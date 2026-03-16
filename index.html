@@ -460,8 +460,9 @@
         .season-chart { width: 100%; height: 100%; }
         .chart-tooltip {
             position: absolute; background: #1B2A4A; color: #FFFFFF; padding: 0.75rem 1rem;
-            border-radius: 0.5rem; font-size: 0.85rem; white-space: nowrap; z-index: 10;
-            pointer-events: none; box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            border-radius: 0.5rem; font-size: 0.82rem; white-space: nowrap; z-index: 10;
+            pointer-events: none; box-shadow: 0 4px 16px rgba(0,0,0,0.25); min-width: 160px;
+            line-height: 1.4;
         }
         .chart-tooltip::before {
             content: ''; position: absolute; bottom: -4px; left: 50%;
@@ -1230,7 +1231,7 @@
         let selectedTeam2 = null;
         let currentView = "home";
         let currentProfile = null;
-        let currentSortStat = "ATW";
+        let currentSortStat = "allTimeW";
         let currentLeadersStat = "allTimeW";
         let leadersSortDir = "desc";
         let leadersFilterConf = null;
@@ -1473,6 +1474,12 @@
         function updateCompareButton() {
             const btn = document.getElementById('compareButton');
             btn.disabled = !selectedTeam1 || !selectedTeam2 || selectedTeam1.espnId === selectedTeam2.espnId;
+        }
+
+        function navigateToRanking(statKey) {
+            currentSortStat = statKey;
+            rankingsSortDir = 'desc';
+            switchView('rankings');
         }
 
         function switchView(view) {
@@ -2604,6 +2611,59 @@
                 return '';
             };
 
+            // Current season highlight
+            let currentSeasonHTML = '';
+            if (SEASONS_DATA && SEASONS_DATA[team.espnId] && SEASONS_DATA[team.espnId].seasons?.length > 0) {
+                const seasons = SEASONS_DATA[team.espnId].seasons;
+                // Find the most recent season (first entry is usually the latest)
+                const latest = seasons[0];
+                const latestYear = latest.year || '';
+                const latestWins = parseInt(latest.wins) || 0;
+                const latestLosses = parseInt(latest.losses) || 0;
+                const latestCoach = latest.coach || '';
+                const latestSeed = latest.seed || '';
+                const latestConfW = parseInt(latest.confWins) || 0;
+                const latestConfL = parseInt(latest.confLosses) || 0;
+                const latestTourney = latest.ncaaTourney || '';
+                const latestApHigh = latest.apHigh || '';
+
+                currentSeasonHTML = `
+                <div style="background: linear-gradient(135deg, ${team.color || '#1B2A4A'} 0%, ${team.color || '#1B2A4A'}dd 100%); border-radius: 0.75rem; padding: 1.25rem 1.5rem; margin-bottom: 1.5rem; color: white; display: flex; flex-wrap: wrap; align-items: center; gap: 1.5rem; box-shadow: 0 4px 16px rgba(0,0,0,0.15);">
+                    <div style="flex: 0 0 auto;">
+                        <div style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; opacity: 0.8; margin-bottom: 0.25rem;">Current Season</div>
+                        <div style="font-size: 1.6rem; font-weight: 800; letter-spacing: -0.02em;">${latestYear}</div>
+                    </div>
+                    <div style="width: 1px; height: 40px; background: rgba(255,255,255,0.25);"></div>
+                    <div style="flex: 0 0 auto; text-align: center;">
+                        <div style="font-size: 1.8rem; font-weight: 800;">${latestWins}-${latestLosses}</div>
+                        <div style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; opacity: 0.8;">Overall</div>
+                    </div>
+                    ${(latestConfW > 0 || latestConfL > 0) ? `
+                    <div style="flex: 0 0 auto; text-align: center;">
+                        <div style="font-size: 1.3rem; font-weight: 700;">${latestConfW}-${latestConfL}</div>
+                        <div style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; opacity: 0.8;">Conference</div>
+                    </div>` : ''}
+                    ${latestSeed ? `
+                    <div style="flex: 0 0 auto; text-align: center;">
+                        <div style="font-size: 1.3rem; font-weight: 700;">#${latestSeed} Seed</div>
+                        <div style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; opacity: 0.8;">NCAA Tourney</div>
+                    </div>` : ''}
+                    ${latestTourney ? `
+                    <div style="flex: 0 0 auto; text-align: center;">
+                        <div style="font-size: 0.9rem; font-weight: 600;">${latestTourney}</div>
+                        <div style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; opacity: 0.8;">Tournament</div>
+                    </div>` : ''}
+                    ${latestApHigh ? `
+                    <div style="flex: 0 0 auto; text-align: center;">
+                        <div style="font-size: 1.3rem; font-weight: 700;">#${latestApHigh}</div>
+                        <div style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; opacity: 0.8;">AP High</div>
+                    </div>` : ''}
+                    <div style="margin-left: auto; text-align: right;">
+                        ${latestCoach ? `<div style="font-size: 0.85rem; opacity: 0.9;">Coach: <strong>${latestCoach}</strong></div>` : ''}
+                    </div>
+                </div>`;
+            }
+
             let profileHTML = `
                 <div class="profile-header">
                     <div class="profile-logo-section">
@@ -2628,52 +2688,26 @@
                     </div>
                 </div>
 
+                ${currentSeasonHTML}
+
                 <div class="stats-grid">
-                    <div class="stat-card">
-                        <div class="stat-card-value">${team.natlChamps}</div>
-                        <div class="stat-card-label">National Championships</div>
-                        <div class="stat-card-rank ${getRankBadge(rankings.natlChamps)}">#${rankings.natlChamps}</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-card-value">${team.finalFours}</div>
-                        <div class="stat-card-label">Final Fours</div>
-                        <div class="stat-card-rank ${getRankBadge(rankings.finalFours)}">#${rankings.finalFours}</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-card-value">${team.elite8s}</div>
-                        <div class="stat-card-label">Elite Eights</div>
-                        <div class="stat-card-rank ${getRankBadge(rankings.elite8s)}">#${rankings.elite8s}</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-card-value">${team.sweet16s}</div>
-                        <div class="stat-card-label">Sweet Sixteens</div>
-                        <div class="stat-card-rank ${getRankBadge(rankings.sweet16s)}">#${rankings.sweet16s}</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-card-value">${team.ncaaTourneys}</div>
-                        <div class="stat-card-label">NCAA Tournaments</div>
-                        <div class="stat-card-rank ${getRankBadge(rankings.ncaaTourneys)}">#${rankings.ncaaTourneys}</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-card-value">${team.confTitles}</div>
-                        <div class="stat-card-label">Conference Titles</div>
-                        <div class="stat-card-rank ${getRankBadge(rankings.confTitles)}">#${rankings.confTitles}</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-card-value">${team.allAmericans}</div>
-                        <div class="stat-card-label">All-Americans</div>
-                        <div class="stat-card-rank ${getRankBadge(rankings.allAmericans)}">#${rankings.allAmericans}</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-card-value">${team.nbaFirstRound}</div>
-                        <div class="stat-card-label">NBA 1st Round</div>
-                        <div class="stat-card-rank ${getRankBadge(rankings.nbaFirstRound)}">#${rankings.nbaFirstRound}</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-card-value">${team.apWeeksRanked}</div>
-                        <div class="stat-card-label">AP Weeks Ranked</div>
-                        <div class="stat-card-rank ${getRankBadge(rankings.apWeeksRanked)}">#${rankings.apWeeksRanked}</div>
-                    </div>
+                    ${[
+                        { key: 'natlChamps', label: 'National Championships', rankKey: 'natlChamps' },
+                        { key: 'finalFours', label: 'Final Fours', rankKey: 'finalFours' },
+                        { key: 'elite8s', label: 'Elite Eights', rankKey: 'elite8s' },
+                        { key: 'sweet16s', label: 'Sweet Sixteens', rankKey: 'sweet16s' },
+                        { key: 'ncaaTourneys', label: 'NCAA Tournaments', rankKey: 'ncaaTourneys' },
+                        { key: 'confTitles', label: 'Conference Titles', rankKey: 'confTitles' },
+                        { key: 'allAmericans', label: 'All-Americans', rankKey: 'allAmericans' },
+                        { key: 'nbaFirstRound', label: 'NBA 1st Round', rankKey: 'nbaFirstRound' },
+                        { key: 'apWeeksRanked', label: 'AP Weeks Ranked', rankKey: 'apWeeksRanked' },
+                    ].map(stat => `
+                        <div class="stat-card" style="cursor: pointer;" onclick="navigateToRanking('${stat.rankKey}')" title="View all teams ranked by ${stat.label}">
+                            <div class="stat-card-value">${team[stat.key]}</div>
+                            <div class="stat-card-label">${stat.label}</div>
+                            <div class="stat-card-rank ${getRankBadge(rankings[stat.rankKey])}">#${rankings[stat.rankKey]} <span style="font-size: 0.6rem; opacity: 0.7;">▸</span></div>
+                        </div>
+                    `).join('')}
                 </div>
             `;
 
@@ -2699,7 +2733,29 @@
                 <div style="margin: 2rem 0;">
                     <h3 style="color: #1B2A4A; font-size: 1.1rem; font-weight: 700; margin-bottom: 1rem;">Conference Rivals</h3>
                     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
-                        ${confRivals.map(rival => `
+                        ${confRivals.map(rival => {
+                            // Look up H2H record
+                            let h2hText = `${rival.allTimeW}-${rival.allTimeL} all-time`;
+                            let h2hColor = '#8892A0';
+                            if (H2H_DATA) {
+                                const teamH2H = H2H_DATA[String(team.espnId)];
+                                if (teamH2H && teamH2H[String(rival.espnId)]) {
+                                    const record = teamH2H[String(rival.espnId)];
+                                    const w = record.w || 0;
+                                    const l = record.l || 0;
+                                    if (w > l) {
+                                        h2hText = `${team.name.split(' ').pop()} leads ${w}-${l}`;
+                                        h2hColor = '#2D7D46';
+                                    } else if (l > w) {
+                                        h2hText = `${rival.name.split(' ').pop()} leads ${l}-${w}`;
+                                        h2hColor = '#C9463E';
+                                    } else {
+                                        h2hText = `Series tied ${w}-${l}`;
+                                        h2hColor = '#8892A0';
+                                    }
+                                }
+                            }
+                            return `
                             <div style="background: #F5F3EE; border-radius: 0.5rem; padding: 1rem; border: 1px solid #D6CFC2; cursor: pointer; transition: all 0.2s ease;"
                                  onclick="openComparison('${team.espnId}', '${rival.espnId}')"
                                  onmouseover="this.style.borderColor='#C9A86C'; this.style.transform='translateY(-2px)'"
@@ -2708,10 +2764,10 @@
                                     <img src="${getLogoUrl(rival.espnId)}" alt="" style="width: 28px; height: 28px; object-fit: contain;">
                                     <div style="font-size: 0.9rem; font-weight: 600; color: #2C3345;">${rival.name}</div>
                                 </div>
-                                <div style="font-size: 0.78rem; color: #8892A0;">${rival.allTimeW}-${rival.allTimeL} all-time</div>
+                                <div style="font-size: 0.78rem; color: ${h2hColor}; font-weight: 600;">${h2hText}</div>
                                 <div style="font-size: 0.75rem; color: #C9A86C; font-weight: 600; margin-top: 0.4rem;">Compare Programs →</div>
-                            </div>
-                        `).join('')}
+                            </div>`;
+                        }).join('')}
                     </div>
                 </div>
             `;
@@ -3136,7 +3192,14 @@
                         if (year >= c.start && year <= c.end) { coachName = c.name; break; }
                     }
                 }
-                points.push({ x, y, year, idx, wins: seasonData[year].wins, losses: seasonData[year].losses, coach: coachName });
+                const sd = seasonData[year];
+                points.push({
+                    x, y, year, idx,
+                    wins: sd.wins, losses: sd.losses,
+                    confWins: sd.confWins || 0, confLosses: sd.confLosses || 0,
+                    postseason: sd.postseason || '',
+                    coach: sd.coach || coachName
+                });
                 pathD += (idx === 0 ? 'M' : 'L') + x + ',' + y;
             });
 
@@ -3194,14 +3257,23 @@
                     hoverLine.setAttribute('style', 'display: block;');
 
                     const winPct = ((point.wins / (point.wins + point.losses)) * 100).toFixed(1);
-                    const coachLine = point.coach ? `<br>Coach: ${point.coach}` : '';
-                    tooltip.innerHTML = `<strong>${team.name}</strong><br>${point.year}<br>Record: ${point.wins}-${point.losses} (${winPct}%)${coachLine}`;
+                    const confLine = (point.confWins > 0 || point.confLosses > 0) ? `<div style="margin-top:3px;">Conf: ${point.confWins}-${point.confLosses}</div>` : '';
+                    const postLine = point.postseason ? `<div style="margin-top:3px; color:#C9A86C; font-weight:600;">${point.postseason}</div>` : '';
+                    const coachLine = point.coach ? `<div style="margin-top:3px; font-size:0.78rem; opacity:0.85;">Coach: ${point.coach}</div>` : '';
+                    const displayYear = `${point.year - 1}-${String(point.year).slice(2)}`;
+                    tooltip.innerHTML = `
+                        <div style="font-weight:700; margin-bottom:4px; border-bottom:1px solid rgba(255,255,255,0.15); padding-bottom:4px;">${team.name} ${displayYear}</div>
+                        <div>Record: <strong>${point.wins}-${point.losses}</strong> (${winPct}%)</div>
+                        ${confLine}${postLine}${coachLine}`;
                     tooltip.style.display = 'block';
 
                     const rect = svg.getBoundingClientRect();
                     const tooltipHeight = tooltip.offsetHeight;
-                    tooltip.style.left = (point.x - rect.left - 60) + 'px';
-                    tooltip.style.top = (point.y - rect.top - tooltipHeight - 15) + 'px';
+                    const tooltipWidth = tooltip.offsetWidth || 180;
+                    let left = (point.x / 1200) * rect.width - tooltipWidth / 2;
+                    left = Math.max(5, Math.min(left, rect.width - tooltipWidth - 5));
+                    tooltip.style.left = left + 'px';
+                    tooltip.style.top = ((point.y / 400) * rect.height - tooltipHeight - 12) + 'px';
                 });
 
                 hoverZone.addEventListener('mouseleave', () => {
