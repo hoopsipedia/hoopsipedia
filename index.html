@@ -1277,7 +1277,8 @@
                     confTitles: data[F.CT],
                     allAmericans: data[F.AA],
                     nbaFirstRound: data[F.NBA],
-                    apWeeksRanked: data[F.APW]
+                    apWeeksRanked: data[F.APW],
+                    winPct: data[F.ATW] + data[F.ATL] > 0 ? parseFloat(((data[F.ATW] / (data[F.ATW] + data[F.ATL])) * 100).toFixed(1)) : 0
                 };
             }).sort((a, b) => b.allTimeW - a.allTimeW);
         }
@@ -2456,8 +2457,13 @@
                 { key: 'natlChamps', label: 'Championships' },
                 { key: 'finalFours', label: 'Final Fours' },
                 { key: 'elite8s', label: 'Elite Eights' },
+                { key: 'sweet16s', label: 'Sweet Sixteens' },
                 { key: 'ncaaTourneys', label: 'NCAA Tournaments' },
-                { key: 'apWeeksRanked', label: 'AP Weeks Ranked' }
+                { key: 'confTitles', label: 'Conference Titles' },
+                { key: 'allAmericans', label: 'All-Americans' },
+                { key: 'nbaFirstRound', label: 'NBA 1st Round Picks' },
+                { key: 'apWeeksRanked', label: 'AP Weeks Ranked' },
+                { key: 'winPct', label: 'Win Percentage' }
             ];
 
             const filterContainer = document.getElementById('filterButtons');
@@ -2524,7 +2530,8 @@
             tbody.innerHTML = '';
 
             sorted.forEach((team, idx) => {
-                const statValue = team[currentSortStat];
+                const rawValue = team[currentSortStat];
+                const statValue = currentSortStat === 'winPct' ? rawValue + '%' : rawValue;
 
                 let badge = '';
                 if (idx === 0) {
