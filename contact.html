@@ -4,205 +4,199 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - Hoopsipedia</title>
-    <meta name="description" content="Get in touch with Hoopsipedia. Send us questions, corrections, suggestions, or feedback about our college basketball encyclopedia.">
+    <meta name="description" content="Get in touch with Hoopsipedia. Report data corrections, suggest features, or just talk college basketball.">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, sans-serif;
-            color: #1a1a2e;
-            background: #f8f9fa;
-            line-height: 1.7;
+            font-family: system-ui, -apple-system, sans-serif;
+            background-color: #F5F3EE;
+            color: #2C3345;
+            line-height: 1.6;
         }
-        header {
-            background: #1a1a2e;
-            color: white;
-            padding: 20px 0;
-            border-bottom: 4px solid #e85d04;
-        }
-        header .container {
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: #1B2A4A;
+            border-bottom: 3px solid #C9A86C;
+            padding: 0.75rem 2rem;
             display: flex;
             align-items: center;
             justify-content: space-between;
         }
-        .logo {
-            font-size: 1.8rem;
-            font-weight: 800;
+
+        .nav-logo {
+            font-family: 'Lobster', cursive;
+            font-size: 1.7rem;
+            color: #C9A86C;
             text-decoration: none;
-            color: white;
-            letter-spacing: -0.5px;
         }
-        .logo span { color: #e85d04; }
-        nav a {
-            color: #ccc;
+
+        .nav-links {
+            display: flex;
+            gap: 0.25rem;
+        }
+
+        .nav-links a {
+            color: rgba(255, 255, 255, 0.65);
             text-decoration: none;
-            margin-left: 28px;
             font-size: 0.95rem;
+            padding: 0.5rem 1.1rem;
+            border-radius: 0.375rem;
             font-weight: 500;
             transition: color 0.2s;
         }
-        nav a:hover, nav a.active { color: #e85d04; }
-        .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
-        header .container { max-width: 1100px; }
-        .page-hero {
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-            color: white;
-            padding: 48px 0;
+
+        .nav-links a:hover {
+            color: #C9A86C;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #1B2A4A;
+            margin-bottom: 2rem;
             text-align: center;
         }
-        .page-hero h1 {
-            font-size: 2.4rem;
-            font-weight: 800;
-            margin-bottom: 8px;
+
+        h2 {
+            font-size: 1.5rem;
+            color: #1B2A4A;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #C9A86C;
+            padding-bottom: 0.5rem;
         }
-        .page-hero p {
+
+        h3 {
+            color: #1B2A4A;
             font-size: 1.1rem;
-            color: #aab;
+            margin-bottom: 0.5rem;
+            margin-top: 1.5rem;
         }
-        .content {
-            padding: 48px 0 64px;
-        }
-        .content h2 {
-            font-size: 1.4rem;
-            font-weight: 700;
-            color: #1a1a2e;
-            margin: 32px 0 12px;
-        }
-        .content h2:first-child { margin-top: 0; }
-        .content p {
-            font-size: 1.05rem;
-            color: #333;
-            margin-bottom: 16px;
-        }
-        .contact-cards {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 24px;
-            margin: 32px 0;
-        }
-        .contact-card {
-            background: #fff;
-            border-radius: 10px;
-            padding: 28px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-            border: 1px solid #e8e8e8;
-        }
-        .contact-card h3 {
-            font-size: 1.15rem;
-            color: #1a1a2e;
-            margin-bottom: 8px;
-        }
-        .contact-card p {
-            font-size: 0.98rem;
-            color: #555;
-            margin-bottom: 12px;
-        }
-        .contact-card a {
-            color: #e85d04;
-            text-decoration: none;
-            font-weight: 600;
+
+        p {
+            margin-bottom: 1rem;
             font-size: 1rem;
+            line-height: 1.7;
         }
-        .contact-card a:hover { text-decoration: underline; }
-        .contact-icon {
-            font-size: 2rem;
-            margin-bottom: 12px;
-            display: block;
+
+        .content-card {
+            background: #FFFFFF;
+            border: 1px solid #E0D9CC;
+            border-radius: 0.5rem;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
         }
-        .response-note {
-            background: #fff;
-            border-left: 4px solid #e85d04;
-            padding: 20px 24px;
-            border-radius: 0 8px 8px 0;
-            margin: 32px 0;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+
+        .email-link {
+            display: inline-block;
+            background: #1B2A4A;
+            color: #C9A86C;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.375rem;
+            text-decoration: none;
+            font-weight: 500;
+            margin: 1rem 0;
+            transition: background 0.2s, color 0.2s;
         }
-        .response-note p { margin-bottom: 0; font-size: 0.98rem; }
-        @media (max-width: 600px) {
-            .contact-cards { grid-template-columns: 1fr; }
+
+        .email-link:hover {
+            background: #C9A86C;
+            color: #1B2A4A;
         }
+
         footer {
-            background: #1a1a2e;
-            color: #aab;
-            padding: 32px 0;
+            background-color: #1B2A4A;
+            color: rgba(255, 255, 255, 0.7);
             text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+            border-top: 3px solid #C9A86C;
             font-size: 0.9rem;
         }
+
         footer a {
-            color: #e85d04;
+            color: #C9A86C;
             text-decoration: none;
-            margin: 0 12px;
         }
-        footer a:hover { text-decoration: underline; }
-        .footer-links { margin-bottom: 12px; }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                padding: 0.75rem 1rem;
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .nav-logo {
+                font-size: 1.5rem;
+            }
+
+            .container {
+                padding: 1.5rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.25rem;
+            }
+        }
     </style>
 </head>
 <body>
-    <header>
-        <div class="container" style="max-width:1100px;">
-            <a href="/" class="logo">HOOPS<span>IPEDIA</span></a>
-            <nav>
-                <a href="/">Home</a>
-                <a href="/about.html">About</a>
-                <a href="/contact.html" class="active">Contact</a>
-                <a href="/privacy.html">Privacy</a>
-                <a href="/terms.html">Terms</a>
-            </nav>
+    <nav>
+        <a href="index.html" class="nav-logo">Hoopsipedia</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
         </div>
-    </header>
+    </nav>
 
-    <div class="page-hero">
-        <div class="container">
-            <h1>Contact Us</h1>
-            <p>We'd love to hear from you</p>
+    <div class="container">
+        <h1>Get in Touch</h1>
+
+        <div class="content-card">
+            <h2>Have Something to Say?</h2>
+            <p>Found a data error? Have an idea to make Hoopsipedia better? Just want to talk about college basketball? Drop me a line.</p>
+
+            <a href="mailto:josh.davis@gambit.security" class="email-link">Email josh.davis@gambit.security</a>
         </div>
-    </div>
 
-    <div class="content">
-        <div class="container">
+        <div class="content-card">
+            <h2>What to Send My Way</h2>
 
-            <p>Have a question, found an error, or want to suggest something? We're always looking to improve Hoopsipedia and appreciate feedback from the college basketball community.</p>
+            <h3>Data Corrections</h3>
+            <p>Spot an error in a season record, tournament result, or coaching record? Let me know. You can also use the correction button on the main site for specific programs.</p>
 
-            <div class="contact-cards">
-                <div class="contact-card">
-                    <span class="contact-icon">&#9993;</span>
-                    <h3>General Inquiries</h3>
-                    <p>Questions, feedback, partnership inquiries, or just want to say hello.</p>
-                    <a href="mailto:contact@hoopsipedia.com">contact@hoopsipedia.com</a>
-                </div>
-                <div class="contact-card">
-                    <span class="contact-icon">&#9998;</span>
-                    <h3>Corrections & Updates</h3>
-                    <p>Spotted an error in our data or have updated information to share?</p>
-                    <a href="mailto:contact@hoopsipedia.com?subject=Correction">Send a correction</a>
-                </div>
-            </div>
+            <h3>Feature Requests</h3>
+            <p>Have an idea for something Hoopsipedia should track or display? I'm always looking for ways to improve the site and make it more useful.</p>
 
-            <h2>What We'd Love to Hear About</h2>
-            <p>We're a small operation with a big love for college basketball, and community feedback helps us prioritize what to build next. Here are some things we'd especially love to hear about:</p>
-            <ul style="margin: 0 0 16px 24px; color: #333;">
-                <li style="font-size: 1.02rem; margin-bottom: 8px;"><strong>Data corrections:</strong> If you find a stat, record, or piece of information that's wrong, please let us know with a source so we can fix it</li>
-                <li style="font-size: 1.02rem; margin-bottom: 8px;"><strong>Feature requests:</strong> What would make Hoopsipedia more useful for you? New pages, tools, or data you'd like to see?</li>
-                <li style="font-size: 1.02rem; margin-bottom: 8px;"><strong>Missing content:</strong> Is there a team, player, season, or topic we should cover that we haven't gotten to yet?</li>
-                <li style="font-size: 1.02rem; margin-bottom: 8px;"><strong>General feedback:</strong> How's the site working for you? What do you like? What could be better?</li>
-            </ul>
-
-            <div class="response-note">
-                <p><strong>Response time:</strong> We read every email and do our best to respond within 48 hours. During March Madness, it might take a little longer — you know how it is.</p>
-            </div>
-
+            <h3>Just Chat</h3>
+            <p>If you just want to talk basketball history or debate your favorite program's legacy, that's cool too. I love talking hoops.</p>
         </div>
     </div>
 
     <footer>
-        <div class="container">
-            <div class="footer-links">
-                <a href="/about.html">About</a>
-                <a href="/contact.html">Contact</a>
-                <a href="/privacy.html">Privacy Policy</a>
-                <a href="/terms.html">Terms of Service</a>
-            </div>
-            <p>&copy; 2026 Hoopsipedia. All rights reserved. Not affiliated with the NCAA.</p>
-        </div>
+        <p>&copy; 2026 Hoopsipedia. All rights reserved.</p>
+        <p>Questions? <a href="contact.html">Get in touch</a> | <a href="privacy.html">Privacy</a> | <a href="terms.html">Terms</a></p>
     </footer>
 </body>
 </html>

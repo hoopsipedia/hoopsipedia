@@ -4,208 +4,207 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy - Hoopsipedia</title>
-    <meta name="description" content="Hoopsipedia's privacy policy. Learn how we collect, use, and protect your information.">
+    <meta name="description" content="Hoopsipedia's privacy policy. Learn how we handle your information.">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, sans-serif;
-            color: #1a1a2e;
-            background: #f8f9fa;
-            line-height: 1.7;
+            font-family: system-ui, -apple-system, sans-serif;
+            background-color: #F5F3EE;
+            color: #2C3345;
+            line-height: 1.6;
         }
-        header {
-            background: #1a1a2e;
-            color: white;
-            padding: 20px 0;
-            border-bottom: 4px solid #e85d04;
-        }
-        header .container {
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: #1B2A4A;
+            border-bottom: 3px solid #C9A86C;
+            padding: 0.75rem 2rem;
             display: flex;
             align-items: center;
             justify-content: space-between;
         }
-        .logo {
-            font-size: 1.8rem;
-            font-weight: 800;
+
+        .nav-logo {
+            font-family: 'Lobster', cursive;
+            font-size: 1.7rem;
+            color: #C9A86C;
             text-decoration: none;
-            color: white;
-            letter-spacing: -0.5px;
         }
-        .logo span { color: #e85d04; }
-        nav a {
-            color: #ccc;
+
+        .nav-links {
+            display: flex;
+            gap: 0.25rem;
+        }
+
+        .nav-links a {
+            color: rgba(255, 255, 255, 0.65);
             text-decoration: none;
-            margin-left: 28px;
             font-size: 0.95rem;
+            padding: 0.5rem 1.1rem;
+            border-radius: 0.375rem;
             font-weight: 500;
             transition: color 0.2s;
         }
-        nav a:hover, nav a.active { color: #e85d04; }
-        .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
-        header .container { max-width: 1100px; }
-        .page-hero {
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-            color: white;
-            padding: 48px 0;
+
+        .nav-links a:hover {
+            color: #C9A86C;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #1B2A4A;
+            margin-bottom: 2rem;
             text-align: center;
         }
-        .page-hero h1 {
-            font-size: 2.4rem;
-            font-weight: 800;
-            margin-bottom: 8px;
+
+        h2 {
+            font-size: 1.5rem;
+            color: #1B2A4A;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #C9A86C;
+            padding-bottom: 0.5rem;
         }
-        .page-hero p {
-            font-size: 1.1rem;
-            color: #aab;
+
+        p {
+            margin-bottom: 1rem;
+            font-size: 1rem;
+            line-height: 1.7;
         }
-        .content {
-            padding: 48px 0 64px;
+
+        ul {
+            margin-left: 2rem;
+            margin-bottom: 1rem;
         }
-        .content h2 {
-            font-size: 1.4rem;
-            font-weight: 700;
-            color: #1a1a2e;
-            margin: 32px 0 12px;
+
+        li {
+            margin-bottom: 0.5rem;
         }
-        .content h2:first-child { margin-top: 0; }
-        .content p {
-            font-size: 1.02rem;
-            color: #333;
-            margin-bottom: 14px;
+
+        a {
+            color: #C9A86C;
+            text-decoration: none;
         }
-        .content ul {
-            margin: 0 0 14px 24px;
-            color: #333;
+
+        a:hover {
+            text-decoration: underline;
         }
-        .content li {
-            font-size: 1.02rem;
-            margin-bottom: 6px;
-        }
-        .effective-date {
-            background: #fff;
+
+        .date-badge {
             display: inline-block;
-            padding: 8px 16px;
-            border-radius: 6px;
+            background: #FFFFFF;
+            border: 1px solid #E0D9CC;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.375rem;
+            margin-bottom: 1.5rem;
             font-size: 0.95rem;
-            color: #555;
-            margin-bottom: 24px;
-            border: 1px solid #e0e0e0;
+            color: #2C3345;
         }
+
         footer {
-            background: #1a1a2e;
-            color: #aab;
-            padding: 32px 0;
+            background-color: #1B2A4A;
+            color: rgba(255, 255, 255, 0.7);
             text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+            border-top: 3px solid #C9A86C;
             font-size: 0.9rem;
         }
+
         footer a {
-            color: #e85d04;
+            color: #C9A86C;
             text-decoration: none;
-            margin: 0 12px;
         }
-        footer a:hover { text-decoration: underline; }
-        .footer-links { margin-bottom: 12px; }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                padding: 0.75rem 1rem;
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .nav-logo {
+                font-size: 1.5rem;
+            }
+
+            .container {
+                padding: 1.5rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.25rem;
+            }
+        }
     </style>
 </head>
 <body>
-    <header>
-        <div class="container" style="max-width:1100px;">
-            <a href="/" class="logo">HOOPS<span>IPEDIA</span></a>
-            <nav>
-                <a href="/">Home</a>
-                <a href="/about.html">About</a>
-                <a href="/contact.html">Contact</a>
-                <a href="/privacy.html" class="active">Privacy</a>
-                <a href="/terms.html">Terms</a>
-            </nav>
+    <nav>
+        <a href="index.html" class="nav-logo">Hoopsipedia</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
         </div>
-    </header>
+    </nav>
 
-    <div class="page-hero">
-        <div class="container">
-            <h1>Privacy Policy</h1>
-            <p>How we handle your information</p>
-        </div>
-    </div>
+    <div class="container">
+        <h1>Privacy Policy</h1>
 
-    <div class="content">
-        <div class="container">
+        <div class="date-badge">Last updated: March 2026</div>
 
-            <div class="effective-date">Effective Date: March 15, 2026</div>
+        <h2>Quick Summary</h2>
+        <p>We use Google Analytics to understand how people use the site. We don't sell your data. We don't collect personal info unless you email us. Cookies are for analytics only.</p>
 
-            <p>Hoopsipedia ("we," "us," or "our") operates the website hoopsipedia.com (the "Site"). This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our Site.</p>
+        <h2>Analytics</h2>
+        <p>Hoopsipedia uses Google Analytics to see how many people visit, which pages they look at, how long they stay, that kind of thing. This helps us understand what's working and what needs improvement. Google Analytics doesn't collect names or personal details, just anonymized usage data.</p>
 
-            <h2>Information We Collect</h2>
+        <h2>Data We Don't Collect</h2>
+        <p>We don't ask you to create accounts. We don't collect personal information just for browsing the site. If you email us using the contact page, we'll have your email address, but we're not selling it or sharing it with anyone.</p>
 
-            <p><strong>Information collected automatically:</strong> When you visit the Site, our servers and third-party analytics services may automatically collect certain information, including your IP address, browser type, operating system, referring URLs, pages viewed, time and date of your visit, and other usage data. This information is collected through cookies and similar tracking technologies.</p>
+        <h2>Cookies</h2>
+        <p>We use cookies for analytics purposes only. These help Google Analytics track site usage. You can disable cookies in your browser settings if you want, though some site features might not work as well.</p>
 
-            <p><strong>Information you provide voluntarily:</strong> If you contact us through our Contact page, we may collect your name and email address. We do not require you to create an account or provide personal information to browse the Site.</p>
+        <h2>Third Party Services</h2>
+        <p>We use these services that collect data:</p>
+        <ul>
+            <li><strong>Google Analytics</strong> - Tracks site traffic and usage patterns</li>
+            <li><strong>ESPN API</strong> - Pulls live score data for college basketball</li>
+            <li><strong>SeatGeek</strong> - Links to ticket information for games</li>
+        </ul>
 
-            <h2>How We Use Your Information</h2>
-            <p>We use the information we collect to:</p>
-            <ul>
-                <li>Operate, maintain, and improve the Site</li>
-                <li>Understand how visitors use the Site so we can improve content and user experience</li>
-                <li>Monitor and analyze usage trends and preferences</li>
-                <li>Respond to your comments, questions, or inquiries</li>
-                <li>Display relevant advertisements through third-party ad networks</li>
-            </ul>
+        <h2>Our Data Sources</h2>
+        <p>The college basketball data on Hoopsipedia comes from public sources like NCAA recordbooks, Sports Reference, and ESPN. This is all public information that we're organizing in one place.</p>
 
-            <h2>Cookies and Tracking Technologies</h2>
-            <p>We use cookies and similar tracking technologies to collect information about your browsing activity on our Site. Cookies are small data files placed on your device that help us understand how you use the Site.</p>
+        <h2>Not Affiliated</h2>
+        <p>Hoopsipedia is an independent project and is not affiliated with the NCAA, ESPN, any conference, or any university. We're just a basketball fan building a resource.</p>
 
-            <p><strong>Types of cookies we use:</strong></p>
-            <ul>
-                <li><strong>Essential cookies:</strong> Necessary for the Site to function properly</li>
-                <li><strong>Analytics cookies:</strong> Help us understand how visitors interact with the Site (e.g., Google Analytics)</li>
-                <li><strong>Advertising cookies:</strong> Used by third-party ad networks to display relevant ads (e.g., Google AdSense)</li>
-            </ul>
-
-            <p>You can control cookies through your browser settings. Most browsers allow you to refuse cookies or alert you when a cookie is being sent. However, some features of the Site may not function properly if cookies are disabled.</p>
-
-            <h2>Third-Party Advertising</h2>
-            <p>We use third-party advertising companies, including Google AdSense, to serve ads when you visit the Site. These companies may use cookies and similar technologies to collect information about your visits to this and other websites in order to provide relevant advertisements about goods and services that may interest you.</p>
-
-            <p>Google's use of advertising cookies enables it and its partners to serve ads based on your visit to the Site and/or other sites on the internet. You may opt out of personalized advertising by visiting <a href="https://www.google.com/settings/ads" style="color:#e85d04;" target="_blank" rel="noopener">Google Ads Settings</a>. For more information about how Google uses data, visit <a href="https://policies.google.com/technologies/partner-sites" style="color:#e85d04;" target="_blank" rel="noopener">Google's Privacy & Terms page</a>.</p>
-
-            <h2>Google Analytics</h2>
-            <p>We use Google Analytics to collect and analyze information about the use of the Site. Google Analytics collects information such as how often visitors come to the Site, what pages they visit, and what other sites they used prior to coming to the Site. We use this information to maintain and improve the Site and its content.</p>
-
-            <p>Google Analytics collects the IP address assigned to you on the date you visit the Site, but does not collect your name or other personally identifying information. You can learn more about how Google Analytics collects and processes data at <a href="https://policies.google.com/privacy" style="color:#e85d04;" target="_blank" rel="noopener">Google's Privacy Policy</a>. You may opt out of Google Analytics by installing the <a href="https://tools.google.com/dlpage/gaoptout" style="color:#e85d04;" target="_blank" rel="noopener">Google Analytics Opt-out Browser Add-on</a>.</p>
-
-            <h2>Third-Party Links</h2>
-            <p>The Site may contain links to third-party websites. We are not responsible for the privacy practices or the content of those third-party websites. We encourage you to read the privacy policy of every website you visit.</p>
-
-            <h2>Children's Privacy</h2>
-            <p>The Site is not directed to children under the age of 13, and we do not knowingly collect personal information from children under 13. If we become aware that we have collected personal information from a child under 13, we will take steps to delete such information.</p>
-
-            <h2>Data Security</h2>
-            <p>We implement reasonable security measures to protect the information we collect. However, no method of transmission over the internet or method of electronic storage is 100% secure, and we cannot guarantee absolute security.</p>
-
-            <h2>Your Rights</h2>
-            <p>Depending on your location, you may have certain rights regarding your personal information, including the right to access, correct, or delete your personal data. If you are a resident of the European Economic Area (EEA), you have rights under the General Data Protection Regulation (GDPR). If you are a California resident, you have rights under the California Consumer Privacy Act (CCPA).</p>
-
-            <p>To exercise any of these rights, please contact us using the information provided on our <a href="/contact.html" style="color:#e85d04;">Contact page</a>.</p>
-
-            <h2>Changes to This Privacy Policy</h2>
-            <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Effective Date" at the top. We encourage you to review this Privacy Policy periodically for any changes.</p>
-
-            <h2>Contact Us</h2>
-            <p>If you have any questions about this Privacy Policy, please contact us through our <a href="/contact.html" style="color:#e85d04;">Contact page</a>.</p>
-
-        </div>
+        <h2>Questions?</h2>
+        <p>If you have privacy questions or concerns, <a href="contact.html">get in touch</a>.</p>
     </div>
 
     <footer>
-        <div class="container">
-            <div class="footer-links">
-                <a href="/about.html">About</a>
-                <a href="/contact.html">Contact</a>
-                <a href="/privacy.html">Privacy Policy</a>
-                <a href="/terms.html">Terms of Service</a>
-            </div>
-            <p>&copy; 2026 Hoopsipedia. All rights reserved. Not affiliated with the NCAA.</p>
-        </div>
+        <p>&copy; 2026 Hoopsipedia. All rights reserved.</p>
+        <p>Questions? <a href="contact.html">Get in touch</a> | <a href="privacy.html">Privacy</a> | <a href="terms.html">Terms</a></p>
     </footer>
 </body>
 </html>

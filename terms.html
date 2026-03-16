@@ -4,193 +4,202 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Terms of Service - Hoopsipedia</title>
-    <meta name="description" content="Terms of Service for Hoopsipedia. Review the terms and conditions governing your use of hoopsipedia.com.">
+    <meta name="description" content="Terms of Service for Hoopsipedia. Review the terms and conditions governing your use of the site.">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, sans-serif;
-            color: #1a1a2e;
-            background: #f8f9fa;
-            line-height: 1.7;
+            font-family: system-ui, -apple-system, sans-serif;
+            background-color: #F5F3EE;
+            color: #2C3345;
+            line-height: 1.6;
         }
-        header {
-            background: #1a1a2e;
-            color: white;
-            padding: 20px 0;
-            border-bottom: 4px solid #e85d04;
-        }
-        header .container {
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: #1B2A4A;
+            border-bottom: 3px solid #C9A86C;
+            padding: 0.75rem 2rem;
             display: flex;
             align-items: center;
             justify-content: space-between;
         }
-        .logo {
-            font-size: 1.8rem;
-            font-weight: 800;
+
+        .nav-logo {
+            font-family: 'Lobster', cursive;
+            font-size: 1.7rem;
+            color: #C9A86C;
             text-decoration: none;
-            color: white;
-            letter-spacing: -0.5px;
         }
-        .logo span { color: #e85d04; }
-        nav a {
-            color: #ccc;
+
+        .nav-links {
+            display: flex;
+            gap: 0.25rem;
+        }
+
+        .nav-links a {
+            color: rgba(255, 255, 255, 0.65);
             text-decoration: none;
-            margin-left: 28px;
             font-size: 0.95rem;
+            padding: 0.5rem 1.1rem;
+            border-radius: 0.375rem;
             font-weight: 500;
             transition: color 0.2s;
         }
-        nav a:hover, nav a.active { color: #e85d04; }
-        .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
-        header .container { max-width: 1100px; }
-        .page-hero {
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-            color: white;
-            padding: 48px 0;
+
+        .nav-links a:hover {
+            color: #C9A86C;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #1B2A4A;
+            margin-bottom: 2rem;
             text-align: center;
         }
-        .page-hero h1 {
-            font-size: 2.4rem;
-            font-weight: 800;
-            margin-bottom: 8px;
+
+        h2 {
+            font-size: 1.5rem;
+            color: #1B2A4A;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #C9A86C;
+            padding-bottom: 0.5rem;
         }
-        .page-hero p {
-            font-size: 1.1rem;
-            color: #aab;
+
+        p {
+            margin-bottom: 1rem;
+            font-size: 1rem;
+            line-height: 1.7;
         }
-        .content {
-            padding: 48px 0 64px;
+
+        ul {
+            margin-left: 2rem;
+            margin-bottom: 1rem;
         }
-        .content h2 {
-            font-size: 1.4rem;
-            font-weight: 700;
-            color: #1a1a2e;
-            margin: 32px 0 12px;
+
+        li {
+            margin-bottom: 0.5rem;
         }
-        .content h2:first-child { margin-top: 0; }
-        .content p {
-            font-size: 1.02rem;
-            color: #333;
-            margin-bottom: 14px;
+
+        a {
+            color: #C9A86C;
+            text-decoration: none;
         }
-        .content ul {
-            margin: 0 0 14px 24px;
-            color: #333;
+
+        a:hover {
+            text-decoration: underline;
         }
-        .content li {
-            font-size: 1.02rem;
-            margin-bottom: 6px;
-        }
-        .effective-date {
-            background: #fff;
+
+        .date-badge {
             display: inline-block;
-            padding: 8px 16px;
-            border-radius: 6px;
+            background: #FFFFFF;
+            border: 1px solid #E0D9CC;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.375rem;
+            margin-bottom: 1.5rem;
             font-size: 0.95rem;
-            color: #555;
-            margin-bottom: 24px;
-            border: 1px solid #e0e0e0;
+            color: #2C3345;
         }
+
         footer {
-            background: #1a1a2e;
-            color: #aab;
-            padding: 32px 0;
+            background-color: #1B2A4A;
+            color: rgba(255, 255, 255, 0.7);
             text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+            border-top: 3px solid #C9A86C;
             font-size: 0.9rem;
         }
+
         footer a {
-            color: #e85d04;
+            color: #C9A86C;
             text-decoration: none;
-            margin: 0 12px;
         }
-        footer a:hover { text-decoration: underline; }
-        .footer-links { margin-bottom: 12px; }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                padding: 0.75rem 1rem;
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .nav-logo {
+                font-size: 1.5rem;
+            }
+
+            .container {
+                padding: 1.5rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.25rem;
+            }
+        }
     </style>
 </head>
 <body>
-    <header>
-        <div class="container" style="max-width:1100px;">
-            <a href="/" class="logo">HOOPS<span>IPEDIA</span></a>
-            <nav>
-                <a href="/">Home</a>
-                <a href="/about.html">About</a>
-                <a href="/contact.html">Contact</a>
-                <a href="/privacy.html">Privacy</a>
-                <a href="/terms.html" class="active">Terms</a>
-            </nav>
+    <nav>
+        <a href="index.html" class="nav-logo">Hoopsipedia</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
         </div>
-    </header>
+    </nav>
 
-    <div class="page-hero">
-        <div class="container">
-            <h1>Terms of Service</h1>
-            <p>Rules governing your use of Hoopsipedia</p>
-        </div>
-    </div>
+    <div class="container">
+        <h1>Terms of Service</h1>
 
-    <div class="content">
-        <div class="container">
+        <div class="date-badge">Last updated: March 2026</div>
 
-            <div class="effective-date">Effective Date: March 15, 2026</div>
+        <h2>Use of the Site</h2>
+        <p>Hoopsipedia is provided as-is for personal, non-commercial use. You can browse and use the data and comparisons however you want for personal basketball fandom purposes. You're free to use it to settle bar debates, research your favorite team's history, or just explore college basketball stats.</p>
 
-            <p>Welcome to Hoopsipedia. By accessing or using the website hoopsipedia.com (the "Site"), you agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, please do not use the Site.</p>
+        <h2>Data Accuracy</h2>
+        <p>We pull our data from public sources like NCAA recordbooks, Sports Reference, and ESPN. We do our best to keep it accurate, but stuff happens and errors can sneak in. If you spot a mistake, use the correction tool on the main site or <a href="contact.html">email us</a> and we'll fix it.</p>
 
-            <h2>1. Use of the Site</h2>
-            <p>Hoopsipedia provides college basketball information, statistics, history, and related content for personal, non-commercial use. You may browse, read, and share links to the Site's content freely. You agree to use the Site only for lawful purposes and in a manner that does not infringe the rights of, restrict, or inhibit anyone else's use and enjoyment of the Site.</p>
+        <h2>No Commercial Use</h2>
+        <p>Don't scrape our data or use it to build a competing service. Don't bulk download and republish our information. If you want to use Hoopsipedia data for something commercial, reach out and we can talk about it.</p>
 
-            <h2>2. Intellectual Property</h2>
-            <p>All content on the Site, including but not limited to text, graphics, logos, images, data compilations, and software, is the property of Hoopsipedia or its content suppliers and is protected by United States and international copyright laws. The compilation of all content on the Site is the exclusive property of Hoopsipedia.</p>
+        <h2>Limitations of Liability</h2>
+        <p>Hoopsipedia is provided as-is. We make no guarantees about accuracy, reliability, or availability. We're not responsible for any issues that come from using the site or the data, including lost bets based on our stats (though hopefully we got those right).</p>
 
-            <p>You may not reproduce, distribute, modify, create derivative works of, publicly display, publicly perform, republish, download, store, or transmit any of the material on the Site, except as follows:</p>
-            <ul>
-                <li>Your computer or browser may temporarily store copies of materials in RAM incidental to your accessing and viewing those materials</li>
-                <li>You may store files that are automatically cached by your web browser for display enhancement purposes</li>
-                <li>You may print or download one copy of a reasonable number of pages of the Site for your own personal, non-commercial use and not for further reproduction, publication, or distribution</li>
-                <li>You may share links to pages on the Site through social media or other platforms</li>
-            </ul>
+        <h2>No Affiliation</h2>
+        <p>Hoopsipedia is not affiliated with the NCAA, ESPN, any conference, any university, or any team. We're just an independent project by a college basketball fan.</p>
 
-            <h2>3. Accuracy of Information</h2>
-            <p>We strive to provide accurate and up-to-date information about college basketball. However, the Site may contain errors, inaccuracies, or omissions. We do not warrant or guarantee the accuracy, completeness, or reliability of any content on the Site. Any reliance you place on such information is strictly at your own risk.</p>
+        <h2>Links to Other Sites</h2>
+        <p>The site has links to ESPN, Sports Reference, and other resources. We're not responsible for what's on those sites or how they use your information. Check their privacy policies and terms.</p>
 
-            <p>Statistical data and historical records presented on the Site are compiled from publicly available sources and are provided for informational and entertainment purposes only.</p>
+        <h2>Changes to These Terms</h2>
+        <p>We might update these terms from time to time. Keep an eye on this page to stay in the loop.</p>
 
-            <h2>4. Third-Party Advertising</h2>
-            <p>The Site may display advertisements provided by third-party ad networks, including Google AdSense. These advertisements may use cookies and similar technologies. Your interactions with any third-party advertiser are solely between you and that advertiser. We are not responsible for the content of any third-party advertisements or any products or services offered therein.</p>
-
-            <h2>5. Third-Party Links</h2>
-            <p>The Site may contain links to third-party websites or services that are not owned or controlled by Hoopsipedia. We have no control over, and assume no responsibility for, the content, privacy policies, or practices of any third-party websites or services. We encourage you to review the terms and privacy policies of any third-party website you visit.</p>
-
-            <h2>6. Disclaimer of Warranties</h2>
-            <p>The Site is provided on an "as is" and "as available" basis without any warranties of any kind, either express or implied, including but not limited to the implied warranties of merchantability, fitness for a particular purpose, or non-infringement. We do not guarantee that the Site will be uninterrupted, timely, secure, or error-free.</p>
-
-            <h2>7. Limitation of Liability</h2>
-            <p>In no event shall Hoopsipedia, its owner, or its affiliates be liable for any indirect, incidental, special, consequential, or punitive damages, including without limitation loss of profits, data, use, or goodwill, arising out of or in connection with your access to or use of the Site.</p>
-
-            <h2>8. Indemnification</h2>
-            <p>You agree to indemnify, defend, and hold harmless Hoopsipedia and its owner from and against any claims, liabilities, damages, losses, and expenses, including reasonable attorneys' fees, arising out of or in any way connected with your access to or use of the Site or your violation of these Terms.</p>
-
-            <h2>9. Governing Law</h2>
-            <p>These Terms shall be governed by and construed in accordance with the laws of the United States, without regard to conflict of law provisions.</p>
-
-            <h2>10. Changes to These Terms</h2>
-            <p>We reserve the right to modify these Terms at any time. We will notify you of any changes by posting the revised Terms on this page and updating the "Effective Date." Your continued use of the Site after any such changes constitutes your acceptance of the revised Terms.</p>
-
-            <h2>11. Contact Us</h2>
-            <p>If you have any questions about these Terms, please contact us through our <a href="/contact.html" style="color:#e85d04;">Contact page</a>.</p>
-
-        </div>
+        <h2>Questions?</h2>
+        <p>If you have questions about these terms, <a href="contact.html">get in touch</a>.</p>
     </div>
 
     <footer>
-        <div class="container">
-            <div class="footer-links">
-                <a href="/about.html">About</a>
-                <a href="/contact.html">Contact</a>
-                <a href="/privacy.html">Privacy Policy</a>
-                <a href="/terms.html">Terms of Service</a>
-            </div>
-            <p>&copy; 2026 Hoopsipedia. All rights reserved. Not affiliated with the NCAA.</p>
-        </div>
+        <p>&copy; 2026 Hoopsipedia. All rights reserved.</p>
+        <p>Questions? <a href="contact.html">Get in touch</a> | <a href="privacy.html">Privacy</a> | <a href="terms.html">Terms</a></p>
     </footer>
 </body>
 </html>

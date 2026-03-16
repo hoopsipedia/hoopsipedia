@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="fo-verify" content="2a1519ca-508b-41b8-a153-ed96332636b1" />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-R7JXCJWHYV"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-R7JXCJWHYV');
+    </script>
     <title>Hoopsipedia - College Basketball Historical Database</title>
     <meta name="description" content="The complete historical database of college basketball. Compare programs, explore all-time stats, track the NCAA Tournament bracket, and discover every team's legacy.">
     <meta name="theme-color" content="#1B2A4A">
@@ -646,20 +654,143 @@
 
         /* ── Responsive ── */
         @media (max-width: 768px) {
-            nav { flex-direction: column; gap: 0.75rem; padding: 0.75rem 1rem; }
-            .nav-links { gap: 0.5rem; width: 100%; justify-content: center; }
-            .logo-wordmark--nav { font-size: 1.3rem; }
-            .logo-wordmark--hero { font-size: 2.5rem; }
-            .compare-controls { flex-direction: column; align-items: stretch; }
-            .compare-input-group { min-width: auto; }
-            .compare-vs { width: 46px; height: 46px; font-size: 0.7rem; }
-            .comparison-header { grid-template-columns: 1fr; gap: 1.25rem; }
-            .programs-grid { grid-template-columns: repeat(auto-fill, minmax(115px, 1fr)); gap: 0.85rem; }
-            .profile-header { grid-template-columns: 1fr; gap: 1.25rem; }
-            .stats-grid { grid-template-columns: repeat(2, 1fr); }
-            .stat-row { grid-template-columns: 1fr; gap: 0.85rem; }
-            .stat-left { justify-content: flex-start; }
-            .teams-controls { flex-direction: column; gap: 0.75rem; }
+            /* Navigation */
+            nav {
+                flex-direction: row;
+                gap: 0.5rem;
+                padding: 0.75rem 0.5rem;
+                overflow-x: auto;
+                align-items: center;
+            }
+            .nav-logo { flex-shrink: 0; }
+            .nav-links {
+                gap: 0.25rem;
+                width: auto;
+                justify-content: flex-start;
+                flex: 1;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+            .nav-links li { white-space: nowrap; }
+            .nav-btn { font-size: 0.75rem; padding: 0.4rem 0.6rem; }
+            .logo-wordmark--nav { font-size: 1.1rem; }
+            .logo-wordmark--hero { font-size: 2rem; }
+
+            /* Compare section - stack vertically with centered VS */
+            .compare-controls {
+                flex-direction: column;
+                align-items: center;
+                gap: 0.75rem;
+            }
+            .compare-input-group {
+                min-width: auto;
+                width: 100%;
+                max-width: 280px;
+            }
+            .compare-input-wrapper { width: 100%; }
+            .compare-input-wrapper input { width: 100%; }
+            .compare-vs {
+                width: 40px;
+                height: 40px;
+                font-size: 0.65rem;
+                align-self: center;
+                order: 2;
+                margin: -0.5rem 0;
+            }
+            .compare-input-group:first-child { order: 1; }
+            .compare-input-group:nth-child(2) { order: 3; }
+            .compare-button {
+                width: 100%;
+                max-width: 280px;
+                order: 4;
+            }
+            .compare-input-group:nth-child(3) { order: 3; }
+
+            /* Comparison view - stack team headers and make stat rows responsive */
+            .comparison-header {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            .team-header { text-align: center; }
+
+            /* Season table - make scrollable horizontally */
+            .season-table-wrapper {
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+            .season-table-wrapper table {
+                min-width: 600px;
+                font-size: 0.75rem;
+            }
+
+            /* Profile header - stack vertically */
+            .profile-header {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            /* Stats grids */
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 0.75rem;
+            }
+            .stat-card {
+                padding: 0.75rem;
+                font-size: 0.8rem;
+            }
+            .stat-card-value { font-size: 1.3rem; }
+
+            /* Stat comparison rows - make them single column on narrow screens */
+            .stat-row {
+                grid-template-columns: 1fr;
+                gap: 0.5rem;
+                padding: 0.75rem;
+            }
+            .stat-left, .stat-right {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.25rem;
+            }
+            .stat-label {
+                text-align: center;
+                width: 100%;
+                order: 1;
+            }
+            .stat-left {
+                order: 2;
+            }
+            .stat-right {
+                order: 3;
+            }
+            .stat-bar {
+                width: 100%;
+                height: 4px;
+            }
+
+            /* Games grid - single column */
+            .games-grid {
+                grid-template-columns: 1fr;
+                gap: 0.75rem;
+            }
+
+            /* Footer - single column */
+            footer {
+                flex-direction: column;
+                gap: 1.5rem;
+                text-align: center;
+            }
+
+            /* Programs grid */
+            .programs-grid {
+                grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+                gap: 0.75rem;
+            }
+
+            /* Teams controls */
+            .teams-controls {
+                flex-direction: column;
+                gap: 0.75rem;
+            }
 
             /* Mobile bracket: stacked regions */
             .bracket-full { grid-template-columns: 1fr; min-width: unset; }
@@ -672,6 +803,28 @@
 
             /* Mobile bracket notice */
             .bracket-desktop-hint { display: block; }
+
+            /* Correction modal and button */
+            .modal {
+                width: 95%;
+                max-height: 90vh;
+                border-radius: 0.5rem;
+            }
+            .modal-body {
+                max-height: 60vh;
+            }
+            .correction-btn {
+                width: 48px;
+                height: 48px;
+                font-size: 1.2rem;
+                bottom: 1rem;
+                right: 1rem;
+            }
+
+            /* Reduce padding and margins on mobile */
+            .container { padding: 0.75rem; }
+            .section-title { font-size: 1.25rem; margin-bottom: 1rem; }
+            .hero { padding: 1.5rem 1rem; }
         }
         .bracket-desktop-hint {
             display: none; text-align: center; padding: 0.6rem 1rem;
@@ -950,7 +1103,7 @@
                     url: event.url + `?aid=${SEATGEEK_AFFILIATE_ID}&pid=${SEATGEEK_PARTNER_ID}`,
                     venue: event.venue?.name || '',
                     date: event.datetime_utc
-                }
+                };
                 TICKET_CACHE[cacheKey] = { data: result, ts: Date.now() };
                 return result;
             } catch (e) {
@@ -975,6 +1128,7 @@
                 const data = await resp.json();
                 H = data.H;
                 COACHES = data.COACHES;
+
                 // Try to load pre-compiled historical season data (generated by compile_history.py)
                 try {
                     const seasonsResp = await fetch('seasons.json');
@@ -983,9 +1137,8 @@
                         console.log(`Loaded historical data for ${Object.keys(SEASONS_DATA).length} teams`);
                     }
                 } catch (e) {
-                    console.log('No seasons.json found — will use ESPN API for season data');
+                    console.log('No seasons.json found - will use ESPN API for season data');
                 }
-
             } catch (e) {
                 console.error('Error loading data:', e);
                 document.body.innerHTML = '<div style="text-align:center;padding:60px;font-family:sans-serif;"><h2>Loading Error</h2><p>Could not load team data. Make sure data.json is in the same directory.</p><p style="color:#999;">' + e.message + '</p></div>';
@@ -1308,7 +1461,7 @@
                         const t1Record = team1.records?.[0]?.summary || (t1Data ? t1Data.conf : '');
                         const t2Record = team2.records?.[0]?.summary || (t2Data ? t2Data.conf : '');
 
-                        // Format time in EST — check for TBD
+                        // Format time in EST - check for TBD
                         let timeStr = 'TBD';
                         if (comp.startDate) {
                             const d = new Date(comp.startDate);
@@ -1367,7 +1520,7 @@
 
                         grid.appendChild(card);
 
-                        // Async H2H fetch — updates bar with real series data in team colors
+                        // Async H2H fetch - updates bar with real series data in team colors
                         fetchGameH2H(t1EspnId, t2EspnId).then(h2h => {
                             const h2hEl = document.getElementById(`${cardId}-h2h`);
                             const barEl = document.getElementById(`${cardId}-bar`);
@@ -1440,7 +1593,7 @@
                         openProfile(fallbackTeam);
                     })
                     .catch(() => {});
-            };
+            }
         }
 
         function openComparison(team1Id, team2Id) {
@@ -1795,7 +1948,7 @@
             });
         }
 
-        function renderStatRow(label, val1, val2, color1, color2) {
+        function renderStatRow(label, val1, val2, color1, color2, team1, team2) {
             const num1 = parseFloat(val1);
             const num2 = parseFloat(val2);
             const max = Math.max(num1, num2) || 1;
@@ -1808,19 +1961,36 @@
             const val1Style = winner === 1 ? `color: ${color1}; font-weight: 800;` : 'color: #A0AAB8;';
             const val2Style = winner === 2 ? `color: ${color2}; font-weight: 800;` : 'color: #A0AAB8;';
 
+            // Logo URLs
+            const logo1 = team1 && team1.espnId ? `https://a.espncdn.com/i/teamlogos/ncaa_basketball/500/${team1.espnId}.png` : '';
+            const logo2 = team2 && team2.espnId ? `https://a.espncdn.com/i/teamlogos/ncaa_basketball/500/${team2.espnId}.png` : '';
+
+            const logo1HTML = logo1 ? `<img src="${logo1}" alt="Logo" style="width: 24px; height: 24px; object-fit: contain; flex-shrink: 0;">` : '';
+            const logo2HTML = logo2 ? `<img src="${logo2}" alt="Logo" style="width: 24px; height: 24px; object-fit: contain; flex-shrink: 0;">` : '';
+
             return `
                 <div class="stat-row">
                     <div class="stat-left">
-                        <div class="stat-bar">
-                            <div class="stat-bar-fill left" style="width: ${bar1Width}%; background-color: ${color1}; opacity: ${winner === 1 ? 0.85 : 0.3};"></div>
+                        <div style="display: flex; align-items: center; gap: 0.5rem;">
+                            ${logo1HTML}
+                            <div style="flex: 1;">
+                                <div class="stat-bar">
+                                    <div class="stat-bar-fill left" style="width: ${bar1Width}%; background-color: ${color1}; opacity: ${winner === 1 ? 0.85 : 0.3};"></div>
+                                </div>
+                            </div>
                         </div>
                         <span class="stat-value" style="${val1Style}">${val1}</span>
                     </div>
                     <div class="stat-label">${label}</div>
                     <div class="stat-right">
                         <span class="stat-value" style="${val2Style}">${val2}</span>
-                        <div class="stat-bar">
-                            <div class="stat-bar-fill right" style="width: ${bar2Width}%; background-color: ${color2}; opacity: ${winner === 2 ? 0.85 : 0.3};"></div>
+                        <div style="display: flex; align-items: center; gap: 0.5rem;">
+                            <div style="flex: 1;">
+                                <div class="stat-bar">
+                                    <div class="stat-bar-fill right" style="width: ${bar2Width}%; background-color: ${color2}; opacity: ${winner === 2 ? 0.85 : 0.3};"></div>
+                                </div>
+                            </div>
+                            ${logo2HTML}
                         </div>
                     </div>
                 </div>
@@ -1851,7 +2021,7 @@
             stats.forEach(stat => {
                 const val1 = stat.compute ? stat.compute(t1) : t1[stat.key];
                 const val2 = stat.compute ? stat.compute(t2) : t2[stat.key];
-                html += renderStatRow(stat.label, val1, val2, t1Color, t2Color);
+                html += renderStatRow(stat.label, val1, val2, t1Color, t2Color, t1, t2);
             });
 
             html += '</div>';
@@ -2198,9 +2368,6 @@
             const years = [];
             for (let y = startYear; y < currentYear; y++) years.push(y);
 
-              const currentYear = 2026;
-            const startYear x(02;
-              const years = []              for (let y = startYear; y < currentYear; y++  years.push(y)
             // Fetch schedules: regular season (type 2), conf tourney (type 4), NCAA tourney (type 3)
             const seasonPromises = [];
             for (let i = 0; i < years.length; i += 5) {
@@ -2354,16 +2521,33 @@
                 const year = parts.length === 2 ? parseInt(parts[0]) + 1 : parseInt(parts[0]);
                 if (isNaN(year)) return;
 
-                const recordParts = (s.record || '').split('-');
-                const wins = parseInt(recordParts[0]) || 0;
-                const losses = parseInt(recordParts[1]) || 0;
+                // Use direct wins/losses from compiled data (not parsed from record string)
+                const wins = parseInt(s.wins) || 0;
+                const losses = parseInt(s.losses) || 0;
                 if (wins === 0 && losses === 0) return;
 
-                const confParts = (s.confRecord || '').split('-');
-                const confWins = parseInt(confParts[0]) || 0;
-                const confLosses = parseInt(confParts[1]) || 0;
+                const confWins = parseInt(s.confWins) || 0;
+                const confLosses = parseInt(s.confLosses) || 0;
 
-                seasonData[year] = { wins, losses, confWins, confLosses, postseason: s.postseason || '', coach: s.coach || '', apRank: s.apRank };
+                // Map ncaaTourney result to display string
+                let postseason = '';
+                if (s.ncaaTourney) {
+                    const t = s.ncaaTourney;
+                    if (t.includes('Won') && t.includes('National Final')) postseason = 'Champion';
+                    else if (t.includes('Lost') && t.includes('National Final')) postseason = 'Runner-Up';
+                    else if (t.includes('National Semifinal')) postseason = 'Final Four';
+                    else if (t.includes('Regional Final')) postseason = 'Elite Eight';
+                    else if (t.includes('Regional Semifinal')) postseason = 'Sweet 16';
+                    else if (t.includes('Third Round')) postseason = 'Sweet 16';
+                    else if (t.includes('Second Round')) postseason = 'R32';
+                    else if (t.includes('First Round')) postseason = 'R64';
+                    else if (t.includes('First Four') || t.includes('Opening Round')) postseason = 'First Four';
+                    else if (t.includes('Playing')) postseason = 'In Progress';
+                    else if (t.includes('Regional Third')) postseason = 'R64';
+                    else postseason = 'NCAA';
+                }
+
+                seasonData[year] = { wins, losses, confWins, confLosses, postseason, coach: s.coach || '', apRank: s.apRank };
                 validYears.push(year);
             });
 
@@ -2382,10 +2566,10 @@
                 wrapper.appendChild(chartEl);
             }
 
-            // Season table — full history
+            // Season table - full history
             const tableHTML = `
-                <div style="margin-top: 1.5rem; max-height: 500px; overflow-y: auto; border: 1px solid #E0D9CC; border-radius: 0.5rem;">
-                    <table style="width: 100%; border-collapse: collapse; font-size: 0.85rem;">
+                <div class="season-table-wrapper" style="margin-top: 1.5rem; max-height: 500px; overflow-y: auto; overflow-x: auto; -webkit-overflow-scrolling: touch; border: 1px solid #E0D9CC; border-radius: 0.5rem;">
+                    <table style="width: 100%; border-collapse: collapse; font-size: 0.85rem; min-width: 600px;">
                         <thead style="position: sticky; top: 0; background: #1B2A4A; color: #C9A86C; z-index: 1;">
                             <tr>
                                 <th style="padding: 0.6rem 0.75rem; text-align: left; font-weight: 600;">Season</th>
