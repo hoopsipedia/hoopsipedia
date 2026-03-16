@@ -1845,7 +1845,7 @@
                         card.innerHTML = `
                             <div style="position: absolute; top: 0.35rem; left: 0.45rem; font-size: 0.7rem; font-weight: 800; color: #C9A86C;">${entry.current}</div>
                             <div class="program-logo" style="background-image: url('${getLogoUrl(espnId)}');"></div>
-                            <div class="program-name">${entry.team?.shortDisplayName || entry.team?.displayName || 'Unknown'}</div>
+                            <div class="program-name">${entry.team?.nickname || entry.team?.location || entry.team?.shortDisplayName || entry.team?.displayName || 'Unknown'}</div>
                             <div style="font-size: 0.72rem; color: #8892A0; margin-top: 0.2rem;">${record}</div>
                         `;
                         card.addEventListener('click', () => {
@@ -1886,9 +1886,13 @@
                 { key: 'natlChamps', label: 'Championships' },
                 { key: 'finalFours', label: 'Final Fours' },
                 { key: 'elite8s', label: 'Elite Eights' },
+                { key: 'sweet16s', label: 'Sweet Sixteens' },
                 { key: 'ncaaTourneys', label: 'NCAA Tournaments' },
                 { key: 'confTitles', label: 'Conference Titles' },
-                { key: 'apWeeksRanked', label: 'AP Weeks Ranked' }
+                { key: 'allAmericans', label: 'All-Americans' },
+                { key: 'nbaFirstRound', label: 'NBA 1st Round Picks' },
+                { key: 'apWeeksRanked', label: 'AP Weeks Ranked' },
+                { key: 'winPct', label: 'Win Percentage' }
             ];
 
             const filterContainer = document.getElementById('leaderFilterButtons');
@@ -1940,7 +1944,8 @@
             tbody.innerHTML = '';
 
             sorted.forEach((team, idx) => {
-                const statValue = team[currentLeadersStat];
+                const rawValue = team[currentLeadersStat];
+                const statValue = currentLeadersStat === 'winPct' ? rawValue + '%' : rawValue;
                 const row = document.createElement('tr');
                 row.innerHTML = `
                     <td>${idx + 1}</td>
@@ -3385,6 +3390,7 @@
             const regions = { 'South': [], 'East': [], 'Midwest': [], 'West': [] };
             const finalFourGames = [];
             const champGame = [];
+            const firstFourGames = [];
 
             // Parse events into regions and rounds
             Object.values(bracketData).forEach(event => {
@@ -3392,8 +3398,19 @@
                 const comp = event.competitions[0];
                 const note = (comp.notes && comp.notes[0]) ? comp.notes[0].headline : '';
 
-                if (note.includes('Championship')) { champGame.push(event); return; }
+                if (note.includes('National Championship') || (note.includes('Championship') && !note.includes('Region'))) { champGame.push(event); return; }
                 if (note.includes('Final Four') || note.includes('Semifinal')) { finalFourGames.push(event); return; }
+
+                // Capture First Four games for play-in labels
+                if (note.includes('First Four')) {
+                    const teams = comp.competitors || [];
+                    const seed = teams[0]?.curatedRank?.current || 0;
+                    const region = note.includes('East') ? 'East' : note.includes('West') ? 'West' : note.includes('Midwest') ? 'Midwest' : 'South';
+                    const names = teams.map(c => c.team?.shortDisplayName || c.team?.nickname || c.team?.location || 'TBD');
+                    const winner = teams.find(c => c.winner);
+                    firstFourGames.push({ region, seed, names, winner, teamIds: teams.map(c => String(c.team?.id)) });
+                    return;
+                }
 
                 let region = 'South';
                 if (note.includes('East')) region = 'East';
@@ -3404,6 +3421,9 @@
                     regions[region].push(event);
                 }
             });
+
+            // Store firstFourGames globally for createMatchupCard to reference
+            window._firstFourGames = firstFourGames;
 
             // Build the true bracket layout: Left regions | Center (FF/Champ) | Right regions
             const bracketFull = document.createElement('div');
@@ -3422,11 +3442,11 @@
             centerCol.innerHTML = `
                 <div class="bracket-round-label">Final Four</div>
                 ${finalFourGames.length > 0 ? finalFourGames.map(e => createMatchupCard(e).outerHTML).join('') :
-                    '<div class="bracket-matchup" style="min-width:140px;"><div class="matchup-team" style="cursor:default;justify-content:center;color:#8892A0;">April 4</div><div class="matchup-team" style="cursor:default;justify-content:center;color:#8892A0;">TBD</div></div>' +
-                    '<div class="bracket-matchup" style="min-width:140px;"><div class="matchup-team" style="cursor:default;justify-content:center;color:#8892A0;">April 4</div><div class="matchup-team" style="cursor:default;justify-content:center;color:#8892A0;">TBD</div></div>'}
+                    '<div class="bracket-matchup" style="min-width:140px;"><div class="matchup-team" style="cursor:default;color:#C4B99A;"><span class="team-name-bracket" style="opacity:0.5;">April 4</span></div><div class="matchup-team" style="cursor:default;color:#C4B99A;"><span class="team-name-bracket" style="opacity:0.5;">—</span></div></div>' +
+                    '<div class="bracket-matchup" style="min-width:140px;"><div class="matchup-team" style="cursor:default;color:#C4B99A;"><span class="team-name-bracket" style="opacity:0.5;">April 4</span></div><div class="matchup-team" style="cursor:default;color:#C4B99A;"><span class="team-name-bracket" style="opacity:0.5;">—</span></div></div>'}
                 <div class="bracket-round-label" style="margin-top:1rem;">Championship</div>
                 ${champGame.length > 0 ? champGame.map(e => createMatchupCard(e).outerHTML).join('') :
-                    '<div class="bracket-matchup" style="min-width:140px;"><div class="matchup-team" style="cursor:default;justify-content:center;color:#8892A0;">April 6</div><div class="matchup-team" style="cursor:default;justify-content:center;color:#8892A0;">TBD</div></div>'}
+                    '<div class="bracket-matchup" style="min-width:140px;"><div class="matchup-team" style="cursor:default;color:#C4B99A;"><span class="team-name-bracket" style="opacity:0.5;">April 6</span></div><div class="matchup-team" style="cursor:default;color:#C4B99A;"><span class="team-name-bracket" style="opacity:0.5;">—</span></div></div>'}
             `;
             bracketFull.appendChild(centerCol);
 
@@ -3456,10 +3476,28 @@
             const rounds = { 'R64': [], 'R32': [], 'S16': [], 'E8': [] };
             events.forEach(event => {
                 const note = (event.competitions[0].notes && event.competitions[0].notes[0]) ? event.competitions[0].notes[0].headline : '';
-                if (note.includes('Elite Eight')) rounds['E8'].push(event);
-                else if (note.includes('Sweet')) rounds['S16'].push(event);
-                else if (note.includes('Round of 32') || note.includes('Second Round')) rounds['R32'].push(event);
+                if (note.includes('Elite Eight') || note.includes('Elite 8')) rounds['E8'].push(event);
+                else if (note.includes('Sweet 16') || note.includes('Sweet Sixteen')) rounds['S16'].push(event);
+                else if (note.includes('2nd Round') || note.includes('Round of 32') || note.includes('Second Round')) rounds['R32'].push(event);
                 else rounds['R64'].push(event);
+            });
+
+            // Sort R64 games in proper NCAA bracket order: 1v16, 8v9, 5v12, 4v13, 6v11, 3v14, 7v10, 2v15
+            const bracketOrder = [1, 8, 5, 4, 6, 3, 7, 2];
+            rounds['R64'].sort((a, b) => {
+                const topSeedA = Math.min(...(a.competitions[0].competitors || []).map(c => c.curatedRank?.current || 99));
+                const topSeedB = Math.min(...(b.competitions[0].competitors || []).map(c => c.curatedRank?.current || 99));
+                const posA = bracketOrder.indexOf(topSeedA);
+                const posB = bracketOrder.indexOf(topSeedB);
+                return (posA === -1 ? 99 : posA) - (posB === -1 ? 99 : posB);
+            });
+            // Sort later rounds by the lowest seed among their competitors (winners flow naturally)
+            ['R32', 'S16', 'E8'].forEach(roundKey => {
+                rounds[roundKey].sort((a, b) => {
+                    const seedA = Math.min(...(a.competitions[0].competitors || []).map(c => c.curatedRank?.current || 99));
+                    const seedB = Math.min(...(b.competitions[0].competitors || []).map(c => c.curatedRank?.current || 99));
+                    return seedA - seedB;
+                });
             });
 
             const roundLabels = { 'R64': '1st Round', 'R32': '2nd Round', 'S16': 'Sweet 16', 'E8': 'Elite 8' };
@@ -3485,8 +3523,8 @@
                         const placeholder = document.createElement('div');
                         placeholder.className = 'bracket-matchup';
                         placeholder.innerHTML = `
-                            <div class="matchup-team" style="cursor:default;justify-content:center;color:#B0B8C4;">TBD</div>
-                            <div class="matchup-team" style="cursor:default;justify-content:center;color:#B0B8C4;">TBD</div>
+                            <div class="matchup-team" style="cursor:default;color:#C4B99A;"><span class="team-seed" style="opacity:0.4;">-</span><span class="team-name-bracket" style="opacity:0.4;">—</span></div>
+                            <div class="matchup-team" style="cursor:default;color:#C4B99A;"><span class="team-seed" style="opacity:0.4;">-</span><span class="team-name-bracket" style="opacity:0.4;">—</span></div>
                         `;
                         col.appendChild(placeholder);
                     }
@@ -3506,6 +3544,10 @@
             const isLive = statusType === 'STATUS_IN_PROGRESS';
             const isFinal = statusType === 'STATUS_FINAL';
 
+            // Determine region for First Four lookup
+            const gameNote = (comp.notes && comp.notes[0]) ? comp.notes[0].headline : '';
+            const gameRegion = gameNote.includes('East') ? 'East' : gameNote.includes('West') ? 'West' : gameNote.includes('Midwest') ? 'Midwest' : 'South';
+
             const card = document.createElement('div');
             card.className = 'bracket-matchup';
 
@@ -3519,14 +3561,53 @@
                 const score = c.score || '';
                 const espnId = String(team.id);
 
+                let teamName = team.shortDisplayName || team.nickname || team.location || team.displayName || 'TBD';
+                let logoHtml = `<img src="${getLogoUrl(espnId)}" alt="" class="team-logo-bracket" onerror="this.style.display='none'">`;
+                let displaySeed = seed;
+
+                // Handle TBD teams (seed 99 = ESPN placeholder)
+                if (seed === 99 || teamName === 'TBD') {
+                    const ffGames = window._firstFourGames || [];
+                    // Determine what seed this TBD slot represents from opponent
+                    const otherComp = competitors.find(oc => oc !== c && oc.curatedRank?.current !== 99);
+                    const seedMap = {1:16, 16:1, 8:9, 9:8, 5:12, 12:5, 4:13, 13:4, 6:11, 11:6, 3:14, 14:3, 7:10, 10:7, 2:15, 15:2};
+                    const expectedSeed = otherComp ? seedMap[otherComp.curatedRank?.current] : null;
+
+                    if (expectedSeed) {
+                        // This is an R64 TBD — check if a First Four game feeds into it
+                        const ffMatch = ffGames.find(ff => ff.region === gameRegion && ff.seed === expectedSeed);
+                        if (ffMatch) {
+                            displaySeed = expectedSeed;
+                            if (ffMatch.winner) {
+                                const w = ffMatch.winner.team;
+                                teamName = w.shortDisplayName || w.nickname || w.location || 'TBD';
+                                logoHtml = `<img src="${getLogoUrl(String(w.id))}" alt="" class="team-logo-bracket" onerror="this.style.display='none'">`;
+                            } else {
+                                teamName = ffMatch.names.join('/');
+                                logoHtml = '';
+                            }
+                        } else {
+                            // No First Four — just an unknown TBD
+                            displaySeed = '-';
+                            teamName = '—';
+                            logoHtml = '';
+                        }
+                    } else {
+                        // Both teams TBD (future round) — show empty slot
+                        displaySeed = '-';
+                        teamName = '—';
+                        logoHtml = '';
+                    }
+                }
+
                 // Make team name clickable
-                teamEl.onclick = () => openProfileById(espnId);
-                teamEl.title = 'View ' + team.displayName + ' profile';
+                teamEl.onclick = () => { if (teamName !== 'TBD') openProfileById(espnId); };
+                teamEl.title = teamName !== 'TBD' ? 'View ' + teamName + ' profile' : '';
 
                 teamEl.innerHTML = `
-                    <span class="team-seed">${seed}</span>
-                    <img src="${getLogoUrl(espnId)}" alt="" class="team-logo-bracket" onerror="this.style.display='none'">
-                    <span class="team-name-bracket">${team.shortDisplayName || team.displayName}</span>
+                    <span class="team-seed">${displaySeed}</span>
+                    ${logoHtml}
+                    <span class="team-name-bracket">${teamName}</span>
                     <span class="team-score ${isLive ? 'live' : ''}">${isLive ? score : isFinal ? score : ''}</span>
                 `;
 
