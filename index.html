@@ -5,6 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="fo-verify" content="2a1519ca-508b-41b8-a153-ed96332636b1" />
     <title>Hoopsipedia - College Basketball Historical Database</title>
+    <meta name="description" content="The complete historical database of college basketball. Compare programs, explore all-time stats, track the NCAA Tournament bracket, and discover every team's legacy.">
+    <meta name="theme-color" content="#1B2A4A">
+
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Hoopsipedia - College Basketball Historical Database">
+    <meta property="og:description" content="Compare programs, explore all-time stats, track the NCAA bracket, and discover every team's legacy. 360+ D1 programs, fully verified.">
+    <meta property="og:site_name" content="Hoopsipedia">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Hoopsipedia">
+    <meta name="twitter:description" content="The complete historical database of college basketball.">
+
+    <!-- Favicon (inline SVG basketball) -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%23E87C1E' stroke='%231B2A4A' stroke-width='1.5'/%3E%3Cline x1='1' y1='16' x2='31' y2='16' stroke='%231B2A4A' stroke-width='1'/%3E%3Cline x1='16' y1='1' x2='16' y2='31' stroke='%231B2A4A' stroke-width='1'/%3E%3Cpath d='M5 5 Q16 16 27 27' fill='none' stroke='%231B2A4A' stroke-width='0.8'/%3E%3Cpath d='M27 5 Q16 16 5 27' fill='none' stroke='%231B2A4A' stroke-width='0.8'/%3E%3C/svg%3E">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
@@ -116,6 +131,8 @@
         .game-team-name { font-weight: 600; color: #2C3345; font-size: 0.9rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
         .game-team-record { font-size: 0.8rem; color: #8892A0; }
         .game-vs { font-size: 0.75rem; color: #A0AAB8; font-weight: 500; text-align: center; padding: 0 0.4rem; }
+        .game-team-clickable { cursor: pointer; border-radius: 0.5rem; padding: 0.25rem; margin: -0.25rem; transition: background 0.15s ease; }
+        .game-team-clickable:hover { background: #F5F3EE; }
         .game-matchup-bar { display: flex; height: 12px; gap: 0; overflow: hidden; border-radius: 2px; }
         .game-bar-team1 { flex-grow: 1; background: #1B2A4A; }
         .game-bar-team2 { flex-grow: 1; background: #C9A86C; }
@@ -126,6 +143,11 @@
         }
         .game-matchup-button:hover { background: #243556; transform: translateY(-1px); }
         .game-time { font-size: 0.75rem; color: #A0AAB8; text-align: center; margin-top: 0.5rem; }
+        .ticket-link {
+            display: block; text-align: center; font-size: 0.78rem; color: #9E7C4A;
+            text-decoration: none; padding: 0.3rem 0; transition: all 0.2s ease;
+        }
+        .ticket-link:hover { color: #1B2A4A; text-decoration: underline; }
 
         /* ── Compare Section ── */
         .compare-section {
@@ -257,6 +279,15 @@
         .stat-value.winner { color: #1B2A4A; font-weight: 800; }
         .stat-value.loser { color: #A0AAB8; }
         .stat-label { font-weight: 600; color: #5A6578; font-size: 0.9rem; text-align: center; min-width: 140px; }
+
+        .comparison-tabs { display: flex; gap: 0; margin-bottom: 2rem; border-bottom: 2px solid #E0D9CC; }
+        .comp-tab {
+            flex: 1; padding: 0.85rem 1.5rem; background: none; border: none;
+            font-size: 1rem; font-weight: 600; color: #8892A0; cursor: pointer;
+            border-bottom: 3px solid transparent; margin-bottom: -2px; transition: all 0.2s ease;
+        }
+        .comp-tab:hover { color: #2C3345; }
+        .comp-tab.active { color: #1B2A4A; border-bottom-color: #C9A86C; }
 
         /* ── Rankings Filters ── */
         .filter-buttons { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 1.75rem; }
@@ -430,7 +461,7 @@
         /* ── Bracket View ── */
         .bracket-header {
             display: flex; align-items: center; justify-content: space-between;
-            margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 2px solid #E0D9CC;
+            margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 2px solid #E0D9CC;
         }
         .bracket-info { display: flex; gap: 1.5rem; align-items: center; }
         .last-updated {
@@ -439,54 +470,122 @@
         }
         .bracket-container {
             background: #FFFFFF; border: 1px solid #E0D9CC; border-radius: 0.75rem;
-            padding: 2rem; overflow-x: auto; min-height: 600px;
+            padding: 1rem; overflow-x: auto; overflow-y: auto; min-height: 600px;
         }
-        .bracket-layout {
-            display: flex; gap: 2rem; justify-content: center; align-items: flex-start;
-            min-width: min-content;
+        .bracket-full {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            gap: 0;
+            min-width: 1200px;
         }
-        .bracket-region {
-            display: flex; flex-direction: column; gap: 1.5rem; min-width: 320px;
+        .bracket-half {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
         }
-        .bracket-round {
-            display: flex; flex-direction: column; gap: 1rem;
+        .bracket-half.right .bracket-region-row { flex-direction: row-reverse; }
+        .bracket-region-row {
+            display: flex;
+            gap: 0;
+            align-items: stretch;
+        }
+        .bracket-round-col {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            min-width: 145px;
+            padding: 0 2px;
+            gap: 4px;
+            position: relative;
+        }
+        /* Connector lines between rounds */
+        .bracket-round-col:not(:first-child) .bracket-matchup {
+            position: relative;
+        }
+        .bracket-half.left .bracket-round-col:not(:first-child) .bracket-matchup::before {
+            content: '';
+            position: absolute;
+            left: -10px;
+            top: 50%;
+            width: 10px;
+            height: 1px;
+            background: #C4B99A;
+        }
+        .bracket-half.right .bracket-round-col:not(:last-child) .bracket-matchup::before {
+            content: '';
+            position: absolute;
+            right: -10px;
+            top: 50%;
+            width: 10px;
+            height: 1px;
+            background: #C4B99A;
+        }
+        /* Vertical connectors for left-side brackets */
+        .bracket-half.left .bracket-round-col:not(:first-child) .bracket-matchup::after {
+            content: '';
+            position: absolute;
+            left: -10px;
+            top: 25%;
+            width: 1px;
+            height: 50%;
+            background: #C4B99A;
+        }
+        /* Vertical connectors for right-side brackets */
+        .bracket-half.right .bracket-round-col:not(:last-child) .bracket-matchup::after {
+            content: '';
+            position: absolute;
+            right: -10px;
+            top: 25%;
+            width: 1px;
+            height: 50%;
+            background: #C4B99A;
+        }
+        .bracket-region-label {
+            text-align: center;
+            font-size: 0.85rem; font-weight: 700; color: #1B2A4A; text-transform: uppercase;
+            letter-spacing: 0.08em; margin-bottom: 0.5rem;
+            background: #F5F3EE; padding: 0.4rem 0.8rem; border-radius: 0.375rem;
+        }
+        .bracket-round-header {
+            text-align: center; font-size: 0.65rem; font-weight: 700; color: #8892A0;
+            text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 4px;
+        }
+        .bracket-center-col {
+            display: flex; flex-direction: column; justify-content: center; align-items: center;
+            min-width: 160px; gap: 1rem; padding: 0 0.5rem;
         }
         .bracket-matchup {
-            background: #F5F3EE; border: 1px solid #D6CFC2; border-radius: 0.5rem;
-            overflow: hidden; min-width: 160px; transition: all 0.2s ease;
+            background: #F5F3EE; border: 1px solid #D6CFC2; border-radius: 0.375rem;
+            overflow: hidden; transition: all 0.2s ease; font-size: 0.75rem;
         }
         .bracket-matchup:hover {
-            border-color: #C9A86C; box-shadow: 0 4px 12px rgba(201,168,108,0.15);
+            border-color: #C9A86C; box-shadow: 0 2px 8px rgba(201,168,108,0.15);
         }
         .matchup-team {
-            padding: 0.75rem; display: flex; align-items: center; gap: 0.6rem;
-            border-bottom: 1px solid #D6CFC2; font-size: 0.85rem; cursor: default;
-            transition: background 0.2s ease;
+            padding: 0.35rem 0.5rem; display: flex; align-items: center; gap: 0.4rem;
+            border-bottom: 1px solid #E0D9CC; font-size: 0.75rem; cursor: pointer;
+            transition: background 0.15s ease;
         }
         .matchup-team:last-child { border-bottom: none; }
         .matchup-team.winner { background: #FFFFFF; font-weight: 700; color: #1B2A4A; }
         .matchup-team.loser { color: #999; opacity: 0.65; }
         .matchup-team:hover { background: #FFFAF4; }
         .team-seed {
-            font-weight: 700; color: #C9A86C; min-width: 28px; text-align: center; font-size: 0.8rem;
+            font-weight: 700; color: #C9A86C; min-width: 18px; text-align: center; font-size: 0.7rem;
         }
-        .team-logo { width: 24px; height: 24px; border-radius: 0.25rem; object-fit: contain; }
-        .team-name { flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+        .team-logo-bracket { width: 18px; height: 18px; object-fit: contain; flex-shrink: 0; }
+        .team-name-bracket {
+            flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+            font-size: 0.73rem;
+        }
         .team-score {
-            font-weight: 700; color: #1B2A4A; min-width: 32px; text-align: right; font-size: 0.9rem;
+            font-weight: 700; color: #1B2A4A; min-width: 24px; text-align: right; font-size: 0.75rem;
         }
         .team-score.live { animation: pulse 1.5s ease-in-out infinite; }
         @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.6; } }
-        .live-badge {
-            display: inline-block; background: #E87C1E; color: #fff; font-size: 0.65rem;
-            font-weight: 700; padding: 0.2rem 0.4rem; border-radius: 0.25rem; margin-left: 0.4rem;
-        }
-        .bracket-center {
-            display: flex; flex-direction: column; gap: 3rem; justify-content: center; align-items: center;
-        }
         .bracket-round-label {
-            font-size: 0.8rem; font-weight: 700; color: #8892A0; text-transform: uppercase;
-            letter-spacing: 0.05em; margin-bottom: 0.5rem;
+            font-size: 0.75rem; font-weight: 700; color: #8892A0; text-transform: uppercase;
+            letter-spacing: 0.05em; margin-bottom: 0.5rem; text-align: center;
         }
 
         /* ── H2H / Correction Modal ── */
@@ -561,6 +660,23 @@
             .stat-row { grid-template-columns: 1fr; gap: 0.85rem; }
             .stat-left { justify-content: flex-start; }
             .teams-controls { flex-direction: column; gap: 0.75rem; }
+
+            /* Mobile bracket: stacked regions */
+            .bracket-full { grid-template-columns: 1fr; min-width: unset; }
+            .bracket-half { flex-direction: column; }
+            .bracket-region-row { flex-direction: column !important; }
+            .bracket-round-col { min-width: unset; }
+            .bracket-center-col { min-width: unset; padding: 1rem 0; }
+            .bracket-container { min-height: auto; }
+            .bracket-matchup::before, .bracket-matchup::after { display: none; }
+
+            /* Mobile bracket notice */
+            .bracket-desktop-hint { display: block; }
+        }
+        .bracket-desktop-hint {
+            display: none; text-align: center; padding: 0.6rem 1rem;
+            background: #FFFAF4; border: 1px solid #E0D9CC; border-radius: 0.375rem;
+            font-size: 0.8rem; color: #9E7C4A; margin-bottom: 1rem;
         }
     </style>
 </head>
@@ -600,7 +716,7 @@
             </div>
 
             <div class="games-section">
-                <h2 class="section-title">Today's Games</h2>
+                <h2 class="section-title">Upcoming Games</h2>
                 <div class="games-grid" id="gamesGrid"></div>
             </div>
 
@@ -629,7 +745,7 @@
                 </div>
             </div>
 
-            <h2 class="section-title">Popular Programs</h2>
+            <h2 class="section-title" id="popularTitle">AP Top 25</h2>
             <div class="programs-grid" id="popularGrid"></div>
 
             <h2 class="section-title">All-Time Leaders</h2>
@@ -664,6 +780,7 @@
                     <span class="last-updated">Last updated: <span id="bracketTimestamp">--:--:--</span></span>
                 </div>
             </div>
+            <div class="bracket-desktop-hint">For the best bracket experience, view on a desktop or rotate your device to landscape.</div>
             <div class="bracket-container" id="bracketContainer"></div>
         </div>
 
@@ -709,6 +826,43 @@
             <div id="profileContent"></div>
         </div>
     </div>
+
+    <!-- Footer -->
+    <footer style="background: #1B2A4A; border-top: 3px solid #C9A86C; padding: 2.5rem 2rem 1.5rem; margin-top: 3rem;">
+        <div style="max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem;">
+            <div>
+                <div style="font-family: 'Lobster', cursive; font-size: 1.4rem; color: #C9A86C; margin-bottom: 0.75rem;">Hoopsipedia</div>
+                <div style="font-size: 0.85rem; color: rgba(255,255,255,0.5); line-height: 1.6;">The complete historical database of college basketball. 360+ D1 programs, fully verified.</div>
+            </div>
+            <div>
+                <div style="font-size: 0.75rem; font-weight: 700; color: rgba(255,255,255,0.4); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.75rem;">Navigate</div>
+                <div style="display: flex; flex-direction: column; gap: 0.4rem;">
+                    <a href="#" onclick="switchView('home'); return false;" style="font-size: 0.85rem; color: rgba(255,255,255,0.65); text-decoration: none; transition: color 0.2s;">Home</a>
+                    <a href="#" onclick="switchView('bracket'); return false;" style="font-size: 0.85rem; color: rgba(255,255,255,0.65); text-decoration: none; transition: color 0.2s;">Bracket</a>
+                    <a href="#" onclick="switchView('rankings'); return false;" style="font-size: 0.85rem; color: rgba(255,255,255,0.65); text-decoration: none; transition: color 0.2s;">Rankings</a>
+                    <a href="#" onclick="switchView('teams'); return false;" style="font-size: 0.85rem; color: rgba(255,255,255,0.65); text-decoration: none; transition: color 0.2s;">Teams</a>
+                </div>
+            </div>
+            <div>
+                <div style="font-size: 0.75rem; font-weight: 700; color: rgba(255,255,255,0.4); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.75rem;">About</div>
+                <div style="display: flex; flex-direction: column; gap: 0.4rem;">
+                    <a href="about.html" style="font-size: 0.85rem; color: rgba(255,255,255,0.65); text-decoration: none;">About Hoopsipedia</a>
+                    <a href="contact.html" style="font-size: 0.85rem; color: rgba(255,255,255,0.65); text-decoration: none;">Contact</a>
+                    <a href="privacy.html" style="font-size: 0.85rem; color: rgba(255,255,255,0.65); text-decoration: none;">Privacy Policy</a>
+                    <a href="terms.html" style="font-size: 0.85rem; color: rgba(255,255,255,0.65); text-decoration: none;">Terms of Service</a>
+                </div>
+            </div>
+            <div>
+                <div style="font-size: 0.75rem; font-weight: 700; color: rgba(255,255,255,0.4); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.75rem;">Data Sources</div>
+                <div style="font-size: 0.8rem; color: rgba(255,255,255,0.45); line-height: 1.6;">
+                    Team data verified against NCAA recordbooks and Sports Reference. Live scores via ESPN. Ticket data via SeatGeek.
+                </div>
+            </div>
+        </div>
+        <div style="max-width: 1400px; margin: 1.5rem auto 0; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1); text-align: center; font-size: 0.75rem; color: rgba(255,255,255,0.3);">
+            &copy; 2026 Hoopsipedia. Not affiliated with the NCAA, ESPN, or any member institution.
+        </div>
+    </footer>
 
     <!-- Correction Modal -->
     <div class="modal-overlay" id="correctionModal">
@@ -767,7 +921,49 @@
             CT: 12, AA: 13, NBA: 14, APW: 15
         };
 
-        // Data loaded dynamically from hoopsipedia-data.json
+        // ── SeatGeek Ticket Integration ──
+        const SEATGEEK_CLIENT_ID = 'PLACEHOLDER_CLIENT_ID';
+        const SEATGEEK_AFFILIATE_ID = 'PLACEHOLDER_AFF_ID';
+        const SEATGEEK_PARTNER_ID = 'PLACEHOLDER_PARTNER_ID';
+        const TICKET_CACHE = {};
+        const TICKET_CACHE_TTL = 30 * 60 * 1000; // 30 minutes
+
+        function getTeamSlug(teamName) {
+            return teamName.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/-+/g, '-').replace(/^-|-$/g, '');
+        }
+
+        async function fetchTicketData(team1Name, team2Name) {
+            const cacheKey = [team1Name, team2Name].sort().join('|');
+            if (TICKET_CACHE[cacheKey] && Date.now() - TICKET_CACHE[cacheKey].ts < TICKET_CACHE_TTL) {
+                return TICKET_CACHE[cacheKey].data;
+            }
+            try {
+                const q = encodeURIComponent(team1Name.split(' ').slice(0, -1).join(' ') + ' ' + team2Name.split(' ').slice(0, -1).join(' '));
+                const url = `https://api.seatgeek.com/2/events?client_id=${SEATGEEK_CLIENT_ID}&q=${q}&type=ncaa_basketball&per_page=1`;
+                const resp = await fetch(url);
+                if (!resp.ok) return null;
+                const data = await resp.json();
+                const event = data.events?.[0];
+                if (!event || !event.stats?.lowest_price) return null;
+                const result = {
+                    price: event.stats.lowest_price,
+                    url: event.url + `?aid=${SEATGEEK_AFFILIATE_ID}&pid=${SEATGEEK_PARTNER_ID}`,
+                    venue: event.venue?.name || '',
+                    date: event.datetime_utc
+                };
+                TICKET_CACHE[cacheKey] = { data: result, ts: Date.now() };
+                return result;
+            } catch (e) {
+                return null;
+            }
+        }
+
+        function renderTicketLink(ticket) {
+            if (!ticket) return '';
+            return `<a href="${ticket.url}" target="_blank" rel="noopener" class="ticket-link">🎟️ Buy Tickets from $${ticket.price}</a>`;
+        }
+
+        // Data loaded dynamically from data.json
         let H = {};
         let COACHES = {};
 
@@ -957,6 +1153,9 @@
             const navBtn = document.querySelector(`[data-view="${view}"]`);
             if (navBtn) navBtn.classList.add('active');
 
+            // Scroll to top on view change
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
             if (view === 'home') {
                 renderHome();
                 if (bracketRefreshInterval) clearInterval(bracketRefreshInterval);
@@ -984,16 +1183,39 @@
 
         function renderTodaysGames() {
             const grid = document.getElementById('gamesGrid');
-            grid.innerHTML = '<div class="chart-loading">Loading today\'s games...</div>';
+            grid.innerHTML = '<div class="chart-loading">Loading upcoming games...</div>';
 
-            fetch('https://site.api.espn.com/apis/site/v2/sports/basketball/mens-college-basketball/scoreboard')
-                .then(r => r.json())
-                .then(data => {
-                    const games = (data.events || []).slice(0, 5);
+            // Fetch today's scoreboard plus upcoming days to get at least 5 games
+            const today = new Date();
+            const urls = [];
+            for (let i = 0; i < 7; i++) {
+                const d = new Date(today);
+                d.setDate(d.getDate() + i);
+                const dateStr = d.toISOString().split('T')[0].replace(/-/g, '');
+                urls.push(`https://site.api.espn.com/apis/site/v2/sports/basketball/mens-college-basketball/scoreboard?dates=${dateStr}&groups=50`);
+            }
+
+            Promise.all(urls.map(u => fetch(u).then(r => r.json()).catch(() => ({ events: [] }))))
+                .then(results => {
+                    let allGames = [];
+                    results.forEach(data => {
+                        (data.events || []).forEach(event => {
+                            const comp = event.competitions?.[0];
+                            if (comp && comp.competitors?.length === 2) {
+                                allGames.push(event);
+                            }
+                        });
+                    });
+
+                    // Deduplicate by event ID and take first 5
+                    const seen = new Set();
+                    allGames = allGames.filter(e => { if (seen.has(e.id)) return false; seen.add(e.id); return true; });
+                    const games = allGames.slice(0, 5);
+
                     grid.innerHTML = '';
 
                     if (games.length === 0) {
-                        grid.innerHTML = '<div class="chart-loading">No games scheduled for today</div>';
+                        grid.innerHTML = '<div class="chart-loading">No upcoming games found</div>';
                         return;
                     }
 
@@ -1003,17 +1225,19 @@
 
                         let team1 = competitors[0];
                         let team2 = competitors[1];
-
                         if (!team1 || !team2) return;
 
                         const t1EspnId = String(team1.team.id);
                         const t2EspnId = String(team2.team.id);
-
                         const t1Data = allTeamsData.find(t => t.espnId === t1EspnId);
                         const t2Data = allTeamsData.find(t => t.espnId === t2EspnId);
 
                         const card = document.createElement('div');
                         card.className = 'game-card';
+
+                        // Pull current season record from ESPN API data
+                        const t1Record = team1.records?.[0]?.summary || (t1Data ? `${t1Data.allTimeW}W all-time` : '?');
+                        const t2Record = team2.records?.[0]?.summary || (t2Data ? `${t2Data.allTimeW}W all-time` : '?');
 
                         const t1Wins = t1Data ? t1Data.allTimeW : 0;
                         const t1Total = t1Data ? (t1Data.allTimeW + t1Data.allTimeL) : 1;
@@ -1023,44 +1247,82 @@
                         const t1Pct = (t1Wins / t1Total) * 100;
                         const t2Pct = (t2Wins / t2Total) * 100;
                         const totalPct = t1Pct + t2Pct;
-
                         const bar1Width = totalPct > 0 ? (t1Pct / totalPct) * 100 : 50;
                         const bar2Width = totalPct > 0 ? (t2Pct / totalPct) * 100 : 50;
 
-                        const time = comp.startDate ? new Date(comp.startDate).toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' }) : 'TBA';
+                        // Format time in EST — check for TBD
+                        let timeStr = 'TBD';
+                        if (comp.startDate) {
+                            const d = new Date(comp.startDate);
+                            const estTime = d.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', timeZone: 'America/New_York' });
+                            const estDate = d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', timeZone: 'America/New_York' });
+                            // ESPN uses midnight (12:00 AM) for TBD times
+                            const hours = parseInt(d.toLocaleTimeString('en-US', { hour: 'numeric', hour12: false, timeZone: 'America/New_York' }));
+                            const mins = d.getMinutes();
+                            if (hours === 0 && mins === 0) {
+                                timeStr = estDate + ' · TBD';
+                            } else {
+                                timeStr = estDate + ' · ' + estTime + ' EST';
+                            }
+                        }
+
+                        // Check game status
+                        const status = comp.status?.type?.description || '';
+                        if (status === 'In Progress') {
+                            const period = comp.status?.period || 0;
+                            const clock = comp.status?.displayClock || '';
+                            timeStr = period <= 2 ? `${period === 1 ? '1st' : '2nd'} Half ${clock}` : `OT ${clock}`;
+                        } else if (status === 'Final') {
+                            timeStr = 'Final';
+                        }
 
                         card.innerHTML = `
                             <div class="game-card-header">
-                                <div class="game-team">
+                                <div class="game-team game-team-clickable" onclick="openProfileById('${t1EspnId}')" title="View ${team1.team.displayName} profile">
                                     <div class="game-team-logo" style="background-image: url('${getLogoUrl(t1EspnId)}');"></div>
                                     <div class="game-team-info">
                                         <div class="game-team-name">${team1.team.displayName}</div>
-                                        <div class="game-team-record">${t1Data ? `${t1Wins}W` : '?'}</div>
+                                        <div class="game-team-record">${t1Record}</div>
                                     </div>
                                 </div>
                                 <div class="game-vs">vs</div>
-                                <div class="game-team">
+                                <div class="game-team game-team-clickable" onclick="openProfileById('${t2EspnId}')" title="View ${team2.team.displayName} profile" style="flex-direction: row-reverse;">
+                                    <div class="game-team-logo" style="background-image: url('${getLogoUrl(t2EspnId)}');"></div>
                                     <div class="game-team-info" style="text-align: right;">
                                         <div class="game-team-name">${team2.team.displayName}</div>
-                                        <div class="game-team-record">${t2Data ? `${t2Wins}W` : '?'}</div>
+                                        <div class="game-team-record">${t2Record}</div>
                                     </div>
-                                    <div class="game-team-logo" style="background-image: url('${getLogoUrl(t2EspnId)}');"></div>
                                 </div>
                             </div>
                             <div class="game-matchup-bar">
                                 <div class="game-bar-team1" style="flex-basis: ${bar1Width}%;"></div>
                                 <div class="game-bar-team2" style="flex-basis: ${bar2Width}%;"></div>
                             </div>
-                            <button class="game-matchup-button" onclick="openComparison('${t1EspnId}', '${t2EspnId}')">Full Matchup →</button>
-                            <div class="game-time">${time}</div>
+                            <button class="game-matchup-button" onclick="event.stopPropagation(); openComparison('${t1EspnId}', '${t2EspnId}')">Full Matchup →</button>
+                            <div class="game-ticket" id="ticket-${t1EspnId}-${t2EspnId}"></div>
+                            <div class="game-time">${timeStr}</div>
                         `;
 
                         grid.appendChild(card);
+
+                        // Async ticket fetch (non-blocking)
+                        if (SEATGEEK_CLIENT_ID !== 'PLACEHOLDER_CLIENT_ID') {
+                            fetchTicketData(team1.team.displayName, team2.team.displayName).then(ticket => {
+                                const el = document.getElementById('ticket-' + t1EspnId + '-' + t2EspnId);
+                                if (el && ticket) el.innerHTML = renderTicketLink(ticket);
+                            });
+                        }
                     });
                 })
                 .catch(err => {
+                    console.error('Games load error:', err);
                     grid.innerHTML = '<div class="chart-error">Error loading games</div>';
                 });
+        }
+
+        function openProfileById(espnId) {
+            const team = allTeamsData.find(t => t.espnId == espnId);
+            if (team) openProfile(team);
         }
 
         function openComparison(team1Id, team2Id) {
@@ -1072,14 +1334,66 @@
         }
 
         function renderPopularPrograms() {
-            const popular = [96, 150, 153, 2305, 26, 84, 41, 222, 127, 2250, 235, 57];
             const grid = document.getElementById('popularGrid');
+            const titleEl = document.getElementById('popularTitle');
+            grid.innerHTML = '<div class="chart-loading">Loading AP Top 25...</div>';
+
+            fetch('https://site.api.espn.com/apis/site/v2/sports/basketball/mens-college-basketball/rankings')
+                .then(r => r.json())
+                .then(data => {
+                    // Find the AP Poll
+                    const apPoll = data.rankings?.find(r => r.name === 'AP Top 25' || r.name?.includes('AP'));
+                    const ranks = apPoll?.ranks || [];
+
+                    if (ranks.length === 0) {
+                        // Fallback to hardcoded popular programs if no poll available
+                        renderPopularFallback();
+                        return;
+                    }
+
+                    // Update title with poll info
+                    if (titleEl) {
+                        const weekLabel = apPoll.headline || 'AP Top 25';
+                        titleEl.textContent = weekLabel;
+                    }
+
+                    grid.innerHTML = '';
+
+                    ranks.slice(0, 25).forEach(entry => {
+                        const espnId = String(entry.team?.id);
+                        const teamData = allTeamsData.find(t => t.espnId === espnId);
+                        const record = entry.recordSummary || '';
+
+                        const card = document.createElement('div');
+                        card.className = 'program-card';
+                        card.style.cursor = 'pointer';
+                        card.style.position = 'relative';
+                        card.innerHTML = `
+                            <div style="position: absolute; top: 0.35rem; left: 0.45rem; font-size: 0.7rem; font-weight: 800; color: #C9A86C;">${entry.current}</div>
+                            <div class="program-logo" style="background-image: url('${getLogoUrl(espnId)}');"></div>
+                            <div class="program-name">${entry.team?.shortDisplayName || entry.team?.displayName || 'Unknown'}</div>
+                            <div style="font-size: 0.72rem; color: #8892A0; margin-top: 0.2rem;">${record}</div>
+                        `;
+                        card.addEventListener('click', () => {
+                            if (teamData) openProfile(teamData);
+                            else openProfileById(espnId);
+                        });
+                        grid.appendChild(card);
+                    });
+                })
+                .catch(() => renderPopularFallback());
+        }
+
+        function renderPopularFallback() {
+            const grid = document.getElementById('popularGrid');
+            const titleEl = document.getElementById('popularTitle');
+            if (titleEl) titleEl.textContent = 'Popular Programs';
             grid.innerHTML = '';
 
+            const popular = [96, 150, 153, 2305, 26, 84, 41, 222, 127, 2250, 235, 57];
             popular.forEach(espnId => {
                 const team = allTeamsData.find(t => t.espnId == espnId);
                 if (!team) return;
-
                 const card = document.createElement('div');
                 card.className = 'program-card';
                 card.style.cursor = 'pointer';
@@ -1172,81 +1486,237 @@
             switchView('comparison');
             const container = document.getElementById('comparisonContent');
 
-            const stats = [
-                { key: 'allTimeW', label: 'All-Time Wins', unit: '' },
-                { key: 'allTimeW', label: 'Win %', unit: '%', compute: t => ((t.allTimeW / (t.allTimeW + t.allTimeL)) * 100).toFixed(1) },
-                { key: 'natlChamps', label: 'National Championships', unit: '' },
-                { key: 'finalFours', label: 'Final Fours', unit: '' },
-                { key: 'elite8s', label: 'Elite Eights', unit: '' },
-                { key: 'sweet16s', label: 'Sweet Sixteens', unit: '' },
-                { key: 'ncaaTourneys', label: 'NCAA Tournaments', unit: '' },
-                { key: 'confTitles', label: 'Conference Titles', unit: '' },
-                { key: 'allAmericans', label: 'All-Americans', unit: '' },
-                { key: 'nbaFirstRound', label: 'NBA 1st Round Picks', unit: '' },
-                { key: 'apWeeksRanked', label: 'AP Weeks Ranked', unit: '' }
-            ];
+            const t1 = selectedTeam1;
+            const t2 = selectedTeam2;
+            const t1Color = t1.color || '#1B2A4A';
+            const t2Color = t2.color || '#C9A86C';
 
-            let headerHTML = `
+            // Build header with team logos and a tab switcher
+            let html = `
                 <div class="comparison-header">
-                    <div class="comparison-team">
-                        <div class="comparison-team-logo" style="background-image: url('${getLogoUrl(selectedTeam1.espnId)}');"></div>
+                    <div class="comparison-team" style="cursor:pointer" onclick="openProfile(selectedTeam1)">
+                        <div class="comparison-team-logo" style="background-image: url('${getLogoUrl(t1.espnId)}');"></div>
                         <div class="comparison-team-info">
-                            <h3>${selectedTeam1.name}</h3>
-                            <p>${selectedTeam1.allTimeW}-${selectedTeam1.allTimeL}</p>
+                            <h3>${t1.name}</h3>
+                            <p>${t1.allTimeW}-${t1.allTimeL}</p>
                         </div>
                     </div>
                     <div class="comparison-vs-badge">VS</div>
-                    <div class="comparison-team">
-                        <div class="comparison-team-logo" style="background-image: url('${getLogoUrl(selectedTeam2.espnId)}');"></div>
+                    <div class="comparison-team" style="cursor:pointer" onclick="openProfile(selectedTeam2)">
+                        <div class="comparison-team-logo" style="background-image: url('${getLogoUrl(t2.espnId)}');"></div>
                         <div class="comparison-team-info">
-                            <h3>${selectedTeam2.name}</h3>
-                            <p>${selectedTeam2.allTimeW}-${selectedTeam2.allTimeL}</p>
+                            <h3>${t2.name}</h3>
+                            <p>${t2.allTimeW}-${t2.allTimeL}</p>
                         </div>
                     </div>
                 </div>
-                <div class="comparison-stats">
+                <div id="compTicketContainer" style="text-align:center; margin-bottom: 0.5rem;"></div>
+                <div class="comparison-tabs">
+                    <button class="comp-tab active" id="tabH2H" onclick="showCompTab('h2h')">Head-to-Head</button>
+                    <button class="comp-tab" id="tabOverall" onclick="showCompTab('overall')">Full Program Comparison</button>
+                </div>
+                <div id="compH2HContent" class="comp-tab-content">
+                    <div class="chart-loading">Loading head-to-head history...</div>
+                </div>
+                <div id="compOverallContent" class="comp-tab-content" style="display:none;"></div>
             `;
+            container.innerHTML = html;
 
-            stats.forEach(stat => {
-                let val1, val2;
+            // Load H2H data and render overall stats
+            loadH2HData(t1, t2);
+            renderOverallComparison(t1, t2);
 
-                if (stat.compute) {
-                    val1 = stat.compute(selectedTeam1);
-                    val2 = stat.compute(selectedTeam2);
-                } else {
-                    val1 = selectedTeam1[stat.key];
-                    val2 = selectedTeam2[stat.key];
+            // Check for upcoming matchup tickets between these two teams
+            if (SEATGEEK_CLIENT_ID !== 'PLACEHOLDER_CLIENT_ID') {
+                fetchTicketData(t1.name, t2.name).then(ticket => {
+                    const ticketEl = document.getElementById('compTicketContainer');
+                    if (ticketEl && ticket) {
+                        ticketEl.innerHTML = renderTicketLink(ticket);
+                    }
+                });
+            }
+        }
+
+        function showCompTab(tab) {
+            document.getElementById('tabH2H').className = 'comp-tab' + (tab === 'h2h' ? ' active' : '');
+            document.getElementById('tabOverall').className = 'comp-tab' + (tab === 'overall' ? ' active' : '');
+            document.getElementById('compH2HContent').style.display = tab === 'h2h' ? 'block' : 'none';
+            document.getElementById('compOverallContent').style.display = tab === 'overall' ? 'block' : 'none';
+        }
+
+        function loadH2HData(t1, t2) {
+            const container = document.getElementById('compH2HContent');
+            const t1Color = t1.color || '#1B2A4A';
+            const t2Color = t2.color || '#C9A86C';
+
+            // Scan recent seasons for actual matchups between these two teams
+            container.innerHTML = '<div class="chart-loading">Searching for historical matchups...</div>';
+
+            const currentYear = new Date().getFullYear();
+            const startYear = currentYear - 10;
+            const years = [];
+            for (let y = startYear; y <= currentYear; y++) years.push(y);
+
+            const schedulePromises = years.map(year =>
+                fetch(`https://site.api.espn.com/apis/site/v2/sports/basketball/mens-college-basketball/teams/${t1.espnId}/schedule?season=${year}`)
+                    .then(r => r.json()).catch(() => ({ events: [] }))
+            );
+
+            Promise.all(schedulePromises).then(results => {
+                const matchups = [];
+                results.forEach(data => {
+                    (data.events || []).forEach(event => {
+                        const comp = event.competitions?.[0];
+                        if (!comp) return;
+                        const opponents = comp.competitors || [];
+                        const isMatch = opponents.some(c => String(c.team?.id) === String(t2.espnId));
+                        if (!isMatch) return;
+
+                        const t1Comp = opponents.find(c => String(c.team?.id) === String(t1.espnId));
+                        const t2Comp = opponents.find(c => String(c.team?.id) === String(t2.espnId));
+                        if (!t1Comp || !t2Comp) return;
+
+                        matchups.push({
+                            date: event.date,
+                            t1Score: parseInt(t1Comp.score) || 0,
+                            t2Score: parseInt(t2Comp.score) || 0,
+                            t1Winner: t1Comp.winner,
+                            venue: comp.venue?.fullName || '',
+                            name: event.name || ''
+                        });
+                    });
+                });
+
+                // Deduplicate by date
+                const seen = new Set();
+                const unique = matchups.filter(m => {
+                    const key = m.date?.substring(0, 10);
+                    if (seen.has(key)) return false;
+                    seen.add(key);
+                    return true;
+                }).sort((a, b) => new Date(b.date) - new Date(a.date));
+
+                const t1Wins = unique.filter(m => m.t1Winner === true).length;
+                const t2Wins = unique.filter(m => m.t1Winner === false).length;
+
+                if (unique.length === 0) {
+                    container.innerHTML = `
+                        <div style="text-align: center; padding: 2.5rem 1.5rem;">
+                            <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">🏀</div>
+                            <div style="font-size: 1.1rem; font-weight: 600; color: #2C3345; margin-bottom: 0.5rem;">No Recent Matchups Found</div>
+                            <div style="font-size: 0.9rem; color: #6B7A8D; max-width: 400px; margin: 0 auto;">
+                                These teams haven't played each other in the last 10 seasons.
+                                Check the <strong>Full Program Comparison</strong> tab to see how their programs stack up historically.
+                            </div>
+                        </div>
+                    `;
+                    return;
                 }
 
-                const num1 = parseFloat(val1);
-                const num2 = parseFloat(val2);
-                const max = Math.max(num1, num2);
-                const bar1Width = (num1 / max) * 100;
-                const bar2Width = (num2 / max) * 100;
-
-                const winner = num1 > num2 ? 1 : num2 > num1 ? 2 : 0;
-
-                headerHTML += `
-                    <div class="stat-row">
-                        <div class="stat-left">
-                            <div class="stat-bar">
-                                <div class="stat-bar-fill left" style="width: ${bar1Width}%; background-color: ${selectedTeam1.color}; opacity: 0.6;"></div>
+                let html = `
+                    <div style="text-align: center; margin-bottom: 1.5rem;">
+                        <div style="font-size: 0.8rem; color: #8892A0; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.5rem;">Last ${unique.length === 1 ? '' : unique.length + ' '}Matchup${unique.length > 1 ? 's' : ''} (${startYear}-${currentYear})</div>
+                        <div style="display: flex; justify-content: center; align-items: center; gap: 2rem;">
+                            <div>
+                                <div style="font-size: 2.2rem; font-weight: 800; color: ${t1Color};">${t1Wins}</div>
+                                <div style="font-size: 0.85rem; color: #6B7A8D;">${t1.name.split(' ').pop()}</div>
                             </div>
-                            <span class="stat-value ${winner === 1 ? 'winner' : 'loser'}">${val1}${stat.unit}</span>
-                        </div>
-                        <div class="stat-label">${stat.label}</div>
-                        <div class="stat-right">
-                            <span class="stat-value ${winner === 2 ? 'winner' : 'loser'}">${val2}${stat.unit}</span>
-                            <div class="stat-bar">
-                                <div class="stat-bar-fill right" style="width: ${bar2Width}%; background-color: ${selectedTeam2.color}; opacity: 0.6;"></div>
+                            <div style="font-size: 1rem; color: #A0AAB8; font-weight: 600;">-</div>
+                            <div>
+                                <div style="font-size: 2.2rem; font-weight: 800; color: ${t2Color};">${t2Wins}</div>
+                                <div style="font-size: 0.85rem; color: #6B7A8D;">${t2.name.split(' ').pop()}</div>
                             </div>
                         </div>
                     </div>
+                    <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                `;
+
+                unique.forEach(m => {
+                    const d = new Date(m.date);
+                    const dateStr = d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+                    const winnerColor = m.t1Winner ? t1Color : t2Color;
+                    html += `
+                        <div style="display: flex; align-items: center; padding: 0.75rem 1rem; background: #FAFAF7; border-radius: 0.5rem; border-left: 3px solid ${winnerColor}; gap: 1rem;">
+                            <div style="flex: 1; font-weight: ${m.t1Winner ? '700' : '400'}; color: ${m.t1Winner ? t1Color : '#A0AAB8'};">${t1.name.split(' ').pop()} ${m.t1Score}</div>
+                            <div style="font-size: 0.75rem; color: #8892A0; min-width: 90px; text-align: center;">${dateStr}</div>
+                            <div style="flex: 1; text-align: right; font-weight: ${!m.t1Winner ? '700' : '400'}; color: ${!m.t1Winner ? t2Color : '#A0AAB8'};">${m.t2Score} ${t2.name.split(' ').pop()}</div>
+                        </div>
+                    `;
+                });
+
+                html += '</div>';
+                container.innerHTML = html;
+            }).catch(() => {
+                container.innerHTML = `
+                    <div style="text-align: center; padding: 2.5rem 1.5rem;">
+                        <div style="font-size: 1.1rem; font-weight: 600; color: #2C3345; margin-bottom: 0.5rem;">Unable to Load Matchup History</div>
+                        <div style="font-size: 0.9rem; color: #6B7A8D;">Check the <strong>Full Program Comparison</strong> tab to compare these programs.</div>
+                    </div>
                 `;
             });
+        }
 
-            headerHTML += '</div>';
-            container.innerHTML = headerHTML;
+        function renderStatRow(label, val1, val2, color1, color2) {
+            const num1 = parseFloat(val1);
+            const num2 = parseFloat(val2);
+            const max = Math.max(num1, num2) || 1;
+            const bar1Width = (num1 / max) * 100;
+            const bar2Width = (num2 / max) * 100;
+
+            const winner = num1 > num2 ? 1 : num2 > num1 ? 2 : 0;
+
+            // Winsipedia-style: highlight the winner's value in their school color
+            const val1Style = winner === 1 ? `color: ${color1}; font-weight: 800;` : 'color: #A0AAB8;';
+            const val2Style = winner === 2 ? `color: ${color2}; font-weight: 800;` : 'color: #A0AAB8;';
+
+            return `
+                <div class="stat-row">
+                    <div class="stat-left">
+                        <div class="stat-bar">
+                            <div class="stat-bar-fill left" style="width: ${bar1Width}%; background-color: ${color1}; opacity: ${winner === 1 ? 0.85 : 0.3};"></div>
+                        </div>
+                        <span class="stat-value" style="${val1Style}">${val1}</span>
+                    </div>
+                    <div class="stat-label">${label}</div>
+                    <div class="stat-right">
+                        <span class="stat-value" style="${val2Style}">${val2}</span>
+                        <div class="stat-bar">
+                            <div class="stat-bar-fill right" style="width: ${bar2Width}%; background-color: ${color2}; opacity: ${winner === 2 ? 0.85 : 0.3};"></div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderOverallComparison(t1, t2) {
+            const container = document.getElementById('compOverallContent');
+            const t1Color = t1.color || '#1B2A4A';
+            const t2Color = t2.color || '#C9A86C';
+
+            const stats = [
+                { key: 'allTimeW', label: 'All-Time Wins' },
+                { label: 'Win %', compute: t => ((t.allTimeW / (t.allTimeW + t.allTimeL)) * 100).toFixed(1) },
+                { key: 'natlChamps', label: 'National Championships' },
+                { key: 'finalFours', label: 'Final Fours' },
+                { key: 'elite8s', label: 'Elite Eights' },
+                { key: 'sweet16s', label: 'Sweet Sixteens' },
+                { key: 'ncaaTourneys', label: 'NCAA Tournaments' },
+                { key: 'confTitles', label: 'Conference Titles' },
+                { key: 'allAmericans', label: 'All-Americans' },
+                { key: 'nbaFirstRound', label: 'NBA 1st Round Picks' },
+                { key: 'apWeeksRanked', label: 'AP Weeks Ranked' }
+            ];
+
+            let html = '<div class="comparison-stats">';
+
+            stats.forEach(stat => {
+                const val1 = stat.compute ? stat.compute(t1) : t1[stat.key];
+                const val2 = stat.compute ? stat.compute(t2) : t2[stat.key];
+                html += renderStatRow(stat.label, val1, val2, t1Color, t2Color);
+            });
+
+            html += '</div>';
+            container.innerHTML = html;
         }
 
         function renderRankings() {
@@ -1465,35 +1935,30 @@
                 `;
             }
 
-            // Add H2H section
+            // Add Conference Rivals section (quick-compare links)
+            const confRivals = allTeamsData
+                .filter(t => t.espnId !== team.espnId && t.conf === team.conf)
+                .sort((a, b) => b.allTimeW - a.allTimeW)
+                .slice(0, 6);
+
             const h2hSection = document.createElement('div');
             h2hSection.innerHTML = `
                 <div style="margin: 2rem 0;">
-                    <h3 style="color: #1B2A4A; font-size: 1.1rem; font-weight: 700; margin-bottom: 1rem;">Head-to-Head Records</h3>
+                    <h3 style="color: #1B2A4A; font-size: 1.1rem; font-weight: 700; margin-bottom: 1rem;">Conference Rivals</h3>
                     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
-                        ${allTeamsData
-                            .filter(t => t.espnId !== team.espnId &&
-                                (t.conf === team.conf || [team.espnId, t.espnId].includes(25) ||
-                                 [team.espnId, t.espnId].includes(52))) // Sample rivalries
-                            .slice(0, 6)
-                            .map(rival => {
-                                const h2h = getHeadToHead(team.espnId, rival.espnId);
-                                if (!h2h) return '';
-                                const team1Lead = h2h.team1.wins > h2h.team2.wins;
-                                return `
-                                    <div style="background: #F5F3EE; border-radius: 0.5rem; padding: 1rem; border: 1px solid #D6CFC2;">
-                                        <div style="font-size: 0.85rem; color: #8892A0; margin-bottom: 0.5rem;">vs ${rival.name}</div>
-                                        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
-                                            <div style="flex: 1; height: 6px; background: linear-gradient(90deg, #1B2A4A ${team1Lead ? 70 : 30}%, #C9A86C 0%); border-radius: 3px;"></div>
-                                        </div>
-                                        <div style="font-size: 0.8rem; color: #2C3345; display: flex; justify-content: space-between;">
-                                            <span><strong>${h2h.team1.wins}</strong></span>
-                                            <span><strong>${h2h.team2.wins}</strong></span>
-                                        </div>
-                                    </div>
-                                `;
-                            })
-                            .join('')}
+                        ${confRivals.map(rival => `
+                            <div style="background: #F5F3EE; border-radius: 0.5rem; padding: 1rem; border: 1px solid #D6CFC2; cursor: pointer; transition: all 0.2s ease;"
+                                 onclick="openComparison('${team.espnId}', '${rival.espnId}')"
+                                 onmouseover="this.style.borderColor='#C9A86C'; this.style.transform='translateY(-2px)'"
+                                 onmouseout="this.style.borderColor='#D6CFC2'; this.style.transform='none'">
+                                <div style="display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.5rem;">
+                                    <img src="${getLogoUrl(rival.espnId)}" alt="" style="width: 28px; height: 28px; object-fit: contain;">
+                                    <div style="font-size: 0.9rem; font-weight: 600; color: #2C3345;">${rival.name}</div>
+                                </div>
+                                <div style="font-size: 0.78rem; color: #8892A0;">${rival.allTimeW}-${rival.allTimeL} all-time</div>
+                                <div style="font-size: 0.75rem; color: #C9A86C; font-weight: 600; margin-top: 0.4rem;">Compare Programs →</div>
+                            </div>
+                        `).join('')}
                     </div>
                 </div>
             `;
@@ -1520,7 +1985,7 @@
                     <h3>Compare with another team</h3>
                     <div class="compare-with-input">
                         <div class="compare-dropdown-wrapper" style="flex: 1;">
-                            <input type="text" id="compareWithInput" placeholder="Search team..." style="width: 100%; padding: 0.75rem; background: #0B1120; border: 1px solid #1E293B; border-radius: 0.5rem; color: #e5e7eb; font-size: 1rem;">
+                            <input type="text" id="compareWithInput" placeholder="Search team...">
                             <div class="compare-with-dropdown" id="compareWithDropdown" style="display: none;"></div>
                         </div>
                         <button class="compare-with-button" id="compareWithButton" disabled>Compare</button>
@@ -1891,140 +2356,152 @@
             await fetchBracketData();
             updateBracketTimestamp();
 
-            const regions = {
-                'South': [],
-                'East': [],
-                'Midwest': [],
-                'West': []
-            };
+            const regions = { 'South': [], 'East': [], 'Midwest': [], 'West': [] };
+            const finalFourGames = [];
+            const champGame = [];
 
-            // Parse events into regions
+            // Parse events into regions and rounds
             Object.values(bracketData).forEach(event => {
-                if (event.competitions && event.competitions[0]) {
-                    const comp = event.competitions[0];
-                    const note = comp.notes && comp.notes[0] ? comp.notes[0].headline : '';
-                    let region = 'South';
-                    if (note.includes('East')) region = 'East';
-                    else if (note.includes('West')) region = 'West';
-                    else if (note.includes('Midwest')) region = 'Midwest';
+                if (!event.competitions || !event.competitions[0]) return;
+                const comp = event.competitions[0];
+                const note = (comp.notes && comp.notes[0]) ? comp.notes[0].headline : '';
 
-                    if (!regions[region].some(e => e.id === event.id)) {
-                        regions[region].push(event);
-                    }
+                if (note.includes('Championship')) { champGame.push(event); return; }
+                if (note.includes('Final Four') || note.includes('Semifinal')) { finalFourGames.push(event); return; }
+
+                let region = 'South';
+                if (note.includes('East')) region = 'East';
+                else if (note.includes('West')) region = 'West';
+                else if (note.includes('Midwest')) region = 'Midwest';
+
+                if (!regions[region].some(e => e.id === event.id)) {
+                    regions[region].push(event);
                 }
             });
 
-            // Build bracket layout
-            const bracketLayout = document.createElement('div');
-            bracketLayout.className = 'bracket-layout';
+            // Build the true bracket layout: Left regions | Center (FF/Champ) | Right regions
+            const bracketFull = document.createElement('div');
+            bracketFull.className = 'bracket-full';
 
-            // Left side (South, East)
-            const leftSide = document.createElement('div');
-            leftSide.style.display = 'flex';
-            leftSide.style.gap = '2rem';
-            leftSide.style.flexDirection = 'column';
+            // Left half: South on top, East on bottom
+            const leftHalf = document.createElement('div');
+            leftHalf.className = 'bracket-half left';
+            leftHalf.appendChild(buildRegionBracket('South', regions['South'], 'left'));
+            leftHalf.appendChild(buildRegionBracket('East', regions['East'], 'left'));
+            bracketFull.appendChild(leftHalf);
 
-            leftSide.appendChild(createRegionBracket('South', regions['South']));
-            leftSide.appendChild(createRegionBracket('East', regions['East']));
-            bracketLayout.appendChild(leftSide);
-
-            // Center (Final Four + Championship)
-            const center = document.createElement('div');
-            center.className = 'bracket-center';
-            center.innerHTML = `<div style="text-align: center;">
+            // Center: Final Four + Championship
+            const centerCol = document.createElement('div');
+            centerCol.className = 'bracket-center-col';
+            centerCol.innerHTML = `
                 <div class="bracket-round-label">Final Four</div>
-                <div style="height: 120px; background: #F5F3EE; border: 1px solid #D6CFC2; border-radius: 0.5rem; width: 160px; display: flex; align-items: center; justify-content: center; color: #8892A0; font-size: 0.85rem;">April 4</div>
-                <div style="margin-top: 2rem;">
-                    <div class="bracket-round-label">Championship</div>
-                    <div style="height: 100px; background: #F5F3EE; border: 1px solid #D6CFC2; border-radius: 0.5rem; width: 160px; display: flex; align-items: center; justify-content: center; color: #8892A0; font-size: 0.85rem;">April 6</div>
-                </div>
-            </div>`;
-            bracketLayout.appendChild(center);
+                ${finalFourGames.length > 0 ? finalFourGames.map(e => createMatchupCard(e).outerHTML).join('') :
+                    '<div class="bracket-matchup" style="min-width:140px;"><div class="matchup-team" style="cursor:default;justify-content:center;color:#8892A0;">April 4</div><div class="matchup-team" style="cursor:default;justify-content:center;color:#8892A0;">TBD</div></div>' +
+                    '<div class="bracket-matchup" style="min-width:140px;"><div class="matchup-team" style="cursor:default;justify-content:center;color:#8892A0;">April 4</div><div class="matchup-team" style="cursor:default;justify-content:center;color:#8892A0;">TBD</div></div>'}
+                <div class="bracket-round-label" style="margin-top:1rem;">Championship</div>
+                ${champGame.length > 0 ? champGame.map(e => createMatchupCard(e).outerHTML).join('') :
+                    '<div class="bracket-matchup" style="min-width:140px;"><div class="matchup-team" style="cursor:default;justify-content:center;color:#8892A0;">April 6</div><div class="matchup-team" style="cursor:default;justify-content:center;color:#8892A0;">TBD</div></div>'}
+            `;
+            bracketFull.appendChild(centerCol);
 
-            // Right side (Midwest, West)
-            const rightSide = document.createElement('div');
-            rightSide.style.display = 'flex';
-            rightSide.style.gap = '2rem';
-            rightSide.style.flexDirection = 'column';
-
-            rightSide.appendChild(createRegionBracket('Midwest', regions['Midwest']));
-            rightSide.appendChild(createRegionBracket('West', regions['West']));
-            bracketLayout.appendChild(rightSide);
+            // Right half: Midwest on top, West on bottom (mirrored)
+            const rightHalf = document.createElement('div');
+            rightHalf.className = 'bracket-half right';
+            rightHalf.appendChild(buildRegionBracket('Midwest', regions['Midwest'], 'right'));
+            rightHalf.appendChild(buildRegionBracket('West', regions['West'], 'right'));
+            bracketFull.appendChild(rightHalf);
 
             container.innerHTML = '';
-            container.appendChild(bracketLayout);
+            container.appendChild(bracketFull);
         }
 
-        function createRegionBracket(regionName, events) {
-            const region = document.createElement('div');
-            region.className = 'bracket-region';
-            region.innerHTML = `<div class="bracket-round-label">${regionName}</div>`;
+        function buildRegionBracket(regionName, events, side) {
+            const wrapper = document.createElement('div');
 
-            const roundGroups = groupEventsByRound(events);
-            roundGroups.forEach(group => {
-                const roundDiv = document.createElement('div');
-                roundDiv.className = 'bracket-round';
+            const label = document.createElement('div');
+            label.className = 'bracket-region-label';
+            label.textContent = regionName + ' Region';
+            wrapper.appendChild(label);
 
-                group.events.forEach(event => {
-                    const matchup = createMatchupCard(event);
-                    roundDiv.appendChild(matchup);
-                });
+            const row = document.createElement('div');
+            row.className = 'bracket-region-row';
 
-                region.appendChild(roundDiv);
-            });
-
-            return region;
-        }
-
-        function groupEventsByRound(events) {
-            const groups = {};
-
+            // Group events by round
+            const rounds = { 'R64': [], 'R32': [], 'S16': [], 'E8': [] };
             events.forEach(event => {
-                const note = event.competitions && event.competitions[0] && event.competitions[0].notes && event.competitions[0].notes[0]
-                    ? event.competitions[0].notes[0].headline
-                    : '';
-
-                const roundKey = note.includes('Championship') ? '7-Championship'
-                    : note.includes('Final Four') ? '6-Final Four'
-                    : note.includes('Elite Eight') ? '5-Elite Eight'
-                    : note.includes('Sweet Sixteen') ? '4-Sweet Sixteen'
-                    : note.includes('Round of 32') ? '3-Round of 32'
-                    : '2-Round of 64';
-
-                if (!groups[roundKey]) groups[roundKey] = [];
-                groups[roundKey].push(event);
+                const note = (event.competitions[0].notes && event.competitions[0].notes[0]) ? event.competitions[0].notes[0].headline : '';
+                if (note.includes('Elite Eight')) rounds['E8'].push(event);
+                else if (note.includes('Sweet')) rounds['S16'].push(event);
+                else if (note.includes('Round of 32') || note.includes('Second Round')) rounds['R32'].push(event);
+                else rounds['R64'].push(event);
             });
 
-            return Object.keys(groups).sort().map(key => ({
-                round: key.split('-')[1],
-                events: groups[key]
-            }));
+            const roundLabels = { 'R64': '1st Round', 'R32': '2nd Round', 'S16': 'Sweet 16', 'E8': 'Elite 8' };
+            const roundOrder = side === 'left' ? ['R64', 'R32', 'S16', 'E8'] : ['E8', 'S16', 'R32', 'R64'];
+
+            roundOrder.forEach(roundKey => {
+                const col = document.createElement('div');
+                col.className = 'bracket-round-col';
+
+                const header = document.createElement('div');
+                header.className = 'bracket-round-header';
+                header.textContent = roundLabels[roundKey];
+                col.appendChild(header);
+
+                if (rounds[roundKey].length > 0) {
+                    rounds[roundKey].forEach(event => {
+                        col.appendChild(createMatchupCard(event));
+                    });
+                } else {
+                    // Show placeholder slots based on round
+                    const slots = roundKey === 'R64' ? 8 : roundKey === 'R32' ? 4 : roundKey === 'S16' ? 2 : 1;
+                    for (let i = 0; i < slots; i++) {
+                        const placeholder = document.createElement('div');
+                        placeholder.className = 'bracket-matchup';
+                        placeholder.innerHTML = `
+                            <div class="matchup-team" style="cursor:default;justify-content:center;color:#B0B8C4;">TBD</div>
+                            <div class="matchup-team" style="cursor:default;justify-content:center;color:#B0B8C4;">TBD</div>
+                        `;
+                        col.appendChild(placeholder);
+                    }
+                }
+
+                row.appendChild(col);
+            });
+
+            wrapper.appendChild(row);
+            return wrapper;
         }
 
         function createMatchupCard(event) {
             const comp = event.competitions[0];
             const competitors = comp.competitors || [];
+            const statusType = event.status?.type?.name || 'STATUS_SCHEDULED';
+            const isLive = statusType === 'STATUS_IN_PROGRESS';
+            const isFinal = statusType === 'STATUS_FINAL';
 
             const card = document.createElement('div');
             card.className = 'bracket-matchup';
 
-            competitors.forEach((comp, idx) => {
-                const team = comp.team;
-                const isWinner = comp.winner;
-                const status = event.status ? event.status.type : 'STATUS_SCHEDULED';
-                const isLive = status === 'STATUS_IN_PROGRESS';
-
+            competitors.forEach(c => {
+                const team = c.team;
+                const isWinner = c.winner;
                 const teamEl = document.createElement('div');
-                teamEl.className = `matchup-team ${isWinner ? 'winner' : isWinner === false ? 'loser' : ''}`;
+                teamEl.className = `matchup-team ${isWinner ? 'winner' : isWinner === false && isFinal ? 'loser' : ''}`;
 
-                const seed = comp.curatedRank && comp.curatedRank.current ? comp.curatedRank.current : '-';
-                const score = comp.score || 0;
+                const seed = c.curatedRank?.current || '-';
+                const score = c.score || '';
+                const espnId = String(team.id);
+
+                // Make team name clickable
+                teamEl.onclick = () => openProfileById(espnId);
+                teamEl.title = 'View ' + team.displayName + ' profile';
 
                 teamEl.innerHTML = `
                     <span class="team-seed">${seed}</span>
-                    <img src="${getLogoUrl(team.id)}" alt="${team.displayName}" class="team-logo" onerror="this.style.display='none'">
-                    <span class="team-name" title="${team.displayName}">${team.abbreviation || team.displayName.substring(0, 3)}</span>
-                    <span class="team-score ${isLive ? 'live' : ''}">${isLive ? score + ' 🔴' : status === 'STATUS_SCHEDULED' ? 'vs' : score}</span>
+                    <img src="${getLogoUrl(espnId)}" alt="" class="team-logo-bracket" onerror="this.style.display='none'">
+                    <span class="team-name-bracket">${team.shortDisplayName || team.displayName}</span>
+                    <span class="team-score ${isLive ? 'live' : ''}">${isLive ? score : isFinal ? score : ''}</span>
                 `;
 
                 card.appendChild(teamEl);
