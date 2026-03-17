@@ -199,6 +199,21 @@
         }
         .game-matchup-button:hover { background: #243556; transform: translateY(-1px); }
         .game-time { font-size: 0.75rem; color: #A0AAB8; text-align: center; margin-top: 0.5rem; }
+        .game-tournament-badge {
+            display: flex; align-items: center; justify-content: center; gap: 0.35rem;
+            padding: 0.2rem 0.6rem; border-radius: 0.3rem;
+            font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.03em;
+            text-align: center;
+        }
+        .game-tournament-badge img { height: 16px; width: auto; }
+        .game-tournament-badge.ncaa { background: #E8F5E9; color: #1B6B3A; }
+        .game-tournament-badge.nit { background: #FFF3E0; color: #E65100; }
+        .game-round-info { font-size: 0.72rem; color: #6B7280; text-align: center; font-weight: 500; }
+        .games-group-label {
+            grid-column: 1 / -1; font-size: 1.1rem; font-weight: 700; color: #1B2A4A;
+            padding: 0.5rem 0 0.25rem; border-bottom: 2px solid #C9A86C; margin-top: 0.5rem;
+        }
+        .games-group-label:first-child { margin-top: 0; }
         .ticket-link {
             display: block; text-align: center; font-size: 0.78rem; color: #9E7C4A;
             text-decoration: none; padding: 0.3rem 0; transition: all 0.2s ease;
@@ -953,7 +968,7 @@
             </div>
 
             <div class="games-section">
-                <h2 class="section-title">Upcoming Games</h2>
+                <h2 class="section-title" id="gamesTitle">Upcoming Games</h2>
                 <div class="games-grid" id="gamesGrid"></div>
             </div>
 
@@ -1733,12 +1748,47 @@
                         });
                     });
 
-                    // Deduplicate by event ID and take first 5
+                    // Deduplicate by event ID
                     const seen = new Set();
                     allGames = allGames.filter(e => { if (seen.has(e.id)) return false; seen.add(e.id); return true; });
-                    const games = allGames.slice(0, 5);
+
+                    // Tag each game with tournament type from ESPN notes
+                    allGames.forEach(e => {
+                        const notes = e.competitions?.[0]?.notes || [];
+                        const headline = notes.map(n => n.headline || '').join(' ');
+                        if (headline.includes('NCAA') && headline.includes('Championship')) {
+                            e._tourney = 'ncaa';
+                            const roundMatch = headline.match(/- ([^-]+)$/);
+                            e._round = roundMatch ? roundMatch[1].trim() : '';
+                            const regionMatch = headline.match(/- (\w+ Region)/);
+                            e._region = regionMatch ? regionMatch[1] : '';
+                        } else if (headline.includes('NIT')) {
+                            e._tourney = 'nit';
+                            const roundMatch = headline.match(/NIT - (.+)$/);
+                            e._round = roundMatch ? roundMatch[1] : 'NIT';
+                        } else {
+                            e._tourney = 'other';
+                            e._round = '';
+                        }
+                    });
+
+                    // NCAA Tournament games first, then NIT, then other
+                    const ncaaGames = allGames.filter(e => e._tourney === 'ncaa');
+                    const nitGames = allGames.filter(e => e._tourney === 'nit');
+                    const otherGames = allGames.filter(e => e._tourney === 'other');
+                    // Show all NCAA games, then up to fill 8 total with NIT/other
+                    const maxTotal = Math.max(8, ncaaGames.length);
+                    const games = [...ncaaGames, ...nitGames, ...otherGames].slice(0, maxTotal);
 
                     grid.innerHTML = '';
+
+                    // Update section title based on tournament context
+                    const titleEl = document.getElementById('gamesTitle');
+                    if (ncaaGames.length > 0) {
+                        titleEl.textContent = 'March Madness';
+                    } else if (nitGames.length > 0) {
+                        titleEl.textContent = 'Postseason Games';
+                    }
 
                     if (games.length === 0) {
                         grid.innerHTML = '<div class="chart-loading">No upcoming games found</div>';
@@ -1798,7 +1848,18 @@
 
                         const cardId = `game-${t1EspnId}-${t2EspnId}`;
 
+                        // Tournament badge
+                        let badgeHTML = '';
+                        if (event._tourney === 'ncaa') {
+                            const roundLabel = event._round || 'NCAA Tournament';
+                            const regionLabel = event._region ? ` · ${event._region}` : '';
+                            badgeHTML = `<div class="game-tournament-badge ncaa"><img src="https://a.espncdn.com/combiner/i?img=/i/espn/misc_logos/500/ncaa.png&h=20" alt="NCAA" onerror="this.style.display='none'"> ${roundLabel}${regionLabel}</div>`;
+                        } else if (event._tourney === 'nit') {
+                            badgeHTML = `<div class="game-tournament-badge nit">NIT · ${event._round || '1st Round'}</div>`;
+                        }
+
                         card.innerHTML = `
+                            ${badgeHTML}
                             <div class="game-card-header">
                                 <div class="game-team game-team-clickable" onclick="openProfileById('${t1EspnId}')" title="View ${team1.team.displayName} profile">
                                     <div class="game-team-logo" style="background-image: url('${getLogoUrl(t1EspnId)}');"></div>
