@@ -23,6 +23,33 @@ def parse_year(year_str):
         return int(parts[0]) + 1
     return int(year_str)
 
+# Name disambiguation for coaches where Sports Reference uses the same name
+# for different people. Format: base_name -> [(year_cutoff, disambiguated_name)]
+# If season year >= cutoff, use the disambiguated name; otherwise use the fallback.
+NAME_DISAMBIGUATION = {
+    'John Thompson': {
+        # John Thompson Jr. coached Georgetown 1972-1999
+        # John Thompson III coached Princeton 2000-2004, Georgetown 2004-2017
+        'cutoff': 2000,
+        'before': 'John Thompson Jr.',
+        'after': 'John Thompson III',
+    },
+}
+
+def disambiguate_coach_name(name, season_year):
+    """Resolve name collisions for coaches with same name but different people."""
+    if name in NAME_DISAMBIGUATION:
+        rule = NAME_DISAMBIGUATION[name]
+        try:
+            yr = parse_year(season_year) if isinstance(season_year, str) else season_year
+            if yr >= rule['cutoff']:
+                return rule['after']
+            else:
+                return rule['before']
+        except:
+            return name
+    return name
+
 def compile_coaches():
     # Load data
     with open('seasons.json') as f:
@@ -81,12 +108,15 @@ def compile_coaches():
         if not seasons:
             continue
 
-        # Group seasons by coach
+        # Group seasons by coach (with name disambiguation)
         coach_seasons = defaultdict(list)
         for season in seasons:
             coach = season.get('coach', '')
             if not coach or ',' in coach:  # Skip multi-coach seasons
                 continue
+            coach = disambiguate_coach_name(coach, season.get('year', ''))
+            season = dict(season)  # Copy to avoid mutating original
+            season['coach'] = coach
             coach_seasons[coach].append(season)
 
         # Build ordered coach list (newest first, matching current COACHES order)
@@ -97,6 +127,7 @@ def compile_coaches():
             coach = season.get('coach', '')
             if not coach or ',' in coach:
                 continue
+            coach = disambiguate_coach_name(coach, season.get('year', ''))
             if coach not in seen_coaches:
                 coach_order.append(coach)
                 seen_coaches.add(coach)
