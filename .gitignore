@@ -19,6 +19,9 @@ node_modules/
 # Compressed backups (tracked originals exist)
 *.gz
 
+# Large source file (split into games_1.json + games_2.json for deploy)
+games.json
+
 # Claude Code
 .claude/
 
