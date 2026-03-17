@@ -91,22 +91,33 @@ def sync_current_season():
 
     log(f"Got records for {len(new_cs)}/{len(team_ids)} teams")
 
-    # Calculate deltas (new wins/losses since last sync)
+    # Calculate deltas (new wins/losses since LAST sync)
+    # IMPORTANT: If CS is empty (first run), this is a baseline capture only.
+    # Sports Reference data already includes the current season, so we must NOT
+    # add the full ESPN season as a delta — that would double-count.
+    # Only subsequent runs (where old_cs has data) produce real deltas.
+    is_first_run = len(old_cs) == 0
+    if is_first_run:
+        log("FIRST RUN: Setting ESPN baseline. No coach updates (SR data already includes this season).")
+
     changes = []
-    for eid, new_rec in new_cs.items():
-        old_rec = old_cs.get(eid, {'w': 0, 'l': 0})
-        delta_w = new_rec['w'] - old_rec.get('w', 0)
-        delta_l = new_rec['l'] - old_rec.get('l', 0)
-        if delta_w > 0 or delta_l > 0:
-            team_name = H[eid][0] if eid in H else f'ESPN:{eid}'
-            changes.append({
-                'eid': eid,
-                'name': team_name,
-                'old': old_rec,
-                'new': new_rec,
-                'delta_w': delta_w,
-                'delta_l': delta_l
-            })
+    if not is_first_run:
+        for eid, new_rec in new_cs.items():
+            old_rec = old_cs.get(eid, None)
+            if old_rec is None:
+                continue  # New team, no baseline to compare
+            delta_w = new_rec['w'] - old_rec.get('w', 0)
+            delta_l = new_rec['l'] - old_rec.get('l', 0)
+            if delta_w > 0 or delta_l > 0:
+                team_name = H[eid][0] if eid in H else f'ESPN:{eid}'
+                changes.append({
+                    'eid': eid,
+                    'name': team_name,
+                    'old': old_rec,
+                    'new': new_rec,
+                    'delta_w': delta_w,
+                    'delta_l': delta_l
+                })
 
     if changes:
         log(f"\n{len(changes)} teams with record changes:")
