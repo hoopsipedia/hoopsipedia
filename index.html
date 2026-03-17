@@ -469,6 +469,39 @@
             padding: 1.75rem; margin-bottom: 2.5rem; box-shadow: 0 1px 4px rgba(0,0,0,0.04);
         }
         .championships-section h3 { font-size: 1.15rem; font-weight: 700; margin-bottom: 0.85rem; color: #1B2A4A; }
+
+        /* ── Tournament Resume ── */
+        .tourney-resume {
+            background: #FFFFFF; border: 1px solid #E0D9CC; border-radius: 0.75rem;
+            padding: 1.75rem; margin-bottom: 2.5rem; box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+        }
+        .tourney-resume h3 { font-size: 1.15rem; font-weight: 700; margin-bottom: 1rem; color: #1B2A4A; }
+        .tourney-summary {
+            display: flex; flex-wrap: wrap; gap: 2rem; margin-bottom: 1.25rem;
+            padding-bottom: 1rem; border-bottom: 1px solid #E0D9CC;
+        }
+        .tourney-summary-stat { text-align: center; }
+        .tourney-summary-value { font-size: 1.6rem; font-weight: 800; color: #1B2A4A; }
+        .tourney-summary-label { font-size: 0.7rem; color: #8892A0; text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600; }
+        .tourney-grid {
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(105px, 1fr)); gap: 0.5rem;
+        }
+        .tourney-entry {
+            padding: 0.5rem 0.4rem; border-radius: 0.4rem; text-align: center;
+            background: #F9F8F5; border: 1px solid #EDE9E0;
+        }
+        .tourney-year { font-size: 0.82rem; font-weight: 700; color: #2C3345; }
+        .tourney-seed { font-size: 0.68rem; color: #8892A0; margin: 0.15rem 0; }
+        .tourney-round {
+            display: inline-block; padding: 0.15rem 0.45rem; border-radius: 0.2rem;
+            font-size: 0.65rem; font-weight: 700; margin-top: 0.2rem;
+        }
+        .tourney-round.champ { background: linear-gradient(135deg, #D4AF37, #E8C84A); color: #1B2A4A; }
+        .tourney-round.runner-up { background: #C0C0C0; color: #1B2A4A; }
+        .tourney-round.ff { background: #1B2A4A; color: #C9A86C; }
+        .tourney-round.e8 { background: #2D5A8E; color: white; }
+        .tourney-round.s16 { background: #4A8BC2; color: white; }
+        .tourney-round.early { background: #E8E2D6; color: #5A6578; }
         .championship-years { display: flex; flex-wrap: wrap; gap: 0.6rem; }
         .championship-badge {
             padding: 0.4rem 0.85rem; background: #1B2A4A; color: #C9A86C;
@@ -1649,6 +1682,94 @@
         // Find team by slug (reverse lookup)
         function findTeamBySlug(slug) {
             return allTeamsData.find(t => teamSlug(t.name) === slug);
+        }
+
+        // Map NCAA tournament result string to display label
+        function mapTourneyResult(ncaaTourneyStr) {
+            if (!ncaaTourneyStr) return '';
+            const t = ncaaTourneyStr;
+            if (t.includes('Won') && t.includes('National Final')) return 'Champion';
+            if (t.includes('Lost') && t.includes('National Final')) return 'Runner-Up';
+            if (t.includes('National Semifinal')) return 'Final Four';
+            if (t.includes('Regional Final')) return 'Elite Eight';
+            if (t.includes('Regional Semifinal') || t.includes('Third Round')) return 'Sweet 16';
+            if (t.includes('Second Round')) return 'R32';
+            if (t.includes('First Round') || t.includes('Regional Third')) return 'R64';
+            if (t.includes('First Four') || t.includes('Opening Round')) return 'First Four';
+            if (t.includes('Playing')) return 'In Progress';
+            return 'NCAA';
+        }
+
+        // Get CSS class for tournament round badge
+        function tourneyRoundClass(result) {
+            if (result === 'Champion') return 'champ';
+            if (result === 'Runner-Up') return 'runner-up';
+            if (result === 'Final Four') return 'ff';
+            if (result === 'Elite Eight') return 'e8';
+            if (result === 'Sweet 16') return 's16';
+            return 'early';
+        }
+
+        // Render NCAA Tournament Resume for team profile
+        function renderTournamentResume(team) {
+            if (!SEASONS_DATA || !SEASONS_DATA[team.espnId]) return '';
+            const seasons = SEASONS_DATA[team.espnId].seasons || [];
+            const tourneySeasons = seasons.filter(s => s.seed || s.ncaaTourney);
+            if (tourneySeasons.length === 0) return '';
+
+            // Process each tournament appearance
+            const appearances = tourneySeasons.map(s => {
+                const result = mapTourneyResult(s.ncaaTourney);
+                return {
+                    year: s.year || '',
+                    seed: s.seed || '',
+                    result,
+                    record: `${s.wins || 0}-${s.losses || 0}`,
+                    coach: s.coach || ''
+                };
+            });
+
+            // Summary stats
+            const total = appearances.length;
+            const resultRank = ['Champion', 'Runner-Up', 'Final Four', 'Elite Eight', 'Sweet 16', 'R32', 'R64', 'First Four', 'NCAA', 'In Progress'];
+            const bestFinish = resultRank.find(r => appearances.some(a => a.result === r)) || 'NCAA';
+            const ff = appearances.filter(a => ['Champion', 'Runner-Up', 'Final Four'].includes(a.result)).length;
+            const seeded = appearances.filter(a => a.seed);
+            const avgSeed = seeded.length > 0 ? (seeded.reduce((sum, a) => sum + parseInt(a.seed), 0) / seeded.length).toFixed(1) : '—';
+
+            // Build grid entries (newest first — they already come sorted from seasons.json)
+            const gridHTML = appearances.map(a => `
+                <div class="tourney-entry">
+                    <div class="tourney-year">${a.year}</div>
+                    ${a.seed ? `<div class="tourney-seed">#${a.seed} Seed</div>` : '<div class="tourney-seed">&nbsp;</div>'}
+                    <div class="tourney-round ${tourneyRoundClass(a.result)}">${a.result}</div>
+                </div>
+            `).join('');
+
+            return `
+                <div class="tourney-resume">
+                    <h3>NCAA Tournament History</h3>
+                    <div class="tourney-summary">
+                        <div class="tourney-summary-stat">
+                            <div class="tourney-summary-value">${total}</div>
+                            <div class="tourney-summary-label">Appearances</div>
+                        </div>
+                        <div class="tourney-summary-stat">
+                            <div class="tourney-summary-value">${bestFinish}</div>
+                            <div class="tourney-summary-label">Best Finish</div>
+                        </div>
+                        <div class="tourney-summary-stat">
+                            <div class="tourney-summary-value">${ff}</div>
+                            <div class="tourney-summary-label">Final Fours</div>
+                        </div>
+                        <div class="tourney-summary-stat">
+                            <div class="tourney-summary-value">${avgSeed}</div>
+                            <div class="tourney-summary-label">Avg Seed</div>
+                        </div>
+                    </div>
+                    <div class="tourney-grid">${gridHTML}</div>
+                </div>
+            `;
         }
 
         let _skipHashUpdate = false; // Prevent hash ↔ switchView loops
@@ -3107,6 +3228,9 @@
                 `;
             }
 
+            // NCAA Tournament Resume
+            profileHTML += renderTournamentResume(team);
+
             // Add Conference Rivals section (quick-compare links)
             const confRivals = allTeamsData
                 .filter(t => t.espnId !== team.espnId && t.conf === team.conf)
@@ -3420,23 +3544,7 @@
                 const confWins = parseInt(s.confWins) || 0;
                 const confLosses = parseInt(s.confLosses) || 0;
 
-                // Map ncaaTourney result to display string
-                let postseason = '';
-                if (s.ncaaTourney) {
-                    const t = s.ncaaTourney;
-                    if (t.includes('Won') && t.includes('National Final')) postseason = 'Champion';
-                    else if (t.includes('Lost') && t.includes('National Final')) postseason = 'Runner-Up';
-                    else if (t.includes('National Semifinal')) postseason = 'Final Four';
-                    else if (t.includes('Regional Final')) postseason = 'Elite Eight';
-                    else if (t.includes('Regional Semifinal')) postseason = 'Sweet 16';
-                    else if (t.includes('Third Round')) postseason = 'Sweet 16';
-                    else if (t.includes('Second Round')) postseason = 'R32';
-                    else if (t.includes('First Round')) postseason = 'R64';
-                    else if (t.includes('First Four') || t.includes('Opening Round')) postseason = 'First Four';
-                    else if (t.includes('Playing')) postseason = 'In Progress';
-                    else if (t.includes('Regional Third')) postseason = 'R64';
-                    else postseason = 'NCAA';
-                }
+                const postseason = mapTourneyResult(s.ncaaTourney);
 
                 seasonData[year] = { wins, losses, confWins, confLosses, postseason, coach: s.coach || '', apRank: s.apRank };
                 validYears.push(year);
