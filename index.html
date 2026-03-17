@@ -1183,6 +1183,7 @@
                 const resp = await fetch('data.json');
                 if (!resp.ok) throw new Error('Failed to load data: ' + resp.status);
                 const data = await resp.json();
+                window.TEAM_DATA = data;
                 H = data.H;
                 COACHES = data.COACHES;
 
@@ -1278,7 +1279,8 @@
                     allAmericans: data[F.AA],
                     nbaFirstRound: data[F.NBA],
                     apWeeksRanked: data[F.APW],
-                    winPct: data[F.ATW] + data[F.ATL] > 0 ? parseFloat(((data[F.ATW] / (data[F.ATW] + data[F.ATL])) * 100).toFixed(1)) : 0
+                    winPct: data[F.ATW] + data[F.ATL] > 0 ? parseFloat(((data[F.ATW] / (data[F.ATW] + data[F.ATL])) * 100).toFixed(1)) : 0,
+                    vacated: window.TEAM_DATA?.V?.[espnId] || null
                 };
             }).sort((a, b) => b.allTimeW - a.allTimeW);
         }
@@ -1946,13 +1948,14 @@
             sorted.forEach((team, idx) => {
                 const rawValue = team[currentLeadersStat];
                 const statValue = currentLeadersStat === 'winPct' ? rawValue + '%' : rawValue;
+                const vacNote = team.vacated ? `<span style="color:#C9A86C; font-size:0.75rem; margin-left:4px;" title="${team.vacated.wins} wins vacated (${team.vacated.seasons})">*</span>` : '';
                 const row = document.createElement('tr');
                 row.innerHTML = `
                     <td>${idx + 1}</td>
                     <td>
                         <div class="team-cell" style="cursor: pointer;" onclick="openProfile({espnId: '${team.espnId}', name: '${team.name}'})">
                             <div class="team-logo-small" style="background-image: url('${getLogoUrl(team.espnId)}');"></div>
-                            <span>${team.name}</span>
+                            <span>${team.name}${vacNote}</span>
                         </div>
                     </td>
                     <td>${statValue}</td>
@@ -2547,13 +2550,14 @@
                     badge = `<span class="rank-badge">${idx + 1}</span>`;
                 }
 
+                const vacNote = team.vacated ? `<span style="color:#C9A86C; font-size:0.75rem; margin-left:4px;" title="${team.vacated.wins} wins vacated (${team.vacated.seasons})">*</span>` : '';
                 const row = document.createElement('tr');
                 row.innerHTML = `
                     <td>${badge}</td>
                     <td>
                         <div class="team-cell" style="cursor: pointer;" onclick="openProfile({espnId: '${team.espnId}', name: '${team.name}'})">
                             <div class="team-logo-small" style="background-image: url('${getLogoUrl(team.espnId)}');"></div>
-                            <span>${team.name}</span>
+                            <span>${team.name}${vacNote}</span>
                         </div>
                     </td>
                     <td>${team.conf}</td>
@@ -2690,13 +2694,17 @@
                         <div class="profile-records">
                             <div class="profile-record">
                                 <div class="profile-record-label">All-Time Record</div>
-                                <div class="profile-record-value">${team.allTimeW}-${team.allTimeL}</div>
+                                <div class="profile-record-value">${team.allTimeW}-${team.allTimeL}${team.vacated ? ' *' : ''}</div>
                             </div>
                             <div class="profile-record">
                                 <div class="profile-record-label">Win %</div>
                                 <div class="profile-record-value">${winPct}%</div>
                             </div>
-                        </div>
+                            ${team.vacated ? `<div class="profile-record" style="grid-column: 1 / -1;">
+                                <div style="font-size: 0.78rem; color: #8892A0; padding: 0.4rem 0.6rem; background: rgba(136,146,160,0.08); border-radius: 0.4rem; border-left: 3px solid #C9A86C;">
+                                    <strong>${team.vacated.wins} wins vacated</strong> (${team.vacated.seasons}) — ${team.vacated.reason}${team.vacated.lost ? '. Also vacated: ' + team.vacated.lost : ''}
+                                </div>
+                            </div>` : ''}
                     </div>
                 </div>
 
