@@ -1368,9 +1368,13 @@
                 });
             });
 
-            // Back button
+            // Back button — use browser history so it goes to previous view, not always home
             document.getElementById('backButton').addEventListener('click', () => {
-                switchView('home');
+                if (window.history.length > 1) {
+                    window.history.back();
+                } else {
+                    switchView('home');
+                }
             });
 
             // Compare inputs
@@ -1483,12 +1487,44 @@
 
         function handleHashRoute() {
             const hash = window.location.hash;
-            if (!hash) return;
+
+            // No hash = go home
+            if (!hash || hash === '#') {
+                _skipHashUpdate = true;
+                switchView('home', true);
+                _skipHashUpdate = false;
+                return;
+            }
+
+            _skipHashUpdate = true;
 
             // #compare/ESPN_ID_1/ESPN_ID_2
             const compareMatch = hash.match(/^#compare\/(\d+)\/(\d+)$/);
             if (compareMatch) {
-                openComparison(compareMatch[1], compareMatch[2]);
+                const buildTeamObj = (espnId) => {
+                    const team = allTeamsData.find(t => t.espnId === espnId);
+                    if (team) return Promise.resolve(team);
+                    return fetch(`https://site.api.espn.com/apis/site/v2/sports/basketball/mens-college-basketball/teams/${espnId}`)
+                        .then(r => r.json())
+                        .then(data => {
+                            const t = data.team;
+                            return {
+                                espnId: String(t.id), name: t.displayName || 'Unknown',
+                                mascot: t.name || '', conf: t.groups?.parent?.name || 'Unknown',
+                                color: t.color ? '#' + t.color : '#1B2A4A',
+                                allTimeW: 500, allTimeL: 500,
+                                natlChamps: 0, champYears: [], finalFours: 0,
+                                elite8s: 0, sweet16s: 0, ncaaTourneys: 0,
+                                confTitles: 0, allAmericans: 0, nbaFirstRound: 0, apWeeksRanked: 0
+                            };
+                        });
+                };
+                Promise.all([buildTeamObj(compareMatch[1]), buildTeamObj(compareMatch[2])]).then(([t1, t2]) => {
+                    selectedTeam1 = t1;
+                    selectedTeam2 = t2;
+                    renderComparison(true);
+                    _skipHashUpdate = false;
+                });
                 return;
             }
 
@@ -1496,16 +1532,22 @@
             const teamMatch = hash.match(/^#team\/(\d+)$/);
             if (teamMatch) {
                 const team = allTeamsData.find(t => t.espnId === teamMatch[1]);
-                if (team) openProfile(team);
-                else openProfileById(teamMatch[1]);
+                if (team) openProfile(team, true);
+                else {
+                    // Fetch from ESPN API for teams not in data.json
+                    openProfileById(teamMatch[1]);
+                }
+                _skipHashUpdate = false;
                 return;
             }
 
             // #view (home, bracket, rankings, teams, coaches)
             const viewMatch = hash.match(/^#(home|bracket|rankings|teams|coaches)$/);
             if (viewMatch) {
-                switchView(viewMatch[1]);
+                switchView(viewMatch[1], true);
             }
+
+            _skipHashUpdate = false;
         }
 
         function updateCompareDropdown(input, dropdownId, teamNum) {
@@ -1555,7 +1597,9 @@
             switchView('rankings');
         }
 
-        function switchView(view) {
+        let _skipHashUpdate = false; // Prevent hash ↔ switchView loops
+
+        function switchView(view, skipHash) {
             currentView = view;
             document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
             document.getElementById(view).classList.add('active');
@@ -1563,6 +1607,15 @@
             document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('active'));
             const navBtn = document.querySelector(`[data-view="${view}"]`);
             if (navBtn) navBtn.classList.add('active');
+
+            // Update hash for browser history (back button support)
+            if (!skipHash && !_skipHashUpdate) {
+                const newHash = (view === 'home') ? '' : `#${view}`;
+                if (window.location.hash !== newHash) {
+                    if (newHash) window.location.hash = newHash;
+                    else history.pushState(null, '', window.location.pathname);
+                }
+            }
 
             // Scroll to top on view change
             window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -2148,13 +2201,13 @@
             });
         }
 
-        function renderComparison() {
-            switchView('comparison');
+        function renderComparison(skipHash) {
+            switchView('comparison', true); // Don't push #comparison, push #compare/ID/ID instead
             const container = document.getElementById('comparisonContent');
 
-            // Update URL hash for shareable link
-            if (selectedTeam1 && selectedTeam2) {
-                history.replaceState(null, '', `#compare/${selectedTeam1.espnId}/${selectedTeam2.espnId}`);
+            // Update URL hash for shareable link + browser history
+            if (selectedTeam1 && selectedTeam2 && !skipHash) {
+                window.location.hash = `#compare/${selectedTeam1.espnId}/${selectedTeam2.espnId}`;
             }
 
             const t1 = selectedTeam1;
@@ -2785,10 +2838,13 @@
             });
         }
 
-        function openProfile(team) {
+        function openProfile(team, skipHash) {
             const fullTeam = allTeamsData.find(t => t.espnId == team.espnId);
-            currentProfile = fullTeam;
-            switchView('profile');
+            currentProfile = fullTeam || team;
+            switchView('profile', true); // Don't push #profile, push #team/ID instead
+            if (!skipHash) {
+                window.location.hash = `#team/${currentProfile.espnId}`;
+            }
             renderProfile();
         }
 
