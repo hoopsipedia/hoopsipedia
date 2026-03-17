@@ -38,7 +38,7 @@ class ScheduleCompiler:
     """Compiler for game-by-game schedule data from Sports Reference."""
 
     BASE_URL = "https://www.sports-reference.com/cbb/schools"
-    MIN_REQUEST_INTERVAL = 4.0
+    MIN_REQUEST_INTERVAL = 6.0
     DATA_DIR = Path(__file__).parent
 
     def __init__(self):
@@ -77,18 +77,19 @@ class ScheduleCompiler:
 
     def _fetch_page(self, url: str) -> Optional[str]:
         self._rate_limit_sleep()
-        for attempt in range(5):
+        for attempt in range(3):
             try:
                 response = self.session.get(url, timeout=15)
                 if response.status_code == 429:
-                    wait = 60 * (attempt + 1)
-                    print(f"    429 Rate Limited. Waiting {wait}s (attempt {attempt+1}/5)...")
+                    wait = 30 * (attempt + 1)
+                    print(f"    429 Rate Limited. Waiting {wait}s (attempt {attempt+1}/3)...")
                     time.sleep(wait)
                     self.last_request_time = time.time()
                     continue
                 if response.status_code == 404:
                     return None
                 response.raise_for_status()
+                self._consecutive_429s = 0  # Reset on success
                 return response.text
             except requests.RequestException as e:
                 if attempt < 2:
@@ -97,6 +98,8 @@ class ScheduleCompiler:
                 else:
                     print(f"    Error: {e}")
                     return None
+        # All 5 attempts were 429s
+        self._consecutive_429s = getattr(self, '_consecutive_429s', 0) + 1
         return None
 
     def _extract_opp_slug(self, href: str) -> Optional[str]:
@@ -288,7 +291,14 @@ class ScheduleCompiler:
         print(f"    Scraping {len(seasons)} seasons ({seasons[0]}-{seasons[-1]})")
 
         all_games = []
+        self._consecutive_429s = 0
         for i, year in enumerate(seasons):
+            # If we've hit 3+ consecutive 429 failures, take a long break
+            if getattr(self, '_consecutive_429s', 0) >= 3:
+                print(f"    ⚠️  Persistent rate limiting detected. Taking 20-minute cooldown...")
+                time.sleep(1200)
+                self._consecutive_429s = 0
+                print(f"    Resuming scrape...")
             games = self._fetch_season_schedule(slug, year)
             all_games.extend(games)
             if (i + 1) % 20 == 0:

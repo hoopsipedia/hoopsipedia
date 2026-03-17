@@ -1,0 +1,26 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# IDE
+.vscode/
+.idea/
+
+# Environment
+.env
+.env.local
+node_modules/
+
+# Compressed backups (tracked originals exist)
+*.gz
+
+# Claude Code
+.claude/
+
+# Local backups
+backups/
