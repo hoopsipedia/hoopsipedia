@@ -214,6 +214,20 @@
             padding: 0.5rem 0 0.25rem; border-bottom: 2px solid #C9A86C; margin-top: 0.5rem;
         }
         .games-group-label:first-child { margin-top: 0; }
+        .games-filters { display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem; flex-wrap: wrap; }
+        .games-filter-tabs { display: flex; gap: 0.35rem; }
+        .games-filter-btn {
+            padding: 0.4rem 0.85rem; border: 1px solid #E0D9CC; border-radius: 0.35rem;
+            background: #FFFFFF; color: #6B7A8D; font-size: 0.78rem; font-weight: 600;
+            cursor: pointer; transition: all 0.15s ease;
+        }
+        .games-filter-btn:hover { border-color: #C9A86C; color: #1B2A4A; }
+        .games-filter-btn.active { background: #1B2A4A; color: #C9A86C; border-color: #1B2A4A; }
+        .games-conf-filter {
+            padding: 0.4rem 0.7rem; border: 1px solid #E0D9CC; border-radius: 0.35rem;
+            background: #FFFFFF; color: #2C3345; font-size: 0.78rem; font-weight: 500;
+            cursor: pointer; min-width: 160px;
+        }
         .ticket-link {
             display: block; text-align: center; font-size: 0.78rem; color: #9E7C4A;
             text-decoration: none; padding: 0.3rem 0; transition: all 0.2s ease;
@@ -969,6 +983,16 @@
 
             <div class="games-section">
                 <h2 class="section-title" id="gamesTitle">Upcoming Games</h2>
+                <div class="games-filters" id="gamesFilters" style="display:none;">
+                    <div class="games-filter-tabs">
+                        <button class="games-filter-btn active" data-filter="ncaa">NCAA Tournament</button>
+                        <button class="games-filter-btn" data-filter="nit">NIT</button>
+                        <button class="games-filter-btn" data-filter="all">All Games</button>
+                    </div>
+                    <select class="games-conf-filter" id="gamesConfFilter">
+                        <option value="">All Conferences</option>
+                    </select>
+                </div>
                 <div class="games-grid" id="gamesGrid"></div>
             </div>
 
@@ -1855,30 +1879,98 @@
                         }
                     });
 
-                    // NCAA Tournament games first, then NIT, then other
-                    const ncaaGames = allGames.filter(e => e._tourney === 'ncaa');
-                    const nitGames = allGames.filter(e => e._tourney === 'nit');
-                    const otherGames = allGames.filter(e => e._tourney === 'other');
-                    // Show all NCAA games, then up to fill 8 total with NIT/other
-                    const maxTotal = Math.max(8, ncaaGames.length);
-                    const games = [...ncaaGames, ...nitGames, ...otherGames].slice(0, maxTotal);
+                    // Store globally for filtering
+                    window._allUpcomingGames = allGames;
 
-                    grid.innerHTML = '';
+                    // Build conference filter options
+                    const confSet = new Set();
+                    allGames.forEach(e => {
+                        const comp = e.competitions?.[0];
+                        if (!comp) return;
+                        comp.competitors?.forEach(c => {
+                            const tid = String(c.team?.id);
+                            const td = allTeamsData.find(t => t.espnId === tid);
+                            if (td) confSet.add(td.conf);
+                        });
+                    });
+                    const confSelect = document.getElementById('gamesConfFilter');
+                    confSelect.innerHTML = '<option value="">All Conferences</option>';
+                    [...confSet].sort().forEach(c => {
+                        confSelect.innerHTML += `<option value="${c}">${c}</option>`;
+                    });
 
-                    // Update section title based on tournament context
-                    const titleEl = document.getElementById('gamesTitle');
-                    if (ncaaGames.length > 0) {
-                        titleEl.textContent = 'March Madness';
-                    } else if (nitGames.length > 0) {
-                        titleEl.textContent = 'Postseason Games';
+                    // Show filters if we have mixed tournaments
+                    const hasNcaa = allGames.some(e => e._tourney === 'ncaa');
+                    const hasNit = allGames.some(e => e._tourney === 'nit');
+                    document.getElementById('gamesFilters').style.display = (hasNcaa || hasNit) ? 'flex' : 'none';
+
+                    // Set up filter event listeners (once)
+                    if (!window._gamesFiltersInit) {
+                        window._gamesFiltersInit = true;
+                        document.querySelectorAll('.games-filter-btn').forEach(btn => {
+                            btn.addEventListener('click', () => {
+                                document.querySelectorAll('.games-filter-btn').forEach(b => b.classList.remove('active'));
+                                btn.classList.add('active');
+                                renderFilteredGames();
+                            });
+                        });
+                        confSelect.addEventListener('change', renderFilteredGames);
                     }
 
-                    if (games.length === 0) {
-                        grid.innerHTML = '<div class="chart-loading">No upcoming games found</div>';
-                        return;
+                    // Default to NCAA filter if tournament games exist
+                    if (hasNcaa) {
+                        document.querySelectorAll('.games-filter-btn').forEach(b => b.classList.remove('active'));
+                        document.querySelector('.games-filter-btn[data-filter="ncaa"]').classList.add('active');
                     }
 
-                    games.forEach(event => {
+                    renderFilteredGames();
+                })
+                .catch(err => {
+                    console.error('Games load error:', err);
+                    grid.innerHTML = '<div class="chart-error">Error loading games</div>';
+                });
+        }
+
+        function renderFilteredGames() {
+            const allGames = window._allUpcomingGames || [];
+            const grid = document.getElementById('gamesGrid');
+            const activeFilter = document.querySelector('.games-filter-btn.active')?.dataset.filter || 'all';
+            const confFilter = document.getElementById('gamesConfFilter').value;
+
+            // Filter by tournament type
+            let filtered = allGames;
+            if (activeFilter === 'ncaa') {
+                filtered = allGames.filter(e => e._tourney === 'ncaa');
+            } else if (activeFilter === 'nit') {
+                filtered = allGames.filter(e => e._tourney === 'nit');
+            }
+
+            // Filter by conference
+            if (confFilter) {
+                filtered = filtered.filter(e => {
+                    const comp = e.competitions?.[0];
+                    if (!comp) return false;
+                    return comp.competitors?.some(c => {
+                        const tid = String(c.team?.id);
+                        const td = allTeamsData.find(t => t.espnId === tid);
+                        return td && td.conf === confFilter;
+                    });
+                });
+            }
+
+            // Update section title
+            const titleEl = document.getElementById('gamesTitle');
+            if (activeFilter === 'ncaa') titleEl.textContent = 'March Madness';
+            else if (activeFilter === 'nit') titleEl.textContent = 'NIT';
+            else titleEl.textContent = 'All Postseason Games';
+
+            grid.innerHTML = '';
+            if (filtered.length === 0) {
+                grid.innerHTML = '<div class="chart-loading">No games found for this filter</div>';
+                return;
+            }
+
+            filtered.forEach(event => {
                         const comp = event.competitions[0];
                         const competitors = comp.competitors || [];
 
@@ -1922,11 +2014,18 @@
                         if (status === 'In Progress') {
                             const period = comp.status?.period || 0;
                             const clock = comp.status?.displayClock || '';
-                            timeStr = period <= 2 ? `${period === 1 ? '1st' : '2nd'} Half ${clock}` : `OT ${clock}`;
+                            const t1Score = team1.score || '0';
+                            const t2Score = team2.score || '0';
+                            const halfStr = period <= 2 ? `${period === 1 ? '1st' : '2nd'} Half ${clock}` : `OT ${clock}`;
+                            timeStr = `<span style="font-size:1.1rem;font-weight:800;color:#1B2A4A;">${t1Score} - ${t2Score}</span><br>${halfStr}`;
                         } else if (status === 'Final') {
                             const t1Score = team1.score || '?';
                             const t2Score = team2.score || '?';
-                            timeStr = `Final: ${t1Score} - ${t2Score}`;
+                            timeStr = `<span style="font-size:1.1rem;font-weight:800;color:#1B2A4A;">Final: ${t1Score} - ${t2Score}</span>`;
+                        } else if (status === 'Halftime') {
+                            const t1Score = team1.score || '0';
+                            const t2Score = team2.score || '0';
+                            timeStr = `<span style="font-size:1.1rem;font-weight:800;color:#1B2A4A;">${t1Score} - ${t2Score}</span><br>Halftime`;
                         }
 
                         const cardId = `game-${t1EspnId}-${t2EspnId}`;
@@ -2009,11 +2108,6 @@
                             });
                         }
                     });
-                })
-                .catch(err => {
-                    console.error('Games load error:', err);
-                    grid.innerHTML = '<div class="chart-error">Error loading games</div>';
-                });
         }
 
         function openProfileById(espnId) {
