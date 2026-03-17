@@ -152,8 +152,8 @@
         .nav-search-item .name { font-weight: 600; color: #2C3345; font-size: 0.9rem; }
         .nav-search-item .conf { color: #8892A0; font-size: 0.78rem; }
         @media (max-width: 768px) {
-            .nav-search input { width: 140px; }
-            .nav-search input:focus { width: 180px; }
+            .nav-search input { width: 110px; font-size: 0.8rem; }
+            .nav-search input:focus { width: 140px; }
         }
 
         /* ── Container & Views ── */
@@ -419,7 +419,7 @@
         .profile-record-label { font-size: 0.75rem; color: #8892A0; text-transform: uppercase; font-weight: 700; margin-bottom: 0.2rem; }
         .profile-record-value { font-size: 1.4rem; font-weight: 800; color: #1B2A4A; }
 
-        .stats-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(155px, 1fr)); gap: 1.25rem; margin-bottom: 2.5rem; }
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 1rem; margin-bottom: 2.5rem; max-width: 100%; box-sizing: border-box; }
         .stat-card {
             background: #FFFFFF; border: 1px solid #E0D9CC; border-radius: 0.75rem;
             padding: 1.25rem; text-align: center; transition: all 0.25s ease;
@@ -703,27 +703,32 @@
 
         /* ── Responsive ── */
         @media (max-width: 768px) {
-            /* Navigation */
+            /* Navigation - two-row compact layout */
             nav {
                 flex-direction: row;
-                gap: 0.5rem;
-                padding: 0.75rem 0.5rem;
-                overflow-x: auto;
+                flex-wrap: wrap;
+                gap: 0.3rem;
+                padding: 0.5rem;
                 align-items: center;
             }
             .nav-logo { flex-shrink: 0; }
             .nav-links {
-                gap: 0.25rem;
+                gap: 0.1rem;
                 width: auto;
                 justify-content: flex-start;
                 flex: 1;
-                overflow-x: auto;
-                -webkit-overflow-scrolling: touch;
+                min-width: 0;
             }
             .nav-links li { white-space: nowrap; }
-            .nav-btn { font-size: 0.75rem; padding: 0.4rem 0.6rem; }
-            .logo-wordmark--nav { font-size: 1.1rem; }
+            .nav-btn { font-size: 0.7rem; padding: 0.35rem 0.5rem; }
+            .nav-logo { display: none; }
             .logo-wordmark--hero { font-size: 2rem; }
+            .logo-swoosh { display: none; }
+            .nav-search {
+                width: 100%;
+                order: 10;
+            }
+            .nav-search input { width: 100% !important; box-sizing: border-box; font-size: 0.85rem; }
 
             /* Compare section - stack vertically with centered VS */
             .compare-controls {
@@ -776,18 +781,27 @@
             .profile-header {
                 grid-template-columns: 1fr;
                 gap: 1rem;
+                padding: 1rem;
             }
+            #profile { overflow-x: hidden; }
 
             /* Stats grids */
             .stats-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 0.75rem;
+                grid-template-columns: repeat(2, 1fr) !important;
+                gap: 0.5rem;
+                max-width: 100%;
+                box-sizing: border-box;
+                overflow: hidden;
+                width: 100%;
             }
             .stat-card {
-                padding: 0.75rem;
-                font-size: 0.8rem;
+                padding: 0.6rem 0.4rem;
+                font-size: 0.7rem;
+                overflow: hidden;
+                box-sizing: border-box;
             }
-            .stat-card-value { font-size: 1.3rem; }
+            .stat-card-value { font-size: 1.2rem; }
+            .stat-card-label { font-size: 0.55rem; word-wrap: break-word; letter-spacing: -0.02em; }
 
             /* Stat comparison rows - make them single column on narrow screens */
             .stat-row {
@@ -816,11 +830,13 @@
                 height: 4px;
             }
 
-            /* Games grid - single column */
+            /* Games grid - single column, prevent overflow */
             .games-grid {
                 grid-template-columns: 1fr;
                 gap: 0.75rem;
             }
+            .game-card { overflow: hidden; }
+            .game-matchup-button { width: 100%; box-sizing: border-box; }
 
             /* Footer - single column */
             footer {
@@ -871,9 +887,12 @@
             }
 
             /* Reduce padding and margins on mobile */
-            .container { padding: 0.75rem; }
+            .container { padding: 0.75rem; overflow-x: hidden; }
             .section-title { font-size: 1.25rem; margin-bottom: 1rem; }
             .hero { padding: 1.5rem 1rem; }
+
+            /* Prevent any horizontal overflow */
+            body { overflow-x: hidden; }
         }
         .bracket-desktop-hint {
             display: none; text-align: center; padding: 0.6rem 1rem;
@@ -1063,7 +1082,7 @@
             <div>
                 <div style="font-size: 0.75rem; font-weight: 700; color: rgba(255,255,255,0.4); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.75rem;">Data Sources</div>
                 <div style="font-size: 0.8rem; color: rgba(255,255,255,0.45); line-height: 1.6;">
-                    Team data verified against NCAA recordbooks and Sports Reference. Live scores via ESPN. Ticket data via SeatGeek.
+                    Team data sourced from Sports Reference and ESPN. All-time records verified against the NCAA official record book, our ultimate source of truth. Ticket data via SeatGeek.
                 </div>
             </div>
         </div>
@@ -1535,7 +1554,38 @@
                 }
             }
 
-            // Fallback to ESPN API for last 5 seasons
+            // Fallback: check games.json data (same source as comparison view)
+            if (GAMES_DATA) {
+                const t1Id = String(t1EspnId), t2Id = String(t2EspnId);
+                const t1Data = GAMES_DATA[t1Id], t2Data = GAMES_DATA[t2Id];
+                let t1Wins = 0, t2Wins = 0;
+                const seen = new Set();
+
+                if (t1Data && t1Data.games) {
+                    const t2Slug = t2Data ? t2Data.slug : null;
+                    t1Data.games.forEach(g => {
+                        if ((g.opp === t2Id || g.opp_slug === t2Slug) && g.pts > 0 && !seen.has(g.date)) {
+                            seen.add(g.date);
+                            if (g.w) t1Wins++; else t2Wins++;
+                        }
+                    });
+                }
+                if (seen.size === 0 && t2Data && t2Data.games) {
+                    const t1Slug = t1Data ? t1Data.slug : null;
+                    t2Data.games.forEach(g => {
+                        if ((g.opp === t1Id || g.opp_slug === t1Slug) && g.pts > 0 && !seen.has(g.date)) {
+                            seen.add(g.date);
+                            if (g.w) t2Wins++; else t1Wins++;
+                        }
+                    });
+                }
+
+                if (seen.size > 0) {
+                    return Promise.resolve({ t1Wins, t2Wins, total: t1Wins + t2Wins });
+                }
+            }
+
+            // Final fallback: ESPN API for last 5 seasons
             const cacheKey = [t1EspnId, t2EspnId].sort().join('-');
             if (h2hCache[cacheKey]) {
                 const cached = h2hCache[cacheKey];
@@ -2706,6 +2756,7 @@
                                 </div>
                             </div>` : ''}
                     </div>
+                </div>
                 </div>
 
                 ${currentSeasonHTML}
