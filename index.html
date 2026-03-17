@@ -1498,44 +1498,62 @@
 
             _skipHashUpdate = true;
 
-            // #compare/ESPN_ID_1/ESPN_ID_2
-            const compareMatch = hash.match(/^#compare\/(\d+)\/(\d+)$/);
+            // #compare/slug1/slug2 or #compare/id1/id2 (backward compat)
+            const compareMatch = hash.match(/^#compare\/([^/]+)\/([^/]+)$/);
             if (compareMatch) {
-                const buildTeamObj = (espnId) => {
-                    const team = allTeamsData.find(t => t.espnId === espnId);
-                    if (team) return Promise.resolve(team);
-                    return fetch(`https://site.api.espn.com/apis/site/v2/sports/basketball/mens-college-basketball/teams/${espnId}`)
-                        .then(r => r.json())
-                        .then(data => {
-                            const t = data.team;
-                            return {
-                                espnId: String(t.id), name: t.displayName || 'Unknown',
-                                mascot: t.name || '', conf: t.groups?.parent?.name || 'Unknown',
-                                color: t.color ? '#' + t.color : '#1B2A4A',
-                                allTimeW: 500, allTimeL: 500,
-                                natlChamps: 0, champYears: [], finalFours: 0,
-                                elite8s: 0, sweet16s: 0, ncaaTourneys: 0,
-                                confTitles: 0, allAmericans: 0, nbaFirstRound: 0, apWeeksRanked: 0
-                            };
-                        });
+                const resolveTeam = (key) => {
+                    // Try slug first, then ESPN ID
+                    const bySlug = findTeamBySlug(key);
+                    if (bySlug) return Promise.resolve(bySlug);
+                    const byId = allTeamsData.find(t => t.espnId === key);
+                    if (byId) return Promise.resolve(byId);
+                    // Fallback: fetch from ESPN API by ID
+                    if (/^\d+$/.test(key)) {
+                        return fetch(`https://site.api.espn.com/apis/site/v2/sports/basketball/mens-college-basketball/teams/${key}`)
+                            .then(r => r.json())
+                            .then(data => {
+                                const t = data.team;
+                                return {
+                                    espnId: String(t.id), name: t.displayName || 'Unknown',
+                                    mascot: t.name || '', conf: t.groups?.parent?.name || 'Unknown',
+                                    color: t.color ? '#' + t.color : '#1B2A4A',
+                                    allTimeW: 500, allTimeL: 500,
+                                    natlChamps: 0, champYears: [], finalFours: 0,
+                                    elite8s: 0, sweet16s: 0, ncaaTourneys: 0,
+                                    confTitles: 0, allAmericans: 0, nbaFirstRound: 0, apWeeksRanked: 0
+                                };
+                            });
+                    }
+                    return Promise.resolve(null);
                 };
-                Promise.all([buildTeamObj(compareMatch[1]), buildTeamObj(compareMatch[2])]).then(([t1, t2]) => {
-                    selectedTeam1 = t1;
-                    selectedTeam2 = t2;
-                    renderComparison(true);
+                Promise.all([resolveTeam(compareMatch[1]), resolveTeam(compareMatch[2])]).then(([t1, t2]) => {
+                    if (t1 && t2) {
+                        selectedTeam1 = t1;
+                        selectedTeam2 = t2;
+                        renderComparison(true);
+                    }
                     _skipHashUpdate = false;
                 });
                 return;
             }
 
-            // #team/ESPN_ID
-            const teamMatch = hash.match(/^#team\/(\d+)$/);
+            // #team/slug or #team/ESPN_ID (backward compat)
+            const teamMatch = hash.match(/^#team\/([^/]+)$/);
             if (teamMatch) {
-                const team = allTeamsData.find(t => t.espnId === teamMatch[1]);
-                if (team) openProfile(team, true);
-                else {
-                    // Fetch from ESPN API for teams not in data.json
-                    openProfileById(teamMatch[1]);
+                const key = teamMatch[1];
+                // Try slug first
+                const bySlug = findTeamBySlug(key);
+                if (bySlug) {
+                    openProfile(bySlug, true);
+                    _skipHashUpdate = false;
+                    return;
+                }
+                // Try ESPN ID
+                const byId = allTeamsData.find(t => t.espnId === key);
+                if (byId) {
+                    openProfile(byId, true);
+                } else if (/^\d+$/.test(key)) {
+                    openProfileById(key);
                 }
                 _skipHashUpdate = false;
                 return;
@@ -1595,6 +1613,16 @@
             currentSortStat = statKey;
             rankingsSortDir = 'desc';
             switchView('rankings');
+        }
+
+        // Generate URL-friendly slug from team name: "Duke Blue Devils" → "duke-blue-devils"
+        function teamSlug(name) {
+            return name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+        }
+
+        // Find team by slug (reverse lookup)
+        function findTeamBySlug(slug) {
+            return allTeamsData.find(t => teamSlug(t.name) === slug);
         }
 
         let _skipHashUpdate = false; // Prevent hash ↔ switchView loops
@@ -2207,7 +2235,7 @@
 
             // Update URL hash for shareable link + browser history
             if (selectedTeam1 && selectedTeam2 && !skipHash) {
-                window.location.hash = `#compare/${selectedTeam1.espnId}/${selectedTeam2.espnId}`;
+                window.location.hash = `#compare/${teamSlug(selectedTeam1.name)}/${teamSlug(selectedTeam2.name)}`;
             }
 
             const t1 = selectedTeam1;
@@ -2841,9 +2869,9 @@
         function openProfile(team, skipHash) {
             const fullTeam = allTeamsData.find(t => t.espnId == team.espnId);
             currentProfile = fullTeam || team;
-            switchView('profile', true); // Don't push #profile, push #team/ID instead
+            switchView('profile', true);
             if (!skipHash) {
-                window.location.hash = `#team/${currentProfile.espnId}`;
+                window.location.hash = `#team/${teamSlug(currentProfile.name)}`;
             }
             renderProfile();
         }
