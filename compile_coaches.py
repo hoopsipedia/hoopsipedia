@@ -51,12 +51,21 @@ def compile_coaches():
         fp = (len(seasons), seasons[0].get('year',''), seasons[0].get('coach',''), seasons[-1].get('year',''))
         fingerprints[fp].append(eid)
 
+    # Known bad mappings: ESPN IDs in seasons.json that have WRONG school data
+    # ESPN 245 is mapped to "Texas A&M" in H but seasons.json has Texas Longhorns data
+    # ESPN 357 is an unmapped duplicate of Texas Longhorns data
+    bad_ids = {'245', '357'}
+
     # Build set of IDs to skip (duplicates)
-    skip_ids = set()
+    skip_ids = set(bad_ids)  # Always skip known bad IDs
     for fp, ids in fingerprints.items():
         if len(ids) > 1:
+            # Remove bad IDs from candidates
+            candidates = [eid for eid in ids if eid not in bad_ids]
+            if not candidates:
+                candidates = ids  # Fallback if all are bad
             # Prefer the ID that's in H
-            primary = next((eid for eid in ids if eid in H), ids[0])
+            primary = next((eid for eid in candidates if eid in H), candidates[0])
             for eid in ids:
                 if eid != primary:
                     skip_ids.add(eid)

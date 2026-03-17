@@ -1584,17 +1584,20 @@
                 const schoolNames = coach.schools.map(s => {
                     const teamArr = H[s[0]];
                     const name = teamArr ? teamArr[0] : 'Unknown';
-                    return `<span style="cursor:pointer;color:#1B2A4A;text-decoration:underline;text-decoration-color:#C9A86C;" onclick="openProfileById('${s[0]}')">${name.replace(/ (Tigers|Wildcats|Bears|Bulldogs|Eagles|Hawks|Huskies|Cougars|Hoyas|Jayhawks|Tar Heels|Blue Devils|Orange|Gators|Seminoles|Ducks|Gamecocks|Volunteers|Longhorns|Aggies|Patriots|Friars|Red Storm|Badgers|Wolfpack|Cavaliers|Cardinals|Spartans|Wolverines|Hawkeyes|Hoosiers|Boilermakers|Terrapins|Scarlet Knights|Illini|Golden Gophers|Cornhuskers|Nittany Lions|Buckeyes|Mountaineers|Sooners|Cowboys|Cyclones|Horned Frogs|Red Raiders|Razorbacks|Rebels|Commodores|Crimson Tide|Demon Deacons|Yellow Jackets|Seminoles|Panthers|Fighting Irish|Blue Jays|Musketeers|Pirates|Marquette Golden Eagles|Villanova Wildcats|Bluejays|Blue Demons)$/i, '')}</span>`;
+                    return `<span style="cursor:pointer;color:#1B2A4A;text-decoration:underline;text-decoration-color:#C9A86C;" onclick="openProfileById('${s[0]}')">${name}</span>`;
                 }).join(', ');
                 const bg = i % 2 === 0 ? '' : 'background:#FAFAF8;';
                 const gold = i < 3 ? 'color:#C9A86C;font-weight:800;' : '';
+                const isActive = coach.yearsEnd >= new Date().getFullYear();
+                const activeStyle = isActive ? 'color:#1B6B3A;' : '';
+                const activeBadge = isActive ? ' <span style="display:inline-block;padding:0.1rem 0.4rem;background:#E8F5E9;color:#1B6B3A;border-radius:0.2rem;font-size:0.65rem;font-weight:700;vertical-align:middle;">ACTIVE</span>' : '';
                 return `<tr style="${bg}">
                     <td style="padding:0.6rem;${gold}">${i + 1}</td>
-                    <td style="padding:0.6rem;font-weight:600;color:#1B2A4A;">${coach.name}</td>
+                    <td style="padding:0.6rem;font-weight:600;${activeStyle}">${coach.name}${activeBadge}</td>
                     <td style="padding:0.6rem;">${coach.wins}-${coach.losses}</td>
                     <td style="padding:0.6rem;">${coach.pct}%</td>
                     <td style="padding:0.6rem;font-size:0.85rem;">${schoolNames}</td>
-                    <td style="padding:0.6rem;color:#8892A0;">${coach.yearsStart}-${coach.yearsEnd}</td>
+                    <td style="padding:0.6rem;color:#8892A0;">${coach.yearsStart}-${coach.yearsEnd === new Date().getFullYear() ? 'Present' : coach.yearsEnd}</td>
                     <td style="padding:0.6rem;font-size:0.85rem;">${coach.bestYr} (${coach.bestRec})</td>
                 </tr>`;
             }).join('');
