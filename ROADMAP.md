@@ -92,7 +92,9 @@
 - Conference strength index over time
 
 ### Content & Engagement
-- **Team origin stories & mascot history** — Wikipedia-style narrative content, hyperlinked across teams
+- **Top 10 Moments per team** — curated YouTube clips for every program's greatest moments (not just tournament — regular season buzzer beaters, rivalry games, historic wins). Embedded on team profiles with context cards. The ultimate rabbit hole feature.
+- **Championship Run pages** — full tournament path for every champion with embedded highlights, opponent links, box scores. Connected from "What Happened Next?" on upset pages. E.g., Virginia's 2019 redemption arc.
+- **Team origin stories & mascot history** — Wikipedia-style narrative content cross-checked with official school athletics pages (never rely solely on Wikipedia). Hyperlinked to other team pages for rabbit-hole exploration.
 - **"This Day in CBB History"** — daily auto-generated content for return visits
 - **Tournament-specific SEO pages** — history of 12-5 upsets, best Cinderella runs, seed performance history
 - **"What If" simulator** — what if X team was in Y conference?
