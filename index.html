@@ -3073,6 +3073,161 @@
             }
         }
 
+        /* ── Advanced Stats Toggle ── */
+        .advanced-stats-toggle {
+            display: flex; align-items: center; justify-content: center;
+            margin: 0 0 1.5rem 0;
+        }
+        .advanced-stats-toggle button {
+            background: #1B2A4A; color: #C9A86C; border: none;
+            padding: 0.6rem 1.5rem; border-radius: 0.5rem;
+            font-size: 0.85rem; font-weight: 600; cursor: pointer;
+            transition: all 0.2s ease; letter-spacing: 0.02em;
+        }
+        .advanced-stats-toggle button:hover {
+            background: #243556; transform: translateY(-1px);
+        }
+        .advanced-stats-panel {
+            max-height: 0; overflow: hidden;
+            transition: max-height 0.4s ease, opacity 0.3s ease;
+            opacity: 0;
+        }
+        .advanced-stats-panel.open {
+            max-height: 800px; opacity: 1;
+        }
+        .advanced-stats-grid {
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 1rem; margin-bottom: 2rem;
+        }
+        .advanced-stat-card {
+            background: #FFFFFF; border: 1px solid #E0D9CC; border-radius: 0.75rem;
+            padding: 1.1rem; text-align: center; transition: all 0.25s ease;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+        }
+        .advanced-stat-card:hover { border-color: #C9A86C; transform: translateY(-2px); }
+        .advanced-stat-value { font-size: 1.6rem; font-weight: 800; color: #1B2A4A; margin-bottom: 0.25rem; }
+        .advanced-stat-label { font-size: 0.72rem; color: #8892A0; text-transform: uppercase; font-weight: 700; letter-spacing: 0.04em; }
+        .advanced-stat-sub { font-size: 0.7rem; color: #A0AAB8; margin-top: 0.2rem; }
+        .advanced-stat-positive { color: #2D7D46; }
+        .advanced-stat-negative { color: #C9463E; }
+
+        /* ── Player Stats Table ── */
+        .player-stats-section {
+            background: #FFFFFF; border: 1px solid #E0D9CC; border-radius: 0.75rem;
+            padding: 1.75rem; margin-bottom: 2.5rem; box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+        }
+        .player-stats-section h3 {
+            font-size: 1.15rem; font-weight: 700; margin-bottom: 1rem; color: #1B2A4A;
+        }
+        .player-stats-header {
+            display: flex; align-items: center; justify-content: space-between;
+            flex-wrap: wrap; gap: 0.75rem; margin-bottom: 1rem;
+        }
+        .player-stats-header h3 { margin-bottom: 0; }
+        .player-compare-btn {
+            background: #1B2A4A; color: #C9A86C; border: none;
+            padding: 0.5rem 1.2rem; border-radius: 0.4rem;
+            font-size: 0.8rem; font-weight: 600; cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        .player-compare-btn:hover { background: #243556; }
+        .player-table-wrap {
+            overflow-x: auto; -webkit-overflow-scrolling: touch;
+            border: 1px solid #E0D9CC; border-radius: 0.5rem;
+        }
+        .player-table {
+            width: 100%; border-collapse: collapse; font-size: 0.85rem;
+            min-width: 780px;
+        }
+        .player-table thead {
+            background: #1B2A4A; color: #C9A86C; position: sticky; top: 0; z-index: 1;
+        }
+        .player-table th {
+            padding: 0.6rem 0.75rem; text-align: left; font-weight: 600;
+            cursor: pointer; user-select: none; white-space: nowrap;
+            transition: background 0.15s;
+        }
+        .player-table th:hover { background: #243556; }
+        .player-table th.sorted-asc::after { content: ' \25B2'; font-size: 0.65rem; }
+        .player-table th.sorted-desc::after { content: ' \25BC'; font-size: 0.65rem; }
+        .player-table td {
+            padding: 0.55rem 0.75rem; border-bottom: 1px solid #F0EDE6;
+        }
+        .player-table tr:nth-child(even) { background: #FAFAF7; }
+        .player-table tr:hover { background: #F5F3EE; }
+        .player-table tr.leading-scorer { background: rgba(201,168,108,0.1); }
+        .player-table tr.leading-scorer td:first-child { border-left: 3px solid #C9A86C; }
+        .player-table .player-name-cell {
+            display: flex; align-items: center; gap: 0.5rem; font-weight: 600;
+        }
+        .player-headshot {
+            width: 28px; height: 28px; border-radius: 50%;
+            object-fit: cover; background: #F0EDE6;
+        }
+
+        /* ── Player Comparison ── */
+        .player-comparison-section {
+            background: #FFFFFF; border: 1px solid #E0D9CC; border-radius: 0.75rem;
+            padding: 1.75rem; margin-bottom: 2.5rem; box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+        }
+        .player-comparison-header {
+            display: flex; align-items: center; justify-content: center;
+            gap: 2rem; margin-bottom: 1.5rem; flex-wrap: wrap;
+        }
+        .player-comparison-pick {
+            display: flex; flex-direction: column; align-items: center; gap: 0.5rem;
+            flex: 1; min-width: 200px; max-width: 300px;
+        }
+        .player-comparison-pick img {
+            width: 64px; height: 64px; border-radius: 50%;
+            object-fit: cover; background: #F0EDE6;
+        }
+        .player-comparison-pick .player-pick-name {
+            font-weight: 700; font-size: 1rem; color: #1B2A4A; text-align: center;
+        }
+        .player-comparison-pick .player-pick-team {
+            font-size: 0.78rem; color: #8892A0;
+        }
+        .player-search-wrapper {
+            position: relative; width: 100%;
+        }
+        .player-search-input {
+            width: 100%; padding: 0.5rem 0.75rem; font-size: 0.85rem;
+            border: 1px solid #E0D9CC; border-radius: 0.4rem;
+            outline: none; transition: border-color 0.2s;
+        }
+        .player-search-input:focus { border-color: #C9A86C; }
+        .player-search-dropdown {
+            position: absolute; top: calc(100% + 2px); left: 0; right: 0;
+            background: #fff; border: 1px solid #E0D9CC; border-radius: 0.5rem;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+            max-height: 240px; overflow-y: auto; z-index: 50; display: none;
+        }
+        .player-search-dropdown.open { display: block; }
+        .player-search-item {
+            display: flex; align-items: center; gap: 0.5rem;
+            padding: 0.5rem 0.75rem; cursor: pointer; transition: background 0.15s;
+        }
+        .player-search-item:hover { background: #F5F3EE; }
+        .player-search-item img {
+            width: 24px; height: 24px; border-radius: 50%; object-fit: cover;
+        }
+        .player-search-item .ps-name { font-weight: 600; font-size: 0.85rem; color: #2C3345; }
+        .player-search-item .ps-team { font-size: 0.72rem; color: #8892A0; }
+        .player-comparison-vs { font-size: 1.2rem; font-weight: 700; color: #C9A86C; }
+        .player-comparison-stats { margin-top: 1rem; }
+
+        @media (max-width: 768px) {
+            .advanced-stats-grid { grid-template-columns: repeat(2, 1fr); }
+            .player-comparison-header { gap: 1rem; }
+            .player-comparison-pick { min-width: 150px; }
+        }
+        @media (max-width: 480px) {
+            .advanced-stats-grid { grid-template-columns: 1fr 1fr; gap: 0.6rem; }
+            .advanced-stat-value { font-size: 1.3rem; }
+            .advanced-stat-label { font-size: 0.65rem; }
+        }
+
     </style>
 </head>
 <body>
@@ -4644,6 +4799,14 @@
                     }
                     _skipHashUpdate = false;
                 });
+                return;
+            }
+
+            // #compare-players/team1Id/player1Id/team2Id/player2Id
+            const playerCompareMatch = hash.match(/^#compare-players\/(\d+)\/(\d+)\/(\d+)\/(\d+)$/);
+            if (playerCompareMatch) {
+                loadPlayerComparisonFromHash(playerCompareMatch[1], playerCompareMatch[2], playerCompareMatch[3], playerCompareMatch[4]);
+                _skipHashUpdate = false;
                 return;
             }
 
@@ -8123,6 +8286,9 @@
                 </div>
             `;
 
+            // Advanced Stats Toggle (Feature 1)
+            profileHTML += renderAdvancedStatsSection(team);
+
             if (team.natlChamps > 0) {
                 profileHTML += `
                     <div class="championships-section">
@@ -8186,6 +8352,17 @@
 
             // Quad Record (Selection Committee Resume)
             profileHTML += renderQuadRecordSection(team);
+
+            // Player Roster & Stats (Feature 2) — placeholder, lazy-loaded
+            profileHTML += `
+                <div class="player-stats-section" id="playerStatsSection">
+                    <div class="player-stats-header">
+                        <h3>Player Roster &amp; Stats</h3>
+                        <button class="player-compare-btn" onclick="openPlayerComparison()">Compare Players</button>
+                    </div>
+                    <div id="playerStatsContent" style="text-align:center;padding:1rem;color:#8892A0;">Loading player stats...</div>
+                </div>
+            `;
 
             // NCAA Tournament Resume
             profileHTML += renderTournamentResume(team);
@@ -8328,6 +8505,17 @@
 
             // Load season data
             loadSeasonData(team);
+
+            // Lazy-load player stats (Feature 2)
+            fetchPlayerStats(team.espnId).then(data => {
+                const psContent = document.getElementById('playerStatsContent');
+                if (psContent && data) {
+                    psContent.innerHTML = renderPlayerStatsTable(data, team);
+                    setupPlayerTableSort();
+                } else if (psContent) {
+                    psContent.innerHTML = '<div style="color:#8892A0;font-size:0.85rem;">Player data unavailable for this team.</div>';
+                }
+            });
         }
 
         function loadSeasonData(team) {
@@ -11287,6 +11475,596 @@
         // Helper: find team by ESPN ID
         function findTeamByEspnId(espnId) {
             return allTeamsData.find(t => String(t.espnId) === String(espnId));
+        }
+
+        // ── Advanced Stats Toggle ──
+        function renderAdvancedStatsSection(team) {
+            const espnId = team.espnId;
+            let latest = {};
+            if (SEASONS_DATA && SEASONS_DATA[espnId] && SEASONS_DATA[espnId].seasons?.length > 0) {
+                latest = SEASONS_DATA[espnId].seasons[0];
+            }
+            const ppg = latest.ppg;
+            const oppPpg = latest.oppPpg;
+            const srs = latest.srs;
+            const sos = latest.sos;
+            const confW = parseInt(latest.confWins) || 0;
+            const confL = parseInt(latest.confLosses) || 0;
+            const wins = parseInt(latest.wins) || 0;
+            const losses = parseInt(latest.losses) || 0;
+            const margin = ppg && oppPpg ? (ppg - oppPpg).toFixed(1) : null;
+            const marginClass = margin > 0 ? 'advanced-stat-positive' : margin < 0 ? 'advanced-stat-negative' : '';
+            const marginPrefix = margin > 0 ? '+' : '';
+
+            const hasData = ppg || srs || sos || (confW + confL > 0);
+            if (!hasData) return '';
+
+            let cards = '';
+            if (ppg) cards += `
+                <div class="advanced-stat-card">
+                    <div class="advanced-stat-value">${ppg}</div>
+                    <div class="advanced-stat-label">Points Per Game</div>
+                </div>`;
+            if (oppPpg) cards += `
+                <div class="advanced-stat-card">
+                    <div class="advanced-stat-value">${oppPpg}</div>
+                    <div class="advanced-stat-label">Opp Points Per Game</div>
+                </div>`;
+            if (margin !== null) cards += `
+                <div class="advanced-stat-card">
+                    <div class="advanced-stat-value ${marginClass}">${marginPrefix}${margin}</div>
+                    <div class="advanced-stat-label">Scoring Margin</div>
+                </div>`;
+            if (srs !== undefined && srs !== null) cards += `
+                <div class="advanced-stat-card">
+                    <div class="advanced-stat-value">${srs}</div>
+                    <div class="advanced-stat-label">SRS</div>
+                    <div class="advanced-stat-sub">Simple Rating System</div>
+                </div>`;
+            if (sos !== undefined && sos !== null) cards += `
+                <div class="advanced-stat-card">
+                    <div class="advanced-stat-value">${sos}</div>
+                    <div class="advanced-stat-label">Strength of Schedule</div>
+                </div>`;
+            if (confW + confL > 0) cards += `
+                <div class="advanced-stat-card">
+                    <div class="advanced-stat-value">${confW}-${confL}</div>
+                    <div class="advanced-stat-label">Conference Record</div>
+                    <div class="advanced-stat-sub">${wins}-${losses} Overall</div>
+                </div>`;
+            if (latest.apHigh) cards += `
+                <div class="advanced-stat-card">
+                    <div class="advanced-stat-value">#${latest.apHigh}</div>
+                    <div class="advanced-stat-label">AP Poll High</div>
+                </div>`;
+            if (latest.seed) cards += `
+                <div class="advanced-stat-card">
+                    <div class="advanced-stat-value">#${latest.seed}</div>
+                    <div class="advanced-stat-label">NCAA Seed</div>
+                </div>`;
+
+            return `
+                <div class="advanced-stats-toggle">
+                    <button onclick="toggleAdvancedStats(this)">Show Advanced Stats</button>
+                </div>
+                <div class="advanced-stats-panel" id="advancedStatsPanel">
+                    <div class="advanced-stats-grid">
+                        ${cards}
+                    </div>
+                    <div id="advancedStatsSplits"></div>
+                </div>
+            `;
+        }
+
+        function toggleAdvancedStats(btn) {
+            const panel = document.getElementById('advancedStatsPanel');
+            if (!panel) return;
+            const isOpen = panel.classList.contains('open');
+            panel.classList.toggle('open');
+            btn.textContent = isOpen ? 'Show Advanced Stats' : 'Hide Advanced Stats';
+
+            // Lazy-load ESPN splits on first open
+            if (!isOpen && !panel.dataset.splitsLoaded && currentProfile) {
+                panel.dataset.splitsLoaded = 'true';
+                fetchAdvancedSplits(currentProfile.espnId);
+            }
+        }
+
+        async function fetchAdvancedSplits(espnId) {
+            const container = document.getElementById('advancedStatsSplits');
+            if (!container) return;
+            const cacheKey = `advSplits_${espnId}`;
+            const cached = sessionStorage.getItem(cacheKey);
+            if (cached) {
+                container.innerHTML = cached;
+                return;
+            }
+            try {
+                const resp = await fetch(`https://site.api.espn.com/apis/site/v2/sports/basketball/mens-college-basketball/teams/${espnId}/statistics`);
+                const data = await resp.json();
+                const splits = data?.splits;
+                if (!splits) return;
+
+                // Look for home/away/neutral categories
+                let splitsHTML = '';
+                const categories = splits.categories || [];
+                // Find overall stats for pace/tempo
+                const overallCat = categories.find(c => c.name === 'general' || c.displayName === 'General');
+                if (overallCat) {
+                    const paceStat = overallCat.stats?.find(s => s.name === 'avgPossessions' || s.name === 'possessions' || s.displayName === 'Possessions');
+                    if (paceStat) {
+                        splitsHTML += `
+                            <div class="advanced-stats-grid" style="margin-top:0;">
+                                <div class="advanced-stat-card">
+                                    <div class="advanced-stat-value">${parseFloat(paceStat.value).toFixed(1)}</div>
+                                    <div class="advanced-stat-label">Pace / Tempo</div>
+                                    <div class="advanced-stat-sub">Possessions per game</div>
+                                </div>
+                            </div>`;
+                    }
+                }
+                if (splitsHTML) {
+                    container.innerHTML = splitsHTML;
+                    sessionStorage.setItem(cacheKey, splitsHTML);
+                }
+            } catch (e) {
+                console.log('Advanced splits fetch failed:', e);
+            }
+        }
+
+        // ── Player Stats on Team Profile ──
+        let _playerStatsCache = {};
+
+        async function fetchPlayerStats(espnId) {
+            const cacheKey = `playerStats_${espnId}`;
+            // Check sessionStorage
+            const cached = sessionStorage.getItem(cacheKey);
+            if (cached) {
+                try { return JSON.parse(cached); } catch(e) {}
+            }
+            // Check memory cache
+            if (_playerStatsCache[espnId]) return _playerStatsCache[espnId];
+
+            try {
+                // Fetch roster (player info) and leaders (per-player stats) in parallel
+                const [rosterResp, leadersResp] = await Promise.all([
+                    fetch(`https://site.api.espn.com/apis/site/v2/sports/basketball/mens-college-basketball/teams/${espnId}/roster`).then(r => r.json()),
+                    fetch(`https://sports.core.api.espn.com/v2/sports/basketball/leagues/mens-college-basketball/seasons/2026/types/2/teams/${espnId}/leaders`).then(r => r.json()).catch(() => null)
+                ]);
+
+                const athletes = rosterResp.athletes || [];
+
+                // Build player map from roster
+                const players = athletes.map(a => ({
+                    id: String(a.id),
+                    name: a.displayName || a.fullName || 'Unknown',
+                    position: a.position?.abbreviation || '',
+                    height: a.displayHeight || '',
+                    weight: a.displayWeight || '',
+                    year: a.experience?.displayValue || '',
+                    jersey: a.jersey || '',
+                    headshot: a.headshot?.href || `https://a.espncdn.com/combiner/i?img=/i/headshots/mens-college-basketball/players/full/${a.id}.png&w=64&h=64`,
+                    stats: {}
+                }));
+
+                // Map stats from leaders endpoint — extract athlete ID from $ref URL
+                if (leadersResp && leadersResp.categories) {
+                    const statKeyMap = {
+                        'pointsPerGame': 'avgPoints',
+                        'assistsPerGame': 'avgAssists',
+                        'reboundsPerGame': 'avgRebounds',
+                        'stealsPerGame': 'avgSteals',
+                        'blocksPerGame': 'avgBlocks',
+                        'fieldGoalPercentage': 'fieldGoalPct',
+                        'minutesPerGame': 'avgMinutes',
+                        'foulsPerGame': 'avgFouls',
+                        'offensiveReboundsPerGame': 'avgOffReb',
+                        'defensiveReboundsPerGame': 'avgDefReb',
+                        '3PointMadePerGame': 'avg3PM',
+                        'PER': 'PER'
+                    };
+                    leadersResp.categories.forEach(cat => {
+                        const statName = statKeyMap[cat.name] || cat.name;
+                        (cat.leaders || []).forEach(leader => {
+                            // Extract athlete ID from $ref URL
+                            const ref = leader.athlete?.['$ref'] || '';
+                            const match = ref.match(/athletes\/(\d+)/);
+                            const pid = match ? match[1] : null;
+                            if (!pid) return;
+                            const player = players.find(p => p.id === pid);
+                            if (player) {
+                                player.stats[statName] = leader.displayValue || String(leader.value);
+                            }
+                        });
+                    });
+                }
+
+                // Also try to get FG%, 3PT%, FT% from the core stats endpoint
+                try {
+                    const fgResp = await fetch(`https://sports.core.api.espn.com/v2/sports/basketball/leagues/mens-college-basketball/seasons/2026/types/2/teams/${espnId}/statistics`);
+                    const fgData = await fgResp.json();
+                    // This endpoint has team stats, not per-player — skip individual mapping
+                } catch(e) {}
+
+                const result = { players, teamId: espnId };
+                _playerStatsCache[espnId] = result;
+                try { sessionStorage.setItem(cacheKey, JSON.stringify(result)); } catch(e) {}
+                return result;
+            } catch (e) {
+                console.log('Player stats fetch failed:', e);
+                return null;
+            }
+        }
+
+        function renderPlayerStatsTable(data, team) {
+            if (!data || !data.players || data.players.length === 0) {
+                return '<div style="color:#8892A0;font-size:0.85rem;padding:1rem;">No player data available for this team.</div>';
+            }
+
+            let players = data.players.filter(p => {
+                // Filter out players with no stats
+                const ppg = parseFloat(p.stats.avgPoints || p.stats.PTS || 0);
+                return ppg > 0 || Object.keys(p.stats).length > 0;
+            });
+
+            // Sort by PPG by default
+            players.sort((a, b) => {
+                const aPPG = parseFloat(a.stats.avgPoints || a.stats.PTS || 0);
+                const bPPG = parseFloat(b.stats.avgPoints || b.stats.PTS || 0);
+                return bPPG - aPPG;
+            });
+
+            const leadingScorerPPG = players.length > 0 ? parseFloat(players[0].stats.avgPoints || players[0].stats.PTS || 0) : 0;
+
+            const getStat = (p, ...keys) => {
+                for (const k of keys) {
+                    if (p.stats[k] !== undefined) return p.stats[k];
+                }
+                return '-';
+            };
+
+            const rows = players.map((p, idx) => {
+                const ppg = getStat(p, 'avgPoints', 'PTS');
+                const rpg = getStat(p, 'avgRebounds', 'REB');
+                const apg = getStat(p, 'avgAssists', 'AST');
+                const spg = getStat(p, 'avgSteals', 'STL');
+                const bpg = getStat(p, 'avgBlocks', 'BLK');
+                const fgPct = getStat(p, 'fieldGoalPct', 'FG%');
+                const isLeader = idx === 0 && leadingScorerPPG > 0;
+
+                // Format FG% - leaders endpoint gives display value like "54.3"
+                const fgDisplay = fgPct !== '-' ? (parseFloat(fgPct) <= 1 ? (parseFloat(fgPct)*100).toFixed(1) + '%' : fgPct + '%') : '-';
+
+                return `<tr class="${isLeader ? 'leading-scorer' : ''}">
+                    <td><div class="player-name-cell">
+                        <img class="player-headshot" src="${p.headshot}" alt="" onerror="this.style.display='none'">
+                        <span>${p.name}</span>
+                    </div></td>
+                    <td>${p.position}</td>
+                    <td>${p.height}</td>
+                    <td>${p.year}</td>
+                    <td style="font-weight:600;">${ppg}</td>
+                    <td>${rpg}</td>
+                    <td>${apg}</td>
+                    <td>${spg}</td>
+                    <td>${bpg}</td>
+                    <td>${fgDisplay}</td>
+                </tr>`;
+            }).join('');
+
+            const columns = [
+                { label: 'Player', key: 'name', type: 'string' },
+                { label: 'Pos', key: 'position', type: 'string' },
+                { label: 'Ht', key: 'height', type: 'string' },
+                { label: 'Yr', key: 'year', type: 'string' },
+                { label: 'PPG', key: 'avgPoints', type: 'number' },
+                { label: 'RPG', key: 'avgRebounds', type: 'number' },
+                { label: 'APG', key: 'avgAssists', type: 'number' },
+                { label: 'SPG', key: 'avgSteals', type: 'number' },
+                { label: 'BPG', key: 'avgBlocks', type: 'number' },
+                { label: 'FG%', key: 'fieldGoalPct', type: 'number' }
+            ];
+
+            return `
+                <div class="player-table-wrap">
+                    <table class="player-table" id="playerStatsTable" data-team-id="${team.espnId}">
+                        <thead><tr>
+                            ${columns.map((col, i) => `<th data-col="${i}" data-sort-key="${col.key}" data-sort-type="${col.type}" class="${i === 4 ? 'sorted-desc' : ''}">${col.label}</th>`).join('')}
+                        </tr></thead>
+                        <tbody>${rows}</tbody>
+                    </table>
+                </div>
+            `;
+        }
+
+        function setupPlayerTableSort() {
+            const table = document.getElementById('playerStatsTable');
+            if (!table) return;
+            const espnId = table.dataset.teamId;
+            const data = _playerStatsCache[espnId];
+            if (!data) return;
+
+            table.querySelectorAll('thead th').forEach(th => {
+                th.addEventListener('click', () => {
+                    const colIdx = parseInt(th.dataset.col);
+                    const sortKey = th.dataset.sortKey;
+                    const sortType = th.dataset.sortType;
+                    const wasDesc = th.classList.contains('sorted-desc');
+                    const wasAsc = th.classList.contains('sorted-asc');
+
+                    // Clear all sort classes
+                    table.querySelectorAll('th').forEach(h => {
+                        h.classList.remove('sorted-asc', 'sorted-desc');
+                    });
+
+                    let ascending = wasDesc; // toggle
+                    th.classList.add(ascending ? 'sorted-asc' : 'sorted-desc');
+
+                    const tbody = table.querySelector('tbody');
+                    const rows = Array.from(tbody.querySelectorAll('tr'));
+
+                    rows.sort((a, b) => {
+                        const cellA = a.children[colIdx]?.textContent?.trim() || '';
+                        const cellB = b.children[colIdx]?.textContent?.trim() || '';
+                        if (sortType === 'number') {
+                            const numA = parseFloat(cellA.replace('%','')) || 0;
+                            const numB = parseFloat(cellB.replace('%','')) || 0;
+                            return ascending ? numA - numB : numB - numA;
+                        }
+                        return ascending ? cellA.localeCompare(cellB) : cellB.localeCompare(cellA);
+                    });
+
+                    rows.forEach(r => tbody.appendChild(r));
+                });
+            });
+        }
+
+        // ── Player Comparison ──
+        let _allPlayersCache = null;
+
+        async function getAllTournamentPlayers() {
+            if (_allPlayersCache) return _allPlayersCache;
+            const cached = sessionStorage.getItem('allTourneyPlayers');
+            if (cached) {
+                try {
+                    _allPlayersCache = JSON.parse(cached);
+                    return _allPlayersCache;
+                } catch(e) {}
+            }
+            // Build from cached per-team data
+            const players = [];
+            for (const key of Object.keys(_playerStatsCache)) {
+                const data = _playerStatsCache[key];
+                if (!data?.players) continue;
+                const team = allTeamsData.find(t => t.espnId === key);
+                data.players.forEach(p => {
+                    players.push({ ...p, teamName: team?.name || 'Unknown', teamEspnId: key, teamColor: team?.color || '#1B2A4A' });
+                });
+            }
+            if (players.length > 0) {
+                _allPlayersCache = players;
+                try { sessionStorage.setItem('allTourneyPlayers', JSON.stringify(players)); } catch(e){}
+            }
+            return players;
+        }
+
+        function renderPlayerComparisonSection() {
+            return `
+                <div class="player-comparison-section" id="playerComparisonSection">
+                    <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 1rem; color: #1B2A4A; text-align: center;">Compare Players</h3>
+                    <div class="player-comparison-header">
+                        <div class="player-comparison-pick" id="playerPick1">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23F0EDE6'/%3E%3Ccircle cx='32' cy='24' r='10' fill='%23D6CFC2'/%3E%3Cellipse cx='32' cy='48' rx='16' ry='10' fill='%23D6CFC2'/%3E%3C/svg%3E" alt="">
+                            <div class="player-pick-name" id="playerPick1Name">Select Player 1</div>
+                            <div class="player-pick-team" id="playerPick1Team"></div>
+                            <div class="player-search-wrapper">
+                                <input type="text" class="player-search-input" id="playerSearch1" placeholder="Search player...">
+                                <div class="player-search-dropdown" id="playerDropdown1"></div>
+                            </div>
+                        </div>
+                        <div class="player-comparison-vs">VS</div>
+                        <div class="player-comparison-pick" id="playerPick2">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23F0EDE6'/%3E%3Ccircle cx='32' cy='24' r='10' fill='%23D6CFC2'/%3E%3Cellipse cx='32' cy='48' rx='16' ry='10' fill='%23D6CFC2'/%3E%3C/svg%3E" alt="">
+                            <div class="player-pick-name" id="playerPick2Name">Select Player 2</div>
+                            <div class="player-pick-team" id="playerPick2Team"></div>
+                            <div class="player-search-wrapper">
+                                <input type="text" class="player-search-input" id="playerSearch2" placeholder="Search player...">
+                                <div class="player-search-dropdown" id="playerDropdown2"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="player-comparison-stats" id="playerComparisonStats"></div>
+                </div>
+            `;
+        }
+
+        let _selectedPlayer1 = null;
+        let _selectedPlayer2 = null;
+
+        function setupPlayerComparison() {
+            const search1 = document.getElementById('playerSearch1');
+            const search2 = document.getElementById('playerSearch2');
+            if (!search1 || !search2) return;
+
+            const setupSearch = (input, dropdownId, pickNum) => {
+                const dropdown = document.getElementById(dropdownId);
+                let debounceTimer;
+                input.addEventListener('input', () => {
+                    clearTimeout(debounceTimer);
+                    debounceTimer = setTimeout(async () => {
+                        const query = input.value.toLowerCase().trim();
+                        if (query.length < 2) {
+                            dropdown.classList.remove('open');
+                            return;
+                        }
+                        const players = await getAllTournamentPlayers();
+                        const matches = players.filter(p =>
+                            p.name.toLowerCase().includes(query) ||
+                            p.teamName.toLowerCase().includes(query)
+                        ).slice(0, 15);
+
+                        dropdown.innerHTML = matches.map(p => `
+                            <div class="player-search-item" data-player-id="${p.id}" data-team-id="${p.teamEspnId}">
+                                <img src="${p.headshot}" alt="" onerror="this.style.display='none'">
+                                <div>
+                                    <div class="ps-name">${p.name}</div>
+                                    <div class="ps-team">${p.teamName} - ${p.position}</div>
+                                </div>
+                            </div>
+                        `).join('');
+
+                        dropdown.querySelectorAll('.player-search-item').forEach(item => {
+                            item.addEventListener('click', () => {
+                                const pid = item.dataset.playerId;
+                                const tid = item.dataset.teamId;
+                                const player = matches.find(p => p.id === pid && p.teamEspnId === tid);
+                                if (!player) return;
+
+                                if (pickNum === 1) {
+                                    _selectedPlayer1 = player;
+                                    document.getElementById('playerPick1Name').textContent = player.name;
+                                    document.getElementById('playerPick1Team').textContent = player.teamName;
+                                    document.querySelector('#playerPick1 img').src = player.headshot;
+                                } else {
+                                    _selectedPlayer2 = player;
+                                    document.getElementById('playerPick2Name').textContent = player.name;
+                                    document.getElementById('playerPick2Team').textContent = player.teamName;
+                                    document.querySelector('#playerPick2 img').src = player.headshot;
+                                }
+                                input.value = '';
+                                dropdown.classList.remove('open');
+
+                                if (_selectedPlayer1 && _selectedPlayer2) {
+                                    renderPlayerComparisonResult();
+                                    // Update hash
+                                    window.location.hash = `#compare-players/${_selectedPlayer1.teamEspnId}/${_selectedPlayer1.id}/${_selectedPlayer2.teamEspnId}/${_selectedPlayer2.id}`;
+                                }
+                            });
+                        });
+
+                        dropdown.classList.toggle('open', matches.length > 0);
+                    }, 200);
+                });
+
+                // Close dropdown on outside click
+                document.addEventListener('click', (e) => {
+                    if (!input.contains(e.target) && !dropdown.contains(e.target)) {
+                        dropdown.classList.remove('open');
+                    }
+                });
+            };
+
+            setupSearch(search1, 'playerDropdown1', 1);
+            setupSearch(search2, 'playerDropdown2', 2);
+        }
+
+        function renderPlayerComparisonResult() {
+            const container = document.getElementById('playerComparisonStats');
+            if (!container || !_selectedPlayer1 || !_selectedPlayer2) return;
+
+            const p1 = _selectedPlayer1;
+            const p2 = _selectedPlayer2;
+            const c1 = p1.teamColor || '#1B2A4A';
+            const c2 = p2.teamColor || '#C9A86C';
+
+            const getStat = (p, ...keys) => {
+                for (const k of keys) {
+                    if (p.stats[k] !== undefined) {
+                        let v = parseFloat(p.stats[k]);
+                        return isNaN(v) ? 0 : v;
+                    }
+                }
+                return 0;
+            };
+
+            const formatPct = (v) => {
+                if (v > 1) return v.toFixed(1) + '%';
+                return (v * 100).toFixed(1) + '%';
+            };
+
+            const stats = [
+                { label: 'Points Per Game', keys: ['avgPoints', 'PTS'], fmt: v => v.toFixed(1) },
+                { label: 'Rebounds Per Game', keys: ['avgRebounds', 'REB'], fmt: v => v.toFixed(1) },
+                { label: 'Assists Per Game', keys: ['avgAssists', 'AST'], fmt: v => v.toFixed(1) },
+                { label: 'Steals Per Game', keys: ['avgSteals', 'STL'], fmt: v => v.toFixed(1) },
+                { label: 'Blocks Per Game', keys: ['avgBlocks', 'BLK'], fmt: v => v.toFixed(1) },
+                { label: 'FG%', keys: ['fieldGoalPct', 'FG%'], fmt: formatPct },
+                { label: 'Minutes Per Game', keys: ['avgMinutes', 'MIN'], fmt: v => v.toFixed(1) },
+            ];
+
+            // Build comparison using renderStatRow pattern
+            const t1 = allTeamsData.find(t => t.espnId === p1.teamEspnId) || { espnId: p1.teamEspnId, name: p1.teamName };
+            const t2 = allTeamsData.find(t => t.espnId === p2.teamEspnId) || { espnId: p2.teamEspnId, name: p2.teamName };
+
+            let html = '<div class="comparison-stats">';
+            stats.forEach(stat => {
+                const v1 = getStat(p1, ...stat.keys);
+                const v2 = getStat(p2, ...stat.keys);
+                // Skip stats where both players have zero
+                if (v1 === 0 && v2 === 0) return;
+                html += renderStatRow(stat.label, stat.fmt(v1), stat.fmt(v2), c1, c2, t1, t2);
+            });
+            html += '</div>';
+            container.innerHTML = html;
+        }
+
+        function openPlayerComparison() {
+            // Navigate to player comparison view
+            switchView('comparison', true);
+            const container = document.getElementById('comparisonContent');
+            container.innerHTML = renderPlayerComparisonSection();
+            setupPlayerComparison();
+            // Pre-populate cache from current profile if available
+            if (currentProfile) {
+                fetchPlayerStats(currentProfile.espnId).then(() => getAllTournamentPlayers());
+            }
+        }
+
+        async function loadPlayerComparisonFromHash(team1Id, player1Id, team2Id, player2Id) {
+            // Fetch player data for both teams
+            const [data1, data2] = await Promise.all([
+                fetchPlayerStats(team1Id),
+                fetchPlayerStats(team2Id)
+            ]);
+            await getAllTournamentPlayers(); // refresh cache
+
+            const allPlayers = await getAllTournamentPlayers();
+            _selectedPlayer1 = allPlayers.find(p => p.id === player1Id && p.teamEspnId === team1Id) || null;
+            _selectedPlayer2 = allPlayers.find(p => p.id === player2Id && p.teamEspnId === team2Id) || null;
+
+            if (!_selectedPlayer1 || !_selectedPlayer2) {
+                // Try from fetched data directly
+                if (data1?.players) {
+                    const t = allTeamsData.find(t => t.espnId === team1Id);
+                    const p = data1.players.find(pl => pl.id === player1Id);
+                    if (p) _selectedPlayer1 = { ...p, teamName: t?.name || 'Unknown', teamEspnId: team1Id, teamColor: t?.color || '#1B2A4A' };
+                }
+                if (data2?.players) {
+                    const t = allTeamsData.find(t => t.espnId === team2Id);
+                    const p = data2.players.find(pl => pl.id === player2Id);
+                    if (p) _selectedPlayer2 = { ...p, teamName: t?.name || 'Unknown', teamEspnId: team2Id, teamColor: t?.color || '#C9A86C' };
+                }
+            }
+
+            // Render the comparison view
+            switchView('comparison', true);
+            const container = document.getElementById('comparisonContent');
+            container.innerHTML = renderPlayerComparisonSection();
+            setupPlayerComparison();
+
+            if (_selectedPlayer1) {
+                document.getElementById('playerPick1Name').textContent = _selectedPlayer1.name;
+                document.getElementById('playerPick1Team').textContent = _selectedPlayer1.teamName;
+                document.querySelector('#playerPick1 img').src = _selectedPlayer1.headshot;
+            }
+            if (_selectedPlayer2) {
+                document.getElementById('playerPick2Name').textContent = _selectedPlayer2.name;
+                document.getElementById('playerPick2Team').textContent = _selectedPlayer2.teamName;
+                document.querySelector('#playerPick2 img').src = _selectedPlayer2.headshot;
+            }
+            if (_selectedPlayer1 && _selectedPlayer2) {
+                renderPlayerComparisonResult();
+            }
         }
 
         // Init
