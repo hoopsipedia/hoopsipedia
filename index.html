@@ -2702,13 +2702,58 @@
             const t1Data = GAMES_DATA[String(t1.espnId)];
             const t2Data = GAMES_DATA[String(t2.espnId)];
 
+            // Sports Reference uses different URL slugs than ESPN names for some schools
+            // This maps ESPN display names to SR opponent slugs found in games.json
+            const SR_SLUG_ALIASES = {
+                'umbc': 'maryland-baltimore-county',
+                'utep': 'texas-el-paso',
+                'uconn': 'connecticut',
+                'smu': 'southern-methodist',
+                'vcu': 'virginia-commonwealth',
+                'lsu': 'louisiana-state',
+                'ucf': 'central-florida',
+                'unlv': 'nevada-las-vegas',
+                'usc': 'southern-california',
+                'ole miss': 'mississippi',
+                'pitt': 'pittsburgh',
+                'uab': 'alabama-birmingham',
+                'unc': 'north-carolina',
+                'uri': 'rhode-island',
+                'loyola chicago': 'loyola-il',
+                'st. john\'s': 'st-johns-ny',
+                'saint joseph\'s': 'saint-josephs',
+                'miami': 'miami-fl',
+            };
+
+            // Build match function for opponent identification
+            function buildOppMatcher(team, teamData) {
+                const exact = new Set();
+                if (teamData && teamData.slug) exact.add(teamData.slug);
+                exact.add(String(team.espnId));
+                if (team.name) {
+                    const full = team.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+                    exact.add(full);
+                    const parts = team.name.split(' ');
+                    if (parts[0]) exact.add(parts[0].toLowerCase());
+                    // Check alias map for SR slug mismatches
+                    const nameLower = team.name.toLowerCase();
+                    for (const [key, srSlug] of Object.entries(SR_SLUG_ALIASES)) {
+                        if (nameLower.includes(key)) exact.add(srSlug);
+                    }
+                }
+                return function(oppId, oppSlug) {
+                    return exact.has(oppId) || exact.has(oppSlug);
+                };
+            }
+
+            const matchesT2 = buildOppMatcher(t2, t2Data);
+            const matchesT1 = buildOppMatcher(t1, t1Data);
+
             // Try to find matchups from team1's perspective
             let matchups = [];
             if (t1Data && t1Data.games) {
-                const t2Slug = t2Data ? t2Data.slug : null;
-                const t2Id = String(t2.espnId);
                 t1Data.games.forEach(g => {
-                    const isOpp = g.opp === t2Id || g.opp_slug === t2Slug;
+                    const isOpp = matchesT2(g.opp || '', g.opp_slug || '');
                     if (isOpp) {
                         matchups.push({
                             date: g.date,
@@ -2725,10 +2770,8 @@
 
             // If we didn't find much from t1, also try from t2's perspective
             if (matchups.length === 0 && t2Data && t2Data.games) {
-                const t1Slug = t1Data ? t1Data.slug : null;
-                const t1Id = String(t1.espnId);
                 t2Data.games.forEach(g => {
-                    const isOpp = g.opp === t1Id || g.opp_slug === t1Slug;
+                    const isOpp = matchesT1(g.opp || '', g.opp_slug || '');
                     if (isOpp) {
                         matchups.push({
                             date: g.date,
