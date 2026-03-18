@@ -3111,6 +3111,25 @@
                 const data = await resp.json();
 
                 let updated = false;
+                // Pre-fetch live box scores for in-progress games (updates each poll)
+                (data.events || []).forEach(event => {
+                    const comp = event.competitions?.[0];
+                    if (!comp) return;
+                    const status = comp.status?.type?.description;
+                    if (status === 'In Progress' || status === 'Halftime') {
+                        const gid = event.id;
+                        fetch(`https://site.api.espn.com/apis/site/v2/sports/basketball/mens-college-basketball/summary?event=${gid}`)
+                            .then(r => r.ok ? r.json() : null)
+                            .then(boxData => {
+                                if (boxData) {
+                                    if (typeof h2hBoxScoreCache !== 'undefined') h2hBoxScoreCache[gid] = boxData;
+                                    if (typeof champBoxScoreCache !== 'undefined') champBoxScoreCache[gid] = boxData;
+                                }
+                            }).catch(() => {});
+                    }
+                });
+
+                // Process newly finished games
                 (data.events || []).forEach(event => {
                     const gameId = event.id;
                     if (_trackedFinals.has(gameId)) return; // Already processed
