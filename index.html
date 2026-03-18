@@ -1014,6 +1014,7 @@
             <li><button class="nav-btn" data-view="bracket">Bracket</button></li>
             <li><button class="nav-btn" data-view="rankings">Rankings</button></li>
             <li><button class="nav-btn" data-view="teams">Teams</button></li>
+            <li><button class="nav-btn" data-view="coaches">Coaches</button></li>
         </ul>
         <div class="nav-search">
             <span class="nav-search-icon">&#128269;</span>
@@ -3343,7 +3344,162 @@
             });
 
             html += '</div>';
+
+            // Add overlaid season history chart if both teams have season data
+            if (SEASONS_DATA && SEASONS_DATA[t1.espnId] && SEASONS_DATA[t2.espnId]) {
+                html += `
+                    <div style="background: #FFFFFF; border: 1px solid #E0D9CC; border-radius: 0.75rem; padding: 1.5rem; margin-top: 1.5rem; box-shadow: 0 1px 4px rgba(0,0,0,0.04);">
+                        <h3 style="font-size: 0.85rem; color: #8892A0; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.75rem; text-align: center;">Season-by-Season Win % Comparison</h3>
+                        <div style="display: flex; justify-content: center; gap: 1.5rem; margin-bottom: 0.75rem; font-size: 0.78rem;">
+                            <div style="display:flex;align-items:center;gap:0.4rem;"><div style="width:20px;height:3px;background:${t1Color};border-radius:2px;"></div> ${t1.name.split(' ').pop()}</div>
+                            <div style="display:flex;align-items:center;gap:0.4rem;"><div style="width:20px;height:3px;background:${t2Color};border-radius:2px;"></div> ${t2.name.split(' ').pop()}</div>
+                        </div>
+                        <div id="compSeasonChart" style="width:100%;height:350px;"></div>
+                    </div>
+                `;
+            }
+
             container.innerHTML = html;
+
+            // Render the overlaid chart after DOM is ready
+            if (SEASONS_DATA && SEASONS_DATA[t1.espnId] && SEASONS_DATA[t2.espnId]) {
+                renderComparisonSeasonChart(t1, t2, t1Color, t2Color);
+            }
+        }
+
+        function renderComparisonSeasonChart(t1, t2, t1Color, t2Color) {
+            const chartContainer = document.getElementById('compSeasonChart');
+            if (!chartContainer) return;
+
+            const t1Seasons = SEASONS_DATA[t1.espnId]?.seasons || [];
+            const t2Seasons = SEASONS_DATA[t2.espnId]?.seasons || [];
+
+            // Build year->data maps (year field is "2025-26" format, parse to start year)
+            function parseSeasonYear(yr) {
+                if (typeof yr === 'number') return yr;
+                const m = String(yr).match(/^(\d{4})/);
+                return m ? parseInt(m[1]) : 0;
+            }
+            const t1Map = {};
+            t1Seasons.forEach(s => {
+                if (s.wins !== undefined && s.losses !== undefined && (s.wins + s.losses) > 0) {
+                    t1Map[parseSeasonYear(s.year)] = s.wins / (s.wins + s.losses);
+                }
+            });
+            const t2Map = {};
+            t2Seasons.forEach(s => {
+                if (s.wins !== undefined && s.losses !== undefined && (s.wins + s.losses) > 0) {
+                    t2Map[parseSeasonYear(s.year)] = s.wins / (s.wins + s.losses);
+                }
+            });
+
+            // Find common year range
+            const allYears = [...new Set([...Object.keys(t1Map), ...Object.keys(t2Map)])].map(Number).filter(y => y > 0).sort((a, b) => a - b);
+            if (allYears.length < 2) return;
+
+            // Auto-scale Y axis to data range (with padding)
+            const allVals = [...Object.values(t1Map), ...Object.values(t2Map)];
+            const dataMin = Math.min(...allVals);
+            const dataMax = Math.max(...allVals);
+            const yMin = Math.max(0, Math.floor(dataMin * 10 - 1) / 10); // Round down with padding
+            const yMax = Math.min(1, Math.ceil(dataMax * 10 + 1) / 10); // Round up with padding
+            const yRange = yMax - yMin;
+
+            const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+            svg.setAttribute('viewBox', '0 0 1200 350');
+            svg.setAttribute('preserveAspectRatio', 'xMidYMid meet');
+            svg.setAttribute('style', 'width: 100%; height: 100%;');
+
+            const pad = { top: 30, right: 30, bottom: 60, left: 55 };
+            const w = 1200 - pad.left - pad.right;
+            const h = 350 - pad.top - pad.bottom;
+
+            // Gridlines (adapted to data range)
+            const gridSteps = 5;
+            for (let i = 0; i <= gridSteps; i++) {
+                const pct = yMin + (i / gridSteps) * yRange;
+                const y = pad.top + (1 - (pct - yMin) / yRange) * h;
+                const gridLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+                gridLine.setAttribute('x1', pad.left);
+                gridLine.setAttribute('y1', y);
+                gridLine.setAttribute('x2', pad.left + w);
+                gridLine.setAttribute('y2', y);
+                gridLine.setAttribute('stroke', '#E0D9CC');
+                gridLine.setAttribute('stroke-width', '0.5');
+                svg.appendChild(gridLine);
+
+                const label = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+                label.setAttribute('x', pad.left - 10);
+                label.setAttribute('y', y + 4);
+                label.setAttribute('text-anchor', 'end');
+                label.setAttribute('font-size', '10');
+                label.setAttribute('fill', '#8892A0');
+                label.textContent = (pct * 100).toFixed(0) + '%';
+                svg.appendChild(label);
+            }
+
+            // X-axis
+            const xAxis = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+            xAxis.setAttribute('x1', pad.left);
+            xAxis.setAttribute('y1', pad.top + h);
+            xAxis.setAttribute('x2', pad.left + w);
+            xAxis.setAttribute('y2', pad.top + h);
+            xAxis.setAttribute('stroke', '#2C3345');
+            xAxis.setAttribute('stroke-width', '1.5');
+            svg.appendChild(xAxis);
+
+            // X-axis year labels (every 10 years)
+            const yearRange = allYears[allYears.length - 1] - allYears[0];
+            allYears.forEach(yr => {
+                if (yr % 10 === 0) {
+                    const x = pad.left + ((yr - allYears[0]) / yearRange) * w;
+                    const label = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+                    label.setAttribute('x', x);
+                    label.setAttribute('y', pad.top + h + 20);
+                    label.setAttribute('text-anchor', 'middle');
+                    label.setAttribute('font-size', '10');
+                    label.setAttribute('fill', '#8892A0');
+                    label.textContent = yr;
+                    svg.appendChild(label);
+                }
+            });
+
+            // Helper to build path with scaled Y axis
+            function buildPath(yearMap, color, opacity) {
+                const pts = [];
+                allYears.forEach(yr => {
+                    if (yearMap[yr] !== undefined) {
+                        const x = pad.left + ((yr - allYears[0]) / yearRange) * w;
+                        const yVal = Math.max(0, Math.min(1, (yearMap[yr] - yMin) / yRange));
+                        const y = pad.top + (1 - yVal) * h;
+                        pts.push({ x, y });
+                    }
+                });
+                if (pts.length < 2) return;
+
+                // Line
+                let d = pts.map((p, i) => (i === 0 ? 'M' : 'L') + p.x.toFixed(1) + ',' + p.y.toFixed(1)).join(' ');
+                const line = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+                line.setAttribute('d', d);
+                line.setAttribute('stroke', color);
+                line.setAttribute('stroke-width', '2.5');
+                line.setAttribute('fill', 'none');
+                line.setAttribute('opacity', opacity);
+                svg.appendChild(line);
+
+                // Area fill
+                const area = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+                const areaD = d + ` L${pts[pts.length - 1].x.toFixed(1)},${pad.top + h} L${pts[0].x.toFixed(1)},${pad.top + h} Z`;
+                area.setAttribute('d', areaD);
+                area.setAttribute('fill', color);
+                area.setAttribute('opacity', '0.12');
+                svg.appendChild(area);
+            }
+
+            buildPath(t1Map, t1Color, '0.9');
+            buildPath(t2Map, t2Color, '0.9');
+
+            chartContainer.appendChild(svg);
         }
 
         function renderRankings() {
