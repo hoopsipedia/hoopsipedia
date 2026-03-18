@@ -2840,17 +2840,20 @@
                 renderTeamsGrid(query);
             });
 
-            // Conference filters
-            const conferences = [...new Set(allTeamsData.map(t => t.conf))].sort();
+            // Conference filters — exclude empty and non-D1 conferences, support multi-select
+            const D1_EXCLUDE = ['CUNY', ''];
+            const conferences = [...new Set(allTeamsData.map(t => t.conf))].filter(c => !D1_EXCLUDE.includes(c)).sort();
             const filterContainer = document.getElementById('conferenceFilters');
             filterContainer.innerHTML = '';
+            let selectedConferences = new Set();
 
             const allBtn = document.createElement('button');
             allBtn.className = 'conf-btn active';
             allBtn.textContent = 'All';
             allBtn.addEventListener('click', () => {
+                selectedConferences.clear();
                 filterConference = null;
-                document.querySelectorAll('.conf-btn').forEach(b => b.classList.remove('active'));
+                document.querySelectorAll('#conferenceFilters .conf-btn').forEach(b => b.classList.remove('active'));
                 allBtn.classList.add('active');
                 document.getElementById('teamSearchInput').value = '';
                 renderTeamsGrid();
@@ -2862,9 +2865,20 @@
                 btn.className = 'conf-btn';
                 btn.textContent = conf;
                 btn.addEventListener('click', () => {
-                    filterConference = conf;
-                    document.querySelectorAll('.conf-btn').forEach(b => b.classList.remove('active'));
-                    btn.classList.add('active');
+                    if (selectedConferences.has(conf)) {
+                        selectedConferences.delete(conf);
+                        btn.classList.remove('active');
+                    } else {
+                        selectedConferences.add(conf);
+                        btn.classList.add('active');
+                    }
+                    allBtn.classList.remove('active');
+                    if (selectedConferences.size === 0) {
+                        filterConference = null;
+                        allBtn.classList.add('active');
+                    } else {
+                        filterConference = [...selectedConferences];
+                    }
                     document.getElementById('teamSearchInput').value = '';
                     renderTeamsGrid();
                 });
@@ -5281,26 +5295,37 @@
                 filterContainer.appendChild(btn);
             });
 
-            // Conference filter for rankings
+            // Conference filter for rankings — multi-select, exclude non-D1
             const confContainer = document.getElementById('rankingsConferenceFilters');
             confContainer.innerHTML = '';
-            const conferences = [...new Set(allTeamsData.map(t => t.conf))].sort();
+            const rankConferences = [...new Set(allTeamsData.map(t => t.conf))].filter(c => !['CUNY', ''].includes(c)).sort();
+            if (!window._rankingsSelectedConfs) window._rankingsSelectedConfs = new Set();
 
             const allConfBtn = document.createElement('button');
             allConfBtn.className = `conf-btn ${!rankingsConfFilter ? 'active' : ''}`;
             allConfBtn.textContent = 'All';
             allConfBtn.addEventListener('click', () => {
+                window._rankingsSelectedConfs.clear();
                 rankingsConfFilter = null;
                 renderRankings();
             });
             confContainer.appendChild(allConfBtn);
 
-            conferences.forEach(conf => {
+            rankConferences.forEach(conf => {
                 const btn = document.createElement('button');
-                btn.className = `conf-btn ${rankingsConfFilter === conf ? 'active' : ''}`;
+                btn.className = `conf-btn ${window._rankingsSelectedConfs.has(conf) ? 'active' : ''}`;
                 btn.textContent = conf;
                 btn.addEventListener('click', () => {
-                    rankingsConfFilter = conf;
+                    if (window._rankingsSelectedConfs.has(conf)) {
+                        window._rankingsSelectedConfs.delete(conf);
+                    } else {
+                        window._rankingsSelectedConfs.add(conf);
+                    }
+                    if (window._rankingsSelectedConfs.size === 0) {
+                        rankingsConfFilter = null;
+                    } else {
+                        rankingsConfFilter = [...window._rankingsSelectedConfs];
+                    }
                     renderRankings();
                 });
                 confContainer.appendChild(btn);
@@ -5316,9 +5341,14 @@
                 renderRankings();
             });
 
-            let teamsToRank = rankingsConfFilter
-                ? allTeamsData.filter(t => t.conf === rankingsConfFilter)
-                : allTeamsData;
+            let teamsToRank = allTeamsData.filter(t => !['CUNY', ''].includes(t.conf));
+            if (rankingsConfFilter) {
+                if (Array.isArray(rankingsConfFilter)) {
+                    teamsToRank = teamsToRank.filter(t => rankingsConfFilter.includes(t.conf));
+                } else {
+                    teamsToRank = teamsToRank.filter(t => t.conf === rankingsConfFilter);
+                }
+            }
 
             const sorted = [...teamsToRank].sort((a, b) => {
                 const aVal = a[currentSortStat];
@@ -5364,10 +5394,15 @@
         }
 
         function renderTeamsGrid(query = '') {
-            let filtered = allTeamsData;
+            // Exclude non-D1 teams from the grid
+            let filtered = allTeamsData.filter(t => !['CUNY', ''].includes(t.conf));
 
             if (filterConference) {
-                filtered = filtered.filter(t => t.conf === filterConference);
+                if (Array.isArray(filterConference)) {
+                    filtered = filtered.filter(t => filterConference.includes(t.conf));
+                } else {
+                    filtered = filtered.filter(t => t.conf === filterConference);
+                }
             }
 
             if (query) {
