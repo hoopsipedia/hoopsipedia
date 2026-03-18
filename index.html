@@ -2359,6 +2359,85 @@
             border-radius: 50%;
             animation: spin 0.7s linear infinite;
         }
+        /* H2H Detail Panel */
+        .h2h-detail-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1.5rem;
+            padding: 1rem 0 0.75rem;
+            margin-bottom: 0.75rem;
+            border-bottom: 1px solid #E0D9CC;
+        }
+        .h2h-detail-team {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.25rem;
+            min-width: 80px;
+        }
+        .h2h-detail-team-logo {
+            width: 36px;
+            height: 36px;
+            object-fit: contain;
+        }
+        .h2h-detail-team-name {
+            font-size: 0.7rem;
+            color: #6B7A8D;
+            text-align: center;
+            max-width: 100px;
+            line-height: 1.2;
+        }
+        .h2h-detail-score {
+            font-size: 1.6rem;
+            font-weight: 800;
+            font-variant-numeric: tabular-nums;
+        }
+        .h2h-detail-score-center {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .h2h-detail-score-dash {
+            font-size: 1.2rem;
+            color: #A0AAB8;
+            font-weight: 400;
+        }
+        .h2h-detail-final {
+            font-size: 0.65rem;
+            color: #8892A0;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-weight: 600;
+            text-align: center;
+            margin-top: 0.15rem;
+        }
+        .h2h-detail-meta {
+            text-align: center;
+            font-size: 0.78rem;
+            color: #6B7A8D;
+            margin-bottom: 0.75rem;
+            line-height: 1.4;
+        }
+        .h2h-detail-not-available {
+            text-align: center;
+            padding: 1rem 0;
+            color: #A0AAB8;
+            font-size: 0.85rem;
+        }
+        .h2h-detail-not-available .score-fallback {
+            font-size: 0.95rem;
+            color: #2C3345;
+            font-weight: 600;
+            margin-top: 0.5rem;
+        }
+        @media (max-width: 600px) {
+            .h2h-detail-header { gap: 0.75rem; }
+            .h2h-detail-team-logo { width: 28px; height: 28px; }
+            .h2h-detail-score { font-size: 1.3rem; }
+            .h2h-boxscore-inner { padding: 0.75rem 0.5rem; }
+            .h2h-boxscore-inner .boxscore-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+        }
 
         /* Key Stats Grid */
         .champ-run-stats {
@@ -2548,6 +2627,234 @@
             .game-center-body { padding: 0.75rem; }
         }
 
+        /* ── This Day in Tournament History Widget ── */
+        .otd-widget {
+            background: linear-gradient(135deg, #1B2A4A 0%, #243556 50%, #1B2A4A 100%);
+            border-radius: 0.75rem;
+            padding: 1.5rem 2rem;
+            margin-bottom: 2.5rem;
+            position: relative;
+            overflow: hidden;
+            min-height: 100px;
+        }
+        .otd-widget::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #C9A86C, transparent);
+        }
+        .otd-header {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            margin-bottom: 0.75rem;
+        }
+        .otd-badge {
+            font-size: 0.65rem;
+            font-weight: 800;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: #C9A86C;
+            background: rgba(201,168,108,0.12);
+            padding: 0.25rem 0.6rem;
+            border-radius: 0.25rem;
+            border: 1px solid rgba(201,168,108,0.25);
+            white-space: nowrap;
+        }
+        .otd-date {
+            font-size: 0.75rem;
+            color: rgba(255,255,255,0.5);
+            font-weight: 500;
+        }
+        .otd-body {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        .otd-nav-btn {
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.12);
+            color: rgba(255,255,255,0.6);
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.85rem;
+            transition: all 0.2s ease;
+            flex-shrink: 0;
+        }
+        .otd-nav-btn:hover {
+            background: rgba(201,168,108,0.2);
+            border-color: rgba(201,168,108,0.4);
+            color: #C9A86C;
+        }
+        .otd-content {
+            flex: 1;
+            min-width: 0;
+        }
+        .otd-fact {
+            display: none;
+            animation: otdFadeIn 0.4s ease;
+        }
+        .otd-fact.active {
+            display: block;
+        }
+        @keyframes otdFadeIn {
+            from { opacity: 0; transform: translateY(4px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .otd-text {
+            font-size: 1rem;
+            line-height: 1.65;
+            color: rgba(255,255,255,0.92);
+        }
+        .otd-text a.otd-team-link {
+            color: #C9A86C;
+            font-weight: 700;
+            text-decoration: none;
+            transition: color 0.15s ease;
+            cursor: pointer;
+        }
+        .otd-text a.otd-team-link:hover {
+            color: #E8D5A8;
+            text-decoration: underline;
+        }
+        .otd-text .otd-year {
+            color: #C9A86C;
+            font-weight: 600;
+        }
+        .otd-team-logo-inline {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            vertical-align: text-bottom;
+            margin: 0 2px;
+        }
+        .otd-dots {
+            display: flex;
+            justify-content: center;
+            gap: 0.4rem;
+            margin-top: 0.75rem;
+        }
+        .otd-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.2);
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        .otd-dot.active {
+            background: #C9A86C;
+            width: 18px;
+            border-radius: 3px;
+        }
+        @media (max-width: 768px) {
+            .otd-widget { padding: 1.25rem 1rem; }
+            .otd-text { font-size: 0.9rem; line-height: 1.6; }
+            .otd-nav-btn { width: 28px; height: 28px; font-size: 0.75rem; }
+            .otd-team-logo-inline { width: 18px; height: 18px; }
+        }
+
+        /* ── NET Rankings & Quad Record ── */
+        .rankings-tabs {
+            display: flex; gap: 0; margin-bottom: 1.5rem;
+            border-bottom: 2px solid #E0D9CC;
+        }
+        .rankings-tab {
+            padding: 0.65rem 1.5rem; background: none; border: none;
+            font-size: 0.95rem; font-weight: 600; color: #8892A0;
+            cursor: pointer; transition: all 0.2s ease;
+            border-bottom: 2px solid transparent; margin-bottom: -2px;
+        }
+        .rankings-tab:hover { color: #1B2A4A; }
+        .rankings-tab.active {
+            color: #1B2A4A; border-bottom-color: #C9A86C;
+        }
+        .net-search-row {
+            display: flex; gap: 1rem; align-items: center; margin-bottom: 1rem; flex-wrap: wrap;
+        }
+        .net-search-row input {
+            flex: 1; min-width: 180px; max-width: 320px;
+            padding: 0.5rem 0.75rem; border: 1px solid #D6CFC2;
+            border-radius: 0.375rem; font-size: 0.9rem; color: #2C3345;
+            transition: border-color 0.2s;
+        }
+        .net-search-row input:focus { outline: none; border-color: #C9A86C; }
+        .net-badge {
+            display: inline-flex; align-items: center; gap: 0.3rem;
+            padding: 0.2rem 0.6rem; border-radius: 1rem;
+            font-size: 0.72rem; font-weight: 700; letter-spacing: 0.02em;
+            white-space: nowrap;
+        }
+        .net-badge--gold { background: rgba(201,168,108,0.2); color: #9E7C4A; }
+        .net-badge--navy { background: rgba(27,42,74,0.15); color: #1B2A4A; }
+        .net-badge--neutral { background: rgba(136,146,160,0.15); color: #5A6578; }
+        .net-badge--gray { background: rgba(160,170,184,0.12); color: #8892A0; }
+
+        .quad-record-section {
+            background: #FFFFFF; border: 1px solid #E0D9CC; border-radius: 0.75rem;
+            padding: 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+        }
+        .quad-record-section h3 {
+            font-size: 1.1rem; font-weight: 700; color: #1B2A4A;
+            margin-bottom: 1rem;
+        }
+        .quad-grid {
+            display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.75rem;
+        }
+        .quad-card {
+            background: #F5F3EE; border-radius: 0.5rem; padding: 1rem;
+            text-align: center; border: 1px solid #E0D9CC; transition: transform 0.15s ease;
+        }
+        .quad-card:hover { transform: translateY(-2px); }
+        .quad-card-label {
+            font-size: 0.72rem; font-weight: 700; text-transform: uppercase;
+            letter-spacing: 0.08em; color: #8892A0; margin-bottom: 0.4rem;
+        }
+        .quad-card-record {
+            font-size: 1.4rem; font-weight: 800; color: #1B2A4A;
+        }
+        .quad-card-detail {
+            font-size: 0.72rem; color: #A0AAB8; margin-top: 0.25rem;
+        }
+        .quad-card--q1-win { border-left: 3px solid #2D7D46; }
+        .quad-card--q4-loss { border-left: 3px solid #C0392B; }
+        .quad-bar {
+            display: flex; height: 10px; border-radius: 5px; overflow: hidden;
+            margin-top: 1rem; background: #E0D9CC;
+        }
+        .quad-bar-q1 { background: #2D7D46; }
+        .quad-bar-q2 { background: #C9A86C; }
+        .quad-bar-q3 { background: #8892A0; }
+        .quad-bar-q4 { background: #C0392B; }
+        .quad-bar-legend {
+            display: flex; gap: 1rem; margin-top: 0.5rem; flex-wrap: wrap;
+            justify-content: center;
+        }
+        .quad-bar-legend-item {
+            display: flex; align-items: center; gap: 0.3rem;
+            font-size: 0.72rem; color: #5A6578;
+        }
+        .quad-bar-legend-dot {
+            width: 8px; height: 8px; border-radius: 50%;
+        }
+        @media (max-width: 640px) {
+            .quad-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .rankings-tab {
+                padding: 0.5rem 1rem; font-size: 0.85rem;
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -2618,6 +2925,19 @@
                 </div>
             </div>
 
+            <div class="otd-widget" id="otdWidget" style="display:none;">
+                <div class="otd-header">
+                    <span class="otd-badge">On This Day</span>
+                    <span class="otd-date" id="otdDate"></span>
+                </div>
+                <div class="otd-body">
+                    <button class="otd-nav-btn" id="otdPrev" aria-label="Previous fact">&#8249;</button>
+                    <div class="otd-content" id="otdContent"></div>
+                    <button class="otd-nav-btn" id="otdNext" aria-label="Next fact">&#8250;</button>
+                </div>
+                <div class="otd-dots" id="otdDots"></div>
+            </div>
+
             <div class="games-section" id="gamesSection">
                 <h2 class="section-title" id="gamesTitle">Today's Games</h2>
                 <div class="games-filters" id="gamesFilters" style="display:none;">
@@ -2680,20 +3000,52 @@
         <!-- Rankings View -->
         <div id="rankings" class="view">
             <h2 class="section-title">Team Rankings</h2>
-            <div class="filter-buttons" id="filterButtons"></div>
-            <div class="conference-filters" id="rankingsConferenceFilters" style="margin-bottom: 1rem;"></div>
-            <div class="rankings-table">
-                <table id="rankingsTable">
-                    <thead>
-                        <tr>
-                            <th>Rank</th>
-                            <th>Team</th>
-                            <th>Conference</th>
-                            <th id="statHeader">All-Time Wins</th>
-                        </tr>
-                    </thead>
-                    <tbody id="rankingsTableBody"></tbody>
-                </table>
+            <div class="rankings-tabs">
+                <button class="rankings-tab active" data-rankings-tab="historical" onclick="switchRankingsTab('historical')">Historical</button>
+                <button class="rankings-tab" data-rankings-tab="net" onclick="switchRankingsTab('net')">NET Rankings</button>
+            </div>
+            <!-- Historical Rankings Panel -->
+            <div id="rankingsHistoricalPanel">
+                <div class="filter-buttons" id="filterButtons"></div>
+                <div class="conference-filters" id="rankingsConferenceFilters" style="margin-bottom: 1rem;"></div>
+                <div class="rankings-table">
+                    <table id="rankingsTable">
+                        <thead>
+                            <tr>
+                                <th>Rank</th>
+                                <th>Team</th>
+                                <th>Conference</th>
+                                <th id="statHeader">All-Time Wins</th>
+                            </tr>
+                        </thead>
+                        <tbody id="rankingsTableBody"></tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- NET Rankings Panel -->
+            <div id="rankingsNetPanel" style="display: none;">
+                <p style="color: #6B7A8D; font-size: 0.85rem; margin-bottom: 1rem;">The NET (NCAA Evaluation Tool) is the NCAA's official ranking system used by the selection committee. Quad records classify wins and losses by opponent NET rank and game location.</p>
+                <div class="net-search-row">
+                    <input type="text" id="netSearchInput" placeholder="Search teams or conferences..." autocomplete="off">
+                    <div class="conference-filters" id="netConferenceFilters"></div>
+                </div>
+                <div class="rankings-table">
+                    <table id="netRankingsTable">
+                        <thead>
+                            <tr>
+                                <th id="netRankHeader" class="sort-asc" style="width: 60px;">NET</th>
+                                <th>Team</th>
+                                <th>Conference</th>
+                                <th>Record</th>
+                                <th>Q1</th>
+                                <th>Q2</th>
+                                <th>Q3</th>
+                                <th>Q4</th>
+                            </tr>
+                        </thead>
+                        <tbody id="netRankingsTableBody"></tbody>
+                    </table>
+                </div>
             </div>
         </div>
 
@@ -3107,6 +3459,11 @@
         let bracketRefreshInterval = null;
         let bracketData = {};
         let H2H_CACHE = {};
+        let NET_RANKINGS = null; // Array of {rank, teamId, teamName, conf, record, quadRecord}
+        let NET_RANKINGS_LOADING = false;
+        let netConfFilter = null;
+        let netSortField = 'rank';
+        let netSortDir = 'asc';
 
         // Redirect query-param share URLs to hash routes (for real browsers, not crawlers)
         (function redirectShareUrl() {
@@ -3223,11 +3580,182 @@
         }
 
         // Initialize
+        // ── This Day in Tournament History ──
+        const TOURNAMENT_HISTORY_FACTS = [
+            // March 15
+            { month: 3, day: 15, year: 2018, text: 'On March 15, <span class="otd-year">2018</span>, 11-seed {Loyola Chicago|loyola-chicago-ramblers|2031} stunned 6-seed {Miami|miami-hurricanes|2390} 64-62 on a buzzer-beating three by Donte Ingram, launching the Sister Jean-led Ramblers on a magical Final Four run.' },
+            // March 16
+            { month: 3, day: 16, year: 2018, text: 'On March 16, <span class="otd-year">2018</span>, {UMBC|umbc-retrievers|2378} became the first 16-seed to defeat a 1-seed, shocking {Virginia|virginia-cavaliers|258} 74-54. Jairus Lyles scored 28 points in what remains the biggest upset in tournament history.' },
+            // March 17
+            { month: 3, day: 17, year: 2023, text: 'On March 17, <span class="otd-year">2023</span>, 16-seed {Fairleigh Dickinson|fairleigh-dickinson-knights|2230} stunned 1-seed {Purdue|purdue-boilermakers|2509} 63-58, becoming the second 16-seed ever to topple a No. 1 and the biggest point spread upset in tournament history.' },
+            { month: 3, day: 17, year: 2022, text: 'On March 17, <span class="otd-year">2022</span>, 15-seed {Saint Peter\'s|saint-peters-peacocks|2612} upset 2-seed {Kentucky|kentucky-wildcats|96} 85-79 in overtime. The Peacocks went on to become the first 15-seed to reach the Elite Eight.' },
+            { month: 3, day: 17, year: 2006, text: 'On March 17, <span class="otd-year">2006</span>, 11-seed {George Mason|george-mason-patriots|2244} began its Cinderella run by upsetting 6-seed {Michigan State|michigan-state-spartans|127} 75-65. The Patriots would reach the Final Four, shocking the college basketball world.' },
+            // March 18
+            { month: 3, day: 18, year: 2022, text: 'On March 18, <span class="otd-year">2022</span>, 15-seed {Saint Peter\'s|saint-peters-peacocks|2612} continued its Cinderella run, defeating 7-seed {Murray State|murray-state-racers|93} 70-60 to advance to the Sweet Sixteen -- the farthest a 15-seed had gone in over two decades.' },
+            // March 19
+            { month: 3, day: 19, year: 2021, text: 'On March 19, <span class="otd-year">2021</span>, 15-seed {Oral Roberts|oral-roberts-golden-eagles|198} stunned 2-seed {Ohio State|ohio-state-buckeyes|194} 75-72 in overtime. Max Abmas scored 29 points and Kevin Obanor added 30 as the Golden Eagles pulled off the first big upset of the first tournament in two years.' },
+            { month: 3, day: 19, year: 2006, text: 'On March 19, <span class="otd-year">2006</span>, 11-seed {George Mason|george-mason-patriots|2244} shocked 3-seed {North Carolina|north-carolina-tar-heels|153} 65-60 in the second round, knocking out the defending national champions on their way to the Final Four.' },
+            // March 21
+            { month: 3, day: 21, year: 2008, text: 'On March 21, <span class="otd-year">2008</span>, sophomore Stephen Curry scored 40 points to lead 10-seed {Davidson|davidson-wildcats|2166} past 7-seed {Gonzaga|gonzaga-bulldogs|2250} 82-76. It was the start of a legendary tournament run that would take Davidson to the Elite Eight.' },
+            // March 22
+            { month: 3, day: 22, year: 2013, text: 'On March 22, <span class="otd-year">2013</span>, 15-seed {Florida Gulf Coast|florida-gulf-coast-eagles|526} -- dubbed "Dunk City" -- upset 2-seed {Georgetown|georgetown-hoyas|46} 78-68, scoring 54 first-half points. FGCU became the first 15-seed to reach the Sweet Sixteen.' },
+            // March 24
+            { month: 3, day: 24, year: 2018, text: 'On March 24, <span class="otd-year">2018</span>, 11-seed {Loyola Chicago|loyola-chicago-ramblers|2031} and 98-year-old team chaplain Sister Jean advanced to the Final Four after defeating 7-seed {Nevada|nevada-wolf-pack|2440} 69-68 on a last-second layup by Marques Townes.' },
+            // March 26
+            { month: 3, day: 26, year: 2006, text: 'On March 26, <span class="otd-year">2006</span>, 11-seed {George Mason|george-mason-patriots|2244} defeated 1-seed {UConn|uconn-huskies|41} 86-84 in overtime to reach the Final Four, completing one of the greatest Cinderella runs in tournament history.' },
+            // March 28
+            { month: 3, day: 28, year: 1992, text: 'On March 28, <span class="otd-year">1992</span>, Christian Laettner hit a turnaround jumper at the buzzer to lift {Duke|duke-blue-devils|150} over {Kentucky|kentucky-wildcats|96} 104-103 in overtime. Laettner went 10-for-10 from the field in what many call the greatest game ever played.' },
+            // March 29
+            { month: 3, day: 29, year: 1982, text: 'On March 29, <span class="otd-year">1982</span>, freshman Michael Jordan hit a 16-foot jumper with 15 seconds left to give {North Carolina|north-carolina-tar-heels|153} a 63-62 victory over {Georgetown|georgetown-hoyas|46} for the national championship -- launching a legend.' },
+            // March 30
+            { month: 3, day: 30, year: 2008, text: 'On March 30, <span class="otd-year">2008</span>, Stephen Curry and 10-seed {Davidson|davidson-wildcats|2166} fell just short against top-seeded {Kansas|kansas-jayhawks|2305} 59-57 in the Elite Eight. Curry scored 25 but his step-back three at the buzzer rimmed out.' },
+            // April 1
+            { month: 4, day: 1, year: 1985, text: 'On April 1, <span class="otd-year">1985</span>, 8-seed {Villanova|villanova-wildcats|222} stunned {Georgetown|georgetown-hoyas|46} 66-64 to win the national championship, shooting a near-perfect 78.6% from the field in perhaps the greatest upset in title game history.' },
+            // April 4
+            { month: 4, day: 4, year: 2016, text: 'On April 4, <span class="otd-year">2016</span>, Kris Jenkins hit a buzzer-beating three-pointer to give {Villanova|villanova-wildcats|222} a 77-74 victory over {North Carolina|north-carolina-tar-heels|153} for the national title -- the first championship decided by a buzzer-beating three.' },
+            { month: 4, day: 4, year: 1983, text: 'On April 4, <span class="otd-year">1983</span>, Lorenzo Charles dunked a missed shot at the buzzer to give {NC State|nc-state-wolfpack|152} a 54-52 upset over Houston for the national championship. Coach Jim Valvano sprinted across the court looking for someone to hug in one of sport\'s most iconic moments.' },
+            { month: 4, day: 4, year: 1988, text: 'On April 4, <span class="otd-year">1988</span>, Danny Manning scored 31 points and grabbed 18 rebounds as 6-seed {Kansas|kansas-jayhawks|2305} upset top-seeded Oklahoma 83-79 for the title. The Jayhawks, dubbed "Danny and the Miracles," won the championship with 11 losses -- the most ever by a champion.' },
+            { month: 4, day: 4, year: 2011, text: 'On April 4, <span class="otd-year">2011</span>, Kemba Walker and {UConn|uconn-huskies|41} capped a stunning 11-game winning streak by defeating {Butler|butler-bulldogs|2169} 53-41 for the national title. Walker was named Most Outstanding Player after leading the Huskies from a ninth-place Big East finish to a championship.' },
+            // April 5
+            { month: 4, day: 5, year: 2010, text: 'On April 5, <span class="otd-year">2010</span>, Gordon Hayward\'s half-court heave at the buzzer hit the backboard and rimmed out as {Duke|duke-blue-devils|150} held off {Butler|butler-bulldogs|2169} 61-59 for the national title. The shot remains one of the biggest "what ifs" in tournament history.' },
+            // April 6
+            { month: 4, day: 6, year: 2015, text: 'On April 6, <span class="otd-year">2015</span>, Tyus Jones scored 23 points -- 19 in the second half -- as {Duke|duke-blue-devils|150} rallied to beat {Wisconsin|wisconsin-badgers|275} 68-63 for the national championship. Jones was named Most Outstanding Player of the Final Four.' },
+            // April 7
+            { month: 4, day: 7, year: 2014, text: 'On April 7, <span class="otd-year">2014</span>, 7-seed {UConn|uconn-huskies|41} defeated 8-seed {Kentucky|kentucky-wildcats|96} 60-54 to win the national championship. Shabazz Napier led the improbable run, becoming the lowest combined seeds in a title game.' },
+            // April 8
+            { month: 4, day: 8, year: 2019, text: 'On April 8, <span class="otd-year">2019</span>, {Virginia|virginia-cavaliers|258} completed the greatest redemption story in sports, defeating {Texas Tech|texas-tech-red-raiders|2641} 85-77 in overtime to win their first national title -- one year after becoming the first 1-seed to lose to a 16-seed.' },
+        ];
+
+        let _otdIndex = 0;
+        let _otdFacts = [];
+        let _otdTimer = null;
+
+        function initOnThisDayWidget() {
+            const widget = document.getElementById('otdWidget');
+            if (!widget) return;
+
+            const now = new Date();
+            const month = now.getMonth() + 1; // 1-indexed
+            const day = now.getDate();
+
+            // Only show during tournament season (March 15 - April 8)
+            const dateNum = month * 100 + day;
+            if (dateNum < 315 || dateNum > 408) {
+                widget.style.display = 'none';
+                return;
+            }
+
+            // Find exact date matches first, then nearby dates for variety
+            let exactFacts = TOURNAMENT_HISTORY_FACTS.filter(f => f.month === month && f.day === day);
+            let nearFacts = TOURNAMENT_HISTORY_FACTS.filter(f => {
+                if (f.month === month && f.day === day) return false;
+                const fDate = new Date(2024, f.month - 1, f.day);
+                const tDate = new Date(2024, month - 1, day);
+                const diff = Math.abs(fDate - tDate) / (1000 * 60 * 60 * 24);
+                return diff <= 2;
+            });
+            let facts = [...exactFacts, ...nearFacts];
+
+            // If still nothing, pick random facts from the tournament date range
+            if (facts.length === 0) {
+                const shuffled = [...TOURNAMENT_HISTORY_FACTS].sort(() => Math.random() - 0.5);
+                facts = shuffled.slice(0, 4);
+            }
+
+            if (facts.length === 0) return;
+
+            _otdFacts = facts;
+            _otdIndex = 0;
+
+            // Set date display
+            const months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+            document.getElementById('otdDate').textContent = months[month - 1] + ' ' + day;
+
+            // Render facts
+            renderOtdFacts();
+            widget.style.display = 'block';
+
+            // Navigation
+            document.getElementById('otdPrev').addEventListener('click', () => {
+                _otdIndex = (_otdIndex - 1 + _otdFacts.length) % _otdFacts.length;
+                renderOtdFacts();
+                resetOtdTimer();
+            });
+            document.getElementById('otdNext').addEventListener('click', () => {
+                _otdIndex = (_otdIndex + 1) % _otdFacts.length;
+                renderOtdFacts();
+                resetOtdTimer();
+            });
+
+            // Auto-rotate every 10 seconds
+            startOtdTimer();
+
+            // Hide nav arrows if only one fact
+            if (_otdFacts.length <= 1) {
+                document.getElementById('otdPrev').style.display = 'none';
+                document.getElementById('otdNext').style.display = 'none';
+            }
+        }
+
+        function renderOtdFacts() {
+            const content = document.getElementById('otdContent');
+            const dotsContainer = document.getElementById('otdDots');
+
+            // Parse team links: {TeamName|slug|espnId}
+            function parseFact(text) {
+                return text.replace(/\{([^|]+)\|([^|]+)\|([^}]+)\}/g, (match, name, slug, espnId) => {
+                    const logoUrl = getLogoUrl(espnId);
+                    return '<img class="otd-team-logo-inline" src="' + logoUrl + '" alt="" onerror="this.style.display=\'none\'">' +
+                           '<a class="otd-team-link" href="#team/' + slug + '">' + name + '</a>';
+                });
+            }
+
+            let html = '';
+            _otdFacts.forEach((fact, i) => {
+                html += '<div class="otd-fact' + (i === _otdIndex ? ' active' : '') + '">';
+                html += '<div class="otd-text">' + parseFact(fact.text) + '</div>';
+                html += '</div>';
+            });
+            content.innerHTML = html;
+
+            // Dots
+            if (_otdFacts.length > 1) {
+                let dots = '';
+                _otdFacts.forEach((_, i) => {
+                    dots += '<span class="otd-dot' + (i === _otdIndex ? ' active' : '') + '" data-idx="' + i + '"></span>';
+                });
+                dotsContainer.innerHTML = dots;
+                dotsContainer.querySelectorAll('.otd-dot').forEach(dot => {
+                    dot.addEventListener('click', () => {
+                        _otdIndex = parseInt(dot.dataset.idx);
+                        renderOtdFacts();
+                        resetOtdTimer();
+                    });
+                });
+            } else {
+                dotsContainer.innerHTML = '';
+            }
+        }
+
+        function startOtdTimer() {
+            if (_otdFacts.length <= 1) return;
+            _otdTimer = setInterval(() => {
+                _otdIndex = (_otdIndex + 1) % _otdFacts.length;
+                renderOtdFacts();
+            }, 10000);
+        }
+
+        function resetOtdTimer() {
+            if (_otdTimer) clearInterval(_otdTimer);
+            startOtdTimer();
+        }
+
         async function init() {
             await loadData();
             setupTeamsData();
             setupEventListeners();
             initCorrectionModal();
+            initOnThisDayWidget();
 
             // Check for hash route on initial load
             try {
@@ -3726,6 +4254,14 @@
             if (champMatch) {
                 switchView('championshipRun', true);
                 renderChampionshipRun(champMatch[1], champMatch[2]);
+                _skipHashUpdate = false;
+                return;
+            }
+
+            // #net-rankings — direct link to NET rankings tab
+            if (hash === '#net-rankings') {
+                switchView('rankings', true);
+                setTimeout(() => switchRankingsTab('net'), 50);
                 _skipHashUpdate = false;
                 return;
             }
@@ -5756,6 +6292,9 @@
             });
             html += '</div>';
 
+            // Store game info globally so toggleH2HBoxScore can access it
+            window._h2hGameInfo = window._h2hGameInfo || {};
+
             // Game list container
             html += `<div id="h2h-games-list" style="display: flex; flex-direction: column; gap: 0.4rem; max-height: 450px; overflow-y: auto;">`;
 
@@ -5813,9 +6352,16 @@
                 } else {
                     // Completed game — clickable for box score
                     const winnerColor = m.t1Winner ? t1Color : t2Color;
+                    // Store game info for the detail panel
+                    window._h2hGameInfo[uid] = {
+                        date: m.date, t1Score: m.t1Score, t2Score: m.t2Score,
+                        t1Winner: m.t1Winner, venue: m.venue, loc: m.loc, ot: m.ot,
+                        t1Name: t1.name, t2Name: t2.name, t1EspnId: t1.espnId, t2EspnId: t2.espnId,
+                        t1Color: t1Color, t2Color: t2Color, t1Slug: t1.slug, t2Slug: t2.slug
+                    };
                     html += `
                         <div class="h2h-game-wrapper" id="h2h-wrap-${uid}" data-decade="${decade}">
-                            <div class="h2h-game-row" data-decade="${decade}" onclick="toggleH2HBoxScore('${uid}', '${t1.espnId}', '${t2.espnId}', '${m.date}', event)" title="Click for box score" style="display: flex; align-items: center; padding: 0.6rem 0.8rem; background: #FAFAF7; border-radius: 0.4rem; border-left: 3px solid ${winnerColor}; gap: 0.75rem; font-size: 0.85rem;">
+                            <div class="h2h-game-row" data-decade="${decade}" onclick="toggleH2HBoxScore('${uid}', '${t1.espnId}', '${t2.espnId}', '${m.date}', event)" title="Click for game details" style="display: flex; align-items: center; padding: 0.6rem 0.8rem; background: #FAFAF7; border-radius: 0.4rem; border-left: 3px solid ${winnerColor}; gap: 0.75rem; font-size: 0.85rem;">
                                 <div style="flex: 1; font-weight: ${m.t1Winner ? '700' : '400'}; color: ${m.t1Winner ? t1Color : '#A0AAB8'};">${t1.name.split(' ').pop()} <span style="font-variant-numeric: tabular-nums;">${m.t1Score}</span>${m.t1Winner ? otStr : ''}</div>
                                 <div style="font-size: 0.7rem; color: #8892A0; min-width: 80px; text-align: center;">${dateStr}${venueStr}</div>
                                 <div style="flex: 1; text-align: right; font-weight: ${!m.t1Winner ? '700' : '400'}; color: ${!m.t1Winner ? t2Color : '#A0AAB8'};">${!m.t1Winner ? otStr : ''}<span style="font-variant-numeric: tabular-nums;">${m.t2Score}</span> ${t2.name.split(' ').pop()}</div>
@@ -5953,6 +6499,13 @@
          * Filter H2H game list by decade.
          */
         function filterH2HDecade(decade) {
+            // Collapse any expanded panels first
+            document.querySelectorAll('#h2h-games-list .h2h-game-wrapper.expanded').forEach(wrapper => {
+                const panel = wrapper.querySelector('.h2h-boxscore-panel');
+                if (panel) panel.style.maxHeight = '0';
+                wrapper.classList.remove('expanded');
+            });
+
             // Handle both standalone rows and wrapper-enclosed rows
             const rows = document.querySelectorAll('#h2h-games-list > .h2h-game-row, #h2h-games-list > .h2h-game-wrapper');
             rows.forEach(el => {
@@ -9349,6 +9902,39 @@
             return null;
         }
 
+        function buildH2HDetailHeader(info) {
+            const d = new Date(info.date + 'T12:00:00');
+            const longDate = d.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' });
+            const locLabel = info.loc === 'H' ? 'Home' : info.loc === 'A' ? 'Away' : info.loc === 'N' ? 'Neutral' : '';
+            const venueParts = [locLabel, info.venue].filter(Boolean).join(' \u00B7 ');
+            const otLabel = info.ot ? ` (${info.ot})` : '';
+            const t1Logo = info.t1EspnId ? `https://a.espncdn.com/i/teamlogos/ncaa/500/${info.t1EspnId}.png` : '';
+            const t2Logo = info.t2EspnId ? `https://a.espncdn.com/i/teamlogos/ncaa/500/${info.t2EspnId}.png` : '';
+            const t1ScoreColor = info.t1Winner ? info.t1Color : '#A0AAB8';
+            const t2ScoreColor = !info.t1Winner ? info.t2Color : '#A0AAB8';
+            return `
+                <div class="h2h-detail-header">
+                    <div class="h2h-detail-team">
+                        ${t1Logo ? `<img class="h2h-detail-team-logo" src="${t1Logo}" alt="${info.t1Name}" onerror="this.style.display='none'">` : ''}
+                        <div class="h2h-detail-team-name">${info.t1Name}</div>
+                    </div>
+                    <div style="text-align: center;">
+                        <div class="h2h-detail-score-center">
+                            <span class="h2h-detail-score" style="color:${t1ScoreColor}">${info.t1Score}</span>
+                            <span class="h2h-detail-score-dash">&ndash;</span>
+                            <span class="h2h-detail-score" style="color:${t2ScoreColor}">${info.t2Score}</span>
+                        </div>
+                        <div class="h2h-detail-final">Final${otLabel}</div>
+                    </div>
+                    <div class="h2h-detail-team">
+                        ${t2Logo ? `<img class="h2h-detail-team-logo" src="${t2Logo}" alt="${info.t2Name}" onerror="this.style.display='none'">` : ''}
+                        <div class="h2h-detail-team-name">${info.t2Name}</div>
+                    </div>
+                </div>
+                <div class="h2h-detail-meta">${longDate}${venueParts ? '<br>' + venueParts : ''}</div>
+            `;
+        }
+
         async function toggleH2HBoxScore(uid, t1EspnId, t2EspnId, dateStr, event) {
             if (event) event.stopPropagation();
             const wrapper = document.getElementById('h2h-wrap-' + uid);
@@ -9373,24 +9959,81 @@
                 return;
             }
 
-            // Check if game is too old for ESPN data (~2002+)
+            // Get stored game info for the detail header
+            const info = (window._h2hGameInfo || {})[uid] || {};
+            const headerHtml = info.date ? buildH2HDetailHeader(info) : '';
+
             const gameYear = parseInt(dateStr.substring(0, 4));
+
+            // For pre-2002 games, check SR boxscores first (no ESPN data available)
             if (gameYear < 2002) {
-                inner.innerHTML = '<div class="h2h-boxscore-loading" style="color:#A8736B;">Box score not available for this era</div>';
-                panel.style.maxHeight = panel.scrollHeight + 'px';
+                // Show loading while we check SR data
+                inner.innerHTML = headerHtml + '<div class="h2h-boxscore-loading"><div class="spinner"></div>Checking for box score...</div>';
+                panel.style.maxHeight = '200px';
+
+                const srData = await loadSRBoxscores();
+                // Try to find matching SR box score by date and team names
+                let srMatch = null;
+                if (srData) {
+                    for (const [key, val] of Object.entries(srData)) {
+                        if (val && val.teams && val.teams.length >= 2) {
+                            // Check if this SR entry matches by looking at team names
+                            const srTeams = val.teams.map(t => (t.name || '').toLowerCase());
+                            const t1Short = (info.t1Name || '').toLowerCase();
+                            const t2Short = (info.t2Name || '').toLowerCase();
+                            const hasT1 = srTeams.some(n => t1Short.includes(n.split(' ').pop()) || n.includes(t1Short.split(' ').pop()));
+                            const hasT2 = srTeams.some(n => t2Short.includes(n.split(' ').pop()) || n.includes(t2Short.split(' ').pop()));
+                            // Also check if year matches
+                            const keyYear = key.substring(0, 4);
+                            const month = parseInt(dateStr.substring(5, 7));
+                            const expectedYear = month >= 10 ? String(gameYear + 1) : String(gameYear);
+                            if (hasT1 && hasT2 && (keyYear === String(gameYear) || keyYear === expectedYear)) {
+                                srMatch = val;
+                                break;
+                            }
+                        }
+                    }
+                }
+
+                if (srMatch) {
+                    inner.innerHTML = headerHtml + renderSRBoxScore(srMatch);
+                } else {
+                    const t1Name = info.t1Name || 'Team 1';
+                    const t2Name = info.t2Name || 'Team 2';
+                    inner.innerHTML = headerHtml + `
+                        <div class="h2h-detail-not-available">
+                            Box score not available for this era.
+                            <div class="score-fallback">Final: ${t1Name} ${info.t1Score || '?'}, ${t2Name} ${info.t2Score || '?'}</div>
+                        </div>`;
+                }
+                inner.dataset.loaded = 'true';
+                requestAnimationFrame(() => {
+                    panel.style.maxHeight = panel.scrollHeight + 'px';
+                    setTimeout(() => { if (wrapper.classList.contains('expanded')) panel.style.maxHeight = 'none'; }, 450);
+                });
                 return;
             }
 
             // Show loading spinner
-            inner.innerHTML = '<div class="h2h-boxscore-loading"><div class="spinner"></div>Loading box score...</div>';
-            panel.style.maxHeight = '80px';
+            inner.innerHTML = headerHtml + '<div class="h2h-boxscore-loading"><div class="spinner"></div>Loading box score...</div>';
+            panel.style.maxHeight = '200px';
 
             // Find ESPN game ID
             const espnGameId = await findH2HGameId(t1EspnId, t2EspnId, dateStr);
 
             if (!espnGameId) {
-                inner.innerHTML = '<div class="h2h-boxscore-loading" style="color:#A8736B;">Box score not available for this game</div>';
-                panel.style.maxHeight = panel.scrollHeight + 'px';
+                const t1Name = info.t1Name || 'Team 1';
+                const t2Name = info.t2Name || 'Team 2';
+                inner.innerHTML = headerHtml + `
+                    <div class="h2h-detail-not-available">
+                        Box score not available for this game.
+                        <div class="score-fallback">Final: ${t1Name} ${info.t1Score || '?'}, ${t2Name} ${info.t2Score || '?'}</div>
+                    </div>`;
+                inner.dataset.loaded = 'true';
+                requestAnimationFrame(() => {
+                    panel.style.maxHeight = panel.scrollHeight + 'px';
+                    setTimeout(() => { if (wrapper.classList.contains('expanded')) panel.style.maxHeight = 'none'; }, 450);
+                });
                 return;
             }
 
@@ -9398,13 +10041,23 @@
             const gameData = await fetchH2HBoxScore(espnGameId);
 
             if (!gameData || !gameData.boxscore) {
-                inner.innerHTML = '<div class="h2h-boxscore-loading" style="color:#A8736B;">Box score not available for this game</div>';
-                panel.style.maxHeight = panel.scrollHeight + 'px';
+                const t1Name = info.t1Name || 'Team 1';
+                const t2Name = info.t2Name || 'Team 2';
+                inner.innerHTML = headerHtml + `
+                    <div class="h2h-detail-not-available">
+                        Box score not available for this game.
+                        <div class="score-fallback">Final: ${t1Name} ${info.t1Score || '?'}, ${t2Name} ${info.t2Score || '?'}</div>
+                    </div>`;
+                inner.dataset.loaded = 'true';
+                requestAnimationFrame(() => {
+                    panel.style.maxHeight = panel.scrollHeight + 'px';
+                    setTimeout(() => { if (wrapper.classList.contains('expanded')) panel.style.maxHeight = 'none'; }, 450);
+                });
                 return;
             }
 
-            // Render box score
-            inner.innerHTML = renderBoxScore(gameData);
+            // Render detail header + full box score
+            inner.innerHTML = headerHtml + renderBoxScore(gameData);
             inner.dataset.loaded = 'true';
 
             // Smooth expand to fit content
