@@ -6820,7 +6820,7 @@
         let upsetsCurrentSort = 'year';
 
         const UPSET_ERAS = {
-            'all': { label: 'All Time (1985+)', min: 1985, max: 9999 },
+            'all': { label: 'All Eras', min: 1985, max: 9999 },
             '3pt': { label: '3-Point Era (1987+)', min: 1987, max: 9999 },
             '64': { label: '64-Team Era (1985-2010)', min: 1985, max: 2010 },
             '68': { label: '68-Team Era (2011+)', min: 2011, max: 9999 },
@@ -6828,13 +6828,13 @@
         };
 
         const UPSET_FUN_FACTS = [
-            'In 2018, UMBC became the first 16-seed to defeat a 1-seed, beating Virginia 74-54.',
-            'The 5-vs-12 matchup is the most common first-round upset. It happens roughly 35% of the time.',
-            '8-vs-9 games are essentially coin flips, with 9-seeds winning nearly half the time.',
-            'Since 1985, a 15-seed has beaten a 2-seed 10 times. Saint Peter\'s (2022) made it all the way to the Elite Eight.',
-            'No 16-seed had ever beaten a 1-seed until UMBC did it in 2018. Fairleigh Dickinson repeated the feat in 2023.',
-            'The 12-over-5 upset is so common it has its own name among bracketologists: "The 12-5 Special."',
-            'In 2023, both a 15-seed (Princeton) and a 16-seed (FDU) won first-round games in the same tournament.'
+            'In 2018, <a href="#team/umbc-retrievers" style="color:#C9A86C;font-weight:700;">UMBC</a> became the first 16-seed to defeat a 1-seed, beating <a href="#team/virginia-cavaliers" style="color:#C9A86C;font-weight:700;">Virginia</a> 74-54. <a href="#game/2018/umbc-retrievers-vs-virginia-cavaliers" style="color:#C9A86C;text-decoration:underline;">Relive the moment →</a>',
+            'The 5-vs-12 matchup is the most common first-round upset. It happens roughly 35% of the time. <a href="#upsets/5v12" style="color:#C9A86C;text-decoration:underline;">Explore all 5v12 upsets →</a>',
+            '8-vs-9 games are essentially coin flips, with 9-seeds winning nearly half the time. <a href="#upsets/8v9" style="color:#C9A86C;text-decoration:underline;">See the 8v9 history →</a>',
+            'Since 1985, a 15-seed has beaten a 2-seed 11 times. <a href="#team/saint-peters-peacocks" style="color:#C9A86C;font-weight:700;">Saint Peter\'s</a> (2022) made it all the way to the Elite Eight. <a href="#upsets/2v15" style="color:#C9A86C;text-decoration:underline;">All 2v15 upsets →</a>',
+            'No 16-seed had ever beaten a 1-seed until <a href="#team/umbc-retrievers" style="color:#C9A86C;font-weight:700;">UMBC</a> did it in 2018. <a href="#team/fairleigh-dickinson-knights" style="color:#C9A86C;font-weight:700;">Fairleigh Dickinson</a> repeated the feat in 2023. <a href="#upsets/1v16" style="color:#C9A86C;text-decoration:underline;">See both upsets →</a>',
+            'The 12-over-5 upset is so common it has its own name among bracketologists: "The 12-5 Special." <a href="#upsets/5v12" style="color:#C9A86C;text-decoration:underline;">Explore the data →</a>',
+            'In 2023, both a 15-seed (<a href="#team/princeton-tigers" style="color:#C9A86C;font-weight:700;">Princeton</a>) and a 16-seed (<a href="#team/fairleigh-dickinson-knights" style="color:#C9A86C;font-weight:700;">FDU</a>) won first-round games in the same tournament.'
         ];
 
         function getUpsetColorClass(upsetPct) {
@@ -7097,7 +7097,8 @@
                 </div>
 
                 <div class="upsets-era-filters">
-                    ${Object.entries(UPSET_ERAS).map(([k, v]) => `<button class="upsets-era-btn ${upsetsCurrentEra === k ? 'active' : ''}" onclick="upsetsCurrentEra='${k}'; upsetsCurrentPairing=null; renderUpsets();">${v.label}</button>`).join('')}
+                    <button class="upsets-era-btn ${upsetsCurrentEra === 'all' ? 'active' : ''}" onclick="upsetsCurrentEra='all'; upsetsCurrentPairing=null; renderUpsets();">All Eras</button>
+                    ${Object.entries(UPSET_ERAS).filter(([k]) => k !== 'all').map(([k, v]) => `<button class="upsets-era-btn ${upsetsCurrentEra === k ? 'active' : ''}" onclick="upsetsCurrentEra='${k}'; upsetsCurrentPairing=null; renderUpsets();">${v.label}</button>`).join('')}
                     ${upsetsCurrentPairing ? `<button class="upsets-era-btn" onclick="upsetsCurrentPairing=null; document.querySelectorAll('.upsets-seed-card').forEach(c=>c.classList.remove('active')); renderUpsetDetails();" style="background:#C9A86C; color:#fff; border-color:#C9A86C;">Show All Pairings</button>` : ''}
                 </div>
 
