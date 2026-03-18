@@ -1099,6 +1099,49 @@
             /* Better mobile typography */
             .game-round-info { font-size: 0.75rem; }
             .game-tournament-badge { font-size: 0.68rem; padding: 0.25rem 0.65rem; }
+
+            /* ── ENHANCED GAME CARDS ON MOBILE ── */
+            .game-card {
+                padding: 1.25rem;
+                border-radius: 0.875rem;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            }
+            .game-scoreboard {
+                padding: 0.75rem 0;
+            }
+            .game-score-team {
+                font-size: 1.5rem;
+            }
+
+            /* ── NAV: add right padding so last item has breathing room ── */
+            .nav-links::after {
+                content: '';
+                flex-shrink: 0;
+                width: 0.5rem;
+            }
+
+            /* ── HERO POLISH ── */
+            .hero {
+                padding: 2rem 1rem 1.25rem;
+                margin-bottom: 1rem;
+            }
+            .hero-logo { margin-bottom: 0.75rem; }
+
+            /* ── GAME FILTERS MOBILE ── */
+            .games-filters {
+                gap: 0.5rem;
+            }
+            .games-conf-filter {
+                width: 100%;
+                min-width: unset;
+                font-size: 0.85rem;
+            }
+
+            /* ── BACK BUTTON MOBILE ── */
+            #backButton {
+                font-size: 0.85rem;
+                padding: 0.5rem 0.75rem;
+            }
         }
         .bracket-desktop-hint {
             display: none; text-align: center; padding: 0.6rem 1rem;
