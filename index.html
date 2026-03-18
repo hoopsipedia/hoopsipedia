@@ -4810,8 +4810,8 @@
             // Try to get game-level matchup history from games.json first
             const gamesFromLocal = getH2HGamesFromData(t1, t2);
 
-            if (gamesFromLocal && gamesFromLocal.length > 3) {
-                // Enough local data — use it directly
+            if (gamesFromLocal && gamesFromLocal.length > 0) {
+                // Local data is our source of truth — ESPN fallback can match wrong teams
                 enrichH2HWithLiveScores(gamesFromLocal, t1, t2).then(enrichedGames => {
                     renderH2HGameList(container, allTimeHtml, hasAllTime, enrichedGames, t1, t2, t1Color, t2Color);
                 });
