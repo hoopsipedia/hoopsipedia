@@ -2636,99 +2636,93 @@
         }
 
         /* ── This Day in Tournament History Widget ── */
+        /* ── Slim OTD Ticker ── */
         .otd-widget {
-            background: linear-gradient(135deg, #1B2A4A 0%, #243556 50%, #1B2A4A 100%);
-            border-radius: 0.75rem;
-            padding: 1.5rem 2rem;
-            margin-bottom: 2.5rem;
-            position: relative;
+            background: #F5F3EE;
+            border-left: 4px solid #C9A86C;
+            border-bottom: 1px solid #E0D9CC;
+            padding: 0.65rem 1rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            max-height: 56px;
             overflow: hidden;
-            min-height: 100px;
-        }
-        .otd-widget::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0;
-            height: 3px;
-            background: linear-gradient(90deg, transparent, #C9A86C, transparent);
+            border-radius: 0 0.375rem 0.375rem 0;
         }
         .otd-header {
             display: flex;
             align-items: center;
-            gap: 0.6rem;
-            margin-bottom: 0.75rem;
+            gap: 0.5rem;
+            flex-shrink: 0;
         }
         .otd-badge {
-            font-size: 0.65rem;
+            font-size: 0.6rem;
             font-weight: 800;
-            letter-spacing: 0.15em;
+            letter-spacing: 0.14em;
             text-transform: uppercase;
             color: #C9A86C;
-            background: rgba(201,168,108,0.12);
-            padding: 0.25rem 0.6rem;
-            border-radius: 0.25rem;
-            border: 1px solid rgba(201,168,108,0.25);
             white-space: nowrap;
         }
         .otd-date {
-            font-size: 0.75rem;
-            color: rgba(255,255,255,0.5);
+            font-size: 0.7rem;
+            color: #8892A0;
             font-weight: 500;
-        }
-        .otd-body {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
+            white-space: nowrap;
         }
         .otd-nav-btn {
-            background: rgba(255,255,255,0.08);
-            border: 1px solid rgba(255,255,255,0.12);
-            color: rgba(255,255,255,0.6);
-            width: 32px;
-            height: 32px;
+            background: transparent;
+            border: 1px solid #E0D9CC;
+            color: #8892A0;
+            width: 26px;
+            height: 26px;
             border-radius: 50%;
             cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             transition: all 0.2s ease;
             flex-shrink: 0;
         }
         .otd-nav-btn:hover {
-            background: rgba(201,168,108,0.2);
-            border-color: rgba(201,168,108,0.4);
+            background: rgba(201,168,108,0.12);
+            border-color: #C9A86C;
             color: #C9A86C;
         }
         .otd-content {
             flex: 1;
             min-width: 0;
+            overflow: hidden;
         }
         .otd-fact {
             display: none;
-            animation: otdFadeIn 0.4s ease;
+            animation: otdFadeIn 0.3s ease;
         }
         .otd-fact.active {
             display: block;
         }
         @keyframes otdFadeIn {
-            from { opacity: 0; transform: translateY(4px); }
-            to { opacity: 1; transform: translateY(0); }
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
         .otd-text {
-            font-size: 1rem;
-            line-height: 1.65;
-            color: rgba(255,255,255,0.92);
+            font-size: 0.85rem;
+            line-height: 1.4;
+            color: #2C3345;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
         .otd-text a.otd-team-link {
-            color: #C9A86C;
+            color: #1B2A4A;
             font-weight: 700;
             text-decoration: none;
             transition: color 0.15s ease;
             cursor: pointer;
         }
         .otd-text a.otd-team-link:hover {
-            color: #E8D5A8;
+            color: #C9A86C;
             text-decoration: underline;
         }
         .otd-text .otd-year {
@@ -2737,38 +2731,121 @@
         }
         .otd-team-logo-inline {
             display: inline-block;
-            width: 20px;
-            height: 20px;
+            width: 18px;
+            height: 18px;
             background-size: contain;
             background-position: center;
             background-repeat: no-repeat;
             vertical-align: text-bottom;
             margin: 0 2px;
         }
-        .otd-dots {
-            display: flex;
-            justify-content: center;
-            gap: 0.4rem;
-            margin-top: 0.75rem;
+        .otd-dots { display: none; }
+        @media (max-width: 768px) {
+            .otd-widget { padding: 0.5rem 0.75rem; gap: 0.5rem; max-height: 52px; }
+            .otd-text { font-size: 0.78rem; }
+            .otd-nav-btn { width: 22px; height: 22px; font-size: 0.7rem; }
+            .otd-team-logo-inline { width: 16px; height: 16px; }
+            .otd-date { display: none; }
         }
-        .otd-dot {
+
+        /* ── Upset Watch Cards ── */
+        .upset-watch-container {
+            margin-bottom: 1.5rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 0.75rem;
+        }
+        .upset-watch-card {
+            background: #F5F3EE;
+            border-left: 4px solid #D4512B;
+            border-radius: 0 0.5rem 0.5rem 0;
+            padding: 0.75rem 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+        }
+        .upset-watch-card:hover {
+            box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+            transform: translateY(-1px);
+        }
+        .upset-watch-card.upset-complete {
+            border-left-color: #2E7D32;
+        }
+        .upset-watch-label {
+            font-size: 0.6rem;
+            font-weight: 800;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: #D4512B;
+            white-space: nowrap;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            gap: 0.35rem;
+        }
+        .upset-complete .upset-watch-label {
+            color: #2E7D32;
+        }
+        .upset-live-dot {
             width: 6px;
             height: 6px;
             border-radius: 50%;
-            background: rgba(255,255,255,0.2);
-            cursor: pointer;
-            transition: all 0.2s ease;
+            background: #D4512B;
+            animation: upsetPulse 1.5s ease-in-out infinite;
         }
-        .otd-dot.active {
-            background: #C9A86C;
-            width: 18px;
-            border-radius: 3px;
+        @keyframes upsetPulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
+        .upset-watch-teams {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            flex: 1;
+            min-width: 0;
+        }
+        .upset-watch-team {
+            display: flex;
+            align-items: center;
+            gap: 0.35rem;
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: #2C3345;
+            white-space: nowrap;
+        }
+        .upset-watch-team img {
+            width: 22px;
+            height: 22px;
+            object-fit: contain;
+        }
+        .upset-watch-seed {
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: #8892A0;
+        }
+        .upset-watch-score {
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: #1B2A4A;
+            white-space: nowrap;
+        }
+        .upset-watch-score .leading { color: #D4512B; }
+        .upset-complete .upset-watch-score .leading { color: #2E7D32; }
+        .upset-watch-clock {
+            font-size: 0.7rem;
+            color: #8892A0;
+            font-weight: 500;
+            white-space: nowrap;
+            flex-shrink: 0;
         }
         @media (max-width: 768px) {
-            .otd-widget { padding: 1.25rem 1rem; }
-            .otd-text { font-size: 0.9rem; line-height: 1.6; }
-            .otd-nav-btn { width: 28px; height: 28px; font-size: 0.75rem; }
-            .otd-team-logo-inline { width: 18px; height: 18px; }
+            .upset-watch-container { grid-template-columns: 1fr; }
+            .upset-watch-card { padding: 0.6rem 0.75rem; }
+            .upset-watch-team { font-size: 0.78rem; }
+            .upset-watch-team img { width: 18px; height: 18px; }
         }
 
         /* ── NET Rankings & Quad Record ── */
@@ -2907,6 +2984,8 @@
                 <p>The complete historical database of college basketball</p>
             </div>
 
+            <div id="upsetWatchContainer" class="upset-watch-container" style="display:none;"></div>
+
             <div class="compare-section">
                 <h2 style="text-align: center; margin-bottom: 0.5rem; color: #C9A86C; font-size: 1.4rem; font-weight: 800; letter-spacing: 0.05em;">Compare Programs</h2>
                 <p style="text-align: center; color: rgba(255,255,255,0.6); font-size: 0.8rem; margin-bottom: 1.5rem;">Pick any two teams and see how they stack up across 80+ years of history</p>
@@ -2935,15 +3014,12 @@
 
             <div class="otd-widget" id="otdWidget" style="display:none;">
                 <div class="otd-header">
-                    <span class="otd-badge">On This Day</span>
+                    <span class="otd-badge">ON THIS DAY</span>
                     <span class="otd-date" id="otdDate"></span>
                 </div>
-                <div class="otd-body">
-                    <button class="otd-nav-btn" id="otdPrev" aria-label="Previous fact">&#8249;</button>
-                    <div class="otd-content" id="otdContent"></div>
-                    <button class="otd-nav-btn" id="otdNext" aria-label="Next fact">&#8250;</button>
-                </div>
-                <div class="otd-dots" id="otdDots"></div>
+                <button class="otd-nav-btn" id="otdPrev" aria-label="Previous fact">&#8249;</button>
+                <div class="otd-content" id="otdContent"></div>
+                <button class="otd-nav-btn" id="otdNext" aria-label="Next fact">&#8250;</button>
             </div>
 
             <div class="games-section" id="gamesSection">
@@ -3639,22 +3715,115 @@
         let _otdFacts = [];
         let _otdTimer = null;
 
+        /**
+         * Search GAMES_DATA for significant games played on today's month/day.
+         * Returns formatted fact objects compatible with the hardcoded facts.
+         */
+        function getDataDrivenOtdFacts(month, day) {
+            if (!GAMES_DATA) return [];
+            const monthStr = String(month).padStart(2, '0');
+            const dayStr = String(day).padStart(2, '0');
+            const mmdd = '-' + monthStr + '-' + dayStr;
+            const monthNames = ['','January','February','March','April','May','June','July','August','September','October','November','December'];
+            const candidates = [];
+
+            // Build a slug-to-team lookup for generating links
+            const slugToTeam = {};
+            for (const [espnId, teamData] of Object.entries(GAMES_DATA)) {
+                if (teamData.slug) {
+                    slugToTeam[teamData.slug] = espnId;
+                }
+            }
+
+            // Look up team display name from allTeamsData
+            function getTeamDisplay(espnId) {
+                const t = allTeamsData.find(t => String(t.espnId) === String(espnId));
+                if (t) {
+                    const slug = t.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+                    const teamSlug = allTeamsData.find(at => at.espnId === t.espnId) ?
+                        (GAMES_DATA[String(t.espnId)]?.slug || slug) : slug;
+                    return { name: t.name, slug: teamSlug, espnId: String(t.espnId) };
+                }
+                return null;
+            }
+
+            const seen = new Set(); // avoid duplicate games
+
+            for (const [espnId, teamData] of Object.entries(GAMES_DATA)) {
+                const games = teamData.games || [];
+                for (const g of games) {
+                    if (!g.date || !g.date.includes(mmdd)) continue;
+                    const year = parseInt(g.date.split('-')[0]);
+                    if (!year || year < 1950) continue;
+
+                    // Dedup: use sorted pair + date
+                    const oppId = g.opp || '';
+                    const pairKey = [espnId, oppId].sort().join('-') + ':' + g.date;
+                    if (seen.has(pairKey)) continue;
+                    seen.add(pairKey);
+
+                    const ptDiff = Math.abs((g.pts || 0) - (g.opp_pts || 0));
+                    const isMarchApril = g.date.includes('-03-') || g.date.includes('-04-');
+
+                    // Score significance
+                    let score = 0;
+                    // Tournament-time games (March/April) are likely tournament games
+                    if (isMarchApril && month >= 3) score += 30;
+                    // Large point differentials
+                    if (ptDiff >= 25) score += 20;
+                    else if (ptDiff >= 15) score += 10;
+                    else if (ptDiff <= 3) score += 15; // close games are exciting
+                    // OT games
+                    if (g.ot) score += 15;
+                    // Recency bonus
+                    if (year >= 2000) score += 5;
+                    if (year >= 2010) score += 5;
+
+                    // Only include moderately significant games
+                    if (score < 25) continue;
+
+                    const winner = g.w ? espnId : oppId;
+                    const loser = g.w ? oppId : espnId;
+                    const winPts = g.w ? g.pts : g.opp_pts;
+                    const losePts = g.w ? g.opp_pts : g.pts;
+
+                    const winTeam = getTeamDisplay(winner);
+                    const loseTeam = getTeamDisplay(loser);
+                    if (!winTeam || !loseTeam) continue;
+
+                    const otLabel = g.ot ? ' in overtime' : '';
+                    const dateLabel = monthNames[month] + ' ' + day;
+                    const text = 'On ' + dateLabel + ', <span class="otd-year">' + year + '</span>: ' +
+                        '{' + winTeam.name + '|' + winTeam.slug + '|' + winTeam.espnId + '}' +
+                        ' defeated ' +
+                        '{' + loseTeam.name + '|' + loseTeam.slug + '|' + loseTeam.espnId + '}' +
+                        ' ' + winPts + '-' + losePts + otLabel + '.';
+
+                    candidates.push({ month, day, year, text, score });
+                }
+            }
+
+            // Sort by significance score descending, pick top 10
+            candidates.sort((a, b) => b.score - a.score);
+            return candidates.slice(0, 10);
+        }
+
         function initOnThisDayWidget() {
             const widget = document.getElementById('otdWidget');
             if (!widget) return;
 
             const now = new Date();
-            const month = now.getMonth() + 1; // 1-indexed
+            const month = now.getMonth() + 1;
             const day = now.getDate();
 
-            // Only show during tournament season (March 15 - April 8)
+            // Only show during basketball season (Nov - April)
             const dateNum = month * 100 + day;
-            if (dateNum < 315 || dateNum > 408) {
+            if (month >= 5 && month <= 10) {
                 widget.style.display = 'none';
                 return;
             }
 
-            // Find exact date matches first, then nearby dates for variety
+            // Hardcoded facts for exact + nearby dates
             let exactFacts = TOURNAMENT_HISTORY_FACTS.filter(f => f.month === month && f.day === day);
             let nearFacts = TOURNAMENT_HISTORY_FACTS.filter(f => {
                 if (f.month === month && f.day === day) return false;
@@ -3663,9 +3832,23 @@
                 const diff = Math.abs(fDate - tDate) / (1000 * 60 * 60 * 24);
                 return diff <= 2;
             });
-            let facts = [...exactFacts, ...nearFacts];
 
-            // If still nothing, pick random facts from the tournament date range
+            // Data-driven facts from games.json
+            const dataDriven = getDataDrivenOtdFacts(month, day);
+
+            // Merge: hardcoded first (better narrative), then data-driven to fill gaps
+            let facts = [...exactFacts];
+            // Add data-driven facts that don't duplicate hardcoded years
+            const hardcodedYears = new Set(exactFacts.map(f => f.year));
+            dataDriven.forEach(dd => {
+                if (!hardcodedYears.has(dd.year)) facts.push(dd);
+            });
+            // Add near-date hardcoded if we still need more
+            if (facts.length < 5) {
+                nearFacts.forEach(nf => { if (facts.length < 12) facts.push(nf); });
+            }
+
+            // Fallback: random hardcoded facts
             if (facts.length === 0) {
                 const shuffled = [...TOURNAMENT_HISTORY_FACTS].sort(() => Math.random() - 0.5);
                 facts = shuffled.slice(0, 4);
@@ -3676,15 +3859,12 @@
             _otdFacts = facts;
             _otdIndex = 0;
 
-            // Set date display
             const months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
             document.getElementById('otdDate').textContent = months[month - 1] + ' ' + day;
 
-            // Render facts
             renderOtdFacts();
-            widget.style.display = 'block';
+            widget.style.display = 'flex';
 
-            // Navigation
             document.getElementById('otdPrev').addEventListener('click', () => {
                 _otdIndex = (_otdIndex - 1 + _otdFacts.length) % _otdFacts.length;
                 renderOtdFacts();
@@ -3696,10 +3876,8 @@
                 resetOtdTimer();
             });
 
-            // Auto-rotate every 10 seconds
             startOtdTimer();
 
-            // Hide nav arrows if only one fact
             if (_otdFacts.length <= 1) {
                 document.getElementById('otdPrev').style.display = 'none';
                 document.getElementById('otdNext').style.display = 'none';
@@ -3708,9 +3886,7 @@
 
         function renderOtdFacts() {
             const content = document.getElementById('otdContent');
-            const dotsContainer = document.getElementById('otdDots');
 
-            // Parse team links: {TeamName|slug|espnId}
             function parseFact(text) {
                 return text.replace(/\{([^|]+)\|([^|]+)\|([^}]+)\}/g, (match, name, slug, espnId) => {
                     const logoUrl = getLogoUrl(espnId);
@@ -3726,24 +3902,6 @@
                 html += '</div>';
             });
             content.innerHTML = html;
-
-            // Dots
-            if (_otdFacts.length > 1) {
-                let dots = '';
-                _otdFacts.forEach((_, i) => {
-                    dots += '<span class="otd-dot' + (i === _otdIndex ? ' active' : '') + '" data-idx="' + i + '"></span>';
-                });
-                dotsContainer.innerHTML = dots;
-                dotsContainer.querySelectorAll('.otd-dot').forEach(dot => {
-                    dot.addEventListener('click', () => {
-                        _otdIndex = parseInt(dot.dataset.idx);
-                        renderOtdFacts();
-                        resetOtdTimer();
-                    });
-                });
-            } else {
-                dotsContainer.innerHTML = '';
-            }
         }
 
         function startOtdTimer() {
@@ -3751,12 +3909,183 @@
             _otdTimer = setInterval(() => {
                 _otdIndex = (_otdIndex + 1) % _otdFacts.length;
                 renderOtdFacts();
-            }, 10000);
+            }, 8000);
         }
 
         function resetOtdTimer() {
             if (_otdTimer) clearInterval(_otdTimer);
             startOtdTimer();
+        }
+
+        // ── Upset Watch: live tournament upset alerts ──
+        let _upsetWatchTimer = null;
+
+        async function checkUpsetWatch() {
+            try {
+                const container = document.getElementById('upsetWatchContainer');
+                if (!container) return;
+
+                const today = new Date();
+                const month = today.getMonth() + 1;
+                // Only during tournament season (March-April)
+                if (month < 3 || month > 4) { container.style.display = 'none'; return; }
+
+                const dateStr = today.toISOString().slice(0, 10).replace(/-/g, '');
+                const resp = await fetch(`https://site.api.espn.com/apis/site/v2/sports/basketball/mens-college-basketball/scoreboard?dates=${dateStr}&groups=50&limit=200`);
+                if (!resp.ok) return;
+                const data = await resp.json();
+
+                const upsetCards = [];
+
+                (data.events || []).forEach(event => {
+                    const comp = event.competitions?.[0];
+                    if (!comp) return;
+                    const status = comp.status?.type?.description;
+                    const isLive = status === 'In Progress' || status === 'Halftime';
+                    const isFinal = status === 'Final';
+                    if (!isLive && !isFinal) return;
+
+                    // Check if tournament game (notes often contain tournament info)
+                    const notes = comp.notes?.[0]?.headline || '';
+                    const isTournament = notes.toLowerCase().includes('tournament') ||
+                                         notes.toLowerCase().includes('ncaa') ||
+                                         notes.toLowerCase().includes('round') ||
+                                         (comp.series?.type === 'tournament');
+
+                    const competitors = comp.competitors || [];
+                    if (competitors.length < 2) return;
+
+                    const home = competitors.find(c => c.homeAway === 'home') || competitors[0];
+                    const away = competitors.find(c => c.homeAway === 'away') || competitors[1];
+
+                    const homeSeed = parseInt(home.curatedRank?.current) || 0;
+                    const awaySeed = parseInt(away.curatedRank?.current) || 0;
+
+                    // Need both teams to have seeds for upset detection
+                    if (!homeSeed || !awaySeed) return;
+
+                    const homeScore = parseInt(home.score) || 0;
+                    const awayScore = parseInt(away.score) || 0;
+
+                    // Determine which is the lower seed (higher number = lower seed = underdog)
+                    let underdog, favorite, underdogScore, favoriteScore;
+                    if (homeSeed > awaySeed) {
+                        underdog = home; favorite = away;
+                        underdogScore = homeScore; favoriteScore = awayScore;
+                    } else if (awaySeed > homeSeed) {
+                        underdog = away; favorite = home;
+                        underdogScore = awayScore; favoriteScore = homeScore;
+                    } else {
+                        return; // Same seed
+                    }
+
+                    const seedDiff = Math.abs(homeSeed - awaySeed);
+                    if (seedDiff < 3) return; // Not enough of a seed gap
+
+                    const underdogSeed = parseInt(underdog.curatedRank?.current);
+                    const favoriteSeed = parseInt(favorite.curatedRank?.current);
+
+                    // For live games: underdog must be leading
+                    // For final games: underdog must have won
+                    if (isLive && underdogScore <= favoriteScore) return;
+                    if (isFinal && !underdog.winner) return;
+
+                    const clock = comp.status?.displayClock || '';
+                    const period = comp.status?.period || 0;
+                    let timeDisplay = '';
+                    if (isLive) {
+                        if (status === 'Halftime') timeDisplay = 'HALF';
+                        else timeDisplay = clock + (period === 1 ? ' 1st' : period === 2 ? ' 2nd' : ' OT');
+                    } else {
+                        timeDisplay = 'FINAL';
+                    }
+
+                    const underdogTeam = underdog.team || {};
+                    const favoriteTeam = favorite.team || {};
+
+                    upsetCards.push({
+                        eventId: event.id,
+                        isLive,
+                        isFinal,
+                        underdog: {
+                            name: underdogTeam.shortDisplayName || underdogTeam.displayName || 'TBD',
+                            espnId: underdogTeam.id,
+                            seed: underdogSeed,
+                            score: underdogScore,
+                            logo: underdogTeam.logo || getLogoUrl(underdogTeam.id)
+                        },
+                        favorite: {
+                            name: favoriteTeam.shortDisplayName || favoriteTeam.displayName || 'TBD',
+                            espnId: favoriteTeam.id,
+                            seed: favoriteSeed,
+                            score: favoriteScore,
+                            logo: favoriteTeam.logo || getLogoUrl(favoriteTeam.id)
+                        },
+                        seedDiff,
+                        timeDisplay,
+                        scoreDiff: underdogScore - favoriteScore
+                    });
+                });
+
+                // Sort: live games first, then by seed diff
+                upsetCards.sort((a, b) => {
+                    if (a.isLive && !b.isLive) return -1;
+                    if (!a.isLive && b.isLive) return 1;
+                    return b.seedDiff - a.seedDiff;
+                });
+
+                // Show up to 4
+                const toShow = upsetCards.slice(0, 4);
+
+                if (toShow.length === 0) {
+                    container.style.display = 'none';
+                    return;
+                }
+
+                container.style.display = 'grid';
+                container.innerHTML = toShow.map(card => {
+                    const statusClass = card.isFinal ? ' upset-complete' : '';
+                    const label = card.isFinal ? 'UPSET COMPLETE' : 'UPSET WATCH';
+                    const liveDot = card.isLive ? '<span class="upset-live-dot"></span>' : '';
+
+                    // Try to build comparison URL
+                    const t1 = allTeamsData.find(t => String(t.espnId) === String(card.underdog.espnId));
+                    const t2 = allTeamsData.find(t => String(t.espnId) === String(card.favorite.espnId));
+                    let href = '#';
+                    if (t1 && t2) {
+                        const s1 = t1.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+                        const s2 = t2.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+                        href = '#compare/' + s1 + '/vs/' + s2;
+                    }
+
+                    return `<a class="upset-watch-card${statusClass}" href="${href}" style="text-decoration:none;">
+                        <span class="upset-watch-label">${liveDot}${label}</span>
+                        <span class="upset-watch-teams">
+                            <span class="upset-watch-team">
+                                <img src="${card.underdog.logo}" alt="" onerror="this.style.display='none'">
+                                <span class="upset-watch-seed">${card.underdog.seed}</span>
+                                ${card.underdog.name}
+                            </span>
+                            <span class="upset-watch-score"><span class="leading">${card.underdog.score}</span>-${card.favorite.score}</span>
+                            <span class="upset-watch-team">
+                                <img src="${card.favorite.logo}" alt="" onerror="this.style.display='none'">
+                                <span class="upset-watch-seed">${card.favorite.seed}</span>
+                                ${card.favorite.name}
+                            </span>
+                        </span>
+                        <span class="upset-watch-clock">${card.timeDisplay}</span>
+                    </a>`;
+                }).join('');
+            } catch (e) {
+                console.warn('Upset Watch error:', e);
+            }
+        }
+
+        function startUpsetWatch() {
+            const month = new Date().getMonth() + 1;
+            if (month < 3 || month > 4) return;
+            checkUpsetWatch();
+            _upsetWatchTimer = setInterval(checkUpsetWatch, 60000);
         }
 
         async function init() {
@@ -3780,6 +4109,7 @@
 
             // Start live game tracker — polls ESPN every 2 min, updates records when games go Final
             try { startLiveGameTracker(); } catch(e) { console.error('Live game tracker error:', e); }
+            try { startUpsetWatch(); } catch(e) { console.error('Upset Watch error:', e); }
         }
 
         /**
