@@ -6881,11 +6881,13 @@
             // Highlight active card
             document.querySelectorAll('.upsets-seed-card').forEach(c => c.classList.remove('active'));
             const activeCard = document.querySelector(`.upsets-seed-card[data-pairing="${pairingKey}"]`);
-            if (activeCard) {
-                activeCard.classList.add('active');
-                activeCard.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-            }
+            if (activeCard) activeCard.classList.add('active');
             renderUpsetDetails();
+            // Scroll to the detail section so user sees the upset list
+            setTimeout(() => {
+                const detail = document.getElementById('upsetsDetailContainer');
+                if (detail) detail.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }, 150);
         }
 
         function getFilteredPairs() {
@@ -6960,11 +6962,9 @@
                 if (upsetsCurrentSort === 'year') {
                     upsets.sort((a, b) => b.year - a.year);
                 } else {
-                    upsets.sort((a, b) => {
-                        const magA = (pair.lower - pair.higher) * (1 + pair.lower / 16);
-                        const magB = (pair.lower - pair.higher) * (1 + pair.lower / 16);
-                        return magB - magA || b.year - a.year;
-                    });
+                    // Magnitude: within a single pairing, sort oldest first (more historic = higher magnitude)
+                    // The seed diff is the same for all games in a pairing, so we sort by year ascending (oldest = most legendary)
+                    upsets.sort((a, b) => a.year - b.year);
                 }
 
                 html += `<div class="upsets-detail-section" id="upset-section-${key}">
@@ -7112,6 +7112,7 @@
                     <div class="upsets-fun-fact-text"><strong>Did You Know?</strong> ${funFact}</div>
                 </div>
 
+                <div style="text-align:center;font-size:0.75rem;color:#8892A0;margin-bottom:0.5rem;font-style:italic;">Seed-based data since 1985 (64-team era). Full historical upsets by program strength coming soon with The Hoopsipedia Ranking.</div>
                 <div class="upsets-era-filters">
                     <button class="upsets-era-btn ${upsetsCurrentEra === 'all' ? 'active' : ''}" onclick="upsetsCurrentEra='all'; upsetsCurrentPairing=null; renderUpsets();">All Eras</button>
                     ${Object.entries(UPSET_ERAS).filter(([k]) => k !== 'all').map(([k, v]) => `<button class="upsets-era-btn ${upsetsCurrentEra === k ? 'active' : ''}" onclick="upsetsCurrentEra='${k}'; upsetsCurrentPairing=null; renderUpsets();">${v.label}</button>`).join('')}
