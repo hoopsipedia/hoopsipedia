@@ -2394,6 +2394,104 @@
             .champ-run-score-value { font-size: 0.95rem; }
             .champ-run-stats { grid-template-columns: repeat(2, 1fr); }
         }
+        /* ── Prominent Box Score (Game Center) ── */
+        .game-center-section {
+            background: #FAFAF7; border: 1px solid #E0D9CC;
+            border-radius: 0.75rem; margin-bottom: 2rem; overflow: hidden;
+            box-shadow: 0 2px 8px rgba(27,42,74,0.08);
+        }
+        .game-center-header {
+            background: #1B2A4A; color: #fff;
+            display: flex; align-items: center; justify-content: center;
+            gap: 2rem; padding: 1.25rem 1.5rem;
+        }
+        .game-center-team {
+            display: flex; align-items: center; gap: 0.75rem;
+            flex: 1;
+        }
+        .game-center-team--away { justify-content: flex-end; }
+        .game-center-team--home { justify-content: flex-start; }
+        .game-center-team-logo {
+            width: 52px; height: 52px; object-fit: contain;
+        }
+        .game-center-team-name {
+            font-weight: 700; font-size: 1.1rem; line-height: 1.2;
+        }
+        .game-center-team-record {
+            font-size: 0.75rem; color: rgba(255,255,255,0.6); margin-top: 0.15rem;
+        }
+        .game-center-score-block {
+            display: flex; flex-direction: column; align-items: center;
+            min-width: 120px;
+        }
+        .game-center-scores {
+            display: flex; align-items: center; gap: 0.75rem;
+        }
+        .game-center-score {
+            font-size: 2.8rem; font-weight: 800; line-height: 1;
+            font-variant-numeric: tabular-nums;
+        }
+        .game-center-score--winner { color: #fff; }
+        .game-center-score--loser { color: rgba(255,255,255,0.5); }
+        .game-center-score-divider {
+            font-size: 1.6rem; color: rgba(255,255,255,0.3); font-weight: 300;
+        }
+        .game-center-status {
+            display: inline-flex; align-items: center; gap: 0.4rem;
+            margin-top: 0.6rem; padding: 0.2rem 0.7rem;
+            border-radius: 1rem; font-size: 0.72rem; font-weight: 700;
+            text-transform: uppercase; letter-spacing: 0.06em;
+        }
+        .game-center-status--live {
+            background: rgba(220,38,38,0.15); color: #FCA5A5;
+        }
+        .game-center-status--halftime {
+            background: rgba(234,179,8,0.15); color: #FDE68A;
+        }
+        .game-center-status--final {
+            background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.7);
+        }
+        .game-center-live-dot {
+            width: 7px; height: 7px; border-radius: 50%;
+            background: #EF4444;
+            animation: gc-pulse 1.5s ease-in-out infinite;
+        }
+        @keyframes gc-pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.4; transform: scale(0.75); }
+        }
+        .game-center-meta {
+            display: flex; align-items: center; justify-content: center;
+            gap: 1rem; padding: 0.5rem 1rem;
+            background: rgba(27,42,74,0.04); border-bottom: 1px solid #E0D9CC;
+            font-size: 0.75rem; color: #8892A0;
+        }
+        .game-center-meta-live {
+            display: inline-flex; align-items: center; gap: 0.35rem;
+            color: #EF4444; font-weight: 600;
+        }
+        .game-center-body {
+            padding: 1.25rem;
+        }
+        .game-center-body .boxscore-container { text-align: left; }
+        .game-center-body .boxscore-team-summary {
+            margin-bottom: 1.25rem;
+        }
+
+        @media (max-width: 768px) {
+            .game-center-header {
+                flex-direction: column; gap: 0.75rem; padding: 1rem;
+            }
+            .game-center-team {
+                justify-content: center !important;
+            }
+            .game-center-team-logo { width: 40px; height: 40px; }
+            .game-center-team-name { font-size: 0.95rem; }
+            .game-center-score { font-size: 2.2rem; }
+            .game-center-score-block { min-width: auto; }
+            .game-center-body { padding: 0.75rem; }
+        }
+
     </style>
 </head>
 <body>
@@ -3827,6 +3925,12 @@
                 removeProfileBackground();
             }
 
+            // Clean up game center refresh when leaving comparison view
+            if (view !== 'comparison') {
+                stopGameCenterRefresh();
+                window._currentCompareGameId = null;
+            }
+
             document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('active'));
             const navBtn = document.querySelector(`[data-view="${view}"]`);
             if (navBtn) navBtn.classList.add('active');
@@ -4664,9 +4768,212 @@
         }
 
         let _comparisonGameId = null; // ESPN event ID for box score tab in comparison view
+        let _gameCenterRefreshInterval = null; // auto-refresh interval for live game center
+        let _gameCenterLastUpdated = null; // timestamp of last box score update
+
+        // ── Prominent Game Center Box Score ──
+
+        function getGameStatus(gameData) {
+            const status = gameData.header?.competitions?.[0]?.status;
+            if (!status) return { label: 'FINAL', type: 'final', detail: '' };
+            const state = status.type?.state; // pre, in, post
+            const detail = status.type?.detail || status.displayClock || '';
+            if (state === 'in') {
+                const period = status.period || 0;
+                const clock = status.displayClock || '';
+                if (detail.toLowerCase().includes('halftime') || detail.toLowerCase().includes('half')) {
+                    return { label: 'HALFTIME', type: 'halftime', detail: 'Halftime' };
+                }
+                return { label: 'LIVE', type: 'live', detail: detail || `${clock} - ${period > 2 ? 'OT' + (period - 2) : (period === 1 ? '1st Half' : '2nd Half')}` };
+            }
+            if (state === 'pre') return { label: 'UPCOMING', type: 'pre', detail: detail };
+            return { label: 'FINAL', type: 'final', detail: detail.toUpperCase().includes('OT') ? detail : 'Final' };
+        }
+
+        function isGameWithin48Hours(gameData) {
+            try {
+                const eventDate = new Date(gameData.header?.competitions?.[0]?.date || gameData.header?.gameNote || 0);
+                if (isNaN(eventDate.getTime())) return false;
+                const now = new Date();
+                const diffMs = now - eventDate;
+                return diffMs < 48 * 60 * 60 * 1000 && diffMs > -24 * 60 * 60 * 1000; // within 48h past or 24h future
+            } catch (e) { return false; }
+        }
+
+        function renderGameCenterHeader(gameData) {
+            const comps = gameData.header?.competitions?.[0];
+            if (!comps) return '';
+            const competitors = comps.competitors || [];
+            if (competitors.length < 2) return '';
+
+            const away = competitors.find(c => c.homeAway === 'away') || competitors[0];
+            const home = competitors.find(c => c.homeAway === 'home') || competitors[1];
+            const status = getGameStatus(gameData);
+
+            const awayScore = away.score || '0';
+            const homeScore = home.score || '0';
+            const awayWinner = parseInt(awayScore) > parseInt(homeScore) && status.type !== 'pre';
+            const homeWinner = parseInt(homeScore) > parseInt(awayScore) && status.type !== 'pre';
+
+            const awayLogo = away.id ? `https://a.espncdn.com/i/teamlogos/ncaa/500/${away.id}.png` : '';
+            const homeLogo = home.id ? `https://a.espncdn.com/i/teamlogos/ncaa/500/${home.id}.png` : '';
+            const awayRecord = away.record?.[0]?.displayValue || '';
+            const homeRecord = home.record?.[0]?.displayValue || '';
+
+            let statusBadge = '';
+            if (status.type === 'live') {
+                statusBadge = `<div class="game-center-status game-center-status--live"><div class="game-center-live-dot"></div>${status.detail}</div>`;
+            } else if (status.type === 'halftime') {
+                statusBadge = `<div class="game-center-status game-center-status--halftime">${status.label}</div>`;
+            } else if (status.type === 'final') {
+                statusBadge = `<div class="game-center-status game-center-status--final">${status.detail}</div>`;
+            }
+
+            const venue = comps.venue?.fullName || '';
+            const gameDate = comps.date ? new Date(comps.date) : null;
+            const dateStr = gameDate ? gameDate.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric', year: 'numeric' }) : '';
+
+            let metaHtml = '';
+            const metaParts = [];
+            if (dateStr) metaParts.push(dateStr);
+            if (venue) metaParts.push(venue);
+            const isLive = status.type === 'live' || status.type === 'halftime';
+            if (isLive) {
+                metaParts.push(`<span class="game-center-meta-live"><span class="game-center-live-dot" style="width:5px;height:5px;"></span>Stats updating live</span>`);
+            }
+            if (metaParts.length > 0) {
+                metaHtml = `<div class="game-center-meta">${metaParts.join(' &middot; ')}</div>`;
+            }
+
+            return `
+                <div class="game-center-header">
+                    <div class="game-center-team game-center-team--away">
+                        <div style="text-align:right;">
+                            <div class="game-center-team-name">${away.team?.displayName || away.team?.shortDisplayName || 'Away'}</div>
+                            ${awayRecord ? `<div class="game-center-team-record">${awayRecord}</div>` : ''}
+                        </div>
+                        ${awayLogo ? `<img class="game-center-team-logo" src="${awayLogo}" alt="" onerror="this.style.display='none'">` : ''}
+                    </div>
+                    <div class="game-center-score-block">
+                        <div class="game-center-scores">
+                            <span class="game-center-score ${awayWinner ? 'game-center-score--winner' : 'game-center-score--loser'}">${status.type === 'pre' ? '' : awayScore}</span>
+                            ${status.type !== 'pre' ? '<span class="game-center-score-divider">-</span>' : '<span class="game-center-score-divider">vs</span>'}
+                            <span class="game-center-score ${homeWinner ? 'game-center-score--winner' : 'game-center-score--loser'}">${status.type === 'pre' ? '' : homeScore}</span>
+                        </div>
+                        ${statusBadge}
+                    </div>
+                    <div class="game-center-team game-center-team--home">
+                        ${homeLogo ? `<img class="game-center-team-logo" src="${homeLogo}" alt="" onerror="this.style.display='none'">` : ''}
+                        <div>
+                            <div class="game-center-team-name">${home.team?.displayName || home.team?.shortDisplayName || 'Home'}</div>
+                            ${homeRecord ? `<div class="game-center-team-record">${homeRecord}</div>` : ''}
+                        </div>
+                    </div>
+                </div>
+                ${metaHtml}
+            `;
+        }
+
+        function renderProminentBoxScore(gameData) {
+            if (!gameData) return '';
+            if (!isGameWithin48Hours(gameData)) return '';
+
+            const headerHtml = renderGameCenterHeader(gameData);
+            if (!headerHtml) return '';
+
+            const boxScoreHtml = renderBoxScore(gameData);
+
+            return `
+                <div class="game-center-section" id="gameCenterSection">
+                    ${headerHtml}
+                    <div class="game-center-body">
+                        ${boxScoreHtml}
+                    </div>
+                </div>
+            `;
+        }
+
+        function startGameCenterRefresh() {
+            stopGameCenterRefresh();
+            _gameCenterLastUpdated = Date.now();
+
+            _gameCenterRefreshInterval = setInterval(async () => {
+                const gameId = window._currentCompareGameId;
+                if (!gameId) { stopGameCenterRefresh(); return; }
+
+                try {
+                    // Force fresh fetch (bypass cache)
+                    const resp = await fetch(`https://site.api.espn.com/apis/site/v2/sports/basketball/mens-college-basketball/summary?event=${gameId}`);
+                    if (!resp.ok) return;
+                    const freshData = await resp.json();
+
+                    // Update caches
+                    if (typeof BOXSCORE_CACHE !== 'undefined') BOXSCORE_CACHE[gameId] = freshData;
+                    if (typeof h2hBoxScoreCache !== 'undefined') h2hBoxScoreCache[gameId] = freshData;
+
+                    // Update the game center section in place
+                    const section = document.getElementById('gameCenterSection');
+                    if (!section) { stopGameCenterRefresh(); return; }
+
+                    section.innerHTML = renderGameCenterHeader(freshData) +
+                        '<div class="game-center-body">' + renderBoxScore(freshData) + '</div>';
+
+                    _gameCenterLastUpdated = Date.now();
+
+                    // Check if game ended - stop refresh
+                    const status = getGameStatus(freshData);
+                    if (status.type === 'final' || status.type === 'pre') {
+                        stopGameCenterRefresh();
+                    }
+                } catch (e) {
+                    // Silent fail - keep trying
+                }
+            }, 60000); // 60 seconds
+        }
+
+        function stopGameCenterRefresh() {
+            if (_gameCenterRefreshInterval) {
+                clearInterval(_gameCenterRefreshInterval);
+                _gameCenterRefreshInterval = null;
+            }
+        }
+
+        async function findRecentGameBetweenTeams(t1EspnId, t2EspnId) {
+            // Check ESPN scoreboard for recent games (last 3 days) between these teams
+            try {
+                const dates = [];
+                for (let d = -2; d <= 0; d++) {
+                    const dt = new Date();
+                    dt.setDate(dt.getDate() + d);
+                    dates.push(dt.toISOString().slice(0, 10).replace(/-/g, ''));
+                }
+
+                const results = await Promise.all(dates.map(date =>
+                    fetch(`https://site.api.espn.com/apis/site/v2/sports/basketball/mens-college-basketball/scoreboard?dates=${date}&groups=50`)
+                        .then(r => r.ok ? r.json() : { events: [] }).catch(() => ({ events: [] }))
+                ));
+
+                for (const data of results) {
+                    for (const event of (data.events || [])) {
+                        const comp = event.competitions?.[0];
+                        if (!comp) continue;
+                        const competitors = comp.competitors || [];
+                        const ids = competitors.map(c => String(c.id || c.team?.id));
+                        if (ids.includes(String(t1EspnId)) && ids.includes(String(t2EspnId))) {
+                            return event.id;
+                        }
+                    }
+                }
+                return null;
+            } catch (e) {
+                return null;
+            }
+        }
 
         function openComparison(team1Id, team2Id, gameId) {
             _comparisonGameId = gameId || null;
+            window._currentCompareGameId = gameId || null;
+            stopGameCenterRefresh();
             const buildTeamObj = (espnId) => {
                 const team = allTeamsData.find(t => t.espnId === espnId);
                 if (team) return Promise.resolve(team);
@@ -4852,6 +5159,7 @@
         function renderComparison(skipHash) {
             switchView('comparison', true); // Don't push #comparison, push #compare/ID/ID instead
             const container = document.getElementById('comparisonContent');
+            stopGameCenterRefresh();
 
             // Update URL hash for shareable link + browser history
             if (selectedTeam1 && selectedTeam2 && !skipHash) {
@@ -4865,6 +5173,7 @@
 
             // Build header with team logos and a tab switcher
             let html = `
+                <div id="gameCenterPlaceholder"></div>
                 <div class="comparison-header">
                     <div class="comparison-team" style="cursor:pointer" onclick="openProfile(selectedTeam1)">
                         <div class="comparison-team-logo" style="background-image: url('${getLogoUrl(t1.espnId)}');"></div>
@@ -4918,6 +5227,9 @@
                 });
             }
 
+            // ── Prominent Game Center: load box score above tabs ──
+            loadGameCenter(t1.espnId, t2.espnId);
+
             // Check for upcoming matchup tickets between these two teams
             if (SEATGEEK_CLIENT_ID !== 'PLACEHOLDER_CLIENT_ID') {
                 fetchTicketData(t1.name, t2.name).then(ticket => {
@@ -4926,6 +5238,59 @@
                         ticketEl.innerHTML = renderTicketLink(ticket);
                     }
                 });
+            }
+        }
+
+        async function loadGameCenter(t1EspnId, t2EspnId) {
+            const placeholder = document.getElementById('gameCenterPlaceholder');
+            if (!placeholder) return;
+
+            let gameId = window._currentCompareGameId || _comparisonGameId;
+
+            // If no gameId passed, check if there's a recent game between these teams
+            if (!gameId) {
+                gameId = await findRecentGameBetweenTeams(t1EspnId, t2EspnId);
+                if (gameId) {
+                    window._currentCompareGameId = gameId;
+                    _comparisonGameId = gameId;
+                }
+            }
+
+            if (!gameId) return; // No recent game found - show normal comparison view
+
+            try {
+                // Fetch game data (use cache if available)
+                let gameData;
+                if (typeof BOXSCORE_CACHE !== 'undefined' && BOXSCORE_CACHE[gameId]) {
+                    gameData = BOXSCORE_CACHE[gameId];
+                } else if (h2hBoxScoreCache[gameId]) {
+                    gameData = h2hBoxScoreCache[gameId];
+                } else {
+                    const resp = await fetch(`https://site.api.espn.com/apis/site/v2/sports/basketball/mens-college-basketball/summary?event=${gameId}`);
+                    if (!resp.ok) return;
+                    gameData = await resp.json();
+                    if (typeof BOXSCORE_CACHE !== 'undefined') BOXSCORE_CACHE[gameId] = gameData;
+                    h2hBoxScoreCache[gameId] = gameData;
+                }
+
+                if (!gameData) return;
+
+                const prominentHtml = renderProminentBoxScore(gameData);
+                if (!prominentHtml) return; // Game is older than 48 hours
+
+                // Verify placeholder still exists (user may have navigated away)
+                const el = document.getElementById('gameCenterPlaceholder');
+                if (el) {
+                    el.innerHTML = prominentHtml;
+                }
+
+                // Start auto-refresh if game is live
+                const status = getGameStatus(gameData);
+                if (status.type === 'live' || status.type === 'halftime') {
+                    startGameCenterRefresh();
+                }
+            } catch (e) {
+                // Silent fail - comparison view still works without game center
             }
         }
 
