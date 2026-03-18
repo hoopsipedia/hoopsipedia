@@ -199,6 +199,30 @@
         }
         .game-matchup-button:hover { background: #243556; transform: translateY(-1px); }
         .game-time { font-size: 0.75rem; color: #A0AAB8; text-align: center; margin-top: 0.5rem; }
+        .game-scoreboard {
+            display: flex; align-items: center; justify-content: center; gap: 1rem;
+            padding: 0.6rem 0; margin: -0.25rem 0;
+        }
+        .game-score-team {
+            font-size: 1.6rem; font-weight: 800; font-variant-numeric: tabular-nums; line-height: 1;
+            min-width: 40px; text-align: center;
+        }
+        .game-score-divider {
+            font-size: 1rem; font-weight: 600; color: #A0AAB8;
+        }
+        .game-score-status {
+            font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em;
+            text-align: center; margin-top: 0.15rem;
+        }
+        .game-score-status.live {
+            color: #D32F2F; animation: livePulse 2s ease-in-out infinite;
+        }
+        .game-score-status.final { color: #5A6578; }
+        .game-score-status.halftime { color: #E65100; }
+        @keyframes livePulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
         .game-tournament-badge {
             display: flex; align-items: center; justify-content: center; gap: 0.35rem;
             padding: 0.2rem 0.6rem; border-radius: 0.3rem;
@@ -1948,10 +1972,10 @@
             const grid = document.getElementById('gamesGrid');
             grid.innerHTML = '<div class="chart-loading">Loading upcoming games...</div>';
 
-            // Fetch today's scoreboard plus upcoming days to get at least 5 games
+            // Fetch yesterday + today + upcoming days (yesterday catches recently finished games)
             const today = new Date();
             const urls = [];
-            for (let i = 0; i < 7; i++) {
+            for (let i = -1; i < 7; i++) {
                 const d = new Date(today);
                 d.setDate(d.getDate() + i);
                 const dateStr = d.toISOString().split('T')[0].replace(/-/g, '');
@@ -2130,23 +2154,48 @@
                             }
                         }
 
-                        // Check game status
+                        // Check game status — build scoreboard and time separately
                         const status = comp.status?.type?.description || '';
+                        let scoreboardHTML = '';
                         if (status === 'In Progress') {
                             const period = comp.status?.period || 0;
                             const clock = comp.status?.displayClock || '';
                             const t1Score = team1.score || '0';
                             const t2Score = team2.score || '0';
                             const halfStr = period <= 2 ? `${period === 1 ? '1st' : '2nd'} Half ${clock}` : `OT ${clock}`;
-                            timeStr = `<span style="font-size:1.1rem;font-weight:800;color:#1B2A4A;">${t1Score} - ${t2Score}</span><br>${halfStr}`;
+                            const t1Winning = parseInt(t1Score) >= parseInt(t2Score);
+                            scoreboardHTML = `
+                                <div class="game-scoreboard">
+                                    <div class="game-score-team" style="color: ${t1Winning ? t1Color : '#A0AAB8'};">${t1Score}</div>
+                                    <div class="game-score-divider">-</div>
+                                    <div class="game-score-team" style="color: ${!t1Winning ? t2Color : '#A0AAB8'};">${t2Score}</div>
+                                </div>
+                                <div class="game-score-status live">&#9679; ${halfStr}</div>`;
+                            timeStr = '';
                         } else if (status === 'Final') {
                             const t1Score = team1.score || '?';
                             const t2Score = team2.score || '?';
-                            timeStr = `<span style="font-size:1.1rem;font-weight:800;color:#1B2A4A;">Final: ${t1Score} - ${t2Score}</span>`;
+                            const t1Won = parseInt(t1Score) > parseInt(t2Score);
+                            scoreboardHTML = `
+                                <div class="game-scoreboard">
+                                    <div class="game-score-team" style="color: ${t1Won ? t1Color : '#A0AAB8'};">${t1Score}</div>
+                                    <div class="game-score-divider">-</div>
+                                    <div class="game-score-team" style="color: ${!t1Won ? t2Color : '#A0AAB8'};">${t2Score}</div>
+                                </div>
+                                <div class="game-score-status final">FINAL</div>`;
+                            timeStr = '';
                         } else if (status === 'Halftime') {
                             const t1Score = team1.score || '0';
                             const t2Score = team2.score || '0';
-                            timeStr = `<span style="font-size:1.1rem;font-weight:800;color:#1B2A4A;">${t1Score} - ${t2Score}</span><br>Halftime`;
+                            const t1Winning = parseInt(t1Score) >= parseInt(t2Score);
+                            scoreboardHTML = `
+                                <div class="game-scoreboard">
+                                    <div class="game-score-team" style="color: ${t1Winning ? t1Color : '#A0AAB8'};">${t1Score}</div>
+                                    <div class="game-score-divider">-</div>
+                                    <div class="game-score-team" style="color: ${!t1Winning ? t2Color : '#A0AAB8'};">${t2Score}</div>
+                                </div>
+                                <div class="game-score-status halftime">HALFTIME</div>`;
+                            timeStr = '';
                         }
 
                         const cardId = `game-${t1EspnId}-${t2EspnId}`;
@@ -2180,6 +2229,7 @@
                                     </div>
                                 </div>
                             </div>
+                            ${scoreboardHTML}
                             <div id="${cardId}-h2h" style="text-align: center; font-size: 0.78rem; color: #8892A0; font-weight: 500;">Loading series history...</div>
                             <div class="game-matchup-bar" id="${cardId}-bar">
                                 <div class="game-bar-team1" style="flex-basis: 50%; background: ${t1Color};"></div>
