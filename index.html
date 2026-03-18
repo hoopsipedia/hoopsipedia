@@ -2155,6 +2155,99 @@
         }
         .champ-run-score-margin.win { color: #2E7D32; }
 
+        /* Expandable box score */
+        .champ-run-game-wrapper {
+            border-left: 3px solid #E0D9CC;
+            border-bottom: 1px solid #F0EDE6;
+            position: relative;
+        }
+        .champ-run-game-wrapper::before {
+            content: '';
+            position: absolute;
+            left: -7px;
+            top: 28px;
+            width: 11px;
+            height: 11px;
+            border-radius: 50%;
+            background: #E0D9CC;
+            border: 2px solid #FFFFFF;
+            z-index: 1;
+        }
+        .champ-run-game-wrapper.championship-wrapper {
+            border-left: 3px solid #C9A86C;
+            background: linear-gradient(90deg, rgba(201,168,108,0.06) 0%, transparent 100%);
+        }
+        .champ-run-game-wrapper.championship-wrapper::before {
+            background: #C9A86C;
+            width: 13px;
+            height: 13px;
+            left: -8px;
+            box-shadow: 0 0 0 3px rgba(201,168,108,0.25);
+        }
+        .champ-run-game-wrapper.championship-wrapper .champ-run-round {
+            color: #C9A86C;
+            font-weight: 800;
+        }
+        .champ-run-game-wrapper .champ-run-game {
+            border-left: none;
+            border-bottom: none;
+            position: static;
+        }
+        .champ-run-game-wrapper .champ-run-game::before {
+            display: none;
+        }
+        .champ-run-game-wrapper.championship-wrapper .champ-run-game {
+            border-left: none;
+            background: none;
+        }
+        .champ-run-expand-icon {
+            font-size: 0.7rem;
+            color: #8892A0;
+            transition: transform 0.25s ease;
+            margin-left: 0.5rem;
+            flex-shrink: 0;
+        }
+        .champ-run-game-wrapper.expanded .champ-run-expand-icon {
+            transform: rotate(180deg);
+        }
+        .champ-run-expand-hint {
+            font-size: 0.65rem;
+            color: #A8B2BF;
+            font-weight: 500;
+            margin-left: 0.25rem;
+        }
+        .champ-run-boxscore-panel {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease;
+            background: #F9F8F5;
+            border-top: 1px solid transparent;
+        }
+        .champ-run-game-wrapper.expanded .champ-run-boxscore-panel {
+            border-top: 1px solid #E0D9CC;
+        }
+        .champ-run-boxscore-inner {
+            padding: 1rem 1.25rem;
+        }
+        .champ-run-boxscore-loading {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.6rem;
+            padding: 1.5rem;
+            color: #8892A0;
+            font-size: 0.85rem;
+        }
+        .champ-run-boxscore-loading .spinner {
+            width: 18px;
+            height: 18px;
+            border: 2px solid #E0D9CC;
+            border-top-color: #1B2A4A;
+            border-radius: 50%;
+            animation: spin 0.7s linear infinite;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+
         /* Key Stats Grid */
         .champ-run-stats {
             display: grid;
@@ -8589,6 +8682,128 @@
             '2025': { slug: 'florida-gators', espnId: '57' }
         };
 
+        // Championship box score cache and schedule cache
+        const champBoxScoreCache = {};
+        const champScheduleCache = {};
+
+        async function fetchChampSchedule(espnId, year) {
+            const cacheKey = `${espnId}-${year}`;
+            if (champScheduleCache[cacheKey]) return champScheduleCache[cacheKey];
+            try {
+                const resp = await fetch(`https://site.api.espn.com/apis/site/v2/sports/basketball/mens-college-basketball/teams/${espnId}/schedule?season=${year}&seasontype=3`);
+                if (!resp.ok) return null;
+                const data = await resp.json();
+                champScheduleCache[cacheKey] = data;
+                return data;
+            } catch (e) { return null; }
+        }
+
+        async function findChampGameId(espnId, year, gameIndex) {
+            const runKey = Object.keys(CHAMPIONSHIP_RUNS).find(k => k.startsWith(year + '/'));
+            const run = runKey ? CHAMPIONSHIP_RUNS[runKey] : null;
+            if (!run) return null;
+            const game = run.games[gameIndex];
+            if (!game) return null;
+
+            // Try schedule API
+            const schedule = await fetchChampSchedule(espnId, year);
+            if (schedule && schedule.events) {
+                // Sort all events by date
+                const sorted = [...schedule.events].sort((a, b) => new Date(a.date) - new Date(b.date));
+
+                // First try: match by opponent team ID (most reliable)
+                if (game.oppEspnId) {
+                    for (const evt of sorted) {
+                        const comp = evt.competitions && evt.competitions[0];
+                        if (!comp || !comp.competitors) continue;
+                        const hasOpp = comp.competitors.some(c => String(c.id) === String(game.oppEspnId));
+                        if (hasOpp) return evt.id;
+                    }
+                }
+
+                // Fallback: use index-based matching (assumes sorted = round order)
+                if (sorted.length >= run.games.length) {
+                    const matchedEvent = sorted[gameIndex];
+                    if (matchedEvent) return matchedEvent.id;
+                }
+            }
+            return null;
+        }
+
+        async function fetchChampBoxScore(gameId) {
+            if (champBoxScoreCache[gameId]) return champBoxScoreCache[gameId];
+            try {
+                const resp = await fetch(`https://site.api.espn.com/apis/site/v2/sports/basketball/mens-college-basketball/summary?event=${gameId}`);
+                if (!resp.ok) return null;
+                const data = await resp.json();
+                champBoxScoreCache[gameId] = data;
+                return data;
+            } catch (e) { return null; }
+        }
+
+        async function toggleChampBoxScore(gameId, espnId, year, gameIndex, event) {
+            event.stopPropagation();
+            const wrapper = document.getElementById('wrap-' + gameId);
+            const panel = document.getElementById('panel-' + gameId);
+            const inner = document.getElementById('inner-' + gameId);
+
+            if (wrapper.classList.contains('expanded')) {
+                // Collapse: set explicit height first so transition works from 'none'
+                panel.style.maxHeight = panel.scrollHeight + 'px';
+                requestAnimationFrame(() => {
+                    panel.style.maxHeight = '0';
+                    wrapper.classList.remove('expanded');
+                });
+                return;
+            }
+
+            // Expand
+            wrapper.classList.add('expanded');
+
+            // If already loaded, just expand
+            if (inner.dataset.loaded === 'true') {
+                panel.style.maxHeight = panel.scrollHeight + 'px';
+                return;
+            }
+
+            // Show loading spinner
+            inner.innerHTML = '<div class="champ-run-boxscore-loading"><div class="spinner"></div>Loading box score...</div>';
+            panel.style.maxHeight = '80px';
+
+            // Find game ID from schedule
+            const espnGameId = await findChampGameId(espnId, year, gameIndex);
+
+            if (!espnGameId) {
+                inner.innerHTML = '<div class="champ-run-boxscore-loading" style="color:#A8736B;">Box score not available for this game</div>';
+                panel.style.maxHeight = panel.scrollHeight + 'px';
+                return;
+            }
+
+            // Fetch box score
+            const gameData = await fetchChampBoxScore(espnGameId);
+
+            if (!gameData || !gameData.boxscore) {
+                inner.innerHTML = '<div class="champ-run-boxscore-loading" style="color:#A8736B;">Box score not available for this game</div>';
+                panel.style.maxHeight = panel.scrollHeight + 'px';
+                return;
+            }
+
+            // Render box score
+            inner.innerHTML = renderBoxScore(gameData);
+            inner.dataset.loaded = 'true';
+
+            // Smooth expand to fit content
+            requestAnimationFrame(() => {
+                panel.style.maxHeight = panel.scrollHeight + 'px';
+                // After transition, set to auto so content is not clipped
+                setTimeout(() => {
+                    if (wrapper.classList.contains('expanded')) {
+                        panel.style.maxHeight = 'none';
+                    }
+                }, 450);
+            });
+        }
+
         function renderChampionshipRun(year, slug) {
             const key = `${year}/${slug}`;
             const run = CHAMPIONSHIP_RUNS[key];
@@ -8606,28 +8821,34 @@
 
             const logoUrl = getLogoUrl(run.espnId);
 
-            // Build tournament path HTML
-            const pathHTML = run.games.map(g => {
+            // Build tournament path HTML with expandable box scores
+            const pathHTML = run.games.map((g, idx) => {
                 const margin = g.winScore - g.loseScore;
                 const oppLogo = g.oppEspnId ? getLogoUrl(g.oppEspnId) : '';
                 const isChamp = g.isChampionship;
-                const oppTeam = g.oppEspnId ? findTeamByEspnId(g.oppEspnId) : null;
-                const oppSlug = oppTeam ? teamSlug(oppTeam.name) : '';
-                const clickAction = oppSlug ? `onclick="window.location.hash='#compare/${teamSlug(run.teamName)}/${oppSlug}'"` : '';
+                const gameId = `champ-bs-${year}-${slug}-${idx}`;
 
                 return `
-                    <div class="champ-run-game ${isChamp ? 'championship-game' : ''}" ${clickAction} ${clickAction ? 'title="Compare these teams"' : ''}>
-                        <div class="champ-run-round">${g.round}</div>
-                        <div class="champ-run-opponent">
-                            ${oppLogo ? `<div class="champ-run-opp-logo" style="background-image:url('${oppLogo}');"></div>` : '<div class="champ-run-opp-logo" style="background:#E8E2D6;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.6rem;color:#8892A0;">&nbsp;</div>'}
-                            <div class="champ-run-opp-info">
-                                <div class="champ-run-opp-name">${isChamp ? '\ud83c\udfc6 ' : ''}vs. ${g.opponent}</div>
-                                <div class="champ-run-opp-seed">#${g.oppSeed} Seed${g.note ? ' \u2022 ' + g.note : ''}</div>
+                    <div class="champ-run-game-wrapper ${isChamp ? 'championship-wrapper' : ''}" id="wrap-${gameId}">
+                        <div class="champ-run-game" onclick="toggleChampBoxScore('${gameId}', '${run.espnId}', ${year}, ${idx}, event)" title="Click for box score">
+                            <div class="champ-run-round">${g.round}</div>
+                            <div class="champ-run-opponent">
+                                ${oppLogo ? `<div class="champ-run-opp-logo" style="background-image:url('${oppLogo}');"></div>` : '<div class="champ-run-opp-logo" style="background:#E8E2D6;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.6rem;color:#8892A0;">&nbsp;</div>'}
+                                <div class="champ-run-opp-info">
+                                    <div class="champ-run-opp-name">vs. ${g.opponent}</div>
+                                    <div class="champ-run-opp-seed">#${g.oppSeed} Seed${g.note ? ' \u2022 ' + g.note : ''}</div>
+                                </div>
+                            </div>
+                            <div class="champ-run-score" style="display:flex;align-items:center;justify-content:flex-end;gap:0.4rem;">
+                                <div style="text-align:right;">
+                                    <div class="champ-run-score-value">${g.score}</div>
+                                    <div class="champ-run-score-margin win">W +${margin}</div>
+                                </div>
+                                <div class="champ-run-expand-icon">\u25BC</div>
                             </div>
                         </div>
-                        <div class="champ-run-score">
-                            <div class="champ-run-score-value">${g.score}</div>
-                            <div class="champ-run-score-margin win">W +${margin}</div>
+                        <div class="champ-run-boxscore-panel" id="panel-${gameId}">
+                            <div class="champ-run-boxscore-inner" id="inner-${gameId}"></div>
                         </div>
                     </div>
                 `;
@@ -8669,13 +8890,13 @@
 
                 <!-- The Story -->
                 <div class="champ-run-card">
-                    <h3>\ud83d\udcda The Story</h3>
+                    <h3>The Story</h3>
                     <div class="champ-run-story">${run.story}</div>
                 </div>
 
                 <!-- Tournament Path -->
                 <div class="champ-run-card">
-                    <h3>\ud83c\udfc0 Tournament Path</h3>
+                    <h3>Tournament Path</h3>
                     <div class="champ-run-path">
                         ${pathHTML}
                     </div>
@@ -8683,14 +8904,14 @@
 
                 <!-- Key Stats -->
                 <div class="champ-run-card">
-                    <h3>\ud83d\udcca Key Stats</h3>
+                    <h3>Key Stats</h3>
                     ${statsHTML}
                 </div>
 
                 <!-- Championship Game Highlights -->
                 ${run.videoId ? `
                 <div class="champ-run-card">
-                    <h3>\ud83c\udfa5 Championship Game Highlights</h3>
+                    <h3>Championship Game Highlights</h3>
                     <div class="champ-run-video">
                         <iframe
                             src="https://www.youtube.com/embed/${run.videoId}"
@@ -8705,7 +8926,7 @@
 
                 <!-- The Aftermath -->
                 <div class="champ-run-card">
-                    <h3>\ud83c\udf1f The Aftermath</h3>
+                    <h3>The Aftermath</h3>
                     <div class="champ-run-story">${run.aftermath}</div>
                 </div>
 
