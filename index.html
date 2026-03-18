@@ -1468,6 +1468,91 @@
         let H2H_DATA = null; // All-time head-to-head records (from h2h.json)
         let GAMES_DATA = null; // Game-level schedule data (from games.json)
 
+        // ── SEED MATCHUP HISTORY ENGINE ──
+        function buildSeedMatchupHistory() {
+            if (!SEASONS_DATA) return;
+            var R1_PAIRS = [[1,16],[2,15],[3,14],[4,13],[5,12],[6,11],[7,10],[8,9]];
+            var pairMap = {};
+            R1_PAIRS.forEach(function(p) {
+                pairMap[p[0]+'v'+p[1]] = { higher: p[0], lower: p[1], higherWins: 0, lowerWins: 0, total: 0, upsets: [] };
+            });
+            var espnIds = Object.keys(SEASONS_DATA);
+            for (var i = 0; i < espnIds.length; i++) {
+                var tdata = SEASONS_DATA[espnIds[i]];
+                var seasons = tdata.seasons || [];
+                for (var j = 0; j < seasons.length; j++) {
+                    var s = seasons[j];
+                    if (!s.seed || !s.ncaaTourney) continue;
+                    var yr = parseInt(s.year.split('-')[0]);
+                    if (yr < 1985) continue;
+                    var seed = s.seed;
+                    var lostR1 = s.ncaaTourney.indexOf('Lost NCAA Tournament First Round') >= 0 || s.ncaaTourney.indexOf('Lost NCAA Tournament First Four') >= 0;
+                    var advanced = !lostR1;
+                    var hEntry = H[espnIds[i]];
+                    var teamName = hEntry ? hEntry[0] : '';
+                    var match = null;
+                    for (var k = 0; k < R1_PAIRS.length; k++) {
+                        if (R1_PAIRS[k][0] === seed || R1_PAIRS[k][1] === seed) { match = R1_PAIRS[k]; break; }
+                    }
+                    if (!match) continue;
+                    var key = match[0]+'v'+match[1];
+                    var pair = pairMap[key];
+                    if (seed === match[0] && advanced) pair.higherWins++;
+                    if (seed === match[1] && advanced) {
+                        pair.lowerWins++;
+                        pair.upsets.push({ year: yr, team: teamName, seed: seed });
+                    }
+                    pair.total++;
+                }
+            }
+            SEED_MATCHUP_HISTORY = { pairs: pairMap };
+            console.log('Seed matchup history built');
+        }
+
+        function getUpsetScore(higherSeed, lowerSeed) {
+            return (lowerSeed - higherSeed) * (1 + (lowerSeed / 16));
+        }
+
+        function getSeedContextText(seed1, seed2) {
+            if (!SEED_MATCHUP_HISTORY.pairs || !seed1 || !seed2) return null;
+            if (seed1 === '-' || seed2 === '-' || seed1 === 99 || seed2 === 99) return null;
+            var s1 = parseInt(seed1), s2 = parseInt(seed2);
+            if (isNaN(s1) || isNaN(s2)) return null;
+            var higher = Math.min(s1, s2), lower = Math.max(s1, s2);
+            var key = higher+'v'+lower;
+            var pair = SEED_MATCHUP_HISTORY.pairs[key];
+            if (!pair || pair.total === 0) return null;
+            var winPct = (pair.lowerWins / (pair.higherWins + pair.lowerWins) * 100).toFixed(0);
+            if (higher <= 2 && lower >= 15) {
+                return { text: lower+'-seeds are '+pair.lowerWins+'-'+pair.higherWins+' all-time vs '+higher+'-seeds', alert: false };
+            } else if (lower - higher >= 5) {
+                return pair.lowerWins > 0
+                    ? { text: lower+'-seeds have '+pair.lowerWins+' upset wins vs '+higher+"-seeds since '85", alert: false }
+                    : { text: higher+'-seeds are '+pair.higherWins+'-0 vs '+lower+'-seeds', alert: false };
+            } else {
+                return { text: lower+'-seeds win '+winPct+'% of '+higher+'v'+lower+' games ('+pair.lowerWins+'-'+pair.higherWins+')', alert: false };
+            }
+        }
+
+        function getUpsetAlertText(seed1, score1, seed2, score2, isLive) {
+            if (!isLive || !seed1 || !seed2) return null;
+            var s1 = parseInt(seed1), s2 = parseInt(seed2);
+            if (isNaN(s1) || isNaN(s2) || s1 === s2) return null;
+            var sc1 = parseInt(score1), sc2 = parseInt(score2);
+            if (isNaN(sc1) || isNaN(sc2)) return null;
+            var higherSeed = Math.min(s1, s2), lowerSeed = Math.max(s1, s2);
+            var underdogLeading = (s1 > s2 && sc1 > sc2) || (s2 > s1 && sc2 > sc1);
+            if (!underdogLeading || lowerSeed - higherSeed < 3) return null;
+            var key = higherSeed+'v'+lowerSeed;
+            var pair = SEED_MATCHUP_HISTORY.pairs ? SEED_MATCHUP_HISTORY.pairs[key] : null;
+            if (pair && pair.lowerWins <= 5) {
+                return { text: '\ud83d\udea8 Upset Alert! '+lowerSeed+'-seeds are only '+pair.lowerWins+'-'+pair.higherWins+' all-time', alert: true };
+            } else if (getUpsetScore(higherSeed, lowerSeed) >= 6) {
+                return { text: '\ud83d\udea8 Upset brewing! '+lowerSeed+' over '+higherSeed+' seed', alert: true };
+            }
+            return null;
+        }
+
         async function loadData() {
             try {
                 const resp = await fetch('data.json');
@@ -1520,7 +1605,12 @@
                 }
             } catch (e) {
                 console.error('Error loading data:', e);
-                document.body.innerHTML = '<div style="text-align:center;padding:60px;font-family:sans-serif;"><h2>Loading Error</h2><p>Could not load team data. Make sure data.json is in the same directory.</p><p style="color:#999;">' + e.message + '</p></div>';
+                document.querySelector('.container').innerHTML = `<div class="error-fallback" style="min-height:60vh;">
+                    <div class="error-fallback-icon" style="font-size:3.5rem;">\u{1F3C0}</div>
+                    <div class="error-fallback-message" style="font-size:1.15rem;">We're having trouble loading Hoopsipedia's data. Try refreshing the page.</div>
+                    <button class="error-fallback-retry" onclick="window.location.reload()">Refresh Page</button>
+                    <div style="margin-top:1rem;font-size:0.8rem;color:#A0AAB8;">${e.message}</div>
+                </div>`;
                 throw e;
             }
         }
@@ -1769,11 +1859,21 @@
                     }
                     return Promise.resolve(null);
                 };
+                // Show skeleton while resolving teams
+                switchView('comparison', true);
+                document.getElementById('comparisonContent').innerHTML = `
+                    <div class="comparison-header">
+                        <div class="comparison-team"><div class="skeleton skeleton-circle" style="width:90px;height:90px;"></div><div class="comparison-team-info"><div class="skeleton skeleton-text skeleton-text--lg" style="width:140px;"></div><div class="skeleton skeleton-text skeleton-text--sm" style="width:80px;"></div></div></div>
+                        <div class="comparison-vs-badge" style="color:#E8E2D6;">VS</div>
+                        <div class="comparison-team"><div class="skeleton skeleton-circle" style="width:90px;height:90px;"></div><div class="comparison-team-info"><div class="skeleton skeleton-text skeleton-text--lg" style="width:140px;"></div><div class="skeleton skeleton-text skeleton-text--sm" style="width:80px;"></div></div></div>
+                    </div>` + renderComparisonSkeleton();
                 Promise.all([resolveTeam(compareMatch[1]), resolveTeam(compareMatch[2])]).then(([t1, t2]) => {
                     if (t1 && t2) {
                         selectedTeam1 = t1;
                         selectedTeam2 = t2;
                         renderComparison(true);
+                    } else {
+                        document.getElementById('comparisonContent').innerHTML = renderErrorFallback('handleHashRoute()');
                     }
                     _skipHashUpdate = false;
                 });
@@ -2391,9 +2491,132 @@
             }).catch(() => ({ t1Wins: 0, t2Wins: 0, total: 0 }));
         }
 
+        // ===== SKELETON HELPERS =====
+        function renderErrorFallback(retryFn) {
+            return `<div class="error-fallback">
+                <div class="error-fallback-icon">\u{1F3C0}</div>
+                <div class="error-fallback-message">We're having trouble loading this data. Try again?</div>
+                <button class="error-fallback-retry" onclick="${retryFn}">Retry</button>
+            </div>`;
+        }
+
+        function renderComparisonSkeleton() {
+            let statRows = '';
+            for (let i = 0; i < 5; i++) {
+                statRows += `<div class="stat-row">
+                    <div class="stat-left">
+                        <div class="skeleton skeleton-text" style="width:50px;height:18px;margin:0;"></div>
+                        <div class="stat-bar"><div class="skeleton" style="width:${40 + Math.random() * 50}%;height:100%;"></div></div>
+                    </div>
+                    <div class="stat-label"><div class="skeleton skeleton-text" style="width:80px;height:14px;margin:0 auto;"></div></div>
+                    <div class="stat-right">
+                        <div class="stat-bar"><div class="skeleton" style="width:${40 + Math.random() * 50}%;height:100%;"></div></div>
+                        <div class="skeleton skeleton-text" style="width:50px;height:18px;margin:0;"></div>
+                    </div>
+                </div>`;
+            }
+            let gameRows = '';
+            for (let i = 0; i < 4; i++) {
+                gameRows += `<div style="display:flex;align-items:center;gap:1rem;padding:0.75rem 0;border-bottom:1px solid #F0EDE6;">
+                    <div class="skeleton skeleton-text" style="width:80px;height:14px;margin:0;"></div>
+                    <div class="skeleton skeleton-text" style="width:40%;height:14px;margin:0;"></div>
+                    <div class="skeleton skeleton-text" style="width:60px;height:14px;margin:0;"></div>
+                </div>`;
+            }
+            return `<div style="text-align:center;margin-bottom:1.5rem;">
+                <div class="skeleton skeleton-text" style="width:200px;height:12px;margin:0 auto 1rem;"></div>
+                <div style="display:flex;justify-content:center;align-items:center;gap:2rem;margin-bottom:1rem;">
+                    <div class="skeleton" style="width:60px;height:48px;border-radius:0.375rem;"></div>
+                    <div class="skeleton" style="width:20px;height:16px;border-radius:0.25rem;"></div>
+                    <div class="skeleton" style="width:60px;height:48px;border-radius:0.375rem;"></div>
+                </div>
+                <div class="skeleton skeleton-bar" style="max-width:300px;margin:0 auto;"></div>
+            </div>
+            <div class="comparison-stats">${statRows}</div>
+            <div style="margin-top:1.5rem;">${gameRows}</div>`;
+        }
+
+        function renderProfileSkeleton() {
+            let statCards = '';
+            for (let i = 0; i < 9; i++) {
+                statCards += `<div class="stat-card skeleton-card" style="text-align:center;">
+                    <div class="skeleton skeleton-text skeleton-text--lg" style="margin:0 auto 0.5rem;width:60%;height:32px;"></div>
+                    <div class="skeleton skeleton-text skeleton-text--sm" style="margin:0 auto 0.5rem;width:80%;"></div>
+                    <div class="skeleton skeleton-text" style="margin:0 auto;width:50%;height:18px;"></div>
+                </div>`;
+            }
+            let tourneyEntries = '';
+            for (let i = 0; i < 12; i++) {
+                tourneyEntries += `<div style="padding:0.5rem 0.4rem;text-align:center;background:#F9F8F5;border:1px solid #EDE9E0;border-radius:0.4rem;">
+                    <div class="skeleton skeleton-text" style="width:60%;height:12px;margin:0 auto 0.3rem;"></div>
+                    <div class="skeleton skeleton-text" style="width:40%;height:10px;margin:0 auto 0.2rem;"></div>
+                    <div class="skeleton" style="width:50%;height:16px;margin:0 auto;border-radius:0.2rem;"></div>
+                </div>`;
+            }
+            return `<div class="profile-header">
+                <div class="profile-logo-section">
+                    <div class="skeleton skeleton-circle" style="width:130px;height:130px;"></div>
+                </div>
+                <div class="profile-info">
+                    <div class="skeleton skeleton-text skeleton-text--lg" style="width:50%;height:28px;margin-bottom:0.75rem;"></div>
+                    <div class="skeleton skeleton-text" style="width:35%;margin-bottom:0.4rem;"></div>
+                    <div class="skeleton skeleton-text" style="width:30%;margin-bottom:1.25rem;"></div>
+                    <div class="profile-records">
+                        <div class="profile-record" style="border-left-color:#E8E2D6;">
+                            <div class="skeleton skeleton-text skeleton-text--sm" style="width:70%;margin-bottom:0.4rem;"></div>
+                            <div class="skeleton skeleton-text" style="width:50%;height:22px;"></div>
+                        </div>
+                        <div class="profile-record" style="border-left-color:#E8E2D6;">
+                            <div class="skeleton skeleton-text skeleton-text--sm" style="width:70%;margin-bottom:0.4rem;"></div>
+                            <div class="skeleton skeleton-text" style="width:40%;height:22px;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="stats-grid">${statCards}</div>
+            <div class="tourney-resume">
+                <div class="skeleton skeleton-text" style="width:200px;height:18px;margin-bottom:1rem;"></div>
+                <div class="tourney-summary" style="border:none;padding:0;margin-bottom:1rem;">
+                    <div class="skeleton" style="width:60px;height:40px;border-radius:0.375rem;"></div>
+                    <div class="skeleton" style="width:60px;height:40px;border-radius:0.375rem;"></div>
+                    <div class="skeleton" style="width:60px;height:40px;border-radius:0.375rem;"></div>
+                    <div class="skeleton" style="width:60px;height:40px;border-radius:0.375rem;"></div>
+                </div>
+                <div class="tourney-grid">${tourneyEntries}</div>
+            </div>`;
+        }
+
+        function renderGameCardsSkeleton(count) {
+            let html = '';
+            for (let i = 0; i < count; i++) {
+                html += `<div class="skeleton-card game-card">
+                    <div class="game-card-header">
+                        <div class="game-team">
+                            <div class="skeleton skeleton-circle" style="width:40px;height:40px;"></div>
+                            <div class="game-team-info">
+                                <div class="skeleton skeleton-text" style="width:${65 + Math.random() * 30}%;"></div>
+                                <div class="skeleton skeleton-text skeleton-text--sm" style="width:40%;"></div>
+                            </div>
+                        </div>
+                        <div class="game-vs" style="visibility:hidden;">vs</div>
+                        <div class="game-team">
+                            <div class="skeleton skeleton-circle" style="width:40px;height:40px;"></div>
+                            <div class="game-team-info">
+                                <div class="skeleton skeleton-text" style="width:${55 + Math.random() * 35}%;"></div>
+                                <div class="skeleton skeleton-text skeleton-text--sm" style="width:40%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skeleton skeleton-bar" style="margin:0.5rem 0;"></div>
+                    <div class="skeleton skeleton-text" style="width:100%;height:36px;border-radius:0.375rem;"></div>
+                </div>`;
+            }
+            return html;
+        }
+
         function renderTodaysGames() {
             const grid = document.getElementById('gamesGrid');
-            grid.innerHTML = '<div class="chart-loading">Loading upcoming games...</div>';
+            grid.innerHTML = renderGameCardsSkeleton(6);
 
             // Fetch yesterday + today + upcoming days (yesterday catches recently finished games)
             const today = new Date();
@@ -2495,7 +2718,7 @@
                 })
                 .catch(err => {
                     console.error('Games load error:', err);
-                    grid.innerHTML = '<div class="chart-error">Error loading games</div>';
+                    grid.innerHTML = renderErrorFallback('renderTodaysGames()');
                 });
         }
 
@@ -2658,6 +2881,17 @@
                                 <div class="game-bar-team1" style="flex-basis: 50%; background: ${t1Color};"></div>
                                 <div class="game-bar-team2" style="flex-basis: 50%; background: ${t2Color};"></div>
                             </div>
+                            ${(function(){
+                                if (event._tourney !== 'ncaa') return '';
+                                var s1 = team1.curatedRank?.current, s2 = team2.curatedRank?.current;
+                                var sc1 = team1.score, sc2 = team2.score;
+                                var statusDesc = comp.status?.type?.description || '';
+                                var live = statusDesc === 'In Progress' || statusDesc === 'Halftime';
+                                var ctx = getUpsetAlertText(s1, sc1, s2, sc2, live) || getSeedContextText(s1, s2);
+                                if (!ctx) return '';
+                                var cls = 'game-context-badge' + (ctx.alert ? ' upset-alert' : '');
+                                return '<div class="'+cls+'">'+ctx.text+'</div>';
+                            })()}
                             <button class="game-matchup-button" onclick="event.stopPropagation(); openComparison('${t1EspnId}', '${t2EspnId}')">Full Matchup →</button>
                             <div class="game-ticket" id="ticket-${t1EspnId}-${t2EspnId}"></div>
                             <div class="game-time">${timeStr}</div>
@@ -2709,12 +2943,18 @@
             if (team) {
                 openProfile(team);
             } else {
+                // Show skeleton while fetching from ESPN API
+                switchView('profile', true);
+                document.getElementById('profileContent').innerHTML = renderProfileSkeleton();
                 // Fallback: fetch team data from ESPN API for teams not in data.json
                 fetch(`https://site.api.espn.com/apis/site/v2/sports/basketball/mens-college-basketball/teams/${espnId}`)
                     .then(r => r.json())
                     .then(data => {
                         const t = data.team;
-                        if (!t) return;
+                        if (!t) {
+                            document.getElementById('profileContent').innerHTML = renderErrorFallback(`openProfileById('${espnId}')`);
+                            return;
+                        }
                         const record = t.record?.items?.[0];
                         const wins = record ? parseInt(record.stats?.find(s => s.name === 'wins')?.value || 0) : 0;
                         const losses = record ? parseInt(record.stats?.find(s => s.name === 'losses')?.value || 0) : 0;
@@ -2732,7 +2972,9 @@
                         };
                         openProfile(fallbackTeam);
                     })
-                    .catch(() => {});
+                    .catch(() => {
+                        document.getElementById('profileContent').innerHTML = renderErrorFallback(`openProfileById('${espnId}')`);
+                    });
             }
         }
 
@@ -2997,7 +3239,7 @@
             const t1Color = t1.color || '#1B2A4A';
             const t2Color = t2.color || '#C9A86C';
 
-            container.innerHTML = '<div class="chart-loading">Loading head-to-head history...</div>';
+            container.innerHTML = renderComparisonSkeleton();
 
             // Build all-time record header from h2h.json
             let allTimeHtml = '';
@@ -3962,6 +4204,8 @@
             const fullTeam = allTeamsData.find(t => t.espnId == team.espnId);
             currentProfile = fullTeam || team;
             switchView('profile', true);
+            // Show skeleton immediately, then render real content
+            document.getElementById('profileContent').innerHTML = renderProfileSkeleton();
             if (!skipHash) {
                 window.location.hash = `#team/${teamSlug(currentProfile.name)}`;
             }
@@ -4748,12 +4992,61 @@
             }, 30000);
         }
 
+        function renderBracketSkeleton() {
+            // Build a skeleton that mimics the bracket layout: 4 rounds of matchup cards
+            function skeletonMatchup() {
+                return `<div style="background:#F5F3EE;border:1px solid #D6CFC2;border-radius:0.375rem;overflow:hidden;margin:3px 0;">
+                    <div style="padding:0.35rem 0.5rem;display:flex;align-items:center;gap:0.4rem;border-bottom:1px solid #E0D9CC;">
+                        <div class="skeleton" style="width:18px;height:18px;border-radius:50%;"></div>
+                        <div class="skeleton skeleton-text" style="width:70%;height:11px;margin:0;"></div>
+                    </div>
+                    <div style="padding:0.35rem 0.5rem;display:flex;align-items:center;gap:0.4rem;">
+                        <div class="skeleton" style="width:18px;height:18px;border-radius:50%;"></div>
+                        <div class="skeleton skeleton-text" style="width:60%;height:11px;margin:0;"></div>
+                    </div>
+                </div>`;
+            }
+            function skeletonRoundCol(count) {
+                let html = '<div class="bracket-round-col" style="min-width:130px;padding:0 10px;display:flex;flex-direction:column;justify-content:space-around;">';
+                for (let i = 0; i < count; i++) html += skeletonMatchup();
+                html += '</div>';
+                return html;
+            }
+            // One region half: R64(8) -> R32(4) -> S16(2) -> E8(1)
+            function skeletonRegion(label) {
+                return `<div>
+                    <div class="bracket-region-label">${label}</div>
+                    <div style="display:flex;gap:0;">
+                        ${skeletonRoundCol(8)}${skeletonRoundCol(4)}${skeletonRoundCol(2)}${skeletonRoundCol(1)}
+                    </div>
+                </div>`;
+            }
+            return `<div class="bracket-full" style="min-width:1200px;">
+                <div class="bracket-row" style="display:grid;grid-template-columns:1fr auto 1fr;">
+                    <div class="bracket-half left">${skeletonRegion('South')}</div>
+                    <div class="bracket-center-col"><div class="bracket-round-label">Final Four</div>${skeletonMatchup()}</div>
+                    <div class="bracket-half right">${skeletonRegion('Midwest')}</div>
+                </div>
+                <div class="bracket-champ-row"><div class="bracket-champ-card"><div class="bracket-round-label" style="font-size:0.85rem;font-weight:800;color:#1B2A4A;">Championship</div>${skeletonMatchup()}</div></div>
+                <div class="bracket-row" style="display:grid;grid-template-columns:1fr auto 1fr;">
+                    <div class="bracket-half left">${skeletonRegion('East')}</div>
+                    <div class="bracket-center-col"><div class="bracket-round-label">Final Four</div>${skeletonMatchup()}</div>
+                    <div class="bracket-half right">${skeletonRegion('West')}</div>
+                </div>
+            </div>`;
+        }
+
         async function renderBracket() {
             const container = document.getElementById('bracketContainer');
-            container.innerHTML = '<div style="text-align: center; padding: 3rem; color: #6B7A8D;">Loading bracket data...</div>';
+            container.innerHTML = renderBracketSkeleton();
 
-            await fetchBracketData();
+            const bracketOk = await fetchBracketData();
             updateBracketTimestamp();
+
+            if (!bracketOk || Object.keys(bracketData).length === 0) {
+                container.innerHTML = renderErrorFallback('renderBracket()');
+                return;
+            }
 
             const regions = { 'South': [], 'East': [], 'Midwest': [], 'West': [] };
             const finalFourGames = [];
@@ -5070,6 +5363,22 @@
 
                 card.appendChild(teamEl);
             });
+
+            // Historical Context Badge
+            if (competitors.length === 2) {
+                var s1 = competitors[0].curatedRank?.current;
+                var s2 = competitors[1].curatedRank?.current;
+                var sc1 = competitors[0].score;
+                var sc2 = competitors[1].score;
+                var ctxInfo = getUpsetAlertText(s1, sc1, s2, sc2, isLive) || getSeedContextText(s1, s2);
+                if (ctxInfo) {
+                    var badge = document.createElement('div');
+                    badge.className = 'seed-context-badge' + (ctxInfo.alert ? ' upset-alert' : '');
+                    badge.textContent = ctxInfo.text;
+                    badge.title = ctxInfo.text;
+                    card.appendChild(badge);
+                }
+            }
 
             return card;
         }
