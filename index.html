@@ -2175,6 +2175,26 @@
                     const winnerScore = parseInt(winner.score) || 0;
                     const loserScore = parseInt(loser.score) || 0;
 
+                    // Update coach records
+                    [winnerId, loserId].forEach(teamId => {
+                        const isWinner = teamId === winnerId;
+                        const coachList = COACHES[teamId];
+                        if (coachList && coachList.length > 0) {
+                            const currentCoach = coachList[coachList.length - 1];
+                            if (currentCoach) {
+                                if (isWinner) currentCoach.w++;
+                                else currentCoach.l++;
+                                currentCoach.pct = parseFloat(((currentCoach.w / (currentCoach.w + currentCoach.l)) * 100).toFixed(1));
+                            }
+                            const lbEntry = COACH_LB.find(c => c.name === currentCoach?.name);
+                            if (lbEntry) {
+                                if (isWinner) lbEntry.wins++;
+                                else lbEntry.losses++;
+                                lbEntry.pct = parseFloat(((lbEntry.wins / (lbEntry.wins + lbEntry.losses)) * 100).toFixed(1));
+                            }
+                        }
+                    });
+
                     // Update team records in allTeamsData
                     const winnerTeam = allTeamsData.find(t => String(t.espnId) === winnerId);
                     const loserTeam = allTeamsData.find(t => String(t.espnId) === loserId);
@@ -6141,7 +6161,9 @@
             if (UPSET_DETAIL_DATA && era) {
                 const filtered = {};
                 for (const [key, pair] of Object.entries(SEED_MATCHUP_HISTORY.pairs)) {
-                    const detailUpsets = (UPSET_DETAIL_DATA[key] || []).filter(u => u.year >= era.min && u.year <= era.max);
+                    const rawDetail = UPSET_DETAIL_DATA[key];
+                    const detailArr = Array.isArray(rawDetail) ? rawDetail : (rawDetail && rawDetail.upsets ? rawDetail.upsets : []);
+                    const detailUpsets = detailArr.filter(u => u.year >= era.min && u.year <= era.max);
                     const allUpsets = pair.upsets ? pair.upsets.filter(u => u.year >= era.min && u.year <= era.max) : [];
                     const upsets = detailUpsets.length > 0 ? detailUpsets : allUpsets;
                     // For era filtering with detailed data, recalculate totals
@@ -6173,7 +6195,9 @@
                 // Prefer detailed data
                 if (UPSET_DETAIL_DATA && UPSET_DETAIL_DATA[key]) {
                     const era = UPSET_ERAS[upsetsCurrentEra];
-                    upsets = UPSET_DETAIL_DATA[key].filter(u => u.year >= era.min && u.year <= era.max);
+                    const rawDetail = UPSET_DETAIL_DATA[key];
+                    const detailArr = Array.isArray(rawDetail) ? rawDetail : (rawDetail && rawDetail.upsets ? rawDetail.upsets : []);
+                    upsets = detailArr.filter(u => u.year >= era.min && u.year <= era.max);
                 } else if (pair.upsets && pair.upsets.length > 0) {
                     upsets = pair.upsets;
                 }
@@ -6211,12 +6235,15 @@
                     </div>`;
 
                 for (const upset of upsets) {
-                    const winnerTeam = findTeamForUpset(upset.team);
-                    const loserTeam = upset.loser ? findTeamForUpset(upset.loser) : null;
+                    // Support both inline format (team/loser) and JSON format (winner/winnerFull/loser/loserFull)
+                    const rawWinnerName = upset.team || upset.winnerFull || upset.winner || 'Unknown';
+                    const rawLoserName = upset.loser || upset.loserFull || `${pair.higher}-seed`;
+                    const winnerTeam = findTeamForUpset(rawWinnerName);
+                    const loserTeam = rawLoserName !== `${pair.higher}-seed` ? findTeamForUpset(rawLoserName) : null;
                     const winnerLogo = winnerTeam ? `https://a.espncdn.com/i/teamlogos/ncaa/500/${winnerTeam.espnId}.png` : '';
                     const loserLogo = loserTeam ? `https://a.espncdn.com/i/teamlogos/ncaa/500/${loserTeam.espnId}.png` : '';
-                    const winnerName = upset.team || 'Unknown';
-                    const loserName = upset.loser || `${pair.higher}-seed`;
+                    const winnerName = rawWinnerName;
+                    const loserName = rawLoserName;
                     const winnerSlug = winnerTeam ? teamSlug(winnerTeam.name) : '';
                     const loserSlug = loserTeam ? teamSlug(loserTeam.name) : '';
                     const score = upset.score || '';
