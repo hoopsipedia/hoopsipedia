@@ -6136,10 +6136,25 @@
         function findTeamForUpset(teamName) {
             if (!teamName) return null;
             const lower = teamName.toLowerCase().replace(/[^a-z0-9 ]/g, '');
-            return allTeamsData.find(t => {
+            // Prefer exact match first
+            const exact = allTeamsData.find(t => {
                 const tn = t.name.toLowerCase().replace(/[^a-z0-9 ]/g, '');
-                return tn === lower || lower.includes(tn) || tn.includes(lower);
+                return tn === lower;
             });
+            if (exact) return exact;
+            // Then try full-name containment (prefer shorter team names to avoid "West Virginia" matching "Virginia")
+            const candidates = allTeamsData.filter(t => {
+                const tn = t.name.toLowerCase().replace(/[^a-z0-9 ]/g, '');
+                return lower.includes(tn) || tn.includes(lower);
+            });
+            if (candidates.length === 0) return null;
+            // Sort by name length difference to prefer closest match
+            candidates.sort((a, b) => {
+                const aLen = Math.abs(a.name.length - teamName.length);
+                const bLen = Math.abs(b.name.length - teamName.length);
+                return aLen - bLen;
+            });
+            return candidates[0];
         }
 
         function filterUpsetsByPairing(pairingKey) {
@@ -6236,23 +6251,23 @@
 
                 for (const upset of upsets) {
                     // Support both inline format (team/loser) and JSON format (winner/winnerFull/loser/loserFull)
-                    const rawWinnerName = upset.team || upset.winnerFull || upset.winner || 'Unknown';
-                    const rawLoserName = upset.loser || upset.loserFull || `${pair.higher}-seed`;
+                    const rawWinnerName = upset.winnerFull || upset.team || upset.winner || 'Unknown';
+                    const rawLoserName = upset.loserFull || (upset.loser && upset.loser.length > 3 ? upset.loser : null) || `${pair.higher}-seed`;
                     const winnerTeam = findTeamForUpset(rawWinnerName);
                     const loserTeam = rawLoserName !== `${pair.higher}-seed` ? findTeamForUpset(rawLoserName) : null;
                     const winnerLogo = winnerTeam ? `https://a.espncdn.com/i/teamlogos/ncaa/500/${winnerTeam.espnId}.png` : '';
                     const loserLogo = loserTeam ? `https://a.espncdn.com/i/teamlogos/ncaa/500/${loserTeam.espnId}.png` : '';
                     const winnerName = rawWinnerName;
                     const loserName = rawLoserName;
-                    const winnerSlug = winnerTeam ? teamSlug(winnerTeam.name) : '';
-                    const loserSlug = loserTeam ? teamSlug(loserTeam.name) : '';
+                    const winnerSlug = winnerTeam ? teamSlug(winnerTeam.name) : teamSlug(winnerName);
+                    const loserSlug = loserTeam ? teamSlug(loserTeam.name) : teamSlug(loserName);
                     const score = upset.score || '';
                     const magnitude = ((pair.lower - pair.higher) / 15 * 100).toFixed(0);
                     const cardClass = isLegendary ? 'upsets-moment-card legendary' : 'upsets-moment-card';
                     const borderColor = winnerTeam && winnerTeam.color ? winnerTeam.color : '#E0D9CC';
-                    // Navigate to game detail page if both teams resolved, else fall back to compare/team
+                    // Navigate to game detail page
                     const gameSlugKey = winnerSlug && loserSlug ? `${upset.year}/${winnerSlug}-vs-${loserSlug}` : '';
-                    const clickAction = gameSlugKey ? `window.location.hash='#game/${gameSlugKey}'` : (winnerSlug && loserSlug ? `window.location.hash='#compare/${winnerSlug}/${loserSlug}'` : (winnerSlug ? `window.location.hash='#team/${winnerSlug}'` : ''));
+                    const clickAction = gameSlugKey ? `window.location.hash='#game/${gameSlugKey}'` : (winnerSlug ? `window.location.hash='#team/${winnerSlug}'` : '');
                     const hasVideo = gameSlugKey ? hasUpsetVideo(upset.year, winnerName, loserName) : false;
 
                     html += `<div class="${cardClass}" style="border-left-color: ${borderColor}; position:relative;" ${clickAction ? `onclick="${clickAction}"` : ''}>
