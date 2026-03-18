@@ -1,117 +1,99 @@
 # Hoopsipedia Roadmap
 
-**Last updated:** 2026-03-17 late evening (post-v0.2.0, post-unbiased review)
+**Last updated:** 2026-03-18 overnight (post-v0.3.0 session)
 
-## MVP (Before Tournament Thursday) — NEARLY COMPLETE
+**Mission: "Nobody connects the dots across 80+ years of basketball. That's our lane."**
+
+## ✅ SHIPPED (v0.1.0 → v0.3.0)
 - [x] Team profiles with all-time stats, rankings, season-by-season records
 - [x] Head-to-head comparisons (Winsipedia-style)
-- [x] Live bracket integration (ESPN API) — **redesigned as true connected bracket**
-- [x] AP Top 25 rankings
-- [x] Conference rankings filter
-- [x] Global search with autocomplete
-- [x] Shareable URLs (readable slug format: `#team/duke-blue-devils`)
+- [x] Live bracket integration — **true connected NCAA tournament bracket**
+- [x] AP Top 25 rankings + conference filter
+- [x] Global search with autocomplete + **fuzzy aliases** (Zags, UNC, Nova, etc.)
+- [x] Shareable URLs (readable slugs + dynamic OG tags + share buttons)
 - [x] Mobile-responsive UI
-- [x] About page with NCAA record book as source of truth
-- [x] Enhanced coaching history (W-L, win%, best season, Top 100 badges)
+- [x] Coach Head-to-Head Comparisons (search, stat bars, coaching journey)
 - [x] Coaches Leaderboard (Top 100 All-Time Wins)
-- [x] Active coach highlighting (green ACTIVE badge)
-- [x] Browser back button support (hash-based SPA navigation)
-- [x] Live scores on game cards (in-progress, halftime, final, OT) — redesigned with prominent scoreboard
-- [x] NCAA Tournament / NIT badges on game cards (logo + round + region)
-- [x] Tournament / NIT / All Games filter tabs + conference dropdown
-- [x] Tournament Resume per team (color-coded grid of every NCAA appearance)
-- [x] Fixed empty space on team profile pages (3-column stats grid)
-- [x] Fixed H2H cache bug (series lead flipping on reload)
-- [x] Fixed Howard → Michigan click bug (data.json now 150 teams)
-- [x] Cloudflare deploy fix (games.json split into games_1.json + games_2.json for 25MB limit)
-- [x] Final Four badge → bronze gradient
-- [x] Arena name truncation fix in H2H view
-- [x] Upcoming tournament game delineation in matchup view (dashed blue border + badge)
-- [x] Dynamic H2H metrics by decade (streaks + series record update when decade filter clicked)
-- [x] Coach Head-to-Head Comparisons (search, autocomplete, stat bars, coaching journey timeline)
-- [x] Coaches button in main navigation bar
+- [x] Live scores on game cards (in-progress, halftime, final, OT)
+- [x] NCAA Tournament / NIT badges + filter tabs + conference dropdown
+- [x] Tournament Resume per team (color-coded grid)
+- [x] Dynamic H2H metrics by decade
 - [x] Overlaid season history chart in Full Program Comparison
+- [x] **Greatest Tournament Upsets page** — clickable seed pairing cards, 214 verified upsets with scores, era filters
+- [x] **Relive the Moment game pages** — cinematic hero, YouTube highlights embedded, "Why This Mattered", "What Happened Next?"
+- [x] **Live Historical Context Engine** — seed matchup badges on bracket + game cards, upset alerts
+- [x] **Live game tracker** — polls ESPN every 2 min, auto-updates team records + coach wins when games go Final
+- [x] **Live record enrichment** — W-L updates from ESPN API on page load
+- [x] **Skeleton loaders + error fallbacks** — shimmer loading states for every view
+- [x] **Sitemap.xml** — 145 URLs for Google indexing
+- [x] **Dynamic OG Tags** via Cloudflare Pages Function
 - [x] SR slug alias map for H2H matching (UMBC, UTEP, VCU, etc.)
-- [x] Fixed disappearing finished games on homepage (fetch yesterday's scoreboard)
-- [x] Fixed "No Matchup History" for in-progress/recent games (UTC timezone fix)
-- [x] Dynamic OG Tags via Cloudflare Pages Function (team + matchup previews for social sharing)
-- [x] Share buttons on team profiles and comparison views
-- [x] Client-side query param → hash redirect for social crawler compatibility
-- [x] True connected NCAA tournament bracket (connectors, Final Four center, region flow)
-- [x] Contact page updated to contact@hoopsipedia.com
-- [ ] Complete game data scrape — **150 teams done, UMBC + CCNY remaining**
+- [x] Fixed 22 teams with missing all-time records (were showing 0-0)
+- [x] Browser back button support
+- [x] Contact page → contact@hoopsipedia.com
+- [x] GitHub Release v0.2.0 published
+
+## 🔥 Pre-Thursday Priority
+- [ ] **Team history & origin stories** — founding year, mascot origin, arena name, notable facts on every team profile. Cross-check with official school athletics pages (NOT just Wikipedia). Hyperlinked to other team pages for rabbit-hole exploration.
+- [ ] **Team page backgrounds** — subtle, opaque background images (campus beauty shots or packed arenas) unique to each team. Must not distract from data — low opacity overlay. Feels homey to alums, interesting to casual fans.
+- [ ] Mobile audit — test every page on 375px (iPhone SE) and 390px (iPhone 14)
 - [ ] Fix John Thompson name collision (Jr vs III counted as same person — 935 ghost wins)
-- [ ] Coaching data gaps: pre-1950 seasons and missing schools
 - [ ] Fix ESPN ID 245 mapping (Texas A&M in H but contains Texas data)
 
-## Pre-Thursday Polish (from unbiased review feedback)
-- [ ] Loading states / skeleton loaders — never show empty tables while data loads
-- [ ] Error fallback states — if ESPN or JSON fails, show cached data or clear message, never blank
-- [ ] Mobile audit — test every page on 375px (iPhone SE) and 390px (iPhone 14), fix overflow/unreadable text
-- [ ] Sitemap.xml — generate for all 360+ team pages so Google can index them
-- [ ] Fuzzy search aliases — "Zags" → Gonzaga, "UNC" → North Carolina, "UConn" → Connecticut, etc.
-
-## Post-Scrape Tasks (when UMBC + CCNY finish)
-- [ ] Re-split games.json → games_1.json + games_2.json
-- [ ] Compile H2H data from all games
-- [ ] Recompile coaches with new team data
-- [ ] Push updated files live
-
-## Launch Day (Thursday)
-- [ ] Final backup: copy updated seasons.json, data.json, games.json to Google Drive
-- [ ] Test site on mobile + desktop before sharing any links
-- [ ] Keep a browser tab open on hoopsipedia.com to spot-check during the day
-
-## Short-Term (During Tournament — First Weekend Priority)
-- [ ] Conference Realignment Tracker — timeline visualization of every D1 conference move (2000-present minimum, ideally all-time), before/after performance metrics, "what if" comparisons. Data already in seasons.json. **Timely, shareable, nobody else does this well.**
-- [ ] NET Rankings + Quad Wins Integration — current NET rankings with quad W/L breakdowns, historical NET by season (2018+), bubble watch page for Feb/March, quad record on team pages. **THE March destination feature.**
-- [ ] ESPN API live update for active coaches (win count updates after each game)
-- [ ] Cinderella / upset history tracker (biggest upsets by seed differential, historical 12-5 matchups, etc.)
+## 🏀 Short-Term (During Tournament — First Weekend)
+- [ ] **Conference Realignment Tracker** — timeline visualization of every D1 conference move, before/after metrics, "what if" comparisons. Timely, shareable, nobody else does this well.
+- [ ] **NET Rankings + Quad Wins** — current NET rankings, quad W/L breakdowns, historical NET (2018+), quad record on team pages. THE March destination feature.
+- [ ] **Championship Run pages** — full tournament path for every champion. Linked from "What Happened Next?" on upset pages. E.g., Virginia's 2019 redemption arc after UMBC loss.
+- [ ] **Relive the Moment enrichment** — box scores from Sports Reference for upset games, expand beyond 11 curated highlights to all upsets with available video
 - [ ] Dual record view: on-court record vs NCAA official record (show vacated wins transparently)
-- [ ] Auto-generated OG images for comparison pages (Team A logo vs Team B logo with key stats)
+- [ ] Auto-generated OG images for comparison pages
+- [ ] Cinderella tracker — real-time during tournament
 
-## Medium-Term (Post-Launch)
-- [ ] Players & Draft History (MVP version) — Notable Players section on team pages (all-time scoring leaders, career stat leaders, All-Americans), NBA Draft history by program, "Draft Factory" rankings, player search. **Table stakes — "a sports site without player data is like a baseball site without batting averages"**
-- [ ] Mid-major conference data fill-out (~22 conferences, ~230 teams)
-- [ ] Backfill all-time stats for newly added teams from NCAA record book
-- [ ] Coach career timelines across schools (visual timeline component)
-- [ ] Coaching era analysis (program strength under each coach vs overall)
-- [ ] Decade-by-decade program strength
-- [ ] Rivalry pages (dedicated pages for historic rivalries)
-- [ ] Clickable H2H game rows → game detail view (box score, player stats, shooting splits) — click any game in any head-to-head matchup to see full game stats
-- [ ] Embeddable widgets — let bloggers/podcasters embed comparison or stat cards on their sites
+## 📊 Medium-Term (Post-Launch)
+- [ ] **Players & Draft History** — Notable Players on team pages, All-Americans, NBA Draft history by program, "Draft Factory" rankings, player search. Table stakes.
+- [ ] **Clickable H2H game rows → game detail** — box score, player stats, shooting splits for ANY game in ANY matchup (not just upsets)
+- [ ] Mid-major conference data expansion (~22 conferences, ~230 teams) — **in progress, 159+ teams scraped**
+- [ ] Coach career timelines across schools (visual timeline)
+- [ ] Coaching era analysis (program strength under each coach)
+- [ ] Decade-by-decade program strength visualizations
+- [ ] Rivalry pages (dedicated pages for historic rivalries with full context)
+- [ ] Embeddable widgets for bloggers/podcasters
 
-## Long-Term Vision
+## 🏆 Long-Term Vision
 
-### Blue Blood Index
+### The Hoopsipedia Ranking (TRADEMARK CANDIDATE)
+**"Nobody connects the dots across 80+ years of basketball. That's our lane."**
+
+#### Blue Blood Index (BBI)
 - Proprietary composite ranking of all-time program strength
 - 8 weighted pillars: Championship Capital (30%), Tournament Depth (20%), Win Consistency (15%), Poll Prestige (12%), Talent Production (10%), Conference Dominance (5%), Coaching Prestige (5%), Current Momentum (3%)
 - Era multipliers to normalize across tournament field sizes
 - Dynamic — updates as current season progresses
-- Full research doc: RANKING_RESEARCH.md
+- Full research: RANKING_RESEARCH.md
 
-### Historical Team-Season Score (HTSS) & Time Machine
+#### Historical Team-Season Score (HTSS) & Time Machine
 - Score every individual team-season in history using z-score era-normalization
-- 5 components: Dominance (35%), Strength of Schedule (20%), Tournament Performance (20%), Peak Perception (15%), Conference Performance (10%)
-- **Head-to-head simulator**: pit any two team-seasons against each other across decades
+- 5 components: Dominance (35%), SOS (20%), Tournament (20%), Peak Perception (15%), Conference (10%)
+- **Cross-era matchup simulator**: "Who wins: 1992 Duke vs 2015 Kentucky?"
 - **All-Time Best Teams stack ranking**: definitive top 100 team-seasons ever
-- **Random Historical Matchup generator**: one-click random cross-era matchup with predicted score — infinite replayability, shareable, homepage widget
-- Full research doc: RANKING_RESEARCH.md
+- **Random Historical Matchup generator**: one-click with predicted score — homepage widget
+- **Live upset context**: "This would be the 14th biggest upset of all time" — powered by HTSS, not just seeds
 
-### The Hoopsipedia Ranking (TRADEMARK CANDIDATE)
-- Combine best predictive signals from NET, KenPom, BPI, Sagarin
-- Backtest against historical tournament results
-- Goal: THE definitive ranking in college basketball's lexicon
+### Live Historical Context Engine (Enriched)
+- Move beyond seed-based stats to HTSS-powered context
+- "According to Hoopsipedia, Siena beating Duke would be the 14th biggest tournament upset of all time, and the 5th biggest in the 3-point era"
+- Era filters: 3-point line (1987), 64-team bracket (1985), NIL (2021), shot clock changes
+- Pre-game context cards on every tournament matchup
 
-### Data Moats (Longer-Term, Leverage 247Sports Subscription)
-- Transfer Portal Impact Analysis — quantify portal winners/losers, track individual transfers, correlate with tournament success
-- Recruiting → Results Pipeline — map recruiting classes to outcomes, scatter plot recruiting rank vs tournament seed, individual recruit tracker
+### Data Moats (Leverage 247Sports Subscription)
+- Transfer Portal Impact Analysis — quantify portal winners/losers
+- Recruiting → Results Pipeline — map recruiting classes to outcomes
 - NIL impact on program performance
 - Conference strength index over time
 
-### Additional Ideas
-- Program trajectory analysis (rising/falling programs over 5/10/20 years)
-- "What If" simulator (what if X team was in Y conference?)
-- "Relive the Moment" — embed highlights for historical tournament games
-- "This Day in CBB History" — daily auto-generated content for return visits
-- Tournament-specific content pages (history of 12-5 upsets, best Cinderella runs, seed performance history) — SEO magnets for March-only fans
+### Content & Engagement
+- **Team origin stories & mascot history** — Wikipedia-style narrative content, hyperlinked across teams
+- **"This Day in CBB History"** — daily auto-generated content for return visits
+- **Tournament-specific SEO pages** — history of 12-5 upsets, best Cinderella runs, seed performance history
+- **"What If" simulator** — what if X team was in Y conference?
+- **Program trajectory analysis** — rising/falling programs over 5/10/20 years
