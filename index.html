@@ -1099,6 +1099,141 @@
             width: 100%;
         }
 
+        /* ── Upsets Page ── */
+        .upsets-stats-dashboard {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        .upsets-stat-card {
+            background: #FFFFFF; border: 1px solid #E0D9CC; border-radius: 0.75rem;
+            padding: 1.25rem; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+        }
+        .upsets-stat-value { font-size: 2rem; font-weight: 800; color: #1B2A4A; margin-bottom: 0.2rem; }
+        .upsets-stat-label { font-size: 0.75rem; color: #8892A0; text-transform: uppercase; font-weight: 700; letter-spacing: 0.04em; }
+        .upsets-fun-fact {
+            background: linear-gradient(135deg, #1B2A4A, #243556); color: #fff;
+            border-radius: 0.75rem; padding: 1rem 1.5rem; margin-bottom: 2rem;
+            display: flex; align-items: center; gap: 0.75rem; font-size: 0.9rem; line-height: 1.5;
+        }
+        .upsets-fun-fact-icon { font-size: 1.5rem; flex-shrink: 0; }
+        .upsets-fun-fact-text { flex: 1; }
+        .upsets-fun-fact-text strong { color: #C9A86C; }
+
+        .upsets-era-filters {
+            display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.75rem;
+        }
+        .upsets-era-btn {
+            padding: 0.4rem 0.85rem; background: #FFFFFF; border: 1px solid #D6CFC2;
+            border-radius: 2rem; color: #6B7A8D; cursor: pointer; font-size: 0.78rem;
+            font-weight: 600; transition: all 0.15s ease;
+        }
+        .upsets-era-btn:hover { border-color: #C9A86C; color: #1B2A4A; }
+        .upsets-era-btn.active { background: #1B2A4A; border-color: #1B2A4A; color: #C9A86C; }
+
+        .upsets-seed-grid {
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem;
+            margin-bottom: 2.5rem;
+        }
+        .upsets-seed-card {
+            background: #FFFFFF; border: 2px solid #E0D9CC; border-radius: 0.75rem;
+            padding: 1.25rem; cursor: pointer; transition: all 0.25s ease;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.04); position: relative; overflow: hidden;
+        }
+        .upsets-seed-card:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.08); border-color: #C9A86C; }
+        .upsets-seed-card.active { border-color: #C9A86C; box-shadow: 0 4px 16px rgba(201,168,108,0.25); }
+        .upsets-seed-card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; }
+        .upsets-seed-label { font-size: 1.3rem; font-weight: 800; color: #1B2A4A; }
+        .upsets-seed-record { font-size: 0.85rem; color: #6B7A8D; font-weight: 600; }
+        .upsets-seed-bar { height: 10px; background: #E8E2D6; border-radius: 5px; overflow: hidden; margin-bottom: 0.5rem; }
+        .upsets-seed-bar-fill { height: 100%; border-radius: 5px; transition: width 0.5s ease; }
+        .upsets-seed-bar-fill.green { background: linear-gradient(90deg, #2E7D32, #4CAF50); }
+        .upsets-seed-bar-fill.yellow { background: linear-gradient(90deg, #F57F17, #FBC02D); }
+        .upsets-seed-bar-fill.orange { background: linear-gradient(90deg, #E65100, #FF9800); }
+        .upsets-seed-bar-fill.red { background: linear-gradient(90deg, #C62828, #EF5350); }
+        .upsets-seed-upset-count {
+            font-size: 0.78rem; color: #8892A0; font-weight: 600;
+        }
+        .upsets-seed-upset-count span { color: #C9A86C; font-weight: 800; }
+
+        .upsets-detail-section {
+            background: #FFFFFF; border: 1px solid #E0D9CC; border-radius: 0.75rem;
+            padding: 1.75rem; margin-bottom: 2rem; box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+        }
+        .upsets-detail-header {
+            display: flex; justify-content: space-between; align-items: center;
+            margin-bottom: 1.25rem; padding-bottom: 0.75rem; border-bottom: 2px solid #E0D9CC;
+        }
+        .upsets-detail-title { font-size: 1.15rem; font-weight: 700; color: #1B2A4A; }
+        .upsets-sort-btns { display: flex; gap: 0.35rem; }
+        .upsets-sort-btn {
+            padding: 0.3rem 0.7rem; background: #F5F3EE; border: 1px solid #E0D9CC;
+            border-radius: 0.35rem; color: #6B7A8D; cursor: pointer; font-size: 0.72rem;
+            font-weight: 600; transition: all 0.15s ease;
+        }
+        .upsets-sort-btn:hover { border-color: #C9A86C; }
+        .upsets-sort-btn.active { background: #1B2A4A; color: #C9A86C; border-color: #1B2A4A; }
+
+        .upsets-moment-card {
+            display: flex; align-items: center; gap: 1rem; padding: 1rem;
+            background: #FAFAF7; border-radius: 0.5rem; margin-bottom: 0.75rem;
+            border-left: 4px solid #E0D9CC; cursor: pointer; transition: all 0.2s ease;
+        }
+        .upsets-moment-card:hover { background: #F5F3EE; transform: translateX(4px); box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+        .upsets-moment-card.legendary { border-left-color: #D4AF37; background: #FFFDF5; }
+        .upsets-moment-card.legendary:hover { background: #FFF8E1; }
+        .upsets-moment-year {
+            font-size: 1.4rem; font-weight: 800; color: #1B2A4A; min-width: 52px; text-align: center;
+        }
+        .upsets-moment-teams { flex: 1; min-width: 0; }
+        .upsets-moment-team-row {
+            display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.25rem;
+        }
+        .upsets-moment-team-row:last-child { margin-bottom: 0; }
+        .upsets-moment-logo { width: 28px; height: 28px; object-fit: contain; flex-shrink: 0; border-radius: 2px; }
+        .upsets-moment-seed-badge {
+            display: inline-flex; align-items: center; justify-content: center;
+            min-width: 22px; height: 22px; border-radius: 4px; font-size: 0.68rem;
+            font-weight: 800; padding: 0 4px; flex-shrink: 0;
+        }
+        .upsets-moment-seed-badge.winner { background: #E8F5E9; color: #1B6B3A; }
+        .upsets-moment-seed-badge.loser { background: #FFEBEE; color: #C62828; }
+        .upsets-moment-name { font-weight: 600; font-size: 0.88rem; color: #2C3345; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .upsets-moment-name.winner { font-weight: 700; }
+        .upsets-moment-name.loser { color: #8892A0; }
+        .upsets-moment-score {
+            font-weight: 700; font-size: 0.85rem; color: #1B2A4A; margin-left: auto; flex-shrink: 0;
+        }
+        .upsets-moment-magnitude {
+            display: flex; flex-direction: column; align-items: center; gap: 0.15rem;
+            min-width: 50px; flex-shrink: 0;
+        }
+        .upsets-moment-magnitude-bar {
+            width: 40px; height: 6px; background: #E8E2D6; border-radius: 3px; overflow: hidden;
+        }
+        .upsets-moment-magnitude-fill { height: 100%; border-radius: 3px; background: #C9A86C; }
+        .upsets-moment-magnitude-label { font-size: 0.6rem; color: #A0AAB8; font-weight: 600; text-transform: uppercase; }
+        .upsets-no-data {
+            text-align: center; padding: 2rem; color: #8892A0; font-size: 0.95rem;
+        }
+
+        .seed-context-badge.clickable { cursor: pointer; transition: all 0.15s ease; }
+        .seed-context-badge.clickable:hover { background: #F0EAD8; color: #1B2A4A; text-decoration: underline; }
+        .game-context-badge.clickable { cursor: pointer; transition: all 0.15s ease; }
+        .game-context-badge.clickable:hover { background: #F0EAD8; color: #1B2A4A; text-decoration: underline; }
+
+        @media (max-width: 768px) {
+            .upsets-stats-dashboard { grid-template-columns: repeat(2, 1fr); gap: 0.5rem; }
+            .upsets-stat-value { font-size: 1.4rem; }
+            .upsets-stat-label { font-size: 0.65rem; }
+            .upsets-seed-grid { grid-template-columns: 1fr; }
+            .upsets-moment-card { flex-wrap: wrap; gap: 0.5rem; padding: 0.75rem; }
+            .upsets-moment-year { font-size: 1.1rem; min-width: 40px; }
+            .upsets-moment-teams { min-width: 0; width: 100%; order: 2; }
+            .upsets-moment-magnitude { flex-direction: row; min-width: auto; order: 3; }
+            .upsets-era-filters { gap: 0.25rem; }
+            .upsets-era-btn { font-size: 0.7rem; padding: 0.35rem 0.65rem; }
+        }
+
         /* ── Error Fallback ── */
         .error-fallback {
             display: flex; flex-direction: column; align-items: center; justify-content: center;
@@ -1133,6 +1268,7 @@
             <li><button class="nav-btn" data-view="rankings">Rankings</button></li>
             <li><button class="nav-btn" data-view="teams">Teams</button></li>
             <li><button class="nav-btn" data-view="coaches">Coaches</button></li>
+            <li><button class="nav-btn" data-view="upsets">Upsets</button></li>
         </ul>
         <div class="nav-search">
             <span class="nav-search-icon">&#128269;</span>
@@ -1320,6 +1456,11 @@
                 </table>
             </div>
         </div>
+
+        <!-- Upsets View -->
+        <div id="upsets" class="view">
+            <div id="upsetsContent"></div>
+        </div>
     </div>
 
     <!-- Footer -->
@@ -1336,6 +1477,7 @@
                     <a href="#" onclick="switchView('bracket'); return false;" style="font-size: 0.85rem; color: rgba(255,255,255,0.65); text-decoration: none; transition: color 0.2s;">Bracket</a>
                     <a href="#" onclick="switchView('rankings'); return false;" style="font-size: 0.85rem; color: rgba(255,255,255,0.65); text-decoration: none; transition: color 0.2s;">Rankings</a>
                     <a href="#" onclick="switchView('teams'); return false;" style="font-size: 0.85rem; color: rgba(255,255,255,0.65); text-decoration: none; transition: color 0.2s;">Teams</a>
+                    <a href="#" onclick="switchView('upsets'); return false;" style="font-size: 0.85rem; color: rgba(255,255,255,0.65); text-decoration: none; transition: color 0.2s;">Upsets</a>
                 </div>
             </div>
             <div>
@@ -2016,6 +2158,17 @@
                 return;
             }
 
+            // #upsets or #upsets/XvY (filter to specific seed pairing)
+            const upsetsMatch = hash.match(/^#upsets(?:\/(\d+v\d+))?$/);
+            if (upsetsMatch) {
+                switchView('upsets', true);
+                if (upsetsMatch[1]) {
+                    setTimeout(() => filterUpsetsByPairing(upsetsMatch[1]), 100);
+                }
+                _skipHashUpdate = false;
+                return;
+            }
+
             // #view (home, bracket, rankings, teams, coaches)
             const viewMatch = hash.match(/^#(home|bracket|rankings|teams|coaches)$/);
             if (viewMatch) {
@@ -2296,6 +2449,9 @@
                 setupCoachAutocomplete('coachCompare2', 'coachDropdown2', '2');
                 if (bracketRefreshInterval) clearInterval(bracketRefreshInterval);
             } else if (view === 'coachComparison') {
+                if (bracketRefreshInterval) clearInterval(bracketRefreshInterval);
+            } else if (view === 'upsets') {
+                renderUpsets();
                 if (bracketRefreshInterval) clearInterval(bracketRefreshInterval);
             }
         }
@@ -2991,8 +3147,11 @@
                                 var live = statusDesc === 'In Progress' || statusDesc === 'Halftime';
                                 var ctx = getUpsetAlertText(s1, sc1, s2, sc2, live) || getSeedContextText(s1, s2);
                                 if (!ctx) return '';
-                                var cls = 'game-context-badge' + (ctx.alert ? ' upset-alert' : '');
-                                return '<div class="'+cls+'">'+ctx.text+'</div>';
+                                var cls = 'game-context-badge clickable' + (ctx.alert ? ' upset-alert' : '');
+                                var _gs1 = parseInt(s1), _gs2 = parseInt(s2);
+                                var pKey = (!isNaN(_gs1) && !isNaN(_gs2)) ? Math.min(_gs1,_gs2)+'v'+Math.max(_gs1,_gs2) : '';
+                                var clickAttr = pKey ? ' onclick="event.stopPropagation(); window.location.hash=\'#upsets/'+pKey+'\';" title="Click to explore upset history"' : '';
+                                return '<div class="'+cls+'"'+clickAttr+'>'+ctx.text+'</div>';
                             })()}
                             <button class="game-matchup-button" onclick="event.stopPropagation(); openComparison('${t1EspnId}', '${t2EspnId}')">Full Matchup →</button>
                             <div class="game-ticket" id="ticket-${t1EspnId}-${t2EspnId}"></div>
@@ -5466,7 +5625,7 @@
                 card.appendChild(teamEl);
             });
 
-            // Historical Context Badge
+            // Historical Context Badge (clickable → links to #upsets)
             if (competitors.length === 2) {
                 var s1 = competitors[0].curatedRank?.current;
                 var s2 = competitors[1].curatedRank?.current;
@@ -5475,9 +5634,14 @@
                 var ctxInfo = getUpsetAlertText(s1, sc1, s2, sc2, isLive) || getSeedContextText(s1, s2);
                 if (ctxInfo) {
                     var badge = document.createElement('div');
-                    badge.className = 'seed-context-badge' + (ctxInfo.alert ? ' upset-alert' : '');
+                    badge.className = 'seed-context-badge clickable' + (ctxInfo.alert ? ' upset-alert' : '');
                     badge.textContent = ctxInfo.text;
-                    badge.title = ctxInfo.text;
+                    badge.title = 'Click to explore all upset history for this seed matchup';
+                    var _s1 = parseInt(s1), _s2 = parseInt(s2);
+                    if (!isNaN(_s1) && !isNaN(_s2)) {
+                        var pairingKey = Math.min(_s1,_s2) + 'v' + Math.max(_s1,_s2);
+                        badge.onclick = function(e) { e.stopPropagation(); window.location.hash = '#upsets/' + pairingKey; };
+                    }
                     card.appendChild(badge);
                 }
             }
@@ -5578,6 +5742,303 @@
                 option.textContent = team.name;
                 teamSelect.appendChild(option);
             });
+        }
+
+        // ── UPSETS PAGE ──
+        let UPSET_DETAIL_DATA = null; // Loaded from upset_history.json if available
+        let upsetsCurrentEra = 'all';
+        let upsetsCurrentPairing = null;
+        let upsetsCurrentSort = 'year';
+
+        const UPSET_ERAS = {
+            'all': { label: 'All Time (1985+)', min: 1985, max: 9999 },
+            '3pt': { label: '3-Point Era (1987+)', min: 1987, max: 9999 },
+            '64': { label: '64-Team Era (1985-2010)', min: 1985, max: 2010 },
+            '68': { label: '68-Team Era (2011+)', min: 2011, max: 9999 },
+            'nil': { label: 'NIL Era (2021+)', min: 2021, max: 9999 }
+        };
+
+        const UPSET_FUN_FACTS = [
+            'In 2018, UMBC became the first 16-seed to defeat a 1-seed, beating Virginia 74-54.',
+            'The 5-vs-12 matchup is the most common first-round upset. It happens roughly 35% of the time.',
+            '8-vs-9 games are essentially coin flips, with 9-seeds winning nearly half the time.',
+            'Since 1985, a 15-seed has beaten a 2-seed 10 times. Saint Peter\'s (2022) made it all the way to the Elite Eight.',
+            'No 16-seed had ever beaten a 1-seed until UMBC did it in 2018. Fairleigh Dickinson repeated the feat in 2023.',
+            'The 12-over-5 upset is so common it has its own name among bracketologists: "The 12-5 Special."',
+            'In 2023, both a 15-seed (Princeton) and a 16-seed (FDU) won first-round games in the same tournament.'
+        ];
+
+        function getUpsetColorClass(upsetPct) {
+            if (upsetPct < 5) return 'green';
+            if (upsetPct < 20) return 'yellow';
+            if (upsetPct < 35) return 'orange';
+            return 'red';
+        }
+
+        function findTeamForUpset(teamName) {
+            if (!teamName) return null;
+            const lower = teamName.toLowerCase().replace(/[^a-z0-9 ]/g, '');
+            return allTeamsData.find(t => {
+                const tn = t.name.toLowerCase().replace(/[^a-z0-9 ]/g, '');
+                return tn === lower || lower.includes(tn) || tn.includes(lower);
+            });
+        }
+
+        function filterUpsetsByPairing(pairingKey) {
+            upsetsCurrentPairing = pairingKey;
+            // Highlight active card
+            document.querySelectorAll('.upsets-seed-card').forEach(c => c.classList.remove('active'));
+            const activeCard = document.querySelector(`.upsets-seed-card[data-pairing="${pairingKey}"]`);
+            if (activeCard) {
+                activeCard.classList.add('active');
+                activeCard.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+            renderUpsetDetails();
+        }
+
+        function getFilteredPairs() {
+            if (!SEED_MATCHUP_HISTORY.pairs) return {};
+            const era = UPSET_ERAS[upsetsCurrentEra];
+            // If we have detailed data with years, filter by era; otherwise return raw pairs
+            if (UPSET_DETAIL_DATA && era) {
+                const filtered = {};
+                for (const [key, pair] of Object.entries(SEED_MATCHUP_HISTORY.pairs)) {
+                    const detailUpsets = (UPSET_DETAIL_DATA[key] || []).filter(u => u.year >= era.min && u.year <= era.max);
+                    const allUpsets = pair.upsets ? pair.upsets.filter(u => u.year >= era.min && u.year <= era.max) : [];
+                    const upsets = detailUpsets.length > 0 ? detailUpsets : allUpsets;
+                    // For era filtering with detailed data, recalculate totals
+                    if (UPSET_DETAIL_DATA[key] && upsetsCurrentEra !== 'all') {
+                        const eraYears = era.max - era.min + 1;
+                        const gamesPerYear = 4; // 4 games per seed pairing per year
+                        const approxTotal = Math.min(pair.total, Math.floor(eraYears * gamesPerYear));
+                        filtered[key] = { ...pair, upsets: upsets, lowerWins: upsets.length, higherWins: approxTotal - upsets.length, total: approxTotal };
+                    } else {
+                        filtered[key] = { ...pair, upsets: upsets.length > 0 ? upsets : pair.upsets };
+                    }
+                }
+                return filtered;
+            }
+            return SEED_MATCHUP_HISTORY.pairs;
+        }
+
+        function renderUpsetDetails() {
+            const container = document.getElementById('upsetsDetailContainer');
+            if (!container) return;
+            const pairs = getFilteredPairs();
+            const pairingsToShow = upsetsCurrentPairing ? [upsetsCurrentPairing] : Object.keys(pairs);
+
+            let html = '';
+            for (const key of pairingsToShow) {
+                const pair = pairs[key];
+                if (!pair) continue;
+                let upsets = [];
+                // Prefer detailed data
+                if (UPSET_DETAIL_DATA && UPSET_DETAIL_DATA[key]) {
+                    const era = UPSET_ERAS[upsetsCurrentEra];
+                    upsets = UPSET_DETAIL_DATA[key].filter(u => u.year >= era.min && u.year <= era.max);
+                } else if (pair.upsets && pair.upsets.length > 0) {
+                    upsets = pair.upsets;
+                }
+
+                if (upsets.length === 0 && upsetsCurrentPairing) {
+                    html += `<div class="upsets-detail-section">
+                        <div class="upsets-detail-header">
+                            <div class="upsets-detail-title">${pair.higher} vs ${pair.lower} Upsets</div>
+                        </div>
+                        <div class="upsets-no-data">No detailed upset data available for this pairing yet. ${pair.lowerWins} upsets have occurred but detailed game data is being compiled.</div>
+                    </div>`;
+                    continue;
+                }
+                if (upsets.length === 0) continue;
+
+                // Sort
+                const isLegendary = (pair.lower >= 15);
+                if (upsetsCurrentSort === 'year') {
+                    upsets.sort((a, b) => b.year - a.year);
+                } else {
+                    upsets.sort((a, b) => {
+                        const magA = (pair.lower - pair.higher) * (1 + pair.lower / 16);
+                        const magB = (pair.lower - pair.higher) * (1 + pair.lower / 16);
+                        return magB - magA || b.year - a.year;
+                    });
+                }
+
+                html += `<div class="upsets-detail-section" id="upset-section-${key}">
+                    <div class="upsets-detail-header">
+                        <div class="upsets-detail-title">${pair.higher} vs ${pair.lower} Upsets (${upsets.length})</div>
+                        <div class="upsets-sort-btns">
+                            <button class="upsets-sort-btn ${upsetsCurrentSort === 'year' ? 'active' : ''}" onclick="upsetsCurrentSort='year'; renderUpsetDetails();">Newest</button>
+                            <button class="upsets-sort-btn ${upsetsCurrentSort === 'magnitude' ? 'active' : ''}" onclick="upsetsCurrentSort='magnitude'; renderUpsetDetails();">Magnitude</button>
+                        </div>
+                    </div>`;
+
+                for (const upset of upsets) {
+                    const winnerTeam = findTeamForUpset(upset.team);
+                    const loserTeam = upset.loser ? findTeamForUpset(upset.loser) : null;
+                    const winnerLogo = winnerTeam ? `https://a.espncdn.com/i/teamlogos/ncaa/500/${winnerTeam.espnId}.png` : '';
+                    const loserLogo = loserTeam ? `https://a.espncdn.com/i/teamlogos/ncaa/500/${loserTeam.espnId}.png` : '';
+                    const winnerName = upset.team || 'Unknown';
+                    const loserName = upset.loser || `${pair.higher}-seed`;
+                    const winnerSlug = winnerTeam ? teamSlug(winnerTeam.name) : '';
+                    const loserSlug = loserTeam ? teamSlug(loserTeam.name) : '';
+                    const score = upset.score || '';
+                    const magnitude = ((pair.lower - pair.higher) / 15 * 100).toFixed(0);
+                    const cardClass = isLegendary ? 'upsets-moment-card legendary' : 'upsets-moment-card';
+                    const borderColor = winnerTeam && winnerTeam.color ? winnerTeam.color : '#E0D9CC';
+                    const clickAction = winnerSlug && loserSlug ? `window.location.hash='#compare/${winnerSlug}/${loserSlug}'` : (winnerSlug ? `window.location.hash='#team/${winnerSlug}'` : '');
+
+                    html += `<div class="${cardClass}" style="border-left-color: ${borderColor};" ${clickAction ? `onclick="${clickAction}"` : ''}>
+                        <div class="upsets-moment-year">${upset.year}</div>
+                        <div class="upsets-moment-teams">
+                            <div class="upsets-moment-team-row">
+                                <span class="upsets-moment-seed-badge winner">${pair.lower}</span>
+                                ${winnerLogo ? `<img class="upsets-moment-logo" src="${winnerLogo}" alt="" onerror="this.style.display='none'">` : ''}
+                                <span class="upsets-moment-name winner">${winnerName}</span>
+                                ${score ? `<span class="upsets-moment-score">${score.split('-')[0] || ''}</span>` : ''}
+                            </div>
+                            <div class="upsets-moment-team-row">
+                                <span class="upsets-moment-seed-badge loser">${pair.higher}</span>
+                                ${loserLogo ? `<img class="upsets-moment-logo" src="${loserLogo}" alt="" onerror="this.style.display='none'">` : ''}
+                                <span class="upsets-moment-name loser">${loserName}</span>
+                                ${score ? `<span class="upsets-moment-score">${score.split('-')[1] || ''}</span>` : ''}
+                            </div>
+                        </div>
+                        <div class="upsets-moment-magnitude">
+                            <div class="upsets-moment-magnitude-bar"><div class="upsets-moment-magnitude-fill" style="width:${magnitude}%"></div></div>
+                            <div class="upsets-moment-magnitude-label">Shock</div>
+                        </div>
+                    </div>`;
+                }
+
+                html += `</div>`;
+            }
+
+            if (!html) {
+                html = '<div class="upsets-no-data">Select a seed pairing above to view upset details.</div>';
+            }
+            container.innerHTML = html;
+        }
+
+        async function renderUpsets() {
+            const content = document.getElementById('upsetsContent');
+            if (!content) return;
+
+            // Show skeleton while loading
+            content.innerHTML = `
+                <h2 class="section-title">Greatest Tournament Upsets</h2>
+                <div class="upsets-stats-dashboard">
+                    ${[1,2,3,4].map(() => `<div class="skeleton-card"><div class="skeleton skeleton-text skeleton-text--lg"></div><div class="skeleton skeleton-text skeleton-text--sm"></div></div>`).join('')}
+                </div>
+                <div class="upsets-seed-grid">
+                    ${[1,2,3,4,5,6,7,8].map(() => `<div class="skeleton-card" style="height:100px;"><div class="skeleton skeleton-text skeleton-text--lg"></div><div class="skeleton skeleton-bar" style="margin-top:0.75rem;"></div></div>`).join('')}
+                </div>
+            `;
+
+            // Try to load detailed upset data
+            if (!UPSET_DETAIL_DATA) {
+                try {
+                    const resp = await fetch('upset_history.json');
+                    if (resp.ok) {
+                        UPSET_DETAIL_DATA = await resp.json();
+                        console.log('Loaded detailed upset history data');
+                    }
+                } catch (e) {
+                    console.log('No upset_history.json found, using SEED_MATCHUP_HISTORY fallback');
+                }
+            }
+
+            const pairs = getFilteredPairs();
+            if (!pairs || Object.keys(pairs).length === 0) {
+                content.innerHTML = renderErrorFallback('renderUpsets()');
+                return;
+            }
+
+            // Compute stats
+            let totalUpsets = 0;
+            let mostUpsetProne = { key: '', count: 0 };
+            let rarestUpset = { key: '', count: Infinity };
+            const pairKeys = ['1v16', '2v15', '3v14', '4v13', '5v12', '6v11', '7v10', '8v9'];
+
+            for (const key of pairKeys) {
+                const p = pairs[key];
+                if (!p) continue;
+                totalUpsets += p.lowerWins;
+                if (p.lowerWins > mostUpsetProne.count) {
+                    mostUpsetProne = { key, count: p.lowerWins, label: `${p.higher} vs ${p.lower}` };
+                }
+                if (p.lowerWins < rarestUpset.count && p.lowerWins >= 0) {
+                    rarestUpset = { key, count: p.lowerWins, label: `${p.higher} vs ${p.lower}` };
+                }
+            }
+
+            const funFact = UPSET_FUN_FACTS[Math.floor(Math.random() * UPSET_FUN_FACTS.length)];
+
+            // Build the page
+            let html = `
+                <h2 class="section-title">Greatest Tournament Upsets</h2>
+
+                <div class="upsets-stats-dashboard">
+                    <div class="upsets-stat-card">
+                        <div class="upsets-stat-value">${totalUpsets}</div>
+                        <div class="upsets-stat-label">First-Round Upsets Since 1985</div>
+                    </div>
+                    <div class="upsets-stat-card">
+                        <div class="upsets-stat-value">${mostUpsetProne.label}</div>
+                        <div class="upsets-stat-label">Most Upset-Prone (${mostUpsetProne.count} upsets)</div>
+                    </div>
+                    <div class="upsets-stat-card">
+                        <div class="upsets-stat-value">${rarestUpset.label}</div>
+                        <div class="upsets-stat-label">Rarest Upset (only ${rarestUpset.count} times)</div>
+                    </div>
+                    <div class="upsets-stat-card">
+                        <div class="upsets-stat-value">${((totalUpsets / (154 * 8)) * 100).toFixed(0)}%</div>
+                        <div class="upsets-stat-label">Overall Upset Rate</div>
+                    </div>
+                </div>
+
+                <div class="upsets-fun-fact">
+                    <div class="upsets-fun-fact-icon">&#127936;</div>
+                    <div class="upsets-fun-fact-text"><strong>Did You Know?</strong> ${funFact}</div>
+                </div>
+
+                <div class="upsets-era-filters">
+                    ${Object.entries(UPSET_ERAS).map(([k, v]) => `<button class="upsets-era-btn ${upsetsCurrentEra === k ? 'active' : ''}" onclick="upsetsCurrentEra='${k}'; upsetsCurrentPairing=null; renderUpsets();">${v.label}</button>`).join('')}
+                    ${upsetsCurrentPairing ? `<button class="upsets-era-btn" onclick="upsetsCurrentPairing=null; document.querySelectorAll('.upsets-seed-card').forEach(c=>c.classList.remove('active')); renderUpsetDetails();" style="background:#C9A86C; color:#fff; border-color:#C9A86C;">Show All Pairings</button>` : ''}
+                </div>
+
+                <div class="upsets-seed-grid">`;
+
+            for (const key of pairKeys) {
+                const p = pairs[key];
+                if (!p) continue;
+                const upsetPct = p.total > 0 ? (p.lowerWins / p.total * 100) : 0;
+                const colorClass = getUpsetColorClass(upsetPct);
+                const isActive = upsetsCurrentPairing === key;
+
+                html += `<div class="upsets-seed-card ${isActive ? 'active' : ''}" data-pairing="${key}" onclick="filterUpsetsByPairing('${key}')">
+                    <div class="upsets-seed-card-header">
+                        <div class="upsets-seed-label">${p.higher} vs ${p.lower}</div>
+                        <div class="upsets-seed-record">${p.higherWins}-${p.lowerWins}</div>
+                    </div>
+                    <div class="upsets-seed-bar">
+                        <div class="upsets-seed-bar-fill ${colorClass}" style="width: ${upsetPct.toFixed(1)}%"></div>
+                    </div>
+                    <div class="upsets-seed-upset-count"><span>${p.lowerWins}</span> upsets &middot; ${upsetPct.toFixed(1)}% upset rate</div>
+                </div>`;
+            }
+
+            html += `</div>
+                <div id="upsetsDetailContainer"></div>`;
+
+            content.innerHTML = html;
+
+            // Render detail section
+            if (upsetsCurrentPairing) {
+                renderUpsetDetails();
+            } else {
+                // Show all pairings that have upset data
+                renderUpsetDetails();
+            }
         }
 
         function openCorrection() {
