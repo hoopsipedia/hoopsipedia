@@ -5548,21 +5548,38 @@
 
             // Current season highlight
             let currentSeasonHTML = '';
-            if (SEASONS_DATA && SEASONS_DATA[team.espnId] && SEASONS_DATA[team.espnId].seasons?.length > 0) {
-                const seasons = SEASONS_DATA[team.espnId].seasons;
-                // Find the most recent season (first entry is usually the latest)
-                const latest = seasons[0];
-                const latestYear = latest.year || '';
-                const latestWins = parseInt(latest.wins) || 0;
-                const latestLosses = parseInt(latest.losses) || 0;
-                const latestCoach = latest.coach || '';
-                const latestSeed = latest.seed || '';
-                const latestConfW = parseInt(latest.confWins) || 0;
-                const latestConfL = parseInt(latest.confLosses) || 0;
-                const latestTourney = latest.ncaaTourney || '';
-                const latestApHigh = latest.apHigh || '';
+            {
+                // Prefer live ESPN record if available, fall back to seasons.json
+                const liveRecord = team._liveRecord; // e.g. "29-5"
+                let latestYear = '2025-26';
+                let latestWins = 0, latestLosses = 0;
+                let latestCoach = '';
+                let latest = {};
 
-                currentSeasonHTML = `
+                if (liveRecord) {
+                    const parts = liveRecord.split('-');
+                    latestWins = parseInt(parts[0]) || 0;
+                    latestLosses = parseInt(parts[1]) || 0;
+                }
+
+                if (SEASONS_DATA && SEASONS_DATA[team.espnId] && SEASONS_DATA[team.espnId].seasons?.length > 0) {
+                    const seasons = SEASONS_DATA[team.espnId].seasons;
+                    latest = seasons[0];
+                    latestYear = latest.year || latestYear;
+                    latestCoach = latest.coach || '';
+                    // Only use seasons.json W-L if we don't have live data
+                    if (!liveRecord) {
+                        latestWins = parseInt(latest.wins) || 0;
+                        latestLosses = parseInt(latest.losses) || 0;
+                    }
+                }
+                const latestSeed = latest?.seed || '';
+                const latestConfW = parseInt(latest?.confWins) || 0;
+                const latestConfL = parseInt(latest?.confLosses) || 0;
+                const latestTourney = latest?.ncaaTourney || '';
+                const latestApHigh = latest?.apHigh || '';
+
+                if (latestWins > 0 || latestLosses > 0) currentSeasonHTML = `
                 <div style="background: linear-gradient(135deg, ${team.color || '#1B2A4A'} 0%, ${team.color || '#1B2A4A'}dd 100%); border-radius: 0.75rem; padding: 1.25rem 1.5rem; margin-bottom: 1.5rem; color: white; display: flex; flex-wrap: wrap; align-items: center; gap: 1.5rem; box-shadow: 0 4px 16px rgba(0,0,0,0.15);">
                     <div style="flex: 0 0 auto;">
                         <div style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; opacity: 0.8; margin-bottom: 0.25rem;">Current Season</div>
