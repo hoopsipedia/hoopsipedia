@@ -260,22 +260,23 @@
 
         /* ── Compare Section ── */
         .compare-section {
-            background: #FFFFFF; border: 1px solid #E0D9CC;
-            border-radius: 0.75rem; padding: 2rem; margin-bottom: 3rem;
-            box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+            background: linear-gradient(135deg, #1B2A4A 0%, #2D4A6E 100%);
+            border: none; border-radius: 1rem; padding: 2rem; margin-bottom: 2.5rem;
+            box-shadow: 0 8px 32px rgba(27,42,74,0.25);
         }
         .compare-controls { display: flex; align-items: flex-end; gap: 1.5rem; flex-wrap: wrap; justify-content: center; }
         .compare-input-group { flex: 1; min-width: 250px; }
         .compare-input-group label {
-            display: block; font-size: 0.8rem; font-weight: 700; color: #5A6578;
+            display: block; font-size: 0.8rem; font-weight: 700; color: #C9A86C;
             margin-bottom: 0.4rem; text-transform: uppercase; letter-spacing: 0.06em;
         }
         .compare-input-group input {
-            width: 100%; padding: 0.7rem 0.85rem; background: #F5F3EE;
-            border: 1px solid #D6CFC2; border-radius: 0.5rem; color: #2C3345;
+            width: 100%; padding: 0.7rem 0.85rem; background: rgba(255,255,255,0.12);
+            border: 1px solid rgba(201,168,108,0.3); border-radius: 0.5rem; color: #FFFFFF;
             font-size: 1rem; transition: all 0.2s ease;
         }
-        .compare-input-group input:focus { outline: none; border-color: #C9A86C; box-shadow: 0 0 0 3px rgba(201,168,108,0.15); }
+        .compare-input-group input::placeholder { color: rgba(255,255,255,0.4); }
+        .compare-input-group input:focus { outline: none; border-color: #C9A86C; box-shadow: 0 0 0 3px rgba(201,168,108,0.25); background: rgba(255,255,255,0.18); }
         .compare-dropdown {
             position: absolute; top: 100%; left: 0; right: 0;
             background: #FFFFFF; border: 1px solid #D6CFC2; border-radius: 0.5rem;
@@ -291,17 +292,17 @@
         .compare-input-wrapper { position: relative; }
         .compare-vs {
             display: flex; align-items: center; justify-content: center;
-            width: 54px; height: 54px; background: #1B2A4A; border-radius: 50%;
+            width: 54px; height: 54px; background: rgba(201,168,108,0.15); border-radius: 50%;
             border: 2px solid #C9A86C; font-weight: 700; font-size: 0.8rem; color: #C9A86C;
         }
         .compare-button {
-            padding: 0.7rem 2rem; background: #1B2A4A; border: none;
-            border-radius: 0.5rem; color: #C9A86C; font-weight: 700;
+            padding: 0.7rem 2rem; background: #C9A86C; border: none;
+            border-radius: 0.5rem; color: #1B2A4A; font-weight: 700;
             cursor: pointer; transition: all 0.2s ease; font-size: 1rem;
-            box-shadow: 0 2px 8px rgba(27,42,74,0.15);
+            box-shadow: 0 2px 12px rgba(201,168,108,0.3);
         }
-        .compare-button:hover { background: #243556; transform: translateY(-1px); }
-        .compare-button:disabled { background: #B0B8C4; color: #fff; cursor: not-allowed; transform: none; box-shadow: none; }
+        .compare-button:hover { background: #E8D5A8; transform: translateY(-1px); box-shadow: 0 4px 16px rgba(201,168,108,0.4); }
+        .compare-button:disabled { background: rgba(255,255,255,0.15); color: rgba(255,255,255,0.3); cursor: not-allowed; transform: none; box-shadow: none; }
 
         /* ── Programs Grid ── */
         .programs-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(145px, 1fr)); gap: 1.25rem; margin-bottom: 3rem; }
@@ -2007,23 +2008,9 @@
                 <p>The complete historical database of college basketball</p>
             </div>
 
-            <div class="games-section">
-                <h2 class="section-title" id="gamesTitle">Upcoming Games</h2>
-                <div class="games-filters" id="gamesFilters" style="display:none;">
-                    <div class="games-filter-tabs">
-                        <button class="games-filter-btn active" data-filter="ncaa">NCAA Tournament</button>
-                        <button class="games-filter-btn" data-filter="nit">NIT</button>
-                        <button class="games-filter-btn" data-filter="all">All Games</button>
-                    </div>
-                    <select class="games-conf-filter" id="gamesConfFilter">
-                        <option value="">All Conferences</option>
-                    </select>
-                </div>
-                <div class="games-grid" id="gamesGrid"></div>
-            </div>
-
             <div class="compare-section">
-                <h2 class="section-title" style="text-align: center; margin-bottom: 2rem;">Compare Programs</h2>
+                <h2 style="text-align: center; margin-bottom: 0.5rem; color: #C9A86C; font-size: 1.4rem; font-weight: 800; letter-spacing: 0.05em;">Compare Programs</h2>
+                <p style="text-align: center; color: rgba(255,255,255,0.6); font-size: 0.8rem; margin-bottom: 1.5rem;">Pick any two teams and see how they stack up across 80+ years of history</p>
                 <div class="compare-controls">
                     <div class="compare-input-group">
                         <label>Team 1</label>
