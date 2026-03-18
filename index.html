@@ -498,7 +498,7 @@
         }
         .tourney-round.champ { background: linear-gradient(135deg, #D4AF37, #E8C84A); color: #1B2A4A; }
         .tourney-round.runner-up { background: #C0C0C0; color: #1B2A4A; }
-        .tourney-round.ff { background: #1B2A4A; color: #C9A86C; }
+        .tourney-round.ff { background: linear-gradient(135deg, #CD7F32, #E8A04A); color: #1B2A4A; }
         .tourney-round.e8 { background: #2D5A8E; color: white; }
         .tourney-round.s16 { background: #4A8BC2; color: white; }
         .tourney-round.early { background: #E8E2D6; color: #5A6578; }
@@ -2726,28 +2726,17 @@
                 return;
             }
 
+            // Store globally for dynamic decade filtering
+            window._h2hGames = games;
+            window._h2hT1 = t1;
+            window._h2hT2 = t2;
+            window._h2hT1Color = t1Color;
+            window._h2hT2Color = t2Color;
+
             let html = allTimeHtml;
 
-            // Compute win streaks
-            const streakInfo = computeWinStreaks(games, t1, t2);
-            if (streakInfo) {
-                html += `
-                    <div style="display: flex; gap: 0.75rem; margin-bottom: 1rem; flex-wrap: wrap; justify-content: center;">
-                        <div style="background: #FAFAF7; border-radius: 0.5rem; padding: 0.6rem 1rem; text-align: center; flex: 1; min-width: 120px; max-width: 200px; border-left: 3px solid ${streakInfo.current.color};">
-                            <div style="font-size: 0.65rem; color: #8892A0; text-transform: uppercase; letter-spacing: 0.05em;">Current Streak</div>
-                            <div style="font-size: 1.1rem; font-weight: 700; color: ${streakInfo.current.color};">${streakInfo.current.team} ${streakInfo.current.count}</div>
-                        </div>
-                        <div style="background: #FAFAF7; border-radius: 0.5rem; padding: 0.6rem 1rem; text-align: center; flex: 1; min-width: 120px; max-width: 200px; border-left: 3px solid ${t1Color};">
-                            <div style="font-size: 0.65rem; color: #8892A0; text-transform: uppercase; letter-spacing: 0.05em;">${t1.name.split(' ').pop()} Best</div>
-                            <div style="font-size: 1.1rem; font-weight: 700; color: ${t1Color};">${streakInfo.t1Best} wins</div>
-                        </div>
-                        <div style="background: #FAFAF7; border-radius: 0.5rem; padding: 0.6rem 1rem; text-align: center; flex: 1; min-width: 120px; max-width: 200px; border-left: 3px solid ${t2Color};">
-                            <div style="font-size: 0.65rem; color: #8892A0; text-transform: uppercase; letter-spacing: 0.05em;">${t2.name.split(' ').pop()} Best</div>
-                            <div style="font-size: 1.1rem; font-weight: 700; color: ${t2Color};">${streakInfo.t2Best} wins</div>
-                        </div>
-                    </div>
-                `;
-            }
+            // Dynamic stats container (updated when decade filter changes)
+            html += `<div id="h2h-dynamic-stats"></div>`;
 
             // Build decade filters
             const decades = new Set();
@@ -2776,22 +2765,121 @@
                 const decade = Math.floor(yr / 10) * 10;
                 const d = new Date(m.date + 'T12:00:00');
                 const dateStr = d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
-                const winnerColor = m.t1Winner ? t1Color : t2Color;
                 const locIcon = m.loc === 'H' ? '&#127968;' : m.loc === 'A' ? '&#9992;' : m.loc === 'N' ? '&#127942;' : '';
-                const venueStr = m.venue ? `<div style="font-size: 0.65rem; color: #A0AAB8; margin-top: 0.1rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 140px;">${locIcon} ${m.venue}</div>` : (m.loc ? `<div style="font-size: 0.65rem; color: #A0AAB8; margin-top: 0.1rem;">${locIcon} ${m.loc === 'H' ? 'Home' : m.loc === 'A' ? 'Away' : 'Neutral'}</div>` : '');
+                const venueStr = m.venue ? `<div style="font-size: 0.65rem; color: #A0AAB8; margin-top: 0.1rem; line-height: 1.3;">${locIcon} ${m.venue}</div>` : (m.loc ? `<div style="font-size: 0.65rem; color: #A0AAB8; margin-top: 0.1rem;">${locIcon} ${m.loc === 'H' ? 'Home' : m.loc === 'A' ? 'Away' : 'Neutral'}</div>` : '');
                 const otStr = m.ot ? `<span style="font-size: 0.65rem; color: #C9A86C; margin-left: 0.25rem;">${m.ot}</span>` : '';
 
-                html += `
-                    <div class="h2h-game-row" data-decade="${decade}" style="display: flex; align-items: center; padding: 0.6rem 0.8rem; background: #FAFAF7; border-radius: 0.4rem; border-left: 3px solid ${winnerColor}; gap: 0.75rem; font-size: 0.85rem;">
-                        <div style="flex: 1; font-weight: ${m.t1Winner ? '700' : '400'}; color: ${m.t1Winner ? t1Color : '#A0AAB8'};">${t1.name.split(' ').pop()} <span style="font-variant-numeric: tabular-nums;">${m.t1Score}</span>${m.t1Winner ? otStr : ''}</div>
-                        <div style="font-size: 0.7rem; color: #8892A0; min-width: 80px; text-align: center;">${dateStr}${venueStr}</div>
-                        <div style="flex: 1; text-align: right; font-weight: ${!m.t1Winner ? '700' : '400'}; color: ${!m.t1Winner ? t2Color : '#A0AAB8'};">${!m.t1Winner ? otStr : ''}<span style="font-variant-numeric: tabular-nums;">${m.t2Score}</span> ${t2.name.split(' ').pop()}</div>
-                    </div>
-                `;
+                // Detect upcoming/scheduled games (future date or 0-0 score with no winner info)
+                const today = new Date();
+                today.setHours(0, 0, 0, 0);
+                const gameDate = new Date(m.date + 'T12:00:00');
+                const isUpcoming = gameDate >= today && m.t1Score === 0 && m.t2Score === 0;
+
+                // Detect tournament games from venue/notes context
+                const isTourneyGame = m.tourney === 'ncaa' || (m.venue && (m.venue.includes('NCAA') || m.venue.includes('Tournament')));
+                const isNIT = m.tourney === 'nit';
+
+                if (isUpcoming) {
+                    // Upcoming game - special styling with badge
+                    const tourneyBadge = isTourneyGame ? `<span style="display: inline-flex; align-items: center; gap: 0.2rem; background: #E8F5E9; color: #1B6B3A; padding: 0.15rem 0.5rem; border-radius: 0.3rem; font-size: 0.6rem; font-weight: 700; text-transform: uppercase;">&#127936; NCAA TOURNAMENT</span>`
+                        : isNIT ? `<span style="display: inline-flex; align-items: center; gap: 0.2rem; background: #FFF3E0; color: #E65100; padding: 0.15rem 0.5rem; border-radius: 0.3rem; font-size: 0.6rem; font-weight: 700; text-transform: uppercase;">NIT</span>`
+                        : '';
+                    html += `
+                        <div class="h2h-game-row" data-decade="${decade}" data-upcoming="true" style="display: flex; align-items: center; padding: 0.6rem 0.8rem; background: linear-gradient(135deg, #F0F7FF, #E8F4FD); border-radius: 0.4rem; border-left: 3px solid #4A8BC2; gap: 0.75rem; font-size: 0.85rem; border: 1px dashed #B0CBEA;">
+                            <div style="flex: 1; font-weight: 600; color: #2C3345;">${t1.name.split(' ').pop()}</div>
+                            <div style="font-size: 0.7rem; color: #4A8BC2; min-width: 80px; text-align: center;">
+                                <div style="font-weight: 700; text-transform: uppercase; font-size: 0.6rem; letter-spacing: 0.05em;">Upcoming</div>
+                                ${dateStr}${tourneyBadge ? `<div style="margin-top: 0.3rem;">${tourneyBadge}</div>` : ''}${venueStr}
+                            </div>
+                            <div style="flex: 1; text-align: right; font-weight: 600; color: #2C3345;">${t2.name.split(' ').pop()}</div>
+                        </div>
+                    `;
+                } else {
+                    const winnerColor = m.t1Winner ? t1Color : t2Color;
+                    html += `
+                        <div class="h2h-game-row" data-decade="${decade}" style="display: flex; align-items: center; padding: 0.6rem 0.8rem; background: #FAFAF7; border-radius: 0.4rem; border-left: 3px solid ${winnerColor}; gap: 0.75rem; font-size: 0.85rem;">
+                            <div style="flex: 1; font-weight: ${m.t1Winner ? '700' : '400'}; color: ${m.t1Winner ? t1Color : '#A0AAB8'};">${t1.name.split(' ').pop()} <span style="font-variant-numeric: tabular-nums;">${m.t1Score}</span>${m.t1Winner ? otStr : ''}</div>
+                            <div style="font-size: 0.7rem; color: #8892A0; min-width: 80px; text-align: center;">${dateStr}${venueStr}</div>
+                            <div style="flex: 1; text-align: right; font-weight: ${!m.t1Winner ? '700' : '400'}; color: ${!m.t1Winner ? t2Color : '#A0AAB8'};">${!m.t1Winner ? otStr : ''}<span style="font-variant-numeric: tabular-nums;">${m.t2Score}</span> ${t2.name.split(' ').pop()}</div>
+                        </div>
+                    `;
+                }
             });
 
             html += '</div>';
             container.innerHTML = html;
+
+            // Render initial dynamic stats for all games
+            updateH2HDynamicStats(games, t1, t2, t1Color, t2Color);
+        }
+
+        /**
+         * Update the H2H dynamic stats (series record, streaks) for a filtered set of games.
+         */
+        function updateH2HDynamicStats(games, t1, t2, t1Color, t2Color) {
+            const el = document.getElementById('h2h-dynamic-stats');
+            if (!el) return;
+
+            // Filter out upcoming games (no score)
+            const completedGames = games.filter(g => g.t1Score > 0 || g.t2Score > 0);
+
+            if (completedGames.length === 0) {
+                el.innerHTML = '';
+                return;
+            }
+
+            // Compute series record for filtered games
+            let t1Wins = 0, t2Wins = 0;
+            completedGames.forEach(g => { if (g.t1Winner) t1Wins++; else t2Wins++; });
+            const totalGames = t1Wins + t2Wins;
+
+            const streakInfo = computeWinStreaks(completedGames, t1, t2);
+
+            let html = '';
+
+            // Series record for this period
+            const t1Pct = totalGames > 0 ? ((t1Wins / totalGames) * 100).toFixed(0) : 0;
+            const t1BarW = totalGames > 0 ? Math.max(5, (t1Wins / totalGames) * 100) : 50;
+            const t2BarW = totalGames > 0 ? Math.max(5, (t2Wins / totalGames) * 100) : 50;
+
+            html += `
+                <div style="display: flex; justify-content: center; align-items: center; gap: 1.5rem; margin-bottom: 0.75rem;">
+                    <div style="text-align: center;">
+                        <div style="font-size: 1.8rem; font-weight: 800; color: ${t1Color}; line-height: 1;">${t1Wins}</div>
+                        <div style="font-size: 0.7rem; color: #6B7A8D;">${t1.name.split(' ').pop()}</div>
+                    </div>
+                    <div style="font-size: 0.9rem; color: #A0AAB8; font-weight: 600;">-</div>
+                    <div style="text-align: center;">
+                        <div style="font-size: 1.8rem; font-weight: 800; color: ${t2Color}; line-height: 1;">${t2Wins}</div>
+                        <div style="font-size: 0.7rem; color: #6B7A8D;">${t2.name.split(' ').pop()}</div>
+                    </div>
+                </div>
+                <div style="display: flex; height: 6px; border-radius: 3px; overflow: hidden; max-width: 250px; margin: 0 auto 0.75rem;">
+                    <div style="width: ${t1BarW}%; background: ${t1Color}; transition: width 0.4s;"></div>
+                    <div style="width: ${t2BarW}%; background: ${t2Color}; transition: width 0.4s;"></div>
+                </div>
+            `;
+
+            if (streakInfo) {
+                html += `
+                    <div style="display: flex; gap: 0.75rem; margin-bottom: 1rem; flex-wrap: wrap; justify-content: center;">
+                        <div style="background: #FAFAF7; border-radius: 0.5rem; padding: 0.6rem 1rem; text-align: center; flex: 1; min-width: 120px; max-width: 200px; border-left: 3px solid ${streakInfo.current.color};">
+                            <div style="font-size: 0.65rem; color: #8892A0; text-transform: uppercase; letter-spacing: 0.05em;">Current Streak</div>
+                            <div style="font-size: 1.1rem; font-weight: 700; color: ${streakInfo.current.color};">${streakInfo.current.team} ${streakInfo.current.count}</div>
+                        </div>
+                        <div style="background: #FAFAF7; border-radius: 0.5rem; padding: 0.6rem 1rem; text-align: center; flex: 1; min-width: 120px; max-width: 200px; border-left: 3px solid ${t1Color};">
+                            <div style="font-size: 0.65rem; color: #8892A0; text-transform: uppercase; letter-spacing: 0.05em;">${t1.name.split(' ').pop()} Best</div>
+                            <div style="font-size: 1.1rem; font-weight: 700; color: ${t1Color};">${streakInfo.t1Best} wins</div>
+                        </div>
+                        <div style="background: #FAFAF7; border-radius: 0.5rem; padding: 0.6rem 1rem; text-align: center; flex: 1; min-width: 120px; max-width: 200px; border-left: 3px solid ${t2Color};">
+                            <div style="font-size: 0.65rem; color: #8892A0; text-transform: uppercase; letter-spacing: 0.05em;">${t2.name.split(' ').pop()} Best</div>
+                            <div style="font-size: 1.1rem; font-weight: 700; color: ${t2Color};">${streakInfo.t2Best} wins</div>
+                        </div>
+                    </div>
+                `;
+            }
+
+            el.innerHTML = html;
         }
 
         /**
@@ -2859,6 +2947,20 @@
             event.target.classList.add('active');
             event.target.style.background = '#1B2A4A';
             event.target.style.color = 'white';
+
+            // Dynamically update H2H stats for selected decade
+            if (window._h2hGames && window._h2hT1 && window._h2hT2) {
+                let filteredGames;
+                if (decade === 'all') {
+                    filteredGames = window._h2hGames;
+                } else {
+                    filteredGames = window._h2hGames.filter(g => {
+                        const yr = parseInt(g.date.substring(0, 4));
+                        return Math.floor(yr / 10) * 10 === decade;
+                    });
+                }
+                updateH2HDynamicStats(filteredGames, window._h2hT1, window._h2hT2, window._h2hT1Color, window._h2hT2Color);
+            }
         }
 
         function renderStatRow(label, val1, val2, color1, color2, team1, team2) {
