@@ -505,6 +505,57 @@
         }
         .championships-section h3 { font-size: 1.15rem; font-weight: 700; margin-bottom: 0.85rem; color: #1B2A4A; }
 
+        /* ── Program History ── */
+        .program-history-section {
+            background: #FFFFFF; border: 1px solid #E0D9CC; border-radius: 0.75rem;
+            padding: 1.75rem; margin-bottom: 2.5rem; box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+        }
+        .program-history-title {
+            font-size: 1.15rem; font-weight: 700; margin: 0 0 0.85rem 0; color: #1B2A4A;
+            display: inline-block;
+        }
+        .program-history-founded {
+            display: inline-block; background: #1B2A4A; color: #F5F3EE;
+            font-size: 0.72rem; font-weight: 600; padding: 0.2rem 0.65rem;
+            border-radius: 999px; margin-left: 0.6rem; vertical-align: middle;
+            letter-spacing: 0.03em; position: relative; top: -2px;
+        }
+        .program-history-blurb {
+            font-size: 0.92rem; line-height: 1.65; color: #3A3F4B; margin: 0.75rem 0 1.25rem 0;
+        }
+        .program-history-cards {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1rem; margin-bottom: 1.25rem;
+        }
+        .program-history-card {
+            background: #F5F3EE; border: 1px solid #E0D9CC; border-radius: 0.6rem;
+            padding: 1rem 1.15rem;
+        }
+        .program-history-card--iconic {
+            background: #F5F3EE; border-color: #C9A86C;
+        }
+        .program-history-card-label {
+            font-size: 0.7rem; font-weight: 700; text-transform: uppercase;
+            letter-spacing: 0.07em; color: #8892A0; margin-bottom: 0.4rem;
+        }
+        .program-history-card--iconic .program-history-card-label {
+            color: #B08F55;
+        }
+        .program-history-card-text {
+            font-size: 0.88rem; line-height: 1.55; color: #3A3F4B;
+        }
+        .program-history-funfact {
+            border-left: 3px solid #C9A86C; background: #FDFBF7;
+            border-radius: 0 0.5rem 0.5rem 0; padding: 0.9rem 1.15rem;
+        }
+        .program-history-funfact-label {
+            font-size: 0.7rem; font-weight: 700; text-transform: uppercase;
+            letter-spacing: 0.07em; color: #B08F55; margin-bottom: 0.35rem;
+        }
+        .program-history-funfact-text {
+            font-size: 0.88rem; line-height: 1.55; color: #3A3F4B;
+        }
+
         /* ── Tournament Resume ── */
         .tourney-resume {
             background: #FFFFFF; border: 1px solid #E0D9CC; border-radius: 0.75rem;
@@ -1027,6 +1078,11 @@
             }
             .stat-card-value { font-size: 1.2rem; }
             .stat-card-label { font-size: 0.55rem; word-wrap: break-word; letter-spacing: -0.02em; }
+
+            /* Program History mobile */
+            .program-history-section { padding: 1.25rem; }
+            .program-history-cards { grid-template-columns: 1fr; }
+            .program-history-blurb { font-size: 0.87rem; }
 
             /* Stat comparison rows - make them single column on narrow screens */
             .stat-row {
@@ -3011,6 +3067,17 @@
                     }
                 } catch (e) {
                     console.log('No arena_photos.json found - using logo watermarks for backgrounds');
+                }
+
+                // Load team history data for program history section
+                try {
+                    const historyResp = await fetch('team_history.json');
+                    if (historyResp.ok) {
+                        TEAM_HISTORY = await historyResp.json();
+                        console.log(`Loaded team history for ${Object.keys(TEAM_HISTORY).length} teams`);
+                    }
+                } catch (e) {
+                    console.log('No team_history.json found - program history section will be hidden');
                 }
             } catch (e) {
                 console.error('Error loading data:', e);
@@ -6338,6 +6405,7 @@
         }
 
         let ARENA_PHOTOS = null; // Loaded from arena_photos.json
+        let TEAM_HISTORY = null; // Loaded from team_history.json
 
         function updateProfileBackground(team) {
             // Remove any existing background elements
@@ -6580,6 +6648,35 @@
                         <div class="championship-years">
                             ${team.champYears.map(year => `<div class="championship-badge">${year}</div>`).join('')}
                         </div>
+                    </div>
+                `;
+            }
+
+            // Program History section (from team_history.json)
+            const historyData = TEAM_HISTORY ? TEAM_HISTORY[String(team.espnId)] : null;
+            if (historyData) {
+                profileHTML += `
+                    <div class="program-history-section">
+                        <h3 class="program-history-title">Program History</h3>
+                        ${historyData.founded ? `<span class="program-history-founded">Est. ${historyData.founded}</span>` : ''}
+                        ${historyData.blurb ? `<p class="program-history-blurb">${historyData.blurb}</p>` : ''}
+                        <div class="program-history-cards">
+                            ${historyData.mascotOrigin ? `
+                            <div class="program-history-card">
+                                <div class="program-history-card-label">Mascot Origin</div>
+                                <div class="program-history-card-text">${historyData.mascotOrigin}</div>
+                            </div>` : ''}
+                            ${historyData.iconicMoment ? `
+                            <div class="program-history-card program-history-card--iconic">
+                                <div class="program-history-card-label">Iconic Moment</div>
+                                <div class="program-history-card-text">${historyData.iconicMoment}</div>
+                            </div>` : ''}
+                        </div>
+                        ${historyData.funFact ? `
+                        <div class="program-history-funfact">
+                            <div class="program-history-funfact-label">Did You Know?</div>
+                            <div class="program-history-funfact-text">${historyData.funFact}</div>
+                        </div>` : ''}
                     </div>
                 `;
             }
