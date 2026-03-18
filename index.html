@@ -592,7 +592,18 @@
         .championship-badge {
             padding: 0.4rem 0.85rem; background: #1B2A4A; color: #C9A86C;
             border-radius: 0.25rem; font-weight: 700; font-size: 0.85rem;
+            cursor: pointer; border: 2px solid transparent; transition: all 0.2s ease;
         }
+        .championship-badge:hover {
+            border-color: #C9A86C; transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(201, 168, 108, 0.3);
+        }
+        .champ-year-link {
+            color: inherit; text-decoration: underline;
+            text-decoration-color: #C9A86C; text-underline-offset: 2px;
+            cursor: pointer; transition: color 0.2s ease;
+        }
+        .champ-year-link:hover { color: #C9A86C; }
 
         /* ── Chart ── */
         .chart-section {
@@ -2930,6 +2941,67 @@
         }
         .quad-bar-legend-dot {
             width: 8px; height: 8px; border-radius: 50%;
+        }
+        .quad-card { cursor: pointer; }
+        .quad-card.quad-card--active {
+            border-color: #1B2A4A; box-shadow: 0 2px 8px rgba(27,42,74,0.15);
+        }
+        .quad-games-expand {
+            max-height: 0; overflow: hidden;
+            transition: max-height 0.35s ease, opacity 0.25s ease;
+            opacity: 0;
+        }
+        .quad-games-expand.quad-games-expand--open {
+            max-height: 800px; opacity: 1; overflow-y: auto;
+        }
+        .quad-games-list {
+            margin-top: 1rem; border: 1px solid #E0D9CC; border-radius: 0.5rem;
+            overflow: hidden;
+        }
+        .quad-game-row {
+            display: flex; align-items: center; gap: 0.75rem;
+            padding: 0.6rem 1rem; font-size: 0.82rem; border-left: 3px solid transparent;
+        }
+        .quad-game-row:nth-child(odd) { background: #FFFFFF; }
+        .quad-game-row:nth-child(even) { background: #FDFCF9; }
+        .quad-game-row--win { border-left-color: #2D7D46; }
+        .quad-game-row--loss { border-left-color: #C0392B; }
+        .quad-game-date {
+            flex: 0 0 70px; font-size: 0.75rem; color: #8892A0; font-weight: 500;
+        }
+        .quad-game-opp {
+            flex: 1; display: flex; align-items: center; gap: 0.5rem;
+            cursor: pointer; font-weight: 600; color: #1B2A4A;
+        }
+        .quad-game-opp:hover { color: #C9A86C; }
+        .quad-game-opp img { width: 20px; height: 20px; object-fit: contain; }
+        .quad-game-net {
+            flex: 0 0 auto; font-size: 0.68rem; font-weight: 700;
+            background: #F0EDE6; color: #5A6578; padding: 0.15rem 0.45rem;
+            border-radius: 0.25rem;
+        }
+        .quad-game-loc {
+            flex: 0 0 50px; font-size: 0.72rem; color: #8892A0; text-align: center;
+        }
+        .quad-game-score {
+            flex: 0 0 55px; font-size: 0.82rem; font-weight: 700; text-align: right;
+        }
+        .quad-game-result {
+            flex: 0 0 24px; font-size: 0.72rem; font-weight: 800; text-align: center;
+        }
+        .quad-game-result--w { color: #2D7D46; }
+        .quad-game-result--l { color: #C0392B; }
+        .quad-games-header {
+            display: flex; align-items: center; gap: 0.75rem;
+            padding: 0.5rem 1rem; background: #1B2A4A; color: #C9A86C;
+            font-size: 0.72rem; font-weight: 700; text-transform: uppercase;
+            letter-spacing: 0.06em;
+        }
+        @media (max-width: 640px) {
+            .quad-game-date { flex: 0 0 55px; font-size: 0.7rem; }
+            .quad-game-loc { flex: 0 0 35px; font-size: 0.68rem; }
+            .quad-game-score { flex: 0 0 48px; }
+            .quad-game-row { gap: 0.4rem; padding: 0.5rem 0.6rem; }
         }
         @media (max-width: 640px) {
             .quad-grid {
@@ -7450,31 +7522,33 @@
             const q2Pct = totalWins > 0 ? ((qr.q2w / totalWins) * 100).toFixed(0) : 0;
             const q3Pct = totalWins > 0 ? ((qr.q3w / totalWins) * 100).toFixed(0) : 0;
             const q4Pct = totalWins > 0 ? ((qr.q4w / totalWins) * 100).toFixed(0) : 0;
+            const eid = team.espnId;
             return `
                 <div class="quad-record-section">
                     <h3>Quad Record (Selection Committee Resume)</h3>
                     <div class="quad-grid">
-                        <div class="quad-card ${qr.q1w > 0 ? 'quad-card--q1-win' : ''}">
+                        <div class="quad-card ${qr.q1w > 0 ? 'quad-card--q1-win' : ''}" onclick="toggleQuadGames(1, '${eid}')" data-quad="1">
                             <div class="quad-card-label">Quad 1</div>
                             <div class="quad-card-record" style="${qr.q1w > 0 ? 'color:#2D7D46;' : ''}">${qr.q1w}-${qr.q1l}</div>
                             <div class="quad-card-detail">Home: NET 1-30 / Neut: 1-50 / Away: 1-75</div>
                         </div>
-                        <div class="quad-card">
+                        <div class="quad-card" onclick="toggleQuadGames(2, '${eid}')" data-quad="2">
                             <div class="quad-card-label">Quad 2</div>
                             <div class="quad-card-record">${qr.q2w}-${qr.q2l}</div>
                             <div class="quad-card-detail">Home: 31-75 / Neut: 51-100 / Away: 76-135</div>
                         </div>
-                        <div class="quad-card">
+                        <div class="quad-card" onclick="toggleQuadGames(3, '${eid}')" data-quad="3">
                             <div class="quad-card-label">Quad 3</div>
                             <div class="quad-card-record">${qr.q3w}-${qr.q3l}</div>
                             <div class="quad-card-detail">Home: 76-160 / Neut: 101-200 / Away: 136-240</div>
                         </div>
-                        <div class="quad-card ${qr.q4l > 0 ? 'quad-card--q4-loss' : ''}">
+                        <div class="quad-card ${qr.q4l > 0 ? 'quad-card--q4-loss' : ''}" onclick="toggleQuadGames(4, '${eid}')" data-quad="4">
                             <div class="quad-card-label">Quad 4</div>
                             <div class="quad-card-record" style="${qr.q4l > 0 ? 'color:#C0392B;' : ''}">${qr.q4w}-${qr.q4l}</div>
                             <div class="quad-card-detail">Home: 161+ / Neut: 201+ / Away: 241+</div>
                         </div>
                     </div>
+                    <div class="quad-games-expand" id="quadGamesExpand"></div>
                     ${totalWins > 0 ? `
                     <div class="quad-bar">
                         <div class="quad-bar-q1" style="flex:${qr.q1w};" title="Q1 Wins: ${qr.q1w}"></div>
@@ -7489,6 +7563,125 @@
                         <div class="quad-bar-legend-item"><div class="quad-bar-legend-dot" style="background:#C0392B;"></div> Q4 (${q4Pct}%)</div>
                     </div>` : ''}
                 </div>`;
+        }
+
+        // Track which quad is currently expanded
+        let _activeQuad = null;
+
+        function toggleQuadGames(quadNum, teamEspnId) {
+            const expandEl = document.getElementById('quadGamesExpand');
+            if (!expandEl) return;
+
+            // Deactivate all cards
+            document.querySelectorAll('.quad-card[data-quad]').forEach(c => c.classList.remove('quad-card--active'));
+
+            // If clicking same quad, collapse
+            if (_activeQuad === quadNum) {
+                expandEl.classList.remove('quad-games-expand--open');
+                _activeQuad = null;
+                return;
+            }
+
+            _activeQuad = quadNum;
+            // Activate clicked card
+            const activeCard = document.querySelector(`.quad-card[data-quad="${quadNum}"]`);
+            if (activeCard) activeCard.classList.add('quad-card--active');
+
+            // Build NET rank map from NET_RANKINGS
+            const netRankMap = {};
+            if (NET_RANKINGS) {
+                NET_RANKINGS.forEach(t => { netRankMap[t.teamId] = t.rank; });
+            }
+
+            // Get team games for current season
+            const teamData = GAMES_DATA?.[String(teamEspnId)];
+            if (!teamData) {
+                expandEl.innerHTML = '<div style="padding:1rem;text-align:center;color:#8892A0;font-size:0.85rem;">Game data not available.</div>';
+                expandEl.classList.add('quad-games-expand--open');
+                return;
+            }
+            const games = Array.isArray(teamData) ? teamData : (teamData.games || []);
+            const currentSeasonGames = games.filter(g => g.date && g.date >= '2025-09-01');
+
+            // Classify and filter to requested quad
+            const quadGames = [];
+            for (const game of currentSeasonGames) {
+                const oppId = String(game.opp || game.oppId || '');
+                const oppRank = netRankMap[oppId];
+                if (!oppRank) continue;
+                const isWin = game.w === true || game.w === 1 || game.result === 'W';
+                const isLoss = game.w === false || game.w === 0 || game.result === 'L';
+                if (!isWin && !isLoss) continue;
+                const loc = (game.loc || game.location || 'H').toUpperCase();
+                const isHome = loc === 'H' || loc === 'HOME';
+                const isNeutral = loc === 'N' || loc === 'NEUTRAL';
+                let quad = 4;
+                if (isHome) { if (oppRank <= 30) quad = 1; else if (oppRank <= 75) quad = 2; else if (oppRank <= 160) quad = 3; }
+                else if (isNeutral) { if (oppRank <= 50) quad = 1; else if (oppRank <= 100) quad = 2; else if (oppRank <= 200) quad = 3; }
+                else { if (oppRank <= 75) quad = 1; else if (oppRank <= 135) quad = 2; else if (oppRank <= 240) quad = 3; }
+
+                if (quad === quadNum) {
+                    // Look up opponent name
+                    const oppTeam = allTeamsData.find(t => String(t.espnId) === oppId);
+                    const oppName = oppTeam ? oppTeam.name : (game.opp_slug || 'Unknown').replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+                    const locLabel = isHome ? 'Home' : (isNeutral ? 'Neutral' : 'Away');
+                    const score = (game.pts && game.opp_pts) ? `${game.pts}-${game.opp_pts}` : '';
+                    quadGames.push({
+                        date: game.date,
+                        oppId,
+                        oppName,
+                        oppRank,
+                        oppEspnId: oppId,
+                        loc: locLabel,
+                        score,
+                        isWin,
+                        oppSlug: game.opp_slug || (oppTeam ? teamSlug(oppTeam.name) : '')
+                    });
+                }
+            }
+
+            // Sort by date, most recent first
+            quadGames.sort((a, b) => b.date.localeCompare(a.date));
+
+            if (quadGames.length === 0) {
+                expandEl.innerHTML = '<div style="padding:1rem;text-align:center;color:#8892A0;font-size:0.85rem;">No Quad ' + quadNum + ' games found.</div>';
+                expandEl.classList.add('quad-games-expand--open');
+                return;
+            }
+
+            const quadLabels = { 1: 'Quad 1', 2: 'Quad 2', 3: 'Quad 3', 4: 'Quad 4' };
+            let html = `<div class="quad-games-list">
+                <div class="quad-games-header">
+                    <span style="flex:0 0 70px;">Date</span>
+                    <span style="flex:1;">Opponent</span>
+                    <span style="flex:0 0 auto;">NET</span>
+                    <span style="flex:0 0 50px;text-align:center;">Loc</span>
+                    <span style="flex:0 0 55px;text-align:right;">Score</span>
+                    <span style="flex:0 0 24px;text-align:center;">W/L</span>
+                </div>`;
+
+            for (const g of quadGames) {
+                const d = new Date(g.date + 'T12:00:00');
+                const dateStr = (d.getMonth() + 1) + '/' + d.getDate();
+                const rowClass = g.isWin ? 'quad-game-row--win' : 'quad-game-row--loss';
+                const resultClass = g.isWin ? 'quad-game-result--w' : 'quad-game-result--l';
+                const oppClick = g.oppEspnId ? `onclick="openProfile({espnId:'${g.oppEspnId}'})"` : '';
+                html += `
+                    <div class="quad-game-row ${rowClass}">
+                        <div class="quad-game-date">${dateStr}</div>
+                        <div class="quad-game-opp" ${oppClick}>
+                            ${g.oppEspnId ? `<img src="${getLogoUrl(g.oppEspnId)}" alt="">` : ''}
+                            ${g.oppName}
+                        </div>
+                        <div class="quad-game-net">#${g.oppRank}</div>
+                        <div class="quad-game-loc">${g.loc}</div>
+                        <div class="quad-game-score">${g.score}</div>
+                        <div class="quad-game-result ${resultClass}">${g.isWin ? 'W' : 'L'}</div>
+                    </div>`;
+            }
+            html += '</div>';
+            expandEl.innerHTML = html;
+            expandEl.classList.add('quad-games-expand--open');
         }
 
         function renderTeamsView() {
@@ -7801,7 +7994,14 @@
                     <div class="championships-section">
                         <h3>National Championships</h3>
                         <div class="championship-years">
-                            ${team.champYears.map(year => `<div class="championship-badge">${year}</div>`).join('')}
+                            ${team.champYears.map(year => {
+                                const champSlug = CHAMP_YEAR_TO_SLUG[String(year)];
+                                const tSlug = teamSlug(team.name);
+                                if (champSlug && champSlug.slug === tSlug) {
+                                    return `<div class="championship-badge" onclick="window.location.hash='#championship/${year}/${champSlug.slug}'" title="View ${year} Championship Run">${year}</div>`;
+                                }
+                                return `<a class="championship-badge" href="https://www.sports-reference.com/cbb/postseason/${year}-ncaa.html" target="_blank" rel="noopener" title="View ${year} NCAA Tournament" style="text-decoration:none;color:#C9A86C;">${year}</a>`;
+                            }).join('')}
                         </div>
                     </div>
                 `;
@@ -7810,11 +8010,25 @@
             // Program History section (from team_history.json)
             const historyData = TEAM_HISTORY ? TEAM_HISTORY[String(team.espnId)] : null;
             if (historyData) {
+                // Helper: linkify championship years in text
+                const linkifyChampYears = (text) => {
+                    if (!text || !team.champYears || team.champYears.length === 0) return text || '';
+                    return text.replace(/\b(1[89]\d{2}|20\d{2})\b/g, (match) => {
+                        const yr = parseInt(match);
+                        if (!team.champYears.includes(yr)) return match;
+                        const champSlug = CHAMP_YEAR_TO_SLUG[String(yr)];
+                        const tSlug = teamSlug(team.name);
+                        if (champSlug && champSlug.slug === tSlug) {
+                            return `<a href="#championship/${yr}/${champSlug.slug}" class="champ-year-link" title="View ${yr} Championship Run">${yr}</a>`;
+                        }
+                        return `<a href="https://www.sports-reference.com/cbb/postseason/${yr}-ncaa.html" target="_blank" rel="noopener" class="champ-year-link" title="View ${yr} NCAA Tournament">${yr}</a>`;
+                    });
+                };
                 profileHTML += `
                     <div class="program-history-section">
                         <h3 class="program-history-title">Program History</h3>
                         ${historyData.founded ? `<span class="program-history-founded">Est. ${historyData.founded}</span>` : ''}
-                        ${historyData.blurb ? `<p class="program-history-blurb">${historyData.blurb}</p>` : ''}
+                        ${historyData.blurb ? `<p class="program-history-blurb">${linkifyChampYears(historyData.blurb)}</p>` : ''}
                         <div class="program-history-cards">
                             ${historyData.mascotOrigin ? `
                             <div class="program-history-card">
@@ -7824,7 +8038,7 @@
                             ${historyData.iconicMoment ? `
                             <div class="program-history-card program-history-card--iconic">
                                 <div class="program-history-card-label">Iconic Moment</div>
-                                <div class="program-history-card-text">${historyData.iconicMoment}</div>
+                                <div class="program-history-card-text">${linkifyChampYears(historyData.iconicMoment)}</div>
                             </div>` : ''}
                         </div>
                         ${historyData.funFact ? `
