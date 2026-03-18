@@ -772,9 +772,14 @@
             min-width: 220px;
         }
         .champ-trophy {
-            font-size: 2rem;
-            margin-bottom: -0.25rem;
-            filter: drop-shadow(0 2px 4px rgba(201, 168, 108, 0.4));
+            width: 80px;
+            height: auto;
+            margin-bottom: 0;
+        }
+        .ff-logo {
+            width: 65px;
+            height: auto;
+            margin-bottom: 0.25rem;
         }
         .champ-title-label {
             font-size: 0.95rem;
@@ -6295,13 +6300,13 @@
             return `<div class="bracket-full" style="width:100%;">
                 <div class="bracket-row" style="display:grid;grid-template-columns:1fr auto 1fr;">
                     <div class="bracket-half left">${skeletonRegion('South')}</div>
-                    <div class="bracket-center-col"><div class="bracket-round-label">Final Four</div>${skeletonMatchup()}</div>
+                    <div class="bracket-center-col"><img class="ff-logo" src="ff_logo.png" alt="Final Four" onerror="this.outerHTML='<div class=bracket-round-label>Final Four</div>'">${skeletonMatchup()}</div>
                     <div class="bracket-half right">${skeletonRegion('Midwest')}</div>
                 </div>
-                <div class="bracket-champ-row"><div class="bracket-champ-card"><div class="champ-trophy">🏆</div><div class="champ-title-label">National Championship</div><div class="champ-subtitle">San Antonio, TX • April 7, 2026</div>${skeletonMatchup()}</div></div>
+                <div class="bracket-champ-row"><div class="bracket-champ-card"><img class="champ-trophy" src="https://upload.wikimedia.org/wikipedia/en/5/5e/2025_NCAA_Division_I_men%27s_basketball_championship_logo.png" alt="National Championship Trophy" onerror="this.style.display='none'"><div class="champ-title-label">National Championship</div><div class="champ-subtitle">San Antonio, TX • April 7, 2026</div>${skeletonMatchup()}</div></div>
                 <div class="bracket-row" style="display:grid;grid-template-columns:1fr auto 1fr;">
                     <div class="bracket-half left">${skeletonRegion('East')}</div>
-                    <div class="bracket-center-col"><div class="bracket-round-label">Final Four</div>${skeletonMatchup()}</div>
+                    <div class="bracket-center-col"><img class="ff-logo" src="ff_logo.png" alt="Final Four" onerror="this.outerHTML='<div class=bracket-round-label>Final Four</div>'">${skeletonMatchup()}</div>
                     <div class="bracket-half right">${skeletonRegion('West')}</div>
                 </div>
             </div>`;
@@ -6376,7 +6381,7 @@
             const ff1Col = document.createElement('div');
             ff1Col.className = 'bracket-center-col';
             ff1Col.innerHTML = `
-                <div class="bracket-round-label">Final Four</div>
+                <img class="ff-logo" src="ff_logo.png" alt="Final Four" onerror="this.outerHTML='<div class=bracket-round-label>Final Four</div>'">
                 ${finalFourGames.length > 0 ? createMatchupCard(finalFourGames[0]).outerHTML : ffTBD}
             `;
             row1.appendChild(ff1Col);
@@ -6393,7 +6398,7 @@
             champRow.className = 'bracket-champ-row';
             champRow.innerHTML = `
                 <div class="bracket-champ-card">
-                    <div class="champ-trophy">🏆</div>
+                    <img class="champ-trophy" src="https://upload.wikimedia.org/wikipedia/en/5/5e/2025_NCAA_Division_I_men%27s_basketball_championship_logo.png" alt="National Championship Trophy" onerror="this.style.display='none'">
                     <div class="champ-title-label">National Championship</div>
                     <div class="champ-subtitle">San Antonio, TX • April 7, 2026</div>
                     ${champGame.length > 0 ? createMatchupCard(champGame[0]).outerHTML : champTBD}
@@ -6413,7 +6418,7 @@
             const ff2Col = document.createElement('div');
             ff2Col.className = 'bracket-center-col';
             ff2Col.innerHTML = `
-                <div class="bracket-round-label">Final Four</div>
+                <img class="ff-logo" src="ff_logo.png" alt="Final Four" onerror="this.outerHTML='<div class=bracket-round-label>Final Four</div>'">
                 ${finalFourGames.length > 1 ? createMatchupCard(finalFourGames[1]).outerHTML : ffTBD}
             `;
             row2.appendChild(ff2Col);
