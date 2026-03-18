@@ -6519,6 +6519,12 @@
                             <div><strong>Nickname:</strong> ${team.mascot}</div>
                         </div>
                         <div class="profile-records">
+                            ${(team.allTimeW + team.allTimeL < 100 && !GAMES_DATA[team.espnId]) ? `
+                            <div class="profile-record" style="grid-column: 1 / -1;">
+                                <div class="profile-record-label">All-Time Record</div>
+                                <div class="profile-record-value" style="font-size: 1rem; color: #8892A0;">Full historical data coming soon</div>
+                            </div>
+                            ` : `
                             <div class="profile-record">
                                 <div class="profile-record-label">All-Time Record</div>
                                 <div class="profile-record-value">${team.allTimeW}-${team.allTimeL}${team.vacated ? ' *' : ''}</div>
@@ -6527,6 +6533,7 @@
                                 <div class="profile-record-label">Win %</div>
                                 <div class="profile-record-value">${winPct}%</div>
                             </div>
+                            `}
                             ${team.vacated ? `<div class="profile-record" style="grid-column: 1 / -1;">
                                 <div style="font-size: 0.78rem; color: #8892A0; padding: 0.4rem 0.6rem; background: rgba(136,146,160,0.08); border-radius: 0.4rem; border-left: 3px solid #C9A86C;">
                                     <strong>${team.vacated.wins} wins vacated</strong> (${team.vacated.seasons}) — ${team.vacated.reason}${team.vacated.lost ? '. Also vacated: ' + team.vacated.lost : ''}
@@ -6538,6 +6545,12 @@
 
                 ${currentSeasonHTML}
 
+                ${(team.allTimeW + team.allTimeL < 100 && !GAMES_DATA[team.espnId]) ? `
+                <div style="background: #FFFFFF; border: 1px solid #E0D9CC; border-radius: 0.75rem; padding: 2rem; margin-bottom: 2.5rem; text-align: center;">
+                    <div style="font-size: 1.1rem; font-weight: 600; color: #1B2A4A; margin-bottom: 0.5rem;">Full Program Data Coming Soon</div>
+                    <div style="font-size: 0.85rem; color: #8892A0;">We're actively building out historical stats, tournament history, and head-to-head data for ${team.name}. Check back soon!</div>
+                </div>
+                ` : `
                 <div class="stats-grid">
                     ${[
                         { key: 'natlChamps', label: 'National Championships', rankKey: 'natlChamps' },
@@ -6556,6 +6569,7 @@
                             <div class="stat-card-rank ${getRankBadge(rankings[stat.rankKey])}">#${rankings[stat.rankKey]} <span style="font-size: 0.6rem; opacity: 0.7;">▸</span></div>
                         </div>
                     `).join('')}
+                `}
                 </div>
             `;
 
