@@ -2211,6 +2211,19 @@
                 } catch (e) {
                     console.log('No game data found - will use ESPN API for game details');
                 }
+
+                // Load arena photos for team profile backgrounds
+                try {
+                    const arenaResp = await fetch('arena_photos.json');
+                    if (arenaResp.ok) {
+                        ARENA_PHOTOS = await arenaResp.json();
+                        // Remove metadata key if present
+                        delete ARENA_PHOTOS.metadata;
+                        console.log(`Loaded arena photos for ${Object.keys(ARENA_PHOTOS).length} teams`);
+                    }
+                } catch (e) {
+                    console.log('No arena_photos.json found - using logo watermarks for backgrounds');
+                }
             } catch (e) {
                 console.error('Error loading data:', e);
                 document.querySelector('.container').innerHTML = `<div class="error-fallback" style="min-height:60vh;">
@@ -5094,9 +5107,11 @@
             return { r: parseInt(hex.substring(0,2),16), g: parseInt(hex.substring(2,4),16), b: parseInt(hex.substring(4,6),16) };
         }
 
+        let ARENA_PHOTOS = null; // Loaded from arena_photos.json
+
         function updateProfileBackground(team) {
             // Remove any existing background elements
-            document.querySelectorAll('.profile-bg, .profile-bg-overlay').forEach(el => el.remove());
+            document.querySelectorAll('.profile-bg, .profile-bg-overlay, .profile-photo-credit').forEach(el => el.remove());
 
             const teamColor = team.color || '#1B2A4A';
             const rgb = hexToRgb(teamColor);
@@ -5104,16 +5119,48 @@
             // Create overlay gradient (always shown — branded feel)
             const overlay = document.createElement('div');
             overlay.className = 'profile-bg-overlay';
-            overlay.style.background = `linear-gradient(180deg, rgba(${rgb.r},${rgb.g},${rgb.b},0.08) 0%, rgba(245,243,238,0.95) 30%, rgba(245,243,238,1) 100%)`;
+            overlay.style.background = `linear-gradient(180deg, rgba(${rgb.r},${rgb.g},${rgb.b},0.12) 0%, rgba(245,243,238,0.92) 35%, rgba(245,243,238,1) 100%)`;
             document.body.appendChild(overlay);
 
-            // Create background element for team logo watermark
+            // Create background element
             const bgEl = document.createElement('div');
             bgEl.className = 'profile-bg';
             bgEl.style.opacity = '0';
             document.body.appendChild(bgEl);
 
-            // Use team logo as a subtle watermark background
+            // Check for real arena photo first
+            const arenaData = ARENA_PHOTOS ? ARENA_PHOTOS[String(team.espnId)] : null;
+
+            if (arenaData && arenaData.imageUrl) {
+                // Use real arena photo
+                const img = new Image();
+                img.onload = function() {
+                    bgEl.style.backgroundImage = `url('${arenaData.imageUrl}')`;
+                    bgEl.style.backgroundSize = 'cover';
+                    bgEl.style.backgroundRepeat = 'no-repeat';
+                    bgEl.style.backgroundPosition = 'center center';
+                    setTimeout(() => { bgEl.style.opacity = '0.09'; }, 50);
+
+                    // Add photo credit at bottom of profile
+                    const credit = document.createElement('div');
+                    credit.className = 'profile-photo-credit';
+                    credit.style.cssText = 'text-align: center; padding: 0.75rem; font-size: 0.65rem; color: #A0AAB8; border-top: 1px solid #E0D9CC; margin-top: 1rem;';
+                    credit.innerHTML = `📷 ${arenaData.arena} — Photo by ${arenaData.photographer}, <a href="${arenaData.licenseUrl}" target="_blank" rel="noopener" style="color: #A0AAB8; text-decoration: underline;">${arenaData.license}</a>`;
+                    const profileView = document.getElementById('profile');
+                    if (profileView) profileView.appendChild(credit);
+                };
+                img.onerror = function() {
+                    // Arena photo failed — fall back to logo watermark
+                    loadLogoWatermark(bgEl, team, rgb);
+                };
+                img.src = arenaData.imageUrl;
+            } else {
+                // No arena photo — use logo watermark as fallback
+                loadLogoWatermark(bgEl, team, rgb);
+            }
+        }
+
+        function loadLogoWatermark(bgEl, team, rgb) {
             const logoUrl = `https://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500/${team.espnId}.png&w=800&h=800&transparent=true`;
             const img = new Image();
             img.onload = function() {
@@ -5121,11 +5168,9 @@
                 bgEl.style.backgroundSize = '400px 400px';
                 bgEl.style.backgroundRepeat = 'no-repeat';
                 bgEl.style.backgroundPosition = 'center 15%';
-                // Brief delay ensures browser paints initial opacity:0 before transitioning
                 setTimeout(() => { bgEl.style.opacity = '0.08'; }, 50);
             };
             img.onerror = function() {
-                // No image available — use a subtle radial glow as fallback
                 bgEl.style.background = `radial-gradient(ellipse at 50% 20%, rgba(${rgb.r},${rgb.g},${rgb.b},0.05) 0%, transparent 60%)`;
                 setTimeout(() => { bgEl.style.opacity = '1'; }, 50);
             };
@@ -5133,7 +5178,7 @@
         }
 
         function removeProfileBackground() {
-            document.querySelectorAll('.profile-bg, .profile-bg-overlay').forEach(el => el.remove());
+            document.querySelectorAll('.profile-bg, .profile-bg-overlay, .profile-photo-credit').forEach(el => el.remove());
         }
 
         function renderProfile() {
