@@ -472,6 +472,16 @@
         .profile-record-label { font-size: 0.75rem; color: #8892A0; text-transform: uppercase; font-weight: 700; margin-bottom: 0.2rem; }
         .profile-record-value { font-size: 1.4rem; font-weight: 800; color: #1B2A4A; }
 
+        .profile-bg {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            z-index: -2; background-size: cover; background-position: center;
+            opacity: 0.07; pointer-events: none; transition: opacity 0.6s ease;
+        }
+        .profile-bg-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            z-index: -1; pointer-events: none;
+        }
+
         .stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-bottom: 2.5rem; max-width: 100%; box-sizing: border-box; }
         .stat-card {
             background: #FFFFFF; border: 1px solid #E0D9CC; border-radius: 0.75rem;
@@ -2767,6 +2777,11 @@
             document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
             document.getElementById(view).classList.add('active');
 
+            // Clean up profile background when leaving profile view
+            if (view !== 'profile') {
+                removeProfileBackground();
+            }
+
             document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('active'));
             const navBtn = document.querySelector(`[data-view="${view}"]`);
             if (navBtn) navBtn.classList.add('active');
@@ -4831,6 +4846,54 @@
             renderProfile();
         }
 
+        function hexToRgb(hex) {
+            hex = hex.replace('#', '');
+            if (hex.length === 3) hex = hex[0]+hex[0]+hex[1]+hex[1]+hex[2]+hex[2];
+            return { r: parseInt(hex.substring(0,2),16), g: parseInt(hex.substring(2,4),16), b: parseInt(hex.substring(4,6),16) };
+        }
+
+        function updateProfileBackground(team) {
+            // Remove any existing background elements
+            document.querySelectorAll('.profile-bg, .profile-bg-overlay').forEach(el => el.remove());
+
+            const teamColor = team.color || '#1B2A4A';
+            const rgb = hexToRgb(teamColor);
+
+            // Create overlay gradient (always shown — branded feel)
+            const overlay = document.createElement('div');
+            overlay.className = 'profile-bg-overlay';
+            overlay.style.background = `linear-gradient(180deg, rgba(${rgb.r},${rgb.g},${rgb.b},0.08) 0%, rgba(245,243,238,0.95) 30%, rgba(245,243,238,1) 100%)`;
+            document.body.appendChild(overlay);
+
+            // Create background element for team logo watermark
+            const bgEl = document.createElement('div');
+            bgEl.className = 'profile-bg';
+            bgEl.style.opacity = '0';
+            document.body.appendChild(bgEl);
+
+            // Use team logo as a subtle watermark background
+            const logoUrl = `https://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500/${team.espnId}.png&w=800&h=800&transparent=true`;
+            const img = new Image();
+            img.onload = function() {
+                bgEl.style.backgroundImage = `url('${logoUrl}')`;
+                bgEl.style.backgroundSize = '400px 400px';
+                bgEl.style.backgroundRepeat = 'no-repeat';
+                bgEl.style.backgroundPosition = 'center 15%';
+                // Brief delay ensures browser paints initial opacity:0 before transitioning
+                setTimeout(() => { bgEl.style.opacity = '0.08'; }, 50);
+            };
+            img.onerror = function() {
+                // No image available — use a subtle radial glow as fallback
+                bgEl.style.background = `radial-gradient(ellipse at 50% 20%, rgba(${rgb.r},${rgb.g},${rgb.b},0.05) 0%, transparent 60%)`;
+                setTimeout(() => { bgEl.style.opacity = '1'; }, 50);
+            };
+            img.src = logoUrl;
+        }
+
+        function removeProfileBackground() {
+            document.querySelectorAll('.profile-bg, .profile-bg-overlay').forEach(el => el.remove());
+        }
+
         function renderProfile() {
             const team = currentProfile;
             const winPct = ((team.allTimeW / (team.allTimeW + team.allTimeL)) * 100).toFixed(1);
@@ -5063,6 +5126,9 @@
 
             document.getElementById('profileContent').innerHTML = profileHTML;
             document.getElementById('profileContent').appendChild(h2hSection);
+
+            // Set team-branded background
+            updateProfileBackground(team);
 
             // Setup compare with
             let selectedCompareTeam = null;
