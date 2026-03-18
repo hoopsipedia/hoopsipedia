@@ -2917,7 +2917,10 @@
             const gamesFromLocal = getH2HGamesFromData(t1, t2);
 
             if (gamesFromLocal && gamesFromLocal.length > 0) {
-                renderH2HGameList(container, allTimeHtml, hasAllTime, gamesFromLocal, t1, t2, t1Color, t2Color);
+                // Enrich any 0-0 (upcoming/unscraped) games with live ESPN scoreboard data
+                enrichH2HWithLiveScores(gamesFromLocal, t1, t2).then(enrichedGames => {
+                    renderH2HGameList(container, allTimeHtml, hasAllTime, enrichedGames, t1, t2, t1Color, t2Color);
+                });
             } else {
                 // Fallback to ESPN API for recent matchups
                 const currentYear = new Date().getFullYear();
@@ -2994,6 +2997,79 @@
          * Extract H2H game list from GAMES_DATA.
          * Searches team1's games for opponent matches with team2.
          */
+        /**
+         * Enrich H2H games with live/final scores from ESPN scoreboard.
+         * Fixes games that were scraped before they were played (0-0 scores).
+         */
+        async function enrichH2HWithLiveScores(games, t1, t2) {
+            // Find games with 0-0 scores that might have been played
+            const zeroGames = games.filter(g => g.t1Score === 0 && g.t2Score === 0);
+            if (zeroGames.length === 0) return games;
+
+            try {
+                // Fetch today + yesterday + day before from ESPN scoreboard
+                const dates = [];
+                for (let d = -2; d <= 1; d++) {
+                    const dt = new Date();
+                    dt.setDate(dt.getDate() + d);
+                    dates.push(dt.toISOString().slice(0, 10).replace(/-/g, ''));
+                }
+
+                const results = await Promise.all(dates.map(date =>
+                    fetch(`https://site.api.espn.com/apis/site/v2/sports/basketball/mens-college-basketball/scoreboard?dates=${date}&groups=50`)
+                        .then(r => r.ok ? r.json() : { events: [] }).catch(() => ({ events: [] }))
+                ));
+
+                // Find matching events for these two teams
+                const allEvents = results.flatMap(r => r.events || []);
+                allEvents.forEach(event => {
+                    const comp = event.competitions?.[0];
+                    if (!comp) return;
+                    const teams = comp.competitors || [];
+                    const hasT1 = teams.some(c => String(c.team?.id) === String(t1.espnId));
+                    const hasT2 = teams.some(c => String(c.team?.id) === String(t2.espnId));
+                    if (!hasT1 || !hasT2) return;
+
+                    const status = comp.status?.type?.description || '';
+                    if (status !== 'Final' && status !== 'In Progress' && status !== 'Halftime') return;
+
+                    const t1Comp = teams.find(c => String(c.team?.id) === String(t1.espnId));
+                    const t2Comp = teams.find(c => String(c.team?.id) === String(t2.espnId));
+                    const t1Score = parseInt(t1Comp?.score) || 0;
+                    const t2Score = parseInt(t2Comp?.score) || 0;
+                    const t1Winner = status === 'Final' ? (t1Score > t2Score) : false;
+                    const eventDate = event.date ? event.date.slice(0, 10) : '';
+
+                    // Match to a 0-0 game by date proximity
+                    zeroGames.forEach(g => {
+                        if (g.t1Score === 0 && g.t2Score === 0) {
+                            const gDate = g.date || '';
+                            // Match if same date or within 1 day
+                            if (eventDate === gDate || Math.abs(new Date(eventDate) - new Date(gDate)) < 2 * 86400000) {
+                                g.t1Score = t1Score;
+                                g.t2Score = t2Score;
+                                g.t1Winner = t1Winner;
+                                g._liveStatus = status;
+
+                                // Add tournament info from notes
+                                const notes = comp.notes || [];
+                                const headline = notes.map(n => n.headline || '').join(' ');
+                                if (headline.includes('NCAA') && headline.includes('Championship')) {
+                                    g.tourney = 'ncaa';
+                                } else if (headline.includes('NIT')) {
+                                    g.tourney = 'nit';
+                                }
+                            }
+                        }
+                    });
+                });
+            } catch (e) {
+                console.warn('Failed to enrich H2H with live scores:', e);
+            }
+
+            return games;
+        }
+
         function getH2HGamesFromData(t1, t2) {
             if (!GAMES_DATA) return null;
 
@@ -3171,13 +3247,27 @@
                 const today = new Date();
                 today.setHours(0, 0, 0, 0);
                 const gameDate = new Date(m.date + 'T12:00:00');
-                const isUpcoming = gameDate >= today && m.t1Score === 0 && m.t2Score === 0;
+                const isUpcoming = !m._liveStatus && gameDate >= today && m.t1Score === 0 && m.t2Score === 0;
+                const isLive = m._liveStatus === 'In Progress' || m._liveStatus === 'Halftime';
 
                 // Detect tournament games from venue/notes context
                 const isTourneyGame = m.tourney === 'ncaa' || (m.venue && (m.venue.includes('NCAA') || m.venue.includes('Tournament')));
                 const isNIT = m.tourney === 'nit';
 
-                if (isUpcoming) {
+                if (isLive) {
+                    // In-progress game with live scores
+                    const tourneyBadge = isTourneyGame ? `<span style="display: inline-flex; align-items: center; gap: 0.2rem; background: #E8F5E9; color: #1B6B3A; padding: 0.15rem 0.5rem; border-radius: 0.3rem; font-size: 0.6rem; font-weight: 700; text-transform: uppercase;">🏀 NCAA TOURNAMENT</span>` : '';
+                    html += `
+                        <div class="h2h-game-row" data-decade="${decade}" style="display: flex; align-items: center; padding: 0.6rem 0.8rem; background: linear-gradient(135deg, #FFF8F0, #FEF3E8); border-radius: 0.4rem; border-left: 3px solid #E65100; gap: 0.75rem; font-size: 0.85rem; border: 1px solid #FFD9B3;">
+                            <div style="flex: 1; font-weight: ${m.t1Score > m.t2Score ? '700' : '400'}; color: ${m.t1Score > m.t2Score ? t1Color : '#A0AAB8'};">${t1.name.split(' ').pop()} <span style="font-variant-numeric: tabular-nums;">${m.t1Score}</span></div>
+                            <div style="font-size: 0.7rem; color: #E65100; min-width: 80px; text-align: center;">
+                                <div style="font-weight: 700; font-size: 0.6rem; letter-spacing: 0.05em;"><span style="display:inline-block;width:6px;height:6px;background:#E53935;border-radius:50%;animation:pulse 1.5s infinite;margin-right:3px;vertical-align:middle;"></span> LIVE</div>
+                                ${m._liveStatus}${tourneyBadge ? `<div style="margin-top: 0.3rem;">${tourneyBadge}</div>` : ''}${venueStr}
+                            </div>
+                            <div style="flex: 1; text-align: right; font-weight: ${m.t2Score > m.t1Score ? '700' : '400'}; color: ${m.t2Score > m.t1Score ? t2Color : '#A0AAB8'};"><span style="font-variant-numeric: tabular-nums;">${m.t2Score}</span> ${t2.name.split(' ').pop()}</div>
+                        </div>
+                    `;
+                } else if (isUpcoming) {
                     // Upcoming game - special styling with badge
                     const tourneyBadge = isTourneyGame ? `<span style="display: inline-flex; align-items: center; gap: 0.2rem; background: #E8F5E9; color: #1B6B3A; padding: 0.15rem 0.5rem; border-radius: 0.3rem; font-size: 0.6rem; font-weight: 700; text-transform: uppercase;">&#127936; NCAA TOURNAMENT</span>`
                         : isNIT ? `<span style="display: inline-flex; align-items: center; gap: 0.2rem; background: #FFF3E0; color: #E65100; padding: 0.15rem 0.5rem; border-radius: 0.3rem; font-size: 0.6rem; font-weight: 700; text-transform: uppercase;">NIT</span>`
