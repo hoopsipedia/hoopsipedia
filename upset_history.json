@@ -1,9 +1,9 @@
 {
   "metadata": {
     "description": "NCAA Tournament first-round upsets by seed matchup (1985-2025, 64-team era)",
-    "lastUpdated": "2026-03-17",
+    "lastUpdated": "2026-03-18",
     "source": "Compiled from NCAA.com, Sports Reference, Wikipedia, and verified sports databases",
-    "notes": "An 'upset' is when the lower-seeded team (higher seed number) defeats the higher-seeded team (lower seed number). Records reflect through the 2025 tournament first round. Some scores for 5v12, 6v11, 7v10, 8v9 may be incomplete due to the high volume of games."
+    "notes": "An 'upset' is when the lower-seeded team (higher seed number) defeats the higher-seeded team (lower seed number). Records reflect through the 2025 tournament first round."
   },
   "1v16": {
     "higherSeedWins": 158,
@@ -816,16 +816,6 @@
       },
       {
         "year": 1989,
-        "winner": "South Alabama",
-        "winnerFull": "South Alabama Jaguars",
-        "winnerSeed": 12,
-        "loser": "Alabama",
-        "loserFull": "Alabama Crimson Tide",
-        "loserSeed": 5,
-        "score": "86-84"
-      },
-      {
-        "year": 1989,
         "winner": "Minnesota",
         "winnerFull": "Minnesota Golden Gophers",
         "winnerSeed": 12,
@@ -833,6 +823,16 @@
         "loserFull": "Kansas State Wildcats",
         "loserSeed": 5,
         "score": "86-75"
+      },
+      {
+        "year": 1989,
+        "winner": "South Alabama",
+        "winnerFull": "South Alabama Jaguars",
+        "winnerSeed": 12,
+        "loser": "Alabama",
+        "loserFull": "Alabama Crimson Tide",
+        "loserSeed": 5,
+        "score": "86-84"
       },
       {
         "year": 1990,
@@ -896,16 +896,6 @@
       },
       {
         "year": 1995,
-        "winner": "Miami (OH)",
-        "winnerFull": "Miami (OH) RedHawks",
-        "winnerSeed": 12,
-        "loser": "Arizona",
-        "loserFull": "Arizona Wildcats",
-        "loserSeed": 5,
-        "score": "71-62"
-      },
-      {
-        "year": 1995,
         "winner": "Drexel",
         "winnerFull": "Drexel Dragons",
         "winnerSeed": 12,
@@ -913,6 +903,16 @@
         "loserFull": "Memphis Tigers",
         "loserSeed": 5,
         "score": "75-63"
+      },
+      {
+        "year": 1995,
+        "winner": "Miami (OH)",
+        "winnerFull": "Miami (OH) RedHawks",
+        "winnerSeed": 12,
+        "loser": "Arizona",
+        "loserFull": "Arizona Wildcats",
+        "loserSeed": 5,
+        "score": "71-62"
       },
       {
         "year": 1996,
@@ -966,6 +966,16 @@
       },
       {
         "year": 2001,
+        "winner": "Creighton",
+        "winnerFull": "Creighton Bluejays",
+        "winnerSeed": 12,
+        "loser": "Virginia",
+        "loserFull": "Virginia Cavaliers",
+        "loserSeed": 5,
+        "score": "84-69"
+      },
+      {
+        "year": 2001,
         "winner": "Utah State",
         "winnerFull": "Utah State Aggies",
         "winnerSeed": 12,
@@ -975,14 +985,15 @@
         "score": "77-68"
       },
       {
-        "year": 2001,
+        "year": 2002,
         "winner": "Creighton",
         "winnerFull": "Creighton Bluejays",
         "winnerSeed": 12,
-        "loser": "Virginia",
-        "loserFull": "Virginia Cavaliers",
+        "loser": "Florida",
+        "loserFull": "Florida Gators",
         "loserSeed": 5,
-        "score": "84-69"
+        "score": "83-82",
+        "overtimes": 1
       },
       {
         "year": 2002,
@@ -1003,17 +1014,6 @@
         "loserFull": "Wake Forest Demon Deacons",
         "loserSeed": 5,
         "score": "92-87"
-      },
-      {
-        "year": 2002,
-        "winner": "Creighton",
-        "winnerFull": "Creighton Bluejays",
-        "winnerSeed": 12,
-        "loser": "Florida",
-        "loserFull": "Florida Gators",
-        "loserSeed": 5,
-        "score": "83-82",
-        "overtimes": 1
       },
       {
         "year": 2003,
@@ -1074,6 +1074,16 @@
         "loserFull": "Syracuse Orange",
         "loserSeed": 5,
         "score": "66-58"
+      },
+      {
+        "year": 2008,
+        "winner": "Villanova",
+        "winnerFull": "Villanova Wildcats",
+        "winnerSeed": 12,
+        "loser": "Clemson",
+        "loserFull": "Clemson Tigers",
+        "loserSeed": 5,
+        "score": "75-69"
       },
       {
         "year": 2008,
@@ -1149,13 +1159,13 @@
       },
       {
         "year": 2013,
-        "winner": "Oregon",
-        "winnerFull": "Oregon Ducks",
+        "winner": "California",
+        "winnerFull": "California Golden Bears",
         "winnerSeed": 12,
-        "loser": "Oklahoma State",
-        "loserFull": "Oklahoma State Cowboys",
+        "loser": "UNLV",
+        "loserFull": "UNLV Rebels",
         "loserSeed": 5,
-        "score": "68-55"
+        "score": "64-61"
       },
       {
         "year": 2013,
@@ -1169,24 +1179,23 @@
       },
       {
         "year": 2013,
-        "winner": "California",
-        "winnerFull": "California Golden Bears",
+        "winner": "Oregon",
+        "winnerFull": "Oregon Ducks",
         "winnerSeed": 12,
-        "loser": "UNLV",
-        "loserFull": "UNLV Rebels",
+        "loser": "Oklahoma State",
+        "loserFull": "Oklahoma State Cowboys",
         "loserSeed": 5,
-        "score": "64-61"
+        "score": "68-55"
       },
       {
         "year": 2014,
-        "winner": "Stephen F. Austin",
-        "winnerFull": "Stephen F. Austin Lumberjacks",
+        "winner": "Harvard",
+        "winnerFull": "Harvard Crimson",
         "winnerSeed": 12,
-        "loser": "VCU",
-        "loserFull": "VCU Rams",
+        "loser": "Cincinnati",
+        "loserFull": "Cincinnati Bearcats",
         "loserSeed": 5,
-        "score": "77-75",
-        "overtimes": 1
+        "score": "61-57"
       },
       {
         "year": 2014,
@@ -1201,23 +1210,14 @@
       },
       {
         "year": 2014,
-        "winner": "Harvard",
-        "winnerFull": "Harvard Crimson",
+        "winner": "Stephen F. Austin",
+        "winnerFull": "Stephen F. Austin Lumberjacks",
         "winnerSeed": 12,
-        "loser": "Cincinnati",
-        "loserFull": "Cincinnati Bearcats",
+        "loser": "VCU",
+        "loserFull": "VCU Rams",
         "loserSeed": 5,
-        "score": "61-57"
-      },
-      {
-        "year": 2016,
-        "winner": "Yale",
-        "winnerFull": "Yale Bulldogs",
-        "winnerSeed": 12,
-        "loser": "Baylor",
-        "loserFull": "Baylor Bears",
-        "loserSeed": 5,
-        "score": "79-75"
+        "score": "77-75",
+        "overtimes": 1
       },
       {
         "year": 2016,
@@ -1231,6 +1231,16 @@
         "overtimes": 2
       },
       {
+        "year": 2016,
+        "winner": "Yale",
+        "winnerFull": "Yale Bulldogs",
+        "winnerSeed": 12,
+        "loser": "Baylor",
+        "loserFull": "Baylor Bears",
+        "loserSeed": 5,
+        "score": "79-75"
+      },
+      {
         "year": 2017,
         "winner": "Middle Tennessee",
         "winnerFull": "Middle Tennessee Blue Raiders",
@@ -1239,6 +1249,16 @@
         "loserFull": "Minnesota Golden Gophers",
         "loserSeed": 5,
         "score": "81-72"
+      },
+      {
+        "year": 2019,
+        "winner": "Liberty",
+        "winnerFull": "Liberty Flames",
+        "winnerSeed": 12,
+        "loser": "Mississippi State",
+        "loserFull": "Mississippi State Bulldogs",
+        "loserSeed": 5,
+        "score": "80-76"
       },
       {
         "year": 2019,
@@ -1262,16 +1282,6 @@
         "score": "72-54"
       },
       {
-        "year": 2019,
-        "winner": "Liberty",
-        "winnerFull": "Liberty Flames",
-        "winnerSeed": 12,
-        "loser": "Mississippi State",
-        "loserFull": "Mississippi State Bulldogs",
-        "loserSeed": 5,
-        "score": "80-76"
-      },
-      {
         "year": 2021,
         "winner": "Oregon State",
         "winnerFull": "Oregon State Beavers",
@@ -1284,16 +1294,6 @@
       },
       {
         "year": 2022,
-        "winner": "Richmond",
-        "winnerFull": "Richmond Spiders",
-        "winnerSeed": 12,
-        "loser": "Iowa",
-        "loserFull": "Iowa Hawkeyes",
-        "loserSeed": 5,
-        "score": "67-63"
-      },
-      {
-        "year": 2022,
         "winner": "New Mexico State",
         "winnerFull": "New Mexico State Aggies",
         "winnerSeed": 12,
@@ -1301,6 +1301,16 @@
         "loserFull": "Connecticut Huskies",
         "loserSeed": 5,
         "score": "70-63"
+      },
+      {
+        "year": 2022,
+        "winner": "Richmond",
+        "winnerFull": "Richmond Spiders",
+        "winnerSeed": 12,
+        "loser": "Iowa",
+        "loserFull": "Iowa Hawkeyes",
+        "loserSeed": 5,
+        "score": "67-63"
       },
       {
         "year": 2024,
@@ -1324,16 +1334,6 @@
       },
       {
         "year": 2025,
-        "winner": "McNeese",
-        "winnerFull": "McNeese Cowboys",
-        "winnerSeed": 12,
-        "loser": "Clemson",
-        "loserFull": "Clemson Tigers",
-        "loserSeed": 5,
-        "score": "69-67"
-      },
-      {
-        "year": 2025,
         "winner": "Colorado State",
         "winnerFull": "Colorado State Rams",
         "winnerSeed": 12,
@@ -1341,16 +1341,24 @@
         "loserFull": "Memphis Tigers",
         "loserSeed": 5,
         "score": "78-70"
+      },
+      {
+        "year": 2025,
+        "winner": "McNeese",
+        "winnerFull": "McNeese Cowboys",
+        "winnerSeed": 12,
+        "loser": "Clemson",
+        "loserFull": "Clemson Tigers",
+        "loserSeed": 5,
+        "score": "69-67"
       }
-    ],
-    "_note": "Verified total: 57 upsets. 56 games with full details currently listed. Remaining games being researched.",
-    "listedUpsets": 56
+    ]
   },
   "6v11": {
-    "higherSeedWins": 98,
-    "lowerSeedWins": 62,
+    "higherSeedWins": 97,
+    "lowerSeedWins": 63,
     "totalGames": 160,
-    "upsetPct": 38.75,
+    "upsetPct": 39.38,
     "notes": "The 6v11 matchup is one of the most upset-prone in the tournament. In 1989, all four 11 seeds won. Since 2005, at least one 11 seed has won every year. Six 11 seeds have reached the Final Four (LSU 1986, George Mason 2006, VCU 2011, Loyola Chicago 2018, UCLA 2021, NC State 2024).",
     "upsets": [
       {
@@ -1365,16 +1373,6 @@
       },
       {
         "year": 1985,
-        "winner": "UTEP",
-        "winnerFull": "UTEP Miners",
-        "winnerSeed": 11,
-        "loser": "Tulsa",
-        "loserFull": "Tulsa Golden Hurricane",
-        "loserSeed": 6,
-        "score": "79-75"
-      },
-      {
-        "year": 1985,
         "winner": "Boston College",
         "winnerFull": "Boston College Eagles",
         "winnerSeed": 11,
@@ -1382,6 +1380,16 @@
         "loserFull": "Texas Tech Red Raiders",
         "loserSeed": 6,
         "score": "55-53"
+      },
+      {
+        "year": 1985,
+        "winner": "UTEP",
+        "winnerFull": "UTEP Miners",
+        "winnerSeed": 11,
+        "loser": "Tulsa",
+        "loserFull": "Tulsa Golden Hurricane",
+        "loserSeed": 6,
+        "score": "79-75"
       },
       {
         "year": 1986,
@@ -1396,15 +1404,25 @@
         "notes": "LSU went on to reach the Final Four."
       },
       {
-        "year": 1989,
-        "winner": "South Alabama",
-        "winnerFull": "South Alabama Jaguars",
+        "year": 1988,
+        "winner": "Rhode Island",
+        "winnerFull": "Rhode Island Rams",
         "winnerSeed": 11,
-        "loser": "Alabama",
-        "loserFull": "Alabama Crimson Tide",
+        "loser": "Missouri",
+        "loserFull": "Missouri Tigers",
         "loserSeed": 6,
-        "score": "86-84",
-        "notes": "All four 11 seeds won in 1989 \u2014 the only year this has happened."
+        "score": "87-80"
+      },
+      {
+        "year": 1989,
+        "winner": "Evansville",
+        "winnerFull": "Evansville Purple Aces",
+        "winnerSeed": 11,
+        "loser": "Oregon State",
+        "loserFull": "Oregon State Beavers",
+        "loserSeed": 6,
+        "score": "94-90",
+        "overtimes": 1
       },
       {
         "year": 1989,
@@ -1418,34 +1436,114 @@
       },
       {
         "year": 1989,
-        "winner": "Xavier",
-        "winnerFull": "Xavier Musketeers",
+        "winner": "South Alabama",
+        "winnerFull": "South Alabama Jaguars",
         "winnerSeed": 11,
-        "loser": "Kansas",
-        "loserFull": "Kansas Jayhawks",
+        "loser": "Alabama",
+        "loserFull": "Alabama Crimson Tide",
         "loserSeed": 6,
-        "score": "87-79"
+        "score": "86-84",
+        "notes": "All four 11 seeds won in 1989 — the only year this has happened."
       },
       {
         "year": 1989,
-        "winner": "Colorado State",
-        "winnerFull": "Colorado State Rams",
+        "winner": "Texas",
+        "winnerFull": "Texas Longhorns",
         "winnerSeed": 11,
-        "loser": "Florida",
-        "loserFull": "Florida Gators",
+        "loser": "Georgia Tech",
+        "loserFull": "Georgia Tech Yellow Jackets",
         "loserSeed": 6,
-        "score": "68-46"
+        "score": "76-70"
       },
       {
-        "year": 1999,
-        "winner": "Gonzaga",
-        "winnerFull": "Gonzaga Bulldogs",
+        "year": 1990,
+        "winner": "Loyola Marymount",
+        "winnerFull": "Loyola Marymount Lions",
         "winnerSeed": 11,
-        "loser": "Minnesota",
-        "loserFull": "Minnesota Golden Gophers",
+        "loser": "New Mexico State",
+        "loserFull": "New Mexico State Aggies",
         "loserSeed": 6,
-        "score": "75-63",
-        "notes": "Beginning of Gonzaga's rise to national prominence."
+        "score": "111-92"
+      },
+      {
+        "year": 1991,
+        "winner": "Creighton",
+        "winnerFull": "Creighton Bluejays",
+        "winnerSeed": 11,
+        "loser": "New Mexico State",
+        "loserFull": "New Mexico State Aggies",
+        "loserSeed": 6,
+        "score": "64-56"
+      },
+      {
+        "year": 1991,
+        "winner": "UConn",
+        "winnerFull": "Connecticut Huskies",
+        "winnerSeed": 11,
+        "loser": "LSU",
+        "loserFull": "LSU Tigers",
+        "loserSeed": 6,
+        "score": "79-62"
+      },
+      {
+        "year": 1993,
+        "winner": "Tulane",
+        "winnerFull": "Tulane Green Wave",
+        "winnerSeed": 11,
+        "loser": "Kansas State",
+        "loserFull": "Kansas State Wildcats",
+        "loserSeed": 6,
+        "score": "55-53"
+      },
+      {
+        "year": 1994,
+        "winner": "Penn",
+        "winnerFull": "Penn Quakers",
+        "winnerSeed": 11,
+        "loser": "Nebraska",
+        "loserFull": "Nebraska Cornhuskers",
+        "loserSeed": 6,
+        "score": "90-80"
+      },
+      {
+        "year": 1995,
+        "winner": "Texas",
+        "winnerFull": "Texas Longhorns",
+        "winnerSeed": 11,
+        "loser": "Oregon",
+        "loserFull": "Oregon Ducks",
+        "loserSeed": 6,
+        "score": "90-73"
+      },
+      {
+        "year": 1996,
+        "winner": "Boston College",
+        "winnerFull": "Boston College Eagles",
+        "winnerSeed": 11,
+        "loser": "Indiana",
+        "loserFull": "Indiana Hoosiers",
+        "loserSeed": 6,
+        "score": "64-51"
+      },
+      {
+        "year": 1998,
+        "winner": "Washington",
+        "winnerFull": "Washington Huskies",
+        "winnerSeed": 11,
+        "loser": "Xavier",
+        "loserFull": "Xavier Musketeers",
+        "loserSeed": 6,
+        "score": "69-68"
+      },
+      {
+        "year": 1998,
+        "winner": "Western Michigan",
+        "winnerFull": "Western Michigan Broncos",
+        "winnerSeed": 11,
+        "loser": "Clemson",
+        "loserFull": "Clemson Tigers",
+        "loserSeed": 6,
+        "score": "75-72"
       },
       {
         "year": 2000,
@@ -1459,6 +1557,66 @@
         "notes": "Bobby Knight's last game as Indiana coach. Largest 11-over-6 margin ever (20 points)."
       },
       {
+        "year": 2001,
+        "winner": "Georgia State",
+        "winnerFull": "Georgia State Panthers",
+        "winnerSeed": 11,
+        "loser": "Wisconsin",
+        "loserFull": "Wisconsin Badgers",
+        "loserSeed": 6,
+        "score": "50-49"
+      },
+      {
+        "year": 2001,
+        "winner": "Temple",
+        "winnerFull": "Temple Owls",
+        "winnerSeed": 11,
+        "loser": "Texas",
+        "loserFull": "Texas Longhorns",
+        "loserSeed": 6,
+        "score": "79-65"
+      },
+      {
+        "year": 2002,
+        "winner": "Southern Illinois",
+        "winnerFull": "Southern Illinois Salukis",
+        "winnerSeed": 11,
+        "loser": "Texas Tech",
+        "loserFull": "Texas Tech Red Raiders",
+        "loserSeed": 6,
+        "score": "76-68"
+      },
+      {
+        "year": 2002,
+        "winner": "Wyoming",
+        "winnerFull": "Wyoming Cowboys",
+        "winnerSeed": 11,
+        "loser": "Gonzaga",
+        "loserFull": "Gonzaga Bulldogs",
+        "loserSeed": 6,
+        "score": "73-66"
+      },
+      {
+        "year": 2003,
+        "winner": "Central Michigan",
+        "winnerFull": "Central Michigan Chippewas",
+        "winnerSeed": 11,
+        "loser": "Creighton",
+        "loserFull": "Creighton Bluejays",
+        "loserSeed": 6,
+        "score": "79-73"
+      },
+      {
+        "year": 2005,
+        "winner": "UAB",
+        "winnerFull": "UAB Blazers",
+        "winnerSeed": 11,
+        "loser": "LSU",
+        "loserFull": "LSU Tigers",
+        "loserSeed": 6,
+        "score": "82-68"
+      },
+      {
         "year": 2006,
         "winner": "George Mason",
         "winnerFull": "George Mason Patriots",
@@ -1468,6 +1626,96 @@
         "loserSeed": 6,
         "score": "75-65",
         "notes": "George Mason went on to reach the Final Four."
+      },
+      {
+        "year": 2006,
+        "winner": "Milwaukee",
+        "winnerFull": "Milwaukee Panthers",
+        "winnerSeed": 11,
+        "loser": "Oklahoma",
+        "loserFull": "Oklahoma Sooners",
+        "loserSeed": 6,
+        "score": "82-74"
+      },
+      {
+        "year": 2007,
+        "winner": "VCU",
+        "winnerFull": "VCU Rams",
+        "winnerSeed": 11,
+        "loser": "Duke",
+        "loserFull": "Duke Blue Devils",
+        "loserSeed": 6,
+        "score": "79-77"
+      },
+      {
+        "year": 2007,
+        "winner": "Winthrop",
+        "winnerFull": "Winthrop Eagles",
+        "winnerSeed": 11,
+        "loser": "Notre Dame",
+        "loserFull": "Notre Dame Fighting Irish",
+        "loserSeed": 6,
+        "score": "74-64"
+      },
+      {
+        "year": 2008,
+        "winner": "Kansas State",
+        "winnerFull": "Kansas State Wildcats",
+        "winnerSeed": 11,
+        "loser": "USC",
+        "loserFull": "USC Trojans",
+        "loserSeed": 6,
+        "score": "80-67"
+      },
+      {
+        "year": 2009,
+        "winner": "Dayton",
+        "winnerFull": "Dayton Flyers",
+        "winnerSeed": 11,
+        "loser": "West Virginia",
+        "loserFull": "West Virginia Mountaineers",
+        "loserSeed": 6,
+        "score": "68-60"
+      },
+      {
+        "year": 2010,
+        "winner": "Old Dominion",
+        "winnerFull": "Old Dominion Monarchs",
+        "winnerSeed": 11,
+        "loser": "Notre Dame",
+        "loserFull": "Notre Dame Fighting Irish",
+        "loserSeed": 6,
+        "score": "51-50"
+      },
+      {
+        "year": 2010,
+        "winner": "Washington",
+        "winnerFull": "Washington Huskies",
+        "winnerSeed": 11,
+        "loser": "Marquette",
+        "loserFull": "Marquette Golden Eagles",
+        "loserSeed": 6,
+        "score": "80-78"
+      },
+      {
+        "year": 2011,
+        "winner": "Gonzaga",
+        "winnerFull": "Gonzaga Bulldogs",
+        "winnerSeed": 11,
+        "loser": "St. John's",
+        "loserFull": "St. John's Red Storm",
+        "loserSeed": 6,
+        "score": "86-71"
+      },
+      {
+        "year": 2011,
+        "winner": "Marquette",
+        "winnerFull": "Marquette Golden Eagles",
+        "winnerSeed": 11,
+        "loser": "Xavier",
+        "loserFull": "Xavier Musketeers",
+        "loserSeed": 6,
+        "score": "66-55"
       },
       {
         "year": 2011,
@@ -1481,14 +1729,14 @@
         "notes": "VCU went on to reach the Final Four."
       },
       {
-        "year": 2011,
-        "winner": "Marquette",
-        "winnerFull": "Marquette Golden Eagles",
+        "year": 2012,
+        "winner": "Colorado",
+        "winnerFull": "Colorado Buffaloes",
         "winnerSeed": 11,
-        "loser": "Xavier",
-        "loserFull": "Xavier Musketeers",
+        "loser": "UNLV",
+        "loserFull": "UNLV Rebels",
         "loserSeed": 6,
-        "score": "66-55"
+        "score": "68-64"
       },
       {
         "year": 2012,
@@ -1532,6 +1780,16 @@
       },
       {
         "year": 2015,
+        "winner": "Dayton",
+        "winnerFull": "Dayton Flyers",
+        "winnerSeed": 11,
+        "loser": "Providence",
+        "loserFull": "Providence Friars",
+        "loserSeed": 6,
+        "score": "66-53"
+      },
+      {
+        "year": 2015,
         "winner": "UCLA",
         "winnerFull": "UCLA Bruins",
         "winnerSeed": 11,
@@ -1562,6 +1820,16 @@
       },
       {
         "year": 2016,
+        "winner": "Northern Iowa",
+        "winnerFull": "Northern Iowa Panthers",
+        "winnerSeed": 11,
+        "loser": "Texas",
+        "loserFull": "Texas Longhorns",
+        "loserSeed": 6,
+        "score": "75-72"
+      },
+      {
+        "year": 2016,
         "winner": "Wichita State",
         "winnerFull": "Wichita State Shockers",
         "winnerSeed": 11,
@@ -1572,13 +1840,13 @@
       },
       {
         "year": 2017,
-        "winner": "Xavier",
-        "winnerFull": "Xavier Musketeers",
+        "winner": "Rhode Island",
+        "winnerFull": "Rhode Island Rams",
         "winnerSeed": 11,
-        "loser": "Maryland",
-        "loserFull": "Maryland Terrapins",
+        "loser": "Creighton",
+        "loserFull": "Creighton Bluejays",
         "loserSeed": 6,
-        "score": "76-65"
+        "score": "84-72"
       },
       {
         "year": 2017,
@@ -1592,13 +1860,13 @@
       },
       {
         "year": 2017,
-        "winner": "Rhode Island",
-        "winnerFull": "Rhode Island Rams",
+        "winner": "Xavier",
+        "winnerFull": "Xavier Musketeers",
         "winnerSeed": 11,
-        "loser": "Creighton",
-        "loserFull": "Creighton Bluejays",
+        "loser": "Maryland",
+        "loserFull": "Maryland Terrapins",
         "loserSeed": 6,
-        "score": "84-72"
+        "score": "76-65"
       },
       {
         "year": 2018,
@@ -1623,13 +1891,23 @@
       },
       {
         "year": 2019,
-        "winner": "Belmont",
-        "winnerFull": "Belmont Bruins",
+        "winner": "Ohio State",
+        "winnerFull": "Ohio State Buckeyes",
         "winnerSeed": 11,
-        "loser": "Maryland",
-        "loserFull": "Maryland Terrapins",
+        "loser": "Iowa State",
+        "loserFull": "Iowa State Cyclones",
         "loserSeed": 6,
-        "score": "79-77"
+        "score": "62-59"
+      },
+      {
+        "year": 2021,
+        "winner": "Syracuse",
+        "winnerFull": "Syracuse Orange",
+        "winnerSeed": 11,
+        "loser": "San Diego State",
+        "loserFull": "San Diego State Aztecs",
+        "loserSeed": 6,
+        "score": "78-62"
       },
       {
         "year": 2021,
@@ -1643,14 +1921,24 @@
         "notes": "UCLA went on to reach the Final Four."
       },
       {
-        "year": 2021,
-        "winner": "Syracuse",
-        "winnerFull": "Syracuse Orange",
+        "year": 2022,
+        "winner": "Iowa State",
+        "winnerFull": "Iowa State Cyclones",
         "winnerSeed": 11,
-        "loser": "San Diego State",
-        "loserFull": "San Diego State Aztecs",
+        "loser": "LSU",
+        "loserFull": "LSU Tigers",
         "loserSeed": 6,
-        "score": "78-62"
+        "score": "59-54"
+      },
+      {
+        "year": 2022,
+        "winner": "Michigan",
+        "winnerFull": "Michigan Wolverines",
+        "winnerSeed": 11,
+        "loser": "Colorado State",
+        "loserFull": "Colorado State Rams",
+        "loserSeed": 6,
+        "score": "75-63"
       },
       {
         "year": 2022,
@@ -1663,34 +1951,24 @@
         "score": "78-64"
       },
       {
-        "year": 2022,
-        "winner": "Iowa State",
-        "winnerFull": "Iowa State Cyclones",
-        "winnerSeed": 11,
-        "loser": "LSU",
-        "loserFull": "LSU Tigers",
-        "loserSeed": 6,
-        "score": "59-54"
-      },
-      {
         "year": 2023,
-        "winner": "Drake",
-        "winnerFull": "Drake Bulldogs",
+        "winner": "Pitt",
+        "winnerFull": "Pittsburgh Panthers",
         "winnerSeed": 11,
-        "loser": "Miami (FL)",
-        "loserFull": "Miami Hurricanes",
+        "loser": "Iowa State",
+        "loserFull": "Iowa State Cyclones",
         "loserSeed": 6,
-        "score": "74-61"
+        "score": "59-41"
       },
       {
         "year": 2024,
-        "winner": "Oregon",
-        "winnerFull": "Oregon Ducks",
+        "winner": "Duquesne",
+        "winnerFull": "Duquesne Dukes",
         "winnerSeed": 11,
-        "loser": "South Carolina",
-        "loserFull": "South Carolina Gamecocks",
+        "loser": "BYU",
+        "loserFull": "BYU Cougars",
         "loserSeed": 6,
-        "score": "87-73"
+        "score": "71-67"
       },
       {
         "year": 2024,
@@ -1705,13 +1983,13 @@
       },
       {
         "year": 2024,
-        "winner": "Duquesne",
-        "winnerFull": "Duquesne Dukes",
+        "winner": "Oregon",
+        "winnerFull": "Oregon Ducks",
         "winnerSeed": 11,
-        "loser": "BYU",
-        "loserFull": "BYU Cougars",
+        "loser": "South Carolina",
+        "loserFull": "South Carolina Gamecocks",
         "loserSeed": 6,
-        "score": "71-67"
+        "score": "87-73"
       },
       {
         "year": 2025,
@@ -1723,38 +2001,204 @@
         "loserSeed": 6,
         "score": "74-65"
       }
-    ],
-    "_note": "Verified total: 62 upsets. 36 games with full details currently listed. Remaining games being researched.",
-    "listedUpsets": 36
+    ]
   },
   "7v10": {
-    "higherSeedWins": 98,
-    "lowerSeedWins": 62,
+    "higherSeedWins": 95,
+    "lowerSeedWins": 65,
     "totalGames": 160,
-    "upsetPct": 38.75,
+    "upsetPct": 40.62,
     "notes": "The 7v10 matchup has an identical upset rate to 6v11. In 1999, all four 10 seeds won. Syracuse became the only 10 seed to reach the Final Four in 2016. The 2021 Oregon vs VCU game was a no-contest due to COVID protocols.",
     "upsets": [
       {
         "year": 1986,
+        "winner": "Villanova",
+        "winnerFull": "Villanova Wildcats",
+        "winnerSeed": 10,
+        "loser": "Virginia Tech",
+        "loserFull": "Virginia Tech Hokies",
+        "loserSeed": 7,
+        "score": "71-62"
+      },
+      {
+        "year": 1987,
         "winner": "LSU",
         "winnerFull": "LSU Tigers",
+        "winnerSeed": 10,
+        "loser": "Georgia Tech",
+        "loserFull": "Georgia Tech Yellow Jackets",
+        "loserSeed": 7,
+        "score": "85-79"
+      },
+      {
+        "year": 1987,
+        "winner": "Western Kentucky",
+        "winnerFull": "Western Kentucky Hilltoppers",
+        "winnerSeed": 10,
+        "loser": "West Virginia",
+        "loserFull": "West Virginia Mountaineers",
+        "loserSeed": 7,
+        "score": "64-62"
+      },
+      {
+        "year": 1988,
+        "winner": "Loyola Marymount",
+        "winnerFull": "Loyola Marymount Lions",
+        "winnerSeed": 10,
+        "loser": "Wyoming",
+        "loserFull": "Wyoming Cowboys",
+        "loserSeed": 7,
+        "score": "119-115"
+      },
+      {
+        "year": 1989,
+        "winner": "Colorado State",
+        "winnerFull": "Colorado State Rams",
+        "winnerSeed": 10,
+        "loser": "Florida",
+        "loserFull": "Florida Gators",
+        "loserSeed": 7,
+        "score": "68-46"
+      },
+      {
+        "year": 1990,
+        "winner": "Texas",
+        "winnerFull": "Texas Longhorns",
+        "winnerSeed": 10,
+        "loser": "Georgia",
+        "loserFull": "Georgia Bulldogs",
+        "loserSeed": 7,
+        "score": "100-88"
+      },
+      {
+        "year": 1991,
+        "winner": "BYU",
+        "winnerFull": "BYU Cougars",
+        "winnerSeed": 10,
+        "loser": "Virginia",
+        "loserFull": "Virginia Cavaliers",
+        "loserSeed": 7,
+        "score": "61-48"
+      },
+      {
+        "year": 1991,
+        "winner": "Temple",
+        "winnerFull": "Temple Owls",
         "winnerSeed": 10,
         "loser": "Purdue",
         "loserFull": "Purdue Boilermakers",
         "loserSeed": 7,
-        "score": "94-87",
-        "overtimes": 2
+        "score": "80-63"
       },
       {
-        "year": 1990,
-        "winner": "Loyola Marymount",
-        "winnerFull": "Loyola Marymount Lions",
+        "year": 1992,
+        "winner": "Iowa State",
+        "winnerFull": "Iowa State Cyclones",
+        "winnerSeed": 10,
+        "loser": "Charlotte",
+        "loserFull": "Charlotte 49ers",
+        "loserSeed": 7,
+        "score": "76-74"
+      },
+      {
+        "year": 1992,
+        "winner": "Tulane",
+        "winnerFull": "Tulane Green Wave",
+        "winnerSeed": 10,
+        "loser": "St. John's",
+        "loserFull": "St. John's Red Storm",
+        "loserSeed": 7,
+        "score": "61-57"
+      },
+      {
+        "year": 1994,
+        "winner": "George Washington",
+        "winnerFull": "George Washington Colonials",
+        "winnerSeed": 10,
+        "loser": "UAB",
+        "loserFull": "UAB Blazers",
+        "loserSeed": 7,
+        "score": "51-46"
+      },
+      {
+        "year": 1994,
+        "winner": "Maryland",
+        "winnerFull": "Maryland Terrapins",
+        "winnerSeed": 10,
+        "loser": "Saint Louis",
+        "loserFull": "Saint Louis Billikens",
+        "loserSeed": 7,
+        "score": "74-66"
+      },
+      {
+        "year": 1995,
+        "winner": "Stanford",
+        "winnerFull": "Stanford Cardinal",
+        "winnerSeed": 10,
+        "loser": "Charlotte",
+        "loserFull": "Charlotte 49ers",
+        "loserSeed": 7,
+        "score": "70-68"
+      },
+      {
+        "year": 1996,
+        "winner": "Santa Clara",
+        "winnerFull": "Santa Clara Broncos",
+        "winnerSeed": 10,
+        "loser": "Maryland",
+        "loserFull": "Maryland Terrapins",
+        "loserSeed": 7,
+        "score": "91-79"
+      },
+      {
+        "year": 1996,
+        "winner": "Texas",
+        "winnerFull": "Texas Longhorns",
         "winnerSeed": 10,
         "loser": "Michigan",
         "loserFull": "Michigan Wolverines",
         "loserSeed": 7,
-        "score": "149-115",
-        "notes": "Highest combined score in NCAA tournament history."
+        "score": "80-76"
+      },
+      {
+        "year": 1997,
+        "winner": "Providence",
+        "winnerFull": "Providence Friars",
+        "winnerSeed": 10,
+        "loser": "Marquette",
+        "loserFull": "Marquette Golden Eagles",
+        "loserSeed": 7,
+        "score": "81-59"
+      },
+      {
+        "year": 1997,
+        "winner": "Texas",
+        "winnerFull": "Texas Longhorns",
+        "winnerSeed": 10,
+        "loser": "Wisconsin",
+        "loserFull": "Wisconsin Badgers",
+        "loserSeed": 7,
+        "score": "71-58"
+      },
+      {
+        "year": 1998,
+        "winner": "Detroit Mercy",
+        "winnerFull": "Detroit Mercy Titans",
+        "winnerSeed": 10,
+        "loser": "St. John's",
+        "loserFull": "St. John's Red Storm",
+        "loserSeed": 7,
+        "score": "66-64"
+      },
+      {
+        "year": 1998,
+        "winner": "Saint Louis",
+        "winnerFull": "Saint Louis Billikens",
+        "winnerSeed": 10,
+        "loser": "UMass",
+        "loserFull": "UMass Minutemen",
+        "loserSeed": 7,
+        "score": "51-46"
       },
       {
         "year": 1998,
@@ -1769,6 +2213,16 @@
       },
       {
         "year": 1999,
+        "winner": "Creighton",
+        "winnerFull": "Creighton Bluejays",
+        "winnerSeed": 10,
+        "loser": "Louisville",
+        "loserFull": "Louisville Cardinals",
+        "loserSeed": 7,
+        "score": "62-58"
+      },
+      {
+        "year": 1999,
         "winner": "Gonzaga",
         "winnerFull": "Gonzaga Bulldogs",
         "winnerSeed": 10,
@@ -1777,6 +2231,106 @@
         "loserSeed": 7,
         "score": "75-63",
         "notes": "Part of the only 10-seed sweep in tournament history."
+      },
+      {
+        "year": 1999,
+        "winner": "Miami (OH)",
+        "winnerFull": "Miami (OH) RedHawks",
+        "winnerSeed": 10,
+        "loser": "Washington",
+        "loserFull": "Washington Huskies",
+        "loserSeed": 7,
+        "score": "59-58"
+      },
+      {
+        "year": 1999,
+        "winner": "Purdue",
+        "winnerFull": "Purdue Boilermakers",
+        "winnerSeed": 10,
+        "loser": "Texas",
+        "loserFull": "Texas Longhorns",
+        "loserSeed": 7,
+        "score": "58-54"
+      },
+      {
+        "year": 2000,
+        "winner": "Gonzaga",
+        "winnerFull": "Gonzaga Bulldogs",
+        "winnerSeed": 10,
+        "loser": "Louisville",
+        "loserFull": "Louisville Cardinals",
+        "loserSeed": 7,
+        "score": "77-66"
+      },
+      {
+        "year": 2000,
+        "winner": "Seton Hall",
+        "winnerFull": "Seton Hall Pirates",
+        "winnerSeed": 10,
+        "loser": "Oregon",
+        "loserFull": "Oregon Ducks",
+        "loserSeed": 7,
+        "score": "72-71"
+      },
+      {
+        "year": 2001,
+        "winner": "Butler",
+        "winnerFull": "Butler Bulldogs",
+        "winnerSeed": 10,
+        "loser": "Wake Forest",
+        "loserFull": "Wake Forest Demon Deacons",
+        "loserSeed": 7,
+        "score": "79-63"
+      },
+      {
+        "year": 2001,
+        "winner": "Georgetown",
+        "winnerFull": "Georgetown Hoyas",
+        "winnerSeed": 10,
+        "loser": "Arkansas",
+        "loserFull": "Arkansas Razorbacks",
+        "loserSeed": 7,
+        "score": "63-61"
+      },
+      {
+        "year": 2002,
+        "winner": "Kent State",
+        "winnerFull": "Kent State Golden Flashes",
+        "winnerSeed": 10,
+        "loser": "Oklahoma State",
+        "loserFull": "Oklahoma State Cowboys",
+        "loserSeed": 7,
+        "score": "69-61"
+      },
+      {
+        "year": 2003,
+        "winner": "Arizona State",
+        "winnerFull": "Arizona State Sun Devils",
+        "winnerSeed": 10,
+        "loser": "Memphis",
+        "loserFull": "Memphis Tigers",
+        "loserSeed": 7,
+        "score": "84-71"
+      },
+      {
+        "year": 2003,
+        "winner": "Auburn",
+        "winnerFull": "Auburn Tigers",
+        "winnerSeed": 10,
+        "loser": "Saint Joseph's",
+        "loserFull": "Saint Joseph's Hawks",
+        "loserSeed": 7,
+        "score": "65-63"
+      },
+      {
+        "year": 2004,
+        "winner": "Nevada",
+        "winnerFull": "Nevada Wolf Pack",
+        "winnerSeed": 10,
+        "loser": "Michigan State",
+        "loserFull": "Michigan State Spartans",
+        "loserSeed": 7,
+        "score": "72-66"
       },
       {
         "year": 2005,
@@ -1811,13 +2365,53 @@
       },
       {
         "year": 2009,
-        "winner": "Northern Iowa",
-        "winnerFull": "Northern Iowa Panthers",
+        "winner": "Maryland",
+        "winnerFull": "Maryland Terrapins",
         "winnerSeed": 10,
-        "loser": "Purdue",
-        "loserFull": "Purdue Boilermakers",
+        "loser": "California",
+        "loserFull": "California Golden Bears",
         "loserSeed": 7,
-        "score": "63-53"
+        "score": "84-71"
+      },
+      {
+        "year": 2009,
+        "winner": "Michigan",
+        "winnerFull": "Michigan Wolverines",
+        "winnerSeed": 10,
+        "loser": "Clemson",
+        "loserFull": "Clemson Tigers",
+        "loserSeed": 7,
+        "score": "62-59"
+      },
+      {
+        "year": 2009,
+        "winner": "USC",
+        "winnerFull": "USC Trojans",
+        "winnerSeed": 10,
+        "loser": "Boston College",
+        "loserFull": "Boston College Eagles",
+        "loserSeed": 7,
+        "score": "72-55"
+      },
+      {
+        "year": 2010,
+        "winner": "Georgia Tech",
+        "winnerFull": "Georgia Tech Yellow Jackets",
+        "winnerSeed": 10,
+        "loser": "Oklahoma State",
+        "loserFull": "Oklahoma State Cowboys",
+        "loserSeed": 7,
+        "score": "64-59"
+      },
+      {
+        "year": 2010,
+        "winner": "Missouri",
+        "winnerFull": "Missouri Tigers",
+        "winnerSeed": 10,
+        "loser": "Clemson",
+        "loserFull": "Clemson Tigers",
+        "loserSeed": 7,
+        "score": "86-78"
       },
       {
         "year": 2010,
@@ -1841,6 +2435,16 @@
       },
       {
         "year": 2012,
+        "winner": "Purdue",
+        "winnerFull": "Purdue Boilermakers",
+        "winnerSeed": 10,
+        "loser": "Saint Mary's",
+        "loserFull": "Saint Mary's Gaels",
+        "loserSeed": 7,
+        "score": "72-69"
+      },
+      {
+        "year": 2012,
         "winner": "Xavier",
         "winnerFull": "Xavier Musketeers",
         "winnerSeed": 10,
@@ -1861,6 +2465,16 @@
       },
       {
         "year": 2014,
+        "winner": "Dayton",
+        "winnerFull": "Dayton Flyers",
+        "winnerSeed": 10,
+        "loser": "Providence",
+        "loserFull": "Providence Friars",
+        "loserSeed": 7,
+        "score": "68-65"
+      },
+      {
+        "year": 2014,
         "winner": "Stanford",
         "winnerFull": "Stanford Cardinal",
         "winnerSeed": 10,
@@ -1870,14 +2484,14 @@
         "score": "60-57"
       },
       {
-        "year": 2014,
-        "winner": "Dayton",
-        "winnerFull": "Dayton Flyers",
+        "year": 2015,
+        "winner": "Ohio State",
+        "winnerFull": "Ohio State Buckeyes",
         "winnerSeed": 10,
-        "loser": "Providence",
-        "loserFull": "Providence Friars",
+        "loser": "VCU",
+        "loserFull": "VCU Rams",
         "loserSeed": 7,
-        "score": "68-65"
+        "score": "75-72"
       },
       {
         "year": 2015,
@@ -1962,16 +2576,6 @@
       },
       {
         "year": 2021,
-        "winner": "Rutgers",
-        "winnerFull": "Rutgers Scarlet Knights",
-        "winnerSeed": 10,
-        "loser": "Clemson",
-        "loserFull": "Clemson Tigers",
-        "loserSeed": 7,
-        "score": "60-56"
-      },
-      {
-        "year": 2021,
         "winner": "Maryland",
         "winnerFull": "Maryland Terrapins",
         "winnerSeed": 10,
@@ -1979,6 +2583,16 @@
         "loserFull": "Connecticut Huskies",
         "loserSeed": 7,
         "score": "63-54"
+      },
+      {
+        "year": 2021,
+        "winner": "Rutgers",
+        "winnerFull": "Rutgers Scarlet Knights",
+        "winnerSeed": 10,
+        "loser": "Clemson",
+        "loserFull": "Clemson Tigers",
+        "loserSeed": 7,
+        "score": "60-56"
       },
       {
         "year": 2022,
@@ -2051,86 +2665,697 @@
         "loserSeed": 7,
         "score": "69-63"
       }
-    ],
-    "_note": "Verified total: 62 upsets. 31 games with full details currently listed. Remaining games being researched.",
-    "listedUpsets": 31
+    ]
   },
   "8v9": {
-    "higherSeedWins": 77,
-    "lowerSeedWins": 83,
+    "higherSeedWins": 75,
+    "lowerSeedWins": 85,
     "totalGames": 160,
-    "upsetPct": 51.88,
+    "upsetPct": 53.12,
     "notes": "The 8v9 matchup is the only first-round pairing where the lower seed (9) has a winning record historically. It is essentially a coin flip and the toughest game to predict in bracket pools. All four 8 seeds won in 2015; all four 9 seeds won in 2019. The lowest seed to win the national championship is an 8 (Villanova 1985).",
     "upsets": [
       {
         "year": 1985,
-        "winner": "Loyola (IL)",
-        "winnerFull": "Loyola Ramblers",
-        "winnerSeed": 9,
-        "loser": "Iona",
-        "loserFull": "Iona Gaels",
-        "loserSeed": 8,
-        "score": "59-58"
-      },
-      {
-        "year": 1986,
-        "winner": "North Carolina A&T",
-        "winnerFull": "North Carolina A&T Aggies",
+        "winner": "Arkansas",
+        "winnerFull": "Arkansas Razorbacks",
         "winnerSeed": 9,
         "loser": "Iowa",
         "loserFull": "Iowa Hawkeyes",
         "loserSeed": 8,
-        "score": "64-62"
+        "score": "63-54"
+      },
+      {
+        "year": 1985,
+        "winner": "Illinois State",
+        "winnerFull": "Illinois State Redbirds",
+        "winnerSeed": 9,
+        "loser": "USC",
+        "loserFull": "USC Trojans",
+        "loserSeed": 8,
+        "score": "58-55"
+      },
+      {
+        "year": 1986,
+        "winner": "Temple",
+        "winnerFull": "Temple Owls",
+        "winnerSeed": 9,
+        "loser": "Jacksonville",
+        "loserFull": "Jacksonville Dolphins",
+        "loserSeed": 8,
+        "score": "61-50"
+      },
+      {
+        "year": 1987,
+        "winner": "Kansas State",
+        "winnerFull": "Kansas State Wildcats",
+        "winnerSeed": 9,
+        "loser": "Georgia",
+        "loserFull": "Georgia Bulldogs",
+        "loserSeed": 8,
+        "score": "82-79",
+        "overtimes": 1
+      },
+      {
+        "year": 1987,
+        "winner": "Michigan",
+        "winnerFull": "Michigan Wolverines",
+        "winnerSeed": 9,
+        "loser": "Navy",
+        "loserFull": "Navy Midshipmen",
+        "loserSeed": 8,
+        "score": "97-82"
+      },
+      {
+        "year": 1987,
+        "winner": "Ohio State",
+        "winnerFull": "Ohio State Buckeyes",
+        "winnerSeed": 9,
+        "loser": "Kentucky",
+        "loserFull": "Kentucky Wildcats",
+        "loserSeed": 8,
+        "score": "91-77"
       },
       {
         "year": 1988,
-        "winner": "Iowa",
-        "winnerFull": "Iowa Hawkeyes",
+        "winner": "Memphis",
+        "winnerFull": "Memphis Tigers",
         "winnerSeed": 9,
-        "loser": "Florida State",
-        "loserFull": "Florida State Seminoles",
+        "loser": "Baylor",
+        "loserFull": "Baylor Bears",
         "loserSeed": 8,
-        "score": "102-98"
+        "score": "75-60"
+      },
+      {
+        "year": 1989,
+        "winner": "Ball State",
+        "winnerFull": "Ball State Cardinals",
+        "winnerSeed": 9,
+        "loser": "Pittsburgh",
+        "loserFull": "Pittsburgh Panthers",
+        "loserSeed": 8,
+        "score": "68-64"
+      },
+      {
+        "year": 1989,
+        "winner": "Clemson",
+        "winnerFull": "Clemson Tigers",
+        "winnerSeed": 9,
+        "loser": "Saint Mary's",
+        "loserFull": "Saint Mary's Gaels",
+        "loserSeed": 8,
+        "score": "83-70"
+      },
+      {
+        "year": 1989,
+        "winner": "Louisiana Tech",
+        "winnerFull": "Louisiana Tech Bulldogs",
+        "winnerSeed": 9,
+        "loser": "La Salle",
+        "loserFull": "La Salle Explorers",
+        "loserSeed": 8,
+        "score": "83-74"
+      },
+      {
+        "year": 1989,
+        "winner": "Notre Dame",
+        "winnerFull": "Notre Dame Fighting Irish",
+        "winnerSeed": 9,
+        "loser": "Vanderbilt",
+        "loserFull": "Vanderbilt Commodores",
+        "loserSeed": 8,
+        "score": "81-65"
+      },
+      {
+        "year": 1990,
+        "winner": "California",
+        "winnerFull": "California Golden Bears",
+        "winnerSeed": 9,
+        "loser": "Indiana",
+        "loserFull": "Indiana Hoosiers",
+        "loserSeed": 8,
+        "score": "65-63"
+      },
+      {
+        "year": 1990,
+        "winner": "UC Santa Barbara",
+        "winnerFull": "UC Santa Barbara Gauchos",
+        "winnerSeed": 9,
+        "loser": "Houston",
+        "loserFull": "Houston Cougars",
+        "loserSeed": 8,
+        "score": "70-66"
+      },
+      {
+        "year": 1991,
+        "winner": "Villanova",
+        "winnerFull": "Villanova Wildcats",
+        "winnerSeed": 9,
+        "loser": "Princeton",
+        "loserFull": "Princeton Tigers",
+        "loserSeed": 8,
+        "score": "50-48"
       },
       {
         "year": 1992,
-        "winner": "Evansville",
-        "winnerFull": "Evansville Purple Aces",
+        "winner": "Iowa",
+        "winnerFull": "Iowa Hawkeyes",
         "winnerSeed": 9,
-        "loser": "Georgetown",
-        "loserFull": "Georgetown Hoyas",
+        "loser": "Texas",
+        "loserFull": "Texas Longhorns",
         "loserSeed": 8,
-        "score": "63-60"
+        "score": "98-92"
+      },
+      {
+        "year": 1992,
+        "winner": "UConn",
+        "winnerFull": "Connecticut Huskies",
+        "winnerSeed": 9,
+        "loser": "Nebraska",
+        "loserFull": "Nebraska Cornhuskers",
+        "loserSeed": 8,
+        "score": "86-65"
+      },
+      {
+        "year": 1992,
+        "winner": "UTEP",
+        "winnerFull": "UTEP Miners",
+        "winnerSeed": 9,
+        "loser": "Evansville",
+        "loserFull": "Evansville Purple Aces",
+        "loserSeed": 8,
+        "score": "55-50"
+      },
+      {
+        "year": 1993,
+        "winner": "UCLA",
+        "winnerFull": "UCLA Bruins",
+        "winnerSeed": 9,
+        "loser": "Iowa State",
+        "loserFull": "Iowa State Cyclones",
+        "loserSeed": 8,
+        "score": "81-70"
+      },
+      {
+        "year": 1993,
+        "winner": "Xavier",
+        "winnerFull": "Xavier Musketeers",
+        "winnerSeed": 9,
+        "loser": "New Orleans",
+        "loserFull": "New Orleans Privateers",
+        "loserSeed": 8,
+        "score": "73-55"
       },
       {
         "year": 1994,
-        "winner": "Wisconsin-Green Bay",
-        "winnerFull": "Wisconsin-Green Bay Phoenix",
+        "winner": "Alabama",
+        "winnerFull": "Alabama Crimson Tide",
+        "winnerSeed": 9,
+        "loser": "Providence",
+        "loserFull": "Providence Friars",
+        "loserSeed": 8,
+        "score": "76-70"
+      },
+      {
+        "year": 1994,
+        "winner": "Boston College",
+        "winnerFull": "Boston College Eagles",
+        "winnerSeed": 9,
+        "loser": "Washington State",
+        "loserFull": "Washington State Cougars",
+        "loserSeed": 8,
+        "score": "67-64"
+      },
+      {
+        "year": 1994,
+        "winner": "Georgetown",
+        "winnerFull": "Georgetown Hoyas",
+        "winnerSeed": 9,
+        "loser": "Illinois",
+        "loserFull": "Illinois Fighting Illini",
+        "loserSeed": 8,
+        "score": "84-77"
+      },
+      {
+        "year": 1994,
+        "winner": "Wisconsin",
+        "winnerFull": "Wisconsin Badgers",
+        "winnerSeed": 9,
+        "loser": "Cincinnati",
+        "loserFull": "Cincinnati Bearcats",
+        "loserSeed": 8,
+        "score": "80-72"
+      },
+      {
+        "year": 1995,
+        "winner": "Saint Louis",
+        "winnerFull": "Saint Louis Billikens",
+        "winnerSeed": 9,
+        "loser": "Minnesota",
+        "loserFull": "Minnesota Golden Gophers",
+        "loserSeed": 8,
+        "score": "64-61",
+        "overtimes": 1
+      },
+      {
+        "year": 1996,
+        "winner": "Eastern Michigan",
+        "winnerFull": "Eastern Michigan Eagles",
+        "winnerSeed": 9,
+        "loser": "Duke",
+        "loserFull": "Duke Blue Devils",
+        "loserSeed": 8,
+        "score": "75-60"
+      },
+      {
+        "year": 1996,
+        "winner": "Stanford",
+        "winnerFull": "Stanford Cardinal",
+        "winnerSeed": 9,
+        "loser": "Bradley",
+        "loserFull": "Bradley Braves",
+        "loserSeed": 8,
+        "score": "66-58"
+      },
+      {
+        "year": 1996,
+        "winner": "Virginia Tech",
+        "winnerFull": "Virginia Tech Hokies",
+        "winnerSeed": 9,
+        "loser": "Green Bay",
+        "loserFull": "Green Bay Phoenix",
+        "loserSeed": 8,
+        "score": "61-48"
+      },
+      {
+        "year": 1997,
+        "winner": "Colorado",
+        "winnerFull": "Colorado Buffaloes",
+        "winnerSeed": 9,
+        "loser": "Indiana",
+        "loserFull": "Indiana Hoosiers",
+        "loserSeed": 8,
+        "score": "80-62"
+      },
+      {
+        "year": 1997,
+        "winner": "Temple",
+        "winnerFull": "Temple Owls",
+        "winnerSeed": 9,
+        "loser": "Ole Miss",
+        "loserFull": "Ole Miss Rebels",
+        "loserSeed": 8,
+        "score": "62-40"
+      },
+      {
+        "year": 1998,
+        "winner": "Illinois State",
+        "winnerFull": "Illinois State Redbirds",
+        "winnerSeed": 9,
+        "loser": "Tennessee",
+        "loserFull": "Tennessee Volunteers",
+        "loserSeed": 8,
+        "score": "82-81"
+      },
+      {
+        "year": 1999,
+        "winner": "New Mexico",
+        "winnerFull": "New Mexico Lobos",
+        "winnerSeed": 9,
+        "loser": "Missouri",
+        "loserFull": "Missouri Tigers",
+        "loserSeed": 8,
+        "score": "61-59"
+      },
+      {
+        "year": 1999,
+        "winner": "Oklahoma State",
+        "winnerFull": "Oklahoma State Cowboys",
+        "winnerSeed": 9,
+        "loser": "Syracuse",
+        "loserFull": "Syracuse Orange",
+        "loserSeed": 8,
+        "score": "69-61"
+      },
+      {
+        "year": 1999,
+        "winner": "Ole Miss",
+        "winnerFull": "Ole Miss Rebels",
+        "winnerSeed": 9,
+        "loser": "Villanova",
+        "loserFull": "Villanova Wildcats",
+        "loserSeed": 8,
+        "score": "72-70"
+      },
+      {
+        "year": 1999,
+        "winner": "Tulsa",
+        "winnerFull": "Tulsa Golden Hurricane",
+        "winnerSeed": 9,
+        "loser": "College of Charleston",
+        "loserFull": "College of Charleston Cougars",
+        "loserSeed": 8,
+        "score": "62-53"
+      },
+      {
+        "year": 2001,
+        "winner": "Charlotte",
+        "winnerFull": "Charlotte 49ers",
+        "winnerSeed": 9,
+        "loser": "Tennessee",
+        "loserFull": "Tennessee Volunteers",
+        "loserSeed": 8,
+        "score": "70-63"
+      },
+      {
+        "year": 2001,
+        "winner": "Fresno State",
+        "winnerFull": "Fresno State Bulldogs",
         "winnerSeed": 9,
         "loser": "California",
         "loserFull": "California Golden Bears",
         "loserSeed": 8,
-        "score": "61-57"
+        "score": "82-70"
+      },
+      {
+        "year": 2001,
+        "winner": "Missouri",
+        "winnerFull": "Missouri Tigers",
+        "winnerSeed": 9,
+        "loser": "Georgia",
+        "loserFull": "Georgia Bulldogs",
+        "loserSeed": 8,
+        "score": "70-68"
+      },
+      {
+        "year": 2001,
+        "winner": "Saint Joseph's",
+        "winnerFull": "Saint Joseph's Hawks",
+        "winnerSeed": 9,
+        "loser": "Georgia Tech",
+        "loserFull": "Georgia Tech Yellow Jackets",
+        "loserSeed": 8,
+        "score": "66-62"
+      },
+      {
+        "year": 2003,
+        "winner": "Gonzaga",
+        "winnerFull": "Gonzaga Bulldogs",
+        "winnerSeed": 9,
+        "loser": "Cincinnati",
+        "loserFull": "Cincinnati Bearcats",
+        "loserSeed": 8,
+        "score": "74-69"
+      },
+      {
+        "year": 2003,
+        "winner": "Purdue",
+        "winnerFull": "Purdue Boilermakers",
+        "winnerSeed": 9,
+        "loser": "LSU",
+        "loserFull": "LSU Tigers",
+        "loserSeed": 8,
+        "score": "80-56"
+      },
+      {
+        "year": 2003,
+        "winner": "Utah",
+        "winnerFull": "Utah Utes",
+        "winnerSeed": 9,
+        "loser": "Oregon",
+        "loserFull": "Oregon Ducks",
+        "loserSeed": 8,
+        "score": "60-58"
+      },
+      {
+        "year": 2004,
+        "winner": "UAB",
+        "winnerFull": "UAB Blazers",
+        "winnerSeed": 9,
+        "loser": "Washington",
+        "loserFull": "Washington Huskies",
+        "loserSeed": 8,
+        "score": "102-100"
       },
       {
         "year": 2005,
-        "winner": "West Virginia",
-        "winnerFull": "West Virginia Mountaineers",
+        "winner": "Iowa State",
+        "winnerFull": "Iowa State Cyclones",
+        "winnerSeed": 9,
+        "loser": "Minnesota",
+        "loserFull": "Minnesota Golden Gophers",
+        "loserSeed": 8,
+        "score": "64-53"
+      },
+      {
+        "year": 2005,
+        "winner": "Mississippi State",
+        "winnerFull": "Mississippi State Bulldogs",
+        "winnerSeed": 9,
+        "loser": "Stanford",
+        "loserFull": "Stanford Cardinal",
+        "loserSeed": 8,
+        "score": "93-70"
+      },
+      {
+        "year": 2005,
+        "winner": "Nevada",
+        "winnerFull": "Nevada Wolf Pack",
+        "winnerSeed": 9,
+        "loser": "Texas",
+        "loserFull": "Texas Longhorns",
+        "loserSeed": 8,
+        "score": "61-57"
+      },
+      {
+        "year": 2006,
+        "winner": "Bucknell",
+        "winnerFull": "Bucknell Bison",
+        "winnerSeed": 9,
+        "loser": "Arkansas",
+        "loserFull": "Arkansas Razorbacks",
+        "loserSeed": 8,
+        "score": "59-55"
+      },
+      {
+        "year": 2007,
+        "winner": "Michigan State",
+        "winnerFull": "Michigan State Spartans",
+        "winnerSeed": 9,
+        "loser": "Marquette",
+        "loserFull": "Marquette Golden Eagles",
+        "loserSeed": 8,
+        "score": "61-49"
+      },
+      {
+        "year": 2007,
+        "winner": "Purdue",
+        "winnerFull": "Purdue Boilermakers",
+        "winnerSeed": 9,
+        "loser": "Arizona",
+        "loserFull": "Arizona Wildcats",
+        "loserSeed": 8,
+        "score": "72-63"
+      },
+      {
+        "year": 2007,
+        "winner": "Xavier",
+        "winnerFull": "Xavier Musketeers",
+        "winnerSeed": 9,
+        "loser": "BYU",
+        "loserFull": "BYU Cougars",
+        "loserSeed": 8,
+        "score": "79-77"
+      },
+      {
+        "year": 2008,
+        "winner": "Arkansas",
+        "winnerFull": "Arkansas Razorbacks",
+        "winnerSeed": 9,
+        "loser": "Indiana",
+        "loserFull": "Indiana Hoosiers",
+        "loserSeed": 8,
+        "score": "86-72"
+      },
+      {
+        "year": 2008,
+        "winner": "Texas A&M",
+        "winnerFull": "Texas A&M Aggies",
+        "winnerSeed": 9,
+        "loser": "BYU",
+        "loserFull": "BYU Cougars",
+        "loserSeed": 8,
+        "score": "67-62"
+      },
+      {
+        "year": 2009,
+        "winner": "Siena",
+        "winnerFull": "Siena Saints",
+        "winnerSeed": 9,
+        "loser": "Ohio State",
+        "loserFull": "Ohio State Buckeyes",
+        "loserSeed": 8,
+        "score": "74-72"
+      },
+      {
+        "year": 2009,
+        "winner": "Texas A&M",
+        "winnerFull": "Texas A&M Aggies",
+        "winnerSeed": 9,
+        "loser": "BYU",
+        "loserFull": "BYU Cougars",
+        "loserSeed": 8,
+        "score": "79-66"
+      },
+      {
+        "year": 2010,
+        "winner": "Northern Iowa",
+        "winnerFull": "Northern Iowa Panthers",
+        "winnerSeed": 9,
+        "loser": "UNLV",
+        "loserFull": "UNLV Rebels",
+        "loserSeed": 8,
+        "score": "69-66"
+      },
+      {
+        "year": 2010,
+        "winner": "Wake Forest",
+        "winnerFull": "Wake Forest Demon Deacons",
+        "winnerSeed": 9,
+        "loser": "Texas",
+        "loserFull": "Texas Longhorns",
+        "loserSeed": 8,
+        "score": "81-80"
+      },
+      {
+        "year": 2011,
+        "winner": "Illinois",
+        "winnerFull": "Illinois Fighting Illini",
+        "winnerSeed": 9,
+        "loser": "UNLV",
+        "loserFull": "UNLV Rebels",
+        "loserSeed": 8,
+        "score": "73-62"
+      },
+      {
+        "year": 2012,
+        "winner": "Saint Louis",
+        "winnerFull": "Saint Louis Billikens",
+        "winnerSeed": 9,
+        "loser": "Memphis",
+        "loserFull": "Memphis Tigers",
+        "loserSeed": 8,
+        "score": "61-54"
+      },
+      {
+        "year": 2013,
+        "winner": "Temple",
+        "winnerFull": "Temple Owls",
+        "winnerSeed": 9,
+        "loser": "NC State",
+        "loserFull": "NC State Wolfpack",
+        "loserSeed": 8,
+        "score": "76-72"
+      },
+      {
+        "year": 2013,
+        "winner": "Wichita State",
+        "winnerFull": "Wichita State Shockers",
+        "winnerSeed": 9,
+        "loser": "Pitt",
+        "loserFull": "Pittsburgh Panthers",
+        "loserSeed": 8,
+        "score": "73-55"
+      },
+      {
+        "year": 2014,
+        "winner": "Pitt",
+        "winnerFull": "Pittsburgh Panthers",
+        "winnerSeed": 9,
+        "loser": "Colorado",
+        "loserFull": "Colorado Buffaloes",
+        "loserSeed": 8,
+        "score": "77-48"
+      },
+      {
+        "year": 2016,
+        "winner": "Butler",
+        "winnerFull": "Butler Bulldogs",
+        "winnerSeed": 9,
+        "loser": "Texas Tech",
+        "loserFull": "Texas Tech Red Raiders",
+        "loserSeed": 8,
+        "score": "71-61"
+      },
+      {
+        "year": 2016,
+        "winner": "Providence",
+        "winnerFull": "Providence Friars",
+        "winnerSeed": 9,
+        "loser": "USC",
+        "loserFull": "USC Trojans",
+        "loserSeed": 8,
+        "score": "70-69"
+      },
+      {
+        "year": 2016,
+        "winner": "UConn",
+        "winnerFull": "Connecticut Huskies",
+        "winnerSeed": 9,
+        "loser": "Colorado",
+        "loserFull": "Colorado Buffaloes",
+        "loserSeed": 8,
+        "score": "74-67"
+      },
+      {
+        "year": 2017,
+        "winner": "Michigan State",
+        "winnerFull": "Michigan State Spartans",
+        "winnerSeed": 9,
+        "loser": "Miami (FL)",
+        "loserFull": "Miami Hurricanes",
+        "loserSeed": 8,
+        "score": "78-58"
+      },
+      {
+        "year": 2018,
+        "winner": "Alabama",
+        "winnerFull": "Alabama Crimson Tide",
+        "winnerSeed": 9,
+        "loser": "Virginia Tech",
+        "loserFull": "Virginia Tech Hokies",
+        "loserSeed": 8,
+        "score": "86-83"
+      },
+      {
+        "year": 2018,
+        "winner": "Florida State",
+        "winnerFull": "Florida State Seminoles",
+        "winnerSeed": 9,
+        "loser": "Missouri",
+        "loserFull": "Missouri Tigers",
+        "loserSeed": 8,
+        "score": "67-54"
+      },
+      {
+        "year": 2018,
+        "winner": "Kansas State",
+        "winnerFull": "Kansas State Wildcats",
         "winnerSeed": 9,
         "loser": "Creighton",
         "loserFull": "Creighton Bluejays",
         "loserSeed": 8,
-        "score": "63-61"
+        "score": "69-59"
       },
       {
-        "year": 2009,
-        "winner": "Northern Iowa",
-        "winnerFull": "Northern Iowa Panthers",
+        "year": 2019,
+        "winner": "Baylor",
+        "winnerFull": "Baylor Bears",
         "winnerSeed": 9,
-        "loser": "Purdue",
-        "loserFull": "Purdue Boilermakers",
+        "loser": "Syracuse",
+        "loserFull": "Syracuse Orange",
         "loserSeed": 8,
-        "score": "63-53"
+        "score": "78-69",
+        "notes": "Part of the first 9-seed sweep since the 64-team era."
       },
       {
         "year": 2019,
@@ -2145,16 +3370,6 @@
       },
       {
         "year": 2019,
-        "winner": "UCF",
-        "winnerFull": "UCF Knights",
-        "winnerSeed": 9,
-        "loser": "VCU",
-        "loserFull": "VCU Rams",
-        "loserSeed": 8,
-        "score": "73-58"
-      },
-      {
-        "year": 2019,
         "winner": "Oklahoma",
         "winnerFull": "Oklahoma Sooners",
         "winnerSeed": 9,
@@ -2165,14 +3380,13 @@
       },
       {
         "year": 2019,
-        "winner": "Baylor",
-        "winnerFull": "Baylor Bears",
+        "winner": "UCF",
+        "winnerFull": "UCF Knights",
         "winnerSeed": 9,
-        "loser": "Syracuse",
-        "loserFull": "Syracuse Orange",
+        "loser": "VCU",
+        "loserFull": "VCU Rams",
         "loserSeed": 8,
-        "score": "78-69",
-        "notes": "Part of the first 9-seed sweep since the 64-team era."
+        "score": "73-58"
       },
       {
         "year": 2021,
@@ -2183,26 +3397,6 @@
         "loserFull": "North Carolina Tar Heels",
         "loserSeed": 8,
         "score": "85-62"
-      },
-      {
-        "year": 2021,
-        "winner": "Georgia Tech",
-        "winnerFull": "Georgia Tech Yellow Jackets",
-        "winnerSeed": 9,
-        "loser": "Loyola Chicago",
-        "loserFull": "Loyola Chicago Ramblers",
-        "loserSeed": 8,
-        "score": "71-60"
-      },
-      {
-        "year": 2022,
-        "winner": "Memphis",
-        "winnerFull": "Memphis Tigers",
-        "winnerSeed": 9,
-        "loser": "Boise State",
-        "loserFull": "Boise State Broncos",
-        "loserSeed": 8,
-        "score": "64-53"
       },
       {
         "year": 2022,
@@ -2216,6 +3410,16 @@
       },
       {
         "year": 2022,
+        "winner": "Memphis",
+        "winnerFull": "Memphis Tigers",
+        "winnerSeed": 9,
+        "loser": "Boise State",
+        "loserFull": "Boise State Broncos",
+        "loserSeed": 8,
+        "score": "64-53"
+      },
+      {
+        "year": 2022,
         "winner": "TCU",
         "winnerFull": "TCU Horned Frogs",
         "winnerSeed": 9,
@@ -2223,6 +3427,16 @@
         "loserFull": "Seton Hall Pirates",
         "loserSeed": 8,
         "score": "69-42"
+      },
+      {
+        "year": 2023,
+        "winner": "Auburn",
+        "winnerFull": "Auburn Tigers",
+        "winnerSeed": 9,
+        "loser": "Iowa",
+        "loserFull": "Iowa Hawkeyes",
+        "loserSeed": 8,
+        "score": "83-75"
       },
       {
         "year": 2023,
@@ -2257,6 +3471,16 @@
       },
       {
         "year": 2024,
+        "winner": "Michigan State",
+        "winnerFull": "Michigan State Spartans",
+        "winnerSeed": 9,
+        "loser": "Mississippi State",
+        "loserFull": "Mississippi State Bulldogs",
+        "loserSeed": 8,
+        "score": "69-51"
+      },
+      {
+        "year": 2024,
         "winner": "Northwestern",
         "winnerFull": "Northwestern Wildcats",
         "winnerSeed": 9,
@@ -2266,14 +3490,14 @@
         "score": "77-65"
       },
       {
-        "year": 2025,
-        "winner": "Georgia",
-        "winnerFull": "Georgia Bulldogs",
+        "year": 2024,
+        "winner": "Texas A&M",
+        "winnerFull": "Texas A&M Aggies",
         "winnerSeed": 9,
-        "loser": "Maryland",
-        "loserFull": "Maryland Terrapins",
+        "loser": "Nebraska",
+        "loserFull": "Nebraska Cornhuskers",
         "loserSeed": 8,
-        "score": "68-59"
+        "score": "98-83"
       },
       {
         "year": 2025,
@@ -2284,9 +3508,27 @@
         "loserFull": "Mississippi State Bulldogs",
         "loserSeed": 8,
         "score": "75-70"
+      },
+      {
+        "year": 2025,
+        "winner": "Creighton",
+        "winnerFull": "Creighton Bluejays",
+        "winnerSeed": 9,
+        "loser": "Louisville",
+        "loserFull": "Louisville Cardinals",
+        "loserSeed": 8,
+        "score": "89-75"
+      },
+      {
+        "year": 2025,
+        "winner": "Georgia",
+        "winnerFull": "Georgia Bulldogs",
+        "winnerSeed": 9,
+        "loser": "Maryland",
+        "loserFull": "Maryland Terrapins",
+        "loserSeed": 8,
+        "score": "68-59"
       }
-    ],
-    "_note": "Verified total: 83 upsets. 22 games with full details currently listed. Remaining games being researched.",
-    "listedUpsets": 22
+    ]
   }
 }
