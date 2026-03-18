@@ -3183,6 +3183,19 @@
                         if (freshTeam) Object.assign(currentProfile, freshTeam);
                     }
 
+                    // Pre-fetch and cache box score so it's instant when user clicks
+                    try {
+                        fetch(`https://site.api.espn.com/apis/site/v2/sports/basketball/mens-college-basketball/summary?event=${gameId}`)
+                            .then(r => r.ok ? r.json() : null)
+                            .then(boxData => {
+                                if (boxData) {
+                                    if (typeof h2hBoxScoreCache !== 'undefined') h2hBoxScoreCache[gameId] = boxData;
+                                    if (typeof champBoxScoreCache !== 'undefined') champBoxScoreCache[gameId] = boxData;
+                                    console.log(`Box score cached for game ${gameId}`);
+                                }
+                            }).catch(() => {});
+                    } catch(e) {}
+
                     updated = true;
                     console.log(`Game Final: ${winner.team?.displayName} ${winnerScore}, ${loser.team?.displayName} ${loserScore} — records updated`);
                 });
