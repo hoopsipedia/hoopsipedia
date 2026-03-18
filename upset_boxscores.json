@@ -1,0 +1,16 @@
+{
+  "_metadata": {
+    "description": "ESPN game IDs for iconic NCAA Tournament upset games. Used to fetch box score data from the ESPN summary API.",
+    "apiEndpoint": "https://site.api.espn.com/apis/site/v2/sports/basketball/mens-college-basketball/summary?event={gameId}",
+    "lastUpdated": "2026-03-18"
+  },
+  "2018/umbc-retrievers-vs-virginia-cavaliers": "401025813",
+  "2023/fairleigh-dickinson-knights-vs-purdue-boilermakers": "401522145",
+  "2022/saint-peter-s-peacocks-vs-kentucky-wildcats": "401408578",
+  "2021/oral-roberts-golden-eagles-vs-ohio-state-buckeyes": "401310905",
+  "2012/norfolk-state-spartans-vs-missouri-tigers": "320760142",
+  "2013/florida-gulf-coast-eagles-vs-georgetown-hoyas": "330810046",
+  "2012/lehigh-mountain-hawks-vs-duke-blue-devils": "320760150",
+  "2016/middle-tennessee-blue-raiders-vs-michigan-state-spartans": "400871286",
+  "2023/princeton-tigers-vs-arizona-wildcats": "401522134"
+}

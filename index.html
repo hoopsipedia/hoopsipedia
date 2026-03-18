@@ -881,30 +881,37 @@
 
         /* ── Responsive ── */
         @media (max-width: 768px) {
-            /* Navigation - two-row compact layout */
+            /* Navigation - compact scrollable layout */
             nav {
-                flex-direction: row;
-                flex-wrap: wrap;
-                gap: 0.3rem;
-                padding: 0.5rem;
-                align-items: center;
+                flex-direction: column;
+                gap: 0.4rem;
+                padding: 0.5rem 0.5rem 0.4rem;
+                align-items: stretch;
             }
-            .nav-logo { flex-shrink: 0; }
-            .nav-links {
-                gap: 0.1rem;
-                width: auto;
-                justify-content: flex-start;
-                flex: 1;
-                min-width: 0;
-            }
-            .nav-links li { white-space: nowrap; }
-            .nav-btn { font-size: 0.7rem; padding: 0.35rem 0.5rem; }
             .nav-logo { display: none; }
+            .nav-links {
+                gap: 0.15rem;
+                width: 100%;
+                justify-content: flex-start;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+                scrollbar-width: none;
+                -ms-overflow-style: none;
+                padding-bottom: 2px;
+            }
+            .nav-links::-webkit-scrollbar { display: none; }
+            .nav-links li { flex-shrink: 0; }
+            .nav-links button {
+                font-size: 0.82rem;
+                padding: 0.45rem 0.75rem;
+                white-space: nowrap;
+            }
             .logo-wordmark--hero { font-size: 2rem; }
             .logo-swoosh { display: none; }
             .nav-search {
                 width: 100%;
                 order: 10;
+                margin-left: 0;
             }
             .nav-search input { width: 100% !important; box-sizing: border-box; font-size: 0.85rem; }
 
@@ -1016,6 +1023,22 @@
             .game-card { overflow: hidden; }
             .game-matchup-button { width: 100%; box-sizing: border-box; }
 
+            /* Allow team names to wrap on mobile instead of ellipsis */
+            .game-team-name {
+                white-space: normal;
+                overflow: visible;
+                text-overflow: unset;
+                line-height: 1.3;
+                font-size: 0.85rem;
+            }
+            .game-card-header {
+                gap: 0.5rem;
+            }
+            .game-team-logo {
+                width: 36px;
+                height: 36px;
+            }
+
             /* Footer - single column */
             footer {
                 flex-direction: column;
@@ -1063,10 +1086,19 @@
             /* Reduce padding and margins on mobile */
             .container { padding: 0.75rem; overflow-x: hidden; }
             .section-title { font-size: 1.25rem; margin-bottom: 1rem; }
-            .hero { padding: 1.5rem 1rem; }
+            .hero { padding: 1.5rem 1rem 1rem; margin-bottom: 1.5rem; }
+            .hero p { font-size: 1rem; }
 
             /* Prevent any horizontal overflow */
             body { overflow-x: hidden; }
+
+            /* Games section spacing */
+            .games-section { margin-bottom: 2rem; }
+            .compare-section { padding: 1.25rem; margin-bottom: 2rem; }
+
+            /* Better mobile typography */
+            .game-round-info { font-size: 0.75rem; }
+            .game-tournament-badge { font-size: 0.68rem; padding: 0.25rem 0.65rem; }
         }
         .bracket-desktop-hint {
             display: none; text-align: center; padding: 0.6rem 1rem;
@@ -1390,7 +1422,7 @@
             font-size: 0.9rem;
         }
 
-        /* Box Score Placeholder */
+        /* Box Score */
         .game-detail-boxscore {
             background: #FFFFFF; border: 1px solid #E0D9CC;
             border-radius: 0.75rem; padding: 1.5rem; margin-bottom: 2rem;
@@ -1411,6 +1443,129 @@
         }
         .game-detail-boxscore-link:hover {
             background: #1B2A4A; color: #C9A86C; border-color: #1B2A4A;
+        }
+
+        /* ── Box Score Tables ── */
+        .boxscore-container { text-align: left; }
+        .boxscore-team-summary {
+            display: grid; grid-template-columns: 1fr 1fr;
+            gap: 0; margin-bottom: 1.5rem;
+            border: 1px solid #E0D9CC; border-radius: 0.75rem; overflow: hidden;
+        }
+        .boxscore-team-summary-col {
+            padding: 1rem 1.25rem;
+        }
+        .boxscore-team-summary-col:first-child {
+            border-right: 1px solid #E0D9CC;
+        }
+        .boxscore-team-summary-header {
+            display: flex; align-items: center; gap: 0.5rem;
+            margin-bottom: 0.75rem; padding-bottom: 0.5rem;
+            border-bottom: 2px solid #E0D9CC;
+        }
+        .boxscore-team-summary-logo {
+            width: 28px; height: 28px; object-fit: contain;
+        }
+        .boxscore-team-summary-name {
+            font-weight: 700; font-size: 0.9rem; color: #1B2A4A;
+        }
+        .boxscore-team-summary-score {
+            font-weight: 800; font-size: 1.1rem; margin-left: auto;
+        }
+        .boxscore-summary-stats {
+            display: grid; grid-template-columns: repeat(3, 1fr);
+            gap: 0.5rem;
+        }
+        .boxscore-summary-stat {
+            text-align: center;
+        }
+        .boxscore-summary-stat-value {
+            font-size: 1rem; font-weight: 700; color: #1B2A4A;
+        }
+        .boxscore-summary-stat-label {
+            font-size: 0.65rem; color: #8892A0; text-transform: uppercase;
+            font-weight: 600; letter-spacing: 0.04em;
+        }
+        .boxscore-team-section {
+            margin-bottom: 1.5rem;
+        }
+        .boxscore-team-header {
+            display: flex; align-items: center; gap: 0.6rem;
+            padding: 0.7rem 1rem;
+            border-radius: 0.5rem 0.5rem 0 0;
+            color: #fff; font-weight: 700; font-size: 0.9rem;
+        }
+        .boxscore-team-header img {
+            width: 24px; height: 24px; object-fit: contain;
+        }
+        .boxscore-table-wrap {
+            overflow-x: auto; -webkit-overflow-scrolling: touch;
+            border: 1px solid #E0D9CC; border-top: none;
+            border-radius: 0 0 0.5rem 0.5rem;
+        }
+        .boxscore-table {
+            width: 100%; border-collapse: collapse;
+            font-size: 0.8rem; min-width: 600px;
+        }
+        .boxscore-table thead th {
+            background: #1B2A4A; color: rgba(255,255,255,0.8);
+            padding: 0.5rem 0.6rem; text-align: center;
+            font-weight: 600; font-size: 0.7rem;
+            text-transform: uppercase; letter-spacing: 0.04em;
+            white-space: nowrap; position: sticky; top: 0; z-index: 2;
+        }
+        .boxscore-table thead th:first-child {
+            text-align: left; position: sticky; left: 0; z-index: 3;
+            background: #1B2A4A; min-width: 140px;
+        }
+        .boxscore-table tbody td {
+            padding: 0.45rem 0.6rem; text-align: center;
+            border-bottom: 1px solid #F0EDE6; color: #2C3345;
+            white-space: nowrap; font-variant-numeric: tabular-nums;
+        }
+        .boxscore-table tbody td:first-child {
+            text-align: left; font-weight: 600; color: #1B2A4A;
+            position: sticky; left: 0; z-index: 1;
+            background: inherit; min-width: 140px;
+        }
+        .boxscore-table tbody tr:nth-child(odd) { background: #FFFFFF; }
+        .boxscore-table tbody tr:nth-child(even) { background: #FAFAF7; }
+        .boxscore-table tbody tr:nth-child(odd) td:first-child { background: #FFFFFF; }
+        .boxscore-table tbody tr:nth-child(even) td:first-child { background: #FAFAF7; }
+        .boxscore-table tbody tr.boxscore-starter td { font-weight: 500; }
+        .boxscore-table tbody tr.boxscore-bench td { color: #6B7A8D; }
+        .boxscore-table tbody tr.boxscore-bench td:first-child { font-weight: 500; }
+        .boxscore-table tbody tr.boxscore-separator td {
+            background: #F0EDE6; font-size: 0.7rem; font-weight: 700;
+            color: #8892A0; text-transform: uppercase; letter-spacing: 0.06em;
+            padding: 0.3rem 0.6rem; text-align: left;
+        }
+        .boxscore-table tbody tr.boxscore-separator td:first-child { background: #F0EDE6; }
+        .boxscore-table tbody tr.boxscore-top-scorer { background: rgba(201,168,108,0.12) !important; }
+        .boxscore-table tbody tr.boxscore-top-scorer td:first-child {
+            background: rgba(201,168,108,0.12) !important;
+            position: relative;
+        }
+        .boxscore-table tbody tr.boxscore-top-scorer td:first-child::after {
+            content: 'TOP'; position: absolute; right: 0.3rem; top: 50%;
+            transform: translateY(-50%);
+            background: #C9A86C; color: #fff; font-size: 0.55rem; font-weight: 800;
+            padding: 0.1rem 0.3rem; border-radius: 0.2rem; letter-spacing: 0.04em;
+        }
+        .boxscore-table tbody tr.boxscore-totals td {
+            font-weight: 700; background: #F5F3EE !important;
+            border-top: 2px solid #D6CFC2; color: #1B2A4A;
+        }
+        .boxscore-table tbody tr.boxscore-totals td:first-child {
+            background: #F5F3EE !important;
+        }
+        .boxscore-loading {
+            text-align: center; padding: 2rem; color: #8892A0;
+        }
+        @media (max-width: 768px) {
+            .boxscore-team-summary { grid-template-columns: 1fr; }
+            .boxscore-team-summary-col:first-child { border-right: none; border-bottom: 1px solid #E0D9CC; }
+            .boxscore-summary-stats { grid-template-columns: repeat(3, 1fr); }
         }
 
         /* What Happened Next */
@@ -1501,7 +1656,16 @@
             }
 
             /* ── PREVENT FULL-PAGE HORIZONTAL OVERFLOW ── */
-            .view { overflow-x: hidden; max-width: 100vw; }
+            .view { overflow-x: clip; max-width: 100vw; }
+
+            /* ── SCROLL HINT: subtle right shadow on scrollable tables ── */
+            .season-table-wrapper,
+            .wins-table,
+            .rankings-table {
+                position: relative;
+                /* Inset shadow on right edge to hint at more content */
+                box-shadow: inset -12px 0 8px -8px rgba(0,0,0,0.06);
+            }
 
             /* ── TOURNAMENT RESUME GRID ── */
             .tourney-grid {
@@ -1533,11 +1697,19 @@
             .upsets-era-filters,
             .games-filter-tabs,
             .conference-filters {
+                display: flex;
                 overflow-x: auto;
                 -webkit-overflow-scrolling: touch;
                 flex-wrap: nowrap;
                 padding-bottom: 0.25rem;
+                scrollbar-width: none;
+                -ms-overflow-style: none;
             }
+            .filter-buttons::-webkit-scrollbar,
+            .leaders-controls::-webkit-scrollbar,
+            .upsets-era-filters::-webkit-scrollbar,
+            .games-filter-tabs::-webkit-scrollbar,
+            .conference-filters::-webkit-scrollbar { display: none; }
             .filter-btn,
             .leaders-filter-btn,
             .conf-btn,
@@ -2780,6 +2952,34 @@
                 return;
             }
 
+            // #boxscore/{eventId} — direct link to a game box score
+            const boxscoreMatch = hash.match(/^#boxscore\/(\d+)$/);
+            if (boxscoreMatch) {
+                const eventId = boxscoreMatch[1];
+                switchView('comparison', true);
+                const container = document.getElementById('comparisonContent');
+                container.innerHTML = '<div class="boxscore-loading" style="padding:3rem;">Loading box score...</div>';
+                fetchBoxScoreData(eventId).then(gameData => {
+                    if (!gameData) {
+                        container.innerHTML = '<div style="text-align:center;padding:3rem;color:#8892A0;">Could not load box score data.</div>';
+                        return;
+                    }
+                    // Extract team info from game data
+                    const comps = gameData.header?.competitions?.[0]?.competitors || [];
+                    const t1Id = comps[0]?.id || '';
+                    const t2Id = comps[1]?.id || '';
+                    if (t1Id && t2Id) {
+                        _comparisonGameId = eventId;
+                        openComparison(t1Id, t2Id, eventId);
+                        setTimeout(() => showCompTab('boxscore'), 400);
+                    } else {
+                        container.innerHTML = `<div style="padding:2rem;">${renderBoxScore(gameData)}</div>`;
+                    }
+                });
+                _skipHashUpdate = false;
+                return;
+            }
+
             // #upsets or #upsets/XvY (filter to specific seed pairing)
             const upsetsMatch = hash.match(/^#upsets(?:\/(\d+v\d+))?$/);
             if (upsetsMatch) {
@@ -3782,7 +3982,7 @@
                                 var clickAttr = pKey ? ' onclick="event.stopPropagation(); window.location.hash=\'#upsets/'+pKey+'\';" title="Click to explore upset history"' : '';
                                 return '<div class="'+cls+'"'+clickAttr+'>'+ctx.text+'</div>';
                             })()}
-                            <button class="game-matchup-button" onclick="event.stopPropagation(); openComparison('${t1EspnId}', '${t2EspnId}')">Full Matchup →</button>
+                            <button class="game-matchup-button" onclick="event.stopPropagation(); openComparison('${t1EspnId}', '${t2EspnId}', '${event.id}')">Full Matchup →</button>
                             <div class="game-ticket" id="ticket-${t1EspnId}-${t2EspnId}"></div>
                             <div class="game-time">${timeStr}</div>
                         `;
@@ -3868,7 +4068,10 @@
             }
         }
 
-        function openComparison(team1Id, team2Id) {
+        let _comparisonGameId = null; // ESPN event ID for box score tab in comparison view
+
+        function openComparison(team1Id, team2Id, gameId) {
+            _comparisonGameId = gameId || null;
             const buildTeamObj = (espnId) => {
                 const team = allTeamsData.find(t => t.espnId === espnId);
                 if (team) return Promise.resolve(team);
@@ -4094,17 +4297,31 @@
                 <div class="comparison-tabs">
                     <button class="comp-tab active" id="tabH2H" onclick="showCompTab('h2h')">Head-to-Head</button>
                     <button class="comp-tab" id="tabOverall" onclick="showCompTab('overall')">Full Program Comparison</button>
+                    ${_comparisonGameId ? `<button class="comp-tab" id="tabBoxScore" onclick="showCompTab('boxscore')">Box Score</button>` : ''}
                 </div>
                 <div id="compH2HContent" class="comp-tab-content">
                     <div class="chart-loading">Loading head-to-head history...</div>
                 </div>
                 <div id="compOverallContent" class="comp-tab-content" style="display:none;"></div>
+                ${_comparisonGameId ? `<div id="compBoxScoreContent" class="comp-tab-content" style="display:none;"><div class="boxscore-loading">Loading box score...</div></div>` : ''}
             `;
             container.innerHTML = html;
 
             // Load H2H data and render overall stats
             loadH2HData(t1, t2);
             renderOverallComparison(t1, t2);
+
+            // Load box score if game ID available
+            if (_comparisonGameId) {
+                fetchBoxScoreData(_comparisonGameId).then(gameData => {
+                    const bsEl = document.getElementById('compBoxScoreContent');
+                    if (bsEl && gameData) {
+                        bsEl.innerHTML = renderBoxScore(gameData);
+                    } else if (bsEl) {
+                        bsEl.innerHTML = '<div class="boxscore-loading">Box score data unavailable</div>';
+                    }
+                });
+            }
 
             // Check for upcoming matchup tickets between these two teams
             if (SEATGEEK_CLIENT_ID !== 'PLACEHOLDER_CLIENT_ID') {
@@ -4120,8 +4337,12 @@
         function showCompTab(tab) {
             document.getElementById('tabH2H').className = 'comp-tab' + (tab === 'h2h' ? ' active' : '');
             document.getElementById('tabOverall').className = 'comp-tab' + (tab === 'overall' ? ' active' : '');
+            const tabBS = document.getElementById('tabBoxScore');
+            if (tabBS) tabBS.className = 'comp-tab' + (tab === 'boxscore' ? ' active' : '');
             document.getElementById('compH2HContent').style.display = tab === 'h2h' ? 'block' : 'none';
             document.getElementById('compOverallContent').style.display = tab === 'overall' ? 'block' : 'none';
+            const bsContent = document.getElementById('compBoxScoreContent');
+            if (bsContent) bsContent.style.display = tab === 'boxscore' ? 'block' : 'none';
         }
 
         function loadH2HData(t1, t2) {
@@ -6359,6 +6580,24 @@
                 }
             }
 
+            // Add "Box Score" link for completed games
+            if (isFinal && competitors.length === 2) {
+                const t1Id = String(competitors[0].team?.id);
+                const t2Id = String(competitors[1].team?.id);
+                const bsLink = document.createElement('div');
+                bsLink.className = 'seed-context-badge clickable';
+                bsLink.style.cssText = 'cursor:pointer; color:#9E7C4A; font-weight:600;';
+                bsLink.textContent = 'View Box Score';
+                bsLink.title = 'View full box score for this game';
+                bsLink.onclick = function(e) {
+                    e.stopPropagation();
+                    openComparison(t1Id, t2Id, event.id);
+                    // Auto-switch to box score tab after a brief delay for rendering
+                    setTimeout(() => showCompTab('boxscore'), 300);
+                };
+                card.appendChild(bsLink);
+            }
+
             return card;
         }
 
@@ -6780,6 +7019,229 @@
             }
         }
 
+        // ── BOX SCORE SYSTEM ──
+
+        let UPSET_BOXSCORES = null; // loaded from upset_boxscores.json
+        const BOXSCORE_CACHE = {}; // cache fetched game summaries
+
+        async function loadUpsetBoxscores() {
+            if (UPSET_BOXSCORES) return UPSET_BOXSCORES;
+            try {
+                const resp = await fetch('upset_boxscores.json');
+                if (resp.ok) {
+                    UPSET_BOXSCORES = await resp.json();
+                    delete UPSET_BOXSCORES._metadata;
+                }
+            } catch (e) {}
+            return UPSET_BOXSCORES || {};
+        }
+
+        async function fetchBoxScoreData(eventId) {
+            if (BOXSCORE_CACHE[eventId]) return BOXSCORE_CACHE[eventId];
+            try {
+                const resp = await fetch(`https://site.api.espn.com/apis/site/v2/sports/basketball/mens-college-basketball/summary?event=${eventId}`);
+                if (!resp.ok) return null;
+                const data = await resp.json();
+                BOXSCORE_CACHE[eventId] = data;
+                return data;
+            } catch (e) {
+                return null;
+            }
+        }
+
+        function renderBoxScore(gameData) {
+            if (!gameData || !gameData.boxscore) return '<div class="boxscore-loading">Box score data unavailable</div>';
+
+            const bs = gameData.boxscore;
+            const teams = bs.teams || [];
+            const players = bs.players || [];
+
+            if (teams.length < 2 || players.length < 2) {
+                return '<div class="boxscore-loading">Box score data unavailable</div>';
+            }
+
+            // Helper: get stat by name from team stats array
+            function getTeamStat(teamStats, name) {
+                const s = teamStats.find(st => st.name === name);
+                return s ? s.displayValue : '-';
+            }
+
+            // Build team summary section
+            let html = '<div class="boxscore-container">';
+
+            // Team summary comparison
+            html += '<div class="boxscore-team-summary">';
+            teams.forEach((t, idx) => {
+                const team = t.team || {};
+                const stats = t.statistics || [];
+                const logoUrl = team.id ? `https://a.espncdn.com/i/teamlogos/ncaa/500/${team.id}.png` : '';
+                // Get score from header or competition
+                let score = '';
+                if (gameData.header) {
+                    const comps = gameData.header.competitions || [];
+                    if (comps[0]) {
+                        const competitor = comps[0].competitors?.find(c => String(c.id) === String(team.id));
+                        score = competitor?.score || '';
+                    }
+                }
+                const teamColor = team.color ? '#' + team.color : (idx === 0 ? '#1B2A4A' : '#C9A86C');
+
+                html += `<div class="boxscore-team-summary-col">
+                    <div class="boxscore-team-summary-header">
+                        ${logoUrl ? `<img class="boxscore-team-summary-logo" src="${logoUrl}" alt="" onerror="this.style.display='none'">` : ''}
+                        <span class="boxscore-team-summary-name">${team.shortDisplayName || team.displayName || 'Team'}</span>
+                        ${score ? `<span class="boxscore-team-summary-score" style="color:${teamColor}">${score}</span>` : ''}
+                    </div>
+                    <div class="boxscore-summary-stats">
+                        <div class="boxscore-summary-stat">
+                            <div class="boxscore-summary-stat-value">${getTeamStat(stats, 'fieldGoalPct')}%</div>
+                            <div class="boxscore-summary-stat-label">FG%</div>
+                        </div>
+                        <div class="boxscore-summary-stat">
+                            <div class="boxscore-summary-stat-value">${getTeamStat(stats, 'threePointFieldGoalPct')}%</div>
+                            <div class="boxscore-summary-stat-label">3PT%</div>
+                        </div>
+                        <div class="boxscore-summary-stat">
+                            <div class="boxscore-summary-stat-value">${getTeamStat(stats, 'freeThrowPct')}%</div>
+                            <div class="boxscore-summary-stat-label">FT%</div>
+                        </div>
+                        <div class="boxscore-summary-stat">
+                            <div class="boxscore-summary-stat-value">${getTeamStat(stats, 'totalRebounds')}</div>
+                            <div class="boxscore-summary-stat-label">REB</div>
+                        </div>
+                        <div class="boxscore-summary-stat">
+                            <div class="boxscore-summary-stat-value">${getTeamStat(stats, 'assists')}</div>
+                            <div class="boxscore-summary-stat-label">AST</div>
+                        </div>
+                        <div class="boxscore-summary-stat">
+                            <div class="boxscore-summary-stat-value">${getTeamStat(stats, 'turnovers')}</div>
+                            <div class="boxscore-summary-stat-label">TO</div>
+                        </div>
+                    </div>
+                </div>`;
+            });
+            html += '</div>';
+
+            // Player stats tables for each team
+            players.forEach((teamPlayers, idx) => {
+                const team = teamPlayers.team || {};
+                const statGroups = teamPlayers.statistics || [];
+                if (statGroups.length === 0) return;
+
+                const sg = statGroups[0]; // primary stat group
+                const labels = sg.labels || [];
+                const athletes = sg.athletes || [];
+
+                // Filter out players with no name or no stats
+                const validAthletes = athletes.filter(a =>
+                    a.athlete?.displayName && a.stats && a.stats.length > 0
+                );
+                if (validAthletes.length === 0) return;
+
+                // Split starters and bench
+                const starters = validAthletes.filter(a => a.starter);
+                const bench = validAthletes.filter(a => !a.starter);
+
+                // Find top scorer across all players in this team
+                const ptsIdx = labels.indexOf('PTS');
+                let topScorerIdx = -1;
+                let topPts = -1;
+                validAthletes.forEach((a, i) => {
+                    const pts = parseInt(a.stats[ptsIdx]) || 0;
+                    if (pts > topPts) { topPts = pts; topScorerIdx = i; }
+                });
+
+                const teamColor = team.color ? '#' + team.color : (idx === 0 ? '#1B2A4A' : '#C9A86C');
+                const logoUrl = team.id ? `https://a.espncdn.com/i/teamlogos/ncaa/500/${team.id}.png` : '';
+
+                // Columns to display (subset of available)
+                const displayCols = ['MIN', 'PTS', 'FG', '3PT', 'FT', 'REB', 'AST', 'STL', 'BLK', 'TO'];
+                const colIndices = displayCols.map(c => labels.indexOf(c)).filter(i => i >= 0);
+                const colLabels = colIndices.map(i => labels[i]);
+
+                html += `<div class="boxscore-team-section">
+                    <div class="boxscore-team-header" style="background:${teamColor}">
+                        ${logoUrl ? `<img src="${logoUrl}" alt="" onerror="this.style.display='none'">` : ''}
+                        ${team.displayName || team.shortDisplayName || 'Team'}
+                    </div>
+                    <div class="boxscore-table-wrap">
+                        <table class="boxscore-table">
+                            <thead><tr>
+                                <th>Player</th>
+                                ${colLabels.map(l => `<th>${l}</th>`).join('')}
+                            </tr></thead>
+                            <tbody>`;
+
+                // Render player rows
+                let globalIdx = 0;
+                function renderPlayerRow(a, isStarter) {
+                    const name = a.athlete?.displayName || '?';
+                    const isTopScorer = globalIdx === topScorerIdx;
+                    const cls = [
+                        isStarter ? 'boxscore-starter' : 'boxscore-bench',
+                        isTopScorer ? 'boxscore-top-scorer' : ''
+                    ].filter(Boolean).join(' ');
+                    globalIdx++;
+                    return `<tr class="${cls}">
+                        <td>${name}</td>
+                        ${colIndices.map(ci => `<td>${a.stats[ci] || '-'}</td>`).join('')}
+                    </tr>`;
+                }
+
+                // Starters
+                html += `<tr class="boxscore-separator"><td colspan="${colLabels.length + 1}">Starters</td></tr>`;
+                starters.forEach(a => { html += renderPlayerRow(a, true); });
+
+                // Bench
+                if (bench.length > 0) {
+                    html += `<tr class="boxscore-separator"><td colspan="${colLabels.length + 1}">Bench</td></tr>`;
+                    bench.forEach(a => { html += renderPlayerRow(a, false); });
+                }
+
+                // Totals row
+                const teamStats = teams[idx]?.statistics || [];
+                html += `<tr class="boxscore-totals">
+                    <td>TOTALS</td>
+                    ${colLabels.map(label => {
+                        if (label === 'MIN') return '<td>-</td>';
+                        if (label === 'PTS') {
+                            // Sum points
+                            let total = 0;
+                            validAthletes.forEach(a => { total += parseInt(a.stats[ptsIdx]) || 0; });
+                            return `<td>${total}</td>`;
+                        }
+                        if (label === 'FG') return `<td>${getTeamStat(teamStats, 'fieldGoalsMade-fieldGoalsAttempted')}</td>`;
+                        if (label === '3PT') return `<td>${getTeamStat(teamStats, 'threePointFieldGoalsMade-threePointFieldGoalsAttempted')}</td>`;
+                        if (label === 'FT') return `<td>${getTeamStat(teamStats, 'freeThrowsMade-freeThrowsAttempted')}</td>`;
+                        if (label === 'REB') return `<td>${getTeamStat(teamStats, 'totalRebounds')}</td>`;
+                        if (label === 'AST') return `<td>${getTeamStat(teamStats, 'assists')}</td>`;
+                        if (label === 'STL') return `<td>${getTeamStat(teamStats, 'steals')}</td>`;
+                        if (label === 'BLK') return `<td>${getTeamStat(teamStats, 'blocks')}</td>`;
+                        if (label === 'TO') return `<td>${getTeamStat(teamStats, 'turnovers')}</td>`;
+                        return '<td>-</td>';
+                    }).join('')}
+                </tr>`;
+
+                html += '</tbody></table></div></div>';
+            });
+
+            html += '</div>';
+            return html;
+        }
+
+        // Find ESPN event ID for an upset game by matching the game key to upset_boxscores.json
+        async function findUpsetEventId(gameKey) {
+            const boxscores = await loadUpsetBoxscores();
+            if (boxscores[gameKey]) return boxscores[gameKey];
+            // Try partial match
+            for (const [key, id] of Object.entries(boxscores)) {
+                if (gameKey.includes(key.split('-vs-')[0].split('/')[1]) || key.includes(gameKey.split('-vs-')[0].split('/')[1])) {
+                    return id;
+                }
+            }
+            return null;
+        }
+
         // ── GAME DETAIL PAGE ("Relive the Moment") ──
 
         const UPSET_HIGHLIGHTS = {
@@ -7088,13 +7550,10 @@
                         `}
                     </div>
 
-                    <!-- Box Score Placeholder -->
-                    <div class="game-detail-boxscore">
+                    <!-- Box Score -->
+                    <div class="game-detail-boxscore" id="gameDetailBoxScore">
                         <div class="game-detail-boxscore-title">Box Score</div>
-                        <div class="game-detail-boxscore-placeholder">Full box score coming soon</div>
-                        <a class="game-detail-boxscore-link" href="https://www.sports-reference.com/cbb/boxscores/" target="_blank" rel="noopener">
-                            View on Sports Reference
-                        </a>
+                        <div class="boxscore-loading">Loading box score...</div>
                     </div>
 
                     <!-- What Happened Next -->
@@ -7127,6 +7586,37 @@
             `;
 
             content.innerHTML = html;
+
+            // Load box score asynchronously
+            (async () => {
+                const boxscoreEl = document.getElementById('gameDetailBoxScore');
+                if (!boxscoreEl) return;
+
+                const gameKey = `${year}/${winnerFullSlug}-vs-${loserFullSlug}`;
+                const eventId = await findUpsetEventId(gameKey);
+
+                if (!eventId) {
+                    boxscoreEl.innerHTML = `
+                        <div class="game-detail-boxscore-title">Box Score</div>
+                        <div class="game-detail-boxscore-placeholder">Box score not available for this game</div>
+                        <a class="game-detail-boxscore-link" href="https://www.sports-reference.com/cbb/boxscores/" target="_blank" rel="noopener">
+                            View on Sports Reference
+                        </a>`;
+                    return;
+                }
+
+                const gameData = await fetchBoxScoreData(eventId);
+                if (!gameData) {
+                    boxscoreEl.innerHTML = `
+                        <div class="game-detail-boxscore-title">Box Score</div>
+                        <div class="game-detail-boxscore-placeholder">Could not load box score data</div>`;
+                    return;
+                }
+
+                boxscoreEl.innerHTML = `
+                    <div class="game-detail-boxscore-title">Box Score</div>
+                    ${renderBoxScore(gameData)}`;
+            })();
         }
 
         function openCorrection() {
