@@ -3587,13 +3587,17 @@
             // Build grid entries (newest first — they already come sorted from seasons.json)
             const gridHTML = appearances.map(a => {
                 // Determine click target: championship run page or Sports Reference
-                const champInfo = CHAMP_YEAR_TO_SLUG[String(a.year)];
+                // a.year is academic format like "2023-24"; extract tournament year (second part)
+                const yearStr = String(a.year);
+                const tourneyYear = yearStr.includes('-') ? '20' + yearStr.split('-')[1] : yearStr;
+                const srYear = yearStr.includes('-') ? yearStr.split('-')[0] : yearStr;
+                const champInfo = CHAMP_YEAR_TO_SLUG[tourneyYear];
                 const isOurChampRun = champInfo && a.result === 'Champion' && String(team.espnId) === champInfo.espnId;
                 let clickAttr = '';
                 if (isOurChampRun) {
-                    clickAttr = ` onclick="event.stopPropagation(); window.location.hash='#championship/${a.year}/${champInfo.slug}';" title="View ${a.year} Championship Run"`;
+                    clickAttr = ` onclick="event.stopPropagation(); window.location.hash='#championship/${tourneyYear}/${champInfo.slug}';" title="View ${tourneyYear} Championship Run"`;
                 } else if (a.year) {
-                    clickAttr = ` onclick="event.stopPropagation(); window.open('https://www.sports-reference.com/cbb/postseason/${a.year}-ncaa.html','_blank');" title="View ${a.year} NCAA Tournament on Sports Reference"`;
+                    clickAttr = ` onclick="event.stopPropagation(); window.open('https://www.sports-reference.com/cbb/postseason/${srYear}-ncaa.html','_blank');" title="View ${yearStr} NCAA Tournament on Sports Reference"`;
                 }
                 return `
                 <div class="tourney-entry clickable"${clickAttr}>
