@@ -1967,6 +1967,284 @@
             .team-name { font-size: 0.78rem; }
             .team-card { padding: 0.75rem; }
         }
+
+        /* ── Championship Run Page ── */
+        .champ-run-hero {
+            background: linear-gradient(135deg, #1B2A4A 0%, #2D4A6E 50%, #1B2A4A 100%);
+            border-radius: 1rem;
+            padding: 3rem 2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+        .champ-run-hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at 30% 50%, rgba(201,168,108,0.08) 0%, transparent 50%);
+            pointer-events: none;
+        }
+        .champ-run-hero-logo {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 1.25rem;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            filter: drop-shadow(0 4px 12px rgba(0,0,0,0.3));
+        }
+        .champ-run-hero-title {
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: #C9A86C;
+            margin-bottom: 0.4rem;
+        }
+        .champ-run-hero-team {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #FFFFFF;
+            margin-bottom: 0.5rem;
+            line-height: 1.2;
+        }
+        .champ-run-hero-subtitle {
+            font-size: 1rem;
+            color: rgba(255,255,255,0.6);
+        }
+        .champ-run-hero-accent {
+            width: 60px;
+            height: 4px;
+            background: #C9A86C;
+            margin: 1rem auto 0;
+            border-radius: 2px;
+        }
+        .champ-run-back {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            color: #C9A86C;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            margin-bottom: 1.5rem;
+            transition: opacity 0.2s;
+            text-decoration: none;
+        }
+        .champ-run-back:hover { opacity: 0.75; }
+
+        .champ-run-card {
+            background: #FFFFFF;
+            border: 1px solid #E0D9CC;
+            border-radius: 0.75rem;
+            padding: 1.75rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+        }
+        .champ-run-card h3 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: #1B2A4A;
+            margin-bottom: 1rem;
+        }
+        .champ-run-story {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: #4A5568;
+        }
+
+        /* Tournament Path */
+        .champ-run-path {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+        .champ-run-game {
+            display: grid;
+            grid-template-columns: 120px 1fr auto;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem 1.25rem;
+            border-left: 3px solid #E0D9CC;
+            position: relative;
+            transition: background 0.15s ease;
+            cursor: pointer;
+            border-bottom: 1px solid #F0EDE6;
+        }
+        .champ-run-game:hover {
+            background: #FAFAF7;
+        }
+        .champ-run-game::before {
+            content: '';
+            position: absolute;
+            left: -7px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 11px;
+            height: 11px;
+            border-radius: 50%;
+            background: #E0D9CC;
+            border: 2px solid #FFFFFF;
+        }
+        .champ-run-game.championship-game {
+            border-left: 3px solid #C9A86C;
+            background: linear-gradient(90deg, rgba(201,168,108,0.06) 0%, transparent 100%);
+            padding: 1.25rem;
+        }
+        .champ-run-game.championship-game::before {
+            background: #C9A86C;
+            width: 13px;
+            height: 13px;
+            left: -8px;
+            box-shadow: 0 0 0 3px rgba(201,168,108,0.25);
+        }
+        .champ-run-game.championship-game .champ-run-round {
+            color: #C9A86C;
+            font-weight: 800;
+        }
+        .champ-run-round {
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: #8892A0;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+        .champ-run-opponent {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        .champ-run-opp-logo {
+            width: 36px;
+            height: 36px;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            flex-shrink: 0;
+        }
+        .champ-run-opp-info {
+            display: flex;
+            flex-direction: column;
+        }
+        .champ-run-opp-name {
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: #2C3345;
+        }
+        .champ-run-opp-seed {
+            font-size: 0.75rem;
+            color: #8892A0;
+        }
+        .champ-run-score {
+            text-align: right;
+            white-space: nowrap;
+        }
+        .champ-run-score-value {
+            font-size: 1.1rem;
+            font-weight: 800;
+            color: #1B2A4A;
+        }
+        .champ-run-score-margin {
+            font-size: 0.72rem;
+            color: #8892A0;
+            font-weight: 600;
+        }
+        .champ-run-score-margin.win { color: #2E7D32; }
+
+        /* Key Stats Grid */
+        .champ-run-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+            gap: 1rem;
+        }
+        .champ-run-stat {
+            text-align: center;
+            padding: 1rem 0.5rem;
+            background: #F9F8F5;
+            border-radius: 0.5rem;
+        }
+        .champ-run-stat-value {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #1B2A4A;
+        }
+        .champ-run-stat-label {
+            font-size: 0.72rem;
+            color: #8892A0;
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+        }
+
+        /* Video embed */
+        .champ-run-video {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 0.5rem;
+        }
+        .champ-run-video iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 0.5rem;
+        }
+
+        /* Team Profile Link */
+        .champ-run-profile-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.7rem 1.5rem;
+            background: #1B2A4A;
+            color: #C9A86C;
+            border: none;
+            border-radius: 0.5rem;
+            font-weight: 700;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-decoration: none;
+        }
+        .champ-run-profile-link:hover {
+            background: #243556;
+            transform: translateY(-1px);
+        }
+
+        /* Clickable tournament badges */
+        .tourney-entry.clickable {
+            cursor: pointer;
+            transition: all 0.15s ease;
+        }
+        .tourney-entry.clickable:hover {
+            border-color: #C9A86C;
+            transform: translateY(-2px);
+            box-shadow: 0 3px 8px rgba(201,168,108,0.15);
+        }
+
+        @media (max-width: 768px) {
+            .champ-run-hero { padding: 2rem 1.25rem; }
+            .champ-run-hero-logo { width: 90px; height: 90px; }
+            .champ-run-hero-team { font-size: 1.6rem; }
+            .champ-run-game {
+                grid-template-columns: 80px 1fr auto;
+                gap: 0.5rem;
+                padding: 0.75rem 0.75rem 0.75rem 1rem;
+            }
+            .champ-run-round { font-size: 0.65rem; }
+            .champ-run-opp-name { font-size: 0.85rem; }
+            .champ-run-opp-logo { width: 28px; height: 28px; }
+            .champ-run-score-value { font-size: 0.95rem; }
+            .champ-run-stats { grid-template-columns: repeat(2, 1fr); }
+        }
     </style>
 </head>
 <body>
@@ -2184,6 +2462,11 @@
         <!-- Game Detail View -->
         <div id="gameDetail" class="view">
             <div id="gameDetailContent"></div>
+        </div>
+
+        <!-- Championship Run View -->
+        <div id="championshipRun" class="view">
+            <div id="championshipRunContent"></div>
         </div>
     </div>
 
@@ -3092,6 +3375,15 @@
                 return;
             }
 
+            // #championship/year/team-slug
+            const champMatch = hash.match(/^#championship\/(\d{4})\/([^/]+)$/);
+            if (champMatch) {
+                switchView('championshipRun', true);
+                renderChampionshipRun(champMatch[1], champMatch[2]);
+                _skipHashUpdate = false;
+                return;
+            }
+
             // #view (home, bracket, rankings, teams, coaches)
             const viewMatch = hash.match(/^#(home|bracket|rankings|teams|coaches)$/);
             if (viewMatch) {
@@ -3293,13 +3585,24 @@
             const avgSeed = seeded.length > 0 ? (seeded.reduce((sum, a) => sum + parseInt(a.seed), 0) / seeded.length).toFixed(1) : '—';
 
             // Build grid entries (newest first — they already come sorted from seasons.json)
-            const gridHTML = appearances.map(a => `
-                <div class="tourney-entry">
+            const gridHTML = appearances.map(a => {
+                // Determine click target: championship run page or Sports Reference
+                const champInfo = CHAMP_YEAR_TO_SLUG[String(a.year)];
+                const isOurChampRun = champInfo && a.result === 'Champion' && String(team.espnId) === champInfo.espnId;
+                let clickAttr = '';
+                if (isOurChampRun) {
+                    clickAttr = ` onclick="event.stopPropagation(); window.location.hash='#championship/${a.year}/${champInfo.slug}';" title="View ${a.year} Championship Run"`;
+                } else if (a.year) {
+                    clickAttr = ` onclick="event.stopPropagation(); window.open('https://www.sports-reference.com/cbb/postseason/${a.year}-ncaa.html','_blank');" title="View ${a.year} NCAA Tournament on Sports Reference"`;
+                }
+                return `
+                <div class="tourney-entry clickable"${clickAttr}>
                     <div class="tourney-year">${a.year}</div>
                     ${a.seed ? `<div class="tourney-seed">#${a.seed} Seed</div>` : '<div class="tourney-seed">&nbsp;</div>'}
                     <div class="tourney-round ${tourneyRoundClass(a.result)}">${a.result}</div>
                 </div>
-            `).join('');
+                `;
+            }).join('');
 
             return `
                 <div class="tourney-resume">
@@ -3382,6 +3685,8 @@
                 renderUpsets();
                 if (bracketRefreshInterval) clearInterval(bracketRefreshInterval);
             } else if (view === 'gameDetail') {
+                if (bracketRefreshInterval) clearInterval(bracketRefreshInterval);
+            } else if (view === 'championshipRun') {
                 if (bracketRefreshInterval) clearInterval(bracketRefreshInterval);
             }
         }
@@ -4505,8 +4810,8 @@
             // Try to get game-level matchup history from games.json first
             const gamesFromLocal = getH2HGamesFromData(t1, t2);
 
-            if (gamesFromLocal && gamesFromLocal.length > 0) {
-                // Enrich any 0-0 (upcoming/unscraped) games with live ESPN scoreboard data
+            if (gamesFromLocal && gamesFromLocal.length > 3) {
+                // Enough local data — use it directly
                 enrichH2HWithLiveScores(gamesFromLocal, t1, t2).then(enrichedGames => {
                     renderH2HGameList(container, allTimeHtml, hasAllTime, enrichedGames, t1, t2, t1Color, t2Color);
                 });
@@ -7177,6 +7482,7 @@
         // ── BOX SCORE SYSTEM ──
 
         let UPSET_BOXSCORES = null; // loaded from upset_boxscores.json
+        let SR_BOXSCORES = null;   // loaded from sr_boxscores.json (pre-ESPN era)
         const BOXSCORE_CACHE = {}; // cache fetched game summaries
 
         async function loadUpsetBoxscores() {
@@ -7189,6 +7495,18 @@
                 }
             } catch (e) {}
             return UPSET_BOXSCORES || {};
+        }
+
+        async function loadSRBoxscores() {
+            if (SR_BOXSCORES) return SR_BOXSCORES;
+            try {
+                const resp = await fetch('sr_boxscores.json');
+                if (resp.ok) {
+                    SR_BOXSCORES = await resp.json();
+                    delete SR_BOXSCORES._metadata;
+                }
+            } catch (e) {}
+            return SR_BOXSCORES || {};
         }
 
         async function fetchBoxScoreData(eventId) {
@@ -7380,6 +7698,135 @@
                 html += '</tbody></table></div></div>';
             });
 
+            html += '</div>';
+            return html;
+        }
+
+        // Render box score from Sports Reference data (sr_boxscores.json)
+        function renderSRBoxScore(srData) {
+            if (!srData || !srData.teams || srData.teams.length < 2) {
+                return '<div class="boxscore-loading">Box score data unavailable</div>';
+            }
+
+            let html = '<div class="boxscore-container">';
+
+            // Team summary comparison
+            html += '<div class="boxscore-team-summary">';
+            srData.teams.forEach((team, idx) => {
+                const totals = team.totals || {};
+                // Calculate percentages from made-attempted strings
+                function calcPct(str) {
+                    if (!str || str === '0-0') return '0.0';
+                    const parts = str.split('-');
+                    const made = parseInt(parts[0]) || 0;
+                    const att = parseInt(parts[1]) || 0;
+                    return att > 0 ? (100 * made / att).toFixed(1) : '0.0';
+                }
+                const teamColor = idx === 0 ? '#1B2A4A' : '#C9A86C';
+                const seedLabel = team.seed ? ` (${team.seed})` : '';
+
+                html += `<div class="boxscore-team-summary-col">
+                    <div class="boxscore-team-summary-header">
+                        <span class="boxscore-team-summary-name">${team.name}${seedLabel}</span>
+                        <span class="boxscore-team-summary-score" style="color:${teamColor}">${team.score}</span>
+                    </div>
+                    <div class="boxscore-summary-stats">
+                        <div class="boxscore-summary-stat">
+                            <div class="boxscore-summary-stat-value">${calcPct(totals.fg)}%</div>
+                            <div class="boxscore-summary-stat-label">FG%</div>
+                        </div>
+                        <div class="boxscore-summary-stat">
+                            <div class="boxscore-summary-stat-value">${calcPct(totals.tp)}%</div>
+                            <div class="boxscore-summary-stat-label">3PT%</div>
+                        </div>
+                        <div class="boxscore-summary-stat">
+                            <div class="boxscore-summary-stat-value">${calcPct(totals.ft)}%</div>
+                            <div class="boxscore-summary-stat-label">FT%</div>
+                        </div>
+                        <div class="boxscore-summary-stat">
+                            <div class="boxscore-summary-stat-value">${totals.reb || '-'}</div>
+                            <div class="boxscore-summary-stat-label">REB</div>
+                        </div>
+                        <div class="boxscore-summary-stat">
+                            <div class="boxscore-summary-stat-value">${totals.ast || '-'}</div>
+                            <div class="boxscore-summary-stat-label">AST</div>
+                        </div>
+                        <div class="boxscore-summary-stat">
+                            <div class="boxscore-summary-stat-value">${totals.to || '-'}</div>
+                            <div class="boxscore-summary-stat-label">TO</div>
+                        </div>
+                    </div>
+                </div>`;
+            });
+            html += '</div>';
+
+            // Player stats tables
+            const colLabels = ['MIN', 'PTS', 'FG', '3PT', 'FT', 'REB', 'AST', 'STL', 'BLK', 'TO'];
+
+            srData.teams.forEach((team, idx) => {
+                const players = team.players || [];
+                if (players.length === 0) return;
+
+                const teamColor = idx === 0 ? '#1B2A4A' : '#C9A86C';
+                const seedLabel = team.seed ? ` (${team.seed})` : '';
+
+                // Find top scorer
+                let topIdx = 0;
+                let topPts = 0;
+                players.forEach((p, i) => {
+                    if ((p.pts || 0) > topPts) { topPts = p.pts; topIdx = i; }
+                });
+
+                html += `<div class="boxscore-team-section">
+                    <div class="boxscore-team-header" style="background:${teamColor}">
+                        ${team.name}${seedLabel}
+                    </div>
+                    <div class="boxscore-table-wrap">
+                        <table class="boxscore-table">
+                            <thead><tr>
+                                <th>Player</th>
+                                ${colLabels.map(l => `<th>${l}</th>`).join('')}
+                            </tr></thead>
+                            <tbody>`;
+
+                players.forEach((p, i) => {
+                    const isTop = i === topIdx;
+                    const cls = isTop ? 'boxscore-top-scorer' : '';
+                    html += `<tr class="${cls}">
+                        <td>${p.name}</td>
+                        <td>${p.min || '-'}</td>
+                        <td>${p.pts || 0}</td>
+                        <td>${p.fg || '-'}</td>
+                        <td>${p.tp || '-'}</td>
+                        <td>${p.ft || '-'}</td>
+                        <td>${p.reb || 0}</td>
+                        <td>${p.ast || 0}</td>
+                        <td>${p.stl || 0}</td>
+                        <td>${p.blk || 0}</td>
+                        <td>${p.to || 0}</td>
+                    </tr>`;
+                });
+
+                // Totals row
+                const totals = team.totals || {};
+                html += `<tr class="boxscore-totals">
+                    <td>TOTALS</td>
+                    <td>-</td>
+                    <td>${totals.pts || team.score || 0}</td>
+                    <td>${totals.fg || '-'}</td>
+                    <td>${totals.tp || '-'}</td>
+                    <td>${totals.ft || '-'}</td>
+                    <td>${totals.reb || '-'}</td>
+                    <td>${totals.ast || '-'}</td>
+                    <td>${totals.stl || '-'}</td>
+                    <td>${totals.blk || '-'}</td>
+                    <td>${totals.to || '-'}</td>
+                </tr>`;
+
+                html += '</tbody></table></div></div>';
+            });
+
+            html += '<div style="text-align:center;padding:0.5rem;font-size:0.75rem;color:#8892A0;">Source: Sports Reference</div>';
             html += '</div>';
             return html;
         }
@@ -7742,35 +8189,41 @@
 
             content.innerHTML = html;
 
-            // Load box score asynchronously
+            // Load box score asynchronously — try ESPN first, fall back to Sports Reference
             (async () => {
                 const boxscoreEl = document.getElementById('gameDetailBoxScore');
                 if (!boxscoreEl) return;
 
                 const gameKey = `${year}/${winnerFullSlug}-vs-${loserFullSlug}`;
+
+                // Try ESPN API first
                 const eventId = await findUpsetEventId(gameKey);
+                if (eventId) {
+                    const gameData = await fetchBoxScoreData(eventId);
+                    if (gameData) {
+                        boxscoreEl.innerHTML = `
+                            <div class="game-detail-boxscore-title">Box Score</div>
+                            ${renderBoxScore(gameData)}`;
+                        return;
+                    }
+                }
 
-                if (!eventId) {
+                // Fall back to Sports Reference data
+                const srData = await loadSRBoxscores();
+                if (srData[gameKey]) {
                     boxscoreEl.innerHTML = `
                         <div class="game-detail-boxscore-title">Box Score</div>
-                        <div class="game-detail-boxscore-placeholder">Box score not available for this game</div>
-                        <a class="game-detail-boxscore-link" href="https://www.sports-reference.com/cbb/boxscores/" target="_blank" rel="noopener">
-                            View on Sports Reference
-                        </a>`;
+                        ${renderSRBoxScore(srData[gameKey])}`;
                     return;
                 }
 
-                const gameData = await fetchBoxScoreData(eventId);
-                if (!gameData) {
-                    boxscoreEl.innerHTML = `
-                        <div class="game-detail-boxscore-title">Box Score</div>
-                        <div class="game-detail-boxscore-placeholder">Could not load box score data</div>`;
-                    return;
-                }
-
+                // No data available
                 boxscoreEl.innerHTML = `
                     <div class="game-detail-boxscore-title">Box Score</div>
-                    ${renderBoxScore(gameData)}`;
+                    <div class="game-detail-boxscore-placeholder">Box score not available for this game</div>
+                    <a class="game-detail-boxscore-link" href="https://www.sports-reference.com/cbb/boxscores/" target="_blank" rel="noopener">
+                        View on Sports Reference
+                    </a>`;
             })();
         }
 
@@ -7820,6 +8273,263 @@
                 });
             }
         });
+
+        // ── Championship Run Data & Renderer ──
+        const CHAMPIONSHIP_RUNS = {
+            '2019/virginia-cavaliers': {
+                year: 2019,
+                teamName: 'Virginia Cavaliers',
+                espnId: '258',
+                teamSlug: 'virginia-cavaliers',
+                heroTitle: '2019 NATIONAL CHAMPIONS',
+                heroSubtitle: '1st Seed \u2022 East Region \u2022 Minneapolis, MN',
+                accentColor: '#F84C1E',
+                story: 'One year after becoming the first 1-seed to lose to a 16-seed (UMBC), Tony Bennett\'s Cavaliers authored one of the greatest redemption stories in sports. Virginia survived an overtime thriller against Purdue, a last-second free throw miracle vs. Auburn, and an overtime championship against Texas Tech to claim their first-ever national title.',
+                games: [
+                    { round: 'Round of 64', opponent: 'Gardner-Webb Runnin\' Bulldogs', oppSeed: 16, oppEspnId: null, score: '71-56', winScore: 71, loseScore: 56, note: '' },
+                    { round: 'Round of 32', opponent: 'Oklahoma Sooners', oppSeed: 9, oppEspnId: '201', score: '63-51', winScore: 63, loseScore: 51, note: '' },
+                    { round: 'Sweet 16', opponent: 'Oregon Ducks', oppSeed: 12, oppEspnId: '2483', score: '53-49', winScore: 53, loseScore: 49, note: '' },
+                    { round: 'Elite Eight', opponent: 'Purdue Boilermakers', oppSeed: 3, oppEspnId: '2509', score: '80-75 (OT)', winScore: 80, loseScore: 75, note: 'OT' },
+                    { round: 'Final Four', opponent: 'Auburn Tigers', oppSeed: 5, oppEspnId: '2', score: '63-62', winScore: 63, loseScore: 62, note: '' },
+                    { round: 'Championship', opponent: 'Texas Tech Red Raiders', oppSeed: 3, oppEspnId: '2641', score: '85-77 (OT)', winScore: 85, loseScore: 77, note: 'OT', isChampionship: true }
+                ],
+                stats: { seed: '1', record: '6-0', avgMargin: '+8.2', closestGame: '63-62 vs Auburn' },
+                videoId: 'ufI6DCB6X2U',
+                aftermath: 'De\'Andre Hunter (4th pick) and Ty Jerome (24th pick) were drafted in the 2019 NBA Draft. Kyle Guy was named Final Four Most Outstanding Player. Coach Tony Bennett turned down a raise, asking the university to invest the money in his staff and a fund for former players instead.',
+                mop: 'Kyle Guy'
+            },
+            '2018/villanova-wildcats': {
+                year: 2018,
+                teamName: 'Villanova Wildcats',
+                espnId: '222',
+                teamSlug: 'villanova-wildcats',
+                heroTitle: '2018 NATIONAL CHAMPIONS',
+                heroSubtitle: '1st Seed \u2022 East Region \u2022 San Antonio, TX',
+                accentColor: '#13284B',
+                story: 'Jay Wright\'s Villanova squad delivered one of the most dominant tournament runs ever, winning all six games by double digits \u2014 a feat never before accomplished. Donte DiVincenzo exploded for 31 points off the bench in the title game, earning MOP honors as the Wildcats captured their third national championship and second in three years.',
+                games: [
+                    { round: 'Round of 64', opponent: 'Radford Highlanders', oppSeed: 16, oppEspnId: null, score: '87-61', winScore: 87, loseScore: 61, note: '' },
+                    { round: 'Round of 32', opponent: 'Alabama Crimson Tide', oppSeed: 9, oppEspnId: '333', score: '81-58', winScore: 81, loseScore: 58, note: '' },
+                    { round: 'Sweet 16', opponent: 'West Virginia Mountaineers', oppSeed: 5, oppEspnId: '277', score: '90-78', winScore: 90, loseScore: 78, note: '' },
+                    { round: 'Elite Eight', opponent: 'Texas Tech Red Raiders', oppSeed: 3, oppEspnId: '2641', score: '71-59', winScore: 71, loseScore: 59, note: '' },
+                    { round: 'Final Four', opponent: 'Kansas Jayhawks', oppSeed: 1, oppEspnId: '2305', score: '95-79', winScore: 95, loseScore: 79, note: '' },
+                    { round: 'Championship', opponent: 'Michigan Wolverines', oppSeed: 3, oppEspnId: '130', score: '79-62', winScore: 79, loseScore: 62, note: '', isChampionship: true }
+                ],
+                stats: { seed: '1', record: '6-0', avgMargin: '+17.2', closestGame: '71-59 vs Texas Tech' },
+                videoId: 'kbaMeEcdDfM',
+                aftermath: 'Mikal Bridges (10th pick), Donte DiVincenzo (17th pick), Jalen Brunson (33rd pick), and Omari Spellman (30th pick) all entered the 2018 NBA Draft. DiVincenzo was named Final Four MOP with his legendary 31-point bench performance. Jay Wright became just the fourth coach to win multiple titles since 1985.',
+                mop: 'Donte DiVincenzo'
+            },
+            '2023/uconn-huskies': {
+                year: 2023,
+                teamName: 'UConn Huskies',
+                espnId: '41',
+                teamSlug: 'uconn-huskies',
+                heroTitle: '2023 NATIONAL CHAMPIONS',
+                heroSubtitle: '4th Seed \u2022 West Region \u2022 Houston, TX',
+                accentColor: '#000E2F',
+                story: 'As a 4-seed, Dan Hurley\'s Huskies delivered one of the most dominant tournament runs in history. UConn won every game by at least 13 points \u2014 the first team to accomplish that since 1981 Indiana \u2014 with an average margin of victory north of 20 points. Adama Sanogo earned MOP honors as UConn claimed its fifth national championship.',
+                games: [
+                    { round: 'Round of 64', opponent: 'Iona Gaels', oppSeed: 13, oppEspnId: '314', score: '87-63', winScore: 87, loseScore: 63, note: '' },
+                    { round: 'Round of 32', opponent: 'Saint Mary\'s Gaels', oppSeed: 5, oppEspnId: '2608', score: '70-55', winScore: 70, loseScore: 55, note: '' },
+                    { round: 'Sweet 16', opponent: 'Arkansas Razorbacks', oppSeed: 8, oppEspnId: '8', score: '88-65', winScore: 88, loseScore: 65, note: '' },
+                    { round: 'Elite Eight', opponent: 'Gonzaga Bulldogs', oppSeed: 3, oppEspnId: '2250', score: '82-54', winScore: 82, loseScore: 54, note: '' },
+                    { round: 'Final Four', opponent: 'Miami Hurricanes', oppSeed: 5, oppEspnId: '2390', score: '72-59', winScore: 72, loseScore: 59, note: '' },
+                    { round: 'Championship', opponent: 'San Diego State Aztecs', oppSeed: 5, oppEspnId: '21', score: '76-59', winScore: 76, loseScore: 59, note: '', isChampionship: true }
+                ],
+                stats: { seed: '4', record: '6-0', avgMargin: '+20.3', closestGame: '72-59 vs Miami' },
+                videoId: 'yPnGZBpvjN0',
+                aftermath: 'Jordan Hawkins (14th pick) and Andre Jackson Jr. (36th pick) were drafted in the 2023 NBA Draft. Adama Sanogo earned MOP honors. Dan Hurley became the third UConn coach to win a title, joining Jim Calhoun and Kevin Ollie. The Huskies would go on to repeat as champions the following year.',
+                mop: 'Adama Sanogo'
+            },
+            '2024/uconn-huskies': {
+                year: 2024,
+                teamName: 'UConn Huskies',
+                espnId: '41',
+                teamSlug: 'uconn-huskies',
+                heroTitle: '2024 NATIONAL CHAMPIONS',
+                heroSubtitle: '1st Seed (Overall #1) \u2022 East Region \u2022 Glendale, AZ',
+                accentColor: '#000E2F',
+                story: 'UConn became the first program to repeat as national champions since Florida in 2006-07. As the overall 1-seed, the Huskies posted the best point differential in NCAA Tournament history (+140), never trailing in the second half of any game. Tristen Newton earned MOP honors as Dan Hurley\'s squad claimed their sixth national title.',
+                games: [
+                    { round: 'Round of 64', opponent: 'Stetson Hatters', oppSeed: 16, oppEspnId: null, score: '91-52', winScore: 91, loseScore: 52, note: '' },
+                    { round: 'Round of 32', opponent: 'Northwestern Wildcats', oppSeed: 9, oppEspnId: '77', score: '75-58', winScore: 75, loseScore: 58, note: '' },
+                    { round: 'Sweet 16', opponent: 'San Diego State Aztecs', oppSeed: 5, oppEspnId: '21', score: '82-52', winScore: 82, loseScore: 52, note: '' },
+                    { round: 'Elite Eight', opponent: 'Illinois Fighting Illini', oppSeed: 3, oppEspnId: '356', score: '77-52', winScore: 77, loseScore: 52, note: '' },
+                    { round: 'Final Four', opponent: 'Alabama Crimson Tide', oppSeed: 4, oppEspnId: '333', score: '86-72', winScore: 86, loseScore: 72, note: '' },
+                    { round: 'Championship', opponent: 'Purdue Boilermakers', oppSeed: 1, oppEspnId: '2509', score: '75-60', winScore: 75, loseScore: 60, note: '', isChampionship: true }
+                ],
+                stats: { seed: '1', record: '6-0', avgMargin: '+23.2', closestGame: '86-72 vs Alabama' },
+                videoId: '4ZZGU7_f_Rs',
+                aftermath: 'Donovan Clingan (7th pick), Stephon Castle (4th pick), and Tristen Newton (2nd round) entered the 2024 NBA Draft. Newton earned MOP honors with 20 points and 7 assists in the title game. Dan Hurley became the first coach since Billy Donovan (Florida 2006-07) to win back-to-back championships.',
+                mop: 'Tristen Newton'
+            },
+            '2025/florida-gators': {
+                year: 2025,
+                teamName: 'Florida Gators',
+                espnId: '57',
+                teamSlug: 'florida-gators',
+                heroTitle: '2025 NATIONAL CHAMPIONS',
+                heroSubtitle: '1st Seed \u2022 West Region \u2022 San Antonio, TX',
+                accentColor: '#0021A5',
+                story: 'Todd Golden\'s Gators stormed through the bracket to claim Florida\'s third national title and first since the back-to-back championships of 2006-07. In a heart-stopping title game, Florida held Houston scoreless over the final two minutes while forcing four turnovers to complete a comeback and win 65-63. Golden became the youngest coach to win a title since Jim Valvano in 1983.',
+                games: [
+                    { round: 'Round of 64', opponent: 'Norfolk State Spartans', oppSeed: 16, oppEspnId: null, score: '95-69', winScore: 95, loseScore: 69, note: '' },
+                    { round: 'Round of 32', opponent: 'UConn Huskies', oppSeed: 8, oppEspnId: '41', score: '77-75', winScore: 77, loseScore: 75, note: '' },
+                    { round: 'Sweet 16', opponent: 'Maryland Terrapins', oppSeed: 4, oppEspnId: '120', score: '87-71', winScore: 87, loseScore: 71, note: '' },
+                    { round: 'Elite Eight', opponent: 'Texas Tech Red Raiders', oppSeed: 3, oppEspnId: '2641', score: '84-79', winScore: 84, loseScore: 79, note: '' },
+                    { round: 'Final Four', opponent: 'Auburn Tigers', oppSeed: 1, oppEspnId: '2', score: '79-73', winScore: 79, loseScore: 73, note: '' },
+                    { round: 'Championship', opponent: 'Houston Cougars', oppSeed: 1, oppEspnId: '248', score: '65-63', winScore: 65, loseScore: 63, note: '', isChampionship: true }
+                ],
+                stats: { seed: '1', record: '6-0', avgMargin: '+10.7', closestGame: '65-63 vs Houston' },
+                videoId: 'igDpFxg60qU',
+                aftermath: 'Walter Clayton Jr. was named the tournament\'s Most Outstanding Player. Will Richard led the team with 18 points in the championship game. Florida became one of only seven programs with three or more national championships. Coach Todd Golden, in just his third season, made March Madness history as the youngest champion coach in over 40 years.',
+                mop: 'Walter Clayton Jr.'
+            }
+        };
+
+        // Map championship years to team slugs for clickable badges
+        const CHAMP_YEAR_TO_SLUG = {
+            '2019': { slug: 'virginia-cavaliers', espnId: '258' },
+            '2018': { slug: 'villanova-wildcats', espnId: '222' },
+            '2023': { slug: 'uconn-huskies', espnId: '41' },
+            '2024': { slug: 'uconn-huskies', espnId: '41' },
+            '2025': { slug: 'florida-gators', espnId: '57' }
+        };
+
+        function renderChampionshipRun(year, slug) {
+            const key = `${year}/${slug}`;
+            const run = CHAMPIONSHIP_RUNS[key];
+            const container = document.getElementById('championshipRunContent');
+
+            if (!run) {
+                container.innerHTML = `
+                    <div style="text-align:center; padding:4rem 2rem;">
+                        <h2 style="color:#1B2A4A; margin-bottom:1rem;">Championship Run Not Found</h2>
+                        <p style="color:#6B7A8D;">We don't have a championship run page for this team and year yet.</p>
+                        <a class="champ-run-back" onclick="window.location.hash='';" style="margin-top:1.5rem; display:inline-flex;">\u2190 Back to Home</a>
+                    </div>`;
+                return;
+            }
+
+            const logoUrl = getLogoUrl(run.espnId);
+
+            // Build tournament path HTML
+            const pathHTML = run.games.map(g => {
+                const margin = g.winScore - g.loseScore;
+                const oppLogo = g.oppEspnId ? getLogoUrl(g.oppEspnId) : '';
+                const isChamp = g.isChampionship;
+                const oppTeam = g.oppEspnId ? findTeamByEspnId(g.oppEspnId) : null;
+                const oppSlug = oppTeam ? teamSlug(oppTeam.name) : '';
+                const clickAction = oppSlug ? `onclick="window.location.hash='#compare/${teamSlug(run.teamName)}/${oppSlug}'"` : '';
+
+                return `
+                    <div class="champ-run-game ${isChamp ? 'championship-game' : ''}" ${clickAction} ${clickAction ? 'title="Compare these teams"' : ''}>
+                        <div class="champ-run-round">${g.round}</div>
+                        <div class="champ-run-opponent">
+                            ${oppLogo ? `<div class="champ-run-opp-logo" style="background-image:url('${oppLogo}');"></div>` : '<div class="champ-run-opp-logo" style="background:#E8E2D6;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.6rem;color:#8892A0;">&nbsp;</div>'}
+                            <div class="champ-run-opp-info">
+                                <div class="champ-run-opp-name">${isChamp ? '\ud83c\udfc6 ' : ''}vs. ${g.opponent}</div>
+                                <div class="champ-run-opp-seed">#${g.oppSeed} Seed${g.note ? ' \u2022 ' + g.note : ''}</div>
+                            </div>
+                        </div>
+                        <div class="champ-run-score">
+                            <div class="champ-run-score-value">${g.score}</div>
+                            <div class="champ-run-score-margin win">W +${margin}</div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+
+            // Build stats HTML
+            const statsHTML = `
+                <div class="champ-run-stats">
+                    <div class="champ-run-stat">
+                        <div class="champ-run-stat-value">#${run.stats.seed}</div>
+                        <div class="champ-run-stat-label">Seed</div>
+                    </div>
+                    <div class="champ-run-stat">
+                        <div class="champ-run-stat-value">${run.stats.record}</div>
+                        <div class="champ-run-stat-label">Record</div>
+                    </div>
+                    <div class="champ-run-stat">
+                        <div class="champ-run-stat-value">${run.stats.avgMargin}</div>
+                        <div class="champ-run-stat-label">Avg Margin</div>
+                    </div>
+                    <div class="champ-run-stat">
+                        <div class="champ-run-stat-value">${run.mop}</div>
+                        <div class="champ-run-stat-label">MOP</div>
+                    </div>
+                </div>
+            `;
+
+            container.innerHTML = `
+                <a class="champ-run-back" onclick="history.back();">\u2190 Back</a>
+
+                <!-- Hero -->
+                <div class="champ-run-hero">
+                    <div class="champ-run-hero-logo" style="background-image:url('${logoUrl}');"></div>
+                    <div class="champ-run-hero-title">${run.heroTitle}</div>
+                    <div class="champ-run-hero-team">${run.teamName}</div>
+                    <div class="champ-run-hero-subtitle">${run.heroSubtitle}</div>
+                    <div class="champ-run-hero-accent"></div>
+                </div>
+
+                <!-- The Story -->
+                <div class="champ-run-card">
+                    <h3>\ud83d\udcda The Story</h3>
+                    <div class="champ-run-story">${run.story}</div>
+                </div>
+
+                <!-- Tournament Path -->
+                <div class="champ-run-card">
+                    <h3>\ud83c\udfc0 Tournament Path</h3>
+                    <div class="champ-run-path">
+                        ${pathHTML}
+                    </div>
+                </div>
+
+                <!-- Key Stats -->
+                <div class="champ-run-card">
+                    <h3>\ud83d\udcca Key Stats</h3>
+                    ${statsHTML}
+                </div>
+
+                <!-- Championship Game Highlights -->
+                ${run.videoId ? `
+                <div class="champ-run-card">
+                    <h3>\ud83c\udfa5 Championship Game Highlights</h3>
+                    <div class="champ-run-video">
+                        <iframe
+                            src="https://www.youtube.com/embed/${run.videoId}"
+                            title="${run.year} NCAA Championship Highlights"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen
+                            loading="lazy"
+                        ></iframe>
+                    </div>
+                </div>
+                ` : ''}
+
+                <!-- The Aftermath -->
+                <div class="champ-run-card">
+                    <h3>\ud83c\udf1f The Aftermath</h3>
+                    <div class="champ-run-story">${run.aftermath}</div>
+                </div>
+
+                <!-- Team Profile Link -->
+                <div style="text-align:center; margin: 1.5rem 0 2rem;">
+                    <a class="champ-run-profile-link" onclick="window.location.hash='#team/${teamSlug(run.teamName)}';">
+                        See full ${run.teamName} profile \u2192
+                    </a>
+                </div>
+            `;
+        }
+
+        // Helper: find team by ESPN ID
+        function findTeamByEspnId(espnId) {
+            return allTeamsData.find(t => String(t.espnId) === String(espnId));
+        }
 
         // Init
         init();

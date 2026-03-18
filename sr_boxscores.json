@@ -1,0 +1,548 @@
+{
+  "_metadata": {
+    "description": "Box score data from Sports Reference for pre-ESPN era NCAA tournament upsets",
+    "source": "sports-reference.com",
+    "lastUpdated": "2026-03-18",
+    "note": "Player stats for historic NCAA tournament upset games (1985-2004) where ESPN API data is unavailable"
+  },
+  "1991/richmond-spiders-vs-syracuse-orange": {
+    "source": "sports-reference",
+    "url": "https://www.sports-reference.com/cbb/boxscores/1991-03-14-richmond.html",
+    "matchup": "2v15",
+    "year": 1991,
+    "teams": [
+      {
+        "name": "Richmond Spiders",
+        "seed": 15,
+        "score": 73,
+        "players": [
+          { "name": "Curtis Blair", "min": 39, "pts": 18, "fg": "5-9", "tp": "1-3", "ft": "7-8", "reb": 3, "ast": 6, "stl": 3, "blk": 0, "to": 1 },
+          { "name": "Kenny Wood", "min": 31, "pts": 12, "fg": "6-11", "tp": "0-1", "ft": "0-1", "reb": 7, "ast": 0, "stl": 0, "blk": 0, "to": 2 },
+          { "name": "Terry Connolly", "min": 30, "pts": 14, "fg": "4-9", "tp": "1-5", "ft": "5-6", "reb": 7, "ast": 5, "stl": 0, "blk": 1, "to": 1 },
+          { "name": "Gerald Jarmon", "min": 26, "pts": 5, "fg": "2-3", "tp": "1-2", "ft": "0-1", "reb": 0, "ast": 3, "stl": 0, "blk": 0, "to": 1 },
+          { "name": "Jim Shields", "min": 24, "pts": 6, "fg": "3-4", "tp": "0-0", "ft": "0-3", "reb": 6, "ast": 1, "stl": 0, "blk": 2, "to": 4 },
+          { "name": "Tim Weathers", "min": 15, "pts": 0, "fg": "0-5", "tp": "0-3", "ft": "0-0", "reb": 3, "ast": 0, "stl": 0, "blk": 0, "to": 1 },
+          { "name": "Jim Springer", "min": 16, "pts": 8, "fg": "3-5", "tp": "0-0", "ft": "2-2", "reb": 2, "ast": 0, "stl": 2, "blk": 0, "to": 0 },
+          { "name": "Chris Fleming", "min": 13, "pts": 8, "fg": "2-5", "tp": "2-3", "ft": "2-2", "reb": 0, "ast": 0, "stl": 0, "blk": 0, "to": 0 },
+          { "name": "Eugene Burroughs", "min": 6, "pts": 2, "fg": "0-0", "tp": "0-0", "ft": "2-2", "reb": 0, "ast": 1, "stl": 0, "blk": 0, "to": 0 }
+        ],
+        "totals": { "pts": 73, "fg": "25-51", "tp": "5-17", "ft": "18-22", "reb": 25, "ast": 18, "stl": 6, "blk": 1, "to": 9 }
+      },
+      {
+        "name": "Syracuse Orange",
+        "seed": 2,
+        "score": 69,
+        "players": [
+          { "name": "Billy Owens", "min": 40, "pts": 22, "fg": "9-19", "tp": "1-3", "ft": "3-4", "reb": 7, "ast": 1, "stl": 0, "blk": 1, "to": 3 },
+          { "name": "Dave Johnson", "min": 30, "pts": 13, "fg": "4-8", "tp": "0-4", "ft": "5-6", "reb": 4, "ast": 2, "stl": 0, "blk": 0, "to": 1 },
+          { "name": "LeRon Ellis", "min": 37, "pts": 12, "fg": "4-5", "tp": "0-0", "ft": "4-6", "reb": 5, "ast": 0, "stl": 0, "blk": 3, "to": 1 },
+          { "name": "Michael Edwards", "min": 32, "pts": 12, "fg": "4-13", "tp": "4-10", "ft": "0-0", "reb": 0, "ast": 1, "stl": 0, "blk": 0, "to": 1 },
+          { "name": "Adrian Autry", "min": 36, "pts": 7, "fg": "3-7", "tp": "0-3", "ft": "1-2", "reb": 7, "ast": 9, "stl": 2, "blk": 0, "to": 4 },
+          { "name": "Conrad McRae", "min": 13, "pts": 3, "fg": "1-1", "tp": "0-0", "ft": "1-1", "reb": 4, "ast": 0, "stl": 0, "blk": 0, "to": 0 },
+          { "name": "Mike Hopkins", "min": 7, "pts": 0, "fg": "0-1", "tp": "0-1", "ft": "0-0", "reb": 1, "ast": 0, "stl": 0, "blk": 0, "to": 2 },
+          { "name": "Scott McCorkle", "min": 5, "pts": 0, "fg": "0-1", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "stl": 1, "blk": 1, "to": 0 }
+        ],
+        "totals": { "pts": 69, "fg": "25-55", "tp": "5-21", "ft": "14-19", "reb": 30, "ast": 12, "stl": 3, "blk": 4, "to": 13 }
+      }
+    ]
+  },
+  "1993/santa-clara-broncos-vs-arizona-wildcats": {
+    "source": "sports-reference",
+    "url": "https://www.sports-reference.com/cbb/boxscores/1993-03-18-arizona.html",
+    "matchup": "2v15",
+    "year": 1993,
+    "teams": [
+      {
+        "name": "Santa Clara Broncos",
+        "seed": 15,
+        "score": 64,
+        "players": [
+          { "name": "Pete Eisenrich", "min": 37, "pts": 19, "fg": "6-13", "tp": "2-7", "ft": "5-6", "reb": 8, "ast": 0, "stl": 0, "blk": 4, "to": 4 },
+          { "name": "DeWayne Lewis", "min": 27, "pts": 13, "fg": "6-15", "tp": "1-4", "ft": "0-0", "reb": 2, "ast": 5, "stl": 7, "blk": 1, "to": 0 },
+          { "name": "Steve Nash", "min": 30, "pts": 10, "fg": "1-7", "tp": "0-3", "ft": "8-10", "reb": 7, "ast": 4, "stl": 0, "blk": 0, "to": 1 },
+          { "name": "John Woolery", "min": 35, "pts": 10, "fg": "5-6", "tp": "0-0", "ft": "3-3", "reb": 5, "ast": 3, "stl": 6, "blk": 1, "to": 2 },
+          { "name": "Mark Schmitz", "min": 31, "pts": 7, "fg": "3-13", "tp": "1-7", "ft": "0-0", "reb": 3, "ast": 6, "stl": 1, "blk": 2, "to": 0 },
+          { "name": "Kevin Dunne", "min": 12, "pts": 5, "fg": "2-2", "tp": "0-0", "ft": "1-4", "reb": 4, "ast": 0, "stl": 0, "blk": 0, "to": 2 },
+          { "name": "Kevin Fitzwilson", "min": 5, "pts": 1, "fg": "0-0", "tp": "0-0", "ft": "1-2", "reb": 0, "ast": 0, "stl": 0, "blk": 1, "to": 3 },
+          { "name": "Adam Anderson", "min": 11, "pts": 0, "fg": "0-2", "tp": "0-0", "ft": "0-1", "reb": 0, "ast": 0, "stl": 0, "blk": 2, "to": 0 },
+          { "name": "Andy Karich", "min": 9, "pts": 0, "fg": "0-1", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 1, "stl": 0, "blk": 0, "to": 0 },
+          { "name": "Jason Sedlock", "min": 2, "pts": 0, "fg": "0-1", "tp": "0-0", "ft": "0-2", "reb": 0, "ast": 0, "stl": 0, "blk": 0, "to": 1 },
+          { "name": "Claude Jones", "min": 1, "pts": 0, "fg": "0-1", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "stl": 0, "blk": 0, "to": 0 }
+        ],
+        "totals": { "pts": 64, "fg": "23-61", "tp": "4-22", "ft": "14-23", "reb": 43, "ast": 9, "stl": 10, "blk": 5, "to": 13 }
+      },
+      {
+        "name": "Arizona Wildcats",
+        "seed": 2,
+        "score": 61,
+        "players": [
+          { "name": "Chris Mills", "min": 29, "pts": 19, "fg": "7-15", "tp": "2-6", "ft": "3-3", "reb": 5, "ast": 1, "stl": 0, "blk": 1, "to": 0 },
+          { "name": "Ed Stokes", "min": 36, "pts": 12, "fg": "5-13", "tp": "0-0", "ft": "2-5", "reb": 8, "ast": 0, "stl": 1, "blk": 3, "to": 0 },
+          { "name": "Khalid Reeves", "min": 32, "pts": 10, "fg": "2-9", "tp": "1-3", "ft": "5-7", "reb": 3, "ast": 3, "stl": 1, "blk": 0, "to": 1 },
+          { "name": "Ray Owes", "min": 28, "pts": 7, "fg": "1-4", "tp": "0-0", "ft": "5-8", "reb": 7, "ast": 1, "stl": 0, "blk": 0, "to": 2 },
+          { "name": "Damon Stoudamire", "min": 21, "pts": 6, "fg": "0-7", "tp": "0-3", "ft": "6-6", "reb": 6, "ast": 4, "stl": 2, "blk": 0, "to": 6 },
+          { "name": "Reggie Geary", "min": 23, "pts": 3, "fg": "1-3", "tp": "1-2", "ft": "0-0", "reb": 2, "ast": 1, "stl": 0, "blk": 1, "to": 1 },
+          { "name": "Joe McLean", "min": 12, "pts": 3, "fg": "1-3", "tp": "1-1", "ft": "0-0", "reb": 3, "ast": 0, "stl": 1, "blk": 0, "to": 1 },
+          { "name": "Dylan Rigdon", "min": 15, "pts": 1, "fg": "0-0", "tp": "1-2", "ft": "0-0", "reb": 0, "ast": 0, "stl": 0, "blk": 1, "to": 1 },
+          { "name": "Joseph Blair", "min": 4, "pts": 0, "fg": "0-1", "tp": "0-0", "ft": "0-1", "reb": 0, "ast": 0, "stl": 0, "blk": 0, "to": 0 }
+        ],
+        "totals": { "pts": 61, "fg": "17-55", "tp": "5-15", "ft": "22-32", "reb": 34, "ast": 10, "stl": 5, "blk": 5, "to": 11 }
+      }
+    ]
+  },
+  "1997/coppin-state-eagles-vs-south-carolina-gamecocks": {
+    "source": "sports-reference",
+    "url": "https://www.sports-reference.com/cbb/boxscores/1997-03-14-coppin-state.html",
+    "matchup": "2v15",
+    "year": 1997,
+    "teams": [
+      {
+        "name": "Coppin State Eagles",
+        "seed": 15,
+        "score": 78,
+        "players": [
+          { "name": "Danny Singletary", "min": 30, "pts": 22, "fg": "8-14", "tp": "1-4", "ft": "5-6", "reb": 2, "ast": 0, "stl": 5, "blk": 1, "to": 1 },
+          { "name": "Antoine Brockington", "min": 35, "pts": 20, "fg": "5-13", "tp": "1-4", "ft": "9-10", "reb": 3, "ast": 2, "stl": 3, "blk": 0, "to": 1 },
+          { "name": "Terquin Mott", "min": 30, "pts": 11, "fg": "5-12", "tp": "0-0", "ft": "1-2", "reb": 11, "ast": 1, "stl": 1, "blk": 3, "to": 4 },
+          { "name": "Kareem Lewis", "min": 15, "pts": 8, "fg": "2-3", "tp": "0-0", "ft": "4-6", "reb": 4, "ast": 1, "stl": 0, "blk": 1, "to": 2 },
+          { "name": "Reggie Welch", "min": 35, "pts": 7, "fg": "3-10", "tp": "0-2", "ft": "1-4", "reb": 15, "ast": 1, "stl": 1, "blk": 0, "to": 2 },
+          { "name": "Fred Warrick", "min": 26, "pts": 7, "fg": "1-5", "tp": "0-2", "ft": "5-5", "reb": 3, "ast": 1, "stl": 1, "blk": 0, "to": 4 },
+          { "name": "Julian King", "min": 9, "pts": 3, "fg": "1-1", "tp": "0-0", "ft": "1-1", "reb": 1, "ast": 0, "stl": 0, "blk": 0, "to": 1 },
+          { "name": "Troy Lewis", "min": 10, "pts": 0, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 2, "ast": 0, "stl": 0, "blk": 0, "to": 0 },
+          { "name": "Jerel Seamon", "min": 10, "pts": 0, "fg": "0-1", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "stl": 1, "blk": 0, "to": 2 }
+        ],
+        "totals": { "pts": 78, "fg": "25-59", "tp": "2-13", "ft": "26-34", "reb": 39, "ast": 6, "stl": 13, "blk": 5, "to": 17 }
+      },
+      {
+        "name": "South Carolina Gamecocks",
+        "seed": 2,
+        "score": 65,
+        "players": [
+          { "name": "B.J. McKie", "min": 29, "pts": 16, "fg": "6-14", "tp": "1-5", "ft": "3-5", "reb": 2, "ast": 1, "stl": 2, "blk": 0, "to": 1 },
+          { "name": "Melvin Watson", "min": 35, "pts": 13, "fg": "6-13", "tp": "0-3", "ft": "1-1", "reb": 5, "ast": 5, "stl": 4, "blk": 1, "to": 6 },
+          { "name": "Ryan Stack", "min": 23, "pts": 13, "fg": "3-5", "tp": "0-1", "ft": "7-7", "reb": 4, "ast": 0, "stl": 1, "blk": 2, "to": 4 },
+          { "name": "Herbert Lee Davis", "min": 18, "pts": 8, "fg": "3-6", "tp": "2-2", "ft": "0-0", "reb": 2, "ast": 0, "stl": 0, "blk": 1, "to": 1 },
+          { "name": "Arthur Carlisle", "min": 16, "pts": 7, "fg": "2-5", "tp": "1-3", "ft": "2-2", "reb": 3, "ast": 0, "stl": 1, "blk": 0, "to": 0 },
+          { "name": "William Gallman", "min": 26, "pts": 4, "fg": "2-3", "tp": "0-0", "ft": "0-2", "reb": 5, "ast": 0, "stl": 1, "blk": 4, "to": 4 },
+          { "name": "Nate Wilbourne", "min": 13, "pts": 3, "fg": "1-3", "tp": "0-0", "ft": "1-1", "reb": 2, "ast": 1, "stl": 0, "blk": 0, "to": 2 },
+          { "name": "Larry Davis", "min": 33, "pts": 2, "fg": "1-8", "tp": "0-5", "ft": "0-0", "reb": 10, "ast": 1, "stl": 0, "blk": 1, "to": 3 },
+          { "name": "Hagen Rouse", "min": 3, "pts": 1, "fg": "0-1", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "stl": 0, "blk": 0, "to": 1 },
+          { "name": "Bud Johnson", "min": 4, "pts": 1, "fg": "0-0", "tp": "0-0", "ft": "1-1", "reb": 0, "ast": 0, "stl": 0, "blk": 0, "to": 0 }
+        ],
+        "totals": { "pts": 65, "fg": "24-58", "tp": "4-20", "ft": "13-16", "reb": 29, "ast": 13, "stl": 9, "blk": 3, "to": 19 }
+      }
+    ]
+  },
+  "2001/hampton-pirates-vs-iowa-state-cyclones": {
+    "source": "sports-reference",
+    "url": "https://www.sports-reference.com/cbb/boxscores/2001-03-15-hampton.html",
+    "matchup": "2v15",
+    "year": 2001,
+    "teams": [
+      {
+        "name": "Hampton Pirates",
+        "seed": 15,
+        "score": 58,
+        "players": [
+          { "name": "Tarvis Williams", "min": 29, "pts": 16, "fg": "7-13", "tp": "0-0", "ft": "2-6", "reb": 13, "ast": 0, "stl": 0, "blk": 6, "to": 5 },
+          { "name": "Marseilles Brown", "min": 40, "pts": 14, "fg": "3-11", "tp": "2-8", "ft": "6-6", "reb": 4, "ast": 4, "stl": 1, "blk": 0, "to": 2 },
+          { "name": "Lasean Howard", "min": 30, "pts": 10, "fg": "4-11", "tp": "0-4", "ft": "2-3", "reb": 5, "ast": 3, "stl": 1, "blk": 1, "to": 3 },
+          { "name": "Cleveland Davis", "min": 22, "pts": 7, "fg": "3-5", "tp": "1-2", "ft": "0-0", "reb": 4, "ast": 0, "stl": 1, "blk": 1, "to": 2 },
+          { "name": "Tommy Adams", "min": 37, "pts": 6, "fg": "2-12", "tp": "0-6", "ft": "2-2", "reb": 0, "ast": 2, "stl": 2, "blk": 0, "to": 2 },
+          { "name": "Isaac Jefferson", "min": 38, "pts": 5, "fg": "2-2", "tp": "0-0", "ft": "1-5", "reb": 4, "ast": 1, "stl": 1, "blk": 0, "to": 2 },
+          { "name": "Arthimus Howard", "min": 3, "pts": 0, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "stl": 0, "blk": 0, "to": 0 },
+          { "name": "David Johnson", "min": 1, "pts": 0, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "stl": 0, "blk": 0, "to": 0 }
+        ],
+        "totals": { "pts": 58, "fg": "21-54", "tp": "3-20", "ft": "13-22", "reb": 30, "ast": 10, "stl": 6, "blk": 8, "to": 15 }
+      },
+      {
+        "name": "Iowa State Cyclones",
+        "seed": 2,
+        "score": 57,
+        "players": [
+          { "name": "Martin Rancik", "min": 31, "pts": 10, "fg": "5-13", "tp": "0-0", "ft": "2-2", "reb": 8, "ast": 0, "stl": 0, "blk": 1, "to": 1 },
+          { "name": "Paul Shirley", "min": 31, "pts": 10, "fg": "4-10", "tp": "0-0", "ft": "2-2", "reb": 8, "ast": 0, "stl": 1, "blk": 0, "to": 5 },
+          { "name": "Jamaal Tinsley", "min": 36, "pts": 9, "fg": "4-11", "tp": "1-3", "ft": "0-4", "reb": 4, "ast": 8, "stl": 5, "blk": 1, "to": 5 },
+          { "name": "Shane Power", "min": 21, "pts": 8, "fg": "3-8", "tp": "0-2", "ft": "2-4", "reb": 5, "ast": 0, "stl": 0, "blk": 0, "to": 1 },
+          { "name": "Kantrail Horton", "min": 36, "pts": 7, "fg": "2-6", "tp": "2-5", "ft": "1-2", "reb": 7, "ast": 1, "stl": 1, "blk": 0, "to": 2 },
+          { "name": "Jake Sullivan", "min": 30, "pts": 7, "fg": "2-4", "tp": "2-4", "ft": "1-2", "reb": 2, "ast": 1, "stl": 0, "blk": 0, "to": 1 },
+          { "name": "Richard Evans", "min": 9, "pts": 4, "fg": "2-2", "tp": "0-0", "ft": "0-1", "reb": 4, "ast": 0, "stl": 0, "blk": 0, "to": 1 },
+          { "name": "Tyray Pearson", "min": 6, "pts": 2, "fg": "1-3", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "stl": 0, "blk": 0, "to": 1 }
+        ],
+        "totals": { "pts": 57, "fg": "23-57", "tp": "5-14", "ft": "6-16", "reb": 39, "ast": 10, "stl": 7, "blk": 2, "to": 17 }
+      }
+    ]
+  },
+  "1986/cleveland-state-vikings-vs-indiana-hoosiers": {
+    "source": "sports-reference",
+    "url": "https://www.sports-reference.com/cbb/boxscores/1986-03-14-cleveland-state.html",
+    "matchup": "3v14",
+    "year": 1986,
+    "teams": [
+      {
+        "name": "Cleveland State Vikings",
+        "seed": 14,
+        "score": 83,
+        "players": [
+          { "name": "Clinton Ransey", "min": 33, "pts": 27, "fg": "9-15", "tp": "0-0", "ft": "9-13", "reb": 5, "ast": 1, "stl": 2, "blk": 0, "to": 4 },
+          { "name": "Eric Mudd", "min": 31, "pts": 16, "fg": "6-7", "tp": "0-0", "ft": "4-5", "reb": 10, "ast": 1, "stl": 1, "blk": 0, "to": 1 },
+          { "name": "Clinton Smith", "min": 23, "pts": 12, "fg": "5-10", "tp": "0-0", "ft": "2-2", "reb": 2, "ast": 3, "stl": 2, "blk": 0, "to": 2 },
+          { "name": "Mouse McFadden", "min": 30, "pts": 9, "fg": "4-8", "tp": "0-0", "ft": "1-1", "reb": 1, "ast": 2, "stl": 1, "blk": 0, "to": 3 },
+          { "name": "Paul Stewart", "min": 17, "pts": 6, "fg": "3-4", "tp": "0-0", "ft": "0-0", "reb": 3, "ast": 0, "stl": 0, "blk": 0, "to": 0 },
+          { "name": "Steve Corbin", "min": 10, "pts": 4, "fg": "2-3", "tp": "0-0", "ft": "0-0", "reb": 2, "ast": 0, "stl": 0, "blk": 0, "to": 1 },
+          { "name": "Bob Crawford", "min": 9, "pts": 4, "fg": "2-3", "tp": "0-0", "ft": "0-0", "reb": 3, "ast": 0, "stl": 0, "blk": 0, "to": 0 },
+          { "name": "Eddie Bryant", "min": 28, "pts": 2, "fg": "1-4", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 4, "stl": 0, "blk": 0, "to": 0 },
+          { "name": "Shawn Hood", "min": 12, "pts": 2, "fg": "1-2", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 4, "stl": 0, "blk": 0, "to": 0 },
+          { "name": "Ray Salters", "min": 7, "pts": 1, "fg": "0-0", "tp": "0-0", "ft": "1-2", "reb": 1, "ast": 0, "stl": 0, "blk": 0, "to": 2 }
+        ],
+        "totals": { "pts": 83, "fg": "33-56", "tp": "0-0", "ft": "17-23", "reb": 29, "ast": 15, "stl": 6, "blk": 0, "to": 13 }
+      },
+      {
+        "name": "Indiana Hoosiers",
+        "seed": 3,
+        "score": 79,
+        "players": [
+          { "name": "Steve Alford", "min": 40, "pts": 24, "fg": "10-20", "tp": "0-0", "ft": "4-4", "reb": 2, "ast": 7, "stl": 1, "blk": 0, "to": 1 },
+          { "name": "Andre Harris", "min": 35, "pts": 16, "fg": "8-10", "tp": "0-0", "ft": "0-2", "reb": 10, "ast": 1, "stl": 0, "blk": 2, "to": 1 },
+          { "name": "Daryl Thomas", "min": 23, "pts": 11, "fg": "4-6", "tp": "0-0", "ft": "3-4", "reb": 4, "ast": 1, "stl": 0, "blk": 0, "to": 3 },
+          { "name": "Rick Calloway", "min": 28, "pts": 10, "fg": "4-8", "tp": "0-0", "ft": "2-4", "reb": 7, "ast": 0, "stl": 0, "blk": 0, "to": 2 },
+          { "name": "Stew Robinson", "min": 39, "pts": 10, "fg": "3-9", "tp": "0-0", "ft": "4-5", "reb": 1, "ast": 4, "stl": 1, "blk": 0, "to": 2 },
+          { "name": "Winston Morgan", "min": 16, "pts": 2, "fg": "1-1", "tp": "0-0", "ft": "0-0", "reb": 2, "ast": 5, "stl": 0, "blk": 0, "to": 0 },
+          { "name": "Steve Eyl", "min": 8, "pts": 2, "fg": "1-2", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "stl": 0, "blk": 0, "to": 0 },
+          { "name": "Todd Jadlow", "min": 6, "pts": 2, "fg": "0-1", "tp": "0-0", "ft": "2-2", "reb": 0, "ast": 0, "stl": 0, "blk": 0, "to": 1 },
+          { "name": "Todd Meier", "min": 5, "pts": 2, "fg": "1-2", "tp": "0-0", "ft": "0-0", "reb": 2, "ast": 0, "stl": 0, "blk": 0, "to": 0 }
+        ],
+        "totals": { "pts": 79, "fg": "32-59", "tp": "0-0", "ft": "15-21", "reb": 28, "ast": 18, "stl": 2, "blk": 2, "to": 15 }
+      }
+    ]
+  },
+  "1997/chattanooga-mocs-vs-georgia-bulldogs": {
+    "source": "sports-reference",
+    "url": "https://www.sports-reference.com/cbb/boxscores/1997-03-14-chattanooga.html",
+    "matchup": "3v14",
+    "year": 1997,
+    "teams": [
+      {
+        "name": "Chattanooga Mocs",
+        "seed": 14,
+        "score": 73,
+        "players": [
+          { "name": "Willie Young", "min": 37, "pts": 24, "fg": "8-14", "tp": "2-3", "ft": "6-7", "reb": 3, "ast": 2, "stl": 0, "blk": 0, "to": 1 },
+          { "name": "Johnny Taylor", "min": 31, "pts": 19, "fg": "6-12", "tp": "2-2", "ft": "5-6", "reb": 2, "ast": 2, "stl": 0, "blk": 0, "to": 2 },
+          { "name": "Chris Mims", "min": 35, "pts": 9, "fg": "4-6", "tp": "0-0", "ft": "1-3", "reb": 6, "ast": 3, "stl": 1, "blk": 1, "to": 1 },
+          { "name": "David Phillips", "min": 18, "pts": 7, "fg": "3-6", "tp": "0-2", "ft": "1-1", "reb": 1, "ast": 0, "stl": 0, "blk": 0, "to": 1 },
+          { "name": "Isaac Conner", "min": 23, "pts": 5, "fg": "2-5", "tp": "1-3", "ft": "0-0", "reb": 2, "ast": 0, "stl": 0, "blk": 1, "to": 4 },
+          { "name": "Marquis Collier", "min": 13, "pts": 4, "fg": "1-1", "tp": "0-0", "ft": "2-3", "reb": 5, "ast": 0, "stl": 0, "blk": 1, "to": 0 },
+          { "name": "Wes Moore", "min": 34, "pts": 3, "fg": "1-2", "tp": "1-1", "ft": "0-0", "reb": 3, "ast": 0, "stl": 0, "blk": 2, "to": 2 },
+          { "name": "Akintoye Oloko", "min": 1, "pts": 2, "fg": "0-0", "tp": "0-0", "ft": "2-2", "reb": 0, "ast": 0, "stl": 0, "blk": 0, "to": 0 },
+          { "name": "Billy Hutchins", "min": 8, "pts": 1, "fg": "0-0", "tp": "0-0", "ft": "1-0", "reb": 1, "ast": 0, "stl": 0, "blk": 0, "to": 0 }
+        ],
+        "totals": { "pts": 73, "fg": "25-46", "tp": "6-11", "ft": "17-22", "reb": 23, "ast": 13, "stl": 1, "blk": 3, "to": 8 }
+      },
+      {
+        "name": "Georgia Bulldogs",
+        "seed": 3,
+        "score": 70,
+        "players": [
+          { "name": "G.G. Smith", "min": 34, "pts": 18, "fg": "6-13", "tp": "2-4", "ft": "4-4", "reb": 4, "ast": 7, "stl": 0, "blk": 0, "to": 1 },
+          { "name": "Ray Harrison", "min": 34, "pts": 14, "fg": "6-10", "tp": "1-1", "ft": "1-2", "reb": 4, "ast": 1, "stl": 2, "blk": 0, "to": 1 },
+          { "name": "Adrian Jones", "min": 14, "pts": 9, "fg": "3-6", "tp": "2-2", "ft": "1-2", "reb": 2, "ast": 3, "stl": 2, "blk": 0, "to": 1 },
+          { "name": "Larry Brown", "min": 15, "pts": 8, "fg": "2-2", "tp": "0-0", "ft": "4-4", "reb": 6, "ast": 0, "stl": 0, "blk": 1, "to": 1 },
+          { "name": "Devin Baker", "min": 21, "pts": 7, "fg": "3-3", "tp": "0-0", "ft": "1-2", "reb": 4, "ast": 0, "stl": 0, "blk": 0, "to": 0 },
+          { "name": "Lorenzo Hall", "min": 25, "pts": 5, "fg": "2-5", "tp": "0-0", "ft": "1-4", "reb": 7, "ast": 0, "stl": 1, "blk": 1, "to": 0 },
+          { "name": "Derrick Dukes", "min": 19, "pts": 4, "fg": "1-7", "tp": "0-3", "ft": "2-3", "reb": 0, "ast": 0, "stl": 0, "blk": 0, "to": 0 },
+          { "name": "Michael Chadwick", "min": 24, "pts": 3, "fg": "1-7", "tp": "1-5", "ft": "0-0", "reb": 0, "ast": 0, "stl": 0, "blk": 3, "to": 0 },
+          { "name": "Badi Oliver", "min": 11, "pts": 2, "fg": "1-1", "tp": "0-0", "ft": "0-2", "reb": 0, "ast": 0, "stl": 0, "blk": 0, "to": 0 },
+          { "name": "Jon Nordin", "min": 3, "pts": 0, "fg": "0-1", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "stl": 0, "blk": 2, "to": 0 }
+        ],
+        "totals": { "pts": 70, "fg": "25-55", "tp": "6-15", "ft": "14-23", "reb": 27, "ast": 11, "stl": 5, "blk": 2, "to": 7 }
+      }
+    ]
+  },
+  "1998/richmond-spiders-vs-south-carolina-gamecocks": {
+    "source": "sports-reference",
+    "url": "https://www.sports-reference.com/cbb/boxscores/1998-03-12-richmond.html",
+    "matchup": "3v14",
+    "year": 1998,
+    "teams": [
+      {
+        "name": "Richmond Spiders",
+        "seed": 14,
+        "score": 62,
+        "players": [
+          { "name": "Jarod Stevenson", "min": 39, "pts": 24, "fg": "8-16", "tp": "2-5", "ft": "6-6", "reb": 5, "ast": 3, "stl": 0, "blk": 1, "to": 0 },
+          { "name": "Marseilles Brown", "min": 35, "pts": 15, "fg": "5-13", "tp": "5-12", "ft": "0-0", "reb": 1, "ast": 4, "stl": 0, "blk": 1, "to": 2 },
+          { "name": "Daryl Oliver", "min": 28, "pts": 11, "fg": "4-13", "tp": "0-2", "ft": "3-4", "reb": 4, "ast": 0, "stl": 1, "blk": 0, "to": 0 },
+          { "name": "Eric Poole", "min": 33, "pts": 6, "fg": "2-5", "tp": "0-0", "ft": "2-4", "reb": 9, "ast": 0, "stl": 1, "blk": 0, "to": 2 },
+          { "name": "Jonathan Baker", "min": 38, "pts": 4, "fg": "2-7", "tp": "0-5", "ft": "0-0", "reb": 5, "ast": 1, "stl": 1, "blk": 0, "to": 1 },
+          { "name": "Nick Patrick", "min": 13, "pts": 2, "fg": "1-4", "tp": "0-0", "ft": "0-0", "reb": 2, "ast": 1, "stl": 0, "blk": 0, "to": 2 },
+          { "name": "David Hensel", "min": 7, "pts": 0, "fg": "0-1", "tp": "0-0", "ft": "0-1", "reb": 0, "ast": 0, "stl": 0, "blk": 0, "to": 0 },
+          { "name": "Carlos Cueto", "min": 5, "pts": 0, "fg": "0-0", "tp": "0-0", "ft": "0-1", "reb": 0, "ast": 1, "stl": 0, "blk": 0, "to": 0 },
+          { "name": "Rick Houston", "min": 2, "pts": 0, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "stl": 0, "blk": 0, "to": 0 }
+        ],
+        "totals": { "pts": 62, "fg": "22-59", "tp": "7-24", "ft": "11-14", "reb": 31, "ast": 10, "stl": 4, "blk": 1, "to": 6 }
+      },
+      {
+        "name": "South Carolina Gamecocks",
+        "seed": 3,
+        "score": 61,
+        "players": [
+          { "name": "B.J. McKie", "min": 37, "pts": 24, "fg": "9-14", "tp": "4-6", "ft": "2-2", "reb": 4, "ast": 2, "stl": 1, "blk": 0, "to": 3 },
+          { "name": "Ryan Stack", "min": 28, "pts": 10, "fg": "4-7", "tp": "1-2", "ft": "1-1", "reb": 4, "ast": 1, "stl": 1, "blk": 2, "to": 2 },
+          { "name": "Melvin Watson", "min": 34, "pts": 6, "fg": "3-8", "tp": "0-1", "ft": "0-0", "reb": 10, "ast": 0, "stl": 1, "blk": 2, "to": 3 },
+          { "name": "Herbert Lee Davis", "min": 21, "pts": 5, "fg": "2-7", "tp": "1-5", "ft": "0-0", "reb": 2, "ast": 0, "stl": 0, "blk": 0, "to": 2 },
+          { "name": "William Gallman", "min": 17, "pts": 5, "fg": "1-2", "tp": "0-0", "ft": "3-6", "reb": 7, "ast": 1, "stl": 0, "blk": 0, "to": 1 },
+          { "name": "Antonio Grant", "min": 32, "pts": 5, "fg": "2-5", "tp": "1-4", "ft": "0-0", "reb": 10, "ast": 1, "stl": 0, "blk": 1, "to": 1 },
+          { "name": "Leron Williams", "min": 18, "pts": 4, "fg": "2-6", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 1, "stl": 0, "blk": 1, "to": 0 },
+          { "name": "Bud Johnson", "min": 7, "pts": 2, "fg": "1-1", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "stl": 0, "blk": 0, "to": 1 },
+          { "name": "Recus Nix", "min": 6, "pts": 0, "fg": "0-2", "tp": "0-1", "ft": "0-0", "reb": 3, "ast": 0, "stl": 1, "blk": 0, "to": 1 }
+        ],
+        "totals": { "pts": 61, "fg": "24-52", "tp": "7-19", "ft": "6-9", "reb": 31, "ast": 15, "stl": 3, "blk": 4, "to": 10 }
+      }
+    ]
+  },
+  "1999/weber-state-wildcats-vs-north-carolina-tar-heels": {
+    "source": "sports-reference",
+    "url": "https://www.sports-reference.com/cbb/boxscores/1999-03-11-north-carolina.html",
+    "matchup": "3v14",
+    "year": 1999,
+    "teams": [
+      {
+        "name": "Weber State Wildcats",
+        "seed": 14,
+        "score": 76,
+        "players": [
+          { "name": "Harold Arceneaux", "min": 34, "pts": 36, "fg": "14-26", "tp": "5-7", "ft": "3-3", "reb": 3, "ast": 1, "stl": 1, "blk": 1, "to": 3 },
+          { "name": "Eddie Gill", "min": 40, "pts": 16, "fg": "4-12", "tp": "3-9", "ft": "5-5", "reb": 5, "ast": 2, "stl": 2, "blk": 0, "to": 2 },
+          { "name": "Marc Lawson", "min": 26, "pts": 8, "fg": "3-5", "tp": "2-4", "ft": "0-0", "reb": 3, "ast": 1, "stl": 1, "blk": 0, "to": 3 },
+          { "name": "Noel Jackson", "min": 36, "pts": 7, "fg": "2-4", "tp": "1-1", "ft": "2-4", "reb": 6, "ast": 5, "stl": 0, "blk": 0, "to": 2 },
+          { "name": "Eric Ketcham", "min": 15, "pts": 6, "fg": "2-3", "tp": "2-3", "ft": "0-0", "reb": 2, "ast": 0, "stl": 1, "blk": 1, "to": 2 },
+          { "name": "Damien Baskerville", "min": 18, "pts": 3, "fg": "1-3", "tp": "1-2", "ft": "0-0", "reb": 8, "ast": 1, "stl": 0, "blk": 1, "to": 0 },
+          { "name": "Dan Del Vecchio", "min": 4, "pts": 1, "fg": "0-0", "tp": "0-0", "ft": "1-1", "reb": 0, "ast": 0, "stl": 0, "blk": 0, "to": 0 },
+          { "name": "Andy Jensen", "min": 25, "pts": 0, "fg": "0-2", "tp": "0-0", "ft": "0-1", "reb": 1, "ast": 3, "stl": 4, "blk": 0, "to": 0 },
+          { "name": "Joey Haws", "min": 2, "pts": 0, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "stl": 0, "blk": 0, "to": 0 }
+        ],
+        "totals": { "pts": 76, "fg": "26-55", "tp": "14-26", "ft": "10-12", "reb": 26, "ast": 15, "stl": 6, "blk": 4, "to": 13 }
+      },
+      {
+        "name": "North Carolina Tar Heels",
+        "seed": 3,
+        "score": 74,
+        "players": [
+          { "name": "Ed Cota", "min": 38, "pts": 20, "fg": "8-12", "tp": "3-5", "ft": "1-1", "reb": 4, "ast": 10, "stl": 3, "blk": 0, "to": 3 },
+          { "name": "Ademola Okulaja", "min": 39, "pts": 17, "fg": "6-15", "tp": "5-12", "ft": "0-0", "reb": 12, "ast": 2, "stl": 1, "blk": 1, "to": 3 },
+          { "name": "Vasco Evtimov", "min": 19, "pts": 13, "fg": "6-10", "tp": "0-0", "ft": "1-2", "reb": 10, "ast": 0, "stl": 1, "blk": 0, "to": 0 },
+          { "name": "Kris Lang", "min": 22, "pts": 11, "fg": "4-8", "tp": "0-0", "ft": "3-5", "reb": 6, "ast": 0, "stl": 0, "blk": 0, "to": 2 },
+          { "name": "Max Owens", "min": 23, "pts": 7, "fg": "2-11", "tp": "1-1", "ft": "2-2", "reb": 4, "ast": 1, "stl": 0, "blk": 1, "to": 2 },
+          { "name": "Brian Bersticker", "min": 11, "pts": 5, "fg": "2-6", "tp": "0-0", "ft": "1-1", "reb": 5, "ast": 0, "stl": 0, "blk": 0, "to": 1 },
+          { "name": "Brendan Haywood", "min": 24, "pts": 2, "fg": "0-3", "tp": "0-0", "ft": "2-2", "reb": 1, "ast": 1, "stl": 0, "blk": 2, "to": 1 },
+          { "name": "Ronald Curry", "min": 20, "pts": 0, "fg": "0-2", "tp": "0-2", "ft": "0-0", "reb": 1, "ast": 1, "stl": 0, "blk": 1, "to": 3 },
+          { "name": "Jason Capel", "min": 4, "pts": 0, "fg": "0-1", "tp": "0-1", "ft": "0-0", "reb": 1, "ast": 0, "stl": 0, "blk": 0, "to": 1 }
+        ],
+        "totals": { "pts": 74, "fg": "28-68", "tp": "9-21", "ft": "9-13", "reb": 37, "ast": 15, "stl": 5, "blk": 4, "to": 12 }
+      }
+    ]
+  },
+  "1985/navy-midshipmen-vs-lsu-tigers": {
+    "source": "sports-reference",
+    "url": "https://www.sports-reference.com/cbb/boxscores/1985-03-15-louisiana-state.html",
+    "matchup": "4v13",
+    "year": 1985,
+    "teams": [
+      {
+        "name": "Navy Midshipmen",
+        "seed": 13,
+        "score": 78,
+        "players": [
+          { "name": "Vernon Butler", "min": 37, "pts": 20, "fg": "5-11", "tp": "0-0", "ft": "10-10", "reb": 9, "ast": 0, "stl": 2, "blk": 4, "to": 0 },
+          { "name": "David Robinson", "min": 38, "pts": 18, "fg": "8-14", "tp": "0-0", "ft": "2-7", "reb": 1, "ast": 3, "stl": 3, "blk": 2, "to": 0 },
+          { "name": "Doug Wojcik", "min": 36, "pts": 18, "fg": "5-7", "tp": "0-0", "ft": "8-8", "reb": 8, "ast": 0, "stl": 3, "blk": 2, "to": 0 },
+          { "name": "Kylor Whitaker", "min": 38, "pts": 13, "fg": "2-7", "tp": "0-0", "ft": "9-10", "reb": 1, "ast": 0, "stl": 3, "blk": 2, "to": 0 },
+          { "name": "Cliff Rees", "min": 27, "pts": 4, "fg": "1-3", "tp": "0-0", "ft": "2-2", "reb": 2, "ast": 2, "stl": 1, "blk": 1, "to": 0 },
+          { "name": "Carl Liebert", "min": 7, "pts": 0, "fg": "0-1", "tp": "0-0", "ft": "0-2", "reb": 0, "ast": 0, "stl": 1, "blk": 1, "to": 0 },
+          { "name": "Tony Wells", "min": 7, "pts": 0, "fg": "0-1", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "stl": 0, "blk": 2, "to": 0 }
+        ],
+        "totals": { "pts": 78, "fg": "22-45", "tp": "0-0", "ft": "34-43", "reb": 38, "ast": 4, "stl": 15, "blk": 16, "to": 0 }
+      },
+      {
+        "name": "LSU Tigers",
+        "seed": 4,
+        "score": 55,
+        "players": [
+          { "name": "John Williams", "min": 25, "pts": 12, "fg": "6-8", "tp": "0-0", "ft": "0-0", "reb": 5, "ast": 0, "stl": 1, "blk": 4, "to": 0 },
+          { "name": "Nikita Wilson", "min": 29, "pts": 9, "fg": "4-8", "tp": "0-0", "ft": "1-2", "reb": 3, "ast": 3, "stl": 3, "blk": 5, "to": 0 },
+          { "name": "Dennis Brown", "min": 20, "pts": 8, "fg": "4-10", "tp": "0-0", "ft": "0-0", "reb": 2, "ast": 0, "stl": 0, "blk": 3, "to": 0 },
+          { "name": "Ricky Blanton", "min": 16, "pts": 4, "fg": "1-1", "tp": "0-0", "ft": "2-4", "reb": 1, "ast": 1, "stl": 0, "blk": 3, "to": 0 },
+          { "name": "Derrick Taylor", "min": 28, "pts": 4, "fg": "2-13", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "stl": 4, "blk": 4, "to": 0 },
+          { "name": "Jerry Reynolds", "min": 23, "pts": 4, "fg": "1-8", "tp": "0-0", "ft": "2-2", "reb": 1, "ast": 2, "stl": 2, "blk": 3, "to": 0 },
+          { "name": "Don Redden", "min": 15, "pts": 2, "fg": "1-5", "tp": "0-0", "ft": "0-0", "reb": 3, "ast": 1, "stl": 2, "blk": 2, "to": 0 }
+        ],
+        "totals": { "pts": 55, "fg": "23-68", "tp": "0-0", "ft": "9-13", "reb": 33, "ast": 9, "stl": 13, "blk": 32, "to": 0 }
+      }
+    ]
+  },
+  "1988/richmond-spiders-vs-indiana-hoosiers": {
+    "source": "sports-reference",
+    "url": "https://www.sports-reference.com/cbb/boxscores/1988-03-18-indiana.html",
+    "matchup": "4v13",
+    "year": 1988,
+    "teams": [
+      {
+        "name": "Richmond Spiders",
+        "seed": 13,
+        "score": 72,
+        "players": [
+          { "name": "Rodney Rice", "min": 40, "pts": 21, "fg": "9-17", "tp": "3-7", "ft": "0-0", "reb": 2, "ast": 1, "stl": 0, "blk": 1, "to": 3 },
+          { "name": "Peter Woolfolk", "min": 30, "pts": 16, "fg": "6-12", "tp": "0-0", "ft": "4-5", "reb": 5, "ast": 0, "stl": 1, "blk": 0, "to": 0 },
+          { "name": "Ken Atkinson", "min": 33, "pts": 14, "fg": "5-6", "tp": "0-0", "ft": "4-6", "reb": 4, "ast": 3, "stl": 1, "blk": 0, "to": 1 },
+          { "name": "Steve Kratzer", "min": 36, "pts": 12, "fg": "6-12", "tp": "0-0", "ft": "1-1", "reb": 12, "ast": 2, "stl": 1, "blk": 3, "to": 1 },
+          { "name": "Mike Winiecki", "min": 13, "pts": 4, "fg": "2-2", "tp": "0-0", "ft": "0-0", "reb": 3, "ast": 0, "stl": 2, "blk": 1, "to": 2 },
+          { "name": "Eric English", "min": 15, "pts": 4, "fg": "1-2", "tp": "0-0", "ft": "2-2", "reb": 1, "ast": 0, "stl": 0, "blk": 0, "to": 4 },
+          { "name": "Scott Stapleton", "min": 25, "pts": 1, "fg": "0-4", "tp": "0-0", "ft": "1-2", "reb": 2, "ast": 2, "stl": 1, "blk": 0, "to": 3 },
+          { "name": "Benjy Taylor", "min": 7, "pts": 0, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "stl": 0, "blk": 0, "to": 0 },
+          { "name": "Hank Dudek", "min": 1, "pts": 0, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "stl": 0, "blk": 0, "to": 0 }
+        ],
+        "totals": { "pts": 72, "fg": "29-55", "tp": "3-7", "ft": "11-16", "reb": 26, "ast": 15, "stl": 5, "blk": 5, "to": 11 }
+      },
+      {
+        "name": "Indiana Hoosiers",
+        "seed": 4,
+        "score": 69,
+        "players": [
+          { "name": "Keith Smart", "min": 40, "pts": 23, "fg": "10-18", "tp": "0-0", "ft": "3-3", "reb": 4, "ast": 2, "stl": 2, "blk": 1, "to": 3 },
+          { "name": "Jay Edwards", "min": 34, "pts": 16, "fg": "6-10", "tp": "4-6", "ft": "0-0", "reb": 5, "ast": 0, "stl": 1, "blk": 0, "to": 2 },
+          { "name": "Todd Jadlow", "min": 25, "pts": 11, "fg": "4-5", "tp": "0-0", "ft": "3-4", "reb": 2, "ast": 1, "stl": 0, "blk": 1, "to": 0 },
+          { "name": "Dean Garrett", "min": 38, "pts": 9, "fg": "4-16", "tp": "0-0", "ft": "1-3", "reb": 10, "ast": 0, "stl": 3, "blk": 4, "to": 2 },
+          { "name": "Lyndon Jones", "min": 32, "pts": 8, "fg": "3-7", "tp": "0-0", "ft": "2-2", "reb": 2, "ast": 8, "stl": 0, "blk": 0, "to": 2 },
+          { "name": "Steve Eyl", "min": 16, "pts": 2, "fg": "1-1", "tp": "0-0", "ft": "0-0", "reb": 2, "ast": 0, "stl": 0, "blk": 0, "to": 1 },
+          { "name": "Joe Hillman", "min": 15, "pts": 0, "fg": "0-4", "tp": "0-1", "ft": "0-0", "reb": 2, "ast": 1, "stl": 0, "blk": 0, "to": 0 }
+        ],
+        "totals": { "pts": 69, "fg": "28-61", "tp": "4-7", "ft": "9-12", "reb": 22, "ast": 17, "stl": 5, "blk": 7, "to": 8 }
+      }
+    ]
+  },
+  "1996/princeton-tigers-vs-ucla-bruins": {
+    "source": "sports-reference",
+    "url": "https://www.sports-reference.com/cbb/boxscores/1996-03-14-princeton.html",
+    "matchup": "4v13",
+    "year": 1996,
+    "teams": [
+      {
+        "name": "Princeton Tigers",
+        "seed": 13,
+        "score": 43,
+        "players": [
+          { "name": "Sydney Johnson", "min": 39, "pts": 11, "fg": "4-9", "tp": "3-7", "ft": "0-0", "reb": 3, "ast": 0, "stl": 0, "blk": 3, "to": 3 },
+          { "name": "Gabe Lewullis", "min": 27, "pts": 10, "fg": "4-9", "tp": "1-5", "ft": "1-2", "reb": 2, "ast": 2, "stl": 0, "blk": 0, "to": 1 },
+          { "name": "Steve Goodrich", "min": 40, "pts": 8, "fg": "4-9", "tp": "0-1", "ft": "0-3", "reb": 6, "ast": 3, "stl": 0, "blk": 0, "to": 2 },
+          { "name": "Mitch Henderson", "min": 37, "pts": 8, "fg": "3-11", "tp": "2-6", "ft": "0-0", "reb": 3, "ast": 4, "stl": 0, "blk": 0, "to": 2 },
+          { "name": "Chris Doyal", "min": 40, "pts": 3, "fg": "1-4", "tp": "1-4", "ft": "0-0", "reb": 5, "ast": 4, "stl": 3, "blk": 0, "to": 1 },
+          { "name": "Brian Earl", "min": 16, "pts": 3, "fg": "1-4", "tp": "1-4", "ft": "0-0", "reb": 1, "ast": 0, "stl": 0, "blk": 0, "to": 1 },
+          { "name": "Jamie Mastaglio", "min": 1, "pts": 0, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "stl": 0, "blk": 0, "to": 0 }
+        ],
+        "totals": { "pts": 43, "fg": "17-46", "tp": "8-27", "ft": "1-5", "reb": 18, "ast": 15, "stl": 7, "blk": 0, "to": 8 }
+      },
+      {
+        "name": "UCLA Bruins",
+        "seed": 4,
+        "score": 41,
+        "players": [
+          { "name": "Toby Bailey Jr.", "min": 36, "pts": 13, "fg": "4-13", "tp": "3-9", "ft": "2-2", "reb": 6, "ast": 0, "stl": 1, "blk": 1, "to": 4 },
+          { "name": "Kris Johnson", "min": 30, "pts": 10, "fg": "4-5", "tp": "0-0", "ft": "2-1", "reb": 5, "ast": 0, "stl": 0, "blk": 0, "to": 4 },
+          { "name": "Charles O'Bannon", "min": 36, "pts": 8, "fg": "3-10", "tp": "0-4", "ft": "2-3", "reb": 8, "ast": 3, "stl": 0, "blk": 0, "to": 2 },
+          { "name": "Brandon Loyd", "min": 12, "pts": 6, "fg": "2-4", "tp": "2-4", "ft": "0-0", "reb": 0, "ast": 0, "stl": 0, "blk": 0, "to": 2 },
+          { "name": "Jelani McCoy", "min": 29, "pts": 2, "fg": "1-3", "tp": "0-0", "ft": "0-3", "reb": 7, "ast": 0, "stl": 0, "blk": 1, "to": 3 },
+          { "name": "Cameron Dollar", "min": 26, "pts": 2, "fg": "0-1", "tp": "0-0", "ft": "2-2", "reb": 2, "ast": 3, "stl": 1, "blk": 0, "to": 3 },
+          { "name": "J.R. Henderson Jr.", "min": 21, "pts": 2, "fg": "1-2", "tp": "0-0", "ft": "0-0", "reb": 3, "ast": 0, "stl": 1, "blk": 0, "to": 2 },
+          { "name": "Kevin Dempsey", "min": 6, "pts": 0, "fg": "0-1", "tp": "0-1", "ft": "0-0", "reb": 0, "ast": 0, "stl": 0, "blk": 0, "to": 0 }
+        ],
+        "totals": { "pts": 41, "fg": "15-39", "tp": "5-18", "ft": "6-9", "reb": 31, "ast": 6, "stl": 3, "blk": 2, "to": 15 }
+      }
+    ]
+  },
+  "1998/valparaiso-crusaders-vs-ole-miss-rebels": {
+    "source": "sports-reference",
+    "url": "https://www.sports-reference.com/cbb/boxscores/1998-03-13-mississippi.html",
+    "matchup": "4v13",
+    "year": 1998,
+    "teams": [
+      {
+        "name": "Valparaiso Crusaders",
+        "seed": 13,
+        "score": 70,
+        "players": [
+          { "name": "Bryce Drew", "min": 36, "pts": 22, "fg": "7-16", "tp": "4-11", "ft": "4-5", "reb": 3, "ast": 8, "stl": 3, "blk": 0, "to": 4 },
+          { "name": "Zoran Viskovic", "min": 35, "pts": 19, "fg": "5-8", "tp": "0-0", "ft": "9-10", "reb": 2, "ast": 0, "stl": 1, "blk": 3, "to": 1 },
+          { "name": "Jared Nuness", "min": 26, "pts": 10, "fg": "3-8", "tp": "2-5", "ft": "2-2", "reb": 2, "ast": 0, "stl": 1, "blk": 0, "to": 1 },
+          { "name": "Antanas Vilcinskas", "min": 12, "pts": 7, "fg": "3-4", "tp": "0-0", "ft": "1-2", "reb": 2, "ast": 0, "stl": 0, "blk": 0, "to": 2 },
+          { "name": "Bill Jenkins", "min": 32, "pts": 6, "fg": "2-4", "tp": "0-1", "ft": "2-2", "reb": 11, "ast": 3, "stl": 1, "blk": 0, "to": 1 },
+          { "name": "Jamie Sykes", "min": 35, "pts": 4, "fg": "2-7", "tp": "0-3", "ft": "0-0", "reb": 2, "ast": 0, "stl": 0, "blk": 2, "to": 3 },
+          { "name": "Bob Jenkins", "min": 15, "pts": 2, "fg": "1-2", "tp": "0-0", "ft": "0-0", "reb": 2, "ast": 0, "stl": 2, "blk": 0, "to": 2 },
+          { "name": "Jason Jenkins", "min": 9, "pts": 0, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "stl": 0, "blk": 0, "to": 0 }
+        ],
+        "totals": { "pts": 70, "fg": "23-49", "tp": "6-20", "ft": "18-21", "reb": 24, "ast": 14, "stl": 7, "blk": 3, "to": 13 }
+      },
+      {
+        "name": "Ole Miss Rebels",
+        "seed": 4,
+        "score": 69,
+        "players": [
+          { "name": "Keith Carter", "min": 39, "pts": 22, "fg": "7-11", "tp": "4-7", "ft": "4-6", "reb": 11, "ast": 3, "stl": 1, "blk": 0, "to": 1 },
+          { "name": "Joezon Darby", "min": 22, "pts": 13, "fg": "3-7", "tp": "3-5", "ft": "4-4", "reb": 1, "ast": 2, "stl": 0, "blk": 0, "to": 1 },
+          { "name": "Ansu Sesay", "min": 31, "pts": 11, "fg": "4-13", "tp": "0-1", "ft": "3-6", "reb": 5, "ast": 3, "stl": 4, "blk": 1, "to": 3 },
+          { "name": "Jason Smith", "min": 24, "pts": 6, "fg": "2-6", "tp": "0-0", "ft": "2-2", "reb": 2, "ast": 3, "stl": 1, "blk": 0, "to": 3 },
+          { "name": "Jon Cantrell", "min": 11, "pts": 5, "fg": "1-4", "tp": "1-4", "ft": "2-2", "reb": 3, "ast": 0, "stl": 0, "blk": 0, "to": 0 },
+          { "name": "Rahim Lockhart", "min": 11, "pts": 4, "fg": "0-2", "tp": "0-0", "ft": "4-6", "reb": 1, "ast": 1, "stl": 0, "blk": 0, "to": 1 },
+          { "name": "Michael White", "min": 15, "pts": 3, "fg": "1-2", "tp": "1-2", "ft": "0-0", "reb": 2, "ast": 1, "stl": 0, "blk": 0, "to": 0 },
+          { "name": "Jason Flanigan", "min": 25, "pts": 3, "fg": "1-3", "tp": "1-2", "ft": "0-0", "reb": 4, "ast": 0, "stl": 0, "blk": 0, "to": 1 },
+          { "name": "Anthony Boone", "min": 20, "pts": 2, "fg": "1-2", "tp": "0-0", "ft": "0-0", "reb": 2, "ast": 0, "stl": 1, "blk": 0, "to": 1 },
+          { "name": "Johnnie Rogers", "min": 2, "pts": 0, "fg": "0-1", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "stl": 0, "blk": 0, "to": 0 }
+        ],
+        "totals": { "pts": 69, "fg": "20-51", "tp": "10-21", "ft": "19-26", "reb": 31, "ast": 13, "stl": 7, "blk": 1, "to": 13 }
+      }
+    ]
+  },
+  "2001/kent-state-golden-flashes-vs-indiana-hoosiers": {
+    "source": "sports-reference",
+    "url": "https://www.sports-reference.com/cbb/boxscores/2001-03-15-indiana.html",
+    "matchup": "4v13",
+    "year": 2001,
+    "teams": [
+      {
+        "name": "Kent State Golden Flashes",
+        "seed": 13,
+        "score": 77,
+        "players": [
+          { "name": "Trevor Huffman", "min": 38, "pts": 24, "fg": "9-19", "tp": "2-3", "ft": "4-6", "reb": 6, "ast": 3, "stl": 0, "blk": 1, "to": 5 },
+          { "name": "Kyrem Massey", "min": 28, "pts": 15, "fg": "7-12", "tp": "1-3", "ft": "0-0", "reb": 0, "ast": 3, "stl": 1, "blk": 1, "to": 4 },
+          { "name": "Mike Perry", "min": 16, "pts": 10, "fg": "4-7", "tp": "0-0", "ft": "2-2", "reb": 4, "ast": 1, "stl": 0, "blk": 0, "to": 1 },
+          { "name": "Andrew Mitchell", "min": 39, "pts": 9, "fg": "3-12", "tp": "0-3", "ft": "3-3", "reb": 0, "ast": 7, "stl": 2, "blk": 0, "to": 2 },
+          { "name": "Rashaun Warren", "min": 24, "pts": 8, "fg": "3-6", "tp": "0-0", "ft": "2-3", "reb": 5, "ast": 1, "stl": 0, "blk": 3, "to": 0 },
+          { "name": "Demetric Shaw", "min": 29, "pts": 7, "fg": "3-6", "tp": "0-0", "ft": "2-2", "reb": 8, "ast": 1, "stl": 2, "blk": 0, "to": 1 },
+          { "name": "John Edwards", "min": 2, "pts": 2, "fg": "1-1", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "stl": 0, "blk": 0, "to": 0 },
+          { "name": "Eric Haut", "min": 3, "pts": 2, "fg": "1-1", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "stl": 0, "blk": 1, "to": 0 },
+          { "name": "Eric Thomas", "min": 16, "pts": 0, "fg": "0-2", "tp": "0-2", "ft": "0-0", "reb": 2, "ast": 0, "stl": 0, "blk": 1, "to": 2 },
+          { "name": "Bryan Bedford", "min": 5, "pts": 0, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 1, "stl": 0, "blk": 0, "to": 1 }
+        ],
+        "totals": { "pts": 77, "fg": "31-66", "tp": "3-11", "ft": "12-18", "reb": 26, "ast": 13, "stl": 7, "blk": 5, "to": 12 }
+      },
+      {
+        "name": "Indiana Hoosiers",
+        "seed": 4,
+        "score": 73,
+        "players": [
+          { "name": "Kirk Haston", "min": 37, "pts": 29, "fg": "10-21", "tp": "1-3", "ft": "8-10", "reb": 9, "ast": 1, "stl": 1, "blk": 0, "to": 1 },
+          { "name": "A.J. Moye", "min": 20, "pts": 12, "fg": "4-6", "tp": "0-0", "ft": "4-4", "reb": 8, "ast": 0, "stl": 0, "blk": 1, "to": 1 },
+          { "name": "Jared Jeffries", "min": 34, "pts": 9, "fg": "4-10", "tp": "0-1", "ft": "1-2", "reb": 8, "ast": 4, "stl": 0, "blk": 1, "to": 4 },
+          { "name": "Tom Coverdale", "min": 29, "pts": 8, "fg": "3-7", "tp": "2-3", "ft": "0-3", "reb": 3, "ast": 4, "stl": 2, "blk": 0, "to": 3 },
+          { "name": "Jeff Newton", "min": 19, "pts": 7, "fg": "2-3", "tp": "0-0", "ft": "3-5", "reb": 2, "ast": 0, "stl": 0, "blk": 2, "to": 2 },
+          { "name": "Dane Fife", "min": 24, "pts": 3, "fg": "1-1", "tp": "1-1", "ft": "0-0", "reb": 2, "ast": 2, "stl": 1, "blk": 0, "to": 4 },
+          { "name": "Kyle Hornsby", "min": 27, "pts": 3, "fg": "1-4", "tp": "1-2", "ft": "0-0", "reb": 2, "ast": 0, "stl": 0, "blk": 2, "to": 2 },
+          { "name": "Jarrad Odle", "min": 6, "pts": 2, "fg": "1-3", "tp": "0-0", "ft": "0-0", "reb": 2, "ast": 0, "stl": 0, "blk": 0, "to": 1 },
+          { "name": "Andre Owens", "min": 4, "pts": 0, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "stl": 0, "blk": 0, "to": 0 }
+        ],
+        "totals": { "pts": 73, "fg": "26-55", "tp": "5-10", "ft": "16-24", "reb": 35, "ast": 13, "stl": 4, "blk": 4, "to": 18 }
+      }
+    ]
+  }
+}
