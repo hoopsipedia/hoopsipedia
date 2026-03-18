@@ -3228,6 +3228,137 @@
             .advanced-stat-label { font-size: 0.65rem; }
         }
 
+        /* ── Starting 5 Comparison ── */
+        .s5-edge-bar {
+            display: flex; align-items: center; justify-content: center; gap: 0.75rem;
+            padding: 0.75rem 1.25rem; border-radius: 0.75rem; margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #F8F6F1, #FFFFFF); border: 1px solid #E0D9CC;
+        }
+        .s5-edge-label { font-weight: 700; font-size: 0.95rem; color: #1B2A4A; }
+        .s5-edge-score { font-weight: 800; font-size: 1.1rem; color: #C9A86C; }
+
+        .s5-matchup-card {
+            display: grid; grid-template-columns: 1fr auto 1fr; gap: 0;
+            background: #FFFFFF; border: 1px solid #E8E2D6; border-radius: 0.75rem;
+            margin-bottom: 0.75rem; overflow: hidden; transition: box-shadow 0.2s;
+        }
+        .s5-matchup-card:hover { box-shadow: 0 4px 16px rgba(27,42,74,0.08); }
+
+        .s5-player-side {
+            display: flex; align-items: center; gap: 0.75rem; padding: 1rem 1.25rem;
+        }
+        .s5-player-side.right { flex-direction: row-reverse; text-align: right; }
+
+        .s5-player-photo {
+            width: 50px; height: 50px; border-radius: 50%; object-fit: cover;
+            border: 2px solid #E0D9CC; flex-shrink: 0; background: #F5F3EE;
+        }
+        .s5-player-info { flex: 1; min-width: 0; }
+        .s5-player-name {
+            font-weight: 700; font-size: 0.9rem; color: #1B2A4A;
+            white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+        }
+        .s5-player-meta { font-size: 0.75rem; color: #8892A0; margin-top: 0.15rem; }
+
+        .s5-stats-grid {
+            display: grid; grid-template-columns: repeat(5, 1fr); gap: 0.25rem;
+            margin-top: 0.5rem;
+        }
+        .s5-stat-cell { text-align: center; }
+        .s5-player-side.right .s5-stat-cell { text-align: center; }
+        .s5-stat-val {
+            font-weight: 600; font-size: 0.85rem; color: #2C3345;
+            line-height: 1.2;
+        }
+        .s5-stat-val.winner { font-weight: 800; color: #2E7D32; }
+        .s5-stat-lbl {
+            font-size: 0.6rem; font-weight: 600; color: #A0AAB8;
+            text-transform: uppercase; letter-spacing: 0.03em;
+        }
+
+        .s5-vs-divider {
+            display: flex; align-items: center; justify-content: center;
+            width: 40px; background: #F8F6F1; border-left: 1px solid #E8E2D6;
+            border-right: 1px solid #E8E2D6; font-weight: 800; font-size: 0.7rem;
+            color: #A0AAB8; letter-spacing: 0.05em;
+        }
+        .s5-pos-badge {
+            display: inline-flex; align-items: center; justify-content: center;
+            background: #E8E2D6; color: #5A6578; font-weight: 700; font-size: 0.65rem;
+            border-radius: 0.25rem; padding: 0.15rem 0.35rem; letter-spacing: 0.04em;
+        }
+
+        .s5-totals-card {
+            display: grid; grid-template-columns: 1fr auto 1fr; gap: 0;
+            background: linear-gradient(135deg, #1B2A4A, #243458); border-radius: 0.75rem;
+            margin-top: 1rem; overflow: hidden; color: #fff;
+        }
+        .s5-totals-side {
+            display: flex; flex-direction: column; align-items: center;
+            padding: 1rem 1.25rem; gap: 0.35rem;
+        }
+        .s5-totals-side.right { text-align: right; }
+        .s5-totals-label { font-size: 0.7rem; font-weight: 600; color: #8892A0; text-transform: uppercase; letter-spacing: 0.04em; }
+        .s5-totals-val { font-weight: 700; font-size: 0.95rem; }
+        .s5-totals-val.winner { color: #C9A86C; }
+        .s5-totals-divider {
+            display: flex; align-items: center; justify-content: center;
+            width: 50px; font-weight: 800; font-size: 0.75rem; color: #C9A86C;
+            border-left: 1px solid rgba(255,255,255,0.1); border-right: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .s5-bench-toggle {
+            display: flex; align-items: center; justify-content: center; gap: 0.5rem;
+            margin-top: 1.25rem; padding: 0.6rem 1.25rem; background: none; border: 1px solid #D6CFC2;
+            border-radius: 2rem; color: #5A6578; cursor: pointer; font-size: 0.85rem;
+            font-weight: 600; transition: all 0.2s; width: 100%;
+        }
+        .s5-bench-toggle:hover { border-color: #C9A86C; color: #9E7C4A; }
+        .s5-bench-toggle.active { background: #1B2A4A; border-color: #1B2A4A; color: #C9A86C; }
+        .s5-bench-toggle svg { transition: transform 0.3s; }
+        .s5-bench-toggle.active svg { transform: rotate(180deg); }
+
+        .s5-bench-content { display: none; margin-top: 0.75rem; }
+        .s5-bench-content.visible { display: block; }
+
+        .s5-bench-edge {
+            text-align: center; padding: 0.5rem; font-weight: 700; font-size: 0.85rem;
+            color: #1B2A4A; margin-top: 0.75rem;
+        }
+
+        .s5-section-label {
+            font-size: 0.75rem; font-weight: 700; color: #8892A0; text-transform: uppercase;
+            letter-spacing: 0.06em; margin-bottom: 0.5rem; padding-left: 0.25rem;
+        }
+
+        .s5-skeleton-card {
+            display: grid; grid-template-columns: 1fr auto 1fr; gap: 0;
+            background: #FFFFFF; border: 1px solid #E8E2D6; border-radius: 0.75rem;
+            margin-bottom: 0.75rem; overflow: hidden;
+        }
+        .s5-skeleton-side { display: flex; align-items: center; gap: 0.75rem; padding: 1rem 1.25rem; }
+        .s5-skeleton-side.right { flex-direction: row-reverse; }
+
+        .s5-team-accent-left { border-left: 3px solid var(--team1-color, #1B2A4A); }
+        .s5-team-accent-right { border-right: 3px solid var(--team2-color, #C9A86C); }
+
+        @media (max-width: 640px) {
+            .s5-matchup-card, .s5-totals-card, .s5-skeleton-card {
+                grid-template-columns: 1fr;
+            }
+            .s5-player-side.right { flex-direction: row; text-align: left; }
+            .s5-vs-divider {
+                width: 100%; height: 28px; border-left: none; border-right: none;
+                border-top: 1px solid #E8E2D6; border-bottom: 1px solid #E8E2D6;
+            }
+            .s5-totals-divider {
+                width: 100%; height: 32px; border-left: none; border-right: none;
+                border-top: 1px solid rgba(255,255,255,0.1); border-bottom: 1px solid rgba(255,255,255,0.1);
+            }
+            .s5-skeleton-side.right { flex-direction: row; }
+            .s5-player-side { padding: 0.75rem 1rem; }
+        }
+
     </style>
 </head>
 <body>
@@ -4753,8 +4884,8 @@
 
             _skipHashUpdate = true;
 
-            // #compare/slug1/slug2 or #compare/id1/id2 (backward compat)
-            const compareMatch = hash.match(/^#compare\/([^/]+)\/([^/]+)$/);
+            // #compare/slug1/slug2 or #compare/id1/id2 (backward compat), optional /starting5 tab
+            const compareMatch = hash.match(/^#compare\/([^/]+)\/([^/]+?)(?:\/(starting5))?$/);
             if (compareMatch) {
                 const resolveTeam = (key) => {
                     // Try slug first, then ESPN ID
@@ -4789,11 +4920,15 @@
                         <div class="comparison-vs-badge" style="color:#E8E2D6;">VS</div>
                         <div class="comparison-team"><div class="skeleton skeleton-circle" style="width:90px;height:90px;"></div><div class="comparison-team-info"><div class="skeleton skeleton-text skeleton-text--lg" style="width:140px;"></div><div class="skeleton skeleton-text skeleton-text--sm" style="width:80px;"></div></div></div>
                     </div>` + renderComparisonSkeleton();
+                const compareTabParam = compareMatch[3] || null;
                 Promise.all([resolveTeam(compareMatch[1]), resolveTeam(compareMatch[2])]).then(([t1, t2]) => {
                     if (t1 && t2) {
                         selectedTeam1 = t1;
                         selectedTeam2 = t2;
                         renderComparison(true);
+                        if (compareTabParam === 'starting5') {
+                            showCompTab('starting5');
+                        }
                     } else {
                         document.getElementById('comparisonContent').innerHTML = renderErrorFallback('handleHashRoute()');
                     }
@@ -6430,7 +6565,7 @@
 
             const confSelect = document.getElementById('leadersConfSelect');
             if (confSelect.innerHTML.length < 50) {
-                const conferences = ['', ...new Set(allTeamsData.map(t => t.conf)).sort()];
+                const conferences = ['', ...new Set(allTeamsData.map(t => t.conf)).filter(c => c && c !== 'CUNY').sort()];
                 confSelect.innerHTML = '';
                 conferences.forEach(conf => {
                     const opt = document.createElement('option');
@@ -6525,12 +6660,14 @@
                 <div class="comparison-tabs">
                     <button class="comp-tab active" id="tabH2H" onclick="showCompTab('h2h')">Head-to-Head</button>
                     <button class="comp-tab" id="tabOverall" onclick="showCompTab('overall')">Full Program Comparison</button>
+                    <button class="comp-tab" id="tabStarting5" onclick="showCompTab('starting5')">Starting 5</button>
                     ${_comparisonGameId ? `<button class="comp-tab" id="tabBoxScore" onclick="showCompTab('boxscore')">Box Score</button>` : ''}
                 </div>
                 <div id="compH2HContent" class="comp-tab-content">
                     <div class="chart-loading">Loading head-to-head history...</div>
                 </div>
                 <div id="compOverallContent" class="comp-tab-content" style="display:none;"></div>
+                <div id="compStarting5Content" class="comp-tab-content" style="display:none;"></div>
                 ${_comparisonGameId ? `<div id="compBoxScoreContent" class="comp-tab-content" style="display:none;"><div class="boxscore-loading">Loading box score...</div></div>` : ''}
             `;
             container.innerHTML = html;
@@ -6621,10 +6758,20 @@
         function showCompTab(tab) {
             document.getElementById('tabH2H').className = 'comp-tab' + (tab === 'h2h' ? ' active' : '');
             document.getElementById('tabOverall').className = 'comp-tab' + (tab === 'overall' ? ' active' : '');
+            const tabS5 = document.getElementById('tabStarting5');
+            if (tabS5) tabS5.className = 'comp-tab' + (tab === 'starting5' ? ' active' : '');
             const tabBS = document.getElementById('tabBoxScore');
             if (tabBS) tabBS.className = 'comp-tab' + (tab === 'boxscore' ? ' active' : '');
             document.getElementById('compH2HContent').style.display = tab === 'h2h' ? 'block' : 'none';
             document.getElementById('compOverallContent').style.display = tab === 'overall' ? 'block' : 'none';
+            const s5Content = document.getElementById('compStarting5Content');
+            if (s5Content) {
+                s5Content.style.display = tab === 'starting5' ? 'block' : 'none';
+                if (tab === 'starting5' && !s5Content._loaded) {
+                    s5Content._loaded = true;
+                    loadStarting5(selectedTeam1, selectedTeam2);
+                }
+            }
             const bsContent = document.getElementById('compBoxScoreContent');
             if (bsContent) bsContent.style.display = tab === 'boxscore' ? 'block' : 'none';
         }
@@ -12065,6 +12212,391 @@
             if (_selectedPlayer1 && _selectedPlayer2) {
                 renderPlayerComparisonResult();
             }
+        }
+
+        // ── Starting 5 Comparison ──
+        function renderStarting5Skeleton() {
+            let cards = '';
+            for (let i = 0; i < 5; i++) {
+                cards += `<div class="s5-skeleton-card">
+                    <div class="s5-skeleton-side">
+                        <div class="skeleton skeleton-circle" style="width:50px;height:50px;flex-shrink:0;"></div>
+                        <div style="flex:1;">
+                            <div class="skeleton skeleton-text" style="width:80px;height:14px;margin:0 0 0.3rem;"></div>
+                            <div class="skeleton skeleton-text" style="width:50px;height:10px;margin:0 0 0.4rem;"></div>
+                            <div style="display:flex;gap:0.4rem;">
+                                ${[1,2,3,4,5].map(() => `<div class="skeleton skeleton-text" style="width:28px;height:14px;margin:0;"></div>`).join('')}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="s5-vs-divider"><span class="s5-pos-badge">--</span></div>
+                    <div class="s5-skeleton-side right">
+                        <div class="skeleton skeleton-circle" style="width:50px;height:50px;flex-shrink:0;"></div>
+                        <div style="flex:1;">
+                            <div class="skeleton skeleton-text" style="width:80px;height:14px;margin:0 0 0.3rem;"></div>
+                            <div class="skeleton skeleton-text" style="width:50px;height:10px;margin:0 0 0.4rem;"></div>
+                            <div style="display:flex;gap:0.4rem;">
+                                ${[1,2,3,4,5].map(() => `<div class="skeleton skeleton-text" style="width:28px;height:14px;margin:0;"></div>`).join('')}
+                            </div>
+                        </div>
+                    </div>
+                </div>`;
+            }
+            return `<div class="s5-section-label">Starting Lineups</div>${cards}`;
+        }
+
+        function getPlayerStat(p, ...keys) {
+            for (const k of keys) {
+                if (p.stats[k] !== undefined && p.stats[k] !== '' && p.stats[k] !== '-') return parseFloat(p.stats[k]);
+            }
+            return 0;
+        }
+
+        function getPlayerStatDisplay(p, ...keys) {
+            for (const k of keys) {
+                if (p.stats[k] !== undefined && p.stats[k] !== '' && p.stats[k] !== '-') {
+                    const v = parseFloat(p.stats[k]);
+                    return isNaN(v) ? p.stats[k] : v.toFixed(1);
+                }
+            }
+            return '-';
+        }
+
+        function classifyPosition(pos, height) {
+            // Classify into one of: PG, SG, SF, PF, C
+            const p = (pos || '').toUpperCase().replace(/[^A-Z]/g, '');
+            if (p === 'PG' || p === 'G' && heightInches(height) < 76) return 'PG';
+            if (p === 'SG') return 'SG';
+            if (p === 'SF') return 'SF';
+            if (p === 'PF') return 'PF';
+            if (p === 'C') return 'C';
+            if (p === 'G') return 'SG';
+            if (p === 'F') {
+                return heightInches(height) >= 80 ? 'PF' : 'SF';
+            }
+            if (p === 'FC' || p === 'CF') return 'PF';
+            // Unknown — guess by height
+            const h = heightInches(height);
+            if (h >= 82) return 'C';
+            if (h >= 79) return 'PF';
+            if (h >= 77) return 'SF';
+            if (h >= 74) return 'SG';
+            return 'PG';
+        }
+
+        function heightInches(h) {
+            if (!h) return 76; // default
+            const parts = h.replace(/"/g,'').split("'").map(s => s.trim());
+            if (parts.length === 2) return parseInt(parts[0]) * 12 + parseInt(parts[1] || 0);
+            const m = h.match(/(\d+)-(\d+)/);
+            if (m) return parseInt(m[1]) * 12 + parseInt(m[2]);
+            return 76;
+        }
+
+        function determineStarters(players) {
+            if (!players || players.length === 0) return [];
+
+            // Filter to players with stats
+            let eligible = players.filter(p => {
+                const ppg = getPlayerStat(p, 'avgPoints', 'PTS');
+                const min = getPlayerStat(p, 'avgMinutes', 'MIN');
+                return ppg > 0 || min > 0;
+            });
+
+            if (eligible.length < 5) eligible = players.slice(0, Math.min(5, players.length));
+
+            // Sort by minutes per game (best proxy for starters)
+            eligible.sort((a, b) => {
+                const aMin = getPlayerStat(a, 'avgMinutes', 'MIN');
+                const bMin = getPlayerStat(b, 'avgMinutes', 'MIN');
+                return bMin - aMin;
+            });
+
+            // Take top players and assign positions
+            const positionSlots = ['PG', 'SG', 'SF', 'PF', 'C'];
+            const starters = [];
+            const used = new Set();
+
+            // First pass: exact position matches from top minute-getters
+            const topCandidates = eligible.slice(0, Math.min(10, eligible.length));
+            for (const slot of positionSlots) {
+                const match = topCandidates.find(p => !used.has(p.id) && classifyPosition(p.position, p.height) === slot);
+                if (match) {
+                    starters.push({ ...match, assignedPos: slot });
+                    used.add(match.id);
+                }
+            }
+
+            // Second pass: fill remaining slots with best available by minutes
+            for (const slot of positionSlots) {
+                if (starters.find(s => s.assignedPos === slot)) continue;
+                const next = topCandidates.find(p => !used.has(p.id));
+                if (next) {
+                    starters.push({ ...next, assignedPos: slot });
+                    used.add(next.id);
+                }
+            }
+
+            // Sort by position order
+            const posOrder = { PG: 0, SG: 1, SF: 2, PF: 3, C: 4 };
+            starters.sort((a, b) => (posOrder[a.assignedPos] || 0) - (posOrder[b.assignedPos] || 0));
+
+            return starters;
+        }
+
+        function determineBench(players, starters) {
+            const starterIds = new Set(starters.map(s => s.id));
+            let bench = players.filter(p => !starterIds.has(p.id));
+            bench = bench.filter(p => {
+                const ppg = getPlayerStat(p, 'avgPoints', 'PTS');
+                const min = getPlayerStat(p, 'avgMinutes', 'MIN');
+                return ppg > 0 || min > 0;
+            });
+            bench.sort((a, b) => getPlayerStat(b, 'avgMinutes', 'MIN') - getPlayerStat(a, 'avgMinutes', 'MIN'));
+            return bench.slice(0, 4).map(p => ({ ...p, assignedPos: classifyPosition(p.position, p.height) }));
+        }
+
+        function renderMatchupCard(p1, p2, position, t1Color, t2Color) {
+            const stats = [
+                { key: 'PPG', keys: ['avgPoints', 'PTS'] },
+                { key: 'RPG', keys: ['avgRebounds', 'REB'] },
+                { key: 'APG', keys: ['avgAssists', 'AST'] },
+                { key: 'FG%', keys: ['fieldGoalPct', 'FG%', 'fieldGoalPercentage'] },
+                { key: '3PT%', keys: ['threePointFieldGoalPercentage', '3PointPct', 'avg3PM'] }
+            ];
+
+            function statCells(player, otherPlayer, isRight) {
+                return stats.map(s => {
+                    const v = getPlayerStat(player, ...s.keys);
+                    const ov = getPlayerStat(otherPlayer, ...s.keys);
+                    const display = getPlayerStatDisplay(player, ...s.keys);
+                    const isWinner = v > 0 && v > ov;
+                    return `<div class="s5-stat-cell">
+                        <div class="s5-stat-val${isWinner ? ' winner' : ''}">${display}</div>
+                        <div class="s5-stat-lbl">${s.key}</div>
+                    </div>`;
+                }).join('');
+            }
+
+            const p1Meta = [p1.assignedPos, p1.jersey ? '#' + p1.jersey : '', p1.height].filter(Boolean).join(' | ');
+            const p2Meta = [p2.assignedPos, p2.jersey ? '#' + p2.jersey : '', p2.height].filter(Boolean).join(' | ');
+
+            return `<div class="s5-matchup-card" style="--team1-color:${t1Color};--team2-color:${t2Color};">
+                <div class="s5-player-side s5-team-accent-left">
+                    <img class="s5-player-photo" src="${p1.headshot}" alt="${p1.name}" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 50 50%22><rect fill=%22%23E8E2D6%22 width=%2250%22 height=%2250%22/><text x=%2225%22 y=%2230%22 text-anchor=%22middle%22 fill=%22%238892A0%22 font-size=%2214%22>${p1.jersey || '?'}</text></svg>'">
+                    <div class="s5-player-info">
+                        <div class="s5-player-name">${p1.name}</div>
+                        <div class="s5-player-meta">${p1Meta}</div>
+                        <div class="s5-stats-grid">${statCells(p1, p2, false)}</div>
+                    </div>
+                </div>
+                <div class="s5-vs-divider"><span class="s5-pos-badge">${position}</span></div>
+                <div class="s5-player-side right s5-team-accent-right">
+                    <img class="s5-player-photo" src="${p2.headshot}" alt="${p2.name}" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 50 50%22><rect fill=%22%23E8E2D6%22 width=%2250%22 height=%2250%22/><text x=%2225%22 y=%2230%22 text-anchor=%22middle%22 fill=%22%238892A0%22 font-size=%2214%22>${p2.jersey || '?'}</text></svg>'">
+                    <div class="s5-player-info">
+                        <div class="s5-player-name">${p2.name}</div>
+                        <div class="s5-player-meta">${p2Meta}</div>
+                        <div class="s5-stats-grid">${statCells(p2, p1, true)}</div>
+                    </div>
+                </div>
+            </div>`;
+        }
+
+        function computeEdge(starters1, starters2) {
+            const stats = [
+                { keys: ['avgPoints', 'PTS'] },
+                { keys: ['avgRebounds', 'REB'] },
+                { keys: ['avgAssists', 'AST'] },
+                { keys: ['fieldGoalPct', 'FG%', 'fieldGoalPercentage'] },
+                { keys: ['threePointFieldGoalPercentage', '3PointPct', 'avg3PM'] }
+            ];
+            let t1Wins = 0, t2Wins = 0;
+            const posCount = Math.min(starters1.length, starters2.length);
+            for (let i = 0; i < posCount; i++) {
+                let pWins1 = 0, pWins2 = 0;
+                for (const s of stats) {
+                    const v1 = getPlayerStat(starters1[i], ...s.keys);
+                    const v2 = getPlayerStat(starters2[i], ...s.keys);
+                    if (v1 > v2) pWins1++;
+                    else if (v2 > v1) pWins2++;
+                }
+                if (pWins1 > pWins2) t1Wins++;
+                else if (pWins2 > pWins1) t2Wins++;
+            }
+            return { t1Wins, t2Wins };
+        }
+
+        function computeTotals(starters) {
+            let ppg = 0, rpg = 0, apg = 0;
+            starters.forEach(p => {
+                ppg += getPlayerStat(p, 'avgPoints', 'PTS');
+                rpg += getPlayerStat(p, 'avgRebounds', 'REB');
+                apg += getPlayerStat(p, 'avgAssists', 'AST');
+            });
+            return { ppg: ppg.toFixed(1), rpg: rpg.toFixed(1), apg: apg.toFixed(1) };
+        }
+
+        function renderTotalsCard(totals1, totals2, t1Name, t2Name) {
+            const ppg1 = parseFloat(totals1.ppg), ppg2 = parseFloat(totals2.ppg);
+            const rpg1 = parseFloat(totals1.rpg), rpg2 = parseFloat(totals2.rpg);
+            const apg1 = parseFloat(totals1.apg), apg2 = parseFloat(totals2.apg);
+
+            function w(v1, v2) { return v1 > v2 ? ' winner' : ''; }
+
+            return `<div class="s5-totals-card">
+                <div class="s5-totals-side">
+                    <div class="s5-totals-label">${t1Name}</div>
+                    <div class="s5-totals-val${w(ppg1, ppg2)}">${totals1.ppg} PPG</div>
+                    <div class="s5-totals-val${w(rpg1, rpg2)}">${totals1.rpg} RPG</div>
+                    <div class="s5-totals-val${w(apg1, apg2)}">${totals1.apg} APG</div>
+                </div>
+                <div class="s5-totals-divider">TOTAL</div>
+                <div class="s5-totals-side right">
+                    <div class="s5-totals-label">${t2Name}</div>
+                    <div class="s5-totals-val${w(ppg2, ppg1)}">${totals2.ppg} PPG</div>
+                    <div class="s5-totals-val${w(rpg2, rpg1)}">${totals2.rpg} RPG</div>
+                    <div class="s5-totals-val${w(apg2, apg1)}">${totals2.apg} APG</div>
+                </div>
+            </div>`;
+        }
+
+        async function loadStarting5(t1, t2) {
+            const container = document.getElementById('compStarting5Content');
+            if (!container) return;
+
+            const t1Color = t1.color || '#1B2A4A';
+            const t2Color = t2.color || '#C9A86C';
+
+            // Show skeleton
+            container.innerHTML = renderStarting5Skeleton();
+
+            try {
+                // Fetch both rosters in parallel (reuses cache from fetchPlayerStats)
+                const [data1, data2] = await Promise.all([
+                    fetchPlayerStats(t1.espnId),
+                    fetchPlayerStats(t2.espnId)
+                ]);
+
+                if (!data1 || !data2 || !data1.players || !data2.players) {
+                    container.innerHTML = '<div style="color:#8892A0;font-size:0.9rem;padding:2rem;text-align:center;">Roster data unavailable for one or both teams.</div>';
+                    return;
+                }
+
+                const starters1 = determineStarters(data1.players);
+                const starters2 = determineStarters(data2.players);
+
+                if (starters1.length === 0 || starters2.length === 0) {
+                    container.innerHTML = '<div style="color:#8892A0;font-size:0.9rem;padding:2rem;text-align:center;">Not enough player data to determine starting lineups.</div>';
+                    return;
+                }
+
+                // Compute edge
+                const edge = computeEdge(starters1, starters2);
+                const edgeTeam = edge.t1Wins > edge.t2Wins ? t1.name : (edge.t2Wins > edge.t1Wins ? t2.name : null);
+
+                let html = '';
+
+                // Edge summary bar
+                if (edgeTeam) {
+                    html += `<div class="s5-edge-bar">
+                        <span class="s5-edge-label">${edgeTeam} Starting 5 Edge:</span>
+                        <span class="s5-edge-score">${edge.t1Wins}-${edge.t2Wins}</span>
+                    </div>`;
+                } else {
+                    html += `<div class="s5-edge-bar">
+                        <span class="s5-edge-label">Starting 5 Matchup:</span>
+                        <span class="s5-edge-score">Even ${edge.t1Wins}-${edge.t2Wins}</span>
+                    </div>`;
+                }
+
+                // Section label
+                html += '<div class="s5-section-label">Starting Lineups</div>';
+
+                // Matchup cards
+                const posCount = Math.min(starters1.length, starters2.length);
+                for (let i = 0; i < posCount; i++) {
+                    const pos = starters1[i].assignedPos || starters2[i].assignedPos || '?';
+                    html += renderMatchupCard(starters1[i], starters2[i], pos, t1Color, t2Color);
+                }
+
+                // Totals
+                const totals1 = computeTotals(starters1);
+                const totals2 = computeTotals(starters2);
+                html += renderTotalsCard(totals1, totals2, t1.name, t2.name);
+
+                // Bench section
+                const bench1 = determineBench(data1.players, starters1);
+                const bench2 = determineBench(data2.players, starters2);
+
+                if (bench1.length > 0 && bench2.length > 0) {
+                    html += `<button class="s5-bench-toggle" onclick="toggleStarting5Bench(this)">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                        Show Bench Comparison
+                    </button>`;
+
+                    html += '<div class="s5-bench-content" id="s5BenchContent">';
+                    html += '<div class="s5-section-label" style="margin-top:0.75rem;">Key Bench Players</div>';
+
+                    const benchCount = Math.min(bench1.length, bench2.length);
+                    for (let i = 0; i < benchCount; i++) {
+                        const pos = bench1[i].assignedPos || bench2[i].assignedPos || 'BN';
+                        html += renderMatchupCard(bench1[i], bench2[i], pos, t1Color, t2Color);
+                    }
+
+                    // Bench totals and edge
+                    const benchTotals1 = computeTotals(bench1);
+                    const benchTotals2 = computeTotals(bench2);
+                    const benchEdge = computeEdge(bench1, bench2);
+                    const benchEdgeTeam = benchEdge.t1Wins > benchEdge.t2Wins ? t1.name : (benchEdge.t2Wins > benchEdge.t1Wins ? t2.name : null);
+
+                    html += renderTotalsCard(benchTotals1, benchTotals2, t1.name, t2.name);
+
+                    if (benchEdgeTeam) {
+                        html += `<div class="s5-bench-edge">Bench Edge: ${benchEdgeTeam} (${benchEdge.t1Wins}-${benchEdge.t2Wins})</div>`;
+                    } else {
+                        html += `<div class="s5-bench-edge">Bench Matchup: Even (${benchEdge.t1Wins}-${benchEdge.t2Wins})</div>`;
+                    }
+
+                    html += '</div>'; // close s5-bench-content
+                }
+
+                // Deep-link hint
+                html += `<div style="text-align:center;margin-top:1.5rem;">
+                    <button onclick="copyStarting5Link()" style="display:inline-flex;align-items:center;gap:0.35rem;background:#1B2A4A;color:#fff;border:none;padding:0.4rem 0.9rem;border-radius:1rem;font-size:0.75rem;font-weight:600;cursor:pointer;letter-spacing:0.02em;transition:background 0.2s;" onmouseover="this.style.background='#2a3d6a'" onmouseout="this.style.background='#1B2A4A'">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 002 2h12a2 2 0 002-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
+                        Share Starting 5
+                    </button>
+                </div>`;
+
+                container.innerHTML = html;
+            } catch (e) {
+                console.error('Starting 5 load error:', e);
+                container.innerHTML = '<div style="color:#8892A0;font-size:0.9rem;padding:2rem;text-align:center;">Failed to load Starting 5 data. Please try again.</div>';
+            }
+        }
+
+        function toggleStarting5Bench(btn) {
+            const content = document.getElementById('s5BenchContent');
+            if (!content) return;
+            const isVisible = content.classList.contains('visible');
+            content.classList.toggle('visible');
+            btn.classList.toggle('active');
+            btn.innerHTML = isVisible
+                ? '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg> Show Bench Comparison'
+                : '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg> Hide Bench Comparison';
+        }
+
+        function copyStarting5Link() {
+            if (!selectedTeam1 || !selectedTeam2) return;
+            const url = window.location.origin + window.location.pathname + '#compare/' + teamSlug(selectedTeam1.name) + '/' + teamSlug(selectedTeam2.name) + '/starting5';
+            navigator.clipboard.writeText(url).then(() => {
+                const btn = event.target.closest('button');
+                if (btn) {
+                    const orig = btn.innerHTML;
+                    btn.innerHTML = '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Link Copied';
+                    setTimeout(() => { btn.innerHTML = orig; }, 2000);
+                }
+            });
         }
 
         // Init
