@@ -1,0 +1,196 @@
+// Cloudflare Pages Function — dynamic Open Graph meta tags for social sharing
+// Intercepts requests with ?team= or ?compare= query params and injects OG tags
+
+const F = {
+  NAME: 0, MASCOT: 1, CONF: 2, COLOR: 3, ATW: 4, ATL: 5,
+  NC: 6, NCY: 7, FF: 8
+};
+
+function teamSlug(name) {
+  return name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+}
+
+// Cache data.json in module-level variable (persists across requests within same isolate)
+let cachedTeamData = null;
+let slugIndex = null;
+
+async function getTeamData(assetFetcher, originUrl) {
+  if (cachedTeamData && slugIndex) return { teams: cachedTeamData, index: slugIndex };
+
+  const dataUrl = new URL('/data.json', originUrl).toString();
+  const resp = await assetFetcher.fetch(dataUrl);
+  if (!resp.ok) return null;
+
+  const data = await resp.json();
+  cachedTeamData = data.H;
+
+  // Build slug-to-espnId index for fast lookups
+  slugIndex = {};
+  for (const [espnId, fields] of Object.entries(cachedTeamData)) {
+    const slug = teamSlug(fields[F.NAME]);
+    slugIndex[slug] = espnId;
+  }
+
+  return { teams: cachedTeamData, index: slugIndex };
+}
+
+function lookupTeam(slug, teams, index) {
+  const espnId = index[slug];
+  if (!espnId) return null;
+  const t = teams[espnId];
+  return {
+    espnId,
+    name: t[F.NAME],
+    mascot: t[F.MASCOT],
+    conf: t[F.CONF],
+    color: t[F.COLOR],
+    allTimeW: t[F.ATW],
+    allTimeL: t[F.ATL],
+    natlChamps: t[F.NC],
+    champYears: t[F.NCY],
+    finalFours: t[F.FF],
+  };
+}
+
+// HTMLRewriter handler that removes existing OG/Twitter meta tags
+class MetaTagRemover {
+  constructor(tagsToRemove) {
+    this.tagsToRemove = tagsToRemove;
+  }
+
+  element(el) {
+    const property = el.getAttribute('property') || '';
+    const name = el.getAttribute('name') || '';
+    if (this.tagsToRemove.has(property) || this.tagsToRemove.has(name)) {
+      el.remove();
+    }
+  }
+}
+
+// HTMLRewriter handler that injects new meta tags before </head>
+class HeadInjector {
+  constructor(metaTags, titleText) {
+    this.metaTags = metaTags;
+    this.titleText = titleText;
+    this.titleReplaced = false;
+  }
+
+  element(el) {
+    // Inject all OG/Twitter meta tags at the end of <head>
+    const tagHtml = this.metaTags
+      .map(({ key, value }) => {
+        const attr = key.startsWith('og:') ? 'property' : 'name';
+        return `<meta ${attr}="${key}" content="${escapeAttr(value)}">`;
+      })
+      .join('\n    ');
+    el.append(tagHtml, { html: true });
+  }
+}
+
+class TitleRewriter {
+  constructor(newTitle) {
+    this.newTitle = newTitle;
+  }
+
+  element(el) {
+    el.setInnerContent(this.newTitle);
+  }
+}
+
+function escapeAttr(str) {
+  return str.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+
+export async function onRequest(context) {
+  const { request } = context;
+  const url = new URL(request.url);
+  const teamParam = url.searchParams.get('team');
+  const compareParam = url.searchParams.get('compare');
+
+  // No relevant query params — passthrough to static files
+  if (!teamParam && !compareParam) {
+    return context.next();
+  }
+
+  // Fetch origin HTML (the index.html) via ASSETS binding to avoid recursive function calls
+  const assetFetcher = context.env.ASSETS;
+  const originUrl = new URL('/', url).toString();
+  const [originResp, teamDataResult] = await Promise.all([
+    assetFetcher.fetch(originUrl),
+    getTeamData(assetFetcher, originUrl),
+  ]);
+
+  if (!originResp.ok || !teamDataResult) {
+    return context.next();
+  }
+
+  const { teams, index } = teamDataResult;
+  let metaTags = [];
+  let pageTitle = '';
+  const canonicalUrl = url.toString();
+
+  if (teamParam) {
+    const team = lookupTeam(teamParam, teams, index);
+    if (!team) return context.next();
+
+    const ncText = team.natlChamps > 0
+      ? `${team.natlChamps} National Championship${team.natlChamps > 1 ? 's' : ''}`
+      : 'No National Championships';
+
+    pageTitle = `${team.name} — Hoopsipedia`;
+    const description = `${team.allTimeW}-${team.allTimeL} all-time | ${ncText} | ${team.conf}`;
+    const imageUrl = `https://a.espncdn.com/i/teamlogos/ncaa/500/${team.espnId}.png`;
+
+    metaTags = [
+      { key: 'og:type', value: 'website' },
+      { key: 'og:title', value: pageTitle },
+      { key: 'og:description', value: description },
+      { key: 'og:image', value: imageUrl },
+      { key: 'og:url', value: canonicalUrl },
+      { key: 'og:site_name', value: 'Hoopsipedia' },
+      { key: 'twitter:card', value: 'summary_large_image' },
+      { key: 'twitter:title', value: pageTitle },
+      { key: 'twitter:description', value: description },
+      { key: 'twitter:image', value: imageUrl },
+    ];
+  } else if (compareParam) {
+    const parts = compareParam.split('/');
+    if (parts.length !== 2) return context.next();
+
+    const team1 = lookupTeam(parts[0], teams, index);
+    const team2 = lookupTeam(parts[1], teams, index);
+    if (!team1 || !team2) return context.next();
+
+    pageTitle = `${team1.name} vs ${team2.name} — Hoopsipedia`;
+    const description = 'Head-to-head comparison on Hoopsipedia';
+    const imageUrl = `https://a.espncdn.com/i/teamlogos/ncaa/500/${team1.espnId}.png`;
+
+    metaTags = [
+      { key: 'og:type', value: 'website' },
+      { key: 'og:title', value: pageTitle },
+      { key: 'og:description', value: description },
+      { key: 'og:image', value: imageUrl },
+      { key: 'og:url', value: canonicalUrl },
+      { key: 'og:site_name', value: 'Hoopsipedia' },
+      { key: 'twitter:card', value: 'summary_large_image' },
+      { key: 'twitter:title', value: pageTitle },
+      { key: 'twitter:description', value: description },
+      { key: 'twitter:image', value: imageUrl },
+    ];
+  }
+
+  // Set of tags to remove from existing HTML
+  const tagsToRemove = new Set(metaTags.map(t => t.key));
+
+  // Use HTMLRewriter to stream-replace meta tags
+  const rewritten = new HTMLRewriter()
+    .on('meta', new MetaTagRemover(tagsToRemove))
+    .on('title', new TitleRewriter(pageTitle))
+    .on('head', new HeadInjector(metaTags, pageTitle))
+    .transform(originResp);
+
+  // Return with appropriate headers
+  const response = new Response(rewritten.body, rewritten);
+  response.headers.set('Cache-Control', 'public, max-age=3600, s-maxage=86400');
+  return response;
+}

@@ -1437,6 +1437,21 @@
         let bracketData = {};
         let H2H_CACHE = {};
 
+        // Redirect query-param share URLs to hash routes (for real browsers, not crawlers)
+        (function redirectShareUrl() {
+            const params = new URLSearchParams(window.location.search);
+            const teamParam = params.get('team');
+            const compareParam = params.get('compare');
+            if (teamParam) {
+                window.location.replace(window.location.pathname + '#team/' + teamParam);
+                return;
+            }
+            if (compareParam) {
+                window.location.replace(window.location.pathname + '#compare/' + compareParam);
+                return;
+            }
+        })();
+
         // Initialize
         async function init() {
             await loadData();
@@ -1754,6 +1769,34 @@
         // Generate URL-friendly slug from team name: "Duke Blue Devils" → "duke-blue-devils"
         function teamSlug(name) {
             return name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+        }
+
+        // Copy a share URL (query-param format) to clipboard
+        function copyShareUrl(type, slug1, slug2) {
+            const base = window.location.origin + window.location.pathname;
+            let url;
+            if (type === 'team') {
+                url = base + '?team=' + slug1;
+            } else {
+                url = base + '?compare=' + slug1 + '/' + slug2;
+            }
+            navigator.clipboard.writeText(url).then(() => {
+                // Show brief confirmation
+                const toast = document.createElement('div');
+                toast.textContent = 'Link copied!';
+                toast.style.cssText = 'position:fixed;bottom:2rem;left:50%;transform:translateX(-50%);background:#1B2A4A;color:#fff;padding:0.6rem 1.4rem;border-radius:2rem;font-size:0.85rem;font-weight:600;z-index:9999;box-shadow:0 4px 16px rgba(0,0,0,0.2);transition:opacity 0.3s;';
+                document.body.appendChild(toast);
+                setTimeout(() => { toast.style.opacity = '0'; }, 1500);
+                setTimeout(() => { toast.remove(); }, 2000);
+            }).catch(() => {
+                // Fallback for older browsers
+                const input = document.createElement('input');
+                input.value = url;
+                document.body.appendChild(input);
+                input.select();
+                document.execCommand('copy');
+                input.remove();
+            });
         }
 
         // Find team by slug (reverse lookup)
@@ -2751,6 +2794,12 @@
                             <p>${t2.allTimeW}-${t2.allTimeL}</p>
                         </div>
                     </div>
+                </div>
+                <div style="text-align:center;margin-bottom:0.5rem;">
+                    <button onclick="copyShareUrl('compare','${teamSlug(t1.name)}','${teamSlug(t2.name)}')" style="display:inline-flex;align-items:center;gap:0.35rem;background:#1B2A4A;color:#fff;border:none;padding:0.4rem 0.9rem;border-radius:1rem;font-size:0.75rem;font-weight:600;cursor:pointer;letter-spacing:0.02em;transition:background 0.2s;" onmouseover="this.style.background='#2a3d6a'" onmouseout="this.style.background='#1B2A4A'">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 002 2h12a2 2 0 002-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
+                        Share Comparison
+                    </button>
                 </div>
                 <div id="compTicketContainer" style="text-align:center; margin-bottom: 0.5rem;"></div>
                 <div class="comparison-tabs">
@@ -3751,7 +3800,13 @@
                         <div class="profile-logo" style="background-image: url('${getLogoUrl(team.espnId)}');"></div>
                     </div>
                     <div class="profile-info">
-                        <h2>${team.name}</h2>
+                        <div style="display:flex;align-items:center;gap:0.75rem;flex-wrap:wrap;">
+                            <h2 style="margin:0;">${team.name}</h2>
+                            <button onclick="copyShareUrl('team','${teamSlug(team.name)}')" style="display:inline-flex;align-items:center;gap:0.35rem;background:#1B2A4A;color:#fff;border:none;padding:0.35rem 0.75rem;border-radius:1rem;font-size:0.72rem;font-weight:600;cursor:pointer;letter-spacing:0.02em;transition:background 0.2s;" onmouseover="this.style.background='#2a3d6a'" onmouseout="this.style.background='#1B2A4A'">
+                                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 002 2h12a2 2 0 002-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
+                                Share
+                            </button>
+                        </div>
                         <div class="profile-meta">
                             <div><strong>Conference:</strong> ${team.conf}</div>
                             <div><strong>Nickname:</strong> ${team.mascot}</div>
