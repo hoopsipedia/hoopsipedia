@@ -753,7 +753,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 1rem 0;
+            padding: 1.5rem 0;
             gap: 0;
             position: relative;
         }
@@ -761,7 +761,36 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 0.5rem;
+            gap: 0.75rem;
+            position: relative;
+        }
+        .bracket-champ-card .bracket-matchup {
+            border: 2px solid #C9A86C;
+            box-shadow: 0 4px 20px rgba(201, 168, 108, 0.3), 0 0 40px rgba(201, 168, 108, 0.08);
+            min-width: 220px;
+        }
+        .champ-trophy {
+            font-size: 2rem;
+            margin-bottom: -0.25rem;
+            filter: drop-shadow(0 2px 4px rgba(201, 168, 108, 0.4));
+        }
+        .champ-title-label {
+            font-size: 0.95rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: #1B2A4A;
+            background: linear-gradient(135deg, #C9A86C, #E8D5A8, #C9A86C);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .champ-subtitle {
+            font-size: 0.65rem;
+            color: #8892A0;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
         }
         .bracket-round-label {
             font-size: 0.7rem; font-weight: 700; color: #8892A0;
@@ -6265,7 +6294,7 @@
                     <div class="bracket-center-col"><div class="bracket-round-label">Final Four</div>${skeletonMatchup()}</div>
                     <div class="bracket-half right">${skeletonRegion('Midwest')}</div>
                 </div>
-                <div class="bracket-champ-row"><div class="bracket-champ-card"><div class="bracket-round-label" style="font-size:0.85rem;font-weight:800;color:#1B2A4A;">Championship</div>${skeletonMatchup()}</div></div>
+                <div class="bracket-champ-row"><div class="bracket-champ-card"><div class="champ-trophy">🏆</div><div class="champ-title-label">National Championship</div><div class="champ-subtitle">San Antonio, TX • April 7, 2026</div>${skeletonMatchup()}</div></div>
                 <div class="bracket-row" style="display:grid;grid-template-columns:1fr auto 1fr;">
                     <div class="bracket-half left">${skeletonRegion('East')}</div>
                     <div class="bracket-center-col"><div class="bracket-round-label">Final Four</div>${skeletonMatchup()}</div>
@@ -6360,7 +6389,9 @@
             champRow.className = 'bracket-champ-row';
             champRow.innerHTML = `
                 <div class="bracket-champ-card">
-                    <div class="bracket-round-label" style="font-size:0.85rem;font-weight:800;color:#1B2A4A;">Championship</div>
+                    <div class="champ-trophy">🏆</div>
+                    <div class="champ-title-label">National Championship</div>
+                    <div class="champ-subtitle">San Antonio, TX • April 7, 2026</div>
                     ${champGame.length > 0 ? createMatchupCard(champGame[0]).outerHTML : champTBD}
                 </div>
             `;
