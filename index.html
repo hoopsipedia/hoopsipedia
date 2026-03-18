@@ -2034,6 +2034,21 @@
                 </div>
             </div>
 
+            <div class="games-section" id="gamesSection">
+                <h2 class="section-title">Today's Games</h2>
+                <div class="games-filters" id="gamesFilters" style="display:none;">
+                    <div class="games-filter-tabs">
+                        <button class="games-filter-btn active" data-filter="ncaa">NCAA Tournament</button>
+                        <button class="games-filter-btn" data-filter="nit">NIT</button>
+                        <button class="games-filter-btn" data-filter="all">All Games</button>
+                    </div>
+                    <select class="games-conf-filter" id="gamesConfFilter">
+                        <option value="">All Conferences</option>
+                    </select>
+                </div>
+                <div class="games-grid" id="gamesGrid"></div>
+            </div>
+
             <h2 class="section-title" id="popularTitle">AP Top 25</h2>
             <div class="programs-grid" id="popularGrid"></div>
 
@@ -3784,6 +3799,7 @@
 
         function renderTodaysGames() {
             const grid = document.getElementById('gamesGrid');
+            if (!grid) { console.warn('gamesGrid not found'); return; }
             grid.innerHTML = renderGameCardsSkeleton(6);
 
             // Fetch yesterday + today + upcoming days (yesterday catches recently finished games)
