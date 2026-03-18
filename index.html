@@ -2630,17 +2630,19 @@
             initCorrectionModal();
 
             // Check for hash route on initial load
-            if (window.location.hash) {
-                handleHashRoute();
-            } else {
-                renderHome();
-            }
+            try {
+                if (window.location.hash) {
+                    handleHashRoute();
+                } else {
+                    renderHome();
+                }
+            } catch(e) { console.error('Initial route error:', e); renderHome(); }
 
             // Enrich with live records in background (doesn't block render)
-            enrichWithLiveRecords();
+            try { enrichWithLiveRecords(); } catch(e) { console.error('Live records enrichment error:', e); }
 
             // Start live game tracker — polls ESPN every 2 min, updates records when games go Final
-            startLiveGameTracker();
+            try { startLiveGameTracker(); } catch(e) { console.error('Live game tracker error:', e); }
         }
 
         /**
@@ -3577,9 +3579,10 @@
         }
 
         function renderHome() {
-            renderTodaysGames();
-            renderPopularPrograms();
-            renderWinsLeaders();
+            // Each section is isolated — one crash cannot kill the others
+            try { renderTodaysGames(); } catch(e) { console.error('Games section error:', e); }
+            try { renderPopularPrograms(); } catch(e) { console.error('AP Top 25 error:', e); }
+            try { renderWinsLeaders(); } catch(e) { console.error('Leaders error:', e); }
         }
 
         // Cache for H2H data to avoid re-fetching
