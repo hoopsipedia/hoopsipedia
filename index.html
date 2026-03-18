@@ -1949,6 +1949,14 @@
             #coaches div[style*="display: flex"][style*="gap: 0.75rem"] {
                 flex-wrap: wrap;
             }
+
+            /* ── NET RANKINGS TABLE: horizontal scroll on mobile ── */
+            #rankingsNetPanel .rankings-table {
+                overflow-x: auto; -webkit-overflow-scrolling: touch;
+            }
+            #rankingsNetPanel table { min-width: 640px; }
+            .net-search-row { flex-direction: column; }
+            .net-search-row input { max-width: 100%; }
         }
 
         /* ── EXTRA SMALL PHONES (iPhone SE, 375px) ── */
@@ -3138,6 +3146,7 @@
                     <a href="#" onclick="switchView('home'); return false;" style="font-size: 0.85rem; color: rgba(255,255,255,0.65); text-decoration: none; transition: color 0.2s;">Home</a>
                     <a href="#" onclick="switchView('bracket'); return false;" style="font-size: 0.85rem; color: rgba(255,255,255,0.65); text-decoration: none; transition: color 0.2s;">Bracket</a>
                     <a href="#" onclick="switchView('rankings'); return false;" style="font-size: 0.85rem; color: rgba(255,255,255,0.65); text-decoration: none; transition: color 0.2s;">Rankings</a>
+                    <a href="#net-rankings" style="font-size: 0.85rem; color: rgba(255,255,255,0.65); text-decoration: none; transition: color 0.2s;">NET Rankings</a>
                     <a href="#" onclick="switchView('teams'); return false;" style="font-size: 0.85rem; color: rgba(255,255,255,0.65); text-decoration: none; transition: color 0.2s;">Teams</a>
                     <a href="#" onclick="switchView('upsets'); return false;" style="font-size: 0.85rem; color: rgba(255,255,255,0.65); text-decoration: none; transition: color 0.2s;">Upsets</a>
                 </div>
@@ -6901,6 +6910,257 @@
             });
         }
 
+        // ── NET Rankings System ──
+
+        function switchRankingsTab(tab) {
+            document.querySelectorAll('.rankings-tab').forEach(t => t.classList.remove('active'));
+            document.querySelector(`[data-rankings-tab="${tab}"]`)?.classList.add('active');
+            document.getElementById('rankingsHistoricalPanel').style.display = tab === 'historical' ? 'block' : 'none';
+            document.getElementById('rankingsNetPanel').style.display = tab === 'net' ? 'block' : 'none';
+            if (tab === 'net') loadNetRankings();
+        }
+
+        async function loadNetRankings() {
+            if (NET_RANKINGS && NET_RANKINGS.length > 0) { renderNetRankings(); return; }
+            const cached = sessionStorage.getItem('NET_RANKINGS');
+            if (cached) {
+                try {
+                    const parsed = JSON.parse(cached);
+                    if (parsed.ts && Date.now() - parsed.ts < 3600000) {
+                        NET_RANKINGS = parsed.data;
+                        for (const nr of NET_RANKINGS) {
+                            const lt = allTeamsData.find(t => t.espnId === nr.teamId);
+                            if (lt) { lt._netRank = nr.rank; lt._quadRecord = nr.quadRecord; }
+                        }
+                        renderNetRankings(); return;
+                    }
+                } catch(e) {}
+            }
+            if (NET_RANKINGS_LOADING) return;
+            NET_RANKINGS_LOADING = true;
+            const tbody = document.getElementById('netRankingsTableBody');
+            tbody.innerHTML = '<tr><td colspan="8" style="text-align:center;padding:3rem;color:#8892A0;">Loading NET rankings...</td></tr>';
+            try {
+                await computeNetRankings();
+                sessionStorage.setItem('NET_RANKINGS', JSON.stringify({ data: NET_RANKINGS, ts: Date.now() }));
+                renderNetRankings();
+            } catch(e) {
+                console.error('Failed to load NET rankings:', e);
+                tbody.innerHTML = '<tr><td colspan="8" style="text-align:center;padding:3rem;color:#8892A0;">Unable to load NET rankings. Try refreshing.</td></tr>';
+            } finally { NET_RANKINGS_LOADING = false; }
+        }
+
+        async function computeNetRankings() {
+            const standingsResp = await fetch('https://site.api.espn.com/apis/v2/sports/basketball/mens-college-basketball/standings');
+            const standingsData = await standingsResp.json();
+            const conferences = standingsData.children || [];
+            const teamMap = {};
+            for (const conf of conferences) {
+                const confName = conf.abbreviation || conf.name || '';
+                for (const entry of (conf.standings?.entries || [])) {
+                    const teamId = String(entry.team?.id);
+                    const stats = {};
+                    for (const s of (entry.stats || [])) stats[s.name] = s.value != null ? s.value : s.displayValue;
+                    // Parse overall record (e.g. "28-5") for full-season W-L
+                    let overallW = stats.wins || 0, overallL = stats.losses || 0;
+                    const overallStr = stats.overall || '';
+                    if (overallStr && overallStr.includes('-')) {
+                        const parts = overallStr.split('-');
+                        overallW = parseInt(parts[0]) || 0;
+                        overallL = parseInt(parts[1]) || 0;
+                    }
+                    const totalGames = overallW + overallL;
+                    teamMap[teamId] = {
+                        teamId, teamName: entry.team?.displayName || '', conf: confName,
+                        wins: overallW, losses: overallL,
+                        winPct: totalGames > 0 ? overallW / totalGames : 0,
+                        ppg: stats.avgPointsFor || 0, oppg: stats.avgPointsAgainst || 0
+                    };
+                }
+            }
+            let bpiMap = {};
+            try {
+                const bpiResp = await fetch('https://sports.core.api.espn.com/v2/sports/basketball/leagues/mens-college-basketball/seasons/2026/powerindex?limit=400');
+                const bpiData = await bpiResp.json();
+                for (const item of (bpiData.items || [])) {
+                    const ref = item.team?.$ref || '';
+                    const teamId = ref.includes('/teams/') ? ref.split('/teams/')[1].split('?')[0] : '';
+                    if (!teamId) continue;
+                    const stats = {};
+                    for (const s of (item.stats || [])) stats[s.name] = s.value != null ? s.value : s.displayValue;
+                    bpiMap[teamId] = { bpi: stats.bpi || 0, bpiRank: stats.bpirank || 999, sor: stats.sor || 0, sorRank: stats.sorrank || 999 };
+                }
+            } catch(e) { console.log('BPI data not available'); }
+
+            const teamScores = [];
+            for (const id of Object.keys(teamMap)) {
+                const t = teamMap[id]; const bpi = bpiMap[id];
+                let score = (bpi && bpi.bpiRank <= 25) ? (1000 - bpi.bpiRank) : ((t.winPct * 500) + ((t.ppg - t.oppg) * 2));
+                teamScores.push({ id, score, ...t, bpi: bpi || null });
+            }
+            teamScores.sort((a, b) => b.score - a.score);
+            const netRankMap = {};
+            teamScores.forEach((t, i) => { netRankMap[t.id] = i + 1; });
+
+            NET_RANKINGS = teamScores.map((t, idx) => {
+                const rank = idx + 1;
+                const quadRecord = computeQuadRecord(t.id, netRankMap);
+                const localTeam = allTeamsData.find(at => at.espnId === t.id);
+                if (localTeam) { localTeam._netRank = rank; localTeam._quadRecord = quadRecord; }
+                return { rank, teamId: t.id, teamName: t.teamName, conf: t.conf || (localTeam ? localTeam.conf : ''),
+                    record: `${Math.round(t.wins)}-${Math.round(t.losses)}`, winPct: t.winPct, bpiRank: t.bpi?.bpiRank || null, quadRecord };
+            });
+        }
+
+        function computeQuadRecord(teamId, netRankMap) {
+            const q = { q1w: 0, q1l: 0, q2w: 0, q2l: 0, q3w: 0, q3l: 0, q4w: 0, q4l: 0 };
+            const teamData = GAMES_DATA?.[teamId];
+            if (!teamData) return q;
+            // Games can be nested under .games key or be a direct array
+            const games = Array.isArray(teamData) ? teamData : (teamData.games || []);
+            if (!games.length) return q;
+            // Only consider current season games (2025-26)
+            const currentSeasonGames = games.filter(g => g.date && g.date >= '2025-09-01');
+            for (const game of currentSeasonGames) {
+                const oppId = String(game.opp || game.oppId || '');
+                const oppRank = netRankMap?.[oppId];
+                if (!oppRank) continue;
+                const isWin = game.w === true || game.w === 1 || game.result === 'W';
+                const isLoss = game.w === false || game.w === 0 || game.result === 'L';
+                if (!isWin && !isLoss) continue;
+                const loc = (game.loc || game.location || 'H').toUpperCase();
+                const isHome = loc === 'H' || loc === 'HOME';
+                const isNeutral = loc === 'N' || loc === 'NEUTRAL';
+                let quad = 4;
+                if (isHome) { if (oppRank <= 30) quad = 1; else if (oppRank <= 75) quad = 2; else if (oppRank <= 160) quad = 3; }
+                else if (isNeutral) { if (oppRank <= 50) quad = 1; else if (oppRank <= 100) quad = 2; else if (oppRank <= 200) quad = 3; }
+                else { if (oppRank <= 75) quad = 1; else if (oppRank <= 135) quad = 2; else if (oppRank <= 240) quad = 3; }
+                if (isWin) q[`q${quad}w`]++; else q[`q${quad}l`]++;
+            }
+            return q;
+        }
+
+        function getNetBadgeClass(rank) {
+            if (!rank || rank > 363) return 'net-badge--gray';
+            if (rank <= 25) return 'net-badge--gold';
+            if (rank <= 50) return 'net-badge--navy';
+            if (rank <= 100) return 'net-badge--neutral';
+            return 'net-badge--gray';
+        }
+
+        function renderNetRankings() {
+            if (!NET_RANKINGS) return;
+            const confContainer = document.getElementById('netConferenceFilters');
+            confContainer.innerHTML = '';
+            const netConfs = [...new Set(NET_RANKINGS.map(t => t.conf))].filter(Boolean).sort();
+            if (!window._netSelectedConfs) window._netSelectedConfs = new Set();
+
+            const allBtn = document.createElement('button');
+            allBtn.className = `conf-btn ${!netConfFilter ? 'active' : ''}`;
+            allBtn.textContent = 'All';
+            allBtn.addEventListener('click', () => { window._netSelectedConfs.clear(); netConfFilter = null; renderNetRankingsTable(); });
+            confContainer.appendChild(allBtn);
+
+            netConfs.forEach(conf => {
+                const btn = document.createElement('button');
+                btn.className = `conf-btn ${window._netSelectedConfs.has(conf) ? 'active' : ''}`;
+                btn.textContent = conf;
+                btn.addEventListener('click', () => {
+                    if (window._netSelectedConfs.has(conf)) window._netSelectedConfs.delete(conf);
+                    else window._netSelectedConfs.add(conf);
+                    netConfFilter = window._netSelectedConfs.size > 0 ? [...window._netSelectedConfs] : null;
+                    renderNetRankingsTable();
+                });
+                confContainer.appendChild(btn);
+            });
+
+            const searchInput = document.getElementById('netSearchInput');
+            searchInput.value = '';
+            searchInput.oninput = () => renderNetRankingsTable();
+            document.getElementById('netRankHeader').onclick = () => { netSortDir = netSortDir === 'asc' ? 'desc' : 'asc'; renderNetRankingsTable(); };
+            renderNetRankingsTable();
+        }
+
+        function renderNetRankingsTable() {
+            const tbody = document.getElementById('netRankingsTableBody');
+            let filtered = [...NET_RANKINGS];
+            const query = document.getElementById('netSearchInput')?.value?.toLowerCase() || '';
+            if (netConfFilter && netConfFilter.length > 0) filtered = filtered.filter(t => netConfFilter.includes(t.conf));
+            if (query) filtered = filtered.filter(t => t.teamName.toLowerCase().includes(query) || t.conf.toLowerCase().includes(query));
+            filtered.sort((a, b) => netSortDir === 'asc' ? a.rank - b.rank : b.rank - a.rank);
+            document.getElementById('netRankHeader').className = netSortDir === 'asc' ? 'sort-asc' : 'sort-desc';
+
+            tbody.innerHTML = '';
+            filtered.forEach(t => {
+                const qr = t.quadRecord || {};
+                const q1Color = (qr.q1w > 0) ? 'color:#2D7D46;font-weight:600;' : '';
+                const q4LossColor = (qr.q4l > 0) ? 'color:#C0392B;font-weight:600;' : '';
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td><span class="net-badge ${getNetBadgeClass(t.rank)}">${t.rank}</span></td>
+                    <td><div class="team-cell" style="cursor:pointer;" onclick="openProfile({espnId:'${t.teamId}',name:'${(t.teamName||'').replace(/'/g,"\\'")}'})"><div class="team-logo-small" style="background-image:url('${getLogoUrl(t.teamId)}');"></div><span>${t.teamName}</span></div></td>
+                    <td>${t.conf}</td>
+                    <td>${t.record}</td>
+                    <td style="${q1Color}">${qr.q1w||0}-${qr.q1l||0}</td>
+                    <td>${qr.q2w||0}-${qr.q2l||0}</td>
+                    <td>${qr.q3w||0}-${qr.q3l||0}</td>
+                    <td style="${q4LossColor}">${qr.q4w||0}-${qr.q4l||0}</td>`;
+                tbody.appendChild(row);
+            });
+            if (filtered.length === 0) tbody.innerHTML = '<tr><td colspan="8" style="text-align:center;padding:2rem;color:#8892A0;">No teams match your search.</td></tr>';
+        }
+
+        function renderQuadRecordSection(team) {
+            const qr = team._quadRecord;
+            if (!qr) return '';
+            const totalWins = qr.q1w + qr.q2w + qr.q3w + qr.q4w;
+            const totalGames = totalWins + qr.q1l + qr.q2l + qr.q3l + qr.q4l;
+            if (totalGames === 0) return '';
+            const q1Pct = totalWins > 0 ? ((qr.q1w / totalWins) * 100).toFixed(0) : 0;
+            const q2Pct = totalWins > 0 ? ((qr.q2w / totalWins) * 100).toFixed(0) : 0;
+            const q3Pct = totalWins > 0 ? ((qr.q3w / totalWins) * 100).toFixed(0) : 0;
+            const q4Pct = totalWins > 0 ? ((qr.q4w / totalWins) * 100).toFixed(0) : 0;
+            return `
+                <div class="quad-record-section">
+                    <h3>Quad Record (Selection Committee Resume)</h3>
+                    <div class="quad-grid">
+                        <div class="quad-card ${qr.q1w > 0 ? 'quad-card--q1-win' : ''}">
+                            <div class="quad-card-label">Quad 1</div>
+                            <div class="quad-card-record" style="${qr.q1w > 0 ? 'color:#2D7D46;' : ''}">${qr.q1w}-${qr.q1l}</div>
+                            <div class="quad-card-detail">Home: NET 1-30 / Neut: 1-50 / Away: 1-75</div>
+                        </div>
+                        <div class="quad-card">
+                            <div class="quad-card-label">Quad 2</div>
+                            <div class="quad-card-record">${qr.q2w}-${qr.q2l}</div>
+                            <div class="quad-card-detail">Home: 31-75 / Neut: 51-100 / Away: 76-135</div>
+                        </div>
+                        <div class="quad-card">
+                            <div class="quad-card-label">Quad 3</div>
+                            <div class="quad-card-record">${qr.q3w}-${qr.q3l}</div>
+                            <div class="quad-card-detail">Home: 76-160 / Neut: 101-200 / Away: 136-240</div>
+                        </div>
+                        <div class="quad-card ${qr.q4l > 0 ? 'quad-card--q4-loss' : ''}">
+                            <div class="quad-card-label">Quad 4</div>
+                            <div class="quad-card-record" style="${qr.q4l > 0 ? 'color:#C0392B;' : ''}">${qr.q4w}-${qr.q4l}</div>
+                            <div class="quad-card-detail">Home: 161+ / Neut: 201+ / Away: 241+</div>
+                        </div>
+                    </div>
+                    ${totalWins > 0 ? `
+                    <div class="quad-bar">
+                        <div class="quad-bar-q1" style="flex:${qr.q1w};" title="Q1 Wins: ${qr.q1w}"></div>
+                        <div class="quad-bar-q2" style="flex:${qr.q2w};" title="Q2 Wins: ${qr.q2w}"></div>
+                        <div class="quad-bar-q3" style="flex:${qr.q3w};" title="Q3 Wins: ${qr.q3w}"></div>
+                        <div class="quad-bar-q4" style="flex:${qr.q4w};" title="Q4 Wins: ${qr.q4w}"></div>
+                    </div>
+                    <div class="quad-bar-legend">
+                        <div class="quad-bar-legend-item"><div class="quad-bar-legend-dot" style="background:#2D7D46;"></div> Q1 (${q1Pct}%)</div>
+                        <div class="quad-bar-legend-item"><div class="quad-bar-legend-dot" style="background:#C9A86C;"></div> Q2 (${q2Pct}%)</div>
+                        <div class="quad-bar-legend-item"><div class="quad-bar-legend-dot" style="background:#8892A0;"></div> Q3 (${q3Pct}%)</div>
+                        <div class="quad-bar-legend-item"><div class="quad-bar-legend-dot" style="background:#C0392B;"></div> Q4 (${q4Pct}%)</div>
+                    </div>` : ''}
+                </div>`;
+        }
+
         function renderTeamsView() {
             renderTeamsGrid();
         }
@@ -7037,6 +7297,17 @@
             const team = currentProfile;
             const winPct = ((team.allTimeW / (team.allTimeW + team.allTimeL)) * 100).toFixed(1);
 
+            // Lazy-load NET rankings in background if not yet fetched
+            if (!NET_RANKINGS && !NET_RANKINGS_LOADING) {
+                computeNetRankings().then(() => {
+                    sessionStorage.setItem('NET_RANKINGS', JSON.stringify({ data: NET_RANKINGS, ts: Date.now() }));
+                    // Re-render profile to show NET badge + quad record
+                    if (currentView === 'profile' && currentProfile?.espnId === team.espnId) {
+                        renderProfile();
+                    }
+                }).catch(e => console.log('Background NET load failed:', e));
+            }
+
             // Find rank for each stat
             const rankings = {};
             const stats = ['allTimeW', 'natlChamps', 'finalFours', 'elite8s', 'sweet16s', 'ncaaTourneys', 'confTitles', 'allAmericans', 'nbaFirstRound', 'apWeeksRanked'];
@@ -7130,6 +7401,7 @@
                     <div class="profile-info">
                         <div style="display:flex;align-items:center;gap:0.75rem;flex-wrap:wrap;">
                             <h2 style="margin:0;">${team.name}</h2>
+                            ${team._netRank ? `<span class="net-badge ${getNetBadgeClass(team._netRank)}" style="font-size:0.8rem;padding:0.25rem 0.7rem;" title="NET Ranking (estimated from BPI + adjusted win%)">NET #${team._netRank}</span>` : ''}
                             <button onclick="copyShareUrl('team','${teamSlug(team.name)}')" style="display:inline-flex;align-items:center;gap:0.35rem;background:#1B2A4A;color:#fff;border:none;padding:0.35rem 0.75rem;border-radius:1rem;font-size:0.72rem;font-weight:600;cursor:pointer;letter-spacing:0.02em;transition:background 0.2s;" onmouseover="this.style.background='#2a3d6a'" onmouseout="this.style.background='#1B2A4A'">
                                 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 002 2h12a2 2 0 002-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
                                 Share
@@ -7233,6 +7505,9 @@
                     </div>
                 `;
             }
+
+            // Quad Record (Selection Committee Resume)
+            profileHTML += renderQuadRecordSection(team);
 
             // NCAA Tournament Resume
             profileHTML += renderTournamentResume(team);
