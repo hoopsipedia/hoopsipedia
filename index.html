@@ -605,6 +605,67 @@
         }
         .champ-year-link:hover { color: #C9A86C; }
 
+        /* ── NBA Draft History ── */
+        .draft-history-section {
+            background: #FFFFFF; border: 1px solid #E0D9CC; border-radius: 0.75rem;
+            padding: 1.75rem; margin-bottom: 2.5rem; box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+        }
+        .draft-history-section h3 {
+            font-size: 1.15rem; font-weight: 700; margin-bottom: 1rem; color: #1B2A4A;
+        }
+        .draft-summary {
+            display: flex; flex-wrap: wrap; gap: 2rem; margin-bottom: 1.25rem;
+            padding-bottom: 1rem; border-bottom: 1px solid #E0D9CC;
+        }
+        .draft-summary-stat { text-align: center; }
+        .draft-summary-value { font-size: 1.6rem; font-weight: 800; color: #1B2A4A; }
+        .draft-summary-label {
+            font-size: 0.7rem; color: #8892A0; text-transform: uppercase;
+            letter-spacing: 0.06em; font-weight: 600;
+        }
+        .draft-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+        .draft-table {
+            width: 100%; border-collapse: collapse; font-size: 0.88rem;
+        }
+        .draft-table th {
+            text-align: left; padding: 0.6rem 0.75rem; font-size: 0.7rem;
+            color: #8892A0; text-transform: uppercase; letter-spacing: 0.06em;
+            font-weight: 600; border-bottom: 2px solid #E0D9CC; white-space: nowrap;
+        }
+        .draft-table td {
+            padding: 0.6rem 0.75rem; border-bottom: 1px solid #EDE9E0;
+            white-space: nowrap;
+        }
+        .draft-table tr:nth-child(even) td { background: #FDFBF7; }
+        .draft-table tr:hover td { background: #F5F0E6; }
+        .draft-pick-badge {
+            display: inline-flex; align-items: center; justify-content: center;
+            width: 28px; height: 28px; border-radius: 50%; font-size: 0.75rem;
+            font-weight: 700; flex-shrink: 0;
+        }
+        .draft-pick-badge.lottery { background: linear-gradient(135deg, #D4AF37, #E8C84A); color: #1B2A4A; }
+        .draft-pick-badge.first-round { background: #1B2A4A; color: #F5F3EE; }
+        .draft-pick-badge.second-round { background: #D6CFC2; color: #5A6578; }
+        .draft-no1-badge {
+            display: inline-block; padding: 0.1rem 0.4rem; border-radius: 0.2rem;
+            font-size: 0.6rem; font-weight: 700; text-transform: uppercase;
+            background: linear-gradient(135deg, #D4AF37, #E8C84A); color: #1B2A4A;
+            margin-left: 0.4rem; vertical-align: middle; letter-spacing: 0.04em;
+        }
+        .draft-player-name { font-weight: 600; color: #2C3345; }
+        .draft-view-all {
+            display: inline-block; margin-top: 1rem; font-size: 0.82rem;
+            font-weight: 600; color: #C9A86C; text-decoration: none;
+            transition: color 0.2s ease;
+        }
+        .draft-view-all:hover { color: #B08F55; text-decoration: underline; }
+        @media (max-width: 600px) {
+            .draft-summary { gap: 1rem; }
+            .draft-table { font-size: 0.82rem; }
+            .draft-table th, .draft-table td { padding: 0.5rem 0.5rem; }
+            .draft-pick-badge { width: 24px; height: 24px; font-size: 0.68rem; }
+        }
+
         /* ── Chart ── */
         .chart-section {
             background: #FFFFFF; border: 1px solid #E0D9CC; border-radius: 0.75rem;
@@ -3588,6 +3649,17 @@
                 } catch (e) {
                     console.log('No team_history.json found - program history section will be hidden');
                 }
+
+                // Load NBA draft history data for draft history section
+                try {
+                    const draftResp = await fetch('draft_history.json');
+                    if (draftResp.ok) {
+                        DRAFT_HISTORY = await draftResp.json();
+                        console.log(`Loaded draft history for ${Object.keys(DRAFT_HISTORY).length} teams`);
+                    }
+                } catch (e) {
+                    console.log('No draft_history.json found - draft history section will be hidden');
+                }
             } catch (e) {
                 console.error('Error loading data:', e);
                 document.querySelector('.container').innerHTML = `<div class="error-fallback" style="min-height:60vh;">
@@ -4851,6 +4923,67 @@
         }
 
         // Render NCAA Tournament Resume for team profile
+        // Render NBA Draft History for team profile
+        function renderDraftHistory(team) {
+            if (!DRAFT_HISTORY) return '';
+            const draftData = DRAFT_HISTORY[String(team.espnId)];
+            if (!draftData || !draftData.notablePicks || draftData.notablePicks.length === 0) return '';
+
+            const picks = draftData.notablePicks.sort((a, b) => b.year - a.year);
+
+            const pickBadgeClass = (pick, round) => {
+                if (round === 1 && pick <= 14) return 'lottery';
+                if (round === 1) return 'first-round';
+                return 'second-round';
+            };
+
+            const rows = picks.map(p => {
+                const isNo1 = p.pick === 1 && p.round === 1;
+                const badgeCls = pickBadgeClass(p.pick, p.round);
+                return `<tr>
+                    <td>${p.year}</td>
+                    <td><span class="draft-pick-badge ${badgeCls}">${p.pick}</span></td>
+                    <td><span class="draft-player-name">${p.name}</span>${isNo1 ? '<span class="draft-no1-badge">#1 Pick</span>' : ''}</td>
+                    <td>${p.nbaTeam}</td>
+                    <td>${p.position}</td>
+                </tr>`;
+            }).join('');
+
+            const summaryStats = [];
+            summaryStats.push(`<div class="draft-summary-stat"><div class="draft-summary-value">${draftData.totalDrafted}</div><div class="draft-summary-label">Players Drafted</div></div>`);
+            summaryStats.push(`<div class="draft-summary-stat"><div class="draft-summary-value">${draftData.firstRoundPicks}</div><div class="draft-summary-label">1st Round Picks</div></div>`);
+            summaryStats.push(`<div class="draft-summary-stat"><div class="draft-summary-value">${draftData.lotteryPicks}</div><div class="draft-summary-label">Lottery Picks</div></div>`);
+            if (draftData.numberOnePicks && draftData.numberOnePicks > 0) {
+                summaryStats.push(`<div class="draft-summary-stat"><div class="draft-summary-value">${draftData.numberOnePicks}</div><div class="draft-summary-label">#1 Overall Picks</div></div>`);
+            }
+
+            return `
+                <div class="draft-history-section">
+                    <h3>NBA Draft History</h3>
+                    <div class="draft-summary">
+                        ${summaryStats.join('')}
+                    </div>
+                    <div class="draft-table-wrap">
+                        <table class="draft-table">
+                            <thead>
+                                <tr>
+                                    <th>Year</th>
+                                    <th>Pick</th>
+                                    <th>Player</th>
+                                    <th>NBA Team</th>
+                                    <th>Pos</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                ${rows}
+                            </tbody>
+                        </table>
+                    </div>
+                    <a class="draft-view-all" href="${draftData.brLink}" target="_blank" rel="noopener">View all draft picks on Basketball Reference &#8594;</a>
+                </div>
+            `;
+        }
+
         function renderTournamentResume(team) {
             if (!SEASONS_DATA || !SEASONS_DATA[team.espnId]) return '';
             const seasons = SEASONS_DATA[team.espnId].seasons || [];
@@ -7742,6 +7875,7 @@
 
         let ARENA_PHOTOS = null; // Loaded from arena_photos.json
         let TEAM_HISTORY = null; // Loaded from team_history.json
+        let DRAFT_HISTORY = null; // Loaded from draft_history.json
 
         function updateProfileBackground(team) {
             // Remove any existing background elements
@@ -8055,6 +8189,9 @@
 
             // NCAA Tournament Resume
             profileHTML += renderTournamentResume(team);
+
+            // NBA Draft History section (from draft_history.json)
+            profileHTML += renderDraftHistory(team);
 
             // Add Conference Rivals section (quick-compare links)
             const confRivals = allTeamsData
