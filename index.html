@@ -2646,12 +2646,14 @@
                             const t2Comp = opponents.find(c => String(c.team?.id) === String(t2.espnId));
                             if (!t1Comp || !t2Comp) return;
 
+                            const gameStatus = comp.status?.type?.description || '';
                             matchups.push({
                                 date: event.date?.substring(0, 10),
                                 t1Score: parseInt(t1Comp.score) || 0,
                                 t2Score: parseInt(t2Comp.score) || 0,
                                 t1Winner: t1Comp.winner,
-                                venue: comp.venue?.fullName || ''
+                                venue: comp.venue?.fullName || '',
+                                status: gameStatus
                             });
                         });
                     });
@@ -2664,7 +2666,12 @@
                         return true;
                     }).sort((a, b) => b.date.localeCompare(a.date));
 
-                    const validGames = unique.filter(m => m.t1Score > 0 || m.t2Score > 0);
+                    // Keep completed games + recent/in-progress/scheduled games (last 2 days)
+                    const now = new Date();
+                    const twoDaysAgo = new Date(now);
+                    twoDaysAgo.setDate(twoDaysAgo.getDate() - 2);
+                    const cutoffStr = twoDaysAgo.toISOString().substring(0, 10);
+                    const validGames = unique.filter(m => m.t1Score > 0 || m.t2Score > 0 || m.date >= cutoffStr);
                     renderH2HGameList(container, allTimeHtml, hasAllTime, validGames, t1, t2, t1Color, t2Color);
                 }).catch(() => {
                     if (hasAllTime) {
