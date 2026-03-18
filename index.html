@@ -7153,7 +7153,7 @@
                     <div class="upsets-seed-bar">
                         <div class="upsets-seed-bar-fill ${colorClass}" style="width: ${upsetPct.toFixed(1)}%"></div>
                     </div>
-                    <div class="upsets-seed-upset-count"><span>${p.lowerWins}</span> upsets &middot; ${upsetPct.toFixed(1)}% upset rate</div>
+                    <div class="upsets-seed-upset-count"><span>${p.upsets ? p.upsets.length : p.lowerWins}</span> upsets${p.upsets && p.upsets.length < p.lowerWins ? ` of ${p.lowerWins}` : ''} &middot; ${upsetPct.toFixed(1)}% upset rate</div>
                 </div>`;
             }
 
