@@ -2035,7 +2035,7 @@
             </div>
 
             <div class="games-section" id="gamesSection">
-                <h2 class="section-title">Today's Games</h2>
+                <h2 class="section-title" id="gamesTitle">Today's Games</h2>
                 <div class="games-filters" id="gamesFilters" style="display:none;">
                     <div class="games-filter-tabs">
                         <button class="games-filter-btn active" data-filter="ncaa">NCAA Tournament</button>
@@ -3935,9 +3935,11 @@
 
             // Update section title
             const titleEl = document.getElementById('gamesTitle');
-            if (activeFilter === 'ncaa') titleEl.textContent = 'March Madness';
-            else if (activeFilter === 'nit') titleEl.textContent = 'NIT';
-            else titleEl.textContent = 'All Postseason Games';
+            if (titleEl) {
+                if (activeFilter === 'ncaa') titleEl.textContent = 'March Madness';
+                else if (activeFilter === 'nit') titleEl.textContent = 'NIT';
+                else titleEl.textContent = 'All Postseason Games';
+            }
 
             grid.innerHTML = '';
             if (filtered.length === 0) {
