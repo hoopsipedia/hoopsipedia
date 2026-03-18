@@ -1160,9 +1160,30 @@
             <div id="profileContent"></div>
         </div>
 
+        <!-- Coach Comparison View -->
+        <div id="coachComparison" class="view">
+            <button onclick="switchView('coaches')" style="margin-bottom: 1.5rem; background: #1B2A4A; color: #C9A86C; border: none; padding: 0.5rem 1.2rem; border-radius: 0.375rem; font-weight: 600; cursor: pointer; font-size: 0.9rem; transition: background 0.2s;">← Back to Coaches</button>
+            <div id="coachComparisonContent"></div>
+        </div>
+
         <div id="coaches" class="view">
             <h2 class="section-title">Top 100 Coaches — All-Time Wins</h2>
-            <p style="color: #6B7A8D; margin-bottom: 1.5rem; font-size: 0.9rem;">Career wins across schools in our database. Based on Sports Reference season data, verified against the NCAA record book.</p>
+            <p style="color: #6B7A8D; margin-bottom: 1rem; font-size: 0.9rem;">Career wins across schools in our database. Based on Sports Reference season data, verified against the NCAA record book.</p>
+            <div style="background: #FFFFFF; border: 1px solid #E0D9CC; border-radius: 0.75rem; padding: 1.25rem; margin-bottom: 1.5rem; box-shadow: 0 1px 4px rgba(0,0,0,0.04);">
+                <div style="font-size: 0.85rem; font-weight: 700; color: #1B2A4A; margin-bottom: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em;">Compare Coaches</div>
+                <div style="display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap;">
+                    <div style="flex: 1; min-width: 140px; position: relative;">
+                        <input type="text" id="coachCompare1" placeholder="Coach 1..." style="width: 100%; padding: 0.5rem 0.75rem; border: 1px solid #E0D9CC; border-radius: 0.375rem; font-size: 0.85rem; box-sizing: border-box;">
+                        <div id="coachDropdown1" style="display:none; position:absolute; top:100%; left:0; right:0; background:white; border:1px solid #E0D9CC; border-radius:0.375rem; max-height:200px; overflow-y:auto; z-index:100; box-shadow:0 4px 12px rgba(0,0,0,0.1);"></div>
+                    </div>
+                    <span style="color: #A0AAB8; font-weight: 600; font-size: 0.85rem;">vs</span>
+                    <div style="flex: 1; min-width: 140px; position: relative;">
+                        <input type="text" id="coachCompare2" placeholder="Coach 2..." style="width: 100%; padding: 0.5rem 0.75rem; border: 1px solid #E0D9CC; border-radius: 0.375rem; font-size: 0.85rem; box-sizing: border-box;">
+                        <div id="coachDropdown2" style="display:none; position:absolute; top:100%; left:0; right:0; background:white; border:1px solid #E0D9CC; border-radius:0.375rem; max-height:200px; overflow-y:auto; z-index:100; box-shadow:0 4px 12px rgba(0,0,0,0.1);"></div>
+                    </div>
+                    <button onclick="compareSelectedCoaches()" style="padding: 0.5rem 1.2rem; background: #1B2A4A; color: #C9A86C; border: none; border-radius: 0.375rem; font-weight: 600; cursor: pointer; font-size: 0.85rem; white-space: nowrap;">Compare →</button>
+                </div>
+            </div>
             <div class="season-table-wrapper" style="background: #FFFFFF; border: 1px solid #E0D9CC; border-radius: 0.75rem; padding: 1rem; box-shadow: 0 1px 4px rgba(0,0,0,0.04);">
                 <table style="width: 100%; border-collapse: collapse;">
                     <thead>
@@ -1620,6 +1641,18 @@
                 return;
             }
 
+            // #compare-coaches/slug1/slug2
+            const coachCompareMatch = hash.match(/^#compare-coaches\/([^/]+)\/([^/]+)$/);
+            if (coachCompareMatch) {
+                const c1 = findCoachBySlug(coachCompareMatch[1]);
+                const c2 = findCoachBySlug(coachCompareMatch[2]);
+                if (c1 && c2) {
+                    renderCoachComparison(c1, c2);
+                }
+                _skipHashUpdate = false;
+                return;
+            }
+
             // #team/slug or #team/ESPN_ID (backward compat)
             const teamMatch = hash.match(/^#team\/([^/]+)$/);
             if (teamMatch) {
@@ -1837,6 +1870,10 @@
                 if (bracketRefreshInterval) clearInterval(bracketRefreshInterval);
             } else if (view === 'coaches') {
                 renderCoachesLeaderboard();
+                setupCoachAutocomplete('coachCompare1', 'coachDropdown1', '1');
+                setupCoachAutocomplete('coachCompare2', 'coachDropdown2', '2');
+                if (bracketRefreshInterval) clearInterval(bracketRefreshInterval);
+            } else if (view === 'coachComparison') {
                 if (bracketRefreshInterval) clearInterval(bracketRefreshInterval);
             }
         }
@@ -1868,6 +1905,172 @@
                     <td style="padding:0.6rem;font-size:0.85rem;">${coach.bestYr} (${coach.bestRec})</td>
                 </tr>`;
             }).join('');
+        }
+
+        // ===== COACH COMPARISON =====
+        function coachSlug(name) {
+            return name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+        }
+        function findCoachBySlug(slug) {
+            return COACH_LB.find(c => coachSlug(c.name) === slug);
+        }
+
+        let _selectedCoach1 = null;
+        let _selectedCoach2 = null;
+
+        function setupCoachAutocomplete(inputId, dropdownId, coachNum) {
+            const input = document.getElementById(inputId);
+            const dropdown = document.getElementById(dropdownId);
+            if (!input || !dropdown) return;
+
+            input.addEventListener('input', () => {
+                const q = input.value.toLowerCase().trim();
+                if (q.length < 2) { dropdown.style.display = 'none'; return; }
+                const matches = COACH_LB.filter(c => c.name.toLowerCase().includes(q)).slice(0, 8);
+                if (matches.length === 0) { dropdown.style.display = 'none'; return; }
+                dropdown.innerHTML = matches.map(c => {
+                    const schoolName = c.schools.length > 0 && H[c.schools[0][0]] ? H[c.schools[0][0]][0] : '';
+                    return `<div style="padding:0.5rem 0.75rem;cursor:pointer;font-size:0.85rem;border-bottom:1px solid #F0ECE3;" onmouseover="this.style.background='#F5F3EE'" onmouseout="this.style.background='white'" onclick="selectCoach('${coachNum}','${c.name.replace(/'/g, "\\'")}')">
+                        <strong>${c.name}</strong> <span style="color:#8892A0;font-size:0.78rem;">${schoolName} · ${c.wins}W</span>
+                    </div>`;
+                }).join('');
+                dropdown.style.display = 'block';
+            });
+
+            input.addEventListener('blur', () => {
+                setTimeout(() => { dropdown.style.display = 'none'; }, 200);
+            });
+        }
+
+        function selectCoach(num, name) {
+            const coach = COACH_LB.find(c => c.name === name);
+            if (num === '1') {
+                _selectedCoach1 = coach;
+                document.getElementById('coachCompare1').value = name;
+                document.getElementById('coachDropdown1').style.display = 'none';
+            } else {
+                _selectedCoach2 = coach;
+                document.getElementById('coachCompare2').value = name;
+                document.getElementById('coachDropdown2').style.display = 'none';
+            }
+        }
+
+        function compareSelectedCoaches() {
+            if (!_selectedCoach1 || !_selectedCoach2) return;
+            window.location.hash = `#compare-coaches/${coachSlug(_selectedCoach1.name)}/${coachSlug(_selectedCoach2.name)}`;
+        }
+
+        function renderCoachComparison(c1, c2) {
+            const container = document.getElementById('coachComparisonContent');
+            switchView('coachComparison', true);
+            window.location.hash = `#compare-coaches/${coachSlug(c1.name)}/${coachSlug(c2.name)}`;
+
+            // Primary school colors and logos
+            const c1School = c1.schools.length > 0 ? c1.schools[c1.schools.length - 1][0] : null;
+            const c2School = c2.schools.length > 0 ? c2.schools[c2.schools.length - 1][0] : null;
+            const c1Color = c1School && H[c1School] ? '#' + (H[c1School][3] || '1B2A4A').replace('#','') : '#1B2A4A';
+            const c2Color = c2School && H[c2School] ? '#' + (H[c2School][3] || 'C9A86C').replace('#','') : '#C9A86C';
+            const c1Logo = c1School ? getLogoUrl(c1School) : '';
+            const c2Logo = c2School ? getLogoUrl(c2School) : '';
+            const c1SchoolName = c1School && H[c1School] ? H[c1School][0] : '';
+            const c2SchoolName = c2School && H[c2School] ? H[c2School][0] : '';
+
+            // Build school history strings
+            const schoolHistory = (coach) => coach.schools.map(s => {
+                const name = H[s[0]] ? H[s[0]][0] : 'Unknown';
+                return `${name} (${s[1]}-${s[2]})`;
+            }).join(' → ');
+
+            // Stats for comparison
+            const c1Years = c1.yearsEnd - c1.yearsStart + 1;
+            const c2Years = c2.yearsEnd - c2.yearsStart + 1;
+            const c1Active = c1.yearsEnd >= new Date().getFullYear();
+            const c2Active = c2.yearsEnd >= new Date().getFullYear();
+
+            // Get team-level stats from their primary school
+            const c1TeamData = c1School && H[c1School] ? H[c1School] : null;
+            const c2TeamData = c2School && H[c2School] ? H[c2School] : null;
+
+            // National Championships and Final Fours from coach's tenure
+            // We'll approximate using the team's overall stats for now
+            const c1Champs = c1TeamData ? c1TeamData[6] : 0; // NC index
+            const c2Champs = c2TeamData ? c2TeamData[6] : 0;
+            const c1FF = c1TeamData ? c1TeamData[8] : 0; // FF index
+            const c2FF = c2TeamData ? c2TeamData[8] : 0;
+
+            let html = `
+                <div style="background: #FFFFFF; border: 1px solid #E0D9CC; border-radius: 0.75rem; padding: 1.5rem; box-shadow: 0 1px 4px rgba(0,0,0,0.04); margin-bottom: 1.5rem;">
+                    <div style="display: flex; justify-content: space-around; align-items: center; flex-wrap: wrap; gap: 1.5rem; margin-bottom: 1.5rem;">
+                        <div style="text-align: center; flex: 1; min-width: 200px;">
+                            ${c1Logo ? `<img src="${c1Logo}" alt="" style="width: 64px; height: 64px; object-fit: contain; margin-bottom: 0.5rem;">` : ''}
+                            <div style="font-size: 1.3rem; font-weight: 800; color: ${c1Color};">${c1.name}</div>
+                            <div style="font-size: 0.8rem; color: #8892A0; margin-top: 0.25rem;">${c1SchoolName}${c1Active ? ' <span style="display:inline-block;padding:0.1rem 0.4rem;background:#E8F5E9;color:#1B6B3A;border-radius:0.2rem;font-size:0.6rem;font-weight:700;">ACTIVE</span>' : ''}</div>
+                        </div>
+                        <div style="font-size: 1.2rem; color: #A0AAB8; font-weight: 600;">VS</div>
+                        <div style="text-align: center; flex: 1; min-width: 200px;">
+                            ${c2Logo ? `<img src="${c2Logo}" alt="" style="width: 64px; height: 64px; object-fit: contain; margin-bottom: 0.5rem;">` : ''}
+                            <div style="font-size: 1.3rem; font-weight: 800; color: ${c2Color};">${c2.name}</div>
+                            <div style="font-size: 0.8rem; color: #8892A0; margin-top: 0.25rem;">${c2SchoolName}${c2Active ? ' <span style="display:inline-block;padding:0.1rem 0.4rem;background:#E8F5E9;color:#1B6B3A;border-radius:0.2rem;font-size:0.6rem;font-weight:700;">ACTIVE</span>' : ''}</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="background: #FFFFFF; border: 1px solid #E0D9CC; border-radius: 0.75rem; padding: 1.5rem; box-shadow: 0 1px 4px rgba(0,0,0,0.04); margin-bottom: 1.5rem;">
+                    <h3 style="font-size: 0.85rem; color: #8892A0; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 1.25rem; text-align: center;">Career Statistics</h3>
+                    ${renderStatRow('Career Wins', c1.wins, c2.wins, c1Color, c2Color, {espnId: c1School}, {espnId: c2School})}
+                    ${renderStatRow('Schools', c1.schools.length, c2.schools.length, c1Color, c2Color, {espnId: c1School}, {espnId: c2School})}
+                    ${renderStatRow('Win %', c1.pct, c2.pct, c1Color, c2Color, {espnId: c1School}, {espnId: c2School})}
+                    ${renderStatRow('Seasons', c1Years, c2Years, c1Color, c2Color, {espnId: c1School}, {espnId: c2School})}
+                </div>
+
+                <div style="background: #FFFFFF; border: 1px solid #E0D9CC; border-radius: 0.75rem; padding: 1.5rem; box-shadow: 0 1px 4px rgba(0,0,0,0.04); margin-bottom: 1.5rem;">
+                    <h3 style="font-size: 0.85rem; color: #8892A0; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 1.25rem; text-align: center;">Best Season</h3>
+                    <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
+                        <div style="text-align: center; flex: 1; min-width: 150px;">
+                            <div style="font-size: 1.4rem; font-weight: 800; color: ${c1Color};">${c1.bestRec}</div>
+                            <div style="font-size: 0.8rem; color: #8892A0;">${c1.bestYr}</div>
+                        </div>
+                        <div style="text-align: center; flex: 1; min-width: 150px;">
+                            <div style="font-size: 1.4rem; font-weight: 800; color: ${c2Color};">${c2.bestRec}</div>
+                            <div style="font-size: 0.8rem; color: #8892A0;">${c2.bestYr}</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="background: #FFFFFF; border: 1px solid #E0D9CC; border-radius: 0.75rem; padding: 1.5rem; box-shadow: 0 1px 4px rgba(0,0,0,0.04);">
+                    <h3 style="font-size: 0.85rem; color: #8892A0; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 1.25rem; text-align: center;">Coaching Journey</h3>
+                    <div style="display: flex; gap: 2rem; flex-wrap: wrap;">
+                        <div style="flex: 1; min-width: 200px;">
+                            <div style="font-weight: 700; color: ${c1Color}; margin-bottom: 0.5rem; font-size: 0.9rem;">${c1.name}</div>
+                            ${c1.schools.map(s => {
+                                const sName = H[s[0]] ? H[s[0]][0] : 'Unknown';
+                                const logo = getLogoUrl(s[0]);
+                                const years = s[2] >= new Date().getFullYear() ? `${s[1]}-Present` : `${s[1]}-${s[2]}`;
+                                return `<div style="display:flex;align-items:center;gap:0.5rem;padding:0.4rem 0;border-bottom:1px solid #F0ECE3;">
+                                    <img src="${logo}" alt="" style="width:24px;height:24px;object-fit:contain;">
+                                    <span style="font-size:0.85rem;color:#2C3345;cursor:pointer;text-decoration:underline;text-decoration-color:#C9A86C;" onclick="openProfileById('${s[0]}')">${sName}</span>
+                                    <span style="font-size:0.75rem;color:#8892A0;margin-left:auto;">${years}</span>
+                                </div>`;
+                            }).join('')}
+                        </div>
+                        <div style="flex: 1; min-width: 200px;">
+                            <div style="font-weight: 700; color: ${c2Color}; margin-bottom: 0.5rem; font-size: 0.9rem;">${c2.name}</div>
+                            ${c2.schools.map(s => {
+                                const sName = H[s[0]] ? H[s[0]][0] : 'Unknown';
+                                const logo = getLogoUrl(s[0]);
+                                const years = s[2] >= new Date().getFullYear() ? `${s[1]}-Present` : `${s[1]}-${s[2]}`;
+                                return `<div style="display:flex;align-items:center;gap:0.5rem;padding:0.4rem 0;border-bottom:1px solid #F0ECE3;">
+                                    <img src="${logo}" alt="" style="width:24px;height:24px;object-fit:contain;">
+                                    <span style="font-size:0.85rem;color:#2C3345;cursor:pointer;text-decoration:underline;text-decoration-color:#C9A86C;" onclick="openProfileById('${s[0]}')">${sName}</span>
+                                    <span style="font-size:0.75rem;color:#8892A0;margin-left:auto;">${years}</span>
+                                </div>`;
+                            }).join('')}
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            container.innerHTML = html;
         }
 
         function renderHome() {
