@@ -2248,6 +2248,62 @@
         }
         @keyframes spin { to { transform: rotate(360deg); } }
 
+        /* H2H Expandable Box Scores */
+        .h2h-game-wrapper {
+            display: flex;
+            flex-direction: column;
+        }
+        .h2h-game-wrapper .h2h-game-row {
+            cursor: pointer;
+            transition: background 0.15s ease;
+            position: relative;
+        }
+        .h2h-game-wrapper .h2h-game-row:hover {
+            filter: brightness(0.97);
+        }
+        .h2h-expand-icon {
+            font-size: 0.6rem;
+            color: #A0AAB8;
+            transition: transform 0.25s ease;
+            flex-shrink: 0;
+            margin-left: auto;
+            padding-left: 0.4rem;
+        }
+        .h2h-game-wrapper.expanded .h2h-expand-icon {
+            transform: rotate(180deg);
+        }
+        .h2h-boxscore-panel {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease;
+            background: #F9F8F5;
+            border-top: 1px solid transparent;
+            border-radius: 0 0 0.4rem 0.4rem;
+        }
+        .h2h-game-wrapper.expanded .h2h-boxscore-panel {
+            border-top: 1px solid #E0D9CC;
+        }
+        .h2h-boxscore-inner {
+            padding: 1rem 1.25rem;
+        }
+        .h2h-boxscore-loading {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.6rem;
+            padding: 1.5rem;
+            color: #8892A0;
+            font-size: 0.85rem;
+        }
+        .h2h-boxscore-loading .spinner {
+            width: 18px;
+            height: 18px;
+            border: 2px solid #E0D9CC;
+            border-top-color: #1B2A4A;
+            border-radius: 50%;
+            animation: spin 0.7s linear infinite;
+        }
+
         /* Key Stats Grid */
         .champ-run-stats {
             display: grid;
@@ -2360,7 +2416,7 @@
             <li><button class="nav-btn" data-view="upsets">Upsets</button></li>
         </ul>
         <div class="nav-search">
-            <span class="nav-search-icon">&#128269;</span>
+            <span class="nav-search-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
             <input type="text" id="globalSearchInput" placeholder="Search teams..." autocomplete="off">
             <div class="nav-search-dropdown" id="globalSearchDropdown"></div>
         </div>
@@ -2697,7 +2753,7 @@
 
         function renderTicketLink(ticket) {
             if (!ticket) return '';
-            return `<a href="${ticket.url}" target="_blank" rel="noopener" class="ticket-link">🎟️ Buy Tickets from $${ticket.price}</a>`;
+            return `<a href="${ticket.url}" target="_blank" rel="noopener" class="ticket-link">Buy Tickets from $${ticket.price}</a>`;
         }
 
         // Data loaded dynamically from data.json
@@ -2861,7 +2917,7 @@
             } catch (e) {
                 console.error('Error loading data:', e);
                 document.querySelector('.container').innerHTML = `<div class="error-fallback" style="min-height:60vh;">
-                    <div class="error-fallback-icon" style="font-size:3.5rem;">\u{1F3C0}</div>
+                    <div class="error-fallback-icon" style="font-size:1.4rem;font-weight:700;color:#A0AAB8;">Oops!</div>
                     <div class="error-fallback-message" style="font-size:1.15rem;">We're having trouble loading Hoopsipedia's data. Try refreshing the page.</div>
                     <button class="error-fallback-retry" onclick="window.location.reload()">Refresh Page</button>
                     <div style="margin-top:1rem;font-size:0.8rem;color:#A0AAB8;">${e.message}</div>
@@ -4085,7 +4141,7 @@
         // ===== SKELETON HELPERS =====
         function renderErrorFallback(retryFn) {
             return `<div class="error-fallback">
-                <div class="error-fallback-icon">\u{1F3C0}</div>
+                <div class="error-fallback-icon" style="font-size:1.4rem;font-weight:700;color:#A0AAB8;">Oops!</div>
                 <div class="error-fallback-message">We're having trouble loading this data. Try again?</div>
                 <button class="error-fallback-retry" onclick="${retryFn}">Retry</button>
             </div>`;
@@ -5171,7 +5227,7 @@
             if (games.length === 0 && !hasAllTime) {
                 container.innerHTML = `
                     <div style="text-align: center; padding: 2.5rem 1.5rem;">
-                        <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">&#127936;</div>
+                        <div style="font-size: 1.1rem; font-weight: 700; color: #A0AAB8; margin-bottom: 0.75rem;">No Games</div>
                         <div style="font-size: 1.1rem; font-weight: 600; color: #2C3345; margin-bottom: 0.5rem;">No Matchup History Found</div>
                         <div style="font-size: 0.9rem; color: #6B7A8D; max-width: 400px; margin: 0 auto;">
                             These teams don't have recorded matchups in our database.
@@ -5225,14 +5281,15 @@
             // Game list container
             html += `<div id="h2h-games-list" style="display: flex; flex-direction: column; gap: 0.4rem; max-height: 450px; overflow-y: auto;">`;
 
-            games.forEach(m => {
+            games.forEach((m, idx) => {
                 const yr = parseInt(m.date.substring(0, 4));
                 const decade = Math.floor(yr / 10) * 10;
                 const d = new Date(m.date + 'T12:00:00');
                 const dateStr = d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
-                const locIcon = m.loc === 'H' ? '&#127968;' : m.loc === 'A' ? '&#9992;' : m.loc === 'N' ? '&#127942;' : '';
-                const venueStr = m.venue ? `<div style="font-size: 0.65rem; color: #A0AAB8; margin-top: 0.1rem; line-height: 1.3;">${locIcon} ${m.venue}</div>` : (m.loc ? `<div style="font-size: 0.65rem; color: #A0AAB8; margin-top: 0.1rem;">${locIcon} ${m.loc === 'H' ? 'Home' : m.loc === 'A' ? 'Away' : 'Neutral'}</div>` : '');
+                const locIcon = m.loc === 'H' ? 'Home' : m.loc === 'A' ? 'Away' : m.loc === 'N' ? 'Neutral' : '';
+                const venueStr = m.venue ? `<div style="font-size: 0.65rem; color: #A0AAB8; margin-top: 0.1rem; line-height: 1.3;">${locIcon ? locIcon + ' &middot; ' : ''}${m.venue}</div>` : (m.loc ? `<div style="font-size: 0.65rem; color: #A0AAB8; margin-top: 0.1rem;">${locIcon}</div>` : '');
                 const otStr = m.ot ? `<span style="font-size: 0.65rem; color: #C9A86C; margin-left: 0.25rem;">${m.ot}</span>` : '';
+                const uid = m.date.replace(/-/g, '') + '_' + idx;
 
                 // Detect upcoming/scheduled games (future date or 0-0 score with no winner info)
                 const today = new Date();
@@ -5245,9 +5302,11 @@
                 const isTourneyGame = m.tourney === 'ncaa' || (m.venue && (m.venue.includes('NCAA') || m.venue.includes('Tournament')));
                 const isNIT = m.tourney === 'nit';
 
+                const chevronIcon = `<div class="h2h-expand-icon">\u25BC</div>`;
+
                 if (isLive) {
-                    // In-progress game with live scores
-                    const tourneyBadge = isTourneyGame ? `<span style="display: inline-flex; align-items: center; gap: 0.2rem; background: #E8F5E9; color: #1B6B3A; padding: 0.15rem 0.5rem; border-radius: 0.3rem; font-size: 0.6rem; font-weight: 700; text-transform: uppercase;">🏀 NCAA TOURNAMENT</span>` : '';
+                    // In-progress game with live scores — not expandable (game still in progress)
+                    const tourneyBadge = isTourneyGame ? `<span style="display: inline-flex; align-items: center; gap: 0.2rem; background: #E8F5E9; color: #1B6B3A; padding: 0.15rem 0.5rem; border-radius: 0.3rem; font-size: 0.6rem; font-weight: 700; text-transform: uppercase;">NCAA TOURNAMENT</span>` : '';
                     html += `
                         <div class="h2h-game-row" data-decade="${decade}" style="display: flex; align-items: center; padding: 0.6rem 0.8rem; background: linear-gradient(135deg, #FFF8F0, #FEF3E8); border-radius: 0.4rem; border-left: 3px solid #E65100; gap: 0.75rem; font-size: 0.85rem; border: 1px solid #FFD9B3;">
                             <div style="flex: 1; font-weight: ${m.t1Score > m.t2Score ? '700' : '400'}; color: ${m.t1Score > m.t2Score ? t1Color : '#A0AAB8'};">${t1.name.split(' ').pop()} <span style="font-variant-numeric: tabular-nums;">${m.t1Score}</span></div>
@@ -5259,8 +5318,8 @@
                         </div>
                     `;
                 } else if (isUpcoming) {
-                    // Upcoming game - special styling with badge
-                    const tourneyBadge = isTourneyGame ? `<span style="display: inline-flex; align-items: center; gap: 0.2rem; background: #E8F5E9; color: #1B6B3A; padding: 0.15rem 0.5rem; border-radius: 0.3rem; font-size: 0.6rem; font-weight: 700; text-transform: uppercase;">&#127936; NCAA TOURNAMENT</span>`
+                    // Upcoming game — not expandable
+                    const tourneyBadge = isTourneyGame ? `<span style="display: inline-flex; align-items: center; gap: 0.2rem; background: #E8F5E9; color: #1B6B3A; padding: 0.15rem 0.5rem; border-radius: 0.3rem; font-size: 0.6rem; font-weight: 700; text-transform: uppercase;">NCAA TOURNAMENT</span>`
                         : isNIT ? `<span style="display: inline-flex; align-items: center; gap: 0.2rem; background: #FFF3E0; color: #E65100; padding: 0.15rem 0.5rem; border-radius: 0.3rem; font-size: 0.6rem; font-weight: 700; text-transform: uppercase;">NIT</span>`
                         : '';
                     html += `
@@ -5274,12 +5333,19 @@
                         </div>
                     `;
                 } else {
+                    // Completed game — clickable for box score
                     const winnerColor = m.t1Winner ? t1Color : t2Color;
                     html += `
-                        <div class="h2h-game-row" data-decade="${decade}" style="display: flex; align-items: center; padding: 0.6rem 0.8rem; background: #FAFAF7; border-radius: 0.4rem; border-left: 3px solid ${winnerColor}; gap: 0.75rem; font-size: 0.85rem;">
-                            <div style="flex: 1; font-weight: ${m.t1Winner ? '700' : '400'}; color: ${m.t1Winner ? t1Color : '#A0AAB8'};">${t1.name.split(' ').pop()} <span style="font-variant-numeric: tabular-nums;">${m.t1Score}</span>${m.t1Winner ? otStr : ''}</div>
-                            <div style="font-size: 0.7rem; color: #8892A0; min-width: 80px; text-align: center;">${dateStr}${venueStr}</div>
-                            <div style="flex: 1; text-align: right; font-weight: ${!m.t1Winner ? '700' : '400'}; color: ${!m.t1Winner ? t2Color : '#A0AAB8'};">${!m.t1Winner ? otStr : ''}<span style="font-variant-numeric: tabular-nums;">${m.t2Score}</span> ${t2.name.split(' ').pop()}</div>
+                        <div class="h2h-game-wrapper" id="h2h-wrap-${uid}" data-decade="${decade}">
+                            <div class="h2h-game-row" data-decade="${decade}" onclick="toggleH2HBoxScore('${uid}', '${t1.espnId}', '${t2.espnId}', '${m.date}', event)" title="Click for box score" style="display: flex; align-items: center; padding: 0.6rem 0.8rem; background: #FAFAF7; border-radius: 0.4rem; border-left: 3px solid ${winnerColor}; gap: 0.75rem; font-size: 0.85rem;">
+                                <div style="flex: 1; font-weight: ${m.t1Winner ? '700' : '400'}; color: ${m.t1Winner ? t1Color : '#A0AAB8'};">${t1.name.split(' ').pop()} <span style="font-variant-numeric: tabular-nums;">${m.t1Score}</span>${m.t1Winner ? otStr : ''}</div>
+                                <div style="font-size: 0.7rem; color: #8892A0; min-width: 80px; text-align: center;">${dateStr}${venueStr}</div>
+                                <div style="flex: 1; text-align: right; font-weight: ${!m.t1Winner ? '700' : '400'}; color: ${!m.t1Winner ? t2Color : '#A0AAB8'};">${!m.t1Winner ? otStr : ''}<span style="font-variant-numeric: tabular-nums;">${m.t2Score}</span> ${t2.name.split(' ').pop()}</div>
+                                ${chevronIcon}
+                            </div>
+                            <div class="h2h-boxscore-panel" id="h2h-panel-${uid}">
+                                <div class="h2h-boxscore-inner" id="h2h-inner-${uid}"></div>
+                            </div>
                         </div>
                     `;
                 }
@@ -5409,12 +5475,15 @@
          * Filter H2H game list by decade.
          */
         function filterH2HDecade(decade) {
-            const rows = document.querySelectorAll('.h2h-game-row');
-            rows.forEach(row => {
-                if (decade === 'all' || parseInt(row.dataset.decade) === decade) {
-                    row.style.display = 'flex';
+            // Handle both standalone rows and wrapper-enclosed rows
+            const rows = document.querySelectorAll('#h2h-games-list > .h2h-game-row, #h2h-games-list > .h2h-game-wrapper');
+            rows.forEach(el => {
+                const decadeVal = parseInt(el.dataset.decade);
+                const show = decade === 'all' || decadeVal === decade;
+                if (el.classList.contains('h2h-game-wrapper')) {
+                    el.style.display = show ? 'flex' : 'none';
                 } else {
-                    row.style.display = 'none';
+                    el.style.display = show ? 'flex' : 'none';
                 }
             });
             // Update active button
@@ -5896,7 +5965,7 @@
                     const credit = document.createElement('div');
                     credit.className = 'profile-photo-credit';
                     credit.style.cssText = 'text-align: center; padding: 0.75rem; font-size: 0.65rem; color: #A0AAB8; border-top: 1px solid #E0D9CC; margin-top: 1rem;';
-                    credit.innerHTML = `📷 ${arenaData.arena} — Photo by ${arenaData.photographer}, <a href="${arenaData.licenseUrl}" target="_blank" rel="noopener" style="color: #A0AAB8; text-decoration: underline;">${arenaData.license}</a>`;
+                    credit.innerHTML = `${arenaData.arena} — Photo by ${arenaData.photographer}, <a href="${arenaData.licenseUrl}" target="_blank" rel="noopener" style="color: #A0AAB8; text-decoration: underline;">${arenaData.license}</a>`;
                     const profileView = document.getElementById('profile');
                     if (profileView) profileView.appendChild(credit);
                 };
@@ -7530,7 +7599,7 @@
                 </div>
 
                 <div class="upsets-fun-fact">
-                    <div class="upsets-fun-fact-icon">&#127936;</div>
+                    <div class="upsets-fun-fact-icon" style="width:28px;height:28px;background:#C9A86C;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:0.75rem;font-weight:800;">i</div>
                     <div class="upsets-fun-fact-text"><strong>Did You Know?</strong> ${funFact}</div>
                 </div>
 
@@ -8681,6 +8750,151 @@
             '2024': { slug: 'uconn-huskies', espnId: '41' },
             '2025': { slug: 'florida-gators', espnId: '57' }
         };
+
+        // H2H box score cache and schedule cache
+        const h2hBoxScoreCache = {};
+        const h2hScheduleCache = {};
+
+        async function fetchH2HSchedule(espnId, year) {
+            const cacheKey = `${espnId}-${year}`;
+            if (h2hScheduleCache[cacheKey]) return h2hScheduleCache[cacheKey];
+            try {
+                const resp = await fetch(`https://site.api.espn.com/apis/site/v2/sports/basketball/mens-college-basketball/teams/${espnId}/schedule?season=${year}`);
+                if (!resp.ok) return null;
+                const data = await resp.json();
+                h2hScheduleCache[cacheKey] = data;
+                return data;
+            } catch (e) { return null; }
+        }
+
+        async function fetchH2HBoxScore(gameId) {
+            if (h2hBoxScoreCache[gameId]) return h2hBoxScoreCache[gameId];
+            try {
+                const resp = await fetch(`https://site.api.espn.com/apis/site/v2/sports/basketball/mens-college-basketball/summary?event=${gameId}`);
+                if (!resp.ok) return null;
+                const data = await resp.json();
+                h2hBoxScoreCache[gameId] = data;
+                return data;
+            } catch (e) { return null; }
+        }
+
+        async function findH2HGameId(t1EspnId, t2EspnId, dateStr) {
+            // dateStr is like "2024-01-15"
+            const year = parseInt(dateStr.substring(0, 4));
+            const month = parseInt(dateStr.substring(5, 7));
+            // College basketball season spans two calendar years; ESPN uses the later year
+            const season = month >= 10 ? year + 1 : year;
+
+            const schedule = await fetchH2HSchedule(t1EspnId, season);
+            if (schedule && schedule.events) {
+                for (const evt of schedule.events) {
+                    // Match by date
+                    const evtDate = evt.date ? evt.date.substring(0, 10) : '';
+                    if (evtDate === dateStr) {
+                        // Verify opponent
+                        const comp = evt.competitions && evt.competitions[0];
+                        if (comp && comp.competitors) {
+                            const hasOpp = comp.competitors.some(c => String(c.id) === String(t2EspnId));
+                            if (hasOpp) return evt.id;
+                        }
+                    }
+                }
+                // Fallback: match by date only (opponent ID might differ)
+                for (const evt of schedule.events) {
+                    const evtDate = evt.date ? evt.date.substring(0, 10) : '';
+                    if (evtDate === dateStr) return evt.id;
+                }
+            }
+
+            // Try season type 2 (regular season) as well
+            const cacheKey2 = `${t1EspnId}-${season}-reg`;
+            if (!h2hScheduleCache[cacheKey2]) {
+                try {
+                    const resp = await fetch(`https://site.api.espn.com/apis/site/v2/sports/basketball/mens-college-basketball/teams/${t1EspnId}/schedule?season=${season}&seasontype=2`);
+                    if (resp.ok) {
+                        const data = await resp.json();
+                        h2hScheduleCache[cacheKey2] = data;
+                        if (data && data.events) {
+                            for (const evt of data.events) {
+                                const evtDate = evt.date ? evt.date.substring(0, 10) : '';
+                                if (evtDate === dateStr) return evt.id;
+                            }
+                        }
+                    }
+                } catch (e) {}
+            }
+
+            return null;
+        }
+
+        async function toggleH2HBoxScore(uid, t1EspnId, t2EspnId, dateStr, event) {
+            if (event) event.stopPropagation();
+            const wrapper = document.getElementById('h2h-wrap-' + uid);
+            const panel = document.getElementById('h2h-panel-' + uid);
+            const inner = document.getElementById('h2h-inner-' + uid);
+
+            if (wrapper.classList.contains('expanded')) {
+                panel.style.maxHeight = panel.scrollHeight + 'px';
+                requestAnimationFrame(() => {
+                    panel.style.maxHeight = '0';
+                    wrapper.classList.remove('expanded');
+                });
+                return;
+            }
+
+            // Expand
+            wrapper.classList.add('expanded');
+
+            // If already loaded, just expand
+            if (inner.dataset.loaded === 'true') {
+                panel.style.maxHeight = panel.scrollHeight + 'px';
+                return;
+            }
+
+            // Check if game is too old for ESPN data (~2002+)
+            const gameYear = parseInt(dateStr.substring(0, 4));
+            if (gameYear < 2002) {
+                inner.innerHTML = '<div class="h2h-boxscore-loading" style="color:#A8736B;">Box score not available for this era</div>';
+                panel.style.maxHeight = panel.scrollHeight + 'px';
+                return;
+            }
+
+            // Show loading spinner
+            inner.innerHTML = '<div class="h2h-boxscore-loading"><div class="spinner"></div>Loading box score...</div>';
+            panel.style.maxHeight = '80px';
+
+            // Find ESPN game ID
+            const espnGameId = await findH2HGameId(t1EspnId, t2EspnId, dateStr);
+
+            if (!espnGameId) {
+                inner.innerHTML = '<div class="h2h-boxscore-loading" style="color:#A8736B;">Box score not available for this game</div>';
+                panel.style.maxHeight = panel.scrollHeight + 'px';
+                return;
+            }
+
+            // Fetch box score
+            const gameData = await fetchH2HBoxScore(espnGameId);
+
+            if (!gameData || !gameData.boxscore) {
+                inner.innerHTML = '<div class="h2h-boxscore-loading" style="color:#A8736B;">Box score not available for this game</div>';
+                panel.style.maxHeight = panel.scrollHeight + 'px';
+                return;
+            }
+
+            // Render box score
+            inner.innerHTML = renderBoxScore(gameData);
+            inner.dataset.loaded = 'true';
+
+            // Smooth expand to fit content
+            requestAnimationFrame(() => {
+                panel.style.maxHeight = panel.scrollHeight + 'px';
+                setTimeout(() => {
+                    if (wrapper.classList.contains('expanded')) {
+                        panel.style.maxHeight = 'none';
+                    }
+                }, 450);
+            });
+        }
 
         // Championship box score cache and schedule cache
         const champBoxScoreCache = {};
