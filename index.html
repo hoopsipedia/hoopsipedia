@@ -6889,30 +6889,38 @@
         }
 
         function getFilteredPairs() {
-            if (!SEED_MATCHUP_HISTORY.pairs) return {};
+            // Primary source: upset_history.json (verified NCAA data)
+            // Fallback: SEED_MATCHUP_HISTORY (computed from seasons.json, less accurate)
             const era = UPSET_ERAS[upsetsCurrentEra];
-            // If we have detailed data with years, filter by era; otherwise return raw pairs
-            if (UPSET_DETAIL_DATA && era) {
+            const pairKeys = ['1v16', '2v15', '3v14', '4v13', '5v12', '6v11', '7v10', '8v9'];
+
+            if (UPSET_DETAIL_DATA) {
                 const filtered = {};
-                for (const [key, pair] of Object.entries(SEED_MATCHUP_HISTORY.pairs)) {
-                    const rawDetail = UPSET_DETAIL_DATA[key];
-                    const detailArr = Array.isArray(rawDetail) ? rawDetail : (rawDetail && rawDetail.upsets ? rawDetail.upsets : []);
-                    const detailUpsets = detailArr.filter(u => u.year >= era.min && u.year <= era.max);
-                    const allUpsets = pair.upsets ? pair.upsets.filter(u => u.year >= era.min && u.year <= era.max) : [];
-                    const upsets = detailUpsets.length > 0 ? detailUpsets : allUpsets;
-                    // For era filtering with detailed data, recalculate totals
-                    if (UPSET_DETAIL_DATA[key] && upsetsCurrentEra !== 'all') {
+                for (const key of pairKeys) {
+                    const src = UPSET_DETAIL_DATA[key];
+                    if (!src) continue;
+                    const allUpsets = src.upsets || [];
+                    const totalGames = src.totalGames || 160;
+                    const higherWins = src.higherSeedWins || (totalGames - allUpsets.length);
+                    const lowerWins = src.lowerSeedWins || allUpsets.length;
+                    const seeds = key.split('v');
+
+                    if (era && upsetsCurrentEra !== 'all') {
+                        const eraUpsets = allUpsets.filter(u => u.year >= era.min && u.year <= era.max);
                         const eraYears = era.max - era.min + 1;
-                        const gamesPerYear = 4; // 4 games per seed pairing per year
-                        const approxTotal = Math.min(pair.total, Math.floor(eraYears * gamesPerYear));
-                        filtered[key] = { ...pair, upsets: upsets, lowerWins: upsets.length, higherWins: approxTotal - upsets.length, total: approxTotal };
+                        const gamesPerYear = 4;
+                        const approxTotal = Math.min(totalGames, Math.floor(eraYears * gamesPerYear));
+                        filtered[key] = { higher: seeds[0], lower: seeds[1], upsets: eraUpsets, lowerWins: eraUpsets.length, higherWins: approxTotal - eraUpsets.length, total: approxTotal };
                     } else {
-                        filtered[key] = { ...pair, upsets: upsets.length > 0 ? upsets : pair.upsets };
+                        filtered[key] = { higher: seeds[0], lower: seeds[1], upsets: allUpsets, lowerWins: lowerWins, higherWins: higherWins, total: totalGames };
                     }
                 }
                 return filtered;
             }
-            return SEED_MATCHUP_HISTORY.pairs;
+
+            // Fallback to SEED_MATCHUP_HISTORY
+            if (SEED_MATCHUP_HISTORY.pairs) return SEED_MATCHUP_HISTORY.pairs;
+            return {};
         }
 
         function renderUpsetDetails() {
