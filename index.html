@@ -1647,6 +1647,105 @@
             }
         })();
 
+        /**
+         * Fetch live current-season records from ESPN and update allTimeW/allTimeL.
+         * Runs in background — doesn't block initial render.
+         * Re-renders current view if records changed.
+         */
+        async function enrichWithLiveRecords() {
+            try {
+                // ESPN scoreboard gives us current season records for teams playing today/yesterday
+                // For broader coverage, fetch the standings/rankings which have all teams
+                const currentYear = new Date().getFullYear();
+                const seasonYear = new Date().getMonth() >= 10 ? currentYear + 1 : currentYear;
+
+                // Fetch current season records for all teams we have
+                // ESPN teams endpoint gives current record per team
+                let updated = 0;
+                const batchSize = 10;
+                const teams = [...allTeamsData];
+
+                for (let i = 0; i < teams.length; i += batchSize) {
+                    const batch = teams.slice(i, i + batchSize);
+                    const results = await Promise.allSettled(
+                        batch.map(t =>
+                            fetch(`https://site.api.espn.com/apis/site/v2/sports/basketball/mens-college-basketball/teams/${t.espnId}`)
+                                .then(r => r.ok ? r.json() : null)
+                                .catch(() => null)
+                        )
+                    );
+
+                    results.forEach((result, idx) => {
+                        if (result.status !== 'fulfilled' || !result.value) return;
+                        const teamData = result.value.team;
+                        if (!teamData?.record?.items?.[0]) return;
+
+                        const overallRecord = teamData.record.items[0];
+                        const stats = overallRecord.stats || [];
+                        const winsObj = stats.find(s => s.name === 'wins');
+                        const lossesObj = stats.find(s => s.name === 'losses');
+                        if (!winsObj || !lossesObj) return;
+
+                        const currentW = Math.round(winsObj.value);
+                        const currentL = Math.round(lossesObj.value);
+
+                        const team = batch[idx];
+
+                        // Find this team's current season in our static data
+                        // Our static ATW/ATL includes all historical wins
+                        // We need to find how many W/L our static data has for the current season
+                        // and replace with ESPN's live count
+                        const teamGames = GAMES_DATA?.[String(team.espnId)];
+                        let staticCurrentW = 0, staticCurrentL = 0;
+                        if (teamGames?.games) {
+                            const currentSeasonStart = `${seasonYear - 1}-11`;
+                            teamGames.games.forEach(g => {
+                                if (g.date >= currentSeasonStart) {
+                                    if (g.w) staticCurrentW++;
+                                    else staticCurrentL++;
+                                }
+                            });
+                        }
+
+                        // Difference = live count minus what our static data already has
+                        const extraW = currentW - staticCurrentW;
+                        const extraL = currentL - staticCurrentL;
+
+                        if (extraW !== 0 || extraL !== 0) {
+                            team.allTimeW += extraW;
+                            team.allTimeL += extraL;
+                            team.winPct = team.allTimeW + team.allTimeL > 0
+                                ? parseFloat(((team.allTimeW / (team.allTimeW + team.allTimeL)) * 100).toFixed(1))
+                                : 0;
+                            team._liveRecord = `${currentW}-${currentL}`;
+                            updated++;
+                        }
+                    });
+
+                    // Small delay between batches to be respectful to ESPN API
+                    if (i + batchSize < teams.length) {
+                        await new Promise(r => setTimeout(r, 200));
+                    }
+                }
+
+                if (updated > 0) {
+                    console.log(`Updated ${updated} teams with live records from ESPN`);
+                    // Re-sort by wins
+                    allTeamsData.sort((a, b) => b.allTimeW - a.allTimeW);
+                    // Re-render current view if it's showing team data
+                    if (currentProfile) {
+                        const freshTeam = allTeamsData.find(t => t.espnId === currentProfile.espnId);
+                        if (freshTeam) {
+                            Object.assign(currentProfile, freshTeam);
+                            renderProfile();
+                        }
+                    }
+                }
+            } catch (e) {
+                console.warn('Failed to enrich with live records:', e);
+            }
+        }
+
         // Initialize
         async function init() {
             await loadData();
@@ -1660,6 +1759,9 @@
             } else {
                 renderHome();
             }
+
+            // Enrich with live records in background (doesn't block render)
+            enrichWithLiveRecords();
         }
 
         function setupTeamsData() {
