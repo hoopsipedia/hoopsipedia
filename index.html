@@ -9130,7 +9130,19 @@
             quadGames.sort((a, b) => b.date.localeCompare(a.date));
 
             if (quadGames.length === 0) {
-                expandEl.innerHTML = '<div style="padding:1rem;text-align:center;color:#8892A0;font-size:0.85rem;">No Quad ' + quadNum + ' games found.</div>';
+                // Check if we have NCAA quad data for this team
+                const ncaaNet = window.NCAA_NET?.[String(teamEspnId)];
+                const qKey = 'q' + quadNum;
+                const ncaaW = ncaaNet?.[qKey + 'w'] || 0;
+                const ncaaL = ncaaNet?.[qKey + 'l'] || 0;
+                if (ncaaW + ncaaL > 0) {
+                    expandEl.innerHTML = `<div style="padding:1rem;text-align:center;color:#8892A0;font-size:0.85rem;">
+                        <div style="font-weight:600;color:#1B2A4A;margin-bottom:0.25rem;">Quad ${quadNum} Record: ${ncaaW}-${ncaaL}</div>
+                        <div>Individual game details are being compiled. Quad record sourced from NCAA.com.</div>
+                    </div>`;
+                } else {
+                    expandEl.innerHTML = '<div style="padding:1rem;text-align:center;color:#8892A0;font-size:0.85rem;">No Quad ' + quadNum + ' games found.</div>';
+                }
                 expandEl.classList.add('quad-games-expand--open');
                 return;
             }
