@@ -6649,7 +6649,7 @@
             if (state === 'in') {
                 const period = status.period || 0;
                 const clock = status.displayClock || '';
-                if (detail.toLowerCase().includes('halftime') || detail.toLowerCase().includes('half')) {
+                if (detail.toLowerCase() === 'halftime' || detail.toLowerCase().startsWith('halftime')) {
                     return { label: 'HALFTIME', type: 'halftime', detail: 'Halftime' };
                 }
                 return { label: 'LIVE', type: 'live', detail: detail || `${clock} - ${period > 2 ? 'OT' + (period - 2) : (period === 1 ? '1st Half' : '2nd Half')}` };
