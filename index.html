@@ -5037,6 +5037,16 @@
         }
 
         function triggerUpsetTakeover(winnerName, winnerSeed, loserName, loserSeed, winnerEspnId, winnerColor) {
+            // Only replace current takeover if this upset is BIGGER (higher seed diff)
+            const newSeedDiff = Math.abs(winnerSeed - loserSeed);
+            const existing = localStorage.getItem('upsetTakeover');
+            if (existing) {
+                try {
+                    const prev = JSON.parse(existing);
+                    if (prev.seedDiff && newSeedDiff <= prev.seedDiff) return; // Current upset is bigger, keep it
+                } catch(e) {}
+            }
+
             // Determine a good color: use team color from our data, fallback to a default celebratory orange
             let color = '#E87C1E'; // default orange
             if (winnerColor) {
@@ -5067,7 +5077,8 @@
                 espnId: winnerEspnId,
                 time: Date.now(),
                 message: message,
-                gameLink: gameLink
+                gameLink: gameLink,
+                seedDiff: newSeedDiff
             };
 
             localStorage.setItem('upsetTakeover', JSON.stringify(data));
