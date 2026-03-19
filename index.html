@@ -4893,10 +4893,7 @@
         }
 
         function startUpsetWatch() {
-            const month = new Date().getMonth() + 1;
-            if (month < 3 || month > 4) return;
-            checkUpsetWatch();
-            _upsetWatchTimer = setInterval(checkUpsetWatch, SCOREBOARD_POLL_INTERVAL);
+            // Now handled by unified live ticker — kept for backward compat
         }
 
         // ── Upset Color Takeover ──
@@ -5159,9 +5156,8 @@
             // Enrich with live records in background (doesn't block render)
             try { enrichWithLiveRecords(); } catch(e) { console.error('Live records enrichment error:', e); }
 
-            // Start live game tracker — polls ESPN every 2 min, updates records when games go Final
-            try { startLiveGameTracker(); } catch(e) { console.error('Live game tracker error:', e); }
-            try { startUpsetWatch(); } catch(e) { console.error('Upset Watch error:', e); }
+            // Start unified live ticker — one master loop updates everything in sync
+            try { startUnifiedLiveTicker(); } catch(e) { console.error('Live ticker error:', e); }
             try { checkUpsetTakeover(); } catch(e) { console.error('Upset takeover restore error:', e); }
             try { checkMilestoneBanner(); } catch(e) { console.error('Milestone banner restore error:', e); }
         }
@@ -5176,17 +5172,35 @@
          */
         let _trackedFinals = new Set(); // Track game IDs we've already processed
 
-        function startLiveGameTracker() {
-            // Only run during basketball season (Nov-April)
+        // ── Unified Live Ticker: one master loop, everything updates together ──
+        function startUnifiedLiveTicker() {
             const month = new Date().getMonth();
             if (month >= 4 && month <= 9) return; // May-Oct, no games
 
-            // Initial check
-            checkForFinalGames();
+            async function tick() {
+                // 1. Fetch fresh scoreboard (one API call)
+                await fetchSharedScoreboard();
+                // 2. Update ALL components from the same data, same moment
+                try { checkUpsetWatch(); } catch(e) {}
+                try { checkForFinalGames(); } catch(e) {}
+                // 3. Refresh homepage game cards if visible
+                try {
+                    const homeView = document.getElementById('home');
+                    if (homeView && homeView.style.display !== 'none') {
+                        renderTodaysGames();
+                    }
+                } catch(e) {}
+            }
 
-            // Poll every 2 minutes
-            setInterval(checkForFinalGames, SCOREBOARD_POLL_INTERVAL);
+            // Initial tick
+            tick();
+            // Then every 30 seconds, everything updates at once
+            setInterval(tick, SCOREBOARD_POLL_INTERVAL);
         }
+
+        // Keep for backward compat but no longer starts its own interval
+        function startLiveGameTracker() {}
+
 
         async function checkForFinalGames() {
             try {
