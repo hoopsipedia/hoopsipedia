@@ -87,24 +87,32 @@
             to { transform: translateY(0); opacity: 1; }
         }
         body.upset-takeover nav {
+            background: var(--accent-color);
             border-bottom-color: var(--accent-color);
-            box-shadow: inset 0 -40px 60px -40px color-mix(in srgb, var(--accent-color) 12%, transparent);
+        }
+        body.upset-takeover .nav-links button {
+            color: rgba(255,255,255,0.7);
         }
         body.upset-takeover .nav-links button.active {
-            color: var(--accent-color);
-            background: color-mix(in srgb, var(--accent-color) 15%, transparent);
+            color: #fff;
+            background: rgba(255,255,255,0.15);
         }
         body.upset-takeover .logo-wordmark--nav {
-            color: var(--accent-color);
+            color: #fff;
         }
-        body.upset-takeover .nav-search input:focus {
-            border-color: var(--accent-color);
+        body.upset-takeover .nav-search input {
+            border-color: rgba(255,255,255,0.3);
+            color: #fff;
+        }
+        body.upset-takeover .nav-search input::placeholder {
+            color: rgba(255,255,255,0.5);
         }
         body.upset-takeover .game-bar-team2 {
             background: var(--accent-color);
         }
         body.upset-takeover .game-matchup-button {
-            color: var(--accent-color);
+            background: var(--accent-color);
+            color: #fff;
         }
         body.upset-takeover .stat-bar-fill {
             background: var(--accent-color);
