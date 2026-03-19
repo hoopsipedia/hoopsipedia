@@ -4145,7 +4145,8 @@
                 try {
                     const gameParts = await Promise.all([
                         fetch('games_1.json').then(r => r.ok ? r.json() : {}),
-                        fetch('games_2.json').then(r => r.ok ? r.json() : {})
+                        fetch('games_2.json').then(r => r.ok ? r.json() : {}),
+                        fetch('games_3.json').then(r => r.ok ? r.json() : {})
                     ]);
                     GAMES_DATA = Object.assign({}, ...gameParts);
                     const teamCount = Object.keys(GAMES_DATA).length;
