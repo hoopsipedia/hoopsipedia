@@ -4345,15 +4345,15 @@
         // ── This Day in Tournament History ──
         const TOURNAMENT_HISTORY_FACTS = [
             // March 15
-            { month: 3, day: 15, year: 2018, text: 'On March 15, <span class="otd-year">2018</span>, 11-seed {Loyola Chicago|loyola-chicago-ramblers|2031} stunned 6-seed {Miami|miami-hurricanes|2390} 64-62 on a buzzer-beating three by Donte Ingram, launching the Sister Jean-led Ramblers on a magical Final Four run.' },
+            { month: 3, day: 15, year: 2018, text: 'On March 15, <span class="otd-year">2018</span>, 11-seed {Loyola Chicago|loyola-chicago-ramblers|2031} stunned 6-seed {Miami|miami-fl-hurricanes|2390} 64-62 on a buzzer-beating three by Donte Ingram, launching the Sister Jean-led Ramblers on a magical Final Four run.' },
             // March 16
             { month: 3, day: 16, year: 2018, text: 'On March 16, <span class="otd-year">2018</span>, {UMBC|umbc-retrievers|2378} became the first 16-seed to defeat a 1-seed, shocking {Virginia|virginia-cavaliers|258} 74-54. Jairus Lyles scored 28 points in what remains the biggest upset in tournament history.' },
             // March 17
             { month: 3, day: 17, year: 2023, text: 'On March 17, <span class="otd-year">2023</span>, 16-seed {Fairleigh Dickinson|fairleigh-dickinson-knights|2230} stunned 1-seed {Purdue|purdue-boilermakers|2509} 63-58, becoming the second 16-seed ever to topple a No. 1 and the biggest point spread upset in tournament history.' },
-            { month: 3, day: 17, year: 2022, text: 'On March 17, <span class="otd-year">2022</span>, 15-seed {Saint Peter\'s|saint-peters-peacocks|2612} upset 2-seed {Kentucky|kentucky-wildcats|96} 85-79 in overtime. The Peacocks went on to become the first 15-seed to reach the Elite Eight.' },
+            { month: 3, day: 17, year: 2022, text: 'On March 17, <span class="otd-year">2022</span>, 15-seed {Saint Peter\'s|saint-peter-s-peacocks|2612} upset 2-seed {Kentucky|kentucky-wildcats|96} 85-79 in overtime. The Peacocks went on to become the first 15-seed to reach the Elite Eight.' },
             { month: 3, day: 17, year: 2006, text: 'On March 17, <span class="otd-year">2006</span>, 11-seed {George Mason|george-mason-patriots|2244} began its Cinderella run by upsetting 6-seed {Michigan State|michigan-state-spartans|127} 75-65. The Patriots would reach the Final Four, shocking the college basketball world.' },
             // March 18
-            { month: 3, day: 18, year: 2022, text: 'On March 18, <span class="otd-year">2022</span>, 15-seed {Saint Peter\'s|saint-peters-peacocks|2612} continued its Cinderella run, defeating 7-seed {Murray State|murray-state-racers|93} 70-60 to advance to the Sweet Sixteen -- the farthest a 15-seed had gone in over two decades.' },
+            { month: 3, day: 18, year: 2022, text: 'On March 18, <span class="otd-year">2022</span>, 15-seed {Saint Peter\'s|saint-peter-s-peacocks|2612} continued its Cinderella run, defeating 7-seed {Murray State|murray-state-racers|93} 70-60 to advance to the Sweet Sixteen -- the farthest a 15-seed had gone in over two decades.' },
             // March 19
             { month: 3, day: 19, year: 2021, text: 'On March 19, <span class="otd-year">2021</span>, 15-seed {Oral Roberts|oral-roberts-golden-eagles|198} stunned 2-seed {Ohio State|ohio-state-buckeyes|194} 75-72 in overtime. Max Abmas scored 29 points and Kevin Obanor added 30 as the Golden Eagles pulled off the first big upset of the first tournament in two years.' },
             { month: 3, day: 19, year: 2006, text: 'On March 19, <span class="otd-year">2006</span>, 11-seed {George Mason|george-mason-patriots|2244} shocked 3-seed {North Carolina|north-carolina-tar-heels|153} 65-60 in the second round, knocking out the defending national champions on their way to the Final Four.' },
@@ -4567,8 +4567,11 @@
             function parseFact(text) {
                 return text.replace(/\{([^|]+)\|([^|]+)\|([^}]+)\}/g, (match, name, slug, espnId) => {
                     const logoUrl = getLogoUrl(espnId);
+                    // Use slug if it resolves, otherwise fall back to ESPN ID
+                    const team = findTeamBySlug(slug);
+                    const href = team ? '#team/' + teamSlug(team.name) : '#team/' + espnId;
                     return '<img class="otd-team-logo-inline" src="' + logoUrl + '" alt="" onerror="this.style.display=\'none\'">' +
-                           '<a class="otd-team-link" href="#team/' + slug + '">' + name + '</a>';
+                           '<a class="otd-team-link" href="' + href + '">' + name + '</a>';
                 });
             }
 
@@ -5599,7 +5602,14 @@
 
         // Find team by slug (reverse lookup)
         function findTeamBySlug(slug) {
-            return allTeamsData.find(t => teamSlug(t.name) === slug);
+            // Exact match first
+            const exact = allTeamsData.find(t => teamSlug(t.name) === slug);
+            if (exact) return exact;
+            // Fuzzy: try matching without common suffixes or with partial match
+            return allTeamsData.find(t => {
+                const ts = teamSlug(t.name);
+                return ts.startsWith(slug) || slug.startsWith(ts) || ts.includes(slug) || slug.includes(ts);
+            });
         }
 
         // Map NCAA tournament result string to display label
@@ -10507,7 +10517,7 @@
             'In 2018, <a href="#team/umbc-retrievers" style="color:#C9A86C;font-weight:700;">UMBC</a> became the first 16-seed to defeat a 1-seed, beating <a href="#team/virginia-cavaliers" style="color:#C9A86C;font-weight:700;">Virginia</a> 74-54. <a href="#game/2018/umbc-retrievers-vs-virginia-cavaliers" style="color:#C9A86C;text-decoration:underline;">Relive the moment →</a>',
             'The 5-vs-12 matchup is the most common first-round upset. It happens roughly 35% of the time. <a href="#upsets/5v12" style="color:#C9A86C;text-decoration:underline;">Explore all 5v12 upsets →</a>',
             '8-vs-9 games are essentially coin flips, with 9-seeds winning nearly half the time. <a href="#upsets/8v9" style="color:#C9A86C;text-decoration:underline;">See the 8v9 history →</a>',
-            'Since 1985, a 15-seed has beaten a 2-seed 11 times. <a href="#team/saint-peters-peacocks" style="color:#C9A86C;font-weight:700;">Saint Peter\'s</a> (2022) made it all the way to the Elite Eight. <a href="#upsets/2v15" style="color:#C9A86C;text-decoration:underline;">All 2v15 upsets →</a>',
+            'Since 1985, a 15-seed has beaten a 2-seed 11 times. <a href="#team/saint-peter-s-peacocks" style="color:#C9A86C;font-weight:700;">Saint Peter\'s</a> (2022) made it all the way to the Elite Eight. <a href="#upsets/2v15" style="color:#C9A86C;text-decoration:underline;">All 2v15 upsets →</a>',
             'No 16-seed had ever beaten a 1-seed until <a href="#team/umbc-retrievers" style="color:#C9A86C;font-weight:700;">UMBC</a> did it in 2018. <a href="#team/fairleigh-dickinson-knights" style="color:#C9A86C;font-weight:700;">Fairleigh Dickinson</a> repeated the feat in 2023. <a href="#upsets/1v16" style="color:#C9A86C;text-decoration:underline;">See both upsets →</a>',
             'The 12-over-5 upset is so common it has its own name among bracketologists: "The 12-5 Special." <a href="#upsets/5v12" style="color:#C9A86C;text-decoration:underline;">Explore the data →</a>',
             'In 2023, both a 15-seed (<a href="#team/princeton-tigers" style="color:#C9A86C;font-weight:700;">Princeton</a>) and a 16-seed (<a href="#team/fairleigh-dickinson-knights" style="color:#C9A86C;font-weight:700;">FDU</a>) won first-round games in the same tournament.'
