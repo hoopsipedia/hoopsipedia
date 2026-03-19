@@ -10572,8 +10572,28 @@
                 const posB = bracketOrder.indexOf(topSeedB);
                 return (posA === -1 ? 99 : posA) - (posB === -1 ? 99 : posB);
             });
-            // Sort later rounds by the lowest seed among their competitors (winners flow naturally)
-            ['R32', 'S16', 'E8'].forEach(roundKey => {
+            // Sort R32 by bracket slot order:
+            // Slot 1: winner of 1v16 vs winner of 8v9 (seeds 1,16,8,9)
+            // Slot 2: winner of 5v12 vs winner of 4v13 (seeds 5,12,4,13)
+            // Slot 3: winner of 6v11 vs winner of 3v14 (seeds 6,11,3,14)
+            // Slot 4: winner of 7v10 vs winner of 2v15 (seeds 7,10,2,15)
+            const r32SlotSeeds = [
+                new Set([1, 16, 8, 9]),   // slot 0
+                new Set([5, 12, 4, 13]),  // slot 1
+                new Set([6, 11, 3, 14]),  // slot 2
+                new Set([7, 10, 2, 15])   // slot 3
+            ];
+            function getR32Slot(event) {
+                const seeds = (event.competitions[0].competitors || []).map(c => c.curatedRank?.current || 99);
+                for (let i = 0; i < r32SlotSeeds.length; i++) {
+                    if (seeds.some(s => r32SlotSeeds[i].has(s))) return i;
+                }
+                return 99;
+            }
+            rounds['R32'].sort((a, b) => getR32Slot(a) - getR32Slot(b));
+
+            // Sort S16 and E8 by lowest seed (fewer games, natural ordering works)
+            ['S16', 'E8'].forEach(roundKey => {
                 rounds[roundKey].sort((a, b) => {
                     const seedA = Math.min(...(a.competitions[0].competitors || []).map(c => c.curatedRank?.current || 99));
                     const seedB = Math.min(...(b.competitions[0].competitors || []).map(c => c.curatedRank?.current || 99));
