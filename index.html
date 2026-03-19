@@ -7644,30 +7644,32 @@
             }
 
             // Build quad record HTML helper
-            function quadHtml(qr, teamName) {
+            function quadHtml(qr, teamName, espnId) {
                 const hasData = qr && (qr.q1w + qr.q1l + qr.q2w + qr.q2l + qr.q3w + qr.q3l + qr.q4w + qr.q4l > 0);
-                if (!hasData) return `<div class="this-season-quad-team"><h4>${teamName}</h4><div style="color:#8892A0;font-size:0.85rem;text-align:center;padding:0.5rem;">Quad record requires opponent game data</div></div>`;
+                if (!hasData) return `<div class="this-season-quad-team"><h4>${teamName}</h4><div style="color:#8892A0;font-size:0.85rem;text-align:center;padding:0.5rem;">Quad data unavailable</div></div>`;
+                const uid = 'cmp-quad-' + espnId;
                 return `
                     <div class="this-season-quad-team">
                         <h4>${teamName}</h4>
                         <div class="this-season-quad-grid">
-                            <div class="this-season-quad-card">
+                            <div class="this-season-quad-card" style="cursor:pointer;" onclick="toggleQuadGames(1, '${espnId}', '${uid}')">
                                 <div class="this-season-quad-label">Quad 1</div>
                                 <div class="this-season-quad-val" style="${qr.q1w > 0 ? 'color:#2D7D46;' : ''}">${qr.q1w}-${qr.q1l}</div>
                             </div>
-                            <div class="this-season-quad-card">
+                            <div class="this-season-quad-card" style="cursor:pointer;" onclick="toggleQuadGames(2, '${espnId}', '${uid}')">
                                 <div class="this-season-quad-label">Quad 2</div>
                                 <div class="this-season-quad-val">${qr.q2w}-${qr.q2l}</div>
                             </div>
-                            <div class="this-season-quad-card">
+                            <div class="this-season-quad-card" style="cursor:pointer;" onclick="toggleQuadGames(3, '${espnId}', '${uid}')">
                                 <div class="this-season-quad-label">Quad 3</div>
                                 <div class="this-season-quad-val">${qr.q3w}-${qr.q3l}</div>
                             </div>
-                            <div class="this-season-quad-card">
+                            <div class="this-season-quad-card" style="cursor:pointer;" onclick="toggleQuadGames(4, '${espnId}', '${uid}')">
                                 <div class="this-season-quad-label">Quad 4</div>
                                 <div class="this-season-quad-val" style="${qr.q4l > 0 ? 'color:#C0392B;' : ''}">${qr.q4w}-${qr.q4l}</div>
                             </div>
                         </div>
+                        <div class="quad-games-expand" id="${uid}"></div>
                     </div>`;
             }
 
@@ -7724,8 +7726,8 @@
                 <!-- Quad Records Side-by-Side -->
                 <div class="this-season-section-title">Quad Records</div>
                 <div class="this-season-quad-compare">
-                    ${quadHtml(t1Quad, t1.name)}
-                    ${quadHtml(t2Quad, t2.name)}
+                    ${quadHtml(t1Quad, t1.name, t1.espnId)}
+                    ${quadHtml(t2Quad, t2.name, t2.espnId)}
                 </div>
 
                 <!-- Starting 5 Comparison -->
@@ -9180,8 +9182,8 @@
         // Track which quad is currently expanded
         let _activeQuad = null;
 
-        function toggleQuadGames(quadNum, teamEspnId) {
-            const expandEl = document.getElementById('quadGamesExpand');
+        function toggleQuadGames(quadNum, teamEspnId, targetId) {
+            const expandEl = document.getElementById(targetId || 'quadGamesExpand');
             if (!expandEl) return;
 
             // Deactivate all cards
