@@ -5724,8 +5724,10 @@
                 } else if (a.year) {
                     clickAttr = ` onclick="event.stopPropagation(); window.open('https://www.sports-reference.com/cbb/postseason/${srYear}-ncaa.html','_blank');" title="View ${yearStr} NCAA Tournament on Sports Reference"`;
                 }
+                const hasJourney = isOurChampRun;
                 return `
-                <div class="tourney-entry clickable"${clickAttr}>
+                <div class="tourney-entry clickable"${clickAttr} style="position:relative;">
+                    ${hasJourney ? '<div style="position:absolute;top:3px;right:3px;width:14px;height:14px;background:linear-gradient(135deg,#D4AF37,#E8C84A);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:7px;color:#1B2A4A;font-weight:800;" title="Championship Journey available (Beta)">J</div>' : ''}
                     <div class="tourney-year">${a.year}</div>
                     ${a.seed ? `<div class="tourney-seed">#${a.seed} Seed</div>` : '<div class="tourney-seed">&nbsp;</div>'}
                     <div class="tourney-round ${tourneyRoundClass(a.result)}">${a.result}</div>
