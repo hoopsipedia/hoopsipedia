@@ -8518,6 +8518,8 @@
             // Only consider current season games (2025-26)
             const currentSeasonGames = games.filter(g => g.date && g.date >= '2025-09-01');
             for (const game of currentSeasonGames) {
+                // Skip unplayed/scheduled games (no score yet)
+                if ((!game.pts && game.pts !== 0) || (game.pts === 0 && game.opp_pts === 0)) continue;
                 const oppId = String(game.opp || game.oppId || '');
                 const oppRank = netRankMap?.[oppId];
                 if (!oppRank) continue;
