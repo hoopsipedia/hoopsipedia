@@ -10835,6 +10835,49 @@
             });
         }
 
+        function getMatchupPreviewFact(id1, name1, id2, name2) {
+            // Use H2H data for a compelling matchup fact
+            if (typeof H2H_DATA !== 'undefined' && H2H_DATA) {
+                const key1 = id1 + '_' + id2;
+                const key2 = id2 + '_' + id1;
+                const h2h = H2H_DATA[key1] || H2H_DATA[key2];
+                if (h2h) {
+                    const w = h2h.w || 0;
+                    const l = h2h.l || 0;
+                    const total = w + l;
+                    // If key was reversed, flip w/l
+                    const isReversed = !!H2H_DATA[key2] && !H2H_DATA[key1];
+                    const wins1 = isReversed ? l : w;
+                    const wins2 = isReversed ? w : l;
+                    if (total > 0) {
+                        if (total === 1) {
+                            const lastWinner = wins1 > 0 ? name1 : name2;
+                            return lastWinner + ' won their only previous meeting';
+                        }
+                        if (wins1 === 0) return name2 + ' leads all-time ' + wins2 + '-0';
+                        if (wins2 === 0) return name1 + ' leads all-time ' + wins1 + '-0';
+                        const leader = wins1 > wins2 ? name1 : name2;
+                        const leaderW = Math.max(wins1, wins2);
+                        const trailW = Math.min(wins1, wins2);
+                        if (wins1 === wins2) return 'Series tied ' + wins1 + '-' + wins2 + ' all-time';
+                        return leader + ' leads series ' + leaderW + '-' + trailW;
+                    }
+                }
+                // No H2H history
+                return 'First-ever meeting between ' + name1 + ' and ' + name2;
+            }
+
+            // Fallback: use program stats
+            const t1 = H[id1], t2 = H[id2];
+            if (t1 && t2) {
+                const nc1 = t1[6] || 0, nc2 = t2[6] || 0;
+                const ff1 = t1[8] || 0, ff2 = t2[8] || 0;
+                if (nc1 > 0 && nc2 > 0) return nc1 + ' titles vs ' + nc2 + ' titles';
+                if (ff1 + ff2 > 5) return (ff1 + ff2) + ' combined Final Fours';
+            }
+            return null;
+        }
+
         function getBracketWinnerFact(winner, loser) {
             const wId = String(winner.team?.id || '');
             const lId = String(loser.team?.id || '');
@@ -11010,6 +11053,30 @@
                         badge.onclick = function(e) { e.stopPropagation(); window.location.hash = '#upsets/' + pairingKey; };
                     }
                     card.appendChild(badge);
+                }
+            }
+
+            // Matchup preview fact for upcoming games with both teams known (R32+)
+            if (!isFinal && !isLive && competitors.length === 2) {
+                const id1 = String(competitors[0].team?.id || '0');
+                const id2 = String(competitors[1].team?.id || '0');
+                const name1 = competitors[0].team?.shortDisplayName || '';
+                const name2 = competitors[1].team?.shortDisplayName || '';
+                const bothKnown = id1 !== '0' && id2 !== '0' && name1 !== '—' && name2 !== '—';
+                if (bothKnown) {
+                    const previewFact = getMatchupPreviewFact(id1, name1, id2, name2);
+                    if (previewFact) {
+                        const prevEl = document.createElement('div');
+                        prevEl.className = 'seed-context-badge clickable';
+                        prevEl.style.cssText = 'cursor:pointer; font-style:italic; color:#9E7C4A; font-size:0.68rem; line-height:1.3;';
+                        prevEl.textContent = previewFact;
+                        prevEl.title = 'View full head-to-head history';
+                        prevEl.onclick = function(e) {
+                            e.stopPropagation();
+                            openComparison(id1, id2);
+                        };
+                        card.appendChild(prevEl);
+                    }
                 }
             }
 
