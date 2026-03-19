@@ -4681,6 +4681,34 @@
             startOtdTimer();
         }
 
+        // ── Shared Scoreboard Cache — single source of truth for all live data ──
+        let _sharedScoreboard = null;
+        let _sharedScoreboardTime = 0;
+        const SCOREBOARD_POLL_INTERVAL = 30000; // 30 seconds, uniform everywhere
+
+        async function fetchSharedScoreboard() {
+            try {
+                const today = new Date();
+                const dateStr = today.toISOString().slice(0, 10).replace(/-/g, '');
+                const resp = await fetch(`https://site.api.espn.com/apis/site/v2/sports/basketball/mens-college-basketball/scoreboard?dates=${dateStr}&groups=50&limit=200`);
+                if (!resp.ok) return _sharedScoreboard;
+                _sharedScoreboard = await resp.json();
+                _sharedScoreboardTime = Date.now();
+                return _sharedScoreboard;
+            } catch(e) {
+                console.warn('Scoreboard fetch error:', e);
+                return _sharedScoreboard;
+            }
+        }
+
+        // Get scoreboard data — returns cached if fresh (< 10s old), otherwise fetches
+        async function getScoreboard() {
+            if (_sharedScoreboard && Date.now() - _sharedScoreboardTime < 10000) {
+                return _sharedScoreboard;
+            }
+            return fetchSharedScoreboard();
+        }
+
         // ── Upset Watch: live tournament upset alerts ──
         let _upsetWatchTimer = null;
 
@@ -4694,10 +4722,8 @@
                 // Only during tournament season (March-April)
                 if (month < 3 || month > 4) { container.style.display = 'none'; return; }
 
-                const dateStr = today.toISOString().slice(0, 10).replace(/-/g, '');
-                const resp = await fetch(`https://site.api.espn.com/apis/site/v2/sports/basketball/mens-college-basketball/scoreboard?dates=${dateStr}&groups=50&limit=200`);
-                if (!resp.ok) return;
-                const data = await resp.json();
+                const data = await getScoreboard();
+                if (!data) return;
 
                 const upsetCards = [];
 
@@ -4870,7 +4896,7 @@
             const month = new Date().getMonth() + 1;
             if (month < 3 || month > 4) return;
             checkUpsetWatch();
-            _upsetWatchTimer = setInterval(checkUpsetWatch, 60000);
+            _upsetWatchTimer = setInterval(checkUpsetWatch, SCOREBOARD_POLL_INTERVAL);
         }
 
         // ── Upset Color Takeover ──
@@ -5159,16 +5185,13 @@
             checkForFinalGames();
 
             // Poll every 2 minutes
-            setInterval(checkForFinalGames, 120000);
+            setInterval(checkForFinalGames, SCOREBOARD_POLL_INTERVAL);
         }
 
         async function checkForFinalGames() {
             try {
-                const today = new Date();
-                const dateStr = today.toISOString().slice(0, 10).replace(/-/g, '');
-                const resp = await fetch(`https://site.api.espn.com/apis/site/v2/sports/basketball/mens-college-basketball/scoreboard?dates=${dateStr}&groups=50`);
-                if (!resp.ok) return;
-                const data = await resp.json();
+                const data = await getScoreboard();
+                if (!data) return;
 
                 let updated = false;
                 // Pre-fetch live box scores for in-progress games (updates each poll)
