@@ -11499,7 +11499,18 @@
             // Team summary comparison
             html += '<div class="boxscore-team-summary">';
             srData.teams.forEach((team, idx) => {
-                const totals = team.totals || {};
+                // Compute totals from player data if not provided
+                let totals = team.totals || {};
+                if (!totals.pts && team.players && team.players.length > 0) {
+                    const p = team.players;
+                    const sumField = (field) => p.reduce((s, pl) => s + (parseInt(pl[field]) || 0), 0);
+                    const sumMadeAtt = (field) => {
+                        let made = 0, att = 0;
+                        p.forEach(pl => { if (pl[field]) { const parts = pl[field].split('-'); made += parseInt(parts[0]) || 0; att += parseInt(parts[1]) || 0; } });
+                        return made + '-' + att;
+                    };
+                    totals = { pts: sumField('pts'), reb: sumField('reb'), ast: sumField('ast'), to: sumField('to'), stl: sumField('stl'), blk: sumField('blk'), fg: sumMadeAtt('fg'), tp: sumMadeAtt('tp'), ft: sumMadeAtt('ft') };
+                }
                 // Calculate percentages from made-attempted strings
                 function calcPct(str) {
                     if (!str || str === '0-0') return '0.0';
@@ -11884,14 +11895,13 @@
 
         function hasUpsetVideo(year, winnerName, loserName) {
             // Check if there's a highlight video for this specific game
+            // Must be an exact key match with a valid videoId
             const wSlug = teamSlug(winnerName);
             const lSlug = teamSlug(loserName);
-            for (const key of Object.keys(UPSET_HIGHLIGHTS)) {
-                if (key.startsWith(year + '/') && (key.includes(wSlug.substring(0, 8)) || key.includes(lSlug.substring(0, 8)))) {
-                    return true;
-                }
-            }
-            return false;
+            const exactKey = year + '/' + wSlug + '-vs-' + lSlug;
+            const altKey = year + '/' + lSlug + '-vs-' + wSlug;
+            const match = UPSET_HIGHLIGHTS[exactKey] || UPSET_HIGHLIGHTS[altKey];
+            return !!(match && match.videoId);
         }
 
         function findUpsetHighlight(gameKey) {
