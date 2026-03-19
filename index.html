@@ -7609,6 +7609,7 @@
                                 g.t2Score = t2Score;
                                 g.t1Winner = t1Winner;
                                 g._liveStatus = status;
+                                g._liveDetail = comp.status?.type?.shortDetail || comp.status?.type?.detail || status;
 
                                 // Add tournament info from notes
                                 const notes = comp.notes || [];
@@ -7827,7 +7828,7 @@
                             <div style="flex: 1; font-weight: ${m.t1Score > m.t2Score ? '700' : '400'}; color: ${m.t1Score > m.t2Score ? t1Color : '#A0AAB8'};">${t1.name.split(' ').pop()} <span style="font-variant-numeric: tabular-nums;">${m.t1Score}</span></div>
                             <div style="font-size: 0.7rem; color: #E65100; min-width: 80px; text-align: center;">
                                 <div style="font-weight: 700; font-size: 0.6rem; letter-spacing: 0.05em;"><span style="display:inline-block;width:6px;height:6px;background:#E53935;border-radius:50%;animation:pulse 1.5s infinite;margin-right:3px;vertical-align:middle;"></span> LIVE</div>
-                                ${m._liveStatus}${tourneyBadge ? `<div style="margin-top: 0.3rem;">${tourneyBadge}</div>` : ''}${venueStr}
+                                ${m._liveStatus === 'Halftime' ? 'Halftime' : m._liveDetail || 'In Progress'}${tourneyBadge ? `<div style="margin-top: 0.3rem;">${tourneyBadge}</div>` : ''}${venueStr}
                             </div>
                             <div style="flex: 1; text-align: right; font-weight: ${m.t2Score > m.t1Score ? '700' : '400'}; color: ${m.t2Score > m.t1Score ? t2Color : '#A0AAB8'};"><span style="font-variant-numeric: tabular-nums;">${m.t2Score}</span> ${t2.name.split(' ').pop()}</div>
                         </div>
