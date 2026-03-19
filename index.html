@@ -10626,7 +10626,14 @@
                 else rounds['R64'].push(event);
             });
 
-            // Sort R64 games in proper NCAA bracket order: 1v16, 8v9, 5v12, 4v13, 6v11, 3v14, 7v10, 2v15
+            // ── HARDCODED BRACKET STRUCTURE ──
+            // NCAA bracket slots are FIXED: the matchup order never changes.
+            // R64 order: 1v16, 8v9, 5v12, 4v13, 6v11, 3v14, 7v10, 2v15
+            // R32 slot 0: winner of (1v16) vs winner of (8v9)
+            // R32 slot 1: winner of (5v12) vs winner of (4v13)
+            // R32 slot 2: winner of (6v11) vs winner of (3v14)
+            // R32 slot 3: winner of (7v10) vs winner of (2v15)
+
             const bracketOrder = [1, 8, 5, 4, 6, 3, 7, 2];
             rounds['R64'].sort((a, b) => {
                 const topSeedA = Math.min(...(a.competitions[0].competitors || []).map(c => c.curatedRank?.current || 99));
@@ -10635,79 +10642,94 @@
                 const posB = bracketOrder.indexOf(topSeedB);
                 return (posA === -1 ? 99 : posA) - (posB === -1 ? 99 : posB);
             });
-            // Sort R32 by bracket slot order:
-            // Slot 1: winner of 1v16 vs winner of 8v9 (seeds 1,16,8,9)
-            // Slot 2: winner of 5v12 vs winner of 4v13 (seeds 5,12,4,13)
-            // Slot 3: winner of 6v11 vs winner of 3v14 (seeds 6,11,3,14)
-            // Slot 4: winner of 7v10 vs winner of 2v15 (seeds 7,10,2,15)
-            const r32SlotSeeds = [
-                new Set([1, 16, 8, 9]),   // slot 0
-                new Set([5, 12, 4, 13]),  // slot 1
-                new Set([6, 11, 3, 14]),  // slot 2
-                new Set([7, 10, 2, 15])   // slot 3
-            ];
-            function getR32Slot(event) {
-                const seeds = (event.competitions[0].competitors || []).map(c => c.curatedRank?.current || 99);
-                for (let i = 0; i < r32SlotSeeds.length; i++) {
-                    if (seeds.some(s => r32SlotSeeds[i].has(s))) return i;
-                }
-                return 99;
-            }
-            rounds['R32'].sort((a, b) => getR32Slot(a) - getR32Slot(b));
 
-            // Advance R64 winners into R32 TBD slots
-            // R32 pairs: [1v16 + 8v9], [5v12 + 4v13], [6v11 + 3v14], [7v10 + 2v15]
-            const r32Pairs = [
-                { seeds: new Set([1, 16, 8, 9]),   feeders: [[1, 16], [8, 9]] },
-                { seeds: new Set([5, 12, 4, 13]),  feeders: [[5, 12], [4, 13]] },
-                { seeds: new Set([6, 11, 3, 14]),  feeders: [[6, 11], [3, 14]] },
-                { seeds: new Set([7, 10, 2, 15]),  feeders: [[7, 10], [2, 15]] }
-            ];
-            // Get R64 winners
-            const r64Winners = {};
+            // Build R64 lookup: topSeed -> { winner competitor (if final), event }
+            const r64ByTopSeed = {};
             rounds['R64'].forEach(event => {
                 const comp = event.competitions[0];
-                if (comp.status?.type?.description !== 'Final') return;
-                const winner = comp.competitors.find(c => c.winner);
-                if (!winner) return;
-                const topSeed = Math.min(...comp.competitors.map(c => c.curatedRank?.current || 99));
-                r64Winners[topSeed] = winner;
+                const seeds = (comp.competitors || []).map(c => c.curatedRank?.current || 99);
+                const topSeed = Math.min(...seeds);
+                const isFinal = comp.status?.type?.description === 'Final';
+                const winner = isFinal ? comp.competitors.find(c => c.winner) : null;
+                r64ByTopSeed[topSeed] = { event, winner, isFinal };
             });
 
-            // For each R32 pair, find the matching R32 game by seed (not array index)
-            r32Pairs.forEach(pair => {
-                const r32Game = rounds['R32'].find(ev => {
-                    const seeds = (ev.competitions[0].competitors || []).map(c => c.curatedRank?.current || 99);
-                    return seeds.some(s => pair.seeds.has(s));
-                });
-                if (!r32Game) return;
-                const comp = r32Game.competitions[0];
-                const hasTBD = comp.competitors.some(c => !c.team?.displayName || c.team.displayName === 'TBD' || (c.curatedRank?.current || 99) >= 99);
-                if (!hasTBD) return;
+            // Build R32 from scratch: always exactly 4 slots, deterministic order
+            // Each slot is either an ESPN R32 game (if ESPN has real data) or a generated matchup
+            const r32Structure = [
+                { slot: 0, feederA: [1, 16], feederB: [8, 9] },
+                { slot: 1, feederA: [5, 12], feederB: [4, 13] },
+                { slot: 2, feederA: [6, 11], feederB: [3, 14] },
+                { slot: 3, feederA: [7, 10], feederB: [2, 15] }
+            ];
 
-                // Find winners from the two feeder R64 games
-                pair.feeders.forEach(([seedA, seedB]) => {
-                    const topSeed = Math.min(seedA, seedB);
-                    const winner = r64Winners[topSeed];
-                    if (!winner) return;
-
-                    // Don't insert a team that's already in this R32 game
-                    const winnerId = String(winner.team?.id || '');
-                    const alreadyIn = winnerId && comp.competitors.some(c => String(c.team?.id || '') === winnerId);
-                    if (alreadyIn) return;
-
-                    // Replace TBD competitor with the winner
-                    const tbdIdx = comp.competitors.findIndex(c => !c.team?.displayName || c.team.displayName === 'TBD' || (c.curatedRank?.current || 99) >= 99);
-                    if (tbdIdx >= 0) {
-                        comp.competitors[tbdIdx] = JSON.parse(JSON.stringify(winner));
-                        comp.competitors[tbdIdx].score = ''; // Reset score for R32
-                        comp.competitors[tbdIdx].winner = undefined;
+            // Index ESPN's R32 games by the team IDs they contain
+            const espnR32ByTeamId = {};
+            rounds['R32'].forEach(ev => {
+                (ev.competitions[0].competitors || []).forEach(c => {
+                    const tid = String(c.team?.id || '');
+                    if (tid && c.team?.displayName !== 'TBD') {
+                        espnR32ByTeamId[tid] = ev;
                     }
                 });
             });
 
-            // Re-sort R32 after filling in winners
-            rounds['R32'].sort((a, b) => getR32Slot(a) - getR32Slot(b));
+            const builtR32 = [];
+            const usedEspnR32 = new Set();
+
+            r32Structure.forEach(slotDef => {
+                const topSeedA = Math.min(...slotDef.feederA);
+                const topSeedB = Math.min(...slotDef.feederB);
+                const winnerA = r64ByTopSeed[topSeedA]?.winner;
+                const winnerB = r64ByTopSeed[topSeedB]?.winner;
+
+                // First: check if ESPN has a real R32 game for this slot
+                // Match by checking if any winner's team ID is in an ESPN R32 game
+                let espnGame = null;
+                if (winnerA) {
+                    const tid = String(winnerA.team?.id || '');
+                    if (espnR32ByTeamId[tid] && !usedEspnR32.has(espnR32ByTeamId[tid])) {
+                        espnGame = espnR32ByTeamId[tid];
+                    }
+                }
+                if (!espnGame && winnerB) {
+                    const tid = String(winnerB.team?.id || '');
+                    if (espnR32ByTeamId[tid] && !usedEspnR32.has(espnR32ByTeamId[tid])) {
+                        espnGame = espnR32ByTeamId[tid];
+                    }
+                }
+
+                if (espnGame) {
+                    // Use ESPN's real R32 game data (scores, status, etc.)
+                    usedEspnR32.add(espnGame);
+                    builtR32.push(espnGame);
+                } else {
+                    // Generate a virtual R32 matchup from R64 winners
+                    const makeTBD = (seed) => ({
+                        team: { id: '0', displayName: 'TBD', shortDisplayName: '—', nickname: '—' },
+                        curatedRank: { current: seed || 99 },
+                        score: '', winner: undefined
+                    });
+
+                    const compA = winnerA ? JSON.parse(JSON.stringify(winnerA)) : makeTBD(null);
+                    const compB = winnerB ? JSON.parse(JSON.stringify(winnerB)) : makeTBD(null);
+                    // Reset scores/winner for R32
+                    compA.score = ''; compA.winner = undefined;
+                    compB.score = ''; compB.winner = undefined;
+
+                    builtR32.push({
+                        id: 'virtual-r32-' + slotDef.slot,
+                        status: { type: { name: 'STATUS_SCHEDULED', description: 'Scheduled' } },
+                        competitions: [{
+                            competitors: [compA, compB],
+                            status: { type: { name: 'STATUS_SCHEDULED' } },
+                            notes: [{ headline: regionName + ' - 2nd Round' }]
+                        }]
+                    });
+                }
+            });
+
+            rounds['R32'] = builtR32;
 
             // Sort S16 and E8 by lowest seed (fewer games, natural ordering works)
             ['S16', 'E8'].forEach(roundKey => {
