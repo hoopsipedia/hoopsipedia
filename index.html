@@ -117,6 +117,34 @@
         body.upset-takeover .stat-bar-fill {
             background: var(--accent-color);
         }
+        body.upset-takeover .logo-wordmark--hero {
+            color: var(--accent-color);
+        }
+        body.upset-takeover .logo-wordmark--hero .logo-basketball .ball {
+            fill: var(--accent-color);
+        }
+        body.upset-takeover .hero-underline {
+            background: var(--accent-color) !important;
+        }
+        body.upset-takeover .compare-button,
+        body.upset-takeover .comp-tab.active,
+        body.upset-takeover .game-matchup-button {
+            background: var(--accent-color) !important;
+            color: #fff !important;
+        }
+        body.upset-takeover .comp-tab:not(.active) {
+            border-color: var(--accent-color) !important;
+            color: var(--accent-color) !important;
+        }
+        body.upset-takeover .section-title {
+            color: var(--accent-color);
+        }
+        body.upset-takeover .popular-team-card:hover {
+            border-color: var(--accent-color);
+        }
+        body.upset-takeover .stat-card-value {
+            color: var(--accent-color);
+        }
         body.upset-takeover footer {
             border-top-color: var(--accent-color) !important;
         }
@@ -4915,14 +4943,8 @@
             if (!stored) return;
             try {
                 const data = JSON.parse(stored);
-                const elapsed = Date.now() - data.time;
-                if (elapsed >= UPSET_TAKEOVER_DURATION) {
-                    clearUpsetTakeover();
-                    return;
-                }
                 applyUpsetTakeover(data, false);
-                // Schedule auto-clear for remaining time
-                setTimeout(clearUpsetTakeover, UPSET_TAKEOVER_DURATION - elapsed);
+                // No auto-clear — stays until next upset replaces it
             } catch(e) {
                 localStorage.removeItem('upsetTakeover');
             }
@@ -4946,9 +4968,12 @@
             const logoUrl = data.espnId ? `https://a.espncdn.com/i/teamlogos/ncaa/500/${data.espnId}.png` : '';
             const logoImg = logoUrl ? `<img src="${logoUrl}" alt="" onerror="this.style.display='none'">` : '';
 
+            const gameLink = data.gameLink || '#';
             banner.innerHTML = `
-                ${logoImg}
-                <span>UPSET COMPLETE: ${data.message}</span>
+                <a href="${gameLink}" style="display:flex;align-items:center;gap:0.75rem;color:#fff;text-decoration:none;flex:1;">
+                    ${logoImg}
+                    <span>UPSET COMPLETE: ${data.message}</span>
+                </a>
                 <button class="takeover-dismiss" onclick="dismissUpsetTakeover()" aria-label="Dismiss">&times;</button>
             `;
 
@@ -4969,7 +4994,9 @@
         }
 
         function dismissUpsetTakeover() {
-            clearUpsetTakeover();
+            // Only hide the banner, keep the color takeover active
+            const banner = document.getElementById('upsetTakeoverBanner');
+            if (banner) banner.remove();
         }
 
         function triggerUpsetTakeover(winnerName, winnerSeed, loserName, loserSeed, winnerEspnId, winnerColor) {
@@ -4994,17 +5021,20 @@
             }
 
             const message = `${winnerSeed}-seed ${winnerName} stuns ${loserSeed}-seed ${loserName}!`;
+            const wSlug = winnerName.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+            const lSlug = loserName.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+            const gameLink = `#game/2026/${wSlug}-vs-${lSlug}`;
             const data = {
                 team: winnerName,
                 color: color,
                 espnId: winnerEspnId,
                 time: Date.now(),
-                message: message
+                message: message,
+                gameLink: gameLink
             };
 
             localStorage.setItem('upsetTakeover', JSON.stringify(data));
             applyUpsetTakeover(data, true);
-            setTimeout(clearUpsetTakeover, UPSET_TAKEOVER_DURATION);
         }
 
         // Track which upsets we've already triggered takeover for

@@ -770,7 +770,7 @@
   },
   "5v12": {
     "higherSeedWins": 103,
-    "lowerSeedWins": 57,
+    "lowerSeedWins": 58,
     "totalGames": 160,
     "upsetPct": 35.63,
     "upsets": [
@@ -1351,8 +1351,20 @@
         "loserFull": "Clemson Tigers",
         "loserSeed": 5,
         "score": "69-67"
+      },
+      {
+        "year": 2026,
+        "winner": "High Point",
+        "winnerFull": "High Point Panthers",
+        "winnerSeed": 12,
+        "loser": "Wisconsin",
+        "loserFull": "Wisconsin Badgers",
+        "loserSeed": 5,
+        "score": "83-82",
+        "notes": "High Point's first ever NCAA Tournament win and appearance. The Panthers, in their first year eligible for the tournament, stunned Wisconsin by one point in a thriller."
       }
-    ]
+    ],
+    "higherWins": 103
   },
   "6v11": {
     "higherSeedWins": 97,
@@ -1443,7 +1455,7 @@
         "loserFull": "Alabama Crimson Tide",
         "loserSeed": 6,
         "score": "86-84",
-        "notes": "All four 11 seeds won in 1989 — the only year this has happened."
+        "notes": "All four 11 seeds won in 1989 \u2014 the only year this has happened."
       },
       {
         "year": 1989,
