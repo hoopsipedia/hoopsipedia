@@ -7887,15 +7887,15 @@
             const el = document.getElementById('h2h-dynamic-stats');
             if (!el) return;
 
-            // Filter out upcoming games (no score)
-            const completedGames = games.filter(g => g.t1Score > 0 || g.t2Score > 0);
+            // Filter out upcoming games (no score) AND in-progress games (not final)
+            const completedGames = games.filter(g => (g.t1Score > 0 || g.t2Score > 0) && g._liveStatus !== 'In Progress' && g._liveStatus !== 'Halftime');
 
             if (completedGames.length === 0) {
                 el.innerHTML = '';
                 return;
             }
 
-            // Compute series record for filtered games
+            // Compute series record for filtered games (only count final results)
             let t1Wins = 0, t2Wins = 0;
             completedGames.forEach(g => { if (g.t1Winner) t1Wins++; else t2Wins++; });
             const totalGames = t1Wins + t2Wins;
