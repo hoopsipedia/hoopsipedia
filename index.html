@@ -8399,7 +8399,20 @@
             const conferences = standingsData.children || [];
             const teamMap = {};
             for (const conf of conferences) {
-                const confName = conf.abbreviation || conf.name || '';
+                let confName = conf.abbreviation || conf.name || '';
+                // Normalize conference name to match our data.json conventions
+                const confMap = {
+                    'acc': 'ACC', 'big-12': 'Big 12', 'big-ten': 'Big Ten', 'sec': 'SEC',
+                    'big-east': 'Big East', 'aac': 'AAC', 'mwc': 'MWC', 'wcc': 'WCC',
+                    'a-10': 'A-10', 'mvc': 'MVC', 'caa': 'CAA', 'mac': 'MAC',
+                    'sun-belt': 'Sun Belt', 'cusa': 'CUSA', 'horizon': 'Horizon League',
+                    'ivy': 'Ivy League', 'maac': 'MAAC', 'patriot': 'Patriot League',
+                    'southern': 'Southern', 'ovc': 'Ohio Valley', 'big-south': 'Big South',
+                    'asun': 'ASUN', 'swac': 'SWAC', 'meac': 'MEAC', 'nec': 'NEC',
+                    'big-sky': 'Big Sky', 'big-west': 'Big West', 'summit': 'Summit League',
+                    'wac': 'WAC', 'southland': 'Southland', 'America East': 'America East'
+                };
+                confName = confMap[confName.toLowerCase()] || confName;
                 for (const entry of (conf.standings?.entries || [])) {
                     const teamId = String(entry.team?.id);
                     const stats = {};
@@ -8501,7 +8514,7 @@
             const allBtn = document.createElement('button');
             allBtn.className = `conf-btn ${!netConfFilter ? 'active' : ''}`;
             allBtn.textContent = 'All';
-            allBtn.addEventListener('click', () => { window._netSelectedConfs.clear(); netConfFilter = null; renderNetRankingsTable(); });
+            allBtn.addEventListener('click', () => { window._netSelectedConfs.clear(); netConfFilter = null; renderNetRankings(); });
             confContainer.appendChild(allBtn);
 
             netConfs.forEach(conf => {
@@ -8512,7 +8525,7 @@
                     if (window._netSelectedConfs.has(conf)) window._netSelectedConfs.delete(conf);
                     else window._netSelectedConfs.add(conf);
                     netConfFilter = window._netSelectedConfs.size > 0 ? [...window._netSelectedConfs] : null;
-                    renderNetRankingsTable();
+                    renderNetRankings(); // Re-render buttons + table together
                 });
                 confContainer.appendChild(btn);
             });
