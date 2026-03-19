@@ -4027,6 +4027,31 @@
         let GAMES_DATA = null; // Game-level schedule data (from games.json)
 
         // ── SEED MATCHUP HISTORY ENGINE ──
+        // Build fast lookup: ESPN team name -> {victimCount, cinderellaCount, pairings}
+        function buildUpsetTeamLookup(upsetData) {
+            const victims = {};    // teamName -> { count, games: [...] }
+            const cinderellas = {}; // teamName -> { count, games: [...] }
+
+            for (const [key, section] of Object.entries(upsetData)) {
+                if (key === 'metadata') continue;
+                for (const u of (section.upsets || [])) {
+                    const loser = u.loserFull || u.loser || '';
+                    const winner = u.winnerFull || u.winner || '';
+                    if (loser) {
+                        if (!victims[loser]) victims[loser] = { count: 0, games: [] };
+                        victims[loser].count++;
+                        victims[loser].games.push(u);
+                    }
+                    if (winner) {
+                        if (!cinderellas[winner]) cinderellas[winner] = { count: 0, games: [] };
+                        cinderellas[winner].count++;
+                        cinderellas[winner].games.push(u);
+                    }
+                }
+            }
+            return { victims, cinderellas };
+        }
+
         function buildSeedMatchupHistory() {
             // Use verified NCAA tournament first-round records (1985-2025, 64/68-team era)
             // Source: NCAA.com official tournament history
@@ -4069,6 +4094,41 @@
 
         function getUpsetScore(higherSeed, lowerSeed) {
             return (lowerSeed - higherSeed) * (1 + (lowerSeed / 16));
+        }
+
+        function getPersonalizedUpsetContext(team1, team2, seed1, seed2) {
+            var lookup = window.UPSET_TEAM_LOOKUP;
+            if (!lookup) return null;
+            var s1 = parseInt(seed1), s2 = parseInt(seed2);
+            if (isNaN(s1) || isNaN(s2) || Math.abs(s1 - s2) < 3) return null;
+
+            // Determine favorite (lower seed number) and underdog (higher seed number)
+            var favorite = s1 < s2 ? team1 : team2;
+            var underdog = s1 < s2 ? team2 : team1;
+            var favName = favorite.team?.displayName || '';
+            var undName = underdog.team?.displayName || '';
+            var favShort = favorite.team?.shortDisplayName || favName;
+            var undShort = underdog.team?.shortDisplayName || undName;
+
+            // Check if favorite is upset-prone
+            var victimData = lookup.victims[favName];
+            // Check if underdog is a cinderella
+            var cinderellaData = lookup.cinderellas[undName];
+
+            // Prioritize: upset-prone favorite (more dramatic for viewers)
+            if (victimData && victimData.count >= 5) {
+                return { text: '⚠️ ' + favShort + ' has been upset ' + victimData.count + ' times as a favorite — watch out', alert: false };
+            }
+            if (cinderellaData && cinderellaData.count >= 4) {
+                return { text: '🔮 ' + undShort + ' has pulled off ' + cinderellaData.count + ' tournament upsets — a serial Cinderella', alert: false };
+            }
+            if (victimData && victimData.count >= 3) {
+                return { text: '⚠️ ' + favShort + ' has been upset ' + victimData.count + ' times in first-round games', alert: false };
+            }
+            if (cinderellaData && cinderellaData.count >= 2) {
+                return { text: '🔮 ' + undShort + ' has ' + cinderellaData.count + ' tournament upsets in their history', alert: false };
+            }
+            return null;
         }
 
         function getSeedContextText(seed1, seed2) {
@@ -4149,6 +4209,16 @@
                 } catch (e) {
                     console.log('No h2h.json found - will use ESPN API for H2H data');
                 }
+
+                // Load upset history for personalized pregame badges
+                try {
+                    const upsetResp = await fetch('upset_history.json');
+                    if (upsetResp.ok) {
+                        UPSET_DETAIL_DATA = await upsetResp.json();
+                        window.UPSET_TEAM_LOOKUP = buildUpsetTeamLookup(UPSET_DETAIL_DATA);
+                        console.log(`Loaded upset history — ${Object.keys(window.UPSET_TEAM_LOOKUP.victims).length} upset-prone teams, ${Object.keys(window.UPSET_TEAM_LOOKUP.cinderellas).length} cinderellas`);
+                    }
+                } catch(e) { console.log('No upset_history.json'); }
 
                 // Try to load game-level schedule data (split into chunks for CDN file size limits)
                 try {
@@ -6756,8 +6826,15 @@
                                     }
                                 }
 
-                                // PRE-GAME & LIVE: seed context and upset alerts
-                                var ctx = getUpsetAlertText(s1, sc1, s2, sc2, live) || getSeedContextText(s1, s2);
+                                // PRE-GAME & LIVE: upset alerts, then personalized team context, then generic seed stats
+                                var ctx = getUpsetAlertText(s1, sc1, s2, sc2, live);
+                                if (!ctx) {
+                                    // Try personalized upset-prone/cinderella context
+                                    ctx = getPersonalizedUpsetContext(team1, team2, s1, s2);
+                                }
+                                if (!ctx) {
+                                    ctx = getSeedContextText(s1, s2);
+                                }
                                 if (!ctx) return '';
                                 var cls = 'game-context-badge clickable' + (ctx.alert ? ' upset-alert' : '');
                                 var _gs1 = parseInt(s1), _gs2 = parseInt(s2);
