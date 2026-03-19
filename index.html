@@ -5485,6 +5485,8 @@
             currentSortStat = statKey;
             rankingsSortDir = 'desc';
             switchView('rankings');
+            // Ensure Historical tab is active (not NET)
+            switchRankingsTab('historical');
         }
 
         // Fuzzy search alias map: common nicknames/abbreviations → canonical team names
