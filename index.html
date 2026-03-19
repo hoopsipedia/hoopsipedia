@@ -11711,20 +11711,32 @@
 
         // Find ESPN event ID for an upset game by matching the game key to upset_boxscores.json
         async function findUpsetEventId(gameKey) {
+            // Exact match first
             const boxscores = await loadUpsetBoxscores();
             if (boxscores[gameKey]) return boxscores[gameKey];
-            // Try partial match
-            for (const [key, id] of Object.entries(boxscores)) {
-                if (gameKey.includes(key.split('-vs-')[0].split('/')[1]) || key.includes(gameKey.split('-vs-')[0].split('/')[1])) {
-                    return id;
+
+            // For current season games, search the live scoreboard
+            const year = gameKey.split('/')[0];
+            if (parseInt(year) >= 2026 && _sharedScoreboard) {
+                const slugs = gameKey.split('/')[1].split('-vs-');
+                for (const event of (_sharedScoreboard.events || [])) {
+                    const comp = event.competitions?.[0];
+                    if (!comp) continue;
+                    const teamNames = comp.competitors.map(c => teamSlug(c.team?.displayName || ''));
+                    if (slugs.every(s => teamNames.some(tn => tn.includes(s.substring(0, 10))))) {
+                        return event.id;
+                    }
                 }
             }
+
+            // Exact key match only for historical (no more loose partial matching)
             return null;
         }
 
         // ── GAME DETAIL PAGE ("Relive the Moment") ──
 
         const UPSET_HIGHLIGHTS = {
+            '2026/high-point-panthers-vs-wisconsin-badgers': { videoId: 'f-NhxOnzK94', title: 'Wisconsin vs High Point - Full Game Highlights | First Round NCAA March Madness 2026', type: 'highlights' },
             '2025/arkansas-razorbacks-vs-kansas-jayhawks': { videoId: 'ud5RTavQYBY', title: 'Arkansas vs. Kansas - First round NCAA tournament extended highlights', type: 'highlights' },
             '2025/baylor-bears-vs-mississippi-state-bulldogs': { videoId: 'OWTf3TAL4HE', title: 'Baylor vs. Mississippi State - First round NCAA tournament extended highlights', type: 'highlights' },
             '2025/colorado-state-rams-vs-memphis-tigers': { videoId: 'pJvm_8NXi1E', title: 'Colorado State vs. Memphis - First round NCAA tournament extended highlights', type: 'highlights' },
@@ -11986,16 +11998,26 @@
         }
 
         function findUpsetHighlight(gameKey) {
-            // Direct match
+            // Direct match in inline highlights
             if (UPSET_HIGHLIGHTS[gameKey]) return UPSET_HIGHLIGHTS[gameKey];
-            // Try partial match (year + partial slug)
-            for (const [key, data] of Object.entries(UPSET_HIGHLIGHTS)) {
-                if (gameKey.startsWith(key.split('-vs-')[0]) || key.startsWith(gameKey.split('-vs-')[0])) {
-                    return data;
-                }
+            // Check external highlights data (loaded from upset_highlights_data.json)
+            if (UPSET_DETAIL_DATA) {
+                // The external file is keyed differently — check all loaded highlight sources
+                try {
+                    const extResp = window._upsetHighlightsExternal;
+                    if (extResp && extResp[gameKey] && extResp[gameKey].videoId) return extResp[gameKey];
+                } catch(e) {}
             }
             return null;
         }
+
+        // Load external highlights on startup
+        (async function() {
+            try {
+                const resp = await fetch('upset_highlights_data.json');
+                if (resp.ok) window._upsetHighlightsExternal = await resp.json();
+            } catch(e) {}
+        })();
 
         function generateWhyThisMattered(winnerSeed, loserSeed, year, winnerName, loserName, notes) {
             const lines = [];
