@@ -6646,11 +6646,24 @@
                 urls.push(`https://site.api.espn.com/apis/site/v2/sports/basketball/mens-college-basketball/scoreboard?dates=${dateStr}&groups=50`);
             }
 
-            Promise.all(urls.map(u => fetch(u).then(r => r.json()).catch(() => ({ events: [] }))))
+            // Use shared scoreboard cache for today's date to stay in sync with upset watch
+            const todayStr = today.toISOString().split('T')[0].replace(/-/g, '');
+            const fetchPromises = urls.map(u => {
+                // For today's URL, use cached scoreboard if available
+                if (u.includes(todayStr) && _sharedScoreboard) {
+                    return Promise.resolve(_sharedScoreboard);
+                }
+                return fetch(u).then(r => r.json()).catch(() => ({ events: [] }));
+            });
+
+            Promise.all(fetchPromises)
                 .then(results => {
                     let allGames = [];
+                    const seenIds = new Set();
                     results.forEach(data => {
                         (data.events || []).forEach(event => {
+                            if (seenIds.has(event.id)) return; // dedupe from shared cache
+                            seenIds.add(event.id);
                             const comp = event.competitions?.[0];
                             if (comp && comp.competitors?.length === 2) {
                                 // Filter out TBD / placeholder games
