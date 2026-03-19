@@ -10658,10 +10658,10 @@
             // Advance R64 winners into R32 TBD slots
             // R32 pairs: [1v16 + 8v9], [5v12 + 4v13], [6v11 + 3v14], [7v10 + 2v15]
             const r32Pairs = [
-                [[1, 16], [8, 9]],
-                [[5, 12], [4, 13]],
-                [[6, 11], [3, 14]],
-                [[7, 10], [2, 15]]
+                { seeds: new Set([1, 16, 8, 9]),   feeders: [[1, 16], [8, 9]] },
+                { seeds: new Set([5, 12, 4, 13]),  feeders: [[5, 12], [4, 13]] },
+                { seeds: new Set([6, 11, 3, 14]),  feeders: [[6, 11], [3, 14]] },
+                { seeds: new Set([7, 10, 2, 15]),  feeders: [[7, 10], [2, 15]] }
             ];
             // Get R64 winners
             const r64Winners = {};
@@ -10674,19 +10674,27 @@
                 r64Winners[topSeed] = winner;
             });
 
-            // For each R32 slot, if game has TBD teams, fill from R64 winners
-            r32Pairs.forEach((pair, slotIdx) => {
-                const r32Game = rounds['R32'][slotIdx];
+            // For each R32 pair, find the matching R32 game by seed (not array index)
+            r32Pairs.forEach(pair => {
+                const r32Game = rounds['R32'].find(ev => {
+                    const seeds = (ev.competitions[0].competitors || []).map(c => c.curatedRank?.current || 99);
+                    return seeds.some(s => pair.seeds.has(s));
+                });
                 if (!r32Game) return;
                 const comp = r32Game.competitions[0];
                 const hasTBD = comp.competitors.some(c => !c.team?.displayName || c.team.displayName === 'TBD' || (c.curatedRank?.current || 99) >= 99);
                 if (!hasTBD) return;
 
                 // Find winners from the two feeder R64 games
-                pair.forEach(([seedA, seedB]) => {
+                pair.feeders.forEach(([seedA, seedB]) => {
                     const topSeed = Math.min(seedA, seedB);
                     const winner = r64Winners[topSeed];
                     if (!winner) return;
+
+                    // Don't insert a team that's already in this R32 game
+                    const winnerId = String(winner.team?.id || '');
+                    const alreadyIn = winnerId && comp.competitors.some(c => String(c.team?.id || '') === winnerId);
+                    if (alreadyIn) return;
 
                     // Replace TBD competitor with the winner
                     const tbdIdx = comp.competitors.findIndex(c => !c.team?.displayName || c.team.displayName === 'TBD' || (c.curatedRank?.current || 99) >= 99);
