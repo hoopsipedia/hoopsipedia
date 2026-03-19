@@ -7151,9 +7151,9 @@
             const panel = document.getElementById('thisSeasonPanel');
             if (!panel) return;
 
-            // Ensure NET rankings are computed (needed for quad records)
-            if (!t1._quadRecord || !t2._quadRecord) {
-                try { await computeNetRankings(); } catch(e) {}
+            // Ensure NET rankings are computed (needed for quad records and NET rank display)
+            if (!t1._netRank || !t2._netRank || !t1._quadRecord || !t2._quadRecord) {
+                try { await computeNetRankings(); } catch(e) { console.error('NET computation failed:', e); }
             }
 
             const t1Color = t1.color || '#1B2A4A';
@@ -7221,7 +7221,8 @@
 
             // Build quad record HTML helper
             function quadHtml(qr, teamName) {
-                if (!qr) return `<div class="this-season-quad-team"><h4>${teamName}</h4><div style="color:#8892A0;font-size:0.85rem;text-align:center;padding:0.5rem;">Quad data unavailable</div></div>`;
+                const hasData = qr && (qr.q1w + qr.q1l + qr.q2w + qr.q2l + qr.q3w + qr.q3l + qr.q4w + qr.q4l > 0);
+                if (!hasData) return `<div class="this-season-quad-team"><h4>${teamName}</h4><div style="color:#8892A0;font-size:0.85rem;text-align:center;padding:0.5rem;">Quad record requires opponent game data</div></div>`;
                 return `
                     <div class="this-season-quad-team">
                         <h4>${teamName}</h4>
