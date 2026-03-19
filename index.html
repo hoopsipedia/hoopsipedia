@@ -1714,6 +1714,8 @@
         }
         .upsets-moment-magnitude-fill { height: 100%; border-radius: 3px; background: #C9A86C; }
         .upsets-moment-magnitude-label { font-size: 0.6rem; color: #A0AAB8; font-weight: 600; text-transform: uppercase; }
+        .upset-team-leaderboards { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 1rem; }
+        @media (max-width: 768px) { .upset-team-leaderboards { grid-template-columns: 1fr; } }
         .upsets-no-data {
             text-align: center; padding: 2rem; color: #8892A0; font-size: 0.95rem;
         }
@@ -10526,6 +10528,124 @@
         let upsetsCurrentEra = 'all';
         let upsetsCurrentPairing = null;
         let upsetsCurrentSort = 'year';
+        if (typeof window._upsetsTeamView === 'undefined') window._upsetsTeamView = false;
+
+        function renderUpsetTeamLeaderboards() {
+            if (!UPSET_DETAIL_DATA) return '<div style="text-align:center;color:#8892A0;padding:2rem;">Loading upset data...</div>';
+
+            // Aggregate from upset_history.json
+            const victims = {};   // team -> [{year, pairing, by, score, seed}]
+            const cinderellas = {}; // team -> [{year, pairing, over, score, seed}]
+
+            for (const [key, section] of Object.entries(UPSET_DETAIL_DATA)) {
+                if (key === 'metadata') continue;
+                for (const u of (section.upsets || [])) {
+                    const loser = u.loserFull || u.loser || '';
+                    const winner = u.winnerFull || u.winner || '';
+                    if (!loser || !winner) continue;
+
+                    if (!victims[loser]) victims[loser] = [];
+                    victims[loser].push({ year: u.year, pairing: key, by: winner, score: u.score || '', loserSeed: u.loserSeed, winnerSeed: u.winnerSeed, notes: u.notes || '' });
+
+                    if (!cinderellas[winner]) cinderellas[winner] = [];
+                    cinderellas[winner].push({ year: u.year, pairing: key, over: loser, score: u.score || '', winnerSeed: u.winnerSeed, loserSeed: u.loserSeed, notes: u.notes || '' });
+                }
+            }
+
+            // Sort by count
+            const victimList = Object.entries(victims).sort((a, b) => b[1].length - a[1].length);
+            const cinderellaList = Object.entries(cinderellas).sort((a, b) => b[1].length - a[1].length);
+
+            function teamSlugFromName(name) {
+                return name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+            }
+
+            function getTeamLogo(name) {
+                const slug = teamSlugFromName(name);
+                const team = allTeamsData.find(t => teamSlugFromName(t.name) === slug);
+                return team ? 'https://a.espncdn.com/i/teamlogos/ncaa/500/' + team.espnId + '.png' : '';
+            }
+
+            function buildLeaderboard(title, subtitle, list, type) {
+                let html = '<div style="margin-bottom:2rem;">';
+                html += '<h3 style="font-size:1.1rem;font-weight:700;color:#1B2A4A;margin-bottom:0.25rem;">' + title + '</h3>';
+                html += '<p style="font-size:0.8rem;color:#8892A0;margin-bottom:1rem;">' + subtitle + '</p>';
+
+                const top = list.slice(0, 20);
+                top.forEach(([team, games], idx) => {
+                    const logo = getTeamLogo(team);
+                    const slug = teamSlugFromName(team);
+                    const uid = type + '-' + idx;
+                    const gamesSort = [...games].sort((a, b) => a.year - b.year);
+
+                    html += '<div style="border:1px solid #E8E6E1;border-radius:0.5rem;margin-bottom:0.5rem;overflow:hidden;">';
+                    // Header row (clickable to expand)
+                    html += `<div onclick="toggleUpsetTeamRow('${uid}')" style="display:flex;align-items:center;gap:0.75rem;padding:0.6rem 0.8rem;cursor:pointer;background:#FAFAF7;">`;
+                    html += `<span style="font-weight:700;color:#8892A0;width:1.5rem;text-align:right;">${idx + 1}</span>`;
+                    if (logo) html += `<img src="${logo}" alt="" style="width:28px;height:28px;object-fit:contain;" onerror="this.style.display='none'">`;
+                    html += `<a href="#team/${slug}" style="font-weight:600;color:#1B2A4A;text-decoration:none;flex:1;" onclick="event.stopPropagation();">${team}</a>`;
+                    html += `<span style="font-weight:700;color:#C9A86C;font-size:1.1rem;">${games.length}</span>`;
+                    html += `<span class="expand-arrow" id="arrow-${uid}" style="color:#8892A0;font-size:0.9rem;">▸</span>`;
+                    html += '</div>';
+
+                    // Expandable detail (hidden by default)
+                    html += '<div id="' + uid + '" style="display:none;border-top:1px solid #E8E6E1;">';
+                    gamesSort.forEach(g => {
+                        const isVictim = type === 'victim';
+                        const oppName = isVictim ? g.by : g.over;
+                        const oppSlug = teamSlugFromName(oppName);
+                        const pairingLabel = g.pairing.replace('v', ' vs ');
+                        const seedInfo = isVictim
+                            ? '#' + g.loserSeed + ' seed lost to #' + g.winnerSeed
+                            : '#' + g.winnerSeed + ' seed beat #' + g.loserSeed;
+
+                        html += '<div style="display:flex;align-items:center;gap:0.5rem;padding:0.5rem 0.8rem 0.5rem 3rem;font-size:0.82rem;border-bottom:1px solid #F0EEEA;">';
+                        html += '<span style="color:#8892A0;min-width:2.5rem;">' + g.year + '</span>';
+                        html += '<span style="background:#F0EEEA;padding:0.1rem 0.4rem;border-radius:0.25rem;font-size:0.7rem;font-weight:600;color:#6B7A8D;min-width:3rem;text-align:center;">' + pairingLabel + '</span>';
+                        html += '<span style="flex:1;">';
+                        if (isVictim) {
+                            html += 'Lost to <a href="#team/' + oppSlug + '" style="color:#1B2A4A;font-weight:600;text-decoration:none;" onclick="event.stopPropagation();">' + oppName + '</a>';
+                        } else {
+                            html += 'Beat <a href="#team/' + oppSlug + '" style="color:#1B2A4A;font-weight:600;text-decoration:none;" onclick="event.stopPropagation();">' + oppName + '</a>';
+                        }
+                        html += '</span>';
+                        if (g.score) html += '<span style="font-weight:600;color:#1B2A4A;">' + g.score + '</span>';
+                        html += '</div>';
+                    });
+                    html += '</div></div>';
+                });
+
+                html += '</div>';
+                return html;
+            }
+
+            let html = '<div class="upset-team-leaderboards">';
+            html += buildLeaderboard(
+                '😬 Most Upset-Prone',
+                'Favorites who lost the most first-round games to lower seeds',
+                victimList, 'victim'
+            );
+            html += buildLeaderboard(
+                '🏆 Serial Cinderellas',
+                'Underdogs who pulled off the most first-round upsets',
+                cinderellaList, 'cinderella'
+            );
+            html += '</div>';
+            return html;
+        }
+
+        function toggleUpsetTeamRow(uid) {
+            const el = document.getElementById(uid);
+            const arrow = document.getElementById('arrow-' + uid);
+            if (!el) return;
+            if (el.style.display === 'none') {
+                el.style.display = 'block';
+                if (arrow) arrow.textContent = '▾';
+            } else {
+                el.style.display = 'none';
+                if (arrow) arrow.textContent = '▸';
+            }
+        }
 
         const UPSET_ERAS = {
             'all': { label: 'All Eras', min: 1985, max: 9999 },
@@ -10813,6 +10933,13 @@
                 </div>
 
                 <div style="text-align:center;font-size:0.75rem;color:#8892A0;margin-bottom:0.5rem;font-style:italic;">Seed-based data since 1985 (64-team era). Full historical upsets by program strength coming soon with The Hoopsipedia Ranking.</div>
+
+                <div style="display:flex;justify-content:center;gap:0.5rem;margin-bottom:1rem;">
+                    <button class="upsets-era-btn ${!window._upsetsTeamView ? 'active' : ''}" onclick="window._upsetsTeamView=false; renderUpsets();" style="font-size:0.85rem;padding:0.5rem 1.2rem;">By Seed Pairing</button>
+                    <button class="upsets-era-btn ${window._upsetsTeamView ? 'active' : ''}" onclick="window._upsetsTeamView=true; renderUpsets();" style="font-size:0.85rem;padding:0.5rem 1.2rem;">By Team</button>
+                </div>
+                ${window._upsetsTeamView ? renderUpsetTeamLeaderboards() : ''}
+                ${window._upsetsTeamView ? '' : `
                 <div class="upsets-era-filters">
                     <button class="upsets-era-btn ${upsetsCurrentEra === 'all' ? 'active' : ''}" onclick="upsetsCurrentEra='all'; upsetsCurrentPairing=null; renderUpsets();">All Eras</button>
                     ${Object.entries(UPSET_ERAS).filter(([k]) => k !== 'all').map(([k, v]) => `<button class="upsets-era-btn ${upsetsCurrentEra === k ? 'active' : ''}" onclick="upsetsCurrentEra='${k}'; upsetsCurrentPairing=null; renderUpsets();">${v.label}</button>`).join('')}
@@ -10841,7 +10968,7 @@
             }
 
             html += `</div>
-                <div id="upsetsDetailContainer"></div>`;
+                <div id="upsetsDetailContainer"></div>`}`;  // closes the "By Seed Pairing" conditional
 
             content.innerHTML = html;
 
