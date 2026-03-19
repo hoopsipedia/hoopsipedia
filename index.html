@@ -3360,6 +3360,10 @@
         .quad-game-opp {
             flex: 1; display: flex; align-items: center; gap: 0.5rem;
             cursor: pointer; font-weight: 600; color: #1B2A4A;
+            min-width: 0; overflow: hidden;
+        }
+        .quad-game-opp span {
+            overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
         }
         .quad-game-opp:hover { color: #C9A86C; }
         .quad-game-opp img { width: 20px; height: 20px; object-fit: contain; }
@@ -3372,7 +3376,7 @@
             flex: 0 0 50px; font-size: 0.72rem; color: #8892A0; text-align: center;
         }
         .quad-game-score {
-            flex: 0 0 55px; font-size: 0.82rem; font-weight: 700; text-align: right;
+            flex: 0 0 60px; font-size: 0.82rem; font-weight: 700; text-align: right; white-space: nowrap;
         }
         .quad-game-result {
             flex: 0 0 24px; font-size: 0.72rem; font-weight: 800; text-align: center;
@@ -3925,13 +3929,13 @@
                 </div>
             </div>
             <div class="season-table-wrapper" style="background: #FFFFFF; border: 1px solid #E0D9CC; border-radius: 0.75rem; padding: 1rem; box-shadow: 0 1px 4px rgba(0,0,0,0.04); overflow-x: auto; -webkit-overflow-scrolling: touch;">
-                <table style="width: 100%; border-collapse: collapse; min-width: 700px;">
+                <table style="width: 100%; border-collapse: collapse; min-width: 800px;">
                     <thead>
                         <tr style="border-bottom: 2px solid #C9A86C;">
                             <th style="padding: 0.6rem; text-align: left; font-size: 0.78rem; color: #8892A0; text-transform: uppercase;">#</th>
                             <th style="padding: 0.6rem; text-align: left; font-size: 0.78rem; color: #8892A0; text-transform: uppercase;">Coach</th>
-                            <th style="padding: 0.6rem; text-align: left; font-size: 0.78rem; color: #8892A0; text-transform: uppercase;">Record</th>
-                            <th style="padding: 0.6rem; text-align: left; font-size: 0.78rem; color: #8892A0; text-transform: uppercase;">Win%</th>
+                            <th style="padding: 0.6rem; text-align: left; font-size: 0.78rem; color: #8892A0; text-transform: uppercase; white-space: nowrap;">Record</th>
+                            <th style="padding: 0.6rem; text-align: left; font-size: 0.78rem; color: #8892A0; text-transform: uppercase; white-space: nowrap;">Win%</th>
                             <th style="padding: 0.6rem; text-align: left; font-size: 0.78rem; color: #8892A0; text-transform: uppercase;">School(s)</th>
                             <th style="padding: 0.6rem; text-align: left; font-size: 0.78rem; color: #8892A0; text-transform: uppercase;">Years</th>
                             <th style="padding: 0.6rem; text-align: left; font-size: 0.78rem; color: #8892A0; text-transform: uppercase;">Best Season</th>
@@ -6245,11 +6249,11 @@
                 return `<tr style="${bg}">
                     <td style="padding:0.6rem;${gold}">${i + 1}</td>
                     <td style="padding:0.6rem;font-weight:600;${activeStyle}">${coach.name}${activeBadge}</td>
-                    <td style="padding:0.6rem;">${coach.wins}-${coach.losses}</td>
-                    <td style="padding:0.6rem;">${coach.pct}%</td>
+                    <td style="padding:0.6rem;white-space:nowrap;">${coach.wins}-${coach.losses}</td>
+                    <td style="padding:0.6rem;white-space:nowrap;">${coach.pct}%</td>
                     <td style="padding:0.6rem;font-size:0.85rem;">${schoolNames}</td>
-                    <td style="padding:0.6rem;color:#8892A0;">${coach.yearsStart}-${coach.yearsEnd === new Date().getFullYear() ? 'Present' : coach.yearsEnd}</td>
-                    <td style="padding:0.6rem;font-size:0.85rem;">${coach.bestYr} (${coach.bestRec})</td>
+                    <td style="padding:0.6rem;color:#8892A0;white-space:nowrap;">${coach.yearsStart}-${coach.yearsEnd === new Date().getFullYear() ? 'Present' : coach.yearsEnd}</td>
+                    <td style="padding:0.6rem;font-size:0.85rem;white-space:nowrap;">${coach.bestYr} (${coach.bestRec})</td>
                 </tr>`;
             }).join('');
         }
@@ -7693,7 +7697,6 @@
                                 <div class="this-season-quad-val" style="${qr.q4l > 0 ? 'color:#C0392B;' : ''}">${qr.q4w}-${qr.q4l}</div>
                             </div>
                         </div>
-                        <div class="quad-games-expand" id="${uid}"></div>
                     </div>`;
             }
 
@@ -7753,6 +7756,8 @@
                     ${quadHtml(t1Quad, t1.name, t1.espnId)}
                     ${quadHtml(t2Quad, t2.name, t2.espnId)}
                 </div>
+                <div class="quad-games-expand" id="cmp-quad-${t1.espnId}"></div>
+                <div class="quad-games-expand" id="cmp-quad-${t2.espnId}"></div>
 
                 <!-- Starting 5 Comparison -->
                 <div class="this-season-section-title">Starting 5</div>
@@ -9321,7 +9326,7 @@
                         <div class="quad-game-date">${dateStr}</div>
                         <div class="quad-game-opp" ${oppClick}>
                             ${g.oppEspnId ? `<img src="${getLogoUrl(g.oppEspnId)}" alt="">` : ''}
-                            ${g.oppName}
+                            <span>${g.oppName}</span>
                         </div>
                         <div class="quad-game-net">#${g.oppRank}</div>
                         <div class="quad-game-loc">${g.loc}</div>
@@ -11072,7 +11077,7 @@
                 const id2 = String(competitors[1].team?.id || '0');
                 const name1 = competitors[0].team?.shortDisplayName || '';
                 const name2 = competitors[1].team?.shortDisplayName || '';
-                const bothKnown = id1 !== '0' && id2 !== '0' && name1 !== '—' && name2 !== '—';
+                const bothKnown = id1 !== '0' && id2 !== '0' && name1 !== '—' && name2 !== '—' && name1 !== 'TBD' && name2 !== 'TBD' && name1 !== '' && name2 !== '';
                 if (bothKnown) {
                     const previewFact = getMatchupPreviewFact(id1, name1, id2, name2);
                     if (previewFact) {
@@ -14363,7 +14368,7 @@
                 { keys: ['fieldGoalPct', 'FG%', 'fieldGoalPercentage'] },
                 { keys: ['threePointFieldGoalPercentage', '3PointPct', 'avg3PM'] }
             ];
-            let t1Wins = 0, t2Wins = 0;
+            let t1Wins = 0, t2Wins = 0, ties = 0;
             const posCount = Math.min(starters1.length, starters2.length);
             for (let i = 0; i < posCount; i++) {
                 let pWins1 = 0, pWins2 = 0;
@@ -14375,8 +14380,9 @@
                 }
                 if (pWins1 > pWins2) t1Wins++;
                 else if (pWins2 > pWins1) t2Wins++;
+                else ties++;
             }
-            return { t1Wins, t2Wins };
+            return { t1Wins, t2Wins, ties };
         }
 
         function computeTotals(starters) {
@@ -14424,15 +14430,16 @@
 
             let html = '';
 
+            const tieText = edge.ties > 0 ? ` <span style="font-size:0.8rem;color:#8892A0;font-weight:500;">(${edge.ties} tied)</span>` : '';
             if (edgeTeam) {
                 html += `<div class="s5-edge-bar">
                     <span class="s5-edge-label">${edgeTeam} Starting 5 Edge:</span>
-                    <span class="s5-edge-score">${edge.t1Wins}-${edge.t2Wins}</span>
+                    <span class="s5-edge-score">${edge.t1Wins}-${edge.t2Wins}${tieText}</span>
                 </div>`;
             } else {
                 html += `<div class="s5-edge-bar">
                     <span class="s5-edge-label">Starting 5 Matchup:</span>
-                    <span class="s5-edge-score">Even ${edge.t1Wins}-${edge.t2Wins}</span>
+                    <span class="s5-edge-score">Even ${edge.t1Wins}-${edge.t2Wins}${tieText}</span>
                 </div>`;
             }
 
