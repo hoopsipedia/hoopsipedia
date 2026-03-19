@@ -3651,7 +3651,8 @@
                 <h2 class="section-title" id="gamesTitle">Today's Games</h2>
                 <div class="games-filters" id="gamesFilters" style="display:none;">
                     <div class="games-filter-tabs">
-                        <button class="games-filter-btn active" data-filter="ncaa">NCAA Tournament</button>
+                        <button class="games-filter-btn active" data-filter="ncaa">Round 1</button>
+                        <button class="games-filter-btn" data-filter="firstfour">First Four</button>
                         <button class="games-filter-btn" data-filter="nit">NIT</button>
                         <button class="games-filter-btn" data-filter="all">All Games</button>
                     </div>
@@ -6379,7 +6380,9 @@
             // Filter by tournament type
             let filtered = allGames;
             if (activeFilter === 'ncaa') {
-                filtered = allGames.filter(e => e._tourney === 'ncaa');
+                filtered = allGames.filter(e => e._tourney === 'ncaa' && !e._round?.includes('First Four'));
+            } else if (activeFilter === 'firstfour') {
+                filtered = allGames.filter(e => e._tourney === 'ncaa' && e._round?.includes('First Four'));
             } else if (activeFilter === 'nit') {
                 filtered = allGames.filter(e => e._tourney === 'nit');
             }
@@ -6400,7 +6403,8 @@
             // Update section title
             const titleEl = document.getElementById('gamesTitle');
             if (titleEl) {
-                if (activeFilter === 'ncaa') titleEl.textContent = 'March Madness';
+                if (activeFilter === 'ncaa') titleEl.textContent = 'March Madness — Round 1';
+                else if (activeFilter === 'firstfour') titleEl.textContent = 'March Madness — First Four';
                 else if (activeFilter === 'nit') titleEl.textContent = 'NIT';
                 else titleEl.textContent = 'All Postseason Games';
             }
