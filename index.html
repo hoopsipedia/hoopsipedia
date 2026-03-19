@@ -4122,16 +4122,16 @@
 
             // Prioritize: upset-prone favorite (more dramatic for viewers)
             if (victimData && victimData.count >= 5) {
-                return { text: '⚠️ ' + favShort + ' has been upset ' + victimData.count + ' times as a favorite — watch out', alert: false };
+                return { text: '' + favShort + ' has been upset ' + victimData.count + ' times as a favorite — watch out', alert: false };
             }
             if (cinderellaData && cinderellaData.count >= 4) {
-                return { text: '🔮 ' + undShort + ' has pulled off ' + cinderellaData.count + ' tournament upsets — a serial Cinderella', alert: false };
+                return { text: '' + undShort + ' has pulled off ' + cinderellaData.count + ' tournament upsets — a serial Cinderella', alert: false };
             }
             if (victimData && victimData.count >= 3) {
-                return { text: '⚠️ ' + favShort + ' has been upset ' + victimData.count + ' times in first-round games', alert: false };
+                return { text: '' + favShort + ' has been upset ' + victimData.count + ' times in first-round games', alert: false };
             }
             if (cinderellaData && cinderellaData.count >= 2) {
-                return { text: '🔮 ' + undShort + ' has ' + cinderellaData.count + ' tournament upsets in their history', alert: false };
+                return { text: '' + undShort + ' has ' + cinderellaData.count + ' tournament upsets in their history', alert: false };
             }
             return null;
         }
@@ -4830,7 +4830,7 @@
                     const statusClass = card.cardType === 'upset-complete' ? ' upset-complete' : '';
                     const label = card.cardType === 'upset-complete' ? 'UPSET COMPLETE'
                         : card.cardType === 'upset' ? 'UPSET WATCH'
-                        : '🔥 CLOSE GAME';
+                        : 'CLOSE GAME';
                     const liveDot = card.isLive ? '<span class="upset-live-dot"></span>' : '';
 
                     // Try to build comparison URL
@@ -5075,7 +5075,7 @@
 
             banner.innerHTML = `
                 ${logoImg}
-                <span style="font-weight:800;letter-spacing:0.05em;">${data.icon} ${data.headline}</span>
+                <span style="font-weight:800;letter-spacing:0.05em;">${data.headline}</span>
                 <span>${data.message}</span>
                 <span style="opacity:0.8;font-size:0.8rem;">${data.detail}</span>
                 <button onclick="dismissMilestone()" style="position:absolute;right:0.75rem;background:none;border:none;color:#fff;font-size:1.2rem;cursor:pointer;opacity:0.7;" aria-label="Dismiss">&times;</button>
@@ -6808,21 +6808,21 @@
 
                                         // Milestone: first ever tournament win
                                         if (typeof ZERO_TOURNEY_WIN_TEAMS !== 'undefined' && ZERO_TOURNEY_WIN_TEAMS[wId]) {
-                                            return '<div class="game-context-badge upset-alert" style="background:#FFF3E0;border-color:#F9A825;color:#E65100;">🎉 ' + wName + '\'s first ever NCAA Tournament win!</div>';
+                                            return '<div class="game-context-badge upset-alert" style="background:#FFF3E0;border-color:#F9A825;color:#E65100;">' + wName + '\'s first ever NCAA Tournament win!</div>';
                                         }
                                         // Milestone: first ever tournament appearance win
                                         if (typeof FIRST_TOURNEY_TEAMS !== 'undefined' && FIRST_TOURNEY_TEAMS[wId]) {
-                                            return '<div class="game-context-badge upset-alert" style="background:#FFF3E0;border-color:#F9A825;color:#E65100;">⭐ ' + wName + ' wins in their first ever tournament!</div>';
+                                            return '<div class="game-context-badge upset-alert" style="background:#FFF3E0;border-color:#F9A825;color:#E65100;">' + wName + ' wins in their first ever tournament!</div>';
                                         }
                                         // Upset complete
                                         if (wSeed > lSeed && seedDiff >= 5) {
                                             var pKey2 = Math.min(wSeed,lSeed)+'v'+Math.max(wSeed,lSeed);
-                                            return '<div class="game-context-badge upset-alert clickable" onclick="event.stopPropagation(); window.location.hash=\'#upsets/'+pKey2+'\';" title="Click to explore upset history">🚨 Upset! ' + wSeed + '-seed ' + wName + ' stuns ' + lSeed + '-seed ' + lName + '</div>';
+                                            return '<div class="game-context-badge upset-alert clickable" onclick="event.stopPropagation(); window.location.hash=\'#upsets/'+pKey2+'\';" title="Click to explore upset history">Upset!' + wSeed + '-seed ' + wName + ' stuns ' + lSeed + '-seed ' + lName + '</div>';
                                         }
                                         // Close game (decided by 5 or fewer)
                                         var margin = Math.abs(parseInt(winner.score) - parseInt(loser.score));
                                         if (margin <= 5) {
-                                            return '<div class="game-context-badge" style="background:#E8F5E9;border-color:#66BB6A;color:#2E7D32;">🔥 ' + wName + ' survives by ' + margin + '!</div>';
+                                            return '<div class="game-context-badge" style="background:#E8F5E9;border-color:#66BB6A;color:#2E7D32;">' + wName + ' survives by ' + margin + '!</div>';
                                         }
                                         // Blowout (margin >= 20)
                                         if (margin >= 20) {
@@ -10899,12 +10899,12 @@
 
             let html = '<div class="upset-team-leaderboards">';
             html += buildLeaderboard(
-                '😬 Most Upset-Prone',
+                'Most Upset-Prone',
                 'Favorites who lost the most first-round games to lower seeds',
                 victimList, 'victim'
             );
             html += buildLeaderboard(
-                '🏆 Serial Cinderellas',
+                'Serial Cinderellas',
                 'Underdogs who pulled off the most first-round upsets',
                 cinderellaList, 'cinderella'
             );
