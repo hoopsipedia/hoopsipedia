@@ -4999,8 +4999,20 @@
                         loserTeam.winPct = parseFloat(((loserTeam.allTimeW / (loserTeam.allTimeW + loserTeam.allTimeL)) * 100).toFixed(1));
                     }
 
-                    // Update H2H cache if exists
+                    // Update H2H data (both pre-compiled and cache) so compare page reflects new results
                     if (winnerId && loserId) {
+                        // Update H2H_DATA (from h2h.json) — the primary source for compare page
+                        if (H2H_DATA) {
+                            if (!H2H_DATA[winnerId]) H2H_DATA[winnerId] = {};
+                            if (!H2H_DATA[loserId]) H2H_DATA[loserId] = {};
+                            const wRec = H2H_DATA[winnerId][loserId] || { w: 0, l: 0, g: 0 };
+                            wRec.w++; wRec.g++;
+                            H2H_DATA[winnerId][loserId] = wRec;
+                            const lRec = H2H_DATA[loserId][winnerId] || { w: 0, l: 0, g: 0 };
+                            lRec.l++; lRec.g++;
+                            H2H_DATA[loserId][winnerId] = lRec;
+                        }
+                        // Also update ESPN API fallback cache
                         const sortedIds = [winnerId, loserId].sort();
                         const cacheKey = sortedIds.join('-');
                         if (H2H_CACHE[cacheKey]) {
