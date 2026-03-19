@@ -7164,9 +7164,25 @@
             const seasonYear = new Date().getMonth() >= 10 ? currentYear + 1 : currentYear;
             const currentSeasonStart = `${seasonYear - 1}-11`;
 
-            // Current season records
-            const t1Record = t1._liveRecord || '---';
-            const t2Record = t2._liveRecord || '---';
+            // Current season records — fetch live from ESPN if not yet enriched
+            async function getLiveRecord(team) {
+                if (team._liveRecord) return team._liveRecord;
+                try {
+                    const resp = await fetch(`https://site.api.espn.com/apis/site/v2/sports/basketball/mens-college-basketball/teams/${team.espnId}`);
+                    if (!resp.ok) return '---';
+                    const d = await resp.json();
+                    const stats = d.team?.record?.items?.[0]?.stats || [];
+                    const w = stats.find(s => s.name === 'wins');
+                    const l = stats.find(s => s.name === 'losses');
+                    if (w && l) {
+                        const rec = `${Math.round(w.value)}-${Math.round(l.value)}`;
+                        team._liveRecord = rec;
+                        return rec;
+                    }
+                } catch(e) {}
+                return '---';
+            }
+            const [t1Record, t2Record] = await Promise.all([getLiveRecord(t1), getLiveRecord(t2)]);
 
             // NET ranks
             const t1Net = t1._netRank || null;
