@@ -10877,12 +10877,14 @@
                         html += '<div style="display:flex;align-items:center;gap:0.5rem;padding:0.5rem 0.8rem 0.5rem 3rem;font-size:0.82rem;border-bottom:1px solid #F0EEEA;">';
                         html += '<span style="color:#8892A0;min-width:2.5rem;">' + g.year + '</span>';
                         html += '<span style="background:#F0EEEA;padding:0.1rem 0.4rem;border-radius:0.25rem;font-size:0.7rem;font-weight:600;color:#6B7A8D;min-width:3rem;text-align:center;">' + pairingLabel + '</span>';
-                        const upsetLink = '#upsets/' + g.pairing;
+                        const _winSlug = teamSlugFromName(isVictim ? oppName : team);
+                        const _losSlug = teamSlugFromName(isVictim ? team : oppName);
+                        const gameLink = '#game/' + g.year + '/' + _winSlug + '-vs-' + _losSlug;
                         html += '<span style="flex:1;">';
                         if (isVictim) {
-                            html += 'Lost to <a href="' + upsetLink + '" style="color:#1B2A4A;font-weight:600;text-decoration:none;" onclick="event.stopPropagation();">' + oppName + '</a>';
+                            html += 'Lost to <a href="' + gameLink + '" style="color:#1B2A4A;font-weight:600;text-decoration:none;" onclick="event.stopPropagation();">' + oppName + '</a>';
                         } else {
-                            html += 'Beat <a href="' + upsetLink + '" style="color:#1B2A4A;font-weight:600;text-decoration:none;" onclick="event.stopPropagation();">' + oppName + '</a>';
+                            html += 'Beat <a href="' + gameLink + '" style="color:#1B2A4A;font-weight:600;text-decoration:none;" onclick="event.stopPropagation();">' + oppName + '</a>';
                         }
                         html += '</span>';
                         if (g.score) html += '<span style="font-weight:600;color:#1B2A4A;">' + g.score + '</span>';
