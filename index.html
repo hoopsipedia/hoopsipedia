@@ -12114,13 +12114,23 @@
             // College basketball season spans two calendar years; ESPN uses the later year
             const season = month >= 10 ? year + 1 : year;
 
+            // Helper: check if two date strings are within 1 day (ESPN uses UTC, our data uses ET)
+            function datesMatch(espnDate, localDate) {
+                if (espnDate === localDate) return true;
+                const d = new Date(localDate + 'T12:00:00');
+                const prev = new Date(d); prev.setDate(prev.getDate() - 1);
+                const next = new Date(d); next.setDate(next.getDate() + 1);
+                const prevStr = prev.toISOString().substring(0, 10);
+                const nextStr = next.toISOString().substring(0, 10);
+                return espnDate === prevStr || espnDate === nextStr;
+            }
+
             const schedule = await fetchH2HSchedule(t1EspnId, season);
             if (schedule && schedule.events) {
+                // First pass: exact date + opponent match
                 for (const evt of schedule.events) {
-                    // Match by date
                     const evtDate = evt.date ? evt.date.substring(0, 10) : '';
-                    if (evtDate === dateStr) {
-                        // Verify opponent
+                    if (datesMatch(evtDate, dateStr)) {
                         const comp = evt.competitions && evt.competitions[0];
                         if (comp && comp.competitors) {
                             const hasOpp = comp.competitors.some(c => String(c.id) === String(t2EspnId));
@@ -12128,10 +12138,10 @@
                         }
                     }
                 }
-                // Fallback: match by date only (opponent ID might differ)
+                // Fallback: date match only (opponent ID might differ)
                 for (const evt of schedule.events) {
                     const evtDate = evt.date ? evt.date.substring(0, 10) : '';
-                    if (evtDate === dateStr) return evt.id;
+                    if (datesMatch(evtDate, dateStr)) return evt.id;
                 }
             }
 
