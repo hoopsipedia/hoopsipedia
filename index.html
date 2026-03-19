@@ -6251,10 +6251,10 @@
             if (!grid) { console.warn('gamesGrid not found'); return; }
             grid.innerHTML = renderGameCardsSkeleton(6);
 
-            // Fetch yesterday + today + upcoming days (yesterday catches recently finished games)
+            // Fetch last 3 days + today + upcoming days (covers First Four results through Round 1)
             const today = new Date();
             const urls = [];
-            for (let i = -1; i < 7; i++) {
+            for (let i = -3; i < 7; i++) {
                 const d = new Date(today);
                 d.setDate(d.getDate() + i);
                 const dateStr = d.toISOString().split('T')[0].replace(/-/g, '');
