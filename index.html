@@ -6715,6 +6715,48 @@
                                 var sc1 = team1.score, sc2 = team2.score;
                                 var statusDesc = comp.status?.type?.description || '';
                                 var live = statusDesc === 'In Progress' || statusDesc === 'Halftime';
+                                var isFinal = statusDesc === 'Final';
+
+                                // POST-GAME: replace seed context with milestone/result
+                                if (isFinal) {
+                                    var winner = comp.competitors?.find(c => c.winner);
+                                    var loser = comp.competitors?.find(c => !c.winner);
+                                    if (winner && loser) {
+                                        var wId = String(winner.team?.id);
+                                        var wSeed = parseInt(winner.curatedRank?.current) || 0;
+                                        var lSeed = parseInt(loser.curatedRank?.current) || 0;
+                                        var wName = winner.team?.shortDisplayName || winner.team?.displayName || '';
+                                        var lName = loser.team?.shortDisplayName || loser.team?.displayName || '';
+                                        var seedDiff = Math.abs(wSeed - lSeed);
+
+                                        // Milestone: first ever tournament win
+                                        if (typeof ZERO_TOURNEY_WIN_TEAMS !== 'undefined' && ZERO_TOURNEY_WIN_TEAMS[wId]) {
+                                            return '<div class="game-context-badge upset-alert" style="background:#FFF3E0;border-color:#F9A825;color:#E65100;">🎉 ' + wName + '\'s first ever NCAA Tournament win!</div>';
+                                        }
+                                        // Milestone: first ever tournament appearance win
+                                        if (typeof FIRST_TOURNEY_TEAMS !== 'undefined' && FIRST_TOURNEY_TEAMS[wId]) {
+                                            return '<div class="game-context-badge upset-alert" style="background:#FFF3E0;border-color:#F9A825;color:#E65100;">⭐ ' + wName + ' wins in their first ever tournament!</div>';
+                                        }
+                                        // Upset complete
+                                        if (wSeed > lSeed && seedDiff >= 5) {
+                                            var pKey2 = Math.min(wSeed,lSeed)+'v'+Math.max(wSeed,lSeed);
+                                            return '<div class="game-context-badge upset-alert clickable" onclick="event.stopPropagation(); window.location.hash=\'#upsets/'+pKey2+'\';" title="Click to explore upset history">🚨 Upset! ' + wSeed + '-seed ' + wName + ' stuns ' + lSeed + '-seed ' + lName + '</div>';
+                                        }
+                                        // Close game (decided by 5 or fewer)
+                                        var margin = Math.abs(parseInt(winner.score) - parseInt(loser.score));
+                                        if (margin <= 5) {
+                                            return '<div class="game-context-badge" style="background:#E8F5E9;border-color:#66BB6A;color:#2E7D32;">🔥 ' + wName + ' survives by ' + margin + '!</div>';
+                                        }
+                                        // Blowout (margin >= 20)
+                                        if (margin >= 20) {
+                                            return '<div class="game-context-badge">' + wName + ' dominates by ' + margin + '</div>';
+                                        }
+                                        // Default final: just show winner
+                                        return '<div class="game-context-badge">' + wName + ' advances</div>';
+                                    }
+                                }
+
+                                // PRE-GAME & LIVE: seed context and upset alerts
                                 var ctx = getUpsetAlertText(s1, sc1, s2, sc2, live) || getSeedContextText(s1, s2);
                                 if (!ctx) return '';
                                 var cls = 'game-context-badge clickable' + (ctx.alert ? ' upset-alert' : '');
