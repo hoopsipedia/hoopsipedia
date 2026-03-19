@@ -11204,9 +11204,15 @@
                 <div style="display:flex;justify-content:center;gap:0.5rem;margin-bottom:1rem;">
                     <button class="upsets-era-btn ${!window._upsetsTeamView ? 'active' : ''}" onclick="window._upsetsTeamView=false; renderUpsets();" style="font-size:0.85rem;padding:0.5rem 1.2rem;">By Seed Pairing</button>
                     <button class="upsets-era-btn ${window._upsetsTeamView ? 'active' : ''}" onclick="window._upsetsTeamView=true; renderUpsets();" style="font-size:0.85rem;padding:0.5rem 1.2rem;">By Team</button>
-                </div>
-                ${window._upsetsTeamView ? renderUpsetTeamLeaderboards() : ''}
-                ${window._upsetsTeamView ? '' : `
+                </div>`;
+
+            if (window._upsetsTeamView) {
+                html += renderUpsetTeamLeaderboards();
+                content.innerHTML = html;
+                return;
+            }
+
+            html += `
                 <div class="upsets-era-filters">
                     <button class="upsets-era-btn ${upsetsCurrentEra === 'all' ? 'active' : ''}" onclick="upsetsCurrentEra='all'; upsetsCurrentPairing=null; renderUpsets();">All Eras</button>
                     ${Object.entries(UPSET_ERAS).filter(([k]) => k !== 'all').map(([k, v]) => `<button class="upsets-era-btn ${upsetsCurrentEra === k ? 'active' : ''}" onclick="upsetsCurrentEra='${k}'; upsetsCurrentPairing=null; renderUpsets();">${v.label}</button>`).join('')}
@@ -11235,7 +11241,7 @@
             }
 
             html += `</div>
-                <div id="upsetsDetailContainer"></div>`}`;  // closes the "By Seed Pairing" conditional
+                <div id="upsetsDetailContainer"></div>`;
 
             content.innerHTML = html;
 
