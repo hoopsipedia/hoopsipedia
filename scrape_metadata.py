@@ -233,23 +233,29 @@ def main():
 
             time.sleep(3.5)
 
-        # Periodic save every 20 teams
+        # Periodic save every 20 teams (with protection restore)
         if (i + 1) % 20 == 0:
             print(f"\n--- Saving progress ({i+1} teams processed) ---")
+            # Restore protected records before every save
+            for tid, rec in protected.items():
+                key = str(tid)
+                if key in h:
+                    if 'w' in rec: h[key][4] = rec['w']
+                    if 'l' in rec: h[key][5] = rec['l']
             with open('data.json', 'w') as f:
                 json.dump(data, f, separators=(',', ':'))
 
-    # Restore protected records (ATW=index 4, ATL=index 5)
+    # Restore protected records (W=index 4, L=index 5)
     if protected:
-        print("\n--- Restoring protected records (ATW/ATL) ---")
+        print("\n--- Restoring protected records (W/L) ---")
         for team_id, rec in protected.items():
-            int_id = int(team_id) if team_id.isdigit() else team_id
-            key = int_id if int_id in h else str(int_id)
+            key = str(team_id)
             if key in h:
-                if 'ATW' in rec:
-                    h[key][4] = rec['ATW']
-                if 'ATL' in rec:
-                    h[key][5] = rec['ATL']
+                if 'w' in rec:
+                    h[key][4] = rec['w']
+                    print(f"  Restored {rec.get('name', key)} W={rec['w']}")
+                if 'l' in rec:
+                    h[key][5] = rec['l']
 
     # Save final data
     with open('data.json', 'w') as f:
