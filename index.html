@@ -4899,6 +4899,138 @@
 
         // Track which upsets we've already triggered takeover for
         let _takeoverTriggered = new Set();
+        let _milestoneTriggered = new Set();
+
+        // ── MILESTONE ALERT SYSTEM ──
+        // Detects historic firsts and notable achievements when games go Final
+
+        // Teams with ZERO NCAA tournament wins entering 2026 tournament
+        // Source: verified against NCAA tournament records
+        const ZERO_TOURNEY_WIN_TEAMS = {
+            '158': 'Nebraska Cornhuskers',       // 0-7 all-time in NCAA tourney
+            '2449': 'North Dakota State Bison',   // 0-2
+            '2460': 'Northern Iowa Panthers',     // 0-3 (debatable - check)
+            '2856': 'California Baptist Lancers', // First ever tournament
+            '338': 'Kennesaw State Owls',         // 0-1
+            '2272': 'High Point Panthers',        // First ever tournament
+            '70': 'Idaho Vandals',                // First in decades
+            '2275': 'Hofstra Pride',              // 0-2
+        };
+
+        // Teams making their first ever NCAA tournament appearance in 2026
+        const FIRST_TOURNEY_TEAMS = {
+            '2856': 'California Baptist Lancers',
+            '2272': 'High Point Panthers',
+        };
+
+        function checkMilestone(comp, winner, loser, winnerScore, loserScore, gameId) {
+            if (_milestoneTriggered.has(gameId)) return;
+
+            const notes = comp.notes?.[0]?.headline || '';
+            const isTournament = notes.toLowerCase().includes('tournament') ||
+                                 notes.toLowerCase().includes('ncaa') ||
+                                 notes.toLowerCase().includes('round') ||
+                                 notes.toLowerCase().includes('sweet') ||
+                                 notes.toLowerCase().includes('elite') ||
+                                 (comp.series?.type === 'tournament');
+            if (!isTournament) return;
+
+            const winnerId = String(winner.team?.id);
+            const winnerName = winner.team?.displayName || 'Unknown';
+            const winnerShort = winner.team?.shortDisplayName || winnerName;
+            const winnerColor = winner.team?.color || '';
+            const winnerLogo = winner.team?.logo || getLogoUrl(winnerId);
+
+            let milestone = null;
+
+            // Check: First ever tournament win
+            if (ZERO_TOURNEY_WIN_TEAMS[winnerId]) {
+                milestone = {
+                    icon: '🎉',
+                    headline: 'HISTORIC FIRST',
+                    message: `${winnerName} wins their first ever NCAA Tournament game!`,
+                    detail: `${winnerShort} ${winnerScore}, ${loser.team?.shortDisplayName || 'Opponent'} ${loserScore}`,
+                    color: winnerColor ? '#' + winnerColor.replace('#', '') : '#C9A86C'
+                };
+            }
+
+            // Check: First ever tournament appearance AND win
+            if (FIRST_TOURNEY_TEAMS[winnerId]) {
+                milestone = {
+                    icon: '⭐',
+                    headline: 'MAKING HISTORY',
+                    message: `${winnerName} wins in their first ever NCAA Tournament appearance!`,
+                    detail: `${winnerShort} ${winnerScore}, ${loser.team?.shortDisplayName || 'Opponent'} ${loserScore}`,
+                    color: winnerColor ? '#' + winnerColor.replace('#', '') : '#C9A86C'
+                };
+            }
+
+            if (!milestone) return;
+
+            _milestoneTriggered.add(gameId);
+
+            // Store in localStorage so it persists across page loads
+            const milestoneData = {
+                ...milestone,
+                espnId: winnerId,
+                logo: winnerLogo,
+                time: Date.now()
+            };
+            localStorage.setItem('milestoneBanner', JSON.stringify(milestoneData));
+            showMilestoneBanner(milestoneData);
+        }
+
+        function showMilestoneBanner(data) {
+            // Remove existing
+            const existing = document.getElementById('milestoneBanner');
+            if (existing) existing.remove();
+
+            const banner = document.createElement('div');
+            banner.id = 'milestoneBanner';
+            banner.style.cssText = `
+                background: linear-gradient(135deg, ${data.color || '#C9A86C'}, ${data.color ? data.color + 'cc' : '#B8941F'});
+                color: #fff; padding: 0.6rem 1rem; display: flex; align-items: center; gap: 0.75rem;
+                font-size: 0.85rem; position: relative; z-index: 100; justify-content: center;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.15); animation: takeoverSlideIn 0.5s ease-out;
+            `;
+
+            const logoImg = data.logo ? `<img src="${data.logo}" alt="" style="width:28px;height:28px;object-fit:contain;" onerror="this.style.display='none'">` : '';
+
+            banner.innerHTML = `
+                ${logoImg}
+                <span style="font-weight:800;letter-spacing:0.05em;">${data.icon} ${data.headline}</span>
+                <span>${data.message}</span>
+                <span style="opacity:0.8;font-size:0.8rem;">${data.detail}</span>
+                <button onclick="dismissMilestone()" style="position:absolute;right:0.75rem;background:none;border:none;color:#fff;font-size:1.2rem;cursor:pointer;opacity:0.7;" aria-label="Dismiss">&times;</button>
+            `;
+
+            const nav = document.querySelector('nav');
+            if (nav && nav.parentNode) {
+                nav.parentNode.insertBefore(banner, nav);
+            }
+        }
+
+        function dismissMilestone() {
+            localStorage.removeItem('milestoneBanner');
+            const banner = document.getElementById('milestoneBanner');
+            if (banner) banner.remove();
+        }
+
+        // Restore milestone banner on page load if recent (within 2 hours)
+        function checkMilestoneBanner() {
+            const stored = localStorage.getItem('milestoneBanner');
+            if (!stored) return;
+            try {
+                const data = JSON.parse(stored);
+                if (Date.now() - data.time > 7200000) { // 2 hours
+                    localStorage.removeItem('milestoneBanner');
+                    return;
+                }
+                showMilestoneBanner(data);
+            } catch(e) {
+                localStorage.removeItem('milestoneBanner');
+            }
+        }
 
         function checkForUpsetTakeoverInScoreboard() {
             // This runs as part of checkUpsetWatch or checkForFinalGames
@@ -4928,6 +5060,7 @@
             try { startLiveGameTracker(); } catch(e) { console.error('Live game tracker error:', e); }
             try { startUpsetWatch(); } catch(e) { console.error('Upset Watch error:', e); }
             try { checkUpsetTakeover(); } catch(e) { console.error('Upset takeover restore error:', e); }
+            try { checkMilestoneBanner(); } catch(e) { console.error('Milestone banner restore error:', e); }
         }
 
         /**
@@ -5108,6 +5241,9 @@
                             }
                         }
                     }
+
+                    // Check for historic milestones
+                    checkMilestone(comp, winner, loser, winnerScore, loserScore, gameId);
 
                     updated = true;
                     console.log(`Game Final: ${winner.team?.displayName} ${winnerScore}, ${loser.team?.displayName} ${loserScore} — records updated`);
