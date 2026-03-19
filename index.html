@@ -10836,34 +10836,44 @@
         }
 
         function getMatchupPreviewFact(id1, name1, id2, name2) {
-            // Use H2H data for a compelling matchup fact
+            // H2H_DATA format: H2H_DATA[teamId][oppId] = { w, l, g }
             if (typeof H2H_DATA !== 'undefined' && H2H_DATA) {
-                const key1 = id1 + '_' + id2;
-                const key2 = id2 + '_' + id1;
-                const h2h = H2H_DATA[key1] || H2H_DATA[key2];
-                if (h2h) {
-                    const w = h2h.w || 0;
-                    const l = h2h.l || 0;
-                    const total = w + l;
-                    // If key was reversed, flip w/l
-                    const isReversed = !!H2H_DATA[key2] && !H2H_DATA[key1];
-                    const wins1 = isReversed ? l : w;
-                    const wins2 = isReversed ? w : l;
-                    if (total > 0) {
-                        if (total === 1) {
-                            const lastWinner = wins1 > 0 ? name1 : name2;
-                            return lastWinner + ' won their only previous meeting';
-                        }
-                        if (wins1 === 0) return name2 + ' leads all-time ' + wins2 + '-0';
-                        if (wins2 === 0) return name1 + ' leads all-time ' + wins1 + '-0';
-                        const leader = wins1 > wins2 ? name1 : name2;
-                        const leaderW = Math.max(wins1, wins2);
-                        const trailW = Math.min(wins1, wins2);
-                        if (wins1 === wins2) return 'Series tied ' + wins1 + '-' + wins2 + ' all-time';
-                        return leader + ' leads series ' + leaderW + '-' + trailW;
+                const rec = (H2H_DATA[id1] && H2H_DATA[id1][id2]) ? H2H_DATA[id1][id2] : null;
+                if (rec && rec.g > 0) {
+                    const wins1 = rec.w;
+                    const wins2 = rec.l;
+                    const total = rec.g;
+                    if (total === 1) {
+                        const lastWinner = wins1 > 0 ? name1 : name2;
+                        return lastWinner + ' won their only previous meeting';
                     }
+                    if (wins1 === wins2) return 'Series tied ' + wins1 + '-' + wins2 + ' all-time (' + total + ' games)';
+                    if (wins1 === 0) return name2 + ' leads all-time ' + wins2 + '-0';
+                    if (wins2 === 0) return name1 + ' leads all-time ' + wins1 + '-0';
+                    const leader = wins1 > wins2 ? name1 : name2;
+                    const leaderW = Math.max(wins1, wins2);
+                    const trailW = Math.min(wins1, wins2);
+                    return leader + ' leads series ' + leaderW + '-' + trailW;
                 }
-                // No H2H history
+                // Check reverse direction too
+                const rec2 = (H2H_DATA[id2] && H2H_DATA[id2][id1]) ? H2H_DATA[id2][id1] : null;
+                if (rec2 && rec2.g > 0) {
+                    const wins2 = rec2.w;
+                    const wins1 = rec2.l;
+                    const total = rec2.g;
+                    if (total === 1) {
+                        const lastWinner = wins1 > 0 ? name1 : name2;
+                        return lastWinner + ' won their only previous meeting';
+                    }
+                    if (wins1 === wins2) return 'Series tied ' + wins1 + '-' + wins2 + ' all-time (' + total + ' games)';
+                    if (wins1 === 0) return name2 + ' leads all-time ' + wins2 + '-0';
+                    if (wins2 === 0) return name1 + ' leads all-time ' + wins1 + '-0';
+                    const leader = wins1 > wins2 ? name1 : name2;
+                    const leaderW = Math.max(wins1, wins2);
+                    const trailW = Math.min(wins1, wins2);
+                    return leader + ' leads series ' + leaderW + '-' + trailW;
+                }
+                // No H2H history found
                 return 'First-ever meeting between ' + name1 + ' and ' + name2;
             }
 
