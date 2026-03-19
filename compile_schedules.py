@@ -38,13 +38,13 @@ class ScheduleCompiler:
     """Compiler for game-by-game schedule data from Sports Reference."""
 
     BASE_URL = "https://www.sports-reference.com/cbb/schools"
-    MIN_REQUEST_INTERVAL = 6.0
+    MIN_REQUEST_INTERVAL = 14.0
     DATA_DIR = Path(__file__).parent
 
     def __init__(self):
         self.session = requests.Session()
         self.session.headers.update({
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+            'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3 Safari/605.1.15'
         })
         self.slug_mapping = self._load_json('slug_mapping.json')
         self.espn_to_sr = self._load_json('espn_to_sr.json')

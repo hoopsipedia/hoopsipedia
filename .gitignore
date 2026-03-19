@@ -27,3 +27,12 @@ games.json
 
 # Local backups
 backups/
+
+# Runtime logs
+sync_log.txt
+boxscore_scrape_log.txt
+
+# Intermediate scrape data
+scraped_boxscores_raw.json
+boxscore_urls.json
+games_to_scrape.json
