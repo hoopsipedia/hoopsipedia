@@ -3136,6 +3136,9 @@
             font-weight: 600;
             color: #2C3345;
             white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 45%;
         }
         .upset-watch-team img {
             width: 22px;
@@ -3152,6 +3155,8 @@
             font-weight: 700;
             color: #1B2A4A;
             white-space: nowrap;
+            padding: 0 0.4rem;
+            flex-shrink: 0;
         }
         .upset-watch-score .leading { color: #D4512B; }
         .upset-complete .upset-watch-score .leading { color: #2E7D32; }
@@ -4152,8 +4157,10 @@
             }
         }
 
-        function getUpsetAlertText(seed1, score1, seed2, score2, isLive) {
+        function getUpsetAlertText(seed1, score1, seed2, score2, isLive, period) {
             if (!isLive || !seed1 || !seed2) return null;
+            // Only show upset alerts in 2nd half or later
+            if (period !== undefined && period < 2) return null;
             var s1 = parseInt(seed1), s2 = parseInt(seed2);
             if (isNaN(s1) || isNaN(s2) || s1 === s2) return null;
             var sc1 = parseInt(score1), sc2 = parseInt(score2);
@@ -6826,8 +6833,9 @@
                                     }
                                 }
 
-                                // PRE-GAME & LIVE: upset alerts, then personalized team context, then generic seed stats
-                                var ctx = getUpsetAlertText(s1, sc1, s2, sc2, live);
+                                // PRE-GAME & LIVE: upset alerts (2nd half only), then personalized team context, then generic seed stats
+                                var gamePeriod = comp.status?.period || 0;
+                                var ctx = getUpsetAlertText(s1, sc1, s2, sc2, live, gamePeriod);
                                 if (!ctx) {
                                     // Try personalized upset-prone/cinderella context
                                     ctx = getPersonalizedUpsetContext(team1, team2, s1, s2);
