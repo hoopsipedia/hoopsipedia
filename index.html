@@ -10802,6 +10802,86 @@
             });
         }
 
+        function getBracketWinnerFact(winner, loser) {
+            const wId = String(winner.team?.id || '');
+            const lId = String(loser.team?.id || '');
+            const wSeed = winner.curatedRank?.current || 99;
+            const lSeed = loser.curatedRank?.current || 99;
+            const wScore = parseInt(winner.score) || 0;
+            const lScore = parseInt(loser.score) || 0;
+            const margin = wScore - lScore;
+            const wTeam = H[wId];
+            const lTeam = H[lId];
+            const wName = winner.team?.shortDisplayName || winner.team?.nickname || '';
+
+            // Check tournament history from SEASONS_DATA
+            if (SEASONS_DATA && wTeam) {
+                const seasons = SEASONS_DATA[wId]?.seasons || [];
+                const tourneyYears = seasons.filter(s => s.ncaaTourney || s.seed);
+                const priorYears = tourneyYears.filter(s => s.year < 2026);
+                // Count prior tournament wins (reached R32+ means at least 1 win)
+                const priorWins = priorYears.filter(s => {
+                    const r = mapTourneyResult(s.ncaaTourney);
+                    return ['R32', 'Sweet 16', 'Elite Eight', 'Final Four', 'Runner-Up', 'Champion'].includes(r);
+                });
+
+                // First tournament win in program history
+                if (priorYears.length > 0 && priorWins.length === 0) {
+                    return `First NCAA Tournament win in ${wName} history`;
+                }
+
+                // First tournament appearance
+                if (priorYears.length === 0 && wTeam[11] <= 1) {
+                    return `${wName}'s first-ever NCAA Tournament game - and a win`;
+                }
+
+                // Long drought — first tourney win in 10+ years
+                if (priorWins.length > 0) {
+                    const lastWinYear = Math.max(...priorWins.map(s => s.year));
+                    if (2026 - lastWinYear >= 10) {
+                        return `${wName}'s first tournament win since ${lastWinYear}`;
+                    }
+                }
+
+                // Back in the tournament after long absence
+                if (priorYears.length > 0) {
+                    const lastAppear = Math.max(...priorYears.map(s => s.year));
+                    if (2026 - lastAppear >= 15) {
+                        return `${wName} back in the tournament after ${2026 - lastAppear} years`;
+                    }
+                }
+            }
+
+            // Upset fact
+            if (wSeed > lSeed && wSeed - lSeed >= 3) {
+                return `${wSeed}-seed ${wName} takes down ${lSeed}-seed`;
+            }
+
+            // Program prestige facts from H data
+            if (wTeam) {
+                const nc = wTeam[6] || 0;
+                const ff = wTeam[8] || 0;
+                const champYears = wTeam[7] || [];
+                const isDefending = champYears.includes(2025);
+                if (nc >= 3) return `${nc}-time national champion advances`;
+                if (isDefending) return `Defending champion ${wName} moves on`;
+                if (nc > 0) return `${nc}-time champion ${wName} advances`;
+            }
+
+            // Blowout
+            if (margin >= 25) return `${wName} cruises with a ${margin}-point blowout`;
+            if (margin >= 15) return `${wName} rolls by ${margin}`;
+
+            // Close game
+            if (margin <= 2) return `${wName} survives by ${margin} in a thriller`;
+            if (margin <= 4) return `${wName} holds on in a ${margin}-point nail-biter`;
+
+            // Dominant seed
+            if (wSeed === 1) return `Top-seeded ${wName} advances`;
+
+            return null;
+        }
+
         function createMatchupCard(event) {
             const comp = event.competitions[0];
             const competitors = comp.competitors || [];
@@ -10897,6 +10977,22 @@
                         badge.onclick = function(e) { e.stopPropagation(); window.location.hash = '#upsets/' + pairingKey; };
                     }
                     card.appendChild(badge);
+                }
+            }
+
+            // Winner fun fact for completed games
+            if (isFinal && competitors.length === 2) {
+                const winner = competitors.find(c => c.winner);
+                const loser = competitors.find(c => !c.winner);
+                if (winner && loser) {
+                    const fact = getBracketWinnerFact(winner, loser);
+                    if (fact) {
+                        const factEl = document.createElement('div');
+                        factEl.className = 'seed-context-badge';
+                        factEl.style.cssText = 'font-style:italic; color:#5A6578; font-size:0.68rem; line-height:1.3;';
+                        factEl.textContent = fact;
+                        card.appendChild(factEl);
+                    }
                 }
             }
 
