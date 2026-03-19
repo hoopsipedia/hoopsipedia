@@ -12043,6 +12043,12 @@
             const lines = [];
             const seedDiff = winnerSeed - loserSeed;
 
+            // If we have specific notes for this game, lead with those
+            if (notes) {
+                lines.push(notes);
+                return lines;
+            }
+
             if (winnerSeed === 16 && loserSeed === 1) {
                 // Count how many 16-over-1 upsets happened up to this year
                 const sixteenOverOne = [2018, 2023];
@@ -12074,9 +12080,7 @@
                 lines.push(`A ${winnerSeed}-seed beating a ${loserSeed}-seed happens about ${pct}% of the time, but each one still stings.`);
             }
 
-            if (notes) {
-                lines.push(notes);
-            }
+            // Notes already handled at top — this is fallback for games without notes
 
             return lines;
         }
