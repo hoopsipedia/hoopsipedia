@@ -10701,7 +10701,18 @@
 
                 if (espnGame) {
                     // Use ESPN's real R32 game data (scores, status, etc.)
+                    // But enforce correct bracket order: feederA winner on top, feederB on bottom
                     usedEspnR32.add(espnGame);
+                    const comp = espnGame.competitions[0];
+                    if (comp.competitors.length === 2 && winnerA && winnerB) {
+                        const idA = String(winnerA.team?.id || '');
+                        const idB = String(winnerB.team?.id || '');
+                        const c0id = String(comp.competitors[0].team?.id || '');
+                        // If feederA's winner is in position 1 (bottom), swap so it's on top
+                        if (c0id === idB) {
+                            comp.competitors.reverse();
+                        }
+                    }
                     builtR32.push(espnGame);
                 } else {
                     // Generate a virtual R32 matchup from R64 winners
