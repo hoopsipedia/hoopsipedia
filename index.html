@@ -8471,13 +8471,24 @@
                     quadRecord: { q1w: d.q1w, q1l: d.q1l, q2w: d.q2w, q2l: d.q2l, q3w: d.q3w, q3l: d.q3l, q4w: d.q4w, q4l: d.q4l }
                 }));
                 entries.sort((a, b) => a.rank - b.rank);
-                // Parse record from allTeamsData
+                // Get current season record — priority: live ESPN > NCAA stored > quad sum
                 entries.forEach(e => {
                     const t = allTeamsData.find(at => at.espnId === e.id);
+                    const ncaaEntry = ncaaNet[e.id] || {};
                     if (t && t._liveRecord) {
+                        // Best: live record from ESPN (most current)
                         const parts = t._liveRecord.split('-');
                         e.wins = parseInt(parts[0]) || 0;
                         e.losses = parseInt(parts[1]) || 0;
+                    } else if (ncaaEntry.w > 0 || ncaaEntry.l > 0) {
+                        // Second: stored NCAA record
+                        e.wins = ncaaEntry.w || 0;
+                        e.losses = ncaaEntry.l || 0;
+                    } else {
+                        // Fallback: quad record sum
+                        const qr = e.quadRecord || {};
+                        e.wins = (qr.q1w||0)+(qr.q2w||0)+(qr.q3w||0)+(qr.q4w||0);
+                        e.losses = (qr.q1l||0)+(qr.q2l||0)+(qr.q3l||0)+(qr.q4l||0);
                     }
                     e.winPct = (e.wins + e.losses > 0) ? e.wins / (e.wins + e.losses) : 0;
                     e.record = `${e.wins}-${e.losses}`;
