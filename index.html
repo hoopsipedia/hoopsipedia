@@ -4302,13 +4302,15 @@
                         const extraW = currentW - staticCurrentW;
                         const extraL = currentL - staticCurrentL;
 
+                        // Always set live record so This Season tab can display it
+                        team._liveRecord = `${currentW}-${currentL}`;
+
                         if (extraW !== 0 || extraL !== 0) {
                             team.allTimeW += extraW;
                             team.allTimeL += extraL;
                             team.winPct = team.allTimeW + team.allTimeL > 0
                                 ? parseFloat(((team.allTimeW / (team.allTimeW + team.allTimeL)) * 100).toFixed(1))
                                 : 0;
-                            team._liveRecord = `${currentW}-${currentL}`;
                             updated++;
                         }
                     });
@@ -7149,6 +7151,11 @@
             const panel = document.getElementById('thisSeasonPanel');
             if (!panel) return;
 
+            // Ensure NET rankings are computed (needed for quad records)
+            if (!t1._quadRecord || !t2._quadRecord) {
+                try { await computeNetRankings(); } catch(e) {}
+            }
+
             const t1Color = t1.color || '#1B2A4A';
             const t2Color = t2.color || '#C9A86C';
 
@@ -8488,10 +8495,28 @@
                 }
             } catch(e) { console.log('BPI data not available'); }
 
+            // Conference strength tiers for NET proxy (avg NET rank of top teams)
+            const confStrength = {
+                'Big Ten': 60, 'Big 12': 58, 'SEC': 56, 'ACC': 55, 'Big East': 50,
+                'AAC': 40, 'MWC': 38, 'WCC': 36, 'A-10': 34, 'MVC': 30,
+                'CAA': 28, 'MAC': 26, 'Sun Belt': 24, 'CUSA': 22, 'Horizon League': 22,
+                'Ivy League': 20, 'MAAC': 20, 'Patriot League': 18, 'Southern': 18,
+                'Ohio Valley': 16, 'Big South': 16, 'ASUN': 20, 'Summit League': 16,
+                'Big Sky': 16, 'Big West': 18, 'WAC': 16, 'Southland': 14,
+                'America East': 16, 'NEC': 12, 'SWAC': 10, 'MEAC': 10
+            };
             const teamScores = [];
             for (const id of Object.keys(teamMap)) {
                 const t = teamMap[id]; const bpi = bpiMap[id];
-                let score = (bpi && bpi.bpiRank <= 25) ? (1000 - bpi.bpiRank) : ((t.winPct * 500) + ((t.ppg - t.oppg) * 2));
+                let score;
+                if (bpi && bpi.bpiRank && bpi.bpiRank <= 400) {
+                    // Use BPI rank directly when available
+                    score = 1000 - bpi.bpiRank;
+                } else {
+                    // Proxy: win% + scoring margin + conference strength bonus
+                    const confBonus = confStrength[t.conf] || 14;
+                    score = (t.winPct * 400) + ((t.ppg - t.oppg) * 2) + (confBonus * 3);
+                }
                 teamScores.push({ id, score, ...t, bpi: bpi || null });
             }
             teamScores.sort((a, b) => b.score - a.score);
@@ -11297,7 +11322,7 @@
                 loser: 'Virginia used the historic loss as fuel, returning the following year to win the 2019 National Championship — completing one of the greatest redemption arcs in sports history.'
             },
             '2023/fairleigh-dickinson-knights-vs-purdue-boilermakers': {
-                winner: 'FDU fell to Florida Atlantic 78-70 in the second round. The program was reclassified from Division I shortly after.',
+                winner: 'FDU fell to Florida Atlantic 78-70 in the second round but cemented their place in tournament lore as only the second 16-seed to topple a 1.',
                 loser: 'Purdue returned the next season as a 1-seed again in 2024 and reached the National Championship game, losing to UConn.'
             },
             '2022/saint-peter-s-peacocks-vs-kentucky-wildcats': {
