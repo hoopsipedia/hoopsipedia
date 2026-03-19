@@ -459,6 +459,92 @@
         .comp-tab:hover { color: #2C3345; }
         .comp-tab.active { color: #1B2A4A; border-bottom-color: #C9A86C; }
 
+        /* ── Season Toggle (This Season / All-Time History) ── */
+        .season-toggle-container {
+            display: flex; gap: 0.5rem; justify-content: center; margin-bottom: 1.5rem;
+        }
+        .season-toggle-btn {
+            padding: 0.75rem 2rem; border: 2px solid #1B2A4A; border-radius: 6px;
+            font-size: 1.05rem; font-weight: 700; cursor: pointer; transition: all 0.2s ease;
+            letter-spacing: 0.03em; background: #FAF8F4; color: #1B2A4A;
+        }
+        .season-toggle-btn:hover { background: #EDE9E0; }
+        .season-toggle-btn.active {
+            background: #1B2A4A; color: #C9A86C; border-color: #1B2A4A;
+        }
+        .season-toggle-btn.active:hover { background: #243560; }
+
+        /* This Season panel */
+        .this-season-panel { padding: 0; }
+        .this-season-records {
+            display: flex; justify-content: center; gap: 2rem; margin-bottom: 1.5rem; flex-wrap: wrap;
+        }
+        .this-season-team-block {
+            flex: 1; min-width: 200px; max-width: 340px; text-align: center;
+            background: #FAFAF7; border-radius: 10px; padding: 1.25rem 1rem;
+            border: 1px solid #E8E2D6;
+        }
+        .this-season-team-name {
+            font-size: 0.85rem; font-weight: 700; color: #5A6578; text-transform: uppercase;
+            letter-spacing: 0.06em; margin-bottom: 0.5rem;
+        }
+        .this-season-record {
+            font-size: 1.8rem; font-weight: 800; color: #1B2A4A; margin-bottom: 0.3rem;
+        }
+        .this-season-conf-record {
+            font-size: 0.85rem; color: #8892A0; font-weight: 600;
+        }
+        .this-season-net-row {
+            display: flex; justify-content: center; gap: 2rem; margin-bottom: 1.5rem; flex-wrap: wrap;
+        }
+        .this-season-net-block {
+            text-align: center;
+        }
+        .this-season-net-label {
+            font-size: 0.75rem; color: #8892A0; font-weight: 600; text-transform: uppercase;
+            letter-spacing: 0.05em; margin-bottom: 0.3rem;
+        }
+        .this-season-section-title {
+            font-size: 1rem; font-weight: 700; color: #1B2A4A; margin: 1.5rem 0 1rem;
+            padding-bottom: 0.4rem; border-bottom: 2px solid #E8E2D6;
+        }
+        .this-season-quad-compare {
+            display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 1.5rem;
+        }
+        .this-season-quad-team {
+            flex: 1; min-width: 200px; max-width: 340px;
+        }
+        .this-season-quad-team h4 {
+            font-size: 0.8rem; font-weight: 700; color: #5A6578; text-transform: uppercase;
+            letter-spacing: 0.05em; margin-bottom: 0.5rem; text-align: center;
+        }
+        .this-season-quad-grid {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 0.4rem;
+        }
+        .this-season-quad-card {
+            background: #FAFAF7; border: 1px solid #E8E2D6; border-radius: 6px;
+            padding: 0.5rem; text-align: center;
+        }
+        .this-season-quad-label {
+            font-size: 0.7rem; font-weight: 700; color: #8892A0; text-transform: uppercase;
+        }
+        .this-season-quad-val {
+            font-size: 1.1rem; font-weight: 800; color: #1B2A4A;
+        }
+        .this-season-h2h-notice {
+            text-align: center; color: #8892A0; font-size: 0.9rem; padding: 1.5rem;
+            background: #FAFAF7; border-radius: 8px; border: 1px solid #E8E2D6;
+        }
+
+        @media (max-width: 600px) {
+            .season-toggle-container { flex-direction: column; }
+            .season-toggle-btn { width: 100%; text-align: center; }
+            .this-season-records { gap: 0.75rem; }
+            .this-season-team-block { min-width: 140px; }
+            .this-season-quad-compare { gap: 0.75rem; }
+            .this-season-quad-team { min-width: 140px; }
+        }
+
         /* ── Rankings Filters ── */
         .filter-buttons { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 1.75rem; }
         .filter-btn {
@@ -3561,6 +3647,31 @@
 
             <div id="upsetWatchContainer" class="upset-watch-container" style="display:none;"></div>
 
+            <div class="games-section" id="gamesSection">
+                <h2 class="section-title" id="gamesTitle">Today's Games</h2>
+                <div class="games-filters" id="gamesFilters" style="display:none;">
+                    <div class="games-filter-tabs">
+                        <button class="games-filter-btn active" data-filter="ncaa">NCAA Tournament</button>
+                        <button class="games-filter-btn" data-filter="nit">NIT</button>
+                        <button class="games-filter-btn" data-filter="all">All Games</button>
+                    </div>
+                    <select class="games-conf-filter" id="gamesConfFilter">
+                        <option value="">All Conferences</option>
+                    </select>
+                </div>
+                <div class="games-grid" id="gamesGrid"></div>
+            </div>
+
+            <div class="otd-widget" id="otdWidget" style="display:none;">
+                <div class="otd-header">
+                    <span class="otd-badge">ON THIS DAY</span>
+                    <span class="otd-date" id="otdDate"></span>
+                </div>
+                <button class="otd-nav-btn" id="otdPrev" aria-label="Previous fact">&#8249;</button>
+                <div class="otd-content" id="otdContent"></div>
+                <button class="otd-nav-btn" id="otdNext" aria-label="Next fact">&#8250;</button>
+            </div>
+
             <div class="compare-section">
                 <h2 style="text-align: center; margin-bottom: 0.5rem; color: #C9A86C; font-size: 1.4rem; font-weight: 800; letter-spacing: 0.05em;">Compare Programs</h2>
                 <p style="text-align: center; color: rgba(255,255,255,0.6); font-size: 0.8rem; margin-bottom: 1.5rem;">Pick any two teams and see how they stack up across 80+ years of history</p>
@@ -3585,31 +3696,6 @@
 
                     <button class="compare-button" id="compareButton" disabled>Compare</button>
                 </div>
-            </div>
-
-            <div class="otd-widget" id="otdWidget" style="display:none;">
-                <div class="otd-header">
-                    <span class="otd-badge">ON THIS DAY</span>
-                    <span class="otd-date" id="otdDate"></span>
-                </div>
-                <button class="otd-nav-btn" id="otdPrev" aria-label="Previous fact">&#8249;</button>
-                <div class="otd-content" id="otdContent"></div>
-                <button class="otd-nav-btn" id="otdNext" aria-label="Next fact">&#8250;</button>
-            </div>
-
-            <div class="games-section" id="gamesSection">
-                <h2 class="section-title" id="gamesTitle">Today's Games</h2>
-                <div class="games-filters" id="gamesFilters" style="display:none;">
-                    <div class="games-filter-tabs">
-                        <button class="games-filter-btn active" data-filter="ncaa">NCAA Tournament</button>
-                        <button class="games-filter-btn" data-filter="nit">NIT</button>
-                        <button class="games-filter-btn" data-filter="all">All Games</button>
-                    </div>
-                    <select class="games-conf-filter" id="gamesConfFilter">
-                        <option value="">All Conferences</option>
-                    </select>
-                </div>
-                <div class="games-grid" id="gamesGrid"></div>
             </div>
 
             <h2 class="section-title" id="popularTitle">AP Top 25</h2>
@@ -5225,6 +5311,7 @@
                         selectedTeam2 = t2;
                         renderComparison(true);
                         if (compareTabParam === 'starting5') {
+                            switchSeasonToggle('alltime');
                             showCompTab('starting5');
                         }
                     } else {
@@ -6928,7 +7015,10 @@
             const t1Color = t1.color || '#1B2A4A';
             const t2Color = t2.color || '#C9A86C';
 
-            // Build header with team logos and a tab switcher
+            // Default to "This Season" during March (tournament), "All-Time" rest of year
+            const isMarchMadness = new Date().getMonth() === 2; // 0-indexed, 2 = March
+
+            // Build header with team logos and season toggle
             let html = `
                 <div id="gameCenterPlaceholder"></div>
                 <div class="comparison-header">
@@ -6955,18 +7045,33 @@
                     </button>
                 </div>
                 <div id="compTicketContainer" style="text-align:center; margin-bottom: 0.5rem;"></div>
-                <div class="comparison-tabs">
-                    <button class="comp-tab active" id="tabH2H" onclick="showCompTab('h2h')">Head-to-Head</button>
-                    <button class="comp-tab" id="tabOverall" onclick="showCompTab('overall')">Full Program Comparison</button>
-                    <button class="comp-tab" id="tabStarting5" onclick="showCompTab('starting5')">Starting 5</button>
-                    ${_comparisonGameId ? `<button class="comp-tab" id="tabBoxScore" onclick="showCompTab('boxscore')">Box Score</button>` : ''}
+
+                <!-- Season Toggle -->
+                <div class="season-toggle-container">
+                    <button class="season-toggle-btn${isMarchMadness ? ' active' : ''}" id="seasonToggleCurrent" onclick="switchSeasonToggle('current')">This Season</button>
+                    <button class="season-toggle-btn${isMarchMadness ? '' : ' active'}" id="seasonToggleAllTime" onclick="switchSeasonToggle('alltime')">All-Time History</button>
                 </div>
-                <div id="compH2HContent" class="comp-tab-content">
-                    <div class="chart-loading">Loading head-to-head history...</div>
+
+                <!-- This Season Panel -->
+                <div id="thisSeasonPanel" class="this-season-panel" style="display:${isMarchMadness ? 'block' : 'none'};">
+                    <div class="chart-loading">Loading current season data...</div>
                 </div>
-                <div id="compOverallContent" class="comp-tab-content" style="display:none;"></div>
-                <div id="compStarting5Content" class="comp-tab-content" style="display:none;"></div>
-                ${_comparisonGameId ? `<div id="compBoxScoreContent" class="comp-tab-content" style="display:none;"><div class="boxscore-loading">Loading box score...</div></div>` : ''}
+
+                <!-- All-Time Panel (existing tabs) -->
+                <div id="allTimePanel" style="display:${isMarchMadness ? 'none' : 'block'};">
+                    <div class="comparison-tabs">
+                        <button class="comp-tab active" id="tabH2H" onclick="showCompTab('h2h')">Head-to-Head</button>
+                        <button class="comp-tab" id="tabOverall" onclick="showCompTab('overall')">Full Program Comparison</button>
+                        <button class="comp-tab" id="tabStarting5" onclick="showCompTab('starting5')">Starting 5</button>
+                        ${_comparisonGameId ? `<button class="comp-tab" id="tabBoxScore" onclick="showCompTab('boxscore')">Box Score</button>` : ''}
+                    </div>
+                    <div id="compH2HContent" class="comp-tab-content">
+                        <div class="chart-loading">Loading head-to-head history...</div>
+                    </div>
+                    <div id="compOverallContent" class="comp-tab-content" style="display:none;"></div>
+                    <div id="compStarting5Content" class="comp-tab-content" style="display:none;"></div>
+                    ${_comparisonGameId ? `<div id="compBoxScoreContent" class="comp-tab-content" style="display:none;"><div class="boxscore-loading">Loading box score...</div></div>` : ''}
+                </div>
             `;
             container.innerHTML = html;
 
@@ -6997,6 +7102,201 @@
                         ticketEl.innerHTML = renderTicketLink(ticket);
                     }
                 });
+            }
+
+            // Load This Season panel content
+            renderThisSeasonPanel(t1, t2);
+        }
+
+        function switchSeasonToggle(mode) {
+            const currentBtn = document.getElementById('seasonToggleCurrent');
+            const allTimeBtn = document.getElementById('seasonToggleAllTime');
+            const thisSeasonPanel = document.getElementById('thisSeasonPanel');
+            const allTimePanel = document.getElementById('allTimePanel');
+            if (!currentBtn || !allTimeBtn || !thisSeasonPanel || !allTimePanel) return;
+
+            if (mode === 'current') {
+                currentBtn.classList.add('active');
+                allTimeBtn.classList.remove('active');
+                thisSeasonPanel.style.display = 'block';
+                allTimePanel.style.display = 'none';
+            } else {
+                currentBtn.classList.remove('active');
+                allTimeBtn.classList.add('active');
+                thisSeasonPanel.style.display = 'none';
+                allTimePanel.style.display = 'block';
+            }
+        }
+
+        async function renderThisSeasonPanel(t1, t2) {
+            const panel = document.getElementById('thisSeasonPanel');
+            if (!panel) return;
+
+            const t1Color = t1.color || '#1B2A4A';
+            const t2Color = t2.color || '#C9A86C';
+
+            // Gather current season data
+            const currentYear = new Date().getFullYear();
+            const seasonYear = new Date().getMonth() >= 10 ? currentYear + 1 : currentYear;
+            const currentSeasonStart = `${seasonYear - 1}-11`;
+
+            // Current season records
+            const t1Record = t1._liveRecord || '---';
+            const t2Record = t2._liveRecord || '---';
+
+            // NET ranks
+            const t1Net = t1._netRank || null;
+            const t2Net = t2._netRank || null;
+
+            // Quad records
+            const t1Quad = t1._quadRecord || null;
+            const t2Quad = t2._quadRecord || null;
+
+            // Conference records from ESPN API
+            let t1ConfRecord = '';
+            let t2ConfRecord = '';
+            try {
+                const [t1Resp, t2Resp] = await Promise.all([
+                    fetch(`https://site.api.espn.com/apis/site/v2/sports/basketball/mens-college-basketball/teams/${t1.espnId}`).then(r => r.ok ? r.json() : null).catch(() => null),
+                    fetch(`https://site.api.espn.com/apis/site/v2/sports/basketball/mens-college-basketball/teams/${t2.espnId}`).then(r => r.ok ? r.json() : null).catch(() => null)
+                ]);
+                if (t1Resp?.team?.record?.items) {
+                    const confItem = t1Resp.team.record.items.find(i => i.type === 'vsconf' || i.description === 'vs. Conf.');
+                    if (confItem) t1ConfRecord = confItem.summary || '';
+                }
+                if (t2Resp?.team?.record?.items) {
+                    const confItem = t2Resp.team.record.items.find(i => i.type === 'vsconf' || i.description === 'vs. Conf.');
+                    if (confItem) t2ConfRecord = confItem.summary || '';
+                }
+            } catch(e) { /* ignore */ }
+
+            // Find H2H games this season
+            let thisSeasonGames = [];
+            if (GAMES_DATA) {
+                const h2hGames = getH2HGamesFromData(t1, t2);
+                if (h2hGames) {
+                    thisSeasonGames = h2hGames.filter(g => g.date >= currentSeasonStart);
+                }
+            }
+
+            // Build quad record HTML helper
+            function quadHtml(qr, teamName) {
+                if (!qr) return `<div class="this-season-quad-team"><h4>${teamName}</h4><div style="color:#8892A0;font-size:0.85rem;text-align:center;padding:0.5rem;">Quad data unavailable</div></div>`;
+                return `
+                    <div class="this-season-quad-team">
+                        <h4>${teamName}</h4>
+                        <div class="this-season-quad-grid">
+                            <div class="this-season-quad-card">
+                                <div class="this-season-quad-label">Quad 1</div>
+                                <div class="this-season-quad-val" style="${qr.q1w > 0 ? 'color:#2D7D46;' : ''}">${qr.q1w}-${qr.q1l}</div>
+                            </div>
+                            <div class="this-season-quad-card">
+                                <div class="this-season-quad-label">Quad 2</div>
+                                <div class="this-season-quad-val">${qr.q2w}-${qr.q2l}</div>
+                            </div>
+                            <div class="this-season-quad-card">
+                                <div class="this-season-quad-label">Quad 3</div>
+                                <div class="this-season-quad-val">${qr.q3w}-${qr.q3l}</div>
+                            </div>
+                            <div class="this-season-quad-card">
+                                <div class="this-season-quad-label">Quad 4</div>
+                                <div class="this-season-quad-val" style="${qr.q4l > 0 ? 'color:#C0392B;' : ''}">${qr.q4w}-${qr.q4l}</div>
+                            </div>
+                        </div>
+                    </div>`;
+            }
+
+            // Build this-season H2H section
+            let h2hSeasonHtml = '';
+            if (thisSeasonGames.length > 0) {
+                h2hSeasonHtml = `<div class="this-season-section-title">Head-to-Head This Season</div>`;
+                thisSeasonGames.forEach(g => {
+                    const winner = g.t1Winner ? t1.name : t2.name;
+                    const winScore = g.t1Winner ? g.t1Score : g.t2Score;
+                    const loseScore = g.t1Winner ? g.t2Score : g.t1Score;
+                    const dateStr = g.date ? new Date(g.date + 'T12:00:00').toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) : '';
+                    const scoreDisplay = (winScore > 0 || loseScore > 0) ? `${winScore}-${loseScore}` : 'Score pending';
+                    const locStr = g.location === 'H' ? 'Home' : g.location === 'A' ? 'Away' : g.location === 'N' ? 'Neutral' : '';
+                    h2hSeasonHtml += `
+                        <div style="background:#FAFAF7;border:1px solid #E8E2D6;border-radius:8px;padding:1rem;margin-bottom:0.5rem;text-align:center;">
+                            <div style="font-weight:700;color:#1B2A4A;font-size:1rem;margin-bottom:0.25rem;">${winner} ${scoreDisplay}</div>
+                            <div style="color:#8892A0;font-size:0.8rem;">${dateStr}${locStr ? ' \u00B7 ' + locStr : ''}</div>
+                        </div>`;
+                });
+            } else {
+                h2hSeasonHtml = `
+                    <div class="this-season-section-title">Head-to-Head This Season</div>
+                    <div class="this-season-h2h-notice">These teams have not played each other this season.</div>`;
+            }
+
+            let html = `
+                <!-- Season Records -->
+                <div class="this-season-records">
+                    <div class="this-season-team-block">
+                        <div class="this-season-team-name">${t1.name}</div>
+                        <div class="this-season-record">${t1Record}</div>
+                        ${t1ConfRecord ? `<div class="this-season-conf-record">${t1ConfRecord} in conference</div>` : ''}
+                    </div>
+                    <div class="this-season-team-block">
+                        <div class="this-season-team-name">${t2.name}</div>
+                        <div class="this-season-record">${t2Record}</div>
+                        ${t2ConfRecord ? `<div class="this-season-conf-record">${t2ConfRecord} in conference</div>` : ''}
+                    </div>
+                </div>
+
+                <!-- NET Rankings -->
+                <div class="this-season-net-row">
+                    <div class="this-season-net-block">
+                        <div class="this-season-net-label">${t1.name} NET</div>
+                        ${t1Net ? `<span class="net-badge ${getNetBadgeClass(t1Net)}" style="font-size:1rem;padding:0.3rem 0.8rem;">NET #${t1Net}</span>` : '<span style="color:#8892A0;font-size:0.9rem;">Not ranked</span>'}
+                    </div>
+                    <div class="this-season-net-block">
+                        <div class="this-season-net-label">${t2.name} NET</div>
+                        ${t2Net ? `<span class="net-badge ${getNetBadgeClass(t2Net)}" style="font-size:1rem;padding:0.3rem 0.8rem;">NET #${t2Net}</span>` : '<span style="color:#8892A0;font-size:0.9rem;">Not ranked</span>'}
+                    </div>
+                </div>
+
+                <!-- Quad Records Side-by-Side -->
+                <div class="this-season-section-title">Quad Records</div>
+                <div class="this-season-quad-compare">
+                    ${quadHtml(t1Quad, t1.name)}
+                    ${quadHtml(t2Quad, t2.name)}
+                </div>
+
+                <!-- Starting 5 Comparison -->
+                <div class="this-season-section-title">Starting 5</div>
+                <div id="thisSeasonStarting5Content">
+                    <div class="chart-loading">Loading starting lineups...</div>
+                </div>
+
+                <!-- H2H This Season -->
+                ${h2hSeasonHtml}
+            `;
+
+            panel.innerHTML = html;
+
+            // Load Starting 5 into this-season panel
+            const s5Container = document.getElementById('thisSeasonStarting5Content');
+            if (s5Container) {
+                try {
+                    const [data1, data2] = await Promise.all([
+                        fetchPlayerStats(t1.espnId),
+                        fetchPlayerStats(t2.espnId)
+                    ]);
+                    if (data1?.players && data2?.players) {
+                        const starters1 = determineStarters(data1.players);
+                        const starters2 = determineStarters(data2.players);
+                        if (starters1.length > 0 && starters2.length > 0) {
+                            s5Container.innerHTML = renderStarting5Content(t1, t2, starters1, starters2, t1Color, t2Color, { showBench: false, showShare: false });
+                        } else {
+                            s5Container.innerHTML = '<div style="color:#8892A0;font-size:0.9rem;padding:1rem;text-align:center;">Not enough player data to determine starting lineups.</div>';
+                        }
+                    } else {
+                        s5Container.innerHTML = '<div style="color:#8892A0;font-size:0.9rem;padding:1rem;text-align:center;">Roster data unavailable for one or both teams.</div>';
+                    }
+                } catch(e) {
+                    s5Container.innerHTML = '<div style="color:#8892A0;font-size:0.9rem;padding:1rem;text-align:center;">Failed to load starting lineup data.</div>';
+                }
             }
         }
 
@@ -12815,71 +13115,42 @@
             </div>`;
         }
 
-        async function loadStarting5(t1, t2) {
-            const container = document.getElementById('compStarting5Content');
-            if (!container) return;
+        function renderStarting5Content(t1, t2, starters1, starters2, t1Color, t2Color, options) {
+            const showBench = options?.showBench !== false;
+            const showShare = options?.showShare !== false;
+            const data1 = options?.data1;
+            const data2 = options?.data2;
 
-            const t1Color = t1.color || '#1B2A4A';
-            const t2Color = t2.color || '#C9A86C';
+            const edge = computeEdge(starters1, starters2);
+            const edgeTeam = edge.t1Wins > edge.t2Wins ? t1.name : (edge.t2Wins > edge.t1Wins ? t2.name : null);
 
-            // Show skeleton
-            container.innerHTML = renderStarting5Skeleton();
+            let html = '';
 
-            try {
-                // Fetch both rosters in parallel (reuses cache from fetchPlayerStats)
-                const [data1, data2] = await Promise.all([
-                    fetchPlayerStats(t1.espnId),
-                    fetchPlayerStats(t2.espnId)
-                ]);
+            if (edgeTeam) {
+                html += `<div class="s5-edge-bar">
+                    <span class="s5-edge-label">${edgeTeam} Starting 5 Edge:</span>
+                    <span class="s5-edge-score">${edge.t1Wins}-${edge.t2Wins}</span>
+                </div>`;
+            } else {
+                html += `<div class="s5-edge-bar">
+                    <span class="s5-edge-label">Starting 5 Matchup:</span>
+                    <span class="s5-edge-score">Even ${edge.t1Wins}-${edge.t2Wins}</span>
+                </div>`;
+            }
 
-                if (!data1 || !data2 || !data1.players || !data2.players) {
-                    container.innerHTML = '<div style="color:#8892A0;font-size:0.9rem;padding:2rem;text-align:center;">Roster data unavailable for one or both teams.</div>';
-                    return;
-                }
+            html += '<div class="s5-section-label">Starting Lineups</div>';
 
-                const starters1 = determineStarters(data1.players);
-                const starters2 = determineStarters(data2.players);
+            const posCount = Math.min(starters1.length, starters2.length);
+            for (let i = 0; i < posCount; i++) {
+                const pos = starters1[i].assignedPos || starters2[i].assignedPos || '?';
+                html += renderMatchupCard(starters1[i], starters2[i], pos, t1Color, t2Color);
+            }
 
-                if (starters1.length === 0 || starters2.length === 0) {
-                    container.innerHTML = '<div style="color:#8892A0;font-size:0.9rem;padding:2rem;text-align:center;">Not enough player data to determine starting lineups.</div>';
-                    return;
-                }
+            const totals1 = computeTotals(starters1);
+            const totals2 = computeTotals(starters2);
+            html += renderTotalsCard(totals1, totals2, t1.name, t2.name);
 
-                // Compute edge
-                const edge = computeEdge(starters1, starters2);
-                const edgeTeam = edge.t1Wins > edge.t2Wins ? t1.name : (edge.t2Wins > edge.t1Wins ? t2.name : null);
-
-                let html = '';
-
-                // Edge summary bar
-                if (edgeTeam) {
-                    html += `<div class="s5-edge-bar">
-                        <span class="s5-edge-label">${edgeTeam} Starting 5 Edge:</span>
-                        <span class="s5-edge-score">${edge.t1Wins}-${edge.t2Wins}</span>
-                    </div>`;
-                } else {
-                    html += `<div class="s5-edge-bar">
-                        <span class="s5-edge-label">Starting 5 Matchup:</span>
-                        <span class="s5-edge-score">Even ${edge.t1Wins}-${edge.t2Wins}</span>
-                    </div>`;
-                }
-
-                // Section label
-                html += '<div class="s5-section-label">Starting Lineups</div>';
-
-                // Matchup cards
-                const posCount = Math.min(starters1.length, starters2.length);
-                for (let i = 0; i < posCount; i++) {
-                    const pos = starters1[i].assignedPos || starters2[i].assignedPos || '?';
-                    html += renderMatchupCard(starters1[i], starters2[i], pos, t1Color, t2Color);
-                }
-
-                // Totals
-                const totals1 = computeTotals(starters1);
-                const totals2 = computeTotals(starters2);
-                html += renderTotalsCard(totals1, totals2, t1.name, t2.name);
-
-                // Bench section
+            if (showBench && data1?.players && data2?.players) {
                 const bench1 = determineBench(data1.players, starters1);
                 const bench2 = determineBench(data2.players, starters2);
 
@@ -12898,7 +13169,6 @@
                         html += renderMatchupCard(bench1[i], bench2[i], pos, t1Color, t2Color);
                     }
 
-                    // Bench totals and edge
                     const benchTotals1 = computeTotals(bench1);
                     const benchTotals2 = computeTotals(bench2);
                     const benchEdge = computeEdge(bench1, bench2);
@@ -12912,18 +13182,51 @@
                         html += `<div class="s5-bench-edge">Bench Matchup: Even (${benchEdge.t1Wins}-${benchEdge.t2Wins})</div>`;
                     }
 
-                    html += '</div>'; // close s5-bench-content
+                    html += '</div>';
                 }
+            }
 
-                // Deep-link hint
+            if (showShare) {
                 html += `<div style="text-align:center;margin-top:1.5rem;">
                     <button onclick="copyStarting5Link()" style="display:inline-flex;align-items:center;gap:0.35rem;background:#1B2A4A;color:#fff;border:none;padding:0.4rem 0.9rem;border-radius:1rem;font-size:0.75rem;font-weight:600;cursor:pointer;letter-spacing:0.02em;transition:background 0.2s;" onmouseover="this.style.background='#2a3d6a'" onmouseout="this.style.background='#1B2A4A'">
                         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 002 2h12a2 2 0 002-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
                         Share Starting 5
                     </button>
                 </div>`;
+            }
 
-                container.innerHTML = html;
+            return html;
+        }
+
+        async function loadStarting5(t1, t2) {
+            const container = document.getElementById('compStarting5Content');
+            if (!container) return;
+
+            const t1Color = t1.color || '#1B2A4A';
+            const t2Color = t2.color || '#C9A86C';
+
+            container.innerHTML = renderStarting5Skeleton();
+
+            try {
+                const [data1, data2] = await Promise.all([
+                    fetchPlayerStats(t1.espnId),
+                    fetchPlayerStats(t2.espnId)
+                ]);
+
+                if (!data1 || !data2 || !data1.players || !data2.players) {
+                    container.innerHTML = '<div style="color:#8892A0;font-size:0.9rem;padding:2rem;text-align:center;">Roster data unavailable for one or both teams.</div>';
+                    return;
+                }
+
+                const starters1 = determineStarters(data1.players);
+                const starters2 = determineStarters(data2.players);
+
+                if (starters1.length === 0 || starters2.length === 0) {
+                    container.innerHTML = '<div style="color:#8892A0;font-size:0.9rem;padding:2rem;text-align:center;">Not enough player data to determine starting lineups.</div>';
+                    return;
+                }
+
+                container.innerHTML = renderStarting5Content(t1, t2, starters1, starters2, t1Color, t2Color, { data1, data2 });
             } catch (e) {
                 console.error('Starting 5 load error:', e);
                 container.innerHTML = '<div style="color:#8892A0;font-size:0.9rem;padding:2rem;text-align:center;">Failed to load Starting 5 data. Please try again.</div>';
