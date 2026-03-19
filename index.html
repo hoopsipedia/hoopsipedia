@@ -4630,13 +4630,6 @@
                     const isFinal = status === 'Final';
                     if (!isLive && !isFinal) return;
 
-                    // Check if tournament game (notes often contain tournament info)
-                    const notes = comp.notes?.[0]?.headline || '';
-                    const isTournament = notes.toLowerCase().includes('tournament') ||
-                                         notes.toLowerCase().includes('ncaa') ||
-                                         notes.toLowerCase().includes('round') ||
-                                         (comp.series?.type === 'tournament');
-
                     const competitors = comp.competitors || [];
                     if (competitors.length < 2) return;
 
@@ -4645,49 +4638,67 @@
 
                     const homeSeed = parseInt(home.curatedRank?.current) || 0;
                     const awaySeed = parseInt(away.curatedRank?.current) || 0;
-
-                    // Need both teams to have seeds for upset detection
-                    if (!homeSeed || !awaySeed) return;
-
                     const homeScore = parseInt(home.score) || 0;
                     const awayScore = parseInt(away.score) || 0;
-
-                    // Determine which is the lower seed (higher number = lower seed = underdog)
-                    let underdog, favorite, underdogScore, favoriteScore;
-                    if (homeSeed > awaySeed) {
-                        underdog = home; favorite = away;
-                        underdogScore = homeScore; favoriteScore = awayScore;
-                    } else if (awaySeed > homeSeed) {
-                        underdog = away; favorite = home;
-                        underdogScore = awayScore; favoriteScore = homeScore;
-                    } else {
-                        return; // Same seed
-                    }
-
-                    const seedDiff = Math.abs(homeSeed - awaySeed);
-                    if (seedDiff < 3) return; // Not enough of a seed gap
-
-                    const underdogSeed = parseInt(underdog.curatedRank?.current);
-                    const favoriteSeed = parseInt(favorite.curatedRank?.current);
-
-                    // For live games: must be 2nd half+ AND underdog leading or within 9 pts (3 possessions)
-                    // For final games: underdog must have won
                     const period = comp.status?.period || 0;
-                    if (isLive) {
-                        if (period < 2) return; // Only show upsets in 2nd half or later
-                        const deficit = favoriteScore - underdogScore;
-                        if (deficit > 9) return; // Underdog must be leading or within 3 possessions (9 pts)
-                    }
-                    if (isFinal && !underdog.winner) return;
-
                     const clock = comp.status?.displayClock || '';
+                    const clockSeconds = comp.status?.clock || 999;
+                    const seedDiff = (homeSeed && awaySeed) ? Math.abs(homeSeed - awaySeed) : 0;
+                    const scoreDiff = Math.abs(homeScore - awayScore);
+
+                    // --- CLOSE GAME ALERT ---
+                    // Any game within 6 pts (2 possessions) with under 5 min left in 2nd half or OT
+                    const isCloseGame = isLive && period >= 2 && clockSeconds <= 300 && scoreDiff <= 6;
+
+                    // --- UPSET WATCH ---
+                    // Seed diff >= 5 (was 3), underdog leading or within 9 pts, 2nd half+
+                    let isUpset = false;
+                    let underdog, favorite, underdogScore, favoriteScore, underdogSeed, favoriteSeed;
+                    if (homeSeed && awaySeed && seedDiff >= 5) {
+                        if (homeSeed > awaySeed) {
+                            underdog = home; favorite = away;
+                            underdogScore = homeScore; favoriteScore = awayScore;
+                        } else {
+                            underdog = away; favorite = home;
+                            underdogScore = awayScore; favoriteScore = homeScore;
+                        }
+                        underdogSeed = parseInt(underdog.curatedRank?.current);
+                        favoriteSeed = parseInt(favorite.curatedRank?.current);
+
+                        if (isLive && period >= 2) {
+                            const deficit = favoriteScore - underdogScore;
+                            if (deficit <= 9) isUpset = true; // Underdog within 3 possessions
+                        }
+                        if (isFinal && underdog.winner) isUpset = true;
+                    }
+
+                    // Skip if neither close game nor upset
+                    if (!isCloseGame && !isUpset) return;
+
+                    // For close game without upset context, pick leading/trailing team
+                    if (!underdog) {
+                        if (homeScore >= awayScore) {
+                            underdog = away; favorite = home;
+                            underdogScore = awayScore; favoriteScore = homeScore;
+                        } else {
+                            underdog = home; favorite = away;
+                            underdogScore = homeScore; favoriteScore = awayScore;
+                        }
+                        underdogSeed = homeSeed > awaySeed ? parseInt(home.curatedRank?.current) : parseInt(away.curatedRank?.current);
+                        favoriteSeed = homeSeed > awaySeed ? parseInt(away.curatedRank?.current) : parseInt(home.curatedRank?.current);
+                    }
+
                     let timeDisplay = '';
                     if (isLive) {
-                        if (status === 'Halftime') timeDisplay = 'HALF';
-                        else timeDisplay = clock + (period === 2 ? ' 2nd' : ' OT');
+                        const detail = comp.status?.type?.shortDetail || '';
+                        if (detail.toLowerCase() === 'halftime') timeDisplay = 'HALF';
+                        else timeDisplay = clock + (period === 2 ? ' 2nd' : period > 2 ? ' OT' : '');
                     } else {
                         timeDisplay = 'FINAL';
                     }
+
+                    // Determine card type: upset takes priority over close game
+                    const cardType = isUpset ? (isFinal ? 'upset-complete' : 'upset') : 'close-game';
 
                     const underdogTeam = underdog.team || {};
                     const favoriteTeam = favorite.team || {};
@@ -4696,17 +4707,18 @@
                         eventId: event.id,
                         isLive,
                         isFinal,
+                        cardType,
                         underdog: {
                             name: underdogTeam.shortDisplayName || underdogTeam.displayName || 'TBD',
                             espnId: underdogTeam.id,
-                            seed: underdogSeed,
+                            seed: underdogSeed || 0,
                             score: underdogScore,
                             logo: underdogTeam.logo || getLogoUrl(underdogTeam.id)
                         },
                         favorite: {
                             name: favoriteTeam.shortDisplayName || favoriteTeam.displayName || 'TBD',
                             espnId: favoriteTeam.id,
-                            seed: favoriteSeed,
+                            seed: favoriteSeed || 0,
                             score: favoriteScore,
                             logo: favoriteTeam.logo || getLogoUrl(favoriteTeam.id)
                         },
@@ -4716,8 +4728,11 @@
                     });
                 });
 
-                // Sort: live games first, then by seed diff
+                // Sort: upsets first, then close games; within each, live first, then by seed diff
                 upsetCards.sort((a, b) => {
+                    const typeOrder = { 'upset': 0, 'close-game': 1, 'upset-complete': 2 };
+                    const ta = typeOrder[a.cardType] ?? 1, tb = typeOrder[b.cardType] ?? 1;
+                    if (ta !== tb) return ta - tb;
                     if (a.isLive && !b.isLive) return -1;
                     if (!a.isLive && b.isLive) return 1;
                     return b.seedDiff - a.seedDiff;
@@ -4733,8 +4748,10 @@
 
                 container.style.display = 'grid';
                 container.innerHTML = toShow.map(card => {
-                    const statusClass = card.isFinal ? ' upset-complete' : '';
-                    const label = card.isFinal ? 'UPSET COMPLETE' : 'UPSET WATCH';
+                    const statusClass = card.cardType === 'upset-complete' ? ' upset-complete' : '';
+                    const label = card.cardType === 'upset-complete' ? 'UPSET COMPLETE'
+                        : card.cardType === 'upset' ? 'UPSET WATCH'
+                        : '🔥 CLOSE GAME';
                     const liveDot = card.isLive ? '<span class="upset-live-dot"></span>' : '';
 
                     // Try to build comparison URL
@@ -4752,13 +4769,13 @@
                         <span class="upset-watch-teams">
                             <span class="upset-watch-team">
                                 <img src="${card.underdog.logo}" alt="" onerror="this.style.display='none'">
-                                <span class="upset-watch-seed">${card.underdog.seed}</span>
+                                ${card.underdog.seed ? `<span class="upset-watch-seed">${card.underdog.seed}</span>` : ''}
                                 ${card.underdog.name}
                             </span>
                             <span class="upset-watch-score"><span class="leading">${card.underdog.score}</span>-${card.favorite.score}</span>
                             <span class="upset-watch-team">
                                 <img src="${card.favorite.logo}" alt="" onerror="this.style.display='none'">
-                                <span class="upset-watch-seed">${card.favorite.seed}</span>
+                                ${card.favorite.seed ? `<span class="upset-watch-seed">${card.favorite.seed}</span>` : ''}
                                 ${card.favorite.name}
                             </span>
                         </span>
