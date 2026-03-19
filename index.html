@@ -21,9 +21,14 @@
     <meta property="og:title" content="Hoopsipedia - College Basketball Historical Database">
     <meta property="og:description" content="Compare programs, explore all-time stats, track the NCAA bracket, and discover every team's legacy. 360+ D1 programs, fully verified.">
     <meta property="og:site_name" content="Hoopsipedia">
+    <meta property="og:image" content="https://www.hoopsipedia.com/branding/hoopsipedia-logo.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://www.hoopsipedia.com">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Hoopsipedia">
     <meta name="twitter:description" content="The complete historical database of college basketball.">
+    <meta name="twitter:image" content="https://www.hoopsipedia.com/branding/hoopsipedia-logo.png">
 
     <!-- Favicon (inline SVG basketball) -->
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%23E87C1E' stroke='%231B2A4A' stroke-width='1.5'/%3E%3Cline x1='1' y1='16' x2='31' y2='16' stroke='%231B2A4A' stroke-width='1'/%3E%3Cline x1='16' y1='1' x2='16' y2='31' stroke='%231B2A4A' stroke-width='1'/%3E%3Cpath d='M5 5 Q16 16 27 27' fill='none' stroke='%231B2A4A' stroke-width='0.8'/%3E%3Cpath d='M27 5 Q16 16 5 27' fill='none' stroke='%231B2A4A' stroke-width='0.8'/%3E%3C/svg%3E">
@@ -3651,7 +3656,8 @@
                 <h2 class="section-title" id="gamesTitle">Today's Games</h2>
                 <div class="games-filters" id="gamesFilters" style="display:none;">
                     <div class="games-filter-tabs">
-                        <button class="games-filter-btn active" data-filter="ncaa">NCAA Tournament</button>
+                        <button class="games-filter-btn active" data-filter="ncaa">Round 1</button>
+                        <button class="games-filter-btn" data-filter="firstfour">First Four</button>
                         <button class="games-filter-btn" data-filter="nit">NIT</button>
                         <button class="games-filter-btn" data-filter="all">All Games</button>
                     </div>
@@ -4344,15 +4350,15 @@
         // ── This Day in Tournament History ──
         const TOURNAMENT_HISTORY_FACTS = [
             // March 15
-            { month: 3, day: 15, year: 2018, text: 'On March 15, <span class="otd-year">2018</span>, 11-seed {Loyola Chicago|loyola-chicago-ramblers|2031} stunned 6-seed {Miami|miami-hurricanes|2390} 64-62 on a buzzer-beating three by Donte Ingram, launching the Sister Jean-led Ramblers on a magical Final Four run.' },
+            { month: 3, day: 15, year: 2018, text: 'On March 15, <span class="otd-year">2018</span>, 11-seed {Loyola Chicago|loyola-chicago-ramblers|2031} stunned 6-seed {Miami|miami-fl-hurricanes|2390} 64-62 on a buzzer-beating three by Donte Ingram, launching the Sister Jean-led Ramblers on a magical Final Four run.' },
             // March 16
             { month: 3, day: 16, year: 2018, text: 'On March 16, <span class="otd-year">2018</span>, {UMBC|umbc-retrievers|2378} became the first 16-seed to defeat a 1-seed, shocking {Virginia|virginia-cavaliers|258} 74-54. Jairus Lyles scored 28 points in what remains the biggest upset in tournament history.' },
             // March 17
             { month: 3, day: 17, year: 2023, text: 'On March 17, <span class="otd-year">2023</span>, 16-seed {Fairleigh Dickinson|fairleigh-dickinson-knights|2230} stunned 1-seed {Purdue|purdue-boilermakers|2509} 63-58, becoming the second 16-seed ever to topple a No. 1 and the biggest point spread upset in tournament history.' },
-            { month: 3, day: 17, year: 2022, text: 'On March 17, <span class="otd-year">2022</span>, 15-seed {Saint Peter\'s|saint-peters-peacocks|2612} upset 2-seed {Kentucky|kentucky-wildcats|96} 85-79 in overtime. The Peacocks went on to become the first 15-seed to reach the Elite Eight.' },
+            { month: 3, day: 17, year: 2022, text: 'On March 17, <span class="otd-year">2022</span>, 15-seed {Saint Peter\'s|saint-peter-s-peacocks|2612} upset 2-seed {Kentucky|kentucky-wildcats|96} 85-79 in overtime. The Peacocks went on to become the first 15-seed to reach the Elite Eight.' },
             { month: 3, day: 17, year: 2006, text: 'On March 17, <span class="otd-year">2006</span>, 11-seed {George Mason|george-mason-patriots|2244} began its Cinderella run by upsetting 6-seed {Michigan State|michigan-state-spartans|127} 75-65. The Patriots would reach the Final Four, shocking the college basketball world.' },
             // March 18
-            { month: 3, day: 18, year: 2022, text: 'On March 18, <span class="otd-year">2022</span>, 15-seed {Saint Peter\'s|saint-peters-peacocks|2612} continued its Cinderella run, defeating 7-seed {Murray State|murray-state-racers|93} 70-60 to advance to the Sweet Sixteen -- the farthest a 15-seed had gone in over two decades.' },
+            { month: 3, day: 18, year: 2022, text: 'On March 18, <span class="otd-year">2022</span>, 15-seed {Saint Peter\'s|saint-peter-s-peacocks|2612} continued its Cinderella run, defeating 7-seed {Murray State|murray-state-racers|93} 70-60 to advance to the Sweet Sixteen -- the farthest a 15-seed had gone in over two decades.' },
             // March 19
             { month: 3, day: 19, year: 2021, text: 'On March 19, <span class="otd-year">2021</span>, 15-seed {Oral Roberts|oral-roberts-golden-eagles|198} stunned 2-seed {Ohio State|ohio-state-buckeyes|194} 75-72 in overtime. Max Abmas scored 29 points and Kevin Obanor added 30 as the Golden Eagles pulled off the first big upset of the first tournament in two years.' },
             { month: 3, day: 19, year: 2006, text: 'On March 19, <span class="otd-year">2006</span>, 11-seed {George Mason|george-mason-patriots|2244} shocked 3-seed {North Carolina|north-carolina-tar-heels|153} 65-60 in the second round, knocking out the defending national champions on their way to the Final Four.' },
@@ -4566,8 +4572,11 @@
             function parseFact(text) {
                 return text.replace(/\{([^|]+)\|([^|]+)\|([^}]+)\}/g, (match, name, slug, espnId) => {
                     const logoUrl = getLogoUrl(espnId);
+                    // Use slug if it resolves, otherwise fall back to ESPN ID
+                    const team = findTeamBySlug(slug);
+                    const href = team ? '#team/' + teamSlug(team.name) : '#team/' + espnId;
                     return '<img class="otd-team-logo-inline" src="' + logoUrl + '" alt="" onerror="this.style.display=\'none\'">' +
-                           '<a class="otd-team-link" href="#team/' + slug + '">' + name + '</a>';
+                           '<a class="otd-team-link" href="' + href + '">' + name + '</a>';
                 });
             }
 
@@ -4621,13 +4630,6 @@
                     const isFinal = status === 'Final';
                     if (!isLive && !isFinal) return;
 
-                    // Check if tournament game (notes often contain tournament info)
-                    const notes = comp.notes?.[0]?.headline || '';
-                    const isTournament = notes.toLowerCase().includes('tournament') ||
-                                         notes.toLowerCase().includes('ncaa') ||
-                                         notes.toLowerCase().includes('round') ||
-                                         (comp.series?.type === 'tournament');
-
                     const competitors = comp.competitors || [];
                     if (competitors.length < 2) return;
 
@@ -4636,45 +4638,67 @@
 
                     const homeSeed = parseInt(home.curatedRank?.current) || 0;
                     const awaySeed = parseInt(away.curatedRank?.current) || 0;
-
-                    // Need both teams to have seeds for upset detection
-                    if (!homeSeed || !awaySeed) return;
-
                     const homeScore = parseInt(home.score) || 0;
                     const awayScore = parseInt(away.score) || 0;
+                    const period = comp.status?.period || 0;
+                    const clock = comp.status?.displayClock || '';
+                    const clockSeconds = comp.status?.clock || 999;
+                    const seedDiff = (homeSeed && awaySeed) ? Math.abs(homeSeed - awaySeed) : 0;
+                    const scoreDiff = Math.abs(homeScore - awayScore);
 
-                    // Determine which is the lower seed (higher number = lower seed = underdog)
-                    let underdog, favorite, underdogScore, favoriteScore;
-                    if (homeSeed > awaySeed) {
-                        underdog = home; favorite = away;
-                        underdogScore = homeScore; favoriteScore = awayScore;
-                    } else if (awaySeed > homeSeed) {
-                        underdog = away; favorite = home;
-                        underdogScore = awayScore; favoriteScore = homeScore;
-                    } else {
-                        return; // Same seed
+                    // --- CLOSE GAME ALERT ---
+                    // Any game within 6 pts (2 possessions) with under 5 min left in 2nd half or OT
+                    const isCloseGame = isLive && period >= 2 && clockSeconds <= 300 && scoreDiff <= 6;
+
+                    // --- UPSET WATCH ---
+                    // Seed diff >= 5 (was 3), underdog leading or within 9 pts, 2nd half+
+                    let isUpset = false;
+                    let underdog, favorite, underdogScore, favoriteScore, underdogSeed, favoriteSeed;
+                    if (homeSeed && awaySeed && seedDiff >= 5) {
+                        if (homeSeed > awaySeed) {
+                            underdog = home; favorite = away;
+                            underdogScore = homeScore; favoriteScore = awayScore;
+                        } else {
+                            underdog = away; favorite = home;
+                            underdogScore = awayScore; favoriteScore = homeScore;
+                        }
+                        underdogSeed = parseInt(underdog.curatedRank?.current);
+                        favoriteSeed = parseInt(favorite.curatedRank?.current);
+
+                        if (isLive && period >= 2) {
+                            const deficit = favoriteScore - underdogScore;
+                            if (deficit <= 9) isUpset = true; // Underdog within 3 possessions
+                        }
+                        if (isFinal && underdog.winner) isUpset = true;
                     }
 
-                    const seedDiff = Math.abs(homeSeed - awaySeed);
-                    if (seedDiff < 3) return; // Not enough of a seed gap
+                    // Skip if neither close game nor upset
+                    if (!isCloseGame && !isUpset) return;
 
-                    const underdogSeed = parseInt(underdog.curatedRank?.current);
-                    const favoriteSeed = parseInt(favorite.curatedRank?.current);
+                    // For close game without upset context, pick leading/trailing team
+                    if (!underdog) {
+                        if (homeScore >= awayScore) {
+                            underdog = away; favorite = home;
+                            underdogScore = awayScore; favoriteScore = homeScore;
+                        } else {
+                            underdog = home; favorite = away;
+                            underdogScore = homeScore; favoriteScore = awayScore;
+                        }
+                        underdogSeed = homeSeed > awaySeed ? parseInt(home.curatedRank?.current) : parseInt(away.curatedRank?.current);
+                        favoriteSeed = homeSeed > awaySeed ? parseInt(away.curatedRank?.current) : parseInt(home.curatedRank?.current);
+                    }
 
-                    // For live games: underdog must be leading
-                    // For final games: underdog must have won
-                    if (isLive && underdogScore <= favoriteScore) return;
-                    if (isFinal && !underdog.winner) return;
-
-                    const clock = comp.status?.displayClock || '';
-                    const period = comp.status?.period || 0;
                     let timeDisplay = '';
                     if (isLive) {
-                        if (status === 'Halftime') timeDisplay = 'HALF';
-                        else timeDisplay = clock + (period === 1 ? ' 1st' : period === 2 ? ' 2nd' : ' OT');
+                        const detail = comp.status?.type?.shortDetail || '';
+                        if (detail.toLowerCase() === 'halftime') timeDisplay = 'HALF';
+                        else timeDisplay = clock + (period === 2 ? ' 2nd' : period > 2 ? ' OT' : '');
                     } else {
                         timeDisplay = 'FINAL';
                     }
+
+                    // Determine card type: upset takes priority over close game
+                    const cardType = isUpset ? (isFinal ? 'upset-complete' : 'upset') : 'close-game';
 
                     const underdogTeam = underdog.team || {};
                     const favoriteTeam = favorite.team || {};
@@ -4683,17 +4707,18 @@
                         eventId: event.id,
                         isLive,
                         isFinal,
+                        cardType,
                         underdog: {
                             name: underdogTeam.shortDisplayName || underdogTeam.displayName || 'TBD',
                             espnId: underdogTeam.id,
-                            seed: underdogSeed,
+                            seed: underdogSeed || 0,
                             score: underdogScore,
                             logo: underdogTeam.logo || getLogoUrl(underdogTeam.id)
                         },
                         favorite: {
                             name: favoriteTeam.shortDisplayName || favoriteTeam.displayName || 'TBD',
                             espnId: favoriteTeam.id,
-                            seed: favoriteSeed,
+                            seed: favoriteSeed || 0,
                             score: favoriteScore,
                             logo: favoriteTeam.logo || getLogoUrl(favoriteTeam.id)
                         },
@@ -4703,8 +4728,11 @@
                     });
                 });
 
-                // Sort: live games first, then by seed diff
+                // Sort: upsets first, then close games; within each, live first, then by seed diff
                 upsetCards.sort((a, b) => {
+                    const typeOrder = { 'upset': 0, 'close-game': 1, 'upset-complete': 2 };
+                    const ta = typeOrder[a.cardType] ?? 1, tb = typeOrder[b.cardType] ?? 1;
+                    if (ta !== tb) return ta - tb;
                     if (a.isLive && !b.isLive) return -1;
                     if (!a.isLive && b.isLive) return 1;
                     return b.seedDiff - a.seedDiff;
@@ -4720,8 +4748,10 @@
 
                 container.style.display = 'grid';
                 container.innerHTML = toShow.map(card => {
-                    const statusClass = card.isFinal ? ' upset-complete' : '';
-                    const label = card.isFinal ? 'UPSET COMPLETE' : 'UPSET WATCH';
+                    const statusClass = card.cardType === 'upset-complete' ? ' upset-complete' : '';
+                    const label = card.cardType === 'upset-complete' ? 'UPSET COMPLETE'
+                        : card.cardType === 'upset' ? 'UPSET WATCH'
+                        : '🔥 CLOSE GAME';
                     const liveDot = card.isLive ? '<span class="upset-live-dot"></span>' : '';
 
                     // Try to build comparison URL
@@ -4731,7 +4761,7 @@
                     if (t1 && t2) {
                         const s1 = t1.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
                         const s2 = t2.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
-                        href = '#compare/' + s1 + '/vs/' + s2;
+                        href = '#compare/' + s1 + '/' + s2;
                     }
 
                     return `<a class="upset-watch-card${statusClass}" href="${href}" style="text-decoration:none;">
@@ -4739,13 +4769,13 @@
                         <span class="upset-watch-teams">
                             <span class="upset-watch-team">
                                 <img src="${card.underdog.logo}" alt="" onerror="this.style.display='none'">
-                                <span class="upset-watch-seed">${card.underdog.seed}</span>
+                                ${card.underdog.seed ? `<span class="upset-watch-seed">${card.underdog.seed}</span>` : ''}
                                 ${card.underdog.name}
                             </span>
                             <span class="upset-watch-score"><span class="leading">${card.underdog.score}</span>-${card.favorite.score}</span>
                             <span class="upset-watch-team">
                                 <img src="${card.favorite.logo}" alt="" onerror="this.style.display='none'">
-                                <span class="upset-watch-seed">${card.favorite.seed}</span>
+                                ${card.favorite.seed ? `<span class="upset-watch-seed">${card.favorite.seed}</span>` : ''}
                                 ${card.favorite.name}
                             </span>
                         </span>
@@ -5594,7 +5624,14 @@
 
         // Find team by slug (reverse lookup)
         function findTeamBySlug(slug) {
-            return allTeamsData.find(t => teamSlug(t.name) === slug);
+            // Exact match first
+            const exact = allTeamsData.find(t => teamSlug(t.name) === slug);
+            if (exact) return exact;
+            // Fuzzy: try matching without common suffixes or with partial match
+            return allTeamsData.find(t => {
+                const ts = teamSlug(t.name);
+                return ts.startsWith(slug) || slug.startsWith(ts) || ts.includes(slug) || slug.includes(ts);
+            });
         }
 
         // Map NCAA tournament result string to display label
@@ -6379,7 +6416,9 @@
             // Filter by tournament type
             let filtered = allGames;
             if (activeFilter === 'ncaa') {
-                filtered = allGames.filter(e => e._tourney === 'ncaa');
+                filtered = allGames.filter(e => e._tourney === 'ncaa' && !e._round?.includes('First Four'));
+            } else if (activeFilter === 'firstfour') {
+                filtered = allGames.filter(e => e._tourney === 'ncaa' && e._round?.includes('First Four'));
             } else if (activeFilter === 'nit') {
                 filtered = allGames.filter(e => e._tourney === 'nit');
             }
@@ -6400,7 +6439,8 @@
             // Update section title
             const titleEl = document.getElementById('gamesTitle');
             if (titleEl) {
-                if (activeFilter === 'ncaa') titleEl.textContent = 'March Madness';
+                if (activeFilter === 'ncaa') titleEl.textContent = 'March Madness — Round 1';
+                else if (activeFilter === 'firstfour') titleEl.textContent = 'March Madness — First Four';
                 else if (activeFilter === 'nit') titleEl.textContent = 'NIT';
                 else titleEl.textContent = 'All Postseason Games';
             }
@@ -6645,7 +6685,7 @@
             if (state === 'in') {
                 const period = status.period || 0;
                 const clock = status.displayClock || '';
-                if (detail.toLowerCase().includes('halftime') || detail.toLowerCase().includes('half')) {
+                if (detail.toLowerCase() === 'halftime' || detail.toLowerCase().startsWith('halftime')) {
                     return { label: 'HALFTIME', type: 'halftime', detail: 'Halftime' };
                 }
                 return { label: 'LIVE', type: 'live', detail: detail || `${clock} - ${period > 2 ? 'OT' + (period - 2) : (period === 1 ? '1st Half' : '2nd Half')}` };
@@ -6792,7 +6832,7 @@
                 } catch (e) {
                     // Silent fail - keep trying
                 }
-            }, 60000); // 60 seconds
+            }, 30000); // 30 seconds
         }
 
         function stopGameCenterRefresh() {
@@ -7605,6 +7645,7 @@
                                 g.t2Score = t2Score;
                                 g.t1Winner = t1Winner;
                                 g._liveStatus = status;
+                                g._liveDetail = comp.status?.type?.shortDetail || comp.status?.type?.detail || status;
 
                                 // Add tournament info from notes
                                 const notes = comp.notes || [];
@@ -7823,7 +7864,7 @@
                             <div style="flex: 1; font-weight: ${m.t1Score > m.t2Score ? '700' : '400'}; color: ${m.t1Score > m.t2Score ? t1Color : '#A0AAB8'};">${t1.name.split(' ').pop()} <span style="font-variant-numeric: tabular-nums;">${m.t1Score}</span></div>
                             <div style="font-size: 0.7rem; color: #E65100; min-width: 80px; text-align: center;">
                                 <div style="font-weight: 700; font-size: 0.6rem; letter-spacing: 0.05em;"><span style="display:inline-block;width:6px;height:6px;background:#E53935;border-radius:50%;animation:pulse 1.5s infinite;margin-right:3px;vertical-align:middle;"></span> LIVE</div>
-                                ${m._liveStatus}${tourneyBadge ? `<div style="margin-top: 0.3rem;">${tourneyBadge}</div>` : ''}${venueStr}
+                                ${m._liveStatus === 'Halftime' ? 'Halftime' : m._liveDetail || 'In Progress'}${tourneyBadge ? `<div style="margin-top: 0.3rem;">${tourneyBadge}</div>` : ''}${venueStr}
                             </div>
                             <div style="flex: 1; text-align: right; font-weight: ${m.t2Score > m.t1Score ? '700' : '400'}; color: ${m.t2Score > m.t1Score ? t2Color : '#A0AAB8'};"><span style="font-variant-numeric: tabular-nums;">${m.t2Score}</span> ${t2.name.split(' ').pop()}</div>
                         </div>
@@ -7883,15 +7924,15 @@
             const el = document.getElementById('h2h-dynamic-stats');
             if (!el) return;
 
-            // Filter out upcoming games (no score)
-            const completedGames = games.filter(g => g.t1Score > 0 || g.t2Score > 0);
+            // Filter out upcoming games (no score) AND in-progress games (not final)
+            const completedGames = games.filter(g => (g.t1Score > 0 || g.t2Score > 0) && g._liveStatus !== 'In Progress' && g._liveStatus !== 'Halftime');
 
             if (completedGames.length === 0) {
                 el.innerHTML = '';
                 return;
             }
 
-            // Compute series record for filtered games
+            // Compute series record for filtered games (only count final results)
             let t1Wins = 0, t2Wins = 0;
             completedGames.forEach(g => { if (g.t1Winner) t1Wins++; else t2Wins++; });
             const totalGames = t1Wins + t2Wins;
@@ -10498,7 +10539,7 @@
             'In 2018, <a href="#team/umbc-retrievers" style="color:#C9A86C;font-weight:700;">UMBC</a> became the first 16-seed to defeat a 1-seed, beating <a href="#team/virginia-cavaliers" style="color:#C9A86C;font-weight:700;">Virginia</a> 74-54. <a href="#game/2018/umbc-retrievers-vs-virginia-cavaliers" style="color:#C9A86C;text-decoration:underline;">Relive the moment →</a>',
             'The 5-vs-12 matchup is the most common first-round upset. It happens roughly 35% of the time. <a href="#upsets/5v12" style="color:#C9A86C;text-decoration:underline;">Explore all 5v12 upsets →</a>',
             '8-vs-9 games are essentially coin flips, with 9-seeds winning nearly half the time. <a href="#upsets/8v9" style="color:#C9A86C;text-decoration:underline;">See the 8v9 history →</a>',
-            'Since 1985, a 15-seed has beaten a 2-seed 11 times. <a href="#team/saint-peters-peacocks" style="color:#C9A86C;font-weight:700;">Saint Peter\'s</a> (2022) made it all the way to the Elite Eight. <a href="#upsets/2v15" style="color:#C9A86C;text-decoration:underline;">All 2v15 upsets →</a>',
+            'Since 1985, a 15-seed has beaten a 2-seed 11 times. <a href="#team/saint-peter-s-peacocks" style="color:#C9A86C;font-weight:700;">Saint Peter\'s</a> (2022) made it all the way to the Elite Eight. <a href="#upsets/2v15" style="color:#C9A86C;text-decoration:underline;">All 2v15 upsets →</a>',
             'No 16-seed had ever beaten a 1-seed until <a href="#team/umbc-retrievers" style="color:#C9A86C;font-weight:700;">UMBC</a> did it in 2018. <a href="#team/fairleigh-dickinson-knights" style="color:#C9A86C;font-weight:700;">Fairleigh Dickinson</a> repeated the feat in 2023. <a href="#upsets/1v16" style="color:#C9A86C;text-decoration:underline;">See both upsets →</a>',
             'The 12-over-5 upset is so common it has its own name among bracketologists: "The 12-5 Special." <a href="#upsets/5v12" style="color:#C9A86C;text-decoration:underline;">Explore the data →</a>',
             'In 2023, both a 15-seed (<a href="#team/princeton-tigers" style="color:#C9A86C;font-weight:700;">Princeton</a>) and a 16-seed (<a href="#team/fairleigh-dickinson-knights" style="color:#C9A86C;font-weight:700;">FDU</a>) won first-round games in the same tournament.'
@@ -10675,7 +10716,7 @@
                         </div>
                         <div class="upsets-moment-magnitude">
                             <div class="upsets-moment-magnitude-bar"><div class="upsets-moment-magnitude-fill" style="width:${magnitude}%"></div></div>
-                            <div class="upsets-moment-magnitude-label">Shock</div>
+                            <div class="upsets-moment-magnitude-label">Shock <span style="color:#C9A86C;font-style:italic;">(Coming Soon)</span></div>
                         </div>
                     </div>`;
                 }
