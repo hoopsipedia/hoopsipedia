@@ -4662,17 +4662,21 @@
                     const underdogSeed = parseInt(underdog.curatedRank?.current);
                     const favoriteSeed = parseInt(favorite.curatedRank?.current);
 
-                    // For live games: underdog must be leading
+                    // For live games: must be 2nd half+ AND underdog leading or within 9 pts (3 possessions)
                     // For final games: underdog must have won
-                    if (isLive && underdogScore <= favoriteScore) return;
+                    const period = comp.status?.period || 0;
+                    if (isLive) {
+                        if (period < 2) return; // Only show upsets in 2nd half or later
+                        const deficit = favoriteScore - underdogScore;
+                        if (deficit > 9) return; // Underdog must be leading or within 3 possessions (9 pts)
+                    }
                     if (isFinal && !underdog.winner) return;
 
                     const clock = comp.status?.displayClock || '';
-                    const period = comp.status?.period || 0;
                     let timeDisplay = '';
                     if (isLive) {
                         if (status === 'Halftime') timeDisplay = 'HALF';
-                        else timeDisplay = clock + (period === 1 ? ' 1st' : period === 2 ? ' 2nd' : ' OT');
+                        else timeDisplay = clock + (period === 2 ? ' 2nd' : ' OT');
                     } else {
                         timeDisplay = 'FINAL';
                     }
@@ -4732,7 +4736,7 @@
                     if (t1 && t2) {
                         const s1 = t1.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
                         const s2 = t2.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
-                        href = '#compare/' + s1 + '/vs/' + s2;
+                        href = '#compare/' + s1 + '/' + s2;
                     }
 
                     return `<a class="upset-watch-card${statusClass}" href="${href}" style="text-decoration:none;">
