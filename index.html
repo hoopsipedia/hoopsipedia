@@ -5212,16 +5212,6 @@
         const UPSET_TAKEOVER_DURATION = 30 * 60 * 1000; // 30 minutes
 
         function checkUpsetTakeover() {
-            // ONE-TIME OVERRIDE: Force VCU takeover for 2026-03-19 (OT comeback upset of UNC)
-            // Remove this block after tournament Day 1
-            const vcuOverride = {
-                team: 'VCU', color: '#D4A017', navColor: '#1A1A1A', espnId: '2670',
-                time: Date.now(), seedDiff: 99,
-                message: '11-seed VCU stuns 6-seed North Carolina in OT!',
-                gameLink: '#game/2026/vcu-rams-vs-north-carolina-tar-heels'
-            };
-            localStorage.setItem('upsetTakeover', JSON.stringify(vcuOverride));
-
             // Check localStorage for existing active takeover on page load / refresh
             const stored = localStorage.getItem('upsetTakeover');
             if (!stored) return;
