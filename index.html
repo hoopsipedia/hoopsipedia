@@ -7087,7 +7087,10 @@
         function renderTodaysGames() {
             const grid = document.getElementById('gamesGrid');
             if (!grid) { console.warn('gamesGrid not found'); return; }
-            grid.innerHTML = renderGameCardsSkeleton(6);
+            // Only show skeleton on first load, not on live refreshes
+            if (!grid.children.length || grid.querySelector('.skeleton-card')) {
+                grid.innerHTML = renderGameCardsSkeleton(6);
+            }
 
             // Fetch last 3 days + today + upcoming days (covers First Four results through Round 1)
             // Use Mountain Time for date rollover (tournament games can end past midnight ET)
@@ -7260,7 +7263,8 @@
                 else titleEl.textContent = 'All Postseason Games';
             }
 
-            grid.innerHTML = '';
+            // Build into a temp container to avoid flicker, then swap atomically
+            const tempGrid = document.createElement('div');
             if (filtered.length === 0) {
                 grid.innerHTML = '<div class="chart-loading">No games found for this filter</div>';
                 return;
@@ -7329,7 +7333,7 @@
                         const header = document.createElement('div');
                         header.style.cssText = 'grid-column: 1/-1; padding: 1rem 0 0.25rem; font-size: 0.95rem; font-weight: 700; color: #8892A0; text-transform: uppercase; letter-spacing: 0.05em; border-top: 2px solid #E8E2D8; margin-top: 0.5rem;';
                         header.textContent = label;
-                        grid.appendChild(header);
+                        tempGrid.appendChild(header);
                     }
                 }
                         const comp = event.competitions[0];
@@ -7564,7 +7568,7 @@
                             <div class="game-time">${timeStr}</div>
                         `;
 
-                        grid.appendChild(card);
+                        tempGrid.appendChild(card);
 
                         // Async H2H fetch - updates bar with real series data in team colors
                         fetchGameH2H(t1EspnId, t2EspnId).then(h2h => {
@@ -7603,6 +7607,12 @@
                             });
                         }
                     });
+
+                    // Atomic swap: replace grid contents in one operation to prevent flicker
+                    grid.innerHTML = '';
+                    while (tempGrid.firstChild) {
+                        grid.appendChild(tempGrid.firstChild);
+                    }
         }
 
         function openProfileById(espnId) {
