@@ -7866,9 +7866,10 @@
             container.querySelectorAll('.comp-tab').forEach(tab => {
                 tab.style.setProperty('--team-color', t1Hex);
             });
-            container.querySelectorAll('.compare-button, .season-toggle-btn.active').forEach(btn => {
+            container.querySelectorAll('.season-toggle-btn.active').forEach(btn => {
                 btn.style.background = t1Hex;
                 btn.style.color = '#fff';
+                btn.style.borderColor = t1Hex;
             });
 
             // Load H2H data and render overall stats
@@ -7911,16 +7912,23 @@
             const allTimePanel = document.getElementById('allTimePanel');
             if (!currentBtn || !allTimeBtn || !thisSeasonPanel || !allTimePanel) return;
 
+            // Get team color from the comparison context
+            const t1Color = selectedTeam1 && selectedTeam1.color ? '#' + selectedTeam1.color.replace('#','') : '';
+
             if (mode === 'current') {
                 currentBtn.classList.add('active');
                 allTimeBtn.classList.remove('active');
                 thisSeasonPanel.style.display = 'block';
                 allTimePanel.style.display = 'none';
+                if (t1Color) { currentBtn.style.background = t1Color; currentBtn.style.color = '#fff'; currentBtn.style.borderColor = t1Color; }
+                allTimeBtn.style.background = ''; allTimeBtn.style.color = ''; allTimeBtn.style.borderColor = '';
             } else {
                 currentBtn.classList.remove('active');
                 allTimeBtn.classList.add('active');
                 thisSeasonPanel.style.display = 'none';
                 allTimePanel.style.display = 'block';
+                currentBtn.style.background = ''; currentBtn.style.color = ''; currentBtn.style.borderColor = '';
+                if (t1Color) { allTimeBtn.style.background = t1Color; allTimeBtn.style.color = '#fff'; allTimeBtn.style.borderColor = t1Color; }
             }
         }
 
