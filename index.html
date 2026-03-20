@@ -11226,7 +11226,7 @@
             if (SEASONS_DATA && wTeam) {
                 const seasons = SEASONS_DATA[wId]?.seasons || [];
                 const tourneyYears = seasons.filter(s => s.ncaaTourney || s.seed);
-                const priorYears = tourneyYears.filter(s => s.year < 2026);
+                const priorYears = tourneyYears.filter(s => parseInt(s.year) < 2026);
                 // Count prior tournament wins (reached R32+ means at least 1 win)
                 const priorWins = priorYears.filter(s => {
                     const r = mapTourneyResult(s.ncaaTourney);
