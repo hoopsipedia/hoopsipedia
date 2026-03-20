@@ -11494,6 +11494,15 @@
                     return `${wName}'s first-ever NCAA Tournament game - and a win`;
                 }
 
+                // First tourney win since winning national championship
+                if (priorWins.length > 0 && wTeam && wTeam[6] > 0) {
+                    const lastWinYear = Math.max(...priorWins.map(s => parseInt(s.year)));
+                    const champYears = wTeam[7] || [];
+                    if (champYears.includes(lastWinYear) && 2026 - lastWinYear >= 2) {
+                        return `${wName}'s first tournament win since their ${lastWinYear} National Championship`;
+                    }
+                }
+
                 // Long drought — first tourney win in 10+ years
                 if (priorWins.length > 0) {
                     const lastWinYear = Math.max(...priorWins.map(s => parseInt(s.year)));
@@ -12132,6 +12141,14 @@
             container.innerHTML = html;
         }
 
+        // Broken championship videos verified via YouTube oEmbed API
+        const _brokenVids = new Set([
+            'uiWERnXd9l0','TcEBqLePnIc','55fROVHk6E4','oE0PoB3mJbE','FDB-OiXFoiQ',
+            '9qJq3oh-NhY','jS5gKWbMkOo','K3GBywMoyU4','nFSavDf3KKo','wBXdQ1Ksdg0',
+            'W2a07ER2Rm0','MpjmP3Es3ek','qlAB7lFJnJg','xqB6MFRB3UU',
+            'bLfEaiGJDq0','QOnJz0YRbGY','x3-bv47TsGI','GmFX7gSGhOQ'
+        ]);
+
         function renderChampions() {
             const content = document.getElementById('championsContent');
             if (!content) return;
@@ -12145,22 +12162,6 @@
                 runs.push({ key, ...run });
             }
             runs.sort((a, b) => b.year - a.year);
-
-            // Group by decade
-            const decades = {};
-            runs.forEach(run => {
-                const decade = Math.floor(run.year / 10) * 10;
-                if (!decades[decade]) decades[decade] = [];
-                decades[decade].push(run);
-            });
-
-            // Broken videos verified via YouTube oEmbed API
-            const _brokenVids = new Set([
-                'uiWERnXd9l0','TcEBqLePnIc','55fROVHk6E4','oE0PoB3mJbE','FDB-OiXFoiQ',
-                '9qJq3oh-NhY','jS5gKWbMkOo','K3GBywMoyU4','nFSavDf3KKo','wBXdQ1Ksdg0',
-                'W2a07ER2Rm0','MpjmP3Es3ek','qlAB7lFJnJg','xqB6MFRB3UU',
-                'bLfEaiGJDq0','QOnJz0YRbGY','x3-bv47TsGI','GmFX7gSGhOQ'
-            ]);
 
             const cardsHtml = runs.map(run => {
                 const logoUrl = `https://a.espncdn.com/i/teamlogos/ncaa/500/${run.espnId}.png`;
@@ -13648,7 +13649,7 @@
                 // No data available
                 boxscoreEl.innerHTML = `
                     <div class="game-detail-boxscore-title">Box Score</div>
-                    <div class="game-detail-boxscore-placeholder">Box score not available for this game</div>
+                    <div class="game-detail-boxscore-placeholder">Box score coming soon</div>
                     <a class="game-detail-boxscore-link" href="https://www.sports-reference.com/cbb/boxscores/" target="_blank" rel="noopener">
                         View on Sports Reference
                     </a>`;
@@ -16120,7 +16121,7 @@
                 const t2Name = info.t2Name || 'Team 2';
                 inner.innerHTML = headerHtml + `
                     <div class="h2h-detail-not-available">
-                        Box score not available for this game.
+                        Box score coming soon.
                         <div class="score-fallback">Final: ${t1Name} ${info.t1Score || '?'}, ${t2Name} ${info.t2Score || '?'}</div>
                     </div>`;
                 inner.dataset.loaded = 'true';
@@ -16139,7 +16140,7 @@
                 const t2Name = info.t2Name || 'Team 2';
                 inner.innerHTML = headerHtml + `
                     <div class="h2h-detail-not-available">
-                        Box score not available for this game.
+                        Box score coming soon.
                         <div class="score-fallback">Final: ${t1Name} ${info.t1Score || '?'}, ${t2Name} ${info.t2Score || '?'}</div>
                     </div>`;
                 inner.dataset.loaded = 'true';
@@ -16267,7 +16268,7 @@
             const espnGameId = await findChampGameId(espnId, year, gameIndex);
 
             if (!espnGameId) {
-                inner.innerHTML = '<div class="champ-run-boxscore-loading" style="color:#A8736B;">Box score not available for this game</div>';
+                inner.innerHTML = '<div class="champ-run-boxscore-loading" style="color:#A8736B;">Box score coming soon</div>';
                 panel.style.maxHeight = panel.scrollHeight + 'px';
                 return;
             }
@@ -16276,7 +16277,7 @@
             const gameData = await fetchChampBoxScore(espnGameId);
 
             if (!gameData || !gameData.boxscore) {
-                inner.innerHTML = '<div class="champ-run-boxscore-loading" style="color:#A8736B;">Box score not available for this game</div>';
+                inner.innerHTML = '<div class="champ-run-boxscore-loading" style="color:#A8736B;">Box score coming soon</div>';
                 panel.style.maxHeight = panel.scrollHeight + 'px';
                 return;
             }
@@ -16410,7 +16411,7 @@
                 </div>
 
                 <!-- Championship Game Highlights -->
-                ${run.videoId ? `
+                ${run.videoId && !_brokenVids.has(run.videoId) ? `
                 <div class="champ-run-card">
                     <h3>Championship Game Highlights</h3>
                     <div class="champ-run-video">
@@ -16423,7 +16424,16 @@
                         ></iframe>
                     </div>
                 </div>
-                ` : ''}
+                ` : `
+                <div class="champ-run-card">
+                    <h3>Championship Game Highlights</h3>
+                    <div style="padding:2rem; text-align:center; color:#8892A0; background:#F0EDE6; border-radius:8px;">
+                        <div style="font-size:1.5rem; margin-bottom:0.5rem;">🎬</div>
+                        <div style="font-weight:600;">Video coming soon</div>
+                        <div style="font-size:0.8rem; margin-top:0.25rem;">We're working on adding championship highlights for this run.</div>
+                    </div>
+                </div>
+                `}
 
                 <!-- The Aftermath -->
                 <div class="champ-run-card">
