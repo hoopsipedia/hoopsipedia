@@ -3990,6 +3990,7 @@
                 <div class="games-filters" id="gamesFilters" style="display:none;">
                     <div class="games-filter-tabs">
                         <button class="games-filter-btn active" data-filter="ncaa">Round 1</button>
+                        <button class="games-filter-btn" data-filter="ncaa-r2">Round 2</button>
                         <button class="games-filter-btn" data-filter="firstfour">First Four</button>
                         <button class="games-filter-btn" data-filter="nit">NIT</button>
                         <button class="games-filter-btn" data-filter="all">All Games</button>
@@ -7090,7 +7091,14 @@
                     // Show filters if we have mixed tournaments
                     const hasNcaa = allGames.some(e => e._tourney === 'ncaa');
                     const hasNit = allGames.some(e => e._tourney === 'nit');
+                    const r2RoundNames = ['Second Round', 'Round of 32', '2nd Round'];
+                    const hasR2 = allGames.some(e => e._tourney === 'ncaa' && r2RoundNames.some(r => e._round?.includes(r)));
+                    const hasR1 = allGames.some(e => e._tourney === 'ncaa' && !e._round?.includes('First Four') && !r2RoundNames.some(r => e._round?.includes(r)));
                     document.getElementById('gamesFilters').style.display = (hasNcaa || hasNit) ? 'flex' : 'none';
+
+                    // Show/hide Round 2 button based on whether R2 games exist
+                    const r2Btn = document.querySelector('.games-filter-btn[data-filter="ncaa-r2"]');
+                    if (r2Btn) r2Btn.style.display = hasR2 ? '' : 'none';
 
                     // Set up filter event listeners (once)
                     if (!window._gamesFiltersInit) {
@@ -7105,10 +7113,14 @@
                         confSelect.addEventListener('change', renderFilteredGames);
                     }
 
-                    // Default to NCAA filter if tournament games exist
+                    // Default to NCAA Round 1 filter if R1 games exist, otherwise R2
                     if (hasNcaa) {
                         document.querySelectorAll('.games-filter-btn').forEach(b => b.classList.remove('active'));
-                        document.querySelector('.games-filter-btn[data-filter="ncaa"]').classList.add('active');
+                        if (hasR1) {
+                            document.querySelector('.games-filter-btn[data-filter="ncaa"]').classList.add('active');
+                        } else if (hasR2) {
+                            document.querySelector('.games-filter-btn[data-filter="ncaa-r2"]').classList.add('active');
+                        }
                     }
 
                     renderFilteredGames();
@@ -7127,8 +7139,11 @@
 
             // Filter by tournament type
             let filtered = allGames;
+            const r2Rounds = ['Second Round', 'Round of 32', '2nd Round'];
             if (activeFilter === 'ncaa') {
-                filtered = allGames.filter(e => e._tourney === 'ncaa' && !e._round?.includes('First Four'));
+                filtered = allGames.filter(e => e._tourney === 'ncaa' && !e._round?.includes('First Four') && !r2Rounds.some(r => e._round?.includes(r)));
+            } else if (activeFilter === 'ncaa-r2') {
+                filtered = allGames.filter(e => e._tourney === 'ncaa' && r2Rounds.some(r => e._round?.includes(r)));
             } else if (activeFilter === 'firstfour') {
                 filtered = allGames.filter(e => e._tourney === 'ncaa' && e._round?.includes('First Four'));
             } else if (activeFilter === 'nit') {
@@ -7152,6 +7167,7 @@
             const titleEl = document.getElementById('gamesTitle');
             if (titleEl) {
                 if (activeFilter === 'ncaa') titleEl.textContent = 'March Madness — Round 1';
+                else if (activeFilter === 'ncaa-r2') titleEl.textContent = 'March Madness — Round 2';
                 else if (activeFilter === 'firstfour') titleEl.textContent = 'March Madness — First Four';
                 else if (activeFilter === 'nit') titleEl.textContent = 'NIT';
                 else titleEl.textContent = 'All Postseason Games';
@@ -12683,9 +12699,11 @@
         // ── GAME DETAIL PAGE ("Relive the Moment") ──
 
         const UPSET_HIGHLIGHTS = {
-            '2026/kentucky-wildcats-vs-santa-clara-broncos': { videoId: 'hDlw629_kFY', title: 'Otega Oweh Banks in Buzzer Beater — Kentucky vs Santa Clara NCAA Tournament 2026', type: 'highlights' },
+            '2026/kentucky-wildcats-vs-santa-clara-broncos': { videoId: '9t6LybyBhWk', title: 'Otega Oweh Banks in Buzzer Beater — Kentucky vs Santa Clara NCAA Tournament 2026', type: 'highlights' },
             '2026/vcu-rams-vs-north-carolina-tar-heels': { videoId: 'Y992fhmrpOo', title: 'VCU vs North Carolina - First Round NCAA Tournament 2026 Extended Highlights', type: 'highlights' },
             '2026/high-point-panthers-vs-wisconsin-badgers': { videoId: 'f-NhxOnzK94', title: 'Wisconsin vs High Point - Full Game Highlights | First Round NCAA March Madness 2026', type: 'highlights' },
+            '2026/texas-longhorns-vs-byu-cougars': { videoId: 'tNyN_y1bVaI', title: 'Texas vs BYU - First Round NCAA Tournament 2026 Extended Highlights', type: 'highlights' },
+            '2026/texas-a-m-aggies-vs-saint-mary-s-gaels': { videoId: 'zcsDIi5nuZA', title: 'Texas A&M vs Saint Mary\'s - First Round NCAA Tournament 2026 Extended Highlights', type: 'highlights' },
             '2013/harvard-crimson-vs-new-mexico-lobos': { videoId: 'nez6lI-RV3o', title: 'Harvard vs. New Mexico: 2013 NCAA second round | Full Replay', type: 'full-replay' },
             '2025/arkansas-razorbacks-vs-kansas-jayhawks': { videoId: 'ud5RTavQYBY', title: 'Arkansas vs. Kansas - First round NCAA tournament extended highlights', type: 'highlights' },
             '2025/baylor-bears-vs-mississippi-state-bulldogs': { videoId: 'OWTf3TAL4HE', title: 'Baylor vs. Mississippi State - First round NCAA tournament extended highlights', type: 'highlights' },
@@ -12966,7 +12984,7 @@
                 tags: ['overtime-thriller', 'buzzer-beater'],
                 headline: 'Otega Oweh banks in 32-foot buzzer beater to force OT — Kentucky survives 89-84',
                 description: 'Oweh scored 35 points including a miraculous banked three from 32 feet with 0.0 seconds left to erase Santa Clara\'s 73-70 lead and force overtime.',
-                videoId: 'hDlw629_kFY',
+                videoId: '9t6LybyBhWk',
                 eventId: '401856525'
             }
         };
@@ -15087,7 +15105,7 @@
                     { round: 'Championship', opponent: 'Utah Utes', oppSeed: 3, oppEspnId: '254', score: '78-69', winScore: 78, loseScore: 69, note: '', isChampionship: true }
                 ],
                 stats: { seed: '2', record: '6-0', avgMargin: '+10.7', closestGame: '86-85 vs Stanford (OT)' },
-                videoId: 'jkYvGfiomVs',
+                videoId: '2JMEwOUIarU',
                 aftermath: 'Jeff Sheppard was named Final Four Most Outstanding Player. Tubby Smith became the first African American coach to win consecutive SEC titles and the first to win a national championship in his debut season at a school. The "Comeback Cats" moniker became one of the most beloved in Kentucky basketball history. Scott Padgett went on to play seven NBA seasons, and Nazr Mohammed was drafted 29th overall in 1998, playing 18 years in the NBA.',
                 mop: 'Jeff Sheppard',
                 staticBoxScores: {
