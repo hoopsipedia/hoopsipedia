@@ -5528,29 +5528,20 @@
 
             // Start unified live ticker — one master loop updates everything in sync
             try { startUnifiedLiveTicker(); } catch(e) { console.error('Live ticker error:', e); }
-            // Seed VCU as default takeover for Day 2 — live ticker will replace if bigger upset comes in
+            // Force VCU takeover for Day 2 — it's the biggest story (19-pt comeback)
+            // Live ticker will replace if an upset with seed diff > 5 comes in today
             try {
-                const stored = localStorage.getItem('upsetTakeover');
-                let shouldSeedVCU = true;
-                if (stored) {
-                    try {
-                        const prev = JSON.parse(stored);
-                        if (prev.seedDiff && prev.seedDiff > 5) shouldSeedVCU = false; // bigger upset already exists
-                    } catch(e) {}
-                }
-                if (shouldSeedVCU) {
-                    const vcuData = {
-                        team: 'VCU',
-                        color: '#F8B800',   // VCU gold as accent
-                        navColor: '#000000', // VCU black for nav
-                        espnId: '2670',
-                        time: Date.now(),
-                        message: '11-seed VCU stuns 6-seed North Carolina!',
-                        gameLink: '#game/2026/vcu-rams-vs-north-carolina-tar-heels',
-                        seedDiff: 5
-                    };
-                    localStorage.setItem('upsetTakeover', JSON.stringify(vcuData));
-                }
+                const vcuData = {
+                    team: 'VCU',
+                    color: '#F8B800',   // VCU gold as accent
+                    navColor: '#000000', // VCU black for nav
+                    espnId: '2670',
+                    time: Date.now(),
+                    message: '11-seed VCU stuns 6-seed North Carolina!',
+                    gameLink: '#game/2026/vcu-rams-vs-north-carolina-tar-heels',
+                    seedDiff: 5
+                };
+                localStorage.setItem('upsetTakeover', JSON.stringify(vcuData));
             } catch(e) {}
             try { checkUpsetTakeover(); } catch(e) { console.error('Upset takeover restore error:', e); }
             try { checkMilestoneBanner(); } catch(e) { console.error('Milestone banner restore error:', e); }
