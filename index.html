@@ -11508,15 +11508,15 @@
                 });
 
                 // First tournament win in program history
-                if ((priorYears.length > 0 && priorWins.length === 0) ||
-                    (priorYears.length === 0 && ZERO_TOURNEY_WIN_TEAMS[wId] && !FIRST_TOURNEY_TEAMS[wId])) {
-                    return `First NCAA Tournament win in ${wName} history`;
+                // Only trust this if team has few prior appearances (data may be incomplete for large programs)
+                if (ZERO_TOURNEY_WIN_TEAMS[wId]) {
+                    if (FIRST_TOURNEY_TEAMS[wId]) {
+                        return `${wName}'s first-ever NCAA Tournament game — and a win!`;
+                    }
+                    return `First NCAA Tournament win in ${wName} history!`;
                 }
-
-                // First tournament appearance AND first win
-                if ((priorYears.length === 0 && wTeam[11] <= 1 && FIRST_TOURNEY_TEAMS[wId]) ||
-                    (priorYears.length === 0 && wTeam[11] <= 1 && !ZERO_TOURNEY_WIN_TEAMS[wId])) {
-                    return `${wName}'s first-ever NCAA Tournament game - and a win`;
+                if (priorYears.length > 0 && priorYears.length <= 10 && priorWins.length === 0) {
+                    return `First NCAA Tournament win in ${wName} history`;
                 }
 
                 // First tourney win since winning national championship
