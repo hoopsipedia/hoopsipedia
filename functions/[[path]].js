@@ -106,9 +106,10 @@ export async function onRequest(context) {
   const url = new URL(request.url);
   const teamParam = url.searchParams.get('team');
   const compareParam = url.searchParams.get('compare');
+  const gameParam = url.searchParams.get('game');
 
   // No relevant query params — passthrough to static files
-  if (!teamParam && !compareParam) {
+  if (!teamParam && !compareParam && !gameParam) {
     return context.next();
   }
 
@@ -167,6 +168,44 @@ export async function onRequest(context) {
 
     metaTags = [
       { key: 'og:type', value: 'website' },
+      { key: 'og:title', value: pageTitle },
+      { key: 'og:description', value: description },
+      { key: 'og:image', value: imageUrl },
+      { key: 'og:url', value: canonicalUrl },
+      { key: 'og:site_name', value: 'Hoopsipedia' },
+      { key: 'twitter:card', value: 'summary_large_image' },
+      { key: 'twitter:title', value: pageTitle },
+      { key: 'twitter:description', value: description },
+      { key: 'twitter:image', value: imageUrl },
+    ];
+  } else if (gameParam) {
+    // ?game=2026/vcu-rams-vs-north-carolina-tar-heels
+    const slashIdx = gameParam.indexOf('/');
+    if (slashIdx < 0) return context.next();
+
+    const year = gameParam.substring(0, slashIdx);
+    const matchupSlug = gameParam.substring(slashIdx + 1);
+    const vsIdx = matchupSlug.indexOf('-vs-');
+    if (vsIdx < 0) return context.next();
+
+    const winnerSlug = matchupSlug.substring(0, vsIdx);
+    const loserSlug = matchupSlug.substring(vsIdx + 4);
+
+    const winner = lookupTeam(winnerSlug, teams, index);
+    const loser = lookupTeam(loserSlug, teams, index);
+
+    // Build title and description even if team lookup fails
+    const winnerName = winner ? winner.name : winnerSlug.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+    const loserName = loser ? loser.name : loserSlug.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+
+    pageTitle = `${winnerName} Upsets ${loserName} — ${year} NCAA Tournament | Hoopsipedia`;
+    const description = `Relive the Moment: ${winnerName} defeats ${loserName} in the ${year} NCAA Tournament. Box score, highlights, and why this upset mattered.`;
+    const imageUrl = winner
+      ? `https://a.espncdn.com/i/teamlogos/ncaa/500/${winner.espnId}.png`
+      : `https://www.hoopsipedia.com/branding/hoopsipedia-logo.png`;
+
+    metaTags = [
+      { key: 'og:type', value: 'article' },
       { key: 'og:title', value: pageTitle },
       { key: 'og:description', value: description },
       { key: 'og:image', value: imageUrl },
