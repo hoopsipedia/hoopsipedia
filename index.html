@@ -12163,11 +12163,15 @@
 
                 // Completeness indicators
                 const hasVideo = !!run.videoId;
-                const hasBoxScores = run.staticBoxScores && Object.keys(run.staticBoxScores).length > 0;
                 const gameCount = run.games ? run.games.length : 0;
-                const boxScoreCount = run.staticBoxScores ? Object.keys(run.staticBoxScores).length : 0;
+                // ESPN has box scores for ~2002+ games; staticBoxScores covers older ones
+                const hasStaticBoxScores = run.staticBoxScores && Object.keys(run.staticBoxScores).length > 0;
+                const hasEspnBoxScores = run.year >= 2002;
+                const hasBoxScores = hasStaticBoxScores || hasEspnBoxScores;
+                const boxScoreCount = hasStaticBoxScores ? Object.keys(run.staticBoxScores).length : (hasEspnBoxScores ? gameCount : 0);
 
-                // MOP
+                // Coach & MOP
+                const coach = run.coach || '';
                 const mop = run.mop || '';
 
                 return `
@@ -12188,7 +12192,7 @@
                         <img src="${logoUrl}" alt="" style="width:36px;height:36px;flex-shrink:0;" onerror="this.style.display='none'">
                         <div style="flex:1; min-width:0;">
                             <div style="font-size:0.9rem; font-weight:700; color:#1B2A4A; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">${run.teamName}</div>
-                            <div style="font-size:0.72rem; color:#8892A0;">${mop ? 'MOP: ' + mop : ''}</div>
+                            <div style="font-size:0.72rem; color:#8892A0;">${coach ? 'Coach: ' + coach : ''}${coach && mop ? ' · ' : ''}${mop ? 'MOP: ' + mop : ''}</div>
                         </div>
                         <div style="display:flex; align-items:center; gap:0.75rem; flex-shrink:0;">
                             <span style="font-size:0.75rem; color:#8892A0; font-weight:600;">#${seed} seed</span>
@@ -12207,7 +12211,7 @@
             const uniqueTeams = new Set(runs.map(r => r.espnId));
             const totalRuns = runs.length;
             const withVideo = runs.filter(r => r.videoId).length;
-            const withBoxScores = runs.filter(r => r.staticBoxScores && Object.keys(r.staticBoxScores).length > 0).length;
+            const withBoxScores = runs.filter(r => (r.staticBoxScores && Object.keys(r.staticBoxScores).length > 0) || r.year >= 2002).length;
 
             content.innerHTML = `
                 <div style="max-width:1000px; margin:0 auto; padding:2rem 1rem;">
@@ -13714,6 +13718,7 @@
                 stats: { seed: '1', record: '6-0', avgMargin: '+8.2', closestGame: '63-62 vs Auburn' },
                 videoId: 'ufI6DCB6X2U',
                 aftermath: 'De\'Andre Hunter (4th pick) and Ty Jerome (24th pick) were drafted in the 2019 NBA Draft. Kyle Guy was named Final Four Most Outstanding Player. Coach Tony Bennett turned down a raise, asking the university to invest the money in his staff and a fund for former players instead.',
+                coach: 'Tony Bennett',
                 mop: 'Kyle Guy'
             },
             '2018/villanova-wildcats': {
@@ -13736,6 +13741,7 @@
                 stats: { seed: '1', record: '6-0', avgMargin: '+17.2', closestGame: '71-59 vs Texas Tech' },
                 videoId: 'kbaMeEcdDfM',
                 aftermath: 'Mikal Bridges (10th pick), Donte DiVincenzo (17th pick), Jalen Brunson (33rd pick), and Omari Spellman (30th pick) all entered the 2018 NBA Draft. DiVincenzo was named Final Four MOP with his legendary 31-point bench performance. Jay Wright became just the fourth coach to win multiple titles since 1985.',
+                coach: 'Jay Wright',
                 mop: 'Donte DiVincenzo'
             },
             '2023/uconn-huskies': {
@@ -13758,6 +13764,7 @@
                 stats: { seed: '4', record: '6-0', avgMargin: '+20.3', closestGame: '72-59 vs Miami' },
                 videoId: 'yPnGZBpvjN0',
                 aftermath: 'Jordan Hawkins (14th pick) and Andre Jackson Jr. (36th pick) were drafted in the 2023 NBA Draft. Adama Sanogo earned MOP honors. Dan Hurley became the third UConn coach to win a title, joining Jim Calhoun and Kevin Ollie. The Huskies would go on to repeat as champions the following year.',
+                coach: 'Dan Hurley',
                 mop: 'Adama Sanogo'
             },
             '2024/uconn-huskies': {
@@ -13780,6 +13787,7 @@
                 stats: { seed: '1', record: '6-0', avgMargin: '+23.2', closestGame: '86-72 vs Alabama' },
                 videoId: '4ZZGU7_f_Rs',
                 aftermath: 'Donovan Clingan (7th pick), Stephon Castle (4th pick), and Tristen Newton (2nd round) entered the 2024 NBA Draft. Newton earned MOP honors with 20 points and 7 assists in the title game. Dan Hurley became the first coach since Billy Donovan (Florida 2006-07) to win back-to-back championships.',
+                coach: 'Dan Hurley',
                 mop: 'Tristen Newton'
             },
             '2025/florida-gators': {
@@ -13802,6 +13810,7 @@
                 stats: { seed: '1', record: '6-0', avgMargin: '+10.7', closestGame: '65-63 vs Houston' },
                 videoId: 'igDpFxg60qU',
                 aftermath: 'Walter Clayton Jr. was named the tournament\'s Most Outstanding Player. Will Richard led the team with 18 points in the championship game. Florida became one of only seven programs with three or more national championships. Coach Todd Golden, in just his third season, made March Madness history as the youngest champion coach in over 40 years.',
+                coach: 'Todd Golden',
                 mop: 'Walter Clayton Jr.'
             },
             '2016/villanova-wildcats': {
@@ -13824,6 +13833,7 @@
                 stats: { seed: '2', record: '6-0', avgMargin: '+20.7', closestGame: '64-59 vs Kansas' },
                 videoId: 'JFKZ84aV-qw',
                 aftermath: 'Ryan Arcidiacono was named Final Four Most Outstanding Player. Kris Jenkins\' buzzer-beating three became one of the most replayed shots in college basketball history. The 95-51 Final Four demolition of Oklahoma was the largest margin of victory in Final Four history. Jay Wright captured his first national championship, and the Wildcats would win another just two years later in 2018.',
+                coach: 'Jay Wright',
                 mop: 'Ryan Arcidiacono'
             },
             '2012/kentucky-wildcats': {
@@ -13846,6 +13856,7 @@
                 stats: { seed: '1', record: '6-0', avgMargin: '+11.8', closestGame: '67-59 vs Kansas' },
                 videoId: 'jZj2UkglB9E',
                 aftermath: 'Anthony Davis was the first overall pick in the 2012 NBA Draft, followed by teammate Michael Kidd-Gilchrist at second overall. Marquis Teague and Terrence Jones were also first-round picks. Davis was named tournament MOP despite scoring just 6 points in the title game, as his defensive dominance was undeniable. Kentucky\'s eighth national title cemented Calipari\'s recruiting model as a championship blueprint.',
+                coach: 'John Calipari',
                 mop: 'Anthony Davis'
             },
             '1992/duke-blue-devils': {
@@ -13868,6 +13879,7 @@
                 stats: { seed: '1', record: '6-0', avgMargin: '+12.8', closestGame: '104-103 vs Kentucky (OT)' },
                 videoId: 'l6a7npEVgek',
                 aftermath: 'Bobby Hurley was named Final Four Most Outstanding Player. Christian Laettner was the 3rd overall pick in the 1992 NBA Draft, while Grant Hill went 3rd overall in 1994. Duke became the last team to repeat as champions until Florida accomplished the feat in 2006-07. Coach K cemented his legacy as one of the greatest coaches in college basketball history with his second consecutive title.',
+                coach: 'Mike Krzyzewski',
                 mop: 'Bobby Hurley'
             },
             '2022/kansas-jayhawks': {
@@ -13890,6 +13902,7 @@
                 stats: { seed: '1', record: '6-0', avgMargin: '+13.5', closestGame: '66-61 vs Providence' },
                 videoId: 'c1qlo4natGE',
                 aftermath: 'Ochai Agbaji was named Final Four Most Outstanding Player and was selected 14th overall in the 2022 NBA Draft. David McCormack scored 15 crucial points in the championship game comeback. Bill Self won his second national title, both at Kansas. The comeback from 16 down will forever stand as the defining moment of the 2022 tournament.',
+                coach: 'Bill Self',
                 mop: 'Ochai Agbaji'
             },
             '2017/north-carolina-tar-heels': {
@@ -13912,6 +13925,7 @@
                 stats: { seed: '1', record: '6-0', avgMargin: '+8.8', closestGame: '77-76 vs Oregon' },
                 videoId: 'cq9AogwLvow',
                 aftermath: 'Joel Berry II was named Final Four Most Outstanding Player, scoring 22 points in the championship game on two stress fractures in his feet. Justin Jackson added 16 points in the title game and was drafted 15th overall. Kennedy Meeks\' block on Nigel Williams-Goss with under a minute left sealed the victory. Roy Williams won his third national championship, all at North Carolina.',
+                coach: 'Roy Williams',
                 mop: 'Joel Berry II'
             },
             '2008/kansas-jayhawks': {
@@ -13934,6 +13948,7 @@
                 stats: { seed: '1', record: '6-0', avgMargin: '+13.2', closestGame: '59-57 vs Davidson' },
                 videoId: 'z3sy0oHP3LI',
                 aftermath: 'Mario Chalmers was named Final Four Most Outstanding Player and his three-pointer became known as "Mario\'s Miracle." Chalmers, Brandon Rush, Darrell Arthur, and Sasha Kaun all went on to NBA careers. Bill Self captured his first national championship in his fifth season at Kansas. The shot remains one of the most iconic moments in NCAA Tournament history.',
+                coach: 'Bill Self',
                 mop: 'Mario Chalmers'
             },
             '1978/kentucky-wildcats': {
@@ -13955,6 +13970,7 @@
                 stats: { seed: '1', record: '5-0', avgMargin: '+9.8', closestGame: '52-49 vs Michigan State' },
                 videoId: 'YKbGfa9t-8Y',
                 aftermath: 'Jack Givens was named Final Four Most Outstanding Player after his legendary 41-point championship performance. Givens was drafted 16th overall in the 1978 NBA Draft. Joe B. Hall became the second Kentucky coach to win a national title, following Adolph Rupp. The 1978 Wildcats finished 30-2 and are remembered as one of the finest teams in Kentucky basketball history.',
+                coach: 'Joe B. Hall',
                 mop: 'Jack Givens'
             },
             '1982/north-carolina-tar-heels': {
@@ -13976,6 +13992,7 @@
                 stats: { seed: '1', record: '5-0', avgMargin: '+4.0', closestGame: '52-50 vs James Madison' },
                 videoId: 'qklYkm2jAQ4',
                 aftermath: 'James Worthy was named Final Four Most Outstanding Player with 28 points in the title game. Worthy was selected first overall in the 1982 NBA Draft by the Los Angeles Lakers. Michael Jordan\'s game-winning shot launched one of the greatest careers in sports history. Dean Smith won his first national title in his seventh Final Four appearance, ending years of criticism about his inability to win the big one.',
+                coach: 'Dean Smith',
                 mop: 'James Worthy'
             },
             '1988/kansas-jayhawks': {
@@ -13998,6 +14015,7 @@
                 stats: { seed: '6', record: '6-0', avgMargin: '+8.0', closestGame: '61-58 vs Murray State' },
                 videoId: 'QIhg5jziMNA',
                 aftermath: 'Danny Manning was named Final Four Most Outstanding Player and was selected first overall in the 1988 NBA Draft by the Los Angeles Clippers. The "Danny and the Miracles" run remains the only 6-seed to ever win the national championship. Coach Larry Brown left for the San Antonio Spurs after the season, making the title run even more singular. Manning finished with 163 points across six tournament games.',
+                coach: 'Larry Brown',
                 mop: 'Danny Manning'
             },
             '1991/duke-blue-devils': {
@@ -14020,6 +14038,7 @@
                 stats: { seed: '2', record: '6-0', avgMargin: '+14.0', closestGame: '79-77 vs UNLV' },
                 videoId: 'Y3zEz5-1fXY',
                 aftermath: 'Christian Laettner, Bobby Hurley, and Grant Hill returned and led Duke to a repeat championship in 1992. All three became high NBA draft picks: Laettner went 3rd overall (1992), Hurley 7th overall (1993), and Grant Hill 3rd overall (1994). The 1991 title launched Coach K\'s dynasty and cemented him as one of college basketball\'s all-time great coaches.',
+                coach: 'Mike Krzyzewski',
                 mop: 'Christian Laettner'
             },
             '2001/duke-blue-devils': {
@@ -14042,6 +14061,7 @@
                 stats: { seed: '1', record: '6-0', avgMargin: '+16.7', closestGame: '79-69 vs USC' },
                 videoId: '5BPWFQPrFLs',
                 aftermath: 'Shane Battier was drafted 6th overall by Vancouver/Memphis and went on to win two NBA championships with the Miami Heat. Jay Williams was taken 2nd overall in 2002 by the Chicago Bulls, but a motorcycle accident in 2003 effectively ended his playing career. Carlos Boozer was drafted 35th overall in 2002 and became a two-time All-Star. This was Coach K\'s 3rd championship.',
+                coach: 'Mike Krzyzewski',
                 mop: 'Shane Battier'
             },
             '1976/indiana-hoosiers': {
@@ -14063,6 +14083,7 @@
                 stats: { seed: 'N/A', record: '5-0', avgMargin: '+13.2', closestGame: '74-69 vs Alabama' },
                 videoId: 'fR9BPVdZ5VU',
                 aftermath: 'Scott May was selected 2nd overall in the 1976 NBA Draft by the Chicago Bulls. Kent Benson, named MOP after his 25-point championship performance, was taken 1st overall in 1977 by the Milwaukee Bucks. Quinn Buckner went 7th overall in 1976 to the Bucks. Bobby Knight went on to win two more national titles (1981, 1987). To this day, the 1975-76 Hoosiers remain the last undefeated national champion.',
+                coach: 'Bob Knight',
                 mop: 'Kent Benson'
             },
             '1967/ucla-bruins': {
@@ -14083,6 +14104,7 @@
                 stats: { seed: 'N/A', record: '4-0', avgMargin: '+23.8', closestGame: '73-58 vs Houston' },
                 videoId: 'NXUkJH1CJAQ',
                 aftermath: 'Lew Alcindor was named MOP \u2014 the first of three consecutive MOP awards as UCLA won seven straight titles from 1967-1973. Alcindor (later Kareem Abdul-Jabbar) was drafted 1st overall in 1969 and became the NBA\'s all-time leading scorer. His dominance was so overwhelming that the NCAA banned dunking the following season, a rule that stood for nearly a decade. John Wooden\'s third title was merely the beginning of an unprecedented run of 10 championships in 12 years.',
+                coach: 'John Wooden',
                 mop: 'Lew Alcindor'
             },
             '1986/louisville-cardinals': {
@@ -14105,6 +14127,7 @@
                 stats: { seed: '2', record: '6-0', avgMargin: '+11.8', closestGame: '72-69 vs Duke' },
                 videoId: '1DhZN0LXTAs',
                 aftermath: 'Pervis Ellison stayed all four years and was selected 1st overall in the 1989 NBA Draft by the Sacramento Kings. Billy Thompson was drafted 19th overall in 1986 and won back-to-back NBA titles with the Lakers (1987-88). Milt Wagner was a second-round pick (35th) by Dallas. Denny Crum cemented his legacy with two national championships (1980, 1986) and six Final Fours.',
+                coach: 'Denny Crum',
                 mop: 'Pervis Ellison'
             },
             '2003/syracuse-orange': {
@@ -14127,6 +14150,7 @@
                 stats: { seed: '3', record: '6-0', avgMargin: '+9.0', closestGame: '79-78 vs Auburn' },
                 videoId: 'pl9cPZehbQw',
                 aftermath: 'Carmelo Anthony declared for the 2003 NBA Draft \u2014 the legendary class of LeBron James, Dwyane Wade, and Chris Bosh \u2014 and was selected 3rd overall by the Denver Nuggets, becoming a 10-time All-Star and Hall of Famer. Hakim Warrick stayed two more years and was drafted 19th overall in 2005. Jim Boeheim finally claimed his first and only national title in his 27th year coaching Syracuse, after two previous runner-up finishes.',
+                coach: 'Jim Boeheim',
                 mop: 'Carmelo Anthony'
             },
             '2000/michigan-state-spartans': {
@@ -14149,6 +14173,7 @@
                 stats: { seed: '1', record: '6-0', avgMargin: '+15.3', closestGame: '73-61 vs Utah' },
                 videoId: '_xx9bawXSqE',
                 aftermath: 'Mateen Cleaves was drafted 14th overall by the Detroit Pistons and Morris Peterson went 21st to the Toronto Raptors. Peterson enjoyed an 11-year NBA career. The championship cemented Tom Izzo as one of college basketball\'s elite coaches and remains the last national title won by a Big Ten team.',
+                coach: 'Tom Izzo',
                 mop: 'Mateen Cleaves'
             },
             '2002/maryland-terrapins': {
@@ -14171,6 +14196,7 @@
                 stats: { seed: '1', record: '6-0', avgMargin: '+14.0', closestGame: '90-82 vs UConn' },
                 videoId: 'rSNcXJAvBcc',
                 aftermath: 'Three Terrapins were selected in the 2002 NBA Draft: Chris Wilcox went 8th overall to the Clippers, Juan Dixon 17th to the Washington Wizards, and Lonny Baxter in the second round to the Bulls. The title was Gary Williams\' crowning achievement at his alma mater and remains Maryland\'s only men\'s basketball national championship.',
+                coach: 'Gary Williams',
                 mop: 'Juan Dixon'
             },
             '1983/nc-state-wolfpack': {
@@ -14193,6 +14219,7 @@
                 stats: { seed: '6', record: '6-0', avgMargin: '+5.3', closestGame: '71-70 vs UNLV' },
                 videoId: 'GfYb-JTmJs4',
                 aftermath: 'Akeem Olajuwon of Houston was named Final Four Most Outstanding Player despite playing for the losing team \u2014 the last time that has happened. Thurl Bailey was drafted 7th overall in the 1983 NBA Draft. Jim Valvano became the youngest coach (37) to win a national championship at that time. Valvano was later diagnosed with cancer and founded the V Foundation for Cancer Research, delivering his legendary ESPY speech in 1993: "Don\'t give up. Don\'t ever give up." He passed away eight weeks later. Lorenzo Charles tragically died in a bus accident in 2011.',
+                coach: 'Jim Valvano',
                 mop: 'Akeem Olajuwon'
             },
             '1985/villanova-wildcats': {
@@ -14215,6 +14242,7 @@
                 stats: { seed: '8', record: '6-0', avgMargin: '+4.7', closestGame: '51-49 vs Dayton' },
                 videoId: '0X9qURT5ORw',
                 aftermath: 'Ed Pinckney was named Final Four Most Outstanding Player. He was drafted 10th overall in the 1985 NBA Draft. The "Perfect Game" cemented Villanova as one of the greatest Cinderella stories in sports history. Coach Rollie Massimino became a legend in Philadelphia and later coached at Cleveland State and Keiser. Georgetown\'s Patrick Ewing was drafted 1st overall by the New York Knicks.',
+                coach: 'Rollie Massimino',
                 mop: 'Ed Pinckney',
                 staticBoxScores: {
                     0: `<div style="overflow-x:auto;">
@@ -14388,6 +14416,7 @@
                 stats: { seed: '3', record: '6-0', avgMargin: '+11.0', closestGame: '56-55 vs Kentucky' },
                 videoId: 'oE0PoB3mJbE',
                 aftermath: 'Kemba Walker was drafted 9th overall by the Charlotte Bobcats in the 2011 NBA Draft. He became a four-time NBA All-Star. Coach Jim Calhoun retired in 2012 with three national championships. UConn would win again in 2014 under Kevin Ollie, becoming the first program to win two titles in four years since Florida (2006-07).',
+                coach: 'Jim Calhoun',
                 mop: 'Kemba Walker'
             },
             '2014/uconn-huskies': {
@@ -14410,6 +14439,7 @@
                 stats: { seed: '7', record: '6-0', avgMargin: '+8.7', closestGame: '81-76 vs Iowa State' },
                 videoId: 'TcEBqLePnIc',
                 aftermath: 'Shabazz Napier was named Final Four Most Outstanding Player and was drafted 24th overall by the Miami Heat (traded to Charlotte). Coach Kevin Ollie became the first coach to win a national championship within his first two full seasons as a head coach. UConn became the first team to win titles as a Big East member and an AAC member.',
+                coach: 'Kevin Ollie',
                 mop: 'Shabazz Napier'
             },
             '1997/arizona-wildcats': {
@@ -14432,6 +14462,7 @@
                 stats: { seed: '4', record: '6-0', avgMargin: '+6.5', closestGame: '73-69 vs College of Charleston' },
                 videoId: 'qlAB7lFJnJg',
                 aftermath: 'Miles Simon was named Final Four Most Outstanding Player. He went undrafted but played professionally overseas. Mike Bibby was drafted 2nd overall in the 1998 NBA Draft. Coach Lute Olson won his only national championship and was inducted into the Basketball Hall of Fame in 2002. Arizona became the first Pac-10 team to win the title since UCLA in 1995.',
+                coach: 'Lute Olson',
                 mop: 'Miles Simon'
             },
             '2003/syracuse-orange': {
@@ -14454,6 +14485,7 @@
                 stats: { seed: '3', record: '6-0', avgMargin: '+11.0', closestGame: '79-78 vs Auburn' },
                 videoId: 'W2a07ER2Rm0',
                 aftermath: 'Carmelo Anthony was named Final Four Most Outstanding Player and was drafted 3rd overall by the Denver Nuggets in the 2003 NBA Draft — the same draft class as LeBron James, Dwyane Wade, and Chris Bosh. Anthony declared for the draft after just one season, becoming the program\'s greatest one-and-done. Coach Jim Boeheim won his only national championship in his 27th season at Syracuse. He would return to the Final Four in 2013 and 2016.',
+                coach: 'Jim Boeheim',
                 mop: 'Carmelo Anthony'
             },
             '1990/unlv-rebels': {
@@ -14476,6 +14508,7 @@
                 stats: { seed: '1', record: '6-0', avgMargin: '+18.7', closestGame: '69-67 vs Ball State' },
                 videoId: 'GmFX7gSGhOQ',
                 aftermath: 'Anderson Hunt was named Final Four Most Outstanding Player with 29 points in the title game. Larry Johnson was drafted 1st overall in the 1991 NBA Draft. Stacey Augmon went 9th. UNLV went 34-0 the following season but was upset by Duke in the 1991 Final Four — sweet revenge for the Blue Devils who would go on to win their first championship. Coach Tarkanian left UNLV in 1992 amid ongoing NCAA investigations.',
+                coach: 'Jerry Tarkanian',
                 mop: 'Anderson Hunt'
             },
             '1993/north-carolina-tar-heels': {
@@ -14498,6 +14531,7 @@
                 stats: { seed: '1', record: '6-0', avgMargin: '+14.5', closestGame: '80-74 vs Arkansas' },
                 videoId: 'x3-bv47TsGI',
                 aftermath: 'Donald Williams was named Final Four Most Outstanding Player. Eric Montross was drafted 9th overall in the 1994 NBA Draft. Chris Webber of Michigan was drafted 1st overall in 1993. The Fab Five\'s legacy was later tarnished by an NCAA investigation that led to Michigan vacating its 1992 and 1993 Final Four appearances. Dean Smith retired in 1997 as the winningest coach in college basketball history with 879 wins.',
+                coach: 'Dean Smith',
                 mop: 'Donald Williams'
             },
             '2010/duke-blue-devils': {
@@ -14520,6 +14554,7 @@
                 stats: { seed: '1', record: '6-0', avgMargin: '+12.7', closestGame: '61-59 vs Butler' },
                 videoId: 'FDB-OiXFoiQ',
                 aftermath: 'Kyle Singler was named Final Four Most Outstanding Player. He was drafted 33rd overall in the 2011 NBA Draft. Jon Scheyer became Duke\'s head coach in 2022 after serving as an assistant under Coach K. Gordon Hayward of Butler was drafted 9th overall and became an NBA All-Star. Coach K\'s fourth title tied him with Adolph Rupp for second-most all-time behind John Wooden\'s 10.',
+                coach: 'Mike Krzyzewski',
                 mop: 'Kyle Singler'
             },
             '2013/louisville-cardinals': {
@@ -14542,6 +14577,7 @@
                 stats: { seed: '1', record: '6-0', avgMargin: '+14.7', closestGame: '72-68 vs Wichita State' },
                 videoId: '55fROVHk6E4',
                 aftermath: 'Luke Hancock was named Final Four Most Outstanding Player — the first reserve to earn the honor. Gorgui Dieng was drafted 21st overall in the 2013 NBA Draft. This title was later vacated by the NCAA in 2018 due to a recruiting scandal involving escort services, though Louisville has appealed and many still consider it a legitimate championship. Rick Pitino was fired in 2017. Kevin Ware made a full recovery and returned to play the following season.',
+                coach: 'Rick Pitino',
                 mop: 'Luke Hancock'
             },
             '2015/duke-blue-devils': {
@@ -14564,6 +14600,7 @@
                 stats: { seed: '1', record: '6-0', avgMargin: '+10.8', closestGame: '63-57 vs Utah' },
                 videoId: 'uiWERnXd9l0',
                 aftermath: 'Tyus Jones was named Final Four Most Outstanding Player and was drafted 24th overall in the 2015 NBA Draft. Jahlil Okafor was drafted 3rd overall by the Philadelphia 76ers. Justise Winslow went 10th to the Miami Heat. It was Coach K\'s fifth national championship, tying him with John Wooden\'s record at one school (Wooden won all 10 at UCLA). Krzyzewski coached seven more seasons before retiring in 2022 with 1,202 career wins.',
+                coach: 'Mike Krzyzewski',
                 mop: 'Tyus Jones'
             },
             '2006/florida-gators': {
@@ -14586,6 +14623,7 @@
                 stats: { seed: '3', record: '6-0', avgMargin: '+12.7', closestGame: '57-53 vs Georgetown' },
                 videoId: 'K3GBywMoyU4',
                 aftermath: 'Joakim Noah was named Final Four Most Outstanding Player. Rather than declaring for the NBA Draft, Noah, Al Horford, Corey Brewer, Taurean Green, and Lee Humphrey all returned for the 2006-07 season to pursue a repeat. The decision was unprecedented and set the stage for Florida\'s back-to-back championship run.',
+                coach: 'Billy Donovan',
                 mop: 'Joakim Noah'
             },
             '2007/florida-gators': {
@@ -14608,6 +14646,7 @@
                 stats: { seed: '1', record: '6-0', avgMargin: '+13.7', closestGame: '74-67 vs Purdue' },
                 videoId: 'jS5gKWbMkOo',
                 aftermath: 'Corey Brewer was named Final Four Most Outstanding Player. After the repeat, the core players declared for the NBA Draft. Al Horford was drafted 3rd overall by the Atlanta Hawks, Corey Brewer went 7th to the Minnesota Timberwolves, and Joakim Noah was selected 9th by the Chicago Bulls. All three had long NBA careers. Billy Donovan became only the fourth coach to win consecutive titles.',
+                coach: 'Billy Donovan',
                 mop: 'Corey Brewer'
             },
             '1994/arkansas-razorbacks': {
@@ -14630,6 +14669,7 @@
                 stats: { seed: '1', record: '6-0', avgMargin: '+13.7', closestGame: '76-72 vs Duke' },
                 videoId: 'QOnJz0YRbGY',
                 aftermath: 'Corliss Williamson was named Final Four Most Outstanding Player. He was drafted 13th overall in the 1996 NBA Draft and played nine NBA seasons. Nolan Richardson became the first African American coach to win the NCAA championship. Arkansas returned to the title game in 1995 but lost to UCLA. Richardson was fired in 2002 amid controversy and later settled a wrongful termination lawsuit with the university.',
+                coach: 'Nolan Richardson',
                 mop: 'Corliss Williamson',
                 staticBoxScores: {
                     5: `<div style="overflow-x:auto;">
@@ -14853,6 +14893,7 @@
                 stats: { seed: '1', record: '6-0', avgMargin: '+12.5', closestGame: '75-74 vs Missouri' },
                 videoId: 'bLfEaiGJDq0',
                 aftermath: 'Ed O\'Bannon was named Final Four Most Outstanding Player and was drafted 9th overall by the New Jersey Nets in the 1995 NBA Draft. He later became the lead plaintiff in the landmark O\'Bannon v. NCAA antitrust lawsuit that challenged the NCAA\'s use of athletes\' likenesses. Tyus Edney was drafted 19th overall. Jim Harrick was fired from UCLA in 1996 over expense report irregularities. It was UCLA\'s first title in 20 years and remains its most recent championship.',
+                coach: 'Jim Harrick',
                 mop: 'Ed O\'Bannon',
                 staticBoxScores: {
                     5: `<div style="overflow-x:auto;">
@@ -15076,6 +15117,7 @@
                 stats: { seed: '1', record: '6-0', avgMargin: '+22.2', closestGame: '81-74 vs Massachusetts' },
                 videoId: 'xqB6MFRB3UU',
                 aftermath: 'Tony Delk was named Final Four Most Outstanding Player. He was drafted 16th overall by the Charlotte Hornets. Ron Mercer went 6th overall in 1997 after staying one more year. Antoine Walker had been drafted 6th overall in 1996. Rick Pitino left Kentucky after the 1996-97 season to coach the Boston Celtics, and later won another championship at Louisville in 2013. The 1996 Wildcats\' average margin of victory in the tournament remains one of the largest in NCAA history.',
+                coach: 'Rick Pitino',
                 mop: 'Tony Delk',
                 staticBoxScores: {
                     5: `<div style="overflow-x:auto;">
@@ -15299,6 +15341,7 @@
                 stats: { seed: '2', record: '6-0', avgMargin: '+10.7', closestGame: '86-85 vs Stanford (OT)' },
                 videoId: '3ZmrJePNVvc',
                 aftermath: 'Jeff Sheppard was named Final Four Most Outstanding Player. Tubby Smith became the first African American coach to win consecutive SEC titles and the first to win a national championship in his debut season at a school. The "Comeback Cats" moniker became one of the most beloved in Kentucky basketball history. Scott Padgett went on to play seven NBA seasons, and Nazr Mohammed was drafted 29th overall in 1998, playing 18 years in the NBA.',
+                coach: 'Tubby Smith',
                 mop: 'Jeff Sheppard',
                 staticBoxScores: {
                     5: `<div style="overflow-x:auto;">
@@ -15540,6 +15583,7 @@
                 stats: { seed: '1', record: '6-0', avgMargin: '+11.3', closestGame: '67-62 vs Gonzaga' },
                 videoId: 'MpjmP3Es3ek',
                 aftermath: 'Richard Hamilton was named Final Four Most Outstanding Player. He was drafted 7th overall by the Washington Wizards in the 1999 NBA Draft and went on to become a three-time All-Star and NBA champion with the Detroit Pistons in 2004. Khalid El-Amin, the sophomore point guard, transferred after the season. Jim Calhoun cemented UConn as a national power, going on to win two more championships in 2004 and 2011.',
+                coach: 'Jim Calhoun',
                 mop: 'Richard Hamilton',
                 staticBoxScores: {
                     5: `<div style="overflow-x:auto;">
@@ -15763,6 +15807,7 @@
                 stats: { seed: '2', record: '6-0', avgMargin: '+13.3', closestGame: '79-78 vs Duke' },
                 videoId: 'wBXdQ1Ksdg0',
                 aftermath: 'Emeka Okafor was named Final Four Most Outstanding Player. He was drafted 2nd overall by the Charlotte Bobcats and won NBA Rookie of the Year. Ben Gordon was drafted 3rd overall by the Chicago Bulls and won Sixth Man of the Year as a rookie. UConn became the first school to win both the men\'s and women\'s NCAA basketball championships in the same year, as Diana Taurasi led the women\'s team to their third straight title.',
+                coach: 'Jim Calhoun',
                 mop: 'Emeka Okafor'
             },
             '2005/north-carolina-tar-heels': {
@@ -15785,6 +15830,7 @@
                 stats: { seed: '1', record: '6-0', avgMargin: '+11.2', closestGame: '67-66 vs Villanova' },
                 videoId: 'nFSavDf3KKo',
                 aftermath: 'Sean May was named Final Four Most Outstanding Player, scoring 26 points on his birthday in the title game. He was drafted 13th overall by the Charlotte Bobcats. Raymond Felton went 5th overall and Rashad McCants 14th in the 2005 NBA Draft. Marvin Williams, who came off the bench, was drafted 2nd overall by the Atlanta Hawks. Roy Williams went on to win two more championships at North Carolina in 2009 and 2017 before retiring in 2021.',
+                coach: 'Roy Williams',
                 mop: 'Sean May'
             },
             '2009/north-carolina-tar-heels': {
