@@ -8313,8 +8313,10 @@
                 const today = new Date();
                 today.setHours(0, 0, 0, 0);
                 const gameDate = new Date(m.date + 'T12:00:00');
-                const isUpcoming = !m._liveStatus && gameDate >= today && m.t1Score === 0 && m.t2Score === 0;
-                const isLive = m._liveStatus === 'In Progress' || m._liveStatus === 'Halftime';
+                const gameStatusStr = m._liveStatus || m.status || '';
+                const isFinalGame = gameStatusStr === 'Final';
+                const isUpcoming = !isFinalGame && !m._liveStatus && gameDate >= today && m.t1Score === 0 && m.t2Score === 0;
+                const isLive = m._liveStatus === 'In Progress' || m._liveStatus === 'Halftime' || m._liveStatus === 'End of Period' || m.status === 'In Progress' || m.status === 'Halftime' || m.status === 'End of Period';
 
                 // Detect tournament games from venue/notes context
                 const isTourneyGame = m.tourney === 'ncaa' || (m.venue && (m.venue.includes('NCAA') || m.venue.includes('Tournament')));
