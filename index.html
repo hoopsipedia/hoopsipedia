@@ -4825,8 +4825,9 @@
                     const comp = event.competitions?.[0];
                     if (!comp) return;
                     const status = comp.status?.type?.description;
-                    const isLive = status === 'In Progress' || status === 'Halftime';
-                    const isFinal = status === 'Final';
+                    const gameState = comp.status?.type?.state || '';
+                    const isLive = status === 'In Progress' || status === 'Halftime' || status === 'End of Period' || gameState === 'in';
+                    const isFinal = status === 'Final' || gameState === 'post';
                     if (!isLive && !isFinal) return;
 
                     const competitors = comp.competitors || [];
@@ -6869,13 +6870,24 @@
 
                         // Check game status — build scoreboard and time separately
                         const status = comp.status?.type?.description || '';
+                        const gameState = comp.status?.type?.state || '';
                         let scoreboardHTML = '';
-                        if (status === 'In Progress') {
+                        if (status === 'In Progress' || status === 'End of Period' || gameState === 'in') {
                             const period = comp.status?.period || 0;
                             const clock = comp.status?.displayClock || '';
                             const t1Score = team1.score || '0';
                             const t2Score = team2.score || '0';
-                            const halfStr = period <= 2 ? `${period === 1 ? '1st' : '2nd'} Half ${clock}` : `OT ${clock}`;
+                            let halfStr = '';
+                            if (status === 'End of Period') {
+                                halfStr = period >= 2 ? 'END REG · Heading to OT' : 'End of ' + (period === 1 ? '1st' : '2nd');
+                            } else if (period === 1) {
+                                halfStr = `1st Half ${clock}`;
+                            } else if (period === 2) {
+                                halfStr = `2nd Half ${clock}`;
+                            } else {
+                                const otNum = period - 2;
+                                halfStr = otNum === 1 ? `OT ${clock}` : `${otNum}OT ${clock}`;
+                            }
                             const t1Winning = parseInt(t1Score) >= parseInt(t2Score);
                             scoreboardHTML = `
                                 <div class="game-scoreboard">
@@ -6889,13 +6901,15 @@
                             const t1Score = team1.score || '?';
                             const t2Score = team2.score || '?';
                             const t1Won = parseInt(t1Score) > parseInt(t2Score);
+                            const gamePeriod = comp.status?.period || 2;
+                            const otLabel = gamePeriod > 2 ? (gamePeriod === 3 ? ' (OT)' : ` (${gamePeriod - 2}OT)`) : '';
                             scoreboardHTML = `
                                 <div class="game-scoreboard">
                                     <div class="game-score-team" style="color: ${t1Won ? t1Color : '#A0AAB8'};">${t1Score}</div>
                                     <div class="game-score-divider">-</div>
                                     <div class="game-score-team" style="color: ${!t1Won ? t2Color : '#A0AAB8'};">${t2Score}</div>
                                 </div>
-                                <div class="game-score-status final">FINAL</div>`;
+                                <div class="game-score-status final">FINAL${otLabel}</div>`;
                             timeStr = '';
                         } else if (status === 'Halftime') {
                             const t1Score = team1.score || '0';
@@ -6953,8 +6967,9 @@
                                 var s1 = team1.curatedRank?.current, s2 = team2.curatedRank?.current;
                                 var sc1 = team1.score, sc2 = team2.score;
                                 var statusDesc = comp.status?.type?.description || '';
-                                var live = statusDesc === 'In Progress' || statusDesc === 'Halftime';
-                                var isFinal = statusDesc === 'Final';
+                                var _gameState = comp.status?.type?.state || '';
+                                var live = statusDesc === 'In Progress' || statusDesc === 'Halftime' || statusDesc === 'End of Period' || _gameState === 'in';
+                                var isFinal = statusDesc === 'Final' || _gameState === 'post';
 
                                 // POST-GAME: replace seed context with milestone/result
                                 if (isFinal) {
