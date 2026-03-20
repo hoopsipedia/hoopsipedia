@@ -7176,11 +7176,14 @@
                 const bIsToday = bDate >= todayET ? 1 : 0;
                 if (aIsToday !== bIsToday) return bIsToday - aIsToday; // today before yesterday
 
-                // Within same day: scheduled before final, then by start time
-                const aFinal = aState === 'post' ? 1 : 0;
-                const bFinal = bState === 'post' ? 1 : 0;
-                if (aFinal !== bFinal) return aFinal - bFinal;
-                return new Date(a.competitions?.[0]?.startDate || 0) - new Date(b.competitions?.[0]?.startDate || 0);
+                // Today's games: finals first (just-finished results), then scheduled
+                // Previous days: finals are natural (all games are done)
+                if (aIsToday && bIsToday) {
+                    const aFinal = aState === 'post' ? 1 : 0;
+                    const bFinal = bState === 'post' ? 1 : 0;
+                    if (aFinal !== bFinal) return bFinal - aFinal; // finals ABOVE scheduled
+                }
+                return new Date(b.competitions?.[0]?.startDate || 0) - new Date(a.competitions?.[0]?.startDate || 0);
             });
 
             // Track day groups for headers
@@ -13067,15 +13070,75 @@
                 } catch (e) {}
             }
 
-            // Find the upset data
-            const upset = findUpsetData(year, winnerSlug, loserSlug);
+            // Find the upset data OR instant classic data
+            let upset = findUpsetData(year, winnerSlug, loserSlug);
+            let isClassicOnly = false;
             if (!upset) {
-                content.innerHTML = `<div style="text-align:center; padding:4rem 2rem;">
-                    <div style="font-size:2rem; margin-bottom:1rem;">Game not found</div>
-                    <p style="color:#8892A0; margin-bottom:1.5rem;">We couldn't find data for this game.</p>
-                    <a href="#upsets" style="color:#C9A86C; font-weight:600; text-decoration:none;">Back to Upsets</a>
-                </div>`;
-                return;
+                // Check if this is an Instant Classic (non-upset memorable game)
+                const classic = findInstantClassicBySlug(year, winnerSlug, loserSlug);
+                if (classic) {
+                    // Build synthetic upset object from classic data + ESPN
+                    isClassicOnly = true;
+                    const w = allTeamsData.find(t => teamSlug(t.name) === winnerSlug);
+                    const l = allTeamsData.find(t => teamSlug(t.name) === loserSlug);
+                    upset = {
+                        winnerName: classic.team1,
+                        loserName: classic.team2,
+                        winnerSeed: classic.team1Seed,
+                        loserSeed: classic.team2Seed,
+                        winnerFull: classic.team1,
+                        loserFull: classic.team2,
+                        score: '', // Will be fetched from ESPN
+                        notes: classic.headline,
+                        eventId: classic.eventId
+                    };
+                    // Try to get score from ESPN
+                    try {
+                        const summResp = await fetch(`https://site.api.espn.com/apis/site/v2/sports/basketball/mens-college-basketball/summary?event=${classic.eventId}`);
+                        if (summResp.ok) {
+                            const summData = await summResp.json();
+                            const comp = summData.header?.competitions?.[0];
+                            if (comp) {
+                                const scores = comp.competitors?.map(c => ({
+                                    id: c.team?.id,
+                                    score: c.score,
+                                    seed: c.curatedRank?.current
+                                })) || [];
+                                const t1 = scores.find(s => String(s.id) === String(classic.team1EspnId));
+                                const t2 = scores.find(s => String(s.id) === String(classic.team2EspnId));
+                                if (t1 && t2) {
+                                    const t1Score = parseInt(t1.score) || 0;
+                                    const t2Score = parseInt(t2.score) || 0;
+                                    if (t1Score >= t2Score) {
+                                        upset.score = `${t1Score}-${t2Score}`;
+                                        upset.winnerName = classic.team1;
+                                        upset.loserName = classic.team2;
+                                        upset.winnerSeed = classic.team1Seed;
+                                        upset.loserSeed = classic.team2Seed;
+                                    } else {
+                                        upset.score = `${t2Score}-${t1Score}`;
+                                        upset.winnerName = classic.team2;
+                                        upset.loserName = classic.team1;
+                                        upset.winnerSeed = classic.team2Seed;
+                                        upset.loserSeed = classic.team1Seed;
+                                    }
+                                }
+                                // Detect overtime
+                                const period = comp.status?.period || summData.header?.competitions?.[0]?.status?.period || 0;
+                                if (period > 2) {
+                                    upset.overtimes = period - 2;
+                                }
+                            }
+                        }
+                    } catch(e) { console.warn('Could not fetch classic game score:', e); }
+                } else {
+                    content.innerHTML = `<div style="text-align:center; padding:4rem 2rem;">
+                        <div style="font-size:2rem; margin-bottom:1rem;">Game not found</div>
+                        <p style="color:#8892A0; margin-bottom:1.5rem;">We couldn't find data for this game.</p>
+                        <a href="#upsets" style="color:#C9A86C; font-weight:600; text-decoration:none;">Back to Upsets</a>
+                    </div>`;
+                    return;
+                }
             }
 
             // Resolve teams
@@ -13128,9 +13191,9 @@
             // Build the page
             let html = `
                 <div class="game-detail-hero" style="background: linear-gradient(135deg, ${heroColor} 0%, ${heroColor}dd 40%, #0D1729 100%)">
-                    <a class="game-detail-back" onclick="window.location.hash='#upsets'">
+                    <a class="game-detail-back" onclick="window.location.hash='${isClassicOnly ? '#home' : '#upsets'}'">
                         <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M10.5 13L5.5 8l5-5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                        Back to Upsets
+                        ${isClassicOnly ? 'Back' : 'Back to Upsets'}
                     </a>
                     <div class="game-detail-round">NCAA Tournament First Round</div>
                     <div class="game-detail-year">${year} NCAA Tournament</div>
@@ -13158,7 +13221,10 @@
                         </div>
                     </div>
 
-                    <div class="game-detail-upset-badge">${upset.winnerSeed}-seed over ${upset.loserSeed}-seed upset</div>
+                    ${isClassicOnly
+                        ? `<div class="game-detail-upset-badge" style="background: linear-gradient(135deg, #F59E0B, #D97706);">⚡ Instant Classic</div>`
+                        : `<div class="game-detail-upset-badge">${upset.winnerSeed}-seed over ${upset.loserSeed}-seed upset</div>`
+                    }
                     ${classicTagsHTML}
 
                     <button onclick="copyShareUrl('game', '${year}/${winnerFullSlug}-vs-${loserFullSlug}')" style="
