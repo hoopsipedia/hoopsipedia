@@ -1358,6 +1358,15 @@
             }
             .logo-wordmark--hero { font-size: 2rem; }
             .logo-swoosh { display: none; }
+            /* Show hero swoosh during takeover so accent color underline is visible */
+            body.upset-takeover .hero-logo .logo-swoosh { display: block; }
+            /* Takeover banner mobile adjustments */
+            .upset-takeover-banner {
+                padding: 0.5rem 2.5rem 0.5rem 0.75rem;
+                font-size: 0.78rem;
+                gap: 0.5rem;
+            }
+            .upset-takeover-banner img { width: 22px; height: 22px; }
             .nav-search {
                 width: 100%;
                 order: 10;
