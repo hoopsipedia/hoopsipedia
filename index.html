@@ -3965,6 +3965,7 @@
             <li><button class="nav-btn" data-view="coaches">Coaches</button></li>
             <li><button class="nav-btn" data-view="upsets">Upsets</button></li>
             <li><button class="nav-btn" data-view="classics">Classics <span style="font-size:0.6rem;background:rgba(245,158,11,0.2);color:#D97706;padding:1px 4px;border-radius:4px;margin-left:2px;vertical-align:middle;">BETA</span></button></li>
+            <li><button class="nav-btn" data-view="champions">Champions</button></li>
         </ul>
         <div class="nav-search">
             <span class="nav-search-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
@@ -4208,6 +4209,11 @@
         <!-- Instant Classics View -->
         <div id="classics" class="view">
             <div id="classicsContent"></div>
+        </div>
+
+        <!-- Championship Journeys View -->
+        <div id="champions" class="view">
+            <div id="championsContent"></div>
         </div>
 
         <!-- Game Detail View -->
@@ -6219,6 +6225,13 @@
                 return;
             }
 
+            // #champions
+            if (hash === '#champions') {
+                switchView('champions', true);
+                _skipHashUpdate = false;
+                return;
+            }
+
             // #championship/year/team-slug
             const champMatch = hash.match(/^#championship\/(\d{4})\/([^/]+)$/);
             if (champMatch) {
@@ -6642,6 +6655,9 @@
                 if (bracketRefreshInterval) clearInterval(bracketRefreshInterval);
             } else if (view === 'classics') {
                 renderClassics();
+                if (bracketRefreshInterval) clearInterval(bracketRefreshInterval);
+            } else if (view === 'champions') {
+                renderChampions();
                 if (bracketRefreshInterval) clearInterval(bracketRefreshInterval);
             }
         }
@@ -12114,6 +12130,119 @@
                 html = '<div class="upsets-no-data">Select a seed pairing above to view upset details.</div>';
             }
             container.innerHTML = html;
+        }
+
+        function renderChampions() {
+            const content = document.getElementById('championsContent');
+            if (!content) return;
+
+            // Collect all championship runs, deduplicate by key, sort newest first
+            const runs = [];
+            const seenKeys = new Set();
+            for (const [key, run] of Object.entries(CHAMPIONSHIP_RUNS)) {
+                if (seenKeys.has(key)) continue;
+                seenKeys.add(key);
+                runs.push({ key, ...run });
+            }
+            runs.sort((a, b) => b.year - a.year);
+
+            // Group by decade
+            const decades = {};
+            runs.forEach(run => {
+                const decade = Math.floor(run.year / 10) * 10;
+                if (!decades[decade]) decades[decade] = [];
+                decades[decade].push(run);
+            });
+
+            const cardsHtml = runs.map(run => {
+                const logoUrl = `https://a.espncdn.com/i/teamlogos/ncaa/500/${run.espnId}.png`;
+                const accentColor = run.accentColor || '#1B2A4A';
+                const link = `#championship/${run.year}/${run.teamSlug}`;
+                const seed = run.stats?.seed || '?';
+                const record = run.stats?.record || '';
+                const closestGame = run.stats?.closestGame || '';
+
+                // Completeness indicators
+                const hasVideo = !!run.videoId;
+                const hasBoxScores = run.staticBoxScores && Object.keys(run.staticBoxScores).length > 0;
+                const gameCount = run.games ? run.games.length : 0;
+                const boxScoreCount = run.staticBoxScores ? Object.keys(run.staticBoxScores).length : 0;
+
+                // Story preview (first ~120 chars)
+                const storyPreview = run.story ? (run.story.length > 140 ? run.story.substring(0, 140).replace(/\s+\S*$/, '') + '...' : run.story) : '';
+
+                return `
+                    <a href="${link}" class="champ-journey-card" style="
+                        display: block;
+                        text-decoration: none;
+                        background: linear-gradient(135deg, ${accentColor}15 0%, #F8F6F1 40%);
+                        border: 1px solid #E8E2D8;
+                        border-left: 4px solid ${accentColor};
+                        border-radius: 12px;
+                        padding: 1.25rem;
+                        transition: transform 0.2s, box-shadow 0.2s;
+                        cursor: pointer;
+                    " onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 24px rgba(0,0,0,0.12)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+                        <div style="display:flex; align-items:center; gap:1rem; margin-bottom:0.75rem;">
+                            <img src="${logoUrl}" alt="" style="width:52px;height:52px;" onerror="this.style.display='none'">
+                            <div style="flex:1;">
+                                <div style="font-size:1.3rem; font-weight:800; color:${accentColor}; line-height:1.1;">${run.year}</div>
+                                <div style="font-size:0.95rem; font-weight:700; color:#1B2A4A;">${run.teamName}</div>
+                            </div>
+                            <div style="text-align:right;">
+                                <div style="font-size:0.75rem; color:#8892A0; font-weight:600;">#${seed} SEED</div>
+                                ${record ? `<div style="font-size:0.85rem; font-weight:700; color:#1B2A4A;">${record}</div>` : ''}
+                            </div>
+                        </div>
+                        ${storyPreview ? `<div style="font-size:0.82rem; color:#5A6577; line-height:1.5; margin-bottom:0.75rem;">${storyPreview}</div>` : ''}
+                        <div style="display:flex; align-items:center; justify-content:space-between; gap:0.5rem; flex-wrap:wrap;">
+                            <div style="display:flex; gap:0.4rem; flex-wrap:wrap;">
+                                <span style="font-size:0.65rem; padding:2px 6px; border-radius:8px; font-weight:600; background:${hasVideo ? 'rgba(34,197,94,0.12)' : 'rgba(0,0,0,0.05)'}; color:${hasVideo ? '#16A34A' : '#A0AAB8'};">${hasVideo ? '✓' : '○'} Video</span>
+                                <span style="font-size:0.65rem; padding:2px 6px; border-radius:8px; font-weight:600; background:${hasBoxScores ? 'rgba(34,197,94,0.12)' : 'rgba(0,0,0,0.05)'}; color:${hasBoxScores ? '#16A34A' : '#A0AAB8'};">${hasBoxScores ? `✓ ${boxScoreCount}/${gameCount}` : '○'} Box Scores</span>
+                            </div>
+                            <span style="font-size:0.8rem; color:#C9A86C; font-weight:600;">View Journey →</span>
+                        </div>
+                    </a>
+                `;
+            }).join('');
+
+            // Stats summary
+            const uniqueTeams = new Set(runs.map(r => r.espnId));
+            const totalRuns = runs.length;
+            const withVideo = runs.filter(r => r.videoId).length;
+            const withBoxScores = runs.filter(r => r.staticBoxScores && Object.keys(r.staticBoxScores).length > 0).length;
+
+            content.innerHTML = `
+                <div style="max-width:1000px; margin:0 auto; padding:2rem 1rem;">
+                    <div style="text-align:center; margin-bottom:2rem;">
+                        <h2 class="section-title" style="margin-bottom:0.5rem;">🏆 Championship Journeys</h2>
+                        <p style="color:#8892A0; margin-top:0.5rem; font-size:0.95rem; max-width:600px; margin-left:auto; margin-right:auto;">
+                            Relive every step of the path to cutting down the nets. ${totalRuns} championship runs documented across ${uniqueTeams.size} programs.
+                        </p>
+                    </div>
+                    <div style="display:flex; justify-content:center; gap:1.5rem; margin-bottom:2rem; flex-wrap:wrap;">
+                        <div style="text-align:center; padding:0.75rem 1.25rem; background:#F8F6F1; border:1px solid #E8E2D8; border-radius:10px;">
+                            <div style="font-size:1.5rem; font-weight:800; color:#1B2A4A;">${totalRuns}</div>
+                            <div style="font-size:0.7rem; color:#8892A0; font-weight:600; text-transform:uppercase; letter-spacing:0.05em;">Journeys</div>
+                        </div>
+                        <div style="text-align:center; padding:0.75rem 1.25rem; background:#F8F6F1; border:1px solid #E8E2D8; border-radius:10px;">
+                            <div style="font-size:1.5rem; font-weight:800; color:#1B2A4A;">${uniqueTeams.size}</div>
+                            <div style="font-size:0.7rem; color:#8892A0; font-weight:600; text-transform:uppercase; letter-spacing:0.05em;">Programs</div>
+                        </div>
+                        <div style="text-align:center; padding:0.75rem 1.25rem; background:#F8F6F1; border:1px solid #E8E2D8; border-radius:10px;">
+                            <div style="font-size:1.5rem; font-weight:800; color:#16A34A;">${withVideo}</div>
+                            <div style="font-size:0.7rem; color:#8892A0; font-weight:600; text-transform:uppercase; letter-spacing:0.05em;">With Video</div>
+                        </div>
+                        <div style="text-align:center; padding:0.75rem 1.25rem; background:#F8F6F1; border:1px solid #E8E2D8; border-radius:10px;">
+                            <div style="font-size:1.5rem; font-weight:800; color:#16A34A;">${withBoxScores}</div>
+                            <div style="font-size:0.7rem; color:#8892A0; font-weight:600; text-transform:uppercase; letter-spacing:0.05em;">With Box Scores</div>
+                        </div>
+                    </div>
+                    <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(340px, 1fr)); gap:1rem;">
+                        ${cardsHtml}
+                    </div>
+                </div>
+            `;
         }
 
         function renderClassics() {
