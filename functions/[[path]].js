@@ -108,9 +108,10 @@ export async function onRequest(context) {
   const compareParam = url.searchParams.get('compare');
   const gameParam = url.searchParams.get('game');
   const champParam = url.searchParams.get('championship');
+  const viewParam = url.searchParams.get('view');
 
   // No relevant query params — passthrough to static files
-  if (!teamParam && !compareParam && !gameParam && !champParam) {
+  if (!teamParam && !compareParam && !gameParam && !champParam && !viewParam) {
     return context.next();
   }
 
@@ -197,6 +198,44 @@ export async function onRequest(context) {
 
     metaTags = [
       { key: 'og:type', value: 'article' },
+      { key: 'og:title', value: pageTitle },
+      { key: 'og:description', value: description },
+      { key: 'og:image', value: imageUrl },
+      { key: 'og:url', value: canonicalUrl },
+      { key: 'og:site_name', value: 'Hoopsipedia' },
+      { key: 'twitter:card', value: 'summary_large_image' },
+      { key: 'twitter:title', value: pageTitle },
+      { key: 'twitter:description', value: description },
+      { key: 'twitter:image', value: imageUrl },
+    ];
+  } else if (viewParam) {
+    // ?view=upsets, ?view=classics, ?view=champions
+    const viewMeta = {
+      'upsets': {
+        title: 'Greatest NCAA Tournament Upsets of All Time — Hoopsipedia',
+        description: 'Every Cinderella story, every bracket buster. Explore the most shocking upsets in March Madness history with scores, highlights, and the stories behind the madness.',
+        image: 'https://www.hoopsipedia.com/branding/hoopsipedia-logo.png',
+      },
+      'classics': {
+        title: '⚡ Instant Classics — 2026 NCAA Tournament | Hoopsipedia',
+        description: 'Buzzer beaters, overtime thrillers, and games you\'ll never forget from the 2026 NCAA Tournament.',
+        image: 'https://www.hoopsipedia.com/branding/hoopsipedia-logo.png',
+      },
+      'champions': {
+        title: '🏆 Championship Journeys — Every Path to Cutting Down the Nets | Hoopsipedia',
+        description: 'Relive every championship run in NCAA Tournament history. Game-by-game breakdowns, box scores, highlights, and the stories behind each title.',
+        image: 'https://www.hoopsipedia.com/branding/hoopsipedia-logo.png',
+      },
+    };
+    const vm = viewMeta[viewParam];
+    if (!vm) return context.next();
+
+    pageTitle = vm.title;
+    const description = vm.description;
+    const imageUrl = vm.image;
+
+    metaTags = [
+      { key: 'og:type', value: 'website' },
       { key: 'og:title', value: pageTitle },
       { key: 'og:description', value: description },
       { key: 'og:image', value: imageUrl },

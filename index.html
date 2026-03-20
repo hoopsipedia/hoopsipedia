@@ -4693,6 +4693,11 @@
                 window.location.replace(window.location.pathname + '#championship/' + champParam);
                 return;
             }
+            const viewParam = params.get('view');
+            if (viewParam) {
+                window.location.replace(window.location.pathname + '#' + viewParam);
+                return;
+            }
         })();
 
         /**
