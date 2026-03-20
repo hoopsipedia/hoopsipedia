@@ -1368,9 +1368,9 @@
   },
   "6v11": {
     "higherSeedWins": 97,
-    "lowerSeedWins": 64,
-    "totalGames": 161,
-    "upsetPct": 39.75,
+    "lowerSeedWins": 65,
+    "totalGames": 162,
+    "upsetPct": 40.12,
     "notes": "The 6v11 matchup is one of the most upset-prone in the tournament. In 1989, all four 11 seeds won. Since 2005, at least one 11 seed has won every year. Six 11 seeds have reached the Final Four (LSU 1986, George Mason 2006, VCU 2011, Loyola Chicago 2018, UCLA 2021, NC State 2024).",
     "upsets": [
       {
@@ -2022,15 +2022,26 @@
         "loserFull": "North Carolina Tar Heels",
         "loserSeed": 6,
         "score": "82-78 (OT)",
-        "note": "VCU completed the largest first-round comeback in NCAA Tournament history, erasing a double-digit deficit against 6-seed North Carolina before forcing overtime and pulling away for an 82-78 victory. The Rams' stunning rally sent shockwaves through the bracket on Day 1 of the 2026 tournament.",
+        "notes": "VCU completed the largest first-round comeback in NCAA Tournament history. Down by as many as 18 points against 6-seed North Carolina, the 11-seed Rams clawed all the way back to force overtime — then pulled away for an 82-78 victory that stunned the bracket on Day 1 of the 2026 tournament.",
         "overtimes": 1
+      },
+      {
+        "year": 2026,
+        "winner": "Texas",
+        "winnerFull": "Texas Longhorns",
+        "winnerSeed": 11,
+        "loser": "BYU",
+        "loserFull": "BYU Cougars",
+        "loserSeed": 6,
+        "score": "77-71",
+        "notes": "Texas built a 46-37 halftime lead and held off BYU's AJ Dybantsa (35 points) to complete the 11-over-6 upset in Portland. Two 11-seeds knocked off 6-seeds on the same day of the 2026 tournament."
       }
     ]
   },
   "7v10": {
-    "higherSeedWins": 95,
-    "lowerSeedWins": 65,
-    "totalGames": 160,
+    "higherSeedWins": 94,
+    "lowerSeedWins": 66,
+    "totalGames": 161,
     "upsetPct": 40.62,
     "notes": "The 7v10 matchup has an identical upset rate to 6v11. In 1999, all four 10 seeds won. Syracuse became the only 10 seed to reach the Final Four in 2016. The 2021 Oregon vs VCU game was a no-contest due to COVID protocols.",
     "upsets": [
@@ -2688,6 +2699,17 @@
         "loserFull": "Marquette Golden Eagles",
         "loserSeed": 7,
         "score": "69-63"
+      },
+      {
+        "year": 2026,
+        "winner": "Texas A&M",
+        "winnerFull": "Texas A&M Aggies",
+        "winnerSeed": 10,
+        "loser": "Saint Mary's",
+        "loserFull": "Saint Mary's Gaels",
+        "loserSeed": 7,
+        "score": "63-50",
+        "notes": "Texas A&M dominated from start to finish, holding Saint Mary's to just 50 points in a decisive 13-point first-round victory in Oklahoma City."
       }
     ]
   },
