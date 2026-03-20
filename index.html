@@ -1925,6 +1925,48 @@
             text-transform: uppercase; letter-spacing: 0.06em;
         }
 
+        /* Instant Classic badges */
+        .instant-classic-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #F59E0B, #D97706);
+            color: white;
+            font-size: 0.7rem;
+            font-weight: 700;
+            padding: 2px 8px;
+            border-radius: 12px;
+            letter-spacing: 0.03em;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: transform 0.15s ease, box-shadow 0.15s ease;
+        }
+        .instant-classic-badge:hover {
+            transform: scale(1.05);
+            box-shadow: 0 2px 8px rgba(245, 158, 11, 0.4);
+        }
+        .game-detail-classic-tags {
+            display: flex; flex-wrap: wrap; gap: 0.5rem;
+            justify-content: center; margin-top: 0.75rem;
+        }
+        .game-detail-classic-tag {
+            display: inline-block;
+            padding: 0.3rem 0.85rem; border-radius: 2rem;
+            font-size: 0.75rem; font-weight: 700;
+            text-transform: uppercase; letter-spacing: 0.04em;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        .game-detail-classic-tag.overtime-thriller {
+            background: rgba(59, 130, 246, 0.2); color: #93C5FD;
+        }
+        .game-detail-classic-tag.buzzer-beater {
+            background: rgba(239, 68, 68, 0.2); color: #FCA5A5;
+        }
+        .game-detail-classic-tag.upset {
+            background: rgba(245, 158, 11, 0.2); color: #FCD34D;
+        }
+        .game-detail-classic-tag.historic-performance {
+            background: rgba(249, 115, 22, 0.2); color: #FDBA74;
+        }
+
         .game-detail-content {
             max-width: 800px; margin: 0 auto;
         }
@@ -5520,20 +5562,21 @@
 
             // Start unified live ticker — one master loop updates everything in sync
             try { startUnifiedLiveTicker(); } catch(e) { console.error('Live ticker error:', e); }
-            // Force VCU takeover for Day 2 — it's the biggest story (19-pt comeback)
+            // Kentucky OT thriller takeover — buzzer beater to force OT, wins in extra time
+            // Manual override: everyone is talking about this ending
             // Live ticker will replace if an upset with seed diff > 5 comes in today
             try {
-                const vcuData = {
-                    team: 'VCU',
-                    color: '#F8B800',   // VCU gold as accent
-                    navColor: '#000000', // VCU black for nav
-                    espnId: '2670',
+                const kyData = {
+                    team: 'Kentucky',
+                    color: '#0033A0',   // Kentucky blue
+                    navColor: '#0033A0',
+                    espnId: '96',
                     time: Date.now(),
-                    message: '11-seed VCU stuns 6-seed North Carolina!',
-                    gameLink: '#game/2026/vcu-rams-vs-north-carolina-tar-heels',
-                    seedDiff: 5
+                    message: '⚡ Instant Classic: Kentucky survives Santa Clara in OT thriller!',
+                    gameLink: '#game/2026/kentucky-wildcats-vs-santa-clara-broncos',
+                    seedDiff: 5  // Keep at 5 so a bigger upset can still replace it
                 };
-                localStorage.setItem('upsetTakeover', JSON.stringify(vcuData));
+                localStorage.setItem('upsetTakeover', JSON.stringify(kyData));
             } catch(e) {}
             try { checkUpsetTakeover(); } catch(e) { console.error('Upset takeover restore error:', e); }
             try { checkMilestoneBanner(); } catch(e) { console.error('Milestone banner restore error:', e); }
@@ -7269,8 +7312,28 @@
                             badgeHTML = `<div class="game-tournament-badge nit">NIT · ${event._round || '1st Round'}</div>`;
                         }
 
+                        // Instant Classic badge
+                        let classicBadgeHTML = '';
+                        const _classicEntry = findInstantClassic(event.id);
+                        if (_classicEntry) {
+                            const _cWinner = comp.competitors?.find(c => c.winner);
+                            const _cLoser = comp.competitors?.find(c => !c.winner);
+                            let _classicHref = '#';
+                            if (_cWinner && _cLoser) {
+                                const _cwSlug = teamSlug(_cWinner.team?.displayName || '');
+                                const _clSlug = teamSlug(_cLoser.team?.displayName || '');
+                                _classicHref = `#game/${_classicEntry.year}/${_cwSlug}-vs-${_clSlug}`;
+                            } else {
+                                const _ct1Slug = teamSlug(_classicEntry.team1);
+                                const _ct2Slug = teamSlug(_classicEntry.team2);
+                                _classicHref = `#game/${_classicEntry.year}/${_ct1Slug}-vs-${_ct2Slug}`;
+                            }
+                            classicBadgeHTML = `<span class="instant-classic-badge" onclick="event.stopPropagation(); window.location.hash='${_classicHref}';" title="Instant Classic">\u26A1 Instant Classic</span>`;
+                        }
+
                         card.innerHTML = `
                             ${badgeHTML}
+                            ${classicBadgeHTML ? `<div style="text-align:center;margin-top:0.5rem;">${classicBadgeHTML}</div>` : ''}
                             <div class="game-card-header">
                                 <div class="game-team game-team-clickable" onclick="openProfileById('${t1EspnId}')" title="View ${team1.team.displayName} profile">
                                     <div class="game-team-logo" style="background-image: url('${getLogoUrl(t1EspnId)}');"></div>
@@ -12795,6 +12858,56 @@
             }
         };
 
+        // Instant Classics: memorable non-upset games (buzzer beaters, OT thrillers, historic performances)
+        const INSTANT_CLASSICS = {
+            // key format: eventId
+            '401856525': {
+                year: 2026,
+                team1: 'Kentucky Wildcats',
+                team1Seed: 7,
+                team1EspnId: '96',
+                team2: 'Santa Clara Broncos',
+                team2Seed: 10,
+                team2EspnId: '2541',
+                tags: ['overtime-thriller', 'buzzer-beater'],
+                headline: 'Kentucky survives Santa Clara in overtime thriller',
+                description: '',
+                videoId: '',
+                eventId: '401856525'
+            }
+        };
+
+        // Helper: find an Instant Classic entry by eventId
+        function findInstantClassic(eventId) {
+            return INSTANT_CLASSICS[String(eventId)] || null;
+        }
+
+        // Helper: find an Instant Classic by game slug (year/winner-vs-loser)
+        function findInstantClassicBySlug(year, winnerSlug, loserSlug) {
+            for (const key in INSTANT_CLASSICS) {
+                const ic = INSTANT_CLASSICS[key];
+                if (ic.year !== parseInt(year)) continue;
+                const t1Slug = teamSlug(ic.team1);
+                const t2Slug = teamSlug(ic.team2);
+                if ((t1Slug === winnerSlug && t2Slug === loserSlug) ||
+                    (t2Slug === winnerSlug && t1Slug === loserSlug)) {
+                    return ic;
+                }
+            }
+            return null;
+        }
+
+        // Helper: get tag display info
+        function getClassicTagDisplay(tag) {
+            const tagMap = {
+                'overtime-thriller': { emoji: '\u23F0', label: 'Overtime Thriller', cls: 'overtime-thriller' },
+                'buzzer-beater':     { emoji: '\uD83D\uDEA8', label: 'Buzzer Beater', cls: 'buzzer-beater' },
+                'upset':             { emoji: '\uD83D\uDD25', label: 'Upset', cls: 'upset' },
+                'historic-performance': { emoji: '\uD83D\uDCC8', label: 'Historic Performance', cls: 'historic-performance' }
+            };
+            return tagMap[tag] || { emoji: '\u26A1', label: tag, cls: '' };
+        }
+
         function hasUpsetVideo(year, winnerName, loserName) {
             // Check if there's a highlight video for this specific game
             // Must be an exact key match with a valid videoId
@@ -12984,6 +13097,22 @@
             // Get aftermath data
             const aftermath = UPSET_AFTERMATH[gameKey];
 
+            // Check if this game is an Instant Classic
+            const classicEntry = findInstantClassicBySlug(year, winnerSlug, loserSlug);
+            let classicTagsHTML = '';
+            if (classicEntry) {
+                const isAlsoUpset = upset.winnerSeed > upset.loserSeed;
+                let allTags = [...classicEntry.tags];
+                if (isAlsoUpset && !allTags.includes('upset')) {
+                    allTags.push('upset');
+                }
+                classicTagsHTML = `<div class="game-detail-classic-tags">` +
+                    allTags.map(tag => {
+                        const info = getClassicTagDisplay(tag);
+                        return `<span class="game-detail-classic-tag ${info.cls}">${info.emoji} ${info.label}</span>`;
+                    }).join('') + `</div>`;
+            }
+
             // Parse score
             const scoreParts = upset.score ? upset.score.split('-') : [];
             const winnerScore = scoreParts[0] || '?';
@@ -13026,6 +13155,7 @@
                     </div>
 
                     <div class="game-detail-upset-badge">${upset.winnerSeed}-seed over ${upset.loserSeed}-seed upset</div>
+                    ${classicTagsHTML}
 
                     <button onclick="copyShareUrl('game', '${year}/${winnerFullSlug}-vs-${loserFullSlug}')" style="
                         margin-top: 1rem; background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.25);
