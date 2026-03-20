@@ -8108,13 +8108,15 @@
             const s5Container = document.getElementById('thisSeasonStarting5Content');
             if (s5Container) {
                 try {
-                    const [data1, data2] = await Promise.all([
+                    const [data1, data2, actual1, actual2] = await Promise.all([
                         fetchPlayerStats(t1.espnId),
-                        fetchPlayerStats(t2.espnId)
+                        fetchPlayerStats(t2.espnId),
+                        fetchActualStarters(t1.espnId),
+                        fetchActualStarters(t2.espnId)
                     ]);
                     if (data1?.players && data2?.players) {
-                        const starters1 = determineStarters(data1.players);
-                        const starters2 = determineStarters(data2.players);
+                        const starters1 = determineStarters(data1.players, actual1);
+                        const starters2 = determineStarters(data2.players, actual2);
                         if (starters1.length > 0 && starters2.length > 0) {
                             s5Container.innerHTML = renderStarting5Content(t1, t2, starters1, starters2, t1Color, t2Color, { showBench: false, showShare: false });
                         } else {
@@ -16500,10 +16502,66 @@
             return 76;
         }
 
-        function determineStarters(players) {
+        // Fetch actual starters from a team's most recent box score
+        async function fetchActualStarters(espnId) {
+            try {
+                const schedResp = await fetch(`https://site.api.espn.com/apis/site/v2/sports/basketball/mens-college-basketball/teams/${espnId}/schedule`);
+                const schedData = await schedResp.json();
+                const events = schedData.events || [];
+                // Find last completed game
+                let lastGameId = null;
+                for (let i = events.length - 1; i >= 0; i--) {
+                    const status = events[i]?.competitions?.[0]?.status?.type?.name;
+                    if (status === 'STATUS_FINAL') { lastGameId = events[i].id; break; }
+                }
+                if (!lastGameId) return null;
+
+                const sumResp = await fetch(`https://site.api.espn.com/apis/site/v2/sports/basketball/mens-college-basketball/summary?event=${lastGameId}`);
+                const sumData = await sumResp.json();
+                const boxPlayers = sumData?.boxscore?.players || [];
+                for (const teamData of boxPlayers) {
+                    if (String(teamData?.team?.id) !== String(espnId)) continue;
+                    const starterIds = new Set();
+                    for (const cat of (teamData.statistics || [])) {
+                        for (const athlete of (cat.athletes || [])) {
+                            if (athlete.starter) starterIds.add(String(athlete.athlete?.id));
+                        }
+                    }
+                    return starterIds.size >= 5 ? starterIds : null;
+                }
+            } catch(e) { console.warn('Could not fetch actual starters for', espnId, e); }
+            return null;
+        }
+
+        function determineStarters(players, actualStarterIds) {
             if (!players || players.length === 0) return [];
 
-            // Filter to players with stats
+            // If we have actual starter IDs from a box score, use them
+            if (actualStarterIds && actualStarterIds.size >= 5) {
+                const realStarters = players.filter(p => actualStarterIds.has(String(p.id)));
+                if (realStarters.length >= 5) {
+                    const positionSlots = ['PG', 'SG', 'SF', 'PF', 'C'];
+                    const starters = [];
+                    const used = new Set();
+
+                    // First pass: position matches
+                    for (const slot of positionSlots) {
+                        const match = realStarters.find(p => !used.has(p.id) && classifyPosition(p.position, p.height) === slot);
+                        if (match) { starters.push({ ...match, assignedPos: slot }); used.add(match.id); }
+                    }
+                    // Second pass: fill remaining
+                    for (const slot of positionSlots) {
+                        if (starters.find(s => s.assignedPos === slot)) continue;
+                        const next = realStarters.find(p => !used.has(p.id));
+                        if (next) { starters.push({ ...next, assignedPos: slot }); used.add(next.id); }
+                    }
+                    const posOrder = { PG: 0, SG: 1, SF: 2, PF: 3, C: 4 };
+                    starters.sort((a, b) => (posOrder[a.assignedPos] || 0) - (posOrder[b.assignedPos] || 0));
+                    return starters;
+                }
+            }
+
+            // Fallback: minutes-based heuristic
             let eligible = players.filter(p => {
                 const ppg = getPlayerStat(p, 'avgPoints', 'PTS');
                 const min = getPlayerStat(p, 'avgMinutes', 'MIN');
@@ -16762,9 +16820,12 @@
             container.innerHTML = renderStarting5Skeleton();
 
             try {
-                const [data1, data2] = await Promise.all([
+                // Fetch player stats and actual starters from recent box scores in parallel
+                const [data1, data2, actual1, actual2] = await Promise.all([
                     fetchPlayerStats(t1.espnId),
-                    fetchPlayerStats(t2.espnId)
+                    fetchPlayerStats(t2.espnId),
+                    fetchActualStarters(t1.espnId),
+                    fetchActualStarters(t2.espnId)
                 ]);
 
                 if (!data1 || !data2 || !data1.players || !data2.players) {
@@ -16772,8 +16833,8 @@
                     return;
                 }
 
-                const starters1 = determineStarters(data1.players);
-                const starters2 = determineStarters(data2.players);
+                const starters1 = determineStarters(data1.players, actual1);
+                const starters2 = determineStarters(data2.players, actual2);
 
                 if (starters1.length === 0 || starters2.length === 0) {
                     container.innerHTML = '<div style="color:#8892A0;font-size:0.9rem;padding:2rem;text-align:center;">Not enough player data to determine starting lineups.</div>';
