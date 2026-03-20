@@ -5138,7 +5138,8 @@
                         if (isLive) {
                             const deficit = favoriteScore - underdogScore;
                             if (period > 2 && deficit <= 9) isUpset = true; // OT — always show
-                            else if (underdogScore > favoriteScore) isUpset = true; // Underdog leading at any point
+                            else if (underdogScore >= favoriteScore) isUpset = true; // Underdog leading or tied at any point
+                            else if (period >= 2 && deficit <= 6) isUpset = true; // 2nd half, within 2 possessions
                             else if (period >= 2 && clockSeconds <= 600 && deficit <= 9) isUpset = true; // Under 10 min in 2nd half, within 3 possessions
                         }
                         if (isFinal && underdog.winner) isUpset = true;
