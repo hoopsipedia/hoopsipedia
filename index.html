@@ -7105,8 +7105,20 @@
             }
 
             // Sort: live games first, then today's scheduled, then previous days (most recent first)
+            // Use ET date for game grouping (when the game actually tipped off for fans)
             const mstNow = new Date(new Date().toLocaleString('en-US', { timeZone: 'America/Denver' }));
             const todayMST = `${mstNow.getFullYear()}-${String(mstNow.getMonth()+1).padStart(2,'0')}-${String(mstNow.getDate()).padStart(2,'0')}`;
+            function getGameDateET(event) {
+                const sd = event.competitions?.[0]?.startDate;
+                if (!sd) return '';
+                const d = new Date(sd);
+                const et = new Date(d.toLocaleString('en-US', { timeZone: 'America/New_York' }));
+                return `${et.getFullYear()}-${String(et.getMonth()+1).padStart(2,'0')}-${String(et.getDate()).padStart(2,'0')}`;
+            }
+            const todayET = (() => {
+                const n = new Date(new Date().toLocaleString('en-US', { timeZone: 'America/New_York' }));
+                return `${n.getFullYear()}-${String(n.getMonth()+1).padStart(2,'0')}-${String(n.getDate()).padStart(2,'0')}`;
+            })();
 
             filtered.sort((a, b) => {
                 const aState = a.competitions?.[0]?.status?.type?.state || '';
@@ -7115,10 +7127,10 @@
                 const bLive = bState === 'in' ? 1 : 0;
                 if (aLive !== bLive) return bLive - aLive; // live first
 
-                const aDate = a.competitions?.[0]?.startDate?.substring(0, 10) || '';
-                const bDate = b.competitions?.[0]?.startDate?.substring(0, 10) || '';
-                const aIsToday = aDate >= todayMST ? 1 : 0;
-                const bIsToday = bDate >= todayMST ? 1 : 0;
+                const aDate = getGameDateET(a);
+                const bDate = getGameDateET(b);
+                const aIsToday = aDate >= todayET ? 1 : 0;
+                const bIsToday = bDate >= todayET ? 1 : 0;
                 if (aIsToday !== bIsToday) return bIsToday - aIsToday; // today before yesterday
 
                 // Within same day: scheduled before final, then by start time
@@ -7137,8 +7149,8 @@
                 if (eventDate) {
                     const d = new Date(eventDate);
                     const dayLabel = d.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', timeZone: 'America/New_York' });
-                    const eventDateStr = eventDate.substring(0, 10);
-                    const isToday = eventDateStr >= todayMST;
+                    const eventDateET = getGameDateET(event);
+                    const isToday = eventDateET >= todayET;
                     const label = isToday ? '' : dayLabel + "'s Games";
                     if (label && label !== lastDayLabel) {
                         lastDayLabel = label;
