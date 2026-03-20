@@ -3958,6 +3958,7 @@
             <li><button class="nav-btn" data-view="teams">Teams</button></li>
             <li><button class="nav-btn" data-view="coaches">Coaches</button></li>
             <li><button class="nav-btn" data-view="upsets">Upsets</button></li>
+            <li><button class="nav-btn" data-view="classics">Classics <span style="font-size:0.6rem;background:rgba(245,158,11,0.2);color:#D97706;padding:1px 4px;border-radius:4px;margin-left:2px;vertical-align:middle;">BETA</span></button></li>
         </ul>
         <div class="nav-search">
             <span class="nav-search-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
@@ -4195,6 +4196,11 @@
         <!-- Upsets View -->
         <div id="upsets" class="view">
             <div id="upsetsContent"></div>
+        </div>
+
+        <!-- Instant Classics View -->
+        <div id="classics" class="view">
+            <div id="classicsContent"></div>
         </div>
 
         <!-- Game Detail View -->
@@ -6139,6 +6145,13 @@
                 return;
             }
 
+            // #classics
+            if (hash === '#classics') {
+                switchView('classics', true);
+                _skipHashUpdate = false;
+                return;
+            }
+
             // #championship/year/team-slug
             const champMatch = hash.match(/^#championship\/(\d{4})\/([^/]+)$/);
             if (champMatch) {
@@ -6559,6 +6572,9 @@
             } else if (view === 'gameDetail') {
                 if (bracketRefreshInterval) clearInterval(bracketRefreshInterval);
             } else if (view === 'championshipRun') {
+                if (bracketRefreshInterval) clearInterval(bracketRefreshInterval);
+            } else if (view === 'classics') {
+                renderClassics();
                 if (bracketRefreshInterval) clearInterval(bracketRefreshInterval);
             }
         }
@@ -12018,6 +12034,76 @@
             container.innerHTML = html;
         }
 
+        function renderClassics() {
+            const content = document.getElementById('classicsContent');
+            if (!content) return;
+
+            const classics = Object.values(INSTANT_CLASSICS);
+
+            // Build cards
+            const cardsHtml = classics.map(ic => {
+                const tagBadges = ic.tags.map(tag => {
+                    const info = getClassicTagDisplay(tag);
+                    return `<span class="game-detail-classic-tag ${info.cls}" style="font-size:0.65rem;padding:2px 6px;">${info.emoji} ${info.label}</span>`;
+                }).join(' ');
+
+                // Determine winner/loser from aftermath or ESPN IDs
+                const gameKey = Object.keys(UPSET_AFTERMATH).find(k => k.includes(teamSlug(ic.team1)) && k.includes(teamSlug(ic.team2)));
+                const t1 = allTeamsData.find(t => t.espnId === String(ic.team1EspnId));
+                const t2 = allTeamsData.find(t => t.espnId === String(ic.team2EspnId));
+                const t1Logo = `https://a.espncdn.com/i/teamlogos/ncaa/500/${ic.team1EspnId}.png`;
+                const t2Logo = `https://a.espncdn.com/i/teamlogos/ncaa/500/${ic.team2EspnId}.png`;
+                const t1Color = t1 && t1.color ? '#' + t1.color.replace('#','') : '#1B2A4A';
+                const slug1 = teamSlug(ic.team1);
+                const slug2 = teamSlug(ic.team2);
+                const gameLink = `#game/${ic.year}/${slug1}-vs-${slug2}`;
+
+                return `
+                    <div class="classic-card" onclick="window.location.hash='${gameLink}'" style="
+                        cursor: pointer;
+                        background: linear-gradient(135deg, ${t1Color}18 0%, #F8F6F1 30%);
+                        border: 1px solid #E8E2D8;
+                        border-radius: 12px;
+                        padding: 1.5rem;
+                        transition: transform 0.2s, box-shadow 0.2s;
+                    " onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 8px 24px rgba(0,0,0,0.12)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+                        <div style="display:flex; align-items:center; gap:1rem; margin-bottom:0.75rem;">
+                            <img src="${t1Logo}" alt="" style="width:48px;height:48px;" onerror="this.style.display='none'">
+                            <span style="font-size:1.2rem; color:#8892A0; font-weight:300;">vs</span>
+                            <img src="${t2Logo}" alt="" style="width:48px;height:48px;" onerror="this.style.display='none'">
+                            <span style="background:linear-gradient(135deg,#F59E0B,#D97706);color:#fff;font-size:0.65rem;font-weight:700;padding:3px 8px;border-radius:10px;letter-spacing:0.03em;">⚡ INSTANT CLASSIC</span>
+                        </div>
+                        <div style="font-size:1.05rem; font-weight:700; color:#1a1a1a; margin-bottom:0.5rem; line-height:1.3;">
+                            ${ic.headline}
+                        </div>
+                        <div style="display:flex; gap:0.5rem; flex-wrap:wrap; margin-bottom:0.5rem;">
+                            ${tagBadges}
+                        </div>
+                        ${ic.description ? `<div style="font-size:0.85rem; color:#5A6577; line-height:1.5;">${ic.description}</div>` : ''}
+                        <div style="margin-top:0.75rem; font-size:0.8rem; color:#C9A86C; font-weight:600;">
+                            Relive This Moment →
+                        </div>
+                    </div>
+                `;
+            }).join('');
+
+            content.innerHTML = `
+                <div style="max-width:900px; margin:0 auto; padding:2rem 1rem;">
+                    <div style="text-align:center; margin-bottom:2rem;">
+                        <h2 class="section-title" style="margin-bottom:0.5rem;">⚡ Instant Classics</h2>
+                        <span style="background:rgba(245,158,11,0.15);color:#D97706;font-size:0.75rem;font-weight:700;padding:3px 10px;border-radius:10px;letter-spacing:0.05em;">BETA</span>
+                        <p style="color:#8892A0; margin-top:0.75rem; font-size:0.95rem;">
+                            The most memorable moments of the ${new Date().getFullYear()} NCAA Tournament — buzzer beaters, overtime thrillers, and games you'll never forget.
+                        </p>
+                    </div>
+                    <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(380px, 1fr)); gap:1.25rem;">
+                        ${cardsHtml}
+                    </div>
+                    ${classics.length === 0 ? '<div style="text-align:center; padding:3rem; color:#8892A0;">No instant classics yet. Stay tuned as the tournament unfolds!</div>' : ''}
+                </div>
+            `;
+        }
+
         async function renderUpsets() {
             const content = document.getElementById('upsetsContent');
             if (!content) return;
@@ -12780,7 +12866,7 @@
             '1991/eastern-michigan-eagles-vs-mississippi-state-bulldogs': { videoId: 'VKqYAv97Fb4', title: 'Michigan State vs. Mississippi State: First Round NCAA tournament extended highlights', type: 'highlights' },
             '1991/penn-state-nittany-lions-vs-ucla-bruins': { videoId: 'akWkRWCzH2w', title: 'Penn State vs. Texas A&M - First Round NCAA tournament extended highlights', type: 'highlights' },
             '1991/richmond-spiders-vs-syracuse-orange': { videoId: 'UucEsA0L6Lc', title: '1991 - Richmond Spiders vs. Syracuse Orangemen | NCAA Tournament 1st Round', type: 'recap' },
-            '1990/ball-state-cardinals-vs-oregon-state-beavers': { videoId: '2FEHQFpFD2I', title: 'Oklahoma State vs. Oregon State - Second Round NCAA tournament extended highlights', type: 'highlights' },
+            '1990/ball-state-cardinals-vs-oregon-state-beavers': { videoId: '-5UHY5f4KPk', title: 'Ball State vs Oregon State - 1990 NCAA Tournament First Round', type: 'highlights' },
             '1990/loyola-marymount-lions-vs-michigan-wolverines': { videoId: 'zPaGdo33fcQ', title: '1990 | Loyola-Marymount vs Michigan Postgame | NCAA Tournament | 3-18-1990', type: 'highlights' },
             '1990/northern-iowa-panthers-vs-missouri-tigers': { videoId: 'l81CbHoY-kg', title: 'Northern Iowa - Missouri (1990 NCAA Southeast Region First Round)', type: 'highlights' },
             '1990/uc-santa-barbara-gauchos-vs-houston-cougars': { videoId: 'jwO2L0yWZ9w', title: '1990 SWC Championship (#9 Arkansas vs. Houston)', type: 'highlights' },
@@ -13199,7 +13285,7 @@
             // Build the page
             let html = `
                 <div class="game-detail-hero" style="background: linear-gradient(135deg, ${heroColor} 0%, ${heroColor}dd 40%, #0D1729 100%)">
-                    <a class="game-detail-back" onclick="window.location.hash='${isClassicOnly ? '#home' : '#upsets'}'">
+                    <a class="game-detail-back" onclick="window.location.hash='${isClassicOnly ? '#classics' : '#upsets'}'">
                         <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M10.5 13L5.5 8l5-5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
                         ${isClassicOnly ? 'Back' : 'Back to Upsets'}
                     </a>
