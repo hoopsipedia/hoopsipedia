@@ -227,8 +227,23 @@ export async function onRequest(context) {
     const winnerName = winner ? winner.name : winnerSlug.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
     const loserName = loser ? loser.name : loserSlug.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
 
-    pageTitle = `${winnerName} Upsets ${loserName} — ${year} NCAA Tournament | Hoopsipedia`;
-    const description = `Relive the Moment: ${winnerName} defeats ${loserName} in the ${year} NCAA Tournament. Box score, highlights, and why this upset mattered.`;
+    // Known Instant Classics (non-upset memorable games)
+    const instantClassics = {
+      '2026/kentucky-wildcats-vs-santa-clara-broncos': {
+        title: `⚡ Instant Classic: Kentucky Survives Santa Clara in OT — ${year} NCAA Tournament | Hoopsipedia`,
+        desc: `Otega Oweh banks in a 32-foot buzzer beater to force overtime. Kentucky wins 89-84 in an instant classic first-round thriller.`
+      }
+    };
+
+    const classicKey = `${year}/${matchupSlug}`;
+    const classic = instantClassics[classicKey];
+
+    pageTitle = classic
+      ? classic.title
+      : `${winnerName} Upsets ${loserName} — ${year} NCAA Tournament | Hoopsipedia`;
+    const description = classic
+      ? classic.desc
+      : `Relive the Moment: ${winnerName} defeats ${loserName} in the ${year} NCAA Tournament. Box score, highlights, and why this upset mattered.`;
     const imageUrl = winner
       ? `https://a.espncdn.com/i/teamlogos/ncaa/500/${winner.espnId}.png`
       : `https://www.hoopsipedia.com/branding/hoopsipedia-logo.png`;
