@@ -130,6 +130,9 @@
         body.upset-takeover .hero-underline {
             background: var(--accent-color) !important;
         }
+        body.upset-takeover .hero-logo .logo-swoosh path {
+            fill: var(--accent-color) !important;
+        }
         body.upset-takeover .compare-button,
         body.upset-takeover .comp-tab.active,
         body.upset-takeover .game-matchup-button {
@@ -5273,7 +5276,7 @@
             if (banner) banner.remove();
         }
 
-        function triggerUpsetTakeover(winnerName, winnerSeed, loserName, loserSeed, winnerEspnId, winnerColor) {
+        function triggerUpsetTakeover(winnerName, winnerSeed, loserName, loserSeed, winnerEspnId, winnerColor, winnerAltColor) {
             // Only replace current takeover if this upset is BIGGER (higher seed diff)
             // Equal seed diffs: newer upset wins (recency + drama)
             const newSeedDiff = Math.abs(winnerSeed - loserSeed);
@@ -5285,24 +5288,51 @@
                 } catch(e) {}
             }
 
-            // Determine a good color: use team color from our data, fallback to a default celebratory orange
+            // Determine colors: primary for accent, alternate for nav/swoosh
             let color = '#E87C1E'; // default orange
+            let altColor = '';
             if (winnerColor) {
                 color = '#' + winnerColor.replace('#', '');
             } else {
                 const team = allTeamsData.find(t => String(t.espnId) === String(winnerEspnId));
                 if (team && team.color) color = '#' + team.color.replace('#', '');
             }
+            if (winnerAltColor) {
+                altColor = '#' + winnerAltColor.replace('#', '');
+            }
 
-            // Ensure sufficient contrast (don't use white or very light colors)
-            const hex = color.replace('#', '');
-            const r = parseInt(hex.substring(0, 2), 16);
-            const g = parseInt(hex.substring(2, 4), 16);
-            const b = parseInt(hex.substring(4, 6), 16);
-            const luminance = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
-            if (luminance > 0.75) {
+            // Color luminance helper
+            function getLuminance(c) {
+                const h = c.replace('#', '');
+                return (0.299 * parseInt(h.substring(0, 2), 16) + 0.587 * parseInt(h.substring(2, 4), 16) + 0.114 * parseInt(h.substring(4, 6), 16)) / 255;
+            }
+
+            const lum = getLuminance(color);
+
+            // Very dark primary (black/near-black): use altColor as accent, dark as nav
+            if (lum < 0.08 && altColor) {
+                const navColor = color;
+                color = altColor; // swap: gold/secondary becomes the accent
+                // Re-check if alt is too light
+                const altLum = getLuminance(color);
+                if (altLum > 0.75) {
+                    const h = color.replace('#', '');
+                    const r = parseInt(h.substring(0, 2), 16);
+                    const g = parseInt(h.substring(2, 4), 16);
+                    const b = parseInt(h.substring(4, 6), 16);
+                    color = `rgb(${Math.round(r * 0.6)}, ${Math.round(g * 0.6)}, ${Math.round(b * 0.6)})`;
+                }
+                var resolvedNavColor = navColor;
+            } else if (lum > 0.75) {
                 // Too light, darken it
+                const h = color.replace('#', '');
+                const r = parseInt(h.substring(0, 2), 16);
+                const g = parseInt(h.substring(2, 4), 16);
+                const b = parseInt(h.substring(4, 6), 16);
                 color = `rgb(${Math.round(r * 0.6)}, ${Math.round(g * 0.6)}, ${Math.round(b * 0.6)})`;
+                var resolvedNavColor = null;
+            } else {
+                var resolvedNavColor = null;
             }
 
             const message = `${winnerSeed}-seed ${winnerName} stuns ${loserSeed}-seed ${loserName}!`;
@@ -5312,6 +5342,7 @@
             const data = {
                 team: winnerName,
                 color: color,
+                navColor: resolvedNavColor || color,
                 espnId: winnerEspnId,
                 time: Date.now(),
                 message: message,
@@ -5673,13 +5704,15 @@
                                     const winnerTeamObj = winner.team || {};
                                     const loserTeamObj = loser.team || {};
                                     const winnerColor = winnerTeamObj.color || '';
+                                    const winnerAltColor = winnerTeamObj.alternateColor || '';
                                     triggerUpsetTakeover(
                                         winnerTeamObj.shortDisplayName || winnerTeamObj.displayName || 'Unknown',
                                         winnerSeed,
                                         loserTeamObj.shortDisplayName || loserTeamObj.displayName || 'Unknown',
                                         loserSeed,
                                         winnerTeamObj.id,
-                                        winnerColor
+                                        winnerColor,
+                                        winnerAltColor
                                     );
                                 }
                             }
