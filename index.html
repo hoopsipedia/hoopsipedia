@@ -87,8 +87,8 @@
             to { transform: translateY(0); opacity: 1; }
         }
         body.upset-takeover nav {
-            background: var(--accent-color);
-            border-bottom-color: var(--accent-color);
+            background: var(--header-accent);
+            border-bottom-color: var(--header-accent);
         }
         body.upset-takeover .nav-links button {
             color: rgba(255,255,255,0.7);
@@ -146,8 +146,8 @@
             color: var(--accent-color);
         }
         body.upset-takeover footer {
-            background: var(--accent-color) !important;
-            border-top-color: var(--accent-color) !important;
+            background: var(--header-accent) !important;
+            border-top-color: var(--header-accent) !important;
         }
         body.upset-takeover footer a,
         body.upset-takeover footer h3,
@@ -167,7 +167,7 @@
             color: var(--accent-color);
         }
         body.upset-takeover .compare-section {
-            background: linear-gradient(135deg, color-mix(in srgb, var(--accent-color) 90%, #000), color-mix(in srgb, var(--accent-color) 70%, #000)) !important;
+            background: linear-gradient(135deg, color-mix(in srgb, var(--header-accent) 90%, #000), color-mix(in srgb, var(--header-accent) 70%, #000)) !important;
         }
         body.upset-takeover .compare-section .compare-button {
             background: #fff !important;
@@ -5011,7 +5011,7 @@
             // ONE-TIME OVERRIDE: Force VCU takeover for 2026-03-19 (OT comeback upset of UNC)
             // Remove this block after tournament Day 1
             const vcuOverride = {
-                team: 'VCU', color: '#D4A017', espnId: '2670',
+                team: 'VCU', color: '#D4A017', navColor: '#1A1A1A', espnId: '2670',
                 time: Date.now(), seedDiff: 99,
                 message: '11-seed VCU stuns 6-seed North Carolina in OT!',
                 gameLink: '#compare/vcu-rams/north-carolina-tar-heels'
@@ -5033,7 +5033,7 @@
         function applyUpsetTakeover(data, animate) {
             document.body.classList.add('upset-takeover');
             document.documentElement.style.setProperty('--accent-color', data.color);
-            document.documentElement.style.setProperty('--header-accent', data.color);
+            document.documentElement.style.setProperty('--header-accent', data.navColor || data.color);
 
             // Remove any existing banner
             const existing = document.getElementById('upsetTakeoverBanner');
@@ -5043,7 +5043,7 @@
             const banner = document.createElement('div');
             banner.id = 'upsetTakeoverBanner';
             banner.className = 'upset-takeover-banner';
-            banner.style.background = data.color;
+            banner.style.background = data.navColor || data.color;
 
             const logoUrl = data.espnId ? `https://a.espncdn.com/i/teamlogos/ncaa/500/${data.espnId}.png` : '';
             const logoImg = logoUrl ? `<img src="${logoUrl}" alt="" onerror="this.style.display='none'">` : '';
