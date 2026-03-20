@@ -5134,8 +5134,8 @@
                     const scoreDiff = Math.abs(homeScore - awayScore);
 
                     // --- CLOSE GAME ALERT ---
-                    // Any game within 6 pts (2 possessions) with under 5 min left in 2nd half or OT
-                    const isCloseGame = isLive && period >= 2 && clockSeconds <= 300 && scoreDiff <= 6;
+                    // Any game within 6 pts (2 possessions) with under 8 min left in 2nd half or OT
+                    const isCloseGame = isLive && period >= 2 && clockSeconds <= 480 && scoreDiff <= 6;
 
                     // --- UPSET WATCH ---
                     // Seed diff >= 5 (was 3), underdog leading or within 9 pts, 2nd half+
