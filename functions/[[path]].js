@@ -107,9 +107,10 @@ export async function onRequest(context) {
   const teamParam = url.searchParams.get('team');
   const compareParam = url.searchParams.get('compare');
   const gameParam = url.searchParams.get('game');
+  const champParam = url.searchParams.get('championship');
 
   // No relevant query params — passthrough to static files
-  if (!teamParam && !compareParam && !gameParam) {
+  if (!teamParam && !compareParam && !gameParam && !champParam) {
     return context.next();
   }
 
@@ -168,6 +169,34 @@ export async function onRequest(context) {
 
     metaTags = [
       { key: 'og:type', value: 'website' },
+      { key: 'og:title', value: pageTitle },
+      { key: 'og:description', value: description },
+      { key: 'og:image', value: imageUrl },
+      { key: 'og:url', value: canonicalUrl },
+      { key: 'og:site_name', value: 'Hoopsipedia' },
+      { key: 'twitter:card', value: 'summary_large_image' },
+      { key: 'twitter:title', value: pageTitle },
+      { key: 'twitter:description', value: description },
+      { key: 'twitter:image', value: imageUrl },
+    ];
+  } else if (champParam) {
+    // ?championship=1985/villanova-wildcats
+    const slashIdx = champParam.indexOf('/');
+    if (slashIdx < 0) return context.next();
+
+    const year = champParam.substring(0, slashIdx);
+    const teamSlugStr = champParam.substring(slashIdx + 1);
+    const team = lookupTeam(teamSlugStr, teams, index);
+
+    const teamName = team ? team.name : teamSlugStr.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+    pageTitle = `${teamName} — ${year} National Champions | Hoopsipedia`;
+    const description = `Relive ${teamName}'s ${year} championship run. Full tournament path, box scores, highlights, and the story of how they cut down the nets.`;
+    const imageUrl = team
+      ? `https://a.espncdn.com/i/teamlogos/ncaa/500/${team.espnId}.png`
+      : `https://www.hoopsipedia.com/branding/hoopsipedia-logo.png`;
+
+    metaTags = [
+      { key: 'og:type', value: 'article' },
       { key: 'og:title', value: pageTitle },
       { key: 'og:description', value: description },
       { key: 'og:image', value: imageUrl },
