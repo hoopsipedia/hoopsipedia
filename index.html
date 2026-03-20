@@ -11889,7 +11889,7 @@
                     const logo = getTeamLogo(team);
                     const slug = teamSlugFromName(team);
                     const uid = type + '-' + idx;
-                    const gamesSort = [...games].sort((a, b) => a.year - b.year);
+                    const gamesSort = [...games].sort((a, b) => b.year - a.year);
 
                     html += '<div style="border:1px solid #E8E6E1;border-radius:0.5rem;margin-bottom:0.5rem;overflow:hidden;">';
                     // Header row (clickable to expand)
