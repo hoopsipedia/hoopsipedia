@@ -12154,15 +12154,21 @@
                 decades[decade].push(run);
             });
 
+            // Broken videos verified via YouTube oEmbed API
+            const _brokenVids = new Set([
+                'uiWERnXd9l0','TcEBqLePnIc','55fROVHk6E4','oE0PoB3mJbE','FDB-OiXFoiQ',
+                '9qJq3oh-NhY','jS5gKWbMkOo','K3GBywMoyU4','nFSavDf3KKo','wBXdQ1Ksdg0',
+                'W2a07ER2Rm0','MpjmP3Es3ek','qlAB7lFJnJg','xqB6MFRB3UU',
+                'bLfEaiGJDq0','QOnJz0YRbGY','x3-bv47TsGI','GmFX7gSGhOQ'
+            ]);
+
             const cardsHtml = runs.map(run => {
                 const logoUrl = `https://a.espncdn.com/i/teamlogos/ncaa/500/${run.espnId}.png`;
                 const accentColor = run.accentColor || '#1B2A4A';
                 const link = `#championship/${run.year}/${run.teamSlug}`;
                 const seed = run.stats?.seed || '?';
                 const record = run.stats?.record || '';
-
-                // Completeness indicators
-                const hasVideo = !!run.videoId;
+                const hasVideo = !!run.videoId && !_brokenVids.has(run.videoId);
                 const gameCount = run.games ? run.games.length : 0;
                 // ESPN has box scores for ~2002+ games; staticBoxScores covers older ones
                 const hasStaticBoxScores = run.staticBoxScores && Object.keys(run.staticBoxScores).length > 0;
@@ -12210,7 +12216,7 @@
             // Stats summary
             const uniqueTeams = new Set(runs.map(r => r.espnId));
             const totalRuns = runs.length;
-            const withVideo = runs.filter(r => r.videoId).length;
+            const withVideo = runs.filter(r => r.videoId && !_brokenVids.has(r.videoId)).length;
             const withBoxScores = runs.filter(r => (r.staticBoxScores && Object.keys(r.staticBoxScores).length > 0) || r.year >= 2002).length;
 
             content.innerHTML = `
@@ -15853,6 +15859,7 @@
                 stats: { seed: '1', record: '6-0', avgMargin: '+20.2', closestGame: '72-60 vs Oklahoma' },
                 videoId: '9qJq3oh-NhY',
                 aftermath: 'Wayne Ellington was named Final Four Most Outstanding Player after averaging 19.2 points and shooting 53% from three in the tournament. Tyler Hansbrough was drafted 13th overall by the Indiana Pacers. Ty Lawson went 18th to the Denver Nuggets, Wayne Ellington 28th to the Timberwolves, and Danny Green went 46th to the Cavaliers before becoming a three-time NBA champion. It was Roy Williams\' second title at North Carolina and UNC\'s fifth overall.',
+                coach: 'Roy Williams',
                 mop: 'Wayne Ellington'
             }
         };
