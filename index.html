@@ -133,15 +133,9 @@
         body.upset-takeover .hero-logo .logo-swoosh path {
             fill: var(--accent-color) !important;
         }
-        body.upset-takeover .compare-button,
-        body.upset-takeover .comp-tab.active,
         body.upset-takeover .game-matchup-button {
-            background: var(--accent-color) !important;
+            background: var(--header-accent) !important;
             color: #fff !important;
-        }
-        body.upset-takeover .comp-tab:not(.active) {
-            border-color: var(--accent-color) !important;
-            color: var(--accent-color) !important;
         }
         body.upset-takeover .section-title {
             color: var(--accent-color);
@@ -544,7 +538,7 @@
             border-bottom: 3px solid transparent; margin-bottom: -2px; transition: all 0.2s ease;
         }
         .comp-tab:hover { color: #2C3345; }
-        .comp-tab.active { color: #1B2A4A; border-bottom-color: #C9A86C; }
+        .comp-tab.active { color: #1B2A4A; border-bottom-color: var(--team-color, #C9A86C); }
 
         /* ── Season Toggle (This Season / All-Time History) ── */
         .season-toggle-container {
@@ -7867,6 +7861,16 @@
             `;
             container.innerHTML = html;
 
+            // Apply left team's color to comparison tabs and buttons
+            const t1Hex = '#' + t1Color.replace('#','');
+            container.querySelectorAll('.comp-tab').forEach(tab => {
+                tab.style.setProperty('--team-color', t1Hex);
+            });
+            container.querySelectorAll('.compare-button, .season-toggle-btn.active').forEach(btn => {
+                btn.style.background = t1Hex;
+                btn.style.color = '#fff';
+            });
+
             // Load H2H data and render overall stats
             loadH2HData(t1, t2);
             renderOverallComparison(t1, t2);
@@ -11247,7 +11251,7 @@
 
                 // Long drought — first tourney win in 10+ years
                 if (priorWins.length > 0) {
-                    const lastWinYear = Math.max(...priorWins.map(s => s.year));
+                    const lastWinYear = Math.max(...priorWins.map(s => parseInt(s.year)));
                     if (2026 - lastWinYear >= 10) {
                         return `${wName}'s first tournament win since ${lastWinYear}`;
                     }
@@ -11255,7 +11259,7 @@
 
                 // Back in the tournament after long absence
                 if (priorYears.length > 0) {
-                    const lastAppear = Math.max(...priorYears.map(s => s.year));
+                    const lastAppear = Math.max(...priorYears.map(s => parseInt(s.year)));
                     if (2026 - lastAppear >= 15) {
                         return `${wName} back in the tournament after ${2026 - lastAppear} years`;
                     }
