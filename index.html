@@ -4236,7 +4236,7 @@
             }
         }
 
-        function getUpsetAlertText(seed1, score1, seed2, score2, isLive, period) {
+        function getUpsetAlertText(seed1, score1, seed2, score2, isLive, period, clockSec) {
             if (!isLive || !seed1 || !seed2) return null;
             // Only show upset alerts in 2nd half or later
             if (period !== undefined && period < 2) return null;
@@ -4263,6 +4263,10 @@
                 }
                 return { text: '\ud83d\udea8 Upset brewing! '+lowerSeed+' over '+higherSeed+' seed', alert: true };
             } else if (tied) {
+                var lateGame = (period > 2) || (period === 2 && clockSec !== undefined && clockSec <= 480);
+                if (lateGame) {
+                    return { text: '\ud83d\udea8 Upset Watch — tied late!', alert: true };
+                }
                 return { text: '\ud83d\udea8 Upset Watch — '+lowerSeed+'-seed tied with '+higherSeed+'-seed!', alert: true };
             } else {
                 // Underdog close but trailing
@@ -7015,7 +7019,8 @@
 
                                 // PRE-GAME & LIVE: upset alerts (2nd half only), then personalized team context, then generic seed stats
                                 var gamePeriod = comp.status?.period || 0;
-                                var ctx = getUpsetAlertText(s1, sc1, s2, sc2, live, gamePeriod);
+                                var gameClock = comp.status?.clock;
+                                var ctx = getUpsetAlertText(s1, sc1, s2, sc2, live, gamePeriod, gameClock);
                                 if (!ctx) {
                                     // Try personalized upset-prone/cinderella context
                                     ctx = getPersonalizedUpsetContext(team1, team2, s1, s2);
