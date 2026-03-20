@@ -5137,7 +5137,13 @@
 
                         if (isLive && period >= 2) {
                             const deficit = favoriteScore - underdogScore;
-                            if (deficit <= 9) isUpset = true; // Underdog within 3 possessions
+                            // Only show upset watch when game is meaningful:
+                            // - Under 10 min left (clockSeconds <= 600) AND underdog within 9 pts
+                            // - OR underdog is actually leading regardless of time
+                            // - OR overtime (period > 2)
+                            if (period > 2 && deficit <= 9) isUpset = true; // OT — always show
+                            else if (underdogScore > favoriteScore) isUpset = true; // Underdog leading
+                            else if (clockSeconds <= 600 && deficit <= 9) isUpset = true; // Under 10 min, within 3 possessions
                         }
                         if (isFinal && underdog.winner) isUpset = true;
                     }
