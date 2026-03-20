@@ -1,6 +1,6 @@
 # Hoopsipedia Roadmap
 
-**Last updated:** 2026-03-18 late evening (tournament tips off tomorrow)
+**Last updated:** 2026-03-19 (NCAA Tournament Day 1)
 
 **Mission: "Nobody connects the dots across 80+ years of basketball. That's our lane."**
 
@@ -33,10 +33,15 @@
 - [x] Live game tracker — polls ESPN, auto-updates records + coach wins when games go Final
 - [x] 5 Championship Run pages (Virginia 2019, Villanova 2018, UConn 2023/2024, Florida 2025)
 - [x] Championship year badges clickable → run pages or Sports Reference
+- [x] Bracket winner fun facts — "5-time national champion advances", "First NCAA Tournament win ever", blowout callouts
+- [x] R32+ matchup preview facts — clickable H2H series history ("Vanderbilt leads 5-2"), links to comparison page
+- [x] Hardcoded bracket structure — deterministic R32 slot placement, correct feeder ordering (top/bottom)
+- [x] Bracket R64 historical seed context badges — "16-seeds are 2-152 all-time vs 1-seeds"
 
 ### Team Profile Enrichment
 - [x] NET Rankings table + NET rank badge on profiles
-- [x] Quad Record section (Q1-Q4 W-L) with expandable game details
+- [x] Quad Record section (Q1-Q4 W-L) with expandable game details on profiles + H2H pages
+- [x] Starting 5 tied positions shown in edge display ("0-3 (2 tied)")
 - [x] Program History — founding year, mascot origin, iconic moment, "Did You Know?"
 - [x] NBA Draft History — 85 teams with lottery picks, #1 overall picks, full draft tables
 - [x] Advanced Stats toggle — PPG, SRS, SOS, scoring margin, conference record
@@ -55,14 +60,20 @@
 - [x] QA sweep — all 68 tournament teams verified
 - [x] Staging branch for DR environment
 - [x] No emojis (except live red dot + upset siren)
+- [x] Hoopsipedia bouncing basketball loading icon (replaced broken ESPN link)
+- [x] Coaches leaderboard records on one line (white-space: nowrap)
 
 ### Data
 - [x] 363 teams in data.json across 32 conferences
-- [x] 189+ teams with full game-by-game data (320K+ games)
+- [x] 210 teams with full game-by-game data (378K+ games)
 - [x] 12,067 ESPN game IDs for instant box score lookup
-- [x] 339 verified upset games with scores
+- [x] 340 verified upset games with scores
 - [x] 199 YouTube highlight clips for upsets
 - [x] 240 Sports Reference box scores (1985-2025)
+- [x] 376 teams with NET rankings (scraped Warren Nolan)
+- [x] H2H data audited — 48 asymmetric entries fixed, 3 self-references removed
+- [x] NET quad records recomputed from games data for all 210 teams
+- [x] Validated batch scraper (scrape_batch.py) with dedup, opponent resolution, crash recovery
 - [x] 85 teams with NBA Draft History
 - [x] 68 team history blurbs
 - [x] 110 arena photos
@@ -73,7 +84,7 @@
 ## 🔥 STACK-RANKED PRIORITIES (Easiest Lift → Highest Value)
 
 ### Tier 1: Quick wins, massive impact (< 2 hours each)
-1. **Starting 5 Comparison Tool** — BUILDING NOW. Side-by-side starting lineups with stats. Most-shared screenshot feature during tournament.
+1. ~~**Starting 5 Comparison Tool**~~ — ✅ SHIPPED. Side-by-side starting lineups with stats, tied positions, bench, totals.
 2. **Upset Color Takeover** — When a big upset happens, site accent colors temporarily shift to the winner's colors for 30 min. Viral screenshot moment.
 3. **Multi-conference filter** — Let users select Big Ten AND Big 12 simultaneously. Simple filter logic change.
 4. **Injury/availability alerts** — Surface key player status on comparison pages. ESPN has some injury data.
