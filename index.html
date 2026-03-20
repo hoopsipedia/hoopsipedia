@@ -3209,19 +3209,20 @@
             font-weight: 600;
             color: #2C3345;
             white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            max-width: 45%;
+            flex-shrink: 1;
+            min-width: 0;
         }
         .upset-watch-team img {
             width: 22px;
             height: 22px;
             object-fit: contain;
+            flex-shrink: 0;
         }
         .upset-watch-seed {
             font-size: 0.7rem;
             font-weight: 700;
             color: #8892A0;
+            flex-shrink: 0;
         }
         .upset-watch-score {
             font-size: 0.9rem;
