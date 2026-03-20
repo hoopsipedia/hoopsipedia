@@ -7523,22 +7523,29 @@
                                             return '<div class="game-context-badge">' + wName + ' dominates by ' + margin + '</div>';
                                         }
                                         // First tourney win since winning national championship
-                                        if (typeof SEASONS_DATA !== 'undefined' && typeof H !== 'undefined' && H[wId]) {
+                                        if (typeof H !== 'undefined' && H[wId]) {
                                             var _wTeam = H[wId];
                                             var _nc = _wTeam[6] || 0;
                                             var _champYrs = _wTeam[7] || [];
-                                            if (_nc > 0) {
-                                                var _seasons = (SEASONS_DATA[wId] && SEASONS_DATA[wId].seasons) || [];
-                                                var _priorWins = _seasons.filter(function(s) {
-                                                    if (parseInt(s.year) >= 2026) return false;
-                                                    var r = mapTourneyResult(s.ncaaTourney);
-                                                    return ['R32','Sweet 16','Elite Eight','Final Four','Runner-Up','Champion'].includes(r);
-                                                });
-                                                if (_priorWins.length > 0) {
-                                                    var _lastWinYr = Math.max.apply(null, _priorWins.map(function(s){return parseInt(s.year);}));
-                                                    if (_champYrs.includes(_lastWinYr) && 2026 - _lastWinYr >= 2) {
-                                                        return '<div class="game-context-badge" style="background:#E8F5E9;border-color:#66BB6A;color:#2E7D32;">' + wName + '\'s first tourney win since their ' + _lastWinYr + ' National Championship</div>';
+                                            if (_nc > 0 && _champYrs.length > 0) {
+                                                var _lastChampYr = Math.max.apply(null, _champYrs);
+                                                // Check SEASONS_DATA for more recent tourney wins (if available)
+                                                var _hasRecentWin = false;
+                                                if (typeof SEASONS_DATA !== 'undefined' && SEASONS_DATA[wId]) {
+                                                    var _seasons = SEASONS_DATA[wId].seasons || [];
+                                                    var _priorWins = _seasons.filter(function(s) {
+                                                        if (parseInt(s.year) >= 2026) return false;
+                                                        var r = mapTourneyResult(s.ncaaTourney);
+                                                        return ['R32','Sweet 16','Elite Eight','Final Four','Runner-Up','Champion'].includes(r);
+                                                    });
+                                                    if (_priorWins.length > 0) {
+                                                        var _lastWinYr = Math.max.apply(null, _priorWins.map(function(s){return parseInt(s.year);}));
+                                                        if (_lastWinYr > _lastChampYr) _hasRecentWin = true;
                                                     }
+                                                }
+                                                // Show championship drought if last championship was 2+ years ago and no more recent tourney win found
+                                                if (!_hasRecentWin && 2026 - _lastChampYr >= 2) {
+                                                    return '<div class="game-context-badge" style="background:#E8F5E9;border-color:#66BB6A;color:#2E7D32;">' + wName + '\'s first tourney win since their ' + _lastChampYr + ' National Championship</div>';
                                                 }
                                             }
                                         }
@@ -11520,11 +11527,20 @@
                 }
 
                 // First tourney win since winning national championship
-                if (priorWins.length > 0 && wTeam && wTeam[6] > 0) {
-                    const lastWinYear = Math.max(...priorWins.map(s => parseInt(s.year)));
+                if (wTeam && wTeam[6] > 0) {
                     const champYears = wTeam[7] || [];
-                    if (champYears.includes(lastWinYear) && 2026 - lastWinYear >= 2) {
-                        return `${wName}'s first tournament win since their ${lastWinYear} National Championship`;
+                    if (champYears.length > 0) {
+                        const lastChampYear = Math.max(...champYears);
+                        // Check if SEASONS_DATA shows a more recent tourney win than the championship
+                        let hasRecentWin = false;
+                        if (priorWins.length > 0) {
+                            const lastWinYear = Math.max(...priorWins.map(s => parseInt(s.year)));
+                            if (lastWinYear > lastChampYear) hasRecentWin = true;
+                        }
+                        // Show championship drought if last championship was 2+ years ago and no more recent tourney win found
+                        if (!hasRecentWin && 2026 - lastChampYear >= 2) {
+                            return `${wName}'s first tournament win since their ${lastChampYear} National Championship`;
+                        }
                     }
                 }
 
