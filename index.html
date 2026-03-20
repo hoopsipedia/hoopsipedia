@@ -5528,6 +5528,30 @@
 
             // Start unified live ticker — one master loop updates everything in sync
             try { startUnifiedLiveTicker(); } catch(e) { console.error('Live ticker error:', e); }
+            // Seed VCU as default takeover for Day 2 — live ticker will replace if bigger upset comes in
+            try {
+                const stored = localStorage.getItem('upsetTakeover');
+                let shouldSeedVCU = true;
+                if (stored) {
+                    try {
+                        const prev = JSON.parse(stored);
+                        if (prev.seedDiff && prev.seedDiff > 5) shouldSeedVCU = false; // bigger upset already exists
+                    } catch(e) {}
+                }
+                if (shouldSeedVCU) {
+                    const vcuData = {
+                        team: 'VCU',
+                        color: '#F8B800',   // VCU gold as accent
+                        navColor: '#000000', // VCU black for nav
+                        espnId: '2670',
+                        time: Date.now(),
+                        message: '11-seed VCU stuns 6-seed North Carolina!',
+                        gameLink: '#game/2026/vcu-rams-vs-north-carolina-tar-heels',
+                        seedDiff: 5
+                    };
+                    localStorage.setItem('upsetTakeover', JSON.stringify(vcuData));
+                }
+            } catch(e) {}
             try { checkUpsetTakeover(); } catch(e) { console.error('Upset takeover restore error:', e); }
             try { checkMilestoneBanner(); } catch(e) { console.error('Milestone banner restore error:', e); }
 
@@ -12698,7 +12722,7 @@
                 loser: 'Iowa State did not return to the NCAA Tournament until 2012 under coach Fred Hoiberg.'
             },
             '2026/vcu-rams-vs-north-carolina-tar-heels': {
-                winner: 'VCU completed the largest first-round comeback in NCAA Tournament history, erasing a double-digit deficit and forcing overtime to stun the Tar Heels 82-78. The Rams\' magical run continues in the Round of 32.',
+                winner: 'VCU completed the largest first-round comeback in NCAA Tournament history, erasing a 19-point deficit and forcing overtime to stun the Tar Heels 82-78. The Rams\' magical run continues in the Round of 32.',
                 loser: 'North Carolina, a 6-seed, suffered a gut-wrenching collapse — blowing a commanding lead before falling in overtime on Day 1 of the 2026 tournament.'
             },
             '2026/texas-longhorns-vs-byu-cougars': {
