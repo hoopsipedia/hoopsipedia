@@ -325,17 +325,27 @@ class SafeScraper:
         losses = sum(1 for g in games if not g['w'])
         print(f"    Validated: {len(games)} games, {wins}W-{losses}L")
 
-        # 6. Check against H data
+        # 6. Check against NCAA record book (data.json H field)
         data = load_json('data.json')
         h = data.get('H', {}).get(espn_id)
         if h:
             h_wins, h_losses = h[4], h[5]
-            if h_wins > 0 and h_losses > 0:
-                # Allow 5% tolerance for edge cases (current season games not yet in SR)
-                if abs(wins - h_wins) > max(h_wins * 0.05, 20):
-                    print(f"    WARNING: W mismatch! Scraped {wins}W vs H data {h_wins}W")
-                if abs(losses - h_losses) > max(h_losses * 0.05, 20):
-                    print(f"    WARNING: L mismatch! Scraped {losses}L vs H data {h_losses}L")
+            h_total = h_wins + h_losses
+            if h_total > 0:
+                sr_total = wins + losses
+                coverage_pct = sr_total / h_total * 100 if h_total > 0 else 0
+                win_gap = h_wins - wins
+                loss_gap = h_losses - losses
+                print(f"    NCAA record book: {h_wins}W-{h_losses}L ({h_total} games)")
+                print(f"    SR coverage: {coverage_pct:.0f}% of NCAA total ({sr_total}/{h_total} games)")
+                if coverage_pct < 50:
+                    print(f"    ⚠️  LOW COVERAGE: SR has less than 50% of NCAA games — likely missing early history")
+                elif coverage_pct < 80:
+                    print(f"    ⚠️  PARTIAL COVERAGE: SR missing {h_total - sr_total} games ({win_gap}W, {loss_gap}L)")
+                elif wins > h_wins + 5:
+                    print(f"    ⚠️  DATA CONFLICT: SR has MORE wins than NCAA record book — needs investigation")
+                else:
+                    print(f"    ✅ Coverage looks good (gap: {win_gap}W, {loss_gap}L — likely current season delta)")
 
         # 7. Check opponent resolution rate
         resolved = sum(1 for g in games if 'opp' in g)
