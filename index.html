@@ -13156,11 +13156,18 @@
             const gameKey = `${year}/${winnerFullSlug}-vs-${loserFullSlug}`;
             const highlight = findUpsetHighlight(gameKey);
 
-            // Generate context
-            const contextLines = generateWhyThisMattered(
-                upset.winnerSeed, upset.loserSeed, parseInt(year),
-                upset.winnerName, upset.loserName, upset.notes
-            );
+            // Generate context — for Instant Classics, use the classic description + headline
+            let contextLines;
+            const classicForContext = findInstantClassicBySlug(year, winnerFullSlug, loserFullSlug) ||
+                                     findInstantClassicBySlug(year, winnerSlug, loserSlug);
+            if (isClassicOnly && classicForContext && classicForContext.description) {
+                contextLines = [classicForContext.headline, classicForContext.description];
+            } else {
+                contextLines = generateWhyThisMattered(
+                    upset.winnerSeed, upset.loserSeed, parseInt(year),
+                    upset.winnerName, upset.loserName, upset.notes
+                );
+            }
 
             // Get aftermath data
             const aftermath = UPSET_AFTERMATH[gameKey];
