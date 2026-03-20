@@ -2,7 +2,7 @@
   "_metadata": {
     "description": "ESPN game IDs for NCAA Tournament upset games. Used to fetch box score data from the ESPN summary API.",
     "apiEndpoint": "https://site.api.espn.com/apis/site/v2/sports/basketball/mens-college-basketball/summary?event={gameId}",
-    "lastUpdated": "2026-03-18"
+    "lastUpdated": "2026-03-19"
   },
   "2018/umbc-retrievers-vs-virginia-cavaliers": "401025813",
   "2023/fairleigh-dickinson-knights-vs-purdue-boilermakers": "401522145",
@@ -122,5 +122,6 @@
   "2008/siena-saints-vs-vanderbilt-commodores": "284000005",
   "2008/western-kentucky-hilltoppers-vs-drake-bulldogs": "284000035",
   "2008/davidson-wildcats-vs-gonzaga-bulldogs": "284000011",
-  "2014/tennessee-volunteers-vs-umass-minutemen": "400546950"
+  "2014/tennessee-volunteers-vs-umass-minutemen": "400546950",
+  "2026/high-point-panthers-vs-wisconsin-badgers": "401856480"
 }

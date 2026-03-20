@@ -7222,9 +7222,15 @@
                     if (!resp.ok) return;
                     const freshData = await resp.json();
 
-                    // Update caches
+                    // Update caches (in-memory + localStorage)
                     if (typeof BOXSCORE_CACHE !== 'undefined') BOXSCORE_CACHE[gameId] = freshData;
                     if (typeof h2hBoxScoreCache !== 'undefined') h2hBoxScoreCache[gameId] = freshData;
+                    try {
+                        const st = freshData.header?.competitions?.[0]?.status?.type?.name || '';
+                        freshData._cachedAt = Date.now();
+                        freshData._cachedStatus = st.toLowerCase().includes('final') ? 'final' : 'live';
+                        localStorage.setItem('espn_bs_' + gameId, JSON.stringify(freshData));
+                    } catch (e) {}
 
                     // Update the game center section in place
                     const section = document.getElementById('gameCenterSection');
@@ -7814,19 +7820,9 @@
             if (!gameId) return; // No recent game found - show normal comparison view
 
             try {
-                // Fetch game data (use cache if available)
-                let gameData;
-                if (typeof BOXSCORE_CACHE !== 'undefined' && BOXSCORE_CACHE[gameId]) {
-                    gameData = BOXSCORE_CACHE[gameId];
-                } else if (h2hBoxScoreCache[gameId]) {
-                    gameData = h2hBoxScoreCache[gameId];
-                } else {
-                    const resp = await fetch(`https://site.api.espn.com/apis/site/v2/sports/basketball/mens-college-basketball/summary?event=${gameId}`);
-                    if (!resp.ok) return;
-                    gameData = await resp.json();
-                    if (typeof BOXSCORE_CACHE !== 'undefined') BOXSCORE_CACHE[gameId] = gameData;
-                    h2hBoxScoreCache[gameId] = gameData;
-                }
+                // Fetch game data (use cache if available, persists to localStorage)
+                let gameData = h2hBoxScoreCache[gameId] || await fetchBoxScoreData(gameId);
+                if (gameData) h2hBoxScoreCache[gameId] = gameData;
 
                 if (!gameData) return;
 
@@ -11726,15 +11722,67 @@
 
         async function fetchBoxScoreData(eventId) {
             if (BOXSCORE_CACHE[eventId]) return BOXSCORE_CACHE[eventId];
+
+            // Check localStorage for cached ESPN box scores (persists across reloads)
+            try {
+                const cached = localStorage.getItem('espn_bs_' + eventId);
+                if (cached) {
+                    const parsed = JSON.parse(cached);
+                    // Use cached data if less than 24 hours old OR if game is final
+                    const isFinal = parsed._cachedStatus === 'final';
+                    const age = Date.now() - (parsed._cachedAt || 0);
+                    if (isFinal || age < 86400000) {
+                        BOXSCORE_CACHE[eventId] = parsed;
+                        return parsed;
+                    }
+                }
+            } catch (e) {}
+
             try {
                 const resp = await fetch(`https://site.api.espn.com/apis/site/v2/sports/basketball/mens-college-basketball/summary?event=${eventId}`);
                 if (!resp.ok) return null;
                 const data = await resp.json();
                 BOXSCORE_CACHE[eventId] = data;
+
+                // Persist to localStorage for recent/live games
+                try {
+                    const status = data.header?.competitions?.[0]?.status?.type?.name || '';
+                    data._cachedAt = Date.now();
+                    data._cachedStatus = status.toLowerCase().includes('final') ? 'final' : 'live';
+                    localStorage.setItem('espn_bs_' + eventId, JSON.stringify(data));
+                    // Clean up old entries (keep max 50)
+                    cleanupBoxscoreCache();
+                } catch (e) {} // localStorage full or unavailable
+
                 return data;
             } catch (e) {
                 return null;
             }
+        }
+
+        function cleanupBoxscoreCache() {
+            try {
+                const keys = [];
+                for (let i = 0; i < localStorage.length; i++) {
+                    const key = localStorage.key(i);
+                    if (key && key.startsWith('espn_bs_')) {
+                        try {
+                            const item = JSON.parse(localStorage.getItem(key));
+                            keys.push({ key, cachedAt: item._cachedAt || 0, isFinal: item._cachedStatus === 'final' });
+                        } catch (e) { keys.push({ key, cachedAt: 0, isFinal: false }); }
+                    }
+                }
+                // Keep at most 50 cached box scores; remove oldest non-final first
+                if (keys.length > 50) {
+                    keys.sort((a, b) => {
+                        if (a.isFinal !== b.isFinal) return a.isFinal ? 1 : -1;
+                        return a.cachedAt - b.cachedAt;
+                    });
+                    while (keys.length > 50) {
+                        localStorage.removeItem(keys.shift().key);
+                    }
+                }
+            } catch (e) {}
         }
 
         function renderBoxScore(gameData) {
