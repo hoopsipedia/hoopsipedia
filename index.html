@@ -4978,7 +4978,13 @@
                     if (t1 && t2) {
                         const s1 = t1.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
                         const s2 = t2.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
-                        href = '#compare/' + s1 + '/' + s2;
+                        if (card.isFinal && card.cardType === 'upset-complete') {
+                            // Completed upsets link to Relive the Moment game page
+                            const year = new Date().getFullYear();
+                            href = `#game/${year}/${s1}-vs-${s2}`;
+                        } else {
+                            href = '#compare/' + s1 + '/' + s2;
+                        }
                     }
 
                     return `<a class="upset-watch-card${statusClass}" href="${href}" style="text-decoration:none;">
@@ -5018,7 +5024,7 @@
                 team: 'VCU', color: '#D4A017', navColor: '#1A1A1A', espnId: '2670',
                 time: Date.now(), seedDiff: 99,
                 message: '11-seed VCU stuns 6-seed North Carolina in OT!',
-                gameLink: '#compare/vcu-rams/north-carolina-tar-heels'
+                gameLink: '#game/2026/vcu-rams-vs-north-carolina-tar-heels'
             };
             localStorage.setItem('upsetTakeover', JSON.stringify(vcuOverride));
 
