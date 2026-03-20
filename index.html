@@ -12597,6 +12597,7 @@
         // ── GAME DETAIL PAGE ("Relive the Moment") ──
 
         const UPSET_HIGHLIGHTS = {
+            '2026/kentucky-wildcats-vs-santa-clara-broncos': { videoId: 'hDlw629_kFY', title: 'Otega Oweh Banks in Buzzer Beater — Kentucky vs Santa Clara NCAA Tournament 2026', type: 'highlights' },
             '2026/vcu-rams-vs-north-carolina-tar-heels': { videoId: 'Y992fhmrpOo', title: 'VCU vs North Carolina - First Round NCAA Tournament 2026 Extended Highlights', type: 'highlights' },
             '2026/high-point-panthers-vs-wisconsin-badgers': { videoId: 'f-NhxOnzK94', title: 'Wisconsin vs High Point - Full Game Highlights | First Round NCAA March Madness 2026', type: 'highlights' },
             '2013/harvard-crimson-vs-new-mexico-lobos': { videoId: 'nez6lI-RV3o', title: 'Harvard vs. New Mexico: 2013 NCAA second round | Full Replay', type: 'full-replay' },
@@ -12860,8 +12861,8 @@
                 loser: 'Saint Mary\'s, a 7-seed, never found their rhythm against an aggressive Texas A&M defense, shooting poorly throughout in Oklahoma City.'
             },
             '2026/kentucky-wildcats-vs-santa-clara-broncos': {
-                winner: 'Kentucky survived one of the wildest first-round games in recent memory. Trailing late in regulation, the Wildcats hit a stunning buzzer beater to force overtime, then pulled away in the extra period to escape Santa Clara. Kentucky advances to the Round of 32.',
-                loser: 'Santa Clara, a 10-seed making a rare tournament appearance, had Kentucky on the ropes before a heartbreaking buzzer beater erased their lead. The Broncos gave everything in overtime but couldn\'t recover from the emotional blow.'
+                winner: 'Otega Oweh nailed a 32-foot banked three-pointer at the buzzer to force overtime after Santa Clara\'s Allen Graves had given the Broncos a 73-70 lead with 2.4 seconds left. Oweh finished with 35 points — 22 in the second half alone — as Kentucky pulled away 89-84 in overtime. The Wildcats advance to the Round of 32.',
+                loser: 'Santa Clara, a 10-seed, had the game won. Allen Graves\' three-pointer with 2.4 seconds left gave the Broncos a 73-70 lead, but Oweh\'s miraculous bank shot from 32 feet stole the moment. The Broncos couldn\'t recover emotionally in overtime.'
             }
         };
 
@@ -12877,9 +12878,9 @@
                 team2Seed: 10,
                 team2EspnId: '2541',
                 tags: ['overtime-thriller', 'buzzer-beater'],
-                headline: 'Kentucky survives Santa Clara in overtime thriller',
-                description: '',
-                videoId: '',
+                headline: 'Otega Oweh banks in 32-foot buzzer beater to force OT — Kentucky survives 89-84',
+                description: 'Oweh scored 35 points including a miraculous banked three from 32 feet with 0.0 seconds left to erase Santa Clara\'s 73-70 lead and force overtime.',
+                videoId: 'hDlw629_kFY',
                 eventId: '401856525'
             }
         };
@@ -13222,7 +13223,7 @@
                     </div>
 
                     ${isClassicOnly
-                        ? `<div class="game-detail-upset-badge" style="background: linear-gradient(135deg, #F59E0B, #D97706);">⚡ Instant Classic</div>`
+                        ? `<div class="game-detail-upset-badge" style="background: rgba(255,255,255,0.95); color: #1a1a1a; font-weight: 800; letter-spacing: 0.05em;">⚡ Instant Classic</div>`
                         : `<div class="game-detail-upset-badge">${upset.winnerSeed}-seed over ${upset.loserSeed}-seed upset</div>`
                     }
                     ${classicTagsHTML}
