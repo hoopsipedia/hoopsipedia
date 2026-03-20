@@ -3340,7 +3340,7 @@
             opacity: 0;
         }
         .quad-games-expand.quad-games-expand--open {
-            max-height: 800px; opacity: 1; overflow-y: auto;
+            max-height: 800px; opacity: 1; overflow-y: auto; overflow-x: auto;
         }
         .quad-games-list {
             margin-top: 1rem; border: 1px solid #E0D9CC; border-radius: 0.5rem;
@@ -4769,7 +4769,7 @@
             try {
                 const today = new Date();
                 const dateStr = today.toISOString().slice(0, 10).replace(/-/g, '');
-                const resp = await fetch(`https://site.api.espn.com/apis/site/v2/sports/basketball/mens-college-basketball/scoreboard?dates=${dateStr}&groups=50&limit=200`);
+                const resp = await fetch(`https://site.api.espn.com/apis/site/v2/sports/basketball/mens-college-basketball/scoreboard?dates=${dateStr}&groups=100&limit=200`);
                 if (!resp.ok) return _sharedScoreboard;
                 _sharedScoreboard = await resp.json();
                 _sharedScoreboardTime = Date.now();
@@ -9207,20 +9207,24 @@
         // Track which quad is currently expanded
         let _activeQuad = null;
 
+        const _activeQuadPerTarget = {}; // track active quad per expand target
         function toggleQuadGames(quadNum, teamEspnId, targetId) {
             const expandEl = document.getElementById(targetId || 'quadGamesExpand');
             if (!expandEl) return;
+            const tKey = targetId || 'quadGamesExpand';
 
             // Deactivate all cards
             document.querySelectorAll('.quad-card[data-quad]').forEach(c => c.classList.remove('quad-card--active'));
 
-            // If clicking same quad, collapse
-            if (_activeQuad === quadNum) {
+            // If clicking same quad on same target, collapse
+            if (_activeQuadPerTarget[tKey] === quadNum) {
                 expandEl.classList.remove('quad-games-expand--open');
+                _activeQuadPerTarget[tKey] = null;
                 _activeQuad = null;
                 return;
             }
 
+            _activeQuadPerTarget[tKey] = quadNum;
             _activeQuad = quadNum;
             // Activate clicked card
             const activeCard = document.querySelector(`.quad-card[data-quad="${quadNum}"]`);
@@ -12339,11 +12343,11 @@
         const UPSET_AFTERMATH = {
             '2018/umbc-retrievers-vs-virginia-cavaliers': {
                 winner: 'UMBC lost to Kansas State 50-43 in the second round two days later. They did not return to the NCAA Tournament until 2026.',
-                loser: 'Virginia used the historic loss as fuel, returning the following year to win the 2019 National Championship — completing one of the greatest redemption arcs in sports history.'
+                loser: 'Virginia used the historic loss as fuel, returning the following year to <a href="#championship/2019/virginia-cavaliers" style="color:#C9A86C;font-weight:700;text-decoration:underline;">win the 2019 National Championship</a> — completing one of the greatest redemption arcs in sports history.'
             },
             '2023/fairleigh-dickinson-knights-vs-purdue-boilermakers': {
                 winner: 'FDU fell to Florida Atlantic 78-70 in the second round but cemented their place in tournament lore as only the second 16-seed to topple a 1.',
-                loser: 'Purdue returned the next season as a 1-seed again in 2024 and reached the National Championship game, losing to UConn.'
+                loser: 'Purdue returned the next season as a 1-seed again in 2024 and reached the National Championship game, losing to <a href="#championship/2024/uconn-huskies" style="color:#C9A86C;font-weight:700;text-decoration:underline;">UConn\'s back-to-back champions</a>.'
             },
             '2022/saint-peter-s-peacocks-vs-kentucky-wildcats': {
                 winner: 'Saint Peter\'s became the first 15-seed to reach the Elite Eight, beating Murray State and Purdue before falling to North Carolina.',
@@ -13070,6 +13074,179 @@
                 aftermath: 'Danny Manning was named Final Four Most Outstanding Player and was selected first overall in the 1988 NBA Draft by the Los Angeles Clippers. The "Danny and the Miracles" run remains the only 6-seed to ever win the national championship. Coach Larry Brown left for the San Antonio Spurs after the season, making the title run even more singular. Manning finished with 163 points across six tournament games.',
                 mop: 'Danny Manning'
             },
+            '1991/duke-blue-devils': {
+                year: 1991,
+                teamName: 'Duke Blue Devils',
+                espnId: '150',
+                teamSlug: 'duke-blue-devils',
+                heroTitle: '1991 NATIONAL CHAMPIONS',
+                heroSubtitle: '2nd Seed \u2022 Midwest Region \u2022 Indianapolis, IN',
+                accentColor: '#003DA5',
+                story: 'After being humiliated 103-73 by UNLV in the 1990 championship game, Duke exacted one of the greatest upsets in tournament history by toppling the undefeated, defending champion Runnin\' Rebels 79-77 in the Final Four. Coach K\'s Blue Devils then dispatched Roy Williams\' Kansas Jayhawks 72-65 in the title game to deliver Duke its first-ever national championship, with Christian Laettner going 12-for-12 from the free throw line.',
+                games: [
+                    { round: 'Round of 64', opponent: 'Northeast Louisiana Indians', oppSeed: 15, oppEspnId: '2439', score: '102-73', winScore: 102, loseScore: 73, note: '' },
+                    { round: 'Round of 32', opponent: 'Iowa Hawkeyes', oppSeed: 7, oppEspnId: '2294', score: '85-70', winScore: 85, loseScore: 70, note: '' },
+                    { round: 'Sweet 16', opponent: 'UConn Huskies', oppSeed: 11, oppEspnId: '41', score: '81-67', winScore: 81, loseScore: 67, note: '' },
+                    { round: 'Elite Eight', opponent: 'St. John\'s Red Storm', oppSeed: 4, oppEspnId: '2599', score: '78-61', winScore: 78, loseScore: 61, note: '' },
+                    { round: 'Final Four', opponent: 'UNLV Runnin\' Rebels', oppSeed: 1, oppEspnId: '2439', score: '79-77', winScore: 79, loseScore: 77, note: '' },
+                    { round: 'Championship', opponent: 'Kansas Jayhawks', oppSeed: 3, oppEspnId: '2305', score: '72-65', winScore: 72, loseScore: 65, note: '', isChampionship: true }
+                ],
+                stats: { seed: '2', record: '6-0', avgMargin: '+14.0', closestGame: '79-77 vs UNLV' },
+                videoId: 'Y3zEz5-1fXY',
+                aftermath: 'Christian Laettner, Bobby Hurley, and Grant Hill returned and led Duke to a repeat championship in 1992. All three became high NBA draft picks: Laettner went 3rd overall (1992), Hurley 7th overall (1993), and Grant Hill 3rd overall (1994). The 1991 title launched Coach K\'s dynasty and cemented him as one of college basketball\'s all-time great coaches.',
+                mop: 'Christian Laettner'
+            },
+            '2001/duke-blue-devils': {
+                year: 2001,
+                teamName: 'Duke Blue Devils',
+                espnId: '150',
+                teamSlug: 'duke-blue-devils',
+                heroTitle: '2001 NATIONAL CHAMPIONS',
+                heroSubtitle: '1st Seed \u2022 East Region \u2022 Minneapolis, MN',
+                accentColor: '#003DA5',
+                story: 'The 2001 Blue Devils were a juggernaut led by National Player of the Year Shane Battier and sophomore Jay Williams, steamrolling through the East Region without a single game closer than 10 points. Their defining moment came in the Final Four against rival Maryland, where Duke overcame a 22-point deficit \u2014 the largest comeback in Final Four history. In the championship, Mike Dunleavy Jr. hit three consecutive threes as Duke dismantled Arizona 82-72.',
+                games: [
+                    { round: 'Round of 64', opponent: 'Monmouth Hawks', oppSeed: 16, oppEspnId: '2405', score: '95-52', winScore: 95, loseScore: 52, note: '' },
+                    { round: 'Round of 32', opponent: 'Missouri Tigers', oppSeed: 9, oppEspnId: '142', score: '94-81', winScore: 94, loseScore: 81, note: '' },
+                    { round: 'Sweet 16', opponent: 'UCLA Bruins', oppSeed: 4, oppEspnId: '26', score: '76-63', winScore: 76, loseScore: 63, note: '' },
+                    { round: 'Elite Eight', opponent: 'USC Trojans', oppSeed: 6, oppEspnId: '30', score: '79-69', winScore: 79, loseScore: 69, note: '' },
+                    { round: 'Final Four', opponent: 'Maryland Terrapins', oppSeed: 3, oppEspnId: '120', score: '95-84', winScore: 95, loseScore: 84, note: '' },
+                    { round: 'Championship', opponent: 'Arizona Wildcats', oppSeed: 2, oppEspnId: '12', score: '82-72', winScore: 82, loseScore: 72, note: '', isChampionship: true }
+                ],
+                stats: { seed: '1', record: '6-0', avgMargin: '+16.7', closestGame: '79-69 vs USC' },
+                videoId: '5BPWFQPrFLs',
+                aftermath: 'Shane Battier was drafted 6th overall by Vancouver/Memphis and went on to win two NBA championships with the Miami Heat. Jay Williams was taken 2nd overall in 2002 by the Chicago Bulls, but a motorcycle accident in 2003 effectively ended his playing career. Carlos Boozer was drafted 35th overall in 2002 and became a two-time All-Star. This was Coach K\'s 3rd championship.',
+                mop: 'Shane Battier'
+            },
+            '1976/indiana-hoosiers': {
+                year: 1976,
+                teamName: 'Indiana Hoosiers',
+                espnId: '84',
+                teamSlug: 'indiana-hoosiers',
+                heroTitle: '1976 NATIONAL CHAMPIONS',
+                heroSubtitle: 'Undefeated (32-0) \u2022 Mideast Region \u2022 Philadelphia, PA',
+                accentColor: '#990000',
+                story: 'Bobby Knight\'s Indiana Hoosiers stormed through the 1976 NCAA Tournament as the last team to complete a perfect season, going 32-0. After a scare against Alabama in the regional semifinals \u2014 their closest game at just five points \u2014 they dominated the Final Four, dismantling UCLA and then routing Big Ten rival Michigan 86-68 in Philadelphia to cap the last undefeated championship run in men\'s college basketball history.',
+                games: [
+                    { round: 'Round of 32', opponent: 'St. John\'s Red Storm', oppSeed: 0, oppEspnId: '2599', score: '90-70', winScore: 90, loseScore: 70, note: '' },
+                    { round: 'Sweet 16', opponent: 'Alabama Crimson Tide', oppSeed: 0, oppEspnId: '333', score: '74-69', winScore: 74, loseScore: 69, note: '' },
+                    { round: 'Elite Eight', opponent: 'Marquette Golden Eagles', oppSeed: 0, oppEspnId: '269', score: '65-56', winScore: 65, loseScore: 56, note: '' },
+                    { round: 'Final Four', opponent: 'UCLA Bruins', oppSeed: 0, oppEspnId: '26', score: '65-51', winScore: 65, loseScore: 51, note: '' },
+                    { round: 'Championship', opponent: 'Michigan Wolverines', oppSeed: 0, oppEspnId: '130', score: '86-68', winScore: 86, loseScore: 68, note: '', isChampionship: true }
+                ],
+                stats: { seed: 'N/A', record: '5-0', avgMargin: '+13.2', closestGame: '74-69 vs Alabama' },
+                videoId: 'fR9BPVdZ5VU',
+                aftermath: 'Scott May was selected 2nd overall in the 1976 NBA Draft by the Chicago Bulls. Kent Benson, named MOP after his 25-point championship performance, was taken 1st overall in 1977 by the Milwaukee Bucks. Quinn Buckner went 7th overall in 1976 to the Bucks. Bobby Knight went on to win two more national titles (1981, 1987). To this day, the 1975-76 Hoosiers remain the last undefeated national champion.',
+                mop: 'Kent Benson'
+            },
+            '1967/ucla-bruins': {
+                year: 1967,
+                teamName: 'UCLA Bruins',
+                espnId: '26',
+                teamSlug: 'ucla-bruins',
+                heroTitle: '1967 NATIONAL CHAMPIONS',
+                heroSubtitle: 'Undefeated (30-0) \u2022 West Region \u2022 Louisville, KY',
+                accentColor: '#2D68C4',
+                story: 'Sophomore sensation Lew Alcindor announced his arrival on college basketball\'s biggest stage by leading UCLA to a dominant 30-0 season and national championship. The Bruins were devastating, winning their four tournament games by an average of nearly 24 points \u2014 including an astounding 109-60 demolition of Wyoming. In the championship at Freedom Hall, Alcindor posted 20 points and 18 rebounds as UCLA launched what would become the greatest dynasty in college basketball history.',
+                games: [
+                    { round: 'Regional Semifinal', opponent: 'Wyoming Cowboys', oppSeed: 0, oppEspnId: '2751', score: '109-60', winScore: 109, loseScore: 60, note: '' },
+                    { round: 'Regional Final', opponent: 'Pacific Tigers', oppSeed: 0, oppEspnId: '279', score: '80-64', winScore: 80, loseScore: 64, note: '' },
+                    { round: 'Final Four', opponent: 'Houston Cougars', oppSeed: 0, oppEspnId: '248', score: '73-58', winScore: 73, loseScore: 58, note: '' },
+                    { round: 'Championship', opponent: 'Dayton Flyers', oppSeed: 0, oppEspnId: '2168', score: '79-64', winScore: 79, loseScore: 64, note: '', isChampionship: true }
+                ],
+                stats: { seed: 'N/A', record: '4-0', avgMargin: '+23.8', closestGame: '73-58 vs Houston' },
+                videoId: 'NXUkJH1CJAQ',
+                aftermath: 'Lew Alcindor was named MOP \u2014 the first of three consecutive MOP awards as UCLA won seven straight titles from 1967-1973. Alcindor (later Kareem Abdul-Jabbar) was drafted 1st overall in 1969 and became the NBA\'s all-time leading scorer. His dominance was so overwhelming that the NCAA banned dunking the following season, a rule that stood for nearly a decade. John Wooden\'s third title was merely the beginning of an unprecedented run of 10 championships in 12 years.',
+                mop: 'Lew Alcindor'
+            },
+            '1986/louisville-cardinals': {
+                year: 1986,
+                teamName: 'Louisville Cardinals',
+                espnId: '97',
+                teamSlug: 'louisville-cardinals',
+                heroTitle: '1986 NATIONAL CHAMPIONS',
+                heroSubtitle: '2nd Seed \u2022 West Region \u2022 Dallas, TX',
+                accentColor: '#AD0000',
+                story: 'Denny Crum\'s Louisville Cardinals stormed through the bracket led by a fearless freshman center named Pervis Ellison. Nicknamed "Never Nervous Pervis," the 6-foot-9 Ellison dominated the championship game against top-ranked Duke with 25 points and 11 rebounds, becoming the first freshman since 1944 to win Final Four MOP honors. Louisville trailed at halftime against both LSU in the semis and Duke in the final but rallied each time, winning Crum\'s second national title in six years.',
+                games: [
+                    { round: 'Round of 64', opponent: 'Drexel Dragons', oppSeed: 15, oppEspnId: '2182', score: '93-73', winScore: 93, loseScore: 73, note: '' },
+                    { round: 'Round of 32', opponent: 'Bradley Braves', oppSeed: 7, oppEspnId: '71', score: '82-68', winScore: 82, loseScore: 68, note: '' },
+                    { round: 'Sweet 16', opponent: 'North Carolina Tar Heels', oppSeed: 3, oppEspnId: '153', score: '94-79', winScore: 94, loseScore: 79, note: '' },
+                    { round: 'Elite Eight', opponent: 'Auburn Tigers', oppSeed: 8, oppEspnId: '2', score: '84-76', winScore: 84, loseScore: 76, note: '' },
+                    { round: 'Final Four', opponent: 'LSU Tigers', oppSeed: 11, oppEspnId: '99', score: '88-77', winScore: 88, loseScore: 77, note: '' },
+                    { round: 'Championship', opponent: 'Duke Blue Devils', oppSeed: 1, oppEspnId: '150', score: '72-69', winScore: 72, loseScore: 69, note: '', isChampionship: true }
+                ],
+                stats: { seed: '2', record: '6-0', avgMargin: '+11.8', closestGame: '72-69 vs Duke' },
+                videoId: '1DhZN0LXTAs',
+                aftermath: 'Pervis Ellison stayed all four years and was selected 1st overall in the 1989 NBA Draft by the Sacramento Kings. Billy Thompson was drafted 19th overall in 1986 and won back-to-back NBA titles with the Lakers (1987-88). Milt Wagner was a second-round pick (35th) by Dallas. Denny Crum cemented his legacy with two national championships (1980, 1986) and six Final Fours.',
+                mop: 'Pervis Ellison'
+            },
+            '2003/syracuse-orange': {
+                year: 2003,
+                teamName: 'Syracuse Orange',
+                espnId: '183',
+                teamSlug: 'syracuse-orange',
+                heroTitle: '2003 NATIONAL CHAMPIONS',
+                heroSubtitle: '3rd Seed \u2022 East Region \u2022 New Orleans, LA',
+                accentColor: '#F76900',
+                story: 'Freshman Carmelo Anthony carried Syracuse to its first and only national championship, beating four Big 12 teams along the way. After barely surviving the Sweet 16 with a 1-point win over Auburn, the Orange throttled top-seeded Oklahoma 63-47 behind their suffocating 2-3 zone. In the championship, Gerry McNamara drilled six first-half three-pointers to build a cushion, and Hakim Warrick sealed the 81-78 win by blocking Michael Lee\'s potential game-tying three with 0.7 seconds left.',
+                games: [
+                    { round: 'Round of 64', opponent: 'Manhattan Jaspers', oppSeed: 14, oppEspnId: '2363', score: '76-65', winScore: 76, loseScore: 65, note: '' },
+                    { round: 'Round of 32', opponent: 'Oklahoma State Cowboys', oppSeed: 6, oppEspnId: '197', score: '68-56', winScore: 68, loseScore: 56, note: '' },
+                    { round: 'Sweet 16', opponent: 'Auburn Tigers', oppSeed: 10, oppEspnId: '2', score: '79-78', winScore: 79, loseScore: 78, note: '' },
+                    { round: 'Elite Eight', opponent: 'Oklahoma Sooners', oppSeed: 1, oppEspnId: '201', score: '63-47', winScore: 63, loseScore: 47, note: '' },
+                    { round: 'Final Four', opponent: 'Texas Longhorns', oppSeed: 1, oppEspnId: '251', score: '95-84', winScore: 95, loseScore: 84, note: '' },
+                    { round: 'Championship', opponent: 'Kansas Jayhawks', oppSeed: 2, oppEspnId: '2305', score: '81-78', winScore: 81, loseScore: 78, note: '', isChampionship: true }
+                ],
+                stats: { seed: '3', record: '6-0', avgMargin: '+9.0', closestGame: '79-78 vs Auburn' },
+                videoId: 'pl9cPZehbQw',
+                aftermath: 'Carmelo Anthony declared for the 2003 NBA Draft \u2014 the legendary class of LeBron James, Dwyane Wade, and Chris Bosh \u2014 and was selected 3rd overall by the Denver Nuggets, becoming a 10-time All-Star and Hall of Famer. Hakim Warrick stayed two more years and was drafted 19th overall in 2005. Jim Boeheim finally claimed his first and only national title in his 27th year coaching Syracuse, after two previous runner-up finishes.',
+                mop: 'Carmelo Anthony'
+            },
+            '2000/michigan-state-spartans': {
+                year: 2000,
+                teamName: 'Michigan State Spartans',
+                espnId: '127',
+                teamSlug: 'michigan-state-spartans',
+                heroTitle: '2000 NATIONAL CHAMPIONS',
+                heroSubtitle: '1st Seed \u2022 Midwest Region \u2022 Indianapolis, IN',
+                accentColor: '#18453B',
+                story: 'Michigan State was the clear best team in 2000, the lone top seed standing in a tournament full of upsets. Mateen Cleaves suffered a sprained ankle early in the second half of the championship game against Florida but gutted his way back onto the court, limping visibly, to lead the Spartans to a convincing 89-76 victory and deliver Tom Izzo\'s first and only national title.',
+                games: [
+                    { round: 'Round of 64', opponent: 'Valparaiso Crusaders', oppSeed: 16, oppEspnId: '2674', score: '65-38', winScore: 65, loseScore: 38, note: '' },
+                    { round: 'Round of 32', opponent: 'Utah Utes', oppSeed: 8, oppEspnId: '254', score: '73-61', winScore: 73, loseScore: 61, note: '' },
+                    { round: 'Sweet 16', opponent: 'Syracuse Orangemen', oppSeed: 4, oppEspnId: '183', score: '75-58', winScore: 75, loseScore: 58, note: '' },
+                    { round: 'Elite Eight', opponent: 'Iowa State Cyclones', oppSeed: 2, oppEspnId: '66', score: '75-64', winScore: 75, loseScore: 64, note: '' },
+                    { round: 'Final Four', opponent: 'Wisconsin Badgers', oppSeed: 8, oppEspnId: '275', score: '53-41', winScore: 53, loseScore: 41, note: '' },
+                    { round: 'Championship', opponent: 'Florida Gators', oppSeed: 5, oppEspnId: '57', score: '89-76', winScore: 89, loseScore: 76, note: '', isChampionship: true }
+                ],
+                stats: { seed: '1', record: '6-0', avgMargin: '+15.3', closestGame: '73-61 vs Utah' },
+                videoId: '_xx9bawXSqE',
+                aftermath: 'Mateen Cleaves was drafted 14th overall by the Detroit Pistons and Morris Peterson went 21st to the Toronto Raptors. Peterson enjoyed an 11-year NBA career. The championship cemented Tom Izzo as one of college basketball\'s elite coaches and remains the last national title won by a Big Ten team.',
+                mop: 'Mateen Cleaves'
+            },
+            '2002/maryland-terrapins': {
+                year: 2002,
+                teamName: 'Maryland Terrapins',
+                espnId: '120',
+                teamSlug: 'maryland-terrapins',
+                heroTitle: '2002 NATIONAL CHAMPIONS',
+                heroSubtitle: '1st Seed \u2022 East Region \u2022 Atlanta, GA',
+                accentColor: '#E03A3E',
+                story: 'Maryland beat five former national champions in a row \u2014 Wisconsin, Kentucky, UConn, Kansas, and Indiana \u2014 on their march to the program\'s first and only national title. Juan Dixon was sensational throughout, scoring 33 points in a wild Final Four semifinal against Kansas where Maryland blew a 20-point lead before hanging on 97-88. In the championship, they locked down Indiana 64-52 behind a suffocating second-half defensive run.',
+                games: [
+                    { round: 'Round of 64', opponent: 'Siena Saints', oppSeed: 16, oppEspnId: '2561', score: '85-70', winScore: 85, loseScore: 70, note: '' },
+                    { round: 'Round of 32', opponent: 'Wisconsin Badgers', oppSeed: 8, oppEspnId: '275', score: '87-57', winScore: 87, loseScore: 57, note: '' },
+                    { round: 'Sweet 16', opponent: 'Kentucky Wildcats', oppSeed: 4, oppEspnId: '96', score: '78-68', winScore: 78, loseScore: 68, note: '' },
+                    { round: 'Elite Eight', opponent: 'UConn Huskies', oppSeed: 2, oppEspnId: '41', score: '90-82', winScore: 90, loseScore: 82, note: '' },
+                    { round: 'Final Four', opponent: 'Kansas Jayhawks', oppSeed: 1, oppEspnId: '2305', score: '97-88', winScore: 97, loseScore: 88, note: '' },
+                    { round: 'Championship', opponent: 'Indiana Hoosiers', oppSeed: 5, oppEspnId: '84', score: '64-52', winScore: 64, loseScore: 52, note: '', isChampionship: true }
+                ],
+                stats: { seed: '1', record: '6-0', avgMargin: '+14.0', closestGame: '90-82 vs UConn' },
+                videoId: 'rSNcXJAvBcc',
+                aftermath: 'Three Terrapins were selected in the 2002 NBA Draft: Chris Wilcox went 8th overall to the Clippers, Juan Dixon 17th to the Washington Wizards, and Lonny Baxter in the second round to the Bulls. The title was Gary Williams\' crowning achievement at his alma mater and remains Maryland\'s only men\'s basketball national championship.',
+                mop: 'Juan Dixon'
+            },
             '1983/nc-state-wolfpack': {
                 year: 1983,
                 teamName: 'NC State Wolfpack',
@@ -13110,7 +13287,15 @@
             '1978': { slug: 'kentucky-wildcats', espnId: '96' },
             '1982': { slug: 'north-carolina-tar-heels', espnId: '153' },
             '1988': { slug: 'kansas-jayhawks', espnId: '2305' },
-            '1983': { slug: 'nc-state-wolfpack', espnId: '152' }
+            '1983': { slug: 'nc-state-wolfpack', espnId: '152' },
+            '1991': { slug: 'duke-blue-devils', espnId: '150' },
+            '2001': { slug: 'duke-blue-devils', espnId: '150' },
+            '1976': { slug: 'indiana-hoosiers', espnId: '84' },
+            '1967': { slug: 'ucla-bruins', espnId: '26' },
+            '1986': { slug: 'louisville-cardinals', espnId: '97' },
+            '2003': { slug: 'syracuse-orange', espnId: '183' },
+            '2000': { slug: 'michigan-state-spartans', espnId: '127' },
+            '2002': { slug: 'maryland-terrapins', espnId: '120' }
         };
 
         // H2H box score cache and schedule cache
