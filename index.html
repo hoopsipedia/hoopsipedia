@@ -3146,7 +3146,7 @@
         .upset-watch-container {
             margin-bottom: 1.5rem;
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
             gap: 0.75rem;
         }
         .upset-watch-card {
@@ -3197,45 +3197,50 @@
         .upset-watch-teams {
             display: flex;
             align-items: center;
-            gap: 0.5rem;
+            gap: 0.4rem;
             flex: 1;
             min-width: 0;
+            overflow: hidden;
         }
         .upset-watch-team {
             display: flex;
             align-items: center;
-            gap: 0.35rem;
-            font-size: 0.82rem;
+            gap: 0.3rem;
+            font-size: 0.78rem;
             font-weight: 600;
             color: #2C3345;
             white-space: nowrap;
-            flex-shrink: 1;
-            min-width: 0;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
         .upset-watch-team img {
-            width: 22px;
-            height: 22px;
+            width: 20px;
+            height: 20px;
             object-fit: contain;
             flex-shrink: 0;
         }
         .upset-watch-seed {
-            font-size: 0.7rem;
+            font-size: 0.68rem;
             font-weight: 700;
             color: #8892A0;
             flex-shrink: 0;
         }
+        .upset-watch-name {
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
         .upset-watch-score {
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             font-weight: 700;
             color: #1B2A4A;
             white-space: nowrap;
-            padding: 0 0.4rem;
+            padding: 0 0.25rem;
             flex-shrink: 0;
         }
         .upset-watch-score .leading { color: #D4512B; }
         .upset-complete .upset-watch-score .leading { color: #2E7D32; }
         .upset-watch-clock {
-            font-size: 0.7rem;
+            font-size: 0.68rem;
             color: #8892A0;
             font-weight: 500;
             white-space: nowrap;
@@ -3244,8 +3249,8 @@
         @media (max-width: 768px) {
             .upset-watch-container { grid-template-columns: 1fr; }
             .upset-watch-card { padding: 0.6rem 0.75rem; }
-            .upset-watch-team { font-size: 0.78rem; }
-            .upset-watch-team img { width: 18px; height: 18px; }
+            .upset-watch-team { font-size: 0.72rem; }
+            .upset-watch-team img { width: 16px; height: 16px; }
         }
 
         /* ── NET Rankings & Quad Record ── */
@@ -4976,15 +4981,15 @@
                         <span class="upset-watch-label">${liveDot}${label}</span>
                         <span class="upset-watch-teams">
                             <span class="upset-watch-team">
-                                <img src="${card.underdog.logo}" alt="" onerror="this.style.display='none'">
                                 ${card.underdog.seed ? `<span class="upset-watch-seed">${card.underdog.seed}</span>` : ''}
-                                ${card.underdog.name}
+                                <img src="${card.underdog.logo}" alt="" onerror="this.style.display='none'">
+                                <span class="upset-watch-name">${card.underdog.name}</span>
                             </span>
                             <span class="upset-watch-score"><span class="leading">${card.underdog.score}</span>-${card.favorite.score}</span>
                             <span class="upset-watch-team">
-                                <img src="${card.favorite.logo}" alt="" onerror="this.style.display='none'">
                                 ${card.favorite.seed ? `<span class="upset-watch-seed">${card.favorite.seed}</span>` : ''}
-                                ${card.favorite.name}
+                                <img src="${card.favorite.logo}" alt="" onerror="this.style.display='none'">
+                                <span class="upset-watch-name">${card.favorite.name}</span>
                             </span>
                         </span>
                         <span class="upset-watch-clock">${card.timeDisplay}</span>
@@ -5066,12 +5071,13 @@
 
         function triggerUpsetTakeover(winnerName, winnerSeed, loserName, loserSeed, winnerEspnId, winnerColor) {
             // Only replace current takeover if this upset is BIGGER (higher seed diff)
+            // Equal seed diffs: newer upset wins (recency + drama)
             const newSeedDiff = Math.abs(winnerSeed - loserSeed);
             const existing = localStorage.getItem('upsetTakeover');
             if (existing) {
                 try {
                     const prev = JSON.parse(existing);
-                    if (prev.seedDiff && newSeedDiff <= prev.seedDiff) return; // Current upset is bigger, keep it
+                    if (prev.seedDiff && newSeedDiff < prev.seedDiff) return; // Current upset is strictly bigger, keep it
                 } catch(e) {}
             }
 
