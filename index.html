@@ -3224,6 +3224,12 @@
         .upset-watch-card.upset-complete {
             border-left-color: #2E7D32;
         }
+        .upset-watch-card.instant-classic {
+            border-left-color: #D97706;
+        }
+        .instant-classic .upset-watch-label {
+            color: #D97706;
+        }
         .upset-watch-label {
             font-size: 0.6rem;
             font-weight: 800;
@@ -5201,9 +5207,63 @@
                     });
                 });
 
+                // Check for completed Instant Classics from today's/yesterday's games
+                if (typeof INSTANT_CLASSICS !== 'undefined') {
+                    (data.events || []).forEach(event => {
+                        const classicData = INSTANT_CLASSICS[event.id];
+                        if (!classicData) return;
+                        const comp = event.competitions?.[0];
+                        if (!comp) return;
+                        const gameState = comp.status?.type?.state || '';
+                        const isFinal = comp.status?.type?.description === 'Final' || gameState === 'post';
+                        if (!isFinal) return;
+                        // Don't add duplicate if already in upsetCards
+                        if (upsetCards.some(c => c.eventId === event.id)) return;
+
+                        const t1 = allTeamsData.find(t => String(t.espnId) === String(classicData.team1EspnId));
+                        const t2 = allTeamsData.find(t => String(t.espnId) === String(classicData.team2EspnId));
+                        const competitors = comp.competitors || [];
+                        const c1 = competitors.find(c => String(c.team?.id) === String(classicData.team1EspnId)) || competitors[0];
+                        const c2 = competitors.find(c => String(c.team?.id) === String(classicData.team2EspnId)) || competitors[1];
+
+                        // Build game page URL
+                        let href = '#classics';
+                        if (t1 && t2) {
+                            const s1 = t1.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+                            const s2 = t2.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+                            href = `#game/${classicData.year}/${s1}-vs-${s2}`;
+                        }
+
+                        upsetCards.push({
+                            eventId: event.id,
+                            isLive: false,
+                            isFinal: true,
+                            cardType: 'instant-classic',
+                            underdog: {
+                                name: classicData.team1.replace(/ (Wildcats|Broncos|Raiders|Bulldogs|Bears|Tigers|Eagles|Panthers|Rams|Tar Heels|Longhorns|Aggies|Gaels|Cougars|Cardinals|Cavaliers).*/, ''),
+                                espnId: classicData.team1EspnId,
+                                seed: classicData.team1Seed,
+                                score: parseInt(c1?.score) || 0,
+                                logo: getLogoUrl(classicData.team1EspnId)
+                            },
+                            favorite: {
+                                name: classicData.team2.replace(/ (Wildcats|Broncos|Raiders|Bulldogs|Bears|Tigers|Eagles|Panthers|Rams|Tar Heels|Longhorns|Aggies|Gaels|Cougars|Cardinals|Cavaliers).*/, ''),
+                                espnId: classicData.team2EspnId,
+                                seed: classicData.team2Seed,
+                                score: parseInt(c2?.score) || 0,
+                                logo: getLogoUrl(classicData.team2EspnId)
+                            },
+                            seedDiff: Math.abs(classicData.team1Seed - classicData.team2Seed),
+                            timeDisplay: 'FINAL',
+                            scoreDiff: 0,
+                            href: href
+                        });
+                    });
+                }
+
                 // Sort: upsets first, then close games; within each, live first, then by seed diff
                 upsetCards.sort((a, b) => {
-                    const typeOrder = { 'upset': 0, 'close-game': 1, 'upset-complete': 2 };
+                    const typeOrder = { 'upset': 0, 'close-game': 1, 'upset-complete': 2, 'instant-classic': 2 };
                     const ta = typeOrder[a.cardType] ?? 1, tb = typeOrder[b.cardType] ?? 1;
                     if (ta !== tb) return ta - tb;
                     if (a.isLive && !b.isLive) return -1;
@@ -5221,25 +5281,28 @@
 
                 container.style.display = 'grid';
                 container.innerHTML = toShow.map(card => {
-                    const statusClass = card.cardType === 'upset-complete' ? ' upset-complete' : '';
-                    const label = card.cardType === 'upset-complete' ? 'UPSET COMPLETE'
+                    const statusClass = card.cardType === 'instant-classic' ? ' upset-complete instant-classic'
+                        : card.cardType === 'upset-complete' ? ' upset-complete' : '';
+                    const label = card.cardType === 'instant-classic' ? '⚡ INSTANT CLASSIC'
+                        : card.cardType === 'upset-complete' ? 'UPSET COMPLETE'
                         : card.cardType === 'upset' ? 'UPSET WATCH'
                         : 'CLOSE GAME';
                     const liveDot = card.isLive ? '<span class="upset-live-dot"></span>' : '';
 
-                    // Try to build comparison URL
-                    const t1 = allTeamsData.find(t => String(t.espnId) === String(card.underdog.espnId));
-                    const t2 = allTeamsData.find(t => String(t.espnId) === String(card.favorite.espnId));
-                    let href = '#';
-                    if (t1 && t2) {
-                        const s1 = t1.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
-                        const s2 = t2.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
-                        if (card.isFinal && card.cardType === 'upset-complete') {
-                            // Completed upsets link to Relive the Moment game page
-                            const year = new Date().getFullYear();
-                            href = `#game/${year}/${s1}-vs-${s2}`;
-                        } else {
-                            href = '#compare/' + s1 + '/' + s2;
+                    // Try to build comparison URL (instant-classic cards have href pre-built)
+                    let href = card.href || '#';
+                    if (!card.href) {
+                        const t1 = allTeamsData.find(t => String(t.espnId) === String(card.underdog.espnId));
+                        const t2 = allTeamsData.find(t => String(t.espnId) === String(card.favorite.espnId));
+                        if (t1 && t2) {
+                            const s1 = t1.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+                            const s2 = t2.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+                            if (card.isFinal && card.cardType === 'upset-complete') {
+                                const year = new Date().getFullYear();
+                                href = `#game/${year}/${s1}-vs-${s2}`;
+                            } else {
+                                href = '#compare/' + s1 + '/' + s2;
+                            }
                         }
                     }
 
