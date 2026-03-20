@@ -2194,7 +2194,7 @@
             }
 
             /* ── PREVENT FULL-PAGE HORIZONTAL OVERFLOW ── */
-            .view { overflow-x: clip; max-width: 100vw; }
+            .view { overflow-x: hidden; max-width: 100vw; }
 
             /* ── SCROLL HINT: subtle right shadow on scrollable tables ── */
             .season-table-wrapper,
@@ -3698,6 +3698,190 @@
             }
             .s5-skeleton-side.right { flex-direction: row; }
             .s5-player-side { padding: 0.75rem 1rem; }
+        }
+
+        /* ══════════════════════════════════════════════
+           MOBILE RESPONSIVENESS AUDIT FIXES
+           ══════════════════════════════════════════════ */
+
+        /* ── 768px: Tablet / Large Phone ── */
+        @media (max-width: 768px) {
+
+            /* Championship run box score tables: prevent stat cells from wrapping */
+            .champ-run-boxscore-inner table {
+                min-width: 360px;
+            }
+            .champ-run-boxscore-inner table td,
+            .champ-run-boxscore-inner table th {
+                white-space: nowrap;
+                padding: 0.25rem 0.3rem;
+                font-size: 0.72rem;
+            }
+            .champ-run-boxscore-inner table td:first-child,
+            .champ-run-boxscore-inner table th:first-child {
+                max-width: 90px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            /* Championship run stats: prevent MOP name overflow */
+            .champ-run-stat-value {
+                font-size: 1.4rem;
+                word-break: break-word;
+                overflow-wrap: break-word;
+            }
+
+            /* Milestone banner: wrap content on mobile */
+            #milestoneBanner {
+                flex-wrap: wrap !important;
+                font-size: 0.78rem !important;
+                padding: 0.5rem 2rem 0.5rem 0.75rem !important;
+                gap: 0.4rem !important;
+            }
+
+            /* Upset watch: fix minmax(340px) being too wide for 375px phones */
+            .upset-watch-container {
+                grid-template-columns: 1fr;
+            }
+
+            /* H2H detail header: tighter spacing on mobile */
+            .h2h-detail-header {
+                gap: 0.75rem;
+                padding: 0.75rem 0 0.5rem;
+            }
+            .h2h-detail-score {
+                font-size: 1.2rem;
+            }
+
+            /* Game detail OT suffix: reduce size */
+            .game-detail-score-ot {
+                font-size: 1.2rem;
+            }
+
+            /* Starting 5: tighter stat grid */
+            .s5-stats-grid {
+                gap: 0.15rem;
+            }
+            .s5-stat-val {
+                font-size: 0.75rem;
+            }
+            .s5-stat-lbl {
+                font-size: 0.55rem;
+            }
+            .s5-player-name {
+                font-size: 0.8rem;
+            }
+            .s5-player-photo {
+                width: 40px;
+                height: 40px;
+            }
+        }
+
+        /* ── 480px: Small Phone ── */
+        @media (max-width: 480px) {
+
+            /* Championship run hero: tighter padding */
+            .champ-run-hero {
+                padding: 1.5rem 1rem;
+            }
+            .champ-run-hero-logo {
+                width: 72px;
+                height: 72px;
+            }
+            .champ-run-hero-team {
+                font-size: 1.35rem;
+            }
+
+            /* Championship run tournament path: narrower columns */
+            .champ-run-game {
+                grid-template-columns: 65px 1fr auto;
+                gap: 0.35rem;
+                padding: 0.6rem 0.5rem 0.6rem 0.75rem;
+            }
+            .champ-run-round {
+                font-size: 0.58rem;
+            }
+            .champ-run-opp-name {
+                font-size: 0.78rem;
+            }
+            .champ-run-opp-logo {
+                width: 24px;
+                height: 24px;
+            }
+            .champ-run-score-value {
+                font-size: 0.88rem;
+            }
+
+            /* Championship run stats: 2-col grid, smaller text */
+            .champ-run-stats {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 0.6rem;
+            }
+            .champ-run-stat {
+                padding: 0.75rem 0.35rem;
+            }
+            .champ-run-stat-value {
+                font-size: 1.2rem;
+            }
+
+            /* Championship run box score: even tighter */
+            .champ-run-boxscore-inner {
+                padding: 0.6rem 0.5rem;
+            }
+            .champ-run-boxscore-inner > div {
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+            .champ-run-boxscore-inner table {
+                min-width: 340px;
+            }
+            .champ-run-boxscore-inner table td,
+            .champ-run-boxscore-inner table th {
+                padding: 0.2rem 0.25rem;
+                font-size: 0.68rem;
+            }
+
+            /* Game detail hero: reduce score size further */
+            .game-detail-score-num {
+                font-size: 1.8rem;
+            }
+            .game-detail-score-dash {
+                font-size: 1.4rem;
+            }
+            .game-detail-matchup {
+                gap: 0.75rem;
+            }
+            .game-detail-team-logo {
+                width: 50px;
+                height: 50px;
+            }
+            .game-detail-team-name {
+                font-size: 0.8rem;
+                max-width: 100px;
+            }
+
+            /* Coaches table: reduce min-width so it scrolls less */
+            .season-table-wrapper table {
+                min-width: 550px !important;
+            }
+
+            /* Game center header: tighter */
+            .game-center-header {
+                gap: 0.5rem;
+                padding: 0.75rem;
+            }
+            .game-center-score {
+                font-size: 1.8rem;
+            }
+
+            /* Comparison view: tighter stat bars */
+            .stat-value {
+                font-size: 0.78rem;
+                min-width: 30px;
+            }
+            .stat-label {
+                font-size: 0.68rem;
+            }
         }
 
     </style>
@@ -13746,6 +13930,1249 @@
                 videoId: 'uiWERnXd9l0',
                 aftermath: 'Tyus Jones was named Final Four Most Outstanding Player and was drafted 24th overall in the 2015 NBA Draft. Jahlil Okafor was drafted 3rd overall by the Philadelphia 76ers. Justise Winslow went 10th to the Miami Heat. It was Coach K\'s fifth national championship, tying him with John Wooden\'s record at one school (Wooden won all 10 at UCLA). Krzyzewski coached seven more seasons before retiring in 2022 with 1,202 career wins.',
                 mop: 'Tyus Jones'
+            },
+            '2006/florida-gators': {
+                year: 2006,
+                teamName: 'Florida Gators',
+                espnId: '57',
+                teamSlug: 'florida-gators',
+                heroTitle: '2006 NATIONAL CHAMPIONS',
+                heroSubtitle: '3rd Seed \u2022 Minneapolis Region \u2022 Indianapolis, IN',
+                accentColor: '#0021A5',
+                story: 'Billy Donovan\'s Gators shocked the college basketball world by capturing Florida\'s first national championship with a roster loaded with underclassmen. Joakim Noah was a force of nature, setting a championship game record with six blocks while adding 16 points and 9 rebounds in the 73-57 demolition of UCLA. The Gators\' run through the Minneapolis Regional included an upset of top-seeded Villanova and a dominant Final Four win over Cinderella George Mason.',
+                games: [
+                    { round: 'Round of 64', opponent: 'South Alabama Jaguars', oppSeed: 14, oppEspnId: '6', score: '76-50', winScore: 76, loseScore: 50, note: '', isChampionship: false },
+                    { round: 'Round of 32', opponent: 'Milwaukee Panthers', oppSeed: 11, oppEspnId: '270', score: '82-60', winScore: 82, loseScore: 60, note: '', isChampionship: false },
+                    { round: 'Sweet 16', opponent: 'Georgetown Hoyas', oppSeed: 7, oppEspnId: '46', score: '57-53', winScore: 57, loseScore: 53, note: '', isChampionship: false },
+                    { round: 'Elite Eight', opponent: 'Villanova Wildcats', oppSeed: 1, oppEspnId: '222', score: '75-62', winScore: 75, loseScore: 62, note: '', isChampionship: false },
+                    { round: 'Final Four', opponent: 'George Mason Patriots', oppSeed: 11, oppEspnId: '2244', score: '73-58', winScore: 73, loseScore: 58, note: '', isChampionship: false },
+                    { round: 'Championship', opponent: 'UCLA Bruins', oppSeed: 2, oppEspnId: '26', score: '73-57', winScore: 73, loseScore: 57, note: '', isChampionship: true }
+                ],
+                stats: { seed: '3', record: '6-0', avgMargin: '+12.7', closestGame: '57-53 vs Georgetown' },
+                videoId: 'K3GBywMoyU4',
+                aftermath: 'Joakim Noah was named Final Four Most Outstanding Player. Rather than declaring for the NBA Draft, Noah, Al Horford, Corey Brewer, Taurean Green, and Lee Humphrey all returned for the 2006-07 season to pursue a repeat. The decision was unprecedented and set the stage for Florida\'s back-to-back championship run.',
+                mop: 'Joakim Noah'
+            },
+            '2007/florida-gators': {
+                year: 2007,
+                teamName: 'Florida Gators',
+                espnId: '57',
+                teamSlug: 'florida-gators',
+                heroTitle: '2007 NATIONAL CHAMPIONS',
+                heroSubtitle: '1st Seed \u2022 Midwest Region \u2022 Atlanta, GA',
+                accentColor: '#0021A5',
+                story: 'Florida became the first team since Duke in 1991-92 to win back-to-back national championships, and they did it with the same starting five. The Gators opened with a record-setting 112-69 demolition of Jackson State before rolling through the Midwest bracket. In the championship game, Corey Brewer scored 13 points as Florida avenged its regular-season meeting with Ohio State, defeating Greg Oden and the Buckeyes 84-75 in Atlanta.',
+                games: [
+                    { round: 'Round of 64', opponent: 'Jackson State Tigers', oppSeed: 16, oppEspnId: '2296', score: '112-69', winScore: 112, loseScore: 69, note: '', isChampionship: false },
+                    { round: 'Round of 32', opponent: 'Purdue Boilermakers', oppSeed: 9, oppEspnId: '2509', score: '74-67', winScore: 74, loseScore: 67, note: '', isChampionship: false },
+                    { round: 'Sweet 16', opponent: 'Butler Bulldogs', oppSeed: 5, oppEspnId: '2086', score: '65-57', winScore: 65, loseScore: 57, note: '', isChampionship: false },
+                    { round: 'Elite Eight', opponent: 'Oregon Ducks', oppSeed: 3, oppEspnId: '2483', score: '85-77', winScore: 85, loseScore: 77, note: '', isChampionship: false },
+                    { round: 'Final Four', opponent: 'UCLA Bruins', oppSeed: 2, oppEspnId: '26', score: '76-66', winScore: 76, loseScore: 66, note: '', isChampionship: false },
+                    { round: 'Championship', opponent: 'Ohio State Buckeyes', oppSeed: 1, oppEspnId: '194', score: '84-75', winScore: 84, loseScore: 75, note: '', isChampionship: true }
+                ],
+                stats: { seed: '1', record: '6-0', avgMargin: '+13.7', closestGame: '74-67 vs Purdue' },
+                videoId: 'jS5gKWbMkOo',
+                aftermath: 'Corey Brewer was named Final Four Most Outstanding Player. After the repeat, the core players declared for the NBA Draft. Al Horford was drafted 3rd overall by the Atlanta Hawks, Corey Brewer went 7th to the Minnesota Timberwolves, and Joakim Noah was selected 9th by the Chicago Bulls. All three had long NBA careers. Billy Donovan became only the fourth coach to win consecutive titles.',
+                mop: 'Corey Brewer'
+            },
+            '1994/arkansas-razorbacks': {
+                year: 1994,
+                teamName: 'Arkansas Razorbacks',
+                espnId: '8',
+                teamSlug: 'arkansas-razorbacks',
+                heroTitle: '1994 NATIONAL CHAMPIONS',
+                heroSubtitle: '1st Seed \u2022 Midwest Region \u2022 Charlotte, NC',
+                accentColor: '#9D2235',
+                story: 'Nolan Richardson\'s "40 Minutes of Hell" full-court pressure defense wore down opponents and delivered Arkansas its only national championship. The Razorbacks suffocated six straight opponents, capped by a 76-72 victory over defending champion Duke in the title game. Scotty Thurman\'s three-pointer from the right wing with 50 seconds remaining sealed the win, and Corliss Williamson dominated inside with 23 points to earn Most Outstanding Player honors.',
+                games: [
+                    { round: 'Round of 64', opponent: 'North Carolina A&T Aggies', oppSeed: 16, oppEspnId: '2448', score: '94-79', winScore: 94, loseScore: 79, note: '', isChampionship: false },
+                    { round: 'Round of 32', opponent: 'Georgetown Hoyas', oppSeed: 9, oppEspnId: '46', score: '85-73', winScore: 85, loseScore: 73, note: '', isChampionship: false },
+                    { round: 'Sweet 16', opponent: 'Tulsa Golden Hurricane', oppSeed: 12, oppEspnId: '202', score: '103-84', winScore: 103, loseScore: 84, note: '', isChampionship: false },
+                    { round: 'Elite Eight', opponent: 'Michigan Wolverines', oppSeed: 3, oppEspnId: '130', score: '76-68', winScore: 76, loseScore: 68, note: '', isChampionship: false },
+                    { round: 'Final Four', opponent: 'Arizona Wildcats', oppSeed: 2, oppEspnId: '12', score: '91-82', winScore: 91, loseScore: 82, note: '', isChampionship: false },
+                    { round: 'Championship', opponent: 'Duke Blue Devils', oppSeed: 2, oppEspnId: '150', score: '76-72', winScore: 76, loseScore: 72, note: '', isChampionship: true }
+                ],
+                stats: { seed: '1', record: '6-0', avgMargin: '+13.7', closestGame: '76-72 vs Duke' },
+                videoId: 'QOnJz0YRbGY',
+                aftermath: 'Corliss Williamson was named Final Four Most Outstanding Player. He was drafted 13th overall in the 1996 NBA Draft and played nine NBA seasons. Nolan Richardson became the first African American coach to win the NCAA championship. Arkansas returned to the title game in 1995 but lost to UCLA. Richardson was fired in 2002 amid controversy and later settled a wrongful termination lawsuit with the university.',
+                mop: 'Corliss Williamson',
+                staticBoxScores: {
+                    5: `<div style="overflow-x:auto;">
+                        <div style="font-weight:700;color:#1B2A4A;margin-bottom:0.5rem;font-size:0.95rem;">Arkansas 76, Duke 72 — April 4, 1994</div>
+                        <div style="font-weight:600;color:#1B2A4A;margin:0.75rem 0 0.25rem;font-size:0.85rem;">Arkansas — 30-77 FG (.390), 11-19 FT</div>
+                        <table style="width:100%;border-collapse:collapse;font-size:0.78rem;margin-bottom:1rem;">
+                            <thead><tr style="border-bottom:2px solid #E8E2D6;color:#6B7A8D;text-align:right;">
+                                <th style="text-align:left;padding:0.3rem 0.5rem;">Player</th>
+                                <th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th>
+                                <th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th>
+                                <th style="padding:0.3rem;">AST</th>
+                                <th style="padding:0.3rem;font-weight:700;color:#1B2A4A;">PTS</th>
+                            </tr></thead>
+                            <tbody>
+                                <tr style="border-bottom:1px solid #F0ECE0;">
+                                    <td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Corliss Williamson</td>
+                                    <td style="text-align:right;padding:0.3rem;">35</td>
+                                    <td style="text-align:right;padding:0.3rem;">10-24</td>
+                                    <td style="text-align:right;padding:0.3rem;">3-5</td>
+                                    <td style="text-align:right;padding:0.3rem;">8</td>
+                                    <td style="text-align:right;padding:0.3rem;">3</td>
+                                    <td style="text-align:right;padding:0.3rem;font-weight:700;">23</td>
+                                </tr>
+                                <tr style="border-bottom:1px solid #F0ECE0;">
+                                    <td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Scotty Thurman</td>
+                                    <td style="text-align:right;padding:0.3rem;">36</td>
+                                    <td style="text-align:right;padding:0.3rem;">6-13</td>
+                                    <td style="text-align:right;padding:0.3rem;">0-0</td>
+                                    <td style="text-align:right;padding:0.3rem;">5</td>
+                                    <td style="text-align:right;padding:0.3rem;">1</td>
+                                    <td style="text-align:right;padding:0.3rem;font-weight:700;">15</td>
+                                </tr>
+                                <tr style="border-bottom:1px solid #F0ECE0;">
+                                    <td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Corey Beck</td>
+                                    <td style="text-align:right;padding:0.3rem;">35</td>
+                                    <td style="text-align:right;padding:0.3rem;">5-11</td>
+                                    <td style="text-align:right;padding:0.3rem;">5-8</td>
+                                    <td style="text-align:right;padding:0.3rem;">10</td>
+                                    <td style="text-align:right;padding:0.3rem;">4</td>
+                                    <td style="text-align:right;padding:0.3rem;font-weight:700;">15</td>
+                                </tr>
+                                <tr style="border-bottom:1px solid #F0ECE0;">
+                                    <td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Clint McDaniel</td>
+                                    <td style="text-align:right;padding:0.3rem;">32</td>
+                                    <td style="text-align:right;padding:0.3rem;">2-5</td>
+                                    <td style="text-align:right;padding:0.3rem;">2-4</td>
+                                    <td style="text-align:right;padding:0.3rem;">2</td>
+                                    <td style="text-align:right;padding:0.3rem;">3</td>
+                                    <td style="text-align:right;padding:0.3rem;font-weight:700;">7</td>
+                                </tr>
+                                <tr style="border-bottom:1px solid #F0ECE0;">
+                                    <td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Dwight Stewart</td>
+                                    <td style="text-align:right;padding:0.3rem;">29</td>
+                                    <td style="text-align:right;padding:0.3rem;">3-11</td>
+                                    <td style="text-align:right;padding:0.3rem;">0-0</td>
+                                    <td style="text-align:right;padding:0.3rem;">9</td>
+                                    <td style="text-align:right;padding:0.3rem;">4</td>
+                                    <td style="text-align:right;padding:0.3rem;font-weight:700;">6</td>
+                                </tr>
+                                <tr style="border-bottom:1px solid #F0ECE0;">
+                                    <td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Alex Dillard</td>
+                                    <td style="text-align:right;padding:0.3rem;">8</td>
+                                    <td style="text-align:right;padding:0.3rem;">1-5</td>
+                                    <td style="text-align:right;padding:0.3rem;">1-2</td>
+                                    <td style="text-align:right;padding:0.3rem;">1</td>
+                                    <td style="text-align:right;padding:0.3rem;">0</td>
+                                    <td style="text-align:right;padding:0.3rem;font-weight:700;">4</td>
+                                </tr>
+                                <tr style="border-bottom:1px solid #F0ECE0;">
+                                    <td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Lee Wilson</td>
+                                    <td style="text-align:right;padding:0.3rem;">5</td>
+                                    <td style="text-align:right;padding:0.3rem;">2-2</td>
+                                    <td style="text-align:right;padding:0.3rem;">0-0</td>
+                                    <td style="text-align:right;padding:0.3rem;">4</td>
+                                    <td style="text-align:right;padding:0.3rem;">1</td>
+                                    <td style="text-align:right;padding:0.3rem;font-weight:700;">4</td>
+                                </tr>
+                                <tr style="border-bottom:1px solid #F0ECE0;">
+                                    <td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Darnell Robinson</td>
+                                    <td style="text-align:right;padding:0.3rem;">12</td>
+                                    <td style="text-align:right;padding:0.3rem;">1-5</td>
+                                    <td style="text-align:right;padding:0.3rem;">0-0</td>
+                                    <td style="text-align:right;padding:0.3rem;">2</td>
+                                    <td style="text-align:right;padding:0.3rem;">1</td>
+                                    <td style="text-align:right;padding:0.3rem;font-weight:700;">2</td>
+                                </tr>
+                                <tr style="border-bottom:1px solid #F0ECE0;">
+                                    <td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Ken Biley</td>
+                                    <td style="text-align:right;padding:0.3rem;">3</td>
+                                    <td style="text-align:right;padding:0.3rem;">0-0</td>
+                                    <td style="text-align:right;padding:0.3rem;">0-0</td>
+                                    <td style="text-align:right;padding:0.3rem;">0</td>
+                                    <td style="text-align:right;padding:0.3rem;">0</td>
+                                    <td style="text-align:right;padding:0.3rem;font-weight:700;">0</td>
+                                </tr>
+                                <tr style="border-bottom:1px solid #F0ECE0;">
+                                    <td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Davor Rimac</td>
+                                    <td style="text-align:right;padding:0.3rem;">5</td>
+                                    <td style="text-align:right;padding:0.3rem;">0-1</td>
+                                    <td style="text-align:right;padding:0.3rem;">0-0</td>
+                                    <td style="text-align:right;padding:0.3rem;">0</td>
+                                    <td style="text-align:right;padding:0.3rem;">1</td>
+                                    <td style="text-align:right;padding:0.3rem;font-weight:700;">0</td>
+                                </tr>
+                                <tr style="border-bottom:2px solid #E8E2D6;font-weight:700;">
+                                    <td style="text-align:left;padding:0.3rem 0.5rem;">TOTALS</td>
+                                    <td style="text-align:right;padding:0.3rem;">200</td>
+                                    <td style="text-align:right;padding:0.3rem;">30-77</td>
+                                    <td style="text-align:right;padding:0.3rem;">11-19</td>
+                                    <td style="text-align:right;padding:0.3rem;">41</td>
+                                    <td style="text-align:right;padding:0.3rem;">18</td>
+                                    <td style="text-align:right;padding:0.3rem;font-weight:700;">76</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div style="font-weight:600;color:#1B2A4A;margin:0.75rem 0 0.25rem;font-size:0.85rem;">Duke — 29-65 FG (.446), 7-11 FT</div>
+                        <table style="width:100%;border-collapse:collapse;font-size:0.78rem;margin-bottom:1rem;">
+                            <thead><tr style="border-bottom:2px solid #E8E2D6;color:#6B7A8D;text-align:right;">
+                                <th style="text-align:left;padding:0.3rem 0.5rem;">Player</th>
+                                <th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th>
+                                <th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th>
+                                <th style="padding:0.3rem;">AST</th>
+                                <th style="padding:0.3rem;font-weight:700;color:#1B2A4A;">PTS</th>
+                            </tr></thead>
+                            <tbody>
+                                <tr style="border-bottom:1px solid #F0ECE0;">
+                                    <td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Antonio Lang</td>
+                                    <td style="text-align:right;padding:0.3rem;">34</td>
+                                    <td style="text-align:right;padding:0.3rem;">6-9</td>
+                                    <td style="text-align:right;padding:0.3rem;">3-3</td>
+                                    <td style="text-align:right;padding:0.3rem;">5</td>
+                                    <td style="text-align:right;padding:0.3rem;">3</td>
+                                    <td style="text-align:right;padding:0.3rem;font-weight:700;">15</td>
+                                </tr>
+                                <tr style="border-bottom:1px solid #F0ECE0;">
+                                    <td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Cherokee Parks</td>
+                                    <td style="text-align:right;padding:0.3rem;">30</td>
+                                    <td style="text-align:right;padding:0.3rem;">7-10</td>
+                                    <td style="text-align:right;padding:0.3rem;">0-1</td>
+                                    <td style="text-align:right;padding:0.3rem;">7</td>
+                                    <td style="text-align:right;padding:0.3rem;">0</td>
+                                    <td style="text-align:right;padding:0.3rem;font-weight:700;">14</td>
+                                </tr>
+                                <tr style="border-bottom:1px solid #F0ECE0;">
+                                    <td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Jeff Capel III</td>
+                                    <td style="text-align:right;padding:0.3rem;">35</td>
+                                    <td style="text-align:right;padding:0.3rem;">6-16</td>
+                                    <td style="text-align:right;padding:0.3rem;">0-0</td>
+                                    <td style="text-align:right;padding:0.3rem;">5</td>
+                                    <td style="text-align:right;padding:0.3rem;">4</td>
+                                    <td style="text-align:right;padding:0.3rem;font-weight:700;">14</td>
+                                </tr>
+                                <tr style="border-bottom:1px solid #F0ECE0;">
+                                    <td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Chris Collins</td>
+                                    <td style="text-align:right;padding:0.3rem;">34</td>
+                                    <td style="text-align:right;padding:0.3rem;">4-11</td>
+                                    <td style="text-align:right;padding:0.3rem;">0-0</td>
+                                    <td style="text-align:right;padding:0.3rem;">0</td>
+                                    <td style="text-align:right;padding:0.3rem;">1</td>
+                                    <td style="text-align:right;padding:0.3rem;font-weight:700;">12</td>
+                                </tr>
+                                <tr style="border-bottom:1px solid #F0ECE0;">
+                                    <td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Grant Hill</td>
+                                    <td style="text-align:right;padding:0.3rem;">38</td>
+                                    <td style="text-align:right;padding:0.3rem;">4-11</td>
+                                    <td style="text-align:right;padding:0.3rem;">3-5</td>
+                                    <td style="text-align:right;padding:0.3rem;">14</td>
+                                    <td style="text-align:right;padding:0.3rem;">6</td>
+                                    <td style="text-align:right;padding:0.3rem;font-weight:700;">12</td>
+                                </tr>
+                                <tr style="border-bottom:1px solid #F0ECE0;">
+                                    <td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Marty Clark</td>
+                                    <td style="text-align:right;padding:0.3rem;">15</td>
+                                    <td style="text-align:right;padding:0.3rem;">1-6</td>
+                                    <td style="text-align:right;padding:0.3rem;">1-2</td>
+                                    <td style="text-align:right;padding:0.3rem;">1</td>
+                                    <td style="text-align:right;padding:0.3rem;">3</td>
+                                    <td style="text-align:right;padding:0.3rem;font-weight:700;">3</td>
+                                </tr>
+                                <tr style="border-bottom:1px solid #F0ECE0;">
+                                    <td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Erik Meek</td>
+                                    <td style="text-align:right;padding:0.3rem;">14</td>
+                                    <td style="text-align:right;padding:0.3rem;">1-2</td>
+                                    <td style="text-align:right;padding:0.3rem;">0-3</td>
+                                    <td style="text-align:right;padding:0.3rem;">7</td>
+                                    <td style="text-align:right;padding:0.3rem;">0</td>
+                                    <td style="text-align:right;padding:0.3rem;font-weight:700;">2</td>
+                                </tr>
+                                <tr style="border-bottom:2px solid #E8E2D6;font-weight:700;">
+                                    <td style="text-align:left;padding:0.3rem 0.5rem;">TOTALS</td>
+                                    <td style="text-align:right;padding:0.3rem;">200</td>
+                                    <td style="text-align:right;padding:0.3rem;">29-65</td>
+                                    <td style="text-align:right;padding:0.3rem;">7-11</td>
+                                    <td style="text-align:right;padding:0.3rem;">39</td>
+                                    <td style="text-align:right;padding:0.3rem;">17</td>
+                                    <td style="text-align:right;padding:0.3rem;font-weight:700;">72</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div style="font-size:0.75rem;color:#6B7A8D;margin-top:0.5rem;">Source: Sports Reference</div>
+                    </div>`
+                }
+            },
+            '1995/ucla-bruins': {
+                year: 1995,
+                teamName: 'UCLA Bruins',
+                espnId: '26',
+                teamSlug: 'ucla-bruins',
+                heroTitle: '1995 NATIONAL CHAMPIONS',
+                heroSubtitle: '1st Seed \u2022 West Region \u2022 Seattle, WA',
+                accentColor: '#2D68C4',
+                story: 'UCLA recaptured its championship glory for the first time since the John Wooden era, winning its 11th national title under Jim Harrick. Ed O\'Bannon delivered one of the great individual tournament performances, scoring 30 points and grabbing 17 rebounds in the 89-78 championship victory over defending champion Arkansas. The run nearly ended in the second round when Tyus Edney\'s iconic coast-to-coast layup at the buzzer gave UCLA a 75-74 escape over Missouri.',
+                games: [
+                    { round: 'Round of 64', opponent: 'Florida International Panthers', oppSeed: 16, oppEspnId: '2229', score: '92-56', winScore: 92, loseScore: 56, note: '', isChampionship: false },
+                    { round: 'Round of 32', opponent: 'Missouri Tigers', oppSeed: 8, oppEspnId: '142', score: '75-74', winScore: 75, loseScore: 74, note: '', isChampionship: false },
+                    { round: 'Sweet 16', opponent: 'Mississippi State Bulldogs', oppSeed: 5, oppEspnId: '344', score: '86-67', winScore: 86, loseScore: 67, note: '', isChampionship: false },
+                    { round: 'Elite Eight', opponent: 'UConn Huskies', oppSeed: 2, oppEspnId: '41', score: '102-96', winScore: 102, loseScore: 96, note: '', isChampionship: false },
+                    { round: 'Final Four', opponent: 'Oklahoma State Cowboys', oppSeed: 4, oppEspnId: '197', score: '74-61', winScore: 74, loseScore: 61, note: '', isChampionship: false },
+                    { round: 'Championship', opponent: 'Arkansas Razorbacks', oppSeed: 2, oppEspnId: '8', score: '89-78', winScore: 89, loseScore: 78, note: '', isChampionship: true }
+                ],
+                stats: { seed: '1', record: '6-0', avgMargin: '+12.5', closestGame: '75-74 vs Missouri' },
+                videoId: 'bLfEaiGJDq0',
+                aftermath: 'Ed O\'Bannon was named Final Four Most Outstanding Player and was drafted 9th overall by the New Jersey Nets in the 1995 NBA Draft. He later became the lead plaintiff in the landmark O\'Bannon v. NCAA antitrust lawsuit that challenged the NCAA\'s use of athletes\' likenesses. Tyus Edney was drafted 19th overall. Jim Harrick was fired from UCLA in 1996 over expense report irregularities. It was UCLA\'s first title in 20 years and remains its most recent championship.',
+                mop: 'Ed O\'Bannon',
+                staticBoxScores: {
+                    5: `<div style="overflow-x:auto;">
+                        <div style="font-weight:700;color:#1B2A4A;margin-bottom:0.5rem;font-size:0.95rem;">UCLA 89, Arkansas 78 — April 3, 1995</div>
+                        <div style="font-weight:600;color:#1B2A4A;margin:0.75rem 0 0.25rem;font-size:0.85rem;">UCLA — 33-68 FG (.485), 21-29 FT</div>
+                        <table style="width:100%;border-collapse:collapse;font-size:0.78rem;margin-bottom:1rem;">
+                            <thead><tr style="border-bottom:2px solid #E8E2D6;color:#6B7A8D;text-align:right;">
+                                <th style="text-align:left;padding:0.3rem 0.5rem;">Player</th>
+                                <th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th>
+                                <th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th>
+                                <th style="padding:0.3rem;">AST</th>
+                                <th style="padding:0.3rem;font-weight:700;color:#1B2A4A;">PTS</th>
+                            </tr></thead>
+                            <tbody>
+                                <tr style="border-bottom:1px solid #F0ECE0;">
+                                    <td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Ed O'Bannon</td>
+                                    <td style="text-align:right;padding:0.3rem;">40</td>
+                                    <td style="text-align:right;padding:0.3rem;">10-21</td>
+                                    <td style="text-align:right;padding:0.3rem;">9-11</td>
+                                    <td style="text-align:right;padding:0.3rem;">17</td>
+                                    <td style="text-align:right;padding:0.3rem;">3</td>
+                                    <td style="text-align:right;padding:0.3rem;font-weight:700;">30</td>
+                                </tr>
+                                <tr style="border-bottom:1px solid #F0ECE0;">
+                                    <td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Toby Bailey</td>
+                                    <td style="text-align:right;padding:0.3rem;">39</td>
+                                    <td style="text-align:right;padding:0.3rem;">12-20</td>
+                                    <td style="text-align:right;padding:0.3rem;">1-2</td>
+                                    <td style="text-align:right;padding:0.3rem;">9</td>
+                                    <td style="text-align:right;padding:0.3rem;">3</td>
+                                    <td style="text-align:right;padding:0.3rem;font-weight:700;">26</td>
+                                </tr>
+                                <tr style="border-bottom:1px solid #F0ECE0;">
+                                    <td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">George Zidek</td>
+                                    <td style="text-align:right;padding:0.3rem;">29</td>
+                                    <td style="text-align:right;padding:0.3rem;">5-8</td>
+                                    <td style="text-align:right;padding:0.3rem;">4-7</td>
+                                    <td style="text-align:right;padding:0.3rem;">6</td>
+                                    <td style="text-align:right;padding:0.3rem;">0</td>
+                                    <td style="text-align:right;padding:0.3rem;font-weight:700;">14</td>
+                                </tr>
+                                <tr style="border-bottom:1px solid #F0ECE0;">
+                                    <td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Charles O'Bannon</td>
+                                    <td style="text-align:right;padding:0.3rem;">36</td>
+                                    <td style="text-align:right;padding:0.3rem;">4-10</td>
+                                    <td style="text-align:right;padding:0.3rem;">3-4</td>
+                                    <td style="text-align:right;padding:0.3rem;">9</td>
+                                    <td style="text-align:right;padding:0.3rem;">6</td>
+                                    <td style="text-align:right;padding:0.3rem;font-weight:700;">11</td>
+                                </tr>
+                                <tr style="border-bottom:1px solid #F0ECE0;">
+                                    <td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Cameron Dollar</td>
+                                    <td style="text-align:right;padding:0.3rem;">36</td>
+                                    <td style="text-align:right;padding:0.3rem;">1-4</td>
+                                    <td style="text-align:right;padding:0.3rem;">4-5</td>
+                                    <td style="text-align:right;padding:0.3rem;">3</td>
+                                    <td style="text-align:right;padding:0.3rem;">8</td>
+                                    <td style="text-align:right;padding:0.3rem;font-weight:700;">6</td>
+                                </tr>
+                                <tr style="border-bottom:1px solid #F0ECE0;">
+                                    <td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">J.R. Henderson</td>
+                                    <td style="text-align:right;padding:0.3rem;">17</td>
+                                    <td style="text-align:right;padding:0.3rem;">1-5</td>
+                                    <td style="text-align:right;padding:0.3rem;">0-1</td>
+                                    <td style="text-align:right;padding:0.3rem;">1</td>
+                                    <td style="text-align:right;padding:0.3rem;">1</td>
+                                    <td style="text-align:right;padding:0.3rem;font-weight:700;">2</td>
+                                </tr>
+                                <tr style="border-bottom:1px solid #F0ECE0;">
+                                    <td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Tyus Edney</td>
+                                    <td style="text-align:right;padding:0.3rem;">3</td>
+                                    <td style="text-align:right;padding:0.3rem;">0-0</td>
+                                    <td style="text-align:right;padding:0.3rem;">0-0</td>
+                                    <td style="text-align:right;padding:0.3rem;">0</td>
+                                    <td style="text-align:right;padding:0.3rem;">1</td>
+                                    <td style="text-align:right;padding:0.3rem;font-weight:700;">0</td>
+                                </tr>
+                                <tr style="border-bottom:2px solid #E8E2D6;font-weight:700;">
+                                    <td style="text-align:left;padding:0.3rem 0.5rem;">TOTALS</td>
+                                    <td style="text-align:right;padding:0.3rem;">200</td>
+                                    <td style="text-align:right;padding:0.3rem;">33-68</td>
+                                    <td style="text-align:right;padding:0.3rem;">21-29</td>
+                                    <td style="text-align:right;padding:0.3rem;">45</td>
+                                    <td style="text-align:right;padding:0.3rem;">22</td>
+                                    <td style="text-align:right;padding:0.3rem;font-weight:700;">89</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div style="font-weight:600;color:#1B2A4A;margin:0.75rem 0 0.25rem;font-size:0.85rem;">Arkansas — 28-65 FG (.431), 12-20 FT</div>
+                        <table style="width:100%;border-collapse:collapse;font-size:0.78rem;margin-bottom:1rem;">
+                            <thead><tr style="border-bottom:2px solid #E8E2D6;color:#6B7A8D;text-align:right;">
+                                <th style="text-align:left;padding:0.3rem 0.5rem;">Player</th>
+                                <th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th>
+                                <th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th>
+                                <th style="padding:0.3rem;">AST</th>
+                                <th style="padding:0.3rem;font-weight:700;color:#1B2A4A;">PTS</th>
+                            </tr></thead>
+                            <tbody>
+                                <tr style="border-bottom:1px solid #F0ECE0;">
+                                    <td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Clint McDaniel</td>
+                                    <td style="text-align:right;padding:0.3rem;">35</td>
+                                    <td style="text-align:right;padding:0.3rem;">5-10</td>
+                                    <td style="text-align:right;padding:0.3rem;">3-4</td>
+                                    <td style="text-align:right;padding:0.3rem;">3</td>
+                                    <td style="text-align:right;padding:0.3rem;">1</td>
+                                    <td style="text-align:right;padding:0.3rem;font-weight:700;">16</td>
+                                </tr>
+                                <tr style="border-bottom:1px solid #F0ECE0;">
+                                    <td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Corliss Williamson</td>
+                                    <td style="text-align:right;padding:0.3rem;">33</td>
+                                    <td style="text-align:right;padding:0.3rem;">3-16</td>
+                                    <td style="text-align:right;padding:0.3rem;">6-10</td>
+                                    <td style="text-align:right;padding:0.3rem;">4</td>
+                                    <td style="text-align:right;padding:0.3rem;">6</td>
+                                    <td style="text-align:right;padding:0.3rem;font-weight:700;">12</td>
+                                </tr>
+                                <tr style="border-bottom:1px solid #F0ECE0;">
+                                    <td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Dwight Stewart</td>
+                                    <td style="text-align:right;padding:0.3rem;">22</td>
+                                    <td style="text-align:right;padding:0.3rem;">5-10</td>
+                                    <td style="text-align:right;padding:0.3rem;">1-2</td>
+                                    <td style="text-align:right;padding:0.3rem;">5</td>
+                                    <td style="text-align:right;padding:0.3rem;">0</td>
+                                    <td style="text-align:right;padding:0.3rem;font-weight:700;">12</td>
+                                </tr>
+                                <tr style="border-bottom:1px solid #F0ECE0;">
+                                    <td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Corey Beck</td>
+                                    <td style="text-align:right;padding:0.3rem;">25</td>
+                                    <td style="text-align:right;padding:0.3rem;">4-6</td>
+                                    <td style="text-align:right;padding:0.3rem;">1-2</td>
+                                    <td style="text-align:right;padding:0.3rem;">3</td>
+                                    <td style="text-align:right;padding:0.3rem;">2</td>
+                                    <td style="text-align:right;padding:0.3rem;font-weight:700;">11</td>
+                                </tr>
+                                <tr style="border-bottom:1px solid #F0ECE0;">
+                                    <td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Lee Wilson</td>
+                                    <td style="text-align:right;padding:0.3rem;">7</td>
+                                    <td style="text-align:right;padding:0.3rem;">3-4</td>
+                                    <td style="text-align:right;padding:0.3rem;">1-2</td>
+                                    <td style="text-align:right;padding:0.3rem;">0</td>
+                                    <td style="text-align:right;padding:0.3rem;">0</td>
+                                    <td style="text-align:right;padding:0.3rem;font-weight:700;">7</td>
+                                </tr>
+                                <tr style="border-bottom:1px solid #F0ECE0;">
+                                    <td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Alex Dillard</td>
+                                    <td style="text-align:right;padding:0.3rem;">15</td>
+                                    <td style="text-align:right;padding:0.3rem;">2-4</td>
+                                    <td style="text-align:right;padding:0.3rem;">0-0</td>
+                                    <td style="text-align:right;padding:0.3rem;">2</td>
+                                    <td style="text-align:right;padding:0.3rem;">1</td>
+                                    <td style="text-align:right;padding:0.3rem;font-weight:700;">6</td>
+                                </tr>
+                                <tr style="border-bottom:1px solid #F0ECE0;">
+                                    <td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Scotty Thurman</td>
+                                    <td style="text-align:right;padding:0.3rem;">32</td>
+                                    <td style="text-align:right;padding:0.3rem;">2-9</td>
+                                    <td style="text-align:right;padding:0.3rem;">0-0</td>
+                                    <td style="text-align:right;padding:0.3rem;">1</td>
+                                    <td style="text-align:right;padding:0.3rem;">1</td>
+                                    <td style="text-align:right;padding:0.3rem;font-weight:700;">5</td>
+                                </tr>
+                                <tr style="border-bottom:1px solid #F0ECE0;">
+                                    <td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Darnell Robinson</td>
+                                    <td style="text-align:right;padding:0.3rem;">10</td>
+                                    <td style="text-align:right;padding:0.3rem;">2-3</td>
+                                    <td style="text-align:right;padding:0.3rem;">0-0</td>
+                                    <td style="text-align:right;padding:0.3rem;">2</td>
+                                    <td style="text-align:right;padding:0.3rem;">0</td>
+                                    <td style="text-align:right;padding:0.3rem;font-weight:700;">4</td>
+                                </tr>
+                                <tr style="border-bottom:1px solid #F0ECE0;">
+                                    <td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Elmer Martin</td>
+                                    <td style="text-align:right;padding:0.3rem;">6</td>
+                                    <td style="text-align:right;padding:0.3rem;">1-2</td>
+                                    <td style="text-align:right;padding:0.3rem;">0-0</td>
+                                    <td style="text-align:right;padding:0.3rem;">3</td>
+                                    <td style="text-align:right;padding:0.3rem;">1</td>
+                                    <td style="text-align:right;padding:0.3rem;font-weight:700;">3</td>
+                                </tr>
+                                <tr style="border-bottom:1px solid #F0ECE0;">
+                                    <td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Davor Rimac</td>
+                                    <td style="text-align:right;padding:0.3rem;">12</td>
+                                    <td style="text-align:right;padding:0.3rem;">1-1</td>
+                                    <td style="text-align:right;padding:0.3rem;">0-0</td>
+                                    <td style="text-align:right;padding:0.3rem;">3</td>
+                                    <td style="text-align:right;padding:0.3rem;">2</td>
+                                    <td style="text-align:right;padding:0.3rem;font-weight:700;">2</td>
+                                </tr>
+                                <tr style="border-bottom:2px solid #E8E2D6;font-weight:700;">
+                                    <td style="text-align:left;padding:0.3rem 0.5rem;">TOTALS</td>
+                                    <td style="text-align:right;padding:0.3rem;">197</td>
+                                    <td style="text-align:right;padding:0.3rem;">28-65</td>
+                                    <td style="text-align:right;padding:0.3rem;">12-20</td>
+                                    <td style="text-align:right;padding:0.3rem;">26</td>
+                                    <td style="text-align:right;padding:0.3rem;">14</td>
+                                    <td style="text-align:right;padding:0.3rem;font-weight:700;">78</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div style="font-size:0.75rem;color:#6B7A8D;margin-top:0.5rem;">Source: Sports Reference</div>
+                    </div>`
+                }
+            },
+            '1996/kentucky-wildcats': {
+                year: 1996,
+                teamName: 'Kentucky Wildcats',
+                espnId: '96',
+                teamSlug: 'kentucky-wildcats',
+                heroTitle: '1996 NATIONAL CHAMPIONS',
+                heroSubtitle: '1st Seed \u2022 Midwest Region \u2022 East Rutherford, NJ',
+                accentColor: '#0033A0',
+                story: 'Rick Pitino\'s "Untouchables" delivered one of the most dominant tournament runs in history, winning their first four games by at least 20 points. Kentucky\'s relentless full-court pressure and three-point shooting overwhelmed every opponent. In the championship game, Tony Delk tied a title-game record with seven three-pointers and scored 24 points as the Wildcats defeated Syracuse 76-67 to claim their sixth national championship.',
+                games: [
+                    { round: 'Round of 64', opponent: 'San Jose State Spartans', oppSeed: 16, oppEspnId: '23', score: '110-72', winScore: 110, loseScore: 72, note: '', isChampionship: false },
+                    { round: 'Round of 32', opponent: 'Virginia Tech Hokies', oppSeed: 9, oppEspnId: '259', score: '84-60', winScore: 84, loseScore: 60, note: '', isChampionship: false },
+                    { round: 'Sweet 16', opponent: 'Utah Utes', oppSeed: 4, oppEspnId: '254', score: '101-70', winScore: 101, loseScore: 70, note: '', isChampionship: false },
+                    { round: 'Elite Eight', opponent: 'Wake Forest Demon Deacons', oppSeed: 2, oppEspnId: '154', score: '83-63', winScore: 83, loseScore: 63, note: '', isChampionship: false },
+                    { round: 'Final Four', opponent: 'Massachusetts Minutemen', oppSeed: 1, oppEspnId: '113', score: '81-74', winScore: 81, loseScore: 74, note: '', isChampionship: false },
+                    { round: 'Championship', opponent: 'Syracuse Orange', oppSeed: 4, oppEspnId: '183', score: '76-67', winScore: 76, loseScore: 67, note: '', isChampionship: true }
+                ],
+                stats: { seed: '1', record: '6-0', avgMargin: '+22.2', closestGame: '81-74 vs Massachusetts' },
+                videoId: 'xqB6MFRB3UU',
+                aftermath: 'Tony Delk was named Final Four Most Outstanding Player. He was drafted 16th overall by the Charlotte Hornets. Ron Mercer went 6th overall in 1997 after staying one more year. Antoine Walker had been drafted 6th overall in 1996. Rick Pitino left Kentucky after the 1996-97 season to coach the Boston Celtics, and later won another championship at Louisville in 2013. The 1996 Wildcats\' average margin of victory in the tournament remains one of the largest in NCAA history.',
+                mop: 'Tony Delk',
+                staticBoxScores: {
+                    5: `<div style="overflow-x:auto;">
+                        <div style="font-weight:700;color:#1B2A4A;margin-bottom:0.5rem;font-size:0.95rem;">Kentucky 76, Syracuse 67 — April 1, 1996</div>
+                        <div style="font-weight:600;color:#1B2A4A;margin:0.75rem 0 0.25rem;font-size:0.85rem;">Kentucky — 28-73 FG (.384), 8-13 FT</div>
+                        <table style="width:100%;border-collapse:collapse;font-size:0.78rem;margin-bottom:1rem;">
+                            <thead><tr style="border-bottom:2px solid #E8E2D6;color:#6B7A8D;text-align:right;">
+                                <th style="text-align:left;padding:0.3rem 0.5rem;">Player</th>
+                                <th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th>
+                                <th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th>
+                                <th style="padding:0.3rem;">AST</th>
+                                <th style="padding:0.3rem;font-weight:700;color:#1B2A4A;">PTS</th>
+                            </tr></thead>
+                            <tbody>
+                                <tr style="border-bottom:1px solid #F0ECE0;">
+                                    <td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Tony Delk</td>
+                                    <td style="text-align:right;padding:0.3rem;">37</td>
+                                    <td style="text-align:right;padding:0.3rem;">8-20</td>
+                                    <td style="text-align:right;padding:0.3rem;">1-2</td>
+                                    <td style="text-align:right;padding:0.3rem;">7</td>
+                                    <td style="text-align:right;padding:0.3rem;">2</td>
+                                    <td style="text-align:right;padding:0.3rem;font-weight:700;">24</td>
+                                </tr>
+                                <tr style="border-bottom:1px solid #F0ECE0;">
+                                    <td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Ron Mercer</td>
+                                    <td style="text-align:right;padding:0.3rem;">24</td>
+                                    <td style="text-align:right;padding:0.3rem;">8-12</td>
+                                    <td style="text-align:right;padding:0.3rem;">1-1</td>
+                                    <td style="text-align:right;padding:0.3rem;">2</td>
+                                    <td style="text-align:right;padding:0.3rem;">2</td>
+                                    <td style="text-align:right;padding:0.3rem;font-weight:700;">20</td>
+                                </tr>
+                                <tr style="border-bottom:1px solid #F0ECE0;">
+                                    <td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Antoine Walker</td>
+                                    <td style="text-align:right;padding:0.3rem;">32</td>
+                                    <td style="text-align:right;padding:0.3rem;">4-12</td>
+                                    <td style="text-align:right;padding:0.3rem;">3-6</td>
+                                    <td style="text-align:right;padding:0.3rem;">9</td>
+                                    <td style="text-align:right;padding:0.3rem;">4</td>
+                                    <td style="text-align:right;padding:0.3rem;font-weight:700;">11</td>
+                                </tr>
+                                <tr style="border-bottom:1px solid #F0ECE0;">
+                                    <td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Derek Anderson</td>
+                                    <td style="text-align:right;padding:0.3rem;">16</td>
+                                    <td style="text-align:right;padding:0.3rem;">4-8</td>
+                                    <td style="text-align:right;padding:0.3rem;">1-1</td>
+                                    <td style="text-align:right;padding:0.3rem;">4</td>
+                                    <td style="text-align:right;padding:0.3rem;">1</td>
+                                    <td style="text-align:right;padding:0.3rem;font-weight:700;">11</td>
+                                </tr>
+                                <tr style="border-bottom:1px solid #F0ECE0;">
+                                    <td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Walter McCarty</td>
+                                    <td style="text-align:right;padding:0.3rem;">19</td>
+                                    <td style="text-align:right;padding:0.3rem;">2-6</td>
+                                    <td style="text-align:right;padding:0.3rem;">0-5</td>
+                                    <td style="text-align:right;padding:0.3rem;">7</td>
+                                    <td style="text-align:right;padding:0.3rem;">0</td>
+                                    <td style="text-align:right;padding:0.3rem;font-weight:700;">4</td>
+                                </tr>
+                                <tr style="border-bottom:1px solid #F0ECE0;">
+                                    <td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Mark Pope</td>
+                                    <td style="text-align:right;padding:0.3rem;">27</td>
+                                    <td style="text-align:right;padding:0.3rem;">1-6</td>
+                                    <td style="text-align:right;padding:0.3rem;">2-2</td>
+                                    <td style="text-align:right;padding:0.3rem;">3</td>
+                                    <td style="text-align:right;padding:0.3rem;">2</td>
+                                    <td style="text-align:right;padding:0.3rem;font-weight:700;">4</td>
+                                </tr>
+                                <tr style="border-bottom:1px solid #F0ECE0;">
+                                    <td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Anthony Epps</td>
+                                    <td style="text-align:right;padding:0.3rem;">35</td>
+                                    <td style="text-align:right;padding:0.3rem;">0-6</td>
+                                    <td style="text-align:right;padding:0.3rem;">0-0</td>
+                                    <td style="text-align:right;padding:0.3rem;">7</td>
+                                    <td style="text-align:right;padding:0.3rem;">0</td>
+                                    <td style="text-align:right;padding:0.3rem;font-weight:700;">0</td>
+                                </tr>
+                                <tr style="border-bottom:1px solid #F0ECE0;">
+                                    <td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Jeff Sheppard</td>
+                                    <td style="text-align:right;padding:0.3rem;">7</td>
+                                    <td style="text-align:right;padding:0.3rem;">1-2</td>
+                                    <td style="text-align:right;padding:0.3rem;">0-1</td>
+                                    <td style="text-align:right;padding:0.3rem;">2</td>
+                                    <td style="text-align:right;padding:0.3rem;">0</td>
+                                    <td style="text-align:right;padding:0.3rem;font-weight:700;">2</td>
+                                </tr>
+                                <tr style="border-bottom:1px solid #F0ECE0;">
+                                    <td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Allen Edwards</td>
+                                    <td style="text-align:right;padding:0.3rem;">3</td>
+                                    <td style="text-align:right;padding:0.3rem;">0-1</td>
+                                    <td style="text-align:right;padding:0.3rem;">0-0</td>
+                                    <td style="text-align:right;padding:0.3rem;">0</td>
+                                    <td style="text-align:right;padding:0.3rem;">0</td>
+                                    <td style="text-align:right;padding:0.3rem;font-weight:700;">0</td>
+                                </tr>
+                                <tr style="border-bottom:2px solid #E8E2D6;font-weight:700;">
+                                    <td style="text-align:left;padding:0.3rem 0.5rem;">TOTALS</td>
+                                    <td style="text-align:right;padding:0.3rem;">200</td>
+                                    <td style="text-align:right;padding:0.3rem;">28-73</td>
+                                    <td style="text-align:right;padding:0.3rem;">8-13</td>
+                                    <td style="text-align:right;padding:0.3rem;">41</td>
+                                    <td style="text-align:right;padding:0.3rem;">11</td>
+                                    <td style="text-align:right;padding:0.3rem;font-weight:700;">76</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div style="font-weight:600;color:#1B2A4A;margin:0.75rem 0 0.25rem;font-size:0.85rem;">Syracuse — 26-52 FG (.500), 9-14 FT</div>
+                        <table style="width:100%;border-collapse:collapse;font-size:0.78rem;margin-bottom:1rem;">
+                            <thead><tr style="border-bottom:2px solid #E8E2D6;color:#6B7A8D;text-align:right;">
+                                <th style="text-align:left;padding:0.3rem 0.5rem;">Player</th>
+                                <th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th>
+                                <th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th>
+                                <th style="padding:0.3rem;">AST</th>
+                                <th style="padding:0.3rem;font-weight:700;color:#1B2A4A;">PTS</th>
+                            </tr></thead>
+                            <tbody>
+                                <tr style="border-bottom:1px solid #F0ECE0;">
+                                    <td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">John Wallace</td>
+                                    <td style="text-align:right;padding:0.3rem;">38</td>
+                                    <td style="text-align:right;padding:0.3rem;">11-19</td>
+                                    <td style="text-align:right;padding:0.3rem;">5-5</td>
+                                    <td style="text-align:right;padding:0.3rem;">10</td>
+                                    <td style="text-align:right;padding:0.3rem;">1</td>
+                                    <td style="text-align:right;padding:0.3rem;font-weight:700;">29</td>
+                                </tr>
+                                <tr style="border-bottom:1px solid #F0ECE0;">
+                                    <td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Todd Burgan</td>
+                                    <td style="text-align:right;padding:0.3rem;">39</td>
+                                    <td style="text-align:right;padding:0.3rem;">7-10</td>
+                                    <td style="text-align:right;padding:0.3rem;">2-5</td>
+                                    <td style="text-align:right;padding:0.3rem;">8</td>
+                                    <td style="text-align:right;padding:0.3rem;">1</td>
+                                    <td style="text-align:right;padding:0.3rem;font-weight:700;">19</td>
+                                </tr>
+                                <tr style="border-bottom:1px solid #F0ECE0;">
+                                    <td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Otis Hill</td>
+                                    <td style="text-align:right;padding:0.3rem;">28</td>
+                                    <td style="text-align:right;padding:0.3rem;">3-9</td>
+                                    <td style="text-align:right;padding:0.3rem;">1-2</td>
+                                    <td style="text-align:right;padding:0.3rem;">10</td>
+                                    <td style="text-align:right;padding:0.3rem;">1</td>
+                                    <td style="text-align:right;padding:0.3rem;font-weight:700;">7</td>
+                                </tr>
+                                <tr style="border-bottom:1px solid #F0ECE0;">
+                                    <td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Lazarus Sims</td>
+                                    <td style="text-align:right;padding:0.3rem;">39</td>
+                                    <td style="text-align:right;padding:0.3rem;">2-5</td>
+                                    <td style="text-align:right;padding:0.3rem;">1-2</td>
+                                    <td style="text-align:right;padding:0.3rem;">2</td>
+                                    <td style="text-align:right;padding:0.3rem;">7</td>
+                                    <td style="text-align:right;padding:0.3rem;font-weight:700;">6</td>
+                                </tr>
+                                <tr style="border-bottom:1px solid #F0ECE0;">
+                                    <td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Jason Cipolla</td>
+                                    <td style="text-align:right;padding:0.3rem;">35</td>
+                                    <td style="text-align:right;padding:0.3rem;">3-8</td>
+                                    <td style="text-align:right;padding:0.3rem;">0-0</td>
+                                    <td style="text-align:right;padding:0.3rem;">2</td>
+                                    <td style="text-align:right;padding:0.3rem;">4</td>
+                                    <td style="text-align:right;padding:0.3rem;font-weight:700;">6</td>
+                                </tr>
+                                <tr style="border-bottom:1px solid #F0ECE0;">
+                                    <td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">J.B. Reafsnyder</td>
+                                    <td style="text-align:right;padding:0.3rem;">13</td>
+                                    <td style="text-align:right;padding:0.3rem;">0-1</td>
+                                    <td style="text-align:right;padding:0.3rem;">0-0</td>
+                                    <td style="text-align:right;padding:0.3rem;">4</td>
+                                    <td style="text-align:right;padding:0.3rem;">0</td>
+                                    <td style="text-align:right;padding:0.3rem;font-weight:700;">0</td>
+                                </tr>
+                                <tr style="border-bottom:1px solid #F0ECE0;">
+                                    <td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Marius Janulis</td>
+                                    <td style="text-align:right;padding:0.3rem;">7</td>
+                                    <td style="text-align:right;padding:0.3rem;">0-0</td>
+                                    <td style="text-align:right;padding:0.3rem;">0-2</td>
+                                    <td style="text-align:right;padding:0.3rem;">0</td>
+                                    <td style="text-align:right;padding:0.3rem;">0</td>
+                                    <td style="text-align:right;padding:0.3rem;font-weight:700;">0</td>
+                                </tr>
+                                <tr style="border-bottom:1px solid #F0ECE0;">
+                                    <td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Elimu Nelson</td>
+                                    <td style="text-align:right;padding:0.3rem;">1</td>
+                                    <td style="text-align:right;padding:0.3rem;">0-0</td>
+                                    <td style="text-align:right;padding:0.3rem;">0-0</td>
+                                    <td style="text-align:right;padding:0.3rem;">0</td>
+                                    <td style="text-align:right;padding:0.3rem;">0</td>
+                                    <td style="text-align:right;padding:0.3rem;font-weight:700;">0</td>
+                                </tr>
+                                <tr style="border-bottom:2px solid #E8E2D6;font-weight:700;">
+                                    <td style="text-align:left;padding:0.3rem 0.5rem;">TOTALS</td>
+                                    <td style="text-align:right;padding:0.3rem;">200</td>
+                                    <td style="text-align:right;padding:0.3rem;">26-52</td>
+                                    <td style="text-align:right;padding:0.3rem;">9-14</td>
+                                    <td style="text-align:right;padding:0.3rem;">36</td>
+                                    <td style="text-align:right;padding:0.3rem;">14</td>
+                                    <td style="text-align:right;padding:0.3rem;font-weight:700;">67</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div style="font-size:0.75rem;color:#6B7A8D;margin-top:0.5rem;">Source: Sports Reference</div>
+                    </div>`
+                }
+            },
+            '1998/kentucky-wildcats': {
+                year: 1998,
+                teamName: 'Kentucky Wildcats',
+                espnId: '96',
+                teamSlug: 'kentucky-wildcats',
+                heroTitle: '1998 NATIONAL CHAMPIONS',
+                heroSubtitle: '2nd Seed \u2022 South Region \u2022 San Antonio, TX',
+                accentColor: '#0033A0',
+                story: 'Tubby Smith became the first coach to win a national championship in his first season at a school, guiding the "Comeback Cats" through one of the most dramatic tournament runs ever. Kentucky trailed by double digits in each of its final three games, including erasing a 17-point deficit against Duke in the Elite Eight and surviving an overtime thriller against Stanford in the Final Four. Jeff Sheppard scored 16 points as Kentucky held off Utah 78-69 in the championship game.',
+                games: [
+                    { round: 'Round of 64', opponent: 'South Carolina State Bulldogs', oppSeed: 15, oppEspnId: '2569', score: '82-67', winScore: 82, loseScore: 67, note: '', isChampionship: false },
+                    { round: 'Round of 32', opponent: 'Saint Louis Billikens', oppSeed: 10, oppEspnId: '139', score: '88-61', winScore: 88, loseScore: 61, note: '', isChampionship: false },
+                    { round: 'Sweet 16', opponent: 'UCLA Bruins', oppSeed: 6, oppEspnId: '26', score: '94-68', winScore: 94, loseScore: 68, note: '', isChampionship: false },
+                    { round: 'Elite Eight', opponent: 'Duke Blue Devils', oppSeed: 1, oppEspnId: '150', score: '86-84', winScore: 86, loseScore: 84, note: '', isChampionship: false },
+                    { round: 'Final Four', opponent: 'Stanford Cardinal', oppSeed: 3, oppEspnId: '24', score: '86-85', winScore: 86, loseScore: 85, note: 'OT', isChampionship: false },
+                    { round: 'Championship', opponent: 'Utah Utes', oppSeed: 3, oppEspnId: '254', score: '78-69', winScore: 78, loseScore: 69, note: '', isChampionship: true }
+                ],
+                stats: { seed: '2', record: '6-0', avgMargin: '+10.7', closestGame: '86-85 vs Stanford (OT)' },
+                videoId: 'jkYvGfiomVs',
+                aftermath: 'Jeff Sheppard was named Final Four Most Outstanding Player. Tubby Smith became the first African American coach to win consecutive SEC titles and the first to win a national championship in his debut season at a school. The "Comeback Cats" moniker became one of the most beloved in Kentucky basketball history. Scott Padgett went on to play seven NBA seasons, and Nazr Mohammed was drafted 29th overall in 1998, playing 18 years in the NBA.',
+                mop: 'Jeff Sheppard',
+                staticBoxScores: {
+                    5: `<div style="overflow-x:auto;">
+                        <div style="font-weight:700;color:#1B2A4A;margin-bottom:0.5rem;font-size:0.95rem;">Kentucky 78, Utah 69 — March 30, 1998</div>
+                        <div style="font-weight:600;color:#1B2A4A;margin:0.75rem 0 0.25rem;font-size:0.85rem;">Kentucky — 29-57 FG (.509), 15-17 FT</div>
+                        <table style="width:100%;border-collapse:collapse;font-size:0.78rem;margin-bottom:1rem;">
+                            <thead><tr style="border-bottom:2px solid #E8E2D6;color:#6B7A8D;text-align:right;">
+                                <th style="text-align:left;padding:0.3rem 0.5rem;">Player</th>
+                                <th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th>
+                                <th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th>
+                                <th style="padding:0.3rem;">AST</th>
+                                <th style="padding:0.3rem;font-weight:700;color:#1B2A4A;">PTS</th>
+                            </tr></thead>
+                            <tbody>
+                                <tr style="border-bottom:1px solid #F0ECE0;">
+                                    <td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Scott Padgett</td>
+                                    <td style="text-align:right;padding:0.3rem;">33</td>
+                                    <td style="text-align:right;padding:0.3rem;">6-11</td>
+                                    <td style="text-align:right;padding:0.3rem;">4-4</td>
+                                    <td style="text-align:right;padding:0.3rem;">5</td>
+                                    <td style="text-align:right;padding:0.3rem;">1</td>
+                                    <td style="text-align:right;padding:0.3rem;font-weight:700;">17</td>
+                                </tr>
+                                <tr style="border-bottom:1px solid #F0ECE0;">
+                                    <td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Jeff Sheppard</td>
+                                    <td style="text-align:right;padding:0.3rem;">34</td>
+                                    <td style="text-align:right;padding:0.3rem;">7-14</td>
+                                    <td style="text-align:right;padding:0.3rem;">2-2</td>
+                                    <td style="text-align:right;padding:0.3rem;">4</td>
+                                    <td style="text-align:right;padding:0.3rem;">3</td>
+                                    <td style="text-align:right;padding:0.3rem;font-weight:700;">16</td>
+                                </tr>
+                                <tr style="border-bottom:1px solid #F0ECE0;">
+                                    <td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Nazr Mohammed</td>
+                                    <td style="text-align:right;padding:0.3rem;">13</td>
+                                    <td style="text-align:right;padding:0.3rem;">5-9</td>
+                                    <td style="text-align:right;padding:0.3rem;">0-0</td>
+                                    <td style="text-align:right;padding:0.3rem;">2</td>
+                                    <td style="text-align:right;padding:0.3rem;">0</td>
+                                    <td style="text-align:right;padding:0.3rem;font-weight:700;">10</td>
+                                </tr>
+                                <tr style="border-bottom:1px solid #F0ECE0;">
+                                    <td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Heshimu Evans</td>
+                                    <td style="text-align:right;padding:0.3rem;">23</td>
+                                    <td style="text-align:right;padding:0.3rem;">3-4</td>
+                                    <td style="text-align:right;padding:0.3rem;">2-2</td>
+                                    <td style="text-align:right;padding:0.3rem;">6</td>
+                                    <td style="text-align:right;padding:0.3rem;">0</td>
+                                    <td style="text-align:right;padding:0.3rem;font-weight:700;">10</td>
+                                </tr>
+                                <tr style="border-bottom:1px solid #F0ECE0;">
+                                    <td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Cameron Mills</td>
+                                    <td style="text-align:right;padding:0.3rem;">12</td>
+                                    <td style="text-align:right;padding:0.3rem;">2-4</td>
+                                    <td style="text-align:right;padding:0.3rem;">2-2</td>
+                                    <td style="text-align:right;padding:0.3rem;">0</td>
+                                    <td style="text-align:right;padding:0.3rem;">1</td>
+                                    <td style="text-align:right;padding:0.3rem;font-weight:700;">8</td>
+                                </tr>
+                                <tr style="border-bottom:1px solid #F0ECE0;">
+                                    <td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Jamaal Magloire</td>
+                                    <td style="text-align:right;padding:0.3rem;">22</td>
+                                    <td style="text-align:right;padding:0.3rem;">2-3</td>
+                                    <td style="text-align:right;padding:0.3rem;">3-3</td>
+                                    <td style="text-align:right;padding:0.3rem;">2</td>
+                                    <td style="text-align:right;padding:0.3rem;">1</td>
+                                    <td style="text-align:right;padding:0.3rem;font-weight:700;">7</td>
+                                </tr>
+                                <tr style="border-bottom:1px solid #F0ECE0;">
+                                    <td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Wayne Turner</td>
+                                    <td style="text-align:right;padding:0.3rem;">27</td>
+                                    <td style="text-align:right;padding:0.3rem;">2-5</td>
+                                    <td style="text-align:right;padding:0.3rem;">2-4</td>
+                                    <td style="text-align:right;padding:0.3rem;">2</td>
+                                    <td style="text-align:right;padding:0.3rem;">4</td>
+                                    <td style="text-align:right;padding:0.3rem;font-weight:700;">6</td>
+                                </tr>
+                                <tr style="border-bottom:1px solid #F0ECE0;">
+                                    <td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Allen Edwards</td>
+                                    <td style="text-align:right;padding:0.3rem;">24</td>
+                                    <td style="text-align:right;padding:0.3rem;">2-7</td>
+                                    <td style="text-align:right;padding:0.3rem;">0-0</td>
+                                    <td style="text-align:right;padding:0.3rem;">5</td>
+                                    <td style="text-align:right;padding:0.3rem;">1</td>
+                                    <td style="text-align:right;padding:0.3rem;font-weight:700;">4</td>
+                                </tr>
+                                <tr style="border-bottom:1px solid #F0ECE0;">
+                                    <td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Saul Smith</td>
+                                    <td style="text-align:right;padding:0.3rem;">7</td>
+                                    <td style="text-align:right;padding:0.3rem;">0-0</td>
+                                    <td style="text-align:right;padding:0.3rem;">0-0</td>
+                                    <td style="text-align:right;padding:0.3rem;">0</td>
+                                    <td style="text-align:right;padding:0.3rem;">0</td>
+                                    <td style="text-align:right;padding:0.3rem;font-weight:700;">0</td>
+                                </tr>
+                                <tr style="border-bottom:1px solid #F0ECE0;">
+                                    <td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Michael Bradley</td>
+                                    <td style="text-align:right;padding:0.3rem;">5</td>
+                                    <td style="text-align:right;padding:0.3rem;">0-0</td>
+                                    <td style="text-align:right;padding:0.3rem;">1-1</td>
+                                    <td style="text-align:right;padding:0.3rem;">0</td>
+                                    <td style="text-align:right;padding:0.3rem;">0</td>
+                                    <td style="text-align:right;padding:0.3rem;font-weight:700;">0</td>
+                                </tr>
+                                <tr style="border-bottom:2px solid #E8E2D6;font-weight:700;">
+                                    <td style="text-align:left;padding:0.3rem 0.5rem;">TOTALS</td>
+                                    <td style="text-align:right;padding:0.3rem;">200</td>
+                                    <td style="text-align:right;padding:0.3rem;">29-57</td>
+                                    <td style="text-align:right;padding:0.3rem;">15-17</td>
+                                    <td style="text-align:right;padding:0.3rem;">26</td>
+                                    <td style="text-align:right;padding:0.3rem;">11</td>
+                                    <td style="text-align:right;padding:0.3rem;font-weight:700;">78</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div style="font-weight:600;color:#1B2A4A;margin:0.75rem 0 0.25rem;font-size:0.85rem;">Utah — 24-55 FG (.436), 17-22 FT</div>
+                        <table style="width:100%;border-collapse:collapse;font-size:0.78rem;margin-bottom:1rem;">
+                            <thead><tr style="border-bottom:2px solid #E8E2D6;color:#6B7A8D;text-align:right;">
+                                <th style="text-align:left;padding:0.3rem 0.5rem;">Player</th>
+                                <th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th>
+                                <th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th>
+                                <th style="padding:0.3rem;">AST</th>
+                                <th style="padding:0.3rem;font-weight:700;color:#1B2A4A;">PTS</th>
+                            </tr></thead>
+                            <tbody>
+                                <tr style="border-bottom:1px solid #F0ECE0;">
+                                    <td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Andre Miller</td>
+                                    <td style="text-align:right;padding:0.3rem;">37</td>
+                                    <td style="text-align:right;padding:0.3rem;">6-15</td>
+                                    <td style="text-align:right;padding:0.3rem;">4-7</td>
+                                    <td style="text-align:right;padding:0.3rem;">6</td>
+                                    <td style="text-align:right;padding:0.3rem;">5</td>
+                                    <td style="text-align:right;padding:0.3rem;font-weight:700;">16</td>
+                                </tr>
+                                <tr style="border-bottom:1px solid #F0ECE0;">
+                                    <td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Michael Doleac</td>
+                                    <td style="text-align:right;padding:0.3rem;">34</td>
+                                    <td style="text-align:right;padding:0.3rem;">5-12</td>
+                                    <td style="text-align:right;padding:0.3rem;">4-6</td>
+                                    <td style="text-align:right;padding:0.3rem;">10</td>
+                                    <td style="text-align:right;padding:0.3rem;">1</td>
+                                    <td style="text-align:right;padding:0.3rem;font-weight:700;">15</td>
+                                </tr>
+                                <tr style="border-bottom:1px solid #F0ECE0;">
+                                    <td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Hanno Mottola</td>
+                                    <td style="text-align:right;padding:0.3rem;">28</td>
+                                    <td style="text-align:right;padding:0.3rem;">4-10</td>
+                                    <td style="text-align:right;padding:0.3rem;">6-6</td>
+                                    <td style="text-align:right;padding:0.3rem;">8</td>
+                                    <td style="text-align:right;padding:0.3rem;">0</td>
+                                    <td style="text-align:right;padding:0.3rem;font-weight:700;">15</td>
+                                </tr>
+                                <tr style="border-bottom:1px solid #F0ECE0;">
+                                    <td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Alex Jensen</td>
+                                    <td style="text-align:right;padding:0.3rem;">35</td>
+                                    <td style="text-align:right;padding:0.3rem;">5-6</td>
+                                    <td style="text-align:right;padding:0.3rem;">3-3</td>
+                                    <td style="text-align:right;padding:0.3rem;">2</td>
+                                    <td style="text-align:right;padding:0.3rem;">2</td>
+                                    <td style="text-align:right;padding:0.3rem;font-weight:700;">14</td>
+                                </tr>
+                                <tr style="border-bottom:1px solid #F0ECE0;">
+                                    <td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Britton Johnsen</td>
+                                    <td style="text-align:right;padding:0.3rem;">16</td>
+                                    <td style="text-align:right;padding:0.3rem;">3-4</td>
+                                    <td style="text-align:right;padding:0.3rem;">0-0</td>
+                                    <td style="text-align:right;padding:0.3rem;">4</td>
+                                    <td style="text-align:right;padding:0.3rem;">0</td>
+                                    <td style="text-align:right;padding:0.3rem;font-weight:700;">7</td>
+                                </tr>
+                                <tr style="border-bottom:1px solid #F0ECE0;">
+                                    <td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Drew Hansen</td>
+                                    <td style="text-align:right;padding:0.3rem;">32</td>
+                                    <td style="text-align:right;padding:0.3rem;">1-6</td>
+                                    <td style="text-align:right;padding:0.3rem;">0-0</td>
+                                    <td style="text-align:right;padding:0.3rem;">5</td>
+                                    <td style="text-align:right;padding:0.3rem;">3</td>
+                                    <td style="text-align:right;padding:0.3rem;font-weight:700;">2</td>
+                                </tr>
+                                <tr style="border-bottom:1px solid #F0ECE0;">
+                                    <td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">David Jackson</td>
+                                    <td style="text-align:right;padding:0.3rem;">10</td>
+                                    <td style="text-align:right;padding:0.3rem;">0-1</td>
+                                    <td style="text-align:right;padding:0.3rem;">0-0</td>
+                                    <td style="text-align:right;padding:0.3rem;">1</td>
+                                    <td style="text-align:right;padding:0.3rem;">0</td>
+                                    <td style="text-align:right;padding:0.3rem;font-weight:700;">0</td>
+                                </tr>
+                                <tr style="border-bottom:1px solid #F0ECE0;">
+                                    <td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Trace Caton</td>
+                                    <td style="text-align:right;padding:0.3rem;">5</td>
+                                    <td style="text-align:right;padding:0.3rem;">0-1</td>
+                                    <td style="text-align:right;padding:0.3rem;">0-0</td>
+                                    <td style="text-align:right;padding:0.3rem;">0</td>
+                                    <td style="text-align:right;padding:0.3rem;">0</td>
+                                    <td style="text-align:right;padding:0.3rem;font-weight:700;">0</td>
+                                </tr>
+                                <tr style="border-bottom:1px solid #F0ECE0;">
+                                    <td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Jordie McTavish</td>
+                                    <td style="text-align:right;padding:0.3rem;">3</td>
+                                    <td style="text-align:right;padding:0.3rem;">0-0</td>
+                                    <td style="text-align:right;padding:0.3rem;">0-0</td>
+                                    <td style="text-align:right;padding:0.3rem;">2</td>
+                                    <td style="text-align:right;padding:0.3rem;">0</td>
+                                    <td style="text-align:right;padding:0.3rem;font-weight:700;">0</td>
+                                </tr>
+                                <tr style="border-bottom:2px solid #E8E2D6;font-weight:700;">
+                                    <td style="text-align:left;padding:0.3rem 0.5rem;">TOTALS</td>
+                                    <td style="text-align:right;padding:0.3rem;">200</td>
+                                    <td style="text-align:right;padding:0.3rem;">24-55</td>
+                                    <td style="text-align:right;padding:0.3rem;">17-22</td>
+                                    <td style="text-align:right;padding:0.3rem;">38</td>
+                                    <td style="text-align:right;padding:0.3rem;">11</td>
+                                    <td style="text-align:right;padding:0.3rem;font-weight:700;">69</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div style="font-size:0.75rem;color:#6B7A8D;margin-top:0.5rem;">Source: Sports Reference</div>
+                    </div>`
+                }
+            },
+            '1999/uconn-huskies': {
+                year: 1999,
+                teamName: 'UConn Huskies',
+                espnId: '41',
+                teamSlug: 'uconn-huskies',
+                heroTitle: '1999 NATIONAL CHAMPIONS',
+                heroSubtitle: '1st Seed \u2022 West Region \u2022 St. Petersburg, FL',
+                accentColor: '#0E1A3A',
+                story: 'Jim Calhoun\'s Huskies captured their first national championship by shocking top-seeded Duke 77-74 in the title game at Tropicana Field in St. Petersburg. Richard "Rip" Hamilton was magnificent throughout the tournament, scoring 27 points in the final to earn Most Outstanding Player honors. UConn snapped Duke\'s 32-game winning streak and denied the Blue Devils a chance at back-to-back titles, pulling off what was considered the biggest upset in championship game history at the time.',
+                games: [
+                    { round: 'Round of 64', opponent: 'UTSA Roadrunners', oppSeed: 16, oppEspnId: '2636', score: '91-66', winScore: 91, loseScore: 66, note: '', isChampionship: false },
+                    { round: 'Round of 32', opponent: 'New Mexico Lobos', oppSeed: 9, oppEspnId: '167', score: '78-56', winScore: 78, loseScore: 56, note: '', isChampionship: false },
+                    { round: 'Sweet 16', opponent: 'Iowa Hawkeyes', oppSeed: 5, oppEspnId: '2294', score: '78-68', winScore: 78, loseScore: 68, note: '', isChampionship: false },
+                    { round: 'Elite Eight', opponent: 'Gonzaga Bulldogs', oppSeed: 10, oppEspnId: '2250', score: '67-62', winScore: 67, loseScore: 62, note: '', isChampionship: false },
+                    { round: 'Final Four', opponent: 'Ohio State Buckeyes', oppSeed: 4, oppEspnId: '194', score: '64-58', winScore: 64, loseScore: 58, note: '', isChampionship: false },
+                    { round: 'Championship', opponent: 'Duke Blue Devils', oppSeed: 1, oppEspnId: '150', score: '77-74', winScore: 77, loseScore: 74, note: '', isChampionship: true }
+                ],
+                stats: { seed: '1', record: '6-0', avgMargin: '+11.3', closestGame: '67-62 vs Gonzaga' },
+                videoId: 'MpjmP3Es3ek',
+                aftermath: 'Richard Hamilton was named Final Four Most Outstanding Player. He was drafted 7th overall by the Washington Wizards in the 1999 NBA Draft and went on to become a three-time All-Star and NBA champion with the Detroit Pistons in 2004. Khalid El-Amin, the sophomore point guard, transferred after the season. Jim Calhoun cemented UConn as a national power, going on to win two more championships in 2004 and 2011.',
+                mop: 'Richard Hamilton',
+                staticBoxScores: {
+                    5: `<div style="overflow-x:auto;">
+                        <div style="font-weight:700;color:#1B2A4A;margin-bottom:0.5rem;font-size:0.95rem;">UConn 77, Duke 74 — March 29, 1999</div>
+                        <div style="font-weight:600;color:#1B2A4A;margin:0.75rem 0 0.25rem;font-size:0.85rem;">UConn — 32-61 FG (.525), 10-18 FT</div>
+                        <table style="width:100%;border-collapse:collapse;font-size:0.78rem;margin-bottom:1rem;">
+                            <thead><tr style="border-bottom:2px solid #E8E2D6;color:#6B7A8D;text-align:right;">
+                                <th style="text-align:left;padding:0.3rem 0.5rem;">Player</th>
+                                <th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th>
+                                <th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th>
+                                <th style="padding:0.3rem;">AST</th>
+                                <th style="padding:0.3rem;font-weight:700;color:#1B2A4A;">PTS</th>
+                            </tr></thead>
+                            <tbody>
+                                <tr style="border-bottom:1px solid #F0ECE0;">
+                                    <td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Richard Hamilton</td>
+                                    <td style="text-align:right;padding:0.3rem;">38</td>
+                                    <td style="text-align:right;padding:0.3rem;">10-22</td>
+                                    <td style="text-align:right;padding:0.3rem;">5-6</td>
+                                    <td style="text-align:right;padding:0.3rem;">7</td>
+                                    <td style="text-align:right;padding:0.3rem;">3</td>
+                                    <td style="text-align:right;padding:0.3rem;font-weight:700;">27</td>
+                                </tr>
+                                <tr style="border-bottom:1px solid #F0ECE0;">
+                                    <td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Ricky Moore</td>
+                                    <td style="text-align:right;padding:0.3rem;">37</td>
+                                    <td style="text-align:right;padding:0.3rem;">6-10</td>
+                                    <td style="text-align:right;padding:0.3rem;">0-1</td>
+                                    <td style="text-align:right;padding:0.3rem;">8</td>
+                                    <td style="text-align:right;padding:0.3rem;">2</td>
+                                    <td style="text-align:right;padding:0.3rem;font-weight:700;">13</td>
+                                </tr>
+                                <tr style="border-bottom:1px solid #F0ECE0;">
+                                    <td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Khalid El-Amin</td>
+                                    <td style="text-align:right;padding:0.3rem;">22</td>
+                                    <td style="text-align:right;padding:0.3rem;">5-12</td>
+                                    <td style="text-align:right;padding:0.3rem;">2-4</td>
+                                    <td style="text-align:right;padding:0.3rem;">4</td>
+                                    <td style="text-align:right;padding:0.3rem;">4</td>
+                                    <td style="text-align:right;padding:0.3rem;font-weight:700;">12</td>
+                                </tr>
+                                <tr style="border-bottom:1px solid #F0ECE0;">
+                                    <td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Kevin Freeman</td>
+                                    <td style="text-align:right;padding:0.3rem;">32</td>
+                                    <td style="text-align:right;padding:0.3rem;">3-6</td>
+                                    <td style="text-align:right;padding:0.3rem;">0-5</td>
+                                    <td style="text-align:right;padding:0.3rem;">3</td>
+                                    <td style="text-align:right;padding:0.3rem;">3</td>
+                                    <td style="text-align:right;padding:0.3rem;font-weight:700;">6</td>
+                                </tr>
+                                <tr style="border-bottom:1px solid #F0ECE0;">
+                                    <td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Albert Mouring</td>
+                                    <td style="text-align:right;padding:0.3rem;">17</td>
+                                    <td style="text-align:right;padding:0.3rem;">3-4</td>
+                                    <td style="text-align:right;padding:0.3rem;">0-1</td>
+                                    <td style="text-align:right;padding:0.3rem;">3</td>
+                                    <td style="text-align:right;padding:0.3rem;">0</td>
+                                    <td style="text-align:right;padding:0.3rem;font-weight:700;">6</td>
+                                </tr>
+                                <tr style="border-bottom:1px solid #F0ECE0;">
+                                    <td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Edmund Saunders</td>
+                                    <td style="text-align:right;padding:0.3rem;">11</td>
+                                    <td style="text-align:right;padding:0.3rem;">1-3</td>
+                                    <td style="text-align:right;padding:0.3rem;">2-4</td>
+                                    <td style="text-align:right;padding:0.3rem;">3</td>
+                                    <td style="text-align:right;padding:0.3rem;">0</td>
+                                    <td style="text-align:right;padding:0.3rem;font-weight:700;">4</td>
+                                </tr>
+                                <tr style="border-bottom:1px solid #F0ECE0;">
+                                    <td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Souleymane Wane</td>
+                                    <td style="text-align:right;padding:0.3rem;">8</td>
+                                    <td style="text-align:right;padding:0.3rem;">2-2</td>
+                                    <td style="text-align:right;padding:0.3rem;">0-0</td>
+                                    <td style="text-align:right;padding:0.3rem;">0</td>
+                                    <td style="text-align:right;padding:0.3rem;">1</td>
+                                    <td style="text-align:right;padding:0.3rem;font-weight:700;">4</td>
+                                </tr>
+                                <tr style="border-bottom:1px solid #F0ECE0;">
+                                    <td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Rashamel Jones</td>
+                                    <td style="text-align:right;padding:0.3rem;">6</td>
+                                    <td style="text-align:right;padding:0.3rem;">1-1</td>
+                                    <td style="text-align:right;padding:0.3rem;">1-2</td>
+                                    <td style="text-align:right;padding:0.3rem;">2</td>
+                                    <td style="text-align:right;padding:0.3rem;">0</td>
+                                    <td style="text-align:right;padding:0.3rem;font-weight:700;">3</td>
+                                </tr>
+                                <tr style="border-bottom:1px solid #F0ECE0;">
+                                    <td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Jake Voskuhl</td>
+                                    <td style="text-align:right;padding:0.3rem;">28</td>
+                                    <td style="text-align:right;padding:0.3rem;">1-1</td>
+                                    <td style="text-align:right;padding:0.3rem;">0-0</td>
+                                    <td style="text-align:right;padding:0.3rem;">3</td>
+                                    <td style="text-align:right;padding:0.3rem;">2</td>
+                                    <td style="text-align:right;padding:0.3rem;font-weight:700;">2</td>
+                                </tr>
+                                <tr style="border-bottom:2px solid #E8E2D6;font-weight:700;">
+                                    <td style="text-align:left;padding:0.3rem 0.5rem;">TOTALS</td>
+                                    <td style="text-align:right;padding:0.3rem;">199</td>
+                                    <td style="text-align:right;padding:0.3rem;">32-61</td>
+                                    <td style="text-align:right;padding:0.3rem;">10-18</td>
+                                    <td style="text-align:right;padding:0.3rem;">33</td>
+                                    <td style="text-align:right;padding:0.3rem;">15</td>
+                                    <td style="text-align:right;padding:0.3rem;font-weight:700;">77</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div style="font-weight:600;color:#1B2A4A;margin:0.75rem 0 0.25rem;font-size:0.85rem;">Duke — 23-56 FG (.411), 21-27 FT</div>
+                        <table style="width:100%;border-collapse:collapse;font-size:0.78rem;margin-bottom:1rem;">
+                            <thead><tr style="border-bottom:2px solid #E8E2D6;color:#6B7A8D;text-align:right;">
+                                <th style="text-align:left;padding:0.3rem 0.5rem;">Player</th>
+                                <th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th>
+                                <th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th>
+                                <th style="padding:0.3rem;">AST</th>
+                                <th style="padding:0.3rem;font-weight:700;color:#1B2A4A;">PTS</th>
+                            </tr></thead>
+                            <tbody>
+                                <tr style="border-bottom:1px solid #F0ECE0;">
+                                    <td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Trajan Langdon</td>
+                                    <td style="text-align:right;padding:0.3rem;">38</td>
+                                    <td style="text-align:right;padding:0.3rem;">7-15</td>
+                                    <td style="text-align:right;padding:0.3rem;">6-7</td>
+                                    <td style="text-align:right;padding:0.3rem;">1</td>
+                                    <td style="text-align:right;padding:0.3rem;">1</td>
+                                    <td style="text-align:right;padding:0.3rem;font-weight:700;">25</td>
+                                </tr>
+                                <tr style="border-bottom:1px solid #F0ECE0;">
+                                    <td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Elton Brand</td>
+                                    <td style="text-align:right;padding:0.3rem;">38</td>
+                                    <td style="text-align:right;padding:0.3rem;">5-8</td>
+                                    <td style="text-align:right;padding:0.3rem;">5-8</td>
+                                    <td style="text-align:right;padding:0.3rem;">13</td>
+                                    <td style="text-align:right;padding:0.3rem;">0</td>
+                                    <td style="text-align:right;padding:0.3rem;font-weight:700;">15</td>
+                                </tr>
+                                <tr style="border-bottom:1px solid #F0ECE0;">
+                                    <td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">William Avery</td>
+                                    <td style="text-align:right;padding:0.3rem;">36</td>
+                                    <td style="text-align:right;padding:0.3rem;">3-12</td>
+                                    <td style="text-align:right;padding:0.3rem;">4-4</td>
+                                    <td style="text-align:right;padding:0.3rem;">4</td>
+                                    <td style="text-align:right;padding:0.3rem;">5</td>
+                                    <td style="text-align:right;padding:0.3rem;font-weight:700;">11</td>
+                                </tr>
+                                <tr style="border-bottom:1px solid #F0ECE0;">
+                                    <td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Chris Carrawell</td>
+                                    <td style="text-align:right;padding:0.3rem;">31</td>
+                                    <td style="text-align:right;padding:0.3rem;">3-7</td>
+                                    <td style="text-align:right;padding:0.3rem;">3-4</td>
+                                    <td style="text-align:right;padding:0.3rem;">4</td>
+                                    <td style="text-align:right;padding:0.3rem;">2</td>
+                                    <td style="text-align:right;padding:0.3rem;font-weight:700;">9</td>
+                                </tr>
+                                <tr style="border-bottom:1px solid #F0ECE0;">
+                                    <td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Corey Maggette</td>
+                                    <td style="text-align:right;padding:0.3rem;">11</td>
+                                    <td style="text-align:right;padding:0.3rem;">3-7</td>
+                                    <td style="text-align:right;padding:0.3rem;">2-2</td>
+                                    <td style="text-align:right;padding:0.3rem;">0</td>
+                                    <td style="text-align:right;padding:0.3rem;">0</td>
+                                    <td style="text-align:right;padding:0.3rem;font-weight:700;">8</td>
+                                </tr>
+                                <tr style="border-bottom:1px solid #F0ECE0;">
+                                    <td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Shane Battier</td>
+                                    <td style="text-align:right;padding:0.3rem;">33</td>
+                                    <td style="text-align:right;padding:0.3rem;">2-7</td>
+                                    <td style="text-align:right;padding:0.3rem;">1-2</td>
+                                    <td style="text-align:right;padding:0.3rem;">4</td>
+                                    <td style="text-align:right;padding:0.3rem;">2</td>
+                                    <td style="text-align:right;padding:0.3rem;font-weight:700;">6</td>
+                                </tr>
+                                <tr style="border-bottom:1px solid #F0ECE0;">
+                                    <td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Chris Burgess</td>
+                                    <td style="text-align:right;padding:0.3rem;">7</td>
+                                    <td style="text-align:right;padding:0.3rem;">0-0</td>
+                                    <td style="text-align:right;padding:0.3rem;">0-0</td>
+                                    <td style="text-align:right;padding:0.3rem;">0</td>
+                                    <td style="text-align:right;padding:0.3rem;">1</td>
+                                    <td style="text-align:right;padding:0.3rem;font-weight:700;">0</td>
+                                </tr>
+                                <tr style="border-bottom:1px solid #F0ECE0;">
+                                    <td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Nate James</td>
+                                    <td style="text-align:right;padding:0.3rem;">6</td>
+                                    <td style="text-align:right;padding:0.3rem;">0-0</td>
+                                    <td style="text-align:right;padding:0.3rem;">1-1</td>
+                                    <td style="text-align:right;padding:0.3rem;">0</td>
+                                    <td style="text-align:right;padding:0.3rem;">0</td>
+                                    <td style="text-align:right;padding:0.3rem;font-weight:700;">0</td>
+                                </tr>
+                                <tr style="border-bottom:2px solid #E8E2D6;font-weight:700;">
+                                    <td style="text-align:left;padding:0.3rem 0.5rem;">TOTALS</td>
+                                    <td style="text-align:right;padding:0.3rem;">200</td>
+                                    <td style="text-align:right;padding:0.3rem;">23-56</td>
+                                    <td style="text-align:right;padding:0.3rem;">21-27</td>
+                                    <td style="text-align:right;padding:0.3rem;">26</td>
+                                    <td style="text-align:right;padding:0.3rem;">11</td>
+                                    <td style="text-align:right;padding:0.3rem;font-weight:700;">74</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div style="font-size:0.75rem;color:#6B7A8D;margin-top:0.5rem;">Source: Sports Reference</div>
+                    </div>`
+                }
+            },
+            '2004/uconn-huskies': {
+                year: 2004,
+                teamName: 'UConn Huskies',
+                espnId: '41',
+                teamSlug: 'uconn-huskies',
+                heroTitle: '2004 NATIONAL CHAMPIONS',
+                heroSubtitle: '2nd Seed \u2022 Phoenix Region \u2022 San Antonio, TX',
+                accentColor: '#0E1A3A',
+                story: 'Emeka Okafor and Ben Gordon powered Jim Calhoun\'s second national championship in a tournament run defined by dominance and one unforgettable comeback. UConn cruised through the Phoenix Regional before facing top-seeded Duke in the Final Four. Trailing 75-67 with under three minutes left, Okafor scored all 18 of his second-half points during a stunning 12-0 run that gave UConn a 79-78 victory. In the championship game, Okafor posted 24 points and 15 rebounds as the Huskies defeated Georgia Tech 82-73.',
+                games: [
+                    { round: 'Round of 64', opponent: 'Vermont Catamounts', oppSeed: 15, oppEspnId: '261', score: '70-53', winScore: 70, loseScore: 53, note: '', isChampionship: false },
+                    { round: 'Round of 32', opponent: 'DePaul Blue Demons', oppSeed: 7, oppEspnId: '305', score: '72-55', winScore: 72, loseScore: 55, note: '', isChampionship: false },
+                    { round: 'Sweet 16', opponent: 'Vanderbilt Commodores', oppSeed: 6, oppEspnId: '238', score: '73-53', winScore: 73, loseScore: 53, note: '', isChampionship: false },
+                    { round: 'Elite Eight', opponent: 'Alabama Crimson Tide', oppSeed: 8, oppEspnId: '333', score: '87-71', winScore: 87, loseScore: 71, note: '', isChampionship: false },
+                    { round: 'Final Four', opponent: 'Duke Blue Devils', oppSeed: 1, oppEspnId: '150', score: '79-78', winScore: 79, loseScore: 78, note: '', isChampionship: false },
+                    { round: 'Championship', opponent: 'Georgia Tech Yellow Jackets', oppSeed: 3, oppEspnId: '59', score: '82-73', winScore: 82, loseScore: 73, note: '', isChampionship: true }
+                ],
+                stats: { seed: '2', record: '6-0', avgMargin: '+13.3', closestGame: '79-78 vs Duke' },
+                videoId: 'wBXdQ1Ksdg0',
+                aftermath: 'Emeka Okafor was named Final Four Most Outstanding Player. He was drafted 2nd overall by the Charlotte Bobcats and won NBA Rookie of the Year. Ben Gordon was drafted 3rd overall by the Chicago Bulls and won Sixth Man of the Year as a rookie. UConn became the first school to win both the men\'s and women\'s NCAA basketball championships in the same year, as Diana Taurasi led the women\'s team to their third straight title.',
+                mop: 'Emeka Okafor'
+            },
+            '2005/north-carolina-tar-heels': {
+                year: 2005,
+                teamName: 'North Carolina Tar Heels',
+                espnId: '153',
+                teamSlug: 'north-carolina-tar-heels',
+                heroTitle: '2005 NATIONAL CHAMPIONS',
+                heroSubtitle: '1st Seed \u2022 Syracuse Region \u2022 St. Louis, MO',
+                accentColor: '#7BAFD4',
+                story: 'Roy Williams finally captured his first national championship after years of heartbreak at Kansas, leading a supremely talented North Carolina squad to the title. Sean May was unstoppable in the championship game, scoring 26 points and grabbing 10 rebounds on his 21st birthday as the Tar Heels defeated top-seeded Illinois 75-70. The title run nearly ended in the Sweet 16, where Villanova pushed UNC to the brink before falling 67-66.',
+                games: [
+                    { round: 'Round of 64', opponent: 'Oakland Golden Grizzlies', oppSeed: 16, oppEspnId: '2473', score: '96-68', winScore: 96, loseScore: 68, note: '', isChampionship: false },
+                    { round: 'Round of 32', opponent: 'Iowa State Cyclones', oppSeed: 9, oppEspnId: '66', score: '92-65', winScore: 92, loseScore: 65, note: '', isChampionship: false },
+                    { round: 'Sweet 16', opponent: 'Villanova Wildcats', oppSeed: 5, oppEspnId: '222', score: '67-66', winScore: 67, loseScore: 66, note: '', isChampionship: false },
+                    { round: 'Elite Eight', opponent: 'Wisconsin Badgers', oppSeed: 6, oppEspnId: '275', score: '88-82', winScore: 88, loseScore: 82, note: '', isChampionship: false },
+                    { round: 'Final Four', opponent: 'Michigan State Spartans', oppSeed: 5, oppEspnId: '127', score: '87-71', winScore: 87, loseScore: 71, note: '', isChampionship: false },
+                    { round: 'Championship', opponent: 'Illinois Fighting Illini', oppSeed: 1, oppEspnId: '356', score: '75-70', winScore: 75, loseScore: 70, note: '', isChampionship: true }
+                ],
+                stats: { seed: '1', record: '6-0', avgMargin: '+11.2', closestGame: '67-66 vs Villanova' },
+                videoId: 'nFSavDf3KKo',
+                aftermath: 'Sean May was named Final Four Most Outstanding Player, scoring 26 points on his birthday in the title game. He was drafted 13th overall by the Charlotte Bobcats. Raymond Felton went 5th overall and Rashad McCants 14th in the 2005 NBA Draft. Marvin Williams, who came off the bench, was drafted 2nd overall by the Atlanta Hawks. Roy Williams went on to win two more championships at North Carolina in 2009 and 2017 before retiring in 2021.',
+                mop: 'Sean May'
+            },
+            '2009/north-carolina-tar-heels': {
+                year: 2009,
+                teamName: 'North Carolina Tar Heels',
+                espnId: '153',
+                teamSlug: 'north-carolina-tar-heels',
+                heroTitle: '2009 NATIONAL CHAMPIONS',
+                heroSubtitle: '1st Seed \u2022 South Region \u2022 Detroit, MI',
+                accentColor: '#7BAFD4',
+                story: 'Roy Williams\' 2009 Tar Heels delivered one of the most dominant wire-to-wire championship runs in tournament history, winning all six games by at least 12 points. Tyler Hansbrough, the all-time leading scorer in UNC history, anchored a roster loaded with NBA talent including Ty Lawson, Wayne Ellington, and Danny Green. The Tar Heels dismantled Michigan State 89-72 in the championship game at Ford Field in Detroit, capping a season in which they were ranked No. 1 for 15 weeks.',
+                games: [
+                    { round: 'Round of 64', opponent: 'Radford Highlanders', oppSeed: 16, oppEspnId: '2515', score: '101-58', winScore: 101, loseScore: 58, note: '', isChampionship: false },
+                    { round: 'Round of 32', opponent: 'LSU Tigers', oppSeed: 8, oppEspnId: '99', score: '84-70', winScore: 84, loseScore: 70, note: '', isChampionship: false },
+                    { round: 'Sweet 16', opponent: 'Gonzaga Bulldogs', oppSeed: 4, oppEspnId: '2250', score: '98-77', winScore: 98, loseScore: 77, note: '', isChampionship: false },
+                    { round: 'Elite Eight', opponent: 'Oklahoma Sooners', oppSeed: 2, oppEspnId: '201', score: '72-60', winScore: 72, loseScore: 60, note: '', isChampionship: false },
+                    { round: 'Final Four', opponent: 'Villanova Wildcats', oppSeed: 3, oppEspnId: '222', score: '83-69', winScore: 83, loseScore: 69, note: '', isChampionship: false },
+                    { round: 'Championship', opponent: 'Michigan State Spartans', oppSeed: 2, oppEspnId: '127', score: '89-72', winScore: 89, loseScore: 72, note: '', isChampionship: true }
+                ],
+                stats: { seed: '1', record: '6-0', avgMargin: '+20.2', closestGame: '72-60 vs Oklahoma' },
+                videoId: '9qJq3oh-NhY',
+                aftermath: 'Wayne Ellington was named Final Four Most Outstanding Player after averaging 19.2 points and shooting 53% from three in the tournament. Tyler Hansbrough was drafted 13th overall by the Indiana Pacers. Ty Lawson went 18th to the Denver Nuggets, Wayne Ellington 28th to the Timberwolves, and Danny Green went 46th to the Cavaliers before becoming a three-time NBA champion. It was Roy Williams\' second title at North Carolina and UNC\'s fifth overall.',
+                mop: 'Wayne Ellington'
             }
         };
 
@@ -13782,7 +15209,17 @@
             '1993': { slug: 'north-carolina-tar-heels', espnId: '153' },
             '2010': { slug: 'duke-blue-devils', espnId: '150' },
             '2013': { slug: 'louisville-cardinals', espnId: '97' },
-            '2015': { slug: 'duke-blue-devils', espnId: '150' }
+            '2015': { slug: 'duke-blue-devils', espnId: '150' },
+            '2006': { slug: 'florida-gators', espnId: '57' },
+            '2007': { slug: 'florida-gators', espnId: '57' },
+            '1994': { slug: 'arkansas-razorbacks', espnId: '8' },
+            '1995': { slug: 'ucla-bruins', espnId: '26' },
+            '1996': { slug: 'kentucky-wildcats', espnId: '96' },
+            '1998': { slug: 'kentucky-wildcats', espnId: '96' },
+            '1999': { slug: 'uconn-huskies', espnId: '41' },
+            '2004': { slug: 'uconn-huskies', espnId: '41' },
+            '2005': { slug: 'north-carolina-tar-heels', espnId: '153' },
+            '2009': { slug: 'north-carolina-tar-heels', espnId: '153' }
         };
 
         // H2H box score cache and schedule cache
