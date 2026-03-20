@@ -5012,14 +5012,11 @@
             // Remove this block after tournament Day 1
             const vcuOverride = {
                 team: 'VCU', color: '#000000', espnId: '2670',
-                time: Date.now(), seedDiff: 5,
+                time: Date.now(), seedDiff: 99,
                 message: '11-seed VCU stuns 6-seed North Carolina in OT!',
                 gameLink: '#compare/vcu-rams/north-carolina-tar-heels'
             };
-            const curTakeover = localStorage.getItem('upsetTakeover');
-            if (!curTakeover || !curTakeover.includes('"team":"VCU"')) {
-                localStorage.setItem('upsetTakeover', JSON.stringify(vcuOverride));
-            }
+            localStorage.setItem('upsetTakeover', JSON.stringify(vcuOverride));
 
             // Check localStorage for existing active takeover on page load / refresh
             const stored = localStorage.getItem('upsetTakeover');
