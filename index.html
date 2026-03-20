@@ -12896,7 +12896,9 @@
             const winnerTeam = findTeamForUpset(upset.winnerName);
             const loserTeam = findTeamForUpset(upset.loserName);
             const winnerLogo = winnerTeam ? `https://a.espncdn.com/i/teamlogos/ncaa/500/${winnerTeam.espnId}.png` : '';
+            const winnerLogoDark = winnerTeam ? `https://a.espncdn.com/i/teamlogos/ncaa/500-dark/${winnerTeam.espnId}.png` : '';
             const loserLogo = loserTeam ? `https://a.espncdn.com/i/teamlogos/ncaa/500/${loserTeam.espnId}.png` : '';
+            const loserLogoDark = loserTeam ? `https://a.espncdn.com/i/teamlogos/ncaa/500-dark/${loserTeam.espnId}.png` : '';
             const winnerFullSlug = winnerTeam ? teamSlug(winnerTeam.name) : winnerSlug;
             const loserFullSlug = loserTeam ? teamSlug(loserTeam.name) : loserSlug;
 
@@ -12933,7 +12935,7 @@
 
                     <div class="game-detail-matchup">
                         <div class="game-detail-team" onclick="event.stopPropagation(); ${winnerTeam ? `window.location.hash='#team/${winnerFullSlug}'` : ''}">
-                            ${winnerLogo ? `<img class="game-detail-team-logo" src="${winnerLogo}" alt="${upset.winnerName}" onerror="this.style.display='none'">` : '<div style="width:90px;height:90px;"></div>'}
+                            ${winnerLogoDark ? `<img class="game-detail-team-logo" src="${winnerLogoDark}" alt="${upset.winnerName}" onerror="this.src='${winnerLogo}'">` : '<div style="width:90px;height:90px;"></div>'}
                             <span class="game-detail-team-seed winner">${upset.winnerSeed}</span>
                             <div class="game-detail-team-name">${upset.winnerName}</div>
                         </div>
@@ -12948,7 +12950,7 @@
                         </div>
 
                         <div class="game-detail-team" onclick="event.stopPropagation(); ${loserTeam ? `window.location.hash='#team/${loserFullSlug}'` : ''}">
-                            ${loserLogo ? `<img class="game-detail-team-logo" src="${loserLogo}" alt="${upset.loserName}" onerror="this.style.display='none'">` : '<div style="width:90px;height:90px;"></div>'}
+                            ${loserLogoDark ? `<img class="game-detail-team-logo" src="${loserLogoDark}" alt="${upset.loserName}" onerror="this.src='${loserLogo}'">` : '<div style="width:90px;height:90px;"></div>'}
                             <span class="game-detail-team-seed loser">${upset.loserSeed}</span>
                             <div class="game-detail-team-name">${upset.loserName}</div>
                         </div>
