@@ -7135,6 +7135,8 @@
                             let halfStr = '';
                             if (status === 'End of Period') {
                                 halfStr = period >= 2 ? 'END REG · Heading to OT' : 'End of ' + (period === 1 ? '1st' : '2nd');
+                            } else if (period === 1 && (clock === '0:00' || clock === '0.0')) {
+                                halfStr = 'HALFTIME';
                             } else if (period === 1) {
                                 halfStr = `1st Half ${clock}`;
                             } else if (period === 2) {
