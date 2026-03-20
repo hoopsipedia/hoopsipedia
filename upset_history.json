@@ -1,7 +1,7 @@
 {
   "metadata": {
     "description": "NCAA Tournament first-round upsets by seed matchup (1985-2025, 64-team era)",
-    "lastUpdated": "2026-03-18",
+    "lastUpdated": "2026-03-19",
     "source": "Compiled from NCAA.com, Sports Reference, Wikipedia, and verified sports databases",
     "notes": "An 'upset' is when the lower-seeded team (higher seed number) defeats the higher-seeded team (lower seed number). Records reflect through the 2025 tournament first round."
   },
@@ -1368,9 +1368,9 @@
   },
   "6v11": {
     "higherSeedWins": 97,
-    "lowerSeedWins": 63,
-    "totalGames": 160,
-    "upsetPct": 39.38,
+    "lowerSeedWins": 64,
+    "totalGames": 161,
+    "upsetPct": 39.75,
     "notes": "The 6v11 matchup is one of the most upset-prone in the tournament. In 1989, all four 11 seeds won. Since 2005, at least one 11 seed has won every year. Six 11 seeds have reached the Final Four (LSU 1986, George Mason 2006, VCU 2011, Loyola Chicago 2018, UCLA 2021, NC State 2024).",
     "upsets": [
       {
@@ -2012,6 +2012,17 @@
         "loserFull": "Missouri Tigers",
         "loserSeed": 6,
         "score": "74-65"
+      },
+      {
+        "year": 2026,
+        "winner": "VCU",
+        "winnerFull": "VCU Rams",
+        "winnerSeed": 11,
+        "loser": "North Carolina",
+        "loserFull": "North Carolina Tar Heels",
+        "loserSeed": 6,
+        "score": "82-78 (OT)",
+        "note": "VCU erased a double-digit deficit and forced overtime before pulling away for a stunning upset of the Tar Heels."
       }
     ]
   },
