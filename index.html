@@ -4245,16 +4245,26 @@
             var sc1 = parseInt(score1), sc2 = parseInt(score2);
             if (isNaN(sc1) || isNaN(sc2)) return null;
             var higherSeed = Math.min(s1, s2), lowerSeed = Math.max(s1, s2);
-            var underdogLeading = (s1 > s2 && sc1 > sc2) || (s2 > s1 && sc2 > sc1);
-            if (!underdogLeading || lowerSeed - higherSeed < 3) return null;
+            var seedDiff = lowerSeed - higherSeed;
+            if (seedDiff < 3) return null;
+            // Underdog is the higher-numbered (lower) seed
+            var underdogScore = (s1 > s2) ? sc1 : sc2;
+            var favoriteScore = (s1 > s2) ? sc2 : sc1;
+            var underdogLeading = underdogScore > favoriteScore;
+            var underdogClose = favoriteScore - underdogScore <= 9; // within 3 possessions
+            // Show alert if underdog is leading OR within striking distance (seed diff >= 5)
+            if (!underdogLeading && !(seedDiff >= 5 && underdogClose)) return null;
             var key = higherSeed+'v'+lowerSeed;
             var pair = SEED_MATCHUP_HISTORY.pairs ? SEED_MATCHUP_HISTORY.pairs[key] : null;
-            if (pair && pair.lowerWins <= 5) {
-                return { text: '\ud83d\udea8 Upset Alert! '+lowerSeed+'-seeds are only '+pair.lowerWins+'-'+pair.higherWins+' all-time', alert: true };
-            } else if (getUpsetScore(higherSeed, lowerSeed) >= 6) {
+            if (underdogLeading) {
+                if (pair && pair.lowerWins <= 5) {
+                    return { text: '\ud83d\udea8 Upset Alert! '+lowerSeed+'-seeds are only '+pair.lowerWins+'-'+pair.higherWins+' all-time', alert: true };
+                }
                 return { text: '\ud83d\udea8 Upset brewing! '+lowerSeed+' over '+higherSeed+' seed', alert: true };
+            } else {
+                // Underdog close but trailing — show "upset watch" instead of "upset brewing"
+                return { text: '\ud83d\udea8 Upset Watch — '+lowerSeed+'-seed within striking distance', alert: true };
             }
-            return null;
         }
 
         async function loadData() {
@@ -6657,17 +6667,18 @@
             grid.innerHTML = renderGameCardsSkeleton(6);
 
             // Fetch last 3 days + today + upcoming days (covers First Four results through Round 1)
-            const today = new Date();
+            // Use Eastern Time for date (games end late ET, UTC would flip to next day after 7pm ET)
+            const etNow = new Date(new Date().toLocaleString('en-US', { timeZone: 'America/New_York' }));
             const urls = [];
             for (let i = -3; i < 7; i++) {
-                const d = new Date(today);
+                const d = new Date(etNow);
                 d.setDate(d.getDate() + i);
-                const dateStr = d.toISOString().split('T')[0].replace(/-/g, '');
-                urls.push(`https://site.api.espn.com/apis/site/v2/sports/basketball/mens-college-basketball/scoreboard?dates=${dateStr}&groups=50`);
+                const dateStr = `${d.getFullYear()}${String(d.getMonth()+1).padStart(2,'0')}${String(d.getDate()).padStart(2,'0')}`;
+                urls.push(`https://site.api.espn.com/apis/site/v2/sports/basketball/mens-college-basketball/scoreboard?dates=${dateStr}&groups=100`);
             }
 
             // Use shared scoreboard cache for today's date to stay in sync with upset watch
-            const todayStr = today.toISOString().split('T')[0].replace(/-/g, '');
+            const todayStr = `${etNow.getFullYear()}${String(etNow.getMonth()+1).padStart(2,'0')}${String(etNow.getDate()).padStart(2,'0')}`;
             const fetchPromises = urls.map(u => {
                 // For today's URL, use cached scoreboard if available
                 if (u.includes(todayStr) && _sharedScoreboard) {
