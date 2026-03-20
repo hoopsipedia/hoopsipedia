@@ -4251,9 +4251,10 @@
             var underdogScore = (s1 > s2) ? sc1 : sc2;
             var favoriteScore = (s1 > s2) ? sc2 : sc1;
             var underdogLeading = underdogScore > favoriteScore;
+            var tied = underdogScore === favoriteScore;
             var underdogClose = favoriteScore - underdogScore <= 9; // within 3 possessions
-            // Show alert if underdog is leading OR within striking distance (seed diff >= 5)
-            if (!underdogLeading && !(seedDiff >= 5 && underdogClose)) return null;
+            // Show alert if underdog is leading, tied, or within striking distance (seed diff >= 5)
+            if (!underdogLeading && !tied && !(seedDiff >= 5 && underdogClose)) return null;
             var key = higherSeed+'v'+lowerSeed;
             var pair = SEED_MATCHUP_HISTORY.pairs ? SEED_MATCHUP_HISTORY.pairs[key] : null;
             if (underdogLeading) {
@@ -4261,8 +4262,10 @@
                     return { text: '\ud83d\udea8 Upset Alert! '+lowerSeed+'-seeds are only '+pair.lowerWins+'-'+pair.higherWins+' all-time', alert: true };
                 }
                 return { text: '\ud83d\udea8 Upset brewing! '+lowerSeed+' over '+higherSeed+' seed', alert: true };
+            } else if (tied) {
+                return { text: '\ud83d\udea8 Upset Watch — '+lowerSeed+'-seed tied with '+higherSeed+'-seed!', alert: true };
             } else {
-                // Underdog close but trailing — show "upset watch" instead of "upset brewing"
+                // Underdog close but trailing
                 return { text: '\ud83d\udea8 Upset Watch — '+lowerSeed+'-seed within striking distance', alert: true };
             }
         }
