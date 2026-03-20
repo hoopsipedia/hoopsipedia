@@ -7295,12 +7295,19 @@
                 const bIsToday = bDate >= todayET ? 1 : 0;
                 if (aIsToday !== bIsToday) return bIsToday - aIsToday; // today before yesterday
 
-                // Today's games: finals first (just-finished results), then scheduled
+                // Today's games: finals first, then live, then upcoming (closest tip first)
                 // Previous days: finals are natural (all games are done)
                 if (aIsToday && bIsToday) {
                     const aFinal = aState === 'post' ? 1 : 0;
                     const bFinal = bState === 'post' ? 1 : 0;
                     if (aFinal !== bFinal) return bFinal - aFinal; // finals ABOVE scheduled
+                    const aLive = aState === 'in' ? 1 : 0;
+                    const bLive = bState === 'in' ? 1 : 0;
+                    if (aLive !== bLive) return bLive - aLive; // live ABOVE upcoming
+                    // Within upcoming: closest tip time first (ascending)
+                    if (!aFinal && !bFinal) {
+                        return new Date(a.competitions?.[0]?.startDate || 0) - new Date(b.competitions?.[0]?.startDate || 0);
+                    }
                 }
                 return new Date(b.competitions?.[0]?.startDate || 0) - new Date(a.competitions?.[0]?.startDate || 0);
             });
