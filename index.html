@@ -118,10 +118,14 @@
             background: var(--accent-color);
         }
         body.upset-takeover .logo-wordmark--hero {
-            color: var(--accent-color);
+            color: var(--header-accent, var(--accent-color));
         }
         body.upset-takeover .logo-wordmark--hero .logo-basketball .ball {
             fill: var(--accent-color);
+        }
+        body.upset-takeover .logo-wordmark--hero .logo-basketball .seam,
+        body.upset-takeover .logo-wordmark--hero .logo-basketball .seam-curve {
+            stroke: var(--accent-color);
         }
         body.upset-takeover .hero-underline {
             background: var(--accent-color) !important;
