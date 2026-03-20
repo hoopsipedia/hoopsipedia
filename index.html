@@ -7104,7 +7104,50 @@
                 return;
             }
 
+            // Sort: live games first, then today's scheduled, then previous days (most recent first)
+            const mstNow = new Date(new Date().toLocaleString('en-US', { timeZone: 'America/Denver' }));
+            const todayMST = `${mstNow.getFullYear()}-${String(mstNow.getMonth()+1).padStart(2,'0')}-${String(mstNow.getDate()).padStart(2,'0')}`;
+
+            filtered.sort((a, b) => {
+                const aState = a.competitions?.[0]?.status?.type?.state || '';
+                const bState = b.competitions?.[0]?.status?.type?.state || '';
+                const aLive = aState === 'in' ? 1 : 0;
+                const bLive = bState === 'in' ? 1 : 0;
+                if (aLive !== bLive) return bLive - aLive; // live first
+
+                const aDate = a.competitions?.[0]?.startDate?.substring(0, 10) || '';
+                const bDate = b.competitions?.[0]?.startDate?.substring(0, 10) || '';
+                const aIsToday = aDate >= todayMST ? 1 : 0;
+                const bIsToday = bDate >= todayMST ? 1 : 0;
+                if (aIsToday !== bIsToday) return bIsToday - aIsToday; // today before yesterday
+
+                // Within same day: scheduled before final, then by start time
+                const aFinal = aState === 'post' ? 1 : 0;
+                const bFinal = bState === 'post' ? 1 : 0;
+                if (aFinal !== bFinal) return aFinal - bFinal;
+                return new Date(a.competitions?.[0]?.startDate || 0) - new Date(b.competitions?.[0]?.startDate || 0);
+            });
+
+            // Track day groups for headers
+            let lastDayLabel = '';
+
             filtered.forEach(event => {
+                // Insert day header if date changes
+                const eventDate = event.competitions?.[0]?.startDate;
+                if (eventDate) {
+                    const d = new Date(eventDate);
+                    const dayLabel = d.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', timeZone: 'America/New_York' });
+                    const eventDateStr = eventDate.substring(0, 10);
+                    const isToday = eventDateStr >= todayMST;
+                    const label = isToday ? '' : dayLabel + "'s Games";
+                    if (label && label !== lastDayLabel) {
+                        lastDayLabel = label;
+                        const header = document.createElement('div');
+                        header.style.cssText = 'grid-column: 1/-1; padding: 1rem 0 0.25rem; font-size: 0.95rem; font-weight: 700; color: #8892A0; text-transform: uppercase; letter-spacing: 0.05em; border-top: 2px solid #E8E2D8; margin-top: 0.5rem;';
+                        header.textContent = label;
+                        grid.appendChild(header);
+                    }
+                }
                         const comp = event.competitions[0];
                         const competitors = comp.competitors || [];
 
