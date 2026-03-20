@@ -4804,9 +4804,9 @@
 
         async function fetchSharedScoreboard() {
             try {
-                // Use Eastern Time for date (games end late ET, UTC would flip to next day after 7pm ET)
+                // Use Mountain Time for date rollover (tournament games can end past midnight ET)
                 const now = new Date();
-                const et = new Date(now.toLocaleString('en-US', { timeZone: 'America/New_York' }));
+                const et = new Date(now.toLocaleString('en-US', { timeZone: 'America/Denver' }));
                 const yyyy = et.getFullYear();
                 const mm = String(et.getMonth() + 1).padStart(2, '0');
                 const dd = String(et.getDate()).padStart(2, '0');
@@ -6716,8 +6716,8 @@
             grid.innerHTML = renderGameCardsSkeleton(6);
 
             // Fetch last 3 days + today + upcoming days (covers First Four results through Round 1)
-            // Use Eastern Time for date (games end late ET, UTC would flip to next day after 7pm ET)
-            const etNow = new Date(new Date().toLocaleString('en-US', { timeZone: 'America/New_York' }));
+            // Use Mountain Time for date rollover (tournament games can end past midnight ET)
+            const etNow = new Date(new Date().toLocaleString('en-US', { timeZone: 'America/Denver' }));
             const urls = [];
             for (let i = -3; i < 7; i++) {
                 const d = new Date(etNow);
@@ -7344,7 +7344,7 @@
             try {
                 const dates = [];
                 for (let d = -2; d <= 0; d++) {
-                    const dt = new Date(new Date().toLocaleString('en-US', { timeZone: 'America/New_York' }));
+                    const dt = new Date(new Date().toLocaleString('en-US', { timeZone: 'America/Denver' }));
                     dt.setDate(dt.getDate() + d);
                     dates.push(`${dt.getFullYear()}${String(dt.getMonth()+1).padStart(2,'0')}${String(dt.getDate()).padStart(2,'0')}`);
                 }
@@ -8095,7 +8095,7 @@
                 // Fetch today + yesterday + day before from ESPN scoreboard
                 const dates = [];
                 for (let d = -2; d <= 1; d++) {
-                    const dt = new Date(new Date().toLocaleString('en-US', { timeZone: 'America/New_York' }));
+                    const dt = new Date(new Date().toLocaleString('en-US', { timeZone: 'America/Denver' }));
                     dt.setDate(dt.getDate() + d);
                     dates.push(`${dt.getFullYear()}${String(dt.getMonth()+1).padStart(2,'0')}${String(dt.getDate()).padStart(2,'0')}`);
                 }
