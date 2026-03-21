@@ -5646,22 +5646,8 @@
 
             // Start unified live ticker — one master loop updates everything in sync
             try { startUnifiedLiveTicker(); } catch(e) { console.error('Live ticker error:', e); }
-            // Kentucky OT thriller takeover — buzzer beater to force OT, wins in extra time
-            // Manual override: everyone is talking about this ending
-            // Live ticker will replace if an upset with seed diff > 5 comes in today
-            try {
-                const kyData = {
-                    team: 'Kentucky',
-                    color: '#0033A0',   // Kentucky blue
-                    navColor: '#0033A0',
-                    espnId: '96',
-                    time: Date.now(),
-                    message: '⚡ Instant Classic: Kentucky survives Santa Clara in OT thriller!',
-                    gameLink: '#game/2026/kentucky-wildcats-vs-santa-clara-broncos',
-                    seedDiff: 5  // Keep at 5 so a bigger upset can still replace it
-                };
-                localStorage.setItem('upsetTakeover', JSON.stringify(kyData));
-            } catch(e) {}
+            // Clear previous day's takeover on fresh load
+            try { localStorage.removeItem('upsetTakeover'); } catch(e) {}
             try { checkUpsetTakeover(); } catch(e) { console.error('Upset takeover restore error:', e); }
             try { checkMilestoneBanner(); } catch(e) { console.error('Milestone banner restore error:', e); }
 
@@ -5864,6 +5850,23 @@
                                 }
                             }
                         }
+                    }
+
+                    // One-time Nebraska milestone: first Sweet 16 after never winning a tourney game before 2026
+                    if (!_takeoverTriggered.has(gameId) && String(winner.team?.id) === '158') {
+                        _takeoverTriggered.add(gameId);
+                        const nebData = {
+                            team: 'Nebraska',
+                            color: '#E41C38',
+                            navColor: '#E41C38',
+                            espnId: '158',
+                            time: Date.now(),
+                            message: 'Nebraska is headed to the Sweet 16! Their first tournament win was just 2 days ago.',
+                            gameLink: '#game/2026/nebraska-cornhuskers-vs-vanderbilt-commodores',
+                            seedDiff: 6  // High enough to persist but can be replaced by a bigger upset
+                        };
+                        localStorage.setItem('upsetTakeover', JSON.stringify(nebData));
+                        applyUpsetTakeover(nebData, true);
                     }
 
                     // Check for historic milestones
