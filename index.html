@@ -7467,7 +7467,7 @@
                         const t1Seed = team1.curatedRank?.current;
                         const t2Seed = team2.curatedRank?.current;
                         const t1SeedBadge = t1Seed ? `<span style="font-size:0.7rem;font-weight:700;color:#8892A0;margin-right:0.25rem;">(${t1Seed})</span>` : '';
-                        const t2SeedBadge = t2Seed ? `<span style="font-size:0.7rem;font-weight:700;color:#8892A0;margin-left:0.25rem;">(${t2Seed})</span>` : '';
+                        const t2SeedBadge = t2Seed ? `<span style="font-size:0.7rem;font-weight:700;color:#8892A0;margin-right:0.25rem;">(${t2Seed})</span>` : '';
 
                         card.innerHTML = `
                             ${badgeHTML}
@@ -7484,7 +7484,7 @@
                                 <div class="game-team game-team-clickable" onclick="openProfileById('${t2EspnId}')" title="View ${team2.team.displayName} profile" style="flex-direction: row-reverse;">
                                     <div class="game-team-logo" style="background-image: url('${getLogoUrl(t2EspnId)}');"></div>
                                     <div class="game-team-info" style="text-align: right;">
-                                        <div class="game-team-name">${team2.team.displayName}${t2SeedBadge}</div>
+                                        <div class="game-team-name">${t2SeedBadge}${team2.team.displayName}</div>
                                         <div class="game-team-record">${t2Record}</div>
                                     </div>
                                 </div>
