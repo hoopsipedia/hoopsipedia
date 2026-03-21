@@ -5382,7 +5382,7 @@
             banner.innerHTML = `
                 <a href="${gameLink}" style="display:flex;align-items:center;justify-content:center;gap:0.75rem;color:#fff;text-decoration:none;flex:1;">
                     ${logoImg}
-                    <span>UPSET COMPLETE: ${data.message}</span>
+                    <span>${data.message.includes('Instant Classic') ? '' : 'UPSET COMPLETE: '}${data.message}</span>
                 </a>
                 <button class="takeover-dismiss" onclick="dismissUpsetTakeover()" aria-label="Dismiss">&times;</button>
             `;
@@ -7203,13 +7203,13 @@
                         confSelect.addEventListener('change', renderFilteredGames);
                     }
 
-                    // Default to NCAA Round 1 filter if R1 games exist, otherwise R2
+                    // Default to the most current round — R2 if available, otherwise R1
                     if (hasNcaa) {
                         document.querySelectorAll('.games-filter-btn').forEach(b => b.classList.remove('active'));
-                        if (hasR1) {
-                            document.querySelector('.games-filter-btn[data-filter="ncaa"]').classList.add('active');
-                        } else if (hasR2) {
+                        if (hasR2) {
                             document.querySelector('.games-filter-btn[data-filter="ncaa-r2"]').classList.add('active');
+                        } else if (hasR1) {
+                            document.querySelector('.games-filter-btn[data-filter="ncaa"]').classList.add('active');
                         }
                     }
 
@@ -7464,6 +7464,11 @@
                             classicBadgeHTML = `<span class="instant-classic-badge" onclick="event.stopPropagation(); window.location.hash='${_classicHref}';" title="Instant Classic">\u26A1 Instant Classic</span>`;
                         }
 
+                        const t1Seed = team1.curatedRank?.current;
+                        const t2Seed = team2.curatedRank?.current;
+                        const t1SeedBadge = t1Seed ? `<span style="font-size:0.7rem;font-weight:700;color:#8892A0;margin-right:0.25rem;">(${t1Seed})</span>` : '';
+                        const t2SeedBadge = t2Seed ? `<span style="font-size:0.7rem;font-weight:700;color:#8892A0;margin-left:0.25rem;">(${t2Seed})</span>` : '';
+
                         card.innerHTML = `
                             ${badgeHTML}
                             ${classicBadgeHTML ? `<div style="text-align:center;margin-top:0.5rem;">${classicBadgeHTML}</div>` : ''}
@@ -7471,7 +7476,7 @@
                                 <div class="game-team game-team-clickable" onclick="openProfileById('${t1EspnId}')" title="View ${team1.team.displayName} profile">
                                     <div class="game-team-logo" style="background-image: url('${getLogoUrl(t1EspnId)}');"></div>
                                     <div class="game-team-info">
-                                        <div class="game-team-name">${team1.team.displayName}</div>
+                                        <div class="game-team-name">${t1SeedBadge}${team1.team.displayName}</div>
                                         <div class="game-team-record">${t1Record}</div>
                                     </div>
                                 </div>
@@ -7479,7 +7484,7 @@
                                 <div class="game-team game-team-clickable" onclick="openProfileById('${t2EspnId}')" title="View ${team2.team.displayName} profile" style="flex-direction: row-reverse;">
                                     <div class="game-team-logo" style="background-image: url('${getLogoUrl(t2EspnId)}');"></div>
                                     <div class="game-team-info" style="text-align: right;">
-                                        <div class="game-team-name">${team2.team.displayName}</div>
+                                        <div class="game-team-name">${team2.team.displayName}${t2SeedBadge}</div>
                                         <div class="game-team-record">${t2Record}</div>
                                     </div>
                                 </div>
