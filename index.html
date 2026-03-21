@@ -5646,8 +5646,24 @@
 
             // Start unified live ticker — one master loop updates everything in sync
             try { startUnifiedLiveTicker(); } catch(e) { console.error('Live ticker error:', e); }
-            // Clear previous day's takeover on fresh load
-            try { localStorage.removeItem('upsetTakeover'); } catch(e) {}
+            // Kentucky OT thriller as default — still the biggest story from yesterday
+            // Will be replaced by any new upset/milestone that triggers today
+            try {
+                const stored = localStorage.getItem('upsetTakeover');
+                if (!stored) {
+                    const kyData = {
+                        team: 'Kentucky',
+                        color: '#0033A0',
+                        navColor: '#0033A0',
+                        espnId: '96',
+                        time: Date.now(),
+                        message: '⚡ Instant Classic: Kentucky survives Santa Clara in OT thriller!',
+                        gameLink: '#game/2026/kentucky-wildcats-vs-santa-clara-broncos',
+                        seedDiff: 1  // Low so any upset or milestone replaces it
+                    };
+                    localStorage.setItem('upsetTakeover', JSON.stringify(kyData));
+                }
+            } catch(e) {}
             try { checkUpsetTakeover(); } catch(e) { console.error('Upset takeover restore error:', e); }
             try { checkMilestoneBanner(); } catch(e) { console.error('Milestone banner restore error:', e); }
 
