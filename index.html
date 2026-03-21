@@ -4744,23 +4744,29 @@
 
                         const team = batch[idx];
 
-                        // Find this team's current season in our static data
-                        // Our static ATW/ATL includes all historical wins
-                        // We need to find how many W/L our static data has for the current season
-                        // and replace with ESPN's live count
-                        const teamGames = GAMES_DATA?.[String(team.espnId)];
+                        // ATW/ATL already includes current season via nightly sync (CS field).
+                        // Use CS as baseline so we only add games that happened AFTER the last sync.
+                        // Fallback to GAMES_DATA counting only if CS is missing for this team.
+                        const csRecord = window.TEAM_DATA?.CS?.[String(team.espnId)];
                         let staticCurrentW = 0, staticCurrentL = 0;
-                        if (teamGames?.games) {
-                            const currentSeasonStart = `${seasonYear - 1}-11`;
-                            teamGames.games.forEach(g => {
-                                if (g.date >= currentSeasonStart) {
-                                    if (g.w) staticCurrentW++;
-                                    else staticCurrentL++;
-                                }
-                            });
+                        if (csRecord) {
+                            staticCurrentW = csRecord.w || 0;
+                            staticCurrentL = csRecord.l || 0;
+                        } else {
+                            // No CS data — fall back to counting GAMES_DATA
+                            const teamGames = GAMES_DATA?.[String(team.espnId)];
+                            if (teamGames?.games) {
+                                const currentSeasonStart = `${seasonYear - 1}-11`;
+                                teamGames.games.forEach(g => {
+                                    if (g.date >= currentSeasonStart) {
+                                        if (g.w) staticCurrentW++;
+                                        else staticCurrentL++;
+                                    }
+                                });
+                            }
                         }
 
-                        // Difference = live count minus what our static data already has
+                        // Difference = live count minus what our synced data already has
                         const extraW = currentW - staticCurrentW;
                         const extraL = currentL - staticCurrentL;
 
