@@ -18276,7 +18276,7 @@
             return bench.slice(0, 4).map(p => ({ ...p, assignedPos: classifyPosition(p.position, p.height) }));
         }
 
-        function renderMatchupCard(p1, p2, position, t1Color, t2Color) {
+        function renderMatchupCard(p1, p2, position, t1Color, t2Color, posWinner) {
             const stats = [
                 { key: 'PPG', keys: ['avgPoints', 'PTS'] },
                 { key: 'RPG', keys: ['avgRebounds', 'REB'] },
@@ -18301,8 +18301,13 @@
             const p1Meta = [p1.assignedPos, p1.jersey ? '#' + p1.jersey : '', p1.height].filter(Boolean).join(' | ');
             const p2Meta = [p2.assignedPos, p2.jersey ? '#' + p2.jersey : '', p2.height].filter(Boolean).join(' | ');
 
+            const t1WinBg = posWinner === 1 ? 'background:rgba(27,42,74,0.04);' : '';
+            const t2WinBg = posWinner === 2 ? 'background:rgba(27,42,74,0.04);' : '';
+            const t1WinBorder = posWinner === 1 ? 'border-left-width:4px;' : '';
+            const t2WinBorder = posWinner === 2 ? 'border-right-width:4px;' : '';
+
             return `<div class="s5-matchup-card" style="--team1-color:${t1Color};--team2-color:${t2Color};">
-                <div class="s5-player-side s5-team-accent-left">
+                <div class="s5-player-side s5-team-accent-left" style="${t1WinBg}${t1WinBorder}">
                     <img class="s5-player-photo" src="${p1.headshot}" alt="${p1.name}" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 50 50%22><rect fill=%22%23E8E2D6%22 width=%2250%22 height=%2250%22/><text x=%2225%22 y=%2230%22 text-anchor=%22middle%22 fill=%22%238892A0%22 font-size=%2214%22>${p1.jersey || '?'}</text></svg>'">
                     <div class="s5-player-info">
                         <div class="s5-player-name">${p1.name}</div>
@@ -18311,7 +18316,7 @@
                     </div>
                 </div>
                 <div class="s5-vs-divider"><span class="s5-pos-badge">${position}</span></div>
-                <div class="s5-player-side right s5-team-accent-right">
+                <div class="s5-player-side right s5-team-accent-right" style="${t2WinBg}${t2WinBorder}">
                     <img class="s5-player-photo" src="${p2.headshot}" alt="${p2.name}" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 50 50%22><rect fill=%22%23E8E2D6%22 width=%2250%22 height=%2250%22/><text x=%2225%22 y=%2230%22 text-anchor=%22middle%22 fill=%22%238892A0%22 font-size=%2214%22>${p2.jersey || '?'}</text></svg>'">
                     <div class="s5-player-info">
                         <div class="s5-player-name">${p2.name}</div>
@@ -18331,6 +18336,7 @@
                 { keys: ['threePointFieldGoalPercentage', '3PointPct', 'avg3PM'] }
             ];
             let t1Wins = 0, t2Wins = 0, ties = 0;
+            const posWinners = []; // 1 = t1 wins, 2 = t2 wins, 0 = tie
             const posCount = Math.min(starters1.length, starters2.length);
             for (let i = 0; i < posCount; i++) {
                 let pWins1 = 0, pWins2 = 0;
@@ -18340,11 +18346,11 @@
                     if (v1 > v2) pWins1++;
                     else if (v2 > v1) pWins2++;
                 }
-                if (pWins1 > pWins2) t1Wins++;
-                else if (pWins2 > pWins1) t2Wins++;
-                else ties++;
+                if (pWins1 > pWins2) { t1Wins++; posWinners.push(1); }
+                else if (pWins2 > pWins1) { t2Wins++; posWinners.push(2); }
+                else { ties++; posWinners.push(0); }
             }
-            return { t1Wins, t2Wins, ties };
+            return { t1Wins, t2Wins, ties, posWinners };
         }
 
         function computeTotals(starters) {
@@ -18393,24 +18399,17 @@
             let html = '';
 
             const tieText = edge.ties > 0 ? ` <span style="font-size:0.8rem;color:#8892A0;font-weight:500;">(${edge.ties} tied)</span>` : '';
-            if (edgeTeam) {
-                html += `<div class="s5-edge-bar">
-                    <span class="s5-edge-label">${edgeTeam} Starting 5 Edge:</span>
-                    <span class="s5-edge-score">${edge.t1Wins}-${edge.t2Wins}${tieText}</span>
-                </div>`;
-            } else {
-                html += `<div class="s5-edge-bar">
-                    <span class="s5-edge-label">Starting 5 Matchup:</span>
-                    <span class="s5-edge-score">Even ${edge.t1Wins}-${edge.t2Wins}${tieText}</span>
-                </div>`;
-            }
+            html += `<div class="s5-edge-bar">
+                <span class="s5-edge-label">Starting 5 Matchup:</span>
+                <span class="s5-edge-score">${t1.name} ${edge.t1Wins} — ${t2.name} ${edge.t2Wins}${tieText}</span>
+            </div>`;
 
             html += '<div class="s5-section-label">Starting Lineups</div>';
 
             const posCount = Math.min(starters1.length, starters2.length);
             for (let i = 0; i < posCount; i++) {
                 const pos = starters1[i].assignedPos || starters2[i].assignedPos || '?';
-                html += renderMatchupCard(starters1[i], starters2[i], pos, t1Color, t2Color);
+                html += renderMatchupCard(starters1[i], starters2[i], pos, t1Color, t2Color, edge.posWinners[i]);
             }
 
             const totals1 = computeTotals(starters1);
