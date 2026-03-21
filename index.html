@@ -5791,6 +5791,29 @@
                         loserTeam.winPct = parseFloat(((loserTeam.allTimeW / (loserTeam.allTimeW + loserTeam.allTimeL)) * 100).toFixed(1));
                     }
 
+                    // Update tournament advancement stats (Sweet 16, Elite 8, Final Four, Championships)
+                    if (winnerTeam) {
+                        const roundNote = (comp.notes?.[0]?.headline || '').toLowerCase();
+                        if (roundNote.includes('2nd round') || roundNote.includes('second round') || roundNote.includes('round of 32')) {
+                            winnerTeam.sweet16s = (winnerTeam.sweet16s || 0) + 1;
+                            console.log(`${winnerTeam.name} advances to Sweet 16 (total: ${winnerTeam.sweet16s})`);
+                        } else if (roundNote.includes('regional semifinal') || roundNote.includes('sweet 16') || roundNote.includes('third round')) {
+                            winnerTeam.elite8s = (winnerTeam.elite8s || 0) + 1;
+                            console.log(`${winnerTeam.name} advances to Elite 8 (total: ${winnerTeam.elite8s})`);
+                        } else if (roundNote.includes('regional final') || roundNote.includes('elite 8') || roundNote.includes('elite eight')) {
+                            winnerTeam.finalFours = (winnerTeam.finalFours || 0) + 1;
+                            console.log(`${winnerTeam.name} advances to Final Four (total: ${winnerTeam.finalFours})`);
+                        } else if (roundNote.includes('national semifinal') || roundNote.includes('final four')) {
+                            // Final Four win = Championship game appearance (tracked as part of finalFours already)
+                            console.log(`${winnerTeam.name} advances to Championship Game`);
+                        } else if (roundNote.includes('championship') || roundNote.includes('national final') || roundNote.includes('title game')) {
+                            winnerTeam.natlChamps = (winnerTeam.natlChamps || 0) + 1;
+                            if (!winnerTeam.champYears) winnerTeam.champYears = [];
+                            winnerTeam.champYears.push(2026);
+                            console.log(`${winnerTeam.name} wins National Championship!`);
+                        }
+                    }
+
                     // Update H2H data (both pre-compiled and cache) so compare page reflects new results
                     if (winnerId && loserId) {
                         // Update H2H_DATA (from h2h.json) — the primary source for compare page
