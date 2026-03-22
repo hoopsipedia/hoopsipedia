@@ -5503,7 +5503,6 @@
         // Teams with ZERO NCAA tournament wins entering 2026 tournament
         // Source: verified against NCAA tournament records
         const ZERO_TOURNEY_WIN_TEAMS = {
-            '158': 'Nebraska Cornhuskers',       // 0-8 all-time entering 2026 (won vs Troy on Day 1)
             '2856': 'California Baptist Lancers', // First ever tournament
             '338': 'Kennesaw State Owls',         // 0-1 (lost to Xavier 2023)
             '2272': 'High Point Panthers',        // First tourney WIN (appeared in 2025, lost to Purdue)
@@ -7588,7 +7587,8 @@
                                         }
                                         // Curated noteworthy game facts (by ESPN team ID)
                                         var NOTEWORTHY_WINS = {
-                                            '258': 'Virginia\'s first tournament win since their 2019 National Championship'
+                                            '258': 'Virginia\'s first tournament win since their 2019 National Championship',
+                                            '158': 'Nebraska is headed to the Sweet 16 for the first time ever!'
                                         };
                                         if (NOTEWORTHY_WINS[wId]) {
                                             return '<div class="game-context-badge" style="background:#E8F5E9;border-color:#66BB6A;color:#2E7D32;">' + NOTEWORTHY_WINS[wId] + '</div>';
@@ -11578,7 +11578,8 @@
 
                 // Curated noteworthy game facts (by ESPN team ID)
                 const NOTEWORTHY_BRACKET_WINS = {
-                    '258': `${wName}'s first tournament win since their 2019 National Championship`
+                    '258': `${wName}'s first tournament win since their 2019 National Championship`,
+                    '158': `Nebraska is headed to the Sweet 16 for the first time ever!`
                 };
                 if (NOTEWORTHY_BRACKET_WINS[wId]) {
                     return NOTEWORTHY_BRACKET_WINS[wId];
