@@ -5388,7 +5388,7 @@
             banner.innerHTML = `
                 <a href="${gameLink}" style="display:flex;align-items:center;justify-content:center;gap:0.75rem;color:#fff;text-decoration:none;flex:1;">
                     ${logoImg}
-                    <span>${data.message.includes('Instant Classic') ? '' : 'UPSET COMPLETE: '}${data.message}</span>
+                    <span>${(data.seedDiff && data.seedDiff >= 3 && !data.message.includes('Instant Classic') && !data.message.includes('Sweet 16') && !data.message.includes('Elite 8') && !data.message.includes('Final Four')) ? 'UPSET COMPLETE: ' : ''}${data.message}</span>
                 </a>
                 <button class="takeover-dismiss" onclick="dismissUpsetTakeover()" aria-label="Dismiss">&times;</button>
             `;
