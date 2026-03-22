@@ -5651,22 +5651,33 @@
 
             // Start unified live ticker — one master loop updates everything in sync
             try { startUnifiedLiveTicker(); } catch(e) { console.error('Live ticker error:', e); }
-            // Kentucky OT thriller as default — still the biggest story from yesterday
+            // Nebraska Sweet 16 milestone — biggest story of the tournament so far
             // Will be replaced by any new upset/milestone that triggers today
             try {
                 const stored = localStorage.getItem('upsetTakeover');
-                if (!stored) {
-                    const kyData = {
-                        team: 'Kentucky',
-                        color: '#0033A0',
-                        navColor: '#0033A0',
-                        espnId: '96',
+                let shouldSetNeb = !stored;
+                if (stored) {
+                    try {
+                        const prev = JSON.parse(stored);
+                        // Replace any stale takeover (Texas, Kentucky, etc.) with Nebraska
+                        // unless it's already Nebraska or something newer with higher seedDiff
+                        if (prev.espnId !== '158' && (!prev.seedDiff || prev.seedDiff <= 6)) {
+                            shouldSetNeb = true;
+                        }
+                    } catch(e) { shouldSetNeb = true; }
+                }
+                if (shouldSetNeb) {
+                    const nebData = {
+                        team: 'Nebraska',
+                        color: '#E41C38',
+                        navColor: '#E41C38',
+                        espnId: '158',
                         time: Date.now(),
-                        message: '⚡ Instant Classic: Kentucky survives Santa Clara in OT thriller!',
-                        gameLink: '#game/2026/kentucky-wildcats-vs-santa-clara-broncos',
-                        seedDiff: 1  // Low so any upset or milestone replaces it
+                        message: 'Nebraska is headed to the Sweet 16! Their first tournament win was just 2 days ago.',
+                        gameLink: '#game/2026/nebraska-cornhuskers-vs-vanderbilt-commodores',
+                        seedDiff: 6
                     };
-                    localStorage.setItem('upsetTakeover', JSON.stringify(kyData));
+                    localStorage.setItem('upsetTakeover', JSON.stringify(nebData));
                 }
             } catch(e) {}
             try { checkUpsetTakeover(); } catch(e) { console.error('Upset takeover restore error:', e); }
