@@ -13104,6 +13104,22 @@
             const boxscores = await loadUpsetBoxscores();
             if (boxscores[gameKey]) return boxscores[gameKey];
 
+            // Check Instant Classics for event ID
+            const gkParts = gameKey.split('/');
+            const gkYear = gkParts[0];
+            const gkSlugs = (gkParts[1] || '').split('-vs-');
+            for (const key in INSTANT_CLASSICS) {
+                const ic = INSTANT_CLASSICS[key];
+                if (ic.year !== parseInt(gkYear)) continue;
+                const t1Slug = teamSlug(ic.team1);
+                const t2Slug = teamSlug(ic.team2);
+                if ((gkSlugs[0] && gkSlugs[1]) &&
+                    ((t1Slug.includes(gkSlugs[0].substring(0,10)) && t2Slug.includes(gkSlugs[1].substring(0,10))) ||
+                     (t2Slug.includes(gkSlugs[0].substring(0,10)) && t1Slug.includes(gkSlugs[1].substring(0,10))))) {
+                    return ic.eventId;
+                }
+            }
+
             // For current season games, search the live scoreboard
             const year = gameKey.split('/')[0];
             if (parseInt(year) >= 2026 && _sharedScoreboard) {
