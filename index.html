@@ -11395,14 +11395,146 @@
 
             rounds['R32'] = builtR32;
 
-            // Sort S16 and E8 by lowest seed (fewer games, natural ordering works)
-            ['S16', 'E8'].forEach(roundKey => {
-                rounds[roundKey].sort((a, b) => {
-                    const seedA = Math.min(...(a.competitions[0].competitors || []).map(c => c.curatedRank?.current || 99));
-                    const seedB = Math.min(...(b.competitions[0].competitors || []).map(c => c.curatedRank?.current || 99));
-                    return seedA - seedB;
+            // ── Build S16 with structural slot assignment (not seed sorting) ──
+            // S16 slot 0 (top): winner of R32 slot 0 vs winner of R32 slot 1
+            // S16 slot 1 (bottom): winner of R32 slot 2 vs winner of R32 slot 3
+            const s16Structure = [
+                { slot: 0, feederR32: [0, 1] },  // top half: 1/16/8/9 vs 5/12/4/13 winners
+                { slot: 1, feederR32: [2, 3] }   // bottom half: 6/11/3/14 vs 7/10/2/15 winners
+            ];
+
+            // Get R32 winners by slot index
+            const r32Winners = builtR32.map(ev => {
+                const comp = ev.competitions[0];
+                const isFinal = comp.status?.type?.description === 'Final';
+                return isFinal ? comp.competitors.find(c => c.winner) : null;
+            });
+
+            // Index ESPN S16 games by team ID
+            const espnS16ByTeamId = {};
+            rounds['S16'].forEach(ev => {
+                (ev.competitions[0].competitors || []).forEach(c => {
+                    const tid = String(c.team?.id || '');
+                    if (tid && c.team?.displayName !== 'TBD') espnS16ByTeamId[tid] = ev;
                 });
             });
+
+            const builtS16 = [];
+            const usedEspnS16 = new Set();
+
+            s16Structure.forEach(slotDef => {
+                const wA = r32Winners[slotDef.feederR32[0]];
+                const wB = r32Winners[slotDef.feederR32[1]];
+
+                let espnGame = null;
+                if (wA) {
+                    const tid = String(wA.team?.id || '');
+                    if (espnS16ByTeamId[tid] && !usedEspnS16.has(espnS16ByTeamId[tid])) espnGame = espnS16ByTeamId[tid];
+                }
+                if (!espnGame && wB) {
+                    const tid = String(wB.team?.id || '');
+                    if (espnS16ByTeamId[tid] && !usedEspnS16.has(espnS16ByTeamId[tid])) espnGame = espnS16ByTeamId[tid];
+                }
+
+                if (espnGame) {
+                    usedEspnS16.add(espnGame);
+                    const comp = espnGame.competitions[0];
+                    if (comp.competitors.length === 2 && wA && wB) {
+                        const idA = String(wA.team?.id || '');
+                        const idB = String(wB.team?.id || '');
+                        const c0id = String(comp.competitors[0].team?.id || '');
+                        if (c0id === idB) comp.competitors.reverse();
+                    }
+                    builtS16.push(espnGame);
+                } else {
+                    const makeTBD = () => ({
+                        team: { id: '0', displayName: 'TBD', shortDisplayName: '—', nickname: '—' },
+                        curatedRank: { current: 99 }, score: '', winner: undefined
+                    });
+                    const compA = wA ? JSON.parse(JSON.stringify(wA)) : makeTBD();
+                    const compB = wB ? JSON.parse(JSON.stringify(wB)) : makeTBD();
+                    compA.score = ''; compA.winner = undefined;
+                    compB.score = ''; compB.winner = undefined;
+                    builtS16.push({
+                        id: 'virtual-s16-' + slotDef.slot,
+                        status: { type: { name: 'STATUS_SCHEDULED', description: 'Scheduled' } },
+                        competitions: [{ competitors: [compA, compB],
+                            status: { type: { name: 'STATUS_SCHEDULED' } },
+                            notes: [{ headline: regionName + ' - Sweet 16' }]
+                        }]
+                    });
+                }
+            });
+
+            // Add any remaining ESPN S16 games not matched to a slot
+            rounds['S16'].forEach(ev => {
+                if (!usedEspnS16.has(ev)) builtS16.push(ev);
+            });
+
+            rounds['S16'] = builtS16;
+
+            // ── Build E8 with structural slot assignment ──
+            // E8 slot 0: winner of S16 slot 0 vs winner of S16 slot 1
+            const s16Winners = builtS16.map(ev => {
+                const comp = ev.competitions[0];
+                const isFinal = comp.status?.type?.description === 'Final';
+                return isFinal ? comp.competitors.find(c => c.winner) : null;
+            });
+
+            const espnE8ByTeamId = {};
+            rounds['E8'].forEach(ev => {
+                (ev.competitions[0].competitors || []).forEach(c => {
+                    const tid = String(c.team?.id || '');
+                    if (tid && c.team?.displayName !== 'TBD') espnE8ByTeamId[tid] = ev;
+                });
+            });
+
+            const builtE8 = [];
+            const wS16A = s16Winners[0];
+            const wS16B = s16Winners[1];
+            let espnE8 = null;
+            if (wS16A) {
+                const tid = String(wS16A.team?.id || '');
+                if (espnE8ByTeamId[tid]) espnE8 = espnE8ByTeamId[tid];
+            }
+            if (!espnE8 && wS16B) {
+                const tid = String(wS16B.team?.id || '');
+                if (espnE8ByTeamId[tid]) espnE8 = espnE8ByTeamId[tid];
+            }
+
+            if (espnE8) {
+                const comp = espnE8.competitions[0];
+                if (comp.competitors.length === 2 && wS16A && wS16B) {
+                    const idA = String(wS16A.team?.id || '');
+                    const c0id = String(comp.competitors[0].team?.id || '');
+                    if (c0id === String(wS16B.team?.id || '')) comp.competitors.reverse();
+                }
+                builtE8.push(espnE8);
+            } else {
+                const makeTBD = () => ({
+                    team: { id: '0', displayName: 'TBD', shortDisplayName: '—', nickname: '—' },
+                    curatedRank: { current: 99 }, score: '', winner: undefined
+                });
+                const cA = wS16A ? JSON.parse(JSON.stringify(wS16A)) : makeTBD();
+                const cB = wS16B ? JSON.parse(JSON.stringify(wS16B)) : makeTBD();
+                cA.score = ''; cA.winner = undefined;
+                cB.score = ''; cB.winner = undefined;
+                builtE8.push({
+                    id: 'virtual-e8-0',
+                    status: { type: { name: 'STATUS_SCHEDULED', description: 'Scheduled' } },
+                    competitions: [{ competitors: [cA, cB],
+                        status: { type: { name: 'STATUS_SCHEDULED' } },
+                        notes: [{ headline: regionName + ' - Elite Eight' }]
+                    }]
+                });
+            }
+
+            // Add any remaining ESPN E8 games not matched
+            rounds['E8'].forEach(ev => {
+                if (ev !== espnE8) builtE8.push(ev);
+            });
+
+            rounds['E8'] = builtE8;
 
             const roundLabels = { 'R64': '1st Round', 'R32': '2nd Round', 'S16': 'Sweet 16', 'E8': 'Elite 8' };
             const roundOrder = ['R64', 'R32', 'S16', 'E8'];
