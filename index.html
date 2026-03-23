@@ -118,7 +118,7 @@
             background: var(--accent-color);
         }
         body.upset-takeover .logo-wordmark--hero {
-            color: var(--header-accent) !important;
+            color: var(--hero-text-color, #1B2A4A) !important;
         }
         body.upset-takeover .logo-wordmark--hero .logo-basketball .ball {
             fill: var(--accent-color);
@@ -5396,6 +5396,9 @@
 
             document.documentElement.style.setProperty('--accent-color', accentColor);
             document.documentElement.style.setProperty('--header-accent', data.navColor || data.color);
+            // Hero text should always be dark/readable — use navColor if dark, else default
+            const heroTextColor = data.navColor && _getLum(data.navColor) < 0.3 ? data.navColor : '#1B2A4A';
+            document.documentElement.style.setProperty('--hero-text-color', heroTextColor);
 
             // Remove any existing banner
             const existing = document.getElementById('upsetTakeoverBanner');
