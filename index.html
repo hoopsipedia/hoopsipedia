@@ -5689,6 +5689,16 @@
 
             // Start unified live ticker — one master loop updates everything in sync
             try { startUnifiedLiveTicker(); } catch(e) { console.error('Live ticker error:', e); }
+            // One-time cleanup: clear stale Nebraska takeover from old forced-override code
+            try {
+                const _stored = localStorage.getItem('upsetTakeover');
+                if (_stored) {
+                    const _prev = JSON.parse(_stored);
+                    if (_prev.espnId === '158' && _prev.seedDiff <= 1) {
+                        localStorage.removeItem('upsetTakeover');
+                    }
+                }
+            } catch(e) {}
             // Takeover restore — apply whatever is in localStorage (from live upset triggers)
             try { checkUpsetTakeover(); } catch(e) { console.error('Upset takeover restore error:', e); }
             try { checkMilestoneBanner(); } catch(e) { console.error('Milestone banner restore error:', e); }
@@ -7601,8 +7611,7 @@
                                         }
                                         // Curated noteworthy game facts (by ESPN team ID)
                                         var NOTEWORTHY_WINS = {
-                                            '258': 'Virginia\'s first tournament win since their 2019 National Championship',
-                                            '158': 'Nebraska is headed to the Sweet 16 for the first time ever!'
+                                            '258': 'Virginia\'s first tournament win since their 2019 National Championship'
                                         };
                                         if (NOTEWORTHY_WINS[wId]) {
                                             return '<div class="game-context-badge" style="background:#E8F5E9;border-color:#66BB6A;color:#2E7D32;">' + NOTEWORTHY_WINS[wId] + '</div>';
