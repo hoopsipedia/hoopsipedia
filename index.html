@@ -5893,9 +5893,9 @@
                                     const winnerColor = winnerTeamObj.color || '';
                                     const winnerAltColor = winnerTeamObj.alternateColor || '';
                                     triggerUpsetTakeover(
-                                        winnerTeamObj.shortDisplayName || winnerTeamObj.displayName || 'Unknown',
+                                        winnerTeamObj.displayName || winnerTeamObj.shortDisplayName || 'Unknown',
                                         winnerSeed,
-                                        loserTeamObj.shortDisplayName || loserTeamObj.displayName || 'Unknown',
+                                        loserTeamObj.displayName || loserTeamObj.shortDisplayName || 'Unknown',
                                         loserSeed,
                                         winnerTeamObj.id,
                                         winnerColor,
@@ -13681,14 +13681,36 @@
             // Find the upset data OR instant classic data
             let upset = findUpsetData(year, winnerSlug, loserSlug);
             let isClassicOnly = false;
+
+            // Fuzzy slug matching: try partial match if exact slug fails
+            // Handles cases like "iowa" matching "iowa-hawkeyes"
+            function fuzzySlugMatch(slug1, slug2) {
+                if (slug1 === slug2) return true;
+                return slug1.startsWith(slug2) || slug2.startsWith(slug1);
+            }
+
             if (!upset) {
                 // Check if this is an Instant Classic (non-upset memorable game)
-                const classic = findInstantClassicBySlug(year, winnerSlug, loserSlug);
+                let classic = findInstantClassicBySlug(year, winnerSlug, loserSlug);
+                // Fuzzy fallback: try partial slug matching against all classics
+                if (!classic) {
+                    for (const key in INSTANT_CLASSICS) {
+                        const ic = INSTANT_CLASSICS[key];
+                        if (ic.year !== parseInt(year)) continue;
+                        const t1Slug = teamSlug(ic.team1);
+                        const t2Slug = teamSlug(ic.team2);
+                        if ((fuzzySlugMatch(winnerSlug, t1Slug) && fuzzySlugMatch(loserSlug, t2Slug)) ||
+                            (fuzzySlugMatch(winnerSlug, t2Slug) && fuzzySlugMatch(loserSlug, t1Slug))) {
+                            classic = ic;
+                            break;
+                        }
+                    }
+                }
                 if (classic) {
                     // Build synthetic upset object from classic data + ESPN
                     isClassicOnly = true;
-                    const w = allTeamsData.find(t => teamSlug(t.name) === winnerSlug);
-                    const l = allTeamsData.find(t => teamSlug(t.name) === loserSlug);
+                    const w = allTeamsData.find(t => teamSlug(t.name) === winnerSlug) || allTeamsData.find(t => fuzzySlugMatch(teamSlug(t.name), winnerSlug));
+                    const l = allTeamsData.find(t => teamSlug(t.name) === loserSlug) || allTeamsData.find(t => fuzzySlugMatch(teamSlug(t.name), loserSlug));
                     upset = {
                         winnerName: classic.team1,
                         loserName: classic.team2,
