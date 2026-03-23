@@ -5689,12 +5689,12 @@
 
             // Start unified live ticker — one master loop updates everything in sync
             try { startUnifiedLiveTicker(); } catch(e) { console.error('Live ticker error:', e); }
-            // One-time cleanup: clear stale Nebraska takeover from old forced-override code
+            // One-time cleanup: clear stale Nebraska takeover (was a curated milestone, now expired)
             try {
                 const _stored = localStorage.getItem('upsetTakeover');
                 if (_stored) {
                     const _prev = JSON.parse(_stored);
-                    if (_prev.espnId === '158' && _prev.seedDiff <= 1) {
+                    if (_prev.espnId === '158') {
                         localStorage.removeItem('upsetTakeover');
                     }
                 }
