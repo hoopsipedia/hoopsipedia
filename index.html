@@ -118,20 +118,20 @@
             background: var(--accent-color);
         }
         body.upset-takeover .logo-wordmark--hero {
-            color: var(--header-accent, var(--accent-color));
+            color: var(--accent-color);
         }
         body.upset-takeover .logo-wordmark--hero .logo-basketball .ball {
             fill: var(--accent-color);
         }
         body.upset-takeover .logo-wordmark--hero .logo-basketball .seam,
         body.upset-takeover .logo-wordmark--hero .logo-basketball .seam-curve {
-            stroke: #ffffff;
+            stroke: var(--accent-color);
         }
         body.upset-takeover .hero-underline {
-            background: #ffffff !important;
+            background: var(--accent-color) !important;
         }
         body.upset-takeover .hero-logo .logo-swoosh path {
-            fill: #ffffff !important;
+            fill: var(--accent-color) !important;
         }
         body.upset-takeover .game-matchup-button {
             background: var(--header-accent) !important;
@@ -3999,6 +3999,7 @@
                         <button class="games-filter-btn" data-filter="firstfour">First Four</button>
                         <button class="games-filter-btn active" data-filter="ncaa">Round 1</button>
                         <button class="games-filter-btn" data-filter="ncaa-r2">Round 2</button>
+                        <button class="games-filter-btn" data-filter="ncaa-s16">Sweet 16</button>
                         <button class="games-filter-btn" data-filter="nit">NIT</button>
                         <button class="games-filter-btn" data-filter="all">All Games</button>
                     </div>
@@ -5381,7 +5382,16 @@
             banner.className = 'upset-takeover-banner';
             banner.style.background = data.navColor || data.color;
 
-            const logoUrl = data.espnId ? `https://a.espncdn.com/i/teamlogos/ncaa/500/${data.espnId}.png` : '';
+            // Use dark-mode logo when banner background is dark (e.g. Iowa black)
+            const bannerBg = data.navColor || data.color;
+            const bannerLum = (() => {
+                let h = bannerBg.replace('#', '');
+                if (h.startsWith('rgb')) { const m = h.match(/\d+/g); if (m) return (0.299*m[0] + 0.587*m[1] + 0.114*m[2]) / 255; }
+                if (h.length === 6) return (0.299 * parseInt(h.substring(0,2),16) + 0.587 * parseInt(h.substring(2,4),16) + 0.114 * parseInt(h.substring(4,6),16)) / 255;
+                return 0.5;
+            })();
+            const logoVariant = bannerLum < 0.3 ? '500-dark' : '500';
+            const logoUrl = data.espnId ? `https://a.espncdn.com/i/teamlogos/ncaa/${logoVariant}/${data.espnId}.png` : '';
             const logoImg = logoUrl ? `<img src="${logoUrl}" alt="" onerror="this.style.display='none'">` : '';
 
             const gameLink = data.gameLink || '#';
@@ -5452,14 +5462,14 @@
             if (lum < 0.08 && altColor) {
                 const navColor = color;
                 color = altColor; // swap: gold/secondary becomes the accent
-                // Re-check if alt is too light
+                // Re-check if alt is too light — only darken slightly to keep it recognizable
                 const altLum = getLuminance(color);
-                if (altLum > 0.75) {
+                if (altLum > 0.85) {
                     const h = color.replace('#', '');
                     const r = parseInt(h.substring(0, 2), 16);
                     const g = parseInt(h.substring(2, 4), 16);
                     const b = parseInt(h.substring(4, 6), 16);
-                    color = `rgb(${Math.round(r * 0.6)}, ${Math.round(g * 0.6)}, ${Math.round(b * 0.6)})`;
+                    color = `rgb(${Math.round(r * 0.82)}, ${Math.round(g * 0.82)}, ${Math.round(b * 0.82)})`;
                 }
                 var resolvedNavColor = navColor;
             } else if (lum > 0.75) {
@@ -7239,13 +7249,17 @@
                     const hasNcaa = allGames.some(e => e._tourney === 'ncaa');
                     const hasNit = allGames.some(e => e._tourney === 'nit');
                     const r2RoundNames = ['Second Round', 'Round of 32', '2nd Round'];
+                    const s16RoundNames = ['Sweet 16', 'Sweet Sixteen', 'Regional Semifinal', 'Third Round', '3rd Round'];
                     const hasR2 = allGames.some(e => e._tourney === 'ncaa' && r2RoundNames.some(r => e._round?.includes(r)));
-                    const hasR1 = allGames.some(e => e._tourney === 'ncaa' && !e._round?.includes('First Four') && !r2RoundNames.some(r => e._round?.includes(r)));
+                    const hasR1 = allGames.some(e => e._tourney === 'ncaa' && !e._round?.includes('First Four') && !r2RoundNames.some(r => e._round?.includes(r)) && !s16RoundNames.some(r => e._round?.includes(r)));
+                    const hasS16 = allGames.some(e => e._tourney === 'ncaa' && s16RoundNames.some(r => e._round?.includes(r)));
                     document.getElementById('gamesFilters').style.display = (hasNcaa || hasNit) ? 'flex' : 'none';
 
-                    // Show/hide Round 2 button based on whether R2 games exist
+                    // Show/hide round buttons based on whether those games exist
                     const r2Btn = document.querySelector('.games-filter-btn[data-filter="ncaa-r2"]');
                     if (r2Btn) r2Btn.style.display = hasR2 ? '' : 'none';
+                    const s16Btn = document.querySelector('.games-filter-btn[data-filter="ncaa-s16"]');
+                    if (s16Btn) s16Btn.style.display = hasS16 ? '' : 'none';
 
                     // Set up filter event listeners (once)
                     if (!window._gamesFiltersInit) {
@@ -7260,10 +7274,12 @@
                         confSelect.addEventListener('change', renderFilteredGames);
                     }
 
-                    // Default to the most current round — R2 if available, otherwise R1
+                    // Default to the most current round
                     if (hasNcaa) {
                         document.querySelectorAll('.games-filter-btn').forEach(b => b.classList.remove('active'));
-                        if (hasR2) {
+                        if (hasS16) {
+                            document.querySelector('.games-filter-btn[data-filter="ncaa-s16"]').classList.add('active');
+                        } else if (hasR2) {
                             document.querySelector('.games-filter-btn[data-filter="ncaa-r2"]').classList.add('active');
                         } else if (hasR1) {
                             document.querySelector('.games-filter-btn[data-filter="ncaa"]').classList.add('active');
@@ -7287,10 +7303,13 @@
             // Filter by tournament type
             let filtered = allGames;
             const r2Rounds = ['Second Round', 'Round of 32', '2nd Round'];
+            const s16Rounds = ['Sweet 16', 'Sweet Sixteen', 'Regional Semifinal', 'Third Round', '3rd Round'];
             if (activeFilter === 'ncaa') {
-                filtered = allGames.filter(e => e._tourney === 'ncaa' && !e._round?.includes('First Four') && !r2Rounds.some(r => e._round?.includes(r)));
+                filtered = allGames.filter(e => e._tourney === 'ncaa' && !e._round?.includes('First Four') && !r2Rounds.some(r => e._round?.includes(r)) && !s16Rounds.some(r => e._round?.includes(r)));
             } else if (activeFilter === 'ncaa-r2') {
                 filtered = allGames.filter(e => e._tourney === 'ncaa' && r2Rounds.some(r => e._round?.includes(r)));
+            } else if (activeFilter === 'ncaa-s16') {
+                filtered = allGames.filter(e => e._tourney === 'ncaa' && s16Rounds.some(r => e._round?.includes(r)));
             } else if (activeFilter === 'firstfour') {
                 filtered = allGames.filter(e => e._tourney === 'ncaa' && e._round?.includes('First Four'));
             } else if (activeFilter === 'nit') {
@@ -7315,6 +7334,7 @@
             if (titleEl) {
                 if (activeFilter === 'ncaa') titleEl.textContent = 'March Madness — Round 1';
                 else if (activeFilter === 'ncaa-r2') titleEl.textContent = 'March Madness — Round 2';
+                else if (activeFilter === 'ncaa-s16') titleEl.textContent = 'March Madness — Sweet 16';
                 else if (activeFilter === 'firstfour') titleEl.textContent = 'March Madness — First Four';
                 else if (activeFilter === 'nit') titleEl.textContent = 'NIT';
                 else titleEl.textContent = 'All Postseason Games';
