@@ -5689,14 +5689,23 @@
 
             // Start unified live ticker — one master loop updates everything in sync
             try { startUnifiedLiveTicker(); } catch(e) { console.error('Live ticker error:', e); }
-            // One-time cleanup: clear stale Nebraska takeover (was a curated milestone, now expired)
+            // Set Iowa upset as current takeover (biggest upset of Round 2: 9-seed over 1-seed)
+            // Will be replaced by any bigger upset that triggers live
             try {
                 const _stored = localStorage.getItem('upsetTakeover');
-                if (_stored) {
-                    const _prev = JSON.parse(_stored);
-                    if (_prev.espnId === '158') {
-                        localStorage.removeItem('upsetTakeover');
-                    }
+                const _needsIowa = !_stored || (JSON.parse(_stored).espnId === '158');
+                if (_needsIowa) {
+                    const iowaData = {
+                        team: 'Iowa Hawkeyes',
+                        color: '#FFCD00',
+                        navColor: '#231f20',
+                        espnId: '2294',
+                        time: Date.now(),
+                        message: 'UPSET COMPLETE: 9-seed Iowa Hawkeyes stuns 1-seed Florida Gators!',
+                        gameLink: '#game/2026/iowa-hawkeyes-vs-florida-gators',
+                        seedDiff: 8
+                    };
+                    localStorage.setItem('upsetTakeover', JSON.stringify(iowaData));
                 }
             } catch(e) {}
             // Takeover restore — apply whatever is in localStorage (from live upset triggers)
