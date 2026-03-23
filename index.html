@@ -5371,7 +5371,30 @@
 
         function applyUpsetTakeover(data, animate) {
             document.body.classList.add('upset-takeover');
-            document.documentElement.style.setProperty('--accent-color', data.color);
+
+            // Fix dark accent colors at apply-time: if accent is too dark,
+            // fetch the team's alternateColor from ESPN API
+            let accentColor = data.color;
+            function _getLum(c) {
+                let h = (c || '').replace('#', '');
+                if (h.startsWith('rgb')) { const m = h.match(/\d+/g); if (m) return (0.299*m[0] + 0.587*m[1] + 0.114*m[2]) / 255; }
+                if (h.length === 6) return (0.299 * parseInt(h.substring(0,2),16) + 0.587 * parseInt(h.substring(2,4),16) + 0.114 * parseInt(h.substring(4,6),16)) / 255;
+                return 0.5;
+            }
+            if (_getLum(accentColor) < 0.2 && data.espnId) {
+                // Try to get alternateColor from ESPN
+                fetch(`https://site.api.espn.com/apis/site/v2/sports/basketball/mens-college-basketball/teams/${data.espnId}`)
+                    .then(r => r.json())
+                    .then(d => {
+                        const alt = d.team?.alternateColor;
+                        if (alt) {
+                            const goldColor = '#' + alt.replace('#', '');
+                            document.documentElement.style.setProperty('--accent-color', goldColor);
+                        }
+                    }).catch(() => {});
+            }
+
+            document.documentElement.style.setProperty('--accent-color', accentColor);
             document.documentElement.style.setProperty('--header-accent', data.navColor || data.color);
 
             // Remove any existing banner
@@ -5461,7 +5484,7 @@
             const lum = getLuminance(color);
 
             // Very dark primary (black/near-black): use altColor as accent, dark as nav
-            if (lum < 0.08 && altColor) {
+            if (lum < 0.2 && altColor) {
                 const navColor = color;
                 color = altColor; // swap: gold/secondary becomes the accent
                 // Re-check if alt is too light — only darken slightly to keep it recognizable
