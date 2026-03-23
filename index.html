@@ -5659,9 +5659,8 @@
                 if (stored) {
                     try {
                         const prev = JSON.parse(stored);
-                        // Replace any stale takeover (Texas, Kentucky, etc.) with Nebraska
-                        // unless it's already Nebraska or something newer with higher seedDiff
-                        if (prev.espnId !== '158' && (!prev.seedDiff || prev.seedDiff <= 6)) {
+                        // Curated milestone — always replace unless already Nebraska
+                        if (prev.espnId !== '158') {
                             shouldSetNeb = true;
                         }
                     } catch(e) { shouldSetNeb = true; }
@@ -5673,9 +5672,9 @@
                         navColor: '#E41C38',
                         espnId: '158',
                         time: Date.now(),
-                        message: 'Nebraska is headed to the Sweet 16! Their first tournament win was just 2 days ago.',
+                        message: '🌽 Nebraska is headed to their first ever Sweet 16!',
                         gameLink: '#game/2026/nebraska-cornhuskers-vs-vanderbilt-commodores',
-                        seedDiff: 6
+                        seedDiff: 99  // Curated milestone — always wins
                     };
                     localStorage.setItem('upsetTakeover', JSON.stringify(nebData));
                 }
@@ -5916,9 +5915,9 @@
                             navColor: '#E41C38',
                             espnId: '158',
                             time: Date.now(),
-                            message: 'Nebraska is headed to the Sweet 16! Their first tournament win was just 2 days ago.',
+                            message: '🌽 Nebraska is headed to their first ever Sweet 16!',
                             gameLink: '#game/2026/nebraska-cornhuskers-vs-vanderbilt-commodores',
-                            seedDiff: 6  // High enough to persist but can be replaced by a bigger upset
+                            seedDiff: 99  // Curated milestone — always wins
                         };
                         localStorage.setItem('upsetTakeover', JSON.stringify(nebData));
                         applyUpsetTakeover(nebData, true);
