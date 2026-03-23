@@ -5689,21 +5689,11 @@
 
             // Start unified live ticker — one master loop updates everything in sync
             try { startUnifiedLiveTicker(); } catch(e) { console.error('Live ticker error:', e); }
-            // Nebraska Sweet 16 milestone — biggest story of the tournament so far
-            // Will be replaced by any new upset/milestone that triggers today
+            // Nebraska Sweet 16 milestone — fallback only if nothing stored
+            // Any live upset or instant classic that triggered replaces this
             try {
                 const stored = localStorage.getItem('upsetTakeover');
-                let shouldSetNeb = !stored;
-                if (stored) {
-                    try {
-                        const prev = JSON.parse(stored);
-                        // Curated milestone — always replace unless already Nebraska
-                        if (prev.espnId !== '158') {
-                            shouldSetNeb = true;
-                        }
-                    } catch(e) { shouldSetNeb = true; }
-                }
-                if (shouldSetNeb) {
+                if (!stored) {
                     const nebData = {
                         team: 'Nebraska',
                         color: '#E41C38',
