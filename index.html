@@ -13780,6 +13780,11 @@
                                 if (period > 2) {
                                     upset.overtimes = period - 2;
                                 }
+                                // Extract round from notes
+                                const _notes = comp.notes || [];
+                                const _headline = _notes.map(n => n.headline || '').join(' ');
+                                const _roundMatch = _headline.match(/- ([^-]+)$/);
+                                if (_roundMatch) upset.roundLabel = _roundMatch[1].trim();
                             }
                         }
                     } catch(e) { console.warn('Could not fetch classic game score:', e); }
@@ -13854,7 +13859,7 @@
                         <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M10.5 13L5.5 8l5-5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
                         ${isClassicOnly ? 'Back' : 'Back to Upsets'}
                     </a>
-                    <div class="game-detail-round">NCAA Tournament First Round</div>
+                    <div class="game-detail-round">NCAA Tournament ${upset.roundLabel || 'First Round'}</div>
                     <div class="game-detail-year">${year} NCAA Tournament</div>
 
                     <div class="game-detail-matchup">
