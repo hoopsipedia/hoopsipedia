@@ -5689,24 +5689,7 @@
 
             // Start unified live ticker — one master loop updates everything in sync
             try { startUnifiedLiveTicker(); } catch(e) { console.error('Live ticker error:', e); }
-            // Nebraska Sweet 16 milestone — fallback only if nothing stored
-            // Any live upset or instant classic that triggered replaces this
-            try {
-                const stored = localStorage.getItem('upsetTakeover');
-                if (!stored) {
-                    const nebData = {
-                        team: 'Nebraska',
-                        color: '#E41C38',
-                        navColor: '#E41C38',
-                        espnId: '158',
-                        time: Date.now(),
-                        message: '🌽 Nebraska is headed to their first ever Sweet 16!',
-                        gameLink: '#game/2026/nebraska-cornhuskers-vs-vanderbilt-commodores',
-                        seedDiff: 1  // Low so any live upset today replaces it
-                    };
-                    localStorage.setItem('upsetTakeover', JSON.stringify(nebData));
-                }
-            } catch(e) {}
+            // Takeover restore — apply whatever is in localStorage (from live upset triggers)
             try { checkUpsetTakeover(); } catch(e) { console.error('Upset takeover restore error:', e); }
             try { checkMilestoneBanner(); } catch(e) { console.error('Milestone banner restore error:', e); }
 
@@ -5932,23 +5915,6 @@
                                 }
                             }
                         }
-                    }
-
-                    // One-time Nebraska milestone: first Sweet 16 after never winning a tourney game before 2026
-                    if (!_takeoverTriggered.has(gameId) && String(winner.team?.id) === '158') {
-                        _takeoverTriggered.add(gameId);
-                        const nebData = {
-                            team: 'Nebraska',
-                            color: '#E41C38',
-                            navColor: '#E41C38',
-                            espnId: '158',
-                            time: Date.now(),
-                            message: '🌽 Nebraska is headed to their first ever Sweet 16!',
-                            gameLink: '#game/2026/nebraska-cornhuskers-vs-vanderbilt-commodores',
-                            seedDiff: 1  // Low so any live upset today replaces it
-                        };
-                        localStorage.setItem('upsetTakeover', JSON.stringify(nebData));
-                        applyUpsetTakeover(nebData, true);
                     }
 
                     // Check for historic milestones
