@@ -7207,16 +7207,13 @@
                 grid.innerHTML = renderGameCardsSkeleton(6);
             }
 
-            // Fetch last 3 days + today + upcoming days (covers First Four results through Round 1)
-            // Use Mountain Time for date rollover (tournament games can end past midnight ET)
+            // Fetch entire tournament window: March 18 (First Four) through April 7 (Championship)
+            // Single date-range request to get all tournament games with results
             const etNow = new Date(new Date().toLocaleString('en-US', { timeZone: 'America/Denver' }));
-            const urls = [];
-            for (let i = -3; i < 7; i++) {
-                const d = new Date(etNow);
-                d.setDate(d.getDate() + i);
-                const dateStr = `${d.getFullYear()}${String(d.getMonth()+1).padStart(2,'0')}${String(d.getDate()).padStart(2,'0')}`;
-                urls.push(`https://site.api.espn.com/apis/site/v2/sports/basketball/mens-college-basketball/scoreboard?dates=${dateStr}&groups=100`);
-            }
+            const yr = etNow.getFullYear();
+            const urls = [
+                `https://site.api.espn.com/apis/site/v2/sports/basketball/mens-college-basketball/scoreboard?dates=${yr}0318-${yr}0407&groups=100&limit=300`
+            ];
 
             // Use shared scoreboard cache for today's date to stay in sync with upset watch
             const todayStr = `${etNow.getFullYear()}${String(etNow.getMonth()+1).padStart(2,'0')}${String(etNow.getDate()).padStart(2,'0')}`;
@@ -7305,16 +7302,7 @@
                     const hasE8 = allGames.some(e => e._tourney === 'ncaa' && e8RoundNames.some(r => e._round?.includes(r)));
                     document.getElementById('gamesFilters').style.display = (hasNcaa || hasNit) ? 'flex' : 'none';
 
-                    // Show/hide round buttons based on whether those games exist
-                    const hasFF = allGames.some(e => e._tourney === 'ncaa' && e._round?.includes('First Four'));
-                    const ffBtn = document.querySelector('.games-filter-btn[data-filter="firstfour"]');
-                    if (ffBtn) ffBtn.style.display = hasFF ? '' : 'none';
-                    const r1Btn = document.querySelector('.games-filter-btn[data-filter="ncaa"]');
-                    if (r1Btn) r1Btn.style.display = hasR1 ? '' : 'none';
-                    const r2Btn = document.querySelector('.games-filter-btn[data-filter="ncaa-r2"]');
-                    if (r2Btn) r2Btn.style.display = hasR2 ? '' : 'none';
-                    const s16Btn = document.querySelector('.games-filter-btn[data-filter="ncaa-s16"]');
-                    if (s16Btn) s16Btn.style.display = hasS16 ? '' : 'none';
+                    // Show/hide round buttons — only hide future rounds with no games yet
                     const e8Btn = document.querySelector('.games-filter-btn[data-filter="ncaa-e8"]');
                     if (e8Btn) e8Btn.style.display = hasE8 ? '' : 'none';
 
@@ -13228,7 +13216,7 @@
             '2026/texas-longhorns-vs-byu-cougars': { videoId: 'tNyN_y1bVaI', title: 'Texas vs BYU - First Round NCAA Tournament 2026 Extended Highlights', type: 'highlights' },
             '2026/texas-longhorns-vs-gonzaga-bulldogs': { videoId: 'jQ1oxzALkdw', title: 'Texas vs Gonzaga - Second Round NCAA Tournament 2026 Extended Highlights', type: 'highlights' },
             '2026/iowa-hawkeyes-vs-florida-gators': { videoId: 'wMZ2WYe41Zo', title: 'Iowa vs Florida - Second Round NCAA Tournament 2026 Extended Highlights', type: 'highlights' },
-            '2026/tennessee-volunteers-vs-iowa-state-cyclones': { videoId: '', title: 'Tennessee vs Iowa State - Sweet 16 NCAA Tournament 2026 Highlights', type: 'highlights' },
+            '2026/tennessee-volunteers-vs-iowa-state-cyclones': { videoId: 'fEGwbBsKTNU', title: 'Tennessee vs Iowa State - Sweet 16 NCAA Tournament 2026 Highlights', type: 'highlights' },
             '2026/st-johns-red-storm-vs-kansas-jayhawks': { videoId: 'BCOixn9ohb0', title: 'St. John\'s vs Kansas - Second Round NCAA Tournament 2026 Extended Highlights', type: 'highlights' },
             '2026/nebraska-cornhuskers-vs-vanderbilt-commodores': { videoId: '5zcKvmpqToo', title: 'Nebraska vs Vanderbilt - Second Round NCAA Tournament 2026 Highlights', type: 'highlights' },
             '2026/texas-a-m-aggies-vs-saint-mary-s-gaels': { videoId: 'zcsDIi5nuZA', title: 'Texas A&M vs Saint Mary\'s - First Round NCAA Tournament 2026 Extended Highlights', type: 'highlights' },
@@ -13570,7 +13558,7 @@
                 tags: ['historic-performance'],
                 headline: 'Tennessee punches their ticket to a 4th straight Elite 8',
                 description: 'Rick Barnes\' 6-seed Volunteers knocked off 2-seed Iowa State to continue their remarkable March run. Tennessee becomes one of just a handful of programs to reach four consecutive Elite Eights.',
-                videoId: '',
+                videoId: 'fEGwbBsKTNU',
                 eventId: '401856573'
             },
             '401856534': {
