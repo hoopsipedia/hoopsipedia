@@ -4002,6 +4002,7 @@
                         <button class="games-filter-btn active" data-filter="ncaa">Round 1</button>
                         <button class="games-filter-btn" data-filter="ncaa-r2">Round 2</button>
                         <button class="games-filter-btn" data-filter="ncaa-s16">Sweet 16</button>
+                        <button class="games-filter-btn" data-filter="ncaa-e8">Elite 8</button>
                         <button class="games-filter-btn" data-filter="nit">NIT</button>
                         <button class="games-filter-btn" data-filter="all">All Games</button>
                     </div>
@@ -7272,9 +7273,11 @@
                     const hasNit = allGames.some(e => e._tourney === 'nit');
                     const r2RoundNames = ['Second Round', 'Round of 32', '2nd Round'];
                     const s16RoundNames = ['Sweet 16', 'Sweet Sixteen', 'Regional Semifinal', 'Third Round', '3rd Round'];
+                    const e8RoundNames = ['Elite 8', 'Elite Eight', 'Regional Final', 'Regional Championship'];
                     const hasR2 = allGames.some(e => e._tourney === 'ncaa' && r2RoundNames.some(r => e._round?.includes(r)));
-                    const hasR1 = allGames.some(e => e._tourney === 'ncaa' && !e._round?.includes('First Four') && !r2RoundNames.some(r => e._round?.includes(r)) && !s16RoundNames.some(r => e._round?.includes(r)));
+                    const hasR1 = allGames.some(e => e._tourney === 'ncaa' && !e._round?.includes('First Four') && !r2RoundNames.some(r => e._round?.includes(r)) && !s16RoundNames.some(r => e._round?.includes(r)) && !e8RoundNames.some(r => e._round?.includes(r)));
                     const hasS16 = allGames.some(e => e._tourney === 'ncaa' && s16RoundNames.some(r => e._round?.includes(r)));
+                    const hasE8 = allGames.some(e => e._tourney === 'ncaa' && e8RoundNames.some(r => e._round?.includes(r)));
                     document.getElementById('gamesFilters').style.display = (hasNcaa || hasNit) ? 'flex' : 'none';
 
                     // Show/hide round buttons based on whether those games exist
@@ -7282,6 +7285,8 @@
                     if (r2Btn) r2Btn.style.display = hasR2 ? '' : 'none';
                     const s16Btn = document.querySelector('.games-filter-btn[data-filter="ncaa-s16"]');
                     if (s16Btn) s16Btn.style.display = hasS16 ? '' : 'none';
+                    const e8Btn = document.querySelector('.games-filter-btn[data-filter="ncaa-e8"]');
+                    if (e8Btn) e8Btn.style.display = hasE8 ? '' : 'none';
 
                     // Set up filter event listeners (once)
                     if (!window._gamesFiltersInit) {
@@ -7299,7 +7304,9 @@
                     // Default to the most current round
                     if (hasNcaa) {
                         document.querySelectorAll('.games-filter-btn').forEach(b => b.classList.remove('active'));
-                        if (hasS16) {
+                        if (hasE8) {
+                            document.querySelector('.games-filter-btn[data-filter="ncaa-e8"]').classList.add('active');
+                        } else if (hasS16) {
                             document.querySelector('.games-filter-btn[data-filter="ncaa-s16"]').classList.add('active');
                         } else if (hasR2) {
                             document.querySelector('.games-filter-btn[data-filter="ncaa-r2"]').classList.add('active');
@@ -7326,12 +7333,15 @@
             let filtered = allGames;
             const r2Rounds = ['Second Round', 'Round of 32', '2nd Round'];
             const s16Rounds = ['Sweet 16', 'Sweet Sixteen', 'Regional Semifinal', 'Third Round', '3rd Round'];
+            const e8Rounds = ['Elite 8', 'Elite Eight', 'Regional Final', 'Regional Championship'];
             if (activeFilter === 'ncaa') {
-                filtered = allGames.filter(e => e._tourney === 'ncaa' && !e._round?.includes('First Four') && !r2Rounds.some(r => e._round?.includes(r)) && !s16Rounds.some(r => e._round?.includes(r)));
+                filtered = allGames.filter(e => e._tourney === 'ncaa' && !e._round?.includes('First Four') && !r2Rounds.some(r => e._round?.includes(r)) && !s16Rounds.some(r => e._round?.includes(r)) && !e8Rounds.some(r => e._round?.includes(r)));
             } else if (activeFilter === 'ncaa-r2') {
                 filtered = allGames.filter(e => e._tourney === 'ncaa' && r2Rounds.some(r => e._round?.includes(r)));
             } else if (activeFilter === 'ncaa-s16') {
                 filtered = allGames.filter(e => e._tourney === 'ncaa' && s16Rounds.some(r => e._round?.includes(r)));
+            } else if (activeFilter === 'ncaa-e8') {
+                filtered = allGames.filter(e => e._tourney === 'ncaa' && e8Rounds.some(r => e._round?.includes(r)));
             } else if (activeFilter === 'firstfour') {
                 filtered = allGames.filter(e => e._tourney === 'ncaa' && e._round?.includes('First Four'));
             } else if (activeFilter === 'nit') {
@@ -7357,6 +7367,7 @@
                 if (activeFilter === 'ncaa') titleEl.textContent = 'March Madness — Round 1';
                 else if (activeFilter === 'ncaa-r2') titleEl.textContent = 'March Madness — Round 2';
                 else if (activeFilter === 'ncaa-s16') titleEl.textContent = 'March Madness — Sweet 16';
+                else if (activeFilter === 'ncaa-e8') titleEl.textContent = 'March Madness — Elite 8';
                 else if (activeFilter === 'firstfour') titleEl.textContent = 'March Madness — First Four';
                 else if (activeFilter === 'nit') titleEl.textContent = 'NIT';
                 else titleEl.textContent = 'All Postseason Games';
