@@ -7306,6 +7306,11 @@
                     document.getElementById('gamesFilters').style.display = (hasNcaa || hasNit) ? 'flex' : 'none';
 
                     // Show/hide round buttons based on whether those games exist
+                    const hasFF = allGames.some(e => e._tourney === 'ncaa' && e._round?.includes('First Four'));
+                    const ffBtn = document.querySelector('.games-filter-btn[data-filter="firstfour"]');
+                    if (ffBtn) ffBtn.style.display = hasFF ? '' : 'none';
+                    const r1Btn = document.querySelector('.games-filter-btn[data-filter="ncaa"]');
+                    if (r1Btn) r1Btn.style.display = hasR1 ? '' : 'none';
                     const r2Btn = document.querySelector('.games-filter-btn[data-filter="ncaa-r2"]');
                     if (r2Btn) r2Btn.style.display = hasR2 ? '' : 'none';
                     const s16Btn = document.querySelector('.games-filter-btn[data-filter="ncaa-s16"]');
