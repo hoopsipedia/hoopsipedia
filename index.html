@@ -5419,8 +5419,10 @@
                 return 0.5;
             })();
             const logoVariant = bannerLum < 0.3 ? '500-dark' : '500';
-            const logoUrl = data.espnId ? `https://a.espncdn.com/i/teamlogos/ncaa/${logoVariant}/${data.espnId}.png` : '';
-            const logoImg = logoUrl ? `<img src="${logoUrl}" alt="" onerror="this.style.display='none'">` : '';
+            // 🎭 Luchador easter egg: Tennessee gets a luchador mask for 2 hours
+            const _luchadorActive = data.espnId === '2633' && data.time && (Date.now() - data.time < 2 * 60 * 60 * 1000);
+            const logoUrl = _luchadorActive ? 'tennessee_luchador.svg' : (data.espnId ? `https://a.espncdn.com/i/teamlogos/ncaa/${logoVariant}/${data.espnId}.png` : '');
+            const logoImg = logoUrl ? `<img src="${logoUrl}" alt="" style="${_luchadorActive ? 'width:36px;height:36px;' : ''}" onerror="this.style.display='none'">` : '';
 
             const gameLink = data.gameLink || '#';
             banner.innerHTML = `
@@ -5934,6 +5936,23 @@
                                 }
                             }
                         }
+                    }
+
+                    // Curated takeover: Tennessee Elite 8 (6-seed over 2-seed Iowa State)
+                    if (!_takeoverTriggered.has(gameId) && String(winner.team?.id) === '2633' && String(loser.team?.id) === '66') {
+                        _takeoverTriggered.add(gameId);
+                        const tennData = {
+                            team: 'Tennessee',
+                            color: '#FF8200',
+                            navColor: '#FF8200',
+                            espnId: '2633',
+                            time: Date.now(),
+                            message: '🍊 Tennessee is headed to the Elite 8! 4th straight year in the second weekend.',
+                            gameLink: '#game/2026/tennessee-volunteers-vs-iowa-state-cyclones',
+                            seedDiff: 10
+                        };
+                        localStorage.setItem('upsetTakeover', JSON.stringify(tennData));
+                        applyUpsetTakeover(tennData, true);
                     }
 
                     // Check for historic milestones
@@ -13168,6 +13187,7 @@
             '2026/texas-longhorns-vs-byu-cougars': { videoId: 'tNyN_y1bVaI', title: 'Texas vs BYU - First Round NCAA Tournament 2026 Extended Highlights', type: 'highlights' },
             '2026/texas-longhorns-vs-gonzaga-bulldogs': { videoId: 'jQ1oxzALkdw', title: 'Texas vs Gonzaga - Second Round NCAA Tournament 2026 Extended Highlights', type: 'highlights' },
             '2026/iowa-hawkeyes-vs-florida-gators': { videoId: 'wMZ2WYe41Zo', title: 'Iowa vs Florida - Second Round NCAA Tournament 2026 Extended Highlights', type: 'highlights' },
+            '2026/tennessee-volunteers-vs-iowa-state-cyclones': { videoId: '', title: 'Tennessee vs Iowa State - Sweet 16 NCAA Tournament 2026 Highlights', type: 'highlights' },
             '2026/st-johns-red-storm-vs-kansas-jayhawks': { videoId: 'BCOixn9ohb0', title: 'St. John\'s vs Kansas - Second Round NCAA Tournament 2026 Extended Highlights', type: 'highlights' },
             '2026/nebraska-cornhuskers-vs-vanderbilt-commodores': { videoId: '5zcKvmpqToo', title: 'Nebraska vs Vanderbilt - Second Round NCAA Tournament 2026 Highlights', type: 'highlights' },
             '2026/texas-a-m-aggies-vs-saint-mary-s-gaels': { videoId: 'zcsDIi5nuZA', title: 'Texas A&M vs Saint Mary\'s - First Round NCAA Tournament 2026 Extended Highlights', type: 'highlights' },
@@ -13497,6 +13517,20 @@
                 description: 'Darling drove the length of the court and finished with a layup as time expired to give St. John\'s a 67-65 win over Kansas, sending the Red Storm to the Sweet 16 for the first time in 27 years.',
                 videoId: 'BCOixn9ohb0',
                 eventId: '401856558'
+            },
+            '401856573': {
+                year: 2026,
+                team1: 'Tennessee Volunteers',
+                team1Seed: 6,
+                team1EspnId: '2633',
+                team2: 'Iowa State Cyclones',
+                team2Seed: 2,
+                team2EspnId: '66',
+                tags: ['historic-performance'],
+                headline: 'Tennessee punches their ticket to a 4th straight Elite 8',
+                description: 'Rick Barnes\' 6-seed Volunteers knocked off 2-seed Iowa State to continue their remarkable March run. Tennessee becomes one of just a handful of programs to reach four consecutive Elite Eights.',
+                videoId: '',
+                eventId: '401856573'
             },
             '401856534': {
                 year: 2026,
