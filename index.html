@@ -311,6 +311,107 @@
         /* ── Section Titles ── */
         .section-title { font-size: 1.7rem; font-weight: 700; margin-bottom: 1.75rem; color: #1B2A4A; }
 
+        /* ── Player Spotlights ── */
+        .player-spotlights-section {
+            margin-bottom: 2rem;
+        }
+        .player-spotlights-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+        }
+        .player-spotlight-game {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        .player-spotlight-game-header {
+            text-align: center;
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #8892A0;
+            padding: 0.25rem 0;
+        }
+        .player-spotlight-card {
+            background: #F5F3EE;
+            border-radius: 0.75rem;
+            padding: 1.25rem 1rem;
+            text-align: center;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+            transition: all 0.2s ease;
+            cursor: pointer;
+            border-top: 3px solid #C9A86C;
+        }
+        .player-spotlight-card:hover {
+            box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+            transform: translateY(-2px);
+        }
+        .player-spotlight-headshot {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: top;
+            margin: 0 auto 0.75rem;
+            display: block;
+            background: #E8E4DD;
+            border: 3px solid #C9A86C;
+        }
+        .player-spotlight-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #1B2A4A;
+            margin-bottom: 0.25rem;
+        }
+        .player-spotlight-meta {
+            font-size: 0.7rem;
+            color: #8892A0;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.4rem;
+        }
+        .player-spotlight-meta img {
+            width: 16px;
+            height: 16px;
+        }
+        .player-spotlight-stats {
+            display: flex;
+            justify-content: center;
+            gap: 0.75rem;
+        }
+        .player-spotlight-stat {
+            text-align: center;
+        }
+        .player-spotlight-stat-value {
+            font-size: 1.1rem;
+            font-weight: 800;
+            color: #1B2A4A;
+        }
+        .player-spotlight-stat-label {
+            font-size: 0.55rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: #8892A0;
+        }
+        .player-spotlight-vs {
+            font-size: 0.65rem;
+            color: #8892A0;
+            margin-top: 0.75rem;
+            font-weight: 600;
+        }
+        @media (max-width: 1024px) {
+            .player-spotlights-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 600px) {
+            .player-spotlights-grid { grid-template-columns: 1fr; }
+        }
+
         /* ── Games Section ── */
         .games-section {
             margin-bottom: 3rem;
@@ -3994,6 +4095,11 @@
 
             <div id="upsetWatchContainer" class="upset-watch-container" style="display:none;"></div>
 
+            <div class="player-spotlights-section" id="playerSpotlightsSection" style="display:none;">
+                <h2 class="section-title" style="margin-bottom:1rem;">Elite 8 — Players to Watch</h2>
+                <div class="player-spotlights-grid" id="playerSpotlightsGrid"></div>
+            </div>
+
             <div class="games-section" id="gamesSection">
                 <h2 class="section-title" id="gamesTitle">Today's Games</h2>
                 <div class="games-filters" id="gamesFilters" style="display:none;">
@@ -6954,6 +7060,7 @@
         function renderHome() {
             // Each section is isolated — one crash cannot kill the others
             try { renderTodaysGames(); } catch(e) { console.error('Games section error:', e); }
+            try { loadEliteEightSpotlights().then(s => { if (s) renderEliteEightSpotlights(s); }).catch(e => console.error('Spotlights error:', e)); } catch(e) {}
             try { renderPopularPrograms(); } catch(e) { console.error('AP Top 25 error:', e); }
             try { renderWinsLeaders(); } catch(e) { console.error('Leaders error:', e); }
         }
@@ -7171,6 +7278,145 @@
                 </div>`;
             }
             return html;
+        }
+
+        // ── Elite 8 Player Spotlights ──
+        let _e8SpotlightCache = null;
+
+        async function loadEliteEightSpotlights() {
+            if (_e8SpotlightCache) return _e8SpotlightCache;
+            if (!_sharedScoreboard) return null;
+
+            // Find Elite 8 games from scoreboard
+            const e8Events = [];
+            for (const ev of (_sharedScoreboard.events || [])) {
+                const comp = ev.competitions?.[0];
+                if (!comp) continue;
+                const note = (comp.notes?.[0]?.headline || '').toLowerCase();
+                if (note.includes('elite 8') || note.includes('elite eight') || note.includes('regional final')) {
+                    const teams = comp.competitors || [];
+                    if (teams.length === 2) {
+                        e8Events.push({
+                            eventId: ev.id,
+                            region: (comp.notes?.[0]?.headline || '').replace(/.*- /, '').replace(/ - .*/, ''),
+                            team1: { id: teams[0].team?.id, name: teams[0].team?.displayName, seed: teams[0].curatedRank?.current, color: teams[0].team?.color },
+                            team2: { id: teams[1].team?.id, name: teams[1].team?.displayName, seed: teams[1].curatedRank?.current, color: teams[1].team?.color }
+                        });
+                    }
+                }
+            }
+
+            if (e8Events.length === 0) return null;
+
+            // Fetch summary for each E8 game
+            const spotlights = [];
+            const fetches = e8Events.map(async (game) => {
+                try {
+                    const resp = await fetch(`https://site.api.espn.com/apis/site/v2/sports/basketball/mens-college-basketball/summary?event=${game.eventId}`, { headers: { 'User-Agent': 'Hoopsipedia/1.0' } });
+                    if (!resp.ok) return;
+                    const data = await resp.json();
+                    const teamLeaders = data.leaders || [];
+
+                    for (const tl of teamLeaders) {
+                        const teamId = tl.team?.id;
+                        const teamInfo = teamId === String(game.team1.id) ? game.team1 : game.team2;
+                        const opponentInfo = teamId === String(game.team1.id) ? game.team2 : game.team1;
+                        const cats = tl.leaders || [];
+
+                        // Get PPG leader (first category)
+                        const ppgCat = cats.find(c => c.name === 'pointsPerGame');
+                        const rpgCat = cats.find(c => c.name === 'reboundsPerGame');
+                        const apgCat = cats.find(c => c.name === 'assistsPerGame');
+
+                        if (!ppgCat?.leaders?.[0]) continue;
+                        const topPlayer = ppgCat.leaders[0];
+                        const athlete = topPlayer.athlete || {};
+                        const headshot = typeof athlete.headshot === 'object' ? athlete.headshot.href : (athlete.headshot || '');
+
+                        // Get RPG and APG for this same player or the leader
+                        const rpgVal = rpgCat?.leaders?.[0]?.displayValue || '—';
+                        const apgVal = apgCat?.leaders?.[0]?.displayValue || '—';
+
+                        spotlights.push({
+                            eventId: game.eventId,
+                            region: game.region,
+                            playerName: athlete.displayName || athlete.fullName || '?',
+                            jersey: athlete.jersey || '?',
+                            position: athlete.position?.abbreviation || '?',
+                            headshot: headshot,
+                            ppg: topPlayer.displayValue || '?',
+                            rpg: rpgVal,
+                            apg: apgVal,
+                            teamId: teamId,
+                            teamName: teamInfo.name,
+                            teamSeed: teamInfo.seed,
+                            teamColor: teamInfo.color,
+                            opponentName: opponentInfo.name,
+                            opponentSeed: opponentInfo.seed
+                        });
+                    }
+                } catch (e) { console.warn('Spotlight fetch error:', e); }
+            });
+
+            await Promise.all(fetches);
+            _e8SpotlightCache = spotlights;
+            return spotlights;
+        }
+
+        function renderEliteEightSpotlights(spotlights) {
+            const section = document.getElementById('playerSpotlightsSection');
+            const grid = document.getElementById('playerSpotlightsGrid');
+            if (!section || !grid || !spotlights || spotlights.length === 0) return;
+
+            // Group by eventId to pair opponents
+            const games = {};
+            for (const s of spotlights) {
+                if (!games[s.eventId]) games[s.eventId] = [];
+                games[s.eventId].push(s);
+            }
+
+            let html = '';
+            for (const eventId of Object.keys(games)) {
+                const players = games[eventId];
+                const region = players[0]?.region || '';
+                html += `<div class="player-spotlight-game">`;
+                html += `<div class="player-spotlight-game-header">${region}</div>`;
+                for (const p of players) {
+                    const color = p.teamColor ? '#' + p.teamColor.replace('#','') : '#C9A86C';
+                    const logoUrl = `https://a.espncdn.com/i/teamlogos/ncaa/500/${p.teamId}.png`;
+                    const headshotUrl = p.headshot || `https://a.espncdn.com/i/headshots/nophoto.png`;
+                    const gameSlug = `${teamSlug(p.teamName)}-vs-${teamSlug(p.opponentName)}`;
+
+                    html += `
+                        <div class="player-spotlight-card" style="border-top-color: ${color}" onclick="window.location.hash='#compare/${p.teamId}/${allTeamsData.find(t=>t.name==='${p.opponentName.replace(/'/g,"\\'")}')?.espnId || ''}'">
+                            <img class="player-spotlight-headshot" src="${headshotUrl}" alt="${p.playerName}" style="border-color: ${color}" onerror="this.src='https://a.espncdn.com/i/headshots/nophoto.png'">
+                            <div class="player-spotlight-name">${p.playerName}</div>
+                            <div class="player-spotlight-meta">
+                                <img src="${logoUrl}" alt="${p.teamName}" onerror="this.style.display='none'">
+                                <span>${p.position} | #${p.jersey} | (${p.teamSeed}) ${p.teamName}</span>
+                            </div>
+                            <div class="player-spotlight-stats">
+                                <div class="player-spotlight-stat">
+                                    <div class="player-spotlight-stat-value">${p.ppg}</div>
+                                    <div class="player-spotlight-stat-label">PPG</div>
+                                </div>
+                                <div class="player-spotlight-stat">
+                                    <div class="player-spotlight-stat-value">${p.rpg}</div>
+                                    <div class="player-spotlight-stat-label">RPG</div>
+                                </div>
+                                <div class="player-spotlight-stat">
+                                    <div class="player-spotlight-stat-value">${p.apg}</div>
+                                    <div class="player-spotlight-stat-label">APG</div>
+                                </div>
+                            </div>
+                            <div class="player-spotlight-vs">vs (${p.opponentSeed}) ${p.opponentName}</div>
+                        </div>`;
+                }
+                html += `</div>`;
+            }
+
+            grid.innerHTML = html;
+            section.style.display = '';
         }
 
         function renderTodaysGames() {
