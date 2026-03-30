@@ -5796,23 +5796,24 @@
 
             // Start unified live ticker — one master loop updates everything in sync
             try { startUnifiedLiveTicker(); } catch(e) { console.error('Live ticker error:', e); }
-            // Set Iowa upset as current takeover (biggest upset of Round 2: 9-seed over 1-seed)
+            // Set UConn Instant Classic as current takeover (Mullins buzzer-beater 3 in Elite 8)
             // Will be replaced by any bigger upset that triggers live
             try {
                 const _stored = localStorage.getItem('upsetTakeover');
-                const _needsIowa = !_stored || (JSON.parse(_stored).espnId === '158');
-                if (_needsIowa) {
-                    const iowaData = {
-                        team: 'Iowa Hawkeyes',
-                        color: '#FFCD00',
-                        navColor: '#231f20',
-                        espnId: '2294',
+                const _prev = _stored ? JSON.parse(_stored) : null;
+                const _needsUConn = !_prev || _prev.espnId === '158' || _prev.espnId === '2294';
+                if (_needsUConn) {
+                    const uconnData = {
+                        team: 'UConn Huskies',
+                        color: '#0c2340',
+                        navColor: '#0c2340',
+                        espnId: '41',
                         time: Date.now(),
-                        message: 'UPSET COMPLETE: 9-seed Iowa Hawkeyes stuns 1-seed Florida Gators!',
-                        gameLink: '#game/2026/iowa-hawkeyes-vs-florida-gators',
-                        seedDiff: 8
+                        message: '⚡ Instant Classic: Braylon Mullins drills a 3 with 0.4 seconds left — UConn stuns Duke 73-72!',
+                        gameLink: '#game/2026/uconn-huskies-vs-duke-blue-devils',
+                        seedDiff: 1
                     };
-                    localStorage.setItem('upsetTakeover', JSON.stringify(iowaData));
+                    localStorage.setItem('upsetTakeover', JSON.stringify(uconnData));
                 }
             } catch(e) {}
             // Takeover restore — apply whatever is in localStorage (from live upset triggers)
