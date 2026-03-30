@@ -5801,7 +5801,7 @@
             try {
                 const _stored = localStorage.getItem('upsetTakeover');
                 const _prev = _stored ? JSON.parse(_stored) : null;
-                const _needsUConn = !_prev || _prev.espnId === '158' || _prev.espnId === '2294';
+                const _needsUConn = !_prev || _prev.espnId !== '41';
                 if (_needsUConn) {
                     const uconnData = {
                         team: 'UConn Huskies',
