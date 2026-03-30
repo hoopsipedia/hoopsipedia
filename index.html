@@ -7883,7 +7883,13 @@
                                             var _eventId = event?.id || '';
                                             var _ic = INSTANT_CLASSICS[_eventId];
                                             if (_ic) {
-                                                return '<div class="game-context-badge" style="background:#FFF8E1;border-color:#F9A825;color:#E65100;">⚡ ' + _ic.headline.substring(0, 80) + (_ic.headline.length > 80 ? '...' : '') + '</div>';
+                                                var _icText = _ic.headline;
+                                                // Truncate at score if headline is too long for the card
+                                                var _scoreMatch = _icText.match(/\d{2,3}-\d{2,3}/);
+                                                if (_scoreMatch && _icText.length > 70) {
+                                                    _icText = _icText.substring(0, _icText.indexOf(_scoreMatch[0]) + _scoreMatch[0].length);
+                                                }
+                                                return '<div class="game-context-badge" style="background:#FFF8E1;border-color:#F9A825;color:#E65100;">⚡ ' + _icText + '</div>';
                                             }
                                         }
                                         // Close game (decided by 5 or fewer)
