@@ -7878,6 +7878,14 @@
                                             var pKey2 = Math.min(wSeed,lSeed)+'v'+Math.max(wSeed,lSeed);
                                             return '<div class="game-context-badge upset-alert clickable" onclick="event.stopPropagation(); window.location.hash=\'#upsets/'+pKey2+'\';" title="Click to explore upset history">Upset!' + wSeed + '-seed ' + wName + ' stuns ' + lSeed + '-seed ' + lName + '</div>';
                                         }
+                                        // Instant Classic — check before generic close-game message
+                                        if (typeof INSTANT_CLASSICS !== 'undefined') {
+                                            var _eventId = event?.id || '';
+                                            var _ic = INSTANT_CLASSICS[_eventId];
+                                            if (_ic) {
+                                                return '<div class="game-context-badge" style="background:#FFF8E1;border-color:#F9A825;color:#E65100;">⚡ ' + _ic.headline.substring(0, 80) + (_ic.headline.length > 80 ? '...' : '') + '</div>';
+                                            }
+                                        }
                                         // Close game (decided by 5 or fewer)
                                         var margin = Math.abs(parseInt(winner.score) - parseInt(loser.score));
                                         if (margin <= 5) {
