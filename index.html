@@ -7518,11 +7518,11 @@
                     const r2RoundNames = ['Second Round', 'Round of 32', '2nd Round'];
                     const s16RoundNames = ['Sweet 16', 'Sweet Sixteen', 'Regional Semifinal', 'Third Round', '3rd Round'];
                     const e8RoundNames = ['Elite 8', 'Elite Eight', 'Regional Final', 'Regional Championship'];
+                    const ffRoundNames = ['Final Four', 'National Semifinal', 'National Championship', 'Title Game'];
                     const hasR2 = allGames.some(e => e._tourney === 'ncaa' && r2RoundNames.some(r => e._round?.includes(r)));
                     const hasR1 = allGames.some(e => e._tourney === 'ncaa' && !e._round?.includes('First Four') && !r2RoundNames.some(r => e._round?.includes(r)) && !s16RoundNames.some(r => e._round?.includes(r)) && !e8RoundNames.some(r => e._round?.includes(r)) && !ffRoundNames.some(r => e._round?.includes(r)));
                     const hasS16 = allGames.some(e => e._tourney === 'ncaa' && s16RoundNames.some(r => e._round?.includes(r)));
                     const hasE8 = allGames.some(e => e._tourney === 'ncaa' && e8RoundNames.some(r => e._round?.includes(r)));
-                    const ffRoundNames = ['Final Four', 'National Semifinal', 'National Championship', 'Title Game'];
                     const hasFF = allGames.some(e => e._tourney === 'ncaa' && ffRoundNames.some(r => e._round?.includes(r)));
                     document.getElementById('gamesFilters').style.display = (hasNcaa || hasNit) ? 'flex' : 'none';
 
