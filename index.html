@@ -6026,11 +6026,18 @@
                                     espnId: String(winnerTeamObj.id),
                                     time: Date.now(),
                                     message: `🏆 ${champName} wins the 2026 National Championship!`,
-                                    gameLink: `#game/2026/${wSlug}-vs-${lSlug}`,
+                                    gameLink: `#championship/2026/${wSlug}`,
                                     seedDiff: 99 // Ensures nothing can override the championship takeover
                                 };
                                 localStorage.setItem('upsetTakeover', JSON.stringify(champData));
                                 applyUpsetTakeover(champData, true);
+                                // Auto-generate championship journey page
+                                generateChampionshipJourney(String(winnerTeamObj.id), champName, wSlug,
+                                    parseInt(winner.curatedRank?.current) || 0,
+                                    loserTeamObj.displayName || 'Unknown',
+                                    parseInt(loser.curatedRank?.current) || 0,
+                                    String(loserTeamObj.id),
+                                    winnerScore, loserScore);
                             }
                             // Major upset (seed diff >= 5) — color takeover
                             else if (winnerSeed && loserSeed && winnerSeed > loserSeed) {
@@ -17913,6 +17920,122 @@
                     }
                 }, 450);
             });
+        }
+
+        async function generateChampionshipJourney(winnerEspnId, winnerName, winnerSlug, winnerSeed, loserName, loserSeed, loserEspnId, champWinScore, champLoseScore) {
+            // Auto-generate a championship journey by fetching all tournament games for the winner
+            const key = `2026/${winnerSlug}`;
+            if (CHAMPIONSHIP_RUNS[key]) return; // Already exists
+
+            console.log(`Generating championship journey for ${winnerName}...`);
+
+            try {
+                // Fetch all tournament dates to find this team's games
+                const tourneyDates = ['20260317','20260318','20260319','20260320','20260321','20260322',
+                                      '20260326','20260327','20260328','20260329','20260404','20260406'];
+                const teamGames = [];
+
+                for (const date of tourneyDates) {
+                    try {
+                        const resp = await fetch(`https://site.api.espn.com/apis/site/v2/sports/basketball/mens-college-basketball/scoreboard?dates=${date}&groups=100&limit=100`);
+                        const data = await resp.json();
+                        (data.events || []).forEach(event => {
+                            const comp = event.competitions?.[0];
+                            if (!comp) return;
+                            const teams = comp.competitors || [];
+                            const isInGame = teams.some(t => String(t.team?.id) === winnerEspnId);
+                            if (!isInGame) return;
+                            const state = event.status?.type?.state || comp.status?.type?.state;
+                            if (state !== 'post') return; // Only finished games
+
+                            const notes = comp.notes?.[0]?.headline || '';
+                            if (!notes.toLowerCase().includes('ncaa') && !notes.toLowerCase().includes('championship')) return;
+
+                            const us = teams.find(t => String(t.team?.id) === winnerEspnId);
+                            const them = teams.find(t => String(t.team?.id) !== winnerEspnId);
+                            if (!us || !them) return;
+
+                            // Determine round from notes
+                            let round = 'Round of 64';
+                            const noteLower = notes.toLowerCase();
+                            if (noteLower.includes('first four')) round = 'First Four';
+                            else if (noteLower.includes('2nd round') || noteLower.includes('second round') || noteLower.includes('round of 32')) round = 'Round of 32';
+                            else if (noteLower.includes('sweet')) round = 'Sweet 16';
+                            else if (noteLower.includes('elite') || noteLower.includes('regional final') || noteLower.includes('regional championship')) round = 'Elite Eight';
+                            else if (noteLower.includes('final four') || noteLower.includes('national semifinal')) round = 'Final Four';
+                            else if (noteLower.includes('national championship')) round = 'Championship';
+
+                            const ourScore = parseInt(us.score) || 0;
+                            const theirScore = parseInt(them.score) || 0;
+                            const isOT = event.status?.type?.detail?.includes('OT') || false;
+
+                            teamGames.push({
+                                round,
+                                opponent: them.team?.displayName || them.team?.shortDisplayName || 'Unknown',
+                                oppSeed: parseInt(them.curatedRank?.current) || 0,
+                                oppEspnId: String(them.team?.id),
+                                score: `${ourScore}-${theirScore}${isOT ? ' (OT)' : ''}`,
+                                winScore: ourScore,
+                                loseScore: theirScore,
+                                note: isOT ? 'OT' : '',
+                                isChampionship: round === 'Championship',
+                                date: event.competitions?.[0]?.startDate || ''
+                            });
+                        });
+                    } catch(e) {}
+                }
+
+                // Sort by date
+                teamGames.sort((a, b) => new Date(a.date) - new Date(b.date));
+
+                if (teamGames.length === 0) {
+                    console.warn('Could not find tournament games for champion');
+                    return;
+                }
+
+                // Calculate stats
+                const totalMargin = teamGames.reduce((sum, g) => sum + (g.winScore - g.loseScore), 0);
+                const avgMargin = (totalMargin / teamGames.length).toFixed(1);
+                const closestGame = teamGames.reduce((closest, g) => {
+                    const margin = g.winScore - g.loseScore;
+                    const closestMargin = closest.winScore - closest.loseScore;
+                    return margin < closestMargin ? g : closest;
+                }, teamGames[0]);
+
+                // Determine region from notes of early games
+                const team = allTeamsData.find(t => String(t.espnId) === winnerEspnId);
+                const natlChamps = team ? (team.natlChamps || 0) + 1 : 1;
+                const ordinal = n => { const s = ['th','st','nd','rd']; const v = n % 100; return n + (s[(v-20)%10]||s[v]||s[0]); };
+
+                // Build the run entry
+                const run = {
+                    year: 2026,
+                    teamName: winnerName,
+                    espnId: winnerEspnId,
+                    teamSlug: winnerSlug,
+                    heroTitle: '2026 NATIONAL CHAMPIONS',
+                    heroSubtitle: `${winnerSeed ? '#' + winnerSeed + ' Seed' : ''} \u2022 Indianapolis, IN`,
+                    accentColor: team?.color ? '#' + team.color.replace('#','') : '#C9A86C',
+                    story: `${winnerName} captured the ${ordinal(natlChamps)} national championship in program history with a ${champWinScore}-${champLoseScore} victory over ${loserName} in Indianapolis. The journey page will be updated with the full story.`,
+                    games: teamGames.map(g => { delete g.date; return g; }),
+                    stats: {
+                        seed: String(winnerSeed || '?'),
+                        record: `${teamGames.length}-0`,
+                        avgMargin: `+${avgMargin}`,
+                        closestGame: `${closestGame.score} vs ${closestGame.opponent.split(' ').pop()}`
+                    },
+                    videoId: null,
+                    aftermath: 'The aftermath of this championship run will be updated soon.',
+                    coach: team?.coach || 'TBD',
+                    mop: 'TBD'
+                };
+
+                CHAMPIONSHIP_RUNS[key] = run;
+                console.log(`Championship journey generated: ${key} (${teamGames.length} games)`);
+
+            } catch(e) {
+                console.error('Failed to generate championship journey:', e);
+            }
         }
 
         function renderChampionshipRun(year, slug) {
