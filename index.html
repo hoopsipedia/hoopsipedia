@@ -956,6 +956,7 @@
         .draft-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
         .draft-table {
             width: 100%; border-collapse: collapse; font-size: 0.88rem;
+            min-width: 550px;
         }
         .draft-table th {
             text-align: left; padding: 0.6rem 0.75rem; font-size: 0.7rem;
@@ -2711,7 +2712,7 @@
         }
         .champ-run-game {
             display: grid;
-            grid-template-columns: 120px 1fr auto;
+            grid-template-columns: 140px 1fr auto;
             align-items: center;
             gap: 1rem;
             padding: 1rem 1.25rem;
@@ -3984,7 +3985,7 @@
 
             /* Championship run tournament path: narrower columns */
             .champ-run-game {
-                grid-template-columns: 65px 1fr auto;
+                grid-template-columns: 85px 1fr auto;
                 gap: 0.35rem;
                 padding: 0.6rem 0.5rem 0.6rem 0.75rem;
             }
@@ -11528,26 +11529,27 @@
             });
             tabbedWrap.appendChild(tabs);
 
-            regionNames.forEach((name, idx) => {
-                const regionDiv = document.createElement('div');
-                regionDiv.className = 'bracket-tabbed-region' + (idx === 0 ? ' active' : '');
-                regionDiv.setAttribute('data-region', name);
-                const side = (name === 'Midwest' || name === 'West') ? 'left' : 'left';
-                regionDiv.appendChild(buildRegionBracket(name, regions[name], 'left'));
-
-                // Add Final Four and Championship after each region for context
-                if (name === 'South' || name === 'Midwest') {
-                    const ffNote = document.createElement('div');
-                    ffNote.style.cssText = 'text-align:center;padding:1rem 0;';
-                    ffNote.innerHTML = `<div class="bracket-round-label">Final Four</div>${finalFourGames.length > 0 ? createMatchupCard(finalFourGames[0]).outerHTML : ffTBD}`;
-                    regionDiv.appendChild(ffNote);
-                } else {
-                    const ffNote = document.createElement('div');
-                    ffNote.style.cssText = 'text-align:center;padding:1rem 0;';
-                    ffNote.innerHTML = `<div class="bracket-round-label">Final Four</div>${finalFourGames.length > 1 ? createMatchupCard(finalFourGames[1]).outerHTML : ffTBD}`;
-                    regionDiv.appendChild(ffNote);
-                }
-                tabbedWrap.appendChild(regionDiv);
+            // Group regions into pairs: South+East feed FF1, Midwest+West feed FF2
+            const regionPairs = [
+                { regions: ['South', 'East'], ffGame: finalFourGames[0] },
+                { regions: ['Midwest', 'West'], ffGame: finalFourGames[1] }
+            ];
+            let firstRegion = true;
+            regionPairs.forEach(pair => {
+                pair.regions.forEach(name => {
+                    const regionDiv = document.createElement('div');
+                    regionDiv.className = 'bracket-tabbed-region' + (firstRegion ? ' active' : '');
+                    firstRegion = false;
+                    regionDiv.setAttribute('data-region', name);
+                    regionDiv.appendChild(buildRegionBracket(name, regions[name], 'left'));
+                    tabbedWrap.appendChild(regionDiv);
+                });
+                // Add the shared Final Four game once after each pair
+                const ffNote = document.createElement('div');
+                ffNote.className = 'bracket-tabbed-ff';
+                ffNote.style.cssText = 'text-align:center;padding:1rem 0;';
+                ffNote.innerHTML = `<div class="bracket-round-label">Final Four</div>${pair.ffGame ? createMatchupCard(pair.ffGame).outerHTML : ffTBD}`;
+                tabbedWrap.appendChild(ffNote);
             });
 
             // Championship in tabbed view
