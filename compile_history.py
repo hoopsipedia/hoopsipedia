@@ -35,9 +35,9 @@ class CollegeBasketballCompiler:
 
     def _load_slug_mapping(self) -> Dict[str, str]:
         """Load the ESPN ID to Sports Reference slug mapping."""
-        mapping_file = self.DATA_DIR / 'slug_mapping.json'
+        mapping_file = self.DATA_DIR / 'espn_to_sr.json'
         if not mapping_file.exists():
-            print(f"ERROR: slug_mapping.json not found at {mapping_file}")
+            print(f"ERROR: espn_to_sr.json not found at {mapping_file}")
             return {}
 
         with open(mapping_file) as f:

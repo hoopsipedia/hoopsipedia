@@ -4397,7 +4397,7 @@
             <div>
                 <div style="font-size: 0.75rem; font-weight: 700; color: rgba(255,255,255,0.4); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.75rem;">Data Sources</div>
                 <div style="font-size: 0.8rem; color: rgba(255,255,255,0.45); line-height: 1.6;">
-                    Team data sourced from Sports Reference and ESPN. All-time records verified against the NCAA official record book, our ultimate source of truth. Ticket data via SeatGeek.
+                    Team data sourced from Sports Reference and ESPN. All-time records verified against the NCAA official record book, our ultimate source of truth.
                 </div>
             </div>
         </div>
@@ -4463,47 +4463,7 @@
             CT: 12, AA: 13, NBA: 14, APW: 15
         };
 
-        // ── SeatGeek Ticket Integration ──
-        const SEATGEEK_CLIENT_ID = 'PLACEHOLDER_CLIENT_ID';
-        const SEATGEEK_AFFILIATE_ID = 'PLACEHOLDER_AFF_ID';
-        const SEATGEEK_PARTNER_ID = 'PLACEHOLDER_PARTNER_ID';
-        const TICKET_CACHE = {};
-        const TICKET_CACHE_TTL = 30 * 60 * 1000; // 30 minutes
-
-        function getTeamSlug(teamName) {
-            return teamName.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/-+/g, '-').replace(/^-|-$/g, '');
-        }
-
-        async function fetchTicketData(team1Name, team2Name) {
-            const cacheKey = [team1Name, team2Name].sort().join('|');
-            if (TICKET_CACHE[cacheKey] && Date.now() - TICKET_CACHE[cacheKey].ts < TICKET_CACHE_TTL) {
-                return TICKET_CACHE[cacheKey].data;
-            }
-            try {
-                const q = encodeURIComponent(team1Name.split(' ').slice(0, -1).join(' ') + ' ' + team2Name.split(' ').slice(0, -1).join(' '));
-                const url = `https://api.seatgeek.com/2/events?client_id=${SEATGEEK_CLIENT_ID}&q=${q}&type=ncaa_basketball&per_page=1`;
-                const resp = await fetch(url);
-                if (!resp.ok) return null;
-                const data = await resp.json();
-                const event = data.events?.[0];
-                if (!event || !event.stats?.lowest_price) return null;
-                const result = {
-                    price: event.stats.lowest_price,
-                    url: event.url + `?aid=${SEATGEEK_AFFILIATE_ID}&pid=${SEATGEEK_PARTNER_ID}`,
-                    venue: event.venue?.name || '',
-                    date: event.datetime_utc
-                };
-                TICKET_CACHE[cacheKey] = { data: result, ts: Date.now() };
-                return result;
-            } catch (e) {
-                return null;
-            }
-        }
-
-        function renderTicketLink(ticket) {
-            if (!ticket) return '';
-            return `<a href="${ticket.url}" target="_blank" rel="noopener" class="ticket-link">Buy Tickets from $${ticket.price}</a>`;
-        }
+        // SeatGeek integration removed — placeholder API keys were never configured
 
         // Data loaded dynamically from data.json
         let H = {};
@@ -4847,93 +4807,95 @@
          */
         async function enrichWithLiveRecords() {
             try {
-                // ESPN scoreboard gives us current season records for teams playing today/yesterday
-                // For broader coverage, fetch the standings/rankings which have all teams
+                // Only enrich teams playing today — not all 373 (was hammering ESPN API)
                 const currentYear = new Date().getFullYear();
                 const seasonYear = new Date().getMonth() >= 10 ? currentYear + 1 : currentYear;
 
-                // Fetch current season records for all teams we have
-                // ESPN teams endpoint gives current record per team
-                let updated = 0;
-                const batchSize = 10;
-                const teams = [...allTeamsData];
-
-                for (let i = 0; i < teams.length; i += batchSize) {
-                    const batch = teams.slice(i, i + batchSize);
-                    const results = await Promise.allSettled(
-                        batch.map(t =>
-                            fetch(`https://site.api.espn.com/apis/site/v2/sports/basketball/mens-college-basketball/teams/${t.espnId}`)
-                                .then(r => r.ok ? r.json() : null)
-                                .catch(() => null)
-                        )
-                    );
-
-                    results.forEach((result, idx) => {
-                        if (result.status !== 'fulfilled' || !result.value) return;
-                        const teamData = result.value.team;
-                        if (!teamData?.record?.items?.[0]) return;
-
-                        const overallRecord = teamData.record.items[0];
-                        const stats = overallRecord.stats || [];
-                        const winsObj = stats.find(s => s.name === 'wins');
-                        const lossesObj = stats.find(s => s.name === 'losses');
-                        if (!winsObj || !lossesObj) return;
-
-                        const currentW = Math.round(winsObj.value);
-                        const currentL = Math.round(lossesObj.value);
-
-                        const team = batch[idx];
-
-                        // ATW/ATL already includes current season via nightly sync (CS field).
-                        // Use CS as baseline so we only add games that happened AFTER the last sync.
-                        // Fallback to GAMES_DATA counting only if CS is missing for this team.
-                        const csRecord = window.TEAM_DATA?.CS?.[String(team.espnId)];
-                        let staticCurrentW = 0, staticCurrentL = 0;
-                        if (csRecord) {
-                            staticCurrentW = csRecord.w || 0;
-                            staticCurrentL = csRecord.l || 0;
-                        } else {
-                            // No CS data — fall back to counting GAMES_DATA
-                            const teamGames = GAMES_DATA?.[String(team.espnId)];
-                            if (teamGames?.games) {
-                                const currentSeasonStart = `${seasonYear - 1}-11`;
-                                teamGames.games.forEach(g => {
-                                    if (g.date >= currentSeasonStart) {
-                                        if (g.w) staticCurrentW++;
-                                        else staticCurrentL++;
-                                    }
-                                });
-                            }
-                        }
-
-                        // Difference = live count minus what our synced data already has
-                        const extraW = currentW - staticCurrentW;
-                        const extraL = currentL - staticCurrentL;
-
-                        // Always set live record so This Season tab can display it
-                        team._liveRecord = `${currentW}-${currentL}`;
-
-                        if (extraW !== 0 || extraL !== 0) {
-                            team.allTimeW += extraW;
-                            team.allTimeL += extraL;
-                            team.winPct = team.allTimeW + team.allTimeL > 0
-                                ? parseFloat(((team.allTimeW / (team.allTimeW + team.allTimeL)) * 100).toFixed(1))
-                                : 0;
-                            updated++;
-                        }
-                    });
-
-                    // Small delay between batches to be respectful to ESPN API
-                    if (i + batchSize < teams.length) {
-                        await new Promise(r => setTimeout(r, 200));
+                // Get today's team IDs from the scoreboard cache or a quick fetch
+                const todayTeamIds = new Set();
+                const todayGames = window._allUpcomingGames || [];
+                todayGames.forEach(event => {
+                    const comp = event.competitions?.[0];
+                    if (!comp) return;
+                    const state = comp.status?.type?.state || event.status?.type?.state;
+                    // Only enrich teams with live or recently finished games
+                    if (state === 'in' || state === 'post') {
+                        comp.competitors?.forEach(c => {
+                            if (c.team?.id) todayTeamIds.add(String(c.team.id));
+                        });
                     }
+                });
+
+                if (todayTeamIds.size === 0) {
+                    console.log('No live/final games today — skipping live record enrichment');
+                    return;
                 }
+
+                const teams = allTeamsData.filter(t => todayTeamIds.has(String(t.espnId)));
+                console.log(`Enriching ${teams.length} teams with live records (today's games only)`);
+
+                let updated = 0;
+                const results = await Promise.allSettled(
+                    teams.map(t =>
+                        fetch(`https://site.api.espn.com/apis/site/v2/sports/basketball/mens-college-basketball/teams/${t.espnId}`)
+                            .then(r => r.ok ? r.json() : null)
+                            .catch(() => null)
+                    )
+                );
+
+                results.forEach((result, idx) => {
+                    if (result.status !== 'fulfilled' || !result.value) return;
+                    const teamData = result.value.team;
+                    if (!teamData?.record?.items?.[0]) return;
+
+                    const overallRecord = teamData.record.items[0];
+                    const stats = overallRecord.stats || [];
+                    const winsObj = stats.find(s => s.name === 'wins');
+                    const lossesObj = stats.find(s => s.name === 'losses');
+                    if (!winsObj || !lossesObj) return;
+
+                    const currentW = Math.round(winsObj.value);
+                    const currentL = Math.round(lossesObj.value);
+
+                    const team = teams[idx];
+
+                    // ATW/ATL already includes current season via nightly sync (CS field).
+                    const csRecord = window.TEAM_DATA?.CS?.[String(team.espnId)];
+                    let staticCurrentW = 0, staticCurrentL = 0;
+                    if (csRecord) {
+                        staticCurrentW = csRecord.w || 0;
+                        staticCurrentL = csRecord.l || 0;
+                    } else {
+                        const teamGames = GAMES_DATA?.[String(team.espnId)];
+                        if (teamGames?.games) {
+                            const currentSeasonStart = `${seasonYear - 1}-11`;
+                            teamGames.games.forEach(g => {
+                                if (g.date >= currentSeasonStart) {
+                                    if (g.w) staticCurrentW++;
+                                    else staticCurrentL++;
+                                }
+                            });
+                        }
+                    }
+
+                    const extraW = currentW - staticCurrentW;
+                    const extraL = currentL - staticCurrentL;
+
+                    team._liveRecord = `${currentW}-${currentL}`;
+
+                    if (extraW !== 0 || extraL !== 0) {
+                        team.allTimeW += extraW;
+                        team.allTimeL += extraL;
+                        team.winPct = team.allTimeW + team.allTimeL > 0
+                            ? parseFloat(((team.allTimeW / (team.allTimeW + team.allTimeL)) * 100).toFixed(1))
+                            : 0;
+                        updated++;
+                    }
+                });
 
                 if (updated > 0) {
                     console.log(`Updated ${updated} teams with live records from ESPN`);
-                    // Re-sort by wins
                     allTeamsData.sort((a, b) => b.allTimeW - a.allTimeW);
-                    // Re-render current view if it's showing team data
                     if (currentProfile) {
                         const freshTeam = allTeamsData.find(t => t.espnId === currentProfile.espnId);
                         if (freshTeam) {
@@ -5826,26 +5788,6 @@
 
             // Start unified live ticker — one master loop updates everything in sync
             try { startUnifiedLiveTicker(); } catch(e) { console.error('Live ticker error:', e); }
-            // Set UConn Instant Classic as current takeover (Mullins buzzer-beater 3 in Elite 8)
-            // Will be replaced by any bigger upset that triggers live
-            try {
-                const _stored = localStorage.getItem('upsetTakeover');
-                const _prev = _stored ? JSON.parse(_stored) : null;
-                const _needsUConn = !_prev || _prev.espnId !== '41';
-                if (_needsUConn) {
-                    const uconnData = {
-                        team: 'UConn Huskies',
-                        color: '#0c2340',
-                        navColor: '#0c2340',
-                        espnId: '41',
-                        time: Date.now(),
-                        message: '⚡ Instant Classic: Braylon Mullins drills a 3 with 0.4 seconds left — UConn stuns Duke 73-72!',
-                        gameLink: '#game/2026/uconn-huskies-vs-duke-blue-devils',
-                        seedDiff: 1
-                    };
-                    localStorage.setItem('upsetTakeover', JSON.stringify(uconnData));
-                }
-            } catch(e) {}
             // Takeover restore — apply whatever is in localStorage (from live upset triggers)
             try { checkUpsetTakeover(); } catch(e) { console.error('Upset takeover restore error:', e); }
             try { checkMilestoneBanner(); } catch(e) { console.error('Milestone banner restore error:', e); }
@@ -6041,26 +5983,60 @@
                             }).catch(() => {});
                     } catch(e) {}
 
-                    // Check for major tournament upset (seed diff >= 5) to trigger color takeover
+                    // Check for tournament takeover triggers
                     if (!_takeoverTriggered.has(gameId)) {
                         const notes = comp.notes?.[0]?.headline || '';
-                        const isTournament = notes.toLowerCase().includes('tournament') ||
-                                             notes.toLowerCase().includes('ncaa') ||
-                                             notes.toLowerCase().includes('round') ||
-                                             notes.toLowerCase().includes('sweet') ||
-                                             notes.toLowerCase().includes('elite') ||
+                        const notesLower = notes.toLowerCase();
+                        const isTournament = notesLower.includes('tournament') ||
+                                             notesLower.includes('ncaa') ||
+                                             notesLower.includes('round') ||
+                                             notesLower.includes('sweet') ||
+                                             notesLower.includes('elite') ||
+                                             notesLower.includes('final four') ||
+                                             notesLower.includes('championship') ||
                                              (comp.series?.type === 'tournament');
+
                         if (isTournament) {
                             const winnerSeed = parseInt(winner.curatedRank?.current) || 0;
                             const loserSeed = parseInt(loser.curatedRank?.current) || 0;
-                            if (winnerSeed && loserSeed && winnerSeed > loserSeed) {
+                            const winnerTeamObj = winner.team || {};
+                            const loserTeamObj = loser.team || {};
+                            const winnerColor = winnerTeamObj.color || '';
+                            const winnerAltColor = winnerTeamObj.alternateColor || '';
+                            const isChampionship = notesLower.includes('national championship');
+
+                            // National Championship — ALWAYS trigger for the new champion
+                            if (isChampionship) {
+                                _takeoverTriggered.add(gameId);
+                                const champName = winnerTeamObj.displayName || winnerTeamObj.shortDisplayName || 'Unknown';
+                                const wSlug = champName.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+                                const lSlug = (loserTeamObj.displayName || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+                                // Handle dark primary colors — swap to alt color as accent
+                                let champColor = winnerColor ? '#' + winnerColor.replace('#', '') : '#C9A86C';
+                                let champNavColor = champColor;
+                                const _cLum = (c => { const h = c.replace('#',''); return h.length===6 ? (0.299*parseInt(h.substring(0,2),16)+0.587*parseInt(h.substring(2,4),16)+0.114*parseInt(h.substring(4,6),16))/255 : 0.5; })(champColor);
+                                if (_cLum < 0.2 && winnerAltColor) {
+                                    champNavColor = champColor;
+                                    champColor = '#' + winnerAltColor.replace('#', '');
+                                }
+                                const champData = {
+                                    team: champName,
+                                    color: champColor,
+                                    navColor: champNavColor,
+                                    espnId: String(winnerTeamObj.id),
+                                    time: Date.now(),
+                                    message: `🏆 ${champName} wins the 2026 National Championship!`,
+                                    gameLink: `#game/2026/${wSlug}-vs-${lSlug}`,
+                                    seedDiff: 99 // Ensures nothing can override the championship takeover
+                                };
+                                localStorage.setItem('upsetTakeover', JSON.stringify(champData));
+                                applyUpsetTakeover(champData, true);
+                            }
+                            // Major upset (seed diff >= 5) — color takeover
+                            else if (winnerSeed && loserSeed && winnerSeed > loserSeed) {
                                 const seedDiff = winnerSeed - loserSeed;
                                 if (seedDiff >= 5) {
                                     _takeoverTriggered.add(gameId);
-                                    const winnerTeamObj = winner.team || {};
-                                    const loserTeamObj = loser.team || {};
-                                    const winnerColor = winnerTeamObj.color || '';
-                                    const winnerAltColor = winnerTeamObj.alternateColor || '';
                                     triggerUpsetTakeover(
                                         winnerTeamObj.displayName || winnerTeamObj.shortDisplayName || 'Unknown',
                                         winnerSeed,
@@ -6073,23 +6049,6 @@
                                 }
                             }
                         }
-                    }
-
-                    // Curated takeover: Tennessee Elite 8 (6-seed over 2-seed Iowa State)
-                    if (!_takeoverTriggered.has(gameId) && String(winner.team?.id) === '2633' && String(loser.team?.id) === '66') {
-                        _takeoverTriggered.add(gameId);
-                        const tennData = {
-                            team: 'Tennessee',
-                            color: '#FF8200',
-                            navColor: '#FF8200',
-                            espnId: '2633',
-                            time: Date.now(),
-                            message: '🍊 Tennessee is headed to the Elite 8! 4th straight year in the second weekend.',
-                            gameLink: '#game/2026/tennessee-volunteers-vs-iowa-state-cyclones',
-                            seedDiff: 10
-                        };
-                        localStorage.setItem('upsetTakeover', JSON.stringify(tennData));
-                        applyUpsetTakeover(tennData, true);
                     }
 
                     // Check for historic milestones
@@ -8007,13 +7966,7 @@
                             }
                         });
 
-                        // Async ticket fetch (non-blocking)
-                        if (SEATGEEK_CLIENT_ID !== 'PLACEHOLDER_CLIENT_ID') {
-                            fetchTicketData(team1.team.displayName, team2.team.displayName).then(ticket => {
-                                const el = document.getElementById('ticket-' + t1EspnId + '-' + t2EspnId);
-                                if (el && ticket) el.innerHTML = renderTicketLink(ticket);
-                            });
-                        }
+                        // Ticket integration placeholder removed
                     });
 
                     // Atomic swap: replace grid contents in one operation to prevent flicker
@@ -8563,15 +8516,7 @@
             // ── Prominent Game Center: load box score above tabs ──
             loadGameCenter(t1.espnId, t2.espnId);
 
-            // Check for upcoming matchup tickets between these two teams
-            if (SEATGEEK_CLIENT_ID !== 'PLACEHOLDER_CLIENT_ID') {
-                fetchTicketData(t1.name, t2.name).then(ticket => {
-                    const ticketEl = document.getElementById('compTicketContainer');
-                    if (ticketEl && ticket) {
-                        ticketEl.innerHTML = renderTicketLink(ticket);
-                    }
-                });
-            }
+            // Ticket integration placeholder removed
 
             // Load This Season panel content
             renderThisSeasonPanel(t1, t2);
