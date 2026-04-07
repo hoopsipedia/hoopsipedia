@@ -2627,7 +2627,6 @@
 
         /* ── Championship Run Page ── */
         .champ-run-hero {
-            background: linear-gradient(135deg, #1B2A4A 0%, #2D4A6E 50%, #1B2A4A 100%);
             border-radius: 1rem;
             padding: 3rem 2rem;
             text-align: center;
@@ -2661,6 +2660,7 @@
             letter-spacing: 0.12em;
             color: #C9A86C;
             margin-bottom: 0.4rem;
+            text-shadow: 0 1px 4px rgba(0,0,0,0.4);
         }
         .champ-run-hero-team {
             font-size: 2.2rem;
@@ -2668,10 +2668,12 @@
             color: #FFFFFF;
             margin-bottom: 0.5rem;
             line-height: 1.2;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.4);
         }
         .champ-run-hero-subtitle {
             font-size: 1rem;
-            color: rgba(255,255,255,0.6);
+            color: rgba(255,255,255,0.85);
+            text-shadow: 0 1px 4px rgba(0,0,0,0.4);
         }
         .champ-run-hero-accent {
             width: 60px;
@@ -17659,7 +17661,923 @@
                 aftermath: 'Wayne Ellington was named Final Four Most Outstanding Player after averaging 19.2 points and shooting 53% from three in the tournament. Tyler Hansbrough was drafted 13th overall by the Indiana Pacers. Ty Lawson went 18th to the Denver Nuggets, Wayne Ellington 28th to the Timberwolves, and Danny Green went 46th to the Cavaliers before becoming a three-time NBA champion. It was Roy Williams\' second title at North Carolina and UNC\'s fifth overall.',
                 coach: 'Roy Williams',
                 mop: 'Wayne Ellington'
-            }
+            },
+            '1939/oregon-ducks': {
+                year: 1939,
+                teamName: 'Oregon Ducks',
+                espnId: '2483',
+                teamSlug: 'oregon-ducks',
+                heroTitle: '1939 NATIONAL CHAMPIONS',
+                heroSubtitle: 'First NCAA Tournament Champions • Evanston, IL',
+                accentColor: '#154733',
+                story: 'Oregon made history as the winner of the very first NCAA basketball tournament. The eight-team field was a modest affair compared to what it would become, but the Tall Firs were worthy champions. Led by Urgel "Slim" Wintermute and Bobby Anet, Howard Hobson\'s squad dispatched Texas and then Oklahoma in the semifinal before routing Ohio State 46-33 in the first-ever championship game at Patten Gymnasium in Evanston, Illinois. The Ducks\' up-tempo style overwhelmed opponents in an era when most teams played deliberately.',
+                games: [
+                    { round: 'Quarterfinal', opponent: 'Texas Longhorns', oppSeed: 0, oppEspnId: '251', score: '56-41', winScore: 56, loseScore: 41, note: '' },
+                    { round: 'Semifinal', opponent: 'Oklahoma Sooners', oppSeed: 0, oppEspnId: '201', score: '55-37', winScore: 55, loseScore: 37, note: '' },
+                    { round: 'Championship', opponent: 'Ohio State Buckeyes', oppSeed: 0, oppEspnId: '194', score: '46-33', winScore: 46, loseScore: 33, note: '' , isChampionship: true}
+                ],
+                stats: { seed: 'N/A', record: '3-0', avgMargin: '+15.3', closestGame: '46-33 vs Ohio State' },
+                videoId: '',
+                aftermath: 'Oregon\'s victory in the inaugural NCAA tournament was a landmark moment, though the event was overshadowed by the NIT, which was considered the more prestigious postseason tournament at the time. Slim Wintermute, the 6\'8" center, was named the tournament\'s outstanding player. Coach Howard Hobson was a pioneer of the fast break and later authored the influential book "Basketball Illustrated." The Ducks would not return to the Final Four for 78 years, finally making it back in 2017.',
+                coach: 'Howard Hobson',
+                mop: 'None designated'
+            },
+            '1940/indiana-hoosiers': {
+                year: 1940,
+                teamName: 'Indiana Hoosiers',
+                espnId: '84',
+                teamSlug: 'indiana-hoosiers',
+                heroTitle: '1940 NATIONAL CHAMPIONS',
+                heroSubtitle: '20-3 Record • Kansas City, MO',
+                accentColor: '#990000',
+                story: 'Branch McCracken\'s "Hurrying Hoosiers" brought their fast-paced style to the second NCAA tournament and ran away with the title. Indiana defeated Springfield in the Eastern playoff before demolishing Duquesne 39-30 in the semifinal and then routing Kansas 60-42 in the championship game at Municipal Auditorium in Kansas City. The Hoosiers\' up-tempo attack was revolutionary for the era, averaging over 50 points per game when most teams struggled to reach 40.',
+                games: [
+                    { round: 'Eastern Playoff', opponent: 'Springfield', oppSeed: 0, oppEspnId: '', score: '48-24', winScore: 48, loseScore: 24, note: '' },
+                    { round: 'Semifinal', opponent: 'Duquesne Dukes', oppSeed: 0, oppEspnId: '2184', score: '39-30', winScore: 39, loseScore: 30, note: '' },
+                    { round: 'Championship', opponent: 'Kansas Jayhawks', oppSeed: 0, oppEspnId: '2305', score: '60-42', winScore: 60, loseScore: 42, note: '' , isChampionship: true}
+                ],
+                stats: { seed: 'N/A', record: '3-0', avgMargin: '+17.0', closestGame: '39-30 vs Duquesne' },
+                videoId: '',
+                aftermath: 'Indiana\'s first national championship established Branch McCracken as one of the game\'s elite coaches. His "Hurrying Hoosiers" philosophy of fast-break basketball was ahead of its time and would influence the sport for decades. McCracken would lead Indiana to a second title in 1953. Marv Huffman, the team\'s star guard, was a two-time All-American who later served in World War II.',
+                coach: 'Branch McCracken',
+                mop: 'Marv Huffman'
+            },
+            '1941/wisconsin-badgers': {
+                year: 1941,
+                teamName: 'Wisconsin Badgers',
+                espnId: '275',
+                teamSlug: 'wisconsin-badgers',
+                heroTitle: '1941 NATIONAL CHAMPIONS',
+                heroSubtitle: '20-3 Record • Kansas City, MO',
+                accentColor: '#C5050C',
+                story: 'Bud Foster\'s Wisconsin Badgers won the school\'s only national championship with a balanced, disciplined attack. The Badgers defeated Dartmouth in the Eastern playoff, then topped Pittsburgh 36-30 in the semifinal before claiming the title with a 39-34 victory over Washington State in Kansas City. Gene Englund and John Kotz led a team that relied on stifling defense and precise half-court execution.',
+                games: [
+                    { round: 'Eastern Playoff', opponent: 'Dartmouth Big Green', oppSeed: 0, oppEspnId: '159', score: '51-50', winScore: 51, loseScore: 50, note: '' },
+                    { round: 'Semifinal', opponent: 'Pittsburgh Panthers', oppSeed: 0, oppEspnId: '221', score: '36-30', winScore: 36, loseScore: 30, note: '' },
+                    { round: 'Championship', opponent: 'Washington State Cougars', oppSeed: 0, oppEspnId: '265', score: '39-34', winScore: 39, loseScore: 34, note: '' , isChampionship: true}
+                ],
+                stats: { seed: 'N/A', record: '3-0', avgMargin: '+4.0', closestGame: '51-50 vs Dartmouth' },
+                videoId: '',
+                aftermath: 'Wisconsin\'s championship remains the program\'s only national title — a fact that makes it one of college basketball\'s most enduring droughts. The Badgers would not reach another Final Four until 2000, a 59-year gap. Coach Bud Foster led Wisconsin basketball for 25 years and was inducted into the Basketball Hall of Fame in 1964. Gene Englund was named the tournament\'s outstanding player.',
+                coach: 'Bud Foster',
+                mop: 'John Kotz'
+            },
+            '1942/stanford-cardinal': {
+                year: 1942,
+                teamName: 'Stanford Cardinal',
+                espnId: '24',
+                teamSlug: 'stanford-cardinal',
+                heroTitle: '1942 NATIONAL CHAMPIONS',
+                heroSubtitle: '28-4 Record • Kansas City, MO',
+                accentColor: '#8C1515',
+                story: 'Stanford won the NCAA title in extraordinary circumstances — with World War II raging, the tournament was held in Kansas City and the Cardinal had to make the cross-country trip by train. Led by Jim Pollard and Howie Dallmar, Everett Dean\'s squad defeated Rice and then Colorado in the semifinal before topping Dartmouth 53-38 in the championship. Dallmar scored 15 points in the title game as Stanford\'s height advantage proved decisive.',
+                games: [
+                    { round: 'Western Playoff', opponent: 'Rice Owls', oppSeed: 0, oppEspnId: '242', score: '53-47', winScore: 53, loseScore: 47, note: '' },
+                    { round: 'Semifinal', opponent: 'Colorado Buffaloes', oppSeed: 0, oppEspnId: '38', score: '46-35', winScore: 46, loseScore: 35, note: '' },
+                    { round: 'Championship', opponent: 'Dartmouth Big Green', oppSeed: 0, oppEspnId: '159', score: '53-38', winScore: 53, loseScore: 38, note: '' , isChampionship: true}
+                ],
+                stats: { seed: 'N/A', record: '3-0', avgMargin: '+10.7', closestGame: '53-47 vs Rice' },
+                videoId: '',
+                aftermath: 'Stanford\'s championship was the program\'s only national title. Jim Pollard, who missed the tournament due to illness, went on to become an NBA legend with the Minneapolis Lakers, winning five titles alongside George Mikan. Howie Dallmar was named the tournament\'s outstanding player and later coached at Stanford and Penn. The impact of World War II would reshape college basketball, as many players left school to serve.',
+                coach: 'Everett Dean',
+                mop: 'Howie Dallmar'
+            },
+            '1943/wyoming-cowboys': {
+                year: 1943,
+                teamName: 'Wyoming Cowboys',
+                espnId: '2751',
+                teamSlug: 'wyoming-cowboys',
+                heroTitle: '1943 NATIONAL CHAMPIONS',
+                heroSubtitle: '31-2 Record • New York, NY',
+                accentColor: '#6666CC',
+                story: 'In the midst of World War II, Everett Shelton\'s Wyoming Cowboys emerged as unlikely champions with an incredible 31-2 record. Kenny Sailors, the man credited with popularizing the jump shot, led Wyoming to victories over Oklahoma and Texas in the Western bracket before a dominant 46-34 win over Georgetown in the championship game at Madison Square Garden. Sailors\' revolutionary jump shot gave the Cowboys an offensive weapon no opponent could solve.',
+                games: [
+                    { round: 'Western Playoff', opponent: 'Oklahoma Sooners', oppSeed: 0, oppEspnId: '201', score: '53-50', winScore: 53, loseScore: 50, note: '' },
+                    { round: 'Semifinal', opponent: 'Texas Longhorns', oppSeed: 0, oppEspnId: '251', score: '58-54', winScore: 58, loseScore: 54, note: '' },
+                    { round: 'Championship', opponent: 'Georgetown Hoyas', oppSeed: 0, oppEspnId: '46', score: '46-34', winScore: 46, loseScore: 34, note: '' , isChampionship: true}
+                ],
+                stats: { seed: 'N/A', record: '3-0', avgMargin: '+6.3', closestGame: '53-50 vs Oklahoma' },
+                videoId: '',
+                aftermath: 'Kenny Sailors was named the tournament\'s outstanding player and is widely credited as the inventor of the modern jump shot. His one-handed jumper was considered radical in an era of set shots and was initially mocked by purists before being universally adopted. Wyoming then defeated NIT champion St. John\'s in a Red Cross charity game, making them undisputed national champions. Sailors served in the Marines during WWII before a brief NBA career.',
+                coach: 'Everett Shelton',
+                mop: 'Kenny Sailors'
+            },
+            '1944/utah-utes': {
+                year: 1944,
+                teamName: 'Utah Utes',
+                espnId: '254',
+                teamSlug: 'utah-utes',
+                heroTitle: '1944 NATIONAL CHAMPIONS',
+                heroSubtitle: '22-4 Record • New York, NY',
+                accentColor: '#CC0000',
+                story: 'Utah\'s path to the 1944 championship was one of the most unusual in tournament history. Originally eliminated in the first round of the NIT, the Utes were invited to replace Arkansas in the NCAA tournament after the Razorbacks\' team bus was involved in an accident. Given a second chance, Vadal Peterson\'s squad took full advantage, winning three games to reach the final and then defeating Dartmouth 42-40 in overtime in a thrilling championship game at Madison Square Garden.',
+                games: [
+                    { round: 'Western Playoff', opponent: 'Missouri Tigers', oppSeed: 0, oppEspnId: '142', score: '45-35', winScore: 45, loseScore: 35, note: '' },
+                    { round: 'Semifinal', opponent: 'Iowa State Cyclones', oppSeed: 0, oppEspnId: '66', score: '40-31', winScore: 40, loseScore: 31, note: '' },
+                    { round: 'Championship', opponent: 'Dartmouth Big Green', oppSeed: 0, oppEspnId: '159', score: '42-40', winScore: 42, loseScore: 40, note: 'OT' , isChampionship: true}
+                ],
+                stats: { seed: 'N/A', record: '3-0', avgMargin: '+7.0', closestGame: '42-40 OT vs Dartmouth' },
+                videoId: '',
+                aftermath: 'Arnie Ferrin, a freshman sensation, was named the tournament\'s outstanding player — he remains one of the youngest MOPs in tournament history. The Utes then defeated NIT champion St. John\'s 43-36 in a Red Cross benefit game, claiming undisputed supremacy. Utah\'s "second chance" championship remains one of the great stories in tournament lore. Ferrin later played professionally and became a successful businessman in Salt Lake City.',
+                coach: 'Vadal Peterson',
+                mop: 'Arnie Ferrin'
+            },
+            '1945/oklahoma-state-cowboys': {
+                year: 1945,
+                teamName: 'Oklahoma State Cowboys',
+                espnId: '197',
+                teamSlug: 'oklahoma-state-cowboys',
+                heroTitle: '1945 NATIONAL CHAMPIONS',
+                heroSubtitle: '27-4 Record • New York, NY',
+                accentColor: '#FF6600',
+                story: 'Then known as Oklahoma A&M, Hank Iba\'s Cowboys won the first of back-to-back championships behind 7-foot center Bob Kurland — one of the first dominant big men in college basketball. Kurland and the Aggies\' suffocating defense carried them through the bracket, culminating in a 49-45 victory over NYU in the championship game at Madison Square Garden. Iba\'s deliberate, defense-first style was the antithesis of the fast-break era that was emerging.',
+                games: [
+                    { round: 'Western Playoff', opponent: 'Utah Utes', oppSeed: 0, oppEspnId: '254', score: '62-37', winScore: 62, loseScore: 37, note: '' },
+                    { round: 'Semifinal', opponent: 'Arkansas Razorbacks', oppSeed: 0, oppEspnId: '8', score: '68-41', winScore: 68, loseScore: 41, note: '' },
+                    { round: 'Championship', opponent: 'NYU Violets', oppSeed: 0, oppEspnId: '', score: '49-45', winScore: 49, loseScore: 45, note: '' , isChampionship: true}
+                ],
+                stats: { seed: 'N/A', record: '3-0', avgMargin: '+18.7', closestGame: '49-45 vs NYU' },
+                videoId: '',
+                aftermath: 'Bob Kurland was named tournament MOP and later became the first player to make goaltending a significant enough issue to warrant a rule change. He chose to play AAU basketball rather than turn professional, winning two Olympic gold medals (1948, 1952). Coach Hank Iba would win again in 1946 and later coached three U.S. Olympic teams, including the controversial 1972 squad that lost the gold medal game to the Soviet Union.',
+                coach: 'Hank Iba',
+                mop: 'Bob Kurland'
+            },
+            '1946/oklahoma-state-cowboys': {
+                year: 1946,
+                teamName: 'Oklahoma State Cowboys',
+                espnId: '197',
+                teamSlug: 'oklahoma-state-cowboys',
+                heroTitle: '1946 NATIONAL CHAMPIONS',
+                heroSubtitle: '31-2 Record • New York, NY',
+                accentColor: '#FF6600',
+                story: 'Oklahoma A&M completed a rare back-to-back championship run behind Bob Kurland, who was even more dominant in his senior season. The Aggies went 31-2 and rolled through the tournament bracket, defeating Baylor and California before topping North Carolina 43-40 in a tight championship game at Madison Square Garden. Kurland\'s defense — particularly his goaltending ability before the rule was changed — made the Aggies nearly impossible to score against.',
+                games: [
+                    { round: 'Western Playoff', opponent: 'Baylor Bears', oppSeed: 0, oppEspnId: '239', score: '44-29', winScore: 44, loseScore: 29, note: '' },
+                    { round: 'Semifinal', opponent: 'California Golden Bears', oppSeed: 0, oppEspnId: '25', score: '52-35', winScore: 52, loseScore: 35, note: '' },
+                    { round: 'Championship', opponent: 'North Carolina Tar Heels', oppSeed: 0, oppEspnId: '153', score: '43-40', winScore: 43, loseScore: 40, note: '' , isChampionship: true}
+                ],
+                stats: { seed: 'N/A', record: '3-0', avgMargin: '+11.7', closestGame: '43-40 vs North Carolina' },
+                videoId: '',
+                aftermath: 'Bob Kurland was again named tournament MOP, becoming one of the first repeat winners. Oklahoma A&M\'s back-to-back titles cemented Hank Iba\'s status as one of the game\'s all-time great coaches. The program (later renamed Oklahoma State) would not win another championship, but Iba\'s coaching tree influenced generations. Kurland finished his career as the most dominant force college basketball had ever seen to that point.',
+                coach: 'Hank Iba',
+                mop: 'Bob Kurland'
+            },
+            '1947/holy-cross-crusaders': {
+                year: 1947,
+                teamName: 'Holy Cross Crusaders',
+                espnId: '107',
+                teamSlug: 'holy-cross-crusaders',
+                heroTitle: '1947 NATIONAL CHAMPIONS',
+                heroSubtitle: '27-3 Record • New York, NY',
+                accentColor: '#0033CC',
+                story: 'Holy Cross pulled off one of the great upsets in early tournament history, stunning heavily-favored Oklahoma A&M to deny the Aggies a third straight title. Led by George Kaftan and coached by Doggie Julian, the Crusaders defeated Navy and CCNY before beating Oklahoma A&M 58-47 in the championship at Madison Square Garden. The small Jesuit school from Worcester, Massachusetts became the darling of college basketball overnight.',
+                games: [
+                    { round: 'Eastern Playoff', opponent: 'Navy Midshipmen', oppSeed: 0, oppEspnId: '2426', score: '55-47', winScore: 55, loseScore: 47, note: '' },
+                    { round: 'Semifinal', opponent: 'CCNY Beavers', oppSeed: 0, oppEspnId: '2609', score: '60-45', winScore: 60, loseScore: 45, note: '' },
+                    { round: 'Championship', opponent: 'Oklahoma State Cowboys', oppSeed: 0, oppEspnId: '197', score: '58-47', winScore: 58, loseScore: 47, note: '' , isChampionship: true}
+                ],
+                stats: { seed: 'N/A', record: '3-0', avgMargin: '+11.3', closestGame: '55-47 vs Navy' },
+                videoId: '',
+                aftermath: 'George Kaftan was named tournament MOP and later played in the NBA. Holy Cross\'s championship put small-school basketball on the map and proved that a Jesuit college could compete with the powerhouses. Bob Cousy, a freshman reserve on the 1947 team, would become the most famous Holy Cross player of all — an NBA legend with the Boston Celtics and Basketball Hall of Famer. Coach Doggie Julian left for the Boston Celtics after the title.',
+                coach: 'Doggie Julian',
+                mop: 'George Kaftan'
+            },
+            '1948/kentucky-wildcats': {
+                year: 1948,
+                teamName: 'Kentucky Wildcats',
+                espnId: '96',
+                teamSlug: 'kentucky-wildcats',
+                heroTitle: '1948 NATIONAL CHAMPIONS',
+                heroSubtitle: '36-3 Record • New York, NY',
+                accentColor: '#0033A0',
+                story: 'Adolph Rupp\'s "Fabulous Five" dominated college basketball with a 36-3 record and emphatic tournament run. Alex Groza, Ralph Beard, Wallace "Wah Wah" Jones, Cliff Barker, and Kenny Rollins formed one of the most talented starting fives in the sport\'s history. Kentucky crushed Columbia and Holy Cross before routing Baylor 58-42 in the championship at Madison Square Garden. Four starters from this team would go on to represent the United States at the 1948 Olympics.',
+                games: [
+                    { round: 'Eastern Playoff', opponent: 'Columbia Lions', oppSeed: 0, oppEspnId: '171', score: '76-53', winScore: 76, loseScore: 53, note: '' },
+                    { round: 'Semifinal', opponent: 'Holy Cross Crusaders', oppSeed: 0, oppEspnId: '107', score: '60-52', winScore: 60, loseScore: 52, note: '' },
+                    { round: 'Championship', opponent: 'Baylor Bears', oppSeed: 0, oppEspnId: '239', score: '58-42', winScore: 58, loseScore: 42, note: '' , isChampionship: true}
+                ],
+                stats: { seed: 'N/A', record: '3-0', avgMargin: '+15.7', closestGame: '60-52 vs Holy Cross' },
+                videoId: '',
+                aftermath: 'Alex Groza was named tournament MOP. The "Fabulous Five" then led the U.S. Olympic team to the gold medal at the 1948 London Games. Kentucky would repeat as champions in 1949. Groza and Beard were later implicated in the 1951 point-shaving scandal, which resulted in their banishment from the NBA — a tragic end for two of the era\'s most gifted players. Adolph Rupp\'s dynasty was only beginning.',
+                coach: 'Adolph Rupp',
+                mop: 'Alex Groza'
+            },
+            '1949/kentucky-wildcats': {
+                year: 1949,
+                teamName: 'Kentucky Wildcats',
+                espnId: '96',
+                teamSlug: 'kentucky-wildcats',
+                heroTitle: '1949 NATIONAL CHAMPIONS',
+                heroSubtitle: '32-2 Record • Seattle, WA',
+                accentColor: '#0033A0',
+                story: 'Kentucky\'s repeat championship featured many of the same "Fabulous Five" stars, with Alex Groza again leading the way. The Wildcats dispatched Villanova and Illinois before overwhelming Oklahoma A&M 46-36 in the championship game, held for the first time on the West Coast at Hec Edmundson Pavilion in Seattle. Rupp\'s squad held opponents under 40 points in two of their three tournament games, showcasing the defensive intensity that defined Kentucky basketball.',
+                games: [
+                    { round: 'Eastern Playoff', opponent: 'Villanova Wildcats', oppSeed: 0, oppEspnId: '222', score: '85-72', winScore: 85, loseScore: 72, note: '' },
+                    { round: 'Semifinal', opponent: 'Illinois Fighting Illini', oppSeed: 0, oppEspnId: '356', score: '76-47', winScore: 76, loseScore: 47, note: '' },
+                    { round: 'Championship', opponent: 'Oklahoma State Cowboys', oppSeed: 0, oppEspnId: '197', score: '46-36', winScore: 46, loseScore: 36, note: '' , isChampionship: true}
+                ],
+                stats: { seed: 'N/A', record: '3-0', avgMargin: '+20.7', closestGame: '85-72 vs Villanova' },
+                videoId: '',
+                aftermath: 'Alex Groza won his second consecutive tournament MOP award. Kentucky\'s back-to-back titles established Rupp\'s program as the premier dynasty of the era. However, the point-shaving scandal of 1951 would result in Kentucky voluntarily suspending its 1952-53 season. Groza and Beard were banned from the NBA. Despite the scandal, Rupp rebuilt and won two more championships (1951 and 1958), cementing his legacy as one of the sport\'s all-time great coaches.',
+                coach: 'Adolph Rupp',
+                mop: 'Alex Groza'
+            },
+            '1950/ccny-beavers': {
+                year: 1950,
+                teamName: 'CCNY Beavers',
+                espnId: '2609',
+                teamSlug: 'ccny-beavers',
+                heroTitle: '1950 NATIONAL CHAMPIONS',
+                heroSubtitle: 'NCAA and NIT Double Champions • New York, NY',
+                accentColor: '#1E40AF',
+                story: 'CCNY accomplished what will never be done again — winning both the NIT and NCAA tournament in the same season. Nat Holman\'s Beavers, led by Irwin Dambrot and Ed Warner, were the ultimate Cinderella. After winning the NIT by defeating defending champion San Francisco, Bradley, and others, CCNY entered the NCAA tournament and defeated Ohio State and North Carolina State before routing Bradley again 71-68 in the championship. The City College of New York, a free public university, had beaten the best in the nation.',
+                games: [
+                    { round: 'Eastern Playoff', opponent: 'Ohio State Buckeyes', oppSeed: 0, oppEspnId: '194', score: '56-55', winScore: 56, loseScore: 55, note: '' },
+                    { round: 'Semifinal', opponent: 'NC State Wolfpack', oppSeed: 0, oppEspnId: '152', score: '78-73', winScore: 78, loseScore: 73, note: '' },
+                    { round: 'Championship', opponent: 'Bradley Braves', oppSeed: 0, oppEspnId: '71', score: '71-68', winScore: 71, loseScore: 68, note: '' , isChampionship: true}
+                ],
+                stats: { seed: 'N/A', record: '3-0', avgMargin: '+3.3', closestGame: '56-55 vs Ohio State' },
+                videoId: '',
+                aftermath: 'CCNY\'s unprecedented double championship was forever tarnished by the 1951 point-shaving scandal. Several CCNY players, including Ed Warner, were found to have fixed games during the 1950-51 season. The scandal devastated New York City basketball and led to the sport\'s center of gravity shifting away from Madison Square Garden. CCNY eventually dropped to Division III and has never returned to national prominence. The NIT and NCAA tournaments were subsequently prohibited from being won by the same team.',
+                coach: 'Nat Holman',
+                mop: 'Irwin Dambrot'
+            },
+            '1951/kentucky-wildcats': {
+                year: 1951,
+                teamName: 'Kentucky Wildcats',
+                espnId: '96',
+                teamSlug: 'kentucky-wildcats',
+                heroTitle: '1951 NATIONAL CHAMPIONS',
+                heroSubtitle: '32-2 Record • Minneapolis, MN',
+                accentColor: '#0033A0',
+                story: 'Adolph Rupp\'s Kentucky Wildcats won their third championship in four years with a dominant 32-2 season. With a new cast of stars after the "Fabulous Five" departed, the Wildcats featured a seven-man rotation led by Bill Spivey, the 7-foot center, Cliff Hagan, and Frank Ramsey. Kentucky bulldozed through the tournament, beating Louisville, St. John\'s, and Illinois before crushing Kansas State 68-58 in the championship game in Minneapolis.',
+                games: [
+                    { round: 'Eastern First Round', opponent: 'Louisville Cardinals', oppSeed: 0, oppEspnId: '97', score: '79-68', winScore: 79, loseScore: 68, note: '' },
+                    { round: 'Eastern Regional', opponent: 'St. John\'s Red Storm', oppSeed: 0, oppEspnId: '2599', score: '59-43', winScore: 59, loseScore: 43, note: '' },
+                    { round: 'Semifinal', opponent: 'Illinois Fighting Illini', oppSeed: 0, oppEspnId: '356', score: '76-74', winScore: 76, loseScore: 74, note: '' },
+                    { round: 'Championship', opponent: 'Kansas State Wildcats', oppSeed: 0, oppEspnId: '2306', score: '68-58', winScore: 68, loseScore: 58, note: '' , isChampionship: true}
+                ],
+                stats: { seed: 'N/A', record: '4-0', avgMargin: '+10.3', closestGame: '76-74 vs Illinois' },
+                videoId: '',
+                aftermath: 'Bill Spivey was named the tournament MOP but would soon be caught up in the point-shaving scandal. Though never convicted, Spivey was banned from the NBA. Kentucky subsequently cancelled its entire 1952-53 season as penance. Despite this, Cliff Hagan and Frank Ramsey — who were too young to be involved — went on to Hall of Fame NBA careers with the Boston Celtics (Ramsey) and St. Louis Hawks (Hagan). This was Rupp\'s fourth and final championship.',
+                coach: 'Adolph Rupp',
+                mop: 'Bill Spivey'
+            },
+            '1952/kansas-jayhawks': {
+                year: 1952,
+                teamName: 'Kansas Jayhawks',
+                espnId: '2305',
+                teamSlug: 'kansas-jayhawks',
+                heroTitle: '1952 NATIONAL CHAMPIONS',
+                heroSubtitle: '28-3 Record • Seattle, WA',
+                accentColor: '#0051BA',
+                story: 'Phog Allen finally won the NCAA championship that had eluded him for years, led by the incomparable Clyde Lovellette. The 6\'9" center became the first player to lead the nation in scoring and win the NCAA tournament in the same season, averaging over 33 points per game in the tournament. Kansas defeated TCU, St. Louis, Santa Clara, and St. John\'s before Lovellette poured in 33 points in a 80-63 rout of St. John\'s in the championship.',
+                games: [
+                    { round: 'Western First Round', opponent: 'TCU Horned Frogs', oppSeed: 0, oppEspnId: '2628', score: '68-64', winScore: 68, loseScore: 64, note: '' },
+                    { round: 'Western Regional', opponent: 'St. Louis Billikens', oppSeed: 0, oppEspnId: '139', score: '74-55', winScore: 74, loseScore: 55, note: '' },
+                    { round: 'Semifinal', opponent: 'Santa Clara Broncos', oppSeed: 0, oppEspnId: '2541', score: '74-55', winScore: 74, loseScore: 55, note: '' },
+                    { round: 'Championship', opponent: 'St. John\'s Red Storm', oppSeed: 0, oppEspnId: '2599', score: '80-63', winScore: 80, loseScore: 63, note: '' , isChampionship: true}
+                ],
+                stats: { seed: 'N/A', record: '4-0', avgMargin: '+13.5', closestGame: '68-64 vs TCU' },
+                videoId: '',
+                aftermath: 'Clyde Lovellette was named tournament MOP after a historic performance. He was drafted 9th overall by the Minneapolis Lakers and won an NBA championship in his rookie year. Coach Phog Allen, the "Father of Basketball Coaching" and a student of James Naismith himself, finally had his NCAA title after decades of building Kansas into a powerhouse. Allen retired in 1956, and the court at Allen Fieldhouse — the cathedral of college basketball — bears his name.',
+                coach: 'Phog Allen',
+                mop: 'Clyde Lovellette'
+            },
+            '1953/indiana-hoosiers': {
+                year: 1953,
+                teamName: 'Indiana Hoosiers',
+                espnId: '84',
+                teamSlug: 'indiana-hoosiers',
+                heroTitle: '1953 NATIONAL CHAMPIONS',
+                heroSubtitle: '23-3 Record • Kansas City, MO',
+                accentColor: '#990000',
+                story: 'Branch McCracken\'s Indiana Hoosiers won their second national championship behind a deep, balanced roster led by Don Schlundt and Bobby Leonard. The "Hurrying Hoosiers" returned to their fast-break roots and overwhelmed opponents with pace and scoring. Indiana defeated DePaul, Notre Dame, and LSU before pulling away from Kansas 69-68 in one of the most thrilling championship games ever played at Municipal Auditorium in Kansas City.',
+                games: [
+                    { round: 'Eastern First Round', opponent: 'DePaul Blue Demons', oppSeed: 0, oppEspnId: '305', score: '82-80', winScore: 82, loseScore: 80, note: '' },
+                    { round: 'Eastern Regional', opponent: 'Notre Dame Fighting Irish', oppSeed: 0, oppEspnId: '87', score: '79-66', winScore: 79, loseScore: 66, note: '' },
+                    { round: 'Semifinal', opponent: 'LSU Tigers', oppSeed: 0, oppEspnId: '99', score: '80-67', winScore: 80, loseScore: 67, note: '' },
+                    { round: 'Championship', opponent: 'Kansas Jayhawks', oppSeed: 0, oppEspnId: '2305', score: '69-68', winScore: 69, loseScore: 68, note: '' , isChampionship: true}
+                ],
+                stats: { seed: 'N/A', record: '4-0', avgMargin: '+7.5', closestGame: '69-68 vs Kansas' },
+                videoId: '',
+                aftermath: 'B.H. Born of Kansas was actually named tournament MOP despite playing for the losing team — the last time this would happen for decades. Don Schlundt led Indiana with 30 points in the final. Bobby Leonard went on to an illustrious career as player and coach of the ABA/NBA\'s Indiana Pacers. This was Branch McCracken\'s second and final championship, completing a title span of 13 years. Indiana would wait 23 years before Bob Knight brought home the next trophy.',
+                coach: 'Branch McCracken',
+                mop: 'B.H. Born (Kansas)'
+            },
+            '1954/la-salle-explorers': {
+                year: 1954,
+                teamName: 'La Salle Explorers',
+                espnId: '2325',
+                teamSlug: 'la-salle-explorers',
+                heroTitle: '1954 NATIONAL CHAMPIONS',
+                heroSubtitle: '26-4 Record • Kansas City, MO',
+                accentColor: '#003333',
+                story: 'Tom Gola led La Salle to the national championship with one of the most complete individual performances in tournament history. The 6\'6" do-everything forward could score, rebound, pass, and defend at the highest level. La Salle defeated Fordham, NC State, and Navy before Gola powered a 92-76 rout of Bradley in the championship game at Kansas City. Gola averaged 22.8 points and 20.5 rebounds per game throughout the tournament — numbers that seem impossible by modern standards.',
+                games: [
+                    { round: 'Eastern First Round', opponent: 'Fordham Rams', oppSeed: 0, oppEspnId: '2226', score: '76-74', winScore: 76, loseScore: 74, note: '' },
+                    { round: 'Eastern Regional', opponent: 'NC State Wolfpack', oppSeed: 0, oppEspnId: '152', score: '88-81', winScore: 88, loseScore: 81, note: '' },
+                    { round: 'Semifinal', opponent: 'Penn State Nittany Lions', oppSeed: 0, oppEspnId: '213', score: '69-54', winScore: 69, loseScore: 54, note: '' },
+                    { round: 'Championship', opponent: 'Bradley Braves', oppSeed: 0, oppEspnId: '71', score: '92-76', winScore: 92, loseScore: 76, note: '' , isChampionship: true}
+                ],
+                stats: { seed: 'N/A', record: '4-0', avgMargin: '+10.0', closestGame: '76-74 vs Fordham' },
+                videoId: '',
+                aftermath: 'Tom Gola was named tournament MOP and finished his La Salle career with 2,461 points and 2,201 rebounds — one of only two players in NCAA history to surpass 2,000 in both categories. He was drafted 1st overall by the Philadelphia Warriors and won an NBA championship in 1956. La Salle has never returned to the Final Four since this championship, making their 1954 title a singular achievement in program history.',
+                coach: 'Ken Loeffler',
+                mop: 'Tom Gola'
+            },
+            '1955/san-francisco-dons': {
+                year: 1955,
+                teamName: 'San Francisco Dons',
+                espnId: '2539',
+                teamSlug: 'san-francisco-dons',
+                heroTitle: '1955 NATIONAL CHAMPIONS',
+                heroSubtitle: '28-1 Record • Kansas City, MO',
+                accentColor: '#009900',
+                story: 'Bill Russell transformed college basketball in his junior year, leading San Francisco to a 28-1 record and the national championship. The 6\'10" Russell revolutionized defense with his shot-blocking ability, which was unprecedented for the era. Phil Woolpert\'s Dons defeated West Texas State, Utah, Colorado, and Oregon State before Russell led a 77-63 victory over La Salle and Tom Gola in the championship. It was the beginning of the greatest individual run in basketball history.',
+                games: [
+                    { round: 'Western First Round', opponent: 'West Texas State', oppSeed: 0, oppEspnId: '', score: '89-66', winScore: 89, loseScore: 66, note: '' },
+                    { round: 'Western Regional', opponent: 'Utah Utes', oppSeed: 0, oppEspnId: '254', score: '78-59', winScore: 78, loseScore: 59, note: '' },
+                    { round: 'Semifinal', opponent: 'Colorado Buffaloes', oppSeed: 0, oppEspnId: '38', score: '62-50', winScore: 62, loseScore: 50, note: '' },
+                    { round: 'Championship', opponent: 'La Salle Explorers', oppSeed: 0, oppEspnId: '2325', score: '77-63', winScore: 77, loseScore: 63, note: '' , isChampionship: true}
+                ],
+                stats: { seed: 'N/A', record: '4-0', avgMargin: '+17.8', closestGame: '62-50 vs Colorado' },
+                videoId: '',
+                aftermath: 'Bill Russell was named tournament MOP and would repeat the feat the following year. His dominance was so total that he changed how the game was played — teams began valuing shot-blocking and rim protection in ways they never had before. Russell went on to win 11 NBA championships with the Boston Celtics and is widely considered the greatest winner in team sports history. San Francisco\'s 1955 title was also notable for breaking the color barrier in major college basketball — Russell and K.C. Jones (who missed the tournament with appendicitis) were pioneers.',
+                coach: 'Phil Woolpert',
+                mop: 'Bill Russell'
+            },
+            '1956/san-francisco-dons': {
+                year: 1956,
+                teamName: 'San Francisco Dons',
+                espnId: '2539',
+                teamSlug: 'san-francisco-dons',
+                heroTitle: '1956 NATIONAL CHAMPIONS',
+                heroSubtitle: 'Undefeated (29-0) • Evanston, IL',
+                accentColor: '#009900',
+                story: 'Bill Russell capped his college career with a perfect 29-0 season and a second consecutive national championship. With K.C. Jones now healthy and joining Russell, San Francisco was simply unbeatable. The Dons\' 55-game winning streak (spanning two seasons) was the longest in college basketball history at the time. San Francisco defeated UCLA, Utah, SMU, and Iowa to complete the undefeated championship run, with Russell recording 26 points and 27 rebounds in the title game.',
+                games: [
+                    { round: 'Western First Round', opponent: 'UCLA Bruins', oppSeed: 0, oppEspnId: '26', score: '72-61', winScore: 72, loseScore: 61, note: '' },
+                    { round: 'Western Regional', opponent: 'Utah Utes', oppSeed: 0, oppEspnId: '254', score: '78-55', winScore: 78, loseScore: 55, note: '' },
+                    { round: 'Semifinal', opponent: 'SMU Mustangs', oppSeed: 0, oppEspnId: '2567', score: '86-68', winScore: 86, loseScore: 68, note: '' },
+                    { round: 'Championship', opponent: 'Iowa Hawkeyes', oppSeed: 0, oppEspnId: '2294', score: '83-71', winScore: 83, loseScore: 71, note: '' , isChampionship: true}
+                ],
+                stats: { seed: 'N/A', record: '4-0', avgMargin: '+15.8', closestGame: '72-61 vs UCLA' },
+                videoId: '',
+                aftermath: 'Bill Russell won his second tournament MOP award and was selected by the St. Louis Hawks in the 1956 NBA Draft before being traded to the Boston Celtics in one of the most consequential trades in sports history. K.C. Jones also went on to a Hall of Fame career with the Celtics. San Francisco\'s 60-game winning streak stood as a record until UCLA surpassed it in 1971. The Dons have not returned to the Final Four since, making this an unrepeated golden era.',
+                coach: 'Phil Woolpert',
+                mop: 'Bill Russell'
+            },
+            '1957/north-carolina-tar-heels': {
+                year: 1957,
+                teamName: 'North Carolina Tar Heels',
+                espnId: '153',
+                teamSlug: 'north-carolina-tar-heels',
+                heroTitle: '1957 NATIONAL CHAMPIONS',
+                heroSubtitle: 'Undefeated (32-0) • Kansas City, MO',
+                accentColor: '#7BAFD4',
+                story: 'Frank McGuire\'s undefeated North Carolina Tar Heels pulled off one of the greatest upsets in championship game history, defeating Wilt Chamberlain and Kansas in triple overtime 54-53. McGuire famously sent 5\'11" Tommy Kearns to jump center against the 7\'1" Chamberlain as a psychological ploy. Lennie Rosenbluth carried UNC with 20 points in the final as the Tar Heels survived three overtime periods to complete a perfect 32-0 season — one of only seven undefeated champions in NCAA history.',
+                games: [
+                    { round: 'Eastern First Round', opponent: 'Yale Bulldogs', oppSeed: 0, oppEspnId: '43', score: '90-74', winScore: 90, loseScore: 74, note: '' },
+                    { round: 'Eastern Regional', opponent: 'Canisius Golden Griffins', oppSeed: 0, oppEspnId: '2115', score: '87-75', winScore: 87, loseScore: 75, note: '' },
+                    { round: 'Semifinal', opponent: 'Syracuse Orange', oppSeed: 0, oppEspnId: '183', score: '67-58', winScore: 67, loseScore: 58, note: '' },
+                    { round: 'Championship', opponent: 'Kansas Jayhawks', oppSeed: 0, oppEspnId: '2305', score: '54-53', winScore: 54, loseScore: 53, note: '3OT' , isChampionship: true}
+                ],
+                stats: { seed: 'N/A', record: '4-0', avgMargin: '+8.0', closestGame: '54-53 3OT vs Kansas' },
+                videoId: '',
+                aftermath: 'Lennie Rosenbluth was named tournament MOP after carrying UNC through the entire season. The triple-overtime championship remains one of the greatest games ever played. Wilt Chamberlain, devastated by the loss, left Kansas after his junior year and played a season with the Harlem Globetrotters before joining the NBA. Frank McGuire left UNC for the NBA after the 1961 season, and his successor was a young assistant named Dean Smith — who would build UNC into the sport\'s most iconic program.',
+                coach: 'Frank McGuire',
+                mop: 'Lennie Rosenbluth'
+            },
+            '1958/kentucky-wildcats': {
+                year: 1958,
+                teamName: 'Kentucky Wildcats',
+                espnId: '96',
+                teamSlug: 'kentucky-wildcats',
+                heroTitle: '1958 NATIONAL CHAMPIONS',
+                heroSubtitle: '23-6 Record • Louisville, KY',
+                accentColor: '#0033A0',
+                story: 'Adolph Rupp\'s "Fiddlin\' Five" earned their nickname because Rupp complained they "fiddled around" too much — but this scrappy, unheralded squad delivered Rupp\'s fourth and final championship. With no All-Americans or NBA prospects, Kentucky relied on teamwork, toughness, and Rupp\'s coaching genius. The Wildcats came together in March, defeating Miami (OH), Notre Dame, and Temple before toppling top-ranked Seattle and Elgin Baylor 84-72 in the championship game at Freedom Hall in Louisville.',
+                games: [
+                    { round: 'Mideast First Round', opponent: 'Miami (OH) RedHawks', oppSeed: 0, oppEspnId: '193', score: '94-70', winScore: 94, loseScore: 70, note: '' },
+                    { round: 'Mideast Regional', opponent: 'Notre Dame Fighting Irish', oppSeed: 0, oppEspnId: '87', score: '89-56', winScore: 89, loseScore: 56, note: '' },
+                    { round: 'Semifinal', opponent: 'Temple Owls', oppSeed: 0, oppEspnId: '218', score: '61-60', winScore: 61, loseScore: 60, note: '' },
+                    { round: 'Championship', opponent: 'Seattle Redhawks', oppSeed: 0, oppEspnId: '2547', score: '84-72', winScore: 84, loseScore: 72, note: '' , isChampionship: true}
+                ],
+                stats: { seed: 'N/A', record: '4-0', avgMargin: '+15.0', closestGame: '61-60 vs Temple' },
+                videoId: '',
+                aftermath: 'The "Fiddlin\' Five" proved that chemistry and coaching could overcome individual talent. Elgin Baylor scored 25 points in the loss but could not carry Seattle alone. This was Adolph Rupp\'s fourth and final championship — he would coach 14 more seasons without winning it all. Vernon Hatton hit a miraculous half-court shot to beat Temple in the semifinal, one of the signature moments of early tournament history. Kentucky\'s four titles under Rupp established the Wildcats as college basketball royalty.',
+                coach: 'Adolph Rupp',
+                mop: 'Elgin Baylor (Seattle)'
+            },
+            '1959/california-golden-bears': {
+                year: 1959,
+                teamName: 'California Golden Bears',
+                espnId: '25',
+                teamSlug: 'california-golden-bears',
+                heroTitle: '1959 NATIONAL CHAMPIONS',
+                heroSubtitle: '25-4 Record • Louisville, KY',
+                accentColor: '#003262',
+                story: 'Pete Newell\'s California Golden Bears won the school\'s only national championship with a defense-first philosophy that would influence the sport for generations. Darrall Imhoff anchored the interior while Cal\'s disciplined style frustrated every opponent. The Bears defeated Idaho State, DePaul, Cincinnati, and Oscar Robertson before defeating West Virginia and Jerry West 71-70 in a classic championship game. Newell\'s defensive principles became the foundation for generations of coaches.',
+                games: [
+                    { round: 'Western First Round', opponent: 'Idaho State Bengals', oppSeed: 0, oppEspnId: '304', score: '71-44', winScore: 71, loseScore: 44, note: '' },
+                    { round: 'Western Regional', opponent: 'DePaul Blue Demons', oppSeed: 0, oppEspnId: '305', score: '77-56', winScore: 77, loseScore: 56, note: '' },
+                    { round: 'Semifinal', opponent: 'Cincinnati Bearcats', oppSeed: 0, oppEspnId: '2132', score: '64-58', winScore: 64, loseScore: 58, note: '' },
+                    { round: 'Championship', opponent: 'West Virginia Mountaineers', oppSeed: 0, oppEspnId: '277', score: '71-70', winScore: 71, loseScore: 70, note: '' , isChampionship: true}
+                ],
+                stats: { seed: 'N/A', record: '4-0', avgMargin: '+9.8', closestGame: '71-70 vs West Virginia' },
+                videoId: '',
+                aftermath: 'Jerry West of West Virginia was named tournament MOP despite playing for the losing team. Pete Newell retired from coaching just one year later, at age 44, due to the stress of the job — walking away while on top. His coaching clinics and philosophies, particularly on post play and footwork, influenced virtually every NBA big man coach for the next 50 years. Darrall Imhoff was drafted 1st overall in 1960. Cal has not won another championship.',
+                coach: 'Pete Newell',
+                mop: 'Jerry West (West Virginia)'
+            },
+            '1960/ohio-state-buckeyes': {
+                year: 1960,
+                teamName: 'Ohio State Buckeyes',
+                espnId: '194',
+                teamSlug: 'ohio-state-buckeyes',
+                heroTitle: '1960 NATIONAL CHAMPIONS',
+                heroSubtitle: '25-3 Record • San Francisco, CA',
+                accentColor: '#BB0000',
+                story: 'Fred Taylor\'s Ohio State Buckeyes, led by sophomore sensation Jerry Lucas, bulldozed through the 1960 tournament and captured the school\'s only national championship. Lucas, along with John Havlicek and Larry Siegfried, formed one of the most talented cores in college basketball history. The Buckeyes destroyed California 75-55 in the championship game, thoroughly dominating the defending champions. Lucas was brilliant throughout, and Ohio State\'s size and skill overwhelmed every opponent they faced.',
+                games: [
+                    { round: 'Mideast First Round', opponent: 'Western Kentucky Hilltoppers', oppSeed: 0, oppEspnId: '98', score: '98-79', winScore: 98, loseScore: 79, note: '' },
+                    { round: 'Mideast Regional', opponent: 'Georgia Tech Yellow Jackets', oppSeed: 0, oppEspnId: '59', score: '86-69', winScore: 86, loseScore: 69, note: '' },
+                    { round: 'Semifinal', opponent: 'NYU Violets', oppSeed: 0, oppEspnId: '', score: '76-54', winScore: 76, loseScore: 54, note: '' },
+                    { round: 'Championship', opponent: 'California Golden Bears', oppSeed: 0, oppEspnId: '25', score: '75-55', winScore: 75, loseScore: 55, note: '' , isChampionship: true}
+                ],
+                stats: { seed: 'N/A', record: '4-0', avgMargin: '+19.5', closestGame: '86-69 vs Georgia Tech' },
+                videoId: '',
+                aftermath: 'Jerry Lucas was named tournament MOP as a sophomore. Ohio State reached the championship game the next two years as well (1961 and 1962) but lost to Cincinnati both times. Lucas, Havlicek, and Siegfried all went on to outstanding NBA careers — Havlicek won eight championships with the Boston Celtics and is considered one of the greatest players in NBA history. This remains Ohio State\'s only basketball national championship.',
+                coach: 'Fred Taylor',
+                mop: 'Jerry Lucas'
+            },
+            '1961/cincinnati-bearcats': {
+                year: 1961,
+                teamName: 'Cincinnati Bearcats',
+                espnId: '2132',
+                teamSlug: 'cincinnati-bearcats',
+                heroTitle: '1961 NATIONAL CHAMPIONS',
+                heroSubtitle: '27-3 Record • Kansas City, MO',
+                accentColor: '#E00122',
+                story: 'Ed Jucker\'s Cincinnati Bearcats pulled off a stunning upset over defending champion Ohio State in the title game, winning 70-65 in overtime at Municipal Auditorium in Kansas City. The Bearcats were massive underdogs against Jerry Lucas, John Havlicek, and the vaunted Buckeyes, but Cincinnati\'s suffocating defense and the brilliance of Bob Wiesenhahn and Tom Thacker made the difference. The overtime triumph was one of the great upsets in championship game history.',
+                games: [
+                    { round: 'Mideast First Round', opponent: 'Seton Hall Pirates', oppSeed: 0, oppEspnId: '2550', score: '69-46', winScore: 69, loseScore: 46, note: '' },
+                    { round: 'Mideast Regional', opponent: 'Kansas State Wildcats', oppSeed: 0, oppEspnId: '2306', score: '69-64', winScore: 69, loseScore: 64, note: '' },
+                    { round: 'Semifinal', opponent: 'Utah Utes', oppSeed: 0, oppEspnId: '254', score: '82-67', winScore: 82, loseScore: 67, note: '' },
+                    { round: 'Championship', opponent: 'Ohio State Buckeyes', oppSeed: 0, oppEspnId: '194', score: '70-65', winScore: 70, loseScore: 65, note: 'OT' , isChampionship: true}
+                ],
+                stats: { seed: 'N/A', record: '4-0', avgMargin: '+11.8', closestGame: '70-65 OT vs Ohio State' },
+                videoId: '',
+                aftermath: 'Cincinnati became the first team to defeat a defending champion in the title game. The Bearcats would go back-to-back in 1962, again defeating Ohio State in the final. Ed Jucker\'s two-year run as head coach is one of the most remarkable in tournament history — he inherited the program from legendary George Smith and immediately won it all. Tom Thacker later became one of the few players to win an NCAA title, an NBA title, and an ABA title.',
+                coach: 'Ed Jucker',
+                mop: 'Jerry Lucas (Ohio State)'
+            },
+            '1962/cincinnati-bearcats': {
+                year: 1962,
+                teamName: 'Cincinnati Bearcats',
+                espnId: '2132',
+                teamSlug: 'cincinnati-bearcats',
+                heroTitle: '1962 NATIONAL CHAMPIONS',
+                heroSubtitle: '29-2 Record • Louisville, KY',
+                accentColor: '#E00122',
+                story: 'Cincinnati completed a remarkable repeat, again defeating Ohio State in the championship game — this time 71-59 at Freedom Hall in Louisville. The Bearcats trailed by 15 at halftime but staged one of the greatest comebacks in title game history, outscoring the Buckeyes 42-24 in the second half. Paul Hogue was dominant in the comeback, finishing with 22 points and 19 rebounds. Tom Thacker and Tony Yates led a defense that completely shut down Ohio State\'s vaunted attack after the break.',
+                games: [
+                    { round: 'Mideast First Round', opponent: 'Creighton Bluejays', oppSeed: 0, oppEspnId: '156', score: '66-46', winScore: 66, loseScore: 46, note: '' },
+                    { round: 'Mideast Regional', opponent: 'Colorado Buffaloes', oppSeed: 0, oppEspnId: '38', score: '73-46', winScore: 73, loseScore: 46, note: '' },
+                    { round: 'Semifinal', opponent: 'UCLA Bruins', oppSeed: 0, oppEspnId: '26', score: '72-70', winScore: 72, loseScore: 70, note: '' },
+                    { round: 'Championship', opponent: 'Ohio State Buckeyes', oppSeed: 0, oppEspnId: '194', score: '71-59', winScore: 71, loseScore: 59, note: '' , isChampionship: true}
+                ],
+                stats: { seed: 'N/A', record: '4-0', avgMargin: '+15.0', closestGame: '72-70 vs UCLA' },
+                videoId: '',
+                aftermath: 'Paul Hogue was named tournament MOP after his heroic second-half performance. Cincinnati\'s back-to-back titles cemented one of the great dynasties of the pre-UCLA era. The semifinal victory over UCLA was notable — it was John Wooden\'s first Final Four appearance, and the two-point loss foreshadowed what was to come as Wooden would soon build the greatest dynasty in college basketball history. Cincinnati has not won a championship since.',
+                coach: 'Ed Jucker',
+                mop: 'Paul Hogue'
+            },
+            '1963/loyola-chicago-ramblers': {
+                year: 1963,
+                teamName: 'Loyola Chicago Ramblers',
+                espnId: '2350',
+                teamSlug: 'loyola-chicago-ramblers',
+                heroTitle: '1963 NATIONAL CHAMPIONS',
+                heroSubtitle: '29-2 Record • Louisville, KY',
+                accentColor: '#6C1D45',
+                story: 'Loyola Chicago\'s 1963 championship is one of the most culturally significant moments in college basketball history. George Ireland\'s Ramblers started four Black players at a time when many programs were still segregated, and their championship game against an all-white Mississippi State team — which had to sneak out of Mississippi to defy a state injunction against playing integrated teams — was dubbed "The Game of Change." Loyola won a thrilling overtime game 60-58 against Cincinnati in the championship.',
+                games: [
+                    { round: 'Mideast First Round', opponent: 'Tennessee Tech Golden Eagles', oppSeed: 0, oppEspnId: '2634', score: '111-42', winScore: 111, loseScore: 42, note: '' },
+                    { round: 'Mideast Regional', opponent: 'Mississippi State Bulldogs', oppSeed: 0, oppEspnId: '344', score: '61-51', winScore: 61, loseScore: 51, note: '"The Game of Change"' },
+                    { round: 'Semifinal', opponent: 'Duke Blue Devils', oppSeed: 0, oppEspnId: '150', score: '94-75', winScore: 94, loseScore: 75, note: '' },
+                    { round: 'Championship', opponent: 'Cincinnati Bearcats', oppSeed: 0, oppEspnId: '2132', score: '60-58', winScore: 60, loseScore: 58, note: 'OT' , isChampionship: true}
+                ],
+                stats: { seed: 'N/A', record: '4-0', avgMargin: '+25.0', closestGame: '60-58 OT vs Cincinnati' },
+                videoId: '',
+                aftermath: 'Les Hunter was named tournament MOP. Loyola\'s championship shattered racial barriers in college basketball and helped accelerate integration across the sport. The game against Mississippi State, where the Bulldogs defied their governor\'s order to boycott integrated games, remains one of the most courageous moments in sports history. Loyola averaged over 90 points per game during the season, playing a revolutionary up-tempo style. The Ramblers did not return to the Final Four until 2018.',
+                coach: 'George Ireland',
+                mop: 'Les Hunter'
+            },
+            '1964/ucla-bruins': {
+                year: 1964,
+                teamName: 'UCLA Bruins',
+                espnId: '26',
+                teamSlug: 'ucla-bruins',
+                heroTitle: '1964 NATIONAL CHAMPIONS',
+                heroSubtitle: 'Undefeated (30-0) • Kansas City, MO',
+                accentColor: '#2D68C4',
+                story: 'John Wooden\'s first championship team was an undersized squad that relied on his revolutionary full-court zone press to create chaos. With no starter taller than 6\'5", the Bruins\' relentless pressure defense turned games into track meets that overwhelmed opponents. Walt Hazzard and Gail Goodrich were the stars of a team that went 30-0, routing Duke 98-83 in the championship. The "press" became the most feared weapon in college basketball.',
+                games: [
+                    { round: 'West First Round', opponent: 'Seattle Redhawks', oppSeed: 0, oppEspnId: '2547', score: '95-90', winScore: 95, loseScore: 90, note: '' },
+                    { round: 'West Regional', opponent: 'San Francisco Dons', oppSeed: 0, oppEspnId: '2539', score: '76-72', winScore: 76, loseScore: 72, note: '' },
+                    { round: 'Semifinal', opponent: 'Kansas State Wildcats', oppSeed: 0, oppEspnId: '2306', score: '90-84', winScore: 90, loseScore: 84, note: '' },
+                    { round: 'Championship', opponent: 'Duke Blue Devils', oppSeed: 0, oppEspnId: '150', score: '98-83', winScore: 98, loseScore: 83, note: '' , isChampionship: true}
+                ],
+                stats: { seed: 'N/A', record: '4-0', avgMargin: '+7.8', closestGame: '76-72 vs San Francisco' },
+                videoId: '',
+                aftermath: 'Walt Hazzard was named tournament MOP. This first championship launched the greatest dynasty in college basketball history — UCLA would win 10 titles in 12 years under Wooden. The full-court press that made this title possible would be adopted and adapted by coaches at every level. Hazzard (later Mahdi Abdul-Rahman) had a solid NBA career, while Gail Goodrich became a five-time All-Star with the Lakers. Duke\'s loss in the final was the first of many Final Four heartbreaks for the Blue Devils.',
+                coach: 'John Wooden',
+                mop: 'Walt Hazzard'
+            },
+            '1965/ucla-bruins': {
+                year: 1965,
+                teamName: 'UCLA Bruins',
+                espnId: '26',
+                teamSlug: 'ucla-bruins',
+                heroTitle: '1965 NATIONAL CHAMPIONS',
+                heroSubtitle: '28-2 Record • Portland, OR',
+                accentColor: '#2D68C4',
+                story: 'UCLA repeated as champions behind the scoring brilliance of Gail Goodrich, who erupted for 42 points in the championship game against Michigan — still one of the greatest individual performances in title game history. Wooden\'s Bruins lost two games during the regular season but peaked at exactly the right time, rolling through the tournament bracket. The championship game at Portland Memorial Coliseum was Goodrich\'s masterpiece.',
+                games: [
+                    { round: 'West First Round', opponent: 'BYU Cougars', oppSeed: 0, oppEspnId: '252', score: '100-76', winScore: 100, loseScore: 76, note: '' },
+                    { round: 'West Regional', opponent: 'San Francisco Dons', oppSeed: 0, oppEspnId: '2539', score: '101-93', winScore: 101, loseScore: 93, note: '' },
+                    { round: 'Semifinal', opponent: 'Wichita State Shockers', oppSeed: 0, oppEspnId: '2724', score: '108-89', winScore: 108, loseScore: 89, note: '' },
+                    { round: 'Championship', opponent: 'Michigan Wolverines', oppSeed: 0, oppEspnId: '130', score: '91-80', winScore: 91, loseScore: 80, note: '' , isChampionship: true}
+                ],
+                stats: { seed: 'N/A', record: '4-0', avgMargin: '+17.8', closestGame: '91-80 vs Michigan' },
+                videoId: '',
+                aftermath: 'Gail Goodrich was named tournament MOP after his 42-point championship masterclass. He went on to a Hall of Fame NBA career with the Los Angeles Lakers, averaging 18.6 points over 14 seasons. Michigan\'s Cazzie Russell led the Wolverines to the title game but couldn\'t overcome Goodrich\'s brilliance. UCLA\'s back-to-back titles established the Bruins as the clear standard in college basketball — and with Lew Alcindor arriving as a freshman the next year, the best was yet to come.',
+                coach: 'John Wooden',
+                mop: 'Gail Goodrich'
+            },
+            '1966/utep-miners': {
+                year: 1966,
+                teamName: 'UTEP Miners',
+                espnId: '2638',
+                teamSlug: 'utep-miners',
+                heroTitle: '1966 NATIONAL CHAMPIONS',
+                heroSubtitle: '28-1 Record • College Park, MD',
+                accentColor: '#FF6600',
+                story: 'Texas Western (now UTEP) made history by becoming the first team to start five Black players in a championship game, defeating Adolph Rupp\'s all-white Kentucky Wildcats 72-65 at Cole Field House. Don Haskins\' miners, led by Bobby Joe Hill, David Lattin, Orsten Artis, and Willie Worsley, played a physical, up-tempo style that Kentucky couldn\'t match. Hill\'s back-to-back steals early in the game set the tone for the most culturally significant game in college basketball history.',
+                games: [
+                    { round: 'Midwest First Round', opponent: 'Oklahoma City', oppSeed: 0, oppEspnId: '', score: '89-74', winScore: 89, loseScore: 74, note: '' },
+                    { round: 'Midwest Regional', opponent: 'Cincinnati Bearcats', oppSeed: 0, oppEspnId: '2132', score: '78-76', winScore: 78, loseScore: 76, note: '' },
+                    { round: 'Semifinal', opponent: 'Utah Utes', oppSeed: 0, oppEspnId: '254', score: '85-78', winScore: 85, loseScore: 78, note: '' },
+                    { round: 'Championship', opponent: 'Kentucky Wildcats', oppSeed: 0, oppEspnId: '96', score: '72-65', winScore: 72, loseScore: 65, note: '' , isChampionship: true}
+                ],
+                stats: { seed: 'N/A', record: '4-0', avgMargin: '+9.5', closestGame: '78-76 vs Cincinnati' },
+                videoId: '',
+                aftermath: 'Bobby Joe Hill\'s steals in the championship game became an iconic moment immortalized in the film "Glory Road" (2006). The game is widely credited with accelerating integration in college basketball, particularly in the South. Within a few years, every major program was recruiting Black players. Don Haskins, who said he simply played his best players regardless of race, was inducted into the Basketball Hall of Fame in 1997. Adolph Rupp recruited his first Black player, Tom Payne, four years later.',
+                coach: 'Don Haskins',
+                mop: 'Jerry Chambers (Utah)'
+            },
+            '1968/ucla-bruins': {
+                year: 1968,
+                teamName: 'UCLA Bruins',
+                espnId: '26',
+                teamSlug: 'ucla-bruins',
+                heroTitle: '1968 NATIONAL CHAMPIONS',
+                heroSubtitle: '29-1 Record • Los Angeles, CA',
+                accentColor: '#2D68C4',
+                story: 'After a dunking ban was introduced partly in response to his dominance, Lew Alcindor developed an unstoppable sky hook and led UCLA to a 29-1 record and the championship. The Bruins\' only loss was the famous "Game of the Century" against Houston at the Astrodome, where Alcindor played through an eye injury. UCLA got revenge in the Final Four, crushing Houston 101-69 in one of the most lopsided semifinal games ever, then defeating North Carolina 78-55 in the title game.',
+                games: [
+                    { round: 'West First Round', opponent: 'New Mexico State Aggies', oppSeed: 0, oppEspnId: '166', score: '58-49', winScore: 58, loseScore: 49, note: '' },
+                    { round: 'West Regional', opponent: 'Santa Clara Broncos', oppSeed: 0, oppEspnId: '2541', score: '87-66', winScore: 87, loseScore: 66, note: '' },
+                    { round: 'Semifinal', opponent: 'Houston Cougars', oppSeed: 0, oppEspnId: '248', score: '101-69', winScore: 101, loseScore: 69, note: 'Revenge for "Game of the Century"' },
+                    { round: 'Championship', opponent: 'North Carolina Tar Heels', oppSeed: 0, oppEspnId: '153', score: '78-55', winScore: 78, loseScore: 55, note: '' , isChampionship: true}
+                ],
+                stats: { seed: 'N/A', record: '4-0', avgMargin: '+22.0', closestGame: '58-49 vs New Mexico State' },
+                videoId: '',
+                aftermath: 'Lew Alcindor was named tournament MOP for the second consecutive year. The 101-69 demolition of Houston — a team that had beaten UCLA earlier that season — remains one of the most emphatic statements in tournament history. Dean Smith\'s North Carolina was simply overmatched in the final. Alcindor\'s development of the sky hook in response to the dunk ban produced a weapon that would become the most unguardable shot in basketball history during his NBA career as Kareem Abdul-Jabbar.',
+                coach: 'John Wooden',
+                mop: 'Lew Alcindor'
+            },
+            '1969/ucla-bruins': {
+                year: 1969,
+                teamName: 'UCLA Bruins',
+                espnId: '26',
+                teamSlug: 'ucla-bruins',
+                heroTitle: '1969 NATIONAL CHAMPIONS',
+                heroSubtitle: '29-1 Record • Louisville, KY',
+                accentColor: '#2D68C4',
+                story: 'Lew Alcindor capped his UCLA career with a third straight championship, leading the Bruins to a 29-1 record and completing one of the most dominant three-year stretches in sports history. UCLA was relentless in the tournament, defeating New Mexico State, Drake, and then Purdue\'s Rick Mount 92-72 in the championship at Freedom Hall in Louisville. Alcindor finished his college career with an 88-2 record and three titles.',
+                games: [
+                    { round: 'West First Round', opponent: 'New Mexico State Aggies', oppSeed: 0, oppEspnId: '166', score: '53-38', winScore: 53, loseScore: 38, note: '' },
+                    { round: 'West Regional', opponent: 'Santa Clara Broncos', oppSeed: 0, oppEspnId: '2541', score: '90-52', winScore: 90, loseScore: 52, note: '' },
+                    { round: 'Semifinal', opponent: 'Drake Bulldogs', oppSeed: 0, oppEspnId: '2181', score: '85-82', winScore: 85, loseScore: 82, note: '' },
+                    { round: 'Championship', opponent: 'Purdue Boilermakers', oppSeed: 0, oppEspnId: '2509', score: '92-72', winScore: 92, loseScore: 72, note: '' , isChampionship: true}
+                ],
+                stats: { seed: 'N/A', record: '4-0', avgMargin: '+18.5', closestGame: '85-82 vs Drake' },
+                videoId: '',
+                aftermath: 'Lew Alcindor won his third consecutive tournament MOP award — a feat never matched. He was drafted 1st overall by the Milwaukee Bucks and changed his name to Kareem Abdul-Jabbar. His 88-2 college record (three championships) stood as the gold standard for decades. Many expected UCLA\'s dynasty to end with Alcindor\'s departure, but John Wooden had other plans — with Sidney Wicks, Curtis Rowe, and later Bill Walton, the titles kept coming.',
+                coach: 'John Wooden',
+                mop: 'Lew Alcindor'
+            },
+            '1970/ucla-bruins': {
+                year: 1970,
+                teamName: 'UCLA Bruins',
+                espnId: '26',
+                teamSlug: 'ucla-bruins',
+                heroTitle: '1970 NATIONAL CHAMPIONS',
+                heroSubtitle: '28-2 Record • College Park, MD',
+                accentColor: '#2D68C4',
+                story: 'Proving the dynasty was bigger than any one player, UCLA won its fourth consecutive championship — and first without Lew Alcindor. Sidney Wicks and Curtis Rowe stepped into starring roles, and the Bruins were nearly as dominant as before. UCLA cruised through the West region and defeated New Mexico State and Jacksonville on the way to the title, beating the Dolphins 80-69 in the championship at Cole Field House. Jacksonville\'s Artis Gilmore posed the only real threat.',
+                games: [
+                    { round: 'West First Round', opponent: 'Jerry West Long Beach State', oppSeed: 0, oppEspnId: '299', score: '88-65', winScore: 88, loseScore: 65, note: '' },
+                    { round: 'West Regional', opponent: 'Utah State Aggies', oppSeed: 0, oppEspnId: '328', score: '101-79', winScore: 101, loseScore: 79, note: '' },
+                    { round: 'Semifinal', opponent: 'New Mexico State Aggies', oppSeed: 0, oppEspnId: '166', score: '93-77', winScore: 93, loseScore: 77, note: '' },
+                    { round: 'Championship', opponent: 'Jacksonville Dolphins', oppSeed: 0, oppEspnId: '294', score: '80-69', winScore: 80, loseScore: 69, note: '' , isChampionship: true}
+                ],
+                stats: { seed: 'N/A', record: '4-0', avgMargin: '+18.3', closestGame: '80-69 vs Jacksonville' },
+                videoId: '',
+                aftermath: 'Sidney Wicks was named tournament MOP, proving UCLA could dominate without Alcindor. Jacksonville\'s 7\'2" Artis Gilmore was the most imposing physical specimen in college basketball but couldn\'t overcome UCLA\'s depth and coaching. Four straight titles seemed impossible to match — yet Wooden\'s Bruins would win three more in a row starting in 1971. Wicks was drafted 2nd overall by the Portland Trail Blazers and won Rookie of the Year.',
+                coach: 'John Wooden',
+                mop: 'Sidney Wicks'
+            },
+            '1971/ucla-bruins': {
+                year: 1971,
+                teamName: 'UCLA Bruins',
+                espnId: '26',
+                teamSlug: 'ucla-bruins',
+                heroTitle: '1971 NATIONAL CHAMPIONS',
+                heroSubtitle: '29-1 Record • Houston, TX',
+                accentColor: '#2D68C4',
+                story: 'The Bill Walton era began with a 29-1 season and UCLA\'s fifth consecutive championship. The redheaded sophomore center was dominant from the start, and the Bruins\' only loss came to Notre Dame in a regular-season upset. UCLA destroyed Villanova 68-62 in the championship game at the Astrodome in Houston. Sidney Wicks earned his second MOP award in what was his final season, though Walton\'s arrival ensured the dynasty would continue uninterrupted.',
+                games: [
+                    { round: 'West First Round', opponent: 'BYU Cougars', oppSeed: 0, oppEspnId: '252', score: '91-73', winScore: 91, loseScore: 73, note: '' },
+                    { round: 'West Regional', opponent: 'Long Beach State 49ers', oppSeed: 0, oppEspnId: '299', score: '57-55', winScore: 57, loseScore: 55, note: '' },
+                    { round: 'Semifinal', opponent: 'Kansas Jayhawks', oppSeed: 0, oppEspnId: '2305', score: '68-60', winScore: 68, loseScore: 60, note: '' },
+                    { round: 'Championship', opponent: 'Villanova Wildcats', oppSeed: 0, oppEspnId: '222', score: '68-62', winScore: 68, loseScore: 62, note: '' , isChampionship: true}
+                ],
+                stats: { seed: 'N/A', record: '4-0', avgMargin: '+8.5', closestGame: '57-55 vs Long Beach State' },
+                videoId: '',
+                aftermath: 'Sidney Wicks was named tournament MOP for the second consecutive year. Five straight titles — Wooden\'s dynasty was now beyond historic, it was unimaginable. Howard Porter of Villanova was initially named MOP but was stripped of the award after it was revealed he had signed a professional contract before the tournament. UCLA\'s winning streak would extend to 88 games before Notre Dame snapped it in 1974.',
+                coach: 'John Wooden',
+                mop: 'Sidney Wicks'
+            },
+            '1972/ucla-bruins': {
+                year: 1972,
+                teamName: 'UCLA Bruins',
+                espnId: '26',
+                teamSlug: 'ucla-bruins',
+                heroTitle: '1972 NATIONAL CHAMPIONS',
+                heroSubtitle: 'Undefeated (30-0) • Los Angeles, CA',
+                accentColor: '#2D68C4',
+                story: 'The 1972 UCLA Bruins are widely considered the greatest college basketball team ever assembled. Bill Walton, in his junior year, led a perfect 30-0 season that saw the Bruins win by an average of more than 30 points per game during the regular season. The tournament was merely a formality — UCLA defeated Weber State, Long Beach State, Louisville, and then Florida State 81-76 in the championship at the Los Angeles Sports Arena. Even the "close" championship game was never truly in doubt.',
+                games: [
+                    { round: 'West First Round', opponent: 'Weber State Wildcats', oppSeed: 0, oppEspnId: '2692', score: '90-58', winScore: 90, loseScore: 58, note: '' },
+                    { round: 'West Regional', opponent: 'Long Beach State 49ers', oppSeed: 0, oppEspnId: '299', score: '73-57', winScore: 73, loseScore: 57, note: '' },
+                    { round: 'Semifinal', opponent: 'Louisville Cardinals', oppSeed: 0, oppEspnId: '97', score: '96-77', winScore: 96, loseScore: 77, note: '' },
+                    { round: 'Championship', opponent: 'Florida State Seminoles', oppSeed: 0, oppEspnId: '52', score: '81-76', winScore: 81, loseScore: 76, note: '' , isChampionship: true}
+                ],
+                stats: { seed: 'N/A', record: '4-0', avgMargin: '+18.0', closestGame: '81-76 vs Florida State' },
+                videoId: '',
+                aftermath: 'Bill Walton was named tournament MOP as UCLA captured its sixth consecutive title. The 1972 team\'s regular-season dominance (30+ point average margin of victory) may never be matched. Walton and the Bruins were in the midst of an 88-game winning streak that still stands as the longest in Division I history. UCLA\'s dynasty under Wooden was reaching heights that seemed impossible — and yet they would win again in 1973.',
+                coach: 'John Wooden',
+                mop: 'Bill Walton'
+            },
+            '1973/ucla-bruins': {
+                year: 1973,
+                teamName: 'UCLA Bruins',
+                espnId: '26',
+                teamSlug: 'ucla-bruins',
+                heroTitle: '1973 NATIONAL CHAMPIONS',
+                heroSubtitle: '30-0 Record • St. Louis, MO',
+                accentColor: '#2D68C4',
+                story: 'Bill Walton delivered perhaps the greatest individual performance in championship game history, shooting 21-of-22 from the field (95.5%) and scoring 44 points as UCLA crushed Memphis State 87-66. The Bruins completed a second straight undefeated season (30-0) and won their unprecedented seventh consecutive national championship. Walton was so dominant that the championship game was never competitive despite Memphis State entering with high hopes.',
+                games: [
+                    { round: 'West First Round', opponent: 'Arizona State Sun Devils', oppSeed: 0, oppEspnId: '9', score: '98-81', winScore: 98, loseScore: 81, note: '' },
+                    { round: 'West Regional', opponent: 'San Francisco Dons', oppSeed: 0, oppEspnId: '2539', score: '54-39', winScore: 54, loseScore: 39, note: '' },
+                    { round: 'Semifinal', opponent: 'Indiana Hoosiers', oppSeed: 0, oppEspnId: '84', score: '70-59', winScore: 70, loseScore: 59, note: '' },
+                    { round: 'Championship', opponent: 'Memphis Tigers', oppSeed: 0, oppEspnId: '235', score: '87-66', winScore: 87, loseScore: 66, note: '' , isChampionship: true}
+                ],
+                stats: { seed: 'N/A', record: '4-0', avgMargin: '+16.0', closestGame: '70-59 vs Indiana' },
+                videoId: '',
+                aftermath: 'Bill Walton won his second consecutive tournament MOP. His 44-point, 21-of-22 performance in the title game is universally considered the greatest individual game in championship history. Seven consecutive titles — a record that will almost certainly never be broken. The dynasty finally ended in 1974 when NC State defeated UCLA in the semifinals, ending an 88-game winning streak. Walton was drafted 1st overall by the Portland Trail Blazers.',
+                coach: 'John Wooden',
+                mop: 'Bill Walton'
+            },
+            '1974/nc-state-wolfpack': {
+                year: 1974,
+                teamName: 'NC State Wolfpack',
+                espnId: '152',
+                teamSlug: 'nc-state-wolfpack',
+                heroTitle: '1974 NATIONAL CHAMPIONS',
+                heroSubtitle: '30-1 Record • Greensboro, NC',
+                accentColor: '#CC0000',
+                story: 'NC State ended UCLA\'s seven-year dynasty in one of the most dramatic tournaments ever. David Thompson — the most electric player in the country — led Norm Sloan\'s Wolfpack to an overtime semifinal victory over UCLA, ending the Bruins\' 88-game winning streak and seven-year title reign. Two days later, NC State defeated Marquette 76-64 in the championship. Thompson was a gravity-defying athlete who played above the rim in an era when that was revolutionary.',
+                games: [
+                    { round: 'East First Round', opponent: 'Providence Friars', oppSeed: 0, oppEspnId: '2507', score: '92-78', winScore: 92, loseScore: 78, note: '' },
+                    { round: 'East Regional', opponent: 'Pittsburgh Panthers', oppSeed: 0, oppEspnId: '221', score: '100-72', winScore: 100, loseScore: 72, note: '' },
+                    { round: 'Semifinal', opponent: 'UCLA Bruins', oppSeed: 0, oppEspnId: '26', score: '80-77', winScore: 80, loseScore: 77, note: '2OT — ends 88-game UCLA win streak' },
+                    { round: 'Championship', opponent: 'Marquette Golden Eagles', oppSeed: 0, oppEspnId: '269', score: '76-64', winScore: 76, loseScore: 64, note: '' , isChampionship: true}
+                ],
+                stats: { seed: 'N/A', record: '4-0', avgMargin: '+12.8', closestGame: '80-77 2OT vs UCLA' },
+                videoId: '',
+                aftermath: 'David Thompson was named tournament MOP after ending the greatest dynasty in sports history. His double-overtime semifinal victory over UCLA is one of the most important games ever played. Thompson was drafted 1st overall in both the NBA and ABA drafts in 1975. NC State had actually been ineligible for the 1973 tournament due to NCAA violations, meaning the Wolfpack might have ended UCLA\'s streak even sooner. This was NC State\'s first title and remains one of the program\'s crowning achievements.',
+                coach: 'Norm Sloan',
+                mop: 'David Thompson'
+            },
+            '1975/ucla-bruins': {
+                year: 1975,
+                teamName: 'UCLA Bruins',
+                espnId: '26',
+                teamSlug: 'ucla-bruins',
+                heroTitle: '1975 NATIONAL CHAMPIONS',
+                heroSubtitle: '28-3 Record • San Diego, CA',
+                accentColor: '#2D68C4',
+                story: 'John Wooden announced his retirement before the Final Four — and his players responded with an unforgettable send-off. UCLA\'s 10th championship under Wooden was powered by Richard Washington and Dave Meyers, who led the Bruins past Louisville and then Kentucky 92-85 in the championship game at the San Diego Sports Arena. It was a fitting ending to the Wooden era — the "Wizard of Westwood" going out on top with his record 10th national championship.',
+                games: [
+                    { round: 'West First Round', opponent: 'Michigan Wolverines', oppSeed: 0, oppEspnId: '130', score: '103-91', winScore: 103, loseScore: 91, note: '' },
+                    { round: 'West Regional', opponent: 'Montana Grizzlies', oppSeed: 0, oppEspnId: '149', score: '67-64', winScore: 67, loseScore: 64, note: '' },
+                    { round: 'Semifinal', opponent: 'Louisville Cardinals', oppSeed: 0, oppEspnId: '97', score: '75-74', winScore: 75, loseScore: 74, note: 'OT' },
+                    { round: 'Championship', opponent: 'Kentucky Wildcats', oppSeed: 0, oppEspnId: '96', score: '92-85', winScore: 92, loseScore: 85, note: '' , isChampionship: true}
+                ],
+                stats: { seed: 'N/A', record: '4-0', avgMargin: '+5.8', closestGame: '75-74 OT vs Louisville' },
+                videoId: '',
+                aftermath: 'Richard Washington was named tournament MOP. John Wooden retired with a record that will never be broken: 10 national championships in 12 years, including seven in a row (1967-1973). No other coach has won more than four. The overtime semifinal victory over Louisville was one of the most dramatic games of Wooden\'s career. His farewell press conference, where he quoted his favorite poetry, became legendary. The "Wizard of Westwood" passed away in 2010 at age 99.',
+                coach: 'John Wooden',
+                mop: 'Richard Washington'
+            },
+            '1977/marquette-golden-eagles': {
+                year: 1977,
+                teamName: 'Marquette Golden Eagles',
+                espnId: '269',
+                teamSlug: 'marquette-golden-eagles',
+                heroTitle: '1977 NATIONAL CHAMPIONS',
+                heroSubtitle: '25-7 Record • Atlanta, GA',
+                accentColor: '#003366',
+                story: 'Al McGuire coached his final game and went out the same way John Wooden did — as a champion. Having announced his retirement before the season, McGuire\'s Warriors (as they were then known) were an unlikely champion with seven losses. But Butch Lee, Bo Ellis, and Jerome Whitehead carried Marquette to the title, defeating UNC-Charlotte, Wake Forest, and then North Carolina 67-59 in the championship at The Omni in Atlanta. McGuire famously wept on the bench as the final seconds ticked away.',
+                games: [
+                    { round: 'Midwest First Round', opponent: 'Cincinnati Bearcats', oppSeed: 0, oppEspnId: '2132', score: '66-51', winScore: 66, loseScore: 51, note: '' },
+                    { round: 'Midwest Regional', opponent: 'Kansas State Wildcats', oppSeed: 0, oppEspnId: '2306', score: '67-66', winScore: 67, loseScore: 66, note: '' },
+                    { round: 'Semifinal', opponent: 'UNC Charlotte 49ers', oppSeed: 0, oppEspnId: '2429', score: '51-49', winScore: 51, loseScore: 49, note: '' },
+                    { round: 'Championship', opponent: 'North Carolina Tar Heels', oppSeed: 0, oppEspnId: '153', score: '67-59', winScore: 67, loseScore: 59, note: '' , isChampionship: true}
+                ],
+                stats: { seed: 'N/A', record: '4-0', avgMargin: '+6.3', closestGame: '51-49 vs UNC Charlotte' },
+                videoId: '',
+                aftermath: 'Butch Lee was named tournament MOP. Al McGuire\'s tears on the bench became one of the most iconic images in tournament history — a brash, beloved coach overwhelmed by the emotion of going out on top. McGuire transitioned to broadcasting and became one of the most colorful and insightful analysts in CBS history. The image of McGuire crying as the clock wound down remains indelible. Marquette\'s only championship was a perfect storybook ending.',
+                coach: 'Al McGuire',
+                mop: 'Butch Lee'
+            },
+            '1979/michigan-state-spartans': {
+                year: 1979,
+                teamName: 'Michigan State Spartans',
+                espnId: '127',
+                teamSlug: 'michigan-state-spartans',
+                heroTitle: '1979 NATIONAL CHAMPIONS',
+                heroSubtitle: '2 Seed • 26-6 Record • Salt Lake City, UT',
+                accentColor: '#18453B',
+                story: 'Magic Johnson vs. Larry Bird — the championship game that saved college basketball and launched the modern era of the sport. Michigan State\'s Earvin "Magic" Johnson led the Spartans to a 75-64 victory over Larry Bird\'s Indiana State Sycamores in the most-watched college basketball game in history. The game drew a 24.1 Nielsen rating that still stands as the highest-rated basketball telecast ever. Magic\'s smile, passing wizardry, and infectious joy made him a national star overnight.',
+                games: [
+                    { round: 'Midwest First Round', opponent: 'Lamar Cardinals', oppSeed: 0, oppEspnId: '2320', score: '95-64', winScore: 95, loseScore: 64, note: '' },
+                    { round: 'Midwest Regional', opponent: 'LSU Tigers', oppSeed: 0, oppEspnId: '99', score: '87-71', winScore: 87, loseScore: 71, note: '' },
+                    { round: 'Semifinal', opponent: 'Penn Quakers', oppSeed: 0, oppEspnId: '219', score: '101-67', winScore: 101, loseScore: 67, note: '' },
+                    { round: 'Championship', opponent: 'Indiana State Sycamores', oppSeed: 0, oppEspnId: '282', score: '75-64', winScore: 75, loseScore: 64, note: '' , isChampionship: true}
+                ],
+                stats: { seed: '2', record: '4-0', avgMargin: '+20.5', closestGame: '75-64 vs Indiana State' },
+                videoId: '',
+                aftermath: 'Magic Johnson was named tournament MOP and was drafted 1st overall by the Los Angeles Lakers. Larry Bird, drafted 6th by the Boston Celtics the year prior, began their legendary NBA rivalry that revitalized professional basketball. Their college championship matchup is widely credited with creating March Madness as a cultural phenomenon. Jud Heathcote\'s Michigan State team was the catalyst for the modern era of college basketball as entertainment.',
+                coach: 'Jud Heathcote',
+                mop: 'Magic Johnson'
+            },
+            '1980/louisville-cardinals': {
+                year: 1980,
+                teamName: 'Louisville Cardinals',
+                espnId: '97',
+                teamSlug: 'louisville-cardinals',
+                heroTitle: '1980 NATIONAL CHAMPIONS',
+                heroSubtitle: '2 Seed • 33-3 Record • Indianapolis, IN',
+                accentColor: '#AD0000',
+                story: 'Denny Crum\'s Louisville Cardinals, dubbed the "Doctors of Dunk" for their high-flying style, won the program\'s first championship with a dominant 33-3 season. Darrell Griffith — "Dr. Dunkenstein" — was the most electrifying player in college basketball, and he saved his best for last. Louisville defeated UCLA and Iowa in the Final Four before Griffith led a 59-54 victory over UCLA in the championship at Market Square Arena in Indianapolis.',
+                games: [
+                    { round: 'Midwest First Round', opponent: 'Kansas State Wildcats', oppSeed: 0, oppEspnId: '2306', score: '71-69', winScore: 71, loseScore: 69, note: '' },
+                    { round: 'Midwest Regional', opponent: 'Texas A&M Aggies', oppSeed: 0, oppEspnId: '245', score: '66-55', winScore: 66, loseScore: 55, note: '' },
+                    { round: 'Semifinal', opponent: 'Iowa Hawkeyes', oppSeed: 0, oppEspnId: '2294', score: '80-72', winScore: 80, loseScore: 72, note: '' },
+                    { round: 'Championship', opponent: 'UCLA Bruins', oppSeed: 0, oppEspnId: '26', score: '59-54', winScore: 59, loseScore: 54, note: '' , isChampionship: true}
+                ],
+                stats: { seed: '2', record: '4-0', avgMargin: '+6.8', closestGame: '71-69 vs Kansas State' },
+                videoId: '',
+                aftermath: 'Darrell Griffith was named tournament MOP and was drafted 2nd overall by the Utah Jazz, where he won Rookie of the Year. His high-flying style made Louisville must-see television and helped establish the Cardinals as a national power. Denny Crum, a John Wooden protege, had delivered on the promise of Louisville basketball. He would win again in 1986. Louisville\'s "Doctors of Dunk" nickname endured as one of the great team monikers in college basketball history.',
+                coach: 'Denny Crum',
+                mop: 'Darrell Griffith'
+            },
+            '1981/indiana-hoosiers': {
+                year: 1981,
+                teamName: 'Indiana Hoosiers',
+                espnId: '84',
+                teamSlug: 'indiana-hoosiers',
+                heroTitle: '1981 NATIONAL CHAMPIONS',
+                heroSubtitle: '3 Seed • 26-9 Record • Philadelphia, PA',
+                accentColor: '#990000',
+                story: 'Bob Knight\'s Indiana Hoosiers overcame a nine-loss regular season to win the national championship — one of the most improbable title runs in tournament history. Isiah Thomas, the brilliant sophomore point guard, carried Indiana through the bracket with poise and clutch performances beyond his years. The Hoosiers survived a dogfight with North Carolina in the championship, winning 63-50 at The Spectrum in Philadelphia as Thomas scored 23 points and was named tournament MOP.',
+                games: [
+                    { round: 'East First Round', opponent: 'Maryland Terrapins', oppSeed: 0, oppEspnId: '120', score: '99-64', winScore: 99, loseScore: 64, note: '' },
+                    { round: 'Mideast Regional', opponent: 'UAB Blazers', oppSeed: 0, oppEspnId: '5', score: '87-72', winScore: 87, loseScore: 72, note: '' },
+                    { round: 'Semifinal', opponent: 'LSU Tigers', oppSeed: 0, oppEspnId: '99', score: '67-49', winScore: 67, loseScore: 49, note: '' },
+                    { round: 'Championship', opponent: 'North Carolina Tar Heels', oppSeed: 0, oppEspnId: '153', score: '63-50', winScore: 63, loseScore: 50, note: '' , isChampionship: true}
+                ],
+                stats: { seed: '3', record: '4-0', avgMargin: '+21.5', closestGame: '63-50 vs North Carolina' },
+                videoId: '',
+                aftermath: 'Isiah Thomas was named tournament MOP and left Indiana after the season to enter the NBA Draft, where he was selected 2nd overall by the Detroit Pistons. Thomas led the Pistons to back-to-back championships (1989-90) and is considered one of the greatest point guards in NBA history. For Bob Knight, it was his second title and proof that his demanding coaching style could mold a flawed team into champions. He would complete the trifecta in 1987.',
+                coach: 'Bob Knight',
+                mop: 'Isiah Thomas'
+            },
+            '1984/georgetown-hoyas': {
+                year: 1984,
+                teamName: 'Georgetown Hoyas',
+                espnId: '46',
+                teamSlug: 'georgetown-hoyas',
+                heroTitle: '1984 NATIONAL CHAMPIONS',
+                heroSubtitle: '1 Seed • 34-3 Record • Seattle, WA',
+                accentColor: '#041E42',
+                story: 'Patrick Ewing and John Thompson\'s Georgetown Hoyas were the most intimidating team in college basketball, and they proved it by dominating the 1984 tournament. The Hoyas\' suffocating defense, anchored by the 7-foot Ewing, held opponents to historically low shooting percentages. Georgetown defeated SMU, UNLV, Dayton, and Kentucky before crushing Hakeem Olajuwon\'s Houston Cougars 84-75 in the championship at the Kingdome in Seattle. It was the culmination of Thompson\'s mission to build a Black-coached powerhouse.',
+                games: [
+                    { round: 'East First Round', opponent: 'SMU Mustangs', oppSeed: 0, oppEspnId: '2567', score: '37-36', winScore: 37, loseScore: 36, note: '' },
+                    { round: 'East Regional', opponent: 'UNLV Rebels', oppSeed: 0, oppEspnId: '2439', score: '62-48', winScore: 62, loseScore: 48, note: '' },
+                    { round: 'Semifinal', opponent: 'Dayton Flyers', oppSeed: 0, oppEspnId: '2168', score: '61-49', winScore: 61, loseScore: 49, note: '' },
+                    { round: 'Championship', opponent: 'Houston Cougars', oppSeed: 0, oppEspnId: '248', score: '84-75', winScore: 84, loseScore: 75, note: '' , isChampionship: true}
+                ],
+                stats: { seed: '1', record: '4-0', avgMargin: '+8.8', closestGame: '37-36 vs SMU' },
+                videoId: '',
+                aftermath: 'Patrick Ewing was named tournament MOP. John Thompson became the first Black head coach to win the NCAA championship, a historic milestone. Georgetown\'s intimidating defensive identity — the iconic gray T-shirts, the towel over Thompson\'s shoulder — became the model for every defensive-minded program. Ewing stayed for his senior year and led Georgetown back to the title game in 1985, where they suffered a stunning upset at the hands of Villanova. He was drafted 1st overall in 1985.',
+                coach: 'John Thompson',
+                mop: 'Patrick Ewing'
+            },
+            '1987/indiana-hoosiers': {
+                year: 1987,
+                teamName: 'Indiana Hoosiers',
+                espnId: '84',
+                teamSlug: 'indiana-hoosiers',
+                heroTitle: '1987 NATIONAL CHAMPIONS',
+                heroSubtitle: '1 Seed • 30-4 Record • New Orleans, LA',
+                accentColor: '#990000',
+                story: 'Keith Smart hit one of the most famous shots in championship game history — a baseline jumper with five seconds left to give Indiana a 74-73 victory over Syracuse in the Superdome. Bob Knight\'s Hoosiers had trailed for most of the second half, but Steve Alford kept them in the game with clutch three-pointers. Smart, a junior college transfer, rose up from the left baseline and buried the winner over Howard Triche, giving Indiana its fifth national championship in one of the most dramatic finishes ever.',
+                games: [
+                    { round: 'Midwest First Round', opponent: 'Fairfield Stags', oppSeed: 0, oppEspnId: '2223', score: '92-58', winScore: 92, loseScore: 58, note: '' },
+                    { round: 'Midwest Regional', opponent: 'Auburn Tigers', oppSeed: 0, oppEspnId: '2', score: '107-90', winScore: 107, loseScore: 90, note: '' },
+                    { round: 'Semifinal', opponent: 'UNLV Rebels', oppSeed: 0, oppEspnId: '2439', score: '97-93', winScore: 97, loseScore: 93, note: '' },
+                    { round: 'Championship', opponent: 'Syracuse Orange', oppSeed: 0, oppEspnId: '183', score: '74-73', winScore: 74, loseScore: 73, note: '' , isChampionship: true}
+                ],
+                stats: { seed: '1', record: '4-0', avgMargin: '+12.3', closestGame: '74-73 vs Syracuse' },
+                videoId: '',
+                aftermath: 'Keith Smart was named tournament MOP for his heroic championship performance. His baseline jumper is replayed every March and remains one of the top five moments in tournament history. Steve Alford finished as Indiana\'s all-time leading scorer and later coached at several major programs. For Bob Knight, this was his third and final national championship. Syracuse\'s Derrick Coleman and Sherman Douglas would return to lead the Orangemen to prominence, but this loss haunted them.',
+                coach: 'Bob Knight',
+                mop: 'Keith Smart'
+            },
+            '1989/michigan-wolverines': {
+                year: 1989,
+                teamName: 'Michigan Wolverines',
+                espnId: '130',
+                teamSlug: 'michigan-wolverines',
+                heroTitle: '1989 NATIONAL CHAMPIONS',
+                heroSubtitle: '3 Seed • 30-7 Record • Seattle, WA',
+                accentColor: '#FFCB05',
+                story: 'Michigan\'s championship run was unlike any other — interim coach Steve Fisher took over just days before the tournament when Bill Frieder was fired for accepting the Arizona State job, and the Wolverines went on an improbable run to the title. Glen Rice was unstoppable, scoring 184 points in six tournament games — still the single-tournament scoring record. Michigan defeated North Carolina, Virginia, and Illinois before Rice\'s 31 points led a 80-79 overtime thriller over Seton Hall in the championship at the Kingdome.',
+                games: [
+                    { round: 'Southeast First Round', opponent: 'Xavier Musketeers', oppSeed: 0, oppEspnId: '2752', score: '92-87', winScore: 92, loseScore: 87, note: '' },
+                    { round: 'Southeast Regional', opponent: 'South Alabama Jaguars', oppSeed: 0, oppEspnId: '6', score: '91-82', winScore: 91, loseScore: 82, note: '' },
+                    { round: 'Southeast Regional Final', opponent: 'North Carolina Tar Heels', oppSeed: 0, oppEspnId: '153', score: '92-87', winScore: 92, loseScore: 87, note: '' },
+                    { round: 'Semifinal', opponent: 'Illinois Fighting Illini', oppSeed: 0, oppEspnId: '356', score: '83-81', winScore: 83, loseScore: 81, note: '' },
+                    { round: 'Championship', opponent: 'Seton Hall Pirates', oppSeed: 0, oppEspnId: '2550', score: '80-79', winScore: 80, loseScore: 79, note: 'OT' , isChampionship: true}
+                ],
+                stats: { seed: '3', record: '5-0', avgMargin: '+5.4', closestGame: '80-79 OT vs Seton Hall' },
+                videoId: '',
+                aftermath: 'Glen Rice was named tournament MOP after setting the all-time single-tournament scoring record with 184 points in six games. Rumeal Robinson hit two clutch free throws in overtime to seal the title. Steve Fisher went from interim to permanent head coach, leading Michigan to the Fab Five era. Rice was drafted 4th overall by the Miami Heat and had a stellar 15-year NBA career. Michigan\'s 1989 title remains the program\'s only recognized championship — the Fab Five Final Four appearances were later vacated.',
+                coach: 'Steve Fisher',
+                mop: 'Glen Rice'
+            },
+            '2021/baylor-bears': {
+                year: 2021,
+                teamName: 'Baylor Bears',
+                espnId: '239',
+                teamSlug: 'baylor-bears',
+                heroTitle: '2021 NATIONAL CHAMPIONS',
+                heroSubtitle: '1 Seed • 28-2 Record • Indianapolis, IN',
+                accentColor: '#003015',
+                story: 'Scott Drew completed one of the greatest program turnarounds in college basketball history, leading Baylor to its first national championship. The Bears\' defense was suffocating and their three-point shooting was deadly — a combination that made them virtually unbeatable. Baylor dominated the tournament, winning every game by double digits including a 86-70 rout of previously-unbeaten Gonzaga in the championship at Lucas Oil Stadium. Jared Butler, MaCio Teague, and Davion Mitchell formed the best backcourt in the country.',
+                games: [
+                    { round: 'Round of 64', opponent: 'Hartford Hawks', oppSeed: 16, oppEspnId: '42', score: '79-55', winScore: 79, loseScore: 55, note: '' },
+                    { round: 'Round of 32', opponent: 'Wisconsin Badgers', oppSeed: 9, oppEspnId: '275', score: '76-63', winScore: 76, loseScore: 63, note: '' },
+                    { round: 'Sweet 16', opponent: 'Villanova Wildcats', oppSeed: 5, oppEspnId: '222', score: '62-51', winScore: 62, loseScore: 51, note: '' },
+                    { round: 'Elite Eight', opponent: 'Arkansas Razorbacks', oppSeed: 3, oppEspnId: '8', score: '81-72', winScore: 81, loseScore: 72, note: '' },
+                    { round: 'Final Four', opponent: 'Houston Cougars', oppSeed: 2, oppEspnId: '248', score: '78-59', winScore: 78, loseScore: 59, note: '' },
+                    { round: 'Championship', opponent: 'Gonzaga Bulldogs', oppSeed: 1, oppEspnId: '2250', score: '86-70', winScore: 86, loseScore: 70, note: '' , isChampionship: true}
+                ],
+                stats: { seed: '1', record: '6-0', avgMargin: '+14.2', closestGame: '62-51 vs Villanova' },
+                videoId: 'sB1lo3f5cVs',
+                aftermath: 'Jared Butler was named tournament MOP after his brilliant two-way play throughout the tournament. Scott Drew inherited a program in 2003 that was reeling from one of the darkest scandals in college sports history — the murder of Patrick Dennehy by teammate Carlton Dotson. That Drew built Baylor from the ashes of that tragedy to a national championship is one of the most remarkable coaching achievements ever. Davion Mitchell was drafted 9th overall by the Sacramento Kings.',
+                coach: 'Scott Drew',
+                mop: 'Jared Butler'
+            },
+
         };
 
         // Map championship years to team slugs for clickable badges
@@ -17705,7 +18623,52 @@
             '1999': { slug: 'uconn-huskies', espnId: '41' },
             '2004': { slug: 'uconn-huskies', espnId: '41' },
             '2005': { slug: 'north-carolina-tar-heels', espnId: '153' },
-            '2009': { slug: 'north-carolina-tar-heels', espnId: '153' }
+            '2009': { slug: 'north-carolina-tar-heels', espnId: '153' },
+            '2026': { slug: 'michigan-wolverines', espnId: '130' },
+            '2021': { slug: 'baylor-bears', espnId: '239' },
+            '1939': { slug: 'oregon-ducks', espnId: '2483' },
+            '1940': { slug: 'indiana-hoosiers', espnId: '84' },
+            '1941': { slug: 'wisconsin-badgers', espnId: '275' },
+            '1942': { slug: 'stanford-cardinal', espnId: '24' },
+            '1943': { slug: 'wyoming-cowboys', espnId: '2751' },
+            '1944': { slug: 'utah-utes', espnId: '254' },
+            '1945': { slug: 'oklahoma-state-cowboys', espnId: '197' },
+            '1946': { slug: 'oklahoma-state-cowboys', espnId: '197' },
+            '1947': { slug: 'holy-cross-crusaders', espnId: '107' },
+            '1948': { slug: 'kentucky-wildcats', espnId: '96' },
+            '1949': { slug: 'kentucky-wildcats', espnId: '96' },
+            '1950': { slug: 'ccny-beavers', espnId: '2609' },
+            '1951': { slug: 'kentucky-wildcats', espnId: '96' },
+            '1952': { slug: 'kansas-jayhawks', espnId: '2305' },
+            '1953': { slug: 'indiana-hoosiers', espnId: '84' },
+            '1954': { slug: 'la-salle-explorers', espnId: '2325' },
+            '1955': { slug: 'san-francisco-dons', espnId: '2539' },
+            '1956': { slug: 'san-francisco-dons', espnId: '2539' },
+            '1957': { slug: 'north-carolina-tar-heels', espnId: '153' },
+            '1958': { slug: 'kentucky-wildcats', espnId: '96' },
+            '1959': { slug: 'california-golden-bears', espnId: '25' },
+            '1960': { slug: 'ohio-state-buckeyes', espnId: '194' },
+            '1961': { slug: 'cincinnati-bearcats', espnId: '2132' },
+            '1962': { slug: 'cincinnati-bearcats', espnId: '2132' },
+            '1963': { slug: 'loyola-chicago-ramblers', espnId: '2350' },
+            '1964': { slug: 'ucla-bruins', espnId: '26' },
+            '1965': { slug: 'ucla-bruins', espnId: '26' },
+            '1966': { slug: 'utep-miners', espnId: '2638' },
+            '1968': { slug: 'ucla-bruins', espnId: '26' },
+            '1969': { slug: 'ucla-bruins', espnId: '26' },
+            '1970': { slug: 'ucla-bruins', espnId: '26' },
+            '1971': { slug: 'ucla-bruins', espnId: '26' },
+            '1972': { slug: 'ucla-bruins', espnId: '26' },
+            '1973': { slug: 'ucla-bruins', espnId: '26' },
+            '1974': { slug: 'nc-state-wolfpack', espnId: '152' },
+            '1975': { slug: 'ucla-bruins', espnId: '26' },
+            '1977': { slug: 'marquette-golden-eagles', espnId: '269' },
+            '1979': { slug: 'michigan-state-spartans', espnId: '127' },
+            '1980': { slug: 'louisville-cardinals', espnId: '97' },
+            '1981': { slug: 'indiana-hoosiers', espnId: '84' },
+            '1984': { slug: 'georgetown-hoyas', espnId: '46' },
+            '1987': { slug: 'indiana-hoosiers', espnId: '84' },
+            '1989': { slug: 'michigan-wolverines', espnId: '130' }
         };
 
         // H2H box score cache and schedule cache
@@ -18265,6 +19228,42 @@
             setTimeout(tryFind, 10 * 60 * 1000);
         }
 
+        function hexToRgb(hex) {
+            hex = hex.replace('#', '');
+            if (hex.length === 3) hex = hex.split('').map(c => c + c).join('');
+            return { r: parseInt(hex.substring(0, 2), 16), g: parseInt(hex.substring(2, 4), 16), b: parseInt(hex.substring(4, 6), 16) };
+        }
+        function rgbToHex(r, g, b) {
+            return '#' + [r, g, b].map(c => Math.min(255, Math.max(0, Math.round(c))).toString(16).padStart(2, '0')).join('');
+        }
+        function getLuminance(hex) {
+            const { r, g, b } = hexToRgb(hex);
+            return (0.299 * r + 0.587 * g + 0.114 * b) / 255;
+        }
+        function adjustHeroColor(hex, amount) {
+            let { r, g, b } = hexToRgb(hex);
+            if (amount > 0) { r += (255 - r) * amount; g += (255 - g) * amount; b += (255 - b) * amount; }
+            else { const f = 1 + amount; r *= f; g *= f; b *= f; }
+            return rgbToHex(r, g, b);
+        }
+        function getHeroGradient(hex) {
+            const lum = getLuminance(hex);
+            if (lum > 0.55) {
+                // Very light color (Michigan maize, Wyoming gold, etc) — darken heavily
+                const dark = adjustHeroColor(hex, -0.6);
+                const mid = adjustHeroColor(hex, -0.4);
+                return `linear-gradient(135deg, ${dark} 0%, ${mid} 40%, ${dark} 100%)`;
+            } else if (lum > 0.35) {
+                // Medium-light (UNC blue, etc) — moderate darkening
+                const dark = adjustHeroColor(hex, -0.35);
+                const mid = adjustHeroColor(hex, -0.1);
+                return `linear-gradient(135deg, ${dark} 0%, ${mid} 50%, ${dark} 100%)`;
+            } else {
+                // Dark color — lighten the middle for depth
+                return `linear-gradient(135deg, ${hex} 0%, ${adjustHeroColor(hex, 0.35)} 50%, ${adjustHeroColor(hex, -0.15)} 100%)`;
+            }
+        }
+
         function renderChampionshipRun(year, slug) {
             const key = `${year}/${slug}`;
             const run = CHAMPIONSHIP_RUNS[key];
@@ -18341,7 +19340,7 @@
                 <a class="champ-run-back" onclick="history.back();">\u2190 Back</a>
 
                 <!-- Hero -->
-                <div class="champ-run-hero">
+                <div class="champ-run-hero" style="background: ${getHeroGradient(run.accentColor)};">
                     <div class="champ-run-hero-logo" style="background-image:url('${logoUrl}');"></div>
                     <div class="champ-run-hero-title">${run.heroTitle}</div>
                     <div class="champ-run-hero-team">${run.teamName}</div>
