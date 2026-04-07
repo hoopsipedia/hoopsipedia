@@ -14500,6 +14500,29 @@
 
         // ── Championship Run Data & Renderer ──
         const CHAMPIONSHIP_RUNS = {
+            '2026/michigan-wolverines': {
+                year: 2026,
+                teamName: 'Michigan Wolverines',
+                espnId: '130',
+                teamSlug: 'michigan-wolverines',
+                heroTitle: '2026 NATIONAL CHAMPIONS',
+                heroSubtitle: '1st Seed \u2022 Midwest Region \u2022 Indianapolis, IN',
+                accentColor: '#FFCB05',
+                story: 'Dusty May\'s Michigan Wolverines stormed through the 2026 NCAA Tournament as the most dominant team in the field, winning their first five games by an average of 21.6 points before holding off a tough UConn squad 69-63 in the championship. The 1-seed Wolverines never trailed in the second half of their first five tournament games, and Elliot Cadeau led the way in the title game with 19 points. It was Michigan\'s 2nd national championship and first since 1989 — ending a 37-year title drought.',
+                games: [
+                    { round: 'Round of 64', opponent: 'Howard Bison', oppSeed: 16, oppEspnId: '47', score: '101-80', winScore: 101, loseScore: 80, note: '' },
+                    { round: 'Round of 32', opponent: 'Saint Louis Billikens', oppSeed: 9, oppEspnId: '139', score: '95-72', winScore: 95, loseScore: 72, note: '' },
+                    { round: 'Sweet 16', opponent: 'Alabama Crimson Tide', oppSeed: 4, oppEspnId: '333', score: '90-77', winScore: 90, loseScore: 77, note: '' },
+                    { round: 'Elite Eight', opponent: 'Tennessee Volunteers', oppSeed: 6, oppEspnId: '2633', score: '95-62', winScore: 95, loseScore: 62, note: '' },
+                    { round: 'Final Four', opponent: 'Arizona Wildcats', oppSeed: 1, oppEspnId: '12', score: '91-73', winScore: 91, loseScore: 73, note: '' },
+                    { round: 'Championship', opponent: 'UConn Huskies', oppSeed: 2, oppEspnId: '41', score: '69-63', winScore: 69, loseScore: 63, note: '', isChampionship: true }
+                ],
+                stats: { seed: '1', record: '6-0', avgMargin: '+19.0', closestGame: '69-63 vs UConn' },
+                videoId: null,
+                aftermath: 'The aftermath of this championship run will be updated soon.',
+                coach: 'Dusty May',
+                mop: 'TBD'
+            },
             '2019/virginia-cavaliers': {
                 year: 2019,
                 teamName: 'Virginia Cavaliers',
@@ -18135,7 +18158,7 @@
 
                 // Determine region from notes of early games
                 const team = allTeamsData.find(t => String(t.espnId) === winnerEspnId);
-                const natlChamps = team ? (team.natlChamps || 0) + 1 : 1;
+                const natlChamps = team ? (team.natlChamps || 0) : 1; // Already incremented by checkForFinalGames
                 const ordinal = n => { const s = ['th','st','nd','rd']; const v = n % 100; return n + (s[(v-20)%10]||s[v]||s[0]); };
 
                 // Build the run entry
