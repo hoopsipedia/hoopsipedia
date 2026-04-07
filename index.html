@@ -5465,6 +5465,8 @@
             try {
                 const data = JSON.parse(stored);
                 applyUpsetTakeover(data, false);
+                // Championship confetti on page load (within 72 hours)
+                if (data.seedDiff === 99) maybeShowChampConfetti();
                 // No auto-clear — stays until next upset replaces it
             } catch(e) {
                 localStorage.removeItem('upsetTakeover');
@@ -5538,6 +5540,86 @@
             if (nav && nav.parentNode) {
                 nav.parentNode.insertBefore(banner, nav);
             }
+        }
+
+        function launchChampionConfetti(primaryColor, secondaryColor) {
+            // Don't double-launch
+            if (document.getElementById('champConfettiCanvas')) return;
+            const canvas = document.createElement('canvas');
+            canvas.id = 'champConfettiCanvas';
+            canvas.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:99999;';
+            document.body.appendChild(canvas);
+            const ctx = canvas.getContext('2d');
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+
+            const pieces = [];
+            const colors = [primaryColor, secondaryColor, '#C9A86C', '#FFFFFF'];
+            for (let i = 0; i < 200; i++) {
+                pieces.push({
+                    x: Math.random() * canvas.width,
+                    y: Math.random() * canvas.height * -1.5,
+                    w: Math.random() * 8 + 4,
+                    h: Math.random() * 6 + 3,
+                    color: colors[Math.floor(Math.random() * colors.length)],
+                    vx: (Math.random() - 0.5) * 3,
+                    vy: Math.random() * 3 + 2,
+                    rot: Math.random() * 360,
+                    rotV: (Math.random() - 0.5) * 8,
+                    opacity: 1
+                });
+            }
+
+            let frame = 0;
+            const maxFrames = 300; // ~5 seconds at 60fps
+            function animate() {
+                frame++;
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                let alive = 0;
+                pieces.forEach(p => {
+                    p.x += p.vx;
+                    p.y += p.vy;
+                    p.vy += 0.05; // gravity
+                    p.rot += p.rotV;
+                    if (frame > maxFrames * 0.7) p.opacity = Math.max(0, p.opacity - 0.02);
+                    if (p.opacity <= 0 || p.y > canvas.height + 50) return;
+                    alive++;
+                    ctx.save();
+                    ctx.globalAlpha = p.opacity;
+                    ctx.translate(p.x, p.y);
+                    ctx.rotate(p.rot * Math.PI / 180);
+                    ctx.fillStyle = p.color;
+                    ctx.fillRect(-p.w / 2, -p.h / 2, p.w, p.h);
+                    ctx.restore();
+                });
+                if (alive > 0 && frame < maxFrames) {
+                    requestAnimationFrame(animate);
+                } else {
+                    canvas.remove();
+                }
+            }
+            requestAnimationFrame(animate);
+
+            // Also handle window resize
+            const resizeHandler = () => { canvas.width = window.innerWidth; canvas.height = window.innerHeight; };
+            window.addEventListener('resize', resizeHandler);
+            setTimeout(() => window.removeEventListener('resize', resizeHandler), maxFrames * 17);
+        }
+
+        function maybeShowChampConfetti() {
+            const stored = localStorage.getItem('upsetTakeover');
+            if (!stored) return;
+            try {
+                const data = JSON.parse(stored);
+                if (data.seedDiff !== 99) return; // Not a championship
+                const elapsed = Date.now() - (data.time || 0);
+                if (elapsed > 72 * 60 * 60 * 1000) return; // Past 72 hours
+                // Get team colors
+                const team = allTeamsData.find(t => String(t.espnId) === String(data.espnId));
+                const primary = data.color || '#C9A86C';
+                const secondary = data.navColor || (team?.alternateColor ? '#' + team.alternateColor.replace('#','') : '#FFFFFF');
+                setTimeout(() => launchChampionConfetti(primary, secondary), 500);
+            } catch(e) {}
         }
 
         function clearUpsetTakeover() {
@@ -6051,6 +6133,7 @@
                                 };
                                 localStorage.setItem('upsetTakeover', JSON.stringify(champData));
                                 applyUpsetTakeover(champData, true);
+                                launchChampionConfetti(champColor, champNavColor);
                                 // Auto-generate championship journey page
                                 generateChampionshipJourney(String(winnerTeamObj.id), champName, wSlug,
                                     parseInt(winner.curatedRank?.current) || 0,
@@ -6454,6 +6537,8 @@
             if (champMatch) {
                 switchView('championshipRun', true);
                 renderChampionshipRun(champMatch[1], champMatch[2]);
+                // Fire confetti on championship journey page if within 72-hour window
+                if (champMatch[1] === '2026') maybeShowChampConfetti();
                 _skipHashUpdate = false;
                 return;
             }
