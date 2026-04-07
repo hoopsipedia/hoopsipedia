@@ -6022,13 +6022,30 @@
                                     champNavColor = champColor;
                                     champColor = '#' + winnerAltColor.replace('#', '');
                                 }
+                                // Build specific championship message
+                                const margin = winnerScore - loserScore;
+                                const loserName = loserTeamObj.displayName || loserTeamObj.shortDisplayName || 'Unknown';
+                                const champTeamData = allTeamsData.find(t => String(t.espnId) === String(winnerTeamObj.id));
+                                const prevTitles = champTeamData ? (champTeamData.natlChamps || 0) : 0;
+                                const titleNum = prevTitles + 1;
+                                const ordinal = n => { const s = ['th','st','nd','rd']; const v = n % 100; return n + (s[(v-20)%10]||s[v]||s[0]); };
+                                let champMsg;
+                                if (margin >= 15) {
+                                    champMsg = `🏆 ${champName} dominates ${loserName} ${winnerScore}-${loserScore} to win their ${ordinal(titleNum)} national championship!`;
+                                } else if (margin >= 8) {
+                                    champMsg = `🏆 ${champName} pulls away from ${loserName} ${winnerScore}-${loserScore} to win their ${ordinal(titleNum)} national championship!`;
+                                } else if (margin >= 4) {
+                                    champMsg = `🏆 ${champName} holds off ${loserName} ${winnerScore}-${loserScore} to win their ${ordinal(titleNum)} national championship!`;
+                                } else {
+                                    champMsg = `🏆 ${champName} survives ${loserName} ${winnerScore}-${loserScore} to win their ${ordinal(titleNum)} national championship!`;
+                                }
                                 const champData = {
                                     team: champName,
                                     color: champColor,
                                     navColor: champNavColor,
                                     espnId: String(winnerTeamObj.id),
                                     time: Date.now(),
-                                    message: `🏆 ${champName} wins the 2026 National Championship!`,
+                                    message: champMsg,
                                     gameLink: `#championship/2026/${wSlug}`,
                                     seedDiff: 99 // Ensures nothing can override the championship takeover
                                 };
