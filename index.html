@@ -6165,7 +6165,7 @@
                                     loserTeamObj.displayName || 'Unknown',
                                     parseInt(loser.curatedRank?.current) || 0,
                                     String(loserTeamObj.id),
-                                    winnerScore, loserScore);
+                                    winnerScore, loserScore, gameId);
                             }
                             // Major upset (seed diff >= 5) — color takeover
                             else if (winnerSeed && loserSeed && winnerSeed > loserSeed) {
@@ -18053,7 +18053,7 @@
             });
         }
 
-        async function generateChampionshipJourney(winnerEspnId, winnerName, winnerSlug, winnerSeed, loserName, loserSeed, loserEspnId, champWinScore, champLoseScore) {
+        async function generateChampionshipJourney(winnerEspnId, winnerName, winnerSlug, winnerSeed, loserName, loserSeed, loserEspnId, champWinScore, champLoseScore, champGameId) {
             // Auto-generate a championship journey by fetching all tournament games for the winner
             const key = `2026/${winnerSlug}`;
             if (CHAMPIONSHIP_RUNS[key]) return; // Already exists
@@ -18164,9 +18164,63 @@
                 CHAMPIONSHIP_RUNS[key] = run;
                 console.log(`Championship journey generated: ${key} (${teamGames.length} games)`);
 
+                // Start polling for championship highlights video
+                pollForChampHighlights(winnerName, winnerSlug, loserName, champGameId);
+
             } catch(e) {
                 console.error('Failed to generate championship journey:', e);
             }
+        }
+
+        function pollForChampHighlights(winnerName, winnerSlug, loserName, champGameId) {
+            const key = `2026/${winnerSlug}`;
+            const run = CHAMPIONSHIP_RUNS[key];
+            if (!run || run.videoId) return; // Already has video
+
+            let attempts = 0;
+            const maxAttempts = 60; // Try for up to 5 hours (every 5 min)
+
+            async function tryFind() {
+                attempts++;
+                console.log(`Searching for championship highlights (attempt ${attempts}/${maxAttempts})...`);
+
+                try {
+                    // ESPN summary endpoint includes video/highlight links after they're processed
+                    const summaryResp = await fetch(`https://site.api.espn.com/apis/site/v2/sports/basketball/mens-college-basketball/summary?event=${champGameId}`);
+                    if (summaryResp.ok) {
+                        const summary = await summaryResp.json();
+                        const videos = summary.videos || [];
+                        const highlights = summary.highlights || [];
+                        const allVids = [...videos, ...highlights];
+                        // Look for a YouTube link in ESPN's video data
+                        for (const v of allVids) {
+                            const links = v.links || {};
+                            const source = links.source?.href || links.web?.href || v.source?.href || '';
+                            const ytMatch = source.match(/youtube\.com\/watch\?v=([a-zA-Z0-9_-]+)/) ||
+                                            source.match(/youtu\.be\/([a-zA-Z0-9_-]+)/);
+                            if (ytMatch) {
+                                console.log(`Found championship highlights video: ${ytMatch[1]}`);
+                                run.videoId = ytMatch[1];
+                                // Re-render if user is on the championship journey page
+                                if (window.location.hash.includes(`#championship/2026/${winnerSlug}`)) {
+                                    renderChampionshipRun(2026, winnerSlug);
+                                }
+                                return; // Done!
+                            }
+                        }
+                    }
+                } catch(e) {}
+
+                // Not found yet — try again in 5 minutes
+                if (attempts < maxAttempts) {
+                    setTimeout(tryFind, 5 * 60 * 1000);
+                } else {
+                    console.log('Stopped searching for championship highlights after max attempts');
+                }
+            }
+
+            // Start first check after 10 minutes (highlights take time to upload)
+            setTimeout(tryFind, 10 * 60 * 1000);
         }
 
         function renderChampionshipRun(year, slug) {
