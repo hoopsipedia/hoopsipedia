@@ -5892,6 +5892,7 @@
          *  4. Updates H2H cache if those teams are being compared
          */
         let _trackedFinals = new Set(); // Track game IDs we've already processed
+        let _champGameDeficits = {}; // Track max 2nd-half deficit per team in championship game
 
         // ── Unified Live Ticker: one master loop, everything updates together ──
         function startUnifiedLiveTicker() {
@@ -5944,6 +5945,26 @@
                                     if (typeof champBoxScoreCache !== 'undefined') champBoxScoreCache[gid] = boxData;
                                 }
                             }).catch(() => {});
+                        // Track max deficit for championship game (2nd half only)
+                        const notesLower = (comp.notes?.[0]?.headline || '').toLowerCase();
+                        const period = comp.status?.period || 0;
+                        if (notesLower.includes('national championship') && period >= 2) {
+                            const competitors = comp.competitors || [];
+                            if (competitors.length === 2) {
+                                const s0 = parseInt(competitors[0].score) || 0;
+                                const s1 = parseInt(competitors[1].score) || 0;
+                                const id0 = String(competitors[0].team?.id);
+                                const id1 = String(competitors[1].team?.id);
+                                // Team 0's deficit = how much they trail by (positive = trailing)
+                                const deficit0 = s1 - s0;
+                                const deficit1 = s0 - s1;
+                                if (!_champGameDeficits[id0]) _champGameDeficits[id0] = 0;
+                                if (!_champGameDeficits[id1]) _champGameDeficits[id1] = 0;
+                                // Only track when trailing (deficit > 0 means team is behind)
+                                if (deficit0 > _champGameDeficits[id0]) _champGameDeficits[id0] = deficit0;
+                                if (deficit1 > _champGameDeficits[id1]) _champGameDeficits[id1] = deficit1;
+                            }
+                        }
                     }
                 });
 
@@ -6112,7 +6133,11 @@
                                 const titleNum = prevTitles + 1;
                                 const ordinal = n => { const s = ['th','st','nd','rd']; const v = n % 100; return n + (s[(v-20)%10]||s[v]||s[0]); };
                                 let champMsg;
-                                if (margin >= 15) {
+                                // Check if the winner came back from a 2nd-half deficit
+                                const winnerMaxDeficit = _champGameDeficits[String(winnerTeamObj.id)] || 0;
+                                if (winnerMaxDeficit >= 5) {
+                                    champMsg = `🏆 ${champName} surges back from ${winnerMaxDeficit} down in the second half to stun ${loserName} ${winnerScore}-${loserScore} and win their ${ordinal(titleNum)} national championship!`;
+                                } else if (margin >= 15) {
                                     champMsg = `🏆 ${champName} dominates ${loserName} ${winnerScore}-${loserScore} to win their ${ordinal(titleNum)} national championship!`;
                                 } else if (margin >= 8) {
                                     champMsg = `🏆 ${champName} pulls away from ${loserName} ${winnerScore}-${loserScore} to win their ${ordinal(titleNum)} national championship!`;
