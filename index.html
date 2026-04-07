@@ -71,9 +71,16 @@
             color: #fff;
             font-weight: 700;
             font-size: 0.9rem;
-            position: relative;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
             z-index: 101;
             animation: takeoverSlideIn 0.5s ease-out;
+        }
+        /* Push page content down to make room for fixed banner */
+        body.upset-takeover-active {
+            padding-top: 52px;
         }
         .upset-takeover-banner img {
             width: 28px; height: 28px; object-fit: contain;
@@ -418,7 +425,7 @@
         .games-section {
             margin-bottom: 3rem;
         }
-        .games-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.25rem; margin-top: 1.5rem; }
+        .games-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.25rem; margin-top: 1.5rem; min-height: 200px; }
         .game-card {
             background: #FFFFFF; border: 1px solid #E0D9CC; border-radius: 0.75rem;
             padding: 1.5rem; box-shadow: 0 1px 4px rgba(0,0,0,0.04);
@@ -1496,6 +1503,7 @@
                 gap: 0.5rem;
             }
             .upset-takeover-banner img { width: 22px; height: 22px; }
+            body.upset-takeover-active { padding-top: 70px; }
             .nav-search {
                 width: 100%;
                 order: 10;
@@ -5535,11 +5543,9 @@
                 <button class="takeover-dismiss" onclick="dismissUpsetTakeover()" aria-label="Dismiss">&times;</button>
             `;
 
-            // Insert before nav
-            const nav = document.querySelector('nav');
-            if (nav && nav.parentNode) {
-                nav.parentNode.insertBefore(banner, nav);
-            }
+            // Insert at top of body (fixed position, no layout shift)
+            document.body.prepend(banner);
+            document.body.classList.add('upset-takeover-active');
         }
 
         function launchChampionConfetti(primaryColor, secondaryColor) {
@@ -5624,6 +5630,7 @@
 
         function clearUpsetTakeover() {
             document.body.classList.remove('upset-takeover');
+            document.body.classList.remove('upset-takeover-active');
             document.documentElement.style.setProperty('--accent-color', '#C9A86C');
             document.documentElement.style.setProperty('--header-accent', '#C9A86C');
             localStorage.removeItem('upsetTakeover');
@@ -5635,6 +5642,7 @@
             // Only hide the banner, keep the color takeover active
             const banner = document.getElementById('upsetTakeoverBanner');
             if (banner) banner.remove();
+            document.body.classList.remove('upset-takeover-active');
         }
 
         function triggerUpsetTakeover(winnerName, winnerSeed, loserName, loserSeed, winnerEspnId, winnerColor, winnerAltColor) {
