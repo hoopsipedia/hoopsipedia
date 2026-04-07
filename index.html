@@ -8052,7 +8052,8 @@
                                             var _champTeam = allTeamsData.find(t => String(t.espnId) === wId);
                                             var _nattys = _champTeam ? (_champTeam.natlChamps || 0) : 0;
                                             var _ordSuffix = (function(n) { var s = ['th','st','nd','rd']; var v = n % 100; return n + (s[(v-20)%10]||s[v]||s[0]); })(_nattys);
-                                            return '<div class="game-context-badge" style="background:#FFF8E1;border-color:#C9A86C;color:#8B6914;">🏆 ' + wName + ' wins their ' + _ordSuffix + ' national championship!</div>';
+                                            var _champSlug = (winner.team?.displayName || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+                                            return '<div class="game-context-badge clickable" style="background:#FFF8E1;border-color:#C9A86C;color:#8B6914;cursor:pointer;" onclick="event.stopPropagation(); window.location.hash=\'#championship/2026/' + _champSlug + '\';" title="View Championship Journey">🏆 ' + wName + ' wins their ' + _ordSuffix + ' national championship!</div>';
                                         }
                                         // Default final: just show winner
                                         return '<div class="game-context-badge">' + wName + ' advances</div>';
