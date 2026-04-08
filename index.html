@@ -6603,8 +6603,23 @@
             }).sort((a, b) => b.allTimeW - a.allTimeW);
         }
 
+        // Teams with no ESPN-hosted logo — use an SVG data URI with initials
+        const LOGO_FALLBACKS = {
+            '2609': 'CCNY' // CCNY Beavers — D1 program 1941-1953, no ESPN logo
+        };
+        const _logoFailCache = new Set();
+
         function getLogoUrl(espnId) {
+            if (LOGO_FALLBACKS[String(espnId)]) return getFallbackLogoUrl(espnId);
             return `https://a.espncdn.com/i/teamlogos/ncaa/500/${espnId}.png`;
+        }
+
+        function getFallbackLogoUrl(espnId) {
+            const initials = LOGO_FALLBACKS[String(espnId)];
+            if (initials) {
+                return `data:image/svg+xml,${encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="48" fill="%231B2A4A"/><text x="50" y="56" text-anchor="middle" font-family="Arial,sans-serif" font-weight="800" font-size="28" fill="%23C9A86C">${initials}</text></svg>`)}`;
+            }
+            return `data:image/svg+xml,${encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="48" fill="%231B2A4A"/><circle cx="50" cy="50" r="30" fill="none" stroke="%23C9A86C" stroke-width="2"/><line x1="20" y1="50" x2="80" y2="50" stroke="%23C9A86C" stroke-width="1.5"/><line x1="50" y1="20" x2="50" y2="80" stroke="%23C9A86C" stroke-width="1.5"/></svg>')}`;
         }
 
         function setupEventListeners() {

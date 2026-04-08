@@ -187,6 +187,7 @@
 - Coaching era analysis (program strength under each coach)
 - Player headshot fallback to school roster pages when ESPN has no photo
 - Permanent system crontab for nightly sync (currently session-only)
+- **Championship Run video completeness** — Many of the 87 championship journey pages are missing YouTube highlight clips for individual tournament games. Need to curate and fill in video IDs across all runs for a complete multimedia experience.
 
 ---
 
