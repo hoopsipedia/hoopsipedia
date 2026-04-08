@@ -301,6 +301,10 @@
         .nav-search-item img { width: 24px; height: 24px; object-fit: contain; }
         .nav-search-item .name { font-weight: 600; color: #2C3345; font-size: 0.9rem; }
         .nav-search-item .conf { color: #8892A0; font-size: 0.78rem; }
+        @media (max-width: 1024px) {
+            .nav-search input { width: 140px; }
+            .nav-search input:focus { width: 180px; }
+        }
         @media (max-width: 768px) {
             .nav-search input { width: 110px; font-size: 0.8rem; }
             .nav-search input:focus { width: 140px; }
@@ -426,6 +430,9 @@
             margin-bottom: 3rem;
         }
         .games-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.25rem; margin-top: 1.5rem; min-height: 200px; }
+        @media (max-width: 1024px) {
+            .games-grid { grid-template-columns: repeat(2, 1fr); }
+        }
         .game-card {
             background: #FFFFFF; border: 1px solid #E0D9CC; border-radius: 0.75rem;
             padding: 1.5rem; box-shadow: 0 1px 4px rgba(0,0,0,0.04);
@@ -1895,7 +1902,17 @@
                 bottom: 1rem;
                 right: 1rem;
             }
-
+        }
+        @media (max-width: 480px) {
+            .correction-btn {
+                width: 40px;
+                height: 40px;
+                font-size: 1rem;
+                bottom: 0.75rem;
+                right: 0.75rem;
+            }
+        }
+        @media (max-width: 768px) {
             /* Reduce padding and margins on mobile */
             .container { padding: 0.75rem; overflow-x: hidden; }
             .section-title { font-size: 1.25rem; margin-bottom: 1rem; }
@@ -3633,12 +3650,16 @@
         .rankings-tabs {
             display: flex; gap: 0; margin-bottom: 1.5rem;
             border-bottom: 2px solid #E0D9CC;
+            overflow-x: auto; flex-wrap: nowrap;
+            -webkit-overflow-scrolling: touch;
+            position: relative;
         }
         .rankings-tab {
             padding: 0.65rem 1.5rem; background: none; border: none;
             font-size: 0.95rem; font-weight: 600; color: #8892A0;
             cursor: pointer; transition: all 0.2s ease;
             border-bottom: 2px solid transparent; margin-bottom: -2px;
+            flex-shrink: 0; white-space: nowrap;
         }
         .rankings-tab:hover { color: #1B2A4A; }
         .rankings-tab.active {
@@ -3783,6 +3804,17 @@
             }
             .rankings-tab {
                 padding: 0.5rem 1rem; font-size: 0.85rem;
+            }
+            .rankings-tabs {
+                -ms-overflow-style: none; scrollbar-width: none;
+            }
+            .rankings-tabs::-webkit-scrollbar { display: none; }
+            .rankings-tabs::after {
+                content: '';
+                position: sticky; right: 0; top: 0;
+                min-width: 2rem; height: 100%; flex-shrink: 0;
+                background: linear-gradient(to right, transparent, #F5F3EE);
+                pointer-events: none;
             }
         }
 

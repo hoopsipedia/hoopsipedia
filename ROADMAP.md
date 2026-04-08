@@ -185,6 +185,7 @@
 - Decade-by-decade program strength visualizations
 - Coach career timelines across schools (visual timeline)
 - Coaching era analysis (program strength under each coach)
+- **Mobile nav redesign at 375px** — 3 nav items (Upsets, Classics, Champions) are invisible with no scroll affordance. Options: hamburger menu, scrollable nav with fade indicator, two-row nav, or icon-only nav. Needs design decision before implementation.
 - Player headshot fallback to school roster pages when ESPN has no photo
 - Permanent system crontab for nightly sync (currently session-only)
 - **Championship Run video completeness** — Many of the 87 championship journey pages are missing YouTube highlight clips for individual tournament games. Need to curate and fill in video IDs across all runs for a complete multimedia experience.
