@@ -19,6 +19,9 @@ let cachedDraft = null;       // draft_history.json
 let cachedTeamHistory = null; // team_history.json
 let cachedUpsets = null;      // upset_history.json
 let cachedTimeMachine = null; // time_machine_results.json
+let cachedGames1 = null;      // games_1.json
+let cachedGames2 = null;      // games_2.json
+let cachedGames3 = null;      // games_3.json
 
 // ── Rate limiting ──
 const rateLimits = new Map();
@@ -87,6 +90,13 @@ async function getTimeMachine(ctx) {
   return cachedTimeMachine;
 }
 
+async function getGames(ctx) {
+  if (!cachedGames1) cachedGames1 = await loadJSON(ctx.env.ASSETS, ctx.request.url, '/games_1.json') || {};
+  if (!cachedGames2) cachedGames2 = await loadJSON(ctx.env.ASSETS, ctx.request.url, '/games_2.json') || {};
+  if (!cachedGames3) cachedGames3 = await loadJSON(ctx.env.ASSETS, ctx.request.url, '/games_3.json') || {};
+  return { ...cachedGames1, ...cachedGames2, ...cachedGames3 };
+}
+
 // ── Helper: team slug from name ──
 function teamSlug(name) {
   return name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
@@ -106,6 +116,10 @@ async function executeTool(name, input, ctx) {
     case 'getTeamHistory': return await toolGetTeamHistory(input, ctx);
     case 'navigateUser': return { status: 'link_rendered', route: input.route, label: input.label };
     case 'getTimeMachine': return await toolGetTimeMachine(input, ctx);
+    case 'getChampionByYear': return await toolGetChampionByYear(input, ctx);
+    case 'getTeamsByConference': return await toolGetTeamsByConference(input, ctx);
+    case 'searchGames': return await toolSearchGames(input, ctx);
+    case 'getTeamTournamentRecord': return await toolGetTeamTournamentRecord(input, ctx);
     default: return { error: `Unknown tool: ${name}` };
   }
 }
@@ -350,6 +364,219 @@ async function toolGetTimeMachine(input, ctx) {
   return { matchups: tm.matchups.map(m => ({ matchup: m.matchup, prediction: m.prediction })) };
 }
 
+async function toolGetChampionByYear(input, ctx) {
+  const data = await getData(ctx);
+  if (!data || !data.H) return { error: 'Data not available' };
+
+  const year = input.year;
+  if (!year) return { error: 'Year is required' };
+
+  for (const [id, fields] of Object.entries(data.H)) {
+    const ncyears = fields[F.NCY];
+    if (Array.isArray(ncyears) && ncyears.includes(year)) {
+      return {
+        year,
+        champion: fields[F.NAME],
+        espnId: id,
+        slug: teamSlug(fields[F.NAME]),
+        allTimeChampionships: fields[F.NC],
+        allChampionshipYears: ncyears
+      };
+    }
+  }
+  return { error: `No champion found for ${year}. NCAA Tournament began in 1939.` };
+}
+
+async function toolGetTeamsByConference(input, ctx) {
+  const data = await getData(ctx);
+  if (!data || !data.H) return { error: 'Data not available' };
+
+  const query = (input.conference || '').toLowerCase().trim();
+  if (!query) return { error: 'Conference name is required' };
+
+  const teams = [];
+  for (const [id, fields] of Object.entries(data.H)) {
+    const conf = (fields[F.CONF] || '').toLowerCase();
+    if (conf === query || conf.includes(query)) {
+      teams.push({
+        espnId: id,
+        name: fields[F.NAME],
+        mascot: fields[F.MASCOT],
+        conference: fields[F.CONF],
+        allTimeWins: fields[F.ATW],
+        allTimeLosses: fields[F.ATL],
+        championships: fields[F.NC],
+        tourneyAppearances: fields[F.TOURNEY]
+      });
+    }
+  }
+
+  if (teams.length === 0) {
+    // List available conferences
+    const confs = [...new Set(Object.values(data.H).map(f => f[F.CONF]).filter(Boolean))].sort();
+    return { error: `No conference matching "${input.conference}". Available: ${confs.join(', ')}` };
+  }
+
+  teams.sort((a, b) => b.allTimeWins - a.allTimeWins);
+  return { conference: teams[0].conference, teamCount: teams.length, teams };
+}
+
+async function toolSearchGames(input, ctx) {
+  const data = await getData(ctx);
+  const allGames = await getGames(ctx);
+  if (!allGames) return { error: 'Games data not available' };
+
+  const espnId = String(input.espnId);
+  const teamGames = allGames[espnId]?.games;
+  if (!teamGames) return { error: `No game data for team ${espnId}` };
+
+  let filtered = teamGames;
+
+  // Filter by season year (games are dated, so filter by year range)
+  if (input.season) {
+    const startYear = parseInt(input.season.split('-')[0]);
+    const seasonStart = `${startYear}-10-01`;
+    const seasonEnd = `${startYear + 1}-06-01`;
+    filtered = filtered.filter(g => g.date >= seasonStart && g.date <= seasonEnd);
+  }
+
+  // Filter by opponent
+  if (input.opponentId) {
+    filtered = filtered.filter(g => String(g.opp) === String(input.opponentId));
+  }
+
+  // Filter by opponent slug (for when name is known but not ID)
+  if (input.opponentSlug) {
+    const slug = input.opponentSlug.toLowerCase();
+    filtered = filtered.filter(g => (g.opp_slug || '').toLowerCase().includes(slug));
+  }
+
+  // Filter tournament games only
+  if (input.tournamentOnly) {
+    // Tournament games are typically in March/April
+    filtered = filtered.filter(g => {
+      const month = parseInt(g.date?.split('-')[1]);
+      return month >= 3 && month <= 4;
+    });
+  }
+
+  // Get team name for context
+  const teamName = data?.H?.[espnId]?.[F.NAME] || 'Unknown';
+
+  // Limit results and format
+  const results = filtered.slice(0, 30).map(g => ({
+    date: g.date,
+    opponent: g.opp_slug || g.opp,
+    opponentId: g.opp,
+    location: g.loc === 'H' ? 'Home' : g.loc === 'A' ? 'Away' : 'Neutral',
+    result: g.w ? 'W' : 'L',
+    score: `${g.pts}-${g.opp_pts}`,
+    teamScore: g.pts,
+    opponentScore: g.opp_pts
+  }));
+
+  return { team: teamName, espnId, totalGames: filtered.length, showing: results.length, games: results };
+}
+
+async function toolGetTeamTournamentRecord(input, ctx) {
+  const data = await getData(ctx);
+  const seasons = await getSeasons(ctx);
+  const allGames = await getGames(ctx);
+  if (!data || !seasons || !allGames) return { error: 'Data not available' };
+
+  const espnId = String(input.espnId);
+  const teamName = data?.H?.[espnId]?.[F.NAME] || 'Unknown';
+  const teamSeasons = seasons[espnId]?.seasons || [];
+  const teamGames = allGames[espnId]?.games || [];
+
+  // Build slug→espnId lookup for resolving opponents without opp field
+  const slugToId = {};
+  for (const [id, fields] of Object.entries(data.H)) {
+    slugToId[teamSlug(fields[F.NAME])] = id;
+  }
+
+  // Build set of tournament season years and seeds
+  const tourneySeasons = {};
+  for (const s of teamSeasons) {
+    if (s.seed) {
+      const startYear = parseInt(s.year?.split('-')[0]);
+      tourneySeasons[startYear] = { seed: s.seed, result: s.ncaaTourney };
+    }
+  }
+
+  // Find March/April games in tournament years
+  // NCAA tournament typically starts mid-March (15th+), conference tournaments are earlier
+  const tourneyGames = [];
+  for (const g of teamGames) {
+    if (!g.date) continue;
+    const parts = g.date.split('-');
+    const year = parseInt(parts[0]);
+    const month = parseInt(parts[1]);
+    const day = parseInt(parts[2]);
+    // NCAA tournament: mid-March through April (skip early March conf tournaments)
+    const isTourneyWindow = (month === 3 && day >= 14) || month === 4;
+    if (isTourneyWindow && tourneySeasons[year - 1]) {
+      const seed = tourneySeasons[year - 1].seed;
+      // Resolve opponent ID: use opp field if present, otherwise resolve from slug
+      const oppId = g.opp ? String(g.opp) : (g.opp_slug ? slugToId[g.opp_slug] : null);
+      tourneyGames.push({
+        date: g.date,
+        season: `${year - 1}-${String(year).slice(2)}`,
+        seed,
+        opponent: g.opp_slug || g.opp,
+        opponentId: oppId,
+        result: g.w ? 'W' : 'L',
+        score: `${g.pts}-${g.opp_pts}`
+      });
+    }
+  }
+
+  // Filter by opponent seed if requested
+  if (input.opponentSeed) {
+    const oppSeed = parseInt(input.opponentSeed);
+    const filteredBySeed = [];
+    for (const g of tourneyGames) {
+      if (!g.opponentId) continue;
+      const seasonYear = g.season.split('-')[0];
+      const oppSeasonData = seasons[g.opponentId]?.seasons?.find(s => s.year?.startsWith(seasonYear));
+      if (oppSeasonData?.seed === oppSeed) {
+        filteredBySeed.push({ ...g, opponentSeed: oppSeed });
+      }
+    }
+    const wins = filteredBySeed.filter(g => g.result === 'W').length;
+    const losses = filteredBySeed.filter(g => g.result === 'L').length;
+    return {
+      team: teamName, espnId,
+      filter: `vs ${oppSeed}-seeds`,
+      record: `${wins}-${losses}`,
+      wins, losses,
+      games: filteredBySeed.slice(0, 20)
+    };
+  }
+
+  // Summary by seed
+  const bySeed = {};
+  for (const g of tourneyGames) {
+    if (!bySeed[g.seed]) bySeed[g.seed] = { wins: 0, losses: 0, games: [] };
+    if (g.result === 'W') bySeed[g.seed].wins++;
+    else bySeed[g.seed].losses++;
+    bySeed[g.seed].games.push(g);
+  }
+
+  const totalWins = tourneyGames.filter(g => g.result === 'W').length;
+  const totalLosses = tourneyGames.filter(g => g.result === 'L').length;
+
+  return {
+    team: teamName, espnId,
+    totalTournamentRecord: `${totalWins}-${totalLosses}`,
+    totalGames: tourneyGames.length,
+    bySeed: Object.fromEntries(
+      Object.entries(bySeed).map(([seed, data]) => [seed, { record: `${data.wins}-${data.losses}`, games: data.games.length }])
+    ),
+    recentGames: tourneyGames.slice(0, 15)
+  };
+}
+
 // ── Tool definitions for Claude ──
 const TOOLS = [
   {
@@ -474,6 +701,55 @@ const TOOLS = [
         matchup: { type: 'string', description: 'Search term to find a specific matchup (e.g. "UCLA vs Kentucky"). Omit for all matchups.' }
       }
     }
+  },
+  {
+    name: 'getChampionByYear',
+    description: 'Find which team won the NCAA championship in a given year. Returns champion name, ESPN ID, and all their championship years.',
+    input_schema: {
+      type: 'object',
+      properties: {
+        year: { type: 'number', description: 'Championship year (e.g. 2015). NCAA Tournament began in 1939.' }
+      },
+      required: ['year']
+    }
+  },
+  {
+    name: 'getTeamsByConference',
+    description: 'List all teams in a conference with their all-time records. Useful for questions like "show me all Big 12 teams" or "who is in the ACC?"',
+    input_schema: {
+      type: 'object',
+      properties: {
+        conference: { type: 'string', description: 'Conference name (e.g. "ACC", "Big 12", "SEC", "Big Ten")' }
+      },
+      required: ['conference']
+    }
+  },
+  {
+    name: 'searchGames',
+    description: 'Search game-by-game results for a team. Can filter by season, opponent, or tournament games. Returns scores, dates, locations. Use lookupTeam first to get ESPN IDs.',
+    input_schema: {
+      type: 'object',
+      properties: {
+        espnId: { type: 'string', description: 'ESPN team ID' },
+        season: { type: 'string', description: 'Season in YYYY-YY format (e.g. "2014-15")' },
+        opponentId: { type: 'string', description: 'ESPN ID of opponent to filter by' },
+        opponentSlug: { type: 'string', description: 'Opponent slug to filter by (e.g. "wisconsin")' },
+        tournamentOnly: { type: 'boolean', description: 'If true, only return March/April games (tournament window)' }
+      },
+      required: ['espnId']
+    }
+  },
+  {
+    name: 'getTeamTournamentRecord',
+    description: 'Get a team\'s NCAA Tournament game-by-game record with seeds, scores, and opponents. Can filter by opponent seed (e.g. "how does Duke do against 12-seeds in the tournament?").',
+    input_schema: {
+      type: 'object',
+      properties: {
+        espnId: { type: 'string', description: 'ESPN team ID' },
+        opponentSeed: { type: 'number', description: 'Filter to games against this seed number (e.g. 12 for 12-seeds)' }
+      },
+      required: ['espnId']
+    }
   }
 ];
 
@@ -486,12 +762,16 @@ Available data includes:
 - Team profiles: all-time records, championships, Final Fours, conference history (365 teams)
 - Season-by-season records: W/L, conference records, SRS, SOS, PPG, AP rankings, tournament results (77 seasons, 1949-2026)
 - Head-to-head records between any two teams (all-time)
+- Game-by-game results with scores for every team (searchable by season, opponent, tournament)
+- Championship history: look up champion by year (1939-2026)
+- Conference rosters: list all teams in any conference
 - HTSS Rankings: Hoopsipedia's proprietary Historical Team-Season Score ranking 25,000+ team-seasons across history (scale: 50=avg, 60-65 good, 65-70 very good, 70-80 elite, 80-85 transcendent, 85+ GOAT tier)
 - Adjusted efficiency ratings: KenPom-style adjOE/adjDE/adjEM per team per season (1949-2026)
-- Coach records and all-time wins leaderboard (top 100)
-- NBA Draft history per team
+- Coach records: 557 coaches with 200+ career wins, filterable by win range, searchable by name
+- NBA Draft history per team (with notable picks and player names)
 - Program history narratives
 - NCAA Tournament upset history by seed matchup (1985-present)
+- Team tournament records: game-by-game tournament history, filterable by opponent seed
 - Time Machine: simulated cross-era matchups between legendary teams
 
 When you mention specific teams, comparisons, or rankings, use the navigateUser tool to create clickable links so the user can explore further on the site.
