@@ -210,16 +210,21 @@ def compile_coaches():
 
     # Sort by wins descending
     all_coaches_list.sort(key=lambda c: c['wins'], reverse=True)
+
+    # Full leaderboard: all coaches with 200+ wins (for AI chat queryability)
+    full_leaderboard = [c for c in all_coaches_list if c['wins'] >= 200]
+    # Top 100 subset (for display on the coaches page)
     top_100 = all_coaches_list[:100]
 
-    # Build rank lookup
+    # Build rank lookup (top 100 only, for display)
     coach_rank = {}
     for i, coach in enumerate(top_100):
         coach_rank[coach['name']] = i + 1
 
     # Update data.json
     data['COACHES'] = enhanced_coaches
-    data['COACH_LB'] = top_100
+    data['COACH_LB'] = full_leaderboard
+    data['COACH_LB_TOP100'] = top_100
     data['COACH_RANK'] = coach_rank
 
     with open('data.json', 'w') as f:

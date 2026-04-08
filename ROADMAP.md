@@ -189,6 +189,7 @@
 - Player headshot fallback to school roster pages when ESPN has no photo
 - Permanent system crontab for nightly sync (currently session-only)
 - **Championship Run video completeness** — Many of the 87 championship journey pages are missing YouTube highlight clips for individual tournament games. Need to curate and fill in video IDs across all runs for a complete multimedia experience.
+- **Expanded coaching wins database** — COACH_LB only has top 100 coaches (500+ wins). AI chat needs deeper data to answer questions about mid-career and up-and-coming coaches. Scrape Sports Reference for all-time records of 500+ D1 coaches. Doesn't need to show on leaderboard page — just needs to be queryable by AI tools.
 
 ---
 
