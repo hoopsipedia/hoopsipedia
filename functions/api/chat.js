@@ -263,6 +263,14 @@ async function toolGetCoachInfo(input, ctx) {
     return coaches ? { team: teamName, coaches: coaches.slice(0, 10) } : { error: `No coach data for team ${input.espnId}` };
   }
 
+  // Filter by win range if provided
+  if (input.minWins || input.maxWins) {
+    const min = input.minWins || 0;
+    const max = input.maxWins || 99999;
+    const filtered = (data.COACH_LB || []).filter(c => c.wins >= min && c.wins <= max);
+    return { coaches: filtered.slice(0, 30), totalMatches: filtered.length };
+  }
+
   // Default: return top 20 from leaderboard
   return { leaderboard: (data.COACH_LB || []).slice(0, 20) };
 }
@@ -394,12 +402,14 @@ const TOOLS = [
   },
   {
     name: 'getCoachInfo',
-    description: 'Look up coaching records. Can search by coach name, get coaches for a specific team, or get the all-time wins leaderboard.',
+    description: 'Look up coaching records. Can search by coach name, get coaches for a specific team, filter by win range, or get the all-time wins leaderboard (top 100).',
     input_schema: {
       type: 'object',
       properties: {
         coachName: { type: 'string', description: 'Coach name to search for' },
-        espnId: { type: 'string', description: 'ESPN team ID to get that team\'s coaching history' }
+        espnId: { type: 'string', description: 'ESPN team ID to get that team\'s coaching history' },
+        minWins: { type: 'number', description: 'Minimum career wins filter (e.g. 500)' },
+        maxWins: { type: 'number', description: 'Maximum career wins filter (e.g. 600)' }
       }
     }
   },
