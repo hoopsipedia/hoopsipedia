@@ -4256,6 +4256,149 @@
             }
         }
 
+        /* ── Random Matchup Widget ── */
+        .random-matchup-widget {
+            background: linear-gradient(135deg, #1B2A4A 0%, #2A3D66 100%);
+            border-radius: 0.75rem;
+            margin-bottom: 1.5rem;
+            overflow: hidden;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+        }
+        .rm-header {
+            display: flex; align-items: center; justify-content: space-between;
+            padding: 0.75rem 1.25rem;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+        .rm-header-title {
+            font-size: 0.75rem; font-weight: 800; letter-spacing: 0.12em;
+            text-transform: uppercase; color: #C9A86C;
+        }
+        .rm-shuffle-btn {
+            background: rgba(201,168,108,0.15); border: 1px solid rgba(201,168,108,0.3);
+            color: #C9A86C; font-size: 0.72rem; font-weight: 700;
+            padding: 0.3rem 0.75rem; border-radius: 1rem; cursor: pointer;
+            transition: all 0.2s;
+        }
+        .rm-shuffle-btn:hover { background: rgba(201,168,108,0.25); }
+        .rm-body {
+            display: flex; align-items: center; justify-content: center;
+            padding: 1.25rem; gap: 1rem;
+        }
+        .rm-team {
+            flex: 1; text-align: center; max-width: 160px;
+        }
+        .rm-team-logo {
+            width: 56px; height: 56px; background-size: contain;
+            background-repeat: no-repeat; background-position: center;
+            margin: 0 auto 0.4rem; filter: drop-shadow(0 2px 6px rgba(0,0,0,0.3));
+        }
+        .rm-team-name {
+            font-size: 0.82rem; font-weight: 700; color: #F5F3EE;
+            line-height: 1.2; margin-bottom: 0.15rem;
+        }
+        .rm-team-season {
+            font-size: 0.7rem; color: #8892A0;
+        }
+        .rm-team-record {
+            font-size: 0.68rem; color: #C9A86C; font-weight: 600;
+        }
+        .rm-center {
+            text-align: center; flex-shrink: 0;
+        }
+        .rm-score {
+            font-size: 1.6rem; font-weight: 900; color: #F5F3EE;
+            letter-spacing: 0.03em; margin-bottom: 0.2rem;
+        }
+        .rm-predicted { font-size: 0.6rem; color: #8892A0; text-transform: uppercase; letter-spacing: 0.1em; }
+        .rm-prob {
+            font-size: 0.68rem; color: #C9A86C; font-weight: 600; margin-top: 0.25rem;
+        }
+        .rm-footer {
+            text-align: center; padding: 0 1.25rem 1rem;
+        }
+        .rm-explore-btn {
+            background: none; border: none; color: #C9A86C;
+            font-size: 0.72rem; font-weight: 600; cursor: pointer;
+            text-decoration: underline; opacity: 0.8;
+        }
+        .rm-explore-btn:hover { opacity: 1; }
+        @media (max-width: 480px) {
+            .rm-body { padding: 1rem 0.75rem; gap: 0.5rem; }
+            .rm-team-logo { width: 42px; height: 42px; }
+            .rm-score { font-size: 1.3rem; }
+            .rm-team-name { font-size: 0.75rem; }
+        }
+
+        /* ── Program Trajectory ── */
+        .trajectory-intro {
+            color: #6B7A8D; font-size: 0.85rem; margin-bottom: 1.25rem; line-height: 1.6;
+        }
+        .trajectory-window-tabs {
+            display: flex; gap: 0.5rem; margin-bottom: 1.25rem; flex-wrap: wrap;
+        }
+        .trajectory-window-tab {
+            background: #F5F3EE; border: 1px solid #E0D9CC; border-radius: 1rem;
+            padding: 0.35rem 1rem; font-size: 0.78rem; font-weight: 600;
+            color: #5A6578; cursor: pointer; transition: all 0.2s;
+        }
+        .trajectory-window-tab.active {
+            background: #1B2A4A; color: #C9A86C; border-color: #1B2A4A;
+        }
+        .trajectory-section-title {
+            font-size: 0.9rem; font-weight: 700; color: #1B2A4A;
+            margin: 1.25rem 0 0.75rem; display: flex; align-items: center; gap: 0.5rem;
+        }
+        .trajectory-section-title .arrow-up { color: #2D7D46; }
+        .trajectory-section-title .arrow-down { color: #C9463E; }
+        .trajectory-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1rem; margin-bottom: 1.5rem;
+        }
+        .trajectory-card {
+            background: #FFFFFF; border: 1px solid #E0D9CC; border-radius: 0.75rem;
+            padding: 1rem 1.25rem; display: flex; align-items: center; gap: 1rem;
+            transition: transform 0.2s, box-shadow 0.2s; cursor: pointer;
+        }
+        .trajectory-card:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.06); }
+        .trajectory-card-logo {
+            width: 44px; height: 44px; background-size: contain;
+            background-repeat: no-repeat; background-position: center; flex-shrink: 0;
+        }
+        .trajectory-card-info { flex: 1; min-width: 0; }
+        .trajectory-card-name {
+            font-size: 0.85rem; font-weight: 700; color: #1B2A4A;
+            white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+        }
+        .trajectory-card-conf {
+            font-size: 0.7rem; color: #8892A0;
+        }
+        .trajectory-card-stats {
+            display: flex; gap: 0.75rem; margin-top: 0.3rem;
+        }
+        .trajectory-card-stat {
+            font-size: 0.72rem; color: #5A6578;
+        }
+        .trajectory-card-stat strong { color: #1B2A4A; }
+        .trajectory-card-delta {
+            text-align: right; flex-shrink: 0;
+        }
+        .trajectory-delta-value {
+            font-size: 1.1rem; font-weight: 800;
+        }
+        .trajectory-delta-value.rising { color: #2D7D46; }
+        .trajectory-delta-value.falling { color: #C9463E; }
+        .trajectory-delta-label {
+            font-size: 0.6rem; color: #8892A0; text-transform: uppercase; letter-spacing: 0.08em;
+        }
+        .trajectory-sparkline {
+            display: flex; align-items: flex-end; gap: 1px; height: 24px; margin-top: 0.3rem;
+        }
+        .trajectory-spark-bar {
+            flex: 1; min-width: 3px; max-width: 8px; border-radius: 1px 1px 0 0;
+            background: #C9A86C; opacity: 0.6; transition: opacity 0.2s;
+        }
+        .trajectory-spark-bar.recent { opacity: 1; background: #1B2A4A; }
+
     </style>
 </head>
 <body>
@@ -4341,6 +4484,8 @@
                 <button class="otd-nav-btn" id="otdNext" aria-label="Next fact">&#8250;</button>
             </div>
 
+            <div id="randomMatchupWidget" class="random-matchup-widget" style="display:none;"></div>
+
             <div class="compare-section">
                 <h2 style="text-align: center; margin-bottom: 0.5rem; color: #C9A86C; font-size: 1.4rem; font-weight: 800; letter-spacing: 0.05em;">Compare Programs</h2>
                 <p style="text-align: center; color: rgba(255,255,255,0.6); font-size: 0.8rem; margin-bottom: 1.5rem;">Pick any two teams and see how they stack up across 80+ years of history</p>
@@ -4419,6 +4564,7 @@
                 <button class="rankings-tab" data-rankings-tab="net" onclick="switchRankingsTab('net')">NET Rankings</button>
                 <button class="rankings-tab" data-rankings-tab="htss" onclick="switchRankingsTab('htss')">HTSS Rankings</button>
                 <button class="rankings-tab" data-rankings-tab="timemachine" onclick="switchRankingsTab('timemachine')">Time Machine</button>
+                <button class="rankings-tab" data-rankings-tab="trajectory" onclick="switchRankingsTab('trajectory')">Trajectories</button>
             </div>
             <!-- Historical Rankings Panel -->
             <div id="rankingsHistoricalPanel">
@@ -4470,6 +4616,10 @@
             <!-- Time Machine Panel -->
             <div id="rankingsTimeMachinePanel" style="display: none;">
                 <div id="timeMachineContent"><p style="text-align:center;padding:3rem;color:#8892A0;">Loading Time Machine...</p></div>
+            </div>
+            <!-- Trajectory Panel -->
+            <div id="rankingsTrajectoryPanel" style="display: none;">
+                <div id="trajectoryContent"><p style="text-align:center;padding:3rem;color:#8892A0;">Loading Trajectories...</p></div>
             </div>
         </div>
 
@@ -6805,6 +6955,14 @@
                 return;
             }
 
+            // #trajectories — direct link to Trajectories tab
+            if (hash === '#trajectories') {
+                switchView('rankings', true);
+                setTimeout(() => switchRankingsTab('trajectory'), 50);
+                _skipHashUpdate = false;
+                return;
+            }
+
             // #view (home, bracket, rankings, teams, coaches)
             const viewMatch = hash.match(/^#(home|bracket|rankings|teams|coaches)$/);
             if (viewMatch) {
@@ -7417,6 +7575,7 @@
             // Each section is isolated — one crash cannot kill the others
             try { renderTodaysGames(); } catch(e) { console.error('Games section error:', e); }
             try { loadEliteEightSpotlights().then(s => { if (s) renderEliteEightSpotlights(s); }).catch(e => console.error('Spotlights error:', e)); } catch(e) {}
+            try { renderRandomMatchup(); } catch(e) { console.error('Random matchup error:', e); }
             try { renderPopularPrograms(); } catch(e) { console.error('AP Top 25 error:', e); }
             try { renderWinsLeaders(); } catch(e) { console.error('Leaders error:', e); }
         }
@@ -10201,9 +10360,11 @@
             document.getElementById('rankingsNetPanel').style.display = tab === 'net' ? 'block' : 'none';
             document.getElementById('rankingsHtssPanel').style.display = tab === 'htss' ? 'block' : 'none';
             document.getElementById('rankingsTimeMachinePanel').style.display = tab === 'timemachine' ? 'block' : 'none';
+            document.getElementById('rankingsTrajectoryPanel').style.display = tab === 'trajectory' ? 'block' : 'none';
             if (tab === 'net') loadNetRankings();
             if (tab === 'htss') renderHtssRankings();
             if (tab === 'timemachine') renderTimeMachine();
+            if (tab === 'trajectory') renderTrajectories();
         }
 
         // ── HTSS Rankings System ──
@@ -10496,6 +10657,201 @@
 
             html += '</div>';
             container.innerHTML = html;
+        }
+
+        // ── Random Historical Matchup Widget ──
+        let _lastRandomMatchup = null;
+
+        function generateRandomMatchup() {
+            if (!HTSS_V2_DATA || !HTSS_V2_DATA.allTimeTop100) return null;
+            const pool = HTSS_V2_DATA.allTimeTop100;
+            let a, b, attempts = 0;
+            do {
+                a = pool[Math.floor(Math.random() * pool.length)];
+                b = pool[Math.floor(Math.random() * pool.length)];
+                attempts++;
+            } while ((a.team === b.team || (a === _lastRandomMatchup?.a && b === _lastRandomMatchup?.b)) && attempts < 50);
+
+            // Simulate score using adjEM differential
+            const emA = a.adjEM || 20, emB = b.adjEM || 20;
+            const avgPace = 68;
+            const avgD = 100;
+            // Each team's expected offensive efficiency against the other's defense
+            const margin = (emA - emB) / 2;
+            const totalPts = 148 + (Math.random() * 8 - 4); // ~144-152
+            const scoreA = Math.round((totalPts / 2) + (margin / 2) + (Math.random() * 3 - 1.5));
+            const scoreB = Math.round((totalPts / 2) - (margin / 2) + (Math.random() * 3 - 1.5));
+            // Win probability via logistic function
+            const probA = 1 / (1 + Math.pow(10, -margin / 10));
+
+            const matchup = { a, b, scoreA, scoreB, probA };
+            _lastRandomMatchup = matchup;
+            return matchup;
+        }
+
+        function renderRandomMatchup() {
+            const widget = document.getElementById('randomMatchupWidget');
+            if (!widget || !HTSS_V2_DATA) return;
+
+            const m = generateRandomMatchup();
+            if (!m) return;
+
+            const teamA = findTeamByName(m.a.team);
+            const teamB = findTeamByName(m.b.team);
+            const logoA = teamA ? getLogoUrl(teamA.espnId) : '';
+            const logoB = teamB ? getLogoUrl(teamB.espnId) : '';
+            const winnerName = m.scoreA >= m.scoreB ? m.a.team.split(' ').pop() : m.b.team.split(' ').pop();
+            const winPct = Math.round((m.scoreA >= m.scoreB ? m.probA : 1 - m.probA) * 100);
+            const yearA = m.a.season.split('-')[0];
+            const yearB = m.b.season.split('-')[0];
+
+            widget.style.display = 'block';
+            widget.innerHTML = `
+                <div class="rm-header">
+                    <span class="rm-header-title">What If? — A Game That Never Happened</span>
+                    <button class="rm-shuffle-btn" onclick="renderRandomMatchup()">Shuffle</button>
+                </div>
+                <div class="rm-body">
+                    <div class="rm-team">
+                        <div class="rm-team-logo" style="background-image:url('${logoA}');"></div>
+                        <div class="rm-team-name">${m.a.team}</div>
+                        <div class="rm-team-season">${yearA} · ${m.a.coach}</div>
+                        <div class="rm-team-record">${m.a.record} · #${m.a.rank} HTSS</div>
+                    </div>
+                    <div class="rm-center">
+                        <div class="rm-score">${m.scoreA} - ${m.scoreB}</div>
+                        <div class="rm-predicted">Predicted</div>
+                        <div class="rm-prob">${winnerName} ${winPct}%</div>
+                    </div>
+                    <div class="rm-team">
+                        <div class="rm-team-logo" style="background-image:url('${logoB}');"></div>
+                        <div class="rm-team-name">${m.b.team}</div>
+                        <div class="rm-team-season">${yearB} · ${m.b.coach}</div>
+                        <div class="rm-team-record">${m.b.record} · #${m.b.rank} HTSS</div>
+                    </div>
+                </div>
+                <div class="rm-footer">
+                    <button class="rm-explore-btn" onclick="switchRankingsTab('timemachine'); switchView('rankings');">Explore all Time Machine matchups →</button>
+                </div>
+            `;
+        }
+
+        // ── Program Trajectory Analysis ──
+        let _trajectoryWindow = 10;
+
+        function computeTrajectories(windowYears) {
+            if (!HTSS_V2_DATA || !HTSS_V2_DATA.byTeam || !SEASONS_DATA) return { rising: [], falling: [] };
+
+            const currentYear = 2026;
+            const recentStart = currentYear - windowYears;
+            const priorStart = recentStart - windowYears;
+            const results = [];
+
+            for (const [espnId, seasons] of Object.entries(HTSS_V2_DATA.byTeam)) {
+                const teamEntry = window.TEAM_DATA?.H?.[espnId];
+                if (!teamEntry) continue;
+                const teamName = teamEntry[0];
+                const conf = teamEntry[2] || '';
+
+                // Get all seasons with years parsed, sorted chronologically
+                const allSeasons = seasons.map(s => {
+                    const yr = parseInt(s.season.split('-')[0]) + 1; // "2024-25" → 2025
+                    return { year: yr, htss: s.htss };
+                }).sort((a, b) => a.year - b.year);
+
+                // Recent window average
+                const recent = allSeasons.filter(s => s.year > recentStart && s.year <= currentYear);
+                const prior = allSeasons.filter(s => s.year > priorStart && s.year <= recentStart);
+
+                if (recent.length < Math.min(3, windowYears) || prior.length < Math.min(3, windowYears)) continue;
+
+                const recentAvg = recent.reduce((sum, s) => sum + s.htss, 0) / recent.length;
+                const priorAvg = prior.reduce((sum, s) => sum + s.htss, 0) / prior.length;
+                const delta = recentAvg - priorAvg;
+
+                // Get last N years of HTSS for sparkline (up to windowYears*2)
+                const sparkData = allSeasons
+                    .filter(s => s.year > currentYear - windowYears * 2 && s.year <= currentYear)
+                    .map(s => s.htss);
+
+                results.push({
+                    espnId, teamName, conf, delta,
+                    recentAvg: Math.round(recentAvg * 10) / 10,
+                    priorAvg: Math.round(priorAvg * 10) / 10,
+                    recentRecord: recent.length + ' seasons',
+                    sparkData
+                });
+            }
+
+            results.sort((a, b) => b.delta - a.delta);
+            return {
+                rising: results.slice(0, 15),
+                falling: results.slice(-15).reverse().map(r => ({ ...r, delta: r.delta }))
+            };
+        }
+
+        function renderTrajectories() {
+            const container = document.getElementById('trajectoryContent');
+            if (!HTSS_V2_DATA || !SEASONS_DATA) {
+                container.innerHTML = '<p style="text-align:center;padding:3rem;color:#8892A0;">Trajectory data not available.</p>';
+                return;
+            }
+
+            const { rising, falling } = computeTrajectories(_trajectoryWindow);
+
+            const renderCards = (teams, direction) => {
+                if (!teams.length) return '<p style="color:#8892A0;font-size:0.85rem;">Not enough data for this window.</p>';
+                return `<div class="trajectory-grid">${teams.map((t, i) => {
+                    const logo = getLogoUrl(t.espnId);
+                    const deltaStr = direction === 'up'
+                        ? '+' + Math.abs(t.delta).toFixed(1)
+                        : '-' + Math.abs(t.delta).toFixed(1);
+                    const deltaClass = direction === 'up' ? 'rising' : 'falling';
+                    const maxHtss = Math.max(...t.sparkData, 55);
+                    const minHtss = Math.min(...t.sparkData, 40);
+                    const range = maxHtss - minHtss || 1;
+                    const halfIdx = Math.floor(t.sparkData.length / 2);
+
+                    return `
+                    <div class="trajectory-card" onclick="openProfileById('${t.espnId}')">
+                        <div class="trajectory-card-logo" style="background-image:url('${logo}');"></div>
+                        <div class="trajectory-card-info">
+                            <div class="trajectory-card-name">${i + 1}. ${t.teamName}</div>
+                            <div class="trajectory-card-conf">${t.conf}</div>
+                            <div class="trajectory-card-stats">
+                                <div class="trajectory-card-stat">Recent: <strong>${t.recentAvg}</strong></div>
+                                <div class="trajectory-card-stat">Prior: <strong>${t.priorAvg}</strong></div>
+                            </div>
+                            <div class="trajectory-sparkline">
+                                ${t.sparkData.map((v, si) => {
+                                    const h = Math.max(3, ((v - minHtss) / range) * 24);
+                                    const cls = si >= halfIdx ? 'trajectory-spark-bar recent' : 'trajectory-spark-bar';
+                                    return `<div class="${cls}" style="height:${h}px;" title="HTSS ${v.toFixed(1)}"></div>`;
+                                }).join('')}
+                            </div>
+                        </div>
+                        <div class="trajectory-card-delta">
+                            <div class="trajectory-delta-value ${deltaClass}">${deltaStr}</div>
+                            <div class="trajectory-delta-label">HTSS Δ</div>
+                        </div>
+                    </div>`;
+                }).join('')}</div>`;
+            };
+
+            container.innerHTML = `
+                <div class="trajectory-intro">
+                    <strong>Program Trajectories</strong> — Which programs are rising and which are falling? This analysis compares each program's average HTSS score over a recent window against their prior window of equal length, revealing the biggest movers in college basketball.
+                </div>
+                <div class="trajectory-window-tabs">
+                    <button class="trajectory-window-tab ${_trajectoryWindow === 5 ? 'active' : ''}" onclick="_trajectoryWindow=5; renderTrajectories();">5 Years</button>
+                    <button class="trajectory-window-tab ${_trajectoryWindow === 10 ? 'active' : ''}" onclick="_trajectoryWindow=10; renderTrajectories();">10 Years</button>
+                    <button class="trajectory-window-tab ${_trajectoryWindow === 20 ? 'active' : ''}" onclick="_trajectoryWindow=20; renderTrajectories();">20 Years</button>
+                </div>
+                <div class="trajectory-section-title"><span class="arrow-up">▲</span> Biggest Risers</div>
+                ${renderCards(rising, 'up')}
+                <div class="trajectory-section-title"><span class="arrow-down">▼</span> Biggest Fallers</div>
+                ${renderCards(falling, 'down')}
+            `;
         }
 
         async function loadNetRankings() {

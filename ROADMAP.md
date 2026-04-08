@@ -147,7 +147,7 @@
 16. ~~**Historical Team-Season Score (HTSS)**~~ — ✅ SHIPPED (v2 with 9 components, 25,000+ team-seasons)
 17. ~~**Time Machine simulator**~~ — ✅ SHIPPED (10 matchups with predicted scores, win probability, factor breakdown)
 18. **AI-powered natural language search** — "Show me the biggest upset ever" → routes to the right page
-19. **Random Historical Matchup generator** — Homepage widget with predicted score (engine exists via Time Machine)
+19. ~~**Random Historical Matchup generator**~~ — ✅ SHIPPED (homepage "What If?" widget — random cross-era matchup from HTSS top 100, predicted score, shuffle button)
 
 ### Tier 4: Long-term moat (ongoing)
 20. **247Sports data integration** — Transfer portal, recruiting rankings, NIL impact analysis
@@ -156,7 +156,7 @@
 23. **Game detail pages for ALL games** — Not just upsets. Every game clickable with box score + highlights
 24. **Embeddable widgets** — Let bloggers/podcasters embed our comparisons
 25. **"What If" conference simulator** — What if Duke was in the Big Ten?
-26. **Program trajectory analysis** — Rising/falling programs over 5/10/20 years
+26. ~~**Program trajectory analysis**~~ — ✅ SHIPPED (Rankings → Trajectories tab — biggest risers/fallers over 5/10/20 year windows, HTSS-based sparkline charts, 15 risers + 15 fallers)
 27. **Arena photos for all teams** — Currently 110/366 teams (30%). Need CC-licensed photos for remaining 257. Copyright review needed before expanding visibility beyond background watermarks.
 
 ---
