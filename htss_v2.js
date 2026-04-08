@@ -514,12 +514,19 @@ function buildAllSeasons() {
       if (cgr) {
         const closeTotal = cgr.closeWins + cgr.closeLosses;
         const clutchTotal = cgr.clutchWins + cgr.clutchLosses;
-        if (closeTotal >= 2) {
+        if (closeTotal >= 1) {
           // Weighted combination of close-game win% and clutch-game win%
           // Close (<=5): 60% weight, Clutch (<=3): 40% weight
           const closeWinPct = cgr.closeWins / closeTotal;
           const clutchWinPct = clutchTotal > 0 ? cgr.clutchWins / clutchTotal : closeWinPct;
-          closeGameScore = closeWinPct * 0.6 + clutchWinPct * 0.4;
+          // Bayesian smoothing: blend with 50% prior, weighted by sample size
+          // This prevents 1-0 = 1.000 or 0-1 = 0.000 from being extreme outliers
+          const priorWeight = 2; // equivalent to 2 imaginary games at 50%
+          const smoothedClose = (cgr.closeWins + priorWeight * 0.5) / (closeTotal + priorWeight);
+          const smoothedClutch = clutchTotal > 0
+            ? (cgr.clutchWins + priorWeight * 0.5) / (clutchTotal + priorWeight)
+            : smoothedClose;
+          closeGameScore = smoothedClose * 0.6 + smoothedClutch * 0.4;
         }
       }
 
