@@ -502,7 +502,8 @@ Guidelines:
 - When comparing teams or seasons, present data in a structured, easy-to-scan format.
 - If you can't find data for a query, say so honestly — don't make up stats.
 - Stay focused on college basketball. Politely redirect off-topic questions.
-- You're in beta — it's okay to acknowledge limitations.`;
+- You're in beta — it's okay to acknowledge limitations.
+- IMPORTANT: Never narrate your tool-use process. Do NOT say things like "Let me look up...", "Now let me get...", "I'll search for...". Just call the tools silently and present the final answer. The user doesn't see tool calls — they only see your text, so narration about looking things up is confusing.`;
 
 // ── Claude API streaming ──
 async function callClaude(messages, apiKey, tools) {
@@ -514,14 +515,33 @@ async function callClaude(messages, apiKey, tools) {
       'anthropic-version': '2023-06-01'
     },
     body: JSON.stringify({
-      model: 'claude-sonnet-4-20250514',
-      max_tokens: 1024,
+      model: 'claude-haiku-4-5-20251001',
+      max_tokens: 1500,
       system: SYSTEM_PROMPT,
       messages,
       tools,
       stream: true
     })
   });
+
+  if (resp.status === 429) {
+    // Rate limited — wait and retry once
+    await new Promise(r => setTimeout(r, 3000));
+    const retry = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-api-key': apiKey,
+        'anthropic-version': '2023-06-01'
+      },
+      body: JSON.stringify({ model: 'claude-haiku-4-5-20251001', max_tokens: 1500, system: SYSTEM_PROMPT, messages, tools, stream: true })
+    });
+    if (!retry.ok) {
+      const err = await retry.text().catch(() => 'Unknown error');
+      throw new Error(`Claude API error ${retry.status}: ${err}`);
+    }
+    return retry.body;
+  }
 
   if (!resp.ok) {
     const err = await resp.text().catch(() => 'Unknown error');
@@ -533,7 +553,7 @@ async function callClaude(messages, apiKey, tools) {
 
 // ── Parse Claude SSE stream, execute tools, write to client ──
 async function handleClaudeStream(claudeBody, writer, encoder, messages, apiKey, ctx, depth = 0) {
-  const MAX_TOOL_ROUNDS = 3; // Prevent runaway recursion
+  const MAX_TOOL_ROUNDS = 4; // Prevent runaway recursion
   const reader = claudeBody.getReader();
   const decoder = new TextDecoder();
   let buffer = '';
@@ -541,6 +561,7 @@ async function handleClaudeStream(claudeBody, writer, encoder, messages, apiKey,
   let toolUseBlocks = [];
   let textContent = '';
   let inputJsonBuffer = '';
+  let pendingText = '';
   let stopReason = null;
 
   try {
@@ -571,7 +592,8 @@ async function handleClaudeStream(claudeBody, writer, encoder, messages, apiKey,
           case 'content_block_delta':
             if (event.delta?.type === 'text_delta' && event.delta.text) {
               textContent += event.delta.text;
-              await writer.write(encoder.encode(`event: text\ndata: ${JSON.stringify({ text: event.delta.text })}\n\n`));
+              // Buffer text — only flush after we know this is the final response (not a tool-use round)
+              pendingText += event.delta.text;
             }
             if (event.delta?.type === 'input_json_delta' && event.delta.partial_json) {
               inputJsonBuffer += event.delta.partial_json;
@@ -597,7 +619,17 @@ async function handleClaudeStream(claudeBody, writer, encoder, messages, apiKey,
     reader.releaseLock();
   }
 
-  // If Claude wants to use tools, execute them and continue (with depth limit)
+  // If this is the final response (no more tool calls), stream the text to the client
+  if (stopReason !== 'tool_use' || toolUseBlocks.length === 0 || depth >= MAX_TOOL_ROUNDS) {
+    if (pendingText) {
+      await writer.write(encoder.encode(`event: text\ndata: ${JSON.stringify({ text: pendingText })}\n\n`));
+    } else if (depth >= MAX_TOOL_ROUNDS && stopReason === 'tool_use') {
+      await writer.write(encoder.encode(`event: text\ndata: ${JSON.stringify({ text: "That question required a lot of data lookups. Could you try breaking it into simpler questions? For example, ask about coaches first, then about a specific team." })}\n\n`));
+    }
+    return;
+  }
+
+  // Claude wants to use tools — execute them and continue
   if (stopReason === 'tool_use' && toolUseBlocks.length > 0 && depth < MAX_TOOL_ROUNDS) {
     // Build assistant message with all content blocks
     const assistantContent = [];
