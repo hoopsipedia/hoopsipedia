@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-08T14:45:58.974Z",
+  "generated": "2026-04-08T15:06:40.336Z",
   "description": "Hoopsipedia Time Machine — Greatest Games Never Played",
   "algorithm": "Efficiency-based neutral-site simulation with era-adjusted pace and logistic win probability",
   "matchups": [
@@ -13,7 +13,7 @@
         "adjOE": 136.08,
         "adjDE": 88.92,
         "adjEM": 47.16,
-        "htss": 88.7,
+        "htss": 88.69,
         "htssRank": 3,
         "apRank": 1
       },
@@ -25,19 +25,19 @@
         "adjOE": 123.45,
         "adjDE": 84.55,
         "adjEM": 38.9,
-        "htss": 81.6,
-        "htssRank": 18,
+        "htss": 81.59,
+        "htssRank": 19,
         "apRank": 1
       },
       "prediction": {
         "winner": "UCLA Bruins",
-        "winnerScore": 84,
-        "loserScore": 78,
-        "scoreA": 84,
-        "scoreB": 78,
+        "winnerScore": 83,
+        "loserScore": 76,
+        "scoreA": 83,
+        "scoreB": 76,
         "winProbA": 78.01,
         "winProbB": 21.99,
-        "margin": 6,
+        "margin": 7,
         "simPossessions": 69
       },
       "factors": [
@@ -81,7 +81,7 @@
           "name": "HTSS",
           "edge": "UCLA Bruins",
           "teamA": "88.7 (#3)",
-          "teamB": "81.6 (#18)"
+          "teamB": "81.6 (#19)"
         }
       ],
       "narrative": "1972 UCLA's elite offense and John Wooden pedigree give them the edge in a competitive but ultimately decisive game. 2015 Kentucky's suffocating defense, pace advantage, NBA-caliber talent, and close-game toughness keep it interesting, but UCLA pulls away down the stretch."
@@ -96,7 +96,7 @@
         "adjOE": 129.42,
         "adjDE": 90.58,
         "adjEM": 38.85,
-        "htss": 90.65,
+        "htss": 90.64,
         "htssRank": 2,
         "apRank": 1
       },
@@ -108,19 +108,19 @@
         "adjOE": 123.36,
         "adjDE": 88.64,
         "adjEM": 34.72,
-        "htss": 81.01,
-        "htssRank": 23,
+        "htss": 80.99,
+        "htssRank": 25,
         "apRank": 1
       },
       "prediction": {
-        "winner": "Indiana Hoosiers",
+        "winner": "UConn Huskies",
         "winnerScore": 84,
-        "loserScore": 81,
-        "scoreA": 84,
-        "scoreB": 81,
+        "loserScore": 82,
+        "scoreA": 82,
+        "scoreB": 84,
         "winProbA": 65.5,
         "winProbB": 34.5,
-        "margin": 3,
+        "margin": 2,
         "simPossessions": 70
       },
       "factors": [
@@ -163,11 +163,11 @@
         {
           "name": "HTSS",
           "edge": "Indiana Hoosiers",
-          "teamA": "90.7 (#2)",
-          "teamB": "81 (#23)"
+          "teamA": "90.6 (#2)",
+          "teamB": "81 (#25)"
         }
       ],
-      "narrative": "This one goes down to the wire — 1976 Indiana barely edges 2024 UConn in an instant classic. 2024 UConn's suffocating defense and pace advantage nearly steal the game, but Indiana's elite offense, Bob Knight pedigree, and close-game toughness prove decisive in the final minutes."
+      "narrative": "This one goes down to the wire — 2024 UConn barely edges 1976 Indiana in an instant classic. 1976 Indiana's elite offense, Bob Knight pedigree, and close-game toughness nearly steal the game, but UConn's suffocating defense and pace advantage prove decisive in the final minutes."
     },
     {
       "matchup": "1992 Duke vs 1996 Kentucky",
@@ -180,7 +180,7 @@
         "adjDE": 92.69,
         "adjEM": 29.62,
         "htss": 79.45,
-        "htssRank": 35,
+        "htssRank": 36,
         "apRank": 1
       },
       "teamB": {
@@ -191,19 +191,19 @@
         "adjOE": 125.16,
         "adjDE": 84.84,
         "adjEM": 40.32,
-        "htss": 82.22,
-        "htssRank": 14,
+        "htss": 82.23,
+        "htssRank": 13,
         "apRank": 2
       },
       "prediction": {
         "winner": "Kentucky Wildcats",
-        "winnerScore": 79,
-        "loserScore": 75,
-        "scoreA": 75,
-        "scoreB": 79,
+        "winnerScore": 83,
+        "loserScore": 73,
+        "scoreA": 73,
+        "scoreB": 83,
         "winProbA": 16.4,
         "winProbB": 83.6,
-        "margin": 4,
+        "margin": 10,
         "simPossessions": 69
       },
       "factors": [
@@ -246,11 +246,11 @@
         {
           "name": "HTSS",
           "edge": "Kentucky Wildcats",
-          "teamA": "79.5 (#35)",
-          "teamB": "82.2 (#14)"
+          "teamA": "79.5 (#36)",
+          "teamB": "82.2 (#13)"
         }
       ],
-      "narrative": "This one goes down to the wire — 1996 Kentucky barely edges 1992 Duke in an instant classic. 1992 Duke's Mike Krzyzewski pedigree and close-game toughness nearly steal the game, but Kentucky's elite offense, suffocating defense, and pace advantage prove decisive in the final minutes."
+      "narrative": "1996 Kentucky's elite offense, suffocating defense, and pace advantage would overwhelm 1992 Duke in a convincing victory. 1992 Duke's Mike Krzyzewski pedigree and close-game toughness aren't enough to overcome the gap in overall quality."
     },
     {
       "matchup": "2018 Villanova vs 2008 Kansas",
@@ -262,7 +262,7 @@
         "adjOE": 123.57,
         "adjDE": 88.43,
         "adjEM": 35.14,
-        "htss": 84.92,
+        "htss": 84.9,
         "htssRank": 7,
         "apRank": 2
       },
@@ -274,19 +274,19 @@
         "adjOE": 122.52,
         "adjDE": 87.48,
         "adjEM": 35.04,
-        "htss": 75.97,
-        "htssRank": 93,
+        "htss": 75.96,
+        "htssRank": 95,
         "apRank": 4
       },
       "prediction": {
         "winner": "Villanova Wildcats",
-        "winnerScore": 73,
+        "winnerScore": 75,
         "loserScore": 72,
-        "scoreA": 73,
+        "scoreA": 75,
         "scoreB": 72,
         "winProbA": 50.37,
         "winProbB": 49.63,
-        "margin": 1,
+        "margin": 3,
         "simPossessions": 66
       },
       "factors": [
@@ -330,7 +330,7 @@
           "name": "HTSS",
           "edge": "Villanova Wildcats",
           "teamA": "84.9 (#7)",
-          "teamB": "76 (#93)"
+          "teamB": "76 (#95)"
         }
       ],
       "narrative": "This one goes down to the wire — 2018 Villanova barely edges 2008 Kansas in an instant classic. 2008 Kansas's pace advantage nearly steals the game, but Villanova's elite offense, Jay Wright pedigree, NBA-caliber talent, and close-game toughness prove decisive in the final minutes."
@@ -345,7 +345,7 @@
         "adjOE": 133.3,
         "adjDE": 91.7,
         "adjEM": 41.6,
-        "htss": 86.04,
+        "htss": 86.03,
         "htssRank": 5,
         "apRank": 2
       },
@@ -357,19 +357,19 @@
         "adjOE": 123.65,
         "adjDE": 88.35,
         "adjEM": 35.31,
-        "htss": 81.82,
-        "htssRank": 16,
+        "htss": 81.8,
+        "htssRank": 17,
         "apRank": 1
       },
       "prediction": {
         "winner": "UCLA Bruins",
-        "winnerScore": 87,
+        "winnerScore": 84,
         "loserScore": 80,
-        "scoreA": 87,
+        "scoreA": 84,
         "scoreB": 80,
         "winProbA": 72.71,
         "winProbB": 27.29,
-        "margin": 7,
+        "margin": 4,
         "simPossessions": 70
       },
       "factors": [
@@ -413,10 +413,10 @@
           "name": "HTSS",
           "edge": "UCLA Bruins",
           "teamA": "86 (#5)",
-          "teamB": "81.8 (#16)"
+          "teamB": "81.8 (#17)"
         }
       ],
-      "narrative": "1968 UCLA's elite offense gives them the edge in a competitive but ultimately decisive game. 2021 Gonzaga's suffocating defense, pace advantage, NBA-caliber talent, and close-game toughness keep it interesting, but UCLA pulls away down the stretch."
+      "narrative": "This one goes down to the wire — 1968 UCLA barely edges 2021 Gonzaga in an instant classic. 2021 Gonzaga's suffocating defense, pace advantage, NBA-caliber talent, and close-game toughness nearly steal the game, but UCLA's elite offense proves decisive in the final minutes."
     },
     {
       "matchup": "1973 UCLA vs 1976 Indiana",
@@ -428,7 +428,7 @@
         "adjOE": 130.98,
         "adjDE": 89.02,
         "adjEM": 41.95,
-        "htss": 91.32,
+        "htss": 91.31,
         "htssRank": 1,
         "apRank": 1
       },
@@ -440,19 +440,19 @@
         "adjOE": 129.42,
         "adjDE": 90.58,
         "adjEM": 38.85,
-        "htss": 90.65,
+        "htss": 90.64,
         "htssRank": 2,
         "apRank": 1
       },
       "prediction": {
         "winner": "UCLA Bruins",
         "winnerScore": 87,
-        "loserScore": 86,
+        "loserScore": 85,
         "scoreA": 87,
-        "scoreB": 86,
+        "scoreB": 85,
         "winProbA": 62.39,
         "winProbB": 37.61,
-        "margin": 1,
+        "margin": 2,
         "simPossessions": 73
       },
       "factors": [
@@ -496,7 +496,7 @@
           "name": "HTSS",
           "edge": "UCLA Bruins",
           "teamA": "91.3 (#1)",
-          "teamB": "90.7 (#2)"
+          "teamB": "90.6 (#2)"
         }
       ],
       "narrative": "This one goes down to the wire — 1973 UCLA barely edges 1976 Indiana in an instant classic. Both teams trade blows, but UCLA makes one more play when it matters most."
@@ -511,9 +511,9 @@
         "adjOE": 124.52,
         "adjDE": 87.48,
         "adjEM": 37.04,
-        "htss": null,
-        "htssRank": null,
-        "apRank": null
+        "htss": 82.13,
+        "htssRank": 15,
+        "apRank": 2
       },
       "teamB": {
         "name": "Villanova Wildcats",
@@ -524,18 +524,18 @@
         "adjDE": 100.43,
         "adjEM": 19.14,
         "htss": 65.61,
-        "htssRank": 805,
+        "htssRank": 815,
         "apRank": 14
       },
       "prediction": {
         "winner": "Virginia Cavaliers",
-        "winnerScore": 86,
+        "winnerScore": 89,
         "loserScore": 75,
-        "scoreA": 86,
+        "scoreA": 89,
         "scoreB": 75,
         "winProbA": 94.18,
         "winProbB": 5.82,
-        "margin": 11,
+        "margin": 14,
         "simPossessions": 70
       },
       "factors": [
@@ -566,17 +566,23 @@
         {
           "name": "Talent",
           "edge": "N/A",
-          "teamA": "N/A",
+          "teamA": "Draft score: 3.3",
           "teamB": "N/A"
         },
         {
           "name": "Clutch",
-          "edge": "N/A",
-          "teamA": "N/A",
-          "teamB": "N/A"
+          "edge": "Virginia Cavaliers",
+          "teamA": "1.4",
+          "teamB": "0.5"
+        },
+        {
+          "name": "HTSS",
+          "edge": "Virginia Cavaliers",
+          "teamA": "82.1 (#15)",
+          "teamB": "65.6 (#815)"
         }
       ],
-      "narrative": "2019 Virginia's elite offense, suffocating defense, and pace advantage would overwhelm 1985 Villanova in a convincing victory. The talent and efficiency gap is simply too wide to overcome."
+      "narrative": "2019 Virginia's elite offense, suffocating defense, pace advantage, and close-game toughness would overwhelm 1985 Villanova in a convincing victory. The talent and efficiency gap is simply too wide to overcome."
     },
     {
       "matchup": "1982 North Carolina vs 2017 North Carolina",
@@ -588,7 +594,7 @@
         "adjOE": 125.01,
         "adjDE": 94.99,
         "adjEM": 30.01,
-        "htss": 81.01,
+        "htss": 81,
         "htssRank": 24,
         "apRank": 1
       },
@@ -600,19 +606,19 @@
         "adjOE": 121.97,
         "adjDE": 90.03,
         "adjEM": 31.94,
-        "htss": 84.03,
+        "htss": 84.01,
         "htssRank": 10,
         "apRank": 6
       },
       "prediction": {
         "winner": "North Carolina Tar Heels",
-        "winnerScore": 84,
-        "loserScore": 81,
-        "scoreA": 84,
-        "scoreB": 81,
+        "winnerScore": 82,
+        "loserScore": 80,
+        "scoreA": 80,
+        "scoreB": 82,
         "winProbA": 42.59,
         "winProbB": 57.41,
-        "margin": 3,
+        "margin": 2,
         "simPossessions": 70
       },
       "factors": [
@@ -659,7 +665,7 @@
           "teamB": "84 (#10)"
         }
       ],
-      "narrative": "This one goes down to the wire — 1982 North Carolina barely edges 2017 North Carolina in an instant classic. 2017 North Carolina's suffocating defense and pace advantage nearly steal the game, but North Carolina's elite offense and close-game toughness prove decisive in the final minutes."
+      "narrative": "This one goes down to the wire — 2017 North Carolina barely edges 1982 North Carolina in an instant classic. 1982 North Carolina's elite offense and close-game toughness nearly steal the game, but North Carolina's suffocating defense and pace advantage prove decisive in the final minutes."
     },
     {
       "matchup": "1991 UNLV vs 2024 UConn",
@@ -672,7 +678,7 @@
         "adjDE": 87.2,
         "adjEM": 40.6,
         "htss": 77.02,
-        "htssRank": 65,
+        "htssRank": 67,
         "apRank": 1
       },
       "teamB": {
@@ -683,16 +689,16 @@
         "adjOE": 123.36,
         "adjDE": 88.64,
         "adjEM": 34.72,
-        "htss": 81.01,
-        "htssRank": 23,
+        "htss": 80.99,
+        "htssRank": 25,
         "apRank": 1
       },
       "prediction": {
         "winner": "UNLV Rebels",
-        "winnerScore": 79,
-        "loserScore": 75,
-        "scoreA": 79,
-        "scoreB": 75,
+        "winnerScore": 78,
+        "loserScore": 74,
+        "scoreA": 78,
+        "scoreB": 74,
         "winProbA": 70.99,
         "winProbB": 29.01,
         "margin": 4,
@@ -738,8 +744,8 @@
         {
           "name": "HTSS",
           "edge": "UConn Huskies",
-          "teamA": "77 (#65)",
-          "teamB": "81 (#23)"
+          "teamA": "77 (#67)",
+          "teamB": "81 (#25)"
         }
       ],
       "narrative": "This one goes down to the wire — 1991 UNLV barely edges 2024 UConn in an instant classic. 2024 UConn's pace advantage and close-game toughness nearly steal the game, but UNLV's elite offense, suffocating defense, and Jerry Tarkanian pedigree prove decisive in the final minutes."
@@ -754,8 +760,8 @@
         "adjOE": 124.5,
         "adjDE": 87.5,
         "adjEM": 36.99,
-        "htss": 76.35,
-        "htssRank": 84,
+        "htss": 76.34,
+        "htssRank": 86,
         "apRank": 1
       },
       "teamB": {
@@ -767,18 +773,18 @@
         "adjDE": 88.41,
         "adjEM": 38.19,
         "htss": 78.95,
-        "htssRank": 42,
+        "htssRank": 43,
         "apRank": 10
       },
       "prediction": {
         "winner": "Michigan Wolverines",
-        "winnerScore": 81,
+        "winnerScore": 79,
         "loserScore": 78,
-        "scoreA": 78,
-        "scoreB": 81,
+        "scoreA": 79,
+        "scoreB": 78,
         "winProbA": 45.52,
         "winProbB": 54.48,
-        "margin": 3,
+        "margin": 1,
         "simPossessions": 69
       },
       "factors": [
@@ -821,11 +827,11 @@
         {
           "name": "HTSS",
           "edge": "Michigan Wolverines",
-          "teamA": "76.4 (#84)",
-          "teamB": "79 (#42)"
+          "teamA": "76.3 (#86)",
+          "teamB": "79 (#43)"
         }
       ],
-      "narrative": "This one goes down to the wire — 1989 Michigan barely edges 2026 Michigan in an instant classic. 2026 Michigan's pace advantage, Dusty May pedigree, and close-game toughness nearly steal the game, but Michigan's elite offense and NBA-caliber talent prove decisive in the final minutes."
+      "narrative": "This one goes down to the wire — 2026 Michigan barely edges 1989 Michigan in an instant classic. 1989 Michigan's elite offense and NBA-caliber talent nearly steal the game, but Michigan's pace advantage, Dusty May pedigree, and close-game toughness prove decisive in the final minutes."
     }
   ]
 }

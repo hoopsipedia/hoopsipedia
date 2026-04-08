@@ -44,7 +44,20 @@ function loadData() {
   const seasons = JSON.parse(fs.readFileSync(path.join(BASE, 'seasons.json'), 'utf8'));
   const data = JSON.parse(fs.readFileSync(path.join(BASE, 'data.json'), 'utf8'));
   const espnToSr = JSON.parse(fs.readFileSync(path.join(BASE, 'espn_to_sr.json'), 'utf8'));
-  return { efficiency, htss, seasons, data, espnToSr };
+  // Load game data for close-game analysis (fallback for teams outside HTSS top 100)
+  const games = {};
+  for (const file of ['games_1.json', 'games_2.json', 'games_3.json']) {
+    const fp = path.join(BASE, file);
+    if (fs.existsSync(fp)) {
+      const gd = JSON.parse(fs.readFileSync(fp, 'utf8'));
+      for (const [id, entry] of Object.entries(gd)) {
+        const arr = entry.games && Array.isArray(entry.games) ? entry.games : (Array.isArray(entry) ? entry : []);
+        if (!games[id]) games[id] = [];
+        games[id].push(...arr);
+      }
+    }
+  }
+  return { efficiency, htss, seasons, data, espnToSr, games };
 }
 
 // ---------------------------------------------------------------------------
@@ -284,6 +297,37 @@ function buildTeamProfile(espnId, seasonKey, springYear, teamInfo, db) {
     if (teamEntry) {
       profile.htss = teamEntry.htss;
       profile.htssRank = teamEntry.rank;
+    }
+  }
+
+  // --- Compute close-game stats directly from game data (fallback when not in top 100) ---
+  if (!profile.htssComponents?.closeGame && db.games[espnId]) {
+    const games = db.games[espnId];
+    let closeWins = 0, closeLosses = 0, clutchWins = 0, clutchLosses = 0;
+    for (const g of games) {
+      if (!g.date || g.pts == null || g.opp_pts == null) continue;
+      const [yr, mo] = g.date.split('-').map(Number);
+      const gameSeason = mo >= 10 ? yr : yr - 1;
+      const gameSeasonKey = `${gameSeason}-${String(gameSeason + 1).slice(2).padStart(2, '0')}`;
+      if (gameSeasonKey !== seasonKey) continue;
+      const margin = Math.abs(g.pts - g.opp_pts);
+      const won = g.w === true || g.pts > g.opp_pts;
+      if (margin <= 5) { won ? closeWins++ : closeLosses++; }
+      if (margin <= 3) { won ? clutchWins++ : clutchLosses++; }
+    }
+    const closeTotal = closeWins + closeLosses;
+    if (closeTotal >= 1) {
+      const priorWeight = 2;
+      const smoothedClose = (closeWins + priorWeight * 0.5) / (closeTotal + priorWeight);
+      const clutchTotal = clutchWins + clutchLosses;
+      const smoothedClutch = clutchTotal > 0
+        ? (clutchWins + priorWeight * 0.5) / (clutchTotal + priorWeight)
+        : smoothedClose;
+      const rawScore = smoothedClose * 0.6 + smoothedClutch * 0.4;
+      // Approximate z-score (era mean ~0.5, std ~0.15)
+      const zScore = (rawScore - 0.5) / 0.15;
+      if (!profile.htssComponents) profile.htssComponents = {};
+      profile.htssComponents.closeGame = Math.round(zScore * 1000) / 1000;
     }
   }
 
