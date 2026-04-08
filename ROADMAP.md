@@ -1,10 +1,10 @@
 # Hoopsipedia Roadmap
 
-**Last updated:** 2026-03-19 (NCAA Tournament Day 1)
+**Last updated:** 2026-04-08 (Post-Tournament / Offseason)
 
 **Mission: "Nobody connects the dots across 80+ years of basketball. That's our lane."**
 
-## ✅ SHIPPED (v0.1.0 → v0.4.0)
+## ✅ SHIPPED (v0.1.0 → v0.5.0)
 
 ### Core Features
 - [x] Team profiles with all-time stats, rankings, season-by-season records
@@ -23,27 +23,42 @@
 ### Tournament Experience
 - [x] Live scores on game cards (in-progress, halftime, final, OT)
 - [x] NCAA Tournament / NIT badges + filter tabs + conference dropdown
-- [x] Greatest Tournament Upsets page — 339 verified upsets, era filters, clickable seed pairing cards
-- [x] Relive the Moment game pages — cinematic hero, 199 YouTube highlights, box scores
+- [x] Greatest Tournament Upsets page — 340+ verified upsets, era filters, clickable seed pairing cards
+- [x] Relive the Moment game pages — cinematic hero with dynamic team colors, YouTube highlights, box scores
 - [x] Live Historical Context Engine — seed matchup badges on bracket + game cards
 - [x] Live Upset Watch cards — prominent homepage alerts when upsets are brewing
 - [x] "On This Day" tournament history ticker — real games from our database + iconic moments
 - [x] Game Center — prominent box score at top of comparison for live/recent games, auto-refreshes
 - [x] Box scores everywhere — 12,067 ESPN game IDs, 240 SR box scores, clickable H2H game rows
 - [x] Live game tracker — polls ESPN, auto-updates records + coach wins when games go Final
-- [x] 5 Championship Run pages (Virginia 2019, Villanova 2018, UConn 2023/2024, Florida 2025)
+- [x] 87 Championship Run pages (all 87 champions 1939-2026) with game-by-game tournament paths, stories, video highlights, and MOP
+- [x] Team-colored hero backgrounds using luminance-aware color system (3-tier dark/medium/light detection)
+- [x] Static box scores for pre-2002 championship games (Sports Reference data for 1985-1999 title games)
 - [x] Championship year badges clickable → run pages or Sports Reference
-- [x] Bracket winner fun facts — "5-time national champion advances", "First NCAA Tournament win ever", blowout callouts
-- [x] R32+ matchup preview facts — clickable H2H series history ("Vanderbilt leads 5-2"), links to comparison page
-- [x] Hardcoded bracket structure — deterministic R32 slot placement, correct feeder ordering (top/bottom)
+- [x] Bracket winner fun facts — "First NCAA Tournament win in history", drought/absence facts, blowout callouts
+- [x] R32+ matchup preview facts — clickable H2H series history, links to comparison page
+- [x] Hardcoded bracket structure — deterministic R32 slot placement, correct feeder ordering
 - [x] Bracket R64 historical seed context badges — "16-seeds are 2-152 all-time vs 1-seeds"
+- [x] Upset Color Takeover — site accent colors shift to upset winner's colors (nav, buttons, footer, hero)
+- [x] Milestone banners — "First ever NCAA Tournament win!" celebration banners for historic moments
+- [x] Game card sorting — live games first, today's scheduled next, previous days below with day headers
+- [x] Shareable OG tags for Relive the Moment pages + Championship Run pages (unique social previews)
+- [x] Share buttons on both Relive the Moment and Championship Run pages
+- [x] Dark/white logo variants on hero backgrounds (prevents logo-on-same-color invisibility)
+
+### Starting 5 Comparison
+- [x] Side-by-side starting lineups with per-player stats and position assignments
+- [x] **Actual starters from ESPN box scores** — uses starter=true flags from most recent game, not minutes heuristic
+- [x] Bench comparison toggle
+- [x] Tied position edge display
+- [x] Shareable Starting 5 links
 
 ### Team Profile Enrichment
 - [x] NET Rankings table + NET rank badge on profiles
-- [x] Quad Record section (Q1-Q4 W-L) with expandable game details on profiles + H2H pages
-- [x] Starting 5 tied positions shown in edge display ("0-3 (2 tied)")
-- [x] Program History — founding year, mascot origin, iconic moment, "Did You Know?"
-- [x] NBA Draft History — 85 teams with lottery picks, #1 overall picks, full draft tables
+- [x] Quad Record section (Q1-Q4 W-L) with expandable game details
+- [x] Program History — all 366 teams with founding year, mascot origin, iconic moment, "Did You Know?"
+- [x] NBA Draft History — all 367 teams with lottery picks, #1 overall picks, full draft tables
+- [x] HTSS Rating section on team profiles — best season score, all-time rank, program score, sparkline chart
 - [x] Advanced Stats toggle — PPG, SRS, SOS, scoring margin, conference record
 - [x] Player Roster & Stats — full roster with headshots, sortable by any stat
 - [x] Player vs Player comparison — side-by-side stat bars, shareable links
@@ -52,79 +67,128 @@
 
 ### Polish & Infrastructure
 - [x] Mobile-responsive UI — tables scroll, 44px tap targets, premium card feel
+- [x] Mobile responsiveness audit + fixes (coaches table scroll, box score wrapping, milestone banner, upset cards, S5 sizing, 480px breakpoint)
 - [x] Skeleton loaders + error fallbacks for every view
 - [x] Error isolation — each section wrapped in try/catch
 - [x] Sitemap.xml — 145+ URLs for Google indexing
-- [x] Dynamic OG Tags via Cloudflare Pages Function
+- [x] Dynamic OG Tags via Cloudflare Pages Function (team, compare, game, championship routes)
 - [x] NCAA data audit — 297 corrections, vacated wins handled
 - [x] QA sweep — all 68 tournament teams verified
 - [x] Staging branch for DR environment
-- [x] No emojis (except live red dot + upset siren)
-- [x] Hoopsipedia bouncing basketball loading icon (replaced broken ESPN link)
-- [x] Coaches leaderboard records on one line (white-space: nowrap)
+- [x] Date rollover set to midnight MST (tournament games can end past midnight ET)
+- [x] Nightly sync cron job — auto-updates current season records + coach win totals from ESPN
+- [x] Comparison tabs + toggle buttons use left team's color (not hardcoded or takeover color)
+- [x] Hoopsipedia bouncing basketball loading icon
 
 ### Data
-- [x] 363 teams in data.json across 32 conferences
-- [x] 210 teams with full game-by-game data (378K+ games)
+- [x] 366 teams in data.json across 32 conferences (cleaned: removed Stanislaus State ghost entry, fixed VMI mapping)
+- [x] 371 teams with full game-by-game data (including CCNY D1-era 1941-1953)
+- [x] 367 teams with season-by-season records in seasons.json
 - [x] 12,067 ESPN game IDs for instant box score lookup
-- [x] 340 verified upset games with scores
+- [x] 340+ verified upset games with scores (including 4 from 2026 Day 1)
 - [x] 199 YouTube highlight clips for upsets
 - [x] 240 Sports Reference box scores (1985-2025)
-- [x] 376 teams with NET rankings (scraped Warren Nolan)
-- [x] H2H data audited — 48 asymmetric entries fixed, 3 self-references removed
-- [x] NET quad records recomputed from games data for all 210 teams
-- [x] Validated batch scraper (scrape_batch.py) with dedup, opponent resolution, crash recovery
-- [x] 85 teams with NBA Draft History
-- [x] 68 team history blurbs
+- [x] 376 teams with NET rankings
+- [x] H2H data audited — 48 asymmetric entries fixed
+- [x] NET quad records recomputed from games data
+- [x] Validated batch scraper with dedup, opponent resolution, crash recovery
+- [x] 367 teams with NBA Draft History
+- [x] 366 teams with team history blurbs
 - [x] 110 arena photos
 - [x] Ranking formula research complete (RANKING_RESEARCH.md)
+- [x] ESPN-to-SR ID mapping cleaned — removed 6 orphan duplicates (Drake, Tulsa, South Dakota, SDSU, Tulane, VMI)
+- [x] Drake duplicate (2181/263) fully merged across 9 files
+- [x] Virginia seasons data re-scraped with full format (was missing wins/losses/SRS/SOS/AP)
+
+### Proprietary Analytics
+- [x] HTSS v1 + v2 — Historical Team-Season Score algorithm (25,000+ team-seasons scored)
+- [x] Efficiency Engine — KenPom/NET-style adjusted efficiency (adjOE/adjDE/adjEM) retroactive to 1949
+- [x] HTSS Rankings page — Top 100 Seasons, Program Rankings (expandable top 5), By Era (6 eras)
+- [x] Time Machine — 10 cross-era matchup simulations with predicted scores, win probability, factor breakdowns
+- [x] Close-game resilience scoring with Bayesian smoothing (threshold lowered to 1 game)
+- [x] Direct hash routes: #htss-rankings, #time-machine
+
+### Bug Fixes (Tournament Days 1-2)
+- [x] Fixed VCU "Why This Mattered" — `note` vs `notes` field name mismatch
+- [x] Fixed year comparison bug — seasons.json uses "YYYY-YY" strings, parseInt needed for numeric comparisons
+- [x] Fixed California Baptist data — had Cal Berkeley's 114 seasons + 18 tourney appearances instead of correct D-I data
+- [x] Fixed Tennessee Final Fours — incorrectly showed 1, should be 0 (never made a Final Four)
+- [x] Fixed bracket fun facts for droughts/absences — parseInt needed in 2 more places
+- [x] Fixed upset_history.json totalGames counts for 5v12 and 7v10 (off by 1)
+- [x] Fixed Texas-BYU score — 77-71 → 79-71
+- [x] Fixed Starting 5 showing wrong players (bench players with high minutes picked over actual starters)
+- [x] Fixed season toggle buttons — inactive button no longer looks clicked after switching
+- [x] Fixed HPU bracket fun fact — now correctly shows "First NCAA Tournament win" (not "first appearance")
 
 ---
 
 ## 🔥 STACK-RANKED PRIORITIES (Easiest Lift → Highest Value)
 
 ### Tier 1: Quick wins, massive impact (< 2 hours each)
-1. ~~**Starting 5 Comparison Tool**~~ — ✅ SHIPPED. Side-by-side starting lineups with stats, tied positions, bench, totals.
-2. **Upset Color Takeover** — When a big upset happens, site accent colors temporarily shift to the winner's colors for 30 min. Viral screenshot moment.
-3. **Multi-conference filter** — Let users select Big Ten AND Big 12 simultaneously. Simple filter logic change.
-4. **Injury/availability alerts** — Surface key player status on comparison pages. ESPN has some injury data.
-5. **Remove CUNY from Rankings/Teams** — D3, not D1. Quick filter.
-6. **Fix bracket sizing** — Regions should fit on screen without horizontal scroll.
+1. ~~**Starting 5 Comparison Tool**~~ — ✅ SHIPPED
+2. ~~**Upset Color Takeover**~~ — ✅ SHIPPED
+3. **Data validation in nightly sync** — Cross-check data.json tournament stats against seasons.json to catch discrepancies like Tennessee FF automatically
+4. ~~**Multi-conference filter**~~ — ✅ SHIPPED (Rankings + Teams pages)
+5. **Injury/availability alerts** — Surface key player status on comparison pages
+6. **Fix bracket sizing** — Regions should fit on screen without horizontal scroll (partially done — responsive tabs at 1024px)
+7. ~~**Largest comebacks in NCAA Tournament history**~~ — ✅ SHIPPED (woven into championship run narratives)
 
 ### Tier 2: Medium lift, high value (2-6 hours each)
-7. **More Championship Run pages** — 17 runs for Duke/UK/UNC/Kansas/UCLA are building. Add defining moments with YouTube clips inline.
-8. **Conference Realignment Tracker** — Timeline visualization of every conference move. High interest topic right now.
-9. **"Best Teams of All Time" page** — Use our existing data to rank top team-seasons. Even without HTSS, we can use win%, SRS, tournament finish.
-10. **Rivalry pages** — Dedicated pages for Duke-UNC, UK-Louisville, etc. with full historical context, embedded highlights of classic games.
-11. **Top 10 Moments per team** — Curated YouTube clips for every program's greatest moments embedded on profiles.
-12. **H2H highlights for craziest finishes** — Link buzzer beaters and OT games in H2H history.
+8. ~~**More Championship Run pages**~~ — ✅ SHIPPED (all 87 champions 1939-2026)
+9. **Conference Realignment Tracker** — Timeline visualization of every conference move
+10. ~~**"Best Teams of All Time" page**~~ — ✅ SHIPPED (HTSS Rankings — Top 100 Seasons, Program Rankings, By Era)
+11. **Rivalry pages** — Dedicated pages for Duke-UNC, UK-Louisville, etc.
+12. **Top 10 Moments per team** — Curated YouTube clips for every program's greatest moments
+13. **H2H highlights for craziest finishes** — Link buzzer beaters and OT games in H2H history
+14. **Takeover priority logic refinement** — Better rules for which upset gets the takeover when multiple happen
 
 ### Tier 3: Big lift, transformative value (1-2 weeks)
-13. **Blue Blood Index (BBI)** — Proprietary all-time program ranking. Formula is researched and ready (RANKING_RESEARCH.md).
-14. **Historical Team-Season Score (HTSS)** — Score every team-season for cross-era comparison. Powers the Time Machine.
-15. **Time Machine simulator** — "1992 Duke vs 2015 Kentucky: who wins?" with predicted score. THE signature feature.
-16. **AI-powered natural language search** — "Show me the biggest upset ever" → routes to the right page.
-17. **Random Historical Matchup generator** — Homepage widget with predicted score. Engagement flywheel.
+15. ~~**Blue Blood Index (BBI)**~~ — ✅ SHIPPED (became HTSS Program Rankings — top 50 all-time programs)
+16. ~~**Historical Team-Season Score (HTSS)**~~ — ✅ SHIPPED (v2 with 9 components, 25,000+ team-seasons)
+17. ~~**Time Machine simulator**~~ — ✅ SHIPPED (10 matchups with predicted scores, win probability, factor breakdown)
+18. **AI-powered natural language search** — "Show me the biggest upset ever" → routes to the right page
+19. **Random Historical Matchup generator** — Homepage widget with predicted score (engine exists via Time Machine)
 
 ### Tier 4: Long-term moat (ongoing)
-18. **247Sports data integration** — Transfer portal, recruiting rankings, NIL impact analysis.
-19. **Full player profiles** — College career stats, NBA career tracking, All-American history.
-20. **Championship Run pages for EVERY champion** — Complete archive, not just 5.
-21. **Pre-1985 historical upsets** — By program strength, not seed.
-22. **Game detail pages for ALL games** — Not just upsets. Every game clickable with box score + highlights.
-23. **Nightly data sync automation** — Records, scores, coaches, NET rankings auto-update.
-24. **Embeddable widgets** — Let bloggers/podcasters embed our comparisons.
+20. **247Sports data integration** — Transfer portal, recruiting rankings, NIL impact analysis
+21. **Full player profiles** — College career stats, NBA career tracking, All-American history
+22. **Pre-1985 historical upsets** — By program strength, not seed
+23. **Game detail pages for ALL games** — Not just upsets. Every game clickable with box score + highlights
+24. **Embeddable widgets** — Let bloggers/podcasters embed our comparisons
 25. **"What If" conference simulator** — What if Duke was in the Big Ten?
-26. **Program trajectory analysis** — Rising/falling programs over 5/10/20 years.
+26. **Program trajectory analysis** — Rising/falling programs over 5/10/20 years
+
+---
+
+## 🏗️ IN PROGRESS / KNOWN ISSUES
+
+### Data Integrity (confirmed outstanding)
+- **18 stale h2h IDs** — h2h.json has entries keyed under old ESPN IDs (4, 42, 188, 291, 317, 354, 361, 372, 377, 395, 408, 422, 430, 447, 2112, 2543, 2597, 2631). Data exists but needs remapping to current IDs.
+- **4 Sun Belt teams missing conference** — Georgia Southern (290), Texas State (326), Arkansas State (2032), UL Monroe (2433) have empty conference strings
+- **New Haven (2441) is D2** — Should be removed or flagged. Has corrupted game data (numeric keys 0-30).
+- **10 teams missing coach data** — Southern Indiana (88), UT Arlington (250), Drake (263), Delaware State (2169), FIU (2229), Omaha (2437), Queens (2511), CCNY (2609), Tarleton State (2627), Lindenwood (2815)
+- **257 teams missing arena photos** (70%) — Biggest enrichment gap, but copyright concerns under review
+- **2003 Syracuse duplicate** in CHAMPIONSHIP_RUNS HTML
+- **Louisville 2013** in championship runs — correctly vacated in data.json but journey page has no asterisk
+- **E8 > S16 count** for 10 pre-1975 teams — bracket was smaller, counting methodology quirk
 
 ---
 
 ## 💡 Feature Ideas (Backlog)
-- Team origin stories expanded to Wikipedia-level depth (cross-referenced with official school athletics pages)
+- Team origin stories expanded to Wikipedia-level depth
 - "This Day in CBB History" — daily auto-generated content (shipped basic version)
 - Tournament-specific SEO pages — history of 12-5 upsets, best Cinderella runs
 - Dual record view: on-court record vs NCAA official record (show vacated wins transparently)
+- **Vacated tournament milestones display** — Figure out best way to present Sweet 16s, Elite 8s, Final Fours that were vacated (e.g., Michigan -2 FF, Memphis -1 FF, Ohio State -1 FF). Currently subtracted from totals but no transparency to the user about why the numbers differ from other sources. Tied to the dual record view feature above.
 - Auto-generated OG images for comparison pages
 - Decade-by-decade program strength visualizations
 - Coach career timelines across schools (visual timeline)
 - Coaching era analysis (program strength under each coach)
+- Player headshot fallback to school roster pages when ESPN has no photo
+- Permanent system crontab for nightly sync (currently session-only)
+
+---
+
+## 📊 Traffic & Milestones
+- **Day 1 (March 19):** 588 unique visitors, peak 73/hour. Zero marketing budget.
+- **Day 2 (March 20):** 489 unique visitors by noon, rising. VCU Relive the Moment page driving social shares.
