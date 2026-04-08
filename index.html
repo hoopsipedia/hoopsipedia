@@ -895,6 +895,175 @@
             font-size: 0.88rem; line-height: 1.55; color: #3A3F4B;
         }
 
+        /* ── HTSS Rankings ── */
+        .htss-intro {
+            color: #6B7A8D; font-size: 0.85rem; margin-bottom: 1rem; line-height: 1.6;
+        }
+        .htss-intro strong { color: #1B2A4A; }
+        .htss-sub-tabs {
+            display: flex; gap: 0.5rem; margin-bottom: 1.25rem; flex-wrap: wrap;
+        }
+        .htss-sub-tab {
+            padding: 0.45rem 1rem; background: #FFFFFF; border: 1px solid #D6CFC2;
+            border-radius: 2rem; color: #5A6578; cursor: pointer; font-size: 0.85rem;
+            font-weight: 500; transition: all 0.2s ease;
+        }
+        .htss-sub-tab:hover { border-color: #C9A86C; color: #9E7C4A; }
+        .htss-sub-tab.active { background: #1B2A4A; border-color: #1B2A4A; color: #C9A86C; font-weight: 600; }
+        .htss-score {
+            display: inline-block; padding: 0.2rem 0.6rem; border-radius: 0.35rem;
+            font-weight: 700; font-size: 0.85rem; letter-spacing: 0.02em;
+        }
+        .htss-score.goat { background: linear-gradient(135deg, #D4AF37, #E8C84A); color: #1B2A4A; }
+        .htss-score.transcendent { background: #1B2A4A; color: #C9A86C; }
+        .htss-score.elite { background: #2D7D46; color: #fff; }
+        .htss-score.very-good { background: #3A7CA5; color: #fff; }
+        .htss-score.good { background: #6B7A8D; color: #fff; }
+        .htss-score.avg { background: #E0D9CC; color: #5A6578; }
+        .htss-components {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 0.5rem; margin-top: 0.5rem;
+        }
+        .htss-component {
+            text-align: center; padding: 0.4rem; background: #F5F3EE; border-radius: 0.35rem;
+            font-size: 0.7rem; color: #5A6578;
+        }
+        .htss-component-val {
+            font-weight: 700; font-size: 0.85rem; color: #1B2A4A; display: block;
+        }
+        .htss-era-tabs {
+            display: flex; gap: 0.4rem; margin-bottom: 1rem; flex-wrap: wrap;
+        }
+        .htss-era-tab {
+            padding: 0.35rem 0.85rem; background: #FFFFFF; border: 1px solid #D6CFC2;
+            border-radius: 2rem; color: #5A6578; cursor: pointer; font-size: 0.78rem;
+            font-weight: 500; transition: all 0.2s ease;
+        }
+        .htss-era-tab:hover { border-color: #C9A86C; color: #9E7C4A; }
+        .htss-era-tab.active { background: #1B2A4A; border-color: #1B2A4A; color: #C9A86C; font-weight: 600; }
+        .htss-program-expand {
+            cursor: pointer; color: #C9A86C; font-size: 0.78rem; font-weight: 600;
+            margin-left: 0.5rem; transition: color 0.2s;
+        }
+        .htss-program-expand:hover { color: #9E7C4A; }
+        .htss-program-top5 {
+            display: none; padding: 0.5rem 0 0 2.5rem;
+        }
+        .htss-program-top5.open { display: block; }
+        .htss-program-top5 table {
+            width: 100%; font-size: 0.82rem; border-collapse: collapse;
+        }
+        .htss-program-top5 td {
+            padding: 0.3rem 0.6rem; border-bottom: 1px solid #F0EDE6; color: #3A3F4B;
+        }
+
+        /* ── Time Machine ── */
+        .tm-intro {
+            color: #6B7A8D; font-size: 0.85rem; margin-bottom: 1.5rem; line-height: 1.6;
+        }
+        .tm-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 1.5rem;
+        }
+        .tm-card {
+            background: #FFFFFF; border: 1px solid #E0D9CC; border-radius: 0.75rem;
+            overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .tm-card:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(0,0,0,0.08); }
+        .tm-card-header {
+            background: #1B2A4A; color: #F5F3EE; padding: 1rem 1.25rem;
+            font-size: 0.95rem; font-weight: 700; text-align: center;
+        }
+        .tm-card-header span { color: #C9A86C; }
+        .tm-card-body { padding: 1.25rem; }
+        .tm-matchup-row {
+            display: flex; align-items: center; justify-content: space-between;
+            margin-bottom: 1rem; gap: 0.75rem;
+        }
+        .tm-team {
+            flex: 1; text-align: center;
+        }
+        .tm-team-logo {
+            width: 48px; height: 48px; background-size: contain; background-repeat: no-repeat;
+            background-position: center; margin: 0 auto 0.35rem;
+        }
+        .tm-team-name {
+            font-size: 0.78rem; font-weight: 600; color: #1B2A4A; line-height: 1.2;
+        }
+        .tm-team-info {
+            font-size: 0.7rem; color: #8892A0;
+        }
+        .tm-score-box {
+            background: #1B2A4A; color: #F5F3EE; border-radius: 0.5rem;
+            padding: 0.5rem 0.75rem; text-align: center; min-width: 70px;
+        }
+        .tm-score-num {
+            font-size: 1.2rem; font-weight: 800; letter-spacing: 0.03em;
+        }
+        .tm-score-label { font-size: 0.65rem; color: #C9A86C; }
+        .tm-prob-bar {
+            height: 8px; border-radius: 4px; overflow: hidden; display: flex;
+            margin-bottom: 0.75rem; background: #E0D9CC;
+        }
+        .tm-prob-a { background: #2D7D46; transition: width 0.4s ease; }
+        .tm-prob-b { background: #C9463E; transition: width 0.4s ease; }
+        .tm-prob-labels {
+            display: flex; justify-content: space-between; font-size: 0.72rem;
+            font-weight: 600; margin-bottom: 0.75rem;
+        }
+        .tm-prob-labels .win { color: #2D7D46; }
+        .tm-prob-labels .lose { color: #C9463E; }
+        .tm-factors {
+            display: grid; grid-template-columns: 1fr auto 1fr; gap: 0.2rem 0.5rem;
+            font-size: 0.75rem; margin-bottom: 0.75rem;
+        }
+        .tm-factor-label {
+            text-align: center; font-weight: 600; color: #1B2A4A; padding: 0.2rem 0;
+        }
+        .tm-factor-a { text-align: right; color: #5A6578; padding: 0.2rem 0; }
+        .tm-factor-b { text-align: left; color: #5A6578; padding: 0.2rem 0; }
+        .tm-factor-edge { font-weight: 700; }
+        .tm-narrative {
+            font-size: 0.82rem; line-height: 1.55; color: #3A3F4B;
+            border-left: 3px solid #C9A86C; padding-left: 0.75rem;
+            font-style: italic;
+        }
+
+        /* ── HTSS Profile Badge ── */
+        .htss-profile-section {
+            background: #FFFFFF; border: 1px solid #E0D9CC; border-radius: 0.75rem;
+            padding: 1.75rem; margin-bottom: 2.5rem; box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+        }
+        .htss-profile-header {
+            display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;
+        }
+        .htss-profile-title {
+            font-size: 1.15rem; font-weight: 700; color: #1B2A4A; margin: 0;
+        }
+        .htss-profile-best {
+            display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 1rem;
+        }
+        .htss-profile-stat {
+            background: #F5F3EE; border: 1px solid #E0D9CC; border-radius: 0.6rem;
+            padding: 0.75rem 1rem; text-align: center; flex: 1; min-width: 120px;
+        }
+        .htss-profile-stat-label {
+            font-size: 0.7rem; font-weight: 700; text-transform: uppercase;
+            letter-spacing: 0.07em; color: #8892A0; margin-bottom: 0.3rem;
+        }
+        .htss-profile-stat-value {
+            font-size: 1.3rem; font-weight: 800; color: #1B2A4A;
+        }
+        .htss-sparkline {
+            display: flex; align-items: flex-end; gap: 2px; height: 40px; margin-top: 0.75rem;
+        }
+        .htss-sparkline-bar {
+            flex: 1; min-width: 3px; max-width: 8px; border-radius: 2px 2px 0 0;
+            transition: opacity 0.2s; cursor: pointer; position: relative;
+        }
+        .htss-sparkline-bar:hover { opacity: 0.8; }
+
         /* ── Tournament Resume ── */
         .tourney-resume {
             background: #FFFFFF; border: 1px solid #E0D9CC; border-radius: 0.75rem;
@@ -4248,6 +4417,8 @@
             <div class="rankings-tabs">
                 <button class="rankings-tab active" data-rankings-tab="historical" onclick="switchRankingsTab('historical')">Historical</button>
                 <button class="rankings-tab" data-rankings-tab="net" onclick="switchRankingsTab('net')">NET Rankings</button>
+                <button class="rankings-tab" data-rankings-tab="htss" onclick="switchRankingsTab('htss')">HTSS Rankings</button>
+                <button class="rankings-tab" data-rankings-tab="timemachine" onclick="switchRankingsTab('timemachine')">Time Machine</button>
             </div>
             <!-- Historical Rankings Panel -->
             <div id="rankingsHistoricalPanel">
@@ -4291,6 +4462,14 @@
                         <tbody id="netRankingsTableBody"></tbody>
                     </table>
                 </div>
+            </div>
+            <!-- HTSS Rankings Panel -->
+            <div id="rankingsHtssPanel" style="display: none;">
+                <div id="htssContent"><p style="text-align:center;padding:3rem;color:#8892A0;">Loading HTSS Rankings...</p></div>
+            </div>
+            <!-- Time Machine Panel -->
+            <div id="rankingsTimeMachinePanel" style="display: none;">
+                <div id="timeMachineContent"><p style="text-align:center;padding:3rem;color:#8892A0;">Loading Time Machine...</p></div>
             </div>
         </div>
 
@@ -4748,6 +4927,28 @@
                     }
                 } catch (e) {
                     console.log('No draft_history.json found - draft history section will be hidden');
+                }
+
+                // Load HTSS v2 rankings data
+                try {
+                    const htssResp = await fetch('htss_v2_results.json');
+                    if (htssResp.ok) {
+                        HTSS_V2_DATA = await htssResp.json();
+                        console.log(`Loaded HTSS v2 — ${HTSS_V2_DATA.allTimeTop100?.length || 0} top seasons, ${HTSS_V2_DATA.programRankings?.length || 0} programs`);
+                    }
+                } catch (e) {
+                    console.log('No htss_v2_results.json found - HTSS rankings will be hidden');
+                }
+
+                // Load Time Machine matchups
+                try {
+                    const tmResp = await fetch('time_machine_results.json');
+                    if (tmResp.ok) {
+                        TIME_MACHINE_DATA = await tmResp.json();
+                        console.log(`Loaded Time Machine — ${TIME_MACHINE_DATA.matchups?.length || 0} matchups`);
+                    }
+                } catch (e) {
+                    console.log('No time_machine_results.json found - Time Machine will be hidden');
                 }
             } catch (e) {
                 console.error('Error loading data:', e);
@@ -6584,6 +6785,22 @@
             if (hash === '#net-rankings') {
                 switchView('rankings', true);
                 setTimeout(() => switchRankingsTab('net'), 50);
+                _skipHashUpdate = false;
+                return;
+            }
+
+            // #htss-rankings — direct link to HTSS rankings tab
+            if (hash === '#htss-rankings') {
+                switchView('rankings', true);
+                setTimeout(() => switchRankingsTab('htss'), 50);
+                _skipHashUpdate = false;
+                return;
+            }
+
+            // #time-machine — direct link to Time Machine tab
+            if (hash === '#time-machine') {
+                switchView('rankings', true);
+                setTimeout(() => switchRankingsTab('timemachine'), 50);
                 _skipHashUpdate = false;
                 return;
             }
@@ -9982,7 +10199,303 @@
             document.querySelector(`[data-rankings-tab="${tab}"]`)?.classList.add('active');
             document.getElementById('rankingsHistoricalPanel').style.display = tab === 'historical' ? 'block' : 'none';
             document.getElementById('rankingsNetPanel').style.display = tab === 'net' ? 'block' : 'none';
+            document.getElementById('rankingsHtssPanel').style.display = tab === 'htss' ? 'block' : 'none';
+            document.getElementById('rankingsTimeMachinePanel').style.display = tab === 'timemachine' ? 'block' : 'none';
             if (tab === 'net') loadNetRankings();
+            if (tab === 'htss') renderHtssRankings();
+            if (tab === 'timemachine') renderTimeMachine();
+        }
+
+        // ── HTSS Rankings System ──
+
+        function getHtssClass(score) {
+            if (score >= 85) return 'goat';
+            if (score >= 80) return 'transcendent';
+            if (score >= 70) return 'elite';
+            if (score >= 65) return 'very-good';
+            if (score >= 60) return 'good';
+            return 'avg';
+        }
+
+        function getHtssLabel(score) {
+            if (score >= 85) return 'GOAT Tier';
+            if (score >= 80) return 'Transcendent';
+            if (score >= 75) return 'All-Time Great';
+            if (score >= 70) return 'Elite';
+            if (score >= 65) return 'Very Good';
+            if (score >= 60) return 'Good';
+            return 'Average';
+        }
+
+        function findTeamByName(name) {
+            return allTeamsData.find(t => t.name === name);
+        }
+
+        function renderHtssRankings() {
+            const container = document.getElementById('htssContent');
+            if (!HTSS_V2_DATA) {
+                container.innerHTML = '<p style="text-align:center;padding:3rem;color:#8892A0;">HTSS data not available.</p>';
+                return;
+            }
+
+            let html = `
+                <div class="htss-intro">
+                    <strong>HTSS — Historical Team-Season Score</strong> is Hoopsipedia's proprietary ranking system. It evaluates every team-season since 1949 across 9 weighted components: adjusted efficiency (30%), tournament performance (18%), strength of schedule (12%), quality record (10%), peak perception (10%), coaching prestige (5%), close-game resilience (5%), NBA draft production (5%), and era difficulty (5%).
+                    <br><br>Scale: <span class="htss-score goat" style="font-size:0.75rem;">85+ GOAT</span>
+                    <span class="htss-score transcendent" style="font-size:0.75rem;">80-85 Transcendent</span>
+                    <span class="htss-score elite" style="font-size:0.75rem;">70-80 Elite</span>
+                    <span class="htss-score very-good" style="font-size:0.75rem;">65-70 Very Good</span>
+                    <span class="htss-score good" style="font-size:0.75rem;">60-65 Good</span>
+                </div>
+                <div class="htss-sub-tabs">
+                    <button class="htss-sub-tab ${_htssSubView === 'top100' ? 'active' : ''}" onclick="_htssSubView='top100'; renderHtssRankings()">Top 100 Seasons</button>
+                    <button class="htss-sub-tab ${_htssSubView === 'programs' ? 'active' : ''}" onclick="_htssSubView='programs'; renderHtssRankings()">Program Rankings</button>
+                    <button class="htss-sub-tab ${_htssSubView === 'eras' ? 'active' : ''}" onclick="_htssSubView='eras'; renderHtssRankings()">By Era</button>
+                </div>
+            `;
+
+            if (_htssSubView === 'top100') {
+                html += renderHtssTop100();
+            } else if (_htssSubView === 'programs') {
+                html += renderHtssProgramRankings();
+            } else if (_htssSubView === 'eras') {
+                html += renderHtssEras();
+            }
+
+            container.innerHTML = html;
+        }
+
+        function renderHtssTop100() {
+            const top100 = HTSS_V2_DATA.allTimeTop100 || [];
+            let html = '<div class="rankings-table"><table><thead><tr>';
+            html += '<th style="color:#fff;width:60px;">Rank</th>';
+            html += '<th style="color:#fff;">Team</th>';
+            html += '<th style="color:#fff;">Season</th>';
+            html += '<th style="color:#fff;">Record</th>';
+            html += '<th style="color:#fff;">Coach</th>';
+            html += '<th style="color:#fff;">HTSS</th>';
+            html += '<th style="color:#fff;">Era</th>';
+            html += '</tr></thead><tbody>';
+
+            top100.forEach(entry => {
+                const team = findTeamByName(entry.team);
+                const logoUrl = team ? getLogoUrl(team.espnId) : '';
+                const teamClick = team ? `onclick="openProfile({espnId:'${team.espnId}',name:'${team.name}'})" style="cursor:pointer;"` : '';
+                let badge = '';
+                if (entry.rank === 1) badge = '<span class="rank-badge gold">1</span>';
+                else if (entry.rank <= 5) badge = `<span class="rank-badge accent">${entry.rank}</span>`;
+                else if (entry.rank <= 25) badge = `<span class="rank-badge">${entry.rank}</span>`;
+                else badge = `<span class="rank-badge">${entry.rank}</span>`;
+
+                const tourneyBadge = entry.tourneyResult === 'champion' ? ' 🏆' : entry.tourneyResult === 'runner-up' ? ' 🥈' : '';
+
+                html += `<tr>
+                    <td>${badge}</td>
+                    <td><div class="team-cell" ${teamClick}>
+                        ${logoUrl ? `<div class="team-logo-small" style="background-image:url('${logoUrl}');"></div>` : ''}
+                        <span>${entry.team}${tourneyBadge}</span>
+                    </div></td>
+                    <td>${entry.season}</td>
+                    <td>${entry.record}</td>
+                    <td style="font-size:0.85rem;">${entry.coach}</td>
+                    <td><span class="htss-score ${getHtssClass(entry.htss)}">${entry.htss.toFixed(1)}</span></td>
+                    <td style="font-size:0.82rem;color:#8892A0;">${entry.era}</td>
+                </tr>`;
+            });
+
+            html += '</tbody></table></div>';
+            return html;
+        }
+
+        function renderHtssProgramRankings() {
+            const programs = HTSS_V2_DATA.programRankings || [];
+            let html = '<div class="rankings-table"><table><thead><tr>';
+            html += '<th style="color:#fff;width:60px;">Rank</th>';
+            html += '<th style="color:#fff;">Program</th>';
+            html += '<th style="color:#fff;">Score</th>';
+            html += '<th style="color:#fff;">Best Season</th>';
+            html += '<th style="color:#fff;">Seasons</th>';
+            html += '<th style="color:#fff;width:40px;"></th>';
+            html += '</tr></thead><tbody>';
+
+            programs.forEach((prog, idx) => {
+                const team = findTeamByName(prog.team);
+                const logoUrl = team ? getLogoUrl(team.espnId) : '';
+                const teamClick = team ? `onclick="openProfile({espnId:'${team.espnId}',name:'${team.name}'})" style="cursor:pointer;"` : '';
+                let badge = '';
+                if (prog.rank === 1) badge = '<span class="rank-badge gold">1</span>';
+                else if (prog.rank <= 5) badge = `<span class="rank-badge accent">${prog.rank}</span>`;
+                else badge = `<span class="rank-badge">${prog.rank}</span>`;
+
+                html += `<tr>
+                    <td>${badge}</td>
+                    <td><div class="team-cell" ${teamClick}>
+                        ${logoUrl ? `<div class="team-logo-small" style="background-image:url('${logoUrl}');"></div>` : ''}
+                        <span>${prog.team}</span>
+                    </div></td>
+                    <td><span class="htss-score ${getHtssClass(prog.score)}">${prog.score.toFixed(1)}</span></td>
+                    <td>${prog.bestSeason}</td>
+                    <td>${prog.qualifyingSeasons}</td>
+                    <td><span class="htss-program-expand" onclick="event.stopPropagation(); toggleHtssTop5(${idx})">▼</span></td>
+                </tr>
+                <tr class="htss-program-top5-row" id="htssTop5_${idx}" style="display:none;">
+                    <td colspan="6" style="padding:0;">
+                        <div style="padding:0.5rem 1rem 0.75rem 3rem; background:#FAFAF7;">
+                            <table style="width:100%;font-size:0.82rem;border-collapse:collapse;">
+                                <tr style="color:#8892A0;font-size:0.72rem;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;">
+                                    <td style="padding:0.3rem 0.5rem;">Season</td>
+                                    <td style="padding:0.3rem 0.5rem;">Record</td>
+                                    <td style="padding:0.3rem 0.5rem;">HTSS</td>
+                                    <td style="padding:0.3rem 0.5rem;">Coach</td>
+                                </tr>
+                                ${(prog.top5 || []).map(s => `
+                                    <tr>
+                                        <td style="padding:0.3rem 0.5rem;color:#2C3345;">${s.year}</td>
+                                        <td style="padding:0.3rem 0.5rem;color:#2C3345;">${s.record}</td>
+                                        <td style="padding:0.3rem 0.5rem;"><span class="htss-score ${getHtssClass(s.htss)}" style="font-size:0.78rem;">${s.htss.toFixed(1)}</span></td>
+                                        <td style="padding:0.3rem 0.5rem;color:#5A6578;">${s.coach}</td>
+                                    </tr>
+                                `).join('')}
+                            </table>
+                        </div>
+                    </td>
+                </tr>`;
+            });
+
+            html += '</tbody></table></div>';
+            return html;
+        }
+
+        function toggleHtssTop5(idx) {
+            const row = document.getElementById('htssTop5_' + idx);
+            if (row) {
+                const isOpen = row.style.display !== 'none';
+                row.style.display = isOpen ? 'none' : 'table-row';
+            }
+        }
+
+        function renderHtssEras() {
+            const eras = HTSS_V2_DATA.metadata?.eras || [];
+            const eraData = HTSS_V2_DATA.eraTop25 || {};
+
+            let html = '<div class="htss-era-tabs">';
+            eras.forEach(era => {
+                html += `<button class="htss-era-tab ${_htssEra === era.name ? 'active' : ''}" onclick="_htssEra='${era.name}'; renderHtssRankings()">${era.name}</button>`;
+            });
+            html += '</div>';
+
+            const seasons = eraData[_htssEra] || [];
+            if (seasons.length === 0) {
+                html += '<p style="text-align:center;padding:2rem;color:#8892A0;">No data for this era.</p>';
+                return html;
+            }
+
+            html += '<div class="rankings-table"><table><thead><tr>';
+            html += '<th style="color:#fff;width:60px;">Rank</th>';
+            html += '<th style="color:#fff;">Team</th>';
+            html += '<th style="color:#fff;">Season</th>';
+            html += '<th style="color:#fff;">Record</th>';
+            html += '<th style="color:#fff;">Coach</th>';
+            html += '<th style="color:#fff;">HTSS</th>';
+            html += '</tr></thead><tbody>';
+
+            seasons.forEach(entry => {
+                const team = findTeamByName(entry.team);
+                const logoUrl = team ? getLogoUrl(team.espnId) : '';
+                const teamClick = team ? `onclick="openProfile({espnId:'${team.espnId}',name:'${team.name}'})" style="cursor:pointer;"` : '';
+                let badge = '';
+                if (entry.rank === 1) badge = '<span class="rank-badge gold">1</span>';
+                else if (entry.rank <= 5) badge = `<span class="rank-badge accent">${entry.rank}</span>`;
+                else badge = `<span class="rank-badge">${entry.rank}</span>`;
+
+                html += `<tr>
+                    <td>${badge}</td>
+                    <td><div class="team-cell" ${teamClick}>
+                        ${logoUrl ? `<div class="team-logo-small" style="background-image:url('${logoUrl}');"></div>` : ''}
+                        <span>${entry.team}</span>
+                    </div></td>
+                    <td>${entry.season}</td>
+                    <td>${entry.record}</td>
+                    <td style="font-size:0.85rem;">${entry.coach}</td>
+                    <td><span class="htss-score ${getHtssClass(entry.htss)}">${entry.htss.toFixed(1)}</span></td>
+                </tr>`;
+            });
+
+            html += '</tbody></table></div>';
+            return html;
+        }
+
+        // ── Time Machine ──
+
+        function renderTimeMachine() {
+            const container = document.getElementById('timeMachineContent');
+            if (!TIME_MACHINE_DATA || !TIME_MACHINE_DATA.matchups) {
+                container.innerHTML = '<p style="text-align:center;padding:3rem;color:#8892A0;">Time Machine data not available.</p>';
+                return;
+            }
+
+            let html = `
+                <div class="tm-intro">
+                    <strong>The Time Machine</strong> — What would happen if the greatest teams in college basketball history faced each other on a neutral court? Powered by Hoopsipedia's HTSS efficiency engine, these simulations pit legendary squads against each other across eras.
+                </div>
+                <div class="tm-grid">
+            `;
+
+            TIME_MACHINE_DATA.matchups.forEach(m => {
+                const teamA = findTeamByName(m.teamA.name);
+                const teamB = findTeamByName(m.teamB.name);
+                const logoA = teamA ? getLogoUrl(teamA.espnId) : '';
+                const logoB = teamB ? getLogoUrl(teamB.espnId) : '';
+                const winnerIsA = m.prediction.scoreA > m.prediction.scoreB;
+
+                html += `
+                <div class="tm-card">
+                    <div class="tm-card-header">${m.matchup}</div>
+                    <div class="tm-card-body">
+                        <div class="tm-matchup-row">
+                            <div class="tm-team">
+                                <div class="tm-team-logo" style="background-image:url('${logoA}');"></div>
+                                <div class="tm-team-name">${m.teamA.name}</div>
+                                <div class="tm-team-info">${m.teamA.season} · ${m.teamA.record}</div>
+                                <div class="tm-team-info">${m.teamA.coach}</div>
+                            </div>
+                            <div class="tm-score-box">
+                                <div class="tm-score-num">${m.prediction.scoreA}-${m.prediction.scoreB}</div>
+                                <div class="tm-score-label">Predicted</div>
+                            </div>
+                            <div class="tm-team">
+                                <div class="tm-team-logo" style="background-image:url('${logoB}');"></div>
+                                <div class="tm-team-name">${m.teamB.name}</div>
+                                <div class="tm-team-info">${m.teamB.season} · ${m.teamB.record}</div>
+                                <div class="tm-team-info">${m.teamB.coach}</div>
+                            </div>
+                        </div>
+                        <div class="tm-prob-labels">
+                            <span class="${winnerIsA ? 'win' : 'lose'}">${m.teamA.name.split(' ').pop()} ${m.prediction.winProbA.toFixed(0)}%</span>
+                            <span class="${!winnerIsA ? 'win' : 'lose'}">${m.teamB.name.split(' ').pop()} ${m.prediction.winProbB.toFixed(0)}%</span>
+                        </div>
+                        <div class="tm-prob-bar">
+                            <div class="tm-prob-a" style="width:${m.prediction.winProbA}%;"></div>
+                            <div class="tm-prob-b" style="width:${m.prediction.winProbB}%;"></div>
+                        </div>
+                        <div class="tm-factors">
+                            ${(m.factors || []).map(f => {
+                                const aEdge = f.edge === m.teamA.name;
+                                const bEdge = f.edge === m.teamB.name;
+                                return `
+                                    <div class="tm-factor-a ${aEdge ? 'tm-factor-edge' : ''}" style="${aEdge ? 'color:#2D7D46;' : ''}">${f.teamA}</div>
+                                    <div class="tm-factor-label">${f.name}</div>
+                                    <div class="tm-factor-b ${bEdge ? 'tm-factor-edge' : ''}" style="${bEdge ? 'color:#2D7D46;' : ''}">${f.teamB}</div>
+                                `;
+                            }).join('')}
+                        </div>
+                        <div class="tm-narrative">${m.narrative}</div>
+                    </div>
+                </div>`;
+            });
+
+            html += '</div>';
+            container.innerHTML = html;
         }
 
         async function loadNetRankings() {
@@ -10257,6 +10770,66 @@
             if (filtered.length === 0) tbody.innerHTML = '<tr><td colspan="8" style="text-align:center;padding:2rem;color:#8892A0;">No teams match your search.</td></tr>';
         }
 
+        function renderHtssProfileSection(team) {
+            if (!HTSS_V2_DATA || !HTSS_V2_DATA.byTeam) return '';
+            const teamSeasons = HTSS_V2_DATA.byTeam[String(team.espnId)];
+            if (!teamSeasons || teamSeasons.length === 0) return '';
+
+            // Find best season
+            const best = teamSeasons[0]; // Already sorted by htss desc
+            const programEntry = (HTSS_V2_DATA.programRankings || []).find(p => p.team === team.name);
+            const programRank = programEntry ? programEntry.rank : null;
+
+            // Build sparkline — show last 20 seasons (most recent)
+            const recentSeasons = teamSeasons.slice(0, Math.min(30, teamSeasons.length)).reverse();
+            const maxHtss = Math.max(...recentSeasons.map(s => s.htss));
+            const minHtss = Math.min(...recentSeasons.map(s => s.htss));
+            const range = maxHtss - minHtss || 1;
+
+            const sparkBars = recentSeasons.map(s => {
+                const pct = ((s.htss - minHtss) / range) * 100;
+                const cls = getHtssClass(s.htss);
+                const colors = { goat: '#D4AF37', transcendent: '#1B2A4A', elite: '#2D7D46', 'very-good': '#3A7CA5', good: '#6B7A8D', avg: '#C4BDB0' };
+                return `<div class="htss-sparkline-bar" style="height:${Math.max(8, pct)}%;background:${colors[cls]};" title="${s.season}: ${s.htss.toFixed(1)}"></div>`;
+            }).join('');
+
+            return `
+                <div class="htss-profile-section">
+                    <div class="htss-profile-header">
+                        <h3 class="htss-profile-title">HTSS Rating</h3>
+                        ${programRank ? `<span class="program-history-founded">#${programRank} All-Time Program</span>` : ''}
+                    </div>
+                    <div class="htss-profile-best">
+                        <div class="htss-profile-stat">
+                            <div class="htss-profile-stat-label">Best Season Score</div>
+                            <div class="htss-profile-stat-value"><span class="htss-score ${getHtssClass(best.htss)}" style="font-size:1.1rem;">${best.htss.toFixed(1)}</span></div>
+                            <div style="font-size:0.75rem;color:#8892A0;margin-top:0.2rem;">${best.season} · ${getHtssLabel(best.htss)}</div>
+                        </div>
+                        <div class="htss-profile-stat">
+                            <div class="htss-profile-stat-label">Best Season Rank</div>
+                            <div class="htss-profile-stat-value">#${best.rank}</div>
+                            <div style="font-size:0.75rem;color:#8892A0;margin-top:0.2rem;">of ${HTSS_V2_DATA.metadata?.totalTeamSeasons?.toLocaleString() || '25,000+'} team-seasons</div>
+                        </div>
+                        ${programEntry ? `
+                        <div class="htss-profile-stat">
+                            <div class="htss-profile-stat-label">Program Score</div>
+                            <div class="htss-profile-stat-value"><span class="htss-score ${getHtssClass(programEntry.score)}" style="font-size:1.1rem;">${programEntry.score.toFixed(1)}</span></div>
+                            <div style="font-size:0.75rem;color:#8892A0;margin-top:0.2rem;">${programEntry.qualifyingSeasons} qualifying seasons</div>
+                        </div>` : ''}
+                    </div>
+                    <div style="font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:0.07em;color:#8892A0;margin-bottom:0.3rem;">HTSS Over Time</div>
+                    <div class="htss-sparkline">${sparkBars}</div>
+                    <div style="display:flex;justify-content:space-between;font-size:0.68rem;color:#A0AAB8;margin-top:0.25rem;">
+                        <span>${recentSeasons[0]?.season || ''}</span>
+                        <span>${recentSeasons[recentSeasons.length - 1]?.season || ''}</span>
+                    </div>
+                    <div style="text-align:center;margin-top:0.75rem;">
+                        <a href="#htss-rankings" style="font-size:0.8rem;color:#C9A86C;font-weight:600;text-decoration:none;">View Full HTSS Rankings →</a>
+                    </div>
+                </div>
+            `;
+        }
+
         function renderQuadRecordSection(team) {
             const qr = team._quadRecord;
             if (!qr) return '';
@@ -10504,6 +11077,11 @@
         let ARENA_PHOTOS = null; // Loaded from arena_photos.json
         let TEAM_HISTORY = null; // Loaded from team_history.json
         let DRAFT_HISTORY = null; // Loaded from draft_history.json
+        let HTSS_V2_DATA = null; // Loaded from htss_v2_results.json
+        let TIME_MACHINE_DATA = null; // Loaded from time_machine_results.json
+        let EFFICIENCY_DATA = null; // Lazy-loaded from efficiency_ratings.json
+        let _htssSubView = 'top100'; // Current HTSS sub-view
+        let _htssEra = 'Current'; // Current era filter
 
         function updateProfileBackground(team) {
             // Remove any existing background elements
@@ -10814,6 +11392,9 @@
                     </div>
                 `;
             }
+
+            // HTSS Profile Section
+            profileHTML += renderHtssProfileSection(team);
 
             // Quad Record (Selection Committee Resume)
             profileHTML += renderQuadRecordSection(team);
