@@ -15892,29 +15892,6 @@
                 coach: 'Lute Olson',
                 mop: 'Miles Simon'
             },
-            '2003/syracuse-orange': {
-                year: 2003,
-                teamName: 'Syracuse Orange',
-                espnId: '183',
-                teamSlug: 'syracuse-orange',
-                heroTitle: '2003 NATIONAL CHAMPIONS',
-                heroSubtitle: '3rd Seed • East Region • New Orleans, LA',
-                accentColor: '#F76900',
-                story: 'Carmelo Anthony was the most dominant freshman in tournament history. The 18-year-old from Baltimore carried Syracuse to its first and only national championship, averaging 20.2 points and 9.8 rebounds across six tournament games. Anthony scored 33 points and grabbed 14 rebounds in the national semifinal victory over Texas, then delivered 20 points and 10 rebounds in the championship game against Kansas. Jim Boeheim\'s signature 2-3 zone stifled every opponent, holding teams to 40.8% shooting in the tournament. After 27 years of coaching and three prior Final Four heartbreaks, Boeheim finally cut down the nets in the Superdome.',
-                games: [
-                    { round: 'Round of 64', opponent: 'Manhattan Jaspers', oppSeed: 14, oppEspnId: '2363', score: '76-58', winScore: 76, loseScore: 58, note: '' },
-                    { round: 'Round of 32', opponent: 'Oklahoma State Cowboys', oppSeed: 6, oppEspnId: '197', score: '68-56', winScore: 68, loseScore: 56, note: '' },
-                    { round: 'Sweet 16', opponent: 'Auburn Tigers', oppSeed: 10, oppEspnId: '2', score: '79-78', winScore: 79, loseScore: 78, note: '' },
-                    { round: 'Elite Eight', opponent: 'Oklahoma Sooners', oppSeed: 1, oppEspnId: '201', score: '63-47', winScore: 63, loseScore: 47, note: '' },
-                    { round: 'Final Four', opponent: 'Texas Longhorns', oppSeed: 1, oppEspnId: '251', score: '95-84', winScore: 95, loseScore: 84, note: '' },
-                    { round: 'Championship', opponent: 'Kansas Jayhawks', oppSeed: 2, oppEspnId: '2305', score: '81-78', winScore: 81, loseScore: 78, note: '', isChampionship: true }
-                ],
-                stats: { seed: '3', record: '6-0', avgMargin: '+11.0', closestGame: '79-78 vs Auburn' },
-                videoId: 'W2a07ER2Rm0',
-                aftermath: 'Carmelo Anthony was named Final Four Most Outstanding Player and was drafted 3rd overall by the Denver Nuggets in the 2003 NBA Draft — the same draft class as LeBron James, Dwyane Wade, and Chris Bosh. Anthony declared for the draft after just one season, becoming the program\'s greatest one-and-done. Coach Jim Boeheim won his only national championship in his 27th season at Syracuse. He would return to the Final Four in 2013 and 2016.',
-                coach: 'Jim Boeheim',
-                mop: 'Carmelo Anthony'
-            },
             '1990/unlv-rebels': {
                 year: 1990,
                 teamName: 'UNLV Rebels',
@@ -15989,7 +15966,8 @@
                 teamName: 'Louisville Cardinals',
                 espnId: '97',
                 teamSlug: 'louisville-cardinals',
-                heroTitle: '2013 NATIONAL CHAMPIONS',
+                heroTitle: '2013 NATIONAL CHAMPIONS *',
+                vacated: true,
                 heroSubtitle: '1st Seed • Midwest Region • Atlanta, GA',
                 accentColor: '#AD0000',
                 story: 'Louisville\'s championship run is forever linked to one of the most harrowing moments in sports history. In the Elite Eight against Duke, sophomore guard Kevin Ware landed awkwardly and suffered a compound fracture of his right leg on national television. As he was carried off on a stretcher, Ware told his teammates through tears: "Just win the game." They did — and they kept winning. Luke Hancock became the first non-starter to be named Final Four Most Outstanding Player, scoring 22 points in the championship game against Michigan. Rick Pitino became the first coach to win national championships at two different schools (Kentucky 1996, Louisville 2013). The Cardinals\' suffocating pressure defense forced 16.4 turnovers per game in the tournament.',
@@ -19926,6 +19904,7 @@
                     <div class="champ-run-hero-title">${run.heroTitle}</div>
                     <div class="champ-run-hero-team">${run.teamName}</div>
                     <div class="champ-run-hero-subtitle">${run.heroSubtitle}</div>
+                    ${run.vacated ? '<div style="margin-top:0.5rem;color:#C9A86C;font-size:0.85rem;font-weight:600;">* Title vacated by the NCAA</div>' : ''}
                     <div class="champ-run-hero-accent"></div>
                     <button onclick="copyShareUrl('championship', '${year}/${slug}')" style="
                         margin-top: 1rem; background: rgba(201,168,108,0.15); border: 1px solid rgba(201,168,108,0.3);

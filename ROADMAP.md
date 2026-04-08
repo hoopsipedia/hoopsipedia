@@ -157,6 +157,7 @@
 24. **Embeddable widgets** — Let bloggers/podcasters embed our comparisons
 25. **"What If" conference simulator** — What if Duke was in the Big Ten?
 26. **Program trajectory analysis** — Rising/falling programs over 5/10/20 years
+27. **Arena photos for all teams** — Currently 110/366 teams (30%). Need CC-licensed photos for remaining 257. Copyright review needed before expanding visibility beyond background watermarks.
 
 ---
 
