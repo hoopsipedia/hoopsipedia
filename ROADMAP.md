@@ -174,14 +174,14 @@
 ## 🏗️ IN PROGRESS / KNOWN ISSUES
 
 ### Data Integrity (confirmed outstanding)
-- **18 stale h2h IDs** — h2h.json has entries keyed under old ESPN IDs (4, 42, 188, 291, 317, 354, 361, 372, 377, 395, 408, 422, 430, 447, 2112, 2543, 2597, 2631). Data exists but needs remapping to current IDs.
-- **4 Sun Belt teams missing conference** — Georgia Southern (290), Texas State (326), Arkansas State (2032), UL Monroe (2433) have empty conference strings
-- **New Haven (2441) is D2** — Should be removed or flagged. Has corrupted game data (numeric keys 0-30).
-- **10 teams missing coach data** — Southern Indiana (88), UT Arlington (250), Drake (263), Delaware State (2169), FIU (2229), Omaha (2437), Queens (2511), CCNY (2609), Tarleton State (2627), Lindenwood (2815)
-- **257 teams missing arena photos** (70%) — Biggest enrichment gap, but copyright concerns under review
+- **10 stale h2h IDs** — h2h.json still has entries under old ESPN IDs (42, 317, 377, 395, 408, 422, 447, 2112, 2543, 2597). 8 of original 18 were fixed. Remaining need remapping to current IDs.
 - **2003 Syracuse duplicate** in CHAMPIONSHIP_RUNS HTML
-- **Louisville 2013** in championship runs — correctly vacated in data.json but journey page has no asterisk
-- **E8 > S16 count** for 10 pre-1975 teams — bracket was smaller, counting methodology quirk
+- **257 teams missing arena photos** (70%) — Biggest enrichment gap, but copyright concerns under review
+- ~~4 Sun Belt teams missing conference~~ — ✅ Fixed
+- ~~New Haven (2441) is D2~~ — ✅ Removed from data.json
+- ~~10 teams missing coach data~~ — ✅ All populated via compile_coaches.py
+- ~~Louisville 2013 vacated asterisk~~ — ✅ Aftermath text covers NCAA vacation
+- ~~E8 > S16 count for pre-1975 teams~~ — ✅ Fixed in data integrity commit
 
 ---
 
