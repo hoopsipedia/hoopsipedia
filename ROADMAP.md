@@ -65,6 +65,16 @@
 - [x] Real arena photo backgrounds — 110 teams with CC-licensed photos
 - [x] "Coming Soon" for shell teams instead of false data
 
+### AI & PWA
+- [x] "Ask Hoopsipedia" conversational AI chat — 15 data tools, Claude Haiku, SSE streaming, navigation links
+- [x] PWA support — manifest.json, service worker, installable on iOS/Android/desktop
+- [x] Coaching database expanded from 100 → 557 coaches (200+ wins)
+- [x] Cross-team draft search by year range
+- [x] Game-by-game search tool (by season, opponent, tournament)
+- [x] Championship lookup by year
+- [x] Conference roster tool
+- [x] Team tournament record with opponent seed filtering
+
 ### Polish & Infrastructure
 - [x] Mobile-responsive UI — tables scroll, 44px tap targets, premium card feel
 - [x] Mobile responsiveness audit + fixes (coaches table scroll, box score wrapping, milestone banner, upset cards, S5 sizing, 480px breakpoint)
@@ -146,7 +156,7 @@
 15. ~~**Blue Blood Index (BBI)**~~ — ✅ SHIPPED (became HTSS Program Rankings — top 50 all-time programs)
 16. ~~**Historical Team-Season Score (HTSS)**~~ — ✅ SHIPPED (v2 with 9 components, 25,000+ team-seasons)
 17. ~~**Time Machine simulator**~~ — ✅ SHIPPED (10 matchups with predicted scores, win probability, factor breakdown)
-18. **AI-powered natural language search** — "Show me the biggest upset ever" → routes to the right page
+18. ~~**AI-powered natural language search**~~ — ✅ SHIPPED ("Ask Hoopsipedia" — full LLM-backed conversational data explorer with 15 tools, streaming responses, clickable navigation links, persistent conversation. Powered by Claude Haiku on Cloudflare Pages Functions.)
 19. ~~**Random Historical Matchup generator**~~ — ✅ SHIPPED (homepage "What If?" widget — random cross-era matchup from HTSS top 100, predicted score, shuffle button)
 
 ### Tier 4: Long-term moat (ongoing)
@@ -189,7 +199,7 @@
 - Player headshot fallback to school roster pages when ESPN has no photo
 - Permanent system crontab for nightly sync (currently session-only)
 - **Championship Run video completeness** — Many of the 87 championship journey pages are missing YouTube highlight clips for individual tournament games. Need to curate and fill in video IDs across all runs for a complete multimedia experience.
-- **Expanded coaching wins database** — COACH_LB only has top 100 coaches (500+ wins). AI chat needs deeper data to answer questions about mid-career and up-and-coming coaches. Scrape Sports Reference for all-time records of 500+ D1 coaches. Doesn't need to show on leaderboard page — just needs to be queryable by AI tools.
+- ~~**Expanded coaching wins database**~~ — ✅ DONE. Expanded from 100 to 557 coaches (200+ career wins). AI chat queryable with win-range filtering.
 
 ---
 
