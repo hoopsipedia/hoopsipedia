@@ -340,8 +340,46 @@ async function toolGetDraftHistory(input, ctx) {
   const draft = await getDraft(ctx);
   if (!draft) return { error: 'Draft data not available' };
 
-  const teamDraft = draft[String(input.espnId)];
-  return teamDraft ? teamDraft : { error: `No draft data for team ${input.espnId}` };
+  // If espnId provided, return that team's draft history
+  if (input.espnId) {
+    const teamDraft = draft[String(input.espnId)];
+    return teamDraft ? teamDraft : { error: `No draft data for team ${input.espnId}` };
+  }
+
+  // Search across all teams by year range
+  if (input.startYear || input.endYear) {
+    const start = input.startYear || 1947;
+    const end = input.endYear || 2026;
+    const picks = [];
+    for (const [id, td] of Object.entries(draft)) {
+      for (const p of (td.notablePicks || [])) {
+        if (p.year >= start && p.year <= end) {
+          picks.push({ ...p, college: td.team, collegeId: id });
+        }
+      }
+    }
+    // Sort by pick number (best picks first)
+    picks.sort((a, b) => a.pick - b.pick);
+    // Count picks per school
+    const bySchool = {};
+    for (const p of picks) {
+      if (!bySchool[p.college]) bySchool[p.college] = { total: 0, firstRound: 0, collegeId: p.collegeId };
+      bySchool[p.college].total++;
+      if (p.round === 1) bySchool[p.college].firstRound++;
+    }
+    const schoolRanking = Object.entries(bySchool)
+      .map(([name, s]) => ({ school: name, espnId: s.collegeId, totalPicks: s.total, firstRoundPicks: s.firstRound }))
+      .sort((a, b) => b.firstRoundPicks - a.firstRound || b.totalPicks - a.totalPicks);
+
+    return {
+      yearRange: `${start}-${end}`,
+      totalPicks: picks.length,
+      topSchools: schoolRanking.slice(0, 15),
+      topPicks: picks.slice(0, 20)
+    };
+  }
+
+  return { error: 'Provide espnId for a team, or startYear/endYear to search across all teams' };
 }
 
 async function toolGetTeamHistory(input, ctx) {
@@ -664,11 +702,14 @@ const TOOLS = [
   },
   {
     name: 'getDraftHistory',
-    description: 'Get NBA draft history for a team including total players drafted, first-round picks, and draft picks by year.',
+    description: 'Get NBA draft history. Can look up a specific team\'s draft picks, or search across ALL teams by year range to find which schools produced the most/best NBA players in a time period.',
     input_schema: {
       type: 'object',
-      properties: { espnId: { type: 'string', description: 'ESPN team ID' } },
-      required: ['espnId']
+      properties: {
+        espnId: { type: 'string', description: 'ESPN team ID for a specific team\'s draft history' },
+        startYear: { type: 'number', description: 'Start year for cross-team draft search (e.g. 1975)' },
+        endYear: { type: 'number', description: 'End year for cross-team draft search (e.g. 1980)' }
+      }
     }
   },
   {
