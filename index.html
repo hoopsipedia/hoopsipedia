@@ -6823,10 +6823,14 @@
             if (!stored) return;
             try {
                 const data = JSON.parse(stored);
+                // Auto-expire after 7 days
+                if (data.time && Date.now() - data.time > 7 * 24 * 60 * 60 * 1000) {
+                    localStorage.removeItem('upsetTakeover');
+                    return;
+                }
                 applyUpsetTakeover(data, false);
                 // Championship confetti on page load (within 72 hours)
                 if (data.seedDiff === 99) maybeShowChampConfetti();
-                // No auto-clear — stays until next upset replaces it
             } catch(e) {
                 localStorage.removeItem('upsetTakeover');
             }
