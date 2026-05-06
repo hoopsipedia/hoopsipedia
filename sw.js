@@ -1,5 +1,5 @@
 // Hoopsipedia Service Worker — PWA offline support
-const CACHE_NAME = 'hoopsipedia-v1';
+const CACHE_NAME = 'hoopsipedia-v3';
 const STATIC_ASSETS = [
   '/',
   '/index.html',
@@ -50,13 +50,26 @@ self.addEventListener('fetch', event => {
     return;
   }
 
-  // Static assets: cache-first with network fallback
+  // HTML pages: network-first (prevents stale UI after deploys)
+  if (url.pathname === '/' || url.pathname.endsWith('.html')) {
+    event.respondWith(
+      fetch(event.request)
+        .then(resp => {
+          const clone = resp.clone();
+          caches.open(CACHE_NAME).then(cache => cache.put(event.request, clone));
+          return resp;
+        })
+        .catch(() => caches.match(event.request))
+    );
+    return;
+  }
+
+  // Other static assets (icons, manifest): cache-first with network fallback
   event.respondWith(
     caches.match(event.request).then(cached => {
       if (cached) return cached;
       return fetch(event.request).then(resp => {
-        // Cache successful responses for static assets
-        if (resp.ok && (url.pathname === '/' || url.pathname.endsWith('.html') || url.pathname.startsWith('/icons/'))) {
+        if (resp.ok && url.pathname.startsWith('/icons/')) {
           const clone = resp.clone();
           caches.open(CACHE_NAME).then(cache => cache.put(event.request, clone));
         }

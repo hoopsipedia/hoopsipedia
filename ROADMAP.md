@@ -46,6 +46,16 @@
 - [x] Share buttons on both Relive the Moment and Championship Run pages
 - [x] Dark/white logo variants on hero backgrounds (prevents logo-on-same-color invisibility)
 
+### Rivalry Pages
+- [x] 12 iconic rivalries — Duke-UNC, Kentucky-Louisville, Kansas-Missouri, UNC-NC State, Indiana-Purdue, Georgetown-Syracuse, UCLA-USC, Michigan-Michigan State, Kentucky-Indiana, Kansas-Kentucky, Duke-Kentucky, Gonzaga-Saint Mary's
+- [x] Split team-color hero with logos + all-time series record
+- [x] Decade-by-decade series timeline bars
+- [x] Biggest wins for each team (top 5 by margin)
+- [x] Recent meetings table with venue info
+- [x] Program comparison grid (record, championships, Final Fours, etc.)
+- [x] Hash routing: #rivalries grid + #rivalry/{slug} detail pages
+- [x] Nav button + clickable cards
+
 ### Starting 5 Comparison
 - [x] Side-by-side starting lineups with per-player stats and position assignments
 - [x] **Actual starters from ESPN box scores** — uses starter=true flags from most recent game, not minutes heuristic
@@ -147,7 +157,7 @@
 8. ~~**More Championship Run pages**~~ — ✅ SHIPPED (all 87 champions 1939-2026)
 9. **Conference Realignment Tracker** — Timeline visualization of every conference move
 10. ~~**"Best Teams of All Time" page**~~ — ✅ SHIPPED (HTSS Rankings — Top 100 Seasons, Program Rankings, By Era)
-11. **Rivalry pages** — Dedicated pages for Duke-UNC, UK-Louisville, etc.
+11. ~~**Rivalry pages**~~ — ✅ SHIPPED (12 iconic rivalries with split-color hero, decade-by-decade series timeline, biggest wins, recent meetings, program comparison grid. Duke-UNC, Kentucky-Louisville, Kansas-Missouri, and 9 more.)
 12. **Top 10 Moments per team** — Curated YouTube clips for every program's greatest moments
 13. **H2H highlights for craziest finishes** — Link buzzer beaters and OT games in H2H history
 14. **Takeover priority logic refinement** — Better rules for which upset gets the takeover when multiple happen
@@ -175,12 +185,12 @@
 
 ### Data Integrity (confirmed outstanding)
 - **10 stale h2h IDs** — h2h.json still has entries under old ESPN IDs (42, 317, 377, 395, 408, 422, 447, 2112, 2543, 2597). 8 of original 18 were fixed. Remaining need remapping to current IDs.
-- **2003 Syracuse duplicate** in CHAMPIONSHIP_RUNS HTML
+- ~~2003 Syracuse duplicate~~ — ✅ No duplicate found; only one `2003/syracuse-orange` key exists in CHAMPIONSHIP_RUNS
 - **257 teams missing arena photos** (70%) — Biggest enrichment gap, but copyright concerns under review
 - ~~4 Sun Belt teams missing conference~~ — ✅ Fixed
 - ~~New Haven (2441) is D2~~ — ✅ Removed from data.json
 - ~~10 teams missing coach data~~ — ✅ All populated via compile_coaches.py
-- ~~Louisville 2013 vacated asterisk~~ — ✅ Aftermath text covers NCAA vacation
+- ~~Louisville 2013 vacated asterisk~~ — ✅ Has `vacated: true`, hero title asterisk, and "Title vacated by the NCAA" note
 - ~~E8 > S16 count for pre-1975 teams~~ — ✅ Fixed in data integrity commit
 
 ---
