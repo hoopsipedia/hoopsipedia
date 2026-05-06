@@ -968,16 +968,17 @@
         .compare-input-group input:focus { outline: none; border-color: #C9A86C; box-shadow: 0 0 0 3px rgba(201,168,108,0.25); background: rgba(255,255,255,0.18); }
         .compare-dropdown {
             position: absolute; top: 100%; left: 0; right: 0;
-            background: #FFFFFF; border: 1px solid #D6CFC2; border-radius: 0.5rem;
+            background: var(--paper); border: 1px solid var(--rule-soft); border-radius: var(--r-md);
             max-height: 300px; overflow-y: auto; z-index: 50; margin-top: 0.25rem;
             box-shadow: 0 8px 24px rgba(0,0,0,0.1);
         }
         .compare-dropdown-item {
-            padding: 0.7rem 0.85rem; cursor: pointer; transition: background 0.15s ease;
-            border-bottom: 1px solid #F0EDE6; font-size: 0.95rem; color: #2C3345;
+            padding: 0.6rem 0.85rem; cursor: pointer; transition: background 0.15s ease;
+            border-bottom: 1px solid var(--rule-faint); font-size: 0.95rem; color: var(--ink);
+            display: flex; align-items: center; gap: 10px;
         }
         .compare-dropdown-item:last-child { border-bottom: none; }
-        .compare-dropdown-item:hover { background: #F5F3EE; }
+        .compare-dropdown-item:hover { background: var(--cream); }
         .compare-input-wrapper { position: relative; }
         .compare-vs {
             display: flex; align-items: center; justify-content: center;
@@ -8135,14 +8136,17 @@
             matches.forEach(team => {
                 const item = document.createElement('div');
                 item.className = 'compare-dropdown-item';
-                item.textContent = team.name;
+                const logoUrl = getLogoUrl(team.espnId);
+                item.innerHTML = `<img src="${logoUrl}" alt="" style="width:24px;height:24px;object-fit:contain;flex-shrink:0;" onerror="this.style.display='none'"><span>${team.name}</span>`;
                 item.addEventListener('click', () => {
                     if (teamNum === 1) {
                         selectedTeam1 = team;
                         document.getElementById('compareTeam1Input').value = team.name;
+                        updateHomeCrest('homeTeam1Crest', team);
                     } else {
                         selectedTeam2 = team;
                         document.getElementById('compareTeam2Input').value = team.name;
+                        updateHomeCrest('homeTeam2Crest', team);
                     }
                     dropdown.style.display = 'none';
                     updateCompareButton();
@@ -8151,6 +8155,17 @@
             });
 
             dropdown.style.display = matches.length > 0 ? 'block' : 'none';
+        }
+
+        function updateHomeCrest(crestId, team) {
+            const crest = document.getElementById(crestId);
+            if (!crest) return;
+            const logoUrl = getLogoUrl(team.espnId);
+            const teamColor = team.color || 'var(--navy)';
+            crest.style.color = teamColor;
+            crest.style.borderColor = teamColor;
+            crest.style.background = 'var(--paper)';
+            crest.innerHTML = `<img src="${logoUrl}" alt="${team.name}" style="width:70%;height:70%;object-fit:contain;" onerror="this.parentElement.innerHTML='<span style=color:${teamColor.replace(/[^#a-zA-Z0-9(),]/g,'')}>?</span>'">`;
         }
 
         function updateCompareButton() {
