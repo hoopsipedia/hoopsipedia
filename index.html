@@ -2567,88 +2567,100 @@
 
         /* ── Upsets Page ── */
         .upsets-stats-dashboard {
-            display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;
-            margin-bottom: 2rem;
+            display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;
+            margin-bottom: 2rem; max-width: 1280px; margin-left: auto; margin-right: auto;
         }
         .upsets-stat-card {
-            background: #FFFFFF; border: 1px solid #E0D9CC; border-radius: 0.75rem;
-            padding: 1.25rem; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+            border: 2px solid var(--navy); border-radius: var(--r-md);
+            padding: 24px 20px; position: relative;
         }
-        .upsets-stat-value { font-size: 2rem; font-weight: 800; color: #1B2A4A; margin-bottom: 0.2rem; }
-        .upsets-stat-label { font-size: 0.75rem; color: #8892A0; text-transform: uppercase; font-weight: 700; letter-spacing: 0.04em; }
+        .upsets-stat-value { font-family: var(--font-display); font-size: 56px; font-weight: 400; color: var(--navy); line-height: 1; margin-bottom: 0; }
+        .upsets-stat-label { font-family: var(--font-mono); font-size: 10px; color: var(--ink-muted); text-transform: uppercase; font-weight: 600; letter-spacing: 0.12em; margin-bottom: 8px; }
+        .upsets-stat-sub { font-family: var(--font-serif); font-size: 13px; color: var(--ink-muted); font-style: italic; margin-top: 8px; }
         .upsets-fun-fact {
-            background: linear-gradient(135deg, #1B2A4A, #243556); color: #fff;
-            border-radius: 0.75rem; padding: 1rem 1.5rem; margin-bottom: 2rem;
-            display: flex; align-items: center; gap: 0.75rem; font-size: 0.9rem; line-height: 1.5;
+            background: linear-gradient(90deg, var(--cream-deep), var(--cream-soft));
+            border: 2px solid var(--gold); border-left: 8px solid var(--gold);
+            padding: 20px 28px; margin-bottom: 2rem;
+            display: flex; align-items: center; gap: 24px; font-size: 17px; line-height: 1.5;
+            max-width: 1280px; margin-left: auto; margin-right: auto;
         }
-        .upsets-fun-fact-icon { font-size: 1.5rem; flex-shrink: 0; }
-        .upsets-fun-fact-text { flex: 1; }
-        .upsets-fun-fact-text strong { color: #C9A86C; }
+        .upsets-fun-fact-icon { font-family: var(--font-display); font-size: 44px; color: var(--gold-deep); line-height: 1; flex-shrink: 0; }
+        .upsets-fun-fact-text { flex: 1; font-family: var(--font-serif); color: var(--ink); }
+        .upsets-fun-fact-text strong { color: var(--gold-deep); }
+        .upsets-fun-fact-label { font-family: var(--font-mono); font-size: 10px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold-deep); margin-bottom: 4px; }
 
         .upsets-era-filters {
-            display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.75rem;
+            display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 1.75rem;
         }
         .upsets-era-btn {
-            padding: 0.4rem 0.85rem; background: #FFFFFF; border: 1px solid #D6CFC2;
-            border-radius: 2rem; color: #6B7A8D; cursor: pointer; font-size: 0.78rem;
-            font-weight: 600; transition: all 0.15s ease;
+            padding: 6px 12px; background: transparent; border: 1px solid var(--navy);
+            border-radius: 2px; color: var(--navy); cursor: pointer; font-family: var(--font-mono);
+            font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+            transition: all 0.15s ease;
         }
-        .upsets-era-btn:hover { border-color: #C9A86C; color: #1B2A4A; }
-        .upsets-era-btn.active { background: #1B2A4A; border-color: #1B2A4A; color: #C9A86C; }
+        .upsets-era-btn:hover { background: var(--navy); color: var(--cream); }
+        .upsets-era-btn.active { background: var(--navy); border-color: var(--navy); color: var(--cream); }
 
         .upsets-seed-grid {
-            display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem;
-            margin-bottom: 2.5rem;
+            display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px;
+            margin-bottom: 2.5rem; max-width: 1280px; margin-left: auto; margin-right: auto;
         }
         .upsets-seed-card {
-            background: #FFFFFF; border: 2px solid #E0D9CC; border-radius: 0.75rem;
-            padding: 1.25rem; cursor: pointer; transition: all 0.25s ease;
-            box-shadow: 0 1px 4px rgba(0,0,0,0.04); position: relative; overflow: hidden;
+            border: 2px solid var(--navy); border-radius: var(--r-md);
+            padding: 18px; cursor: pointer; transition: all 0.15s ease;
+            position: relative; overflow: hidden; text-align: left;
         }
-        .upsets-seed-card:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.08); border-color: #C9A86C; }
-        .upsets-seed-card.active { border-color: #C9A86C; box-shadow: 0 4px 16px rgba(201,168,108,0.25); }
-        .upsets-seed-card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; }
-        .upsets-seed-label { font-size: 1.3rem; font-weight: 800; color: #1B2A4A; }
-        .upsets-seed-record { font-size: 0.85rem; color: #6B7A8D; font-weight: 600; }
-        .upsets-seed-bar { height: 10px; background: #E8E2D6; border-radius: 5px; overflow: hidden; margin-bottom: 0.5rem; }
-        .upsets-seed-bar-fill { height: 100%; border-radius: 5px; transition: width 0.5s ease; }
-        .upsets-seed-bar-fill.green { background: linear-gradient(90deg, #2E7D32, #4CAF50); }
-        .upsets-seed-bar-fill.yellow { background: linear-gradient(90deg, #F57F17, #FBC02D); }
-        .upsets-seed-bar-fill.orange { background: linear-gradient(90deg, #E65100, #FF9800); }
-        .upsets-seed-bar-fill.red { background: linear-gradient(90deg, #C62828, #EF5350); }
+        .upsets-seed-card:hover { transform: translateY(-2px); }
+        .upsets-seed-card.active { background: var(--navy); color: var(--cream); border-color: var(--navy); border-width: 3px; }
+        .upsets-seed-card-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 12px; }
+        .upsets-seed-label { font-family: var(--font-display); font-size: 32px; font-weight: 400; color: var(--navy); line-height: 1; }
+        .upsets-seed-card.active .upsets-seed-label { color: var(--cream); }
+        .upsets-seed-record { font-family: var(--font-mono); font-size: 10px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--rust-deep); }
+        .upsets-seed-card.active .upsets-seed-record { color: var(--gold-brand); }
+        .upsets-seed-bar { height: 6px; background: rgba(20,35,63,0.12); border-radius: 2px; overflow: hidden; margin-bottom: 8px; }
+        .upsets-seed-card.active .upsets-seed-bar { background: rgba(245,243,238,0.2); }
+        .upsets-seed-bar-fill { height: 100%; border-radius: 2px; transition: width 0.5s ease; background: var(--rust); }
+        .upsets-seed-card.active .upsets-seed-bar-fill { background: var(--gold-brand); }
+        .upsets-seed-bar-fill.green { background: var(--rust); opacity: 0.3; }
+        .upsets-seed-bar-fill.yellow { background: var(--rust); opacity: 0.5; }
+        .upsets-seed-bar-fill.orange { background: var(--rust); opacity: 0.75; }
+        .upsets-seed-bar-fill.red { background: var(--rust); }
         .upsets-seed-upset-count {
-            font-size: 0.78rem; color: #8892A0; font-weight: 600;
+            font-family: var(--font-serif); font-size: 13px; font-weight: 700; color: var(--ink-soft);
         }
-        .upsets-seed-upset-count span { color: #C9A86C; font-weight: 800; }
+        .upsets-seed-card.active .upsets-seed-upset-count { color: rgba(245,243,238,0.85); }
+        .upsets-seed-upset-count span { color: var(--rust); font-weight: 800; }
+        .upsets-seed-card.active .upsets-seed-upset-count span { color: var(--cream); }
 
         .upsets-detail-section {
-            background: #FFFFFF; border: 1px solid #E0D9CC; border-radius: 0.75rem;
-            padding: 1.75rem; margin-bottom: 2rem; box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+            background: var(--paper); border: 2px solid var(--navy); border-radius: var(--r-md);
+            padding: 1.75rem; margin-bottom: 2rem;
         }
         .upsets-detail-header {
-            display: flex; justify-content: space-between; align-items: center;
-            margin-bottom: 1.25rem; padding-bottom: 0.75rem; border-bottom: 2px solid #E0D9CC;
+            display: flex; justify-content: space-between; align-items: baseline;
+            margin-bottom: 1.25rem; padding-bottom: 12px; border-bottom: 3px solid var(--navy);
         }
-        .upsets-detail-title { font-size: 1.15rem; font-weight: 700; color: #1B2A4A; }
-        .upsets-sort-btns { display: flex; gap: 0.35rem; }
+        .upsets-detail-title { font-family: var(--font-display); font-size: 36px; font-weight: 400; letter-spacing: 0.01em; text-transform: uppercase; color: var(--navy); }
+        .upsets-sort-btns { display: inline-flex; border: 2px solid var(--navy); border-radius: 4px; }
         .upsets-sort-btn {
-            padding: 0.3rem 0.7rem; background: #F5F3EE; border: 1px solid #E0D9CC;
-            border-radius: 0.35rem; color: #6B7A8D; cursor: pointer; font-size: 0.72rem;
-            font-weight: 600; transition: all 0.15s ease;
+            padding: 8px 16px; background: transparent; border: none;
+            color: var(--navy); cursor: pointer; font-family: var(--font-mono);
+            font-size: 10px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;
+            transition: all 0.15s ease;
         }
-        .upsets-sort-btn:hover { border-color: #C9A86C; }
-        .upsets-sort-btn.active { background: #1B2A4A; color: #C9A86C; border-color: #1B2A4A; }
+        .upsets-sort-btn:hover { background: var(--cream-deep); }
+        .upsets-sort-btn.active { background: var(--navy); color: var(--cream); }
 
         .upsets-moment-card {
             display: flex; align-items: center; gap: 1rem; padding: 1rem;
-            background: #FAFAF7; border-radius: 0.5rem; margin-bottom: 0.75rem;
-            border-left: 4px solid #E0D9CC; cursor: pointer; transition: all 0.2s ease;
+            background: var(--cream); border-radius: var(--r-md); margin-bottom: 0.75rem;
+            border: 1px solid var(--rule-soft); cursor: pointer; transition: all 0.2s ease;
         }
-        .upsets-moment-card:hover { background: #F5F3EE; transform: translateX(4px); box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
-        .upsets-moment-card.legendary { border-left-color: #D4AF37; background: #FFFDF5; }
-        .upsets-moment-card.legendary:hover { background: #FFF8E1; }
+        .upsets-moment-card:hover { background: var(--cream-deep); transform: translateX(4px); }
+        .upsets-moment-card.legendary { border-color: var(--gold); background: var(--cream-soft); }
+        .upsets-moment-card.legendary:hover { background: var(--cream-deep); }
         .upsets-moment-year {
-            font-size: 1.4rem; font-weight: 800; color: #1B2A4A; min-width: 52px; text-align: center;
+            font-family: var(--font-display); font-size: 1.4rem; font-weight: 400; color: var(--navy); min-width: 52px; text-align: center;
         }
         .upsets-moment-teams { flex: 1; min-width: 0; }
         .upsets-moment-team-row {
@@ -2658,30 +2670,32 @@
         .upsets-moment-logo { width: 28px; height: 28px; object-fit: contain; flex-shrink: 0; border-radius: 2px; }
         .upsets-moment-seed-badge {
             display: inline-flex; align-items: center; justify-content: center;
-            min-width: 22px; height: 22px; border-radius: 4px; font-size: 0.68rem;
-            font-weight: 800; padding: 0 4px; flex-shrink: 0;
+            min-width: 22px; height: 22px; border-radius: 2px; font-family: var(--font-mono);
+            font-size: 9px; font-weight: 700; padding: 0 4px; flex-shrink: 0;
+            border: 1px solid var(--navy);
         }
-        .upsets-moment-seed-badge.winner { background: #E8F5E9; color: #1B6B3A; }
-        .upsets-moment-seed-badge.loser { background: #FFEBEE; color: #C62828; }
-        .upsets-moment-name { font-weight: 600; font-size: 0.88rem; color: #2C3345; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-        .upsets-moment-name.winner { font-weight: 700; }
-        .upsets-moment-name.loser { color: #8892A0; }
+        .upsets-moment-seed-badge.winner { background: var(--moss); color: var(--cream); border-color: var(--moss); }
+        .upsets-moment-seed-badge.loser { background: transparent; color: var(--navy); }
+        .upsets-moment-name { font-family: var(--font-serif); font-weight: 600; font-size: 0.88rem; color: var(--ink); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .upsets-moment-name.winner { font-weight: 800; }
+        .upsets-moment-name.loser { color: var(--ink-muted); }
         .upsets-moment-score {
-            font-weight: 700; font-size: 0.85rem; color: #1B2A4A; margin-left: auto; flex-shrink: 0;
+            font-family: var(--font-serif); font-weight: 700; font-size: 0.85rem; color: var(--navy); margin-left: auto; flex-shrink: 0;
+            font-feature-settings: "tnum" 1, "lnum" 1;
         }
         .upsets-moment-magnitude {
             display: flex; flex-direction: column; align-items: center; gap: 0.15rem;
             min-width: 50px; flex-shrink: 0;
         }
         .upsets-moment-magnitude-bar {
-            width: 40px; height: 6px; background: #E8E2D6; border-radius: 3px; overflow: hidden;
+            width: 40px; height: 6px; background: var(--cream-deep); border-radius: 3px; overflow: hidden;
         }
-        .upsets-moment-magnitude-fill { height: 100%; border-radius: 3px; background: #C9A86C; }
-        .upsets-moment-magnitude-label { font-size: 0.6rem; color: #A0AAB8; font-weight: 600; text-transform: uppercase; }
+        .upsets-moment-magnitude-fill { height: 100%; border-radius: 3px; background: var(--gold); }
+        .upsets-moment-magnitude-label { font-size: 0.6rem; color: var(--ink-faint); font-weight: 600; text-transform: uppercase; }
         .upset-team-leaderboards { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 1rem; }
         @media (max-width: 768px) { .upset-team-leaderboards { grid-template-columns: 1fr; } }
         .upsets-no-data {
-            text-align: center; padding: 2rem; color: #8892A0; font-size: 0.95rem;
+            text-align: center; padding: 2rem; color: var(--ink-muted); font-size: 0.95rem;
         }
 
         .seed-context-badge.clickable { cursor: pointer; transition: all 0.15s ease; }
@@ -2691,7 +2705,7 @@
 
         @media (max-width: 768px) {
             .upsets-stats-dashboard { grid-template-columns: repeat(2, 1fr); gap: 0.5rem; }
-            .upsets-stat-value { font-size: 1.4rem; }
+            .upsets-stat-value { font-size: 32px; }
             .upsets-stat-label { font-size: 0.65rem; }
             .upsets-seed-grid { grid-template-columns: 1fr; }
             .upsets-moment-card { flex-wrap: wrap; gap: 0.5rem; padding: 0.75rem; }
@@ -2700,6 +2714,50 @@
             .upsets-moment-magnitude { flex-direction: row; min-width: auto; order: 3; }
             .upsets-era-filters { gap: 0.25rem; }
             .upsets-era-btn { font-size: 0.7rem; padding: 0.35rem 0.65rem; }
+        }
+
+        /* ── Tournament Resume / Classics ── */
+        .resume-grid {
+            display: grid; grid-template-columns: repeat(10, 1fr); gap: 6px;
+            max-width: 1280px; margin: 0 auto;
+        }
+        .resume-cell {
+            padding: 14px 10px; min-height: 92px;
+            display: flex; flex-direction: column; justify-content: space-between;
+            position: relative; cursor: pointer; transition: transform 0.1s;
+        }
+        .resume-cell:hover { transform: scale(1.05); z-index: 2; }
+        .resume-cell-year { font-family: var(--font-display); font-size: 22px; line-height: 1; }
+        .resume-cell-round { font-family: var(--font-mono); font-size: 10px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; margin-top: 8px; }
+        .resume-cell-seed { position: absolute; top: 4px; right: 6px; font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.08em; opacity: 0.55; }
+        .resume-summary-strip {
+            display: grid; grid-template-columns: repeat(5, 1fr); gap: 0;
+            border: 2px solid var(--navy); max-width: 1280px; margin: 0 auto;
+        }
+        .resume-summary-cell {
+            padding: 18px 16px; text-align: center; border-right: 1px solid var(--rule);
+        }
+        .resume-summary-cell:last-child { border-right: none; }
+        .resume-summary-num { font-family: var(--font-display); font-size: 44px; line-height: 1; font-feature-settings: "tnum" 1, "lnum" 1; }
+        .resume-summary-label { font-family: var(--font-mono); font-size: 10px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-muted); margin-top: 6px; }
+        .resume-legend {
+            display: flex; align-items: center; gap: 24px; flex-wrap: wrap;
+            border-top: 1px solid var(--rule-soft); padding-top: 20px;
+            max-width: 1280px; margin: 0 auto;
+        }
+        .resume-legend-swatch { width: 22px; height: 22px; display: inline-block; }
+        .classics-strip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; max-width: 1280px; margin: 0 auto; }
+        @media (max-width: 768px) {
+            .resume-grid { grid-template-columns: repeat(5, 1fr); }
+            .resume-summary-strip { grid-template-columns: repeat(3, 1fr); }
+            .resume-summary-cell:nth-child(4), .resume-summary-cell:nth-child(5) { border-top: 1px solid var(--rule); }
+            .classics-strip { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 480px) {
+            .resume-grid { grid-template-columns: repeat(4, 1fr); gap: 4px; }
+            .resume-cell { min-height: 72px; padding: 10px 8px; }
+            .resume-cell-year { font-size: 16px; }
+            .resume-summary-strip { grid-template-columns: repeat(2, 1fr); }
         }
 
         /* ── Error Fallback ── */
@@ -3363,267 +3421,171 @@
 
         /* ── Championship Run Page ── */
         .champ-run-hero {
-            border-radius: 1rem;
-            padding: 3rem 2rem;
-            text-align: center;
-            margin-bottom: 2rem;
+            padding: 56px 28px 64px;
             position: relative;
             overflow: hidden;
         }
         .champ-run-hero::before {
             content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle at 30% 50%, rgba(201,168,108,0.08) 0%, transparent 50%);
+            position: absolute; inset: 0;
+            background: repeating-linear-gradient(135deg, rgba(255,255,255,0.025) 0 2px, transparent 2px 30px);
             pointer-events: none;
         }
         .champ-run-hero-logo {
             width: 120px;
             height: 120px;
-            margin: 0 auto 1.25rem;
             background-size: contain;
             background-position: center;
             background-repeat: no-repeat;
             filter: drop-shadow(0 4px 12px rgba(0,0,0,0.3));
+            flex-shrink: 0;
         }
         .champ-run-hero-title {
-            font-size: 0.85rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.12em;
-            color: #C9A86C;
-            margin-bottom: 0.4rem;
-            text-shadow: 0 1px 4px rgba(0,0,0,0.4);
+            font-family: var(--font-mono); font-size: 10px; font-weight: 600;
+            text-transform: uppercase; letter-spacing: 0.12em;
+            color: rgba(255,255,255,0.7);
         }
         .champ-run-hero-team {
-            font-size: 2.2rem;
-            font-weight: 800;
-            color: #FFFFFF;
-            margin-bottom: 0.5rem;
-            line-height: 1.2;
-            text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+            font-family: var(--font-display); font-size: clamp(48px, 8vw, 110px);
+            font-weight: 400; color: #fff; line-height: 0.9; margin: 0;
         }
         .champ-run-hero-subtitle {
-            font-size: 1rem;
-            color: rgba(255,255,255,0.85);
-            text-shadow: 0 1px 4px rgba(0,0,0,0.4);
+            font-family: var(--font-serif); font-style: italic; font-size: 22px;
+            color: var(--gold-brand); margin-top: 8px;
         }
         .champ-run-hero-accent {
-            width: 60px;
-            height: 4px;
-            background: #C9A86C;
-            margin: 1rem auto 0;
-            border-radius: 2px;
+            height: 6px; background: var(--gold-brand); margin: 0;
         }
+        .champ-run-hero-stats {
+            margin-top: 32px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 0;
+            border: 1px solid rgba(255,255,255,0.18);
+        }
+        .champ-run-hero-stat {
+            padding: 20px 22px; border-right: 1px solid rgba(255,255,255,0.18);
+        }
+        .champ-run-hero-stat:last-child { border-right: none; }
+        .champ-run-hero-meta {
+            margin-top: 24px; display: flex; gap: 28px; flex-wrap: wrap;
+            font-family: var(--font-serif); font-size: 14px; color: rgba(255,255,255,0.78);
+        }
+        .champ-run-hero-meta strong { color: #fff; }
         .champ-run-back {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.4rem;
-            color: #C9A86C;
-            font-size: 0.85rem;
-            font-weight: 600;
-            cursor: pointer;
-            margin-bottom: 1.5rem;
-            transition: opacity 0.2s;
-            text-decoration: none;
+            display: inline-flex; align-items: center; gap: 0.4rem;
+            color: var(--gold); font-family: var(--font-serif); font-size: 14px; font-weight: 600;
+            cursor: pointer; margin-bottom: 1.5rem; transition: opacity 0.2s; text-decoration: none;
         }
         .champ-run-back:hover { opacity: 0.75; }
 
         .champ-run-card {
-            background: #FFFFFF;
-            border: 1px solid #E0D9CC;
-            border-radius: 0.75rem;
-            padding: 1.75rem;
-            margin-bottom: 1.5rem;
-            box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+            background: var(--paper); border: 2px solid var(--navy); border-radius: var(--r-md);
+            padding: 28px; margin-bottom: 24px;
         }
         .champ-run-card h3 {
-            font-size: 1.15rem;
-            font-weight: 700;
-            color: #1B2A4A;
-            margin-bottom: 1rem;
+            font-family: var(--font-display); font-size: 22px; font-weight: 400;
+            color: var(--navy); margin-bottom: 16px;
+            border-bottom: 3px solid var(--navy); padding-bottom: 12px;
         }
         .champ-run-story {
-            font-size: 1rem;
-            line-height: 1.7;
-            color: #4A5568;
+            font-family: var(--font-serif); font-size: 16px; line-height: 1.7; color: var(--ink-soft);
         }
 
         /* Tournament Path */
         .champ-run-path {
-            display: flex;
-            flex-direction: column;
-            gap: 0;
+            display: flex; flex-direction: column; gap: 0;
+            position: relative; padding-left: 32px;
+        }
+        .champ-run-path::before {
+            content: ''; position: absolute; left: 12px; top: 8px; bottom: 8px;
+            width: 2px; background: var(--rule);
         }
         .champ-run-game {
-            display: grid;
-            grid-template-columns: 140px 1fr auto;
-            align-items: center;
-            gap: 1rem;
-            padding: 1rem 1.25rem;
-            border-left: 3px solid #E0D9CC;
-            position: relative;
-            transition: background 0.15s ease;
-            cursor: pointer;
-            border-bottom: 1px solid #F0EDE6;
+            display: grid; grid-template-columns: 180px 1fr 220px; align-items: center;
+            gap: 0; padding: 0; position: relative;
+            transition: background 0.15s ease; cursor: pointer;
         }
-        .champ-run-game:hover {
-            background: #FAFAF7;
-        }
-        .champ-run-game::before {
-            content: '';
-            position: absolute;
-            left: -7px;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 11px;
-            height: 11px;
-            border-radius: 50%;
-            background: #E0D9CC;
-            border: 2px solid #FFFFFF;
-        }
-        .champ-run-game.championship-game {
-            border-left: 3px solid #C9A86C;
-            background: linear-gradient(90deg, rgba(201,168,108,0.06) 0%, transparent 100%);
-            padding: 1.25rem;
-        }
-        .champ-run-game.championship-game::before {
-            background: #C9A86C;
-            width: 13px;
-            height: 13px;
-            left: -8px;
-            box-shadow: 0 0 0 3px rgba(201,168,108,0.25);
-        }
+        .champ-run-game:hover { background: var(--cream-soft); }
+        .champ-run-game::before { display: none; }
+        .champ-run-game.championship-game { background: none; padding: 0; }
+        .champ-run-game.championship-game::before { display: none; }
         .champ-run-game.championship-game .champ-run-round {
-            color: #C9A86C;
-            font-weight: 800;
+            color: var(--navy); font-weight: 800;
         }
         .champ-run-round {
-            font-size: 0.75rem;
-            font-weight: 700;
-            color: #8892A0;
-            text-transform: uppercase;
-            letter-spacing: 0.04em;
+            font-family: var(--font-display); font-size: 16px; font-weight: 400;
+            color: var(--navy); line-height: 1.15; margin-top: 4px;
         }
         .champ-run-opponent {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
+            display: flex; align-items: center; gap: 0.75rem;
         }
         .champ-run-opp-logo {
-            width: 36px;
-            height: 36px;
-            background-size: contain;
-            background-position: center;
-            background-repeat: no-repeat;
-            flex-shrink: 0;
+            width: 36px; height: 36px; background-size: contain;
+            background-position: center; background-repeat: no-repeat; flex-shrink: 0;
         }
-        .champ-run-opp-info {
-            display: flex;
-            flex-direction: column;
-        }
+        .champ-run-opp-info { display: flex; flex-direction: column; }
         .champ-run-opp-name {
-            font-weight: 600;
-            font-size: 0.95rem;
-            color: #2C3345;
+            font-family: var(--font-serif); font-weight: 700; font-size: 17px; color: var(--ink);
         }
         .champ-run-opp-seed {
-            font-size: 0.75rem;
-            color: #8892A0;
+            font-family: var(--font-mono); font-size: 10px; color: var(--ink-muted);
+            letter-spacing: 0.08em; text-transform: uppercase;
         }
-        .champ-run-score {
-            text-align: right;
-            white-space: nowrap;
-        }
+        .champ-run-score { text-align: right; white-space: nowrap; }
         .champ-run-score-value {
-            font-size: 1.1rem;
-            font-weight: 800;
-            color: #1B2A4A;
+            font-family: var(--font-display); font-size: 30px; font-weight: 800;
+            color: var(--navy); font-feature-settings: "tnum" 1, "lnum" 1;
         }
         .champ-run-score-margin {
-            font-size: 0.72rem;
-            color: #8892A0;
-            font-weight: 600;
+            font-family: var(--font-mono); font-size: 10px; color: var(--ink-muted);
+            font-weight: 600; letter-spacing: 0.08em;
         }
-        .champ-run-score-margin.win { color: #2E7D32; }
+        .champ-run-score-margin.win { color: var(--moss); }
 
         /* Expandable box score */
         .champ-run-game-wrapper {
-            border-left: 3px solid #E0D9CC;
-            border-bottom: 1px solid #F0EDE6;
-            position: relative;
+            border-bottom: 1px solid var(--rule-soft); position: relative;
+            margin-bottom: 18px;
         }
         .champ-run-game-wrapper::before {
-            content: '';
-            position: absolute;
-            left: -7px;
-            top: 28px;
-            width: 11px;
-            height: 11px;
-            border-radius: 50%;
-            background: #E0D9CC;
-            border: 2px solid #FFFFFF;
-            z-index: 1;
+            content: ''; position: absolute; left: -26px; top: 28px;
+            width: 14px; height: 14px; border-radius: 50%;
+            background: var(--navy); border: 3px solid var(--cream); z-index: 1;
         }
         .champ-run-game-wrapper.championship-wrapper {
-            border-left: 3px solid #C9A86C;
-            background: linear-gradient(90deg, rgba(201,168,108,0.06) 0%, transparent 100%);
+            border: 3px solid var(--gold-deep); border-radius: var(--r-md);
         }
         .champ-run-game-wrapper.championship-wrapper::before {
-            background: #C9A86C;
-            width: 13px;
-            height: 13px;
-            left: -8px;
-            box-shadow: 0 0 0 3px rgba(201,168,108,0.25);
+            background: var(--gold-brand); width: 14px; height: 14px;
+            box-shadow: 0 0 0 2px var(--gold-deep);
         }
         .champ-run-game-wrapper.championship-wrapper .champ-run-round {
-            color: #C9A86C;
-            font-weight: 800;
+            color: var(--navy); font-weight: 800;
         }
         .champ-run-game-wrapper .champ-run-game {
-            border-left: none;
-            border-bottom: none;
-            position: static;
+            border-left: none; border-bottom: none; position: static;
         }
-        .champ-run-game-wrapper .champ-run-game::before {
-            display: none;
-        }
+        .champ-run-game-wrapper .champ-run-game::before { display: none; }
         .champ-run-game-wrapper.championship-wrapper .champ-run-game {
-            border-left: none;
-            background: none;
+            border-left: none; background: none;
         }
         .champ-run-expand-icon {
-            font-size: 0.7rem;
-            color: #8892A0;
-            transition: transform 0.25s ease;
-            margin-left: 0.5rem;
-            flex-shrink: 0;
+            font-size: 0.7rem; color: var(--ink-faint);
+            transition: transform 0.25s ease; margin-left: 0.5rem; flex-shrink: 0;
         }
         .champ-run-game-wrapper.expanded .champ-run-expand-icon {
             transform: rotate(180deg);
         }
         .champ-run-expand-hint {
-            font-size: 0.65rem;
-            color: #A8B2BF;
-            font-weight: 500;
-            margin-left: 0.25rem;
+            font-size: 10px; color: var(--ink-faint); font-family: var(--font-mono);
+            font-weight: 500; margin-left: 0.25rem;
         }
         .champ-run-boxscore-panel {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.4s ease;
-            background: #F9F8F5;
-            border-top: 1px solid transparent;
+            max-height: 0; overflow: hidden; transition: max-height 0.4s ease;
+            background: var(--cream-soft); border-top: 1px solid transparent;
         }
         .champ-run-game-wrapper.expanded .champ-run-boxscore-panel {
-            border-top: 1px solid #E0D9CC;
+            border-top: 1px solid var(--rule-soft);
         }
-        .champ-run-boxscore-inner {
-            padding: 1rem 1.25rem;
-        }
+        .champ-run-boxscore-inner { padding: 1rem 1.25rem; }
         .champ-run-boxscore-loading {
             display: flex;
             align-items: center;
@@ -3780,77 +3742,47 @@
 
         /* Key Stats Grid */
         .champ-run-stats {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-            gap: 1rem;
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 0;
+            border: 2px solid var(--navy);
         }
         .champ-run-stat {
-            text-align: center;
-            padding: 1rem 0.5rem;
-            background: #F9F8F5;
-            border-radius: 0.5rem;
+            text-align: center; padding: 18px 16px;
+            border-right: 1px solid var(--rule);
         }
+        .champ-run-stat:last-child { border-right: none; }
         .champ-run-stat-value {
-            font-size: 1.8rem;
-            font-weight: 800;
-            color: #1B2A4A;
+            font-family: var(--font-display); font-size: 36px; font-weight: 400;
+            color: var(--navy); line-height: 1; font-feature-settings: "tnum" 1, "lnum" 1;
         }
         .champ-run-stat-label {
-            font-size: 0.72rem;
-            color: #8892A0;
-            text-transform: uppercase;
-            font-weight: 600;
-            letter-spacing: 0.04em;
+            font-family: var(--font-mono); font-size: 10px; color: var(--ink-muted);
+            text-transform: uppercase; font-weight: 600; letter-spacing: 0.12em; margin-top: 6px;
         }
 
         /* Video embed */
         .champ-run-video {
-            position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
-            overflow: hidden;
-            border-radius: 0.5rem;
+            position: relative; padding-bottom: 56.25%; height: 0;
+            overflow: hidden; border-radius: var(--r-md);
         }
         .champ-run-video iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: none;
-            border-radius: 0.5rem;
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            border: none; border-radius: var(--r-md);
         }
 
         /* Team Profile Link */
         .champ-run-profile-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.7rem 1.5rem;
-            background: #1B2A4A;
-            color: #C9A86C;
-            border: none;
-            border-radius: 0.5rem;
-            font-weight: 700;
-            font-size: 0.9rem;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            text-decoration: none;
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            padding: 12px 24px; background: var(--navy); color: var(--gold);
+            border: none; border-radius: 2px; font-family: var(--font-display);
+            font-weight: 400; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase;
+            cursor: pointer; transition: all 0.2s ease; text-decoration: none;
         }
-        .champ-run-profile-link:hover {
-            background: #243556;
-            transform: translateY(-1px);
-        }
+        .champ-run-profile-link:hover { background: var(--navy-deep); }
 
         /* Clickable tournament badges */
-        .tourney-entry.clickable {
-            cursor: pointer;
-            transition: all 0.15s ease;
-        }
+        .tourney-entry.clickable { cursor: pointer; transition: all 0.15s ease; }
         .tourney-entry.clickable:hover {
-            border-color: #C9A86C;
-            transform: translateY(-2px);
-            box-shadow: 0 3px 8px rgba(201,168,108,0.15);
+            border-color: var(--gold); transform: translateY(-2px);
         }
 
         @media (max-width: 768px) {
@@ -14875,7 +14807,7 @@
         if (typeof window._upsetsTeamView === 'undefined') window._upsetsTeamView = false;
 
         function renderUpsetTeamLeaderboards() {
-            if (!UPSET_DETAIL_DATA) return '<div style="text-align:center;color:#8892A0;padding:2rem;">Loading upset data...</div>';
+            if (!UPSET_DETAIL_DATA) return '<div style="text-align:center;color:var(--ink-muted);padding:2rem;font-family:var(--font-serif);font-style:italic;">Loading upset data...</div>';
 
             // Aggregate from upset_history.json
             const victims = {};   // team -> [{year, pairing, by, score, seed}]
@@ -14910,10 +14842,11 @@
                 return team ? 'https://a.espncdn.com/i/teamlogos/ncaa/500/' + team.espnId + '.png' : '';
             }
 
-            function buildLeaderboard(title, subtitle, list, type) {
+            function buildLeaderboard(kicker, title, subtitle, list, type, accent) {
                 let html = '<div style="margin-bottom:2rem;">';
-                html += '<h3 style="font-size:1.1rem;font-weight:700;color:#1B2A4A;margin-bottom:0.25rem;">' + title + '</h3>';
-                html += '<p style="font-size:0.8rem;color:#8892A0;margin-bottom:1rem;">' + subtitle + '</p>';
+                html += '<div class="label-mono" style="color:var(--ink-muted);margin-bottom:4px;">' + kicker + '</div>';
+                html += '<h3 class="h-display" style="font-size:28px;color:var(--navy);margin:0 0 4px;border-bottom:3px solid var(--navy);padding-bottom:12px;">' + title + '</h3>';
+                html += '<p style="font-size:13px;color:var(--ink-muted);margin-bottom:1rem;font-family:var(--font-serif);font-style:italic;">' + subtitle + '</p>';
 
                 const top = list.slice(0, 20);
                 top.forEach(([team, games], idx) => {
@@ -14922,18 +14855,18 @@
                     const uid = type + '-' + idx;
                     const gamesSort = [...games].sort((a, b) => b.year - a.year);
 
-                    html += '<div style="border:1px solid #E8E6E1;border-radius:0.5rem;margin-bottom:0.5rem;overflow:hidden;">';
+                    html += '<div style="border:1px solid var(--rule-soft);border-radius:var(--r-md);margin-bottom:8px;overflow:hidden;">';
                     // Header row (clickable to expand)
-                    html += `<div onclick="toggleUpsetTeamRow('${uid}')" style="display:flex;align-items:center;gap:0.75rem;padding:0.6rem 0.8rem;cursor:pointer;background:#FAFAF7;">`;
-                    html += `<span style="font-weight:700;color:#8892A0;width:1.5rem;text-align:right;">${idx + 1}</span>`;
-                    if (logo) html += `<img src="${logo}" alt="" style="width:28px;height:28px;object-fit:contain;" onerror="this.style.display='none'">`;
-                    html += `<span style="font-weight:600;color:#1B2A4A;flex:1;">${team}</span>`;
-                    html += `<span style="font-weight:700;color:#C9A86C;font-size:1.1rem;">${games.length}</span>`;
-                    html += `<span class="expand-arrow" id="arrow-${uid}" style="color:#8892A0;font-size:0.9rem;">▸</span>`;
+                    html += `<div onclick="toggleUpsetTeamRow('${uid}')" style="display:flex;align-items:center;gap:0.75rem;padding:10px 14px;cursor:pointer;background:var(--paper);">`;
+                    html += `<span style="font-family:var(--font-mono);font-weight:700;color:var(--ink-faint);width:1.5rem;text-align:right;font-size:11px;">${idx + 1}</span>`;
+                    if (logo) html += `<img src="${logo}" alt="" style="width:28px;height:28px;object-fit:contain;border-radius:2px;" onerror="this.style.display='none'">`;
+                    html += `<span style="font-family:var(--font-serif);font-weight:700;color:var(--navy);flex:1;font-size:15px;">${team}</span>`;
+                    html += `<span style="font-family:var(--font-display);font-weight:700;color:${accent};font-size:18px;">${games.length}</span>`;
+                    html += `<span class="expand-arrow" id="arrow-${uid}" style="color:var(--ink-faint);font-size:0.9rem;">▸</span>`;
                     html += '</div>';
 
                     // Expandable detail (hidden by default)
-                    html += '<div id="' + uid + '" style="display:none;border-top:1px solid #E8E6E1;">';
+                    html += '<div id="' + uid + '" style="display:none;border-top:1px solid var(--rule-soft);">';
                     gamesSort.forEach(g => {
                         const isVictim = type === 'victim';
                         const oppName = isVictim ? g.by : g.over;
@@ -14943,20 +14876,20 @@
                             ? '#' + g.loserSeed + ' seed lost to #' + g.winnerSeed
                             : '#' + g.winnerSeed + ' seed beat #' + g.loserSeed;
 
-                        html += '<div style="display:flex;align-items:center;gap:0.5rem;padding:0.5rem 0.8rem 0.5rem 3rem;font-size:0.82rem;border-bottom:1px solid #F0EEEA;">';
-                        html += '<span style="color:#8892A0;min-width:2.5rem;">' + g.year + '</span>';
-                        html += '<span style="background:#F0EEEA;padding:0.1rem 0.4rem;border-radius:0.25rem;font-size:0.7rem;font-weight:600;color:#6B7A8D;min-width:3rem;text-align:center;">' + pairingLabel + '</span>';
+                        html += '<div style="display:flex;align-items:center;gap:0.5rem;padding:8px 14px 8px 3rem;font-size:13px;border-bottom:1px solid var(--cream-deep);font-family:var(--font-serif);">';
+                        html += '<span style="color:var(--ink-muted);min-width:2.5rem;font-family:var(--font-mono);font-size:11px;">' + g.year + '</span>';
+                        html += '<span style="background:var(--cream-deep);padding:2px 6px;border-radius:2px;font-size:10px;font-weight:600;color:var(--ink-muted);min-width:3rem;text-align:center;font-family:var(--font-mono);letter-spacing:0.05em;">' + pairingLabel + '</span>';
                         const _winSlug = teamSlugFromName(isVictim ? oppName : team);
                         const _losSlug = teamSlugFromName(isVictim ? team : oppName);
                         const gameLink = '#game/' + g.year + '/' + _winSlug + '-vs-' + _losSlug;
                         html += '<span style="flex:1;">';
                         if (isVictim) {
-                            html += 'Lost to <a href="' + gameLink + '" style="color:#1B2A4A;font-weight:600;text-decoration:none;" onclick="event.stopPropagation();">' + oppName + '</a>';
+                            html += 'Lost to <a href="' + gameLink + '" style="color:var(--navy);font-weight:600;text-decoration:none;border-bottom:1px solid var(--gold-brand);" onclick="event.stopPropagation();">' + oppName + '</a>';
                         } else {
-                            html += 'Beat <a href="' + gameLink + '" style="color:#1B2A4A;font-weight:600;text-decoration:none;" onclick="event.stopPropagation();">' + oppName + '</a>';
+                            html += 'Beat <a href="' + gameLink + '" style="color:var(--navy);font-weight:600;text-decoration:none;border-bottom:1px solid var(--gold-brand);" onclick="event.stopPropagation();">' + oppName + '</a>';
                         }
                         html += '</span>';
-                        if (g.score) html += '<span style="font-weight:600;color:#1B2A4A;">' + g.score + '</span>';
+                        if (g.score) html += '<span style="font-weight:600;color:var(--navy);font-family:var(--font-display);font-feature-settings:\'tnum\' 1,\'lnum\' 1;">' + g.score + '</span>';
                         html += '</div>';
                     });
                     html += '</div></div>';
@@ -14968,14 +14901,14 @@
 
             let html = '<div class="upset-team-leaderboards">';
             html += buildLeaderboard(
-                'Most Upset-Prone',
+                'HALL OF SHAME', 'Most Times Upset',
                 'Favorites who lost the most first-round games to lower seeds',
-                victimList, 'victim'
+                victimList, 'victim', 'var(--rust)'
             );
             html += buildLeaderboard(
-                'Serial Cinderellas',
+                'GIANT KILLERS', 'Most Upsets Pulled',
                 'Underdogs who pulled off the most first-round upsets',
-                cinderellaList, 'cinderella'
+                cinderellaList, 'cinderella', 'var(--moss)'
             );
             html += '</div>';
             return html;
@@ -15158,13 +15091,12 @@
                     const score = upset.score || '';
                     const magnitude = ((pair.lower - pair.higher) / 15 * 100).toFixed(0);
                     const cardClass = isLegendary ? 'upsets-moment-card legendary' : 'upsets-moment-card';
-                    const borderColor = winnerTeam && winnerTeam.color ? winnerTeam.color : '#E0D9CC';
                     // Navigate to game detail page
                     const gameSlugKey = winnerSlug && loserSlug ? `${upset.year}/${winnerSlug}-vs-${loserSlug}` : '';
                     const clickAction = gameSlugKey ? `window.location.hash='#game/${gameSlugKey}'` : (winnerSlug ? `window.location.hash='#team/${winnerSlug}'` : '');
                     const hasVideo = gameSlugKey ? hasUpsetVideo(upset.year, winnerName, loserName) : false;
 
-                    html += `<div class="${cardClass}" style="border-left-color: ${borderColor}; position:relative;" ${clickAction ? `onclick="${clickAction}"` : ''}>
+                    html += `<div class="${cardClass}" style="position:relative;" ${clickAction ? `onclick="${clickAction}"` : ''}>
                         ${hasVideo ? '<div class="upsets-moment-play-icon"><svg width="10" height="12" viewBox="0 0 10 12" fill="currentColor"><polygon points="0,0 10,6 0,12"/></svg></div>' : ''}
                         <div class="upsets-moment-year">${upset.year}</div>
                         <div class="upsets-moment-teams">
@@ -15183,7 +15115,7 @@
                         </div>
                         <div class="upsets-moment-magnitude">
                             <div class="upsets-moment-magnitude-bar"><div class="upsets-moment-magnitude-fill" style="width:${magnitude}%"></div></div>
-                            <div class="upsets-moment-magnitude-label">Shock <span style="color:#C9A86C;font-style:italic;">(Coming Soon)</span></div>
+                            <div class="upsets-moment-magnitude-label">Shock <span style="color:var(--gold);font-style:italic;">(Coming Soon)</span></div>
                         </div>
                     </div>`;
                 }
@@ -15219,7 +15151,7 @@
 
             const cardsHtml = runs.map(run => {
                 const logoUrl = `https://a.espncdn.com/i/teamlogos/ncaa/500/${run.espnId}.png`;
-                const accentColor = run.accentColor || '#1B2A4A';
+                const accentColor = run.accentColor || 'var(--navy)';
                 const link = `#championship/${run.year}/${run.teamSlug}`;
                 const seed = run.stats?.seed || '?';
                 const record = run.stats?.record || '';
@@ -15241,28 +15173,27 @@
                         align-items: center;
                         gap: 1rem;
                         text-decoration: none;
-                        background: #F8F6F1;
-                        border: 1px solid #E8E2D8;
-                        border-left: 4px solid ${accentColor};
-                        border-radius: 10px;
+                        background: var(--paper);
+                        border: 2px solid var(--navy);
+                        border-radius: var(--r-md);
                         padding: 0.75rem 1rem;
-                        transition: transform 0.15s, box-shadow 0.15s;
+                        transition: transform 0.15s;
                         cursor: pointer;
-                    " onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 4px 16px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
-                        <div style="font-size:1.15rem; font-weight:800; color:${accentColor}; min-width:42px; text-align:center;">${run.year}</div>
+                    " onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform=''">
+                        <div class="h-display" style="font-size:28px; color:var(--navy); min-width:52px; text-align:center;">${run.year}</div>
                         <img src="${logoUrl}" alt="" style="width:36px;height:36px;flex-shrink:0;" onerror="this.style.display='none'">
                         <div style="flex:1; min-width:0;">
-                            <div style="font-size:0.9rem; font-weight:700; color:#1B2A4A; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">${run.teamName}</div>
-                            <div style="font-size:0.72rem; color:#8892A0;">${coach ? 'Coach: ' + coach : ''}${coach && mop ? ' · ' : ''}${mop ? 'MOP: ' + mop : ''}</div>
+                            <div style="font-family:var(--font-serif); font-size:16px; font-weight:700; color:var(--ink); white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">${run.teamName}</div>
+                            <div style="font-family:var(--font-serif); font-size:12px; color:var(--ink-muted); font-style:italic;">${coach ? 'Coach: ' + coach : ''}${coach && mop ? ' · ' : ''}${mop ? 'MOP: ' + mop : ''}</div>
                         </div>
                         <div style="display:flex; align-items:center; gap:0.75rem; flex-shrink:0;">
-                            <span style="font-size:0.75rem; color:#8892A0; font-weight:600;">#${seed} seed</span>
-                            ${record ? `<span style="font-size:0.75rem; font-weight:700; color:#1B2A4A;">${record}</span>` : ''}
+                            <span class="pill" style="font-size:10px;">#${seed} seed</span>
+                            ${record ? `<span style="font-family:var(--font-mono); font-size:13px; font-weight:700; color:var(--navy);">${record}</span>` : ''}
                             <div style="display:flex; gap:0.3rem;">
-                                <span style="font-size:0.6rem; padding:2px 5px; border-radius:6px; font-weight:600; background:${hasVideo ? 'rgba(34,197,94,0.12)' : 'rgba(0,0,0,0.05)'}; color:${hasVideo ? '#16A34A' : '#A0AAB8'};" title="${hasVideo ? 'Has video' : 'No video'}">${hasVideo ? '✓' : '○'} Vid</span>
-                                <span style="font-size:0.6rem; padding:2px 5px; border-radius:6px; font-weight:600; background:${hasBoxScores ? 'rgba(34,197,94,0.12)' : 'rgba(0,0,0,0.05)'}; color:${hasBoxScores ? '#16A34A' : '#A0AAB8'};" title="${hasBoxScores ? boxScoreCount + '/' + gameCount + ' box scores' : 'No box scores'}">${hasBoxScores ? '✓' : '○'} Box</span>
+                                <span class="label-mono" style="font-size:9px; padding:2px 5px; color:${hasVideo ? 'var(--moss)' : 'var(--ink-faint)'};" title="${hasVideo ? 'Has video' : 'No video'}">${hasVideo ? '✓' : '○'} VID</span>
+                                <span class="label-mono" style="font-size:9px; padding:2px 5px; color:${hasBoxScores ? 'var(--moss)' : 'var(--ink-faint)'};" title="${hasBoxScores ? boxScoreCount + '/' + gameCount + ' box scores' : 'No box scores'}">${hasBoxScores ? '✓' : '○'} BOX</span>
                             </div>
-                            <span style="font-size:0.75rem; color:#C9A86C; font-weight:600;">→</span>
+                            <span style="font-family:var(--font-serif); font-size:14px; color:var(--gold-deep); font-weight:600;">→</span>
                         </div>
                     </a>
                 `;
@@ -15275,105 +15206,280 @@
             const withBoxScores = runs.filter(r => (r.staticBoxScores && Object.keys(r.staticBoxScores).length > 0) || r.year >= 2002).length;
 
             content.innerHTML = `
-                <div style="max-width:1000px; margin:0 auto; padding:2rem 1rem;">
-                    <div style="text-align:center; margin-bottom:2rem;">
-                        <h2 class="section-title" style="margin-bottom:0.5rem;">🏆 Championship Journeys</h2>
-                        <p style="color:#8892A0; margin-top:0.5rem; font-size:0.95rem; max-width:600px; margin-left:auto; margin-right:auto;">
+                <div style="max-width:1280px; margin:0 auto; padding:48px 28px;">
+                    <div style="text-align:center; margin-bottom:32px;">
+                        <div class="divider-stars" style="margin-bottom:14px;">
+                            <span class="stars">★ ★ ★</span>
+                            <span class="label-mono" style="color:var(--ink-muted);">The definitive record</span>
+                            <span class="stars">★ ★ ★</span>
+                        </div>
+                        <h1 class="h-display" style="font-size:clamp(64px,10vw,124px);color:var(--navy);line-height:0.88;margin:0;">CHAMPIONS</h1>
+                        <p style="font-family:var(--font-serif);font-style:italic;font-size:19px;color:var(--ink-soft);max-width:720px;margin:14px auto 0;">
                             Relive every step of the path to cutting down the nets. ${totalRuns} championship runs documented across ${uniqueTeams.size} programs.
                         </p>
                     </div>
-                    <div style="display:flex; justify-content:center; gap:1.5rem; margin-bottom:2rem; flex-wrap:wrap;">
-                        <div style="text-align:center; padding:0.75rem 1.25rem; background:#F8F6F1; border:1px solid #E8E2D8; border-radius:10px;">
-                            <div style="font-size:1.5rem; font-weight:800; color:#1B2A4A;">${totalRuns}</div>
-                            <div style="font-size:0.7rem; color:#8892A0; font-weight:600; text-transform:uppercase; letter-spacing:0.05em;">Journeys</div>
+                    <div style="display:grid; grid-template-columns:repeat(4, 1fr); gap:16px; margin-bottom:36px;">
+                        <div class="card-bordered" style="padding:20px 18px;">
+                            <div class="label-mono" style="color:var(--ink-muted);margin-bottom:6px;">JOURNEYS</div>
+                            <div class="h-display" style="font-size:44px;color:var(--navy);line-height:1;">${totalRuns}</div>
                         </div>
-                        <div style="text-align:center; padding:0.75rem 1.25rem; background:#F8F6F1; border:1px solid #E8E2D8; border-radius:10px;">
-                            <div style="font-size:1.5rem; font-weight:800; color:#1B2A4A;">${uniqueTeams.size}</div>
-                            <div style="font-size:0.7rem; color:#8892A0; font-weight:600; text-transform:uppercase; letter-spacing:0.05em;">Programs</div>
+                        <div class="card-bordered" style="padding:20px 18px;">
+                            <div class="label-mono" style="color:var(--ink-muted);margin-bottom:6px;">PROGRAMS</div>
+                            <div class="h-display" style="font-size:44px;color:var(--navy);line-height:1;">${uniqueTeams.size}</div>
                         </div>
-                        <div style="text-align:center; padding:0.75rem 1.25rem; background:#F8F6F1; border:1px solid #E8E2D8; border-radius:10px;">
-                            <div style="font-size:1.5rem; font-weight:800; color:#16A34A;">${withVideo}</div>
-                            <div style="font-size:0.7rem; color:#8892A0; font-weight:600; text-transform:uppercase; letter-spacing:0.05em;">With Video</div>
+                        <div class="card-bordered" style="padding:20px 18px;">
+                            <div class="label-mono" style="color:var(--ink-muted);margin-bottom:6px;">WITH VIDEO</div>
+                            <div class="h-display" style="font-size:44px;color:var(--moss);line-height:1;">${withVideo}</div>
                         </div>
-                        <div style="text-align:center; padding:0.75rem 1.25rem; background:#F8F6F1; border:1px solid #E8E2D8; border-radius:10px;">
-                            <div style="font-size:1.5rem; font-weight:800; color:#16A34A;">${withBoxScores}</div>
-                            <div style="font-size:0.7rem; color:#8892A0; font-weight:600; text-transform:uppercase; letter-spacing:0.05em;">With Box Scores</div>
+                        <div class="card-bordered" style="padding:20px 18px;">
+                            <div class="label-mono" style="color:var(--ink-muted);margin-bottom:6px;">WITH BOX SCORES</div>
+                            <div class="h-display" style="font-size:44px;color:var(--moss);line-height:1;">${withBoxScores}</div>
                         </div>
                     </div>
-                    <div style="display:flex; flex-direction:column; gap:0.5rem;">
+                    <div style="display:flex; flex-direction:column; gap:8px;">
                         ${cardsHtml}
                     </div>
                 </div>
             `;
         }
 
+        let _classicsTeamId = null; // currently selected team for classics resume
+
+        // Map tournament result string to resume grid key
+        function mapResultToResumeKey(result) {
+            if (result === 'Champion') return 'champ';
+            if (result === 'Runner-Up') return 'runner';
+            if (result === 'Final Four') return 'f4';
+            if (result === 'Elite Eight') return 'e8';
+            if (result === 'Sweet 16') return 's16';
+            if (result === 'R32') return 'r32';
+            if (result === 'R64') return 'r64';
+            if (result === 'First Four') return 'ff';
+            return 'miss';
+        }
+
+        // Round → style mapping (existing CSS custom properties)
+        const RESUME_ROUND_STYLE = {
+            champ:  { bg: 'var(--gold-brand)', fg: 'var(--navy)',      label: '★ CHAMP', weight: 800 },
+            runner: { bg: 'var(--ink-light)',   fg: 'var(--navy)',      label: 'RUNNER',  weight: 700 },
+            f4:     { bg: 'var(--rust)',        fg: 'var(--cream)',     label: 'F4',      weight: 700 },
+            e8:     { bg: 'var(--navy)',        fg: 'var(--cream)',     label: 'E8',      weight: 600 },
+            s16:    { bg: 'var(--ink-soft)',     fg: 'var(--cream)',     label: 'S16',     weight: 500 },
+            r32:    { bg: 'var(--cream-deep)',   fg: 'var(--ink-soft)',  label: 'R32',     weight: 500 },
+            r64:    { bg: 'var(--cream)',        fg: 'var(--ink-muted)', label: 'R64',     weight: 400 },
+            ff:     { bg: 'var(--cream)',        fg: 'var(--ink-muted)', label: 'FF',      weight: 400 },
+            miss:   { bg: 'transparent',         fg: 'var(--ink-faint)', label: '—',  weight: 400, border: '1px dashed var(--rule-soft)' },
+            covid:  { bg: 'transparent',         fg: 'var(--ink-faint)', label: '—',  weight: 400, border: '1px dashed var(--rule-soft)' },
+        };
+
+        const RESUME_LEGEND = [
+            ['champ','National Champion'], ['runner','Runner-up'], ['f4','Final Four'],
+            ['e8','Elite Eight'], ['s16','Sweet 16'], ['r32','Round of 32'],
+            ['r64','Round of 64'], ['miss','Did not qualify'],
+        ];
+
+        function selectClassicsTeam(espnId) {
+            _classicsTeamId = espnId;
+            renderClassics();
+        }
+
         function renderClassics() {
             const content = document.getElementById('classicsContent');
             if (!content) return;
 
-            const classics = Object.values(INSTANT_CLASSICS);
+            // Default to Kentucky if no team selected, or first team with data
+            if (!_classicsTeamId && allTeamsData.length > 0) {
+                const ky = allTeamsData.find(t => t.name && t.name.toLowerCase().includes('kentucky') && t.name.toLowerCase().includes('wildcats'));
+                _classicsTeamId = ky ? ky.espnId : allTeamsData[0].espnId;
+            }
 
-            // Build cards
-            const cardsHtml = classics.map(ic => {
-                const tagBadges = ic.tags.map(tag => {
-                    const info = getClassicTagDisplay(tag);
-                    return `<span class="game-detail-classic-tag ${info.cls}" style="font-size:0.65rem;padding:2px 6px;">${info.emoji} ${info.label}</span>`;
-                }).join(' ');
+            const team = allTeamsData.find(t => String(t.espnId) === String(_classicsTeamId));
+            if (!team) {
+                content.innerHTML = '<div style="text-align:center;color:var(--ink-muted);padding:3rem;font-family:var(--font-serif);font-style:italic;">Select a team to view their tournament resume.</div>';
+                return;
+            }
 
-                // Determine winner/loser from aftermath or ESPN IDs
-                const gameKey = Object.keys(UPSET_AFTERMATH).find(k => k.includes(teamSlug(ic.team1)) && k.includes(teamSlug(ic.team2)));
-                const t1 = allTeamsData.find(t => t.espnId === String(ic.team1EspnId));
-                const t2 = allTeamsData.find(t => t.espnId === String(ic.team2EspnId));
-                const t1Logo = `https://a.espncdn.com/i/teamlogos/ncaa/500/${ic.team1EspnId}.png`;
-                const t2Logo = `https://a.espncdn.com/i/teamlogos/ncaa/500/${ic.team2EspnId}.png`;
-                const t1Color = t1 && t1.color ? '#' + t1.color.replace('#','') : '#1B2A4A';
-                const slug1 = teamSlug(ic.team1);
-                const slug2 = teamSlug(ic.team2);
-                const gameLink = `#game/${ic.year}/${slug1}-vs-${slug2}`;
+            const teamColor = team.color ? '#' + team.color.replace('#','') : 'var(--navy)';
+            const logoUrl = `https://a.espncdn.com/i/teamlogos/ncaa/500/${team.espnId}.png`;
 
-                return `
-                    <div class="classic-card" onclick="window.location.hash='${gameLink}'" style="
-                        cursor: pointer;
-                        background: linear-gradient(135deg, ${t1Color}18 0%, #F8F6F1 30%);
-                        border: 1px solid #E8E2D8;
-                        border-radius: 12px;
-                        padding: 1.5rem;
-                        transition: transform 0.2s, box-shadow 0.2s;
-                    " onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 8px 24px rgba(0,0,0,0.12)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
-                        <div style="display:flex; align-items:center; gap:1rem; margin-bottom:0.75rem;">
-                            <img src="${t1Logo}" alt="" style="width:48px;height:48px;" onerror="this.style.display='none'">
-                            <span style="font-size:1.2rem; color:#8892A0; font-weight:300;">vs</span>
-                            <img src="${t2Logo}" alt="" style="width:48px;height:48px;" onerror="this.style.display='none'">
-                            <span style="background:linear-gradient(135deg,#F59E0B,#D97706);color:#fff;font-size:0.65rem;font-weight:700;padding:3px 8px;border-radius:10px;letter-spacing:0.03em;">⚡ INSTANT CLASSIC</span>
-                        </div>
-                        <div style="font-size:1.05rem; font-weight:700; color:#1a1a1a; margin-bottom:0.5rem; line-height:1.3;">
-                            ${ic.headline}
-                        </div>
-                        <div style="display:flex; gap:0.5rem; flex-wrap:wrap; margin-bottom:0.5rem;">
-                            ${tagBadges}
-                        </div>
-                        ${ic.description ? `<div style="font-size:0.85rem; color:#5A6577; line-height:1.5;">${ic.description}</div>` : ''}
-                        <div style="margin-top:0.75rem; font-size:0.8rem; color:#C9A86C; font-weight:600;">
-                            Relive This Moment →
-                        </div>
-                    </div>
-                `;
+            // Build year-by-year resume from SEASONS_DATA
+            const seasons = (SEASONS_DATA && SEASONS_DATA[team.espnId]) ? SEASONS_DATA[team.espnId].seasons || [] : [];
+            const resumeYears = [];
+
+            // Process all years from 1985 to current
+            const currentYear = new Date().getFullYear();
+            for (let y = currentYear; y >= 1985; y--) {
+                // Find this team's season for this tournament year
+                // seasons.json uses academic year format like "2023-24" for the 2024 tournament
+                const matchSeason = seasons.find(s => {
+                    const yearStr = String(s.year || '');
+                    if (yearStr.includes('-')) {
+                        const parts = yearStr.split('-');
+                        const startYear = parseInt(parts[0]);
+                        const endPart = parts[1];
+                        let tourneyYear;
+                        if (endPart.length === 2) {
+                            const century = endPart === '00' ? Math.floor(startYear / 100) + 1 : Math.floor(startYear / 100);
+                            tourneyYear = century * 100 + parseInt(endPart);
+                        } else {
+                            tourneyYear = parseInt(endPart);
+                        }
+                        return tourneyYear === y;
+                    }
+                    return parseInt(yearStr) === y;
+                });
+
+                if (y === 2020) {
+                    resumeYears.push({ y: 2020, r: 'covid', seed: null });
+                } else if (matchSeason && (matchSeason.seed || matchSeason.ncaaTourney)) {
+                    const result = mapTourneyResult(matchSeason.ncaaTourney);
+                    const rKey = mapResultToResumeKey(result);
+                    resumeYears.push({ y, r: rKey, seed: matchSeason.seed || null });
+                } else {
+                    resumeYears.push({ y, r: 'miss', seed: null });
+                }
+            }
+
+            // Tallies
+            const tally = {};
+            resumeYears.forEach(yr => { tally[yr.r] = (tally[yr.r] || 0) + 1; });
+            const champs = tally.champ || 0;
+            const runners = tally.runner || 0;
+            const f4s = champs + runners + (tally.f4 || 0);
+            const e8s = f4s + (tally.e8 || 0);
+            const totalAppearances = resumeYears.length - (tally.miss || 0) - (tally.covid || 0);
+
+            // Team picker dropdown — top ~50 most successful programs
+            const topTeams = allTeamsData
+                .filter(t => SEASONS_DATA && SEASONS_DATA[t.espnId])
+                .sort((a, b) => (b.allTimeW || 0) - (a.allTimeW || 0))
+                .slice(0, 80);
+
+            const teamOptions = topTeams.map(t =>
+                `<option value="${t.espnId}" ${String(t.espnId) === String(_classicsTeamId) ? 'selected' : ''}>${t.name}</option>`
+            ).join('');
+
+            // Grid cells
+            const gridCells = resumeYears.map(yr => {
+                const s = RESUME_ROUND_STYLE[yr.r] || RESUME_ROUND_STYLE.miss;
+                const champSlug = CHAMP_YEAR_TO_SLUG[yr.y];
+                const isChampRun = champSlug && yr.r === 'champ' && String(team.espnId) === champSlug.espnId;
+                const clickTarget = isChampRun
+                    ? `window.location.hash='#championship/${yr.y}/${champSlug.slug}'`
+                    : `window.open('https://www.sports-reference.com/cbb/postseason/${yr.y}-ncaa.html','_blank')`;
+
+                return `<div class="resume-cell" style="background:${s.bg};border:${s.border || '1px solid var(--rule-soft)'};" onclick="${yr.r !== 'miss' && yr.r !== 'covid' ? clickTarget : ''}">
+                    ${yr.seed ? `<div class="resume-cell-seed" style="color:${s.fg};">#${yr.seed}</div>` : ''}
+                    <div class="resume-cell-year" style="color:${s.fg};font-weight:${s.weight};">${yr.y}</div>
+                    <div class="resume-cell-round" style="color:${s.fg};font-weight:${s.weight === 800 ? 800 : 600};">${yr.r === 'covid' ? 'CANCELED' : s.label}</div>
+                </div>`;
             }).join('');
 
+            // Legend
+            const legendHtml = RESUME_LEGEND.map(([k, label]) => {
+                const s = RESUME_ROUND_STYLE[k];
+                return `<div style="display:flex;align-items:center;gap:8px;">
+                    <div class="resume-legend-swatch" style="background:${s.bg};border:${s.border || '1px solid var(--rule-soft)'};"></div>
+                    <span style="font-family:var(--font-serif);font-size:13px;color:var(--ink-soft);">${label}</span>
+                </div>`;
+            }).join('');
+
+            // Classic games strip (from INSTANT_CLASSICS if available)
+            let classicsStripHtml = '';
+            const classics = typeof INSTANT_CLASSICS !== 'undefined' ? Object.values(INSTANT_CLASSICS) : [];
+            if (classics.length > 0) {
+                const classicCards = classics.slice(0, 3).map(ic => {
+                    const slug1 = teamSlug(ic.team1);
+                    const slug2 = teamSlug(ic.team2);
+                    const gameLink = `#game/${ic.year}/${slug1}-vs-${slug2}`;
+                    return `<a href="${gameLink}" class="card-bordered" style="padding:22px;text-decoration:none;display:block;">
+                        <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:10px;">
+                            <span class="h-display" style="font-size:36px;color:var(--navy);">${ic.year}</span>
+                            <span class="label-mono" style="color:var(--gold-deep);">CLASSIC</span>
+                        </div>
+                        <div class="h-display" style="font-size:22px;color:var(--ink);line-height:1.1;margin-bottom:8px;">${ic.headline}</div>
+                        <div style="font-family:var(--font-serif);font-style:italic;font-size:14px;color:var(--ink-soft);">${ic.description || ''}</div>
+                    </a>`;
+                }).join('');
+                classicsStripHtml = `
+                    <section style="padding:0 0 64px;border-top:3px double var(--navy);">
+                        <div style="max-width:1280px;margin:0 auto;padding-top:40px;">
+                            <div style="margin-bottom:20px;">
+                                <div class="label-mono" style="color:var(--ink-muted);margin-bottom:4px;">UNFORGETTABLE</div>
+                                <h2 class="h-display" style="font-size:36px;color:var(--navy);margin:0;border-bottom:3px solid var(--navy);padding-bottom:12px;">Classic Games</h2>
+                            </div>
+                            <div class="classics-strip">${classicCards}</div>
+                        </div>
+                    </section>`;
+            }
+
             content.innerHTML = `
-                <div style="max-width:900px; margin:0 auto; padding:2rem 1rem;">
-                    <div style="text-align:center; margin-bottom:2rem;">
-                        <h2 class="section-title" style="margin-bottom:0.5rem;">⚡ Instant Classics</h2>
-                        <span style="background:rgba(245,158,11,0.15);color:#D97706;font-size:0.75rem;font-weight:700;padding:3px 10px;border-radius:10px;letter-spacing:0.05em;">BETA</span>
-                        <p style="color:#8892A0; margin-top:0.75rem; font-size:0.95rem;">
-                            The most memorable moments of the ${new Date().getFullYear()} NCAA Tournament — buzzer beaters, overtime thrillers, and games you'll never forget.
-                        </p>
+                <!-- HERO -->
+                <section style="padding:48px 0 28px;">
+                    <div style="max-width:1280px;margin:0 auto;">
+                        <div class="divider-stars" style="margin-bottom:14px;">
+                            <span class="stars">★ ★</span>
+                            <span class="label-mono" style="color:var(--ink-muted);">March, year by year</span>
+                            <span class="stars">★ ★</span>
+                        </div>
+                        <h1 class="h-display" style="font-size:clamp(56px,9vw,110px);color:var(--navy);line-height:0.9;margin:0;text-align:center;">TOURNAMENT RESUME</h1>
+                        <div style="display:flex;justify-content:center;gap:14px;align-items:center;margin-top:18px;flex-wrap:wrap;">
+                            <span class="label-mono" style="color:var(--ink-muted);">SHOWING:</span>
+                            <img src="${logoUrl}" alt="" style="width:32px;height:32px;border-radius:50%;border:2px solid var(--navy);" onerror="this.style.display='none'">
+                            <select onchange="selectClassicsTeam(this.value)" style="font-family:var(--font-display);font-size:22px;padding:6px 10px;background:var(--paper);border:2px solid var(--navy);color:var(--navy);">
+                                ${teamOptions}
+                            </select>
+                            <span style="font-family:var(--font-serif);font-style:italic;color:var(--ink-muted);">since 1985</span>
+                        </div>
                     </div>
-                    <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(380px, 1fr)); gap:1.25rem;">
-                        ${cardsHtml}
+                </section>
+
+                <!-- SUMMARY STRIP -->
+                <section style="padding:0 0 32px;">
+                    <div class="resume-summary-strip">
+                        <div class="resume-summary-cell">
+                            <div class="resume-summary-num" style="color:var(--gold-deep);">${champs}</div>
+                            <div class="resume-summary-label">CHAMPIONSHIPS</div>
+                        </div>
+                        <div class="resume-summary-cell">
+                            <div class="resume-summary-num" style="color:var(--ink);">${runners}</div>
+                            <div class="resume-summary-label">RUNNERS-UP</div>
+                        </div>
+                        <div class="resume-summary-cell">
+                            <div class="resume-summary-num" style="color:var(--rust);">${f4s}</div>
+                            <div class="resume-summary-label">FINAL FOURS</div>
+                        </div>
+                        <div class="resume-summary-cell">
+                            <div class="resume-summary-num" style="color:var(--navy);">${e8s}</div>
+                            <div class="resume-summary-label">ELITE EIGHTS</div>
+                        </div>
+                        <div class="resume-summary-cell">
+                            <div class="resume-summary-num" style="color:var(--ink);">${totalAppearances}</div>
+                            <div class="resume-summary-label">TOURNAMENTS</div>
+                        </div>
                     </div>
-                    ${classics.length === 0 ? '<div style="text-align:center; padding:3rem; color:#8892A0;">No instant classics yet. Stay tuned as the tournament unfolds!</div>' : ''}
-                </div>
+                </section>
+
+                <!-- DENSE GRID -->
+                <section style="padding:0 0 24px;">
+                    <div style="max-width:1280px;margin:0 auto;">
+                        <div style="margin-bottom:20px;">
+                            <div class="label-mono" style="color:var(--ink-muted);margin-bottom:4px;">40 YEARS · 1985–${currentYear}</div>
+                            <h2 class="h-display" style="font-size:36px;color:var(--navy);margin:0;border-bottom:3px solid var(--navy);padding-bottom:12px;">Every March</h2>
+                        </div>
+                        <div class="resume-grid">${gridCells}</div>
+                    </div>
+                </section>
+
+                <!-- LEGEND -->
+                <section style="padding:0 0 56px;">
+                    <div class="resume-legend">
+                        <span class="label-mono" style="color:var(--ink-muted);">LEGEND</span>
+                        ${legendHtml}
+                    </div>
+                </section>
+
+                ${classicsStripHtml}
             `;
         }
 
@@ -15383,12 +15489,24 @@
 
             // Show skeleton while loading
             content.innerHTML = `
-                <h2 class="section-title">Greatest Tournament Upsets</h2>
-                <div class="upsets-stats-dashboard">
-                    ${[1,2,3,4].map(() => `<div class="skeleton-card"><div class="skeleton skeleton-text skeleton-text--lg"></div><div class="skeleton skeleton-text skeleton-text--sm"></div></div>`).join('')}
+                <section style="padding:56px 0 32px;border-bottom:1px solid var(--rule-soft);">
+                    <div style="max-width:1280px;margin:0 auto;">
+                        <div class="divider-stars" style="margin-bottom:16px;">
+                            <span class="stars">★ ★</span>
+                            <span class="label-mono" style="color:var(--ink-muted);">March's most precious commodity</span>
+                            <span class="stars">★ ★</span>
+                        </div>
+                        <h1 class="h-display" style="font-size:clamp(72px,11vw,132px);color:var(--navy);line-height:0.88;margin:0;text-align:center;">UPSETS</h1>
+                        <p style="text-align:center;font-family:var(--font-serif);font-style:italic;font-size:19px;color:var(--ink-soft);max-width:720px;margin:14px auto 0;">
+                            Every time a team you'd never heard of broke a bracket. Filter by era, seed pairing, or program.
+                        </p>
+                    </div>
+                </section>
+                <div class="upsets-stats-dashboard" style="padding-top:40px;">
+                    ${[1,2,3,4].map(() => `<div class="upsets-stat-card"><div class="skeleton skeleton-text skeleton-text--sm" style="margin-bottom:8px;"></div><div class="skeleton skeleton-text skeleton-text--lg"></div><div class="skeleton skeleton-text skeleton-text--sm" style="margin-top:8px;"></div></div>`).join('')}
                 </div>
                 <div class="upsets-seed-grid">
-                    ${[1,2,3,4,5,6,7,8].map(() => `<div class="skeleton-card" style="height:100px;"><div class="skeleton skeleton-text skeleton-text--lg"></div><div class="skeleton skeleton-bar" style="margin-top:0.75rem;"></div></div>`).join('')}
+                    ${[1,2,3,4,5,6,7,8].map(() => `<div class="upsets-stat-card" style="height:100px;"><div class="skeleton skeleton-text skeleton-text--lg"></div><div class="skeleton skeleton-bar" style="margin-top:0.75rem;"></div></div>`).join('')}
                 </div>
             `;
 
@@ -15432,39 +15550,74 @@
             const funFact = UPSET_FUN_FACTS[Math.floor(Math.random() * UPSET_FUN_FACTS.length)];
 
             // Build the page
+            const upsetRate = ((totalUpsets / (154 * 8)) * 100).toFixed(1);
             let html = `
-                <h2 class="section-title">Greatest Tournament Upsets</h2>
+                <!-- HERO -->
+                <section style="padding:56px 0 32px;border-bottom:1px solid var(--rule-soft);">
+                    <div style="max-width:1280px;margin:0 auto;">
+                        <div class="divider-stars" style="margin-bottom:16px;">
+                            <span class="stars">★ ★</span>
+                            <span class="label-mono" style="color:var(--ink-muted);">March's most precious commodity</span>
+                            <span class="stars">★ ★</span>
+                        </div>
+                        <h1 class="h-display" style="font-size:clamp(72px,11vw,132px);color:var(--navy);line-height:0.88;margin:0;text-align:center;">UPSETS</h1>
+                        <p style="text-align:center;font-family:var(--font-serif);font-style:italic;font-size:19px;color:var(--ink-soft);max-width:720px;margin:14px auto 0;">
+                            Every time a team you'd never heard of broke a bracket. Filter by era, seed pairing, or program. Argue with friends.
+                        </p>
+                    </div>
+                </section>
 
-                <div class="upsets-stats-dashboard">
-                    <div class="upsets-stat-card">
-                        <div class="upsets-stat-value">${totalUpsets}</div>
-                        <div class="upsets-stat-label">First-Round Upsets Since 1985</div>
+                <!-- STATS DASHBOARD -->
+                <section style="padding:40px 0;">
+                    <div class="upsets-stats-dashboard">
+                        <div class="upsets-stat-card">
+                            <div class="upsets-stat-label">TOTAL UPSETS</div>
+                            <div class="upsets-stat-value">${totalUpsets}</div>
+                            <div class="upsets-stat-sub">since 1985 (8+ seed gap)</div>
+                        </div>
+                        <div class="upsets-stat-card">
+                            <div class="upsets-stat-label">MOST UPSET-PRONE</div>
+                            <div class="upsets-stat-value">${mostUpsetProne.label}</div>
+                            <div class="upsets-stat-sub">${mostUpsetProne.count} upsets</div>
+                        </div>
+                        <div class="upsets-stat-card">
+                            <div class="upsets-stat-label">RAREST UPSET</div>
+                            <div class="upsets-stat-value">${rarestUpset.label}</div>
+                            <div class="upsets-stat-sub">only ${rarestUpset.count} times</div>
+                        </div>
+                        <div class="upsets-stat-card">
+                            <div class="upsets-stat-label">OVERALL UPSET RATE</div>
+                            <div class="upsets-stat-value">${upsetRate}%</div>
+                            <div class="upsets-stat-sub">across all 1st-round games</div>
+                        </div>
                     </div>
-                    <div class="upsets-stat-card">
-                        <div class="upsets-stat-value">${mostUpsetProne.label}</div>
-                        <div class="upsets-stat-label">Most Upset-Prone (${mostUpsetProne.count} upsets)</div>
-                    </div>
-                    <div class="upsets-stat-card">
-                        <div class="upsets-stat-value">${rarestUpset.label}</div>
-                        <div class="upsets-stat-label">Rarest Upset (only ${rarestUpset.count} times)</div>
-                    </div>
-                    <div class="upsets-stat-card">
-                        <div class="upsets-stat-value">${((totalUpsets / (154 * 8)) * 100).toFixed(0)}%</div>
-                        <div class="upsets-stat-label">Overall Upset Rate</div>
-                    </div>
-                </div>
+                </section>
 
+                <!-- DID YOU KNOW -->
                 <div class="upsets-fun-fact">
-                    <div class="upsets-fun-fact-icon" style="width:28px;height:28px;background:#C9A86C;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:0.75rem;font-weight:800;">i</div>
-                    <div class="upsets-fun-fact-text"><strong>Did You Know?</strong> ${funFact}</div>
+                    <div class="upsets-fun-fact-icon">★</div>
+                    <div>
+                        <div class="upsets-fun-fact-label">DID YOU KNOW?</div>
+                        <div class="upsets-fun-fact-text">${funFact}</div>
+                    </div>
                 </div>
 
-                <div style="text-align:center;font-size:0.75rem;color:#8892A0;margin-bottom:0.5rem;font-style:italic;">Seed-based data since 1985 (64-team era). Full historical upsets by program strength coming soon with The Hoopsipedia Ranking.</div>
+                <div style="text-align:center;font-size:12px;color:var(--ink-muted);margin-bottom:12px;font-style:italic;font-family:var(--font-serif);">Seed-based data since 1985 (64-team era). Full historical upsets by program strength coming soon with The Hoopsipedia Ranking.</div>
 
-                <div style="display:flex;justify-content:center;gap:0.5rem;margin-bottom:1rem;">
-                    <button class="upsets-era-btn ${!window._upsetsTeamView ? 'active' : ''}" onclick="window._upsetsTeamView=false; renderUpsets();" style="font-size:0.85rem;padding:0.5rem 1.2rem;">By Seed Pairing</button>
-                    <button class="upsets-era-btn ${window._upsetsTeamView ? 'active' : ''}" onclick="window._upsetsTeamView=true; renderUpsets();" style="font-size:0.85rem;padding:0.5rem 1.2rem;">By Team</button>
-                </div>`;
+                <!-- CONTROLS: view toggle + era pills -->
+                <section style="padding:0 0 32px;">
+                    <div style="max-width:1280px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;">
+                        <div style="display:inline-flex;border:2px solid var(--navy);border-radius:4px;">
+                            <button class="h-display" style="padding:10px 22px;font-size:16px;letter-spacing:0.08em;background:${!window._upsetsTeamView ? 'var(--navy)' : 'transparent'};color:${!window._upsetsTeamView ? 'var(--cream)' : 'var(--navy)'};border:none;cursor:pointer;" onclick="window._upsetsTeamView=false; renderUpsets();">By Seed Pairing</button>
+                            <button class="h-display" style="padding:10px 22px;font-size:16px;letter-spacing:0.08em;background:${window._upsetsTeamView ? 'var(--navy)' : 'transparent'};color:${window._upsetsTeamView ? 'var(--cream)' : 'var(--navy)'};border:none;cursor:pointer;" onclick="window._upsetsTeamView=true; renderUpsets();">By Team</button>
+                        </div>
+                        <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;">
+                            <span class="label-mono" style="color:var(--ink-muted);margin-right:4px;">ERA:</span>
+                            <button class="pill upsets-era-btn ${upsetsCurrentEra === 'all' ? 'active' : ''}" onclick="upsetsCurrentEra='all'; upsetsCurrentPairing=null; renderUpsets();">All Eras</button>
+                            ${Object.entries(UPSET_ERAS).filter(([k]) => k !== 'all').map(([k, v]) => `<button class="pill upsets-era-btn ${upsetsCurrentEra === k ? 'active' : ''}" onclick="upsetsCurrentEra='${k}'; upsetsCurrentPairing=null; renderUpsets();">${v.label}</button>`).join('')}
+                        </div>
+                    </div>
+                </section>`;
 
             if (window._upsetsTeamView) {
                 html += renderUpsetTeamLeaderboards();
@@ -15473,11 +15626,7 @@
             }
 
             html += `
-                <div class="upsets-era-filters">
-                    <button class="upsets-era-btn ${upsetsCurrentEra === 'all' ? 'active' : ''}" onclick="upsetsCurrentEra='all'; upsetsCurrentPairing=null; renderUpsets();">All Eras</button>
-                    ${Object.entries(UPSET_ERAS).filter(([k]) => k !== 'all').map(([k, v]) => `<button class="upsets-era-btn ${upsetsCurrentEra === k ? 'active' : ''}" onclick="upsetsCurrentEra='${k}'; upsetsCurrentPairing=null; renderUpsets();">${v.label}</button>`).join('')}
-                    ${upsetsCurrentPairing ? `<button class="upsets-era-btn" onclick="upsetsCurrentPairing=null; document.querySelectorAll('.upsets-seed-card').forEach(c=>c.classList.remove('active')); renderUpsetDetails();" style="background:#C9A86C; color:#fff; border-color:#C9A86C;">Show All Pairings</button>` : ''}
-                </div>
+                ${upsetsCurrentPairing ? `<div style="margin-bottom:16px;"><button class="pill upsets-era-btn" onclick="upsetsCurrentPairing=null; document.querySelectorAll('.upsets-seed-card').forEach(c=>c.classList.remove('active')); renderUpsetDetails();" style="background:var(--gold); color:var(--cream); border-color:var(--gold);">← Show All Pairings</button></div>` : ''}
 
                 <div class="upsets-seed-grid">`;
 
@@ -21623,8 +21772,8 @@
             if (!run) {
                 container.innerHTML = `
                     <div style="text-align:center; padding:4rem 2rem;">
-                        <h2 style="color:#1B2A4A; margin-bottom:1rem;">Championship Run Not Found</h2>
-                        <p style="color:#6B7A8D;">We don't have a championship run page for this team and year yet.</p>
+                        <h2 class="h-display" style="color:var(--navy); margin-bottom:1rem;">Championship Run Not Found</h2>
+                        <p style="color:var(--ink-muted);font-family:var(--font-serif);font-style:italic;">We don't have a championship run page for this team and year yet.</p>
                         <a class="champ-run-back" onclick="window.location.hash='';" style="margin-top:1.5rem; display:inline-flex;">\u2190 Back to Home</a>
                     </div>`;
                 return;
@@ -21644,7 +21793,7 @@
                         <div class="champ-run-game" onclick="toggleChampBoxScore('${gameId}', '${run.espnId}', ${year}, ${idx}, event)" title="Click for box score">
                             <div class="champ-run-round">${g.round}</div>
                             <div class="champ-run-opponent">
-                                ${oppLogo ? `<div class="champ-run-opp-logo" style="background-image:url('${oppLogo}');"></div>` : '<div class="champ-run-opp-logo" style="background:#E8E2D6;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.6rem;color:#8892A0;">&nbsp;</div>'}
+                                ${oppLogo ? `<div class="champ-run-opp-logo" style="background-image:url('${oppLogo}');"></div>` : '<div class="champ-run-opp-logo" style="background:var(--cream-deep);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.6rem;color:var(--ink-muted);">&nbsp;</div>'}
                                 <div class="champ-run-opp-info">
                                     <div class="champ-run-opp-name">vs. ${g.opponent}</div>
                                     <div class="champ-run-opp-seed">#${g.oppSeed} Seed${g.note ? ' \u2022 ' + g.note : ''}</div>
@@ -21687,26 +21836,71 @@
                 </div>
             `;
 
-            container.innerHTML = `
-                <a class="champ-run-back" onclick="history.back();">\u2190 Back</a>
+            const accentColor = run.accentColor || '#14233F';
+            const teamData = findTeamByEspnId(run.espnId);
+            const teamColorHex = teamData && teamData.color ? '#' + teamData.color.replace('#','') : accentColor;
 
-                <!-- Hero -->
-                <div class="champ-run-hero" style="background: ${getHeroGradient(run.accentColor)};">
-                    <div class="champ-run-hero-logo" style="background-image:url('${logoUrl}');"></div>
-                    <div class="champ-run-hero-title">${run.heroTitle}</div>
-                    <div class="champ-run-hero-team">${run.teamName}</div>
-                    <div class="champ-run-hero-subtitle">${run.heroSubtitle}</div>
-                    ${run.vacated ? '<div style="margin-top:0.5rem;color:#C9A86C;font-size:0.85rem;font-weight:600;">* Title vacated by the NCAA</div>' : ''}
-                    <div class="champ-run-hero-accent"></div>
-                    <button onclick="copyShareUrl('championship', '${year}/${slug}')" style="
-                        margin-top: 1rem; background: rgba(201,168,108,0.15); border: 1px solid rgba(201,168,108,0.3);
-                        color: #C9A86C; padding: 0.45rem 1.2rem; border-radius: 2rem; font-size: 0.8rem; font-weight: 600;
-                        cursor: pointer; transition: background 0.2s; display: inline-flex; align-items: center; gap: 0.4rem;
-                    " onmouseover="this.style.background='rgba(201,168,108,0.25)'" onmouseout="this.style.background='rgba(201,168,108,0.15)'">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
-                        Share This Run
-                    </button>
+            container.innerHTML = `
+                <!-- Team-color hero band -->
+                <div class="champ-run-hero" style="background:${teamColorHex};">
+                    <div style="max-width:1280px;margin:0 auto;position:relative;">
+                        <a class="champ-run-back" onclick="history.back();" style="color:rgba(255,255,255,0.6);">\u2190 Back</a>
+                        <div class="divider-stars" style="margin-bottom:14px;">
+                            <span class="stars" style="color:var(--gold-brand);">\u2605 \u2605 \u2605</span>
+                            <span class="label-mono" style="color:rgba(255,255,255,0.7);">${run.heroTitle || 'NATIONAL CHAMPION \u00b7 ' + year}</span>
+                            <span class="stars" style="color:var(--gold-brand);">\u2605 \u2605 \u2605</span>
+                        </div>
+                        <div style="display:grid;grid-template-columns:120px 1fr auto;gap:32px;align-items:center;">
+                            <div class="champ-run-hero-logo" style="background-image:url('${logoUrl}');"></div>
+                            <div>
+                                <div class="h-display" style="font-size:24px;color:rgba(255,255,255,0.65);letter-spacing:0.18em;margin-bottom:8px;">THE ${year}</div>
+                                <h1 class="champ-run-hero-team">${run.teamName.toUpperCase()}</h1>
+                                <div class="champ-run-hero-subtitle">${run.heroSubtitle}</div>
+                                ${run.vacated ? '<div style="margin-top:8px;color:var(--gold-brand);font-family:var(--font-mono);font-size:11px;letter-spacing:0.08em;">* TITLE VACATED BY THE NCAA</div>' : ''}
+                            </div>
+                            <div style="text-align:center;">
+                                <div style="font-size:86px;line-height:1;color:var(--gold-brand);">\u265b</div>
+                                <div class="label-mono" style="color:var(--gold-brand);margin-top:4px;">${run.coach || 'CHAMPION'}</div>
+                            </div>
+                        </div>
+
+                        <!-- Hero stat strip -->
+                        <div class="champ-run-hero-stats">
+                            <div class="champ-run-hero-stat">
+                                <div class="label-mono" style="color:rgba(255,255,255,0.6);margin-bottom:6px;">TOURNAMENT RECORD</div>
+                                <div class="h-display" style="font-size:36px;color:#fff;line-height:1;">${run.games ? run.games.length + '\u20130' : run.stats?.record || ''}</div>
+                            </div>
+                            <div class="champ-run-hero-stat">
+                                <div class="label-mono" style="color:rgba(255,255,255,0.6);margin-bottom:6px;">AVG MARGIN</div>
+                                <div class="h-display" style="font-size:36px;color:#fff;line-height:1;">${run.stats?.avgMargin || '\u2014'}</div>
+                            </div>
+                            <div class="champ-run-hero-stat">
+                                <div class="label-mono" style="color:rgba(255,255,255,0.6);margin-bottom:6px;">SEED</div>
+                                <div class="h-display" style="font-size:36px;color:#fff;line-height:1;">#${run.stats?.seed || '?'}</div>
+                            </div>
+                            <div class="champ-run-hero-stat">
+                                <div class="label-mono" style="color:rgba(255,255,255,0.6);margin-bottom:6px;">MOP</div>
+                                <div class="h-display" style="font-size:24px;color:#fff;line-height:1.1;">${run.mop || '\u2014'}</div>
+                            </div>
+                        </div>
+
+                        <!-- Meta row -->
+                        <div class="champ-run-hero-meta">
+                            ${run.coach ? '<span><strong>Coach:</strong> ' + run.coach + '</span>' : ''}
+                            ${run.stats?.record ? '<span><strong>Record:</strong> ' + run.stats.record + '</span>' : ''}
+                            <span><strong>Seed:</strong> #${run.stats?.seed || '?'}</span>
+                        </div>
+
+                        <button onclick="copyShareUrl('championship', '${year}/${slug}')" class="btn btn-ghost" style="margin-top:20px;padding:8px 18px;font-size:12px;border-color:rgba(255,255,255,0.3);color:var(--gold-brand);">
+                            \u2605 SHARE THIS RUN
+                        </button>
+                    </div>
                 </div>
+
+                <!-- Gold rule -->
+                <div class="champ-run-hero-accent"></div>
+
+                <div style="max-width:1280px;margin:0 auto;padding:48px 28px;">
 
                 <!-- The Story -->
                 <div class="champ-run-card">
@@ -21716,16 +21910,10 @@
 
                 <!-- Tournament Path -->
                 <div class="champ-run-card">
-                    <h3>Tournament Path</h3>
+                    <h3>Game by Game</h3>
                     <div class="champ-run-path">
                         ${pathHTML}
                     </div>
-                </div>
-
-                <!-- Key Stats -->
-                <div class="champ-run-card">
-                    <h3>Key Stats</h3>
-                    ${statsHTML}
                 </div>
 
                 <!-- Championship Game Highlights -->
@@ -21745,10 +21933,9 @@
                 ` : `
                 <div class="champ-run-card">
                     <h3>Championship Game Highlights</h3>
-                    <div style="padding:2rem; text-align:center; color:#8892A0; background:#F0EDE6; border-radius:8px;">
-                        <div style="font-size:1.5rem; margin-bottom:0.5rem;">🎬</div>
-                        <div style="font-weight:600;">Video coming soon</div>
-                        <div style="font-size:0.8rem; margin-top:0.25rem;">We're working on adding championship highlights for this run.</div>
+                    <div style="padding:2rem; text-align:center; color:var(--ink-muted); background:var(--cream-deep); border-radius:var(--r-md);">
+                        <div style="font-family:var(--font-serif);font-weight:600;">Video coming soon</div>
+                        <div style="font-family:var(--font-serif);font-size:13px;font-style:italic;margin-top:4px;color:var(--ink-faint);">We're working on adding championship highlights for this run.</div>
                     </div>
                 </div>
                 `}
@@ -21760,10 +21947,12 @@
                 </div>
 
                 <!-- Team Profile Link -->
-                <div style="text-align:center; margin: 1.5rem 0 2rem;">
+                <div style="text-align:center; margin: 24px 0 48px;">
                     <a class="champ-run-profile-link" onclick="window.location.hash='#team/${teamSlug(run.teamName)}';">
-                        See full ${run.teamName} profile \u2192
+                        SEE FULL ${run.teamName.toUpperCase()} PROFILE \u2192
                     </a>
+                </div>
+
                 </div>
             `;
         }
