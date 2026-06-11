@@ -883,7 +883,7 @@ async function callClaude(messages, apiKey, tools) {
 }
 
 // ── Parse Claude SSE stream, execute tools, write to client ──
-async function handleClaudeStream(claudeBody, writer, encoder, messages, apiKey, ctx, depth = 0) {
+async function handleClaudeStream(claudeBody, writer, encoder, messages, apiKey, ctx, depth = 0, carriedText = '') {
   const MAX_TOOL_ROUNDS = 4; // Prevent runaway recursion
   const reader = claudeBody.getReader();
   const decoder = new TextDecoder();
@@ -950,10 +950,12 @@ async function handleClaudeStream(claudeBody, writer, encoder, messages, apiKey,
     reader.releaseLock();
   }
 
-  // If this is the final response (no more tool calls), stream the text to the client
+  // If this is the final response (no more tool calls), stream the text to the client.
+  // Fall back to text carried over from earlier tool rounds so an answer is never silently dropped.
   if (stopReason !== 'tool_use' || toolUseBlocks.length === 0 || depth >= MAX_TOOL_ROUNDS) {
-    if (pendingText) {
-      await writer.write(encoder.encode(`event: text\ndata: ${JSON.stringify({ text: pendingText })}\n\n`));
+    const finalText = pendingText || carriedText;
+    if (finalText) {
+      await writer.write(encoder.encode(`event: text\ndata: ${JSON.stringify({ text: finalText })}\n\n`));
     } else if (depth >= MAX_TOOL_ROUNDS && stopReason === 'tool_use') {
       await writer.write(encoder.encode(`event: text\ndata: ${JSON.stringify({ text: "That question required a lot of data lookups. Could you try breaking it into simpler questions? For example, ask about coaches first, then about a specific team." })}\n\n`));
     }
@@ -962,6 +964,16 @@ async function handleClaudeStream(claudeBody, writer, encoder, messages, apiKey,
 
   // Claude wants to use tools — execute them and continue
   if (stopReason === 'tool_use' && toolUseBlocks.length > 0 && depth < MAX_TOOL_ROUNDS) {
+    // Text before a navigateUser-only round is the answer itself (not tool narration) — flush it now.
+    // Text before data-lookup rounds stays suppressed but is carried so it can be emitted if the
+    // final round produces no text.
+    const navigateOnly = toolUseBlocks.every(t => t.name === 'navigateUser');
+    if (pendingText && navigateOnly) {
+      await writer.write(encoder.encode(`event: text\ndata: ${JSON.stringify({ text: pendingText })}\n\n`));
+      pendingText = '';
+      carriedText = '';
+    }
+
     // Build assistant message with all content blocks
     const assistantContent = [];
     if (textContent) assistantContent.push({ type: 'text', text: textContent });
@@ -994,7 +1006,7 @@ async function handleClaudeStream(claudeBody, writer, encoder, messages, apiKey,
     ];
 
     const nextStream = await callClaude(newMessages, apiKey, TOOLS);
-    await handleClaudeStream(nextStream, writer, encoder, newMessages, apiKey, ctx, depth + 1);
+    await handleClaudeStream(nextStream, writer, encoder, newMessages, apiKey, ctx, depth + 1, pendingText || carriedText);
   }
 }
 
