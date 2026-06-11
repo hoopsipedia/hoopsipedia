@@ -19,7 +19,7 @@ import urllib.request
 import urllib.error
 from datetime import datetime
 
-BASE_DIR = "/Users/joshdavis/Projects/hoopsipedia"
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 OUTPUT_FILE = os.path.join(BASE_DIR, "game_ids_bulk.json")
 PROGRESS_FILE = os.path.join(BASE_DIR, "game_ids_progress.json")
 

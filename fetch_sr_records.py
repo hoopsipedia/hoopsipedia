@@ -5,14 +5,16 @@ Updates data.json H[espnId][4] (ATW) and H[espnId][5] (ATL).
 """
 
 import json
+import os
 import re
 import time
 import urllib.request
 import urllib.error
 import sys
 
-DATA_FILE = "/Users/joshdavis/Projects/hoopsipedia/data.json"
-MAPPING_FILE = "/Users/joshdavis/Projects/hoopsipedia/espn_to_sr.json"
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+DATA_FILE = os.path.join(BASE_DIR, "data.json")
+MAPPING_FILE = os.path.join(BASE_DIR, "espn_to_sr.json")
 DELAY = 4  # seconds between requests
 RETRY_DELAY = 30  # seconds after 429
 MAX_RETRIES = 3  # retry up to 3 times on 429

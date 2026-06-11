@@ -33,10 +33,17 @@ games.json
 backups/
 
 # Runtime logs
+logs/
+*.log
 sync_log.txt
 boxscore_scrape_log.txt
+scrape_chain_log.txt
+scrape_log_batch1.txt
 
 # Intermediate scrape data
 scraped_boxscores_raw.json
 boxscore_urls.json
 games_to_scrape.json
+_scrape_interim_*.json
+_sr_audit.json
+game_ids_progress.json

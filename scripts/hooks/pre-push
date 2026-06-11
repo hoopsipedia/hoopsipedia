@@ -1,0 +1,72 @@
+#!/bin/bash
+# Pre-push hook: validate index.html has no JS syntax errors
+# This prevents pushing broken code that crashes the entire site
+# DO NOT BYPASS WITH --no-verify — if this fails, FIX THE CODE
+
+# Load nvm if available (needed for node in non-interactive shells)
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+
+echo "🔍 Running pre-push validation..."
+
+# Write validation script to temp file to avoid bash escaping issues
+TMPFILE=$(mktemp /tmp/hoops-validate-XXXXXX.js)
+cat > "$TMPFILE" << 'JSEOF'
+const fs = require('fs');
+const vm = require('vm');
+const html = fs.readFileSync('index.html', 'utf8');
+
+// Extract inline script blocks
+const scripts = [];
+let idx = 0;
+while (true) {
+    const start = html.indexOf('<script', idx);
+    if (start === -1) break;
+    const startTag = html.indexOf('>', start);
+    const end = html.indexOf('</script>', startTag);
+    if (startTag === -1 || end === -1) break;
+    const tag = html.substring(start, startTag + 1);
+    if (!tag.includes('src=') && !tag.includes('type="application/json"') && !tag.includes("type='application/json'")) {
+        scripts.push({ code: html.substring(startTag + 1, end), line: html.substring(0, start).split('\n').length });
+    }
+    idx = end + 9;
+}
+
+let errors = 0;
+for (const s of scripts) {
+    try {
+        vm.createScript(s.code, { filename: 'index.html' });
+    } catch(e) {
+        errors++;
+        const errLine = e.lineNumber ? (s.line + e.lineNumber - 1) : s.line;
+        console.error('❌ JS Syntax Error near line ' + errLine + ': ' + e.message);
+    }
+}
+
+if (errors > 0) {
+    console.error('\n❌ Found ' + errors + ' syntax error(s). Push blocked.');
+    console.error('⚠️  DO NOT use --no-verify to bypass this check. Fix the code instead.');
+    process.exit(1);
+} else {
+    console.log('✅ JavaScript syntax check passed');
+}
+JSEOF
+
+node --max-old-space-size=8192 "$TMPFILE"
+RESULT=$?
+rm -f "$TMPFILE"
+if [ $RESULT -ne 0 ]; then exit 1; fi
+
+# Verify data.json is valid JSON
+node -e "JSON.parse(require('fs').readFileSync('data.json','utf8')); console.log('✅ data.json is valid JSON');" || { echo "❌ data.json is invalid JSON"; exit 1; }
+
+# Verify h2h.json is valid JSON
+node -e "JSON.parse(require('fs').readFileSync('h2h.json','utf8')); console.log('✅ h2h.json is valid JSON');" || { echo "❌ h2h.json is invalid JSON"; exit 1; }
+
+# Verify games files are valid JSON
+for f in games_1.json games_2.json games_3.json; do
+    node -e "JSON.parse(require('fs').readFileSync('$f','utf8')); console.log('✅ $f is valid JSON');" || { echo "❌ $f is invalid JSON"; exit 1; }
+done
+
+echo ""
+echo "✅ All pre-push checks passed. Pushing..."
