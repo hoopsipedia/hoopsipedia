@@ -26,6 +26,7 @@ def save_json_atomic(path, obj, **dump_kwargs):
             json.dump(obj, f, **dump_kwargs)
             f.flush()
             os.fsync(f.fileno())
+        os.chmod(tmp_path, 0o644)  # mkstemp defaults to 0600; match sibling data files
         os.replace(tmp_path, path)
     except BaseException:
         try:
