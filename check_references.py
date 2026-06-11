@@ -17,7 +17,7 @@ class ReferenceChecker:
     """Check Sports Reference team pages."""
 
     BASE_URL = "https://www.sports-reference.com/cbb/schools"
-    MIN_INTERVAL = 3.0  # Rate limit
+    MIN_INTERVAL = 4.0  # Rate limit (SR floor — keep >= 4s)
 
     def __init__(self):
         self.data_dir = Path(__file__).parent
@@ -28,8 +28,8 @@ class ReferenceChecker:
         self.last_request = 0
 
     def load_mapping(self) -> Dict[str, str]:
-        """Load slug mapping."""
-        mapping_file = self.data_dir / 'slug_mapping.json'
+        """Load the canonical ESPN ID → Sports Reference slug mapping."""
+        mapping_file = self.data_dir / 'espn_to_sr.json'
         if not mapping_file.exists():
             return {}
         with open(mapping_file) as f:
@@ -223,7 +223,7 @@ def main():
         slug = checker.suggest_slug(team_name)
         print(f"Team name: {team_name}")
         print(f"Suggested slug: {slug}")
-        print(f"\nAdd to slug_mapping.json:")
+        print(f"\nAdd to espn_to_sr.json:")
         print(f'  "XXX": "{slug}"')
     else:
         print(f"Unknown command: {command}")

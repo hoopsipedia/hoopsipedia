@@ -1,28 +1,29 @@
 #!/usr/bin/env python3
 """
-Sports Reference Box Score Scraper for Hoopsipedia.
+Sports Reference Box Score Scraper for Hoopsipedia — single entry point.
+
+Covers ALL year ranges (pre-2005 and modern). Shared fetching/parsing lives in
+sr_parser.py (BeautifulSoup-based). Replaces the deprecated scrape_sr_boxscores.py
+and scrape_modern_boxscores.py.
 
 Scrapes box scores from sports-reference.com and outputs structured JSON
 matching the sr_boxscores.json format. Can scrape:
   1. Individual box score pages by URL
-  2. All tournament games for a given year
-  3. All games from a tournament bracket page
+  2. All tournament games for a given year (works for any year SR has brackets,
+     including pre-2005 — this supersedes the old date-guessing approach)
+  3. A pre-mapped URL list (boxscore_urls.json format, the old "modern" mode),
+     with a 404 fallback that finds the game via the team's schedule page
 
 Usage:
     python scrape_boxscores.py --year 1992                    # All 1992 tournament games
     python scrape_boxscores.py --years 1985-2001              # All pre-ESPN tournament years
     python scrape_boxscores.py --url URL                      # Single box score page
-    python scrape_boxscores.py --championship 1992/duke       # All games for a championship run
+    python scrape_boxscores.py --urls-file boxscore_urls.json # Pre-mapped game URLs (old modern mode)
     python scrape_boxscores.py --output my_boxscores.json     # Custom output file
 """
 
-import json
-import time
-import re
 import argparse
 import sys
-import os
-from pathlib import Path
 from datetime import datetime
 
 # Force unbuffered output so logs appear in real-time
@@ -36,339 +37,44 @@ except ImportError:
     print("ERROR: requests and beautifulsoup4 required. Run: pip install requests beautifulsoup4")
     sys.exit(1)
 
-from json_io import save_json_atomic
-
-DATA_DIR = Path(__file__).parent
-MIN_REQUEST_INTERVAL = 4.0  # seconds between requests to SR
-SR_BASE = "https://www.sports-reference.com/cbb"
-
-# SR school abbreviations → full slug mapping (built dynamically)
-SR_ABBREV_TO_SLUG = {}
-
-
-def load_json(filename):
-    path = DATA_DIR / filename
-    if path.exists():
-        with open(path) as f:
-            return json.load(f)
-    return {}
+from sr_parser import (
+    MIN_REQUEST_INTERVAL,
+    SRFetcher,
+    find_alt_boxscore_url,
+    get_tournament_boxscore_urls,
+    load_json,
+    parse_boxscore_html,
+    save_json,
+    url_to_game_key,
+)
 
 
-def save_json(filename, data):
-    path = DATA_DIR / filename
-    save_json_atomic(path, data, indent=2, ensure_ascii=False)
-    print(f"  Saved {len(data)} entries to {filename}")
+def _strip_internal_keys(boxscore_data):
+    """Remove parser-internal keys (sr_slug) so saved output keeps the
+    established sr_boxscores.json shape."""
+    if boxscore_data:
+        for team in boxscore_data.get('teams', []):
+            team.pop('sr_slug', None)
+    return boxscore_data
 
 
 class BoxScoreScraper:
-    """Scrapes box scores from Sports Reference."""
+    """Scrapes box scores from Sports Reference via the shared sr_parser library."""
 
     def __init__(self, delay=MIN_REQUEST_INTERVAL):
-        self.session = requests.Session()
-        self.session.headers.update({
-            'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) '
-                          'AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3 Safari/605.1.15'
-        })
-        self.delay = delay
-        self.last_request_time = 0
-        self.request_count = 0
+        self.fetcher = SRFetcher(delay=delay)
         self.errors = []
 
-    def _rate_limit(self):
-        elapsed = time.time() - self.last_request_time
-        if elapsed < self.delay:
-            time.sleep(self.delay - elapsed)
-        self.last_request_time = time.time()
-
-    def _fetch(self, url, retries=5):
-        """Fetch a URL with rate limiting and retries."""
-        self._rate_limit()
-        self.request_count += 1
-
-        for attempt in range(retries):
-            try:
-                resp = self.session.get(url, timeout=30)
-                if resp.status_code == 429:
-                    # Use Retry-After header if available, otherwise escalate
-                    retry_after = resp.headers.get('Retry-After')
-                    if retry_after:
-                        wait = int(retry_after) + 5  # Add 5s buffer
-                        print(f"    429 rate limited, Retry-After: {retry_after}s, waiting {wait}s...")
-                    else:
-                        wait = 90 * (attempt + 1)
-                        print(f"    429 rate limited, waiting {wait}s...")
-                    time.sleep(wait)
-                    # Reset delay timer after long wait
-                    self.last_request_time = time.time()
-                    continue
-                if resp.status_code == 404:
-                    print(f"    404 not found: {url}")
-                    return None
-                if resp.status_code != 200:
-                    print(f"    HTTP {resp.status_code}: {url}")
-                    if attempt < retries - 1:
-                        time.sleep(15)
-                    continue
-                return resp
-            except requests.exceptions.RequestException as e:
-                print(f"    Request error (attempt {attempt+1}): {e}")
-                if attempt < retries - 1:
-                    time.sleep(15)
-        return None
+    @property
+    def request_count(self):
+        return self.fetcher.request_count
 
     def parse_boxscore_page(self, url):
-        """Parse a single SR box score page into structured JSON."""
-        resp = self._fetch(url)
-        if not resp:
+        """Fetch and parse a single SR box score page into structured JSON."""
+        html = self.fetcher.fetch_text(url)
+        if not html:
             return None
-
-        soup = BeautifulSoup(resp.text, 'html.parser')
-
-        # Get teams and scores from scorebox
-        scorebox = soup.find(class_='scorebox')
-        if not scorebox:
-            print(f"    No scorebox found on {url}")
-            return None
-
-        team_divs = scorebox.find_all('div', recursive=False)
-        teams_data = []
-
-        for div in team_divs[:2]:
-            team_info = {}
-            # Team name
-            strong = div.find('strong')
-            if strong:
-                link = strong.find('a')
-                team_info['name'] = link.text.strip() if link else strong.text.strip()
-                if link and link.get('href'):
-                    # Extract SR slug from href like /cbb/schools/connecticut/2024.html
-                    href = link['href']
-                    slug_match = re.search(r'/schools/([^/]+)/', href)
-                    if slug_match:
-                        team_info['sr_slug'] = slug_match.group(1)
-
-            # Score
-            score_div = div.find(class_='score')
-            if score_div:
-                try:
-                    team_info['score'] = int(score_div.text.strip())
-                except ValueError:
-                    team_info['score'] = 0
-
-            teams_data.append(team_info)
-
-        if len(teams_data) < 2:
-            print(f"    Could not find 2 teams on {url}")
-            return None
-
-        # Parse basic box score tables
-        result = {"source": "sports-reference", "teams": []}
-
-        for team_data in teams_data:
-            sr_slug = team_data.get('sr_slug', '')
-            team_entry = {
-                "name": team_data.get('name', 'Unknown'),
-                "score": team_data.get('score', 0),
-                "players": [],
-                "totals": {}
-            }
-
-            # Find the basic box score table for this team
-            table_id = f'box-score-basic-{sr_slug}'
-            table = soup.find('table', id=table_id)
-
-            if not table:
-                # Try finding by partial match
-                for t in soup.find_all('table'):
-                    tid = t.get('id', '')
-                    if tid.startswith('box-score-basic-') and sr_slug in tid:
-                        table = t
-                        break
-
-            if not table:
-                # Last resort: match by team name in table
-                print(f"    Warning: No table found for {sr_slug}, trying fallback...")
-                result['teams'].append(team_entry)
-                continue
-
-            # Parse header to get column indices
-            thead = table.find('thead')
-            if not thead:
-                result['teams'].append(team_entry)
-                continue
-
-            header_rows = thead.find_all('tr')
-            # Use the last header row (has actual stat names)
-            stat_headers = [th.text.strip() for th in header_rows[-1].find_all('th')]
-
-            # Parse player rows
-            tbody = table.find('tbody')
-            if tbody:
-                for row in tbody.find_all('tr'):
-                    # Skip separator rows
-                    if 'class' in row.attrs and 'thead' in ' '.join(row.get('class', [])):
-                        continue
-
-                    cells = row.find_all(['th', 'td'])
-                    if len(cells) < 5:
-                        continue
-
-                    player_name = cells[0].text.strip()
-
-                    # Skip "Team Totals" row — handle separately
-                    if 'Totals' in player_name or 'Team' in player_name:
-                        continue
-
-                    # Skip "Reserves" header
-                    if player_name in ('Reserves', 'Starters', ''):
-                        continue
-
-                    player = {"name": player_name}
-
-                    # Map columns to stats
-                    for i, cell in enumerate(cells[1:], 1):
-                        if i < len(stat_headers):
-                            header = stat_headers[i]
-                            val = cell.text.strip()
-
-                            if header == 'MP':
-                                try:
-                                    player['min'] = int(val) if val else 0
-                                except ValueError:
-                                    # Handle MM:SS format
-                                    if ':' in val:
-                                        parts = val.split(':')
-                                        player['min'] = int(parts[0])
-                                    else:
-                                        player['min'] = 0
-                            elif header == 'PTS':
-                                player['pts'] = int(val) if val and val != '' else 0
-                            elif header == 'FG':
-                                fg = val
-                                # Get FGA from next column
-                                fga_idx = i + 1
-                                if fga_idx - 1 < len(cells) - 1:
-                                    fga = cells[fga_idx].text.strip()
-                                    player['fg'] = f"{fg}-{fga}" if fg and fga else "0-0"
-                            elif header == '3P':
-                                tp = val
-                                tpa_idx = i + 1
-                                if tpa_idx - 1 < len(cells) - 1:
-                                    tpa = cells[tpa_idx].text.strip()
-                                    player['tp'] = f"{tp}-{tpa}" if tp and tpa else "0-0"
-                            elif header == 'FT':
-                                ft = val
-                                fta_idx = i + 1
-                                if fta_idx - 1 < len(cells) - 1:
-                                    fta = cells[fta_idx].text.strip()
-                                    player['ft'] = f"{ft}-{fta}" if ft and fta else "0-0"
-                            elif header == 'TRB':
-                                player['reb'] = int(val) if val and val != '' else 0
-                            elif header == 'AST':
-                                player['ast'] = int(val) if val and val != '' else 0
-                            elif header == 'STL':
-                                player['stl'] = int(val) if val and val != '' else 0
-                            elif header == 'BLK':
-                                player['blk'] = int(val) if val and val != '' else 0
-                            elif header == 'TOV':
-                                player['to'] = int(val) if val and val != '' else 0
-
-                    team_entry['players'].append(player)
-
-            # Parse totals from tfoot
-            tfoot = table.find('tfoot')
-            if tfoot:
-                totals_row = tfoot.find('tr')
-                if totals_row:
-                    cells = totals_row.find_all(['th', 'td'])
-                    totals = {}
-                    for i, cell in enumerate(cells[1:], 1):
-                        if i < len(stat_headers):
-                            header = stat_headers[i]
-                            val = cell.text.strip()
-                            if header == 'FG':
-                                fga_idx = i + 1
-                                if fga_idx - 1 < len(cells) - 1:
-                                    fga = cells[fga_idx].text.strip()
-                                    totals['fg'] = f"{val}-{fga}"
-                            elif header == '3P':
-                                tpa_idx = i + 1
-                                if tpa_idx - 1 < len(cells) - 1:
-                                    tpa = cells[tpa_idx].text.strip()
-                                    totals['tp'] = f"{val}-{tpa}"
-                            elif header == 'FT':
-                                fta_idx = i + 1
-                                if fta_idx - 1 < len(cells) - 1:
-                                    fta = cells[fta_idx].text.strip()
-                                    totals['ft'] = f"{val}-{fta}"
-                            elif header == 'TRB':
-                                totals['reb'] = int(val) if val else 0
-                            elif header == 'AST':
-                                totals['ast'] = int(val) if val else 0
-
-                    team_entry['totals'] = totals
-
-            result['teams'].append(team_entry)
-
-        return result
-
-    def get_tournament_boxscore_urls(self, year):
-        """Get all box score URLs from a tournament bracket page."""
-        url = f"{SR_BASE}/postseason/men/{year}-ncaa.html"
-        print(f"  Fetching tournament bracket: {url}")
-        resp = self._fetch(url)
-        if not resp:
-            # Try alternate URL format
-            url = f"{SR_BASE}/postseason/{year}-ncaa.html"
-            print(f"  Trying alternate: {url}")
-            resp = self._fetch(url)
-            if not resp:
-                return []
-
-        soup = BeautifulSoup(resp.text, 'html.parser')
-        links = soup.find_all('a', href=True)
-
-        boxscore_urls = set()
-        for link in links:
-            href = link['href']
-            if '/boxscores/' in href and href.endswith('.html') and href != '/cbb/boxscores/':
-                full_url = f"https://www.sports-reference.com{href}" if href.startswith('/') else href
-                boxscore_urls.add(full_url)
-
-        urls = sorted(boxscore_urls)
-        print(f"  Found {len(urls)} box score URLs for {year}")
-        return urls
-
-    def url_to_game_key(self, url, boxscore_data):
-        """Convert a box score URL + data to a game key like 2024/winner-slug-vs-loser-slug."""
-        if not boxscore_data or not boxscore_data.get('teams') or len(boxscore_data['teams']) < 2:
-            return None
-
-        # Extract year from URL
-        match = re.search(r'/boxscores/(\d{4})-', url)
-        if not match:
-            return None
-        year = match.group(1)
-
-        t1 = boxscore_data['teams'][0]
-        t2 = boxscore_data['teams'][1]
-
-        # Determine winner/loser
-        if t1['score'] >= t2['score']:
-            winner, loser = t1, t2
-        else:
-            winner, loser = t2, t1
-
-        def name_to_slug(name):
-            slug = name.lower()
-            slug = re.sub(r'[^a-z0-9\s-]', '', slug)
-            slug = re.sub(r'\s+', '-', slug.strip())
-            return slug
-
-        winner_slug = name_to_slug(winner['name'])
-        loser_slug = name_to_slug(loser['name'])
-
-        return f"{year}/{winner_slug}-vs-{loser_slug}"
+        return parse_boxscore_html(html, url=url)
 
     def scrape_tournament_year(self, year, existing_keys=None, output_file=None):
         """Scrape all box scores for a tournament year. Returns dict of game_key → boxscore.
@@ -376,7 +82,7 @@ class BoxScoreScraper:
         existing_keys = existing_keys or set()
         results = {}
 
-        urls = self.get_tournament_boxscore_urls(year)
+        urls = get_tournament_boxscore_urls(self.fetcher, year)
         if not urls:
             print(f"  No URLs found for {year}")
             return results
@@ -396,7 +102,7 @@ class BoxScoreScraper:
                 continue
 
             # Generate game key
-            key = self.url_to_game_key(url, data)
+            key = url_to_game_key(url, data)
             if not key:
                 print(f"    Could not generate key for {url}")
                 continue
@@ -405,6 +111,7 @@ class BoxScoreScraper:
                 print(f"    SKIP (already have): {key}")
                 continue
 
+            _strip_internal_keys(data)
             results[key] = data
             existing_keys.add(key)
             print(f"    OK: {key} ({data['teams'][0]['name']} {data['teams'][0]['score']} - {data['teams'][1]['name']} {data['teams'][1]['score']})")
@@ -420,7 +127,7 @@ class BoxScoreScraper:
         return results
 
     def _incremental_save(self, output_file, new_data):
-        """Merge new data into output file and save."""
+        """Merge new data into output file and save (atomic via save_json)."""
         existing = load_json(output_file)
         merged = {**existing, **new_data}
         merged['_metadata'] = {
@@ -434,28 +141,155 @@ class BoxScoreScraper:
         """Scrape a single box score URL."""
         data = self.parse_boxscore_page(url)
         if data:
-            key = self.url_to_game_key(url, data)
+            key = url_to_game_key(url, data)
+            _strip_internal_keys(data)
             return {key: data} if key else {}
         return {}
 
+    def scrape_urls_file(self, urls_file, output_file, limit=0, start=0):
+        """Scrape pre-mapped game URLs (boxscore_urls.json format) — the old
+        scrape_modern_boxscores.py mode, now using the BeautifulSoup parser.
+
+        Each game entry needs: key, year, matchup, score, boxscore_url,
+        winner_slug, loser_slug, winner_full, loser_full, winner_seed, loser_seed.
+        Falls back to schedule-page lookup if the box score URL 404s.
+        Saves incrementally (atomic) after each successful scrape.
+        """
+        output = load_json(output_file)
+        if output:
+            print(f"Loaded {len(output)} existing entries")
+
+        games = load_json(urls_file)
+        if not games:
+            print(f"ERROR: no games found in {urls_file}")
+            return {}
+
+        print(f"Total games to scrape: {len(games)}")
+
+        scraped = 0
+        new_data = {}
+
+        for i, game in enumerate(games):
+            if i < start:
+                continue
+
+            key = game["key"]
+            if key in output:
+                continue
+
+            if limit and scraped >= limit:
+                break
+
+            url = game["boxscore_url"]
+            print(f"\n[{i+1}/{len(games)}] {key}")
+            print(f"  URL: {url}")
+
+            html = self.fetcher.fetch_text(url)
+
+            if not html:
+                # Try alternate URL via schedule-page lookup (404 fallback)
+                print(f"  404, trying schedule lookup...")
+                alt_url = find_alt_boxscore_url(self.fetcher, game["loser_slug"], game["year"])
+                if alt_url:
+                    print(f"  Alt URL: {alt_url}")
+                    html = self.fetcher.fetch_text(alt_url)
+                    if html:
+                        url = alt_url
+
+            if not html:
+                print(f"  FAILED")
+                self.errors.append((key, 'fetch failed'))
+                continue
+
+            data = parse_boxscore_html(html, url=url)
+            if not data or len(data.get('teams', [])) < 2:
+                print(f"  FAILED: no box score tables")
+                self.errors.append((key, 'parse failed'))
+                continue
+
+            # Attach seeds/names from the game record, matched by SR slug
+            score_parts = game["score"].split("-")
+            w_score, l_score = int(score_parts[0]), int(score_parts[1])
+            ws, ls = game["winner_slug"], game["loser_slug"]
+
+            teams_out = []
+            for t in data['teams']:
+                slug = t.get('sr_slug', '')
+                if slug:
+                    is_winner = (slug == ws or ws in slug or slug in ws)
+                else:
+                    # No slug parsed — fall back to score comparison
+                    is_winner = t.get('score', 0) == w_score
+
+                teams_out.append({
+                    "name": game["winner_full"] if is_winner else game["loser_full"],
+                    "seed": game["winner_seed"] if is_winner else game["loser_seed"],
+                    "score": w_score if is_winner else l_score,
+                    "players": t.get('players', []),
+                    "totals": t.get('totals', {}),
+                })
+
+            output[key] = {
+                "source": "sports-reference",
+                "url": url,
+                "year": game["year"],
+                "matchup": game["matchup"],
+                "teams": teams_out,
+            }
+            new_data[key] = output[key]
+
+            scraped += 1
+            nplayers = sum(len(t["players"]) for t in teams_out)
+            print(f"  OK: {len(teams_out)} teams, {nplayers} players")
+
+            # Save after each game (atomic)
+            save_json(output_file, output)
+
+        save_json(output_file, output)
+
+        print(f"\n{'='*60}")
+        print(f"Scraped: {scraped} new | Total: {len(output)}")
+        return new_data
+
 
 def main():
-    parser = argparse.ArgumentParser(description='Scrape box scores from Sports Reference')
+    parser = argparse.ArgumentParser(description='Scrape box scores from Sports Reference (all year ranges)')
     parser.add_argument('--year', type=int, help='Scrape all tournament games for a specific year')
     parser.add_argument('--years', type=str, help='Year range like 1985-2001')
     parser.add_argument('--url', type=str, help='Scrape a single box score URL')
-    parser.add_argument('--output', type=str, default='sr_boxscores.json', help='Output file')
-    parser.add_argument('--delay', type=float, default=MIN_REQUEST_INTERVAL, help='Seconds between requests')
+    parser.add_argument('--urls-file', type=str, help='Pre-mapped game URL list (boxscore_urls.json format)')
+    parser.add_argument('--output', type=str, default=None,
+                        help='Output file (default: sr_boxscores.json; sr_boxscores_modern.json with --urls-file)')
+    parser.add_argument('--delay', type=float, default=MIN_REQUEST_INTERVAL,
+                        help=f'Seconds between requests (floor: {MIN_REQUEST_INTERVAL})')
+    parser.add_argument('--limit', type=int, default=0, help='Max games to scrape (--urls-file mode)')
+    parser.add_argument('--start', type=int, default=0, help='Start index (--urls-file mode)')
     parser.add_argument('--dry-run', action='store_true', help='Only list URLs, don\'t scrape')
     args = parser.parse_args()
 
-    # Load existing data
-    existing = load_json(args.output)
-    existing_keys = set(k for k in existing.keys() if k != '_metadata')
-    print(f"Existing box scores: {len(existing_keys)}")
+    # Default output: keep the historical per-mode files
+    if args.output is None:
+        args.output = 'sr_boxscores_modern.json' if args.urls_file else 'sr_boxscores.json'
 
     scraper = BoxScoreScraper(delay=args.delay)
     new_data = {}
+
+    if args.urls_file:
+        print(f"Scraping pre-mapped URLs from: {args.urls_file}")
+        new_data = scraper.scrape_urls_file(args.urls_file, args.output,
+                                            limit=args.limit, start=args.start)
+        # scrape_urls_file saves incrementally itself
+        if scraper.errors:
+            print(f"\n{len(scraper.errors)} errors:")
+            for key, err in scraper.errors:
+                print(f"  {key}: {err}")
+        print(f"Total requests: {scraper.request_count}")
+        return
+
+    # Load existing data (tournament/single-URL modes)
+    existing = load_json(args.output)
+    existing_keys = set(k for k in existing.keys() if k != '_metadata')
+    print(f"Existing box scores: {len(existing_keys)}")
 
     if args.url:
         print(f"Scraping single URL: {args.url}")

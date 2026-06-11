@@ -75,6 +75,7 @@ Copy the tarball off-machine (cloud drive / external disk) — a local backup do
 
 ## Documentation
 
+- `docs/DEPLOY.md` — deploy & operations runbook
 - `ROADMAP.md` — feature roadmap and status
 - `VISION.md` — project mission
 - `DATA_AUDIT.md` — data verification against the NCAA record book

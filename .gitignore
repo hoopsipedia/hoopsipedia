@@ -32,6 +32,9 @@ games.json
 # Local backups
 backups/
 
+# Archived code (preserved in git history; excluded so it doesn't deploy)
+archive/
+
 # Runtime logs
 logs/
 *.log

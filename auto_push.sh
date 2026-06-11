@@ -39,10 +39,15 @@ print(f'Split: {len(data)} teams, {games} games')
         git commit -m "Auto-update: $CURRENT teams scraped ($DIFF new since last push)
 
 Co-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>"
-        git push origin main
-        
-        LAST_COUNT=$CURRENT
-        echo "$(date): Pushed $CURRENT teams live"
+        if git push origin main; then
+            LAST_COUNT=$CURRENT
+            echo "$(date): Pushed $CURRENT teams live"
+        else
+            # Push failed (network, pre-push hook, remote rejection, ...).
+            # Do NOT exit, do NOT force, NEVER --no-verify — the commit is local,
+            # so leave LAST_COUNT unchanged and retry on the next cycle.
+            echo "$(date): ERROR — git push failed for $CURRENT teams; will retry next cycle" >&2
+        fi
     fi
     
     # Check if scrapes are still running
@@ -66,7 +71,12 @@ with open('games_2.json', 'w') as f:
             git commit -m "Final scrape update: $CURRENT teams total
 
 Co-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>"
-            git push origin main
+            if ! git push origin main; then
+                # Final push failed — keep the monitor alive so it retries next
+                # cycle instead of exiting with unpushed work.
+                echo "$(date): ERROR — final git push failed; will retry next cycle" >&2
+                continue
+            fi
         fi
         echo "$(date): All scrapes complete. Exiting monitor."
         exit 0

@@ -6142,6 +6142,22 @@
         let netSortField = 'rank';
         let netSortDir = 'asc';
 
+        // ── SEASON ROLLOVER: update this block each November ──
+        // Single source of truth for the current season. Every season-dependent
+        // calculation, ESPN API URL, and tournament date below references this.
+        const SEASON_CONFIG = {
+            currentSeasonStartYear: 2025,
+            currentSeasonEndYear: 2026,
+            espnSeasonId: 2026,
+            seasonCutoverISO: '2025-09-01',
+            tournament: {
+                year: 2026,
+                startDate: '20260317',
+                endDate: '20260406',
+                championshipDateText: 'April 7, 2026'
+            }
+        };
+
         // Redirect query-param share URLs to hash routes (for real browsers, not crawlers)
         (function redirectShareUrl() {
             const params = new URLSearchParams(window.location.search);
@@ -7072,7 +7088,7 @@
             const message = `${winnerSeed}-seed ${winnerName} stuns ${loserSeed}-seed ${loserName}!`;
             const wSlug = winnerName.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
             const lSlug = loserName.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
-            const gameLink = `#game/2026/${wSlug}-vs-${lSlug}`;
+            const gameLink = `#game/${SEASON_CONFIG.tournament.year}/${wSlug}-vs-${lSlug}`;
             const data = {
                 team: winnerName,
                 color: color,
@@ -7466,9 +7482,9 @@
                             console.log(`${winnerTeam.name} advances to Championship Game`);
                         } else if (roundNote.includes('championship') || roundNote.includes('national final') || roundNote.includes('title game')) {
                             if (!winnerTeam.champYears) winnerTeam.champYears = [];
-                            if (!winnerTeam.champYears.includes(2026)) {
+                            if (!winnerTeam.champYears.includes(SEASON_CONFIG.tournament.year)) {
                                 winnerTeam.natlChamps = (winnerTeam.natlChamps || 0) + 1;
-                                winnerTeam.champYears.push(2026);
+                                winnerTeam.champYears.push(SEASON_CONFIG.tournament.year);
                             }
                             console.log(`${winnerTeam.name} wins National Championship!`);
                         }
@@ -7581,7 +7597,7 @@
                                     espnId: String(winnerTeamObj.id),
                                     time: Date.now(),
                                     message: champMsg,
-                                    gameLink: `#championship/2026/${wSlug}`,
+                                    gameLink: `#championship/${SEASON_CONFIG.tournament.year}/${wSlug}`,
                                     seedDiff: 99 // Ensures nothing can override the championship takeover
                                 };
                                 localStorage.setItem('upsetTakeover', JSON.stringify(champData));
@@ -8082,7 +8098,7 @@
                 switchView('championshipRun', true);
                 renderChampionshipRun(champMatch[1], champMatch[2]);
                 // Fire confetti on championship journey page if within 72-hour window
-                if (champMatch[1] === '2026') maybeShowChampConfetti();
+                if (champMatch[1] === String(SEASON_CONFIG.tournament.year)) maybeShowChampConfetti();
                 _skipHashUpdate = false;
                 return;
             }
@@ -9723,7 +9739,7 @@
                                             var _nattys = _champTeam ? (_champTeam.natlChamps || 0) : 0;
                                             var _ordSuffix = (function(n) { var s = ['th','st','nd','rd']; var v = n % 100; return n + (s[(v-20)%10]||s[v]||s[0]); })(_nattys);
                                             var _champSlug = (winner.team?.displayName || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
-                                            return '<div class="game-context-badge clickable" style="background:#FFF8E1;border-color:#C9A86C;color:#8B6914;cursor:pointer;" onclick="event.stopPropagation(); window.location.hash=\'#championship/2026/' + _champSlug + '\';" title="View Championship Journey">🏆 ' + wName + ' wins their ' + _ordSuffix + ' national championship!</div>';
+                                            return '<div class="game-context-badge clickable" style="background:#FFF8E1;border-color:#C9A86C;color:#8B6914;cursor:pointer;" onclick="event.stopPropagation(); window.location.hash=\'#championship/' + SEASON_CONFIG.tournament.year + '/' + _champSlug + '\';" title="View Championship Journey">🏆 ' + wName + ' wins their ' + _ordSuffix + ' national championship!</div>';
                                         }
                                         // Default final: just show winner
                                         return '<div class="game-context-badge">' + wName + ' advances</div>';
@@ -12099,7 +12115,7 @@
         function computeTrajectories(windowYears) {
             if (!HTSS_V2_DATA || !HTSS_V2_DATA.byTeam || !SEASONS_DATA) return { rising: [], falling: [] };
 
-            const currentYear = 2026;
+            const currentYear = SEASON_CONFIG.currentSeasonEndYear;
             const recentStart = currentYear - windowYears;
             const priorStart = recentStart - windowYears;
             const results = [];
@@ -12333,7 +12349,7 @@
             }
             let bpiMap = {};
             try {
-                const bpiResp = await fetch('https://sports.core.api.espn.com/v2/sports/basketball/leagues/mens-college-basketball/seasons/2026/powerindex?limit=400');
+                const bpiResp = await fetch(`https://sports.core.api.espn.com/v2/sports/basketball/leagues/mens-college-basketball/seasons/${SEASON_CONFIG.espnSeasonId}/powerindex?limit=400`);
                 const bpiData = await bpiResp.json();
                 for (const item of (bpiData.items || [])) {
                     const ref = item.team?.$ref || '';
@@ -12391,7 +12407,7 @@
             const games = Array.isArray(teamData) ? teamData : (teamData.games || []);
             if (!games.length) return q;
             // Only consider current season games (2025-26)
-            const currentSeasonGames = games.filter(g => g.date && g.date >= '2025-09-01');
+            const currentSeasonGames = games.filter(g => g.date && g.date >= SEASON_CONFIG.seasonCutoverISO);
             for (const game of currentSeasonGames) {
                 // Skip unplayed/scheduled games (no score yet)
                 if ((!game.pts && game.pts !== 0) || (game.pts === 0 && game.opp_pts === 0)) continue;
@@ -12636,7 +12652,7 @@
                 return;
             }
             const games = Array.isArray(teamData) ? teamData : (teamData.games || []);
-            const currentSeasonGames = games.filter(g => g.date && g.date >= '2025-09-01');
+            const currentSeasonGames = games.filter(g => g.date && g.date >= SEASON_CONFIG.seasonCutoverISO);
 
             // Classify and filter to requested quad
             const quadGames = [];
@@ -13301,7 +13317,7 @@
             const teamInfoPromise = fetch(`https://site.api.espn.com/apis/site/v2/sports/basketball/mens-college-basketball/teams/${team.espnId}`)
                 .then(r => r.json()).catch(() => ({}));
 
-            const currentYear = 2026;
+            const currentYear = SEASON_CONFIG.currentSeasonEndYear;
             const startYear = 2002;
             const years = [];
             for (let y = startYear; y < currentYear; y++) years.push(y);
@@ -13738,14 +13754,15 @@
 
         // ── BRACKET FUNCTIONS ──
         async function fetchBracketData() {
+            const _ty = SEASON_CONFIG.tournament.year;
             const dates = [
-                '20260317', '20260318', // First Four
-                '20260319', '20260320', // Round 64
-                '20260321', '20260322', // Round 32
-                '20260326', '20260327', // Sweet 16
-                '20260328', '20260329', // Elite 8
-                '20260404',             // Final Four
-                '20260406'              // Championship
+                SEASON_CONFIG.tournament.startDate, `${_ty}0318`, // First Four
+                `${_ty}0319`, `${_ty}0320`, // Round 64
+                `${_ty}0321`, `${_ty}0322`, // Round 32
+                `${_ty}0326`, `${_ty}0327`, // Sweet 16
+                `${_ty}0328`, `${_ty}0329`, // Elite 8
+                `${_ty}0404`,               // Final Four
+                SEASON_CONFIG.tournament.endDate // Championship
             ];
 
             try {
@@ -13827,7 +13844,7 @@
                     </div>
                     <div class="bracket-center-stack">
                         <div class="bracket-ff-box"><div class="bracket-round-label" style="font-size:0.7rem;">Final Four</div>${skeletonMatchup()}</div>
-                        <div class="bracket-champ-card"><img class="ff-logo" src="ff_logo.png" alt="Final Four" onerror="this.style.display='none'" style="width:100px;height:auto;"><div class="champ-title-label">National Championship</div><div class="champ-subtitle">Indianapolis, IN &bull; April 7, 2026</div>${skeletonMatchup()}</div>
+                        <div class="bracket-champ-card"><img class="ff-logo" src="ff_logo.png" alt="Final Four" onerror="this.style.display='none'" style="width:100px;height:auto;"><div class="champ-title-label">National Championship</div><div class="champ-subtitle">Indianapolis, IN &bull; ${SEASON_CONFIG.tournament.championshipDateText}</div>${skeletonMatchup()}</div>
                         <div class="bracket-ff-box"><div class="bracket-round-label" style="font-size:0.7rem;">Final Four</div>${skeletonMatchup()}</div>
                     </div>
                     <div class="bracket-side-col">
@@ -13931,7 +13948,7 @@
             champBox.innerHTML = `
                 <img class="ff-logo" src="ff_logo.png" alt="Final Four" onerror="this.style.display='none'" style="width:100px;height:auto;">
                 <div class="champ-title-label">National Championship</div>
-                <div class="champ-subtitle">Indianapolis, IN &bull; April 7, 2026</div>
+                <div class="champ-subtitle">Indianapolis, IN &bull; ${SEASON_CONFIG.tournament.championshipDateText}</div>
                 ${champGame.length > 0 ? createMatchupCard(champGame[0]).outerHTML : champTBD}
             `;
             centerCol.appendChild(champBox);
@@ -14013,7 +14030,7 @@
             champTabbed.innerHTML = `
                 <div class="bracket-champ-card">
                     <div class="champ-title-label">National Championship</div>
-                    <div class="champ-subtitle">Indianapolis, IN - April 7, 2026</div>
+                    <div class="champ-subtitle">Indianapolis, IN - ${SEASON_CONFIG.tournament.championshipDateText}</div>
                     ${champGame.length > 0 ? createMatchupCard(champGame[0]).outerHTML : champTBD}
                 </div>
             `;
@@ -14463,7 +14480,7 @@
             if (SEASONS_DATA && wTeam) {
                 const seasons = SEASONS_DATA[wId]?.seasons || [];
                 const tourneyYears = seasons.filter(s => s.ncaaTourney || s.seed);
-                const priorYears = tourneyYears.filter(s => parseInt(s.year) < 2026);
+                const priorYears = tourneyYears.filter(s => parseInt(s.year) < SEASON_CONFIG.tournament.year);
                 // Count prior tournament wins (reached R32+ means at least 1 win)
                 const priorWins = priorYears.filter(s => {
                     const r = mapTourneyResult(s.ncaaTourney);
@@ -14494,7 +14511,7 @@
                 // Long drought — first tourney win in 10+ years
                 if (priorWins.length > 0) {
                     const lastWinYear = Math.max(...priorWins.map(s => parseInt(s.year)));
-                    if (2026 - lastWinYear >= 10) {
+                    if (SEASON_CONFIG.tournament.year - lastWinYear >= 10) {
                         return `${wName}'s first tournament win since ${lastWinYear}`;
                     }
                 }
@@ -14502,8 +14519,8 @@
                 // Back in the tournament after long absence
                 if (priorYears.length > 0) {
                     const lastAppear = Math.max(...priorYears.map(s => parseInt(s.year)));
-                    if (2026 - lastAppear >= 15) {
-                        return `${wName} back in the tournament after ${2026 - lastAppear} years`;
+                    if (SEASON_CONFIG.tournament.year - lastAppear >= 15) {
+                        return `${wName} back in the tournament after ${SEASON_CONFIG.tournament.year - lastAppear} years`;
                     }
                 }
             }
@@ -16102,7 +16119,7 @@
 
             // For current season games, search the live scoreboard
             const year = gameKey.split('/')[0];
-            if (parseInt(year) >= 2026 && _sharedScoreboard) {
+            if (parseInt(year) >= SEASON_CONFIG.tournament.year && _sharedScoreboard) {
                 const slugs = gameKey.split('/')[1].split('-vs-');
                 for (const event of (_sharedScoreboard.events || [])) {
                     const comp = event.competitions?.[0];
@@ -21560,15 +21577,16 @@
 
         async function generateChampionshipJourney(winnerEspnId, winnerName, winnerSlug, winnerSeed, loserName, loserSeed, loserEspnId, champWinScore, champLoseScore, champGameId) {
             // Auto-generate a championship journey by fetching all tournament games for the winner
-            const key = `2026/${winnerSlug}`;
+            const key = `${SEASON_CONFIG.tournament.year}/${winnerSlug}`;
             if (CHAMPIONSHIP_RUNS[key]) return; // Already exists
 
             console.log(`Generating championship journey for ${winnerName}...`);
 
             try {
                 // Fetch all tournament dates to find this team's games
-                const tourneyDates = ['20260317','20260318','20260319','20260320','20260321','20260322',
-                                      '20260326','20260327','20260328','20260329','20260404','20260406'];
+                const _ty = SEASON_CONFIG.tournament.year;
+                const tourneyDates = [SEASON_CONFIG.tournament.startDate, `${_ty}0318`, `${_ty}0319`, `${_ty}0320`, `${_ty}0321`, `${_ty}0322`,
+                                      `${_ty}0326`, `${_ty}0327`, `${_ty}0328`, `${_ty}0329`, `${_ty}0404`, SEASON_CONFIG.tournament.endDate];
                 const teamGames = [];
 
                 for (const date of tourneyDates) {
@@ -21645,11 +21663,11 @@
 
                 // Build the run entry
                 const run = {
-                    year: 2026,
+                    year: SEASON_CONFIG.tournament.year,
                     teamName: winnerName,
                     espnId: winnerEspnId,
                     teamSlug: winnerSlug,
-                    heroTitle: '2026 NATIONAL CHAMPIONS',
+                    heroTitle: `${SEASON_CONFIG.tournament.year} NATIONAL CHAMPIONS`,
                     heroSubtitle: `${winnerSeed ? '#' + winnerSeed + ' Seed' : ''} \u2022 Indianapolis, IN`,
                     accentColor: team?.color ? '#' + team.color.replace('#','') : '#C9A86C',
                     story: `${winnerName} captured the ${ordinal(natlChamps)} national championship in program history with a ${champWinScore}-${champLoseScore} victory over ${loserName} in Indianapolis. The journey page will be updated with the full story.`,
@@ -21678,7 +21696,7 @@
         }
 
         function pollForChampHighlights(winnerName, winnerSlug, loserName, champGameId) {
-            const key = `2026/${winnerSlug}`;
+            const key = `${SEASON_CONFIG.tournament.year}/${winnerSlug}`;
             const run = CHAMPIONSHIP_RUNS[key];
             if (!run || run.videoId) return; // Already has video
 
@@ -21707,8 +21725,8 @@
                                 console.log(`Found championship highlights video: ${ytMatch[1]}`);
                                 run.videoId = ytMatch[1];
                                 // Re-render if user is on the championship journey page
-                                if (window.location.hash.includes(`#championship/2026/${winnerSlug}`)) {
-                                    renderChampionshipRun(2026, winnerSlug);
+                                if (window.location.hash.includes(`#championship/${SEASON_CONFIG.tournament.year}/${winnerSlug}`)) {
+                                    renderChampionshipRun(SEASON_CONFIG.tournament.year, winnerSlug);
                                 }
                                 return; // Done!
                             }
@@ -22114,7 +22132,7 @@
                 // Fetch roster (player info) and leaders (per-player stats) in parallel
                 const [rosterResp, leadersResp] = await Promise.all([
                     fetch(`https://site.api.espn.com/apis/site/v2/sports/basketball/mens-college-basketball/teams/${espnId}/roster`).then(r => r.json()),
-                    fetch(`https://sports.core.api.espn.com/v2/sports/basketball/leagues/mens-college-basketball/seasons/2026/types/2/teams/${espnId}/leaders`).then(r => r.json()).catch(() => null)
+                    fetch(`https://sports.core.api.espn.com/v2/sports/basketball/leagues/mens-college-basketball/seasons/${SEASON_CONFIG.espnSeasonId}/types/2/teams/${espnId}/leaders`).then(r => r.json()).catch(() => null)
                 ]);
 
                 const athletes = rosterResp.athletes || [];
@@ -22166,7 +22184,7 @@
 
                 // Also try to get FG%, 3PT%, FT% from the core stats endpoint
                 try {
-                    const fgResp = await fetch(`https://sports.core.api.espn.com/v2/sports/basketball/leagues/mens-college-basketball/seasons/2026/types/2/teams/${espnId}/statistics`);
+                    const fgResp = await fetch(`https://sports.core.api.espn.com/v2/sports/basketball/leagues/mens-college-basketball/seasons/${SEASON_CONFIG.espnSeasonId}/types/2/teams/${espnId}/statistics`);
                     const fgData = await fgResp.json();
                     // This endpoint has team stats, not per-player — skip individual mapping
                 } catch(e) {}

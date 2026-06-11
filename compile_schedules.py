@@ -48,7 +48,6 @@ class ScheduleCompiler:
         self.session.headers.update({
             'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3 Safari/605.1.15'
         })
-        self.slug_mapping = self._load_json('slug_mapping.json')
         self.espn_to_sr = self._load_json('espn_to_sr.json')
         self.sr_to_espn = {v: k for k, v in self.espn_to_sr.items()}
         self.games_data = self._load_json('games.json') or {}
@@ -131,9 +130,9 @@ class ScheduleCompiler:
         # Try ESPN ID directly first (most reliable)
         team_data = seasons.get(espn_id, {}) if espn_id else {}
 
-        # If not found, try reverse lookup from slug_mapping
+        # If not found, try reverse lookup from espn_to_sr mapping
         if not team_data.get('seasons'):
-            sr_id = next((k for k, v in self.slug_mapping.items() if v == slug), None)
+            sr_id = self.sr_to_espn.get(slug)
             if sr_id:
                 team_data = seasons.get(sr_id, {})
 

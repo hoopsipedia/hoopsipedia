@@ -369,6 +369,44 @@ function buildTeamProfile(espnId, seasonKey, springYear, teamInfo, db) {
 }
 
 /**
+ * Deterministic randomness helpers.
+ *
+ * The simulation's "jitter" used Math.random(), so the same matchup produced
+ * a different score every run. Instead we seed a tiny PRNG (mulberry32) from
+ * a hash of the two team slugs + season keys, so a given matchup always
+ * yields the same simulated game.
+ */
+
+/** FNV-1a 32-bit string hash → unsigned 32-bit seed. */
+function hashStringToSeed(str) {
+  let h = 0x811c9dc5;
+  for (let i = 0; i < str.length; i++) {
+    h ^= str.charCodeAt(i);
+    h = Math.imul(h, 0x01000193);
+  }
+  return h >>> 0;
+}
+
+/** mulberry32: tiny seeded PRNG returning floats in [0, 1). */
+function mulberry32(seed) {
+  let a = seed >>> 0;
+  return function () {
+    a = (a + 0x6d2b79f5) | 0;
+    let t = Math.imul(a ^ (a >>> 15), 1 | a);
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+}
+
+/** Slugify a team name for stable seeding (e.g. "North Carolina" → "north-carolina"). */
+function teamSlug(profile) {
+  return String(profile.fullName || profile.espnId)
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+}
+
+/**
  * The core prediction algorithm.
  *
  * Takes two team profiles and simulates a hypothetical neutral-site game.
@@ -410,9 +448,13 @@ function predictGame(profileA, profileB) {
   const winProbB = 1 - winProbA;
 
   // Step 5: Generate a realistic final score
-  // Add slight randomness (±2 pts) but keep the margin intact
-  const jitterA = (Math.random() - 0.5) * 4; // ±2
-  const jitterB = (Math.random() - 0.5) * 4; // ±2
+  // Add slight randomness (±2 pts) but keep the margin intact.
+  // Seeded PRNG: the same matchup (teams + seasons) always simulates the same game.
+  const rand = mulberry32(hashStringToSeed(
+    `${teamSlug(profileA)}:${profileA.seasonKey}|${teamSlug(profileB)}:${profileB.seasonKey}`
+  ));
+  const jitterA = (rand() - 0.5) * 4; // ±2
+  const jitterB = (rand() - 0.5) * 4; // ±2
 
   let scoreA = Math.round(teamARawPts + jitterA);
   let scoreB = Math.round(teamBRawPts + jitterB);
@@ -428,7 +470,7 @@ function predictGame(profileA, profileB) {
 
   if (margin < 3) {
     // Coin-flip game: use win probability to decide
-    const coinFlip = Math.random();
+    const coinFlip = rand();
     if (coinFlip < winProbA) {
       winner = 'A';
     } else {
@@ -436,9 +478,9 @@ function predictGame(profileA, profileB) {
     }
     // Make sure the winner's score is higher
     if (winner === 'A' && scoreA <= scoreB) {
-      scoreA = scoreB + Math.ceil(Math.random() * 3);
+      scoreA = scoreB + Math.ceil(rand() * 3);
     } else if (winner === 'B' && scoreB <= scoreA) {
-      scoreB = scoreA + Math.ceil(Math.random() * 3);
+      scoreB = scoreA + Math.ceil(rand() * 3);
     }
   } else {
     winner = scoreA > scoreB ? 'A' : 'B';

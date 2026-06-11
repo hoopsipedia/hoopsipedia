@@ -30,6 +30,12 @@ const RATE_WINDOW = 5 * 60 * 1000; // 5 minutes
 
 function checkRateLimit(ip) {
   const now = Date.now();
+  // Cheap eviction: when the map grows past 1000 entries, drop expired ones
+  if (rateLimits.size > 1000) {
+    for (const [key, val] of rateLimits) {
+      if (now > val.resetAt) rateLimits.delete(key);
+    }
+  }
   const entry = rateLimits.get(ip);
   if (!entry || now > entry.resetAt) {
     rateLimits.set(ip, { count: 1, resetAt: now + RATE_WINDOW });
@@ -90,11 +96,17 @@ async function getTimeMachine(ctx) {
   return cachedTimeMachine;
 }
 
-async function getGames(ctx) {
+async function getTeamGames(ctx, espnId) {
   if (!cachedGames1) cachedGames1 = await loadJSON(ctx.env.ASSETS, ctx.request.url, '/games_1.json') || {};
   if (!cachedGames2) cachedGames2 = await loadJSON(ctx.env.ASSETS, ctx.request.url, '/games_2.json') || {};
   if (!cachedGames3) cachedGames3 = await loadJSON(ctx.env.ASSETS, ctx.request.url, '/games_3.json') || {};
-  return { ...cachedGames1, ...cachedGames2, ...cachedGames3 };
+  // games_3 first: mirrors the old {...g1,...g2,...g3} last-wins merge — some teams
+  // (e.g. 263 Drake) have a stale legacy-format duplicate in an earlier file
+  const entry = cachedGames3[espnId] || cachedGames2[espnId] || cachedGames1[espnId] || null;
+  // ~116 teams are stored as legacy bare arrays (no .games wrapper) — normalize so
+  // the tools don't report "no game data" for them
+  if (Array.isArray(entry)) return { games: entry };
+  return entry;
 }
 
 // ── Helper: team slug from name ──
@@ -461,11 +473,9 @@ async function toolGetTeamsByConference(input, ctx) {
 
 async function toolSearchGames(input, ctx) {
   const data = await getData(ctx);
-  const allGames = await getGames(ctx);
-  if (!allGames) return { error: 'Games data not available' };
-
   const espnId = String(input.espnId);
-  const teamGames = allGames[espnId]?.games;
+  const teamEntry = await getTeamGames(ctx, espnId);
+  const teamGames = teamEntry?.games;
   if (!teamGames) return { error: `No game data for team ${espnId}` };
 
   let filtered = teamGames;
@@ -519,13 +529,13 @@ async function toolSearchGames(input, ctx) {
 async function toolGetTeamTournamentRecord(input, ctx) {
   const data = await getData(ctx);
   const seasons = await getSeasons(ctx);
-  const allGames = await getGames(ctx);
-  if (!data || !seasons || !allGames) return { error: 'Data not available' };
+  if (!data || !seasons) return { error: 'Data not available' };
 
   const espnId = String(input.espnId);
   const teamName = data?.H?.[espnId]?.[F.NAME] || 'Unknown';
   const teamSeasons = seasons[espnId]?.seasons || [];
-  const teamGames = allGames[espnId]?.games || [];
+  const teamEntry = await getTeamGames(ctx, espnId);
+  const teamGames = teamEntry?.games || [];
 
   // Build slug→espnId lookup for resolving opponents without opp field
   const slugToId = {};
@@ -1010,13 +1020,37 @@ async function handleClaudeStream(claudeBody, writer, encoder, messages, apiKey,
   }
 }
 
+// ── CORS allowlist ──
+const ALLOWED_ORIGINS = ['https://www.hoopsipedia.com', 'https://hoopsipedia.com'];
+const MAX_BODY_CHARS = 65536;       // total request body limit
+const MAX_USER_MESSAGE_CHARS = 8192;      // per-user-message content limit (JSON.stringify length)
+const MAX_ASSISTANT_MESSAGE_CHARS = 40960; // assistant history can hold multi-round concatenated answers (up to 5 rounds x 1500 max_tokens)
+
+// Returns CORS headers for a request Origin. If Origin is absent (curl,
+// same-origin), the request is allowed but no ACAO header is emitted.
+// If Origin is present but not allowlisted, returns null (caller must 403).
+function corsHeadersFor(origin) {
+  if (!origin) return {};
+  if (!ALLOWED_ORIGINS.includes(origin)) return null;
+  return {
+    'Access-Control-Allow-Origin': origin,
+    'Vary': 'Origin'
+  };
+}
+
 // ── Main handler ──
 export async function onRequestPost(context) {
   const { request, env } = context;
 
-  // CORS headers
+  // CORS lockdown: reject browser requests from non-allowlisted origins
+  const origin = request.headers.get('Origin');
+  const corsHeaders = corsHeadersFor(origin);
+  if (corsHeaders === null) {
+    return new Response('Forbidden', { status: 403 });
+  }
+
   const headers = {
-    'Access-Control-Allow-Origin': '*',
+    ...corsHeaders,
     'Access-Control-Allow-Methods': 'POST, OPTIONS',
     'Access-Control-Allow-Headers': 'Content-Type',
     'Content-Type': 'text/event-stream',
@@ -1042,10 +1076,26 @@ export async function onRequestPost(context) {
     );
   }
 
-  // Parse request body
+  // Cheap pre-parse size check via Content-Length when the client sends one
+  const contentLength = parseInt(request.headers.get('Content-Length') || '0', 10);
+  if (contentLength > MAX_BODY_CHARS) {
+    return new Response(
+      `event: error\ndata: ${JSON.stringify({ message: 'Request too large.' })}\n\n`,
+      { status: 400, headers }
+    );
+  }
+
+  // Parse request body (read as text first to enforce the size limit exactly)
   let body;
   try {
-    body = await request.json();
+    const rawBody = await request.text();
+    if (rawBody.length > MAX_BODY_CHARS) {
+      return new Response(
+        `event: error\ndata: ${JSON.stringify({ message: 'Request too large.' })}\n\n`,
+        { status: 400, headers }
+      );
+    }
+    body = JSON.parse(rawBody);
   } catch {
     return new Response(
       `event: error\ndata: ${JSON.stringify({ message: 'Invalid request format.' })}\n\n`,
@@ -1059,6 +1109,23 @@ export async function onRequestPost(context) {
       `event: error\ndata: ${JSON.stringify({ message: 'Invalid message format.' })}\n\n`,
       { status: 400, headers }
     );
+  }
+
+  // Validate each message: must be an object with role user/assistant and bounded content
+  for (const msg of messages) {
+    const validShape = msg && typeof msg === 'object' && !Array.isArray(msg) &&
+      (msg.role === 'user' || msg.role === 'assistant');
+    let contentStr;
+    if (validShape) {
+      try { contentStr = JSON.stringify(msg.content); } catch { contentStr = undefined; }
+    }
+    const maxChars = msg && msg.role === 'assistant' ? MAX_ASSISTANT_MESSAGE_CHARS : MAX_USER_MESSAGE_CHARS;
+    if (!validShape || typeof contentStr !== 'string' || contentStr.length > maxChars) {
+      return new Response(
+        `event: error\ndata: ${JSON.stringify({ message: 'Invalid message format.' })}\n\n`,
+        { status: 400, headers }
+      );
+    }
   }
 
   // Create streaming response
@@ -1084,10 +1151,15 @@ export async function onRequestPost(context) {
 }
 
 // Handle CORS preflight
-export async function onRequestOptions() {
+export async function onRequestOptions(context) {
+  const origin = context.request.headers.get('Origin');
+  const corsHeaders = corsHeadersFor(origin);
+  if (corsHeaders === null) {
+    return new Response('Forbidden', { status: 403 });
+  }
   return new Response(null, {
     headers: {
-      'Access-Control-Allow-Origin': '*',
+      ...corsHeaders,
       'Access-Control-Allow-Methods': 'POST, OPTIONS',
       'Access-Control-Allow-Headers': 'Content-Type'
     }

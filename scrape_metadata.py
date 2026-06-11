@@ -11,6 +11,7 @@ Only updates fields that are currently 0.
 
 import json
 import re
+import sys
 import time
 import urllib.request
 import urllib.error
@@ -95,7 +96,10 @@ def main():
     try:
         with open('/tmp/sr_to_bref.json') as f:
             sr_to_bref = json.load(f)
-    except:
+    except FileNotFoundError:
+        sr_to_bref = {}
+    except json.JSONDecodeError as e:
+        print(f"WARNING: /tmp/sr_to_bref.json is corrupt ({e}) — proceeding with empty SR-to-bref mapping", file=sys.stderr)
         sr_to_bref = {}
 
     # Load protected records
@@ -105,8 +109,11 @@ def main():
             pr = json.load(f)
         if 'records' in pr:
             protected = pr['records']
-    except:
+    except FileNotFoundError:
         pass
+    except json.JSONDecodeError as e:
+        print(f"WARNING: protected_records.json is corrupt ({e}) — protected records NOT loaded; "
+              f"manual corrections may be overwritten! Fix the file before trusting this run.", file=sys.stderr)
 
     h = data['H']
 

@@ -48,7 +48,9 @@ def disambiguate_coach_name(name, season_year):
                 return rule['after']
             else:
                 return rule['before']
-        except:
+        except (ValueError, TypeError):
+            # parse_year failed on a malformed season string, or season_year was a
+            # non-comparable type — keep the original name
             return name
     return name
 
@@ -155,7 +157,8 @@ def compile_coaches():
             for s in c_seasons:
                 try:
                     years.append(parse_year(s.get('year', '')))
-                except:
+                except ValueError:
+                    # Malformed year string — skip this season for start/end range
                     pass
 
             start = min(years) if years else 0

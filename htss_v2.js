@@ -1210,7 +1210,7 @@ function computeProgramRankings(allSeasons) {
 // Load v1 results for side-by-side comparison in console output.
 
 function loadV1Results() {
-  const v1Path = path.join(BASE, 'htss_results.json');
+  const v1Path = path.join(BASE, 'archive', 'htss_results.json');
   if (!fs.existsSync(v1Path)) return null;
   try {
     return JSON.parse(fs.readFileSync(v1Path, 'utf-8'));
