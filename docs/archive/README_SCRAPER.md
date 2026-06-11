@@ -1,3 +1,5 @@
+> ARCHIVED 2026-06: superseded — see README.md and docs/. Kept for history.
+
 # College Basketball Historical Data Scraper - Complete Setup
 
 ## Overview

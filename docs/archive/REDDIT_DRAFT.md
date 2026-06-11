@@ -1,3 +1,5 @@
+> ARCHIVED 2026-06: superseded — see README.md and docs/. Kept for history.
+
 # Reddit Post Draft — r/CollegeBasketball
 
 **Title:** I built a college basketball historical database and I need your help making it better before the tournament starts tomorrow

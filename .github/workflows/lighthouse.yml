@@ -1,0 +1,99 @@
+# Lighthouse performance budget against the LIVE site (hoopsipedia.com).
+#
+# Runs weekly (Mon 9am UTC) + on demand. Mobile emulation (Lighthouse default).
+#
+# ── Measured baseline (local Lighthouse 13.4.0, mobile, 2026-06-11) ─────────
+#   https://www.hoopsipedia.com/
+#     performance 0.56 | accessibility 0.79 | seo 0.91
+#     FCP 7.6s | LCP 14.9s | TBT 65ms | CLS 0.008 | total-byte-weight 3.4 MB
+#   https://www.hoopsipedia.com/?team=duke-blue-devils
+#     performance 0.57 | accessibility 0.82 | seo 0.92
+#     FCP 6.4s | LCP 16.2s | TBT 158ms | CLS 0.0002 | total-byte-weight 15.2 MB
+#     ⚠ Lighthouse warned "page loaded too slowly to finish within the time
+#       limit. Results may be incomplete" — byte weight is likely UNDERCOUNTED
+#       (full data payload is far larger). Also note the URL redirected to
+#       https://www.hoopsipedia.com/#team/duke-blue-devils (hash route).
+#
+# Assertions below are tuned to this baseline with headroom for run-to-run
+# variance, so today's site passes but real regressions fail. The byte-weight
+# ceiling is deliberately loose (80 MB) because the team page's full payload
+# never finished loading in the trace — the point right now is catching a
+# +20 MB regression, not enforcing an ideal.
+#
+# ── How to tighten after the Wave 2b lazy-load fix lands ────────────────────
+#   In the lighthouserc.json heredoc below:
+#     1. total-byte-weight: 83886080 (80 MB) → 5242880 (5 MB)
+#     2. categories:performance minScore: 0.40 → re-measure, then set ~0.05
+#        below the new median (likely 0.65+ once payload shrinks)
+#     3. largest-contentful-paint: 22000 → re-measure, then new median +25%
+#   Re-measure with:
+#     npx lighthouse https://www.hoopsipedia.com/ --output=json --quiet \
+#       --chrome-flags="--headless" --only-categories=performance,accessibility,seo
+
+name: Lighthouse Budget
+
+on:
+  schedule:
+    - cron: '0 9 * * 1' # Mondays 9am UTC
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  lighthouse:
+    runs-on: ubuntu-latest
+    steps:
+      # No checkout needed — we audit the live site. The LHCI config is
+      # generated at runtime so the repo stays clean.
+      - name: Write LHCI assertion config (baseline 2026-06-11, see header)
+        run: |
+          cat > lighthouserc.json <<'EOF'
+          {
+            "ci": {
+              "assert": {
+                "assertions": {
+                  "categories:performance": [
+                    "error",
+                    { "minScore": 0.4, "aggregationMethod": "median-run" }
+                  ],
+                  "categories:accessibility": [
+                    "error",
+                    { "minScore": 0.7, "aggregationMethod": "median-run" }
+                  ],
+                  "categories:seo": [
+                    "error",
+                    { "minScore": 0.85, "aggregationMethod": "median-run" }
+                  ],
+                  "total-byte-weight": [
+                    "error",
+                    { "maxNumericValue": 83886080, "aggregationMethod": "median-run" }
+                  ],
+                  "largest-contentful-paint": [
+                    "error",
+                    { "maxNumericValue": 22000, "aggregationMethod": "median-run" }
+                  ],
+                  "total-blocking-time": [
+                    "error",
+                    { "maxNumericValue": 600, "aggregationMethod": "median-run" }
+                  ],
+                  "cumulative-layout-shift": [
+                    "error",
+                    { "maxNumericValue": 0.1, "aggregationMethod": "median-run" }
+                  ]
+                }
+              }
+            }
+          }
+          EOF
+
+      - name: Run Lighthouse CI against live site
+        uses: treosh/lighthouse-ci-action@v12
+        with:
+          urls: |
+            https://www.hoopsipedia.com/
+            https://www.hoopsipedia.com/?team=duke-blue-devils
+          runs: 3
+          configPath: ./lighthouserc.json
+          uploadArtifacts: true
+          temporaryPublicStorage: true

@@ -1,3 +1,5 @@
+> ARCHIVED 2026-06: superseded — see README.md and docs/. Kept for history.
+
 # College Basketball Historical Data Scraper
 
 This directory contains tools to compile comprehensive historical college basketball season-by-season data from Sports Reference for all ~362 D1 teams.

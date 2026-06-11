@@ -76,13 +76,15 @@ Copy the tarball off-machine (cloud drive / external disk) — a local backup do
 ## Documentation
 
 - `docs/DEPLOY.md` — deploy & operations runbook
+- `docs/DATA_AUDIT.md` — data verification against the NCAA record book
+- `docs/FULL_AUDIT_2026_04.md` — full data audit (April 2026)
+- `docs/archive/` — superseded docs (old scraper guides, QA report, drafts), kept for history
+- `SCRAPE_STATUS.md` — current scrape coverage status
 - `ROADMAP.md` — feature roadmap and status
 - `VISION.md` — project mission
-- `DATA_AUDIT.md` — data verification against the NCAA record book
 - `REPO_AUDIT_2026_06.md` — full repo audit + improvement plan (June 2026)
 - `RANKING_RESEARCH.md` — ranking methodology research
-- Scraper docs (`README_SCRAPER.md`, `SCRAPER_SETUP.md`, `QUICK_START.md`, `SCRAPER_INDEX.md`) are partially stale — trust the code and `REPO_AUDIT_2026_06.md` over them.
 
 ## Data sources
 
-Sports-Reference (historical baseline) → ESPN (real-time) → **NCAA official record book** (ultimate source of truth; vacated wins are not counted). See `DATA_AUDIT.md` for the reconciliation methodology.
+Sports-Reference (historical baseline) → ESPN (real-time) → **NCAA official record book** (ultimate source of truth; vacated wins are not counted). See `docs/DATA_AUDIT.md` for the reconciliation methodology.
