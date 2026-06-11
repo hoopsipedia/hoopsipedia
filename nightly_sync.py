@@ -18,6 +18,8 @@ import time
 import os
 import subprocess
 from datetime import datetime
+
+from json_io import save_json_atomic
 from collections import defaultdict
 
 DATA_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -166,8 +168,7 @@ def sync_current_season():
     data['SYNC_TIME'] = datetime.now().isoformat()
 
     # Write data
-    with open(DATA_FILE, 'w') as f:
-        json.dump(data, f)
+    save_json_atomic(DATA_FILE, data)
 
     log(f"Data saved. {len(new_cs)} season records, {coach_updates} coach updates.")
 

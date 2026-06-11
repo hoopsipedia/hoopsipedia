@@ -42,6 +42,23 @@ const { execSync } = require('child_process');
 
 const BASE = __dirname;
 
+// Load a required JSON data file, exiting with a clear message instead of a
+// stack trace when it is missing or corrupt (e.g. truncated by a killed scrape).
+function loadJSONOrDie(filePath) {
+  if (!fs.existsSync(filePath)) {
+    console.error(`ERROR: required data file missing: ${filePath}`);
+    console.error('Re-run the scraper/compiler that produces it, then retry.');
+    process.exit(1);
+  }
+  try {
+    return JSON.parse(fs.readFileSync(filePath, 'utf-8'));
+  } catch (e) {
+    console.error(`ERROR: failed to parse ${filePath}: ${e.message}`);
+    console.error('The file may be truncated or corrupt. Restore it from backup or re-generate it.');
+    process.exit(1);
+  }
+}
+
 // ─────────────────────────────────────────────────────────────────────────────
 // 1. LOAD DATA — ensure efficiency_ratings.json exists, then load everything
 // ─────────────────────────────────────────────────────────────────────────────
@@ -57,17 +74,17 @@ console.log('='.repeat(80));
 console.log('Loading data...');
 console.time('Data loading');
 
-const efficiencyData = JSON.parse(fs.readFileSync(efficiencyPath, 'utf-8'));
-const seasonsData     = JSON.parse(fs.readFileSync(path.join(BASE, 'seasons.json'), 'utf-8'));
-const mainData        = JSON.parse(fs.readFileSync(path.join(BASE, 'data.json'), 'utf-8'));
-const draftData       = JSON.parse(fs.readFileSync(path.join(BASE, 'draft_history.json'), 'utf-8'));
+const efficiencyData = loadJSONOrDie(efficiencyPath);
+const seasonsData     = loadJSONOrDie(path.join(BASE, 'seasons.json'));
+const mainData        = loadJSONOrDie(path.join(BASE, 'data.json'));
+const draftData       = loadJSONOrDie(path.join(BASE, 'draft_history.json'));
 
 // Game data — loaded lazily for close-game analysis
 const gamesData = {};
 for (const file of ['games_1.json', 'games_2.json', 'games_3.json']) {
   const fp = path.join(BASE, file);
   if (fs.existsSync(fp)) {
-    const data = JSON.parse(fs.readFileSync(fp, 'utf-8'));
+    const data = loadJSONOrDie(fp);
     for (const [espnId, entry] of Object.entries(data)) {
       if (!gamesData[espnId]) gamesData[espnId] = [];
       const games = entry.games && Array.isArray(entry.games) ? entry.games : (Array.isArray(entry) ? entry : []);

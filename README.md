@@ -47,6 +47,17 @@ python3 test_scraper.py           # scraper smoke tests
 
 **The pre-push hook is mandatory.** It validates the JS in `index.html` and the deploy-critical JSON files. Never bypass it with `--no-verify` — a syntax error in `index.html` takes down the whole site.
 
+## Data backup & restore
+
+The JSON data files are the project's crown jewels — weeks of rate-limited scraping. Back them up before risky pipeline changes:
+
+```bash
+./scripts/backup_data.sh                                  # → ~/Backups/hoopsipedia/hoopsipedia-data-YYYY-MM-DD.tar.gz
+tar -xzf ~/Backups/hoopsipedia/hoopsipedia-data-YYYY-MM-DD.tar.gz sr_boxscores.json   # restore one file
+```
+
+Copy the tarball off-machine (cloud drive / external disk) — a local backup doesn't survive a dead laptop. All pipeline writes go through `json_io.save_json_atomic()` so a crashed scrape can't truncate a data file, but backups cover everything else.
+
 ## Key files
 
 | Path | Purpose |

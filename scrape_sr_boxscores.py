@@ -16,6 +16,8 @@ from urllib.request import urlopen, Request
 from urllib.error import HTTPError, URLError
 from html.parser import HTMLParser
 
+from json_io import save_json_atomic
+
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 UPSET_HISTORY = os.path.join(SCRIPT_DIR, "upset_history.json")
 ESPN_TO_SR = os.path.join(SCRIPT_DIR, "espn_to_sr.json")
@@ -617,8 +619,7 @@ def main():
             not_found.append(game_key)
 
         # Save progress after each game
-        with open(OUTPUT_FILE, 'w') as f:
-            json.dump(existing, f, indent=2)
+        save_json_atomic(OUTPUT_FILE, existing, indent=2)
 
     print(f"\n{'='*60}")
     print(f"RESULTS:")

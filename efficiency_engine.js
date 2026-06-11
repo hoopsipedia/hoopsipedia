@@ -14,6 +14,24 @@ const fs = require('fs');
 const path = require('path');
 
 const DATA_DIR = __dirname;
+
+// Load a required JSON data file, exiting with a clear message instead of a
+// stack trace when it is missing or corrupt (e.g. truncated by a killed scrape).
+function loadJSONOrDie(filePath) {
+  if (!fs.existsSync(filePath)) {
+    console.error(`ERROR: required data file missing: ${filePath}`);
+    console.error('Re-run the scraper/compiler that produces it, then retry.');
+    process.exit(1);
+  }
+  try {
+    return JSON.parse(fs.readFileSync(filePath, 'utf8'));
+  } catch (e) {
+    console.error(`ERROR: failed to parse ${filePath}: ${e.message}`);
+    console.error('The file may be truncated or corrupt. Restore it from backup or re-generate it.');
+    process.exit(1);
+  }
+}
+
 const HCA = 3.5; // Home court advantage in points
 const CONVERGENCE_THRESHOLD = 0.01; // 0.01 on a ~40pt scale = sufficient precision
 const MAX_ITERATIONS = 100;
@@ -53,7 +71,7 @@ function loadAllTeams() {
   console.log('Loading game data...');
   console.time('Data loading');
 
-  const espnToSr = JSON.parse(fs.readFileSync(path.join(DATA_DIR, 'espn_to_sr.json'), 'utf8'));
+  const espnToSr = loadJSONOrDie(path.join(DATA_DIR, 'espn_to_sr.json'));
 
   // Build reverse map: slug → ESPN ID
   const slugToEspn = {};
@@ -65,7 +83,7 @@ function loadAllTeams() {
   let totalGames = 0;
 
   for (const file of ['games_1.json', 'games_2.json', 'games_3.json']) {
-    const data = JSON.parse(fs.readFileSync(path.join(DATA_DIR, file), 'utf8'));
+    const data = loadJSONOrDie(path.join(DATA_DIR, file));
     for (const espnId of Object.keys(data)) {
       const entry = data[espnId];
       let games, slug;
@@ -420,7 +438,7 @@ function computeTiersAndRankings(seasonData) {
 // ─── Validation against SRS ───
 function validateAgainstSRS(seasonData, espnToSr) {
   console.log('\nValidation: Comparing against SRS from seasons.json...');
-  const seasonsFile = JSON.parse(fs.readFileSync(path.join(DATA_DIR, 'seasons.json'), 'utf8'));
+  const seasonsFile = loadJSONOrDie(path.join(DATA_DIR, 'seasons.json'));
 
   // Build lookup: srsData[espnId][seasonKey] = srs
   const srsData = {};
@@ -529,7 +547,7 @@ function buildOutput(seasonData, totalGames, totalIterations, validation, espnTo
   console.log('\nBuilding output...');
   console.time('Output build');
 
-  const seasonsFile = JSON.parse(fs.readFileSync(path.join(DATA_DIR, 'seasons.json'), 'utf8'));
+  const seasonsFile = loadJSONOrDie(path.join(DATA_DIR, 'seasons.json'));
 
   // Build team name lookup from seasons.json and espnToSr
   const teamNames = {};

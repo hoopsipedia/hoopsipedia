@@ -25,8 +25,8 @@ class ScraperTester:
         })
 
     def load_slug_mapping(self) -> Dict[str, str]:
-        """Load slug mapping."""
-        mapping_file = self.data_dir / 'slug_mapping.json'
+        """Load the canonical ESPN ID → Sports Reference slug mapping."""
+        mapping_file = self.data_dir / 'espn_to_sr.json'
         if not mapping_file.exists():
             print(f"ERROR: {mapping_file} not found")
             return {}
@@ -200,17 +200,18 @@ class ScraperTester:
 
         return True
 
-    def run_all_tests(self):
-        """Run all tests."""
+    def run_all_tests(self, offline: bool = False):
+        """Run all tests. offline=True skips tests that hit the network (for CI)."""
         print("\n" + "="*70)
-        print("COLLEGE BASKETBALL SCRAPER - TEST SUITE")
+        print("COLLEGE BASKETBALL SCRAPER - TEST SUITE" + (" (offline)" if offline else ""))
         print("="*70)
 
         tests = [
             ("Slug Mapping", self.test_slug_mapping),
-            ("Sample Fetch", self.test_sample_fetch),
             ("Output Structure", self.test_output_structure),
         ]
+        if not offline:
+            tests.insert(1, ("Sample Fetch", self.test_sample_fetch))
 
         results = []
         for name, test_func in tests:
@@ -242,7 +243,10 @@ def main():
     # Allow specific test
     if len(sys.argv) > 1:
         test_name = sys.argv[1]
-        if test_name == "mapping":
+        if test_name == "--offline":
+            success = tester.run_all_tests(offline=True)
+            sys.exit(0 if success else 1)
+        elif test_name == "mapping":
             tester.test_slug_mapping()
         elif test_name == "fetch":
             sample_id = sys.argv[2] if len(sys.argv) > 2 else "96"

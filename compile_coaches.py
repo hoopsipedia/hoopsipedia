@@ -16,6 +16,8 @@ import json
 import sys
 from collections import defaultdict
 
+from json_io import save_json_atomic
+
 def parse_year(year_str):
     """Extract end year from season string like '2025-26' -> 2026"""
     if '-' in year_str:
@@ -227,8 +229,7 @@ def compile_coaches():
     data['COACH_LB_TOP100'] = top_100
     data['COACH_RANK'] = coach_rank
 
-    with open('data.json', 'w') as f:
-        json.dump(data, f)
+    save_json_atomic('data.json', data)
 
     # Print summary
     print(f"Enhanced coaching data for {len(enhanced_coaches)} teams")

@@ -1,0 +1,49 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: JS syntax check (index.html inline scripts)
+        run: node --max-old-space-size=8192 scripts/validate_index_js.js
+
+      - name: Validate deploy-critical JSON files
+        run: |
+          for f in data.json h2h.json games_1.json games_2.json games_3.json seasons.json espn_to_sr.json slug_aliases.json; do
+            node -e "JSON.parse(require('fs').readFileSync('$f','utf8'))"
+            echo "OK $f"
+          done
+
+      - name: Syntax-check Node analytics engines
+        run: |
+          for f in htss_v2.js efficiency_engine.js time_machine.js; do
+            node --check "$f"
+            echo "OK $f"
+          done
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install Python dependencies
+        run: pip install -r requirements.txt
+
+      - name: Compile all Python scripts
+        run: python -m py_compile *.py
+
+      - name: Scraper setup validation
+        run: python validate_setup.py
+
+      - name: Scraper test suite (offline)
+        run: python test_scraper.py --offline

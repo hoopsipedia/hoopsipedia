@@ -76,10 +76,6 @@ def main():
     print("\n2. OPTIONAL UTILITY SCRIPTS")
     print("-" * 70)
     checks['optional'].append(check_python_file(
-        base_dir / 'generate_slug_mapping.py',
-        'Slug mapping generator'
-    ))
-    checks['optional'].append(check_python_file(
         base_dir / 'check_references.py',
         'Reference checker'
     ))
@@ -91,8 +87,12 @@ def main():
     print("\n3. REQUIRED DATA FILES")
     print("-" * 70)
     checks['required'].append(check_json_valid(
-        base_dir / 'slug_mapping.json',
-        'ESPN ID → slug mapping'
+        base_dir / 'espn_to_sr.json',
+        'ESPN ID → SR slug mapping'
+    ))
+    checks['required'].append(check_python_file(
+        base_dir / 'json_io.py',
+        'Atomic JSON write utility'
     ))
     checks['required'].append(check_file_exists(
         base_dir / 'data.json',

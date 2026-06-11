@@ -15,6 +15,8 @@ import time
 import urllib.request
 import urllib.error
 
+from json_io import save_json_atomic
+
 HEADERS = {
     'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36'
 }
@@ -242,8 +244,7 @@ def main():
                 if key in h:
                     if 'w' in rec: h[key][4] = rec['w']
                     if 'l' in rec: h[key][5] = rec['l']
-            with open('data.json', 'w') as f:
-                json.dump(data, f, separators=(',', ':'))
+            save_json_atomic('data.json', data, separators=(',', ':'))
 
     # Restore protected records (W=index 4, L=index 5)
     if protected:
@@ -258,8 +259,7 @@ def main():
                     h[key][5] = rec['l']
 
     # Save final data
-    with open('data.json', 'w') as f:
-        json.dump(data, f, separators=(',', ':'))
+    save_json_atomic('data.json', data, separators=(',', ':'))
 
     print("\n" + "=" * 60)
     print("SUMMARY")

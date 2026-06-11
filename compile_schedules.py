@@ -33,6 +33,8 @@ import requests
 from bs4 import BeautifulSoup
 from datetime import datetime
 
+from json_io import save_json_atomic
+
 
 class ScheduleCompiler:
     """Compiler for game-by-game schedule data from Sports Reference."""
@@ -63,8 +65,7 @@ class ScheduleCompiler:
 
     def _save_progress(self):
         path = self.DATA_DIR / 'games.json'
-        with open(path, 'w') as f:
-            json.dump(self.games_data, f, separators=(',', ':'))
+        save_json_atomic(path, self.games_data, separators=(',', ':'))
         total_games = sum(len(v.get('games', [])) for v in self.games_data.values())
         size_kb = path.stat().st_size / 1024
         print(f"  >> Saved: {len(self.games_data)} teams, {total_games} games ({size_kb:.0f} KB)")

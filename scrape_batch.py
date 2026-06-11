@@ -25,6 +25,8 @@ except ImportError:
     print("ERROR: requests and beautifulsoup4 required. Run: pip install requests beautifulsoup4")
     sys.exit(1)
 
+from json_io import save_json_atomic
+
 DATA_DIR = Path(__file__).parent
 MIN_REQUEST_INTERVAL = 14.0
 BASE_URL = "https://www.sports-reference.com/cbb/schools"
@@ -420,8 +422,7 @@ def merge_safely(new_teams):
                 return False
 
     # Write back
-    with open(DATA_DIR / target, 'w') as f:
-        json.dump(target_data, f, separators=(',', ':'))
+    save_json_atomic(DATA_DIR / target, target_data, separators=(',', ':'))
 
     total_games = sum(
         len(v if isinstance(v, list) else v.get('games', []))
@@ -470,8 +471,7 @@ def main():
             results.append((eid, games, name))
             # Save intermediate results in case of crash
             interim_path = DATA_DIR / f'_scrape_interim_{eid}.json'
-            with open(interim_path, 'w') as f:
-                json.dump(games, f, separators=(',', ':'))
+            save_json_atomic(interim_path, games, separators=(',', ':'))
 
     print(f"\n\nScraping complete. {len(results)}/{len(teams)} teams succeeded.")
 

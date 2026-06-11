@@ -12,6 +12,8 @@ import urllib.request
 import urllib.error
 import sys
 
+from json_io import save_json_atomic
+
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_FILE = os.path.join(BASE_DIR, "data.json")
 MAPPING_FILE = os.path.join(BASE_DIR, "espn_to_sr.json")
@@ -122,8 +124,7 @@ for i, (espn_id, slug, name) in enumerate(teams_to_fetch):
 
 # Save updated data
 data["H"] = H
-with open(DATA_FILE, "w") as f:
-    json.dump(data, f, separators=(",", ":"))
+save_json_atomic(DATA_FILE, data, separators=(",", ":"))
 
 print(f"\n=== SUMMARY ===")
 print(f"Updated: {updated}")

@@ -14,6 +14,8 @@ import requests
 from bs4 import BeautifulSoup
 from datetime import datetime
 
+from json_io import save_json_atomic
+
 
 class CollegeBasketballCompiler:
     """Main compiler class for fetching and parsing college basketball data."""
@@ -58,8 +60,7 @@ class CollegeBasketballCompiler:
     def _save_progress(self):
         """Save current progress to seasons.json."""
         seasons_file = self.DATA_DIR / 'seasons.json'
-        with open(seasons_file, 'w') as f:
-            json.dump(self.seasons_data, f, separators=(',', ':'))
+        save_json_atomic(seasons_file, self.seasons_data, separators=(',', ':'))
         print(f"  >> Progress saved: {len(self.seasons_data)} teams in seasons.json")
 
     def _rate_limit_sleep(self):

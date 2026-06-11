@@ -34,22 +34,39 @@ const path = require('path');
 
 const BASE = path.dirname(__filename);
 
+// Load a required JSON data file, exiting with a clear message instead of a
+// stack trace when it is missing or corrupt (e.g. truncated by a killed scrape).
+function loadJSONOrDie(filePath) {
+  if (!fs.existsSync(filePath)) {
+    console.error(`ERROR: required data file missing: ${filePath}`);
+    console.error('Re-run the scraper/compiler that produces it, then retry.');
+    process.exit(1);
+  }
+  try {
+    return JSON.parse(fs.readFileSync(filePath, 'utf8'));
+  } catch (e) {
+    console.error(`ERROR: failed to parse ${filePath}: ${e.message}`);
+    console.error('The file may be truncated or corrupt. Restore it from backup or re-generate it.');
+    process.exit(1);
+  }
+}
+
 /**
  * Load all required data files. We load them synchronously at startup since
  * the CLI needs everything in memory to run any matchup.
  */
 function loadData() {
-  const efficiency = JSON.parse(fs.readFileSync(path.join(BASE, 'efficiency_ratings.json'), 'utf8'));
-  const htss = JSON.parse(fs.readFileSync(path.join(BASE, 'htss_v2_results.json'), 'utf8'));
-  const seasons = JSON.parse(fs.readFileSync(path.join(BASE, 'seasons.json'), 'utf8'));
-  const data = JSON.parse(fs.readFileSync(path.join(BASE, 'data.json'), 'utf8'));
-  const espnToSr = JSON.parse(fs.readFileSync(path.join(BASE, 'espn_to_sr.json'), 'utf8'));
+  const efficiency = loadJSONOrDie(path.join(BASE, 'efficiency_ratings.json'));
+  const htss = loadJSONOrDie(path.join(BASE, 'htss_v2_results.json'));
+  const seasons = loadJSONOrDie(path.join(BASE, 'seasons.json'));
+  const data = loadJSONOrDie(path.join(BASE, 'data.json'));
+  const espnToSr = loadJSONOrDie(path.join(BASE, 'espn_to_sr.json'));
   // Load game data for close-game analysis (fallback for teams outside HTSS top 100)
   const games = {};
   for (const file of ['games_1.json', 'games_2.json', 'games_3.json']) {
     const fp = path.join(BASE, file);
     if (fs.existsSync(fp)) {
-      const gd = JSON.parse(fs.readFileSync(fp, 'utf8'));
+      const gd = loadJSONOrDie(fp);
       for (const [id, entry] of Object.entries(gd)) {
         const arr = entry.games && Array.isArray(entry.games) ? entry.games : (Array.isArray(entry) ? entry : []);
         if (!games[id]) games[id] = [];

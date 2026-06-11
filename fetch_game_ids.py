@@ -19,6 +19,8 @@ import urllib.request
 import urllib.error
 from datetime import datetime
 
+from json_io import save_json_atomic
+
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 OUTPUT_FILE = os.path.join(BASE_DIR, "game_ids_bulk.json")
 PROGRESS_FILE = os.path.join(BASE_DIR, "game_ids_progress.json")
@@ -44,8 +46,7 @@ def load_progress():
 
 def save_progress(progress):
     """Save progress to file"""
-    with open(PROGRESS_FILE, "w") as f:
-        json.dump(progress, f)
+    save_json_atomic(PROGRESS_FILE, progress)
 
 def save_final(games):
     """Save final output file"""
@@ -56,8 +57,7 @@ def save_final(games):
         },
         "games": games
     }
-    with open(OUTPUT_FILE, "w") as f:
-        json.dump(output, f, indent=2)
+    save_json_atomic(OUTPUT_FILE, output, indent=2)
     print(f"\nSaved {len(games)} games to {OUTPUT_FILE}")
 
 def fetch_json(url):

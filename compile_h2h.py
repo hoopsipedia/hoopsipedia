@@ -27,6 +27,8 @@ import requests
 from bs4 import BeautifulSoup
 from datetime import datetime
 
+from json_io import save_json_atomic
+
 
 class HeadToHeadCompiler:
     """Compiler for all-time head-to-head records from Sports Reference."""
@@ -71,8 +73,7 @@ class HeadToHeadCompiler:
     def _save_progress(self):
         """Save current progress to h2h.json."""
         h2h_file = self.DATA_DIR / 'h2h.json'
-        with open(h2h_file, 'w') as f:
-            json.dump(self.h2h_data, f, separators=(',', ':'))
+        save_json_atomic(h2h_file, self.h2h_data, separators=(',', ':'))
         size_kb = h2h_file.stat().st_size / 1024
         print(f"  >> Progress saved: {len(self.h2h_data)} teams in h2h.json ({size_kb:.0f} KB)")
 

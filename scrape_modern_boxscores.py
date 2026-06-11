@@ -15,6 +15,8 @@ import argparse
 from urllib.request import urlopen, Request
 from urllib.error import HTTPError, URLError
 
+from json_io import save_json_atomic
+
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 OUTPUT_FILE = os.path.join(BASE_DIR, "sr_boxscores_modern.json")
 GAMES_FILE = os.path.join(BASE_DIR, "boxscore_urls.json")
@@ -234,11 +236,9 @@ def main():
         print(f"  OK: {len(teams)} teams, {nplayers} players")
 
         # Save after each
-        with open(OUTPUT_FILE, "w") as f:
-            json.dump(output, f, indent=2)
+        save_json_atomic(OUTPUT_FILE, output, indent=2)
 
-    with open(OUTPUT_FILE, "w") as f:
-        json.dump(output, f, indent=2)
+    save_json_atomic(OUTPUT_FILE, output, indent=2)
 
     print(f"\n{'='*60}")
     print(f"Scraped: {scraped} new | Total: {len(output)}")
