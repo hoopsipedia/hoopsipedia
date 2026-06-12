@@ -15,6 +15,7 @@ Files covered:
   - data.json                 (H team table)
   - on_this_day.json          (daily events)
   - games_1.json / games_2.json / games_3.json (per-team game logs)
+  - seasons.json              (per-team season histories)
 
 Exit code 1 on any FAIL. See tests/README.md for documented invariant
 decisions and the SKIP list policy.
@@ -450,6 +451,46 @@ def test_games_file(fname):
 
 
 # --------------------------------------------------------------------------
+# seasons.json
+# --------------------------------------------------------------------------
+
+def test_seasons_no_duplicate_histories(data_h):
+    # The original compile_history.py scrape matched slugs by name-prefix
+    # substring, assigning 16 small schools a flagship's byte-identical
+    # season history (fixed 2026-06-12, see SEASONS_DUPLICATE_REPORT.md).
+    # Invariant: no two data.json-H teams may share an identical season
+    # fingerprint (length + first-10 seasons' year:W-L), which would mean
+    # one team is wearing another's history.
+    name = "seasons.json"
+    try:
+        d = load(name)
+    except Exception as e:
+        check(name + ": parses", False, str(e))
+        return
+    check(name + ": parses", True)
+    if data_h is None:
+        check(name + ": no two data.json-H teams share an identical season "
+              "fingerprint", False, "data.json H unavailable, cannot cross-check")
+        return
+
+    fingerprints = {}
+    for tid, entry in d.items():
+        if str(tid) not in data_h:
+            continue
+        seasons = entry.get("seasons") if isinstance(entry, dict) else None
+        if not isinstance(seasons, list) or len(seasons) < 3:
+            continue
+        fp = (len(seasons), "|".join(
+            "%s:%s-%s" % (s.get("year"), s.get("wins"), s.get("losses"))
+            for s in seasons[:10]))
+        fingerprints.setdefault(fp, []).append(tid)
+
+    dupes = [(ids, fp[0]) for fp, ids in fingerprints.items() if len(ids) > 1]
+    check(name + ": no two data.json-H teams share an identical season "
+          "fingerprint", not dupes, first_bad(dupes))
+
+
+# --------------------------------------------------------------------------
 
 def test_games_shard_disjointness(fnames):
     # Consumers merge the shards last-wins (Object.assign / dict update), so a
@@ -482,6 +523,7 @@ def main():
     data_h = test_data_json()
     test_unified_rankings(data_h)
     test_on_this_day()
+    test_seasons_no_duplicate_histories(data_h)
     games_files = ("games_1.json", "games_2.json", "games_3.json")
     for f in games_files:
         test_games_file(f)
