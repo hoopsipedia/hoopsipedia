@@ -19,5 +19,19 @@ for f in data.json h2h.json games_1.json games_2.json games_3.json; do
     node -e "JSON.parse(require('fs').readFileSync('$f','utf8')); console.log('✅ $f is valid JSON');" || { echo "❌ $f is invalid JSON"; exit 1; }
 done
 
+# Slice freshness: the site serves per-team/per-year slices (games/, boxscores/).
+# If a source monolith was updated without re-running the split scripts, the site
+# would silently serve stale data — block the push instead.
+check_fresh() {
+    if [ -f "$1" ] && [ -f "$2" ] && [ "$1" -nt "$2" ]; then
+        echo "❌ $1 is newer than $2 — run python3 $3, then commit the slices"; exit 1
+    fi
+}
+check_fresh games_1.json games/index.json scripts/split_games.py
+check_fresh games_2.json games/index.json scripts/split_games.py
+check_fresh games_3.json games/index.json scripts/split_games.py
+check_fresh sr_boxscores.json boxscores/index.json scripts/split_boxscores.py
+echo "✅ Data slices are fresh"
+
 echo ""
 echo "✅ All pre-push checks passed. Pushing..."

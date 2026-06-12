@@ -5823,7 +5823,103 @@
         let SEASONS_DATA = null; // Pre-compiled historical season data (from seasons.json)
         let SEED_MATCHUP_HISTORY = {}; // Computed seed-vs-seed historical stats
         let H2H_DATA = null; // All-time head-to-head records (from h2h.json)
-        let GAMES_DATA = null; // Game-level schedule data (from games.json)
+        let GAMES_DATA = null; // Lazily-populated per-team game cache: {espnId: {games:[...], slug}}
+        let GAMES_INDEX = null; // games/index.json manifest: {espnId: gameCount}
+        let GAMES_LEGACY_MODE = false; // true when games/index.json is missing (pre-split deploy)
+        let _gamesIndexPromise = null;
+        let _allGamesPromise = null;
+        const _teamGamesFetches = {}; // espnId -> in-flight fetch promise
+
+        // ── LAZY GAME DATA LOADING (Wave 2b) ──
+        // First-time visitors used to download ~67MB of games_1/2/3.json upfront.
+        // Now we load an 8KB manifest and fetch per-team slices on demand.
+        function loadGamesIndex() {
+            if (!_gamesIndexPromise) {
+                _gamesIndexPromise = (async () => {
+                    try {
+                        const resp = await fetch('games/index.json');
+                        if (resp.ok) {
+                            GAMES_INDEX = await resp.json();
+                            GAMES_DATA = {};
+                            console.log(`Games manifest loaded — ${Object.keys(GAMES_INDEX).length} teams (lazy per-team loading)`);
+                            return;
+                        }
+                    } catch (e) { /* fall through to legacy */ }
+                    // Deploy-transition safety: manifest missing — old monolithic load
+                    GAMES_LEGACY_MODE = true;
+                    await loadAllGames();
+                })();
+            }
+            return _gamesIndexPromise;
+        }
+
+        // Fetch one team's games slice (games/{espnId}.json), memoized.
+        async function ensureTeamGames(espnId) {
+            if (espnId == null || espnId === '') return null;
+            const id = String(espnId);
+            await loadGamesIndex();
+            if (GAMES_DATA && GAMES_DATA[id]) return GAMES_DATA[id];
+            if (GAMES_LEGACY_MODE) return (GAMES_DATA && GAMES_DATA[id]) || null;
+            if (GAMES_INDEX && !(id in GAMES_INDEX)) return null; // team has no games data
+            if (!_teamGamesFetches[id]) {
+                _teamGamesFetches[id] = (async () => {
+                    try {
+                        const resp = await fetch(`games/${id}.json`);
+                        if (resp.ok) {
+                            const entry = await resp.json();
+                            GAMES_DATA[id] = entry;
+                            return entry;
+                        }
+                    } catch (e) { /* network failure */ }
+                    delete _teamGamesFetches[id]; // allow retry on transient failure
+                    return null;
+                })();
+            }
+            return _teamGamesFetches[id];
+        }
+
+        // Full-corpus load — used ONLY by consumers that genuinely need every
+        // team's games (NET proxy fallback when real NCAA NET data is missing).
+        // games_1/2/3.json stay deployed for one release; once removed, this
+        // fans out per-team from the manifest instead.
+        function loadAllGames() {
+            if (!_allGamesPromise) {
+                _allGamesPromise = (async () => {
+                    try {
+                        const gameParts = await Promise.all([
+                            fetch('games_1.json').then(r => r.ok ? r.json() : {}),
+                            fetch('games_2.json').then(r => r.ok ? r.json() : {}),
+                            fetch('games_3.json').then(r => r.ok ? r.json() : {})
+                        ]);
+                        const merged = Object.assign({}, ...gameParts);
+                        if (Object.keys(merged).length > 0) {
+                            GAMES_DATA = Object.assign(merged, GAMES_DATA || {});
+                            if (!GAMES_INDEX) {
+                                GAMES_INDEX = {};
+                                for (const [id, e] of Object.entries(GAMES_DATA)) {
+                                    GAMES_INDEX[id] = (Array.isArray(e) ? e : (e.games || [])).length;
+                                }
+                            }
+                            console.log(`Loaded full game data for ${Object.keys(GAMES_DATA).length} teams`);
+                            return GAMES_DATA;
+                        }
+                    } catch (e) { /* monolith gone — fan out below */ }
+                    if (GAMES_INDEX) {
+                        await Promise.all(Object.keys(GAMES_INDEX).map(id => ensureTeamGames(id)));
+                    }
+                    if (!GAMES_DATA) GAMES_DATA = {};
+                    return GAMES_DATA;
+                })();
+            }
+            return _allGamesPromise;
+        }
+
+        // Synchronous "does this team have games data?" — answered from the
+        // manifest so existence checks don't need to fetch the actual slice.
+        function hasGamesData(espnId) {
+            const id = String(espnId);
+            return !!((GAMES_INDEX && id in GAMES_INDEX) || (GAMES_DATA && GAMES_DATA[id]));
+        }
 
         // ── SEED MATCHUP HISTORY ENGINE ──
         // Build fast lookup: ESPN team name -> {victimCount, cinderellaCount, pairings}
@@ -6038,16 +6134,12 @@
                     }
                 } catch(e) { console.log('No upset_history.json'); }
 
-                // Try to load game-level schedule data (split into chunks for CDN file size limits)
+                // Game-level schedule data: load the tiny manifest now; per-team
+                // slices (games/{espnId}.json) are fetched lazily on demand.
+                // Falls back to the old games_1/2/3.json monolith if the
+                // manifest isn't deployed yet.
                 try {
-                    const gameParts = await Promise.all([
-                        fetch('games_1.json').then(r => r.ok ? r.json() : {}),
-                        fetch('games_2.json').then(r => r.ok ? r.json() : {}),
-                        fetch('games_3.json').then(r => r.ok ? r.json() : {})
-                    ]);
-                    GAMES_DATA = Object.assign({}, ...gameParts);
-                    const teamCount = Object.keys(GAMES_DATA).length;
-                    if (teamCount > 0) console.log(`Loaded game data for ${teamCount} teams`);
+                    await loadGamesIndex();
                 } catch (e) {
                     console.log('No game data found - will use ESPN API for game details');
                 }
@@ -6222,6 +6314,12 @@
                 const teams = allTeamsData.filter(t => todayTeamIds.has(String(t.espnId)));
                 console.log(`Enriching ${teams.length} teams with live records (today's games only)`);
 
+                // Lazy-load game slices for teams whose current-season record
+                // must be derived from games data (no CS record from nightly sync)
+                await Promise.all(teams
+                    .filter(t => !window.TEAM_DATA?.CS?.[String(t.espnId)])
+                    .map(t => ensureTeamGames(t.espnId).catch(() => null)));
+
                 let updated = 0;
                 const results = await Promise.allSettled(
                     teams.map(t =>
@@ -6349,10 +6447,49 @@
         let _otdTimer = null;
 
         /**
-         * Search GAMES_DATA for significant games played on today's month/day.
-         * Returns formatted fact objects compatible with the hardcoded facts.
+         * Data-driven "On This Day" facts.
+         * Lazy mode: reads the precompiled on_this_day.json (~330KB) instead of
+         * scanning every team's games (which would require the full 67MB corpus).
+         * Legacy mode (full GAMES_DATA in memory): keeps the original scan.
          */
-        function getDataDrivenOtdFacts(month, day) {
+        let _otdDataPromise = null;
+        function loadOtdData() {
+            if (!_otdDataPromise) {
+                _otdDataPromise = fetch('on_this_day.json')
+                    .then(r => r.ok ? r.json() : null)
+                    .catch(() => null);
+            }
+            return _otdDataPromise;
+        }
+
+        async function getDataDrivenOtdFacts(month, day) {
+            if (GAMES_LEGACY_MODE && GAMES_DATA) return scanGamesDataOtdFacts(month, day);
+            const otd = await loadOtdData();
+            const key = String(month).padStart(2, '0') + '-' + String(day).padStart(2, '0');
+            const entries = (otd && otd[key]) || [];
+            if (!entries.length) return [];
+            const monthNames = ['','January','February','March','April','May','June','July','August','September','October','November','December'];
+            return entries.map(e => {
+                const year = parseInt((e.date || '').slice(0, 4)) || 0;
+                // Headline format: "YYYY-MM-DD: Team A beats Team B 99-98 ..."
+                let body = (e.headline || '').replace(/^\d{4}-\d{2}-\d{2}:\s*/, '');
+                for (const t of (e.teams || [])) {
+                    if (t.name && t.espnId) {
+                        const slug = t.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+                        body = body.replace(t.name, '{' + t.name + '|' + slug + '|' + t.espnId + '}');
+                    }
+                }
+                const text = 'On ' + monthNames[month] + ' ' + day + ', <span class="otd-year">' + year + '</span>: ' + body;
+                return { month, day, year, text, score: e.sig || 25 };
+            }).filter(f => f.year >= 1950).sort((a, b) => b.score - a.score).slice(0, 10);
+        }
+
+        /**
+         * Legacy scan: search the full GAMES_DATA corpus for significant games
+         * played on today's month/day. Only used when the monolithic
+         * games_1/2/3.json were loaded (pre-split deploy fallback).
+         */
+        function scanGamesDataOtdFacts(month, day) {
             if (!GAMES_DATA) return [];
             const monthStr = String(month).padStart(2, '0');
             const dayStr = String(day).padStart(2, '0');
@@ -6441,7 +6578,7 @@
             return candidates.slice(0, 10);
         }
 
-        function initOnThisDayWidget() {
+        async function initOnThisDayWidget() {
             const widget = document.getElementById('otdWidget');
             if (!widget) return;
 
@@ -6466,8 +6603,8 @@
                 return diff <= 2;
             });
 
-            // Data-driven facts from games.json
-            const dataDriven = getDataDrivenOtdFacts(month, day);
+            // Data-driven facts from precompiled on_this_day.json (lazy) or GAMES_DATA (legacy)
+            const dataDriven = await getDataDrivenOtdFacts(month, day);
 
             // Merge: hardcoded first (better narrative), then data-driven to fill gaps
             let facts = [...exactFacts];
@@ -7299,7 +7436,7 @@
             setupTeamsData();
             setupEventListeners();
             initCorrectionModal();
-            initOnThisDayWidget();
+            initOnThisDayWidget().catch(e => console.warn('OTD widget init failed:', e));
 
             // Check for hash route on initial load
             try {
@@ -8073,7 +8210,7 @@
             const rivalryMatch = hash.match(/^#rivalry\/([^/]+)$/);
             if (rivalryMatch) {
                 switchView('rivalryPage', true);
-                renderRivalryPage(rivalryMatch[1]);
+                renderRivalryPage(rivalryMatch[1]).catch(e => console.error('Rivalry page render failed:', e));
                 _skipHashUpdate = false;
                 return;
             }
@@ -8883,7 +9020,7 @@
         // Cache for H2H data to avoid re-fetching
         const h2hCache = {};
 
-        function fetchGameH2H(t1EspnId, t2EspnId) {
+        async function fetchGameH2H(t1EspnId, t2EspnId) {
             // Use all-time H2H data if available (instant, no API calls)
             if (H2H_DATA) {
                 const t1H2H = H2H_DATA[String(t1EspnId)];
@@ -8893,10 +9030,14 @@
                 }
             }
 
-            // Fallback: check games.json data (same source as comparison view)
-            if (GAMES_DATA) {
+            // Fallback: check per-team games data (same source as comparison view)
+            const [t1Loaded, t2Loaded] = await Promise.all([
+                ensureTeamGames(t1EspnId).catch(() => null),
+                ensureTeamGames(t2EspnId).catch(() => null)
+            ]);
+            if (t1Loaded || t2Loaded) {
                 const t1Id = String(t1EspnId), t2Id = String(t2EspnId);
-                const t1Data = GAMES_DATA[t1Id], t2Data = GAMES_DATA[t2Id];
+                const t1Data = t1Loaded, t2Data = t2Loaded;
                 let t1Wins = 0, t2Wins = 0;
                 const seen = new Set();
 
@@ -10521,8 +10662,12 @@
                 }
             } catch(e) { /* ignore */ }
 
-            // Find H2H games this season
+            // Find H2H games this season (lazy-load both teams' game slices)
             let thisSeasonGames = [];
+            await Promise.all([
+                ensureTeamGames(t1.espnId).catch(() => null),
+                ensureTeamGames(t2.espnId).catch(() => null)
+            ]);
             if (GAMES_DATA) {
                 const h2hGames = getH2HGamesFromData(t1, t2);
                 if (h2hGames) {
@@ -10721,12 +10866,18 @@
             if (bsContent) bsContent.style.display = tab === 'boxscore' ? 'block' : 'none';
         }
 
-        function loadH2HData(t1, t2) {
+        async function loadH2HData(t1, t2) {
             const container = document.getElementById('compH2HContent');
             const t1Color = t1.color || '#1B2A4A';
             const t2Color = t2.color || '#C9A86C';
 
             container.innerHTML = renderComparisonSkeleton();
+
+            // Lazy-load both teams' game slices for the matchup history below
+            await Promise.all([
+                ensureTeamGames(t1.espnId).catch(() => null),
+                ensureTeamGames(t2.espnId).catch(() => null)
+            ]);
 
             // Build all-time record header from h2h.json
             let allTimeHtml = '';
@@ -11672,8 +11823,8 @@
             tbody.innerHTML = '';
 
             // Separate real data teams from shell teams
-            const realTeams = sorted.filter(t => t.allTimeW >= 100 || (GAMES_DATA && GAMES_DATA[t.espnId]));
-            const shellTeams = sorted.filter(t => t.allTimeW < 100 && !(GAMES_DATA && GAMES_DATA[t.espnId]));
+            const realTeams = sorted.filter(t => t.allTimeW >= 100 || hasGamesData(t.espnId));
+            const shellTeams = sorted.filter(t => t.allTimeW < 100 && !hasGamesData(t.espnId));
 
             // Render real teams with rankings
             realTeams.forEach((team, idx) => {
@@ -12389,6 +12540,11 @@
             const netRankMap = {};
             teamScores.forEach((t, i) => { netRankMap[t.id] = i + 1; });
 
+            // computeQuadRecord below genuinely needs every team's current-season
+            // games — this proxy path only runs when real NCAA NET data is
+            // missing from data.json, so the full-corpus load is acceptable here.
+            await loadAllGames();
+
             NET_RANKINGS = teamScores.map((t, idx) => {
                 const rank = idx + 1;
                 const quadRecord = computeQuadRecord(t.id, netRankMap);
@@ -12616,7 +12772,7 @@
         let _activeQuad = null;
 
         const _activeQuadPerTarget = {}; // track active quad per expand target
-        function toggleQuadGames(quadNum, teamEspnId, targetId) {
+        async function toggleQuadGames(quadNum, teamEspnId, targetId) {
             const expandEl = document.getElementById(targetId || 'quadGamesExpand');
             if (!expandEl) return;
             const tKey = targetId || 'quadGamesExpand';
@@ -12644,8 +12800,8 @@
                 NET_RANKINGS.forEach(t => { netRankMap[t.teamId] = t.rank; });
             }
 
-            // Get team games for current season
-            const teamData = GAMES_DATA?.[String(teamEspnId)];
+            // Get team games for current season (lazy-fetch this team's slice)
+            const teamData = await ensureTeamGames(teamEspnId).catch(() => null);
             if (!teamData) {
                 expandEl.innerHTML = '<div style="padding:1rem;text-align:center;color:#8892A0;font-size:0.85rem;">Game data not available.</div>';
                 expandEl.classList.add('quad-games-expand--open');
@@ -13032,7 +13188,7 @@
 
                 ${currentSeasonHTML}
 
-                ${(team.allTimeW + team.allTimeL < 100 && !GAMES_DATA[team.espnId]) ? `
+                ${(team.allTimeW + team.allTimeL < 100 && !hasGamesData(team.espnId)) ? `
                 <div class="ds-card" style="padding:2rem; margin-bottom:2.5rem; text-align:center;">
                     <div style="font-size:1.1rem; font-weight:600; color:var(--navy); margin-bottom:0.5rem;">Full Program Data Coming Soon</div>
                     <div style="font-size:0.85rem; color:var(--ink-muted);">We're actively building out historical stats, tournament history, and head-to-head data for ${team.name}. Check back soon!</div>
@@ -15698,6 +15854,8 @@
             return UPSET_BOXSCORES || {};
         }
 
+        // Legacy whole-file loader (18MB) — only used as deploy-transition
+        // fallback when the per-year boxscores/ slices aren't deployed yet.
         async function loadSRBoxscores() {
             if (SR_BOXSCORES) return SR_BOXSCORES;
             try {
@@ -15708,6 +15866,51 @@
                 }
             } catch (e) {}
             return SR_BOXSCORES || {};
+        }
+
+        // ── Per-year SR boxscore loading (Wave 2b) ──
+        // Game keys are "YYYY/slug-vs-slug", so boxscores/{year}.json holds just
+        // that season's entries (~100-700KB instead of 18MB).
+        const SR_BOXSCORES_BY_YEAR = {}; // year -> {gameKey: data}
+        let _srBoxIndexPromise = null;
+
+        function loadSRBoxscoreIndex() {
+            if (!_srBoxIndexPromise) {
+                _srBoxIndexPromise = fetch('boxscores/index.json')
+                    .then(r => r.ok ? r.json() : null)
+                    .catch(() => null);
+            }
+            return _srBoxIndexPromise;
+        }
+
+        async function loadSRBoxscoresYear(year) {
+            const y = String(year);
+            if (SR_BOXSCORES_BY_YEAR[y]) return SR_BOXSCORES_BY_YEAR[y];
+            // Whole file already in memory (legacy fallback) — slice it
+            if (SR_BOXSCORES) {
+                const slice = {};
+                for (const k in SR_BOXSCORES) if (k.startsWith(y + '/')) slice[k] = SR_BOXSCORES[k];
+                SR_BOXSCORES_BY_YEAR[y] = slice;
+                return slice;
+            }
+            const idx = await loadSRBoxscoreIndex();
+            if (idx && idx.years) {
+                if (!idx.years[y]) { SR_BOXSCORES_BY_YEAR[y] = {}; return SR_BOXSCORES_BY_YEAR[y]; } // no boxscores that year
+                try {
+                    const resp = await fetch(`boxscores/${y}.json`);
+                    if (resp.ok) {
+                        SR_BOXSCORES_BY_YEAR[y] = await resp.json();
+                        return SR_BOXSCORES_BY_YEAR[y];
+                    }
+                } catch (e) {}
+                return {}; // transient failure — don't cache, allow retry
+            }
+            // Deploy-transition safety: per-year slices missing — whole-file load
+            const all = await loadSRBoxscores();
+            const slice = {};
+            for (const k in all) if (k.startsWith(y + '/')) slice[k] = all[k];
+            SR_BOXSCORES_BY_YEAR[y] = slice;
+            return slice;
         }
 
         async function fetchBoxScoreData(eventId) {
@@ -16992,8 +17195,8 @@
                     }
                 }
 
-                // Fall back to Sports Reference data
-                const srData = await loadSRBoxscores();
+                // Fall back to Sports Reference data (per-year slice)
+                const srData = await loadSRBoxscoresYear(year);
                 if (srData[gameKey]) {
                     boxscoreEl.innerHTML = `
                         <div class="game-detail-boxscore-title">Box Score</div>
@@ -21343,7 +21546,13 @@
                 inner.innerHTML = headerHtml + '<div class="h2h-boxscore-loading"><div class="spinner"></div>Checking for box score...</div>';
                 panel.style.maxHeight = '200px';
 
-                const srData = await loadSRBoxscores();
+                // Per-year slices: SR keys use tournament year, so a Nov/Dec game
+                // date maps to the following year's key — fetch both candidates
+                const gMonth = parseInt(dateStr.substring(5, 7));
+                const candidateYear = gMonth >= 10 ? gameYear + 1 : gameYear;
+                const srData = Object.assign({},
+                    await loadSRBoxscoresYear(gameYear),
+                    candidateYear !== gameYear ? await loadSRBoxscoresYear(candidateYear) : {});
                 // Try to find matching SR box score by date and team names
                 let srMatch = null;
                 if (srData) {
@@ -23328,12 +23537,18 @@
             return result;
         }
 
-        function renderRivalryPage(slug) {
+        async function renderRivalryPage(slug) {
             const rivalry = RIVALRIES.find(r => r.slug === slug);
             if (!rivalry) {
                 document.getElementById('rivalryPageContent').innerHTML = '<div style="text-align:center;padding:3rem;color:#8892A0;">Rivalry not found.</div>';
                 return;
             }
+
+            // Lazy-load both teams' game slices for game-level rivalry data
+            await Promise.all([
+                ensureTeamGames(rivalry.team1Id).catch(() => null),
+                ensureTeamGames(rivalry.team2Id).catch(() => null)
+            ]);
 
             const container = document.getElementById('rivalryPageContent');
             const t1 = H[rivalry.team1Id];

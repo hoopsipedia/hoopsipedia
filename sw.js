@@ -1,5 +1,6 @@
 // Hoopsipedia Service Worker — PWA offline support
-const CACHE_NAME = 'hoopsipedia-v3';
+// v4: evicts cached games_1/2/3.json + sr_boxscores.json megafiles (Wave 2b lazy loading)
+const CACHE_NAME = 'hoopsipedia-v4';
 const STATIC_ASSETS = [
   '/',
   '/index.html',

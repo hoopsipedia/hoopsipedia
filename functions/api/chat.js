@@ -19,9 +19,11 @@ let cachedDraft = null;       // draft_history.json
 let cachedTeamHistory = null; // team_history.json
 let cachedUpsets = null;      // upset_history.json
 let cachedTimeMachine = null; // time_machine_results.json
-let cachedGames1 = null;      // games_1.json
-let cachedGames2 = null;      // games_2.json
-let cachedGames3 = null;      // games_3.json
+let cachedGames1 = null;      // games_1.json (legacy fallback only)
+let cachedGames2 = null;      // games_2.json (legacy fallback only)
+let cachedGames3 = null;      // games_3.json (legacy fallback only)
+let cachedGamesManifest;      // games/index.json — undefined = not fetched, null = missing
+const cachedTeamGames = {};   // espnId -> normalized {games, slug} | null (per-team slices)
 
 // ── Rate limiting ──
 const rateLimits = new Map();
@@ -97,16 +99,34 @@ async function getTimeMachine(ctx) {
 }
 
 async function getTeamGames(ctx, espnId) {
+  // Wave 2b: fetch the per-team slice (/games/{espnId}.json, KBs) instead of
+  // caching three ~22MB parts — drops worker memory from ~70MB to near zero.
+  const id = String(espnId);
+  if (id in cachedTeamGames) return cachedTeamGames[id];
+  if (cachedGamesManifest === undefined) {
+    cachedGamesManifest = await loadJSON(ctx.env.ASSETS, ctx.request.url, '/games/index.json');
+  }
+  if (cachedGamesManifest) {
+    if (!(id in cachedGamesManifest)) return (cachedTeamGames[id] = null); // no data for this team
+    const entry = await loadJSON(ctx.env.ASSETS, ctx.request.url, `/games/${id}.json`);
+    if (entry) {
+      // Slices are pre-normalized to {games, slug}, but tolerate bare arrays
+      return (cachedTeamGames[id] = Array.isArray(entry) ? { games: entry } : entry);
+    }
+    // Unexpected 404 despite manifest entry — fall through to legacy path
+  }
+  // Legacy fallback: per-team slices not deployed yet (kept for one release)
   if (!cachedGames1) cachedGames1 = await loadJSON(ctx.env.ASSETS, ctx.request.url, '/games_1.json') || {};
   if (!cachedGames2) cachedGames2 = await loadJSON(ctx.env.ASSETS, ctx.request.url, '/games_2.json') || {};
   if (!cachedGames3) cachedGames3 = await loadJSON(ctx.env.ASSETS, ctx.request.url, '/games_3.json') || {};
   // games_3 first: mirrors the old {...g1,...g2,...g3} last-wins merge — some teams
   // (e.g. 263 Drake) have a stale legacy-format duplicate in an earlier file
-  const entry = cachedGames3[espnId] || cachedGames2[espnId] || cachedGames1[espnId] || null;
+  const entry = cachedGames3[id] || cachedGames2[id] || cachedGames1[id] || null;
   // ~116 teams are stored as legacy bare arrays (no .games wrapper) — normalize so
   // the tools don't report "no game data" for them
-  if (Array.isArray(entry)) return { games: entry };
-  return entry;
+  const norm = Array.isArray(entry) ? { games: entry } : entry;
+  cachedTeamGames[id] = norm;
+  return norm;
 }
 
 // ── Helper: team slug from name ──
