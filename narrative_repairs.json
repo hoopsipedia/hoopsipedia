@@ -1,0 +1,231 @@
+{
+  "_comment": "Narrative fact-check repairs. Each entry replaces `find` with `replace` in team_history.json[teamId][field] (or sets the field for kind=value). Only entries with status=approved are applied by scripts/apply_narrative_repairs.py. Findings source: FACTCHECK_FINDINGS_2026-06-11.md / FACTCHECK_FINDINGS_FULL_2026-06-12.md.",
+  "batch1": [
+    {
+      "findingId": 0,
+      "team": "UCLA Bruins",
+      "field": "blurb",
+      "find": "Before Wooden arrived in 1948, UCLA had never won a conference title",
+      "replace": "Before Wooden arrived in 1948, UCLA had not won a conference title since 1927",
+      "status": "applied",
+      "appliedOn": "2026-07-07"
+    },
+    {
+      "findingId": 1,
+      "team": "UCLA Bruins",
+      "field": "blurb",
+      "find": "once lost 39 straight games to rival USC",
+      "replace": "once lost 42 straight games to rival USC between 1932 and 1943",
+      "status": "applied",
+      "appliedOn": "2026-07-07"
+    },
+    {
+      "findingId": 2,
+      "team": "Kentucky Wildcats",
+      "field": "funFact",
+      "find": "Kentucky has led the nation in home attendance since 1976 and won the national attendance title a record 25 times",
+      "replace": "Kentucky has won the national attendance title 29 times since Rupp Arena opened in 1976, more than any other program",
+      "status": "applied",
+      "appliedOn": "2026-07-07"
+    },
+    {
+      "findingId": 7,
+      "team": "Kansas Jayhawks",
+      "field": "funFact",
+      "find": "Kansas's coaching lineage is unmatched: Naismith coached Allen, who coached Dean Smith and Adolph Rupp — between them, they won over 3,000 games and multiple national titles",
+      "replace": "Kansas's coaching lineage is unmatched: Naismith coached Allen, who coached Dean Smith and Adolph Rupp — between them, they won more than 2,500 games and multiple national titles",
+      "status": "applied",
+      "appliedOn": "2026-07-07"
+    },
+    {
+      "findingId": 8,
+      "team": "Indiana Hoosiers",
+      "field": "mascotOrigin",
+      "find": "The term 'Hoosier' has been associated with Indiana residents since the 1840s, though its exact origin remains debated among historians",
+      "replace": "The term 'Hoosier' has been associated with Indiana residents since the early 1830s, though its exact origin remains debated among historians",
+      "status": "applied",
+      "appliedOn": "2026-07-07"
+    },
+    {
+      "findingId": 9,
+      "team": "Villanova Wildcats",
+      "field": "mascotOrigin",
+      "find": "The 'Wildcats' nickname has been used since the early days of the program, though the exact reason for its selection is lost to history",
+      "replace": "The 'Wildcats' nickname was adopted in 1926 through a campus-wide contest, the winning suggestion of assistant football coach Edward Hunsinger, who had played at Notre Dame alongside the famed 'Four Horsemen'",
+      "status": "applied",
+      "appliedOn": "2026-07-07"
+    },
+    {
+      "findingId": 10,
+      "team": "Syracuse Orange",
+      "field": "blurb",
+      "find": "ranks fifth all-time in total wins among NCAA programs",
+      "replace": "ranks among the top ten NCAA programs in all-time wins",
+      "status": "applied",
+      "appliedOn": "2026-07-07"
+    },
+    {
+      "findingId": 11,
+      "team": "Syracuse Orange",
+      "field": "blurb",
+      "find": "Syracuse has led the nation in attendance 25 times",
+      "replace": "Syracuse has led the nation in attendance 16 times, including 11 straight seasons from 1985 to 1995",
+      "status": "applied",
+      "appliedOn": "2026-07-07"
+    },
+    {
+      "findingId": 12,
+      "team": "Houston Cougars",
+      "field": "blurb",
+      "find": "Houston won its first NCAA Championship in 2025, finally breaking through after heartbreaking losses in the 1980s.",
+      "replace": "Houston is still chasing its first NCAA Championship, having reached seven Final Fours and lost national title games in 1983, 1984, and 2025 — the last a 65-63 heartbreaker against Florida.",
+      "status": "applied",
+      "appliedOn": "2026-07-07"
+    },
+    {
+      "findingId": 14,
+      "team": "Michigan State Spartans",
+      "field": "blurb",
+      "find": "Under Tom Izzo, who arrived in 1995, Michigan State has reached ten Final Fours and won a second national title in 2000.",
+      "replace": "Under Tom Izzo, who arrived in 1995, Michigan State has reached eight Final Fours — ten in program history — and won a second national title in 2000.",
+      "status": "applied",
+      "appliedOn": "2026-07-07"
+    },
+    {
+      "findingId": 15,
+      "team": "Michigan State Spartans",
+      "field": "funFact",
+      "find": "Tom Izzo has led Michigan State to ten Final Fours, tied for sixth most all-time, and ESPN named the Spartans the best team of the 2000s decade",
+      "replace": "Tom Izzo has led Michigan State to eight Final Fours, the fifth most by any coach all-time, and ESPN's Andy Katz picked the Spartans as his team of the 2000s decade",
+      "status": "applied",
+      "appliedOn": "2026-07-07"
+    },
+    {
+      "findingId": 17,
+      "team": "Cincinnati Bearcats",
+      "field": "blurb",
+      "find": "Under Ed Jucker, Cincinnati won back-to-back NCAA Championships in 1961 and 1962, becoming the last team to win consecutive titles until Duke in 1991-92.",
+      "replace": "Under Ed Jucker, Cincinnati won back-to-back NCAA Championships in 1961 and 1962, and came within an overtime loss to Loyola Chicago of a third straight title in 1963.",
+      "status": "applied",
+      "appliedOn": "2026-07-07"
+    },
+    {
+      "findingId": 18,
+      "team": "Cincinnati Bearcats",
+      "field": "iconicMoment",
+      "find": "Winning back-to-back NCAA Championships in 1961 and 1962 under coach Ed Jucker, the last team to repeat until Duke thirty years later",
+      "replace": "Winning back-to-back NCAA Championships in 1961 and 1962 under coach Ed Jucker, then reaching a third straight title game in 1963",
+      "status": "applied",
+      "appliedOn": "2026-07-07"
+    },
+    {
+      "findingId": 19,
+      "team": "Cincinnati Bearcats",
+      "field": "mascotOrigin",
+      "find": "Adopted in 1914 when cheerleader Norman 'Pat' Lyon combined 'bear' and 'cats' after a cartoon of a ferocious bear-cat hybrid appeared in the school newspaper",
+      "replace": "Born on Halloween 1914, when cheerleader Norman 'Pat' Lyon punned on star fullback Teddy Baehr's name — 'They may be Wildcats, but we have a Baehr-cat on our side' — during a win over Kentucky; a student newspaper cartoon of a 'Cincinnati Bear Cat' days later cemented the name",
+      "status": "applied",
+      "appliedOn": "2026-07-07"
+    },
+    {
+      "findingId": 20,
+      "team": "Gonzaga Bulldogs",
+      "field": "funFact",
+      "find": "When Gonzaga opened McCarthey Athletic Center in 2004, the Bulldogs won 100 consecutive home games there, the longest such streak in the NCAA at the time",
+      "replace": "Gonzaga opened McCarthey Athletic Center in 2004 riding a 38-game home winning streak, and later won 75 straight there from 2018 to 2023 — more than five years without a home loss",
+      "status": "applied",
+      "appliedOn": "2026-07-07"
+    },
+    {
+      "findingId": 22,
+      "team": "Kansas State Wildcats",
+      "field": "blurb",
+      "find": "Kansas State has a proud basketball history, reaching the Final Four four times and finishing as national runner-up twice (1951, 1958).",
+      "replace": "Kansas State has a proud basketball history, reaching the Final Four four times (1948, 1951, 1958, 1964) and finishing as national runner-up in 1951.",
+      "status": "applied",
+      "appliedOn": "2026-07-07"
+    },
+    {
+      "findingId": 25,
+      "team": "Illinois Fighting Illini",
+      "field": "funFact",
+      "find": "Despite being ranked No. 1 and undefeated, the 1943 'Whiz Kids' team opted not to play in the NCAA Tournament when three of its five starters were called to duty in World War II",
+      "replace": "Despite a 17-1 record and recognition as the nation's best team, the 1943 'Whiz Kids' opted not to play in the NCAA Tournament when three of their five starters were called to duty in World War II",
+      "status": "applied",
+      "appliedOn": "2026-07-07"
+    },
+    {
+      "findingId": 27,
+      "team": "Baylor Bears",
+      "field": "blurb",
+      "find": "demolcing previously undefeated Gonzaga 86-70 in the title game",
+      "replace": "demolishing previously undefeated Gonzaga 86-70 in the title game",
+      "status": "applied",
+      "appliedOn": "2026-07-07"
+    },
+    {
+      "findingId": 32,
+      "team": "Auburn Tigers",
+      "field": "blurb",
+      "find": "inspired by a line from Oliver Goldsmith's poem 'The Deserted Village' referencing a 'bold peasantry.'",
+      "replace": "inspired by the line 'where crouching tigers wait their hapless prey' from Oliver Goldsmith's poem 'The Deserted Village.'",
+      "status": "applied",
+      "appliedOn": "2026-07-07"
+    },
+    {
+      "findingId": 33,
+      "team": "Auburn Tigers",
+      "field": "iconicMoment",
+      "find": "Reaching the 2019 Final Four under Bruce Pearl, the program's first Final Four appearance in over 30 years, energizing the fan base",
+      "replace": "Reaching the 2019 Final Four under Bruce Pearl, the first Final Four appearance in program history, capped by an overtime Elite Eight upset of Kentucky",
+      "status": "applied",
+      "appliedOn": "2026-07-07"
+    },
+    {
+      "findingId": 34,
+      "team": "Colorado State Rams",
+      "field": "funFact",
+      "find": "Colorado State's Moby Arena, opened in 1966, was nicknamed 'Moby' both for its whale-like shape and as a pun on the arena's original name",
+      "replace": "Colorado State's Moby Arena, dedicated in 1966, earned its nickname when a student sportswriter compared the hump-shaped building to the whale from Moby-Dick — 'Moby Gym' stuck, and the name was made official decades later",
+      "status": "applied",
+      "appliedOn": "2026-07-07"
+    },
+    {
+      "findingId": 35,
+      "team": "Hawai'i Rainbow Warriors",
+      "field": "blurb",
+      "find": "The program has made multiple NCAA Tournament appearances and reached the Sweet Sixteen.",
+      "replace": "The program has made multiple NCAA Tournament appearances and earned its first tournament win in 2016 over California.",
+      "status": "applied",
+      "appliedOn": "2026-07-07"
+    },
+    {
+      "findingId": 37,
+      "team": "Hawai'i Rainbow Warriors",
+      "field": "founded",
+      "kind": "value",
+      "find": 1920,
+      "replace": 1912,
+      "status": "applied",
+      "appliedOn": "2026-07-07"
+    },
+    {
+      "findingId": 38,
+      "team": "Minnesota Golden Gophers",
+      "field": "blurb",
+      "find": "including two NCAA Tournament title claims in 1919 and 1937 (pre-tournament era)",
+      "replace": "including retroactively awarded national championships for 1902 and 1919 from the Helms Athletic Foundation and 1903 from the Premo-Porretta Power Poll",
+      "status": "applied",
+      "appliedOn": "2026-07-07"
+    },
+    {
+      "findingId": 39,
+      "team": "New Hampshire Wildcats",
+      "field": "iconicMoment",
+      "find": "The 2006 America East Tournament Championship and NCAA Tournament appearance, the program's first Big Dance bid in over a decade.",
+      "replace": "Back-to-back 20-win seasons in 2015-16 and 2016-17 under Bill Herrion, the best stretch of the program's Division I era.",
+      "status": "applied",
+      "appliedOn": "2026-07-07"
+    }
+  ]
+}
