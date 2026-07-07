@@ -103,6 +103,15 @@ class CollegeBasketballCompiler:
             return text if text else None
         return None
 
+    @staticmethod
+    def _clean_int(text: str) -> int:
+        """Parse an SR integer cell, tolerating footnote markers like '11*'
+        (used for vacated/adjusted records). Raises ValueError if no digits."""
+        cleaned = re.sub(r'[^\d]', '', text)
+        if not cleaned:
+            raise ValueError(f"no digits in {text!r}")
+        return int(cleaned)
+
     def _parse_season_from_row(self, row) -> Optional[Dict[str, Any]]:
         """Parse a single season row using data-stat attributes."""
         try:
@@ -117,13 +126,20 @@ class CollegeBasketballCompiler:
 
             season_obj = {'year': season}
 
+            # SR appends '-nm' to seasons played outside the majors
+            # (non-Division-I). Keep the season, clean the label, keep the
+            # signal as a flag.
+            if season.endswith('-nm'):
+                season_obj['year'] = season[:-3]
+                season_obj['nonMajor'] = True
+
             # Overall record: wins and losses
             wins = self._get_cell_value(row, 'wins')
             losses = self._get_cell_value(row, 'losses')
             if wins and losses:
-                season_obj['wins'] = int(wins)
-                season_obj['losses'] = int(losses)
-                season_obj['record'] = f"{wins}-{losses}"
+                season_obj['wins'] = self._clean_int(wins)
+                season_obj['losses'] = self._clean_int(losses)
+                season_obj['record'] = f"{season_obj['wins']}-{season_obj['losses']}"
 
             # Win-Loss percentage
             wl_pct = self._get_cell_value(row, 'win_loss_pct')
@@ -142,9 +158,9 @@ class CollegeBasketballCompiler:
             conf_wins = self._get_cell_value(row, 'wins_conf')
             conf_losses = self._get_cell_value(row, 'losses_conf')
             if conf_wins and conf_losses:
-                season_obj['confWins'] = int(conf_wins)
-                season_obj['confLosses'] = int(conf_losses)
-                season_obj['confRecord'] = f"{conf_wins}-{conf_losses}"
+                season_obj['confWins'] = self._clean_int(conf_wins)
+                season_obj['confLosses'] = self._clean_int(conf_losses)
+                season_obj['confRecord'] = f"{season_obj['confWins']}-{season_obj['confLosses']}"
 
             # Conference W-L%
             conf_pct = self._get_cell_value(row, 'win_loss_pct_conf')
