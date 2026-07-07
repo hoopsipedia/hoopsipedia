@@ -7379,6 +7379,12 @@
         }
 
         async function init() {
+            // The Pages Function ([[path]].js) prepends a crawler-visible
+            // #ssr-content block inside <body>. The SPA is taking over, so
+            // drop it; without JS it stays and the page still has content.
+            const ssrBlock = document.getElementById('ssr-content');
+            if (ssrBlock) ssrBlock.remove();
+
             // Masthead date
             const mastheadDate = document.getElementById('mastheadDate');
             if (mastheadDate) mastheadDate.textContent = new Date().toLocaleDateString('en-US', { weekday:'long', month:'long', day:'numeric' });

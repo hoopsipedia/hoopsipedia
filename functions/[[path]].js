@@ -158,6 +158,165 @@ function breadcrumbLd(items) {
   };
 }
 
+// ---------- Server-rendered content (SSR) ----------
+// Visible-by-default HTML prepended inside <body> so crawlers (and no-JS
+// users) see real content instead of the empty SPA shell. index.html
+// removes #ssr-content the moment the SPA renders, so JS users never see
+// it. This replaces the old <noscript> summary, which Google largely
+// ignores once it renders JS.
+
+// Per-isolate cache of seasons/{espnId}.json slices (~15KB each). The
+// full seasons.json is 5.4MB — too heavy to parse per request.
+const seasonsCache = new Map();
+
+async function getTeamSeasons(assetFetcher, originUrl, espnId) {
+  if (seasonsCache.has(espnId)) return seasonsCache.get(espnId);
+  try {
+    const resp = await assetFetcher.fetch(new URL(`/seasons/${espnId}.json`, originUrl).toString());
+    if (!resp.ok) return null;
+    const data = await resp.json();
+    const seasons = Array.isArray(data.seasons) ? data.seasons : null;
+    if (seasons) seasonsCache.set(espnId, seasons);
+    return seasons;
+  } catch (e) {
+    return null;
+  }
+}
+
+const SSR_SECTION_STYLE = 'max-width:960px;margin:24px auto;padding:0 16px 24px;line-height:1.6';
+const SSR_TABLE_STYLE = 'border-collapse:collapse;width:100%;font-size:14px';
+const SSR_CELL_STYLE = 'border:1px solid #ccc;padding:4px 8px;text-align:left';
+
+function ssrWrap(inner) {
+  return `<div id="ssr-content"><section style="${SSR_SECTION_STYLE}">${inner}</section></div>`;
+}
+
+function teamHref(origin, slug) {
+  return `${origin}/?team=${encodeParam(slug)}`;
+}
+
+function winPctText(w, l) {
+  const games = w + l;
+  if (!games) return '';
+  return (w / games).toFixed(3).replace(/^0/, '');
+}
+
+// All teams in a conference as [{name, slug}], sorted by name.
+function conferenceTeams(teams, conf, excludeEspnId) {
+  const out = [];
+  for (const [espnId, t] of Object.entries(teams)) {
+    if (t[F.CONF] === conf && espnId !== excludeEspnId) {
+      out.push({ name: t[F.NAME], slug: teamSlug(t[F.NAME]) });
+    }
+  }
+  out.sort((a, b) => a.name.localeCompare(b.name));
+  return out;
+}
+
+function renderTeamSsr(team, seasons, teams, origin) {
+  const slug = teamSlug(team.name);
+  const parts = [];
+
+  parts.push(`<h1>${escapeHtml(team.name)} basketball — program history</h1>`);
+
+  const nSeasons = seasons ? seasons.length : 0;
+  const firstYear = nSeasons ? seasons[seasons.length - 1].year : null;
+  const pct = winPctText(team.allTimeW, team.allTimeL);
+  const summaryBits = [
+    `The ${escapeHtml(team.name)} compete in the ${escapeHtml(team.conf)} and hold an all-time record of ${team.allTimeW}–${team.allTimeL}${pct ? ` (${pct} winning percentage)` : ''}`,
+  ];
+  if (nSeasons && firstYear) {
+    summaryBits.push(` across ${nSeasons} recorded seasons dating back to ${escapeHtml(firstYear)}`);
+  }
+  summaryBits.push('.');
+  if (team.natlChamps > 0) {
+    summaryBits.push(` The program has won ${team.natlChamps} NCAA national championship${team.natlChamps > 1 ? 's' : ''} (${team.champYears.join(', ')}) and reached ${team.finalFours} Final Four${team.finalFours === 1 ? '' : 's'}.`);
+  } else if (team.finalFours > 0) {
+    summaryBits.push(` The program has reached ${team.finalFours} Final Four${team.finalFours === 1 ? '' : 's'}.`);
+  }
+  parts.push(`<p>${summaryBits.join('')}</p>`);
+
+  if (team.champYears.length) {
+    const champLinks = team.champYears
+      .map(y => `<a href="${origin}/?championship=${encodeParam(`${y}/${slug}`)}">${y}</a>`)
+      .join(', ');
+    parts.push(`<h2>National championships</h2><p>${champLinks}</p>`);
+  }
+
+  if (nSeasons) {
+    const rows = seasons.map(s => {
+      const record = s.record || `${s.wins}-${s.losses}`;
+      const confCell = s.confRecord
+        ? `${escapeHtml(s.confRecord)} (${escapeHtml(s.conf || '')})`
+        : escapeHtml(s.conf || '');
+      const apCell = s.apHigh ? `AP #${s.apHigh}` : '';
+      return `<tr><td style="${SSR_CELL_STYLE}">${escapeHtml(s.year)}</td><td style="${SSR_CELL_STYLE}">${escapeHtml(record)}</td><td style="${SSR_CELL_STYLE}">${confCell}</td><td style="${SSR_CELL_STYLE}">${escapeHtml(s.coach || '')}</td><td style="${SSR_CELL_STYLE}">${apCell}</td></tr>`;
+    }).join('');
+    parts.push(
+      `<h2>Season-by-season results</h2>` +
+      `<table style="${SSR_TABLE_STYLE}"><thead><tr>` +
+      `<th style="${SSR_CELL_STYLE}">Season</th><th style="${SSR_CELL_STYLE}">Record</th><th style="${SSR_CELL_STYLE}">Conference</th><th style="${SSR_CELL_STYLE}">Coach</th><th style="${SSR_CELL_STYLE}">AP peak</th>` +
+      `</tr></thead><tbody>${rows}</tbody></table>`
+    );
+  }
+
+  const rivals = conferenceTeams(teams, team.conf, team.espnId);
+  if (rivals.length) {
+    const rivalLinks = rivals.map(r => `<a href="${teamHref(origin, r.slug)}">${escapeHtml(r.name)}</a>`).join(' · ');
+    parts.push(`<h2>More ${escapeHtml(team.conf)} programs</h2><p>${rivalLinks}</p>`);
+  }
+
+  parts.push(`<p><a href="${origin}/?view=teams">All Division I programs</a> · <a href="${origin}/?view=rankings">Historical rankings</a> · <a href="${origin}/?view=champions">Championship journeys</a> · <a href="${origin}/">Hoopsipedia home</a></p>`);
+
+  return ssrWrap(parts.join('\n'));
+}
+
+function renderTeamsDirectorySsr(teams, origin) {
+  const byConf = new Map();
+  for (const t of Object.values(teams)) {
+    const conf = t[F.CONF] || 'Independent';
+    if (!byConf.has(conf)) byConf.set(conf, []);
+    byConf.get(conf).push({ name: t[F.NAME], slug: teamSlug(t[F.NAME]) });
+  }
+  const confs = [...byConf.keys()].sort((a, b) => a.localeCompare(b));
+  const parts = [`<h1>All Division I college basketball programs</h1>`,
+    `<p>Every program on Hoopsipedia, organized by conference. Each page covers the team's full history: all-time record, season-by-season results, coaches, NCAA Tournament runs, and national championships.</p>`];
+  for (const conf of confs) {
+    const list = byConf.get(conf).sort((a, b) => a.name.localeCompare(b.name))
+      .map(t => `<a href="${teamHref(origin, t.slug)}">${escapeHtml(t.name)}</a>`).join(' · ');
+    parts.push(`<h2>${escapeHtml(conf)}</h2><p>${list}</p>`);
+  }
+  return ssrWrap(parts.join('\n'));
+}
+
+function renderHomepageSsr(teams, origin) {
+  const entries = Object.values(teams);
+  const winningest = [...entries]
+    .sort((a, b) => b[F.ATW] - a[F.ATW])
+    .slice(0, 25)
+    .map(t => `<a href="${teamHref(origin, teamSlug(t[F.NAME]))}">${escapeHtml(t[F.NAME])}</a> (${t[F.ATW]}–${t[F.ATL]})`)
+    .join(' · ');
+
+  const champs = [];
+  for (const t of entries) {
+    const years = Array.isArray(t[F.NCY]) ? t[F.NCY] : [];
+    for (const y of years) champs.push({ year: y, name: t[F.NAME], slug: teamSlug(t[F.NAME]) });
+  }
+  champs.sort((a, b) => b.year - a.year);
+  const champList = champs.slice(0, 30)
+    .map(c => `<a href="${origin}/?championship=${encodeParam(`${c.year}/${c.slug}`)}">${c.year} ${escapeHtml(c.name)}</a>`)
+    .join(' · ');
+
+  const parts = [
+    `<h1>Hoopsipedia — the college basketball history encyclopedia</h1>`,
+    `<p>Hoopsipedia is a free historical database covering ${entries.length}+ Division I men's college basketball programs across 77 seasons (1949–2026): all-time records, season-by-season results, head coaches, NCAA Tournament history, championship runs, historical rankings, and retroactive efficiency ratings.</p>`,
+    `<p>Explore: <a href="${origin}/?view=teams">All teams</a> · <a href="${origin}/?view=rankings">Rankings</a> · <a href="${origin}/?view=bracket">Tournament bracket</a> · <a href="${origin}/?view=coaches">Coaches</a> · <a href="${origin}/?view=champions">Championship journeys</a> · <a href="${origin}/?view=upsets">Greatest upsets</a> · <a href="${origin}/?view=classics">Instant classics</a></p>`,
+    `<h2>Winningest programs of all time</h2><p>${winningest}</p>`,
+    `<h2>Recent national champions</h2><p>${champList}</p>`,
+  ];
+  return ssrWrap(parts.join('\n'));
+}
+
 export async function onRequest(context) {
   const { request } = context;
   const url = new URL(request.url);
@@ -167,8 +326,10 @@ export async function onRequest(context) {
   const champParam = url.searchParams.get('championship');
   const viewParam = url.searchParams.get('view');
 
-  // No relevant query params — passthrough to static files
-  if (!teamParam && !compareParam && !gameParam && !champParam && !viewParam) {
+  // Bare homepage gets SSR content too; everything else with no relevant
+  // query params passes through to static files.
+  const isHomepage = url.pathname === '/' && url.search === '';
+  if (!isHomepage && !teamParam && !compareParam && !gameParam && !champParam && !viewParam) {
     return context.next();
   }
 
@@ -193,7 +354,7 @@ export async function onRequest(context) {
   // URLs and sitemap.xml — keep all three in lockstep.
   const origin = 'https://www.hoopsipedia.com';
   const jsonLdBlocks = []; // schema.org objects to inject as <script type="application/ld+json">
-  let noscriptHtml = '';   // crawler-visible summary, prepended inside <body> within <noscript>
+  let ssrHtml = '';        // crawler-visible content, prepended inside <body> as #ssr-content
 
   if (teamParam) {
     const team = lookupTeam(teamParam, teams, index);
@@ -241,22 +402,10 @@ export async function onRequest(context) {
       { name: team.name, url: canonicalUrl },
     ]));
 
-    // Crawler-visible summary. Served inside <noscript> so the client SPA
-    // (which renders the same data into #app) never double-renders it.
-    // Google indexes <noscript> content; trade-off documented in repo notes —
-    // upgrade to a visible SSR block once index.html can flag app init.
-    noscriptHtml = [
-      '<noscript data-ssr="true">',
-      '<section style="max-width:720px;margin:24px auto;padding:16px;font-family:Georgia,serif;line-height:1.5">',
-      `<h1>${escapeHtml(team.name)}</h1>`,
-      `<p><strong>Conference:</strong> ${escapeHtml(team.conf)}</p>`,
-      `<p><strong>All-time record:</strong> ${team.allTimeW}–${team.allTimeL}</p>`,
-      `<p><strong>National championships:</strong> ${team.natlChamps > 0 ? `${team.natlChamps}${escapeHtml(champYearsText)}` : 'None'}</p>`,
-      `<p><strong>Final Fours:</strong> ${team.finalFours}</p>`,
-      `<p>Explore ${escapeHtml(team.name)} history, season-by-season results, and head-to-head comparisons on <a href="${origin}/">Hoopsipedia</a>, the college basketball historical database. This page is fully interactive with JavaScript enabled.</p>`,
-      '</section>',
-      '</noscript>',
-    ].join('');
+    // Visible SSR block: full program history (season table, championships,
+    // conference links). index.html removes #ssr-content on SPA hydration.
+    const seasons = await getTeamSeasons(assetFetcher, originUrl, team.espnId);
+    ssrHtml = renderTeamSsr(team, seasons, teams, origin);
   } else if (compareParam) {
     const parts = compareParam.split('/');
     if (parts.length !== 2) return context.next();
@@ -333,8 +482,13 @@ export async function onRequest(context) {
       { key: 'twitter:image', value: imageUrl },
     ];
   } else if (viewParam) {
-    // ?view=upsets, ?view=classics, ?view=champions
+    // ?view=teams, ?view=upsets, ?view=classics, ?view=champions
     const viewMeta = {
+      'teams': {
+        title: 'All Division I College Basketball Programs — Hoopsipedia',
+        description: 'Browse every Division I men\'s basketball program by conference. All-time records, season-by-season results, coaches, and NCAA Tournament history for 365+ teams.',
+        image: 'https://www.hoopsipedia.com/branding/hoopsipedia-logo.png',
+      },
       'upsets': {
         title: 'Greatest NCAA Tournament Upsets of All Time — Hoopsipedia',
         description: 'Every Cinderella story, every bracket buster. Explore the most shocking upsets in March Madness history with scores, highlights, and the stories behind the madness.',
@@ -353,6 +507,10 @@ export async function onRequest(context) {
     };
     const vm = viewMeta[viewParam];
     if (!vm) return context.next();
+
+    if (viewParam === 'teams') {
+      ssrHtml = renderTeamsDirectorySsr(teams, origin);
+    }
 
     canonicalUrl = `${origin}/?view=${encodeParam(viewParam)}`;
     pageTitle = vm.title;
@@ -450,6 +608,18 @@ export async function onRequest(context) {
       { key: 'twitter:description', value: description },
       { key: 'twitter:image', value: imageUrl },
     ];
+  } else if (isHomepage) {
+    // Keep index.html's own title/description; just add canonical, WebSite
+    // schema, and the crawler-visible SSR content block.
+    canonicalUrl = `${origin}/`;
+    jsonLdBlocks.push({
+      '@context': 'https://schema.org',
+      '@type': 'WebSite',
+      name: 'Hoopsipedia',
+      url: `${origin}/`,
+      description: 'The college basketball history encyclopedia: 365+ Division I programs, 77 seasons of records, NCAA Tournament history, and historical rankings.',
+    });
+    ssrHtml = renderHomepageSsr(teams, origin);
   }
 
   // Set of tags to remove from existing HTML
@@ -466,11 +636,16 @@ export async function onRequest(context) {
   let rewriter = new HTMLRewriter()
     .on('meta', new MetaTagRemover(tagsToRemove))
     .on('link', new CanonicalRemover())
-    .on('title', new TitleRewriter(pageTitle))
     .on('head', new HeadInjector(metaTags, pageTitle, extraHeadHtml));
 
-  if (noscriptHtml) {
-    rewriter = rewriter.on('body', new BodyPrepender(noscriptHtml));
+  // Homepage keeps index.html's own <title>; an empty pageTitle must not
+  // blank it out.
+  if (pageTitle) {
+    rewriter = rewriter.on('title', new TitleRewriter(pageTitle));
+  }
+
+  if (ssrHtml) {
+    rewriter = rewriter.on('body', new BodyPrepender(ssrHtml));
   }
 
   const rewritten = rewriter.transform(originResp);
