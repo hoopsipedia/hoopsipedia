@@ -227,5 +227,296 @@
       "status": "applied",
       "appliedOn": "2026-07-07"
     }
+  ],
+  "batch2": [
+    {
+      "findingId": 40,
+      "team": "New Hampshire Wildcats",
+      "field": "funFact",
+      "find": "UNH's Lundholm Gymnasium was one of the most intimate and oldest venues in Division I basketball before the school moved to the larger Whittemore Center Arena.",
+      "replace": "UNH's Lundholm Gymnasium, an intimate ~3,000-seat venue that opened in the 1930s, remains one of the oldest and smallest arenas in Division I basketball and is still the Wildcats' home court.",
+      "confidence": "high",
+      "status": "applied",
+      "appliedOn": "2026-07-07"
+    },
+    {
+      "findingId": 43,
+      "team": "Richmond Spiders",
+      "field": "iconicMoment",
+      "find": "Upsetting No. 2 seed Syracuse 73-69 in the 2011 NCAA Tournament as a 12-seed, part of a run to the Sweet Sixteen under coach Chris Mooney.",
+      "replace": "Upsetting No. 2 seed Syracuse 73-69 in the 1991 NCAA Tournament as a 15-seed, becoming the first 15-seed in tournament history to beat a 2-seed under coach Dick Tarrant.",
+      "confidence": "high",
+      "status": "applied",
+      "appliedOn": "2026-07-07"
+    },
+    {
+      "findingId": 44,
+      "team": "Richmond Spiders",
+      "field": "funFact",
+      "find": "Richmond is one of the few schools to have upset a No. 1, No. 2, and No. 3 seed in the NCAA Tournament across its history, earning a reputation as a giant-killer.",
+      "replace": "Richmond is the only school to have won NCAA Tournament games as a No. 12, No. 13, No. 14, and No. 15 seed, earning a reputation as a giant-killer.",
+      "confidence": "high",
+      "status": "applied",
+      "appliedOn": "2026-07-07"
+    },
+    {
+      "findingId": 45,
+      "team": "Richmond Spiders",
+      "field": "founded",
+      "kind": "value",
+      "find": 1914,
+      "replace": 1912,
+      "confidence": "high",
+      "status": "applied",
+      "appliedOn": "2026-07-07"
+    },
+    {
+      "findingId": 46,
+      "team": "Pacific Tigers",
+      "field": "iconicMoment",
+      "find": "The 2004-05 season, when Pacific went 27-3 and earned a #6 seed in the NCAA Tournament, the program's highest seed and one of its best seasons in history.",
+      "replace": "The 2004-05 season, when Pacific went 27-4 and a perfect 18-0 in the Big West, earned a #8 seed in the NCAA Tournament, beat No. 9 seed Pittsburgh, and fell to No. 1 seed Washington in the second round, one of the best seasons in program history.",
+      "confidence": "high",
+      "status": "applied",
+      "appliedOn": "2026-07-07"
+    },
+    {
+      "findingId": 47,
+      "team": "Pacific Tigers",
+      "field": "mascotOrigin",
+      "find": "The Tigers mascot was adopted in 1923, chosen for the animal's strength and ferocity, giving the Stockton-based university a powerful athletic identity.",
+      "replace": "The Tigers nickname originated in the fall of 1908, when the rugby team's black jerseys and socks with orange stripes made the players look like tigers, and was made official by the 1925 student constitution.",
+      "confidence": "high",
+      "status": "applied",
+      "appliedOn": "2026-07-07"
+    },
+    {
+      "findingId": 48,
+      "team": "DePaul Blue Demons",
+      "field": "mascotOrigin",
+      "find": "The 'Blue Demons' name combines the school's signature blue color with an energetic and fierce spirit; the mascot is named DIBS (DePaul Intercollegiate Blue Spirit)",
+      "replace": "The 'Blue Demons' name evolved from 'D-men' — early DePaul athletes wore a large 'D' on their sweaters, prompting fans to call them 'D-men,' which was formalized into 'Demons' in the 1920s; 'Blue' came from the university's designated color (the affiliated DePaul Academy took scarlet). The mascot is named DIBS (DePaul Intercollegiate Blue Spirit).",
+      "confidence": "high",
+      "status": "applied",
+      "appliedOn": "2026-07-07"
+    },
+    {
+      "findingId": 50,
+      "team": "Georgia State Panthers",
+      "field": "funFact",
+      "find": "Georgia State's home arena was formerly Philips Arena (now State Farm Arena), the same venue used by the Atlanta Hawks — one of the few mid-major programs to share a venue with an NBA team.",
+      "replace": "Georgia State men's basketball called the on-campus GSU Sports Arena home for nearly 50 years (1973-2022) before moving into the new 7,300-seat Georgia State Convocation Center near the former Turner Field for the 2022-23 season.",
+      "confidence": "high",
+      "status": "applied",
+      "appliedOn": "2026-07-07"
+    },
+    {
+      "findingId": 51,
+      "team": "Mercyhurst Lakers",
+      "field": "founded",
+      "kind": "value",
+      "find": 2023,
+      "replace": 2024,
+      "confidence": "high",
+      "status": "applied",
+      "appliedOn": "2026-07-07"
+    },
+    {
+      "findingId": 52,
+      "team": "Mercyhurst Lakers",
+      "field": "blurb",
+      "find": "Mercyhurst University in Erie, Pennsylvania, began competing in Division I in 2023-24 as a member of the Northeast Conference.",
+      "replace": "Mercyhurst University in Erie, Pennsylvania, began competing in Division I in 2024-25 as a member of the Northeast Conference.",
+      "confidence": "high",
+      "status": "applied",
+      "appliedOn": "2026-07-07"
+    },
+    {
+      "findingId": 53,
+      "team": "Mercyhurst Lakers",
+      "field": "iconicMoment",
+      "find": "The 2023 announcement of the transition to Division I, signaling a new era for Mercyhurst athletics and its basketball program.",
+      "replace": "The 2024 announcement of the transition to Division I, signaling a new era for Mercyhurst athletics and its basketball program.",
+      "confidence": "high",
+      "status": "applied",
+      "appliedOn": "2026-07-07"
+    },
+    {
+      "findingId": 55,
+      "team": "Radford Highlanders",
+      "field": "founded",
+      "kind": "value",
+      "find": 1920,
+      "replace": 1974,
+      "confidence": "high",
+      "status": "applied",
+      "appliedOn": "2026-07-07"
+    },
+    {
+      "findingId": 56,
+      "team": "Radford Highlanders",
+      "field": "blurb",
+      "find": "Radford's basketball program dates to 1920, and the Virginia school competes in the Big South Conference.",
+      "replace": "Radford's men's basketball program dates to 1974, and the Virginia school is a charter member of the Big South Conference.",
+      "confidence": "high",
+      "status": "applied",
+      "appliedOn": "2026-07-07"
+    },
+    {
+      "findingId": 57,
+      "team": "Seton Hall Pirates",
+      "field": "mascotOrigin",
+      "find": "The 'Pirates' nickname was adopted in the 1930s, reflecting New Jersey's coastal heritage and seafaring history",
+      "replace": "The 'Pirates' nickname was born on April 24, 1931, when a Newark News sportswriter, watching Seton Hall's baseball team steal a come-from-behind win over Holy Cross, called them 'a gang of Pirates' — a name that stuck.",
+      "confidence": "high",
+      "status": "applied",
+      "appliedOn": "2026-07-07"
+    },
+    {
+      "findingId": 58,
+      "team": "Seton Hall Pirates",
+      "field": "blurb",
+      "find": "The 'Pirates' nickname was chosen in the 1930s to reflect the school's New Jersey coastal heritage.",
+      "replace": "The 'Pirates' nickname dates to 1931, when a sportswriter dubbed Seton Hall's comeback-minded baseball team 'a gang of Pirates.'",
+      "confidence": "high",
+      "status": "applied",
+      "appliedOn": "2026-07-07"
+    },
+    {
+      "findingId": 61,
+      "team": "Saint Mary's Gaels",
+      "field": "founded",
+      "kind": "value",
+      "find": 1918,
+      "replace": 1909,
+      "confidence": "medium",
+      "status": "applied",
+      "appliedOn": "2026-07-07"
+    },
+    {
+      "findingId": 63,
+      "team": "Western Illinois Leathernecks",
+      "field": "iconicMoment",
+      "find": "Making the 2004 Summit League tournament and competing for an NCAA Tournament berth, one of the program's most competitive recent eras.",
+      "replace": "Going 22-9 in 2012-13 under coach Jim Molinari to share the Summit League regular-season title and earn a College Basketball Invitational bid, the winningest Division I season in program history.",
+      "confidence": "high",
+      "status": "applied",
+      "appliedOn": "2026-07-07"
+    },
+    {
+      "findingId": 64,
+      "team": "Drexel Dragons",
+      "field": "mascotOrigin",
+      "find": "The Dragons nickname was adopted in the early 1900s, with the mythical dragon representing power and the fiery spirit of the university's competitive teams.",
+      "replace": "The Dragons nickname was adopted in 1928, announced in Drexel's student newspaper The Triangle, replacing 'The Engineers' so that athletes from all of the school's colleges — not just engineering — would be represented under a single fierce identity.",
+      "confidence": "high",
+      "status": "applied",
+      "appliedOn": "2026-07-07"
+    },
+    {
+      "findingId": 65,
+      "team": "Utah Tech Trailblazers",
+      "field": "mascotOrigin",
+      "find": "The Trailblazers name was adopted in 2022 as part of the school's rebranding from Dixie State to Utah Tech, symbolizing pioneering innovation and the spirit of the American West.",
+      "replace": "The Trailblazers name was unveiled on April 11, 2016, replacing 'Red Storm' while the school was still Dixie State; the university later rebranded from Dixie State to Utah Tech, effective July 2022. The name symbolizes pioneering innovation and the spirit of the American West.",
+      "confidence": "high",
+      "status": "applied",
+      "appliedOn": "2026-07-07"
+    },
+    {
+      "findingId": 66,
+      "team": "UAB Blazers",
+      "field": "iconicMoment",
+      "find": "Upsetting No. 1 seed Iowa State in the 2015 NCAA Tournament as a 14-seed, capped by a Robert Brown three-pointer, just weeks after the university had threatened to shut down the program.",
+      "replace": "Upsetting No. 3 seed Iowa State 60-59 in the 2015 NCAA Tournament as a 14-seed — Robert Brown scored 21 and hit a go-ahead three before William Lee's late basket and free throws sealed it — just months after the university had controversially shut down its football program.",
+      "confidence": "high",
+      "status": "applied",
+      "appliedOn": "2026-07-07"
+    },
+    {
+      "findingId": 67,
+      "team": "UAB Blazers",
+      "field": "mascotOrigin",
+      "find": "The Blazers name was chosen in a student contest in 1978, referencing Birmingham's history as an iron and steel city — the city's blast furnaces \"blazed\" through the night.",
+      "replace": "The Blazers name originated in late 1977 when history student Tommy Burns suggested 'Trail Blazers' — the new program blazing a trail for the school, partly inspired by the NBA's Portland Trail Blazers — which was shortened to 'Blazers' and won a January 1978 campus vote.",
+      "confidence": "high",
+      "status": "applied",
+      "appliedOn": "2026-07-07"
+    },
+    {
+      "findingId": 68,
+      "team": "Colorado Buffaloes",
+      "field": "iconicMoment",
+      "find": "Chauncey Billups' stellar 1996-97 season, averaging 17.1 points as a sophomore before becoming the No. 3 overall NBA pick and eventual NBA Finals MVP.",
+      "replace": "Chauncey Billups' stellar 1996-97 season, averaging 19.1 points as a sophomore before becoming the No. 3 overall NBA pick and eventual NBA Finals MVP.",
+      "confidence": "high",
+      "status": "applied",
+      "appliedOn": "2026-07-07"
+    },
+    {
+      "findingId": 70,
+      "team": "Saint Louis Billikens",
+      "field": "founded",
+      "kind": "value",
+      "find": 1900,
+      "replace": 1915,
+      "confidence": "medium",
+      "status": "applied",
+      "appliedOn": "2026-07-07"
+    },
+    {
+      "findingId": 71,
+      "team": "Saint Louis Billikens",
+      "field": "blurb",
+      "find": "As a founding member of the Missouri Valley Conference, SLU has a proud tradition in the Atlantic 10.",
+      "replace": "A longtime member of the Missouri Valley Conference from 1937 to 1974, SLU carries that proud tradition into the Atlantic 10.",
+      "confidence": "high",
+      "status": "applied",
+      "appliedOn": "2026-07-07"
+    },
+    {
+      "findingId": 73,
+      "team": "Fairleigh Dickinson Knights",
+      "field": "founded",
+      "kind": "value",
+      "find": 1957,
+      "replace": 1949,
+      "confidence": "high",
+      "status": "applied",
+      "appliedOn": "2026-07-07"
+    },
+    {
+      "findingId": "45c",
+      "team": "Richmond Spiders",
+      "field": "blurb",
+      "find": "dates to 1914",
+      "replace": "dates to 1912",
+      "confidence": "high",
+      "status": "applied",
+      "note": "companion to #45 founded fix",
+      "appliedOn": "2026-07-07"
+    },
+    {
+      "findingId": "73c",
+      "team": "Fairleigh Dickinson Knights",
+      "field": "blurb",
+      "find": "began in 1957",
+      "replace": "began in 1949",
+      "confidence": "high",
+      "status": "applied",
+      "note": "companion to #73 founded fix",
+      "appliedOn": "2026-07-07"
+    },
+    {
+      "findingId": "70c",
+      "team": "Saint Louis Billikens",
+      "field": "blurb",
+      "find": "dates to around 1900, making it one of the oldest in the Midwest",
+      "replace": "dates to 1915",
+      "confidence": "medium",
+      "status": "applied",
+      "note": "companion to #70 founded fix; 'oldest in the Midwest' superlative dropped since it rested on the wrong 1900 date",
+      "appliedOn": "2026-07-07"
+    }
   ]
 }
