@@ -8160,6 +8160,13 @@
                 return;
             }
 
+            // #coach/{slug} — single coach detail
+            const coachMatch = hash.match(/^#coach\/([a-z0-9-]+)$/);
+            if (coachMatch) {
+                const c = findCoachBySlug(coachMatch[1]);
+                if (c) { renderCoachDetail(c); _skipHashUpdate = false; return; }
+            }
+
             // #compare-coaches/slug1/slug2
             const coachCompareMatch = hash.match(/^#compare-coaches\/([^/]+)\/([^/]+)$/);
             if (coachCompareMatch) {
@@ -8804,7 +8811,7 @@
                 const stats = [
                     { num: COACH_LB.length, label: 'COACHES TRACKED', sub: 'top of all-time D1 wins' },
                     { num: topCoach.wins.toLocaleString(), label: 'MOST WINS', sub: topCoach.name + ' · ' + topSchool },
-                    { num: '11', label: 'MOST TITLES', sub: 'John Wooden · UCLA' },
+                    { num: '10', label: 'MOST TITLES', sub: 'John Wooden · UCLA' },
                     { num: '.' + topPctCoach.pct.toString().replace('.',''), label: 'BEST WIN %', sub: topPctCoach.name + ' · ' + topPctSchool },
                 ];
                 statCardsEl.innerHTML = stats.map(s => `
@@ -8834,7 +8841,7 @@
                 const pctColor = pctVal >= 0.75 ? 'color:var(--moss);' : '';
                 return `<tr data-coach-tier="${tier}">
                     <td class="rank"><span style="display:inline-flex;align-items:center;gap:8px;">${origRank}${tierBadge}</span></td>
-                    <td><div style="font-family:var(--font-serif);font-weight:800;font-size:16px;color:var(--ink);">${coach.name}${activeBadge}</div></td>
+                    <td><div style="font-family:var(--font-serif);font-weight:800;font-size:16px;"><a href="#coach/${coachSlug(coach.name)}" style="color:var(--navy);text-decoration:underline;text-decoration-color:var(--gold-brand);text-underline-offset:3px;">${coach.name}</a>${activeBadge}</div></td>
                     <td class="num">${coach.wins}–${coach.losses}</td>
                     <td class="num" style="${pctColor}">${coach.pct}%</td>
                     <td style="font-family:var(--font-serif);font-size:14px;color:var(--ink-soft);">${schoolNames}</td>
@@ -8895,6 +8902,60 @@
         function compareSelectedCoaches() {
             if (!_selectedCoach1 || !_selectedCoach2) return;
             window.location.hash = `#compare-coaches/${coachSlug(_selectedCoach1.name)}/${coachSlug(_selectedCoach2.name)}`;
+        }
+
+        function renderCoachDetail(coach) {
+            switchView('coachComparison', true);
+            const rank = COACH_LB.indexOf(coach) + 1;
+            const tier = getCoachTier(rank);
+            const isActive = coach.yearsEnd >= new Date().getFullYear();
+            const tierBadge = `<span class="coach-tier-badge ${tier}">${tier === 'goat' ? '★ GOAT' : tier.toUpperCase()}</span>`;
+
+            // Per-school tenures with records from COACHES[teamId], linked to
+            // team pages; best season links into the new season pages.
+            const tenures = coach.schools.map(([tid, start, end]) => {
+                const teamArr = H[tid];
+                const teamName = teamArr ? teamArr[0] : 'Unknown';
+                const slug = teamArr ? teamSlug(teamName) : null;
+                const rec = (COACHES[tid] || []).find(x => x.name === coach.name);
+                const endLbl = end >= new Date().getFullYear() ? 'Present' : end;
+                const nameHtml = slug
+                    ? `<a href="#team/${slug}" style="color:var(--navy);font-weight:700;text-decoration:underline;text-decoration-color:var(--gold-brand);">${escapeHtml(teamName)}</a>`
+                    : escapeHtml(teamName);
+                const bestBits = rec && rec.bestYr && slug
+                    ? ` · Best: <a href="#season/${slug}/${rec.bestYr}" style="color:var(--rust);font-weight:600;">${rec.bestYr} (${rec.bestRec})</a>`
+                    : (rec && rec.bestYr ? ` · Best: ${rec.bestYr} (${rec.bestRec})` : '');
+                const recBits = rec && rec.w > 0 ? `<span class="numerals" style="color:var(--ink);">${rec.w}–${rec.l}</span> <span style="color:var(--ink-muted);">(${rec.pct}%)</span>` : '';
+                return `<div style="display:flex;align-items:center;gap:14px;padding:12px 0;border-bottom:1px dashed var(--rule,#D8D2C4);">
+                    <img src="${getLogoUrl(tid)}" alt="" style="width:36px;height:36px;object-fit:contain;" onerror="this.style.display='none'">
+                    <div style="flex:1;">
+                        <div style="font-family:var(--font-serif);font-size:16px;">${nameHtml}</div>
+                        <div style="font-family:var(--font-mono);font-size:11px;color:var(--ink-muted);margin-top:2px;">${start}–${endLbl}</div>
+                    </div>
+                    <div style="text-align:right;font-size:14px;">${recBits}${bestBits}</div>
+                </div>`;
+            }).join('');
+
+            document.getElementById('coachComparisonContent').innerHTML = `
+                <div style="max-width:860px;margin:0 auto;padding:32px 16px 56px;">
+                    <a href="#coaches" style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.1em;color:var(--ink-muted);text-decoration:none;">← ALL COACHES</a>
+                    <div style="display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-top:14px;">
+                        <h1 class="h-display" style="font-size:clamp(40px,6vw,64px);color:var(--navy);margin:0;">${escapeHtml(coach.name)}</h1>
+                        <span style="display:inline-flex;align-items:center;gap:8px;">${tierBadge}${isActive ? '<span class="pill pill-moss" style="font-size:10px;padding:2px 8px;">ACTIVE</span>' : ''}</span>
+                    </div>
+                    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:14px;margin:22px 0 28px;">
+                        <div class="coaches-stat-card"><div class="label-mono" style="color:var(--ink-muted);">ALL-TIME RANK</div><div class="h-display" style="font-size:38px;color:var(--navy);">#${rank}</div></div>
+                        <div class="coaches-stat-card"><div class="label-mono" style="color:var(--ink-muted);">CAREER RECORD</div><div class="h-display" style="font-size:38px;color:var(--navy);">${coach.wins.toLocaleString()}–${coach.losses.toLocaleString()}</div></div>
+                        <div class="coaches-stat-card"><div class="label-mono" style="color:var(--ink-muted);">WIN %</div><div class="h-display" style="font-size:38px;color:var(--navy);">${coach.pct}%</div></div>
+                        <div class="coaches-stat-card"><div class="label-mono" style="color:var(--ink-muted);">SEASONS</div><div class="h-display" style="font-size:38px;color:var(--navy);">${coach.yearsEnd - coach.yearsStart + 1}</div></div>
+                    </div>
+                    <h2 class="label-mono" style="color:var(--ink-muted);margin-bottom:4px;">COACHING STOPS</h2>
+                    ${tenures}
+                    <div style="margin-top:26px;">
+                        <button class="btn" onclick="document.getElementById('coachCompare1') && (window.location.hash='#coaches', setTimeout(() => { const i = document.getElementById('coachCompare1'); if (i) { i.value='${coach.name.replace(/'/g, "\\'")}' ; selectCoach('1','${coach.name.replace(/'/g, "\\'")}'); i.scrollIntoView({behavior:'smooth', block:'center'}); const j = document.getElementById('coachCompare2'); if (j) j.focus(); } }, 350))">COMPARE ${escapeHtml(coach.name.split(' ').pop().toUpperCase())} VS... →</button>
+                    </div>
+                </div>`;
+            document.title = `${coach.name} — Coaches — Hoopsipedia`;
         }
 
         function renderCoachComparison(c1, c2) {
