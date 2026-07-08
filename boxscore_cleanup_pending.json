@@ -1,0 +1,26 @@
+{
+ "delete_after_overnight_run": [
+  "1986/lsu-tigers-vs-memphis-tigers",
+  "1986/lsu-tigers-vs-purdue-boilermakers",
+  "1996/arkansas-little-rock-trojans-vs-purdue-boilermakers",
+  "2004/nevada-wolf-pack-vs-gonzaga-bulldogs",
+  "2025/arkansas-razorbacks-vs-kansas-jayhawks",
+  "2025/georgia-bulldogs-vs-maryland-terrapins",
+  "2014/stanford-cardinal-vs-kansas-state-wildcats",
+  "1992/new-mexico-state-aggies-vs-depaul-blue-demons",
+  "1997/college-of-charleston-cougars-vs-maryland-terrapins",
+  "2025/drake-bulldogs-vs-missouri-tigers",
+  "2025/new-mexico-lobos-vs-marquette-golden-eagles",
+  "2025/baylor-bears-vs-mississippi-state-bulldogs",
+  "2010/cornell-big-red-vs-temple-owls",
+  "1995/drexel-dragons-vs-memphis-tigers",
+  "2014/dayton-flyers-vs-providence-friars",
+  "2023/utah-state-aggies-vs-missouri-tigers",
+  "2022/loyola-chicago-ramblers-vs-ohio-state-buckeyes",
+  "2016/michigan-wolverines-vs-notre-dame-fighting-irish",
+  "2011/texas-am-vs-stanford",
+  "2018/notre-dame-vs-uconn"
+ ],
+ "reason": "adjudicated 2026-07-08: 7 corrupt, 6 wrong scores, 2 wrong years, 3 flipped winners, 2 womens games",
+ "then": "re-apply deletions, validate new pre-1985 entries vs game logs, run boxscore_rescrape_queue.json, commit+push"
+}

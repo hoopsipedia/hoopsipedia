@@ -14035,6 +14035,22 @@
             return null;
         }
 
+        // opp records sometimes lack the espnId but always carry an SR-style
+        // slug; espn_to_sr.json (7.7KB) gives an exact reverse mapping.
+        let _srSlugIndex = null;
+        async function getSrSlugIndex() {
+            if (_srSlugIndex) return _srSlugIndex;
+            try {
+                const resp = await fetch('/espn_to_sr.json');
+                if (resp.ok) {
+                    const m = await resp.json();
+                    _srSlugIndex = {};
+                    for (const [eid, srSlug] of Object.entries(m)) _srSlugIndex[srSlug] = eid;
+                } else { _srSlugIndex = {}; }
+            } catch (e) { _srSlugIndex = {}; }
+            return _srSlugIndex;
+        }
+
         async function renderSeasonPage(slug, seasonStr) {
             const container = document.getElementById('seasonPageContent');
             if (!container) return;
@@ -14124,12 +14140,17 @@
             _seasonGameInfo = {};
             const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
             let anyVacated = false;
+            const srSlugIndex = await getSrSlugIndex();
             const scheduleRows = games.map((g, i) => {
                 const uid = 'sp' + i;
                 const gameYear = parseInt(g.date.slice(0, 4));
                 const gameMonth = parseInt(g.date.slice(5, 7));
                 const opp = String(g.opp || '');
-                const oppTeam = opp ? allTeamsData.find(t => String(t.espnId) === opp) : null;
+                let oppTeam = opp ? allTeamsData.find(t => String(t.espnId) === opp) : null;
+                if (!oppTeam && g.opp_slug && srSlugIndex[g.opp_slug]) {
+                    const eid = srSlugIndex[g.opp_slug];
+                    oppTeam = allTeamsData.find(t => String(t.espnId) === eid) || null;
+                }
                 const oppName = oppTeam ? oppTeam.name : String(g.opp_slug || 'Unknown').replace(/-/g, ' ');
                 const eventId = matchSeasonEventId(espnId, g, gameIds);
                 const espnOk = !!(eventId && gameYear >= 2002);
@@ -22077,13 +22098,18 @@
             const game = run.games[gameIndex];
             if (!game) return null;
 
+            // ESPN has no pre-2002 data; its schedule endpoint can answer a
+            // bad year with an unrelated season, so never index-match there.
+            if (year < 2002) return null;
+
             // Try schedule API
             const schedule = await fetchChampSchedule(espnId, year);
             if (schedule && schedule.events) {
                 // Sort all events by date
                 const sorted = [...schedule.events].sort((a, b) => new Date(a.date) - new Date(b.date));
 
-                // First try: match by opponent team ID (most reliable)
+                // Match by opponent team ID only — the old index-based
+                // fallback served box scores of completely unrelated games.
                 if (game.oppEspnId) {
                     for (const evt of sorted) {
                         const comp = evt.competitions && evt.competitions[0];
@@ -22092,12 +22118,24 @@
                         if (hasOpp) return evt.id;
                     }
                 }
+            }
+            return null;
+        }
 
-                // Fallback: use index-based matching (assumes sorted = round order)
-                if (sorted.length >= run.games.length) {
-                    const matchedEvent = sorted[gameIndex];
-                    if (matchedEvent) return matchedEvent.id;
-                }
+        // Match a championship-run game to a scraped SR box score by exact
+        // score pair + name-word overlap on BOTH teams (precise, no fuzz).
+        function findChampSRBoxScore(srData, run, game) {
+            if (!srData) return null;
+            const wordSet = n => new Set(String(n).toLowerCase().replace(/[^a-z0-9 ]/g, '').split(/\s+/));
+            const overlaps = (a, b) => { for (const w of wordSet(a)) if (w.length > 2 && wordSet(b).has(w)) return true; return false; };
+            for (const val of Object.values(srData)) {
+                if (!val || !val.teams || val.teams.length !== 2) continue;
+                const [t1, t2] = val.teams;
+                const pairA = t1.score === game.winScore && t2.score === game.loseScore &&
+                    overlaps(t1.name, run.teamName) && overlaps(t2.name, game.opponent);
+                const pairB = t2.score === game.winScore && t1.score === game.loseScore &&
+                    overlaps(t2.name, run.teamName) && overlaps(t1.name, game.opponent);
+                if (pairA || pairB) return val;
             }
             return null;
         }
@@ -22151,6 +22189,22 @@
             // Show loading spinner
             inner.innerHTML = '<div class="champ-run-boxscore-loading"><div class="spinner"></div>Loading box score...</div>';
             panel.style.maxHeight = '80px';
+
+            // Our scraped SR tournament box scores cover 1939-2026 — try them
+            // first for pre-ESPN years (exact score-pair + both-team match).
+            if (year < 2002 && runData && runData.games && runData.games[gameIndex]) {
+                const srData = await loadSRBoxscoresYear(year);
+                const srMatch = findChampSRBoxScore(srData, runData, runData.games[gameIndex]);
+                if (srMatch) {
+                    inner.innerHTML = renderSRBoxScore(srMatch);
+                    inner.dataset.loaded = 'true';
+                    requestAnimationFrame(() => {
+                        panel.style.maxHeight = panel.scrollHeight + 'px';
+                        setTimeout(() => { if (wrapper.classList.contains('expanded')) panel.style.maxHeight = 'none'; }, 450);
+                    });
+                    return;
+                }
+            }
 
             // Find game ID from schedule
             const espnGameId = await findChampGameId(espnId, year, gameIndex);

@@ -275,6 +275,22 @@ function renderTeamSsr(team, seasons, teams, origin) {
 // Per-isolate cache of games/{espnId}.json slices for season pages.
 const gamesCache = new Map();
 
+// Reverse SR-slug -> espnId index (opp records sometimes lack the id).
+let srSlugIndex = null;
+async function getSrSlugIndex(assetFetcher, originUrl) {
+  if (srSlugIndex) return srSlugIndex;
+  try {
+    const resp = await assetFetcher.fetch(new URL('/espn_to_sr.json', originUrl).toString());
+    if (!resp.ok) return {};
+    const m = await resp.json();
+    srSlugIndex = {};
+    for (const [eid, slug] of Object.entries(m)) srSlugIndex[slug] = eid;
+    return srSlugIndex;
+  } catch (e) {
+    return {};
+  }
+}
+
 async function getTeamGames(assetFetcher, originUrl, espnId) {
   if (gamesCache.has(espnId)) return gamesCache.get(espnId);
   try {
@@ -307,7 +323,7 @@ function seasonHref(origin, slug, seasonStr) {
   return `${origin}/teams/${encodeParam(slug)}/${encodeParam(seasonStr)}`;
 }
 
-function renderSeasonSsr(team, seasonRow, games, teams, origin) {
+function renderSeasonSsr(team, seasonRow, games, teams, origin, slugIdx) {
   const slug = teamSlug(team.name);
   const parts = [];
   const seasonStr = seasonRow.year;
@@ -327,7 +343,8 @@ function renderSeasonSsr(team, seasonRow, games, teams, origin) {
 
   if (games.length) {
     const rows = games.map(g => {
-      const oppT = teams[String(g.opp)];
+      let oppT = teams[String(g.opp)];
+      if (!oppT && g.opp_slug && slugIdx && slugIdx[g.opp_slug]) oppT = teams[slugIdx[g.opp_slug]];
       const oppName = oppT ? oppT[F.NAME] : (g.opp_slug || 'Unknown').replace(/-/g, ' ');
       const oppCell = oppT
         ? `<a href="${origin}/teams/${encodeParam(teamSlug(oppT[F.NAME]))}">${escapeHtml(oppName)}</a>`
@@ -494,7 +511,8 @@ export async function onRequest(context) {
 
     const allGames = await getTeamGames(assetFetcher, originUrl, team.espnId);
     const seasonGames = allGames ? gamesForSeason(allGames, seasonParam) : [];
-    ssrHtml = renderSeasonSsr(team, seasonRow, seasonGames, teams, origin);
+    const slugIdx = await getSrSlugIndex(assetFetcher, originUrl);
+    ssrHtml = renderSeasonSsr(team, seasonRow, seasonGames, teams, origin, slugIdx);
   } else if (teamParam) {
     const team = lookupTeam(teamParam, teams, index);
     if (!team) return isPathRoute ? notFound() : context.next();
