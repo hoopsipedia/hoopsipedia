@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-08T15:06:40.336Z",
+  "generated": "2026-07-08T22:50:25.527Z",
   "description": "Hoopsipedia Time Machine — Greatest Games Never Played",
   "algorithm": "Efficiency-based neutral-site simulation with era-adjusted pace and logistic win probability",
   "matchups": [
@@ -10,10 +10,10 @@
         "season": "1971-72",
         "record": "30-0",
         "coach": "John Wooden",
-        "adjOE": 136.08,
-        "adjDE": 88.92,
-        "adjEM": 47.16,
-        "htss": 88.69,
+        "adjOE": 135.99,
+        "adjDE": 89.01,
+        "adjEM": 46.97,
+        "htss": 88.16,
         "htssRank": 3,
         "apRank": 1
       },
@@ -22,36 +22,36 @@
         "season": "2014-15",
         "record": "38-1",
         "coach": "John Calipari",
-        "adjOE": 123.45,
-        "adjDE": 84.55,
-        "adjEM": 38.9,
-        "htss": 81.59,
-        "htssRank": 19,
+        "adjOE": 126.15,
+        "adjDE": 81.85,
+        "adjEM": 44.29,
+        "htss": 84.74,
+        "htssRank": 10,
         "apRank": 1
       },
       "prediction": {
         "winner": "UCLA Bruins",
         "winnerScore": 83,
-        "loserScore": 76,
+        "loserScore": 80,
         "scoreA": 83,
-        "scoreB": 76,
-        "winProbA": 78.01,
-        "winProbB": 21.99,
-        "margin": 7,
+        "scoreB": 80,
+        "winProbA": 60.13,
+        "winProbB": 39.87,
+        "margin": 3,
         "simPossessions": 69
       },
       "factors": [
         {
           "name": "Offense",
           "edge": "UCLA Bruins",
-          "teamA": "136.1 adjOE",
-          "teamB": "123.5 adjOE"
+          "teamA": "136 adjOE",
+          "teamB": "126.2 adjOE"
         },
         {
           "name": "Defense",
           "edge": "Kentucky Wildcats",
-          "teamA": "88.9 adjDE",
-          "teamB": "84.6 adjDE"
+          "teamA": "89 adjDE",
+          "teamB": "81.9 adjDE"
         },
         {
           "name": "Pace",
@@ -80,11 +80,11 @@
         {
           "name": "HTSS",
           "edge": "UCLA Bruins",
-          "teamA": "88.7 (#3)",
-          "teamB": "81.6 (#19)"
+          "teamA": "88.2 (#3)",
+          "teamB": "84.7 (#10)"
         }
       ],
-      "narrative": "1972 UCLA's elite offense and John Wooden pedigree give them the edge in a competitive but ultimately decisive game. 2015 Kentucky's suffocating defense, pace advantage, NBA-caliber talent, and close-game toughness keep it interesting, but UCLA pulls away down the stretch."
+      "narrative": "This one goes down to the wire — 1972 UCLA barely edges 2015 Kentucky in an instant classic. 2015 Kentucky's suffocating defense, pace advantage, NBA-caliber talent, and close-game toughness nearly steal the game, but UCLA's elite offense and John Wooden pedigree prove decisive in the final minutes."
     },
     {
       "matchup": "1976 Indiana vs 2024 UConn",
@@ -93,10 +93,10 @@
         "season": "1975-76",
         "record": "32-0",
         "coach": "Bob Knight",
-        "adjOE": 129.42,
-        "adjDE": 90.58,
-        "adjEM": 38.85,
-        "htss": 90.64,
+        "adjOE": 129.2,
+        "adjDE": 90.8,
+        "adjEM": 38.41,
+        "htss": 89.26,
         "htssRank": 2,
         "apRank": 1
       },
@@ -105,36 +105,36 @@
         "season": "2023-24",
         "record": "37-3",
         "coach": "Dan Hurley",
-        "adjOE": 123.36,
-        "adjDE": 88.64,
-        "adjEM": 34.72,
-        "htss": 80.99,
+        "adjOE": 124.56,
+        "adjDE": 87.44,
+        "adjEM": 37.12,
+        "htss": 80.82,
         "htssRank": 25,
         "apRank": 1
       },
       "prediction": {
-        "winner": "UConn Huskies",
-        "winnerScore": 84,
+        "winner": "Indiana Hoosiers",
+        "winnerScore": 83,
         "loserScore": 82,
-        "scoreA": 82,
-        "scoreB": 84,
-        "winProbA": 65.5,
-        "winProbB": 34.5,
-        "margin": 2,
+        "scoreA": 83,
+        "scoreB": 82,
+        "winProbA": 54.96,
+        "winProbB": 45.04,
+        "margin": 1,
         "simPossessions": 70
       },
       "factors": [
         {
           "name": "Offense",
           "edge": "Indiana Hoosiers",
-          "teamA": "129.4 adjOE",
-          "teamB": "123.4 adjOE"
+          "teamA": "129.2 adjOE",
+          "teamB": "124.6 adjOE"
         },
         {
           "name": "Defense",
           "edge": "UConn Huskies",
-          "teamA": "90.6 adjDE",
-          "teamB": "88.6 adjDE"
+          "teamA": "90.8 adjDE",
+          "teamB": "87.4 adjDE"
         },
         {
           "name": "Pace",
@@ -163,11 +163,11 @@
         {
           "name": "HTSS",
           "edge": "Indiana Hoosiers",
-          "teamA": "90.6 (#2)",
-          "teamB": "81 (#25)"
+          "teamA": "89.3 (#2)",
+          "teamB": "80.8 (#25)"
         }
       ],
-      "narrative": "This one goes down to the wire — 2024 UConn barely edges 1976 Indiana in an instant classic. 1976 Indiana's elite offense, Bob Knight pedigree, and close-game toughness nearly steal the game, but UConn's suffocating defense and pace advantage prove decisive in the final minutes."
+      "narrative": "This one goes down to the wire — 1976 Indiana barely edges 2024 UConn in an instant classic. 2024 UConn's suffocating defense and pace advantage nearly steal the game, but Indiana's elite offense, Bob Knight pedigree, and close-game toughness prove decisive in the final minutes."
     },
     {
       "matchup": "1992 Duke vs 1996 Kentucky",
@@ -176,11 +176,11 @@
         "season": "1991-92",
         "record": "34-2",
         "coach": "Mike Krzyzewski",
-        "adjOE": 122.31,
-        "adjDE": 92.69,
-        "adjEM": 29.62,
-        "htss": 79.45,
-        "htssRank": 36,
+        "adjOE": 123.48,
+        "adjDE": 91.52,
+        "adjEM": 31.95,
+        "htss": 79.6,
+        "htssRank": 38,
         "apRank": 1
       },
       "teamB": {
@@ -188,36 +188,36 @@
         "season": "1995-96",
         "record": "34-2",
         "coach": "Rick Pitino",
-        "adjOE": 125.16,
-        "adjDE": 84.84,
-        "adjEM": 40.32,
-        "htss": 82.23,
-        "htssRank": 13,
+        "adjOE": 126.65,
+        "adjDE": 83.35,
+        "adjEM": 43.3,
+        "htss": 83.81,
+        "htssRank": 11,
         "apRank": 2
       },
       "prediction": {
         "winner": "Kentucky Wildcats",
-        "winnerScore": 83,
-        "loserScore": 73,
-        "scoreA": 73,
-        "scoreB": 83,
-        "winProbA": 16.4,
-        "winProbB": 83.6,
-        "margin": 10,
+        "winnerScore": 80,
+        "loserScore": 75,
+        "scoreA": 75,
+        "scoreB": 80,
+        "winProbA": 15.11,
+        "winProbB": 84.89,
+        "margin": 5,
         "simPossessions": 69
       },
       "factors": [
         {
           "name": "Offense",
           "edge": "Kentucky Wildcats",
-          "teamA": "122.3 adjOE",
-          "teamB": "125.2 adjOE"
+          "teamA": "123.5 adjOE",
+          "teamB": "126.7 adjOE"
         },
         {
           "name": "Defense",
           "edge": "Kentucky Wildcats",
-          "teamA": "92.7 adjDE",
-          "teamB": "84.8 adjDE"
+          "teamA": "91.5 adjDE",
+          "teamB": "83.4 adjDE"
         },
         {
           "name": "Pace",
@@ -246,11 +246,11 @@
         {
           "name": "HTSS",
           "edge": "Kentucky Wildcats",
-          "teamA": "79.5 (#36)",
-          "teamB": "82.2 (#13)"
+          "teamA": "79.6 (#38)",
+          "teamB": "83.8 (#11)"
         }
       ],
-      "narrative": "1996 Kentucky's elite offense, suffocating defense, and pace advantage would overwhelm 1992 Duke in a convincing victory. 1992 Duke's Mike Krzyzewski pedigree and close-game toughness aren't enough to overcome the gap in overall quality."
+      "narrative": "1996 Kentucky's elite offense, suffocating defense, and pace advantage give them the edge in a competitive but ultimately decisive game. 1992 Duke's Mike Krzyzewski pedigree and close-game toughness keep it interesting, but Kentucky pulls away down the stretch."
     },
     {
       "matchup": "2018 Villanova vs 2008 Kansas",
@@ -259,11 +259,11 @@
         "season": "2017-18",
         "record": "36-4",
         "coach": "Jay Wright",
-        "adjOE": 123.57,
-        "adjDE": 88.43,
-        "adjEM": 35.14,
-        "htss": 84.9,
-        "htssRank": 7,
+        "adjOE": 123.87,
+        "adjDE": 88.13,
+        "adjEM": 35.74,
+        "htss": 80.55,
+        "htssRank": 27,
         "apRank": 2
       },
       "teamB": {
@@ -271,36 +271,36 @@
         "season": "2007-08",
         "record": "37-3",
         "coach": "Bill Self",
-        "adjOE": 122.52,
-        "adjDE": 87.48,
-        "adjEM": 35.04,
-        "htss": 75.96,
-        "htssRank": 95,
+        "adjOE": 124.56,
+        "adjDE": 85.44,
+        "adjEM": 39.12,
+        "htss": 77.68,
+        "htssRank": 66,
         "apRank": 4
       },
       "prediction": {
-        "winner": "Villanova Wildcats",
-        "winnerScore": 75,
-        "loserScore": 72,
-        "scoreA": 75,
-        "scoreB": 72,
-        "winProbA": 50.37,
-        "winProbB": 49.63,
+        "winner": "Kansas Jayhawks",
+        "winnerScore": 76,
+        "loserScore": 73,
+        "scoreA": 73,
+        "scoreB": 76,
+        "winProbA": 37.85,
+        "winProbB": 62.15,
         "margin": 3,
         "simPossessions": 66
       },
       "factors": [
         {
           "name": "Offense",
-          "edge": "Villanova Wildcats",
-          "teamA": "123.6 adjOE",
-          "teamB": "122.5 adjOE"
+          "edge": "Even",
+          "teamA": "123.9 adjOE",
+          "teamB": "124.6 adjOE"
         },
         {
           "name": "Defense",
-          "edge": "Even",
-          "teamA": "88.4 adjDE",
-          "teamB": "87.5 adjDE"
+          "edge": "Kansas Jayhawks",
+          "teamA": "88.1 adjDE",
+          "teamB": "85.4 adjDE"
         },
         {
           "name": "Pace",
@@ -329,11 +329,11 @@
         {
           "name": "HTSS",
           "edge": "Villanova Wildcats",
-          "teamA": "84.9 (#7)",
-          "teamB": "76 (#95)"
+          "teamA": "80.6 (#27)",
+          "teamB": "77.7 (#66)"
         }
       ],
-      "narrative": "This one goes down to the wire — 2018 Villanova barely edges 2008 Kansas in an instant classic. 2008 Kansas's pace advantage nearly steals the game, but Villanova's elite offense, Jay Wright pedigree, NBA-caliber talent, and close-game toughness prove decisive in the final minutes."
+      "narrative": "This one goes down to the wire — 2008 Kansas barely edges 2018 Villanova in an instant classic. 2018 Villanova's Jay Wright pedigree, NBA-caliber talent, and close-game toughness nearly steal the game, but Kansas's suffocating defense and pace advantage prove decisive in the final minutes."
     },
     {
       "matchup": "1968 UCLA vs 2021 Gonzaga",
@@ -342,11 +342,11 @@
         "season": "1967-68",
         "record": "29-1",
         "coach": "John Wooden",
-        "adjOE": 133.3,
-        "adjDE": 91.7,
-        "adjEM": 41.6,
-        "htss": 86.03,
-        "htssRank": 5,
+        "adjOE": 134.5,
+        "adjDE": 90.5,
+        "adjEM": 44,
+        "htss": 87.71,
+        "htssRank": 4,
         "apRank": 2
       },
       "teamB": {
@@ -354,36 +354,36 @@
         "season": "2020-21",
         "record": "31-1",
         "coach": "Mark Few",
-        "adjOE": 123.65,
-        "adjDE": 88.35,
-        "adjEM": 35.31,
-        "htss": 81.8,
-        "htssRank": 17,
+        "adjOE": 124.75,
+        "adjDE": 87.25,
+        "adjEM": 37.5,
+        "htss": 80.34,
+        "htssRank": 31,
         "apRank": 1
       },
       "prediction": {
         "winner": "UCLA Bruins",
-        "winnerScore": 84,
-        "loserScore": 80,
-        "scoreA": 84,
-        "scoreB": 80,
-        "winProbA": 72.71,
-        "winProbB": 27.29,
-        "margin": 4,
+        "winnerScore": 86,
+        "loserScore": 79,
+        "scoreA": 86,
+        "scoreB": 79,
+        "winProbA": 73.32,
+        "winProbB": 26.68,
+        "margin": 7,
         "simPossessions": 70
       },
       "factors": [
         {
           "name": "Offense",
           "edge": "UCLA Bruins",
-          "teamA": "133.3 adjOE",
-          "teamB": "123.7 adjOE"
+          "teamA": "134.5 adjOE",
+          "teamB": "124.8 adjOE"
         },
         {
           "name": "Defense",
           "edge": "Gonzaga Bulldogs",
-          "teamA": "91.7 adjDE",
-          "teamB": "88.4 adjDE"
+          "teamA": "90.5 adjDE",
+          "teamB": "87.3 adjDE"
         },
         {
           "name": "Pace",
@@ -393,7 +393,7 @@
         },
         {
           "name": "Coaching",
-          "edge": "Even",
+          "edge": "UCLA Bruins",
           "teamA": "John Wooden",
           "teamB": "Mark Few"
         },
@@ -412,11 +412,11 @@
         {
           "name": "HTSS",
           "edge": "UCLA Bruins",
-          "teamA": "86 (#5)",
-          "teamB": "81.8 (#17)"
+          "teamA": "87.7 (#4)",
+          "teamB": "80.3 (#31)"
         }
       ],
-      "narrative": "This one goes down to the wire — 1968 UCLA barely edges 2021 Gonzaga in an instant classic. 2021 Gonzaga's suffocating defense, pace advantage, NBA-caliber talent, and close-game toughness nearly steal the game, but UCLA's elite offense proves decisive in the final minutes."
+      "narrative": "1968 UCLA's elite offense and John Wooden pedigree give them the edge in a competitive but ultimately decisive game. 2021 Gonzaga's suffocating defense, pace advantage, NBA-caliber talent, and close-game toughness keep it interesting, but UCLA pulls away down the stretch."
     },
     {
       "matchup": "1973 UCLA vs 1976 Indiana",
@@ -425,10 +425,10 @@
         "season": "1972-73",
         "record": "30-0",
         "coach": "John Wooden",
-        "adjOE": 130.98,
-        "adjDE": 89.02,
-        "adjEM": 41.95,
-        "htss": 91.31,
+        "adjOE": 131.43,
+        "adjDE": 88.57,
+        "adjEM": 42.87,
+        "htss": 91.71,
         "htssRank": 1,
         "apRank": 1
       },
@@ -437,36 +437,36 @@
         "season": "1975-76",
         "record": "32-0",
         "coach": "Bob Knight",
-        "adjOE": 129.42,
-        "adjDE": 90.58,
-        "adjEM": 38.85,
-        "htss": 90.64,
+        "adjOE": 129.2,
+        "adjDE": 90.8,
+        "adjEM": 38.41,
+        "htss": 89.26,
         "htssRank": 2,
         "apRank": 1
       },
       "prediction": {
         "winner": "UCLA Bruins",
-        "winnerScore": 87,
-        "loserScore": 85,
-        "scoreA": 87,
-        "scoreB": 85,
-        "winProbA": 62.39,
-        "winProbB": 37.61,
-        "margin": 2,
+        "winnerScore": 88,
+        "loserScore": 87,
+        "scoreA": 88,
+        "scoreB": 87,
+        "winProbA": 67.34,
+        "winProbB": 32.66,
+        "margin": 1,
         "simPossessions": 73
       },
       "factors": [
         {
           "name": "Offense",
           "edge": "UCLA Bruins",
-          "teamA": "131 adjOE",
-          "teamB": "129.4 adjOE"
+          "teamA": "131.4 adjOE",
+          "teamB": "129.2 adjOE"
         },
         {
           "name": "Defense",
           "edge": "UCLA Bruins",
-          "teamA": "89 adjDE",
-          "teamB": "90.6 adjDE"
+          "teamA": "88.6 adjDE",
+          "teamB": "90.8 adjDE"
         },
         {
           "name": "Pace",
@@ -495,8 +495,8 @@
         {
           "name": "HTSS",
           "edge": "UCLA Bruins",
-          "teamA": "91.3 (#1)",
-          "teamB": "90.6 (#2)"
+          "teamA": "91.7 (#1)",
+          "teamB": "89.3 (#2)"
         }
       ],
       "narrative": "This one goes down to the wire — 1973 UCLA barely edges 1976 Indiana in an instant classic. Both teams trade blows, but UCLA makes one more play when it matters most."
@@ -508,11 +508,11 @@
         "season": "2018-19",
         "record": "35-3",
         "coach": "Tony Bennett",
-        "adjOE": 124.52,
-        "adjDE": 87.48,
-        "adjEM": 37.04,
-        "htss": 82.13,
-        "htssRank": 15,
+        "adjOE": 125.45,
+        "adjDE": 86.55,
+        "adjEM": 38.9,
+        "htss": 80.95,
+        "htssRank": 23,
         "apRank": 2
       },
       "teamB": {
@@ -520,36 +520,36 @@
         "season": "1984-85",
         "record": "25-10",
         "coach": "Rollie Massimino",
-        "adjOE": 119.57,
-        "adjDE": 100.43,
-        "adjEM": 19.14,
-        "htss": 65.61,
-        "htssRank": 815,
+        "adjOE": 120.3,
+        "adjDE": 99.7,
+        "adjEM": 20.61,
+        "htss": 66.1,
+        "htssRank": 801,
         "apRank": 14
       },
       "prediction": {
         "winner": "Virginia Cavaliers",
-        "winnerScore": 89,
-        "loserScore": 75,
-        "scoreA": 89,
-        "scoreB": 75,
-        "winProbA": 94.18,
-        "winProbB": 5.82,
-        "margin": 14,
+        "winnerScore": 86,
+        "loserScore": 76,
+        "scoreA": 86,
+        "scoreB": 76,
+        "winProbA": 94.51,
+        "winProbB": 5.49,
+        "margin": 10,
         "simPossessions": 70
       },
       "factors": [
         {
           "name": "Offense",
           "edge": "Virginia Cavaliers",
-          "teamA": "124.5 adjOE",
-          "teamB": "119.6 adjOE"
+          "teamA": "125.5 adjOE",
+          "teamB": "120.3 adjOE"
         },
         {
           "name": "Defense",
           "edge": "Virginia Cavaliers",
-          "teamA": "87.5 adjDE",
-          "teamB": "100.4 adjDE"
+          "teamA": "86.6 adjDE",
+          "teamB": "99.7 adjDE"
         },
         {
           "name": "Pace",
@@ -578,8 +578,8 @@
         {
           "name": "HTSS",
           "edge": "Virginia Cavaliers",
-          "teamA": "82.1 (#15)",
-          "teamB": "65.6 (#815)"
+          "teamA": "81 (#23)",
+          "teamB": "66.1 (#801)"
         }
       ],
       "narrative": "2019 Virginia's elite offense, suffocating defense, pace advantage, and close-game toughness would overwhelm 1985 Villanova in a convincing victory. The talent and efficiency gap is simply too wide to overcome."
@@ -591,11 +591,11 @@
         "season": "1981-82",
         "record": "32-2",
         "coach": "Dean Smith",
-        "adjOE": 125.01,
-        "adjDE": 94.99,
-        "adjEM": 30.01,
-        "htss": 81,
-        "htssRank": 24,
+        "adjOE": 127.1,
+        "adjDE": 92.9,
+        "adjEM": 34.2,
+        "htss": 85.61,
+        "htssRank": 6,
         "apRank": 1
       },
       "teamB": {
@@ -603,36 +603,36 @@
         "season": "2016-17",
         "record": "33-7",
         "coach": "Roy Williams",
-        "adjOE": 121.97,
-        "adjDE": 90.03,
-        "adjEM": 31.94,
-        "htss": 84.01,
-        "htssRank": 10,
+        "adjOE": 122.76,
+        "adjDE": 89.24,
+        "adjEM": 33.52,
+        "htss": 81.25,
+        "htssRank": 19,
         "apRank": 6
       },
       "prediction": {
         "winner": "North Carolina Tar Heels",
         "winnerScore": 82,
-        "loserScore": 80,
-        "scoreA": 80,
-        "scoreB": 82,
-        "winProbA": 42.59,
-        "winProbB": 57.41,
-        "margin": 2,
+        "loserScore": 81,
+        "scoreA": 82,
+        "scoreB": 81,
+        "winProbA": 52.64,
+        "winProbB": 47.36,
+        "margin": 1,
         "simPossessions": 70
       },
       "factors": [
         {
           "name": "Offense",
           "edge": "North Carolina Tar Heels",
-          "teamA": "125 adjOE",
-          "teamB": "122 adjOE"
+          "teamA": "127.1 adjOE",
+          "teamB": "122.8 adjOE"
         },
         {
           "name": "Defense",
           "edge": "North Carolina Tar Heels",
-          "teamA": "95 adjDE",
-          "teamB": "90 adjDE"
+          "teamA": "92.9 adjDE",
+          "teamB": "89.2 adjDE"
         },
         {
           "name": "Pace",
@@ -642,7 +642,7 @@
         },
         {
           "name": "Coaching",
-          "edge": "Even",
+          "edge": "North Carolina Tar Heels",
           "teamA": "Dean Smith",
           "teamB": "Roy Williams"
         },
@@ -661,11 +661,11 @@
         {
           "name": "HTSS",
           "edge": "North Carolina Tar Heels",
-          "teamA": "81 (#24)",
-          "teamB": "84 (#10)"
+          "teamA": "85.6 (#6)",
+          "teamB": "81.3 (#19)"
         }
       ],
-      "narrative": "This one goes down to the wire — 2017 North Carolina barely edges 1982 North Carolina in an instant classic. 1982 North Carolina's elite offense and close-game toughness nearly steal the game, but North Carolina's suffocating defense and pace advantage prove decisive in the final minutes."
+      "narrative": "This one goes down to the wire — 1982 North Carolina barely edges 2017 North Carolina in an instant classic. 2017 North Carolina's suffocating defense and pace advantage nearly steal the game, but North Carolina's elite offense, Dean Smith pedigree, and close-game toughness prove decisive in the final minutes."
     },
     {
       "matchup": "1991 UNLV vs 2024 UConn",
@@ -674,11 +674,11 @@
         "season": "1990-91",
         "record": "34-1",
         "coach": "Jerry Tarkanian",
-        "adjOE": 127.8,
-        "adjDE": 87.2,
-        "adjEM": 40.6,
-        "htss": 77.02,
-        "htssRank": 67,
+        "adjOE": 127.75,
+        "adjDE": 87.25,
+        "adjEM": 40.51,
+        "htss": 75.03,
+        "htssRank": 131,
         "apRank": 1
       },
       "teamB": {
@@ -686,22 +686,22 @@
         "season": "2023-24",
         "record": "37-3",
         "coach": "Dan Hurley",
-        "adjOE": 123.36,
-        "adjDE": 88.64,
-        "adjEM": 34.72,
-        "htss": 80.99,
+        "adjOE": 124.56,
+        "adjDE": 87.44,
+        "adjEM": 37.12,
+        "htss": 80.82,
         "htssRank": 25,
         "apRank": 1
       },
       "prediction": {
         "winner": "UNLV Rebels",
-        "winnerScore": 78,
-        "loserScore": 74,
-        "scoreA": 78,
-        "scoreB": 74,
-        "winProbA": 70.99,
-        "winProbB": 29.01,
-        "margin": 4,
+        "winnerScore": 80,
+        "loserScore": 78,
+        "scoreA": 80,
+        "scoreB": 78,
+        "winProbA": 62.59,
+        "winProbB": 37.41,
+        "margin": 2,
         "simPossessions": 69
       },
       "factors": [
@@ -709,13 +709,13 @@
           "name": "Offense",
           "edge": "UNLV Rebels",
           "teamA": "127.8 adjOE",
-          "teamB": "123.4 adjOE"
+          "teamB": "124.6 adjOE"
         },
         {
           "name": "Defense",
-          "edge": "UNLV Rebels",
-          "teamA": "87.2 adjDE",
-          "teamB": "88.6 adjDE"
+          "edge": "Even",
+          "teamA": "87.3 adjDE",
+          "teamB": "87.4 adjDE"
         },
         {
           "name": "Pace",
@@ -725,14 +725,14 @@
         },
         {
           "name": "Coaching",
-          "edge": "UNLV Rebels",
+          "edge": "N/A",
           "teamA": "Jerry Tarkanian",
           "teamB": "Dan Hurley"
         },
         {
           "name": "Talent",
-          "edge": "Even",
-          "teamA": "Draft score: 3.5",
+          "edge": "N/A",
+          "teamA": "N/A",
           "teamB": "Draft score: 3.5"
         },
         {
@@ -744,11 +744,11 @@
         {
           "name": "HTSS",
           "edge": "UConn Huskies",
-          "teamA": "77 (#67)",
-          "teamB": "81 (#25)"
+          "teamA": "75 (#131)",
+          "teamB": "80.8 (#25)"
         }
       ],
-      "narrative": "This one goes down to the wire — 1991 UNLV barely edges 2024 UConn in an instant classic. 2024 UConn's pace advantage and close-game toughness nearly steal the game, but UNLV's elite offense, suffocating defense, and Jerry Tarkanian pedigree prove decisive in the final minutes."
+      "narrative": "This one goes down to the wire — 1991 UNLV barely edges 2024 UConn in an instant classic. 2024 UConn's pace advantage and close-game toughness nearly steal the game, but UNLV's elite offense proves decisive in the final minutes."
     },
     {
       "matchup": "2026 Michigan vs 1989 Michigan",
@@ -757,11 +757,11 @@
         "season": "2025-26",
         "record": "31-3",
         "coach": "Dusty May",
-        "adjOE": 124.5,
-        "adjDE": 87.5,
-        "adjEM": 36.99,
-        "htss": 76.34,
-        "htssRank": 86,
+        "adjOE": 126.68,
+        "adjDE": 85.32,
+        "adjEM": 41.36,
+        "htss": 75.44,
+        "htssRank": 113,
         "apRank": 1
       },
       "teamB": {
@@ -769,36 +769,36 @@
         "season": "1988-89",
         "record": "27-6",
         "coach": "Bill Frieder,Steve Fisher",
-        "adjOE": 126.59,
-        "adjDE": 88.41,
-        "adjEM": 38.19,
-        "htss": 78.95,
-        "htssRank": 43,
+        "adjOE": 125.47,
+        "adjDE": 89.53,
+        "adjEM": 35.94,
+        "htss": 75.82,
+        "htssRank": 99,
         "apRank": 10
       },
       "prediction": {
         "winner": "Michigan Wolverines",
-        "winnerScore": 79,
-        "loserScore": 78,
-        "scoreA": 79,
-        "scoreB": 78,
-        "winProbA": 45.52,
-        "winProbB": 54.48,
-        "margin": 1,
+        "winnerScore": 80,
+        "loserScore": 75,
+        "scoreA": 80,
+        "scoreB": 75,
+        "winProbA": 69.53,
+        "winProbB": 30.47,
+        "margin": 5,
         "simPossessions": 69
       },
       "factors": [
         {
           "name": "Offense",
           "edge": "Michigan Wolverines",
-          "teamA": "124.5 adjOE",
-          "teamB": "126.6 adjOE"
+          "teamA": "126.7 adjOE",
+          "teamB": "125.5 adjOE"
         },
         {
           "name": "Defense",
-          "edge": "Even",
-          "teamA": "87.5 adjDE",
-          "teamB": "88.4 adjDE"
+          "edge": "Michigan Wolverines",
+          "teamA": "85.3 adjDE",
+          "teamB": "89.5 adjDE"
         },
         {
           "name": "Pace",
@@ -808,14 +808,14 @@
         },
         {
           "name": "Coaching",
-          "edge": "Michigan Wolverines",
+          "edge": "N/A",
           "teamA": "Dusty May",
           "teamB": "Bill Frieder,Steve Fisher"
         },
         {
           "name": "Talent",
-          "edge": "Michigan Wolverines",
-          "teamA": "Draft score: -0.3",
+          "edge": "N/A",
+          "teamA": "N/A",
           "teamB": "Draft score: 2.7"
         },
         {
@@ -827,11 +827,11 @@
         {
           "name": "HTSS",
           "edge": "Michigan Wolverines",
-          "teamA": "76.3 (#86)",
-          "teamB": "79 (#43)"
+          "teamA": "75.4 (#113)",
+          "teamB": "75.8 (#99)"
         }
       ],
-      "narrative": "This one goes down to the wire — 2026 Michigan barely edges 1989 Michigan in an instant classic. 1989 Michigan's elite offense and NBA-caliber talent nearly steal the game, but Michigan's pace advantage, Dusty May pedigree, and close-game toughness prove decisive in the final minutes."
+      "narrative": "2026 Michigan's elite offense, suffocating defense, pace advantage, and close-game toughness give them the edge in a competitive but ultimately decisive game. 1989 Michigan battles hard but can't match Michigan's firepower."
     }
   ]
 }

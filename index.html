@@ -8318,6 +8318,18 @@
                 return;
             }
 
+            // #time-machine/{slugA}/{seasonA}/{slugB}/{seasonB} — custom Time Machine matchup
+            const tmCustomMatch = hash.match(/^#time-machine\/([a-z0-9-]+)\/(\d{4}-\d{2})\/([a-z0-9-]+)\/(\d{4}-\d{2})$/);
+            if (tmCustomMatch) {
+                switchView('rankings', true);
+                setTimeout(() => {
+                    switchRankingsTab('timemachine');
+                    tmRunCustomFromRoute(tmCustomMatch[1], tmCustomMatch[2], tmCustomMatch[3], tmCustomMatch[4]);
+                }, 50);
+                _skipHashUpdate = false;
+                return;
+            }
+
             // #time-machine — direct link to Time Machine tab
             if (hash === '#time-machine') {
                 switchView('rankings', true);
@@ -12258,28 +12270,16 @@
 
         // ── Time Machine ──
 
-        function renderTimeMachine() {
-            const container = document.getElementById('timeMachineContent');
-            if (!TIME_MACHINE_DATA || !TIME_MACHINE_DATA.matchups) {
-                container.innerHTML = '<p style="text-align:center;padding:3rem;color:#8892A0;">Time Machine data not available.</p>';
-                return;
-            }
+        // Per-matchup result card — shared by the 10 canonical matchups and
+        // user-built custom matchups (which have no factors/narrative).
+        function renderTmCard(m) {
+            const teamA = findTeamByName(m.teamA.name);
+            const teamB = findTeamByName(m.teamB.name);
+            const logoA = teamA ? getLogoUrl(teamA.espnId) : '';
+            const logoB = teamB ? getLogoUrl(teamB.espnId) : '';
+            const winnerIsA = m.prediction.scoreA > m.prediction.scoreB;
 
-            let html = `
-                <div class="tm-intro">
-                    <strong>The Time Machine</strong> — What would happen if the greatest teams in college basketball history faced each other on a neutral court? Powered by Hoopsipedia's HTSS efficiency engine, these simulations pit legendary squads against each other across eras.
-                </div>
-                <div class="tm-grid">
-            `;
-
-            TIME_MACHINE_DATA.matchups.forEach(m => {
-                const teamA = findTeamByName(m.teamA.name);
-                const teamB = findTeamByName(m.teamB.name);
-                const logoA = teamA ? getLogoUrl(teamA.espnId) : '';
-                const logoB = teamB ? getLogoUrl(teamB.espnId) : '';
-                const winnerIsA = m.prediction.scoreA > m.prediction.scoreB;
-
-                html += `
+            return `
                 <div class="tm-card">
                     <div class="tm-card-header">${m.matchup}</div>
                     <div class="tm-card-body">
@@ -12287,8 +12287,8 @@
                             <div class="tm-team">
                                 <div class="tm-team-logo" style="background-image:url('${logoA}');"></div>
                                 <div class="tm-team-name">${m.teamA.name}</div>
-                                <div class="tm-team-info">${m.teamA.season} · ${m.teamA.record}</div>
-                                <div class="tm-team-info">${m.teamA.coach}</div>
+                                <div class="tm-team-info">${m.teamA.season} · ${m.teamA.record || '—'}</div>
+                                <div class="tm-team-info">${m.teamA.coach || ''}</div>
                             </div>
                             <div class="tm-score-box">
                                 <div class="tm-score-num">${m.prediction.scoreA}-${m.prediction.scoreB}</div>
@@ -12297,8 +12297,8 @@
                             <div class="tm-team">
                                 <div class="tm-team-logo" style="background-image:url('${logoB}');"></div>
                                 <div class="tm-team-name">${m.teamB.name}</div>
-                                <div class="tm-team-info">${m.teamB.season} · ${m.teamB.record}</div>
-                                <div class="tm-team-info">${m.teamB.coach}</div>
+                                <div class="tm-team-info">${m.teamB.season} · ${m.teamB.record || '—'}</div>
+                                <div class="tm-team-info">${m.teamB.coach || ''}</div>
                             </div>
                         </div>
                         <div class="tm-prob-labels">
@@ -12309,8 +12309,9 @@
                             <div class="tm-prob-a" style="width:${m.prediction.winProbA}%;"></div>
                             <div class="tm-prob-b" style="width:${m.prediction.winProbB}%;"></div>
                         </div>
+                        ${(m.factors && m.factors.length) ? `
                         <div class="tm-factors">
-                            ${(m.factors || []).map(f => {
+                            ${m.factors.map(f => {
                                 const aEdge = f.edge === m.teamA.name;
                                 const bEdge = f.edge === m.teamB.name;
                                 return `
@@ -12319,14 +12320,481 @@
                                     <div class="tm-factor-b ${bEdge ? 'tm-factor-edge' : ''}" style="${bEdge ? 'color:#2D7D46;' : ''}">${f.teamB}</div>
                                 `;
                             }).join('')}
-                        </div>
-                        <div class="tm-narrative">${m.narrative}</div>
+                        </div>` : `
+                        <div class="tm-factors">
+                            <div class="tm-factor-a">${m.teamA.adjOE != null ? m.teamA.adjOE.toFixed(1) + ' adjOE' : '—'}</div>
+                            <div class="tm-factor-label">Offense</div>
+                            <div class="tm-factor-b">${m.teamB.adjOE != null ? m.teamB.adjOE.toFixed(1) + ' adjOE' : '—'}</div>
+                            <div class="tm-factor-a">${m.teamA.adjDE != null ? m.teamA.adjDE.toFixed(1) + ' adjDE' : '—'}</div>
+                            <div class="tm-factor-label">Defense</div>
+                            <div class="tm-factor-b">${m.teamB.adjDE != null ? m.teamB.adjDE.toFixed(1) + ' adjDE' : '—'}</div>
+                            ${(m.teamA.htss != null && m.teamB.htss != null) ? `
+                            <div class="tm-factor-a">${m.teamA.htss.toFixed(1)}</div>
+                            <div class="tm-factor-label">HTSS</div>
+                            <div class="tm-factor-b">${m.teamB.htss.toFixed(1)}</div>` : ''}
+                            <div class="tm-factor-a"></div>
+                            <div class="tm-factor-label">${m.prediction.simPossessions} poss.</div>
+                            <div class="tm-factor-b"></div>
+                        </div>`}
+                        ${m.narrative ? `<div class="tm-narrative">${m.narrative}</div>` : ''}
                     </div>
                 </div>`;
+        }
+
+        // "Build Your Own Matchup" card — pick any {team, season} vs any {team, season}.
+        function renderTmBuilder() {
+            const inputStyle = 'width:100%;padding:12px 14px;font-family:var(--font-serif);font-size:15px;border:2px solid var(--navy);background:var(--paper);color:var(--ink);box-sizing:border-box;';
+            const selectStyle = 'width:100%;margin-top:8px;padding:10px 12px;font-family:var(--font-mono);font-size:13px;border:2px solid var(--navy);background:var(--paper);color:var(--ink);box-sizing:border-box;';
+            const sideHtml = (side, placeholder) => `
+                <div style="flex:1;min-width:230px;">
+                    <div class="label-mono" style="color:var(--ink-muted);margin-bottom:6px;">TEAM ${side}</div>
+                    <div style="position:relative;">
+                        <input type="text" id="tmTeamInput${side}" placeholder="${placeholder}" autocomplete="off" style="${inputStyle}">
+                        <div id="tmDropdown${side}" class="compare-dropdown" style="display:none;position:absolute;top:100%;left:0;right:0;max-height:200px;overflow-y:auto;z-index:100;"></div>
+                    </div>
+                    <select id="tmSeason${side}" disabled style="${selectStyle}">
+                        <option value="">Pick a team first…</option>
+                    </select>
+                </div>`;
+            return `
+                <div class="ds-card-bordered" style="padding:24px 28px;background:var(--cream-deep);margin-bottom:1.75rem;">
+                    <div style="margin-bottom:14px;">
+                        <div class="label-mono" style="color:var(--ink-muted);margin-bottom:4px;">ANY TEAM · ANY SEASON · 1949-2026</div>
+                        <div class="h-display" style="font-size:24px;color:var(--navy);">Build Your Own Matchup</div>
+                    </div>
+                    <div style="display:flex;gap:14px;align-items:flex-start;flex-wrap:wrap;">
+                        ${sideHtml('A', 'Team A · e.g. UCLA')}
+                        <span class="h-display" style="font-size:22px;color:var(--rust);align-self:center;">VS</span>
+                        ${sideHtml('B', 'Team B · e.g. Kentucky')}
+                    </div>
+                    <div style="text-align:center;margin-top:16px;">
+                        <button class="btn" onclick="tmRunCustomMatchup()" style="padding:12px 28px;">SIMULATE →</button>
+                        <div id="tmBuilderError" class="label-mono" style="color:var(--rust);margin-top:8px;display:none;"></div>
+                    </div>
+                </div>`;
+        }
+
+        function renderTimeMachine() {
+            const container = document.getElementById('timeMachineContent');
+            if (!container) return;
+
+            let html = `
+                <div id="tmCustomResult" style="max-width:560px;margin:0 auto 1.5rem;">${_tmCustomMatchup ? renderTmCard(_tmCustomMatchup) : ''}</div>
+                ${renderTmBuilder()}
+            `;
+
+            if (TIME_MACHINE_DATA && TIME_MACHINE_DATA.matchups) {
+                html += `
+                    <div class="tm-intro">
+                        <strong>The Time Machine</strong> — What would happen if the greatest teams in college basketball history faced each other on a neutral court? Powered by Hoopsipedia's HTSS efficiency engine, these simulations pit legendary squads against each other across eras.
+                    </div>
+                    <div class="tm-grid">
+                `;
+                TIME_MACHINE_DATA.matchups.forEach(m => { html += renderTmCard(m); });
+                html += '</div>';
+            } else {
+                html += '<p style="text-align:center;padding:3rem;color:#8892A0;">Time Machine data not available.</p>';
+            }
+
+            container.innerHTML = html;
+
+            // Wire up the builder + restore any in-progress selections
+            setupTmAutocomplete('A');
+            setupTmAutocomplete('B');
+            if (_tmTeamA) {
+                const i = document.getElementById('tmTeamInputA');
+                if (i) i.value = _tmTeamA.name;
+                tmPopulateSeasons('A', _tmSeasonA);
+            }
+            if (_tmTeamB) {
+                const i = document.getElementById('tmTeamInputB');
+                if (i) i.value = _tmTeamB.name;
+                tmPopulateSeasons('B', _tmSeasonB);
+            }
+            ensureEfficiencyData(); // warm the ratings cache for first simulate
+        }
+
+        // ── Time Machine: Build-Your-Own Matchup ──
+        // Simulation math ported VERBATIM from time_machine.js (tm-prefixed to
+        // avoid collisions) so identical matchups reproduce the precomputed
+        // scores in time_machine_results.json exactly.
+
+        let _tmTeamA = null;        // selected Team A (allTeamsData entry)
+        let _tmTeamB = null;        // selected Team B
+        let _tmSeasonA = '';        // selected season key for A (e.g. '1971-72')
+        let _tmSeasonB = '';        // selected season key for B
+        let _tmCustomMatchup = null; // last custom result (same shape as TIME_MACHINE_DATA.matchups)
+        let _efficiencyPromise = null;
+
+        // Lazy-load efficiency_ratings.json on first use (same memoized-promise
+        // pattern as loadGamesIndex).
+        function ensureEfficiencyData() {
+            if (!_efficiencyPromise) {
+                _efficiencyPromise = (async () => {
+                    try {
+                        const resp = await fetch('/efficiency_ratings.json');
+                        if (resp.ok) {
+                            EFFICIENCY_DATA = await resp.json();
+                            console.log(`Loaded efficiency ratings — ${Object.keys(EFFICIENCY_DATA.seasons || {}).length} seasons`);
+                        }
+                    } catch (e) {
+                        console.error('Failed to load efficiency ratings:', e);
+                        _efficiencyPromise = null; // allow retry on transient failure
+                    }
+                    return EFFICIENCY_DATA;
+                })();
+            }
+            return _efficiencyPromise;
+        }
+
+        /**
+         * Historical average possessions per game by era.
+         * (Ported verbatim from time_machine.js getEraPace.)
+         */
+        function tmGetEraPace(springYear) {
+            if (springYear < 1965) return 78;
+            if (springYear <= 1985) return 73;
+            if (springYear <= 1993) return 70;
+            if (springYear <= 2007) return 67;
+            if (springYear <= 2015) return 65;
+            return 67; // 2016+ saw slight pace increase
+        }
+
+        /** FNV-1a 32-bit string hash → unsigned 32-bit seed. (Ported verbatim from time_machine.js.) */
+        function tmHashStringToSeed(str) {
+            let h = 0x811c9dc5;
+            for (let i = 0; i < str.length; i++) {
+                h ^= str.charCodeAt(i);
+                h = Math.imul(h, 0x01000193);
+            }
+            return h >>> 0;
+        }
+
+        /** mulberry32: tiny seeded PRNG returning floats in [0, 1). (Ported verbatim from time_machine.js.) */
+        function tmMulberry32(seed) {
+            let a = seed >>> 0;
+            return function () {
+                a = (a + 0x6d2b79f5) | 0;
+                let t = Math.imul(a ^ (a >>> 15), 1 | a);
+                t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+                return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+            };
+        }
+
+        /** Slugify a team name for stable seeding (e.g. "North Carolina" → "north-carolina"). (Ported verbatim from time_machine.js teamSlug.) */
+        function tmTeamSlug(profile) {
+            return String(profile.fullName || profile.espnId)
+                .toLowerCase()
+                .replace(/[^a-z0-9]+/g, '-')
+                .replace(/^-+|-+$/g, '');
+        }
+
+        function tmRound2(n) { return n != null ? Math.round(n * 100) / 100 : null; }
+
+        /**
+         * The core prediction algorithm. (Ported verbatim from time_machine.js
+         * predictGame — same seed-string construction, same math, so the same
+         * matchup always simulates the same game.)
+         */
+        function tmPredictGame(profileA, profileB) {
+            // Validate we have efficiency data for both teams
+            if (!profileA.adjOE || !profileB.adjOE) {
+                const missing = !profileA.adjOE ? profileA.fullName : profileB.fullName;
+                throw new Error(`Missing efficiency data for ${missing} (${profileA.seasonKey || profileB.seasonKey}). Cannot simulate.`);
+            }
+
+            // Step 1: Neutral pace — average of both teams' era pace
+            const simPossessions = (profileA.eraPace + profileB.eraPace) / 2;
+
+            // Step 2: Predict scoring efficiency
+            const BASELINE = 100; // Average D-I team scores ~100 pts per 100 possessions
+
+            const teamAOff = profileA.adjOE + profileB.adjDE - BASELINE;
+            const teamBOff = profileB.adjOE + profileA.adjDE - BASELINE;
+
+            // Step 3: Convert efficiency to actual points using simulated pace
+            const teamARawPts = teamAOff * (simPossessions / 100);
+            const teamBRawPts = teamBOff * (simPossessions / 100);
+
+            // Step 4: Win probability via logistic model
+            const pointDiff = teamARawPts - teamBRawPts;
+            const winProbA = 1 / (1 + Math.exp(-pointDiff / 4.5));
+            const winProbB = 1 - winProbA;
+
+            // Step 5: Generate a realistic final score
+            // Seeded PRNG: the same matchup (teams + seasons) always simulates the same game.
+            const rand = tmMulberry32(tmHashStringToSeed(
+                `${tmTeamSlug(profileA)}:${profileA.seasonKey}|${tmTeamSlug(profileB)}:${profileB.seasonKey}`
+            ));
+            const jitterA = (rand() - 0.5) * 4; // ±2
+            const jitterB = (rand() - 0.5) * 4; // ±2
+
+            let scoreA = Math.round(teamARawPts + jitterA);
+            let scoreB = Math.round(teamBRawPts + jitterB);
+
+            // Ensure scores are reasonable — floor at 40, cap at 120
+            scoreA = Math.max(40, Math.min(120, scoreA));
+            scoreB = Math.max(40, Math.min(120, scoreB));
+
+            // Determine winner — if margin is < 3, it's basically a coin flip
+            let winner;
+            const margin = Math.abs(scoreA - scoreB);
+
+            if (margin < 3) {
+                // Coin-flip game: use win probability to decide
+                const coinFlip = rand();
+                if (coinFlip < winProbA) {
+                    winner = 'A';
+                } else {
+                    winner = 'B';
+                }
+                // Make sure the winner's score is higher
+                if (winner === 'A' && scoreA <= scoreB) {
+                    scoreA = scoreB + Math.ceil(rand() * 3);
+                } else if (winner === 'B' && scoreB <= scoreA) {
+                    scoreB = scoreA + Math.ceil(rand() * 3);
+                }
+            } else {
+                winner = scoreA > scoreB ? 'A' : 'B';
+            }
+
+            return {
+                simPossessions: Math.round(simPossessions),
+                teamAOff: tmRound2(teamAOff),
+                teamBOff: tmRound2(teamBOff),
+                teamARawPts: tmRound2(teamARawPts),
+                teamBRawPts: tmRound2(teamBRawPts),
+                scoreA,
+                scoreB,
+                pointDiff: tmRound2(pointDiff),
+                winProbA: tmRound2(winProbA * 100),
+                winProbB: tmRound2(winProbB * 100),
+                winner, // 'A' or 'B'
+                margin: Math.abs(scoreA - scoreB),
+            };
+        }
+
+        // School short name for matchup labels: "UCLA Bruins" → "UCLA"
+        function tmShortName(team) {
+            if (team.mascot && team.name.endsWith(' ' + team.mascot)) {
+                return team.name.slice(0, -(team.mascot.length + 1));
+            }
+            return team.name;
+        }
+
+        // Build a unified team-season profile for the simulator from
+        // EFFICIENCY_DATA + allTeamsData + SEASONS_DATA + HTSS_V2_DATA.
+        function tmBuildProfile(espnId, seasonKey) {
+            const id = String(espnId);
+            const eff = EFFICIENCY_DATA && EFFICIENCY_DATA.seasons && EFFICIENCY_DATA.seasons[seasonKey]
+                ? EFFICIENCY_DATA.seasons[seasonKey][id] : null;
+            if (!eff) return null;
+            const team = allTeamsData.find(t => String(t.espnId) === id);
+            const springYear = parseInt(seasonKey.split('-')[0]) + 1;
+
+            let record = eff.record || null;
+            let coach = null;
+            const rows = (SEASONS_DATA && SEASONS_DATA[id] && SEASONS_DATA[id].seasons) || [];
+            const row = rows.find(s => s.year === seasonKey);
+            if (row) {
+                coach = row.coach || null;
+                record = record || row.record || null;
+            }
+
+            let htss = null, htssRank = null;
+            const htssRows = HTSS_V2_DATA && HTSS_V2_DATA.byTeam ? HTSS_V2_DATA.byTeam[id] : null;
+            if (htssRows) {
+                const entry = htssRows.find(e => e.season === seasonKey);
+                if (entry) { htss = entry.htss; htssRank = entry.rank; }
+            }
+
+            return {
+                espnId: id,
+                fullName: team ? team.name : (eff.team || id),
+                seasonKey,
+                springYear,
+                adjOE: eff.adjOE,
+                adjDE: eff.adjDE,
+                adjEM: eff.adjEM,
+                eraPace: tmGetEraPace(springYear),
+                record,
+                coach,
+                htss,
+                htssRank,
+            };
+        }
+
+        // Team search autocomplete for the matchup builder (same pattern as
+        // setupCoachAutocomplete / updateCompareDropdown).
+        function setupTmAutocomplete(side) {
+            const input = document.getElementById('tmTeamInput' + side);
+            const dropdown = document.getElementById('tmDropdown' + side);
+            if (!input || !dropdown) return;
+
+            input.addEventListener('input', () => {
+                const q = input.value.toLowerCase().trim();
+                if (q.length < 2) { dropdown.style.display = 'none'; return; }
+                const matches = allTeamsData.filter(t => teamMatchesQuery(t, q)).slice(0, 8);
+                if (matches.length === 0) { dropdown.style.display = 'none'; return; }
+                dropdown.innerHTML = matches.map(t => `
+                    <div class="compare-dropdown-item" onclick="tmSelectTeam('${side}','${String(t.espnId)}')">
+                        <img src="${getLogoUrl(t.espnId)}" alt="" style="width:24px;height:24px;object-fit:contain;flex-shrink:0;" onerror="this.style.display='none'"><span>${t.name}</span>
+                    </div>`).join('');
+                dropdown.style.display = 'block';
             });
 
-            html += '</div>';
-            container.innerHTML = html;
+            input.addEventListener('blur', () => {
+                setTimeout(() => { dropdown.style.display = 'none'; }, 200);
+            });
+        }
+
+        function tmSelectTeam(side, espnId) {
+            const team = allTeamsData.find(t => String(t.espnId) === String(espnId));
+            if (!team) return;
+            if (side === 'A') { _tmTeamA = team; _tmSeasonA = ''; }
+            else { _tmTeamB = team; _tmSeasonB = ''; }
+            const input = document.getElementById('tmTeamInput' + side);
+            if (input) input.value = team.name;
+            const dropdown = document.getElementById('tmDropdown' + side);
+            if (dropdown) dropdown.style.display = 'none';
+            tmPopulateSeasons(side);
+        }
+
+        // Fill the season <select> with the team's seasons that HAVE efficiency data.
+        async function tmPopulateSeasons(side, preselect) {
+            const sel = document.getElementById('tmSeason' + side);
+            const team = side === 'A' ? _tmTeamA : _tmTeamB;
+            if (!sel || !team) return;
+            sel.disabled = true;
+            sel.innerHTML = '<option value="">Loading seasons…</option>';
+            await ensureEfficiencyData();
+            if (!EFFICIENCY_DATA || !EFFICIENCY_DATA.seasons) {
+                sel.innerHTML = '<option value="">Efficiency data unavailable</option>';
+                return;
+            }
+            const id = String(team.espnId);
+            const keys = Object.keys(EFFICIENCY_DATA.seasons)
+                .filter(k => EFFICIENCY_DATA.seasons[k][id] && parseInt(k.split('-')[0]) >= 1949)
+                .sort((a, b) => parseInt(b.split('-')[0]) - parseInt(a.split('-')[0]));
+            if (keys.length === 0) {
+                sel.innerHTML = '<option value="">No seasons with efficiency data</option>';
+                return;
+            }
+            sel.innerHTML = '<option value="">Select season…</option>' + keys.map(k => {
+                const springYear = parseInt(k.split('-')[0]) + 1;
+                const rec = EFFICIENCY_DATA.seasons[k][id].record || '';
+                return `<option value="${k}">${springYear} (${k})${rec ? ' · ' + rec : ''}</option>`;
+            }).join('');
+            sel.disabled = false;
+            sel.onchange = () => { if (side === 'A') _tmSeasonA = sel.value; else _tmSeasonB = sel.value; };
+            if (preselect && keys.includes(preselect)) {
+                sel.value = preselect;
+                if (side === 'A') _tmSeasonA = preselect; else _tmSeasonB = preselect;
+            }
+        }
+
+        // Run a user-built matchup: build both profiles, simulate, render the
+        // result card above the builder, and push a shareable hash route.
+        async function tmRunCustomMatchup(pushHash = true) {
+            const errEl = document.getElementById('tmBuilderError');
+            const showError = (msg) => {
+                if (errEl) { errEl.textContent = msg; errEl.style.display = 'block'; }
+            };
+            if (errEl) errEl.style.display = 'none';
+
+            const selA = document.getElementById('tmSeasonA');
+            const selB = document.getElementById('tmSeasonB');
+            const seasonA = selA ? selA.value : '';
+            const seasonB = selB ? selB.value : '';
+            if (!_tmTeamA || !_tmTeamB) { showError('PICK BOTH TEAMS FIRST'); return; }
+            if (!seasonA || !seasonB) { showError('PICK A SEASON FOR BOTH TEAMS'); return; }
+
+            await ensureEfficiencyData();
+            const profileA = tmBuildProfile(_tmTeamA.espnId, seasonA);
+            const profileB = tmBuildProfile(_tmTeamB.espnId, seasonB);
+            if (!profileA || !profileB) { showError('NO EFFICIENCY DATA FOR THAT TEAM-SEASON'); return; }
+
+            let pred;
+            try {
+                pred = tmPredictGame(profileA, profileB);
+            } catch (e) {
+                showError(String(e.message || e).toUpperCase());
+                return;
+            }
+
+            _tmSeasonA = seasonA;
+            _tmSeasonB = seasonB;
+
+            // Same shape as TIME_MACHINE_DATA.matchups entries
+            _tmCustomMatchup = {
+                matchup: `${profileA.springYear} ${tmShortName(_tmTeamA)} vs ${profileB.springYear} ${tmShortName(_tmTeamB)}`,
+                teamA: {
+                    name: profileA.fullName,
+                    season: profileA.seasonKey,
+                    record: profileA.record,
+                    coach: profileA.coach,
+                    adjOE: profileA.adjOE,
+                    adjDE: profileA.adjDE,
+                    adjEM: profileA.adjEM,
+                    htss: profileA.htss,
+                },
+                teamB: {
+                    name: profileB.fullName,
+                    season: profileB.seasonKey,
+                    record: profileB.record,
+                    coach: profileB.coach,
+                    adjOE: profileB.adjOE,
+                    adjDE: profileB.adjDE,
+                    adjEM: profileB.adjEM,
+                    htss: profileB.htss,
+                },
+                prediction: {
+                    winner: pred.winner === 'A' ? profileA.fullName : profileB.fullName,
+                    winnerScore: pred.winner === 'A' ? pred.scoreA : pred.scoreB,
+                    loserScore: pred.winner === 'A' ? pred.scoreB : pred.scoreA,
+                    scoreA: pred.scoreA,
+                    scoreB: pred.scoreB,
+                    winProbA: pred.winProbA,
+                    winProbB: pred.winProbB,
+                    margin: pred.margin,
+                    simPossessions: pred.simPossessions,
+                },
+            };
+
+            const container = document.getElementById('tmCustomResult');
+            if (container) {
+                container.innerHTML = renderTmCard(_tmCustomMatchup);
+                container.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+
+            // Shareable hash route (pushState avoids re-triggering hashchange)
+            if (pushHash) {
+                const newHash = `#time-machine/${teamSlug(_tmTeamA.name)}/${seasonA}/${teamSlug(_tmTeamB.name)}/${seasonB}`;
+                if (window.location.hash !== newHash) {
+                    history.pushState(null, '', newHash);
+                }
+            }
+        }
+
+        // Auto-run a custom matchup from #time-machine/{slugA}/{seasonA}/{slugB}/{seasonB}
+        async function tmRunCustomFromRoute(slugA, seasonA, slugB, seasonB) {
+            await ensureEfficiencyData();
+            const teamA = findTeamBySlug(slugA);
+            const teamB = findTeamBySlug(slugB);
+            if (!teamA || !teamB) {
+                const container = document.getElementById('tmCustomResult');
+                if (container) container.innerHTML = '<p style="text-align:center;padding:1.5rem;color:#8892A0;">Could not find those teams.</p>';
+                return;
+            }
+            _tmTeamA = teamA;
+            _tmTeamB = teamB;
+            const inA = document.getElementById('tmTeamInputA');
+            if (inA) inA.value = teamA.name;
+            const inB = document.getElementById('tmTeamInputB');
+            if (inB) inB.value = teamB.name;
+            await tmPopulateSeasons('A', seasonA);
+            await tmPopulateSeasons('B', seasonB);
+            await tmRunCustomMatchup(false);
         }
 
         // ── Random Historical Matchup Widget ──
