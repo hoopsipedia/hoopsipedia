@@ -84,6 +84,26 @@ def parse_nba_first_round(html):
     return sum(1 for r in rounds if r == '1')
 
 
+_TITLE_STOPWORDS = {'of', 'the', 'at', 'and'}
+
+def title_matches_school(title, name, slug):
+    """Check that a bref college page title plausibly refers to the given school.
+
+    basketball-reference serves another school's page (often Virginia's) for
+    unrecognized college params instead of 404ing, so an unverified title means
+    the pick count may belong to a different school entirely.
+    """
+    if not title:
+        return False
+    title_words = set(re.sub(r'[^a-z0-9 ]', ' ', title.lower()).split())
+    for candidate in (name, slug.replace('-', ' ')):
+        words = [w for w in re.sub(r'[^a-z0-9 ]', ' ', candidate.lower()).split()
+                 if w not in _TITLE_STOPWORDS]
+        if words and all(w in title_words for w in words):
+            return True
+    return False
+
+
 def main():
     with open('data.json') as f:
         data = json.load(f)
@@ -155,6 +175,7 @@ def main():
     updated_nba = 0
     updated_apw = 0
     failed = []
+    missing_bref = []
     updates_log = []
 
     for i, team in enumerate(teams_to_scrape):
@@ -219,24 +240,36 @@ def main():
         if team['needs_nba']:
             bref_slug = sr_to_bref.get(slug)
             if not bref_slug:
-                # Try direct: remove hyphens
+                # Fallback rarely resolves: real bref college IDs are
+                # abbreviations (e.g. 'ulamo' for louisiana-monroe), not
+                # hyphen-stripped SR slugs. Title check below catches the
+                # wrong-page case; flag for a sr_to_bref.json entry.
                 bref_slug = slug.replace('-', '')
+                missing_bref.append(f"{name} ({slug})")
+                print(f"  WARNING: no sr_to_bref mapping for '{slug}', trying fallback '{bref_slug}'")
 
             url = f"https://www.basketball-reference.com/friv/colleges.fcgi?college={bref_slug}"
             html = fetch_url(url)
             if html:
-                # Verify the page is for the right school by checking title
-                title_match = re.search(r'<title>(.*?)</title>', html)
-                title = title_match.group(1) if title_match else ''
+                title_match = re.search(r'<title>(.*?)</title>', html, re.IGNORECASE | re.DOTALL)
+                title = title_match.group(1).strip() if title_match else ''
 
-                nba = parse_nba_first_round(html)
-                if nba > 0:
-                    entry[14] = nba
-                    updated_nba += 1
-                    updates_log.append(f"  NBA: {name} = {nba}")
-                    print(f"  NBA = {nba} (from: {title})")
+                if not title_matches_school(title, name, slug):
+                    # bref serves another school's page (often Virginia's) for
+                    # bad college params — writing this count would put another
+                    # school's picks on this team.
+                    print(f"  NBA skipped: title '{title}' does not match school "
+                          f"(bref slug '{bref_slug}' likely wrong)")
+                    failed.append(f"{name} (bref title mismatch: '{title}')")
                 else:
-                    print(f"  NBA = 0 (from: {title})")
+                    nba = parse_nba_first_round(html)
+                    if nba > 0:
+                        entry[14] = nba
+                        updated_nba += 1
+                        updates_log.append(f"  NBA: {name} = {nba}")
+                        print(f"  NBA = {nba} (from: {title})")
+                    else:
+                        print(f"  NBA = 0 (from: {title})")
             else:
                 print(f"  NBA = 0 (no bref page)")
 
@@ -281,6 +314,12 @@ def main():
         print(f"\nFailed ({len(failed)}):")
         for f_name in failed:
             print(f"  - {f_name}")
+
+    if missing_bref:
+        print(f"\nTeams missing sr_to_bref.json entries ({len(missing_bref)}) — "
+              f"NBA counts may be undercounted until mappings are added:")
+        for m_name in missing_bref:
+            print(f"  - {m_name}")
 
     print("\nAll updates:")
     for log in updates_log:
