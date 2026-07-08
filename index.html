@@ -14165,8 +14165,9 @@
                 return;
             }
 
-            const wins = seasonRow ? (parseInt(seasonRow.wins) || 0) : games.filter(g => g.w).length;
-            const losses = seasonRow ? (parseInt(seasonRow.losses) || 0) : games.filter(g => !g.w).length;
+            // Official records exclude NCAA-vacated games (displayed with *)
+            const wins = seasonRow ? (parseInt(seasonRow.wins) || 0) : games.filter(g => g.w && !g.vacated).length;
+            const losses = seasonRow ? (parseInt(seasonRow.losses) || 0) : games.filter(g => !g.w && !g.vacated).length;
             const record = (seasonRow && seasonRow.record) || `${wins}-${losses}`;
             const postseason = seasonRow ? mapTourneyResult(seasonRow.ncaaTourney) : '';
 
