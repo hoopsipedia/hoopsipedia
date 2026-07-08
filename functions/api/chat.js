@@ -19,6 +19,9 @@ let cachedDraft = null;       // draft_history.json
 let cachedTeamHistory = null; // team_history.json
 let cachedUpsets = null;      // upset_history.json
 let cachedTimeMachine = null; // time_machine_results.json
+let cachedAPPolls = null;     // ap_polls.json
+const cachedGameIds = {};     // espnId -> game_ids/{id}.json slice
+const cachedBoxYears = {};    // year -> boxscores/{year}.json slice
 let cachedGames1 = null;      // games_1.json (legacy fallback only)
 let cachedGames2 = null;      // games_2.json (legacy fallback only)
 let cachedGames3 = null;      // games_3.json (legacy fallback only)
@@ -149,6 +152,8 @@ async function executeTool(name, input, ctx) {
     case 'navigateUser': return { status: 'link_rendered', route: input.route, label: input.label };
     case 'getTimeMachine': return await toolGetTimeMachine(input, ctx);
     case 'getChampionByYear': return await toolGetChampionByYear(input, ctx);
+    case 'getAPPoll': return await toolGetAPPoll(input, ctx);
+    case 'getBoxScore': return await toolGetBoxScore(input, ctx);
     case 'getTeamsByConference': return await toolGetTeamsByConference(input, ctx);
     case 'searchGames': return await toolSearchGames(input, ctx);
     case 'getTeamTournamentRecord': return await toolGetTeamTournamentRecord(input, ctx);
@@ -170,26 +175,40 @@ async function toolLookupTeam(input, ctx) {
     slugIndex[teamSlug(fields[F.NAME])] = id;
   }
 
-  // Search by name, mascot, slug, alias
+  // Search by name, mascot, slug, alias — ranked: exact school/alias match
+  // beats prefix beats substring, so "Southern" finds Southern Jaguars
+  // first rather than whichever *Southern* happens to iterate first.
+  const scored = [];
   for (const [id, fields] of Object.entries(data.H)) {
     const name = fields[F.NAME].toLowerCase();
     const mascot = (fields[F.MASCOT] || '').toLowerCase();
     const slug = teamSlug(fields[F.NAME]);
-    if (name.includes(query) || mascot.includes(query) || slug.includes(query)) {
-      results.push(formatTeamInfo(id, fields));
-    }
+    const school = name.replace(new RegExp('\\s*' + mascot.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '$'), '').trim();
+    let score = 0;
+    if (school === query || name === query) score = 100;
+    else if (name.startsWith(query) || school.startsWith(query)) score = 60;
+    else if (name.includes(query) || mascot.includes(query) || slug.includes(query)) score = 30;
+    if (score) scored.push({ score, id, fields });
   }
-
-  // Check aliases
-  if (results.length === 0 && aliases) {
+  if (aliases) {
     for (const [alias, id] of Object.entries(aliases)) {
-      if (alias.includes(query) && data.H[String(id)]) {
-        results.push(formatTeamInfo(String(id), data.H[String(id)]));
+      const a = alias.toLowerCase();
+      if ((a === query || a.includes(query)) && data.H[String(id)]) {
+        const existing = scored.find(s => s.id === String(id));
+        const aScore = a === query ? 100 : 40;
+        if (existing) existing.score = Math.max(existing.score, aScore);
+        else scored.push({ score: aScore, id: String(id), fields: data.H[String(id)] });
       }
     }
   }
+  scored.sort((a, b) => b.score - a.score);
+  for (const s of scored) results.push(formatTeamInfo(s.id, s.fields));
 
-  return results.length > 0 ? { teams: results.slice(0, 5) } : { error: `No team found matching "${input.query}"` };
+  if (results.length === 0) return { error: `No team found matching "${input.query}"` };
+  const topScore = scored[0].score;
+  // Ambiguous when there is no exact match and several plausible teams
+  const ambiguous = topScore < 100 && scored.filter(s => s.score >= 30).length > 1;
+  return { teams: results.slice(0, 5), ...(ambiguous ? { ambiguous: true, note: 'Multiple teams match — ask the user which one they mean before answering.' } : {}) };
 }
 
 function formatTeamInfo(id, fields) {
@@ -432,6 +451,143 @@ async function toolGetTimeMachine(input, ctx) {
   }
 
   return { matchups: tm.matchups.map(m => ({ matchup: m.matchup, prediction: m.prediction })) };
+}
+
+// ── AP polls (ap_polls.json: {"<season>":{"weeks":[{label, ranks:[{rank,id|name}]}]}}) ──
+async function resolveTeamId(ctx, name) {
+  const data = await getData(ctx);
+  if (!data || !data.H) return null;
+  const q = String(name || '').toLowerCase().trim();
+  let best = null, bestScore = 0;
+  for (const [id, fields] of Object.entries(data.H)) {
+    const full = fields[F.NAME].toLowerCase();
+    const school = full.replace(new RegExp('\\s*' + (fields[F.MASCOT] || '').toLowerCase().replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '$'), '').trim();
+    let s = 0;
+    if (full === q || school === q) s = 100;
+    else if (full.startsWith(q) || school.startsWith(q)) s = 60;
+    else if (full.includes(q)) s = 30;
+    if (s > bestScore) { bestScore = s; best = id; }
+  }
+  if (bestScore >= 60) return best;
+  const aliases = await getSlugAliases(ctx);
+  if (aliases) {
+    for (const [alias, id] of Object.entries(aliases)) {
+      if (alias.toLowerCase() === q) return String(id);
+    }
+  }
+  return best;
+}
+
+async function toolGetAPPoll(input, ctx) {
+  if (!cachedAPPolls) {
+    cachedAPPolls = await loadJSON(ctx.env.ASSETS, ctx.request.url, '/ap_polls.json');
+  }
+  if (!cachedAPPolls) return { error: 'AP poll data not available' };
+  const season = cachedAPPolls[String(input.season)];
+  if (!season || !season.weeks || !season.weeks.length) {
+    return { error: `No AP poll data for the ${input.season} season (polls begin in 1949)` };
+  }
+  let week = season.weeks[season.weeks.length - 1];
+  let label = 'Final';
+  if (input.week) {
+    const q = String(input.week).toLowerCase();
+    const found = season.weeks.find(w => String(w.label).toLowerCase().includes(q));
+    if (found) { week = found; label = found.label; }
+  }
+  const data = await getData(ctx);
+  const ranks = week.ranks.map(e => ({
+    rank: e.rank,
+    team: e.id && data.H[e.id] ? data.H[e.id][F.NAME] : (e.name || 'Unknown'),
+  }));
+  return {
+    season: input.season,
+    pollWeek: label,
+    note: 'The final AP poll is taken before the NCAA tournament.',
+    availableWeeks: season.weeks.map(w => w.label),
+    rankings: ranks,
+  };
+}
+
+// ── Box scores: SR slices for tournament games any era; ESPN summary via
+// the per-team event-ID map for 2002+ games ──
+async function toolGetBoxScore(input, ctx) {
+  const tid = await resolveTeamId(ctx, input.team);
+  const oid = await resolveTeamId(ctx, input.opponent);
+  const data = await getData(ctx);
+  if (!tid) return { error: `Could not resolve team "${input.team}"` };
+  const year = parseInt(input.seasonEndYear);
+  const norm = s => String(s || '').toLowerCase().replace(/[^a-z0-9 ]/g, '');
+  const overlap = (a, b) => {
+    const bw = new Set(norm(b).split(/\s+/));
+    return norm(a).split(/\s+/).some(w => w.length > 2 && bw.has(w));
+  };
+
+  // 1) SR tournament slice (covers 1939-2026 tournaments)
+  if (!cachedBoxYears[year]) {
+    cachedBoxYears[year] = await loadJSON(ctx.env.ASSETS, ctx.request.url, `/boxscores/${year}.json`) || {};
+  }
+  const teamName = data.H[tid] ? data.H[tid][F.NAME] : input.team;
+  const oppName = oid && data.H[oid] ? data.H[oid][F.NAME] : input.opponent;
+  for (const val of Object.values(cachedBoxYears[year])) {
+    if (!val || !val.teams || val.teams.length !== 2) continue;
+    const [t1, t2] = val.teams;
+    if ((overlap(t1.name, teamName) && overlap(t2.name, oppName)) ||
+        (overlap(t2.name, teamName) && overlap(t1.name, oppName))) {
+      return {
+        source: 'sports-reference',
+        teams: val.teams.map(t => ({
+          name: t.name, score: t.score, seed: t.seed,
+          topPlayers: (t.players || []).slice()
+            .sort((a, b) => (b.pts || 0) - (a.pts || 0)).slice(0, 6),
+          totals: t.totals,
+        })),
+      };
+    }
+  }
+
+  // 2) ESPN event map for 2002+ (regular season + postseason)
+  if (year >= 2002 && oid) {
+    if (!cachedGameIds[tid]) {
+      cachedGameIds[tid] = await loadJSON(ctx.env.ASSETS, ctx.request.url, `/game_ids/${tid}.json`) || {};
+    }
+    const lo = `${year - 1}-08-01`, hi = `${year}-07-31`;
+    let eventId = null;
+    for (const [eid, g] of Object.entries(cachedGameIds[tid])) {
+      if (g.date < lo || g.date > hi) continue;
+      if ((String(g.t1) === tid && String(g.t2) === oid) || (String(g.t2) === tid && String(g.t1) === oid)) {
+        if (!input.date || Math.abs(new Date(g.date) - new Date(input.date)) < 2 * 86400000) {
+          eventId = eid;
+          if (input.date && g.date === input.date) break;
+        }
+      }
+    }
+    if (eventId) {
+      try {
+        const resp = await fetch(`https://site.api.espn.com/apis/site/v2/sports/basketball/mens-college-basketball/summary?event=${eventId}`);
+        if (resp.ok) {
+          const sum = await resp.json();
+          const players = (sum.boxscore && sum.boxscore.players) || [];
+          const teams = players.map(p => {
+            const stats = (p.statistics && p.statistics[0]) || {};
+            const keys = stats.names || [];
+            const iPts = keys.indexOf('PTS');
+            const rows = (stats.athletes || []).map(a => ({
+              name: a.athlete && a.athlete.displayName,
+              pts: iPts >= 0 ? parseInt(a.stats[iPts]) || 0 : null,
+              line: (a.stats || []).join(' '),
+              keys: keys.join(' '),
+            })).sort((a, b) => (b.pts || 0) - (a.pts || 0)).slice(0, 6);
+            return { name: p.team && p.team.displayName, topPlayers: rows };
+          });
+          const comp = sum.header && sum.header.competitions && sum.header.competitions[0];
+          const score = comp ? comp.competitors.map(c => `${c.team.displayName} ${c.score}`).join(', ') : null;
+          return { source: 'espn', eventId, finalScore: score, teams };
+        }
+      } catch (e) { /* fall through */ }
+    }
+  }
+
+  return { error: `No box score found for ${input.team} vs ${input.opponent} in ${year}. Tournament games 1939-2026 and most 2002+ games are covered.` };
 }
 
 async function toolGetChampionByYear(input, ctx) {
@@ -774,6 +930,32 @@ const TOOLS = [
     }
   },
   {
+    name: 'getAPPoll',
+    description: 'Get AP poll rankings for a season (1949-2026). Returns the final poll by default, or a specific week. The final AP poll is taken BEFORE the NCAA tournament.',
+    input_schema: {
+      type: 'object',
+      properties: {
+        season: { type: 'number', description: 'Season end year, e.g. 2024 for the 2023-24 season' },
+        week: { type: 'string', description: "Optional: poll week label (e.g. 'Pre', 'Final', or a date). Defaults to the final poll." }
+      },
+      required: ['season']
+    }
+  },
+  {
+    name: 'getBoxScore',
+    description: 'Get the box score for a specific game: team stats and player lines. Works for NCAA tournament games 1939-2026 and most games from 2002 onward. Identify the game by one team, the opponent, and the season or date.',
+    input_schema: {
+      type: 'object',
+      properties: {
+        team: { type: 'string', description: 'One team in the game' },
+        opponent: { type: 'string', description: 'The other team' },
+        seasonEndYear: { type: 'number', description: 'Season end year (e.g. 1992 for the 1991-92 title game)' },
+        date: { type: 'string', description: 'Optional exact date YYYY-MM-DD if known' }
+      },
+      required: ['team', 'opponent', 'seasonEndYear']
+    }
+  },
+  {
     name: 'getChampionByYear',
     description: 'Find which team won the NCAA championship in a given year. Returns champion name, ESPN ID, and all their championship years.',
     input_schema: {
@@ -825,13 +1007,13 @@ const TOOLS = [
 ];
 
 // ── System prompt ──
-const SYSTEM_PROMPT = `You are the Hoopsipedia Assistant, an expert on college basketball history and statistics. You help users explore data from Hoopsipedia, a comprehensive college basketball historical database covering 365+ Division I programs from 1949 to 2026.
+const SYSTEM_PROMPT = `You are the Hoopsipedia Assistant, an expert on college basketball history and statistics. You help users explore data from Hoopsipedia, a comprehensive college basketball historical database covering 365+ Division I programs. Season-by-season data reaches back to each program's founding — for many schools into the early 1900s (complete coverage for all programs from 1949 through 2026). Never claim data starts in 1949 — check the tools first.
 
 You have access to tools that query Hoopsipedia's proprietary data. Use them to answer questions with specific facts and numbers. Always call tools to look up data rather than relying on general knowledge — Hoopsipedia's data is authoritative.
 
 Available data includes:
 - Team profiles: all-time records, championships, Final Fours, conference history (365 teams)
-- Season-by-season records: W/L, conference records, SRS, SOS, PPG, AP rankings, tournament results (77 seasons, 1949-2026)
+- Season-by-season records: W/L, conference records, SRS, SOS, PPG, AP rankings, tournament results (back to each program's first season, many pre-1949)
 - Head-to-head records between any two teams (all-time)
 - Game-by-game results with scores for every team (searchable by season, opponent, tournament)
 - Championship history: look up champion by year (1939-2026)
@@ -859,6 +1041,11 @@ Route formats for navigateUser:
 
 Guidelines:
 - Be conversational but concise. Lead with the answer, then provide supporting detail.
+- ALWAYS call lookupTeam before saying a team is unknown or not in the database — many schools go by short names (Milwaukee, UMass, Southern Miss).
+- If lookupTeam returns ambiguous:true, do NOT guess — ask the user which team they mean, listing the candidates.
+- When comparing or ranking teams/seasons, always cite each team's W-L record alongside any ratings (HTSS, efficiency).
+- Some games are marked vacated:true — the NCAA vacated them. Mention them with an asterisk when relevant, but never count them toward a program's or coach's official win totals.
+- AP poll questions: use getAPPoll. Note the final AP poll is taken BEFORE the NCAA tournament, so champions are sometimes ranked low or unranked in it.
 - Use specific numbers and stats from tool results.
 - When comparing teams or seasons, present data in a structured, easy-to-scan format.
 - If you can't find data for a query, say so honestly — don't make up stats.
@@ -877,7 +1064,7 @@ async function callClaude(messages, apiKey, tools) {
     },
     body: JSON.stringify({
       model: 'claude-haiku-4-5-20251001',
-      max_tokens: 1500,
+      max_tokens: 2200,
       system: SYSTEM_PROMPT,
       messages,
       tools,
@@ -895,7 +1082,7 @@ async function callClaude(messages, apiKey, tools) {
         'x-api-key': apiKey,
         'anthropic-version': '2023-06-01'
       },
-      body: JSON.stringify({ model: 'claude-haiku-4-5-20251001', max_tokens: 1500, system: SYSTEM_PROMPT, messages, tools, stream: true })
+      body: JSON.stringify({ model: 'claude-haiku-4-5-20251001', max_tokens: 2200, system: SYSTEM_PROMPT, messages, tools, stream: true })
     });
     if (!retry.ok) {
       const err = await retry.text().catch(() => 'Unknown error');
