@@ -250,7 +250,8 @@ function renderTeamSsr(team, seasons, teams, origin) {
         ? `${escapeHtml(s.confRecord)} (${escapeHtml(s.conf || '')})`
         : escapeHtml(s.conf || '');
       const apCell = s.apHigh ? `AP #${s.apHigh}` : '';
-      return `<tr><td style="${SSR_CELL_STYLE}">${escapeHtml(s.year)}</td><td style="${SSR_CELL_STYLE}">${escapeHtml(record)}</td><td style="${SSR_CELL_STYLE}">${confCell}</td><td style="${SSR_CELL_STYLE}">${escapeHtml(s.coach || '')}</td><td style="${SSR_CELL_STYLE}">${apCell}</td></tr>`;
+      const yearCell = `<a href="${seasonHref(origin, slug, s.year)}">${escapeHtml(s.year)}</a>`;
+      return `<tr><td style="${SSR_CELL_STYLE}">${yearCell}</td><td style="${SSR_CELL_STYLE}">${escapeHtml(record)}</td><td style="${SSR_CELL_STYLE}">${confCell}</td><td style="${SSR_CELL_STYLE}">${escapeHtml(s.coach || '')}</td><td style="${SSR_CELL_STYLE}">${apCell}</td></tr>`;
     }).join('');
     parts.push(
       `<h2>Season-by-season results</h2>` +
@@ -267,6 +268,86 @@ function renderTeamSsr(team, seasons, teams, origin) {
   }
 
   parts.push(`<p><a href="${origin}/?view=teams">All Division I programs</a> · <a href="${origin}/?view=rankings">Historical rankings</a> · <a href="${origin}/?view=champions">Championship journeys</a> · <a href="${origin}/">Hoopsipedia home</a></p>`);
+
+  return ssrWrap(parts.join('\n'));
+}
+
+// Per-isolate cache of games/{espnId}.json slices for season pages.
+const gamesCache = new Map();
+
+async function getTeamGames(assetFetcher, originUrl, espnId) {
+  if (gamesCache.has(espnId)) return gamesCache.get(espnId);
+  try {
+    const resp = await assetFetcher.fetch(new URL(`/games/${espnId}.json`, originUrl).toString());
+    if (!resp.ok) return null;
+    const data = await resp.json();
+    const games = Array.isArray(data.games) ? data.games : (Array.isArray(data) ? data : null);
+    if (games) {
+      if (gamesCache.size > 40) gamesCache.clear(); // slices are ~50-300KB; cap memory
+      gamesCache.set(espnId, games);
+    }
+    return games;
+  } catch (e) {
+    return null;
+  }
+}
+
+// Season "1988-89" -> games dated 1988-08-01 .. 1989-07-31.
+function gamesForSeason(games, seasonStr) {
+  const startYear = parseInt(seasonStr.substring(0, 4), 10);
+  if (!startYear) return [];
+  const lo = `${startYear}-08-01`;
+  const hi = `${startYear + 1}-07-31`;
+  return games
+    .filter(g => g.date && g.date >= lo && g.date <= hi)
+    .sort((a, b) => (a.date < b.date ? -1 : 1));
+}
+
+function seasonHref(origin, slug, seasonStr) {
+  return `${origin}/teams/${encodeParam(slug)}/${encodeParam(seasonStr)}`;
+}
+
+function renderSeasonSsr(team, seasonRow, games, teams, origin) {
+  const slug = teamSlug(team.name);
+  const parts = [];
+  const seasonStr = seasonRow.year;
+
+  parts.push(`<h1>${escapeHtml(seasonStr)} ${escapeHtml(team.name)} — schedule and results</h1>`);
+
+  const record = seasonRow.record || `${seasonRow.wins}-${seasonRow.losses}`;
+  const bits = [
+    `The ${escapeHtml(seasonStr)} ${escapeHtml(team.name)} went ${escapeHtml(record)}`,
+  ];
+  if (seasonRow.confRecord) bits.push(` (${escapeHtml(seasonRow.confRecord)} in the ${escapeHtml(seasonRow.conf || team.conf)})`);
+  if (seasonRow.coach) bits.push(` under head coach ${escapeHtml(seasonRow.coach)}`);
+  bits.push('.');
+  if (seasonRow.apHigh) bits.push(` The team peaked at #${seasonRow.apHigh} in the AP poll.`);
+  if (seasonRow.srs != null) bits.push(` Simple Rating System: ${seasonRow.srs}.`);
+  parts.push(`<p>${bits.join('')}</p>`);
+
+  if (games.length) {
+    const rows = games.map(g => {
+      const oppT = teams[String(g.opp)];
+      const oppName = oppT ? oppT[F.NAME] : (g.opp_slug || 'Unknown').replace(/-/g, ' ');
+      const oppCell = oppT
+        ? `<a href="${origin}/teams/${encodeParam(teamSlug(oppT[F.NAME]))}">${escapeHtml(oppName)}</a>`
+        : escapeHtml(oppName);
+      const loc = g.loc === 'H' ? 'vs' : g.loc === 'A' ? 'at' : 'neutral';
+      const res = `${g.w ? 'W' : 'L'} ${g.pts}–${g.opp_pts}${g.ot ? ` (${g.ot}OT)` : ''}${g.vacated ? ' *' : ''}`;
+      return `<tr><td style="${SSR_CELL_STYLE}">${escapeHtml(g.date)}</td><td style="${SSR_CELL_STYLE}">${loc} ${oppCell}</td><td style="${SSR_CELL_STYLE}">${res}</td><td style="${SSR_CELL_STYLE}">${escapeHtml(g.arena || '')}</td></tr>`;
+    }).join('');
+    parts.push(
+      `<h2>Game-by-game results (${games.length} games)</h2>` +
+      `<table style="${SSR_TABLE_STYLE}"><thead><tr>` +
+      `<th style="${SSR_CELL_STYLE}">Date</th><th style="${SSR_CELL_STYLE}">Opponent</th><th style="${SSR_CELL_STYLE}">Result</th><th style="${SSR_CELL_STYLE}">Arena</th>` +
+      `</tr></thead><tbody>${rows}</tbody></table>`
+    );
+    if (games.some(g => g.vacated)) {
+      parts.push(`<p>* Result later vacated by the NCAA and not counted in official records.</p>`);
+    }
+  }
+
+  parts.push(`<p><a href="${origin}/teams/${encodeParam(slug)}">${escapeHtml(team.name)} program history</a> · <a href="${origin}/?view=teams">All Division I programs</a> · <a href="${origin}/">Hoopsipedia home</a></p>`);
 
   return ssrWrap(parts.join('\n'));
 }
@@ -320,11 +401,22 @@ function renderHomepageSsr(teams, origin) {
 export async function onRequest(context) {
   const { request } = context;
   const url = new URL(request.url);
-  const teamParam = url.searchParams.get('team');
+  let teamParam = url.searchParams.get('team');
   const compareParam = url.searchParams.get('compare');
   const gameParam = url.searchParams.get('game');
   const champParam = url.searchParams.get('championship');
   const viewParam = url.searchParams.get('view');
+
+  // Forever URLs: /teams/{slug} and /teams/{slug}/{season}. The path form is
+  // canonical; ?team= keeps working and canonicalizes to the path.
+  let seasonParam = null;
+  let isPathRoute = false;
+  const pathMatch = url.pathname.match(/^\/teams\/([a-z0-9-]+)(?:\/(\d{4}(?:-\d{2})?))?\/?$/);
+  if (pathMatch) {
+    teamParam = pathMatch[1];
+    seasonParam = pathMatch[2] || null;
+    isPathRoute = true;
+  }
 
   // Bare homepage gets SSR content too; everything else with no relevant
   // query params passes through to static files.
@@ -356,11 +448,59 @@ export async function onRequest(context) {
   const jsonLdBlocks = []; // schema.org objects to inject as <script type="application/ld+json">
   let ssrHtml = '';        // crawler-visible content, prepended inside <body> as #ssr-content
 
-  if (teamParam) {
-    const team = lookupTeam(teamParam, teams, index);
-    if (!team) return context.next();
+  // Path routes must hard-404 on unknown teams/seasons — the SPA fallback
+  // would otherwise serve soft-404s for every mistyped forever URL.
+  const notFound = () => new Response(
+    `<!doctype html><meta charset="utf-8"><title>Not found — Hoopsipedia</title>` +
+    `<div style="font-family:sans-serif;max-width:600px;margin:80px auto;text-align:center">` +
+    `<h1>Page not found</h1><p>No such team or season.</p>` +
+    `<p><a href="/?view=teams">Browse all teams</a> · <a href="/">Hoopsipedia home</a></p></div>`,
+    { status: 404, headers: { 'content-type': 'text/html; charset=utf-8' } });
 
-    canonicalUrl = `${origin}/?team=${encodeParam(teamParam)}`;
+  if (teamParam && seasonParam) {
+    // /teams/{slug}/{season} — self-contained season page
+    const team = lookupTeam(teamParam, teams, index);
+    if (!team) return notFound();
+    const seasons = await getTeamSeasons(assetFetcher, originUrl, team.espnId);
+    const seasonRow = seasons ? seasons.find(s => s.year === seasonParam) : null;
+    if (!seasonRow) return notFound();
+
+    const slug = teamSlug(team.name);
+    canonicalUrl = seasonHref(origin, slug, seasonParam);
+    const record = seasonRow.record || `${seasonRow.wins}-${seasonRow.losses}`;
+    pageTitle = `${seasonParam} ${team.name} — schedule & results — Hoopsipedia`;
+    const description = `${seasonParam} ${team.name} basketball: ${record}${seasonRow.coach ? ` under ${seasonRow.coach}` : ''}${seasonRow.apHigh ? `, peaked at AP #${seasonRow.apHigh}` : ''}. Full game-by-game schedule, scores, and box scores on Hoopsipedia.`;
+    const imageUrl = `https://a.espncdn.com/i/teamlogos/ncaa/500/${team.espnId}.png`;
+
+    metaTags = [
+      { key: 'description', value: description },
+      { key: 'og:type', value: 'website' },
+      { key: 'og:title', value: pageTitle },
+      { key: 'og:description', value: description },
+      { key: 'og:image', value: imageUrl },
+      { key: 'og:url', value: canonicalUrl },
+      { key: 'og:site_name', value: 'Hoopsipedia' },
+      { key: 'twitter:card', value: 'summary_large_image' },
+      { key: 'twitter:title', value: pageTitle },
+      { key: 'twitter:description', value: description },
+      { key: 'twitter:image', value: imageUrl },
+    ];
+    jsonLdBlocks.push(breadcrumbLd([
+      { name: 'Hoopsipedia', url: `${origin}/` },
+      { name: 'Teams', url: `${origin}/?view=teams` },
+      { name: team.name, url: `${origin}/teams/${encodeParam(slug)}` },
+      { name: seasonParam, url: canonicalUrl },
+    ]));
+
+    const allGames = await getTeamGames(assetFetcher, originUrl, team.espnId);
+    const seasonGames = allGames ? gamesForSeason(allGames, seasonParam) : [];
+    ssrHtml = renderSeasonSsr(team, seasonRow, seasonGames, teams, origin);
+  } else if (teamParam) {
+    const team = lookupTeam(teamParam, teams, index);
+    if (!team) return isPathRoute ? notFound() : context.next();
+
+    // Path URL is the forever/canonical form; ?team= canonicalizes to it.
+    canonicalUrl = `${origin}/teams/${encodeParam(teamSlug(team.name))}`;
 
     const champYearsText = team.champYears.length ? ` (${team.champYears.join(', ')})` : '';
     const ncText = team.natlChamps > 0

@@ -1698,6 +1698,16 @@
         .season-chart { width: 100%; height: 100%; }
         .chart-loading { display: flex; align-items: center; justify-content: center; height: 300px; color: #8892A0; font-size: 1rem; }
         .chart-error { display: flex; align-items: center; justify-content: center; height: 300px; color: #DC3545; font-size: 1rem; text-align: center; padding: 1rem; }
+        /* Season-by-season year links → single-season pages */
+        .season-year-link { color: inherit; text-decoration: none; border-bottom: 1px dotted #C9A86C; cursor: pointer; }
+        .season-year-link:hover { color: #1B2A4A; border-bottom: 1px solid #1B2A4A; }
+        /* Single-season page schedule */
+        .season-sched-row { cursor: default; }
+        .season-sched-row.expandable { cursor: pointer; }
+        .season-sched-row.expandable:hover td { background: #F5F2EA; }
+        .season-sched-row td { padding: 0.5rem 0.75rem; border-bottom: 1px solid #F0EDE6; color: #2C3345; }
+        .season-expand-icon { font-size: 0.6rem; color: #A0AAB8; transition: transform 0.25s ease; display: inline-block; }
+        .season-sched-row.expanded .season-expand-icon { transform: rotate(180deg); }
         .season-chart { width: 100%; height: 100%; }
         .chart-tooltip {
             position: absolute; background: #1B2A4A; color: #FFFFFF; padding: 0.75rem 1rem;
@@ -5712,6 +5722,11 @@
         <div id="championshipRun" class="view">
             <div id="championshipRunContent"></div>
         </div>
+
+        <!-- Single-Season Page View -->
+        <div id="seasonPage" class="view">
+            <div id="seasonPageContent"></div>
+        </div>
     </div>
 
     <!-- Footer -->
@@ -5736,10 +5751,10 @@
                 <div>
                     <div class="label-mono" style="color: rgba(245,243,238,0.4); margin-bottom: 12px;">About</div>
                     <div style="display: flex; flex-direction: column; gap: 6px;">
-                        <a href="about.html" style="font-size: 0.85rem; color: rgba(245,243,238,0.65); text-decoration: none; font-family: var(--font-serif);">About Hoopsipedia</a>
-                        <a href="contact.html" style="font-size: 0.85rem; color: rgba(245,243,238,0.65); text-decoration: none; font-family: var(--font-serif);">Contact</a>
-                        <a href="privacy.html" style="font-size: 0.85rem; color: rgba(245,243,238,0.65); text-decoration: none; font-family: var(--font-serif);">Privacy Policy</a>
-                        <a href="terms.html" style="font-size: 0.85rem; color: rgba(245,243,238,0.65); text-decoration: none; font-family: var(--font-serif);">Terms of Service</a>
+                        <a href="/about.html" style="font-size: 0.85rem; color: rgba(245,243,238,0.65); text-decoration: none; font-family: var(--font-serif);">About Hoopsipedia</a>
+                        <a href="/contact.html" style="font-size: 0.85rem; color: rgba(245,243,238,0.65); text-decoration: none; font-family: var(--font-serif);">Contact</a>
+                        <a href="/privacy.html" style="font-size: 0.85rem; color: rgba(245,243,238,0.65); text-decoration: none; font-family: var(--font-serif);">Privacy Policy</a>
+                        <a href="/terms.html" style="font-size: 0.85rem; color: rgba(245,243,238,0.65); text-decoration: none; font-family: var(--font-serif);">Terms of Service</a>
                     </div>
                 </div>
                 <div>
@@ -5837,7 +5852,7 @@
             if (!_gamesIndexPromise) {
                 _gamesIndexPromise = (async () => {
                     try {
-                        const resp = await fetch('games/index.json');
+                        const resp = await fetch('/games/index.json');
                         if (resp.ok) {
                             GAMES_INDEX = await resp.json();
                             GAMES_DATA = {};
@@ -5864,7 +5879,7 @@
             if (!_teamGamesFetches[id]) {
                 _teamGamesFetches[id] = (async () => {
                     try {
-                        const resp = await fetch(`games/${id}.json`);
+                        const resp = await fetch(`/games/${id}.json`);
                         if (resp.ok) {
                             const entry = await resp.json();
                             GAMES_DATA[id] = entry;
@@ -5887,9 +5902,9 @@
                 _allGamesPromise = (async () => {
                     try {
                         const gameParts = await Promise.all([
-                            fetch('games_1.json').then(r => r.ok ? r.json() : {}),
-                            fetch('games_2.json').then(r => r.ok ? r.json() : {}),
-                            fetch('games_3.json').then(r => r.ok ? r.json() : {})
+                            fetch('/games_1.json').then(r => r.ok ? r.json() : {}),
+                            fetch('/games_2.json').then(r => r.ok ? r.json() : {}),
+                            fetch('/games_3.json').then(r => r.ok ? r.json() : {})
                         ]);
                         const merged = Object.assign({}, ...gameParts);
                         if (Object.keys(merged).length > 0) {
@@ -6087,7 +6102,7 @@
 
         async function loadData() {
             try {
-                const resp = await fetch('data.json');
+                const resp = await fetch('/data.json');
                 if (!resp.ok) throw new Error('Failed to load data: ' + resp.status);
                 const data = await resp.json();
                 window.TEAM_DATA = data;
@@ -6099,7 +6114,7 @@
 
                 // Try to load pre-compiled historical season data (generated by compile_history.py)
                 try {
-                    const seasonsResp = await fetch('seasons.json');
+                    const seasonsResp = await fetch('/seasons.json');
                     if (seasonsResp.ok) {
                         SEASONS_DATA = await seasonsResp.json();
                         console.log(`Loaded historical data for ${Object.keys(SEASONS_DATA).length} teams`);
@@ -6115,7 +6130,7 @@
 
                 // Try to load all-time head-to-head data (generated by compile_h2h.py)
                 try {
-                    const h2hResp = await fetch('h2h.json');
+                    const h2hResp = await fetch('/h2h.json');
                     if (h2hResp.ok) {
                         H2H_DATA = await h2hResp.json();
                         console.log(`Loaded H2H data for ${Object.keys(H2H_DATA).length} teams`);
@@ -6126,7 +6141,7 @@
 
                 // Load upset history for personalized pregame badges
                 try {
-                    const upsetResp = await fetch('upset_history.json');
+                    const upsetResp = await fetch('/upset_history.json');
                     if (upsetResp.ok) {
                         UPSET_DETAIL_DATA = await upsetResp.json();
                         window.UPSET_TEAM_LOOKUP = buildUpsetTeamLookup(UPSET_DETAIL_DATA);
@@ -6146,7 +6161,7 @@
 
                 // Load arena photos for team profile backgrounds
                 try {
-                    const arenaResp = await fetch('arena_photos.json');
+                    const arenaResp = await fetch('/arena_photos.json');
                     if (arenaResp.ok) {
                         ARENA_PHOTOS = await arenaResp.json();
                         // Remove metadata key if present
@@ -6159,7 +6174,7 @@
 
                 // Load team history data for program history section
                 try {
-                    const historyResp = await fetch('team_history.json');
+                    const historyResp = await fetch('/team_history.json');
                     if (historyResp.ok) {
                         TEAM_HISTORY = await historyResp.json();
                         console.log(`Loaded team history for ${Object.keys(TEAM_HISTORY).length} teams`);
@@ -6170,7 +6185,7 @@
 
                 // Load NBA draft history data for draft history section
                 try {
-                    const draftResp = await fetch('draft_history.json');
+                    const draftResp = await fetch('/draft_history.json');
                     if (draftResp.ok) {
                         DRAFT_HISTORY = await draftResp.json();
                         console.log(`Loaded draft history for ${Object.keys(DRAFT_HISTORY).length} teams`);
@@ -6181,7 +6196,7 @@
 
                 // Load HTSS v2 rankings data
                 try {
-                    const htssResp = await fetch('htss_v2_results.json');
+                    const htssResp = await fetch('/htss_v2_results.json');
                     if (htssResp.ok) {
                         HTSS_V2_DATA = await htssResp.json();
                         console.log(`Loaded HTSS v2 — ${HTSS_V2_DATA.allTimeTop100?.length || 0} top seasons, ${HTSS_V2_DATA.programRankings?.length || 0} programs`);
@@ -6192,7 +6207,7 @@
 
                 // Load Time Machine matchups
                 try {
-                    const tmResp = await fetch('time_machine_results.json');
+                    const tmResp = await fetch('/time_machine_results.json');
                     if (tmResp.ok) {
                         TIME_MACHINE_DATA = await tmResp.json();
                         console.log(`Loaded Time Machine — ${TIME_MACHINE_DATA.matchups?.length || 0} matchups`);
@@ -6279,6 +6294,31 @@
                 return;
             }
         })();
+
+        // Forever-URL path routes: /teams/{slug} and /teams/{slug}/{season}.
+        // The Pages Function serves index.html on these paths; render the right
+        // view directly so the pretty path stays in the address bar. If a hash
+        // is present, the hash wins. Called from init() AFTER data has loaded.
+        // Returns true when it handled the route.
+        function handlePathRoute() {
+            if (window.location.hash) return false;
+            const m = window.location.pathname.match(/^\/teams\/([a-z0-9-]+)(?:\/(\d{4}(?:-\d{2})?))?\/?$/);
+            if (!m) return false;
+            const team = findTeamBySlug(m[1]);
+            if (!team) return false;
+            _skipHashUpdate = true;
+            try {
+                if (m[2]) {
+                    switchView('seasonPage', true);
+                    renderSeasonPage(m[1], m[2]);
+                } else {
+                    openProfile(team, true);
+                }
+            } finally {
+                _skipHashUpdate = false;
+            }
+            return true;
+        }
 
         /**
          * Fetch live current-season records from ESPN and update allTimeW/allTimeL.
@@ -6455,7 +6495,7 @@
         let _otdDataPromise = null;
         function loadOtdData() {
             if (!_otdDataPromise) {
-                _otdDataPromise = fetch('on_this_day.json')
+                _otdDataPromise = fetch('/on_this_day.json')
                     .then(r => r.ok ? r.json() : null)
                     .catch(() => null);
             }
@@ -7444,11 +7484,11 @@
             initCorrectionModal();
             initOnThisDayWidget().catch(e => console.warn('OTD widget init failed:', e));
 
-            // Check for hash route on initial load
+            // Check for hash route on initial load (path routes handled when no hash)
             try {
                 if (window.location.hash) {
                     handleHashRoute();
-                } else {
+                } else if (!handlePathRoute()) {
                     renderHome();
                 }
             } catch(e) { console.error('Initial route error:', e); renderHome(); }
@@ -8235,6 +8275,15 @@
                 return;
             }
 
+            // #season/{slug}/{year} — single-season page (year like "1988-89")
+            const seasonMatch = hash.match(/^#season\/([a-z0-9-]+)\/(\d{4}(?:-\d{2})?)$/);
+            if (seasonMatch) {
+                switchView('seasonPage', true);
+                renderSeasonPage(seasonMatch[1], seasonMatch[2]);
+                _skipHashUpdate = false;
+                return;
+            }
+
             // #championship/year/team-slug
             const champMatch = hash.match(/^#championship\/(\d{4})\/([^/]+)$/);
             if (champMatch) {
@@ -8593,7 +8642,7 @@
                 if (isOurChampRun) {
                     clickAttr = ` onclick="event.stopPropagation(); window.location.hash='#championship/${tourneyYear}/${champInfo.slug}';" title="View ${tourneyYear} Championship Run"`;
                 } else if (a.year) {
-                    clickAttr = ` onclick="event.stopPropagation(); window.open('https://www.sports-reference.com/cbb/postseason/${srYear}-ncaa.html','_blank');" title="View ${yearStr} NCAA Tournament on Sports Reference"`;
+                    clickAttr = ` onclick="event.stopPropagation(); window.location.hash='#season/${teamSlug(team.name)}/${seasonStrFromEndYear(tourneyYear)}';" title="View the ${yearStr} ${team.name} season"`;
                 }
                 const hasJourney = isOurChampRun;
                 return `
@@ -8664,7 +8713,7 @@
                 const newHash = (view === 'home') ? '' : `#${view}`;
                 if (window.location.hash !== newHash) {
                     if (newHash) window.location.hash = newHash;
-                    else history.pushState(null, '', window.location.pathname);
+                    else history.pushState(null, '', window.location.pathname.startsWith('/teams/') ? '/' : window.location.pathname);
                 }
             }
 
@@ -8700,6 +8749,8 @@
             } else if (view === 'gameDetail') {
                 if (bracketRefreshInterval) clearInterval(bracketRefreshInterval);
             } else if (view === 'championshipRun') {
+                if (bracketRefreshInterval) clearInterval(bracketRefreshInterval);
+            } else if (view === 'seasonPage') {
                 if (bracketRefreshInterval) clearInterval(bracketRefreshInterval);
             } else if (view === 'rivalries') {
                 renderRivalries();
@@ -13243,7 +13294,7 @@
                                 if (champSlug && champSlug.slug === tSlug) {
                                     return `<div class="championship-badge" onclick="window.location.hash='#championship/${year}/${champSlug.slug}'" title="View ${year} Championship Run">${year}</div>`;
                                 }
-                                return `<a class="championship-badge" href="https://www.sports-reference.com/cbb/postseason/${year}-ncaa.html" target="_blank" rel="noopener" title="View ${year} NCAA Tournament" style="text-decoration:none;color:#C9A86C;">${year}</a>`;
+                                return `<a class="championship-badge" href="#season/${tSlug}/${seasonStrFromEndYear(year)}" title="View the ${seasonStrFromEndYear(year)} championship season" style="text-decoration:none;color:#C9A86C;">${year}</a>`;
                             }).join('')}
                         </div>
                     </div>
@@ -13264,7 +13315,7 @@
                         if (champSlug && champSlug.slug === tSlug) {
                             return `<a href="#championship/${yr}/${champSlug.slug}" class="champ-year-link" title="View ${yr} Championship Run">${yr}</a>`;
                         }
-                        return `<a href="https://www.sports-reference.com/cbb/postseason/${yr}-ncaa.html" target="_blank" rel="noopener" class="champ-year-link" title="View ${yr} NCAA Tournament">${yr}</a>`;
+                        return `<a href="#season/${tSlug}/${seasonStrFromEndYear(yr)}" class="champ-year-link" title="View the ${seasonStrFromEndYear(yr)} championship season">${yr}</a>`;
                     });
                 };
                 profileHTML += `
@@ -13595,7 +13646,7 @@
                                                       s.postseason === 'Final Four' ? 'background:#E8DDD0;color:#1B2A4A;font-weight:600;' :
                                                       s.postseason ? 'color:#6B7A8D;' : 'color:#C4B99A;';
                                     return `<tr style="background:${bgColor}; border-bottom: 1px solid #F0EDE6;">
-                                        <td style="padding: 0.5rem 0.75rem; font-weight: 600; color: #2C3345;">${year - 1}-${String(year).slice(2)}</td>
+                                        <td style="padding: 0.5rem 0.75rem; font-weight: 600; color: #2C3345;"><a class="season-year-link" href="#season/${teamSlug(team.name)}/${year - 1}-${String(year).slice(2)}" title="View ${year - 1}-${String(year).slice(2)} season page">${year - 1}-${String(year).slice(2)}</a></td>
                                         <td style="padding: 0.5rem 0.75rem; text-align: center; color: #2C3345;">${s.wins}-${s.losses}</td>
                                         <td style="padding: 0.5rem 0.75rem; text-align: center; color: #6B7A8D;">${confStr}</td>
                                         <td style="padding: 0.5rem 0.75rem; text-align: center; color: ${parseFloat(pct) >= 60 ? '#2D7D46' : parseFloat(pct) < 40 ? '#C9463E' : '#2C3345'}; font-weight: 600;">.${pct.replace('.', '').padStart(3, '0')}</td>
@@ -13691,7 +13742,7 @@
                                                   s.postseason ? 'color:#6B7A8D;' : 'color:#C4B99A;';
                                 const displayYear = `${year - 1}-${String(year).slice(2)}`;
                                 return `<tr style="background:${bgColor}; border-bottom: 1px solid #F0EDE6;">
-                                    <td style="padding: 0.5rem 0.75rem; font-weight: 600; color: #2C3345;">${displayYear}</td>
+                                    <td style="padding: 0.5rem 0.75rem; font-weight: 600; color: #2C3345;"><a class="season-year-link" href="#season/${teamSlug(team.name)}/${displayYear}" title="View ${displayYear} season page">${displayYear}</a></td>
                                     <td style="padding: 0.5rem 0.75rem; text-align: center; color: #2C3345;">${s.wins}-${s.losses}</td>
                                     <td style="padding: 0.5rem 0.75rem; text-align: center; color: #6B7A8D;">${confStr}</td>
                                     <td style="padding: 0.5rem 0.75rem; color: #2C3345; font-size: 0.82rem;">${s.coach || '-'}</td>
@@ -13864,7 +13915,8 @@
                     tooltip.innerHTML = `
                         <div style="font-weight:700; margin-bottom:4px; border-bottom:1px solid rgba(255,255,255,0.15); padding-bottom:4px;">${team.name} ${displayYear}</div>
                         <div>Record: <strong>${point.wins}-${point.losses}</strong> (${winPct}%)</div>
-                        ${confLine}${postLine}${coachLine}`;
+                        ${confLine}${postLine}${coachLine}
+                        <div style="margin-top:5px; font-size:0.72rem; color:#C9A86C; font-weight:600;">Click point to view season →</div>`;
                     tooltip.style.display = 'block';
 
                     const rect = svg.getBoundingClientRect();
@@ -13879,6 +13931,12 @@
                 hoverZone.addEventListener('mouseleave', () => {
                     hoverLine.setAttribute('style', 'display: none;');
                     tooltip.style.display = 'none';
+                });
+
+                // Click a data point → single-season page
+                hoverZone.addEventListener('click', () => {
+                    const displayYear = `${point.year - 1}-${String(point.year).slice(2)}`;
+                    window.location.hash = `#season/${teamSlug(team.name)}/${displayYear}`;
                 });
 
                 svg.appendChild(hoverZone);
@@ -13912,6 +13970,344 @@
 
             container.appendChild(svg);
             return container;
+        }
+
+        // ── SINGLE-SEASON PAGES (#season/{slug}/{year}) ──
+        let _seasonPageReq = 0;            // guards against stale async renders
+        let _seasonGameInfo = {};          // uid -> game context for box score expanders
+        const _gameIdsCache = {};          // espnId -> promise of game_ids/{id}.json
+
+        // Academic season string from tournament/end year: 1992 -> "1991-92"
+        function seasonStrFromEndYear(endYear) {
+            const y = parseInt(endYear);
+            return `${y - 1}-${String(y).slice(-2)}`;
+        }
+
+        function fetchGameIdsForTeam(espnId) {
+            const id = String(espnId);
+            if (!_gameIdsCache[id]) {
+                _gameIdsCache[id] = fetch(`/game_ids/${id}.json`)
+                    .then(r => r.ok ? r.json() : {})
+                    .catch(() => ({}));
+            }
+            return _gameIdsCache[id];
+        }
+
+        // Match a games/{id}.json row to an ESPN event ID: same team pair,
+        // date within ±1 day, and our side's score agrees.
+        function matchSeasonEventId(espnId, game, gameIds) {
+            if (!gameIds || !game.opp || !game.date) return null;
+            const me = String(espnId), opp = String(game.opp);
+            const gTime = Date.parse(game.date + 'T00:00:00Z');
+            if (isNaN(gTime)) return null;
+            for (const [eventId, e] of Object.entries(gameIds)) {
+                if (!e || !e.date) continue;
+                let ourScore;
+                if (String(e.t1) === me && String(e.t2) === opp) ourScore = e.s1;
+                else if (String(e.t2) === me && String(e.t1) === opp) ourScore = e.s2;
+                else continue;
+                const eTime = Date.parse(e.date + 'T00:00:00Z');
+                if (isNaN(eTime) || Math.abs(eTime - gTime) > 86400000) continue;
+                if (ourScore != null && game.pts != null && Number(ourScore) !== Number(game.pts)) continue;
+                return eventId;
+            }
+            return null;
+        }
+
+        // Find an SR boxscore entry for a season-page game — same matching
+        // approach as toggleH2HBoxScore (team-name overlap), tightened with the
+        // score pair since SR entries carry final scores.
+        function findSRSeasonMatch(srData, info) {
+            if (!srData) return null;
+            const t1Short = (info.teamName || '').toLowerCase();
+            const t2Short = (info.oppName || '').toLowerCase();
+            const scores = [Number(info.pts), Number(info.oppPts)].sort((a, b) => a - b);
+            for (const val of Object.values(srData)) {
+                if (!val || !val.teams || val.teams.length < 2) continue;
+                const srScores = [Number(val.teams[0].score), Number(val.teams[1].score)].sort((a, b) => a - b);
+                if (!isNaN(scores[0]) && !isNaN(srScores[0]) &&
+                    (srScores[0] !== scores[0] || srScores[1] !== scores[1])) continue;
+                const srTeams = val.teams.map(t => (t.name || '').toLowerCase());
+                const hasT1 = srTeams.some(n => n && (t1Short.includes(n.split(' ').pop()) || n.includes(t1Short.split(' ').pop())));
+                const hasT2 = srTeams.some(n => n && (t2Short.includes(n.split(' ').pop()) || n.includes(t2Short.split(' ').pop())));
+                if (hasT1 && hasT2) return val;
+            }
+            return null;
+        }
+
+        async function renderSeasonPage(slug, seasonStr) {
+            const container = document.getElementById('seasonPageContent');
+            if (!container) return;
+            const reqId = ++_seasonPageReq;
+
+            const team = findTeamBySlug(slug);
+            if (team) document.title = `${seasonStr} ${team.name} — schedule & results — Hoopsipedia`;
+            if (!team) {
+                container.innerHTML = `
+                    <div style="text-align:center; padding:4rem 1rem; color:var(--ink-muted); font-family:var(--font-serif);">
+                        <div style="font-size:1.2rem; margin-bottom:0.75rem;">Team not found</div>
+                        <a href="#teams" style="color:var(--navy);">Browse all teams →</a>
+                    </div>`;
+                return;
+            }
+
+            const tSlug = teamSlug(team.name);
+            const espnId = String(team.espnId);
+            const teamColor = team.color || '#1B2A4A';
+            container.innerHTML = `<div class="chart-loading">Loading ${escapeHtml(seasonStr)} ${escapeHtml(team.name)}...</div>`;
+
+            // Season summaries: prefer the preloaded monolith, else per-team slice
+            const preloaded = (SEASONS_DATA && SEASONS_DATA[espnId] && SEASONS_DATA[espnId].seasons) || null;
+            const [seasons, gamesEntry, gameIds] = await Promise.all([
+                preloaded ? Promise.resolve(preloaded) :
+                    fetch(`/seasons/${espnId}.json`)
+                        .then(r => r.ok ? r.json() : null)
+                        .then(d => (d && d.seasons) || [])
+                        .catch(() => []),
+                ensureTeamGames(espnId),
+                fetchGameIdsForTeam(espnId)
+            ]);
+            if (reqId !== _seasonPageReq) return; // superseded by a newer navigation
+
+            const seasonIdx = (seasons || []).findIndex(s => String(s.year) === seasonStr);
+            const seasonRow = seasonIdx >= 0 ? seasons[seasonIdx] : null;
+
+            // Season window: Aug 1 of startYear through Jul 31 of startYear+1
+            const startYear = parseInt(seasonStr.slice(0, 4));
+            const lo = `${startYear}-08-01`, hi = `${startYear + 1}-07-31`;
+            const games = ((gamesEntry && gamesEntry.games) || [])
+                .filter(g => g.date && g.date >= lo && g.date <= hi)
+                .sort((a, b) => (a.date < b.date ? -1 : 1));
+
+            if (!seasonRow && games.length === 0) {
+                container.innerHTML = `
+                    <div style="text-align:center; padding:4rem 1rem; color:var(--ink-muted); font-family:var(--font-serif);">
+                        <div style="font-size:1.2rem; margin-bottom:0.75rem;">No data on record for the ${escapeHtml(seasonStr)} ${escapeHtml(team.name)} season.</div>
+                        <a href="#team/${tSlug}" style="color:var(--navy);">← ${escapeHtml(team.name)} program history</a>
+                    </div>`;
+                return;
+            }
+
+            const wins = seasonRow ? (parseInt(seasonRow.wins) || 0) : games.filter(g => g.w).length;
+            const losses = seasonRow ? (parseInt(seasonRow.losses) || 0) : games.filter(g => !g.w).length;
+            const record = (seasonRow && seasonRow.record) || `${wins}-${losses}`;
+            const postseason = seasonRow ? mapTourneyResult(seasonRow.ncaaTourney) : '';
+
+            // Header chips
+            let chipsHTML = `<span class="ds-pill ds-pill-filled" style="font-size:10px;">${escapeHtml(record)} OVERALL</span>`;
+            if (seasonRow && seasonRow.confRecord) chipsHTML += `<span class="ds-pill" style="font-size:10px;">${escapeHtml(String(seasonRow.confRecord))} ${escapeHtml(String(seasonRow.conf || team.conf || ''))}</span>`;
+            if (seasonRow && seasonRow.seed) chipsHTML += `<span class="ds-pill" style="font-size:10px;">#${escapeHtml(String(seasonRow.seed))} SEED</span>`;
+            if (postseason) chipsHTML += `<span class="ds-pill ds-pill-gold" style="font-size:10px;">★ ${escapeHtml(postseason.toUpperCase())}</span>`;
+
+            // Stat strip (only stats present in the summary row)
+            const statBlocks = [];
+            if (seasonRow) {
+                if (seasonRow.apHigh) statBlocks.push({ label: 'AP PEAK', value: '#' + seasonRow.apHigh });
+                if (seasonRow.apPre) statBlocks.push({ label: 'AP PRESEASON', value: '#' + seasonRow.apPre });
+                if (seasonRow.srs != null) statBlocks.push({ label: 'SRS', value: seasonRow.srs });
+                if (seasonRow.sos != null) statBlocks.push({ label: 'SOS', value: seasonRow.sos });
+                if (seasonRow.ppg != null) statBlocks.push({ label: 'PPG', value: seasonRow.ppg });
+                if (seasonRow.oppPpg != null) statBlocks.push({ label: 'OPP PPG', value: seasonRow.oppPpg });
+            }
+            const statStripHTML = statBlocks.length ? `
+                <div style="padding:24px 0 0;">
+                    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(110px, 1fr)); gap:0; border-top:1px solid var(--rule-soft); border-bottom:1px solid var(--rule-soft);">
+                        ${statBlocks.map(s => `
+                        <div style="padding:14px 16px; border-right:1px solid var(--rule-soft);">
+                            <div class="label-mono" style="color:var(--ink-muted); margin-bottom:4px;">${s.label}</div>
+                            <div class="numerals" style="font-size:24px; font-weight:800; color:var(--navy);">${escapeHtml(String(s.value))}</div>
+                        </div>`).join('')}
+                    </div>
+                </div>` : '';
+
+            // Schedule rows + box score expanders
+            _seasonGameInfo = {};
+            const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+            let anyVacated = false;
+            const scheduleRows = games.map((g, i) => {
+                const uid = 'sp' + i;
+                const gameYear = parseInt(g.date.slice(0, 4));
+                const gameMonth = parseInt(g.date.slice(5, 7));
+                const opp = String(g.opp || '');
+                const oppTeam = opp ? allTeamsData.find(t => String(t.espnId) === opp) : null;
+                const oppName = oppTeam ? oppTeam.name : String(g.opp_slug || 'Unknown').replace(/-/g, ' ');
+                const eventId = matchSeasonEventId(espnId, g, gameIds);
+                const espnOk = !!(eventId && gameYear >= 2002);
+                const srPlausible = gameMonth === 3 || gameMonth === 4; // tournament-era window
+                const expandable = espnOk || srPlausible;
+                if (g.vacated) anyVacated = true;
+
+                _seasonGameInfo[uid] = {
+                    eventId: espnOk ? eventId : null,
+                    tournamentYear: startYear + 1,
+                    teamName: team.name, oppName: oppName,
+                    pts: g.pts, oppPts: g.opp_pts, w: !!g.w
+                };
+
+                const dParts = g.date.split('-');
+                const dateDisplay = `${monthNames[parseInt(dParts[1]) - 1]} ${parseInt(dParts[2])}, ${dParts[0]}`;
+                const locLabel = g.loc === 'H' ? 'vs' : g.loc === 'A' ? 'at' : '·N';
+                const oppCell = oppTeam
+                    ? `<a href="#team/${teamSlug(oppTeam.name)}" onclick="event.stopPropagation();" style="color:var(--navy); font-weight:600; text-decoration:none;">${escapeHtml(oppName)}</a>`
+                    : `<span style="color:#2C3345;">${escapeHtml(oppName)}</span>`;
+                const logoCell = oppTeam
+                    ? `<img src="${getLogoUrl(oppTeam.espnId)}" alt="" style="width:22px; height:22px; object-fit:contain; flex-shrink:0;" onerror="this.style.display='none'">`
+                    : '';
+                const resultPill = `<span style="display:inline-block; min-width:20px; padding:0.1rem 0.45rem; border-radius:0.3rem; font-weight:700; font-size:0.75rem; background:${g.w ? '#E5F2E9' : '#FBEAEA'}; color:${g.w ? '#2D7D46' : '#C9463E'};">${g.w ? 'W' : 'L'}</span>`;
+                const otTag = g.ot ? ` <span style="font-size:0.7rem; color:#8892A0; font-weight:600;">${escapeHtml(String(g.ot))}</span>` : '';
+                const vacTag = g.vacated ? ' <span title="Result later vacated by the NCAA" style="color:#C9463E; font-weight:700;">*</span>' : '';
+                const bg = i % 2 === 0 ? '#FFFFFF' : '#FAFAF7';
+
+                let html = `
+                    <tr class="season-sched-row${expandable ? ' expandable' : ''}" id="season-row-${uid}" style="background:${bg};"${expandable ? ` onclick="toggleSeasonBoxScore('${uid}', event)" title="Click for box score"` : ''}>
+                        <td class="numerals" style="white-space:nowrap;">${dateDisplay}</td>
+                        <td style="text-align:center; color:#6B7A8D;">${locLabel}</td>
+                        <td><div style="display:flex; align-items:center; gap:0.5rem;">${logoCell}${oppCell}</div></td>
+                        <td style="text-align:center;">${resultPill}</td>
+                        <td class="numerals" style="text-align:center; font-weight:600;">${g.pts}-${g.opp_pts}${otTag}${vacTag}</td>
+                        <td style="color:#6B7A8D; font-size:0.8rem;">${escapeHtml(String(g.arena || ''))}</td>
+                        <td style="text-align:right;">${expandable ? '<span class="season-expand-icon">▼</span>' : ''}</td>
+                    </tr>`;
+                if (expandable) {
+                    html += `
+                    <tr><td colspan="7" style="padding:0; border:0;">
+                        <div class="h2h-boxscore-panel" id="season-panel-${uid}"><div class="h2h-boxscore-inner" id="season-inner-${uid}"></div></div>
+                    </td></tr>`;
+                }
+                return html;
+            }).join('');
+
+            const scheduleHTML = games.length ? `
+                <div class="chart-section">
+                    <h3>Schedule &amp; Results</h3>
+                    <div class="season-table-wrapper" style="overflow-x:auto; -webkit-overflow-scrolling:touch; border:1px solid #E0D9CC; border-radius:0.5rem;">
+                        <table style="width:100%; border-collapse:collapse; font-size:0.85rem; min-width:640px;">
+                            <thead style="background:#1B2A4A; color:#C9A86C;">
+                                <tr>
+                                    <th style="padding:0.6rem 0.75rem; text-align:left; font-weight:600;">Date</th>
+                                    <th style="padding:0.6rem 0.75rem; text-align:center; font-weight:600;"></th>
+                                    <th style="padding:0.6rem 0.75rem; text-align:left; font-weight:600;">Opponent</th>
+                                    <th style="padding:0.6rem 0.75rem; text-align:center; font-weight:600;">Result</th>
+                                    <th style="padding:0.6rem 0.75rem; text-align:center; font-weight:600;">Score</th>
+                                    <th style="padding:0.6rem 0.75rem; text-align:left; font-weight:600;">Arena</th>
+                                    <th style="padding:0.6rem 0.75rem;"></th>
+                                </tr>
+                            </thead>
+                            <tbody>${scheduleRows}</tbody>
+                        </table>
+                    </div>
+                    ${anyVacated ? '<div style="margin-top:0.75rem; font-size:0.8rem; color:#8892A0; font-family:var(--font-serif); font-style:italic;">* Result later vacated by the NCAA and not counted in official records.</div>' : ''}
+                </div>` : `
+                <div class="chart-section">
+                    <h3>Schedule &amp; Results</h3>
+                    <div style="padding:2rem; text-align:center; color:var(--ink-muted); font-family:var(--font-serif); font-style:italic;">No game-by-game results on record for this season.</div>
+                </div>`;
+
+            // Prev/next season navigation (seasons array is newest-first)
+            const prevSeason = seasonIdx >= 0 && seasonIdx + 1 < seasons.length ? seasons[seasonIdx + 1] : null;
+            const nextSeason = seasonIdx > 0 ? seasons[seasonIdx - 1] : null;
+            const navHTML = `
+                <div style="display:flex; justify-content:space-between; align-items:center; gap:1rem; flex-wrap:wrap; margin:2rem 0 1rem; padding-top:1.25rem; border-top:1px solid var(--rule-soft);">
+                    <div style="flex:1; min-width:140px;">
+                        ${prevSeason ? `<a href="#season/${tSlug}/${escapeHtml(String(prevSeason.year))}" style="color:var(--navy); text-decoration:none; font-family:var(--font-serif); font-weight:600;">← ${escapeHtml(String(prevSeason.year))}</a>` : ''}
+                    </div>
+                    <a href="#team/${tSlug}" class="label-mono" style="color:var(--ink-muted); text-decoration:none; text-align:center;">← ${escapeHtml(team.name.toUpperCase())} PROGRAM HISTORY</a>
+                    <div style="flex:1; min-width:140px; text-align:right;">
+                        ${nextSeason ? `<a href="#season/${tSlug}/${escapeHtml(String(nextSeason.year))}" style="color:var(--navy); text-decoration:none; font-family:var(--font-serif); font-weight:600;">${escapeHtml(String(nextSeason.year))} →</a>` : ''}
+                    </div>
+                </div>`;
+
+            container.innerHTML = `
+                <!-- ===== SEASON HERO — matches team profile aesthetic ===== -->
+                <section style="background:var(--paper); border-bottom:6px solid ${teamColor}; position:relative; overflow:hidden; margin:-2rem -1.5rem 0; padding:0;">
+                    <div style="max-width:1280px; margin:0 auto; padding:36px 28px 28px; position:relative;">
+                        <div style="display:flex; align-items:center; gap:8px; margin-bottom:6px;">
+                            <a href="#team/${tSlug}" class="label-mono" style="color:var(--ink-muted); text-decoration:none;">← ${escapeHtml(team.name.toUpperCase())}</a>
+                            <span class="label-mono" style="color:var(--ink-muted);">·</span>
+                            <span class="label-mono" style="color:${teamColor};">${escapeHtml(String((seasonRow && seasonRow.conf) || team.conf || ''))}</span>
+                        </div>
+                        <div style="display:grid; grid-template-columns:auto 1fr; gap:24px; align-items:center;">
+                            <div style="width:clamp(64px, 8vw, 100px); height:clamp(64px, 8vw, 100px); flex-shrink:0;">
+                                <img src="${getLogoUrl(espnId)}" alt="${escapeHtml(team.name)}" style="width:100%; height:100%; object-fit:contain;">
+                            </div>
+                            <div>
+                                <div class="h-slab" style="font-size:clamp(30px, 4.5vw, 58px); line-height:0.95; color:var(--navy);">
+                                    ${escapeHtml(seasonStr)} ${escapeHtml(team.name)}
+                                </div>
+                                <div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap; align-items:center;">${chipsHTML}</div>
+                                ${(seasonRow && seasonRow.coach) ? `<div style="margin-top:10px; font-family:var(--font-serif); font-size:14px; color:var(--ink-soft);">Head Coach: <strong style="color:var(--navy);">${escapeHtml(String(seasonRow.coach))}</strong></div>` : ''}
+                            </div>
+                        </div>
+                        ${statStripHTML}
+                    </div>
+                </section>
+
+                ${scheduleHTML}
+                ${navHTML}
+            `;
+        }
+
+        // Expand/collapse a season-page box score row — same animation pattern
+        // as toggleH2HBoxScore. Tries ESPN (matched event ID, 2002+) first,
+        // then the SR tournament slice, then a "not available" fallback.
+        async function toggleSeasonBoxScore(uid, event) {
+            if (event) event.stopPropagation();
+            const row = document.getElementById('season-row-' + uid);
+            const panel = document.getElementById('season-panel-' + uid);
+            const inner = document.getElementById('season-inner-' + uid);
+            if (!panel || !inner) return;
+
+            if (row && row.classList.contains('expanded')) {
+                panel.style.maxHeight = panel.scrollHeight + 'px';
+                requestAnimationFrame(() => {
+                    panel.style.maxHeight = '0';
+                    row.classList.remove('expanded');
+                });
+                return;
+            }
+            if (row) row.classList.add('expanded');
+
+            // Already loaded — just expand
+            if (inner.dataset.loaded === 'true') {
+                panel.style.maxHeight = panel.scrollHeight + 'px';
+                return;
+            }
+
+            const info = _seasonGameInfo[uid] || {};
+            inner.innerHTML = '<div class="h2h-boxscore-loading"><div class="spinner"></div>Loading box score...</div>';
+            panel.style.maxHeight = '200px';
+
+            let html = null;
+
+            // ESPN box score (matched event ID, 2002+)
+            if (info.eventId) {
+                const gameData = await fetchBoxScoreData(info.eventId);
+                if (gameData && gameData.boxscore) html = renderBoxScore(gameData);
+            }
+
+            // Sports Reference tournament boxscores — any era
+            if (!html && info.tournamentYear) {
+                const srData = await loadSRBoxscoresYear(info.tournamentYear);
+                const srMatch = findSRSeasonMatch(srData, info);
+                if (srMatch) html = renderSRBoxScore(srMatch);
+            }
+
+            if (!html) {
+                html = `
+                    <div class="h2h-detail-not-available">
+                        Box score not available for this game.
+                        <div class="score-fallback">Final: ${escapeHtml(info.teamName || 'Team')} ${info.pts != null ? info.pts : '?'}, ${escapeHtml(info.oppName || 'Opponent')} ${info.oppPts != null ? info.oppPts : '?'}</div>
+                    </div>`;
+            }
+
+            inner.innerHTML = html;
+            inner.dataset.loaded = 'true';
+            requestAnimationFrame(() => {
+                panel.style.maxHeight = panel.scrollHeight + 'px';
+                setTimeout(() => {
+                    if (row && row.classList.contains('expanded')) panel.style.maxHeight = 'none';
+                }, 450);
+            });
         }
 
         // ── BRACKET FUNCTIONS ──
@@ -14006,7 +14402,7 @@
                     </div>
                     <div class="bracket-center-stack">
                         <div class="bracket-ff-box"><div class="bracket-round-label" style="font-size:0.7rem;">Final Four</div>${skeletonMatchup()}</div>
-                        <div class="bracket-champ-card"><img class="ff-logo" src="ff_logo.png" alt="Final Four" onerror="this.style.display='none'" style="width:100px;height:auto;"><div class="champ-title-label">National Championship</div><div class="champ-subtitle">Indianapolis, IN &bull; ${SEASON_CONFIG.tournament.championshipDateText}</div>${skeletonMatchup()}</div>
+                        <div class="bracket-champ-card"><img class="ff-logo" src="/ff_logo.png" alt="Final Four" onerror="this.style.display='none'" style="width:100px;height:auto;"><div class="champ-title-label">National Championship</div><div class="champ-subtitle">Indianapolis, IN &bull; ${SEASON_CONFIG.tournament.championshipDateText}</div>${skeletonMatchup()}</div>
                         <div class="bracket-ff-box"><div class="bracket-round-label" style="font-size:0.7rem;">Final Four</div>${skeletonMatchup()}</div>
                     </div>
                     <div class="bracket-side-col">
@@ -14108,7 +14504,7 @@
             const champBox = document.createElement('div');
             champBox.className = 'bracket-champ-card';
             champBox.innerHTML = `
-                <img class="ff-logo" src="ff_logo.png" alt="Final Four" onerror="this.style.display='none'" style="width:100px;height:auto;">
+                <img class="ff-logo" src="/ff_logo.png" alt="Final Four" onerror="this.style.display='none'" style="width:100px;height:auto;">
                 <div class="champ-title-label">National Championship</div>
                 <div class="champ-subtitle">Indianapolis, IN &bull; ${SEASON_CONFIG.tournament.championshipDateText}</div>
                 ${champGame.length > 0 ? createMatchupCard(champGame[0]).outerHTML : champTBD}
@@ -15545,7 +15941,7 @@
                 const isChampRun = champSlug && yr.r === 'champ' && String(team.espnId) === champSlug.espnId;
                 const clickTarget = isChampRun
                     ? `window.location.hash='#championship/${yr.y}/${champSlug.slug}'`
-                    : `window.open('https://www.sports-reference.com/cbb/postseason/${yr.y}-ncaa.html','_blank')`;
+                    : `window.location.hash='#season/${teamSlug(team.name)}/${seasonStrFromEndYear(yr.y)}'`;
 
                 return `<div class="resume-cell" style="background:${s.bg};border:${s.border || '1px solid var(--rule-soft)'};" onclick="${yr.r !== 'miss' && yr.r !== 'covid' ? clickTarget : ''}">
                     ${yr.seed ? `<div class="resume-cell-seed" style="color:${s.fg};">#${yr.seed}</div>` : ''}
@@ -15692,7 +16088,7 @@
             // Try to load detailed upset data
             if (!UPSET_DETAIL_DATA) {
                 try {
-                    const resp = await fetch('upset_history.json');
+                    const resp = await fetch('/upset_history.json');
                     if (resp.ok) {
                         UPSET_DETAIL_DATA = await resp.json();
                         console.log('Loaded detailed upset history data');
@@ -15851,7 +16247,7 @@
         async function loadUpsetBoxscores() {
             if (UPSET_BOXSCORES) return UPSET_BOXSCORES;
             try {
-                const resp = await fetch('upset_boxscores.json');
+                const resp = await fetch('/upset_boxscores.json');
                 if (resp.ok) {
                     UPSET_BOXSCORES = await resp.json();
                     delete UPSET_BOXSCORES._metadata;
@@ -15865,7 +16261,7 @@
         async function loadSRBoxscores() {
             if (SR_BOXSCORES) return SR_BOXSCORES;
             try {
-                const resp = await fetch('sr_boxscores.json');
+                const resp = await fetch('/sr_boxscores.json');
                 if (resp.ok) {
                     SR_BOXSCORES = await resp.json();
                     delete SR_BOXSCORES._metadata;
@@ -15882,7 +16278,7 @@
 
         function loadSRBoxscoreIndex() {
             if (!_srBoxIndexPromise) {
-                _srBoxIndexPromise = fetch('boxscores/index.json')
+                _srBoxIndexPromise = fetch('/boxscores/index.json')
                     .then(r => r.ok ? r.json() : null)
                     .catch(() => null);
             }
@@ -15903,7 +16299,7 @@
             if (idx && idx.years) {
                 if (!idx.years[y]) { SR_BOXSCORES_BY_YEAR[y] = {}; return SR_BOXSCORES_BY_YEAR[y]; } // no boxscores that year
                 try {
-                    const resp = await fetch(`boxscores/${y}.json`);
+                    const resp = await fetch(`/boxscores/${y}.json`);
                     if (resp.ok) {
                         SR_BOXSCORES_BY_YEAR[y] = await resp.json();
                         return SR_BOXSCORES_BY_YEAR[y];
@@ -16788,7 +17184,7 @@
         // Load external highlights on startup
         (async function() {
             try {
-                const resp = await fetch('upset_highlights_data.json');
+                const resp = await fetch('/upset_highlights_data.json');
                 if (resp.ok) window._upsetHighlightsExternal = await resp.json();
             } catch(e) {}
         })();
@@ -16908,7 +17304,7 @@
             // Ensure upset data is loaded
             if (!UPSET_DETAIL_DATA) {
                 try {
-                    const resp = await fetch('upset_history.json');
+                    const resp = await fetch('/upset_history.json');
                     if (resp.ok) {
                         UPSET_DETAIL_DATA = await resp.json();
                     }
