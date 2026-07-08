@@ -8904,6 +8904,28 @@
             window.location.hash = `#compare-coaches/${coachSlug(_selectedCoach1.name)}/${coachSlug(_selectedCoach2.name)}`;
         }
 
+        // Championships / Final Fours / NCAA trips per coach, computed from
+        // season rows (row.coach + row.ncaaTourney). Cached per name.
+        const _coachAccoladeCache = {};
+        function computeCoachAccolades(name) {
+            if (_coachAccoladeCache[name]) return _coachAccoladeCache[name];
+            let titles = 0, finalFours = 0, trips = 0;
+            const SD = (typeof SEASONS_DATA !== 'undefined' && SEASONS_DATA) || {};
+            for (const teamSeasons of Object.values(SD)) {
+                const rows = Array.isArray(teamSeasons) ? teamSeasons : (teamSeasons.seasons || []);
+                for (const r of rows) {
+                    if (r.coach !== name || !r.ncaaTourney) continue;
+                    trips++;
+                    const t = String(r.ncaaTourney);
+                    if (/National (Semifinal|Final)|\(Final Four\)/i.test(t)) finalFours++;
+                    if (/^Won NCAA Tournament National Final/i.test(t)) titles++;
+                }
+            }
+            const out = { titles, finalFours, trips };
+            _coachAccoladeCache[name] = out;
+            return out;
+        }
+
         function renderCoachDetail(coach) {
             switchView('coachComparison', true);
             const rank = COACH_LB.indexOf(coach) + 1;
@@ -8947,6 +8969,8 @@
                         <div class="coaches-stat-card"><div class="label-mono" style="color:var(--ink-muted);">ALL-TIME RANK</div><div class="h-display" style="font-size:38px;color:var(--navy);">#${rank}</div></div>
                         <div class="coaches-stat-card"><div class="label-mono" style="color:var(--ink-muted);">CAREER RECORD</div><div class="h-display" style="font-size:38px;color:var(--navy);">${coach.wins.toLocaleString()}–${coach.losses.toLocaleString()}</div></div>
                         <div class="coaches-stat-card"><div class="label-mono" style="color:var(--ink-muted);">WIN %</div><div class="h-display" style="font-size:38px;color:var(--navy);">${coach.pct}%</div></div>
+                        <div class="coaches-stat-card"><div class="label-mono" style="color:var(--ink-muted);">NATIONAL TITLES</div><div class="h-display" style="font-size:38px;color:var(--gold-brand);">${computeCoachAccolades(coach.name).titles}</div></div>
+                        <div class="coaches-stat-card"><div class="label-mono" style="color:var(--ink-muted);">FINAL FOURS</div><div class="h-display" style="font-size:38px;color:var(--navy);">${computeCoachAccolades(coach.name).finalFours}</div></div>
                         <div class="coaches-stat-card"><div class="label-mono" style="color:var(--ink-muted);">SEASONS</div><div class="h-display" style="font-size:38px;color:var(--navy);">${coach.yearsEnd - coach.yearsStart + 1}</div></div>
                     </div>
                     <h2 class="label-mono" style="color:var(--ink-muted);margin-bottom:4px;">COACHING STOPS</h2>
@@ -8959,6 +8983,8 @@
         }
 
         function renderCoachComparison(c1, c2) {
+            const c1Acc = computeCoachAccolades(c1.name);
+            const c2Acc = computeCoachAccolades(c2.name);
             const container = document.getElementById('coachComparisonContent');
             switchView('coachComparison', true);
             window.location.hash = `#compare-coaches/${coachSlug(c1.name)}/${coachSlug(c2.name)}`;
@@ -9016,7 +9042,9 @@
                 <div style="background: #FFFFFF; border: 1px solid #E0D9CC; border-radius: 0.75rem; padding: 1.5rem; box-shadow: 0 1px 4px rgba(0,0,0,0.04); margin-bottom: 1.5rem;">
                     <h3 style="font-size: 0.85rem; color: #8892A0; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 1.25rem; text-align: center;">Career Statistics</h3>
                     ${renderStatRow('Career Wins', c1.wins, c2.wins, c1Color, c2Color, {espnId: c1School}, {espnId: c2School})}
-                    ${renderStatRow('Schools', c1.schools.length, c2.schools.length, c1Color, c2Color, {espnId: c1School}, {espnId: c2School})}
+                    ${renderStatRow('National Titles', c1Acc.titles, c2Acc.titles, c1Color, c2Color, {espnId: c1School}, {espnId: c2School})}
+                    ${renderStatRow('Final Fours', c1Acc.finalFours, c2Acc.finalFours, c1Color, c2Color, {espnId: c1School}, {espnId: c2School})}
+                    ${renderStatRow('NCAA Tournaments', c1Acc.trips, c2Acc.trips, c1Color, c2Color, {espnId: c1School}, {espnId: c2School})}
                     ${renderStatRow('Win %', c1.pct, c2.pct, c1Color, c2Color, {espnId: c1School}, {espnId: c2School})}
                     ${renderStatRow('Seasons', c1Years, c2Years, c1Color, c2Color, {espnId: c1School}, {espnId: c2School})}
                 </div>
