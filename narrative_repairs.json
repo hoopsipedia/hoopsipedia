@@ -3954,5 +3954,58 @@
       "note": "companion to #346 founded 1901->1946",
       "appliedOn": "2026-07-07"
     }
+  ],
+  "specials": [
+    {
+      "findingId": 267,
+      "team": "USF Bulls",
+      "field": "founded",
+      "kind": "value",
+      "find": 1959,
+      "replace": 1971,
+      "confidence": "high",
+      "status": "applied",
+      "appliedOn": "2026-07-07"
+    },
+    {
+      "findingId": "268a",
+      "team": "USF Bulls",
+      "field": "blurb",
+      "find": "launched in 1959, just three years after the university opened in 1956",
+      "replace": "launched in 1971, when the Golden Brahmans won their debut 74-73 at Stetson",
+      "confidence": "high",
+      "status": "applied",
+      "appliedOn": "2026-07-07"
+    },
+    {
+      "findingId": "268b",
+      "team": "USF Bulls",
+      "field": "blurb",
+      "find": "Under current coach Amir Abdur-Rahim, USF earned its first NCAA Tournament at-large bid in decades for the 2024 tournament, and was selected as an 11-seed in the 2026 tournament, marking a new era for Bulls basketball.",
+      "replace": "Under Amir Abdur-Rahim, USF won the 2024 American regular-season title but was snubbed by the NCAA Tournament; after his sudden death in October 2024, the Bulls swept the 2026 American regular-season and tournament titles under Bryan Hodgson and earned a No. 11 seed, with veteran coach Chris Mack taking over that spring.",
+      "confidence": "high",
+      "status": "applied",
+      "appliedOn": "2026-07-07"
+    },
+    {
+      "findingId": 269,
+      "team": "USF Bulls",
+      "field": "iconicMoment",
+      "find": "Earning a 2024 NCAA Tournament bid under Amir Abdur-Rahim, the program's first at-large selection in the modern era",
+      "replace": "Winning the 2026 American Conference regular-season and tournament titles and earning a No. 11 NCAA Tournament seed, the program's first March Madness bid since 2012",
+      "confidence": "high",
+      "status": "applied",
+      "appliedOn": "2026-07-07"
+    },
+    {
+      "findingId": 270,
+      "team": "USF Bulls",
+      "field": "funFact",
+      "find": "USF is one of the youngest major basketball programs in the country, having been founded just three years after the university itself opened in 1956",
+      "replace": "USF is one of the youngest major programs in the country — varsity basketball didn't tip off until December 1, 1971, a 74-73 win at Stetson, 15 years after the university was established",
+      "confidence": "high",
+      "status": "applied",
+      "appliedOn": "2026-07-07"
+    }
   ]
 }
