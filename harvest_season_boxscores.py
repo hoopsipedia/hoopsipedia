@@ -71,7 +71,7 @@ def main():
     skipped = 0
     failed = 0
     for i, url in enumerate(sorted(box_urls)):
-        html = fetcher.fetch(url)
+        html = fetcher.fetch_text(url)
         if not html:
             failed += 1
             continue
