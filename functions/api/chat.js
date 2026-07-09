@@ -191,11 +191,15 @@ async function toolLookupTeam(input, ctx) {
     if (score) scored.push({ score, id, fields });
   }
   if (aliases) {
+    // Alias keys are slug-form ("miami-ohio"); slugify the query so spoken
+    // phrasings like "Miami Ohio" or "St Francis PA" still hit them.
+    // Apostrophes are dropped (not hyphenated) so "Saint John's" -> "saint-johns"
+    const querySlug = teamSlug(query.replace(/['’]/g, ''));
     for (const [alias, id] of Object.entries(aliases)) {
       const a = alias.toLowerCase();
-      if ((a === query || a.includes(query)) && data.H[String(id)]) {
+      if ((a === query || a === querySlug || a.includes(query) || a.includes(querySlug)) && data.H[String(id)]) {
         const existing = scored.find(s => s.id === String(id));
-        const aScore = a === query ? 100 : 40;
+        const aScore = (a === query || a === querySlug) ? 100 : 40;
         if (existing) existing.score = Math.max(existing.score, aScore);
         else scored.push({ score: aScore, id: String(id), fields: data.H[String(id)] });
       }
@@ -471,8 +475,10 @@ async function resolveTeamId(ctx, name) {
   if (bestScore >= 60) return best;
   const aliases = await getSlugAliases(ctx);
   if (aliases) {
+    const qSlug = teamSlug(q.replace(/['’]/g, ''));
     for (const [alias, id] of Object.entries(aliases)) {
-      if (alias.toLowerCase() === q) return String(id);
+      const a = alias.toLowerCase();
+      if (a === q || a === qSlug) return String(id);
     }
   }
   return best;
