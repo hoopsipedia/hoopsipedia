@@ -111,6 +111,8 @@ def main():
     print(f'Arkansas game log: {len(ark_log)} games')
 
     def log_match(date, ark_pts, opp_pts):
+        if date < '1949-08-01':  # SR game log starts 1949-12; checksum-only before that
+            return True
         base = datetime.strptime(date, '%Y-%m-%d')
         for off in (0, -1, 1):
             d = (base + timedelta(days=off)).strftime('%Y-%m-%d')

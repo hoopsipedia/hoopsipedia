@@ -24,9 +24,13 @@ def season_start(season):  # "1928-29" -> 1928
 
 
 def resolve_wrapper(url):
-    """Sidearm /documents/*.pdf wrapper -> storage.googleapis.com asset URL."""
+    """Sidearm /documents/*.pdf wrapper -> storage.googleapis.com asset URL.
+    The document itself is in the <object data="..."> tag; the page's nav menu
+    also carries storage URLs (site PDFs), so a bare first-match is wrong."""
     html = get(url).decode("utf-8", "replace")
-    m = re.search(r'(https://storage\.googleapis\.com/[^"\'<> ]+)', html)
+    m = re.search(r'<object[^>]+data="(https://storage\.googleapis\.com/[^"]+)"', html)
+    if not m:
+        m = re.search(r'(https://storage\.googleapis\.com/[^"\'<> ]+)', html)
     return m.group(1) if m else None
 
 
@@ -54,23 +58,45 @@ def osu_pairs():
     return out
 
 
-def sidearm_pairs(index_url, base):
-    h = get(index_url).decode("utf-8", "replace")
+def uva_pairs():
+    """Anchor text is the season: <a href="/documents/{uuid}.pdf">1964-65&nbsp;(PDF)</a>"""
+    h = get("https://virginiasports.com/all-time-boxscores-listed-by-season").decode("utf-8", "replace")
     out, seen = [], set()
-    # rows pair a season label with a Box Scores document link
-    for m in re.finditer(r'(\d{4}-\d{2})[^<]{0,80}?</[^>]+>.{0,400}?href="(/documents/[^"]+\.pdf)"', h, re.S):
-        season, path = m.group(1), m.group(2)
+    for m in re.finditer(r'href="(/documents/[^"]+\.pdf)"[^>]*>\s*(\d{4}-\d{2})&nbsp;', h):
+        season = m.group(2)
         if season in seen or not (y := season_start(season)) or y >= CUTOFF:
             continue
         seen.add(season)
-        out.append((season, base + path, True))
+        out.append((season, "https://virginiasports.com" + m.group(1), True))
+    return out
+
+
+def unm_pairs():
+    """Season markers (<strong>YYYY-YY</strong>) and 'Box Scores' links interleave
+    in a multi-column table; table rows can hold several season groups, so pair
+    each Box Scores link with the nearest PRECEDING season marker by position."""
+    h = get("https://golobos.com/new-mexico-mens-basketball-historical-stats-box-scores").decode("utf-8", "replace")
+    seasons = [(m.start(), m.group(1)) for m in re.finditer(r"<strong>(\d{4}-\d{2})", h)]
+    out, seen = [], set()
+    for m in re.finditer(r'href="([^"]+)"[^>]*>\s*Box\s*Scores', h):
+        prev = [s for s in seasons if s[0] < m.start()]
+        if not prev or m.start() - prev[-1][0] > 600:
+            continue
+        season, url = prev[-1][1], m.group(1)
+        if season in seen or not (y := season_start(season)) or y >= CUTOFF:
+            continue
+        seen.add(season)
+        if url.startswith("/"):
+            out.append((season, "https://golobos.com" + url, True))
+        else:
+            out.append((season, url, "storage.googleapis.com" not in url))
     return out
 
 
 SOURCES = {
     "ohiostate": osu_pairs,
-    "virginia": lambda: sidearm_pairs("https://virginiasports.com/all-time-boxscores-listed-by-season", "https://virginiasports.com"),
-    "newmexico": lambda: sidearm_pairs("https://golobos.com/new-mexico-mens-basketball-historical-stats-box-scores", "https://golobos.com"),
+    "virginia": uva_pairs,
+    "newmexico": unm_pairs,
 }
 
 
