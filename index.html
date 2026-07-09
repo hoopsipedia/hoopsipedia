@@ -22460,12 +22460,40 @@
             } catch (e) { return null; }
         }
 
-        async function findH2HGameId(t1EspnId, t2EspnId, dateStr) {
+        // Precomputed ESPN event map lookup (game_ids/{espnId}.json slices,
+        // same source as matchSeasonEventId): match by team pair + date ±1
+        // day + our-side score when both sides carry one.
+        async function findMappedEventId(t1EspnId, t2EspnId, dateStr, t1Score) {
+            const gTime = Date.parse(dateStr + 'T00:00:00Z');
+            if (isNaN(gTime)) return null;
+            const gameIds = await fetchGameIdsForTeam(t1EspnId);
+            const me = String(t1EspnId), opp = String(t2EspnId);
+            for (const [eventId, e] of Object.entries(gameIds || {})) {
+                if (!e || !e.date) continue;
+                let ourScore;
+                if (String(e.t1) === me && String(e.t2) === opp) ourScore = e.s1;
+                else if (String(e.t2) === me && String(e.t1) === opp) ourScore = e.s2;
+                else continue;
+                const eTime = Date.parse(e.date + 'T00:00:00Z');
+                if (isNaN(eTime) || Math.abs(eTime - gTime) > 86400000) continue;
+                if (ourScore != null && t1Score != null && Number(ourScore) !== Number(t1Score)) continue;
+                return eventId;
+            }
+            return null;
+        }
+
+        async function findH2HGameId(t1EspnId, t2EspnId, dateStr, t1Score) {
             // dateStr is like "2024-01-15"
             const year = parseInt(dateStr.substring(0, 4));
             const month = parseInt(dateStr.substring(5, 7));
             // College basketball season spans two calendar years; ESPN uses the later year
             const season = month >= 10 ? year + 1 : year;
+
+            // The event map covers 2002+ — hit it before any live ESPN fetch
+            if (season >= 2002) {
+                const mapped = await findMappedEventId(t1EspnId, t2EspnId, dateStr, t1Score);
+                if (mapped) return mapped;
+            }
 
             // Helper: check if two date strings are within 1 day (ESPN uses UTC, our data uses ET)
             function datesMatch(espnDate, localDate) {
@@ -22642,7 +22670,7 @@
             panel.style.maxHeight = '200px';
 
             // Find ESPN game ID
-            const espnGameId = await findH2HGameId(t1EspnId, t2EspnId, dateStr);
+            const espnGameId = await findH2HGameId(t1EspnId, t2EspnId, dateStr, info.t1Score);
 
             if (!espnGameId) {
                 const t1Name = info.t1Name || 'Team 1';
@@ -22720,6 +22748,30 @@
             // ESPN has no pre-2002 data; its schedule endpoint can answer a
             // bad year with an unrelated season, so never index-match there.
             if (year < 2002) return null;
+
+            // Precomputed event map first: run games carry no date, so pin
+            // the event by opponent + March/April of the tournament year +
+            // exact score pair (all run games are wins, so our side scored
+            // winScore).
+            if (game.oppEspnId) {
+                const gameIds = await fetchGameIdsForTeam(espnId);
+                const me = String(espnId), opp = String(game.oppEspnId);
+                for (const [eventId, e] of Object.entries(gameIds || {})) {
+                    if (!e || !e.date) continue;
+                    let ourScore, oppScore;
+                    if (String(e.t1) === me && String(e.t2) === opp) { ourScore = e.s1; oppScore = e.s2; }
+                    else if (String(e.t2) === me && String(e.t1) === opp) { ourScore = e.s2; oppScore = e.s1; }
+                    else continue;
+                    const eYear = parseInt(e.date.substring(0, 4));
+                    const eMonth = parseInt(e.date.substring(5, 7));
+                    if (eYear !== year || eMonth < 3 || eMonth > 4) continue;
+                    if (game.winScore != null) {
+                        if (ourScore == null || oppScore == null) continue;
+                        if (Number(ourScore) !== Number(game.winScore) || Number(oppScore) !== Number(game.loseScore)) continue;
+                    } else if (e.type !== 'postseason') continue;
+                    return eventId;
+                }
+            }
 
             // Try schedule API
             const schedule = await fetchChampSchedule(espnId, year);
