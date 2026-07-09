@@ -78,7 +78,7 @@ def main():
             stats['bad_shape'] += 1
             continue
         for g in page.get('games', []):
-            date = g.get('date', '')
+            date = g.get('date') or ''
             teams = g.get('teams', [])
             if not re.match(r'\d{4}-\d{2}-\d{2}$', date) or len(teams) != 2:
                 quarantine.append((path, f'bad shape {date}'))
