@@ -1007,6 +1007,20 @@ const TOOLS = [
 ];
 
 // ── System prompt ──
+// Date/season anchor: without this, the model falls back to its training
+// cutoff's sense of "now" and calls completed seasons "not yet played".
+function buildSystemPrompt() {
+  const now = new Date();
+  const year = now.getUTCFullYear();
+  const month = now.getUTCMonth() + 1;
+  const fmt = (endYear) => `${endYear - 1}-${String(endYear).slice(2)}`;
+  // Seasons run Nov-Apr; the season ending in April of year Y is complete from May Y onward
+  const lastCompleted = month >= 5 ? year : year - 1;
+  const inProgress = month >= 11 ? fmt(year + 1) : (month <= 4 ? fmt(year) : null);
+  const anchor = `Today's date is ${now.toISOString().slice(0, 10)}. The most recently COMPLETED college basketball season is ${fmt(lastCompleted)}, which ended with the NCAA tournament in April ${lastCompleted}. Every season through ${fmt(lastCompleted)} is finished — treat its games, records, champions, and stats as final historical fact, and NEVER describe it as ongoing, current, upcoming, or not yet played. ${inProgress ? `The ${inProgress} season is currently in progress.` : 'It is currently the offseason.'} Your internal sense of the current date is outdated — trust this date and the tool data.`;
+  return `${anchor}\n\n${SYSTEM_PROMPT}`;
+}
+
 const SYSTEM_PROMPT = `You are the Hoopsipedia Assistant, an expert on college basketball history and statistics. You help users explore data from Hoopsipedia, a comprehensive college basketball historical database covering 365+ Division I programs. Season-by-season data reaches back to each program's founding — for many schools into the early 1900s (complete coverage for all programs from 1949 through 2026). Never claim data starts in 1949 — check the tools first.
 
 You have access to tools that query Hoopsipedia's proprietary data. Use them to answer questions with specific facts and numbers. Always call tools to look up data rather than relying on general knowledge — Hoopsipedia's data is authoritative.
@@ -1055,6 +1069,7 @@ Guidelines:
 
 // ── Claude API streaming ──
 async function callClaude(messages, apiKey, tools) {
+  const system = buildSystemPrompt();
   const resp = await fetch('https://api.anthropic.com/v1/messages', {
     method: 'POST',
     headers: {
@@ -1065,7 +1080,7 @@ async function callClaude(messages, apiKey, tools) {
     body: JSON.stringify({
       model: 'claude-haiku-4-5-20251001',
       max_tokens: 2200,
-      system: SYSTEM_PROMPT,
+      system,
       messages,
       tools,
       stream: true
@@ -1082,7 +1097,7 @@ async function callClaude(messages, apiKey, tools) {
         'x-api-key': apiKey,
         'anthropic-version': '2023-06-01'
       },
-      body: JSON.stringify({ model: 'claude-haiku-4-5-20251001', max_tokens: 2200, system: SYSTEM_PROMPT, messages, tools, stream: true })
+      body: JSON.stringify({ model: 'claude-haiku-4-5-20251001', max_tokens: 2200, system, messages, tools, stream: true })
     });
     if (!retry.ok) {
       const err = await retry.text().catch(() => 'Unknown error');
