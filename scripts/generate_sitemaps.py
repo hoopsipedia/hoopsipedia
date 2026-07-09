@@ -7,6 +7,7 @@ Outputs (repo root):
   sitemap-core.xml       — homepage, views, ?championship pages (from the
                            previous flat sitemap's non-team entries)
   sitemap-teams.xml      — /teams/{slug} for all teams
+  sitemap-coaches.xml    — /coaches/{slug} for the top-100 coaches
   sitemap-seasons-N.xml  — /teams/{slug}/{season}, chunked at 10,000 URLs
 
 Season URLs are derived from seasons/{espnId}.json so every URL is
@@ -47,7 +48,8 @@ def write_urlset(path, urls):
 
 def main():
     with open(os.path.join(ROOT, 'data.json')) as f:
-        H = json.load(f)['H']
+        data = json.load(f)
+    H = data['H']
 
     # core: carry over non-team entries from the existing flat sitemap
     core = []
@@ -62,7 +64,7 @@ def main():
         # regenerating over an index: rebuild core from the existing child
         prev = open(os.path.join(ROOT, 'sitemap-core.xml')).read()
         for m in re.finditer(r'<url>.*?</url>', prev, re.S):
-            core.append(m.group(0).strip())
+            core.append('  ' + m.group(0).strip())
     n_core = write_urlset('sitemap-core.xml', core)
 
     # teams at forever URLs
@@ -73,6 +75,14 @@ def main():
         slugs[eid] = slug
         team_urls.append(url_el(f'{ORIGIN}/teams/{slug}', priority='0.8'))
     n_teams = write_urlset('sitemap-teams.xml', sorted(team_urls))
+
+    # top-100 coaches at forever URLs (same leaderboard the Pages function
+    # serves — /coaches/{slug} 404s anyone outside it)
+    coach_lb = data.get('COACH_LB_TOP100') or data.get('COACH_LB') or []
+    coach_urls = sorted(
+        url_el(f"{ORIGIN}/coaches/{team_slug(c['name'])}", priority='0.7')
+        for c in coach_lb)
+    n_coaches = write_urlset('sitemap-coaches.xml', coach_urls)
 
     # seasons, chunked
     season_urls = []
@@ -88,7 +98,7 @@ def main():
                 season_urls.append(url_el(f'{ORIGIN}/teams/{slug}/{yr}'))
     season_urls.sort()
     chunks = [season_urls[i:i + CHUNK] for i in range(0, len(season_urls), CHUNK)]
-    children = ['sitemap-core.xml', 'sitemap-teams.xml']
+    children = ['sitemap-core.xml', 'sitemap-teams.xml', 'sitemap-coaches.xml']
     for i, chunk in enumerate(chunks, 1):
         write_urlset(f'sitemap-seasons-{i}.xml', chunk)
         children.append(f'sitemap-seasons-{i}.xml')
@@ -101,8 +111,9 @@ def main():
         f.write(f"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n"
                 f"<sitemapindex xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">\n{entries}\n</sitemapindex>\n")
 
-    print(f'core: {n_core} | teams: {n_teams} | seasons: {len(season_urls)} '
-          f'across {len(chunks)} chunks | index: {len(children)} children')
+    print(f'core: {n_core} | teams: {n_teams} | coaches: {n_coaches} | '
+          f'seasons: {len(season_urls)} across {len(chunks)} chunks | '
+          f'index: {len(children)} children')
 
 
 if __name__ == '__main__':

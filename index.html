@@ -6302,6 +6302,19 @@
         // Returns true when it handled the route.
         function handlePathRoute() {
             if (window.location.hash) return false;
+            // /coaches/{slug} — coach detail at a forever URL
+            const cm = window.location.pathname.match(/^\/coaches\/([a-z0-9-]+)\/?$/);
+            if (cm) {
+                const coach = findCoachBySlug(cm[1]);
+                if (!coach) return false;
+                _skipHashUpdate = true;
+                try {
+                    renderCoachDetail(coach);
+                } finally {
+                    _skipHashUpdate = false;
+                }
+                return true;
+            }
             const m = window.location.pathname.match(/^\/teams\/([a-z0-9-]+)(?:\/(\d{4}(?:-\d{2})?))?\/?$/);
             if (!m) return false;
             const team = findTeamBySlug(m[1]);

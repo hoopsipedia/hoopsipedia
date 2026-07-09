@@ -13,9 +13,14 @@ function teamSlug(name) {
 // Cache data.json in module-level variable (persists across requests within same isolate)
 let cachedTeamData = null;
 let slugIndex = null;
+let cachedCoaches = null;  // COACHES: per-team coach tenure records
+let cachedCoachLb = null;  // COACH_LB_TOP100: all-time wins leaderboard
+let coachIndex = null;     // coach slug -> leaderboard entry
 
 async function getTeamData(assetFetcher, originUrl) {
-  if (cachedTeamData && slugIndex) return { teams: cachedTeamData, index: slugIndex };
+  if (cachedTeamData && slugIndex) {
+    return { teams: cachedTeamData, index: slugIndex, coaches: cachedCoaches, coachLb: cachedCoachLb, coachIdx: coachIndex };
+  }
 
   const dataUrl = new URL('/data.json', originUrl).toString();
   const resp = await assetFetcher.fetch(dataUrl);
@@ -23,6 +28,8 @@ async function getTeamData(assetFetcher, originUrl) {
 
   const data = await resp.json();
   cachedTeamData = data.H;
+  cachedCoaches = data.COACHES || {};
+  cachedCoachLb = data.COACH_LB_TOP100 || data.COACH_LB || [];
 
   // Build slug-to-espnId index for fast lookups
   slugIndex = {};
@@ -31,7 +38,11 @@ async function getTeamData(assetFetcher, originUrl) {
     slugIndex[slug] = espnId;
   }
 
-  return { teams: cachedTeamData, index: slugIndex };
+  // Coach slug index (same slug function the SPA's coachSlug uses)
+  coachIndex = {};
+  for (const c of cachedCoachLb) coachIndex[teamSlug(c.name)] = c;
+
+  return { teams: cachedTeamData, index: slugIndex, coaches: cachedCoaches, coachLb: cachedCoachLb, coachIdx: coachIndex };
 }
 
 function lookupTeam(slug, teams, index) {
@@ -387,6 +398,115 @@ function renderTeamsDirectorySsr(teams, origin) {
   return ssrWrap(parts.join('\n'));
 }
 
+// Coach accolades from season rows (row.coach + row.ncaaTourney) of the
+// coach's own schools only — same counting rules as the SPA's
+// computeCoachAccolades, but over seasons/{tid}.json slices instead of the
+// 5.4MB seasons.json monolith. Title years are kept for linking.
+async function computeCoachAccoladesSsr(assetFetcher, originUrl, coach, teams) {
+  let titles = 0, finalFours = 0, trips = 0;
+  const titleSeasons = []; // {year, teamName, teamSlug}
+  const tids = [...new Set(coach.schools.map(([tid]) => String(tid)))];
+  const slices = await Promise.all(tids.map(tid => getTeamSeasons(assetFetcher, originUrl, tid)));
+  tids.forEach((tid, i) => {
+    const rows = slices[i];
+    if (!rows) return;
+    for (const r of rows) {
+      if (r.coach !== coach.name || !r.ncaaTourney) continue;
+      trips++;
+      const t = String(r.ncaaTourney);
+      if (/National (Semifinal|Final)|\(Final Four\)/i.test(t)) finalFours++;
+      if (/^Won NCAA Tournament National Final/i.test(t)) {
+        titles++;
+        const teamName = teams[tid] ? teams[tid][F.NAME] : '';
+        titleSeasons.push({ year: r.year, teamName, teamSlug: teamName ? teamSlug(teamName) : null });
+      }
+    }
+  });
+  titleSeasons.sort((a, b) => (a.year < b.year ? -1 : 1));
+  return { titles, finalFours, trips, titleSeasons };
+}
+
+function coachHref(origin, slug) {
+  return `${origin}/coaches/${encodeParam(slug)}`;
+}
+
+function renderCoachSsr(coach, rank, accolades, teams, coaches, coachLb, origin) {
+  const parts = [];
+  const currentYear = 2026; // site data runs through the 2025-26 season
+  const isActive = coach.yearsEnd >= currentYear;
+  const nSeasons = coach.yearsEnd - coach.yearsStart + 1;
+  const pct = winPctText(coach.wins, coach.losses);
+
+  parts.push(`<h1>${escapeHtml(coach.name)} — college basketball coaching record</h1>`);
+
+  const schoolNames = coach.schools
+    .map(([tid]) => teams[String(tid)] ? teams[String(tid)][F.NAME] : null)
+    .filter(Boolean);
+  const bits = [
+    `${escapeHtml(coach.name)} ${isActive ? 'has compiled' : 'compiled'} a career record of ${coach.wins}–${coach.losses}${pct ? ` (${pct} winning percentage)` : ''} across ${nSeasons} seasons as a Division I head coach (${coach.yearsStart}–${isActive ? 'present' : coach.yearsEnd}), ranking #${rank} on the all-time D1 wins list`,
+  ];
+  if (schoolNames.length) {
+    bits.push(` with stops at ${schoolNames.map(escapeHtml).join(', ')}`);
+  }
+  bits.push('.');
+  if (accolades.titles > 0) {
+    bits.push(` He has won ${accolades.titles} NCAA national championship${accolades.titles > 1 ? 's' : ''} and reached ${accolades.finalFours} Final Four${accolades.finalFours === 1 ? '' : 's'} in ${accolades.trips} NCAA Tournament appearance${accolades.trips === 1 ? '' : 's'}.`);
+  } else if (accolades.finalFours > 0) {
+    bits.push(` He has reached ${accolades.finalFours} Final Four${accolades.finalFours === 1 ? '' : 's'} in ${accolades.trips} NCAA Tournament appearance${accolades.trips === 1 ? '' : 's'}.`);
+  } else if (accolades.trips > 0) {
+    bits.push(` He has made ${accolades.trips} NCAA Tournament appearance${accolades.trips === 1 ? '' : 's'}.`);
+  }
+  parts.push(`<p>${bits.join('')}</p>`);
+
+  if (accolades.titleSeasons.length) {
+    const links = accolades.titleSeasons.map(t => {
+      const label = `${t.year}${t.teamName ? ` (${t.teamName})` : ''}`;
+      return t.teamSlug
+        ? `<a href="${seasonHref(origin, t.teamSlug, t.year)}">${escapeHtml(label)}</a>`
+        : escapeHtml(label);
+    }).join(', ');
+    parts.push(`<h2>National championships</h2><p>${links}</p>`);
+  }
+
+  const tenureRows = coach.schools.map(([tid, start, end]) => {
+    const tidStr = String(tid);
+    const teamArr = teams[tidStr];
+    const teamName = teamArr ? teamArr[F.NAME] : 'Unknown';
+    const slug = teamArr ? teamSlug(teamName) : null;
+    const rec = (coaches[tidStr] || []).find(x => x.name === coach.name);
+    const schoolCell = slug
+      ? `<a href="${origin}/teams/${encodeParam(slug)}">${escapeHtml(teamName)}</a>`
+      : escapeHtml(teamName);
+    const yearsCell = `${start}–${end >= currentYear ? 'Present' : end}`;
+    const recCell = rec && rec.w > 0 ? `${rec.w}–${rec.l}` : '';
+    const pctCell = rec && rec.pct != null ? `${rec.pct}%` : '';
+    const bestCell = rec && rec.bestYr
+      ? (slug
+        ? `<a href="${seasonHref(origin, slug, rec.bestYr)}">${escapeHtml(rec.bestYr)} (${escapeHtml(rec.bestRec || '')})</a>`
+        : `${escapeHtml(rec.bestYr)} (${escapeHtml(rec.bestRec || '')})`)
+      : '';
+    return `<tr><td style="${SSR_CELL_STYLE}">${schoolCell}</td><td style="${SSR_CELL_STYLE}">${yearsCell}</td><td style="${SSR_CELL_STYLE}">${recCell}</td><td style="${SSR_CELL_STYLE}">${pctCell}</td><td style="${SSR_CELL_STYLE}">${bestCell}</td></tr>`;
+  }).join('');
+  parts.push(
+    `<h2>Coaching stops</h2>` +
+    `<table style="${SSR_TABLE_STYLE}"><thead><tr>` +
+    `<th style="${SSR_CELL_STYLE}">School</th><th style="${SSR_CELL_STYLE}">Years</th><th style="${SSR_CELL_STYLE}">Record</th><th style="${SSR_CELL_STYLE}">Win %</th><th style="${SSR_CELL_STYLE}">Best season</th>` +
+    `</tr></thead><tbody>${tenureRows}</tbody></table>`
+  );
+
+  const others = coachLb
+    .filter(c => c.name !== coach.name)
+    .map(c => `<a href="${coachHref(origin, teamSlug(c.name))}">${escapeHtml(c.name)}</a>`)
+    .join(' · ');
+  if (others) {
+    parts.push(`<h2>More all-time winningest coaches</h2><p>${others}</p>`);
+  }
+
+  parts.push(`<p><a href="${origin}/?view=coaches">All-time coaches leaderboard</a> · <a href="${origin}/?view=teams">All Division I programs</a> · <a href="${origin}/">Hoopsipedia home</a></p>`);
+
+  return ssrWrap(parts.join('\n'));
+}
+
 function renderHomepageSsr(teams, origin) {
   const entries = Object.values(teams);
   const winningest = [...entries]
@@ -435,10 +555,15 @@ export async function onRequest(context) {
     isPathRoute = true;
   }
 
+  // Forever URLs: /coaches/{slug} — top-100 all-time coaches.
+  let coachParam = null;
+  const coachPathMatch = url.pathname.match(/^\/coaches\/([a-z0-9-]+)\/?$/);
+  if (coachPathMatch) coachParam = coachPathMatch[1];
+
   // Bare homepage gets SSR content too; everything else with no relevant
   // query params passes through to static files.
   const isHomepage = url.pathname === '/' && url.search === '';
-  if (!isHomepage && !teamParam && !compareParam && !gameParam && !champParam && !viewParam) {
+  if (!isHomepage && !teamParam && !compareParam && !gameParam && !champParam && !viewParam && !coachParam) {
     return context.next();
   }
 
@@ -454,7 +579,7 @@ export async function onRequest(context) {
     return context.next();
   }
 
-  const { teams, index } = teamDataResult;
+  const { teams, index, coaches, coachLb, coachIdx } = teamDataResult;
   let metaTags = [];
   let pageTitle = '';
   let canonicalUrl = url.toString();
@@ -470,11 +595,67 @@ export async function onRequest(context) {
   const notFound = () => new Response(
     `<!doctype html><meta charset="utf-8"><title>Not found — Hoopsipedia</title>` +
     `<div style="font-family:sans-serif;max-width:600px;margin:80px auto;text-align:center">` +
-    `<h1>Page not found</h1><p>No such team or season.</p>` +
+    `<h1>Page not found</h1><p>No such team, coach, or season.</p>` +
     `<p><a href="/?view=teams">Browse all teams</a> · <a href="/">Hoopsipedia home</a></p></div>`,
     { status: 404, headers: { 'content-type': 'text/html; charset=utf-8' } });
 
-  if (teamParam && seasonParam) {
+  if (coachParam) {
+    // /coaches/{slug} — coach career page
+    const coach = coachIdx ? coachIdx[coachParam] : null;
+    if (!coach) return notFound();
+
+    const slug = teamSlug(coach.name);
+    canonicalUrl = coachHref(origin, slug);
+    const rank = coachLb.indexOf(coach) + 1;
+    const accolades = await computeCoachAccoladesSsr(assetFetcher, originUrl, coach, teams);
+
+    // OG image: logo of the school where the coach spent the most seasons.
+    let primaryTid = null, primarySpan = -1;
+    for (const [tid, start, end] of coach.schools) {
+      if (end - start > primarySpan) { primarySpan = end - start; primaryTid = String(tid); }
+    }
+    const imageUrl = primaryTid
+      ? `https://a.espncdn.com/i/teamlogos/ncaa/500/${primaryTid}.png`
+      : `https://www.hoopsipedia.com/branding/hoopsipedia-logo.png`;
+
+    pageTitle = `${coach.name} — Coaches — Hoopsipedia`;
+    const accBits = [];
+    if (accolades.titles > 0) accBits.push(`${accolades.titles} national title${accolades.titles > 1 ? 's' : ''}`);
+    if (accolades.finalFours > 0) accBits.push(`${accolades.finalFours} Final Four${accolades.finalFours === 1 ? '' : 's'}`);
+    const description = `${coach.name} coaching record: ${coach.wins}-${coach.losses} (${coach.pct}%), #${rank} all-time in D1 wins${accBits.length ? `, ${accBits.join(', ')}` : ''}. Full career history, season-by-season tenures, and comparisons on Hoopsipedia.`;
+
+    metaTags = [
+      { key: 'description', value: description },
+      { key: 'og:type', value: 'profile' },
+      { key: 'og:title', value: pageTitle },
+      { key: 'og:description', value: description },
+      { key: 'og:image', value: imageUrl },
+      { key: 'og:url', value: canonicalUrl },
+      { key: 'og:site_name', value: 'Hoopsipedia' },
+      { key: 'twitter:card', value: 'summary_large_image' },
+      { key: 'twitter:title', value: pageTitle },
+      { key: 'twitter:description', value: description },
+      { key: 'twitter:image', value: imageUrl },
+    ];
+
+    jsonLdBlocks.push({
+      '@context': 'https://schema.org',
+      '@type': 'Person',
+      name: coach.name,
+      jobTitle: 'College Basketball Head Coach',
+      url: canonicalUrl,
+      ...(primaryTid && teams[primaryTid]
+        ? { affiliation: { '@type': 'SportsTeam', name: teams[primaryTid][F.NAME], sport: 'Basketball' } }
+        : {}),
+    });
+    jsonLdBlocks.push(breadcrumbLd([
+      { name: 'Hoopsipedia', url: `${origin}/` },
+      { name: 'Coaches', url: `${origin}/?view=coaches` },
+      { name: coach.name, url: canonicalUrl },
+    ]));
+
+    ssrHtml = renderCoachSsr(coach, rank, accolades, teams, coaches, coachLb, origin);
+  } else if (teamParam && seasonParam) {
     // /teams/{slug}/{season} — self-contained season page
     const team = lookupTeam(teamParam, teams, index);
     if (!team) return notFound();
