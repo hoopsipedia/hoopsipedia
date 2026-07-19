@@ -1,0 +1,42 @@
+{
+  "page": 28,
+  "games": [
+    {
+      "date": "1999-02-20",
+      "opponent": "North Carolina",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 66,
+          "players": [
+            {"name": "Adam Hall", "min": 37, "fg": "7-16", "ft": "1-1", "tp": "3-6", "reb": 5, "ast": 3, "pf": 2, "to": 3, "stl": 2, "pts": 18},
+            {"name": "Chris Williams", "min": 31, "fg": "6-12", "ft": "0-0", "tp": "0-3", "reb": 6, "ast": 2, "pf": 3, "to": 2, "stl": 1, "blk": 0, "pts": 12},
+            {"name": "Kris Hunter", "min": 32, "fg": "4-6", "ft": "0-0", "tp": "0-0", "reb": 7, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 2, "pts": 8},
+            {"name": "Chezley Watson", "min": 30, "fg": "2-5", "ft": "2-2", "tp": "1-3", "reb": 4, "ast": 4, "pf": 4, "to": 1, "stl": 1, "blk": 0, "pts": 6},
+            {"name": "Donald Hand", "min": 38, "fg": "6-20", "ft": "2-2", "tp": "1-7", "reb": 4, "ast": 7, "pf": 2, "to": 2, "stl": 0, "blk": 0, "pts": 15},
+            {"name": "Josh Hare", "min": 18, "fg": "2-2", "ft": "0-0", "tp": "1-1", "reb": 0, "ast": 0, "pf": 3, "to": 1, "stl": 2, "pts": 5},
+            {"name": "Willie Dersch", "min": 14, "fg": "0-1", "ft": "2-3", "tp": "0-1", "reb": 0, "ast": 1, "pf": 1, "to": 0, "stl": 0, "pts": 2},
+            {"name": "Jason Dowling", "min": 0, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 1, "to": 0, "stl": 0, "pts": 0}
+          ],
+          "checksum_ok": true
+        },
+        {
+          "name": "North Carolina Tar Heels",
+          "score": 67,
+          "players": [
+            {"name": "Ademola Okulaja", "min": 36, "fg": "6-14", "ft": "1-1", "tp": "2-6", "reb": 10, "ast": 3, "pf": 2, "to": 1, "stl": 1, "blk": 1, "pts": 15},
+            {"name": "Kris Lang", "min": 34, "fg": "4-12", "ft": "1-1", "tp": "0-0", "reb": 9, "ast": 1, "pf": 1, "to": 0, "stl": 2, "blk": 0, "pts": 9},
+            {"name": "Brendan Haywood", "min": 29, "fg": "4-6", "ft": "2-3", "tp": "0-0", "reb": 10, "ast": 1, "pf": 2, "to": 3, "stl": 2, "blk": 0, "pts": 10},
+            {"name": "Ed Cota", "min": 39, "fg": "6-12", "ft": "2-3", "tp": "1-2", "reb": 3, "ast": 9, "pf": 1, "to": 5, "stl": 1, "blk": 0, "pts": 15},
+            {"name": "Jason Capel", "min": 33, "fg": "2-8", "ft": "4-4", "tp": "1-3", "reb": 2, "ast": 1, "pf": 5, "to": 2, "stl": 0, "blk": 0, "pts": 9},
+            {"name": "Ronald Curry", "min": 19, "fg": "1-5", "ft": "0-0", "tp": "1-2", "reb": 3, "ast": 2, "pf": 0, "to": 2, "stl": 0, "blk": 0, "pts": 3},
+            {"name": "Vasco Evtimov", "min": 4, "fg": "2-3", "ft": "0-0", "tp": "0-0", "ast": 2, "pts": 4, "notes": "row alignment partly illegible; pts computed as 2*fg_made (no 3PT makes)"},
+            {"name": "Brian Bersticker", "min": 6, "fg": "1-1", "ft": "0-0", "tp": "0-0", "reb": 3, "ast": 1, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 2}
+          ],
+          "checksum_ok": true
+        }
+      ]
+    }
+  ],
+  "skipped": []
+}

@@ -1,0 +1,9 @@
+{
+  "page": 22,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page contains a typed official NCAA box score, Virginia at Florida State, 1999-01-30 (Tallahassee, FL), final Virginia 67, Florida State 60 (2OT). Columns are dense (FG FGA 3P 3PA FT FTA OR DR TOT PF PTS A TO BLK S MIN) and several player rows are misaligned/illegible in the scan (Virginia: Adam Hall and Kris Hunter rows produce inconsistent digit counts; Florida State: Terrell Baker and others fail the PTS = 2*FG+3P+FT cross-check). Using the point-formula check, Virginia's 5 clearly legible starters (Watson, Hand, Dersch, Williams plus bench) still do not sum to the team total of 67, and Florida State's player points likewise do not reconcile to 60. Skipping rather than guessing per instructions since checksum cannot be confirmed for either team."
+    }
+  ]
+}

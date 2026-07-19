@@ -1,0 +1,9 @@
+{
+  "page": 9,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Typed official NCAA box score, Morgan State (0-8) at Ohio State (3-5), St. John Arena, Columbus, Ohio, Date: December 27, 1994. Final score legible from halftime/total lines: Morgan State 74 (37+37), Ohio State 95 (55+40); team-total shooting lines also legible and internally consistent (MS: 26-55 FG, 6-11 3FG, 16-21 FT -> 2*26+6+16=74; OSU: 33-52 FG, 7-11 3FG, 22-36 FT -> 2*33+7+22=95). However the per-player rows (12 players each side, 15 dense columns: FG-AT, 3FG-AT, FT-AT, OF, DF, TO(reb total), PF, TP, A, TO(turnovers), BK, ST, MN) are small and tightly spaced; multiple individual digits could not be read with confidence and produced internal contradictions (e.g. OF+DF not matching the total-rebound column, TP not matching 2*FG+3FG+FT for several rows) on cross-check. Rather than guess/repair individual player stat lines, skipping per instructions to be ruthless about skipping vs. guessing. Team-level final score and shooting totals are reliable if useful elsewhere, but no player-line data is included here to avoid fabricating values."
+    }
+  ]
+}

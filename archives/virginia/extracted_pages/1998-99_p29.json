@@ -1,0 +1,43 @@
+{
+  "page": 29,
+  "games": [
+    {
+      "date": "1999-02-25",
+      "opponent": "Georgia Tech",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 68,
+          "players": [
+            {"name": "Adam Hall", "min": "33", "fg": "3-6", "tp": "2-4", "ft": "2-2", "reb": 6, "ast": 2, "pf": 5, "to": 3, "blk": 0, "stl": 2, "pts": 10},
+            {"name": "Chris Williams", "min": "34", "fg": "4-11", "tp": "2-5", "ft": "2-2", "reb": 7, "ast": 1, "pf": 5, "to": 8, "blk": 1, "stl": 2, "pts": 12},
+            {"name": "Kris Hunter", "min": "40", "fg": "1-10", "tp": "0-0", "ft": "2-2", "reb": 10, "ast": 0, "pf": 4, "to": 0, "blk": 7, "stl": 1, "pts": 4},
+            {"name": "Chezley Watson", "min": "32", "fg": "2-4", "tp": "0-1", "ft": "0-0", "reb": 3, "ast": 0, "pf": 5, "to": 6, "blk": 0, "stl": 2, "pts": 4},
+            {"name": "Donald Hand", "min": "43", "fg": "8-22", "tp": "3-12", "ft": "9-10", "reb": 13, "ast": 4, "pf": 4, "to": 6, "blk": 0, "stl": 2, "pts": 28},
+            {"name": "Willie Dersch", "min": "15", "fg": "1-1", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 5, "to": 0, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Josh Hare", "min": "25", "fg": "1-3", "tp": "1-2", "ft": "2-2", "reb": 3, "ast": 2, "pf": 1, "to": 0, "blk": 0, "stl": 0, "pts": 5},
+            {"name": "Cade Lemcke", "min": "3", "fg": "1-1", "tp": "1-1", "ft": "0-0", "reb": 1, "ast": 0, "pf": 1, "to": 0, "blk": 0, "stl": 0, "pts": 3},
+            {"name": "Jason Dowling", "min": "0+", "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Georgia Tech Yellow Jackets",
+          "score": 74,
+          "players": [
+            {"name": "Ashley Kelly", "min": "2", "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Jon Babul", "min": "23", "fg": "1-6", "tp": "0-0", "ft": "2-4", "reb": 4, "ast": 0, "pf": 1, "to": 3, "blk": 0, "stl": 1, "pts": 4},
+            {"name": "Jason Collier", "min": "38", "fg": "3-11", "tp": "0-2", "ft": "13-16", "reb": 12, "ast": 1, "pf": 3, "to": 2, "blk": 0, "stl": 0, "pts": 19},
+            {"name": "Tony Akins", "min": "31", "fg": "2-8", "tp": "0-3", "ft": "1-1", "reb": 4, "ast": 2, "pf": 5, "to": 3, "blk": 0, "stl": 3, "pts": 5},
+            {"name": "Jason Floyd", "min": "42", "fg": "5-18", "tp": "1-6", "ft": "4-4", "reb": 4, "ast": 7, "pf": 4, "to": 1, "blk": 0, "stl": 3, "pts": 15},
+            {"name": "Alvin Jones", "min": "42", "fg": "5-8", "tp": "0-0", "ft": "6-7", "reb": 9, "ast": 1, "pf": 4, "to": 1, "blk": 3, "stl": 0, "pts": 16},
+            {"name": "T.J. Vines", "min": "35", "fg": "3-6", "tp": "3-4", "ft": "3-4", "reb": 1, "ast": 2, "pf": 0, "to": 3, "blk": 0, "stl": 3, "pts": 12},
+            {"name": "Darryl LaBarrie", "min": "12", "fg": "1-1", "tp": "0-0", "ft": "1-2", "reb": 2, "ast": 0, "pf": 0, "to": 1, "blk": 0, "stl": 1, "pts": 3}
+          ]
+        }
+      ],
+      "checksum_ok": true,
+      "notes": "Overtime game (score by periods: VA 32-28-8=68, GT 29-31-14=74). Reb column shown as team total (O+D=T); recorded total rebounds only. Players with all-dash lines (did not play) omitted: Virginia's Lloyd, Lyons, Martin, Harbour; Georgia Tech's Neal, Kincaid, Perry, Prentice, Tretti."
+    }
+  ],
+  "skipped": []
+}

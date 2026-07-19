@@ -1,0 +1,9 @@
+{
+  "page": 4,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page 4 shows a single clear typed OFFICIAL BOX SCORE: Ohio State vs Marquette, November 30, 1994, St. John Arena, Columbus, Ohio (Marquette 82, Ohio State 70). The five starters on each side are legibly typed and individually checksum correctly via pts = 2*(FG-3FG) + 3*3FG + FT (e.g. Marquette: Eford 18, Crawford 9, McCaskill 11, Miller 5, Piper 22 = 65; Ohio State starters likewise consistent). However the reserve/bench rows for both teams (Marquette: Abraham, Shaw, Gates, Hutchins, McCall, Streater, Joseph; Ohio State reserves) are printed in small dense type and repeated attempts to parse the FG/FGA/3FG/3FGA/FT/FTA/OFF/DEF/TOT column groups produced internally inconsistent results (e.g. FT exceeding FTA, OFF+DEF not matching TOT, TP not matching computed points) - i.e. the exact digit alignment in those narrow columns could not be confirmed with confidence given only a single non-zoomable read. Since the team-level checksum against the final score (82-70) requires the complete roster including reserves, and guessing individual reserve stat lines risks inventing values, the entire game is skipped rather than transcribed partially or with unverified figures."
+    }
+  ]
+}

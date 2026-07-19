@@ -1,0 +1,9 @@
+{
+  "page": 30,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page contains an official box score for BYU vs New Mexico, 03/09/00, Las Vegas NV (BYU 55, New Mexico 43). BYU (visitors) stat lines are reasonably legible, but the New Mexico (home team) player stat lines are corrupted by overlapping handwritten digits/annotations bleeding through the printed FG-FGA, 3PT, FT-FTA, rebound, and points columns (e.g. cells reading like '5-9656', '2-7286', '6~7857', '1-9 111', '0-0 3667', '5-18278'), making the true numeric values ambiguous. Since both teams' player lines and a checksum are required, and one team cannot be transcribed confidently, the entire game was skipped rather than guessing at the garbled New Mexico figures."
+    }
+  ]
+}
