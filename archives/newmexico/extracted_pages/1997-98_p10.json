@@ -1,0 +1,49 @@
+{
+  "page": 10,
+  "games": [
+    {
+      "date": "1997-12-30",
+      "opponent": "Yale Bulldogs",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 69,
+          "players": [
+            {"name": "Lamont Long", "min": 22, "fg": "4-8", "tp": "2-3", "ft": "2-4", "reb": 5, "ast": 0, "pf": 3, "to": 1, "stl": 1, "blk": 0, "pts": 12},
+            {"name": "Kenny Thomas", "min": 25, "fg": "5-11", "tp": "0-2", "ft": "2-5", "reb": 6, "ast": 2, "pf": 1, "to": 0, "stl": 2, "blk": 1, "pts": 12},
+            {"name": "Greg Davis", "min": 13, "fg": "0-3", "tp": "0-2", "ft": "2-2", "reb": 1, "ast": 0, "pf": 5, "to": 0, "stl": 0, "blk": 2, "pts": 2},
+            {"name": "Tom Starkey", "min": 9, "fg": "2-4", "tp": "0-1", "ft": "0-0", "reb": 2, "ast": 1, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Kevin Henry", "min": 25, "fg": "2-8", "tp": "1-7", "ft": "0-0", "reb": 2, "ast": 3, "pf": 0, "to": 1, "stl": 1, "blk": 0, "pts": 5},
+            {"name": "Marcos White", "min": 2, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 1, "pf": 0, "to": 0, "stl": 1, "blk": 0, "pts": 0},
+            {"name": "Clayton Shields", "min": 22, "fg": "4-8", "tp": "0-4", "ft": "7-7", "reb": 8, "ast": 2, "pf": 4, "to": 3, "stl": 1, "blk": 0, "pts": 15},
+            {"name": "Nick Andrews", "min": 1, "fg": "0-1", "tp": "0-1", "ft": "0-1", "reb": 1, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Royce Olney", "min": 26, "fg": "4-8", "tp": "1-5", "ft": "0-0", "reb": 3, "ast": 2, "pf": 0, "to": 2, "stl": 3, "blk": 0, "pts": 9},
+            {"name": "David Gibson", "min": 36, "fg": "3-4", "tp": "0-0", "ft": "0-0", "reb": 6, "ast": 2, "pf": 0, "to": 0, "stl": 1, "blk": 0, "pts": 6},
+            {"name": "Ryan Noce", "min": 5, "fg": "1-2", "tp": "0-0", "ft": "0-0", "reb": 2, "ast": 0, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Ben Baum", "min": 14, "fg": "0-3", "tp": "0-0", "ft": "2-2", "reb": 2, "ast": 0, "pf": 2, "to": 1, "stl": 0, "blk": 1, "pts": 2}
+          ]
+        },
+        {
+          "name": "Yale Bulldogs",
+          "score": 44,
+          "players": [
+            {"name": "Charlie Petit", "min": 29, "fg": "3-10", "tp": "2-8", "ft": "1-1", "reb": 3, "ast": 0, "pf": 1, "to": 2, "stl": 1, "blk": 0, "pts": 9},
+            {"name": "Mark Bratton", "min": 3, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Matt Ricketts", "min": 36, "fg": "2-8", "tp": "2-7", "ft": "0-0", "reb": 2, "ast": 2, "pf": 4, "to": 4, "stl": 0, "blk": 0, "pts": 6},
+            {"name": "Marlon Simpkins", "min": 13, "fg": "0-1", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 3, "pf": 1, "to": 3, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "David Tompkins", "min": 15, "fg": "1-2", "tp": "0-0", "ft": "0-0", "reb": 3, "ast": 0, "pf": 4, "to": 0, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Emerson Whitley", "min": 30, "fg": "2-11", "tp": "1-6", "ft": "3-3", "reb": 6, "ast": 2, "pf": 3, "to": 4, "stl": 2, "blk": 0, "pts": 8},
+            {"name": "Neil Yanke", "min": 16, "fg": "1-5", "tp": "0-0", "ft": "4-6", "reb": 1, "ast": 0, "pf": 1, "to": 2, "stl": 0, "blk": 0, "pts": 6},
+            {"name": "Jason Williams", "min": 31, "fg": "1-10", "tp": "0-2", "ft": "2-2", "reb": 8, "ast": 0, "pf": 2, "to": 2, "stl": 1, "blk": 0, "pts": 4},
+            {"name": "Tom Kritzer", "min": 9, "fg": "0-0", "tp": "0-0", "ft": "2-4", "reb": 1, "ast": 0, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "John Kirkowski", "min": 13, "fg": "0-3", "tp": "0-0", "ft": "1-2", "reb": 11, "ast": 0, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 1},
+            {"name": "Ken Marschner", "min": 5, "fg": "2-2", "tp": "0-0", "ft": "2-4", "reb": 4, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 6}
+          ]
+        }
+      ],
+      "checksum_ok": true,
+      "notes": "DNS (did not suit) players Cavaco, Hunterton, Smith, Lanigan for Yale omitted (no stats recorded). Blue handwritten digits between FG/FGA and 3pt/FT columns on the New Mexico side are shooting-percentage annotations (e.g. '500' = 2-4, '667' = 2-3), not part of the made/attempted counts; black printed digits used for made-attempted values. reb field is total rebounds only (off/def not separately requested); ast/to/stl/blk/min taken from the right-side A/T/B/S/MIN table, row-aligned 1:1 against the player list (including blank rows for Yale DNS players) and verified against team MIN total of 200 and team A/T/B/S totals for both teams."
+    }
+  ],
+  "skipped": []
+}

@@ -1,0 +1,46 @@
+{
+  "page": 25,
+  "games": [
+    {
+      "date": "1991-02-14",
+      "opponent": "Brigham Young",
+      "site": "Albuquerque, NM",
+      "teams": [
+        {
+          "name": "Brigham Young Cougars",
+          "score": 83,
+          "players": [
+            {"name": "Mark Heslop", "min": 23, "fg": "4-9", "ft": "1-2", "tp": "3-6", "reb": 2, "ast": 1, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 12},
+            {"name": "Nathan Call", "min": 35, "fg": "1-3", "ft": "2-3", "tp": "1-2", "reb": 5, "ast": 8, "pf": 1, "to": 3, "stl": 2, "blk": 0, "pts": 5},
+            {"name": "Mark Santiago", "min": 7, "fg": "1-2", "ft": "0-0", "tp": "1-2", "reb": 0, "ast": 3, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 3},
+            {"name": "Kenneth Roberts", "min": 11, "fg": "2-2", "ft": "2-2", "tp": "0-0", "reb": 2, "ast": 1, "pf": 4, "to": 0, "stl": 2, "blk": 0, "pts": 6},
+            {"name": "Gary Trost", "min": 35, "fg": "5-7", "ft": "7-9", "tp": "0-0", "reb": 5, "ast": 0, "pf": 3, "to": 0, "stl": 0, "blk": 1, "pts": 17},
+            {"name": "Steve Schreiner", "min": 36, "fg": "8-14", "ft": "2-3", "tp": "0-0", "reb": 9, "ast": 1, "pf": 2, "to": 2, "stl": 1, "blk": 0, "pts": 18},
+            {"name": "Scott Moon", "min": 34, "fg": "5-6", "ft": "4-6", "tp": "2-2", "reb": 0, "ast": 4, "pf": 3, "to": 2, "stl": 1, "blk": 0, "pts": 16},
+            {"name": "Shawn Bradley", "min": 7, "fg": "1-4", "ft": "0-0", "tp": "0-0", "reb": 2, "ast": 1, "pf": 3, "to": 4, "stl": 0, "blk": 1, "pts": 2},
+            {"name": "Jared Miller", "min": 12, "fg": "1-3", "ft": "2-2", "tp": "0-0", "reb": 3, "ast": 2, "pf": 3, "to": 1, "stl": 1, "blk": 0, "pts": 4}
+          ],
+          "checksum_ok": true
+        },
+        {
+          "name": "New Mexico Lobos",
+          "score": 76,
+          "players": [
+            {"name": "Ike Williams", "min": 30, "fg": "3-10", "ft": "0-0", "tp": "0-3", "reb": 4, "ast": 4, "pf": 4, "to": 2, "stl": 1, "blk": 0, "pts": 6},
+            {"name": "Luc Longley", "min": 38, "fg": "11-18", "ft": "10-11", "tp": "0-0", "reb": 9, "ast": 0, "pf": 3, "to": 0, "stl": 1, "blk": 3, "pts": 32},
+            {"name": "Marvin McBurrows", "min": 18, "fg": "1-4", "ft": "2-2", "tp": "0-0", "reb": 1, "ast": 0, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Kurt Miller", "min": 10, "fg": "2-4", "ft": "0-0", "tp": "0-1", "reb": 5, "ast": 1, "pf": 0, "to": 1, "stl": 1, "blk": 0, "pts": 4},
+            {"name": "Jimmy Taylor", "min": 34, "fg": "5-7", "ft": "0-1", "tp": "1-1", "reb": 0, "ast": 6, "pf": 5, "to": 0, "stl": 3, "blk": 0, "pts": 11},
+            {"name": "Khari Jaxon", "min": 2, "fg": "0-0", "ft": "0-2", "tp": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Vladimir McCrary", "min": 28, "fg": "3-6", "ft": "0-1", "tp": "0-0", "reb": 5, "ast": 1, "pf": 5, "to": 3, "stl": 0, "blk": 0, "pts": 6},
+            {"name": "Rob Robbins", "min": 38, "fg": "4-11", "ft": "3-4", "tp": "2-6", "reb": 2, "ast": 2, "pf": 3, "to": 2, "stl": 2, "blk": 0, "pts": 13},
+            {"name": "Rob Newton", "min": 2, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ],
+          "checksum_ok": true
+        }
+      ],
+      "notes": "Players with blank/DNP rows omitted: BYU Keegan Kane, Robert Jones, Jeff Campbell; New Mexico Lance Milford. Team FG/FT/rebound/PF/AST/TO/BLK/STL totals on sheet match transcribed player rows; points computed from printed TP (total points) column, cross-checked as 2*(fg_made-3pt_made)+3*3pt_made+ft_made."
+    }
+  ],
+  "skipped": []
+}

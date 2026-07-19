@@ -1,0 +1,9 @@
+{
+  "page": 31,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Official NCAA box score, George Washington (visitors) 82 at New Mexico (home) 68, played 1993-03-19 at McKale Center, Tucson, Ariz. (apparent NCAA tournament game). Team totals rows are legible and internally consistent (GW: FG 30-61, 3FG 7-14, FT 15-22, TP 82; New Mexico: FG 24-60, 3FG 6-21, FT 14-15, TP 68 — both satisfy 2*FG+3FG+FT=score), but the per-player handwritten stat grid (FG/FGA, 3FG/3FGA, FT/FTA, rebounds, PF, TP, A, TO, BLK, S, MIN columns) is too cramped/ambiguous to transcribe individual player lines with confidence without inventing values (many cells appear blank for zero, causing column misalignment risk). Skipping per-player detail rather than guessing; final score and metadata noted here for reference."
+    }
+  ]
+}

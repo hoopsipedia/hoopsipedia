@@ -1,0 +1,9 @@
+{
+  "page": 4,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Official NCAA box score, Ohio State (visitors) at West Virginia, site W.V.U. Coliseum. Ohio State's side is legible and checksums cleanly (player pts = 2*FG+FT sum to 72, matching team TOTALS TP=72). However, the West Virginia side has multiple illegible/ambiguous handwritten digits (notably Collins' FT/FTA and the team TOTALS TP figure, which is overwritten by another handwritten annotation) that prevent a confident checksum -- player pts sums came to 57 under one plausible reading vs. a computed team total of 55 (2*FG_total 19 + FT_total 17), and reconciling requires guessing which digits are wrong. Per instructions to be ruthless rather than guess, the entire game (both teams, since it's one page/one box score) is skipped rather than transcribed with unverified West Virginia stats. Exact game date is also unclear in the header (partially legible, likely mid-January 1980 but not confidently readable)."
+    }
+  ]
+}

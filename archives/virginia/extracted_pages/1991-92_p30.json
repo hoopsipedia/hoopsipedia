@@ -1,0 +1,47 @@
+{
+  "page": 30,
+  "games": [
+    {
+      "date": "1992-03-23",
+      "opponent": "Tennessee",
+      "teams": [
+        {
+          "name": "Tennessee Volunteers",
+          "score": 52,
+          "players": [
+            {"name": "Allan Houston", "min": "38", "fg": "6-14", "tp": "3-7", "ft": "4-4", "reb": "5", "pf": "1", "ast": "1", "to": "2", "pts": 19},
+            {"name": "Corey Allen", "min": "22", "fg": "0-8", "tp": "0-2", "reb": "5", "pf": "3", "ast": "2", "to": "3", "pts": 0},
+            {"name": "Carlus Groves", "fg": "4-13", "tp": "1-1", "ft": "1-4", "reb": "4", "pf": "3", "to": "2", "pts": 10},
+            {"name": "Jay Price", "min": "17", "fg": "0-2", "tp": "0-1", "reb": "2", "ast": "1", "to": "3", "stl": "1", "pts": 0},
+            {"name": "Lang Wiseman", "min": "23", "fg": "1-8", "tp": "0-2", "ft": "2-2", "reb": "4", "pf": "2", "ast": "1", "stl": "1", "pts": 4},
+            {"name": "Steve Rivers", "min": "13", "fg": "0-2", "ft": "1-1", "reb": "1", "pf": "4", "to": "1", "blk": "1", "pts": 0},
+            {"name": "Shun Sheffield", "min": "21", "fg": "1-2", "reb": "7", "pf": "2", "to": "2", "stl": "1", "pts": 2},
+            {"name": "Alonzo Johnson", "min": "7", "fg": "2-3", "pts": 4},
+            {"name": "Chris Brand", "min": "12", "fg": "3-6", "tp": "1-3", "to": "1", "pts": 7},
+            {"name": "Jermaine Brown", "min": "10", "fg": "3-5", "pf": "1", "ast": "1", "to": "1", "stl": "1", "pts": 6},
+            {"name": "Daryl Milson", "min": "3", "pts": 0}
+          ]
+        },
+        {
+          "name": "Virginia Cavaliers",
+          "score": 77,
+          "players": [
+            {"name": "Bryant Stith", "min": "33", "fg": "7-16", "tp": "0-2", "ft": "5-6", "reb": "8", "pf": "3", "ast": "3", "to": "3", "blk": "1", "pts": 19},
+            {"name": "Junior Burrough", "min": "32", "fg": "5-15", "ft": "3-4", "reb": "7", "pf": "2", "to": "7", "stl": "1", "pts": 13},
+            {"name": "Ted Jeffries", "min": "30", "ft": "3-4", "reb": "9", "pf": "3", "ast": "1", "to": "1", "pts": 11},
+            {"name": "Anthony Oliver", "min": "17", "fg": "1-2", "ft": "2-2", "pf": "2", "ast": "1", "pts": 4},
+            {"name": "Cory Alexander", "min": "36", "fg": "3-8", "tp": "1-4", "ft": "3-4", "reb": "7", "pf": "1", "ast": "4", "to": "2", "stl": "3", "pts": 10},
+            {"name": "Cornel Parker", "min": "27", "fg": "3-6", "reb": "2", "pf": "2", "ast": "3", "blk": "1", "pts": 6},
+            {"name": "Yuri Barnes", "min": "17", "fg": "2-3", "ft": "4-6", "reb": "7", "stl": "1", "pts": 8},
+            {"name": "Doug Smith", "min": "5", "ft": "4-4", "pf": "1", "pts": 4},
+            {"name": "Chris Havlicek", "min": "1", "fg": "1-1", "pts": 2},
+            {"name": "Shawn Wilson", "min": "1", "pts": 0},
+            {"name": "Jason Williford", "min": "0", "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

@@ -1,0 +1,9 @@
+{
+  "page": 10,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page contains a typed/dot-matrix box score for UNM at BYU, 1/4/93, Marriott Center (final: UNM 56, BYU 70, per the clearly legible Totals/Final rows), but the individual player-line columns (FG/FGA/3PT/FT/rebounds/fouls/MIN) are low-resolution and column alignment is ambiguous in the scan. Attempted per-player point reconstruction (pts = 2*FG + 3FG_made + FT_made) summed to ~54-55 for UNM against a team total of 56, and per-player values for several rows (e.g., Jenkins, Griego, Brown, Hayden) could not be read with confidence. Skipping rather than guessing since the checksum could not be confirmed within acceptable confidence."
+    }
+  ]
+}

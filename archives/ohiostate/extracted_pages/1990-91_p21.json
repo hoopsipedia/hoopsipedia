@@ -1,0 +1,9 @@
+{
+  "page": 21,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Ohio State vs Northwestern, Feb 9 1991 (St. John Arena) - typed official box score, but checksum fails and cannot be resolved after a second read. Northwestern (visitor): sum of player points = 60 (Brotz 15, Rankin 2, Howell 6, Leslie 19, Baldwin 12, Reece 6, Kirkpatrick/Simpson/Haunty/Lounsberry/Queen 0) vs team final score of 64 and team TOTALS row (TP=64, FG 23-50 vs individual FG-made sum of only 21) - a 2-made-FG / 4-point gap that re-reading the scan could not pin down to a specific player row. Ohio State (home) side also shows an internally inconsistent row: Baker (G) reads FG 2-3, FT 0-1 (implying 4 pts) but the TP column shows 7, and Robinson's row has an ambiguous/short column count in the rebound fields. Rather than invent corrected made-FG/points values, skipping the whole game per instructions."
+    }
+  ]
+}

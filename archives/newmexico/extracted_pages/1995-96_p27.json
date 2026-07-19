@@ -1,0 +1,43 @@
+{
+  "page": 27,
+  "games": [
+    {
+      "date": "1996-02-29",
+      "opponent": "Air Force",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 67,
+          "players": [
+            {"name": "Kenny Thomas", "min": 28, "fg": "4-6", "ft": "5-5", "reb": 5, "ast": 0, "pf": 4, "to": 4, "stl": 0, "blk": 1, "pts": 13},
+            {"name": "Charles Smith", "min": 36, "fg": "7-18", "tp": "1-6", "ft": "4-4", "reb": 7, "ast": 3, "pf": 2, "to": 6, "stl": 1, "blk": 2, "pts": 19},
+            {"name": "Clayton Shields", "min": 25, "fg": "6-12", "tp": "3-5", "ft": "0-0", "reb": 8, "ast": 2, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 15},
+            {"name": "Royce Olney", "min": 25, "fg": "2-4", "tp": "1-2", "ft": "6-7", "reb": 4, "ast": 1, "pf": 2, "to": 1, "stl": 1, "blk": 0, "pts": 11},
+            {"name": "David Gibson", "min": 36, "fg": "1-2", "ft": "0-3", "reb": 3, "ast": 0, "pf": 0, "to": 2, "stl": 0, "blk": 1, "pts": 2},
+            {"name": "Greg Schornstein", "min": 38, "fg": "2-6", "tp": "1-2", "ft": "0-2", "reb": 6, "ast": 4, "pf": 1, "to": 2, "stl": 1, "blk": 0, "pts": 5},
+            {"name": "Marty Cotwright", "min": 10, "fg": "1-1", "ft": "0-0", "reb": 3, "ast": 0, "pf": 2, "to": 1, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Daniel Santiago", "min": 2, "fg": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Air Force Falcons",
+          "score": 55,
+          "players": [
+            {"name": "Matt Horin", "min": 7, "fg": "1-3", "tp": "1-2", "ft": "0-0", "reb": 1, "ast": 1, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 3},
+            {"name": "Jarmica Reese", "min": 38, "fg": "3-11", "tp": "0-3", "ft": "2-2", "reb": 7, "ast": 3, "pf": 2, "to": 1, "stl": 0, "blk": 1, "pts": 8},
+            {"name": "Louis Stewart", "min": 13, "fg": "1-3", "ft": "0-0", "reb": 3, "ast": 3, "pf": 0, "to": 0, "stl": 1, "blk": 0, "pts": 2},
+            {"name": "Brandon Parker", "min": 26, "fg": "1-7", "ft": "0-0", "reb": 3, "ast": 4, "pf": 2, "to": 1, "stl": 3, "blk": 2, "pts": 2},
+            {"name": "Reggie Minton", "min": 36, "fg": "3-13", "tp": "3-8", "ft": "1-2", "reb": 2, "ast": 3, "pf": 4, "to": 4, "stl": 1, "blk": 0, "pts": 10},
+            {"name": "Bonar Luzey", "min": 0, "fg": "0-2", "ft": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Michael Freeman", "min": 31, "fg": "7-14", "ft": "2-3", "reb": 6, "ast": 2, "pf": 3, "to": 1, "stl": 0, "blk": 0, "pts": 16},
+            {"name": "Anthony Barrett", "min": 10, "fg": "2-3", "ft": "0-0", "reb": 1, "ast": 0, "pf": 3, "to": 0, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Charlie Nelson", "min": 39, "fg": "5-12", "ft": "0-0", "reb": 6, "ast": 1, "pf": 3, "to": 1, "stl": 1, "blk": 0, "pts": 10}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": [],
+  "notes": "New Mexico is HOME team (67), Air Force VISITOR (55). New Mexico won 67-55 at The Pit, Albuquerque NM, 2/29/1996. Both team pts columns sum exactly to final scores (NM: 13+19+15+11+2+5+2+0=67; Air Force: 3+8+2+2+10+0+16+4+10=55). Used TP column values directly (not recomputed) since sheet provides per-player total points. Bonar Luzey's minutes listed as '0+' on the sheet (negligible playing time); recorded as 0."
+}

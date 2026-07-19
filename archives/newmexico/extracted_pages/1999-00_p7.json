@@ -1,0 +1,9 @@
+{
+  "page": 7,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page 7 holds one official box score (New Mexico Lobos 69 @ UTEP Miners 84, 12/01/1999, Don Haskins Center, El Paso TX). Team totals are clearly printed and legible (Lobos: 21-47 FG, 2-12 3PT, 25-29 FT, 69 pts; UTEP: 31-51 FG, 4-11 3PT, 18-25 FT, 84 pts; period score 31-38=69 and 41-43=84, matching the final line score). However, someone hand-wrote each player's shooting percentage (e.g. '625', '778', '286', '333', '571', '800', '750', '647', '714') directly inline/overlapping the printed FG-FGA and FT-FTA digit columns for nearly every player row on both teams. This makes it impossible to reliably determine where the printed attempt digit ends and the handwritten percentage annotation begins for several rows (Smith, Long, Henry, Palmer, White, Robinson on Lobos; Smith, Wolfram, Nelson on UTEP), and a naive read produces player point sums that do not reconcile with the team TP column (e.g. Smith, Brian: FG/FT read as 1-3/0-2 implies 2 pts but printed TP shows 4). Rather than guess which digits are real stats vs. handwritten overlay, the per-player lines for this game are skipped in full per instructions to avoid inventing values; only the clean, unambiguous team totals were usable and are not sufficient on their own to satisfy the required per-player transcription with checksum."
+    }
+  ]
+}

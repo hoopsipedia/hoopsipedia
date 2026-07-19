@@ -1,0 +1,47 @@
+{
+  "page": 23,
+  "games": [
+    {
+      "date": "1994-02-17",
+      "opponent": "San Diego State Aztecs",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 65,
+          "players": [
+            {"name": "Marlow White", "min": 40, "fg": "6-11", "tp": "1-5", "ft": "1-2", "reb": 8, "ast": 2, "pf": 3, "to": 1, "stl": 4, "blk": 1, "pts": 14},
+            {"name": "Lewis LaMar", "min": 32, "fg": "6-7", "tp": "0-6", "ft": "6-7", "reb": 9, "ast": 1, "pf": 4, "to": 3, "stl": 5, "blk": 2, "pts": 18},
+            {"name": "Canonchet Neves", "min": 32, "fg": "3-7", "tp": "2-6", "ft": "2-2", "reb": 1, "ast": 1, "pf": 2, "to": 6, "stl": 2, "blk": 0, "pts": 10},
+            {"name": "Charles Smith", "min": 29, "fg": "4-9", "tp": "3-4", "ft": "0-0", "reb": 4, "ast": 3, "pf": 2, "to": 2, "stl": 2, "blk": 1, "pts": 11},
+            {"name": "Greg Brown", "min": 40, "fg": "3-12", "tp": "0-4", "ft": "1-4", "reb": 3, "ast": 5, "pf": 3, "to": 1, "stl": 2, "blk": 0, "pts": 7},
+            {"name": "Frank Willis", "min": "--", "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Rodney Sanders", "min": "--", "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Scott Pritchett", "min": 12, "fg": "0-1", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 2, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "J.J. Griego", "min": "--", "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Brian Hayden", "min": 8, "fg": "2-3", "tp": "0-0", "ft": "1-2", "reb": 2, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 5},
+            {"name": "Greg Schornstein", "min": 7, "fg": "0-0", "tp": "0-0", "ft": "0-1", "reb": 2, "ast": 0, "pf": 3, "to": 1, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "San Diego State Aztecs",
+          "score": 61,
+          "players": [
+            {"name": "Carlus Groves", "min": 31, "fg": "6-15", "tp": "1-5", "ft": "2-3", "reb": 8, "ast": 1, "pf": 5, "to": 4, "stl": 0, "blk": 2, "pts": 15},
+            {"name": "Derric Croft", "min": 38, "fg": "6-14", "tp": "2-5", "ft": "0-2", "reb": 10, "ast": 1, "pf": 4, "to": 3, "stl": 3, "blk": 0, "pts": 14},
+            {"name": "Marc Carter", "min": 34, "fg": "7-14", "tp": "0-1", "ft": "2-4", "reb": 4, "ast": 0, "pf": 4, "to": 4, "stl": 3, "blk": 0, "pts": 16, "note": "reb column as printed (OF3/DF4/To4) does not sum internally; transcribed as shown"},
+            {"name": "Chris Walters", "min": 16, "fg": "0-3", "tp": "0-1", "ft": "0-0", "reb": 0, "ast": 0, "pf": 3, "to": 1, "stl": 1, "blk": 1, "pts": 0},
+            {"name": "Chad Nelson", "min": 24, "fg": "0-1", "tp": "0-1", "ft": "2-2", "reb": 2, "ast": 4, "pf": 2, "to": 2, "stl": 1, "blk": 0, "pts": 2},
+            {"name": "Berry Randle", "min": 20, "fg": "2-4", "tp": "0-1", "ft": "6-7", "reb": 7, "ast": 3, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 10},
+            {"name": "Jason Sanders", "min": 23, "fg": "1-4", "tp": "0-1", "ft": "0-0", "reb": 2, "ast": 1, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Terrence Hamilton", "min": 9, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Corey Klinke", "min": "--", "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Chris Davis", "min": 5, "fg": "1-1", "tp": "0-0", "ft": "0-0", "reb": 2, "ast": 0, "pf": 1, "to": 3, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Matt Ambrose", "min": "--", "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

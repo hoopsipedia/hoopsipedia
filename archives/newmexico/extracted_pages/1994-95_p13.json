@@ -1,0 +1,9 @@
+{
+  "page": 13,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page shows an official box score for New Mexico vs Hawai'i dated 01/07/05 (i.e. Jan 7, 2005 — the 2004-05 season, not 1994-95; likely a misfiled/mislabeled scan within the 1994-95_boxscores.pdf compilation). New Mexico's box (61 pts) checksums perfectly (7+13+3+16+7+14+1=61) but Hawai'i's box does not reconcile: individually transcribed player FT values sum to 15 while the team FT total is clearly printed as 14 (confirmed twice: TOTALS row '14 21' and FT% split '4-8'+'10-13'=14-21), and player points computed via 2*(FG-3FG)+3*3FG+FT sum to 63 vs the team/period total of 62. Re-read the page once (allowed max) and could not identify which single digit (likely in one of WHITLOCK/McGEE/BONNER/HANDY/MARONEY/PARKER's FT or TP cell) is misprinted or misscanned. Skipping per instructions rather than guessing a correction. Also flagging the date mismatch with the file's season label for follow-up."
+    }
+  ]
+}

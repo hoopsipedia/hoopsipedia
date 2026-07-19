@@ -1,0 +1,46 @@
+{
+  "page": 12,
+  "games": [
+    {
+      "date": "1994-01-12",
+      "opponent": "Clemson",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 64,
+          "players": [
+            {"name": "Junior Burrough", "min": 26, "fg": "3-15", "tp": "0-0", "ft": "3-4", "reb": 6, "ast": 0, "to": 1, "blk": 0, "stl": 2, "pf": 3, "pts": 9},
+            {"name": "Cornel Parker", "min": 38, "fg": "2-5", "tp": "0-2", "ft": "2-2", "reb": 1, "ast": 2, "to": 3, "blk": 2, "stl": 1, "pf": 2, "pts": 6},
+            {"name": "Yuri Barnes", "min": 37, "fg": "7-13", "tp": "0-0", "ft": "3-4", "reb": 10, "ast": 1, "to": 3, "blk": 0, "stl": 1, "pf": 0, "pts": 17},
+            {"name": "Harold Deane", "min": 37, "fg": "5-11", "tp": "2-5", "ft": "7-8", "reb": 4, "ast": 1, "to": 3, "blk": 0, "stl": 1, "pf": 2, "pts": 19},
+            {"name": "Jason Williford", "min": 26, "fg": "1-4", "tp": "1-2", "ft": "6-8", "reb": 5, "ast": 3, "to": 1, "blk": 0, "stl": 1, "pf": 4, "pts": 9},
+            {"name": "Jamal Robinson", "min": 16, "fg": "1-4", "tp": "0-1", "ft": "2-2", "reb": 5, "ast": 2, "to": 0, "blk": 0, "stl": 1, "pf": 1, "pts": 4},
+            {"name": "Chris Alexander", "min": 14, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "to": 0, "blk": 0, "stl": 1, "pf": 3, "pts": 0},
+            {"name": "Shawn Wilson", "min": 3, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 2, "to": 0, "blk": 0, "stl": 0, "pf": 4, "pts": 0},
+            {"name": "Chris Havlicek", "fg": "0-2", "tp": "0-2", "ft": "0-0", "reb": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pf": 0, "pts": 0}
+          ],
+          "checksum_ok": true
+        },
+        {
+          "name": "Clemson Tigers",
+          "score": 57,
+          "players": [
+            {"name": "Jeff Brown", "min": 31, "fg": "2-3", "tp": "1-2", "ft": "0-0", "reb": 1, "ast": 2, "to": 7, "blk": 0, "stl": 0, "pf": 2, "pts": 5},
+            {"name": "Rayfield Ragland", "min": 21, "fg": "5-11", "tp": "2-5", "ft": "0-0", "reb": 5, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pf": 3, "pts": 12},
+            {"name": "Sharone Wright", "min": 34, "fg": "3-7", "tp": "0-0", "ft": "7-10", "reb": 18, "ast": 0, "to": 7, "blk": 4, "stl": 0, "pf": 4, "pts": 13},
+            {"name": "Lou Richie", "min": 14, "fg": "0-1", "tp": "0-1", "ft": "0-0", "reb": 1, "ast": 3, "to": 3, "blk": 0, "stl": 1, "pf": 3, "pts": 0},
+            {"name": "Andre Bowain", "min": 31, "fg": "1-7", "tp": "0-3", "ft": "1-1", "reb": 6, "ast": 6, "to": 1, "blk": 0, "stl": 0, "pf": 4, "pts": 3},
+            {"name": "Bruce Martin", "min": 26, "fg": "4-11", "tp": "2-8", "ft": "1-1", "reb": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pf": 0, "pts": 11},
+            {"name": "Wayne Buckingham", "min": 12, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pf": 0, "pts": 0},
+            {"name": "Corey Wallace", "min": 13, "fg": "3-5", "tp": "2-3", "ft": "1-1", "reb": 1, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pf": 2, "pts": 9},
+            {"name": "Frank Tomera", "min": 2, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pf": 0, "pts": 0},
+            {"name": "Merl Code", "min": 16, "fg": "1-6", "tp": "0-4", "ft": "2-2", "reb": 1, "ast": 0, "to": 3, "blk": 0, "stl": 3, "pf": 3, "pts": 4}
+          ],
+          "checksum_ok": true
+        }
+      ],
+      "notes": "Chris Havlicek (VA) minutes illegible/blank on scoresheet, omitted rather than invented; team-minute total (200) implies ~3 min but not directly legible so left out."
+    }
+  ],
+  "skipped": []
+}

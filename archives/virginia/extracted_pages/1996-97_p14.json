@@ -1,0 +1,53 @@
+{
+  "page": 14,
+  "games": [
+    {
+      "date": "1997-01-08",
+      "opponent": "Florida State",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 64,
+          "players": [
+            {"name": "Staples", "min": 29, "fg": "2-7", "tp": "0-3", "ft": "0-0", "reb": 2, "ast": 2, "to": 0, "blk": 0, "stl": 0, "pf": 0, "pts": 4},
+            {"name": "Deane", "min": 39, "fg": "3-11", "tp": "1-5", "ft": "2-2", "reb": 4, "ast": 6, "to": 6, "blk": 1, "stl": 1, "pf": 0, "pts": 9},
+            {"name": "Nolan", "min": 33, "fg": "6-12", "tp": "0-0", "ft": "0-0", "reb": 8, "ast": 1, "to": 3, "blk": 0, "stl": 0, "pf": 3, "pts": 12},
+            {"name": "Alexander", "min": 37, "fg": "12-20", "tp": "2-4", "ft": "0-0", "reb": 2, "ast": 2, "to": 1, "blk": 0, "stl": 1, "pf": 4, "pts": 26},
+            {"name": "Ducharme", "min": 31, "fg": "0-1", "tp": "0-0", "ft": "2-2", "reb": 9, "ast": 0, "to": 3, "blk": 1, "stl": 0, "pf": 3, "pts": 2},
+            {"name": "Robinson", "min": 14, "fg": "2-2", "tp": "0-0", "ft": "0-0", "reb": 5, "ast": 0, "to": 2, "blk": 0, "stl": 1, "pf": 1, "pts": 4},
+            {"name": "McLaughlin", "min": 0, "note": "DNP"},
+            {"name": "Dersch", "min": 1, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pf": 0, "pts": 0},
+            {"name": "Curtis", "min": 0, "note": "DNP"},
+            {"name": "Marcaccini", "min": 0, "note": "DNP"},
+            {"name": "Metheney", "min": 13, "fg": "1-2", "tp": "0-0", "ft": "0-0", "reb": 3, "ast": 2, "to": 0, "blk": 2, "stl": 0, "pf": 5, "pts": 2},
+            {"name": "Hunter", "min": 3, "fg": "2-2", "tp": "0-0", "ft": "1-2", "reb": 1, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pf": 0, "pts": 5},
+            {"name": "Walton", "min": 0, "note": "DNP"}
+          ],
+          "team_totals": {"fg": "28-57", "tp": "3-12", "ft": "5-6", "reb": 39, "ast": 13, "to": 15, "blk": 4, "stl": 3, "pf": 16, "pts": 64, "min": 200}
+        },
+        {
+          "name": "Florida State Seminoles",
+          "score": 61,
+          "players": [
+            {"name": "Thompson", "min": 34, "fg": "5-8", "tp": "4-5", "ft": "1-2", "reb": 4, "ast": 4, "to": 1, "blk": 0, "stl": 3, "pf": 4, "pts": 15},
+            {"name": "Jackson", "min": 29, "fg": "1-8", "tp": "0-0", "ft": "2-2", "reb": 7, "ast": 1, "to": 1, "blk": 0, "stl": 1, "pf": 0, "pts": 4},
+            {"name": "Greer", "min": 32, "fg": "4-9", "tp": "1-4", "ft": "3-3", "reb": 4, "ast": 5, "to": 1, "blk": 0, "stl": 1, "pf": 1, "pts": 12},
+            {"name": "Collins", "min": 36, "fg": "5-10", "tp": "1-4", "ft": "0-2", "reb": 1, "ast": 2, "to": 2, "blk": 1, "stl": 4, "pf": 3, "pts": 11},
+            {"name": "Louis", "min": 34, "fg": "5-15", "tp": "0-0", "ft": "1-2", "reb": 7, "ast": 0, "to": 0, "blk": 0, "stl": 2, "pf": 2, "pts": 11},
+            {"name": "Hale", "min": 0, "note": "DNP"},
+            {"name": "Deas", "min": 6, "fg": "0-1", "tp": "0-0", "ft": "1-2", "reb": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pf": 1, "pts": 1},
+            {"name": "Luchman", "min": 17, "fg": "1-5", "tp": "0-5", "ft": "2-2", "reb": 2, "ast": 0, "to": 0, "blk": 1, "stl": 1, "pf": 1, "pts": 7},
+            {"name": "Brower", "min": 12, "fg": "0-2", "tp": "0-2", "ft": "0-0", "reb": 0, "ast": 1, "to": 3, "blk": 0, "stl": 1, "pf": 0, "pts": 0},
+            {"name": "Mulligan", "min": 0, "note": "DNP"}
+          ],
+          "team_totals": {"fg": "21-58", "tp": "6-15", "ft": "13-18", "reb": 26, "ast": 13, "to": 8, "blk": 2, "stl": 13, "pf": 12, "pts": 61, "min": 200}
+        }
+      ],
+      "checksum_ok": true,
+      "location": "Tallahassee, FL",
+      "attendance": 9452,
+      "score_by_period": {"virginia": [31, 33], "florida_state": [35, 26]}
+    }
+  ],
+  "skipped": []
+}

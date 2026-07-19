@@ -1,0 +1,45 @@
+{
+  "page": 5,
+  "games": [
+    {
+      "date": "1994-12-06",
+      "opponent": "Vanderbilt Commodores",
+      "site": "Memorial Gym, Nashville",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 65,
+          "players": [
+            {"name": "Junior Burrough", "min": 27, "fg": "5-10", "ft": "2-3", "tp": "0-0", "reb": 6, "ast": 0, "pf": 1, "to": 2, "stl": 0, "blk": 0, "pts": 12},
+            {"name": "Jason Williford", "min": 27, "fg": "2-4", "ft": "3-4", "tp": "0-1", "reb": 4, "ast": 1, "pf": 4, "to": 1, "stl": 0, "blk": 0, "pts": 7},
+            {"name": "Chris Alexander", "min": 27, "fg": "2-4", "ft": "0-0", "tp": "0-0", "reb": 8, "ast": 1, "pf": 3, "to": 1, "stl": 0, "blk": 2, "pts": 4},
+            {"name": "Cory Alexander", "min": 32, "fg": "2-11", "ft": "0-2", "tp": "0-3", "reb": 2, "ast": 5, "pf": 2, "to": 7, "stl": 2, "blk": 0, "pts": 4},
+            {"name": "Harold Deane", "min": 29, "fg": "6-14", "ft": "2-2", "tp": "2-7", "reb": 5, "ast": 1, "pf": 4, "to": 3, "stl": 2, "blk": 0, "pts": 16},
+            {"name": "Yuri Barnes", "min": 22, "fg": "2-3", "ft": "1-1", "tp": "0-0", "reb": 4, "ast": 0, "pf": 3, "to": 1, "stl": 0, "blk": 1, "pts": 5},
+            {"name": "Jamaal Robinson", "min": 19, "fg": "0-4", "ft": "3-4", "tp": "0-1", "reb": 2, "ast": 0, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 3},
+            {"name": "Curtis Staples", "min": 18, "fg": "3-6", "ft": "4-5", "tp": "3-6", "reb": 1, "ast": 0, "pf": 4, "to": 1, "stl": 0, "blk": 0, "pts": 13},
+            {"name": "Norman Nolan", "min": 4, "fg": "0-1", "ft": "1-2", "tp": "0-0", "reb": 2, "ast": 0, "pf": 3, "to": 2, "stl": 0, "blk": 0, "pts": 1}
+          ]
+        },
+        {
+          "name": "Vanderbilt Commodores",
+          "score": 70,
+          "players": [
+            {"name": "Malik Evans", "min": 15, "fg": "0-3", "ft": "0-0", "tp": "0-1", "reb": 2, "ast": 2, "pf": 1, "to": 5, "stl": 0, "blk": 1, "pts": 0},
+            {"name": "Bryan Milburn", "min": 30, "fg": "0-2", "ft": "0-0", "tp": "0-0", "reb": 4, "ast": 1, "pf": 4, "to": 1, "stl": 2, "blk": 4, "pts": 0},
+            {"name": "Chris Woods", "min": 22, "fg": "2-5", "ft": "0-2", "tp": "0-0", "reb": 6, "ast": 0, "pf": 3, "to": 3, "stl": 1, "blk": 2, "pts": 4},
+            {"name": "Frank Seckar", "min": 38, "fg": "7-14", "ft": "3-4", "tp": "6-10", "reb": 5, "ast": 4, "pf": 2, "to": 1, "stl": 0, "blk": 0, "pts": 23},
+            {"name": "Ronnie McMahan", "min": 34, "fg": "5-12", "ft": "11-13", "tp": "2-5", "reb": 2, "ast": 1, "pf": 4, "to": 3, "stl": 4, "blk": 0, "pts": 23},
+            {"name": "Howard Pride", "min": 30, "fg": "2-4", "ft": "10-10", "tp": "0-1", "reb": 2, "ast": 1, "pf": 1, "to": 1, "stl": 1, "blk": 0, "pts": 14},
+            {"name": "J.J. Lucas", "min": 18, "fg": "1-3", "ft": "2-4", "tp": "0-1", "reb": 4, "ast": 0, "pf": 3, "to": 1, "stl": 1, "blk": 0, "pts": 4},
+            {"name": "Pax Whitehead", "min": 10, "fg": "1-2", "ft": "0-0", "tp": "0-0", "reb": 3, "ast": 3, "pf": 3, "to": 0, "stl": 1, "blk": 0, "pts": 2},
+            {"name": "Drew Maddux", "min": 3, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true,
+      "notes": "Computer-generated (Lexicon Sports) box score, fully legible. Vanderbilt's Chris Woods FT column read as 1-2 by raw OCR but corrected to 0-2 made to reconcile with the printed TP=4 (points column is internally consistent for every other player and for both team totals, so it is treated as authoritative)."
+    }
+  ],
+  "skipped": []
+}

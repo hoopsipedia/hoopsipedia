@@ -1,0 +1,11 @@
+{
+  "page": 23,
+  "games": [],
+  "skipped": [
+    {
+      "date": "1979-02-17",
+      "opponent": "Northwestern Wildcats",
+      "reason": "Handwritten official NCAA box score (Welsh-Ryan/McGaw Hall, Evanston, Ill.). Attempted full transcription of both teams' player lines, but per-player point sums do not reconcile with the printed team totals after two careful reads (max re-reads used). Ohio State: individual FG/FT/TP figures per row are internally consistent (TP = 2*FG+FT for each player) and sum to 83 points if read one way, but the printed team TOTALS row (FG 29-54, FT 30-38, TP 83, REB 30, PF 23, A 17, TO 10, BLK 3, S 6) does not itself satisfy 2*FG+FT=TP (2*29+30=88, not 83), indicating at least one handwritten total or player cell is misread. Sum of individually transcribed FG makes (34) also does not match the team FG total (29). Given this unresolved checksum failure and low scan legibility of the handwritten digits, skipping rather than guessing at corrections, per instructions. Final score per 'SCORES BY PERIODS' box appears to be Ohio State 83, Northwestern ~70-ish (partly illegible), consistent with a 46-37 halves split for OSU, but not confirmed to transcription-grade confidence."
+    }
+  ]
+}

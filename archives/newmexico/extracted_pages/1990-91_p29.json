@@ -1,0 +1,9 @@
+{
+  "page": 29,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "1991-03-07 New Mexico vs Hawaii (Laramie, WY, WAC tournament box score). Hawaii's line checksums perfectly (player PTS sum 68 = team total 68; FT makes sum 7 = team FT 7; FG makes sum 29 = team FG 29). But New Mexico's player PTS sum to 69 (Williams 0, McCrary 8, Longley 21, Banks 20, Robbins 12, McBurrows 0, Taylor 4, Jaxon 2, Newton 2) vs the box's team total of 67 (matching the final score 67 from the SCORE BY PERIODS line: 36+31=67). New Mexico's individual FT-made sum is also inconsistent (10 vs team total 8) - a 2-point/2-FT discrepancy that likely traces to one misread digit on a blurry scanned cell. Re-read the page once (the one allowed re-read) and got identical values both times, so the ambiguity is in the scan itself, not a transcription slip. Skipping the whole game rather than guessing which New Mexico player's FT/PTS cell is off."
+    }
+  ]
+}

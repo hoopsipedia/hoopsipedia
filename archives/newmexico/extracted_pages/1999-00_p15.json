@@ -1,0 +1,50 @@
+{
+  "page": 15,
+  "games": [
+    {
+      "date": "2000-01-02",
+      "opponent": "Washington",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 78,
+          "players": [
+            {"name": "Damion Walker", "min": 22, "fg": "1-4", "ft": "7-7", "tp": "0-0", "reb": 5, "ast": 1, "pf": 3, "to": 0, "stl": 1, "blk": 1, "pts": 9},
+            {"name": "Roland Hannah", "min": 27, "fg": "0-2", "ft": "0-0", "tp": "0-0", "reb": 2, "ast": 1, "pf": 1, "to": 3, "stl": 7, "blk": 0, "pts": 0},
+            {"name": "Wayland White", "min": 24, "fg": "6-9", "ft": "2-7", "tp": "0-0", "reb": 7, "ast": 1, "pf": 1, "to": 1, "stl": 0, "blk": 2, "pts": 14},
+            {"name": "Kevin Henry", "min": 26, "fg": "6-9", "ft": "0-0", "tp": "5-6", "reb": 2, "ast": 2, "pf": 2, "to": 0, "stl": 2, "blk": 0, "pts": 17},
+            {"name": "Marlon Parmer", "min": 25, "fg": "2-3", "ft": "1-5", "tp": "0-0", "reb": 6, "ast": 7, "pf": 3, "to": 4, "stl": 0, "blk": 0, "pts": 5},
+            {"name": "Lamont Long", "min": 21, "fg": "5-8", "ft": "2-3", "tp": "1-3", "reb": 2, "ast": 3, "pf": 1, "to": 3, "stl": 4, "blk": 0, "pts": 13},
+            {"name": "Tim Lightfoot", "min": 23, "fg": "5-10", "ft": "0-0", "tp": "2-5", "reb": 2, "ast": 0, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 12},
+            {"name": "Rafael Berumen", "min": 5, "fg": "0-1", "ft": "0-0", "tp": "0-0", "reb": 2, "ast": 0, "pf": 1, "to": 2, "stl": 1, "blk": 1, "pts": 0},
+            {"name": "Brian Smith", "min": "0+", "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Nick Andrews", "min": 2, "fg": "0-1", "ft": "0-0", "tp": "0-1", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Pat Kelly", "min": 2, "fg": "0-1", "ft": "0-0", "tp": "0-0", "reb": 1, "ast": 1, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "R.T. Guinn", "min": 23, "fg": "4-5", "ft": "0-0", "tp": "0-0", "reb": 7, "ast": 3, "pf": 1, "to": 0, "stl": 0, "blk": 4, "pts": 8}
+          ]
+        },
+        {
+          "name": "Washington Huskies",
+          "score": 52,
+          "players": [
+            {"name": "Will Perkins", "min": 27, "fg": "6-8", "ft": "4-6", "tp": "0-0", "reb": 5, "ast": 0, "pf": 3, "to": 1, "stl": 0, "blk": 1, "pts": 16},
+            {"name": "Thalo Green", "min": 27, "fg": "4-7", "ft": "0-0", "tp": "0-0", "reb": 4, "ast": 2, "pf": 1, "to": 2, "stl": 1, "blk": 0, "pts": 8},
+            {"name": "Senque Carey", "min": 28, "fg": "5-11", "ft": "1-1", "tp": "0-1", "reb": 2, "ast": 1, "pf": 1, "to": 2, "stl": 0, "blk": 0, "pts": 11},
+            {"name": "Deon Luton", "min": 21, "fg": "1-4", "ft": "0-0", "tp": "1-4", "reb": 3, "ast": 1, "pf": 3, "to": 2, "stl": 0, "blk": 0, "pts": 3},
+            {"name": "Michael Johnson", "min": 28, "fg": "3-10", "ft": "2-2", "tp": "0-4", "reb": 4, "ast": 2, "pf": 2, "to": 3, "stl": 0, "blk": 0, "pts": 8},
+            {"name": "Andrew Moritz", "min": 7, "fg": "0-1", "ft": "0-0", "tp": "0-1", "reb": 0, "ast": 1, "pf": 3, "to": 0, "stl": 0, "blk": 1, "pts": 0},
+            {"name": "Greg Clark", "min": 17, "fg": "0-2", "ft": "0-0", "tp": "0-0", "reb": 1, "ast": 1, "pf": 3, "to": 2, "stl": 1, "blk": 0, "pts": 0},
+            {"name": "Travis Duty", "min": 2, "fg": "1-1", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Bryan Brown", "min": 8, "fg": "1-4", "ft": "0-0", "tp": "1-3", "reb": 1, "ast": 1, "pf": 3, "to": 2, "stl": 1, "blk": 0, "pts": 3},
+            {"name": "Chris Walcott", "min": 3, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 1, "stl": 1, "blk": 0, "pts": 0},
+            {"name": "Ben Coffee", "min": 10, "fg": "0-3", "ft": "0-0", "tp": "0-2", "reb": 2, "ast": 1, "pf": 1, "to": 0, "stl": 1, "blk": 0, "pts": 0},
+            {"name": "Marlon Shelton", "min": 11, "fg": "0-3", "ft": "0-0", "tp": "0-0", "reb": 3, "ast": 1, "pf": 3, "to": 0, "stl": 1, "blk": 1, "pts": 0},
+            {"name": "David Dixon", "min": 11, "fg": "0-3", "ft": "1-2", "tp": "0-0", "reb": 3, "ast": 0, "pf": 1, "to": 1, "stl": 1, "blk": 1, "pts": 1}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

@@ -1,0 +1,45 @@
+{
+  "page": 3,
+  "games": [
+    {
+      "date": "1995-11-25",
+      "opponent": "Mercer Bears",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 107,
+          "players": [
+            {"name": "Kenny Thomas", "min": 18, "fg": "5-8", "ft": "5-7", "tp": "0-0", "reb": 5, "ast": 2, "pf": 1, "to": 3, "stl": 1, "blk": 1, "pts": 15},
+            {"name": "Charles Smith", "min": 30, "fg": "11-21", "ft": "2-2", "tp": "6-9", "reb": 5, "ast": 5, "pf": 1, "to": 0, "stl": 4, "blk": 2, "pts": 29},
+            {"name": "Clayton Shields", "min": 25, "fg": "3-6", "ft": "6-8", "tp": "1-3", "reb": 6, "ast": 2, "pf": 2, "to": 2, "stl": 0, "blk": 2, "pts": 13},
+            {"name": "Royce Olney", "min": 25, "fg": "3-7", "ft": "0-0", "tp": "2-4", "reb": 5, "ast": 1, "pf": 4, "to": 1, "stl": 4, "blk": 0, "pts": 8},
+            {"name": "David Gibson", "min": 37, "fg": "3-6", "ft": "5-7", "tp": "0-1", "reb": 5, "ast": 7, "pf": 4, "to": 2, "stl": 4, "blk": 0, "pts": 11},
+            {"name": "Shawn Simpson", "min": 16, "fg": "1-5", "ft": "2-2", "tp": "0-0", "reb": 5, "ast": 0, "pf": 2, "to": 1, "stl": 1, "blk": 2, "pts": 4},
+            {"name": "Chris Paddock", "min": 4, "fg": "1-3", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 2, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Greg Schornstein", "min": 23, "fg": "2-6", "ft": "0-0", "tp": "1-2", "reb": 8, "ast": 4, "pf": 2, "to": 3, "stl": 2, "blk": 0, "pts": 5},
+            {"name": "Marty Cotwright", "min": 9, "fg": "3-4", "ft": "1-2", "tp": "0-0", "reb": 7, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 1, "pts": 7},
+            {"name": "Daniel Santiago", "min": 13, "fg": "3-6", "ft": "7-10", "tp": "0-0", "reb": 7, "ast": 0, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 13}
+          ]
+        },
+        {
+          "name": "Mercer Bears",
+          "score": 72,
+          "players": [
+            {"name": "Reggie Elliott", "min": 32, "fg": "9-25", "ft": "5-7", "tp": "3-6", "reb": 6, "ast": 4, "pf": 4, "to": 4, "stl": 2, "blk": 0, "pts": 26},
+            {"name": "Shane Franks", "min": 14, "fg": "2-5", "ft": "1-2", "tp": "1-2", "reb": 3, "ast": 1, "pf": 1, "to": 3, "stl": 0, "blk": 0, "pts": 6},
+            {"name": "Tomaz Lavric", "min": 1, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Victor Bristol", "min": 8, "fg": "0-1", "ft": "0-0", "tp": "0-0", "reb": 2, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Tony Etchison", "min": 35, "fg": "0-2", "ft": "0-0", "tp": "0-1", "reb": 1, "ast": 6, "pf": 4, "to": 1, "stl": 0, "blk": 2, "pts": 0},
+            {"name": "Scott Farley", "min": 32, "fg": "3-6", "ft": "5-6", "tp": "1-3", "reb": 10, "ast": 0, "pf": 5, "to": 4, "stl": 1, "blk": 1, "pts": 12},
+            {"name": "Lance Carter", "min": 29, "fg": "1-3", "ft": "1-2", "tp": "0-0", "reb": 3, "ast": 1, "pf": 4, "to": 2, "stl": 0, "blk": 1, "pts": 3},
+            {"name": "Ledon Green", "min": 34, "fg": "9-21", "ft": "4-4", "tp": "1-5", "reb": 2, "ast": 3, "pf": 1, "to": 4, "stl": 4, "blk": 1, "pts": 23},
+            {"name": "Kevin Skurka", "min": 10, "fg": "1-1", "ft": "0-2", "tp": "0-0", "reb": 1, "ast": 0, "pf": 5, "to": 0, "stl": 0, "blk": 0, "pts": 2}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": [],
+  "notes": "Player Ryan Robinson (Mercer, #43) and Steve Lewis (New Mexico, #25) marked DID NOT SUIT and excluded from player lists. Blank 3-pt made/attempt cells filled as 0-0, verified against team 3-pt totals (Mercer 6-17, New Mexico 10-19). pts field taken directly from sheet's own 'TP' (points) column, not computed."
+}

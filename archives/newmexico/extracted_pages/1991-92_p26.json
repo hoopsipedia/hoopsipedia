@@ -1,0 +1,9 @@
+{
+  "page": 26,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "2/27/92 New Mexico Lobos at Colorado State Rams (Moby Arena, Final 60-56). Colorado State's full box score (10 players) transcribes cleanly and each player's FG/3FG/FT reconciles exactly to their listed points, summing to 56 (matches final). New Mexico's box score is mostly clean too: 10 of 12 players (Logan, Williams, Pritchett, Scott, Thomas, LaMar, Banks, Jaxon, Griego, Hayden) transcribe cleanly with points formula-validated, summing to 57. However players #40 McCrary, Vladimir and #50 Heffner, Trent have overlapping/corrected handwritten digits across FG, FT, rebound, and minutes columns that cannot be read with confidence (their minutes total is ambiguous between the two, and their combined 3 remaining points cannot be attributed to either player without guessing). Skipping the whole game rather than inventing values for these two players per instructions."
+    }
+  ]
+}

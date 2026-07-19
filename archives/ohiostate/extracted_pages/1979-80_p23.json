@@ -1,0 +1,45 @@
+{
+  "page": 23,
+  "games": [
+    {
+      "date": "1980-01-24",
+      "date_uncertain": true,
+      "opponent": "Minnesota Golden Gophers",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 70,
+          "players": [
+            {"name": "Jim Smith", "min": 25, "fg": "2-3", "ft": "4-6", "reb": 3, "pf": 5, "ast": 1, "to": 0, "blk": 1, "stl": 1, "pts": 8},
+            {"name": "Clark Kellogg", "min": 20, "fg": "5-12", "ft": "1-1", "reb": 8, "pf": 2, "ast": 1, "to": 2, "blk": 0, "stl": 1, "pts": 11},
+            {"name": "Herb Williams", "min": 38, "fg": "6-17", "ft": "2-2", "reb": 9, "pf": 2, "ast": 0, "to": 3, "blk": 4, "stl": 0, "pts": 14},
+            {"name": "Carter Scott", "min": 20, "fg": "5-7", "ft": "1-2", "reb": 1, "pf": 4, "ast": 2, "to": 4, "blk": 0, "stl": 0, "pts": 11},
+            {"name": "Kelvin Ramsey", "min": 40, "fg": "9-14", "ft": "0-0", "reb": 4, "pf": 3, "ast": 3, "to": 4, "blk": 0, "stl": 0, "pts": 18},
+            {"name": "Todd Penn", "min": 12, "fg": "0-2", "ft": "0-0", "reb": 2, "pf": 0, "ast": 0, "to": 2, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Jim Ellinghausen", "min": 5, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 1, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Marquis Miller", "min": 10, "fg": "1-1", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 1, "pts": 2},
+            {"name": "Larry Huggins", "min": 8, "fg": "2-3", "ft": "2-2", "reb": 1, "pf": 4, "ast": 1, "to": 0, "blk": 0, "stl": 0, "pts": 6}
+          ]
+        },
+        {
+          "name": "Minnesota Golden Gophers",
+          "score": 74,
+          "players": [
+            {"name": "Kevin McHale", "min": 38, "fg": "10-20", "ft": "0-0", "reb": 10, "pf": 4, "ast": 3, "to": 3, "blk": 5, "stl": 1, "pts": 20},
+            {"name": "Andy Thompson", "min": 14, "fg": "1-4", "ft": "0-0", "reb": 3, "pf": 0, "ast": 0, "to": 2, "blk": 0, "stl": 1, "pts": 2},
+            {"name": "Gary Holmes", "min": 36, "fg": "5-11", "ft": "2-2", "reb": 10, "pf": 0, "ast": 0, "to": 2, "blk": 1, "stl": 3, "pts": 12},
+            {"name": "Mark Hall", "min": 35, "fg": "5-9", "ft": "8-10", "reb": 3, "pf": 1, "ast": 1, "to": 1, "blk": 0, "stl": 0, "pts": 18},
+            {"name": "Darryl Mitchell", "min": 26, "fg": "1-4", "ft": "3-4", "reb": 5, "pf": 3, "ast": 1, "to": 3, "blk": 0, "stl": 0, "pts": 5},
+            {"name": "Zebedee Howell", "min": 11, "fg": "1-2", "ft": "0-1", "reb": 1, "pf": 1, "ast": 1, "to": 1, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Trent Tucker", "min": 27, "fg": "3-7", "ft": "1-2", "reb": 1, "pf": 2, "ast": 2, "to": 2, "blk": 0, "stl": 2, "pts": 7},
+            {"name": "Randy Breuer", "min": 9, "fg": "3-4", "ft": "2-4", "reb": 1, "pf": 2, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pts": 8},
+            {"name": "Ben Coleman", "min": 1, "fg": "0-1", "ft": "0-0", "reb": 1, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true,
+      "notes": "Team reb totals include TEAM REBOUNDS line (OSU +2, Minnesota +4) not attributable to a player, so player REB sums are less than team totals by that amount. Minnesota FTA sum (23) is 1 less than the printed team FTA total (24); source of discrepancy not identified but does not affect points checksum. Header date at top of scoresheet is heavily garbled/faded; day '24' and year '1980' are legible, month inferred as January from context (Big Ten conference play, score-by-periods shows two regulation halves only). Player minute totals for OSU sum to 178 vs an expected 200 man-minutes; some MIN digits are partially cut off at the right edge of the sheet, so a few OSU MIN values may be slightly misread, but this does not affect the points checksum."
+    }
+  ],
+  "skipped": []
+}

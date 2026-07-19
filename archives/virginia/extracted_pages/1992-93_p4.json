@@ -1,0 +1,52 @@
+{
+  "page": 4,
+  "games": [
+    {
+      "date": "1992-12-12",
+      "opponent": "Howard",
+      "site": "Charlottesville, VA",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 100,
+          "players": [
+            {"name": "Junior Burrough", "min": 24, "fg": "4-5", "ft": "6-6", "reb": 5, "pf": 2, "to": 3, "stl": 2, "pts": 14},
+            {"name": "Jason Williford", "min": 24, "fg": "2-5", "tp": "0-1", "reb": 5, "pf": 5, "ast": 3, "to": 4, "stl": 3, "pts": 4},
+            {"name": "Ted Jeffries", "min": 23, "fg": "2-3", "ft": "4-4", "reb": 6, "pf": 3, "ast": 1, "to": 3, "pts": 8},
+            {"name": "Cornel Parker", "min": 27, "fg": "5-7", "tp": "0-1", "ft": "17-20", "reb": 7, "pf": 2, "ast": 3, "to": 3, "blk": 1, "pts": 27},
+            {"name": "Cory Alexander", "min": 30, "fg": "9-17", "tp": "3-6", "ft": "1-4", "reb": 3, "ast": 7, "to": 3, "blk": 1, "pts": 22},
+            {"name": "Doug Smith", "min": 19, "fg": "1-2", "tp": "1-1", "ft": "3-4", "reb": 1, "pf": 5, "ast": 5, "to": 2, "pts": 6},
+            {"name": "Yuri Barnes", "min": 16, "fg": "4-5", "ft": "3-6", "reb": 4, "pf": 2, "to": 3, "blk": 1, "pts": 11},
+            {"name": "Chris Havlicek", "min": 15, "fg": "3-4", "ft": "0-4", "reb": 2, "pf": 1, "to": 1, "blk": 1, "pts": 6},
+            {"name": "Chris Alexander", "min": 16, "ft": "0-4", "reb": 4, "pf": 3, "ast": 1, "to": 1, "blk": 2, "pts": 0},
+            {"name": "Rock Mitchell", "min": 2, "fg": "0-2", "pf": 1, "pts": 0},
+            {"name": "Bobby Graves", "min": 2, "fg": "0-1", "ft": "0-4", "reb": 2, "pts": 0},
+            {"name": "Maurice Watkins", "min": 2, "fg": "1-1", "stl": 1, "pts": 2}
+          ]
+        },
+        {
+          "name": "Howard Bison",
+          "score": 64,
+          "players": [
+            {"name": "Khalid Ross", "min": 7, "reb": 1, "pf": 5, "pts": 2},
+            {"name": "Art Crowder", "min": 23, "fg": "1-4", "ft": "0-3", "reb": 3, "pf": 4, "to": 1, "pts": 2},
+            {"name": "Otis Young", "min": 24, "fg": "4-7", "ft": "3-5", "reb": 7, "ast": 2, "pf": 3, "pts": 11},
+            {"name": "Cory Beard", "min": 20, "fg": "2-7", "tp": "0-1", "ft": "1-3", "reb": 1, "ast": 5, "pts": 5},
+            {"name": "Milan Brown", "min": 19, "fg": "3-3", "ft": "1-1", "reb": 1, "pf": 3, "ast": 1, "to": 2, "pts": 7},
+            {"name": "Sean Turley", "min": 27, "fg": "5-10", "tp": "1-4", "ft": "2-3", "reb": 4, "pf": 4, "ast": 2, "to": 3, "blk": 2, "pts": 13},
+            {"name": "Robert Riddick", "min": 9, "fg": "1-2", "pf": 1, "to": 1, "stl": 1, "pts": 2},
+            {"name": "Tommy Brown", "min": 14, "fg": "1-6", "tp": "0-4", "ft": "2-2", "reb": 1, "pf": 3, "ast": 2, "to": 4, "pts": 4},
+            {"name": "Charles Solomon", "min": 18, "fg": "4-7", "ft": "4-5", "reb": 5, "pf": 4, "ast": 3, "to": 2, "pts": 12},
+            {"name": "Lamar Day", "min": 6, "pf": 1, "pts": 0},
+            {"name": "Donnell Diggs", "min": 7, "fg": "0-5", "ft": "0-1", "pts": 0},
+            {"name": "Phil Chenier", "min": 6, "fg": "1-3", "tp": "1-3", "pf": 2, "ast": 1, "blk": 1, "pts": 3},
+            {"name": "Iman Ross", "min": 4, "fg": "1-5", "ast": 1, "pts": 3}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": [],
+  "notes": "Official NCAA box score sheet, typed with some handwritten annotations. Format: Total FG column includes made 3-pointers (verified via 2*(FG-3FG)+3*3FG+FT=TP for multiple players). Player pts taken directly from sheet's TP column; checksums: Virginia sum=100 (matches final score), Howard sum=64 (matches final score). A few minor fields (e.g. Khalid Ross's FG/FT split, Iman Ross's 3pt attempts, Milan Brown's off/def rebound split) were illegible and omitted rather than guessed; only aggregate reb totals used where off/def split was unclear."
+}

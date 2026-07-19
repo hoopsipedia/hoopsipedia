@@ -1,0 +1,9 @@
+{
+  "page": 13,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Game 12: Iowa @ Ohio State, Jan 4 1994, final Iowa 68 - Ohio State 72. Iowa's box score transcribed cleanly and checksums exactly (player TP sum = 68 = final score). However Ohio State's box score rows are too visually ambiguous to transcribe confidently: several numeric fields run together with no clear spacing (e.g. Simpson and Skelton rows have a stray leading digit that is likely the position letter 'G' misread as '6', and dense runs of zero values in PF/AS/TO/BK/ST columns are easy to miscount/drop). Best-effort TP-column reading summed to 67, not 72 (off by 5), i.e. checksum fails. Per instructions, skipping the whole game rather than guessing at the illegible Ohio State player stats. Already used the one allowed re-read of this page attempting to resolve it."
+    }
+  ]
+}

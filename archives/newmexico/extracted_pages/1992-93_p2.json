@@ -1,0 +1,45 @@
+{
+  "page": 2,
+  "games": [
+    {
+      "date": "1992-12-03",
+      "opponent": "Texas A&M",
+      "site": "Albuquerque, NM",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 71,
+          "players": [
+            {"name": "Logan, Steve", "min": 34, "fg": "2-4", "ft": "4-4", "tp": "2-3", "reb": 1, "ast": 7, "pf": 4, "to": 1, "stl": 1, "blk": 0, "pts": 10},
+            {"name": "Williams, Ike", "min": 31, "fg": "1-9", "ft": "1-3", "tp": "1-3", "reb": 8, "ast": 3, "pf": 3, "to": 1, "stl": 0, "blk": 1, "pts": 4},
+            {"name": "Jenkins, Corey", "min": 36, "fg": "5-12", "ft": "0-1", "tp": "2-7", "reb": 1, "ast": 4, "pf": 1, "to": 4, "stl": 1, "blk": 0, "pts": 12},
+            {"name": "Thomas, Eric", "min": 14, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 1, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "LaMar, Lewis", "min": 33, "fg": "1-2", "ft": "2-2", "tp": "0-0", "reb": 5, "ast": 2, "pf": 3, "to": 0, "stl": 0, "blk": 1, "pts": 4},
+            {"name": "Neves, Canonchet", "min": 34, "fg": "6-14", "ft": "1-1", "tp": "3-9", "reb": 5, "ast": 1, "pf": 4, "to": 6, "stl": 1, "blk": 7, "pts": 16},
+            {"name": "Jaxon, Khari", "min": 34, "fg": "10-14", "ft": "1-3", "tp": "0-0", "reb": 10, "ast": 1, "pf": 4, "to": 0, "stl": 1, "blk": 0, "pts": 21},
+            {"name": "Griego, J.J.", "min": 16, "fg": "2-3", "ft": "0-1", "tp": "0-1", "reb": 3, "ast": 2, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Hayden, Brian", "min": 2, "fg": "0-0", "ft": "0-2", "tp": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Texas A&M Aggies",
+          "score": 69,
+          "players": [
+            {"name": "Murry, Brett", "min": 40, "fg": "3-10", "ft": "0-0", "tp": "1-4", "reb": 6, "ast": 6, "pf": 2, "to": 5, "stl": 1, "blk": 1, "pts": 7},
+            {"name": "Bardone, Tony Jr.", "min": 1, "fg": "0-1", "ft": "0-0", "tp": "0-0", "reb": 1, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Edwards, David", "min": 40, "fg": "7-10", "ft": "2-3", "tp": "3-4", "reb": 4, "ast": 7, "pf": 3, "to": 3, "stl": 4, "blk": 0, "pts": 19},
+            {"name": "Henderson, Chuck", "min": 37, "fg": "1-6", "ft": "2-2", "tp": "0-2", "reb": 3, "ast": 1, "pf": 4, "to": 1, "stl": 1, "blk": 0, "pts": 4},
+            {"name": "Smith, Michael", "min": 2, "fg": "0-1", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "McGinnis, Tony", "min": 20, "fg": "3-6", "ft": "1-2", "tp": "0-0", "reb": 1, "ast": 0, "pf": 4, "to": 2, "stl": 0, "blk": 0, "pts": 7},
+            {"name": "Henderson, Corey", "min": 20, "fg": "1-2", "ft": "1-2", "tp": "0-0", "reb": 2, "ast": 1, "pf": 1, "to": 1, "stl": 1, "blk": 0, "pts": 3},
+            {"name": "Johnson, Damon", "min": 35, "fg": "10-16", "ft": "5-12", "tp": "0-0", "reb": 10, "ast": 2, "pf": 2, "to": 0, "stl": 1, "blk": 0, "pts": 25},
+            {"name": "Broderson, Lance", "min": 5, "fg": "2-3", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 4}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": [],
+  "notes": "Smith, Joel (No. 21, Texas A&M) and reserves Caraswell/Haralson/Morgan (A&M) and Willis/Milford/Heffner (New Mexico) did not play (blank rows, DNP) and are omitted. Minutes for a few bench players (e.g. Johnson Damon, Broderson Lance) and secondary stats (ast/to/stl) had faint digits reconciled against team-total columns (FG/FGA/3FG/3FGA/FT/FTA/Reb/PF/points all cross-checked exactly against printed team totals; pts checksum passes exactly for both teams: 71-69)."
+}

@@ -1,0 +1,11 @@
+{
+  "page": 1,
+  "games": [],
+  "skipped": [
+    {
+      "date": "1993-11-29",
+      "opponent": "Connecticut",
+      "reason": "Official NCAA box score, University Hall, Charlottesville (Connecticut 77, Virginia 36). Virginia's player-point sum reconciles exactly to the final score (36=36), but Connecticut's player-point sum from the handwritten TP column comes to 76 vs. the printed final of 77 (off by 1). Connecticut's team FG-made (31) and FT-made (12) sums from individual rows match the printed team totals row exactly, and the shortfall is consistent with a single mis-read digit in one player's cramped handwritten TP or 3-point cell (team 3-pt makes total 3, but only 1 could be confidently attributed to an individual, Ray Allen). Rather than invent/adjust a player's total to force the checksum, skipping per instructions since Connecticut fails the per-team checksum on this single read."
+    }
+  ]
+}

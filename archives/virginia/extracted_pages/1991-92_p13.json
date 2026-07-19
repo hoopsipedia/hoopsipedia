@@ -1,0 +1,50 @@
+{
+  "page": 13,
+  "games": [
+    {
+      "date": "1992-01-18",
+      "opponent": "Notre Dame",
+      "teams": [
+        {
+          "name": "Notre Dame Fighting Irish",
+          "score": 56,
+          "players": [
+            {"name": "Ellis, LaPhonso", "min": 38, "fg": "3-12", "tp": "0-1", "ft": "8-10", "reb": 9, "to": 5, "stl": 1, "pf": 2, "pts": 14},
+            {"name": "Taylor, Billy", "min": 30, "fg": "5-8", "ft": "0-2", "reb": 3, "ast": 2, "pf": 1, "pts": 10},
+            {"name": "Tower, Keith", "min": 31, "fg": "2-3", "reb": 3, "ast": 1, "to": 1, "stl": 1, "pf": 2, "pts": 4},
+            {"name": "Bennett, Elmer", "min": 32, "fg": "5-13", "tp": "0-2", "ft": "3-4", "ast": 5, "to": 5, "stl": 5, "pf": 3, "pts": 13},
+            {"name": "Sweet, Daimon", "min": 37, "fg": "4-7", "tp": "1-1", "ft": "2-2", "reb": 2, "to": 2, "blk": 1, "stl": 1, "pf": 2, "pts": 11},
+            {"name": "Ross, Jon", "min": 5, "fg": "1-1", "reb": 1, "pf": 3, "pts": 2},
+            {"name": "Boyer, Brendan", "min": 3, "pf": 0, "pts": 0},
+            {"name": "Cozen, Carl", "min": 10, "fg": "0-1", "reb": 1, "to": 1, "pf": 1, "pts": 0},
+            {"name": "Russell, Malik", "min": 8, "fg": "0-1", "to": 2, "stl": 1, "pf": 1, "pts": 0},
+            {"name": "Gillmore, Nathion", "min": 4, "ast": 1, "pf": 0, "pts": 0},
+            {"name": "Ross, Joe", "min": 2, "fg": "1-2", "ft": "0-1", "reb": 1, "pf": 1, "pts": 2}
+          ],
+          "checksum_ok": true
+        },
+        {
+          "name": "Virginia Cavaliers",
+          "score": 83,
+          "players": [
+            {"name": "Stith, Bryant", "min": 34, "fg": "7-10", "tp": "0-1", "ft": "5-5", "reb": 9, "ast": 4, "to": 3, "stl": 3, "pf": 2, "pts": 19},
+            {"name": "Burrough, Junior", "min": 33, "fg": "5-9", "ft": "1-2", "reb": 4, "to": 4, "pts": 11},
+            {"name": "Jeffries, Ted", "min": 20, "fg": "0-2", "ft": "2-2", "reb": 3, "to": 1, "pf": 2, "pts": 2},
+            {"name": "Oliver, Anthony", "min": 9, "fg": "1-3", "reb": 1, "ast": 3, "to": 1, "pts": 2},
+            {"name": "Alexander, Cory", "min": 31, "fg": "7-11", "tp": "4-6", "ft": "4-5", "ast": 3, "to": 6, "pf": 2, "pts": 22},
+            {"name": "Barnes, Yuri", "min": 16, "fg": "1-1", "ft": "1-1", "reb": 4, "to": 2, "stl": 1, "pf": 3, "pts": 3},
+            {"name": "Parker, Cornel", "min": 29, "fg": "2-3", "tp": "1-2", "ft": "4-4", "reb": 1, "ast": 4, "pf": 2, "pts": 9},
+            {"name": "Johnson, Derrick", "min": 5, "ast": 1, "pts": 0},
+            {"name": "Wilson, Shawn", "min": 10, "fg": "2-2", "reb": 2, "ast": 1, "stl": 1, "pf": 3, "pts": 4},
+            {"name": "Smith, Doug", "min": 8, "fg": "3-3", "ft": "1-1", "reb": 1, "to": 1, "pts": 7},
+            {"name": "Havlicek, Chris", "min": 3, "to": 1, "pf": 1, "pts": 0},
+            {"name": "Williford, Jason", "min": 1, "fg": "2-2", "ft": "0-1", "reb": 1, "pts": 4},
+            {"name": "Graves, Bobby", "min": 1, "fg": "0-1", "pts": 0}
+          ],
+          "checksum_ok": true
+        }
+      ]
+    }
+  ],
+  "skipped": []
+}

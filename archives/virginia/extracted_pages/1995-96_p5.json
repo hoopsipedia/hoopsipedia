@@ -1,0 +1,11 @@
+{
+  "page": 5,
+  "games": [],
+  "skipped": [
+    {
+      "date": "1995-12-09",
+      "opponent": "Richmond Spiders",
+      "reason": "Virginia Cavaliers 67 checksum passed (player TP sum 67 == final score 67), but Richmond Spiders player TP column sums to 54 while the box score's own TOTALS row and final score (25+27) show 52 — a 2-point internal inconsistency in the source scoresheet (likely one player's FT made/attempted digits misread; individual FT-made sum is 17 vs TOTALS row FT-made of 15). Could not confidently identify which single player row is wrong, so the entire game was skipped per the ruthless-checksum rule rather than guessing."
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "page": 30,
+  "games": [],
+  "skipped": [
+    {
+      "date": "1995-03-10",
+      "opponent": "Utah Utes",
+      "reason": "Official NCAA box score (New Mexico Lobos vs Utah Utes, WAC Semi-Final, Bob King Court at The Pit) is legible for all filled-in player rows and both are internally self-consistent per-player (each player's FG/3P/FT matches their own TP), but the sum of player points does not match the team final score on either side: New Mexico players sum to 47 vs. listed team total of 50 (diff 3, matching a 1 FG + 1 FT shortfall vs team FGM/FTM totals of 18/12), and Utah players sum to 85 vs. listed team total of 86 (diff 1). Discrepancy likely traces to faint/illegible entries in rows that appear blank (Hopkins, Willard, Shields for New Mexico; Jones, Barratt for Utah) or a misread digit elsewhere. Skipping rather than guessing per instructions; checksum fails for both teams."
+    }
+  ]
+}

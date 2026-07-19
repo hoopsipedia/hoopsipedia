@@ -1,0 +1,45 @@
+{
+  "page": 30,
+  "games": [
+    {
+      "date": "1994-03-18",
+      "opponent": "New Mexico",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 57,
+          "players": [
+            {"name": "Jamal Robinson", "min": 28, "fg": "2-8", "tp3": "0-0", "ft": "2-2", "reb": 6, "ast": 1, "pf": 3, "to": 1, "blk": 1, "stl": 3, "pts": 6},
+            {"name": "Jason Williford", "min": 18, "fg": "2-7", "tp3": "0-2", "ft": "1-2", "reb": 8, "ast": 1, "pf": 4, "to": 1, "blk": 0, "stl": 0, "pts": 5},
+            {"name": "Junior Burrough", "min": 38, "fg": "9-19", "tp3": "0-1", "ft": "2-6", "reb": 8, "ast": 1, "pf": 1, "to": 2, "blk": 1, "stl": 0, "pts": 20},
+            {"name": "Cornel Parker", "min": 35, "fg": "1-5", "tp3": "0-1", "ft": "0-0", "reb": 4, "ast": 2, "pf": 1, "to": 2, "blk": 1, "stl": 0, "pts": 2},
+            {"name": "Harold Deane", "min": 38, "fg": "6-12", "tp3": "3-6", "ft": "3-4", "reb": 3, "ast": 2, "pf": 0, "to": 1, "blk": 1, "stl": 2, "pts": 18},
+            {"name": "Chris Havlicek", "min": 1, "fg": "0-0", "tp3": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Yuri Barnes", "min": 20, "fg": "2-5", "tp3": "0-0", "ft": "0-0", "reb": 4, "ast": 0, "pf": 0, "to": 2, "blk": 1, "stl": 0, "pts": 4},
+            {"name": "Chris Alexander", "min": 17, "fg": "0-0", "tp3": "0-0", "ft": "0-0", "reb": 2, "ast": 0, "pf": 2, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Mike Powell", "min": 5, "fg": "1-1", "tp3": "0-0", "ft": "0-0", "reb": 1, "ast": 1, "pf": 1, "to": 0, "blk": 1, "stl": 0, "pts": 2}
+          ]
+        },
+        {
+          "name": "New Mexico Lobos",
+          "score": 54,
+          "players": [
+            {"name": "Marlow White", "min": 37, "fg": "5-15", "tp3": "1-9", "ft": "1-1", "reb": 5, "ast": 1, "pf": 2, "to": 3, "blk": 0, "stl": 1, "pts": 12},
+            {"name": "Canonchet Neves", "min": 35, "fg": "2-10", "tp3": "1-6", "ft": "1-2", "reb": 7, "ast": 1, "pf": 2, "to": 1, "blk": 0, "stl": 1, "pts": 6},
+            {"name": "Lewis LaMar", "min": 34, "fg": "2-4", "tp3": "0-0", "ft": "0-0", "reb": 4, "ast": 0, "pf": 4, "to": 2, "blk": 1, "stl": 1, "pts": 4},
+            {"name": "Charles Smith", "min": 32, "fg": "7-12", "tp3": "2-3", "ft": "4-7", "reb": 5, "ast": 2, "pf": 2, "to": 1, "blk": 0, "stl": 1, "pts": 20},
+            {"name": "Greg Brown", "min": 38, "fg": "5-15", "tp3": "2-7", "ft": "0-0", "reb": 5, "ast": 4, "pf": 3, "to": 2, "blk": 0, "stl": 1, "pts": 12},
+            {"name": "Frank Willis", "min": 0, "fg": "0-0", "tp3": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Scott Pritchett", "min": 10, "fg": "0-2", "tp3": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 2, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "J.J. Griego", "min": 3, "fg": "0-1", "tp3": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Brian Hayden", "min": 6, "fg": "0-0", "tp3": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Greg Schornstein", "min": 5, "fg": "0-1", "tp3": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true,
+      "notes": "1994 NCAA Tournament 1st Round, ARCO Arena, Sacramento. Officials: Ted Valentine, Sid Rodeheffer, Edward Schumer. Attendance 16,477. TP column on sheet is total points (verified via checksum), not turnovers; TO column used for turnovers as labeled."
+    }
+  ],
+  "skipped": []
+}

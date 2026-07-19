@@ -1,0 +1,13 @@
+{
+  "page": 22,
+  "games": [],
+  "skipped": [
+    {
+      "date": "1994-02-19",
+      "opponent": "North Carolina Tar Heels",
+      "site": "Dean E. Smith Center, Chapel Hill, N.C.",
+      "final_scores": {"Virginia Cavaliers": 56, "North Carolina Tar Heels": 69},
+      "reason": "Checksum failure on Virginia side only. Team score 56 is confirmed independently (halftime 32+24=56; team shooting line FG 21-68, 3PT 5-21, FT 9-15 all cross-validate via the printed 1st-half/2nd-half/game shooting-percentage breakdowns, e.g. 3-Pt Game .238 = 5/21). However, the sum of the 10 Virginia players' printed TP (points) column totals only 55, one point short. Individual FG-made sum (21) and FT-made sum (9) both match the team totals exactly, but individual 3-point-made sum is 4 vs. a team total of 5 -- indicating one player's made-3-pointer was likely misread as a miss (or as a 2-pointer) in a single cell, which would also make that player's TP read 1 low. Could not confidently identify which of the players with 3PT attempts (Barnes 0-1, Burrough 0-4, Robinson 0-5) has the misread digit, so per no-guessing policy this game is skipped rather than transcribed with an invented correction. North Carolina's box (18-50 FG, 4-9 3PT, 29-40 FT, 69 pts) checksums perfectly (player TP sum = 69, exact match) and is fully legible; only the Virginia-side ambiguity blocks this page."
+    }
+  ]
+}

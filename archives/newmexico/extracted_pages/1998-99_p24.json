@@ -1,0 +1,47 @@
+{
+  "page": 24,
+  "games": [
+    {
+      "date": "1999-02-08",
+      "opponent": "San Diego State",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 85,
+          "players": [
+            {"name": "Lamont Long", "min": 38, "fg": "6-13", "tp": "1-4", "ft": "2-2", "reb": 11, "ast": 6, "pf": 2, "to": 4, "stl": 1, "blk": 0, "pts": 15},
+            {"name": "Brian Smith", "min": 28, "fg": "3-4", "tp": "0-0", "ft": "1-2", "reb": 4, "ast": 2, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 7},
+            {"name": "Kenny Thomas", "min": 40, "fg": "12-17", "tp": "1-4", "ft": "3-3", "reb": 8, "ast": 0, "pf": 1, "to": 4, "stl": 2, "blk": 0, "pts": 28},
+            {"name": "Kevin Henry", "min": 36, "fg": "8-15", "tp": "6-12", "ft": "1-1", "reb": 1, "ast": 4, "pf": 2, "to": 5, "stl": 2, "blk": 0, "pts": 23},
+            {"name": "John Robinson", "min": 28, "fg": "3-5", "tp": "1-1", "ft": "1-1", "reb": 1, "ast": 4, "pf": 2, "to": 2, "stl": 1, "blk": 0, "pts": 7},
+            {"name": "Greg Davis", "min": 12, "fg": "0-1", "tp": "0-1", "ft": "0-0", "reb": 4, "ast": 2, "pf": 2, "to": 1, "stl": 2, "blk": 1, "pts": 0},
+            {"name": "Tim Lightfoot", "min": 3, "fg": "0-1", "tp": "0-1", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Marcos White", "min": 1, "fg": "0-1", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Nick Andrews", "min": 1, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Pat Kelly", "min": 1, "fg": "1-2", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Roland Hannah", "min": 13, "fg": "1-2", "tp": "0-0", "ft": "1-2", "reb": 5, "ast": 1, "pf": 0, "to": 1, "stl": 2, "blk": 0, "pts": 3}
+          ]
+        },
+        {
+          "name": "San Diego State Aztecs",
+          "score": 60,
+          "players": [
+            {"name": "Myron Epps", "min": 33, "fg": "9-17", "tp": "0-0", "ft": "2-5", "reb": 8, "ast": 1, "pf": 3, "to": 0, "stl": 2, "blk": 0, "pts": 20},
+            {"name": "Vincent Okotie", "min": 27, "fg": "2-4", "tp": "0-0", "ft": "0-0", "reb": 2, "ast": 0, "pf": 3, "to": 2, "stl": 0, "blk": 0, "pts": 5},
+            {"name": "Marcelo Correa", "min": 21, "fg": "1-6", "tp": "0-2", "ft": "0-0", "reb": 5, "ast": 0, "pf": 1, "to": 1, "stl": 1, "blk": 0, "pts": 2},
+            {"name": "Donte Wilson", "min": 32, "fg": "4-7", "tp": "2-4", "ft": "0-0", "reb": 1, "ast": 5, "pf": 5, "to": 1, "stl": 1, "blk": 0, "pts": 10},
+            {"name": "Matt Watts", "min": 28, "fg": "5-15", "tp": "1-4", "ft": "4-4", "reb": 3, "ast": 5, "pf": 3, "to": 0, "stl": 1, "blk": 3, "pts": 15},
+            {"name": "Brady Trenkle", "min": 2, "fg": "0-1", "tp": "0-1", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "to": 0, "stl": 1, "blk": 0, "pts": 0},
+            {"name": "David Abramowitz", "min": 17, "fg": "1-7", "tp": "0-4", "ft": "0-0", "reb": 1, "ast": 1, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "David Kaplansky", "min": 2, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Jeffrey Berokoff", "min": 18, "fg": "2-3", "tp": "1-2", "ft": "1-2", "reb": 2, "ast": 1, "pf": 1, "to": 2, "stl": 1, "blk": 0, "pts": 6},
+            {"name": "Walter Small", "min": 5, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 2, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Joe Mann", "min": 14, "fg": "0-2", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 1, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

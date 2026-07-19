@@ -1,0 +1,24 @@
+{
+  "page": 1,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Dense compilation page (6 games on one page, ~13 players per team per game, very small typed font). Game headline (Simon Fraser 54, New Mexico 107, Nov 18 1996, Albuquerque) is legible, but per-player line stats are too small/dense to transcribe reliably; a trial parse of Simon Fraser's Dynie line (FG 11-17, 3P 0-3, FT 6-6) implies 28 pts vs. a printed TP of 17, i.e. a checksum contradiction, indicating column misalignment risk. Skipped rather than guess."
+    },
+    {
+      "reason": "Same compilation page, Game 2: Columbia 56, New Mexico 94, Nov 22 1996, Albuquerque. Headline score legible; player-level stat columns too small/dense to transcribe with confidence given demonstrated misalignment risk on this page. Skipped rather than guess."
+    },
+    {
+      "reason": "Same compilation page, Game 3: Eastern Washington 53, New Mexico 69, Nov 23 1996, Albuquerque. Headline score legible; player-level stat columns too small/dense to transcribe with confidence. Skipped rather than guess."
+    },
+    {
+      "reason": "Same compilation page, Game 4: Centenary 64, New Mexico 96, Nov 27 1996, Albuquerque. Headline score legible; player-level stat columns too small/dense to transcribe with confidence. Skipped rather than guess."
+    },
+    {
+      "reason": "Same compilation page, Game 5: Arizona 77, New Mexico 84, Nov 30 1996, Albuquerque. Headline score legible; player-level stat columns too small/dense to transcribe with confidence. Skipped rather than guess."
+    },
+    {
+      "reason": "Same compilation page, Game 6: New Mexico at Texas Tech, Dec 4 1996, Lubbock TX. Even the final score digits were not confidently legible at this resolution (possible 68-68 read, which cannot be a final score without noted OT), let alone player-level stats. Skipped rather than guess."
+    }
+  ]
+}

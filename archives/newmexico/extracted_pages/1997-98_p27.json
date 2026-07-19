@@ -1,0 +1,9 @@
+{
+  "page": 27,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "1997-98 New Mexico at Utah, Feb 28 1998 (final UNM 55, Utah 65). UNM (visitors) side is fully legible and checksums exactly (player points sum to 55 = final score). Utah (home) side: the four starters with significant minutes (Mottola 18, Jensen 11, Doleac 15, Miller 14 = 58 pts, computed via 2*(FG-3FG)+3*3FG+FT and cross-checked against team FG 25/50=.500, 3FG 4/15=.267, FT 11/15=.733 which match the printed shooting-percentage summary lines) are confidently readable. However the six Utah bench players (Hansen, Jackson, Mctavish, Caton, Johnsen, Carlisle) who combine for the remaining ~7 points and ~76 minutes have box cells too small/cramped on the scanned fax to reliably distinguish digits (made-vs-attempted ordering, single vs double digit minutes) -- repeated attempts produced internally inconsistent minute totals. Rather than invent values for the bench rows, skipping the whole game per the ruthless-skip guidance; UNM's own game log elsewhere in this archive likely already captures this same Feb 28 1998 @ Utah result from the UNM side."
+    }
+  ]
+}

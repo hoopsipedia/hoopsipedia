@@ -1,0 +1,49 @@
+{
+  "page": 3,
+  "games": [
+    {
+      "date": "1990-11-26",
+      "opponent": "UCLA",
+      "notes": "Great Alaska Shootout, Game 12, Sullivan Arena, Anchorage. Virginia entered 2-1, UCLA entered 3-0. Officials: Mickey Crowley, Stan Rote, Owen Grogan.",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 74,
+          "score_by_half": {"1st": 29, "2nd": 45},
+          "players": [
+            {"name": "Kenny Turner", "min": 36, "fg": "10-18", "tp": "4-9", "ft": "1-4", "reb": 10, "ast": 2, "pf": 4, "to": 2, "stl": 0, "blk": 0, "pts": 25},
+            {"name": "Bryant Stith", "min": 25, "fg": "8-18", "tp": "2-5", "ft": "4-4", "reb": 7, "ast": 0, "pf": 5, "to": 2, "stl": 1, "blk": 0, "pts": 22},
+            {"name": "Ted Jeffries", "min": 31, "fg": "3-7", "ft": "0-1", "reb": 6, "ast": 1, "pf": 2, "to": 1, "stl": 0, "blk": 0, "pts": 6},
+            {"name": "Anthony Oliver", "min": 21, "fg": "4-8", "ft": "0-0", "reb": 4, "ast": 0, "pf": 2, "to": 0, "stl": 0, "blk": 1, "pts": 8},
+            {"name": "John Crotty", "min": 34, "fg": "1-11", "tp": "1-7", "ft": "4-4", "reb": 2, "ast": 8, "pf": 2, "to": 3, "stl": 1, "blk": 0, "pts": 7},
+            {"name": "Doug Smith", "min": 6, "fg": "1-2", "ft": "2-2", "reb": 0, "ast": 3, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Derrick Johnson", "min": 4, "fg": "0-1", "tp": "0-1", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Dirk Katstra", "min": 1, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 1, "blk": 0, "pts": 0},
+            {"name": "Corey Stewart", "min": 2, "fg": "1-2", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 1, "blk": 0, "pts": 2},
+            {"name": "Cornell Parker", "min": 19, "fg": "0-5", "ft": "0-0", "reb": 3, "ast": 1, "pf": 4, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Shawn Wilson", "min": 1, "pts": 0, "notes": "row partially obscured/crossed out on scoresheet; only minutes and points legible"}
+          ]
+        },
+        {
+          "name": "UCLA Bruins",
+          "score": 89,
+          "score_by_half": {"1st": 40, "2nd": 49},
+          "players": [
+            {"name": "Mitchell Butler", "min": 29, "fg": "2-3", "tp": "1-2", "ft": "4-6", "reb": 2, "ast": 2, "pf": 2, "to": 0, "stl": 3, "blk": 1, "pts": 9},
+            {"name": "Tracy Murray", "min": 17, "fg": "5-10", "tp": "1-3", "ft": "2-2", "reb": 5, "ast": 1, "pf": 4, "to": 1, "stl": 2, "blk": 0, "pts": 13},
+            {"name": "Don MacLean", "min": 32, "fg": "8-17", "ft": "4-4", "reb": 8, "ast": 2, "pf": 2, "to": 1, "stl": 1, "blk": 0, "pts": 20},
+            {"name": "Gerald Madkins", "min": 32, "fg": "3-5", "tp": "1-1", "ft": "0-1", "reb": 5, "ast": 2, "pf": 0, "to": 2, "stl": 1, "blk": 0, "pts": 7},
+            {"name": "Darrick Martin", "min": 32, "fg": "6-10", "tp": "2-4", "ft": "7-8", "reb": 1, "ast": 5, "pf": 1, "to": 1, "stl": 1, "blk": 0, "pts": 21},
+            {"name": "Lou Richie", "min": 2, "fg": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Shon Tarver", "min": 22, "fg": "3-6", "tp": "0-1", "ft": "1-1", "reb": 5, "ast": 2, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 7},
+            {"name": "Chris Kenny", "min": 1, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Keith Owens", "min": 23, "fg": "3-3", "ft": "2-2", "reb": 4, "ast": 0, "pf": 0, "to": 1, "stl": 1, "blk": 5, "pts": 8},
+            {"name": "Zan Mason", "min": 10, "fg": "1-3", "ft": "2-2", "reb": 0, "ast": 0, "pf": 3, "to": 0, "stl": 0, "blk": 0, "pts": 4}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

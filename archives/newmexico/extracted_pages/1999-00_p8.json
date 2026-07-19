@@ -1,0 +1,11 @@
+{
+  "page": 8,
+  "games": [],
+  "skipped": [
+    {
+      "date": "1999-12-08",
+      "opponent": "New Mexico State",
+      "reason": "Official box score New Mexico vs New Mexico State (12-08-99, Las Cruces). Most player rows transcribe cleanly and pass the internal points formula (2*(FG-3FG)+3*3FG+FT == printed TP), but the sheet fails checksum: (1) New Mexico's Marlon Parmer row (No. 13) has an illegible/overlapping handwritten annotation ('5600' after his FGA) that will not resolve into the standard 16 stat columns even after a second read, so his FT/rebound/assist figures cannot be confidently read - his points could only be back-derived by forcing the team total to 57, which is guessing rather than transcription; (2) New Mexico State's 10 player rows are individually clean (16 tokens each, each internally consistent with its own printed TP), and FG/FGA/3FG/3FGA/FTA sums all match the TOTALS row exactly, but summed FT-made = 19 vs the team TOTALS row's 17 (independently corroborated by the halftime FT split 2-5 + 15-17 = 17-22) - a 2-point discrepancy that cannot be localized to a specific player without inventing a correction. Skipping the whole game rather than shipping unverified/invented values."
+    }
+  ]
+}

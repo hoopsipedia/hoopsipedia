@@ -1,0 +1,36 @@
+{
+  "page": 4,
+  "games": [],
+  "skipped": [
+    {
+      "date": "1997-02-01",
+      "opponent": "Utah",
+      "reason": "Page contains 6 dense box scores (Games 19-24) printed 3-up per row with small numerals (MP/FGA/3PA/FTA/REB/PF/A/TO/B/S/TP). Attempted careful transcription of player rows; reconstructed points via 2*FGM+3PM+FTM did not reliably reconcile with printed per-player TP and team TOTALS for at least one team tested in detail (see Tulsa game below), indicating a real risk of misread or dropped rows across all six games at this resolution. No zoom capability available for this PDF page beyond the single allowed read. Ruled unsafe to transcribe player lines without risking invented/incorrect values."
+    },
+    {
+      "date": "1997-02-03",
+      "opponent": "Brigham Young",
+      "reason": "Same page/layout issue as Game 19 above; small dense box score, could not verify player-level digits with confidence."
+    },
+    {
+      "date": "1997-02-06",
+      "opponent": "SMU",
+      "reason": "Same page/layout issue as Game 19 above; small dense box score, could not verify player-level digits with confidence."
+    },
+    {
+      "date": "1997-02-08",
+      "opponent": "TCU",
+      "reason": "Same page/layout issue as Game 19 above; small dense box score, could not verify player-level digits with confidence."
+    },
+    {
+      "date": "1997-02-13",
+      "opponent": "Rice",
+      "reason": "Same page/layout issue as Game 19 above; small dense box score, could not verify player-level digits with confidence."
+    },
+    {
+      "date": "1997-02-16",
+      "opponent": "Tulsa",
+      "reason": "Attempted full transcription (this was the smallest/cleanest game on the page). Individually computed player points (2*FGM+3PM+FTM) for Tulsa summed to 44 against a printed final score of 51, and summed FG-made (16) did not match the printed team TOTALS FG-made (19) -- indicating at least one player row was misread or missed. Checksum failed; skipping rather than guessing the missing row."
+    }
+  ]
+}

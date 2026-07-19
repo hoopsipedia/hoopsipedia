@@ -1,0 +1,11 @@
+{
+  "page": 17,
+  "games": [],
+  "skipped": [
+    {
+      "date": "1994-01-20",
+      "opponent": "Colorado State",
+      "reason": "Official NCAA box score, New Mexico at Colorado State, final New Mexico 70, Colorado State 72. Colorado State side checksums perfectly (player PTS sum 72 = team score 72; FG/FGA/3P/3PA/FT made-attempted individual sums all match team totals exactly). New Mexico player PTS sum = 69 (White 14, Neves 10, LaMar 9, Smith 22, Brown 10, Griego 0, Pritchett 0, Hayden 4, Schornstein 0) vs team final score 70 — off by 1. Individual FG/FGA/3P/3PA sums for New Mexico all match team totals exactly, but individual FT-made sum (13) and FT-attempted sum (20) do not match the printed team FT line (14-18), and each player's printed PTS value is internally self-consistent with that player's own FG/3P/FT line, so the discrepancy traces to an apparent error/typo in the original 1994 printed box score's FT column rather than a misread by the transcriber. Skipping per checksum-fail rule rather than guessing which digit is wrong."
+    }
+  ]
+}

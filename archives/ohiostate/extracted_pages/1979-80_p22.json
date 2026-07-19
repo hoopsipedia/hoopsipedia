@@ -1,0 +1,9 @@
+{
+  "page": 22,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Handwritten official NCAA box score for Ohio State vs Michigan State (Feb 9, 1980, St. John Arena) is present but handwriting quality is too poor to transcribe confidently. Checksums fail to reconcile: Michigan State's team FG total (23 per TOTALS row) does not match the sum of legible individual player FG entries (22), and points computed from FG*2+FT for individual MSU players sum to 57 vs. the team final score of 59. For Ohio State, computing team TP as 2*FG+FT from the TOTALS row (2*29+13=71) correctly matches the final score of 71, confirming the totals row is reliable, but the sum of individual player FG values transcribed from the handwriting (35) is far off from the team FG total (29), indicating several player FG/FT/FGA cells are illegible or ambiguous (particularly Scott, Ramsey, Huggins, Sims rows where digits are unclear or overlapping). Per instructions, skipping rather than guessing at values to avoid inventing data."
+    }
+  ]
+}

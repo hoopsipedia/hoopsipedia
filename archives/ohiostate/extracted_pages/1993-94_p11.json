@@ -1,0 +1,44 @@
+{
+  "page": 11,
+  "games": [
+    {
+      "date": "1993-12-30",
+      "opponent": "West Virginia Mountaineers",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 82,
+          "players": [
+            {"name": "Lawrence Funderburke", "min": 24, "fg": "6-8", "tp": "0-0", "ast": 0, "to": 3, "blk": 0, "stl": 2, "pf": 4, "pts": 12},
+            {"name": "Gerald Eaker", "min": 28, "fg": "5-9", "ft": "0-0", "tp": "0-0", "reb": 9, "ast": 1, "pf": 3, "to": 3, "stl": 1, "blk": 3, "pts": 10},
+            {"name": "Derek Anderson", "min": 36, "fg": "3-11", "ft": "12-13", "tp": "0-3", "reb": 2, "ast": 4, "pf": 4, "to": 4, "stl": 3, "blk": 0, "pts": 18},
+            {"name": "Greg Simpson", "min": 33, "fg": "11-15", "ft": "3-4", "tp": "4-7", "reb": 5, "ast": 6, "pf": 2, "to": 3, "stl": 0, "blk": 0, "pts": 29},
+            {"name": "Jamie Skelton", "min": 35, "fg": "3-15", "ft": "0-0", "tp": "3-9", "reb": 7, "ast": 4, "pf": 1, "to": 2, "stl": 1, "blk": 0, "pts": 9},
+            {"name": "Rickey Dudley", "min": 19, "fg": "0-2", "tp": "0-2", "ast": 3, "to": 0, "blk": 1, "pf": 2, "pts": 2},
+            {"name": "Nate Wilbourne", "min": 9, "fg": "0-1", "ft": "0-0", "reb": 1, "ast": 0, "pf": 2, "to": 3, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Antonio Watson", "min": 8, "fg": "1-2", "ft": "0-0", "tp": "0-0", "reb": 3, "ast": 0, "pf": 3, "to": 1, "stl": 0, "blk": 1, "pts": 2},
+            {"name": "Jimmy Ratliff", "min": 2, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Doug Etzler", "min": 6, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 0}
+          ],
+          "checksum_ok": true
+        },
+        {
+          "name": "West Virginia Mountaineers",
+          "score": 87,
+          "players": [
+            {"name": "Pervires Greene", "min": 31, "fg": "6-12", "ft": "14-14", "tp": "0-0", "reb": 6, "ast": 0, "pf": 4, "to": 3, "stl": 1, "blk": 2, "pts": 26},
+            {"name": "Ricky Robinson", "min": 35, "fg": "7-14", "ft": "1-2", "tp": "0-0", "reb": 7, "ast": 2, "pf": 1, "to": 0, "stl": 2, "blk": 0, "pts": 15},
+            {"name": "Phil Wilson", "min": 36, "fg": "2-5", "ft": "2-3", "tp": "0-0", "reb": 8, "ast": 3, "pf": 3, "to": 2, "stl": 5, "blk": 2, "pts": 6},
+            {"name": "Mike Boyd", "min": 26, "fg": "2-6", "ft": "2-2", "tp": "0-0", "reb": 2, "ast": 3, "pf": 3, "to": 4, "stl": 0, "blk": 0, "pts": 6},
+            {"name": "Marsalis Basey", "min": 40, "fg": "9-18", "ft": "2-2", "tp": "4-6", "reb": 3, "ast": 5, "pf": 1, "to": 6, "stl": 1, "blk": 0, "pts": 24},
+            {"name": "Zain Shaw", "min": 20, "fg": "1-3", "ft": "4-5", "tp": "1-1", "reb": 5, "ast": 1, "pf": 2, "to": 1, "stl": 1, "blk": 0, "pts": 7},
+            {"name": "Nenad Grausa", "min": 10, "fg": "1-3", "ft": "0-0", "tp": "0-0", "reb": 1, "ast": 1, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 3},
+            {"name": "Leon Agnew", "min": 2, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ],
+          "checksum_ok": true
+        }
+      ]
+    }
+  ],
+  "skipped": []
+}

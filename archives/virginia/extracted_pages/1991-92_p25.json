@@ -1,0 +1,44 @@
+{
+  "page": 25,
+  "games": [
+    {
+      "date": "1992-02-29",
+      "opponent": "Clemson Tigers",
+      "site": "Charlottesville, VA",
+      "teams": [
+        {
+          "name": "Clemson Tigers",
+          "score": 49,
+          "players": [
+            {"name": "Devon Gray", "min": 34, "fg": "8-11", "reb": 5, "pf": 1, "to": 5, "stl": 1, "pts": 16},
+            {"name": "Corey Wallace", "min": 27, "fg": "3-7", "tp": "3-5", "reb": 1, "ast": 1, "pf": 2, "to": 3, "pts": 9},
+            {"name": "Sharone Wright", "min": 29, "fg": "2-3", "ft": "1-3", "reb": 6, "ast": 2, "to": 5, "blk": 3, "pts": 5},
+            {"name": "Chris Whitney", "min": 36, "fg": "3-7", "tp": "1-4", "reb": 4, "ast": 5, "pf": 5, "to": 3, "stl": 1, "pts": 7},
+            {"name": "Kevin Hines", "min": 10, "fg": "0-1", "reb": 2, "pf": 1, "pts": 0},
+            {"name": "Ryan Amestoy", "min": 20, "fg": "2-5", "tp": "1-3", "ft": "2-2", "reb": 1, "pf": 2, "pts": 7},
+            {"name": "Andre Bovain", "min": 23, "fg": "1-4", "reb": 2, "ast": 1, "pf": 2, "to": 2, "stl": 2, "pts": 2},
+            {"name": "Steve Harris", "min": 10, "fg": "1-1", "ft": "1-2", "reb": 1, "ast": 1, "pf": 3, "to": 3, "pts": 3}
+          ],
+          "checksum_ok": true
+        },
+        {
+          "name": "Virginia Cavaliers",
+          "score": 69,
+          "players": [
+            {"name": "Bryant Stith", "min": 38, "fg": "6-13", "tp": "0-3", "reb": 4, "blk": 1, "stl": 3, "pts": 12},
+            {"name": "Junior Burrough", "min": 27, "fg": "4-9", "ft": "2-2", "pf": 1, "to": 1, "pts": 10},
+            {"name": "Ted Jeffries", "min": 34, "fg": "3-4", "ft": "2-4", "reb": 6, "pf": 4, "ast": 4, "to": 2, "stl": 1, "pts": 8},
+            {"name": "Anthony Oliver", "min": 22, "fg": "5-10", "tp": "0-1", "ft": "1-2", "reb": 4, "pf": 1, "to": 1, "stl": 2, "pts": 11},
+            {"name": "Cory Alexander", "min": 34, "fg": "5-11", "tp": "2-5", "ft": "0-1", "reb": 5, "pf": 1, "ast": 9, "to": 2, "stl": 2, "pts": 12},
+            {"name": "Yuri Barnes", "min": 15, "fg": "1-2", "ft": "2-2", "reb": 2, "pf": 3, "ast": 1, "to": 3, "stl": 2, "pts": 4},
+            {"name": "Cornel Parker", "min": 23, "fg": "4-7", "tp": "1-2", "ft": "3-3", "reb": 4, "pf": 1, "ast": 6, "to": 2, "blk": 1, "stl": 1, "pts": 12},
+            {"name": "Doug Smith", "min": 6, "fg": "0-1", "tp": "0-1", "ft": "0-1", "to": 1, "pts": 0},
+            {"name": "Jason Williford", "min": 1, "ft": "0-1", "pts": 0}
+          ],
+          "checksum_ok": true
+        }
+      ]
+    }
+  ],
+  "skipped": []
+}

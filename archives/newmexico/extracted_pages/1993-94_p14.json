@@ -1,0 +1,48 @@
+{
+  "page": 14,
+  "games": [
+    {
+      "date": "1994-01-10",
+      "opponent": "Fresno State",
+      "site": "Selland Arena, Fresno CA",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 65,
+          "players": [
+            {"name": "White, Marlow", "min": 38, "fg": "7-18", "tp": "3-9", "ft": "3-3", "reb": 6, "pf": 3, "ast": 3, "to": 2, "blk": 3, "stl": 3, "pts": 20},
+            {"name": "Neves, Canonchet", "min": 32, "fg": "2-8", "tp": "2-6", "ft": "1-2", "reb": 3, "ast": 3, "pts": 7},
+            {"name": "LaMar, Lewis", "min": 30, "fg": "1-4", "ft": "1-2", "reb": 16, "pf": 2, "to": 2, "pts": 3},
+            {"name": "Smith, Charles", "min": 32, "fg": "6-14", "tp": "4-7", "reb": 1, "pf": 3, "ast": 2, "to": 3, "blk": 1, "stl": 1, "pts": 16},
+            {"name": "Brown, Greg", "min": 39, "fg": "5-14", "tp": "2-6", "ft": "2-2", "reb": 3, "pf": 1, "ast": 2, "to": 4, "stl": 1, "pts": 14},
+            {"name": "Willis, Frank", "min": 2, "pts": 0},
+            {"name": "Sanders, Rodney", "min": 8, "reb": 1, "ast": 1, "pts": 0},
+            {"name": "Pritchett, Scott", "pts": 0},
+            {"name": "Thomas, Eric", "min": 3, "pts": 0},
+            {"name": "Griego, J.J.", "min": 16, "ast": 1, "pts": 0},
+            {"name": "Schornstein, Greg", "min": 16, "fg": "2-4", "tp": "1-3", "reb": 5, "ast": 2, "to": 2, "pts": 5}
+          ]
+        },
+        {
+          "name": "Fresno State Bulldogs",
+          "score": 69,
+          "players": [
+            {"name": "Stel, Travis", "min": 31, "fg": "3-8", "tp": "0-1", "ft": "2-2", "reb": 4, "pf": 3, "ast": 2, "stl": 1, "pts": 8},
+            {"name": "Marshall, Seth", "min": 31, "fg": "6-10", "tp": "2-2", "ft": "2-3", "reb": 3, "pf": 2, "ast": 6, "to": 2, "blk": 1, "stl": 2, "pts": 16},
+            {"name": "Mayberry, Lee", "min": 35, "fg": "1-2", "reb": 16, "pf": 1, "to": 3, "blk": 2, "stl": 3, "pts": 2},
+            {"name": "Harris, Carl Ray", "min": 35, "fg": "10-25", "tp": "3-9", "ft": "2-2", "reb": 3, "pf": 2, "ast": 2, "to": 3, "stl": 2, "pts": 25},
+            {"name": "Santiago, Brian", "min": 30, "fg": "4-9", "tp": "2-5", "ft": "3-5", "reb": 2, "pf": 1, "ast": 10, "to": 3, "stl": 1, "pts": 13},
+            {"name": "Bakke, Brandon", "min": 17, "fg": "1-2", "tp": "1-2", "reb": 2, "pts": 3},
+            {"name": "Koford, Chris", "min": 12, "reb": 1, "pf": 1, "pts": 0},
+            {"name": "Satterwhite, Davon", "min": 8, "fg": "1-3", "tp": "0-2", "reb": 2, "ast": 1, "pts": 2},
+            {"name": "Bull, Ted", "min": 1, "pts": 0},
+            {"name": "Rassi, Ken", "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true,
+      "notes": "pts computed as 2*(FG_made-3FG_made)+3*3FG_made+FT_made per NCAA box score convention (pre-3pt column already separate on sheet); both team sums match final scores (UNM 65, Fresno State 69). Neves PF cell had an ambiguous circled '(S)' mark, and a few minor stat cells for bench players were blank/illegible so those fields were omitted rather than guessed."
+    }
+  ],
+  "skipped": []
+}

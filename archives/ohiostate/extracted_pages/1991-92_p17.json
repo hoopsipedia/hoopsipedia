@@ -1,0 +1,9 @@
+{
+  "page": 17,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page 17 is an official boxscore for Ohio State @ Michigan, 02/02/1992, Ann Arbor, MI (final OSU 68, Michigan 58). The Ohio State (visitor) side is legible and checksums correctly: Jent 10, Jackson 22, Robinson 2, Brown 6, Baker 16, Funderburke 12, Hall/Skelton/Dudley/Kelzer 0 = 68 (matches team total row FG 27-59, FT 14-23 = 68). However, the Michigan (home) side has its top rows (Webber, Voskuil, Howard, Rose) obscured by heavy scan/print artifacts, making their FG/FT/points figures unreadable with confidence. Since a game must have both teams checksummed and the Michigan starters' stats cannot be transcribed reliably without guessing, the entire game was skipped rather than fabricating or partially guessing the Michigan box score."
+    }
+  ]
+}

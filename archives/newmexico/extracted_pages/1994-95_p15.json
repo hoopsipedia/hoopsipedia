@@ -1,0 +1,42 @@
+{
+  "page": 15,
+  "games": [
+    {
+      "date": "1995-01-12",
+      "opponent": "Colorado State",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 71,
+          "players": [
+            {"name": "Charles Smith", "min": 27, "fg": "7-14", "tp": "1-3", "ft": "3-5", "reb": 2, "ast": 3, "pf": 1, "to": 2, "stl": 1, "blk": 1, "pts": 18},
+            {"name": "Marlon White", "min": 34, "fg": "7-11", "tp": "4-8", "ft": "2-4", "reb": 4, "ast": 1, "pf": 2, "to": 1, "stl": 1, "blk": 1, "pts": 20},
+            {"name": "Clayton Shields", "min": 30, "fg": "1-4", "tp": "1-3", "ft": "1-2", "reb": 5, "ast": 0, "pf": 2, "to": 4, "stl": 0, "blk": 3, "pts": 4},
+            {"name": "Royce Olney", "min": 20, "fg": "1-5", "tp": "0-1", "ft": "0-0", "reb": 4, "ast": 3, "pf": 3, "to": 1, "stl": 1, "blk": 0, "pts": 2},
+            {"name": "David Gibson", "min": 39, "fg": "1-3", "tp": "0-1", "ft": "4-6", "reb": 4, "ast": 5, "pf": 3, "to": 2, "stl": 2, "blk": 0, "pts": 6},
+            {"name": "Shawn Simpson", "min": 21, "fg": "3-4", "ft": "1-5", "reb": 3, "ast": 0, "pf": 2, "to": 1, "stl": 0, "blk": 2, "pts": 7},
+            {"name": "Brian Hayden", "min": 19, "fg": "1-3", "tp": "0-0", "ft": "0-0", "reb": 4, "ast": 0, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Greg Schornstein", "min": 10, "fg": "4-6", "tp": "2-2", "ft": "2-2", "reb": 4, "ast": 0, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 12}
+          ]
+        },
+        {
+          "name": "Colorado State Rams",
+          "score": 68,
+          "players": [
+            {"name": "Ryan Chilton", "min": 18, "fg": "3-5", "ft": "0-0", "reb": 2, "ast": 0, "pf": 5, "to": 0, "stl": 0, "blk": 1, "pts": 6},
+            {"name": "Lorenzo Johnson", "min": 9, "fg": "0-0", "ft": "2-2", "reb": 2, "ast": 0, "pf": 2, "to": 0, "stl": 1, "blk": 0, "pts": 2},
+            {"name": "Delmonte Madison", "min": 35, "fg": "6-16", "tp": "3-10", "ft": "1-1", "reb": 1, "ast": 3, "pf": 3, "to": 0, "stl": 2, "blk": 0, "pts": 16},
+            {"name": "Jon Laster", "min": 17, "fg": "1-1", "tp": "1-1", "ft": "0-0", "reb": 1, "ast": 0, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 3},
+            {"name": "David Evans", "min": 37, "fg": "10-18", "tp": "3-9", "ft": "5-5", "reb": 5, "ast": 5, "pf": 4, "to": 7, "stl": 1, "blk": 0, "pts": 28},
+            {"name": "Willie Walker", "min": 11, "fg": "0-3", "tp": "0-1", "ft": "0-0", "reb": 0, "ast": 1, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Matt Barnett", "min": 30, "fg": "2-5", "tp": "1-1", "ft": "1-2", "reb": 6, "ast": 1, "pf": 2, "to": 1, "stl": 0, "blk": 1, "pts": 6},
+            {"name": "Kish Lewis", "min": 30, "fg": "1-8", "ft": "1-2", "reb": 8, "ast": 0, "pf": 3, "to": 1, "stl": 0, "blk": 1, "pts": 3},
+            {"name": "Joe Vogel", "min": 13, "fg": "2-5", "ft": "0-0", "reb": 2, "ast": 0, "pf": 1, "to": 1, "stl": 3, "blk": 0, "pts": 4}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

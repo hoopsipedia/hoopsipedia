@@ -1,0 +1,45 @@
+{
+  "page": 31,
+  "games": [
+    {
+      "date": "1992-03-19",
+      "opponent": "Louisiana Tech",
+      "teams": [
+        {
+          "name": "Louisiana Tech Bulldogs",
+          "score": 84,
+          "players": [
+            {"name": "Mark Dick", "min": 2, "fg": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pf": 1, "pts": 0},
+            {"name": "JoJo Goldsmith", "min": 26, "fg": "1-5", "tp": "1-4", "ft": "0-0", "reb": 1, "ast": 1, "to": 0, "blk": 0, "stl": 0, "pf": 1, "pts": 3},
+            {"name": "Anthony Dade", "min": 30, "fg": "12-15", "ft": "3-8", "reb": 5, "ast": 4, "to": 1, "blk": 0, "stl": 0, "pf": 2, "pts": 27},
+            {"name": "Shawn Davis", "min": 16, "fg": "0-2", "ft": "0-2", "reb": 2, "ast": 1, "to": 1, "blk": 0, "stl": 0, "pf": 1, "pts": 0},
+            {"name": "Ron Ellis", "min": 27, "fg": "7-12", "ft": "1-3", "reb": 8, "ast": 1, "to": 1, "blk": 0, "stl": 1, "pf": 3, "pts": 15},
+            {"name": "Reggie Hill", "min": 20, "fg": "1-3", "ft": "1-1", "reb": 2, "ast": 1, "to": 1, "blk": 0, "stl": 0, "pf": 3, "pts": 3},
+            {"name": "Eric Brown", "min": 36, "fg": "6-13", "tp": "4-9", "ft": "2-3", "reb": 0, "ast": 4, "to": 5, "blk": 0, "stl": 1, "pf": 3, "pts": 18},
+            {"name": "P.J. Brown", "min": 37, "fg": "8-16", "tp": "1-3", "ft": "1-1", "reb": 12, "ast": 1, "to": 0, "blk": 4, "stl": 0, "pf": 3, "pts": 18},
+            {"name": "James Johnson", "min": 2, "fg": "0-1", "ft": "0-0", "reb": 1, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pf": 2, "pts": 0},
+            {"name": "Mark Spradling", "min": 4, "fg": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pf": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "New Mexico Lobos",
+          "score": 90,
+          "players": [
+            {"name": "Steve Logan", "min": 28, "fg": "3-5", "tp": "2-3", "ft": "0-2", "reb": 7, "ast": 3, "to": 3, "blk": 0, "stl": 2, "pf": 0, "pts": 8},
+            {"name": "Ike Williams", "min": 22, "fg": "6-9", "tp": "2-2", "ft": "0-0", "reb": 3, "ast": 3, "to": 1, "blk": 0, "stl": 1, "pf": 1, "pts": 14},
+            {"name": "Will Scott", "min": 32, "fg": "10-16", "ft": "0-1", "reb": 4, "ast": 3, "to": 0, "blk": 2, "stl": 2, "pf": 0, "pts": 20},
+            {"name": "Lewis La Mar", "min": 22, "fg": "6-9", "ft": "6-10", "reb": 8, "ast": 1, "to": 0, "blk": 0, "stl": 0, "pf": 3, "pts": 18},
+            {"name": "Willie Banks", "min": 38, "fg": "3-6", "tp": "0-2", "ft": "4-7", "reb": 5, "ast": 5, "to": 0, "blk": 0, "stl": 3, "pf": 2, "pts": 10},
+            {"name": "Khari Jaxon", "min": 19, "fg": "3-8", "tp": "0-1", "ft": "2-4", "reb": 6, "ast": 0, "to": 1, "blk": 1, "stl": 0, "pf": 4, "pts": 8},
+            {"name": "Vladimir McCrary", "min": 18, "fg": "4-7", "ft": "0-0", "reb": 4, "ast": 4, "to": 2, "blk": 0, "stl": 0, "pf": 2, "pts": 8},
+            {"name": "Trent Heffner", "min": 21, "fg": "2-3", "ft": "0-0", "ast": 1, "to": 2, "blk": 0, "stl": 0, "pf": 3, "pts": 4}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": [
+    {"reason": "Player Lance Milford (#45, New Mexico) row was largely blank/illegible with FG and rebound columns unreadable; his stat line was omitted entirely (treated as DNP with no recorded pts) rather than guessed, since including a nonzero value for him would break the team checksum against the printed final score of 90 and TOTALS row."}
+  ]
+}

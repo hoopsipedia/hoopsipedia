@@ -1,0 +1,9 @@
+{
+  "page": 11,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page is a legible official box score (New Mexico Lobos @ Arizona Wildcats, 12/21/99, final 70-68 Arizona, McKale Center) with clear team totals (UNM 28-66 FG, 5-16 3PT, 9-11 FT = 70 pts, checksum-verified; Arizona 20-55 FG, 4-12 3PT, 24-31 FT = 68 pts, checksum-verified). However, the fax/scan is double-exposed: shooting-percentage ghost digits bleed directly into the FG/FGA/3PT columns for many rows (e.g. '6/67', '20350', '12583', '8375', '7571', '3333', '6667', '460'), and this was confirmed identical on a second read of the same page (no higher-resolution data available). Several individual player lines could be reconstructed with high confidence by cross-checking made-shot percentages against points scored (White, Smith, Walker, Long, Robinson on the Lobos side all check out cleanly), but other rows (Lightfoot, Berumen, Parmer, Guinn, Hannah, the Lobos TEAM rebounds line) and the entire Arizona Wildcats roster (Wright, Jefferson, Woods, Arenas, Gardner, Walton, Anderson, Javtokas) remain ambiguous enough that a full checksum-verified player-by-player transcription for both teams cannot be produced without risking invented values. Skipping the whole game rather than shipping a partial/uncertain roster."
+    }
+  ]
+}

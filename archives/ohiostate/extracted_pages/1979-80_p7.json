@@ -1,0 +1,43 @@
+{
+  "page": 7,
+  "games": [
+    {
+      "date": "unknown",
+      "opponent": "Louisville Cardinals",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 65,
+          "players": [
+            {"name": "Jim Smith", "fg": "1-2", "ft": "0-0", "reb": 1, "pf": 3, "ast": 2, "to": 1, "pts": 2, "min": 30},
+            {"name": "Clark Kellogg", "fg": "5-12", "ft": "2-2", "reb": 8, "pf": 2, "ast": 1, "to": 2, "blk": 1, "pts": 12, "min": 39},
+            {"name": "Herb Williams", "fg": "9-17", "ft": "2-5", "reb": 6, "pf": 3, "ast": 0, "to": 0, "stl": 3, "pts": 20, "min": 40},
+            {"name": "Kelvin Ramsey", "fg": "9-16", "ft": "3-4", "reb": 4, "pf": 3, "ast": 10, "to": 4, "stl": 4, "pts": 21, "min": 30},
+            {"name": "Carter Scott", "fg": "1-4", "ft": "0-0", "reb": 1, "pf": 3, "ast": 0, "to": 2, "pts": 2, "min": 18},
+            {"name": "Larry Higgins", "fg": "0-1", "ft": "0-0", "reb": 2, "pf": 2, "ast": 2, "to": 2, "pts": 0, "min": 15},
+            {"name": "Tony Hall", "fg": "2-3", "ft": "0-0", "reb": 0, "pf": 2, "ast": 0, "to": 1, "pts": 4, "min": 6},
+            {"name": "Jim Ellinghausen", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 1, "ast": 0, "to": 0, "pts": 0, "min": 9},
+            {"name": "Todd Penn", "fg": "1-2", "ft": "2-2", "reb": 0, "pf": 4, "ast": 1, "to": 4, "pts": 4, "min": 11},
+            {"name": "Cliff Kirchner", "fg": "0-1", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 0, "pts": 0, "min": 1},
+            {"name": "Granville Walters", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 0, "pts": 0, "min": 1}
+          ]
+        },
+        {
+          "name": "Louisville Cardinals",
+          "score": 75,
+          "players": [
+            {"name": "Wiley Brown", "fg": "4-7", "ft": "0-0", "reb": 1, "pf": 2, "ast": 1, "to": 2, "pts": 8, "min": 23},
+            {"name": "Derek Smith", "fg": "7-12", "ft": "4-5", "reb": 9, "pf": 1, "ast": 3, "to": 2, "blk": 2, "pts": 18, "min": 38},
+            {"name": "Rodney McCray", "fg": "4-5", "ft": "2-2", "reb": 9, "pf": 2, "ast": 2, "to": 2, "pts": 10, "min": 35},
+            {"name": "Jerry Eaves", "fg": "3-7", "ft": "5-7", "reb": 2, "pf": 2, "ast": 3, "to": 2, "pts": 11, "min": 30},
+            {"name": "Darrell Griffith", "fg": "8-14", "ft": "3-4", "reb": 6, "pf": 3, "ast": 9, "to": 4, "blk": 1, "stl": 2, "pts": 19, "min": 36},
+            {"name": "Roger Burkman", "fg": "1-1", "ft": "2-3", "reb": 4, "pf": 3, "ast": 3, "to": 1, "blk": 3, "pts": 4, "min": 19},
+            {"name": "Poncho Wright", "fg": "2-5", "ft": "1-3", "reb": 1, "pf": 2, "ast": 0, "to": 1, "pts": 5, "min": 10}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

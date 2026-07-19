@@ -1,0 +1,9 @@
+{
+  "page": 27,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page contains a typed official box score (Ohio State vs Michigan State, March 3, 1991, St. John Arena) but the scan is cropped at the right margin, cutting off the MIN/attendance columns and leaving several digits ambiguous (e.g., Steigenga and Peplowski rows have stray/garbled characters, Smith's FT makes are ambiguous between 0-1 and 1-1). Attempting to reconcile individual player point totals against the team final scores (MSU 64, OSU 65) required guessing at ambiguous digits rather than confidently reading them, so this game is skipped per the no-guessing rule rather than risk an inaccurate checksum-forced transcription."
+    }
+  ]
+}

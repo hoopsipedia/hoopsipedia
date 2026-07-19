@@ -1,0 +1,9 @@
+{
+  "page": 29,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Official NCAA box score, Ohio State (visitors) @ Iowa (home), 1991-03-10, Carver-Hawkeye Arena, final Ohio State 69 - Iowa 80. Ohio State's player lines were legible and cross-checked against the team FG%/3FG%/FT% summary lines (FG 27-56, 3FG 4-11, FT 11-18): individual points (Jackson 24, Lee 6, Carter 7, Baker 6, Brown 15, Jent 9, Robinson 0, Skelton 2, Davis 0) sum to exactly 69, matching the final score. However, Iowa's (home team) player rows have FT attempts, rebound splits, and several point values that are smudged/overlapped by the printed shooting-percentage annotations and could not be reconciled with the final score of 80 (best-effort reconstruction using the printed FG/FT team totals came up short by ~2 points, indicating at least one misread digit). Since a game requires both teams' lines to be confidently checksummed and only one PDF read pass is allowed, the whole game is skipped rather than guessing Iowa's box score."
+    }
+  ]
+}

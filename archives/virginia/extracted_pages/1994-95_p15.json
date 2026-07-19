@@ -1,0 +1,42 @@
+{
+  "page": 15,
+  "games": [
+    {
+      "date": "1995-01-22",
+      "opponent": "Georgia Tech",
+      "teams": [
+        {
+          "name": "Georgia Tech",
+          "score": 85,
+          "players": [
+            {"name": "James Forrest", "min": 43, "fg": "9-21", "ft": "11-13", "reb": 11, "ast": 2, "pf": 4, "to": 2, "blk": 1, "stl": 1, "pts": 29},
+            {"name": "Matt Harpring", "min": 48, "fg": "3-5", "tp": "0-1", "ft": "2-4", "reb": 9, "ast": 3, "pf": 4, "to": 1, "stl": 1, "pts": 8},
+            {"name": "Eddie Elisma", "min": 20, "fg": "1-5", "reb": 5, "pf": 2, "to": 1, "blk": 3, "pts": 2},
+            {"name": "Drew Barry", "min": 49, "fg": "2-6", "tp": "0-2", "ft": "2-2", "reb": 7, "ast": 13, "pf": 2, "to": 5, "blk": 2, "stl": 2, "pts": 6},
+            {"name": "Travis Best", "min": 43, "fg": "6-18", "tp": "1-5", "ft": "7-12", "reb": 4, "ast": 3, "pf": 3, "to": 3, "blk": 1, "stl": 1, "pts": 20},
+            {"name": "Michael Maddox", "min": 37, "fg": "7-12", "tp": "2-2", "ft": "2-4", "reb": 9, "pf": 4, "stl": 1, "pts": 18},
+            {"name": "C.J. Williams", "min": 10, "fg": "1-1", "ast": 1, "stl": 1, "pts": 2},
+            {"name": "Bucky Hodge", "min": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Virginia Cavaliers",
+          "score": 88,
+          "players": [
+            {"name": "Junior Burrough", "min": 39, "fg": "8-22", "ft": "3-3", "reb": 13, "ast": 4, "pf": 4, "to": 1, "blk": 1, "pts": 19},
+            {"name": "Jamal Robinson", "min": 22, "fg": "3-7", "tp": "1-2", "ft": "3-4", "reb": 5, "ast": 1, "pf": 3, "to": 1, "stl": 1, "pts": 10},
+            {"name": "Chris Alexander", "min": 17, "ft": "0-2", "reb": 5, "pf": 0, "ast": 3, "to": 2, "blk": 2, "pts": 0},
+            {"name": "Cory Alexander", "min": 48, "fg": "10-16", "tp": "4-8", "reb": 5, "ast": 7, "pf": 3, "to": 5, "stl": 2, "pts": 24},
+            {"name": "Harold Deane", "min": 43, "fg": "2-12", "tp": "0-4", "ft": "6-7", "reb": 3, "ast": 4, "pf": 4, "to": 3, "blk": 1, "pts": 10},
+            {"name": "Norman Nolan", "min": 4, "fg": "1-1", "pts": 2},
+            {"name": "Jason Williford", "min": 26, "fg": "3-10", "tp": "1-2", "ft": "0-1", "reb": 7, "pf": 3, "to": 1, "pts": 7},
+            {"name": "Yuri Barnes", "min": 22, "fg": "2-4", "ft": "1-2", "reb": 7, "pf": 2, "to": 2, "pts": 5},
+            {"name": "Curtis Staples", "min": 29, "fg": "4-9", "tp": "3-8", "reb": 2, "pf": 3, "pts": 11}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

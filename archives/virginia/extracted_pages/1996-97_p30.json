@@ -1,0 +1,11 @@
+{
+  "page": 30,
+  "games": [],
+  "skipped": [
+    {
+      "date": "1997-03-07",
+      "opponent": "North Carolina",
+      "reason": "Official NCAA box score (Virginia vs North Carolina, Greensboro NC, final 68-78) is typed and mostly legible, but the Virginia (visitors) bench row for Colin Ducharme (#52) contains an internally impossible reading (FT made > FT attempted) and the printed team totals cannot be reconciled with the sum of individual player point totals (players sum to 67 vs. printed team total of 68; team 3PA total of 32 also does not reconcile with individual 3PA figures for the starters). Cross-checked via column-sum reconstruction (which worked cleanly for North Carolina, whose players sum to exactly 78 = printed team total), but Virginia's discrepancy could not be resolved without guessing at the Ducharme row's FT/FTA/OR/DR/PTS values, and a second full-page read did not improve legibility. Per instructions, skipping rather than guessing since the Virginia team checksum fails."
+    }
+  ]
+}

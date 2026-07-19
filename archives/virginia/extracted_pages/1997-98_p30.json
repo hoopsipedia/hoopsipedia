@@ -1,0 +1,47 @@
+{
+  "page": 30,
+  "games": [
+    {
+      "date": "1998-03-05",
+      "opponent": "Duke",
+      "location": "Greensboro, N.C.",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 41,
+          "players": [
+            {"name": "Willie Dersch", "min": 30, "fg": "2-3", "tp": "0-1", "ft": "0-0", "reb": 3, "ast": 1, "to": 2, "blk": 0, "stl": 0, "pf": 3, "pts": 4},
+            {"name": "Norman Nolan", "min": 39, "fg": "6-14", "tp": "0-0", "ft": "1-3", "reb": 15, "ast": 1, "to": 3, "blk": 0, "stl": 0, "pf": 4, "pts": 13},
+            {"name": "Colin Ducharme", "min": 12, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 2, "ast": 1, "to": 1, "blk": 1, "stl": 0, "pf": 5, "pts": 0},
+            {"name": "Curtis Staples", "min": 37, "fg": "3-13", "tp": "3-13", "ft": "2-4", "reb": 6, "ast": 2, "to": 3, "blk": 2, "stl": 1, "pf": 2, "pts": 11},
+            {"name": "Donald Hand", "min": 35, "fg": "4-8", "tp": "2-3", "ft": "0-2", "reb": 2, "ast": 2, "to": 6, "blk": 0, "stl": 0, "pf": 1, "pts": 10},
+            {"name": "Kris Hunter", "min": 19, "fg": "1-6", "tp": "0-0", "ft": "0-0", "reb": 5, "ast": 0, "to": 1, "blk": 1, "stl": 0, "pf": 0, "pts": 2},
+            {"name": "Monte Marcaccini", "min": 6, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "to": 2, "blk": 0, "stl": 0, "pf": 0, "pts": 0},
+            {"name": "Chezley Watson", "min": 7, "fg": "0-2", "tp": "0-0", "ft": "0-0", "pts": 0},
+            {"name": "Craig McAndrew", "min": 10, "fg": "0-1", "tp": "0-0", "ft": "1-2", "reb": 2, "ast": 1, "to": 0, "blk": 0, "stl": 0, "pf": 4, "pts": 1},
+            {"name": "Michael Curtis", "min": 4, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pf": 0, "pts": 0},
+            {"name": "Peter McLaughlin", "min": 1, "fg": "0-0", "tp": "0-0", "ft": "0-0", "pts": 0}
+          ]
+        },
+        {
+          "name": "Duke Blue Devils",
+          "score": 63,
+          "players": [
+            {"name": "Roshown McLeod", "min": 30, "fg": "5-16", "tp": "0-3", "ft": "4-4", "reb": 4, "ast": 1, "to": 1, "blk": 1, "stl": 1, "pf": 3, "pts": 14},
+            {"name": "Shane Battier", "min": 23, "fg": "4-5", "tp": "0-0", "ft": "1-3", "reb": 6, "ast": 0, "to": 3, "blk": 1, "stl": 2, "pf": 2, "pts": 9},
+            {"name": "Elton Brand", "min": 23, "fg": "2-6", "tp": "0-0", "ft": "0-1", "reb": 5, "ast": 0, "to": 1, "blk": 0, "stl": 2, "pf": 3, "pts": 4},
+            {"name": "Steve Wojciechowski", "min": 28, "fg": "1-5", "tp": "1-5", "ft": "0-0", "reb": 3, "ast": 3, "to": 0, "blk": 2, "stl": 0, "pf": 0, "pts": 3},
+            {"name": "Trajan Langdon", "min": 28, "fg": "3-11", "tp": "2-3", "ft": "2-2", "reb": 4, "ast": 0, "to": 0, "blk": 0, "stl": 1, "pf": 3, "pts": 10},
+            {"name": "Chris Carrawell", "min": 20, "fg": "0-4", "tp": "0-0", "ft": "1-2", "reb": 2, "ast": 0, "to": 0, "blk": 1, "stl": 0, "pf": 0, "pts": 1},
+            {"name": "Chris Burgess", "min": 15, "fg": "3-5", "tp": "0-0", "ft": "3-6", "reb": 9, "ast": 0, "to": 0, "blk": 0, "stl": 1, "pf": 1, "pts": 9},
+            {"name": "William Avery", "min": 21, "fg": "4-6", "tp": "1-3", "ft": "2-2", "reb": 2, "ast": 4, "to": 2, "blk": 0, "stl": 0, "pf": 3, "pts": 11},
+            {"name": "Mike Chappell", "min": 8, "fg": "0-1", "tp": "0-0", "ft": "0-0", "reb": 3, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pf": 1, "pts": 0},
+            {"name": "Ricky Price", "min": 4, "fg": "1-1", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pf": 0, "pts": 2}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

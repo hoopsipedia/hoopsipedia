@@ -1,0 +1,45 @@
+{
+  "page": 10,
+  "games": [
+    {
+      "date": "1995-12-29",
+      "opponent": "Boston University",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 95,
+          "players": [
+            {"name": "Kenny Thomas", "min": 33, "fg": "5-6", "ft": "6-6", "reb": 7, "ast": 4, "pf": 3, "to": 4, "stl": 0, "blk": 0, "pts": 16},
+            {"name": "Charles Smith", "min": 36, "fg": "7-14", "tp": "3-6", "ft": "4-6", "reb": 5, "ast": 3, "pf": 3, "to": 4, "stl": 0, "blk": 0, "pts": 21},
+            {"name": "Kavossy Franklin", "min": 13, "fg": "0-3", "tp": "0-1", "ft": "2-2", "reb": 0, "ast": 3, "pf": 1, "to": 2, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Clayton Shields", "min": 21, "fg": "3-6", "tp": "2-2", "ft": "2-2", "reb": 9, "ast": 1, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 10},
+            {"name": "Royce Olney", "min": 34, "fg": "3-5", "tp": "1-3", "ft": "4-4", "reb": 1, "ast": 6, "pf": 0, "to": 5, "stl": 4, "blk": 0, "pts": 11},
+            {"name": "David Gibson", "min": 27, "fg": "3-5", "tp": "1-2", "ft": "5-6", "reb": 4, "ast": 3, "pf": 4, "to": 4, "stl": 1, "blk": 0, "pts": 12},
+            {"name": "Shawn Simpson", "min": 14, "fg": "3-5", "ft": "1-2", "reb": 3, "ast": 0, "pf": 0, "to": 1, "stl": 1, "blk": 1, "pts": 7},
+            {"name": "Greg Schornstein", "min": 15, "fg": "3-3", "tp": "2-2", "ft": "1-2", "reb": 3, "ast": 1, "pf": 4, "to": 0, "stl": 0, "blk": 0, "pts": 9},
+            {"name": "Daniel Santiago", "min": 7, "fg": "2-2", "ft": "3-4", "reb": 2, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 7}
+          ]
+        },
+        {
+          "name": "Boston University",
+          "score": 83,
+          "players": [
+            {"name": "B.J. Fearrington", "min": 14, "fg": "2-2", "ft": "1-2", "reb": 2, "ast": 2, "pf": 3, "to": 0, "stl": 1, "blk": 0, "pts": 5},
+            {"name": "LeVar Folk", "min": 31, "fg": "4-12", "tp": "0-1", "ft": "0-0", "reb": 2, "ast": 3, "pf": 3, "to": 1, "stl": 2, "blk": 0, "pts": 8},
+            {"name": "Joey Beard", "min": 28, "fg": "4-9", "tp": "0-1", "ft": "2-3", "reb": 5, "ast": 0, "pf": 5, "to": 0, "stl": 2, "blk": 0, "pts": 10},
+            {"name": "Tunji Awojobi", "min": 40, "fg": "9-18", "ft": "4-6", "reb": 6, "ast": 3, "pf": 3, "to": 3, "stl": 3, "blk": 3, "pts": 22},
+            {"name": "Raja Bell", "min": 34, "fg": "8-15", "tp": "2-4", "ft": "7-7", "reb": 3, "ast": 0, "pf": 4, "to": 4, "stl": 1, "blk": 0, "pts": 25},
+            {"name": "Billy Beal", "min": 24, "fg": "3-11", "tp": "3-9", "ft": "0-0", "reb": 1, "ast": 1, "pf": 3, "to": 2, "stl": 0, "blk": 0, "pts": 9},
+            {"name": "Steve Ehretsman", "min": 17, "fg": "0-1", "tp": "0-1", "ft": "1-2", "reb": 2, "ast": 1, "pf": 3, "to": 1, "stl": 1, "blk": 0, "pts": 1},
+            {"name": "Greg Hamond", "min": 3, "fg": "0-0", "ft": "0-2", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Yusef Delnyeffitte", "min": 9, "fg": "0-1", "ft": "3-4", "reb": 2, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 3},
+            {"name": "Ken Michin", "min": 0, "fg": "0-1", "ft": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": [],
+  "notes": "Player 'pts' values taken directly from the sheet's printed TP (points) column; both team totals checksum exactly (NM 95, BU 83). Boston U's Fearrington had a MIN cell that visually read as '84' (impossible for a 40-min regulation game with no OT); corrected to 14, the only value that makes Boston U's individual minutes sum to the printed team total of 200 (New Mexico's minutes summed to exactly 200 with no adjustment, confirming the method). Yusef Delnyeffitte's surname spelling is uncertain (handwritten, could be Delayeffitte/Delnyeffitte) - transcribed best guess."
+}

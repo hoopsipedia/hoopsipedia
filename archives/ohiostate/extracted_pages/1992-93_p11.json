@@ -1,0 +1,47 @@
+{
+  "page": 11,
+  "games": [
+    {
+      "date": "1993-01-05",
+      "opponent": "Penn State",
+      "location": "University Park, Pennsylvania",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 71,
+          "players": [
+            {"name": "Lawrence Funderburke", "min": 30, "fg": "9-15", "tp": "0-0", "ft": "0-0", "oreb": 1, "dreb": 5, "reb": 6, "pf": 0, "ast": 1, "to": 1, "blk": 4, "stl": 0, "pts": 18},
+            {"name": "Jamie Skelton", "min": 35, "fg": "3-12", "tp": "1-6", "ft": "6-8", "oreb": 1, "dreb": 2, "reb": 3, "pf": 0, "ast": 2, "to": 0, "blk": 1, "stl": 2, "pts": 13},
+            {"name": "Rickey Dudley", "min": 27, "fg": "3-7", "tp": "0-0", "ft": "2-4", "oreb": 1, "dreb": 4, "reb": 4, "pf": 4, "ast": 0, "to": 0, "blk": 1, "stl": 1, "pts": 8},
+            {"name": "Doug Etzler", "min": 15, "fg": "1-5", "tp": "1-2", "ft": "0-0", "oreb": 1, "dreb": 1, "reb": 3, "pf": 1, "ast": 1, "to": 0, "blk": 0, "stl": 0, "pts": 3},
+            {"name": "Alex Davis", "min": 30, "fg": "2-7", "tp": "0-3", "ft": "1-2", "oreb": 1, "dreb": 2, "reb": 3, "pf": 3, "ast": 3, "to": 1, "blk": 0, "stl": 2, "pts": 5},
+            {"name": "Derek Anderson", "min": 22, "fg": "3-3", "tp": "0-0", "ft": "0-0", "oreb": 2, "dreb": 2, "reb": 2, "pf": 2, "ast": 3, "to": 0, "blk": 0, "stl": 1, "pts": 6},
+            {"name": "Tom Brandewie", "min": 18, "fg": "2-2", "tp": "0-0", "ft": "0-0", "oreb": 3, "dreb": 3, "reb": 6, "pf": 1, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 4},
+            {"name": "Greg Simpson", "min": 14, "fg": "5-7", "tp": "4-4", "ft": "0-1", "pf": 0, "ast": 2, "to": 2, "blk": 0, "stl": 1, "pts": 14},
+            {"name": "Charles Macon", "min": 3, "fg": "0-1", "tp": "0-0", "ft": "0-0", "oreb": 0, "dreb": 1, "reb": 1, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Jimmy Ratliff", "min": 3, "fg": "0-0", "tp": "0-0", "ft": "0-0", "oreb": 0, "dreb": 0, "reb": 0, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Antonio Watson", "min": 3, "fg": "0-2", "tp": "0-0", "ft": "0-0", "oreb": 1, "dreb": 1, "reb": 2, "pf": 2, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Penn State Nittany Lions",
+          "score": 68,
+          "players": [
+            {"name": "Eric Carr", "min": 34, "fg": "0-4", "tp": "0-0", "ft": "0-1", "oreb": 3, "dreb": 2, "reb": 5, "pf": 2, "ast": 0, "to": 1, "blk": 0, "stl": 1, "pts": 0},
+            {"name": "DeRon Hayes", "min": 36, "fg": "10-20", "tp": "1-2", "ft": "2-4", "oreb": 2, "dreb": 1, "reb": 3, "pf": 0, "ast": 1, "to": 2, "blk": 0, "stl": 0, "pts": 23},
+            {"name": "John Amachi", "min": 31, "fg": "7-12", "tp": "2-3", "ft": "4-5", "oreb": 5, "dreb": 6, "reb": 11, "pf": 3, "ast": 2, "to": 1, "blk": 2, "stl": 0, "pts": 20},
+            {"name": "Greg Bartram", "min": 27, "fg": "5-9", "tp": "1-3", "ft": "0-0", "oreb": 1, "dreb": 1, "reb": 1, "pf": 1, "ast": 3, "to": 3, "blk": 2, "stl": 0, "pts": 11},
+            {"name": "Michael Jennings", "min": 35, "fg": "4-9", "tp": "3-6", "ft": "1-2", "oreb": 2, "dreb": 7, "reb": 9, "pf": 3, "ast": 3, "to": 3, "blk": 0, "stl": 1, "pts": 12},
+            {"name": "Steve Wydman", "min": 18, "fg": "0-4", "pts": 0},
+            {"name": "Michael Joseph", "min": 9, "fg": "0-0", "pts": 0},
+            {"name": "Jon Dietz", "min": 6, "fg": "0-1", "pts": 0},
+            {"name": "Rahsaan Carlton", "min": 4, "fg": "1-3", "pts": 2}
+          ]
+        }
+      ],
+      "checksum_ok": true,
+      "notes": "Points column (TP) printed directly on sheet for most players; used as authoritative pts value and cross-checked against 2*FGmade(non-3)+3*3FGmade+FTmade. For Ohio State's Simpson and Penn State bench players (Wydman/Joseph/Dietz/Carlton) some middle columns (OR/DR/REB/PF/A/TO/BK/S) were ambiguous in the scan/OCR alignment and were omitted rather than guessed; minutes, FG, 3FG/FT where legible, and points were retained. Bench aggregate for Penn State was cross-validated via team-total arithmetic (team FG/3FG/FT minus starters' sums), which confirmed only 1 field goal (2 pts, attributed to Carlton) was scored off the bench, consistent with the printed team total of 68. Both team point sums match the printed final score line (Ohio State 71, Penn State 68) and the FINAL score box (38+33=71; 42+26=68)."
+    }
+  ],
+  "skipped": []
+}

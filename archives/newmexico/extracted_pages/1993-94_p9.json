@@ -1,0 +1,46 @@
+{
+  "page": 9,
+  "games": [
+    {
+      "date": "1993-12-29",
+      "opponent": "Middle Tennessee State",
+      "site": "Albuquerque, NM",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 69,
+          "players": [
+            {"name": "Frank Willis", "min": 7, "fg": "0-2", "ft": "0-0", "tp": "0-0", "reb": 3, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 1, "pts": 0},
+            {"name": "Charles Smith", "min": 25, "fg": "5-10", "ft": "0-0", "tp": "2-6", "reb": 3, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 1, "pts": 12},
+            {"name": "Greg Brown", "min": 37, "fg": "3-11", "ft": "3-4", "tp": "0-4", "reb": 2, "ast": 5, "pf": 3, "to": 2, "stl": 0, "blk": 0, "pts": 9},
+            {"name": "Marlow White", "min": 29, "fg": "6-10", "ft": "1-3", "tp": "3-6", "reb": 6, "ast": 2, "pf": 3, "to": 2, "stl": 1, "blk": 1, "pts": 16},
+            {"name": "Scott Pritchett", "min": 18, "fg": "1-1", "ft": "2-4", "tp": "0-0", "reb": 2, "ast": 2, "pf": 1, "to": 2, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Lewis LaMar", "min": 33, "fg": "0-1", "ft": "8-8", "tp": "0-0", "reb": 15, "ast": 1, "pf": 2, "to": 4, "stl": 1, "blk": 2, "pts": 8},
+            {"name": "Canonchet Neves", "min": 37, "fg": "4-13", "ft": "4-4", "tp": "4-12", "reb": 5, "ast": 2, "pf": 3, "to": 1, "stl": 0, "blk": 2, "pts": 16},
+            {"name": "J.J. Griego", "min": 11, "fg": "1-1", "ft": "2-3", "tp": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Greg Schornstein", "min": 3, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 2, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Middle Tennessee State Blue Raiders",
+          "score": 56,
+          "players": [
+            {"name": "Tim Gaither", "min": 34, "fg": "7-11", "ft": "4-4", "tp": "1-2", "reb": 4, "ast": 3, "pf": 2, "to": 0, "stl": 3, "blk": 0, "pts": 19},
+            {"name": "Jevon Banks", "min": 19, "fg": "1-5", "ft": "0-0", "tp": "1-2", "reb": 2, "ast": 1, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 3},
+            {"name": "Kenon Wright", "min": 12, "fg": "0-1", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 1, "pf": 2, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Milton Dean", "min": 37, "fg": "7-20", "ft": "5-6", "tp": "1-4", "reb": 7, "ast": 3, "pf": 4, "to": 1, "stl": 2, "blk": 0, "pts": 20},
+            {"name": "Corey Norwood", "min": 14, "fg": "1-4", "ft": "0-0", "tp": "0-1", "reb": 3, "ast": 0, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Paul Washington", "min": 19, "fg": "1-5", "ft": "0-0", "tp": "1-4", "reb": 5, "ast": 1, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 3},
+            {"name": "Shawn Driskill", "min": 8, "fg": "1-2", "ft": "0-0", "tp": "0-1", "reb": 2, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Chad Wampler", "min": 21, "fg": "1-7", "ft": "0-0", "tp": "1-3", "reb": 1, "ast": 1, "pf": 3, "to": 0, "stl": 0, "blk": 0, "pts": 3},
+            {"name": "Robert Clark", "min": 18, "fg": "1-5", "ft": "0-1", "tp": "0-1", "reb": 4, "ast": 0, "pf": 4, "to": 0, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Brent Secrest", "min": 18, "fg": "1-1", "ft": "0-0", "tp": "0-0", "reb": 2, "ast": 0, "pf": 2, "to": 1, "stl": 0, "blk": 0, "pts": 2}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": [],
+  "notes": "Points computed via pts = 2*(fg_made - tp_made) + 3*tp_made + ft_made, cross-checked against the sheet's own TP column (both matched for every player). Stephon Jiles, Rodney Sanders, and Eric Thomas listed on the roster with no stats recorded (did not play) and were omitted. Both team checksums pass exactly (New Mexico 69, Middle Tennessee State 56)."
+}

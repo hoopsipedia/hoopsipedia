@@ -1,0 +1,9 @@
+{
+  "page": 15,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Handwritten official scoresheet (Ohio State vs Michigan) is a real box score but multiple player rows are too faded/illegible to transcribe confidently, including a full row for Ohio State (Williams/Herb, the starting center and a likely major scorer) and a substitute row (Wingerhausen), plus several Michigan rows (e.g., Bodnar/Marty). Team-level splits (FG 32-64, FT 10-14, REB 34) are legible, implying a team point total of about 74 via 2*FG+FT, but the sum of legible individual TP values (8+14+16+12+0+3=53 for OSU) falls well short, meaning the missing/illegible rows carry ~21 points that cannot be read with confidence. Rather than guess player stat lines to force a checksum match, skipping per instructions to be ruthless about illegible data."
+    }
+  ]
+}

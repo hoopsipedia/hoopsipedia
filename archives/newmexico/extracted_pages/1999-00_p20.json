@@ -1,0 +1,9 @@
+{
+  "page": 20,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "01/29/00 Brigham Young @ New Mexico (BYU 69, New Mexico 78, Albuquerque NM): visiting team (BYU) box score is clean and typed, checksums correctly (player pts sum = 69 = final score). However the home team (New Mexico) rows have garbled/overlapping digit clusters in the FG/FGA/FT/FTA columns (e.g. '3 83750 0 3 5600' for Walker, '7 116361 2 12 148571' for Long, '1 6 1671 4' for Henry, '5 7714 0 0 4 5800' for Hannah) that appear to be correction marks or scan bleed-through overlapping the printed numbers. Player points (TP) column and rebound/assist/steal/block/minute columns are legible and internally consistent (e.g. Walker's TP=9 matches 2*FG(3)+FT(3) with 3PT=0), but FGA and FTA (attempt) values cannot be confidently disambiguated from the noise digits, and the schema requires reliable made-attempted pairs. Per instructions to be ruthless about skipping rather than guessing, and since a complete game requires both teams' player lines, the entire game is skipped rather than transcribing New Mexico's attempts speculatively."
+    }
+  ]
+}

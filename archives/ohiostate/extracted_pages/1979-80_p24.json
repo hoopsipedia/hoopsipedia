@@ -1,0 +1,9 @@
+{
+  "page": 24,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Feb 16, 1980: Ohio State vs Illinois, final score Illinois 57 - Ohio State 71 (per score-by-periods 22+35 / 31+40, and Ohio State FG30*2+FT11=71). Illinois side checksums cleanly: sum of the 11 player TP lines = 57, matching the team total and final score exactly, so that side is transcribable. However the Ohio State (home) side does not checksum: summing the legible player point lines (computed as 2*FG made + FT made for each of the 12 clearly-named players: Smith, Kellogg, Williams, Scott, Ramsey, Huggins, Waiters, Miller, Ellinghausen, Kirchner, Penn, Sims) yields 67, four short of the team total of 71 shown in the TOTALS row and the final score. The handwriting for several OSU cells is ambiguous (e.g. Smith, Jim's PF cell reads as an impossible value like '8', and reb/pf columns for that row may be transposed), and there are three additional crossed-out/illegible marginal name entries near the bottom of the OSU roster ('Wong, Johnson', 'Tony, Bryant', 'Mike, Mary') with numeric strings that don't cleanly parse as stat columns -- these may hide the missing 4 points or may be void scorekeeper corrections. Re-read the page once (the one allowed re-read) and the ambiguity persisted, so per instructions this game is skipped in full (both teams) rather than transcribing one team with a failing checksum on the other."
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "page": 3,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page contains a real handwritten NCAA official box score (Ohio State at Stetson University, Dec 8 1979, Edmunds Center, DeLand FL) but the handwriting is faint, cursive, and heavily overwritten/crossed-out in the Field Goals/Free Throws/Rebounds/Points columns for both teams. Individual digits (e.g. made-attempted pairs, points totals) cannot be read with confidence, so per-player stats and the team-vs-player-sum checksum cannot be reliably reconstructed without guessing. Skipping rather than transcribing unreliable values."
+    }
+  ]
+}

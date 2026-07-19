@@ -1,0 +1,46 @@
+{
+  "page": 20,
+  "games": [
+    {
+      "date": "1999-01-23",
+      "opponent": "UTEP Miners",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 49,
+          "players": [
+            {"name": "John Robinson II", "min": 31, "fg": "2-7", "tp": "2-6", "ft": "1-2", "reb": 1, "ast": 3, "pf": 2, "to": 8, "stl": 0, "blk": 1, "pts": 7},
+            {"name": "Damion Walker", "min": 15, "fg": "2-3", "tp": "0-0", "ft": "1-2", "reb": 2, "ast": 0, "pf": 1, "to": 2, "stl": 0, "blk": 0, "pts": 5},
+            {"name": "Kenny Thomas", "min": 40, "fg": "5-13", "tp": "0-4", "ft": "6-6", "reb": 9, "ast": 0, "pf": 3, "to": 5, "stl": 2, "blk": 2, "pts": 16},
+            {"name": "Lamont Long", "min": 40, "fg": "3-7", "tp": "1-2", "ft": "3-4", "reb": 7, "ast": 4, "pf": 1, "to": 1, "stl": 2, "blk": 0, "pts": 10},
+            {"name": "Kevin Henry", "min": 23, "fg": "2-6", "tp": "2-6", "ft": "0-0", "reb": 0, "ast": 1, "pf": 4, "to": 0, "stl": 1, "blk": 0, "pts": 6},
+            {"name": "Greg Davis", "min": 6, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 1, "pf": 5, "to": 0, "stl": 1, "blk": 0, "pts": 0},
+            {"name": "Tim Lightfoot", "min": 26, "fg": "2-7", "tp": "1-5", "ft": "0-0", "reb": 1, "ast": 2, "pf": 1, "to": 0, "stl": 2, "blk": 0, "pts": 5},
+            {"name": "Brian Smith", "min": 14, "fg": "0-2", "tp": "0-1", "ft": "0-0", "reb": 1, "ast": 0, "pf": 3, "to": 1, "stl": 1, "blk": 0, "pts": 0},
+            {"name": "Roland Hannah", "min": 5, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "UTEP Miners",
+          "score": 67,
+          "players": [
+            {"name": "Rico Nelson", "min": 24, "fg": "4-8", "tp": "3-7", "ft": "1-1", "reb": 1, "ast": 1, "pf": 0, "to": 1, "stl": 1, "blk": 0, "pts": 12},
+            {"name": "Brandon Wolfram", "min": 37, "fg": "6-8", "tp": "0-0", "ft": "4-5", "reb": 9, "ast": 2, "pf": 3, "to": 3, "stl": 3, "blk": 0, "pts": 16},
+            {"name": "Sharif Fajardo", "min": 32, "fg": "2-7", "tp": "0-0", "ft": "1-2", "reb": 5, "ast": 0, "pf": 3, "to": 4, "stl": 1, "blk": 2, "pts": 5},
+            {"name": "William Smith", "min": 36, "fg": "2-4", "tp": "1-2", "ft": "2-5", "reb": 9, "ast": 5, "pf": 3, "to": 5, "stl": 1, "blk": 0, "pts": 7},
+            {"name": "Winford McRae", "min": 30, "fg": "2-3", "tp": "1-2", "ft": "4-6", "reb": 2, "ast": 8, "pf": 1, "to": 0, "stl": 1, "blk": 0, "pts": 9},
+            {"name": "Parker Vandivort", "min": 0, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Victor Luces", "min": 5, "fg": "0-1", "tp": "0-1", "ft": "1-2", "reb": 0, "ast": 0, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 1},
+            {"name": "Jarvis Mullahon", "min": 26, "fg": "4-11", "tp": "3-8", "ft": "2-4", "reb": 1, "ast": 0, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 13},
+            {"name": "Jose Escobedo", "min": 4, "fg": "0-1", "tp": "0-1", "ft": "2-2", "reb": 1, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Jon Bomba", "min": 6, "fg": "1-3", "tp": "0-0", "ft": "0-0", "reb": 3, "ast": 0, "pf": 4, "to": 0, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Daomond Gregory", "min": 0, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Javier Mendoza", "min": 0, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

@@ -1,0 +1,51 @@
+{
+  "page": 7,
+  "games": [
+    {
+      "date": "1993-12-18",
+      "opponent": "North Carolina",
+      "site": "Dean E. Smith Center, Chapel Hill, N.C.",
+      "notes": "Score-by-periods total for North Carolina appears to be 33+42=75 (a digit in the second-half score was ambiguous, read as either 48 or 42); 75 is used because it is the only value that satisfies the player-points checksum. Ohio State's Jamie Skelton TP was ambiguous between 27 and 29; 27 was used because it satisfies both the individual FG/3FG/FT formula (2*(10-4)+3*4+3=27) and the team checksum. Several North Carolina bench players (Zwikker, McInnis, Landry, Davis) had illegible minute/rebound/assist/steal/block entries that appeared to be zero/blank; only name and points (0) are reported for them to avoid inventing values.",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 68,
+          "players": [
+            {"name": "Derek Anderson", "min": 31, "fg": "6-19", "tp": "0-1", "ft": "2-2", "reb": 6, "ast": 4, "pf": 2, "to": 7, "blk": 0, "stl": 4, "pts": 14},
+            {"name": "Rickey Dudley", "min": 28, "fg": "0-2", "tp": "0-0", "ft": "0-0", "reb": 6, "ast": 1, "pf": 4, "to": 2, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Nate Wilbourne", "min": 16, "fg": "1-4", "tp": "0-0", "ft": "0-0", "reb": 4, "ast": 0, "pf": 4, "to": 0, "blk": 0, "stl": 1, "pts": 2},
+            {"name": "Greg Simpson", "min": 28, "fg": "5-11", "tp": "3-3", "ft": "0-0", "reb": 3, "ast": 4, "pf": 3, "to": 4, "blk": 0, "stl": 3, "pts": 11},
+            {"name": "Jamie Skelton", "min": 34, "fg": "10-25", "tp": "4-7", "ft": "3-3", "reb": 2, "ast": 0, "pf": 2, "to": 5, "blk": 0, "stl": 1, "pts": 27},
+            {"name": "Gerald Eaker", "min": 15, "fg": "2-6", "tp": "0-0", "ft": "3-4", "reb": 3, "ast": 0, "pf": 3, "to": 0, "blk": 0, "stl": 0, "pts": 7},
+            {"name": "Lawrence Funderburke", "min": 26, "fg": "2-3", "tp": "0-0", "ft": "0-2", "reb": 7, "ast": 2, "pf": 3, "to": 1, "blk": 0, "stl": 1, "pts": 4},
+            {"name": "Antonio Watson", "min": 15, "fg": "1-2", "tp": "0-0", "ft": "0-2", "reb": 4, "ast": 1, "pf": 2, "to": 0, "blk": 2, "stl": 2, "pts": 3},
+            {"name": "Jimmy Ratliff", "min": 3, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Charles Macon", "min": 2, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Otis Winston", "min": 2, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0}
+          ],
+          "checksum_ok": true
+        },
+        {
+          "name": "North Carolina Tar Heels",
+          "score": 75,
+          "players": [
+            {"name": "Brian Reese", "min": 19, "fg": "4-6", "tp": "0-0", "ft": "1-2", "reb": 7, "ast": 2, "pf": 3, "to": 5, "blk": 0, "stl": 1, "pts": 9},
+            {"name": "Kevin Salvadori", "min": 24, "fg": "2-3", "tp": "0-0", "ft": "0-0", "reb": 5, "ast": 1, "pf": 3, "to": 1, "blk": 2, "stl": 2, "pts": 4},
+            {"name": "Eric Montross", "min": 24, "fg": "2-8", "tp": "0-0", "ft": "2-6", "reb": 5, "ast": 0, "pf": 3, "to": 1, "blk": 2, "stl": 2, "pts": 6},
+            {"name": "Donald Williams", "min": 33, "fg": "9-17", "tp": "2-6", "ft": "6-7", "reb": 1, "ast": 2, "pf": 0, "to": 4, "blk": 0, "stl": 3, "pts": 26},
+            {"name": "Derrick Phelps", "min": 26, "fg": "2-4", "tp": "0-0", "ft": "4-4", "reb": 5, "ast": 5, "pf": 2, "to": 2, "blk": 0, "stl": 4, "pts": 8},
+            {"name": "Rasheed Wallace", "min": 20, "fg": "2-6", "tp": "0-0", "ft": "0-0", "reb": 6, "ast": 3, "pf": 1, "to": 0, "blk": 0, "stl": 4, "pts": 4},
+            {"name": "Jerry Stackhouse", "min": 26, "fg": "5-9", "tp": "0-0", "ft": "5-7", "reb": 5, "ast": 4, "pf": 3, "to": 3, "blk": 0, "stl": 0, "pts": 15},
+            {"name": "Dante Calabria", "min": 15, "fg": "1-4", "tp": "0-2", "ft": "1-4", "reb": 5, "ast": 3, "pf": 3, "to": 0, "blk": 0, "stl": 2, "pts": 3},
+            {"name": "Serge Zwikker", "pts": 0},
+            {"name": "Jeff McInnis", "pts": 0},
+            {"name": "Pearce Landry", "pts": 0},
+            {"name": "Larry Davis", "pts": 0}
+          ],
+          "checksum_ok": true
+        }
+      ]
+    }
+  ],
+  "skipped": []
+}

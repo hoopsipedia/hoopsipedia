@@ -1,0 +1,45 @@
+{
+  "page": 10,
+  "games": [
+    {
+      "date": "1991-01-02",
+      "opponent": "Marquette",
+      "site": "Milwaukee, Wisconsin",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 94,
+          "players": [
+            {"name": "Bryant Stith", "min": 33, "fg": "9-14", "ft": "0-0", "tp": "2-4", "reb": 4, "ast": 1, "pf": 3, "to": 3, "stl": 2, "blk": 0, "pts": 20},
+            {"name": "Kenny Turner", "min": 33, "fg": "8-15", "ft": "9-10", "tp": "1-4", "reb": 12, "ast": 3, "pf": 3, "to": 3, "stl": 2, "blk": 0, "pts": 26},
+            {"name": "Ted Jeffries", "min": 17, "fg": "5-7", "ft": "4-6", "tp": "0-0", "reb": 5, "ast": 2, "pf": 4, "to": 0, "stl": 0, "blk": 0, "pts": 14},
+            {"name": "Anthony Oliver", "min": 31, "fg": "5-11", "ft": "2-2", "tp": "0-2", "reb": 2, "ast": 2, "pf": 3, "to": 0, "stl": 1, "blk": 0, "pts": 12},
+            {"name": "John Crotty", "min": 32, "fg": "4-9", "ft": "4-4", "tp": "4-7", "reb": 3, "ast": 11, "pf": 1, "to": 3, "stl": 3, "blk": 0, "pts": 16},
+            {"name": "Dirk Katstra", "min": 4, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Cornel Parker", "min": 17, "fg": "0-0", "ft": "5-6", "tp": "0-0", "reb": 3, "ast": 1, "pf": 5, "to": 2, "stl": 0, "blk": 0, "pts": 5},
+            {"name": "Matt Blundin", "min": 13, "fg": "0-1", "ft": "1-2", "tp": "0-0", "reb": 1, "ast": 0, "pf": 2, "to": 1, "stl": 0, "blk": 0, "pts": 1},
+            {"name": "Derrick Johnson", "min": 5, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Shawn Wilson", "min": 1, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Marquette Golden Eagles",
+          "score": 88,
+          "players": [
+            {"name": "Trevor Powell", "min": 32, "fg": "7-9", "ft": "2-4", "tp": "0-0", "reb": 10, "ast": 0, "pf": 2, "to": 1, "stl": 0, "blk": 0, "pts": 16},
+            {"name": "Ron Curry", "min": 37, "fg": "10-18", "ft": "3-5", "tp": "4-7", "reb": 9, "ast": 2, "pf": 4, "to": 1, "stl": 2, "blk": 2, "pts": 27},
+            {"name": "Damon Key", "min": 30, "fg": "3-9", "ft": "3-4", "tp": "0-0", "reb": 6, "ast": 2, "pf": 1, "to": 4, "stl": 2, "blk": 0, "pts": 9},
+            {"name": "Rob Logterman", "min": 20, "fg": "1-5", "ft": "4-4", "tp": "1-4", "reb": 2, "ast": 5, "pf": 3, "to": 2, "stl": 0, "blk": 0, "pts": 7},
+            {"name": "Mark Anglavar", "min": 23, "fg": "4-8", "ft": "0-0", "tp": "2-6", "reb": 2, "ast": 4, "pf": 4, "to": 1, "stl": 0, "blk": 0, "pts": 10},
+            {"name": "Keith Stewart", "min": 25, "fg": "2-10", "ft": "2-2", "tp": "2-5", "reb": 1, "ast": 5, "pf": 3, "to": 3, "stl": 0, "blk": 1, "pts": 8},
+            {"name": "Bruce Hayes", "min": 13, "fg": "1-1", "ft": "1-1", "tp": "0-0", "reb": 0, "ast": 1, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 3},
+            {"name": "Charles Brakes", "min": 8, "fg": "1-2", "ft": "0-0", "tp": "0-0", "reb": 1, "ast": 1, "pf": 0, "to": 2, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Jim McIlvaine", "min": 10, "fg": "2-3", "ft": "2-2", "tp": "0-0", "reb": 3, "ast": 0, "pf": 2, "to": 0, "stl": 0, "blk": 1, "pts": 6}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

@@ -1,0 +1,47 @@
+{
+  "page": 12,
+  "games": [
+    {
+      "date": "1995-01-11",
+      "opponent": "Clemson",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 61,
+          "players": [
+            {"name": "Burrough, Junior", "min": 26, "fg": "5-7", "ft": "2-3", "reb": 9, "ast": 2, "to": 2, "pf": 2, "pts": 12},
+            {"name": "Robinson, Jamal", "min": 24, "fg": "3-11", "tp": "1-7", "reb": 4, "ast": 3, "to": 1, "pts": 7},
+            {"name": "Alexander, Chris", "min": 21, "reb": 2, "ast": 1, "to": 1, "blk": 3, "pts": 0},
+            {"name": "Alexander, Cory", "min": 39, "fg": "6-12", "tp": "3-8", "ft": "1-2", "reb": 5, "ast": 3, "to": 4, "stl": 1, "pf": 1, "pts": 16},
+            {"name": "Deane, Harold", "min": 5, "reb": 1, "pts": 0},
+            {"name": "Staples, Curtis", "min": 32, "fg": "4-5", "tp": "4-5", "reb": 3, "ast": 2, "pf": 1, "pts": 12},
+            {"name": "Nolan, Norman", "min": 10, "fg": "1-3", "reb": 2, "pf": 3, "pts": 2},
+            {"name": "Barnes, Yuri", "min": 19, "fg": "1-2", "reb": 2, "stl": 1, "pf": 2, "pts": 2},
+            {"name": "Williford, Jason", "min": 19, "fg": "3-4", "tp": "1-1", "ft": "3-3", "reb": 6, "ast": 3, "pf": 2, "pts": 10},
+            {"name": "Curtis, Michael", "min": 1, "pts": 0},
+            {"name": "Watkins, Maurice", "min": 1, "pts": 0},
+            {"name": "Walton, Martin", "min": 1, "pts": 0},
+            {"name": "McLaughlin, Peter", "min": 1, "pts": 0},
+            {"name": "Ellsworth, Percy", "min": 1, "pts": 0}
+          ]
+        },
+        {
+          "name": "Clemson Tigers",
+          "score": 37,
+          "players": [
+            {"name": "Kelly, Andy", "min": 28, "fg": "1-5", "tp": "0-3", "reb": 2, "ast": 2, "to": 1, "pf": 3, "pts": 2},
+            {"name": "Buckner, Greg", "min": 28, "fg": "1-5", "tp": "0-2", "ft": "1-3", "reb": 5, "ast": 2, "to": 1, "blk": 2, "stl": 3, "pf": 3, "pts": 3},
+            {"name": "Iturbe, Iker", "min": 19, "fg": "1-5", "reb": 2, "stl": 1, "pts": 2},
+            {"name": "Martin, Bruce", "min": 34, "fg": "3-7", "tp": "1-4", "reb": 3, "pf": 2, "pts": 7},
+            {"name": "Code, Merl", "min": 34, "fg": "3-10", "tp": "1-5", "ft": "4-4", "reb": 2, "ast": 2, "to": 2, "stl": 3, "pf": 1, "pts": 11},
+            {"name": "Harder, Bill", "min": 24, "fg": "2-5", "tp": "2-3", "ft": "2-2", "reb": 3, "ast": 1, "pf": 3, "pts": 8},
+            {"name": "Ragland, Rayfield", "min": 28, "fg": "1-8", "tp": "1-4", "ft": "1-2", "reb": 7, "to": 1, "pf": 1, "pts": 4},
+            {"name": "Johnson, Danny", "min": 5, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

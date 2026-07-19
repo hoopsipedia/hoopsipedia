@@ -1,0 +1,9 @@
+{
+  "page": 31,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Official NCAA box score, Butler vs New Mexico, 1997-98 NCAA Tournament 1st Round, Lexington KY, date 03-13-98. Final score clearly legible (Score by Periods: Butler 24+38=62, New Mexico 31+48=79; also Second Chance Points and Off Turnovers footer lines are legible). However the per-player statistical columns (FG-FGA, 3FG-FGA, FT-FTA, rebounds, PF, TP, A, TO, BLK, S, MIN) are printed in very small, low-contrast, tightly packed digits on this scan and could not be read with enough confidence to reconstruct player lines that reliably pass a points checksum against the final scores (62 and 79). Rather than risk inventing/mis-assigning digits, the full game (including player lines) was skipped per instructions to be ruthless about illegible data."
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "page": 12,
+  "games": [
+    {
+      "date": "1992-01-14",
+      "opponent": "Indiana Hoosiers",
+      "site": "Assembly Hall, Bloomington, IN",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 83,
+          "players": [
+            {"name": "Chris Jent", "min": 34, "fg": "9-18", "tp": "0-2", "ft": "0-0", "reb": 5, "ast": 5, "pf": 1, "to": 3, "stl": 0, "blk": 1, "pts": 18},
+            {"name": "Jim Jackson", "min": 28, "fg": "12-19", "tp": "2-4", "ft": "5-6", "reb": 7, "ast": 0, "pf": 4, "to": 1, "stl": 1, "blk": 3, "pts": 31},
+            {"name": "Bill Robinson", "min": 5, "fg": "0-3", "tp": "0-0", "ft": "0-0", "reb": 2, "ast": 0, "pf": 4, "to": 0, "stl": 0, "blk": 1, "pts": 0},
+            {"name": "Mark Baker", "min": 26, "fg": "1-8", "tp": "0-0", "ft": "1-2", "reb": 3, "ast": 3, "pf": 5, "to": 2, "stl": 1, "blk": 0, "pts": 3},
+            {"name": "Jamaal Brown", "min": 35, "fg": "2-8", "tp": "2-6", "ft": "0-0", "reb": 3, "ast": 2, "pf": 1, "to": 3, "stl": 1, "blk": 0, "pts": 6},
+            {"name": "Tom Brandewie", "min": 11, "fg": "1-1", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 1, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Lawrence Funderburke", "min": 28, "fg": "5-8", "tp": "0-0", "ft": "2-2", "reb": 3, "ast": 0, "pf": 3, "to": 1, "stl": 3, "blk": 3, "pts": 12},
+            {"name": "Alex Davis", "min": 7, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Jamie Skelton", "min": 13, "fg": "4-7", "tp": "3-5", "ft": "0-0", "reb": 1, "ast": 0, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 11},
+            {"name": "Steve Hall", "min": 5, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 1, "stl": 1, "blk": 0, "pts": 0}
+          ],
+          "checksum_ok": true
+        },
+        {
+          "name": "Indiana Hoosiers",
+          "score": 91,
+          "players": [
+            {"name": "Greg Graham", "min": 40, "fg": "6-10", "tp": "3-3", "ft": "10-12", "reb": 5, "ast": 2, "pf": 2, "to": 0, "stl": 1, "blk": 0, "pts": 25},
+            {"name": "Calbert Cheaney", "min": 25, "fg": "6-9", "tp": "0-0", "ft": "4-4", "reb": 6, "ast": 0, "pf": 1, "to": 2, "stl": 1, "blk": 0, "pts": 16},
+            {"name": "Eric Anderson", "min": 35, "fg": "3-7", "tp": "1-3", "ft": "4-4", "reb": 2, "ast": 2, "pf": 2, "to": 3, "stl": 0, "blk": 2, "pts": 11},
+            {"name": "Chris Reynolds", "min": 37, "fg": "3-5", "tp": "0-1", "ft": "1-2", "reb": 3, "ast": 6, "pf": 1, "to": 3, "stl": 1, "blk": 0, "pts": 7},
+            {"name": "Damon Bailey", "min": 32, "fg": "5-12", "tp": "1-2", "ft": "14-14", "reb": 6, "ast": 1, "pf": 4, "to": 1, "stl": 1, "blk": 0, "pts": 25},
+            {"name": "Jamal Meeks", "min": 18, "fg": "3-4", "tp": "1-1", "ft": "0-0", "reb": 4, "ast": 1, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 7},
+            {"name": "Matt Nover", "min": 13, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 2, "ast": 0, "pf": 0, "to": 2, "stl": 0, "blk": 0, "pts": 0}
+          ],
+          "checksum_ok": true
+        }
+      ]
+    }
+  ],
+  "skipped": []
+}

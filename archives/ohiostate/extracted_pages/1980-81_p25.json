@@ -1,0 +1,9 @@
+{
+  "page": 25,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Handwritten NCAA box score, Ohio State at Indiana, 2/26/81, site Bloomington, IND. Team totals are legible (Ohio State FG 23-39, FT 12-15, REB 22, PF 15, TP 58; Indiana FG 30-59, FT 14-15, REB ?, PF 13, TP 74; final by period OSU 20+? / IND 34+40=74), but individual player rows for both teams are written in very messy, faint, and partly crossed-out handwriting. A best-effort read of Ohio State's player TP column summed to only 47 against a team total of 58, an 11-point gap that could not be resolved confidently (the Williams/center row is essentially illegible). Given the checksum mismatch and low confidence in several digits (notably rows for Scott, Smith/South, and Williams), skipping rather than guessing per instructions."
+    }
+  ]
+}

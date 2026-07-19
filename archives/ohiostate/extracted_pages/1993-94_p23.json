@@ -1,0 +1,9 @@
+{
+  "page": 23,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Game 22: Ohio State vs Michigan, Feb 13 1994, St. John Arena. Typed official box score. Michigan (visitor) side reads cleanly and checksums exactly (sum of player TP = 72 = final score 72, and matches printed TOTALS row TP 72). However, Ohio State (home) side has several bench-player rows (Anderson, and especially Simpson and Eaker near the bottom) where key digits (FT makes, TOT rebounds) are faint/ambiguous in the typewritten print, and the summed player points could not be confidently reconciled to the printed team TOTALS TP of 70 (matches final score 70) without guessing values for Simpson/Eaker. Since the schema requires both teams' checksums to hold for a game entry, and per instructions to be ruthless about skipping rather than inventing values, the entire game is skipped rather than partially fabricated."
+    }
+  ]
+}

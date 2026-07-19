@@ -1,0 +1,47 @@
+{
+  "page": 22,
+  "games": [
+    {
+      "date": "1992-02-19",
+      "opponent": "North Carolina Tar Heels",
+      "teams": [
+        {
+          "name": "North Carolina Tar Heels",
+          "score": 73,
+          "players": [
+            {"name": "George Lynch", "min": 32, "fg": "6-12", "tp": "0-1", "ft": "0-1", "reb": 10, "ast": 2, "pf": 4, "to": 0, "stl": 2, "blk": 0, "pts": 12},
+            {"name": "Brian Reese", "min": 23, "fg": "4-9", "tp": "0-4", "ft": "1-2", "reb": 4, "ast": 1, "pf": 4, "to": 3, "stl": 1, "blk": 0, "pts": 9},
+            {"name": "Eric Montross", "min": 26, "fg": "4-10", "ft": "2-2", "reb": 7, "ast": 0, "pf": 4, "to": 3, "stl": 0, "blk": 0, "pts": 10},
+            {"name": "Hubert Davis", "min": 35, "fg": "3-11", "tp": "2-7", "ft": "1-2", "reb": 1, "ast": 0, "pf": 3, "to": 1, "stl": 0, "blk": 0, "pts": 9},
+            {"name": "Derrick Phelps", "min": 33, "fg": "7-14", "tp": "2-5", "ft": "5-5", "reb": 2, "ast": 8, "pf": 5, "to": 2, "stl": 1, "blk": 0, "pts": 21},
+            {"name": "Pat Sullivan", "min": 18, "fg": "1-3", "tp": "0-2", "ft": "2-4", "reb": 3, "ast": 0, "pf": 2, "to": 2, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Kevin Salvadori", "min": 17, "fg": "2-3", "reb": 2, "ast": 0, "pf": 2, "to": 0, "stl": 0, "blk": 2, "pts": 4},
+            {"name": "Henrick Rodl", "min": 9, "fg": "1-1", "ft": "0-1", "reb": 1, "ast": 1, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Matt Wenstrom", "min": 2, "reb": 1, "ast": 0, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Donald Williams", "min": 4, "fg": "1-2", "reb": 0, "ast": 0, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Scott Cherry", "min": 1, "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Virginia Cavaliers",
+          "score": 86,
+          "players": [
+            {"name": "Bryant Stith", "min": 38, "fg": "8-15", "tp": "3-5", "ft": "11-16", "reb": 10, "ast": 3, "pf": 2, "to": 3, "stl": 0, "blk": 0, "pts": 30},
+            {"name": "Junior Burrough", "min": 34, "fg": "6-11", "ft": "10-13", "reb": 8, "ast": 0, "pf": 3, "to": 0, "stl": 2, "blk": 0, "pts": 22},
+            {"name": "Ted Jeffries", "min": 38, "fg": "2-3", "ft": "1-2", "reb": 6, "ast": 1, "pf": 3, "to": 0, "stl": 1, "blk": 1, "pts": 5},
+            {"name": "Anthony Oliver", "min": 19, "fg": "2-8", "reb": 2, "ast": 4, "pf": 1, "to": 2, "stl": 1, "blk": 1, "pts": 4},
+            {"name": "Cory Alexander", "min": 30, "fg": "7-13", "tp": "2-5", "ft": "8-12", "reb": 1, "ast": 3, "pf": 3, "to": 4, "stl": 2, "blk": 0, "pts": 24},
+            {"name": "Cornel Parker", "min": 21, "fg": "0-1", "reb": 4, "ast": 5, "pf": 2, "to": 0, "stl": 1, "blk": 1, "pts": 0},
+            {"name": "Doug Smith", "min": 11, "fg": "0-1", "tp": "0-1", "ft": "1-2", "reb": 1, "ast": 1, "pf": 2, "to": 2, "stl": 0, "blk": 0, "pts": 1},
+            {"name": "Yuri Barnes", "min": 6, "fg": "0-1", "reb": 4, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Shawn Wilson", "min": 2, "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Jason Williford", "min": 1, "reb": 0, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": [],
+  "notes": "Printed/typed official NCAA box score, fully legible. Virginia's Doug Smith TP digit was obscured/ambiguous on the printout; computed pts=1 from FT made (1) plus 0 made FGs, which reconciles the Virginia team total (86) exactly. All other player points taken directly from printed TP column. Rebounds shown are total (Off+Def) only; per-player Off/Def split omitted for brevity. Both team checksums pass: UNC sum=73 (matches), UVA sum=86 (matches). Minutes columns also independently sum to 200 for both teams, corroborating transcription accuracy."
+}

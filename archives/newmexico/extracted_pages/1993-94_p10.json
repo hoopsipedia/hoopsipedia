@@ -1,0 +1,44 @@
+{
+  "page": 10,
+  "games": [
+    {
+      "date": "1993-12-30",
+      "opponent": "Rice",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 90,
+          "players": [
+            {"name": "Frank Willis", "min": 4, "fg": "1-1", "ft": "0-1", "reb": 1, "pf": 2, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Charles Smith", "min": 26, "fg": "2-7", "tp": "0-2", "ft": "0-0", "reb": 5, "pf": 2, "ast": 3, "to": 3, "blk": 0, "stl": 1, "pts": 4},
+            {"name": "Greg Brown", "min": 37, "fg": "8-12", "tp": "2-4", "ft": "4-4", "reb": 3, "pf": 2, "ast": 4, "to": 2, "blk": 0, "stl": 1, "pts": 22},
+            {"name": "Marlow White", "min": 35, "fg": "8-11", "tp": "6-9", "ft": "8-10", "reb": 8, "pf": 2, "ast": 1, "to": 3, "blk": 1, "stl": 1, "pts": 30},
+            {"name": "Scott Pritchett", "min": 17, "fg": "2-4", "ft": "5-6", "reb": 2, "pf": 0, "ast": 2, "to": 1, "blk": 0, "stl": 0, "pts": 9},
+            {"name": "Lewis LaMar", "min": 36, "fg": "0-4", "ft": "6-8", "reb": 9, "pf": 2, "ast": 1, "to": 0, "blk": 1, "stl": 1, "pts": 6},
+            {"name": "Canonchet Neves", "min": 37, "fg": "6-11", "tp": "3-8", "ft": "2-3", "reb": 4, "pf": 2, "ast": 5, "to": 0, "blk": 0, "stl": 0, "pts": 17},
+            {"name": "J.J. Griego", "min": 5, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 1, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Greg Schornstein", "min": 3, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Rice Owls",
+          "score": 75,
+          "players": [
+            {"name": "Eric Singletary", "min": 9, "fg": "0-0", "ft": "0-0", "reb": 1, "pf": 1, "ast": 2, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Thomas McGhee", "min": 17, "fg": "1-7", "tp": "0-2", "ft": "0-0", "reb": 3, "pf": 5, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Torrey Andrews", "min": 38, "fg": "8-14", "tp": "0-1", "ft": "4-4", "reb": 6, "pf": 4, "ast": 2, "to": 3, "blk": 0, "stl": 0, "pts": 20},
+            {"name": "Scott Tynes", "min": 35, "fg": "8-18", "tp": "2-4", "ft": "1-1", "reb": 8, "pf": 2, "ast": 4, "to": 1, "blk": 0, "stl": 2, "pts": 19},
+            {"name": "Kevin Rabbitt", "min": 32, "fg": "1-4", "tp": "1-3", "ft": "2-4", "reb": 1, "pf": 4, "ast": 6, "to": 1, "blk": 0, "stl": 1, "pts": 5},
+            {"name": "Jesse Cravens", "min": 18, "fg": "5-9", "tp": "1-4", "ft": "0-0", "reb": 2, "pf": 2, "ast": 1, "to": 0, "blk": 0, "stl": 0, "pts": 11},
+            {"name": "Adam Peakes", "min": 25, "fg": "6-12", "tp": "4-8", "ft": "0-0", "reb": 3, "pf": 5, "ast": 2, "to": 0, "blk": 0, "stl": 2, "pts": 16},
+            {"name": "Shaun Igo", "min": 5, "fg": "0-1", "ft": "0-2", "reb": 1, "pf": 1, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Robert Glaze", "min": 1, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 1, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Todd Schodettelkotte", "min": 19, "fg": "1-4", "ft": "0-0", "reb": 3, "pf": 2, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pts": 2}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

@@ -1,0 +1,9 @@
+{
+  "page": 16,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Game 14: Ohio State vs Illinois, January 15, 1994, St. John Arena, Columbus, Ohio (Illinois 83, Ohio State 75). Illinois (visitor) box score is clean and checksums perfectly (player FG sum=28, 3FG sum=2, FT sum=25, TP sum=83, all matching team totals). However, the Ohio State (home) section could not be transcribed with confidence: individual player FG values summed against clearly-printed team totals (FG 24, FGA 58, FT 23) do not reconcile (my best reading sums to well above 24), and per-player TP figures (Anderson, Simpson, Macon) do not satisfy pts = 2*(FG-3FG)+3*3FG+FT against the team's confirmed TP=75. This indicates digit-level misreads in the OSU columns (small typed font, tight column spacing) that could not be resolved even after a second full-page read; no zoom capability was available to verify individual digits. Skipping the whole game rather than publishing a half-correct/half-guessed box score, per instructions to be ruthless about skipping over guessing."
+    }
+  ]
+}

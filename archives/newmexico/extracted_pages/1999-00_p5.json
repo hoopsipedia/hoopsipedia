@@ -1,0 +1,48 @@
+{
+  "page": 5,
+  "games": [
+    {
+      "date": "1999-11-26",
+      "opponent": "Sam Houston State",
+      "note": "1st game of the Furr's Supermarkets Lobo Classic, at Albuquerque, NM. Some New Mexico player rows (Walker, Long, Hannah, Berumen, Guinn) had illegible/overlapping ink in the FG-FGA/3PT/FT columns on the scan; those fields were omitted rather than guessed. Points (TP column) were legible for all players and checksum to the final score for both teams.",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 71,
+          "players": [
+            {"name": "Brian Smith", "min": 29, "fg": "4-8", "tp": "0-0", "ft": "0-0", "reb": 3, "ast": 1, "pf": 2, "to": 0, "stl": 0, "blk": 2, "pts": 8},
+            {"name": "Damion Walker", "min": 24, "pf": 4, "ast": 1, "to": 0, "stl": 0, "blk": 2, "pts": 9},
+            {"name": "Lamont Long", "min": 35, "pf": 2, "ast": 1, "to": 3, "stl": 2, "blk": 0, "pts": 21},
+            {"name": "Kevin Henry", "min": 27, "fg": "4-11", "tp": "3-6", "ft": "0-1", "reb": 2, "ast": 3, "pf": 2, "to": 1, "stl": 1, "blk": 0, "pts": 11},
+            {"name": "Marlon Parmer", "min": 24, "fg": "3-11", "tp": "2-4", "ft": "3-3", "reb": 4, "ast": 2, "pf": 1, "to": 1, "stl": 3, "blk": 0, "pts": 11},
+            {"name": "Wayland White", "min": 18, "fg": "1-3", "tp": "0-0", "ft": "1-3", "reb": 1, "ast": 0, "pf": 5, "to": 1, "stl": 0, "blk": 1, "pts": 3},
+            {"name": "John Robinson", "min": 16, "fg": "0-7", "tp": "0-3", "ft": "0-0", "reb": 1, "ast": 4, "pf": 4, "to": 1, "stl": 2, "blk": 0, "pts": 0},
+            {"name": "Rafael Berumen", "min": 3, "pts": 0},
+            {"name": "R.T. Guinn", "min": 1, "pts": 0},
+            {"name": "Roland Hannah", "min": 23, "fg": "3-7", "reb": 10, "ast": 1, "pf": 3, "to": 0, "stl": 1, "blk": 0, "pts": 8}
+          ],
+          "checksum_ok": true
+        },
+        {
+          "name": "Sam Houston State Bearkats",
+          "score": 61,
+          "players": [
+            {"name": "Senecca Wall", "min": 34, "fg": "5-9", "tp": "1-2", "ft": "10-14", "reb": 5, "ast": 0, "pf": 4, "to": 4, "stl": 0, "blk": 0, "pts": 21},
+            {"name": "David Amaya", "min": 29, "fg": "2-12", "tp": "1-1", "ft": "4-6", "reb": 12, "ast": 0, "pf": 3, "to": 7, "stl": 0, "blk": 0, "pts": 9},
+            {"name": "Ricky Fernandez", "min": 33, "fg": "2-7", "tp": "0-0", "ft": "6-8", "reb": 12, "ast": 1, "pf": 1, "to": 1, "stl": 2, "blk": 1, "pts": 10},
+            {"name": "Boney Watson", "min": 28, "fg": "3-8", "tp": "2-6", "ft": "2-2", "reb": 5, "ast": 3, "pf": 4, "to": 1, "stl": 0, "blk": 0, "pts": 10},
+            {"name": "Jeremy Burkhalter", "min": 34, "fg": "3-13", "tp": "0-7", "ft": "2-2", "reb": 6, "ast": 2, "pf": 2, "to": 2, "stl": 2, "blk": 1, "pts": 8},
+            {"name": "Sammy Giles", "min": 14, "fg": "0-2", "tp": "0-0", "ft": "1-2", "reb": 3, "ast": 0, "pf": 3, "to": 0, "stl": 0, "blk": 0, "pts": 1},
+            {"name": "Eddy Barlow", "min": 12, "fg": "0-2", "tp": "0-0", "ft": "2-2", "reb": 2, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Dennis Buse", "min": 2, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Demetrius Smith", "min": 10, "fg": "1-2", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Keith Heinrich", "min": 4, "fg": "0-1", "tp": "0-1", "ft": "0-0", "reb": 1, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Brian Jordy", "min": 0, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ],
+          "checksum_ok": true
+        }
+      ]
+    }
+  ],
+  "skipped": []
+}

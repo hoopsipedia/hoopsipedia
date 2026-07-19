@@ -1,0 +1,3598 @@
+[
+ {
+  "id": "G001",
+  "q": "How many national championships does Indiana have?",
+  "expected": [
+   [
+    "5"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "blueblood",
+   "kind": "champ_count"
+  }
+ },
+ {
+  "id": "G002",
+  "q": "How many national championships does Utah have?",
+  "expected": [
+   [
+    "1"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "blueblood",
+   "kind": "champ_count"
+  }
+ },
+ {
+  "id": "G003",
+  "q": "How many national championships does Michigan have?",
+  "expected": [
+   [
+    "2"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "blueblood",
+   "kind": "champ_count"
+  }
+ },
+ {
+  "id": "G004",
+  "q": "How many national championships does Illinois Fighting have?",
+  "expected": [
+   [
+    "0",
+    "zero",
+    "none",
+    "never won",
+    "no national championship",
+    "hasn't won",
+    "has not won"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "blueblood",
+   "kind": "champ_count_zero"
+  }
+ },
+ {
+  "id": "G005",
+  "q": "How many national championships does Notre Dame Fighting have?",
+  "expected": [
+   [
+    "0",
+    "zero",
+    "none",
+    "never won",
+    "no national championship",
+    "hasn't won",
+    "has not won"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "blueblood",
+   "kind": "champ_count_zero"
+  }
+ },
+ {
+  "id": "G006",
+  "q": "How many national championships does Purdue have?",
+  "expected": [
+   [
+    "0",
+    "zero",
+    "none",
+    "never won",
+    "no national championship",
+    "hasn't won",
+    "has not won"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "blueblood",
+   "kind": "champ_count_zero"
+  }
+ },
+ {
+  "id": "G007",
+  "q": "How many national championships does Syracuse have?",
+  "expected": [
+   [
+    "1"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "blueblood",
+   "kind": "champ_count"
+  }
+ },
+ {
+  "id": "G008",
+  "q": "How many national championships does UConn have?",
+  "expected": [
+   [
+    "6"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "blueblood",
+   "kind": "champ_count"
+  }
+ },
+ {
+  "id": "G009",
+  "q": "How many national championships does Bucknell have?",
+  "expected": [
+   [
+    "0",
+    "zero",
+    "none",
+    "never won",
+    "no national championship",
+    "hasn't won",
+    "has not won"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "major",
+   "kind": "champ_count_zero"
+  }
+ },
+ {
+  "id": "G010",
+  "q": "How many national championships does South Carolina have?",
+  "expected": [
+   [
+    "0",
+    "zero",
+    "none",
+    "never won",
+    "no national championship",
+    "hasn't won",
+    "has not won"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "major",
+   "kind": "champ_count_zero"
+  }
+ },
+ {
+  "id": "G011",
+  "q": "How many national championships does Georgetown have?",
+  "expected": [
+   [
+    "1"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "major",
+   "kind": "champ_count"
+  }
+ },
+ {
+  "id": "G012",
+  "q": "How many national championships does Duquesne have?",
+  "expected": [
+   [
+    "0",
+    "zero",
+    "none",
+    "never won",
+    "no national championship",
+    "hasn't won",
+    "has not won"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "major",
+   "kind": "champ_count_zero"
+  }
+ },
+ {
+  "id": "G013",
+  "q": "How many national championships does UTEP have?",
+  "expected": [
+   [
+    "1"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "major",
+   "kind": "champ_count"
+  }
+ },
+ {
+  "id": "G014",
+  "q": "How many national championships does Iowa State have?",
+  "expected": [
+   [
+    "0",
+    "zero",
+    "none",
+    "never won",
+    "no national championship",
+    "hasn't won",
+    "has not won"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "major",
+   "kind": "champ_count_zero"
+  }
+ },
+ {
+  "id": "G015",
+  "q": "How many national championships does Western Michigan have?",
+  "expected": [
+   [
+    "0",
+    "zero",
+    "none",
+    "never won",
+    "no national championship",
+    "hasn't won",
+    "has not won"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "major",
+   "kind": "champ_count_zero"
+  }
+ },
+ {
+  "id": "G016",
+  "q": "How many national championships does Baylor have?",
+  "expected": [
+   [
+    "1"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "major",
+   "kind": "champ_count"
+  }
+ },
+ {
+  "id": "G017",
+  "q": "How many national championships does Loyola Marymount have?",
+  "expected": [
+   [
+    "0",
+    "zero",
+    "none",
+    "never won",
+    "no national championship",
+    "hasn't won",
+    "has not won"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "mid",
+   "kind": "champ_count_zero"
+  }
+ },
+ {
+  "id": "G018",
+  "q": "How many national championships does Army Black have?",
+  "expected": [
+   [
+    "0",
+    "zero",
+    "none",
+    "never won",
+    "no national championship",
+    "hasn't won",
+    "has not won"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "mid",
+   "kind": "champ_count_zero"
+  }
+ },
+ {
+  "id": "G019",
+  "q": "How many national championships does Cornell Big have?",
+  "expected": [
+   [
+    "0",
+    "zero",
+    "none",
+    "never won",
+    "no national championship",
+    "hasn't won",
+    "has not won"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "mid",
+   "kind": "champ_count_zero"
+  }
+ },
+ {
+  "id": "G020",
+  "q": "How many national championships does Louisiana Tech have?",
+  "expected": [
+   [
+    "0",
+    "zero",
+    "none",
+    "never won",
+    "no national championship",
+    "hasn't won",
+    "has not won"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "mid",
+   "kind": "champ_count_zero"
+  }
+ },
+ {
+  "id": "G021",
+  "q": "How many national championships does UAB have?",
+  "expected": [
+   [
+    "0",
+    "zero",
+    "none",
+    "never won",
+    "no national championship",
+    "hasn't won",
+    "has not won"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "mid",
+   "kind": "champ_count_zero"
+  }
+ },
+ {
+  "id": "G022",
+  "q": "How many national championships does Pacific have?",
+  "expected": [
+   [
+    "0",
+    "zero",
+    "none",
+    "never won",
+    "no national championship",
+    "hasn't won",
+    "has not won"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "mid",
+   "kind": "champ_count_zero"
+  }
+ },
+ {
+  "id": "G023",
+  "q": "How many national championships does Weber State have?",
+  "expected": [
+   [
+    "0",
+    "zero",
+    "none",
+    "never won",
+    "no national championship",
+    "hasn't won",
+    "has not won"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "mid",
+   "kind": "champ_count_zero"
+  }
+ },
+ {
+  "id": "G024",
+  "q": "How many national championships does Rice have?",
+  "expected": [
+   [
+    "0",
+    "zero",
+    "none",
+    "never won",
+    "no national championship",
+    "hasn't won",
+    "has not won"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "mid",
+   "kind": "champ_count_zero"
+  }
+ },
+ {
+  "id": "G025",
+  "q": "How many national championships does Florida Gulf Coast have?",
+  "expected": [
+   [
+    "0",
+    "zero",
+    "none",
+    "never won",
+    "no national championship",
+    "hasn't won",
+    "has not won"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "low",
+   "kind": "champ_count_zero"
+  }
+ },
+ {
+  "id": "G026",
+  "q": "How many national championships does South Carolina Upstate have?",
+  "expected": [
+   [
+    "0",
+    "zero",
+    "none",
+    "never won",
+    "no national championship",
+    "hasn't won",
+    "has not won"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "low",
+   "kind": "champ_count_zero"
+  }
+ },
+ {
+  "id": "G027",
+  "q": "How many national championships does Cleveland State have?",
+  "expected": [
+   [
+    "0",
+    "zero",
+    "none",
+    "never won",
+    "no national championship",
+    "hasn't won",
+    "has not won"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "low",
+   "kind": "champ_count_zero"
+  }
+ },
+ {
+  "id": "G028",
+  "q": "How many national championships does Bryant have?",
+  "expected": [
+   [
+    "0",
+    "zero",
+    "none",
+    "never won",
+    "no national championship",
+    "hasn't won",
+    "has not won"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "low",
+   "kind": "champ_count_zero"
+  }
+ },
+ {
+  "id": "G029",
+  "q": "How many national championships does Maine Black have?",
+  "expected": [
+   [
+    "0",
+    "zero",
+    "none",
+    "never won",
+    "no national championship",
+    "hasn't won",
+    "has not won"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "low",
+   "kind": "champ_count_zero"
+  }
+ },
+ {
+  "id": "G030",
+  "q": "How many national championships does North Alabama have?",
+  "expected": [
+   [
+    "0",
+    "zero",
+    "none",
+    "never won",
+    "no national championship",
+    "hasn't won",
+    "has not won"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "low",
+   "kind": "champ_count_zero"
+  }
+ },
+ {
+  "id": "G031",
+  "q": "How many national championships does Ball State have?",
+  "expected": [
+   [
+    "0",
+    "zero",
+    "none",
+    "never won",
+    "no national championship",
+    "hasn't won",
+    "has not won"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "low",
+   "kind": "champ_count_zero"
+  }
+ },
+ {
+  "id": "G032",
+  "q": "How many national championships does North Dakota Fighting have?",
+  "expected": [
+   [
+    "0",
+    "zero",
+    "none",
+    "never won",
+    "no national championship",
+    "hasn't won",
+    "has not won"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "low",
+   "kind": "champ_count_zero"
+  }
+ },
+ {
+  "id": "G033",
+  "q": "Who won the 1939 national championship?",
+  "expected": [
+   [
+    "Oregon",
+    "Oregon Ducks"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getChampionByYear",
+   "era": "1930s",
+   "kind": "champ_by_year"
+  }
+ },
+ {
+  "id": "G034",
+  "q": "Who won the 1941 national championship?",
+  "expected": [
+   [
+    "Wisconsin",
+    "Wisconsin Badgers"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getChampionByYear",
+   "era": "1940s",
+   "kind": "champ_by_year"
+  }
+ },
+ {
+  "id": "G035",
+  "q": "Who won the 1943 national championship?",
+  "expected": [
+   [
+    "Wyoming",
+    "Wyoming Cowboys"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getChampionByYear",
+   "era": "1940s",
+   "kind": "champ_by_year"
+  }
+ },
+ {
+  "id": "G036",
+  "q": "Who won the 1945 national championship?",
+  "expected": [
+   [
+    "Oklahoma State",
+    "Oklahoma State Cowboys"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getChampionByYear",
+   "era": "1940s",
+   "kind": "champ_by_year"
+  }
+ },
+ {
+  "id": "G037",
+  "q": "Who won the 1947 national championship?",
+  "expected": [
+   [
+    "Holy Cross",
+    "Holy Cross Crusaders"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getChampionByYear",
+   "era": "1940s",
+   "kind": "champ_by_year"
+  }
+ },
+ {
+  "id": "G038",
+  "q": "Who won the 1949 national championship?",
+  "expected": [
+   [
+    "Kentucky",
+    "Kentucky Wildcats"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getChampionByYear",
+   "era": "1940s",
+   "kind": "champ_by_year"
+  }
+ },
+ {
+  "id": "G039",
+  "q": "Who won the 1951 national championship?",
+  "expected": [
+   [
+    "Kentucky",
+    "Kentucky Wildcats"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getChampionByYear",
+   "era": "1950s",
+   "kind": "champ_by_year"
+  }
+ },
+ {
+  "id": "G040",
+  "q": "Who won the 1953 national championship?",
+  "expected": [
+   [
+    "Indiana",
+    "Indiana Hoosiers"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getChampionByYear",
+   "era": "1950s",
+   "kind": "champ_by_year"
+  }
+ },
+ {
+  "id": "G041",
+  "q": "Who won the 1955 national championship?",
+  "expected": [
+   [
+    "San Francisco",
+    "San Francisco Dons"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getChampionByYear",
+   "era": "1950s",
+   "kind": "champ_by_year"
+  }
+ },
+ {
+  "id": "G042",
+  "q": "Who won the 1957 national championship?",
+  "expected": [
+   [
+    "North Carolina Tar",
+    "North Carolina Tar Heels"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getChampionByYear",
+   "era": "1950s",
+   "kind": "champ_by_year"
+  }
+ },
+ {
+  "id": "G043",
+  "q": "Who won the 1959 national championship?",
+  "expected": [
+   [
+    "California Golden",
+    "California Golden Bears"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getChampionByYear",
+   "era": "1950s",
+   "kind": "champ_by_year"
+  }
+ },
+ {
+  "id": "G044",
+  "q": "Who won the 1961 national championship?",
+  "expected": [
+   [
+    "Cincinnati",
+    "Cincinnati Bearcats"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getChampionByYear",
+   "era": "1960s",
+   "kind": "champ_by_year"
+  }
+ },
+ {
+  "id": "G045",
+  "q": "Who won the 1963 national championship?",
+  "expected": [
+   [
+    "Loyola Chicago",
+    "Loyola Chicago Ramblers"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getChampionByYear",
+   "era": "1960s",
+   "kind": "champ_by_year"
+  }
+ },
+ {
+  "id": "G046",
+  "q": "Who won the 1965 national championship?",
+  "expected": [
+   [
+    "UCLA",
+    "UCLA Bruins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getChampionByYear",
+   "era": "1960s",
+   "kind": "champ_by_year"
+  }
+ },
+ {
+  "id": "G047",
+  "q": "Who won the 1967 national championship?",
+  "expected": [
+   [
+    "UCLA",
+    "UCLA Bruins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getChampionByYear",
+   "era": "1960s",
+   "kind": "champ_by_year"
+  }
+ },
+ {
+  "id": "G048",
+  "q": "Who won the 1969 national championship?",
+  "expected": [
+   [
+    "UCLA",
+    "UCLA Bruins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getChampionByYear",
+   "era": "1960s",
+   "kind": "champ_by_year"
+  }
+ },
+ {
+  "id": "G049",
+  "q": "Who won the 1971 national championship?",
+  "expected": [
+   [
+    "UCLA",
+    "UCLA Bruins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getChampionByYear",
+   "era": "1970s",
+   "kind": "champ_by_year"
+  }
+ },
+ {
+  "id": "G050",
+  "q": "Who won the 1973 national championship?",
+  "expected": [
+   [
+    "UCLA",
+    "UCLA Bruins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getChampionByYear",
+   "era": "1970s",
+   "kind": "champ_by_year"
+  }
+ },
+ {
+  "id": "G051",
+  "q": "Who won the 1975 national championship?",
+  "expected": [
+   [
+    "UCLA",
+    "UCLA Bruins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getChampionByYear",
+   "era": "1970s",
+   "kind": "champ_by_year"
+  }
+ },
+ {
+  "id": "G052",
+  "q": "Who won the 1977 national championship?",
+  "expected": [
+   [
+    "Marquette Golden",
+    "Marquette Golden Eagles"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getChampionByYear",
+   "era": "1970s",
+   "kind": "champ_by_year"
+  }
+ },
+ {
+  "id": "G053",
+  "q": "Who won the 1979 national championship?",
+  "expected": [
+   [
+    "Michigan State",
+    "Michigan State Spartans"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getChampionByYear",
+   "era": "1970s",
+   "kind": "champ_by_year"
+  }
+ },
+ {
+  "id": "G054",
+  "q": "Who won the 1981 national championship?",
+  "expected": [
+   [
+    "Indiana",
+    "Indiana Hoosiers"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getChampionByYear",
+   "era": "1980s",
+   "kind": "champ_by_year"
+  }
+ },
+ {
+  "id": "G055",
+  "q": "Who won the 1983 national championship?",
+  "expected": [
+   [
+    "NC State",
+    "NC State Wolfpack"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getChampionByYear",
+   "era": "1980s",
+   "kind": "champ_by_year"
+  }
+ },
+ {
+  "id": "G056",
+  "q": "Who won the 1985 national championship?",
+  "expected": [
+   [
+    "Villanova",
+    "Villanova Wildcats"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getChampionByYear",
+   "era": "1980s",
+   "kind": "champ_by_year"
+  }
+ },
+ {
+  "id": "G057",
+  "q": "Who won the 1987 national championship?",
+  "expected": [
+   [
+    "Indiana",
+    "Indiana Hoosiers"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getChampionByYear",
+   "era": "1980s",
+   "kind": "champ_by_year"
+  }
+ },
+ {
+  "id": "G058",
+  "q": "Who won the 1989 national championship?",
+  "expected": [
+   [
+    "Michigan",
+    "Michigan Wolverines"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getChampionByYear",
+   "era": "1980s",
+   "kind": "champ_by_year"
+  }
+ },
+ {
+  "id": "G059",
+  "q": "Who won the 1991 national championship?",
+  "expected": [
+   [
+    "Duke Blue",
+    "Duke Blue Devils"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getChampionByYear",
+   "era": "1990s",
+   "kind": "champ_by_year"
+  }
+ },
+ {
+  "id": "G060",
+  "q": "Who won the 1993 national championship?",
+  "expected": [
+   [
+    "North Carolina Tar",
+    "North Carolina Tar Heels"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getChampionByYear",
+   "era": "1990s",
+   "kind": "champ_by_year"
+  }
+ },
+ {
+  "id": "G061",
+  "q": "Who won the 1995 national championship?",
+  "expected": [
+   [
+    "UCLA",
+    "UCLA Bruins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getChampionByYear",
+   "era": "1990s",
+   "kind": "champ_by_year"
+  }
+ },
+ {
+  "id": "G062",
+  "q": "Who won the 1997 national championship?",
+  "expected": [
+   [
+    "Arizona",
+    "Arizona Wildcats"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getChampionByYear",
+   "era": "1990s",
+   "kind": "champ_by_year"
+  }
+ },
+ {
+  "id": "G063",
+  "q": "Who won the 1999 national championship?",
+  "expected": [
+   [
+    "UConn",
+    "UConn Huskies"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getChampionByYear",
+   "era": "1990s",
+   "kind": "champ_by_year"
+  }
+ },
+ {
+  "id": "G064",
+  "q": "Who won the 2001 national championship?",
+  "expected": [
+   [
+    "Duke Blue",
+    "Duke Blue Devils"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getChampionByYear",
+   "era": "2000s",
+   "kind": "champ_by_year"
+  }
+ },
+ {
+  "id": "G065",
+  "q": "Who won the 2003 national championship?",
+  "expected": [
+   [
+    "Syracuse",
+    "Syracuse Orange"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getChampionByYear",
+   "era": "2000s",
+   "kind": "champ_by_year"
+  }
+ },
+ {
+  "id": "G066",
+  "q": "Who won the 2005 national championship?",
+  "expected": [
+   [
+    "North Carolina Tar",
+    "North Carolina Tar Heels"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getChampionByYear",
+   "era": "2000s",
+   "kind": "champ_by_year"
+  }
+ },
+ {
+  "id": "G067",
+  "q": "Who won the 2007 national championship?",
+  "expected": [
+   [
+    "Florida",
+    "Florida Gators"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getChampionByYear",
+   "era": "2000s",
+   "kind": "champ_by_year"
+  }
+ },
+ {
+  "id": "G068",
+  "q": "Who won the 2009 national championship?",
+  "expected": [
+   [
+    "North Carolina Tar",
+    "North Carolina Tar Heels"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getChampionByYear",
+   "era": "2000s",
+   "kind": "champ_by_year"
+  }
+ },
+ {
+  "id": "G069",
+  "q": "Who won the 2011 national championship?",
+  "expected": [
+   [
+    "UConn",
+    "UConn Huskies"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getChampionByYear",
+   "era": "2010s",
+   "kind": "champ_by_year"
+  }
+ },
+ {
+  "id": "G070",
+  "q": "Who won the 2014 national championship?",
+  "expected": [
+   [
+    "UConn",
+    "UConn Huskies"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getChampionByYear",
+   "era": "2010s",
+   "kind": "champ_by_year"
+  }
+ },
+ {
+  "id": "G071",
+  "q": "Who won the 2016 national championship?",
+  "expected": [
+   [
+    "Villanova",
+    "Villanova Wildcats"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getChampionByYear",
+   "era": "2010s",
+   "kind": "champ_by_year"
+  }
+ },
+ {
+  "id": "G072",
+  "q": "Who won the 2018 national championship?",
+  "expected": [
+   [
+    "Villanova",
+    "Villanova Wildcats"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getChampionByYear",
+   "era": "2010s",
+   "kind": "champ_by_year"
+  }
+ },
+ {
+  "id": "G073",
+  "q": "Who won the 2021 national championship?",
+  "expected": [
+   [
+    "Baylor",
+    "Baylor Bears"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getChampionByYear",
+   "era": "2020s",
+   "kind": "champ_by_year"
+  }
+ },
+ {
+  "id": "G074",
+  "q": "Who won the 2023 national championship?",
+  "expected": [
+   [
+    "UConn",
+    "UConn Huskies"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getChampionByYear",
+   "era": "2020s",
+   "kind": "champ_by_year"
+  }
+ },
+ {
+  "id": "G075",
+  "q": "Who won the 2025 national championship?",
+  "expected": [
+   [
+    "Florida",
+    "Florida Gators"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getChampionByYear",
+   "era": "2020s",
+   "kind": "champ_by_year"
+  }
+ },
+ {
+  "id": "G076",
+  "q": "How many all-time wins does Indiana have?",
+  "expected": [
+   [
+    "1965"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "blueblood",
+   "kind": "alltime_wins"
+  }
+ },
+ {
+  "id": "G077",
+  "q": "How many all-time wins does Utah have?",
+  "expected": [
+   [
+    "1923"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "blueblood",
+   "kind": "alltime_wins"
+  }
+ },
+ {
+  "id": "G078",
+  "q": "How many all-time wins does Michigan have?",
+  "expected": [
+   [
+    "1649"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "blueblood",
+   "kind": "alltime_wins"
+  }
+ },
+ {
+  "id": "G079",
+  "q": "How many all-time wins does Illinois Fighting have?",
+  "expected": [
+   [
+    "1953"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "blueblood",
+   "kind": "alltime_wins"
+  }
+ },
+ {
+  "id": "G080",
+  "q": "How many all-time wins does Notre Dame Fighting have?",
+  "expected": [
+   [
+    "1989"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "blueblood",
+   "kind": "alltime_wins"
+  }
+ },
+ {
+  "id": "G081",
+  "q": "How many all-time wins does Bucknell have?",
+  "expected": [
+   [
+    "1531"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "major",
+   "kind": "alltime_wins"
+  }
+ },
+ {
+  "id": "G082",
+  "q": "How many all-time wins does South Carolina have?",
+  "expected": [
+   [
+    "1530"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "major",
+   "kind": "alltime_wins"
+  }
+ },
+ {
+  "id": "G083",
+  "q": "How many all-time wins does Georgetown have?",
+  "expected": [
+   [
+    "1756"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "major",
+   "kind": "alltime_wins"
+  }
+ },
+ {
+  "id": "G084",
+  "q": "How many all-time wins does Duquesne have?",
+  "expected": [
+   [
+    "1514"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "major",
+   "kind": "alltime_wins"
+  }
+ },
+ {
+  "id": "G085",
+  "q": "How many all-time wins does UTEP have?",
+  "expected": [
+   [
+    "1445"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "major",
+   "kind": "alltime_wins"
+  }
+ },
+ {
+  "id": "G086",
+  "q": "How many all-time wins does Loyola Marymount have?",
+  "expected": [
+   [
+    "965"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "mid",
+   "kind": "alltime_wins"
+  }
+ },
+ {
+  "id": "G087",
+  "q": "How many all-time wins does Army Black have?",
+  "expected": [
+   [
+    "1332"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "mid",
+   "kind": "alltime_wins"
+  }
+ },
+ {
+  "id": "G088",
+  "q": "How many all-time wins does Cornell Big have?",
+  "expected": [
+   [
+    "1356"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "mid",
+   "kind": "alltime_wins"
+  }
+ },
+ {
+  "id": "G089",
+  "q": "How many all-time wins does Louisiana Tech have?",
+  "expected": [
+   [
+    "942"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "mid",
+   "kind": "alltime_wins"
+  }
+ },
+ {
+  "id": "G090",
+  "q": "How many all-time wins does UAB have?",
+  "expected": [
+   [
+    "965"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "mid",
+   "kind": "alltime_wins"
+  }
+ },
+ {
+  "id": "G091",
+  "q": "How many all-time wins does Florida Gulf Coast have?",
+  "expected": [
+   [
+    "316"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "low",
+   "kind": "alltime_wins"
+  }
+ },
+ {
+  "id": "G092",
+  "q": "How many all-time wins does South Carolina Upstate have?",
+  "expected": [
+   [
+    "225"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "low",
+   "kind": "alltime_wins"
+  }
+ },
+ {
+  "id": "G093",
+  "q": "How many all-time wins does Cleveland State have?",
+  "expected": [
+   [
+    "808"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "low",
+   "kind": "alltime_wins"
+  }
+ },
+ {
+  "id": "G094",
+  "q": "How many all-time wins does Bryant have?",
+  "expected": [
+   [
+    "227"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "low",
+   "kind": "alltime_wins"
+  }
+ },
+ {
+  "id": "G095",
+  "q": "How many all-time wins does Maine Black have?",
+  "expected": [
+   [
+    "872"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "low",
+   "kind": "alltime_wins"
+  }
+ },
+ {
+  "id": "G096",
+  "q": "How many Final Fours has Indiana made?",
+  "expected": [
+   [
+    "8"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "blueblood",
+   "kind": "ff_count"
+  }
+ },
+ {
+  "id": "G097",
+  "q": "How many Final Fours has Utah made?",
+  "expected": [
+   [
+    "4"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "blueblood",
+   "kind": "ff_count"
+  }
+ },
+ {
+  "id": "G098",
+  "q": "How many Final Fours has Michigan made?",
+  "expected": [
+   [
+    "5"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "blueblood",
+   "kind": "ff_count"
+  }
+ },
+ {
+  "id": "G099",
+  "q": "How many Final Fours has Illinois Fighting made?",
+  "expected": [
+   [
+    "5"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "blueblood",
+   "kind": "ff_count"
+  }
+ },
+ {
+  "id": "G100",
+  "q": "How many Final Fours has Bucknell made?",
+  "expected": [
+   [
+    "0",
+    "zero",
+    "none",
+    "never",
+    "no Final Four",
+    "hasn't"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "major",
+   "kind": "ff_count"
+  }
+ },
+ {
+  "id": "G101",
+  "q": "How many Final Fours has South Carolina made?",
+  "expected": [
+   [
+    "2"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "major",
+   "kind": "ff_count"
+  }
+ },
+ {
+  "id": "G102",
+  "q": "How many Final Fours has Georgetown made?",
+  "expected": [
+   [
+    "5"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "major",
+   "kind": "ff_count"
+  }
+ },
+ {
+  "id": "G103",
+  "q": "How many Final Fours has Duquesne made?",
+  "expected": [
+   [
+    "0",
+    "zero",
+    "none",
+    "never",
+    "no Final Four",
+    "hasn't"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "major",
+   "kind": "ff_count"
+  }
+ },
+ {
+  "id": "G104",
+  "q": "How many Final Fours has Loyola Marymount made?",
+  "expected": [
+   [
+    "0",
+    "zero",
+    "none",
+    "never",
+    "no Final Four",
+    "hasn't"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "mid",
+   "kind": "ff_count"
+  }
+ },
+ {
+  "id": "G105",
+  "q": "How many Final Fours has Army Black made?",
+  "expected": [
+   [
+    "0",
+    "zero",
+    "none",
+    "never",
+    "no Final Four",
+    "hasn't"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "mid",
+   "kind": "ff_count"
+  }
+ },
+ {
+  "id": "G106",
+  "q": "How many Final Fours has Cornell Big made?",
+  "expected": [
+   [
+    "0",
+    "zero",
+    "none",
+    "never",
+    "no Final Four",
+    "hasn't"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "mid",
+   "kind": "ff_count"
+  }
+ },
+ {
+  "id": "G107",
+  "q": "How many Final Fours has Louisiana Tech made?",
+  "expected": [
+   [
+    "0",
+    "zero",
+    "none",
+    "never",
+    "no Final Four",
+    "hasn't"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "mid",
+   "kind": "ff_count"
+  }
+ },
+ {
+  "id": "G108",
+  "q": "How many Final Fours has Florida Gulf Coast made?",
+  "expected": [
+   [
+    "0",
+    "zero",
+    "none",
+    "never",
+    "no Final Four",
+    "hasn't"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "low",
+   "kind": "ff_count"
+  }
+ },
+ {
+  "id": "G109",
+  "q": "How many Final Fours has South Carolina Upstate made?",
+  "expected": [
+   [
+    "0",
+    "zero",
+    "none",
+    "never",
+    "no Final Four",
+    "hasn't"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "low",
+   "kind": "ff_count"
+  }
+ },
+ {
+  "id": "G110",
+  "q": "How many Final Fours has Cleveland State made?",
+  "expected": [
+   [
+    "0",
+    "zero",
+    "none",
+    "never",
+    "no Final Four",
+    "hasn't"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "low",
+   "kind": "ff_count"
+  }
+ },
+ {
+  "id": "G111",
+  "q": "How many Final Fours has Bryant made?",
+  "expected": [
+   [
+    "0",
+    "zero",
+    "none",
+    "never",
+    "no Final Four",
+    "hasn't"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "low",
+   "kind": "ff_count"
+  }
+ },
+ {
+  "id": "G112",
+  "q": "What conference does Indiana play in?",
+  "expected": [
+   [
+    "Big Ten"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "blueblood",
+   "kind": "conference"
+  }
+ },
+ {
+  "id": "G113",
+  "q": "What conference does Utah play in?",
+  "expected": [
+   [
+    "Big 12"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "blueblood",
+   "kind": "conference"
+  }
+ },
+ {
+  "id": "G114",
+  "q": "What conference does Michigan play in?",
+  "expected": [
+   [
+    "Big Ten"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "blueblood",
+   "kind": "conference"
+  }
+ },
+ {
+  "id": "G115",
+  "q": "What conference does Illinois Fighting play in?",
+  "expected": [
+   [
+    "Big Ten"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "blueblood",
+   "kind": "conference"
+  }
+ },
+ {
+  "id": "G116",
+  "q": "What conference does Notre Dame Fighting play in?",
+  "expected": [
+   [
+    "ACC"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "blueblood",
+   "kind": "conference"
+  }
+ },
+ {
+  "id": "G117",
+  "q": "What conference does Bucknell play in?",
+  "expected": [
+   [
+    "Patriot League"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "major",
+   "kind": "conference"
+  }
+ },
+ {
+  "id": "G118",
+  "q": "What conference does South Carolina play in?",
+  "expected": [
+   [
+    "SEC"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "major",
+   "kind": "conference"
+  }
+ },
+ {
+  "id": "G119",
+  "q": "What conference does Georgetown play in?",
+  "expected": [
+   [
+    "Big East"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "major",
+   "kind": "conference"
+  }
+ },
+ {
+  "id": "G120",
+  "q": "What conference does Duquesne play in?",
+  "expected": [
+   [
+    "A-10"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "major",
+   "kind": "conference"
+  }
+ },
+ {
+  "id": "G121",
+  "q": "What conference does UTEP play in?",
+  "expected": [
+   [
+    "CUSA"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "major",
+   "kind": "conference"
+  }
+ },
+ {
+  "id": "G122",
+  "q": "What conference does Loyola Marymount play in?",
+  "expected": [
+   [
+    "WCC"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "mid",
+   "kind": "conference"
+  }
+ },
+ {
+  "id": "G123",
+  "q": "What conference does Army Black play in?",
+  "expected": [
+   [
+    "Patriot League"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "mid",
+   "kind": "conference"
+  }
+ },
+ {
+  "id": "G124",
+  "q": "What conference does Cornell Big play in?",
+  "expected": [
+   [
+    "Ivy League"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "mid",
+   "kind": "conference"
+  }
+ },
+ {
+  "id": "G125",
+  "q": "What conference does Louisiana Tech play in?",
+  "expected": [
+   [
+    "CUSA"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "mid",
+   "kind": "conference"
+  }
+ },
+ {
+  "id": "G126",
+  "q": "What conference does UAB play in?",
+  "expected": [
+   [
+    "AAC"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "mid",
+   "kind": "conference"
+  }
+ },
+ {
+  "id": "G127",
+  "q": "What conference does Florida Gulf Coast play in?",
+  "expected": [
+   [
+    "ASUN"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "low",
+   "kind": "conference"
+  }
+ },
+ {
+  "id": "G128",
+  "q": "What conference does South Carolina Upstate play in?",
+  "expected": [
+   [
+    "Big South"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "low",
+   "kind": "conference"
+  }
+ },
+ {
+  "id": "G129",
+  "q": "What conference does Cleveland State play in?",
+  "expected": [
+   [
+    "Horizon League"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "low",
+   "kind": "conference"
+  }
+ },
+ {
+  "id": "G130",
+  "q": "What conference does Bryant play in?",
+  "expected": [
+   [
+    "America East"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "low",
+   "kind": "conference"
+  }
+ },
+ {
+  "id": "G131",
+  "q": "What conference does Maine Black play in?",
+  "expected": [
+   [
+    "America East"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "low",
+   "kind": "conference"
+  }
+ },
+ {
+  "id": "G132",
+  "q": "When did Jacksonville's basketball program begin?",
+  "expected": [
+   [
+    "1947"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getTeamHistory",
+   "kind": "founded"
+  }
+ },
+ {
+  "id": "G133",
+  "q": "When did Bethune-Cookman's basketball program begin?",
+  "expected": [
+   [
+    "1930"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getTeamHistory",
+   "kind": "founded"
+  }
+ },
+ {
+  "id": "G134",
+  "q": "When did Wyoming's basketball program begin?",
+  "expected": [
+   [
+    "1905"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getTeamHistory",
+   "kind": "founded"
+  }
+ },
+ {
+  "id": "G135",
+  "q": "When did Tarleton State's basketball program begin?",
+  "expected": [
+   [
+    "1917"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getTeamHistory",
+   "kind": "founded"
+  }
+ },
+ {
+  "id": "G136",
+  "q": "When did Quinnipiac's basketball program begin?",
+  "expected": [
+   [
+    "1965"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getTeamHistory",
+   "kind": "founded"
+  }
+ },
+ {
+  "id": "G137",
+  "q": "When did Lehigh Mountain's basketball program begin?",
+  "expected": [
+   [
+    "1900"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getTeamHistory",
+   "kind": "founded"
+  }
+ },
+ {
+  "id": "G138",
+  "q": "When did Wagner's basketball program begin?",
+  "expected": [
+   [
+    "1928"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getTeamHistory",
+   "kind": "founded"
+  }
+ },
+ {
+  "id": "G139",
+  "q": "When did Saint Mary's's basketball program begin?",
+  "expected": [
+   [
+    "1909"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getTeamHistory",
+   "kind": "founded"
+  }
+ },
+ {
+  "id": "G140",
+  "q": "When did American University's basketball program begin?",
+  "expected": [
+   [
+    "1925"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getTeamHistory",
+   "kind": "founded"
+  }
+ },
+ {
+  "id": "G141",
+  "q": "When did UIC's basketball program begin?",
+  "expected": [
+   [
+    "1946"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getTeamHistory",
+   "kind": "founded"
+  }
+ },
+ {
+  "id": "G142",
+  "q": "When did Wofford's basketball program begin?",
+  "expected": [
+   [
+    "1906"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getTeamHistory",
+   "kind": "founded"
+  }
+ },
+ {
+  "id": "G143",
+  "q": "When did Pacific's basketball program begin?",
+  "expected": [
+   [
+    "1924"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getTeamHistory",
+   "kind": "founded"
+  }
+ },
+ {
+  "id": "G144",
+  "q": "When did Kansas's basketball program begin?",
+  "expected": [
+   [
+    "1898"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getTeamHistory",
+   "kind": "founded"
+  }
+ },
+ {
+  "id": "G145",
+  "q": "When did UL Monroe's basketball program begin?",
+  "expected": [
+   [
+    "1951"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getTeamHistory",
+   "kind": "founded"
+  }
+ },
+ {
+  "id": "G146",
+  "q": "When did Clemson's basketball program begin?",
+  "expected": [
+   [
+    "1912"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getTeamHistory",
+   "kind": "founded"
+  }
+ },
+ {
+  "id": "G147",
+  "q": "When did Omaha's basketball program begin?",
+  "expected": [
+   [
+    "2012"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getTeamHistory",
+   "kind": "founded"
+  }
+ },
+ {
+  "id": "G148",
+  "q": "When did Ohio State's basketball program begin?",
+  "expected": [
+   [
+    "1898"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getTeamHistory",
+   "kind": "founded"
+  }
+ },
+ {
+  "id": "G149",
+  "q": "When did Bradley's basketball program begin?",
+  "expected": [
+   [
+    "1902"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getTeamHistory",
+   "kind": "founded"
+  }
+ },
+ {
+  "id": "G150",
+  "q": "When did Cal State Fullerton's basketball program begin?",
+  "expected": [
+   [
+    "1957"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getTeamHistory",
+   "kind": "founded"
+  }
+ },
+ {
+  "id": "G151",
+  "q": "When did BYU's basketball program begin?",
+  "expected": [
+   [
+    "1902"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getTeamHistory",
+   "kind": "founded"
+  }
+ },
+ {
+  "id": "G152",
+  "q": "What was Indiana's record in the 1968-69 season?",
+  "expected": [
+   [
+    "9-15",
+    "9 wins",
+    "9–15"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getTeamSeasons",
+   "tier": "blueblood",
+   "era": "1960s",
+   "kind": "season_record"
+  }
+ },
+ {
+  "id": "G153",
+  "q": "What was Utah's record in the 1934-35 season?",
+  "expected": [
+   [
+    "10-9",
+    "10 wins",
+    "10–9"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getTeamSeasons",
+   "tier": "blueblood",
+   "era": "1930s",
+   "kind": "season_record"
+  }
+ },
+ {
+  "id": "G154",
+  "q": "What was Michigan's record in the 1993-94 season?",
+  "expected": [
+   [
+    "24-8",
+    "24 wins",
+    "24–8"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getTeamSeasons",
+   "tier": "blueblood",
+   "era": "1990s",
+   "kind": "season_record"
+  }
+ },
+ {
+  "id": "G155",
+  "q": "What was Illinois Fighting's record in the 1946-47 season?",
+  "expected": [
+   [
+    "14-6",
+    "14 wins",
+    "14–6"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getTeamSeasons",
+   "tier": "blueblood",
+   "era": "1940s",
+   "kind": "season_record"
+  }
+ },
+ {
+  "id": "G156",
+  "q": "What was Notre Dame Fighting's record in the 1912-13 season?",
+  "expected": [
+   [
+    "13-2",
+    "13 wins",
+    "13–2"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getTeamSeasons",
+   "tier": "blueblood",
+   "era": "1910s",
+   "kind": "season_record"
+  }
+ },
+ {
+  "id": "G157",
+  "q": "What was Purdue's record in the 1961-62 season?",
+  "expected": [
+   [
+    "17-7",
+    "17 wins",
+    "17–7"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getTeamSeasons",
+   "tier": "blueblood",
+   "era": "1960s",
+   "kind": "season_record"
+  }
+ },
+ {
+  "id": "G158",
+  "q": "What was Bucknell's record in the 1985-86 season?",
+  "expected": [
+   [
+    "17-12",
+    "17 wins",
+    "17–12"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getTeamSeasons",
+   "tier": "major",
+   "era": "1980s",
+   "kind": "season_record"
+  }
+ },
+ {
+  "id": "G159",
+  "q": "What was South Carolina's record in the 1971-72 season?",
+  "expected": [
+   [
+    "24-5",
+    "24 wins",
+    "24–5"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getTeamSeasons",
+   "tier": "major",
+   "era": "1970s",
+   "kind": "season_record"
+  }
+ },
+ {
+  "id": "G160",
+  "q": "What was Georgetown's record in the 1947-48 season?",
+  "expected": [
+   [
+    "13-15",
+    "13 wins",
+    "13–15"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getTeamSeasons",
+   "tier": "major",
+   "era": "1940s",
+   "kind": "season_record"
+  }
+ },
+ {
+  "id": "G161",
+  "q": "What was Duquesne's record in the 2005-06 season?",
+  "expected": [
+   [
+    "3-24",
+    "3 wins",
+    "3–24"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getTeamSeasons",
+   "tier": "major",
+   "era": "2000s",
+   "kind": "season_record"
+  }
+ },
+ {
+  "id": "G162",
+  "q": "What was UTEP's record in the 2025-26 season?",
+  "expected": [
+   [
+    "11-20",
+    "11 wins",
+    "11–20"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getTeamSeasons",
+   "tier": "major",
+   "era": "2020s",
+   "kind": "season_record"
+  }
+ },
+ {
+  "id": "G163",
+  "q": "What was Iowa State's record in the 1970-71 season?",
+  "expected": [
+   [
+    "5-21",
+    "5 wins",
+    "5–21"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getTeamSeasons",
+   "tier": "major",
+   "era": "1970s",
+   "kind": "season_record"
+  }
+ },
+ {
+  "id": "G164",
+  "q": "What was Loyola Marymount's record in the 1993-94 season?",
+  "expected": [
+   [
+    "6-21",
+    "6 wins",
+    "6–21"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getTeamSeasons",
+   "tier": "mid",
+   "era": "1990s",
+   "kind": "season_record"
+  }
+ },
+ {
+  "id": "G165",
+  "q": "What was Army Black's record in the 1964-65 season?",
+  "expected": [
+   [
+    "21-8",
+    "21 wins",
+    "21–8"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getTeamSeasons",
+   "tier": "mid",
+   "era": "1960s",
+   "kind": "season_record"
+  }
+ },
+ {
+  "id": "G166",
+  "q": "What was Cornell Big's record in the 1999-00 season?",
+  "expected": [
+   [
+    "10-17",
+    "10 wins",
+    "10–17"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getTeamSeasons",
+   "tier": "mid",
+   "era": "1990s",
+   "kind": "season_record"
+  }
+ },
+ {
+  "id": "G167",
+  "q": "What was Louisiana Tech's record in the 2015-16 season?",
+  "expected": [
+   [
+    "23-10",
+    "23 wins",
+    "23–10"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getTeamSeasons",
+   "tier": "mid",
+   "era": "2010s",
+   "kind": "season_record"
+  }
+ },
+ {
+  "id": "G168",
+  "q": "What was UAB's record in the 2025-26 season?",
+  "expected": [
+   [
+    "20-12",
+    "20 wins",
+    "20–12"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getTeamSeasons",
+   "tier": "mid",
+   "era": "2020s",
+   "kind": "season_record"
+  }
+ },
+ {
+  "id": "G169",
+  "q": "What was Pacific's record in the 2012-13 season?",
+  "expected": [
+   [
+    "22-13",
+    "22 wins",
+    "22–13"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getTeamSeasons",
+   "tier": "mid",
+   "era": "2010s",
+   "kind": "season_record"
+  }
+ },
+ {
+  "id": "G170",
+  "q": "What was Florida Gulf Coast's record in the 2021-22 season?",
+  "expected": [
+   [
+    "22-12",
+    "22 wins",
+    "22–12"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getTeamSeasons",
+   "tier": "low",
+   "era": "2020s",
+   "kind": "season_record"
+  }
+ },
+ {
+  "id": "G171",
+  "q": "What was South Carolina Upstate's record in the 2018-19 season?",
+  "expected": [
+   [
+    "6-26",
+    "6 wins",
+    "6–26"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getTeamSeasons",
+   "tier": "low",
+   "era": "2010s",
+   "kind": "season_record"
+  }
+ },
+ {
+  "id": "G172",
+  "q": "What was Cleveland State's record in the 1982-83 season?",
+  "expected": [
+   [
+    "8-20",
+    "8 wins",
+    "8–20"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getTeamSeasons",
+   "tier": "low",
+   "era": "1980s",
+   "kind": "season_record"
+  }
+ },
+ {
+  "id": "G173",
+  "q": "What was Bryant's record in the 2021-22 season?",
+  "expected": [
+   [
+    "22-10",
+    "22 wins",
+    "22–10"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getTeamSeasons",
+   "tier": "low",
+   "era": "2020s",
+   "kind": "season_record"
+  }
+ },
+ {
+  "id": "G174",
+  "q": "What was Maine Black's record in the 1947-48 season?",
+  "expected": [
+   [
+    "11-7",
+    "11 wins",
+    "11–7"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getTeamSeasons",
+   "tier": "low",
+   "era": "1940s",
+   "kind": "season_record"
+  }
+ },
+ {
+  "id": "G175",
+  "q": "What was North Alabama's record in the 2023-24 season?",
+  "expected": [
+   [
+    "15-17",
+    "15 wins",
+    "15–17"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getTeamSeasons",
+   "tier": "low",
+   "era": "2020s",
+   "kind": "season_record"
+  }
+ },
+ {
+  "id": "G176",
+  "q": "What is the all-time head-to-head record between Middle Tennessee Blue and Charlotte?",
+  "expected": [
+   [
+    "14"
+   ],
+   [
+    "4"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getHeadToHead",
+   "kind": "h2h",
+   "games": 18
+  }
+ },
+ {
+  "id": "G177",
+  "q": "What is the all-time head-to-head record between South Carolina Upstate and Florida Gulf Coast?",
+  "expected": [
+   [
+    "6"
+   ],
+   [
+    "18"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getHeadToHead",
+   "kind": "h2h",
+   "games": 24
+  }
+ },
+ {
+  "id": "G178",
+  "q": "What is the all-time head-to-head record between Denver and North Texas Mean?",
+  "expected": [
+   [
+    "10"
+   ],
+   [
+    "16"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getHeadToHead",
+   "kind": "h2h",
+   "games": 26
+  }
+ },
+ {
+  "id": "G179",
+  "q": "What is the all-time head-to-head record between Prairie View A&M and Southern?",
+  "expected": [
+   [
+    "30"
+   ],
+   [
+    "69"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getHeadToHead",
+   "kind": "h2h",
+   "games": 99
+  }
+ },
+ {
+  "id": "G180",
+  "q": "What is the all-time head-to-head record between North Texas Mean and Fresno State?",
+  "expected": [
+   [
+    "16"
+   ],
+   [
+    "28"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getHeadToHead",
+   "kind": "h2h",
+   "games": 44
+  }
+ },
+ {
+  "id": "G181",
+  "q": "What is the all-time head-to-head record between Northern Iowa and Southern Illinois?",
+  "expected": [
+   [
+    "39"
+   ],
+   [
+    "37"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getHeadToHead",
+   "kind": "h2h",
+   "games": 76
+  }
+ },
+ {
+  "id": "G182",
+  "q": "What is the all-time head-to-head record between Ohio and Kent State Golden?",
+  "expected": [
+   [
+    "97"
+   ],
+   [
+    "58"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getHeadToHead",
+   "kind": "h2h",
+   "games": 155
+  }
+ },
+ {
+  "id": "G183",
+  "q": "What is the all-time head-to-head record between Virginia Tech and West Virginia?",
+  "expected": [
+   [
+    "29"
+   ],
+   [
+    "47"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getHeadToHead",
+   "kind": "h2h",
+   "games": 76
+  }
+ },
+ {
+  "id": "G184",
+  "q": "What is the all-time head-to-head record between BYU and TCU Horned?",
+  "expected": [
+   [
+    "21"
+   ],
+   [
+    "4"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getHeadToHead",
+   "kind": "h2h",
+   "games": 25
+  }
+ },
+ {
+  "id": "G185",
+  "q": "What is the all-time head-to-head record between Duquesne and DePaul Blue?",
+  "expected": [
+   [
+    "12"
+   ],
+   [
+    "14"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getHeadToHead",
+   "kind": "h2h",
+   "games": 26
+  }
+ },
+ {
+  "id": "G186",
+  "q": "What is the all-time head-to-head record between NJIT and UAlbany Great?",
+  "expected": [
+   [
+    "2"
+   ],
+   [
+    "16"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getHeadToHead",
+   "kind": "h2h",
+   "games": 18
+  }
+ },
+ {
+  "id": "G187",
+  "q": "What is the all-time head-to-head record between Missouri and Alabama Crimson?",
+  "expected": [
+   [
+    "7"
+   ],
+   [
+    "15"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getHeadToHead",
+   "kind": "h2h",
+   "games": 22
+  }
+ },
+ {
+  "id": "G188",
+  "q": "What is the all-time head-to-head record between Ole Miss and Alabama Crimson?",
+  "expected": [
+   [
+    "45"
+   ],
+   [
+    "92"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getHeadToHead",
+   "kind": "h2h",
+   "games": 137
+  }
+ },
+ {
+  "id": "G189",
+  "q": "What is the all-time head-to-head record between New Mexico State and Southern Illinois?",
+  "expected": [
+   [
+    "11"
+   ],
+   [
+    "8"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getHeadToHead",
+   "kind": "h2h",
+   "games": 19
+  }
+ },
+ {
+  "id": "G190",
+  "q": "What is the all-time head-to-head record between Temple and South Carolina?",
+  "expected": [
+   [
+    "7"
+   ],
+   [
+    "8"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getHeadToHead",
+   "kind": "h2h",
+   "games": 15
+  }
+ },
+ {
+  "id": "G191",
+  "q": "What is the all-time head-to-head record between Cincinnati and Virginia Tech?",
+  "expected": [
+   [
+    "13"
+   ],
+   [
+    "18"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getHeadToHead",
+   "kind": "h2h",
+   "games": 31
+  }
+ },
+ {
+  "id": "G192",
+  "q": "What is the all-time head-to-head record between UCLA and Colorado?",
+  "expected": [
+   [
+    "20"
+   ],
+   [
+    "7"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getHeadToHead",
+   "kind": "h2h",
+   "games": 27
+  }
+ },
+ {
+  "id": "G193",
+  "q": "What is the all-time head-to-head record between Rutgers Scarlet and Pennsylvania?",
+  "expected": [
+   [
+    "5"
+   ],
+   [
+    "13"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getHeadToHead",
+   "kind": "h2h",
+   "games": 18
+  }
+ },
+ {
+  "id": "G194",
+  "q": "What is the all-time head-to-head record between Northeastern and George Mason?",
+  "expected": [
+   [
+    "12"
+   ],
+   [
+    "10"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getHeadToHead",
+   "kind": "h2h",
+   "games": 22
+  }
+ },
+ {
+  "id": "G195",
+  "q": "What is the all-time head-to-head record between Villanova and Xavier?",
+  "expected": [
+   [
+    "37"
+   ],
+   [
+    "9"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getHeadToHead",
+   "kind": "h2h",
+   "games": 46
+  }
+ },
+ {
+  "id": "G196",
+  "q": "What is the all-time head-to-head record between Ohio State and Penn State Nittany?",
+  "expected": [
+   [
+    "47"
+   ],
+   [
+    "22"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getHeadToHead",
+   "kind": "h2h",
+   "games": 69
+  }
+ },
+ {
+  "id": "G197",
+  "q": "What is the all-time head-to-head record between North Carolina Tar and Western Kentucky?",
+  "expected": [
+   [
+    "23"
+   ],
+   [
+    "18"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getHeadToHead",
+   "kind": "h2h",
+   "games": 41
+  }
+ },
+ {
+  "id": "G198",
+  "q": "What is the all-time head-to-head record between Cal State Fullerton and Pacific?",
+  "expected": [
+   [
+    "42"
+   ],
+   [
+    "50"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getHeadToHead",
+   "kind": "h2h",
+   "games": 92
+  }
+ },
+ {
+  "id": "G199",
+  "q": "What is the all-time head-to-head record between St. Bonaventure and Tulane Green?",
+  "expected": [
+   [
+    "8"
+   ],
+   [
+    "8"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "getHeadToHead",
+   "kind": "h2h",
+   "games": 16
+  }
+ },
+ {
+  "id": "G200",
+  "q": "How many NCAA tournament appearances does Indiana have?",
+  "expected": [
+   [
+    "41"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "blueblood",
+   "kind": "tourney_count"
+  }
+ },
+ {
+  "id": "G201",
+  "q": "How many NCAA tournament appearances does Utah have?",
+  "expected": [
+   [
+    "31"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "blueblood",
+   "kind": "tourney_count"
+  }
+ },
+ {
+  "id": "G202",
+  "q": "How many NCAA tournament appearances does Michigan have?",
+  "expected": [
+   [
+    "31"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "blueblood",
+   "kind": "tourney_count"
+  }
+ },
+ {
+  "id": "G203",
+  "q": "How many NCAA tournament appearances does Illinois Fighting have?",
+  "expected": [
+   [
+    "36"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "blueblood",
+   "kind": "tourney_count"
+  }
+ },
+ {
+  "id": "G204",
+  "q": "How many NCAA tournament appearances does Bucknell have?",
+  "expected": [
+   [
+    "7"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "major",
+   "kind": "tourney_count"
+  }
+ },
+ {
+  "id": "G205",
+  "q": "How many NCAA tournament appearances does South Carolina have?",
+  "expected": [
+   [
+    "13"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "major",
+   "kind": "tourney_count"
+  }
+ },
+ {
+  "id": "G206",
+  "q": "How many NCAA tournament appearances does Georgetown have?",
+  "expected": [
+   [
+    "31"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "major",
+   "kind": "tourney_count"
+  }
+ },
+ {
+  "id": "G207",
+  "q": "How many NCAA tournament appearances does Duquesne have?",
+  "expected": [
+   [
+    "6"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "major",
+   "kind": "tourney_count"
+  }
+ },
+ {
+  "id": "G208",
+  "q": "How many NCAA tournament appearances does Loyola Marymount have?",
+  "expected": [
+   [
+    "5"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "mid",
+   "kind": "tourney_count"
+  }
+ },
+ {
+  "id": "G209",
+  "q": "How many NCAA tournament appearances does Army Black have?",
+  "expected": [
+   [
+    "0",
+    "zero",
+    "none",
+    "never made",
+    "no NCAA tournament",
+    "hasn't"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "mid",
+   "kind": "tourney_count"
+  }
+ },
+ {
+  "id": "G210",
+  "q": "How many NCAA tournament appearances does Cornell Big have?",
+  "expected": [
+   [
+    "5"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "mid",
+   "kind": "tourney_count"
+  }
+ },
+ {
+  "id": "G211",
+  "q": "How many NCAA tournament appearances does Louisiana Tech have?",
+  "expected": [
+   [
+    "5"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "mid",
+   "kind": "tourney_count"
+  }
+ },
+ {
+  "id": "G212",
+  "q": "How many NCAA tournament appearances does Florida Gulf Coast have?",
+  "expected": [
+   [
+    "3"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "low",
+   "kind": "tourney_count"
+  }
+ },
+ {
+  "id": "G213",
+  "q": "How many NCAA tournament appearances does South Carolina Upstate have?",
+  "expected": [
+   [
+    "0",
+    "zero",
+    "none",
+    "never made",
+    "no NCAA tournament",
+    "hasn't"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "low",
+   "kind": "tourney_count"
+  }
+ },
+ {
+  "id": "G214",
+  "q": "How many NCAA tournament appearances does Cleveland State have?",
+  "expected": [
+   [
+    "3"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "low",
+   "kind": "tourney_count"
+  }
+ },
+ {
+  "id": "G215",
+  "q": "How many NCAA tournament appearances does Bryant have?",
+  "expected": [
+   [
+    "2"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "low",
+   "kind": "tourney_count"
+  }
+ }
+]

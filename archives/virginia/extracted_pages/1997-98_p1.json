@@ -1,0 +1,43 @@
+{
+  "page": 1,
+  "games": [
+    {
+      "date": "1997-11-16",
+      "opponent": "Richmond Spiders",
+      "teams": [
+        {
+          "name": "Richmond Spiders",
+          "score": 83,
+          "players": [
+            {"name": "Jarod Stevenson", "min": 49, "fg": "9-16", "tp": "4-5", "ft": "6-7", "reb": 11, "ast": 1, "pf": 3, "to": 1, "stl": 0, "blk": 4, "pts": 28},
+            {"name": "Nick Patrick", "min": 20, "fg": "0-6", "tp": "0-1", "ft": "0-0", "reb": 6, "ast": 1, "pf": 1, "to": 0, "stl": 1, "blk": 1, "pts": 0},
+            {"name": "Eric Poole", "min": 46, "fg": "2-9", "tp": "0-0", "ft": "3-4", "reb": 9, "ast": 1, "pf": 3, "to": 0, "stl": 3, "blk": 1, "pts": 7},
+            {"name": "Marseilles Brown", "min": 42, "fg": "3-16", "tp": "1-10", "ft": "5-8", "reb": 8, "ast": 5, "pf": 1, "to": 1, "stl": 1, "blk": 0, "pts": 12},
+            {"name": "Jonathan Baker", "min": 38, "fg": "4-7", "tp": "4-7", "ft": "2-2", "reb": 5, "ast": 3, "pf": 2, "to": 1, "stl": 0, "blk": 0, "pts": 14},
+            {"name": "Carlos Cueto", "min": 8, "fg": "0-0", "tp": "0-0", "ft": "1-2", "reb": 0, "ast": 2, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 1},
+            {"name": "Daryl Oliver", "min": 12, "fg": "0-1", "tp": "0-1", "ft": "2-2", "reb": 0, "ast": 0, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Rick Houston", "min": 31, "fg": "5-12", "tp": "3-7", "ft": "6-6", "reb": 4, "ast": 0, "pf": 0, "to": 1, "stl": 1, "blk": 0, "pts": 19},
+            {"name": "David Hensel", "min": 4, "fg": "0-2", "tp": "0-0", "ft": "0-0", "reb": 2, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Virginia Cavaliers",
+          "score": 79,
+          "players": [
+            {"name": "Willie Dersch", "min": 47, "fg": "4-12", "tp": "1-5", "ft": "0-0", "reb": 6, "ast": 5, "pf": 3, "to": 3, "stl": 0, "blk": 0, "pts": 9},
+            {"name": "Norman Nolan", "min": 48, "fg": "13-20", "tp": "0-0", "ft": "5-11", "reb": 11, "ast": 0, "pf": 2, "to": 1, "stl": 0, "blk": 0, "pts": 31},
+            {"name": "Chase Metheney", "min": 15, "fg": "1-4", "tp": "0-0", "ft": "1-2", "reb": 6, "ast": 1, "pf": 3, "to": 0, "stl": 1, "blk": 0, "pts": 3},
+            {"name": "Curtis Staples", "min": 49, "fg": "9-18", "tp": "7-15", "ft": "1-2", "reb": 6, "ast": 0, "pf": 2, "to": 1, "stl": 1, "blk": 0, "pts": 26},
+            {"name": "Donald Hand", "min": 16, "fg": "0-1", "tp": "0-0", "ft": "0-0", "reb": 3, "ast": 2, "pf": 1, "to": 2, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Chezley Watson", "min": 34, "fg": "1-3", "tp": "0-1", "ft": "0-0", "reb": 4, "ast": 4, "pf": 4, "to": 2, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Monte Marcaccini", "min": 10, "fg": "1-2", "tp": "0-1", "ft": "0-0", "reb": 1, "ast": 0, "pf": 5, "to": 0, "stl": 1, "blk": 0, "pts": 2},
+            {"name": "Colin Ducharme", "min": 31, "fg": "3-10", "tp": "0-0", "ft": "0-0", "reb": 7, "ast": 1, "pf": 4, "to": 3, "stl": 0, "blk": 2, "pts": 6}
+          ]
+        }
+      ],
+      "checksum_ok": true,
+      "notes": "OT game (score by periods: 1st,2nd,OT1,OT2 both teams; final Richmond 83, Virginia 79). Some minor OCR ambiguity in Richmond's ast/to/blk/stl values for Stevenson and Patrick due to smudged digits, but points columns are clear and both teams' player point totals reconcile exactly to final scores (83 and 79)."
+    }
+  ],
+  "skipped": []
+}

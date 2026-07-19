@@ -1,0 +1,50 @@
+{
+  "page": 3,
+  "games": [
+    {
+      "date": "1978-11-27",
+      "opponent": "Miami (Ohio)",
+      "site": "St. John Arena",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 85,
+          "players": [
+            {"name": "Miller", "min": 25, "fg": "2-6", "ft": "0-0", "reb": 4, "pf": 3, "ast": 2, "to": 4, "blk": 1, "stl": 0, "pts": 4},
+            {"name": "Smith, J.", "min": 35, "fg": "4-10", "ft": "1-4", "reb": 9, "pf": 2, "ast": 0, "to": 3, "blk": 2, "stl": 1, "pts": 9},
+            {"name": "Unknown (C)", "min": 39, "fg": "12-19", "ft": "3-9", "reb": 13, "pf": 3, "ast": 1, "to": 4, "blk": 4, "stl": 2, "pts": 27},
+            {"name": "Scott", "min": 32, "fg": "4-9", "ft": "4-4", "reb": 3, "pf": 1, "ast": 7, "to": 2, "blk": 0, "stl": 2, "pts": 12},
+            {"name": "Ramsey", "min": 39, "fg": "15-21", "ft": "1-1", "reb": 2, "pf": 4, "ast": 4, "to": 6, "blk": 0, "stl": 4, "pts": 31},
+            {"name": "Ellinghausen", "min": 3, "fg": "0-1", "ft": "0-0", "reb": 0, "pf": 2, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Chae", "min": 16, "fg": "0-1", "ft": "0-0", "reb": 3, "pf": 2, "ast": 3, "to": 0, "blk": 0, "stl": 2, "pts": 0},
+            {"name": "Unknown", "min": 5, "fg": "0-0", "ft": "0-0", "reb": 2, "pf": 2, "ast": 0, "to": 0, "blk": 3, "stl": 0, "pts": 0},
+            {"name": "Smith, R.", "min": 2, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Kirchner", "min": 1, "fg": "1-1", "ft": "0-0", "reb": 2, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Unknown", "min": 1, "fg": "0-2", "ft": "0-0", "reb": 1, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Penn", "min": 1, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Johnson", "min": 1, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Miami (Ohio) RedHawks",
+          "score": 69,
+          "players": [
+            {"name": "Unknown", "min": 33, "fg": "3-6", "ft": "2-3", "reb": 6, "pf": 2, "ast": 2, "to": 4, "blk": 0, "stl": 0, "pts": 8},
+            {"name": "Michite", "min": 19, "fg": "3-6", "ft": "3-4", "reb": 2, "pf": 4, "ast": 1, "to": 1, "blk": 0, "stl": 0, "pts": 9},
+            {"name": "Grady", "min": 28, "fg": "6-16", "ft": "2-4", "reb": 7, "pf": 3, "ast": 0, "to": 2, "blk": 0, "stl": 0, "pts": 14},
+            {"name": "Datos", "min": 38, "fg": "8-14", "ft": "0-0", "reb": 1, "pf": 0, "ast": 4, "to": 3, "blk": 0, "stl": 2, "pts": 16},
+            {"name": "Dagn", "min": 38, "fg": "4-8", "ft": "2-2", "reb": 3, "pf": 2, "ast": 5, "to": 5, "blk": 0, "stl": 1, "pts": 10},
+            {"name": "Unknown", "min": 24, "fg": "2-7", "ft": "0-0", "reb": 4, "pf": 1, "ast": 2, "to": 5, "blk": 1, "stl": 0, "pts": 4},
+            {"name": "Steigert", "min": 10, "fg": "0-1", "ft": "4-4", "reb": 1, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 4},
+            {"name": "Hawkins", "min": 6, "fg": "1-3", "ft": "0-0", "reb": 2, "pf": 1, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Unknown", "min": 1, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 1, "pts": 0},
+            {"name": "Klauth", "min": 1, "fg": "0-1", "ft": "0-0", "reb": 0, "pf": 1, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Unknown", "min": 2, "fg": "1-1", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 2}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

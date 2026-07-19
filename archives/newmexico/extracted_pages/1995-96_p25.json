@@ -1,0 +1,11 @@
+{
+  "page": 25,
+  "games": [],
+  "skipped": [
+    {
+      "date": "1996-02-22",
+      "opponent": "San Diego State Aztecs",
+      "reason": "New Mexico (visitors) box score checksummed cleanly: player points sum to 83, matching the final score (83-78 UNM win at San Diego Sports Arena). However, San Diego State's player point column sums to 82, not the printed team score of 78 (confirmed by both the TOTALS row and the 1st/2nd-half score table at bottom). Re-read the page once (max allowed) to double check; each SDSU player's own FG/points line is internally self-consistent, and FG-made sums to the correct team total (27), but the combined made-3pt + made-FT figures across players (28) don't reconcile with the team totals row (6+18=24), a discrepancy of exactly 4 that could not be isolated to a single legible digit (candidates include Anderson's free-throw and 3pt columns, which required inference to even become internally consistent). Rather than guess which player's line has the transcription/scorekeeping error, skipping the whole game per instructions."
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "page": 12,
+  "games": [
+    {
+      "date": "1998-01-05",
+      "opponent": "Texas Christian Horned Frogs",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 98,
+          "players": [
+            {"name": "Lamont Long", "min": 40, "fg": "10-19", "tp": "1-3", "ft": "6-8", "reb": 12, "ast": 2, "pf": 3, "to": 1, "stl": 2, "blk": 0, "pts": 27},
+            {"name": "Kenny Thomas", "min": 21, "fg": "1-6", "tp": "0-2", "ft": "1-2", "reb": 5, "ast": 0, "pf": 4, "to": 3, "stl": 0, "blk": 1, "pts": 3},
+            {"name": "Kevin Henry", "min": 19, "fg": "3-6", "tp": "2-5", "ft": "4-4", "reb": 3, "ast": 3, "pf": 2, "to": 1, "stl": 1, "blk": 0, "pts": 12},
+            {"name": "Clayton Shields", "min": 40, "fg": "12-16", "tp": "8-9", "ft": "2-2", "reb": 10, "ast": 2, "pf": 0, "to": 4, "stl": 2, "blk": 0, "pts": 34},
+            {"name": "Royce Olney", "min": 21, "fg": "1-4", "tp": "1-4", "ft": "2-2", "reb": 2, "ast": 1, "pf": 3, "to": 0, "stl": 1, "blk": 0, "pts": 5},
+            {"name": "David Gibson", "min": 40, "fg": "3-7", "tp": "1-1", "ft": "4-6", "reb": 4, "ast": 6, "pf": 1, "to": 4, "stl": 0, "blk": 0, "pts": 11},
+            {"name": "Ben Baum", "min": 19, "fg": "2-3", "tp": "1-2", "ft": "1-2", "reb": 1, "ast": 0, "pf": 0, "to": 1, "stl": 1, "blk": 0, "pts": 6}
+          ]
+        },
+        {
+          "name": "Texas Christian Horned Frogs",
+          "score": 77,
+          "players": [
+            {"name": "Prince Fowler", "min": 33, "fg": "1-5", "tp": "1-3", "ft": "0-0", "reb": 1, "ast": 3, "pf": 4, "to": 2, "stl": 0, "blk": 0, "pts": 3},
+            {"name": "James Penny", "min": 22, "fg": "5-8", "tp": "0-1", "ft": "0-0", "reb": 3, "ast": 1, "pf": 2, "to": 2, "stl": 0, "blk": 1, "pts": 10},
+            {"name": "Malcolm Johnson", "min": 34, "fg": "4-10", "tp": "4-6", "ft": "0-0", "reb": 5, "ast": 0, "pf": 4, "to": 2, "stl": 1, "blk": 0, "pts": 12},
+            {"name": "Mike Jones", "min": 37, "fg": "9-19", "tp": "1-5", "ft": "4-6", "reb": 7, "ast": 1, "pf": 2, "to": 0, "stl": 2, "blk": 4, "pts": 23},
+            {"name": "Ryan Carroll", "min": 7, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 1, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Dennis Davis", "min": 29, "fg": "2-4", "tp": "0-0", "ft": "0-0", "reb": 7, "ast": 1, "pf": 3, "to": 1, "stl": 1, "blk": 0, "pts": 4},
+            {"name": "Lee Nailon", "min": 38, "fg": "12-26", "tp": "0-0", "ft": "1-2", "reb": 9, "ast": 1, "pf": 4, "to": 2, "stl": 2, "blk": 0, "pts": 25}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

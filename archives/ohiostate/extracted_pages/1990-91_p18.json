@@ -1,0 +1,9 @@
+{
+  "page": 18,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page 18 (sheet numbered '17') is a typed box score for Ohio State @ Minnesota, January 24, 1991, Williams Arena, Minneapolis (final: Ohio State 80, Minnesota 70) — game identity and final score are clearly legible. However, the per-player stat rows for most starters on BOTH teams (Perry Carter for Ohio State; Walter Bond, Randy Carter, Dana Jackson, Arriel McDonald, and Kevin Lynch for Minnesota) each show only 14-15 of the expected 16 tab-separated column values, with the OR/DR/REB/PF block (and for Kevin Lynch, also FT/FTA) ambiguous as to which column is missing/misaligned. Re-reading the page a second time reproduced the identical rendering, so the ambiguity could not be resolved. Ohio State's five starters plus bench were internally cross-checked against the point-scoring formula (2*FG made minus 3FG made *2 + 3*3FG made + FT made) and reconciled exactly to the final score of 80, but Minnesota's corresponding player point totals could not be reconciled with confidence (e.g. Randy Carter's computed points from FG/FT columns as read, 12, does not match any token in his row, with the closest candidate being 10) — several digits could not be pinned down without fabricating values. Per instructions to be ruthless about skipping rather than guessing, and because the schema requires a validated box score for both teams to record a game, this game is skipped in full rather than reporting a partially-invented Minnesota lineup."
+    }
+  ]
+}

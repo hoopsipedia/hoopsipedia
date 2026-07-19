@@ -1,0 +1,11 @@
+{
+  "page": 11,
+  "games": [],
+  "skipped": [
+    {
+      "date": "1998-01-03",
+      "opponent": "Air Force",
+      "reason": "Official NCAA box score, New Mexico 92 vs Air Force 59 (Jan 3, 1998, The Pit). New Mexico side checksums perfectly (player TP sum = 92, matches final score and half-total 41+51=92). Air Force side fails checksum: player TP sum = 60 vs team final of 59 (halves 34+25=59); also team 3-pt FG line (9-17) doesn't match sum of individual 3FG lines (10-18), off by exactly one made+attempted 3-pointer, which is consistent with the 1-point TP discrepancy (likely one player's shot type misread as a three that was actually a two, or a genuine scorekeeper error in the original 1998 sheet). Could not confidently resolve which individual entry is wrong without guessing, so per instructions the whole game is skipped rather than transcribed with a forced/guessed correction."
+    }
+  ]
+}

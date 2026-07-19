@@ -1,0 +1,9 @@
+{
+  "page": 22,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Ohio State vs Illinois box score, Feb 14 1981, Columbus OH. Visitors (Illinois) box is legible and checksums cleanly (player TP sum 4+16+4+17+8+14+0+0+0+0=63 matches team TOTALS TP=63, which also matches the 'Score by Periods' final for Illinois). However the home team (Ohio State) box has two illegible player rows (7th and 8th rows, names and several numeric columns unreadable/smudged) and the TOTALS row digits are internally inconsistent (apparent FG total 24 x2=48 plus apparent FT total would need ~29 makes to reach an apparent TP of 77, but FTA total reads as only 12, which is impossible). Because the numbers cannot be reconciled with confidence, the Ohio State side fails checksum and the whole game is skipped per the ruthless-skip instruction rather than guessing values."
+    }
+  ]
+}

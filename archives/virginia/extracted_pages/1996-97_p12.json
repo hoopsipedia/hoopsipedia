@@ -1,0 +1,40 @@
+{
+  "page": 12,
+  "games": [
+    {
+      "date": "1997-01-02",
+      "opponent": "Loyola",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 67,
+          "players": [
+            {"name": "Jamal Robinson", "min": 34, "fg": "4-9", "tp": "0-0", "ft": "1-2", "reb": 12, "ast": 4, "pf": 1, "to": 1, "blk": 0, "stl": 0, "pts": 9},
+            {"name": "Monte Marcaccini", "min": 14, "fg": "1-2", "tp": "1-1", "ft": "1-4", "reb": 2, "ast": 1, "pf": 0, "to": 0, "blk": 1, "stl": 0, "pts": 4},
+            {"name": "Colin Ducharme", "min": 11, "fg": "1-1", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 1, "pf": 0, "to": 0, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Curtis Staples", "min": 35, "fg": "6-9", "tp": "5-8", "ft": "2-2", "reb": 5, "ast": 0, "pf": 4, "to": 3, "blk": 0, "stl": 2, "pts": 19},
+            {"name": "Harold Deane", "min": 40, "fg": "3-11", "tp": "3-9", "ft": "9-9", "reb": 5, "ast": 6, "pf": 2, "to": 3, "blk": 1, "stl": 4, "pts": 18},
+            {"name": "Norman Nolan", "min": 23, "fg": "3-5", "tp": "0-0", "ft": "4-6", "reb": 7, "ast": 0, "pf": 2, "to": 2, "blk": 2, "stl": 0, "pts": 10},
+            {"name": "Willie Dersch", "min": 20, "fg": "1-3", "tp": "0-2", "ft": "0-0", "reb": 1, "ast": 3, "pf": 0, "to": 2, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Courtney Alexander", "min": 14, "fg": "1-5", "tp": "0-2", "ft": "1-2", "pts": 3},
+            {"name": "Craig McAndrew", "min": 9, "fg": "0-2", "tp": "0-0", "ft": "0-1", "pts": 0}
+          ]
+        },
+        {
+          "name": "Loyola",
+          "score": 61,
+          "players": [
+            {"name": "Mike Powell", "min": 36, "fg": "6-16", "tp": "2-4", "ft": "4-6", "reb": 2, "ast": 3, "pf": 3, "to": 0, "blk": 0, "stl": 2, "pts": 18},
+            {"name": "Erik Cooper", "min": 40, "fg": "2-6", "tp": "1-3", "ft": "3-4", "reb": 3, "ast": 0, "pf": 3, "to": 0, "blk": 0, "stl": 3, "pts": 8},
+            {"name": "Roderick Platt", "min": 40, "fg": "2-4", "tp": "0-0", "ft": "1-2", "reb": 9, "ast": 4, "pf": 1, "to": 0, "blk": 2, "stl": 0, "pts": 5},
+            {"name": "Milt Williams", "min": 14, "fg": "1-2", "tp": "1-1", "ft": "0-0", "reb": 2, "ast": 2, "pf": 1, "to": 0, "blk": 0, "stl": 0, "pts": 3},
+            {"name": "Jason Rowe", "min": 35, "fg": "6-13", "tp": "3-7", "ft": "1-2", "reb": 4, "ast": 1, "pf": 4, "to": 3, "blk": 1, "stl": 0, "pts": 16},
+            {"name": "Darren Kelly", "min": 35, "fg": "4-10", "tp": "1-3", "ft": "2-4", "reb": 5, "ast": 1, "pf": 3, "to": 3, "blk": 0, "stl": 0, "pts": 11}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

@@ -1,0 +1,48 @@
+{
+  "page": 3,
+  "games": [
+    {
+      "date": "1993-12-04",
+      "opponent": "Rice",
+      "arena": "University Hall, Charlottesville, VA",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 59,
+          "players": [
+            {"name": "Junior Burrough", "min": 34, "fg": "4-19", "tp": "1-2", "ft": "6-12", "reb": 11, "pf": 3, "ast": 1, "to": 1, "stl": 3, "pts": 15},
+            {"name": "Jason Williford", "min": 32, "fg": "3-9", "tp": "0-2", "ft": "2-6", "reb": 12, "pf": 4, "ast": 1, "to": 3, "stl": 3, "pts": 8},
+            {"name": "Yuri Barnes", "min": 28, "fg": "3-9", "ft": "2-2", "reb": 14, "pf": 4, "ast": 2, "pts": 8},
+            {"name": "Cornel Parker", "min": 31, "fg": "5-8", "tp": "1-1", "ft": "3-4", "reb": 5, "pf": 3, "to": 2, "stl": 2, "pts": 14},
+            {"name": "Harold Deane", "min": 38, "fg": "2-6", "tp": "2-5", "ft": "5-9", "reb": 3, "pf": 2, "ast": 5, "to": 4, "blk": 4, "stl": 1, "pts": 11},
+            {"name": "Chris Alexander", "min": 6, "fg": "0-1", "pf": 1, "pts": 0},
+            {"name": "Jamal Robinson", "min": 17, "fg": "0-5", "tp": "0-1", "ft": "3-4", "reb": 4, "pf": 3, "blk": 1, "stl": 2, "pts": 3},
+            {"name": "Chris Havlicek", "min": 7, "fg": "0-1", "tp": "0-1", "reb": 1, "pts": 0},
+            {"name": "Shawn Wilson", "min": 3, "blk": 1, "pts": 0},
+            {"name": "Mike Powell", "min": 4, "fg": "0-1", "pts": 0}
+          ]
+        },
+        {
+          "name": "Rice Owls",
+          "score": 51,
+          "players": [
+            {"name": "Torrey Andrews", "min": 35, "fg": "4-11", "ft": "7-10", "reb": 7, "pf": 3, "to": 4, "pts": 15},
+            {"name": "Scott Tynes", "min": 33, "fg": "0-7", "tp": "0-4", "reb": 6, "pf": 3, "to": 2, "stl": 1, "pts": 0},
+            {"name": "Todd Schoettelkotte", "min": 20, "fg": "2-6", "reb": 5, "pf": 4, "to": 1, "stl": 1, "pts": 4},
+            {"name": "Kevin Rabbit", "min": 29, "fg": "3-6", "tp": "2-2", "reb": 2, "pf": 4, "ast": 4, "to": 3, "pts": 8},
+            {"name": "Adam Peakes", "min": 32, "fg": "2-6", "tp": "1-4", "ft": "0-2", "reb": 8, "pf": 5, "ast": 4, "to": 1, "stl": 2, "pts": 5, "note": "fouled out at 0:19; rebound off/def shown as 4/4, team-total column split unclear so reb totaled as sum"},
+            {"name": "Shaun Igo", "min": 20, "fg": "1-7", "ft": "6-10", "reb": 7, "pf": 2, "to": 3, "blk": 1, "pts": 8},
+            {"name": "Eric Singletary", "min": 11, "fg": "1-4", "tp": "0-2", "reb": 3, "pf": 1, "ast": 1, "to": 2, "pts": 2},
+            {"name": "Thomas McGhee", "min": 9, "fg": "3-6", "ft": "3-4", "reb": 2, "stl": 1, "pts": 9},
+            {"name": "Jesse Cravens", "min": 1, "reb": 1, "pts": 0},
+            {"name": "Scott Oliver", "min": 10, "fg": "0-1", "reb": 2, "pf": 3, "to": 1, "stl": 1, "pts": 0},
+            {"name": "Matt Baskind", "min": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true,
+      "checksum_note": "Sum of player pts: Virginia 15+8+8+14+11+0+3+0+0+0=59 (matches final 59); Rice 15+0+4+8+5+8+2+9+0+0+0=51 (matches final 51). pts computed per NCAA formula pts = 2*FG_made + 3PT_made + FT_made where FG_made already includes 3-point makes."
+    }
+  ],
+  "skipped": []
+}

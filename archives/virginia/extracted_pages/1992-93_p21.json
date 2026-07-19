@@ -1,0 +1,41 @@
+{
+  "page": 21,
+  "games": [
+    {
+      "date": "1993-02-18",
+      "opponent": "Duke Blue Devils",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 58,
+          "players": [
+            {"name": "Junior Burrough", "min": 25, "fg": "1-6", "ft": "4-5", "reb": 7, "pf": 3, "to": 4, "blk": 1, "pts": 6},
+            {"name": "Jason Williford", "min": 15, "fg": "1-3", "reb": 5, "pf": 2, "ast": 1, "to": 4, "stl": 2, "pts": 2},
+            {"name": "Ted Jeffries", "min": 36, "fg": "5-10", "ft": "0-2", "reb": 9, "pf": 2, "ast": 1, "to": 2, "stl": 1, "pts": 10},
+            {"name": "Cornel Parker", "min": 35, "fg": "4-11", "ft": "0-2", "reb": 8, "pf": 1, "ast": 3, "to": 3, "blk": 1, "pts": 8},
+            {"name": "Cory Alexander", "min": 40, "fg": "6-18", "tp": "1-5", "ft": "7-8", "reb": 2, "pf": 1, "ast": 4, "to": 2, "stl": 2, "pts": 20},
+            {"name": "Yuri Barnes", "min": 16, "fg": "1-5", "ft": "2-2", "reb": 8, "pf": 4, "to": 2, "blk": 1, "pts": 4},
+            {"name": "Doug Smith", "min": 30, "fg": "3-4", "tp": "1-2", "ft": "1-2", "reb": 6, "pf": 1, "ast": 4, "to": 1, "stl": 1, "pts": 8},
+            {"name": "Shawn Wilson", "min": 3, "pts": 0}
+          ]
+        },
+        {
+          "name": "Duke Blue Devils",
+          "score": 55,
+          "players": [
+            {"name": "Marty Clark", "min": 14, "fg": "0-4", "tp": "0-1", "pf": 3, "ast": 2, "stl": 1, "pts": 0},
+            {"name": "Antonio Lang", "min": 32, "fg": "2-5", "ft": "1-4", "reb": 7, "pf": 5, "ast": 3, "to": 2, "blk": 2, "stl": 1, "pts": 5},
+            {"name": "Cherokee Parks", "min": 35, "fg": "8-12", "ft": "0-1", "reb": 11, "pf": 2, "to": 1, "blk": 2, "pts": 16},
+            {"name": "Bobby Hurley", "min": 40, "fg": "3-11", "tp": "2-5", "reb": 5, "pf": 4, "ast": 9, "to": 6, "pts": 8},
+            {"name": "Thomas Hill", "min": 31, "fg": "6-17", "tp": "1-4", "ft": "1-3", "reb": 7, "pf": 4, "ast": 1, "stl": 3, "pts": 14},
+            {"name": "Erik Meek", "min": 13, "fg": "1-4", "ft": "0-3", "reb": 2, "pf": 1, "blk": 1, "pts": 2},
+            {"name": "Kenny Blakeney", "min": 17, "fg": "0-5", "tp": "0-1", "ft": "2-2", "reb": 4, "ast": 1, "to": 1, "pts": 2},
+            {"name": "Chris Collins", "min": 18, "fg": "3-6", "tp": "2-4", "reb": 1, "pf": 1, "to": 2, "pts": 8}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

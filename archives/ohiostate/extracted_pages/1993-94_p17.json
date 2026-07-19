@@ -1,0 +1,9 @@
+{
+  "page": 17,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page shows Game 16: Ohio State vs Penn State, 1994-01-19, St. John Arena, Columbus OH, final score Ohio State 79, Penn State 57 (both teams' full player rosters with FG/3PT/FT/REB/PF/TP/AST/TO/BLK/STL/MIN columns are present and mostly legible). However, several player rows (Penn State: Williams, Joseph, Wydman; Ohio State: Watson) appear to be missing one digit each relative to the 16-column format used by other rows on the page, and cross-checking team TOTALS against summed individual stats produced internal inconsistencies (e.g. Penn State individual PF sum of just 8 of 11 players already exceeds the team PF total, and the points needed to reconcile TOTALS TP=57 with summed known players' TP=51 does not match what the FG/FT/3PT column differences allow). Given these unresolved arithmetic contradictions, could not confidently reconstruct exact per-player stat lines or pass the required points checksum for either team, so skipping per instructions to be ruthless rather than guess."
+    }
+  ]
+}

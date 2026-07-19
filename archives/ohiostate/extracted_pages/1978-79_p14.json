@@ -1,0 +1,9 @@
+{
+  "page": 14,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page contains a single handwritten NCAA official box score (Ohio State vs. an opponent, likely Minnesota) but the handwriting is faint and inconsistent enough that many digits in the FG/FGA/FT/FTA/REB/PF/TP/A/TO/BLK/S/MIN columns for both teams cannot be read with confidence (e.g. ambiguous 6 vs 16, 3 vs 33, 45 vs 35 in totals rows). Only one player line (opponent row 1, likely 'McNeal': FG 7-11, FT 2-2, TP 16) self-checksums cleanly (7*2+2=16); no other row or either team's total could be verified against a reliable score, so transcribing further risked inventing values. Skipping per instructions rather than guessing."
+    }
+  ]
+}

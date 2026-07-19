@@ -1,0 +1,11 @@
+{
+  "page": 4,
+  "games": [],
+  "skipped": [
+    {
+      "date": "1993-12-04",
+      "opponent": "UNC-Asheville (Ohio State vs. UNC-Asheville, Game Three, St. John Arena)",
+      "reason": "Visitor (UNC-Asheville) player lines transcribed cleanly and checksummed exactly (player TP sum = 59 = final score). However, the home team (Ohio State) roster has several faint/ambiguous numeric columns on this scan (free-throw made/attempted fields transposed or missing on multiple rows; four bench rows - Macon, Eaker, Ratliff, Winston - are especially degraded). Best-effort reconstruction of Ohio State player points totaled well short of the 93-point final score (off by roughly 13 points after solving via team-total constraints for FG/3FG/FT), which exceeds plausible single-digit OCR error. Already used both permitted reads of the page. Skipping the whole game per instructions rather than publish a non-checksummed or partially invented roster."
+    }
+  ]
+}

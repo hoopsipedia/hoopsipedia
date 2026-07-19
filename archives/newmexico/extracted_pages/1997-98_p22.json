@@ -1,0 +1,9 @@
+{
+  "page": 22,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page contains an official box score for New Mexico vs Air Force, 2/14/98 at Clune Arena, USAFA, CO (final: New Mexico 96, Air Force 72). Team-level TOTALS rows are clearly legible and internally consistent (New Mexico: FG 36-53, 3PT 9-15, FT 15-17, TP 96, checksum 2*(36-9)+3*9+15=96 matches final score; Air Force: FG 27-67, 3PT 11-30, FT 7-10, TP 72, checksum 2*(27-11)+3*11+7=72 matches final score). However, the individual player rows for both teams are heavily obscured by overlapping percentage figures bleeding into the FG/3PT/FT columns, faint smudges, and a struck-through/corrected player entry (No. 24, 'ANDREWS' crossed out and replaced with 'Henry, Kevin'), making per-player made/attempted values too unreliable to transcribe with confidence. Skipping rather than guessing individual player lines per instructions."
+    }
+  ]
+}

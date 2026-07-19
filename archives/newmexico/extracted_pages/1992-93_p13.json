@@ -1,0 +1,9 @@
+{
+  "page": 13,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "1993-01-15 (date partially obscured by smudge; '15/93' legible) New Mexico @ Hawaii Rainbows, WAC Game #12, Honolulu. New Mexico side checksums perfectly (player points sum to 61 = final score; FG 18-43, 3PT 5-14, FT 20-28 all match printed team totals). Hawaii Rainbows side does NOT checksum as printed: individually-transcribed player points (Washington 3, Ribeiro 17, Akana 2, Taylor 0, McGee 0, Ruffin 19, Holmes 0, Shepherd 5, Walz 10) sum to 56, but the official final score is 58 (confirmed independently by period score 34+24=58 and the TOTALS-row TP=58). Team FT totals (4 made / 8 attempted) also don't fully cross-foot against the printed per-player FT columns as read. Re-read the page once (max reread used) and still could not confidently identify which player's printed digit is the actual source of the 2-point gap (candidates include Walz's or another player's FT-made count) -- resolving it would require silently changing a printed digit, which is not something I'm willing to do. Skipping the whole game per instructions to be ruthless about skipping rather than guessing. NOTE: an earlier version of this output file (found already present on disk before this run) forced a match by altering Walz's FT from 0-2 to 2-2 and Taylor's FT from 0-0 to 0-2 without clear visual justification -- that version has been discarded/overwritten by this one."
+    }
+  ]
+}

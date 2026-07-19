@@ -1,0 +1,9 @@
+{
+  "page": 20,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Michigan State @ Ohio State, Feb 7 1981, St. John Arena, Columbus OH — official NCAA box score. Ohio State side checksums perfectly (player pts sum 73 == team TP total 73), but Michigan State has one player row (2nd row, position 'f') that is entirely struck through/illegible with no readable name or stats. Summing the 6 legible Michigan State scorers (Vincent 27, Foster 2, Smith 10, Brkovich 10, Kaye 9, Perry 2) plus zeros for the bench gives 60, one point short of the printed team total (~61, and FT column total also off by exactly 1), implying the illegible player scored via a single made free throw. Skipping the whole game rather than inventing that player's identity/stats or fudging the total."
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "page": 6,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Ohio State vs Howard, December 14, 1991, St. John Arena (final: Ohio State 114, Howard 53). Clear typed official box score, both team FG totals (Howard 22/65, Ohio State 41/72) matched exactly when individually summed, and Howard's per-player TP column summed correctly to 53 (checksum passes for the visitor). However, Ohio State's per-player TP column summed to 122, an 8-point mismatch against the actual final score of 114 (confirmed by the printed TOTALS row and the FT shooting-percentage footnote showing team FT as 29-38/.763, whereas the individually transcribed FT column summed to 36 makes, ~7 too many). The discrepancy traces to ambiguous/closely-spaced FT made-attempted digits for one or more Ohio State bench players (Ratliff, Etzler, Skelton, Dudley, Jackson, Baker, Brown were all candidates) that could not be resolved with confidence after using the one allowed re-read. Per instructions, skipping rather than publishing a partially-wrong box score."
+    }
+  ]
+}

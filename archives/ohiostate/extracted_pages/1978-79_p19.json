@@ -1,0 +1,9 @@
+{
+  "page": 19,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page contains one game (Ohio State vs Indiana) on a handwritten official scoresheet. Ohio State's side is legible enough that team total points (62) matches 2*FGM+FTM for the printed team totals row, but Indiana's side has faded/ambiguous ink: several player first-round digits are illegible or contradictory (e.g., the Indiana totals row FG column reads as '2', which does not match the sum of individually legible player FG values, and multiple player names/rebound/assist entries are too smudged to read with confidence). Since a game entry requires both teams' player lines and Indiana's cannot be transcribed without guessing, the whole game is skipped per the ruthless-skip-over-guess instruction rather than emitting a partial/unverified box score."
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "page": 13,
+  "games": [],
+  "skipped": [
+    {
+      "date": "1994-01-08",
+      "opponent": "Air Force",
+      "reason": "Checksum failed for Air Force (home team): sum of individual player points = 56 (Loll 16, Barrett 4, Morgan 2, Jones 22, Minton 6, Bell 2, Garey 2, Nelson 2, rest 0) but team final score / official PTS total = 54. Underlying FT column also inconsistent: individual FT-made sum = 10 (Loll 2, Morgan 2, Jones 4, Garey 2) vs team total FT = 8, and FTA sums 15 vs team total 13. New Mexico (visitor) side checksums cleanly (individual sum 80 = final score 80), but since the game object requires both teams to validate, and Air Force's internal box score is self-inconsistent in the source document (typed STATMAN II report, 01-08-94 New Mexico 80 @ Air Force 54), the whole game is skipped rather than guessing which figure is the typo."
+    }
+  ]
+}

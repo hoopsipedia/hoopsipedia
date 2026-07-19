@@ -1,0 +1,39 @@
+{
+  "page": 28,
+  "games": [
+    {
+      "date": "1980-03-02",
+      "opponent": "Indiana Hoosiers",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 73,
+          "players": [
+            {"name": "Smith", "min": "35", "fg": "3-7", "ft": "2-4", "reb": "6", "pf": "4", "ast": "2", "to": "1", "blk": "2", "stl": "0", "pts": "8"},
+            {"name": "Kellogg", "min": "45", "fg": "5-12", "ft": "8-9", "reb": "16", "pf": "3", "ast": "2", "to": "2", "blk": "3", "stl": "1", "pts": "18"},
+            {"name": "Williams", "min": "33", "fg": "6-16", "ft": "6-8", "reb": "11", "pf": "5", "ast": "0", "to": "1", "blk": "2", "stl": "1", "pts": "18"},
+            {"name": "Ramsey", "min": "44", "fg": "8-19", "ft": "1-2", "reb": "1", "pf": "4", "ast": "7", "to": "2", "blk": "0", "stl": "2", "pts": "17"},
+            {"name": "Scott", "min": "41", "fg": "4-10", "ft": "0-0", "reb": "4", "pf": "4", "ast": "2", "to": "1", "blk": "0", "stl": "0", "pts": "8"},
+            {"name": "Ellinghausen", "min": "13", "fg": "1-2", "ft": "0-0", "reb": "1", "pf": "4", "ast": "0", "to": "1", "blk": "0", "stl": "0", "pts": "2"},
+            {"name": "Huggins", "min": "7", "fg": "1-1", "ft": "0-0", "reb": "0", "pf": "0", "ast": "0", "to": "0", "blk": "0", "stl": "0", "pts": "2"},
+            {"name": "Waiters", "min": "2", "fg": "0-0", "ft": "0-0", "reb": "0", "pf": "0", "ast": "0", "to": "0", "blk": "1", "stl": "0", "pts": "0"}
+          ]
+        },
+        {
+          "name": "Indiana Hoosiers",
+          "score": 76,
+          "players": [
+            {"name": "Woodson", "min": "45", "fg": "9-20", "ft": "3-5", "reb": "2", "pf": "3", "ast": "4", "to": "2", "blk": "3", "stl": "0", "pts": "21"},
+            {"name": "Risley", "fg": "1-2", "ft": "4-4", "reb": "8", "pf": "3", "ast": "0", "to": "2", "blk": "0", "stl": "1", "pts": "6"},
+            {"name": "Tolbert", "min": "45", "fg": "4-9", "ft": "2-4", "reb": "12", "pf": "4", "ast": "1", "to": "2", "blk": "1", "stl": "0", "pts": "10"},
+            {"name": "I. Thomas", "min": "45", "fg": "6-15", "ft": "9-9", "reb": "10", "pf": "3", "ast": "7", "to": "2", "blk": "0", "stl": "0", "pts": "21"},
+            {"name": "Carter", "fg": "3-8", "ft": "6-7", "reb": "3", "pf": "3", "ast": "3", "to": "3", "blk": "0", "stl": "1", "pts": "12"},
+            {"name": "Turner", "fg": "2-4", "ft": "2-4", "reb": "5", "pf": "3", "ast": "0", "to": "0", "blk": "1", "stl": "1", "pts": "6"}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

@@ -1,0 +1,47 @@
+{
+  "page": 13,
+  "games": [
+    {
+      "date": "1993-01-23",
+      "opponent": "Georgia Tech",
+      "teams": [
+        {
+          "name": "Georgia Tech Yellow Jackets",
+          "score": 75,
+          "players": [
+            {"name": "Moore, Martice", "min": 30, "fg": "6-11", "tp": "1-1", "ft": "2-2", "reb": 4, "ast": 2, "pf": 0, "to": 2, "stl": 0, "blk": 2, "pts": 15},
+            {"name": "Forrest, James", "min": 26, "fg": "4-9", "tp": "0-0", "ft": "0-1", "reb": 7, "ast": 0, "pf": 4, "to": 4, "stl": 1, "blk": 0, "pts": 8},
+            {"name": "Mackey, Malcolm", "min": 37, "fg": "9-12", "tp": "0-0", "ft": "4-6", "reb": 9, "ast": 0, "pf": 1, "to": 1, "stl": 0, "blk": 1, "pts": 22},
+            {"name": "Best, Travis", "min": 40, "fg": "5-12", "tp": "1-2", "ft": "4-6", "reb": 4, "ast": 6, "pf": 1, "to": 3, "stl": 2, "blk": 1, "pts": 15},
+            {"name": "Hill, Bryan", "min": 29, "fg": "2-2", "tp": "0-0", "ft": "0-4", "reb": 0, "ast": 3, "pf": 2, "to": 1, "stl": 1, "blk": 0, "pts": 4},
+            {"name": "Barry, Drew", "min": 20, "fg": "1-3", "tp": "0-1", "ft": "1-2", "reb": 4, "ast": 2, "pf": 0, "to": 2, "stl": 0, "blk": 0, "pts": 3},
+            {"name": "Newbill, Ivano", "min": 18, "fg": "3-4", "tp": "0-0", "ft": "2-4", "reb": 4, "ast": 1, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 8}
+          ],
+          "team_rebounds_extra": {"off": 3, "def": 2, "tot": 5},
+          "checksum_ok": true
+        },
+        {
+          "name": "Virginia Cavaliers",
+          "score": 71,
+          "players": [
+            {"name": "Burrough, Junior", "min": 28, "fg": "11-20", "tp": "0-1", "ft": "4-6", "reb": 8, "ast": 0, "pf": 4, "to": 4, "stl": 3, "blk": 0, "pts": 26},
+            {"name": "Williford, Jason", "min": 19, "fg": "0-6", "tp": "0-1", "ft": "0-0", "reb": 6, "ast": 0, "pf": 2, "to": 1, "stl": 2, "blk": 0, "pts": 0},
+            {"name": "Jeffries, Ted", "min": 38, "fg": "7-13", "tp": "0-0", "ft": "0-0", "reb": 12, "ast": 2, "pf": 3, "to": 1, "stl": 0, "blk": 0, "pts": 14},
+            {"name": "Parker, Cornel", "min": 36, "fg": "3-11", "tp": "1-4", "ft": "0-0", "reb": 7, "ast": 2, "pf": 4, "to": 1, "stl": 1, "blk": 1, "pts": 7},
+            {"name": "Alexander, Cory", "min": 40, "fg": "7-18", "tp": "3-8", "ft": "3-4", "reb": 2, "ast": 11, "pf": 4, "to": 2, "stl": 0, "blk": 0, "pts": 20},
+            {"name": "Smith, Doug", "min": 25, "fg": "0-3", "tp": "0-3", "ft": "0-0", "reb": 1, "ast": 4, "pf": 1, "to": 2, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Barnes, Yuri", "min": 13, "fg": "2-4", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "pf": 3, "to": 0, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Wilson, Shawn", "min": 1, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ],
+          "team_rebounds_extra": {"off": 2, "def": 0, "tot": 2},
+          "checksum_ok": true
+        }
+      ],
+      "site": "Charlottesville, VA",
+      "attendance": 8864,
+      "officials": ["Herring", "Croft", "Gordon"],
+      "score_by_period": {"georgia_tech": {"1st": 36, "2nd": 39}, "virginia": {"1st": 37, "2nd": 34}}
+    }
+  ],
+  "skipped": []
+}

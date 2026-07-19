@@ -1,0 +1,46 @@
+{
+  "page": 29,
+  "games": [
+    {
+      "date": "1979-03-12",
+      "opponent": "Maryland Terrapins",
+      "notes": "NCAA Tournament game at Cole Field House. Records shown pre-game: Ohio State (19-10), Maryland (19-11). TP is a printed points column on the sheet (not computed), but cross-checked against 2*FG_made+FT_made where legible and it matched for most rows. Some player names on the Maryland side are partially obscured by handwriting/overlapping text; best-guess transcriptions used (Buck Williams, Larry Gibson, Greg Manning, Reggie Jackson identified via known 1978-79 Maryland roster). Minutes (MIN) column omitted for players where digits were not legible with confidence.",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 79,
+          "players": [
+            {"name": "Scott, Carter", "fg": "5-8", "ft": "4-6", "reb": 5, "pf": 4, "pts": 14, "ast": 2, "to": 1},
+            {"name": "Smith, Jim", "fg": "5-6", "ft": "0-0", "reb": 8, "pf": 3, "pts": 10, "ast": 0, "to": 0, "blk": 2, "stl": 1},
+            {"name": "Williams, Herb", "fg": "6-14", "ft": "3-7", "reb": 8, "pf": 1, "pts": 15, "ast": 1, "to": 5, "blk": 0, "stl": 0, "min": 40},
+            {"name": "Ransey, Kelvin", "fg": "9-20", "ft": "5-8", "reb": 3, "pf": 3, "pts": 23, "ast": 4, "to": 0, "blk": 0, "stl": 4},
+            {"name": "Cline, Mike", "fg": "6-9", "ft": "1-2", "reb": 3, "pf": 4, "pts": 13, "ast": 5, "to": 6, "blk": 0, "stl": 0, "min": 31},
+            {"name": "Ellinghausen, Jim", "fg": "0-2", "ft": "0-0", "reb": 1, "pf": 1, "pts": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "min": 5},
+            {"name": "Smith, Rick", "fg": "1-1", "ft": "0-1", "reb": 0, "pf": 0, "pts": 2, "ast": 0, "to": 1, "blk": 0, "stl": 0, "min": 5},
+            {"name": "Penn, Tad", "fg": "0-0", "ft": "0-0", "reb": 1, "pf": 0, "pts": 0, "ast": 1, "to": 1, "blk": 0, "stl": 0, "min": 8},
+            {"name": "Hall, Tony", "fg": "0-3", "ft": "2-2", "reb": 4, "pf": 1, "pts": 2, "ast": 0, "to": 1, "blk": 0, "stl": 1, "min": 13}
+          ],
+          "checksum_ok": true
+        },
+        {
+          "name": "Maryland Terrapins",
+          "score": 72,
+          "players": [
+            {"name": "Graham, Ernie", "fg": "8-16", "ft": "4-4", "reb": 3, "pf": 4, "pts": 20, "ast": 2, "to": 4, "blk": 1, "stl": 2, "min": 27},
+            {"name": "Williams, Buck", "fg": "1-7", "ft": "0-0", "reb": 12, "pf": 2, "pts": 8, "ast": 0, "to": 3, "blk": 1, "stl": 1, "min": 36},
+            {"name": "Gibson, Larry", "fg": "0-6", "ft": "1-4", "reb": 6, "pf": 4, "pts": 3, "ast": 1, "to": 3, "blk": 1, "stl": 0},
+            {"name": "Manning, Greg", "fg": "4-10", "ft": "2-3", "reb": 1, "pf": 2, "pts": 10, "ast": 1, "to": 2, "blk": 1, "stl": 0, "min": 27},
+            {"name": "Morley, Dutch", "fg": "0-0", "ft": "0-0", "reb": 2, "pf": 3, "pts": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0},
+            {"name": "Holsey, Burk", "fg": "0-0", "ft": "0-0", "reb": 1, "pf": null, "pts": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0},
+            {"name": "King, Albert", "fg": "11-18", "ft": "5-6", "reb": 6, "pf": 1, "pts": 27, "ast": 3, "to": 2, "blk": 1, "stl": 0},
+            {"name": "Jackson, Reggie", "fg": "0-3", "ft": "0-0", "reb": 0, "pf": 3, "pts": 0, "ast": 3, "to": 1, "blk": 1, "stl": 0},
+            {"name": "Baldwin, Taylor", "fg": "1-2", "ft": "0-0", "reb": 3, "pf": 1, "pts": 2, "ast": 0, "to": 1, "blk": 0, "stl": 0},
+            {"name": "Shrader, Eric", "fg": "1-2", "ft": "0-0", "reb": 0, "pf": 0, "pts": 2, "ast": 0, "to": 0, "blk": 0, "stl": 0}
+          ],
+          "checksum_ok": true
+        }
+      ]
+    }
+  ],
+  "skipped": []
+}

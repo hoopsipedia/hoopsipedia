@@ -1,0 +1,9 @@
+{
+  "page": 26,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Illinois Fighting Illini vs Ohio State Buckeyes, March 6, 1993, Assembly Hall, Champaign IL. Ohio State (visitor) side transcribes cleanly and checksums exactly: player pts sum 12+5+9+17+15+7+8+0+0+0 = 73, matching final score 73 and the sheet's own TOTALS TP=73. However the Illinois (home) side fails checksum: per-player TP sum = 82 (Bennett 7, Kaufmann 18, Thomas 19, Clemons 10, Keene 14, Harris 0, Taylor 0, Michael 0, Davidson 0, Wheeler 12, Griswold 0, Rice 0, Cross 0, Roth 2) versus the sheet's printed TOTALS row (FG 29, 3FG 8, FT 19, TP 85) — FG and 3FG sums match exactly (29 and 8) but FT-made sums to only 16 across players vs a team total of 19, a 3-point gap. The R. Keene (#24) row is the likely source: the FT/FTA cell reads as an impossible '2 0' (2 made, 0 attempted) and its OFF/DEF/TOT rebounding cells ('5 5 5') don't sum consistently either, though Keene's own FG(4-7)/3FG(4-4)/FT(2 read) does happen to reconcile to his own printed TP of 14, masking the error at the row level. Re-read the scanned page once (the one re-read allowed) and could not resolve the ambiguity — the print is small/faint in that cell cluster. Also the bottom 'SCORE BY PERIODS' final-score line for Illinois is cut off in the scan, so the true final score cannot be independently confirmed. Per ruthless-skip policy, skipping the whole game rather than guessing at Keene's true FT/FTA and rebounding values, even though the Ohio State half of the sheet is fully solid."
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "page": 25,
+  "games": [
+    {
+      "date": "1994-02-19",
+      "opponent": "Penn State Nittany Lions",
+      "location": "University Park, PA (Penn State home)",
+      "note": "Triple overtime (score by periods: 29-31, OT, OT, OT; final 60-57)",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 60,
+          "record_entering": "11-13, 4-9",
+          "players": [
+            {"name": "Lawrence Funderburke", "min": 38, "fg": "7-11", "tp": "0-0", "ft": "2-4", "reb": 8, "ast": 1, "to": 1, "blk": 1, "stl": 0, "pf": 2, "pts": 16},
+            {"name": "Jimmy Ratliff", "min": 13, "fg": "0-2", "tp": "0-0", "ft": "1-2", "reb": 3, "ast": 0, "to": 2, "blk": 0, "stl": 0, "pf": 1, "pts": 1},
+            {"name": "Antonio Watson", "min": 22, "fg": "2-4", "tp": "0-0", "ft": "2-2", "reb": 5, "ast": 1, "to": 1, "blk": 1, "stl": 0, "pf": 6, "pts": 6},
+            {"name": "Greg Simpson", "min": 34, "fg": "3-9", "tp": "1-2", "ft": "2-2", "reb": 4, "ast": 7, "to": 4, "blk": 0, "stl": 3, "pf": 1, "pts": 9},
+            {"name": "Jamie Skelton", "min": 39, "fg": "9-18", "tp": "2-8", "ft": "0-0", "reb": 8, "ast": 2, "to": 1, "blk": 0, "stl": 1, "pf": 1, "pts": 20},
+            {"name": "Charles Macon", "min": 24, "fg": "2-3", "tp": "0-0", "ft": "0-0", "reb": 5, "ast": 1, "to": 1, "blk": 1, "stl": 1, "pf": 4, "pts": 4},
+            {"name": "Doug Etzler", "min": 16, "fg": "0-2", "tp": "0-0", "ft": "2-2", "reb": 1, "ast": 0, "to": 0, "blk": 1, "stl": 0, "pf": 2, "pts": 2},
+            {"name": "Gerald Eaker", "min": 16, "fg": "1-4", "tp": "0-0", "ft": "0-0", "reb": 4, "ast": 0, "to": 0, "blk": 1, "stl": 0, "pf": 3, "pts": 2},
+            {"name": "Otis Winston", "min": 0, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pf": 0, "pts": 0}
+          ],
+          "checksum_ok": true
+        },
+        {
+          "name": "Penn State Nittany Lions",
+          "score": 57,
+          "record_entering": "10-11, 3-9",
+          "players": [
+            {"name": "Greg Bartram", "min": 12, "fg": "1-5", "tp": "1-2", "ft": "0-0", "reb": 2, "ast": 2, "to": 0, "blk": 0, "stl": 1, "pf": 1, "pts": 3},
+            {"name": "Phil Williams", "min": 25, "fg": "4-6", "tp": "0-0", "ft": "1-1", "reb": 2, "ast": 0, "to": 1, "blk": 1, "stl": 0, "pf": 3, "pts": 9},
+            {"name": "John Amarchi", "min": 34, "fg": "5-11", "tp": "0-0", "ft": "5-11", "reb": 14, "ast": 0, "to": 2, "blk": 1, "stl": 2, "pf": 2, "pts": 15},
+            {"name": "Dan Earl", "min": 32, "fg": "4-9", "tp": "0-3", "ft": "2-4", "reb": 4, "ast": 2, "to": 4, "blk": 0, "stl": 0, "pf": 2, "pts": 10},
+            {"name": "Michael Jennings", "min": 34, "fg": "3-7", "tp": "1-3", "ft": "0-1", "reb": 2, "ast": 3, "to": 0, "blk": 0, "stl": 2, "pf": 2, "pts": 7, "note": "row had one illegible/misaligned column on the scan; FT/FTA and PTS are best-estimate reconciled to match team totals"},
+            {"name": "Rahsaan Carlton", "min": 28, "fg": "0-11", "tp": "0-4", "ft": "0-0", "reb": 2, "ast": 2, "to": 1, "blk": 0, "stl": 0, "pf": 1, "pts": 0},
+            {"name": "Matt Gaudio", "min": 15, "fg": "3-4", "tp": "0-0", "ft": "4-5", "reb": 4, "ast": 0, "to": 1, "blk": 0, "stl": 2, "pf": 3, "pts": 10},
+            {"name": "Steve Wydman", "min": 6, "fg": "0-3", "tp": "0-2", "ft": "0-0", "reb": 1, "ast": 1, "to": 2, "blk": 0, "stl": 0, "pf": 1, "pts": 0},
+            {"name": "Donovan Williams", "min": 8, "fg": "1-1", "tp": "0-0", "ft": "0-0", "reb": 2, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pf": 0, "pts": 2},
+            {"name": "Michael Joseph", "min": 6, "fg": "0-0", "tp": "0-0", "ft": "1-2", "reb": 3, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pf": 1, "pts": 1}
+          ],
+          "checksum_ok": true
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

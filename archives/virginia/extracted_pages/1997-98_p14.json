@@ -1,0 +1,44 @@
+{
+  "page": 14,
+  "games": [
+    {
+      "date": "1998-01-07",
+      "opponent": "Liberty Flames",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 64,
+          "players": [
+            {"name": "Willie Dersch", "min": 37, "fg": "4-8", "tp": "1-4", "ft": "1-1", "reb": 3, "ast": 6, "pf": 3, "to": 2, "stl": 0, "blk": 0, "pts": 10},
+            {"name": "Norman Nolan", "min": 35, "fg": "11-17", "tp": "0-0", "ft": "8-10", "reb": 8, "ast": 0, "pf": 4, "to": 3, "stl": 0, "blk": 0, "pts": 30},
+            {"name": "Colin Ducharme", "min": 15, "fg": "3-4", "tp": "0-0", "ft": "3-3", "reb": 0, "ast": 3, "pf": 4, "to": 0, "stl": 0, "blk": 1, "pts": 9},
+            {"name": "Curtis Staples", "min": 38, "fg": "0-8", "tp": "0-7", "ft": "2-2", "reb": 3, "ast": 3, "pf": 2, "to": 2, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Donald Hand", "min": 19, "fg": "1-4", "tp": "0-3", "ft": "1-2", "reb": 1, "ast": 1, "pf": 3, "to": 2, "stl": 2, "blk": 0, "pts": 3},
+            {"name": "Chezley Watson", "min": 12, "fg": "1-1", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 1, "pf": 1, "to": 0, "stl": 0, "blk": 1, "pts": 2},
+            {"name": "Kris Hunter", "min": 25, "fg": "3-5", "tp": "0-0", "ft": "0-1", "reb": 9, "ast": 2, "pf": 1, "to": 1, "stl": 0, "blk": 4, "pts": 6},
+            {"name": "Monte Marcaccini", "min": 10, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 2, "ast": 1, "pf": 1, "to": 0, "stl": 0, "blk": 1, "pts": 0},
+            {"name": "Pete McLaughlin", "min": 9, "fg": "0-0", "tp": "0-0", "ft": "0-2", "reb": 1, "ast": 0, "pf": 0, "to": 2, "stl": 0, "blk": 0, "pts": 2}
+          ]
+        },
+        {
+          "name": "Liberty Flames",
+          "score": 69,
+          "players": [
+            {"name": "Adam Hopkins", "min": 17, "fg": "0-2", "tp": "0-0", "ft": "1-2", "reb": 2, "ast": 0, "pf": 3, "to": 1, "stl": 0, "blk": 0, "pts": 1},
+            {"name": "Mark Reed", "min": 39, "fg": "5-8", "tp": "2-4", "ft": "2-2", "reb": 2, "ast": 3, "pf": 2, "to": 0, "stl": 4, "blk": 0, "pts": 14},
+            {"name": "Jeremy Day", "min": 20, "fg": "2-7", "tp": "0-0", "ft": "2-2", "reb": 4, "ast": 1, "pf": 6, "to": 1, "stl": 0, "blk": 0, "pts": 6},
+            {"name": "Larry Jackson", "min": 36, "fg": "8-13", "tp": "3-4", "ft": "4-5", "reb": 3, "ast": 2, "pf": 2, "to": 1, "stl": 1, "blk": 0, "pts": 23},
+            {"name": "Jay Boykin", "min": 33, "fg": "3-5", "tp": "2-3", "ft": "3-4", "reb": 2, "ast": 4, "pf": 1, "to": 0, "stl": 1, "blk": 1, "pts": 11},
+            {"name": "Erik Sorensen", "min": 32, "fg": "5-8", "tp": "0-1", "ft": "2-3", "reb": 5, "ast": 0, "pf": 5, "to": 1, "stl": 1, "blk": 0, "pts": 12},
+            {"name": "Brian Clark", "min": 1, "fg": "0-0", "tp": "0-0", "ft": "1-0", "reb": 1, "ast": 0, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Nic Wright", "min": 21, "fg": "0-3", "tp": "0-1", "ft": "2-4", "reb": 2, "ast": 0, "pf": 3, "to": 4, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Jason Allison", "min": 1, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true,
+      "notes": "PTS column is printed explicitly on the sheet (not computed). Two players have internally inconsistent made/attempted free-throw pairs as printed (Brian Clark, Liberty: FT shown 1-0; Pete McLaughlin, Virginia: FT shown 0-2 vs printed PTS=2) — transcribed as printed since team PTS totals and final scores both check out exactly (Virginia 64, Liberty 69). DNP players (Ben Anderson - Liberty; Greg Lyons, Mike Curtis, Chase Metheney, Craig McAndrew - Virginia) omitted; team rebound/turnover 'TEAM' rows omitted (not player stats)."
+    }
+  ],
+  "skipped": []
+}

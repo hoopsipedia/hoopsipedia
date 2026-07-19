@@ -1,0 +1,46 @@
+{
+  "page": 11,
+  "games": [
+    {
+      "date": "1981-01-10",
+      "opponent": "Purdue",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 65,
+          "players": [
+            {"name": "Clogg", "fg": "2-9", "reb": 4, "pf": 5, "ast": 1, "to": 3, "stl": 2, "min": 23, "pts": 4},
+            {"name": "Smith", "fg": "2-3", "ft": "2-3", "reb": 5, "pf": 4, "min": 24, "pts": 6},
+            {"name": "Williams", "fg": "11-15", "ft": "5-7", "reb": 8, "pf": 4, "to": 2, "blk": 3, "min": 38, "pts": 27},
+            {"name": "Huggins", "fg": "1-7", "reb": 2, "pf": 5, "ast": 10, "to": 1, "stl": 1, "min": 32, "pts": 2},
+            {"name": "Scott", "fg": "1-5", "ft": "2-2", "pf": 5, "to": 4, "min": 21, "pts": 4},
+            {"name": "Penn", "fg": "5-13", "reb": 4, "pf": 4, "ast": 2, "to": 4, "stl": 1, "min": 29, "pts": 10},
+            {"name": "Miller", "fg": "1-3", "reb": 3, "pf": 3, "to": 1, "stl": 2, "min": 13, "pts": 2},
+            {"name": "Waiters", "fg": "1-3", "reb": 2, "pf": 1, "to": 1, "min": 8, "pts": 2},
+            {"name": "Haas", "fg": "3-5", "ft": "2-2", "reb": 1, "pf": 2, "ast": 1, "to": 2, "stl": 1, "min": 10, "pts": 8},
+            {"name": "Schlichter", "pf": 2, "min": 2, "pts": 0}
+          ],
+          "checksum_ok": true
+        },
+        {
+          "name": "Purdue Boilermakers",
+          "score": 73,
+          "players": [
+            {"name": "Edmonson", "fg": "9-13", "ft": "8-8", "reb": 5, "pf": 2, "ast": 2, "to": 4, "blk": 1, "stl": 2, "min": 40, "pts": 26},
+            {"name": "Scearcy", "fg": "0-7", "ft": "3-7", "reb": 9, "pf": 2, "to": 2, "stl": 1, "min": 29, "pts": 3},
+            {"name": "Cross", "fg": "2-8", "ft": "2-5", "reb": 6, "pf": 4, "to": 2, "min": 21, "pts": 6},
+            {"name": "Walker", "fg": "4-6", "ft": "11-15", "reb": 5, "pf": 1, "ast": 4, "to": 7, "min": 34, "pts": 19},
+            {"name": "Morris", "fg": "3-5", "ft": "3-5", "reb": 3, "pf": 5, "to": 2, "stl": 1, "min": 14, "pts": 9},
+            {"name": "Barnes", "fg": "2-4", "ft": "1-3", "reb": 3, "stl": 1, "min": 23, "pts": 5},
+            {"name": "Benson", "fg": "1-3", "ft": "1-2", "reb": 3, "pf": 2, "blk": 1, "min": 22, "pts": 3},
+            {"name": "Stallings", "fg": "0-2", "ft": "1-2", "ast": 5, "to": 1, "stl": 2, "min": 10, "pts": 1},
+            {"name": "Eitert", "fg": "0-1", "ft": "1-2", "min": 7, "pts": 1}
+          ],
+          "checksum_ok": true
+        }
+      ]
+    }
+  ],
+  "skipped": [],
+  "notes": "Ohio State at Purdue, West Lafayette. Date year digit partially cut off ('1/10/8_'); inferred 1981 as this is the 1980-81 season file. Purdue player #2 surname illegible/uncertain, transcribed as 'Scearcy' (best guess from handwriting). Both teams' player TP columns sum exactly to final scores (OSU 65, Purdue 73), confirming checksum. FG/FT made values cross-checked against TP (2*fg+ft) for consistency."
+}

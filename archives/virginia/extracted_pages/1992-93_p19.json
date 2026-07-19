@@ -1,0 +1,42 @@
+{
+  "page": 19,
+  "games": [
+    {
+      "date": "1993-02-11",
+      "opponent": "NC State",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 75,
+          "players": [
+            {"name": "Burrough, Junior", "min": 29, "fg": "5-12", "ft": "2-5", "reb": 6, "ast": 1, "pf": 1, "stl": 1, "pts": 12},
+            {"name": "Williford, Jason", "min": 16, "fg": "0-2", "reb": 4, "ast": 1, "pf": 2, "pts": 0},
+            {"name": "Jeffries, Ted", "min": 33, "fg": "3-9", "ft": "2-4", "reb": 7, "ast": 3, "pf": 2, "to": 1, "blk": 3, "pts": 8},
+            {"name": "Parker, Cornel", "min": 32, "fg": "5-11", "tp": "0-2", "ft": "1-2", "reb": 4, "ast": 4, "pf": 3, "blk": 1, "stl": 1, "pts": 11},
+            {"name": "Alexander, Cory", "min": 40, "fg": "9-16", "tp": "2-3", "ft": "5-5", "reb": 5, "ast": 3, "to": 2, "blk": 1, "pts": 25},
+            {"name": "Barnes, Yuri", "min": 18, "fg": "3-3", "ft": "2-2", "reb": 4, "pf": 1, "pts": 8},
+            {"name": "Smith, Doug", "min": 30, "fg": "2-5", "tp": "2-4", "ft": "5-6", "reb": 4, "ast": 4, "pf": 1, "pts": 11},
+            {"name": "Havlicek, Chris", "min": 2, "to": 1, "pts": 0}
+          ]
+        },
+        {
+          "name": "NC State Wolfpack",
+          "score": 66,
+          "players": [
+            {"name": "Davis, Mark", "min": 29, "fg": "3-11", "tp": "2-3", "ft": "1-2", "reb": 7, "ast": 1, "pf": 1, "to": 2, "stl": 1, "blk": 1, "pts": 9},
+            {"name": "Lewis, Marc", "min": 25, "fg": "3-6", "tp": "0-1", "ft": "0-0", "reb": 3, "ast": 3, "pf": 4, "to": 1, "pts": 6},
+            {"name": "Thompson, Kevin", "min": 38, "fg": "8-13", "ft": "2-4", "reb": 11, "ast": 4, "pf": 5, "to": 1, "blk": 2, "pts": 18},
+            {"name": "McCuller, Lakista", "min": 33, "fg": "5-10", "tp": "4-5", "reb": 2, "ast": 2, "stl": 1, "pts": 14},
+            {"name": "Marshall, Curtis", "min": 32, "fg": "2-9", "tp": "0-3", "reb": 5, "ast": 6, "pf": 5, "to": 1, "pts": 4},
+            {"name": "Wilson, Marcus", "min": 19, "fg": "3-5", "tp": "0-2", "reb": 1, "pf": 3, "blk": 1, "pts": 6},
+            {"name": "Fuller, Todd", "min": 19, "fg": "4-8", "ft": "1-2", "reb": 7, "to": 1, "pts": 9},
+            {"name": "Newman, Victor", "min": 5, "ast": 1, "to": 1, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": [],
+  "notes": "Official NCAA box score, Virginia 75 def. NC State 66, 2/11/93 in Charlottesville, VA. Both teams' player points checksum against final scores (VA sum=75, NCSU sum=66). Thompson (NCSU) and Marshall (NCSU) both fouled out (circled PF=5); Thompson also had a technical foul at 0:40 2nd half. Some rebound/steal/block/turnover cells were blank on the sheet (interpreted as 0/not recorded) and omitted where illegible rather than guessed."
+}

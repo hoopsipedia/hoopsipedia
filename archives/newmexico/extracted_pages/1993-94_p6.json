@@ -1,0 +1,49 @@
+{
+  "page": 6,
+  "games": [
+    {
+      "date": "1993-12-11",
+      "opponent": "New Mexico State Aggies",
+      "site": "Albuquerque, NM",
+      "note": "Double overtime. pts computed as 2*(fg_made-tp_made)+3*tp_made+ft_made where the printed TP (points) column was unreadable/uncertain; matched printed TP where legible.",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 104,
+          "players": [
+            {"name": "Frank Willis", "min": 1, "fg": "0-1", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Charles Smith", "min": 19, "fg": "1-9", "ft": "0-3", "tp": "0-6", "reb": 5, "ast": 0, "pf": 2, "to": 2, "stl": 1, "blk": 0, "pts": 2},
+            {"name": "Greg Brown", "min": 48, "fg": "7-12", "ft": "14-16", "tp": "6-9", "reb": 1, "ast": 5, "pf": 2, "to": 6, "stl": 2, "blk": 0, "pts": 34},
+            {"name": "Rodney Sanders", "min": 22, "fg": "3-9", "ft": "0-0", "tp": "2-7", "reb": 1, "ast": 3, "pf": 5, "to": 2, "stl": 0, "blk": 0, "pts": 8},
+            {"name": "Marlow White", "min": 34, "fg": "5-13", "ft": "2-3", "tp": "3-10", "reb": 5, "ast": 1, "pf": 5, "to": 2, "stl": 0, "blk": 0, "pts": 15},
+            {"name": "Scott Pritchett", "min": 3, "fg": "0-0", "ft": "1-2", "tp": "0-0", "reb": 0, "ast": 1, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 1},
+            {"name": "Lewis LaMar", "min": 34, "fg": "0-2", "ft": "6-8", "tp": "0-0", "reb": 5, "ast": 1, "pf": 4, "to": 1, "stl": 2, "blk": 4, "pts": 6},
+            {"name": "Canonchet Neves", "min": 49, "fg": "7-19", "ft": "6-10", "tp": "3-10", "reb": 15, "ast": 1, "pf": 4, "to": 6, "stl": 0, "blk": 0, "pts": 23},
+            {"name": "J.J. Griego", "min": 24, "fg": "3-4", "ft": "3-4", "tp": "0-0", "reb": 7, "ast": 2, "pf": 2, "to": 4, "stl": 1, "blk": 0, "pts": 9},
+            {"name": "Brian Hayden", "min": 16, "fg": "3-5", "ft": "0-2", "tp": "0-0", "reb": 4, "ast": 0, "pf": 5, "to": 0, "stl": 0, "blk": 0, "pts": 6}
+          ]
+        },
+        {
+          "name": "New Mexico State Aggies",
+          "score": 112,
+          "players": [
+            {"name": "Keith Johnson", "min": 35, "fg": "10-15", "ft": "6-13", "tp": "0-1", "reb": 10, "ast": 7, "pf": 4, "to": 4, "stl": 5, "blk": 1, "pts": 26},
+            {"name": "Johnny Selvie", "min": 20, "fg": "0-3", "ft": "0-2", "tp": "0-0", "reb": 2, "ast": 0, "pf": 3, "to": 2, "stl": 0, "blk": 3, "pts": 0},
+            {"name": "Corey Rogers", "min": 21, "fg": "2-5", "ft": "0-0", "tp": "2-4", "reb": 5, "ast": 3, "pf": 2, "to": 2, "stl": 1, "blk": 0, "pts": 6},
+            {"name": "Lance Jackson", "min": 14, "fg": "6-14", "ft": "4-4", "tp": "2-6", "reb": 4, "ast": 2, "pf": 2, "to": 1, "stl": 2, "blk": 0, "pts": 18},
+            {"name": "James Dockery", "min": 35, "fg": "3-11", "ft": "1-4", "tp": "0-0", "reb": 14, "ast": 2, "pf": 3, "to": 1, "stl": 1, "blk": 0, "pts": 7},
+            {"name": "Rodney Walker", "min": 18, "fg": "1-5", "ft": "0-1", "tp": "0-2", "reb": 2, "ast": 0, "pf": 2, "to": 3, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Ron Coleman", "min": 7, "fg": "0-1", "ft": "0-2", "tp": "0-1", "reb": 2, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Thomas Wyatt", "min": 22, "fg": "9-10", "ft": "1-2", "tp": "0-0", "reb": 4, "ast": 2, "pf": 2, "to": 3, "stl": 0, "blk": 2, "pts": 19},
+            {"name": "Paul Jarrett", "min": 12, "fg": "0-2", "ft": "0-0", "tp": "0-2", "reb": 1, "ast": 0, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "William Howze", "min": 18, "fg": "2-4", "ft": "4-7", "tp": "0-0", "reb": 3, "ast": 0, "pf": 2, "to": 2, "stl": 0, "blk": 2, "pts": 8},
+            {"name": "Darrin Jackson", "min": 24, "fg": "5-9", "ft": "1-2", "tp": "3-5", "reb": 4, "ast": 0, "pf": 4, "to": 1, "stl": 1, "blk": 0, "pts": 14},
+            {"name": "Skip McCoy", "min": 24, "fg": "4-8", "ft": "1-1", "tp": "3-6", "reb": 0, "ast": 0, "pf": 5, "to": 0, "stl": 1, "blk": 0, "pts": 12}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

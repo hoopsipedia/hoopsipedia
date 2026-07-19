@@ -1,0 +1,50 @@
+{
+  "page": 21,
+  "games": [
+    {
+      "date": "1978-02-11",
+      "opponent": "Illinois Fighting Illini",
+      "site": "St. John Arena, Columbus, Ohio",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 70,
+          "players": [
+            {"name": "T. Smith", "min": 21, "fg": "0-4", "ft": "1-2", "reb": 5, "pf": 3, "to": 1, "pts": 1, "note": "pts computed as 2*fg+ft (TP column illegible)"},
+            {"name": "Page", "min": 46, "fg": "7-12", "ft": "4-4", "reb": 11, "pf": 3, "ast": 1, "to": 3, "blk": 0, "stl": 1, "pts": 18},
+            {"name": "Williams", "min": 37, "fg": "6-11", "ft": "5-5", "reb": 8, "pf": 2, "ast": 0, "to": 1, "blk": 1, "stl": 0, "pts": 17},
+            {"name": "Ramsey", "min": 31, "fg": "8-15", "ft": "0-0", "reb": 5, "pf": 3, "ast": 6, "to": 4, "blk": 0, "stl": 1, "pts": 16},
+            {"name": "Cline", "min": 23, "fg": "4-6", "ft": "2-3", "reb": 1, "pf": 4, "ast": 4, "to": 2, "blk": 1, "stl": 1, "pts": 10, "note": "pts computed as 2*fg+ft (TP column illegible)"},
+            {"name": "Ellinghausen", "min": 14, "fg": "0-1", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 0, "blk": 1, "stl": 0, "pts": 0},
+            {"name": "Scott", "min": 17, "fg": "3-4", "ft": "2-2", "reb": 1, "pf": 1, "ast": 1, "to": 5, "blk": 0, "stl": 1, "pts": 8, "note": "player name uncertain due to handwriting"},
+            {"name": "Penn", "min": 9, "fg": "0-2", "ft": "0-0", "reb": 0, "pf": 0, "ast": 2, "to": 2, "blk": 1, "stl": 0, "pts": 0},
+            {"name": "Burris", "min": 7, "fg": "0-1", "ft": "0-0", "reb": 1, "pf": 0, "ast": 0, "to": 0, "blk": 1, "stl": 0, "pts": 0},
+            {"name": "K. Smith", "min": 0, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0}
+          ],
+          "checksum_ok": true
+        },
+        {
+          "name": "Illinois Fighting Illini",
+          "score": 65,
+          "players": [
+            {"name": "Cobb", "min": 22, "fg": "2-6", "ft": "0-0", "reb": 4, "pf": 0, "ast": 1, "to": 2, "blk": 0, "stl": 1, "pts": 4},
+            {"name": "Bresnahan", "min": 32, "fg": "5-14", "ft": "1-2", "reb": 15, "pf": 3, "ast": 1, "to": 1, "blk": 0, "stl": 0, "pts": 11},
+            {"name": "Adams", "min": 21, "fg": "4-11", "ft": "1-2", "reb": 4, "pf": 3, "ast": 0, "to": 3, "pts": 9},
+            {"name": "Judson", "min": 33, "fg": "2-5", "ft": "2-2", "reb": 1, "pf": 1, "ast": 1, "to": 2, "pts": 6},
+            {"name": "Matthews", "min": 32, "fg": "2-9", "ft": "2-2", "reb": 3, "pf": 2, "ast": 2, "to": 4, "blk": 0, "stl": 1, "pts": 6},
+            {"name": "Smith", "min": 31, "fg": "7-12", "ft": "3-4", "reb": 4, "pf": 4, "ast": 1, "to": 1, "blk": 0, "stl": 3, "pts": 17},
+            {"name": "Johnson", "min": 9, "fg": "2-3", "ft": "0-0", "reb": 0, "pf": 1, "ast": 0, "to": 0, "pts": 4},
+            {"name": "Gray", "min": 3, "fg": "0-3", "ft": "0-0", "reb": 0, "pf": 0, "ast": 5, "to": 0, "pts": 0},
+            {"name": "Jones", "min": 9, "fg": "3-5", "ft": "0-0", "reb": 0, "pf": 2, "ast": 0, "to": 0, "stl": 1, "pts": 6},
+            {"name": "Gerhardt", "min": 8, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 0, "pts": 0},
+            {"name": "Ferdinand", "min": 1, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 0, "pts": 0},
+            {"name": "Lubin", "min": 1, "fg": "1-1", "ft": "0-0", "reb": 0, "pf": 1, "ast": 0, "to": 0, "pts": 2}
+          ],
+          "checksum_ok": true
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

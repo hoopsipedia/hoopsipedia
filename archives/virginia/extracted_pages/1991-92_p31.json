@@ -1,0 +1,9 @@
+{
+  "page": 31,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page is an OFFICIAL NCAA BASKETBALL BOX SCORE for the 1992 NIT Quarterfinal Round: New Mexico (20-13) at Virginia (18-13), Date 3-27-92, Site Richmond Coliseum, Final: New Mexico 71, Virginia 76 (32-39 / 32-44). Headline info (date, opponent, final score, team FG/FT/rebound totals) is legible, but individual player rows contain dense handwritten entries across many closely-packed columns (FG-FGA, 3FG-FGA, FT-FTA, Off-Def-Tot rebounds, PF, TP, A, TO, BLK, S, MIN) where several cells (especially free-throw and rebound splits interacting with the TP/points column, e.g. for McCrary, Jaxon, Logan on New Mexico and Alexander, Parker on Virginia) could not be read with confidence sufficient to pass a player-points checksum against the printed team totals (TP 71 for New Mexico, TP 76 for Virginia). Per instructions, skipping rather than guessing at ambiguous digits."
+    }
+  ]
+}

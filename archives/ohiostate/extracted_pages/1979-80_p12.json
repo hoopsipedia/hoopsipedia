@@ -1,0 +1,41 @@
+{
+  "page": 12,
+  "games": [
+    {
+      "date": "1980-01-10",
+      "opponent": "Iowa",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 77,
+          "players": [
+            {"name": "Jim Smith", "min": 34, "fg": "3-7", "ft": "1-1", "reb": 7, "pf": 4, "ast": null, "to": null, "blk": 2, "stl": 0, "pts": 7},
+            {"name": "Clark Kellogg", "min": 34, "fg": "7-15", "ft": "5-5", "reb": 5, "pf": 3, "ast": 1, "to": 2, "blk": null, "stl": 2, "pts": 19},
+            {"name": "Herb Williams", "min": 40, "fg": "8-13", "ft": "5-7", "reb": 12, "pf": 1, "ast": 2, "to": 1, "blk": 3, "stl": 2, "pts": 21},
+            {"name": "Kelvin Ransey", "min": 33, "fg": "5-12", "ft": "2-3", "reb": 3, "pf": 4, "ast": 9, "to": 3, "blk": 1, "stl": 1, "pts": 12},
+            {"name": "Carter Scott", "min": 39, "fg": "7-12", "ft": "4-6", "reb": 3, "pf": 2, "ast": 5, "to": 2, "blk": 1, "stl": 2, "pts": 18},
+            {"name": "Jim Ellinghausen", "min": 4, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 1, "ast": null, "to": null, "blk": 1, "stl": null, "pts": 0},
+            {"name": "Todd Penn", "min": 4, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": null, "to": null, "blk": null, "stl": null, "pts": 0},
+            {"name": "Larry Huggins", "min": 4, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": null, "to": null, "blk": null, "stl": null, "pts": 0},
+            {"name": "Marquis Miller", "min": 3, "fg": "0-2", "ft": "0-0", "reb": 0, "pf": 0, "ast": null, "to": null, "blk": null, "stl": null, "pts": 0}
+          ]
+        },
+        {
+          "name": "Iowa Hawkeyes",
+          "score": 71,
+          "players": [
+            {"name": "Vince Brookins", "min": 31, "fg": "7-13", "ft": "0-0", "reb": 4, "pf": 4, "ast": 3, "to": 2, "blk": 1, "stl": 1, "pts": 14},
+            {"name": "Steve Krafcisin", "min": 33, "fg": "5-13", "ft": "0-0", "reb": 12, "pf": 3, "ast": 1, "to": 3, "blk": 0, "stl": 1, "pts": 10},
+            {"name": "Steve Waite", "min": 38, "fg": "6-13", "ft": "2-2", "reb": 8, "pf": 4, "ast": 2, "to": 2, "blk": 1, "stl": 0, "pts": 14},
+            {"name": "Kevin Boyle", "min": 38, "fg": "7-16", "ft": "0-0", "reb": 12, "pf": 5, "ast": 6, "to": 0, "blk": null, "stl": 4, "pts": 14},
+            {"name": "Kenny Arnold", "min": 35, "fg": "6-13", "ft": "1-2", "reb": 5, "pf": 2, "ast": 3, "to": 3, "blk": null, "stl": 1, "pts": 13},
+            {"name": "Bob Hansen", "min": 16, "fg": "2-8", "ft": "0-1", "reb": 0, "pf": 0, "ast": 1, "to": 0, "blk": null, "stl": 0, "pts": 4},
+            {"name": "Mike Henry", "min": 4, "fg": "1-1", "ft": "0-0", "reb": 1, "pf": 0, "ast": 0, "to": 0, "blk": null, "stl": 0, "pts": 2}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

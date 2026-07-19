@@ -1,0 +1,44 @@
+{
+  "page": 4,
+  "games": [
+    {
+      "date": "1992-12-12",
+      "opponent": "New Mexico State",
+      "site": "Pan Am Center, Las Cruces, NM",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 69,
+          "players": [
+            {"name": "Ike Williams", "min": 30, "fg": "6-11", "ft": "1-2", "tp": "2-4", "reb": 5, "ast": 4, "pf": 3, "to": 1, "stl": 1, "blk": 0, "pts": 15},
+            {"name": "Khari Jaxon", "min": 31, "fg": "5-7", "ft": "0-5", "tp": "0-0", "reb": 11, "ast": 0, "pf": 5, "to": 2, "stl": 0, "blk": 3, "pts": 10},
+            {"name": "Canonchet Neves", "min": 32, "fg": "4-9", "ft": "0-2", "tp": "4-6", "reb": 2, "ast": 3, "pf": 4, "to": 2, "stl": 1, "blk": 0, "pts": 12},
+            {"name": "Steve Logan", "min": 39, "fg": "3-10", "ft": "5-8", "tp": "1-6", "reb": 5, "ast": 2, "pf": 1, "to": 2, "stl": 3, "blk": 0, "pts": 12},
+            {"name": "Corey Jenkins", "min": 13, "fg": "0-3", "ft": "0-0", "tp": "0-1", "reb": 1, "ast": 0, "pf": 2, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Greg Brown", "min": 28, "fg": "4-6", "ft": "1-2", "tp": "2-3", "reb": 0, "ast": 2, "pf": 0, "to": 2, "stl": 1, "blk": 0, "pts": 11},
+            {"name": "Lewis LaMar", "min": 13, "fg": "1-2", "ft": "5-6", "tp": "0-0", "reb": 4, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 7},
+            {"name": "J.J. Griego", "min": 11, "fg": "1-2", "ft": "0-0", "tp": "0-0", "reb": 3, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 1, "pts": 2},
+            {"name": "Frank Willis", "min": 3, "fg": "0-1", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ],
+          "checksum_ok": true
+        },
+        {
+          "name": "New Mexico State",
+          "score": 62,
+          "players": [
+            {"name": "Eric Traylor", "min": 18, "fg": "3-10", "ft": "2-2", "tp": "0-1", "reb": 10, "ast": 0, "pf": 5, "to": 1, "stl": 0, "blk": 1, "pts": 8},
+            {"name": "Cliff Reed", "min": 21, "fg": "2-8", "ft": "2-5", "tp": "0-1", "reb": 6, "ast": 1, "pf": 4, "to": 1, "stl": 1, "blk": 0, "pts": 6},
+            {"name": "Tracey Ware", "min": 31, "fg": "7-12", "ft": "4-4", "tp": "0-0", "reb": 10, "ast": 0, "pf": 3, "to": 1, "stl": 0, "blk": 0, "pts": 18},
+            {"name": "Marc Thompson", "min": 17, "fg": "0-2", "ft": "0-0", "tp": "0-0", "reb": 1, "ast": 1, "pf": 0, "to": 0, "stl": 1, "blk": 0, "pts": 0},
+            {"name": "Sam Crawford", "min": 39, "fg": "1-8", "ft": "0-0", "tp": "1-5", "reb": 1, "ast": 2, "pf": 2, "to": 2, "stl": 0, "blk": 0, "pts": 3},
+            {"name": "Corey Rogers", "min": 24, "fg": "4-9", "ft": "0-0", "tp": "2-7", "reb": 1, "ast": 2, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 10},
+            {"name": "James Dockery", "min": 22, "fg": "4-7", "ft": "3-4", "tp": "0-0", "reb": 9, "ast": 1, "pf": 2, "to": 2, "stl": 1, "blk": 0, "pts": 11},
+            {"name": "Darrin Jackson", "min": 28, "fg": "1-10", "ft": "3-5", "tp": "1-7", "reb": 6, "ast": 1, "pf": 2, "to": 1, "stl": 0, "blk": 0, "pts": 6}
+          ],
+          "checksum_ok": true
+        }
+      ]
+    }
+  ],
+  "skipped": []
+}

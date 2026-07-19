@@ -1,0 +1,15 @@
+{
+  "page": 6,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Game 31 (WAC Tournament Semis, No. 14 New Mexico 70 @ No. 3 Utah 72, 3/7/1997): page has three side-by-side box scores in very small print. New Mexico player TP column did not reconcile with the team total (70) or with FG-A/FT-A internal math after two careful reads; FG-A team totals also did not sum from the listed player lines. Skipped rather than guess individual digits."
+    },
+    {
+      "reason": "Game 32 (NCAA 1st Rd, Old Dominion 55 @ No. 11 New Mexico 59, 3/14/1997): Old Dominion side checksummed cleanly (player TP sum = 55), but New Mexico side did not reconcile to 59 even after recomputing points from FG/3P/FT makes for each player (best reconstruction summed to 60, off by 1, implying at least one misread digit). Since both teams must checksum and the New Mexico line could not be confirmed without guessing a digit, the whole game was skipped."
+    },
+    {
+      "reason": "Game 33 (NCAA 2nd Rd, No. 25 Louisville 64 @ No. 11 New Mexico 63, 3/16/1997): Louisville side checksummed cleanly (player TP sum = 64), but several New Mexico player lines (e.g., Smith, Shields) gave TP values inconsistent with their own FG-made/3P-made/FT-made figures (computed points did not match the printed TP column), and column alignment in this dense 3-up layout could not be confirmed with confidence on a second read. Whole game skipped rather than invent corrected digits."
+    }
+  ]
+}

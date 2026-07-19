@@ -1,0 +1,53 @@
+{
+  "page": 9,
+  "games": [
+    {
+      "date": "1993-01-02",
+      "opponent": "Utah Utes",
+      "site": "Jon M. Huntsman Center",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 45,
+          "players": [
+            {"name": "Ike Williams", "min": 25, "fg": "2-6", "tp": "0-2", "ft": "0-1", "reb": 3, "ast": 1, "pf": 1, "to": 7, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Neves Canonchet", "min": 12, "fg": "0-3", "tp": "0-0", "ft": "0-2", "reb": 3, "ast": 0, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Khari Jaxon", "min": 36, "fg": "6-15", "tp": "0-1", "ft": "3-6", "reb": 9, "ast": 1, "pf": 3, "to": 4, "stl": 0, "blk": 5, "pts": 15},
+            {"name": "Steve Logan", "min": 31, "fg": "3-10", "tp": "1-1", "ft": "1-1", "reb": 6, "ast": 2, "pf": 1, "to": 4, "stl": 0, "blk": 0, "pts": 7},
+            {"name": "Greg Brown", "min": 33, "fg": "1-8", "tp": "0-3", "ft": "0-0", "reb": 3, "ast": 1, "pf": 1, "to": 1, "stl": 2, "blk": 0, "pts": 2},
+            {"name": "Corey Jenkins", "min": 27, "fg": "2-4", "tp": "1-3", "ft": "4-4", "reb": 0, "ast": 1, "pf": 0, "to": 1, "stl": 2, "blk": 0, "pts": 9},
+            {"name": "Eric Thomas", "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Lewis LaMar", "min": 24, "fg": "2-2", "tp": "0-2", "ft": "2-2", "reb": 3, "ast": 2, "pf": 2, "to": 1, "stl": 0, "blk": 1, "pts": 6},
+            {"name": "J.J. Griego", "min": 4, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Brian Hayden", "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Frank Willis", "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Trent Heffner", "min": 8, "fg": "1-2", "tp": "0-0", "ft": "0-0", "reb": 3, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 2}
+          ]
+        },
+        {
+          "name": "Utah Utes",
+          "score": 78,
+          "players": [
+            {"name": "Josh Grant", "min": 33, "fg": "9-18", "tp": "2-4", "ft": "1-1", "reb": 19, "ast": 4, "pf": 2, "to": 3, "stl": 1, "blk": 1, "pts": 21},
+            {"name": "Phil Dixon", "min": 31, "fg": "5-10", "tp": "3-6", "ft": "0-0", "reb": 2, "ast": 4, "pf": 1, "to": 1, "stl": 3, "blk": 0, "pts": 13},
+            {"name": "Larry Cain", "min": 27, "fg": "2-8", "tp": "0-1", "ft": "1-2", "reb": 7, "ast": 3, "pf": 2, "to": 3, "stl": 0, "blk": 3, "pts": 5},
+            {"name": "Jimmy Soto", "min": 30, "fg": "3-9", "tp": "0-1", "ft": "0-1", "reb": 2, "pf": 2, "pts": 6},
+            {"name": "Mike Barlow", "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Byron Wilson", "min": 27, "fg": "6-11", "tp": "3-4", "ft": "1-2", "reb": 7, "ast": 3, "pf": 4, "to": 2, "stl": 0, "blk": 0, "pts": 16},
+            {"name": "Darroll Wright", "min": 15, "fg": "3-6", "tp": "0-0", "ft": "0-0", "reb": 2, "pf": 1, "pts": 6},
+            {"name": "Mark Rydalch", "min": 14, "fg": "1-3", "tp": "0-1", "ft": "1-2", "reb": 1, "pf": 1, "pts": 3},
+            {"name": "Rob Black", "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Jeff Connolly", "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "David Cook", "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Chris Jones", "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Tony Block", "min": 19, "fg": "3-6", "tp": "0-0", "ft": "2-2", "reb": 5, "ast": 1, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 8},
+            {"name": "Andy Tanner", "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true,
+      "notes": "Scott Pritchett (UNM) crossed out on scoresheet as DNP and excluded from player list. Utah bench players (Barlow, Black, Connolly, Cook, Jones, Tanner) recorded as DNP/scoreless. Some ancillary columns (ast/to/blk/stl/min) for Utah's Soto, Wright, and Rydalch were not fully legible and are omitted rather than invented; fg/tp/ft/pts for those three are confident (each self-checksums against the sheet's own point formula). Both teams' player pts sums match final scores exactly (UNM 45, Utah 78)."
+    }
+  ],
+  "skipped": []
+}

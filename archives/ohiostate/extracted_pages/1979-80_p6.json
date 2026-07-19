@@ -1,0 +1,9 @@
+{
+  "page": 6,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "12/15/1979 Ohio State vs Holy Cross (site: Hara Arena/Center; final OSU 79, Holy Cross 63 per 'Score by Periods' box). Ohio State's player lines checksum perfectly: player TP sum = 79 (matches team TOTALS TP=79), player FG sum = 31 (matches TOTALS FG=31), player FT sum = 17 (matches TOTALS FT=17), and 2*31+17=79 confirms internal consistency. However, Holy Cross's handwritten entries could not be reconciled after two independent read passes: summing the legible player TP values (using the constraint TP=2*FG+FT per player, valid pre-3pt-line) yields totals in the 70-73 range, versus the team TOTALS row of FG 25/FT 13/TP 63 (which itself is independently corroborated by the Score-by-Periods line, 33+30=63). The discrepancy (~8-10 points) traces to ambiguous/illegible digits on several Holy Cross rows (notably Ernie Floyd #44 and Bob Kelly #10, where FT/TP figures are unclear in the scan, and possibly Ronnie Perry #15). Rather than publish a half-verified or guessed roster for one team, the entire game is skipped per the ruthless-skip instruction."
+    }
+  ]
+}

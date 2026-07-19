@@ -1,0 +1,45 @@
+{
+  "page": 26,
+  "games": [
+    {
+      "date": "1993-03-06",
+      "opponent": "Maryland",
+      "site": "University Hall",
+      "teams": [
+        {
+          "name": "Maryland Terrapins",
+          "score": 74,
+          "players": [
+            {"name": "Exree Hipp", "min": 26, "fg": "2-6", "tp": "0-1", "ft": "0-0", "reb": 2, "ast": 3, "pf": 4, "to": 0, "stl": 0, "blk": 1, "pts": 4},
+            {"name": "Evers Burns", "min": 35, "fg": "6-16", "tp": "0-0", "ft": "1-3", "reb": 14, "ast": 1, "pf": 5, "to": 4, "stl": 4, "blk": 4, "pts": 13},
+            {"name": "Chris Kerwin", "min": 14, "fg": "1-3", "tp": "0-0", "ft": "1-2", "reb": 1, "ast": 0, "pf": 4, "to": 0, "stl": 0, "blk": 0, "pts": 3},
+            {"name": "Johnny Rhodes", "min": 38, "fg": "9-14", "tp": "5-8", "ft": "0-1", "reb": 3, "ast": 1, "pf": 3, "to": 2, "stl": 1, "blk": 0, "pts": 23},
+            {"name": "Kevin McLinton", "min": 30, "fg": "3-12", "tp": "1-2", "ft": "6-9", "reb": 5, "ast": 6, "pf": 5, "to": 7, "stl": 1, "blk": 0, "pts": 13},
+            {"name": "Mario Lucas", "min": 21, "fg": "4-9", "tp": "0-1", "ft": "1-1", "reb": 10, "ast": 0, "pf": 3, "to": 3, "stl": 0, "blk": 3, "pts": 9},
+            {"name": "John Walsh", "min": 6, "fg": "1-4", "tp": "0-0", "ft": "1-1", "reb": 3, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 3},
+            {"name": "Duane Simpkins", "min": 19, "fg": "2-7", "tp": "0-2", "ft": "1-2", "reb": 2, "ast": 5, "pf": 2, "to": 2, "stl": 1, "blk": 2, "pts": 5},
+            {"name": "Kurtis Shultz", "min": 5, "fg": "0-1", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Wayne Bristol", "min": 6, "fg": "0-0", "tp": "0-0", "ft": "1-2", "reb": 0, "ast": 0, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 1}
+          ]
+        },
+        {
+          "name": "Virginia Cavaliers",
+          "score": 88,
+          "players": [
+            {"name": "Junior Burrough", "min": 32, "fg": "8-14", "tp": "0-0", "ft": "1-4", "reb": 13, "ast": 3, "pf": 3, "to": 2, "stl": 1, "blk": 5, "pts": 17},
+            {"name": "Jason Williford", "min": 24, "fg": "3-10", "tp": "1-2", "ft": "0-0", "reb": 4, "ast": 4, "pf": 3, "to": 1, "stl": 3, "blk": 0, "pts": 7},
+            {"name": "Ted Jeffries", "min": 30, "fg": "5-9", "tp": "0-0", "ft": "5-8", "reb": 12, "ast": 2, "pf": 4, "to": 3, "stl": 0, "blk": 1, "pts": 15},
+            {"name": "Cornel Parker", "min": 33, "fg": "4-10", "tp": "0-3", "ft": "4-7", "reb": 9, "ast": 8, "pf": 4, "to": 5, "stl": 3, "blk": 1, "pts": 12},
+            {"name": "Cory Alexander", "min": 37, "fg": "7-12", "tp": "0-0", "ft": "6-11", "reb": 2, "ast": 7, "pf": 3, "to": 4, "stl": 2, "blk": 0, "pts": 20},
+            {"name": "Doug Smith", "min": 25, "fg": "1-6", "tp": "0-3", "ft": "0-0", "reb": 1, "ast": 2, "pf": 2, "to": 1, "stl": 1, "blk": 0, "pts": 2},
+            {"name": "Yuri Barnes", "min": 17, "fg": "6-9", "tp": "0-0", "ft": "3-6", "reb": 5, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 2, "pts": 15},
+            {"name": "Shawn Wilson", "min": 1, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true,
+      "notes": "Total FG column includes 3-pointers made/attempted (subset shown separately); points computed/verified as 2*(FG-3FGmade)+3*3FGmade+FT and match sheet's per-player TP column and team totals exactly (Maryland 74, Virginia 88). Rock Mitchell (Virginia) listed on roster but had no recorded stats (did not play) and is omitted."
+    }
+  ],
+  "skipped": []
+}

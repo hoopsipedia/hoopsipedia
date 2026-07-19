@@ -1,0 +1,9 @@
+{
+  "page": 4,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page 4 is the official box score for Stephen F. Austin at New Mexico, 11/23/99, final SFA 61 - New Mexico 98. The visitor (Stephen F. Austin) table is clean and fully reconciles (FG made sum 17, FT made sum 21/31 attempts, and per-player points sum to exactly 61, matching the team total). However, the home team (New Mexico) player rows have overlapping/garbled digits where inline shooting-percentage figures appear fused directly into the FG-FGA and FT-FTA fields (e.g. Long's row reads '8 155531 2 5 66830 8 8 22 4 2 0 2 29'; Henry's reads '7 135383 7429 2 1 2 3 2 19 1 2 0 1 28'), making it impossible to reliably separate makes/attempts from the embedded percentage digits for several players (Long, Henry, Parmer, White, Robinson, Berumen). A second read of the same page (the one allowed re-read) did not resolve the ambiguity since it is an artifact of the source scan itself, not resolution. Because a complete game entry requires both teams' verified player lines and the New Mexico side cannot be checksummed with confidence, the entire game was skipped rather than guessing New Mexico's individual stat lines."
+    }
+  ]
+}

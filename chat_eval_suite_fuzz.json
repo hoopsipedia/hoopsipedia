@@ -1,0 +1,7490 @@
+[
+ {
+  "id": "F001",
+  "q": "If 1970-71 Clemson, 2020-21 Liberty, and 1996-97 Butler played each other, who would win and why?",
+  "expected": [
+   [
+    "9-17",
+    "9–17",
+    "9 wins"
+   ],
+   [
+    "23-6",
+    "23–6",
+    "23 wins"
+   ],
+   [
+    "23-10",
+    "23–10",
+    "23 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_3way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Clemson",
+     "year": "1970-71",
+     "record": "9-17",
+     "srs": -3.5,
+     "confRecord": "3-11",
+     "apHigh": null
+    },
+    {
+     "team": "Liberty",
+     "year": "2020-21",
+     "record": "23-6",
+     "srs": 4.06,
+     "confRecord": "11-2",
+     "apHigh": null
+    },
+    {
+     "team": "Butler",
+     "year": "1996-97",
+     "record": "23-10",
+     "srs": 7.61,
+     "confRecord": "12-4",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F002",
+  "q": "Compare 2004-05 Monmouth, 2011-12 Tulsa, and 1994-95 TCU. Which was the best team?",
+  "expected": [
+   [
+    "16-13",
+    "16–13",
+    "16 wins"
+   ],
+   [
+    "17-14",
+    "17–14",
+    "17 wins"
+   ],
+   [
+    "16-11",
+    "16–11",
+    "16 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_3way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Monmouth",
+     "year": "2004-05",
+     "record": "16-13",
+     "srs": -6.58,
+     "confRecord": "14-4",
+     "apHigh": null
+    },
+    {
+     "team": "Tulsa",
+     "year": "2011-12",
+     "record": "17-14",
+     "srs": 5.82,
+     "confRecord": "10-6",
+     "apHigh": null
+    },
+    {
+     "team": "TCU",
+     "year": "1994-95",
+     "record": "16-11",
+     "srs": 0.81,
+     "confRecord": "8-6",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F003",
+  "q": "Rank these teams: 2022-23 Eastern Illinois and 1979-80 Vermont.",
+  "expected": [
+   [
+    "9-22",
+    "9–22",
+    "9 wins"
+   ],
+   [
+    "12-15",
+    "12–15",
+    "12 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_2way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Eastern Illinois",
+     "year": "2022-23",
+     "record": "9-22",
+     "srs": -14.09,
+     "confRecord": "5-13",
+     "apHigh": null
+    },
+    {
+     "team": "Vermont",
+     "year": "1979-80",
+     "record": "12-15",
+     "srs": -6.28,
+     "confRecord": "12-14",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F004",
+  "q": "Rank these teams: 2020-21 Stetson, 1973-74 Georgia Southern, and 1932-33 Richmond.",
+  "expected": [
+   [
+    "12-15",
+    "12–15",
+    "12 wins"
+   ],
+   [
+    "19-7",
+    "19–7",
+    "19 wins"
+   ],
+   [
+    "8-4",
+    "8–4",
+    "8 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_3way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Stetson",
+     "year": "2020-21",
+     "record": "12-15",
+     "srs": -7.26,
+     "confRecord": "7-9",
+     "apHigh": null
+    },
+    {
+     "team": "Georgia Southern",
+     "year": "1973-74",
+     "record": "19-7",
+     "srs": 1.94,
+     "confRecord": null,
+     "apHigh": null
+    },
+    {
+     "team": "Richmond",
+     "year": "1932-33",
+     "record": "8-4",
+     "srs": null,
+     "confRecord": null,
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F005",
+  "q": "Break down 1988-89 Western Carolina, 1947-48 Saint Louis, and 1951-52 Michigan State — records, strength of schedule, how far each went.",
+  "expected": [
+   [
+    "12-16",
+    "12–16",
+    "12 wins"
+   ],
+   [
+    "24-3",
+    "24–3",
+    "24 wins"
+   ],
+   [
+    "13-9",
+    "13–9",
+    "13 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_3way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Western Carolina",
+     "year": "1988-89",
+     "record": "12-16",
+     "srs": -7.27,
+     "confRecord": "4-10",
+     "apHigh": null
+    },
+    {
+     "team": "Saint Louis",
+     "year": "1947-48",
+     "record": "24-3",
+     "srs": null,
+     "confRecord": "8-2",
+     "apHigh": null
+    },
+    {
+     "team": "Michigan State",
+     "year": "1951-52",
+     "record": "13-9",
+     "srs": 6.54,
+     "confRecord": "6-8",
+     "apHigh": 19
+    }
+   ]
+  }
+ },
+ {
+  "id": "F006",
+  "q": "If 2025-26 Saint Peter's, 1914-15 Oregon, 2004-05 Clemson, and 2021-22 Louisiana Tech played each other, who would win and why?",
+  "expected": [
+   [
+    "17-12",
+    "17–12",
+    "17 wins"
+   ],
+   [
+    "7-10",
+    "7–10",
+    "7 wins"
+   ],
+   [
+    "16-16",
+    "16–16",
+    "16 wins"
+   ],
+   [
+    "24-10",
+    "24–10",
+    "24 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_4way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Saint Peter's",
+     "year": "2025-26",
+     "record": "17-12",
+     "srs": -7.44,
+     "confRecord": "14-6",
+     "apHigh": null
+    },
+    {
+     "team": "Oregon",
+     "year": "1914-15",
+     "record": "7-10",
+     "srs": null,
+     "confRecord": null,
+     "apHigh": null
+    },
+    {
+     "team": "Clemson",
+     "year": "2004-05",
+     "record": "16-16",
+     "srs": 11.23,
+     "confRecord": "5-11",
+     "apHigh": null
+    },
+    {
+     "team": "Louisiana Tech",
+     "year": "2021-22",
+     "record": "24-10",
+     "srs": 5.23,
+     "confRecord": "12-6",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F007",
+  "q": "Compare 2002-03 Fairleigh Dickinson, 2018-19 UT Martin, and 2018-19 Quinnipiac. Which was the best team?",
+  "expected": [
+   [
+    "15-14",
+    "15–14",
+    "15 wins"
+   ],
+   [
+    "12-19",
+    "12–19",
+    "12 wins"
+   ],
+   [
+    "16-15",
+    "16–15",
+    "16 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_3way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Fairleigh Dickinson",
+     "year": "2002-03",
+     "record": "15-14",
+     "srs": -11.53,
+     "confRecord": "9-9",
+     "apHigh": null
+    },
+    {
+     "team": "UT Martin",
+     "year": "2018-19",
+     "record": "12-19",
+     "srs": -10.94,
+     "confRecord": "6-12",
+     "apHigh": null
+    },
+    {
+     "team": "Quinnipiac",
+     "year": "2018-19",
+     "record": "16-15",
+     "srs": -6.78,
+     "confRecord": "11-7",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F008",
+  "q": "If 1940-41 Butler, 2007-08 New Mexico, and 2018-19 Milwaukee played each other, who would win and why?",
+  "expected": [
+   [
+    "13-9",
+    "13–9",
+    "13 wins"
+   ],
+   [
+    "24-9",
+    "24–9",
+    "24 wins"
+   ],
+   [
+    "9-22",
+    "9–22",
+    "9 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_3way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Butler",
+     "year": "1940-41",
+     "record": "13-9",
+     "srs": null,
+     "confRecord": null,
+     "apHigh": null
+    },
+    {
+     "team": "New Mexico",
+     "year": "2007-08",
+     "record": "24-9",
+     "srs": 12.53,
+     "confRecord": "11-5",
+     "apHigh": null
+    },
+    {
+     "team": "Milwaukee",
+     "year": "2018-19",
+     "record": "9-22",
+     "srs": -8.9,
+     "confRecord": "4-14",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F009",
+  "q": "If 2019-20 Saint Francis and 1908-09 Georgia played each other, who would win and why?",
+  "expected": [
+   [
+    "22-10",
+    "22–10",
+    "22 wins"
+   ],
+   [
+    "6-2",
+    "6–2",
+    "6 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_2way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Saint Francis",
+     "year": "2019-20",
+     "record": "22-10",
+     "srs": -2.05,
+     "confRecord": "13-5",
+     "apHigh": null
+    },
+    {
+     "team": "Georgia",
+     "year": "1908-09",
+     "record": "6-2",
+     "srs": null,
+     "confRecord": null,
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F010",
+  "q": "Rank these teams: 1973-74 UL Monroe and 2003-04 Stetson.",
+  "expected": [
+   [
+    "16-10",
+    "16–10",
+    "16 wins"
+   ],
+   [
+    "12-15",
+    "12–15",
+    "12 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_2way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "UL Monroe",
+     "year": "1973-74",
+     "record": "16-10",
+     "srs": -1.9,
+     "confRecord": null,
+     "apHigh": null
+    },
+    {
+     "team": "Stetson",
+     "year": "2003-04",
+     "record": "12-15",
+     "srs": -10.23,
+     "confRecord": "10-10",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F011",
+  "q": "Compare 2002-03 Vermont, 1976-77 UT Rio Grande Valley, 2014-15 Towson, and 1927-28 Northern Arizona. Which was the best team?",
+  "expected": [
+   [
+    "21-12",
+    "21–12",
+    "21 wins"
+   ],
+   [
+    "17-9",
+    "17–9",
+    "17 wins"
+   ],
+   [
+    "12-20",
+    "12–20",
+    "12 wins"
+   ],
+   [
+    "12-3",
+    "12–3",
+    "12 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_4way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Vermont",
+     "year": "2002-03",
+     "record": "21-12",
+     "srs": -1.32,
+     "confRecord": "11-5",
+     "apHigh": null
+    },
+    {
+     "team": "UT Rio Grande Valley",
+     "year": "1976-77",
+     "record": "17-9",
+     "srs": -4.16,
+     "confRecord": null,
+     "apHigh": null
+    },
+    {
+     "team": "Towson",
+     "year": "2014-15",
+     "record": "12-20",
+     "srs": -7.02,
+     "confRecord": "5-13",
+     "apHigh": null
+    },
+    {
+     "team": "Northern Arizona",
+     "year": "1927-28",
+     "record": "12-3",
+     "srs": null,
+     "confRecord": null,
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F012",
+  "q": "Compare 2007-08 Richmond, 1959-60 Marshall Thundering, and 1922-23 Detroit Mercy. Which was the best team?",
+  "expected": [
+   [
+    "16-15",
+    "16–15",
+    "16 wins"
+   ],
+   [
+    "10-13",
+    "10–13",
+    "10 wins"
+   ],
+   [
+    "9-7",
+    "9–7",
+    "9 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_3way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Richmond",
+     "year": "2007-08",
+     "record": "16-15",
+     "srs": 0.22,
+     "confRecord": "9-7",
+     "apHigh": null
+    },
+    {
+     "team": "Marshall Thundering",
+     "year": "1959-60",
+     "record": "10-13",
+     "srs": -2.04,
+     "confRecord": "4-8",
+     "apHigh": null
+    },
+    {
+     "team": "Detroit Mercy",
+     "year": "1922-23",
+     "record": "9-7",
+     "srs": null,
+     "confRecord": null,
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F013",
+  "q": "Break down 1985-86 Nicholls and 1982-83 UC Irvine — records, strength of schedule, how far each went.",
+  "expected": [
+   [
+    "8-16",
+    "8–16",
+    "8 wins"
+   ],
+   [
+    "16-12",
+    "16–12",
+    "16 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_2way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Nicholls",
+     "year": "1985-86",
+     "record": "8-16",
+     "srs": -14.81,
+     "confRecord": "2-8",
+     "apHigh": null
+    },
+    {
+     "team": "UC Irvine",
+     "year": "1982-83",
+     "record": "16-12",
+     "srs": 2.6,
+     "confRecord": "8-8",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F014",
+  "q": "If 1996-97 Old Dominion, 1991-92 McNeese, and 1984-85 Grambling played each other, who would win and why?",
+  "expected": [
+   [
+    "22-11",
+    "22–11",
+    "22 wins"
+   ],
+   [
+    "7-22",
+    "7–22",
+    "7 wins"
+   ],
+   [
+    "8-19",
+    "8–19",
+    "8 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_3way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Old Dominion",
+     "year": "1996-97",
+     "record": "22-11",
+     "srs": 3.72,
+     "confRecord": "10-6",
+     "apHigh": null
+    },
+    {
+     "team": "McNeese",
+     "year": "1991-92",
+     "record": "7-22",
+     "srs": -15.23,
+     "confRecord": "4-14",
+     "apHigh": null
+    },
+    {
+     "team": "Grambling",
+     "year": "1984-85",
+     "record": "8-19",
+     "srs": -18.82,
+     "confRecord": "4-10",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F015",
+  "q": "Rank these teams: 1949-50 Seton Hall, 1988-89 UC Santa Barbara, and 2017-18 Cal Poly.",
+  "expected": [
+   [
+    "11-15",
+    "11–15",
+    "11 wins"
+   ],
+   [
+    "21-9",
+    "21–9",
+    "21 wins"
+   ],
+   [
+    "9-22",
+    "9–22",
+    "9 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_3way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Seton Hall",
+     "year": "1949-50",
+     "record": "11-15",
+     "srs": -3.66,
+     "confRecord": null,
+     "apHigh": null
+    },
+    {
+     "team": "UC Santa Barbara",
+     "year": "1988-89",
+     "record": "21-9",
+     "srs": 7.81,
+     "confRecord": "11-7",
+     "apHigh": null
+    },
+    {
+     "team": "Cal Poly",
+     "year": "2017-18",
+     "record": "9-22",
+     "srs": -11.56,
+     "confRecord": "4-12",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F016",
+  "q": "Rank these teams: 1980-81 Nebraska and 1978-79 Evansville.",
+  "expected": [
+   [
+    "15-12",
+    "15–12",
+    "15 wins"
+   ],
+   [
+    "13-16",
+    "13–16",
+    "13 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_2way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Nebraska",
+     "year": "1980-81",
+     "record": "15-12",
+     "srs": 7.78,
+     "confRecord": "9-5",
+     "apHigh": null
+    },
+    {
+     "team": "Evansville",
+     "year": "1978-79",
+     "record": "13-16",
+     "srs": -5.07,
+     "confRecord": null,
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F017",
+  "q": "Break down 1982-83 Southern, 1906-07 Pittsburgh, 2007-08 Longwood, and 1983-84 Mercer — records, strength of schedule, how far each went.",
+  "expected": [
+   [
+    "16-14",
+    "16–14",
+    "16 wins"
+   ],
+   [
+    "6-5",
+    "6–5",
+    "6 wins"
+   ],
+   [
+    "9-22",
+    "9–22",
+    "9 wins"
+   ],
+   [
+    "14-14",
+    "14–14",
+    "14 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_4way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Southern",
+     "year": "1982-83",
+     "record": "16-14",
+     "srs": -11.47,
+     "confRecord": "7-7",
+     "apHigh": null
+    },
+    {
+     "team": "Pittsburgh",
+     "year": "1906-07",
+     "record": "6-5",
+     "srs": null,
+     "confRecord": null,
+     "apHigh": null
+    },
+    {
+     "team": "Longwood",
+     "year": "2007-08",
+     "record": "9-22",
+     "srs": -18.73,
+     "confRecord": null,
+     "apHigh": null
+    },
+    {
+     "team": "Mercer",
+     "year": "1983-84",
+     "record": "14-14",
+     "srs": -6.97,
+     "confRecord": "6-8",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F018",
+  "q": "Break down 2019-20 South Carolina Upstate, 1957-58 Murray State, and 1996-97 Sam Houston — records, strength of schedule, how far each went.",
+  "expected": [
+   [
+    "13-20",
+    "13–20",
+    "13 wins"
+   ],
+   [
+    "8-16",
+    "8–16",
+    "8 wins"
+   ],
+   [
+    "8-18",
+    "8–18",
+    "8 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_3way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "South Carolina Upstate",
+     "year": "2019-20",
+     "record": "13-20",
+     "srs": -13.58,
+     "confRecord": "7-11",
+     "apHigh": null
+    },
+    {
+     "team": "Murray State",
+     "year": "1957-58",
+     "record": "8-16",
+     "srs": -4.31,
+     "confRecord": "4-6",
+     "apHigh": null
+    },
+    {
+     "team": "Sam Houston",
+     "year": "1996-97",
+     "record": "8-18",
+     "srs": -15.5,
+     "confRecord": "7-9",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F019",
+  "q": "If 1949-50 Cornell Big, 1970-71 Louisville, 1987-88 Hawai'i Rainbow, and 1952-53 Columbia played each other, who would win and why?",
+  "expected": [
+   [
+    "18-7",
+    "18–7",
+    "18 wins"
+   ],
+   [
+    "20-9",
+    "20–9",
+    "20 wins"
+   ],
+   [
+    "4-25",
+    "4–25",
+    "4 wins"
+   ],
+   [
+    "17-6",
+    "17–6",
+    "17 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_4way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Cornell Big",
+     "year": "1949-50",
+     "record": "18-7",
+     "srs": 5.36,
+     "confRecord": "7-5",
+     "apHigh": null
+    },
+    {
+     "team": "Louisville",
+     "year": "1970-71",
+     "record": "20-9",
+     "srs": 10.4,
+     "confRecord": "9-5",
+     "apHigh": 13
+    },
+    {
+     "team": "Hawai'i Rainbow",
+     "year": "1987-88",
+     "record": "4-25",
+     "srs": -3.56,
+     "confRecord": "2-14",
+     "apHigh": null
+    },
+    {
+     "team": "Columbia",
+     "year": "1952-53",
+     "record": "17-6",
+     "srs": 3.38,
+     "confRecord": "8-4",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F020",
+  "q": "Compare 2023-24 East Texas A&M and 1982-83 Missouri. Which was the best team?",
+  "expected": [
+   [
+    "13-20",
+    "13–20",
+    "13 wins"
+   ],
+   [
+    "26-8",
+    "26–8",
+    "26 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_2way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "East Texas A&M",
+     "year": "2023-24",
+     "record": "13-20",
+     "srs": -14.52,
+     "confRecord": "6-12",
+     "apHigh": null
+    },
+    {
+     "team": "Missouri",
+     "year": "1982-83",
+     "record": "26-8",
+     "srs": 15.39,
+     "confRecord": "12-2",
+     "apHigh": 6
+    }
+   ]
+  }
+ },
+ {
+  "id": "F021",
+  "q": "Break down 1959-60 Cornell Big, 2021-22 UC San Diego, 1953-54 Iowa, and 1995-96 UL Monroe — records, strength of schedule, how far each went.",
+  "expected": [
+   [
+    "13-10",
+    "13–10",
+    "13 wins"
+   ],
+   [
+    "13-16",
+    "13–16",
+    "13 wins"
+   ],
+   [
+    "17-5",
+    "17–5",
+    "17 wins"
+   ],
+   [
+    "16-14",
+    "16–14",
+    "16 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_4way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Cornell Big",
+     "year": "1959-60",
+     "record": "13-10",
+     "srs": -5.55,
+     "confRecord": "8-6",
+     "apHigh": null
+    },
+    {
+     "team": "UC San Diego",
+     "year": "2021-22",
+     "record": "13-16",
+     "srs": -7.04,
+     "confRecord": "7-11",
+     "apHigh": null
+    },
+    {
+     "team": "Iowa",
+     "year": "1953-54",
+     "record": "17-5",
+     "srs": 15.41,
+     "confRecord": "11-3",
+     "apHigh": 10
+    },
+    {
+     "team": "UL Monroe",
+     "year": "1995-96",
+     "record": "16-14",
+     "srs": -2.53,
+     "confRecord": "13-5",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F022",
+  "q": "If 2023-24 Southern and 2002-03 Delaware State played each other, who would win and why?",
+  "expected": [
+   [
+    "18-14",
+    "18–14",
+    "18 wins"
+   ],
+   [
+    "15-12",
+    "15–12",
+    "15 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_2way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Southern",
+     "year": "2023-24",
+     "record": "18-14",
+     "srs": -8.74,
+     "confRecord": "12-6",
+     "apHigh": null
+    },
+    {
+     "team": "Delaware State",
+     "year": "2002-03",
+     "record": "15-12",
+     "srs": -9.94,
+     "confRecord": "13-5",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F023",
+  "q": "If 2006-07 Fordham, 2025-26 South Florida, 2021-22 UT Martin, and 1984-85 Temple played each other, who would win and why?",
+  "expected": [
+   [
+    "18-12",
+    "18–12",
+    "18 wins"
+   ],
+   [
+    "24-8",
+    "24–8",
+    "24 wins"
+   ],
+   [
+    "8-22",
+    "8–22",
+    "8 wins"
+   ],
+   [
+    "25-6",
+    "25–6",
+    "25 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_4way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Fordham",
+     "year": "2006-07",
+     "record": "18-12",
+     "srs": 1.21,
+     "confRecord": "10-6",
+     "apHigh": null
+    },
+    {
+     "team": "South Florida",
+     "year": "2025-26",
+     "record": "24-8",
+     "srs": 12.98,
+     "confRecord": "15-3",
+     "apHigh": null
+    },
+    {
+     "team": "UT Martin",
+     "year": "2021-22",
+     "record": "8-22",
+     "srs": -11.13,
+     "confRecord": "4-14",
+     "apHigh": null
+    },
+    {
+     "team": "Temple",
+     "year": "1984-85",
+     "record": "25-6",
+     "srs": 7.67,
+     "confRecord": "15-3",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F024",
+  "q": "If 2006-07 Robert Morris and 2021-22 Elon played each other, who would win and why?",
+  "expected": [
+   [
+    "17-11",
+    "17–11",
+    "17 wins"
+   ],
+   [
+    "10-22",
+    "10–22",
+    "10 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_2way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Robert Morris",
+     "year": "2006-07",
+     "record": "17-11",
+     "srs": -5.62,
+     "confRecord": "9-9",
+     "apHigh": null
+    },
+    {
+     "team": "Elon",
+     "year": "2021-22",
+     "record": "10-22",
+     "srs": -6.15,
+     "confRecord": "7-11",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F025",
+  "q": "Break down 1940-41 California, 2025-26 Chattanooga, and 2022-23 UT Martin — records, strength of schedule, how far each went.",
+  "expected": [
+   [
+    "15-12",
+    "15–12",
+    "15 wins"
+   ],
+   [
+    "13-19",
+    "13–19",
+    "13 wins"
+   ],
+   [
+    "19-14",
+    "19–14",
+    "19 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_3way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "California",
+     "year": "1940-41",
+     "record": "15-12",
+     "srs": null,
+     "confRecord": "6-6",
+     "apHigh": null
+    },
+    {
+     "team": "Chattanooga",
+     "year": "2025-26",
+     "record": "13-19",
+     "srs": -10.88,
+     "confRecord": "7-11",
+     "apHigh": null
+    },
+    {
+     "team": "UT Martin",
+     "year": "2022-23",
+     "record": "19-14",
+     "srs": -8.67,
+     "confRecord": "10-8",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F026",
+  "q": "Compare 2007-08 Kentucky, 1907-08 Bucknell, 2014-15 Omaha, and 1994-95 TCU. Which was the best team?",
+  "expected": [
+   [
+    "18-13",
+    "18–13",
+    "18 wins"
+   ],
+   [
+    "12-0",
+    "12–0",
+    "12 wins"
+   ],
+   [
+    "12-17",
+    "12–17",
+    "12 wins"
+   ],
+   [
+    "16-11",
+    "16–11",
+    "16 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_4way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Kentucky",
+     "year": "2007-08",
+     "record": "18-13",
+     "srs": 9.19,
+     "confRecord": "12-4",
+     "apHigh": 20
+    },
+    {
+     "team": "Bucknell",
+     "year": "1907-08",
+     "record": "12-0",
+     "srs": null,
+     "confRecord": null,
+     "apHigh": null
+    },
+    {
+     "team": "Omaha",
+     "year": "2014-15",
+     "record": "12-17",
+     "srs": -7.18,
+     "confRecord": "5-11",
+     "apHigh": null
+    },
+    {
+     "team": "TCU",
+     "year": "1994-95",
+     "record": "16-11",
+     "srs": 0.81,
+     "confRecord": "8-6",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F027",
+  "q": "Rank these teams: 1946-47 San Francisco, 2025-26 Southeast Missouri State, and 1994-95 Florida.",
+  "expected": [
+   [
+    "13-14",
+    "13–14",
+    "13 wins"
+   ],
+   [
+    "20-13",
+    "20–13",
+    "20 wins"
+   ],
+   [
+    "17-13",
+    "17–13",
+    "17 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_3way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "San Francisco",
+     "year": "1946-47",
+     "record": "13-14",
+     "srs": null,
+     "confRecord": null,
+     "apHigh": null
+    },
+    {
+     "team": "Southeast Missouri State",
+     "year": "2025-26",
+     "record": "20-13",
+     "srs": -6.84,
+     "confRecord": "14-6",
+     "apHigh": null
+    },
+    {
+     "team": "Florida",
+     "year": "1994-95",
+     "record": "17-13",
+     "srs": 15.4,
+     "confRecord": "8-8",
+     "apHigh": 6
+    }
+   ]
+  }
+ },
+ {
+  "id": "F028",
+  "q": "If 1955-56 Cincinnati, 2018-19 Texas State, and 1983-84 UNLV played each other, who would win and why?",
+  "expected": [
+   [
+    "17-7",
+    "17–7",
+    "17 wins"
+   ],
+   [
+    "24-10",
+    "24–10",
+    "24 wins"
+   ],
+   [
+    "29-6",
+    "29–6",
+    "29 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_3way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Cincinnati",
+     "year": "1955-56",
+     "record": "17-7",
+     "srs": 13.65,
+     "confRecord": null,
+     "apHigh": 14
+    },
+    {
+     "team": "Texas State",
+     "year": "2018-19",
+     "record": "24-10",
+     "srs": 1.54,
+     "confRecord": "12-6",
+     "apHigh": null
+    },
+    {
+     "team": "UNLV",
+     "year": "1983-84",
+     "record": "29-6",
+     "srs": 16.06,
+     "confRecord": "16-2",
+     "apHigh": 4
+    }
+   ]
+  }
+ },
+ {
+  "id": "F029",
+  "q": "Break down 2016-17 Southern and 1953-54 TCU — records, strength of schedule, how far each went.",
+  "expected": [
+   [
+    "15-18",
+    "15–18",
+    "15 wins"
+   ],
+   [
+    "10-14",
+    "10–14",
+    "10 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_2way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Southern",
+     "year": "2016-17",
+     "record": "15-18",
+     "srs": -14.48,
+     "confRecord": "10-8",
+     "apHigh": null
+    },
+    {
+     "team": "TCU",
+     "year": "1953-54",
+     "record": "10-14",
+     "srs": -1.3,
+     "confRecord": "5-7",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F030",
+  "q": "Compare 1998-99 Alabama, 1979-80 Colorado State, and 2006-07 Lipscomb. Which was the best team?",
+  "expected": [
+   [
+    "17-15",
+    "17–15",
+    "17 wins"
+   ],
+   [
+    "10-17",
+    "10–17",
+    "10 wins"
+   ],
+   [
+    "18-13",
+    "18–13",
+    "18 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_3way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Alabama",
+     "year": "1998-99",
+     "record": "17-15",
+     "srs": 5.85,
+     "confRecord": "6-10",
+     "apHigh": null
+    },
+    {
+     "team": "Colorado State",
+     "year": "1979-80",
+     "record": "10-17",
+     "srs": -4.11,
+     "confRecord": "5-9",
+     "apHigh": null
+    },
+    {
+     "team": "Lipscomb",
+     "year": "2006-07",
+     "record": "18-13",
+     "srs": -2.62,
+     "confRecord": "11-7",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F031",
+  "q": "If 2010-11 Pacific, 1992-93 Northwestern, and 2008-09 Pepperdine played each other, who would win and why?",
+  "expected": [
+   [
+    "16-15",
+    "16–15",
+    "16 wins"
+   ],
+   [
+    "8-19",
+    "8–19",
+    "8 wins"
+   ],
+   [
+    "9-23",
+    "9–23",
+    "9 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_3way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Pacific",
+     "year": "2010-11",
+     "record": "16-15",
+     "srs": 0.75,
+     "confRecord": "8-8",
+     "apHigh": null
+    },
+    {
+     "team": "Northwestern",
+     "year": "1992-93",
+     "record": "8-19",
+     "srs": 2.34,
+     "confRecord": "3-15",
+     "apHigh": null
+    },
+    {
+     "team": "Pepperdine",
+     "year": "2008-09",
+     "record": "9-23",
+     "srs": -11.23,
+     "confRecord": "5-9",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F032",
+  "q": "If 2024-25 North Texas and 2017-18 Western Carolina played each other, who would win and why?",
+  "expected": [
+   [
+    "27-9",
+    "27–9",
+    "27 wins"
+   ],
+   [
+    "13-19",
+    "13–19",
+    "13 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_2way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "North Texas",
+     "year": "2024-25",
+     "record": "27-9",
+     "srs": 7.7,
+     "confRecord": "14-4",
+     "apHigh": null
+    },
+    {
+     "team": "Western Carolina",
+     "year": "2017-18",
+     "record": "13-19",
+     "srs": -11.9,
+     "confRecord": "8-10",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F033",
+  "q": "If 1996-97 Southern, 1952-53 Georgia Tech, and 1930-31 Davidson played each other, who would win and why?",
+  "expected": [
+   [
+    "10-17",
+    "10–17",
+    "10 wins"
+   ],
+   [
+    "5-17",
+    "5–17",
+    "5 wins"
+   ],
+   [
+    "8-8",
+    "8–8",
+    "8 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_3way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Southern",
+     "year": "1996-97",
+     "record": "10-17",
+     "srs": -18.55,
+     "confRecord": "5-9",
+     "apHigh": null
+    },
+    {
+     "team": "Georgia Tech",
+     "year": "1952-53",
+     "record": "5-17",
+     "srs": -12.63,
+     "confRecord": "4-9",
+     "apHigh": null
+    },
+    {
+     "team": "Davidson",
+     "year": "1930-31",
+     "record": "8-8",
+     "srs": null,
+     "confRecord": null,
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F034",
+  "q": "Compare 1960-61 Tennessee Tech and 1981-82 Prairie View A&M. Which was the best team?",
+  "expected": [
+   [
+    "6-13",
+    "6–13",
+    "6 wins"
+   ],
+   [
+    "2-23",
+    "2–23",
+    "2 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_2way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Tennessee Tech",
+     "year": "1960-61",
+     "record": "6-13",
+     "srs": -6.33,
+     "confRecord": "3-9",
+     "apHigh": null
+    },
+    {
+     "team": "Prairie View A&M",
+     "year": "1981-82",
+     "record": "2-23",
+     "srs": -28.72,
+     "confRecord": "1-11",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F035",
+  "q": "Compare 2009-10 Campbell, 1984-85 New Mexico, and 2018-19 Richmond. Which was the best team?",
+  "expected": [
+   [
+    "19-11",
+    "19–11",
+    "19 wins"
+   ],
+   [
+    "19-13",
+    "19–13",
+    "19 wins"
+   ],
+   [
+    "13-20",
+    "13–20",
+    "13 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_3way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Campbell",
+     "year": "2009-10",
+     "record": "19-11",
+     "srs": -3.13,
+     "confRecord": "14-6",
+     "apHigh": null
+    },
+    {
+     "team": "New Mexico",
+     "year": "1984-85",
+     "record": "19-13",
+     "srs": 3.37,
+     "confRecord": "9-7",
+     "apHigh": null
+    },
+    {
+     "team": "Richmond",
+     "year": "2018-19",
+     "record": "13-20",
+     "srs": -1.37,
+     "confRecord": "6-12",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F036",
+  "q": "Rank these teams: 2009-10 Delaware, 1953-54 LSU, 1960-61 Idaho State, and 1993-94 UL Monroe.",
+  "expected": [
+   [
+    "7-24",
+    "7–24",
+    "7 wins"
+   ],
+   [
+    "20-5",
+    "20–5",
+    "20 wins"
+   ],
+   [
+    "13-12",
+    "13–12",
+    "13 wins"
+   ],
+   [
+    "19-9",
+    "19–9",
+    "19 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_4way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Delaware",
+     "year": "2009-10",
+     "record": "7-24",
+     "srs": -7.86,
+     "confRecord": "3-15",
+     "apHigh": null
+    },
+    {
+     "team": "LSU",
+     "year": "1953-54",
+     "record": "20-5",
+     "srs": 13.49,
+     "confRecord": "14-0",
+     "apHigh": 5
+    },
+    {
+     "team": "Idaho State",
+     "year": "1960-61",
+     "record": "13-12",
+     "srs": -6.46,
+     "confRecord": null,
+     "apHigh": null
+    },
+    {
+     "team": "UL Monroe",
+     "year": "1993-94",
+     "record": "19-9",
+     "srs": -3.13,
+     "confRecord": "15-3",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F037",
+  "q": "If 1912-13 Kentucky, 1986-87 Utah State, and 2018-19 Hofstra played each other, who would win and why?",
+  "expected": [
+   [
+    "5-3",
+    "5–3",
+    "5 wins"
+   ],
+   [
+    "15-16",
+    "15–16",
+    "15 wins"
+   ],
+   [
+    "27-8",
+    "27–8",
+    "27 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_3way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Kentucky",
+     "year": "1912-13",
+     "record": "5-3",
+     "srs": null,
+     "confRecord": null,
+     "apHigh": null
+    },
+    {
+     "team": "Utah State",
+     "year": "1986-87",
+     "record": "15-16",
+     "srs": 1.63,
+     "confRecord": "8-10",
+     "apHigh": null
+    },
+    {
+     "team": "Hofstra",
+     "year": "2018-19",
+     "record": "27-8",
+     "srs": 4.68,
+     "confRecord": "15-3",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F038",
+  "q": "Break down 2022-23 Utah State and 1923-24 Tulane — records, strength of schedule, how far each went.",
+  "expected": [
+   [
+    "26-9",
+    "26–9",
+    "26 wins"
+   ],
+   [
+    "21-1",
+    "21–1",
+    "21 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_2way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Utah State",
+     "year": "2022-23",
+     "record": "26-9",
+     "srs": 14.23,
+     "confRecord": "13-5",
+     "apHigh": null
+    },
+    {
+     "team": "Tulane",
+     "year": "1923-24",
+     "record": "21-1",
+     "srs": null,
+     "confRecord": "10-0",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F039",
+  "q": "Compare 2008-09 Fordham, 2015-16 Fairleigh Dickinson, and 2010-11 Nicholls. Which was the best team?",
+  "expected": [
+   [
+    "3-25",
+    "3–25",
+    "3 wins"
+   ],
+   [
+    "18-15",
+    "18–15",
+    "18 wins"
+   ],
+   [
+    "14-14",
+    "14–14",
+    "14 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_3way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Fordham",
+     "year": "2008-09",
+     "record": "3-25",
+     "srs": -14.14,
+     "confRecord": "1-15",
+     "apHigh": null
+    },
+    {
+     "team": "Fairleigh Dickinson",
+     "year": "2015-16",
+     "record": "18-15",
+     "srs": -10.9,
+     "confRecord": "11-7",
+     "apHigh": null
+    },
+    {
+     "team": "Nicholls",
+     "year": "2010-11",
+     "record": "14-14",
+     "srs": -5.72,
+     "confRecord": "8-8",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F040",
+  "q": "If 1985-86 SMU, 1972-73 Xavier, and 2010-11 Milwaukee played each other, who would win and why?",
+  "expected": [
+   [
+    "18-11",
+    "18–11",
+    "18 wins"
+   ],
+   [
+    "3-23",
+    "3–23",
+    "3 wins"
+   ],
+   [
+    "19-14",
+    "19–14",
+    "19 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_3way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "SMU",
+     "year": "1985-86",
+     "record": "18-11",
+     "srs": 5.44,
+     "confRecord": "10-6",
+     "apHigh": null
+    },
+    {
+     "team": "Xavier",
+     "year": "1972-73",
+     "record": "3-23",
+     "srs": -7.75,
+     "confRecord": null,
+     "apHigh": null
+    },
+    {
+     "team": "Milwaukee",
+     "year": "2010-11",
+     "record": "19-14",
+     "srs": 1.48,
+     "confRecord": "13-5",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F041",
+  "q": "Break down 2015-16 Middle Tennessee and 1929-30 Wake Forest — records, strength of schedule, how far each went.",
+  "expected": [
+   [
+    "25-10",
+    "25–10",
+    "25 wins"
+   ],
+   [
+    "2-11",
+    "2–11",
+    "2 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_2way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Middle Tennessee",
+     "year": "2015-16",
+     "record": "25-10",
+     "srs": 2.66,
+     "confRecord": "13-5",
+     "apHigh": null
+    },
+    {
+     "team": "Wake Forest",
+     "year": "1929-30",
+     "record": "2-11",
+     "srs": null,
+     "confRecord": null,
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F042",
+  "q": "If 2011-12 Texas A&M and 1994-95 Memphis played each other, who would win and why?",
+  "expected": [
+   [
+    "14-18",
+    "14–18",
+    "14 wins"
+   ],
+   [
+    "24-10",
+    "24–10",
+    "24 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_2way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Texas A&M",
+     "year": "2011-12",
+     "record": "14-18",
+     "srs": 5.57,
+     "confRecord": "4-14",
+     "apHigh": 19
+    },
+    {
+     "team": "Memphis",
+     "year": "1994-95",
+     "record": "24-10",
+     "srs": 14.4,
+     "confRecord": "9-3",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F043",
+  "q": "Rank these teams: 2007-08 Wichita State, 2025-26 UAlbany, and 2012-13 Miami (FL).",
+  "expected": [
+   [
+    "11-20",
+    "11–20",
+    "11 wins"
+   ],
+   [
+    "11-21",
+    "11–21",
+    "11 wins"
+   ],
+   [
+    "29-7",
+    "29–7",
+    "29 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_3way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Wichita State",
+     "year": "2007-08",
+     "record": "11-20",
+     "srs": 1.04,
+     "confRecord": "4-14",
+     "apHigh": null
+    },
+    {
+     "team": "UAlbany",
+     "year": "2025-26",
+     "record": "11-21",
+     "srs": -13.89,
+     "confRecord": "7-9",
+     "apHigh": null
+    },
+    {
+     "team": "Miami (FL)",
+     "year": "2012-13",
+     "record": "29-7",
+     "srs": 16.98,
+     "confRecord": "15-3",
+     "apHigh": 2
+    }
+   ]
+  }
+ },
+ {
+  "id": "F044",
+  "q": "Compare 1935-36 Tennessee, 1996-97 Nevada, and 2005-06 UAlbany. Which was the best team?",
+  "expected": [
+   [
+    "15-6",
+    "15–6",
+    "15 wins"
+   ],
+   [
+    "21-10",
+    "21–10",
+    "21 wins"
+   ],
+   [
+    "21-11",
+    "21–11",
+    "21 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_3way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Tennessee",
+     "year": "1935-36",
+     "record": "15-6",
+     "srs": null,
+     "confRecord": "8-4",
+     "apHigh": null
+    },
+    {
+     "team": "Nevada",
+     "year": "1996-97",
+     "record": "21-10",
+     "srs": 3.77,
+     "confRecord": "12-4",
+     "apHigh": null
+    },
+    {
+     "team": "UAlbany",
+     "year": "2005-06",
+     "record": "21-11",
+     "srs": -0.44,
+     "confRecord": "13-3",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F045",
+  "q": "Break down 1988-89 UTSA, 1976-77 Brown, 1991-92 Radford, and 1936-37 Columbia — records, strength of schedule, how far each went.",
+  "expected": [
+   [
+    "15-13",
+    "15–13",
+    "15 wins"
+   ],
+   [
+    "6-20",
+    "6–20",
+    "6 wins"
+   ],
+   [
+    "20-9",
+    "20–9",
+    "20 wins"
+   ],
+   [
+    "14-6",
+    "14–6",
+    "14 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_4way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "UTSA",
+     "year": "1988-89",
+     "record": "15-13",
+     "srs": -3,
+     "confRecord": "8-10",
+     "apHigh": null
+    },
+    {
+     "team": "Brown",
+     "year": "1976-77",
+     "record": "6-20",
+     "srs": -10.84,
+     "confRecord": "5-9",
+     "apHigh": null
+    },
+    {
+     "team": "Radford",
+     "year": "1991-92",
+     "record": "20-9",
+     "srs": -8.52,
+     "confRecord": "12-2",
+     "apHigh": null
+    },
+    {
+     "team": "Columbia",
+     "year": "1936-37",
+     "record": "14-6",
+     "srs": null,
+     "confRecord": "7-5",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F046",
+  "q": "Compare 1931-32 Wake Forest, 1977-78 Baylor, and 1952-53 BYU. Which was the best team?",
+  "expected": [
+   [
+    "4-8",
+    "4–8",
+    "4 wins"
+   ],
+   [
+    "14-13",
+    "14–13",
+    "14 wins"
+   ],
+   [
+    "22-8",
+    "22–8",
+    "22 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_3way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Wake Forest",
+     "year": "1931-32",
+     "record": "4-8",
+     "srs": null,
+     "confRecord": null,
+     "apHigh": null
+    },
+    {
+     "team": "Baylor",
+     "year": "1977-78",
+     "record": "14-13",
+     "srs": 4.65,
+     "confRecord": "8-8",
+     "apHigh": null
+    },
+    {
+     "team": "BYU",
+     "year": "1952-53",
+     "record": "22-8",
+     "srs": 9.24,
+     "confRecord": "11-3",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F047",
+  "q": "Break down 1996-97 Robert Morris and 1924-25 SMU — records, strength of schedule, how far each went.",
+  "expected": [
+   [
+    "4-23",
+    "4–23",
+    "4 wins"
+   ],
+   [
+    "5-11",
+    "5–11",
+    "5 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_2way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Robert Morris",
+     "year": "1996-97",
+     "record": "4-23",
+     "srs": -15.36,
+     "confRecord": "3-15",
+     "apHigh": null
+    },
+    {
+     "team": "SMU",
+     "year": "1924-25",
+     "record": "5-11",
+     "srs": null,
+     "confRecord": "4-10",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F048",
+  "q": "Break down 2011-12 Iona, 2000-01 Cal Poly, and 2023-24 Mississippi Valley State — records, strength of schedule, how far each went.",
+  "expected": [
+   [
+    "25-8",
+    "25–8",
+    "25 wins"
+   ],
+   [
+    "9-19",
+    "9–19",
+    "9 wins"
+   ],
+   [
+    "1-30",
+    "1–30",
+    "1 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_3way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Iona",
+     "year": "2011-12",
+     "record": "25-8",
+     "srs": 8.36,
+     "confRecord": "15-3",
+     "apHigh": null
+    },
+    {
+     "team": "Cal Poly",
+     "year": "2000-01",
+     "record": "9-19",
+     "srs": -8.23,
+     "confRecord": "3-13",
+     "apHigh": null
+    },
+    {
+     "team": "Mississippi Valley State",
+     "year": "2023-24",
+     "record": "1-30",
+     "srs": -26.17,
+     "confRecord": "1-17",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F049",
+  "q": "Break down 1948-49 Detroit Mercy, 2009-10 Cal State Northridge, and 1996-97 VCU — records, strength of schedule, how far each went.",
+  "expected": [
+   [
+    "12-10",
+    "12–10",
+    "12 wins"
+   ],
+   [
+    "11-21",
+    "11–21",
+    "11 wins"
+   ],
+   [
+    "14-13",
+    "14–13",
+    "14 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_3way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Detroit Mercy",
+     "year": "1948-49",
+     "record": "12-10",
+     "srs": null,
+     "confRecord": null,
+     "apHigh": null
+    },
+    {
+     "team": "Cal State Northridge",
+     "year": "2009-10",
+     "record": "11-21",
+     "srs": -5.81,
+     "confRecord": "6-10",
+     "apHigh": null
+    },
+    {
+     "team": "VCU",
+     "year": "1996-97",
+     "record": "14-13",
+     "srs": 2.01,
+     "confRecord": "9-7",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F050",
+  "q": "If 2008-09 Washington State and 1978-79 Yale played each other, who would win and why?",
+  "expected": [
+   [
+    "17-16",
+    "17–16",
+    "17 wins"
+   ],
+   [
+    "11-15",
+    "11–15",
+    "11 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_2way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Washington State",
+     "year": "2008-09",
+     "record": "17-16",
+     "srs": 11.29,
+     "confRecord": "8-10",
+     "apHigh": null
+    },
+    {
+     "team": "Yale",
+     "year": "1978-79",
+     "record": "11-15",
+     "srs": -5.15,
+     "confRecord": "5-9",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F051",
+  "q": "Rank these teams: 2013-14 Washington, 1954-55 Duquesne, and 2007-08 Central Connecticut.",
+  "expected": [
+   [
+    "17-15",
+    "17–15",
+    "17 wins"
+   ],
+   [
+    "22-4",
+    "22–4",
+    "22 wins"
+   ],
+   [
+    "14-16",
+    "14–16",
+    "14 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_3way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Washington",
+     "year": "2013-14",
+     "record": "17-15",
+     "srs": 6.26,
+     "confRecord": "9-9",
+     "apHigh": null
+    },
+    {
+     "team": "Duquesne",
+     "year": "1954-55",
+     "record": "22-4",
+     "srs": 17.72,
+     "confRecord": null,
+     "apHigh": 2
+    },
+    {
+     "team": "Central Connecticut",
+     "year": "2007-08",
+     "record": "14-16",
+     "srs": -5.31,
+     "confRecord": "10-8",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F052",
+  "q": "If 2024-25 Alcorn State and 2017-18 North Carolina Central played each other, who would win and why?",
+  "expected": [
+   [
+    "11-21",
+    "11–21",
+    "11 wins"
+   ],
+   [
+    "19-16",
+    "19–16",
+    "19 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_2way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Alcorn State",
+     "year": "2024-25",
+     "record": "11-21",
+     "srs": -14.06,
+     "confRecord": "11-7",
+     "apHigh": null
+    },
+    {
+     "team": "North Carolina Central",
+     "year": "2017-18",
+     "record": "19-16",
+     "srs": -13.18,
+     "confRecord": "9-7",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F053",
+  "q": "Break down 1989-90 UIC, 2000-01 Charleston, 2014-15 Texas A&M-Corpus Christi, and 1945-46 Army — records, strength of schedule, how far each went.",
+  "expected": [
+   [
+    "16-12",
+    "16–12",
+    "16 wins"
+   ],
+   [
+    "22-7",
+    "22–7",
+    "22 wins"
+   ],
+   [
+    "20-14",
+    "20–14",
+    "20 wins"
+   ],
+   [
+    "9-6",
+    "9–6",
+    "9 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_4way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "UIC",
+     "year": "1989-90",
+     "record": "16-12",
+     "srs": -0.75,
+     "confRecord": "6-6",
+     "apHigh": null
+    },
+    {
+     "team": "Charleston",
+     "year": "2000-01",
+     "record": "22-7",
+     "srs": 1.62,
+     "confRecord": "12-4",
+     "apHigh": null
+    },
+    {
+     "team": "Texas A&M-Corpus Christi",
+     "year": "2014-15",
+     "record": "20-14",
+     "srs": -5.58,
+     "confRecord": "13-5",
+     "apHigh": null
+    },
+    {
+     "team": "Army",
+     "year": "1945-46",
+     "record": "9-6",
+     "srs": null,
+     "confRecord": null,
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F054",
+  "q": "If 1996-97 Notre Dame, 2023-24 Cal State Bakersfield, and 2017-18 Southern Utah played each other, who would win and why?",
+  "expected": [
+   [
+    "16-14",
+    "16–14",
+    "16 wins"
+   ],
+   [
+    "13-19",
+    "13–19",
+    "13 wins"
+   ],
+   [
+    "13-19",
+    "13–19",
+    "13 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_3way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Notre Dame",
+     "year": "1996-97",
+     "record": "16-14",
+     "srs": 9.42,
+     "confRecord": "8-10",
+     "apHigh": null
+    },
+    {
+     "team": "Cal State Bakersfield",
+     "year": "2023-24",
+     "record": "13-19",
+     "srs": -5.37,
+     "confRecord": "8-12",
+     "apHigh": null
+    },
+    {
+     "team": "Southern Utah",
+     "year": "2017-18",
+     "record": "13-19",
+     "srs": -7.64,
+     "confRecord": "5-13",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F055",
+  "q": "Break down 2015-16 Delaware State and 1982-83 Southern Miss — records, strength of schedule, how far each went.",
+  "expected": [
+   [
+    "7-25",
+    "7–25",
+    "7 wins"
+   ],
+   [
+    "14-14",
+    "14–14",
+    "14 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_2way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Delaware State",
+     "year": "2015-16",
+     "record": "7-25",
+     "srs": -20.88,
+     "confRecord": "5-11",
+     "apHigh": null
+    },
+    {
+     "team": "Southern Miss",
+     "year": "1982-83",
+     "record": "14-14",
+     "srs": 3.71,
+     "confRecord": "3-9",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F056",
+  "q": "Compare 1991-92 San Jose State and 2014-15 Texas State. Which was the best team?",
+  "expected": [
+   [
+    "2-24",
+    "2–24",
+    "2 wins"
+   ],
+   [
+    "14-17",
+    "14–17",
+    "14 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_2way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "San Jose State",
+     "year": "1991-92",
+     "record": "2-24",
+     "srs": -8.2,
+     "confRecord": "1-17",
+     "apHigh": null
+    },
+    {
+     "team": "Texas State",
+     "year": "2014-15",
+     "record": "14-17",
+     "srs": -5.25,
+     "confRecord": "7-13",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F057",
+  "q": "Rank these teams: 2016-17 Tennessee Tech, 2007-08 Florida, and 2023-24 Jacksonville State.",
+  "expected": [
+   [
+    "12-20",
+    "12–20",
+    "12 wins"
+   ],
+   [
+    "24-12",
+    "24–12",
+    "24 wins"
+   ],
+   [
+    "14-18",
+    "14–18",
+    "14 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_3way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Tennessee Tech",
+     "year": "2016-17",
+     "record": "12-20",
+     "srs": -7.6,
+     "confRecord": "8-8",
+     "apHigh": null
+    },
+    {
+     "team": "Florida",
+     "year": "2007-08",
+     "record": "24-12",
+     "srs": 12.34,
+     "confRecord": "8-8",
+     "apHigh": 20
+    },
+    {
+     "team": "Jacksonville State",
+     "year": "2023-24",
+     "record": "14-18",
+     "srs": -3.55,
+     "confRecord": "6-10",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F058",
+  "q": "Rank these teams: 2012-13 VMI and 2014-15 Oral Roberts.",
+  "expected": [
+   [
+    "14-17",
+    "14–17",
+    "14 wins"
+   ],
+   [
+    "19-15",
+    "19–15",
+    "19 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_2way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "VMI",
+     "year": "2012-13",
+     "record": "14-17",
+     "srs": -11.36,
+     "confRecord": "8-8",
+     "apHigh": null
+    },
+    {
+     "team": "Oral Roberts",
+     "year": "2014-15",
+     "record": "19-15",
+     "srs": -3.83,
+     "confRecord": "10-6",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F059",
+  "q": "Compare 2024-25 Hofstra, 1925-26 Clemson, and 2019-20 Cal State Bakersfield. Which was the best team?",
+  "expected": [
+   [
+    "15-18",
+    "15–18",
+    "15 wins"
+   ],
+   [
+    "4-17",
+    "4–17",
+    "4 wins"
+   ],
+   [
+    "12-19",
+    "12–19",
+    "12 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_3way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Hofstra",
+     "year": "2024-25",
+     "record": "15-18",
+     "srs": -4.97,
+     "confRecord": "6-12",
+     "apHigh": null
+    },
+    {
+     "team": "Clemson",
+     "year": "1925-26",
+     "record": "4-17",
+     "srs": null,
+     "confRecord": "1-7",
+     "apHigh": null
+    },
+    {
+     "team": "Cal State Bakersfield",
+     "year": "2019-20",
+     "record": "12-19",
+     "srs": -7.11,
+     "confRecord": "6-10",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F060",
+  "q": "Break down 2011-12 Marquette, 1974-75 Houston Christian, 1960-61 Denver, and 2008-09 UNC Asheville — records, strength of schedule, how far each went.",
+  "expected": [
+   [
+    "27-8",
+    "27–8",
+    "27 wins"
+   ],
+   [
+    "9-17",
+    "9–17",
+    "9 wins"
+   ],
+   [
+    "12-14",
+    "12–14",
+    "12 wins"
+   ],
+   [
+    "15-16",
+    "15–16",
+    "15 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_4way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Marquette",
+     "year": "2011-12",
+     "record": "27-8",
+     "srs": 16.92,
+     "confRecord": "14-4",
+     "apHigh": 8
+    },
+    {
+     "team": "Houston Christian",
+     "year": "1974-75",
+     "record": "9-17",
+     "srs": -15.81,
+     "confRecord": null,
+     "apHigh": null
+    },
+    {
+     "team": "Denver",
+     "year": "1960-61",
+     "record": "12-14",
+     "srs": -4.88,
+     "confRecord": "6-8",
+     "apHigh": null
+    },
+    {
+     "team": "UNC Asheville",
+     "year": "2008-09",
+     "record": "15-16",
+     "srs": -11.34,
+     "confRecord": "10-8",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F061",
+  "q": "If 1986-87 Temple, 1982-83 Wichita State, and 1972-73 Creighton played each other, who would win and why?",
+  "expected": [
+   [
+    "32-4",
+    "32–4",
+    "32 wins"
+   ],
+   [
+    "25-3",
+    "25–3",
+    "25 wins"
+   ],
+   [
+    "15-11",
+    "15–11",
+    "15 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_3way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Temple",
+     "year": "1986-87",
+     "record": "32-4",
+     "srs": 13.18,
+     "confRecord": "17-1",
+     "apHigh": 5
+    },
+    {
+     "team": "Wichita State",
+     "year": "1982-83",
+     "record": "25-3",
+     "srs": 11.27,
+     "confRecord": "17-1",
+     "apHigh": 11
+    },
+    {
+     "team": "Creighton",
+     "year": "1972-73",
+     "record": "15-11",
+     "srs": 3.9,
+     "confRecord": null,
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F062",
+  "q": "If 1971-72 Oral Roberts, 1992-93 Arkansas State, and 2008-09 Purdue Fort Wayne played each other, who would win and why?",
+  "expected": [
+   [
+    "26-2",
+    "26–2",
+    "26 wins"
+   ],
+   [
+    "16-12",
+    "16–12",
+    "16 wins"
+   ],
+   [
+    "13-17",
+    "13–17",
+    "13 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_3way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Oral Roberts",
+     "year": "1971-72",
+     "record": "26-2",
+     "srs": 8.3,
+     "confRecord": null,
+     "apHigh": 16
+    },
+    {
+     "team": "Arkansas State",
+     "year": "1992-93",
+     "record": "16-12",
+     "srs": 4.06,
+     "confRecord": "11-7",
+     "apHigh": null
+    },
+    {
+     "team": "Purdue Fort Wayne",
+     "year": "2008-09",
+     "record": "13-17",
+     "srs": -5.42,
+     "confRecord": "8-10",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F063",
+  "q": "Break down 2018-19 Jacksonville and 1999-00 VMI — records, strength of schedule, how far each went.",
+  "expected": [
+   [
+    "12-20",
+    "12–20",
+    "12 wins"
+   ],
+   [
+    "6-23",
+    "6–23",
+    "6 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_2way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Jacksonville",
+     "year": "2018-19",
+     "record": "12-20",
+     "srs": -8.27,
+     "confRecord": "5-11",
+     "apHigh": null
+    },
+    {
+     "team": "VMI",
+     "year": "1999-00",
+     "record": "6-23",
+     "srs": -14.9,
+     "confRecord": "1-15",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F064",
+  "q": "Compare 1929-30 Saint Mary's and 1960-61 Murray State. Which was the best team?",
+  "expected": [
+   [
+    "5-15",
+    "5–15",
+    "5 wins"
+   ],
+   [
+    "13-10",
+    "13–10",
+    "13 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_2way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Saint Mary's",
+     "year": "1929-30",
+     "record": "5-15",
+     "srs": null,
+     "confRecord": null,
+     "apHigh": null
+    },
+    {
+     "team": "Murray State",
+     "year": "1960-61",
+     "record": "13-10",
+     "srs": 1.92,
+     "confRecord": "7-5",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F065",
+  "q": "Compare 1956-57 Columbia and 2007-08 Oral Roberts. Which was the best team?",
+  "expected": [
+   [
+    "18-6",
+    "18–6",
+    "18 wins"
+   ],
+   [
+    "24-9",
+    "24–9",
+    "24 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_2way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Columbia",
+     "year": "1956-57",
+     "record": "18-6",
+     "srs": 2.72,
+     "confRecord": "9-5",
+     "apHigh": null
+    },
+    {
+     "team": "Oral Roberts",
+     "year": "2007-08",
+     "record": "24-9",
+     "srs": 5.71,
+     "confRecord": "16-2",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F066",
+  "q": "Compare 1924-25 Northern Arizona, 2016-17 Florida International, and 1936-37 Wisconsin. Which was the best team?",
+  "expected": [
+   [
+    "7-6",
+    "7–6",
+    "7 wins"
+   ],
+   [
+    "7-24",
+    "7–24",
+    "7 wins"
+   ],
+   [
+    "8-12",
+    "8–12",
+    "8 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_3way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Northern Arizona",
+     "year": "1924-25",
+     "record": "7-6",
+     "srs": null,
+     "confRecord": null,
+     "apHigh": null
+    },
+    {
+     "team": "Florida International",
+     "year": "2016-17",
+     "record": "7-24",
+     "srs": -8.1,
+     "confRecord": "3-15",
+     "apHigh": null
+    },
+    {
+     "team": "Wisconsin",
+     "year": "1936-37",
+     "record": "8-12",
+     "srs": null,
+     "confRecord": "3-9",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F067",
+  "q": "Break down 2024-25 North Alabama, 2025-26 New Mexico, and 2003-04 Texas — records, strength of schedule, how far each went.",
+  "expected": [
+   [
+    "24-11",
+    "24–11",
+    "24 wins"
+   ],
+   [
+    "23-10",
+    "23–10",
+    "23 wins"
+   ],
+   [
+    "25-8",
+    "25–8",
+    "25 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_3way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "North Alabama",
+     "year": "2024-25",
+     "record": "24-11",
+     "srs": 1.02,
+     "confRecord": "14-4",
+     "apHigh": null
+    },
+    {
+     "team": "New Mexico",
+     "year": "2025-26",
+     "record": "23-10",
+     "srs": 13.53,
+     "confRecord": "13-7",
+     "apHigh": null
+    },
+    {
+     "team": "Texas",
+     "year": "2003-04",
+     "record": "25-8",
+     "srs": 18.52,
+     "confRecord": null,
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F068",
+  "q": "Compare 2023-24 App State and 1998-99 Northwestern. Which was the best team?",
+  "expected": [
+   [
+    "27-7",
+    "27–7",
+    "27 wins"
+   ],
+   [
+    "15-14",
+    "15–14",
+    "15 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_2way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "App State",
+     "year": "2023-24",
+     "record": "27-7",
+     "srs": 6.04,
+     "confRecord": "16-2",
+     "apHigh": null
+    },
+    {
+     "team": "Northwestern",
+     "year": "1998-99",
+     "record": "15-14",
+     "srs": 10.81,
+     "confRecord": "6-10",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F069",
+  "q": "Compare 1983-84 VMI, 2005-06 Ball State, 1987-88 Towson, and 1980-81 Miami (OH). Which was the best team?",
+  "expected": [
+   [
+    "8-19",
+    "8–19",
+    "8 wins"
+   ],
+   [
+    "10-18",
+    "10–18",
+    "10 wins"
+   ],
+   [
+    "14-16",
+    "14–16",
+    "14 wins"
+   ],
+   [
+    "11-15",
+    "11–15",
+    "11 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_4way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "VMI",
+     "year": "1983-84",
+     "record": "8-19",
+     "srs": -12.2,
+     "confRecord": "4-12",
+     "apHigh": null
+    },
+    {
+     "team": "Ball State",
+     "year": "2005-06",
+     "record": "10-18",
+     "srs": -3.53,
+     "confRecord": "6-12",
+     "apHigh": null
+    },
+    {
+     "team": "Towson",
+     "year": "1987-88",
+     "record": "14-16",
+     "srs": -7.83,
+     "confRecord": "4-10",
+     "apHigh": null
+    },
+    {
+     "team": "Miami (OH)",
+     "year": "1980-81",
+     "record": "11-15",
+     "srs": -1.21,
+     "confRecord": "6-10",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F070",
+  "q": "Break down 1943-44 San Francisco and 1907-08 Dayton — records, strength of schedule, how far each went.",
+  "expected": [
+   [
+    "8-11",
+    "8–11",
+    "8 wins"
+   ],
+   [
+    "10-3",
+    "10–3",
+    "10 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_2way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "San Francisco",
+     "year": "1943-44",
+     "record": "8-11",
+     "srs": null,
+     "confRecord": null,
+     "apHigh": null
+    },
+    {
+     "team": "Dayton",
+     "year": "1907-08",
+     "record": "10-3",
+     "srs": null,
+     "confRecord": null,
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F071",
+  "q": "Rank these teams: 1978-79 Illinois State, 2008-09 SE Louisiana, and 1977-78 Middle Tennessee.",
+  "expected": [
+   [
+    "20-10",
+    "20–10",
+    "20 wins"
+   ],
+   [
+    "13-17",
+    "13–17",
+    "13 wins"
+   ],
+   [
+    "18-8",
+    "18–8",
+    "18 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_3way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Illinois State",
+     "year": "1978-79",
+     "record": "20-10",
+     "srs": 2.26,
+     "confRecord": null,
+     "apHigh": null
+    },
+    {
+     "team": "SE Louisiana",
+     "year": "2008-09",
+     "record": "13-17",
+     "srs": -6.22,
+     "confRecord": "7-9",
+     "apHigh": null
+    },
+    {
+     "team": "Middle Tennessee",
+     "year": "1977-78",
+     "record": "18-8",
+     "srs": -1.07,
+     "confRecord": "10-4",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F072",
+  "q": "If 1906-07 Tulane, 1970-71 Washington, 1943-44 Georgia Tech, and 2009-10 Miami (OH) played each other, who would win and why?",
+  "expected": [
+   [
+    "2-8",
+    "2–8",
+    "2 wins"
+   ],
+   [
+    "15-13",
+    "15–13",
+    "15 wins"
+   ],
+   [
+    "14-4",
+    "14–4",
+    "14 wins"
+   ],
+   [
+    "14-18",
+    "14–18",
+    "14 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_4way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Tulane",
+     "year": "1906-07",
+     "record": "2-8",
+     "srs": null,
+     "confRecord": null,
+     "apHigh": null
+    },
+    {
+     "team": "Washington",
+     "year": "1970-71",
+     "record": "15-13",
+     "srs": 4.16,
+     "confRecord": "6-8",
+     "apHigh": null
+    },
+    {
+     "team": "Georgia Tech",
+     "year": "1943-44",
+     "record": "14-4",
+     "srs": null,
+     "confRecord": "2-0",
+     "apHigh": null
+    },
+    {
+     "team": "Miami (OH)",
+     "year": "2009-10",
+     "record": "14-18",
+     "srs": 0.56,
+     "confRecord": "9-7",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F073",
+  "q": "Break down 2008-09 Utah Valley, 2001-02 Iona, and 1984-85 Siena — records, strength of schedule, how far each went.",
+  "expected": [
+   [
+    "17-11",
+    "17–11",
+    "17 wins"
+   ],
+   [
+    "13-17",
+    "13–17",
+    "13 wins"
+   ],
+   [
+    "22-7",
+    "22–7",
+    "22 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_3way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Utah Valley",
+     "year": "2008-09",
+     "record": "17-11",
+     "srs": null,
+     "confRecord": null,
+     "apHigh": null
+    },
+    {
+     "team": "Iona",
+     "year": "2001-02",
+     "record": "13-17",
+     "srs": -5.58,
+     "confRecord": "10-8",
+     "apHigh": null
+    },
+    {
+     "team": "Siena",
+     "year": "1984-85",
+     "record": "22-7",
+     "srs": -1.59,
+     "confRecord": "12-4",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F074",
+  "q": "If 1971-72 Wisconsin, 2022-23 Stony Brook, and 1988-89 Bethune-Cookman played each other, who would win and why?",
+  "expected": [
+   [
+    "13-11",
+    "13–11",
+    "13 wins"
+   ],
+   [
+    "11-22",
+    "11–22",
+    "11 wins"
+   ],
+   [
+    "12-16",
+    "12–16",
+    "12 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_3way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Wisconsin",
+     "year": "1971-72",
+     "record": "13-11",
+     "srs": 4.29,
+     "confRecord": "6-8",
+     "apHigh": null
+    },
+    {
+     "team": "Stony Brook",
+     "year": "2022-23",
+     "record": "11-22",
+     "srs": -12.45,
+     "confRecord": "6-12",
+     "apHigh": null
+    },
+    {
+     "team": "Bethune-Cookman",
+     "year": "1988-89",
+     "record": "12-16",
+     "srs": -13.61,
+     "confRecord": "8-8",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F075",
+  "q": "Compare 2001-02 Southeast Missouri State, 1932-33 Dayton, and 2007-08 Little Rock. Which was the best team?",
+  "expected": [
+   [
+    "6-22",
+    "6–22",
+    "6 wins"
+   ],
+   [
+    "7-7",
+    "7–7",
+    "7 wins"
+   ],
+   [
+    "20-11",
+    "20–11",
+    "20 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_3way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Southeast Missouri State",
+     "year": "2001-02",
+     "record": "6-22",
+     "srs": -10.67,
+     "confRecord": "4-12",
+     "apHigh": null
+    },
+    {
+     "team": "Dayton",
+     "year": "1932-33",
+     "record": "7-7",
+     "srs": null,
+     "confRecord": null,
+     "apHigh": null
+    },
+    {
+     "team": "Little Rock",
+     "year": "2007-08",
+     "record": "20-11",
+     "srs": -3.26,
+     "confRecord": "11-7",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F076",
+  "q": "Rank these teams: 1995-96 UMBC, 2017-18 Presbyterian, and 2019-20 Oral Roberts.",
+  "expected": [
+   [
+    "5-22",
+    "5–22",
+    "5 wins"
+   ],
+   [
+    "11-21",
+    "11–21",
+    "11 wins"
+   ],
+   [
+    "17-14",
+    "17–14",
+    "17 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_3way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "UMBC",
+     "year": "1995-96",
+     "record": "5-22",
+     "srs": -17.13,
+     "confRecord": "3-11",
+     "apHigh": null
+    },
+    {
+     "team": "Presbyterian",
+     "year": "2017-18",
+     "record": "11-21",
+     "srs": -14.33,
+     "confRecord": "4-14",
+     "apHigh": null
+    },
+    {
+     "team": "Oral Roberts",
+     "year": "2019-20",
+     "record": "17-14",
+     "srs": 2.16,
+     "confRecord": "9-7",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F077",
+  "q": "If 2021-22 St. Thomas-Minnesota, 2025-26 North Alabama, and 2014-15 East Tennessee State played each other, who would win and why?",
+  "expected": [
+   [
+    "10-20",
+    "10–20",
+    "10 wins"
+   ],
+   [
+    "9-21",
+    "9–21",
+    "9 wins"
+   ],
+   [
+    "16-14",
+    "16–14",
+    "16 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_3way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "St. Thomas-Minnesota",
+     "year": "2021-22",
+     "record": "10-20",
+     "srs": -11.15,
+     "confRecord": "4-14",
+     "apHigh": null
+    },
+    {
+     "team": "North Alabama",
+     "year": "2025-26",
+     "record": "9-21",
+     "srs": -15.63,
+     "confRecord": "4-14",
+     "apHigh": null
+    },
+    {
+     "team": "East Tennessee State",
+     "year": "2014-15",
+     "record": "16-14",
+     "srs": -4.8,
+     "confRecord": "8-10",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F078",
+  "q": "Rank these teams: 1998-99 South Alabama, 2020-21 North Dakota, and 2024-25 Howard.",
+  "expected": [
+   [
+    "11-16",
+    "11–16",
+    "11 wins"
+   ],
+   [
+    "9-17",
+    "9–17",
+    "9 wins"
+   ],
+   [
+    "12-20",
+    "12–20",
+    "12 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_3way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "South Alabama",
+     "year": "1998-99",
+     "record": "11-16",
+     "srs": -4.23,
+     "confRecord": "6-8",
+     "apHigh": null
+    },
+    {
+     "team": "North Dakota",
+     "year": "2020-21",
+     "record": "9-17",
+     "srs": -10.35,
+     "confRecord": "8-8",
+     "apHigh": null
+    },
+    {
+     "team": "Howard",
+     "year": "2024-25",
+     "record": "12-20",
+     "srs": -12.02,
+     "confRecord": "7-7",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F079",
+  "q": "Compare 2020-21 Ball State and 2025-26 Merrimack. Which was the best team?",
+  "expected": [
+   [
+    "10-13",
+    "10–13",
+    "10 wins"
+   ],
+   [
+    "23-11",
+    "23–11",
+    "23 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_2way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Ball State",
+     "year": "2020-21",
+     "record": "10-13",
+     "srs": -1.96,
+     "confRecord": "8-9",
+     "apHigh": null
+    },
+    {
+     "team": "Merrimack",
+     "year": "2025-26",
+     "record": "23-11",
+     "srs": -4.27,
+     "confRecord": "17-3",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F080",
+  "q": "Break down 2022-23 Jackson State and 2007-08 Northern Illinois — records, strength of schedule, how far each went.",
+  "expected": [
+   [
+    "14-19",
+    "14–19",
+    "14 wins"
+   ],
+   [
+    "6-22",
+    "6–22",
+    "6 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_2way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Jackson State",
+     "year": "2022-23",
+     "record": "14-19",
+     "srs": -11.36,
+     "confRecord": "12-6",
+     "apHigh": null
+    },
+    {
+     "team": "Northern Illinois",
+     "year": "2007-08",
+     "record": "6-22",
+     "srs": -9.3,
+     "confRecord": "3-12",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F081",
+  "q": "Break down 2025-26 Lindenwood, 1977-78 Ball State, 2018-19 Lamar, and 1985-86 Manhattan — records, strength of schedule, how far each went.",
+  "expected": [
+   [
+    "18-15",
+    "18–15",
+    "18 wins"
+   ],
+   [
+    "10-15",
+    "10–15",
+    "10 wins"
+   ],
+   [
+    "20-13",
+    "20–13",
+    "20 wins"
+   ],
+   [
+    "2-26",
+    "2–26",
+    "2 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_4way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Lindenwood",
+     "year": "2025-26",
+     "record": "18-15",
+     "srs": -9.44,
+     "confRecord": "11-9",
+     "apHigh": null
+    },
+    {
+     "team": "Ball State",
+     "year": "1977-78",
+     "record": "10-15",
+     "srs": -5.98,
+     "confRecord": "6-10",
+     "apHigh": null
+    },
+    {
+     "team": "Lamar",
+     "year": "2018-19",
+     "record": "20-13",
+     "srs": -5.94,
+     "confRecord": "12-6",
+     "apHigh": null
+    },
+    {
+     "team": "Manhattan",
+     "year": "1985-86",
+     "record": "2-26",
+     "srs": -29.48,
+     "confRecord": "1-13",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F082",
+  "q": "If 1991-92 Northwestern State, 1982-83 SE Louisiana, and 2012-13 Louisiana Tech played each other, who would win and why?",
+  "expected": [
+   [
+    "15-13",
+    "15–13",
+    "15 wins"
+   ],
+   [
+    "18-9",
+    "18–9",
+    "18 wins"
+   ],
+   [
+    "27-7",
+    "27–7",
+    "27 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_3way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Northwestern State",
+     "year": "1991-92",
+     "record": "15-13",
+     "srs": -9.3,
+     "confRecord": "9-9",
+     "apHigh": null
+    },
+    {
+     "team": "SE Louisiana",
+     "year": "1982-83",
+     "record": "18-9",
+     "srs": -3.08,
+     "confRecord": null,
+     "apHigh": null
+    },
+    {
+     "team": "Louisiana Tech",
+     "year": "2012-13",
+     "record": "27-7",
+     "srs": 5.47,
+     "confRecord": "16-2",
+     "apHigh": 25
+    }
+   ]
+  }
+ },
+ {
+  "id": "F083",
+  "q": "Compare 1913-14 Northern Colorado and 2016-17 East Tennessee State. Which was the best team?",
+  "expected": [
+   [
+    "1-2",
+    "1–2",
+    "1 wins"
+   ],
+   [
+    "27-8",
+    "27–8",
+    "27 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_2way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Northern Colorado",
+     "year": "1913-14",
+     "record": "1-2",
+     "srs": null,
+     "confRecord": null,
+     "apHigh": null
+    },
+    {
+     "team": "East Tennessee State",
+     "year": "2016-17",
+     "record": "27-8",
+     "srs": 7.31,
+     "confRecord": "14-4",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F084",
+  "q": "Rank these teams: 2017-18 Lipscomb and 2002-03 Arkansas State.",
+  "expected": [
+   [
+    "23-10",
+    "23–10",
+    "23 wins"
+   ],
+   [
+    "13-15",
+    "13–15",
+    "13 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_2way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Lipscomb",
+     "year": "2017-18",
+     "record": "23-10",
+     "srs": -2.1,
+     "confRecord": "10-4",
+     "apHigh": null
+    },
+    {
+     "team": "Arkansas State",
+     "year": "2002-03",
+     "record": "13-15",
+     "srs": -0.05,
+     "confRecord": "6-8",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F085",
+  "q": "Compare 2010-11 Presbyterian and 1989-90 Chicago State. Which was the best team?",
+  "expected": [
+   [
+    "13-18",
+    "13–18",
+    "13 wins"
+   ],
+   [
+    "6-22",
+    "6–22",
+    "6 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_2way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Presbyterian",
+     "year": "2010-11",
+     "record": "13-18",
+     "srs": -7.72,
+     "confRecord": "7-11",
+     "apHigh": null
+    },
+    {
+     "team": "Chicago State",
+     "year": "1989-90",
+     "record": "6-22",
+     "srs": -11.54,
+     "confRecord": null,
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F086",
+  "q": "Compare 1992-93 Tennessee Tech, 2019-20 Central Michigan, and 2009-10 Oral Roberts. Which was the best team?",
+  "expected": [
+   [
+    "15-13",
+    "15–13",
+    "15 wins"
+   ],
+   [
+    "14-18",
+    "14–18",
+    "14 wins"
+   ],
+   [
+    "20-13",
+    "20–13",
+    "20 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_3way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Tennessee Tech",
+     "year": "1992-93",
+     "record": "15-13",
+     "srs": -7.63,
+     "confRecord": "9-7",
+     "apHigh": null
+    },
+    {
+     "team": "Central Michigan",
+     "year": "2019-20",
+     "record": "14-18",
+     "srs": -3.4,
+     "confRecord": "7-11",
+     "apHigh": null
+    },
+    {
+     "team": "Oral Roberts",
+     "year": "2009-10",
+     "record": "20-13",
+     "srs": -0.88,
+     "confRecord": "13-5",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F087",
+  "q": "Compare 1952-53 Tennessee and 1946-47 Idaho. Which was the best team?",
+  "expected": [
+   [
+    "13-8",
+    "13–8",
+    "13 wins"
+   ],
+   [
+    "4-24",
+    "4–24",
+    "4 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_2way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Tennessee",
+     "year": "1952-53",
+     "record": "13-8",
+     "srs": -4.71,
+     "confRecord": "7-6",
+     "apHigh": null
+    },
+    {
+     "team": "Idaho",
+     "year": "1946-47",
+     "record": "4-24",
+     "srs": null,
+     "confRecord": "1-15",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F088",
+  "q": "Break down 2018-19 Florida Atlantic and 2015-16 Incarnate Word — records, strength of schedule, how far each went.",
+  "expected": [
+   [
+    "17-16",
+    "17–16",
+    "17 wins"
+   ],
+   [
+    "17-12",
+    "17–12",
+    "17 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_2way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Florida Atlantic",
+     "year": "2018-19",
+     "record": "17-16",
+     "srs": -1.42,
+     "confRecord": "8-10",
+     "apHigh": null
+    },
+    {
+     "team": "Incarnate Word",
+     "year": "2015-16",
+     "record": "17-12",
+     "srs": -9.2,
+     "confRecord": "12-6",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F089",
+  "q": "Compare 1927-28 Buffalo, 1974-75 Georgia Southern, 1983-84 Butler, and 1947-48 Kansas. Which was the best team?",
+  "expected": [
+   [
+    "8-8",
+    "8–8",
+    "8 wins"
+   ],
+   [
+    "8-18",
+    "8–18",
+    "8 wins"
+   ],
+   [
+    "13-15",
+    "13–15",
+    "13 wins"
+   ],
+   [
+    "9-15",
+    "9–15",
+    "9 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_4way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Buffalo",
+     "year": "1927-28",
+     "record": "8-8",
+     "srs": null,
+     "confRecord": null,
+     "apHigh": null
+    },
+    {
+     "team": "Georgia Southern",
+     "year": "1974-75",
+     "record": "8-18",
+     "srs": -12.14,
+     "confRecord": null,
+     "apHigh": null
+    },
+    {
+     "team": "Butler",
+     "year": "1983-84",
+     "record": "13-15",
+     "srs": -1.02,
+     "confRecord": "7-7",
+     "apHigh": null
+    },
+    {
+     "team": "Kansas",
+     "year": "1947-48",
+     "record": "9-15",
+     "srs": null,
+     "confRecord": "4-8",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F090",
+  "q": "Rank these teams: 2006-07 Cal State Fullerton, 1936-37 Western Michigan, and 2020-21 Georgia Southern.",
+  "expected": [
+   [
+    "20-10",
+    "20–10",
+    "20 wins"
+   ],
+   [
+    "13-4",
+    "13–4",
+    "13 wins"
+   ],
+   [
+    "13-13",
+    "13–13",
+    "13 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_3way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Cal State Fullerton",
+     "year": "2006-07",
+     "record": "20-10",
+     "srs": -1.91,
+     "confRecord": "9-5",
+     "apHigh": null
+    },
+    {
+     "team": "Western Michigan",
+     "year": "1936-37",
+     "record": "13-4",
+     "srs": null,
+     "confRecord": null,
+     "apHigh": null
+    },
+    {
+     "team": "Georgia Southern",
+     "year": "2020-21",
+     "record": "13-13",
+     "srs": -10.22,
+     "confRecord": "7-9",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F091",
+  "q": "If 1989-90 Wichita State, 1951-52 Evansville, and 2006-07 Oral Roberts played each other, who would win and why?",
+  "expected": [
+   [
+    "10-19",
+    "10–19",
+    "10 wins"
+   ],
+   [
+    "7-20",
+    "7–20",
+    "7 wins"
+   ],
+   [
+    "23-11",
+    "23–11",
+    "23 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_3way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Wichita State",
+     "year": "1989-90",
+     "record": "10-19",
+     "srs": 2.62,
+     "confRecord": "6-8",
+     "apHigh": null
+    },
+    {
+     "team": "Evansville",
+     "year": "1951-52",
+     "record": "7-20",
+     "srs": null,
+     "confRecord": null,
+     "apHigh": null
+    },
+    {
+     "team": "Oral Roberts",
+     "year": "2006-07",
+     "record": "23-11",
+     "srs": 4.54,
+     "confRecord": "12-2",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F092",
+  "q": "If 1988-89 South Florida, 1947-48 Indiana, and 2005-06 Richmond played each other, who would win and why?",
+  "expected": [
+   [
+    "7-21",
+    "7–21",
+    "7 wins"
+   ],
+   [
+    "8-12",
+    "8–12",
+    "8 wins"
+   ],
+   [
+    "13-17",
+    "13–17",
+    "13 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_3way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "South Florida",
+     "year": "1988-89",
+     "record": "7-21",
+     "srs": -3.21,
+     "confRecord": "2-12",
+     "apHigh": null
+    },
+    {
+     "team": "Indiana",
+     "year": "1947-48",
+     "record": "8-12",
+     "srs": null,
+     "confRecord": "3-9",
+     "apHigh": null
+    },
+    {
+     "team": "Richmond",
+     "year": "2005-06",
+     "record": "13-17",
+     "srs": -5.09,
+     "confRecord": "6-10",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F093",
+  "q": "Rank these teams: 2005-06 James Madison and 2010-11 Jacksonville.",
+  "expected": [
+   [
+    "5-23",
+    "5–23",
+    "5 wins"
+   ],
+   [
+    "20-12",
+    "20–12",
+    "20 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_2way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "James Madison",
+     "year": "2005-06",
+     "record": "5-23",
+     "srs": -12.74,
+     "confRecord": "2-16",
+     "apHigh": null
+    },
+    {
+     "team": "Jacksonville",
+     "year": "2010-11",
+     "record": "20-12",
+     "srs": -1.42,
+     "confRecord": "13-7",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F094",
+  "q": "Break down 2017-18 Hofstra and 1935-36 Niagara — records, strength of schedule, how far each went.",
+  "expected": [
+   [
+    "19-12",
+    "19–12",
+    "19 wins"
+   ],
+   [
+    "17-6",
+    "17–6",
+    "17 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_2way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Hofstra",
+     "year": "2017-18",
+     "record": "19-12",
+     "srs": -0.53,
+     "confRecord": "12-6",
+     "apHigh": null
+    },
+    {
+     "team": "Niagara",
+     "year": "1935-36",
+     "record": "17-6",
+     "srs": null,
+     "confRecord": null,
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F095",
+  "q": "If 2010-11 Stephen F. Austin and 2007-08 Arkansas-Pine Bluff played each other, who would win and why?",
+  "expected": [
+   [
+    "18-11",
+    "18–11",
+    "18 wins"
+   ],
+   [
+    "13-18",
+    "13–18",
+    "13 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_2way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Stephen F. Austin",
+     "year": "2010-11",
+     "record": "18-11",
+     "srs": -3.29,
+     "confRecord": "9-7",
+     "apHigh": null
+    },
+    {
+     "team": "Arkansas-Pine Bluff",
+     "year": "2007-08",
+     "record": "13-18",
+     "srs": -17.8,
+     "confRecord": "8-10",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F096",
+  "q": "Break down 2024-25 Middle Tennessee and 1986-87 Saint Francis — records, strength of schedule, how far each went.",
+  "expected": [
+   [
+    "22-12",
+    "22–12",
+    "22 wins"
+   ],
+   [
+    "11-16",
+    "11–16",
+    "11 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_2way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Middle Tennessee",
+     "year": "2024-25",
+     "record": "22-12",
+     "srs": 2.52,
+     "confRecord": "12-6",
+     "apHigh": null
+    },
+    {
+     "team": "Saint Francis",
+     "year": "1986-87",
+     "record": "11-16",
+     "srs": -9.71,
+     "confRecord": "7-9",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F097",
+  "q": "If 2006-07 Central Connecticut and 2006-07 Hofstra played each other, who would win and why?",
+  "expected": [
+   [
+    "22-12",
+    "22–12",
+    "22 wins"
+   ],
+   [
+    "22-10",
+    "22–10",
+    "22 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_2way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Central Connecticut",
+     "year": "2006-07",
+     "record": "22-12",
+     "srs": -3.63,
+     "confRecord": "16-2",
+     "apHigh": null
+    },
+    {
+     "team": "Hofstra",
+     "year": "2006-07",
+     "record": "22-10",
+     "srs": 2.53,
+     "confRecord": "14-4",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F098",
+  "q": "If 1953-54 Saint Mary's, 1916-17 Auburn, 1943-44 Gonzaga, and 1968-69 Seattle U played each other, who would win and why?",
+  "expected": [
+   [
+    "10-14",
+    "10–14",
+    "10 wins"
+   ],
+   [
+    "2-2",
+    "2–2",
+    "2 wins"
+   ],
+   [
+    "22-4",
+    "22–4",
+    "22 wins"
+   ],
+   [
+    "20-8",
+    "20–8",
+    "20 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_4way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Saint Mary's",
+     "year": "1953-54",
+     "record": "10-14",
+     "srs": -6.76,
+     "confRecord": "4-8",
+     "apHigh": null
+    },
+    {
+     "team": "Auburn",
+     "year": "1916-17",
+     "record": "2-2",
+     "srs": null,
+     "confRecord": null,
+     "apHigh": null
+    },
+    {
+     "team": "Gonzaga",
+     "year": "1943-44",
+     "record": "22-4",
+     "srs": null,
+     "confRecord": null,
+     "apHigh": null
+    },
+    {
+     "team": "Seattle U",
+     "year": "1968-69",
+     "record": "20-8",
+     "srs": 6.83,
+     "confRecord": null,
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F099",
+  "q": "Rank these teams: 1921-22 Dayton and 2017-18 South Dakota.",
+  "expected": [
+   [
+    "6-8",
+    "6–8",
+    "6 wins"
+   ],
+   [
+    "26-9",
+    "26–9",
+    "26 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_2way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Dayton",
+     "year": "1921-22",
+     "record": "6-8",
+     "srs": null,
+     "confRecord": null,
+     "apHigh": null
+    },
+    {
+     "team": "South Dakota",
+     "year": "2017-18",
+     "record": "26-9",
+     "srs": 6.17,
+     "confRecord": "11-3",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F100",
+  "q": "Break down 1908-09 California, 1992-93 Stanford, and 1976-77 Austin Peay — records, strength of schedule, how far each went.",
+  "expected": [
+   [
+    "10-0",
+    "10–0",
+    "10 wins"
+   ],
+   [
+    "7-23",
+    "7–23",
+    "7 wins"
+   ],
+   [
+    "24-4",
+    "24–4",
+    "24 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_3way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "California",
+     "year": "1908-09",
+     "record": "10-0",
+     "srs": null,
+     "confRecord": null,
+     "apHigh": null
+    },
+    {
+     "team": "Stanford",
+     "year": "1992-93",
+     "record": "7-23",
+     "srs": 0.06,
+     "confRecord": "2-16",
+     "apHigh": null
+    },
+    {
+     "team": "Austin Peay",
+     "year": "1976-77",
+     "record": "24-4",
+     "srs": 3.81,
+     "confRecord": "13-1",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F101",
+  "q": "If 2005-06 Northwestern State, 1925-26 Wisconsin, 2022-23 Utah Valley, and 2006-07 Chicago State played each other, who would win and why?",
+  "expected": [
+   [
+    "26-8",
+    "26–8",
+    "26 wins"
+   ],
+   [
+    "8-9",
+    "8–9",
+    "8 wins"
+   ],
+   [
+    "28-9",
+    "28–9",
+    "28 wins"
+   ],
+   [
+    "9-20",
+    "9–20",
+    "9 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_4way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Northwestern State",
+     "year": "2005-06",
+     "record": "26-8",
+     "srs": 4.01,
+     "confRecord": "15-1",
+     "apHigh": null
+    },
+    {
+     "team": "Wisconsin",
+     "year": "1925-26",
+     "record": "8-9",
+     "srs": null,
+     "confRecord": "4-8",
+     "apHigh": null
+    },
+    {
+     "team": "Utah Valley",
+     "year": "2022-23",
+     "record": "28-9",
+     "srs": 8.48,
+     "confRecord": "15-3",
+     "apHigh": null
+    },
+    {
+     "team": "Chicago State",
+     "year": "2006-07",
+     "record": "9-20",
+     "srs": -6.59,
+     "confRecord": null,
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F102",
+  "q": "If 2025-26 Lindenwood, 2003-04 Central Connecticut, 2008-09 Cal State Northridge, and 2017-18 San Diego State played each other, who would win and why?",
+  "expected": [
+   [
+    "18-15",
+    "18–15",
+    "18 wins"
+   ],
+   [
+    "14-14",
+    "14–14",
+    "14 wins"
+   ],
+   [
+    "17-14",
+    "17–14",
+    "17 wins"
+   ],
+   [
+    "22-11",
+    "22–11",
+    "22 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_4way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Lindenwood",
+     "year": "2025-26",
+     "record": "18-15",
+     "srs": -9.44,
+     "confRecord": "11-9",
+     "apHigh": null
+    },
+    {
+     "team": "Central Connecticut",
+     "year": "2003-04",
+     "record": "14-14",
+     "srs": -6.69,
+     "confRecord": "9-9",
+     "apHigh": null
+    },
+    {
+     "team": "Cal State Northridge",
+     "year": "2008-09",
+     "record": "17-14",
+     "srs": 2.65,
+     "confRecord": "11-5",
+     "apHigh": null
+    },
+    {
+     "team": "San Diego State",
+     "year": "2017-18",
+     "record": "22-11",
+     "srs": 12.23,
+     "confRecord": "11-7",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F103",
+  "q": "Rank these teams: 1972-73 Northeastern and 2025-26 High Point.",
+  "expected": [
+   [
+    "19-7",
+    "19–7",
+    "19 wins"
+   ],
+   [
+    "30-4",
+    "30–4",
+    "30 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_2way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Northeastern",
+     "year": "1972-73",
+     "record": "19-7",
+     "srs": -10.77,
+     "confRecord": null,
+     "apHigh": null
+    },
+    {
+     "team": "High Point",
+     "year": "2025-26",
+     "record": "30-4",
+     "srs": 6.77,
+     "confRecord": "15-1",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F104",
+  "q": "Rank these teams: 1996-97 Green Bay and 2005-06 Purdue Fort Wayne.",
+  "expected": [
+   [
+    "14-14",
+    "14–14",
+    "14 wins"
+   ],
+   [
+    "10-18",
+    "10–18",
+    "10 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_2way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Green Bay",
+     "year": "1996-97",
+     "record": "14-14",
+     "srs": 0.89,
+     "confRecord": "10-6",
+     "apHigh": null
+    },
+    {
+     "team": "Purdue Fort Wayne",
+     "year": "2005-06",
+     "record": "10-18",
+     "srs": -11.33,
+     "confRecord": null,
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F105",
+  "q": "Compare 1999-00 Stephen F. Austin and 1936-37 New Mexico. Which was the best team?",
+  "expected": [
+   [
+    "6-21",
+    "6–21",
+    "6 wins"
+   ],
+   [
+    "12-14",
+    "12–14",
+    "12 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_2way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Stephen F. Austin",
+     "year": "1999-00",
+     "record": "6-21",
+     "srs": -12.81,
+     "confRecord": "3-15",
+     "apHigh": null
+    },
+    {
+     "team": "New Mexico",
+     "year": "1936-37",
+     "record": "12-14",
+     "srs": null,
+     "confRecord": "10-10",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F106",
+  "q": "If 1982-83 Maryland, 1930-31 Brown, and 1921-22 Montana played each other, who would win and why?",
+  "expected": [
+   [
+    "20-10",
+    "20–10",
+    "20 wins"
+   ],
+   [
+    "9-10",
+    "9–10",
+    "9 wins"
+   ],
+   [
+    "14-7",
+    "14–7",
+    "14 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_3way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Maryland",
+     "year": "1982-83",
+     "record": "20-10",
+     "srs": 8.5,
+     "confRecord": "8-6",
+     "apHigh": null
+    },
+    {
+     "team": "Brown",
+     "year": "1930-31",
+     "record": "9-10",
+     "srs": null,
+     "confRecord": null,
+     "apHigh": null
+    },
+    {
+     "team": "Montana",
+     "year": "1921-22",
+     "record": "14-7",
+     "srs": null,
+     "confRecord": null,
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F107",
+  "q": "Compare 2021-22 Northern Arizona, 2000-01 Norfolk State, 1898-99 Illinois State, and 2025-26 Valparaiso. Which was the best team?",
+  "expected": [
+   [
+    "9-23",
+    "9–23",
+    "9 wins"
+   ],
+   [
+    "12-17",
+    "12–17",
+    "12 wins"
+   ],
+   [
+    "2-0",
+    "2–0",
+    "2 wins"
+   ],
+   [
+    "18-15",
+    "18–15",
+    "18 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_4way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Northern Arizona",
+     "year": "2021-22",
+     "record": "9-23",
+     "srs": -13.5,
+     "confRecord": "5-15",
+     "apHigh": null
+    },
+    {
+     "team": "Norfolk State",
+     "year": "2000-01",
+     "record": "12-17",
+     "srs": -12.63,
+     "confRecord": "11-7",
+     "apHigh": null
+    },
+    {
+     "team": "Illinois State",
+     "year": "1898-99",
+     "record": "2-0",
+     "srs": null,
+     "confRecord": null,
+     "apHigh": null
+    },
+    {
+     "team": "Valparaiso",
+     "year": "2025-26",
+     "record": "18-15",
+     "srs": -0.02,
+     "confRecord": "11-9",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F108",
+  "q": "Break down 2014-15 Liberty, 1975-76 Ball State, 1963-64 Saint Joseph's, and 2012-13 Wyoming — records, strength of schedule, how far each went.",
+  "expected": [
+   [
+    "8-24",
+    "8–24",
+    "8 wins"
+   ],
+   [
+    "11-14",
+    "11–14",
+    "11 wins"
+   ],
+   [
+    "18-10",
+    "18–10",
+    "18 wins"
+   ],
+   [
+    "20-14",
+    "20–14",
+    "20 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_4way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Liberty",
+     "year": "2014-15",
+     "record": "8-24",
+     "srs": -16.01,
+     "confRecord": "2-16",
+     "apHigh": null
+    },
+    {
+     "team": "Ball State",
+     "year": "1975-76",
+     "record": "11-14",
+     "srs": -7.18,
+     "confRecord": "5-11",
+     "apHigh": null
+    },
+    {
+     "team": "Saint Joseph's",
+     "year": "1963-64",
+     "record": "18-10",
+     "srs": 3.27,
+     "confRecord": "5-1",
+     "apHigh": null
+    },
+    {
+     "team": "Wyoming",
+     "year": "2012-13",
+     "record": "20-14",
+     "srs": 5.32,
+     "confRecord": "4-12",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F109",
+  "q": "Break down 1983-84 Georgia, 1944-45 Northwestern, 2015-16 Southern Illinois, and 1944-45 St. John's — records, strength of schedule, how far each went.",
+  "expected": [
+   [
+    "17-13",
+    "17–13",
+    "17 wins"
+   ],
+   [
+    "7-12",
+    "7–12",
+    "7 wins"
+   ],
+   [
+    "22-10",
+    "22–10",
+    "22 wins"
+   ],
+   [
+    "21-3",
+    "21–3",
+    "21 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_4way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Georgia",
+     "year": "1983-84",
+     "record": "17-13",
+     "srs": 11.41,
+     "confRecord": "8-10",
+     "apHigh": 10
+    },
+    {
+     "team": "Northwestern",
+     "year": "1944-45",
+     "record": "7-12",
+     "srs": null,
+     "confRecord": "4-8",
+     "apHigh": null
+    },
+    {
+     "team": "Southern Illinois",
+     "year": "2015-16",
+     "record": "22-10",
+     "srs": 2.79,
+     "confRecord": "11-7",
+     "apHigh": null
+    },
+    {
+     "team": "St. John's",
+     "year": "1944-45",
+     "record": "21-3",
+     "srs": null,
+     "confRecord": null,
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F110",
+  "q": "If 2025-26 Bellarmine and 2022-23 Wofford played each other, who would win and why?",
+  "expected": [
+   [
+    "13-19",
+    "13–19",
+    "13 wins"
+   ],
+   [
+    "17-16",
+    "17–16",
+    "17 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_2way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Bellarmine",
+     "year": "2025-26",
+     "record": "13-19",
+     "srs": -8.98,
+     "confRecord": "7-11",
+     "apHigh": null
+    },
+    {
+     "team": "Wofford",
+     "year": "2022-23",
+     "record": "17-16",
+     "srs": -5.02,
+     "confRecord": "8-10",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F111",
+  "q": "Compare 2021-22 Longwood, 1926-27 Cincinnati, 2015-16 Indiana State, and 2011-12 Eastern Illinois. Which was the best team?",
+  "expected": [
+   [
+    "26-7",
+    "26–7",
+    "26 wins"
+   ],
+   [
+    "13-5",
+    "13–5",
+    "13 wins"
+   ],
+   [
+    "15-17",
+    "15–17",
+    "15 wins"
+   ],
+   [
+    "12-17",
+    "12–17",
+    "12 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_4way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Longwood",
+     "year": "2021-22",
+     "record": "26-7",
+     "srs": -0.35,
+     "confRecord": "15-1",
+     "apHigh": null
+    },
+    {
+     "team": "Cincinnati",
+     "year": "1926-27",
+     "record": "13-5",
+     "srs": null,
+     "confRecord": null,
+     "apHigh": null
+    },
+    {
+     "team": "Indiana State",
+     "year": "2015-16",
+     "record": "15-17",
+     "srs": 0.04,
+     "confRecord": "8-10",
+     "apHigh": null
+    },
+    {
+     "team": "Eastern Illinois",
+     "year": "2011-12",
+     "record": "12-17",
+     "srs": -11.48,
+     "confRecord": "5-11",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F112",
+  "q": "Break down 1923-24 Toledo, 2019-20 Hampton, and 1989-90 VCU — records, strength of schedule, how far each went.",
+  "expected": [
+   [
+    "5-5",
+    "5–5",
+    "5 wins"
+   ],
+   [
+    "15-19",
+    "15–19",
+    "15 wins"
+   ],
+   [
+    "11-17",
+    "11–17",
+    "11 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_3way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Toledo",
+     "year": "1923-24",
+     "record": "5-5",
+     "srs": null,
+     "confRecord": null,
+     "apHigh": null
+    },
+    {
+     "team": "Hampton",
+     "year": "2019-20",
+     "record": "15-19",
+     "srs": -12.02,
+     "confRecord": "8-10",
+     "apHigh": null
+    },
+    {
+     "team": "VCU",
+     "year": "1989-90",
+     "record": "11-17",
+     "srs": -1.61,
+     "confRecord": "5-9",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F113",
+  "q": "Compare 1984-85 East Tennessee State, 1981-82 Tennessee, and 2002-03 Texas A&M-Corpus Christi. Which was the best team?",
+  "expected": [
+   [
+    "9-18",
+    "9–18",
+    "9 wins"
+   ],
+   [
+    "20-10",
+    "20–10",
+    "20 wins"
+   ],
+   [
+    "14-15",
+    "14–15",
+    "14 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_3way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "East Tennessee State",
+     "year": "1984-85",
+     "record": "9-18",
+     "srs": -10.7,
+     "confRecord": "3-13",
+     "apHigh": null
+    },
+    {
+     "team": "Tennessee",
+     "year": "1981-82",
+     "record": "20-10",
+     "srs": 9.75,
+     "confRecord": "13-5",
+     "apHigh": 15
+    },
+    {
+     "team": "Texas A&M-Corpus Christi",
+     "year": "2002-03",
+     "record": "14-15",
+     "srs": -9.94,
+     "confRecord": null,
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F114",
+  "q": "Compare 1992-93 New Orleans, 2012-13 Santa Clara, and 2014-15 Indiana. Which was the best team?",
+  "expected": [
+   [
+    "26-4",
+    "26–4",
+    "26 wins"
+   ],
+   [
+    "26-12",
+    "26–12",
+    "26 wins"
+   ],
+   [
+    "20-14",
+    "20–14",
+    "20 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_3way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "New Orleans",
+     "year": "1992-93",
+     "record": "26-4",
+     "srs": 12,
+     "confRecord": "18-0",
+     "apHigh": 13
+    },
+    {
+     "team": "Santa Clara",
+     "year": "2012-13",
+     "record": "26-12",
+     "srs": 6.54,
+     "confRecord": "9-7",
+     "apHigh": null
+    },
+    {
+     "team": "Indiana",
+     "year": "2014-15",
+     "record": "20-14",
+     "srs": 12.94,
+     "confRecord": "9-9",
+     "apHigh": 22
+    }
+   ]
+  }
+ },
+ {
+  "id": "F115",
+  "q": "Compare 2021-22 Massachusetts, 1935-36 Dayton, 1914-15 Utah, and 1970-71 Houston. Which was the best team?",
+  "expected": [
+   [
+    "15-17",
+    "15–17",
+    "15 wins"
+   ],
+   [
+    "3-13",
+    "3–13",
+    "3 wins"
+   ],
+   [
+    "12-4",
+    "12–4",
+    "12 wins"
+   ],
+   [
+    "22-7",
+    "22–7",
+    "22 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_4way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Massachusetts",
+     "year": "2021-22",
+     "record": "15-17",
+     "srs": -0.67,
+     "confRecord": "7-11",
+     "apHigh": null
+    },
+    {
+     "team": "Dayton",
+     "year": "1935-36",
+     "record": "3-13",
+     "srs": null,
+     "confRecord": null,
+     "apHigh": null
+    },
+    {
+     "team": "Utah",
+     "year": "1914-15",
+     "record": "12-4",
+     "srs": null,
+     "confRecord": null,
+     "apHigh": null
+    },
+    {
+     "team": "Houston",
+     "year": "1970-71",
+     "record": "22-7",
+     "srs": 11.02,
+     "confRecord": null,
+     "apHigh": 14
+    }
+   ]
+  }
+ },
+ {
+  "id": "F116",
+  "q": "If 1926-27 Army, 1997-98 UT Martin, and 1918-19 Valparaiso played each other, who would win and why?",
+  "expected": [
+   [
+    "11-3",
+    "11–3",
+    "11 wins"
+   ],
+   [
+    "7-20",
+    "7–20",
+    "7 wins"
+   ],
+   [
+    "1-2",
+    "1–2",
+    "1 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_3way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Army",
+     "year": "1926-27",
+     "record": "11-3",
+     "srs": null,
+     "confRecord": null,
+     "apHigh": null
+    },
+    {
+     "team": "UT Martin",
+     "year": "1997-98",
+     "record": "7-20",
+     "srs": -16.71,
+     "confRecord": "5-13",
+     "apHigh": null
+    },
+    {
+     "team": "Valparaiso",
+     "year": "1918-19",
+     "record": "1-2",
+     "srs": null,
+     "confRecord": null,
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F117",
+  "q": "Rank these teams: 2024-25 Auburn, 1903-04 Penn State, and 2001-02 Furman.",
+  "expected": [
+   [
+    "32-6",
+    "32–6",
+    "32 wins"
+   ],
+   [
+    "5-4",
+    "5–4",
+    "5 wins"
+   ],
+   [
+    "17-14",
+    "17–14",
+    "17 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_3way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Auburn",
+     "year": "2024-25",
+     "record": "32-6",
+     "srs": 28.68,
+     "confRecord": "15-3",
+     "apHigh": 1
+    },
+    {
+     "team": "Penn State",
+     "year": "1903-04",
+     "record": "5-4",
+     "srs": null,
+     "confRecord": null,
+     "apHigh": null
+    },
+    {
+     "team": "Furman",
+     "year": "2001-02",
+     "record": "17-14",
+     "srs": -1.61,
+     "confRecord": "7-9",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F118",
+  "q": "Break down 1986-87 Bethune-Cookman, 1977-78 Ole Miss, 2022-23 Fairleigh Dickinson, and 1988-89 UAB — records, strength of schedule, how far each went.",
+  "expected": [
+   [
+    "10-19",
+    "10–19",
+    "10 wins"
+   ],
+   [
+    "10-17",
+    "10–17",
+    "10 wins"
+   ],
+   [
+    "21-16",
+    "21–16",
+    "21 wins"
+   ],
+   [
+    "22-12",
+    "22–12",
+    "22 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_4way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Bethune-Cookman",
+     "year": "1986-87",
+     "record": "10-19",
+     "srs": -19.17,
+     "confRecord": "6-8",
+     "apHigh": null
+    },
+    {
+     "team": "Ole Miss",
+     "year": "1977-78",
+     "record": "10-17",
+     "srs": -0.16,
+     "confRecord": "5-13",
+     "apHigh": null
+    },
+    {
+     "team": "Fairleigh Dickinson",
+     "year": "2022-23",
+     "record": "21-16",
+     "srs": -8.98,
+     "confRecord": "10-6",
+     "apHigh": null
+    },
+    {
+     "team": "UAB",
+     "year": "1988-89",
+     "record": "22-12",
+     "srs": 7.06,
+     "confRecord": "8-6",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F119",
+  "q": "Compare 1976-77 Seattle U, 1913-14 Kansas State, and 2009-10 Presbyterian. Which was the best team?",
+  "expected": [
+   [
+    "13-14",
+    "13–14",
+    "13 wins"
+   ],
+   [
+    "10-7",
+    "10–7",
+    "10 wins"
+   ],
+   [
+    "5-26",
+    "5–26",
+    "5 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_3way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Seattle U",
+     "year": "1976-77",
+     "record": "13-14",
+     "srs": -3.66,
+     "confRecord": "7-7",
+     "apHigh": null
+    },
+    {
+     "team": "Kansas State",
+     "year": "1913-14",
+     "record": "10-7",
+     "srs": null,
+     "confRecord": "7-5",
+     "apHigh": null
+    },
+    {
+     "team": "Presbyterian",
+     "year": "2009-10",
+     "record": "5-26",
+     "srs": null,
+     "confRecord": "2-16",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F120",
+  "q": "Compare 1992-93 Wichita State, 1987-88 Memphis, and 2010-11 Belmont. Which was the best team?",
+  "expected": [
+   [
+    "10-17",
+    "10–17",
+    "10 wins"
+   ],
+   [
+    "20-12",
+    "20–12",
+    "20 wins"
+   ],
+   [
+    "30-5",
+    "30–5",
+    "30 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_3way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Wichita State",
+     "year": "1992-93",
+     "record": "10-17",
+     "srs": -1.39,
+     "confRecord": "7-11",
+     "apHigh": null
+    },
+    {
+     "team": "Memphis",
+     "year": "1987-88",
+     "record": "20-12",
+     "srs": 10.18,
+     "confRecord": "6-6",
+     "apHigh": 19
+    },
+    {
+     "team": "Belmont",
+     "year": "2010-11",
+     "record": "30-5",
+     "srs": 13.07,
+     "confRecord": "19-1",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F121",
+  "q": "Rank these teams: 1985-86 Western Illinois and 2024-25 Columbia.",
+  "expected": [
+   [
+    "13-15",
+    "13–15",
+    "13 wins"
+   ],
+   [
+    "12-15",
+    "12–15",
+    "12 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_2way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Western Illinois",
+     "year": "1985-86",
+     "record": "13-15",
+     "srs": -5.32,
+     "confRecord": "7-7",
+     "apHigh": null
+    },
+    {
+     "team": "Columbia",
+     "year": "2024-25",
+     "record": "12-15",
+     "srs": -9.18,
+     "confRecord": "1-13",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F122",
+  "q": "Rank these teams: 2017-18 Northern Iowa, 2003-04 UNLV, 2020-21 Florida, and 2020-21 Lafayette.",
+  "expected": [
+   [
+    "16-16",
+    "16–16",
+    "16 wins"
+   ],
+   [
+    "18-13",
+    "18–13",
+    "18 wins"
+   ],
+   [
+    "15-10",
+    "15–10",
+    "15 wins"
+   ],
+   [
+    "9-6",
+    "9–6",
+    "9 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_4way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Northern Iowa",
+     "year": "2017-18",
+     "record": "16-16",
+     "srs": 4,
+     "confRecord": "7-11",
+     "apHigh": null
+    },
+    {
+     "team": "UNLV",
+     "year": "2003-04",
+     "record": "18-13",
+     "srs": 7.49,
+     "confRecord": "7-7",
+     "apHigh": null
+    },
+    {
+     "team": "Florida",
+     "year": "2020-21",
+     "record": "15-10",
+     "srs": 13.7,
+     "confRecord": "9-7",
+     "apHigh": 22
+    },
+    {
+     "team": "Lafayette",
+     "year": "2020-21",
+     "record": "9-6",
+     "srs": -5.38,
+     "confRecord": "9-5",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F123",
+  "q": "If 2007-08 Southern Utah, 1938-39 Clemson, 1983-84 Richmond, and 2008-09 Presbyterian played each other, who would win and why?",
+  "expected": [
+   [
+    "11-19",
+    "11–19",
+    "11 wins"
+   ],
+   [
+    "16-8",
+    "16–8",
+    "16 wins"
+   ],
+   [
+    "22-10",
+    "22–10",
+    "22 wins"
+   ],
+   [
+    "12-17",
+    "12–17",
+    "12 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_4way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Southern Utah",
+     "year": "2007-08",
+     "record": "11-19",
+     "srs": -6.35,
+     "confRecord": "9-9",
+     "apHigh": null
+    },
+    {
+     "team": "Clemson",
+     "year": "1938-39",
+     "record": "16-8",
+     "srs": null,
+     "confRecord": "6-6",
+     "apHigh": null
+    },
+    {
+     "team": "Richmond",
+     "year": "1983-84",
+     "record": "22-10",
+     "srs": 3.57,
+     "confRecord": "7-3",
+     "apHigh": null
+    },
+    {
+     "team": "Presbyterian",
+     "year": "2008-09",
+     "record": "12-17",
+     "srs": null,
+     "confRecord": "0-0",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F124",
+  "q": "Rank these teams: 2014-15 Arkansas State, 1988-89 Southern, and 1971-72 Montana State.",
+  "expected": [
+   [
+    "11-18",
+    "11–18",
+    "11 wins"
+   ],
+   [
+    "20-11",
+    "20–11",
+    "20 wins"
+   ],
+   [
+    "10-16",
+    "10–16",
+    "10 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_3way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Arkansas State",
+     "year": "2014-15",
+     "record": "11-18",
+     "srs": -10.1,
+     "confRecord": "6-14",
+     "apHigh": null
+    },
+    {
+     "team": "Southern",
+     "year": "1988-89",
+     "record": "20-11",
+     "srs": -0.53,
+     "confRecord": "10-4",
+     "apHigh": null
+    },
+    {
+     "team": "Montana State",
+     "year": "1971-72",
+     "record": "10-16",
+     "srs": -15.72,
+     "confRecord": "6-8",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F125",
+  "q": "Compare 2014-15 Omaha, 1929-30 Wake Forest, and 2022-23 Houston Christian. Which was the best team?",
+  "expected": [
+   [
+    "12-17",
+    "12–17",
+    "12 wins"
+   ],
+   [
+    "2-11",
+    "2–11",
+    "2 wins"
+   ],
+   [
+    "10-22",
+    "10–22",
+    "10 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_3way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Omaha",
+     "year": "2014-15",
+     "record": "12-17",
+     "srs": -7.18,
+     "confRecord": "5-11",
+     "apHigh": null
+    },
+    {
+     "team": "Wake Forest",
+     "year": "1929-30",
+     "record": "2-11",
+     "srs": null,
+     "confRecord": null,
+     "apHigh": null
+    },
+    {
+     "team": "Houston Christian",
+     "year": "2022-23",
+     "record": "10-22",
+     "srs": -17.18,
+     "confRecord": "7-11",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F126",
+  "q": "Break down 2024-25 Utah Tech and 2019-20 UMass Lowell River — records, strength of schedule, how far each went.",
+  "expected": [
+   [
+    "7-26",
+    "7–26",
+    "7 wins"
+   ],
+   [
+    "13-19",
+    "13–19",
+    "13 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_2way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Utah Tech",
+     "year": "2024-25",
+     "record": "7-26",
+     "srs": -10.29,
+     "confRecord": "2-14",
+     "apHigh": null
+    },
+    {
+     "team": "UMass Lowell River",
+     "year": "2019-20",
+     "record": "13-19",
+     "srs": -8.19,
+     "confRecord": "7-9",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F127",
+  "q": "If 2025-26 Norfolk State and 1927-28 Pennsylvania played each other, who would win and why?",
+  "expected": [
+   [
+    "15-17",
+    "15–17",
+    "15 wins"
+   ],
+   [
+    "22-5",
+    "22–5",
+    "22 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_2way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Norfolk State",
+     "year": "2025-26",
+     "record": "15-17",
+     "srs": -13.55,
+     "confRecord": "8-6",
+     "apHigh": null
+    },
+    {
+     "team": "Pennsylvania",
+     "year": "1927-28",
+     "record": "22-5",
+     "srs": null,
+     "confRecord": "7-3",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F128",
+  "q": "If 1946-47 Loyola Chicago and 1992-93 East Carolina played each other, who would win and why?",
+  "expected": [
+   [
+    "20-9",
+    "20–9",
+    "20 wins"
+   ],
+   [
+    "13-17",
+    "13–17",
+    "13 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_2way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Loyola Chicago",
+     "year": "1946-47",
+     "record": "20-9",
+     "srs": null,
+     "confRecord": null,
+     "apHigh": null
+    },
+    {
+     "team": "East Carolina",
+     "year": "1992-93",
+     "record": "13-17",
+     "srs": -2.02,
+     "confRecord": "4-10",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F129",
+  "q": "Rank these teams: 2025-26 Merrimack and 2015-16 Rice.",
+  "expected": [
+   [
+    "23-11",
+    "23–11",
+    "23 wins"
+   ],
+   [
+    "12-20",
+    "12–20",
+    "12 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_2way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Merrimack",
+     "year": "2025-26",
+     "record": "23-11",
+     "srs": -4.27,
+     "confRecord": "17-3",
+     "apHigh": null
+    },
+    {
+     "team": "Rice",
+     "year": "2015-16",
+     "record": "12-20",
+     "srs": -8.8,
+     "confRecord": "7-11",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F130",
+  "q": "Rank these teams: 2011-12 Saint Peter's, 2025-26 Illinois, 1956-57 Loyola Chicago, and 2025-26 Tarleton State.",
+  "expected": [
+   [
+    "5-26",
+    "5–26",
+    "5 wins"
+   ],
+   [
+    "24-8",
+    "24–8",
+    "24 wins"
+   ],
+   [
+    "14-10",
+    "14–10",
+    "14 wins"
+   ],
+   [
+    "14-18",
+    "14–18",
+    "14 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_4way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Saint Peter's",
+     "year": "2011-12",
+     "record": "5-26",
+     "srs": -13.37,
+     "confRecord": "4-14",
+     "apHigh": null
+    },
+    {
+     "team": "Illinois",
+     "year": "2025-26",
+     "record": "24-8",
+     "srs": 26.46,
+     "confRecord": "15-5",
+     "apHigh": 5
+    },
+    {
+     "team": "Loyola Chicago",
+     "year": "1956-57",
+     "record": "14-10",
+     "srs": -6.69,
+     "confRecord": null,
+     "apHigh": null
+    },
+    {
+     "team": "Tarleton State",
+     "year": "2025-26",
+     "record": "14-18",
+     "srs": -4.99,
+     "confRecord": "5-13",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F131",
+  "q": "Rank these teams: 2017-18 Chattanooga and 1970-71 UNLV.",
+  "expected": [
+   [
+    "10-23",
+    "10–23",
+    "10 wins"
+   ],
+   [
+    "16-10",
+    "16–10",
+    "16 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_2way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Chattanooga",
+     "year": "2017-18",
+     "record": "10-23",
+     "srs": -11.09,
+     "confRecord": "3-15",
+     "apHigh": null
+    },
+    {
+     "team": "UNLV",
+     "year": "1970-71",
+     "record": "16-10",
+     "srs": 0.34,
+     "confRecord": "9-5",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F132",
+  "q": "Compare 1924-25 Utah, 1942-43 Ohio State, and 1956-57 Rutgers. Which was the best team?",
+  "expected": [
+   [
+    "5-11",
+    "5–11",
+    "5 wins"
+   ],
+   [
+    "8-9",
+    "8–9",
+    "8 wins"
+   ],
+   [
+    "8-15",
+    "8–15",
+    "8 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_3way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Utah",
+     "year": "1924-25",
+     "record": "5-11",
+     "srs": null,
+     "confRecord": "3-5",
+     "apHigh": null
+    },
+    {
+     "team": "Ohio State",
+     "year": "1942-43",
+     "record": "8-9",
+     "srs": null,
+     "confRecord": "5-7",
+     "apHigh": null
+    },
+    {
+     "team": "Rutgers",
+     "year": "1956-57",
+     "record": "8-15",
+     "srs": -18.71,
+     "confRecord": null,
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F133",
+  "q": "Compare 2022-23 Old Dominion, 2022-23 Wagner, and 2023-24 Bellarmine. Which was the best team?",
+  "expected": [
+   [
+    "19-12",
+    "19–12",
+    "19 wins"
+   ],
+   [
+    "15-13",
+    "15–13",
+    "15 wins"
+   ],
+   [
+    "8-23",
+    "8–23",
+    "8 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_3way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Old Dominion",
+     "year": "2022-23",
+     "record": "19-12",
+     "srs": -0.41,
+     "confRecord": "11-7",
+     "apHigh": null
+    },
+    {
+     "team": "Wagner",
+     "year": "2022-23",
+     "record": "15-13",
+     "srs": -11.81,
+     "confRecord": "8-8",
+     "apHigh": null
+    },
+    {
+     "team": "Bellarmine",
+     "year": "2023-24",
+     "record": "8-23",
+     "srs": -11.79,
+     "confRecord": "4-12",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F134",
+  "q": "Rank these teams: 2005-06 Memphis and 1943-44 Marquette.",
+  "expected": [
+   [
+    "33-4",
+    "33–4",
+    "33 wins"
+   ],
+   [
+    "8-6",
+    "8–6",
+    "8 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_2way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Memphis",
+     "year": "2005-06",
+     "record": "33-4",
+     "srs": 18.81,
+     "confRecord": "13-1",
+     "apHigh": 3
+    },
+    {
+     "team": "Marquette",
+     "year": "1943-44",
+     "record": "8-6",
+     "srs": null,
+     "confRecord": null,
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F135",
+  "q": "If 1959-60 Loyola Chicago, 2001-02 Binghamton, 2024-25 Charleston, and 1993-94 Arkansas State played each other, who would win and why?",
+  "expected": [
+   [
+    "10-12",
+    "10–12",
+    "10 wins"
+   ],
+   [
+    "9-19",
+    "9–19",
+    "9 wins"
+   ],
+   [
+    "24-9",
+    "24–9",
+    "24 wins"
+   ],
+   [
+    "15-12",
+    "15–12",
+    "15 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_4way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Loyola Chicago",
+     "year": "1959-60",
+     "record": "10-12",
+     "srs": -7.88,
+     "confRecord": null,
+     "apHigh": null
+    },
+    {
+     "team": "Binghamton",
+     "year": "2001-02",
+     "record": "9-19",
+     "srs": -13.87,
+     "confRecord": "6-10",
+     "apHigh": null
+    },
+    {
+     "team": "Charleston",
+     "year": "2024-25",
+     "record": "24-9",
+     "srs": -0.6,
+     "confRecord": "13-5",
+     "apHigh": null
+    },
+    {
+     "team": "Arkansas State",
+     "year": "1993-94",
+     "record": "15-12",
+     "srs": -0.26,
+     "confRecord": "10-8",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F136",
+  "q": "If 1974-75 Buffalo, 1996-97 Howard, and 2007-08 Tennessee Tech played each other, who would win and why?",
+  "expected": [
+   [
+    "8-17",
+    "8–17",
+    "8 wins"
+   ],
+   [
+    "7-20",
+    "7–20",
+    "7 wins"
+   ],
+   [
+    "13-19",
+    "13–19",
+    "13 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_3way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Buffalo",
+     "year": "1974-75",
+     "record": "8-17",
+     "srs": -16.01,
+     "confRecord": null,
+     "apHigh": null
+    },
+    {
+     "team": "Howard",
+     "year": "1996-97",
+     "record": "7-20",
+     "srs": -17.92,
+     "confRecord": "7-11",
+     "apHigh": null
+    },
+    {
+     "team": "Tennessee Tech",
+     "year": "2007-08",
+     "record": "13-19",
+     "srs": -7.95,
+     "confRecord": "10-10",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F137",
+  "q": "Break down 1991-92 Navy, 2014-15 Minnesota, and 2025-26 Mississippi State — records, strength of schedule, how far each went.",
+  "expected": [
+   [
+    "6-22",
+    "6–22",
+    "6 wins"
+   ],
+   [
+    "18-15",
+    "18–15",
+    "18 wins"
+   ],
+   [
+    "13-19",
+    "13–19",
+    "13 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_3way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Navy",
+     "year": "1991-92",
+     "record": "6-22",
+     "srs": -11.03,
+     "confRecord": "1-13",
+     "apHigh": null
+    },
+    {
+     "team": "Minnesota",
+     "year": "2014-15",
+     "record": "18-15",
+     "srs": 12.34,
+     "confRecord": "6-12",
+     "apHigh": null
+    },
+    {
+     "team": "Mississippi State",
+     "year": "2025-26",
+     "record": "13-19",
+     "srs": 7.29,
+     "confRecord": "5-13",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F138",
+  "q": "Break down 1944-45 Niagara and 1934-35 Santa Clara — records, strength of schedule, how far each went.",
+  "expected": [
+   [
+    "7-6",
+    "7–6",
+    "7 wins"
+   ],
+   [
+    "12-5",
+    "12–5",
+    "12 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_2way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Niagara",
+     "year": "1944-45",
+     "record": "7-6",
+     "srs": null,
+     "confRecord": null,
+     "apHigh": null
+    },
+    {
+     "team": "Santa Clara",
+     "year": "1934-35",
+     "record": "12-5",
+     "srs": null,
+     "confRecord": null,
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F139",
+  "q": "If 2008-09 Louisiana Tech and 2021-22 South Carolina Upstate played each other, who would win and why?",
+  "expected": [
+   [
+    "15-18",
+    "15–18",
+    "15 wins"
+   ],
+   [
+    "15-17",
+    "15–17",
+    "15 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_2way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Louisiana Tech",
+     "year": "2008-09",
+     "record": "15-18",
+     "srs": -2.38,
+     "confRecord": "6-10",
+     "apHigh": null
+    },
+    {
+     "team": "South Carolina Upstate",
+     "year": "2021-22",
+     "record": "15-17",
+     "srs": -9.01,
+     "confRecord": "10-6",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F140",
+  "q": "If 2024-25 North Alabama and 2016-17 Montana played each other, who would win and why?",
+  "expected": [
+   [
+    "24-11",
+    "24–11",
+    "24 wins"
+   ],
+   [
+    "16-16",
+    "16–16",
+    "16 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_2way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "North Alabama",
+     "year": "2024-25",
+     "record": "24-11",
+     "srs": 1.02,
+     "confRecord": "14-4",
+     "apHigh": null
+    },
+    {
+     "team": "Montana",
+     "year": "2016-17",
+     "record": "16-16",
+     "srs": -2.67,
+     "confRecord": "11-7",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F141",
+  "q": "Break down 2012-13 Northern Kentucky, 2002-03 Cal State Northridge, 2020-21 LSU, and 2015-16 Holy Cross — records, strength of schedule, how far each went.",
+  "expected": [
+   [
+    "11-16",
+    "11–16",
+    "11 wins"
+   ],
+   [
+    "14-15",
+    "14–15",
+    "14 wins"
+   ],
+   [
+    "19-10",
+    "19–10",
+    "19 wins"
+   ],
+   [
+    "15-20",
+    "15–20",
+    "15 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_4way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Northern Kentucky",
+     "year": "2012-13",
+     "record": "11-16",
+     "srs": -7.55,
+     "confRecord": "9-9",
+     "apHigh": null
+    },
+    {
+     "team": "Cal State Northridge",
+     "year": "2002-03",
+     "record": "14-15",
+     "srs": -2.27,
+     "confRecord": "8-10",
+     "apHigh": null
+    },
+    {
+     "team": "LSU",
+     "year": "2020-21",
+     "record": "19-10",
+     "srs": 15.7,
+     "confRecord": "11-6",
+     "apHigh": null
+    },
+    {
+     "team": "Holy Cross",
+     "year": "2015-16",
+     "record": "15-20",
+     "srs": -11.2,
+     "confRecord": "5-13",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F142",
+  "q": "Break down 1973-74 Boston University, 1907-08 Duke, 1988-89 Long Beach State, and 1993-94 Clemson — records, strength of schedule, how far each went.",
+  "expected": [
+   [
+    "9-16",
+    "9–16",
+    "9 wins"
+   ],
+   [
+    "2-3",
+    "2–3",
+    "2 wins"
+   ],
+   [
+    "13-15",
+    "13–15",
+    "13 wins"
+   ],
+   [
+    "18-16",
+    "18–16",
+    "18 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_4way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Boston University",
+     "year": "1973-74",
+     "record": "9-16",
+     "srs": -13.02,
+     "confRecord": "2-9",
+     "apHigh": null
+    },
+    {
+     "team": "Duke",
+     "year": "1907-08",
+     "record": "2-3",
+     "srs": null,
+     "confRecord": null,
+     "apHigh": null
+    },
+    {
+     "team": "Long Beach State",
+     "year": "1988-89",
+     "record": "13-15",
+     "srs": -1.19,
+     "confRecord": "10-8",
+     "apHigh": null
+    },
+    {
+     "team": "Clemson",
+     "year": "1993-94",
+     "record": "18-16",
+     "srs": 9.21,
+     "confRecord": "6-10",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F143",
+  "q": "Rank these teams: 2020-21 North Dakota, 2013-14 Gardner-Webb, and 1991-92 UNC Greensboro.",
+  "expected": [
+   [
+    "9-17",
+    "9–17",
+    "9 wins"
+   ],
+   [
+    "18-15",
+    "18–15",
+    "18 wins"
+   ],
+   [
+    "7-21",
+    "7–21",
+    "7 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_3way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "North Dakota",
+     "year": "2020-21",
+     "record": "9-17",
+     "srs": -10.35,
+     "confRecord": "8-8",
+     "apHigh": null
+    },
+    {
+     "team": "Gardner-Webb",
+     "year": "2013-14",
+     "record": "18-15",
+     "srs": -7.33,
+     "confRecord": "10-6",
+     "apHigh": null
+    },
+    {
+     "team": "UNC Greensboro",
+     "year": "1991-92",
+     "record": "7-21",
+     "srs": -16.49,
+     "confRecord": null,
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F144",
+  "q": "Break down 1962-63 Gonzaga and 1995-96 Campbell — records, strength of schedule, how far each went.",
+  "expected": [
+   [
+    "14-12",
+    "14–12",
+    "14 wins"
+   ],
+   [
+    "17-11",
+    "17–11",
+    "17 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_2way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Gonzaga",
+     "year": "1962-63",
+     "record": "14-12",
+     "srs": -4.21,
+     "confRecord": null,
+     "apHigh": null
+    },
+    {
+     "team": "Campbell",
+     "year": "1995-96",
+     "record": "17-11",
+     "srs": -7.05,
+     "confRecord": "11-5",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F145",
+  "q": "Rank these teams: 2022-23 Louisiana Tech, 1981-82 Louisville, 1992-93 UT Arlington, and 2010-11 Fairfield.",
+  "expected": [
+   [
+    "15-18",
+    "15–18",
+    "15 wins"
+   ],
+   [
+    "23-10",
+    "23–10",
+    "23 wins"
+   ],
+   [
+    "16-12",
+    "16–12",
+    "16 wins"
+   ],
+   [
+    "25-8",
+    "25–8",
+    "25 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_4way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Louisiana Tech",
+     "year": "2022-23",
+     "record": "15-18",
+     "srs": 0.1,
+     "confRecord": "7-13",
+     "apHigh": null
+    },
+    {
+     "team": "Louisville",
+     "year": "1981-82",
+     "record": "23-10",
+     "srs": 14.71,
+     "confRecord": "8-4",
+     "apHigh": 3
+    },
+    {
+     "team": "UT Arlington",
+     "year": "1992-93",
+     "record": "16-12",
+     "srs": -6.79,
+     "confRecord": "10-8",
+     "apHigh": null
+    },
+    {
+     "team": "Fairfield",
+     "year": "2010-11",
+     "record": "25-8",
+     "srs": 2.94,
+     "confRecord": "15-3",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F146",
+  "q": "Rank these teams: 2021-22 Incarnate Word and 1972-73 Xavier.",
+  "expected": [
+   [
+    "7-25",
+    "7–25",
+    "7 wins"
+   ],
+   [
+    "3-23",
+    "3–23",
+    "3 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_2way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Incarnate Word",
+     "year": "2021-22",
+     "record": "7-25",
+     "srs": -17.03,
+     "confRecord": "3-11",
+     "apHigh": null
+    },
+    {
+     "team": "Xavier",
+     "year": "1972-73",
+     "record": "3-23",
+     "srs": -7.75,
+     "confRecord": null,
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F147",
+  "q": "If 2013-14 Vermont and 2012-13 Western Carolina played each other, who would win and why?",
+  "expected": [
+   [
+    "22-11",
+    "22–11",
+    "22 wins"
+   ],
+   [
+    "14-19",
+    "14–19",
+    "14 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_2way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Vermont",
+     "year": "2013-14",
+     "record": "22-11",
+     "srs": 4.52,
+     "confRecord": "15-1",
+     "apHigh": null
+    },
+    {
+     "team": "Western Carolina",
+     "year": "2012-13",
+     "record": "14-19",
+     "srs": -6.42,
+     "confRecord": "9-9",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F148",
+  "q": "Compare 1939-40 Holy Cross and 1991-92 Bethune-Cookman. Which was the best team?",
+  "expected": [
+   [
+    "2-3",
+    "2–3",
+    "2 wins"
+   ],
+   [
+    "4-25",
+    "4–25",
+    "4 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_2way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Holy Cross",
+     "year": "1939-40",
+     "record": "2-3",
+     "srs": null,
+     "confRecord": null,
+     "apHigh": null
+    },
+    {
+     "team": "Bethune-Cookman",
+     "year": "1991-92",
+     "record": "4-25",
+     "srs": -30.84,
+     "confRecord": "3-13",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F149",
+  "q": "If 2017-18 Butler, 1964-65 Texas, 1962-63 Notre Dame, and 1996-97 Wyoming played each other, who would win and why?",
+  "expected": [
+   [
+    "21-14",
+    "21–14",
+    "21 wins"
+   ],
+   [
+    "16-9",
+    "16–9",
+    "16 wins"
+   ],
+   [
+    "17-9",
+    "17–9",
+    "17 wins"
+   ],
+   [
+    "12-16",
+    "12–16",
+    "12 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_4way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Butler",
+     "year": "2017-18",
+     "record": "21-14",
+     "srs": 16.92,
+     "confRecord": "9-9",
+     "apHigh": null
+    },
+    {
+     "team": "Texas",
+     "year": "1964-65",
+     "record": "16-9",
+     "srs": 0.93,
+     "confRecord": null,
+     "apHigh": null
+    },
+    {
+     "team": "Notre Dame",
+     "year": "1962-63",
+     "record": "17-9",
+     "srs": 8.34,
+     "confRecord": null,
+     "apHigh": null
+    },
+    {
+     "team": "Wyoming",
+     "year": "1996-97",
+     "record": "12-16",
+     "srs": 2.15,
+     "confRecord": "8-8",
+     "apHigh": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "F150",
+  "q": "Break down 2011-12 Chicago State, 1979-80 Temple, and 1994-95 Manhattan — records, strength of schedule, how far each went.",
+  "expected": [
+   [
+    "4-26",
+    "4–26",
+    "4 wins"
+   ],
+   [
+    "14-12",
+    "14–12",
+    "14 wins"
+   ],
+   [
+    "26-5",
+    "26–5",
+    "26 wins"
+   ]
+  ],
+  "forbidden": [],
+  "tags": {
+   "kind": "fuzz_3way",
+   "tool": "multi",
+   "truth": [
+    {
+     "team": "Chicago State",
+     "year": "2011-12",
+     "record": "4-26",
+     "srs": -19.3,
+     "confRecord": "2-8",
+     "apHigh": null
+    },
+    {
+     "team": "Temple",
+     "year": "1979-80",
+     "record": "14-12",
+     "srs": 1.33,
+     "confRecord": "8-3",
+     "apHigh": null
+    },
+    {
+     "team": "Manhattan",
+     "year": "1994-95",
+     "record": "26-5",
+     "srs": 9.12,
+     "confRecord": "12-2",
+     "apHigh": null
+    }
+   ]
+  }
+ }
+]

@@ -1,0 +1,43 @@
+{
+  "page": 11,
+  "games": [
+    {
+      "date": "1998-12-29",
+      "opponent": "Houston Cougars",
+      "notes": "1998 Lobo Invitational Championship Game, The Pit/Bob King Court, Albuquerque, NM. Minutes/AST/STL/BLK columns omitted: right-side per-player table rows could not be confidently aligned to left-side player rows (appears to skip DNP rows inconsistently), so only unambiguous left-table columns (FG, 3FG, FT, REB, PF, TP) were transcribed to avoid inventing values.",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 84,
+          "players": [
+            {"name": "Lamont Long", "fg": "9-15", "tp": "0-2", "ft": "5-6", "reb": 5, "pf": 3, "pts": 23},
+            {"name": "Kenny Thomas", "fg": "10-15", "tp": "2-4", "ft": "1-3", "reb": 9, "pf": 2, "pts": 23},
+            {"name": "Greg Davis", "fg": "3-5", "tp": "0-1", "ft": "1-2", "reb": 7, "pf": 3, "pts": 7},
+            {"name": "Tim Lightfoot", "fg": "0-1", "tp": "0-1", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Kevin Henry", "fg": "2-6", "tp": "1-4", "ft": "3-4", "reb": 4, "pf": 1, "pts": 8},
+            {"name": "John Robinson II", "fg": "5-9", "tp": "2-3", "ft": "4-6", "reb": 1, "pf": 1, "pts": 16},
+            {"name": "Damion Walker", "fg": "3-6", "tp": "0-0", "ft": "1-2", "reb": 6, "pf": 4, "pts": 7}
+          ]
+        },
+        {
+          "name": "Houston Cougars",
+          "score": 69,
+          "players": [
+            {"name": "Wm Stringfellow", "fg": "7-11", "tp": "0-0", "ft": "0-2", "reb": 11, "pf": 4, "pts": 14},
+            {"name": "Torrence Botts", "fg": "1-9", "tp": "1-6", "ft": "1-2", "reb": 1, "pf": 0, "pts": 4},
+            {"name": "Gee Gervin", "fg": "13-27", "tp": "3-12", "ft": "0-1", "reb": 4, "pf": 2, "pts": 29},
+            {"name": "Derrick Fernandez", "fg": "3-4", "tp": "0-0", "ft": "2-2", "reb": 1, "pf": 4, "pts": 8},
+            {"name": "Willie Moore", "fg": "1-2", "tp": "0-0", "ft": "0-0", "reb": 3, "pf": 1, "pts": 2},
+            {"name": "Chad Hendrick", "fg": "2-3", "tp": "0-0", "ft": "0-0", "reb": 2, "pf": 0, "pts": 4},
+            {"name": "Trey Austin", "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Treva Crosby", "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Jake Ballis", "fg": "2-5", "tp": "0-0", "ft": "0-0", "reb": 2, "pf": 1, "pts": 4},
+            {"name": "Kenny Younger", "fg": "2-7", "tp": "0-0", "ft": "0-0", "reb": 4, "pf": 4, "pts": 4}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

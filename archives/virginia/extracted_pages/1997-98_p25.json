@@ -1,0 +1,44 @@
+{
+  "page": 25,
+  "games": [
+    {
+      "date": "1998-02-14",
+      "opponent": "Georgia Tech",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 86,
+          "players": [
+            {"name": "Norman Nolan", "min": 32, "fg": "10-17", "tp": "0-4", "ft": "4-4", "reb": 12, "ast": 0, "pf": 4, "to": 5, "stl": 1, "blk": 0, "pts": 24},
+            {"name": "Colin Ducharme", "min": 33, "fg": "4-9", "tp": "0-0", "ft": "0-0", "reb": 3, "ast": 2, "pf": 3, "to": 2, "stl": 0, "blk": 1, "pts": 8},
+            {"name": "Curtis Staples", "min": 40, "fg": "11-18", "tp": "9-15", "ft": "0-0", "reb": 4, "ast": 2, "pf": 2, "to": 1, "stl": 1, "blk": 0, "pts": 31},
+            {"name": "Donald Hand", "min": 24, "fg": "2-7", "tp": "0-2", "ft": "0-0", "reb": 3, "ast": 6, "pf": 4, "to": 2, "stl": 2, "blk": 0, "pts": 4},
+            {"name": "Willie Dersch", "min": 31, "fg": "7-8", "tp": "0-0", "ft": "0-0", "reb": 3, "ast": 2, "pf": 2, "to": 2, "stl": 0, "blk": 0, "pts": 14},
+            {"name": "Craig McAndrew", "min": 4, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Chezley Watson", "min": 16, "fg": "1-6", "tp": "0-0", "ft": "0-0", "reb": 2, "ast": 5, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Kris Hunter", "min": 10, "fg": "0-2", "tp": "0-0", "ft": "1-2", "reb": 2, "ast": 1, "pf": 1, "to": 0, "stl": 0, "blk": 2, "pts": 1},
+            {"name": "Monte Marcaccini", "min": 9, "fg": "0-1", "tp": "0-1", "ft": "0-0", "reb": 3, "ast": 2, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Chase Metheney", "min": 1, "fg": "1-1", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 2}
+          ]
+        },
+        {
+          "name": "Georgia Tech Yellow Jackets",
+          "score": 105,
+          "players": [
+            {"name": "Matt Harpring", "min": 32, "fg": "6-16", "tp": "1-4", "ft": "8-12", "reb": 8, "ast": 5, "pf": 0, "to": 1, "stl": 2, "blk": 0, "pts": 21},
+            {"name": "Michael Maddox", "min": 30, "fg": "7-14", "tp": "4-7", "ft": "2-3", "reb": 6, "ast": 3, "pf": 1, "to": 0, "stl": 2, "blk": 1, "pts": 20},
+            {"name": "Alvin Jones", "min": 31, "fg": "5-6", "tp": "0-0", "ft": "2-3", "reb": 6, "ast": 1, "pf": 3, "to": 1, "stl": 0, "blk": 2, "pts": 12},
+            {"name": "Dion Glover", "min": 34, "fg": "6-14", "tp": "2-5", "ft": "6-7", "reb": 5, "ast": 1, "pf": 2, "to": 1, "stl": 3, "blk": 0, "pts": 20},
+            {"name": "Travis Spivey", "min": 33, "fg": "4-6", "tp": "1-2", "ft": "0-0", "reb": 1, "ast": 8, "pf": 1, "to": 0, "stl": 3, "blk": 0, "pts": 9},
+            {"name": "Jason Floyd", "min": 21, "fg": "5-9", "tp": "3-7", "ft": "0-0", "reb": 3, "ast": 4, "pf": 0, "to": 2, "stl": 1, "blk": 0, "pts": 13},
+            {"name": "T.J. Vines", "min": 17, "fg": "3-4", "tp": "3-4", "ft": "1-2", "reb": 1, "ast": 3, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 10},
+            {"name": "Jan Medlock", "min": 2, "fg": "0-1", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true,
+      "note": "Virginia's Kris Hunter row: printed PTS digit was illegible/ambiguous; recomputed pts=1 via 2*fg_made+3*tp_made+ft_made (0 fg-made pts + 1 ft made = 1), which is also required for team FT-made total (5) and team points total (86) to reconcile. Team PF sums (VA 22 vs printed 21; GT 8 vs printed 9) show a 1-off discrepancy likely from an OCR misread on a single player's PF digit; not correctable with confidence, left as read, does not affect points checksum."
+    }
+  ],
+  "skipped": []
+}

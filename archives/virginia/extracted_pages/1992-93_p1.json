@@ -1,0 +1,42 @@
+{
+  "page": 1,
+  "games": [
+    {
+      "date": "1992-12-01",
+      "opponent": "Pennsylvania",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 74,
+          "players": [
+            {"name": "Junior Burrough", "min": 34, "fg": "10-21", "ft": "3-8", "reb": 7, "pf": 3, "ast": 0, "to": 3, "blk": 1, "pts": 23},
+            {"name": "Jason Williford", "min": 29, "fg": "0-1", "tp": "0-1", "ft": "3-4", "reb": 4, "pf": 3, "ast": 0, "to": 2, "blk": 1, "stl": 1, "pts": 3},
+            {"name": "Ted Jeffries", "min": 30, "fg": "3-9", "ft": "3-4", "reb": 12, "pf": 4, "ast": 5, "stl": 2, "pts": 9},
+            {"name": "Cornel Parker", "min": 36, "fg": "5-7", "tp": "2-2", "ft": "4-4", "reb": 3, "pf": 3, "ast": 3, "to": 1, "blk": 1, "pts": 16},
+            {"name": "Cory Alexander", "min": 38, "fg": "5-15", "tp": "2-6", "ft": "2-4", "reb": 3, "pf": 2, "ast": 6, "to": 6, "blk": 1, "stl": 2, "pts": 14},
+            {"name": "Yuri Barnes", "min": 14, "fg": "1-2", "ft": "1-2", "reb": 7, "pf": 4, "ast": 0, "pts": 3},
+            {"name": "Doug Smith", "min": 14, "fg": "2-4", "tp": "0-1", "ft": "2-4", "reb": 5, "pf": 0, "ast": 1, "pts": 6},
+            {"name": "Chris Havlicek", "min": 3, "fg": "0-0", "ft": "0-0", "reb": 1, "pf": 0, "ast": 0, "pts": 0},
+            {"name": "Chris Alexander", "min": 2, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Pennsylvania",
+          "score": 68,
+          "players": [
+            {"name": "Andy Baratta", "min": 10, "fg": "0-2", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 2, "blk": 1, "pts": 0},
+            {"name": "Barry Pierce", "min": 35, "fg": "6-13", "tp": "2-5", "ft": "5-6", "reb": 9, "pf": 4, "ast": 0, "to": 4, "stl": 1, "pts": 19},
+            {"name": "Eric Moore", "min": 30, "fg": "0-4", "tp": "0-1", "ft": "0-0", "reb": 9, "pf": 4, "ast": 1, "to": 1, "stl": 1, "pts": 0},
+            {"name": "Matt Maloney", "min": 38, "fg": "8-18", "tp": "6-8", "ft": "0-0", "reb": 4, "pf": 2, "ast": 2, "to": 2, "stl": 2, "pts": 22},
+            {"name": "Derome Allen", "min": 34, "fg": "5-16", "tp": "1-6", "ft": "3-4", "reb": 2, "pf": 1, "ast": 4, "stl": 2, "pts": 14},
+            {"name": "Shawn Trice", "min": 28, "fg": "2-7", "ft": "2-4", "reb": 7, "pf": 4, "ast": 1, "to": 2, "blk": 1, "stl": 1, "pts": 6},
+            {"name": "Tim Krug", "min": 12, "fg": "1-4", "tp": "1-1", "ft": "0-0", "reb": 2, "pf": 1, "ast": 1, "pts": 3},
+            {"name": "Scott Kegler", "min": 13, "fg": "1-3", "tp": "0-1", "ft": "2-3", "reb": 3, "pf": 3, "ast": 2, "to": 1, "pts": 4}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

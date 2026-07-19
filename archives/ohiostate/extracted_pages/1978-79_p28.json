@@ -1,0 +1,9 @@
+{
+  "page": 28,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Handwritten NCAA box score (St. Joseph's @ Ohio State, NIT First Round, dated Mar. 7 1979, St. John Arena) is legible enough to identify the game but too blurry/inconsistent for confident digit-by-digit transcription. St. Joseph's TP (points) column is almost entirely blank or illegible for every player, making a checksum impossible on that side. Ohio State's FG/FGA/FT/FTA/REB/PF/TP columns have many ambiguous digits (e.g. Cline's FG vs FGA order, several rows' TP cells unreadable), and a plausible full reconstruction only worked by back-solving one player's line (Hall) from the team total rather than reading it directly, which the task instructions treat as inventing a value. The final score in the bottom 'SCORE BY PERIODS' row is also too faint to read with confidence. Given the instruction to be ruthless about skipping rather than guessing, this page's game was skipped entirely rather than transcribed with low-confidence/inferred values."
+    }
+  ]
+}

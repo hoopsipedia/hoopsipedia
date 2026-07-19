@@ -1,0 +1,9 @@
+{
+  "page": 23,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Official NCAA box score, Ohio State at Purdue, 02-26-92, final Ohio State 71 - Purdue 64. Visitor (Ohio State) player lines were legible and checksummed exactly to the final score (71). However, the home team (Purdue) player-by-player rows have tightly kerned/ambiguous numeric columns that could not be read with confidence in a single pass (only one Read of this page is permitted), creating real risk of invented per-player values even though Purdue's printed TOTALS row (FG 30-61, 3P 3-7, FT 1-5, PTS 64) is legible and checksums correctly to the final score. Since the task requires both teams' player lines per game and per-player accuracy for Purdue could not be guaranteed, the entire game was skipped rather than submitting a partially-confident/guessed roster."
+    }
+  ]
+}

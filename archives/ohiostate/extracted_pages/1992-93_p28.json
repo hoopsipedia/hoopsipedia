@@ -1,0 +1,9 @@
+{
+  "page": 28,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Official NCAA box score: Ohio State (15-12) at Purdue (18-9), 03-14-93, West Lafayette, final Ohio State 72 - Purdue 62. Ohio State's player lines are legible and checksum perfectly (23+11+4+15+12+6+0+1=72, matching the TOTALS row and final score). Purdue's player-level FG/3P/FT/PTS columns are too small/degraded in this scan to transcribe with confidence: the TOTALS row is internally consistent (23 FG, 5 3P, 11 FT -> 62 pts, matching the final score) but re-deriving points from the individually-read player FG/3P/FT figures sums to 64, and summing the individually-read PTS column sums to 55 - neither matches the team total of 62, indicating digit-level misreads rather than a source data error. Skipped the whole game rather than guess Purdue's numbers, per instructions to be ruthless about skipping."
+    }
+  ]
+}

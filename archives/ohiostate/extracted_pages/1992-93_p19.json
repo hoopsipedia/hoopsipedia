@@ -1,0 +1,9 @@
+{
+  "page": 19,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page 19 (labeled page '18' in the scan corner) is a full typed box score: Penn State @ Ohio State, February 6, 1993, St. John Arena (final: Penn State 59, Ohio State 62). Team TOTALS rows are clearly legible and internally consistent (Penn State TOTALS TP=59 matches the final score; Ohio State TOTALS TP=62 matches the final score). However, several individual player rows are too small/low-resolution to reliably distinguish digits in the FG/FGA/3FG/FT columns from the TP (points) column, and at least one row is internally contradictory on close reading (Penn State's DeRON HAYES line reads FG 0-2, FT 0-0, yet shows TP=5, which is impossible with those made-shot totals as read). Summing all legible player TP values for Penn State yields 64, which does not match the official team total of 59 -- confirming multiple unreliable digit reads rather than a printing error. Re-read the page once per instructions and the ambiguity persisted (same scan resolution, no zoom available). Per instructions to be ruthless about skipping rather than guessing/inventing values, this game's player-level box score is skipped; only the clearly legible game metadata (date, opponent, final score) could be confirmed, which is below the required players+checksum bar for inclusion."
+    }
+  ]
+}

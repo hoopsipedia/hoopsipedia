@@ -1,0 +1,44 @@
+{
+  "page": 30,
+  "games": [
+    {
+      "date": "1996-03-08",
+      "opponent": "Fresno State Bulldogs",
+      "note": "1996 WAC Tournament Semifinal Game 1, The Pit, Albuquerque NM; New Mexico won in 3OT. Sheet's 'TP' column is total points (used as pts), not 3-pointers; 3-point made-attempted transcribed as 'tp' per schema. Blank/unplayed rows (Carson, Austin, Jabali, White, Carruthers, Paddock) omitted.",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 104,
+          "players": [
+            {"name": "Kenny Thomas", "min": 49, "fg": "6-12", "ft": "5-10", "reb": 6, "ast": 4, "pf": 4, "to": 2, "stl": 2, "blk": 1, "pts": 17},
+            {"name": "Charles Smith", "min": 50, "fg": "9-25", "tp": "3-10", "ft": "8-8", "reb": 5, "ast": 3, "pf": 0, "to": 2, "stl": 6, "blk": 4, "pts": 29},
+            {"name": "Kavossy Franklin", "min": 4, "fg": "0-1", "ft": "0-2", "reb": 2, "ast": 0, "pf": 2, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Clayton Shields", "min": 52, "fg": "6-11", "tp": "4-9", "ft": "3-7", "reb": 14, "ast": 2, "pf": 4, "to": 1, "stl": 1, "blk": 0, "pts": 19},
+            {"name": "Royce Olney", "min": 23, "fg": "6-7", "tp": "2-2", "ft": "2-2", "reb": 0, "ast": 1, "pf": 5, "to": 0, "stl": 2, "blk": 0, "pts": 16},
+            {"name": "David Gibson", "min": 51, "fg": "3-8", "ft": "3-4", "reb": 5, "ast": 4, "pf": 2, "to": 3, "stl": 1, "blk": 1, "pts": 9},
+            {"name": "Greg Schornstein", "min": 40, "fg": "4-9", "tp": "3-6", "ft": "0-0", "reb": 6, "ast": 3, "pf": 5, "to": 3, "stl": 3, "blk": 0, "pts": 11},
+            {"name": "Marty Cotwright", "min": 4, "fg": "0-0", "ft": "1-2", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 1},
+            {"name": "Daniel Santiago", "min": 2, "fg": "1-1", "ft": "0-2", "reb": 0, "ast": 0, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 2}
+          ]
+        },
+        {
+          "name": "Fresno State Bulldogs",
+          "score": 99,
+          "players": [
+            {"name": "Rahsaan Smith", "min": 50, "fg": "8-12", "ft": "0-1", "reb": 14, "ast": 0, "pf": 4, "to": 1, "stl": 2, "blk": 5, "pts": 16},
+            {"name": "Gerrit Terdenge", "min": 12, "fg": "0-2", "ft": "0-0", "reb": 4, "ast": 1, "pf": 2, "to": 2, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Dominick Young", "min": 53, "fg": "9-23", "tp": "7-18", "ft": "1-2", "reb": 3, "ast": 3, "pf": 3, "to": 7, "stl": 0, "blk": 0, "pts": 26},
+            {"name": "Brandon Bakke", "min": 6, "fg": "0-1", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Darrnaryl Stamps", "min": 5, "fg": "0-1", "ft": "0-2", "reb": 3, "ast": 0, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Khary Stanley", "min": 30, "fg": "3-7", "ft": "2-4", "reb": 5, "ast": 1, "pf": 4, "to": 2, "stl": 1, "blk": 0, "pts": 8},
+            {"name": "Darnell McCulloch", "min": 28, "fg": "6-7", "ft": "0-2", "reb": 5, "ast": 0, "pf": 5, "to": 1, "stl": 0, "blk": 0, "pts": 12},
+            {"name": "Kendric Brooks", "min": 51, "fg": "7-12", "tp": "4-5", "ft": "7-10", "reb": 5, "ast": 3, "pf": 2, "to": 2, "stl": 2, "blk": 0, "pts": 25},
+            {"name": "James Gray", "min": 40, "fg": "5-11", "tp": "1-3", "ft": "1-1", "reb": 3, "ast": 5, "pf": 5, "to": 4, "stl": 1, "blk": 0, "pts": 12}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

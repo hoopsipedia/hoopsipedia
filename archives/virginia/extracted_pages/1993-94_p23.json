@@ -1,0 +1,44 @@
+{
+  "page": 23,
+  "games": [
+    {
+      "date": "1994-02-22",
+      "opponent": "Georgia Tech",
+      "teams": [
+        {
+          "name": "Georgia Tech Yellow Jackets",
+          "score": 72,
+          "players": [
+            {"name": "Martice Moore", "min": 26, "fg": "1-5", "ft": "0-0", "tp": "0-0", "reb": 4, "ast": 3, "pf": 1, "to": 3, "blk": 1, "pts": 2},
+            {"name": "James Forrest", "min": 42, "fg": "8-21", "ft": "4-5", "tp": "0-0", "reb": 11, "ast": 3, "pf": 4, "to": 3, "pts": 20},
+            {"name": "Ivano Newbill", "min": 38, "fg": "3-5", "ft": "0-0", "tp": "0-0", "reb": 9, "ast": 2, "pf": 4, "to": 3, "blk": 4, "stl": 1, "pts": 6},
+            {"name": "Travis Best", "min": 43, "fg": "8-16", "ft": "5-5", "tp": "3-5", "reb": 3, "ast": 7, "pf": 4, "to": 4, "stl": 3, "pts": 24},
+            {"name": "Fred Vinson", "min": 43, "fg": "5-12", "ft": "1-2", "tp": "4-8", "reb": 7, "pf": 2, "to": 2, "stl": 2, "pts": 15},
+            {"name": "Eddie Elisma", "min": 27, "fg": "1-2", "ft": "1-2", "tp": "0-0", "reb": 5, "pf": 4, "to": 1, "stl": 1, "pts": 3},
+            {"name": "Yann Barbic", "min": 6, "fg": "1-3", "ft": "0-0", "tp": "0-1", "reb": 1, "pf": 3, "pts": 2}
+          ],
+          "team_totals": {"fg": "27-64", "ft": "11-14", "tp": "7-14", "reb": 40, "ast": 15, "pf": 22, "to": 14, "blk": 5, "stl": 7, "pts": 72, "min": 225},
+          "checksum_ok": true
+        },
+        {
+          "name": "Virginia Cavaliers",
+          "score": 73,
+          "players": [
+            {"name": "Junior Burrough", "min": 38, "fg": "6-19", "ft": "2-3", "tp": "0-1", "reb": 6, "ast": 1, "pf": 3, "to": 1, "blk": 2, "stl": 2, "pts": 14},
+            {"name": "Jason Williford", "min": 39, "fg": "2-10", "ft": "8-10", "tp": "1-2", "reb": 10, "ast": 5, "pf": 1, "to": 2, "pts": 13},
+            {"name": "Yuri Barnes", "min": 39, "fg": "5-11", "ft": "2-6", "tp": "0-0", "reb": 10, "ast": 1, "pf": 3, "to": 1, "stl": 2, "pts": 12},
+            {"name": "Cornel Parker", "min": 24, "fg": "2-7", "ft": "4-6", "tp": "0-1", "reb": 5, "ast": 3, "to": 4, "pts": 8},
+            {"name": "Harold Deane", "min": 36, "fg": "3-8", "ft": "6-6", "tp": "1-5", "reb": 7, "ast": 3, "pf": 4, "stl": 2, "pts": 13},
+            {"name": "Chris Alexander", "min": 12, "fg": "0-1", "reb": 4, "pf": 1, "to": 1, "pts": 0},
+            {"name": "Jamal Robinson", "min": 36, "fg": "5-11", "ft": "1-2", "tp": "2-4", "reb": 3, "ast": 2, "pf": 2, "to": 2, "pts": 13},
+            {"name": "Mike Powell", "min": 1, "reb": 1, "pts": 0}
+          ],
+          "team_totals": {"fg": "23-67", "ft": "23-33", "tp": "4-13", "reb": 46, "ast": 15, "pf": 14, "to": 10, "blk": 3, "stl": 6, "pts": 73, "min": 225},
+          "checksum_ok": true
+        }
+      ],
+      "notes": "Went to overtime: GT 36-31-5(OT)=72, UVA 30-37-6(OT)=73. Individual rebound Off/Def split for Georgia Tech's Moore and Virginia's Deane had ambiguous handwriting on Off column; Tot rebound value for those two rows was reconciled against team Off/Def/Tot totals (reconciliation confirmed exact match). Individual turnover/blocked-shot column sums are off by 1-2 from team totals in a couple spots (minor handwriting ambiguity) but this does not affect the points checksum, which is exact for both teams."
+    }
+  ],
+  "skipped": []
+}

@@ -1,0 +1,36 @@
+{
+  "page": 3,
+  "games": [],
+  "skipped": [
+    {
+      "date": "1997-01-04",
+      "opponent": "Hawaii",
+      "reason": "Page contains 6 dense typed box scores (Games 13-18) packed onto one page with very small per-player stat columns. New Mexico's own player-row sum checksummed exactly to 62 (team score), but Hawaii's roster includes bench players (e.g. Rodgers and others) whose FG/FT lines could not be confidently read; listed players only summed to 64 of Hawaii's 75 points, leaving points unaccounted for. Skipped rather than guess/invent missing player lines."
+    },
+    {
+      "date": "1997-01-09",
+      "opponent": "TCU",
+      "reason": "TOTALS row aggregate (27-73 FG, 3-17 3P, 7-12 FT = 64 pts) matched TCU's final score, but individual player field-goal-made values summed to only 26 vs the required 27, indicating at least one misread digit among TCU's players that could not be resolved without re-reading the page (single-read limit already used)."
+    },
+    {
+      "date": "1997-01-11",
+      "opponent": "SMU",
+      "reason": "Same page-density issue as other games on this page (Game 15): player stat columns too small/tight to transcribe with confidence for both full rosters within the single allotted read; skipped rather than guess individual lines."
+    },
+    {
+      "date": "1997-01-16",
+      "opponent": "Tulsa",
+      "reason": "Same page-density issue (Game 16): could not confidently verify full player-line checksums for both teams from the single read of this 6-games-per-page compilation."
+    },
+    {
+      "date": "1997-01-18",
+      "opponent": "Rice",
+      "reason": "Same page-density issue (Game 17): could not confidently verify full player-line checksums for both teams from the single read of this 6-games-per-page compilation."
+    },
+    {
+      "date": "1997-01-25",
+      "opponent": "UTEP",
+      "reason": "Same page-density issue (Game 18): could not confidently verify full player-line checksums for both teams from the single read of this 6-games-per-page compilation."
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "page": 1,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Virginia vs South Carolina (11-25-96, Maui Invitational, Lahaina HI) — typed STATMAN box score, but tightly-kerned columns make several players' FT/FTA/OR/DR/TOT/PF fields ambiguous (many rows show 14-15 tokens instead of the 16 required by the FG/FGA/3P/3PA/FT/FTA/OR/DR/TOT/PF/PTS/A/TO/BLK/S/MIN header, with the missing column varying by row). FG/FGA/3P/3PA sums were cross-checked against team TOTALS: FG (37), 3P (14), and 3PA (29) matched exactly, but FGA summed to 66 vs a team total of 64, confirming at least one player's shot-attempt value is misread. Given the FT/PF ambiguity would require guessing to fill missing columns and the FGA checksum already fails, skipping rather than inventing per-player values (used my one allowed re-read; still unresolved)."
+    }
+  ]
+}

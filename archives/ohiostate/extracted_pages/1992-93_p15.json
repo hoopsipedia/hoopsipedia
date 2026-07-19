@@ -1,0 +1,47 @@
+{
+  "page": 15,
+  "games": [
+    {
+      "date": "1993-01-24",
+      "opponent": "Indiana",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 69,
+          "players": [
+            {"name": "Lawrence Funderburke", "min": 23, "fg": "2-6", "ft": "4-6", "tp": "0-0", "reb": 4, "ast": 2, "pf": 2, "to": 4, "stl": 1, "blk": 2, "pts": 8},
+            {"name": "Rickey Dudley", "min": 9, "fg": "2-2", "ft": "0-0", "tp": "0-0", "reb": 3, "ast": 1, "pf": 5, "to": 0, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Doug Etzler", "min": 8, "fg": "0-1", "ft": "0-0", "tp": "0-1", "reb": 2, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Jamie Skelton", "min": 25, "fg": "4-10", "ft": "2-2", "tp": "0-3", "reb": 1, "ast": 1, "pf": 2, "to": 3, "stl": 0, "blk": 0, "pts": 10},
+            {"name": "Alex Davis", "min": 25, "fg": "4-6", "ft": "0-0", "tp": "1-1", "reb": 0, "ast": 1, "pf": 4, "to": 1, "stl": 2, "blk": 0, "pts": 9},
+            {"name": "Antonio Watson", "min": 23, "fg": "3-5", "ft": "0-0", "tp": "0-0", "reb": 4, "ast": 0, "pf": 3, "to": 2, "stl": 1, "blk": 0, "pts": 6},
+            {"name": "Greg Simpson", "min": 32, "fg": "6-15", "ft": "2-3", "tp": "1-4", "reb": 3, "ast": 2, "pf": 3, "to": 6, "stl": 2, "blk": 0, "pts": 15},
+            {"name": "Derek Anderson", "min": 25, "fg": "1-7", "ft": "4-4", "tp": "0-3", "reb": 2, "ast": 3, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 6},
+            {"name": "Tom Brandewine", "min": 9, "fg": "1-2", "ft": "1-4", "tp": "0-0", "reb": 2, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 3},
+            {"name": "Charles Macon", "min": 13, "fg": "3-3", "ft": "0-0", "tp": "0-0", "reb": 4, "ast": 0, "pf": 3, "to": 1, "stl": 1, "blk": 1, "pts": 6},
+            {"name": "Nate Wilbourne", "min": 5, "fg": "1-1", "ft": "0-0", "tp": "0-0", "reb": 2, "ast": 0, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Jimmy Ratliff", "min": 3, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ],
+          "checksum_ok": true
+        },
+        {
+          "name": "Indiana Hoosiers",
+          "score": 96,
+          "players": [
+            {"name": "Calbert Cheaney", "min": 31, "fg": "10-22", "ft": "6-6", "tp": "1-4", "reb": 11, "ast": 2, "pf": 2, "to": 4, "stl": 1, "blk": 1, "pts": 27},
+            {"name": "Alan Henderson", "min": 24, "fg": "5-9", "ft": "4-5", "tp": "0-0", "reb": 9, "ast": 0, "pf": 3, "to": 1, "stl": 1, "blk": 0, "pts": 14},
+            {"name": "Matt Nover", "min": 25, "fg": "3-6", "ft": "2-4", "tp": "0-0", "reb": 10, "ast": 0, "pf": 3, "to": 2, "stl": 0, "blk": 0, "pts": 8},
+            {"name": "Greg Graham", "min": 25, "fg": "3-7", "ft": "3-3", "tp": "0-2", "reb": 1, "ast": 2, "pf": 1, "to": 0, "stl": 2, "blk": 0, "pts": 9},
+            {"name": "Damon Bailey", "min": 29, "fg": "5-7", "ft": "4-4", "tp": "1-3", "reb": 4, "ast": 3, "pf": 3, "to": 3, "stl": 2, "blk": 0, "pts": 15},
+            {"name": "Chris Reynolds", "min": 20, "fg": "0-2", "ft": "0-0", "tp": "0-0", "reb": 1, "ast": 2, "pf": 3, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Brian Evans", "min": 24, "fg": "4-4", "ft": "5-7", "tp": "1-1", "reb": 6, "ast": 1, "pf": 2, "to": 1, "stl": 1, "blk": 0, "pts": 14},
+            {"name": "Todd Leary", "min": 16, "fg": "2-3", "ft": "4-4", "tp": "1-1", "reb": 2, "ast": 1, "pf": 1, "to": 1, "stl": 1, "blk": 0, "pts": 9},
+            {"name": "Pat Knight", "min": 6, "fg": "0-3", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 1, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ],
+          "checksum_ok": true
+        }
+      ]
+    }
+  ],
+  "skipped": []
+}

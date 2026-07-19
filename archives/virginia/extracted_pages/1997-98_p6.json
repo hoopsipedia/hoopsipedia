@@ -1,0 +1,51 @@
+{
+  "page": 6,
+  "games": [
+    {
+      "date": "1997-12-06",
+      "opponent": "Duke Blue Devils",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 59,
+          "players": [
+            {"name": "Willie Dersch", "min": 30, "fg": "0-3", "tp": "0-0", "ft": "0-1", "reb": 3, "ast": 2, "pf": 4, "to": 3, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Norman Nolan", "min": 37, "fg": "9-17", "tp": "0-1", "ft": "0-2", "reb": 4, "ast": 1, "pf": 2, "to": 1, "stl": 1, "blk": 0, "pts": 18},
+            {"name": "Colin Ducharme", "min": 18, "fg": "2-3", "tp": "0-0", "ft": "0-0", "reb": 4, "ast": 0, "pf": 4, "to": 5, "stl": 0, "blk": 1, "pts": 4},
+            {"name": "Curtis Staples", "min": 39, "fg": "7-16", "tp": "2-5", "ft": "0-0", "reb": 8, "ast": 5, "pf": 1, "to": 5, "stl": 2, "blk": 0, "pts": 16},
+            {"name": "Donald Hand", "min": 15, "fg": "2-3", "tp": "1-2", "ft": "0-0", "reb": 1, "ast": 1, "pf": 5, "to": 5, "stl": 2, "blk": 0, "pts": 5},
+            {"name": "Monte Marcaccini", "min": 27, "fg": "1-6", "tp": "1-4", "ft": "0-0", "reb": 10, "ast": 2, "pf": 3, "to": 3, "stl": 0, "blk": 0, "pts": 3},
+            {"name": "Chezley Watson", "min": 11, "fg": "0-1", "tp": "0-0", "ft": "1-1", "reb": 1, "ast": 1, "pf": 1, "to": 0, "stl": 1, "blk": 0, "pts": 1},
+            {"name": "Chase Metheney", "min": 19, "fg": "4-5", "tp": "0-0", "ft": "4-4", "reb": 6, "ast": 0, "pf": 2, "to": 3, "stl": 0, "blk": 3, "pts": 12},
+            {"name": "Craig McAndrew", "min": 1, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Kris Hunter", "min": 3, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 1, "pts": 0},
+            {"name": "Michael Curtis", "min": 0, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 1, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Peter McLaughlin", "min": 0, "fg": "0-1", "tp": "0-1", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ],
+          "checksum_ok": true
+        },
+        {
+          "name": "Duke Blue Devils",
+          "score": 103,
+          "players": [
+            {"name": "Mike Chappell", "min": 17, "fg": "4-10", "tp": "0-3", "ft": "3-3", "reb": 1, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 11},
+            {"name": "Shane Battier", "min": 24, "fg": "2-2", "tp": "0-0", "ft": "4-5", "reb": 6, "ast": 1, "pf": 0, "to": 0, "stl": 0, "blk": 2, "pts": 8},
+            {"name": "Elton Brand", "min": 20, "fg": "2-10", "tp": "0-0", "ft": "2-4", "reb": 3, "ast": 0, "pf": 3, "to": 1, "stl": 3, "blk": 1, "pts": 6},
+            {"name": "Steve Wojciechowski", "min": 29, "fg": "2-8", "tp": "2-6", "ft": "0-0", "reb": 4, "ast": 5, "pf": 2, "to": 3, "stl": 4, "blk": 0, "pts": 6},
+            {"name": "Trajan Langdon", "min": 25, "fg": "10-15", "tp": "2-5", "ft": "0-0", "reb": 5, "ast": 3, "pf": 4, "to": 1, "stl": 1, "blk": 1, "pts": 22},
+            {"name": "Chris Carrawell", "min": 14, "fg": "3-6", "tp": "1-2", "ft": "1-2", "reb": 1, "ast": 0, "pf": 0, "to": 2, "stl": 0, "blk": 3, "pts": 8},
+            {"name": "Chris Burgess", "min": 20, "fg": "3-4", "tp": "0-0", "ft": "3-6", "reb": 5, "ast": 2, "pf": 1, "to": 1, "stl": 0, "blk": 2, "pts": 9},
+            {"name": "Roshown McLeod", "min": 18, "fg": "5-7", "tp": "2-4", "ft": "3-4", "reb": 4, "ast": 4, "pf": 0, "to": 0, "stl": 3, "blk": 0, "pts": 15},
+            {"name": "William Avery", "min": 22, "fg": "4-9", "tp": "2-4", "ft": "0-0", "reb": 2, "ast": 4, "pf": 3, "to": 0, "stl": 3, "blk": 0, "pts": 10},
+            {"name": "Taymon Domzalski", "min": 4, "fg": "3-5", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "to": 0, "stl": 1, "blk": 0, "pts": 6},
+            {"name": "Todd Singleton", "min": 3, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 2, "ast": 1, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "J.D. Simpson", "min": 2, "fg": "1-1", "tp": "0-0", "ft": "0-0", "reb": 2, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Jay Heaps", "min": 2, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ],
+          "checksum_ok": true
+        }
+      ]
+    }
+  ],
+  "skipped": []
+}

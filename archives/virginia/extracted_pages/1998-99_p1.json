@@ -1,0 +1,47 @@
+{
+  "page": 1,
+  "games": [
+    {
+      "date": "1998-11-13",
+      "opponent": "Virginia Commonwealth",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 86,
+          "players": [
+            {"name": "Willie Dersch", "min": 34, "fg": "5-9", "ft": "0-0", "tp": "2-5", "reb": 4, "ast": 0, "pf": 3, "to": 1, "stl": 0, "blk": 0, "pts": 12},
+            {"name": "Chris Williams", "min": 38, "fg": "7-12", "ft": "6-9", "tp": "0-2", "reb": 10, "ast": 1, "pf": 2, "to": 3, "stl": 3, "blk": 1, "pts": 20},
+            {"name": "Colin Ducharme", "min": 12, "fg": "3-4", "ft": "0-0", "tp": "0-0", "reb": 6, "ast": 0, "pf": 5, "to": 2, "stl": 0, "blk": 0, "pts": 6},
+            {"name": "Chezley Watson", "min": 33, "fg": "4-10", "ft": "5-6", "tp": "0-2", "reb": 5, "ast": 3, "pf": 1, "to": 3, "stl": 2, "blk": 0, "pts": 13},
+            {"name": "Donald Hand", "min": 34, "fg": "7-16", "ft": "10-11", "tp": "0-3", "reb": 3, "ast": 3, "pf": 4, "to": 8, "stl": 2, "blk": 0, "pts": 24},
+            {"name": "Cade Lemke", "min": 0, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Greg Lyons", "min": 0, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Josh Hare", "min": 17, "fg": "1-2", "ft": "0-0", "tp": "0-0", "reb": 4, "ast": 3, "pf": 0, "to": 2, "stl": 1, "blk": 0, "pts": 2},
+            {"name": "Adam Hall", "min": 15, "fg": "1-3", "ft": "2-2", "tp": "0-1", "reb": 6, "ast": 0, "pf": 5, "to": 4, "stl": 2, "blk": 1, "pts": 4},
+            {"name": "Kris Hunter", "min": 17, "fg": "2-4", "ft": "1-1", "tp": "0-0", "reb": 5, "ast": 1, "pf": 0, "to": 0, "stl": 0, "blk": 5, "pts": 5}
+          ],
+          "checksum_ok": true
+        },
+        {
+          "name": "Virginia Commonwealth",
+          "score": 70,
+          "players": [
+            {"name": "Shannon Martin", "min": 15, "fg": "4-6", "ft": "1-3", "tp": "2-4", "reb": 4, "ast": 1, "pf": 5, "to": 1, "stl": 1, "blk": 0, "pts": 11},
+            {"name": "Patrick Kodjoe", "min": 30, "fg": "3-7", "ft": "0-0", "tp": "0-4", "reb": 8, "ast": 1, "pf": 2, "to": 1, "stl": 1, "blk": 0, "pts": 6},
+            {"name": "L.F. Likhcholitov", "min": 8, "fg": "0-2", "ft": "2-2", "tp": "0-0", "reb": 2, "ast": 0, "pf": 3, "to": 0, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "LaMar Taylor", "min": 18, "fg": "1-5", "ft": "0-0", "tp": "0-2", "reb": 0, "ast": 3, "pf": 3, "to": 0, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Garland Ragler", "min": 16, "fg": "0-5", "ft": "3-4", "tp": "0-2", "reb": 1, "ast": 1, "pf": 2, "to": 1, "stl": 1, "blk": 0, "pts": 3},
+            {"name": "Bo Jones", "min": 26, "fg": "5-16", "ft": "2-2", "tp": "2-6", "reb": 2, "ast": 3, "pf": 3, "to": 1, "stl": 2, "blk": 0, "pts": 14},
+            {"name": "Alexander Shtam", "min": 6, "fg": "1-2", "ft": "0-1", "tp": "1-1", "reb": 0, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 3},
+            {"name": "Scott Lilly", "min": 30, "fg": "5-16", "ft": "0-0", "tp": "1-6", "reb": 1, "ast": 2, "pf": 2, "to": 5, "stl": 1, "blk": 0, "pts": 11},
+            {"name": "Scott Moore", "min": 13, "fg": "3-4", "ft": "0-0", "tp": "2-3", "reb": 2, "ast": 0, "pf": 0, "to": 2, "stl": 0, "blk": 0, "pts": 8},
+            {"name": "Reggie Okosa", "min": 12, "fg": "1-3", "ft": "4-4", "tp": "0-0", "reb": 4, "ast": 0, "pf": 2, "to": 2, "stl": 1, "blk": 0, "pts": 6},
+            {"name": "Shawn Hampton", "min": 26, "fg": "1-4", "ft": "2-2", "tp": "0-0", "reb": 4, "ast": 0, "pf": 1, "to": 1, "stl": 1, "blk": 0, "pts": 4}
+          ],
+          "checksum_ok": true
+        }
+      ]
+    }
+  ],
+  "skipped": []
+}

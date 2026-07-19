@@ -1,0 +1,9 @@
+{
+  "page": 21,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Handwritten scoresheet: Ohio State (Columbus, OH) vs Michigan, date illegible (header reads something like 'FEB ?? 19??'). Ohio State's player lines are legible and checksum cleanly (2*FG+FT per player sums to 66, matching the team total/final score of 66). However Michigan's player lines are too blurry/ambiguous to transcribe confidently: several digits in the FG/FT/TP columns are indistinct, one player row has an illegible name, and the computed player-points sum (61, via 2*FG+FT) does not cleanly reconcile with the apparent team total/final score (~63). Rather than guess at the uncertain digits, the entire game is skipped per the ruthless-skip instruction."
+    }
+  ]
+}

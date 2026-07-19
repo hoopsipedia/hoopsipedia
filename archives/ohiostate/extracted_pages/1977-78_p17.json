@@ -1,0 +1,9 @@
+{
+  "page": 17,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page contains a handwritten NCAA basketball box score for Michigan at Ohio State (Columbus, Ohio), with legible team final scores (Michigan 71, Ohio State 80, matching the TOTALS-row TP columns and the score-by-periods line), but individual player rows are cursive handwriting with ambiguous digits (circled/hollow marks indistinguishable as 0 vs O), making confident player-by-player FG/FT/REB/PTS transcription impossible. Per-player point sums could not be reliably reconstructed to verify against the team checksum without risking invented values, so the game was skipped rather than guessed."
+    }
+  ]
+}

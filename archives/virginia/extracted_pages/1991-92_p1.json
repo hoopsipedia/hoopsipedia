@@ -1,0 +1,53 @@
+{
+  "page": 1,
+  "games": [
+    {
+      "date": "1991-11-24",
+      "opponent": "William & Mary",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 78,
+          "players": [
+            {"name": "Junior Burrough", "min": 27, "fg": "6-10", "ft": "5-7", "tp": "0-0", "reb": 6, "ast": 0, "pf": 1, "to": 2, "stl": 0, "blk": 1, "pts": 17},
+            {"name": "Bryant Stith", "min": 28, "fg": "6-12", "ft": "7-8", "tp": "0-2", "reb": 8, "ast": 0, "pf": 3, "to": 4, "stl": 3, "blk": 0, "pts": 19},
+            {"name": "Ted Jeffries", "min": 31, "fg": "1-4", "ft": "1-3", "tp": "0-0", "reb": 4, "ast": 0, "pf": 2, "to": 1, "stl": 1, "blk": 1, "pts": 3},
+            {"name": "Anthony Oliver", "min": 16, "fg": "3-6", "ft": "0-0", "tp": "0-0", "reb": 1, "ast": 0, "pf": 2, "to": 2, "stl": 1, "blk": 0, "pts": 6},
+            {"name": "Cory Alexander", "min": 21, "fg": "2-8", "ft": "1-5", "tp": "0-2", "reb": 4, "ast": 2, "pf": 2, "to": 4, "stl": 3, "blk": 0, "pts": 5},
+            {"name": "Cornel Parker", "min": 26, "fg": "3-7", "ft": "6-9", "tp": "1-1", "reb": 6, "ast": 0, "pf": 2, "to": 0, "stl": 0, "blk": 3, "pts": 13},
+            {"name": "Doug Smith", "min": 13, "fg": "0-1", "ft": "4-4", "tp": "0-0", "reb": 6, "ast": 4, "pf": 1, "to": 1, "stl": 1, "blk": 0, "pts": 4},
+            {"name": "Yuri Barnes", "min": 6, "fg": "0-1", "reb": 2, "pts": 0},
+            {"name": "Shawn Wilson", "min": 4, "ft": "1-2", "reb": 1, "pf": 2, "pts": 1},
+            {"name": "Derrick Johnson", "min": 14, "fg": "1-3", "tp": "0-1", "reb": 1, "ast": 4, "pf": 1, "to": 0, "stl": 2, "blk": 0, "pts": 2},
+            {"name": "Chris Havlicek", "min": 5, "pts": 0},
+            {"name": "Corey Stewart", "min": 3, "fg": "1-2", "pf": 2, "stl": 1, "pts": 2},
+            {"name": "Chris Alexander", "min": 4, "fg": "2-2", "ft": "0-2", "reb": 2, "pf": 4, "pts": 4},
+            {"name": "Jason Williford", "min": 2, "fg": "1-2", "reb": 1, "pf": 2, "pts": 2}
+          ],
+          "checksum_ok": true
+        },
+        {
+          "name": "William & Mary Tribe",
+          "score": 43,
+          "players": [
+            {"name": "Ben Blocker", "min": 26, "fg": "4-7", "ft": "0-0", "tp": "0-0", "reb": 3, "ast": 1, "pf": 4, "to": 0, "stl": 2, "blk": 0, "pts": 8},
+            {"name": "Thomas Roberts", "min": 36, "fg": "3-13", "ft": "10-10", "tp": "2-4", "reb": 6, "ast": 1, "pf": 2, "to": 7, "stl": 1, "blk": 0, "pts": 18},
+            {"name": "Scott Smith", "min": 28, "fg": "4-12", "ft": "1-3", "tp": "0-0", "reb": 2, "ast": 2, "pf": 5, "to": 0, "stl": 1, "blk": 1, "pts": 9},
+            {"name": "Brendan Connor", "min": 31, "fg": "1-4", "ft": "0-0", "tp": "0-1", "reb": 3, "ast": 2, "pf": 3, "to": 4, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Derrick Peters", "min": 22, "fg": "1-1", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 1, "pf": 4, "to": 3, "stl": 2, "blk": 0, "pts": 2},
+            {"name": "Todd Cauthorn", "min": 17, "fg": "2-3", "ft": "0-0", "tp": "0-0", "reb": 6, "ast": 0, "pf": 5, "to": 3, "stl": 0, "blk": 1, "pts": 4},
+            {"name": "David Cox", "min": 21, "fg": "0-3", "ft": "0-1", "tp": "0-2", "reb": 3, "ast": 1, "pf": 0, "to": 2, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Charles Payton", "min": 6, "pts": 0},
+            {"name": "Kurt Small", "min": 5, "fg": "0-2", "ft": "0-0", "tp": "0-2", "reb": 0, "ast": 0, "pf": 0, "to": 2, "stl": 0, "blk": 1, "pts": 0},
+            {"name": "Eric Wakefield", "min": 3, "fg": "0-1", "ft": "0-0", "tp": "0-0", "reb": 1, "ast": 0, "pf": 2, "to": 0, "stl": 1, "blk": 0, "pts": 0},
+            {"name": "Sean Duff", "min": 2, "fg": "0-1", "pts": 0},
+            {"name": "Steve Purpura", "min": 2, "fg": "0-1", "reb": 1, "pf": 1, "pts": 0},
+            {"name": "Chris Dox", "min": 1, "pf": 1, "pts": 0}
+          ],
+          "checksum_ok": true
+        }
+      ]
+    }
+  ],
+  "skipped": []
+}

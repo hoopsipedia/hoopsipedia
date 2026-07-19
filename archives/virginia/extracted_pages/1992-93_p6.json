@@ -1,0 +1,49 @@
+{
+  "page": 6,
+  "games": [
+    {
+      "date": "1992-12-29",
+      "opponent": "Radford",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 82,
+          "players": [
+            {"name": "Junior Burrough", "min": 27, "fg": "10-14", "tp": "0-0", "ft": "6-7", "reb": 6, "ast": null, "pf": 4, "to": 1, "stl": 3, "blk": 1, "pts": 26},
+            {"name": "Jason Williford", "min": 25, "fg": "2-7", "tp": "0-0", "ft": "5-5", "reb": 5, "ast": 3, "pf": 2, "to": 1, "stl": 1, "pts": 9},
+            {"name": "Ted Jeffries", "min": 30, "fg": "2-4", "tp": "0-0", "ft": "2-3", "reb": 7, "pf": 4, "blk": 3, "pts": 6},
+            {"name": "Cornel Parker", "min": 38, "fg": "5-16", "tp": "0-2", "ft": "4-6", "reb": 4, "pf": 2, "pts": 14},
+            {"name": "Cory Alexander", "min": 34, "fg": "4-13", "tp": "2-3", "ft": "0-0", "reb": 2, "ast": 4, "pf": 1, "to": 4, "stl": 1, "pts": 10},
+            {"name": "Doug Smith", "min": 15, "fg": "1-1", "tp": "0-0", "ft": "0-0", "reb": 4, "ast": 2, "pts": 2},
+            {"name": "Yuri Barnes", "min": 20, "fg": "6-11", "tp": "0-0", "ft": "0-1", "reb": 10, "pf": 2, "blk": 2, "stl": 1, "pts": 12},
+            {"name": "Chris Havlicek", "min": 5, "fg": "0-2", "tp": "0-0", "ft": "2-2", "reb": 1, "ast": 2, "pf": 2, "pts": 2},
+            {"name": "Chris Alexander", "min": 3, "fg": "0-1", "tp": "0-0", "ft": "1-2", "reb": 2, "ast": 1, "pf": 2, "pts": 1},
+            {"name": "Maurice Watkins", "min": 1, "pts": 0},
+            {"name": "Bobby Graves", "min": 1, "pts": 0},
+            {"name": "Rock Mitchell", "min": 1, "pts": 0}
+          ]
+        },
+        {
+          "name": "Radford Highlanders",
+          "score": 63,
+          "players": [
+            {"name": "Don Burgess", "min": 38, "fg": "4-8", "tp": "1-2", "ft": "0-0", "reb": 8, "pf": 2, "ast": 1, "to": 5, "blk": 1, "pts": 9},
+            {"name": "Tyrone Travis", "min": 24, "fg": "7-11", "tp": "1-2", "ft": "1-4", "reb": 8, "pf": 5, "ast": 1, "blk": 2, "pts": 16},
+            {"name": "Chris Harvey", "min": 15, "fg": "1-3", "tp": "0-0", "ft": "0-0", "reb": 3, "pf": 2, "to": 1, "blk": 1, "pts": 2},
+            {"name": "Brian Schmall", "min": 38, "fg": "7-13", "tp": "2-3", "ft": "0-0", "reb": 3, "pf": 1, "ast": 4, "to": 4, "blk": 1, "pts": 16},
+            {"name": "Doug Day", "min": 20, "fg": "1-7", "tp": "0-4", "ft": "0-0", "reb": 4, "ast": 2, "to": 1, "pts": 2},
+            {"name": "Tom Gallaher", "min": 13, "fg": "0-2", "tp": "0-0", "ft": "0-0", "reb": 3, "pf": 1, "pts": 0},
+            {"name": "Antoine Dalton", "min": 12, "fg": "1-2", "tp": "0-0", "ft": "0-2", "reb": 4, "to": 4, "pts": 2},
+            {"name": "Jason Lansdown", "min": 15, "fg": "0-3", "tp": "0-0", "ft": "0-0", "pf": 3, "ast": 3, "pts": 0},
+            {"name": "Eric Bowens", "min": 14, "fg": "6-9", "tp": "0-1", "ft": "2-3", "reb": 5, "pf": 1, "to": 3, "pts": 14},
+            {"name": "Johnny Watkins", "min": 10, "fg": "1-3", "tp": "0-1", "ft": "0-1", "reb": 2, "pf": 2, "ast": 2, "pts": 2},
+            {"name": "Matthew Reynolds", "min": 1, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true,
+      "notes": "Points computed/cross-checked via pts = 2*FG_made + 3PT_made + FT_made (pre-3pt-value era rule) against printed TP column and team FG/3PT/FT totals row; Tyrone Travis's 3-point makes (1) and free-throw makes (1) were confirmed this way since handwriting was faint. Some minor players' assist/turnover/steal/blk cells were blank on the sheet (treated as 0/omitted) for low-minute reserves (Watkins M., Graves, Mitchell for UVA; Reynolds for Radford), who recorded no other stats. Rebounds given as total (off+def) per player."
+    }
+  ],
+  "skipped": []
+}

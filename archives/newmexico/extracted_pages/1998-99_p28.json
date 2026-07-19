@@ -1,0 +1,9 @@
+{
+  "page": 28,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page shows a typed BYU Sports Info box score for New Mexico @ BYU, 2/25/1999 (Provo, UT), final UNM 85, BYU 64 (halves 31-54 / 26-38). Team totals row is legible and checksum-consistent (FG 26-52, 3pt 10-23, FT 23-25 => pts (26-10)*2+10*3+23=85, matches). However, individual player rows have small handwritten superscript numbers (e.g. '333', '467', '636', '545', '286') overlaid on/adjacent to the typed FG/FGA/FT columns, apparently a running play-by-play score tally rather than stat data. Disentangling these from the typed per-player FG/FGA/3FG/3FGA/FT/FTA digits is unreliable at this resolution. Test transcription: Smith, Brian checksum passed (FG2-6,3FG0-1,FT0-0 => 4 pts, matches printed TP=4), but Thomas, Kenny failed checksum (computed (8-3)*2+3*3+9=28 pts vs printed TP column showing 4), indicating column misalignment/misreads elsewhere in the sheet. Rather than guess at the remaining ~20 player lines, skipping the full game per instructions. Team-level final score (UNM 85, BYU 64) is confidently legible if useful at a game-summary level, but no player box score is being emitted."
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "page": 8,
+  "games": [
+    {
+      "date": "1994-12-19",
+      "opponent": "VMI",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 100,
+          "players": [
+            {"name": "Junior Burrough", "min": 24, "fg": "7-10", "tp": "0-0", "ft": "2-3", "reb": 4, "ast": 1, "pf": 1, "to": 2, "stl": 1, "blk": 3, "pts": 16},
+            {"name": "Jason Williford", "min": 19, "fg": "1-7", "tp": "0-2", "ft": "3-4", "reb": 9, "ast": 3, "pf": 4, "to": 2, "stl": 1, "blk": 1, "pts": 5},
+            {"name": "Chris Alexander", "min": 15, "fg": "1-2", "tp": "0-0", "ft": "0-0", "reb": 2, "ast": 0, "pf": 1, "to": 0, "pts": 2},
+            {"name": "Cory Alexander", "min": 25, "fg": "7-12", "tp": "1-4", "ft": "2-3", "reb": 2, "ast": 8, "pf": 2, "to": 2, "stl": 1, "pts": 17},
+            {"name": "Harold Deane", "min": 32, "fg": "5-9", "tp": "1-4", "ft": "10-12", "reb": 3, "ast": 9, "pf": 1, "to": 1, "pts": 21},
+            {"name": "Yuri Barnes", "min": 22, "fg": "5-7", "tp": "0-0", "ft": "4-5", "reb": 7, "ast": 0, "pf": 1, "blk": 2, "pts": 14},
+            {"name": "Jamal Robinson", "min": 12, "fg": "0-2", "ft": "1-4", "reb": 4, "pf": 5, "pts": 4},
+            {"name": "Curtis Staples", "min": 25, "fg": "4-8", "tp": "3-6", "ft": "1-2", "reb": 1, "ast": 3, "pf": 2, "to": 1, "stl": 4, "pts": 12},
+            {"name": "Norman Nolan", "min": 16, "fg": "3-5", "tp": "0-0", "ft": "2-4", "reb": 3, "pf": 0, "blk": 1, "pts": 8},
+            {"name": "Michael Curtis", "min": 5, "pts": 0},
+            {"name": "Peter McLaughlin", "min": 2, "ft": "1-2", "pts": 1},
+            {"name": "Martin Walton", "min": 2, "reb": 2, "pts": 0},
+            {"name": "Maurice Watkins", "min": 1, "fg": "0-1", "pts": 0}
+          ],
+          "checksum_ok": true
+        },
+        {
+          "name": "VMI Keydets",
+          "score": 73,
+          "players": [
+            {"name": "Lawrence Gullette", "min": 33, "fg": "11-24", "tp": "7-12", "ft": "3-4", "reb": 9, "ast": 0, "pf": 2, "to": 3, "stl": 1, "blk": 2, "pts": 32},
+            {"name": "Lester Johnson", "min": 24, "fg": "1-7", "tp": "0-0", "ft": "4-8", "reb": 4, "ast": 2, "pf": 3, "to": 0, "pts": 6},
+            {"name": "Larry Osborne", "min": 12, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 4, "pf": 0, "pts": 0},
+            {"name": "Maurice Spencer", "min": 15, "fg": "1-9", "tp": "0-7", "ft": "0-0", "reb": 5, "ast": 2, "pf": 3, "to": 1, "pts": 3},
+            {"name": "Bobby Prince", "min": 33, "fg": "5-5", "tp": "3-3", "ft": "3-3", "reb": 5, "ast": 9, "pf": 5, "to": 7, "stl": 2, "pts": 16},
+            {"name": "Mike Spinelli", "min": 26, "fg": "1-2", "tp": "0-0", "ft": "1-2", "reb": 5, "ast": 0, "pf": 2, "to": 5, "stl": 1, "pts": 3},
+            {"name": "Warren Johnson", "min": 17, "fg": "1-5", "tp": "0-1", "ft": "0-0", "reb": 4, "ast": 0, "pf": 2, "to": 2, "pts": 2},
+            {"name": "B.J. Grinage", "min": 8, "fg": "0-0", "tp": "0-0", "reb": 1, "pf": 2, "stl": 1, "pts": 0},
+            {"name": "Aron Buss", "min": 9, "fg": "1-6", "tp": "1-6", "ft": "2-2", "reb": 2, "ast": 0, "pf": 0, "to": 2, "pts": 5},
+            {"name": "Bryan Woolsey", "min": 12, "fg": "1-1", "tp": "0-1", "pf": 2, "pts": 3},
+            {"name": "Howard Byrd", "min": 4, "fg": "0-2", "tp": "0-1", "reb": 0, "pf": 2, "stl": 1, "pts": 0},
+            {"name": "Bryan Taueg", "min": 5, "fg": "1-4", "tp": "1-3", "reb": 1, "pf": 2, "pts": 3},
+            {"name": "Greg Robison", "min": 2, "fg": "0-1", "to": 1, "pts": 0}
+          ],
+          "checksum_ok": true
+        }
+      ]
+    }
+  ],
+  "skipped": []
+}

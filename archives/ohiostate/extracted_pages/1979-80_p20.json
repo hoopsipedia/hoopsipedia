@@ -1,0 +1,46 @@
+{
+  "page": 20,
+  "games": [
+    {
+      "date": null,
+      "opponent": "Wisconsin Badgers",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 67,
+          "players": [
+            {"name": "Kellogg, Clark", "min": "37.5", "fg": "5-9", "ft": "4-4", "reb": 12, "pf": 2, "ast": 2, "to": 2, "blk": 0, "stl": 1, "pts": 14},
+            {"name": "Smith, Jim", "min": "20.5", "fg": "3-6", "ft": "0-3", "reb": 1, "pf": 4, "ast": 1, "to": 2, "blk": 2, "stl": 0, "pts": 6},
+            {"name": "Williams, Herb", "min": "36.5", "fg": "6-13", "ft": "0-0", "reb": 8, "pf": 3, "ast": 0, "to": 3, "blk": 3, "stl": 0, "pts": 12},
+            {"name": "Ramsey, Kelvin", "min": "39", "fg": "9-17", "ft": "0-0", "reb": 5, "pf": 5, "ast": 6, "to": 4, "blk": 0, "stl": 2, "pts": 18},
+            {"name": "Scott, Carter", "min": "36", "fg": "5-9", "ft": "2-2", "reb": 1, "pf": 2, "ast": 4, "to": 2, "blk": 0, "stl": 1, "pts": 12},
+            {"name": "Ellinghausen, Jim", "min": "19.5", "fg": "2-4", "ft": "1-2", "reb": 2, "pf": 2, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pts": 5},
+            {"name": "Penn, Todd", "min": "4.5", "fg": "0-0", "ft": "0-1", "reb": 0, "pf": 0, "ast": 0, "to": 1, "blk": 0, "stl": 1, "pts": 0},
+            {"name": "Waiters, Granville", "min": "3.5", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Miller, Marquis", "min": "2.5", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 1, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Huggins, Larry", "min": "0.5", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Wisconsin Badgers",
+          "score": 70,
+          "players": [
+            {"name": "Gregory, Claude", "min": "36", "fg": "8-14", "ft": "7-8", "reb": 9, "pf": 5, "ast": 2, "to": 4, "blk": 1, "stl": 0, "pts": 23},
+            {"name": "Chrnelich, Joe", "min": "39", "fg": "7-12", "ft": "0-0", "reb": 10, "pf": 0, "ast": 2, "to": 3, "blk": 0, "stl": 0, "pts": 14},
+            {"name": "Petty, Larry", "min": "39", "fg": "4-11", "ft": "2-6", "reb": 6, "pf": 3, "ast": 0, "to": 1, "blk": 1, "stl": 7, "pts": 10},
+            {"name": "Hastings, Dan", "min": "29", "fg": "3-4", "ft": "0-1", "reb": 1, "pf": 3, "ast": 3, "to": 1, "blk": 0, "stl": 1, "pts": 6},
+            {"name": "Matthews, Wes", "min": "30", "fg": "5-16", "ft": "3-5", "reb": 2, "pf": 3, "ast": 3, "to": 5, "blk": 0, "stl": 3, "pts": 13},
+            {"name": "Mitchell, Keith", "min": "2", "fg": "0-1", "ft": "0-0", "reb": 2, "pf": 0, "ast": 1, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Gaines, Arnold", "min": "19", "fg": "1-1", "ft": "2-2", "reb": 3, "pf": 1, "ast": 0, "to": 2, "blk": 0, "stl": 1, "pts": 4},
+            {"name": "Newbridge, Mark", "min": "1", "fg": "0-1", "ft": "0-0", "reb": 2, "pf": 1, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Kreklow, Mike", "min": "0", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 1, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Bailey, John", "min": "2", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": [],
+  "notes": "Date not legible on scoresheet (header line at top of page is faded/cut off); score-by-periods table confirms Ohio State 37+30=67, Wisconsin 31+39=70, matching both team totals and per-player pts sums. Minutes column includes some low-confidence reads (e.g. Petty stl=7 looks unusually high, Kreklow min=0) but these do not affect the points checksum, which passed cleanly for both teams."
+}

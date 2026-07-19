@@ -1,0 +1,48 @@
+{
+  "page": 3,
+  "games": [
+    {
+      "date": "1992-12-08",
+      "opponent": "Arizona Wildcats",
+      "site": "Tucson, AZ (McKale Center)",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 70,
+          "players": [
+            {"name": "Lamar", "min": 19, "fg": "1-1", "tp": "0-0", "ft": "2-2", "reb": 4, "ast": 1, "to": 0, "blk": 1, "stl": 0, "pf": 2, "pts": 4},
+            {"name": "Neves", "min": 34, "fg": "3-12", "tp": "1-5", "ft": "0-0", "reb": 6, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pf": 4, "pts": 7},
+            {"name": "Jaxon", "min": 37, "fg": "9-13", "tp": "0-0", "ft": "1-6", "reb": 8, "ast": 8, "to": 2, "blk": 1, "stl": 2, "pf": 4, "pts": 19},
+            {"name": "Logan", "min": 38, "fg": "4-12", "tp": "2-6", "ft": "8-11", "reb": 8, "ast": 2, "to": 2, "blk": 1, "stl": 1, "pf": 2, "pts": 18},
+            {"name": "Williams", "min": 33, "fg": "5-8", "tp": "0-0", "ft": "7-10", "reb": 2, "ast": 2, "to": 2, "blk": 1, "stl": 1, "pf": 2, "pts": 17},
+            {"name": "Jenkins", "min": 22, "fg": "0-7", "tp": "0-5", "ft": "1-2", "reb": 3, "ast": 0, "to": 6, "blk": 0, "stl": 0, "pf": 1, "pts": 1},
+            {"name": "Heffner", "min": 4, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 1, "to": 1, "blk": 0, "stl": 1, "pf": 1, "pts": 0},
+            {"name": "Griego", "min": 13, "fg": "2-2", "tp": "0-0", "ft": "0-0", "reb": 4, "ast": 1, "to": 1, "blk": 0, "stl": 0, "pf": 0, "pts": 4}
+          ]
+        },
+        {
+          "name": "Arizona Wildcats",
+          "score": 89,
+          "players": [
+            {"name": "Owes", "min": 14, "fg": "2-9", "tp": "0-0", "ft": "2-4", "reb": 2, "pf": 2, "pts": 6},
+            {"name": "Mills", "min": 24, "fg": "7-11", "tp": "1-2", "ft": "3-3", "reb": 2, "pf": 2, "pts": 18},
+            {"name": "Stokes", "min": 23, "fg": "4-12", "tp": "0-0", "ft": "2-2", "reb": 6, "pf": 2, "pts": 10},
+            {"name": "Stoudamire", "min": 23, "fg": "6-11", "tp": "3-5", "ft": "0-0", "reb": 3, "pf": 2, "pts": 15},
+            {"name": "Geary", "min": 21, "fg": "1-3", "tp": "0-0", "ft": "0-0", "reb": 1, "pf": 2, "pts": 2},
+            {"name": "Bohannon", "min": 14, "fg": "2-6", "tp": "0-0", "ft": "0-2", "reb": 4, "pf": 2, "pts": 4},
+            {"name": "Reeves", "min": 22, "fg": "5-8", "tp": "3-6", "ft": "0-0", "reb": 4, "pf": 3, "pts": 13},
+            {"name": "Rigdon", "min": 9, "fg": "1-3", "tp": "0-1", "ft": "2-3", "reb": 0, "pf": 0, "pts": 4},
+            {"name": "Blair", "min": 20, "fg": "6-7", "tp": "0-0", "ft": "1-3", "reb": 6, "pf": 4, "pts": 13},
+            {"name": "Johnson", "min": 13, "fg": "1-6", "tp": "0-1", "ft": "0-0", "reb": 3, "pf": 1, "pts": 2},
+            {"name": "Flanagan", "min": 8, "fg": "1-1", "tp": "0-0", "ft": "0-0", "reb": 3, "pf": 0, "pts": 2},
+            {"name": "Williams", "min": 8, "fg": "0-1", "tp": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Johns", "min": 1, "fg": "0-1", "tp": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true,
+      "note": "New Mexico Lobos player points and assists sum exactly to team totals (70 pts, 15 ast) confirming row alignment. Arizona ast/to/blk/stl columns were too ambiguous on the handwritten sheet to transcribe with confidence and are omitted (never invented); FG/FT/3PT/points were cross-verified two ways (per-player 2*FGmade-3PTmade formula vs printed TP column, and column sums vs printed team TOTALS row: FG 36-79, 3PT 7-16, FT 10-17) and both agree exactly, and final score 89 also matches the Score-By-Periods box (39+50). One correction found on second read: Owes' FT was misread as 0-4/TP5 on first pass; re-derivation forced by the checksum discrepancy showed FT 2-4/TP6 is the only value consistent with both the team FT-made total (10) and team points total (89)."
+    }
+  ],
+  "skipped": []
+}

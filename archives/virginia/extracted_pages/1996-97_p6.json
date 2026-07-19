@@ -1,0 +1,9 @@
+{
+  "page": 6,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "1996-12-07 Clemson at Virginia (Clemson 62, Virginia 52): Clemson box checksums perfectly (individual PTS sum = 62 = team total, verified against FG/3P/FT makes). Virginia box FAILS checksum: individual player PTS column sums to 53 (Nolan 6 + Alexander 16 + Metheney 2 + Staples 3 + Deane 12 + Robinson 8 + Ducharme 4 + Dersch 2 + Hunter 0), but team TOTALS row and the final score (confirmed by period score 27+25=52 and by the FT split line 'Game (13/19) 68.4') both show 52. Sum of individual FT makes/attempts (14/20) also exceeds the team FT total (13/19) by exactly 1-for-1. Each player row is internally self-consistent (2*FGmade-2*3Pmade+3*3Pmade+FTmade == printed PTS), so this is not a single obvious misread digit but an inherent 1-point discrepancy in the original 1996 scoresheet (likely a scorer error crediting an extra made/attempted FT to one player, most plausibly Courtney Alexander 7/9 FT, without updating the team total). Re-read the page a second time and the text was identical both times, so this is a source-document inconsistency rather than an OCR artifact. Per instructions, skipping rather than guessing which player's line is wrong."
+    }
+  ]
+}

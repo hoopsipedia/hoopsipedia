@@ -1,0 +1,12 @@
+{
+  "page": 12,
+  "games": [],
+  "skipped": [
+    {
+      "date": "1993-01-20",
+      "opponent": "North Carolina",
+      "site": "Dean E. Smith Center, Chapel Hill, N.C.",
+      "reason": "Virginia side checksummed perfectly (player TP sum = 58 = final score), and every individual North Carolina player row is internally self-consistent (2*FGmade + 3FGmade + FTmade = that player's printed TP for all 14 players). However, the sum of North Carolina player TP values totals 78, while the team TOTALS row and the periods score (32+48) both give 80 - an unresolved 2-point gap. Also checked: NC FG sum 29 vs team total FG 30, 3FG sum 5 vs team 6, FT sum 15 vs team 14 (a pattern consistent with one missed made 3-pointer plus one over-counted free throw somewhere among the 14 rows, but the exact row could not be pinned down). MIN (200), assists (20), and FTA (19) column sums all matched the team totals exactly, indicating the general transcription approach was sound, but the FG/3FG/FT/points discrepancy could not be resolved within the one-re-read allowance, so per instructions the game was skipped rather than guessed."
+    }
+  ]
+}

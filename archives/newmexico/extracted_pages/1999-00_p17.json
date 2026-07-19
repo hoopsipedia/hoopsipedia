@@ -1,0 +1,9 @@
+{
+  "page": 17,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Official fax box score for New Mexico @ Wyoming (Laramie) is present, but the fax scan quality severely degrades the New Mexico (visitors) player rows: FG/FGA and 3PT FG/FGA digits are overlapping/bled together (e.g. rows read as '9556', '10600', '8375', '10 300', '3330', '1145', '7286', '5600' where clean made-attempted pairs cannot be confidently separated). A reconstruction attempt using team totals as a constraint (FG 28-63, 3PT 7-19, FT 20-27, TP 83) failed to reconcile against apparent per-player point totals, confirming the individual figures cannot be trusted. Wyoming's (home team) player rows are clean and fully checksum correctly against their team total (FG 32-71, 3PT 9-25, FT 15-21, TP 88, points sum verified per player), but per instructions both teams' lines are needed and New Mexico's cannot be produced without inventing values, so the whole game is skipped. Separately, the exact game date is also partially illegible: the dateline reads '-.-00 7:07pm at Laramie, Wyo.' with the day/month cut off at the page's left edge; only the fax transmission timestamp (01/13/00 23:21:50 EDT) and season records (New Mexico 9-8/1-1, Wyoming 11-5/1-0) are legible, suggesting a game in the January 12-13, 2000 range but not confirmable to the day."
+    }
+  ]
+}

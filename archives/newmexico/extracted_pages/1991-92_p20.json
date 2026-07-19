@@ -1,0 +1,9 @@
+{
+  "page": 20,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "1992-02-01 New Mexico @ Utah (Jon M. Huntsman Center). UNM (visitors) box score checksums perfectly (player TP sum 54 = team total 54; FG sum 20=20, 3PT sum 5=5, FT sum 9=9). However Utah (home) box score does not checksum: summing legible player lines gives FG made 19 and TP 63, versus the team TOTALS row of FG 18-50 and TP 61 (a 1-FG/2-point discrepancy). The gap traces to one of three low-stat bench rows with tiny/dense typed digits (Howard, Davison, or Wyatt, each showing a single FG make on 1-2 attempts) - I cannot determine with confidence which one is mistranscribed, and the two allowed reads of this page have both been used. Per instructions, skipping the whole game rather than guessing which bench player's line is wrong."
+    }
+  ]
+}

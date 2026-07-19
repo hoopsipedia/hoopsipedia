@@ -1,0 +1,49 @@
+{
+  "page": 24,
+  "games": [
+    {
+      "date": "1978-02-16",
+      "opponent": "Indiana",
+      "site": "St. John Arena, Columbus, Ohio",
+      "teams": [
+        {
+          "name": "Indiana Hoosiers",
+          "score": 83,
+          "players": [
+            {"name": "Radford", "fg": "7-9", "ft": "9-14", "reb": 5, "pf": 5, "pts": 23},
+            {"name": "Woodson", "fg": "8-14", "ft": "3-3", "reb": 2, "pf": 5, "pts": 19},
+            {"name": "Talbert", "fg": "9-14", "ft": "0-0", "reb": 12, "pf": 3, "pts": 18},
+            {"name": "Baker", "fg": "1-3", "ft": "0-0", "reb": 2, "pf": 3, "pts": 2},
+            {"name": "Wisman", "fg": "2-3", "ft": "3-4", "reb": 1, "pf": 0, "pts": 7},
+            {"name": "Risley", "fg": "2-3", "ft": "0-0", "reb": 4, "pf": 2, "pts": 4},
+            {"name": "Carter", "fg": "4-8", "ft": "2-3", "reb": 6, "pf": 2, "pts": 10},
+            {"name": "Kirschner", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Roberson", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Tsenhargen", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Grunwald", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Fells", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 70,
+          "players": [
+            {"name": "Page", "fg": "5-12", "ft": "3-5", "reb": 5, "pf": 3, "pts": 13},
+            {"name": "J. Smith", "fg": "3-10", "ft": "2-2", "reb": 5, "pf": 5, "pts": 8},
+            {"name": "Williams", "fg": "5-13", "ft": "2-2", "reb": 15, "pf": 2, "pts": 12},
+            {"name": "Ransey", "fg": "10-23", "ft": "1-1", "reb": 3, "pf": 4, "pts": 21},
+            {"name": "Cline", "fg": "0-1", "ft": "0-0", "reb": 1, "pf": 4, "pts": 0},
+            {"name": "Ellinghausen", "fg": "1-2", "ft": "2-2", "reb": 1, "pf": 0, "pts": 4},
+            {"name": "Scott", "fg": "3-6", "ft": "0-0", "reb": 0, "pf": 1, "pts": 6},
+            {"name": "Penn", "fg": "0-2", "ft": "0-0", "reb": 2, "pf": 2, "pts": 0},
+            {"name": "Burris", "fg": "2-3", "ft": "2-4", "reb": 5, "pf": 2, "pts": 6}
+          ]
+        }
+      ],
+      "score_by_periods": {"Indiana": [40, 43], "Ohio State": [39, 31]},
+      "checksum_ok": true,
+      "notes": "Per-player pts computed/verified via pts = 2*fg_made + ft_made (pre-3-point era, no TP-only column ambiguity resolved this way for Radford's FT value, read as 9 not 7 based on checksum agreement). Assist/turnover/block/steal columns present on sheet but handwriting too small/uncertain to transcribe reliably per player; omitted rather than guessed. Team totals (FG/FGA/FT/FTA/REB) cross-checked against summed player lines and match once each team's separately-listed 'team rebounds' entry (Indiana 3, Ohio State 2) is added."
+    }
+  ],
+  "skipped": []
+}

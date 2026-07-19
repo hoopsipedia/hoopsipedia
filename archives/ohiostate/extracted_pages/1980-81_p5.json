@@ -1,0 +1,41 @@
+{
+  "page": 5,
+  "games": [
+    {
+      "date": "1980-12-16",
+      "opponent": "South Alabama",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 67,
+          "players": [
+            {"name": "Jim Smith", "min": "17", "fg": "1-4", "ft": "1-2", "reb": "5", "ast": "0", "pf": "5", "to": "0", "stl": "0", "blk": "1", "pts": "3"},
+            {"name": "Clark Kellogg", "min": "37", "fg": "8-20", "ft": "2-4", "reb": "18", "ast": "4", "pf": "4", "to": "2", "stl": "0", "blk": "1", "pts": "18"},
+            {"name": "Herb Williams", "fg": "7-13", "ft": "0-1", "reb": "4", "ast": "1", "pf": "5", "to": "6", "stl": "0", "blk": "5", "pts": "14"},
+            {"name": "Larry Huggins", "min": "39", "fg": "6-10", "ft": "0-0", "reb": "2", "ast": "2", "pf": "3", "to": "2", "stl": "1", "blk": "1", "pts": "12"},
+            {"name": "Carter Scott", "min": "38", "fg": "4-15", "ft": "0-1", "reb": "4", "ast": "4", "pf": "3", "to": "4", "stl": "3", "blk": "1", "pts": "8"},
+            {"name": "Cliff Kirchner", "min": "3", "fg": "1-2", "ft": "0-0", "reb": "0", "ast": "0", "pf": "1", "to": "0", "stl": "0", "blk": "0", "pts": "2"},
+            {"name": "Granville Waiters", "min": "9", "fg": "1-1", "ft": "0-0", "reb": "0", "ast": "0", "pf": "0", "to": "0", "stl": "0", "blk": "0", "pts": "2"},
+            {"name": "Todd Penn", "min": "16", "fg": "2-7", "ft": "4-6", "reb": "3", "ast": "1", "pf": "3", "to": "1", "stl": "1", "blk": "0", "pts": "8"},
+            {"name": "Marquis Miller", "fg": "0-1", "ft": "0-0", "reb": "1", "ast": "1", "pf": "1", "to": "0", "stl": "0", "blk": "0", "pts": "0"}
+          ]
+        },
+        {
+          "name": "South Alabama",
+          "score": 76,
+          "players": [
+            {"name": "Ed Rains", "min": "40", "fg": "7-16", "ft": "2-5", "reb": "2", "ast": "2", "pf": "2", "to": "5", "stl": "1", "blk": "1", "pts": "16"},
+            {"name": "Rory White", "min": "30", "fg": "10-15", "ft": "2-3", "reb": "9", "ast": "0", "pf": "0", "to": "5", "stl": "1", "blk": "2", "pts": "22"},
+            {"name": "John May", "min": "30", "fg": "3-7", "ft": "6-7", "reb": "16", "ast": "3", "pf": "3", "to": "1", "stl": "1", "blk": "0", "pts": "12"},
+            {"name": "Scott Williams", "fg": "4-6", "ft": "2-3", "reb": "6", "ast": "3", "pf": "2", "to": "1", "stl": "3", "blk": "0", "pts": "10"},
+            {"name": "Herb Andrew", "min": "40", "fg": "0-3", "ft": "8-9", "reb": "1", "ast": "7", "pf": "3", "to": "5", "stl": "2", "blk": "0", "pts": "8"},
+            {"name": "Tony Hafley", "min": "10", "fg": "1-2", "ft": "0-0", "reb": "0", "ast": "0", "pf": "2", "to": "1", "stl": "0", "blk": "0", "pts": "2"},
+            {"name": "Damon Bryant", "min": "6", "fg": "3-6", "ft": "0-0", "reb": "0", "ast": "1", "pf": "2", "to": "0", "stl": "0", "blk": "0", "pts": "6"}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

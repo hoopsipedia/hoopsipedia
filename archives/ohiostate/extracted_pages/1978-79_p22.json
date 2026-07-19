@@ -1,0 +1,44 @@
+{
+  "page": 22,
+  "games": [
+    {
+      "date": "1979-02-15",
+      "opponent": "Minnesota",
+      "site": "Minneapolis, MN",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 74,
+          "players": [
+            {"name": "Jim Smith", "fg": "1-4", "ft": "1-6", "reb": 2, "pf": 2, "ast": 1, "to": 1, "blk": 2, "stl": 1, "pts": 6},
+            {"name": "Carter Scott", "fg": "4-7", "ft": "0-0", "reb": 6, "pf": 3, "ast": 1, "to": 3, "blk": 0, "stl": 0, "pts": 8},
+            {"name": "Herb Williams", "fg": "12-15", "ft": "2-4", "reb": 12, "pf": 1, "ast": 2, "to": 2, "blk": 1, "stl": 0, "pts": 26},
+            {"name": "Kelvin Ransey", "fg": "8-15", "ft": "4-6", "reb": 1, "pf": 3, "ast": 2, "to": 6, "blk": 0, "stl": 1, "pts": 20},
+            {"name": "Todd Penn", "fg": "0-3", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 1, "blk": 0, "stl": 1, "pts": 0},
+            {"name": "Jim Ellinghausen", "fg": "0-1", "ft": "0-0", "reb": 2, "pf": 0, "ast": 2, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Mike Cline", "fg": "5-6", "ft": "4-4", "reb": 3, "pf": 0, "ast": 3, "to": 0, "blk": 0, "stl": 0, "pts": 14},
+            {"name": "Art Schlichter", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 1, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Tony Hall", "fg": "0-1", "ft": "0-0", "reb": 0, "pf": 1, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pts": 0}
+          ],
+          "checksum_ok": true
+        },
+        {
+          "name": "Minnesota Golden Gophers",
+          "score": 68,
+          "players": [
+            {"name": "Leo Rautins", "fg": "0-4", "ft": "0-0", "reb": 1, "pf": 2, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Kevin McHale", "fg": "12-19", "ft": "4-5", "reb": 13, "pf": 4, "ast": 0, "to": 5, "blk": 2, "stl": 0, "pts": 28},
+            {"name": "Gary Holmes", "fg": "1-4", "ft": "1-2", "reb": 4, "pf": 2, "ast": 2, "to": 1, "blk": 0, "stl": 0, "pts": 3},
+            {"name": "Trent Tucker", "fg": "3-5", "ft": "0-0", "reb": 5, "pf": 2, "ast": 0, "to": 2, "blk": 0, "stl": 1, "pts": 6},
+            {"name": "Mark Hall", "fg": "2-7", "ft": "1-2", "reb": 3, "pf": 5, "ast": 0, "to": 2, "blk": 0, "stl": 2, "pts": 5},
+            {"name": "Darryl Mitchell", "fg": "8-12", "ft": "1-1", "reb": 2, "pf": 2, "ast": 1, "to": 2, "blk": 0, "stl": 1, "pts": 17},
+            {"name": "James Jackson", "fg": "4-11", "ft": "1-1", "reb": 1, "pf": 1, "ast": 2, "to": 3, "blk": 1, "stl": 0, "pts": 9},
+            {"name": "Brian Pederson", "fg": "0-2", "ft": "0-0", "reb": 0, "pf": 1, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0}
+          ],
+          "checksum_ok": true
+        }
+      ]
+    }
+  ],
+  "skipped": []
+}

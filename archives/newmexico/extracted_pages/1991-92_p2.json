@@ -1,0 +1,43 @@
+{
+  "page": 2,
+  "games": [
+    {
+      "date": "1991-11-23",
+      "opponent": "Duquesne",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 91,
+          "players": [
+            {"name": "Steve Logan", "min": 33, "fg": "4-18", "tp": "1-8", "ft": "4-6", "reb": 1, "ast": 3, "pf": 0, "to": 2, "blk": 1, "stl": 2, "pts": 13},
+            {"name": "Ike Williams", "min": 17, "fg": "1-7", "tp": "1-5", "ft": "5-8", "reb": 4, "ast": 2, "pf": 4, "to": 2, "blk": 0, "stl": 1, "pts": 8},
+            {"name": "Will Scott", "min": 24, "fg": "4-8", "ft": "2-4", "reb": 5, "ast": 0, "pf": 2, "to": 3, "blk": 0, "stl": 1, "pts": 10},
+            {"name": "Lewis LaMar", "min": 10, "fg": "0-2", "ft": "2-2", "reb": 1, "ast": 0, "pf": 2, "to": 0, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Willie Banks", "min": 37, "fg": "10-16", "tp": "1-3", "ft": "4-4", "reb": 1, "ast": 6, "pf": 2, "to": 2, "blk": 0, "stl": 6, "pts": 25},
+            {"name": "Khari Jaxon", "min": 26, "fg": "5-8", "ft": "2-2", "reb": 8, "ast": 1, "pf": 2, "to": 4, "blk": 4, "stl": 1, "pts": 12},
+            {"name": "J.J. Griego", "min": 9, "fg": "1-3", "tp": "0-1", "ft": "0-1", "reb": 2, "ast": 1, "pf": 0, "to": 0, "blk": 0, "stl": 2, "pts": 2},
+            {"name": "Brian Hayden", "min": 23, "fg": "2-3", "ft": "1-2", "reb": 7, "ast": 1, "pf": 2, "to": 1, "blk": 0, "stl": 2, "pts": 5},
+            {"name": "Vladimir McCrary", "min": 21, "fg": "4-10", "ft": "6-7", "reb": 7, "ast": 2, "pf": 2, "to": 1, "blk": 0, "stl": 1, "pts": 14}
+          ]
+        },
+        {
+          "name": "Duquesne Dukes",
+          "score": 85,
+          "players": [
+            {"name": "Mark Gilbert", "min": 26, "fg": "5-9", "tp": "2-2", "ft": "1-2", "reb": 9, "ast": 4, "pf": 2, "to": 3, "blk": 0, "stl": 3, "pts": 13},
+            {"name": "Effrem Whitehead", "min": 25, "fg": "7-12", "tp": "3-6", "ft": "0-0", "reb": 2, "ast": 5, "pf": 5, "to": 4, "blk": 3, "stl": 1, "pts": 17},
+            {"name": "Ganon Baker", "min": 25, "fg": "2-7", "tp": "0-3", "ft": "2-2", "reb": 1, "ast": 3, "pf": 2, "to": 8, "blk": 0, "stl": 0, "pts": 6},
+            {"name": "Keith English", "min": 20, "fg": "1-3", "ft": "2-3", "reb": 4, "ast": 2, "pf": 3, "to": 3, "blk": 0, "stl": 0, "pts": 4},
+            {"name": "James Hargrove", "min": 34, "fg": "7-15", "tp": "2-3", "ft": "0-0", "reb": 6, "ast": 2, "pf": 3, "to": 3, "blk": 0, "stl": 0, "pts": 16},
+            {"name": "Alan Watkins", "min": 11, "fg": "3-4", "ft": "0-0", "reb": 3, "ast": 1, "pf": 5, "to": 2, "blk": 0, "stl": 0, "pts": 6},
+            {"name": "Ricky Lopes", "min": 9, "fg": "0-1", "ft": "1-1", "reb": 1, "ast": 0, "pf": 0, "to": 1, "blk": 2, "stl": 1, "pts": 1},
+            {"name": "Willie Ladson", "min": 17, "fg": "1-1", "ft": "2-2", "reb": 4, "ast": 0, "pf": 4, "to": 2, "blk": 0, "stl": 0, "pts": 4, "note": "FG makes/attempts inferred from team-total and points-column reconciliation; handwriting on this line was ambiguous between 0 and 1 made FG"},
+            {"name": "Derrick Alston", "min": 38, "fg": "8-10", "ft": "2-2", "reb": 6, "ast": 2, "pf": 3, "to": 6, "blk": 2, "stl": 0, "pts": 18}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

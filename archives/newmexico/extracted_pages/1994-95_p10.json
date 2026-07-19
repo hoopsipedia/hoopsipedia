@@ -1,0 +1,44 @@
+{
+  "page": 10,
+  "games": [
+    {
+      "date": "1994-12-29",
+      "opponent": "UNC Charlotte 49ers",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 75,
+          "players": [
+            {"name": "Charles Smith", "min": 32, "fg": "6-16", "ft": "0-0", "tp": "2-4", "reb": 6, "ast": 3, "pf": 1, "to": 2, "stl": 1, "blk": 0, "pts": 14},
+            {"name": "Marlow White", "min": 43, "fg": "6-13", "ft": "5-5", "tp": "4-10", "reb": 5, "ast": 2, "pf": 3, "to": 2, "stl": 2, "blk": 3, "pts": 21},
+            {"name": "Clayton Shields", "min": 30, "fg": "5-12", "ft": "0-0", "tp": "2-5", "reb": 6, "ast": 1, "pf": 2, "to": 1, "stl": 1, "blk": 0, "pts": 12},
+            {"name": "Royce Olney", "min": 22, "fg": "0-1", "ft": "2-2", "tp": "0-0", "reb": 1, "ast": 0, "pf": 2, "to": 1, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "David Gibson", "min": 38, "fg": "2-4", "ft": "2-3", "tp": "0-1", "reb": 5, "ast": 3, "pf": 3, "to": 0, "stl": 1, "blk": 0, "pts": 6},
+            {"name": "Shawn Simpson", "min": 9, "fg": "1-2", "ft": "1-2", "tp": "0-0", "reb": 1, "ast": 0, "pf": 4, "to": 1, "stl": 0, "blk": 1, "pts": 3},
+            {"name": "Brian Hayden", "min": 35, "fg": "6-17", "ft": "1-4", "tp": "0-0", "reb": 6, "ast": 1, "pf": 3, "to": 2, "stl": 0, "blk": 0, "pts": 13},
+            {"name": "Greg Schornstein", "min": 13, "fg": "2-5", "ft": "0-0", "tp": "0-1", "reb": 2, "ast": 2, "pf": 2, "to": 2, "stl": 1, "blk": 0, "pts": 4},
+            {"name": "Marty Cotwright", "min": 3, "fg": "0-1", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "UNC Charlotte 49ers",
+          "score": 78,
+          "players": [
+            {"name": "DeMarco Johnson", "min": 18, "fg": "1-4", "ft": "1-2", "tp": "0-0", "reb": 4, "ast": 1, "pf": 0, "to": 1, "stl": 0, "blk": 3, "pts": 3},
+            {"name": "Quincy Alexander", "min": 5, "fg": "0-1", "ft": "1-2", "tp": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 1},
+            {"name": "Bruce Patterson", "min": 18, "fg": "1-5", "ft": "0-0", "tp": "0-0", "reb": 1, "ast": 1, "pf": 4, "to": 1, "stl": 1, "blk": 0, "pts": 2},
+            {"name": "Jarvis Lang", "min": 44, "fg": "6-15", "ft": "7-9", "tp": "0-2", "reb": 15, "ast": 1, "pf": 1, "to": 3, "stl": 0, "blk": 2, "pts": 19},
+            {"name": "Ponce James", "min": 26, "fg": "1-4", "ft": "1-3", "tp": "0-0", "reb": 3, "ast": 2, "pf": 0, "to": 3, "stl": 0, "blk": 0, "pts": 3},
+            {"name": "Roy Wells", "min": 16, "fg": "3-4", "ft": "0-0", "tp": "2-2", "reb": 2, "ast": 0, "pf": 3, "to": 2, "stl": 0, "blk": 0, "pts": 8},
+            {"name": "Bobby Kummer", "min": 29, "fg": "3-9", "ft": "2-2", "tp": "0-2", "reb": 7, "ast": 2, "pf": 1, "to": 0, "stl": 1, "blk": 0, "pts": 8},
+            {"name": "Shanderic Downs", "min": 26, "fg": "6-9", "ft": "0-1", "tp": "2-4", "reb": 1, "ast": 1, "pf": 3, "to": 2, "stl": 0, "blk": 0, "pts": 14},
+            {"name": "Roderick Howard", "min": 21, "fg": "4-8", "ft": "4-4", "tp": "4-8", "reb": 2, "ast": 2, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 16},
+            {"name": "Jermain Parker", "min": 22, "fg": "2-3", "ft": "0-0", "tp": "0-0", "reb": 6, "ast": 0, "pf": 4, "to": 3, "stl": 0, "blk": 3, "pts": 4}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

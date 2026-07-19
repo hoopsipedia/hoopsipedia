@@ -1,0 +1,42 @@
+{
+  "page": 20,
+  "games": [
+    {
+      "date": "1991-02-02",
+      "opponent": "Wake Forest Demon Deacons",
+      "teams": [
+        {
+          "name": "Wake Forest Demon Deacons",
+          "score": 80,
+          "players": [
+            {"name": "Chris King", "min": 37, "fg": "13-21", "tp": "0-1", "ft": "0-0", "reb": 4, "ast": 1, "pf": 2, "to": 1, "stl": 0, "blk": 0, "pts": 26},
+            {"name": "Anthony Tucker", "min": 37, "fg": "4-11", "tp": "0-0", "ft": "3-4", "reb": 7, "ast": 3, "pf": 1, "to": 2, "stl": 1, "blk": 0, "pts": 11},
+            {"name": "Rodney Rogers", "min": 39, "fg": "6-17", "tp": "0-0", "ft": "3-5", "reb": 10, "ast": 2, "pf": 2, "to": 2, "stl": 0, "blk": 2, "pts": 15},
+            {"name": "Robert Siler", "min": 19, "fg": "1-4", "tp": "0-0", "ft": "2-2", "reb": 5, "ast": 0, "pf": 1, "to": 2, "stl": 1, "blk": 0, "pts": 4},
+            {"name": "Derrick McQueen", "min": 26, "fg": "2-5", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 3, "pf": 3, "to": 4, "stl": 3, "blk": 0, "pts": 4},
+            {"name": "Randolph Childress", "min": 26, "fg": "4-11", "tp": "1-4", "ft": "5-5", "reb": 2, "ast": 1, "pf": 3, "to": 1, "stl": 4, "blk": 0, "pts": 14},
+            {"name": "Trelonnie Owens", "min": 12, "fg": "2-2", "tp": "0-0", "ft": "0-0", "reb": 3, "ast": 0, "pf": 1, "to": 1, "stl": 1, "blk": 0, "pts": 4},
+            {"name": "Tom Wise", "min": 3, "fg": "1-1", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Robert Doggett", "min": 1, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ],
+          "checksum_ok": true
+        },
+        {
+          "name": "Virginia Cavaliers",
+          "score": 83,
+          "players": [
+            {"name": "Bryant Stith", "min": 34, "fg": "13-21", "tp": "2-5", "ft": "3-3", "reb": 2, "ast": 1, "pf": 3, "to": 3, "stl": 2, "blk": 1, "pts": 31},
+            {"name": "Kenny Turner", "min": 36, "fg": "5-11", "tp": "0-2", "ft": "0-0", "reb": 6, "ast": 2, "pf": 0, "to": 0, "stl": 2, "blk": 5, "pts": 10},
+            {"name": "Ted Jeffries", "min": 20, "fg": "2-6", "tp": "0-0", "ft": "2-2", "reb": 1, "ast": 1, "pf": 3, "to": 0, "stl": 1, "blk": 0, "pts": 6},
+            {"name": "Cornel Parker", "min": 34, "fg": "1-3", "tp": "0-1", "ft": "3-4", "reb": 6, "ast": 7, "pf": 5, "to": 5, "stl": 2, "blk": 1, "pts": 5},
+            {"name": "John Crotty", "min": 40, "fg": "9-20", "tp": "1-6", "ft": "5-5", "reb": 2, "ast": 2, "pf": 0, "to": 3, "stl": 2, "blk": 0, "pts": 24},
+            {"name": "Matt Blundin", "min": 28, "fg": "1-3", "tp": "0-1", "ft": "0-0", "reb": 7, "ast": 0, "pf": 3, "to": 3, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Dirk Katstra", "min": 8, "fg": "2-2", "tp": "1-1", "ft": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 5}
+          ],
+          "checksum_ok": true
+        }
+      ]
+    }
+  ],
+  "skipped": []
+}

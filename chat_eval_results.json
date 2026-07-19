@@ -1,0 +1,339 @@
+[
+ {
+  "id": "A1",
+  "q": "How many national championships does UCLA have?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 2.5,
+  "notes": [],
+  "answer": "UCLA has **11 national championships**, which is the second-most all-time behind North Carolina (18). \n\nThe Bruins won their titles in: 1964, 1965, 1967, 1968, 1969, 1970, 1971, 1972, 1973, 1975, and 1995. That dominant run from the mid-1960s through the mid-1970sâwinning 10 titles in 12 yearsâis one of the greatest dynasties in college basketball history.\n\nWant to explore more about UCLA's program or compare them to other top programs?"
+ },
+ {
+  "id": "A2",
+  "q": "Who won the 1983 national championship?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 5.5,
+  "notes": [],
+  "answer": "**NC State** won the 1983 national championship. It was their second titleâthey also won in 1974.\n\nThe Wolfpack's 1983 championship is one of the most legendary runs in college basketball history, capped by their upset victory over Houston in the final."
+ },
+ {
+  "id": "A3",
+  "q": "What conference is Gonzaga in?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 2.1,
+  "notes": [],
+  "answer": "Gonzaga is in the **WCC (West Coast Conference)**.\n\nThe Bulldogs are one of the most successful programs in that conference with 24 conference titles and 26 NCAA Tournament appearances. Want to explore more about Gonzaga's program?"
+ },
+ {
+  "id": "A4",
+  "q": "How many Final Fours has Duke been to?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 8.2,
+  "notes": [],
+  "answer": "Duke has been to **18 Final Fours**. The Blue Devils have also won 5 national championships (1991, 1992, 2001, 2010, 2015) and made 48 NCAA Tournament appearances overall.\n\nWant to explore Duke's tournament history in more detail? Here's a link to their profile:"
+ },
+ {
+  "id": "A5",
+  "q": "What year did Michigan win its first championship?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 2.2,
+  "notes": [],
+  "answer": "Michigan won its first NCAA championship in **1989**. They've won two championships total (1989 and 2026).\n\nView [Michigan's profile](https://hoopsipedia.com#team/michigan-wolverines) to explore more about their championship runs."
+ },
+ {
+  "id": "A6",
+  "q": "Who is the all-time wins leader in college basketball?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 3.9,
+  "notes": [],
+  "answer": "**Mike Krzyzewski** is the all-time wins leader in college basketball with **1,193 wins** against 365 losses (76.6% winning percentage) across his coaching career from 1976â2022.\n\nCoach K coached at two schools:\n- **Army** (1976â1980)\n- **Duke** (1981â2022)\n\nHis best season was **1998â99**, when Duke went 37â2. He's followed by Jim Boeheim (Syracuse, 1,097 wins) and Roy Williams (Kansas and North Carolina, 903 wins)."
+ },
+ {
+  "id": "A7",
+  "q": "What is Villanova's mascot?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 1.9,
+  "notes": [],
+  "answer": "Villanova's mascot is the **Wildcats**. \n\nThe program has been quite successful, with 3 national championships (1985, 2016, 2018), 6 Final Fours, and 41 tournament appearances overall."
+ },
+ {
+  "id": "A8",
+  "q": "When did Mercyhurst move to Division I?",
+  "verdict": "FAIL",
+  "status": 200,
+  "latency_s": 2.1,
+  "notes": [
+   "missing any of ['2024']"
+  ],
+  "answer": "I don't have specific information about Mercyhurst's Division I transition date in my current tools. My database focuses on Division I programs from 1949 onward, but I don't have a dedicated tool to look up conference transition histories or when schools moved up divisions.\n\nTo get an accurate answer, I'd recommend checking Mercyhurst's athletic department website or the NCAA's official records. If you're curious about Mercyhurst's Division I basketball history since they joined (including their seasons, records, and tournament appearances), I'd be happy to help with that if you'd like!"
+ },
+ {
+  "id": "B1",
+  "q": "Who has more all-time wins, Kentucky or Kansas, and by how many?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 7.5,
+  "notes": [],
+  "answer": "**Kentucky has more all-time wins by 9 games.**\n\n- **Kentucky Wildcats**: 2,447 wins (784 losses)\n- **Kansas Jayhawks**: 2,438 wins (919 losses)\n\nThe difference is 2,447 - 2,438 = **9 wins**.\n\nBoth are among the elite programs in college basketball history, but Kentucky edges out Kansas for the most all-time victories."
+ },
+ {
+  "id": "B2",
+  "q": "What is the all-time head-to-head record between Duke and North Carolina?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 5.1,
+  "notes": [],
+  "answer": "The all-time head-to-head record between Duke and North Carolina is **North Carolina leads 103-93** in 196 total games.\n\nThis rivalry is one of the most storied in college basketball. Despite Duke's incredible success with 5 national championships, North Carolina's 6 championships and slight edge in their matchups reflect the Tar Heels' historical dominance in the ACC. Want to explore either team's profile or compare them further?"
+ },
+ {
+  "id": "B3",
+  "q": "Compare UCLA and Kentucky: championships, Final Fours, and all-time wins.",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 6.0,
+  "notes": [],
+  "answer": "Here's the head-to-head comparison of UCLA and Kentucky:\n\n| Metric | UCLA | Kentucky |\n|--------|------|----------|\n| **All-Time Wins** | 2,052 | 2,447 |\n| **Championships** | 11 | 8 |\n| **Final Fours** | 19 | 17 |\n| **Elite Eights** | 22 | 25 |\n| **Tournament Appearances** | 52 | 63 |\n\n**Championships by Era:**\n- **UCLA**: 11 titles (1964, 1965, 1967, 1968, 1969, 1970, 1971, 1972, 1973, 1975, 1995) â dominated the 1960s-70s under John Wooden\n- **Kentucky**: 8 titles (1948, 1949, 1951, 1958, 1978, 1996, 1998, 2012) â spread across decades with recent success\n\n**Key Takeaways:**\n- **UCLA** has 3 more championships but fewer all-time wins\n- **Kentucky** leads in total wins (395 more) and tournament appearances (11 more)\n- **UCLA** had a historic championship run (11 titles in 31 years, 1964-1995)\n- **Kentucky** has more elite eights (25 vs 22) and a higher Final Four appearance rate relative to tournament trips\n\nExplore both programs in more detail:"
+ },
+ {
+  "id": "B4",
+  "q": "Which team was better in 2015 by efficiency: Duke or Wisconsin?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 6.3,
+  "notes": [],
+  "answer": "**Wisconsin was slightly better in 2015 by efficiency.** Here's the breakdown:\n\n| Team | Efficiency Rank | adjEM | adjOE | adjDE | Record |\n|------|-----------------|-------|-------|-------|--------|\n| **Wisconsin** | **#2** | **+37.50** | **122.75** | **85.25** | 36-4 |\n| Duke | #4 | +35.32 | 121.66 | 86.34 | 35-4 |\n\nWisconsin's efficiency margin was +2.18 points per 100 possessions better than Duke. They also ranked higher overall (#2 vs #4 nationally) and had a slightly better record. Wisconsin was especially strong on offense (122.75 adjOE) and played a tougher schedule (SOS rank #4 vs Duke's #9).\n\nThat said, Duke won the national championship that year, while Wisconsin made it to the Final Four as a 7-seed. Both were phenomenal teamsâDuke's tournament performance was just exceptional."
+ },
+ {
+  "id": "B5",
+  "q": "Who did Villanova beat in each round of the 2016 tournament?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 4.4,
+  "notes": [],
+  "answer": "Villanova beat the following teams in each round of the 2016 NCAA Tournament:\n\n- **Round 1**: North Carolina Asheville (86-56)\n- **Round 2**: Iowa (87-68)\n- **Sweet 16**: Miami (92-69)\n- **Elite Eight**: Kansas (64-59)\n- **Final Four**: Oklahoma (95-51)\n- **Championship**: North Carolina (77-74)\n\nThat legendary championship game against UNC came down to the final shotâKris Jenkins hit a three-pointer with 4.7 seconds left to secure Villanova's national title. It was one of the most dramatic endings in tournament history!"
+ },
+ {
+  "id": "B6",
+  "q": "Which active program has the longest current NCAA tournament appearance streak?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 2.5,
+  "notes": [],
+  "answer": "I don't have a direct tool to query active tournament appearance streaks across all programs. However, I can help you find this information by checking specific programs you suspect might have long streaks.\n\nA few perennial tournament teams come to mindâprograms like Duke, Kansas, Gonzaga, and a few others have had extended runs in recent decades. \n\nWould you like me to look up the tournament histories for specific programs you're curious about? Or if you know which teams typically make the tournament consistently, I can check their recent season-by-season records to count their consecutive appearances.\n\nAlternatively, if you have a program in mind that you think might have the longest active streak, just let me know the name and I can verify it for you!"
+ },
+ {
+  "id": "B7",
+  "q": "List the last five national champions in order.",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 7.6,
+  "notes": [],
+  "answer": "Here are the last five national champions in order:\n\n1. **2026** â [Michigan Wolverines](https://hoopsipedia.com/#team/michigan-wolverines) (2nd championship)\n2. **2025** â [Florida Gators](https://hoopsipedia.com/#team/florida-gators) (3rd championship)\n3. **2024** â [UConn Huskies](https://hoopsipedia.com/#team/uconn-huskies) (back-to-back)\n4. **2023** â [UConn Huskies](https://hoopsipedia.com/#team/uconn-huskies) (6th championship all-time)\n5. **2022** â [Kansas Jayhawks](https://hoopsipedia.com/#team/kansas-jayhawks) (4th championship)\n\nUConn has had a dominant stretch, winning consecutive championships in 2023-24."
+ },
+ {
+  "id": "B8",
+  "q": "What was Gonzaga's best season ever by HTSS score?",
+  "verdict": "FAIL",
+  "status": 200,
+  "latency_s": 4.5,
+  "notes": [
+   "missing any of ['2021', '2017']"
+  ],
+  "answer": "**Gonzaga's best season by HTSS score was 2020-21 with an 80.34 rating, ranking #31 all-time.**\n\nThat was a transcendent season â the Bulldogs went 28-1 in the regular season and advanced to the National Championship game before falling to Baylor. An 80.34 HTSS score puts them in the \"Transcendent\" tier (80-85 range), which is just shy of \"GOAT\" status.\n\nTheir second-best season was 2018-19 with a 75.39 score (Elite tier), when they made a Final Four run.\n\nWould you like to explore more about that magical 2020-21 season or compare it to other top programs?"
+ },
+ {
+  "id": "B9",
+  "q": "Which coach has more career wins, Coach K or Jim Boeheim?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 2.6,
+  "notes": [],
+  "answer": "**Coach K has more career wins.** Mike Krzyzewski finished with **1,193 wins** compared to Jim Boeheim's **1,097 wins** â a difference of 96 wins.\n\nCoach K coached from 1976-2022 with a 76.6% winning percentage, while Boeheim coached from 1977-2023 with a 71.7% winning percentage. Coach K's best season was 1998-99 (37-2), and Boeheim's was 2011-12 (34-3)."
+ },
+ {
+  "id": "B10",
+  "q": "How did the 12-seeds do against 5-seeds historically in the tournament?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 4.3,
+  "notes": [],
+  "answer": "In matchups between 5-seeds and 12-seeds, the **5-seeds have dominated historically**, winning **103 out of 160 games (64.4%)**, while 12-seeds have pulled off **57 upsets (35.6%)**.\n\nThat said, 12-seeds have had some notable success. They've managed to upset 5-seeds roughly 1 in 3 times, which is a meaningful upset rate. Some memorable 12-seed victories include:\n\n- **1994**: Tulsa beat UCLA 112-102\n- **1999**: Southwest Missouri State beat Wisconsin 43-32 (a defensive slugfest)\n- **1991**: Temple beat Purdue 80-63 and Eastern Michigan beat Mississippi State 76-56\n- **1987**: Wyoming beat Virginia 64-60 and Austin Peay beat Illinois 68-67\n\nSo while 5-seeds are clear favorites in this matchup, 12-seeds have proven they can steal games at better than 1-in-3 odds. Interested in exploring more tournament upset trends?"
+ },
+ {
+  "id": "C1",
+  "q": "Who won the 2026 national championship and who did they beat in the final?",
+  "verdict": "FAIL",
+  "status": 200,
+  "latency_s": 4.7,
+  "notes": [
+   "missing any of ['UConn', 'Connecticut']",
+   "missing any of ['69', '63']"
+  ],
+  "answer": "The **Michigan Wolverines** won the 2026 national championship. However, the data I have doesn't include the specific opponent they faced in the final game. \n\nThis was Michigan's second national championship in program historyâthey previously won in 1989. You can explore Michigan's complete championship history and program details here:For more detailed information about the championship game matchup, you might want to check the bracket view on Hoopsipedia."
+ },
+ {
+  "id": "C2",
+  "q": "How many championships does Houston have?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 5.3,
+  "notes": [],
+  "answer": "Houston has **0 NCAA championships**. \n\nHowever, the Cougars have had a very successful program with 7 Final Four appearances, 9 Elite Eight finishes, and 16 conference titles. They've made 27 NCAA Tournament appearances overall, so while they haven't won it all, they've been a perennial tournament team.\n\nYou can explore Houston's full profile here:"
+ },
+ {
+  "id": "C3",
+  "q": "Tell me about UTEP's 1966 championship.",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 4.5,
+  "notes": [],
+  "answer": "Perfect! UTEP won the **1966 NCAA Championship**âtheir only national title. It remains one of the program's defining moments.\n\nHere are the key facts about UTEP:\n\n- **Championship Count**: 1 (1966)\n- **Final Fours**: 1 total appearance\n- **Tournament Success**: 18 tournament appearances overall, with 2 Elite Eight finishes and 4 Sweet Sixteen appearances\n- **All-Time Record**: 1,445 wins, 1,113 losses\n- **Conference Titles**: 10\n- **Notable**: 4 players drafted in the NBA First Round; 2 All-Americans in program history\n\nThe 1966 championship is iconic in UTEP basketball lore. It was a remarkable run that established the Miners as a national powerhouse during that era.\n\nWant to explore more details about that championship season? I can pull up their season-by-season record, the tournament bracket, or compare them to other championship teams from that era."
+ },
+ {
+  "id": "C4",
+  "q": "What happened to Louisville's 2013 championship?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 3.6,
+  "notes": [],
+  "answer": "Louisville's 2013 NCAA championship was **vacated due to NCAA violations**. While the Cardinals won the national tournament that year on the court, the title was stripped by the NCAA and is not recognized in the official record.\n\nAccording to Hoopsipedia's data, Louisville's official championship count stands at **2** (1980 and 1986), with the 2013 title removed from their record. The 2013 championship is one of the notable cases in college basketball history where a team's tournament success was overshadowed by subsequent NCAA penalties."
+ },
+ {
+  "id": "C5",
+  "q": "Who was ranked #1 in the final AP poll of 2024?",
+  "verdict": "FAIL",
+  "status": 200,
+  "latency_s": 2.5,
+  "notes": [
+   "missing any of ['UConn', 'Connecticut', 'Houston', 'Purdue']"
+  ],
+  "answer": "I don't have a tool to query AP Poll rankings directly. However, I can tell you that if you're asking about the final AP Poll before the 2024 NCAA Tournament, that would typically be in early March 2024.\n\nTo help you find this information more reliably, I could:\n1. Look up the **2024 NCAA Championship winner** to see who won it all that year\n2. Search for a specific team's 2024 season record and ranking history\n\nWould you like me to look up who won the 2024 championship, or are you interested in a specific team's 2024 season details?"
+ },
+ {
+  "id": "C6",
+  "q": "How many teams from the Big East made the 2026 tournament?",
+  "verdict": "JUDGE",
+  "status": 200,
+  "latency_s": 8.5,
+  "notes": [],
+  "answer": "I can see the regular season records, but these results don't explicitly show tournament appearance/seeding. However, based on the 2025-26 season records, I can infer which teams likely made the tournament based on typical selection standards. Let me check the tournament history more directly.\n\nThe data shows the Big East had strong teams in 2026, but to give you the definitive number of NCAA Tournament berths, I'd need to check the actual tournament bracket or championship results. Based on the regular season performance shown, the top candidates would be:\n\n- **UConn** (29-5, #2 AP preseason)\n- **St. John's** (28-6, #5 AP preseason)  \n- **Villanova** (24-8)\n- **Seton Hall** (21-12)\n\nHowever, I don't have a direct tool to query the complete 2026 NCAA Tournament bracket. The 2025-26 season is still in progress in the real world, so Hoopsipedia may not have finalized tournament data yet. Could you clarify if you're asking about the 2026 tournament (which would have taken place in March 2026), or if you meant a different year?"
+ },
+ {
+  "id": "C7",
+  "q": "What was the biggest upset in tournament history by seed?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 5.2,
+  "notes": [],
+  "answer": "By seed matchup, the **8-seed vs 9-seed** is the biggest upset *category* with the highest upset frequency. In their 159 matchups since 1985, **9-seeds have actually beaten 8-seeds 84 times (52.83% upset rate)** â more than half the time! This is the only matchup where the lower seed wins more often than not.\n\nHere's the full upset breakdown by seed (1985-present, 64-team era):\n\n| Matchup | Higher Seed Wins | Lower Seed Upsets | Upset % |\n|---------|-----------------|-------------------|---------|\n| **1v16** | 158 | 2 | **1.25%** (rarest) |\n| **2v15** | 149 | 11 | 6.88% |\n| **3v14** | 137 | 23 | 14.38% |\n| **4v13** | 127 | 32 | 20.13% |\n| **5v12** | 103 | 57 | 35.63% |\n| **6v11** | 97 | 65 | 40.12% |\n| **7v10** | 94 | 65 | 40.88% |\n| **8v9** | 75 | 84 | **52.83%** (most common) |\n\nThe 1-seed vs 16-seed matchup is the most predictableâonly 2 upsets ever. The deeper you go into the bracket and the closer the seeds get, the more upsets happen. At the 8-9 level, it's basically a coin flip.\n\nWant to [explore tournament upset history in detail](https://hoopsipedia.com#upsets)?"
+ },
+ {
+  "id": "C8",
+  "q": "Which team returned to Division I in 2009 after dropping down decades earlier?",
+  "verdict": "FAIL",
+  "status": 200,
+  "latency_s": 2.6,
+  "notes": [
+   "missing any of ['Seattle']"
+  ],
+  "answer": "I don't have a specific tool designed to search for teams by their Division I history or reinstatement dates. This is a pretty niche historical detail that would require information about which teams left Division I and when they returned.\n\nDo you happen to know the team name or region? If you can give me a team name to look up, I can pull their full history from Hoopsipedia, which might include details about their Division I status over time. Alternatively, if you know the approximate decade they dropped down, that could help narrow it down."
+ },
+ {
+  "id": "D1",
+  "q": "Who won the 2020 NCAA tournament?",
+  "verdict": "FAIL",
+  "status": 200,
+  "latency_s": 3.7,
+  "notes": [
+   "missing any of ['cancel', 'COVID', 'no tournament', 'was not held', \"wasn't held\"]"
+  ],
+  "answer": "If you meant the 2021 NCAA Tournament (the first one after the pandemic), **Baylor** won itâtheir first and only national championship. Would you like to know more about that Baylor team or any other tournament?"
+ },
+ {
+  "id": "D2",
+  "q": "Tell me about Houston winning the 2025 championship.",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 2.9,
+  "notes": [],
+  "answer": "Actually, **Florida won the 2025 NCAA Championship**, not Houston. The Gators claimed their third national title in program historyâtheir first since back-to-back championships in 2006 and 2007.\n\nThis was a significant achievement for Florida, adding to their championship legacy. It's their third title overall across 2006, 2007, and 2025.\n\nWould you like to know more about Houston's 2024-25 season, or explore Florida's championship run?"
+ },
+ {
+  "id": "D3",
+  "q": "Who was Duke's leading scorer in the 2015 championship game?",
+  "verdict": "JUDGE",
+  "status": 200,
+  "latency_s": 2.3,
+  "notes": [],
+  "answer": "I don't have a tool that retrieves player-level statistics or box scores from specific games. Hoopsipedia's database covers team records, tournament results, and historical rankings, but not individual player scoring in particular games.\n\nHowever, I can tell you that Duke won the 2015 NCAA Championship, and I can look up their roster and tournament record from that season if that would help. For detailed box score information about the championship game itself, you'd need to check ESPN's box score archive or another resource with play-by-play data.\n\nWould you like me to pull up Duke's 2014-15 season record or their tournament run instead?"
+ },
+ {
+  "id": "D4",
+  "q": "What was the final score of the 1985 Villanova-Georgetown title game?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 6.9,
+  "notes": [],
+  "answer": "**Villanova 66, Georgetown 64**\n\nOne of the greatest upsets in NCAA Tournament history! Villanova, a #8 seed, defeated #1 seed Georgetown in the 1985 national championship game on April 1st. The Wildcats' stunning victory remains iconicâthey shot 78.6% from the field and held Georgetown's Hoya defense at bay in what's considered one of the most thrilling title games ever played."
+ },
+ {
+  "id": "D5",
+  "q": "Who won the 2018 women's national championship?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 1.7,
+  "notes": [],
+  "answer": "I appreciate the question, but I need to let you know that Hoopsipedia's database focuses on **men's college basketball**. The tools and data I have access to cover 365+ Division I men's programs from 1949 to 2026, but don't include women's basketball.\n\nFor information about the 2018 women's NCAA championship, I'd recommend checking the official NCAA website or other women's basketball-specific resources.\n\nIs there anything about men's college basketball history I can help you with instead?"
+ },
+ {
+  "id": "D6",
+  "q": "How many points did Michael Jordan score in the 1982 title game?",
+  "verdict": "JUDGE",
+  "status": 200,
+  "latency_s": 3.0,
+  "notes": [],
+  "answer": "I appreciate the question, but Michael Jordan's 1982 championship game performance is actually outside my scope â Hoopsipedia focuses on **college basketball history**, and that game was an NBA Finals matchup (Lakers vs. 76ers).\n\nHowever, if you're interested in **college basketball**, I'd be happy to help! For example, I could:\n- Look up **North Carolina's 1982 championship season** (when MJ was a freshman on the Tar Heels)\n- Find his college stats or tournament performance\n- Explore that era of college basketball\n\nWould any of those interest you?"
+ },
+ {
+  "id": "D7",
+  "q": "Did Kentucky make the 1988 tournament?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 6.1,
+  "notes": [],
+  "answer": "Yes, **Kentucky did make the 1988 NCAA Tournament** (the tournament played in March/April 1988, for the 1987-88 season). They finished the regular season 18-11, received an #8 seed, but lost in the first round. They went 10-8 in SEC conference play that year under coach Eddie Sutton."
+ },
+ {
+  "id": "D8",
+  "q": "Which team won 38 games in 2024?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 1.9,
+  "notes": [],
+  "answer": "I don't have a tool that allows me to search directly for teams by win total in a specific season. To find which team won 38 games in 2024, I would need to look up individual teams' season records.\n\nCould you provide more context? For example:\n- Do you remember the team name or region?\n- Was this the 2023-24 or 2024-25 season?\n- Do you know if they made a deep NCAA Tournament run?\n\nWith that information, I can look up their exact record for you."
+ },
+ {
+  "id": "D9",
+  "q": "asdfghjkl what is the meaning of basketball qwerty?",
+  "verdict": "JUDGE",
+  "status": 200,
+  "latency_s": 2.3,
+  "notes": [],
+  "answer": "I think there might be some keyboard mashing in there! ð\n\nTo clarify: I'm here to help with **college basketball history and statistics** from Hoopsipedia. I can answer questions like:\n\n- Team records, championships, and all-time stats\n- Head-to-head matchups between schools\n- NCAA Tournament history and upset trends\n- Coach records and NBA draft history\n- Season-by-season breakdowns and efficiency ratings\n- Historical program comparisons\n\nIs there a college basketball question I can help you with? Feel free to ask about any team, coach, tournament, or era!"
+ },
+ {
+  "id": "D10",
+  "q": "Compare the 1996 Kentucky team to the 2021 Gonzaga team. Who wins?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 9.9,
+  "notes": [],
+  "answer": "This is a fascinating matchup! Here's the breakdown:\n\n## The Teams\n\n**1996 Kentucky Wildcats** â National Champions\n- Record: 34-2 (Perfect 16-0 SEC)\n- Coach: Rick Pitino\n- Seeded: #1\n- HTSS Rank: 11 (83.81 â Transcendent tier)\n\n**2021 Gonzaga Bulldogs** â National Runners-Up\n- Record: 31-1 (Perfect 15-0 WCC)\n- Coach: Mark Few\n- Seeded: #1\n- HTSS Rank: 31 (80.34 â Elite tier)\n\n## Efficiency Comparison\n\n| Metric | 1996 Kentucky | 2021 Gonzaga |\n|--------|---------------|-------------|\n| **Adj. Efficiency Margin** | 43.3 | 37.5 |\n| **Adj. Offensive Efficiency** | 126.65 | 124.75 |\n| **Adj. Defensive Efficiency** | 83.35 | 87.25 |\n| **SOS Rank** | 7 | 74 |\n| **PPG For** | 91.4 | 91.0 |\n| **PPG Against** | 69.4 | 69.7 |\n\n## The Verdict\n\n**Kentucky wins, and it's not particularly close.** \n\nThe 1996 Wildcats' 43.3 efficiency margin is absolutely eliteânearly **6 points better** than Gonzaga's already-impressive 37.5. They played a significantly harder schedule (much better SOS) and had a superior defense (83.35 vs 87.25 in adjusted defensive efficiency). Kentucky also won their championship on the court, while Gonzaga fell to Baylor in the final.\n\nThe 1996 Kentucky team ranks among the greatest college basketball teams ever assembled. While the 2021 Gonzaga team was exceptionalâarguably the best in program historyâKentucky's combination of elite offense, suffocating defense, and championship pedigree gives them the edge in this hypothetical matchup."
+ }
+]

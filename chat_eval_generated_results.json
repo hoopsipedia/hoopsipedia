@@ -1,0 +1,3059 @@
+[
+ {
+  "id": "G001",
+  "q": "How many national championships does Indiana have?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 2.6,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "blueblood",
+   "kind": "champ_count"
+  },
+  "notes": [],
+  "answer": "Indiana has **5 national championships**, won in:\n- 1940\n- 1953\n- 1976\n- 1981\n- 1987\n\nThe Hoosiers also have 8 Final Four appearances and 22 conference titles. You can explore more about their program history on [their profile page](https://hoopsipedia.com#team/indiana-hoosiers)."
+ },
+ {
+  "id": "G002",
+  "q": "How many national championships does Utah have?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 3.4,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "blueblood",
+   "kind": "champ_count"
+  },
+  "notes": [],
+  "answer": "The **Utah Utes** have **1 national championship**, which they won in **1944**.\n\nThe Utah program has had solid postseason success beyond that championshipâthey've made 4 Final Fours, 5 Elite Eights, and 11 Sweet Sixteens overall, along with 31 tournament appearances. They've also won 20 conference titles.\n\nCheck out [Utah's full profile](https://hoopsipedia.com/#team/utah-utes) to explore more of their history!"
+ },
+ {
+  "id": "G003",
+  "q": "How many national championships does Michigan have?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 6.7,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "blueblood",
+   "kind": "champ_count"
+  },
+  "notes": [],
+  "answer": "**Michigan has 2 national championships**, won in **1989 and 2026**.\n\nHere's the breakdown for the Michigan Wolverines:\n- **Championships:** 2\n- **Final Fours:** 5\n- **All-time record:** 1,649-1,125\n\n(If you were asking about Michigan State instead, they also have 2 championships, won in 1979 and 2000.)"
+ },
+ {
+  "id": "G004",
+  "q": "How many national championships does Illinois Fighting have?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 3.8,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "blueblood",
+   "kind": "champ_count_zero"
+  },
+  "notes": [],
+  "answer": "Illinois Fighting Illini has **0 national championships**.\n\nHowever, the program has been quite successful overall:\n- **5 Final Four appearances**\n- **8 Elite Eight appearances**\n- **17 conference titles**\n- **36 NCAA Tournament appearances**\n\nTheir closest tournament run to a championship came in 2005 when they made the Final Four, but they haven't won a national title in the NCAA Tournament era.\n\nCheck out [Illinois's full profile](javascript:void(0)) to explore more of their tournament history and season-by-season records!"
+ },
+ {
+  "id": "G005",
+  "q": "How many national championships does Notre Dame Fighting have?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 3.5,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "blueblood",
+   "kind": "champ_count_zero"
+  },
+  "notes": [],
+  "answer": "Notre Dame Fighting Irish has **0 national championships**. \n\nThe program has had some tournament success with 1 Final Four appearance, 6 Elite Eight finishes, and 37 tournament appearances overall, but they've never won an NCAA championship. They do have 1 conference title to their credit."
+ },
+ {
+  "id": "G006",
+  "q": "How many national championships does Purdue have?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 14.1,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "blueblood",
+   "kind": "champ_count_zero"
+  },
+  "notes": [],
+  "answer": "Purdue has **0 national championships**. \n\nDespite being one of the winningest programs in college basketball history with 1,980 all-time wins, the Boilermakers have never won an NCAA championship. They've made 3 Final Fours and reached 5 Elite Eights, but haven't captured a title yet.\n\nIf you'd like to explore Purdue's program in more detail, check out their profile:"
+ },
+ {
+  "id": "G007",
+  "q": "How many national championships does Syracuse have?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 3.5,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "blueblood",
+   "kind": "champ_count"
+  },
+  "notes": [],
+  "answer": "Syracuse has **1 national championship**, won in **2003**.\n\nThe Orange have also made 6 Final Fours and 39 NCAA Tournament appearances overall. They're one of the most successful programs in the ACC with 12 conference titles to their name.\n\nWant to explore Syracuse's season-by-season record or tournament history? [Check out their full profile.](navigateUser)"
+ },
+ {
+  "id": "G008",
+  "q": "How many national championships does UConn have?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 5.1,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "blueblood",
+   "kind": "champ_count"
+  },
+  "notes": [],
+  "answer": "**UConn has 6 national championships**, won in:\n- 1999\n- 2004\n- 2011\n- 2014\n- 2023\n- 2024\n\nTheir most recent titles came in back-to-back years (2023 and 2024). The Huskies have been to 7 Final Fours and made 37 NCAA Tournament appearances overall.\n\nWant to explore more about UConn's program history?"
+ },
+ {
+  "id": "G009",
+  "q": "How many national championships does Bucknell have?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 6.1,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "major",
+   "kind": "champ_count_zero"
+  },
+  "notes": [],
+  "answer": "Bucknell has **0 national championships**. \n\nThe Bison compete in the Patriot League and have made 7 NCAA Tournament appearances, but have never won a national title. They have been quite successful in their conference, though, with 27 conference championship titles."
+ },
+ {
+  "id": "G010",
+  "q": "How many national championships does South Carolina have?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 6.3,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "major",
+   "kind": "champ_count_zero"
+  },
+  "notes": [],
+  "answer": "The **South Carolina Gamecocks** have **0 national championships**. \n\nHowever, they've had notable success in recent years, reaching the **Final Four twice** and making **13 NCAA Tournament appearances**. They've also won **2 conference titles** in the SEC.\n\nYou might be thinking of their recent success â they've been a tournament contender in the modern era with strong NCAA Tournament runs."
+ },
+ {
+  "id": "G011",
+  "q": "How many national championships does Georgetown have?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 3.2,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "major",
+   "kind": "champ_count"
+  },
+  "notes": [],
+  "answer": "Georgetown has **1 national championship**, won in **1984**. \n\nThe Hoyas have had an impressive tournament history with 5 Final Four appearances and 31 NCAA Tournament berths overall, but that 1984 title remains their only national championship."
+ },
+ {
+  "id": "G012",
+  "q": "How many national championships does Duquesne have?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 6.1,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "major",
+   "kind": "champ_count_zero"
+  },
+  "notes": [],
+  "answer": "Duquesne has **0 national championships**. \n\nWhile the Dukes have had success in their historyâwith 6 NCAA Tournament appearances, 2 Elite Eights, and 4 conference titlesâthey haven't won an NCAA Division I national championship."
+ },
+ {
+  "id": "G013",
+  "q": "How many national championships does UTEP have?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 4.4,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "major",
+   "kind": "champ_count"
+  },
+  "notes": [],
+  "answer": "UTEP has **1 national championship**, won in **1966**.\n\nThe Miners are one of college basketball's historic programs with a solid tournament resumeâ18 NCAA Tournament appearances, 1 Final Four, 2 Elite Eights, and 4 Sweet Sixteens. They've also won 10 conference titles and produced 4 NBA first-round picks."
+ },
+ {
+  "id": "G014",
+  "q": "How many national championships does Iowa State have?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 3.0,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "major",
+   "kind": "champ_count_zero"
+  },
+  "notes": [],
+  "answer": "Iowa State has **0 national championships**. \n\nThe Cyclones have never won an NCAA Division I championship, though they've had a strong program history with 1 Final Four appearance, 3 Elite Eight appearances, and 23 total tournament appearances. They also have 4 conference titles to their name."
+ },
+ {
+  "id": "G015",
+  "q": "How many national championships does Western Michigan have?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 5.6,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "major",
+   "kind": "champ_count_zero"
+  },
+  "notes": [],
+  "answer": "Western Michigan has **0 national championships**. \n\nThe Broncos compete in the MAC (Mid-American Conference) and have made 4 NCAA Tournament appearances and 1 Sweet Sixteen, but have never won a national title."
+ },
+ {
+  "id": "G016",
+  "q": "How many national championships does Baylor have?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 4.7,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "major",
+   "kind": "champ_count"
+  },
+  "notes": [],
+  "answer": "Baylor has **1 national championship**, which they won in **2021**. That was a landmark season for the programâthe Bears went 28-2 and defeated Gonzaga 86-70 in the championship game."
+ },
+ {
+  "id": "G017",
+  "q": "How many national championships does Loyola Marymount have?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 2.6,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "mid",
+   "kind": "champ_count_zero"
+  },
+  "notes": [],
+  "answer": "Loyola Marymount has **0 national championships**. \n\nThe Lions have made 5 NCAA Tournament appearances and won 1 Elite Eight (their best tournament finish), along with 5 conference titles, but have never won the national championship."
+ },
+ {
+  "id": "G018",
+  "q": "How many national championships does Army Black have?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 2.4,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "mid",
+   "kind": "champ_count_zero"
+  },
+  "notes": [],
+  "answer": "Army Black Knights have **0 national championships**. \n\nThe program has an all-time record of 1,332-1,367 and competes in the Patriot League, but has never won an NCAA championship or made a Final Four."
+ },
+ {
+  "id": "G019",
+  "q": "How many national championships does Cornell Big have?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 2.6,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "mid",
+   "kind": "champ_count_zero"
+  },
+  "notes": [],
+  "answer": "Cornell Big Red has **0 national championships**. \n\nThe team has had some success in the tournament with 5 NCAA Tournament appearances and 2 Sweet 16 finishes, plus 8 Ivy League conference titles, but they haven't won an NCAA championship.\n\nCheck out [Cornell's profile](https://hoopsipedia.com) to see their full history and tournament record!"
+ },
+ {
+  "id": "G020",
+  "q": "How many national championships does Louisiana Tech have?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 5.1,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "mid",
+   "kind": "champ_count_zero"
+  },
+  "notes": [],
+  "answer": "Louisiana Tech has **0 national championships**. \n\nThe Bulldogs have appeared in the NCAA Tournament 5 times and reached the Sweet Sixteen once, but have never won a championship. They currently compete in Conference USA."
+ },
+ {
+  "id": "G021",
+  "q": "How many national championships does UAB have?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 3.4,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "mid",
+   "kind": "champ_count_zero"
+  },
+  "notes": [],
+  "answer": "UAB has **0 national championships**. \n\nThe Blazers have had a solid tournament history with 17 NCAA Tournament appearances, including 1 Elite Eight showing and 3 Sweet Sixteen runs, but have never won a national title. They've been more successful on the conference level with 14 conference championships."
+ },
+ {
+  "id": "G022",
+  "q": "How many national championships does Pacific have?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 2.6,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "mid",
+   "kind": "champ_count_zero"
+  },
+  "notes": [],
+  "answer": "Pacific has **0 national championships**. \n\nThe Tigers have made the tournament 9 times and reached the Elite Eight once, but have never won a national title. They play in the WCC (West Coast Conference) and have won 15 conference titles throughout their history."
+ },
+ {
+  "id": "G023",
+  "q": "How many national championships does Weber State have?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 2.7,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "mid",
+   "kind": "champ_count_zero"
+  },
+  "notes": [],
+  "answer": "Weber State has **0 national championships**. \n\nThe Wildcats have been competitive in the Big Sky Conference with 32 conference titles, and they've made 16 NCAA Tournament appearances with 2 Sweet Sixteen runs, but they haven't won an NCAA national championship."
+ },
+ {
+  "id": "G024",
+  "q": "How many national championships does Rice have?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 2.2,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "mid",
+   "kind": "champ_count_zero"
+  },
+  "notes": [],
+  "answer": "Rice has **0 national championships**. The Owls have made 4 NCAA Tournament appearances and won 3 Sweet Sixteen games, but have never won the national title. They've been more successful in conference play, winning 10 conference championships in their history."
+ },
+ {
+  "id": "G025",
+  "q": "How many national championships does Florida Gulf Coast have?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 3.2,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "low",
+   "kind": "champ_count_zero"
+  },
+  "notes": [],
+  "answer": "Florida Gulf Coast has **0 national championships**. \n\nWhile FGCU has had a successful Division I program with 3 NCAA Tournament appearances and a memorable Sweet Sixteen run in 2013 (the famous \"Dunk City\" team), they have not won the national championship."
+ },
+ {
+  "id": "G026",
+  "q": "How many national championships does South Carolina Upstate have?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 2.6,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "low",
+   "kind": "champ_count_zero"
+  },
+  "notes": [],
+  "answer": "South Carolina Upstate has **0 national championships**. The Spartans compete in the Big South Conference and have an all-time record of 225-374 with no tournament appearances to date."
+ },
+ {
+  "id": "G027",
+  "q": "How many national championships does Cleveland State have?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 2.4,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "low",
+   "kind": "champ_count_zero"
+  },
+  "notes": [],
+  "answer": "Cleveland State has **0 national championships**. The Vikings play in the Horizon League and have made the NCAA Tournament 3 times, with one Sweet Sixteen appearance, but have never won an NCAA championship."
+ },
+ {
+  "id": "G028",
+  "q": "How many national championships does Bryant have?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 3.1,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "low",
+   "kind": "champ_count_zero"
+  },
+  "notes": [],
+  "answer": "Bryant has **0 national championships**. The Bulldogs compete in the America East Conference and have made 2 NCAA Tournament appearances in their history, but have not won a championship."
+ },
+ {
+  "id": "G029",
+  "q": "How many national championships does Maine Black have?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 7.7,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "low",
+   "kind": "champ_count_zero"
+  },
+  "notes": [],
+  "answer": "Maine Black Bears have **0 national championships**. The program has an all-time record of 872 wins and 1,125 losses, but has never won an NCAA Division I title. They also have not made a Final Four or appeared in the NCAA Tournament."
+ },
+ {
+  "id": "G030",
+  "q": "How many national championships does North Alabama have?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 4.0,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "low",
+   "kind": "champ_count_zero"
+  },
+  "notes": [],
+  "answer": "North Alabama has **0 national championships**. The Lions compete in the ASUN Conference and have not made an NCAA Tournament appearance in the Division I era covered by Hoopsipedia's database."
+ },
+ {
+  "id": "G031",
+  "q": "How many national championships does Ball State have?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 2.4,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "low",
+   "kind": "champ_count_zero"
+  },
+  "notes": [],
+  "answer": "Ball State has **0 national championships**. The Cardinals play in the MAC Conference and have made 7 NCAA Tournament appearances with 1 Sweet Sixteen, but have never won a national title."
+ },
+ {
+  "id": "G032",
+  "q": "How many national championships does North Dakota Fighting have?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 4.2,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "low",
+   "kind": "champ_count_zero"
+  },
+  "notes": [],
+  "answer": "North Dakota Fighting Hawks has **0 national championships**. \n\nThe school has appeared in the NCAA Tournament once but has not won a championship. Their all-time record is 389-349. If you were thinking of North Dakota State, they also have 0 championships but have made it to the tournament 4 times and had a Sweet Sixteen appearance."
+ },
+ {
+  "id": "G033",
+  "q": "Who won the 1939 national championship?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 3.6,
+  "tags": {
+   "tool": "getChampionByYear",
+   "era": "1930s",
+   "kind": "champ_by_year"
+  },
+  "notes": [],
+  "answer": "**Oregon** won the 1939 NCAA championshipâthe very first national championship in college basketball history. This remains their only title."
+ },
+ {
+  "id": "G034",
+  "q": "Who won the 1941 national championship?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 4.0,
+  "tags": {
+   "tool": "getChampionByYear",
+   "era": "1940s",
+   "kind": "champ_by_year"
+  },
+  "notes": [],
+  "answer": "The **Wisconsin Badgers** won the 1941 NCAA national championship. It remains their only national title in program history."
+ },
+ {
+  "id": "G035",
+  "q": "Who won the 1943 national championship?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 2.1,
+  "tags": {
+   "tool": "getChampionByYear",
+   "era": "1940s",
+   "kind": "champ_by_year"
+  },
+  "notes": [],
+  "answer": "**Wyoming** won the 1943 NCAA national championship. It remains their only championship in program history.\n\nInterestingly, this was during the early years of the NCAA Tournamentâthe tournament only began in 1939, so this was just the 5th championship."
+ },
+ {
+  "id": "G036",
+  "q": "Who won the 1945 national championship?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 3.8,
+  "tags": {
+   "tool": "getChampionByYear",
+   "era": "1940s",
+   "kind": "champ_by_year"
+  },
+  "notes": [],
+  "answer": "**Oklahoma State** won the 1945 NCAA basketball championship. This was one of their two national titles; they also won in 1946, back-to-back championships during that era.\n\nInterested in learning more about Oklahoma State's program history?"
+ },
+ {
+  "id": "G037",
+  "q": "Who won the 1947 national championship?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 3.2,
+  "tags": {
+   "tool": "getChampionByYear",
+   "era": "1940s",
+   "kind": "champ_by_year"
+  },
+  "notes": [],
+  "answer": "**Holy Cross** won the 1947 NCAA National Championship. It's their only national title in program history.\n\nCheck out the [Holy Cross Crusaders profile](https://hoopsipedia.com/#team/holy-cross-crusaders) to explore more about their program history and championship run!"
+ },
+ {
+  "id": "G038",
+  "q": "Who won the 1949 national championship?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 3.9,
+  "tags": {
+   "tool": "getChampionByYear",
+   "era": "1940s",
+   "kind": "champ_by_year"
+  },
+  "notes": [],
+  "answer": "**Kentucky Wildcats** won the 1949 national championship. This was their second consecutive title (they also won in 1948).\n\nKentucky has won 8 national championships total â in 1948, 1949, 1951, 1958, 1978, 1996, 1998, and 2012.\n\nCheck out [Kentucky's full profile](navigateUser) to explore more about their storied history."
+ },
+ {
+  "id": "G039",
+  "q": "Who won the 1951 national championship?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 3.6,
+  "tags": {
+   "tool": "getChampionByYear",
+   "era": "1950s",
+   "kind": "champ_by_year"
+  },
+  "notes": [],
+  "answer": "**Kentucky** won the 1951 NCAA championship. It was one of their 8 national titles. The Wildcats have been champions in 1948, 1949, 1951, 1958, 1978, 1996, 1998, and 2012."
+ },
+ {
+  "id": "G040",
+  "q": "Who won the 1953 national championship?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 4.1,
+  "tags": {
+   "tool": "getChampionByYear",
+   "era": "1950s",
+   "kind": "champ_by_year"
+  },
+  "notes": [],
+  "answer": "**Indiana** won the 1953 national championship. It was their second titleâthey also won in 1940. Indiana has captured 5 national championships total (1940, 1953, 1976, 1981, and 1987).\n\nWould you like to learn more about that championship team or explore Indiana's basketball history?"
+ },
+ {
+  "id": "G041",
+  "q": "Who won the 1955 national championship?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 3.8,
+  "tags": {
+   "tool": "getChampionByYear",
+   "era": "1950s",
+   "kind": "champ_by_year"
+  },
+  "notes": [],
+  "answer": "The **San Francisco Dons** won the 1955 national championship. They won back-to-back titles in 1955 and 1956âone of only seven programs to accomplish that feat.\n\nWant to explore the Dons' history further?"
+ },
+ {
+  "id": "G042",
+  "q": "Who won the 1957 national championship?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 3.7,
+  "tags": {
+   "tool": "getChampionByYear",
+   "era": "1950s",
+   "kind": "champ_by_year"
+  },
+  "notes": [],
+  "answer": "The **North Carolina Tar Heels** won the 1957 national championship. It was their first of six titles in program history. \n\nWould you like to learn more about that championship team or North Carolina's other championships?"
+ },
+ {
+  "id": "G043",
+  "q": "Who won the 1959 national championship?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 3.5,
+  "tags": {
+   "tool": "getChampionByYear",
+   "era": "1950s",
+   "kind": "champ_by_year"
+  },
+  "notes": [],
+  "answer": "The **California Golden Bears** won the 1959 NCAA Championship. This remains their only national title.\n\nWant to explore more about this historic California team or compare them to other champions? Check out [California's profile](navigateUser?route=%23team/california-golden-bears&label=View+California+Profile) or browse [all championship history](navigateUser?route=%23bracket&label=Championship+Bracket)."
+ },
+ {
+  "id": "G044",
+  "q": "Who won the 1961 national championship?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 2.2,
+  "tags": {
+   "tool": "getChampionByYear",
+   "era": "1960s",
+   "kind": "champ_by_year"
+  },
+  "notes": [],
+  "answer": "The **Cincinnati Bearcats** won the 1961 national championship. It was one of their back-to-back titlesâthey also won in 1962. Cincinnati has two all-time national championships.\n\nWant to explore more about Cincinnati's championship runs or compare them to other powerhouses of that era?"
+ },
+ {
+  "id": "G045",
+  "q": "Who won the 1963 national championship?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 2.7,
+  "tags": {
+   "tool": "getChampionByYear",
+   "era": "1960s",
+   "kind": "champ_by_year"
+  },
+  "notes": [],
+  "answer": "**Loyola Chicago** won the 1963 NCAA championship. It's their only national title in program history.\n\nThe Ramblers' 1963 championship team is historically significant as one of the most prominent early integrated teams to win a national championship."
+ },
+ {
+  "id": "G046",
+  "q": "Who won the 1965 national championship?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 4.6,
+  "tags": {
+   "tool": "getChampionByYear",
+   "era": "1960s",
+   "kind": "champ_by_year"
+  },
+  "notes": [],
+  "answer": "**UCLA** won the 1965 national championship. This was the second of their back-to-back titles (they also won in 1964), marking the beginning of their legendary dynasty. In total, UCLA has won **11 national championships**, with their most recent title in 1995.\n\nWant to explore more about UCLA's historic run?"
+ },
+ {
+  "id": "G047",
+  "q": "Who won the 1967 national championship?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 3.6,
+  "tags": {
+   "tool": "getChampionByYear",
+   "era": "1960s",
+   "kind": "champ_by_year"
+  },
+  "notes": [],
+  "answer": "**UCLA** won the 1967 national championship. This was one of their 11 total titles, part of their dominant run that included championships in 1964, 1965, and then 1967-1973 (an incredible stretch under Coach John Wooden).\n\nWant to explore more about UCLA's dynasty? Check out their [full profile](https://hoopsipedia.com#team/ucla-bruins) or see how they stack up against other programs across history."
+ },
+ {
+  "id": "G048",
+  "q": "Who won the 1969 national championship?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 4.2,
+  "tags": {
+   "tool": "getChampionByYear",
+   "era": "1960s",
+   "kind": "champ_by_year"
+  },
+  "notes": [],
+  "answer": "**UCLA** won the 1969 national championship. This was part of their dominant dynasty in the 1960s and early 1970sâthe Bruins won 11 national titles total, including back-to-back championships in 1968 and 1969.\n\nWant to explore more about UCLA's championship run? Check out their [full profile](navigateUser) or compare them to other championship teams from that era."
+ },
+ {
+  "id": "G049",
+  "q": "Who won the 1971 national championship?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 4.5,
+  "tags": {
+   "tool": "getChampionByYear",
+   "era": "1970s",
+   "kind": "champ_by_year"
+  },
+  "notes": [],
+  "answer": "**UCLA** won the 1971 national championship. This was the Bruins' seventh title in a rowâpart of their legendary dynasty. UCLA finished with 11 national championships total, with titles in 1964, 1965, 1967, 1968, 1969, 1970, 1971, 1972, 1973, 1975, and 1995.\n\nCheck out the [UCLA Bruins profile](navigateUser?route=#team/ucla-bruins&label=View UCLA Bruins) to explore more about their dynasty years."
+ },
+ {
+  "id": "G050",
+  "q": "Who won the 1973 national championship?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 2.6,
+  "tags": {
+   "tool": "getChampionByYear",
+   "era": "1970s",
+   "kind": "champ_by_year"
+  },
+  "notes": [],
+  "answer": "**UCLA** won the 1973 national championship. This was their 7th championship in a remarkable nine-year span (1964-1973), showcasing the dominance of coach John Wooden's program.\n\nUCLA finished with 11 total national championships, with their last coming in 1995.\n\nWant to explore more about UCLA's dynasty? Check out their [team profile](https://hoopsipedia.com/#team/ucla-bruins)."
+ },
+ {
+  "id": "G051",
+  "q": "Who won the 1975 national championship?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 3.6,
+  "tags": {
+   "tool": "getChampionByYear",
+   "era": "1970s",
+   "kind": "champ_by_year"
+  },
+  "notes": [],
+  "answer": "**UCLA** won the 1975 national championship. It was their 11th title overall, and their last championship of the dynasty era under coach John Wooden. \n\nUCLA's championship years: 1964, 1965, 1967, 1968, 1969, 1970, 1971, 1972, 1973, 1975, and 1995.\n\nWant to explore UCLA's legendary program? Check out their [profile](navigateUser:route=#team/ucla-bruins&label=View UCLA Profile)."
+ },
+ {
+  "id": "G052",
+  "q": "Who won the 1977 national championship?",
+  "verdict": "FAIL",
+  "status": 200,
+  "latency_s": 2.1,
+  "tags": {
+   "tool": "getChampionByYear",
+   "era": "1970s",
+   "kind": "champ_by_year"
+  },
+  "notes": [
+   "missing any of ['Marquette Golden', 'Marquette Golden Eagles']"
+  ],
+  "answer": "**Marquette** won the 1977 national championship. It's their only NCAA championship title to date.\n\nThe Golden Eagles were coached by Al McGuire in that legendary tournament run."
+ },
+ {
+  "id": "G053",
+  "q": "Who won the 1979 national championship?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 4.4,
+  "tags": {
+   "tool": "getChampionByYear",
+   "era": "1970s",
+   "kind": "champ_by_year"
+  },
+  "notes": [],
+  "answer": "**Michigan State** won the 1979 NCAA championship. It was their first title. The Spartans would go on to win another championship in 2000, giving them 2 total."
+ },
+ {
+  "id": "G054",
+  "q": "Who won the 1981 national championship?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 3.2,
+  "tags": {
+   "tool": "getChampionByYear",
+   "era": "1980s",
+   "kind": "champ_by_year"
+  },
+  "notes": [],
+  "answer": "**Indiana** won the 1981 NCAA national championship. It was the Hoosiers' fourth title, and they would go on to win a fifth championship in 1987. Indiana has won 5 national championships total (1940, 1953, 1976, 1981, 1987).\n\nWould you like to learn more about that championship team or Indiana's basketball history?"
+ },
+ {
+  "id": "G055",
+  "q": "Who won the 1983 national championship?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 4.4,
+  "tags": {
+   "tool": "getChampionByYear",
+   "era": "1980s",
+   "kind": "champ_by_year"
+  },
+  "notes": [],
+  "answer": "**NC State** won the 1983 NCAA Championship. This was the Wolfpack's second national title (they also won in 1974). That 1983 team, coached by Jim Valvano, is one of the most iconic champions in college basketball history.\n\nWant to explore more about that championship run or NC State's program history?"
+ },
+ {
+  "id": "G056",
+  "q": "Who won the 1985 national championship?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 3.4,
+  "tags": {
+   "tool": "getChampionByYear",
+   "era": "1980s",
+   "kind": "champ_by_year"
+  },
+  "notes": [],
+  "answer": "**Villanova** won the 1985 national championship. \n\nThis is one of three titles for the Wildcatsâthey also won championships in 2016 and 2018. The 1985 championship is especially memorable as Villanova pulled off a historic upset, winning as an 8-seed in the tournament.\n\nCheck out the [Villanova profile](navigateUser?route=#team/villanova-wildcats&label=View Villanova Profile) to explore more about their championship history."
+ },
+ {
+  "id": "G057",
+  "q": "Who won the 1987 national championship?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 7.3,
+  "tags": {
+   "tool": "getChampionByYear",
+   "era": "1980s",
+   "kind": "champ_by_year"
+  },
+  "notes": [],
+  "answer": "**Indiana** won the 1987 national championship. It was the Hoosiers' 5th title. Indiana has won championships in 1940, 1953, 1976, 1981, and 1987.\n\nWant to explore more about Indiana's championship seasons? Check out their [profile](navigateUser) or look at their [season-by-season history](navigateUser)."
+ },
+ {
+  "id": "G058",
+  "q": "Who won the 1989 national championship?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 4.3,
+  "tags": {
+   "tool": "getChampionByYear",
+   "era": "1980s",
+   "kind": "champ_by_year"
+  },
+  "notes": [],
+  "answer": "**Michigan** won the 1989 national championship. It was one of their two titles (they also won in 2026).\n\nCheck out [Michigan's profile](navigateUser?route=%23team%2Fmichigan-wolverines&label=View Michigan Profile) to explore more about their championship runs and program history."
+ },
+ {
+  "id": "G059",
+  "q": "Who won the 1991 national championship?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 3.1,
+  "tags": {
+   "tool": "getChampionByYear",
+   "era": "1990s",
+   "kind": "champ_by_year"
+  },
+  "notes": [],
+  "answer": "**Duke Blue Devils** won the 1991 NCAA Championship. This was their first of two consecutive titlesâthey also won in 1992. Duke has won 5 national championships total (1991, 1992, 2001, 2010, 2015).\n\nCheck out [Duke's profile](navigateUser?route=%23team%2Fduke-blue-devils&label=Duke+Blue+Devils) to explore more about their championship seasons."
+ },
+ {
+  "id": "G060",
+  "q": "Who won the 1993 national championship?",
+  "verdict": "FAIL",
+  "status": 200,
+  "latency_s": 4.6,
+  "tags": {
+   "tool": "getChampionByYear",
+   "era": "1990s",
+   "kind": "champ_by_year"
+  },
+  "notes": [
+   "missing any of ['North Carolina Tar', 'North Carolina Tar Heels']"
+  ],
+  "answer": "**North Carolina** won the 1993 NCAA national championship. It was the Tar Heels' third title, and they've gone on to win six total championships (1957, 1982, 1993, 2005, 2009, 2017).\n\nCheck out the [North Carolina team profile](to explore more about their historic program."
+ },
+ {
+  "id": "G061",
+  "q": "Who won the 1995 national championship?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 4.1,
+  "tags": {
+   "tool": "getChampionByYear",
+   "era": "1990s",
+   "kind": "champ_by_year"
+  },
+  "notes": [],
+  "answer": "**UCLA** won the 1995 national championship. It was the Bruins' 11th title and their first national championship since 1975, ending a 20-year drought. You can explore more about UCLA's championship history and legacy on their profile:"
+ },
+ {
+  "id": "G062",
+  "q": "Who won the 1997 national championship?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 3.2,
+  "tags": {
+   "tool": "getChampionByYear",
+   "era": "1990s",
+   "kind": "champ_by_year"
+  },
+  "notes": [],
+  "answer": "**Arizona** won the 1997 national championship. It was their only national title to date, and they defeated Kentucky in the final. The Wildcats had a dominant season under coach Lute Olson.\n\nWant to explore more about that championship team or Arizona's program history?"
+ },
+ {
+  "id": "G063",
+  "q": "Who won the 1999 national championship?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 3.7,
+  "tags": {
+   "tool": "getChampionByYear",
+   "era": "1990s",
+   "kind": "champ_by_year"
+  },
+  "notes": [],
+  "answer": "**UConn Huskies** won the 1999 national championship. It was their first title.\n\nUConn has gone on to win 6 championships total (1999, 2004, 2011, 2014, 2023, 2024), making them one of the most successful programs in college basketball history.\n\nWant to explore more about UConn's championship runs or the 1999 tournament?"
+ },
+ {
+  "id": "G064",
+  "q": "Who won the 2001 national championship?",
+  "verdict": "FAIL",
+  "status": 200,
+  "latency_s": 2.7,
+  "tags": {
+   "tool": "getChampionByYear",
+   "era": "2000s",
+   "kind": "champ_by_year"
+  },
+  "notes": [
+   "missing any of ['Duke Blue', 'Duke Blue Devils']"
+  ],
+  "answer": "Duke won the 2001 NCAA championship. It was their third national title, following back-to-back championships in 1991 and 1992, and they would go on to win two more in 2010 and 2015 for a total of 5 championships.\n\nWant to explore more about that championship team? Check out [Duke's profile](https://hoopsipedia.com)."
+ },
+ {
+  "id": "G065",
+  "q": "Who won the 2003 national championship?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 2.7,
+  "tags": {
+   "tool": "getChampionByYear",
+   "era": "2000s",
+   "kind": "champ_by_year"
+  },
+  "notes": [],
+  "answer": "**Syracuse** won the 2003 national championship. It remains their only NCAA tournament title.\n\nWould you like to explore more about that championship run, or learn about Syracuse basketball in general?"
+ },
+ {
+  "id": "G066",
+  "q": "Who won the 2005 national championship?",
+  "verdict": "FAIL",
+  "status": 200,
+  "latency_s": 6.3,
+  "tags": {
+   "tool": "getChampionByYear",
+   "era": "2000s",
+   "kind": "champ_by_year"
+  },
+  "notes": [
+   "missing any of ['North Carolina Tar', 'North Carolina Tar Heels']"
+  ],
+  "answer": "**North Carolina** won the 2005 NCAA national championship. It was their second title under coach Roy Williams (who took over in 2003). This was the Tar Heels' fourth national championship overall, and they've gone on to win two more since then (2009, 2017) for a total of 6 titles.\n\nWant to explore more about that championship team or compare it to other legendary UNC squads?"
+ },
+ {
+  "id": "G067",
+  "q": "Who won the 2007 national championship?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 4.0,
+  "tags": {
+   "tool": "getChampionByYear",
+   "era": "2000s",
+   "kind": "champ_by_year"
+  },
+  "notes": [],
+  "answer": "The **Florida Gators** won the 2007 NCAA Championship. It was their second consecutive titleâthey also won in 2006. Florida has won 3 national championships total (2006, 2007, and 2025).\n\nCheck out the [Gators' profile](https://hoopsipedia.com/#team/florida-gators) to explore more about their championship runs and program history!"
+ },
+ {
+  "id": "G068",
+  "q": "Who won the 2009 national championship?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 2.7,
+  "tags": {
+   "tool": "getChampionByYear",
+   "era": "2000s",
+   "kind": "champ_by_year"
+  },
+  "notes": [],
+  "answer": "**North Carolina** won the 2009 NCAA Championship. It was the Tar Heels' second title in five years (they also won in 2005), and their sixth championship overall. Their other titles came in 1957, 1982, 1993, and 2017.\n\nWant to explore more about that championship team? Check out the [North Carolina Tar Heels profile](javascript:void(0))."
+ },
+ {
+  "id": "G069",
+  "q": "Who won the 2011 national championship?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 3.7,
+  "tags": {
+   "tool": "getChampionByYear",
+   "era": "2010s",
+   "kind": "champ_by_year"
+  },
+  "notes": [],
+  "answer": "**UConn Huskies** won the 2011 NCAA Men's Basketball Championship. \n\nThis was their third title in 12 years. UConn has won a total of 6 national championships (1999, 2004, 2011, 2014, 2023, and 2024).\n\nCheck out [UConn's profile](https://hoopsipedia.com/#team/uconn-huskies) to explore more about their championship history and program."
+ },
+ {
+  "id": "G070",
+  "q": "Who won the 2014 national championship?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 6.6,
+  "tags": {
+   "tool": "getChampionByYear",
+   "era": "2010s",
+   "kind": "champ_by_year"
+  },
+  "notes": [],
+  "answer": "**UConn** won the 2014 NCAA national championship. \n\nThis was the Huskies' fourth title at that point, with championships in 1999, 2004, and 2011. They've since added two more (2023 and 2024) for a total of six national championships."
+ },
+ {
+  "id": "G071",
+  "q": "Who won the 2016 national championship?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 4.2,
+  "tags": {
+   "tool": "getChampionByYear",
+   "era": "2010s",
+   "kind": "champ_by_year"
+  },
+  "notes": [],
+  "answer": "**Villanova** won the 2016 NCAA championship. It was their second title in program history (they also won in 1985 and would win again in 2018).\n\nThat 2016 team pulled off one of the most memorable championship moments everâKris Jenkins hit a buzzer-beating three-pointer to beat North Carolina 77-74 in the final.\n\nWant to explore Villanova's full championship history?"
+ },
+ {
+  "id": "G072",
+  "q": "Who won the 2018 national championship?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 3.2,
+  "tags": {
+   "tool": "getChampionByYear",
+   "era": "2010s",
+   "kind": "champ_by_year"
+  },
+  "notes": [],
+  "answer": "**Villanova** won the 2018 NCAA championship, defeating Michigan 79-62. This was the Wildcats' third national title, joining their championships in 1985 and 2016.\n\nCheck out [Villanova's full profile](navigateUser#team/villanova-wildcats) to explore their program history and season records!"
+ },
+ {
+  "id": "G073",
+  "q": "Who won the 2021 national championship?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 3.7,
+  "tags": {
+   "tool": "getChampionByYear",
+   "era": "2020s",
+   "kind": "champ_by_year"
+  },
+  "notes": [],
+  "answer": "**Baylor** won the 2021 NCAA men's basketball championship. It was their first national title in program history."
+ },
+ {
+  "id": "G074",
+  "q": "Who won the 2023 national championship?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 2.7,
+  "tags": {
+   "tool": "getChampionByYear",
+   "era": "2020s",
+   "kind": "champ_by_year"
+  },
+  "notes": [],
+  "answer": "**UConn** won the 2023 NCAA championship. This was their 5th title overall (they've also won in 1999, 2004, 2011, and 2014). They went on to win again in 2024, giving them back-to-back championships.\n\nWant to explore more about UConn's championship run or compare it to other programs?"
+ },
+ {
+  "id": "G075",
+  "q": "Who won the 2025 national championship?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 3.2,
+  "tags": {
+   "tool": "getChampionByYear",
+   "era": "2020s",
+   "kind": "champ_by_year"
+  },
+  "notes": [],
+  "answer": "**Florida** won the 2025 NCAA national championship! ð\n\nThis is the Gators' third national title in program history. They previously won back-to-back championships in 2006 and 2007. \n\nWant to explore more about Florida's championship history or this season? Check out the [Florida Gators profile](navigateUser: #team/florida-gators)."
+ },
+ {
+  "id": "G076",
+  "q": "How many all-time wins does Indiana have?",
+  "verdict": "FAIL",
+  "status": 200,
+  "latency_s": 2.6,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "blueblood",
+   "kind": "alltime_wins"
+  },
+  "notes": [
+   "missing any of ['1965']"
+  ],
+  "answer": "The **Indiana Hoosiers** have **1,965 all-time wins**. They also have 1,147 all-time losses, giving them a .632 winning percentage. Indiana has won 5 NCAA championships (1940, 1953, 1976, 1981, 1987) and made 41 tournament appearances with 8 Final Four trips."
+ },
+ {
+  "id": "G077",
+  "q": "How many all-time wins does Utah have?",
+  "verdict": "FAIL",
+  "status": 200,
+  "latency_s": 4.8,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "blueblood",
+   "kind": "alltime_wins"
+  },
+  "notes": [
+   "missing any of ['1923']"
+  ],
+  "answer": "The **Utah Utes** have **1,923 all-time wins** against 1,121 losses. They won the national championship in 1944 and have made 4 Final Fours, 5 Elite Eights, and 31 NCAA Tournament appearances overall.\n\nCheck out [Utah Utes' full profile](javascript:void(0)) to explore more of their history!"
+ },
+ {
+  "id": "G078",
+  "q": "How many all-time wins does Michigan have?",
+  "verdict": "FAIL",
+  "status": 200,
+  "latency_s": 3.2,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "blueblood",
+   "kind": "alltime_wins"
+  },
+  "notes": [
+   "missing any of ['1649']"
+  ],
+  "answer": "The **Michigan Wolverines** have **1,649 all-time wins** (against 1,125 losses). They've won 2 national championships (1989 and 2026), reached the Final Four 5 times, and made 31 NCAA Tournament appearances.\n\n(Note: If you were asking about Michigan State, they have 1,875 all-time winsâthe most in the Big Ten.)"
+ },
+ {
+  "id": "G079",
+  "q": "How many all-time wins does Illinois Fighting have?",
+  "verdict": "FAIL",
+  "status": 200,
+  "latency_s": 5.2,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "blueblood",
+   "kind": "alltime_wins"
+  },
+  "notes": [
+   "missing any of ['1953']"
+  ],
+  "answer": "Illinois Fighting Illini has **1,953 all-time wins** against 1,084 losses.\n\nThey've made 36 NCAA Tournament appearances, reached 5 Final Fours, and won 17 conference titles, though they haven't captured a national championship. Check out [Illinois' full profile](https://hoopsipedia.com/#team/illinois-fighting-illini) for more details on their program history!"
+ },
+ {
+  "id": "G080",
+  "q": "How many all-time wins does Notre Dame Fighting have?",
+  "verdict": "FAIL",
+  "status": 200,
+  "latency_s": 7.0,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "blueblood",
+   "kind": "alltime_wins"
+  },
+  "notes": [
+   "missing any of ['1989']"
+  ],
+  "answer": "Notre Dame Fighting Irish has **1,989 all-time wins** against 1,144 losses. They've made 37 NCAA Tournament appearances, reached 1 Final Four, and have won 1 conference title. You can view their full profile here:"
+ },
+ {
+  "id": "G081",
+  "q": "How many all-time wins does Bucknell have?",
+  "verdict": "FAIL",
+  "status": 200,
+  "latency_s": 2.9,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "major",
+   "kind": "alltime_wins"
+  },
+  "notes": [
+   "missing any of ['1531']"
+  ],
+  "answer": "Bucknell has **1,531 all-time wins**. The Bison compete in the Patriot League and have made 7 NCAA Tournament appearances with 27 conference titles, though they haven't won a national championship."
+ },
+ {
+  "id": "G082",
+  "q": "How many all-time wins does South Carolina have?",
+  "verdict": "FAIL",
+  "status": 200,
+  "latency_s": 3.7,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "major",
+   "kind": "alltime_wins"
+  },
+  "notes": [
+   "missing any of ['1530']"
+  ],
+  "answer": "The **South Carolina Gamecocks** have **1,530 all-time wins** (with 1,364 losses).\n\nIf you're interested in their full program profile, check out their page:"
+ },
+ {
+  "id": "G083",
+  "q": "How many all-time wins does Georgetown have?",
+  "verdict": "FAIL",
+  "status": 200,
+  "latency_s": 2.6,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "major",
+   "kind": "alltime_wins"
+  },
+  "notes": [
+   "missing any of ['1756']"
+  ],
+  "answer": "Georgetown has **1,756 all-time wins** against 1,190 losses. The Hoyas won their NCAA Championship in 1984 and have made 31 NCAA Tournament appearances overall, including 5 Final Four trips."
+ },
+ {
+  "id": "G084",
+  "q": "How many all-time wins does Duquesne have?",
+  "verdict": "FAIL",
+  "status": 200,
+  "latency_s": 7.1,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "major",
+   "kind": "alltime_wins"
+  },
+  "notes": [
+   "missing any of ['1514']"
+  ],
+  "answer": "Duquesne has **1,514 all-time wins** against 1,225 losses. The Dukes compete in the Atlantic 10 conference and have made 6 NCAA Tournament appearances with 4 conference titles to their credit."
+ },
+ {
+  "id": "G085",
+  "q": "How many all-time wins does UTEP have?",
+  "verdict": "FAIL",
+  "status": 200,
+  "latency_s": 2.9,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "major",
+   "kind": "alltime_wins"
+  },
+  "notes": [
+   "missing any of ['1445']"
+  ],
+  "answer": "UTEP has **1,445 all-time wins**. The Miners have compiled a 1,445-1,113 record and won the NCAA Championship in 1966. They've also made 18 tournament appearances and won 10 conference titles."
+ },
+ {
+  "id": "G086",
+  "q": "How many all-time wins does Loyola Marymount have?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 3.4,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "mid",
+   "kind": "alltime_wins"
+  },
+  "notes": [],
+  "answer": "Loyola Marymount has **965 all-time wins** against 1,232 losses. The Lions compete in the West Coast Conference and have made 5 NCAA Tournament appearances, including an Elite Eight run."
+ },
+ {
+  "id": "G087",
+  "q": "How many all-time wins does Army Black have?",
+  "verdict": "FAIL",
+  "status": 200,
+  "latency_s": 2.8,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "mid",
+   "kind": "alltime_wins"
+  },
+  "notes": [
+   "missing any of ['1332']"
+  ],
+  "answer": "Army Black Knights have **1,332 all-time wins** against 1,367 losses. They play in the Patriot League and have yet to make an NCAA Tournament appearance."
+ },
+ {
+  "id": "G088",
+  "q": "How many all-time wins does Cornell Big have?",
+  "verdict": "FAIL",
+  "status": 200,
+  "latency_s": 2.2,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "mid",
+   "kind": "alltime_wins"
+  },
+  "notes": [
+   "missing any of ['1356']"
+  ],
+  "answer": "Cornell Big Red has **1,356 all-time wins** against 1,515 losses. They compete in the Ivy League and have made 5 NCAA Tournament appearances with 2 Sweet Sixteen finishes."
+ },
+ {
+  "id": "G089",
+  "q": "How many all-time wins does Louisiana Tech have?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 3.4,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "mid",
+   "kind": "alltime_wins"
+  },
+  "notes": [],
+  "answer": "Louisiana Tech has **942 all-time wins** against 665 losses. You can explore their full profile here:"
+ },
+ {
+  "id": "G090",
+  "q": "How many all-time wins does UAB have?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 2.5,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "mid",
+   "kind": "alltime_wins"
+  },
+  "notes": [],
+  "answer": "UAB has **965 all-time wins** against 562 losses. The Blazers have won 14 conference titles and made 17 NCAA Tournament appearances, though they haven't won a national championship. Their best tournament run was reaching the Elite Eight once."
+ },
+ {
+  "id": "G091",
+  "q": "How many all-time wins does Florida Gulf Coast have?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 2.2,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "low",
+   "kind": "alltime_wins"
+  },
+  "notes": [],
+  "answer": "Florida Gulf Coast has **316 all-time wins** (against 294 losses). The Eagles compete in the ASUN conference and have made 3 NCAA Tournament appearances, including a memorable run to the Sweet Sixteen. They've won 6 conference titles in their program history."
+ },
+ {
+  "id": "G092",
+  "q": "How many all-time wins does South Carolina Upstate have?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 3.1,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "low",
+   "kind": "alltime_wins"
+  },
+  "notes": [],
+  "answer": "South Carolina Upstate has **225 all-time wins** (with 374 losses). The Spartans compete in the Big South Conference and have not made an NCAA Tournament appearance in the tournament era."
+ },
+ {
+  "id": "G093",
+  "q": "How many all-time wins does Cleveland State have?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 2.6,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "low",
+   "kind": "alltime_wins"
+  },
+  "notes": [],
+  "answer": "Cleveland State has **808 all-time wins** against 801 losses. The Vikings compete in the Horizon League and have made 3 NCAA Tournament appearances with 1 Sweet Sixteen finish."
+ },
+ {
+  "id": "G094",
+  "q": "How many all-time wins does Bryant have?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 2.3,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "low",
+   "kind": "alltime_wins"
+  },
+  "notes": [],
+  "answer": "Bryant has **227 all-time wins** against 325 losses. The Bulldogs compete in the America East Conference and have made 2 NCAA Tournament appearances."
+ },
+ {
+  "id": "G095",
+  "q": "How many all-time wins does Maine Black have?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 4.5,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "low",
+   "kind": "alltime_wins"
+  },
+  "notes": [],
+  "answer": "Maine Black Bears have **872 all-time wins** against 1,125 losses. They compete in the America East Conference and have never won an NCAA championship."
+ },
+ {
+  "id": "G096",
+  "q": "How many Final Fours has Indiana made?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 5.1,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "blueblood",
+   "kind": "ff_count"
+  },
+  "notes": [],
+  "answer": "**Indiana has made 8 Final Fours.** They also won 5 National Championships (1940, 1953, 1976, 1981, 1987) and have 12 Elite Eight appearances overall.\n\nWant to explore more about the Hoosiers?"
+ },
+ {
+  "id": "G097",
+  "q": "How many Final Fours has Utah made?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 3.6,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "blueblood",
+   "kind": "ff_count"
+  },
+  "notes": [],
+  "answer": "The University of Utah Utes have made **4 Final Fours**. They also won the NCAA championship in 1944 and have made 31 total tournament appearances.\n\nCheck out [Utah's full profile](https://hoopsipedia.com/#team/utah-utes) to explore their history in more detail."
+ },
+ {
+  "id": "G098",
+  "q": "How many Final Fours has Michigan made?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 3.0,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "blueblood",
+   "kind": "ff_count"
+  },
+  "notes": [],
+  "answer": "**Michigan Wolverines** has made **5 Final Fours**.\n\nThe program has won 2 national championships (1989 and 2026) and has appeared in 31 NCAA Tournaments overall. They're also 9-time Elite Eight participants.\n\nWould you like to know more about their championship runs or compare them to other Big Ten programs?"
+ },
+ {
+  "id": "G099",
+  "q": "How many Final Fours has Illinois Fighting made?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 2.8,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "blueblood",
+   "kind": "ff_count"
+  },
+  "notes": [],
+  "answer": "Illinois Fighting Illini has made **5 Final Fours** in their program history. They've also made 36 NCAA Tournament appearances with 8 Elite Eights and 12 Sweet Sixteens, though they haven't won a national championship.\n\nWant to explore more about Illinois' tournament history or compare them to other programs?"
+ },
+ {
+  "id": "G100",
+  "q": "How many Final Fours has Bucknell made?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 5.2,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "major",
+   "kind": "ff_count"
+  },
+  "notes": [],
+  "answer": "Bucknell has made **0 Final Fours**. The Bison have made 7 NCAA Tournament appearances and won 27 conference titles, but haven't advanced to the Final Four. Their best tournament finish has been reaching the Elite Eight."
+ },
+ {
+  "id": "G101",
+  "q": "How many Final Fours has South Carolina made?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 6.3,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "major",
+   "kind": "ff_count"
+  },
+  "notes": [],
+  "answer": "South Carolina (the Gamecocks) has made **2 Final Fours**. They've also made 3 Elite Eights and 4 Sweet Sixteens in their 13 tournament appearances, while winning 2 conference titles."
+ },
+ {
+  "id": "G102",
+  "q": "How many Final Fours has Georgetown made?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 6.6,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "major",
+   "kind": "ff_count"
+  },
+  "notes": [],
+  "answer": "Georgetown has made **5 Final Fours** in program history. The Hoyas won their national championship in 1984 and have appeared in 31 NCAA Tournaments overall with 8 Elite Eight appearances.\n\nInterested in exploring more about Georgetown's tournament history? Check out their [team profile](navigateUser({\"route\": \"#team/georgetown-hoyas\", \"label\": \"View Georgetown Profile\"})) or see how they perform in specific tournament matchups."
+ },
+ {
+  "id": "G103",
+  "q": "How many Final Fours has Duquesne made?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 6.7,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "major",
+   "kind": "ff_count"
+  },
+  "notes": [],
+  "answer": "Duquesne has made **0 Final Fours**. \n\nThe Dukes have had some tournament success with 2 Elite Eight appearances and 2 Sweet Sixteen appearances, but they haven't reached the Final Four stage in their NCAA Tournament history."
+ },
+ {
+  "id": "G104",
+  "q": "How many Final Fours has Loyola Marymount made?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 3.9,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "mid",
+   "kind": "ff_count"
+  },
+  "notes": [],
+  "answer": "Loyola Marymount has made **0 Final Fours**. \n\nHowever, the Lions have had some notable tournament success:\n- **1 Elite Eight** appearance\n- **1 Sweet Sixteen** appearance\n- **5 total NCAA Tournament appearances**\n- **5 conference titles**\n\nWant to explore their tournament history further?"
+ },
+ {
+  "id": "G105",
+  "q": "How many Final Fours has Army Black made?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 5.1,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "mid",
+   "kind": "ff_count"
+  },
+  "notes": [],
+  "answer": "Army Black Knights has made **0 Final Fours** in their history. In fact, they've never made an NCAA Tournament appearance at all. The program has an all-time record of 1,332 wins and 1,367 losses, competing in the Patriot League conference."
+ },
+ {
+  "id": "G106",
+  "q": "How many Final Fours has Cornell Big made?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 3.1,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "mid",
+   "kind": "ff_count"
+  },
+  "notes": [],
+  "answer": "Cornell has made **0 Final Fours** in program history. \n\nThe Big Red have appeared in the NCAA Tournament 5 times and reached the Sweet Sixteen twice, but have never advanced to a Final Four. Cornell has also won 8 conference titles in the Ivy League."
+ },
+ {
+  "id": "G107",
+  "q": "How many Final Fours has Louisiana Tech made?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 2.3,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "mid",
+   "kind": "ff_count"
+  },
+  "notes": [],
+  "answer": "Louisiana Tech has made **0 Final Fours** in their history. They've made 5 NCAA Tournament appearances overall, with 1 Sweet Sixteen as their deepest tournament run."
+ },
+ {
+  "id": "G108",
+  "q": "How many Final Fours has Florida Gulf Coast made?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 3.5,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "low",
+   "kind": "ff_count"
+  },
+  "notes": [],
+  "answer": "Florida Gulf Coast has made **0 Final Fours**. \n\nHowever, the Eagles have had a notable tournament history: they've made 3 NCAA Tournament appearances and reached the Sweet Sixteen once (most famously in 2013, when they made the Elite Eight and had a magical run as a 15-seed). They've also won 6 conference titles."
+ },
+ {
+  "id": "G109",
+  "q": "How many Final Fours has South Carolina Upstate made?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 3.0,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "low",
+   "kind": "ff_count"
+  },
+  "notes": [],
+  "answer": "South Carolina Upstate has made **0 Final Fours**. The Spartans have never appeared in the NCAA Tournament and have no conference titles in their program history. They currently compete in the Big South conference."
+ },
+ {
+  "id": "G110",
+  "q": "How many Final Fours has Cleveland State made?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 3.7,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "low",
+   "kind": "ff_count"
+  },
+  "notes": [],
+  "answer": "Cleveland State has made **0 Final Fours**. \n\nThe Vikings have appeared in 3 NCAA Tournaments overall and made it to the Sweet Sixteen once, but have never advanced to a Final Four."
+ },
+ {
+  "id": "G111",
+  "q": "How many Final Fours has Bryant made?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 2.9,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "low",
+   "kind": "ff_count"
+  },
+  "notes": [],
+  "answer": "Bryant has made **0 Final Fours**. The Bulldogs compete in the America East Conference and have made 2 NCAA Tournament appearances overall, but have not advanced to the Final Four."
+ },
+ {
+  "id": "G112",
+  "q": "What conference does Indiana play in?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 4.7,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "blueblood",
+   "kind": "conference"
+  },
+  "notes": [],
+  "answer": "Indiana Hoosiers play in the **Big Ten** conference. They're one of the conference's flagship programs with 5 national championships, 22 conference titles, and 41 NCAA Tournament appearances."
+ },
+ {
+  "id": "G113",
+  "q": "What conference does Utah play in?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 5.2,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "blueblood",
+   "kind": "conference"
+  },
+  "notes": [],
+  "answer": "The **Utah Utes** play in the **Big 12** conference. They're one of the major programs in the state, with 1,923 all-time wins, a 1944 national championship, and 31 NCAA tournament appearances.\n\nIf you were asking about another Utah school, Utah State Aggies play in the Mountain West Conference (MWC)."
+ },
+ {
+  "id": "G114",
+  "q": "What conference does Michigan play in?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 2.5,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "blueblood",
+   "kind": "conference"
+  },
+  "notes": [],
+  "answer": "Michigan plays in the **Big Ten** conference. \n\nYou're referring to the University of Michigan Wolverines, who have 1,649 all-time wins and won national championships in 1989 and 2026."
+ },
+ {
+  "id": "G115",
+  "q": "What conference does Illinois Fighting play in?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 2.2,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "blueblood",
+   "kind": "conference"
+  },
+  "notes": [],
+  "answer": "Illinois Fighting Illini plays in the **Big Ten** conference."
+ },
+ {
+  "id": "G116",
+  "q": "What conference does Notre Dame Fighting play in?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 5.1,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "blueblood",
+   "kind": "conference"
+  },
+  "notes": [],
+  "answer": "Notre Dame Fighting Irish plays in the **ACC** (Atlantic Coast Conference)."
+ },
+ {
+  "id": "G117",
+  "q": "What conference does Bucknell play in?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 2.3,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "major",
+   "kind": "conference"
+  },
+  "notes": [],
+  "answer": "Bucknell plays in the **Patriot League**. The Bison have been a solid mid-major program with 27 conference titles and 7 NCAA Tournament appearances in their history."
+ },
+ {
+  "id": "G118",
+  "q": "What conference does South Carolina play in?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 5.4,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "major",
+   "kind": "conference"
+  },
+  "notes": [],
+  "answer": "The University of South Carolina Gamecocks play in the **SEC (Southeastern Conference)**.\n\nIf you're interested in learning more about the program, you can check out their profile:"
+ },
+ {
+  "id": "G119",
+  "q": "What conference does Georgetown play in?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 3.2,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "major",
+   "kind": "conference"
+  },
+  "notes": [],
+  "answer": "Georgetown plays in the **Big East** conference. The Hoyas have a storied history in this conference with 11 conference titles and a national championship in 1984."
+ },
+ {
+  "id": "G120",
+  "q": "What conference does Duquesne play in?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 2.3,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "major",
+   "kind": "conference"
+  },
+  "notes": [],
+  "answer": "Duquesne plays in the **A-10** (Atlantic 10 Conference).\n\nThe Dukes have an all-time record of 1514 wins and 1225 losses, with 4 conference titles and 6 NCAA tournament appearances under their belt."
+ },
+ {
+  "id": "G121",
+  "q": "What conference does UTEP play in?",
+  "verdict": "FAIL",
+  "status": 200,
+  "latency_s": 4.9,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "major",
+   "kind": "conference"
+  },
+  "notes": [
+   "missing any of ['CUSA']"
+  ],
+  "answer": "UTEP plays in **Conference USA (C-USA)**.\n\nThe Miners have a storied history with 1,445 all-time wins, a national championship in 1966, and 18 tournament appearances. Would you like to explore more about their program history or current roster?"
+ },
+ {
+  "id": "G122",
+  "q": "What conference does Loyola Marymount play in?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 5.5,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "mid",
+   "kind": "conference"
+  },
+  "notes": [],
+  "answer": "Loyola Marymount plays in the **WCC** (West Coast Conference)."
+ },
+ {
+  "id": "G123",
+  "q": "What conference does Army Black play in?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 4.0,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "mid",
+   "kind": "conference"
+  },
+  "notes": [],
+  "answer": "Army Black Knights play in the **Patriot League**."
+ },
+ {
+  "id": "G124",
+  "q": "What conference does Cornell Big play in?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 2.2,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "mid",
+   "kind": "conference"
+  },
+  "notes": [],
+  "answer": "Cornell plays in the **Ivy League**. They've made 5 NCAA Tournament appearances in their history, with 2 Sweet Sixteen finishes."
+ },
+ {
+  "id": "G125",
+  "q": "What conference does Louisiana Tech play in?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 2.4,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "mid",
+   "kind": "conference"
+  },
+  "notes": [],
+  "answer": "Louisiana Tech plays in **CUSA** (Conference USA)."
+ },
+ {
+  "id": "G126",
+  "q": "What conference does UAB play in?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 4.2,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "mid",
+   "kind": "conference"
+  },
+  "notes": [],
+  "answer": "UAB plays in the **AAC** (American Athletic Conference)."
+ },
+ {
+  "id": "G127",
+  "q": "What conference does Florida Gulf Coast play in?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 2.0,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "low",
+   "kind": "conference"
+  },
+  "notes": [],
+  "answer": "Florida Gulf Coast plays in the **ASUN** conference."
+ },
+ {
+  "id": "G128",
+  "q": "What conference does South Carolina Upstate play in?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 3.2,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "low",
+   "kind": "conference"
+  },
+  "notes": [],
+  "answer": "South Carolina Upstate plays in the **Big South** conference. The Spartans have an all-time record of 225 wins and 374 losses in Division I basketball."
+ },
+ {
+  "id": "G129",
+  "q": "What conference does Cleveland State play in?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 3.0,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "low",
+   "kind": "conference"
+  },
+  "notes": [],
+  "answer": "Cleveland State plays in the **Horizon League**."
+ },
+ {
+  "id": "G130",
+  "q": "What conference does Bryant play in?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 1.9,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "low",
+   "kind": "conference"
+  },
+  "notes": [],
+  "answer": "Bryant plays in the **America East Conference**."
+ },
+ {
+  "id": "G131",
+  "q": "What conference does Maine Black play in?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 3.7,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "low",
+   "kind": "conference"
+  },
+  "notes": [],
+  "answer": "Maine Black Bears play in the **America East** conference."
+ },
+ {
+  "id": "G132",
+  "q": "When did Jacksonville's basketball program begin?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 6.3,
+  "tags": {
+   "tool": "getTeamHistory",
+   "kind": "founded"
+  },
+  "notes": [],
+  "answer": "Jacksonville University's basketball program was **founded in 1947**. The program gained national prominence in 1970 when the Dolphins made a remarkable Cinderella run to the NCAA Championship Game, led by legendary 7-foot-2 center Artis Gilmore. Though they fell to UCLA in the final, that season remains the program's iconic moment.\n\nYou can explore more about Jacksonville's history on their [team profile](https://hoopsipedia.com)."
+ },
+ {
+  "id": "G133",
+  "q": "When did Bethune-Cookman's basketball program begin?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 3.7,
+  "tags": {
+   "tool": "getTeamHistory",
+   "kind": "founded"
+  },
+  "notes": [],
+  "answer": "Bethune-Cookman's basketball program dates to around **1930**. The program is based at the historically Black university in Daytona Beach, Florida, which was founded by the legendary educator Mary McLeod Bethune in 1904. The Wildcats now compete in the SWAC (Southwestern Athletic Conference)."
+ },
+ {
+  "id": "G134",
+  "q": "When did Wyoming's basketball program begin?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 5.2,
+  "tags": {
+   "tool": "getTeamHistory",
+   "kind": "founded"
+  },
+  "notes": [],
+  "answer": "Wyoming's basketball program began in **1905**. The Cowboys have a rich history competing in the Mountain West Conference, highlighted by their NCAA Championship in 1943 under coach Ev Shelton. They're one of the few programs with a legitimate claim to a national title from that era.\n\nInterestingly, Wyoming plays in one of the highest-altitude home courts in Division I basketball â their Arena-Auditorium sits at 7,220 feet elevation in Laramie, which gives them a significant home-court advantage against visiting teams dealing with the thin air."
+ },
+ {
+  "id": "G135",
+  "q": "When did Tarleton State's basketball program begin?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 5.5,
+  "tags": {
+   "tool": "getTeamHistory",
+   "kind": "founded"
+  },
+  "notes": [],
+  "answer": "Tarleton State's basketball program began in **1917**, making it one of the longest-running programs in college basketball. The university itself was founded in 1899 in Stephenville, Texas. However, the program is relatively new to Division IâTarleton State transitioned to D-I in 2020 and now competes in the WAC."
+ },
+ {
+  "id": "G136",
+  "q": "When did Quinnipiac's basketball program begin?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 10.0,
+  "tags": {
+   "tool": "getTeamHistory",
+   "kind": "founded"
+  },
+  "notes": [],
+  "answer": "Quinnipiac's basketball program began in **1965**, when the university was founded. The program has grown from its origins into a competitive Division I team competing in the Metro Atlantic Athletic Conference (MAAC). The Bobcats have compiled a 420-424 all-time record and continue to build their basketball identity in the modern era."
+ },
+ {
+  "id": "G137",
+  "q": "When did Lehigh Mountain's basketball program begin?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 3.2,
+  "tags": {
+   "tool": "getTeamHistory",
+   "kind": "founded"
+  },
+  "notes": [],
+  "answer": "Lehigh Mountain Hawks' basketball program began in **1900**. The team competes in the Patriot League and is based at Lehigh University in Bethlehem, Pennsylvania. They're perhaps best known for their legendary upset of #2 seed Duke in the 2012 NCAA Tournament, led by C.J. McCollum's 30-point performance."
+ },
+ {
+  "id": "G138",
+  "q": "When did Wagner's basketball program begin?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 4.7,
+  "tags": {
+   "tool": "getTeamHistory",
+   "kind": "founded"
+  },
+  "notes": [],
+  "answer": "Wagner's basketball program began in **1928**. The Seahawks are based in Staten Island, New York, and now compete in the Northeast Conference. A recent highlight was their 2024 NEC Tournament championship, which led to their first NCAA Tournament victory when they beat Howard 71-68 in the First Four."
+ },
+ {
+  "id": "G139",
+  "q": "When did Saint Mary's's basketball program begin?",
+  "verdict": "FAIL",
+  "status": 200,
+  "latency_s": 3.5,
+  "tags": {
+   "tool": "getTeamHistory",
+   "kind": "founded"
+  },
+  "notes": [
+   "missing any of ['1909']"
+  ],
+  "answer": "Saint Mary's basketball program began in the **early 1900s**. The school itself was founded in 1863 in San Francisco before relocating to Moraga, California in 1928. The team adopted the \"Gaels\" mascot in 1926, named by a San Francisco sportswriter in reference to Irish warrior tradition."
+ },
+ {
+  "id": "G140",
+  "q": "When did American University's basketball program begin?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 6.9,
+  "tags": {
+   "tool": "getTeamHistory",
+   "kind": "founded"
+  },
+  "notes": [],
+  "answer": "American University's basketball program began in **1925**. The Eagles compete in the Patriot League and are based in Washington, D.C., at Bender Arenaâone of the closest Division I venues to the White House."
+ },
+ {
+  "id": "G141",
+  "q": "When did UIC's basketball program begin?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 3.5,
+  "tags": {
+   "tool": "getTeamHistory",
+   "kind": "founded"
+  },
+  "notes": [],
+  "answer": "UIC's basketball program began in **1946**. The Chicago-based school competes in the Missouri Valley Conference and has made 3 NCAA Tournament appearances, with their first berth coming in 1998 as an at-large selection."
+ },
+ {
+  "id": "G142",
+  "q": "When did Wofford's basketball program begin?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 4.2,
+  "tags": {
+   "tool": "getTeamHistory",
+   "kind": "founded"
+  },
+  "notes": [],
+  "answer": "Wofford's basketball program began in **1906**. The Terriers, based in Spartanburg, South Carolina, have been competing since the early 1900s and now play in the Southern Conference. They've had some notable recent success, including an impressive upset over No. 7 seed Seton Hall in the 2019 NCAA Tournament as a 10-seed."
+ },
+ {
+  "id": "G143",
+  "q": "When did Pacific's basketball program begin?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 4.4,
+  "tags": {
+   "tool": "getTeamHistory",
+   "kind": "founded"
+  },
+  "notes": [],
+  "answer": "Pacific's basketball program began in **1924**. The University of the Pacific Tigers have been competing since then and now play in the West Coast Conference (WCC). They've had a solid tournament history with 9 NCAA Tournament appearances and reached the Elite Eight once."
+ },
+ {
+  "id": "G144",
+  "q": "When did Kansas's basketball program begin?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 9.0,
+  "tags": {
+   "tool": "getTeamHistory",
+   "kind": "founded"
+  },
+  "notes": [],
+  "answer": "Kansas's basketball program was founded in **1898** by Dr. James Naismith, the inventor of basketball itself. This makes Kansas the only college basketball program founded by basketball's creator. Naismith served as the program's first coach, though he was the only Kansas coach to finish with a losing record. The program has since become one of the winningest in college basketball history."
+ },
+ {
+  "id": "G145",
+  "q": "When did UL Monroe's basketball program begin?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 3.9,
+  "tags": {
+   "tool": "getTeamHistory",
+   "kind": "founded"
+  },
+  "notes": [],
+  "answer": "UL Monroe's basketball program began in **1951**. The school is now located in Monroe, Louisiana, and competes in the Sun Belt Conference as the Warhawks. The program had notable success in the 1980s and 1990s when it was known as Northeast Louisiana, making seven NCAA Tournament appearances between 1982 and 1996, including four consecutive trips from 1990 to 1993."
+ },
+ {
+  "id": "G146",
+  "q": "When did Clemson's basketball program begin?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 9.8,
+  "tags": {
+   "tool": "getTeamHistory",
+   "kind": "founded"
+  },
+  "notes": [],
+  "answer": "Clemson's basketball program began in **1912**. The Tigers won their first four games that inaugural season. \n\nAn interesting tidbit: their first indoor basketball game on campus in 1913 was played in the basement of the administration building, where players had to dribble around support pillars!\n\nClemson became a founding member of the ACC and has since compiled 1,478 all-time wins. Their program reached its highest peaks with Elite Eight appearances in 1980 (when they famously upset #1 Duke in overtime) and again in 2024."
+ },
+ {
+  "id": "G147",
+  "q": "When did Omaha's basketball program begin?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 5.2,
+  "tags": {
+   "tool": "getTeamHistory",
+   "kind": "founded"
+  },
+  "notes": [],
+  "answer": "**Omaha's Division I basketball program began in 2012** when the University of Nebraska Omaha transitioned from Division II to Division I. \n\nNotably, the program has made significant recent progressâthey just won their first Summit League tournament championship in March 2025 with a 22-win season and earned their first NCAA Division I Tournament appearance as a 15-seed!\n\nWant to explore more about the Mavericks' recent success or their full season history?"
+ },
+ {
+  "id": "G148",
+  "q": "When did Ohio State's basketball program begin?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 3.7,
+  "tags": {
+   "tool": "getTeamHistory",
+   "kind": "founded"
+  },
+  "notes": [],
+  "answer": "Ohio State's basketball program was founded in **1898**.\n\nThe program made an impressive early impact, appearing in the very first NCAA Championship game in 1939 (where they lost to Oregon). Their greatest achievement came in 1960 when they won the national championship, led by Hall of Famers Jerry Lucas and John Havlicek.\n\nWant to explore more about Ohio State basketball? [Check out their full profile.](hoopsipedia.com#team/ohio-state-buckeyes)"
+ },
+ {
+  "id": "G149",
+  "q": "When did Bradley's basketball program begin?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 10.5,
+  "tags": {
+   "tool": "getTeamHistory",
+   "kind": "founded"
+  },
+  "notes": [],
+  "answer": "Bradley's basketball program began in **1902** in Peoria, Illinois. The program had its golden era in the 1950s, highlighted by back-to-back NCAA Championship game appearances in 1950 and 1954. The Braves compete in the Missouri Valley Conference and have maintained a competitive program throughout their history."
+ },
+ {
+  "id": "G150",
+  "q": "When did Cal State Fullerton's basketball program begin?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 5.9,
+  "tags": {
+   "tool": "getTeamHistory",
+   "kind": "founded"
+  },
+  "notes": [],
+  "answer": "Cal State Fullerton's basketball program began in **1957**. \n\nThe Titans have had some solid moments in their history, most notably their memorable 1978 NCAA Tournament run where they upset #4 New Mexico and #11 San Francisco to reach the Elite Eight before losing to Arkansas, 61-58 â just one game away from the Final Four."
+ },
+ {
+  "id": "G151",
+  "q": "When did BYU's basketball program begin?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 6.1,
+  "tags": {
+   "tool": "getTeamHistory",
+   "kind": "founded"
+  },
+  "notes": [],
+  "answer": "BYU's basketball program was established in **1902**, making it one of the oldest basketball programs west of the Mississippi River. The team adopted the \"Cougars\" mascot in 1923.\n\nCheck out the [BYU Cougars profile](navigateUser) to explore more of their rich basketball history!"
+ },
+ {
+  "id": "G152",
+  "q": "What was Indiana's record in the 1968-69 season?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 3.9,
+  "tags": {
+   "tool": "getTeamSeasons",
+   "tier": "blueblood",
+   "era": "1960s",
+   "kind": "season_record"
+  },
+  "notes": [],
+  "answer": "Indiana's record in the 1968-69 season was **9-15** overall and **4-10** in Big Ten play. It was a tough year under coach Lou Watson, with the team scoring 81.1 PPG while allowing 84.6 PPG."
+ },
+ {
+  "id": "G153",
+  "q": "What was Utah's record in the 1934-35 season?",
+  "verdict": "FAIL",
+  "status": 200,
+  "latency_s": 1.4,
+  "tags": {
+   "tool": "getTeamSeasons",
+   "tier": "blueblood",
+   "era": "1930s",
+   "kind": "season_record"
+  },
+  "notes": [
+   "missing any of ['10-9', '10 wins', '10–9']"
+  ],
+  "answer": "I don't have data for the 1934-35 season. Hoopsipedia's historical records begin in 1949, so the earliest season available is 1949-50.\n\nIf you're interested in Utah's basketball history, I can look up their records starting from 1949 onward, or provide information about their all-time program record. Would either of those be helpful?"
+ },
+ {
+  "id": "G154",
+  "q": "What was Michigan's record in the 1993-94 season?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 8.2,
+  "tags": {
+   "tool": "getTeamSeasons",
+   "tier": "blueblood",
+   "era": "1990s",
+   "kind": "season_record"
+  },
+  "notes": [],
+  "answer": "Michigan went **24-8** in the 1993-94 season with a 13-5 Big Ten conference record. They were seeded #3 in the NCAA Tournament but lost in the Regional Final. The team was coached by Steve Fisher, averaged 79.8 PPG on offense while allowing 73.5 PPG, and finished ranked #11 in the final AP poll."
+ },
+ {
+  "id": "G155",
+  "q": "What was Illinois Fighting's record in the 1946-47 season?",
+  "verdict": "FAIL",
+  "status": 200,
+  "latency_s": 3.9,
+  "tags": {
+   "tool": "getTeamSeasons",
+   "tier": "blueblood",
+   "era": "1940s",
+   "kind": "season_record"
+  },
+  "notes": [
+   "missing any of ['14-6', '14 wins', '14–6']"
+  ],
+  "answer": "I found Illinois, but I need to check if they have data from that season. Hoopsipedia's historical database covers seasons from 1949 onward, and the 1946-47 season predates that coverage. Unfortunately, I don't have access to Illinois Fighting Illini's record for the 1946-47 season through Hoopsipedia's database.\n\nThe earliest season data available in Hoopsipedia is 1949-50. If you're interested in Illinois's records from 1949 onward, or want to explore other aspects of their basketball history, I'd be happy to help!"
+ },
+ {
+  "id": "G156",
+  "q": "What was Notre Dame Fighting's record in the 1912-13 season?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 3.5,
+  "tags": {
+   "tool": "getTeamSeasons",
+   "tier": "blueblood",
+   "era": "1910s",
+   "kind": "season_record"
+  },
+  "notes": [],
+  "answer": "Notre Dame's record in the 1912-13 season was **13-2** (.867 winning percentage). The team was coached by Bill Nelson and competed as an independent."
+ },
+ {
+  "id": "G157",
+  "q": "What was Purdue's record in the 1961-62 season?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 4.3,
+  "tags": {
+   "tool": "getTeamSeasons",
+   "tier": "blueblood",
+   "era": "1960s",
+   "kind": "season_record"
+  },
+  "notes": [],
+  "answer": "Purdue's record in the 1961-62 season was **17-7** overall with a **9-5 conference record** in the Big Ten. They were coached by Ray Eddy and ranked as high as #6 in the AP Poll that season."
+ },
+ {
+  "id": "G158",
+  "q": "What was Bucknell's record in the 1985-86 season?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 3.4,
+  "tags": {
+   "tool": "getTeamSeasons",
+   "tier": "major",
+   "era": "1980s",
+   "kind": "season_record"
+  },
+  "notes": [],
+  "answer": "Bucknell's record in the 1985-86 season was **17-12** (17 wins, 12 losses). They went **8-6** in conference play (ECC) under coach Charles Woollum, scoring 70.8 PPG while allowing 70 PPG."
+ },
+ {
+  "id": "G159",
+  "q": "What was South Carolina's record in the 1971-72 season?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 4.9,
+  "tags": {
+   "tool": "getTeamSeasons",
+   "tier": "major",
+   "era": "1970s",
+   "kind": "season_record"
+  },
+  "notes": [],
+  "answer": "South Carolina's record in the 1971-72 season was **24-5** (.828 winning percentage). \n\nThe Gamecocks had an outstanding year under coach Frank McGuire, ranking as high as #3 in the AP Poll and finishing with a final ranking of #6. They averaged 82.3 points per game on offense while holding opponents to 71.5 points. However, their season ended in the NCAA Tournament Regional Semifinal."
+ },
+ {
+  "id": "G160",
+  "q": "What was Georgetown's record in the 1947-48 season?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 7.2,
+  "tags": {
+   "tool": "getTeamSeasons",
+   "tier": "major",
+   "era": "1940s",
+   "kind": "season_record"
+  },
+  "notes": [],
+  "answer": "Georgetown's record in the 1947-48 season was **13-15** (13 wins, 15 losses), coached by Elmer Ripley. They were independent that year and averaged 28 points per game while allowing 34.4 PPG to opponents."
+ },
+ {
+  "id": "G161",
+  "q": "What was Duquesne's record in the 2005-06 season?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 10.0,
+  "tags": {
+   "tool": "getTeamSeasons",
+   "tier": "major",
+   "era": "2000s",
+   "kind": "season_record"
+  },
+  "notes": [],
+  "answer": "Duquesne had a **3-24 record in the 2005-06 season** (1-15 in Atlantic 10 conference play). It was a difficult year under coach Danny Nee, with an SRS rating of -10.21, indicating a significantly below-average team. They averaged 66.1 points per game while allowing 77.4."
+ },
+ {
+  "id": "G162",
+  "q": "What was UTEP's record in the 2025-26 season?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 5.0,
+  "tags": {
+   "tool": "getTeamSeasons",
+   "tier": "major",
+   "era": "2020s",
+   "kind": "season_record"
+  },
+  "notes": [],
+  "answer": "UTEP's record in the 2025-26 season was **11-20** overall (7-13 in CUSA conference play). It was a difficult season for the Miners under head coach Joe Golding, with the team scoring 69.3 PPG while allowing 72.4 PPG. You can view more details about this season on their [UTEP profile](</))."
+ },
+ {
+  "id": "G163",
+  "q": "What was Iowa State's record in the 1970-71 season?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 4.9,
+  "tags": {
+   "tool": "getTeamSeasons",
+   "tier": "major",
+   "era": "1970s",
+   "kind": "season_record"
+  },
+  "notes": [],
+  "answer": "Iowa State's record in the 1970-71 season was **5-21** overall (5 wins, 21 losses). In Big 8 Conference play, they went 2-12. The team was coached by Glendon Anderson and averaged 72.1 points per game while allowing 80.5 per game."
+ },
+ {
+  "id": "G164",
+  "q": "What was Loyola Marymount's record in the 1993-94 season?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 4.0,
+  "tags": {
+   "tool": "getTeamSeasons",
+   "tier": "mid",
+   "era": "1990s",
+   "kind": "season_record"
+  },
+  "notes": [],
+  "answer": "Loyola Marymount went **6-21** in the 1993-94 season (4-10 in WCC conference play). They averaged 79 PPG while allowing 90 PPG under coach John Olive. It was a difficult year with an SRS rating of -9.09."
+ },
+ {
+  "id": "G165",
+  "q": "What was Army Black's record in the 1964-65 season?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 4.3,
+  "tags": {
+   "tool": "getTeamSeasons",
+   "tier": "mid",
+   "era": "1960s",
+   "kind": "season_record"
+  },
+  "notes": [],
+  "answer": "Army Black Knights went **21-8** in the 1964-65 season under coach Tates Locke. They scored 67.3 points per game and gave up 60.9 points per game. That was a strong season for the program, posting a .724 winning percentage."
+ },
+ {
+  "id": "G166",
+  "q": "What was Cornell Big's record in the 1999-00 season?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 4.6,
+  "tags": {
+   "tool": "getTeamSeasons",
+   "tier": "mid",
+   "era": "1990s",
+   "kind": "season_record"
+  },
+  "notes": [],
+  "answer": "Cornell's record in the **1999-00 season** was **10-17** overall, with a **3-11 conference record** in Ivy League play. The team was coached by Scott Thompson and averaged 65.3 points per game while allowing 68.6."
+ },
+ {
+  "id": "G167",
+  "q": "What was Louisiana Tech's record in the 2015-16 season?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 4.4,
+  "tags": {
+   "tool": "getTeamSeasons",
+   "tier": "mid",
+   "era": "2010s",
+   "kind": "season_record"
+  },
+  "notes": [],
+  "answer": "Louisiana Tech went **23-10** in the 2015-16 season under coach Eric Konkol. They posted a conference record of 12-6 in the CUSA and averaged 79.5 points per game while allowing 72.6 PPG."
+ },
+ {
+  "id": "G168",
+  "q": "What was UAB's record in the 2025-26 season?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 3.7,
+  "tags": {
+   "tool": "getTeamSeasons",
+   "tier": "mid",
+   "era": "2020s",
+   "kind": "season_record"
+  },
+  "notes": [],
+  "answer": "UAB's record in the 2025-26 season was **20-12** (625 winning percentage). They went **11-7 in American Conference** play. Under coach Andy Kennedy, the Blazers averaged 79.2 points per game while allowing 73.8 PPG."
+ },
+ {
+  "id": "G169",
+  "q": "What was Pacific's record in the 2012-13 season?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 11.1,
+  "tags": {
+   "tool": "getTeamSeasons",
+   "tier": "mid",
+   "era": "2010s",
+   "kind": "season_record"
+  },
+  "notes": [],
+  "answer": "Pacific went **22-13** in the 2012-13 season, with a conference record of 13-5 in the Big West. They were seeded as a 15-seed in the NCAA Tournament and lost in the second round."
+ },
+ {
+  "id": "G170",
+  "q": "What was Florida Gulf Coast's record in the 2021-22 season?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 4.5,
+  "tags": {
+   "tool": "getTeamSeasons",
+   "tier": "low",
+   "era": "2020s",
+   "kind": "season_record"
+  },
+  "notes": [],
+  "answer": "In the 2021-22 season, Florida Gulf Coast went **22-12** overall with a **10-6 conference record** in the ASUN (A-Sun). The Eagles averaged 77.7 PPG offensively while allowing 73.7 PPG on defense. They were coached by Michael Fly."
+ },
+ {
+  "id": "G171",
+  "q": "What was South Carolina Upstate's record in the 2018-19 season?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 10.8,
+  "tags": {
+   "tool": "getTeamSeasons",
+   "tier": "low",
+   "era": "2010s",
+   "kind": "season_record"
+  },
+  "notes": [],
+  "answer": "South Carolina Upstate's record in the 2018-19 season was **6-26** (6 wins, 26 losses). They went 1-16 in Big South Conference play under coach Dave Dickerson. It was a challenging season with a scoring margin of -7.0 points per game (67.8 PPG to 74.8 OPPG)."
+ },
+ {
+  "id": "G172",
+  "q": "What was Cleveland State's record in the 1982-83 season?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 8.1,
+  "tags": {
+   "tool": "getTeamSeasons",
+   "tier": "low",
+   "era": "1980s",
+   "kind": "season_record"
+  },
+  "notes": [],
+  "answer": "Cleveland State's record in the 1982-83 season was **8-20** (8 wins, 20 losses). They were in the Mid-Continent Conference that year with a conference record of 1-4. Head coach Ray Dieringer's team averaged 70.3 points per game while allowing 76.3 points per game."
+ },
+ {
+  "id": "G173",
+  "q": "What was Bryant's record in the 2021-22 season?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 4.5,
+  "tags": {
+   "tool": "getTeamSeasons",
+   "tier": "low",
+   "era": "2020s",
+   "kind": "season_record"
+  },
+  "notes": [],
+  "answer": "Bryant went **22-10** in the 2021-22 season. They had an outstanding conference record of 15-2 in the NEC, earning a 16-seed in the NCAA Tournament where they lost in the First Four game. They averaged 78 points per game and were coached by Jared Grasso."
+ },
+ {
+  "id": "G174",
+  "q": "What was Maine Black's record in the 1947-48 season?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 7.7,
+  "tags": {
+   "tool": "getTeamSeasons",
+   "tier": "low",
+   "era": "1940s",
+   "kind": "season_record"
+  },
+  "notes": [],
+  "answer": "Maine Black Bears went **11-7** in the 1947-48 season under coach Eck Allen. They had a conference record of 2-5 in the Yankee Conference that year."
+ },
+ {
+  "id": "G175",
+  "q": "What was North Alabama's record in the 2023-24 season?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 9.2,
+  "tags": {
+   "tool": "getTeamSeasons",
+   "tier": "low",
+   "era": "2020s",
+   "kind": "season_record"
+  },
+  "notes": [],
+  "answer": "North Alabama went **15-17** in the 2023-24 season under coach Tony Pujol, finishing with an 8-8 conference record in the ASUN. They averaged 76.5 points per game while allowing 76.1 ppg."
+ },
+ {
+  "id": "G176",
+  "q": "What is the all-time head-to-head record between Middle Tennessee Blue and Charlotte?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 11.6,
+  "tags": {
+   "tool": "getHeadToHead",
+   "kind": "h2h",
+   "games": 18
+  },
+  "notes": [],
+  "answer": "**Middle Tennessee leads the all-time head-to-head series against Charlotte 14-4** (18 total games).\n\nMiddle Tennessee has a dominant record in the matchup, winning 78% of the contests between these two Conference USA/AAC rivals."
+ },
+ {
+  "id": "G177",
+  "q": "What is the all-time head-to-head record between South Carolina Upstate and Florida Gulf Coast?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 5.4,
+  "tags": {
+   "tool": "getHeadToHead",
+   "kind": "h2h",
+   "games": 24
+  },
+  "notes": [],
+  "answer": "The all-time head-to-head record between South Carolina Upstate and Florida Gulf Coast is **Florida Gulf Coast leads 18-6** in 24 total matchups."
+ },
+ {
+  "id": "G178",
+  "q": "What is the all-time head-to-head record between Denver and North Texas Mean?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 7.8,
+  "tags": {
+   "tool": "getHeadToHead",
+   "kind": "h2h",
+   "games": 26
+  },
+  "notes": [],
+  "answer": "The all-time head-to-head record between **Denver** and **North Texas Mean Green** is **North Texas leads 16-10** in 26 total meetings.\n\nNorth Texas has the edge in their series history against the Pioneers."
+ },
+ {
+  "id": "G179",
+  "q": "What is the all-time head-to-head record between Prairie View A&M and Southern?",
+  "verdict": "FAIL",
+  "status": 200,
+  "latency_s": 3.4,
+  "tags": {
+   "tool": "getHeadToHead",
+   "kind": "h2h",
+   "games": 99
+  },
+  "notes": [
+   "missing any of ['30']",
+   "missing any of ['69']"
+  ],
+  "answer": "I found Prairie View A&M, but I need clarification on which \"Southern\" team you're asking about. The search returned several options:\n\n- **Southern Illinois Salukis** (MVC)\n- **Southern Utah Thunderbirds** (WAC)\n- **Georgia Southern Eagles** (Sun Belt)\n- **Charleston Southern Buccaneers** (Big South)\n- **Southern Indiana Screaming Eagles** (Ohio Valley)\n\nWhich Southern team would you like to compare with Prairie View A&M?"
+ },
+ {
+  "id": "G180",
+  "q": "What is the all-time head-to-head record between North Texas Mean and Fresno State?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 4.9,
+  "tags": {
+   "tool": "getHeadToHead",
+   "kind": "h2h",
+   "games": 44
+  },
+  "notes": [],
+  "answer": "The all-time head-to-head record between **North Texas Mean Green** and **Fresno State Bulldogs** is:\n\n**Fresno State leads 28-16** (44 total games played)\n\nFresno State has dominated the series, winning 64% of the matchups."
+ },
+ {
+  "id": "G181",
+  "q": "What is the all-time head-to-head record between Northern Iowa and Southern Illinois?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 7.7,
+  "tags": {
+   "tool": "getHeadToHead",
+   "kind": "h2h",
+   "games": 76
+  },
+  "notes": [],
+  "answer": "**Northern Iowa leads the all-time head-to-head series 39â37 against Southern Illinois**, with 76 total games played between the two Missouri Valley Conference rivals."
+ },
+ {
+  "id": "G182",
+  "q": "What is the all-time head-to-head record between Ohio and Kent State Golden?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 5.8,
+  "tags": {
+   "tool": "getHeadToHead",
+   "kind": "h2h",
+   "games": 155
+  },
+  "notes": [],
+  "answer": "The all-time head-to-head record between **Ohio Bobcats** and **Kent State Golden Flashes** is:\n\n**Ohio leads 97-58** (155 total games)\n\nBoth programs compete in the MAC (Mid-American Conference), so they've had a long rivalry history. Would you like to explore more about either program?"
+ },
+ {
+  "id": "G183",
+  "q": "What is the all-time head-to-head record between Virginia Tech and West Virginia?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 4.1,
+  "tags": {
+   "tool": "getHeadToHead",
+   "kind": "h2h",
+   "games": 76
+  },
+  "notes": [],
+  "answer": "West Virginia leads the all-time head-to-head record against Virginia Tech **47-29** (76 total games)."
+ },
+ {
+  "id": "G184",
+  "q": "What is the all-time head-to-head record between BYU and TCU Horned?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 7.4,
+  "tags": {
+   "tool": "getHeadToHead",
+   "kind": "h2h",
+   "games": 25
+  },
+  "notes": [],
+  "answer": "BYU leads the all-time head-to-head series against TCU **21-4** in 25 total games. \n\nThe Cougars have dominated this matchup historically. Both teams now compete in the Big 12, so they should have more opportunities to play in the future."
+ },
+ {
+  "id": "G185",
+  "q": "What is the all-time head-to-head record between Duquesne and DePaul Blue?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 4.7,
+  "tags": {
+   "tool": "getHeadToHead",
+   "kind": "h2h",
+   "games": 26
+  },
+  "notes": [],
+  "answer": "The all-time head-to-head record between Duquesne and DePaul is **DePaul leads 14-12** in 26 total meetings."
+ },
+ {
+  "id": "G186",
+  "q": "What is the all-time head-to-head record between NJIT and UAlbany Great?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 8.3,
+  "tags": {
+   "tool": "getHeadToHead",
+   "kind": "h2h",
+   "games": 18
+  },
+  "notes": [],
+  "answer": "The all-time head-to-head record between **NJIT and UAlbany** is:\n\n**UAlbany leads 16-2** (18 total games)\n\nUAlbany has dominated this matchup between the two America East Conference rivals, winning the vast majority of their meetings."
+ },
+ {
+  "id": "G187",
+  "q": "What is the all-time head-to-head record between Missouri and Alabama Crimson?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 4.1,
+  "tags": {
+   "tool": "getHeadToHead",
+   "kind": "h2h",
+   "games": 22
+  },
+  "notes": [],
+  "answer": "**Missouri trails Alabama 7-15 all-time** in their head-to-head series (22 total games). Alabama holds the advantage with 15 wins to Missouri's 7 wins."
+ },
+ {
+  "id": "G188",
+  "q": "What is the all-time head-to-head record between Ole Miss and Alabama Crimson?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 4.3,
+  "tags": {
+   "tool": "getHeadToHead",
+   "kind": "h2h",
+   "games": 137
+  },
+  "notes": [],
+  "answer": "The all-time head-to-head record between Ole Miss and Alabama is **Alabama leads 92-45** (137 total games played).\n\nAlabama has dominated the series historically, winning roughly 67% of the matchups. Both programs are SEC conference rivals, which explains the extensive game history between them."
+ },
+ {
+  "id": "G189",
+  "q": "What is the all-time head-to-head record between New Mexico State and Southern Illinois?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 4.4,
+  "tags": {
+   "tool": "getHeadToHead",
+   "kind": "h2h",
+   "games": 19
+  },
+  "notes": [],
+  "answer": "The all-time head-to-head record between New Mexico State and Southern Illinois is **New Mexico State 11, Southern Illinois 8** in 19 total games."
+ },
+ {
+  "id": "G190",
+  "q": "What is the all-time head-to-head record between Temple and South Carolina?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 6.1,
+  "tags": {
+   "tool": "getHeadToHead",
+   "kind": "h2h",
+   "games": 15
+  },
+  "notes": [],
+  "answer": "The all-time head-to-head record between Temple and South Carolina is **South Carolina 8, Temple 7** (15 total games).\n\nSouth Carolina holds a slight edge in the series. Would you like more details about their matchups or specific seasons?"
+ },
+ {
+  "id": "G191",
+  "q": "What is the all-time head-to-head record between Cincinnati and Virginia Tech?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 10.1,
+  "tags": {
+   "tool": "getHeadToHead",
+   "kind": "h2h",
+   "games": 31
+  },
+  "notes": [],
+  "answer": "The all-time head-to-head record between Cincinnati and Virginia Tech is **Virginia Tech 18, Cincinnati 13** in 31 total games. Virginia Tech has a slight edge in the series."
+ },
+ {
+  "id": "G192",
+  "q": "What is the all-time head-to-head record between UCLA and Colorado?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 4.7,
+  "tags": {
+   "tool": "getHeadToHead",
+   "kind": "h2h",
+   "games": 27
+  },
+  "notes": [],
+  "answer": "The all-time head-to-head record between **UCLA and Colorado** is **20-7 in favor of UCLA**. They've played 27 total games."
+ },
+ {
+  "id": "G193",
+  "q": "What is the all-time head-to-head record between Rutgers Scarlet and Pennsylvania?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 4.7,
+  "tags": {
+   "tool": "getHeadToHead",
+   "kind": "h2h",
+   "games": 18
+  },
+  "notes": [],
+  "answer": "The all-time head-to-head record between **Rutgers** and **Pennsylvania** is:\n\n**Pennsylvania leads 13-5** (18 total games played)\n\nPennsylvania has a strong edge in this series, with 13 wins compared to Rutgers' 5 wins."
+ },
+ {
+  "id": "G194",
+  "q": "What is the all-time head-to-head record between Northeastern and George Mason?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 4.0,
+  "tags": {
+   "tool": "getHeadToHead",
+   "kind": "h2h",
+   "games": 22
+  },
+  "notes": [],
+  "answer": "Northeastern leads the all-time head-to-head record against George Mason **12-10** through 22 total games."
+ },
+ {
+  "id": "G195",
+  "q": "What is the all-time head-to-head record between Villanova and Xavier?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 6.2,
+  "tags": {
+   "tool": "getHeadToHead",
+   "kind": "h2h",
+   "games": 46
+  },
+  "notes": [],
+  "answer": "Villanova leads the all-time head-to-head series against Xavier **37-9** (46 games total). \n\nThe Wildcats have dominated this matchup, which makes sense given their success as a Big East powerhouse with three national championships compared to Xavier's less decorated tournament history."
+ },
+ {
+  "id": "G196",
+  "q": "What is the all-time head-to-head record between Ohio State and Penn State Nittany?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 3.9,
+  "tags": {
+   "tool": "getHeadToHead",
+   "kind": "h2h",
+   "games": 69
+  },
+  "notes": [],
+  "answer": "**Ohio State leads the all-time head-to-head record 47â22 against Penn State Nittany Lions** (69 total games played)."
+ },
+ {
+  "id": "G197",
+  "q": "What is the all-time head-to-head record between North Carolina Tar and Western Kentucky?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 4.3,
+  "tags": {
+   "tool": "getHeadToHead",
+   "kind": "h2h",
+   "games": 41
+  },
+  "notes": [],
+  "answer": "The all-time head-to-head record between **North Carolina and Western Kentucky** is:\n\n**North Carolina leads 23-18** (41 total games)\n\nThe Tar Heels have the advantage in this matchup, winning 23 games compared to Western Kentucky's 18 victories."
+ },
+ {
+  "id": "G198",
+  "q": "What is the all-time head-to-head record between Cal State Fullerton and Pacific?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 4.4,
+  "tags": {
+   "tool": "getHeadToHead",
+   "kind": "h2h",
+   "games": 92
+  },
+  "notes": [],
+  "answer": "The all-time head-to-head record between **Cal State Fullerton** and **Pacific** is **Pacific leads 50-42** in 92 total meetings."
+ },
+ {
+  "id": "G199",
+  "q": "What is the all-time head-to-head record between St. Bonaventure and Tulane Green?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 4.0,
+  "tags": {
+   "tool": "getHeadToHead",
+   "kind": "h2h",
+   "games": 16
+  },
+  "notes": [],
+  "answer": "The all-time head-to-head record between St. Bonaventure and Tulane Green Wave is **8-8**, with 16 total games played between the two teams. It's a perfectly even rivalry!"
+ },
+ {
+  "id": "G200",
+  "q": "How many NCAA tournament appearances does Indiana have?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 3.1,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "blueblood",
+   "kind": "tourney_count"
+  },
+  "notes": [],
+  "answer": "Indiana (the Hoosiers) has **41 NCAA tournament appearances**. They've won 5 national championships (1940, 1953, 1976, 1981, 1987), reached the Final Four 8 times, and the Elite Eight 12 times.\n\nCheck out [Indiana's full profile](https://hoopsipedia.com#team/indiana-hoosiers) to explore their complete tournament history and season-by-season records!"
+ },
+ {
+  "id": "G201",
+  "q": "How many NCAA tournament appearances does Utah have?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 7.2,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "blueblood",
+   "kind": "tourney_count"
+  },
+  "notes": [],
+  "answer": "The **Utah Utes** have made **31 NCAA Tournament appearances**. They've also won 1 championship (1944), reached 4 Final Fours, 5 Elite Eights, and 11 Sweet Sixteens.\n\nWant to explore more about Utah's tournament history? Check out their [full profile](navigateUser?route=#team/utah-utes&label=View Utah Profile)."
+ },
+ {
+  "id": "G202",
+  "q": "How many NCAA tournament appearances does Michigan have?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 3.7,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "blueblood",
+   "kind": "tourney_count"
+  },
+  "notes": [],
+  "answer": "The **Michigan Wolverines** have **31 NCAA tournament appearances**.\n\nThey've also won 2 national championships (1989 and 2026), reached 5 Final Fours, and have 14 Sweet Sixteen appearances all-time.\n\nWant to dive deeper into their tournament history? Check out their [full profile](https://hoopsipedia.com#team/michigan-wolverines) or their [tournament record by seed matchup](https://hoopsipedia.com#team/michigan-wolverines)."
+ },
+ {
+  "id": "G203",
+  "q": "How many NCAA tournament appearances does Illinois Fighting have?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 3.7,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "blueblood",
+   "kind": "tourney_count"
+  },
+  "notes": [],
+  "answer": "Illinois Fighting Illini has made **36 NCAA Tournament appearances**.\n\nThey've also reached the Final Four 5 times and the Elite Eight 8 times, though they haven't won a national championship. The program has won 17 conference titles and produced 12 All-Americans throughout their history.\n\nWant to explore more about their tournament history or recent seasons? I can pull up their game-by-game tournament record or season records."
+ },
+ {
+  "id": "G204",
+  "q": "How many NCAA tournament appearances does Bucknell have?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 4.5,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "major",
+   "kind": "tourney_count"
+  },
+  "notes": [],
+  "answer": "Bucknell has made **7 NCAA tournament appearances**. The Bison have won 27 Patriot League conference titles but have not won a national championship or made a Final Four."
+ },
+ {
+  "id": "G205",
+  "q": "How many NCAA tournament appearances does South Carolina have?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 5.0,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "major",
+   "kind": "tourney_count"
+  },
+  "notes": [],
+  "answer": "The **South Carolina Gamecocks** have made **13 NCAA tournament appearances**. They've also reached 2 Final Fours and 3 Elite Eights in their history.\n\nIf you were asking about South Carolina State, they have 4 tournament appearances.\n\nWould you like more details about South Carolina's tournament history, or explore their season-by-season record?"
+ },
+ {
+  "id": "G206",
+  "q": "How many NCAA tournament appearances does Georgetown have?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 2.6,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "major",
+   "kind": "tourney_count"
+  },
+  "notes": [],
+  "answer": "Georgetown has **31 NCAA tournament appearances**. The Hoyas have been quite successful in tournament play, with 5 Final Fours, 8 Elite Eights, and 12 Sweet Sixteens to their credit. They won their lone national championship in 1984.\n\nCheck out [Georgetown's full profile](https://hoopsipedia.com#team/georgetown-hoyas) to explore their tournament history in detail!"
+ },
+ {
+  "id": "G207",
+  "q": "How many NCAA tournament appearances does Duquesne have?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 2.8,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "major",
+   "kind": "tourney_count"
+  },
+  "notes": [],
+  "answer": "Duquesne has **6 NCAA tournament appearances**. \n\nThe Dukes have made it to the Sweet Sixteen twice and the Elite Eight twice, though they've never won a national championship. They've also claimed 4 conference titles in their history."
+ },
+ {
+  "id": "G208",
+  "q": "How many NCAA tournament appearances does Loyola Marymount have?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 6.6,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "mid",
+   "kind": "tourney_count"
+  },
+  "notes": [],
+  "answer": "Loyola Marymount has **5 NCAA tournament appearances**. \n\nThe Lions have also made 1 Elite Eight and 1 Sweet Sixteen in their tournament history, though they've never reached the Final Four or won a national championship. They compete in the WCC conference and have won 5 conference titles during their time as a Division I program."
+ },
+ {
+  "id": "G209",
+  "q": "How many NCAA tournament appearances does Army Black have?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 2.8,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "mid",
+   "kind": "tourney_count"
+  },
+  "notes": [],
+  "answer": "According to the Hoopsipedia database, **Army Black Knights have 0 NCAA tournament appearances**. The program has an all-time record of 1,332 wins and 1,367 losses, but has never made it to the NCAA tournament."
+ },
+ {
+  "id": "G210",
+  "q": "How many NCAA tournament appearances does Cornell Big have?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 6.0,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "mid",
+   "kind": "tourney_count"
+  },
+  "notes": [],
+  "answer": "Cornell has made **5 NCAA Tournament appearances**. The Big Red have also made 2 Sweet Sixteen appearances and won 8 Ivy League conference titles, though they've never won a national championship."
+ },
+ {
+  "id": "G211",
+  "q": "How many NCAA tournament appearances does Louisiana Tech have?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 5.2,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "mid",
+   "kind": "tourney_count"
+  },
+  "notes": [],
+  "answer": "Louisiana Tech has **5 NCAA tournament appearances**. \n\nThe Bulldogs have also made 1 Sweet Sixteen appearance in their tournament history. While they've never won a championship or made a Final Four, they've been a solid mid-major program with a strong all-time record (942 wins, 665 losses)."
+ },
+ {
+  "id": "G212",
+  "q": "How many NCAA tournament appearances does Florida Gulf Coast have?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 2.5,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "low",
+   "kind": "tourney_count"
+  },
+  "notes": [],
+  "answer": "Florida Gulf Coast has **3 NCAA Tournament appearances**. The Eagles have made it to the Sweet Sixteen once, most memorably in 2013 when they made a Cinderella run as a 15-seed. They compete in the ASUN Conference."
+ },
+ {
+  "id": "G213",
+  "q": "How many NCAA tournament appearances does South Carolina Upstate have?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 2.4,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "low",
+   "kind": "tourney_count"
+  },
+  "notes": [],
+  "answer": "Based on Hoopsipedia's data, **South Carolina Upstate has 0 NCAA tournament appearances**. The Spartans, who compete in the Big South Conference, have an all-time record of 225 wins and 374 losses but have not made the NCAA Tournament."
+ },
+ {
+  "id": "G214",
+  "q": "How many NCAA tournament appearances does Cleveland State have?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 2.7,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "low",
+   "kind": "tourney_count"
+  },
+  "notes": [],
+  "answer": "Cleveland State has **3 NCAA tournament appearances** in program history. They've also made it to the Sweet Sixteen once."
+ },
+ {
+  "id": "G215",
+  "q": "How many NCAA tournament appearances does Bryant have?",
+  "verdict": "PASS",
+  "status": 200,
+  "latency_s": 1.8,
+  "tags": {
+   "tool": "lookupTeam",
+   "tier": "low",
+   "kind": "tourney_count"
+  },
+  "notes": [],
+  "answer": "Bryant has **2 NCAA tournament appearances** in their program history."
+ }
+]

@@ -1,0 +1,9 @@
+{
+  "page": 2,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Dec 1, 1979 - Ohio University (visitors) at Ohio State (home), Columbus OH, final score Ohio State 78, Ohio University 51. Visitors' (Ohio University) player lines are legible and checksum correctly (sum of TP = 51 = team total). However, the home team (Ohio State) box score has several illegible/inconsistent bottom rows (Sims, Hetz, Marx - handwriting with strikethroughs/name corrections e.g. 'Johnson' crossed out near Hetz/Marx), and cross-checking FG/FT against listed TP for multiple players (e.g. Sims: FG0-2 FT1-2 implies 1-2 pts but TP field appears to read 3) shows inconsistencies indicating unreliable OCR/transcription of handwritten digits. Best-effort sum of legible home-team TP values (~75) does not match the team total (78). Per instructions, skipping rather than guessing to avoid inventing values; entire game omitted since both teams must be reported together."
+    }
+  ]
+}

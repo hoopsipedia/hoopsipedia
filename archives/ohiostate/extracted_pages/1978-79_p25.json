@@ -1,0 +1,9 @@
+{
+  "page": 25,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Handwritten NCAA box score (Iowa at Ohio State, St. John Arena, Feb. 24, 1979) is too illegible to transcribe player lines confidently. Header info (date, site, opponent Iowa, final score by periods appears to read Ohio State 33+35) is discernible, but individual player FG/FGA/FT/FTA/REB/PF/TP/A/TO/BLK/S/MIN cells are handwritten in faint pencil/pen with many digits indistinguishable (0 vs 6, 3 vs 8, etc.) and several player surnames only partially legible (e.g. Ohio State roster shows Williams, Ramsey(?), Penn, Sellinghausen(?) plus unreadable names). Team TOTALS rows are also not reliably readable, so a player-points checksum against the final score cannot be verified with confidence. Skipping per instructions to avoid guessing."
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "page": 10,
+  "games": [
+    {
+      "date": "1995-01-04",
+      "opponent": "Florida State",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 81,
+          "players": [
+            {"name": "Burrough", "min": 28, "fg": "3-10", "tp": "0-0", "ft": "1-2", "reb": 5, "ast": 1, "pf": 2, "to": 1, "blk": 0, "stl": 3, "pts": 7},
+            {"name": "Alexander (D.)", "min": 33, "fg": "8-14", "tp": "4-5", "ft": "1-3", "reb": 6, "ast": 6, "pf": 3, "to": 3, "blk": 0, "stl": 0, "pts": 21},
+            {"name": "Robinson", "min": 26, "fg": "2-4", "tp": "0-0", "ft": "0-0", "reb": 2, "ast": 1, "pf": 2, "to": 1, "blk": 0, "stl": 2, "pts": 4},
+            {"name": "Deane", "min": 35, "fg": "7-14", "tp": "5-10", "ft": "9-10", "reb": 5, "ast": 1, "pf": 3, "to": 1, "blk": 0, "stl": 1, "pts": 28},
+            {"name": "Alexander (T.)", "min": 20, "fg": "1-1", "tp": "0-0", "ft": "0-0", "reb": 3, "ast": 0, "pf": 0, "to": 0, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Staples", "min": 12, "fg": "2-4", "tp": "2-4", "ft": "1-2", "reb": 2, "ast": 1, "pf": 0, "to": 0, "blk": 0, "stl": 0, "pts": 7},
+            {"name": "Williford", "min": 16, "fg": "0-6", "tp": "0-2", "ft": "0-0", "reb": 4, "ast": 2, "pf": 3, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Barnes", "min": 21, "fg": "4-6", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "pf": 2, "to": 2, "blk": 1, "stl": 0, "pts": 8},
+            {"name": "Nolan", "min": 9, "fg": "2-4", "tp": "0-0", "ft": "0-0", "reb": 3, "ast": 0, "pf": 0, "to": 0, "blk": 0, "stl": 0, "pts": 4}
+          ]
+        },
+        {
+          "name": "Florida State Seminoles",
+          "score": 75,
+          "players": [
+            {"name": "Sura", "min": 38, "fg": "9-17", "tp": "3-8", "ft": "9-11", "reb": 8, "ast": 4, "pf": 3, "to": 2, "blk": 0, "stl": 0, "pts": 30},
+            {"name": "Greer", "min": 22, "fg": "2-3", "tp": "0-0", "ft": "0-0", "reb": 2, "ast": 4, "pf": 0, "to": 1, "blk": 0, "stl": 0, "pts": 4},
+            {"name": "Collins", "min": 33, "fg": "6-9", "tp": "1-3", "ft": "2-4", "reb": 6, "ast": 1, "pf": 4, "to": 0, "blk": 3, "stl": 0, "pts": 15},
+            {"name": "Reid", "min": 21, "fg": "2-5", "tp": "0-0", "ft": "0-1", "reb": 3, "ast": 0, "pf": 4, "to": 4, "blk": 3, "stl": 0, "pts": 4},
+            {"name": "Louis", "min": 27, "fg": "4-10", "tp": "0-0", "ft": "0-1", "reb": 3, "ast": 0, "pf": 1, "to": 1, "blk": 3, "stl": 0, "pts": 8},
+            {"name": "Wooden", "min": 5, "fg": "0-2", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Curry", "min": 20, "fg": "2-5", "tp": "1-3", "ft": "0-0", "reb": 5, "ast": 2, "pf": 3, "to": 0, "blk": 0, "stl": 1, "pts": 5},
+            {"name": "Carroll", "min": 25, "fg": "3-5", "tp": "3-4", "ft": "0-0", "reb": 2, "ast": 0, "pf": 0, "to": 2, "blk": 0, "stl": 0, "pts": 9},
+            {"name": "Luchman", "min": 9, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 1, "blk": 2, "stl": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true,
+      "note": "Went to OT (score by periods: VA 34-47-OT=81, FSU 33-42-OT=75). Assist/turnover digits for a few Virginia players were partly obscured by a handwritten 'Revised' stamp/marks (Ø used as stray/zero glyph); best-effort reads used for ast/to fields, but pts for every player were read directly from the printed PTS column (not computed) and both team point sums check out exactly against final scores."
+    }
+  ],
+  "skipped": []
+}

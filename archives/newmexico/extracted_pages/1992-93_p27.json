@@ -1,0 +1,47 @@
+{
+  "page": 27,
+  "games": [
+    {
+      "date": "1993-03-06",
+      "opponent": "Brigham Young Cougars",
+      "site": "Albuquerque, NM",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 79,
+          "players": [
+            {"name": "Steve Logan", "min": "37", "fg": "5-10", "tp": "2-6", "ft": "9-10", "reb": "3", "ast": "4", "pf": "2", "to": "1", "stl": "0", "blk": "0", "pts": 21},
+            {"name": "Ike Williams", "min": "27", "fg": "5-12", "tp": "5-9", "ft": "3-4", "reb": "5", "ast": "2", "pf": "3", "to": "1", "stl": "0", "blk": "0", "pts": 18},
+            {"name": "Greg Brown", "min": "30", "fg": "4-9", "tp": "3-7", "ft": "4-4", "reb": "2", "ast": "2", "pf": "2", "to": "1", "stl": "1", "blk": "0", "pts": 15},
+            {"name": "Corey Jenkins", "min": "14", "fg": "1-2", "tp": "1-1", "ft": "0-0", "reb": "1", "ast": "3", "pf": "2", "to": "1", "stl": "0", "blk": "0", "pts": 3},
+            {"name": "Lewis LaMar", "min": "7", "fg": "0-0", "ft": "0-0", "reb": "1", "ast": "0", "pf": "1", "to": "0", "stl": "0", "blk": "0", "pts": 0},
+            {"name": "Canonchet Neves", "min": "34", "fg": "4-8", "tp": "3-6", "ft": "0-0", "reb": "3", "ast": "4", "pf": "5", "to": "0", "stl": "0", "blk": "0", "pts": 11},
+            {"name": "Khari Jaxon", "min": "31", "fg": "4-4", "ft": "1-6", "reb": "8", "ast": "1", "pf": "5", "to": "2", "stl": "1", "blk": "3", "pts": 9},
+            {"name": "J.J. Griego", "min": "13", "fg": "1-3", "ft": "0-1", "reb": "0", "ast": "1", "pf": "0", "to": "1", "stl": "0", "blk": "0", "pts": 2},
+            {"name": "Trent Heffner", "min": "7", "fg": "0-0", "ft": "0-2", "reb": "1", "ast": "0", "pf": "4", "to": "1", "stl": "0", "blk": "0", "pts": 0}
+          ]
+        },
+        {
+          "name": "Brigham Young Cougars",
+          "score": 76,
+          "players": [
+            {"name": "Kurt Christensen", "min": "9", "fg": "0-1", "tp": "0-1", "ft": "0-0", "reb": "0", "ast": "0", "pf": "3", "to": "1", "stl": "0", "blk": "0", "pts": 0},
+            {"name": "Nick Sanderson", "min": "40", "fg": "5-12", "tp": "2-4", "ft": "6-7", "reb": "7", "ast": "6", "pf": "4", "to": "0", "stl": "0", "blk": "0", "pts": 18},
+            {"name": "Russell Larson", "min": "15", "fg": "3-6", "ft": "0-0", "reb": "3", "ast": "0", "pf": "5", "to": "1", "stl": "0", "blk": "0", "pts": 6},
+            {"name": "Randy Reid", "min": "28", "fg": "1-3", "ft": "0-0", "reb": "3", "ast": "4", "pf": "2", "to": "1", "stl": "1", "blk": "0", "pts": 2},
+            {"name": "Ryan Cuff", "min": "2", "fg": "0-2", "tp": "0-2", "ft": "0-2", "reb": "0", "ast": "0", "pf": "1", "to": "0", "stl": "1", "blk": "0", "pts": 0},
+            {"name": "Mark Durrant", "min": "27", "fg": "2-2", "ft": "0-0", "reb": "1", "ast": "4", "pf": "5", "to": "0", "stl": "0", "blk": "0", "pts": 4},
+            {"name": "Kevin Nixon", "min": "8", "fg": "1-4", "tp": "0-1", "ft": "0-0", "reb": "2", "pf": "6", "to": "1", "stl": "0", "blk": "0", "pts": 2},
+            {"name": "Gary Trost", "min": "39", "fg": "7-12", "ft": "12-14", "reb": "7", "pf": "3", "to": "1", "stl": "0", "blk": "1", "pts": 26},
+            {"name": "David Astle", "min": "2", "fg": "0-0", "ft": "0-0", "reb": "0", "ast": "0", "pf": "0", "to": "0", "stl": "0", "blk": "0", "pts": 0},
+            {"name": "Shane Knight", "min": "6", "fg": "0-1", "tp": "0-1", "ft": "0-0", "reb": "2", "ast": "1", "pf": "1", "to": "0", "stl": "0", "blk": "0", "pts": 0},
+            {"name": "Jared Miller", "min": "24", "fg": "8-12", "ft": "2-2", "reb": "7", "ast": "0", "pf": "3", "to": "1", "stl": "0", "blk": "0", "pts": 18}
+          ]
+        }
+      ],
+      "checksum_ok": true,
+      "notes": "ast omitted for Kevin Nixon and Gary Trost (BYU) — assist column illegible/ambiguous in scan; all other fields legible. Points (pts) taken directly from sheet's TP column, cross-checked against 2*(FG-3FG)+3*3FG+FT computation and both matched. Player minutes sum to 200 for both teams, confirming no players omitted in error. Fish John (BYU), Eric Thomas/Brian Hayden/Frank Willis/Lance Milford (UNM) listed on roster with no stats — did not play, excluded from players array."
+    }
+  ],
+  "skipped": []
+}

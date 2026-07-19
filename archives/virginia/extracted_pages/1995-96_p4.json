@@ -1,0 +1,43 @@
+{
+  "page": 4,
+  "games": [
+    {
+      "date": "1995-12-05",
+      "opponent": "Vanderbilt",
+      "teams": [
+        {
+          "name": "Vanderbilt Commodores",
+          "score": 61,
+          "players": [
+            {"name": "Malik Evans", "min": 30, "fg": "7-15", "tp": "0-1", "ft": "5-8", "reb": 11, "ast": 1, "to": 3, "pf": 2, "pts": 19},
+            {"name": "Drew Maddux", "min": 37, "fg": "5-14", "tp": "1-3", "ft": "1-4", "reb": 5, "ast": 3, "to": 2, "stl": 1, "pf": 3, "pts": 12},
+            {"name": "Austin Bates", "min": 8, "fg": "1-5", "reb": 2, "to": 1, "pf": 2, "pts": 2},
+            {"name": "Howard Pride", "min": 32, "fg": "0-7", "tp": "0-5", "ft": "4-6", "reb": 6, "ast": 5, "pf": 3, "pts": 4},
+            {"name": "Frank Seckar", "min": 38, "fg": "6-14", "tp": "5-10", "reb": 7, "ast": 2, "to": 1, "blk": 2, "pf": 1, "pts": 17},
+            {"name": "Gianni Cugini", "min": 26, "fg": "1-5", "tp": "0-1", "reb": 11, "ast": 1, "pf": 1, "pts": 2},
+            {"name": "Pax Whitehead", "min": 13, "fg": "1-5", "ft": "1-2", "reb": 3, "blk": 2, "stl": 1, "pts": 3},
+            {"name": "Billy DiSpaltro", "min": 16, "fg": "1-1", "reb": 2, "stl": 1, "pts": 2},
+            {"name": "Vince Ford", "fg": "0-1", "ft": "0-2", "pts": 0}
+          ]
+        },
+        {
+          "name": "Virginia Cavaliers",
+          "score": 48,
+          "players": [
+            {"name": "Norman Nolan", "min": 22, "fg": "3-6", "reb": 14, "to": 2, "blk": 2, "pf": 1, "pts": 6},
+            {"name": "Cory Alexander", "min": 28, "fg": "5-10", "ft": "1-2", "reb": 1, "to": 2, "blk": 1, "pf": 1, "pts": 11},
+            {"name": "Chris Alexander", "min": 28, "fg": "2-6", "ft": "0-2", "reb": 10, "to": 1, "blk": 2, "pf": 2, "pts": 4},
+            {"name": "Curtis Staples", "min": 34, "fg": "5-14", "tp": "1-9", "reb": 2, "ast": 1, "to": 1, "pf": 4, "pts": 11},
+            {"name": "Harold Deane", "min": 33, "fg": "1-12", "tp": "0-8", "ft": "2-2", "reb": 4, "ast": 4, "to": 4, "blk": 1, "stl": 2, "pf": 5, "pts": 4},
+            {"name": "Jamal Robinson", "min": 29, "fg": "4-9", "reb": 9, "ast": 8, "to": 1, "blk": 2, "stl": 1, "pf": 3, "pts": 8},
+            {"name": "Scott Johnson", "min": 18, "fg": "1-4", "tp": "0-1", "reb": 4, "to": 1, "pf": 2, "pts": 2},
+            {"name": "Chase Metheney", "min": 8, "fg": "1-1", "ft": "0-2", "reb": 2, "pts": 2}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": [],
+  "notes": "Official NCAA box score, typed. Vanderbilt (visitor) 61, Virginia (home) 48, 12/5/95 at University Hall, Charlottesville VA. FG made totals include 3-pointers per NCAA convention; pts computed/verified as 2*(non-3 FG made... standard 2*FGmade+3FGmade_extra+FTmade), matches printed TP column for all players and both team totals (61 and 48). Vanderbilt's Vince Ford has minutes listed ambiguously as 'Ot' on the sheet (possibly OT notation or illegible) so min omitted for that player. Harold Deane's foul count (5) is circled on the sheet, likely indicating fouled out."
+}

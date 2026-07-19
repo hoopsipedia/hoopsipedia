@@ -1,0 +1,42 @@
+{
+  "page": 25,
+  "games": [
+    {
+      "date": "1993-03-08",
+      "opponent": "College of Charleston",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 72,
+          "players": [
+            {"name": "Junior Burrough", "min": 25, "fg": "3-5", "ft": "4-5", "reb": 7, "pf": 2, "to": 3, "stl": 1, "pts": 10},
+            {"name": "Jason Williford", "min": 20, "fg": "2-5", "tp": "1-2", "ft": "2-3", "reb": 4, "pf": 2, "ast": 1, "to": 2, "stl": 2, "pts": 7},
+            {"name": "Ted Jeffries", "min": 36, "fg": "3-4", "ft": "1-4", "reb": 6, "pf": 2, "ast": 4, "to": 1, "blk": 2, "pts": 7},
+            {"name": "Cornel Parker", "min": 30, "fg": "3-7", "tp": "0-2", "ft": "1-5", "reb": 4, "pf": 1, "ast": 2, "to": 3, "stl": 1, "pts": 7},
+            {"name": "Cory Alexander", "min": 39, "fg": "11-14", "tp": "1-4", "ft": "4-5", "pf": 2, "ast": 5, "to": 3, "pts": 27},
+            {"name": "Yuri Barnes", "min": 19, "fg": "2-4", "ft": "2-4", "reb": 5, "pf": 2, "to": 3, "stl": 1, "pts": 6},
+            {"name": "Doug Smith", "min": 30, "fg": "3-5", "tp": "2-3", "reb": 1, "pf": 1, "ast": 6, "to": 2, "stl": 2, "pts": 8},
+            {"name": "Chris Havlicek", "min": 1, "pf": 1, "to": 2, "pts": 0}
+          ]
+        },
+        {
+          "name": "College of Charleston Cougars",
+          "score": 58,
+          "players": [
+            {"name": "Russell Palmer", "min": 33, "fg": "4-7", "ft": "1-2", "reb": 3, "pf": 3, "ast": 2, "to": 1, "stl": 2, "pts": 9},
+            {"name": "Patrick King", "min": 27, "fg": "1-8", "tp": "0-4", "ft": "0-2", "reb": 4, "pf": 2, "ast": 2, "to": 1, "pts": 2},
+            {"name": "Chris Jackson", "min": 34, "fg": "6-13", "reb": 4, "pf": 4, "to": 2, "blk": 1, "pts": 12},
+            {"name": "Marcus Woods", "min": 35, "fg": "2-6", "reb": 6, "pf": 4, "ast": 5, "to": 2, "stl": 7, "pts": 4},
+            {"name": "Marion Busby", "min": 37, "fg": "8-13", "tp": "1-5", "ft": "2-3", "reb": 2, "pf": 4, "ast": 3, "to": 4, "stl": 2, "pts": 19},
+            {"name": "Ken Ward", "min": 21, "fg": "3-5", "ft": "6-6", "reb": 3, "pf": 5, "ast": 2, "to": 2, "pts": 12},
+            {"name": "Chris Turner", "min": 4, "fg": "0-1", "tp": "0-1", "pts": 0},
+            {"name": "Anthony Johnson", "min": 7, "ast": 1, "pts": 0},
+            {"name": "Roland Cruickshank", "min": 2, "stl": 1, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

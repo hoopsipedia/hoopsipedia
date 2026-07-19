@@ -1,0 +1,49 @@
+{
+  "page": 8,
+  "games": [
+    {
+      "date": "1998-12-21",
+      "opponent": "McNeese State",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 90,
+          "players": [
+            {"name": "Lamont Long", "min": 36, "fg": "11-16", "tp": "5-5", "ft": "1-1", "reb": 7, "ast": 4, "pf": 2, "to": 2, "stl": 4, "blk": 0, "pts": 28},
+            {"name": "Kenny Thomas", "min": 34, "fg": "6-10", "tp": "1-1", "ft": "9-10", "reb": 14, "ast": 2, "pf": 2, "to": 4, "stl": 1, "blk": 2, "pts": 22},
+            {"name": "Greg Davis", "min": 15, "fg": "0-0", "tp": "0-0", "ft": "2-2", "reb": 4, "ast": 2, "pf": 3, "to": 1, "stl": 0, "blk": 1, "pts": 2},
+            {"name": "Tim Lightfoot", "min": 12, "fg": "1-5", "tp": "0-2", "ft": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 1, "stl": 1, "blk": 0, "pts": 2},
+            {"name": "Kevin Henry", "min": 28, "fg": "5-8", "tp": "5-7", "ft": "2-2", "reb": 1, "ast": 1, "pf": 0, "to": 7, "stl": 1, "blk": 0, "pts": 17},
+            {"name": "Marcos White", "min": 2, "fg": "0-1", "tp": "0-0", "ft": "1-2", "reb": 1, "ast": 1, "pf": 0, "to": 0, "stl": 2, "blk": 0, "pts": 1},
+            {"name": "Brian Smith", "min": 14, "fg": "3-5", "tp": "0-0", "ft": "2-2", "reb": 9, "ast": 0, "pf": 0, "to": 1, "stl": 1, "blk": 0, "pts": 8},
+            {"name": "John Robinson II", "min": 30, "fg": "2-7", "tp": "1-3", "ft": "3-4", "reb": 2, "ast": 10, "pf": 2, "to": 5, "stl": 1, "blk": 0, "pts": 8},
+            {"name": "Nick Andrews", "min": 1, "fg": "1-1", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 1, "blk": 0, "pts": 2},
+            {"name": "Pat Kelly", "min": 1, "fg": "0-1", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 1, "blk": 0, "pts": 0},
+            {"name": "Damion Walker", "min": 19, "fg": "0-2", "tp": "0-0", "ft": "0-0", "reb": 5, "ast": 0, "pf": 4, "to": 3, "stl": 0, "blk": 1, "pts": 0},
+            {"name": "Roland Hannah", "min": 8, "fg": "0-2", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "to": 0, "stl": 1, "blk": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "McNeese State",
+          "score": 46,
+          "players": [
+            {"name": "Tierre Brown", "min": 3, "fg": "0-1", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "pf": 1, "to": 1, "stl": 1, "blk": 1, "pts": 0},
+            {"name": "Todd Briley", "min": 20, "fg": "0-4", "tp": "0-2", "ft": "2-2", "reb": 1, "ast": 1, "pf": 1, "to": 4, "stl": 1, "blk": 0, "pts": 2},
+            {"name": "Chauncey Bryant", "min": 5, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Quasean Nicholson", "min": 17, "fg": "0-4", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 1, "pf": 0, "to": 2, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Adrian Johnson", "min": 19, "fg": "2-4", "tp": "0-0", "ft": "1-2", "reb": 0, "ast": 0, "pf": 0, "to": 1, "stl": 1, "blk": 0, "pts": 5},
+            {"name": "Demond Mallet", "min": 35, "fg": "6-23", "tp": "3-16", "ft": "2-2", "reb": 2, "ast": 0, "pf": 2, "to": 1, "stl": 4, "blk": 0, "pts": 17},
+            {"name": "Franklin Paul", "min": 29, "fg": "1-9", "tp": "0-2", "ft": "3-6", "reb": 10, "ast": 3, "pf": 1, "to": 2, "stl": 4, "blk": 3, "pts": 5},
+            {"name": "Terrance Scott", "min": 19, "fg": "3-4", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 1, "pf": 2, "to": 2, "stl": 2, "blk": 0, "pts": 6},
+            {"name": "Adrian Floyd", "min": 18, "fg": "1-5", "tp": "0-1", "ft": "0-0", "reb": 4, "ast": 2, "pf": 4, "to": 2, "stl": 0, "blk": 1, "pts": 2},
+            {"name": "Khalid Morris", "min": 2, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 1, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Fred Gentry", "min": 33, "fg": "4-8", "tp": "0-0", "ft": "1-1", "reb": 3, "ast": 1, "pf": 3, "to": 2, "stl": 4, "blk": 1, "pts": 9}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": [],
+  "notes": "GENTRY FT read as 0-0 on sheet but corrected to 1-1 (FTA=1) based on internal consistency check: (FG-3FG)*2+3FG*3+FT must equal the sheet's own TP column (9), and team FT total (9) only reconciles with FT made=1. All other player pts taken directly from sheet's TP column, cross-validated against FG/3FG/FT via formula. Both team pts sums match final score exactly (46, 90)."
+}

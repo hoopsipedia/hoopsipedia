@@ -1,0 +1,48 @@
+{
+  "page": 21,
+  "games": [
+    {
+      "date": "1992-02-06",
+      "opponent": "Wyoming Cowboys",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 79,
+          "players": [
+            {"name": "Steve Logan", "min": 22, "fg": "3-11", "tp": "2-5", "ft": "1-2", "reb": 3, "ast": 4, "to": 3, "blk": 0, "stl": 1, "pf": 1, "pts": 9},
+            {"name": "Ike Williams", "min": 27, "fg": "7-11", "tp": "2-2", "ft": "6-8", "reb": 5, "ast": 2, "to": 1, "blk": 0, "stl": 4, "pf": 2, "pts": 22},
+            {"name": "Will Scott", "min": 18, "fg": "3-5", "tp": "0-0", "ft": "3-8", "reb": 1, "ast": 1, "to": 1, "blk": 1, "stl": 0, "pf": 4, "pts": 9},
+            {"name": "Lewis LaMar", "min": 9, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pf": 1, "pts": 0},
+            {"name": "Willie Banks", "min": 40, "fg": "8-15", "tp": "3-3", "ft": "3-4", "reb": 1, "ast": 2, "to": 1, "blk": 0, "stl": 3, "pf": 2, "pts": 22},
+            {"name": "Khari Jaxon", "min": 34, "fg": "3-4", "tp": "0-0", "ft": "2-5", "reb": 11, "ast": 3, "to": 1, "blk": 4, "stl": 3, "pf": 5, "pts": 8},
+            {"name": "J.J. Griego", "min": 9, "fg": "0-1", "tp": "0-0", "ft": "0-2", "reb": 2, "ast": 1, "to": 1, "blk": 0, "stl": 1, "pf": 0, "pts": 0},
+            {"name": "Brian Hayden", "min": 6, "fg": "0-1", "tp": "0-0", "ft": "1-2", "reb": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pf": 1, "pts": 1},
+            {"name": "Vladimir McCrary", "min": 35, "fg": "2-7", "tp": "0-0", "ft": "4-8", "reb": 3, "ast": 3, "to": 2, "blk": 1, "stl": 2, "pf": 4, "pts": 8}
+          ],
+          "checksum_ok": true
+        },
+        {
+          "name": "Wyoming Cowboys",
+          "score": 65,
+          "players": [
+            {"name": "Hasson Sanders", "min": 9, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pf": 0, "pts": 0},
+            {"name": "Steve Gosar", "min": 16, "fg": "0-1", "tp": "0-0", "ft": "0-0", "reb": 2, "ast": 1, "to": 4, "blk": 0, "stl": 0, "pf": 1, "pts": 0},
+            {"name": "Brett Studdard", "min": 5, "fg": "1-2", "tp": "0-1", "ft": "0-0", "reb": 1, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pf": 0, "pts": 2},
+            {"name": "Maurice Alexander", "min": 31, "fg": "4-11", "tp": "1-4", "ft": "6-7", "reb": 2, "ast": 1, "to": 4, "blk": 0, "stl": 0, "pf": 3, "pts": 15},
+            {"name": "Brian Rewers", "min": 17, "fg": "2-7", "tp": "0-0", "ft": "0-0", "reb": 6, "ast": 0, "to": 2, "blk": 0, "stl": 1, "pf": 4, "pts": 4},
+            {"name": "Travis Butler", "min": 23, "fg": "3-9", "tp": "2-3", "ft": "0-1", "reb": 5, "ast": 0, "to": 3, "blk": 0, "stl": 0, "pf": 4, "pts": 8},
+            {"name": "Michael Brown", "min": 3, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pf": 1, "pts": 0},
+            {"name": "Tim Breaux", "min": 34, "fg": "4-7", "tp": "0-3", "ft": "6-8", "reb": 4, "ast": 0, "to": 3, "blk": 0, "stl": 1, "pf": 4, "pts": 14},
+            {"name": "Theo Ratliff", "min": 14, "fg": "1-1", "tp": "0-0", "ft": "4-4", "reb": 1, "ast": 0, "to": 1, "blk": 2, "stl": 0, "pf": 4, "pts": 6},
+            {"name": "Bobby Traylor", "min": 8, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pf": 0, "pts": 0},
+            {"name": "Reginald Slater", "min": 35, "fg": "7-14", "tp": "0-0", "ft": "2-2", "reb": 16, "ast": 3, "to": 7, "blk": 3, "stl": 1, "pf": 4, "pts": 16},
+            {"name": "Donald Phillips", "min": 5, "fg": "0-0", "tp": "0-0", "ft": "0-2", "reb": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pf": 0, "pts": 0}
+          ],
+          "checksum_ok": true
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

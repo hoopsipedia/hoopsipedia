@@ -1,0 +1,46 @@
+{
+  "page": 14,
+  "games": [
+    {
+      "date": null,
+      "opponent": "William and Mary",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 93,
+          "players": [
+            {"name": "Junior Burrough", "min": 25, "fg": "3-9", "tp": "0-1", "ft": "3-4", "reb": 5, "pf": 3, "ast": 0, "to": 5, "blk": 1, "stl": 2, "pts": 9},
+            {"name": "Cornel Parker", "min": 33, "fg": "3-6", "tp": "0-1", "ft": "5-7", "reb": 11, "pf": 3, "ast": 3, "to": 5, "blk": 0, "stl": 0, "pts": 11},
+            {"name": "Doug Smith", "min": 28, "fg": "0-1", "tp": "0-1", "ft": "4-6", "reb": 4, "pf": 4, "ast": 4, "to": 0, "blk": 0, "stl": 1, "pts": 4},
+            {"name": "Cory Alexander", "min": 43, "fg": "8-16", "tp": "2-4", "ft": "8-11", "reb": 4, "pf": 1, "ast": 5, "to": 4, "blk": 0, "stl": 2, "pts": 26},
+            {"name": "Chris Havlicek", "min": 5, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 1, "pf": 0, "ast": 1, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Jason Williford", "min": 34, "fg": "3-9", "tp": "0-1", "ft": "4-4", "reb": 15, "pf": 3, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pts": 10},
+            {"name": "Yuri Barnes", "min": 14, "fg": "4-6", "tp": "0-0", "ft": "2-2", "reb": 0, "pf": 2, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 10},
+            {"name": "Ted Jeffries", "min": 42, "fg": "10-13", "tp": "0-0", "ft": "3-6", "reb": 10, "pf": 4, "ast": 5, "to": 3, "blk": 3, "stl": 1, "pts": 23},
+            {"name": "Shawn Wilson", "min": 1, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 1, "pts": 0}
+          ]
+        },
+        {
+          "name": "William and Mary",
+          "score": 84,
+          "players": [
+            {"name": "Sean Duff", "min": 3, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "pf": 1, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Thomas Roberts", "min": 43, "fg": "9-21", "tp": "5-8", "ft": "2-5", "reb": 5, "pf": 3, "ast": 1, "to": 1, "blk": 2, "stl": 3, "pts": 25},
+            {"name": "Todd Cauthorn", "min": 32, "fg": "5-10", "tp": "0-0", "ft": "1-5", "reb": 9, "pf": 4, "ast": 1, "to": 0, "blk": 0, "stl": 3, "pts": 11},
+            {"name": "Brendan Connor", "min": 40, "fg": "2-7", "tp": "0-5", "ft": "2-2", "reb": 2, "pf": 3, "ast": 3, "to": 5, "blk": 0, "stl": 3, "pts": 6},
+            {"name": "Derrick Peters", "min": 4, "fg": "0-1", "tp": "0-1", "ft": "0-0", "reb": 1, "pf": 1, "ast": 0, "to": 0, "blk": 0, "stl": 1, "pts": 0},
+            {"name": "Matt Verkey", "min": 18, "fg": "0-5", "tp": "0-2", "ft": "0-0", "reb": 4, "pf": 3, "ast": 1, "to": 1, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "David Cox", "min": 34, "fg": "4-11", "tp": "3-8", "ft": "2-3", "reb": 3, "pf": 4, "ast": 3, "to": 2, "blk": 0, "stl": 1, "pts": 13},
+            {"name": "Kurt Small", "min": 35, "fg": "8-19", "tp": "3-7", "ft": "8-8", "reb": 6, "pf": 5, "ast": 2, "to": 1, "blk": 1, "stl": 1, "pts": 27},
+            {"name": "Mike Shafer", "min": 1, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Carl Parker", "min": 14, "fg": "1-2", "tp": "0-0", "ft": "0-1", "reb": 4, "pf": 4, "ast": 3, "to": 1, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "David Cully", "min": 1, "fg": "0-1", "tp": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true,
+      "notes": "Date field on scoresheet is blank; score-by-periods shows 1st/2nd/OT (Virginia 48-28-17=93, William & Mary 33-43-8=84) confirming this went to overtime. Game is University of Virginia vs William and Mary, 1992-93 season. Officials: Wirtz, Elliott, Fisher. Attendance 7891. Kurt Small's PF value is a circled '5' on the sheet (likely denotes fouling out/disqualification) - transcribed as 5 with lower confidence. TP column values on the sheet were used directly as pts (not derived from 2*fg+ft) since both are given explicitly and match."
+    }
+  ],
+  "skipped": []
+}

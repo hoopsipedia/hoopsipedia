@@ -1,0 +1,9 @@
+{
+  "page": 19,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Game 18: Ohio State vs Michigan State, 1994-01-26, St. John Arena (final MSU 77, OSU 71). Michigan State's box score transcribed cleanly and checksums perfectly (player points sum to 77). However, on the Ohio State side, two player rows (40 Dudley, Rickey and 41 Watson, Antonio) are ambiguous/illegible at this scan resolution: my two independent reads of their FG/FT/TP figures were internally inconsistent with each other and, combined, roughly double the value implied by the official team totals row and the other six OSU players (who all individually checksum correctly: Funderburke 24, Anderson 11, Skelton 15, Eaker 0, Macon 1, Simpson 2, summing with team totals to imply Dudley+Watson combined FG=8, FGA=12, FT=2, TP=18 -- but this combined figure cannot be reliably split between the two individual players from the scan). Since per-player values could not be confirmed without guessing, and I have exhausted the one allowed re-read of this page, the entire game is skipped rather than reporting a partially invented Ohio State lineup."
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "page": 24,
+  "games": [
+    {
+      "date": "1981-02-21",
+      "opponent": "Wisconsin",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 63,
+          "players": [
+            {"name": "Jim Smith", "min": 14, "fg": "0-4", "ft": "0-0", "reb": 4, "pf": 1, "ast": 0, "to": 2, "blk": 1, "stl": 1, "pts": 0},
+            {"name": "Clark Kellogg", "min": 32, "fg": "6-14", "ft": "6-6", "reb": 13, "pf": 3, "ast": 0, "to": 3, "blk": 0, "stl": 2, "pts": 18},
+            {"name": "Herb Williams", "min": 40, "fg": "5-15", "ft": "1-2", "reb": 7, "pf": 3, "ast": 0, "to": 2, "blk": 3, "stl": 1, "pts": 11},
+            {"name": "Carter Scott", "min": 27, "fg": "2-10", "ft": "3-5", "reb": 2, "pf": 5, "ast": 5, "to": 0, "blk": 0, "stl": 0, "pts": 7},
+            {"name": "Larry Huggins", "min": 36, "fg": "1-5", "ft": "0-0", "reb": 1, "pf": 5, "ast": 2, "to": 3, "blk": 0, "stl": 2, "pts": 2},
+            {"name": "Mitch Haas", "min": 28, "fg": "8-13", "ft": "2-2", "reb": 5, "pf": 0, "ast": 0, "to": 3, "blk": 0, "stl": 1, "pts": 18},
+            {"name": "Tony Campbell", "min": 6, "fg": "2-3", "ft": "0-0", "reb": 2, "pf": 2, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 4},
+            {"name": "Todd Penn", "min": 16, "fg": "1-7", "ft": "1-2", "reb": 1, "pf": 2, "ast": 3, "to": 2, "blk": 0, "stl": 1, "pts": 3},
+            {"name": "Granville Waiters", "min": 1, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0}
+          ],
+          "checksum_ok": true
+        },
+        {
+          "name": "Wisconsin Badgers",
+          "score": 77,
+          "players": [
+            {"name": "Claude Gregory", "min": 39.5, "fg": "3-14", "ft": "5-6", "reb": 10, "pf": 5, "ast": 3, "to": 2, "blk": 0, "stl": 1, "pts": 11},
+            {"name": "Mike Kreklow", "min": 33, "fg": "3-4", "ft": "2-2", "reb": 1, "pf": 5, "ast": 2, "to": 3, "blk": 0, "stl": 1, "pts": 8},
+            {"name": "Larry Petty", "min": 31, "fg": "11-17", "ft": "3-6", "reb": 10, "pf": 2, "ast": 0, "to": 3, "blk": 2, "stl": 1, "pts": 25},
+            {"name": "John Bailey", "min": 38, "fg": "10-15", "ft": "2-2", "reb": 4, "pf": 3, "ast": 4, "to": 3, "blk": 1, "stl": 1, "pts": 22},
+            {"name": "Greg Dandridge", "min": 40, "fg": "3-4", "ft": "3-4", "reb": 6, "pf": 3, "ast": 5, "to": 4, "blk": 0, "stl": 1, "pts": 9},
+            {"name": "Dan Hastings", "min": 12, "fg": "1-1", "ft": "0-1", "reb": 2, "pf": 1, "ast": 1, "to": 2, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Gary Zinkgraf", "min": 2, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 1, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "James Hilderbrand", "min": 4, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 1, "to": 1, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Herb Lake", "min": 0.5, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0}
+          ],
+          "checksum_ok": true
+        }
+      ]
+    }
+  ],
+  "skipped": []
+}

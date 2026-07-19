@@ -1,0 +1,46 @@
+{
+  "page": 12,
+  "games": [
+    {
+      "date": "1999-02-23",
+      "opponent": "New Mexico State",
+      "note": "Printed date on scoresheet is 2/23/99, which falls in the 1998-99 season, not 1999-00 — flagging discrepancy but transcribing as printed.",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 60,
+          "players": [
+            {"name": "Brian Smith", "min": 16, "fg": "2-5", "tp": "0-0", "ft": "0-0", "reb": 2, "ast": 1, "to": 1, "blk": 1, "stl": 0, "pf": 3, "pts": 4},
+            {"name": "Damion Walker", "min": 31, "fg": "2-8", "tp": "0-1", "ft": "2-2", "reb": 4, "ast": 1, "to": 2, "blk": 3, "stl": 0, "pf": 3, "pts": 6},
+            {"name": "Lamont Long", "min": 35, "fg": "3-11", "tp": "2-6", "ft": "4-4", "reb": 3, "ast": 3, "to": 3, "blk": 0, "stl": 1, "pf": 3, "pts": 12},
+            {"name": "Wayland White", "min": 23, "fg": "4-9", "tp": "1-1", "ft": "1-1", "reb": 3, "ast": 2, "to": 1, "blk": 1, "stl": 0, "pf": 0, "pts": 10},
+            {"name": "Kevin Henry", "min": 36, "fg": "9-17", "tp": "6-12", "ft": "2-2", "reb": 2, "ast": 3, "to": 1, "blk": 0, "stl": 0, "pf": 0, "pts": 26},
+            {"name": "Tim Lightfoot", "min": 9, "fg": "0-2", "tp": "0-1", "ft": "0-0", "reb": 1, "ast": 1, "to": 2, "blk": 0, "stl": 0, "pf": 5, "pts": 0},
+            {"name": "Rafael Berumen", "min": 6, "fg": "0-1", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pf": 1, "pts": 0},
+            {"name": "Marlon Parmer", "min": 22, "fg": "1-5", "tp": "0-2", "ft": "0-0", "reb": 6, "ast": 3, "to": 0, "blk": 1, "stl": 0, "pf": 0, "pts": 2},
+            {"name": "Roland Hannah", "min": 22, "fg": "0-1", "tp": "0-0", "ft": "0-0", "reb": 4, "ast": 1, "to": 1, "blk": 0, "stl": 1, "pf": 2, "pts": 0}
+          ],
+          "checksum_note": "player pts sum = 4+6+12+10+26+0+0+2+0 = 60, matches team score 60"
+        },
+        {
+          "name": "New Mexico State Aggies",
+          "score": 63,
+          "players": [
+            {"name": "Aaron Brodt", "min": 34, "fg": "4-5", "tp": "0-0", "ft": "3-4", "reb": 10, "ast": 0, "to": 4, "blk": 0, "stl": 0, "pf": 2, "pts": 11},
+            {"name": "Daveeno Hines", "min": 26, "fg": "1-6", "tp": "0-0", "ft": "0-0", "reb": 9, "ast": 2, "to": 0, "blk": 0, "stl": 0, "pf": 3, "pts": 2},
+            {"name": "Billy Keys", "min": 36, "fg": "6-13", "tp": "0-2", "ft": "1-2", "reb": 3, "ast": 7, "to": 0, "blk": 0, "stl": 2, "pf": 2, "pts": 13},
+            {"name": "Zack Norvell", "min": 21, "fg": "2-3", "tp": "0-0", "ft": "3-6", "reb": 4, "ast": 0, "to": 0, "blk": 0, "stl": 1, "pf": 2, "pts": 7},
+            {"name": "Eric Channing", "min": 32, "fg": "7-13", "tp": "2-4", "ft": "0-0", "reb": 1, "ast": 2, "to": 4, "blk": 0, "stl": 0, "pf": 1, "pts": 16},
+            {"name": "Dennis Desmond", "min": 4, "fg": "0-0", "tp": "0-0", "ft": "0-1", "reb": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pf": 1, "pts": 0},
+            {"name": "Brad Bestor", "min": 23, "fg": "3-7", "tp": "2-6", "ft": "2-2", "reb": 1, "ast": 2, "to": 0, "blk": 0, "stl": 1, "pf": 0, "pts": 10},
+            {"name": "Mikko Noopila", "min": 18, "fg": "1-2", "tp": "0-1", "ft": "0-1", "reb": 1, "ast": 0, "to": 1, "blk": 0, "stl": 1, "pf": 4, "pts": 2},
+            {"name": "Stephan Green", "min": 6, "fg": "1-2", "tp": "0-0", "ft": "0-0", "reb": 2, "ast": 1, "to": 0, "blk": 1, "stl": 1, "pf": 1, "pts": 2}
+          ],
+          "checksum_note": "player pts sum = 11+2+13+7+16+0+10+2+2 = 63, matches team score 63"
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

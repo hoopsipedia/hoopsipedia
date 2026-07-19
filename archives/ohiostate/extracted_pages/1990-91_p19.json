@@ -1,0 +1,11 @@
+{
+  "page": 19,
+  "games": [],
+  "skipped": [
+    {
+      "date": "1991-01-31",
+      "opponent": "Michigan State Spartans (at East Lansing)",
+      "reason": "Official NCAA box score (Ohio State 61, Michigan State 75). Ohio State (visitor) rows transcribed cleanly and passed checksum (player PTS sum = 61 = team total; player MIN sum = 200 = team total), but the Michigan State (home) rows are too blurry/degraded to transcribe confidently: several rows are missing/merged digits versus the 16-column header (FG FGA 3P 3PA FT FTA OR DR TOT PF PTS A TO BLK S MIN), and computed totals are impossible (e.g. a single player's TOT rebounds reading as 35 or 17, exceeding the team's own listed TOT of 35; Hickman's row has only 15 legible tokens instead of 16). Since the schema requires both teams' verified lines and free-form guessing of the Michigan State digits would risk inventing values, the entire game is skipped rather than partially fabricated."
+    }
+  ]
+}

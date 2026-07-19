@@ -1,0 +1,47 @@
+{
+  "page": 5,
+  "games": [
+    {
+      "date": "1991-12-18",
+      "opponent": "New Orleans",
+      "site": "Lakefront Arena, New Orleans, La.",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 52,
+          "players": [
+            {"name": "Burrough, Junior", "min": 32, "fg": "5-13", "tp": "0-1", "ft": "3-4", "reb": 5, "ast": 0, "pf": 4, "to": 3, "stl": 1, "blk": 0, "pts": 13},
+            {"name": "Oliver, Anthony", "min": 23, "fg": "1-4", "tp": "0-1", "ft": "0-0", "reb": 3, "ast": 6, "pf": 1, "to": 2, "stl": 3, "blk": 0, "pts": 2},
+            {"name": "Smith, Doug", "min": 1, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 1, "blk": 0, "pts": 0},
+            {"name": "Alexander, Cory", "min": 33, "fg": "3-12", "tp": "0-3", "ft": "3-4", "reb": 2, "ast": 5, "pf": 3, "to": 4, "stl": 1, "blk": 0, "pts": 9},
+            {"name": "Stith, Bryant", "min": 36, "fg": "6-12", "tp": "1-3", "ft": "4-4", "reb": 7, "ast": 2, "pf": 2, "to": 4, "stl": 2, "blk": 0, "pts": 17},
+            {"name": "Johnson, Derrick", "min": 7, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 2, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Barnes, Yuri", "min": 6, "fg": "1-1", "tp": "0-0", "ft": "0-2", "reb": 0, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Parker, Cornel", "min": 20, "fg": "1-5", "tp": "0-2", "ft": "0-0", "reb": 3, "ast": 0, "pf": 2, "to": 2, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Jeffries, Ted", "min": 28, "fg": "2-4", "tp": "0-0", "ft": "1-2", "reb": 4, "ast": 2, "pf": 3, "to": 1, "stl": 1, "blk": 0, "pts": 5},
+            {"name": "Wilson, Shawn", "min": 14, "fg": "1-1", "tp": "0-0", "ft": "0-0", "reb": 3, "ast": 1, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 2}
+          ],
+          "checksum_ok": true
+        },
+        {
+          "name": "New Orleans Privateers",
+          "score": 54,
+          "players": [
+            {"name": "Latiche, Darren", "min": 5, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Clyburn, Loren", "min": 15, "fg": "0-3", "tp": "0-1", "ft": "2-2", "reb": 3, "ast": 1, "pf": 2, "to": 4, "stl": 3, "blk": 0, "pts": 2},
+            {"name": "Myvett, Dwight", "min": 37, "fg": "3-5", "tp": "1-1", "ft": "2-3", "reb": 2, "ast": 8, "pf": 3, "to": 4, "stl": 0, "blk": 0, "pts": 9},
+            {"name": "Dyer, Louweegi", "min": 34, "fg": "4-7", "tp": "0-0", "ft": "3-4", "reb": 2, "ast": 1, "pf": 0, "to": 3, "stl": 1, "blk": 0, "pts": 11},
+            {"name": "Simon, Melvin", "min": 32, "fg": "4-6", "tp": "0-0", "ft": "6-11", "reb": 7, "ast": 1, "pf": 4, "to": 2, "stl": 0, "blk": 0, "pts": 14},
+            {"name": "Bennett, Leonard", "min": 23, "fg": "1-1", "tp": "0-3", "ft": "0-0", "reb": 0, "ast": 1, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Johnson, Ervin", "min": 40, "fg": "7-13", "tp": "0-0", "ft": "2-2", "reb": 14, "ast": 1, "pf": 1, "to": 1, "stl": 2, "blk": 6, "pts": 16},
+            {"name": "Dennis, Teddy", "min": 6, "fg": "0-2", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "to": 1, "stl": 1, "blk": 0, "pts": 0},
+            {"name": "Rice, Sydney", "min": 8, "fg": "0-3", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 0}
+          ],
+          "checksum_ok": true
+        }
+      ]
+    }
+  ],
+  "skipped": [],
+  "notes": "Full typed official scoresheet, page holds one game. Some FG/3pt attempt cells appear internally inconsistent for Bennett, Leonard (FG 1-1 but 3pt 0-3, i.e. more 3pt attempts than total FG attempts) but this is copied as printed on the sheet; his points value (2) checks out against the sheet's own TP column so was not altered. Both team point totals reconcile exactly against player-line sums and the final score line (Virginia 52, New Orleans 54)."
+}

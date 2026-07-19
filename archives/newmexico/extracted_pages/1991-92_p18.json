@@ -1,0 +1,9 @@
+{
+  "page": 18,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page 18 contains a typed official NCAA box score (New Mexico 71 at San Diego State 61, San Diego Sports Arena, January 25, 1992). Team-level totals rows are legible (UNM: FG26-53, 3FG3-11, FT16-18, OREB9/DREB29/TREB38, PF17, TP71, AST12, TOV17, BLK6, STL6, MIN200; SDSU: FG23-60, 3FG5-16, FT10-16, OREB13/DREB19/TREB32, PF14, TP61, AST12, TOV15, BLK3, STL5, MIN200), but the individual player rows are dense 16-column dot-matrix print that could not be resolved digit-by-digit with confidence -- repeated attempts to parse per-player FT-attempt, offensive/defensive rebound split, and the assist/turnover/block/steal block produced internally inconsistent results (e.g. a single player's block count exceeding the team block total). Rather than invent or guess individual player stat lines, this game is skipped per the ruthless-skip-over-guess instruction. Only the clean team-total line is confidently readable."
+    }
+  ]
+}

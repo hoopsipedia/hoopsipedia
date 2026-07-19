@@ -1,0 +1,44 @@
+{
+  "page": 4,
+  "games": [
+    {
+      "date": "1990-11-30",
+      "opponent": "New Orleans",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 55,
+          "players": [
+            {"name": "Stith, Bryant", "min": 38, "fg": "5-19", "tp": "0-5", "ft": "7-8", "reb": 8, "ast": 2, "pf": 4, "stl": 3, "pts": 17},
+            {"name": "Turner, Kenny", "min": 33, "fg": "2-10", "tp": "0-2", "ft": "3-4", "reb": 4, "ast": 2, "pf": 0, "pts": 7},
+            {"name": "Jeffries, Ted", "min": 24, "fg": "1-4", "ft": "2-2", "reb": 2, "pf": 2, "pts": 4},
+            {"name": "Oliver, Anthony", "min": 20, "fg": "0-1", "ft": "2-2", "reb": 1, "pf": 5, "to": 1, "pts": 2},
+            {"name": "Crotty, John", "min": 37, "fg": "9-16", "tp": "4-5", "ft": "3-6", "reb": 1, "ast": 3, "pf": 4, "to": 2, "stl": 1, "pts": 25},
+            {"name": "Blundin, Matt", "min": 27, "fg": "0-1", "reb": 1, "pf": 2, "to": 2, "stl": 2, "pts": 0},
+            {"name": "Wilson, Shawn", "min": 1, "pf": 1, "pts": 0},
+            {"name": "Smith, Doug", "min": 19, "fg": "0-1", "reb": 1, "ast": 3, "pf": 1, "pts": 0},
+            {"name": "Katstra, Dirk", "min": 1, "fg": "0-1", "reb": 1, "pf": 1, "pts": 0}
+          ]
+        },
+        {
+          "name": "New Orleans",
+          "score": 60,
+          "players": [
+            {"name": "Laiche, Darren", "min": 8, "fg": "0-0", "reb": 1, "ast": 1, "pf": 1, "to": 5, "pts": 0},
+            {"name": "Hill, Fred", "min": 3, "fg": "0-1", "reb": 2, "ast": 1, "pf": 2, "pts": 0},
+            {"name": "Johnson, Ervin", "min": 38, "fg": "3-5", "ft": "3-6", "reb": 12, "ast": 3, "pf": 1, "to": 2, "blk": 4, "pts": 9},
+            {"name": "Clarke, Cass", "min": 18, "fg": "0-3", "tp": "0-1", "reb": 3, "pf": 4, "to": 2, "pts": 0},
+            {"name": "Myvett, Dwight", "min": 32, "fg": "3-3", "tp": "1-1", "ft": "3-3", "reb": 3, "ast": 3, "to": 1, "blk": 1, "pts": 10},
+            {"name": "Collins, Tank", "min": 33, "fg": "7-14", "ft": "2-3", "reb": 7, "ast": 1, "pf": 3, "to": 3, "pts": 16},
+            {"name": "Simon, Melvin", "min": 24, "fg": "5-13", "ft": "1-2", "reb": 6, "ast": 1, "pf": 3, "to": 2, "blk": 1, "pts": 11},
+            {"name": "Dyer, Louweegi", "min": 24, "fg": "3-5", "ft": "2-2", "reb": 6, "ast": 1, "pts": 8},
+            {"name": "Rice, Sydney", "min": 14, "fg": "2-3", "ft": "2-2", "reb": 2, "ast": 1, "pf": 2, "to": 2, "blk": 2, "pts": 6},
+            {"name": "Bennett, Leonard", "min": 6, "fg": "0-1", "tp": "0-1", "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

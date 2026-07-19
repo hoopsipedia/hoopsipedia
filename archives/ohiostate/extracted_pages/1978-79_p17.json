@@ -1,0 +1,9 @@
+{
+  "page": 17,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Handwritten NCAA box score scoresheet is too illegible/ambiguous for confident transcription. The opponent team name (top table header) is an illegible scrawl and cannot be identified; the date/site line at the top is also illegible. Several player-level numeric cells for both teams (FG, FGA especially) are ambiguous between plausible digit readings (e.g. team FG totals could be read as 24 or 26; individual player FG-FGA pairs like '12-24' vs '12-16' cannot be distinguished with confidence). While the two team point totals (63 and presumed Ohio State 66) roughly satisfy 2*FG+FT under one plausible reading of the ambiguous digits, the opponent identity and per-player values are not reliable enough to transcribe without inventing/guessing values, so the game was skipped per instructions to be ruthless about skipping rather than guessing."
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "page": 6,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page 6 is 'GAME FIVE: Ohio State vs UC Santa Barbara, December 14, 1993, St. John Arena' but the printed box score is only FIRST-HALF data, not a full-game box score. Evidence: the shooting-percentage footnotes on both team blocks are explicitly labeled 'TOTAL FGX: 1ST HALF' and '3-PT. FGX: 1ST HALF' and '1ST HALF', with no corresponding 2ND HALF or GAME-total line; the TOTALS row for each team (FG 11-21 for UCSB, FG 10-30 for OSU) matches those 1st-half percentages exactly; and each team's total player MIN sums to ~100, consistent with 5 players x 20 minutes (one half), not the ~200 expected for a full 40-minute game. The 'SCORE BY PERIODS' section lists only a single figure (UC Santa Barbara 30, Ohio State 30) under a column that aligns with '1ST H', while '2ND H' and 'FINAL' are blank/not printed. No full-game final score is available on this page, so per instructions the game was skipped rather than reporting the halftime score as a final or inventing missing values."
+    }
+  ]
+}

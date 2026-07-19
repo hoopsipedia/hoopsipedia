@@ -1,0 +1,45 @@
+{
+  "page": 18,
+  "games": [
+    {
+      "date": "1993-02-01",
+      "opponent": "Texas Southern Tigers",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 78,
+          "players": [
+            {"name": "Steve Logan", "min": 36, "fg": "4-10", "tp": "2-6", "ft": "3-4", "reb": 3, "ast": 6, "pf": 2, "to": 4, "stl": 1, "blk": 0, "pts": 13},
+            {"name": "Ike Williams", "min": 32, "fg": "9-12", "tp": "4-5", "ft": "0-2", "reb": 9, "ast": 3, "pf": 0, "to": 3, "stl": 1, "blk": 0, "pts": 22},
+            {"name": "Greg Brown", "min": 39, "fg": "2-7", "tp": "1-4", "ft": "0-1", "reb": 3, "ast": 5, "pf": 1, "to": 4, "stl": 1, "blk": 0, "pts": 5},
+            {"name": "Corey Jenkins", "min": 27, "fg": "4-10", "tp": "3-8", "ft": "0-0", "reb": 4, "ast": 1, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 11},
+            {"name": "Lewis LaMar", "min": 23, "fg": "3-3", "ft": "0-3", "reb": 8, "ast": 2, "pf": 3, "to": 0, "stl": 0, "blk": 0, "pts": 6},
+            {"name": "Canonchet Neves", "min": 7, "fg": "1-1", "tp": "1-1", "ft": "0-0", "reb": 3, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 3},
+            {"name": "Khari Jaxon", "min": 24, "fg": "6-8", "ft": "0-2", "reb": 4, "ast": 0, "pf": 4, "to": 2, "stl": 0, "blk": 4, "pts": 12},
+            {"name": "Brian Hayden", "min": 6, "fg": "0-1", "ft": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Trent Heffner", "min": 20, "fg": "2-4", "ft": "2-3", "reb": 3, "ast": 1, "pf": 5, "to": 0, "stl": 0, "blk": 0, "pts": 6}
+          ]
+        },
+        {
+          "name": "Texas Southern Tigers",
+          "score": 61,
+          "players": [
+            {"name": "Titus Howard", "min": 12, "fg": "0-6", "tp": "0-2", "ft": "0-0", "reb": 3, "ast": 1, "pf": 4, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Kevin Granger", "min": 40, "fg": "5-9", "tp": "0-0", "ft": "1-3", "reb": 2, "ast": 7, "pf": 1, "to": 4, "stl": 3, "blk": 0, "pts": 11},
+            {"name": "Gerald Woods", "min": 21, "fg": "1-6", "tp": "1-4", "ft": "0-0", "reb": 0, "ast": 1, "pf": 0, "to": 0, "stl": 1, "blk": 0, "pts": 4, "note": "printed TP (4) does not reconcile with printed FG/3pt line (would compute to 3); transcribed as printed and used in team checksum"},
+            {"name": "Theon Dotson", "min": 31, "fg": "4-10", "tp": "0-3", "ft": "0-0", "reb": 5, "ast": 1, "pf": 1, "to": 1, "stl": 1, "blk": 1, "pts": 8},
+            {"name": "Kevin Adams", "min": 17, "fg": "0-4", "tp": "0-4", "ft": "1-2", "reb": 5, "ast": 1, "pf": 1, "to": 1, "stl": 1, "blk": 0, "pts": 1},
+            {"name": "Kenwick Gaines", "min": 2, "fg": "0-1", "ft": "0-0", "reb": 2, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Coy Sidney", "min": 4, "fg": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Thomas Foster", "min": 7, "fg": "2-2", "ft": "0-0", "reb": 0, "ast": 0, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Byron Anderson", "min": 3, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Sean Zone", "min": 31, "fg": "4-9", "tp": "3-5", "ft": "0-3", "reb": 6, "ast": 0, "pf": 2, "to": 0, "stl": 1, "blk": 0, "pts": 11},
+            {"name": "Charles Moore", "min": 32, "fg": "9-14", "ft": "4-5", "reb": 7, "ast": 2, "pf": 2, "to": 3, "stl": 0, "blk": 0, "pts": 22}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

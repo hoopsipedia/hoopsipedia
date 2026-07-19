@@ -1,0 +1,48 @@
+{
+  "page": 29,
+  "games": [
+    {
+      "date": "1995-03-09",
+      "opponent": "Wyoming Cowboys",
+      "notes": "WAC Quarterfinal at The Pit, Albuquerque, NM. New Mexico entered 14-14 (9-9 WAC), now 15-14; Wyoming entered 13-14 (9-9 WAC), now 13-15.",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 63,
+          "players": [
+            {"name": "Charles Smith", "fg": "5-12", "tp": "1-2", "ft": "5-7", "reb": 9, "ast": 1, "to": 5, "blk": 1, "stl": 0, "pf": 2, "min": 32, "pts": 16},
+            {"name": "Cedric Hopkins", "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pf": 0, "min": 0, "pts": 0},
+            {"name": "Marlow White", "fg": "5-12", "tp": "3-7", "ft": "5-6", "reb": 9, "ast": 2, "to": 2, "blk": 0, "stl": 3, "pf": 3, "min": 38, "pts": 18},
+            {"name": "Cody Willard", "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pf": 0, "min": 0, "pts": 0},
+            {"name": "Clayton Shields", "fg": "1-4", "tp": "0-2", "ft": "0-0", "reb": 3, "ast": 0, "to": 2, "blk": 0, "stl": 0, "pf": 1, "min": 8, "pts": 2},
+            {"name": "Royce Olney", "fg": "0-1", "tp": "0-1", "ft": "0-0", "reb": 3, "ast": 2, "to": 0, "blk": 0, "stl": 0, "pf": 3, "min": 11, "pts": 2},
+            {"name": "David Gibson", "fg": "2-6", "tp": "1-2", "ft": "2-4", "reb": 3, "ast": 2, "to": 2, "blk": 0, "stl": 0, "pf": 3, "min": 39, "pts": 7},
+            {"name": "Shawn Simpson", "fg": "1-2", "ft": "0-0", "reb": 3, "ast": 1, "to": 2, "blk": 0, "stl": 0, "pf": 2, "min": 14, "pts": 2},
+            {"name": "Brian Hayden", "fg": "0-0", "ft": "0-0", "reb": 1, "ast": 1, "to": 0, "blk": 0, "stl": 0, "pf": 3, "min": 10, "pts": 0},
+            {"name": "Greg Schornstein", "fg": "2-8", "tp": "0-2", "ft": "5-6", "reb": 3, "ast": 0, "to": 2, "blk": 1, "stl": 1, "pf": 4, "min": 32, "pts": 9},
+            {"name": "Marty Cotwright", "fg": "1-4", "ft": "5-6", "reb": 3, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pf": 2, "min": 16, "pts": 7}
+          ],
+          "checksum_ok": true
+        },
+        {
+          "name": "Wyoming Cowboys",
+          "score": 56,
+          "players": [
+            {"name": "LaDrell Whitehead", "fg": "2-13", "tp": "0-5", "ft": "4-4", "reb": 4, "ast": 3, "to": 2, "blk": 0, "stl": 1, "pf": 4, "min": 32, "pts": 8},
+            {"name": "Sly Johnson", "fg": "0-6", "tp": "0-5", "ft": "2-2", "reb": 1, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pf": 4, "min": 22, "pts": 2},
+            {"name": "Aaron Smith", "fg": "3-11", "tp": "0-4", "ft": "1-2", "reb": 5, "ast": 3, "to": 1, "blk": 0, "stl": 1, "pf": 4, "min": 32, "pts": 7},
+            {"name": "H.L. Coleman", "fg": "2-5", "tp": "0-1", "ft": "1-2", "reb": 9, "ast": 1, "to": 0, "blk": 0, "stl": 1, "pf": 5, "min": 36, "pts": 5},
+            {"name": "Jeron Roberts", "fg": "2-2", "tp": "1-1", "ft": "2-4", "reb": 2, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pf": 3, "min": 11, "pts": 7},
+            {"name": "Jeff Allen", "fg": "1-1", "ft": "0-0", "reb": 2, "ast": 0, "to": 0, "blk": 1, "stl": 0, "pf": 2, "min": 5, "pts": 2},
+            {"name": "Theo Ratliff", "fg": "4-10", "ft": "6-12", "reb": 11, "ast": 0, "to": 3, "blk": 3, "stl": 1, "pf": 4, "min": 32, "pts": 14},
+            {"name": "Bobby Traylor", "fg": "3-12", "tp": "2-5", "ft": "3-4", "reb": 5, "ast": 0, "to": 3, "blk": 0, "stl": 2, "pf": 1, "min": 24, "pts": 11},
+            {"name": "Chris Haslam", "fg": "0-1", "ft": "0-0", "reb": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pf": 0, "min": 6, "pts": 0}
+          ],
+          "checksum_ok": true
+        }
+      ],
+      "final_by_half": {"New Mexico Lobos": [33, 30], "Wyoming Cowboys": [21, 35]}
+    }
+  ],
+  "skipped": []
+}

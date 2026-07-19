@@ -1,0 +1,42 @@
+{
+  "page": 14,
+  "games": [
+    {
+      "date": "1999-01-04",
+      "opponent": "Fresno State Bulldogs",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 80,
+          "players": [
+            {"name": "Damion Walker", "min": 25, "fg": "2-5", "tp": "0-1", "ft": "3-6", "reb": 11, "ast": 0, "pf": 4, "to": 3, "stl": 0, "blk": 1, "pts": 7},
+            {"name": "Roland Hannah", "min": 32, "fg": "7-10", "tp": "1-1", "ft": "0-0", "reb": 4, "ast": 2, "pf": 2, "to": 3, "stl": 2, "blk": 0, "pts": 15},
+            {"name": "Kenny Thomas", "min": 33, "fg": "7-12", "tp": "1-4", "ft": "2-2", "reb": 8, "ast": 2, "pf": 3, "to": 1, "stl": 1, "blk": 2, "pts": 17},
+            {"name": "Kevin Henry", "min": 27, "fg": "3-11", "tp": "0-5", "ft": "2-2", "reb": 4, "ast": 1, "pf": 4, "to": 3, "stl": 1, "blk": 0, "pts": 8},
+            {"name": "John Robinson", "min": 39, "fg": "7-18", "tp": "4-8", "ft": "6-6", "reb": 8, "ast": 11, "pf": 4, "to": 8, "stl": 1, "blk": 0, "pts": 24},
+            {"name": "Greg Davis", "min": 19, "fg": "2-2", "tp": "0-0", "ft": "0-0", "reb": 3, "ast": 0, "pf": 4, "to": 1, "stl": 0, "blk": 1, "pts": 4},
+            {"name": "Tim Lightfoot", "min": 22, "fg": "2-4", "tp": "1-2", "ft": "0-0", "reb": 3, "ast": 1, "pf": 3, "to": 4, "stl": 1, "blk": 0, "pts": 5},
+            {"name": "Brian Smith", "min": 3, "fg": "0-2", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Fresno State Bulldogs",
+          "score": 86,
+          "players": [
+            {"name": "Larry Abney", "min": 21, "fg": "2-3", "tp": "0-0", "ft": "0-0", "reb": 6, "ast": 0, "pf": 3, "to": 1, "stl": 2, "blk": 2, "pts": 4},
+            {"name": "Terrance Roberson", "min": 31, "fg": "4-10", "tp": "1-6", "ft": "4-5", "reb": 9, "ast": 1, "pf": 0, "to": 4, "stl": 4, "blk": 0, "pts": 13},
+            {"name": "Melvin Ely", "min": 32, "fg": "8-13", "tp": "0-0", "ft": "2-3", "reb": 5, "ast": 0, "pf": 2, "to": 2, "stl": 6, "blk": 3, "pts": 18},
+            {"name": "Demetrius Porter", "min": 18, "fg": "0-2", "tp": "0-1", "ft": "0-2", "reb": 1, "ast": 2, "pf": 5, "to": 1, "pts": 0},
+            {"name": "Courtney Alexander", "min": 34, "fg": "10-20", "tp": "2-6", "ft": "4-6", "reb": 4, "ast": 3, "pf": 2, "to": 4, "stl": 1, "blk": 0, "pts": 26},
+            {"name": "Willie Farley", "min": 28, "fg": "4-8", "tp": "2-4", "ft": "2-3", "reb": 4, "ast": 3, "pf": 2, "to": 4, "stl": 1, "blk": 0, "pts": 12},
+            {"name": "Chris Herren", "min": 22, "fg": "2-10", "tp": "0-5", "ft": "4-7", "reb": 1, "ast": 9, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 8},
+            {"name": "Randy Holcomb", "min": 14, "fg": "1-3", "tp": "1-1", "ft": "2-2", "reb": 1, "ast": 2, "pf": 1, "to": 3, "stl": 1, "blk": 1, "pts": 5}
+          ]
+        }
+      ],
+      "checksum_ok": true,
+      "notes": "Willie Farley's printed PTS digit was illegible/inconsistent with his FG-3P-FT line (appeared to read as 26, duplicating the row above); recomputed pts=2*(FG-3P)+3*3P+FT=12 from his made-shot columns, which makes the Fresno State player-sum equal the official final score of 86 exactly. All other player pts are as printed and sum exactly to each team's final score. Stray decimal prefixes (e.g. '.400', '.583') before some New Mexico rows are shooting-percentage annotations, not table columns, and were excluded. Team-level rebound-only 'TEAM' lines (no player) were omitted from player lists."
+    }
+  ],
+  "skipped": []
+}

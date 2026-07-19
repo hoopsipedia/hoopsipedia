@@ -1,0 +1,51 @@
+{
+  "page": 6,
+  "games": [
+    {
+      "date": "1999-11-27",
+      "opponent": "Alcorn State",
+      "teams": [
+        {
+          "name": "Alcorn State",
+          "score": 58,
+          "players": [
+            {"name": "Terrance Cameron", "min": 30, "fg": "5-14", "tp": "0-1", "ft": "1-1", "reb": 5, "pf": 4, "ast": 1, "to": 1, "blk": 1, "stl": 3, "pts": 11},
+            {"name": "Marcus Fleming", "min": 24, "fg": "7-13", "tp": "0-2", "ft": "2-4", "reb": 4, "pf": 4, "ast": 0, "to": 0, "blk": 0, "stl": 1, "pts": 16},
+            {"name": "Walter Harper", "min": 25, "fg": "2-8", "tp": "0-0", "ft": "2-2", "reb": 4, "pf": 2, "ast": 1, "to": 2, "blk": 0, "stl": 0, "pts": 6},
+            {"name": "Treymane Chambers", "min": 22, "fg": "0-4", "tp": "0-2", "ft": "3-4", "reb": 3, "pf": 3, "ast": 0, "to": 3, "blk": 0, "stl": 1, "pts": 3},
+            {"name": "Wallace Harris", "min": 17, "fg": "2-5", "tp": "1-2", "ft": "0-0", "reb": 1, "pf": 4, "ast": 2, "to": 1, "blk": 0, "stl": 0, "pts": 5},
+            {"name": "J.T. West", "min": 7, "fg": "1-1", "tp": "1-1", "ft": "0-0", "reb": 0, "pf": 0, "ast": 2, "to": 2, "blk": 0, "stl": 0, "pts": 3},
+            {"name": "Corey Magnum", "min": 9, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Brian Adams", "min": 18, "fg": "2-5", "tp": "1-2", "ft": "0-0", "reb": 4, "pf": 0, "ast": 1, "to": 5, "blk": 0, "stl": 2, "pts": 5},
+            {"name": "Jason Cable", "min": 8, "fg": "2-6", "tp": "0-2", "ft": "0-0", "reb": 2, "pf": 1, "ast": 1, "to": 0, "blk": 0, "stl": 1, "pts": 4},
+            {"name": "Devin Pack", "min": 16, "fg": "0-1", "tp": "0-1", "ft": "0-0", "reb": 1, "pf": 2, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "R'mario Smith", "min": 7, "fg": "0-1", "tp": "0-0", "ft": "0-0", "reb": 0, "pf": 3, "ast": 1, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Tori Harris", "min": 2, "fg": "0-1", "tp": "0-1", "ft": "0-0", "reb": 1, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 1, "pts": 0},
+            {"name": "Andrew Ross", "min": 15, "fg": "2-6", "tp": "0-0", "ft": "1-2", "reb": 5, "pf": 2, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pts": 5}
+          ],
+          "checksum_ok": true
+        },
+        {
+          "name": "New Mexico Lobos",
+          "score": 85,
+          "players": [
+            {"name": "Brian Smith", "min": 27, "fg": "3-4", "tp": "0-0", "ft": "0-0", "reb": 4, "pf": 1, "ast": 0, "to": 1, "blk": 2, "stl": 1, "pts": 6},
+            {"name": "Damion Walker", "min": 24, "fg": "5-7", "tp": "0-0", "ft": "2-3", "reb": 7, "pf": 3, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 12},
+            {"name": "Lamont Long", "min": 32, "fg": "15-21", "tp": "5-7", "ft": "4-5", "reb": 4, "pf": 0, "ast": 2, "to": 3, "blk": 0, "stl": 0, "pts": 39},
+            {"name": "Kevin Henry", "min": 25, "fg": "3-9", "tp": "2-6", "ft": "0-0", "reb": 1, "pf": 2, "ast": 1, "to": 2, "blk": 0, "stl": 0, "pts": 8},
+            {"name": "Marlon Parmer", "min": 21, "fg": "2-4", "tp": "0-0", "ft": "1-2", "reb": 1, "pf": 5, "ast": 3, "to": 0, "blk": 0, "stl": 0, "pts": 5},
+            {"name": "Wayland White", "min": 20, "fg": "3-7", "tp": "0-0", "ft": "2-3", "reb": 3, "pf": 0, "ast": 2, "to": 2, "blk": 1, "stl": 1, "pts": 8},
+            {"name": "John Robinson", "min": 18, "fg": "0-1", "tp": "0-0", "ft": "0-0", "reb": 5, "pf": 3, "ast": 3, "to": 4, "blk": 0, "stl": 4, "pts": 0},
+            {"name": "Rafael Berumen", "min": 10, "fg": "0-0", "tp": "0-0", "ft": "0-1", "reb": 1, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Nick Andrews", "min": 2, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 2, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Pat Kelly", "min": 2, "fg": "0-1", "tp": "0-0", "ft": "2-2", "reb": 2, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "R.T. Guinn", "min": 3, "fg": "0-0", "tp": "0-0", "ft": "0-2", "reb": 3, "pf": 2, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Roland Hannah", "min": 16, "fg": "1-1", "tp": "0-0", "ft": "3-4", "reb": 5, "pf": 3, "ast": 2, "to": 4, "blk": 0, "stl": 1, "pts": 5}
+          ],
+          "checksum_ok": true
+        }
+      ]
+    }
+  ],
+  "skipped": []
+}

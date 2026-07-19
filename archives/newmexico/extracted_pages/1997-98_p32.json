@@ -1,0 +1,9 @@
+{
+  "page": 32,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page contains a legible header (Syracuse vs New Mexico, NCAA Tournament 2nd Round, 03-15-98, Lexington KY, final score Syracuse 56 - New Mexico 46, per 'SCORE BY PERIODS' summary), but the box score itself is a rotated (90-degree) scan with dense, overlapping/misaligned numeric columns (FG-FGA, 3PT, FT, rebounds, PF, TP, A, TO, BLK, S, TIME) that cannot be confidently mapped to individual players. Several fields (e.g., free-throw and point totals for multiple players) appear garbled or overlapping in the scan. Skipping rather than guessing per-player stats, since checksum verification would not be reliable."
+    }
+  ]
+}

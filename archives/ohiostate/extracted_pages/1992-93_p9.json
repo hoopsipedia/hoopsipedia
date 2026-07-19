@@ -1,0 +1,11 @@
+{
+  "page": 9,
+  "games": [],
+  "skipped": [
+    {
+      "date": "1992-12-29",
+      "opponent": "Oregon",
+      "reason": "Official NCAA box score, Ohio State vs Univ. of Oregon (Memorial Coliseum), final Oregon 75 - Ohio State 79. Oregon (visitors) side checksums perfectly: player point sum = 75, matching FG/3FG/FT team totals exactly (FG 25-58, 3FG 7-14, FT 18-26). However the Ohio State (home) side does not checksum: summed player points = 80 vs. printed/confirmed final score of 79, and player-level FG (27) and FT (23) makes do not match the printed team totals (FG 28-59, FT 20-27), which are independently corroborated by the half-by-half FG/3FG/FT split lines at the bottom of the sheet. Rebounds (OFF/DEF/TOT, including the separate team-rebounds line) check out exactly, and every individual player row is internally self-consistent (points = 2*(FG-3FG made)+3*3FG made+FT made), so the error is confined to one or two players' FG/FT digits that could not be pinned down with confidence even after a second read of the page. Per instructions, skipping rather than guessing which digit(s) are misread."
+    }
+  ]
+}

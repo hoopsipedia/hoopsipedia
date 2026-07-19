@@ -1,0 +1,9 @@
+{
+  "page": 2,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page contains a typed STATMAN box score for Virginia 75, Massachusetts 68 (Maui Invitational, Lahaina HI, 11-26-96). Starters' lines (Nolan, Alexander, Staples, Deane for Virginia) check out cleanly (FG and 3P columns sum to team totals of 27 and 5, and 2*FG+3P+FT matches each starter's listed PTS). However bench rows (McAndrew, Ducharme, Robinson, Dersch for Virginia, and all Massachusetts rows) produce internally inconsistent numbers on this scan's resolution: summed FT-made across the roster (22) does not match the team FT total (16), summed FTA (39) does not match team FTA (32), and at least one bench line implies an impossible stat (6 rebounds/4 turnovers/1 block in only 3 minutes played), indicating column misalignment or misread digits I cannot resolve confidently from the available image. Per instructions to avoid guessing, the game was skipped rather than transcribed with unreliable bench/opponent figures; team-level metadata (final score 75-68, date, opponent, site) is legible but full player-by-player checksum could not be verified."
+    }
+  ]
+}

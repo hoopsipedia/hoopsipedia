@@ -1,0 +1,9 @@
+{
+  "page": 15,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "1/26/1992 Ohio State at Seton Hall (East Rutherford, NJ) official NCAA box score. Ohio State's side checksums perfectly: every player's PTS matches 2*(FG-3P)+3*3P+FT, and the sum of player points (Jent 10, Jackson 21, Robinson 4, Baker 12, Brown 10, Skelton 2, Brandewie 0, Funderburke 5, Ratliff 0) = 64, equal to the final score and TOTALS row. However, Seton Hall's side fails checksum: summing the printed PTS column for Winchester(2), Karnishovas(7), Walker(8), Caver(7), Dehere(20), Crist(0), Hurley(0), Leahy(16), Wright(15) = 75, which does not match Seton Hall's final score of 68 or the printed TOTALS PTS of 68. Cross-checking against the FG/3P/FT formula also fails to reconcile for Winchester, Walker, and Wright specifically (formula gives 4/6/10 vs printed 2/8/15), indicating misread or ambiguous digits in the scanned FT/FGA columns for those rows that could not be resolved even on a second read of the page. Rather than guess which digits are wrong, skipping the entire game (both teams) so no inconsistent data is published."
+    }
+  ]
+}

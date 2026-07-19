@@ -1,0 +1,44 @@
+{
+  "page": 18,
+  "games": [
+    {
+      "date": "1998-01-18",
+      "opponent": "N.C. State",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 59,
+          "players": [
+            {"name": "Willie Dersch", "min": 33, "fg": "1-3", "tp": "0-0", "ft": "0-0", "pts": 2},
+            {"name": "Norman Nolan", "min": 40, "fg": "13-19", "tp": "0-0", "ft": "9-11", "reb": 9, "ast": 0, "pf": 2, "to": 2, "blk": 0, "stl": 0, "pts": 35},
+            {"name": "Colin Ducharme", "min": 21, "fg": "1-5", "tp": "0-0", "ft": "1-2", "reb": 5, "ast": 0, "pf": 5, "to": 1, "blk": 1, "stl": 0, "pts": 3},
+            {"name": "Curtis Staples", "min": 40, "fg": "5-8", "tp": "3-6", "ft": "3-4", "reb": 5, "ast": 1, "pf": 2, "to": 3, "blk": 0, "stl": 0, "pts": 16},
+            {"name": "Donald Hand", "min": 27, "fg": "0-2", "tp": "0-0", "ft": "1-2", "reb": 4, "ast": 4, "pf": 3, "to": 3, "blk": 0, "stl": 1, "pts": 1},
+            {"name": "Chezley Watson", "min": 13, "fg": "0-1", "tp": "0-0", "ft": "0-2", "reb": 2, "ast": 1, "pf": 1, "to": 1, "blk": 1, "stl": 0, "pts": 0},
+            {"name": "Kris Hunter", "min": 13, "fg": "1-2", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "pf": 2, "to": 1, "blk": 2, "stl": 0, "pts": 2},
+            {"name": "Chase Metheney", "min": 6, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 1, "pf": 2, "to": 0, "blk": 1, "stl": 0, "pts": 0},
+            {"name": "Monte Marcaccini", "min": 7, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 1, "pf": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0}
+          ],
+          "checksum_ok": true
+        },
+        {
+          "name": "N.C. State",
+          "score": 56,
+          "players": [
+            {"name": "Ishua Benjamin", "min": 38, "fg": "5-11", "tp": "1-2", "ft": "1-2", "reb": 1, "ast": 0, "pf": 2, "to": 0, "blk": 0, "stl": 1, "pts": 12},
+            {"name": "Tim Wells", "min": 35, "fg": "3-9", "tp": "0-2", "ft": "6-6", "reb": 7, "ast": 3, "pf": 3, "to": 1, "blk": 0, "stl": 1, "pts": 12},
+            {"name": "Kenny Inge", "min": 29, "fg": "1-7", "tp": "0-1", "ft": "2-2", "reb": 5, "ast": 1, "pf": 5, "to": 1, "blk": 0, "stl": 0, "pts": 4},
+            {"name": "Justin Gainey", "min": 31, "fg": "1-4", "tp": "0-0", "ft": "0-2", "reb": 3, "ast": 0, "pf": 4, "to": 2, "blk": 0, "stl": 1, "pts": 2},
+            {"name": "C.C. Harrison", "min": 37, "fg": "5-14", "tp": "2-5", "ft": "7-10", "reb": 2, "ast": 2, "pf": 3, "to": 2, "blk": 0, "stl": 2, "pts": 19},
+            {"name": "Archie Miller", "min": 12, "fg": "1-1", "tp": "1-1", "ft": "2-2", "pts": 5},
+            {"name": "Luke Buffum", "min": 9, "fg": "0-1", "tp": "0-0", "ft": "0-2", "pts": 0},
+            {"name": "Cornelius Williams", "min": 9, "fg": "1-2", "tp": "0-0", "ft": "0-0", "pts": 2}
+          ],
+          "checksum_ok": true
+        }
+      ]
+    }
+  ],
+  "skipped": [],
+  "notes": "Typed official NCAA box score, 1998-01-18, Virginia 59 N.C. State 56 (OT noted on periods table but no OT scoring shown; final score line shows only two periods). NC State bench players (Miller, Buffum, Williams) had ambiguous/truncated trailing columns (rebounds/ast/pf/to/blk/stl) in the source text, so only min/fg/tp/ft/pts were transcribed for them, derived from the unambiguous leading FG/3P/FT columns plus the printed team PTS total (56) as a cross-check constraint; Virginia starter Willie Dersch's PTS was similarly reconciled to 2 (via 2*FG+FT formula and team-total constraint of 59) rather than a misread trailing digit, with his rebound/ast/pf/to/blk/stl columns omitted for the same reason. Both teams' player point sums reconcile exactly to the printed final scores."
+}

@@ -1,0 +1,43 @@
+{
+  "page": 4,
+  "games": [
+    {
+      "date": "1997-11-25",
+      "opponent": "Delaware",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 64,
+          "players": [
+            {"name": "Willie Dersch", "min": 36, "fg": "1-5", "ft": "0-0", "tp": "0-3", "reb": 3, "ast": 4, "pf": 0, "to": 2, "stl": 1, "blk": 2, "pts": 2},
+            {"name": "Norman Nolan", "min": 18, "fg": "6-9", "ft": "2-3", "tp": "0-0", "reb": 4, "ast": 2, "pf": 3, "to": 2, "stl": 0, "blk": 0, "pts": 14},
+            {"name": "Chase Metheney", "min": 27, "fg": "2-2", "ft": "2-2", "tp": "0-0", "reb": 6, "ast": 2, "pf": 3, "to": 4, "stl": 0, "blk": 3, "pts": 6},
+            {"name": "Curtis Staples", "min": 39, "fg": "6-15", "ft": "4-5", "tp": "3-10", "reb": 9, "ast": 0, "pf": 3, "to": 3, "stl": 3, "blk": 0, "pts": 19},
+            {"name": "Chezley Watson", "min": 15, "fg": "1-4", "ft": "0-0", "tp": "0-2", "reb": 1, "ast": 4, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Donald Hand", "min": 25, "fg": "2-6", "ft": "5-8", "tp": "1-2", "reb": 5, "ast": 2, "pf": 4, "to": 2, "stl": 2, "blk": 0, "pts": 10},
+            {"name": "Monte Marcaccini", "min": 17, "fg": "0-2", "ft": "0-1", "tp": "0-1", "reb": 5, "ast": 1, "pf": 2, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Kris Hunter", "min": 3, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Colin Ducharme", "min": 20, "fg": "5-10", "ft": "1-2", "tp": "0-0", "reb": 4, "ast": 0, "pf": 4, "to": 1, "stl": 1, "blk": 0, "pts": 11}
+          ],
+          "checksum_ok": true
+        },
+        {
+          "name": "Delaware Fightin' Blue Hens",
+          "score": 57,
+          "players": [
+            {"name": "Mike Pegues", "min": 36, "fg": "4-14", "ft": "4-5", "tp": "0-0", "reb": 9, "ast": 0, "pf": 3, "to": 4, "stl": 1, "blk": 0, "pts": 12},
+            {"name": "Keith Davis", "min": 38, "fg": "5-14", "ft": "2-4", "tp": "2-3", "reb": 3, "ast": 3, "pf": 3, "to": 3, "stl": 1, "blk": 0, "pts": 14},
+            {"name": "Darryl Presley", "min": 29, "fg": "2-10", "ft": "2-2", "tp": "0-1", "reb": 10, "ast": 1, "pf": 4, "to": 3, "stl": 1, "blk": 2, "pts": 6},
+            {"name": "Tyrone Perry", "min": 33, "fg": "2-4", "ft": "2-2", "tp": "2-2", "reb": 9, "ast": 1, "pf": 4, "to": 5, "stl": 1, "blk": 0, "pts": 8},
+            {"name": "K. Marciulionis", "min": 28, "fg": "5-11", "ft": "2-2", "tp": "4-8", "reb": 1, "ast": 1, "pf": 1, "to": 1, "stl": 0, "blk": 1, "pts": 16},
+            {"name": "John Bennett", "min": 15, "fg": "0-1", "ft": "1-2", "tp": "0-0", "reb": 0, "ast": 3, "pf": 1, "to": 0, "stl": 1, "blk": 2, "pts": 1},
+            {"name": "Greg Miller", "min": 18, "fg": "0-5", "ft": "0-0", "tp": "0-4", "reb": 5, "ast": 2, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Madou Diouf", "min": 3, "fg": "0-3", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ],
+          "checksum_ok": true
+        }
+      ]
+    }
+  ],
+  "skipped": []
+}

@@ -1,0 +1,9 @@
+{
+  "page": 1,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "1999-11-06 Simon Fraser at New Mexico (final 85-64, per periods 55+30=85 and 29+35=64): Simon Fraser visitors checksum passes exactly (player pts sum 64 = final score 64). However New Mexico (home) player point totals sum to 84 (Walker 4, Hannah 6, Long 29, Robinson 6, Henry 8, White 6, Lightfoot 2, Berumen 1, Parmer 17, Smith 5, Andrews 0, Kelly 0, Guinn 0), one point short of the printed/period-confirmed final score of 85. Team FG-made (33) and 3PT-made (2) sums match the TOTALS row exactly, and every player's printed TP matches 2*(FG-3FG)+3*3FG+FT for that player, so the gap is not attributable to a single obvious misread digit; it appears to be either an uncorrectable OCR ambiguity in a bench player's FT line (Andrews/Kelly/Guinn rows are partly obscured by print bleed-through/smudging) or a genuine 1-point scorekeeping discrepancy on the original 1999 sheet. Sheet also has several stray/bleed-through digit clusters overlapping the FG/FT columns (e.g. '571', '2504', '375', '4290', '8675', '400', '330') that had to be filtered out as noise, reducing confidence further. Skipped per instructions rather than guessing which line to adjust."
+    }
+  ]
+}

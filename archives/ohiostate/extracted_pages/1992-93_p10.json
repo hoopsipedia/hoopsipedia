@@ -1,0 +1,9 @@
+{
+  "page": 10,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page shows a full official box score (Illinois-Chicago 55 at Ohio State 79, January 2, 1993, St. John Arena) with clearly legible team totals rows and starters, but several reserve players on both teams have faded/small dot-matrix print where digits are ambiguous (e.g. Illinois-Chicago's Lampley row parses to only 15 of the expected 16 columns; Bailey's OFF+DEF does not sum to the printed TOT, and FG/TP do not reconcile without guessing a digit). Given the requirement for a reliable player-level checksum against the team's final score, and the instruction not to invent values, the full player-by-player transcription for both teams was skipped rather than guessed. Reference only: final score Ohio State 79, Illinois-Chicago 55 (by half: UIC 27-28, OSU 38-41)."
+    }
+  ]
+}

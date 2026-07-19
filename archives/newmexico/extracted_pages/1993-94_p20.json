@@ -1,0 +1,42 @@
+{
+  "page": 20,
+  "games": [
+    {
+      "date": "1994-02-05",
+      "opponent": "Texas-El Paso",
+      "site": "Albuquerque, NM",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 80,
+          "players": [
+            {"name": "Charles Smith", "min": 32, "fg": "5-10", "tp": "1-1", "ft": "0-0", "reb": 6, "ast": 1, "pf": 3, "to": 2, "stl": 0, "blk": 0, "pts": 11},
+            {"name": "Greg Brown", "min": 40, "fg": "14-21", "tp": "5-9", "ft": "9-10", "reb": 1, "ast": 1, "pf": 2, "to": 3, "stl": 1, "blk": 0, "pts": 42},
+            {"name": "Marlow White", "min": 45, "fg": "5-14", "tp": "2-9", "ft": "0-1", "reb": 9, "ast": 4, "pf": 3, "to": 1, "stl": 3, "blk": 0, "pts": 12},
+            {"name": "Scott Pritchett", "min": 18, "fg": "0-4", "ft": "0-0", "reb": 0, "ast": 1, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Lewis LaMar", "min": 35, "fg": "1-7", "ft": "2-4", "reb": 8, "ast": 0, "pf": 4, "to": 4, "stl": 0, "blk": 1, "pts": 4},
+            {"name": "Canonchet Neves", "min": 44, "fg": "2-7", "tp": "0-3", "ft": "1-2", "reb": 14, "ast": 0, "pf": 3, "to": 0, "stl": 0, "blk": 1, "pts": 5},
+            {"name": "Brian Hayden", "min": 10, "fg": "2-4", "ft": "2-4", "reb": 5, "ast": 0, "pf": 4, "to": 0, "stl": 0, "blk": 0, "pts": 6},
+            {"name": "Greg Schornstein", "min": 1, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Texas-El Paso Miners",
+          "score": 78,
+          "players": [
+            {"name": "Carl Davis", "min": 28, "fg": "1-9", "tp": "1-6", "ft": "0-0", "reb": 2, "ast": 4, "pf": 3, "to": 1, "stl": 1, "blk": 1, "pts": 3},
+            {"name": "Phil Crocker", "min": 40, "fg": "4-9", "tp": "2-6", "ft": "2-2", "reb": 3, "ast": 6, "pf": 4, "to": 2, "stl": 1, "blk": 0, "pts": 12},
+            {"name": "Jeff Spillar", "min": 16, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 1, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Hector Gonzalez", "min": 16, "fg": "0-0", "ft": "0-2", "reb": 3, "ast": 0, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Ralph Davis", "min": 40, "fg": "7-16", "tp": "0-1", "ft": "4-4", "reb": 7, "ast": 2, "pf": 2, "to": 1, "stl": 1, "blk": 1, "pts": 18},
+            {"name": "Antoine Gillespie", "min": 43, "fg": "10-21", "tp": "3-7", "ft": "8-8", "reb": 4, "ast": 0, "pf": 4, "to": 2, "stl": 0, "blk": 0, "pts": 31},
+            {"name": "George Banks", "min": 37, "fg": "6-9", "ft": "2-2", "reb": 10, "ast": 1, "pf": 4, "to": 2, "stl": 1, "blk": 2, "pts": 14},
+            {"name": "Damion Gosa", "min": 5, "fg": "0-3", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

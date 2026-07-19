@@ -1,0 +1,9 @@
+{
+  "page": 12,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Ohio State vs Iowa, January 3, 1990, St. John Arena. Ohio State (home) side checksums perfectly: player TP column sums to 63, matching final score 63 (30+33 by periods). Iowa (visitor) side fails checksum: player TP column (already printed on sheet, not derived) sums to 58 (7+4+16+4+16+6+3+2+0), but Iowa's official final score is 59 (confirmed independently via both the printed team TOTALS row and the SCORE BY PERIODS line 31+28=59). The discrepancy of exactly 1 point traces to Iowa's FT-made total: summing individual FT-made (1+0+4+2+4+2+0+0+0=13) is 1 less than the team FT total of 14. The low-scoring bench players near the bottom of the Iowa column (SKINNER, STREET, WINTERS) are the likely source but the scanned print quality is not sharp enough at this resolution to confidently identify which single digit is misprinted/misread even after a second look at the page. Per instructions, skipping rather than guessing since one team's numbers do not reconcile. Note: this page is dated January 3, 1990, which is mid-season for the 1989-90 season (per record shown, Ohio State was 11-0 and Iowa 11-2 at time of game), not 1990-91 -- this page appears to be misfiled/bound into the 1990-91 compilation PDF rather than reflecting an actual 1990-91 game."
+    }
+  ]
+}

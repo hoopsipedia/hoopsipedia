@@ -1,0 +1,48 @@
+{
+  "page": 27,
+  "games": [
+    {
+      "date": "1994-03-03",
+      "opponent": "BYU Cougars",
+      "site": "Provo, Utah",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 84,
+          "players": [
+            {"name": "White, Marlow", "min": "45.0", "fg": "5-12", "ft": "8-9", "tp": "3-9", "reb": 6, "ast": 1, "pf": 4, "to": 5, "stl": 1, "blk": 1, "pts": 21},
+            {"name": "LaMar, Lewis", "min": "30.0", "fg": "1-3", "ft": "0-0", "tp": "0-0", "reb": 12, "ast": 1, "pf": 4, "to": 2, "stl": 0, "blk": 1, "pts": 2},
+            {"name": "Neves, Canonch", "min": "40.0", "fg": "6-14", "ft": "1-2", "tp": "3-3", "reb": 4, "ast": 0, "pf": 5, "to": 2, "stl": 1, "blk": 0, "pts": 16},
+            {"name": "Smith, Charles", "min": "26.0", "fg": "0-4", "ft": "2-2", "tp": "0-3", "reb": 3, "ast": 0, "pf": 3, "to": 5, "stl": 1, "blk": 0, "pts": 2},
+            {"name": "Brown, Greg", "min": "45.0", "fg": "10-19", "ft": "11-16", "tp": "3-8", "reb": 3, "ast": 5, "pf": 3, "to": 1, "stl": 1, "blk": 0, "pts": 34},
+            {"name": "Sanders, Rodney", "min": "0.0", "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Pritchett, Scott", "min": "19.0", "fg": "0-2", "ft": "0-0", "tp": "0-0", "reb": 2, "ast": 0, "pf": 2, "to": 1, "stl": 0, "blk": 0, "pts": 0, "note": "sheet printed TP=1 for this player but FG=0-2 and FT=0-0, which computes to 0 pts; used computed value (0) to reconcile team total with final score/Totals row (84)"},
+            {"name": "Griego, JJ", "min": "0.0", "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Hayden, Brian", "min": "10.0", "fg": "2-2", "ft": "2-4", "tp": "0-0", "reb": 3, "ast": 1, "pf": 4, "to": 0, "stl": 0, "blk": 0, "pts": 6},
+            {"name": "Schornstein, Greg", "min": "10.0", "fg": "1-1", "ft": "1-2", "tp": "0-0", "reb": 0, "ast": 0, "pf": 2, "to": 0, "stl": 1, "blk": 0, "pts": 3}
+          ],
+          "checksum_ok": true
+        },
+        {
+          "name": "BYU Cougars",
+          "score": 82,
+          "players": [
+            {"name": "Larson, Russell", "min": "20.0", "fg": "8-16", "ft": "3-3", "tp": "0-2", "reb": 6, "ast": 2, "pf": 5, "to": 1, "stl": 1, "blk": 0, "pts": 19},
+            {"name": "Knight, Shane", "min": "18.0", "fg": "2-5", "ft": "0-0", "tp": "1-4", "reb": 4, "ast": 1, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 5},
+            {"name": "Roberts, Kenneth", "min": "33.0", "fg": "8-11", "ft": "12-13", "tp": "0-0", "reb": 10, "ast": 4, "pf": 4, "to": 3, "stl": 0, "blk": 1, "pts": 28},
+            {"name": "Christensen, Kurt", "min": "38.0", "fg": "3-8", "ft": "1-2", "tp": "1-2", "reb": 0, "ast": 2, "pf": 2, "to": 0, "stl": 1, "blk": 0, "pts": 8},
+            {"name": "Reid, Randy", "min": "33.0", "fg": "0-3", "ft": "0-0", "tp": "0-2", "reb": 0, "ast": 4, "pf": 5, "to": 0, "stl": 0, "blk": 1, "pts": 0},
+            {"name": "Thompson, Jay", "min": "4.0", "fg": "0-0", "ft": "2-2", "tp": "0-0", "reb": 3, "ast": 0, "pf": 1, "to": 2, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Reid, Robbie", "min": "17.0", "fg": "0-2", "ft": "2-2", "tp": "0-2", "reb": 0, "ast": 1, "pf": 5, "to": 1, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Fish, John", "min": "0.0", "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Lindquist, Shawn", "min": "0.0", "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Durrant, Mark", "min": "32.0", "fg": "2-5", "ft": "0-0", "tp": "0-1", "reb": 3, "ast": 2, "pf": 3, "to": 2, "stl": 0, "blk": 1, "pts": 4},
+            {"name": "Wilcox, Craig", "min": "32.0", "fg": "4-10", "ft": "4-4", "tp": "2-5", "reb": 4, "ast": 0, "pf": 1, "to": 4, "stl": 0, "blk": 0, "pts": 14}
+          ],
+          "checksum_ok": true
+        }
+      ]
+    }
+  ],
+  "skipped": []
+}

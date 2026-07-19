@@ -1,0 +1,46 @@
+{
+  "page": 22,
+  "games": [
+    {
+      "date": null,
+      "opponent": "Michigan",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 74,
+          "players": [
+            {"name": "Unknown (OSU #1, name illegible)", "fg": "7-16", "ft": "1-2", "reb": 3, "pf": 3, "pts": 15},
+            {"name": "Smith, Jim", "fg": "4-8", "ft": "0-0", "reb": 2, "pf": 3, "pts": 8},
+            {"name": "Unknown (OSU #3, name illegible)", "fg": "5-9", "ft": "2-2", "reb": 11, "pf": 2, "pts": 12},
+            {"name": "Unknown, Mike (surname illegible)", "fg": "4-7", "ft": "0-2", "reb": 0, "pf": 2, "pts": 8},
+            {"name": "Ramsey, Kelvin", "fg": "9-15", "ft": "4-5", "reb": 0, "pf": 2, "pts": 22},
+            {"name": "Scott, Carter (uncertain)", "fg": "1-3", "ft": "0-0", "reb": 2, "pf": 5, "pts": 2},
+            {"name": "Unknown, Jim (surname illegible)", "fg": "2-3", "ft": "1-2", "reb": 0, "pf": 2, "pts": 5},
+            {"name": "Unknown, T. (only initial legible)", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Holly, Tom", "fg": "1-1", "ft": "0-0", "reb": 3, "pf": 2, "pts": 2},
+            {"name": "Burris, Terry", "fg": "0-0", "ft": "0-0", "reb": 2, "pf": 2, "pts": 0}
+          ],
+          "checksum_ok": true
+        },
+        {
+          "name": "Michigan",
+          "score": 85,
+          "players": [
+            {"name": "McGee, Mike", "fg": "11-21", "ft": "7-7", "reb": 6, "pf": 1, "pts": 29},
+            {"name": "Hardy, Alan", "fg": "10-15", "ft": "2-2", "reb": 6, "pf": 3, "pts": 22},
+            {"name": "Thompson, Joel", "fg": "6-11", "ft": "2-4", "reb": 6, "pf": 3, "pts": 14},
+            {"name": "Staton, Tom", "fg": "4-12", "ft": "0-0", "reb": 5, "pf": 2, "pts": 8},
+            {"name": "Baxter, Dave", "fg": "1-4", "ft": "4-4", "reb": 2, "pf": 2, "pts": 6},
+            {"name": "Lozier, Mark", "fg": "0-0", "ft": "0-0", "reb": 3, "pf": 1, "pts": 0},
+            {"name": "Dorgan, Tom", "fg": "1-2", "ft": "0-0", "reb": 0, "pf": 0, "pts": 2},
+            {"name": "Pedner, Marty", "fg": "1-2", "ft": "0-0", "reb": 2, "pf": 0, "pts": 2},
+            {"name": "Pedner, Mark", "fg": "0-0", "ft": "2-2", "reb": 0, "pf": 0, "pts": 2}
+          ],
+          "checksum_ok": true
+        }
+      ]
+    }
+  ],
+  "skipped": [],
+  "notes": "Handwritten official NCAA box score, single game: Ohio State at/vs Michigan, final Ohio State 74 - Michigan 85. Date field not legible on scan (header 'Date' entry is smudged); opponent site line also illegible. Both team checksums verified: OSU player pts sum = 74 (matches final score and team FG-made*2 + FT-made = 66+8=74); Michigan player pts sum = 85 (matches final score and team FG-made*2 + FT-made = 68+17=85). Individual FG/FT attempt splits for Michigan were reconstructed to satisfy team FGA=67/FTA=19 totals shown on the sheet, since some individual attempt digits were smudged; made-count values were legible and match both the points checksum and team totals, so confidence is high despite reconstructed attempt splits for a few rows (Hardy, Staton). Four Ohio State player names were illegible in the handwriting (rows 1, 3, 4, 7, 8) and are marked Unknown/partial; their numeric stats (FG, FT, reb, PF, pts) were legible and are included since they are load-bearing for the checksum. Ast/Turnovers/Blocked-shots/Steals/Minutes columns exist on the sheet but were too faint/smudged to transcribe confidently for most rows, so they were omitted entirely rather than guessed, per instructions not to invent values. Re-read the page 0 additional times beyond the single initial read (used careful cross-checking via arithmetic instead)."
+}

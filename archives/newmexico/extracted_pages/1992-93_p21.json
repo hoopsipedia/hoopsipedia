@@ -1,0 +1,9 @@
+{
+  "page": 21,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Official NCAA box score New Mexico @ Wyoming, 02-13-93, Laramie WY (final NM 76, Wyoming 60) is present but the scan has heavy overlapping/double-exposed print artifacts corrupting the FT/FTA, OR/DR, and in several rows the PTS columns for multiple players on both teams (e.g. NM's Steve Logan, Ike Williams row area, and bench players Corey Jenkins, Canonchet Neves, J.J. Griego, Trent Heffner; Wyoming's Brian Rewers, Theo Ratliff, Rick Henry, David Murray, and bench players Steve Gosar, Brett Studdard, Michael Brown, Eric Wattree). Cross-checking computed points (2*(FG-3P)+3*3P+FT) against the printed PTS values produced mismatches for at least one player (Khari Jaxon: computed 7 vs printed 6), indicating unreliable digit recognition in the corrupted zone. Per instructions, skipping rather than guessing at values that cannot be confidently verified against the team checksum."
+    }
+  ]
+}

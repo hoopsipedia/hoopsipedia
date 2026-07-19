@@ -1,0 +1,9 @@
+{
+  "page": 24,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Handwritten official box score (Ohio State vs Illinois, apparently Feb 22 1979 at St. John Arena) is too faded/illegible to transcribe confidently. Several player-name cells are illegible or ambiguous on both sides (top table rows besides Bresnahan and Range; bottom table rows besides Smith, Williams, Cline, Ransey, Penn), multiple stat cells have ambiguous digits, and the final-score-by-periods box at the bottom is illegible for both teams' final totals. Attempted reconstruction: top-team (Illinois) TOTALS row FG=23/FT=11 implies 57 pts but TOTALS TP cell reads ~55 (mismatch); bottom-team (Ohio State) TOTALS TP reads ~73 but several player rows near the bottom are blank/unreadable so the per-player sum could not be reliably reconciled, and the final score digits in the score-by-periods table could not be read with confidence. Skipping per instruction to be ruthless rather than guess."
+    }
+  ]
+}

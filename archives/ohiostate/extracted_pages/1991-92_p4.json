@@ -1,0 +1,9 @@
+{
+  "page": 4,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Ohio State vs Ohio University, December 4, 1991 (St. John Arena) — Ohio University (visitor) side reconciles cleanly to final score 62 using the printed TP column. However, the Ohio State (home) bench rows (Hall, Brandewie, Welton, Davis, Dudley, Ratliff, Etzler) contain internally inconsistent digits at this scan resolution (e.g. free-throws-made exceeding free-throws-attempted, a 3-pointer made with 0 total field goals made), and the confidently-read player point values do not sum to the printed team final score of 78. Rather than guess/derive missing or ambiguous digits, skipping the whole game per the ruthless-skip rule since both teams' lines are required together."
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "page": 1,
+  "games": [
+    {
+      "date": "1998-11-13",
+      "opponent": "DePaul",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 82,
+          "players": [
+            {"name": "Lamont Long", "min": 40, "fg": "10-19", "tp": "4-5", "ft": "5-7", "reb": 4, "ast": 8, "to": 5, "blk": 0, "stl": 0, "pts": 29},
+            {"name": "Greg Davis", "min": 21, "fg": "1-1", "tp": "0-0", "ft": "0-0", "reb": 7, "ast": 0, "to": 2, "blk": 0, "stl": 1, "pts": 2},
+            {"name": "Tim Lightfoot", "min": 2, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Kevin Henry", "min": 38, "fg": "9-13", "tp": "6-9", "ft": "0-0", "reb": 2, "ast": 1, "to": 1, "blk": 0, "stl": 0, "pts": 24},
+            {"name": "Drew Gaulden", "min": 3, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "to": 0, "blk": 0, "stl": 1, "pts": 0},
+            {"name": "Brian Smith", "min": 32, "fg": "3-5", "tp": "0-0", "ft": "0-0", "reb": 6, "ast": 1, "to": 2, "blk": 0, "stl": 0, "pts": 6},
+            {"name": "John Robinson II", "min": 15, "fg": "1-3", "tp": "0-1", "ft": "0-0", "reb": 0, "ast": 3, "to": 1, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Damion Walker", "min": 27, "fg": "4-6", "tp": "0-1", "ft": "3-4", "reb": 3, "ast": 0, "to": 4, "blk": 0, "stl": 0, "pts": 11},
+            {"name": "Roland Hannah", "min": 22, "fg": "4-6", "tp": "0-0", "ft": "0-0", "reb": 6, "ast": 2, "to": 2, "blk": 0, "stl": 0, "pts": 8}
+          ]
+        },
+        {
+          "name": "DePaul Blue Demons",
+          "score": 81,
+          "players": [
+            {"name": "Quentin Richardson", "min": 36, "fg": "9-19", "tp": "0-3", "ft": "0-2", "reb": 7, "ast": 2, "to": 2, "blk": 0, "stl": 2, "pts": 18},
+            {"name": "Rashon Burno", "min": 10, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Thomas Cooper", "min": 8, "fg": "2-3", "tp": "0-1", "ft": "1-1", "reb": 2, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 5},
+            {"name": "Lamar Butler", "min": 6, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Ayinde Avery", "min": 1, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Kerry Hartfield", "min": 33, "fg": "4-12", "tp": "3-10", "ft": "1-2", "reb": 1, "ast": 2, "to": 2, "blk": 0, "stl": 0, "pts": 12},
+            {"name": "Bobby Simmons", "min": 35, "fg": "7-11", "tp": "2-2", "ft": "1-3", "reb": 4, "ast": 6, "to": 4, "blk": 1, "stl": 0, "pts": 17},
+            {"name": "Willie Coleman", "min": 37, "fg": "4-8", "tp": "2-5", "ft": "3-5", "reb": 4, "ast": 2, "to": 3, "blk": 0, "stl": 3, "pts": 13},
+            {"name": "Lance Williams", "min": 34, "fg": "7-12", "tp": "0-0", "ft": "2-2", "reb": 9, "ast": 1, "to": 1, "blk": 0, "stl": 0, "pts": 16}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

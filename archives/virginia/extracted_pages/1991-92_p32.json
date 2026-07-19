@@ -1,0 +1,46 @@
+{
+  "page": 32,
+  "games": [
+    {
+      "date": "1992-03-30",
+      "opponent": "Florida",
+      "location": "New York City (Madison Square Garden)",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 62,
+          "players": [
+            {"name": "Junior Burrough", "min": 24, "fg": "3-10", "tp": "0-0", "ft": "1-4", "reb": 5, "ast": 0, "pf": 2, "to": 1, "stl": 0, "blk": 1, "pts": 7},
+            {"name": "Bryant Stith", "min": 40, "fg": "9-23", "tp": "1-3", "ft": "8-10", "reb": 15, "ast": 4, "pf": 1, "to": 1, "stl": 1, "blk": 0, "pts": 27},
+            {"name": "Ted Jeffries", "min": 32, "fg": "2-4", "tp": "0-0", "ft": "0-0", "reb": 5, "ast": 0, "pf": 4, "to": 1, "stl": 1, "blk": 1, "pts": 4},
+            {"name": "Cory Alexander", "min": 27, "fg": "1-5", "tp": "0-4", "ft": "3-4", "reb": 3, "ast": 9, "pf": 2, "to": 2, "stl": 0, "blk": 0, "pts": 5},
+            {"name": "Anthony Oliver", "min": 33, "fg": "7-11", "tp": "0-0", "ft": "1-2", "reb": 2, "ast": 1, "pf": 2, "to": 2, "stl": 1, "blk": 4, "pts": 15},
+            {"name": "Yuri Barnes", "min": 3, "fg": "0-1", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Cornel Parker", "min": 31, "fg": "0-4", "tp": "0-1", "ft": "1-1", "reb": 4, "ast": 2, "pf": 1, "to": 1, "stl": 1, "blk": 0, "pts": 1},
+            {"name": "Doug Smith", "min": 10, "fg": "1-2", "tp": "1-1", "ft": "0-0", "reb": 2, "ast": 2, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 3}
+          ],
+          "checksum_ok": true
+        },
+        {
+          "name": "Florida Gators",
+          "score": 56,
+          "players": [
+            {"name": "Hosie Grinsley", "min": 23, "fg": "1-2", "tp": "1-1", "ft": "0-0", "reb": 2, "ast": 0, "pf": 2, "to": 2, "stl": 1, "blk": 0, "pts": 3},
+            {"name": "Stacey Poole", "min": 32, "fg": "6-15", "tp": "0-0", "ft": "4-6", "reb": 10, "ast": 1, "pf": 1, "to": 2, "stl": 0, "blk": 1, "pts": 16},
+            {"name": "Andrew DeClercq", "min": 21, "fg": "4-4", "tp": "0-0", "ft": "0-0", "reb": 6, "ast": 0, "pf": 4, "to": 2, "stl": 0, "blk": 0, "pts": 8},
+            {"name": "Craig Brown", "min": 25, "fg": "4-7", "tp": "0-0", "ft": "0-0", "reb": 2, "ast": 4, "pf": 4, "to": 3, "stl": 1, "blk": 0, "pts": 8},
+            {"name": "Dan Cross", "min": 23, "fg": "0-2", "tp": "0-1", "ft": "1-2", "reb": 2, "ast": 3, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 1},
+            {"name": "Svein Dyrkolbotn", "min": 9, "fg": "2-4", "tp": "0-0", "ft": "1-1", "reb": 3, "ast": 1, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 5},
+            {"name": "Martti Kuisma", "min": 16, "fg": "1-4", "tp": "0-0", "ft": "0-1", "reb": 1, "ast": 0, "pf": 0, "to": 0, "stl": 1, "blk": 0, "pts": 2},
+            {"name": "Scott Stewart", "min": 19, "fg": "2-6", "tp": "2-5", "ft": "0-0", "reb": 1, "ast": 1, "pf": 3, "to": 2, "stl": 1, "blk": 0, "pts": 6},
+            {"name": "Brian Hogan", "min": 23, "fg": "1-6", "tp": "1-5", "ft": "0-0", "reb": 1, "ast": 1, "pf": 3, "to": 0, "stl": 0, "blk": 0, "pts": 3, "note": "pts recomputed from FG/3P/FT (2*fg2pt + 3*3pt + ft) — printed PTS digit was ambiguous on scan; recomputed value reconciles team total"},
+            {"name": "Louis Rowe", "min": 9, "fg": "2-4", "tp": "0-2", "ft": "0-0", "reb": 1, "ast": 1, "pf": 1, "to": 0, "stl": 1, "blk": 0, "pts": 4}
+          ],
+          "checksum_ok": true
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

@@ -1,0 +1,11 @@
+{
+  "page": 21,
+  "games": [],
+  "skipped": [
+    {
+      "date": "1991-02-04",
+      "opponent": "Radford",
+      "reason": "Official NCAA box score, Radford (54) at Virginia (87), Charlottesville VA. Radford's 13 player lines transcribe cleanly and checksum exactly (2+7+16+4+5+14+2+0+4+0+0+0+0 = 54, matching printed TOTALS TP=54). Virginia's starters and most bench (Stith 25, Turner 18, Jeffries 5, Crotty 14, Parker 4, Blundin 7, Kirby 1, Johnson 0, Katstra 6, Smith 0, Wilson 0 = 80 confirmed) are legible, but the final four handwritten bench lines (Stewart, Hawlicek, Ford [name struck through, likely DNP], Floriani) are too faint/ambiguous in the FG/FT columns to confidently assign the remaining 7 points (87-80) without guessing, so per-player checksum for Virginia could not be verified. Skipping the whole game per instructions rather than inventing values for the illegible bench entries."
+    }
+  ]
+}

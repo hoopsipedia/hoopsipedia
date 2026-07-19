@@ -1,0 +1,45 @@
+{
+  "page": 20,
+  "games": [
+    {
+      "date": "1994-02-17",
+      "opponent": "Clemson Tigers",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 52,
+          "players": [
+            {"name": "Junior Burrough", "min": 28, "fg": "4-10", "ft": "2-2", "tp": "0-1", "reb": 3, "pf": 4, "to": 2, "blk": 1, "pts": 10},
+            {"name": "Jason Williford", "min": 32, "fg": "4-12", "ft": "4-5", "tp": "1-4", "reb": 10, "ast": 4, "pf": 2, "to": 3, "stl": 2, "pts": 13},
+            {"name": "Yuri Barnes", "min": 33, "fg": "2-9", "ft": "7-12", "tp": "0-0", "reb": 15, "pf": 2, "blk": 1, "pts": 11},
+            {"name": "Cornel Parker", "min": 32, "fg": "0-5", "tp": "0-2", "reb": 6, "ast": 4, "to": 4, "pts": 0},
+            {"name": "Harold Deane", "min": 33, "fg": "3-10", "ft": "3-4", "tp": "2-5", "reb": 4, "ast": 1, "pf": 3, "to": 2, "stl": 1, "pts": 11},
+            {"name": "Jamal Robinson", "min": 21, "fg": "2-6", "ft": "3-4", "tp": "0-1", "reb": 1, "ast": 2, "pf": 2, "pts": 7},
+            {"name": "Chris Alexander", "min": 17, "reb": 2, "pf": 3, "blk": 2, "pts": 0},
+            {"name": "Shawn Wilson", "min": 2, "pf": 1, "pts": 0},
+            {"name": "Chris Havlicek", "min": 2, "pts": 0}
+          ],
+          "checksum_ok": true
+        },
+        {
+          "name": "Clemson Tigers",
+          "score": 44,
+          "players": [
+            {"name": "Jeff Brown", "min": 11, "fg": "1-4", "ft": "0-0", "tp": "1-4", "reb": 1, "ast": 1, "pf": 4, "to": 2, "pts": 3},
+            {"name": "Devin Gray", "min": 29, "fg": "4-15", "ft": "0-0", "tp": "0-0", "reb": 6, "pf": 3, "stl": 1, "pts": 8},
+            {"name": "Sharone Wright", "min": 34, "fg": "8-16", "ft": "6-11", "tp": "0-0", "reb": 12, "pf": 2, "to": 4, "blk": 2, "pts": 22},
+            {"name": "Lou Richie", "min": 26, "fg": "1-3", "ft": "2-2", "tp": "1-1", "reb": 4, "ast": 5, "pf": 4, "to": 1, "stl": 3, "pts": 5},
+            {"name": "Andre Bovain", "min": 34, "fg": "1-8", "ft": "2-2", "tp": "0-3", "reb": 10, "ast": 2, "pf": 2, "to": 1, "pts": 4},
+            {"name": "Wayne Buckingham", "min": 10, "fg": "0-2", "ft": "0-0", "tp": "0-0", "reb": 2, "ast": 1, "pf": 1, "to": 2, "pts": 0},
+            {"name": "Kyle Freeman", "min": 14, "fg": "0-4", "ft": "0-4", "tp": "0-0", "reb": 2, "ast": 1, "pf": 1, "to": 1, "stl": 1, "pts": 0},
+            {"name": "Corey Wallace", "min": 13, "fg": "0-5", "ft": "2-2", "tp": "0-3", "reb": 4, "pf": 2, "pts": 2},
+            {"name": "Rayfield Ragland", "min": 23, "fg": "0-5", "ft": "0-1", "tp": "0-2", "reb": 5, "ast": 1, "pf": 4, "pts": 0},
+            {"name": "Bruce Martin", "min": 6, "fg": "0-1", "tp": "0-1", "pf": 1, "pts": 0}
+          ],
+          "checksum_ok": true
+        }
+      ]
+    }
+  ],
+  "skipped": []
+}

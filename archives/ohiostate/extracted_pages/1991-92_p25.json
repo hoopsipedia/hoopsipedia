@@ -1,0 +1,45 @@
+{
+  "page": 25,
+  "games": [
+    {
+      "date": "1992-03-03",
+      "opponent": "Michigan",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 77,
+          "players": [
+            {"name": "Chris Jent", "min": 32, "fg": "6-12", "ft": "2-2", "tp": "1-3", "ast": 3, "pf": 2, "to": 2, "blk": 0, "stl": 2, "pts": 15},
+            {"name": "Jim Jackson", "min": 37, "fg": "9-15", "ft": "5-7", "tp": "2-3", "reb": 13, "ast": 6, "pf": 0, "to": 4, "stl": 1, "blk": 0, "pts": 25},
+            {"name": "Lawrence Funderburke", "min": 35, "fg": "3-7", "ft": "3-4", "tp": "0-0", "reb": 10, "ast": 1, "pf": 2, "to": 1, "stl": 1, "blk": 1, "pts": 9},
+            {"name": "Mark Baker", "min": 38, "fg": "5-10", "ft": "8-9", "tp": "0-0", "reb": 1, "ast": 6, "pf": 1, "to": 5, "stl": 4, "blk": 0, "pts": 18},
+            {"name": "Jamaal Brown", "min": 17, "fg": "2-4", "ft": "2-2", "tp": "0-2", "reb": 9, "ast": 0, "pf": 3, "to": 2, "stl": 0, "blk": 0, "pts": 6},
+            {"name": "Bill Robinson", "min": 11, "fg": "0-0", "ft": "0-2", "tp": "0-0", "reb": 3, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Rickey Dudley", "min": 18, "fg": "0-0", "ft": "4-4", "tp": "0-0", "reb": 3, "ast": 1, "pf": 3, "to": 3, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Jamie Skelton", "min": 4, "fg": "0-1", "ft": "0-0", "tp": "0-1", "reb": 0, "ast": 0, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Alex Davis", "min": 2, "fg": "0-1", "ft": "0-0", "tp": "0-1", "reb": 1, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Steve Hall", "min": 3, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Tom Brandewie", "min": 3, "fg": "0-0", "ft": "0-1", "tp": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Michigan Wolverines",
+          "score": 66,
+          "players": [
+            {"name": "Chris Webber", "min": 34, "fg": "8-17", "ft": "1-4", "tp": "0-1", "reb": 12, "ast": 3, "pf": 3, "to": 1, "stl": 5, "blk": 1, "pts": 17},
+            {"name": "James Voskuil", "min": 11, "fg": "1-4", "ft": "0-0", "tp": "0-2", "reb": 0, "ast": 0, "pf": 4, "to": 1, "stl": 0, "blk": 1, "pts": 2},
+            {"name": "Juwan Howard", "min": 30, "fg": "2-10", "ft": "2-4", "tp": "0-0", "reb": 9, "ast": 2, "pf": 1, "to": 4, "stl": 0, "blk": 0, "pts": 6},
+            {"name": "Jalen Rose", "min": 36, "fg": "4-16", "ft": "2-2", "tp": "0-5", "reb": 3, "ast": 5, "pf": 1, "to": 4, "stl": 3, "blk": 0, "pts": 10},
+            {"name": "Michael Talley", "min": 18, "fg": "0-2", "ft": "0-0", "tp": "0-1", "reb": 2, "ast": 1, "pf": 2, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Ray Jackson", "min": 23, "fg": "5-8", "ft": "0-3", "tp": "0-0", "reb": 5, "ast": 4, "pf": 2, "to": 2, "stl": 1, "blk": 1, "pts": 10},
+            {"name": "Eric Riley", "min": 14, "fg": "4-4", "ft": "1-2", "tp": "0-0", "reb": 3, "ast": 0, "pf": 4, "to": 1, "stl": 2, "blk": 0, "pts": 9},
+            {"name": "Jimmy King", "min": 26, "fg": "5-9", "ft": "0-1", "tp": "0-1", "reb": 6, "ast": 1, "pf": 2, "to": 2, "stl": 2, "blk": 0, "pts": 10},
+            {"name": "Freddie Hunter", "min": 8, "fg": "1-2", "ft": "0-1", "tp": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 2}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

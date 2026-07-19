@@ -1,0 +1,45 @@
+{
+  "page": 24,
+  "games": [
+    {
+      "date": "1993-02-25",
+      "opponent": "Fresno State",
+      "site": "Selland Arena, Fresno, CA",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 57,
+          "players": [
+            {"name": "Ike Williams", "min": 28, "fg": "4-14", "tp": "2-7", "ft": "0-0", "reb": 3, "ast": 2, "to": 3, "stl": 2, "pts": 10},
+            {"name": "Lewis LaMar", "min": 14, "fg": "0-1", "reb": 3, "pf": 3, "ast": 2, "to": 1, "blk": 1, "stl": 1, "pts": 0},
+            {"name": "Khari Jaxon", "min": 35, "fg": "4-11", "ft": "9-13", "reb": 15, "ast": 4, "to": 2, "blk": 4, "stl": 3, "pts": 17},
+            {"name": "Steve Logan", "min": 37, "fg": "3-12", "tp": "0-5", "ft": "2-2", "reb": 3, "pf": 2, "ast": 5, "to": 3, "stl": 1, "pts": 8},
+            {"name": "Greg Brown", "min": 34, "fg": "2-9", "tp": "1-5", "reb": 1, "ast": 3, "pts": 5},
+            {"name": "Corey Jenkins", "min": 17, "fg": "0-1", "tp": "0-1", "ft": "2-4", "reb": 3, "to": 1, "pts": 2},
+            {"name": "Canonchet Neves", "min": 27, "fg": "6-13", "tp": "2-6", "ft": "1-1", "reb": 9, "pf": 2, "pts": 15},
+            {"name": "J.J. Griego", "min": 4, "fg": "0-1", "tp": "0-1", "ast": 1, "pts": 0},
+            {"name": "Frank Willis", "min": 4, "stl": 1, "pts": 0}
+          ]
+        },
+        {
+          "name": "Fresno State Bulldogs",
+          "score": 71,
+          "players": [
+            {"name": "Travis Stel", "min": 25, "fg": "4-9", "ft": "2-4", "reb": 7, "ast": 2, "to": 5, "blk": 1, "pts": 10},
+            {"name": "Davon Satterthwaite", "min": 35, "fg": "7-17", "tp": "2-6", "ft": "3-3", "reb": 8, "pf": 1, "ast": 2, "to": 2, "blk": 1, "stl": 2, "pts": 19},
+            {"name": "Lee Mayberry", "min": 29, "fg": "3-5", "ft": "1-3", "reb": 9, "pf": 3, "blk": 1, "stl": 2, "pts": 7},
+            {"name": "DeAndre Austin", "min": 29, "fg": "2-5", "tp": "1-1", "reb": 5, "pf": 1, "ast": 1, "to": 2, "stl": 3, "pts": 5},
+            {"name": "Brian Santiago", "min": 37, "fg": "4-8", "tp": "1-4", "ft": "6-7", "reb": 7, "pf": 2, "ast": 10, "to": 3, "stl": 3, "pts": 15},
+            {"name": "Johnny Hines", "min": 4, "fg": "0-1", "pts": 0},
+            {"name": "Alex Fisher", "min": 3, "fg": "0-1", "ft": "2-2", "reb": 2, "pf": 0, "ast": 2, "to": 1, "pts": 2},
+            {"name": "Patrick Teagues", "min": 20, "fg": "1-3", "ft": "1-2", "reb": 2, "pf": 4, "ast": 2, "to": 1, "pts": 3},
+            {"name": "Seth Marshall", "min": 18, "fg": "4-5", "ft": "2-2", "reb": 4, "pf": 1, "ast": 1, "to": 1, "pts": 10}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": [],
+  "notes": "PF for New Mexico's Khari Jaxon and Fresno State's Travis Stel shown as circled '(S)' (likely a starter marker, not a numeric foul count) so pf omitted for those two players. Three players (Thomas, Hayden, Heffner for New Mexico; Bakke, Brown, Bull, Nanney for Fresno State) had entirely blank rows (apparent DNPs) and were omitted rather than invented. Both teams' player point totals sum exactly to the printed final score (57 and 71) and FG/3FG/FT team totals and total minutes (200/200) reconcile against individually transcribed rows, confirming a high-confidence reading despite some illegible secondary stats (a few assist/turnover/rebound cells left blank)."
+}

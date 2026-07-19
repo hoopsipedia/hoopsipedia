@@ -1,0 +1,40 @@
+{
+  "page": 27,
+  "games": [
+    {
+      "date": "1995-02-28",
+      "opponent": "Virginia Tech Hokies",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 63,
+          "players": [
+            {"name": "Burrough, J.", "min": 38, "fg": "11-17", "tp": "0-0", "ft": "0-3", "reb": 9, "ast": 3, "pf": 4, "to": 1, "stl": 1, "blk": 1, "pts": 22},
+            {"name": "Williford, J.", "min": 38, "fg": "6-9", "tp": "1-2", "ft": "5-5", "reb": 6, "ast": 3, "pf": 4, "to": 3, "stl": 2, "blk": 0, "pts": 18},
+            {"name": "Alexander, Ch.", "min": 23, "fg": "1-1", "tp": "0-0", "ft": "0-0", "reb": 4, "ast": 1, "pf": 1, "to": 1, "stl": 0, "blk": 1, "pts": 2},
+            {"name": "Staples, C.", "min": 36, "fg": "3-10", "tp": "3-7", "ft": "0-0", "reb": 3, "ast": 1, "pf": 3, "to": 3, "stl": 1, "blk": 0, "pts": 9},
+            {"name": "Deane, H.", "min": 40, "fg": "3-11", "tp": "2-8", "ft": "2-3", "reb": 3, "ast": 8, "pf": 3, "to": 5, "stl": 1, "blk": 0, "pts": 10},
+            {"name": "Ellsworth, P.", "min": 2, "pts": 0},
+            {"name": "Barnes, Y.", "min": 14, "fg": "0-1", "reb": 1, "pf": 3, "pts": 0},
+            {"name": "Robinson, J.", "min": 8, "fg": "1-2", "reb": 1, "ast": 2, "to": 2, "pts": 2},
+            {"name": "Nolan, N.", "min": 1, "pts": 0}
+          ]
+        },
+        {
+          "name": "Virginia Tech Hokies",
+          "score": 62,
+          "players": [
+            {"name": "Custis, A.", "min": 38, "fg": "4-9", "tp": "0-0", "ft": "4-6", "reb": 8, "ast": 3, "pf": 3, "to": 1, "stl": 4, "blk": 0, "pts": 12},
+            {"name": "Smith, S.", "min": 32, "fg": "5-12", "tp": "0-0", "ft": "4-9", "reb": 4, "ast": 1, "pf": 3, "to": 4, "stl": 3, "blk": 2, "pts": 14},
+            {"name": "Jackson, T.", "min": 30, "fg": "4-9", "tp": "1-2", "ft": "2-2", "reb": 9, "ast": 0, "pf": 3, "to": 3, "stl": 0, "blk": 1, "pts": 11},
+            {"name": "Good, S.", "min": 40, "fg": "4-10", "tp": "0-0", "ft": "1-2", "reb": 4, "ast": 2, "pf": 3, "to": 2, "stl": 1, "blk": 0, "pts": 9},
+            {"name": "Watlington, D.", "min": 40, "fg": "2-8", "ft": "4-5", "reb": 6, "ast": 4, "pf": 3, "to": 0, "stl": 0, "blk": 0, "pts": 10},
+            {"name": "Jackson, D.", "min": 20, "fg": "2-3", "tp": "0-0", "ft": "2-2", "reb": 2, "ast": 1, "pf": 2, "to": 1, "stl": 1, "blk": 0, "pts": 6}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

@@ -1,0 +1,53 @@
+{
+  "page": 16,
+  "games": [
+    {
+      "date": "1991-01-21",
+      "opponent": "Davidson",
+      "teams": [
+        {
+          "name": "Davidson",
+          "score": 47,
+          "players": [
+            {"name": "Narat, Janko", "min": 16, "fg": "2-6", "tp": "1-3", "ft": "2-2", "reb": 1, "pf": 4, "to": 3, "pts": 7},
+            {"name": "Marsh, James", "min": 27, "fg": "1-3", "ft": "1-2", "reb": 9, "pf": 2, "to": 1, "blk": 1, "stl": 1, "pts": 3},
+            {"name": "Musch, Detlef", "min": 26, "fg": "3-7", "reb": 9, "pf": 3, "to": 2, "pts": 6},
+            {"name": "Denmond, Paul", "min": 25, "fg": "2-11", "tp": "1-3", "reb": 1, "pf": 1, "ast": 2, "to": 2, "pts": 5},
+            {"name": "Zimmerman, Jason", "min": 28, "fg": "3-8", "tp": "0-2", "ft": "2-2", "reb": 2, "pf": 3, "to": 1, "pts": 8},
+            {"name": "Strickland, Darry", "min": 15, "fg": "0-3", "tp": "0-2", "ft": "0-2", "pf": 0, "to": 2, "stl": 1, "pts": 0},
+            {"name": "Holloway, Pat", "min": 30, "fg": "5-10", "tp": "1-2", "ft": "2-2", "reb": 1, "pf": 3, "ast": 4, "to": 3, "stl": 4, "pts": 13},
+            {"name": "Drobnitch, Paul", "min": 13, "pf": 2, "to": 1, "stl": 1, "pts": 0},
+            {"name": "Heuer, J.D.", "min": 9, "fg": "1-1", "pf": 1, "to": 1, "stl": 1, "pts": 2},
+            {"name": "Chapin, Jeff", "min": 10, "fg": "1-5", "tp": "0-1", "reb": 2, "pf": 1, "pts": 2},
+            {"name": "Freeman, Sterling", "min": 1, "ft": "1-2", "reb": 1, "pf": 1, "pts": 1}
+          ],
+          "checksum_ok": true
+        },
+        {
+          "name": "Virginia Cavaliers",
+          "score": 71,
+          "players": [
+            {"name": "Stith, Bryant", "min": 31, "fg": "5-11", "tp": "0-1", "ft": "4-8", "reb": 10, "pf": 1, "to": 2, "stl": 2, "pts": 14},
+            {"name": "Turner, Kenny", "min": 25, "fg": "2-4", "tp": "0-1", "ft": "2-2", "reb": 6, "ast": 1, "blk": 1, "stl": 1, "pts": 6},
+            {"name": "Jeffries, Ted", "min": 22, "fg": "3-5", "ft": "1-2", "reb": 5, "pf": 1, "ast": 1, "to": 2, "blk": 1, "pts": 7},
+            {"name": "Oliver, Anthony", "min": 20, "fg": "8-11", "ft": "0-1", "reb": 3, "pf": 1, "ast": 2, "to": 2, "stl": 3, "pts": 16},
+            {"name": "Crotty, John", "min": 30, "fg": "4-10", "tp": "1-4", "ft": "3-5", "reb": 2, "pf": 1, "ast": 3, "to": 2, "pts": 12},
+            {"name": "Parker, Cornel", "min": 6, "fg": "0-2", "reb": 1, "pf": 2, "pts": 0},
+            {"name": "Blundin, Matt", "min": 25, "fg": "0-1", "ft": "1-4", "reb": 5, "pf": 2, "ast": 1, "pts": 1},
+            {"name": "Johnson, Derrick", "min": 8, "fg": "1-1", "ft": "2-2", "reb": 1, "stl": 2, "pts": 4},
+            {"name": "Katstra, Dirk", "min": 13, "fg": "1-2", "tp": "1-2", "reb": 2, "pf": 3, "pts": 3},
+            {"name": "Kirby, Terry", "min": 6, "fg": "1-4", "pf": 1, "ast": 1, "pts": 2},
+            {"name": "Wilson, Shawn", "min": 4, "fg": "1-1", "reb": 1, "ast": 1, "pts": 2},
+            {"name": "Ford, Blair", "min": 2, "ast": 2, "pts": 0},
+            {"name": "Stewart, Corey", "min": 3, "ft": "2-2", "reb": 1, "pf": 1, "ast": 1, "pts": 2},
+            {"name": "Smith, Doug", "fg": "0-1", "pts": 0},
+            {"name": "Havlicek, Chris", "ft": "2-2", "reb": 1, "pf": 2, "pts": 2}
+          ],
+          "checksum_ok": true
+        }
+      ]
+    }
+  ],
+  "skipped": [],
+  "notes": "Smith/Havlicek rows at bottom of Virginia roster are cramped/overlap with the 'TEAM REBOUNDS' label; MIN not legible for either, and their exact rebound/FT cell placement is inferred to make the team checksum reconcile exactly to 71 (69 from clearly legible players + 2 from these two). All other fields transcribed directly from the printed/handwritten box score. Blank stat cells for a player were omitted (not assumed to be 0) except where a player row was otherwise fully blank (pts recorded as 0)."
+}

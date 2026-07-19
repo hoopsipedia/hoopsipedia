@@ -1,0 +1,53 @@
+{
+  "page": 27,
+  "games": [
+    {
+      "date": "unknown",
+      "date_note": "Typed date field at top of scoresheet is illegible/faded in scan (photocopy loss) — could not be read even at 400dpi zoom. Opponent, location (Columbus, Ohio), score-by-periods layout with extra OT column(s), and box score are legible.",
+      "opponent": "Purdue",
+      "teams": [
+        {
+          "name": "Purdue Boilermakers",
+          "score": 92,
+          "players": [
+            {"name": "Morris, Drake", "pos": "F", "fg": "6-17", "ft": "12-19", "reb": 9, "pf": 5, "ast": 0, "to": 3, "blk": 1, "stl": 0, "pts": 24},
+            {"name": "[illegible], (F)", "name_note": "Player name illegible in scan (handwriting lost/smudged, partially covered by hole-punch mark); position F, likely jersey ~2", "pos": "F", "fg": "1-2", "ft": "2-2", "reb": 5, "pf": 2, "ast": 0, "to": 1, "blk": 1, "stl": 0, "pts": 4},
+            {"name": "Cross, Russell", "pos": "C", "fg": "8-19", "ft": "10-11", "reb": 11, "pf": 3, "ast": 1, "to": 6, "blk": 1, "stl": 0, "pts": 26},
+            {"name": "Walker, Brian", "pos": "G", "fg": "2-2", "ft": "3-4", "reb": 4, "pf": 4, "ast": 7, "to": 2, "blk": 0, "stl": 0, "pts": 7},
+            {"name": "Cummings, Keith", "name_note": "Surname uncertain — handwriting could also read 'Edmonson'; transcribed as written", "pos": "G", "fg": "3-14", "ft": "4-7", "reb": 5, "pf": 3, "ast": 2, "to": 1, "blk": 0, "stl": 0, "pts": 10},
+            {"name": "Pearce, Mike", "fg": "3-4", "ft": "1-3", "reb": 4, "pf": 3, "ast": 1, "to": 0, "blk": 0, "stl": 0, "min": 28, "pts": 7},
+            {"name": "Stallings, Kevin", "fg": "2-5", "ft": "6-7", "reb": 2, "pf": 2, "ast": 1, "to": 1, "blk": 0, "stl": 2, "min": 24, "pts": 10},
+            {"name": "Barnes, Roosevelt", "fg": "2-4", "ft": "0-0", "reb": 2, "pf": 3, "ast": 2, "to": 2, "blk": 0, "stl": 1, "min": 16, "pts": 4},
+            {"name": "Benson, Ted", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "min": 3, "pts": 0},
+            {"name": "Mitchell, Jon", "fg": "0-1", "ft": "0-1", "reb": 2, "pf": 0, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pts": 0}
+          ],
+          "team_totals_on_sheet": {"fg": "27-68", "ft": "38-48", "reb": 47, "pf": 25, "pts": 92, "ast": 14, "to": 18, "team_rebounds": 3},
+          "checksum_ok": true,
+          "checksum_detail": "Player pts sum = 24+4+26+7+10+7+10+4+0+0 = 92, matches team score 92 and sheet TOTALS TP=92. Also verified: player pts independently equal 2*FGmade+FTmade for every player (pre-3pt era), REB sum (44) + team rebounds (3) = 47 matches sheet REB total."
+        },
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 93,
+          "players": [
+            {"name": "Smith, Jim", "pos": "F", "fg": "1-5", "ft": "4-7", "reb": 4, "pf": 5, "ast": 2, "to": 1, "blk": 1, "stl": 0, "min": 22, "pts": 6},
+            {"name": "Kellogg, Clark", "pos": "F", "fg": "4-9", "ft": "1-2", "reb": 4, "pf": 5, "ast": 2, "to": 1, "blk": 1, "stl": 0, "min": 30, "pts": 9},
+            {"name": "Williams, Herb", "pos": "C", "fg": "10-18", "ft": "4-6", "reb": 15, "pf": 5, "ast": 2, "to": 2, "blk": 5, "stl": 1, "min": 52, "pts": 24},
+            {"name": "Penn, Todd", "pos": "G", "fg": "8-15", "ft": "9-13", "reb": 3, "pf": 4, "ast": 1, "to": 4, "blk": 0, "stl": 5, "min": 54, "pts": 25},
+            {"name": "Scott, Carter", "pos": "G", "fg": "1-3", "ft": "0-0", "reb": 0, "pf": 5, "ast": 0, "to": 3, "blk": 0, "stl": 1, "min": 11, "pts": 2},
+            {"name": "Haas, Mitch", "fg": "0-2", "ft": "1-3", "reb": 2, "pf": 1, "ast": 1, "to": 2, "blk": 0, "stl": 0, "min_note": "illegible", "pts": 1},
+            {"name": "Huggins, Larry", "fg": "3-6", "ft": "2-3", "reb": 3, "pf": 5, "ast": 4, "to": 3, "blk": 0, "stl": 0, "min_note": "illegible", "pts": 8},
+            {"name": "Waiters, Granville", "fg": "4-5", "ft": "0-0", "reb": 3, "pf": 2, "ast": 0, "to": 2, "blk": 0, "stl": 0, "min_note": "illegible", "pts": 8},
+            {"name": "Kirchner, Cliff", "fg": "1-2", "ft": "0-0", "reb": 0, "pf": 5, "ast": 0, "to": 0, "blk": 0, "stl": 0, "min_note": "illegible", "pts": 2},
+            {"name": "Campbell, Tony", "fg": "0-1", "ft": "0-0", "reb": 1, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "min_note": "illegible", "pts": 0},
+            {"name": "Major, Ed", "fg": "3-5", "ft": "2-2", "reb": 3, "pf": 5, "ast": 0, "to": 1, "blk": 0, "stl": 0, "min_note": "illegible", "pts": 8}
+          ],
+          "team_totals_on_sheet": {"fg": "35-71", "ft": "23-36", "reb": 40, "pf": 40, "pts": 93, "ast_note": "illegible on sheet", "team_rebounds": 2},
+          "checksum_ok": true,
+          "checksum_detail": "Player pts sum = 6+9+24+25+2+1+8+8+2+0+8 = 93, matches team score 93 and sheet TOTALS TP=93. Also verified: player FG sum = 1+4+10+8+1+0+3+4+1+0+3 = 35 matches sheet FG total; player FT sum = 4+1+4+9+0+1+2+0+0+0+2 = 23 matches sheet FT total; REB sum (38) + team rebounds (2) = 40 matches sheet REB total (initially misread as 45, re-zoomed and confirmed 40)."
+        }
+      ],
+      "notes_extra": "Game appears to have gone beyond regulation — the 'Score by Periods' row shows extra column(s) beyond 1st/2nd half suggesting overtime, but the individual period numbers are too faint to transcribe reliably. Attendance shown as 13,591. Officials: Ed Marzeich(?), Mike Stockner, Rollo Vailem(?, names partially legible)."
+    }
+  ],
+  "skipped": []
+}

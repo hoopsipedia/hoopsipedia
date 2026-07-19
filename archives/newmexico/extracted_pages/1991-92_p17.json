@@ -1,0 +1,9 @@
+{
+  "page": 17,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "New Mexico Lobos vs Hawaii Rainbows, 1992-01-23 at Neal Blaisdell Arena, Honolulu (final NM 55, Hawaii 58). New Mexico Lobos side checks out perfectly (player TP sum = 55 = team score; FG/3PT/FT columns all internally consistent). However Hawaii Rainbows fails checksum: player TP sum = 60 vs team total/final score of 58 (a 2-point discrepancy), while FG made/attempted and 3PT made/attempted columns sum exactly to the team totals (22-50 FG, 6-9 3PT). The error is isolated to the FT/FTA column: individual FT sums to 10-22 vs the team box total of 8-16 (confirmed via the FT% halftime breakdown 1-5 + 7-11 = 8-16). Could not confidently determine which single player row's FT/FTA is misread (Phil Lott's FT 2-7 or Tim Shepherd's FT 2-6 each fit the required -2 made/-6 attempted delta equally well, and both scenarios also imply a corresponding TP misread of 17->15 or 4->2 respectively). Skipped whole game per checksum-failure/no-guessing policy rather than fabricate a resolution."
+    }
+  ]
+}

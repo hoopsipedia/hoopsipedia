@@ -1,0 +1,9 @@
+{
+  "page": 9,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Maui Invitational Game 8, Ohio State (88) at Kentucky (100), 1993-11-22, Lahaina Civic Center — official NCAA box score, typed/printed form with handwritten entries. Page is legible enough to identify the game, final score (Ohio St 43+45=88, Kentucky 53+47=100), and most starters' lines cross-check cleanly against the printed TP column via the 2*FG+3*3FG+FT formula (e.g. Anderson 23, Dudley 8, Wilbourne 10, Ford 27 on a confirmed 13-13 FT night, Delk 27). However, summing all printed player TP values yields 90 for Ohio State (vs. printed final 88) and 104 for Kentucky (vs. printed final 100) — both fail checksum by a non-zero margin. Several bench rows have ambiguous handwritten digits (Ohio State: Skelton, Ratliff; Kentucky: Sheppard, Kiddick, McCarty, Martinez rebound/assist columns) that could not be resolved with confidence in the single allotted read, so per the ruthless-skip rule the full game is being skipped rather than published with a guessed correction."
+    }
+  ]
+}

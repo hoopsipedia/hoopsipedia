@@ -1,0 +1,43 @@
+{
+  "page": 9,
+  "games": [
+    {
+      "date": "1978-12-30",
+      "opponent": "Rutgers",
+      "location": "Madison Square Garden (Holiday Festival)",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 96,
+          "players": [
+            {"name": "Carter Scott", "min": 33, "fg": "5-13", "ft": "2-2", "reb": 8, "ast": 8, "pf": 4, "stl": 2, "pts": 12},
+            {"name": "Jim Smith", "min": 39, "fg": "3-8", "ft": "3-3", "reb": 10, "ast": 0, "pf": 5, "stl": 0, "pts": 9},
+            {"name": "Herb Williams", "min": 55, "fg": "11-23", "ft": "2-4", "reb": 16, "ast": 0, "pf": 4, "stl": 1, "pts": 24},
+            {"name": "Todd Penn", "min": 36, "fg": "3-4", "ft": "2-2", "reb": 4, "ast": 3, "pf": 4, "stl": 2, "pts": 8},
+            {"name": "Kelvin Ransey", "min": 54, "fg": "17-28", "ft": "4-7", "reb": 5, "ast": 4, "pf": 2, "stl": 0, "pts": 38},
+            {"name": "Mike Cline", "min": 26, "fg": "0-2", "ft": "0-0", "reb": 2, "ast": 1, "pf": 3, "stl": 1, "pts": 0},
+            {"name": "Jim Ellinghausen", "min": 16, "fg": "0-4", "ft": "1-2", "reb": 5, "ast": 0, "pf": 3, "stl": 0, "pts": 1},
+            {"name": "Tony Hull", "min": 10, "fg": "2-5", "ft": "0-0", "reb": 2, "ast": 0, "pf": 1, "stl": 0, "pts": 4}
+          ]
+        },
+        {
+          "name": "Rutgers Scarlet Knights",
+          "score": 97,
+          "players": [
+            {"name": "Abdel Anderson", "min": 49, "fg": "7-18", "ft": "2-6", "reb": 8, "ast": 0, "pf": 3, "stl": 3, "pts": 16},
+            {"name": "Kelvin Troy", "min": 48, "fg": "3-8", "ft": "3-6", "reb": 9, "ast": 1, "pf": 3, "stl": 2, "pts": 8},
+            {"name": "James Bailey", "min": 46, "fg": "13-29", "ft": "5-8", "reb": 7, "ast": 1, "pf": 3, "stl": 1, "pts": 31},
+            {"name": "Tom Brown", "min": 32, "fg": "5-8", "ft": "2-2", "reb": 3, "ast": 8, "pf": 3, "stl": 1, "pts": 12},
+            {"name": "David Stith", "min": 29, "fg": "6-12", "ft": "5-6", "reb": 6, "ast": 5, "pf": 2, "stl": 0, "pts": 17},
+            {"name": "Jon McDaniel", "min": 17, "fg": "4-5", "ft": "1-1", "reb": 4, "ast": 0, "pf": 2, "stl": 0, "pts": 9},
+            {"name": "Bill Clarke", "min": 18, "fg": "1-1", "ft": "2-2", "reb": 0, "ast": 4, "pf": 1, "stl": 1, "pts": 4},
+            {"name": "Mark Maddinger", "min": 11, "fg": "0-2", "ft": "0-0", "reb": 2, "ast": 0, "pf": 1, "stl": 0, "pts": 0},
+            {"name": "Marcus Griffin", "min": 7, "fg": "0-1", "ft": "0-0", "reb": 1, "ast": 1, "pf": 1, "stl": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

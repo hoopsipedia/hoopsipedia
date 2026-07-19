@@ -1,0 +1,9 @@
+{
+  "page": 12,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Game 11: North Carolina A&T @ Ohio State, 1994-01-02, St. John Arena (final: NC A&T 58, Ohio State 93). Visitor (North Carolina A&T) box score is fully legible and checksums cleanly (player points sum to 58, matching the final score and team TOTALS line). However the home team (Ohio State) roster rows for several bench players (No. 3 Simpson, No. 15 Skelton, No. 4 Etzler, and No. 42 whose name is illegible/garbled in the scan) have ambiguous, run-together digit columns for rebounds/assists/steals/minutes that could not be confidently segmented even after a second read of the page, and one player's name itself is not legible. Per instructions to never invent values and to be ruthless about skipping rather than guessing, the entire game is skipped rather than submitting a partially fabricated Ohio State box score."
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "page": 32,
+  "games": [
+    {
+      "date": "1999-03-06",
+      "opponent": "Utah Utes",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 45,
+          "players": [
+            {"name": "Lamont Long", "min": 31, "fg": "2-6", "tp": "0-2", "ft": "2-2", "oreb": 1, "dreb": 5, "reb": 6, "pf": 0, "pts": 6, "ast": 1, "to": 0, "blk": 0, "stl": 1},
+            {"name": "Greg Davis", "min": 40, "fg": "1-5", "tp": "0-1", "ft": "0-0", "oreb": 3, "dreb": 4, "reb": 7, "pf": 2, "pts": 2, "ast": 2, "to": 0, "blk": 2, "stl": 1},
+            {"name": "Damion Walker", "min": 34, "fg": "4-14", "tp": "0-1", "ft": "4-7", "oreb": 5, "dreb": 8, "reb": 13, "pf": 1, "pts": 12, "ast": 0, "to": 1, "blk": 0, "stl": 0},
+            {"name": "Kevin Henry", "min": 39, "fg": "4-12", "tp": "1-4", "ft": "4-4", "oreb": 0, "dreb": 2, "reb": 2, "pf": 3, "pts": 13, "ast": 1, "to": 2, "blk": 0, "stl": 0},
+            {"name": "John Robinson", "min": 38, "fg": "2-9", "tp": "2-4", "ft": "2-2", "oreb": 0, "dreb": 2, "reb": 2, "pf": 0, "pts": 8, "ast": 4, "to": 1, "blk": 0, "stl": 0},
+            {"name": "Tim Lightfoot", "min": 12, "fg": "1-2", "tp": "0-0", "ft": "0-1", "oreb": 0, "dreb": 1, "reb": 1, "pf": 0, "pts": 2, "ast": 0, "to": 2, "blk": 0, "stl": 0},
+            {"name": "Roland Hannah", "min": 6, "fg": "1-1", "tp": "0-0", "ft": "0-0", "oreb": 0, "dreb": 0, "reb": 0, "pf": 1, "pts": 2, "ast": 0, "to": 0, "blk": 0, "stl": 0}
+          ],
+          "checksum_ok": true
+        },
+        {
+          "name": "Utah Utes",
+          "score": 60,
+          "players": [
+            {"name": "Hanno Mottola", "min": 33, "fg": "5-12", "tp": "1-2", "ft": "2-2", "oreb": 2, "dreb": 5, "reb": 7, "pf": 2, "pts": 13, "ast": 0, "to": 1, "blk": 0, "stl": 0},
+            {"name": "Alex Jensen", "min": 40, "fg": "7-12", "tp": "2-5", "ft": "2-2", "oreb": 8, "dreb": 3, "reb": 11, "pf": 1, "pts": 18, "ast": 4, "to": 1, "blk": 0, "stl": 1},
+            {"name": "Nate Althoff", "min": 28, "fg": "3-5", "tp": "0-0", "ft": "0-0", "oreb": 1, "dreb": 6, "reb": 7, "pf": 4, "pts": 6, "ast": 1, "to": 0, "blk": 2, "stl": 0},
+            {"name": "Andre Miller", "min": 29, "fg": "6-15", "tp": "0-6", "ft": "0-1", "oreb": 1, "dreb": 4, "reb": 5, "pf": 2, "pts": 12, "ast": 5, "to": 1, "blk": 0, "stl": 1},
+            {"name": "Jeremy Killion", "min": 30, "fg": "1-8", "tp": "1-8", "ft": "0-2", "oreb": 0, "dreb": 2, "reb": 2, "pf": 1, "pts": 3, "ast": 1, "to": 1, "blk": 0, "stl": 0},
+            {"name": "Tony Harvey", "min": 31, "fg": "2-6", "tp": "1-3", "ft": "0-0", "oreb": 0, "dreb": 2, "reb": 2, "pf": 1, "pts": 5, "ast": 5, "to": 1, "blk": 0, "stl": 1},
+            {"name": "Phil Cullen", "min": 9, "fg": "1-2", "tp": "1-2", "ft": "0-0", "oreb": 0, "dreb": 1, "reb": 1, "pf": 1, "pts": 3, "ast": 0, "to": 0, "blk": 0, "stl": 0}
+          ],
+          "checksum_ok": true
+        }
+      ]
+    }
+  ],
+  "skipped": [],
+  "notes": "Typed official WAC Championship box score, single game (New Mexico vs Utah, 03/06/99, Las Vegas, WAC Tournament). 'tp' key here holds 3-point made-attempted (sheet's '3-PT' column) per the source header, NOT points; 'pts' holds the sheet's own points column. Point checksums pass exactly for both teams (NM 45, Utah 60) using the sheet's printed TP/points column. Minor unresolved 1-count discrepancies exist between individual-sum vs team-total for a few secondary attempt/counting columns on the New Mexico side (3PTA sums to 12 vs team 13; FTA sums to 16 vs team 15; TO sums to 6 vs team 7) -- these do not affect the points checksum and are left as read rather than guessed at. Utah Utes line for Jensen (FT corrected from an initial misread of 4-4 to 2-2) and Killion (FT corrected from misread 8-0 to 0-2, 3PT corrected to 1-8) were reconciled against team FT/3PT/rebound/assist/turnover/steal/block/minutes totals, all of which now match exactly."
+}

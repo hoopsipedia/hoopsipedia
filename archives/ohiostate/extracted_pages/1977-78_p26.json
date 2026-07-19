@@ -1,0 +1,9 @@
+{
+  "page": 26,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Handwritten official NCAA box score visible (Minnesota at Ohio State, played in Columbus, Ohio; visible OSU players include Page, J. Smith, Williams, Ramsey, Wine, Ellinghausen, Scott, Penn, Hall, Miller). However the handwriting for numeric columns (FG, FGA, FT, FTA, REB, PF, TP, A, TO, BLK) is too faint/cramped to read digit-by-digit with confidence, and computed player-point sums could not be reliably reconciled to the team final scores shown at the bottom of each column. Skipping rather than guessing values, per ruthless-skip policy."
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "page": 8,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Scanned handwritten official scoresheet for an Ohio State vs. West Virginia game at St. John Arena. Player-level rows and each team's own TOTALS/TP row are internally consistent (top team players sum to 67, matching its TOTALS TP of 67; bottom team, identifiable as Ohio State via Clark Kellogg and Herb Williams, sums to 70, matching its TOTALS TP of 70). However: (1) the date field at the top of the sheet is illegible handwriting/print bleed-through and cannot be transcribed with confidence; (2) several player surnames in the top (opponent) roster are illegible or only partially legible (rows 1, 3, 4, 7, 8 have smudged/cut-off handwriting); (3) the small 'SCORE BY PERIODS' summary box at the bottom of the page appears to show different final totals (approx. 70 for West Virginia and 76 for Ohio State) than the per-table TOTALS rows (67 and 70), an unresolved discrepancy that cannot be reconciled without a second, sharper read. Given the illegible date (a required field) and the conflicting final-score sources, this game is skipped rather than guessed, per instructions to be ruthless about skipping over guessing. Page was read only once, as instructed."
+    }
+  ]
+}

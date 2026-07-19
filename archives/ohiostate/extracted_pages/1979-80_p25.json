@@ -1,0 +1,51 @@
+{
+  "page": 25,
+  "games": [
+    {
+      "date": "1980-02-21",
+      "opponent": "Northwestern Wildcats",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 68,
+          "players": [
+            {"name": "Jim Smith", "min": 31, "fg": "2-5", "ft": "3-4", "reb": 2, "pf": 2, "ast": 1, "to": 2, "pts": 7},
+            {"name": "Clark Kellogg", "min": 35, "fg": "2-6", "ft": "2-2", "reb": 7, "pf": 4, "ast": 6, "to": 6, "blk": 1, "pts": 6},
+            {"name": "Herb Williams", "min": 37, "fg": "7-15", "ft": "4-7", "reb": 9, "pf": 2, "ast": 1, "to": 5, "blk": 1, "pts": 18},
+            {"name": "Kelvin Bausey", "min": 34, "fg": "8-15", "ft": "4-5", "reb": 3, "pf": 3, "ast": 5, "to": 3, "blk": 1, "pts": 20},
+            {"name": "Carter Scott", "min": 30, "fg": "5-11", "ft": "0-0", "reb": 1, "pf": 3, "ast": 3, "to": 4, "pts": 10},
+            {"name": "Larry Huggins", "min": 20, "fg": "2-3", "ft": "2-2", "reb": 0, "pf": 3, "ast": 1, "to": 1, "pts": 6},
+            {"name": "Jim Johnson", "min": 5, "fg": "0-1", "ft": "0-0", "reb": 2, "pf": 1, "pts": 0},
+            {"name": "Marquis Wild", "min": 3, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Todd Kevin", "min": 2, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Nate Lyons", "min": 2, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Granville Waiters", "min": 1, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 1, "pts": 0},
+            {"name": "Cliff Rathbone", "min": 1, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Reese/Mitchell/Johnson (combined, illegible individual names)", "min": null, "fg": "0-0", "ft": "1-2", "reb": 3, "pf": 0, "pts": 1}
+          ]
+        },
+        {
+          "name": "Northwestern Wildcats",
+          "score": 59,
+          "players": [
+            {"name": "Jim Stack", "min": 33, "fg": "5-10", "ft": "0-0", "reb": 4, "pf": 4, "ast": 0, "to": 3, "pts": 10},
+            {"name": "Mike Campbell", "min": 36, "fg": "2-6", "ft": "4-4", "reb": 5, "pf": 3, "ast": 1, "to": 2, "blk": 1, "pts": 8},
+            {"name": "Brian Jung", "min": 16, "fg": "1-5", "ft": "0-0", "reb": 3, "pf": 5, "ast": 1, "to": 0, "pts": 2},
+            {"name": "Rod Roberson", "min": 32, "fg": "6-9", "ft": "3-4", "reb": 3, "pf": 1, "ast": 3, "to": 5, "stl": 2, "pts": 15},
+            {"name": "Brian Gibson", "min": 26, "fg": "4-7", "ft": "0-0", "reb": 3, "pf": 2, "ast": 1, "to": 3, "stl": 3, "pts": 8},
+            {"name": "Jeff Blackard", "min": 2, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "John Egan", "min": 1, "fg": "0-0", "ft": "2-2", "reb": 0, "pf": 0, "pts": 2},
+            {"name": "Mike Jenkins", "min": 17, "fg": "0-4", "ft": "4-8", "reb": 0, "pf": 0, "ast": 3, "to": 4, "pts": 4},
+            {"name": "Bob Grady", "min": 20, "fg": "4-6", "ft": "0-0", "reb": 3, "pf": 3, "ast": 0, "to": 1, "pts": 8},
+            {"name": "Rethel Gaddis", "min": 18, "fg": "0-4", "ft": "2-2", "reb": 0, "pf": 2, "pts": 2},
+            {"name": "Bobby Anderson", "min": 1, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Larry Lumpkins", "min": 1, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 1, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": [],
+  "notes": "Single handwritten NCAA box-score sheet. Date read as 2-21-80. Points computed/cross-checked as pts = 2*fg_made + ft_made where a direct TP column was also present and used to verify; both sources agreed. Ohio State's final row of the roster appears to be a combined/overwritten entry (name illegible, transcribed as 'Reese/Mitchell/Johnson') contributing 1 point (1-2 FT) needed to reach the team total of 68 -- kept to preserve checksum, but the player identity for that line is not reliable. Secondary columns (assists, turnovers, blocks, steals) are handwritten in a cramped block with some overlapping/corrected digits (e.g., Herb Williams' turnover cell has a strikethrough); these were transcribed only where reasonably legible and omitted otherwise rather than guessed. Both teams' player point totals sum exactly to their final scores (OSU 68, Northwestern 59), matching the final score line (OSU 30+38=68, Northwestern 27+32=59) and the TOTALS row on the sheet."
+}

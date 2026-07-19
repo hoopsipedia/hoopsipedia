@@ -1,0 +1,9 @@
+{
+  "page": 3,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page 3 is a typed official box score: Ohio State vs. Chicago State, November 30, 1991, St. John Arena. Chicago State (visitor) roster was fully legible and checksummed perfectly (sum of player TP = 44 = final score 44; each individual player's TP also matched 2*(FG-3FG)+3*3FG+FT). However, several Ohio State (home) bench-player rows (HALL, BRANDEWIE, DAVIS, RATLIFF, DUDLEY, ETZLER) have column counts that do not cleanly align to the 16-field header (FG FGA 3FG 3FGA FT FTA OFF DEF TOT PF TP AS TO BK ST MIN) -- some rows appear to be missing a digit or have an internally inconsistent FT/FTA pair, making individual player point totals unverifiable with confidence. Team-level totals for Ohio State do checksum correctly (46 FG - 8 3FG = 38 two-pointers; 2*38 + 3*8 + 16 FT = 116 = final score 116), but per-player breakdown for the ambiguous rows could not be confirmed without guessing, so per instructions the whole game is skipped rather than submitting a partially invented roster."
+    }
+  ]
+}

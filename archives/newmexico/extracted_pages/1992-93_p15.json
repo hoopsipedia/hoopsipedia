@@ -1,0 +1,45 @@
+{
+  "page": 15,
+  "games": [
+    {
+      "date": "1993-01-21",
+      "opponent": "Colorado State Rams",
+      "site": "Albuquerque, NM",
+      "note": "New Mexico lost in one overtime period, 67-65",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 65,
+          "players": [
+            {"name": "Steve Logan", "min": 43, "fg": "7-11", "tp": "2-4", "ft": "2-2", "reb": 2, "ast": 5, "pf": 2, "to": 1, "stl": 3, "blk": 0, "pts": 18},
+            {"name": "Ike Williams", "min": 40, "fg": "6-16", "tp": "3-8", "ft": "1-1", "reb": 5, "ast": 3, "pf": 2, "to": 2, "stl": 3, "blk": 0, "pts": 16},
+            {"name": "Greg Brown", "min": 35, "fg": "7-11", "tp": "4-9", "ft": "3-3", "reb": 4, "ast": 1, "pf": 2, "to": 2, "stl": 0, "blk": 0, "pts": 19},
+            {"name": "Corey Jenkins", "min": 16, "fg": "1-6", "tp": "0-2", "ft": "2-2", "reb": 2, "ast": 2, "pf": 1, "to": 0, "stl": 1, "blk": 0, "pts": 4},
+            {"name": "Lewis La Mar", "min": 24, "fg": "2-3", "ft": "0-0", "reb": 3, "ast": 0, "pf": 2, "to": 4, "stl": 0, "blk": 2, "pts": 4},
+            {"name": "Canonchet Neves", "min": 3, "fg": "0-1", "tp": "0-1", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Khari Jaxon", "min": 41, "fg": "2-5", "ft": "0-4", "reb": 6, "ast": 1, "pf": 5, "to": 3, "stl": 2, "blk": 3, "pts": 4},
+            {"name": "Trent Heffner", "min": 23, "fg": "0-0", "ft": "0-1", "reb": 4, "ast": 1, "pf": 1, "to": 2, "stl": 1, "blk": 0, "pts": 0}
+          ],
+          "checksum_ok": true
+        },
+        {
+          "name": "Colorado State Rams",
+          "score": 67,
+          "players": [
+            {"name": "Keith Bonds", "min": 38, "fg": "5-9", "tp": "3-4", "ft": "2-2", "reb": 3, "ast": 2, "pf": 0, "to": 1, "stl": 1, "blk": 0, "pts": 15},
+            {"name": "Bobby Sellers", "min": 6, "fg": "0-0", "ft": "0-2", "reb": 0, "ast": 0, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Damon Crawford", "min": 30, "fg": "2-4", "ft": "2-2", "reb": 7, "ast": 1, "pf": 4, "to": 0, "stl": 1, "blk": 1, "pts": 6},
+            {"name": "Dwayne Molyneaux", "min": 15, "fg": "2-4", "ft": "1-2", "reb": 4, "ast": 1, "pf": 0, "to": 1, "stl": 1, "blk": 0, "pts": 5},
+            {"name": "Ryan Yoder", "min": 39, "fg": "5-9", "tp": "1-2", "ft": "4-4", "reb": 1, "ast": 7, "pf": 2, "to": 5, "stl": 4, "blk": 0, "pts": 15},
+            {"name": "Doug Larson", "min": 41, "fg": "9-16", "ft": "1-2", "reb": 9, "ast": 1, "pf": 1, "to": 5, "stl": 0, "blk": 1, "pts": 19},
+            {"name": "Tyson Maroney", "min": 7, "fg": "0-1", "ft": "0-0", "reb": 1, "ast": 1, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Aaron Atkinson", "min": 37, "fg": "1-8", "ft": "5-6", "reb": 6, "ast": 0, "pf": 4, "to": 2, "stl": 1, "blk": 0, "pts": 7},
+            {"name": "Joe Vogel", "min": 12, "fg": "0-2", "ft": "0-0", "reb": 2, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 2, "pts": 0}
+          ],
+          "checksum_ok": true
+        }
+      ]
+    }
+  ],
+  "skipped": []
+}

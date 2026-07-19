@@ -1,0 +1,9 @@
+{
+  "page": 31,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page 31 is a single clean typed NCAA Tournament box score: North Carolina @ Ohio State, March 27, 1992, Southeast Regional Semifinal, Rupp Arena, Lexington KY (final: Ohio State 80, North Carolina 73). North Carolina's 10-player line is fully legible and checksums exactly to their team total (8+9+21+21+6+4+2+2+0+0 = 73). However, Ohio State's player rows have tightly spaced/misaligned numeric columns in the scan (e.g. Lawrence Funderburke's row does not cleanly resolve to 16 fields where OR+DR=REB and 2*(FG-3FG)+3*3FG+FT=TP; several other OSU rows show similar ambiguity), and this could not be resolved confidently even after the one permitted re-read of the page. Per instructions to avoid inventing digit values, the whole game (both teams required) is skipped rather than guessing at Ohio State's individual stat lines."
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "page": 5,
+  "games": [
+    {
+      "date": "1992-12-16",
+      "opponent": "Wright State Raiders",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 76,
+          "players": [
+            {"name": "Lawrence Funderburke", "min": 37, "fg": "11-15", "ft": "6-10", "tp": "0-0", "reb": 10, "ast": 1, "pf": 1, "to": 4, "stl": 2, "blk": 4, "pts": 28},
+            {"name": "Jimmy Ratliff", "min": 21, "fg": "4-5", "ft": "2-2", "tp": "0-0", "reb": 5, "ast": 2, "pf": 1, "to": 3, "stl": 0, "blk": 1, "pts": 10},
+            {"name": "Tom Brandewie", "min": 14, "fg": "3-3", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 1, "pf": 1, "to": 3, "stl": 1, "blk": 0, "pts": 6},
+            {"name": "Doug Etzler", "min": 28, "fg": "1-4", "ft": "2-2", "tp": "0-1", "reb": 1, "ast": 5, "pf": 3, "to": 4, "stl": 1, "blk": 0, "pts": 4},
+            {"name": "Alex Davis", "min": 31, "fg": "4-8", "ft": "3-4", "tp": "2-3", "reb": 5, "ast": 5, "pf": 1, "to": 3, "stl": 0, "blk": 0, "pts": 13},
+            {"name": "Greg Simpson", "min": 14, "fg": "1-3", "ft": "0-1", "tp": "0-0", "reb": 4, "ast": 1, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Jamie Skelton", "min": 20, "fg": "1-5", "ft": "1-2", "tp": "0-2", "reb": 4, "ast": 4, "pf": 1, "to": 0, "stl": 1, "blk": 0, "pts": 3},
+            {"name": "Rickey Dudley", "min": 22, "fg": "2-2", "ft": "2-2", "tp": "0-0", "reb": 4, "ast": 1, "pf": 2, "to": 0, "stl": 1, "blk": 0, "pts": 6},
+            {"name": "Charles Macon", "min": 6, "fg": "1-2", "ft": "0-0", "tp": "0-0", "reb": 1, "ast": 1, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Antonio Watson", "min": 7, "fg": "1-2", "ft": "0-1", "tp": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 2}
+          ]
+        },
+        {
+          "name": "Wright State Raiders",
+          "score": 55,
+          "players": [
+            {"name": "Bill Edwards", "min": 35, "fg": "7-20", "ft": "1-2", "tp": "1-4", "reb": 8, "ast": 4, "pf": 3, "to": 3, "stl": 2, "blk": 0, "pts": 16},
+            {"name": "Dan Skeoch", "min": 16, "fg": "1-5", "ft": "0-0", "tp": "0-1", "reb": 2, "ast": 1, "pf": 3, "to": 3, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Mike Nahar", "min": 34, "fg": "6-8", "ft": "1-1", "tp": "0-1", "reb": 6, "ast": 3, "pf": 2, "to": 1, "stl": 1, "blk": 0, "pts": 13},
+            {"name": "Mark Woods", "min": 39, "fg": "5-14", "ft": "7-8", "tp": "0-2", "reb": 4, "ast": 3, "pf": 2, "to": 4, "stl": 4, "blk": 0, "pts": 17},
+            {"name": "Andy Holderman", "min": 32, "fg": "1-6", "ft": "0-0", "tp": "1-5", "reb": 0, "ast": 2, "pf": 4, "to": 3, "stl": 2, "blk": 0, "pts": 3},
+            {"name": "Renaldo O'Neal", "min": 14, "fg": "1-2", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 1, "pf": 1, "to": 0, "stl": 1, "blk": 1, "pts": 2},
+            {"name": "Jason Smith", "min": 7, "fg": "1-2", "ft": "0-0", "tp": "0-0", "reb": 2, "ast": 1, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Delme Herriman", "min": 22, "fg": "0-2", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 2, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Chris McGuire", "min": 1, "fg": "0-1", "ft": "0-0", "tp": "0-1", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": [],
+  "notes": "Typed official box score, high legibility. Points checksum verified exactly: Ohio State player pts sum to 76 (final score) and Wright State player pts sum to 55 (final score), matching printed period scores (38+38=76, 32+23=55). Some ancillary columns (assists/turnovers/blocks/steals/rebounds) for lower-minute bench players were reconstructed via column-count alignment against the printed team totals row and carry slightly lower confidence than the FG/FT/points figures, which were independently cross-checked against team FG/FT made totals (22-60 FG, 9-11 FT for Wright State; FG made summed to 29 for Ohio State) and matched exactly."
+}

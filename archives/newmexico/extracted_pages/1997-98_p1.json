@@ -1,0 +1,46 @@
+{
+  "page": 1,
+  "games": [
+    {
+      "date": "1997-11-11",
+      "opponent": "Southern Cal",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 98,
+          "players": [
+            {"name": "Lamont Long", "fg": "11-21", "tp": "4-5", "ft": "5-5", "reb": 1, "pf": 3, "pts": 31},
+            {"name": "Kenny Thomas", "fg": "6-9", "tp": "2-2", "ft": "3-3", "reb": 11, "pf": 4, "pts": 17},
+            {"name": "Greg Davis", "fg": "0-3", "tp": "0-0", "ft": "0-0", "reb": 5, "pf": 1, "pts": 0},
+            {"name": "Tom Starkey", "fg": "0-2", "tp": "0-1", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Kevin Henry", "fg": "2-5", "tp": "2-4", "ft": "1-3", "reb": 2, "pf": 2, "pts": 7},
+            {"name": "Marcos White", "fg": "0-0", "tp": "0-0", "ft": "1-2", "reb": 0, "pf": 0, "pts": 1},
+            {"name": "Clayton Shields", "fg": "5-11", "tp": "1-5", "ft": "3-5", "reb": 6, "pf": 2, "pts": 14},
+            {"name": "Royce Olney", "fg": "6-9", "tp": "3-5", "ft": "4-5", "reb": 2, "pf": 2, "pts": 19},
+            {"name": "David Gibson", "fg": "3-5", "tp": "1-2", "ft": "0-1", "reb": 6, "pf": 3, "pts": 7},
+            {"name": "Ryan Noce", "fg": "0-0", "tp": "0-0", "ft": "0-1", "reb": 1, "pf": 0, "pts": 0},
+            {"name": "Ben Baum", "fg": "0-1", "tp": "0-0", "ft": "2-2", "reb": 2, "pf": 2, "pts": 2}
+          ]
+        },
+        {
+          "name": "Southern Cal Trojans",
+          "score": 76,
+          "players": [
+            {"name": "Gary Williams", "fg": "3-8", "tp": "0-1", "ft": "1-1", "reb": 2, "pf": 2, "pts": 7},
+            {"name": "Kevin Augustine", "fg": "2-5", "tp": "1-2", "ft": "0-0", "reb": 1, "pf": 0, "pts": 5},
+            {"name": "Jeff Trepagnier", "fg": "4-6", "tp": "1-1", "ft": "0-0", "reb": 3, "pf": 0, "pts": 9},
+            {"name": "Adam Spanich", "fg": "4-8", "tp": "2-3", "ft": "0-0", "reb": 1, "pf": 4, "pts": 10},
+            {"name": "Elias Ayuso", "fg": "1-5", "tp": "0-2", "ft": "4-5", "reb": 0, "pf": 4, "pts": 6},
+            {"name": "Jarvis Turner", "fg": "7-12", "tp": "0-0", "ft": "4-4", "reb": 5, "pf": 4, "pts": 18},
+            {"name": "Shannon Swillis", "fg": "1-3", "tp": "0-1", "ft": "3-5", "reb": 4, "pf": 2, "pts": 5},
+            {"name": "Ken Sims", "fg": "3-4", "tp": "2-3", "ft": "0-0", "reb": 5, "pf": 2, "pts": 8},
+            {"name": "Gary Johnson", "fg": "0-2", "tp": "0-0", "ft": "0-0", "reb": 2, "pf": 0, "pts": 0},
+            {"name": "Greg Lakey", "fg": "4-8", "tp": "0-1", "ft": "0-0", "reb": 3, "pf": 2, "pts": 8}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

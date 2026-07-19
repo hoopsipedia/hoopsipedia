@@ -1,0 +1,9 @@
+{
+  "page": 13,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Ohio State vs Iowa, January 19, 1992 (St. John Arena, Columbus) — typed official box score, mostly legible. Iowa's side reconciled perfectly on careful re-read (player points sum to 81, matching Iowa's final score of 81, and FG/FT/3FG column sums also matched Iowa's printed team totals exactly). However, Ohio State's side did not reconcile: summing the printed per-player TP (points) values for Jent(16), Funderburke(12), Robinson(4), Daher(16), Jackson(21), Brown(9), Brandewie(2), Skelton(6), Davis(0), Dudley(0) gives 86, but Ohio State's final score (and printed team TOTALS row) is 85 — off by one. Several bench-player rows (Robinson, Jackson, Brandewie) have a rebounds-TOTAL column digit that appears faint/merged in the scan, forcing reconstructions that could not be fully cross-verified against the team FG/FT column totals either (individual FG sum came to 32 vs team-printed 34; individual FT sum came to 18 vs team-printed 14), indicating at least one bench player's FG-FT-TP line is misread. Used the one allowed re-read already; could not resolve the remaining ambiguity with confidence, so per instructions to be ruthless rather than guess, the whole game is skipped rather than publishing a team box score with a wrong point total."
+    }
+  ]
+}

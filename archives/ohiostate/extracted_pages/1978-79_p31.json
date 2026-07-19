@@ -1,0 +1,9 @@
+{
+  "page": 31,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Handwritten official scoresheet (Ohio State vs. Alabama at Madison Square Garden) is heavily degraded: the date is illegible (appears to read '...21, 197?' but the year digit cannot be confidently distinguished, and the sheet predates/postdates ambiguity risks misfiling the game), several player name fields are smudged/ambiguous (e.g. rows for Ohio State's 4th and 5th players could read 'Mike Cline' or similar, 'Jim Fillinghausen'/'Fillinghaugen', 'Cliff Kirchner' or similar - none confidently legible), and the rebound/assist/foul/steal/blocked-shot sub-columns are cramped and faint enough that individual player values cannot be read with confidence. Team-level FGM/FTM totals and Ohio State's computed point total (2*FGM+FTM = 86) are legible and internally consistent, but with player names and date unconfirmed, transcribing a full per-player box score risked inventing/mis-assigning values rather than reading them, so the game was skipped per instructions to be ruthless about skipping over guessing."
+    }
+  ]
+}
