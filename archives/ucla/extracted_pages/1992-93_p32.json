@@ -1,0 +1,45 @@
+{
+  "page": 32,
+  "games": [
+    {
+      "date": "1993-03-19",
+      "opponent": "Iowa State",
+      "ucla_score": 81,
+      "opp_score": 70,
+      "notes": "NCAA West Regional First Round, McKale Center, Tucson, AZ. UCLA (9 seed) vs Iowa State (8 seed).",
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 81,
+          "players": [
+            {"name": "Mitchell Butler", "min": 37, "fg": "6-8", "ft": "2-2", "tp": "0-0", "reb": 5, "ast": 2, "pf": 4, "to": 4, "stl": 2, "blk": 0, "pts": 14},
+            {"name": "Ed O'Bannon", "min": 37, "fg": "9-10", "ft": "0-0", "tp": "2-2", "reb": 13, "ast": 1, "pf": 2, "to": 4, "stl": 0, "blk": 3, "pts": 20},
+            {"name": "Richard Petruska", "min": 33, "fg": "6-12", "ft": "2-2", "tp": "0-0", "reb": 7, "ast": 5, "pf": 1, "to": 3, "stl": 1, "blk": 1, "pts": 14},
+            {"name": "Tyus Edney", "min": 35, "fg": "6-13", "ft": "6-6", "tp": "1-2", "reb": 5, "ast": 6, "pf": 3, "to": 3, "stl": 1, "blk": 0, "pts": 19},
+            {"name": "Shon Tarver", "min": 36, "fg": "5-10", "ft": "1-2", "tp": "0-1", "reb": 2, "ast": 2, "pf": 1, "to": 5, "stl": 1, "blk": 0, "pts": 11},
+            {"name": "Kevin Dempsey", "min": 13, "fg": "1-4", "ft": "1-2", "tp": "0-1", "reb": 1, "ast": 0, "pf": 3, "to": 0, "stl": 0, "blk": 0, "pts": 3},
+            {"name": "Rodney Zimmerman", "min": 9, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 1, "ast": 1, "pf": 1, "to": 2, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Iowa State Cyclones",
+          "score": 70,
+          "players": [
+            {"name": "Fred Hoiberg", "min": 36, "fg": "4-7", "ft": "2-2", "tp": "1-3", "reb": 5, "ast": 2, "pf": 3, "to": 1, "stl": 1, "blk": 0, "pts": 11},
+            {"name": "Howard Eaton", "min": 16, "fg": "2-3", "ft": "2-2", "tp": "0-0", "reb": 0, "ast": 1, "pf": 0, "to": 1, "stl": 1, "blk": 2, "pts": 6},
+            {"name": "Loren Meyer", "min": 28, "fg": "0-8", "ft": "6-6", "tp": "0-0", "reb": 5, "ast": 2, "pf": 1, "to": 2, "stl": 1, "blk": 0, "pts": 6},
+            {"name": "Ron Bayless", "min": 38, "fg": "4-10", "ft": "9-10", "tp": "2-6", "reb": 3, "ast": 6, "pf": 3, "to": 3, "stl": 1, "blk": 0, "pts": 19},
+            {"name": "Justus Thigpen", "min": 37, "fg": "9-20", "ft": "0-0", "tp": "2-7", "reb": 3, "ast": 3, "pf": 3, "to": 2, "stl": 1, "blk": 0, "pts": 20},
+            {"name": "Julius Michalak", "min": 21, "fg": "1-6", "ft": "0-0", "tp": "0-0", "reb": 1, "ast": 0, "pf": 3, "to": 1, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Morgan Wheat", "min": 21, "fg": "2-5", "ft": "1-2", "tp": "1-1", "reb": 6, "ast": 0, "pf": 2, "to": 1, "stl": 4, "blk": 0, "pts": 6},
+            {"name": "Hurl Beechum", "min": 1, "fg": "0-1", "ft": "0-0", "tp": "0-1", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 1, "blk": 0, "pts": 0},
+            {"name": "Donnell Bivens", "min": 1, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Fred Brown", "min": 1, "fg": "0-1", "ft": "0-0", "tp": "0-1", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

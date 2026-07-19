@@ -1,0 +1,42 @@
+{
+  "page": 1,
+  "games": [
+    {
+      "date": "1928-12-08",
+      "opponent": "Ohio Wesleyan",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 21,
+          "players": [
+            {"name": "Ervin, H.A.", "min": "38:26", "pf": 0, "pts": 2},
+            {"name": "Stull, T.E.", "min": "1:34", "pf": 0, "pts": 0},
+            {"name": "Shuler, F.A.", "min": "26:19", "pf": 0, "pts": 2},
+            {"name": "Evans, J.G.", "min": "13:01", "pf": 1, "pts": 4},
+            {"name": "Van Heyde, G.", "min": "21:58", "pf": 0, "pts": 2},
+            {"name": "Helfrich, W.T.", "min": "5:22", "pf": 0, "pts": 0},
+            {"name": "Fesler, W.E.", "min": "28:15", "pf": 2, "pts": 2},
+            {"name": "Larkins, Richard", "min": "11:45", "pf": 2, "pts": 0},
+            {"name": "Hinchman, Wm.", "min": "16:17", "pf": 4, "pts": 0},
+            {"name": "Holman, A.", "min": "24:55", "pf": 0, "pts": 7},
+            {"name": "Cox, Joe", "min": "12:58", "pf": 0, "pts": 2}
+          ]
+        },
+        {
+          "name": "Ohio Wesleyan",
+          "score": 36,
+          "players": [
+            {"name": "Hnizder", "pf": 0, "pts": 11},
+            {"name": "Magloy", "pf": 0, "pts": 12},
+            {"name": "Siegenthaller", "pf": 0, "pts": 6},
+            {"name": "Mitchell", "pf": 1, "pts": 0},
+            {"name": "Halliday", "pf": 1, "pts": 2},
+            {"name": "Thomas", "pf": 1, "pts": 5}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

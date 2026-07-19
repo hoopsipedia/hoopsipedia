@@ -1,0 +1,41 @@
+{
+  "page": 14,
+  "games": [
+    {
+      "date": "1966-01-29",
+      "opponent": "New Mexico State",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 81,
+          "players": [
+            {"name": "Hoover", "ft": "8-8", "pf": 1, "pts": 14},
+            {"name": "Patterson", "ft": "8-11", "pf": 3, "pts": 26},
+            {"name": "Rose", "ft": "4-5", "pf": 4, "pts": 10},
+            {"name": "Johnston", "ft": "3-3", "pf": 4, "pts": 7},
+            {"name": "Morgan", "ft": "1-1", "pf": 5, "pts": 9},
+            {"name": "Howard", "ft": "4-5", "pf": 5, "pts": 6},
+            {"name": "Monroe", "ft": "3-7", "pf": 5, "pts": 9}
+          ]
+        },
+        {
+          "name": "New Mexico State Aggies",
+          "score": 69,
+          "players": [
+            {"name": "Raybal", "ft": "1-2", "pf": 0, "pts": 1},
+            {"name": "M. Dabich", "ft": "3-4", "pf": 5, "pts": 19},
+            {"name": "Davis", "ft": "8-9", "pf": 5, "pts": 18},
+            {"name": "Gambill", "ft": "4-7", "pf": 5, "pts": 8},
+            {"name": "Williams", "ft": "6-6", "pf": 2, "pts": 8},
+            {"name": "Higgins", "ft": "1-4", "pf": 0, "pts": 9},
+            {"name": "Noble", "ft": "1-2", "pf": 5, "pts": 1},
+            {"name": "Morehead", "ft": "3-6", "pf": 5, "pts": 5}
+          ]
+        }
+      ],
+      "checksum_ok": true,
+      "notes": "Official NCAA box score, typed form with handwritten entries. FGA (field goals attempted) column left blank on the sheet, so per-player 'fg' field was omitted rather than invented (FG made values were legible: UNM 3,9,3,2,4,1,3 = team total 25; NMSU 0,8,5,2,1,4,0,1 = team total 21, both match sheet TOTALS row). TP column gave points directly, no computation needed. Handwritten note on NMSU side: 'NMSU finished game with 4 players.' Site: Las Cruces HS."
+    }
+  ],
+  "skipped": []
+}

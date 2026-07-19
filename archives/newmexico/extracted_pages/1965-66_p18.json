@@ -1,0 +1,9 @@
+{
+  "page": 18,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page 18 contains two official scorer's sheets (New Mexico vs. Texas Western, played at Albuquerque, 1965-66 season per handwritten '65-66' notation). Team final scores are legible (New Mexico 64, Texas Western 67) but individual player statistics are recorded as handwritten tally marks/check marks/circles in the FIRST HALF and SECOND HALF FG/FT columns rather than clear digits, and the per-player SUMMARY columns (FGA, FG, FTA, FT, REB, AST, PF, TP) are ambiguous or blank for most rows on the New Mexico sheet, with only the team totals row fully legible. The Texas Western sheet has some SUMMARY digits but the column order/alignment could not be confirmed with confidence (test reconstructions of FG/FT against TP did not consistently satisfy pts = 2*FG + FT for multiple players). The exact game date is also not confidently legible in the DATE field. Given the risk of transcribing incorrect player-level stats and failing the required checksum, this game was skipped rather than guessed at values."
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "page": 23,
+  "games": [
+    {
+      "date": "1985-02-21",
+      "opponent": "California",
+      "ucla_score": 53,
+      "opp_score": 48,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 53,
+          "players": [
+            {"name": "Reggie Miller", "min": "36", "fg": "4-8", "ft": "5-7", "reb": 2, "ast": 2, "pf": 2, "to": 0, "blk": 0, "stl": 1, "pts": 13},
+            {"name": "Craig Jackson", "min": "23.5", "fg": "0-2", "ft": "2-3", "reb": 3, "ast": 0, "pf": 0, "to": 1, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Brad Wright", "min": "30", "fg": "4-5", "ft": "1-1", "reb": 4, "ast": 1, "pf": 4, "to": 0, "blk": 0, "stl": 0, "pts": 9},
+            {"name": "Montel Hatcher", "min": "18", "fg": "4-7", "ft": "0-0", "reb": 1, "ast": 0, "pf": 1, "to": 2, "blk": 0, "stl": 1, "pts": 8},
+            {"name": "Nigel Miguel", "min": "31", "fg": "2-8", "ft": "2-3", "reb": 6, "ast": 4, "pf": 2, "to": 1, "blk": 0, "stl": 0, "pts": 6},
+            {"name": "Gary Maloncon", "min": "24.5", "fg": "2-8", "ft": "0-0", "reb": 4, "ast": 0, "pf": 2, "to": 1, "blk": 3, "stl": 0, "pts": 4},
+            {"name": "Corey Gaines", "min": "23.5", "fg": "2-3", "ft": "3-3", "reb": 1, "ast": 1, "pf": 3, "to": 1, "blk": 0, "stl": 0, "pts": 7},
+            {"name": "Dave Immel", "min": "12", "fg": "2-4", "ft": "0-0", "reb": 1, "ast": 4, "pf": 3, "to": 0, "blk": 0, "stl": 0, "pts": 4},
+            {"name": "Jack Haley", "min": "1.5", "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 1, "pf": 1, "to": 0, "blk": 0, "stl": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "California Golden Bears",
+          "score": 48,
+          "players": [
+            {"name": "Jeff Thilgen", "min": "35.5", "fg": "2-3", "ft": "0-2", "reb": 2, "ast": 6, "pf": 3, "to": 0, "blk": 0, "stl": 1, "pts": 4},
+            {"name": "Jim Beatie", "min": "25.5", "fg": "3-5", "ft": "0-0", "reb": 2, "ast": 0, "pf": 1, "to": 1, "blk": 0, "stl": 2, "pts": 6},
+            {"name": "Leonard Taylor", "min": "40", "fg": "2-6", "ft": "4-5", "reb": 6, "ast": 0, "pf": 4, "to": 2, "blk": 1, "stl": 1, "pts": 8},
+            {"name": "Kevin Johnson", "min": "39.5", "fg": "3-11", "ft": "4-8", "reb": 7, "ast": 4, "pf": 4, "to": 2, "blk": 0, "stl": 1, "pts": 10},
+            {"name": "Chris Washington", "min": "34", "fg": "4-10", "ft": "7-8", "reb": 2, "ast": 3, "pf": 3, "to": 3, "blk": 0, "stl": 1, "pts": 15},
+            {"name": "Earnie Sears", "min": "6.5", "fg": "0-1", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Eddie Javius", "min": "14.5", "fg": "2-2", "ft": "1-1", "reb": 4, "ast": 1, "pf": 4, "to": 1, "blk": 0, "stl": 0, "pts": 5},
+            {"name": "Jeff Huling", "min": "4", "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Richard Chang", "min": "4", "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

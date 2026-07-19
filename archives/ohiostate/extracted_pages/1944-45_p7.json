@@ -1,0 +1,43 @@
+{
+  "page": 7,
+  "games": [
+    {
+      "date": "1945-01-03",
+      "opponent": "Wyoming",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 44,
+          "players": [
+            {"name": "Grate", "pts": 16},
+            {"name": "Dugger", "pts": 7},
+            {"name": "Caudill", "pts": 0},
+            {"name": "Pfeiffer", "pts": 5},
+            {"name": "Risen", "pts": 7},
+            {"name": "Huston", "pts": 3},
+            {"name": "Sims", "pts": 0},
+            {"name": "Davis", "pts": 0},
+            {"name": "Amling", "pts": 3},
+            {"name": "Jacobs", "pts": 3}
+          ]
+        },
+        {
+          "name": "Wyoming",
+          "score": 36,
+          "players": [
+            {"name": "Eliopulos", "pts": 1},
+            {"name": "Copellan", "pts": 4},
+            {"name": "Porter", "pts": 3},
+            {"name": "Nostrand", "pts": 20},
+            {"name": "Herron", "pts": 0},
+            {"name": "Brown", "pts": 7},
+            {"name": "Rogers", "pts": 1},
+            {"name": "Baer", "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

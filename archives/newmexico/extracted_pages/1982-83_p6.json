@@ -1,0 +1,9 @@
+{
+  "page": 6,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Official NCAA box score, apparently dated Dec. 18, 1982 at Dee Events Center, Ogden, Utah: New Mexico Lobos (visitors) at Weber State Wildcats. Weber State's side is fully legible and checksums cleanly (player TP sum 7+13+8+6+9+6+2+1+0=52 matches team total 52 and final score 52). However New Mexico's (visitors) player names are obscured by white redaction/correction blobs and most of their FG/FGA/FT/FTA/REB/PF/TP stat cells are illegible or blank across nearly all rows -- only the MIN column (24,29,28,35,30,31,...,12) and a stray FGA value of 9 are readable, and the team TP total is ambiguous (appears as ~40 in the totals row but the final score line shows New Mexico scored 48, a mismatch that cannot be resolved from the scan). Since a complete game entry requires both teams' player lines and New Mexico's cannot be transcribed confidently or checksummed, the entire game is skipped per the ruthless-skip instruction rather than guessing or fabricating New Mexico's stat lines."
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "page": 10,
+  "games": [
+    {
+      "date": "1994-01-13",
+      "opponent": "Washington State",
+      "ucla_score": 81,
+      "opp_score": 79,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 81,
+          "players": [
+            {"name": "Ed O'Bannon", "min": 38, "fg": "6-13", "tp": "0-1", "ft": "6-10", "reb": 9, "ast": 1, "pf": 3, "to": 0, "stl": 0, "blk": 0, "pts": 18},
+            {"name": "Charles O'Bannon", "min": 30, "fg": "6-14", "tp": "1-3", "ft": "1-2", "reb": 9, "ast": 0, "pf": 4, "to": 6, "stl": 3, "blk": 0, "pts": 14},
+            {"name": "Jiri Zidek", "min": 18, "fg": "5-8", "tp": "0-0", "ft": "6-7", "reb": 7, "ast": 0, "pf": 4, "to": 2, "stl": 0, "blk": 0, "pts": 16},
+            {"name": "Shon Tarver", "min": 37, "fg": "4-13", "tp": "1-4", "ft": "3-6", "reb": 4, "ast": 2, "pf": 1, "to": 1, "stl": 1, "blk": 1, "pts": 12},
+            {"name": "Tyus Edney", "min": 36, "fg": "4-11", "tp": "0-1", "ft": "4-5", "reb": 3, "ast": 4, "pf": 0, "to": 1, "stl": 2, "blk": 1, "pts": 12},
+            {"name": "Marquis Burns", "min": 7, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Cameron Dollar", "min": 4, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 2, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Rodney Zimmerman", "min": 22, "fg": "3-3", "tp": "0-0", "ft": "3-6", "reb": 5, "ast": 0, "pf": 2, "to": 1, "stl": 0, "blk": 0, "pts": 9},
+            {"name": "Kevin Dempsey", "min": 8, "fg": "0-1", "tp": "0-1", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Washington State",
+          "score": 79,
+          "players": [
+            {"name": "Mark Hendrickson", "min": 30, "fg": "7-12", "tp": "0-2", "ft": "1-5", "reb": 5, "ast": 2, "pf": 5, "to": 1, "stl": 1, "blk": 0, "pts": 15},
+            {"name": "Fred Ferguson", "min": 23, "fg": "4-8", "tp": "0-0", "ft": "2-2", "reb": 8, "ast": 0, "pf": 4, "to": 0, "stl": 1, "blk": 0, "pts": 10},
+            {"name": "Tony Harris", "min": 37, "fg": "5-13", "tp": "0-2", "ft": "3-4", "reb": 4, "ast": 4, "pf": 4, "to": 6, "stl": 0, "blk": 0, "pts": 13},
+            {"name": "Eddie Hill", "min": 32, "fg": "5-12", "tp": "5-9", "ft": "0-0", "reb": 3, "ast": 0, "pf": 0, "to": 4, "stl": 0, "blk": 0, "pts": 15},
+            {"name": "Donminic Ellison", "min": 38, "fg": "4-9", "tp": "3-7", "ft": "0-0", "reb": 3, "ast": 9, "pf": 3, "to": 2, "stl": 3, "blk": 0, "pts": 11},
+            {"name": "Nathan Erdmann", "min": 3, "fg": "0-1", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Isaac Fontaine", "min": 10, "fg": "0-2", "tp": "0-1", "ft": "0-0", "reb": 0, "ast": 1, "pf": 1, "to": 0, "stl": 1, "blk": 0, "pts": 0},
+            {"name": "David Vik", "min": 9, "fg": "0-1", "tp": "0-0", "ft": "2-2", "reb": 0, "ast": 0, "pf": 3, "to": 0, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Tavares Mack", "min": 18, "fg": "5-6", "tp": "0-0", "ft": "3-4", "reb": 9, "ast": 0, "pf": 4, "to": 0, "stl": 0, "blk": 0, "pts": 13}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

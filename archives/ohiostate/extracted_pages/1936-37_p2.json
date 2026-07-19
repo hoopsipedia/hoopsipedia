@@ -1,0 +1,11 @@
+{
+  "page": 2,
+  "games": [],
+  "skipped": [
+    {
+      "date": "1936-12-21",
+      "opponent": "Creighton",
+      "reason": "Newspaper clipping box score ('Creighton Is Ohio's Victim', Ohio State 35, Creighton 28, at Omaha) is too blurry/low-resolution in the scan to transcribe player lines confidently. Team-level totals row for Ohio State (13-9-35, i.e. FG-FT-PTS) checksums correctly via pts=2*FG+FT=35, matching the final score, but summing the individual player P (points) column as legibly read (3,0,5,5,0,1,0,0,0,12=26) does NOT reconcile with the team total of 35, and the individual G/F columns as read (sum G=10, sum F=6) don't reconcile with the printed totals (13, 9) either. This indicates several digits in the cramped, dot-matrix newsprint table are being misread. The Creighton-side columns are even harder to read, appearing to show only 2 numeric columns instead of the expected 3 (G F P) for several rows, likely due to column compression/blur in the clipping. Given the failed player-level checksum and low confidence in individual digits, skipping rather than guessing."
+    }
+  ]
+}

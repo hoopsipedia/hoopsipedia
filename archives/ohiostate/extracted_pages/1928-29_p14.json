@@ -1,0 +1,43 @@
+{
+  "page": 14,
+  "games": [
+    {
+      "date": "1929-02-22",
+      "opponent": "Purdue",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 23,
+          "players": [
+            {"name": "Evans", "min": "40:00", "pf": 1, "pts": 8},
+            {"name": "Ervin", "min": "16:55", "pf": 1, "pts": 0},
+            {"name": "Shuler", "min": "5:57", "pf": 2, "pts": 0},
+            {"name": "Hinchman", "min": "11:13", "pf": 1, "pts": 6},
+            {"name": "Van Heyde", "min": "40:00", "pf": 2, "pts": 4},
+            {"name": "Fesler", "min": "40:00", "pf": 1, "pts": 4},
+            {"name": "Larkins", "min": "40:00", "pf": 1, "pts": 1},
+            {"name": "Tittel", "min": "5:57", "pf": 1, "pts": 0}
+          ]
+        },
+        {
+          "name": "Purdue",
+          "score": 39,
+          "players": [
+            {"name": "Harmeson", "pf": 0, "pts": 4},
+            {"name": "Welch", "pf": 0, "pts": 2},
+            {"name": "Cummins", "pf": 1, "pts": 8},
+            {"name": "Gibbens", "pf": 0, "pts": 0},
+            {"name": "Murphy", "pf": 1, "pts": 10},
+            {"name": "Daniels", "pf": 1, "pts": 0},
+            {"name": "Schnaiter", "pf": 1, "pts": 8},
+            {"name": "Lyle", "pf": 0, "pts": 0},
+            {"name": "Boots", "pf": 0, "pts": 7},
+            {"name": "Overman", "pf": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

@@ -1,0 +1,9 @@
+{
+  "page": 14,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page 14 shows one game (Ohio State 67, St. Johns 61, Jan 31 1955, Western Conference official box score) with two teams: visiting St. Johns and home Ohio State. The visiting team's (St. Johns) individual player lines are clean and checksum exactly (player PTS sum = 61 = team score, and FG*2+FT = PTS for every player). However, the home team (Ohio State) rows are faint/smudged in several digit positions (e.g. FG vs FT digits in the Kelley C and Short F rows are ambiguous between plausible readings like 6/7 and 2/4), so per-player figures could not be pinned down with confidence even though the printed team TOTALS row (64 FGA, 24 FG, 40 FTA, 19 FT, 17 PF, 67 PTS, 37 Reb) is legible and internally consistent (24*2+19=67, matching the final score). Since a valid game entry requires confidently transcribed player lines for BOTH teams and Ohio State's individual rows could not be verified, the whole game was skipped rather than guessing digits. Re-scanning this page at higher resolution would likely resolve it."
+    }
+  ]
+}

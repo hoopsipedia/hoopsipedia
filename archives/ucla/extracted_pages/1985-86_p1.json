@@ -1,0 +1,52 @@
+{
+  "page": 1,
+  "games": [
+    {
+      "date": "1985-11-24",
+      "opponent": "North Carolina",
+      "ucla_score": 70,
+      "opp_score": 107,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 70,
+          "players": [
+            {"name": "Miller", "min": 36, "fg": "9-15", "ft": "2-5", "reb": 4, "pf": 2, "ast": 3, "to": 4, "blk": 1, "stl": 3, "pts": 20},
+            {"name": "Butler", "min": 25, "fg": "2-3", "ft": "4-5", "reb": 4, "pf": 4, "ast": 1, "to": 1, "blk": 0, "stl": 0, "pts": 8},
+            {"name": "Haley", "min": 26, "fg": "1-5", "ft": "0-0", "reb": 2, "pf": 4, "ast": 1, "to": 1, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Hatcher", "min": 24, "fg": "6-15", "ft": "0-1", "reb": 4, "pf": 3, "ast": 0, "to": 3, "blk": 0, "stl": 1, "pts": 12},
+            {"name": "Gaines", "min": 35, "fg": "8-13", "ft": "2-2", "reb": 5, "pf": 1, "ast": 2, "to": 4, "blk": 0, "stl": 0, "pts": 18},
+            {"name": "Richardson", "min": 19, "fg": "4-7", "ft": "0-1", "reb": 3, "pf": 2, "ast": 5, "to": 2, "blk": 0, "stl": 1, "pts": 8},
+            {"name": "Jackson", "min": 16, "fg": "0-2", "ft": "0-0", "reb": 2, "pf": 2, "ast": 2, "to": 3, "blk": 0, "stl": 1, "pts": 0},
+            {"name": "Jones", "min": 8, "fg": "1-1", "ft": "0-0", "reb": 3, "pf": 2, "ast": 1, "to": 2, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Rochelin", "min": 5, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 1, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Palmer", "min": 4, "fg": "0-0", "ft": "0-0", "reb": 1, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Dunlap", "min": 1, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Morris", "min": 1, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "North Carolina Tar Heels",
+          "score": 107,
+          "players": [
+            {"name": "Wolf", "min": 25, "fg": "7-12", "ft": "1-2", "reb": 4, "pf": 2, "ast": 2, "to": 1, "blk": 0, "stl": 0, "pts": 15},
+            {"name": "Popson", "min": 13, "fg": "3-6", "ft": "0-0", "reb": 4, "pf": 3, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 6},
+            {"name": "Daugherty", "min": 32, "fg": "13-13", "ft": "5-5", "reb": 6, "pf": 1, "ast": 1, "to": 6, "blk": 1, "stl": 2, "pts": 31},
+            {"name": "Hale", "min": 26, "fg": "4-11", "ft": "4-4", "reb": 7, "pf": 3, "ast": 3, "to": 6, "blk": 0, "stl": 3, "pts": 12},
+            {"name": "K. Smith", "min": 32, "fg": "3-8", "ft": "3-4", "reb": 1, "pf": 0, "ast": 13, "to": 0, "blk": 2, "stl": 2, "pts": 9},
+            {"name": "Martin", "min": 18, "fg": "5-11", "ft": "3-3", "reb": 8, "pf": 4, "ast": 1, "to": 1, "blk": 0, "stl": 0, "pts": 13},
+            {"name": "Lebo", "min": 24, "fg": "3-4", "ft": "2-2", "reb": 4, "pf": 2, "ast": 4, "to": 1, "blk": 0, "stl": 0, "pts": 8},
+            {"name": "Hunter", "min": 9, "fg": "1-1", "ft": "1-2", "reb": 0, "pf": 2, "ast": 0, "to": 3, "blk": 0, "stl": 1, "pts": 3},
+            {"name": "Bucknall", "min": 5, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 2, "ast": 1, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Madden", "min": 6, "fg": "2-3", "ft": "0-0", "reb": 0, "pf": 2, "ast": 1, "to": 0, "blk": 0, "stl": 0, "pts": 4},
+            {"name": "R. Smith", "min": 6, "fg": "2-2", "ft": "0-0", "reb": 1, "pf": 1, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 4},
+            {"name": "Norwood", "min": 2, "fg": "0-0", "ft": "0-0", "reb": 1, "pf": 0, "ast": 0, "to": 2, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Daye", "min": 2, "fg": "0-1", "ft": "2-2", "reb": 1, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 2}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

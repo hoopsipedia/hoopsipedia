@@ -1,0 +1,9 @@
+{
+  "page": 9,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Handwritten official NCAA box score, Ohio State vs Princeton University, Dec 19 1981 at Madison Square Garden (final score line reads Ohio State 59, Princeton 55). Princeton's side checksums cleanly (FG 21-44, FT 13-19, TP 55 = final score, and player pts derivable/verifiable via team FG/FT column arithmetic). However Ohio State's player rows do not reconcile: team totals derived from the FG%/FT% summary lines are FG 15-38 and FT 29-36 (TP 59, matching final score), but summing legible player lines (Campbell 18, Kellogg 13, Waiters/Waters 9, Huggins 4, Stokes 6, Kirchner 2, Taylor 4, plus three near-zero bench rows for Klaas, Jones, Johnson) only totals 56 points and 26 made free throws vs a required 29 - a 3-point/3-FT discrepancy in illegible bench-player handwriting (rows for Taylor/Klaas/Jones/Johnson are faint and overlapping) that could not be resolved even after a second read. Skipping the whole game rather than guessing values for the ambiguous reserve rows."
+    }
+  ]
+}

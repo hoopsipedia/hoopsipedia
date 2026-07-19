@@ -1,0 +1,48 @@
+{
+  "page": 1,
+  "games": [
+    {
+      "date": "1976-11-26",
+      "opponent": "New Mexico Highlands",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 121,
+          "players": [
+            {"name": "Norm Cacy", "fg": "5-15", "ft": "4-6", "reb": 6, "ast": 2, "pf": 4, "to": 4, "pts": 14},
+            {"name": "Willis Howard", "fg": "6-13", "ft": "1-2", "reb": 3, "ast": 1, "pf": 3, "to": 2, "pts": 13},
+            {"name": "Jimmy Allen", "fg": "6-9", "ft": "2-2", "reb": 3, "ast": 0, "pf": 5, "to": 0, "pts": 14},
+            {"name": "Michael Cooper", "fg": "6-11", "ft": "2-3", "reb": 7, "ast": 3, "pf": 0, "to": 5, "pts": 14},
+            {"name": "Dan Davis", "fg": "2-8", "ft": "1-2", "reb": 2, "ast": 4, "pf": 2, "to": 4, "pts": 5},
+            {"name": "Wil Smiley", "fg": "5-14", "ft": "2-6", "reb": 14, "ast": 5, "pf": 2, "to": 5, "pts": 12},
+            {"name": "Dave Otero", "fg": "0-3", "ft": "2-2", "reb": 2, "ast": 1, "pf": 2, "to": 2, "pts": 2},
+            {"name": "Steve Davis", "fg": "5-5", "ft": "2-5", "reb": 10, "ast": 1, "pf": 4, "to": 6, "pts": 12},
+            {"name": "Scott Daum", "fg": "0-1", "ft": "2-2", "reb": 1, "ast": 0, "pf": 1, "to": 0, "pts": 2},
+            {"name": "Billy Reid", "fg": "11-18", "ft": "2-3", "reb": 4, "ast": 7, "pf": 3, "to": 9, "pts": 24},
+            {"name": "Mark Felix", "fg": "3-8", "ft": "3-4", "reb": 3, "ast": 5, "pf": 3, "to": 2, "pts": 9}
+          ]
+        },
+        {
+          "name": "New Mexico Highlands",
+          "score": 82,
+          "players": [
+            {"name": "Tim Conner", "fg": "5-6", "ft": "1-5", "reb": 6, "ast": 3, "pf": 5, "to": 4, "min": 26, "pts": 11},
+            {"name": "Ken Young", "fg": "4-16", "ft": "0-2", "reb": 2, "ast": 0, "pf": 5, "to": 6, "min": 27, "pts": 8},
+            {"name": "Jerome Denny", "fg": "2-5", "ft": "2-4", "reb": 5, "ast": 0, "pf": 4, "to": 2, "min": 22, "pts": 6},
+            {"name": "David Berry", "fg": "14-25", "ft": "1-5", "reb": 13, "ast": 2, "pf": 3, "to": 5, "min": 32, "pts": 29},
+            {"name": "Pete Campos", "fg": "1-5", "ft": "0-1", "reb": 4, "ast": 2, "pf": 5, "to": 10, "min": 21, "pts": 2},
+            {"name": "Leroy Garcia", "fg": "3-12", "ft": "0-3", "reb": 2, "ast": 0, "pf": 4, "to": 10, "min": 19, "pts": 6},
+            {"name": "Rodney Scott", "fg": "2-8", "ft": "0-0", "reb": 0, "ast": 1, "pf": 1, "to": 1, "min": 16, "pts": 4},
+            {"name": "Robert Lucero", "fg": "0-1", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "min": 2, "pts": 0},
+            {"name": "Mark Cassidy", "fg": "1-1", "ft": "0-1", "reb": 0, "ast": 0, "pf": 0, "to": 1, "min": 4, "pts": 2},
+            {"name": "Pancho Guardiola", "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 1, "min": 2, "pts": 0},
+            {"name": "Steve Burwell", "fg": "3-7", "ft": "1-1", "reb": 2, "ast": 0, "pf": 1, "to": 4, "min": 11, "pts": 7},
+            {"name": "Tom Hodges", "fg": "2-6", "ft": "1-3", "reb": 9, "ast": 1, "pf": 4, "to": 4, "min": 17, "pts": 7}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

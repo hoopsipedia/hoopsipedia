@@ -1,0 +1,43 @@
+{
+  "page": 2,
+  "games": [
+    {
+      "date": "1984-11-26",
+      "opponent": "Texas Southern",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 64,
+          "players": [
+            {"name": "Mike Winters", "min": 38, "fg": "3-5", "ft": "0-0", "reb": 3, "pts": 6},
+            {"name": "George Scott", "min": 31, "fg": "3-7", "ft": "4-10", "reb": 7, "pts": 10},
+            {"name": "T.J. Drake", "min": 16, "fg": "1-2", "ft": "0-1", "reb": 1, "pts": 2},
+            {"name": "Kelvin Scarbrough", "min": 35, "fg": "4-10", "ft": "4-5", "reb": 5, "pts": 12},
+            {"name": "Hunter Greene", "min": 33, "fg": "6-9", "ft": "0-5", "reb": 3, "pts": 12},
+            {"name": "Niles Dockery", "min": 2, "fg": "0-0", "ft": "0-0", "reb": 2, "pts": 0},
+            {"name": "Paul Lawson", "min": 21, "fg": "2-4", "ft": "5-6", "reb": 1, "pts": 9},
+            {"name": "Shawn Brooks", "min": 24, "fg": "4-9", "ft": "5-6", "reb": 8, "pts": 13}
+          ]
+        },
+        {
+          "name": "Texas Southern Tigers",
+          "score": 63,
+          "players": [
+            {"name": "Stephenfon Stanfield", "min": 25, "fg": "3-5", "ft": "0-0", "reb": 10, "pts": 6},
+            {"name": "Andre Applewhite", "min": 29, "fg": "4-13", "ft": "3-4", "reb": 6, "pts": 11},
+            {"name": "Melvin Stewart", "min": 15, "fg": "0-2", "ft": "0-1", "reb": 1, "pts": 0},
+            {"name": "Donald Weathersby", "fg": "0-6", "ft": "0-2", "reb": 2, "pts": 0},
+            {"name": "Lester Brooks", "min": 40, "fg": "7-16", "ft": "0-0", "reb": 5, "pts": 14},
+            {"name": "Al Watt", "min": 11, "fg": "2-4", "ft": "1-2", "reb": 0, "pts": 5},
+            {"name": "Terrence Hill", "min": 25, "fg": "3-5", "ft": "2-2", "reb": 9, "pts": 8},
+            {"name": "Lee Gibson", "min": 17, "fg": "4-12", "ft": "1-1", "reb": 2, "pts": 9},
+            {"name": "Arthur Roby", "min": 11, "fg": "1-2", "ft": "1-2", "reb": 2, "pts": 3},
+            {"name": "Terry Hampton", "min": 9, "fg": "3-4", "ft": "1-2", "reb": 1, "pts": 7}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

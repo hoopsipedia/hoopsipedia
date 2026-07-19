@@ -1,0 +1,45 @@
+{
+  "page": 13,
+  "games": [
+    {
+      "date": "1977-01-08",
+      "opponent": "Oregon State",
+      "ucla_score": 83,
+      "opp_score": 66,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 83,
+          "players": [
+            {"name": "Greenwood", "min": 36, "fg": "8-13", "ft": "3-4", "reb": 10, "ast": 0, "pf": 4, "pts": 19},
+            {"name": "Johnson", "min": 39, "fg": "8-12", "ft": "3-8", "reb": 9, "ast": 0, "pf": 2, "pts": 19},
+            {"name": "Vroman", "min": 10, "fg": "2-3", "ft": "0-0", "reb": 1, "ast": 1, "pf": 3, "pts": 4},
+            {"name": "Townsend", "min": 30, "fg": "5-8", "ft": "4-4", "reb": 1, "ast": 6, "pf": 3, "pts": 14},
+            {"name": "Spillane", "min": 35, "fg": "4-5", "ft": "1-2", "reb": 1, "ast": 8, "pf": 3, "pts": 9},
+            {"name": "Sims", "min": 22, "fg": "2-5", "ft": "2-4", "reb": 6, "ast": 0, "pf": 2, "pts": 6},
+            {"name": "Vandeweghe", "min": 4, "fg": "2-3", "ft": "1-1", "reb": 1, "ast": 0, "pf": 1, "pts": 5},
+            {"name": "Wilkes", "min": 9, "fg": "0-0", "ft": "2-2", "reb": 1, "ast": 1, "pf": 2, "pts": 2},
+            {"name": "Hamilton", "min": 15, "fg": "2-6", "ft": "1-2", "reb": 0, "ast": 1, "pf": 1, "pts": 5}
+          ]
+        },
+        {
+          "name": "Oregon State Beavers",
+          "score": 66,
+          "players": [
+            {"name": "Lee", "min": 39, "fg": "2-7", "ft": "0-0", "reb": 4, "ast": 4, "pf": 4, "pts": 4},
+            {"name": "D. Smith", "min": 40, "fg": "5-10", "ft": "0-0", "reb": 4, "ast": 1, "pf": 4, "pts": 10},
+            {"name": "Glanders", "min": 15, "fg": "1-1", "ft": "0-0", "reb": 1, "ast": 0, "pf": 4, "pts": 2},
+            {"name": "R. Smith", "min": 40, "fg": "12-20", "ft": "4-4", "reb": 4, "ast": 1, "pf": 3, "pts": 28},
+            {"name": "Tucker", "min": 39, "fg": "7-10", "ft": "4-7", "reb": 4, "ast": 6, "pf": 5, "pts": 18},
+            {"name": "Johnson", "min": 19, "fg": "0-2", "ft": "4-5", "reb": 1, "ast": 0, "pf": 5, "pts": 4},
+            {"name": "Allen", "min": 3, "fg": "0-2", "ft": "0-1", "reb": 3, "ast": 1, "pf": 1, "pts": 0},
+            {"name": "Campbell", "min": 4, "fg": "0-1", "ft": "0-0", "reb": 1, "ast": 0, "pf": 0, "pts": 0},
+            {"name": "Jordan", "min": 1, "fg": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "pf": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

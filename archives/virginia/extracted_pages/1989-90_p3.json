@@ -1,0 +1,49 @@
+{
+  "page": 3,
+  "games": [
+    {
+      "date": "1989-11-28",
+      "opponent": "Samford",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 87,
+          "players": [
+            {"name": "Bryant Stith", "min": 24, "fg": "7-11", "tp": "0-2", "ft": "4-6", "reb": 6, "ast": 1, "to": 2, "pf": 3, "pts": 18},
+            {"name": "Kenny Turner", "min": 27, "fg": "9-9", "ft": "1-1", "reb": 3, "ast": 3, "to": 2, "stl": 2, "pf": 1, "pts": 19},
+            {"name": "Ted Jeffries", "min": 14, "fg": "1-3", "ft": "3-4", "reb": 3, "pts": 5},
+            {"name": "Anthony Oliver", "min": 24, "fg": "6-16", "ft": "1-2", "reb": 6, "blk": 1, "pf": 2, "pts": 13},
+            {"name": "John Crotty", "min": 36, "fg": "9-18", "tp": "4-7", "ft": "4-5", "reb": 4, "ast": 11, "to": 1, "stl": 2, "pf": 1, "pts": 26},
+            {"name": "Jeff Daniel", "min": 15, "fg": "0-1", "pts": 0},
+            {"name": "Matt Blundin", "min": 26, "fg": "0-1", "reb": 7, "to": 2, "blk": 2, "stl": 2, "pf": 2, "pts": 0},
+            {"name": "Curtis Williams", "min": 9, "fg": "0-2", "reb": 4, "pf": 3, "pts": 0},
+            {"name": "Dirk Katstra", "min": 8, "fg": "1-3", "tp": "0-1", "ft": "0-1", "reb": 2, "ast": 1, "to": 1, "pf": 2, "pts": 2},
+            {"name": "Doug Smith", "min": 6, "fg": "1-1", "ft": "1-1", "ast": 3, "pts": 3},
+            {"name": "Blair Ford", "min": 11, "fg": "0-3", "tp": "0-3", "ft": "1-2", "reb": 4, "pf": 2, "pts": 1}
+          ]
+        },
+        {
+          "name": "Samford Bulldogs",
+          "score": 61,
+          "players": [
+            {"name": "Tim Donlon", "min": 32, "fg": "4-8", "ft": "2-5", "reb": 4, "ast": 4, "to": 3, "pf": 2, "pts": 10},
+            {"name": "Brian Leaks", "min": 19, "fg": "0-5", "tp": "0-1", "ft": "1-2", "reb": 2, "to": 4, "stl": 1, "pf": 3, "pts": 1},
+            {"name": "Stanley Wormely", "min": 25, "fg": "4-4", "reb": 3, "to": 1, "blk": 2, "stl": 3, "pf": 4, "pts": 8},
+            {"name": "Arnold Hamilton", "min": 18, "fg": "3-7", "tp": "0-3", "ft": "0-1", "reb": 2, "to": 1, "stl": 1, "pf": 1, "pts": 6},
+            {"name": "John Thomas", "min": 30, "fg": "1-5", "tp": "0-2", "reb": 4, "ast": 3, "to": 4, "stl": 2, "pf": 2, "pts": 2},
+            {"name": "Dillard Quick", "min": 23, "fg": "4-5", "reb": 1, "ast": 1, "blk": 1, "pts": 8},
+            {"name": "Bo Gamble", "min": 21, "fg": "4-6", "ft": "2-3", "reb": 5, "ast": 5, "to": 1, "blk": 1, "pf": 3, "pts": 10},
+            {"name": "Bennie Carter", "min": 3, "reb": 1, "pts": 0},
+            {"name": "Kevy McInnis", "min": 20, "fg": "4-8", "tp": "1-1", "ft": "2-2", "ast": 2, "to": 1, "pf": 1, "pts": 11},
+            {"name": "Olandus Eason", "fg": "1-2", "pts": 2},
+            {"name": "Maurice Johnson", "min": 1, "pts": 0},
+            {"name": "Kevin Moore", "min": 4, "fg": "1-2", "ft": "1-2", "pf": 2, "pts": 3}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": [],
+  "notes": "Official NCAA box score, typed header with handwritten stat entries, clearly legible. Virginia (home) vs Samford (visitors), final Virginia 87 - Samford 61 (scoring by periods: Samford 31-30=61, Virginia 46-41=87). pts computed from box score TP column directly (all TP values legible); cross-checked pts = 2*(FGmade-3PTmade) + 3*3PTmade + FTmade for every player and all matched the printed TP column. Both team player-point sums equal the printed final scores (61 and 87) - checksum passes for both teams. Some minutes/rebound-detail cells were blank or illegible for bench players with 0 stats (e.g. Olandus Eason MIN illegible dash, omitted); FG/FT fields omitted where the sheet showed no attempts."
+}

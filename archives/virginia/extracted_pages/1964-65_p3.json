@@ -1,0 +1,9 @@
+{
+  "page": 3,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Official basketball box (Duke home form) dated Dec. 19, 1964: Virginia at Duke. Team names, date, and final scores (Duke 104, Virginia 91 - both totals rows clearly legible) are readable, but the individual player rows are a faint/blurry carbon-copy scan where FG-att, FG-made, FT-att, FT-made, rebound, and PF digits for several players (esp. Duke's Vacendak, Herbster, and Virginia's Sanders, Hilsmier, Warlick rows) are not confidently distinguishable. Attempted checksum (2*FGM+FTM per player summed vs team total) came up short of both team totals by 1-2 points on independent read-throughs, indicating at least one misread digit per side. Per instructions to be ruthless about skipping rather than guessing, and having already used the single permitted read, this game is skipped rather than transcribed with unverified digits."
+    }
+  ]
+}

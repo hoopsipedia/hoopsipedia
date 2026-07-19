@@ -1,0 +1,47 @@
+{
+  "page": 13,
+  "games": [
+    {
+      "date": "1978-01-14",
+      "opponent": "Arizona Wildcats",
+      "site": "Tucson, Arizona",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 93,
+          "players": [
+            {"name": "Abney", "min": "36.5", "fg": "7-17", "ft": "3-3", "reb": 4, "ast": 2, "pf": 1, "to": 3, "stl": 2, "blk": 0, "pts": 17},
+            {"name": "Johnson", "min": 27, "fg": "8-17", "ft": "4-4", "reb": 6, "ast": 3, "pf": 3, "to": 3, "stl": 2, "blk": 0, "pts": 20},
+            {"name": "Smiley", "min": 12, "fg": "0-2", "ft": "0-0", "reb": 4, "ast": 0, "pf": 4, "to": 2, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Saunders", "min": 35, "fg": "3-8", "ft": "4-8", "reb": 3, "ast": 4, "pf": 2, "to": 3, "stl": 3, "blk": 0, "pts": 10},
+            {"name": "Cooper", "min": 32, "fg": "5-17", "ft": "5-7", "reb": 5, "ast": 6, "pf": 3, "to": 1, "stl": 2, "blk": 2, "pts": 15},
+            {"name": "Allen", "min": 28, "fg": "7-9", "ft": "0-1", "reb": 9, "ast": 0, "pf": 4, "to": 2, "stl": 1, "blk": 3, "pts": 14},
+            {"name": "Felix", "min": 7, "fg": "4-4", "ft": "0-0", "reb": 1, "ast": 1, "pf": 2, "to": 0, "stl": 2, "blk": 0, "pts": 8},
+            {"name": "Stewart", "min": 8, "fg": "1-1", "ft": "0-0", "reb": 1, "ast": 0, "pf": 1, "to": 0, "stl": 1, "blk": 0, "pts": 2},
+            {"name": "Howard", "min": "16.5", "fg": "2-3", "ft": "3-6", "reb": 3, "ast": 1, "pf": 5, "to": 5, "stl": 0, "blk": 1, "pts": 7}
+          ],
+          "team_rebounds_unassigned": 4
+        },
+        {
+          "name": "Arizona Wildcats",
+          "score": 81,
+          "players": [
+            {"name": "Doffy", "min": 31, "fg": "10-18", "ft": "5-6", "reb": 10, "ast": 3, "pf": 3, "to": 4, "stl": 0, "blk": 0, "pts": 25},
+            {"name": "Davis", "min": 30, "fg": "4-9", "ft": "3-6", "reb": 8, "ast": 1, "pf": 4, "to": 3, "stl": 0, "blk": 0, "pts": 11},
+            {"name": "Taylor", "min": 26, "fg": "4-14", "ft": "2-5", "reb": 4, "ast": 0, "pf": 1, "to": 5, "stl": 0, "blk": 1, "pts": 10},
+            {"name": "Brown", "min": 33, "fg": "1-5", "ft": "3-4", "reb": 2, "ast": 8, "pf": 2, "to": 4, "stl": 2, "blk": 0, "pts": 5},
+            {"name": "Nehls", "min": 30, "fg": "7-12", "ft": "2-2", "reb": 4, "ast": 1, "pf": 3, "to": 3, "stl": 0, "blk": 0, "pts": 16},
+            {"name": "Marshall", "min": 25, "fg": "0-6", "ft": "1-1", "reb": 6, "ast": 0, "pf": 2, "to": 1, "stl": 0, "blk": 0, "pts": 1},
+            {"name": "Denic", "min": 14, "fg": "3-5", "ft": "1-2", "reb": 7, "ast": 0, "pf": 5, "to": 3, "stl": 1, "blk": 0, "pts": 7},
+            {"name": "Williams", "min": 8, "fg": "2-3", "ft": "2-2", "reb": 1, "ast": 0, "pf": 3, "to": 2, "stl": 0, "blk": 0, "pts": 6},
+            {"name": "Smith", "min": 2, "fg": "0-1", "ft": "0-0", "reb": 1, "ast": 1, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ],
+          "team_rebounds_unassigned": 7
+        }
+      ],
+      "score_by_periods": {"New Mexico Lobos": [43, 50], "Arizona Wildcats": [40, 41]},
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

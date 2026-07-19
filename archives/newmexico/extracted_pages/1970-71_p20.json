@@ -1,0 +1,9 @@
+{
+  "page": 20,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page is a 'Cage Chart' shot-tracking sheet for New Mexico vs Utah dated 2-11-71, explicitly labeled 'HALF FIRST' — it contains only first-half shot-location/turnover tracking plus a first-half stat table, not a final game box score with final scores. Additionally, the handwritten FT-FTA and TP figures are ambiguous/hard to read: individual player FT-made values sum to 16 but the team totals row shows FT made as 11 (mismatch), and individual TP values (computed via 2*FG_made+FT_made) sum to 62 while the totals row TP appears to read ~57 (also mismatched and partially illegible). Given the missing final score and failed checksum, this page was skipped per the be-ruthless guidance rather than guessing at illegible digits."
+    }
+  ]
+}

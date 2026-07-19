@@ -1,0 +1,49 @@
+{
+  "page": 30,
+  "games": [
+    {
+      "date": "2000-03-11",
+      "opponent": "Washington Huskies",
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 90,
+          "players": [
+            {"name": "Jason Kapono", "min": 22, "fg": "7-9", "tp": "4-6", "ft": "0-0", "reb": 3, "ast": 2, "pf": 2, "to": 1, "stl": 3, "blk": 0, "pts": 18},
+            {"name": "Sean Farnham", "min": 16, "fg": "1-6", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 1, "pf": 3, "to": 2, "stl": 2, "blk": 0, "pts": 2},
+            {"name": "Jerome Moiso", "min": 18, "fg": "4-8", "tp": "0-0", "ft": "0-0", "reb": 4, "ast": 2, "pf": 1, "to": 1, "stl": 0, "blk": 1, "pts": 8},
+            {"name": "Earl Watson", "min": 25, "fg": "4-10", "tp": "2-4", "ft": "0-0", "reb": 4, "ast": 6, "pf": 2, "to": 3, "stl": 1, "blk": 0, "pts": 10},
+            {"name": "Billy Knight", "min": 22, "fg": "3-8", "tp": "0-2", "ft": "1-1", "reb": 6, "ast": 2, "pf": 1, "to": 1, "stl": 3, "blk": 0, "pts": 7},
+            {"name": "Ryan Bailey", "min": 20, "fg": "2-3", "tp": "0-0", "ft": "0-0", "reb": 3, "ast": 4, "pf": 0, "to": 1, "stl": 1, "blk": 0, "pts": 4},
+            {"name": "Rico Hines", "min": 12, "fg": "1-1", "tp": "1-1", "ft": "1-2", "reb": 2, "ast": 1, "pf": 0, "to": 0, "stl": 1, "blk": 0, "pts": 4},
+            {"name": "Matt Barnes", "min": 17, "fg": "4-7", "tp": "0-1", "ft": "1-2", "reb": 4, "ast": 1, "pf": 0, "to": 2, "stl": 2, "blk": 1, "pts": 9},
+            {"name": "Ray Young", "min": 14, "fg": "2-7", "tp": "0-2", "ft": "0-0", "reb": 1, "ast": 0, "pf": 4, "to": 3, "stl": 4, "blk": 0, "pts": 4},
+            {"name": "JaRon Rush", "min": 15, "fg": "7-9", "tp": "1-2", "ft": "0-0", "reb": 4, "ast": 1, "pf": 4, "to": 1, "stl": 2, "blk": 0, "pts": 15},
+            {"name": "Brandon Brooks", "min": 5, "fg": "0-3", "tp": "0-0", "ft": "1-2", "reb": 3, "ast": 0, "pf": 0, "to": 0, "stl": 1, "blk": 0, "pts": 1},
+            {"name": "Dan Gadzuric", "min": 14, "fg": "4-6", "tp": "0-0", "ft": "0-1", "reb": 3, "ast": 1, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 8}
+          ]
+        },
+        {
+          "name": "Washington Huskies",
+          "score": 64,
+          "players": [
+            {"name": "Chris Walcott", "min": 20, "fg": "4-8", "tp": "0-2", "ft": "1-1", "reb": 1, "ast": 0, "pf": 2, "to": 3, "stl": 2, "blk": 1, "pts": 9},
+            {"name": "Thalo Green", "min": 24, "fg": "1-1", "tp": "0-0", "ft": "2-2", "reb": 7, "ast": 2, "pf": 3, "to": 4, "stl": 0, "blk": 1, "pts": 4},
+            {"name": "Senque Carey", "min": 31, "fg": "1-7", "tp": "0-3", "ft": "3-4", "reb": 1, "ast": 5, "pf": 3, "to": 4, "stl": 2, "blk": 0, "pts": 5},
+            {"name": "Deon Luton", "min": 29, "fg": "3-7", "tp": "0-3", "ft": "0-1", "reb": 3, "ast": 1, "pf": 0, "to": 3, "stl": 0, "blk": 0, "pts": 6},
+            {"name": "Michael Johnson", "min": 29, "fg": "4-9", "tp": "0-2", "ft": "3-4", "reb": 3, "ast": 0, "pf": 0, "to": 4, "stl": 1, "blk": 0, "pts": 11},
+            {"name": "Will Perkins", "min": 17, "fg": "3-7", "tp": "0-0", "ft": "1-2", "reb": 3, "ast": 0, "pf": 0, "to": 2, "stl": 0, "blk": 3, "pts": 7},
+            {"name": "Andrew Moritz", "min": 5, "fg": "0-2", "tp": "0-1", "ft": "0-0", "reb": 1, "ast": 2, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Greg Clark", "min": 14, "fg": "1-3", "tp": "1-2", "ft": "3-3", "reb": 1, "ast": 0, "pf": 1, "to": 3, "stl": 0, "blk": 0, "pts": 6},
+            {"name": "Bryan Brown", "min": 6, "fg": "1-1", "tp": "0-0", "ft": "0-0", "reb": 4, "ast": 1, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Ben Coffee", "min": 6, "fg": "1-2", "tp": "0-1", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Marlon Shelton", "min": 9, "fg": "5-8", "tp": "0-0", "ft": "0-0", "reb": 4, "ast": 0, "pf": 1, "to": 1, "stl": 0, "blk": 2, "pts": 10},
+            {"name": "David Dixon", "min": 10, "fg": "1-3", "tp": "0-0", "ft": "0-2", "reb": 3, "ast": 0, "pf": 2, "to": 1, "stl": 1, "blk": 0, "pts": 2}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

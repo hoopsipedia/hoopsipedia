@@ -1,0 +1,45 @@
+{
+  "page": 9,
+  "games": [
+    {
+      "date": "1988-12-28",
+      "opponent": "Wake Forest",
+      "site": "Albuquerque, NM",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 76,
+          "players": [
+            {"name": "McBurrows, Marvin", "min": 12, "fg": "2-3", "tp": "2-3", "ft": "0-2", "reb": 1, "ast": 1, "pf": 0, "to": 0, "stl": 2, "blk": 0, "pts": 6},
+            {"name": "Thomas, Charlie", "min": 31, "fg": "4-6", "ft": "4-6", "reb": 6, "ast": 0, "pf": 2, "to": 3, "stl": 2, "blk": 0, "pts": 12},
+            {"name": "Longley, Luc", "min": 39, "fg": "6-8", "ft": "6-8", "reb": 4, "ast": 2, "pf": 3, "to": 3, "stl": 1, "blk": 4, "pts": 18},
+            {"name": "McGee, Darrell", "min": 34, "fg": "6-9", "tp": "1-1", "ft": "3-4", "reb": 2, "ast": 8, "pf": 1, "to": 1, "stl": 1, "blk": 0, "pts": 16},
+            {"name": "Robbins, Rob", "min": 36, "fg": "7-12", "tp": "3-5", "ft": "3-4", "reb": 3, "ast": 3, "pf": 2, "to": 2, "stl": 0, "blk": 0, "pts": 20},
+            {"name": "Walker, Donnie", "min": 6, "fg": "0-1", "tp": "0-1", "ft": "0-0", "reb": 0, "ast": 1, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Banks, Willie", "min": 32, "fg": "1-2", "ft": "0-1", "reb": 2, "ast": 3, "pf": 1, "to": 2, "stl": 1, "blk": 0, "pts": 2},
+            {"name": "Tower, Chris", "min": 9, "fg": "1-3", "ft": "0-0", "reb": 2, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Loeffel, Rob", "min": 1, "fg": "0-1", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Wake Forest Demon Deacons",
+          "score": 71,
+          "players": [
+            {"name": "Sam, Anthony", "min": 28, "fg": "6-14", "tp": "0-1", "ft": "5-6", "reb": 7, "ast": 1, "pf": 1, "to": 2, "stl": 2, "blk": 0, "pts": 17, "note": "first name partially cropped at page edge; last name Sam is legible, first name inferred as Anthony"},
+            {"name": "King, Chris", "min": 27, "fg": "5-10", "ft": "0-0", "reb": 7, "ast": 1, "pf": 3, "to": 1, "stl": 2, "blk": 0, "pts": 10},
+            {"name": "Medlin, Phil", "min": 21, "fg": "4-5", "ft": "2-4", "reb": 3, "ast": 1, "pf": 4, "to": 0, "stl": 1, "blk": 1, "pts": 10},
+            {"name": "McQueen, Derrick", "min": 32, "fg": "2-3", "ft": "0-0", "reb": 5, "ast": 10, "pf": 3, "to": 1, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Carlyle, David", "min": 33, "fg": "4-12", "tp": "4-8", "ft": "0-0", "reb": 4, "ast": 2, "pf": 4, "to": 4, "stl": 1, "blk": 0, "pts": 12},
+            {"name": "Boyd, Cal", "min": 13, "fg": "3-8", "tp": "2-6", "ft": "1-2", "reb": 1, "ast": 1, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 9},
+            {"name": "Ray, Steve", "min": 8, "fg": "1-1", "tp": "1-1", "ft": "0-0", "reb": 2, "ast": 1, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 3},
+            {"name": "Siler, Robert", "min": 19, "fg": "2-7", "tp": "2-3", "ft": "0-0", "reb": 2, "ast": 0, "pf": 3, "to": 2, "stl": 0, "blk": 1, "pts": 6},
+            {"name": "Johnson, Antonio", "min": 3, "fg": "0-1", "tp": "0-1", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Kitley, Ralph", "min": 16, "fg": "0-1", "ft": "0-0", "reb": 2, "ast": 0, "pf": 1, "to": 1, "stl": 1, "blk": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

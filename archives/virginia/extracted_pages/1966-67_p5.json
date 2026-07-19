@@ -1,0 +1,49 @@
+{
+  "page": 5,
+  "games": [
+    {
+      "date": "1966-12-13",
+      "opponent": "Maryland",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 65,
+          "players": [
+            {"name": "Jim Connelly", "min": 36, "fg": "5-16", "ft": "5-6", "reb": 11, "ast": 1, "pf": 3, "to": 0, "stl": 0, "blk": 0, "pts": 15},
+            {"name": "Buddy Reams", "min": 34, "fg": "5-9", "ft": "0-0", "reb": 6, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 10},
+            {"name": "John Naponick", "min": 24, "fg": "0-5", "ft": "0-0", "reb": 13, "ast": 1, "pf": 3, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Chip Case", "min": 23, "fg": "4-7", "ft": "2-4", "reb": 2, "ast": 1, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 10},
+            {"name": "John Quinn", "min": 33, "fg": "1-9", "ft": "4-5", "reb": 1, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 6},
+            {"name": "Gary Laws", "min": 13, "fg": "0-1", "ft": "3-4", "reb": 1, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 3},
+            {"name": "Sam Harvey", "min": 7, "fg": "1-5", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Mike Katos", "min": 11, "fg": "5-7", "ft": "4-4", "reb": 4, "ast": 1, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 14},
+            {"name": "John Gidding", "min": 4, "fg": "1-3", "ft": "1-2", "reb": 3, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 3},
+            {"name": "Barry Koval", "min": 7, "fg": "0-1", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Mike Eikenberry", "min": 4, "fg": "1-1", "ft": "0-1", "reb": 3, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 2}
+          ]
+        },
+        {
+          "name": "Maryland",
+          "score": 85,
+          "players": [
+            {"name": "Gary Williams", "min": 0, "fg": "2-5", "ft": "0-0", "reb": 1, "ast": 6, "pf": 4, "to": 0, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Pete Johnson", "min": 0, "fg": "0-5", "ft": "0-0", "reb": 2, "ast": 2, "pf": 4, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Billy Jones", "min": 0, "fg": "9-18", "ft": "4-6", "reb": 5, "ast": 3, "pf": 3, "to": 0, "stl": 0, "blk": 0, "pts": 22},
+            {"name": "Joe Harrington", "min": 0, "fg": "4-9", "ft": "2-2", "reb": 6, "ast": 3, "pf": 4, "to": 0, "stl": 0, "blk": 0, "pts": 10},
+            {"name": "Jay MacMillan", "min": 0, "fg": "14-27", "ft": "6-6", "reb": 14, "ast": 2, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 34},
+            {"name": "Rich Drescher", "min": 0, "fg": "4-10", "ft": "1-1", "reb": 8, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 9},
+            {"name": "Larry Brown", "min": 0, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Mike DeCosmo", "min": 0, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Jon MacDonald", "min": 0, "fg": "0-1", "ft": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Steve Feeney", "min": 0, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Dennis Veith", "min": 0, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "John Avery", "min": 0, "fg": "1-1", "ft": "4-4", "reb": 2, "ast": 1, "pf": 4, "to": 0, "stl": 0, "blk": 0, "pts": 6}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": [],
+  "notes": "Both teams' player points columns were printed directly on the sheet and match the FG/FT-derived totals (2*fg_made+ft_made), so pts were transcribed as printed rather than computed. Maryland's per-player and team 'Min' column is printed as 0 throughout (data apparently not recorded for the visiting team on this sheet), while Virginia's Min column has real values summing to the printed team total of 196. Virginia's team-total assists (5) does not equal the sum of individual assists shown (4); left as printed since checksum requirement is on points only, which passes exactly for both teams (Virginia 65, Maryland 85)."
+}

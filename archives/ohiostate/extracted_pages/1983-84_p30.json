@@ -1,0 +1,43 @@
+{
+  "page": 30,
+  "games": [
+    {
+      "date": "1984-03-15",
+      "opponent": "Xavier Musketeers",
+      "notes": "NIT First Round Game, Cincinnati Gardens (OH), double overtime (score by periods: 1st, 2nd, OT, OT)",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 57,
+          "players": [
+            {"name": "Tony Campbell", "min": 37, "fg": "4-7", "ft": "3-6", "reb": 3, "ast": 1, "pf": 5, "to": 2, "stl": 1, "blk": 0, "pts": 11},
+            {"name": "Dave Jones", "min": 20, "fg": "1-5", "ft": "0-0", "reb": 6, "ast": 1, "pf": 1, "to": 2, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Clarence McGee", "min": 20, "fg": "0-2", "ft": "0-1", "reb": 1, "ast": 1, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Ron Stokes", "min": 43, "fg": "3-7", "ft": "4-4", "reb": 5, "ast": 5, "pf": 1, "to": 5, "stl": 2, "blk": 0, "pts": 10},
+            {"name": "Troy Taylor", "min": 44, "fg": "6-15", "ft": "4-6", "reb": 2, "ast": 2, "pf": 3, "to": 3, "stl": 3, "blk": 0, "pts": 16},
+            {"name": "Keith Wesson", "min": 27, "fg": "0-1", "ft": "2-2", "reb": 2, "ast": 0, "pf": 5, "to": 0, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Dennis Hopson", "min": 16, "fg": "5-10", "ft": "6-7", "reb": 8, "ast": 0, "pf": 4, "to": 2, "stl": 3, "blk": 1, "pts": 16},
+            {"name": "Curtis Wilson", "min": 3, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 0}
+          ],
+          "checksum_ok": true
+        },
+        {
+          "name": "Xavier Musketeers",
+          "score": 60,
+          "players": [
+            {"name": "Dexter Bailey", "min": 30, "fg": "1-5", "ft": "0-0", "reb": 5, "ast": 0, "pf": 5, "to": 2, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "John Shimko", "min": 32, "fg": "3-7", "ft": "0-0", "reb": 2, "ast": 1, "pf": 5, "to": 1, "stl": 1, "blk": 1, "pts": 6},
+            {"name": "Jeff Jenkins", "min": 43, "fg": "8-16", "ft": "14-14", "reb": 11, "ast": 0, "pf": 2, "to": 4, "stl": 1, "blk": 0, "pts": 30},
+            {"name": "Ralph Lee", "min": 25, "fg": "0-6", "ft": "0-1", "reb": 1, "ast": 2, "pf": 5, "to": 2, "stl": 1, "blk": 0, "pts": 0},
+            {"name": "Victor Fleming", "min": 41, "fg": "6-12", "ft": "5-9", "reb": 8, "ast": 0, "pf": 1, "to": 4, "stl": 2, "blk": 0, "pts": 17},
+            {"name": "Leroy Greenidge", "min": 9, "fg": "0-1", "ft": "0-0", "reb": 1, "ast": 2, "pf": 1, "to": 3, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Richard Harris", "min": 23, "fg": "1-1", "ft": "1-2", "reb": 4, "ast": 1, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 3},
+            {"name": "Walter McBride", "min": 22, "fg": "0-3", "ft": "2-2", "reb": 3, "ast": 0, "pf": 1, "to": 2, "stl": 1, "blk": 0, "pts": 2}
+          ],
+          "checksum_ok": true
+        }
+      ]
+    }
+  ],
+  "skipped": []
+}

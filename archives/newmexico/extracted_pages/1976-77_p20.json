@@ -1,0 +1,45 @@
+{
+  "page": 20,
+  "games": [
+    {
+      "date": "1977-01-27",
+      "opponent": "Utah",
+      "site": "Special Events Center",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 84,
+          "players": [
+            {"name": "Smiley", "min": 24, "fg": "6-10", "ft": "2-3", "reb": 9, "pf": 3, "ast": 1, "to": 2, "blk": 2, "stl": 0, "pts": 14},
+            {"name": "Johnson", "min": 35, "fg": "6-14", "ft": "2-4", "reb": 6, "pf": 3, "ast": 4, "to": 2, "blk": 0, "stl": 0, "pts": 14},
+            {"name": "Cooper", "min": 37, "fg": "9-17", "ft": "2-2", "reb": 0, "pf": 2, "ast": 1, "to": 4, "blk": 0, "stl": 1, "pts": 20},
+            {"name": "Howard", "min": 23, "fg": "4-7", "ft": "0-0", "reb": 8, "pf": 4, "ast": 3, "to": 2, "blk": 0, "stl": 1, "pts": 8},
+            {"name": "Reitz", "min": 30, "fg": "7-12", "ft": "0-2", "reb": 1, "pf": 1, "ast": 1, "to": 4, "blk": 0, "stl": 2, "pts": 14},
+            {"name": "Davis", "min": 20, "fg": "4-4", "ft": "1-1", "reb": 0, "pf": 1, "ast": 3, "to": 0, "blk": 1, "stl": 1, "pts": 9},
+            {"name": "Felix", "min": 13, "fg": "0-0", "ft": "1-2", "reb": 0, "pf": 2, "ast": 2, "to": 1, "blk": 0, "stl": 1, "pts": 1},
+            {"name": "Stewart", "min": 2, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Allen", "min": 16, "fg": "2-3", "ft": "0-2", "reb": 6, "pf": 0, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pts": 4}
+          ]
+        },
+        {
+          "name": "Utah Utes",
+          "score": 94,
+          "players": [
+            {"name": "Judkins", "min": 40, "fg": "5-9", "ft": "8-8", "reb": 10, "pf": 2, "ast": 3, "to": 3, "blk": 0, "stl": 0, "pts": 18},
+            {"name": "Deane", "min": 38, "fg": "10-17", "ft": "7-8", "reb": 6, "pf": 0, "ast": 6, "to": 4, "blk": 0, "stl": 2, "pts": 27, "note": "FT made read as 7 (of 8) to reconcile with legible points total of 27; digit was ambiguous on scoresheet"},
+            {"name": "Matheney", "min": 36, "fg": "15-19", "ft": "2-2", "reb": 5, "pf": 3, "ast": 0, "to": 1, "blk": 0, "stl": 1, "pts": 32, "note": "disqualified (fouled out) per officials' notation at bottom of sheet"},
+            {"name": "Williams", "min": 38, "fg": "4-7", "ft": "0-0", "reb": 3, "pf": 5, "ast": 2, "to": 0, "blk": 0, "stl": 1, "pts": 8},
+            {"name": "Jonas", "min": 40, "fg": "2-2", "ft": "1-2", "reb": 1, "pf": 3, "ast": 12, "to": 5, "blk": 0, "stl": 1, "pts": 5},
+            {"name": "McCanna", "min": 2, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 1, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Dunn", "min": 2, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Rice", "min": 2, "fg": "1-2", "ft": "0-0", "reb": 0, "pf": 2, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Leavitt", "min": 3, "fg": "1-2", "ft": "0-0", "reb": 0, "pf": 1, "ast": 1, "to": 0, "blk": 0, "stl": 0, "pts": 2}
+          ]
+        }
+      ],
+      "checksum_ok": true,
+      "checksum_note": "New Mexico player pts sum to 84 (matches final score); Utah player pts sum to 94 (matches final score). Score-by-periods box (NM 38+46=84, Utah 50+44=94) also matches team point totals."
+    }
+  ],
+  "skipped": []
+}

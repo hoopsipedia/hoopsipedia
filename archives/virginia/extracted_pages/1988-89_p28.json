@@ -1,0 +1,48 @@
+{
+  "page": 28,
+  "games": [
+    {
+      "date": "1989-03-10",
+      "opponent": "Clemson Tigers",
+      "notes": "ACC Tournament First Round, Game 4, Atlanta. Attendance: 16,723.",
+      "teams": [
+        {
+          "name": "Clemson Tigers",
+          "score": 73,
+          "players": [
+            {"name": "Pryor", "min": 16, "fg": "0-3", "tp": "0-0", "ft": "0-0", "reb": 4, "ast": 1, "pf": 3, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Jones", "min": 20, "fg": "3-7", "tp": "2-5", "ft": "3-3", "reb": 3, "ast": 1, "pf": 1, "to": 2, "stl": 0, "blk": 1, "pts": 11},
+            {"name": "Davis", "min": 30, "fg": "7-11", "tp": "0-0", "ft": "7-11", "reb": 15, "ast": 1, "pf": 3, "to": 3, "stl": 0, "blk": 0, "pts": 21},
+            {"name": "Forrest", "min": 18, "fg": "1-6", "tp": "0-3", "ft": "0-0", "reb": 0, "ast": 2, "pf": 3, "to": 1, "stl": 1, "blk": 0, "pts": 2},
+            {"name": "Kincaid", "min": 18, "fg": "4-10", "tp": "2-5", "ft": "0-3", "reb": 2, "ast": 1, "pf": 4, "to": 0, "stl": 0, "blk": 0, "pts": 10},
+            {"name": "Cash", "min": 25, "fg": "1-3", "tp": "0-0", "ft": "0-1", "reb": 3, "ast": 4, "pf": 3, "to": 0, "stl": 1, "blk": 0, "pts": 2},
+            {"name": "Campbell", "min": 31, "fg": "6-12", "tp": "1-1", "ft": "4-6", "reb": 8, "ast": 0, "pf": 5, "to": 3, "stl": 0, "blk": 2, "pts": 17},
+            {"name": "Young", "min": 22, "fg": "3-7", "tp": "1-4", "ft": "0-1", "reb": 7, "ast": 5, "pf": 5, "to": 2, "stl": 2, "blk": 0, "pts": 7},
+            {"name": "Brown", "min": 15, "fg": "1-4", "tp": "1-3", "ft": "0-1", "reb": 2, "ast": 0, "pf": 5, "to": 3, "stl": 1, "blk": 0, "pts": 3},
+            {"name": "Mitchell", "min": 3, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Howling", "min": 2, "fg": "0-1", "tp": "0-1", "ft": "0-0", "reb": 0, "ast": 0, "pf": 2, "to": 1, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Virginia Cavaliers",
+          "score": 90,
+          "players": [
+            {"name": "Stith", "min": 30, "fg": "4-8", "tp": "0-0", "ft": "7-9", "reb": 3, "ast": 5, "pf": 5, "to": 4, "stl": 5, "blk": 1, "pts": 15},
+            {"name": "Blundin", "min": 21, "fg": "1-2", "tp": "0-0", "ft": "6-11", "reb": 7, "ast": 3, "pf": 4, "to": 1, "stl": 2, "blk": 0, "pts": 8},
+            {"name": "Dabbs", "min": 30, "fg": "5-10", "tp": "0-0", "ft": "6-6", "reb": 9, "ast": 4, "pf": 3, "to": 1, "stl": 0, "blk": 0, "pts": 16},
+            {"name": "Morgan", "min": 34, "fg": "6-17", "tp": "1-7", "ft": "4-5", "reb": 7, "ast": 4, "pf": 2, "to": 3, "stl": 1, "blk": 0, "pts": 17},
+            {"name": "Crotty", "min": 37, "fg": "5-9", "tp": "2-5", "ft": "6-8", "reb": 2, "ast": 2, "pf": 2, "to": 1, "stl": 1, "blk": 0, "pts": 18},
+            {"name": "Williams", "min": 21, "fg": "4-6", "tp": "0-0", "ft": "4-5", "reb": 8, "ast": 0, "pf": 4, "to": 2, "stl": 1, "blk": 0, "pts": 10},
+            {"name": "Turner", "min": 14, "fg": "2-3", "tp": "0-0", "ft": "2-3", "reb": 2, "ast": 2, "pf": 0, "to": 2, "stl": 1, "blk": 0, "pts": 6},
+            {"name": "Oliver", "min": 3, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Katstra", "min": 1, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Daniel", "min": 8, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 2, "ast": 0, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Cooke", "min": 1, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

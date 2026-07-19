@@ -1,0 +1,11 @@
+{
+  "page": 12,
+  "games": [],
+  "skipped": [
+    {
+      "date": "1974-01-19",
+      "opponent": "George Washington",
+      "reason": "Virginia team checksum fails: individual player FG-made (27), FG-att (74), rebounds (33), assists (13), personal fouls (21), turnovers (20), and minutes (200) all sum exactly to the team totals row, confirming those columns were read correctly. But individual FT-made sums to 8 while the team totals row shows FT-made 13 (diff of 5), and FT-att sums to 18 vs total 19 (diff of 1). Because FT-made is off by more than FT-att, this cannot be a simple single-digit misread of one clean cell; the per-player FT column has at least one illegible/ambiguous entry causing points (sum=62) to fall short of the final score (67) by exactly 5. Rather than guess which player's free-throw line is wrong, skipping per instructions. Note: George Washington's own totals (FG 32-64, FT 9-15... team pts 73) reconcile exactly with computed 2*FG+FT for every player once John Holloran's points is taken as 17 (computed from his clearly-legible FG 7-15/FT 3-4) rather than a smudged printed '19' in his points cell -- GW would have checksummed cleanly, but the game is skipped as a whole because Virginia's line does not."
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "page": 5,
+  "games": [],
+  "skipped": [
+    {
+      "date": "1948-12-21",
+      "opponent": "California",
+      "reason": "Ohio State's box score (Donham, Schnittker, Jacobs, Raidiger, Giacomelli, Brown, Burkholder, Melzer, Franchimont, Hudson, Taylor) checksums perfectly to the final score of 74 using pts = 2*FG_made + FT_made. However California's printed box score has misaligned/faded columns (e.g. Ragler's row shows only 4 legible numbers where 5 are expected with a stray period '.0', Walker's row is likewise missing a column) causing the sum of individual player points (63) to not match the team's official total of 60 or the printed Totals row (60). Per the ruthless-skip instruction, the whole game is skipped rather than guessing at the illegible California digits; a second read pass was not used since the underlying scan quality for California's row is the limiting factor, not a one-time misread."
+    }
+  ]
+}

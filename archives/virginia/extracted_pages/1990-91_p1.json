@@ -1,0 +1,46 @@
+{
+  "page": 1,
+  "games": [
+    {
+      "date": "1990-11-23",
+      "opponent": "Siena Saints",
+      "notes": "Great Alaska Shootout, Game One, Sullivan Arena, Anchorage AK. Officials: Owen Grogan, Bob Stuvek, Bernard Jackson. Technical foul: Downey (Siena). pts computed as 2*(fg_made-3pt_made)+3*3pt_made+ft_made where sheet's FG column is total field goals made (including 3-pointers) per standard NCAA box score format of this era; verified against printed team TP totals.",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 80,
+          "players": [
+            {"name": "Turner, Kenny", "min": 25, "fg": "8-15", "tp": "2-6", "ft": "0-0", "reb": 9, "ast": 1, "pf": 0, "to": 0, "stl": 2, "blk": 0, "pts": 18},
+            {"name": "Smith, Bryant", "min": 35, "fg": "9-16", "tp": "2-5", "ft": "13-14", "reb": 9, "ast": 2, "pf": 2, "to": 4, "stl": 1, "blk": 2, "pts": 33},
+            {"name": "Jeffries, Ted", "min": 35, "fg": "3-9", "tp": "0-0", "ft": "0-0", "reb": 8, "ast": 1, "pf": 4, "to": 0, "stl": 0, "blk": 0, "pts": 6},
+            {"name": "Oliver, Anthony", "min": 27, "fg": "4-10", "tp": "0-1", "ft": "0-0", "reb": 3, "ast": 0, "pf": 1, "to": 2, "stl": 0, "blk": 1, "pts": 8},
+            {"name": "Crotty, John", "min": 34, "fg": "4-12", "tp": "1-5", "ft": "2-2", "reb": 0, "ast": 6, "pf": 2, "to": 1, "stl": 1, "blk": 0, "pts": 11},
+            {"name": "Smith, Doug", "min": 1, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Stewart, Corey", "min": 3, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Katstra, Dirk", "min": 6, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Parker, Cornel", "min": 28, "fg": "0-1", "tp": "0-1", "ft": "4-6", "reb": 3, "ast": 1, "pf": 3, "to": 1, "stl": 1, "blk": 1, "pts": 4},
+            {"name": "Wilson, Shawn", "min": 6, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 1, "pts": 0}
+          ]
+        },
+        {
+          "name": "Siena Saints",
+          "score": 77,
+          "players": [
+            {"name": "Huerter, Tom", "min": 26, "fg": "3-7", "tp": "2-5", "ft": "0-0", "reb": 4, "ast": 6, "pf": 4, "to": 2, "stl": 0, "blk": 0, "pts": 8},
+            {"name": "Matthews, Lee", "min": 28, "fg": "1-5", "ft": "0-0", "reb": 8, "ast": 0, "pf": 2, "to": 3, "stl": 1, "blk": 2, "pts": 2},
+            {"name": "Downey, Steve", "min": 26, "fg": "2-7", "ft": "1-2", "reb": 5, "ast": 0, "pf": 2, "to": 2, "stl": 1, "blk": 1, "pts": 5},
+            {"name": "Brown, Marc", "min": 40, "fg": "11-22", "tp": "5-8", "ft": "4-4", "reb": 5, "ast": 7, "pf": 1, "to": 4, "stl": 0, "blk": 0, "pts": 31},
+            {"name": "Schroeder, Bruce", "min": 33, "fg": "9-16", "tp": "3-5", "ft": "1-2", "reb": 8, "ast": 0, "pf": 3, "to": 1, "stl": 0, "blk": 0, "pts": 22},
+            {"name": "Ryder, Jim", "min": 6, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Bennerman, Doremus", "min": 5, "fg": "0-1", "tp": "0-1", "ft": "0-0", "reb": 0, "ast": 1, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Brown, Mike", "min": 13, "fg": "1-3", "tp": "0-1", "ft": "2-2", "reb": 2, "ast": 1, "pf": 2, "to": 4, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Roberts, James", "min": 16, "fg": "2-4", "ft": "1-1", "reb": 1, "ast": 1, "pf": 0, "to": 0, "stl": 1, "blk": 0, "pts": 5},
+            {"name": "Grazulis, Andy", "min": 13, "fg": "0-0", "ft": "0-0", "reb": 3, "ast": 0, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

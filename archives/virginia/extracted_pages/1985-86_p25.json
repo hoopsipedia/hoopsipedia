@@ -1,0 +1,44 @@
+{
+  "page": 25,
+  "games": [
+    {
+      "date": "1986-02-22",
+      "opponent": "Clemson Tigers",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 82,
+          "players": [
+            {"name": "Andrew Kennedy", "min": 26, "fg": "4-4", "ft": "0-0", "ast": 2, "to": 4, "stl": 1, "pts": 8},
+            {"name": "Tom Sheehey", "min": 31, "fg": "5-8", "ft": "6-6", "ast": 3, "to": 4, "stl": 2, "pts": 16},
+            {"name": "Olden Polynice", "min": 39, "fg": "9-13", "ft": "3-6", "ast": 2, "to": 3, "blk": 1, "pts": 21},
+            {"name": "Mel Kennedy", "min": 38, "fg": "2-8", "ft": "5-7", "ast": 2, "to": 4, "blk": 1, "pts": 9},
+            {"name": "Tom Calloway", "min": 19, "fg": "2-4", "ft": "2-2", "ast": 3, "to": 2, "pts": 6},
+            {"name": "John Johnson", "min": 24, "fg": "4-5", "ft": "3-7", "ast": 3, "to": 1, "pts": 11},
+            {"name": "Richard Morgan", "min": 20, "fg": "5-6", "ft": "1-2", "ast": 2, "stl": 5, "pts": 11},
+            {"name": "John Dyslin", "min": 2, "ast": 1, "pts": 0},
+            {"name": "Darrick Simms", "min": 1, "pts": 0}
+          ]
+        },
+        {
+          "name": "Clemson Tigers",
+          "score": 69,
+          "players": [
+            {"name": "Glenn Corbit", "min": 36, "fg": "5-10", "ft": "2-2", "ast": 4, "to": 2, "blk": 1, "stl": 1, "pts": 12},
+            {"name": "Horace Grant", "min": 36, "fg": "8-16", "ft": "0-0", "ast": 1, "to": 1, "pts": 16},
+            {"name": "Glen McCants", "min": 26, "fg": "2-4", "ft": "4-4", "ast": 0, "to": 4, "pts": 8},
+            {"name": "Grayson Marshall", "min": 36, "fg": "2-5", "ft": "1-2", "ast": 4, "to": 5, "pts": 5},
+            {"name": "Michael Best", "min": 34, "fg": "9-24", "ft": "3-4", "ast": 4, "to": 1, "stl": 4, "pts": 21},
+            {"name": "Jerry Pryor", "min": 18, "fg": "3-5", "ft": "1-1", "ast": 1, "pts": 7},
+            {"name": "Anthony Jenkins", "min": 2, "fg": "0-1", "ast": 0, "pts": 0},
+            {"name": "Larry Middleton", "min": 5, "fg": "0-4", "ast": 0, "pts": 0},
+            {"name": "Michael Tait", "min": 5, "fg": "0-1", "ast": 1, "to": 1, "pts": 0},
+            {"name": "Chris Michael", "min": 2, "ast": 0, "to": 1, "stl": 1, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

@@ -1,0 +1,45 @@
+{
+  "page": 8,
+  "games": [
+    {
+      "date": "1950-01-02",
+      "opponent": "Bradley",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 46,
+          "players": [
+            {"name": "Donham", "min": "34.15", "fg": "4-9", "ft": "3-7", "pf": 4, "pts": 11},
+            {"name": "Jacobs", "min": "32.30", "fg": "4-15", "ft": "6-6", "pf": 3, "pts": 14},
+            {"name": "Taylor", "min": "33.15", "fg": "5-10", "ft": "1-3", "pf": 2, "pts": 11},
+            {"name": "Brown", "min": "27.00", "fg": "1-9", "ft": "0-0", "pf": 3, "pts": 2},
+            {"name": "Burkholder", "min": "34.15", "fg": "1-9", "ft": "2-3", "pf": 2, "pts": 4},
+            {"name": "Kuechle", "min": "5.45", "fg": "0-3", "ft": "0-0", "pf": 2, "pts": 0},
+            {"name": "Moore", "min": "8.00", "fg": "0-6", "ft": "0-0", "pf": 1, "pts": 0},
+            {"name": "Wharton", "min": "4.15", "fg": "2-3", "ft": "0-1", "pf": 1, "pts": 4},
+            {"name": "Karaffa", "min": "6.15", "fg": "0-2", "ft": "0-1", "pf": 2, "pts": 0},
+            {"name": "Dawe", "min": "5.45", "fg": "0-2", "ft": "0-0", "pf": 0, "pts": 0},
+            {"name": "Remington", "min": "5.00", "fg": "0-2", "ft": "0-0", "pf": 1, "pts": 0},
+            {"name": "Giacomelli", "min": "3.45", "fg": "0-1", "ft": "0-2", "pf": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Bradley",
+          "score": 65,
+          "players": [
+            {"name": "Grover", "fg": "3-13", "ft": "2-3", "pf": 1, "pts": 8},
+            {"name": "Melchiorre", "fg": "2-8", "ft": "3-7", "pf": 4, "pts": 7},
+            {"name": "Unruh", "fg": "6-12", "ft": "5-5", "pf": 4, "pts": 17},
+            {"name": "Mann", "fg": "4-11", "ft": "0-1", "pf": 3, "pts": 8},
+            {"name": "Preece", "fg": "1-7", "ft": "0-1", "pf": 1, "pts": 2},
+            {"name": "Schlictman", "fg": "3-11", "ft": "0-0", "pf": 3, "pts": 6},
+            {"name": "Behnke", "fg": "6-10", "ft": "5-6", "pf": 2, "pts": 17},
+            {"name": "Chianakas", "fg": "0-1", "ft": "0-0", "pf": 1, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

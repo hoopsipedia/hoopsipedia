@@ -1,0 +1,43 @@
+{
+  "page": 20,
+  "games": [
+    {
+      "date": "1988-01-30",
+      "opponent": "Wake Forest",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 69,
+          "players": [
+            {"name": "Kennedy, Mel", "min": 33, "fg": "4-13", "tp": "2-5", "ft": "2-2", "reb": 3, "pf": 3, "to": 1, "pts": 12},
+            {"name": "Turner, Kenny", "min": 35, "fg": "3-7", "ft": "2-4", "reb": 13, "ast": 4, "stl": 3, "pf": 2, "pts": 8},
+            {"name": "Batts, Bill", "min": 36, "fg": "4-8", "ft": "1-4", "reb": 9, "to": 1, "blk": 2, "stl": 1, "pf": 1, "pts": 9},
+            {"name": "Johnson, John", "min": 40, "fg": "6-13", "tp": "1-4", "ft": "2-3", "reb": 1, "ast": 8, "to": 1, "stl": 1, "pf": 1, "pts": 15},
+            {"name": "Morgan, Richard", "min": 13, "fg": "2-7", "tp": "0-3", "reb": 1, "ast": 3, "to": 1, "stl": 1, "pf": 1, "pts": 4},
+            {"name": "Simms, Darrick", "min": 18, "fg": "3-6", "reb": 2, "ast": 2, "to": 2, "stl": 1, "pf": 3, "pts": 6},
+            {"name": "Daniel, Jeff", "min": 6, "fg": "0-1", "reb": 1, "pf": 2, "pts": 0},
+            {"name": "Crotty, John", "min": 19, "fg": "5-7", "tp": "4-5", "ft": "1-2", "pf": 3, "pts": 15}
+          ],
+          "checksum_ok": true
+        },
+        {
+          "name": "Wake Forest Demon Deacons",
+          "score": 64,
+          "players": [
+            {"name": "Ivy, Sam", "min": 28, "fg": "5-12", "reb": 10, "pf": 4, "to": 4, "ast": 2, "pts": 10},
+            {"name": "Carlyle, David", "min": 33, "fg": "7-10", "tp": "6-8", "ft": "2-2", "reb": 3, "ast": 1, "to": 3, "pf": 4, "pts": 22},
+            {"name": "Kitley, Ralph", "min": 35, "fg": "3-5", "ft": "0-1", "reb": 7, "ast": 4, "to": 2, "pf": 1, "stl": 1, "pts": 6},
+            {"name": "Boyd, Cal", "min": 40, "fg": "3-10", "tp": "0-5", "ft": "0-1", "reb": 2, "ast": 5, "to": 2, "pf": 3, "stl": 2, "pts": 6},
+            {"name": "Black, Tony", "min": 33, "fg": "3-5", "tp": "1-1", "reb": 5, "ast": 5, "to": 2, "pf": 2, "stl": 2, "pts": 7},
+            {"name": "Wise, Tom", "min": 5, "reb": 1, "pf": 2, "stl": 1, "pts": 0},
+            {"name": "Sanders, Todd", "min": 11, "fg": "2-4", "ft": "0-1", "ast": 1, "to": 2, "pf": 1, "pts": 4},
+            {"name": "Johnson, Antonio", "min": 3, "stl": 1, "pts": 0},
+            {"name": "Keys, Daric", "min": 12, "fg": "4-5", "tp": "1-1", "reb": 2, "ast": 2, "to": 1, "blk": 1, "stl": 1, "pts": 9}
+          ],
+          "checksum_ok": true
+        }
+      ]
+    }
+  ],
+  "skipped": []
+}

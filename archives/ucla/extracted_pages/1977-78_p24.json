@@ -1,0 +1,49 @@
+{
+  "page": 24,
+  "games": [
+    {
+      "date": "1978-02-25",
+      "opponent": "Oregon",
+      "ucla_score": 83,
+      "opp_score": 57,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 83,
+          "players": [
+            {"name": "Brad Holland", "min": 5, "fg": "1-2", "ft": "2-2", "reb": 2, "ast": 1, "pf": 2, "to": 2, "pts": 4},
+            {"name": "Raymond Townsend", "min": 35, "fg": "7-16", "ft": "6-6", "reb": 2, "ast": 2, "pf": 1, "to": 1, "stl": 1, "pts": 20},
+            {"name": "Roy Hamilton", "min": 36, "fg": "8-12", "ft": "4-5", "reb": 4, "ast": 4, "pf": 3, "to": 2, "pts": 20},
+            {"name": "Chris Lippert", "min": 3, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 3, "to": 1, "pts": 0},
+            {"name": "Gig Sims", "min": 29, "fg": "1-2", "ft": "0-2", "reb": 4, "pf": 3, "to": 2, "blk": 5, "stl": 1, "pts": 2},
+            {"name": "Darrell Allums", "min": 16, "fg": "1-2", "ft": "3-4", "reb": 5, "pf": 4, "to": 1, "pts": 5},
+            {"name": "David Greenwood", "min": 33, "fg": "2-12", "ft": "3-3", "reb": 15, "ast": 4, "pf": 3, "to": 2, "blk": 2, "stl": 3, "pts": 7},
+            {"name": "James Wilkes", "min": 27, "fg": "4-7", "ft": "3-4", "reb": 6, "ast": 1, "pf": 4, "to": 4, "stl": 1, "pts": 11},
+            {"name": "Rennie Kelly", "min": 2, "fg": "2-2", "reb": 1, "to": 1, "stl": 1, "pts": 4},
+            {"name": "Tony Anderson", "min": 4, "fg": "1-2", "ft": "1-2", "reb": 2, "pf": 1, "to": 1, "pts": 3},
+            {"name": "Kiki Vandeweghe", "min": 15, "fg": "1-2", "ft": "5-5", "reb": 1, "pts": 7}
+          ]
+        },
+        {
+          "name": "Oregon Ducks",
+          "score": 57,
+          "players": [
+            {"name": "Mike Drummond", "min": 36, "fg": "4-8", "ft": "2-2", "reb": 1, "ast": 3, "pf": 2, "stl": 3, "pts": 10},
+            {"name": "Stu Lyon", "min": 13, "fg": "1-4", "ft": "3-6", "reb": 4, "pf": 2, "to": 2, "stl": 1, "pts": 5},
+            {"name": "Phil Barnker", "min": 29, "fg": "5-16", "reb": 4, "ast": 3, "pf": 4, "stl": 1, "pts": 10},
+            {"name": "John Murray", "min": 5, "fg": "1-1", "reb": 1, "ast": 1, "pf": 1, "blk": 3, "pts": 2},
+            {"name": "Danny Mack", "min": 10, "fg": "1-3", "reb": 2, "pf": 1, "pts": 2},
+            {"name": "Felton Sealey", "min": 13, "fg": "3-6", "ft": "4-4", "reb": 2, "pf": 5, "pts": 10},
+            {"name": "Mike Clark", "min": 26, "fg": "1-4", "ft": "3-6", "reb": 7, "ast": 2, "pf": 3, "to": 1, "pts": 5},
+            {"name": "Rob Closs", "min": 19, "fg": "3-8", "ft": "2-2", "reb": 1, "ast": 2, "pf": 3, "to": 1, "pts": 8},
+            {"name": "Kelvin Small", "min": 28, "fg": "1-6", "ft": "1-4", "reb": 10, "ast": 2, "pf": 1, "to": 4, "pts": 3},
+            {"name": "Dan Hartshorne", "min": 19, "fg": "0-6", "reb": 2, "pf": 3, "to": 1, "pts": 0},
+            {"name": "Rich Davis", "min": 12, "fg": "1-4", "reb": 3, "pf": 3, "stl": 1, "pts": 2}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

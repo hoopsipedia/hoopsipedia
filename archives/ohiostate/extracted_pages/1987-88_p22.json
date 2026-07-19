@@ -1,0 +1,9 @@
+{
+  "page": 22,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page shows one game: Wisconsin @ Ohio State, February 12, 1988, St. John Arena (final score Wisconsin 53, Ohio State 78). The five starters on each team are typed clearly and internally consistent (FG/3FG/FT match each player's listed points via the 2*FG+3FG+FT formula, and starters' FG/FGA/3FG/FT sums are consistent with the team FG/FGA/3FG/FT totals lines). However several bench rows on both sides are cramped/low-contrast with ambiguous column alignment (a couple of Wisconsin reserves are missing an apparent rebounds digit that had to be inferred), and one Ohio State bench player's row (jersey number and name, possibly 'Randy Doss') is genuinely illegible/garbled in the scan, making it impossible to reliably reconstruct every player's line. Because the required checksum (sum of all player points per team == team final score, 53 for Wisconsin and 78 for Ohio State) cannot be confidently verified end-to-end without guessing at the illegible bench entries, this game is skipped rather than risking invented values in the archive."
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "page": 10,
+  "games": [
+    {
+      "date": "1975-01-03",
+      "opponent": "Indiana",
+      "teams": [
+        {
+          "name": "Indiana",
+          "score": 66,
+          "players": [
+            {"name": "Tom Abernethy", "fg": "4-8", "ft": "0-0", "reb": 5, "ast": 3, "pf": 2, "pts": 8},
+            {"name": "Scott May", "fg": "10-24", "ft": "4-4", "reb": 9, "ast": 2, "pf": 2, "pts": 24},
+            {"name": "Kent Benson", "fg": "9-12", "ft": "5-7", "reb": 12, "ast": 2, "pf": 0, "pts": 23},
+            {"name": "Quinn Buckner", "fg": "2-10", "ft": "0-3", "reb": 3, "ast": 8, "pf": 3, "pts": 4},
+            {"name": "Bob Wilkerson", "fg": "2-4", "ft": "0-2", "reb": 3, "ast": 2, "pf": 3, "pts": 4},
+            {"name": "Jim Crews", "fg": "1-1", "ft": "0-1", "reb": 0, "ast": 1, "pf": 1, "pts": 2},
+            {"name": "Wayne Radford", "fg": "0-0", "ft": "0-0", "reb": 1, "ast": 1, "pf": 1, "pts": 0},
+            {"name": "Rich Valavicius", "fg": "0-1", "ft": "1-2", "reb": 0, "ast": 0, "pf": 1, "pts": 1}
+          ]
+        },
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 64,
+          "players": [
+            {"name": "Fred Poole", "fg": "2-9", "ft": "2-2", "reb": 3, "ast": 1, "pf": 3, "pts": 6},
+            {"name": "Mike Daugherty", "fg": "8-9", "ft": "2-2", "reb": 2, "ast": 2, "pf": 5, "pts": 18},
+            {"name": "Craig Taylor", "fg": "3-9", "ft": "2-2", "reb": 9, "ast": 4, "pf": 4, "pts": 8},
+            {"name": "Jed Wood", "fg": "5-12", "ft": "0-0", "reb": 5, "ast": 4, "pf": 3, "pts": 10},
+            {"name": "Larry Bolden", "fg": "9-13", "ft": "2-2", "reb": 2, "ast": 1, "pf": 4, "pts": 20},
+            {"name": "Mark Bayless", "fg": "0-0", "ft": "2-2", "reb": 2, "ast": 0, "pf": 1, "pts": 2},
+            {"name": "Mike Cline", "fg": "0-1", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

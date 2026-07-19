@@ -1,0 +1,9 @@
+{
+  "page": 16,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Game 15, January 23, 1988, Williams Arena, Minneapolis - Ohio State 85 at Minnesota 76. Ohio State's full roster (8 players) is clearly legible and its player-points sum checksums exactly to 85 (Carter 7 + Francis 10 + White 16 + Wilson 13 + Burson 25 + Mateen 10 + J.Anderson 2 + S.Anderson 2 = 85, cross-verified against team FG/FGA/FT totals of 26/48/32). However, Minnesota's roster of 10 players has very tightly spaced, small-font numeric columns for the 8 bench players (Newbern, Zurcher, Gaffney, Hanson, Lynch, Holmgren, Bond, Williams) that could not be confidently assigned digit-by-digit even after two reads of the page; only the top 3 Minnesota players (Burton 11, Coffey 16, Shikenjanski 10, summing to 37 of the required 76) were legible with confidence via internal FG/FT/TP formula cross-check. Since a full-team checksum requires all 10 Minnesota player lines and the remaining 8 cannot be transcribed without guessing, the entire game is skipped rather than submitting a partially fabricated Minnesota box score."
+    }
+  ]
+}

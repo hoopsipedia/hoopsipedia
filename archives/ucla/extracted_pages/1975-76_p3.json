@@ -1,0 +1,50 @@
+{
+  "page": 3,
+  "games": [
+    {
+      "date": "1975-12-06",
+      "opponent": "Southern Illinois",
+      "ucla_score": 81,
+      "opp_score": 60,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 81,
+          "players": [
+            {"name": "Rich Washington", "min": "37", "fg": "5-11", "ft": "4-4", "reb": 8, "pf": 2, "pts": 14, "ast": 7},
+            {"name": "Marques Johnson", "min": "37", "fg": "5-16", "ft": "4-6", "reb": 15, "pf": 2, "pts": 14, "ast": 1},
+            {"name": "Ralph Drollinger", "min": "22", "fg": "7-12", "ft": "2-2", "reb": 11, "pf": 1, "pts": 16, "ast": 2},
+            {"name": "Brad Holland", "min": "22", "fg": "5-10", "ft": "0-0", "reb": 1, "pf": 3, "pts": 10, "ast": 3},
+            {"name": "Andre McCarter", "min": "22", "fg": "1-4", "ft": "0-0", "reb": 0, "pf": 3, "pts": 2, "ast": 6},
+            {"name": "Wilbert Olinde", "min": "14", "fg": "2-4", "ft": "0-0", "reb": 1, "pf": 0, "pts": 4, "ast": 1},
+            {"name": "Jim Spillane", "min": "16", "fg": "2-4", "ft": "0-0", "reb": 0, "pf": 2, "pts": 4, "ast": 1},
+            {"name": "Raymond Townsend", "min": "12", "fg": "3-3", "ft": "0-0", "reb": 2, "pf": 2, "pts": 6, "ast": 1},
+            {"name": "Roy Hamilton", "min": "6", "fg": "1-1", "ft": "2-4", "reb": 2, "pf": 0, "pts": 4, "ast": 0},
+            {"name": "David Greenwood", "min": "4", "fg": "0-2", "ft": "3-4", "reb": 2, "pf": 1, "pts": 3, "ast": 0},
+            {"name": "Gavin Smith", "min": "3", "fg": "0-2", "ft": "2-2", "reb": 2, "pf": 0, "pts": 2, "ast": 1},
+            {"name": "Brett Vroman", "min": "3", "fg": "0-1", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0, "ast": 0},
+            {"name": "Chris Lippert", "min": "2", "fg": "0-0", "ft": "2-2", "reb": 0, "pf": 2, "pts": 2, "ast": 0}
+          ]
+        },
+        {
+          "name": "Southern Illinois",
+          "score": 60,
+          "players": [
+            {"name": "Ford", "min": "29", "fg": "2-7", "ft": "0-0", "reb": 5, "pf": 5, "pts": 4, "ast": 3},
+            {"name": "Wilson", "min": "35.5", "fg": "2-10", "ft": "5-7", "reb": 8, "pf": 4, "pts": 9, "ast": 1},
+            {"name": "Abrams", "min": "31", "fg": "3-8", "ft": "0-1", "reb": 5, "pf": 3, "pts": 6, "ast": 1},
+            {"name": "Glenn", "min": "39", "fg": "8-15", "ft": "2-2", "reb": 3, "pf": 2, "pts": 18, "ast": 1},
+            {"name": "Turner", "min": "22", "fg": "5-10", "ft": "0-0", "reb": 1, "pf": 1, "pts": 10, "ast": 1},
+            {"name": "Williams", "min": "24", "fg": "3-6", "ft": "3-3", "reb": 3, "pf": 4, "pts": 9, "ast": 3},
+            {"name": "Hughlett", "min": "15.5", "fg": "1-2", "ft": "0-0", "reb": 1, "pf": 2, "pts": 2, "ast": 0},
+            {"name": "Kieszkowski", "min": "1.5", "fg": "0-0", "ft": "2-2", "reb": 0, "pf": 0, "pts": 2, "ast": 0},
+            {"name": "Harris", "min": "1.5", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 1, "pts": 0, "ast": 0},
+            {"name": "Huggins", "min": "1", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 1, "pts": 0, "ast": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

@@ -1,0 +1,41 @@
+{
+  "page": 9,
+  "games": [
+    {
+      "date": "1965-12-29",
+      "opponent": "Idaho",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 99,
+          "players": [
+            {"name": "Hoover", "fg": "1-4", "ft": "2-4", "reb": 4, "pf": 1, "pts": 4},
+            {"name": "Morgan", "fg": "6-13", "ft": "6-8", "reb": 8, "pf": 3, "pts": 18},
+            {"name": "Howard", "fg": "7-14", "ft": "5-5", "reb": 8, "pf": 3, "pts": 19},
+            {"name": "Manese", "fg": "7-12", "ft": "5-6", "reb": 4, "pf": 5, "pts": 19},
+            {"name": "Daniels", "fg": "11-16", "ft": "5-7", "reb": 13, "pf": 4, "pts": 27},
+            {"name": "Johnston", "fg": "0-0", "ft": "4-4", "pf": 2, "pts": 4},
+            {"name": "Patterson", "fg": "3-9", "ft": "2-3", "reb": 10, "pts": 8}
+          ]
+        },
+        {
+          "name": "Idaho",
+          "score": 81,
+          "players": [
+            {"name": "Rucker", "fg": "7-15", "ft": "3-6", "reb": 2, "pf": 4, "pts": 17},
+            {"name": "Scaife", "fg": "5-15", "ft": "8-8", "reb": 6, "pf": 3, "pts": 18},
+            {"name": "Haskins", "fg": "7-18", "ft": "2-2", "reb": 6, "pf": 3, "pts": 16},
+            {"name": "Schlatthauer", "fg": "4-6", "ft": "1-1", "reb": 5, "pf": 4, "pts": 9},
+            {"name": "Pipkin", "fg": "4-12", "ft": "1-2", "reb": 1, "pf": 3, "pts": 9},
+            {"name": "Day", "fg": "0-0", "ft": "1-1", "pts": 1},
+            {"name": "Wicks", "fg": "1-3", "ft": "0-0", "reb": 1, "pts": 2},
+            {"name": "Bohanon", "fg": "4-9", "ft": "1-1", "reb": 2, "pf": 5, "pts": 9},
+            {"name": "James", "fg": "0-1", "ft": "0-0", "pf": 1, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

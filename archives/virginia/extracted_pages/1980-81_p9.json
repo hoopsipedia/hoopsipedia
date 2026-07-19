@@ -1,0 +1,48 @@
+{
+  "page": 9,
+  "games": [
+    {
+      "date": "1981-01-05",
+      "opponent": "Delaware",
+      "site": "Newark, DE - Del. Fieldhouse",
+      "date_note": "Printed date on sheet reads 'Jan. 5, 1980', but this is dated to 1981-01-05 since the archive is the 1980-81 Virginia season (game recorded on p.9 of the 1980-81 compilation); '1980' is likely a habitual year-typo common in early January entries.",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 88,
+          "players": [
+            {"name": "Lee Raker", "min": 26, "fg": "0-8", "ft": "3-6", "reb": 7, "pf": 3, "ast": 4, "to": 2, "blk": 0, "stl": 0, "pts": 3},
+            {"name": "Craig Robinson", "min": 23, "fg": "3-6", "ft": "8-10", "reb": 10, "pf": 4, "ast": 0, "to": 1, "blk": 1, "stl": 1, "pts": 14},
+            {"name": "Ralph Sampson", "min": 30, "fg": "12-23", "ft": "0-1", "reb": 8, "pf": 2, "ast": 5, "to": 1, "blk": 4, "stl": 2, "pts": 24},
+            {"name": "Jeff Lamp", "min": 31, "fg": "10-15", "ft": "3-5", "reb": 6, "pf": 3, "ast": 3, "to": 1, "blk": 0, "stl": 1, "pts": 23},
+            {"name": "Jeff Jones", "min": 22, "fg": "3-4", "ft": "0-0", "reb": 3, "pf": 0, "ast": 5, "to": 2, "blk": 0, "stl": 1, "pts": 6},
+            {"name": "Louis Collins", "min": 5, "fg": "1-4", "ft": "0-0", "reb": 1, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Ricky Stokes", "min": 23, "fg": "0-3", "ft": "2-3", "reb": 3, "pf": 3, "ast": 2, "to": 2, "blk": 0, "stl": 1, "pts": 2},
+            {"name": "Jeff Klein", "min": 9, "fg": "1-1", "ft": "4-4", "reb": 0, "pf": 3, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pts": 6},
+            {"name": "Terry Gates", "min": 21, "fg": "2-3", "ft": "0-0", "reb": 3, "pf": 5, "ast": 1, "to": 2, "blk": 0, "stl": 0, "pts": 4},
+            {"name": "Lewis Lattimore", "min": 10, "fg": "2-6", "ft": "0-0", "reb": 3, "pf": 2, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pts": 4}
+          ]
+        },
+        {
+          "name": "Delaware",
+          "score": 69,
+          "players": [
+            {"name": "Ken Luck", "min": 35, "fg": "3-9", "ft": "2-2", "reb": 3, "pf": 5, "ast": 1, "to": 4, "blk": 0, "stl": 1, "pts": 8},
+            {"name": "Andy Huffman", "min": 33, "fg": "1-4", "ft": "1-1", "reb": 4, "pf": 3, "ast": 0, "to": 2, "blk": 1, "stl": 0, "pts": 3},
+            {"name": "Peter Mullenberg", "min": 30, "fg": "4-14", "reb": 6, "pf": 3, "ast": 4, "to": 3, "blk": 0, "stl": 0, "pts": 14, "note": "ft/fta digits illegible/inconsistent with printed pts of 14 (2*4=8, implying 6 made FT vs a read of ~5); omitted rather than guessed"},
+            {"name": "Tom Campbell", "min": 30, "fg": "6-7", "ft": "5-7", "reb": 1, "pf": 3, "ast": 3, "to": 5, "blk": 0, "stl": 4, "pts": 17},
+            {"name": "Ken Dill", "min": 37, "fg": "6-10", "ft": "3-4", "reb": 5, "pf": 3, "ast": 3, "to": 2, "blk": 1, "stl": 0, "pts": 15},
+            {"name": "Tim Carr", "min": 12, "fg": "1-2", "ft": "0-0", "reb": 3, "pf": 3, "ast": 0, "to": 1, "blk": 1, "stl": 0, "pts": 2},
+            {"name": "Ralph Novak", "min": 5, "fg": "2-4", "ft": "0-0", "reb": 3, "pf": 0, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pts": 4},
+            {"name": "Pat Purcell", "min": 3, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 1, "ast": 0, "to": 0, "blk": 1, "stl": 0, "pts": 0},
+            {"name": "Will Reybold", "min": 5, "fg": "0-0", "ft": "2-2", "reb": 0, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Walston Warner", "min": 10, "fg": "0-4", "ft": "4-4", "reb": 2, "pf": 1, "ast": 3, "to": 1, "blk": 0, "stl": 0, "pts": 4}
+          ]
+        }
+      ],
+      "checksum_ok": true,
+      "checksum_note": "Virginia player pts sum to 88 (matches final score 88, box shows 47/41 by half). Delaware player pts sum to 69 (matches final score 69, box shows 33/36 by half). DNP players (Othell Wilson for Virginia; Dean Knotts, Clifford Ross, John Staudenmayer for Delaware) omitted from player lists since they recorded no stats."
+    }
+  ],
+  "skipped": []
+}

@@ -1,0 +1,41 @@
+{
+  "page": 17,
+  "games": [
+    {
+      "date": "1971-02-09",
+      "opponent": "Purdue",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 69,
+          "players": [
+            {"name": "Wagar", "fg": "2-9", "ft": "3-4", "reb": 4, "pf": 5, "pts": 7},
+            {"name": "Minor", "fg": "0-3", "ft": "1-2", "reb": 3, "pf": 0, "pts": 1},
+            {"name": "Witte", "fg": "8-16", "ft": "1-3", "reb": 16, "pf": 2, "pts": 17},
+            {"name": "Cleamons", "fg": "5-10", "ft": "2-3", "reb": 9, "pf": 2, "pts": 12},
+            {"name": "Hornyak", "fg": "12-22", "ft": "3-5", "reb": 7, "pf": 1, "pts": 27},
+            {"name": "Siekmann", "fg": "1-3", "ft": "2-2", "reb": 2, "pf": 1, "pts": 4},
+            {"name": "Merchant", "fg": "0-0", "ft": "1-1", "reb": 1, "pf": 1, "pts": 1},
+            {"name": "Macknin", "fg": "0-1", "ft": "0-0", "reb": 0, "pf": 1, "pts": 0}
+          ]
+        },
+        {
+          "name": "Purdue",
+          "score": 67,
+          "players": [
+            {"name": "Faerber", "fg": "3-9", "ft": "1-1", "reb": 6, "pf": 1, "pts": 7},
+            {"name": "Ford", "fg": "9-16", "ft": "5-6", "reb": 5, "pf": 1, "pts": 23},
+            {"name": "Franklin", "fg": "9-16", "ft": "1-4", "reb": 14, "pf": 3, "pts": 19},
+            {"name": "Weatherford", "fg": "5-22", "ft": "0-0", "reb": 0, "pf": 3, "pts": 10},
+            {"name": "Longfellow", "fg": "2-3", "ft": "0-0", "reb": 1, "pf": 2, "pts": 4},
+            {"name": "Gemauf", "fg": "2-4", "ft": "0-0", "reb": 1, "pf": 2, "pts": 4},
+            {"name": "Price", "fg": "0-0", "ft": "0-0", "reb": 2, "pf": 2, "pts": 0},
+            {"name": "Kroc", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

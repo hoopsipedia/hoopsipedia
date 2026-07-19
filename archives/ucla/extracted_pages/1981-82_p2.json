@@ -1,0 +1,45 @@
+{
+  "page": 2,
+  "games": [
+    {
+      "date": "1981-11-28",
+      "opponent": "Pepperdine",
+      "ucla_score": 76,
+      "opp_score": 69,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 76,
+          "players": [
+            {"name": "Fields, K.", "min": 29, "fg": "7-11", "ft": "5-9", "reb": 4, "ast": 0, "pf": 4, "to": 1, "stl": 2, "blk": 0, "pts": 19},
+            {"name": "Sanders, M.", "min": 36, "fg": "5-12", "ft": "2-2", "reb": 6, "ast": 1, "pf": 4, "to": 3, "stl": 0, "blk": 0, "pts": 12},
+            {"name": "Gray, S.", "min": 33, "fg": "3-3", "ft": "2-6", "reb": 13, "ast": 1, "pf": 3, "to": 5, "stl": 0, "blk": 2, "pts": 8},
+            {"name": "Foster, R.", "min": 18, "fg": "1-4", "ft": "3-4", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 5},
+            {"name": "Jackson, R.", "min": 38, "fg": "5-11", "ft": "4-5", "reb": 8, "ast": 7, "pf": 2, "to": 2, "stl": 2, "blk": 0, "pts": 14},
+            {"name": "Eaton, M.", "min": 5, "fg": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 1, "pts": 0},
+            {"name": "Holton, M.", "min": 24, "fg": "3-7", "ft": "3-5", "reb": 2, "ast": 2, "pf": 3, "to": 2, "stl": 1, "blk": 0, "pts": 9},
+            {"name": "Daye, D.", "min": 15, "fg": "4-5", "ft": "1-2", "reb": 1, "ast": 2, "pf": 1, "to": 6, "stl": 0, "blk": 1, "pts": 9},
+            {"name": "Sears, D.", "min": 2, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Pepperdine",
+          "score": 69,
+          "players": [
+            {"name": "Sadler, B.", "min": 23, "fg": "3-12", "ft": "4-7", "reb": 5, "ast": 1, "pf": 5, "to": 1, "stl": 0, "blk": 0, "pts": 10},
+            {"name": "Anger, V.", "min": 28, "fg": "2-5", "ft": "4-5", "reb": 4, "ast": 0, "pf": 2, "to": 0, "stl": 0, "blk": 1, "pts": 8},
+            {"name": "McCollum, S.", "min": 24, "fg": "3-6", "ft": "0-0", "reb": 4, "ast": 1, "pf": 5, "to": 0, "stl": 1, "blk": 0, "pts": 6},
+            {"name": "Suttle, D.", "min": 28, "fg": "5-17", "ft": "2-2", "reb": 6, "ast": 3, "pf": 4, "to": 4, "stl": 1, "blk": 0, "pts": 12},
+            {"name": "Bond, B.", "min": 31, "fg": "11-17", "ft": "2-2", "reb": 0, "ast": 1, "pf": 5, "to": 6, "stl": 0, "blk": 0, "pts": 24},
+            {"name": "Wilson, M.", "min": 21, "fg": "0-1", "ft": "0-0", "reb": 0, "ast": 7, "pf": 2, "to": 2, "stl": 1, "blk": 0, "pts": 0},
+            {"name": "Philips, O.", "min": 28, "fg": "4-7", "ft": "1-1", "reb": 6, "ast": 0, "pf": 3, "to": 0, "stl": 2, "blk": 1, "pts": 9},
+            {"name": "Poole, R.", "min": 8, "fg": "0-0", "ft": "0-0", "reb": 2, "ast": 0, "pf": 2, "to": 1, "stl": 0, "blk": 1, "pts": 0},
+            {"name": "Netherton, D.", "min": 9, "fg": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

@@ -1,0 +1,42 @@
+{
+  "page": 11,
+  "games": [
+    {
+      "date": "1945-01-22",
+      "opponent": "Purdue",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 50,
+          "players": [
+            {"name": "Grate", "pts": 10},
+            {"name": "Dugger", "pts": 7},
+            {"name": "Risen", "pts": 6},
+            {"name": "Huston (C)", "pts": 9},
+            {"name": "Amling", "pts": 13},
+            {"name": "Caudill", "pts": 2},
+            {"name": "Snyder", "pts": 0},
+            {"name": "Pfeiffer", "pts": 3},
+            {"name": "Sims", "pts": 0},
+            {"name": "Jacobs", "pts": 0}
+          ]
+        },
+        {
+          "name": "Purdue",
+          "score": 35,
+          "players": [
+            {"name": "Gosewehr", "pts": 0},
+            {"name": "Hoffman", "pts": 8},
+            {"name": "Trump", "pts": 3},
+            {"name": "Hinga", "pts": 5},
+            {"name": "Haag (A.C.)", "pts": 8},
+            {"name": "Anderson", "pts": 11},
+            {"name": "Elliott", "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

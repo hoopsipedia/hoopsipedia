@@ -1,0 +1,9 @@
+{
+  "page": 10,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page is a scrapbook template (SCORE/OHIO/OPP./ATTENDANCE/CAPTAIN/MANAGER header, SPORT/YEAR/DATE/OPPONENT/PLACE/COACH footer) with a tiny, low-resolution newspaper box-score clipping pasted at an angle in the middle. Clipping appears to show Illinois vs Ohio State (players legible: Philip, Shoaff, Menke, Mathisen, E. Parker, Shirley, Smiley, Fulton, Vance for Illinois; Miller, Wise, Richwald, Trainor, Kruse, Fejedelem/Fejeda, Huhtar, White, Sims, Gecowets for Ohio State; officials Russ Rapp and Bill Orwig), but the R./F./MF./PF./Pts. digit columns are too small and blurred to read confidently -- multiple digits are ambiguous between values (e.g. team totals could be read as 24-12-4-19-60 for Illinois and 21-6-6-14-48 for Ohio State, but per-player pts do not reliably sum to those totals given the legibility). No printed date is visible on the page (DATE field in footer template is blank; only a faint '2/6' page/photo mark appears, not a game date). Per instructions, skipping rather than guessing at digits."
+    }
+  ]
+}

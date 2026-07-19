@@ -1,0 +1,41 @@
+{
+  "page": 8,
+  "games": [
+    {
+      "date": "1965-12-23",
+      "opponent": "Kansas",
+      "teams": [
+        {
+          "name": "Kansas",
+          "score": 81,
+          "players": [
+            {"name": "Franz", "fg": "5-7", "ft": "1-4", "reb": 7, "pf": 4, "pts": 11},
+            {"name": "Lochmann", "fg": "3-9", "ft": "1-1", "reb": 2, "pf": 5, "pts": 7},
+            {"name": "Wesley", "fg": "5-10", "ft": "6-8", "reb": 9, "pf": 5, "pts": 16},
+            {"name": "Lewis", "fg": "5-8", "ft": "7-7", "reb": 6, "pf": 3, "pts": 17},
+            {"name": "Lopes", "fg": "4-15", "ft": "5-6", "reb": 14, "pf": 2, "pts": 13},
+            {"name": "Wilson", "fg": "6-16", "ft": "5-7", "reb": 12, "pf": 1, "pts": 17},
+            {"name": "Bohnenstiehl", "fg": "0-1", "ft": "0-0", "reb": 0, "pf": 3, "pts": 0},
+            {"name": "Davis", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 68,
+          "players": [
+            {"name": "Hosket", "fg": "5-9", "ft": "8-10", "reb": 12, "pf": 5, "pts": 18},
+            {"name": "Swain", "fg": "0-7", "ft": "2-2", "reb": 7, "pf": 5, "pts": 2},
+            {"name": "Dove", "fg": "9-25", "ft": "8-13", "reb": 7, "pf": 4, "pts": 26},
+            {"name": "Sepic", "fg": "9-19", "ft": "1-1", "reb": 10, "pf": 3, "pts": 19},
+            {"name": "Gregory", "fg": "0-1", "ft": "1-6", "reb": 2, "pf": 5, "pts": 1},
+            {"name": "Peters", "fg": "0-4", "ft": "0-0", "reb": 2, "pf": 1, "pts": 0},
+            {"name": "Ahijevych", "fg": "1-2", "ft": "0-0", "reb": 1, "pf": 2, "pts": 2},
+            {"name": "Tischer", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

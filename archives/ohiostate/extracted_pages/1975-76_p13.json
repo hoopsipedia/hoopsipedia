@@ -1,0 +1,9 @@
+{
+  "page": 13,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Ohio State vs Michigan, 1976-01-12 (OSU 81, Michigan 84). Ohio State side checksums perfectly (player pts sum = 81 = final score). Michigan side fails checksum: printed player PTS column sums to 95, not the team final score of 84. The discrepancy traces to the Robinson, John line (FG 3-12, FT 5-8), which is printed with PTS=22; the pre-3pt formula 2*FG_made+FT_made gives 11 for that line, and substituting 11 for 22 makes the Michigan total sum to exactly 84. This looks like an arithmetic/transcription error on the original 1976 official scoresheet itself (re-read the page once to confirm the printed '22' was read correctly both times). Per instructions to skip rather than guess when a team's checksum fails, the whole game is skipped instead of silently 'correcting' the original sheet's number."
+    }
+  ]
+}

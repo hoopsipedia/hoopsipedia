@@ -1,0 +1,9 @@
+{
+  "page": 3,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page holds one official NCAA box score: East Texas State @ New Mexico, dated 12/1/81 (site: Albuquerque, NM), final score East Texas State 69 - New Mexico 113 per team TOTALS rows (both consistent with 2*FGmade+FTmade and with the 1st/2nd half score-by-periods sums). However, individual handwritten player FG/FT/TP entries are ambiguous in several rows (e.g., Relford Billy, Battle Henry for ETSU) and the reconstructed player-point sums do not reconcile exactly with the printed team totals after cross-checking each row against the pts=2*FGmade+FTmade identity (ETSU players summed to ~65 vs team total 69; New Mexico players summed to ~118 vs team total 113). Rather than guess individual digits to force a match, skipping this game per the checksum-failure rule."
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "page": 16,
+  "games": [
+    {
+      "date": "1986-01-29",
+      "opponent": "USC",
+      "ucla_score": 66,
+      "opp_score": 56,
+      "teams": [
+        {
+          "name": "USC Trojans",
+          "score": 56,
+          "players": [
+            {"name": "Dowell", "min": 40, "fg": "9-16", "ft": "2-3", "reb": 11, "ast": 0, "pf": 5, "to": 4, "stl": 0, "blk": 1, "pts": 20},
+            {"name": "Lewis", "min": 37, "fg": "4-13", "ft": "4-6", "reb": 8, "ast": 3, "pf": 2, "to": 3, "stl": 0, "blk": 0, "pts": 12},
+            {"name": "Gathers", "min": 26, "fg": "1-6", "ft": "1-2", "reb": 3, "ast": 2, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 3},
+            {"name": "Kimble", "min": 31, "fg": "4-13", "ft": "2-2", "reb": 9, "ast": 0, "pf": 3, "to": 4, "stl": 1, "blk": 0, "pts": 10},
+            {"name": "Friend", "min": 25, "fg": "1-4", "ft": "2-2", "reb": 1, "ast": 1, "pf": 4, "to": 1, "stl": 2, "blk": 0, "pts": 4},
+            {"name": "Keller", "min": 20, "fg": "0-1", "ft": "3-4", "reb": 3, "ast": 0, "pf": 5, "to": 2, "stl": 1, "blk": 2, "pts": 3},
+            {"name": "Winslow", "min": 6, "fg": "0-0", "ft": "0-2", "reb": 1, "ast": 1, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Grande", "min": 15, "fg": "2-3", "ft": "0-0", "reb": 0, "ast": 2, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 4}
+          ]
+        },
+        {
+          "name": "UCLA Bruins",
+          "score": 66,
+          "players": [
+            {"name": "Miller", "min": 37, "fg": "6-12", "ft": "9-10", "reb": 5, "ast": 4, "pf": 4, "to": 2, "stl": 0, "blk": 0, "pts": 21},
+            {"name": "Jones", "min": 23, "fg": "2-6", "ft": "0-0", "reb": 4, "ast": 1, "pf": 3, "to": 5, "stl": 1, "blk": 0, "pts": 4},
+            {"name": "Jackson", "min": 31, "fg": "3-6", "ft": "1-1", "reb": 5, "ast": 0, "pf": 1, "to": 2, "stl": 3, "blk": 1, "pts": 7},
+            {"name": "Hatcher", "min": 31, "fg": "2-10", "ft": "4-4", "reb": 3, "ast": 1, "pf": 3, "to": 2, "stl": 0, "blk": 0, "pts": 8},
+            {"name": "Richardson", "min": 40, "fg": "7-12", "ft": "2-2", "reb": 5, "ast": 3, "pf": 0, "to": 2, "stl": 3, "blk": 0, "pts": 16},
+            {"name": "Haley", "min": 26, "fg": "2-4", "ft": "2-4", "reb": 5, "ast": 0, "pf": 4, "to": 1, "stl": 1, "blk": 1, "pts": 6},
+            {"name": "Palmer", "min": 5, "fg": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Rochelin", "min": 5, "fg": "2-4", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Morris", "min": 1, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Dunlap", "min": 1, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

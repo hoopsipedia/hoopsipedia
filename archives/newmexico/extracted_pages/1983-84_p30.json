@@ -1,0 +1,42 @@
+{
+  "page": 30,
+  "games": [
+    {
+      "date": "1984-03-01",
+      "opponent": "Utah",
+      "site": "Special Events Center",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 45,
+          "players": [
+            {"name": "Garrett", "min": 40, "fg": "9-14", "ft": "0-1", "reb": 2, "pf": 4, "ast": 0, "to": 3, "blk": 2, "pts": 18},
+            {"name": "Polensky", "min": 45, "fg": "2-5", "ft": "2-3", "reb": 9, "pf": 4, "ast": 4, "to": 3, "stl": 2, "pts": 6},
+            {"name": "Drake", "min": 27, "fg": "2-2", "ft": "0-0", "reb": 3, "pf": 2, "ast": 0, "to": 0, "blk": 1, "pts": 4},
+            {"name": "Franse", "min": 36, "fg": "3-7", "ft": "0-0", "reb": 0, "pf": 2, "ast": 1, "to": 1, "stl": 1, "pts": 6},
+            {"name": "Smith", "min": 45, "fg": "3-13", "ft": "5-8", "reb": 3, "pf": 2, "ast": 6, "to": 3, "stl": 1, "pts": 11},
+            {"name": "Scarborough", "min": 9, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 0, "pts": 0},
+            {"name": "Winters", "min": 23, "fg": "0-1", "ft": "0-0", "reb": 1, "pf": 1, "ast": 0, "to": 0, "stl": 1, "pts": 0}
+          ]
+        },
+        {
+          "name": "Utah Utes",
+          "score": 44,
+          "players": [
+            {"name": "Hill, M.", "min": 35, "fg": "1-3", "ft": "0-0", "reb": 4, "pf": 2, "ast": 1, "to": 2, "pts": 2},
+            {"name": "McLaughlin", "min": 36, "fg": "3-5", "ft": "0-2", "reb": 4, "pf": 1, "ast": 2, "to": 1, "pts": 6},
+            {"name": "Winans", "min": 45, "fg": "3-9", "ft": "4-7", "reb": 12, "pf": 2, "ast": 3, "to": 1, "stl": 1, "pts": 10},
+            {"name": "Hendrix", "min": 44, "fg": "5-7", "ft": "0-0", "reb": 1, "pf": 3, "ast": 5, "to": 5, "blk": 1, "pts": 10},
+            {"name": "Upshaw", "min": 39, "fg": "7-12", "ft": "0-0", "reb": 5, "pf": 4, "ast": 2, "to": 3, "stl": 3, "pts": 14},
+            {"name": "Springs", "min": 5, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 0, "pts": 0},
+            {"name": "Moore", "min": 7, "fg": "1-3", "ft": "0-0", "reb": 3, "pf": 0, "ast": 0, "to": 6, "pts": 2},
+            {"name": "Raymond", "min": 8, "fg": "0-0", "ft": "0-0", "reb": 1, "pf": 2, "ast": 0, "to": 0, "blk": 1, "stl": 1, "pts": 0},
+            {"name": "Robinson", "min": 6, "fg": "0-1", "ft": "0-0", "reb": 0, "pf": 0, "ast": 2, "to": 2, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

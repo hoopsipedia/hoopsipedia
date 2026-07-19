@@ -1,0 +1,11 @@
+{
+  "page": 29,
+  "games": [],
+  "skipped": [
+    {
+      "date": "1989-03-11",
+      "opponent": "Duke",
+      "reason": "Official NCAA box score, Virginia (19-10, road/visitor) at Duke (24-6, home), ACC Tournament 2nd Round, Atlanta Omni, Final Virginia 58 - Duke 69. Virginia side checksums perfectly (player points sum to 58, matching TOTALS TP=58 and FINAL score). However Duke side fails checksum: summed player points = 70 (Brickey 12, Ferry 23, Laettner 2, Henderson 6, Snyder 7, Abdelnaby 13, Smith 3, Davis 2, Koubek 2, Buckley 0, Burgin 0) versus the sheet's own printed TOTALS row TP=69 and FINAL score 69; FTA sums correctly to 18 (matching TOTALS/FT% panel game 9-18) but FT-made sums to 10 vs the printed total of 9, indicating one Duke player's FT-made digit (most likely Brickey's '4' in the 4-7 FT column) is misread by one but not confidently identifiable even after a second read of the page. Per instructions, skipping rather than guessing which player's stat line is wrong."
+    }
+  ]
+}

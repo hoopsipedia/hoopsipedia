@@ -1,0 +1,44 @@
+{
+  "page": 14,
+  "games": [
+    {
+      "date": "1991-01-05",
+      "opponent": "Wyoming",
+      "teams": [
+        {
+          "name": "Wyoming Cowboys",
+          "score": 92,
+          "players": [
+            {"name": "Kerry McIntyre", "min": 9, "fg": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "pf": 2, "to": 0, "stl": 1, "blk": 0, "pts": 0},
+            {"name": "Rick Henry", "min": 1, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Todd Barnett", "min": 4, "fg": "0-0", "ft": "1-2", "reb": 0, "ast": 1, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 1},
+            {"name": "Maurice Alexander", "min": 36, "fg": "7-12", "tp": "4-6", "ft": "4-4", "reb": 4, "ast": 8, "pf": 0, "to": 4, "stl": 6, "blk": 0, "pts": 22},
+            {"name": "Paris Bryant", "min": 30, "fg": "5-10", "tp": "1-3", "ft": "0-0", "reb": 2, "ast": 1, "pf": 1, "to": 1, "stl": 2, "blk": 0, "pts": 11},
+            {"name": "Brian Rewers", "min": 26, "fg": "1-2", "ft": "2-2", "reb": 5, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Travis Butler", "min": 10, "fg": "2-2", "tp": "2-2", "ft": "0-0", "reb": 1, "ast": 2, "pf": 1, "to": 2, "stl": 0, "blk": 0, "pts": 6},
+            {"name": "Reggie Page", "min": 13, "fg": "2-2", "ft": "1-2", "reb": 3, "ast": 2, "pf": 5, "to": 0, "stl": 0, "blk": 0, "pts": 5},
+            {"name": "Tim Breaux", "min": 39, "fg": "11-16", "tp": "1-2", "ft": "4-5", "reb": 3, "ast": 1, "pf": 3, "to": 3, "stl": 1, "blk": 0, "pts": 27},
+            {"name": "Reginald Slater", "min": 32, "fg": "6-12", "ft": "4-4", "reb": 11, "ast": 3, "pf": 4, "to": 3, "stl": 3, "blk": 0, "pts": 16}
+          ]
+        },
+        {
+          "name": "New Mexico Lobos",
+          "score": 79,
+          "players": [
+            {"name": "Ike Williams", "min": 27, "fg": "3-8", "tp": "1-2", "ft": "2-3", "reb": 4, "ast": 6, "pf": 1, "to": 4, "stl": 1, "blk": 0, "pts": 9},
+            {"name": "Luc Longley", "min": 39, "fg": "10-14", "ft": "5-6", "reb": 5, "ast": 4, "pf": 2, "to": 3, "stl": 2, "blk": 4, "pts": 25},
+            {"name": "Kurt Miller", "min": 4, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Jimmy Taylor", "min": 13, "fg": "2-3", "tp": "2-3", "ft": "0-0", "reb": 0, "ast": 4, "pf": 1, "to": 0, "stl": 2, "blk": 0, "pts": 6},
+            {"name": "Willie Banks", "min": 39, "fg": "6-9", "tp": "3-4", "ft": "0-0", "reb": 3, "ast": 0, "pf": 4, "to": 3, "stl": 1, "blk": 0, "pts": 15},
+            {"name": "Khari Jaxon", "min": 19, "fg": "2-3", "ft": "0-1", "reb": 4, "ast": 0, "pf": 4, "to": 2, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Rob Robbins", "min": 37, "fg": "5-20", "tp": "3-15", "ft": "6-6", "reb": 2, "ast": 4, "pf": 3, "to": 0, "stl": 1, "blk": 0, "pts": 19},
+            {"name": "Rob Newton", "min": 22, "fg": "0-0", "ft": "1-4", "reb": 5, "ast": 1, "pf": 1, "to": 1, "stl": 1, "blk": 1, "pts": 1}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": [],
+  "notes": "Player rows with no recorded stats (did not play): Wyoming's Steve Gosar; New Mexico's George Powdrill, Marvin McBurrows, Lance Milford — omitted from players list. Wyoming totals checksum: 0+0+1+22+11+4+6+5+27+16=92 matches final score and team TOTALS row TP=92. New Mexico totals checksum: 9+25+0+6+15+4+19+1=79 matches final score and team TOTALS row TP=79. Rebounds reported as single 'reb' value (total) since sheet's Off/Def/Tot columns were combined into one field for simplicity; TP values taken directly from sheet's TP column, not computed."
+}

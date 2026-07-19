@@ -1,0 +1,44 @@
+{
+  "page": 16,
+  "games": [
+    {
+      "date": "1976-01-24",
+      "opponent": "Iowa",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 67,
+          "players": [
+            {"name": "Poole", "fg": "4-9", "ft": "3-4", "reb": 6, "ast": 2, "pf": 2, "pts": 11},
+            {"name": "Daugherty", "fg": "2-4", "ft": "0-1", "reb": 2, "ast": 2, "pf": 4, "pts": 4},
+            {"name": "Craig Taylor", "fg": "6-13", "ft": "0-0", "reb": 8, "ast": 0, "pf": 2, "pts": 12},
+            {"name": "Bolden", "fg": "7-12", "ft": "2-4", "reb": 3, "ast": 3, "pf": 1, "pts": 16},
+            {"name": "Bayless", "fg": "4-8", "ft": "2-2", "reb": 3, "ast": 3, "pf": 4, "pts": 10},
+            {"name": "Smith", "fg": "0-2", "ft": "0-0", "reb": 5, "ast": 0, "pf": 1, "pts": 0},
+            {"name": "Wood", "fg": "3-6", "ft": "0-0", "reb": 0, "ast": 3, "pf": 3, "pts": 6},
+            {"name": "Hammond", "fg": "1-2", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "pts": 2},
+            {"name": "Cline", "fg": "3-6", "ft": "0-0", "reb": 3, "ast": 1, "pf": 2, "pts": 6},
+            {"name": "Burris", "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "pts": 0},
+            {"name": "Shields", "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Iowa Hawkeyes",
+          "score": 78,
+          "players": [
+            {"name": "Bruce King", "fg": "9-15", "ft": "0-0", "reb": 7, "ast": 0, "pf": 4, "pts": 18},
+            {"name": "Dan Frost", "fg": "7-10", "ft": "5-8", "reb": 12, "ast": 1, "pf": 1, "pts": 19},
+            {"name": "Fred Haberecht", "fg": "4-7", "ft": "0-1", "reb": 6, "ast": 5, "pf": 3, "pts": 8},
+            {"name": "Cal Wulfsberg", "fg": "2-5", "ft": "4-4", "reb": 1, "ast": 16, "pf": 2, "pts": 8},
+            {"name": "Scott Thompson", "fg": "7-16", "ft": "0-0", "reb": 3, "ast": 3, "pf": 2, "pts": 14},
+            {"name": "William Mayfield", "fg": "2-2", "ft": "0-0", "reb": 4, "ast": 0, "pf": 1, "pts": 4},
+            {"name": "Archie Mays", "fg": "3-6", "ft": "1-3", "reb": 2, "ast": 1, "pf": 3, "pts": 7},
+            {"name": "Mike Gatens", "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

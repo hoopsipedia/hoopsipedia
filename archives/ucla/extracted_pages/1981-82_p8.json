@@ -1,0 +1,50 @@
+{
+  "page": 8,
+  "games": [
+    {
+      "date": "1981-12-29",
+      "opponent": "Maryland",
+      "ucla_score": 90,
+      "opp_score": 57,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 90,
+          "players": [
+            {"name": "Sanders", "min": 24, "fg": "10-16", "ft": "3-3", "reb": 11, "ast": 1, "pf": 3, "to": 0, "stl": 0, "blk": 0, "pts": 23},
+            {"name": "Fields", "min": 23, "fg": "7-9", "ft": "2-2", "reb": 3, "ast": 0, "pf": 3, "to": 1, "stl": 0, "blk": 0, "pts": 16},
+            {"name": "Gray", "min": 25, "fg": "2-5", "ft": "0-0", "reb": 5, "ast": 0, "pf": 3, "to": 0, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Jackson", "min": 28, "fg": "7-9", "ft": "1-3", "reb": 0, "ast": 5, "pf": 2, "to": 1, "stl": 1, "blk": 0, "pts": 15},
+            {"name": "Holton", "min": 21, "fg": "2-5", "ft": "0-0", "reb": 3, "ast": 3, "pf": 1, "to": 3, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Daye", "min": 19, "fg": "3-7", "ft": "2-3", "reb": 2, "ast": 2, "pf": 3, "to": 0, "stl": 1, "blk": 0, "pts": 8},
+            {"name": "Foster", "min": 14, "fg": "2-4", "ft": "6-6", "reb": 1, "ast": 1, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 10},
+            {"name": "Miguel", "min": 13, "fg": "1-3", "ft": "0-0", "reb": 2, "ast": 0, "pf": 2, "to": 2, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Anderson", "min": 11, "fg": "1-4", "ft": "0-0", "reb": 4, "ast": 0, "pf": 1, "to": 1, "stl": 1, "blk": 1, "pts": 2},
+            {"name": "Eaton", "min": 6, "fg": "0-3", "ft": "0-0", "reb": 5, "ast": 0, "pf": 0, "to": 2, "stl": 0, "blk": 2, "pts": 0},
+            {"name": "Sears", "min": 6, "fg": "2-2", "ft": "0-0", "reb": 0, "ast": 0, "pf": 3, "to": 0, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Maloncon", "min": 6, "fg": "1-1", "ft": "0-0", "reb": 0, "ast": 1, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Wright", "min": 4, "fg": "0-1", "ft": "0-0", "reb": 4, "ast": 0, "pf": 2, "to": 2, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Maryland",
+          "score": 57,
+          "players": [
+            {"name": "Fothergill", "min": 7, "fg": "0-2", "ft": "0-0", "reb": 0, "ast": 1, "pf": 2, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Branch", "min": 29, "fg": "3-10", "ft": "0-2", "reb": 2, "ast": 0, "pf": 1, "to": 4, "stl": 0, "blk": 1, "pts": 6},
+            {"name": "Pittman", "min": 40, "fg": "2-4", "ft": "9-11", "reb": 4, "ast": 0, "pf": 3, "to": 3, "stl": 0, "blk": 5, "pts": 13},
+            {"name": "Morley", "min": 28, "fg": "2-3", "ft": "2-2", "reb": 0, "ast": 3, "pf": 1, "to": 2, "stl": 1, "blk": 0, "pts": 6},
+            {"name": "Jackson", "min": 20, "fg": "1-5", "ft": "2-2", "reb": 2, "ast": 1, "pf": 0, "to": 1, "stl": 1, "blk": 0, "pts": 4},
+            {"name": "Baldwin", "min": 6, "fg": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Adkins", "min": 20, "fg": "3-6", "ft": "0-0", "reb": 3, "ast": 1, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 6},
+            {"name": "Holbert", "min": 11, "fg": "1-3", "ft": "0-2", "reb": 0, "ast": 0, "pf": 3, "to": 0, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Rivers", "min": 12, "fg": "4-8", "ft": "0-0", "reb": 0, "ast": 0, "pf": 2, "to": 1, "stl": 1, "blk": 0, "pts": 8},
+            {"name": "Veal", "min": 27, "fg": "2-11", "ft": "8-11", "reb": 7, "ast": 0, "pf": 3, "to": 1, "stl": 0, "blk": 0, "pts": 12}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

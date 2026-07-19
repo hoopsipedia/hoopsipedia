@@ -1,0 +1,48 @@
+{
+  "page": 4,
+  "games": [
+    {
+      "date": "1979-12-11",
+      "opponent": "Notre Dame",
+      "ucla_score": 74,
+      "opp_score": 77,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 74,
+          "players": [
+            {"name": "Kiki Vandeweghe", "min": 32, "fg": "8-16", "ft": "1-1", "reb": 7, "pf": 2, "ast": 1, "to": 5, "blk": 0, "stl": 1, "pts": 17},
+            {"name": "James Wilkes", "min": 28, "fg": "3-8", "ft": "0-2", "reb": 4, "pf": 4, "ast": 2, "to": 3, "blk": 0, "stl": 0, "pts": 6},
+            {"name": "Darrell Allums", "min": 12, "fg": "0-2", "ft": "0-0", "reb": 1, "pf": 2, "ast": 0, "to": 2, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Tyren Naulls", "min": 24, "fg": "1-4", "ft": "1-2", "reb": 3, "pf": 5, "ast": 1, "to": 2, "blk": 0, "stl": 1, "pts": 3},
+            {"name": "Tony Anderson", "min": 11, "fg": "1-3", "ft": "0-0", "reb": 5, "pf": 0, "ast": 1, "to": 1, "blk": 1, "stl": 1, "pts": 2},
+            {"name": "Rod Foster", "min": 21, "fg": "7-7", "ft": "1-3", "reb": 0, "pf": 5, "ast": 3, "to": 3, "blk": 1, "stl": 1, "pts": 15},
+            {"name": "Mike Sanders", "min": 24, "fg": "6-10", "ft": "2-2", "reb": 8, "pf": 2, "ast": 1, "to": 2, "blk": 1, "stl": 2, "pts": 14},
+            {"name": "Michael Holyton", "min": 8, "fg": "0-0", "ft": "1-2", "reb": 0, "pf": 0, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pts": 1},
+            {"name": "Darren Daye", "min": 16, "fg": "0-2", "ft": "0-3", "reb": 1, "pf": 1, "ast": 2, "to": 3, "blk": 0, "stl": 2, "pts": 0},
+            {"name": "Gig Sims", "min": 20, "fg": "6-9", "ft": "0-1", "reb": 6, "pf": 4, "ast": 1, "to": 2, "blk": 1, "stl": 1, "pts": 12},
+            {"name": "Cliff Pruitt", "min": 4, "fg": "1-1", "ft": "2-3", "reb": 1, "pf": 0, "ast": 1, "to": 0, "blk": 0, "stl": 0, "pts": 4}
+          ]
+        },
+        {
+          "name": "Notre Dame Fighting Irish",
+          "score": 77,
+          "players": [
+            {"name": "Kelly Tripucka", "min": 30, "fg": "4-12", "ft": "5-5", "reb": 10, "pf": 4, "ast": 3, "to": 3, "blk": 0, "stl": 2, "pts": 13},
+            {"name": "Tracy Jackson", "min": 33, "fg": "3-9", "ft": "3-4", "reb": 2, "pf": 3, "ast": 1, "to": 2, "blk": 0, "stl": 1, "pts": 9},
+            {"name": "Orlando Woolridge", "min": 32, "fg": "4-8", "ft": "2-3", "reb": 3, "pf": 3, "ast": 3, "to": 5, "blk": 0, "stl": 0, "pts": 10},
+            {"name": "Rich Branning", "min": 32, "fg": "5-9", "ft": "6-8", "reb": 4, "pf": 4, "ast": 5, "to": 4, "blk": 0, "stl": 0, "pts": 16},
+            {"name": "Stan Wilcox", "min": 20, "fg": "4-5", "ft": "0-0", "reb": 1, "pf": 1, "ast": 2, "to": 2, "blk": 0, "stl": 0, "pts": 8},
+            {"name": "Mike Mitchell", "min": 9, "fg": "2-3", "ft": "0-0", "reb": 0, "pf": 1, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 4},
+            {"name": "John Paxson", "min": 19, "fg": "0-1", "ft": "4-4", "reb": 0, "pf": 0, "ast": 3, "to": 0, "blk": 0, "stl": 1, "pts": 4},
+            {"name": "Bill Varner", "min": 1, "fg": "0-2", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Tim Andree", "min": 12, "fg": "1-5", "ft": "3-4", "reb": 2, "pf": 1, "ast": 0, "to": 0, "blk": 1, "stl": 0, "pts": 5},
+            {"name": "Gilbert Salinas", "min": 12, "fg": "4-6", "ft": "0-0", "reb": 4, "pf": 4, "ast": 0, "to": 2, "blk": 0, "stl": 0, "pts": 8}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

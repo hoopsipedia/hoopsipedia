@@ -1,0 +1,9 @@
+{
+  "page": 27,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "2000-03-02 UCLA Bruins (83) at California (62), Haas Pavilion, Berkeley. UCLA side checksum passes exactly (player TP sum 20+0+9+2+12+1+0+8+9+0+22=83 == team score 83), but California side fails: printed player TP column sums to 61 (22+4+1+9+9+0+7+3+0+0+2+4=61) vs printed team total of 62, and this is confirmed on a second full re-read of the page (King, Raymond and Jones, Robbie both show FT-FTA 1-2 but printed TP=0, an internal inconsistency in the original scoresheet; team FT-FTA total 12-21 also does not match the sum of individual FT-made values, which is 13). Since the source box score itself contains an unresolvable 1-point/1-make arithmetic error that cannot be corrected without guessing, the game is skipped per the ruthless-skip-over-guess instruction rather than fabricating a fix."
+    }
+  ]
+}

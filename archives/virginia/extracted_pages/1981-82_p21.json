@@ -1,0 +1,50 @@
+{
+  "page": 21,
+  "games": [
+    {
+      "date": "1982-01-30",
+      "opponent": "Duke Blue Devils",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 77,
+          "players": [
+            {"name": "Craig Robinson", "fg": "6-9", "ft": "2-3", "reb": 7, "ast": 0, "pf": 3, "to": 1, "blk": 0, "stl": 0, "pts": 14},
+            {"name": "Tim Mullen", "fg": "3-10", "ft": "4-4", "reb": 5, "ast": 3, "pf": 4, "to": 0, "blk": 0, "stl": 1, "pts": 10},
+            {"name": "Ralph Sampson", "fg": "6-7", "ft": "11-16", "reb": 11, "ast": 1, "pf": 3, "to": 2, "blk": 2, "stl": 0, "pts": 23},
+            {"name": "Othell Wilson", "fg": "2-5", "ft": "2-4", "reb": 1, "ast": 2, "pf": 4, "to": 3, "blk": 0, "stl": 0, "pts": 6},
+            {"name": "Jeff Jones", "fg": "1-3", "ft": "12-12", "reb": 3, "ast": 5, "pf": 1, "to": 1, "blk": 0, "stl": 0, "pts": 14},
+            {"name": "Jim Miller", "fg": "2-3", "ft": "0-0", "reb": 6, "ast": 1, "pf": 4, "to": 0, "blk": 0, "stl": 0, "pts": 4},
+            {"name": "Kenton Edelin", "fg": "2-3", "ft": "0-0", "reb": 0, "ast": 0, "pf": 2, "to": 0, "blk": 0, "stl": 0, "pts": 4},
+            {"name": "Ricky Stokes", "fg": "0-0", "ft": "2-4", "reb": 0, "ast": 2, "pf": 1, "to": 0, "blk": 0, "stl": 1, "pts": 2},
+            {"name": "Kenny Johnson", "fg": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "pf": 1, "to": 1, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Dean Carpenter", "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 3, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Dan Merrifield", "fg": "0-1", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Doug Newburg", "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Duke Blue Devils",
+          "score": 65,
+          "players": [
+            {"name": "Doug McNeely", "min": 29, "fg": "1-6", "ft": "2-3", "reb": 4, "ast": 0, "pf": 3, "to": 0, "blk": 0, "stl": 0, "pts": 4},
+            {"name": "Chip Engelland", "min": 34, "fg": "6-14", "ft": "3-4", "reb": 1, "ast": 3, "pf": 5, "to": 1, "blk": 0, "stl": 0, "pts": 15},
+            {"name": "Mike Tissaw", "min": 12, "fg": "0-1", "ft": "0-2", "reb": 1, "ast": 1, "to": 1, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Tom Emma", "min": 27, "fg": "3-8", "ft": "0-1", "reb": 2, "ast": 0, "pf": 3, "to": 0, "blk": 0, "stl": 0, "pts": 6},
+            {"name": "Vince Taylor", "min": 36, "fg": "5-14", "ft": "7-10", "reb": 7, "ast": 2, "pf": 5, "to": 2, "blk": 0, "stl": 1, "pts": 17},
+            {"name": "Dan Meagher", "min": 14, "fg": "0-0", "ft": "3-4", "reb": 3, "ast": 0, "pf": 5, "to": 0, "blk": 0, "stl": 0, "pts": 3},
+            {"name": "Allen Williams", "min": 11, "fg": "0-0", "ft": "1-2", "reb": 0, "ast": 1, "pf": 3, "to": 2, "blk": 0, "stl": 0, "pts": 1},
+            {"name": "Greg Wendt", "min": 11, "fg": "1-3", "ft": "0-0", "reb": 1, "ast": 1, "pf": 3, "to": 1, "blk": 0, "stl": 1, "pts": 2},
+            {"name": "Todd Anderson", "min": 8, "fg": "1-2", "ft": "2-2", "reb": 2, "ast": 0, "pf": 1, "to": 0, "blk": 0, "stl": 1, "pts": 4},
+            {"name": "Jay Bryan", "fg": "3-4", "ft": "5-6", "reb": 2, "ast": 0, "pf": 4, "to": 0, "blk": 0, "stl": 0, "pts": 11},
+            {"name": "Richard Ford", "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Ned Franke", "min": 1, "fg": "1-1", "ft": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 0, "blk": 0, "stl": 0, "pts": 2}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": [],
+  "notes": "MIN omitted for all Virginia players (column cropped at the right edge of the scan for the visitors' table). Duke's Mike Tissaw PF omitted (digit unreadable / would exceed 5-foul cap). Duke's Tom Emma FG-attempted (read as 8) and Todd Anderson FG-attempted (read as 2) plus Anderson's steal count were resolved using the TOTALS row cross-check (team FGA=53, team STL=3) since raw handwriting was ambiguous between the two digits; both final reads satisfy makes<=attempts. Jay Bryan and Richard Ford minutes omitted (illegible/blank). Both teams' player points sum exactly to the final score (Virginia 77, Duke 65), matching the SCORE BY PERIODS final line."
+}

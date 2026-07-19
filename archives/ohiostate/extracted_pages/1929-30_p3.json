@@ -1,0 +1,40 @@
+{
+  "page": 3,
+  "games": [
+    {
+      "date": "1929-12-31",
+      "opponent": "Pittsburgh",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 33,
+          "players": [
+            {"name": "Ervin", "min": "45 min (overtime)", "ft": "0-2", "pf": 0, "pts": 14},
+            {"name": "Evans", "min": "44 min 35 sec", "ft": "1-2", "pf": 3, "pts": 5},
+            {"name": "Such", "min": "25 seconds", "ft": "0-0", "pf": 0, "pts": 0},
+            {"name": "Trigley", "min": "26 min 40 sec", "ft": "0-0", "pf": 0, "pts": 4},
+            {"name": "Condon", "min": "18 min 20 sec", "ft": "0-1", "pf": 0, "pts": 6},
+            {"name": "Fesler", "min": "45 min", "ft": "0-0", "pf": 2, "pts": 2},
+            {"name": "Larkins", "min": "37 min", "ft": "0-1", "pf": 1, "pts": 0},
+            {"name": "Hinchman", "min": "7 min 5 sec", "ft": "2-2", "pf": 1, "pts": 2},
+            {"name": "Holcomb", "min": "55 seconds", "ft": "0-0", "pf": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Pittsburgh",
+          "score": 38,
+          "players": [
+            {"name": "Hyatt", "ft": "2-2", "pf": 0, "pts": 18},
+            {"name": "Zehfuss", "ft": "3-4", "pf": 0, "pts": 5},
+            {"name": "Trobleski", "ft": "0-0", "pf": 1, "pts": 0},
+            {"name": "L. Cohen", "ft": "0-0", "pf": 0, "pts": 0},
+            {"name": "Arthure", "ft": "0-1", "pf": 1, "pts": 10},
+            {"name": "W. Kowallis", "ft": "1-1", "pf": 3, "pts": 5}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

@@ -1,0 +1,45 @@
+{
+  "page": 19,
+  "games": [
+    {
+      "date": "1981-02-12",
+      "opponent": "Arizona",
+      "ucla_score": 90,
+      "opp_score": 79,
+      "teams": [
+        {
+          "name": "Arizona Wildcats",
+          "score": 79,
+          "players": [
+            {"name": "Davis", "min": 40, "fg": "14-26", "ft": "10-11", "reb": 7, "ast": 0, "pf": 3, "to": 2, "stl": 2, "blk": 1, "pts": 38},
+            {"name": "Dosty", "min": 36, "fg": "3-12", "ft": "4-5", "reb": 6, "ast": 2, "pf": 3, "to": 4, "stl": 1, "blk": 0, "pts": 10},
+            {"name": "F. Smith", "min": 32, "fg": "2-5", "ft": "5-9", "reb": 4, "ast": 0, "pf": 4, "to": 1, "stl": 1, "blk": 0, "pts": 9},
+            {"name": "Brown", "min": 40, "fg": "3-4", "ft": "1-2", "reb": 1, "ast": 7, "pf": 4, "to": 5, "stl": 2, "blk": 0, "pts": 7},
+            {"name": "J. Smith", "min": 13, "fg": "0-1", "ft": "0-0", "reb": 2, "ast": 0, "pf": 5, "to": 3, "stl": 2, "blk": 0, "pts": 0},
+            {"name": "Collins", "min": 21, "fg": "5-8", "ft": "2-2", "reb": 2, "ast": 1, "pf": 4, "to": 2, "stl": 0, "blk": 0, "pts": 12},
+            {"name": "Walker", "min": 6, "fg": "0-2", "ft": "0-0", "reb": 2, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Miller", "min": 11, "fg": "1-1", "ft": "1-2", "reb": 1, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 3},
+            {"name": "Thompson", "min": 1, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "UCLA Bruins",
+          "score": 90,
+          "players": [
+            {"name": "Sanders", "min": 32, "fg": "6-11", "ft": "4-5", "reb": 8, "ast": 4, "pf": 4, "to": 1, "stl": 4, "blk": 0, "pts": 16},
+            {"name": "Daye", "min": 21, "fg": "2-4", "ft": "3-4", "reb": 1, "ast": 3, "pf": 3, "to": 3, "stl": 0, "blk": 0, "pts": 7},
+            {"name": "Pruitt", "min": 29, "fg": "6-10", "ft": "5-6", "reb": 6, "ast": 1, "pf": 2, "to": 1, "stl": 1, "blk": 0, "pts": 17},
+            {"name": "Foster", "min": 26, "fg": "7-12", "ft": "2-2", "reb": 3, "ast": 4, "pf": 4, "to": 3, "stl": 1, "blk": 0, "pts": 16},
+            {"name": "Holton", "min": 29, "fg": "9-14", "ft": "6-7", "reb": 5, "ast": 6, "pf": 2, "to": 1, "stl": 0, "blk": 0, "pts": 24},
+            {"name": "Anderson", "min": 15, "fg": "1-2", "ft": "0-0", "reb": 4, "ast": 1, "pf": 3, "to": 4, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Fields", "min": 20, "fg": "2-7", "ft": "0-2", "reb": 4, "ast": 1, "pf": 2, "to": 1, "stl": 1, "blk": 0, "pts": 4},
+            {"name": "Jackson", "min": 25, "fg": "1-3", "ft": "0-2", "reb": 0, "ast": 0, "pf": 2, "to": 2, "stl": 1, "blk": 0, "pts": 2},
+            {"name": "Eaton", "min": 3, "fg": "1-1", "ft": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 2}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

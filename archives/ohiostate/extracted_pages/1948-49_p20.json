@@ -1,0 +1,9 @@
+{
+  "page": 20,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Ohio State vs Michigan, 1949-02-26, Ohio State won 69-44 (Fairgrounds Coliseum, attendance 6,125) — date, opponent, and final score are legible in the article text and the 'SCORE/OPP.' header block, and Ohio State's team totals row (FG 25, FT 19 -> 2*25+19=69) reconciles with the article's own '25 of 67 field goals' note. However, the individual player stat lines for both teams are badly garbled by the scan/OCR: names and numeric columns do not align cleanly, several rows show only 2-3 numbers where 4 (FG/FT/PF/Pts) are expected, and player-to-number mapping cannot be confidently reconstructed. Rather than guess at per-player fg/ft/pts values, the whole game is skipped per instructions to be ruthless about skipping over guessing."
+    }
+  ]
+}

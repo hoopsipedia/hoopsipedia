@@ -1,0 +1,9 @@
+{
+  "page": 17,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "1985-86 Ohio State vs Illinois (Jan 23, 1986, St. John Arena) box score present but sheet is too degraded/overlapping to transcribe confidently. Illinois side: 7 of 8 player lines are legible and checksum to 65 pts (Winters 0, Welch 16, Norman 27, Douglas 6, Blackwell 12, Wysinger 4, Hamilton/Howell(DNP) 0), but the 8th player row (jersey 0, name illegible - reads roughly 'Mechts'/'Scott', a substitute) has illegible FG/FGA/FT/FTA cells, leaving the team 2 pts short of the final score of 67 - cannot be reconciled without inventing values. Ohio State side (final 65) has multiple player rows with illegible/overlapping ink in name, FG, FGA, and REB columns (rows for jersey ambiguous between 'Hopson'/'Hopkins', 'Sellers'/'Seders', 'McKee'/'Cravenston', 'Watson'/'Wellson Keith') preventing a reliable per-player transcription and checksum. Given two read passes on this page, skipping per ruthless-skip guidance rather than guessing values."
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "page": 20,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page 20 is a newspaper clipping (South Bend Tribune-style AP story, 'Thomas and Dye Heroes of Game') covering Ohio State 28, Notre Dame 23, played 1936-03-03 at South Bend (line score box: OHIO 28, OPP 23; footer tags Sport=Basketball, Year=1936, Date=Mar. 3, Opponent=Notre Dame, Place=South Bend, Coach=Olsen). It includes a tiny agate-type line-up table for both teams with columns R./F./T. Team totals are legible and internally consistent (Ohio State 11-6-28, Notre Dame 10-3-23; both totals equal 2*R+F and match the final score and the article's free-throw narrative: OSU made 6 of 10, Notre Dame made 3 of 12). However, the individual player rows (McDonald, Whitlinger, Laybourne, Thomas, Raudabaugh, Dye, Busich for Ohio State; Ford, Moir, Hopkins, Nowak, Peters, Ireland, Wade, Wukovits for Notre Dame) are printed too small/blurry to read each player's R and F digits with confidence -- multiple plausible digit assignments satisfy the team-total checksum equally well (e.g. splitting Raudabaugh/Dye's combined R=1,F=6 several different ways all sum correctly), so no single per-player reading could be verified as correct. Per instructions, skipped rather than guess player-level stats; only the article-confirmed facts (Thomas led OSU with 5 field goals for 10 points; Moir was held to Notre Dame's season-low 3 points) are certain but are not a full box score."
+    }
+  ]
+}

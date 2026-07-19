@@ -1,0 +1,11 @@
+{
+  "page": 29,
+  "games": [],
+  "skipped": [
+    {
+      "date": "1999-03-04",
+      "opponent": "Arizona State",
+      "reason": "Typed official box score, UCLA vs Arizona State at Wells Fargo Arena, final UCLA 68 - Arizona State 65. UCLA side checksums cleanly (player pts sum = 68, matching team total and period score) after resolving one ambiguous cell (Barnes, Matt: read as FT 2-4/TP 1 on the sheet, but FT must be 1-2/TP 1 to match team FT total of 10-13 and team TP of 68; all 8 other UCLA columns - FGA, 3PT, rebounds OF/DE/TOT, PF, A, TO, BLK, S, MIN - reconcile exactly). Arizona State side FAILS checksum: every individual player row is internally self-consistent (TP = 2*FG+3FG+FT for all 10 players) and all 8 other stat columns (FG, FGA, 3FG, 3FGA, OF, DE, TOT rebounds, PF, A, TO, BLK, S, MIN) sum to match the printed team totals exactly, but summed player points = 66 while the printed team TOTALS row and the independent SCORE BY PERIODS line (31+34) both read 65 - a 1-point discrepancy on the FT column specifically (player FT-made sum = 16 vs printed team FT total of 15) that persisted identically across two separate reads of the page. Could not identify with confidence which single Arizona State player's FT entry is the source of the 1-point original-document arithmetic error, so per the ruthless-skip rule the whole game is skipped rather than guessing which player stat to adjust."
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "page": 11,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "01/16/92 UCLA vs Oregon at Pauley Pavilion (final UCLA 99, Oregon 71). Oregon's team checksums cleanly (player TP sum = 71 = team total; FGM/3PTM/FTM columns all reconcile with team totals). UCLA does NOT checksum: printed player TP values sum to 103 vs team total 99, and even recomputing points from each player's FG/3PT/FT figures sums to 102 vs 99. The discrepancy traces to the FREE THROW column for MARTIN and TARVER, both printed as '3- 7' (identical, suspiciously), which pushes team FTA sum to 33 vs the printed team total of 26 and FTM sum to 16 vs printed team total of 13. Likely an OCR/scan misread on those two rows (adjacent MIN column bleed or similar), but I cannot confidently resolve the true digits from the available scan resolution after two passes. Per instructions, skipping rather than guessing at MARTIN/TARVER's free-throw line."
+    }
+  ]
+}

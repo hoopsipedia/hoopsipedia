@@ -1,0 +1,45 @@
+{
+  "page": 10,
+  "games": [
+    {
+      "date": "1967-01-07",
+      "opponent": "Minnesota Golden Gophers",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 78,
+          "players": [
+            {"name": "Sepic", "fg": "4-16", "ft": "4-6", "pf": 4, "reb": 7, "pts": 12},
+            {"name": "Miller", "fg": "8-16", "ft": "1-1", "pf": 3, "reb": 9, "pts": 17},
+            {"name": "Hoskett", "fg": "5-13", "ft": "6-7", "pf": 4, "reb": 8, "pts": 16},
+            {"name": "Schnabel", "fg": "4-9", "ft": "2-2", "pf": 1, "reb": 6, "pts": 10},
+            {"name": "Sadelfeld", "fg": "7-8", "ft": "2-4", "pf": 1, "reb": 3, "pts": 16},
+            {"name": "Howell", "fg": "3-5", "ft": "0-0", "pf": 1, "reb": 2, "pts": 6},
+            {"name": "Barnard", "fg": "0-1", "ft": "1-1", "pf": 1, "reb": 1, "pts": 1},
+            {"name": "Swain", "fg": "0-0", "ft": "0-0", "pf": 0, "reb": 0, "pts": 0},
+            {"name": "Tischer", "fg": "0-0", "ft": "0-0", "pf": 1, "reb": 1, "pts": 0},
+            {"name": "McDavid", "fg": "0-0", "ft": "0-0", "pf": 0, "reb": 0, "pts": 0},
+            {"name": "Rowley", "fg": "0-1", "ft": "0-0", "pf": 0, "reb": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Minnesota Golden Gophers",
+          "score": 65,
+          "players": [
+            {"name": "Stephens", "fg": "2-6", "ft": "1-1", "pf": 2, "reb": 7, "pts": 5},
+            {"name": "Presthus", "fg": "5-12", "ft": "2-3", "pf": 5, "reb": 9, "pts": 12},
+            {"name": "Kondla", "fg": "9-26", "ft": "7-9", "pf": 3, "reb": 8, "pts": 25},
+            {"name": "Barry", "fg": "5-8", "ft": "0-1", "pf": 1, "reb": 3, "pts": 10},
+            {"name": "Gardnor", "fg": "4-7", "ft": "3-5", "pf": 3, "reb": 2, "pts": 11},
+            {"name": "Miller", "fg": "1-4", "ft": "0-0", "pf": 0, "reb": 4, "pts": 2},
+            {"name": "Johnson", "fg": "0-1", "ft": "0-0", "pf": 2, "reb": 0, "pts": 0},
+            {"name": "Moore", "fg": "0-0", "ft": "0-0", "pf": 0, "reb": 0, "pts": 0},
+            {"name": "Litten", "fg": "0-0", "ft": "0-0", "pf": 0, "reb": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

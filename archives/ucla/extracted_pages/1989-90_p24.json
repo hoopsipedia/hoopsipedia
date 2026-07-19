@@ -1,0 +1,42 @@
+{
+  "page": 24,
+  "games": [
+    {
+      "date": "1990-02-22",
+      "opponent": "Oregon",
+      "ucla_score": 99,
+      "opp_score": 105,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 99,
+          "players": [
+            {"name": "Trevor Wilson", "min": 35, "fg": "6-11", "ft": "0-2", "reb": 6, "ast": 3, "pf": 5, "to": 1, "pts": 12},
+            {"name": "Gerald Madkins", "min": 31, "fg": "3-10", "tp": "0-3", "ft": "1-2", "reb": 2, "ast": 4, "pf": 3, "to": 1, "pts": 7},
+            {"name": "Darrick Martin", "min": 30, "fg": "7-10", "tp": "3-4", "ft": "1-1", "reb": 0, "ast": 5, "pf": 5, "to": 2, "stl": 2, "pts": 18},
+            {"name": "Mitchell Butler", "min": 19, "fg": "4-4", "ft": "1-2", "reb": 4, "ast": 1, "pf": 4, "to": 1, "stl": 1, "blk": 1, "pts": 9},
+            {"name": "Tracy Murray", "min": 31, "fg": "4-8", "tp": "1-4", "ft": "6-6", "reb": 3, "ast": 1, "pf": 3, "to": 3, "stl": 1, "blk": 1, "pts": 15},
+            {"name": "Don MacLean", "min": 36, "fg": "12-23", "tp": "0-1", "ft": "7-8", "reb": 16, "ast": 1, "pf": 2, "to": 2, "stl": 2, "pts": 31},
+            {"name": "Zan Mason", "min": 10, "fg": "2-2", "ft": "0-3", "reb": 1, "ast": 1, "pf": 2, "to": 1, "stl": 1, "pts": 4},
+            {"name": "Kevin Walker", "min": 8, "fg": "1-7", "tp": "1-4", "ft": "0-0", "reb": 1, "ast": 0, "pf": 1, "to": 0, "pts": 3}
+          ]
+        },
+        {
+          "name": "Oregon Ducks",
+          "score": 105,
+          "players": [
+            {"name": "Terrell Brandon", "min": 39, "fg": "11-16", "tp": "2-3", "ft": "7-9", "reb": 4, "ast": 8, "pf": 3, "to": 3, "stl": 4, "pts": 31},
+            {"name": "Keith Reynolds", "min": 40, "fg": "11-17", "ft": "2-4", "reb": 11, "ast": 2, "pf": 3, "to": 3, "stl": 2, "pts": 24},
+            {"name": "Mike Helms", "min": 5, "fg": "0-1", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "to": 3, "pts": 0},
+            {"name": "Kevin Mixon", "min": 36, "fg": "8-12", "tp": "4-7", "ft": "5-7", "reb": 0, "ast": 1, "pf": 2, "to": 2, "pts": 25},
+            {"name": "Richard Lucas", "min": 38, "fg": "3-6", "ft": "2-4", "reb": 8, "ast": 1, "pf": 2, "to": 1, "pts": 8},
+            {"name": "Bob Fife", "min": 19, "fg": "2-2", "ft": "0-0", "reb": 1, "ast": 2, "pf": 4, "to": 1, "blk": 4, "pts": 4},
+            {"name": "Eric Dunn", "min": 23, "fg": "4-6", "ft": "5-6", "reb": 5, "ast": 0, "pf": 4, "to": 0, "stl": 1, "blk": 1, "pts": 13}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

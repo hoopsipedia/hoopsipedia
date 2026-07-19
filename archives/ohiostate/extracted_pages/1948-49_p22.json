@@ -1,0 +1,9 @@
+{
+  "page": 22,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page contains a newspaper clipping box score for Ohio State 63, DePaul 51 (Chicago Stadium, March 5, 1949) plus an unrelated 'Big Nine Cage Facts, Figures' league-standings sidebar (not a single-game box score, so not transcribed). The individual player lines for Ohio State (Donahue/'Donham' 11, Schnittker 21, Raidiger 11, Allen 12, Burkholder 8) are internally consistent (tp = 2*fg + ft for each) and sum exactly to 63, passing checksum. However, the DePaul player lines (Lukstta 10, Phelan 13, Benson 7, Pirtle 5, Leddy 5, Gillespie 14, Meyer 1, Overholt 2), while each internally consistent (tp = 2*fg + ft), sum to 57 points, not the 51 shown as DePaul's final score in both the scoreboard header and the article headline ('63-51, in Chicago Stadium'). Because the DePaul side fails the team-score checksum and the print in this scan is too small/degraded to re-verify individual digits with confidence, the whole game is skipped rather than guessing which digit(s) were misread."
+    }
+  ]
+}

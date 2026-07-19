@@ -1,0 +1,47 @@
+{
+  "page": 1,
+  "games": [
+    {
+      "date": "1998-11-19",
+      "opponent": "Santa Clara Broncos",
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 89,
+          "players": [
+            {"name": "Jerome Moiso", "min": 22, "fg": "5-12", "tp": "0-0", "ft": "6-10", "reb": 7, "pf": 3, "ast": 2, "to": 2, "blk": 1, "stl": 0, "pts": 16},
+            {"name": "JaRon Rush", "min": 28, "fg": "5-12", "tp": "1-4", "ft": "8-10", "reb": 8, "pf": 4, "ast": 3, "to": 1, "blk": 0, "stl": 0, "pts": 19},
+            {"name": "Dan Gadzuric", "min": 17, "fg": "4-6", "tp": "0-0", "ft": "1-2", "reb": 5, "pf": 2, "ast": 1, "to": 3, "blk": 4, "stl": 0, "pts": 9},
+            {"name": "Matt Barnes", "min": 28, "fg": "4-8", "tp": "1-4", "ft": "3-5", "reb": 8, "pf": 1, "ast": 2, "to": 0, "blk": 0, "stl": 1, "pts": 9},
+            {"name": "Earl Watson", "min": 35, "fg": "5-14", "tp": "1-4", "ft": "4-5", "reb": 8, "pf": 3, "ast": 5, "to": 5, "blk": 0, "stl": 0, "pts": 15},
+            {"name": "Rico Hines", "min": 18, "fg": "1-2", "tp": "0-1", "ft": "1-2", "reb": 3, "pf": 3, "ast": 3, "to": 2, "blk": 1, "stl": 0, "pts": 3},
+            {"name": "Travis Reed", "min": 21, "fg": "2-2", "tp": "0-0", "ft": "0-0", "reb": 3, "pf": 4, "ast": 1, "to": 0, "blk": 1, "stl": 0, "pts": 4},
+            {"name": "Ryan Bailey", "min": 17, "fg": "3-6", "tp": "1-3", "ft": "2-2", "reb": 1, "pf": 0, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pts": 9},
+            {"name": "Todd Ramasar", "min": 4, "fg": "0-0", "tp": "0-0", "ft": "2-2", "reb": 0, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Ray Young", "min": 5, "fg": "1-3", "tp": "1-1", "ft": "0-0", "reb": 1, "pf": 0, "ast": 1, "to": 1, "blk": 0, "stl": 0, "pts": 3},
+            {"name": "Brandon Loyd", "min": 4, "fg": "0-1", "tp": "0-1", "ft": "0-0", "reb": 1, "pf": 0, "ast": 1, "to": 1, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Sean Farnham", "min": 1, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Santa Clara Broncos",
+          "score": 76,
+          "players": [
+            {"name": "Todd Wuschnig", "min": 33, "fg": "4-9", "tp": "2-3", "ft": "6-8", "reb": 10, "pf": 4, "ast": 2, "to": 1, "blk": 0, "stl": 2, "pts": 16},
+            {"name": "Alex Lopez", "min": 29, "fg": "4-7", "tp": "0-0", "ft": "1-2", "reb": 3, "pf": 4, "ast": 1, "to": 7, "blk": 0, "stl": 0, "pts": 8},
+            {"name": "David Emslie", "min": 15, "fg": "1-2", "tp": "0-0", "ft": "0-0", "reb": 0, "pf": 2, "ast": 1, "to": 0, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Nathan Fast", "min": 37, "fg": "9-22", "tp": "3-9", "ft": "4-6", "reb": 3, "pf": 1, "ast": 0, "to": 1, "blk": 0, "stl": 2, "pts": 25},
+            {"name": "Delano D'Oyen", "min": 37, "fg": "3-15", "tp": "1-9", "ft": "5-5", "reb": 5, "pf": 3, "ast": 9, "to": 1, "blk": 0, "stl": 1, "pts": 12},
+            {"name": "Jamie Holmes", "min": 16, "fg": "1-2", "tp": "0-0", "ft": "0-0", "reb": 2, "pf": 3, "ast": 1, "to": 3, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Darrell Teat", "min": 15, "fg": "2-5", "tp": "0-1", "ft": "1-2", "reb": 4, "pf": 5, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 5},
+            {"name": "Stephen Dely", "min": 4, "fg": "0-0", "tp": "0-0", "ft": "4-4", "reb": 0, "pf": 2, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 4},
+            {"name": "Chris Gomes", "min": 12, "fg": "1-1", "tp": "0-0", "ft": "0-0", "reb": 2, "pf": 2, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Justin Holbrook", "min": 2, "fg": "0-1", "tp": "0-1", "ft": "0-1", "reb": 0, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

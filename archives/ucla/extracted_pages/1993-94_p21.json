@@ -1,0 +1,9 @@
+{
+  "page": 21,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Feb 19, 1994 UCLA @ Arizona (McKale Center, Tucson) - UCLA side checksums perfectly (player points sum to 74, matching official final 74), but Arizona side does not reconcile: player points sum to 96 while the official final score is 98, and team FT-made total (22) doesn't match the sum of legible individual FT lines (20). The ~2-point gap traces to illegible/ambiguous bench entries (Flanagan, McLean, Williams, Kelley, Richey, Brown had cramped, hard-to-read FT and rebound cells). Rather than guess, skipping the entire game per checksum policy since the box score can't be fully verified."
+    }
+  ]
+}

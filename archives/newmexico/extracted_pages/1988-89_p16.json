@@ -1,0 +1,41 @@
+{
+  "page": 16,
+  "games": [
+    {
+      "date": "1989-01-26",
+      "opponent": "Colorado State Rams",
+      "teams": [
+        {
+          "name": "Colorado State Rams",
+          "score": 62,
+          "players": [
+            {"name": "Pat Durham", "fg": "3-8", "ft": "2-4", "reb": 8, "ast": 2, "pf": 2, "pts": 8},
+            {"name": "Jamie Hines", "fg": "4-9", "tp": "3-4", "ft": "2-5", "reb": 1, "ast": 1, "pf": 4, "pts": 13},
+            {"name": "Eric Frieauf", "fg": "4-7", "ft": "0-0", "reb": 6, "ast": 1, "pf": 4, "pts": 8},
+            {"name": "Joel Tribelhorn", "fg": "9-17", "tp": "2-6", "ft": "0-0", "reb": 3, "ast": 4, "pf": 2, "pts": 20},
+            {"name": "Trent Shippen", "fg": "3-7", "tp": "1-4", "ft": "0-0", "reb": 4, "ast": 4, "pf": 3, "pts": 7},
+            {"name": "Lynn Tryon", "fg": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "pf": 0, "pts": 0},
+            {"name": "Andy Anderson", "fg": "0-0", "ft": "0-0", "reb": 1, "ast": 2, "pf": 1, "pts": 0},
+            {"name": "Matt Sharp", "fg": "3-5", "ft": "0-0", "reb": 0, "ast": 0, "pf": 2, "pts": 6}
+          ]
+        },
+        {
+          "name": "New Mexico Lobos",
+          "score": 65,
+          "players": [
+            {"name": "Marvin McBurrows", "fg": "1-2", "ft": "1-3", "reb": 3, "ast": 3, "pf": 1, "pts": 3},
+            {"name": "Charlie Thomas", "fg": "8-11", "ft": "0-0", "reb": 6, "ast": 2, "pf": 0, "pts": 16},
+            {"name": "Luc Longley", "fg": "4-5", "ft": "3-3", "reb": 6, "ast": 0, "pf": 4, "pts": 11},
+            {"name": "Darrell McGee", "fg": "4-8", "tp": "3-3", "ft": "1-3", "reb": 2, "ast": 7, "pf": 0, "pts": 12},
+            {"name": "Rob Robbins", "fg": "2-5", "tp": "2-2", "ft": "1-1", "reb": 2, "ast": 1, "pf": 5, "pts": 7},
+            {"name": "Kurt Miller", "fg": "0-0", "ft": "0-0", "reb": 1, "ast": 1, "pf": 1, "pts": 0},
+            {"name": "Willie Banks", "fg": "3-7", "tp": "0-2", "ft": "6-8", "reb": 1, "ast": 1, "pf": 1, "pts": 12},
+            {"name": "Rob Loeffel", "fg": "2-3", "ft": "0-0", "reb": 1, "ast": 0, "pf": 2, "pts": 4}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

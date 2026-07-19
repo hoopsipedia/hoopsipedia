@@ -1,0 +1,48 @@
+{
+  "page": 8,
+  "games": [
+    {
+      "date": "1969-12-20",
+      "opponent": "William & Mary",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 92,
+          "players": [
+            {"name": "Chip Case", "fg": "7-16", "ft": "8-10", "reb": 11, "ast": 3, "pf": 3, "to": 4, "blk": 0, "stl": 0, "pts": 22},
+            {"name": "Bill Gerry", "fg": "7-12", "ft": "4-6", "reb": 14, "ast": 0, "pf": 2, "to": 4, "blk": 0, "stl": 0, "pts": 18},
+            {"name": "Scott McCandlish", "fg": "6-13", "ft": "5-11", "reb": 15, "ast": 0, "pf": 2, "to": 0, "blk": 0, "stl": 0, "pts": 17},
+            {"name": "Kevin Kennelly", "fg": "4-5", "ft": "5-6", "reb": 0, "ast": 2, "pf": 3, "to": 4, "blk": 0, "stl": 0, "pts": 13},
+            {"name": "Tim Rash", "fg": "5-10", "ft": "0-2", "reb": 5, "ast": 0, "pf": 0, "to": 2, "blk": 0, "stl": 0, "pts": 10},
+            {"name": "John Hill", "fg": "0-0", "ft": "4-4", "reb": 0, "ast": 0, "pf": 0, "to": 1, "blk": 0, "stl": 0, "pts": 4},
+            {"name": "Frank DeWitt", "fg": "2-3", "ft": "0-0", "reb": 2, "ast": 0, "pf": 1, "to": 0, "blk": 0, "stl": 0, "pts": 4},
+            {"name": "Chip Miller", "fg": "1-3", "ft": "2-2", "reb": 0, "ast": 1, "pf": 0, "to": 2, "blk": 0, "stl": 0, "pts": 4},
+            {"name": "Joe Morahan", "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "to": 1, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Mike Slaysman", "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 1, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Tom Bagby", "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "William & Mary",
+          "score": 72,
+          "players": [
+            {"name": "Tom Jasper", "fg": "1-7", "ft": "1-2", "reb": 2, "ast": 0, "pf": 3, "to": 0, "blk": 0, "stl": 0, "pts": 3},
+            {"name": "Bob Sherwood", "fg": "9-19", "ft": "2-2", "reb": 8, "ast": 1, "pf": 4, "to": 4, "blk": 0, "stl": 0, "pts": 20},
+            {"name": "Mike Schemering", "fg": "4-5", "ft": "0-0", "reb": 5, "ast": 1, "pf": 5, "to": 4, "blk": 0, "stl": 0, "pts": 8},
+            {"name": "Steve Dodge", "fg": "6-16", "ft": "2-3", "reb": 5, "ast": 0, "pf": 2, "to": 2, "blk": 0, "stl": 0, "pts": 14},
+            {"name": "Harry Kent", "fg": "6-19", "ft": "2-4", "reb": 5, "ast": 2, "pf": 3, "to": 1, "blk": 0, "stl": 0, "pts": 14},
+            {"name": "Paul King", "fg": "1-3", "ft": "2-3", "reb": 1, "ast": 2, "pf": 2, "to": 1, "blk": 0, "stl": 0, "pts": 4},
+            {"name": "Neil Gewirtzman", "fg": "0-4", "ft": "0-1", "reb": 1, "ast": 1, "pf": 4, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Jim Warns", "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "David Stout", "fg": "1-1", "ft": "1-2", "reb": 1, "ast": 0, "pf": 1, "to": 0, "blk": 0, "stl": 0, "pts": 3},
+            {"name": "Ray Anderson", "fg": "2-2", "ft": "0-1", "reb": 0, "ast": 0, "pf": 0, "to": 0, "blk": 0, "stl": 0, "pts": 4},
+            {"name": "Jerry Fisher", "fg": "1-1", "ft": "0-0", "reb": 2, "ast": 0, "pf": 2, "to": 0, "blk": 0, "stl": 0, "pts": 2}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": [],
+  "notes": "Printed (computer-generated) team stat sheet, not handwritten. Three players' FT columns were OCR-ambiguous (Tom Jasper, Neil Gewirtzman, David Stout: digits 0/1/7 easily confused in this scan) and were resolved by requiring player pts to equal 2*fg_made+ft_made and team pts sums to match the printed final scores (92-72); all other rows were read directly and unambiguously. Both teams' player-point sums and team FG-made/FT-made sums reconcile exactly against the printed team totals. Minutes ('Min') column was present but printed as 0 for every player on both teams (clearly not recorded/tracked), so it was omitted entirely rather than reported as fabricated zeros. No 3-point column used per pre-1969-70 rules (sheet's '3 Pt' column is always 0-0, an artifact of the stat template)."
+}

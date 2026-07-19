@@ -1,0 +1,52 @@
+{
+  "page": 10,
+  "games": [
+    {
+      "date": "1981-01-07",
+      "date_note": "Scoresheet handwritten date reads 'Jan. 7, 1980' but this is a 1980-81 season compilation and Virginia's listed record (10-0) fits a January 1981 date, so the year is transcribed as 1981.",
+      "opponent": "NC State Wolfpack",
+      "site": "Charlottesville, VA",
+      "teams": [
+        {
+          "name": "NC State Wolfpack",
+          "record": "7-4 (0-3)",
+          "score": 55,
+          "players": [
+            {"name": "Thurl Bailey", "pos": "f", "min": 35, "fg": "3-11", "ft": "2-2", "reb": 7, "pf": 4, "ast": 0, "to": 0, "pts": 8},
+            {"name": "Art Jones", "pos": "f", "min": 32, "fg": "4-9", "ft": "2-2", "reb": 2, "pf": 4, "ast": 4, "to": 5, "pts": 10},
+            {"name": "Craig Watts", "pos": "c", "min": 13, "fg": "1-1", "ft": "0-0", "reb": 2, "pf": 5, "pf_note": "circled on sheet, fouled out", "ast": 0, "to": 0, "pts": 2},
+            {"name": "Sidney Love", "pos": "g", "min": 38, "fg": "5-9", "ft": "1-2", "reb": 3, "pf": 3, "ast": 4, "to": 0, "stl": 4, "pts": 11},
+            {"name": "Derek Whittenburg", "pos": "g", "min": 30, "fg": "5-13", "ft": "0-0", "reb": 3, "pf": 2, "ast": 2, "to": 2, "pts": 10},
+            {"name": "Scott Parczyk", "min": 30, "fg": "3-7", "ft": "2-2", "reb": 4, "pf": 2, "ast": 0, "to": 2, "stl": 1, "pts": 8},
+            {"name": "Kenny Mathews", "min": 15, "fg": "3-10", "ft": "0-0", "reb": 1, "pf": 1, "ast": 2, "to": 0, "stl": 1, "pts": 6},
+            {"name": "Chuck Nevitt", "min": 12, "fg": "0-1", "ft": "0-1", "reb": 1, "pf": 4, "ast": 0, "blk": 1, "pts": 0},
+            {"name": "Harold Thompson", "min": 3, "pf": 0, "ast": 1, "pts": 0},
+            {"name": "Max Perry", "min": 2, "reb": 2, "pf": 0, "ast": 0, "pts": 0}
+          ],
+          "checksum_ok": true
+        },
+        {
+          "name": "Virginia Cavaliers",
+          "record": "10-0 (2-0)",
+          "score": 63,
+          "players": [
+            {"name": "Craig Robinson", "pos": "f", "min": 21, "fg": "1-5", "ft": "4-7", "reb": 7, "pf": 3, "ast": 2, "to": 1, "blk": 1, "stl": 1, "pts": 6},
+            {"name": "Lee Baker", "pos": "f", "min": 31, "fg": "2-7", "ft": "0-0", "reb": 5, "pf": 3, "ast": 2, "to": 0, "pts": 4},
+            {"name": "Ralph Sampson", "pos": "c", "min": 37, "fg": "9-15", "ft": "6-12", "reb": 13, "pf": 2, "ast": 0, "to": 10, "blk": 4, "stl": 1, "pts": 24},
+            {"name": "Jeff Lamp", "pos": "g", "min": 37, "fg": "5-8", "ft": "7-7", "reb": 4, "pf": 1, "ast": 1, "to": 1, "pts": 17},
+            {"name": "Jeff Jones", "pos": "g", "min": 29, "fg": "2-4", "ft": "0-1", "reb": 2, "pf": 2, "ast": 2, "to": 1, "stl": 2, "pts": 4},
+            {"name": "Othell Wilson", "min": 17, "fg": "1-1", "ft": "2-2", "reb": 2, "pf": 1, "ast": 0, "to": 4, "stl": 1, "pts": 4},
+            {"name": "Terry Gates", "min": 16, "fg": "0-2", "ft": "2-2", "reb": 2, "pf": 2, "pts": 2},
+            {"name": "Ricky Stokes", "min": 10, "fg": "0-0", "ft": "2-2", "reb": 2, "pf": 1, "pts": 2},
+            {"name": "Lewis Lattimore", "min": 2, "reb": 1, "pts": 0}
+          ],
+          "checksum_ok": true
+        }
+      ],
+      "final_score_by_periods": {"nc_state": {"1st": 31, "2nd": 24, "final": 55}, "virginia": {"1st": 35, "2nd": 28, "final": 63}},
+      "officials": ["Moser", "Burch", "Cage"],
+      "attendance": 9000
+    }
+  ],
+  "skipped": []
+}

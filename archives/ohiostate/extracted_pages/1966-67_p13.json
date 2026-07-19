@@ -1,0 +1,43 @@
+{
+  "page": 13,
+  "games": [
+    {
+      "date": "1967-01-21",
+      "opponent": "Minnesota",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 60,
+          "players": [
+            {"name": "Sepic", "fg": "5-14", "ft": "2-4", "reb": 10, "pf": 5, "pts": 12},
+            {"name": "Miller", "fg": "8-20", "ft": "0-0", "reb": 9, "pf": 0, "pts": 16},
+            {"name": "Hosket", "fg": "7-12", "ft": "5-8", "reb": 11, "pf": 5, "pts": 19},
+            {"name": "Sadelfeld", "fg": "2-8", "ft": "0-0", "reb": 5, "pf": 3, "pts": 4},
+            {"name": "Schnabel", "fg": "0-2", "ft": "0-0", "reb": 0, "pf": 2, "pts": 0},
+            {"name": "Rowley", "fg": "1-4", "ft": "1-1", "reb": 0, "pf": 1, "pts": 3},
+            {"name": "Howell", "fg": "3-6", "ft": "0-0", "reb": 5, "pf": 4, "pts": 6},
+            {"name": "Barnard", "fg": "0-1", "ft": "0-0", "reb": 1, "pf": 0, "pts": 0},
+            {"name": "McDavid", "fg": "0-0", "ft": "0-0", "reb": 1, "pf": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Minnesota",
+          "score": 67,
+          "players": [
+            {"name": "Presthus", "fg": "2-11", "ft": "4-5", "reb": 8, "pf": 2, "pts": 8},
+            {"name": "Gardner", "fg": "8-12", "ft": "4-5", "reb": 5, "pf": 3, "pts": 20},
+            {"name": "Kondla", "fg": "4-14", "ft": "6-11", "reb": 15, "pf": 3, "pts": 14},
+            {"name": "Barry", "fg": "5-11", "ft": "3-4", "reb": 5, "pf": 2, "pts": 13},
+            {"name": "Miller", "fg": "1-4", "ft": "8-9", "reb": 4, "pf": 0, "pts": 10},
+            {"name": "Moore", "fg": "0-1", "ft": "2-2", "reb": 1, "pf": 0, "pts": 2},
+            {"name": "Johnson", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 1, "pts": 0},
+            {"name": "Stephens", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Litten", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

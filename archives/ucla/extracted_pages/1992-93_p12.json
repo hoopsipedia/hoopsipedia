@@ -1,0 +1,45 @@
+{
+  "page": 12,
+  "games": [
+    {
+      "date": "1993-01-07",
+      "opponent": "Arizona",
+      "ucla_score": 80,
+      "opp_score": 82,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 80,
+          "players": [
+            {"name": "Butler, Mitchell", "min": 36, "fg": "2-7", "ft": "2-2", "tp": "2-3", "reb": 9, "ast": 3, "pf": 2, "to": 6, "stl": 0, "blk": 0, "pts": 8},
+            {"name": "O'Bannon, Ed", "min": 37, "fg": "10-13", "ft": "6-11", "tp": "3-3", "reb": 5, "ast": 0, "pf": 2, "to": 2, "stl": 2, "blk": 1, "pts": 29},
+            {"name": "Petruska, Richard", "min": 25, "fg": "4-8", "ft": "2-5", "tp": "0-0", "reb": 3, "ast": 2, "pf": 5, "to": 4, "stl": 0, "blk": 1, "pts": 10},
+            {"name": "Tarver, Shon", "min": 33, "fg": "5-15", "ft": "2-3", "tp": "0-1", "reb": 6, "ast": 1, "pf": 1, "to": 2, "stl": 1, "blk": 0, "pts": 12},
+            {"name": "Edney, Tyus", "min": 38, "fg": "5-7", "ft": "4-4", "tp": "1-3", "reb": 2, "ast": 7, "pf": 1, "to": 1, "stl": 5, "blk": 0, "pts": 15},
+            {"name": "Zidek, Jiri", "min": 12, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 1, "ast": 1, "pf": 1, "to": 2, "stl": 1, "blk": 0, "pts": 0},
+            {"name": "Dempsey, Kevin", "min": 11, "fg": "2-3", "ft": "1-2", "tp": "1-1", "reb": 1, "ast": 1, "pf": 0, "to": 2, "stl": 0, "blk": 1, "pts": 6},
+            {"name": "Zimmerman, Rodney", "min": 11, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 1, "ast": 1, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Burns, Marquis", "min": 1, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Arizona Wildcats",
+          "score": 82,
+          "players": [
+            {"name": "Owes, Ray", "min": 19, "fg": "3-7", "ft": "2-2", "tp": "0-0", "reb": 5, "ast": 2, "pf": 4, "to": 1, "stl": 2, "blk": 0, "pts": 8},
+            {"name": "Mills, Chris", "min": 37, "fg": "13-18", "ft": "0-0", "tp": "1-3", "reb": 4, "ast": 1, "pf": 2, "to": 2, "stl": 0, "blk": 1, "pts": 27},
+            {"name": "Stokes, Ed", "min": 34, "fg": "5-8", "ft": "2-5", "tp": "0-0", "reb": 6, "ast": 11, "pf": 4, "to": 0, "stl": 3, "blk": 0, "pts": 12},
+            {"name": "Stoudamire, Damon", "min": 34, "fg": "4-8", "ft": "0-0", "tp": "2-4", "reb": 3, "ast": 2, "pf": 2, "to": 0, "stl": 3, "blk": 0, "pts": 10},
+            {"name": "Reeves, Khalid", "min": 34, "fg": "5-10", "ft": "0-0", "tp": "2-5", "reb": 3, "ast": 4, "pf": 2, "to": 3, "stl": 2, "blk": 0, "pts": 12},
+            {"name": "Blair, Joseph", "min": 17, "fg": "3-4", "ft": "0-0", "tp": "0-0", "reb": 3, "ast": 0, "pf": 2, "to": 3, "stl": 0, "blk": 0, "pts": 6},
+            {"name": "Geary, Reggie", "min": 12, "fg": "0-0", "ft": "0-2", "tp": "0-0", "reb": 0, "ast": 4, "pf": 0, "to": 1, "stl": 2, "blk": 0, "pts": 0},
+            {"name": "McLean, Joe", "min": 15, "fg": "1-5", "ft": "1-2", "tp": "0-1", "reb": 1, "ast": 0, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 3},
+            {"name": "Bohannon, Eldric", "min": 8, "fg": "2-2", "ft": "0-0", "tp": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 4}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

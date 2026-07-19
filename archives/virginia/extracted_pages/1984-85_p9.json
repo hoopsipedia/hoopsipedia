@@ -1,0 +1,44 @@
+{
+  "page": 9,
+  "games": [
+    {
+      "date": "1984-12-27",
+      "opponent": "Penn State",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 66,
+          "players": [
+            {"name": "Jim Miller", "fg": "1-9", "ft": "1-2", "reb": 5, "ast": 1, "pf": 1, "to": 2, "stl": 0, "blk": 1, "pts": 3, "min": 23},
+            {"name": "John Johnson", "fg": "1-4", "ft": "0-0", "reb": 0, "ast": 3, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 2, "min": 21},
+            {"name": "Tim Sheehey", "fg": "3-5", "ft": "1-2", "reb": 4, "ast": 1, "pf": 4, "to": 3, "stl": 0, "blk": 0, "pts": 7, "min": 23},
+            {"name": "Tim Mullen", "fg": "3-7", "ft": "0-1", "reb": 5, "ast": 3, "pf": 2, "to": 6, "stl": 0, "blk": 0, "pts": 6, "min": 32},
+            {"name": "Dan Merrifield", "fg": "2-4", "ft": "0-0", "reb": 5, "ast": 0, "pf": 4, "to": 3, "stl": 1, "blk": 1, "pts": 4, "min": 22},
+            {"name": "Derrick Simms", "fg": "3-4", "ft": "4-4", "reb": 7, "ast": 3, "pf": 3, "to": 1, "stl": 1, "blk": 0, "pts": 10, "min": 27},
+            {"name": "Olden Polynice", "fg": "9-12", "ft": "7-11", "reb": 8, "ast": 0, "pf": 3, "to": 3, "stl": 1, "blk": 1, "pts": 25, "min": 26},
+            {"name": "Mel Kennedy", "fg": "2-6", "ft": "4-6", "reb": 6, "ast": 1, "pf": 4, "to": 5, "stl": 0, "blk": 0, "pts": 8, "min": 22},
+            {"name": "John Dyslin", "fg": "0-0", "ft": "1-2", "reb": 0, "ast": 0, "pf": 1, "to": 1, "stl": 1, "blk": 0, "pts": 1, "min": 4}
+          ]
+        },
+        {
+          "name": "Penn State",
+          "score": 54,
+          "players": [
+            {"name": "Dwight Gibson", "fg": "3-11", "ft": "5-6", "pts": 11},
+            {"name": "Terry Graves", "fg": "4-11", "ft": "2-3", "pts": 10},
+            {"name": "Craig Collins", "fg": "4-5", "ft": "3-3", "pts": 11},
+            {"name": "Carl Schaefer", "fg": "3-5", "ft": "2-3", "pts": 8},
+            {"name": "Tim Newcomer", "fg": "1-4", "ft": "2-2", "pts": 4},
+            {"name": "Bill Pollock", "fg": "1-1", "ft": "2-2", "pts": 4},
+            {"name": "Paul Murphy", "fg": "0-0", "ft": "0-0", "pts": 0},
+            {"name": "Tony Ward", "fg": "1-6", "ft": "1-2", "pts": 3},
+            {"name": "Mike Peapos", "fg": "1-5", "ft": "1-7", "pts": 3},
+            {"name": "Troy Daniel", "fg": "0-0", "ft": "0-0", "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

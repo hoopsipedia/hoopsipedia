@@ -1,0 +1,45 @@
+{
+  "page": 22,
+  "games": [
+    {
+      "date": "1984-02-15",
+      "opponent": "Virginia Tech",
+      "site": "Richmond, VA",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 54,
+          "players": [
+            {"name": "Jim Miller", "min": 34, "fg": "5-10", "ft": "0-0", "reb": 5, "ast": 1, "pf": 1, "to": 3, "stl": 1, "pts": 10},
+            {"name": "Rick Carlisle", "min": 25, "fg": "5-12", "ft": "3-3", "reb": 3, "ast": 1, "pf": 1, "to": 1, "stl": 1, "pts": 13},
+            {"name": "Kenton Edelin", "min": 29, "fg": "0-2", "ft": "0-0", "reb": 9, "ast": 1, "pf": 4, "to": 1, "stl": 1, "pts": 0},
+            {"name": "Othell Wilson", "min": 35, "fg": "2-10", "ft": "4-7", "reb": 4, "ast": 5, "pf": 2, "to": 5, "stl": 7, "blk": 1, "pts": 8},
+            {"name": "Ricky Stokes", "min": 30, "fg": "3-4", "ft": "2-2", "reb": 1, "ast": 2, "pf": 4, "to": 2, "stl": 2, "pts": 8},
+            {"name": "Olden Polynice", "min": 25, "fg": "6-9", "ft": "1-3", "reb": 5, "pf": 3, "pts": 13},
+            {"name": "Tim Mullen", "min": 8, "fg": "0-1", "ft": "0-0", "reb": 1, "ast": 2, "pf": 1, "pts": 0},
+            {"name": "Tom Sheehey", "min": 6, "fg": "0-2", "ft": "0-0", "reb": 0, "ast": 1, "pf": 0, "to": 1, "pts": 0},
+            {"name": "Dan Merrifield", "min": 8, "fg": "1-3", "ft": "0-0", "reb": 0, "ast": 1, "pf": 3, "pts": 2}
+          ]
+        },
+        {
+          "name": "Virginia Tech",
+          "score": 56,
+          "players": [
+            {"name": "Perry Young", "min": 39, "fg": "10-14", "ft": "6-8", "reb": 3, "ast": 1, "pf": 1, "to": 7, "stl": 2, "pts": 26},
+            {"name": "John Dixon", "min": 26, "fg": "2-4", "ft": "0-0", "reb": 7, "pf": 3, "pts": 4},
+            {"name": "Bobby Beecher", "min": 35, "fg": "3-8", "ft": "2-3", "reb": 3, "ast": 1, "pf": 3, "to": 4, "stl": 1, "blk": 2, "pts": 8},
+            {"name": "Al Young", "min": 33, "fg": "1-4", "ft": "1-2", "reb": 0, "ast": 2, "pf": 2, "to": 1, "stl": 2, "pts": 3},
+            {"name": "Deil Curry", "min": 27, "fg": "3-5", "ft": "0-0", "reb": 4, "ast": 1, "pf": 3, "to": 6, "stl": 2, "pts": 6},
+            {"name": "Tim Lewis", "min": 19, "fg": "2-2", "ft": "0-0", "reb": 2, "pf": 1, "pts": 4},
+            {"name": "Keith Colbert", "min": 19, "fg": "1-3", "ft": "3-3", "reb": 2, "pf": 4, "to": 2, "pts": 5},
+            {"name": "Phil Williams", "min": 1, "fg": "0-1", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Ron Evgrhart", "min": 1, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 1, "pf": 1, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true,
+      "notes": "Score by periods: Va Tech 23+33=56, Virginia 18+36=54. Both team player-point sums match final scores exactly."
+    }
+  ],
+  "skipped": []
+}

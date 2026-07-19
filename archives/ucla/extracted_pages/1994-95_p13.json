@@ -1,0 +1,45 @@
+{
+  "page": 13,
+  "games": [
+    {
+      "date": "1995-01-26",
+      "opponent": "Stanford",
+      "ucla_score": 77,
+      "opp_score": 74,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 77,
+          "players": [
+            {"name": "Ed O'Bannon", "min": 32, "fg": "9-17", "tp": "1-2", "ft": "4-6", "reb": 6, "ast": 1, "to": 2, "blk": 1, "stl": 0, "pf": 4, "pts": 23},
+            {"name": "Charles O'Bannon", "min": 36, "fg": "3-8", "tp": "0-1", "ft": "3-5", "reb": 10, "ast": 4, "to": 5, "blk": 1, "stl": 1, "pf": 2, "pts": 9},
+            {"name": "George Zidek", "min": 33, "fg": "5-12", "tp": "1-1", "ft": "6-7", "reb": 6, "ast": 1, "to": 0, "blk": 1, "stl": 0, "pf": 4, "pts": 17},
+            {"name": "J.R. Henderson", "min": 28, "fg": "1-7", "tp": "0-0", "ft": "3-4", "reb": 10, "ast": 0, "to": 2, "blk": 2, "stl": 0, "pf": 2, "pts": 5},
+            {"name": "Tyus Edney", "min": 33, "fg": "4-7", "tp": "1-1", "ft": "5-7", "reb": 6, "ast": 6, "to": 2, "blk": 2, "stl": 2, "pf": 4, "pts": 14},
+            {"name": "Toby Bailey", "min": 19, "fg": "1-7", "tp": "0-2", "ft": "1-6", "reb": 5, "ast": 0, "to": 1, "blk": 0, "stl": 1, "pf": 2, "pts": 3},
+            {"name": "Ike Nwankwo", "min": 7, "fg": "3-5", "tp": "0-0", "ft": "0-2", "reb": 5, "ast": 1, "to": 0, "blk": 1, "stl": 0, "pf": 2, "pts": 6},
+            {"name": "Cameron Dollar", "min": 12, "fg": "0-1", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 1, "to": 1, "blk": 1, "stl": 1, "pf": 4, "pts": 0}
+          ]
+        },
+        {
+          "name": "Stanford Cardinal",
+          "score": 74,
+          "players": [
+            {"name": "Andy Poppink", "min": 21, "fg": "5-7", "tp": "1-1", "ft": "5-7", "reb": 6, "ast": 2, "to": 2, "blk": 0, "stl": 0, "pf": 5, "pts": 16},
+            {"name": "Darren Allaway", "min": 26, "fg": "3-4", "tp": "0-0", "ft": "2-4", "reb": 5, "ast": 0, "to": 3, "blk": 0, "stl": 1, "pf": 5, "pts": 8},
+            {"name": "Tim Young", "min": 19, "fg": "3-4", "tp": "0-0", "ft": "2-3", "reb": 3, "ast": 0, "to": 0, "blk": 1, "stl": 1, "pf": 5, "pts": 8},
+            {"name": "Dion Cross", "min": 32, "fg": "7-19", "tp": "6-10", "ft": "4-6", "reb": 1, "ast": 1, "to": 0, "blk": 0, "stl": 0, "pf": 2, "pts": 24},
+            {"name": "Brevin Knight", "min": 31, "fg": "3-13", "tp": "2-5", "ft": "4-5", "reb": 1, "ast": 5, "to": 3, "blk": 0, "stl": 1, "pf": 5, "pts": 12},
+            {"name": "David Harbour", "min": 29, "fg": "2-7", "tp": "0-2", "ft": "2-2", "reb": 3, "ast": 4, "to": 3, "blk": 0, "stl": 0, "pf": 6, "pts": 6},
+            {"name": "Bart Lammersen", "min": 26, "fg": "0-4", "tp": "0-0", "ft": "0-1", "reb": 5, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pf": 2, "pts": 0},
+            {"name": "Warren Gravely", "min": 9, "fg": "0-1", "tp": "0-1", "ft": "0-1", "reb": 1, "ast": 2, "to": 1, "blk": 0, "stl": 1, "pf": 0, "pts": 0},
+            {"name": "Rich Jackson", "min": 6, "fg": "0-2", "tp": "0-1", "ft": "0-0", "reb": 1, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pf": 1, "pts": 0},
+            {"name": "Todd Manley", "min": 1, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pf": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

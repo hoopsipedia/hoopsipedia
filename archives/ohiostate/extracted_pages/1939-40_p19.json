@@ -1,0 +1,9 @@
+{
+  "page": 19,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page 19 holds one game's box score: Ohio State 51, Michigan 32, played Mar. 2 (1939-40 season) at the Coliseum, attendance 4,658, OSU captain Lynch, manager Scharff, coach Olsen (all legible from the header/footer strips). However, the player stat table for both teams is too degraded/misaligned to transcribe confidently: e.g. Capt. Bob Lynch's row shows 0 field goals in the table even though the narrative recap explicitly states he 'bombed the nets for 16 points on eight baskets,' indicating the numeric columns are shifted or misread relative to the player-name rows. Similar inconsistencies appear elsewhere in the Ohio State and Michigan tables (e.g. narrative says only Goss made Ohio's free throws worth 3 total points, but the raw table shows nonzero free-throw-like values on multiple other rows). Because the column alignment cannot be resolved with confidence from the available render and a checksum against the 51/32 final scores cannot be reliably confirmed, per-player lines are skipped rather than guessed."
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "page": 20,
+  "games": [
+    {
+      "date": "1983-02-05",
+      "opponent": "Hawaii",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 90,
+          "players": [
+            {"name": "Tim Garrett", "min": 34, "fg": "8-10", "ft": "13-15", "reb": 6, "pf": 2, "ast": 1, "to": 3, "blk": 1, "pts": 29},
+            {"name": "Alan Dolensky", "min": 31, "fg": "2-6", "ft": "2-6", "reb": 7, "pf": 4, "ast": 5, "to": 5, "blk": 0, "stl": 1, "pts": 6},
+            {"name": "George Scott", "min": 38, "fg": "6-7", "ft": "1-3", "reb": 8, "pf": 3, "ast": 1, "to": 1, "blk": 0, "pts": 13},
+            {"name": "Niles Dockery", "min": 29, "fg": "3-10", "ft": "6-8", "reb": 0, "pf": 4, "ast": 3, "to": 2, "blk": 0, "stl": 1, "pts": 12},
+            {"name": "Michael Johnson", "min": 35, "fg": "8-12", "ft": "3-6", "reb": 8, "pf": 2, "ast": 3, "to": 2, "blk": 0, "stl": 1, "pts": 19},
+            {"name": "Nelson Franse", "min": 3, "fg": "0-0", "ft": "2-2", "reb": 1, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Tim Fullmer", "min": 19, "fg": "2-3", "ft": "1-2", "reb": 5, "pf": 0, "ast": 1, "to": 4, "blk": 1, "stl": 0, "pts": 5},
+            {"name": "Don Brkovich", "min": 3, "fg": "0-1", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Craig Allison", "min": 8, "fg": "1-1", "ft": "2-2", "reb": 1, "pf": 2, "ast": 0, "to": 0, "blk": 0, "stl": 1, "pts": 4}
+          ]
+        },
+        {
+          "name": "Hawaii",
+          "score": 83,
+          "players": [
+            {"name": "Greg Hicks", "min": 26, "fg": "4-6", "ft": "0-0", "reb": 4, "pf": 5, "ast": 2, "to": 2, "blk": 2, "stl": 0, "pts": 8},
+            {"name": "Bobby Hancock", "min": 26, "fg": "5-12", "ft": "5-7", "reb": 6, "pf": 4, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pts": 15},
+            {"name": "Roque Harris", "min": 21, "fg": "2-4", "ft": "2-2", "reb": 4, "pf": 1, "ast": 0, "to": 3, "blk": 0, "stl": 0, "pts": 6},
+            {"name": "Tony Webster", "min": 32, "fg": "10-24", "ft": "3-4", "reb": 8, "pf": 2, "ast": 3, "to": 2, "blk": 0, "stl": 0, "pts": 23},
+            {"name": "William Colston", "min": 26, "fg": "2-9", "ft": "0-0", "reb": 3, "pf": 2, "ast": 3, "to": 0, "blk": 0, "stl": 3, "pts": 4},
+            {"name": "Crosetti Speight", "min": 16, "fg": "1-3", "ft": "0-0", "reb": 1, "pf": 5, "ast": 1, "to": 0, "blk": 0, "stl": 1, "pts": 2},
+            {"name": "Dan Hale", "min": 19, "fg": "1-7", "ft": "0-0", "reb": 3, "pf": 3, "ast": 2, "to": 1, "blk": 0, "stl": 1, "pts": 2},
+            {"name": "Sam Johnson", "min": 13, "fg": "4-6", "ft": "2-3", "reb": 1, "pf": 4, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 10},
+            {"name": "Garland Hughes", "min": 1, "fg": "0-0", "ft": "0-0", "reb": 1, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Jack Miller", "min": 12, "fg": "4-6", "ft": "3-4", "reb": 5, "pf": 5, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pts": 11},
+            {"name": "Larry Conners", "min": 7, "fg": "1-4", "ft": "0-0", "reb": 3, "pf": 2, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Bill Mosier", "min": 1, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 1, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

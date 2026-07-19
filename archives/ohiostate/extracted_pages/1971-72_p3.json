@@ -1,0 +1,43 @@
+{
+  "page": 3,
+  "games": [
+    {
+      "date": "1971-12-04",
+      "opponent": "Oregon",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 68,
+          "players": [
+            {"name": "Wagar", "fg": "3-7", "ft": "3-4", "reb": 4, "pf": 2, "pts": 9},
+            {"name": "Minor", "fg": "5-9", "ft": "0-0", "reb": 9, "pf": 3, "pts": 10},
+            {"name": "Witte", "fg": "8-10", "ft": "5-8", "reb": 8, "pf": 1, "pts": 21},
+            {"name": "Merchant", "fg": "3-8", "ft": "4-4", "reb": 3, "pf": 4, "pts": 10},
+            {"name": "Gerhard", "fg": "1-6", "ft": "0-0", "reb": 7, "pf": 0, "pts": 2},
+            {"name": "Siekmann", "fg": "3-7", "ft": "8-9", "reb": 2, "pf": 2, "pts": 14},
+            {"name": "Jackson", "fg": "0-2", "ft": "2-2", "reb": 2, "pf": 0, "pts": 2},
+            {"name": "Repella", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Allison", "fg": "0-1", "ft": "0-0", "reb": 1, "pf": 0, "pts": 0},
+            {"name": "Kiracofe", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 1, "pts": 0}
+          ]
+        },
+        {
+          "name": "Oregon",
+          "score": 57,
+          "players": [
+            {"name": "Ingram", "fg": "3-9", "ft": "4-4", "reb": 5, "pf": 2, "pts": 10},
+            {"name": "Blair", "fg": "5-10", "ft": "0-1", "reb": 4, "pf": 5, "pts": 10},
+            {"name": "Little", "fg": "6-15", "ft": "4-6", "reb": 7, "pf": 4, "pts": 16},
+            {"name": "Thompson", "fg": "1-6", "ft": "0-0", "reb": 0, "pf": 0, "pts": 2},
+            {"name": "Strand", "fg": "6-10", "ft": "4-5", "reb": 2, "pf": 4, "pts": 16},
+            {"name": "Sunderland", "fg": "0-0", "ft": "0-0", "reb": 4, "pf": 2, "pts": 0},
+            {"name": "Reynolds", "fg": "1-1", "ft": "1-1", "reb": 0, "pf": 3, "pts": 3},
+            {"name": "Broussard", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

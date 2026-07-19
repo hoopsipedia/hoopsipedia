@@ -1,0 +1,41 @@
+{
+  "page": 26,
+  "games": [
+    {
+      "date": "1971-03-06",
+      "opponent": "Arizona Wildcats",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 93,
+          "players": [
+            {"name": "Stewart", "fg": "2-3", "ft": "0-1", "reb": 3, "pf": 2, "pts": 4},
+            {"name": "Little", "fg": "0-4", "ft": "3-3", "reb": 2, "pf": 3, "pts": 3, "ast": 1},
+            {"name": "Faulkner", "fg": "12-20", "ft": "3-6", "reb": 7, "pf": 3, "pts": 27, "ast": 1},
+            {"name": "Long", "fg": "10-21", "ft": "9-14", "reb": 30, "pf": 4, "pts": 29, "ast": 2},
+            {"name": "Gibson", "fg": "4-7", "ft": "4-5", "reb": 7, "pf": 2, "pts": 12, "ast": 5},
+            {"name": "Johnson", "fg": "3-8", "ft": "4-4", "reb": 5, "pf": 4, "pts": 10},
+            {"name": "Roberts", "fg": "1-1", "ft": "0-0", "reb": 1, "pf": 0, "pts": 2, "ast": 2},
+            {"name": "Wright", "fg": "2-4", "ft": "2-2", "reb": 1, "pf": 1, "pts": 6}
+          ]
+        },
+        {
+          "name": "Arizona Wildcats",
+          "score": 83,
+          "players": [
+            {"name": "Warner", "fg": "9-28", "ft": "7-11", "reb": 8, "pf": 3, "pts": 25, "ast": 6},
+            {"name": "Lee", "fg": "1-4", "ft": "3-4", "reb": 7, "pf": 5, "pts": 5},
+            {"name": "Myers", "fg": "6-13", "ft": "2-2", "reb": 11, "pf": 4, "pts": 14},
+            {"name": "McKinney", "fg": "3-8", "ft": "3-4", "reb": 2, "pf": 2, "pts": 9, "ast": 3},
+            {"name": "Ugrin", "fg": "2-5", "ft": "0-0", "reb": 3, "pf": 3, "pts": 4},
+            {"name": "Mitchell", "fg": "4-8", "ft": "4-4", "reb": 2, "pf": 2, "pts": 12, "ast": 8},
+            {"name": "Huckstein", "fg": "7-9", "ft": "0-0", "reb": 0, "pf": 2, "pts": 14, "ast": 1},
+            {"name": "Edwards", "fg": "0-1", "ft": "0-0", "reb": 2, "pf": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

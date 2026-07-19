@@ -1,0 +1,9 @@
+{
+  "page": 3,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Newspaper clipping (Dec 6, 1948 vs Marquette, OSU won 72-47 per headline/article text) contains a two-column player box score table, but the scan is too low-resolution/blurry to reliably OCR the individual player stat lines. Re-reading the page produced inconsistent digit readings for the same rows (e.g. team totals read as '19 20 47' on one pass and '18 11 12' on another), and player names/team assignment between the two side-by-side tables (Marquette vs Ohio State) could not be confidently disambiguated. Skipping rather than guessing per instructions; final team score (Ohio State 72, Marquette 47) is legible from the headline/summary text but individual player lines and per-team checksums cannot be verified confidently."
+    }
+  ]
+}

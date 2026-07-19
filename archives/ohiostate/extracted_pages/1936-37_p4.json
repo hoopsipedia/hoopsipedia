@@ -1,0 +1,9 @@
+{
+  "page": 4,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page shows a single team's box score only: Ohio State vs. California, Dec. 26 1936, Berkeley, coach Olsen, score Ohio 31 - Opp 33 (attendance 3,000, captain Tippy Dye). Only Ohio State's 8 player lines are present (McDonald, Hull, Baker, Ritchell, Thomas, Raudabaugh, Dye, Prewitt) with columns G (field goals made), FT (free throws made), PF, TP. Ohio State's own totals checksum correctly (2*FG+FT sums to 31, matching the team score), but California's player lines are not on this page (likely on a companion page not included in this single-page read), so a complete two-team game entry cannot be built without guessing the opponent's lineup. Skipped rather than fabricate the opponent side."
+    }
+  ]
+}

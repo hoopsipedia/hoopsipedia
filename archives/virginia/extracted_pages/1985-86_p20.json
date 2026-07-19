@@ -1,0 +1,45 @@
+{
+  "page": 20,
+  "games": [
+    {
+      "date": "1986-02-06",
+      "opponent": "Duke Blue Devils",
+      "teams": [
+        {
+          "name": "Duke Blue Devils",
+          "score": 77,
+          "players": [
+            {"name": "Alarie, Mark", "min": 34, "fg": "5-12", "ft": "6-7", "pts": 16},
+            {"name": "Henderson, David", "min": 31, "fg": "9-14", "ft": "2-4", "pts": 20},
+            {"name": "Bilas, Jay", "min": 26, "fg": "3-6", "ft": "2-4", "pts": 8},
+            {"name": "Amaker, Tommy", "min": 26, "fg": "1-2", "ft": "5-6", "pts": 7},
+            {"name": "Dawkins, Johnny", "min": 36, "fg": "9-15", "ft": "2-3", "pts": 20},
+            {"name": "King, Billy", "fg": "0-2", "ft": "0-0", "pts": 0},
+            {"name": "Ferry, Danny", "min": 18, "fg": "2-6", "ft": "0-0", "pts": 4},
+            {"name": "Snyder, Quin", "min": 15, "fg": "1-1", "ft": "0-0", "pts": 2},
+            {"name": "Smith, John", "min": 1, "pts": 0},
+            {"name": "Williams, Weldon", "min": 1, "pts": 0},
+            {"name": "Strickland, Kevin", "pts": 0}
+          ]
+        },
+        {
+          "name": "Virginia Cavaliers",
+          "score": 65,
+          "players": [
+            {"name": "Kennedy, Andrew", "min": 36, "fg": "5-7", "ft": "2-9", "pts": 12},
+            {"name": "Sheehey, Tom", "min": 13, "fg": "0-3", "ft": "0-0", "pts": 0},
+            {"name": "Polynice, Olden", "min": 37, "fg": "1-5", "ft": "5-8", "pts": 7},
+            {"name": "Calloway, Tom", "min": 19, "fg": "3-6", "ft": "2-2", "pts": 8},
+            {"name": "Kennedy, Mel", "min": 38, "fg": "8-15", "ft": "7-10", "pts": 23},
+            {"name": "Johnson, John", "min": 29, "fg": "1-9", "ft": "2-2", "pts": 4},
+            {"name": "Dyslin, John", "min": 5, "pts": 0},
+            {"name": "Morgan, Richard", "min": 21, "fg": "4-8", "ft": "3-3", "pts": 11},
+            {"name": "Simms, Darrick", "min": 2, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

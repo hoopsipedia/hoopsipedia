@@ -1,0 +1,41 @@
+{
+  "page": 27,
+  "games": [
+    {
+      "date": "1986-02-27",
+      "opponent": "Hawaii Rainbows",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 65,
+          "players": [
+            {"name": "Johnny Brown", "min": 40, "fg": "6-13", "ft": "7-11", "reb": 8, "ast": 4, "pf": 2, "to": 3, "blk": 0, "pts": 19},
+            {"name": "Mike Winters", "min": 27, "fg": "1-6", "ft": "0-0", "reb": 3, "ast": 2, "pf": 4, "to": 2, "blk": 0, "stl": 1, "pts": 2},
+            {"name": "Robert Loeffel", "min": 27, "fg": "3-5", "ft": "4-4", "reb": 2, "ast": 0, "pf": 2, "to": 1, "blk": 1, "stl": 0, "pts": 10},
+            {"name": "Kelvin Scarborough", "min": 39, "fg": "6-11", "ft": "4-5", "reb": 6, "ast": 4, "pf": 2, "to": 4, "blk": 0, "stl": 3, "pts": 16},
+            {"name": "Kelly Graves", "min": 37, "fg": "7-12", "ft": "1-1", "reb": 3, "ast": 2, "pf": 0, "to": 3, "blk": 0, "stl": 3, "pts": 15},
+            {"name": "Paul Lawson", "min": 11, "fg": "1-1", "ft": "0-0", "reb": 1, "ast": 0, "pf": 3, "to": 2, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Larry Markland", "min": 11, "fg": "0-1", "ft": "0-2", "reb": 4, "ast": 1, "pf": 2, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Brian Parker", "min": 8, "fg": "0-1", "ft": "1-4", "reb": 2, "ast": 0, "pf": 2, "to": 1, "blk": 0, "stl": 0, "pts": 1}
+          ]
+        },
+        {
+          "name": "Hawaii Rainbows",
+          "score": 64,
+          "players": [
+            {"name": "Kenny Walker", "min": 40, "fg": "8-16", "ft": "5-5", "reb": 4, "ast": 4, "pf": 4, "to": 3, "blk": 0, "stl": 3, "pts": 21},
+            {"name": "Anthony Jones", "min": 37, "fg": "5-12", "ft": "3-5", "reb": 13, "ast": 0, "pf": 4, "to": 3, "blk": 0, "pts": 13},
+            {"name": "Rick Domonkos", "min": 24, "fg": "1-4", "ft": "0-0", "reb": 6, "ast": 1, "pf": 4, "to": 3, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Keith Turner", "min": 40, "fg": "9-17", "ft": "0-1", "reb": 2, "ast": 1, "pf": 2, "to": 2, "blk": 0, "stl": 1, "pts": 18},
+            {"name": "Jerald Wrightsil", "min": 40, "fg": "5-12", "ft": "0-0", "reb": 6, "ast": 1, "pf": 2, "to": 3, "blk": 1, "stl": 3, "pts": 10},
+            {"name": "Richard Jardine", "min": 3, "fg": "0-1", "ft": "0-0", "reb": 1, "ast": 0, "pf": 1, "to": 1, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "John Gabriel", "min": 16, "fg": "0-1", "ft": "0-0", "reb": 2, "ast": 1, "pf": 5, "to": 3, "blk": 1, "stl": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": [],
+  "notes": "reb = combined offensive+defensive rebounds from sheet's split REB(o)/REB(d) columns. Some steals (stl) values omitted where faint/illegible on the scan (e.g. Anthony Jones, Johnny Brown) rather than guessed. Date on scoresheet handwritten '2/27/86' (consistent with 1985-86 season, printed year cell shows '26' as a scan/handwriting slip). Home team New Mexico won 65-64."
+}

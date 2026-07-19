@@ -1,0 +1,40 @@
+{
+  "page": 33,
+  "games": [
+    {
+      "date": "1987-03-06",
+      "opponent": "BYU",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 93,
+          "players": [
+            {"name": "Hunter Greene", "min": 39, "pts": 19},
+            {"name": "Mike Winters", "min": 35, "pts": 12},
+            {"name": "Rob Loeffel", "min": 33, "pts": 27},
+            {"name": "Kellogg Scarborough", "min": 38, "pts": 21},
+            {"name": "Paul Garner", "min": 32, "pts": 5},
+            {"name": "Andre McGee", "min": 12, "pts": 0},
+            {"name": "Clyde Adams", "min": 11, "pts": 9}
+          ]
+        },
+        {
+          "name": "BYU Cougars",
+          "score": 86,
+          "players": [
+            {"name": "Jeff Chatman", "min": 37, "pts": 24},
+            {"name": "Michael Smith", "min": 34, "pts": 26},
+            {"name": "Tim Cheatum", "min": 19, "pts": 9},
+            {"name": "Nathan Call", "min": 31, "pts": 7},
+            {"name": "Bob Gardner", "min": 36, "pts": 10},
+            {"name": "Matt Haws", "min": 5, "pts": 0},
+            {"name": "Brent Stephenson", "min": 14, "pts": 2},
+            {"name": "Jon Usevitch", "min": 16, "pts": 8}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

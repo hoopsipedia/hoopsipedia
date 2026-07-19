@@ -1,0 +1,54 @@
+{
+  "page": 9,
+  "games": [
+    {
+      "date": "1975-01-04",
+      "opponent": "Oklahoma",
+      "ucla_score": 111,
+      "opp_score": 66,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 111,
+          "players": [
+            {"name": "Washington", "fg": "8-9", "ft": "1-2", "reb": 6, "ast": 5, "pf": 2, "pts": 17},
+            {"name": "Meyers", "fg": "5-14", "ft": "4-4", "reb": 6, "ast": 3, "pf": 2, "pts": 14},
+            {"name": "Drollinger", "fg": "4-10", "ft": "2-4", "reb": 8, "ast": 1, "pf": 4, "pts": 10},
+            {"name": "Trgovich", "fg": "4-11", "ft": "0-0", "reb": 4, "ast": 5, "pf": 1, "pts": 8},
+            {"name": "McCarter", "fg": "0-2", "ft": "0-0", "reb": 2, "ast": 3, "pf": 0, "pts": 0},
+            {"name": "Spillane", "fg": "4-6", "ft": "0-0", "reb": 0, "ast": 6, "pf": 1, "pts": 8},
+            {"name": "Johnson", "fg": "7-10", "ft": "0-0", "reb": 8, "ast": 3, "pf": 3, "pts": 14},
+            {"name": "Olinde", "fg": "3-5", "ft": "0-0", "reb": 4, "ast": 0, "pf": 0, "pts": 6},
+            {"name": "Corliss", "fg": "4-5", "ft": "2-2", "reb": 2, "ast": 3, "pf": 0, "pts": 10},
+            {"name": "Smith", "fg": "4-8", "ft": "0-0", "reb": 5, "ast": 3, "pf": 1, "pts": 8},
+            {"name": "Vroman", "fg": "3-3", "ft": "8-8", "reb": 4, "ast": 1, "pf": 1, "pts": 14},
+            {"name": "Townsend", "fg": "0-2", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "pts": 0},
+            {"name": "Thomas", "fg": "1-1", "ft": "0-0", "reb": 1, "ast": 0, "pf": 0, "pts": 2}
+          ]
+        },
+        {
+          "name": "Oklahoma Sooners",
+          "score": 66,
+          "players": [
+            {"name": "Gordon", "fg": "0-3", "ft": "0-0", "reb": 2, "ast": 2, "pf": 1, "pts": 0},
+            {"name": "Pritchard", "fg": "5-10", "ft": "1-2", "reb": 3, "ast": 2, "pf": 4, "pts": 11},
+            {"name": "Adams", "fg": "10-28", "ft": "5-6", "reb": 11, "ast": 6, "pf": 3, "pts": 25},
+            {"name": "Fields", "fg": "1-3", "ft": "0-0", "reb": 3, "ast": 4, "pf": 0, "pts": 2},
+            {"name": "McCurdy", "fg": "1-5", "ft": "0-0", "reb": 4, "ast": 1, "pf": 0, "pts": 2},
+            {"name": "Blevins", "fg": "2-6", "ft": "0-0", "reb": 3, "ast": 0, "pf": 1, "pts": 4},
+            {"name": "Graham", "fg": "3-5", "ft": "0-1", "reb": 2, "ast": 2, "pf": 1, "pts": 6},
+            {"name": "Williams", "fg": "1-5", "ft": "0-0", "reb": 1, "ast": 1, "pf": 0, "pts": 2},
+            {"name": "McNeil", "fg": "0-1", "ft": "0-0", "reb": 0, "ast": 0, "pf": 2, "pts": 0},
+            {"name": "Gentry", "fg": "7-13", "ft": "0-2", "reb": 6, "ast": 1, "pf": 3, "pts": 14},
+            {"name": "Sooter", "fg": "0-2", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "pts": 0},
+            {"name": "Vest", "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "pts": 0},
+            {"name": "Lane", "fg": "0-1", "ft": "0-0", "reb": 1, "ast": 1, "pf": 0, "pts": 0},
+            {"name": "Neff", "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

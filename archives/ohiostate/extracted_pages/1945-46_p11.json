@@ -1,0 +1,9 @@
+{
+  "page": 11,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page is a newspaper wire-story clipping ('Victory Over Purdue By 48-38 on Last Half Rally', Chicago AP, dateline Jan 22 [1946], describing Ohio State's 48-38 win over Purdue apparently played ~1946-01-21). A box score table for both OHIO STATE and PURDUE (columns G/F/FP/TP) is present at the bottom of the page, and the totals line is internally consistent (TP = 2*G + F for the team totals: 2*19+10=48 for Ohio State), but the individual player digits in the small print are too blurry/low-resolution to transcribe with confidence — my attempted per-player reads did not sum to the team totals for either team (Ohio State players summed to G=18/F=5/TP=41 vs totals G=19/F=10/TP=48; Purdue table similarly illegible). Per instructions, skipping rather than guessing values that would fail checksum."
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "page": 16,
+  "games": [
+    {
+      "date": "1977-01-26",
+      "opponent": "Michigan",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 81,
+          "players": [
+            {"name": "Burris", "fg": "9-14", "ft": "3-4", "reb": 3, "ast": 1, "pf": 5, "pts": 21},
+            {"name": "Hall", "fg": "2-5", "ft": "2-2", "reb": 4, "ast": 0, "pf": 2, "pts": 6},
+            {"name": "Ellinghausen", "fg": "3-8", "ft": "0-0", "reb": 5, "ast": 1, "pf": 2, "pts": 6},
+            {"name": "Ramsey", "fg": "7-13", "reb": 5, "pf": 3, "pts": 19},
+            {"name": "Bolden", "fg": "2-7", "ft": "2-2", "reb": 3, "ast": 4, "pf": 1, "pts": 6},
+            {"name": "Daugherty", "fg": "3-3", "ft": "0-0", "reb": 1, "ast": 0, "pf": 1, "pts": 6},
+            {"name": "Poole", "fg": "3-6", "ft": "7-8", "reb": 1, "ast": 0, "pf": 2, "pts": 13},
+            {"name": "Hammond", "fg": "0-2", "ft": "0-0", "reb": 2, "ast": 0, "pf": 1, "pts": 0},
+            {"name": "Smith", "fg": "2-2", "ft": "0-0", "reb": 1, "ast": 0, "pf": 0, "pts": 4}
+          ]
+        },
+        {
+          "name": "Michigan",
+          "score": 92,
+          "players": [
+            {"name": "Robinson", "fg": "5-9", "ft": "3-4", "reb": 8, "ast": 0, "pf": 1, "pts": 13},
+            {"name": "Thompson", "fg": "2-7", "ft": "0-0", "reb": 5, "ast": 0, "pf": 2, "pts": 4},
+            {"name": "Hubbard", "fg": "6-10", "ft": "5-9", "reb": 14, "ast": 1, "pf": 4, "pts": 17},
+            {"name": "Green", "fg": "7-15", "ft": "2-2", "reb": 2, "ast": 3, "pf": 3, "pts": 16},
+            {"name": "Grote", "fg": "6-9", "ft": "4-5", "reb": 2, "ast": 3, "pf": 4, "pts": 16},
+            {"name": "Staton", "fg": "1-1", "ft": "0-1", "reb": 0, "ast": 1, "pf": 2, "pts": 2},
+            {"name": "Baxter", "fg": "6-6", "ft": "4-4", "reb": 0, "ast": 2, "pf": 3, "pts": 16},
+            {"name": "Berdy", "fg": "4-6", "ft": "0-0", "reb": 1, "ast": 0, "pf": 2, "pts": 8},
+            {"name": "Bergen", "fg": "0-1", "ft": "0-0", "reb": 1, "ast": 0, "pf": 2, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

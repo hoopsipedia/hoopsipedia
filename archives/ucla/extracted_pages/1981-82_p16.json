@@ -1,0 +1,40 @@
+{
+  "page": 16,
+  "games": [
+    {
+      "date": "1982-01-29",
+      "opponent": "Oregon State",
+      "ucla_score": 74,
+      "opp_score": 68,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 74,
+          "players": [
+            {"name": "Sanders", "min": 39, "fg": "11-17", "ft": "7-10", "reb": 6, "ast": 0, "pf": 2, "blk": 0, "pts": 29},
+            {"name": "Fields", "min": 40, "fg": "12-17", "ft": "1-1", "reb": 8, "ast": 0, "pf": 1, "blk": 0, "pts": 25},
+            {"name": "Gray", "min": 14, "fg": "0-2", "ft": "0-0", "reb": 3, "ast": 0, "pf": 1, "blk": 1, "pts": 0},
+            {"name": "Jackson", "min": 33, "fg": "2-6", "ft": "4-6", "reb": 5, "ast": 6, "pf": 3, "blk": 1, "pts": 8},
+            {"name": "Foster", "min": 26, "fg": "0-6", "ft": "2-2", "reb": 2, "ast": 1, "pf": 1, "blk": 0, "pts": 2},
+            {"name": "Holton", "min": 21, "fg": "1-1", "ft": "2-4", "reb": 0, "ast": 3, "pf": 0, "blk": 0, "pts": 4},
+            {"name": "Daye", "min": 27, "fg": "3-4", "ft": "0-1", "reb": 5, "ast": 0, "pf": 2, "blk": 0, "pts": 6}
+          ]
+        },
+        {
+          "name": "Oregon State Beavers",
+          "score": 68,
+          "players": [
+            {"name": "Evans", "min": 29, "fg": "5-9", "ft": "0-0", "reb": 3, "ast": 4, "pf": 1, "to": 0, "blk": 0, "stl": 1, "pts": 10},
+            {"name": "Green", "min": 39, "fg": "4-6", "ft": "0-0", "reb": 4, "ast": 1, "pf": 4, "to": 8, "blk": 0, "stl": 1, "pts": 8},
+            {"name": "Sitton", "min": 36, "fg": "10-15", "ft": "2-2", "reb": 4, "ast": 7, "pf": 5, "to": 5, "blk": 0, "stl": 1, "pts": 22},
+            {"name": "Brew", "min": 40, "fg": "5-9", "ft": "1-1", "reb": 2, "ast": 2, "pf": 1, "to": 1, "blk": 0, "stl": 0, "pts": 11},
+            {"name": "Conner", "min": 40, "fg": "4-10", "ft": "3-4", "reb": 7, "ast": 8, "pf": 3, "to": 0, "blk": 0, "stl": 3, "pts": 11},
+            {"name": "Holbrook", "min": 16, "fg": "3-7", "ft": "0-0", "reb": 2, "ast": 1, "pf": 2, "to": 1, "blk": 1, "stl": 1, "pts": 6}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

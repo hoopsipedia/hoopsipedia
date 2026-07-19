@@ -1,0 +1,43 @@
+{
+  "page": 6,
+  "games": [
+    {
+      "date": "1948-01-03",
+      "opponent": "Northwestern Wildcats",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 64,
+          "players": [
+            {"name": "Schnittker", "ft": "4-7", "pf": 3, "pts": 20},
+            {"name": "Winter", "ft": "0-0", "pf": 0, "pts": 0},
+            {"name": "Donham", "ft": "2-2", "pf": 2, "pts": 8},
+            {"name": "Johnston", "ft": "1-9", "pf": 4, "pts": 9},
+            {"name": "Raidiger", "ft": "2-2", "pf": 0, "pts": 10},
+            {"name": "Brown", "ft": "2-3", "pf": 2, "pts": 8},
+            {"name": "Jacobs", "ft": "0-1", "pf": 1, "pts": 0},
+            {"name": "Burkholder", "ft": "3-4", "pf": 1, "pts": 5},
+            {"name": "Hudson", "ft": "0-2", "pf": 3, "pts": 4}
+          ]
+        },
+        {
+          "name": "Northwestern Wildcats",
+          "score": 60,
+          "players": [
+            {"name": "Neufer", "ft": "0-1", "pf": 3, "pts": 0},
+            {"name": "Hughes", "ft": "0-1", "pf": 2, "pts": 6},
+            {"name": "Stricklen", "ft": "4-6", "pf": 4, "pts": 24},
+            {"name": "Zravalef", "ft": "1-1", "pf": 1, "pts": 1},
+            {"name": "Maddock", "ft": "6-7", "pf": 5, "pts": 16},
+            {"name": "Turek", "ft": "2-2", "pf": 2, "pts": 8},
+            {"name": "Barr", "ft": "0-1", "pf": 5, "pts": 4},
+            {"name": "Strumillo", "ft": "1-1", "pf": 6, "pts": 1}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": [],
+  "notes": "Field goal 'made-attempted' column omitted for all players: sheet's FG column only shows makes, not attempts (no attempts recorded on this scoresheet). FT column reconstructed as made-attempted using the sheet's 'F' (free throws made) and 'MF' (free throws missed) columns, i.e. attempted = F+MF. Both teams' printed TP (points) column was used directly for pts and cross-checked: sum(pts)=64 matches Ohio State's final score of 64, and sum(pts)=60 matches Northwestern's final score of 60. As an internal consistency check, TP also equals 2*FG_made + FT_made for every player using this column interpretation, which strongly confirms the F/MF column assignment. Northwestern's Strumillo shows PF=6, which is anomalous (5-foul limit) but transcribed as printed rather than corrected, since it does not affect the points checksum. Newspaper prose in the article text states Stricklen scored 23 and Maddock scored 12 (partial/first-half figures), which differ from the box score's final totals (24 and 16 respectively); the tabulated box score was treated as authoritative per instructions."
+}

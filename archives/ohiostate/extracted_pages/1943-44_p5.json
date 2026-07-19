@@ -1,0 +1,9 @@
+{
+  "page": 5,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page is the official scoresheet form for Ohio State (46) vs Great Lakes (52), played 1944-01-01 at Cleveland (attendance 5,900, captain Don Grate, coach Olsen), but the printed form's player rows are entirely covered by a pasted-in newspaper clipping ('Great Lakes Too Tough for Buckeyes'). The clipping contains its own miniature box score table with both teams' player lines (Great Lakes: Armstrong, Schaefer, Gray, Baker, Coleman, Curtis, Joachim, Smith, Luckenbach; Ohio State: Grate, Bowen, Caudill, Rees, Dugger, Bowen, Linden, Munster) but the numeric stat columns are newsprint-scale text in a low-resolution scan and cannot be read digit-by-digit with confidence sufficient to pass a points checksum. Rather than guess individual FG/FT/PF/PTS values, skipping the full game per ruthless-skip guidance. Only the game metadata (date, opponent, final score) is reliably legible."
+    }
+  ]
+}

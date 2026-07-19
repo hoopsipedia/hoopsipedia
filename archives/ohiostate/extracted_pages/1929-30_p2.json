@@ -1,0 +1,43 @@
+{
+  "page": 2,
+  "games": [
+    {
+      "date": "1929-12-28",
+      "opponent": "Notre Dame",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 29,
+          "players": [
+            {"name": "Ervin (RF)", "fgm": 4, "ftm": 0, "ft_missed": 3, "pf": 2, "pts": 8, "min": "40 min."},
+            {"name": "Evans (LF)", "fgm": 4, "ftm": 1, "ft_missed": 3, "pf": 2, "pts": 9, "min": "26 min. 35 sec."},
+            {"name": "Such (LF)", "fgm": 0, "ftm": 0, "ft_missed": 0, "pf": 1, "pts": 0, "min": "2 min. 55 sec."},
+            {"name": "Kowal (LF)", "fgm": 0, "ftm": 0, "ft_missed": 0, "pf": 0, "pts": 0, "min": "- min. 30 sec."},
+            {"name": "Wrigley (C)", "fgm": 2, "ftm": 1, "ft_missed": 0, "pf": 3, "pts": 5, "min": "34 min. 30 sec."},
+            {"name": "Condon (C)", "fgm": 0, "ftm": 0, "ft_missed": 0, "pf": 1, "pts": 0, "min": "5 min. 30 sec."},
+            {"name": "Fesler (RG)", "fgm": 1, "ftm": 0, "ft_missed": 1, "pf": 2, "pts": 2, "min": "40 min."},
+            {"name": "Larkins (LG)", "fgm": 0, "ftm": 2, "ft_missed": 3, "pf": 3, "pts": 2, "min": "36 min. 45 sec."},
+            {"name": "Finchman (LG)", "fgm": 1, "ftm": 1, "ft_missed": 0, "pf": 0, "pts": 3, "min": "3 min. 15 sec."}
+          ]
+        },
+        {
+          "name": "Notre Dame",
+          "score": 22,
+          "players": [
+            {"name": "Newbold (RF/LF)", "fgm": 0, "ftm": 2, "pf": 1, "pts": 2},
+            {"name": "McCarthy (RF-LF)", "fgm": 2, "ftm": 3, "pf": 2, "pts": 7},
+            {"name": "Crowe (LF)", "fgm": 0, "ftm": 0, "pf": 4, "pts": 0},
+            {"name": "Gavin (LF)", "fgm": 0, "ftm": 0, "pf": 0, "pts": 0},
+            {"name": "DeCook (C)", "fgm": 3, "ftm": 1, "pf": 1, "pts": 7},
+            {"name": "Busch (C)", "fgm": 0, "ftm": 0, "pf": 0, "pts": 0},
+            {"name": "Kixer (C)", "fgm": 0, "ftm": 0, "pf": 0, "pts": 0},
+            {"name": "Donovan (RG)", "fgm": 0, "ftm": 2, "pf": 2, "pts": 2},
+            {"name": "Smith (LG)", "fgm": 1, "ftm": 2, "pf": 0, "pts": 4}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

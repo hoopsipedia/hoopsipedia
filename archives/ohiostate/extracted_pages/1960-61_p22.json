@@ -1,0 +1,9 @@
+{
+  "page": 22,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Ohio State at Indiana, Feb 20, 1961 (OSU 73, Indiana 69). Ohio State's player lines checksum perfectly (11+2+16+17+27+0+0=73). However Indiana's player lines do not reconcile with Indiana's own printed team totals row: summed PTS=71 vs total 69, summed FGA=91 vs total 89, summed FTA=18 vs total 20, summed FT=10 vs total 13, summed PF=23 vs total 21 (Rebounds do reconcile: 50 + 7 team boards = 57). The discrepancies center on an illegible/ambiguous cell in the Porter F row (2*FG+FT does not match his own printed PTS with any single consistent reading), and possibly other cells. Rather than guess at the correct digits, skipping the whole game per the ruthless-skip instruction."
+    }
+  ]
+}

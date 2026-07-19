@@ -1,0 +1,9 @@
+{
+  "page": 32,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "3/22/97 UCLA (24-8) vs Minnesota (31-3), NCAA Midwest Regional, Alamo Dome. Clean typed official box score, both teams' full stat lines legible. Minnesota checksum passes exactly (player TP sum 12+14+7+18+0+0+0+15+14+0+0 = 80 == team total/final score 80). However UCLA fails checksum: player TP sum 22(O'Bannon)+9(Henderson)+0(McCoy)+7(Dollar)+21(Bailey)+2(Loyd)+0(Myers)+10(Johnson) = 71, but UCLA's printed team TOTALS TP = 72 and final score by periods (33+39) = 72 - a 1-point discrepancy. Re-read the page once (both reads identical) trying to resolve via Henderson's row (FG4-8/FT2-4 computes to 10 pts vs printed TP 9) and Loyd's row (FG1-1, ambiguous 3PT mark, printed TP 2) but could not confidently determine which digit is the error without inventing a value, and the sheet itself has an internal inconsistency on Henderson's rebounds (OF 4 + DE 4 printed but TOT shows 9, not 8), suggesting the original 1997 scoresheet itself has a minor tabulation slip rather than a transcription error on my part. Per instructions, skipping the whole game rather than guessing which player's point total to bump by 1."
+    }
+  ]
+}

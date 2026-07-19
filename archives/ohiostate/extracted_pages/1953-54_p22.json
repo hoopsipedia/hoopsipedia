@@ -1,0 +1,43 @@
+{
+  "page": 22,
+  "games": [
+    {
+      "date": "1954-02-27",
+      "opponent": "Indiana",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 68,
+          "players": [
+            {"name": "J. Miller", "fg": "6-20", "ft": "3-4", "reb": 18, "pf": 3, "pts": 15},
+            {"name": "Kelley", "fg": "3-15", "ft": "1-2", "reb": 8, "pf": 5, "pts": 7},
+            {"name": "Ebert", "fg": "7-16", "ft": "10-14", "reb": 20, "pf": 4, "pts": 24},
+            {"name": "Cook", "fg": "2-7", "ft": "1-1", "reb": 1, "pf": 1, "pts": 5},
+            {"name": "Freeman", "fg": "5-20", "ft": "2-3", "reb": 4, "pf": 2, "pts": 12},
+            {"name": "Ellis", "fg": "1-6", "ft": "1-2", "reb": 1, "pf": 2, "pts": 3},
+            {"name": "Short", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 1, "pts": 0},
+            {"name": "C. Miller", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Ropes", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Smith", "fg": "1-2", "ft": "0-0", "reb": 0, "pf": 0, "pts": 2},
+            {"name": "Keeling", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 1, "pts": 0}
+          ]
+        },
+        {
+          "name": "Indiana",
+          "score": 84,
+          "players": [
+            {"name": "Kraak", "fg": "4-16", "ft": "1-2", "reb": 12, "pf": 4, "pts": 9},
+            {"name": "Farley", "fg": "4-9", "ft": "0-1", "reb": 8, "pf": 4, "pts": 8},
+            {"name": "Schlundt", "fg": "10-15", "ft": "7-10", "reb": 10, "pf": 2, "pts": 27},
+            {"name": "R. Scott", "fg": "0-6", "ft": "4-6", "reb": 4, "pf": 1, "pts": 4},
+            {"name": "Leonard", "fg": "7-18", "ft": "2-2", "reb": 5, "pf": 4, "pts": 16},
+            {"name": "Choise", "fg": "7-17", "ft": "6-7", "reb": 11, "pf": 2, "pts": 20},
+            {"name": "Byers", "fg": "0-1", "ft": "0-2", "reb": 0, "pf": 2, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

@@ -1,0 +1,47 @@
+{
+  "page": 13,
+  "games": [
+    {
+      "date": "1979-01-02",
+      "opponent": "Hawaii",
+      "date_note": "Scoresheet is handwritten 'Jan. 2, 1978' but this is the 1978-79 season compilation and site is Blaisdell Center Arena (Hawaii's home); corrected year to 1979 assuming a common new-year date-writing slip on the original form.",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 64,
+          "players": [
+            {"name": "Phil Abney", "min": 36, "fg": "5-15", "ft": "5-6", "reb": 7, "ast": 1, "to": 4, "blk": 1, "pf": 2, "pts": 15},
+            {"name": "Russell Saunders", "min": 34, "fg": "1-3", "ft": "0-0", "reb": 1, "ast": 6, "to": 3, "blk": 0, "stl": 3, "pf": 5, "pts": 2},
+            {"name": "Norm Cacy", "fg": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "to": 2, "blk": 0, "stl": 0, "pf": 1, "pts": 0},
+            {"name": "Aparicio Curry", "min": 2, "fg": "0-1", "ft": "0-0", "reb": 0, "ast": 0, "to": 0, "blk": 1, "stl": 0, "pf": 0, "pts": 0},
+            {"name": "Andre Logan", "min": 24, "fg": "4-8", "ft": "0-1", "reb": 5, "ast": 0, "to": 1, "blk": 0, "stl": 2, "pf": 5, "pts": 8},
+            {"name": "Paul Roby", "min": 27, "fg": "6-16", "ft": "4-6", "reb": 3, "ast": 1, "to": 3, "blk": 2, "stl": 1, "pf": 2, "pts": 16},
+            {"name": "Everette Jefferson", "min": 25, "fg": "7-9", "ft": "2-3", "reb": 3, "ast": 3, "to": 2, "blk": 1, "stl": 1, "pf": 0, "pts": 16},
+            {"name": "Dino Gregory", "min": 14, "fg": "1-6", "ft": "0-1", "reb": 6, "ast": 1, "to": 1, "blk": 0, "stl": 0, "pf": 1, "pts": 2},
+            {"name": "Mark Felix", "min": 16, "fg": "0-0", "ft": "1-2", "reb": 0, "ast": 1, "to": 1, "blk": 0, "stl": 0, "pf": 2, "pts": 1},
+            {"name": "Mike Stewart", "min": 15, "fg": "1-3", "ft": "0-0", "reb": 2, "ast": 2, "to": 1, "blk": 0, "stl": 0, "pf": 0, "pts": 2},
+            {"name": "Jim Williams", "min": 9, "fg": "1-3", "ft": "0-0", "reb": 2, "ast": 0, "to": 2, "blk": 0, "stl": 0, "pf": 4, "pts": 2}
+          ]
+        },
+        {
+          "name": "Hawaii Rainbow Warriors",
+          "score": 66,
+          "players": [
+            {"name": "Mark Hackett", "min": 22, "fg": "5-9", "ft": "0-1", "reb": 5, "ast": 1, "to": 2, "blk": 0, "stl": 1, "pf": 0, "pts": 10},
+            {"name": "Larry Jones", "min": 18, "fg": "0-1", "ft": "3-5", "reb": 5, "ast": 1, "to": 2, "blk": 0, "stl": 2, "pf": 1, "pts": 3},
+            {"name": "Joe Frazier", "min": 28, "fg": "0-5", "ft": "0-0", "reb": 1, "ast": 3, "to": 6, "blk": 0, "stl": 0, "pf": 1, "pts": 0},
+            {"name": "Aaron Hines", "min": 4, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pf": 0, "pts": 0},
+            {"name": "Robert Smith", "min": 32, "fg": "1-2", "ft": "2-2", "reb": 4, "ast": 3, "to": 1, "blk": 0, "stl": 1, "pf": 3, "pts": 4},
+            {"name": "Thomas Louden", "min": 26, "fg": "6-12", "ft": "2-5", "reb": 5, "ast": 3, "to": 5, "blk": 0, "stl": 2, "pf": 5, "pts": 14},
+            {"name": "Eric Bowman", "min": 32, "fg": "7-12", "ft": "2-5", "reb": 5, "ast": 2, "to": 6, "blk": 2, "stl": 2, "pf": 4, "pts": 16},
+            {"name": "Tony Wells", "min": 30, "fg": "6-8", "ft": "3-6", "reb": 3, "ast": 2, "to": 5, "blk": 3, "stl": 1, "pf": 2, "pts": 15},
+            {"name": "Brad Pineau", "min": 10, "fg": "2-5", "ft": "0-2", "reb": 6, "ast": 1, "to": 0, "blk": 0, "stl": 0, "pf": 2, "pts": 4}
+          ]
+        }
+      ],
+      "checksum_ok": true,
+      "checksum_note": "New Mexico player pts sum = 64 (matches final score & team TP; team FG 26/64, FT 12/19 also match totals row). Hawaii player pts sum = 66 (matches final score & team TP; team FG 27/54, FT 12/26 also match totals row). Did-not-play players (dashes on sheet) omitted: New Mexico none; Hawaii: Gary Newsome, Hollis Vickery, Tom Beckerle, Kevin Johnson, Antoine Goodlow."
+    }
+  ],
+  "skipped": []
+}

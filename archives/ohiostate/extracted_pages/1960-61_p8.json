@@ -1,0 +1,9 @@
+{
+  "page": 8,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Official Western Conference Box Score: Ohio State 97 at Seton Hall 57, December 27, 1960 (attendance 16,738; officials Silverman and Bonder). Team names, final scores, and quarter scores are legible, but the small typed per-player FGA/FG/FTA/FT/PF/PTS/Reb figures for both 12-man rosters are too fine/ambiguous to transcribe with confidence at this resolution. Multiple candidate readings were tried and none produced a self-consistent player-level checksum against the team totals (Ohio State FG total 42 + FT total 13 = 97 matches team score, but individual player FG/FT/PTS values could not be pinned down precisely enough to sum correctly), so the game was skipped per the ruthless-skip-over-guess instruction rather than fabricate player lines."
+    }
+  ]
+}

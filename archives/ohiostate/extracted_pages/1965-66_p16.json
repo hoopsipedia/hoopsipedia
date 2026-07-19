@@ -1,0 +1,43 @@
+{
+  "page": 16,
+  "games": [
+    {
+      "date": "1966-01-31",
+      "opponent": "Wisconsin",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 87,
+          "players": [
+            {"name": "Hosket", "fg": "7-15", "ft": "5-10", "pf": 4, "reb": 13, "pts": 19},
+            {"name": "Peters", "fg": "9-17", "ft": "2-2", "pf": 3, "reb": 16, "pts": 20},
+            {"name": "Dove", "fg": "4-13", "ft": "8-11", "pf": 3, "reb": 11, "pts": 16},
+            {"name": "Sepic", "fg": "4-15", "ft": "3-9", "pf": 4, "reb": 6, "pts": 11},
+            {"name": "Rowley", "fg": "8-13", "ft": "2-3", "pf": 5, "reb": 2, "pts": 18},
+            {"name": "Whitlinger", "fg": "1-2", "ft": "0-0", "pf": 1, "reb": 0, "pts": 2},
+            {"name": "Walkey", "fg": "0-1", "ft": "0-1", "pf": 0, "reb": 0, "pts": 0},
+            {"name": "Swain", "fg": "0-3", "ft": "1-1", "pf": 1, "reb": 2, "pts": 1},
+            {"name": "Gregory", "fg": "0-0", "ft": "0-0", "pf": 0, "reb": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Wisconsin Badgers",
+          "score": 81,
+          "players": [
+            {"name": "Franklin", "fg": "3-10", "ft": "4-8", "pf": 4, "reb": 9, "pts": 10},
+            {"name": "Barnes", "fg": "6-13", "ft": "4-4", "pf": 3, "reb": 10, "pts": 16},
+            {"name": "Zubor", "fg": "6-11", "ft": "4-4", "pf": 4, "reb": 6, "pts": 16},
+            {"name": "Carlin", "fg": "1-3", "ft": "0-0", "pf": 5, "reb": 4, "pts": 2},
+            {"name": "Sweeney", "fg": "9-17", "ft": "4-5", "pf": 2, "reb": 4, "pts": 22},
+            {"name": "Gustafson", "fg": "1-6", "ft": "6-6", "pf": 1, "reb": 3, "pts": 8},
+            {"name": "Morenz", "fg": "2-4", "ft": "3-3", "pf": 1, "reb": 2, "pts": 7},
+            {"name": "Gardner", "fg": "0-0", "ft": "0-0", "pf": 2, "reb": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true,
+      "notes": "Overtime game (final was 77-77 after regulation, OT periods: WIS +4, OSU +10). fg/ft columns transcribed as made-attempted from sheet's FG/FGA and FT/FTA fields. Player rebounds and team totals present on sheet but team total row omitted from JSON per schema. Note: sheet's printed FTA team-total (31) does not reconcile with sum of individual FTA values (37) though FGA/FG/FT/PF totals all reconcile exactly with individual sums and pts checksums for both teams pass exactly (81 and 87) -- likely a scan/OCR ambiguity on that one total cell (7 vs 1), does not affect pts checksum."
+    }
+  ],
+  "skipped": []
+}

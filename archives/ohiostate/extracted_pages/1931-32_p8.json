@@ -1,0 +1,9 @@
+{
+  "page": 8,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page shows a 1/16/1932 Ohio State @ Iowa game (final score 40-23 per article headline and sport/year/date/opponent/place/coach footer table), but the actual box score is a tiny scanned agate-type statistics table (columns F.G./F.T./P.F./T. for both 'Iowa' and 'Ohio State' rosters) that is too small/low-resolution to read individual player digits with confidence. Attempted transcription produced internally inconsistent numbers (e.g. a player's F.G./F.T. did not sum to their listed T column), indicating the digits cannot be trusted. Team-level totals partially corroborate final score (Iowa row totals ~7 FG/9 FT/23 pts; Ohio State row totals ~17 FG/6 FT/40 pts) but individual player lines were not transcribed per the ruthless-skip instruction."
+    }
+  ]
+}

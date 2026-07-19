@@ -1,0 +1,9 @@
+{
+  "page": 14,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page shows a newspaper clipping box score for Ohio State at Illinois, Feb. 13, 1933 (Urbana, coach H.G. Olsen), final score Ohio State 31, Illinois 29 (OT) per headline text and handwritten score box, with team totals rows that check out (OSU: FG 10, FT 11, TP 31 = 2*10+11; Illinois: FG 11, FT 7, TP 29 = 2*11+7). However, the individual player rows (Colburn, Hinchman, Hosket, Conrad, Beitner, Marrison for OSU; Froschauer, Bennett, Hellmich, Benyon, Gibbs, Theobald for Illinois) are misaligned/illegible in the scan -- column counts vary row to row and per-player FG/FT do not reconcile to a consistent 2*FG+FT=TP formula or to the team totals. Rather than guess at digits, skipping the player-line transcription entirely; only the final score and metadata are confidently legible."
+    }
+  ]
+}

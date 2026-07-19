@@ -1,0 +1,9 @@
+{
+  "page": 5,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Jan 1, 1939-40 vs Cornell at the Coliseum (final: Ohio State 28, Cornell 29, part of a doubleheader with Michigan/Pittsburgh). Cornell's box (Bennett, Vaughn, Rammer, Dunbar, Jolly, Webster) is legible enough to transcribe and checksums cleanly to the listed team total of 29 (T = 2*FG + FT for every row and for the Totals row). However, the Ohio State column (Moeller, McLain, Mickelson, Goss, Fisher, Sattire, Graf, Lynch, Dawson, Marzano, and a further guard) is printed in very small, faint type in the scan; individual digits in the F. and T. columns could not be distinguished with confidence, and candidate readings did not reliably sum to the stated Ohio State total of 28. Since a game entry requires both teams' verified lines and the schema does not support a partial-team game, the entire game was skipped rather than guessing at illegible Ohio State values."
+    }
+  ]
+}

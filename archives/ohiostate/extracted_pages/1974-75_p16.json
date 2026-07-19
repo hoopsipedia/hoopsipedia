@@ -1,0 +1,48 @@
+{
+  "page": 16,
+  "games": [
+    {
+      "date": "1975-01-20",
+      "opponent": "Northwestern",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 77,
+          "players": [
+            {"name": "Stiegemeier", "fg": "5-8", "ft": "0-4", "reb": 3, "pf": 4, "pts": 10},
+            {"name": "Andreas", "fg": "10-13", "ft": "5-6", "reb": 9, "pf": 3, "pts": 25},
+            {"name": "Taylor", "fg": "7-14", "ft": "3-4", "reb": 12, "pf": 1, "pts": 17},
+            {"name": "Bolden", "fg": "6-16", "ft": "0-0", "reb": 5, "pf": 4, "pts": 12},
+            {"name": "Bayless", "fg": "4-6", "ft": "0-0", "reb": 9, "pf": 4, "pts": 8},
+            {"name": "Wood", "fg": "1-1", "ft": "3-3", "reb": 1, "pf": 1, "pts": 5},
+            {"name": "Weston", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Burris", "fg": "0-1", "ft": "0-0", "reb": 0, "pf": 2, "pts": 0},
+            {"name": "Shields", "fg": "0-0", "ft": "0-1", "reb": 0, "pts": 0},
+            {"name": "Hammond", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Northwestern",
+          "score": 67,
+          "players": [
+            {"name": "Williams", "fg": "6-15", "ft": "1-2", "reb": 4, "pf": 2, "pts": 13},
+            {"name": "Suere", "fg": "2-8", "ft": "0-0", "reb": 5, "pf": 0, "pts": 4},
+            {"name": "Wallace", "fg": "3-9", "ft": "0-0", "reb": 9, "pf": 3, "pts": 6},
+            {"name": "Teasley", "fg": "0-8", "ft": "0-0", "reb": 3, "pf": 2, "pts": 0},
+            {"name": "McKinney", "fg": "9-18", "ft": "7-13", "reb": 3, "pf": 1, "pts": 25},
+            {"name": "Hildebrand", "fg": "0-1", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Curfman", "fg": "1-3", "ft": "0-0", "reb": 2, "pf": 2, "pts": 2},
+            {"name": "Wells", "fg": "0-2", "ft": "0-2", "reb": 2, "pf": 2, "pts": 0},
+            {"name": "Hale", "fg": "3-6", "ft": "0-0", "reb": 2, "pf": 2, "pts": 6},
+            {"name": "Allen", "fg": "1-2", "ft": "3-4", "reb": 1, "pf": 2, "pts": 5},
+            {"name": "Dennis", "fg": "1-2", "ft": "0-0", "reb": 1, "pf": 2, "pts": 2},
+            {"name": "Niser", "fg": "0-0", "ft": "0-0", "reb": 1, "pf": 2, "pts": 0},
+            {"name": "Cartwright", "fg": "2-5", "ft": "0-0", "reb": 5, "pf": 0, "pts": 4}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

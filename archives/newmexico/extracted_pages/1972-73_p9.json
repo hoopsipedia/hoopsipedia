@@ -1,0 +1,47 @@
+{
+  "page": 9,
+  "games": [
+    {
+      "date": "1972-12-30",
+      "opponent": "Seattle",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 70,
+          "players": [
+            {"name": "Bernard Hardin", "min": "32", "fg": "6-10", "ft": "0-0", "reb": 8, "ast": 1, "pf": 3, "pts": 12},
+            {"name": "Don Ford", "min": "24", "fg": "4-11", "ft": "0-0", "reb": 7, "ast": 2, "pf": 2, "pts": 8},
+            {"name": "Darryl Minniefield", "min": "30", "fg": "4-7", "ft": "2-3", "reb": 9, "ast": 1, "pf": 2, "pts": 10},
+            {"name": "Tommy Roberts", "min": "27", "fg": "2-7", "ft": "2-3", "reb": 2, "ast": 6, "pf": 4, "pts": 6},
+            {"name": "Chester Fuller", "min": "37", "fg": "6-15", "ft": "3-4", "reb": 2, "ast": 2, "pf": 3, "pts": 15},
+            {"name": "Mike Stewart", "min": "11", "fg": "1-1", "ft": "0-0", "reb": 2, "ast": 0, "pf": 0, "pts": 2},
+            {"name": "Gabe Nava", "min": "12", "fg": "2-5", "ft": "1-2", "reb": 2, "ast": 1, "pf": 0, "pts": 5},
+            {"name": "Wendell Taylor", "min": "4", "fg": "0-1", "ft": "2-3", "reb": 1, "ast": 1, "pf": 0, "pts": 2},
+            {"name": "Marv Saiers", "min": "23", "fg": "5-5", "ft": "0-0", "reb": 3, "ast": 2, "pf": 1, "pts": 10}
+          ]
+        },
+        {
+          "name": "Seattle",
+          "score": 54,
+          "players": [
+            {"name": "Bob Gross", "min": "38", "fg": "2-7", "ft": "2-2", "reb": 5, "ast": 6, "pf": 3, "pts": 6},
+            {"name": "Ron Howard", "min": "34", "fg": "4-10", "ft": "0-1", "reb": 6, "ast": 1, "pf": 3, "pts": 8},
+            {"name": "Greg Williams", "min": "37", "fg": "8-15", "ft": "2-3", "reb": 6, "ast": 2, "pf": 3, "pts": 18},
+            {"name": "Red Dorline", "fg": "8-14", "ft": "0-0", "reb": 3, "ast": 1, "pf": 2, "pts": 16},
+            {"name": "Leney Stuart", "min": "30", "fg": "0-2", "ft": "0-0", "reb": 4, "ast": 5, "pf": 1, "pts": 0},
+            {"name": "Jim Ferguson", "min": "2", "fg": "0-1", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "pts": 0},
+            {"name": "Frank Oleynick", "min": "2", "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "pts": 0},
+            {"name": "Steve Endresen", "min": "2", "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "pts": 0},
+            {"name": "Dick Gross", "min": "2", "fg": "1-1", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "pts": 2},
+            {"name": "Jesse McCaffie", "min": "11", "fg": "1-3", "ft": "0-0", "reb": 0, "ast": 0, "pf": 3, "pts": 2},
+            {"name": "Ron Bennett", "min": "2", "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "pts": 0},
+            {"name": "Larry Smoke", "min": "2", "fg": "0-0", "ft": "2-2", "reb": 0, "ast": 0, "pf": 1, "pts": 2}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": [],
+  "notes": "Minutes column for Seattle's Red Dorline (#24) is partially obscured/illegible on the scan; omitted rather than guessed. All other fields transcribed directly from the official scoresheet's printed TOTAL POINTS column (not computed). New Mexico player checksum: 12+8+10+6+15+2+5+2+10=70 (matches team score). Seattle player checksum: 6+8+18+16+0+0+0+0+2+2+0+2=54 (matches team score). Players with entirely blank stat lines (New Mexico: Pat King, Bob Toppert, Rich Pokorski) were not transcribed since they did not play."
+}

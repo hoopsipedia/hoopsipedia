@@ -1,0 +1,45 @@
+{
+  "page": 4,
+  "games": [
+    {
+      "date": "1949-12-10",
+      "opponent": "Butler",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 67,
+          "players": [
+            {"name": "Schnittker", "min": "29:00", "fg": "7-16", "ft": "7-8", "pf": 5, "pts": 21},
+            {"name": "Donham", "min": "28:00", "fg": "5-12", "ft": "1-2", "pf": 5, "pts": 11},
+            {"name": "Taylor", "min": "37:45", "fg": "6-16", "ft": "3-3", "pf": 3, "pts": 15},
+            {"name": "Brown", "min": "38:45", "fg": "2-12", "ft": "3-6", "pf": 2, "pts": 7},
+            {"name": "Burkholder", "min": "24:30", "fg": "0-5", "ft": "2-3", "pf": 5, "pts": 2},
+            {"name": "Jacobs", "min": "18:00", "fg": "1-11", "ft": "1-5", "pf": 1, "pts": 3},
+            {"name": "Kuechle", "min": "3:30", "fg": "0-2", "ft": "0-0", "pf": 0, "pts": 0},
+            {"name": "Dawe", "min": "16:45", "fg": "2-4", "ft": "0-0", "pf": 2, "pts": 4},
+            {"name": "Remington", "min": "3:45", "fg": "1-1", "ft": "2-2", "pf": 3, "pts": 4}
+          ]
+        },
+        {
+          "name": "Butler",
+          "score": 65,
+          "players": [
+            {"name": "R. O'Brien", "fg": "10-20", "ft": "10-10", "pf": 4, "pts": 30},
+            {"name": "Doyle", "fg": "6-10", "ft": "2-6", "pf": 5, "pts": 14},
+            {"name": "Crockett", "fg": "1-4", "ft": "4-6", "pf": 3, "pts": 6},
+            {"name": "Wood", "fg": "3-5", "ft": "0-0", "pf": 0, "pts": 6},
+            {"name": "Baker", "fg": "1-5", "ft": "0-2", "pf": 2, "pts": 2},
+            {"name": "Stohler", "fg": "0-1", "ft": "3-6", "pf": 1, "pts": 3},
+            {"name": "W. O'Brien", "fg": "0-0", "ft": "0-1", "pf": 3, "pts": 0},
+            {"name": "Burdsall", "fg": "0-1", "ft": "0-0", "pf": 1, "pts": 0},
+            {"name": "Jackson", "fg": "0-0", "ft": "0-0", "pf": 0, "pts": 0},
+            {"name": "Fougerousse", "fg": "0-0", "ft": "0-0", "pf": 0, "pts": 0},
+            {"name": "Chapman", "fg": "1-4", "ft": "2-4", "pf": 4, "pts": 4}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

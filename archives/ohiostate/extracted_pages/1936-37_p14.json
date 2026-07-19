@@ -1,0 +1,11 @@
+{
+  "page": 14,
+  "games": [],
+  "skipped": [
+    {
+      "date": "1937-02-06",
+      "opponent": "Minnesota",
+      "reason": "Typed box score (Ohio State 14, Minnesota 31, at Minneapolis). Minnesota's line checksums cleanly (B/Ft/P columns: player pts = 2*FG_made + FT_made sums to 31, matching team total, after re-reading to correct Addington's field-goal count from 1 to 2). However, Ohio State's individual Ft (free-throws-made) column sums to only 1 across all players while the printed team total (Ft=2) and final score (14) require 2 — one player's free-throw make (likely Thomas, Hull, or George, all printed as very light/faint type) is misread or the digit is obscured. Player-point sum computes to 13 vs the required 14. Used both allowed reads and could not confidently resolve which player's Ft value is correct, so skipping the full game per the ruthless-skip rule rather than guessing."
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "page": 4,
+  "games": [
+    {
+      "date": "1971-12-11",
+      "opponent": "Baldwin-Wallace",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 117,
+          "players": [
+            {"name": "Frank DeWitt", "fg": "3-13", "ft": "0-0", "reb": 12, "ast": 2, "pf": 2, "to": 1, "blk": 0, "stl": 0, "min": 0, "pts": 6},
+            {"name": "Jim Hobgood", "fg": "7-18", "ft": "3-4", "reb": 9, "ast": 4, "pf": 1, "to": 1, "blk": 0, "stl": 0, "min": 0, "pts": 17},
+            {"name": "Scott McCandlish", "fg": "1-6", "ft": "0-1", "reb": 11, "ast": 1, "pf": 4, "to": 1, "blk": 0, "stl": 0, "min": 0, "pts": 2},
+            {"name": "Barry Parkhill", "fg": "19-33", "ft": "13-21", "reb": 6, "ast": 7, "pf": 2, "to": 4, "blk": 0, "stl": 0, "min": 0, "pts": 51},
+            {"name": "Tim Rash", "fg": "4-7", "ft": "0-0", "reb": 3, "ast": 1, "pf": 2, "to": 2, "blk": 0, "stl": 0, "min": 0, "pts": 8},
+            {"name": "Chip Miller", "fg": "3-4", "ft": "2-2", "reb": 1, "ast": 2, "pf": 0, "to": 3, "blk": 0, "stl": 0, "min": 0, "pts": 8},
+            {"name": "Bob McKeag", "fg": "0-2", "ft": "1-1", "reb": 3, "ast": 1, "pf": 1, "to": 1, "blk": 0, "stl": 0, "min": 0, "pts": 1},
+            {"name": "Lanny Stahurski", "fg": "3-6", "ft": "3-7", "reb": 4, "ast": 3, "pf": 3, "to": 0, "blk": 0, "stl": 0, "min": 0, "pts": 9},
+            {"name": "Al Drummond", "fg": "1-1", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "to": 0, "blk": 0, "stl": 0, "min": 0, "pts": 2},
+            {"name": "Bob McCurdy", "fg": "3-5", "ft": "1-2", "reb": 3, "ast": 1, "pf": 2, "to": 3, "blk": 0, "stl": 0, "min": 0, "pts": 7},
+            {"name": "Steve Morris", "fg": "0-2", "ft": "2-3", "reb": 1, "ast": 0, "pf": 0, "to": 0, "blk": 0, "stl": 0, "min": 0, "pts": 2},
+            {"name": "Larry Gerry", "fg": "1-2", "ft": "2-2", "reb": 0, "ast": 0, "pf": 2, "to": 1, "blk": 0, "stl": 0, "min": 0, "pts": 4}
+          ]
+        },
+        {
+          "name": "Baldwin-Wallace",
+          "score": 83,
+          "players": [
+            {"name": "Dean Martin", "fg": "12-27", "ft": "6-7", "reb": 8, "ast": 1, "pf": 1, "to": 4, "blk": 0, "stl": 0, "min": 0, "pts": 30},
+            {"name": "Jim Kopania", "fg": "4-9", "ft": "1-2", "reb": 5, "ast": 2, "pf": 1, "to": 4, "blk": 0, "stl": 0, "min": 0, "pts": 9},
+            {"name": "Otis Dancy", "fg": "3-9", "ft": "1-3", "reb": 5, "ast": 3, "pf": 4, "to": 1, "blk": 0, "stl": 0, "min": 0, "pts": 7},
+            {"name": "Larry McElfresh", "fg": "3-7", "ft": "1-1", "reb": 2, "ast": 4, "pf": 5, "to": 7, "blk": 0, "stl": 0, "min": 0, "pts": 7},
+            {"name": "Al Lane", "fg": "3-8", "ft": "3-4", "reb": 13, "ast": 4, "pf": 5, "to": 5, "blk": 0, "stl": 0, "min": 0, "pts": 9},
+            {"name": "Greg Marsh", "fg": "4-7", "ft": "1-1", "reb": 3, "ast": 0, "pf": 1, "to": 1, "blk": 0, "stl": 0, "min": 0, "pts": 9},
+            {"name": "Stan Dixon", "fg": "1-2", "ft": "2-3", "reb": 3, "ast": 0, "pf": 3, "to": 4, "blk": 0, "stl": 0, "min": 0, "pts": 4},
+            {"name": "Jim Brady", "fg": "2-2", "ft": "2-4", "reb": 0, "ast": 1, "pf": 1, "to": 2, "blk": 0, "stl": 0, "min": 0, "pts": 6},
+            {"name": "Dave Toetz", "fg": "0-1", "ft": "0-0", "reb": 0, "ast": 0, "pf": 3, "to": 0, "blk": 0, "stl": 0, "min": 0, "pts": 0},
+            {"name": "Rybarczyk", "fg": "0-1", "ft": "2-2", "reb": 0, "ast": 0, "pf": 0, "to": 0, "blk": 0, "stl": 0, "min": 0, "pts": 2}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": [],
+  "notes": "Single game (12/11/1971 vs Baldwin-Wallace) presented as a computer-generated official stat sheet (not handwritten); year inferred as 1971 from season label 1971-72 and early-December date. Sheet includes explicit Pts column for each player (used directly, not derived); a 3-Pt column exists on the template but is 0-0 for all players, correctly reflecting the pre-3-point-line era. A 'Min' (minutes) column is printed on the sheet but shows 0 for every player on both teams -- transcribed as-is (literal sheet value) though it appears minutes were not tracked/entered for this game rather than players truly playing zero minutes; treat with caution if minutes matter downstream. Both team checksums verified exactly: Virginia player pts sum to 117 (matches final score), Baldwin-Wallace player pts sum to 83 (matches final score)."
+}

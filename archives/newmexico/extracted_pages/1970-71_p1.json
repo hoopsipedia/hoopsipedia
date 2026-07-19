@@ -1,0 +1,47 @@
+{
+  "page": 1,
+  "games": [
+    {
+      "date": "1970-12-01",
+      "opponent": "Colorado",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 66,
+          "players": [
+            {"name": "Gibson", "fg": "3-12", "ft": "4-9", "reb": 3, "pf": 5, "pts": 10},
+            {"name": "Long", "fg": "8-14", "ft": "7-8", "reb": 9, "pf": 3, "pts": 23},
+            {"name": "Wright", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Little", "fg": "4-6", "ft": "2-3", "reb": 5, "pf": 0, "pts": 10},
+            {"name": "Faulkner", "fg": "1-7", "ft": "0-4", "reb": 6, "pf": 5, "pts": 2},
+            {"name": "Johnson", "fg": "6-11", "ft": "2-2", "reb": 8, "pf": 3, "pts": 14},
+            {"name": "Roberts", "fg": "0-0", "ft": "3-4", "reb": 1, "pf": 2, "pts": 3},
+            {"name": "Seidler", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Stewart", "fg": "2-2", "ft": "0-1", "reb": 7, "pf": 5, "pts": 4}
+          ]
+        },
+        {
+          "name": "Colorado",
+          "score": 63,
+          "players": [
+            {"name": "Dud. Mitchell", "fg": "10-16", "ft": "0-1", "reb": 1, "pf": 5, "pts": 20},
+            {"name": "Meely", "fg": "6-19", "ft": "6-9", "reb": 13, "pf": 3, "pts": 18},
+            {"name": "Creighton", "fg": "5-8", "ft": "0-0", "reb": 8, "pf": 5, "pts": 10},
+            {"name": "Aaker", "fg": "0-2", "ft": "3-5", "reb": 3, "pf": 5, "pts": 3},
+            {"name": "Shell", "fg": "2-4", "ft": "0-1", "reb": 2, "pf": 1, "pts": 4},
+            {"name": "Jameson", "fg": "0-2", "ft": "0-0", "reb": 1, "pf": 2, "pts": 0},
+            {"name": "Pickens", "fg": "0-1", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Smith", "fg": "1-4", "ft": "0-1", "reb": 2, "pf": 0, "pts": 2},
+            {"name": "McCoy", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Maulsby", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Dg. Mitchell", "fg": "2-2", "ft": "0-0", "reb": 0, "pf": 1, "pts": 4},
+            {"name": "Teets", "fg": "0-0", "ft": "0-1", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Hofman", "fg": "1-1", "ft": "0-2", "reb": 1, "pf": 3, "pts": 2}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

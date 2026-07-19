@@ -1,0 +1,35 @@
+{
+  "page": 3,
+  "games": [
+    {
+      "date": "1935-12-16",
+      "opponent": "Muskingum College",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 50,
+          "players": [
+            {"name": "Whitlinger", "fg": "1", "ft": "1", "pf": 3, "pts": 15},
+            {"name": "Laybourne", "fg": "1", "ft": "1", "pf": 0, "pts": 7},
+            {"name": "Nihousen", "fg": "1", "ft": "2", "pf": 0, "pts": 4},
+            {"name": "Borland", "fg": "4", "ft": "1", "pf": 4, "pts": 9},
+            {"name": "George", "fg": "0", "ft": "0", "pf": 2, "pts": 0},
+            {"name": "Crow", "fg": "3", "ft": "0", "pf": 2, "pts": 6},
+            {"name": "Rhodes", "fg": "0", "ft": "0", "pf": 2, "pts": 0},
+            {"name": "Smith", "fg": "1", "ft": "0", "pf": 1, "pts": 2},
+            {"name": "Rendabaugh", "fg": "0", "ft": "1", "pf": 2, "pts": 1},
+            {"name": "Dye", "fg": "3", "ft": "0", "pf": 2, "pts": 6},
+            {"name": "Wasylik", "fg": "0", "ft": "0", "pf": 1, "pts": 0}
+          ]
+        },
+        {
+          "name": "Muskingum College",
+          "score": 25,
+          "players": []
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

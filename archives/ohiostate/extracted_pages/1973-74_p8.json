@@ -1,0 +1,46 @@
+{
+  "page": 8,
+  "games": [
+    {
+      "date": "1973-12-27",
+      "opponent": "Butler",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 77,
+          "players": [
+            {"name": "Jackson", "fg": "2-5", "ft": "0-0", "pf": 5, "ast": 0, "reb": 6, "pts": 4},
+            {"name": "Wenner", "fg": "7-13", "ft": "1-3", "pf": 3, "ast": 4, "reb": 11, "pts": 15},
+            {"name": "Andreas", "fg": "7-20", "ft": "1-1", "pf": 4, "ast": 3, "reb": 10, "pts": 15},
+            {"name": "Bolden", "fg": "8-19", "ft": "2-4", "pf": 2, "ast": 4, "pts": 18},
+            {"name": "Repella", "fg": "4-6", "ft": "0-0", "pf": 2, "ast": 1, "reb": 2, "pts": 8},
+            {"name": "Wolfe", "fg": "4-7", "ft": "0-0", "pf": 3, "ast": 1, "reb": 6, "pts": 8},
+            {"name": "Taylor", "fg": "1-6", "ft": "0-1", "pf": 1, "ast": 0, "reb": 8, "pts": 2},
+            {"name": "Gerhard", "fg": "1-1", "ft": "0-0", "pf": 0, "ast": 1, "reb": 1, "pts": 2},
+            {"name": "Allison", "fg": "0-0", "ft": "0-0", "pf": 0, "ast": 0, "reb": 0, "pts": 0},
+            {"name": "Stiegemeier", "fg": "1-1", "ft": "1-2", "pf": 0, "ast": 0, "reb": 2, "pts": 3},
+            {"name": "Reinhardt", "fg": "1-1", "ft": "0-0", "pf": 1, "ast": 0, "reb": 1, "pts": 2}
+          ]
+        },
+        {
+          "name": "Butler",
+          "score": 63,
+          "players": [
+            {"name": "Monserez", "fg": "6-14", "ft": "3-3", "pf": 3, "ast": 0, "reb": 12, "pts": 15},
+            {"name": "Reinhardt, Craig", "fg": "2-3", "ft": "0-0", "pf": 2, "ast": 0, "reb": 2, "pts": 4},
+            {"name": "Mason", "fg": "1-12", "ft": "1-2", "pf": 1, "ast": 1, "reb": 13, "pts": 3},
+            {"name": "Williams", "fg": "1-5", "ft": "0-0", "pf": 0, "ast": 2, "reb": 0, "pts": 2},
+            {"name": "Burris", "fg": "1-14", "ft": "2-2", "pf": 1, "ast": 4, "reb": 4, "pts": 4},
+            {"name": "Cox", "fg": "6-13", "ft": "3-3", "pf": 2, "ast": 1, "reb": 4, "pts": 15},
+            {"name": "Dunn", "fg": "0-3", "ft": "2-2", "pf": 1, "ast": 0, "reb": 2, "pts": 2},
+            {"name": "Speckman", "fg": "4-10", "ft": "3-5", "pf": 2, "ast": 0, "reb": 6, "pts": 11},
+            {"name": "Lile", "fg": "1-3", "ft": "3-5", "pf": 0, "ast": 1, "reb": 1, "pts": 5},
+            {"name": "Eggert", "fg": "1-2", "ft": "0-0", "pf": 0, "ast": 0, "reb": 1, "pts": 2}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

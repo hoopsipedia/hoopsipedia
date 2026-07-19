@@ -1,0 +1,44 @@
+{
+  "page": 27,
+  "games": [
+    {
+      "date": "1993-02-28",
+      "opponent": "Duke",
+      "ucla_score": 67,
+      "opp_score": 78,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 67,
+          "players": [
+            {"name": "Mitchell Butler", "fg": "4-6", "tp": "0-0", "ft": "0-1", "reb": 5, "ast": 4, "pf": 4, "to": 3, "blk": 0, "stl": 0, "min": 29, "pts": 8},
+            {"name": "Ed O'Bannon", "fg": "6-12", "tp": "0-0", "ft": "5-6", "reb": 5, "ast": 1, "pf": 3, "to": 3, "blk": 0, "stl": 1, "min": 35, "pts": 17},
+            {"name": "Richard Petruska", "fg": "2-7", "tp": "0-0", "ft": "4-4", "reb": 5, "ast": 1, "pf": 3, "to": 4, "blk": 0, "stl": 0, "min": 20, "pts": 8},
+            {"name": "Tyus Edney", "fg": "2-7", "tp": "0-2", "ft": "2-2", "reb": 1, "ast": 7, "pf": 3, "to": 4, "blk": 0, "stl": 2, "min": 40, "pts": 6},
+            {"name": "Shon Tarver", "fg": "9-15", "tp": "1-4", "ft": "0-0", "reb": 5, "ast": 2, "pf": 2, "to": 4, "blk": 0, "stl": 2, "min": 37, "pts": 19},
+            {"name": "Kevin Dempsey", "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "blk": 0, "stl": 0, "min": 10, "pts": 0},
+            {"name": "Rodney Zimmerman", "fg": "3-6", "tp": "0-0", "ft": "1-2", "reb": 4, "ast": 1, "pf": 4, "to": 0, "blk": 0, "stl": 1, "min": 20, "pts": 7},
+            {"name": "George Zidek", "fg": "0-0", "tp": "0-0", "ft": "2-2", "reb": 1, "ast": 0, "pf": 0, "to": 0, "blk": 0, "stl": 0, "min": 4, "pts": 2},
+            {"name": "Marcus Burns", "fg": "0-2", "tp": "0-0", "ft": "0-0", "reb": 3, "ast": 0, "pf": 0, "to": 0, "blk": 0, "stl": 0, "min": 7, "pts": 0}
+          ]
+        },
+        {
+          "name": "Duke Blue Devils",
+          "score": 78,
+          "players": [
+            {"name": "Thomas Hill", "fg": "8-14", "tp": "1-4", "ft": "5-10", "reb": 1, "ast": 1, "pf": 3, "to": 5, "blk": 0, "stl": 2, "min": 36, "pts": 22},
+            {"name": "Antonio Lang", "fg": "6-12", "tp": "0-0", "ft": "2-4", "reb": 7, "ast": 0, "pf": 2, "to": 1, "blk": 0, "stl": 2, "min": 38, "pts": 14},
+            {"name": "Cherokee Parks", "fg": "6-10", "tp": "0-0", "ft": "5-6", "reb": 7, "ast": 0, "pf": 3, "to": 1, "blk": 4, "stl": 1, "min": 32, "pts": 17},
+            {"name": "Bobby Hurley", "fg": "5-10", "tp": "3-7", "ft": "6-6", "reb": 2, "ast": 15, "pf": 3, "to": 3, "blk": 0, "stl": 1, "min": 39, "pts": 19},
+            {"name": "Chris Collins", "fg": "2-2", "tp": "1-1", "ft": "0-0", "reb": 0, "ast": 0, "pf": 2, "to": 1, "blk": 0, "stl": 0, "min": 24, "pts": 5},
+            {"name": "Marty Clark", "fg": "0-2", "tp": "0-2", "ft": "0-0", "reb": 2, "ast": 1, "pf": 2, "to": 0, "blk": 0, "stl": 1, "min": 16, "pts": 0},
+            {"name": "Kenny Blakeney", "fg": "0-0", "tp": "0-0", "ft": "1-2", "reb": 0, "ast": 0, "pf": 0, "to": 1, "blk": 0, "stl": 0, "min": 8, "pts": 1},
+            {"name": "Erik Meek", "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 2, "ast": 0, "pf": 2, "to": 1, "blk": 0, "stl": 0, "min": 7, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

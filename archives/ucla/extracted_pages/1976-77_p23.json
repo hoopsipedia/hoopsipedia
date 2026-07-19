@@ -1,0 +1,9 @@
+{
+  "page": 23,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "1977-02-17 UCLA 89, Oregon State 76 (Corvallis, OR): UCLA player points column fails checksum. Team total is 89 (matches 38-63 FG + 13-17 FT = 89), but summing the printed individual POINTS column (17+20+0+18+21+1+8+0+0) gives 85, a 4-point shortfall. The shortfall traces to Kiki Vandeweghe's row, printed as 1-2 FG, 2-2 FT, 5 REB, 0 AST, 0 FOULS, 0 POINTS -- but 1-2 FG and 2-2 FT would mathematically yield 4 points, not the printed 0. Re-read the page once to confirm the printed value is indeed 0, not a misread; the discrepancy appears to be an error in the original source document. Per instructions to never invent values and be ruthless about skipping, this game is skipped rather than silently correcting Vandeweghe's points to 4. Oregon State's line (14+8+19+15+18+0+2+0+0+0=76) checksums correctly and was not the issue."
+    }
+  ]
+}

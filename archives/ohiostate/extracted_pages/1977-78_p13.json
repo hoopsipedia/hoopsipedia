@@ -1,0 +1,9 @@
+{
+  "page": 13,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Handwritten official box score dated Jan 21, 1978 at St. John Arena, Columbus, Ohio (Ohio State home game). Ohio State side (Ellinghausen, Chase(?), Williams, Bausey/Ransey(?), Page, Penn, Smith J., Poole, Hall) is legible enough that FG-made, FT-made, and per-player TP (validated via 2*FGM+FTM, pre-3pt era) all cross-check cleanly against the team totals row (FG 32, FT 11, TP 75) -- checksum passes for that side alone. However, the opposing (visiting) team's name is not printed or legible anywhere on the page, and its player stat lines could not be reconciled: summing the 2*FGM+FTM formula for the 9 visitor rows yields 80 points vs. a team total of 87, and summing individual FG-made (26) does not match the team FG total implied by the printed shooting percentages (~29). Because a complete game entry requires both teams' box scores with a passing checksum, and the opponent identity plus several of its numeric entries cannot be transcribed confidently, the entire game is skipped rather than guessed at."
+    }
+  ]
+}

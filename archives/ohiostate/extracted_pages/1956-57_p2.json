@@ -1,0 +1,47 @@
+{
+  "page": 2,
+  "games": [
+    {
+      "date": "1956-12-01",
+      "opponent": "Butler",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 98,
+          "players": [
+            {"name": "Howard", "fg": "9-13", "ft": "5-10", "reb": 17, "pf": 2, "pts": 23},
+            {"name": "Sidle", "fg": "9-16", "ft": "5-8", "reb": 13, "pf": 5, "pts": 23},
+            {"name": "Huston", "fg": "6-15", "ft": "0-1", "reb": 8, "pf": 5, "pts": 12},
+            {"name": "Millard", "fg": "6-9", "ft": "3-4", "reb": 0, "pf": 2, "pts": 15},
+            {"name": "Laughlin", "fg": "6-14", "ft": "4-5", "reb": 1, "pf": 1, "pts": 16},
+            {"name": "Hagedorn", "fg": "0-2", "ft": "0-0", "reb": 1, "pf": 1, "pts": 0},
+            {"name": "Barkstall", "fg": "0-2", "ft": "0-0", "reb": 1, "pf": 0, "pts": 0},
+            {"name": "Steagall", "fg": "1-3", "ft": "1-2", "reb": 0, "pf": 1, "pts": 3},
+            {"name": "Mosier", "fg": "1-1", "ft": "0-1", "reb": 1, "pf": 1, "pts": 2},
+            {"name": "Martin", "fg": "0-1", "ft": "0-0", "reb": 2, "pf": 0, "pts": 0},
+            {"name": "Snyder", "fg": "1-3", "ft": "2-3", "reb": 0, "pf": 1, "pts": 4},
+            {"name": "Dressler", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Bressler", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Butler",
+          "score": 82,
+          "players": [
+            {"name": "Guzek", "fg": "5-15", "ft": "13-14", "reb": 8, "pf": 4, "pts": 23},
+            {"name": "Peterman", "fg": "1-8", "ft": "2-2", "reb": 2, "pf": 4, "pts": 4},
+            {"name": "Foster", "fg": "1-4", "ft": "0-2", "reb": 3, "pf": 1, "pts": 2},
+            {"name": "Cox", "fg": "7-16", "ft": "2-4", "reb": 3, "pf": 3, "pts": 16},
+            {"name": "Plump", "fg": "6-13", "ft": "6-6", "reb": 3, "pf": 3, "pts": 18},
+            {"name": "Mitchell", "fg": "7-13", "ft": "1-2", "reb": 11, "pf": 4, "pts": 15},
+            {"name": "Masters", "fg": "0-0", "ft": "0-0", "reb": 1, "pf": 1, "pts": 0},
+            {"name": "Theofanis", "fg": "1-1", "ft": "2-3", "reb": 2, "pf": 2, "pts": 4},
+            {"name": "Edwards", "fg": "0-0", "ft": "0-0", "reb": 1, "pf": 1, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

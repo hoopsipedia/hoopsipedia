@@ -1,0 +1,40 @@
+{
+  "page": 17,
+  "games": [
+    {
+      "date": "1938-02-19",
+      "opponent": "Illinois",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 34,
+          "players": [
+            {"name": "Hull", "pf": 1, "pts": 8},
+            {"name": "Baker", "pf": 2, "pts": 4},
+            {"name": "Stafford", "pf": 0, "pts": 0},
+            {"name": "Schick", "pf": 4, "pts": 10},
+            {"name": "Settler", "pf": 2, "pts": 2},
+            {"name": "Boughner", "pf": 3, "pts": 6},
+            {"name": "Goetz", "pf": 0, "pts": 0},
+            {"name": "Lynch", "pf": 2, "pts": 4}
+          ]
+        },
+        {
+          "name": "Illinois",
+          "score": 42,
+          "players": [
+            {"name": "Phillips", "pf": 1, "pts": 4},
+            {"name": "Lessater", "pf": 1, "pts": 2},
+            {"name": "Hapse", "pf": 4, "pts": 12},
+            {"name": "Frank", "pf": 0, "pts": 0},
+            {"name": "Dehner", "pf": 1, "pts": 12},
+            {"name": "Handlon", "pf": 1, "pts": 5},
+            {"name": "Nesbit", "pf": 1, "pts": 7}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

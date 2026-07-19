@@ -1,0 +1,49 @@
+{
+  "page": 26,
+  "games": [
+    {
+      "date": "1988-02-25",
+      "opponent": "Washington",
+      "ucla_score": 97,
+      "opp_score": 87,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 97,
+          "players": [
+            {"name": "Trevor Wilson", "min": 36, "fg": "7-7", "ft": "2-5", "tp": "0-0", "reb": 8, "ast": 9, "pf": 3, "to": 2, "stl": 0, "blk": 0, "pts": 16},
+            {"name": "Craig Jackson", "min": 18, "fg": "2-4", "ft": "3-3", "tp": "0-0", "reb": 4, "ast": 1, "pf": 2, "to": 1, "stl": 0, "blk": 1, "pts": 7},
+            {"name": "Kelvin Butler", "min": 31, "fg": "8-10", "ft": "5-6", "tp": "0-0", "reb": 4, "ast": 2, "pf": 2, "to": 1, "stl": 2, "blk": 0, "pts": 21},
+            {"name": "Pooh Richardson", "min": 38, "fg": "6-9", "ft": "0-1", "tp": "0-0", "reb": 6, "ast": 4, "pf": 2, "to": 4, "stl": 2, "blk": 0, "pts": 12},
+            {"name": "Dave Immel", "min": 20, "fg": "4-9", "ft": "8-8", "tp": "0-1", "reb": 0, "ast": 3, "pf": 2, "to": 2, "stl": 1, "blk": 0, "pts": 16},
+            {"name": "Gerald Madkins", "min": 22, "fg": "2-5", "ft": "6-6", "tp": "1-2", "reb": 3, "ast": 2, "pf": 0, "to": 4, "stl": 1, "blk": 0, "pts": 11},
+            {"name": "Charles Rochelin", "min": 24, "fg": "4-6", "ft": "0-0", "tp": "2-2", "reb": 2, "ast": 1, "pf": 0, "to": 0, "stl": 1, "blk": 0, "pts": 10},
+            {"name": "Kevin Walker", "min": 7, "fg": "1-4", "ft": "0-0", "tp": "1-3", "reb": 1, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 1, "pts": 3},
+            {"name": "Kevin Williams", "min": 1, "fg": "0-0", "ft": "1-2", "tp": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 1},
+            {"name": "Darryl Morris", "min": 1, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Chris Kenny", "min": 1, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 1, "ast": 0, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Keith Owens", "min": 1, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Washington Huskies",
+          "score": 87,
+          "players": [
+            {"name": "Mike Hayward", "min": 35, "fg": "6-15", "ft": "4-4", "tp": "3-4", "reb": 6, "ast": 6, "pf": 5, "to": 1, "stl": 0, "blk": 0, "pts": 19},
+            {"name": "Jeff Sanor", "min": 39, "fg": "1-8", "ft": "2-2", "tp": "1-5", "reb": 6, "ast": 8, "pf": 3, "to": 2, "stl": 0, "blk": 0, "pts": 5},
+            {"name": "Mark West", "min": 19, "fg": "2-6", "ft": "1-2", "tp": "0-0", "reb": 2, "ast": 1, "pf": 1, "to": 4, "stl": 0, "blk": 0, "pts": 5},
+            {"name": "Eldridge Recasner", "min": 37, "fg": "12-20", "ft": "2-2", "tp": "1-3", "reb": 9, "ast": 2, "pf": 4, "to": 3, "stl": 2, "blk": 0, "pts": 27},
+            {"name": "Troy Morrell", "min": 38, "fg": "2-6", "ft": "4-4", "tp": "0-2", "reb": 2, "ast": 4, "pf": 4, "to": 0, "stl": 3, "blk": 0, "pts": 8},
+            {"name": "Todd Lautenbach", "min": 21, "fg": "7-8", "ft": "2-2", "tp": "1-3", "reb": 3, "ast": 1, "pf": 2, "to": 1, "stl": 0, "blk": 0, "pts": 16},
+            {"name": "David Wilson", "min": 1, "fg": "1-2", "ft": "2-2", "tp": "1-2", "reb": 0, "ast": 0, "pf": 1, "to": 0, "stl": 1, "blk": 0, "pts": 5},
+            {"name": "Barry Howard", "min": 2, "fg": "1-2", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Tom Robinson", "min": 1, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Anthony Jenkins", "min": 7, "fg": "0-2", "ft": "0-0", "tp": "0-1", "reb": 0, "ast": 0, "pf": 3, "to": 1, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

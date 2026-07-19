@@ -1,0 +1,41 @@
+{
+  "page": 3,
+  "games": [
+    {
+      "date": "1942-12-30",
+      "opponent": "Rochester",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 52,
+          "players": [
+            {"name": "Wise", "fg": "4", "ft": "1", "pts": 9},
+            {"name": "Everett", "fg": "0", "ft": "3", "pts": 3},
+            {"name": "Miller/Sidwald (combined - individual split illegible)", "pts": 12},
+            {"name": "Dugger", "fg": "3", "ft": "2", "pts": 8},
+            {"name": "Trabin", "fg": "1", "ft": "0", "pts": 2},
+            {"name": "Schrider", "fg": "3", "ft": "0", "pts": 6},
+            {"name": "White", "fg": "0", "ft": "0", "pts": 0},
+            {"name": "Fekete", "fg": "3", "ft": "3", "pts": 9},
+            {"name": "Sims", "fg": "1", "ft": "1", "pts": 3}
+          ]
+        },
+        {
+          "name": "Rochester",
+          "score": 53,
+          "players": [
+            {"name": "Beall", "fg": "3", "ft": "3", "pts": 9},
+            {"name": "Fowerday", "fg": "2", "ft": "2", "pts": 6},
+            {"name": "Chapman", "fg": "0", "ft": "0", "pts": 0},
+            {"name": "Colhane", "fg": "1", "ft": "1", "pts": 3},
+            {"name": "Williams", "fg": "4", "ft": "2", "pts": 10},
+            {"name": "Barrody", "fg": "3", "ft": "0", "pts": 6},
+            {"name": "Baynes", "fg": "8", "ft": "3", "pts": 19}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

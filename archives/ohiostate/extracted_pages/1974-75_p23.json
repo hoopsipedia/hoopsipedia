@@ -1,0 +1,40 @@
+{
+  "page": 23,
+  "games": [
+    {
+      "date": "1975-02-15",
+      "opponent": "Wisconsin",
+      "teams": [
+        {
+          "name": "Wisconsin",
+          "score": 70,
+          "players": [
+            {"name": "Luchsinger", "fg": "2-8", "ft": "0-0", "reb": 1, "ast": 0, "pf": 3, "pts": 4},
+            {"name": "McCoy", "fg": "4-13", "ft": "1-2", "reb": 9, "ast": 0, "pf": 4, "pts": 9},
+            {"name": "Koehler", "fg": "12-25", "ft": "5-7", "reb": 16, "ast": 3, "pf": 4, "pts": 29},
+            {"name": "McCauley", "fg": "2-7", "ft": "0-2", "reb": 1, "ast": 2, "pf": 0, "pts": 4},
+            {"name": "Colbert", "fg": "0-1", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "pts": 0},
+            {"name": "Pearson", "fg": "3-11", "ft": "0-2", "reb": 7, "ast": 4, "pf": 2, "pts": 6},
+            {"name": "Paterick", "fg": "4-9", "ft": "2-3", "reb": 3, "ast": 2, "pf": 4, "pts": 10},
+            {"name": "Falk", "fg": "3-4", "ft": "2-2", "reb": 1, "ast": 3, "pf": 2, "pts": 8},
+            {"name": "Hardy", "fg": "0-2", "ft": "0-0", "reb": 2, "ast": 0, "pf": 1, "pts": 0}
+          ]
+        },
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 76,
+          "players": [
+            {"name": "Andreas", "fg": "10-17", "ft": "1-6", "reb": 10, "ast": 2, "pf": 1, "pts": 21},
+            {"name": "Weston", "fg": "3-10", "ft": "4-4", "reb": 6, "ast": 3, "pf": 2, "pts": 10},
+            {"name": "Taylor", "fg": "5-14", "ft": "3-3", "reb": 13, "ast": 3, "pf": 5, "pts": 13},
+            {"name": "Wood", "fg": "4-6", "ft": "0-0", "reb": 6, "ast": 3, "pf": 4, "pts": 8},
+            {"name": "Bolden", "fg": "6-13", "ft": "7-10", "reb": 3, "ast": 9, "pf": 4, "pts": 19},
+            {"name": "Hammond", "fg": "1-1", "ft": "3-4", "reb": 3, "ast": 1, "pf": 1, "pts": 5}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

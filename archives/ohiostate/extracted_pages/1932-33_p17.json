@@ -1,0 +1,9 @@
+{
+  "page": 17,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Newspaper clipping 'Title Hopes Get Initial Setback' covers Ohio State at Iowa, Feb 25 1933 (Iowa City, attendance 9000+, captain Mattison). Final score is legible (Ohio 29, Iowa 37), and a box score table with player lines for both teams is present, but the scan resolution is too low / text too small to confidently read the individual FG/FT/PF/Pts digits for each player. Attempted OCR-by-eye produced inconsistent totals (e.g. Krumbholz line: FG=5, FT=1 implies 11 pts by 2*FG+FT, but printed total looked like 7), indicating misread digits rather than a real discrepancy. Skipping per ruthless-skip policy rather than guessing player stats."
+    }
+  ]
+}

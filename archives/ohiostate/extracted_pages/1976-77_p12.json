@@ -1,0 +1,48 @@
+{
+  "page": 12,
+  "games": [
+    {
+      "date": "1977-01-08",
+      "opponent": "Purdue",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 65,
+          "players": [
+            {"name": "Burris", "fg": "7-10", "ft": "0-0", "reb": 3, "pf": 3, "ast": 0, "pts": 14},
+            {"name": "Hall", "fg": "0-3", "ft": "4-4", "reb": 6, "pf": 2, "ast": 1, "pts": 4},
+            {"name": "Ellinghausen", "fg": "5-6", "ft": "4-4", "reb": 3, "pf": 0, "ast": 0, "pts": 14},
+            {"name": "Ransey", "fg": "7-15", "ft": "0-0", "reb": 3, "pf": 1, "ast": 2, "pts": 14},
+            {"name": "Bolden", "fg": "5-10", "ft": "0-0", "reb": 2, "pf": 1, "ast": 9, "pts": 10},
+            {"name": "Hammond", "fg": "1-2", "ft": "0-0", "reb": 0, "pf": 1, "ast": 0, "pts": 2},
+            {"name": "Daugherty", "fg": "2-7", "ft": "0-0", "reb": 2, "pf": 1, "ast": 1, "pts": 4},
+            {"name": "Poole", "fg": "0-2", "ft": "1-1", "reb": 1, "pf": 1, "ast": 0, "pts": 1},
+            {"name": "Hetz", "fg": "0-0", "ft": "2-2", "reb": 1, "pf": 1, "ast": 0, "pts": 2},
+            {"name": "Wood", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 1, "ast": 0, "pts": 0},
+            {"name": "Smith", "fg": "0-2", "ft": "0-0", "reb": 0, "pf": 1, "ast": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Purdue",
+          "score": 82,
+          "players": [
+            {"name": "Parker", "fg": "8-15", "ft": "4-4", "reb": 4, "pf": 1, "ast": 4, "pts": 20},
+            {"name": "Scheffler", "fg": "0-5", "ft": "0-0", "reb": 4, "pf": 0, "ast": 0, "pts": 0},
+            {"name": "Parkinson", "fg": "1-9", "ft": "2-2", "reb": 2, "pf": 3, "ast": 9, "pts": 4},
+            {"name": "Jordan", "fg": "10-21", "ft": "9-12", "reb": 9, "pf": 2, "ast": 1, "pts": 29},
+            {"name": "Walls", "fg": "4-9", "ft": "1-2", "reb": 6, "pf": 3, "ast": 0, "pts": 9},
+            {"name": "Carroll", "fg": "5-7", "ft": "0-0", "reb": 12, "pf": 4, "ast": 0, "pts": 10},
+            {"name": "Sichting", "fg": "4-4", "ft": "0-0", "reb": 1, "pf": 2, "ast": 4, "pts": 8},
+            {"name": "Thomas", "fg": "0-1", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "pts": 0},
+            {"name": "Smalley", "fg": "1-1", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "pts": 2},
+            {"name": "McDermott", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "pts": 0},
+            {"name": "Kabat", "fg": "0-0", "ft": "0-0", "reb": 2, "pf": 0, "ast": 0, "pts": 0},
+            {"name": "Needham", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

@@ -1,0 +1,9 @@
+{
+  "page": 29,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "1990-03-10 Arizona State vs UCLA (Tempe, AZ) fails checksum for Arizona State: box score prints final score as Arizona State 37+41=\"79\" (arithmetic error in source, actually sums to 78) and team TOTALS row also prints TP=79 for Arizona State, but the sum of all 7 Arizona State player point lines (A-Austin 27, Becker 4, I-Austin 26, Redhair 6, Camper 6, Anderson 9, Lewis 0) totals exactly 78, and an independent FG/3PT/FT-based recomputation from the team shooting totals (26 FG made, 8 of them 3-pointers, 18 FT made) also yields 78, not 79. No overtime period is shown (shooting stat splits only list Period 1 and Period 2, summing exactly to the game totals with no OT column), so a 79-79 tie is not physically possible for a completed regulation game. Re-read the page once to confirm; both reads show identical digits, so this is an internal inconsistency in the original 1990 typewritten box score itself (likely a scorekeeper typo of 37/41 for what should sum to 78, or the team TP total was mistyped), not a legibility issue. UCLA's own player-point sum (79) does match UCLA's printed final score/team total (79) cleanly, but since Arizona State's side cannot be reconciled without guessing which printed number is wrong, the whole game is skipped per the ruthless-skip-over-guess instruction rather than fabricating a corrected score."
+    }
+  ]
+}

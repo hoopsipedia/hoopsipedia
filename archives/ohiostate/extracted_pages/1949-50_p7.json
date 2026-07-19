@@ -1,0 +1,42 @@
+{
+  "page": 7,
+  "games": [
+    {
+      "date": "1949-12-29",
+      "opponent": "Harvard",
+      "note": "Game played at East Lansing (Ohio State listed as *HOME TEAM). Sheet has separate FG-made/FGA-attempted and FT-made/FTM-missed columns (FTM = free throws missed, not made); ft field below is made-attempted using FT as made and FT+FTM as attempted. PTS column is as printed on the sheet and matches 2*FG+FT_made for every player.",
+      "teams": [
+        {
+          "name": "Harvard",
+          "score": 48,
+          "players": [
+            {"name": "Rockwell", "pos": "F", "fg": "5-20", "ft": "6-9", "pf": 4, "pts": 16},
+            {"name": "Murphy", "pos": "F", "fg": "5-21", "ft": "4-5", "pf": 2, "pts": 14},
+            {"name": "Prior", "pos": "C", "fg": "0-4", "ft": "1-2", "pf": 3, "pts": 1},
+            {"name": "Covey", "pos": "G", "fg": "1-5", "ft": "1-1", "pf": 4, "pts": 3},
+            {"name": "Gabler", "pos": "C", "fg": "2-15", "ft": "2-2", "pf": 2, "pts": 6},
+            {"name": "E. Smith", "pos": "C", "fg": "2-9", "ft": "1-1", "pf": 3, "pts": 5},
+            {"name": "Crosby", "pos": "G", "fg": "1-8", "ft": "1-2", "pf": 1, "pts": 3},
+            {"name": "Hickey", "pos": "G", "fg": "0-0", "ft": "0-1", "pf": 3, "pts": 0}
+          ]
+        },
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 59,
+          "players": [
+            {"name": "Donham", "pos": "F", "min": "34:00", "fg": "6-15", "ft": "2-5", "pf": 4, "pts": 14},
+            {"name": "Jacobs", "pos": "F", "min": "26:30", "fg": "3-13", "ft": "4-6", "pf": 2, "pts": 10},
+            {"name": "Taylor", "pos": "C", "min": "40:00", "fg": "4-18", "ft": "4-6", "pf": 1, "pts": 12},
+            {"name": "Brown", "pos": "G", "min": "35:45", "fg": "2-10", "ft": "4-4", "pf": 4, "pts": 8},
+            {"name": "Burkholder", "pos": "G", "min": "37:00", "fg": "1-13", "ft": "2-3", "pf": 0, "pts": 4},
+            {"name": "Remington", "pos": "F", "min": "19:30", "fg": "4-12", "ft": "3-4", "pf": 4, "pts": 11},
+            {"name": "Faraffa", "pos": "G", "min": "4:15", "fg": "0-1", "ft": "0-0", "pf": 1, "pts": 0},
+            {"name": "Dawe", "pos": "G", "min": "3:00", "fg": "0-0", "ft": "0-0", "pf": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

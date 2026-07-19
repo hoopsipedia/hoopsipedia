@@ -1,0 +1,40 @@
+{
+  "page": 6,
+  "games": [
+    {
+      "date": "1930-01-11",
+      "opponent": "Wisconsin",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 25,
+          "players": [
+            {"name": "Irwin", "min": "10:00", "ft": "0-1", "pf": 0, "pts": 6},
+            {"name": "Evans", "min": "10:55", "ft": "0-1", "pf": 0, "pts": 2},
+            {"name": "Hinchman", "min": "29:45", "ft": "1-2", "pf": 1, "pts": 5},
+            {"name": "Such", "min": "2:34", "ft": "0-2", "pf": 0, "pts": 0},
+            {"name": "Wrigley", "min": "30:00", "ft": "1-1", "pf": 2, "pts": 5},
+            {"name": "Condon", "min": "10:00", "ft": "1-1", "pf": 0, "pts": 1},
+            {"name": "Fesler", "min": "40:00", "ft": "1-3", "pf": 3, "pts": 3},
+            {"name": "Larkins", "min": "31:30", "ft": "1-3", "pf": 4, "pts": 3},
+            {"name": "Williams", "min": "5:15", "ft": "0-0", "pf": 1, "pts": 0}
+          ]
+        },
+        {
+          "name": "Wisconsin",
+          "score": 32,
+          "players": [
+            {"name": "Matthusen", "ft": "0-1", "pf": 4, "pts": 2},
+            {"name": "Nelson", "ft": "1-2", "pf": 3, "pts": 1},
+            {"name": "Farber", "ft": "0-1", "pf": 1, "pts": 6},
+            {"name": "Foster", "ft": "3-4", "pf": 1, "pts": 13},
+            {"name": "Curjelewski", "ft": "2-4", "pf": 0, "pts": 4},
+            {"name": "Paul", "ft": "0-2", "pf": 2, "pts": 6}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

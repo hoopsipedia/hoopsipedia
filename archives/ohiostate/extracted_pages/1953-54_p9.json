@@ -1,0 +1,9 @@
+{
+  "page": 9,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page 9 is an official Western Conference box score for Ohio State at Michigan, January 4, 1954 (final: Michigan 85, Ohio State 76; half 43-39 Michigan). Ohio State's (visiting team) player lines are clear and checksum cleanly (player points sum to 76, rebounds sum to 25). However Michigan's (home team) section has heavy scan smudging/staining running diagonally across the PF, PTS, and Rebounds columns for essentially all six players, one player's name is illegible under the smudge (possibly 'Kaddy'/'Eddy'/'Reddy' - cannot be read with confidence), and the FG column readings only sum to 28 against a team total of 29 (one digit is ambiguous, likely Groffsky's FG of 3 vs 4, or the obscured 5th player's FG of 6 vs 7). Because a player name and a numeric column can't be confirmed without guessing, and both teams are required for a complete game record, the entire game is skipped rather than fabricating the uncertain Michigan values."
+    }
+  ]
+}

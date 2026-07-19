@@ -1,0 +1,9 @@
+{
+  "page": 11,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page 11 is a newspaper clipping ('Fesler is Offensive Star for Ohio State') covering Ohio State vs Chicago, Feb. 16 1931 at the Coliseum (coach H.G. Olsen), with a header showing final score approx. Ohio 25, Chicago 26 and attendance 3333, plus two small embedded box-score tables (Chicago and Ohio State) with columns R./F./P.F./T.P. However, the individual player statistic digits in both tables are too small and blurred in the scan to read with confidence (multiple rows have ambiguous or missing digits), and the printed Totals row does not clearly reconcile with 2*FG+FT for either team from what is legible. Rather than guess player-level fg/ft/pts values, the entire game is skipped per the checksum/confidence requirement."
+    }
+  ]
+}

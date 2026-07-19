@@ -1,0 +1,45 @@
+{
+  "page": 16,
+  "games": [
+    {
+      "date": "1956-02-04",
+      "opponent": "Indiana",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 100,
+          "players": [
+            {"name": "Howard", "fg": "4-14", "ft": "2-2", "reb": 15, "pf": 3, "pts": 10},
+            {"name": "Laughlin", "fg": "6-13", "ft": "7-8", "reb": 4, "pf": 2, "pts": 19},
+            {"name": "Kelley", "fg": "1-6", "ft": "7-11", "reb": 13, "pf": 4, "pts": 9},
+            {"name": "Ellis", "fg": "6-16", "ft": "4-5", "reb": 1, "pf": 5, "pts": 16},
+            {"name": "Freeman", "fg": "13-39", "ft": "15-17", "reb": 1, "pf": 4, "pts": 41},
+            {"name": "Millard", "fg": "0-2", "ft": "0-0", "reb": 1, "pf": 1, "pts": 0},
+            {"name": "Short", "fg": "2-2", "ft": "0-0", "reb": 3, "pf": 0, "pts": 4},
+            {"name": "Snyder", "fg": "0-3", "ft": "0-0", "reb": 1, "pf": 0, "pts": 0},
+            {"name": "Martin", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Barkstall", "fg": "0-2", "ft": "1-2", "reb": 0, "pf": 0, "pts": 1},
+            {"name": "Mosier", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Indiana Hoosiers",
+          "score": 82,
+          "players": [
+            {"name": "Choice", "fg": "7-13", "ft": "6-12", "reb": 11, "pf": 1, "pts": 20},
+            {"name": "Thompson", "fg": "4-10", "ft": "4-4", "reb": 7, "pf": 1, "pts": 12},
+            {"name": "Dees", "fg": "5-21", "ft": "7-8", "reb": 6, "pf": 3, "pts": 13},
+            {"name": "Bryant", "fg": "8-15", "ft": "6-6", "reb": 5, "pf": 4, "pts": 22},
+            {"name": "Obremskoy", "fg": "2-10", "ft": "1-2", "reb": 2, "pf": 5, "pts": 5},
+            {"name": "Fisher", "fg": "3-6", "ft": "1-2", "reb": 4, "pf": 2, "pts": 8},
+            {"name": "Phipps", "fg": "1-3", "ft": "0-0", "reb": 0, "pf": 5, "pts": 2},
+            {"name": "Barley", "fg": "0-0", "ft": "0-0", "pf": 2, "pts": 0},
+            {"name": "Ball", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

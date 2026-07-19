@@ -1,0 +1,49 @@
+{
+  "page": 5,
+  "games": [
+    {
+      "date": "1981-12-02",
+      "opponent": "Kent State",
+      "teams": [
+        {
+          "name": "Kent State",
+          "score": 54,
+          "players": [
+            {"name": "Warner, Geoff", "min": 23, "fg": "1-7", "ft": "1-2", "reb": 6, "pf": 1, "ast": 2, "to": 2, "blk": 0, "stl": 1, "pts": 3},
+            {"name": "Moore, Curtis", "min": 26, "fg": "4-9", "ft": "2-2", "reb": 1, "pf": 3, "ast": 0, "to": 2, "blk": 0, "stl": 0, "pts": 10},
+            {"name": "Evans, Ryan", "min": 29, "fg": "2-4", "ft": "0-1", "reb": 6, "pf": 4, "ast": 0, "to": 2, "blk": 0, "stl": 0, "pts": 4},
+            {"name": "Ed [surname illegible]", "min": 19, "fg": "1-5", "ft": "0-0", "reb": 6, "pf": 4, "ast": 1, "to": 1, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Cudworth, Gregg", "min": 19, "fg": "3-7", "ft": "2-2", "reb": 2, "pf": 0, "ast": 0, "to": 3, "blk": 0, "stl": 0, "pts": 8},
+            {"name": "Howell, Kenny", "min": 14, "fg": "1-3", "ft": "2-2", "reb": 0, "pf": 3, "ast": 1, "to": 1, "blk": 0, "stl": 0, "pts": 4},
+            {"name": "Gordon, Keith", "min": 13, "fg": "0-0", "ft": "3-5", "reb": 3, "pf": 2, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 3},
+            {"name": "Harmon, Marty", "min": 15, "fg": "5-7", "ft": "3-4", "reb": 1, "pf": 2, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pts": 13},
+            {"name": "Grier, Anthony", "min": 19, "fg": "1-4", "ft": "2-2", "reb": 0, "pf": 0, "ast": 3, "to": 1, "blk": 0, "stl": 0, "pts": 4},
+            {"name": "Bryant, Andre", "min": 14, "fg": "1-3", "ft": "0-0", "reb": 2, "pf": 2, "ast": 0, "to": 1, "blk": 1, "stl": 0, "pts": 2},
+            {"name": "Robbins, Larry", "min": 4, "fg": "0-1", "ft": "0-0", "reb": 0, "pf": 1, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Vaughn, Gerald", "min": 4, "fg": "0-0", "ft": "1-2", "reb": 1, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 1}
+          ]
+        },
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 74,
+          "players": [
+            {"name": "Stokes, Ron", "min": 23, "fg": "2-5", "ft": "3-5", "reb": 0, "pf": 3, "ast": 2, "to": 0, "blk": 0, "stl": 0, "pts": 7},
+            {"name": "Huggins, Larry", "min": 32, "fg": "5-8", "ft": "1-1", "reb": 3, "pf": 2, "ast": 2, "to": 2, "blk": 0, "stl": 0, "pts": 11},
+            {"name": "Walters, Granville", "min": 22, "fg": "3-5", "ft": "2-2", "reb": 7, "pf": 2, "ast": 0, "to": 2, "blk": 1, "stl": 0, "pts": 8},
+            {"name": "Campbell, Tony", "min": 36, "fg": "7-13", "ft": "4-4", "reb": 7, "pf": 2, "ast": 2, "to": 4, "blk": 1, "stl": 0, "pts": 18},
+            {"name": "Kellogg, Clark", "min": 8, "reb": 5, "pf": 0, "ast": 1, "to": 0, "blk": 0, "stl": 0, "pts": 5},
+            {"name": "Kirchner, Cliff", "min": 8, "fg": "0-0", "ft": "0-0", "reb": 1, "pf": 2, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Taylor, Trot", "min": 28, "fg": "3-8", "ft": "6-8", "reb": 5, "pf": 4, "ast": 5, "to": 3, "blk": 0, "stl": 1, "pts": 12},
+            {"name": "Concheck, Joe", "min": 17, "fg": "2-5", "ft": "3-4", "reb": 2, "pf": 1, "ast": 1, "to": 1, "blk": 0, "stl": 0, "pts": 7},
+            {"name": "Jones, Dave", "min": 6, "fg": "0-1", "ft": "0-0", "reb": 0, "pf": 1, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Johnson, Bryant", "min": 4, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 1, "pts": 0},
+            {"name": "Haas, Mitch", "min": 3, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Falk, Derick", "min": 3, "fg": "3-3", "ft": "0-0", "reb": 1, "pf": 1, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 6}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

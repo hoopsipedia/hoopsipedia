@@ -1,0 +1,9 @@
+{
+  "page": 12,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "1967-01-07 Seattle at UNM (New Mexico Lobos): UNM side transcribes and checksums perfectly (player PTS sum = 80, matching team TOTALS row; FG/FT/RB/P columns also all match team totals exactly). However Seattle's box score has several cells with visible pen corrections/circled or struck-through digits (LOONEY FT/FTA, STRONG FT, WORKMAN,T FT/FTA/P, WILKINS FT) that are genuinely ambiguous even on a second look at the page. Best-effort transcription of Seattle sums to 59 points vs. the team TOTALS row of 60, an unresolved 1-point discrepancy. Per instructions to be ruthless about skipping rather than guessing on a failed checksum, and since the schema requires one checksum_ok per full game (both teams), the entire game is skipped rather than partially fabricating the ambiguous Seattle digits."
+    }
+  ]
+}

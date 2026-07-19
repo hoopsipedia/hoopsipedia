@@ -1,0 +1,9 @@
+{
+  "page": 21,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page is a newspaper clipping (Everett B. Morris, presumably NY Herald Tribune) covering the 1946 NCAA third-place game, Ohio State 63, California 45 (headline and article text clearly legible, confirming date context and final score). Two small box-score tables (California and Ohio State, columns Fg/Ft/Pf/Mp/Tp) are present in the clipping, but the scan resolution on the numeric columns is too degraded to reliably distinguish individual digits per player (multiple candidate readings possible for several rows, e.g. Wray/Bower/Hogeboom for California and Lovett/Huston/Kuhn for Ohio State). Because per-player values could not be read with confidence, transcribing them risked fabricating stats and failing the checksum requirement, so the game was skipped rather than guessed. Team names/final score (Ohio State 63, California 45) are legible but that alone is insufficient to satisfy the required per-player box score with checksum."
+    }
+  ]
+}

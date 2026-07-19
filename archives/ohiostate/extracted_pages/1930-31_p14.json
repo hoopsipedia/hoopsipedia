@@ -1,0 +1,11 @@
+{
+  "page": 14,
+  "games": [],
+  "skipped": [
+    {
+      "date": "1931-02-28",
+      "opponent": "Northwestern",
+      "reason": "Checksum failure / low-confidence OCR of faded multi-column box score (columns B./F./M.F./P.F./Pts. are misaligned and partly cropped for several rows). Team score line clearly reads Ohio 18, Northwestern 32, and the Northwestern Pts. column totals to 32 (checksum OK), but the Ohio State player Pts. values as legible (Ervin 6, Fesler 6, Weaver 0, Larkins 0, Hoffer 4, Lively 4, Mattison 2, Ferrall 0, Van Thryde 0, Lakin 0) sum to 22, which does not match Ohio State's final score of 18 -- indicating unreliable digit reads on that faint scorebook column. Skipping rather than guessing individual player lines."
+    }
+  ]
+}

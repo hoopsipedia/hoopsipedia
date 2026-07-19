@@ -1,0 +1,9 @@
+{
+  "page": 9,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Purdue @ UCLA, 1975-12-30 (Pauley Pavilion), final Purdue 86 - UCLA 99. UCLA side checksums perfectly (player points sum to 99 = team total; FG 42-76 and FT 15-25 match team row exactly). Purdue side fails checksum: individual player points sum to only 84 vs team final score of 86, and individual FT-made sum to 16 vs team FT total of 18-20 (team FT% of .900 confirms 18/20 is correct, so the shortfall is a real transcription gap, not a misread team total). Each individual Purdue row is internally self-consistent (2*FGmade+FTmade=Pts as printed), but one player's free-throw line could not be confidently identified as the source of the missing 2 points/2 free throws from the available image detail, so per instructions the game was skipped rather than guessing which cell is wrong."
+    }
+  ]
+}

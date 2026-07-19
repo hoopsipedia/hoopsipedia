@@ -1,0 +1,42 @@
+{
+  "page": 21,
+  "games": [
+    {
+      "date": "1984-02-11",
+      "opponent": "Louisville",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 50,
+          "players": [
+            {"name": "Jim Miller", "min": 34, "fg": "1-8", "ft": "1-2", "reb": 4, "pf": 4, "ast": 1, "to": 5, "pts": 3},
+            {"name": "Rick Carlisle", "min": 27, "fg": "2-6", "ft": "6-8", "reb": 4, "pf": 2, "to": 2, "stl": 2, "pts": 10},
+            {"name": "Kenton Edelin", "min": 39, "fg": "3-3", "ft": "1-1", "reb": 5, "pf": 2, "ast": 2, "to": 1, "blk": 3, "stl": 2, "pts": 7},
+            {"name": "Othell Wilson", "min": 39, "fg": "7-14", "ft": "2-2", "reb": 6, "pf": 1, "ast": 2, "to": 1, "blk": 1, "stl": 4, "pts": 16},
+            {"name": "Ricky Stokes", "min": 18, "fg": "1-4", "ft": "0-0", "reb": 2, "pf": 1, "ast": 1, "to": 1, "stl": 1, "pts": 2},
+            {"name": "Tim Mullen", "min": 17, "fg": "1-3", "ft": "2-4", "reb": 0, "pf": 3, "to": 1, "pts": 4},
+            {"name": "Olden Polynice", "min": 19, "fg": "3-3", "ft": "0-0", "reb": 6, "pf": 2, "ast": 1, "pts": 6},
+            {"name": "Tom Sheehey", "min": 7, "fg": "1-1", "ft": "0-0", "reb": 1, "pf": 1, "to": 1, "pts": 2}
+          ]
+        },
+        {
+          "name": "Louisville Cardinals",
+          "score": 45,
+          "players": [
+            {"name": "Manuel Forrest", "min": 36, "fg": "2-5", "ft": "3-4", "reb": 8, "pf": 3, "ast": 3, "to": 6, "pts": 7},
+            {"name": "Charles Jones", "min": 39, "fg": "4-7", "ft": "2-4", "reb": 7, "pf": 2, "ast": 2, "to": 2, "blk": 2, "stl": 2, "pts": 10},
+            {"name": "Barry Sumpter", "min": 17, "fg": "0-1", "ft": "0-0", "reb": 3, "pf": 0, "blk": 1, "pts": 0},
+            {"name": "Lancaster Gordon", "min": 36, "fg": "7-12", "ft": "0-0", "reb": 3, "pf": 2, "ast": 1, "to": 3, "blk": 1, "stl": 1, "pts": 14},
+            {"name": "Milt Wagner", "min": 37, "fg": "4-10", "ft": "2-3", "reb": 3, "pf": 2, "ast": 4, "to": 3, "stl": 1, "pts": 10},
+            {"name": "Jeff Hall", "min": 31, "fg": "2-6", "ft": "0-0", "reb": 0, "pf": 4, "ast": 1, "to": 1, "stl": 1, "pts": 4},
+            {"name": "Danny Mitchell", "min": 2, "fg": "0-0", "ft": "0-0", "reb": 1, "pf": 1, "pts": 0},
+            {"name": "James Jetter", "min": 1, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 3, "pts": 0},
+            {"name": "Bobbie Valentine", "min": 1, "fg": "0-0", "ft": "0-1", "reb": 0, "pf": 0, "stl": 1, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

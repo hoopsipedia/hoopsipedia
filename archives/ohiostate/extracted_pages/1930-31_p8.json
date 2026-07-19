@@ -1,0 +1,9 @@
+{
+  "page": 8,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Ohio State at Michigan, Jan. 26 1931 (Ann Arbor), final score Ohio 22 - Michigan 40 per scoreboard header. Small lineup box (Michigan and Ohio State player lines with R/F/P.F./T.P. columns) is present but the scan is too degraded to read the F (free throw) and P.F. columns reliably. Best-effort transcription of Michigan's T.P. column (Eveland 8, Weiss 6, Petrie 0, Daniels 12, Altenhof 4, Williamson 0) sums to 30, which fails checksum against the official final score of 40, so no player-level data could be transcribed with confidence. The accompanying newspaper article (headline 'Court Contest Close in Opening Stanzas') confirms Daniels scored 12 points and Michigan led 15-10 at half, but does not give a full box score. Skipping per instruction to be ruthless rather than guess."
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "page": 30,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Official NCAA box score sheet for UTEP (Texas-El Paso) at New Mexico, date approx. 1/26/88, Albuquerque NM, final score legible as UTEP 63 - New Mexico 74. However the handwritten per-player stat columns (FG/3FG/FT/REB/PF/TP) are cramped and ambiguous - column boundaries could not be reliably distinguished. Attempted checksum reconciliation of the visitors' printed team-totals row against the final score (63) failed to reconcile with the digits legible for FG-made, 3FG-made, and FT-made, indicating at least one digit is being misread. Skipped rather than guess individual player lines or risk a false-passing checksum."
+    }
+  ]
+}

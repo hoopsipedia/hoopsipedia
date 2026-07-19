@@ -1,0 +1,9 @@
+{
+  "page": 16,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Newspaper clipping for Ohio State 57, Illinois 50 (1948-02-14, Illinois Coliseum) contains a per-player box score table for both teams (columns: FG, FT-made, MF, FF, TP), but the small agate-type numerals are not legible enough to confidently transcribe both sides. The Ohio State column reconstruction (pts = 2*FG + FTM) checksummed exactly to the team's final score of 57, but the same approach on the Illinois table did not reproduce Illinois' final score of 50 with the values I could read, indicating at least one misread digit in that half of the table. Since a game record needs both teams' verified lines and I could not get Illinois to checksum, and re-reading the same low-resolution scan would not improve legibility, the entire game was skipped rather than guessed. Note: the page also contains a separate smaller 'Ohio State J-V' vs 'Freshmen' preliminary-game box score, but it lacks a stated final score/date in the visible text and its FG/FT/PF column semantics could not be confirmed, so it was skipped as well rather than risk inventing values."
+    }
+  ]
+}

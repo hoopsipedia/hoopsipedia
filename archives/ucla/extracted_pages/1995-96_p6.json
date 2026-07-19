@@ -1,0 +1,51 @@
+{
+  "page": 6,
+  "games": [
+    {
+      "date": "1995-12-09",
+      "opponent": "Maryland Terrapins",
+      "ucla_score": 73,
+      "opp_score": 63,
+      "site": "The Pond of Anaheim",
+      "teams": [
+        {
+          "name": "Maryland Terrapins",
+          "score": 63,
+          "players": [
+            {"name": "Exree Hipp", "min": 25, "fg": "3-13", "tp": "1-7", "ft": "0-0", "reb": 6, "ast": 0, "to": 1, "blk": 0, "stl": 1, "pf": 4, "pts": 7},
+            {"name": "Keith Booth", "min": 33, "fg": "1-12", "tp": "0-0", "ft": "4-6", "reb": 6, "ast": 1, "to": 2, "blk": 0, "stl": 1, "pf": 3, "pts": 6},
+            {"name": "Obinna Ekezie", "min": 20, "fg": "0-6", "tp": "0-0", "ft": "3-6", "reb": 9, "ast": 0, "to": 1, "blk": 1, "stl": 1, "pf": 3, "pts": 3},
+            {"name": "Duane Simpkins", "min": 31, "fg": "6-12", "tp": "1-2", "ft": "8-10", "reb": 2, "ast": 2, "to": 9, "blk": 0, "stl": 1, "pf": 2, "pts": 21},
+            {"name": "Johnny Rhodes", "min": 36, "fg": "3-15", "tp": "2-8", "ft": "0-2", "reb": 4, "ast": 0, "to": 1, "blk": 0, "stl": 1, "pf": 4, "pts": 8},
+            {"name": "Laron Profit", "min": 13, "fg": "0-4", "tp": "0-1", "ft": "3-4", "reb": 1, "ast": 0, "to": 1, "blk": 0, "stl": 2, "pf": 3, "pts": 3},
+            {"name": "Matt Raydo", "min": 0, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pf": 0, "pts": 0},
+            {"name": "Matt Kovarik", "min": 1, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pf": 0, "pts": 0},
+            {"name": "Terrell Stokes", "min": 10, "fg": "0-2", "tp": "0-0", "ft": "0-0", "reb": 2, "ast": 0, "to": 1, "blk": 0, "stl": 2, "pf": 1, "pts": 0},
+            {"name": "Sarunas Jasikevicius", "min": 3, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pf": 0, "pts": 0},
+            {"name": "Mario Lucas", "min": 9, "fg": "1-5", "tp": "0-1", "ft": "0-0", "reb": 4, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pf": 3, "pts": 2},
+            {"name": "Rodney Elliott", "min": 18, "fg": "5-8", "tp": "1-2", "ft": "2-4", "reb": 7, "ast": 0, "to": 1, "blk": 0, "stl": 3, "pf": 3, "pts": 13}
+          ]
+        },
+        {
+          "name": "UCLA Bruins",
+          "score": 73,
+          "players": [
+            {"name": "Charles O'Bannon", "min": 37, "fg": "4-10", "tp": "1-1", "ft": "8-11", "reb": 10, "ast": 3, "to": 5, "blk": 1, "stl": 2, "pf": 2, "pts": 17},
+            {"name": "J.R. Henderson", "min": 36, "fg": "4-11", "tp": "0-0", "ft": "2-6", "reb": 5, "ast": 2, "to": 5, "blk": 0, "stl": 1, "pf": 4, "pts": 10},
+            {"name": "Jelani McCoy", "min": 34, "fg": "7-10", "tp": "0-0", "ft": "1-2", "reb": 10, "ast": 0, "to": 8, "blk": 11, "stl": 2, "pf": 2, "pts": 15},
+            {"name": "Toby Bailey", "min": 32, "fg": "3-7", "tp": "1-1", "ft": "1-2", "reb": 2, "ast": 3, "to": 5, "blk": 0, "stl": 0, "pf": 3, "pts": 8},
+            {"name": "Kris Johnson", "min": 26, "fg": "6-11", "tp": "0-1", "ft": "0-1", "reb": 6, "ast": 0, "to": 2, "blk": 0, "stl": 1, "pf": 2, "pts": 12},
+            {"name": "Cameron Dollar", "min": 12, "fg": "0-0", "tp": "0-0", "ft": "1-3", "reb": 7, "ast": 1, "to": 3, "blk": 0, "stl": 0, "pf": 4, "pts": 1},
+            {"name": "Brandon Loyd", "min": 4, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pf": 0, "pts": 0},
+            {"name": "Bob Myers", "min": 0, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pf": 0, "pts": 0},
+            {"name": "Kevin Dempsey", "min": 13, "fg": "2-4", "tp": "0-1", "ft": "4-4", "reb": 5, "ast": 1, "to": 1, "blk": 0, "stl": 0, "pf": 0, "pts": 8},
+            {"name": "Ike Nwankwo", "min": 0, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pf": 0, "pts": 0},
+            {"name": "omm'A Givens", "min": 5, "fg": "0-0", "tp": "0-0", "ft": "2-2", "reb": 2, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pf": 0, "pts": 2}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

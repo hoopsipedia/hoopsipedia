@@ -1,0 +1,9 @@
+{
+  "page": 23,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Feb 25, 1961: Wisconsin (visiting) 74 at Ohio State 97. Wisconsin's table transcribes cleanly and passes checksum (player PTS sum = 6+9+13+16+2+2+4+5+2+8+7+0 = 74, matches team score; Reb sum 3+11+9+4+1+5+2+1+2+1+3+0=42, +9 team boards = 51, matches TOTALS Reb). However Ohio State's table has its top two player rows' names fully obscured by a pasted-on newspaper clipping ('DISCHINGER'S SAVES WIN...'), and several digits (especially FT/PF/Reb columns for middle rows, e.g. an implausible 23-rebound entry on one line) are smudged or ambiguous. Best-effort player PTS sum for Ohio State comes to ~92, a 5-point mismatch against the official final score of 97, that could not be resolved on a second read without guessing at digits. Skipping the whole game per the checksum-failure rule rather than inventing values or names."
+    }
+  ]
+}

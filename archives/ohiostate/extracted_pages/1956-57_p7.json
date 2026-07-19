@@ -1,0 +1,48 @@
+{
+  "page": 7,
+  "games": [
+    {
+      "date": "1956-12-28",
+      "opponent": "Manhattan",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 67,
+          "players": [
+            {"name": "Howard", "fg": "7-19", "ft": "4-10", "pf": 5, "pts": 18},
+            {"name": "Sidle", "fg": "4-15", "ft": "0-0", "pf": 3, "pts": 8},
+            {"name": "Huston", "fg": "5-12", "ft": "3-5", "pf": 1, "pts": 13},
+            {"name": "Millard", "fg": "0-7", "ft": "1-2", "pf": 2, "pts": 1},
+            {"name": "Laughlin", "fg": "5-12", "ft": "5-6", "pf": 2, "pts": 15},
+            {"name": "Martin", "fg": "2-7", "ft": "0-0", "pf": 1, "pts": 4},
+            {"name": "Barkstall", "fg": "4-5", "ft": "0-0", "pf": 0, "pts": 8},
+            {"name": "Snyder", "fg": "0-0", "ft": "0-0", "pf": 0, "pts": 0},
+            {"name": "Mosier", "fg": "0-0", "ft": "0-0", "pf": 0, "pts": 0},
+            {"name": "Steagall", "fg": "0-0", "ft": "0-0", "pf": 0, "pts": 0},
+            {"name": "Hagedorn", "fg": "0-0", "ft": "0-0", "pf": 1, "pts": 0},
+            {"name": "Dressler", "fg": "0-1", "ft": "0-0", "pf": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Manhattan",
+          "score": 82,
+          "players": [
+            {"name": "Paulson", "fg": "6-15", "ft": "4-5", "pf": 1, "pts": 16},
+            {"name": "Powers", "fg": "4-8", "ft": "2-3", "pf": 3, "pts": 10},
+            {"name": "Lombardo", "fg": "9-15", "ft": "5-7", "pf": 2, "pts": 23},
+            {"name": "O'Connor", "fg": "6-11", "ft": "2-3", "pf": 5, "pts": 14},
+            {"name": "Josephs", "fg": "4-8", "ft": "2-3", "pf": 3, "pts": 10},
+            {"name": "Murphy", "fg": "2-4", "ft": "3-5", "pf": 0, "pts": 7},
+            {"name": "McGorty", "fg": "0-0", "ft": "0-0", "pf": 0, "pts": 0},
+            {"name": "Cavanagh", "fg": "0-0", "ft": "0-0", "pf": 0, "pts": 0},
+            {"name": "Martinsen", "fg": "0-1", "ft": "0-0", "pf": 0, "pts": 0},
+            {"name": "Burkoski", "fg": "0-0", "ft": "0-0", "pf": 0, "pts": 0},
+            {"name": "Clegg", "fg": "1-1", "ft": "0-0", "pf": 0, "pts": 2}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

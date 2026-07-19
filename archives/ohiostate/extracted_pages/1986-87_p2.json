@@ -1,0 +1,9 @@
+{
+  "page": 2,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page contains one official NCAA box score (Bucknell at Ohio State, Nov 29 1986, St. John Arena, Columbus Ohio) but the handwritten scan is heavily smudged/faint in the FG-FGA-FT-FTA and rebound columns for most player rows on both teams. Individual digits are frequently ambiguous or illegible (marked with dots/smears in the source), making it impossible to confidently transcribe per-player made/attempted values. Team TOTALS row values are also partially illegible, and the 'Score by periods' box (Bucknell 26 / Ohio State 45) appears inconsistent with the FG% shooting splits shown (which imply a final score well above those numbers), suggesting further transcription risk. Skipped rather than guess values that would fail or falsely pass the checksum."
+    }
+  ]
+}

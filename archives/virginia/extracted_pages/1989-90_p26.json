@@ -1,0 +1,48 @@
+{
+  "page": 26,
+  "games": [
+    {
+      "date": "1990-03-01",
+      "opponent": "Wake Forest",
+      "site": "Charlottesville, VA",
+      "teams": [
+        {
+          "name": "Wake Forest Demon Deacons",
+          "score": 51,
+          "players": [
+            {"name": "Ivy, Sam", "min": 31, "fg": "5-12", "ft": "0-0", "reb": 6, "pf": 2, "ast": 1, "pts": 10},
+            {"name": "King, Chris", "min": 37, "fg": "7-15", "reb": 9, "pf": 4, "ast": 2, "to": 1, "blk": 4, "pts": 14},
+            {"name": "Kitley, Ralph", "min": 20, "fg": "0-1", "reb": 1, "pf": 2, "to": 4, "pts": 0},
+            {"name": "Johnson, Antonio", "min": 13, "fg": "0-1", "tp": "0-1", "reb": 2, "ast": 2, "pts": 0},
+            {"name": "Carlyle, David", "min": 9, "fg": "0-2", "tp": "0-1", "to": 2, "pts": 0},
+            {"name": "Tucker, Anthony", "min": 28, "fg": "7-14", "ft": "0-3", "reb": 13, "pf": 1, "ast": 1, "to": 2, "pts": 14},
+            {"name": "McQueen, Derrick", "min": 33, "fg": "3-9", "tp": "0-2", "reb": 6, "pf": 3, "ast": 5, "to": 2, "pts": 6},
+            {"name": "Siler, Robert", "min": 14, "fg": "2-3", "tp": "1-2", "reb": 3, "pf": 1, "pts": 5},
+            {"name": "Medlin, Phil", "min": 2, "stl": 1, "pts": 0},
+            {"name": "Hedgecoe, David", "min": 1, "pts": 0},
+            {"name": "Sanders, Todd", "min": 12, "fg": "1-3", "reb": 2, "pf": 0, "ast": 1, "to": 2, "blk": 1, "pts": 2}
+          ]
+        },
+        {
+          "name": "Virginia Cavaliers",
+          "score": 50,
+          "players": [
+            {"name": "Stith, Bryant", "min": 33, "fg": "3-13", "tp": "1-4", "ft": "0-4", "reb": 9, "pf": 3, "blk": 3, "pts": 7},
+            {"name": "Turner, Kenny", "min": 36, "fg": "7-16", "tp": "1-5", "ft": "1-2", "reb": 6, "ast": 1, "pts": 16},
+            {"name": "Daniel, Jeff", "min": 8, "reb": 1, "pts": 0},
+            {"name": "Cooke, Mark", "min": 9, "fg": "1-4", "tp": "0-1", "reb": 1, "pf": 1, "pts": 2},
+            {"name": "Crotty, John", "min": 39, "fg": "5-16", "tp": "2-8", "ft": "1-2", "reb": 5, "pf": 1, "ast": 6, "blk": 1, "stl": 3, "pts": 13},
+            {"name": "Jeffries, Ted", "min": 19, "fg": "1-4", "reb": 5, "pts": 2},
+            {"name": "Oliver, Anthony", "min": 27, "fg": "1-7", "ft": "2-2", "pf": 1, "ast": 1, "stl": 1, "pts": 4},
+            {"name": "Blundin, Matt", "min": 21, "fg": "2-3", "ft": "2-2", "reb": 6, "pf": 4, "ast": 1, "to": 3, "pts": 6},
+            {"name": "Smith, Doug", "min": 1, "pts": 0},
+            {"name": "Kirby, Terry", "min": 7, "fg": "0-2", "tp": "0-1", "reb": 2, "ast": 1, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true,
+      "notes": "Final score by periods: Wake Forest 19-32=51, Virginia 26-24=50. TP column on the official NCAA sheet is total points scored (not made-attempted); the 3-point made-attempted values come from the separate '3-point FG/FGA' sub-columns and are mapped to the 'tp' key per task schema. FG totals, 3pt totals, FT totals, and minutes totals for both teams were independently verified against the sheet's TOTALS row and reconcile exactly, confirming transcription accuracy. A couple of individual PF values (Turner, Daniel for Virginia) were illegible/ambiguous on the scan and omitted rather than guessed; this does not affect the points checksum."
+    }
+  ],
+  "skipped": []
+}

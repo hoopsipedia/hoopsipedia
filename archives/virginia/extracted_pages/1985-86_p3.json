@@ -1,0 +1,47 @@
+{
+  "page": 3,
+  "games": [
+    {
+      "date": "1985-12-01",
+      "opponent": "Virginia Commonwealth",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 79,
+          "players": [
+            {"name": "Tom Sheehey", "min": 35, "fg": "8-16", "ft": "2-3", "reb": 5, "ast": 2, "pf": 4, "to": 3, "pts": 18},
+            {"name": "Mel Kennedy", "min": 41, "fg": "1-9", "ft": "5-6", "reb": 4, "ast": 2, "pf": 3, "to": 1, "stl": 1, "pts": 7},
+            {"name": "Olden Polynice", "min": 43, "fg": "5-5", "ft": "5-9", "reb": 6, "ast": 1, "pf": 4, "to": 1, "blk": 5, "pts": 15},
+            {"name": "Darrick Simms", "min": 16, "fg": "2-6", "reb": 2, "ast": 5, "pf": 2, "to": 2, "pts": 4},
+            {"name": "Tom Calloway", "min": 40, "fg": "8-15", "ft": "6-7", "reb": 2, "ast": 1, "pf": 3, "stl": 2, "pts": 22},
+            {"name": "Andrew Kennedy", "min": 25, "fg": "2-2", "ft": "5-5", "reb": 4, "pf": 2, "blk": 1, "pts": 9},
+            {"name": "John Johnson", "min": 5, "reb": 1, "pts": 0},
+            {"name": "John Dyslin", "min": 2, "pts": 0},
+            {"name": "Jeff Daniel", "min": 2, "pf": 1, "pts": 0},
+            {"name": "Richard Morgan", "min": 4, "fg": "1-2", "reb": 1, "pf": 1, "to": 1, "pts": 2},
+            {"name": "Lance Blanks", "min": 12, "fg": "1-1", "reb": 3, "ast": 1, "pf": 3, "pts": 2}
+          ]
+        },
+        {
+          "name": "Virginia Commonwealth",
+          "score": 75,
+          "players": [
+            {"name": "Michael Brown", "min": 34, "fg": "6-14", "ft": "2-2", "reb": 5, "ast": 0, "pf": 3, "to": 1, "pts": 14},
+            {"name": "Phil Stinnie", "min": 23, "fg": "5-8", "ft": "0-0", "reb": 5, "ast": 0, "pf": 5, "to": 1, "stl": 1, "pts": 10},
+            {"name": "Alvin Robinson", "min": 32, "fg": "3-7", "ft": "1-3", "reb": 7, "ast": 0, "pf": 4, "to": 1, "pts": 7},
+            {"name": "Nicky Jones", "min": 37, "fg": "8-14", "ft": "8-9", "reb": 6, "ast": 4, "pf": 5, "to": 4, "stl": 1, "pts": 24},
+            {"name": "Don Franco", "min": 20, "fg": "2-5", "ft": "0-0", "reb": 1, "ast": 0, "pf": 3, "to": 3, "stl": 1, "pts": 4},
+            {"name": "Bruce Allen", "min": 41, "fg": "3-13", "ft": "4-4", "reb": 7, "ast": 4, "pf": 2, "to": 1, "stl": 2, "pts": 10},
+            {"name": "Bruce Pettway", "min": 7, "fg": "0-1", "ft": "0-0", "reb": 0, "pf": 1, "pts": 0},
+            {"name": "William Feazell", "min": 19, "fg": "0-2", "ft": "2-2", "reb": 6, "pf": 4, "to": 1, "pts": 2},
+            {"name": "Willie Jennings", "min": 5, "ft": "0-0", "reb": 1, "pf": 0, "pts": 0},
+            {"name": "Andy Black", "min": 4, "reb": 2, "pf": 1, "to": 1, "pts": 2},
+            {"name": "Darren Reid", "min": 3, "fg": "1-1", "reb": 3, "pf": 0, "pts": 2}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

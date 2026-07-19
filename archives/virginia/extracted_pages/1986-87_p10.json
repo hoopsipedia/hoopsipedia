@@ -1,0 +1,51 @@
+{
+  "page": 10,
+  "games": [
+    {
+      "date": "1987-01-05",
+      "opponent": "Brown",
+      "teams": [
+        {
+          "name": "Brown Bears",
+          "score": 70,
+          "players": [
+            {"name": "Patrick Lynch", "min": 16, "fg": "1-7", "tp": "0-3", "ft": "4-4", "reb": 4, "ast": 1, "pf": 3, "to": 1, "pts": 6},
+            {"name": "Anthony Katsaros", "min": 22, "fg": "0-2", "reb": 3, "pf": 4, "pts": 0},
+            {"name": "Todd Murray", "min": 37, "fg": "3-9", "tp": "0-1", "ft": "2-2", "reb": 3, "ast": 2, "pf": 3, "pts": 8},
+            {"name": "Dom Taylor", "min": 24, "fg": "0-3", "reb": 1, "ast": 2, "to": 2, "pf": 1, "pts": 0},
+            {"name": "David Visscher", "min": 23, "fg": "3-5", "ft": "2-2", "reb": 1, "ast": 1, "to": 2, "stl": 1, "pf": 2, "pts": 8},
+            {"name": "Marcus Thompson", "min": 23, "fg": "9-15", "tp": "2-3", "ft": "2-2", "reb": 4, "ast": 1, "to": 1, "stl": 1, "pf": 2, "pts": 22},
+            {"name": "Keiron Bigby", "min": 26, "fg": "8-16", "tp": "4-8", "reb": 0, "ast": 5, "blk": 3, "pf": 3, "pts": 20},
+            {"name": "Dick Whitmore", "min": 9, "fg": "1-2", "ft": "2-2", "reb": 1, "ast": 4, "to": 4, "pf": 1, "pts": 4},
+            {"name": "Sean Moran", "min": 13, "fg": "1-2", "reb": 2, "ast": 1, "pf": 4, "pts": 2},
+            {"name": "Tom Chaney", "min": 2, "pts": 0},
+            {"name": "Arthur Jackson", "min": 3, "fg": "0-1", "reb": 1, "pf": 1, "pts": 0},
+            {"name": "Bernard Muir", "min": 1, "fg": "0-1", "reb": 1, "pts": 0},
+            {"name": "Todd Klock", "min": 1, "pf": 1, "pts": 0}
+          ]
+        },
+        {
+          "name": "Virginia Cavaliers",
+          "score": 92,
+          "players": [
+            {"name": "Andrew Kennedy", "min": 34, "fg": "4-7", "ft": "10-11", "reb": 7, "pf": 1, "pts": 18},
+            {"name": "Mel Kennedy", "min": 25, "fg": "9-12", "tp": "1-1", "ft": "2-2", "reb": 5, "stl": 1, "pf": 3, "pts": 21},
+            {"name": "Tom Sheehey", "min": 15, "fg": "3-4", "ft": "2-2", "reb": 6, "pf": 1, "pts": 8},
+            {"name": "Richard Morgan", "min": 24, "fg": "4-12", "tp": "1-4", "ft": "4-4", "reb": 1, "ast": 2, "to": 2, "pf": 1, "pts": 13},
+            {"name": "John Johnson", "min": 33, "fg": "3-5", "ft": "5-5", "reb": 5, "ast": 6, "to": 1, "pf": 1, "pts": 11},
+            {"name": "John Dyslin", "min": 14, "ft": "0-4", "reb": 4, "pf": 2, "pts": 0},
+            {"name": "Lance Blanks", "min": 12, "fg": "1-2", "pts": 2},
+            {"name": "Bill Batts", "min": 5, "ft": "1-2", "reb": 1, "pf": 1, "pts": 1},
+            {"name": "Tim Martin", "min": 5, "fg": "1-2", "ft": "2-2", "reb": 1, "ast": 2, "pts": 4},
+            {"name": "Rob Metcalf", "min": 7, "fg": "0-1", "tp": "0-1", "reb": 1, "pf": 1, "pts": 0},
+            {"name": "Mark Cooke", "min": 10, "fg": "1-2", "ft": "3-4", "reb": 3, "ast": 1, "pf": 1, "pts": 5},
+            {"name": "Anthony Solomon", "min": 5, "ft": "0-1", "reb": 0, "ast": 1, "to": 1, "pts": 0},
+            {"name": "Darrick Simms", "min": 11, "fg": "2-5", "ft": "5-6", "reb": 3, "ast": 1, "to": 1, "stl": 1, "pf": 1, "pts": 9}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

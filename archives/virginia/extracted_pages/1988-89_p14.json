@@ -1,0 +1,51 @@
+{
+  "page": 14,
+  "games": [
+    {
+      "date": "1989-01-15",
+      "opponent": "North Carolina Tar Heels",
+      "site": "Charlottesville, VA",
+      "teams": [
+        {
+          "name": "North Carolina Tar Heels",
+          "score": 83,
+          "players": [
+            {"name": "Kevin Madden", "min": 27, "fg": "3-13", "tp": "0-5", "ft": "3-5", "reb": 6, "pf": 4, "ast": 0, "to": 1, "stl": 0, "blk": 0, "pts": 9},
+            {"name": "Pete Chilcutt", "min": 23, "fg": "4-4", "tp": "0-0", "ft": "0-0", "reb": 5, "to": 1, "blk": 1, "pts": 8},
+            {"name": "Scott Williams", "min": 16, "fg": "3-7", "tp": "0-1", "ft": "0-0", "reb": 3, "pf": 4, "blk": 1, "pts": 6},
+            {"name": "Steve Bucknall", "min": 31, "fg": "2-13", "tp": "0-6", "ft": "0-0", "reb": 6, "pf": 4, "ast": 1, "to": 3, "stl": 1, "pts": 4},
+            {"name": "Jeff Lebo", "min": 28, "fg": "11-18", "tp": "3-6", "ft": "1-1", "reb": 3, "pf": 2, "ast": 2, "to": 2, "stl": 1, "pts": 26},
+            {"name": "Rick Fox", "min": 21, "fg": "1-7", "tp": "0-2", "ft": "0-0", "reb": 7, "pf": 2, "ast": 2, "to": 2, "stl": 2, "blk": 1, "pts": 2},
+            {"name": "J.R. Reid", "min": 31, "fg": "9-15", "tp": "0-0", "ft": "3-6", "reb": 5, "pf": 4, "ast": 1, "to": 2, "pts": 21},
+            {"name": "King Rice", "min": 12, "fg": "1-1", "tp": "1-1", "ft": "0-0", "reb": 2, "pf": 3, "ast": 1, "pts": 3},
+            {"name": "Hubert Davis", "min": 6, "fg": "1-4", "tp": "1-3", "ft": "1-1", "reb": 2, "pf": 3, "ast": 3, "to": 2, "pts": 4},
+            {"name": "Jeff Denny", "min": 5, "fg": "0-2", "tp": "0-2", "ft": "0-0", "reb": 2, "pf": 2, "pts": 0},
+            {"name": "David May", "min": 0, "pts": 0}
+          ],
+          "checksum_ok": true
+        },
+        {
+          "name": "Virginia Cavaliers",
+          "score": 106,
+          "players": [
+            {"name": "Bryant Stith", "min": 19, "fg": "3-7", "tp": "0-0", "ft": "1-2", "reb": 6, "pf": 2, "ast": 2, "to": 1, "stl": 2, "pts": 7},
+            {"name": "Matt Blundin", "min": 26, "fg": "2-6", "tp": "0-0", "ft": "4-6", "reb": 9, "pf": 2, "ast": 4, "to": 1, "blk": 1, "stl": 3, "pts": 8},
+            {"name": "Brent Dabbs", "min": 14, "fg": "1-5", "tp": "0-0", "ft": "0-0", "reb": 4, "pf": 4, "pts": 2},
+            {"name": "Richard Morgan", "min": 36, "fg": "13-25", "tp": "8-14", "ft": "5-6", "reb": 6, "pf": 1, "ast": 2, "to": 2, "stl": 2, "pts": 39},
+            {"name": "John Crotty", "min": 28, "fg": "2-4", "tp": "1-2", "ft": "2-3", "pf": 4, "ast": 5, "to": 3, "stl": 2, "pts": 7},
+            {"name": "Kenny Turner", "min": 21, "fg": "4-6", "tp": "0-1", "ft": "4-5", "reb": 3, "pf": 1, "ast": 4, "to": 3, "stl": 1, "pts": 12},
+            {"name": "Curtis Williams", "min": 17, "fg": "6-6", "tp": "0-0", "ft": "0-2", "reb": 5, "pf": 1, "stl": 1, "pts": 12},
+            {"name": "Anthony Oliver", "min": 15, "fg": "3-7", "tp": "0-0", "ft": "6-6", "reb": 3, "pf": 3, "pts": 12},
+            {"name": "Brent Bair", "min": 4, "fg": "0-1", "pf": 1, "pts": 0},
+            {"name": "Jeff Daniel", "min": 19, "fg": "1-3", "tp": "0-0", "ft": "4-4", "reb": 3, "pf": 1, "blk": 1, "pts": 6},
+            {"name": "Mark Cooke", "min": 1, "ft": "1-2", "pts": 1},
+            {"name": "Dirk Katstra", "min": 0, "pts": 0}
+          ],
+          "checksum_ok": true
+        }
+      ]
+    }
+  ],
+  "skipped": [],
+  "notes": "Official NCAA box score, North Carolina at Virginia, 1/15/89, Charlottesville VA. Both team point totals independently sum to the recorded final score (UNC 83, UVA 106) and also match the sheet's team FG-made/3P-made/FT-made totals row exactly (UNC 35/5/8, UVA 35/9/27), giving high confidence in fg/tp/ft/pts fields. Minutes per team also sum to exactly 200 for both squads, corroborating row alignment. Two ambiguous cells were resolved via checksum: NC's Rick Fox final TP read as 2 (not a nearby circled 5) and King Rice's basket was read as a made 3-pointer (1-1) rather than a 2FG+FT split, both required to make team FG/3P/FT sums match the printed totals row. Rebound/assist/steal/block/PF figures were transcribed as read but are lower-confidence than the checksummed FG/FT/pts columns since they weren't independently verified against the totals row for every player; Crotty's rebound cell was illegible so 'reb' was omitted for him rather than guessed."
+}

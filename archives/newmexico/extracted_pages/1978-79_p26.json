@@ -1,0 +1,48 @@
+{
+  "page": 26,
+  "games": [
+    {
+      "date": "1979-02-24",
+      "opponent": "San Diego State Aztecs",
+      "site": "Albuquerque, NM",
+      "teams": [
+        {
+          "name": "San Diego State Aztecs",
+          "score": 78,
+          "players": [
+            {"name": "Kim Goetz", "min": 29, "fg": "5-17", "ft": "2-2", "reb": 3, "pf": 4, "ast": 1, "to": 3, "blk": 2, "stl": 2, "pts": 12},
+            {"name": "Chris Holden", "min": 11, "fg": "0-3", "ft": "0-0", "reb": 0, "pf": 3, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Steve Mladovic", "min": 29, "fg": "8-17", "ft": "7-8", "reb": 23, "pf": 5, "ast": 3, "to": 4, "blk": 0, "stl": 2, "pts": 23},
+            {"name": "Mike Dodd", "min": 32, "fg": "7-13", "ft": "4-4", "reb": 4, "pf": 1, "ast": 1, "to": 2, "blk": 0, "stl": 1, "pts": 18},
+            {"name": "Tony Gwynn", "min": 37, "fg": "6-14", "ft": "0-0", "reb": 3, "pf": 5, "ast": 5, "to": 7, "blk": 0, "stl": 2, "pts": 12},
+            {"name": "Lance Cole", "reb": 0},
+            {"name": "Marcus Hamilton", "min": 23, "fg": "1-4", "ft": "3-4", "reb": 4, "pf": 4, "ast": 0, "to": 1, "blk": 1, "stl": 1, "pts": 5},
+            {"name": "Jimmie Ranson", "min": 8, "fg": "1-2", "ft": "2-2", "reb": 3, "pf": 3, "ast": 0, "to": 3, "blk": 0, "stl": 0, "pts": 4},
+            {"name": "Jerry Brown", "min": 17, "fg": "2-3", "ft": "0-2", "reb": 7, "pf": 2, "ast": 1, "to": 2, "blk": 1, "stl": 0, "pts": 4},
+            {"name": "Kevin Cornish", "min": 8, "fg": "0-0", "ft": "0-0", "reb": 2, "pf": 0, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "New Mexico Lobos",
+          "score": 84,
+          "players": [
+            {"name": "Phil Arney", "min": 31, "fg": "7-17", "ft": "1-2", "reb": 6, "pf": 2, "ast": 5, "to": 3, "blk": 0, "stl": 1, "pts": 15},
+            {"name": "Andre Logan", "min": 27, "fg": "2-6", "ft": "4-5", "reb": 5, "pf": 4, "ast": 2, "to": 4, "blk": 0, "stl": 0, "pts": 8},
+            {"name": "Paul Rory", "min": 28, "fg": "9-14", "ft": "0-1", "reb": 9, "pf": 2, "ast": 0, "to": 1, "blk": 1, "stl": 3, "pts": 18, "note": "listed as team captain (C)"},
+            {"name": "Everette Jefferson", "min": 15, "fg": "5-8", "ft": "0-1", "reb": 2, "pf": 4, "ast": 3, "to": 1, "blk": 0, "stl": 1, "pts": 10},
+            {"name": "Mark Felix", "min": 21, "fg": "0-5", "ft": "5-7", "reb": 6, "pf": 4, "ast": 4, "to": 2, "blk": 0, "stl": 1, "pts": 5},
+            {"name": "Russell Saunders", "min": 19, "fg": "4-7", "ft": "0-1", "reb": 3, "pf": 1, "ast": 4, "to": 2, "blk": 0, "stl": 0, "pts": 8},
+            {"name": "Aparicio Curry", "min": 8, "fg": "0-2", "ft": "1-2", "reb": 0, "pf": 1, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 1},
+            {"name": "Larry Belin", "min": 5, "fg": "0-1", "ft": "0-0", "reb": 1, "pf": 0, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Dino Gregory", "min": 2, "fg": "0-0", "ft": "1-2", "reb": 1, "pf": 0, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pts": 1},
+            {"name": "Mike Stewart", "min": 20, "fg": "3-8", "ft": "8-9", "reb": 4, "pf": 2, "ast": 1, "to": 0, "blk": 0, "stl": 1, "pts": 14},
+            {"name": "Jim Williams", "min": 16, "fg": "2-4", "ft": "0-2", "reb": 3, "pf": 1, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pts": 4}
+          ]
+        }
+      ],
+      "checksum_ok": true,
+      "checksum_note": "SDSU player pts sum to 78 (Lance Cole recorded 0 min/0 reb only, no other stats on sheet, contributes 0). New Mexico player pts sum to 84. Both match final scores exactly. TP column on sheet already gave total points directly, no computation needed. Ken Blackmon (SDSU) had a fully blank row (did not play) and is omitted from the players list."
+    }
+  ],
+  "skipped": []
+}

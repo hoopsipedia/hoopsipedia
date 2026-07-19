@@ -1,0 +1,42 @@
+{
+  "page": 2,
+  "games": [
+    {
+      "date": "1970-12-03",
+      "opponent": "Virginia Tech",
+      "location": "Hampton, Va.",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 68,
+          "players": [
+            {"name": "Frank DeWitt", "fg": "2-4", "ft": "0-2", "reb": 5, "ast": 0, "pf": 2, "to": 3, "blk": 0, "stl": 0, "pts": 4},
+            {"name": "Bill Gerry", "fg": "5-11", "ft": "7-12", "reb": 7, "ast": 0, "pf": 1, "to": 4, "blk": 0, "stl": 0, "pts": 17},
+            {"name": "Scott McCandlish", "fg": "6-15", "ft": "4-5", "reb": 8, "ast": 2, "pf": 4, "to": 2, "blk": 0, "stl": 0, "pts": 16},
+            {"name": "Barry Parkhill", "fg": "4-12", "ft": "4-5", "reb": 4, "ast": 4, "pf": 3, "to": 4, "blk": 0, "stl": 0, "pts": 12},
+            {"name": "Tim Rash", "fg": "1-7", "ft": "0-0", "reb": 3, "ast": 0, "pf": 0, "to": 3, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Chip Miller", "fg": "5-5", "ft": "1-1", "reb": 7, "ast": 2, "pf": 3, "to": 2, "blk": 0, "stl": 0, "pts": 11},
+            {"name": "Jim Hobgood", "fg": "2-3", "ft": "2-2", "reb": 2, "ast": 1, "pf": 1, "to": 3, "blk": 0, "stl": 0, "pts": 6}
+          ]
+        },
+        {
+          "name": "Virginia Tech Hokies",
+          "score": 59,
+          "players": [
+            {"name": "Tom Trice", "fg": "7-18", "ft": "1-6", "reb": 16, "ast": 1, "pf": 3, "to": 6, "blk": 0, "stl": 0, "pts": 15},
+            {"name": "Allan Bristow", "fg": "9-18", "ft": "1-8", "reb": 17, "ast": 5, "pf": 3, "to": 6, "blk": 0, "stl": 0, "pts": 19},
+            {"name": "Charlie Lipscomb", "fg": "1-5", "ft": "1-1", "reb": 5, "ast": 1, "pf": 5, "to": 0, "blk": 0, "stl": 0, "pts": 3},
+            {"name": "Loyd King", "fg": "0-7", "ft": "2-2", "reb": 1, "ast": 1, "pf": 2, "to": 3, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Wayne Lockett", "fg": "5-10", "ft": "0-1", "reb": 4, "ast": 1, "pf": 2, "to": 3, "blk": 0, "stl": 0, "pts": 10},
+            {"name": "Bill McNeer", "fg": "3-12", "ft": "0-0", "reb": 1, "ast": 1, "pf": 2, "to": 1, "blk": 0, "stl": 0, "pts": 6},
+            {"name": "Darwin Pippin", "fg": "2-7", "ft": "0-0", "reb": 2, "ast": 0, "pf": 0, "to": 0, "blk": 0, "stl": 0, "pts": 4},
+            {"name": "Mike McKelvy", "fg": "0-3", "ft": "0-0", "reb": 3, "ast": 1, "pf": 1, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Randy Minnix", "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 1, "pf": 2, "to": 3, "blk": 0, "stl": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

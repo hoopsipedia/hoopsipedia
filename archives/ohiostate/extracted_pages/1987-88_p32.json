@@ -1,0 +1,44 @@
+{
+  "page": 32,
+  "games": [
+    {
+      "date": "1988-03-25",
+      "opponent": "New Mexico Lobos",
+      "note": "NIT 3rd Round, Albuquerque, New Mexico; Attendance 14,022; Officials: Wulkow, Zetcher, Kaster",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 68,
+          "players": [
+            {"name": "Tony White", "min": 28, "fg": "3-5", "tp": "0-0", "ft": "0-1", "reb": 2, "pf": 4, "ast": 0, "to": 1, "blk": 1, "stl": 2, "pts": 6},
+            {"name": "Jerry Francis", "min": 38, "fg": "4-11", "tp": "0-0", "ft": "9-10", "reb": 7, "pf": 3, "ast": 5, "to": 3, "blk": 0, "stl": 0, "pts": 17},
+            {"name": "Perry Carter", "min": 34, "fg": "3-6", "tp": "0-0", "ft": "4-5", "reb": 6, "pf": 3, "ast": 1, "to": 4, "blk": 1, "stl": 1, "pts": 10},
+            {"name": "Curtis Wilson", "min": 40, "fg": "3-7", "tp": "1-4", "ft": "6-6", "reb": 1, "pf": 2, "ast": 7, "to": 0, "blk": 0, "stl": 2, "pts": 13},
+            {"name": "Jay Burson", "min": 39, "fg": "8-14", "tp": "3-4", "ft": "1-3", "reb": 5, "pf": 2, "ast": 2, "to": 3, "blk": 0, "stl": 2, "pts": 20},
+            {"name": "James Bradley", "min": 1, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "John Anderson", "min": 5, "fg": "0-1", "tp": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 2, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Grady Mateen", "min": 15, "fg": "0-1", "tp": "0-0", "ft": "2-2", "reb": 2, "pf": 3, "ast": 0, "to": 4, "blk": 0, "stl": 0, "pts": 2}
+          ],
+          "team_totals_from_sheet": {"fg": "21-45", "tp": "4-8", "ft": "22-26", "reb": 25, "pf": 17, "ast": 15, "to": 17, "blk": 5, "stl": 7, "pts": 68, "score_by_half": [36, 32]}
+        },
+        {
+          "name": "New Mexico Lobos",
+          "score": 65,
+          "players": [
+            {"name": "Hunter Greene", "min": 37, "fg": "5-11", "tp": "1-4", "ft": "3-6", "reb": 6, "pf": 3, "ast": 6, "to": 4, "blk": 0, "stl": 3, "pts": 14},
+            {"name": "Charlie Thomas", "min": 37, "fg": "7-13", "tp": "0-0", "ft": "3-4", "reb": 6, "pf": 4, "ast": 5, "to": 1, "blk": 0, "stl": 0, "pts": 17},
+            {"name": "Rob Loeffel", "min": 28, "fg": "2-5", "tp": "0-0", "ft": "2-2", "reb": 5, "pf": 3, "ast": 0, "to": 4, "blk": 1, "stl": 0, "pts": 6},
+            {"name": "Darrell McGee", "min": 31, "fg": "0-3", "tp": "0-1", "ft": "0-0", "reb": 4, "pf": 4, "ast": 4, "to": 4, "blk": 0, "stl": 2, "pts": 0},
+            {"name": "Rob Robbins", "min": 32, "fg": "5-10", "tp": "0-3", "ft": "0-0", "reb": 2, "pf": 3, "ast": 2, "to": 0, "blk": 0, "stl": 2, "pts": 10},
+            {"name": "Kurt Miller", "min": 2, "fg": "0-1", "tp": "0-0", "ft": "0-0", "reb": 1, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Rob Newton", "min": 4, "fg": "0-0", "tp": "0-0", "ft": "0-1", "reb": 1, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 1, "pts": 0},
+            {"name": "Jimmy Rogers", "min": 29, "fg": "6-9", "tp": "0-0", "ft": "6-6", "reb": 6, "pf": 3, "ast": 1, "to": 0, "blk": 0, "stl": 1, "pts": 18}
+          ],
+          "team_totals_from_sheet": {"fg": "25-52", "tp": "0-5", "ft": "15-19", "reb": 32, "pf": 19, "ast": 18, "to": 17, "blk": 1, "stl": 8, "pts": 65, "score_by_half": [30, 35]}
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

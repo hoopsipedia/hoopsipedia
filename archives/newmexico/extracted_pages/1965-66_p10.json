@@ -1,0 +1,47 @@
+{
+  "page": 10,
+  "games": [
+    {
+      "date": "1966-01-01",
+      "opponent": "Denver",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 87,
+          "players": [
+            {"name": "Hoover", "fg": "2-3", "ft": "5-7", "reb": 1, "pf": 2, "pts": 9},
+            {"name": "Morgan", "fg": "5-12", "ft": "6-9", "reb": 14, "pf": 4, "pts": 16},
+            {"name": "Howard", "fg": "3-7", "ft": "6-7", "reb": 2, "pts": 12},
+            {"name": "Monroe", "fg": "2-6", "ft": "2-2", "reb": 5, "pf": 5, "pts": 6},
+            {"name": "Daniels", "fg": "14-24", "ft": "3-5", "reb": 15, "pf": 4, "pts": 31},
+            {"name": "Dupree", "fg": "0-0", "ft": "0-1", "pts": 0},
+            {"name": "Johnston", "fg": "0-1", "ft": "0-0", "reb": 1, "pts": 0},
+            {"name": "Cleveland", "fg": "0-0", "ft": "0-0", "reb": 1, "pf": 2, "pts": 0},
+            {"name": "Patterson", "fg": "3-5", "ft": "0-0", "reb": 4, "pf": 4, "pts": 6},
+            {"name": "Rose", "fg": "1-1", "ft": "3-3", "reb": 1, "pts": 5},
+            {"name": "Burwitz", "fg": "0-1", "ft": "2-2", "pf": 1, "pts": 2}
+          ]
+        },
+        {
+          "name": "Denver",
+          "score": 66,
+          "players": [
+            {"name": "Callahan", "fg": "2-3", "ft": "0-1", "reb": 5, "pf": 4, "pts": 4},
+            {"name": "Grover", "fg": "3-12", "ft": "0-1", "reb": 2, "pf": 3, "pts": 6},
+            {"name": "Roderick", "fg": "2-4", "ft": "3-4", "reb": 4, "pf": 3, "pts": 7},
+            {"name": "Hollines", "fg": "10-24", "ft": "10-11", "reb": 4, "pf": 3, "pts": 30},
+            {"name": "Beck", "fg": "1-4", "ft": "3-5", "reb": 4, "pf": 5, "pts": 5},
+            {"name": "Cox", "fg": "0-1", "ft": "0-0", "pf": 2, "pts": 0},
+            {"name": "Arnold", "fg": "2-5", "ft": "1-1", "reb": 6, "pf": 1, "pts": 5},
+            {"name": "Boxberger", "fg": "1-1", "ft": "1-2", "reb": 1, "pf": 0, "pts": 3},
+            {"name": "Ducar", "fg": "1-4", "ft": "1-2", "reb": 1, "pf": 1, "pts": 3},
+            {"name": "McCude", "fg": "0-0", "ft": "0-0", "pf": 1, "pts": 0},
+            {"name": "White", "fg": "0-2", "ft": "3-3", "pf": 3, "pts": 3}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

@@ -1,0 +1,45 @@
+{
+  "page": 13,
+  "games": [
+    {
+      "date": "1981-01-15",
+      "opponent": "Brigham Young Cougars",
+      "site": "Albuquerque, NM",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 87,
+          "players": [
+            {"name": "Tony Asley", "min": 22, "fg": "1-3", "ft": "0-0", "reb": 4, "ast": 1, "pf": 5, "to": 3, "stl": 1, "blk": 0, "pts": 2},
+            {"name": "Michael Johnson", "min": 14, "fg": "0-1", "ft": "0-0", "reb": 1, "ast": 1, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Jerome Henderson", "min": 19, "fg": "2-4", "ft": "2-2", "reb": 4, "ast": 0, "pf": 4, "to": 0, "stl": 0, "blk": 1, "pts": 6},
+            {"name": "Kenny Page", "min": 38, "fg": "16-31", "ft": "12-13", "reb": 3, "ast": 2, "pf": 3, "to": 0, "stl": 3, "blk": 0, "pts": 44},
+            {"name": "Phil Smith", "min": 35, "fg": "9-17", "ft": "3-4", "reb": 5, "ast": 7, "pf": 4, "to": 4, "stl": 3, "blk": 1, "pts": 21},
+            {"name": "Wallace Williams", "min": 3, "fg": "0-1", "ft": "1-2", "reb": 6, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 1},
+            {"name": "David Duggin", "min": 21, "fg": "1-6", "ft": "3-4", "reb": 0, "ast": 1, "pf": 2, "to": 2, "stl": 2, "blk": 0, "pts": 5},
+            {"name": "Larry Tarrance", "min": 20, "fg": "1-3", "ft": "0-1", "reb": 0, "ast": 3, "pf": 4, "to": 1, "stl": 2, "blk": 1, "pts": 2},
+            {"name": "Jeff Reinert", "min": 10, "fg": "0-1", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Alan Dolensky", "min": 17, "fg": "3-5", "ft": "0-0", "reb": 2, "ast": 0, "pf": 4, "to": 2, "stl": 1, "blk": 0, "pts": 6}
+          ]
+        },
+        {
+          "name": "Brigham Young Cougars",
+          "score": 92,
+          "players": [
+            {"name": "Fred Roberts", "min": 40, "fg": "7-12", "ft": "7-8", "reb": 16, "ast": 8, "pf": 2, "to": 5, "stl": 2, "blk": 1, "pts": 21},
+            {"name": "Steve Trumbo", "min": 29, "fg": "2-7", "ft": "4-6", "reb": 9, "ast": 2, "pf": 3, "to": 2, "stl": 2, "blk": 0, "pts": 8, "note": "surname handwriting hard to read, best guess 'Trumbo'"},
+            {"name": "Greg Kite", "min": 36, "fg": "5-11", "ft": "1-4", "reb": 6, "ast": 1, "pf": 3, "to": 6, "stl": 0, "blk": 3, "pts": 11},
+            {"name": "Danny Ainge", "min": 39, "fg": "13-20", "ft": "2-2", "reb": 6, "ast": 6, "pf": 5, "to": 9, "stl": 1, "blk": 0, "pts": 28},
+            {"name": "Steve Craig", "min": 25, "fg": "1-6", "ft": "4-4", "reb": 4, "ast": 3, "pf": 3, "to": 0, "stl": 0, "blk": 0, "pts": 6},
+            {"name": "Greg Ballif", "min": 17, "fg": "4-6", "ft": "0-0", "reb": 0, "ast": 2, "pf": 2, "to": 3, "stl": 0, "blk": 0, "pts": 8},
+            {"name": "Timo Saarelainen", "min": 9, "fg": "3-4", "ft": "3-4", "reb": 1, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 9},
+            {"name": "Gary Furniss", "min": 5, "fg": "0-0", "ft": "1-2", "reb": 2, "ast": 0, "pf": 1, "to": 0, "stl": 1, "blk": 0, "pts": 1}
+          ]
+        }
+      ],
+      "checksum_ok": true,
+      "notes": "Score-by-periods box shows NM 39-48=87, BYU 51-41=92 (second-half digits partly obscured, final-score column used as authority). Both teams' player pts columns were partly illegible where printed team totals didn't reconcile (BYU printed team TP misread as 72 vs correct 92; NM Henderson FG/TP digit ambiguous between 2/6 and 3/8) - resolved using pts = 2*fg_made + ft_made (pre-3pt era) plus final-score checksum, both of which now match exactly (BYU 92, NM 87)."
+    }
+  ],
+  "skipped": []
+}

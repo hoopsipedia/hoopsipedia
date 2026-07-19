@@ -1,0 +1,46 @@
+{
+  "page": 32,
+  "games": [
+    {
+      "date": "1987-03-14",
+      "opponent": "Wyoming",
+      "ucla_score": 68,
+      "opp_score": 78,
+      "teams": [
+        {
+          "name": "Wyoming Cowboys",
+          "score": 78,
+          "players": [
+            {"name": "Dent", "min": 34, "fg": "0-1", "tp": "0-0", "ft": "2-3", "reb": 4, "ast": 6, "pf": 4, "to": 5, "stl": 2, "pts": 2},
+            {"name": "Fox", "min": 22, "fg": "0-3", "tp": "0-1", "ft": "1-2", "reb": 0, "ast": 2, "pf": 3, "to": 3, "pts": 1},
+            {"name": "Leckner", "min": 38, "fg": "7-15", "tp": "0-0", "ft": "6-8", "reb": 14, "ast": 0, "pf": 3, "to": 1, "blk": 2, "pts": 20},
+            {"name": "Dembo", "min": 39, "fg": "9-14", "tp": "7-10", "ft": "16-16", "reb": 9, "ast": 6, "pf": 2, "to": 4, "blk": 1, "pts": 41},
+            {"name": "Sommers", "min": 31, "fg": "2-5", "tp": "0-0", "ft": "2-2", "reb": 8, "ast": 4, "pf": 3, "to": 4, "pts": 6},
+            {"name": "Boyd", "min": 23, "fg": "3-5", "tp": "0-0", "ft": "0-1", "reb": 1, "ast": 1, "pf": 1, "to": 3, "stl": 1, "pts": 6},
+            {"name": "Jones", "min": 10, "fg": "1-1", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 4, "to": 1, "stl": 1, "pts": 2},
+            {"name": "Hunt", "min": 1, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 0, "pts": 0},
+            {"name": "Loggins", "min": 2, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "UCLA Bruins",
+          "score": 68,
+          "players": [
+            {"name": "Richardson", "min": 32, "fg": "2-7", "tp": "0-1", "ft": "4-4", "reb": 5, "ast": 6, "pf": 3, "to": 2, "stl": 1, "pts": 8},
+            {"name": "Immel", "min": 25, "fg": "4-12", "tp": "0-6", "ft": "2-2", "reb": 2, "ast": 1, "pf": 4, "to": 1, "stl": 3, "pts": 10},
+            {"name": "Haley", "min": 28, "fg": "1-6", "tp": "0-0", "ft": "3-4", "reb": 2, "ast": 0, "pf": 2, "to": 0, "pts": 5},
+            {"name": "Miller", "min": 38, "fg": "8-17", "tp": "2-4", "ft": "6-7", "reb": 9, "ast": 1, "pf": 5, "to": 3, "stl": 7, "pts": 24},
+            {"name": "Rochelin", "min": 24, "fg": "1-6", "tp": "0-2", "ft": "3-4", "reb": 5, "ast": 1, "pf": 4, "to": 1, "pts": 5},
+            {"name": "Wilson", "min": 9, "fg": "0-0", "tp": "0-0", "ft": "2-2", "reb": 2, "ast": 0, "pf": 3, "to": 2, "pts": 2},
+            {"name": "Hatcher", "min": 18, "fg": "4-12", "tp": "2-5", "ft": "0-0", "reb": 2, "ast": 1, "pf": 2, "to": 1, "pts": 10},
+            {"name": "Palmer", "min": 1, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "pts": 0},
+            {"name": "Foster", "min": 12, "fg": "0-1", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 1, "pf": 2, "to": 2, "stl": 1, "pts": 0},
+            {"name": "Walker", "min": 13, "fg": "2-3", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "pf": 2, "to": 2, "pts": 4}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

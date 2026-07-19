@@ -1,0 +1,9 @@
+{
+  "page": 15,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page contains a newspaper clipping box score (Ohio State 41, Wisconsin 35, Feb 17 1940, Fairgrounds Coliseum) with player-level G/F/MF/PF/Pts columns for both teams, but the print is too small/low-resolution in the scan to confidently distinguish individual digits. Two reads of the page did not resolve the ambiguity, and a confident player-line transcription that checksums to 35 (Wisconsin) and 41 (Ohio State) could not be produced without guessing, so the game was skipped rather than risk invented values."
+    }
+  ]
+}

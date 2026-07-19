@@ -1,0 +1,41 @@
+{
+  "page": 6,
+  "games": [
+    {
+      "date": "1941-01-02",
+      "opponent": "Creighton",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 55,
+          "players": [
+            {"name": "Miller", "pts": 6},
+            {"name": "Fisher", "pts": 13},
+            {"name": "Davis", "pts": 0},
+            {"name": "Scholler", "pts": 0},
+            {"name": "Jorgenson", "pts": 20},
+            {"name": "Graf", "pts": 9},
+            {"name": "Geoworth", "pts": 7},
+            {"name": "Dawson", "pts": 0}
+          ]
+        },
+        {
+          "name": "Creighton",
+          "score": 42,
+          "players": [
+            {"name": "Jaquay", "pts": 12},
+            {"name": "Fleming", "pts": 6},
+            {"name": "Langer", "pts": 6},
+            {"name": "Reisser (C)", "pts": 10},
+            {"name": "Haldeman", "pts": 2},
+            {"name": "Nolan", "pts": 4},
+            {"name": "Bheata", "pts": 0},
+            {"name": "Pitzgerald", "pts": 2}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

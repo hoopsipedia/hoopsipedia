@@ -1,0 +1,49 @@
+{
+  "page": 27,
+  "games": [
+    {
+      "date": "1999-02-25",
+      "opponent": "Washington State",
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 100,
+          "players": [
+            {"name": "JaRon Rush", "min": 21, "fg": "4-8", "tp": "0-2", "ft": "0-1", "reb": 6, "ast": 0, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 8},
+            {"name": "Matt Barnes", "min": 21, "fg": "4-6", "tp": "2-3", "ft": "0-0", "reb": 3, "ast": 3, "pf": 0, "to": 2, "stl": 1, "blk": 0, "pts": 10},
+            {"name": "Sean Farnham", "min": 19, "fg": "3-4", "tp": "0-0", "ft": "0-0", "reb": 4, "ast": 1, "pf": 3, "to": 2, "stl": 1, "blk": 0, "pts": 6},
+            {"name": "Earl Watson", "min": 26, "fg": "3-7", "tp": "1-3", "ft": "6-9", "reb": 4, "ast": 6, "pf": 3, "to": 4, "stl": 2, "blk": 0, "pts": 13},
+            {"name": "Baron Davis", "min": 26, "fg": "4-8", "tp": "0-3", "ft": "9-12", "reb": 3, "ast": 11, "pf": 2, "to": 8, "stl": 2, "blk": 0, "pts": 17},
+            {"name": "Ray Young", "min": 16, "fg": "2-4", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 3, "to": 2, "stl": 1, "blk": 0, "pts": 4},
+            {"name": "Rico Hines", "min": 6, "fg": "1-2", "tp": "0-1", "ft": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Travis Reed", "min": 11, "fg": "1-2", "tp": "0-0", "ft": "3-4", "reb": 3, "ast": 0, "pf": 5, "to": 1, "stl": 1, "blk": 0, "pts": 5},
+            {"name": "Jerome Moiso", "min": 16, "fg": "3-7", "tp": "0-1", "ft": "0-0", "reb": 6, "ast": 1, "pf": 5, "to": 2, "stl": 0, "blk": 1, "pts": 6},
+            {"name": "Ryan Bailey", "min": 17, "fg": "3-4", "tp": "1-1", "ft": "4-7", "reb": 3, "ast": 2, "pf": 4, "to": 2, "stl": 1, "blk": 0, "pts": 11},
+            {"name": "Brandon Loyd", "min": 12, "fg": "4-7", "tp": "4-7", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 12},
+            {"name": "Todd Ramasar", "min": 9, "fg": "2-5", "tp": "0-0", "ft": "2-2", "reb": 1, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 6}
+          ]
+        },
+        {
+          "name": "Washington State",
+          "score": 61,
+          "players": [
+            {"name": "Kojo Mensah-Bonsu", "min": 25, "fg": "3-5", "tp": "0-0", "ft": "6-8", "reb": 4, "ast": 1, "pf": 2, "to": 3, "stl": 0, "blk": 0, "pts": 12},
+            {"name": "Eddie Miller", "min": 22, "fg": "0-2", "tp": "0-0", "ft": "8-8", "reb": 3, "ast": 0, "pf": 1, "to": 4, "stl": 2, "blk": 2, "pts": 8},
+            {"name": "Mike Bush", "min": 16, "fg": "1-6", "tp": "0-0", "ft": "0-0", "reb": 2, "ast": 0, "pf": 4, "to": 4, "stl": 0, "blk": 1, "pts": 2},
+            {"name": "Kab Kazadi", "min": 16, "fg": "0-2", "tp": "0-1", "ft": "0-0", "reb": 3, "ast": 1, "pf": 5, "to": 2, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Jan-Michael Thomas", "min": 29, "fg": "2-12", "tp": "1-9", "ft": "6-8", "reb": 1, "ast": 1, "pf": 3, "to": 1, "stl": 1, "blk": 0, "pts": 11},
+            {"name": "Chris Crosby", "min": 24, "fg": "4-11", "tp": "2-6", "ft": "3-3", "reb": 2, "ast": 2, "pf": 1, "to": 8, "stl": 0, "blk": 0, "pts": 13},
+            {"name": "Blake Pengelly", "min": 20, "fg": "1-4", "tp": "1-4", "ft": "0-0", "reb": 1, "ast": 4, "pf": 3, "to": 4, "stl": 0, "blk": 0, "pts": 3},
+            {"name": "Brian Stewart", "min": 13, "fg": "2-3", "tp": "0-0", "ft": "4-6", "reb": 4, "ast": 0, "pf": 2, "to": 0, "stl": 0, "blk": 2, "pts": 8},
+            {"name": "Will Hutchens", "min": 13, "fg": "0-2", "tp": "0-1", "ft": "0-0", "reb": 5, "ast": 0, "pf": 0, "to": 3, "stl": 1, "blk": 0, "pts": 0},
+            {"name": "Steve Slotemaker", "min": 18, "fg": "1-5", "tp": "0-1", "ft": "2-2", "reb": 2, "ast": 0, "pf": 3, "to": 1, "stl": 0, "blk": 1, "pts": 4},
+            {"name": "Leif Nelson", "min": 2, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Clark", "min": 2, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 1, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

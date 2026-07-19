@@ -1,0 +1,44 @@
+{
+  "page": 32,
+  "games": [
+    {
+      "date": "1985-03-19",
+      "opponent": "St. Joseph's",
+      "note": "NIT Second Round, site Charlottesville VA",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 68,
+          "players": [
+            {"name": "Jim Miller", "min": "31", "fg": "6-12", "ft": "2-2", "reb": 6, "ast": 0, "pf": 4, "to": 1, "pts": 14},
+            {"name": "Tom Sheehey", "min": "23", "fg": "3-7", "ft": "1-2", "reb": 7, "ast": 1, "pf": 0, "to": 1, "pts": 7},
+            {"name": "Olden Polynice", "min": "34", "fg": "5-6", "ft": "5-6", "reb": 8, "ast": 0, "pf": 1, "to": 2, "stl": 1, "pts": 15},
+            {"name": "Mel Kennedy", "min": "34", "fg": "3-8", "ft": "0-0", "reb": 1, "ast": 2, "pf": 3, "to": 0, "stl": 2, "pts": 6},
+            {"name": "Tim Mullen", "min": "37", "fg": "3-7", "ft": "6-7", "reb": 1, "ast": 4, "pf": 2, "to": 6, "blk": 1, "stl": 1, "pts": 12},
+            {"name": "Tan Calloway", "min": "6", "fg": "1-1", "ft": "3-5", "reb": 2, "ast": 0, "pf": 3, "to": 1, "stl": 1, "pts": 5},
+            {"name": "Darrick Simms", "min": "23", "fg": "2-6", "ft": "3-4", "reb": 2, "ast": 3, "pf": 2, "to": 1, "pts": 7},
+            {"name": "Dan Merrifield", "min": "12", "fg": "1-1", "ft": "0-0", "reb": 1, "ast": 0, "pf": 2, "to": 2, "stl": 1, "pts": 2},
+            {"name": "John Johnson", "min": "<1", "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "pts": 0},
+            {"name": "Anthony Solomon", "min": "<1", "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "St. Joseph's Hawks",
+          "score": 61,
+          "players": [
+            {"name": "Greg Mullee", "min": "34", "fg": "3-5", "ft": "0-0", "reb": 2, "ast": 6, "pf": 2, "to": 3, "pts": 6},
+            {"name": "Bob Lojewski", "min": "37", "fg": "9-13", "ft": "3-5", "reb": 6, "ast": 1, "pf": 3, "to": 0, "stl": 1, "pts": 21},
+            {"name": "Rodney Blake", "min": "22", "fg": "2-2", "ft": "1-3", "reb": 1, "ast": 0, "pf": 4, "to": 2, "blk": 3, "pts": 5},
+            {"name": "Maurice Martin", "min": "30", "fg": "5-8", "ft": "5-5", "reb": 4, "ast": 1, "pf": 5, "to": 2, "pts": 15, "note": "fouled out (PF circled); played 1:40 in OT/extra per notation"},
+            {"name": "Geoff Arnold", "min": "37", "fg": "3-9", "ft": "0-0", "reb": 4, "ast": 0, "pf": 1, "to": 2, "stl": 1, "pts": 6},
+            {"name": "Dave Slattery", "min": "19", "fg": "4-6", "ft": "0-0", "reb": 2, "ast": 1, "pf": 2, "to": 0, "stl": 1, "pts": 8},
+            {"name": "James Flint", "min": "7", "fg": "0-2", "ft": "0-2", "reb": 1, "ast": 0, "pf": 3, "to": 0, "pts": 0},
+            {"name": "James Owens", "min": "14", "fg": "0-1", "ft": "0-1", "reb": 2, "ast": 0, "pf": 1, "to": 2, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

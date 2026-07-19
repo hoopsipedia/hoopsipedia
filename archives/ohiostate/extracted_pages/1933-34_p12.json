@@ -1,0 +1,9 @@
+{
+  "page": 12,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "1934-01-26 Ohio State at Michigan (Ann Arbor, coach H.G. Olsen, referee Schommer, umpire Lane, half score Ohio-16 Michigan-12): Michigan's box score checks out (player pts sum = 32 = header OPP score 32), but Ohio State's player pts sum computed two independent ways (individual player pts column sum = 28; totals row G=12,F=4 -> 2*12+4=28) both equal 28, which conflicts with the scoreboard header showing Ohio=26. A 2-point discrepancy between the internally-consistent table and the header score; skipping per checksum-failure policy rather than guessing which figure (26 vs 28) is correct."
+    }
+  ]
+}

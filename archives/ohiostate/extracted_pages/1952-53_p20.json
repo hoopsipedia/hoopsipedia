@@ -1,0 +1,9 @@
+{
+  "page": 20,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Feb 23, 1953 — Ohio State (75) @ Iowa (90). Ohio State's box score is fully legible and typed; per-player pts (computed 2*FG+FT) sum to exactly 75, matching the team score, and FG/FGA/FT totals all tie to the printed TOTALS row. Iowa's box score on the same page, however, has roughly 6 of 13 player rows (Thompson, Ridley, Jensen, Hettrick, R. Miller, Diehl) with scan smudging/fading obscuring the FG/FGA/FT/PF/PTS digits. Iowa's team-level totals (FG 32, FT 26, PTS 90) are internally consistent with the legible players (Davis, McBride, Jarnagin, DeGunther, Mau, Stenger, Buckles, Stark), but that leaves 6 unknowns constrained only by aggregate remainders — not enough to confidently reconstruct each obscured player's individual line without guessing. Since a game requires both teams' player lines and Iowa's cannot be transcribed confidently, skipping the whole game rather than inventing values for the smudged Iowa rows."
+    }
+  ]
+}

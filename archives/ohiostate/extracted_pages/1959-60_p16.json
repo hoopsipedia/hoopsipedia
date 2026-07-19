@@ -1,0 +1,45 @@
+{
+  "page": 16,
+  "games": [
+    {
+      "date": "1960-01-30",
+      "opponent": "Michigan State",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 111,
+          "players": [
+            {"name": "Havlicek", "fg": "9-17", "ft": "2-2", "reb": 10, "pf": 3, "pts": 20},
+            {"name": "Roberts", "fg": "4-10", "ft": "1-1", "reb": 7, "pf": 1, "pts": 9},
+            {"name": "Lucas", "fg": "11-15", "ft": "3-5", "reb": 14, "pf": 3, "pts": 25},
+            {"name": "Siegfried", "fg": "4-10", "ft": "1-1", "reb": 5, "pf": 2, "pts": 9},
+            {"name": "Nowell", "fg": "5-8", "ft": "5-5", "reb": 5, "pf": 4, "pts": 15},
+            {"name": "Nourse", "fg": "6-7", "ft": "0-0", "reb": 4, "pf": 3, "pts": 12},
+            {"name": "Furry", "fg": "3-6", "ft": "0-0", "reb": 5, "pf": 1, "pts": 6},
+            {"name": "Hoyt", "fg": "4-5", "ft": "1-1", "reb": 2, "pf": 0, "pts": 9},
+            {"name": "Gearhart", "fg": "2-3", "ft": "0-0", "reb": 0, "pf": 0, "pts": 4},
+            {"name": "Knight", "fg": "0-2", "ft": "0-0", "reb": 0, "pf": 1, "pts": 0},
+            {"name": "Cedargren", "fg": "0-1", "ft": "0-0", "reb": 0, "pf": 2, "pts": 0},
+            {"name": "Barker", "fg": "1-1", "ft": "0-0", "reb": 1, "pf": 2, "pts": 2}
+          ]
+        },
+        {
+          "name": "Michigan State Spartans",
+          "score": 79,
+          "players": [
+            {"name": "Olson", "fg": "3-12", "ft": "5-8", "reb": 3, "pf": 4, "pts": 11},
+            {"name": "Scott", "fg": "0-1", "ft": "0-0", "reb": 1, "pf": 0, "pts": 0},
+            {"name": "Walker", "fg": "7-22", "ft": "13-16", "reb": 16, "pf": 1, "pts": 27},
+            {"name": "Fahs", "fg": "6-17", "ft": "4-6", "reb": 3, "pf": 3, "pts": 16},
+            {"name": "Schwarm", "fg": "5-12", "ft": "0-0", "reb": 1, "pf": 2, "pts": 10},
+            {"name": "Young", "fg": "5-6", "ft": "1-1", "reb": 2, "pf": 4, "pts": 11},
+            {"name": "Wilson", "fg": "2-5", "ft": "0-0", "reb": 2, "pf": 1, "pts": 4},
+            {"name": "Sparvero", "fg": "0-2", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

@@ -1,0 +1,51 @@
+{
+  "page": 18,
+  "games": [
+    {
+      "date": "1989-02-01",
+      "opponent": "NC State Wolfpack",
+      "site": "Charlottesville, VA",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 91,
+          "players": [
+            {"name": "Bryant Stith", "fg": "6-9", "tp": "0-0", "ft": "3-3", "reb": 12, "pf": 3, "pts": 15},
+            {"name": "Matt Blundin", "fg": "0-2", "tp": "0-0", "ft": "1-3", "reb": 9, "pf": 2, "pts": 1},
+            {"name": "Brent Dabbs", "fg": "6-10", "tp": "0-0", "ft": "4-7", "reb": 9, "pts": 16},
+            {"name": "Richard Morgan", "fg": "7-13", "tp": "3-3", "ft": "3-5", "reb": 7, "pts": 20},
+            {"name": "John Crotty", "fg": "6-10", "tp": "1-2", "ft": "5-9", "reb": 2, "pf": 1, "pts": 18},
+            {"name": "Kenny Turner", "fg": "1-3", "tp": "0-0", "ft": "3-4", "reb": 3, "pts": 5},
+            {"name": "Curtis Williams", "fg": "4-7", "tp": "0-0", "ft": "2-3", "reb": 8, "pf": 3, "pts": 10},
+            {"name": "Jeff Daniel", "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 2, "pts": 0},
+            {"name": "Anthony Oliver", "fg": "1-3", "tp": "0-0", "ft": "0-0", "reb": 1, "pf": 2, "pts": 2},
+            {"name": "Brent Bair", "pts": 0},
+            {"name": "Dirk Katstra", "fg": "0-0", "tp": "0-0", "ft": "1-2", "pts": 1},
+            {"name": "Mark Cooke", "fg": "1-1", "tp": "1-1", "ft": "0-0", "reb": 1, "pts": 3}
+          ]
+        },
+        {
+          "name": "NC State Wolfpack",
+          "score": 71,
+          "players": [
+            {"name": "Brian Howard", "fg": "2-12", "tp": "0-4", "ft": "0-0", "reb": 2, "pts": 4},
+            {"name": "Chucky Brown", "fg": "8-18", "tp": "0-1", "ft": "2-2", "reb": 7, "pf": 1, "pts": 18},
+            {"name": "Avie Lester", "fg": "1-7", "tp": "0-0", "ft": "1-2", "reb": 7, "pf": 3, "pts": 3},
+            {"name": "Chris Corchiani", "fg": "3-8", "tp": "1-4", "ft": "0-0", "reb": 2, "pf": 3, "pts": 7},
+            {"name": "Rodney Monroe", "fg": "7-21", "tp": "5-15", "ft": "0-0", "reb": 5, "pf": 2, "pts": 19},
+            {"name": "Kelsey Weems", "fg": "4-9", "tp": "2-3", "ft": "1-1", "reb": 2, "pts": 11},
+            {"name": "Mickey Hinnant", "fg": "3-7", "tp": "1-2", "ft": "0-2", "reb": 2, "pf": 4, "pts": 7},
+            {"name": "Brian D'Amico", "fg": "1-5", "tp": "0-0", "ft": "0-0", "reb": 5, "pf": 3, "pts": 2},
+            {"name": "Tom Gugliotta", "pts": 0},
+            {"name": "David Lee", "pts": 0},
+            {"name": "Jamie Knox", "pts": 0},
+            {"name": "Kenny Poston", "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": [],
+  "notes": "Official NCAA box score, final. NC State (visitors, 14-3/5-2) at Virginia (home, 12-6/4-2), 2/1/89, Charlottesville VA. Officials: Paparo, Housman, Scagliotta. Technical foul: Corchiani (NCS). Score by periods: NC State 33-38=71, Virginia 53-38=91. Player 'pts' computed from made FG (incl. 3s) + made FT per NCAA convention: 2*(FG-3FG)+3*3FG+FT; both team sums match final scores exactly (71 and 91) confirming checksum. Minutes-played (MIN) column and assist/turnover/block/steal columns were cropped/cut off at the right edge of the scan and largely illegible, so they were omitted rather than guessed. Personal-foul (PF) values omitted for a handful of players (Howard, Weems on NC State; Dabbs, Morgan, Turner, Katstra, Cooke on Virginia, and bench players with no other stats) where the cell was blank, obscured, or overlapped by a circled starter marker '(S)' rather than a clear digit."
+}

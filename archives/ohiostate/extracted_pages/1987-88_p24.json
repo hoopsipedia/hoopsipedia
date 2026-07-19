@@ -1,0 +1,9 @@
+{
+  "page": 24,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page shows a typed 'BASKETBALL BOX SCORE - Game 23' for Northwestern at Ohio State, February 20, 1988, St. John Arena, Columbus, Ohio (final: Northwestern 69, Ohio State 77). Header/final-score/officials/attendance lines are legible, but the per-player numeric columns (FG FGA 3FG 3GA FT FTA OR DR REB PF TP A TO BK S MIN) do not align consistently across rows in this scan -- several player rows show only 15 tokens where 16 columns are expected, and computed points (2*FG+3FG+FT) do not reconcile with the apparent TP column position for multiple players (e.g., Terry Buford: FG 0, 3FG 0, FT 0 implies 0 pts, but the token in the apparent TP slot reads 3). Given the ambiguity in which column is shifted/blank per row, transcribing player lines risked inventing values, so the full box score (both Northwestern and Ohio State rosters) was skipped rather than guessed."
+    }
+  ]
+}

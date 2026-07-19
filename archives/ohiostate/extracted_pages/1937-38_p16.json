@@ -1,0 +1,9 @@
+{
+  "page": 16,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Feb. 12, 1938 - Ohio State (37) vs Purdue (29), Coliseum (per bottom index strip: Basketball 1937-38 Feb. 12 Purdue Coliseum Olsen). This is a newspaper clipping ('Bucks Play Great Ball On Defense' by Irven Scheibeck) with two small condensed box-score tables (Ohio and Purdue) printed in tiny newsprint at the bottom of the article columns. The Ohio table's first two numeric columns (FG made, FT made) were legible enough to reconstruct via checksum: Hull 3-4(10), Baker 4-2(10), Schick 4-0(8), Boughner 1-1(3), Anderson 3-0(6), Stafford 0-0(0), Quintt 0-0(0) summing to FG=15/FT=7/Pts=37, matching Ohio's final score of 37 exactly. However, the Purdue (visitor) table is smaller and more degraded in the scan; individual player rows could not be read with confidence and any reconstruction would risk inventing values, and the meaning of two additional numeric columns in both tables (beyond FG/FT/Pts) could not be confidently identified (possibly FTA and PF, but not verifiable). Since a game requires both teams' verified lines and the schema disallows guessing, the entire game is skipped rather than submitting a one-sided or partially-fabricated box score."
+    }
+  ]
+}

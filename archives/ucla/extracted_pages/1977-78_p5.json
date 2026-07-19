@@ -1,0 +1,44 @@
+{
+  "page": 5,
+  "games": [
+    {
+      "date": "1977-12-10",
+      "opponent": "Notre Dame Fighting Irish",
+      "ucla_score": 66,
+      "opp_score": 69,
+      "teams": [
+        {
+          "name": "Notre Dame Fighting Irish",
+          "score": 69,
+          "players": [
+            {"name": "Flowers", "min": 31, "fg": "1-7", "ft": "0-0", "reb": 2, "pf": 5, "ast": 5, "pts": 2},
+            {"name": "Batton", "min": 37, "fg": "10-13", "ft": "2-2", "reb": 8, "pf": 2, "ast": 5, "pts": 22},
+            {"name": "Laimbeer", "min": 38, "fg": "5-10", "ft": "0-0", "reb": 9, "pf": 2, "ast": 3, "blk": 6, "pts": 10},
+            {"name": "Carpenter", "min": 20, "fg": "2-2", "ft": "0-1", "reb": 1, "pf": 3, "ast": 6, "pts": 4},
+            {"name": "Williams", "min": 38, "fg": "7-18", "ft": "3-3", "reb": 4, "pf": 0, "ast": 1, "pts": 17},
+            {"name": "Branning", "min": 20, "fg": "5-5", "ft": "0-2", "reb": 2, "pf": 4, "ast": 2, "pts": 10},
+            {"name": "Tripucka", "min": 8, "fg": "2-2", "ft": "0-0", "reb": 2, "pf": 1, "ast": 0, "pts": 4},
+            {"name": "Hanzlik", "min": 6, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 1, "ast": 0, "pts": 0},
+            {"name": "Wilcox", "min": 2, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "UCLA Bruins",
+          "score": 66,
+          "players": [
+            {"name": "Greenwood", "min": 40, "fg": "7-13", "ft": "5-6", "reb": 4, "pf": 4, "pts": 19},
+            {"name": "Vandeweghe", "min": 24, "fg": "2-10", "ft": "0-0", "reb": 7, "pf": 0, "ast": 5, "pts": 4},
+            {"name": "Sims", "min": 34, "fg": "3-9", "ft": "0-0", "reb": 7, "pf": 2, "ast": 3, "blk": 3, "pts": 6},
+            {"name": "Townsend", "min": 34, "fg": "7-12", "ft": "0-0", "reb": 1, "pf": 3, "ast": 2, "pts": 14},
+            {"name": "Hamilton", "min": 38, "fg": "6-13", "ft": "3-5", "reb": 6, "pf": 2, "ast": 7, "pts": 15},
+            {"name": "Wilkes", "min": 16, "fg": "2-5", "ft": "2-2", "reb": 1, "pf": 1, "ast": 0, "pts": 6},
+            {"name": "Allums", "min": 6, "fg": "0-2", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 1, "pts": 0},
+            {"name": "Holland", "min": 8, "fg": "1-1", "ft": "0-0", "reb": 0, "pf": 0, "ast": 1, "pts": 2}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

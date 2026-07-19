@@ -1,0 +1,9 @@
+{
+  "page": 19,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Scoresheet identified: 'University of New Mexico at University of Utah', Feb 8 1972 (shot chart page). Utah's box score is written in clear dark ink and is fully legible: 11 Jones 5-8/3-4/4reb/4pf/13pts, 23 Dearman 3-8/10-11/9reb/5pf/16pts, 31 Soderberg 7-11/1-2/8reb/1pf/15pts, 3 Medley 1-9/0-0/1reb/3pf/2pts, 10 Trail 5-11/1-4/7reb/4pf/11pts, 25 Cockett 1-5/3-4/2reb/3pf/5pts, 21 Norman 1-3/0-0/5reb/4pf/2pts, 30 Vaughn 0-0/1-3/2reb/0pf/1pt, 44 Whiting 1-3/2-2/2reb/2pf/4pts -- points sum to 69, matching Utah's printed team total (checksum passes). However New Mexico's player lines are written in faint light-teal ink with very low contrast against the scan, and individual digits (player numbers, FG/FT made-attempted, rebounds, fouls) cannot be read with confidence even after a second full-resolution pass -- e.g. Faulkner's FT column and Little's rebound/foul columns are illegible, and the printed New Mexico team total is likewise too faint to confirm a checksum. Since both teams are required for a game entry and New Mexico's side cannot be verified, the entire game is skipped rather than guessing at values or a final score."
+    }
+  ]
+}

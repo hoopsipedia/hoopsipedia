@@ -1,0 +1,43 @@
+{
+  "page": 10,
+  "games": [
+    {
+      "date": "1981-01-03",
+      "opponent": "UTEP Miners",
+      "teams": [
+        {
+          "name": "UTEP Miners",
+          "score": 70,
+          "players": [
+            {"name": "Fred Reynolds", "min": 17, "fg": "2-2", "ft": "0-2", "reb": 3, "pf": 4, "ast": 1, "to": 1, "blk": 1, "stl": 0, "pts": 4},
+            {"name": "Anthony Burns", "min": 37, "fg": "4-7", "ft": "2-4", "reb": 6, "pf": 1, "ast": 4, "to": 2, "blk": 0, "stl": 2, "pts": 10},
+            {"name": "Terry [surname partly illegible, likely Prewitt]", "min": 30, "fg": "2-8", "ft": "3-8", "reb": 5, "pf": 0, "ast": 7, "to": 4, "blk": 0, "stl": 0, "pts": 7},
+            {"name": "Virgil Kennedy", "min": 35, "fg": "7-13", "ft": "1-1", "reb": 5, "pf": 5, "ast": 4, "to": 2, "blk": 0, "stl": 0, "pts": 15},
+            {"name": "Julius Layne", "min": 29, "fg": "6-12", "ft": "3-5", "reb": 4, "pf": 3, "ast": 1, "to": 1, "blk": 0, "stl": 0, "pts": 15},
+            {"name": "Rick Thompson", "min": 6, "fg": "1-2", "ft": "2-4", "reb": 2, "pf": 1, "ast": 2, "to": 1, "blk": 0, "stl": 0, "pts": 4},
+            {"name": "Eric Alexander", "min": 11, "fg": "0-0", "ft": "2-2", "reb": 1, "pf": 2, "ast": 0, "to": 2, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Tim Crenshaw", "min": 11, "fg": "0-2", "ft": "0-0", "reb": 1, "pf": 1, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Roshern Amie", "min": 24, "fg": "6-8", "ft": "1-2", "reb": 5, "pf": 2, "ast": 1, "to": 1, "blk": 0, "stl": 0, "pts": 13}
+          ]
+        },
+        {
+          "name": "New Mexico Lobos",
+          "score": 62,
+          "players": [
+            {"name": "Kenny Page", "min": 39, "fg": "8-16", "ft": "2-2", "reb": 10, "pf": 4, "ast": 2, "to": 7, "blk": 0, "stl": 1, "pts": 18},
+            {"name": "Alan D[surname partly illegible, appears to end in -nsky]", "min": 21, "reb": 5, "pf": 1, "ast": 2, "to": 7, "blk": 0, "stl": 0, "pts": 8},
+            {"name": "Michael Johnson", "min": 31, "fg": "2-3", "ft": "0-2", "reb": 5, "pf": 1, "ast": 1, "to": 1, "blk": 0, "stl": 2, "pts": 4},
+            {"name": "Phil Smith", "min": 36, "fg": "2-9", "ft": "6-6", "reb": 3, "pf": 3, "ast": 6, "to": 1, "blk": 0, "stl": 1, "pts": 10},
+            {"name": "David Duggin", "min": 26, "fg": "5-9", "ft": "0-0", "reb": 2, "pf": 3, "ast": 1, "to": 2, "blk": 0, "stl": 1, "pts": 10},
+            {"name": "Wallace Williams", "min": 10, "fg": "0-0", "ft": "2-2", "reb": 0, "pf": 3, "ast": 3, "to": 3, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Jeff Seinert", "min": 6, "fg": "0-0", "ft": "0-0", "reb": 1, "pf": 1, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Tony Ceasley", "min": 12, "fg": "2-4", "ft": "0-1", "reb": 2, "pf": 4, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pts": 4},
+            {"name": "Jerome Henderson", "min": 19, "fg": "3-6", "ft": "0-0", "reb": 3, "pf": 5, "ast": 1, "to": 0, "blk": 3, "stl": 0, "pts": 6}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

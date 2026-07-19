@@ -1,0 +1,41 @@
+{
+  "page": 13,
+  "games": [
+    {
+      "date": "1985-01-03",
+      "opponent": "NC State Wolfpack",
+      "site": "Reynolds Coliseum, Raleigh, N.C.",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 45,
+          "players": [
+            {"name": "Sheehey, Tom", "fg": "6-11", "ft": "2-2", "ast": 4, "to": 0, "blk": 0, "stl": 1, "pts": 14},
+            {"name": "Merrifield, Dan", "fg": "2-2", "ft": "0-0", "ast": 1, "to": 0, "blk": 0, "stl": 0, "pts": 4},
+            {"name": "Polynice, Olden", "fg": "4-8", "ft": "1-2", "ast": 0, "to": 2, "blk": 0, "stl": 0, "pts": 9},
+            {"name": "Simms, Derrick", "fg": "3-10", "ft": "0-0", "ast": 3, "to": 2, "blk": 0, "stl": 0, "pts": 6},
+            {"name": "Mullen, Tim", "fg": "1-1", "ft": "1-2", "ast": 0, "to": 2, "blk": 0, "stl": 0, "pts": 3},
+            {"name": "Kennedy, Mel", "fg": "1-5", "ft": "0-0", "ast": 2, "to": 3, "blk": 0, "stl": 2, "pts": 2},
+            {"name": "Miller, Jim", "fg": "3-4", "ft": "1-2", "ast": 0, "to": 2, "blk": 0, "stl": 0, "pts": 7},
+            {"name": "Johnson, John", "fg": "0-2", "ft": "0-0", "ast": 5, "to": 1, "blk": 0, "stl": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "NC State Wolfpack",
+          "score": 51,
+          "players": [
+            {"name": "Pierre, Russell", "fg": "2-3", "ft": "4-5", "ast": 1, "to": 3, "blk": 0, "stl": 1, "pts": 8},
+            {"name": "Charles, Lorenzo", "fg": "4-10", "ft": "1-2", "ast": 3, "to": 1, "blk": 0, "stl": 0, "pts": 9},
+            {"name": "McQueen, Cozell", "fg": "3-4", "ft": "1-2", "ast": 0, "to": 0, "blk": 1, "stl": 0, "pts": 7},
+            {"name": "McMillan, Nate", "fg": "1-7", "ft": "3-4", "ast": 4, "to": 2, "blk": 0, "stl": 0, "pts": 5},
+            {"name": "Myers, Ernie", "fg": "2-6", "ft": "0-1", "ast": 2, "to": 1, "blk": 0, "stl": 2, "pts": 4},
+            {"name": "Gannon, Terry", "fg": "5-11", "ft": "0-0", "ast": 4, "to": 3, "blk": 0, "stl": 1, "pts": 10},
+            {"name": "Webb, Spud", "fg": "3-5", "ft": "2-2", "pts": 8}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

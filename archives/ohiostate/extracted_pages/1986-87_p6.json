@@ -1,0 +1,9 @@
+{
+  "page": 6,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page contains a handwritten official NCAA box score (Ohio State vs. Bowling Green, apparently St. John Arena, Columbus OH, December 1986; final score by periods legible as Bowling Green 18+34=52, Ohio State 37+52=89), but the per-player statistic cells (FG-FGA, FT-FTA, rebounds, PF, TP, A, TO, BLK, S, MIN) are handwritten in very small, faint, smudged script and cannot be read with confidence for either team's roster. Team-level TOTALS row is also too ambiguous to reliably parse into the required column structure without risking invented values. Skipping per instructions rather than guessing; not counted as a checksummed game."
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "page": 20,
+  "games": [
+    {
+      "date": "1966-02-19",
+      "opponent": "Denver",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 86,
+          "players": [
+            {"name": "Bill Morgan", "fg": "2-8", "ft": "0-0", "reb": 6, "pf": 5, "pts": 4},
+            {"name": "Ben Monroe", "fg": "8-13", "ft": "1-2", "reb": 5, "pf": 3, "pts": 17},
+            {"name": "Mel Daniels", "fg": "16-28", "ft": "2-4", "reb": 9, "pf": 2, "pts": 34},
+            {"name": "Don Hoover", "fg": "2-5", "ft": "2-4", "reb": 1, "pf": 3, "pts": 6},
+            {"name": "Jim Patterson", "fg": "6-13", "ft": "1-2", "reb": 7, "pf": 3, "pts": 13},
+            {"name": "Jim Johnston", "fg": "1-6", "ft": "6-8", "reb": 2, "pf": 5, "pts": 8},
+            {"name": "Jim Howard", "fg": "2-2", "ft": "0-1", "reb": 3, "pf": 1, "pts": 4}
+          ]
+        },
+        {
+          "name": "Denver",
+          "score": 77,
+          "players": [
+            {"name": "Rick Callahan", "fg": "0-0", "ft": "12-13", "reb": 5, "pf": 3, "pts": 12},
+            {"name": "George Roderick", "fg": "5-9", "ft": "2-3", "reb": 3, "pf": 3, "pts": 12},
+            {"name": "Byron Beck", "fg": "10-13", "ft": "1-2", "reb": 12, "pf": 5, "pts": 21},
+            {"name": "Gerry Grover", "fg": "2-8", "ft": "2-2", "reb": 4, "pf": 2, "pts": 6},
+            {"name": "Harry Hollines", "fg": "9-24", "ft": "8-9", "reb": 12, "pf": 3, "pts": 26},
+            {"name": "Dave Arnold", "fg": "0-1", "ft": "0-0", "reb": 3, "pf": 1, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": [],
+  "notes": "Typed 'Official Basketball Box' scoresheet, fully legible. Team FG/FT made+attempt totals row cross-checked against individual player rows and reconciled exactly (NM: FG 37-75, FT 12-?; Denver: FG 26-55, FT 25-29). Player pts computed as 2*fg_made+ft_made per instructions (sheet's own TOTAL POINTS column was used to verify but one entry, Jim Patterson, appeared to print as 15 in the scan though the made/attempt columns and team-total math reconcile only at 13 -- used the computed/reconciled value of 13. All other players' computed pts matched the printed TOTAL POINTS column exactly. Both team checksums pass exactly (NM 86, Denver 77). No minutes/ast/to/stl/blk columns exist on this sheet."
+}

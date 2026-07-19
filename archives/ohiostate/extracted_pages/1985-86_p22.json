@@ -1,0 +1,42 @@
+{
+  "page": 22,
+  "games": [
+    {
+      "date": "1986-02-08",
+      "opponent": "Wisconsin",
+      "teams": [
+        {
+          "name": "Wisconsin Badgers",
+          "score": 71,
+          "players": [
+            {"name": "Steinhaus, Gregg", "min": "26", "fg": "7-11", "ft": "0-0", "reb": "5", "pf": "5", "pts": 14, "ast": "1", "to": "3", "blk": "0", "stl": "1"},
+            {"name": "Weber, J.J.", "min": "24", "fg": "2-5", "ft": "0-0", "reb": "6", "pf": "1", "pts": 4, "ast": "2", "to": "4", "blk": "0", "stl": "0"},
+            {"name": "Ripley, Rod", "min": "40", "fg": "3-10", "ft": "2-2", "reb": "6", "pf": "3", "pts": 8, "ast": "3", "to": "1", "blk": "0", "stl": "0"},
+            {"name": "Olson, Rick", "min": "40", "fg": "10-21", "ft": "3-3", "reb": "1", "pf": "4", "pts": 23, "ast": "2", "to": "4", "blk": "0", "stl": "0"},
+            {"name": "Heineman, Mike", "min": "40", "fg": "8-13", "ft": "2-2", "reb": "3", "pf": "4", "pts": 18, "ast": "2", "to": "1", "blk": "0", "stl": "2"},
+            {"name": "Laszewski, Jay", "min": "5", "fg": "1-1", "ft": "0-0", "reb": "0", "pf": "4", "pts": 2, "ast": "0", "to": "1", "blk": "0", "stl": "0"},
+            {"name": "Maloski, Tom", "min": "25", "fg": "0-1", "ft": "2-5", "pf": "5", "pts": 2, "ast": "3", "to": "1", "blk": "0", "stl": "1"}
+          ],
+          "checksum_ok": true
+        },
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 73,
+          "players": [
+            {"name": "Francis, Jerry", "min": "26", "fg": "6-6", "ft": "2-4", "reb": "2", "pf": "4", "pts": 14, "ast": "2", "to": "5", "blk": "0", "stl": "0"},
+            {"name": "Sellers, Brad", "min": "40", "fg": "3-10", "ft": "9-10", "reb": "8", "pf": "2", "pts": 15, "ast": "1", "to": "2", "blk": "4", "stl": "1"},
+            {"name": "Wesson, Keith", "min": "37", "fg": "7-9", "ft": "5-6", "reb": "10", "pf": "2", "pts": 19, "ast": "0", "to": "4", "blk": "1", "stl": "1"},
+            {"name": "Hopson, Dennis", "min": "36", "fg": "5-11", "ft": "4-7", "reb": "4", "pf": "2", "pts": 14, "ast": "1", "to": "4", "blk": "0", "stl": "3"},
+            {"name": "Lomax, Kip", "min": "29", "fg": "1-3", "ft": "2-2", "reb": "2", "pf": "3", "pts": 4, "ast": "1", "to": "4", "blk": "0", "stl": "0"},
+            {"name": "Burson, Jay", "min": "4", "fg": "0-1", "ft": "0-0", "reb": "0", "pf": "2", "pts": 0, "ast": "0", "to": "1", "blk": "0", "stl": "0"},
+            {"name": "Wilson, Curtis", "min": "16", "fg": "2-2", "ft": "3-5", "reb": "1", "pf": "2", "pts": 7, "ast": "3", "to": "1", "blk": "0", "stl": "0"},
+            {"name": "Dumas, Joe", "min": "6", "fg": "0-1", "ft": "0-0", "reb": "1", "pf": "0", "pts": 0, "ast": "0", "to": "0", "blk": "0", "stl": "0"},
+            {"name": "McGee, Clarence", "min": "6", "fg": "0-0", "ft": "0-0", "reb": "0", "pf": "1", "pts": 0, "ast": "2", "to": "2", "blk": "0", "stl": "0"}
+          ],
+          "checksum_ok": true
+        }
+      ]
+    }
+  ],
+  "skipped": []
+}

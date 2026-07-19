@@ -1,0 +1,43 @@
+{
+  "page": 24,
+  "games": [
+    {
+      "date": "1984-02-21",
+      "opponent": "Clemson Tigers",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 77,
+          "players": [
+            {"name": "Jim Miller", "min": 30, "fg": "2-10", "ft": "7-8", "reb": 3, "pf": 4, "to": 2, "ast": 2, "pts": 11},
+            {"name": "Dan Merrifield", "min": 17, "fg": "2-4", "ft": "0-0", "reb": 1, "pf": 4, "pts": 4},
+            {"name": "Olden Polynice", "min": 35, "fg": "6-8", "ft": "5-8", "reb": 7, "pf": 2, "pts": 17},
+            {"name": "Rick Carlisle", "min": 30, "fg": "5-7", "ft": "6-8", "reb": 2, "pf": 3, "ast": 2, "pts": 16},
+            {"name": "Othell Wilson", "min": 39, "fg": "4-7", "ft": "2-2", "reb": 0, "pf": 4, "ast": 8, "to": 2, "stl": 1, "pts": 10},
+            {"name": "Kenton Edelin", "min": 10, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Ricky Stokes", "min": 17, "fg": "3-4", "ft": "1-2", "reb": 2, "pf": 2, "ast": 1, "to": 2, "stl": 2, "pts": 7},
+            {"name": "Tom Sheehey", "min": 18, "fg": "6-8", "ft": "0-0", "reb": 1, "pf": 1, "ast": 1, "to": 1, "pts": 12},
+            {"name": "Tim Mullen", "min": 4, "fg": "0-1", "ft": "0-0", "reb": 0, "pf": 1, "ast": 2, "pts": 0}
+          ]
+        },
+        {
+          "name": "Clemson Tigers",
+          "score": 70,
+          "players": [
+            {"name": "Chris Michael", "min": 27, "fg": "4-7", "reb": 1, "pf": 5, "ast": 1, "to": 1, "pts": 8},
+            {"name": "Raymond Jones", "min": 37, "fg": "2-4", "ft": "1-2", "reb": 6, "pf": 5, "ast": 1, "to": 4, "stl": 1, "pts": 5},
+            {"name": "Murray Jarman", "min": 38, "fg": "8-10", "ft": "4-5", "reb": 5, "pf": 1, "to": 1, "pts": 20},
+            {"name": "Warren Wallace", "min": 30, "fg": "2-3", "ft": "2-3", "reb": 1, "pf": 4, "ast": 2, "to": 1, "pts": 6},
+            {"name": "Vincent Hamilton", "min": 37, "fg": "5-8", "ft": "4-5", "reb": 2, "pf": 4, "ast": 7, "to": 4, "pts": 14},
+            {"name": "Marc Campbell", "min": 26, "fg": "6-8", "ft": "5-5", "reb": 2, "pf": 2, "ast": 1, "to": 2, "pts": 17},
+            {"name": "Horace Grant", "min": 3, "fg": "0-0", "ft": "0-0", "reb": 1, "pf": 1, "pts": 0},
+            {"name": "Glen McCants", "min": 2, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true,
+      "notes": "Player row FT/FTA blank for Chris Michael (no free throws attempted); 'ft' key omitted for him. Column header on sheet reads MIN/A/TC/BLK/S; TC interpreted as turnovers (TO) based on standard box-score layout and mapped to 'to' key. Virginia player sum 77 matches team score; Clemson player sum 70 matches team score."
+    }
+  ],
+  "skipped": []
+}

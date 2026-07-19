@@ -1,0 +1,40 @@
+{
+  "page": 28,
+  "games": [
+    {
+      "date": "1968-03-16",
+      "opponent": "Kentucky",
+      "notes": "NCAA Mideast Regional Final (Mid East Finals of NCAA); Officials: Steve Honzo and Phil Fox; Attendance: 11,500; Technical fouls: none; Score by quarters (actually halves) OSU 44-38=82, Kentucky 40-41=81; sheet lists no MIN/AST/TO/STL/BLK columns, only FGA/FG/FTA/FT/PF/PTS/Reb",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 82,
+          "players": [
+            {"name": "Howell", "fg": "8-16", "ft": "2-2", "reb": 7, "pf": 2, "pts": 18},
+            {"name": "Hosket", "fg": "8-14", "ft": "5-5", "reb": 12, "pf": 4, "pts": 21},
+            {"name": "Sorenson", "fg": "11-17", "ft": "2-5", "reb": 7, "pf": 1, "pts": 24},
+            {"name": "Meadors", "fg": "3-6", "ft": "0-0", "reb": 2, "pf": 1, "pts": 6},
+            {"name": "Schnabel", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Finney", "fg": "4-9", "ft": "1-1", "reb": 7, "pf": 2, "pts": 9},
+            {"name": "Smith", "fg": "2-5", "ft": "0-1", "reb": 4, "pts": 4}
+          ]
+        },
+        {
+          "name": "Kentucky Wildcats",
+          "score": 81,
+          "players": [
+            {"name": "Pratt", "fg": "6-18", "ft": "2-3", "reb": 7, "pf": 2, "pts": 14},
+            {"name": "Jaracz", "fg": "6-8", "ft": "1-1", "reb": 7, "pf": 3, "pts": 13},
+            {"name": "Issel", "fg": "7-18", "ft": "5-6", "reb": 8, "pf": 2, "pts": 19},
+            {"name": "Casey", "fg": "8-18", "ft": "0-0", "reb": 8, "pf": 4, "pts": 16},
+            {"name": "Clevenger", "fg": "7-12", "ft": "1-2", "reb": 3, "pf": 4, "pts": 15},
+            {"name": "LeMaster", "fg": "1-4", "ft": "0-1", "reb": 0, "pf": 0, "pts": 2},
+            {"name": "Gamble", "fg": "1-1", "ft": "0-0", "reb": 1, "pf": 0, "pts": 2}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

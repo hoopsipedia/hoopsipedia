@@ -1,0 +1,9 @@
+{
+  "page": 16,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Official Western Conference box score, Ohio State (62, visiting) vs Pittsburgh (53, home), Feb 14, 1953 (halftime OSU 33-Pitt 28, att. 1,391). Sheet is heavily overlaid with dark highlighting/redaction-style bands across many player rows on BOTH teams (OSU: Hatfield, Cook, Jones; Pittsburgh: Zernich, Reautbaugh/Resutko, Deitrick, Duross, Buron, Boyd, Knapek, Artman, Ruschal), obscuring individual FG/FGA/FT/PF/PTS digits. Recomputing pts as 2*FG+FT for legible OSU rows only summed to 56 vs the team's stated total of 62, and summed FG for legible OSU rows (16) does not match the printed FG total (19) -- checksum fails and the shortfall lands squarely in the obscured rows, so the missing points cannot be attributed with confidence. Pittsburgh's obscured rows are even less legible (several PTS cells unreadable). Skipping per instructions rather than guessing values under the redaction artifacts."
+    }
+  ]
+}

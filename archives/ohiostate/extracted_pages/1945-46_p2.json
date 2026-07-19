@@ -1,0 +1,46 @@
+{
+  "page": 2,
+  "games": [
+    {
+      "date": "1945-12-08",
+      "opponent": "Pittsburgh",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 47,
+          "players": [
+            {"name": "Bowen", "pts": 18},
+            {"name": "Snyder", "pts": 5},
+            {"name": "Wells", "pts": 2},
+            {"name": "Risen", "pts": 2},
+            {"name": "Genske", "pts": 0},
+            {"name": "Elliott", "pts": 2},
+            {"name": "Kuhn", "pts": 0},
+            {"name": "Huston", "pts": 10},
+            {"name": "Amling", "pts": 8}
+          ]
+        },
+        {
+          "name": "Pittsburgh",
+          "score": 37,
+          "players": [
+            {"name": "Apple", "pts": 5},
+            {"name": "Cosentino", "pts": 1},
+            {"name": "David", "pts": 0},
+            {"name": "Gennock", "pts": 0},
+            {"name": "Borowicz", "pts": 0},
+            {"name": "Zeller", "pts": 17},
+            {"name": "Medich", "pts": 8},
+            {"name": "Maruzewski", "pts": 0},
+            {"name": "Malarkey", "pts": 3},
+            {"name": "Santangelo", "pts": 0},
+            {"name": "Siewart", "pts": 0},
+            {"name": "Williams", "pts": 3}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

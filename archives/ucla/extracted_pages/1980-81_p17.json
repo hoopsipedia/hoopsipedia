@@ -1,0 +1,44 @@
+{
+  "page": 17,
+  "games": [
+    {
+      "date": "1981-02-06",
+      "opponent": "Southern California",
+      "ucla_score": 76,
+      "opp_score": 62,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 76,
+          "players": [
+            {"name": "Darren Daye", "min": 28, "fg": "6-10", "ft": "4-8", "reb": 5, "pf": 2, "ast": 2, "to": 2, "blk": 0, "stl": 1, "pts": 16},
+            {"name": "Cliff Pruitt", "min": 18, "fg": "0-4", "ft": "0-0", "reb": 2, "pf": 4, "ast": 1, "to": 3, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Mike Sanders", "min": 31, "fg": "5-8", "ft": "10-11", "reb": 5, "pf": 4, "ast": 0, "to": 2, "blk": 0, "stl": 0, "pts": 20},
+            {"name": "Ralph Jackson", "min": 33, "fg": "3-5", "ft": "3-5", "reb": 3, "pf": 2, "ast": 4, "to": 3, "blk": 0, "stl": 2, "pts": 9},
+            {"name": "Michael Holton", "min": 30, "fg": "1-3", "ft": "7-8", "reb": 2, "pf": 4, "ast": 2, "to": 4, "blk": 0, "stl": 0, "pts": 9},
+            {"name": "Rod Foster", "min": 17, "fg": "0-4", "ft": "0-0", "reb": 0, "pf": 3, "ast": 2, "to": 0, "blk": 0, "stl": 1, "pts": 0},
+            {"name": "Dean Sears", "min": 5, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 1, "ast": 0, "to": 0, "blk": 0, "stl": 1, "pts": 0},
+            {"name": "Tony Anderson", "min": 16, "fg": "3-4", "ft": "3-4", "reb": 3, "pf": 4, "ast": 0, "to": 1, "blk": 1, "stl": 0, "pts": 9},
+            {"name": "Kenny Fields", "min": 22, "fg": "6-9", "ft": "1-3", "reb": 9, "pf": 3, "ast": 0, "to": 1, "blk": 1, "stl": 1, "pts": 13}
+          ]
+        },
+        {
+          "name": "Southern California",
+          "score": 62,
+          "players": [
+            {"name": "Barry Brooks", "min": 34, "fg": "4-10", "ft": "3-5", "reb": 4, "pf": 5, "ast": 0, "to": 1, "blk": 1, "stl": 0, "pts": 11},
+            {"name": "James McDonald", "min": 30, "fg": "3-6", "ft": "0-3", "reb": 8, "pf": 5, "ast": 1, "to": 2, "blk": 1, "stl": 0, "pts": 6},
+            {"name": "Maurice Williams", "min": 27, "fg": "4-11", "ft": "4-4", "reb": 8, "pf": 4, "ast": 0, "to": 2, "blk": 2, "stl": 0, "pts": 12},
+            {"name": "Jacque Hill", "min": 40, "fg": "0-6", "ft": "4-4", "reb": 2, "pf": 4, "ast": 4, "to": 4, "blk": 0, "stl": 0, "pts": 4},
+            {"name": "Dwight Anderson", "min": 35, "fg": "5-14", "ft": "7-8", "reb": 3, "pf": 3, "ast": 2, "to": 3, "blk": 0, "stl": 0, "pts": 17},
+            {"name": "George Ratkovich", "min": 4, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 1, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Ron Holmes", "min": 15, "fg": "3-5", "ft": "2-3", "reb": 2, "pf": 4, "ast": 0, "to": 0, "blk": 0, "stl": 1, "pts": 8},
+            {"name": "Mike Owens", "min": 15, "fg": "1-1", "ft": "2-3", "reb": 3, "pf": 4, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pts": 4}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

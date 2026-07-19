@@ -1,0 +1,36 @@
+{
+  "page": 6,
+  "games": [
+    {
+      "date": "1934-01-06",
+      "opponent": "Chicago",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 42,
+          "players": [
+            {"name": "Colburn", "ft": "2-5", "pf": 0, "pts": 10},
+            {"name": "Padlow", "ft": "2-5", "pf": 2, "pts": 4},
+            {"name": "Whitlinger", "ft": "2-2", "pf": 2, "pts": 8},
+            {"name": "Rosequist", "ft": "1-1", "pf": 2, "pts": 11},
+            {"name": "Conrad", "ft": "1-3", "pf": 3, "pts": 1},
+            {"name": "Beitner", "ft": "0-0", "pf": 2, "pts": 8}
+          ]
+        },
+        {
+          "name": "Chicago",
+          "score": 32,
+          "players": [
+            {"name": "Haarlow", "ft": "0-2", "pf": 0, "pts": 10},
+            {"name": "Pyle", "ft": "2-5", "pf": 4, "pts": 10},
+            {"name": "Peterson", "ft": "3-3", "pf": 0, "pts": 7},
+            {"name": "Lang", "ft": "1-2", "pf": 1, "pts": 1},
+            {"name": "Oppenheim", "ft": "0-0", "pf": 4, "pts": 4}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

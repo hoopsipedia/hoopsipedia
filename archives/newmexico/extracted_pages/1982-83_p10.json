@@ -1,0 +1,40 @@
+{
+  "page": 10,
+  "games": [
+    {
+      "date": "1982-12-29",
+      "opponent": "Princeton",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 52,
+          "players": [
+            {"name": "Tim Garrett", "min": 35, "fg": "5-16", "ft": "2-3", "reb": 6, "ast": 0, "pf": 3, "to": 1, "stl": 0, "blk": 1, "pts": 12},
+            {"name": "Tim Fullmer", "min": 29, "fg": "3-6", "ft": "0-0", "reb": 4, "ast": 0, "pf": 3, "to": 2, "stl": 0, "blk": 0, "pts": 6},
+            {"name": "George Scott", "min": 35, "fg": "1-1", "ft": "2-2", "reb": 7, "ast": 1, "pf": 0, "to": 2, "stl": 1, "blk": 0, "pts": 4},
+            {"name": "Phil Smith", "min": 38, "fg": "1-4", "ft": "5-7", "reb": 6, "ast": 4, "pf": 0, "to": 6, "stl": 0, "blk": 0, "pts": 7},
+            {"name": "Don Brkovich", "min": 34, "fg": "5-9", "ft": "2-4", "reb": 5, "ast": 1, "pf": 2, "to": 3, "stl": 0, "blk": 0, "pts": 12},
+            {"name": "Alan Dolensky", "min": 3, "fg": "0-0", "ft": "0-1", "reb": 1, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Michael Johnson", "min": 23, "fg": "2-3", "ft": "3-6", "reb": 3, "ast": 1, "pf": 3, "to": 1, "stl": 2, "blk": 0, "pts": 7},
+            {"name": "Craig Allison", "min": 3, "fg": "1-1", "ft": "2-2", "reb": 0, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 4}
+          ]
+        },
+        {
+          "name": "Princeton",
+          "score": 46,
+          "players": [
+            {"name": "Gordon Enderle", "min": 20, "fg": "2-5", "ft": "0-1", "reb": 0, "ast": 1, "pf": 5, "to": 2, "stl": 0, "blk": 1, "pts": 4},
+            {"name": "Craig Robinson", "min": 40, "fg": "5-13", "ft": "5-6", "reb": 11, "ast": 2, "pf": 4, "to": 3, "stl": 3, "blk": 1, "pts": 15},
+            {"name": "Rich Simkus", "min": 17, "fg": "1-3", "ft": "2-4", "reb": 1, "ast": 1, "pf": 5, "to": 0, "stl": 1, "blk": 0, "pts": 4},
+            {"name": "Bill Ryan", "min": 40, "fg": "2-8", "ft": "0-0", "reb": 0, "ast": 1, "pf": 1, "to": 2, "stl": 1, "blk": 0, "pts": 4},
+            {"name": "John Smyth", "min": 40, "fg": "7-12", "ft": "1-2", "reb": 1, "ast": 1, "pf": 2, "to": 2, "stl": 1, "blk": 0, "pts": 15},
+            {"name": "Kevin Mullin", "min": 20, "fg": "2-8", "ft": "0-1", "reb": 4, "ast": 0, "pf": 2, "to": 0, "stl": 1, "blk": 0, "pts": 4},
+            {"name": "Howard Levy", "min": 23, "fg": "0-0", "ft": "0-0", "reb": 4, "ast": 1, "pf": 4, "to": 0, "stl": 1, "blk": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

@@ -1,0 +1,9 @@
+{
+  "page": 23,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page 23 contains one handwritten official box score (Iowa at Ohio State, an overtime game per the 'OT OT FINAL' score-by-periods header). Team totals rows are partly legible (Iowa totals row reads approx FG 27-57, FT 16-18, REB 33, PF 15; Ohio State totals row reads approx FG 26-58, FT 15-15, REB 31, PF 20), but the individual player rows for both teams are too illegible to transcribe with confidence: several player first/last names are unreadable handwriting (e.g. Iowa row 1 name illegible, a row reading like 'Sasil..Chota'), and many per-player FG/FGA/FT/FTA/REB/PF/A/TO/S/MIN cell values are smudged, ambiguous, or overlapping strikethrough marks that cannot be distinguished (e.g. digits that could be 2/6 vs 8, 3 vs 5, 1 vs 7). Per instructions to be ruthless about skipping rather than guessing player-level stats, the whole game is skipped rather than invented."
+    }
+  ]
+}

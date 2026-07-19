@@ -1,0 +1,9 @@
+{
+  "page": 28,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Handwritten official NCAA box score, Ohio State vs. Iowa, Feb 18 1987 at St. John Arena (Iowa 82, Ohio State 80 per score-by-periods line). Header, team names, date, and final score are legible, but the player-level stat grid is faint/ambiguous handwriting with overlapping strikethrough foul/turnover annotations (e.g. 'player control foul', 'traveling', officials' notes) crowding several rows on both teams. Multiple FG/FT/rebound cells cannot be read with confidence, and reconstructing exact per-player points to satisfy the checksum against the 82/80 final would require guessing rather than reading. Skipping per instructions to be ruthless rather than invent values."
+    }
+  ]
+}

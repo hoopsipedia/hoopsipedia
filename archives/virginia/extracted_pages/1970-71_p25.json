@@ -1,0 +1,42 @@
+{
+  "page": 25,
+  "games": [
+    {
+      "date": "1971-03-11",
+      "opponent": "Wake Forest",
+      "note": "ACC Tournament, Greensboro, N.C.; pts computed as 2*fg_made + ft_made where sheet lacked explicit points column check (sheet actually lists Pts directly; used for checksum)",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 85,
+          "players": [
+            {"name": "Bill Gerry", "min": 37, "fg": "8-15", "ft": "7-8", "reb": 13, "ast": 1, "pf": 3, "to": 3, "stl": 0, "blk": 0, "pts": 23},
+            {"name": "Frank DeWitt", "min": 31, "fg": "1-5", "ft": "2-4", "reb": 3, "ast": 0, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Scott McCandlish", "min": 38, "fg": "8-13", "ft": "3-4", "reb": 8, "ast": 2, "pf": 3, "to": 0, "stl": 0, "blk": 0, "pts": 19},
+            {"name": "Barry Parkhill", "min": 40, "fg": "8-17", "ft": "2-2", "reb": 5, "ast": 1, "pf": 3, "to": 3, "stl": 0, "blk": 0, "pts": 18},
+            {"name": "Tim Rash", "min": 32, "fg": "4-7", "ft": "1-1", "reb": 3, "ast": 5, "pf": 3, "to": 3, "stl": 0, "blk": 0, "pts": 9},
+            {"name": "Jim Hobgood", "min": 14, "fg": "4-4", "ft": "0-0", "reb": 0, "ast": 1, "pf": 3, "to": 0, "stl": 0, "blk": 0, "pts": 8},
+            {"name": "Chip Miller", "min": 8, "fg": "2-3", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 4}
+          ]
+        },
+        {
+          "name": "Wake Forest Demon Deacons",
+          "score": 84,
+          "players": [
+            {"name": "Rich Habegger", "min": 29, "fg": "2-4", "ft": "1-6", "reb": 8, "ast": 3, "pf": 5, "to": 1, "stl": 0, "blk": 0, "pts": 5},
+            {"name": "Neil Pastushok", "min": 34, "fg": "7-12", "ft": "2-2", "reb": 5, "ast": 1, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 16},
+            {"name": "Gil McGregor", "min": 39, "fg": "8-11", "ft": "4-4", "reb": 5, "ast": 2, "pf": 4, "to": 3, "stl": 0, "blk": 0, "pts": 20},
+            {"name": "Charlie Davis", "min": 40, "fg": "9-23", "ft": "5-7", "reb": 5, "ast": 4, "pf": 0, "to": 2, "stl": 0, "blk": 0, "pts": 23},
+            {"name": "Bob Rhoads", "min": 38, "fg": "5-10", "ft": "5-6", "reb": 2, "ast": 0, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 15},
+            {"name": "Pat Kelly", "min": 1, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "John Orenczak", "min": 8, "fg": "0-0", "ft": "1-2", "reb": 1, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 1},
+            {"name": "Bob Hook", "min": 2, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Willie Griffin", "min": 9, "fg": "2-4", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 4}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

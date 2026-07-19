@@ -1,0 +1,43 @@
+{
+  "page": 13,
+  "games": [
+    {
+      "date": "1968-01-22",
+      "opponent": "Georgia Tech",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 66,
+          "players": [
+            {"name": "Howell", "fg": "5-8", "ft": "0-0", "reb": 9, "pf": 1, "pts": 10},
+            {"name": "Hosket", "fg": "7-12", "ft": "1-1", "reb": 12, "pf": 1, "pts": 15},
+            {"name": "Sorenson", "fg": "8-11", "ft": "5-7", "reb": 12, "pf": 3, "pts": 21},
+            {"name": "Swain", "fg": "4-8", "ft": "1-1", "reb": 4, "pf": 2, "pts": 9},
+            {"name": "Meadors", "fg": "2-3", "ft": "0-2", "reb": 3, "pf": 1, "pts": 4},
+            {"name": "Finney", "fg": "0-2", "ft": "0-0", "reb": 1, "pf": 1, "pts": 0},
+            {"name": "Schnabel", "fg": "0-1", "ft": "0-1", "reb": 0, "pf": 1, "pts": 0},
+            {"name": "Andreas", "fg": "2-3", "ft": "0-0", "reb": 4, "pf": 1, "pts": 4},
+            {"name": "Geddes", "fg": "0-2", "ft": "0-1", "reb": 2, "pf": 1, "pts": 0},
+            {"name": "Barclay", "fg": "0-0", "ft": "3-3", "reb": 0, "pf": 0, "pts": 3}
+          ]
+        },
+        {
+          "name": "Georgia Tech",
+          "score": 55,
+          "players": [
+            {"name": "Thorne", "fg": "5-9", "ft": "2-2", "reb": 5, "pf": 2, "pts": 12},
+            {"name": "Tomasovich", "fg": "2-13", "ft": "0-0", "reb": 2, "pf": 5, "pts": 4},
+            {"name": "Seemer", "fg": "7-10", "ft": "6-8", "reb": 5, "pf": 1, "pts": 20},
+            {"name": "Brizendine", "fg": "5-8", "ft": "2-5", "reb": 6, "pf": 4, "pts": 12},
+            {"name": "Clark", "fg": "3-16", "ft": "0-0", "reb": 0, "pf": 2, "pts": 6},
+            {"name": "Akins", "fg": "0-4", "ft": "0-0", "reb": 1, "pf": 0, "pts": 0},
+            {"name": "Tison", "fg": "0-4", "ft": "1-1", "reb": 6, "pf": 0, "pts": 1},
+            {"name": "Veryzer", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

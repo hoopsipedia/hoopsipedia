@@ -1,0 +1,9 @@
+{
+  "page": 13,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Feb 1, 1937 Ohio State vs Chicago (final Ohio 19, Chicago 16 per article text) has a legible, checksum-passing Ohio State box score (Hull 8, Ritchell 1, Thomas 5, Randabaugh 2, Dye 3 = 19, matching B/F totals of 7-5), but the Chicago (Maroons) box score table is garbled/overlapping in the scan (ghosting on the 'Amundsen, g.' row bleeding into the adjacent line) and the visible player point totals (Cassels 5, Mullins 8, Petersen 2, Rossin 1, Eggemeyer 1 = 17) already exceed Chicago's final score of 16 before even counting Amundsen, so the Chicago line fails checksum and cannot be transcribed confidently. Skipping the whole game since both teams' lines are required."
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "page": 19,
+  "games": [],
+  "skipped": [
+    {
+      "date": "1974-02-11",
+      "opponent": "Michigan State Spartans",
+      "reason": "Official box score, Ohio State (home, 67) vs Michigan State (visiting, 75). Ohio State's player lines are legible and checksum exactly (6+10+15+19+11+2+2+0+2+0=67, matches team total). However, Michigan State's FT and PTS columns for Hairston and Glover are overwritten/corrected with illegible marks (appear as something like '±7', '±4', '±9/8' and '±3', '±2', '±3/4') — cannot confidently determine their true FT-made or points values, so the visiting team's player-level checksum cannot be verified. Only one read of the page was permitted, so skipping rather than guessing per instructions."
+    }
+  ]
+}

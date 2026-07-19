@@ -1,0 +1,41 @@
+{
+  "page": 1,
+  "games": [
+    {
+      "date": "1965-12-01",
+      "opponent": "William & Mary",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 82,
+          "players": [
+            {"name": "Jerry Sanders", "min": 40, "fg": "6-13", "ft": "3-6", "reb": 13, "ast": 0, "pf": 4, "to": 1, "stl": 0, "blk": 0, "pts": 15},
+            {"name": "Mike Katos", "min": 39, "fg": "4-15", "ft": "4-5", "reb": 8, "ast": 0, "pf": 4, "to": 4, "stl": 0, "blk": 0, "pts": 12},
+            {"name": "John Schroeder", "min": 25, "fg": "1-6", "ft": "3-4", "reb": 7, "ast": 0, "pf": 5, "to": 0, "stl": 0, "blk": 0, "pts": 5},
+            {"name": "Jim Connelly", "min": 40, "fg": "19-36", "ft": "4-9", "reb": 9, "ast": 0, "pf": 5, "to": 7, "stl": 0, "blk": 0, "pts": 42},
+            {"name": "Dale Hilsmier", "min": 13, "fg": "1-2", "ft": "0-1", "reb": 1, "ast": 0, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Jeff Crackel", "min": 20, "fg": "1-4", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 2, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Buddy Reams", "min": 13, "fg": "2-3", "ft": "0-0", "reb": 4, "ast": 0, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Jack Lettice", "min": 7, "fg": "0-2", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Fred Stant", "min": 3, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "William & Mary",
+          "score": 93,
+          "players": [
+            {"name": "Jim Rama", "min": 33, "fg": "8-11", "ft": "4-5", "reb": 7, "ast": 0, "pf": 3, "to": 1, "stl": 0, "blk": 0, "pts": 20},
+            {"name": "Larry Paffrath", "min": 32, "fg": "3-3", "ft": "0-0", "reb": 2, "ast": 0, "pf": 0, "to": 2, "stl": 0, "blk": 0, "pts": 6},
+            {"name": "Ben Pomeroy", "min": 40, "fg": "14-18", "ft": "5-10", "reb": 16, "ast": 0, "pf": 3, "to": 3, "stl": 0, "blk": 0, "pts": 33},
+            {"name": "Walt Wenk", "min": 28, "fg": "2-6", "ft": "3-4", "reb": 1, "ast": 0, "pf": 5, "to": 7, "stl": 0, "blk": 0, "pts": 7},
+            {"name": "Ron Panneton", "min": 40, "fg": "9-14", "ft": "5-10", "reb": 4, "ast": 0, "pf": 3, "to": 9, "stl": 0, "blk": 0, "pts": 23},
+            {"name": "Tim Walter", "min": 21, "fg": "0-1", "ft": "4-5", "reb": 7, "ast": 0, "pf": 3, "to": 1, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Billy Taylor", "min": 6, "fg": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "pf": 2, "to": 2, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

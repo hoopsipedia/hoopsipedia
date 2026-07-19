@@ -1,0 +1,9 @@
+{
+  "page": 33,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Game found: New Mexico Lobos @ UTEP, 3/10/88, Provo UT (final NM 61, UTEP 74). UTEP's player-line points sum to exactly 74 (checksum passes cleanly), but New Mexico's player-line points sum to 62 vs the official team total of 61. Several New Mexico rows (e.g. Greene, Miller, Rogers, Longley) have columns that run short by 1-2 values in the scan compared to the 16-column header (FG FGA 3FG 3FGA FT FTA OF DE TO-reb PF TP A TO-turnover BL S MIN), making the FT/FTA and TP fields ambiguous/misaligned for those rows. Rather than guess which digit is wrong, skipping the whole game per instructions (both allowed reads of the page were used and the ambiguity could not be resolved)."
+    }
+  ]
+}

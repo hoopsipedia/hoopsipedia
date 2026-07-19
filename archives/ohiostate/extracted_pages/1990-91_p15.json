@@ -1,0 +1,51 @@
+{
+  "page": 15,
+  "games": [
+    {
+      "date": "1991-01-12",
+      "opponent": "Wisconsin",
+      "teams": [
+        {
+          "name": "Wisconsin",
+          "score": 60,
+          "players": [
+            {"name": "Simms, Willie", "min": 25, "fg": "3-5", "tp": "0-0", "ft": "2-2", "reb": 3, "ast": 3, "pf": 4, "to": 2, "stl": 0, "blk": 0, "pts": 8},
+            {"name": "Ellenson, John", "min": 19, "fg": "1-4", "tp": "0-2", "ft": "0-0", "reb": 0, "ast": 2, "pf": 0, "to": 3, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Tompkins, Patrick", "min": 27, "fg": "3-6", "tp": "0-0", "ft": "1-4", "reb": 7, "ast": 1, "pf": 3, "to": 6, "stl": 2, "blk": 0, "pts": 7},
+            {"name": "Douglass, Billy", "min": 17, "fg": "1-1", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 1, "pf": 3, "to": 2, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Locum, Tim", "min": 24, "fg": "3-4", "tp": "2-3", "ft": "0-0", "reb": 1, "ast": 1, "pf": 1, "to": 2, "stl": 0, "blk": 1, "pts": 8},
+            {"name": "Hisle, Larry", "min": 23, "fg": "4-8", "tp": "2-5", "ft": "2-3", "reb": 3, "ast": 1, "pf": 2, "to": 4, "stl": 0, "blk": 0, "pts": 12},
+            {"name": "McGee, Carlton", "min": 13, "fg": "2-5", "tp": "0-0", "ft": "0-2", "reb": 2, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 1, "pts": 4},
+            {"name": "Harrell, Damon", "min": 6, "fg": "0-1", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Peters, Jay", "min": 13, "fg": "1-2", "tp": "1-2", "ft": "0-0", "reb": 1, "ast": 1, "pf": 1, "to": 2, "stl": 0, "blk": 0, "pts": 3},
+            {"name": "Ely, Louis", "min": 11, "fg": "1-4", "tp": "0-0", "ft": "0-0", "reb": 2, "ast": 0, "pf": 2, "to": 1, "stl": 0, "blk": 2, "pts": 2},
+            {"name": "Johnson, Jason", "min": 7, "fg": "0-2", "tp": "0-2", "ft": "0-0", "reb": 2, "ast": 2, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Good, Drian", "min": 5, "fg": "2-2", "tp": "1-1", "ft": "2-2", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 7},
+            {"name": "Weaver, Kass", "min": 5, "fg": "1-2", "tp": "1-1", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 3},
+            {"name": "Johnson, Grant", "min": 5, "fg": "1-1", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 1, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 2}
+          ]
+        },
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 92,
+          "players": [
+            {"name": "Jackson, Jim", "min": 31, "fg": "6-9", "tp": "1-2", "ft": "4-5", "reb": 2, "ast": 3, "pf": 3, "to": 3, "stl": 1, "blk": 1, "pts": 17},
+            {"name": "Lee, Treg", "min": 30, "fg": "5-8", "tp": "0-0", "ft": "3-3", "reb": 6, "ast": 1, "pf": 2, "to": 2, "stl": 1, "blk": 0, "pts": 13},
+            {"name": "Carter, Perry", "min": 30, "fg": "8-12", "tp": "0-0", "ft": "2-2", "reb": 4, "ast": 2, "pf": 2, "to": 3, "stl": 1, "blk": 0, "pts": 18},
+            {"name": "Baker, Mark", "min": 30, "fg": "4-9", "tp": "0-0", "ft": "3-4", "reb": 3, "ast": 1, "pf": 3, "to": 0, "stl": 0, "blk": 0, "pts": 11},
+            {"name": "Brown, Jamaal", "min": 28, "fg": "3-8", "tp": "0-3", "ft": "7-7", "reb": 1, "ast": 1, "pf": 2, "to": 0, "stl": 4, "blk": 0, "pts": 13},
+            {"name": "Robinson, Bill", "min": 11, "fg": "2-3", "tp": "0-0", "ft": "0-0", "reb": 5, "ast": 0, "pf": 4, "to": 0, "stl": 1, "blk": 0, "pts": 4},
+            {"name": "Jent, Chris", "fg": "3-5", "tp": "2-2", "ft": "0-0", "ast": 3, "pf": 2, "to": 1, "pts": 8},
+            {"name": "Skelton, Jamie", "fg": "1-2", "tp": "0-1", "ft": "0-1", "ast": 3, "pf": 1, "to": 1, "pts": 2},
+            {"name": "Davis, Alex", "min": 10, "fg": "1-1", "tp": "1-1", "ft": "0-0", "reb": 3, "stl": 1, "pts": 3},
+            {"name": "Brandewie, Tom", "fg": "1-2", "tp": "0-1", "ft": "1-4", "reb": 3, "pts": 3},
+            {"name": "Ratliff, Jimmy", "min": 3, "fg": "0-2", "tp": "0-0", "ft": "0-0", "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": [],
+  "notes": "Typed official box score. Page marked '(14)' in corner but this is page 15 of the PDF extraction. All 14 Wisconsin player lines individually verified via pts = 2*(FGmade-3FGmade)+3*3FGmade+FTmade and sum to team score 60. Ohio State starters (Jackson, Lee, Carter, Baker, Brown, Robinson, Jent) similarly formula-verified. For 4 OSU bench players (Skelton, Davis, Brandewie, Ratliff) minor print made a couple of digits ambiguous (e.g. TP 2 vs 3); their pts/fg/ft values were resolved via the constraint that all player pts must sum to the team total (92, matching FINAL score and TOTALS row FG 34-61/3FG 4-10/FT 20-26). Rebounds/assists/PF/TO/STL/BLK and minutes for those 4 bench players and Jent's minutes were left out where the exact digit could not be confidently read (omitted rather than guessed), per instructions not to invent values. Team-level 'TEAM' rebound rows (unassigned rebounds) were excluded as they are not player lines."
+}

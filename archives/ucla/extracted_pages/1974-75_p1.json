@@ -1,0 +1,46 @@
+{
+  "page": 1,
+  "games": [
+    {
+      "date": "1974-11-29",
+      "opponent": "Wichita State",
+      "ucla_score": 85,
+      "opp_score": 74,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 85,
+          "players": [
+            {"name": "Washington, F", "fg": "7-10", "ft": "0-2", "reb": 7, "pf": 5, "pts": 14, "ast": 2},
+            {"name": "Meyers, F", "fg": "2-5", "ft": "2-3", "reb": 6, "pf": 4, "pts": 6, "ast": 1},
+            {"name": "Drollinger, C", "fg": "8-11", "ft": "5-6", "reb": 17, "pf": 2, "pts": 21, "ast": 3},
+            {"name": "Trgovich, G", "fg": "5-10", "ft": "4-7", "reb": 1, "pf": 1, "pts": 14, "ast": 5},
+            {"name": "Spillane, G", "fg": "7-12", "ft": "2-2", "reb": 1, "pf": 4, "pts": 16, "ast": 5},
+            {"name": "McCarter, G", "fg": "2-5", "ft": "1-2", "reb": 0, "pf": 1, "pts": 5, "ast": 2},
+            {"name": "Olinde, F", "fg": "2-4", "ft": "2-5", "reb": 4, "pf": 1, "pts": 6, "ast": 4},
+            {"name": "Corliss, F", "fg": "1-1", "ft": "1-1", "reb": 1, "pf": 2, "pts": 3, "ast": 1}
+          ]
+        },
+        {
+          "name": "Wichita State Shockers",
+          "score": 74,
+          "players": [
+            {"name": "McCullough, F", "fg": "3-5", "ft": "0-0", "reb": 2, "pf": 5, "pts": 6, "ast": 0},
+            {"name": "Yoder, F", "fg": "2-9", "ft": "3-4", "reb": 2, "pf": 5, "pts": 7, "ast": 1},
+            {"name": "Elmore, C", "fg": "3-9", "ft": "0-0", "reb": 8, "pf": 1, "pts": 6, "ast": 0},
+            {"name": "Bruton, G", "fg": "7-11", "ft": "3-4", "reb": 4, "pf": 2, "pts": 17, "ast": 7},
+            {"name": "Gray, G", "fg": "8-12", "ft": "2-2", "reb": 3, "pf": 4, "pts": 18, "ast": 1},
+            {"name": "Edgar, F", "fg": "0-4", "ft": "0-0", "reb": 2, "pf": 0, "pts": 0, "ast": 3},
+            {"name": "Strom, C", "fg": "4-7", "ft": "4-8", "reb": 5, "pf": 2, "pts": 12, "ast": 2},
+            {"name": "Harris, F", "fg": "0-1", "ft": "0-0", "reb": 1, "pf": 0, "pts": 0, "ast": 0},
+            {"name": "Tsingine, G", "fg": "3-4", "ft": "0-0", "reb": 1, "pf": 5, "pts": 6, "ast": 2},
+            {"name": "Holmes, C", "fg": "1-1", "ft": "0-0", "reb": 2, "pf": 1, "pts": 2, "ast": 0},
+            {"name": "Reinert", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0, "ast": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

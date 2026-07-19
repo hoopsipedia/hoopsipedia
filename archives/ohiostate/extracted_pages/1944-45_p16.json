@@ -1,0 +1,45 @@
+{
+  "page": 16,
+  "games": [
+    {
+      "date": "1945-02-17",
+      "opponent": "Indiana",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 63,
+          "players": [
+            {"name": "Grate", "fg": "2", "ft": "3", "pts": 7},
+            {"name": "Duxger", "fg": "2", "ft": "1", "pts": 5},
+            {"name": "Snyder", "fg": "1", "ft": "1", "pts": 3},
+            {"name": "Caudill", "fg": "4", "ft": "1", "pts": 9},
+            {"name": "Davis", "fg": "0", "ft": "1", "pts": 1},
+            {"name": "Risen", "fg": "9", "ft": "6", "pts": 24},
+            {"name": "Sims", "fg": "4", "ft": "0", "pts": 8},
+            {"name": "Huston", "fg": "1", "ft": "0", "pts": 2},
+            {"name": "Amling", "fg": "2", "ft": "0", "pts": 4},
+            {"name": "Jacobs", "fg": "0", "ft": "0", "pts": 0}
+          ]
+        },
+        {
+          "name": "Indiana Hoosiers",
+          "score": 45,
+          "players": [
+            {"name": "Herrmann", "fg": "2", "ft": "2", "pts": 6},
+            {"name": "Copeland", "fg": "1", "ft": "3", "pts": 5},
+            {"name": "Radcliff", "fg": "1", "ft": "3", "pts": 5},
+            {"name": "Schneider", "fg": "0", "ft": "0", "pts": 0},
+            {"name": "Kralovansky", "fg": "2", "ft": "6", "pts": 10},
+            {"name": "Johnson", "fg": "1", "ft": "1", "pts": 3},
+            {"name": "Roper", "fg": "0", "ft": "0", "pts": 0},
+            {"name": "Herron", "fg": "4", "ft": "1", "pts": 9},
+            {"name": "Armstrong", "fg": "3", "ft": "1", "pts": 7},
+            {"name": "Brandenburg", "fg": "0", "ft": "0", "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

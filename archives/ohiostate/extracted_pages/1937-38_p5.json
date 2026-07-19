@@ -1,0 +1,12 @@
+{
+  "page": 5,
+  "games": [],
+  "skipped": [
+    {
+      "date": "1938-01-01",
+      "opponent": "University of Baltimore",
+      "final_score": "Ohio State 53, Baltimore 37 (per article headline and score-by-halves line)",
+      "reason": "Newspaper clipping box score table is very small/blurred scanned newsprint. Player-line G/F/T digits could not be read with high confidence, and reconstructed sums do not reconcile with the printed team totals or the final score reported in the article text (e.g. Ohio State field-goal column sums to ~18 from legible player lines vs a printed team total of ~27, and player point sums to ~45 vs the actual final score of 53; Baltimore roster names and digits are similarly too faint to read reliably). Per instructions, skipping rather than guessing individual player stat lines."
+    }
+  ]
+}

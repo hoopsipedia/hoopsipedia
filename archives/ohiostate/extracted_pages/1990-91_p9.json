@@ -1,0 +1,9 @@
+{
+  "page": 9,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Typed box score for Ohio State 71, Georgetown 60 (Dec 22, 1990, Thomas & Mack Center, 'Dual in the Desert/Game 1') is present and the TOTALS rows for both teams are clearly legible and self-consistent (Georgetown TOTALS: FG 21-55, 3FG 2-8, FT 16-20, REB 33, TP 60 matching final score 60; Ohio State TOTALS: FG 22-56, 3FG 1-4, FT 26-32, REB 40, TP 71 matching final score 71). However, the individual player rows are printed in a dense 16-column table (FG FGA 3FG 3GA FT FTA OR DR REB PF TP A TO BK S MIN) with tight spacing, and several player rows do not resolve consistently against the pts formula (2*(FG-3FG)+3*3FG+FT = TP) or against column-sum constraints implied by the TOTALS row (e.g. Joey Brown's row appears to be missing a digit/column, and Brian Kelly's row yields an impossible PF value of 6 under the most literal reading). Re-read the page once (2 reads used, per instructions) and could not resolve the ambiguity confidently. Per instructions, skipping rather than guessing at individual player lines; team-level final score (Ohio State 71, Georgetown 60) is confirmed accurate from the TOTALS/FINAL rows if a summary-only entry is ever wanted, but no player-level box score is included here since it could not be checksummed reliably."
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "page": 7,
+  "games": [
+    {
+      "date": "1980-12-27",
+      "opponent": "DePaul",
+      "ucla_score": 77,
+      "opp_score": 93,
+      "site": "Rosemont Horizon (Chicago)",
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 77,
+          "players": [
+            {"name": "Daye", "min": 28, "fg": "5-12", "ft": "1-1", "reb": 8, "pf": 5, "ast": 5, "to": 3, "stl": 2, "blk": 0, "pts": 11},
+            {"name": "Sanders", "min": 24, "fg": "2-11", "ft": "0-0", "reb": 7, "pf": 5, "ast": 0, "to": 3, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Fields", "min": 24, "fg": "6-10", "ft": "1-3", "reb": 9, "pf": 4, "ast": 0, "to": 0, "stl": 1, "blk": 0, "pts": 13},
+            {"name": "Foster", "min": 29, "fg": "7-15", "ft": "5-6", "reb": 2, "pf": 3, "ast": 0, "to": 3, "stl": 0, "blk": 1, "pts": 19},
+            {"name": "Holton", "min": 24, "fg": "1-3", "ft": "0-1", "reb": 3, "pf": 2, "ast": 2, "to": 0, "stl": 2, "blk": 0, "pts": 2},
+            {"name": "Anderson", "min": 11, "fg": "2-3", "ft": "2-4", "reb": 0, "pf": 1, "ast": 0, "to": 2, "stl": 0, "blk": 0, "pts": 6},
+            {"name": "Eaton", "min": 0, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 1, "ast": 0, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Jackson", "min": 28, "fg": "3-6", "ft": "0-0", "reb": 0, "pf": 1, "ast": 6, "to": 4, "stl": 0, "blk": 0, "pts": 6},
+            {"name": "Pellitt", "min": 25, "fg": "7-11", "ft": "2-3", "reb": 4, "pf": 2, "ast": 0, "to": 2, "stl": 1, "blk": 0, "pts": 16},
+            {"name": "Sears", "min": 7, "fg": "0-0", "ft": "0-0", "reb": 1, "pf": 0, "ast": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "DePaul Blue Demons",
+          "score": 93,
+          "players": [
+            {"name": "Aguirre", "min": 38, "fg": "8-14", "ft": "7-8", "reb": 9, "pf": 3, "ast": 4, "to": 5, "stl": 1, "blk": 2, "pts": 23},
+            {"name": "Grubbs", "min": 29, "fg": "6-10", "ft": "0-0", "reb": 3, "pf": 3, "ast": 1, "to": 2, "stl": 0, "blk": 1, "pts": 12},
+            {"name": "Cummings", "min": 22, "fg": "7-13", "ft": "5-8", "reb": 8, "pf": 2, "ast": 5, "to": 1, "stl": 2, "blk": 2, "pts": 19},
+            {"name": "Dillard", "min": 29, "fg": "2-4", "ft": "0-0", "reb": 2, "pf": 3, "ast": 5, "to": 2, "stl": 2, "blk": 0, "pts": 4},
+            {"name": "Bradshaw", "min": 35, "fg": "2-5", "ft": "4-4", "reb": 3, "pf": 4, "ast": 6, "to": 1, "stl": 2, "blk": 0, "pts": 8},
+            {"name": "Randolph", "min": 16, "fg": "4-7", "ft": "6-7", "reb": 6, "pf": 3, "ast": 1, "to": 1, "stl": 1, "blk": 0, "pts": 14},
+            {"name": "Moore", "min": 15, "fg": "2-3", "ft": "3-3", "reb": 2, "pf": 0, "ast": 0, "to": 1, "stl": 0, "blk": 0, "pts": 7},
+            {"name": "Burkholder", "min": 1, "fg": "1-1", "ft": "0-0", "reb": 1, "pf": 0, "ast": 0, "to": 0, "stl": 1, "blk": 0, "pts": 2},
+            {"name": "McGuire", "min": 3, "fg": "1-1", "ft": "0-0", "reb": 1, "pf": 0, "ast": 0, "to": 0, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "McMillan", "min": 1, "fg": "1-1", "ft": "0-0", "reb": 0, "pf": 1, "ast": 0, "to": 0, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Manella", "fg": "0-1", "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

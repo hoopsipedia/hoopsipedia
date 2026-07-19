@@ -1,0 +1,40 @@
+{
+  "page": 14,
+  "games": [
+    {
+      "date": "1960-01-16",
+      "opponent": "Northwestern",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 81,
+          "players": [
+            {"name": "Havlicek", "fg": "3-6", "ft": "2-2", "reb": 3, "pf": 3, "pts": 8},
+            {"name": "Roberts", "fg": "1-4", "ft": "0-0", "reb": 1, "pf": 2, "pts": 2},
+            {"name": "Lucas", "fg": "9-12", "ft": "10-11", "reb": 8, "pf": 2, "pts": 28},
+            {"name": "Siegfried", "fg": "5-15", "ft": "1-1", "reb": 5, "pf": 3, "pts": 11},
+            {"name": "Nowell", "fg": "7-12", "ft": "2-2", "reb": 1, "pf": 3, "pts": 16},
+            {"name": "Furry", "fg": "5-10", "ft": "2-2", "reb": 10, "pf": 3, "pts": 12},
+            {"name": "Knight", "fg": "2-4", "ft": "0-0", "reb": 4, "pf": 1, "pts": 4}
+          ]
+        },
+        {
+          "name": "Northwestern",
+          "score": 64,
+          "players": [
+            {"name": "Jones", "fg": "10-26", "ft": "8-9", "reb": 7, "pf": 5, "pts": 28},
+            {"name": "Campbell", "fg": "7-14", "ft": "3-3", "reb": 4, "pf": 2, "pts": 17},
+            {"name": "Brandt", "fg": "2-5", "ft": "0-1", "reb": 3, "pf": 4, "pts": 4},
+            {"name": "Wells", "fg": "3-10", "ft": "5-5", "reb": 5, "pf": 1, "pts": 11},
+            {"name": "Cacciatore", "fg": "1-7", "ft": "2-4", "reb": 2, "pf": 3, "pts": 4},
+            {"name": "Snyder", "fg": "0-1", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "North", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 1, "pts": 0},
+            {"name": "Kauber", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

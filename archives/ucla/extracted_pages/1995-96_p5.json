@@ -1,0 +1,49 @@
+{
+  "page": 5,
+  "games": [
+    {
+      "date": "1995-12-02",
+      "opponent": "Kansas",
+      "ucla_score": 70,
+      "opp_score": 85,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 70,
+          "players": [
+            {"name": "O'Bannon, Charles", "min": "33:12", "fg": "8-13", "tp": "0-0", "ft": "6-8", "reb": 5, "ast": 3, "pf": 5, "to": 2, "stl": 1, "blk": 1, "pts": 22},
+            {"name": "Henderson, J.R.", "min": "28:03", "fg": "4-13", "tp": "0-1", "ft": "4-6", "reb": 4, "ast": 3, "pf": 5, "to": 3, "stl": 0, "blk": 0, "pts": 12},
+            {"name": "McCoy, Jelani", "min": "34:58", "fg": "7-10", "tp": "0-0", "ft": "0-2", "reb": 8, "ast": 0, "pf": 4, "to": 1, "stl": 2, "blk": 5, "pts": 14},
+            {"name": "Dollar, Cameron", "min": "24:48", "fg": "1-4", "tp": "1-3", "ft": "0-0", "reb": 2, "ast": 2, "pf": 1, "to": 5, "stl": 1, "blk": 0, "pts": 3},
+            {"name": "Bailey, Toby", "min": "36:03", "fg": "3-12", "tp": "1-3", "ft": "3-4", "reb": 4, "ast": 3, "pf": 1, "to": 6, "stl": 1, "blk": 0, "pts": 10},
+            {"name": "Givens, omm'A", "min": "13:57", "fg": "0-2", "tp": "0-0", "ft": "2-2", "reb": 3, "ast": 2, "pf": 0, "to": 1, "stl": 2, "blk": 0, "pts": 2},
+            {"name": "Johnson, Kris", "min": "24:14", "fg": "3-10", "tp": "1-3", "ft": "0-0", "reb": 7, "ast": 1, "pf": 0, "to": 0, "stl": 1, "blk": 0, "pts": 7},
+            {"name": "Loyd, Brandon", "min": "4:45", "fg": "0-1", "tp": "0-1", "ft": "0-0", "reb": 0, "ast": 0, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Kansas Jayhawks",
+          "score": 85,
+          "players": [
+            {"name": "Pierce, Paul", "min": "25:44", "fg": "4-8", "tp": "0-3", "ft": "6-6", "reb": 8, "ast": 1, "pf": 2, "to": 3, "stl": 1, "blk": 1, "pts": 14},
+            {"name": "LaFrentz, Raef", "min": "32:46", "fg": "4-10", "tp": "0-0", "ft": "4-4", "reb": 11, "ast": 0, "pf": 0, "to": 0, "stl": 1, "blk": 1, "pts": 12},
+            {"name": "Pollard, Scot", "min": "16:17", "fg": "3-4", "tp": "0-0", "ft": "1-2", "reb": 3, "ast": 0, "pf": 5, "to": 1, "stl": 0, "blk": 2, "pts": 7},
+            {"name": "Vaughn, Jacque", "min": "35:05", "fg": "7-11", "tp": "0-3", "ft": "8-10", "reb": 5, "ast": 6, "pf": 0, "to": 4, "stl": 0, "blk": 0, "pts": 22},
+            {"name": "Haase, Jerod", "min": "22:06", "fg": "3-8", "tp": "0-3", "ft": "2-3", "reb": 4, "ast": 2, "pf": 3, "to": 2, "stl": 3, "blk": 1, "pts": 8},
+            {"name": "Williams, B.J.", "min": "12:39", "fg": "0-1", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 1, "pf": 5, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Pearson, Sean", "min": "14:25", "fg": "2-6", "tp": "1-3", "ft": "0-1", "reb": 2, "ast": 2, "pf": 1, "to": 1, "stl": 2, "blk": 0, "pts": 5},
+            {"name": "Pugh, T.J.", "min": "16:59", "fg": "1-4", "tp": "0-0", "ft": "1-4", "reb": 3, "ast": 0, "pf": 1, "to": 1, "stl": 1, "blk": 1, "pts": 3},
+            {"name": "Rayford, Calvin", "min": "4:49", "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Thomas, Billy", "min": "7:41", "fg": "3-5", "tp": "2-4", "ft": "0-1", "reb": 3, "ast": 0, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 8},
+            {"name": "Robertson, Ryan", "min": "9:44", "fg": "2-5", "tp": "0-2", "ft": "2-2", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 1, "blk": 0, "pts": 6},
+            {"name": "Whatley, T.J.", "min": "0:35", "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "McGrath, C.B.", "min": "0:35", "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Ransom, Steve", "min": "0:35", "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 1, "blk": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

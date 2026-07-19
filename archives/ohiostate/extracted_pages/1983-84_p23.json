@@ -1,0 +1,41 @@
+{
+  "page": 23,
+  "games": [
+    {
+      "date": "1984-02-16",
+      "opponent": "Northwestern",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 60,
+          "players": [
+            {"name": "Tony Campbell", "min": 40, "fg": "11-17", "ft": "4-5", "reb": 7, "ast": 1, "pf": 2, "to": 1, "stl": 1, "blk": 1, "pts": 26},
+            {"name": "Dave Jones", "min": 37, "fg": "1-6", "ft": "0-0", "reb": 2, "ast": 4, "pf": 3, "to": 0, "stl": 1, "blk": 0, "pts": 2},
+            {"name": "Clarence McGee", "min": 24, "fg": "0-1", "ft": "0-0", "reb": 1, "ast": 0, "pf": 3, "to": 1, "stl": 0, "pts": 0},
+            {"name": "Troy Taylor", "min": 29, "fg": "8-13", "ft": "0-1", "reb": 1, "ast": 5, "pf": 3, "to": 2, "stl": 2, "blk": 1, "pts": 16},
+            {"name": "Ron Stokes", "min": 34, "fg": "3-8", "ft": "0-0", "reb": 3, "ast": 4, "pf": 4, "to": 3, "stl": 0, "blk": 0, "pts": 6},
+            {"name": "Curtis Wilson", "min": 11, "fg": "1-2", "ft": "0-0", "reb": 1, "ast": 1, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Keith Wesson", "min": 17, "fg": "2-2", "ft": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Dennis Hopson", "min": 8, "fg": "2-2", "ft": "0-0", "reb": 1, "ast": 1, "pf": 1, "to": 0, "stl": 0, "blk": 1, "pts": 4}
+          ]
+        },
+        {
+          "name": "Northwestern Wildcats",
+          "score": 61,
+          "players": [
+            {"name": "Andre Goode", "min": 33, "fg": "5-8", "ft": "0-0", "reb": 7, "ast": 6, "pf": 2, "to": 5, "stl": 1, "blk": 0, "pts": 10},
+            {"name": "John Peterson", "min": 24, "fg": "2-6", "ft": "0-0", "reb": 6, "ast": 1, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Paul Schultz", "min": 40, "fg": "5-5", "ft": "4-8", "reb": 4, "ast": 1, "pf": 2, "to": 0, "stl": 0, "blk": 1, "pts": 14},
+            {"name": "Art Aaron", "min": 34, "fg": "7-13", "ft": "4-5", "reb": 3, "ast": 4, "pf": 3, "to": 2, "stl": 2, "blk": 1, "pts": 18},
+            {"name": "Shawn Watts", "min": 32, "fg": "3-4", "ft": "0-1", "reb": 2, "ast": 5, "pf": 4, "to": 1, "stl": 0, "blk": 0, "pts": 6},
+            {"name": "Elliot Fullen", "min": 26, "fg": "4-7", "ft": "1-1", "reb": 4, "ast": 2, "pf": 2, "to": 3, "stl": 1, "blk": 0, "pts": 9},
+            {"name": "Roy Dixon", "min": 8, "fg": "0-1", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Chris Berg", "min": 3, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

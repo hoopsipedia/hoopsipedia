@@ -1,0 +1,47 @@
+{
+  "page": 1,
+  "games": [
+    {
+      "date": "1992-11-18",
+      "opponent": "St. Louis",
+      "ucla_score": 68,
+      "opp_score": 54,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 68,
+          "players": [
+            {"name": "Rich Petruska", "min": 35, "fg": "7-11", "tp": "0-0", "ft": "7-8", "reb": 9, "ast": 1, "pf": 2, "to": 1, "stl": 0, "blk": 2, "pts": 21},
+            {"name": "Ed O'Bannon", "min": 34, "fg": "4-7", "tp": "0-0", "ft": "0-1", "reb": 8, "ast": 0, "pf": 3, "to": 3, "stl": 3, "blk": 0, "pts": 8},
+            {"name": "Jiri Zidek", "min": 14, "fg": "2-5", "tp": "0-0", "ft": "1-1", "reb": 3, "ast": 2, "pf": 0, "to": 3, "stl": 1, "blk": 0, "pts": 5},
+            {"name": "Mitch Butler", "min": 28, "fg": "3-5", "tp": "0-2", "ft": "2-4", "reb": 5, "ast": 2, "pf": 4, "to": 3, "stl": 1, "blk": 0, "pts": 8},
+            {"name": "Tyus Edney", "min": 36, "fg": "6-11", "tp": "1-1", "ft": "3-5", "reb": 3, "ast": 4, "pf": 3, "to": 2, "stl": 2, "blk": 0, "pts": 16},
+            {"name": "Rodney Zimmerman", "min": 16, "fg": "1-1", "tp": "0-0", "ft": "0-0", "reb": 5, "ast": 2, "pf": 1, "to": 2, "stl": 0, "blk": 1, "pts": 2},
+            {"name": "Kevin Dempsey", "min": 15, "fg": "0-1", "tp": "0-1", "ft": "0-0", "reb": 1, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Marquis Burns", "min": 9, "fg": "2-2", "tp": "1-1", "ft": "0-0", "reb": 1, "ast": 1, "pf": 1, "to": 0, "stl": 1, "blk": 0, "pts": 5},
+            {"name": "Ike Nwankwo", "min": 5, "fg": "0-1", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "David Boyle", "min": 8, "fg": "1-1", "tp": "1-1", "ft": "0-4", "reb": 1, "ast": 0, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 3}
+          ]
+        },
+        {
+          "name": "St. Louis Billikens",
+          "score": 54,
+          "players": [
+            {"name": "Brian Smith", "min": 13, "fg": "0-2", "tp": "0-0", "ft": "0-2", "reb": 2, "ast": 0, "pf": 3, "to": 0, "stl": 0, "blk": 1, "pts": 0},
+            {"name": "Donnie Dobbs", "min": 36, "fg": "7-12", "tp": "0-0", "ft": "3-5", "reb": 3, "ast": 1, "pf": 2, "to": 0, "stl": 1, "blk": 0, "pts": 17},
+            {"name": "Scott Highmark", "min": 38, "fg": "7-14", "tp": "2-7", "ft": "4-4", "reb": 2, "ast": 1, "pf": 3, "to": 2, "stl": 1, "blk": 0, "pts": 20},
+            {"name": "Carlo McCauley", "min": 18, "fg": "0-2", "tp": "0-1", "ft": "0-0", "reb": 0, "ast": 3, "pf": 5, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Erwin Claggett", "min": 36, "fg": "6-15", "tp": "1-5", "ft": "0-0", "reb": 7, "ast": 3, "pf": 0, "to": 2, "stl": 3, "blk": 1, "pts": 13},
+            {"name": "Marcus Jones", "min": 27, "fg": "1-3", "tp": "0-2", "ft": "0-0", "reb": 0, "ast": 2, "pf": 4, "to": 2, "stl": 1, "blk": 0, "pts": 2},
+            {"name": "Evan Pedersen", "min": 18, "fg": "1-4", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "pf": 3, "to": 0, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Ryan Grant", "min": 9, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 2, "ast": 1, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Eric Jones", "min": 1, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Eric Bickel", "min": 4, "fg": "0-1", "tp": "0-0", "ft": "0-0", "reb": 2, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

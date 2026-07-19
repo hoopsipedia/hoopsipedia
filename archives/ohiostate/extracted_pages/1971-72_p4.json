@@ -1,0 +1,41 @@
+{
+  "page": 4,
+  "games": [
+    {
+      "date": "1971-12-06",
+      "opponent": "Utah State",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 71,
+          "players": [
+            {"name": "Wagar", "fg": "3-11", "ft": "1-2", "reb": 4, "pf": 3, "pts": 7},
+            {"name": "Minor", "fg": "5-10", "ft": "1-3", "reb": 10, "pf": 0, "pts": 11},
+            {"name": "Witte", "fg": "7-13", "ft": "6-8", "reb": 15, "pf": 4, "pts": 20},
+            {"name": "Merchant", "fg": "3-11", "ft": "0-0", "reb": 1, "pf": 4, "pts": 6},
+            {"name": "Gerhard", "fg": "8-12", "ft": "4-7", "reb": 4, "pf": 0, "pts": 20},
+            {"name": "Siekmann", "fg": "1-3", "ft": "1-3", "reb": 3, "pf": 1, "pts": 3},
+            {"name": "Jackson", "fg": "1-3", "ft": "1-3", "reb": 5, "pf": 1, "pts": 3},
+            {"name": "Repella", "fg": "0-2", "ft": "1-2", "reb": 2, "pf": 0, "pts": 1}
+          ]
+        },
+        {
+          "name": "Utah State Aggies",
+          "score": 60,
+          "players": [
+            {"name": "Hatch", "fg": "2-6", "ft": "2-2", "reb": 0, "pf": 2, "pts": 6},
+            {"name": "Lauriski", "fg": "4-16", "ft": "5-5", "reb": 12, "pf": 5, "pts": 13},
+            {"name": "Love", "fg": "3-6", "ft": "0-1", "reb": 6, "pf": 2, "pts": 6},
+            {"name": "Tebbs", "fg": "7-11", "ft": "6-6", "reb": 3, "pf": 5, "pts": 20},
+            {"name": "Wakefield", "fg": "1-4", "ft": "0-0", "reb": 1, "pf": 0, "pts": 2},
+            {"name": "Hansen", "fg": "4-8", "ft": "1-1", "reb": 1, "pf": 4, "pts": 9},
+            {"name": "Boatwright", "fg": "1-3", "ft": "2-4", "reb": 7, "pf": 3, "pts": 4},
+            {"name": "Thompson", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

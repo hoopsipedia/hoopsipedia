@@ -1,0 +1,9 @@
+{
+  "page": 20,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Official NCAA/ACC box score, Wake Forest at Virginia, dated 2/3/83, Charlottesville VA (Wake Forest 75, Virginia 89; this ACC game used a trial 3-point line so the sheet has a 3PT-FG/FGA column in addition to overall FG/FGA). Transcribed all player rows for both teams and cross-validated 3PT-made and FT-made column sums against the sheet's own team TOTALS row: Wake Forest 3PT (7 made) and FT (16 made) both matched the totals row exactly, but summed player TP (points) = 73 vs. the sheet's printed team total of 75 (off by 2, implying one FG-made cell was misread by 1 make). Virginia 3PT (5 made) matched exactly, but summed player FT (12 made) vs. team totals row (10 made) and summed player TP = 91 vs. printed team total 89 (off by 2 in the opposite direction, implying one FT-made cell, likely Lambiotte or Newbold both showing an identical faint '2-2' FT line, was misread). Could not resolve which single cell was misread through internal row consistency (each ambiguous row is internally self-consistent even with the wrong digit), and a second render of the same PDF page would not improve legibility of the handwritten entries. Skipping per checksum-failure rule rather than guessing which digit to correct."
+    }
+  ]
+}

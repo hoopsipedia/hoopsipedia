@@ -1,0 +1,37 @@
+{
+  "page": 20,
+  "games": [
+    {
+      "date": "1934-03-05",
+      "opponent": "Western Reserve",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 36,
+          "players": [
+            {"name": "Hosequist", "fg_made": 1, "ft_made": 0, "pf": 3, "pts": 2},
+            {"name": "Wilson", "fg_made": 7, "ft_made": 2, "pf": 2, "pts": 16},
+            {"name": "Conrad", "fg_made": 1, "ft_made": 0, "pf": 2, "pts": 2},
+            {"name": "Fisher", "fg_made": 3, "ft_made": 0, "pf": 4, "pts": 6},
+            {"name": "Beltner", "fg_made": 1, "ft_made": 1, "pf": 4, "pts": 3},
+            {"name": "Colburn", "fg_made": 1, "ft_made": 2, "pf": 0, "pts": 4},
+            {"name": "Whittlinger", "fg_made": 1, "ft_made": 1, "pf": 2, "pts": 3}
+          ]
+        },
+        {
+          "name": "Western Reserve",
+          "score": 33,
+          "players": [
+            {"name": "Coen", "fg_made": 2, "ft_made": 1, "pf": 0, "pts": 5},
+            {"name": "Scheerer", "fg_made": 1, "ft_made": 3, "pf": 2, "pts": 5},
+            {"name": "Pontius", "fg_made": 9, "ft_made": 2, "pf": 2, "pts": 20},
+            {"name": "Bricker", "fg_made": 0, "ft_made": 1, "pf": 3, "pts": 1},
+            {"name": "Katzenmyer", "fg_made": 1, "ft_made": 0, "pf": 1, "pts": 2}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

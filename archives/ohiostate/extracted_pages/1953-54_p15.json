@@ -1,0 +1,9 @@
+{
+  "page": 15,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Official Western Conference box score, Jan 23 1954: Ohio State (visiting, final 76) at Michigan State (home, final 83). Ohio State's player lines are clearly legible and checksum cleanly: Kelley 15, Miller 14, Ebert 17, Freeman 24, Cook 6, Ellis/Vaughn/Wigton/Ropes 0 each = 76, matching the team total exactly, with FG/FT columns internally consistent (pts = 2*FG_made + FT_made for every row). However, Michigan State's sheet has three player rows (Ferrari F, Stackhouse G, Devanny G) that are heavily smudged/shaded in the scan, making FG, FGA, FT, FTM, and PTS digits unreliable. Applying the pts = 2*FG_made + FT_made check to the Ferrari row using the best-guess digits (FG 4, FT 5) yields 13, not the apparent printed PTS of ~16-18, confirming those cells cannot be read with confidence. Since Michigan State's 5 clearly legible rows (McCoy 34, Armstrong 8, Petersox 5, Corbitt 5, Eartman 2 = 54) leave 29 points unaccounted for across the 3 illegible rows, the team-level checksum against the final score of 83 cannot be verified. Skipping the entire game rather than guessing at the illegible Michigan State cells."
+    }
+  ]
+}

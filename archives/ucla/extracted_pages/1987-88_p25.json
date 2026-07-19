@@ -1,0 +1,9 @@
+{
+  "page": 25,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "2-20-88 Arizona at UCLA (Pauley Pavilion, Arizona won 78-76 OT): UCLA side checksums perfectly (player pts sum 76 == team total 76 == final score). Arizona side fails checksum: every individual player's points line is internally consistent with their own FG/3FG/FT (all via 2*FG+3FG+FT formula) and FG/FGA/3FG/3FGA sums match team totals exactly (27-55 FG, 4-9 3FG), but summed player points = 73 vs team-total/scoreboard 78, and summed player FT-made = 15 vs team-listed FT-made 20 (a 5-point/5-make gap traceable specifically to the team FT total line, likely an original scorekeeping arithmetic error). Re-read the page once already per instructions; could not reconcile without guessing, so skipping the whole game rather than reporting an inconsistent Arizona line."
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "page": 20,
+  "games": [
+    {
+      "date": "1984-02-09",
+      "opponent": "North Carolina Tar Heels",
+      "teams": [
+        {
+          "name": "North Carolina Tar Heels",
+          "score": 85,
+          "players": [
+            {"name": "Matt Doherty", "fg": "3-8", "ft": "5-6", "reb": 3, "pf": 3, "min": 37, "ast": 3, "to": 3, "pts": 11},
+            {"name": "Sam Perkins", "fg": "10-11", "ft": "7-7", "reb": 11, "pf": 4, "min": 36, "ast": 1, "to": 4, "blk": 3, "stl": 1, "pts": 27},
+            {"name": "Brad Daugherty", "fg": "2-5", "ft": "3-10", "reb": 10, "pf": 4, "min": 34, "ast": 2, "to": 2, "blk": 3, "stl": 1, "pts": 7},
+            {"name": "Michael Jordan", "fg": "11-15", "ft": "2-4", "reb": 3, "pf": 3, "min": 31, "ast": 1, "to": 1, "stl": 2, "pts": 24},
+            {"name": "Steve Hale", "fg": "3-4", "ft": "4-4", "pf": 3, "min": 37, "ast": 3, "to": 2, "pts": 10},
+            {"name": "Joe Wolf", "fg": "0-1", "min": 6, "ast": 0, "pts": 0},
+            {"name": "Buzz Peterson", "fg": "2-4", "pf": 2, "min": 14, "ast": 3, "to": 2, "stl": 1, "pts": 4},
+            {"name": "Dave Popson", "fg": "1-1", "min": 5, "ast": 1, "to": 0, "pts": 2}
+          ]
+        },
+        {
+          "name": "Virginia Cavaliers",
+          "score": 72,
+          "players": [
+            {"name": "Jim Miller", "fg": "11-19", "ft": "1-2", "reb": 1, "pf": 2, "min": 31, "ast": 1, "to": 2, "pts": 23},
+            {"name": "Rick Carlisle", "fg": "5-12", "reb": 2, "pf": 3, "min": 26, "ast": 1, "to": 1, "pts": 10},
+            {"name": "Kenton Edelin", "fg": "0-2", "ft": "0-1", "reb": 5, "pf": 3, "min": 32, "ast": 1, "to": 1, "blk": 2, "pts": 0},
+            {"name": "Ricky Stokes", "fg": "3-5", "ft": "1-1", "reb": 2, "pf": 3, "min": 26, "ast": 3, "to": 2, "stl": 3, "pts": 7},
+            {"name": "Othell Wilson", "fg": "7-15", "ft": "1-1", "reb": 8, "pf": 3, "min": 36, "ast": 5, "to": 3, "stl": 1, "pts": 15},
+            {"name": "Olden Polynice", "ft": "1-2", "reb": 2, "pf": 1, "min": 17, "pts": 1},
+            {"name": "Tim Mullen", "fg": "6-9", "ft": "0-1", "reb": 2, "pf": 1, "min": 19, "ast": 2, "to": 1, "pts": 12},
+            {"name": "Tom Sheehey", "fg": "2-2", "ft": "0-1", "reb": 1, "pf": 2, "min": 9, "ast": 1, "to": 1, "stl": 1, "pts": 4},
+            {"name": "Dan Merrifield", "pf": 1, "min": 4, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

@@ -1,0 +1,46 @@
+{
+  "page": 14,
+  "games": [
+    {
+      "date": "1984-01-22",
+      "opponent": "Louisville",
+      "ucla_score": 78,
+      "opp_score": 86,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 78,
+          "players": [
+            {"name": "Gary Maloncon", "min": 25, "fg": "4-9", "ft": "0-0", "reb": 4, "ast": 0, "pf": 5, "to": 1, "stl": 0, "blk": 1, "pts": 8},
+            {"name": "Kenny Fields", "min": 31, "fg": "11-22", "ft": "3-4", "reb": 7, "ast": 0, "pf": 3, "to": 3, "stl": 2, "blk": 1, "pts": 25},
+            {"name": "Stuart Gray", "min": 35, "fg": "4-9", "ft": "2-2", "reb": 12, "ast": 1, "pf": 4, "to": 0, "stl": 2, "blk": 1, "pts": 10},
+            {"name": "Ralph Jackson", "min": 38, "fg": "8-14", "ft": "3-4", "reb": 3, "ast": 8, "pf": 4, "to": 4, "stl": 3, "blk": 0, "pts": 19},
+            {"name": "Montel Hatcher", "min": 20, "fg": "2-3", "ft": "0-0", "reb": 1, "ast": 1, "pf": 3, "to": 1, "stl": 0, "blk": 1, "pts": 4},
+            {"name": "Nigel Miguel", "min": 9, "fg": "0-4", "ft": "2-2", "reb": 0, "ast": 0, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Brad Wright", "min": 9, "fg": "1-3", "ft": "2-2", "reb": 4, "ast": 1, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Reggie Miller", "min": 15, "fg": "1-5", "ft": "0-0", "reb": 1, "ast": 0, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Corey Gaines", "min": 19, "fg": "1-3", "ft": "2-2", "reb": 1, "ast": 1, "pf": 1, "to": 1, "stl": 2, "blk": 0, "pts": 4}
+          ]
+        },
+        {
+          "name": "Louisville Cardinals",
+          "score": 86,
+          "players": [
+            {"name": "Manual Forrest", "min": 36.5, "fg": "3-8", "ft": "5-6", "reb": 5, "ast": 1, "pf": 4, "to": 2, "stl": 0, "blk": 1, "pts": 11},
+            {"name": "Billy Thompson", "min": 34.5, "fg": "7-10", "ft": "3-4", "reb": 6, "ast": 9, "pf": 3, "to": 2, "stl": 2, "blk": 1, "pts": 17},
+            {"name": "Charles Jones", "min": 32.5, "fg": "11-14", "ft": "5-11", "reb": 15, "ast": 1, "pf": 2, "to": 1, "stl": 2, "blk": 2, "pts": 27},
+            {"name": "Lancaster Gordon", "min": 30.5, "fg": "2-7", "ft": "3-4", "reb": 6, "ast": 3, "pf": 2, "to": 4, "stl": 0, "blk": 0, "pts": 7},
+            {"name": "Milt Wagner", "min": 36.5, "fg": "8-17", "ft": "2-2", "reb": 7, "ast": 1, "pf": 3, "to": 6, "stl": 1, "blk": 0, "pts": 18},
+            {"name": "Barry Sumpter", "min": 7.5, "fg": "1-1", "ft": "0-0", "reb": 0, "ast": 0, "pf": 2, "to": 2, "stl": 0, "blk": 1, "pts": 2},
+            {"name": "Jeff Hall", "min": 7.5, "fg": "2-3", "ft": "0-1", "reb": 0, "ast": 0, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Mark McSwain", "min": 3.5, "fg": "0-1", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 1, "pts": 0},
+            {"name": "Kent Jones", "min": 0.5, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Danny Mitchell", "min": 0.5, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

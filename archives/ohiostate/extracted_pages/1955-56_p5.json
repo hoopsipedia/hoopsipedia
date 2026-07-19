@@ -1,0 +1,42 @@
+{
+  "page": 5,
+  "games": [
+    {
+      "date": "1955-12-12",
+      "opponent": "Oklahoma",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 89,
+          "players": [
+            {"name": "Howard", "fg": "9-13", "ft": "1-2", "reb": 11, "pf": 2, "pts": 19},
+            {"name": "Sidle", "fg": "0-4", "ft": "4-4", "reb": 7, "pf": 4, "pts": 4},
+            {"name": "Kelley", "fg": "5-8", "ft": "1-3", "reb": 4, "pf": 3, "pts": 11},
+            {"name": "Freeman", "fg": "12-20", "ft": "16-20", "reb": 2, "pf": 3, "pts": 40},
+            {"name": "Ellis", "fg": "0-2", "ft": "4-4", "reb": 2, "pf": 1, "pts": 4},
+            {"name": "Millard", "fg": "4-4", "ft": "0-1", "reb": 4, "pf": 1, "pts": 8},
+            {"name": "Laughlin", "fg": "1-2", "ft": "0-1", "reb": 1, "pf": 0, "pts": 2},
+            {"name": "Allen", "fg": "0-2", "ft": "1-?", "reb": 2, "pf": 2, "pts": 1},
+            {"name": "Short", "fg": "0-0", "ft": "0-0", "reb": 1, "pf": 1, "pts": 0},
+            {"name": "Martin", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Oklahoma",
+          "score": 68,
+          "players": [
+            {"name": "Abbey", "fg": "3-7", "ft": "2-5", "reb": 4, "pf": 2, "pts": 8},
+            {"name": "King", "fg": "5-16", "ft": "10-10", "reb": 6, "pf": 4, "pts": 20},
+            {"name": "Bacher", "fg": "6-17", "ft": "4-6", "reb": 7, "pf": 2, "pts": 16},
+            {"name": "Peck", "fg": "4-12", "ft": "0-0", "reb": 1, "pf": 4, "pts": 8},
+            {"name": "Balding", "fg": "2-5", "ft": "0-0", "reb": 4, "pf": 4, "pts": 4},
+            {"name": "Jones", "fg": "3-10", "ft": "4-8", "reb": 6, "pf": 3, "pts": 10},
+            {"name": "Pinkerton", "fg": "0-3", "ft": "2-2", "reb": 4, "pf": 3, "pts": 2}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

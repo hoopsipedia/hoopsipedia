@@ -1,0 +1,9 @@
+{
+  "page": 31,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page shows a single game (Cleveland State 80 at Ohio State 86, NIT 2nd round, March 22, 1988, St. John Arena) with team totals legible (CLE: FG28 3FG7 FT17 -> 80 pts; OSU: FG28 3FG1 FT29 -> 86 pts, both matching final scores), but individual player rows on both sides are overlaid with handwritten radio-broadcast/substitution annotations ('Broadcast media', 'off. rch. (Matsen in for White)', '1353 PF White - 2', bench substitution notes on the Ohio State side) that obscure or confound several FG/FT/TP digits, especially the bench players. Attempted reconstruction of Ohio State bench player points did not cleanly reconcile to the team total, so per instructions I am skipping rather than guessing/fabricating player-level stat lines."
+    }
+  ]
+}

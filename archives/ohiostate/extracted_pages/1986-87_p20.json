@@ -1,0 +1,49 @@
+{
+  "page": 20,
+  "games": [
+    {
+      "date": "1987-01-21",
+      "opponent": "Minnesota",
+      "site": "Minneapolis, MN",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 93,
+          "players": [
+            {"name": "Dennis Hopson", "fg": "11-19", "tp": "3-6", "ft": "9-12", "reb": 7, "pf": 2, "pts": 34, "ast": 4, "to": 2, "blk": 0, "stl": 3, "min": 36},
+            {"name": "Jerry Francis", "fg": "3-5", "tp": "0-0", "ft": "4-4", "reb": 6, "pf": 2, "pts": 10, "ast": 1, "to": 1, "blk": 0, "stl": 0, "min": 30},
+            {"name": "John Anderson", "fg": "0-2", "tp": "0-0", "ft": "0-0", "reb": 5, "pf": 4, "pts": 0, "ast": 0, "to": 1, "blk": 0, "stl": 0, "min": 20},
+            {"name": "Curtis Wilson", "fg": "5-7", "tp": "2-2", "ft": "10-10", "reb": 1, "pf": 4, "pts": 22, "ast": 3, "to": 2, "blk": 1, "stl": 1, "min": 29},
+            {"name": "Jay Burson", "fg": "6-10", "tp": "0-1", "ft": "2-3", "reb": 4, "pf": 3, "pts": 14, "ast": 0, "to": 3, "blk": 1, "stl": 0, "min": 23},
+            {"name": "Kip Lomax", "fg": "0-2", "tp": "0-1", "ft": "4-4", "reb": 4, "pf": 1, "pts": 4, "ast": 0, "to": 0, "blk": 0, "stl": 0, "min": 16},
+            {"name": "Tony White", "fg": "2-4", "tp": "0-0", "ft": "0-0", "reb": 3, "pf": 1, "pts": 4, "ast": 0, "to": 1, "blk": 2, "stl": 0, "min": 20},
+            {"name": "Keith Wesson", "fg": "1-2", "tp": "0-0", "ft": "1-4", "reb": 3, "pf": 4, "pts": 3, "ast": 0, "to": 0, "blk": 0, "stl": 0, "min": 1},
+            {"name": "Scott Anderson", "fg": "0-0", "tp": "0-0", "ft": "2-2", "reb": 1, "pf": 0, "pts": 2, "ast": 0, "to": 0, "blk": 0, "stl": 0, "min": 1},
+            {"name": "Jim Martin", "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Randy Pintup", "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Joe Dumas", "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0}
+          ],
+          "checksum_ok": true
+        },
+        {
+          "name": "Minnesota Golden Gophers",
+          "score": 78,
+          "players": [
+            {"name": "Terence Woods", "fg": "3-6", "tp": "0-0", "ft": "0-0", "reb": 3, "pf": 2, "pts": 6, "ast": 6, "to": 3, "blk": 1, "stl": 3, "min": 31},
+            {"name": "Kelvin Smith", "fg": "5-10", "tp": "0-0", "ft": "1-2", "reb": 1, "pf": 2, "pts": 11, "ast": 0, "to": 1, "blk": 0, "stl": 1, "min": 28},
+            {"name": "Richard Coffey", "fg": "2-4", "tp": "0-0", "ft": "1-2", "reb": 5, "pf": 4, "pts": 5, "ast": 0, "to": 1, "blk": 1, "stl": 2, "min": 27},
+            {"name": "Kim Zurcher", "fg": "7-12", "tp": "1-3", "ft": "1-2", "reb": 6, "pf": 5, "pts": 16, "ast": 1, "to": 2, "blk": 0, "stl": 4, "min": 28},
+            {"name": "Terence Williams", "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "min": 5},
+            {"name": "Ray Gaffney", "fg": "6-9", "tp": "0-0", "ft": "0-0", "reb": 3, "pf": 4, "pts": 12, "ast": 1, "to": 3, "blk": 0, "stl": 1, "min": 31},
+            {"name": "Willie Burton", "fg": "5-10", "tp": "0-0", "ft": "7-8", "reb": 5, "pf": 4, "pts": 17, "ast": 0, "to": 0, "blk": 0, "stl": 0, "min": 24},
+            {"name": "Tim Hanson", "fg": "4-7", "tp": "2-4", "ft": "1-2", "reb": 2, "pf": 4, "pts": 11, "ast": 1, "to": 0, "blk": 0, "stl": 1, "min": 9},
+            {"name": "Jim Shikenjanski", "fg": "0-2", "tp": "0-0", "ft": "0-0", "reb": 0, "pf": 1, "pts": 0, "ast": 0, "to": 1, "blk": 0, "stl": 0, "min": 4},
+            {"name": "Connell Lewis", "fg": "0-1", "tp": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0, "ast": 0, "to": 2, "blk": 0, "stl": 0, "min": 3}
+          ],
+          "checksum_ok": true
+        }
+      ]
+    }
+  ],
+  "skipped": []
+}

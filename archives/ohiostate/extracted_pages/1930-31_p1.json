@@ -1,0 +1,36 @@
+{
+  "page": 1,
+  "games": [
+    {
+      "date": "1930-12-13",
+      "opponent": "Pittsburgh",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 17,
+          "players": [
+            {"name": "Ervin", "pos": "f", "ft": "0-2", "pf": 1, "pts": 2, "fg_made": 1},
+            {"name": "Gardner", "pos": "f", "ft": "2-2", "pf": 1, "pts": 2, "fg_made": 0},
+            {"name": "Mattison", "pos": "c", "ft": "2-3", "pf": 2, "pts": 2, "fg_made": 0},
+            {"name": "Fesler", "pos": "g", "ft": "2-2", "pf": 3, "pts": 6, "fg_made": 2},
+            {"name": "Hoffer", "pos": "g", "ft": "0-0", "pf": 1, "pts": 0, "fg_made": 0},
+            {"name": "Russell", "pos": "c", "ft": "0-0", "pf": 0, "pts": 0, "fg_made": 0},
+            {"name": "Hinchman", "pos": "f", "ft": "0-0", "pf": 0, "pts": 2, "fg_made": 1},
+            {"name": "Wrigley", "pos": "f", "ft": "0-0", "pf": 2, "pts": 0, "fg_made": 0},
+            {"name": "Paulsey", "pos": "c", "ft": "0-0", "pf": 0, "pts": 0, "fg_made": 0},
+            {"name": "Larkins", "pos": "g", "ft": "1-1", "pf": 0, "pts": 3, "fg_made": 1}
+          ],
+          "checksum_ok": true
+        },
+        {
+          "name": "Pittsburgh",
+          "score": 25,
+          "players": [],
+          "checksum_ok": null
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

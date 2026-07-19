@@ -1,0 +1,9 @@
+{
+  "page": 21,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Official Western Conference box score, Wisconsin (visiting) at Ohio State (home), Feb 26, 1953, attendance 4,244. Wisconsin's line is fully legible and checksums cleanly (team score 69 == sum of player PTS, with a deduced Siefert G line of FG7 FGA14 FT2 FTM0 PF0 PTS16 that reconciles all column totals exactly). However, the Ohio State (home) table is heavily smudged/obscured by scan artifacts across the Miller F and Wilks F rows (numbers not confidently legible), and the header 'Score: 65' does not match the table's own TOTALS row PTS of 63 (the totals-row arithmetic, PF sum, and FG/FT deductions are internally self-consistent at 63, suggesting either a scan misread of the header digit or an original scorer error, but this cannot be resolved without a clearer scan). Because two of Ohio State's six player lines are not reliably readable and the two score fields on the same sheet disagree, the Ohio State side of this game fails a confident checksum. Per instructions to be ruthless about skipping rather than guessing, the entire game (both teams) was skipped rather than transcribing a partial/uncertain box score."
+    }
+  ]
+}

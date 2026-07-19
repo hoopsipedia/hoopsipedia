@@ -1,0 +1,47 @@
+{
+  "page": 11,
+  "games": [
+    {
+      "date": "1970-01-10",
+      "opponent": "Illinois",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 59,
+          "players": [
+            {"name": "Andreas", "fg": "5-9", "ft": "0-1", "reb": 4, "pf": 2, "pts": 10},
+            {"name": "Cleamons", "fg": "9-13", "ft": "1-1", "reb": 5, "pf": 1, "pts": 19},
+            {"name": "Sorenson", "fg": "4-8", "ft": "3-5", "reb": 5, "pf": 5, "pts": 11},
+            {"name": "Finney", "fg": "4-5", "ft": "2-3", "reb": 2, "pf": 3, "pts": 10},
+            {"name": "Barclay", "fg": "3-10", "ft": "1-1", "reb": 3, "pf": 0, "pts": 7},
+            {"name": "Minor", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 2, "pts": 0},
+            {"name": "Macknin", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 3, "pts": 0},
+            {"name": "Spies", "fg": "1-1", "ft": "0-0", "reb": 0, "pf": 0, "pts": 2},
+            {"name": "Hexamer", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Geddes", "fg": "0-1", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0}
+          ],
+          "checksum_ok": true
+        },
+        {
+          "name": "Illinois",
+          "score": 77,
+          "players": [
+            {"name": "Crews", "fg": "6-9", "ft": "3-6", "reb": 7, "pf": 2, "pts": 15},
+            {"name": "Miller", "fg": "7-11", "ft": "6-7", "reb": 1, "pf": 4, "pts": 20},
+            {"name": "Jackson", "fg": "0-0", "ft": "0-0", "reb": 4, "pf": 2, "pts": 0},
+            {"name": "Price", "fg": "3-11", "ft": "4-4", "reb": 6, "pf": 4, "pts": 10},
+            {"name": "Howat", "fg": "10-11", "ft": "0-1", "reb": 3, "pf": 0, "pts": 20},
+            {"name": "Windmiller", "fg": "4-10", "ft": "0-1", "reb": 4, "pf": 0, "pts": 8},
+            {"name": "Shapland", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Dezort", "fg": "1-1", "ft": "2-2", "reb": 0, "pf": 0, "pts": 4},
+            {"name": "Krelle", "fg": "0-0", "ft": "0-0", "reb": 1, "pf": 0, "pts": 0},
+            {"name": "Faulds", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Scaletta", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0}
+          ],
+          "checksum_ok": true
+        }
+      ]
+    }
+  ],
+  "skipped": []
+}

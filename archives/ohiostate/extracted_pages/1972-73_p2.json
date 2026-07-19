@@ -1,0 +1,9 @@
+{
+  "page": 2,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "1972-73 Ohio State vs Wisconsin-Milwaukee (Nov. 27, 1972, final 92-81). Visiting team (Wisconsin-Milwaukee) table is clean and checksums perfectly (player PTS sum = 81 = final score; FG*2+FT = 66+15 = 81). However the home team (Ohio State) table has 17 dense player rows and could not be transcribed with confidence: reconstructed player PTS sum (~88) does not match the official final score (92), and column sums for PGA/FTA/PF also show small (1-2 unit) discrepancies versus the printed TOTALS row (PGA 83, FG 34, FTA 36, FT 24, PF 18). The bottom row ('Moody G') in particular is not legible enough to confirm exact digits. Rather than invent or force values to hit the checksum, the whole game is skipped per instructions to be ruthless about skipping instead of guessing."
+    }
+  ]
+}

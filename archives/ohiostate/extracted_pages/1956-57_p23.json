@@ -1,0 +1,45 @@
+{
+  "page": 23,
+  "games": [
+    {
+      "date": "1957-03-04",
+      "opponent": "Minnesota",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 69,
+          "players": [
+            {"name": "Sidle", "fg": "5-13", "ft": "3-4", "reb": 10, "pf": 5, "pts": 13},
+            {"name": "Howard", "fg": "8-18", "ft": "1-6", "reb": 13, "pf": 4, "pts": 17},
+            {"name": "Huston", "fg": "4-10", "ft": "0-0", "reb": 12, "pf": 4, "pts": 8},
+            {"name": "Millard", "fg": "3-9", "ft": "7-11", "reb": 0, "pf": 3, "pts": 13},
+            {"name": "Laughlin", "fg": "7-13", "ft": "2-3", "reb": 1, "pf": 3, "pts": 16},
+            {"name": "Martin", "fg": "0-3", "ft": "2-2", "reb": 0, "pf": 2, "pts": 2},
+            {"name": "Steagall", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Mosier", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 2, "pts": 0},
+            {"name": "Barkstall", "fg": "0-1", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Minnesota",
+          "score": 76,
+          "players": [
+            {"name": "Kline", "fg": "5-15", "ft": "10-10", "reb": 16, "pf": 3, "pts": 20},
+            {"name": "Tucker", "fg": "6-25", "ft": "3-8", "reb": 16, "pf": 3, "pts": 15},
+            {"name": "Dommeyer", "fg": "6-19", "ft": "3-5", "reb": 8, "pf": 2, "pts": 15},
+            {"name": "Hanson", "fg": "6-13", "ft": "2-2", "reb": 1, "pf": 5, "pts": 14},
+            {"name": "Lindsley", "fg": "0-1", "ft": "2-2", "reb": 1, "pf": 2, "pts": 2},
+            {"name": "Pix", "fg": "0-1", "ft": "1-2", "reb": 0, "pf": 0, "pts": 1},
+            {"name": "Anderstrom", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Nettleton", "fg": "0-0", "ft": "1-2", "reb": 0, "pf": 0, "pts": 1},
+            {"name": "Johnson", "fg": "3-9", "ft": "2-2", "reb": 4, "pf": 4, "pts": 8},
+            {"name": "Stoltman", "fg": "0-1", "ft": "0-1", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Rodberg", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

@@ -1,0 +1,40 @@
+{
+  "page": 20,
+  "games": [
+    {
+      "date": "1957-02-23",
+      "opponent": "Michigan",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 94,
+          "players": [
+            {"name": "Howard", "fg": "6-22", "ft": "5-6", "reb": 20, "pf": 3, "pts": 17},
+            {"name": "Sidle", "fg": "9-19", "ft": "2-4", "reb": 9, "pf": 4, "pts": 20},
+            {"name": "Huston", "fg": "11-22", "ft": "4-8", "reb": 11, "pf": 3, "pts": 26},
+            {"name": "Millard", "fg": "6-10", "ft": "6-6", "reb": 3, "pf": 4, "pts": 18},
+            {"name": "Laughlin", "fg": "5-16", "ft": "3-3", "reb": 3, "pf": 0, "pts": 13},
+            {"name": "Steagall", "fg": "0-2", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Barkstall", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Mosier", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Michigan",
+          "score": 88,
+          "players": [
+            {"name": "Burton", "fg": "4-14", "ft": "0-1", "reb": 13, "pf": 3, "pts": 8},
+            {"name": "Tillotson", "fg": "1-5", "ft": "2-2", "reb": 6, "pf": 4, "pts": 4},
+            {"name": "Kramer", "fg": "5-11", "ft": "1-1", "reb": 6, "pf": 5, "pts": 11},
+            {"name": "Shearon", "fg": "13-20", "ft": "4-5", "reb": 1, "pf": 1, "pts": 30},
+            {"name": "Lee", "fg": "8-20", "ft": "2-5", "reb": 7, "pf": 3, "pts": 18},
+            {"name": "Tarrier", "fg": "2-5", "ft": "2-2", "reb": 4, "pf": 2, "pts": 6},
+            {"name": "Lewis", "fg": "5-8", "ft": "1-2", "reb": 1, "pf": 3, "pts": 11}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

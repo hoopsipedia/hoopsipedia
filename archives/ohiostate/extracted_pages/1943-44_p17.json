@@ -1,0 +1,42 @@
+{
+  "page": 17,
+  "games": [
+    {
+      "date": "1944-03-21",
+      "opponent": "Temple",
+      "notes": "Date not printed on page; inferred from known historical record of the 1944 NCAA Tournament Eastern Regional first-round game (Ohio State 57, Temple 47) at Madison Square Garden. Sheet lists FG (field goals made), FT (free throws made), FTM (free throws missed), PF, TP (total points) — no MIN/REB/AST/STL/BLK/TO/FGA columns present, so fg and ft below are MADE counts only (attempts not recorded on sheet). TP values are as printed and independently verified equal to 2*FG+FT for every player.",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 57,
+          "players": [
+            {"name": "Grate", "fg_made": 8, "ft_made": 1, "pf": 3, "pts": 17},
+            {"name": "Plank", "fg_made": 0, "ft_made": 0, "pf": 0, "pts": 0},
+            {"name": "Dugger", "fg_made": 2, "ft_made": 0, "pf": 0, "pts": 4},
+            {"name": "Caudill", "fg_made": 3, "ft_made": 0, "pf": 0, "pts": 6},
+            {"name": "Risen", "fg_made": 3, "ft_made": 1, "pf": 3, "pts": 7},
+            {"name": "Bowen", "fg_made": 4, "ft_made": 2, "pf": 3, "pts": 10},
+            {"name": "Fink", "fg_made": 0, "ft_made": 1, "pf": 0, "pts": 1},
+            {"name": "Huston", "fg_made": 5, "ft_made": 2, "pf": 2, "pts": 12},
+            {"name": "Gunton", "fg_made": 0, "ft_made": 0, "pf": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Temple Owls",
+          "score": 47,
+          "players": [
+            {"name": "Koescher", "fg_made": 5, "ft_made": 2, "pf": 4, "pts": 12},
+            {"name": "Joyce", "fg_made": 7, "ft_made": 2, "pf": 0, "pts": 16},
+            {"name": "Budd", "fg_made": 2, "ft_made": 0, "pf": 3, "pts": 4},
+            {"name": "Bramble", "fg_made": 3, "ft_made": 0, "pf": 0, "pts": 6},
+            {"name": "Burns", "fg_made": 0, "ft_made": 0, "pf": 0, "pts": 0},
+            {"name": "Fox", "fg_made": 2, "ft_made": 5, "pf": 3, "pts": 9},
+            {"name": "Collins", "fg_made": 0, "ft_made": 0, "pf": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

@@ -1,0 +1,9 @@
+{
+  "page": 20,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page contains a newspaper clipping (NEW YORK, MARCH 23 — apparently the 1946 NCAA Eastern Regional championship, Ohio State Buckeyes vs. North Carolina Tar Heels at Madison Square Garden, OSU lost in overtime, narrative indicates final score OSU 57, North Carolina ~60) with a small box score table (columns B/FT/Tp for both teams, e.g. Bowen, Snyder, Wells, Underman, Huston, Amling for Ohio State; Dillon, Anderson, Schoble, Paxton, McKinney, White, Thorne, Jordan for North Carolina). However, the scan resolution of the box score table is too low to confidently read individual digits — several player point values do not internally reconcile with their listed B/FT figures (e.g. an Underman line that would require pts = 2*FG+FT but the digits read do not satisfy that formula), and the North Carolina team total does not clearly reconcile with the narrated final score. Given the requirement to be ruthless about skipping rather than guessing, and having already used the single allowed read of this page, no player-level data was transcribed."
+    }
+  ]
+}

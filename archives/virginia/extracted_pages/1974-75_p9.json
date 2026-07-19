@@ -1,0 +1,41 @@
+{
+  "page": 9,
+  "games": [
+    {
+      "date": "1975-01-11",
+      "opponent": "Virginia Tech",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 73,
+          "players": [
+            {"name": "Marc Iavaroni", "min": 29, "fg": "7-10", "ft": "2-3", "reb": 6, "pf": 5, "to": 2, "pts": 16},
+            {"name": "Wally Walker", "min": 32, "fg": "8-17", "ft": "3-4", "reb": 5, "pf": 2, "ast": 2, "to": 2, "pts": 19},
+            {"name": "Dan Bonner", "min": 25, "fg": "5-8", "ft": "2-2", "reb": 6, "pf": 2, "ast": 4, "to": 2, "pts": 12},
+            {"name": "Billy Langloh", "min": 21, "fg": "2-10", "ft": "4-5", "reb": 3, "pf": 1, "ast": 3, "pts": 8},
+            {"name": "Andy Bonanni", "min": 34, "fg": "4-8", "ft": "2-4", "reb": 7, "pf": 1, "ast": 2, "to": 4, "pts": 10},
+            {"name": "Dave Koesters", "min": 24, "fg": "3-6", "ft": "2-2", "reb": 4, "pf": 4, "ast": 2, "to": 1, "pts": 8},
+            {"name": "Lamont Carr", "min": 15, "ft": "0-2", "pf": 1, "to": 1, "pts": 0},
+            {"name": "Mark Newlen", "min": 8, "pf": 1, "pts": 0}
+          ]
+        },
+        {
+          "name": "Virginia Tech",
+          "score": 74,
+          "players": [
+            {"name": "Russell Davis", "min": 40, "fg": "7-14", "ft": "4-4", "reb": 6, "pf": 2, "ast": 1, "pts": 18},
+            {"name": "Larry Cooke", "min": 31, "fg": "5-13", "ft": "0-2", "reb": 5, "pf": 4, "ast": 3, "pts": 10},
+            {"name": "Mike Collins", "min": 12, "fg": "3-4", "ft": "2-2", "reb": 1, "pf": 1, "pts": 8},
+            {"name": "Dave Sensibaugh", "min": 32, "fg": "4-9", "reb": 2, "pf": 3, "ast": 6, "pts": 8},
+            {"name": "Kyle McKee", "min": 10, "fg": "2-5", "reb": 1, "pf": 2, "ast": 1, "pts": 4},
+            {"name": "Duke Thorpe", "min": 31, "fg": "1-1", "ft": "1-3", "reb": 10, "pf": 3, "pts": 3},
+            {"name": "Sam Foggin", "min": 27, "fg": "8-14", "ft": "1-2", "reb": 8, "pf": 2, "pts": 17},
+            {"name": "Mark Cartwright", "min": 17, "fg": "2-7", "ft": "2-2", "reb": 3, "pf": 1, "pts": 6}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

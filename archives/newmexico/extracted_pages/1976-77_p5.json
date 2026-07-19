@@ -1,0 +1,42 @@
+{
+  "page": 5,
+  "games": [
+    {
+      "date": "1976-12-07",
+      "opponent": "Unknown Opponent (team name illegible on scoresheet; handwritten site note reads approx. \"4-10 Civic\"; bottom score-by-periods table nickname illegible, resembles \"Valcans\"/\"Vulcans\" but not confidently readable)",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 78,
+          "players": [
+            {"name": "Smiley", "min": 11, "fg": "2-4", "reb": 5, "pf": 3, "ast": 1, "to": 3, "stl": 4, "pts": 4},
+            {"name": "Davis, Steve", "min": 19, "fg": "2-4", "ft": "2-2", "reb": 7, "pf": 3, "ast": 3, "to": 1, "stl": 1, "pts": 6},
+            {"name": "Cooper", "min": 32, "fg": "5-9", "reb": 2, "ast": 1, "to": 3, "blk": 1, "stl": 2, "pts": 10},
+            {"name": "Howard", "min": 26, "fg": "8-14", "ft": "3-4", "reb": 6, "pf": 4, "to": 1, "pts": 19},
+            {"name": "Davis, Dan", "min": 30, "fg": "1-4", "reb": 2, "pts": 2},
+            {"name": "Reed", "min": 21, "fg": "3-10", "reb": 2, "pf": 1, "ast": 1, "to": 2, "pts": 6},
+            {"name": "Felix", "min": 10, "fg": "0-3", "ft": "2-2", "pf": 2, "to": 1, "pts": 2},
+            {"name": "Allen", "min": 28, "fg": "4-8", "ft": "2-4", "reb": 7, "pf": 3, "to": 5, "blk": 2, "stl": 1, "pts": 10},
+            {"name": "Johnston", "min": 31, "fg": "9-16", "ft": "1-1", "reb": 8, "pf": 1, "ast": 2, "to": 4, "blk": 1, "stl": 1, "pts": 19}
+          ]
+        },
+        {
+          "name": "Unknown Opponent",
+          "score": 81,
+          "players": [
+            {"name": "Bartholomew", "min": 38, "fg": "12-18", "ft": "3-6", "reb": 9, "pf": 2, "ast": 2, "to": 1, "pts": 27},
+            {"name": "Coccimiglio", "min": 2, "fg": "0-1", "pts": 0},
+            {"name": "Hicks", "min": 23, "fg": "4-13", "ft": "1-4", "reb": 6, "pf": 5, "ast": 3, "to": 3, "stl": 1, "pts": 9},
+            {"name": "Huffman", "min": 37, "fg": "6-10", "ft": "3-7", "reb": 9, "pf": 2, "to": 2, "stl": 1, "pts": 15},
+            {"name": "Lovelace", "fg": "2-5", "ft": "2-2", "reb": 2, "pf": 3, "to": 3, "stl": 3, "pts": 6},
+            {"name": "O'Rear", "min": 40, "fg": "5-13", "reb": 4, "pf": 1, "ast": 7, "to": 2, "stl": 2, "pts": 10},
+            {"name": "Singeton", "min": 3},
+            {"name": "Zeimantz", "min": 18, "fg": "7-11", "reb": 4, "pf": 2, "ast": 1, "to": 1, "pts": 14}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

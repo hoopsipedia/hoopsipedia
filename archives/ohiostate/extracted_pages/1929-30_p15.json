@@ -1,0 +1,42 @@
+{
+  "page": 15,
+  "games": [
+    {
+      "date": "1930-03-03",
+      "opponent": "Wisconsin",
+      "note": "Columns on sheet are FG(made), FT(made), PF, TOTAL(pts). Verified via pts = 2*fg + ft for every player, and per-team pts sums equal final scores.",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 23,
+          "players": [
+            {"name": "Ivors", "min": "40", "fg": "2", "ft": "1", "pf": 2, "pts": 6},
+            {"name": "Erwin", "min": "31:02", "fg": "2", "ft": "0", "pf": 1, "pts": 4},
+            {"name": "Hinchman", "min": "9:58", "fg": "1", "ft": "1", "pf": 2, "pts": 3},
+            {"name": "Stewart", "min": "17", "fg": "0", "ft": "0", "pf": 1, "pts": 0},
+            {"name": "Wrigley", "min": "19:20", "fg": "2", "ft": "0", "pf": 3, "pts": 4},
+            {"name": "Russell", "min": "3:40", "fg": "1", "ft": "0", "pf": 0, "pts": 2},
+            {"name": "Fesler", "min": "40", "fg": "2", "ft": "0", "pf": 1, "pts": 4},
+            {"name": "Larkins", "min": "12", "fg": "0", "ft": "0", "pf": 2, "pts": 0},
+            {"name": "Holcomb", "min": "27:45", "fg": "0", "ft": "0", "pf": 1, "pts": 0}
+          ]
+        },
+        {
+          "name": "Wisconsin",
+          "score": 32,
+          "players": [
+            {"name": "Matthusen", "fg": "0", "ft": "0", "pf": 0, "pts": 0},
+            {"name": "Poser", "fg": "0", "ft": "1", "pf": 0, "pts": 1},
+            {"name": "Farber", "fg": "4", "ft": "2", "pf": 2, "pts": 10},
+            {"name": "Foster", "fg": "6", "ft": "4", "pf": 0, "pts": 16},
+            {"name": "Griswold", "fg": "0", "ft": "1", "pf": 0, "pts": 1},
+            {"name": "Chmielewski", "fg": "0", "ft": "1", "pf": 0, "pts": 1},
+            {"name": "Paul", "fg": "1", "ft": "1", "pf": 2, "pts": 3}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

@@ -1,0 +1,9 @@
+{
+  "page": 2,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Official NCAA box score, November 30, 1985, St. John Arena, Columbus OH. Final: Ohio State 83, Brooklyn College 57 (per 'SCORE BY PERIODS' line: Brooklyn College 26-31=57, Ohio State 33-50=83). Ohio State's player-by-player table (bottom half) is legible and its player points (computed as 2*FG made + FT made) sum to exactly 83, matching the final score, so it checksums cleanly. However, the top table (Brooklyn College's box score) is handwritten and the per-player numeric columns do not reliably separate into the FG/FGA/FT/FTA/REB/PF/TP header order used elsewhere on the page -- most rows show only 6 legible numeric values where 7 are expected, so individual player FG/FT/points cannot be confidently assigned to the correct columns even though the team TOTALS row (FG 23-61=.377, FT 11-16=.688, TP 57) does match the final score. Since both teams' player lines are required for a game entry and Brooklyn College's per-player stats could not be transcribed with confidence, the whole game is skipped rather than guessing values for one side."
+    }
+  ]
+}

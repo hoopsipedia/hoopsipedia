@@ -1,0 +1,48 @@
+{
+  "page": 5,
+  "games": [
+    {
+      "date": "1974-12-14",
+      "opponent": "Texas Tech",
+      "site": "Lubbock Municipal Auditorium",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 50,
+          "players": [
+            {"name": "Pat King", "fg": "1-6", "ft": "3-3", "reb": 7, "pf": 3, "ast": 2, "to": 2, "stl": 1, "pts": 5},
+            {"name": "Bob Toppert", "fg": "5-19", "ft": "2-3", "reb": 1, "pf": 1, "ast": 1, "to": 3, "pts": 12},
+            {"name": "Bill Hagins", "fg": "4-18", "ft": "0-0", "reb": 18, "pf": 2, "ast": 1, "to": 4, "blk": 2, "stl": 2, "pts": 8},
+            {"name": "Rich Pokorski", "fg": "3-7", "ft": "2-3", "reb": 2, "pf": 3, "to": 2, "pts": 8},
+            {"name": "Mike Koller", "fg": "1-2", "ft": "0-0", "reb": 1, "pf": 1, "to": 1, "pts": 2},
+            {"name": "Price Battle", "fg": "1-2", "ft": "0-0", "reb": 0, "pf": 3, "to": 2, "pts": 2},
+            {"name": "Mike Patterson", "fg": "1-2", "ft": "0-0", "reb": 2, "pf": 3, "stl": 1, "pts": 2},
+            {"name": "Dan Davis", "fg": "0-2", "ft": "0-0", "reb": 0, "pf": 0, "to": 1, "pts": 0},
+            {"name": "Ricky Williams", "fg": "0-4", "ft": "2-2", "reb": 2, "pf": 3, "ast": 1, "to": 2, "pts": 2},
+            {"name": "Steve Davis", "fg": "0-1", "ft": "0-0", "reb": 2, "pf": 2, "pts": 0},
+            {"name": "Norm Cacy", "fg": "2-7", "ft": "5-6", "reb": 3, "pf": 1, "to": 2, "pts": 9}
+          ]
+        },
+        {
+          "name": "Texas Tech",
+          "score": 70,
+          "players": [
+            {"name": "Phil Bailey", "fg": "1-8", "ft": "2-4", "reb": 2, "pf": 1, "ast": 1, "to": 2, "pts": 4},
+            {"name": "Steve Dunn", "fg": "4-8", "ft": "4-5", "reb": 2, "pf": 3, "ast": 3, "to": 4, "stl": 1, "pts": 12},
+            {"name": "Rick Bullock", "fg": "10-17", "ft": "5-5", "reb": 12, "pf": 4, "ast": 2, "to": 2, "blk": 6, "pts": 25},
+            {"name": "Grady Newton", "fg": "3-8", "ft": "2-2", "reb": 5, "pf": 5, "ast": 3, "to": 4, "blk": 1, "pts": 8},
+            {"name": "William Johnson", "fg": "3-6", "ft": "3-3", "reb": 10, "pf": 4, "ast": 1, "to": 3, "pts": 9},
+            {"name": "Rudy Liggins", "fg": "6-12", "ft": "0-1", "reb": 11, "pf": 1, "ast": 1, "to": 3, "blk": 3, "stl": 1, "pts": 12},
+            {"name": "Keith Kitchell", "fg": "0-2", "ft": "0-0", "reb": 0, "pf": 2, "to": 3, "stl": 3, "pts": 0},
+            {"name": "Bryan Maux", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Grant Dukes", "fg": "0-2", "ft": "0-0", "reb": 1, "pf": 1, "pts": 0},
+            {"name": "Mark Davis", "fg": "0-1", "ft": "0-0", "reb": 1, "pf": 1, "pts": 0},
+            {"name": "Mike Edwards", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "to": 1, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

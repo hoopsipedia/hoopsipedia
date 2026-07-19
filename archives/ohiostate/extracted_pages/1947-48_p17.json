@@ -1,0 +1,9 @@
+{
+  "page": 17,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "1947-48 Ohio State vs Wisconsin (Feb 16, 1948, final 53-47, Coliseum) newspaper box score. Ohio State's lineup transcribed cleanly and checksummed exactly (player points 8+24+6+9+5+1+0=53, matching team total and matching G/F/MF columns via pts=2*FGmade+FTmade). However the Wisconsin lineup, printed in a dense right-hand column of the scanned clipping, could not be read reliably: on two independent reads the player point values (Cook 17, Pokrzywinski ~0-2, Possum 0, Behfeldt 12, Mills 4, Hiaarlow 0, Rogers 1, Zorn 0, Moore 0, Mador 8) sum to only ~43-44, not the printed team total of 47, and the individual free-throw-made (F.) column values sum to ~8-10 versus a printed Totals row of 11 -- the small print is too degraded/ambiguous to resolve the discrepancy confidently even after a second look. Per instructions, skipping the whole game rather than guessing at the illegible Wisconsin figures; not re-reading a third time since the two-read budget is exhausted."
+    }
+  ]
+}

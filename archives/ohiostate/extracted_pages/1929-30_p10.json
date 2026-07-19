@@ -1,0 +1,9 @@
+{
+  "page": 10,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "1930-02-08 Ohio State (22) vs Indiana (26) at Columbus: Ohio State side checksums cleanly (player points 12+3+4+0+3+0=22, matches team score 22, using pts=2*B(field goals made)+F(free throws made) per the sheet's B/F/MF/P/TOTAL columns). Indiana side does NOT checksum: player points 5+3+2+1+15+0+2+0=28 (Zeller 5, B.Miller f 3, Cooper 2, Strickland 1, McCracken 15, Gill 0, B.Miller g 2, Veller 0) vs the sheet's own printed team total of 26 and the cover-page scoreboard OPP total of 26 -- a discrepancy of 2 points, apparently an arithmetic error on the original 1930 scoresheet itself (each individual row internally checksums against its own B/F values, but the row sum does not match the declared team total). Re-read the page once to confirm the numbers (Cooper P=8, B.Miller g total=2, printed total=26) were transcribed correctly; the mismatch is in the source document, not a reading error. Skipping the whole game rather than guessing which entry the original scorer mis-totaled."
+    }
+  ]
+}

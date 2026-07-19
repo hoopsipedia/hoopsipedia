@@ -1,0 +1,9 @@
+{
+  "page": 9,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Handwritten official box score, West Virginia at Ohio State, ~1977-12-21, St. John Arena, Columbus OH (final: West Virginia 80, Ohio State 89). West Virginia's roster (Bostick, Lewis, Robinson, Fritz, Moore, Roberts, Herbert) is clearly legible and checksums exactly to 80 (2+16+20+6+34+0+2=80). However Ohio State's player rows are too illegible/ambiguous to transcribe confidently with certainty against never-invent-values: the FG/FGA cells for Scott, Ramsay, and especially Page appear as dashes/ditto-like marks or faded/struck-through entries rather than clear digits, and Page's row is largely illegible across most columns. Team totals row for Ohio State (41-79 FG, 7-13 FT, 48 REB, 19 PF, 89 TP, 20 A, 15 TO, 8 BLK, 4 S, 200 MIN) is legible and matches the final score of 89, but individual player lines cannot be reconstructed with confidence, so the full game (which requires both teams' player lines) was skipped rather than guessed."
+    }
+  ]
+}

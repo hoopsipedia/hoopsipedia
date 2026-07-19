@@ -1,0 +1,45 @@
+{
+  "page": 12,
+  "games": [
+    {
+      "date": "1994-01-20",
+      "opponent": "Arizona",
+      "ucla_score": 74,
+      "opp_score": 66,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 74,
+          "players": [
+            {"name": "Charles O'Bannon", "min": 28, "fg": "3-6", "tp": "1-2", "ft": "1-2", "reb": 5, "ast": 1, "pf": 4, "to": 3, "stl": 0, "blk": 0, "pts": 8},
+            {"name": "Ed O'Bannon", "min": 38, "fg": "5-14", "tp": "0-1", "ft": "4-5", "reb": 9, "ast": 4, "pf": 1, "to": 1, "stl": 2, "blk": 0, "pts": 14},
+            {"name": "George Zidek", "min": 27, "fg": "4-8", "tp": "0-0", "ft": "2-3", "reb": 8, "ast": 0, "pf": 1, "to": 1, "stl": 1, "blk": 2, "pts": 10},
+            {"name": "Tyus Edney", "min": 35, "fg": "7-13", "tp": "0-1", "ft": "12-14", "reb": 4, "ast": 6, "pf": 1, "to": 2, "stl": 2, "blk": 0, "pts": 26},
+            {"name": "Shon Tarver", "min": 32, "fg": "5-15", "tp": "0-1", "ft": "1-3", "reb": 5, "ast": 2, "pf": 2, "to": 4, "stl": 1, "blk": 2, "pts": 11},
+            {"name": "Marquis Burns", "min": 9, "fg": "0-0", "tp": "0-0", "ft": "2-2", "reb": 1, "ast": 1, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Rodney Zimmerman", "min": 13, "fg": "0-1", "tp": "0-0", "ft": "1-3", "reb": 5, "ast": 0, "pf": 0, "to": 1, "stl": 0, "blk": 1, "pts": 1},
+            {"name": "Kevin Dempsey", "min": 5, "fg": "0-2", "tp": "0-1", "ft": "0-0", "reb": 2, "ast": 2, "pf": 1, "to": 1, "stl": 0, "blk": 1, "pts": 0},
+            {"name": "Cameron Dollar", "min": 13, "fg": "1-1", "tp": "0-0", "ft": "0-0", "reb": 2, "ast": 0, "pf": 0, "to": 1, "stl": 2, "blk": 0, "pts": 2}
+          ]
+        },
+        {
+          "name": "Arizona Wildcats",
+          "score": 66,
+          "players": [
+            {"name": "Ray Owens", "min": 37, "fg": "7-15", "tp": "1-2", "ft": "1-2", "reb": 8, "ast": 0, "pf": 2, "to": 1, "stl": 0, "blk": 0, "pts": 16},
+            {"name": "Reggie Geary", "min": 30, "fg": "3-9", "tp": "1-6", "ft": "1-2", "reb": 3, "ast": 2, "pf": 4, "to": 1, "stl": 1, "blk": 0, "pts": 8},
+            {"name": "Joseph Blair", "min": 29, "fg": "6-8", "tp": "0-0", "ft": "0-0", "reb": 7, "ast": 0, "pf": 4, "to": 0, "stl": 0, "blk": 1, "pts": 12},
+            {"name": "Damon Stoudamire", "min": 35, "fg": "4-14", "tp": "1-8", "ft": "0-0", "reb": 7, "ast": 8, "pf": 4, "to": 7, "stl": 1, "blk": 0, "pts": 9},
+            {"name": "Khalid Reeves", "min": 37, "fg": "5-15", "tp": "0-5", "ft": "3-5", "reb": 5, "ast": 5, "pf": 3, "to": 5, "stl": 4, "blk": 0, "pts": 13},
+            {"name": "Dylan Rigdon", "min": 13, "fg": "1-2", "tp": "0-1", "ft": "2-2", "reb": 2, "ast": 0, "pf": 2, "to": 2, "stl": 1, "blk": 0, "pts": 4},
+            {"name": "Kevin Flanagan", "min": 11, "fg": "1-1", "tp": "0-0", "ft": "0-0", "reb": 5, "ast": 0, "pf": 3, "to": 0, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Corey Williams", "min": 5, "fg": "0-2", "tp": "0-1", "ft": "2-2", "reb": 2, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 1, "pts": 2},
+            {"name": "Joe McLean", "min": 3, "fg": "0-2", "tp": "0-2", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

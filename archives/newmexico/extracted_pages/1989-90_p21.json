@@ -1,0 +1,51 @@
+{
+  "page": 21,
+  "games": [
+    {
+      "date": "1990-02-08",
+      "opponent": "Colorado State Rams",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 71,
+          "players": [
+            {"name": "Darrell McGee", "min": "38.0", "fg": "9-13", "tp": "6-10", "ft": "0-0", "reb": 2, "ast": 1, "pf": 1, "to": 3, "stl": 2, "blk": 0, "pts": 24},
+            {"name": "Andre McGee", "min": "6.0", "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Luc Longley", "min": "38.0", "fg": "6-10", "tp": "0-4", "ft": "4-4", "reb": 9, "ast": 4, "pf": 2, "to": 3, "stl": 0, "blk": 1, "pts": 16},
+            {"name": "Tony Steffan", "min": "0.0", "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Marvin McBurrows", "min": "26.0", "fg": "2-3", "tp": "1-1", "ft": "1-2", "reb": 1, "ast": 1, "pf": 4, "to": 1, "stl": 0, "blk": 0, "pts": 6},
+            {"name": "Donnie Walker", "min": "0.0", "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Sammie Liberatore", "min": "0.0", "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Kurt Miller", "min": "26.0", "fg": "4-6", "tp": "0-1", "ft": "1-2", "reb": 12, "ast": 3, "pf": 3, "to": 3, "stl": 2, "blk": 0, "pts": 9},
+            {"name": "Willie Banks", "min": "12.0", "pts": 1},
+            {"name": "Omar Sierra", "min": "0.0", "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "J.J. Griego", "min": "0.0", "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Rob Robbins", "min": "39.0", "fg": "2-8", "tp": "0-4", "ft": "4-4", "reb": 0, "ast": 2, "pf": 1, "to": 2, "stl": 2, "blk": 0, "pts": 8},
+            {"name": "Rob Newton", "min": "15.0", "fg": "3-3", "tp": "0-1", "ft": "1-2", "reb": 4, "ast": 0, "pf": 3, "to": 0, "stl": 0, "blk": 0, "pts": 7}
+          ],
+          "checksum_ok": true
+        },
+        {
+          "name": "Colorado State Rams",
+          "score": 75,
+          "players": [
+            {"name": "Dwayne Polk", "min": "0.0", "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Carren Wilson", "min": "0.0", "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Tracy Jordan", "min": "5.0", "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Mark Meredith", "min": "37.0", "fg": "5-8", "tp": "4-6", "ft": "2-2", "reb": 3, "ast": 2, "pf": 2, "to": 0, "stl": 2, "blk": 0, "pts": 16},
+            {"name": "Lynn Tryon", "min": "40.0", "fg": "5-9", "tp": "2-4", "ft": "2-2", "reb": 1, "ast": 9, "pf": 1, "to": 2, "stl": 2, "blk": 0, "pts": 14},
+            {"name": "Dwayne Molyneaux", "min": "0.0", "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Jamie Hines", "min": "11.0", "fg": "1-1", "tp": "1-1", "ft": "0-0", "reb": 2, "ast": 2, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 3},
+            {"name": "Mike Mitchell", "min": "35.0", "fg": "7-13", "tp": "1-3", "ft": "3-6", "reb": 7, "ast": 2, "pf": 4, "to": 2, "stl": 1, "blk": 0, "pts": 18},
+            {"name": "Andy Anderson", "min": "32.0", "fg": "4-6", "tp": "0-1", "ft": "5-5", "reb": 0, "ast": 3, "pf": 2, "to": 6, "stl": 0, "blk": 1, "pts": 13},
+            {"name": "Eric Friehauf", "min": "26.0", "fg": "3-3", "tp": "0-1", "ft": "1-3", "reb": 1, "ast": 1, "pf": 3, "to": 0, "stl": 2, "blk": 1, "pts": 7},
+            {"name": "Matt Sharp", "min": "14.0", "fg": "2-4", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 2, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Wagner Manna", "min": "0.0", "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ],
+          "checksum_ok": true
+        }
+      ]
+    }
+  ],
+  "skipped": []
+}

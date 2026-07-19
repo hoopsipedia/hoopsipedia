@@ -1,0 +1,47 @@
+{
+  "page": 20,
+  "games": [
+    {
+      "date": "1973-02-17",
+      "opponent": "Illinois Fighting Illini",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 68,
+          "players": [
+            {"name": "Jackson", "fg": "8-13", "ft": "4-4", "reb": 7, "pf": 3, "pts": 20},
+            {"name": "Andreas", "fg": "1-5", "ft": "0-0", "reb": 5, "pf": 1, "pts": 2},
+            {"name": "Witte", "fg": "11-26", "ft": "2-2", "reb": 14, "pf": 5, "pts": 24},
+            {"name": "Merchant", "fg": "0-1", "ft": "0-0", "reb": 0, "pf": 1, "pts": 0},
+            {"name": "Hornyak", "fg": "6-17", "ft": "4-4", "reb": 4, "pf": 4, "pts": 16},
+            {"name": "Gerhard", "fg": "3-5", "ft": "0-0", "reb": 4, "pf": 3, "pts": 6},
+            {"name": "Wenner", "fg": "0-6", "ft": "0-0", "reb": 4, "pf": 2, "pts": 0},
+            {"name": "Taylor", "fg": "0-1", "ft": "0-0", "reb": 0, "pf": 1, "pts": 0},
+            {"name": "Wolfe", "fg": "0-0", "ft": "0-0", "reb": 1, "pf": 0, "pts": 0},
+            {"name": "Siekmann", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Stiegemeier", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Weston", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Repella", "fg": "0-1", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Illinois Fighting Illini",
+          "score": 79,
+          "players": [
+            {"name": "Weatherspoon", "fg": "10-19", "ft": "8-11", "reb": 11, "pf": 1, "pts": 28},
+            {"name": "Schmidt", "fg": "2-5", "ft": "2-2", "reb": 7, "pf": 3, "pts": 6},
+            {"name": "Connor", "fg": "6-12", "ft": "1-2", "reb": 12, "pf": 4, "pts": 13},
+            {"name": "Tucker", "fg": "2-5", "ft": "4-4", "reb": 4, "pf": 4, "pts": 8},
+            {"name": "Dawson", "fg": "9-18", "ft": "5-6", "reb": 0, "pf": 0, "pts": 23},
+            {"name": "Roberson", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Foster", "fg": "0-0", "ft": "0-0", "reb": 3, "pf": 1, "pts": 0},
+            {"name": "Schroeder", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Roberts", "fg": "0-0", "ft": "1-2", "reb": 0, "pf": 0, "pts": 1}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

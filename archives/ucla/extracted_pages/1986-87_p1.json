@@ -1,0 +1,49 @@
+{
+  "page": 1,
+  "games": [
+    {
+      "date": "1986-11-29",
+      "opponent": "Santa Clara",
+      "ucla_score": 76,
+      "opp_score": 62,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 76,
+          "players": [
+            {"name": "Miller", "min": 38, "fg": "9-16", "tp": "3-7", "ft": "8-10", "reb": 10, "ast": 1, "pf": 0, "to": 5, "stl": 2, "blk": 1, "pts": 29},
+            {"name": "Jackson", "min": 29, "fg": "1-2", "tp": "0-0", "ft": "3-7", "reb": 11, "ast": 1, "pf": 2, "to": 1, "stl": 0, "blk": 3, "pts": 5},
+            {"name": "Haley", "min": 25, "fg": "1-5", "tp": "0-0", "ft": "0-0", "reb": 5, "ast": 0, "pf": 3, "to": 2, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Hatcher", "min": 25, "fg": "4-8", "tp": "0-0", "ft": "3-4", "reb": 3, "ast": 1, "pf": 1, "to": 2, "stl": 1, "blk": 0, "pts": 11},
+            {"name": "Richardson", "min": 38, "fg": "8-12", "tp": "0-0", "ft": "2-4", "reb": 3, "ast": 6, "pf": 3, "to": 1, "stl": 3, "blk": 1, "pts": 18},
+            {"name": "Immel", "min": 12, "fg": "2-6", "tp": "1-2", "ft": "0-1", "reb": 1, "ast": 2, "pf": 1, "to": 0, "stl": 1, "blk": 0, "pts": 5},
+            {"name": "Wilson", "min": 13, "fg": "1-3", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 2, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Foster", "min": 13, "fg": "1-3", "tp": "0-0", "ft": "0-0", "reb": 3, "ast": 0, "pf": 2, "to": 1, "stl": 0, "blk": 1, "pts": 2},
+            {"name": "Palmer", "min": 5, "fg": "1-1", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 2, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Walker", "min": 2, "fg": "0-1", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Santa Clara Broncos",
+          "score": 62,
+          "players": [
+            {"name": "H'Orvath", "min": 29, "fg": "6-8", "tp": "0-0", "ft": "1-2", "reb": 8, "ast": 2, "pf": 3, "to": 3, "stl": 1, "blk": 1, "pts": 13},
+            {"name": "Gordon", "min": 10, "fg": "0-3", "tp": "0-1", "ft": "0-0", "reb": 1, "ast": 0, "pf": 5, "to": 2, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Weiss", "min": 20, "fg": "2-5", "tp": "0-0", "ft": "0-0", "reb": 5, "ast": 0, "pf": 4, "to": 1, "stl": 1, "blk": 0, "pts": 4},
+            {"name": "Burley", "min": 31, "fg": "4-15", "tp": "0-5", "ft": "1-1", "reb": 2, "ast": 1, "pf": 1, "to": 0, "stl": 1, "blk": 0, "pts": 9},
+            {"name": "Lane", "min": 39, "fg": "3-13", "tp": "1-2", "ft": "2-5", "reb": 5, "ast": 8, "pf": 4, "to": 6, "stl": 2, "blk": 1, "pts": 9},
+            {"name": "McPherson", "min": 24, "fg": "4-7", "tp": "0-0", "ft": "1-2", "reb": 5, "ast": 0, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 9},
+            {"name": "Wilgenbush", "min": 28, "fg": "7-12", "tp": "0-0", "ft": "2-2", "reb": 10, "ast": 0, "pf": 3, "to": 1, "stl": 0, "blk": 0, "pts": 16},
+            {"name": "Aaron", "min": 6, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 1, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Becker", "min": 2, "fg": "0-1", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Moody", "min": 5, "fg": "0-1", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Appiah", "min": 3, "fg": "1-2", "tp": "0-0", "ft": "0-1", "reb": 1, "ast": 0, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Underwood", "min": 1, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

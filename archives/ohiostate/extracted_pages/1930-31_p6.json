@@ -1,0 +1,9 @@
+{
+  "page": 6,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page 6 is a scanned Columbus newspaper clipping ('BUCKEYES BEAT MICHIGAN, 22-16', Jan. 17, 1931 at the Coliseum, attendance 6192) containing a full per-player box score table for both Ohio State (Hinchman, Lively, Ervin, Fesler, Hoffer, Larkins) and Michigan (Petrie, Ereland, Weiss, Shaw, Daniels, Williamson, Altenhof). The team TOTALS rows are legible and internally consistent (Ohio State: 9 FG + 4 FT = 22 pts matching the 22-16 final; Michigan: 6 FG + 4 FT = 16 pts matching the final), but the individual player rows are printed at very small newspaper-column resolution and the FG/FT/PF digits could not be read with confidence -- repeated attempts produced per-player sums that did not reconcile with the legible team totals. Per instructions, skipping rather than guessing at illegible player-level digits. Game metadata (date 1931-01-17, opponent Michigan, final score Ohio State 22, Michigan 16) is confidently legible but is not enough on its own to satisfy the required player-line transcription, so no game entry was recorded."
+    }
+  ]
+}

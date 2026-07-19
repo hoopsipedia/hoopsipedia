@@ -1,0 +1,44 @@
+{
+  "page": 5,
+  "games": [
+    {
+      "date": "1954-12-21",
+      "opponent": "California",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 63,
+          "players": [
+            {"name": "Miller", "fg": "6-9", "ft": "1-7", "pf": 1, "pts": 13},
+            {"name": "Kelley", "fg": "3-7", "ft": "4-6", "pf": 1, "pts": 10},
+            {"name": "Ropes", "fg": "2-3", "ft": "0-1", "pf": 3, "pts": 4},
+            {"name": "Freeman", "fg": "7-21", "ft": "9-10", "pf": 4, "pts": 23},
+            {"name": "Ellis", "fg": "5-8", "ft": "1-2", "pf": 3, "pts": 11},
+            {"name": "Millard", "fg": "1-1", "ft": "0-0", "pf": 0, "pts": 2},
+            {"name": "Keeling", "fg": "0-0", "ft": "0-0", "pf": 0, "pts": 0},
+            {"name": "Short", "fg": "0-0", "ft": "0-0", "pf": 0, "pts": 0},
+            {"name": "Mitchell", "fg": "0-0", "ft": "0-0", "pf": 0, "pts": 0},
+            {"name": "Wigton", "fg": "0-0", "ft": "0-0", "pf": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "California",
+          "score": 74,
+          "players": [
+            {"name": "Blake", "fg": "6-11", "ft": "2-2", "pf": 4, "pts": 14},
+            {"name": "Friend", "fg": "7-15", "ft": "4-6", "pf": 3, "pts": 18},
+            {"name": "R. McKeen (C)", "fg": "7-15", "ft": "2-4", "pf": 1, "pts": 16},
+            {"name": "Diaz", "fg": "7-10", "ft": "1-3", "pf": 1, "pts": 15},
+            {"name": "Hess", "fg": "4-7", "ft": "2-3", "pf": 3, "pts": 10},
+            {"name": "Winetrub", "fg": "0-1", "ft": "0-0", "pf": 0, "pts": 0},
+            {"name": "R. McKeen (F)", "fg": "0-3", "ft": "1-2", "pf": 1, "pts": 1},
+            {"name": "Arrillaga", "fg": "0-1", "ft": "0-0", "pf": 1, "pts": 0},
+            {"name": "Harler", "fg": "0-0", "ft": "0-0", "pf": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

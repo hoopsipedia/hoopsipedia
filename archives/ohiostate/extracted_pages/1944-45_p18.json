@@ -1,0 +1,50 @@
+{
+  "page": 18,
+  "games": [
+    {
+      "date": "1945-02-24",
+      "opponent": "Indiana",
+      "note": "Sheet columns are G (field goals made), F (free throws made), P (points) — no attempt counts given. 'fg' and 'ft' below are makes-only (no attempts on sheet). P column matches 2*G+F for every player and both team totals.",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 85,
+          "players": [
+            {"name": "Grate", "pos": "f", "fg": "10", "ft": "1", "pts": 21},
+            {"name": "Dugger", "pos": "f-c", "fg": "2", "ft": "2", "pts": 6},
+            {"name": "Caudill", "pos": "f", "fg": "6", "ft": "1", "pts": 13},
+            {"name": "Snyder", "pos": "f", "fg": "0", "ft": "0", "pts": 0},
+            {"name": "Risen", "pos": "c", "fg": "12", "ft": "0", "pts": 24},
+            {"name": "Davis", "pos": "g", "fg": "1", "ft": "0", "pts": 2},
+            {"name": "Huston", "pos": "g (C)", "fg": "1", "ft": "3", "pts": 5},
+            {"name": "Amling", "pos": "g", "fg": "2", "ft": "0", "pts": 4},
+            {"name": "Sims", "pos": "g", "fg": "4", "ft": "1", "pts": 9},
+            {"name": "McFadden", "pos": "f", "fg": "0", "ft": "0", "pts": 0},
+            {"name": "Jacobs", "pos": "g", "fg": "0", "ft": "1", "pts": 1},
+            {"name": "Donham", "pos": "c", "fg": "0", "ft": "0", "pts": 0},
+            {"name": "Tuttle", "pos": "g", "fg": "0", "ft": "0", "pts": 0},
+            {"name": "Calloway", "pos": "g", "fg": "0", "ft": "0", "pts": 0}
+          ]
+        },
+        {
+          "name": "Indiana Hoosiers",
+          "score": 52,
+          "players": [
+            {"name": "Herrmann", "pos": "f", "fg": "5", "ft": "2", "pts": 12},
+            {"name": "Copeland", "pos": "f", "fg": "1", "ft": "0", "pts": 2},
+            {"name": "Roper", "pos": "f", "fg": "0", "ft": "0", "pts": 0},
+            {"name": "McMurray", "pos": "f", "fg": "1", "ft": "0", "pts": 2},
+            {"name": "Karlovansky", "pos": "c (AC)", "fg": "5", "ft": "3", "pts": 13},
+            {"name": "Herron", "pos": "g", "fg": "9", "ft": "1", "pts": 19},
+            {"name": "Armstrong", "pos": "g", "fg": "1", "ft": "2", "pts": 4},
+            {"name": "Schneider", "pos": "g", "fg": "0", "ft": "0", "pts": 0},
+            {"name": "Brandenburg", "pos": "g", "fg": "0", "ft": "0", "pts": 0},
+            {"name": "Turner", "pos": "g", "fg": "0", "ft": "0", "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

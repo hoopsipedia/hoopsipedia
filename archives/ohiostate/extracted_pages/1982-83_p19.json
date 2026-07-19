@@ -1,0 +1,9 @@
+{
+  "page": 19,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Handwritten Big Ten official box score (Minnesota @ Ohio State, Feb. 2 1983, St. John Arena) is legible enough to identify teams/date but individual digit values are too ambiguous to transcribe reliably. Attempted reconstruction failed checksum on both sides: Minnesota player FG/FT sums (27 FG / 21 FT) did not reconcile with the team TOTALS row (32 FG / 24 FT), and at least one Ohio State player line (Taylor, Troy: FG 7, FT 8-10 shown) computes to 22 pts (2*7+8) but the sheet's TP column reads 27 for that row, an unresolvable discrepancy. Rather than guess at illegible handwritten digits, skipping the whole game per instructions."
+    }
+  ]
+}

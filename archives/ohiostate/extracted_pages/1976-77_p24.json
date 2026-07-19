@@ -1,0 +1,9 @@
+{
+  "page": 24,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Ohio State vs Illinois, Feb 19, 1977 (Ohio State 64, Illinois 60 per legible TOTALS rows, both checksum-consistent as team totals: OSU 2*27+10=64, ILL 2*25+10=60). However, many individual player stat cells on both rosters are too faded/illegible to transcribe confidently (multiple FGA/FTA/REB/PF/PTS/A digits illegible or ambiguous, e.g. Ohio State's Durris, Ellinghausen, Bolean, Hammond, Sansby rows and Illinois's Adams row where computed pts 2*3+2=8 does not match the apparent PTS digit '3'). Per-player checksum could not be reliably verified, so the full game is skipped rather than guessing individual values."
+    }
+  ]
+}

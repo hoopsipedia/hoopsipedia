@@ -1,0 +1,9 @@
+{
+  "page": 2,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page shows a newspaper clipping for Ohio State 39, Pittsburgh 33 (Dec 7, 1946, Columbus, attendance 7663, OSU coach Dye) with a small player-by-player box score table (Pittsburgh: David, Grary, Genecin, Forster, Elicek, Shuter, Apple, Harris, Bernich, Lengsfeld; Ohio State: Pugh, Denham, Ward, Jones, Underman, Hutson, Grai, Anning, T. Wale, W. White), but the table's numeric columns (FG/FT/PF/points) are printed too small and low-resolution to read individual digits confidently. Transcribing player stats would require guessing, so the box score is skipped rather than risking invented values; only the final score and game metadata (legible from the article) are noted here, not entered as a structured game record per instructions."
+    }
+  ]
+}

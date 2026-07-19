@@ -1,0 +1,9 @@
+{
+  "page": 7,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page shows a single handwritten scoresheet: North Dakota vs New Mexico (UNM), 12/19/66. North Dakota's player table (Bates, Schultz, Herring, Keel, Jenkins, Tweedie, Grubisich, Jackson, Stolt, Burton, Praus, Kestor, Godfread) is legible and its TP column sums to 64, matching the team total row (26 FG / 87 FGA / 12 FT / 21 FTA / 35 RB / 23 P / 64 TP). However, the New Mexico player table (Nelson, Dupree, Sanford, Shropshire, Grimes, Hoover, Morgan, Lund, Monroe, Judge, Fisher, Daniels, Burwitz, and an added 'Lopez' line) has numerous smudged/overlapping handwritten digits in the FG, FGA, FT, FTA and TP columns that cannot be read with confidence (e.g. the Monroe row and several TP entries are illegible squiggles), so individual player point values cannot be trusted to sum correctly to the New Mexico team total (31 FG / 69 FGA / 22 FT / 34 FTA / 48 RB / 16 P / 84 TP). Since a complete, checksum-verified box score requires confident transcription of both teams, and the New Mexico side cannot be transcribed without guessing, the entire game is skipped rather than risk inventing values."
+    }
+  ]
+}

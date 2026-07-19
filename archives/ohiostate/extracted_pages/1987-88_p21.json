@@ -1,0 +1,9 @@
+{
+  "page": 21,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Game 20 (Ohio State at Iowa, February 10, 1988, Carver-Hawkeye Arena) is a single clean typed box score on this page, but the Iowa (home) team's per-player FT column does not reconcile: summing the printed FT-made values for all 11 Iowa players gives 26, while Iowa's team FT total is confirmed as 22-of-31 by BOTH the TOTALS row and the separate FT% breakdown line (1st Half 11-14 + 2nd Half 11-17 = 22-of-31). This is a hard 4-point discrepancy I could not resolve to a specific misread player without a clearer scan, so per-player pts cannot be computed reliably for Iowa and the checksum (sum of player pts == team final score of 92) would fail or be forced. Note: the Ohio State side of this same box score DID checksum perfectly (FG, 3FG, and FT per-player sums all match the OSU TOTALS row exactly, and pts sum = 75 = OSU's final score), but since a game record requires both teams and the Iowa side is unreliable, the whole game was skipped rather than publishing a half-verified/half-guessed box score."
+    }
+  ]
+}

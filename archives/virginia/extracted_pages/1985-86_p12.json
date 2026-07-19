@@ -1,0 +1,40 @@
+{
+  "page": 12,
+  "games": [
+    {
+      "date": "1986-01-04",
+      "opponent": "Georgia Tech",
+      "teams": [
+        {
+          "name": "Georgia Tech Yellow Jackets",
+          "score": 64,
+          "players": [
+            {"name": "Tom Hammonds", "min": 38, "fg": "6-8", "ft": "0-0", "reb": 3, "pf": 2, "to": 2, "stl": 1, "pts": 12},
+            {"name": "Duane Ferrell", "min": 33, "fg": "4-8", "ft": "1-1", "reb": 6, "pf": 1, "ast": 1, "to": 1, "pts": 9},
+            {"name": "John Salley", "min": 33, "fg": "2-7", "ft": "2-2", "reb": 5, "pf": 3, "ast": 3, "to": 4, "blk": 1, "stl": 1, "pts": 6, "note": "first name blacked out on scoresheet; inferred from 1985-86 Georgia Tech roster"},
+            {"name": "Bruce Dalrymple", "min": 39, "fg": "6-11", "ft": "1-2", "reb": 4, "pf": 4, "ast": 4, "to": 3, "blk": 1, "stl": 2, "pts": 13},
+            {"name": "Mark Price", "min": 40, "fg": "8-15", "ft": "2-2", "reb": 6, "pf": 2, "ast": 3, "to": 1, "pts": 18},
+            {"name": "Craig Neal", "min": 13, "fg": "2-5", "ft": "2-2", "ast": 2, "to": 1, "pts": 6},
+            {"name": "Antoine Ford", "min": 4, "fg": "0-1", "pts": 0}
+          ]
+        },
+        {
+          "name": "Virginia Cavaliers",
+          "score": 61,
+          "players": [
+            {"name": "Andrew Kennedy", "min": 34, "fg": "4-8", "ft": "2-2", "reb": 11, "pf": 2, "to": 1, "blk": 2, "stl": 2, "pts": 10},
+            {"name": "Tom Sheehey", "min": 37, "fg": "5-11", "ft": "4-4", "reb": 4, "pf": 4, "ast": 3, "to": 3, "stl": 2, "pts": 14},
+            {"name": "Olden Polynice", "min": 40, "fg": "7-13", "ft": "3-3", "reb": 10, "pf": 2, "to": 3, "pts": 17},
+            {"name": "Tom Calloway", "min": 27, "fg": "2-5", "pf": 1, "ast": 4, "to": 1, "stl": 1, "pts": 4},
+            {"name": "Mel Kennedy", "min": 33, "fg": "4-13", "ft": "2-2", "reb": 3, "pf": 2, "to": 2, "pts": 10},
+            {"name": "John Johnson", "min": 14, "fg": "0-1", "reb": 1, "pf": 1, "ast": 3, "to": 2, "pts": 0},
+            {"name": "Sean Dyslin", "min": 1, "pts": 0, "note": "first name handwritten and hard to read; possibly 'Sean' or 'Sonn'"},
+            {"name": "Richard Morgan", "min": 12, "fg": "3-6", "reb": 2, "pf": 2, "stl": 1, "pts": 6}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

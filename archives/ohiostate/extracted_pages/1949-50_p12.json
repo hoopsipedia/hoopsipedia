@@ -1,0 +1,43 @@
+{
+  "page": 12,
+  "games": [
+    {
+      "date": "1950-01-16",
+      "opponent": "Michigan",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 74,
+          "players": [
+            {"name": "Schnittker", "min": "35:44", "fg": "9-19", "ft": "10-12", "pf": 3, "pts": 28},
+            {"name": "Remington", "min": "4:16", "fg": "0-4", "ft": "1-1", "pf": 2, "pts": 1},
+            {"name": "Donham", "min": "34:46", "fg": "6-12", "ft": "2-3", "pf": 4, "pts": 14},
+            {"name": "Taylor", "min": "14:56", "fg": "0-5", "ft": "2-2", "pf": 4, "pts": 2},
+            {"name": "Armstrong", "min": "21:10", "fg": "1-5", "ft": "1-1", "pf": 5, "pts": 3},
+            {"name": "Brown", "min": "38:03", "fg": "6-10", "ft": "1-2", "pf": 1, "pts": 13},
+            {"name": "Jacobs", "min": "16:22", "fg": "3-6", "ft": "0-1", "pf": 2, "pts": 6},
+            {"name": "Burkholder", "min": "32:46", "fg": "3-9", "ft": "1-3", "pf": 4, "pts": 7},
+            {"name": "Xaraffa", "min": "1:57", "fg": "0-0", "ft": "0-0", "pf": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Michigan",
+          "score": 58,
+          "players": [
+            {"name": "Suprunowicz", "fg": "4-20", "ft": "5-7", "pf": 2, "pts": 13},
+            {"name": "Olson", "fg": "0-5", "ft": "0-0", "pf": 2, "pts": 0},
+            {"name": "McIntosh", "fg": "4-7", "ft": "1-2", "pf": 2, "pts": 9},
+            {"name": "Doyle", "fg": "1-6", "ft": "0-0", "pf": 1, "pts": 2},
+            {"name": "Gutowski", "fg": "1-3", "ft": "1-4", "pf": 1, "pts": 3},
+            {"name": "Vander Kuy", "fg": "6-9", "ft": "4-11", "pf": 4, "pts": 16},
+            {"name": "Skala", "fg": "0-4", "ft": "0-0", "pf": 0, "pts": 0},
+            {"name": "Morrill", "fg": "3-10", "ft": "1-1", "pf": 5, "pts": 7},
+            {"name": "Murray", "fg": "2-10", "ft": "4-4", "pf": 3, "pts": 8}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

@@ -1,0 +1,9 @@
+{
+  "page": 11,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Official Western Conference box score, Ohio State 97 vs Illinois 73, January 4, 1960 (Havlicek, Lucas, Siegfried, Knight for OSU). Ohio State side checksums cleanly (sum of player PTS = 97 = team total, and 2*FG+FT = 97 matches totals row). However Illinois's printed per-player FGA and FT digits are faint/smudged on the scan and do not reconcile: summed player FGA = 86 vs printed team total FGA = 81, and summed player FT = 19 vs printed team total FT = 23 (summed PTS = 69 vs reported team score 73). Re-read the page once already; could not resolve the ambiguous Illinois cells (likely Bunkenburg, Wessels, Perry, or Mohlenbrock FT/FGA digits) with confidence, so skipping the whole game rather than guessing at Illinois's line."
+    }
+  ]
+}

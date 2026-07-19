@@ -1,0 +1,50 @@
+{
+  "page": 3,
+  "games": [
+    {
+      "date": "1986-12-06",
+      "opponent": "Southern Illinois Salukis",
+      "note": "Investors Classic, Charlottesville VA. Sheet prints 'Date 6 DEC 1896' which is an obvious typo/scanner misread for 1986. Blank FG/3PT/FT cells interpreted as 0-0 (no attempts). Metcalf, Rob (VA) has an illegible FT field (shows an impossible made>attempted pair); omitted rather than guessed, his pts=0 is unaffected. Player-minutes sum to 202 for Virginia vs team total of 200 (minor OCR noise on one or two MIN entries), not treated as a checksum failure since only points checksum is required.",
+      "teams": [
+        {
+          "name": "Southern Illinois Salukis",
+          "score": 82,
+          "players": [
+            {"name": "Ross, Billy", "min": 16, "fg": "2-5", "ft": "0-1", "tp": "0-0", "reb": 2, "pf": 1, "pts": 4},
+            {"name": "Novsek, Doug", "min": 32, "fg": "6-12", "ft": "2-2", "tp": "6-9", "reb": 1, "pf": 4, "to": 3, "pts": 20},
+            {"name": "Richardson, Tim", "min": 25, "fg": "2-4", "ft": "1-3", "reb": 7, "pf": 4, "ast": 1, "pts": 5},
+            {"name": "Middleton, Steve", "min": 29, "fg": "6-18", "ft": "4-5", "tp": "1-5", "reb": 3, "pf": 5, "ast": 4, "to": 2, "stl": 1, "pts": 17},
+            {"name": "Nurnberger, Kai", "min": 28, "fg": "7-10", "ft": "0-0", "tp": "0-2", "reb": 1, "pf": 4, "ast": 2, "to": 2, "pts": 14},
+            {"name": "Krueger, Todd", "min": 8, "pf": 3, "blk": 1, "pts": 0},
+            {"name": "House, Randy", "min": 29, "fg": "4-7", "ft": "0-1", "tp": "1-3", "reb": 6, "pf": 4, "ast": 1, "to": 2, "stl": 1, "pts": 9},
+            {"name": "Welch, Brian", "min": 21, "fg": "4-6", "tp": "1-1", "reb": 1, "pf": 3, "ast": 1, "to": 1, "stl": 3, "pts": 9},
+            {"name": "Schafer, Jay", "min": 7, "fg": "2-2", "pf": 1, "pts": 4},
+            {"name": "Hesse, Scott", "min": 2, "fg": "0-1", "reb": 1, "pf": 2, "ast": 1, "pts": 0},
+            {"name": "Harre, Wayne", "min": 2, "reb": 1, "pts": 0},
+            {"name": "Anderson, Jeff", "min": 1, "reb": 1, "pts": 0}
+          ]
+        },
+        {
+          "name": "Virginia Cavaliers",
+          "score": 94,
+          "players": [
+            {"name": "Kennedy, Andrew", "min": 32, "fg": "10-15", "ft": "10-13", "reb": 10, "pf": 2, "pts": 30},
+            {"name": "Sheehey, Tom", "min": 28, "fg": "10-11", "ft": "1-1", "reb": 7, "pf": 1, "ast": 3, "pts": 21},
+            {"name": "Dyslin, John", "min": 17, "fg": "1-6", "reb": 3, "pf": 3, "to": 3, "blk": 1, "pts": 2},
+            {"name": "Johnson, John", "min": 28, "fg": "1-2", "ft": "2-2", "reb": 3, "pf": 2, "ast": 5, "to": 2, "pts": 4},
+            {"name": "Morgan, Richard", "min": 18, "fg": "4-12", "ft": "1-2", "reb": 3, "pf": 2, "ast": 4, "stl": 1, "pts": 9},
+            {"name": "Simms, Darrick", "min": 19, "ft": "5-6", "reb": 1, "pf": 3, "ast": 3, "stl": 1, "pts": 5},
+            {"name": "Martin, Tim", "min": 13, "fg": "1-3", "reb": 2, "to": 1, "stl": 1, "pts": 2},
+            {"name": "Kennedy, Mel", "min": 23, "fg": "6-10", "ft": "5-6", "reb": 6, "pf": 1, "to": 2, "pts": 17},
+            {"name": "Blanks, Lance", "min": 14, "fg": "0-2", "tp": "0-1", "ft": "2-4", "reb": 1, "pf": 1, "to": 2, "pts": 2},
+            {"name": "Cooke, Mark", "min": 5, "blk": 1, "pts": 0},
+            {"name": "Solomon, Anthony", "min": 3, "ft": "2-3", "reb": 1, "to": 2, "pts": 2},
+            {"name": "Metcalf, Rob", "min": 2, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

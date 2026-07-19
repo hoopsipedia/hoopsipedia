@@ -1,0 +1,39 @@
+{
+  "page": 17,
+  "games": [
+    {
+      "date": "1970-01-31",
+      "opponent": "Northwestern",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 68,
+          "players": [
+            {"name": "Andreas", "fg": "5-15", "ft": "2-3", "pf": 2, "reb": 5, "pts": 12},
+            {"name": "Minor", "fg": "3-7", "ft": "0-0", "pf": 2, "reb": 10, "pts": 6},
+            {"name": "Sorenson", "fg": "6-12", "ft": "11-11", "pf": 5, "reb": 1, "pts": 23},
+            {"name": "Clemons", "fg": "4-10", "ft": "1-1", "pf": 4, "reb": 4, "pts": 9},
+            {"name": "Harclay", "fg": "3-9", "ft": "1-2", "pf": 4, "reb": 4, "pts": 7},
+            {"name": "Finney", "fg": "4-6", "ft": "3-4", "pf": 0, "pts": 11}
+          ]
+        },
+        {
+          "name": "Northwestern",
+          "score": 64,
+          "players": [
+            {"name": "Crandall", "fg": "0-10", "ft": "1-2", "pf": 3, "reb": 8, "pts": 1},
+            {"name": "Moran", "fg": "2-7", "ft": "2-4", "pf": 2, "reb": 6, "pts": 6},
+            {"name": "Hentz", "fg": "3-6", "ft": "2-2", "pf": 1, "reb": 3, "pts": 8},
+            {"name": "Adams", "fg": "9-18", "ft": "3-3", "pf": 4, "reb": 11, "pts": 21},
+            {"name": "Kelley", "fg": "4-15", "ft": "4-5", "pf": 2, "reb": 10, "pts": 12},
+            {"name": "Sarno", "fg": "5-9", "ft": "4-5", "pf": 4, "reb": 4, "pts": 14},
+            {"name": "Berg", "fg": "1-2", "ft": "0-0", "pf": 0, "reb": 0, "pts": 2},
+            {"name": "Douglass", "fg": "0-0", "ft": "0-0", "pf": 1, "reb": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

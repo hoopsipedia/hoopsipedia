@@ -1,0 +1,47 @@
+{
+  "page": 25,
+  "games": [
+    {
+      "date": "1975-03-01",
+      "opponent": "Utah",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 76,
+          "players": [
+            {"name": "Toppert", "min": 16, "fg": "2-6", "ft": "2-2", "reb": 3, "ast": 2, "pf": 2, "to": 4, "stl": 1, "pts": 6},
+            {"name": "Fokorski", "min": 21, "fg": "3-7", "ft": "0-0", "reb": 6, "ast": 1, "pf": 3, "to": 1, "stl": 0, "pts": 6},
+            {"name": "Hagins", "min": 28, "fg": "5-15", "ft": "0-1", "reb": 15, "ast": 2, "pf": 3, "to": 4, "stl": 0, "pts": 10},
+            {"name": "King", "min": 28, "fg": "6-12", "ft": "0-0", "reb": 7, "ast": 6, "pf": 3, "to": 4, "stl": 2, "pts": 12},
+            {"name": "D. Davis", "min": 29, "fg": "8-15", "ft": "1-1", "reb": 2, "ast": 5, "pf": 2, "to": 3, "stl": 1, "pts": 17},
+            {"name": "Williams", "min": 21, "fg": "4-7", "ft": "4-5", "reb": 3, "ast": 1, "pf": 4, "to": 8, "stl": 1, "pts": 12},
+            {"name": "Cacy", "min": 20, "fg": "1-4", "ft": "0-0", "reb": 4, "ast": 1, "pf": 2, "to": 1, "stl": 0, "pts": 2},
+            {"name": "S. Davis", "min": 10, "fg": "0-3", "ft": "1-2", "reb": 4, "ast": 1, "pf": 1, "to": 1, "stl": 4, "pts": 1},
+            {"name": "Koller", "min": 20, "fg": "3-5", "ft": "2-4", "reb": 6, "ast": 1, "pf": 3, "to": 1, "stl": 1, "pts": 8},
+            {"name": "Kruse", "min": 7, "fg": "1-1", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "to": 0, "stl": 0, "pts": 2}
+          ]
+        },
+        {
+          "name": "Utah Utes",
+          "score": 93,
+          "players": [
+            {"name": "Terry", "min": 25, "fg": "3-6", "ft": "0-1", "reb": 2, "ast": 3, "pf": 1, "to": 0, "stl": 0, "pts": 6},
+            {"name": "Porter", "min": 30, "fg": "7-12", "ft": "3-3", "reb": 6, "ast": 4, "pf": 1, "to": 1, "stl": 3, "pts": 17},
+            {"name": "Menatti", "min": 25, "fg": "7-13", "ft": "7-8", "reb": 9, "ast": 3, "pf": 1, "to": 1, "stl": 1, "pts": 21},
+            {"name": "Jonas", "min": 32, "fg": "3-4", "ft": "0-2", "reb": 2, "ast": 8, "pf": 1, "to": 5, "stl": 1, "pts": 6},
+            {"name": "Burden", "min": 29, "fg": "7-15", "ft": "8-8", "reb": 4, "ast": 0, "pf": 3, "to": 4, "stl": 0, "pts": 22},
+            {"name": "Judkins", "min": 15, "fg": "1-4", "ft": "1-1", "reb": 7, "ast": 3, "pf": 2, "to": 1, "stl": 0, "pts": 3},
+            {"name": "Metheny", "min": 14, "fg": "5-5", "ft": "1-1", "reb": 2, "ast": 0, "pf": 3, "to": 3, "stl": 2, "pts": 11},
+            {"name": "Gore", "min": 14, "fg": "1-3", "ft": "2-2", "reb": 0, "ast": 2, "pf": 2, "to": 3, "stl": 2, "pts": 4},
+            {"name": "Grey", "min": 7, "fg": "0-1", "ft": "1-2", "reb": 0, "ast": 0, "pf": 0, "to": 1, "stl": 1, "pts": 1},
+            {"name": "Gardner", "min": 5, "fg": "1-2", "ft": "0-0", "reb": 1, "ast": 0, "pf": 1, "to": 0, "stl": 0, "pts": 2},
+            {"name": "Smith", "min": 2, "fg": "0-1", "ft": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 0, "stl": 0, "pts": 0},
+            {"name": "Stucki", "min": 0, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

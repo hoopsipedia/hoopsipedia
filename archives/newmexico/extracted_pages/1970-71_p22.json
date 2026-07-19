@@ -1,0 +1,44 @@
+{
+  "page": 22,
+  "games": [
+    {
+      "date": "1971-02-20",
+      "opponent": "UTEP",
+      "teams": [
+        {
+          "name": "UTEP",
+          "score": 68,
+          "players": [
+            {"name": "Whitlock", "fg": "1-1", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "to": 1, "pts": 9},
+            {"name": "Warner", "fg": "2-7", "ft": "2-3", "reb": 1, "ast": 3, "pf": 2, "pts": 6},
+            {"name": "Davis", "fg": "0-2", "ft": "1-2", "pf": 1, "pts": 1},
+            {"name": "Doale", "ft": "3-5", "reb": 2, "ast": 1, "pf": 3, "to": 2, "pts": 7},
+            {"name": "Gibbs", "fg": "7-18", "ft": "7-10", "reb": 7, "ast": 1, "pf": 4, "pts": 21},
+            {"name": "Brakes", "fg": "6-10", "ft": "3-8", "reb": 7, "ast": 2, "pf": 4, "to": 2, "pts": 15},
+            {"name": "English", "fg": "5-13", "ft": "6-6", "reb": 9, "ast": 4, "pf": 4, "pts": 16},
+            {"name": "Bonp", "fg": "0-0", "reb": 1, "ast": 1, "pf": 3, "pts": 0}
+          ]
+        },
+        {
+          "name": "New Mexico Lobos",
+          "score": 67,
+          "players": [
+            {"name": "Gibson", "fg": "2-2", "ft": "5-8", "reb": 2, "ast": 7, "pf": 2, "to": 6, "pts": 9},
+            {"name": "Stewart", "fg": "0-0", "ft": "3-4", "reb": 1, "ast": 1, "pf": 4, "to": 1, "pts": 3},
+            {"name": "Seidler", "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "pts": 0},
+            {"name": "Johnson", "fg": "6-8", "ft": "0-0", "reb": 0, "ast": 0, "pf": 3, "to": 0, "pts": 12},
+            {"name": "Roberts", "fg": "0-0", "ft": "0-1", "reb": 0, "ast": 0, "pf": 0, "to": 0, "pts": 0},
+            {"name": "Faulkner", "fg": "2-6", "ft": "1-2", "reb": 9, "ast": 1, "pf": 6, "to": 3, "pts": 5},
+            {"name": "Little", "fg": "2-3", "ft": "1-1", "reb": 3, "ast": 2, "pf": 4, "to": 0, "pts": 5},
+            {"name": "Long", "fg": "9-18", "ft": "15-15", "reb": 9, "ast": 0, "pf": 4, "to": 4, "pts": 33}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": [
+    {"reason": "UTEP roster row #22 'Lumby' has no stats filled in (blank row) - omitted rather than inventing zeros"},
+    {"reason": "New Mexico roster row 'Wright' has no stats filled in (blank row) - omitted rather than inventing zeros"}
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "page": 31,
+  "games": [
+    {
+      "date": "1991-03-10",
+      "opponent": "Washington",
+      "ucla_score": 73,
+      "opp_score": 60,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 73,
+          "players": [
+            {"name": "MacLean", "min": 30, "fg": "6-12", "tp": "0-1", "ft": "6-8", "reb": 4, "ast": 1, "pf": 2, "to": 7, "stl": 2, "blk": 0, "pts": 18},
+            {"name": "Murray", "min": 33, "fg": "5-15", "tp": "1-7", "ft": "0-0", "reb": 4, "ast": 0, "pf": 2, "to": 1, "stl": 1, "blk": 1, "pts": 11},
+            {"name": "Owens", "min": 21, "fg": "3-4", "tp": "0-0", "ft": "2-2", "reb": 4, "ast": 3, "pf": 1, "to": 1, "stl": 0, "blk": 1, "pts": 8},
+            {"name": "Martin", "min": 32, "fg": "3-10", "tp": "1-3", "ft": "1-2", "reb": 3, "ast": 5, "pf": 2, "to": 1, "stl": 2, "blk": 0, "pts": 8},
+            {"name": "Madkins", "min": 24, "fg": "2-5", "tp": "1-3", "ft": "0-0", "reb": 2, "ast": 3, "pf": 2, "to": 0, "stl": 1, "blk": 0, "pts": 5},
+            {"name": "Butler", "min": 23, "fg": "4-8", "tp": "0-0", "ft": "1-1", "reb": 6, "ast": 2, "pf": 2, "to": 2, "stl": 0, "blk": 0, "pts": 9},
+            {"name": "Tarver", "min": 23, "fg": "6-6", "tp": "0-0", "ft": "2-5", "reb": 8, "ast": 2, "pf": 3, "to": 4, "stl": 0, "blk": 1, "pts": 14},
+            {"name": "Zimmerman", "min": 10, "fg": "0-1", "tp": "0-0", "ft": "0-0", "reb": 4, "ast": 0, "pf": 2, "to": 1, "stl": 0, "blk": 1, "pts": 0},
+            {"name": "Richie", "min": 1, "fg": "0-1", "tp": "0-1", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Kenny", "min": 1, "fg": "0-1", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Paulsell", "min": 1, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Mason", "min": 0, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Washington Huskies",
+          "score": 60,
+          "players": [
+            {"name": "Brown", "min": 35, "fg": "3-8", "tp": "0-1", "ft": "3-6", "reb": 6, "ast": 3, "pf": 3, "to": 6, "stl": 2, "blk": 0, "pts": 9},
+            {"name": "Meekins", "min": 29, "fg": "9-14", "tp": "0-0", "ft": "2-2", "reb": 8, "ast": 0, "pf": 3, "to": 3, "stl": 0, "blk": 0, "pts": 20},
+            {"name": "Hayward", "min": 32, "fg": "0-4", "tp": "0-1", "ft": "2-2", "reb": 4, "ast": 2, "pf": 5, "to": 5, "stl": 1, "blk": 0, "pts": 2},
+            {"name": "French", "min": 28, "fg": "1-3", "tp": "0-0", "ft": "0-0", "reb": 3, "ast": 1, "pf": 1, "to": 2, "stl": 2, "blk": 0, "pts": 2},
+            {"name": "Merritt", "min": 40, "fg": "8-17", "tp": "3-9", "ft": "2-4", "reb": 7, "ast": 1, "pf": 2, "to": 1, "stl": 4, "blk": 0, "pts": 21},
+            {"name": "Caviezel", "min": 14, "fg": "2-9", "tp": "1-3", "ft": "0-2", "reb": 2, "ast": 0, "pf": 1, "to": 0, "stl": 2, "blk": 0, "pts": 5},
+            {"name": "Youngblood", "min": 21, "fg": "0-3", "tp": "0-1", "ft": "1-2", "reb": 1, "ast": 1, "pf": 1, "to": 2, "stl": 0, "blk": 0, "pts": 1},
+            {"name": "Woods", "min": 1, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

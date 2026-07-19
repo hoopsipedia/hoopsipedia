@@ -1,0 +1,41 @@
+{
+  "page": 27,
+  "games": [
+    {
+      "date": "1975-03-02",
+      "opponent": "Indiana",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 78,
+          "players": [
+            {"name": "Andreas", "fg": "8-11", "ft": "4-6", "reb": 7, "ast": 2, "pf": 4, "pts": 20},
+            {"name": "Weston", "fg": "5-8", "ft": "3-4", "reb": 5, "ast": 2, "pf": 5, "pts": 13},
+            {"name": "Taylor", "fg": "7-16", "ft": "1-1", "reb": 12, "ast": 1, "pf": 3, "pts": 15},
+            {"name": "Wood", "fg": "0-1", "ft": "0-0", "reb": 0, "ast": 1, "pf": 0, "pts": 0},
+            {"name": "Bolden", "fg": "10-14", "ft": "2-6", "reb": 2, "ast": 5, "pf": 4, "pts": 22},
+            {"name": "Bayless", "fg": "4-10", "ft": "0-0", "reb": 3, "ast": 5, "pf": 1, "pts": 8},
+            {"name": "Stiegemeier", "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 3, "pts": 0},
+            {"name": "Hammond", "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "pts": 0},
+            {"name": "Shields", "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "pts": 0}
+          ],
+          "checksum_ok": true
+        },
+        {
+          "name": "Indiana Hoosiers",
+          "score": 86,
+          "players": [
+            {"name": "Green", "fg": "12-20", "ft": "5-6", "reb": 7, "ast": 2, "pf": 4, "pts": 29},
+            {"name": "Wilkerson", "fg": "6-15", "ft": "2-2", "reb": 14, "ast": 4, "pf": 3, "pts": 14},
+            {"name": "Benson", "fg": "5-14", "ft": "1-4", "reb": 6, "ast": 1, "pts": 11},
+            {"name": "Buckner", "fg": "9-18", "ft": "1-3", "reb": 6, "ast": 9, "pf": 3, "pts": 19},
+            {"name": "Laskowski", "fg": "2-5", "ft": "6-6", "reb": 3, "ast": 2, "pf": 3, "pts": 10},
+            {"name": "Abernathy", "fg": "1-1", "ft": "1-2", "reb": 1, "ast": 0, "pf": 1, "pts": 3}
+          ],
+          "checksum_ok": true
+        }
+      ]
+    }
+  ],
+  "skipped": []
+}

@@ -1,0 +1,48 @@
+{
+  "page": 23,
+  "games": [
+    {
+      "date": "1978-02-18",
+      "opponent": "North Carolina",
+      "location": "Chapel Hill, N.C.",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 54,
+          "players": [
+            {"name": "Mike Owens", "min": 38, "fg": "3-9", "ft": "6-10", "reb": 6, "ast": 1, "pf": 5, "to": 1, "stl": 0, "blk": 0, "pts": 12},
+            {"name": "Marc Iavaroni", "min": 35, "fg": "0-3", "ft": "0-0", "reb": 3, "ast": 0, "pf": 5, "to": 4, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Steve Castellan", "min": 8, "fg": "0-0", "ft": "0-0", "reb": 2, "ast": 0, "pf": 2, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Jeff Lamp", "min": 39, "fg": "10-19", "ft": "2-2", "reb": 7, "ast": 1, "pf": 4, "to": 0, "stl": 0, "blk": 0, "pts": 22},
+            {"name": "Bobby Stokes", "min": 31, "fg": "0-0", "ft": "1-2", "reb": 2, "ast": 3, "pf": 4, "to": 6, "stl": 1, "blk": 0, "pts": 1},
+            {"name": "Lee Raker", "min": 26, "fg": "3-7", "ft": "1-2", "reb": 1, "ast": 1, "pf": 5, "to": 1, "stl": 1, "blk": 0, "pts": 7},
+            {"name": "Tommy Hicks", "min": 12, "fg": "3-3", "ft": "2-4", "reb": 2, "ast": 2, "pf": 2, "to": 1, "stl": 1, "blk": 0, "pts": 8},
+            {"name": "Tommy Briscoe", "min": 3, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Garland Jefferson", "min": 4, "fg": "2-3", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Ed Schetlick", "min": 4, "fg": "0-1", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "North Carolina",
+          "score": 71,
+          "players": [
+            {"name": "Al Wood", "min": 23, "fg": "2-4", "ft": "0-0", "reb": 7, "ast": 1, "pf": 4, "to": 0, "stl": 0, "blk": 2, "pts": 4},
+            {"name": "Dudley Bradley", "min": 23, "fg": "2-3", "ft": "0-0", "reb": 3, "ast": 3, "pf": 4, "to": 0, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Jeff Wolf", "min": 34, "fg": "2-2", "ft": "3-6", "reb": 10, "ast": 0, "pf": 3, "to": 0, "stl": 1, "blk": 2, "pts": 7},
+            {"name": "Tom Zaliagiris", "min": 34, "fg": "4-10", "ft": "3-6", "reb": 5, "ast": 2, "pf": 2, "to": 1, "stl": 3, "blk": 0, "pts": 11},
+            {"name": "Phil Ford", "min": 37, "fg": "9-17", "ft": "12-14", "reb": 2, "ast": 3, "pf": 2, "to": 1, "stl": 2, "blk": 0, "pts": 30},
+            {"name": "John Virgil", "min": 13, "fg": "3-3", "ft": "3-5", "reb": 1, "ast": 1, "pf": 1, "to": 0, "stl": 0, "blk": 1, "pts": 9},
+            {"name": "Pete Budko", "min": 16, "fg": "1-1", "ft": "0-0", "reb": 1, "ast": 0, "pf": 4, "to": 0, "stl": 0, "blk": 1, "pts": 2},
+            {"name": "Dave Colescott", "min": 12, "fg": "0-1", "ft": "2-2", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Ged Doughton", "min": 3, "fg": "0-0", "ft": "2-2", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Randy Wiel", "min": 2, "fg": "0-1", "ft": "0-0", "reb": 1, "ast": 1, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Mike Pepper", "min": 1, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": [],
+  "notes": "Typed official stats sheet, single game vs North Carolina at Chapel Hill on 2/18/1977-78 season (dated 1978-02-18). Sheet includes a printed 'Pts' column for every player, so pts values were taken directly except for Dudley Bradley, whose printed Pts cell appeared as 0 despite FG 2-3/FT 0-0 (which computes to 4 via 2*FGM+FTM); used the computed value 4 since it reconciles the North Carolina team total (71) while the printed reading did not (would total 67). All other players' printed Pts matched 2*FGM+FTM exactly. Both teams' player point sums equal the box's final scores (Virginia 54, North Carolina 71). Sheet includes a '3 Pt' column but it is all zeros for every player (pre-3-point-line era, likely a template placeholder), so tp was omitted per instructions. Jeff Larp/Lamp spelled 'Jeff Larup' on the sheet but this is the well-known Jeff Lamp (later NBA player); recorded as 'Jeff Lamp'."
+}

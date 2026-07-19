@@ -1,0 +1,9 @@
+{
+  "page": 16,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "2/17/34 Ohio State vs Michigan (final Ohio 20, Michigan 26, Coliseum, coach H.G. Olsen). Michigan's box score checksums perfectly (player PTS sum = 26 = team score, and G/F/MF/P columns all sum to the TOTALS row). Ohio State's box score does NOT checksum: legible player PTS values (Wendt 0, Wilson 2, Hosequist 9, Beltner 2, Conrad 0, Wittinger 0, Colburn 2) sum to 15, but Ohio's final score and the sheet's own TOTALS row both show 20 (5-point gap). The G column also sums to 6 from individual rows vs 8 on the TOTALS row, and MF/P columns show smaller mismatches, indicating at least one digit in the Ohio State table (likely Hosequist's G or another row) is misread/illegible on this scan. Rather than guess which digit is wrong, skipping the whole game since one team's data cannot be trusted. Already used the single allowed Read; not re-reading."
+    }
+  ]
+}

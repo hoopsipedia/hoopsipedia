@@ -1,0 +1,50 @@
+{
+  "page": 4,
+  "games": [
+    {
+      "date": "1965-01-09",
+      "opponent": "Clemson",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 72,
+          "players": [
+            {"name": "Jerry Sanders", "fg": "0-3", "ft": "0-0", "reb": 1, "pf": 1, "pts": 0},
+            {"name": "Ken Goble", "fg": "1-4", "ft": "4-4", "reb": 1, "pf": 2, "pts": 6},
+            {"name": "Mack Caldwell", "fg": "4-11", "ft": "3-5", "reb": 10, "pf": 4, "pts": 11},
+            {"name": "Jim Connelly", "fg": "4-11", "ft": "3-5", "reb": 3, "pf": 5, "pts": 11},
+            {"name": "Bernie Meyer", "fg": "2-4", "ft": "1-1", "reb": 3, "pf": 5, "pts": 5},
+            {"name": "Teed Wafle", "fg": "2-6", "ft": "9-11", "reb": 8, "pf": 3, "pts": 13},
+            {"name": "Mack Wilcox", "fg": "3-4", "ft": "4-5", "reb": 5, "pf": 4, "pts": 10},
+            {"name": "Fred Stant", "fg": "4-9", "ft": "5-6", "reb": 7, "pf": 3, "pts": 13},
+            {"name": "Renny Barnes", "fg": "0-0", "ft": "0-0", "reb": 1, "pf": 1, "pts": 0},
+            {"name": "Bob Engel", "fg": "1-2", "ft": "1-1", "reb": 3, "pf": 0, "pts": 3}
+          ]
+        },
+        {
+          "name": "Clemson Tigers",
+          "score": 99,
+          "players": [
+            {"name": "Hank Channell", "fg": "3-7", "ft": "0-1", "reb": 8, "pf": 4, "pts": 6},
+            {"name": "Jim Sutherland", "fg": "5-15", "ft": "2-2", "reb": 9, "pf": 2, "pts": 12},
+            {"name": "Randy Mahaffey", "fg": "7-14", "ft": "4-9", "reb": 6, "pf": 3, "pts": 18},
+            {"name": "Buddy Benedict", "fg": "2-5", "ft": "2-5", "reb": 3, "pf": 2, "pts": 6},
+            {"name": "Joe Ayoob", "fg": "4-6", "ft": "3-3", "reb": 4, "pf": 0, "pts": 11},
+            {"name": "Garry Helms", "fg": "4-7", "ft": "0-1", "reb": 2, "pf": 2, "pts": 8},
+            {"name": "Walt Ayers", "fg": "2-6", "ft": "0-1", "reb": 2, "pf": 3, "pts": 4},
+            {"name": "Ronnie Cox", "fg": "2-4", "ft": "3-4", "reb": 1, "pf": 0, "pts": 7},
+            {"name": "Ken Gardner", "fg": "1-2", "ft": "8-9", "reb": 4, "pf": 3, "pts": 10},
+            {"name": "Rudy Antonio", "fg": "0-1", "ft": "3-4", "reb": 1, "pf": 4, "pts": 3},
+            {"name": "Tom Corcoran", "fg": "1-3", "ft": "1-2", "reb": 1, "pf": 2, "pts": 3},
+            {"name": "Donnie Switz", "fg": "1-4", "ft": "0-0", "reb": 1, "pf": 1, "pts": 2},
+            {"name": "Richard Hall", "fg": "2-8", "ft": "0-0", "reb": 5, "pf": 1, "pts": 4},
+            {"name": "Fred Steitzer", "fg": "1-2", "ft": "3-3", "reb": 1, "pf": 2, "pts": 5}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": [],
+  "notes": "Sheet has no MIN/AST/TO/STL/BLK columns (pre-3pt era, no tp column either). Virginia bench players Whitey Rocklein, Jim Galloway, Wayne Metzger, and Dale Hilamier are listed on the roster but have entirely blank stat rows (did not play) and were omitted rather than recorded as zero. Two cells required correction against the printed team totals to pass checksum: (1) Clemson's Fred Steitzer FT reads ambiguously as 2-3 in the handwriting but must be 3-3 to match both his own printed points total (5) and the team FT-made total (29); corrected to 3-3. (2) Clemson's Joe Ayoob has a smudged/illegible printed points digit that looked like '5', inconsistent with his own FG (4-6) and FT (3-3) which imply 2*4+3=11; using pts=11 makes both his row and the team point total (99) balance exactly, so it was computed from FG/FT rather than the illegible printed digit, per the pre-3pt pts=2*fg_made+ft_made rule. Ayoob's PF cell shows an odd '0x' mark (possibly a scan artifact or a foul-out notation); recorded as pf=0 since the digit itself reads as 0 and it fits the team PF total (29). All other FG/FT/REB/PF/PTS column sums for both teams match the printed TOTALS row exactly."
+}

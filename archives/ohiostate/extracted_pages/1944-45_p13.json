@@ -1,0 +1,48 @@
+{
+  "page": 13,
+  "games": [
+    {
+      "date": "1945-02-09",
+      "opponent": "Wisconsin",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 63,
+          "players": [
+            {"name": "Grate", "pts": 8},
+            {"name": "Caudill", "pts": 10},
+            {"name": "Dugger", "pts": 9},
+            {"name": "Snyder", "pts": 6},
+            {"name": "McFadden", "pts": 2},
+            {"name": "Risen", "pts": 7},
+            {"name": "Pfeiffer", "pts": 6},
+            {"name": "Huston", "pts": 7},
+            {"name": "Amling", "pts": 8},
+            {"name": "Simms", "pts": 0},
+            {"name": "Jacobs", "pts": 0}
+          ]
+        },
+        {
+          "name": "Wisconsin",
+          "score": 34,
+          "players": [
+            {"name": "Bunke", "pts": 4},
+            {"name": "Smith", "pts": 5},
+            {"name": "Mathews", "pts": 2},
+            {"name": "Patterson", "pts": 13},
+            {"name": "Bachman", "pts": 0},
+            {"name": "Rosendahl", "pts": 0},
+            {"name": "Johnson", "pts": 6},
+            {"name": "Zorn", "pts": 0},
+            {"name": "Goering", "pts": 4},
+            {"name": "Grimm", "pts": 0},
+            {"name": "Hollinger", "pts": 0},
+            {"name": "Sullivan", "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

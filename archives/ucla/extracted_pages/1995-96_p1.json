@@ -1,0 +1,54 @@
+{
+  "page": 1,
+  "games": [
+    {
+      "date": "1995-11-20",
+      "opponent": "Santa Clara",
+      "ucla_score": 69,
+      "opp_score": 78,
+      "notes": "Maui Invitational. Score by periods: Santa Clara 38-40=78, UCLA 36-33=69. No OT. Attendance 2,400. Some individual sub-column values (FG/3P/FT splits, rebounds, assists, steals, minutes) for Santa Clara's Steve Nash and UCLA's J.R. Henderson were faint/ambiguous on the scan and were reconstructed by reconciling against team column totals (all reconciled values satisfy the team FG/3P/FT/OR/DR/PF/A/TO/BLK/S/MIN totals). UCLA bench players Ike Nwankwo and Harold Sylvester played very limited garbage-time minutes with all-zero stat lines per the sheet; minutes for these two are approximate.",
+      "teams": [
+        {
+          "name": "Santa Clara Broncos",
+          "score": 78,
+          "players": [
+            {"name": "Jason Sedlock", "min": 13, "fg": "2-2", "ft": "0-0", "tp": "0-0", "reb": 1, "ast": 3, "pf": 4, "to": 0, "stl": 1, "blk": 0, "pts": 4},
+            {"name": "Kevin Dunne", "min": 28, "fg": "2-2", "ft": "3-6", "tp": "1-1", "reb": 5, "ast": 2, "pf": 2, "to": 5, "stl": 0, "blk": 1, "pts": 8},
+            {"name": "Brendan Graves", "min": 26, "fg": "4-7", "ft": "3-4", "tp": "0-0", "reb": 3, "ast": 2, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 11},
+            {"name": "Steve Nash", "min": 28, "fg": "5-12", "ft": "7-7", "tp": "2-5", "reb": 1, "ast": 7, "pf": 3, "to": 3, "stl": 3, "blk": 0, "pts": 19},
+            {"name": "Marlon Garnett", "min": 35, "fg": "7-14", "ft": "4-4", "tp": "3-8", "reb": 3, "ast": 3, "pf": 0, "to": 1, "stl": 3, "blk": 0, "pts": 21},
+            {"name": "Lloyd Pierce", "min": 16, "fg": "0-7", "ft": "1-2", "tp": "0-0", "reb": 5, "ast": 0, "pf": 0, "to": 2, "stl": 1, "blk": 0, "pts": 1},
+            {"name": "Phil Von Buchwaldt", "min": 20, "fg": "3-4", "ft": "4-4", "tp": "0-0", "reb": 6, "ast": 0, "pf": 2, "to": 3, "stl": 0, "blk": 0, "pts": 10},
+            {"name": "Drew Zurek", "min": 14, "fg": "2-3", "ft": "0-0", "tp": "0-1", "reb": 1, "ast": 0, "pf": 3, "to": 1, "stl": 0, "blk": 1, "pts": 4},
+            {"name": "Adam Anderson", "min": 14, "fg": "0-2", "ft": "0-0", "tp": "0-1", "reb": 3, "ast": 0, "pf": 4, "to": 3, "stl": 1, "blk": 0, "pts": 0},
+            {"name": "Todd Wuschnig", "min": 3, "fg": "0-1", "ft": "0-0", "tp": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Harry Hofmann", "min": 1, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 1, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Matt Coleman", "min": 1, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Craig Johnson", "min": 1, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Nathan Fast", "min": 0, "pts": 0, "notes": "DNP"}
+          ]
+        },
+        {
+          "name": "UCLA Bruins",
+          "score": 69,
+          "players": [
+            {"name": "Charles O'Bannon", "min": 34, "fg": "8-14", "ft": "4-7", "tp": "1-2", "reb": 7, "ast": 4, "pf": 3, "to": 3, "stl": 1, "blk": 2, "pts": 21},
+            {"name": "J.R. Henderson", "min": 32, "fg": "9-14", "ft": "0-1", "tp": "0-0", "reb": 6, "ast": 1, "pf": 1, "to": 4, "stl": 3, "blk": 0, "pts": 18},
+            {"name": "Jelani McCoy", "min": 24, "fg": "2-3", "ft": "2-4", "tp": "0-0", "reb": 7, "ast": 0, "pf": 4, "to": 2, "stl": 0, "blk": 6, "pts": 6},
+            {"name": "Cameron Dollar", "min": 28, "fg": "0-3", "ft": "0-0", "tp": "0-3", "reb": 3, "ast": 5, "pf": 5, "to": 7, "stl": 1, "blk": 0, "pts": 0},
+            {"name": "Toby Bailey", "min": 27, "fg": "5-14", "ft": "0-3", "tp": "2-8", "reb": 1, "ast": 1, "pf": 4, "to": 3, "stl": 2, "blk": 0, "pts": 12},
+            {"name": "Kevin Dempsey", "min": 12, "fg": "2-6", "ft": "0-1", "tp": "1-2", "reb": 1, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 5},
+            {"name": "Kris Johnson", "min": 19, "fg": "1-1", "ft": "0-0", "tp": "0-0", "reb": 3, "ast": 3, "pf": 1, "to": 1, "stl": 2, "blk": 0, "pts": 2},
+            {"name": "omm'A Givens", "min": 12, "fg": "1-2", "ft": "1-2", "tp": "0-1", "reb": 2, "ast": 0, "pf": 0, "to": 1, "stl": 1, "blk": 0, "pts": 3},
+            {"name": "Brandon Loyd", "min": 6, "fg": "0-2", "ft": "0-0", "tp": "0-2", "reb": 3, "ast": 0, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Bob Myers", "min": 2, "fg": "0-0", "ft": "2-3", "tp": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 0, "stl": 1, "blk": 0, "pts": 2},
+            {"name": "Ike Nwankwo", "min": 1, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Harold Sylvester", "min": 2, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

@@ -1,0 +1,49 @@
+{
+  "page": 2,
+  "games": [
+    {
+      "date": "1979-12-01",
+      "opponent": "Georgia Tech",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 55,
+          "players": [
+            {"name": "Mike Owens", "min": 29, "fg": "1-2", "ft": "2-4", "reb": 2, "pf": 1, "ast": 0, "to": 1, "pts": 4},
+            {"name": "Lee Raker", "min": 17, "fg": "2-4", "ft": "8-8", "reb": 1, "pf": 4, "ast": 0, "to": 0, "pts": 12},
+            {"name": "Ralph Sampson", "min": 23, "fg": "2-3", "ft": "0-0", "reb": 6, "pf": 2, "ast": 0, "to": 0, "pts": 4},
+            {"name": "Jeff Lamp", "min": 39, "fg": "4-9", "ft": "5-7", "reb": 5, "pf": 1, "ast": 0, "to": 3, "pts": 13},
+            {"name": "Jeff Jones", "min": 32, "fg": "0-8", "ft": "7-9", "reb": 1, "pf": 2, "ast": 2, "to": 3, "pts": 7},
+            {"name": "Terry Gates", "min": 19, "fg": "0-1", "ft": "3-4", "reb": 4, "pf": 1, "ast": 0, "to": 0, "pts": 3},
+            {"name": "Jeff Klein", "min": 24, "fg": "2-4", "ft": "1-2", "reb": 3, "pf": 1, "ast": 1, "to": 1, "pts": 5},
+            {"name": "Doug Newberg", "min": 9, "fg": "0-2", "reb": 4, "pf": 0, "ast": 1, "to": 1, "pts": 0},
+            {"name": "Craig Robinson", "min": 6, "fg": "1-2", "ft": "0-1", "reb": 2, "pf": 0, "ast": 0, "to": 0, "pts": 2},
+            {"name": "Lewis LaTourette", "min": 8, "fg": "1-1", "ft": "1-2", "reb": 3, "pf": 3, "ast": 0, "to": 0, "pts": 3},
+            {"name": "Dean Carpenter", "min": 1, "fg": "0-1", "reb": 1, "pf": 0, "ast": 0, "to": 0, "pts": 0},
+            {"name": "Darren Cross", "min": 1, "fg": "1-3", "reb": 0, "pf": 0, "ast": 0, "to": 1, "pts": 2}
+          ]
+        },
+        {
+          "name": "Georgia Tech",
+          "score": 37,
+          "players": [
+            {"name": "Brock Steppe", "fg": "5-11", "ft": "4-4", "reb": 3, "pf": 6, "ast": 1, "to": 0, "pts": 14},
+            {"name": "Lenny Horton", "min": 32, "fg": "3-9", "ft": "3-3", "reb": 6, "pf": 5, "ast": 1, "to": 4, "pts": 9},
+            {"name": "Rob Noles", "min": 23, "fg": "0-3", "ft": "2-2", "reb": 2, "pf": 5, "ast": 1, "to": 6, "pts": 2},
+            {"name": "Kenny O'Brien", "min": 23, "fg": "1-2", "ft": "0-1", "reb": 2, "pf": 2, "ast": 1, "to": 1, "pts": 2},
+            {"name": "John Mann", "fg": "3-4", "reb": 4, "pf": 3, "ast": 2, "to": 2, "pts": 6},
+            {"name": "John Nidiffer", "min": 1, "fg": "0-0", "reb": 0, "pf": 2, "ast": 0, "to": 6, "pts": 0},
+            {"name": "Steve Neal", "min": 10, "fg": "1-3", "reb": 1, "pf": 3, "ast": 0, "to": 1, "pts": 2},
+            {"name": "Fred Hall", "min": 4, "fg": "0-2", "reb": 2, "pf": 0, "ast": 0, "to": 3, "pts": 0},
+            {"name": "George Thomas", "min": 16, "fg": "1-2", "reb": 1, "pf": 2, "ast": 0, "to": 2, "pts": 2},
+            {"name": "Steve Peck", "min": 13, "fg": "0-1", "reb": 2, "pf": 1, "ast": 0, "to": 3, "pts": 0},
+            {"name": "Steve Shaw", "min": 7, "fg": "0-1", "reb": 0, "pf": 5, "ast": 0, "to": 2, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true,
+      "notes": "Printed team TOTALS row shows FT/FTA/FG/FGA/REB matching individual sums exactly for both teams, confirming high-confidence transcription. Printed TP team-totals cells (37 for Georgia Tech, 52 for Virginia) and the 'Final' score-by-periods box (39 for Georgia Tech) appear to contain handwriting misreads (7/9 and 2/5 confusable digits); actual final score used here (Virginia 55, Georgia Tech 37) is corroborated independently by: (1) sum of individual player points for each team, and (2) the half-by-half score-by-periods line (Virginia 27+28=55, Georgia Tech 17+20=37). BLK/steals column on the sheet (header ambiguous, appears as a narrow column between BLK and MIN) was not transcribed due to uncertain column alignment; omitted rather than guessed."
+    }
+  ],
+  "skipped": []
+}

@@ -1,0 +1,9 @@
+{
+  "page": 16,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page shows a Michigan State vs Ohio State box score (score-by-periods table: Michigan State 26+43=69, Ohio State 33+41=74), but the Michigan State player table (top of page) is cut off at the top edge (missing opening rows) and its FG/FGA/FT/REB/PF/TP/A/TO/BLK/S digits are too faint/ambiguous to transcribe confidently or checksum. The Ohio State table (bottom, labeled 'OFFICIAL BIG TEN BASKETBALL BOX SCORE') is more legible but several player rows have overlapping/cursive names and digits that cannot be read with confidence either. Since both teams' player lines are required and cannot be reliably transcribed/checksummed, the entire game is skipped rather than risk invented values."
+    }
+  ]
+}

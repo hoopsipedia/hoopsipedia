@@ -1,0 +1,42 @@
+{
+  "page": 30,
+  "games": [
+    {
+      "date": "1989-03-10",
+      "opponent": "UTEP",
+      "site": "Huntsman Center - SLC",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 57,
+          "players": [
+            {"name": "McBurrows", "min": 32, "fg": "2-4", "tp": "0-1", "ft": "2-5", "reb": 5, "ast": 1, "pf": 2, "to": 1, "pts": 6},
+            {"name": "Thomas", "min": 28, "fg": "6-17", "tp": "0-0", "ft": "0-2", "reb": 7, "ast": 2, "pf": 4, "to": 1, "stl": 1, "pts": 12},
+            {"name": "Longley", "min": 40, "fg": "7-16", "tp": "0-0", "ft": "2-2", "reb": 10, "ast": 2, "pf": 2, "to": 4, "blk": 2, "stl": 1, "pts": 16},
+            {"name": "McGee", "min": 26, "fg": "2-7", "tp": "2-3", "ft": "0-0", "reb": 2, "ast": 5, "pf": 2, "to": 2, "pts": 6},
+            {"name": "Robbins", "min": 37, "fg": "5-8", "tp": "1-2", "ft": "2-2", "reb": 1, "ast": 3, "pf": 1, "to": 1, "pts": 13},
+            {"name": "Walker", "min": 15, "fg": "1-1", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 2, "pts": 2},
+            {"name": "Miller", "min": 12, "fg": "0-4", "tp": "0-0", "ft": "2-2", "reb": 2, "ast": 1, "pf": 1, "to": 0, "pts": 2},
+            {"name": "Banks", "min": 10, "fg": "0-1", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 2, "pts": 0}
+          ]
+        },
+        {
+          "name": "UTEP Miners",
+          "score": 89,
+          "players": [
+            {"name": "McCall", "min": 27, "fg": "7-10", "tp": "2-3", "ft": "0-0", "reb": 6, "ast": 2, "pf": 0, "to": 0, "pts": 16},
+            {"name": "Davis", "min": 21, "fg": "3-6", "tp": "0-0", "ft": "1-2", "reb": 6, "ast": 0, "pf": 1, "to": 1, "pts": 7},
+            {"name": "Foster", "min": 26, "fg": "6-12", "tp": "0-0", "ft": "3-3", "reb": 11, "ast": 1, "pf": 4, "to": 2, "blk": 3, "pts": 15},
+            {"name": "Hardaway", "min": 39, "fg": "13-21", "tp": "1-2", "ft": "1-1", "reb": 3, "ast": 8, "pf": 2, "to": 2, "blk": 1, "stl": 2, "pts": 28},
+            {"name": "Stewart", "min": 37, "fg": "5-13", "tp": "0-2", "ft": "3-5", "reb": 1, "ast": 4, "pf": 1, "to": 1, "pts": 13},
+            {"name": "Melvin", "min": 15, "fg": "3-3", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 1, "pf": 1, "to": 0, "stl": 2, "pts": 6},
+            {"name": "Ezenwa", "min": 16, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 4, "ast": 0, "pf": 3, "to": 1, "pts": 0},
+            {"name": "Van Dyke", "min": 19, "fg": "2-4", "tp": "0-0", "ft": "0-0", "reb": 8, "ast": 0, "pf": 4, "to": 1, "stl": 1, "pts": 4}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

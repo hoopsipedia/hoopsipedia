@@ -1,0 +1,9 @@
+{
+  "page": 9,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Ohio State vs Illinois, January 7, 1950 (Official Western Conference Basketball Box Score). Ohio State side checksums cleanly (player PTS sum = 83 = declared team score). Illinois side FAILS checksum: player PTS column sums to 60 (7+6+0+3+3+10+11+2+0+8+6+4+0) but the declared team score and TOTALS row both show 62 — a 2-point discrepancy. The Illinois FG (23) and FT (16) column totals independently match their TOTALS row, and 2*23+16=62 matches the declared score exactly, indicating the true per-player breakdown reconciles to 62; the discrepancy traces to one ambiguous row (Gerecke F: printed as FG 2, FGA 3, FT 1, FTM 0, PTS 3 — but 2*FG+FT=5 not 3, while FG=1 would reconcile it, i.e. the FG digit is likely misprinted/misread as '2' vs '1' on the scan). Re-read the page once (allowed re-read used) and the image was identical/no clearer, so the ambiguity could not be resolved without guessing. Skipping the entire game per instructions rather than inventing a corrected digit."
+    }
+  ]
+}

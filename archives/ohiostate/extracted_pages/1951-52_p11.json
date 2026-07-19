@@ -1,0 +1,47 @@
+{
+  "page": 11,
+  "games": [
+    {
+      "date": "1952-02-02",
+      "opponent": "Illinois",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 62,
+          "players": [
+            {"name": "Williams", "fg": "2-7", "ft": "4-4", "pf": 5, "pts": 8},
+            {"name": "Gillaugh", "fg": "2-5", "ft": "1-2", "pf": 2, "pts": 5},
+            {"name": "Wilks", "fg": "2-15", "ft": "1-2", "pf": 3, "pts": 5},
+            {"name": "Dawe", "fg": "0-0", "ft": "0-0", "pf": 0, "pts": 0},
+            {"name": "Moore", "fg": "0-0", "ft": "0-0", "pf": 0, "pts": 0},
+            {"name": "Ebert", "fg": "8-18", "ft": "5-7", "pf": 5, "pts": 21},
+            {"name": "Armstrong", "fg": "4-5", "ft": "4-5", "pf": 5, "pts": 12},
+            {"name": "Keraffa", "fg": "0-4", "ft": "0-1", "pf": 1, "pts": 0},
+            {"name": "Hatfield", "fg": "2-3", "ft": "0-1", "pf": 4, "pts": 4},
+            {"name": "Hague", "fg": "0-1", "ft": "0-1", "pf": 0, "pts": 0},
+            {"name": "Jones", "fg": "1-4", "ft": "0-2", "pf": 1, "pts": 2},
+            {"name": "Cook", "fg": "2-4", "ft": "1-2", "pf": 1, "pts": 5}
+          ]
+        },
+        {
+          "name": "Illinois",
+          "score": 66,
+          "players": [
+            {"name": "Bemoras", "fg": "3-12", "ft": "2-3", "pf": 4, "pts": 8},
+            {"name": "Hooper", "fg": "1-3", "ft": "1-1", "pf": 1, "pts": 3},
+            {"name": "C. Follmer", "fg": "2-10", "ft": "1-2", "pf": 1, "pts": 5},
+            {"name": "Gerecke", "fg": "0-2", "ft": "0-0", "pf": 5, "pts": 0},
+            {"name": "Christiansen", "fg": "0-0", "ft": "0-2", "pf": 0, "pts": 0},
+            {"name": "Peterson", "fg": "1-5", "ft": "4-6", "pf": 5, "pts": 6},
+            {"name": "Kerr", "fg": "9-18", "ft": "2-5", "pf": 4, "pts": 20},
+            {"name": "Bradar", "fg": "3-10", "ft": "1-2", "pf": 3, "pts": 7},
+            {"name": "Wright", "fg": "0-0", "ft": "0-0", "pf": 0, "pts": 0},
+            {"name": "Fletcher", "fg": "6-16", "ft": "5-8", "pf": 4, "pts": 17}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

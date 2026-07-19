@@ -1,0 +1,9 @@
+{
+  "page": 8,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page shows one game (Holy Cross @ Ohio State, Dec 21 1982, St. John Arena, final Holy Cross 60 - Ohio State 81). Holy Cross player-points checksum passes (sum=60, matches final). Ohio State player-points checksum FAILS: individual player TP sum = 79 vs team final/TOTALS row TP = 81 (a 2-point gap). Team FT/FTA totals (15-18, corroborated internally by 1st/2nd-half FT splits 7-7 and 8-11 and by FT%=83.3) exceed the sum of legible per-player FT columns (13-16) by exactly 2-2, while every individual row is internally consistent (2*FG+FT=TP) and FG/FGA sums match team totals exactly (33/67). Most likely a technical-foul free throw (a technical foul on 'Hohman' is noted on the sheet) credited to the team total but not attributable to a specific player line, or one player's FT digits are too faint/ambiguous to confidently assign the missing 2-2 to a specific row. Per instructions, skipping rather than guessing which player's FT to adjust."
+    }
+  ]
+}

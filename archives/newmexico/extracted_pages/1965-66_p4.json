@@ -1,0 +1,43 @@
+{
+  "page": 4,
+  "games": [
+    {
+      "date": "1965-12-11",
+      "opponent": "Texas Tech",
+      "location": "Lubbock, TX",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 68,
+          "players": [
+            {"name": "Morgan", "fg": "1-1", "ft": "0-4", "reb": 2, "pf": 5, "pts": 2},
+            {"name": "Monroe", "fg": "4-15", "ft": "2-2", "reb": 7, "pf": 5, "pts": 10},
+            {"name": "Daniels", "fg": "16-23", "ft": "7-7", "reb": 10, "pf": 4, "pts": 39},
+            {"name": "Howard", "fg": "1-7", "ft": "2-2", "reb": 4, "pf": 5, "pts": 4},
+            {"name": "Hoover", "fg": "3-8", "ft": "0-0", "reb": 1, "pf": 1, "pts": 6},
+            {"name": "Patterson", "fg": "3-10", "ft": "1-1", "reb": 5, "pf": 5, "pts": 7},
+            {"name": "Johnston", "fg": "0-1", "ft": "0-2", "reb": 4, "pf": 4, "pts": 0},
+            {"name": "Burwitz", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Dupree", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Rose", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Texas Tech Red Raiders",
+          "score": 78,
+          "players": [
+            {"name": "Wilkinson", "fg": "4-7", "ft": "6-6", "reb": 3, "pf": 1, "pts": 14},
+            {"name": "Reuther", "fg": "4-15", "ft": "6-10", "reb": 10, "pf": 1, "pts": 14},
+            {"name": "Glover", "fg": "4-7", "ft": "1-3", "reb": 5, "pf": 4, "pts": 9},
+            {"name": "Malaise", "fg": "7-18", "ft": "5-7", "reb": 2, "pf": 3, "pts": 19},
+            {"name": "Tapp", "fg": "2-4", "ft": "5-6", "reb": 6, "pf": 2, "pts": 9},
+            {"name": "Paul", "fg": "3-6", "ft": "7-8", "reb": 6, "pf": 3, "pts": 13}
+          ]
+        }
+      ],
+      "checksum_ok": true,
+      "notes": "Box score also lists final score by periods (NM 31-37-68, TT 36-42-78), team totals (NM: fg 28-65, ft 12-18, reb 33, pf 29, tp 68; TT: fg 24-57, ft 30-40, reb 32, pf 14, tp 78), team rebounds (NM 9, TT 12), fg%/ft% splits, officials (Charles Lutz, Yvan Rechy), and attendance 9,500 — not transcribed into player lines per schema. Player pts columns were printed on sheet as 'tp' (already provided, not computed)."
+    }
+  ],
+  "skipped": []
+}

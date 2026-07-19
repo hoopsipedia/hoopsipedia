@@ -1,0 +1,41 @@
+{
+  "page": 24,
+  "games": [
+    {
+      "date": "1989-02-22",
+      "opponent": "Georgia Tech",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 65,
+          "players": [
+            {"name": "Stith", "min": 40, "fg": "9-13", "tp": "0-0", "ft": "10-13", "reb": 7, "ast": 1, "pf": 3, "to": 3, "stl": 2, "blk": 0, "pts": 28},
+            {"name": "Blundin", "min": 32, "fg": "1-4", "tp": "0-0", "ft": "2-2", "reb": 9, "ast": 1, "pf": 3, "to": 0, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Dabbs", "min": 33, "fg": "6-12", "tp": "0-0", "ft": "2-2", "reb": 12, "ast": 2, "pf": 1, "to": 6, "stl": 0, "blk": 0, "pts": 14},
+            {"name": "Morgan", "min": 36, "fg": "3-10", "tp": "2-6", "ft": "0-0", "reb": 3, "ast": 4, "pf": 3, "to": 1, "stl": 2, "blk": 0, "pts": 8},
+            {"name": "Crotty", "min": 32, "fg": "3-7", "tp": "1-3", "ft": "0-0", "reb": 5, "ast": 9, "to": 7, "stl": 2, "blk": 0, "pts": 7},
+            {"name": "Oliver", "min": 9, "fg": "0-2", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 1, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Turner", "min": 3, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 2, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Williams", "min": 7, "fg": "1-1", "tp": "0-0", "ft": "0-0", "reb": 2, "ast": 0, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Daniel", "min": 8, "fg": "1-1", "tp": "0-0", "ft": "0-1", "reb": 1, "ast": 0, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 2}
+          ]
+        },
+        {
+          "name": "Georgia Tech Yellow Jackets",
+          "score": 73,
+          "players": [
+            {"name": "Scott", "min": 40, "fg": "9-15", "tp": "1-4", "ft": "2-3", "reb": 1, "ast": 6, "pf": 3, "to": 1, "stl": 4, "blk": 0, "pts": 21},
+            {"name": "Hammonds", "min": 38, "fg": "9-17", "tp": "0-0", "ft": "7-7", "reb": 6, "ast": 0, "pf": 3, "to": 3, "stl": 0, "blk": 1, "pts": 25},
+            {"name": "McNeil", "min": 20, "fg": "0-1", "tp": "0-0", "ft": "1-2", "reb": 2, "ast": 2, "pf": 4, "to": 2, "stl": 0, "blk": 0, "pts": 1},
+            {"name": "Brown", "min": 38, "fg": "2-6", "tp": "0-4", "ft": "2-3", "reb": 2, "ast": 5, "pf": 2, "to": 1, "stl": 3, "blk": 0, "pts": 6},
+            {"name": "Oliver", "min": 39, "fg": "7-15", "tp": "0-2", "ft": "3-4", "reb": 5, "ast": 6, "pf": 3, "to": 4, "stl": 2, "blk": 0, "pts": 17},
+            {"name": "Whitmore", "min": 4, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 1, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Brittian", "min": 21, "fg": "1-1", "tp": "0-0", "ft": "1-2", "reb": 6, "ast": 1, "pf": 4, "to": 2, "stl": 0, "blk": 1, "pts": 3}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

@@ -1,0 +1,42 @@
+{
+  "page": 2,
+  "games": [
+    {
+      "date": "1970-12-01",
+      "opponent": "Utah State",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 89,
+          "players": [
+            {"name": "Minor", "fg": "1-6", "ft": "0-0", "pf": 4, "reb": 0, "pts": 2},
+            {"name": "Macknin", "fg": "4-7", "ft": "0-1", "pf": 4, "reb": 5, "pts": 8},
+            {"name": "Witte", "fg": "8-14", "ft": "4-8", "pf": 3, "reb": 13, "pts": 20},
+            {"name": "Cleamons", "fg": "9-20", "ft": "10-10", "pf": 3, "reb": 4, "pts": 28},
+            {"name": "Hornyak", "fg": "8-15", "ft": "7-10", "pf": 4, "reb": 6, "pts": 23},
+            {"name": "Siekmann", "fg": "2-3", "ft": "3-3", "pf": 2, "reb": 1, "pts": 7},
+            {"name": "Merchant", "fg": "0-0", "ft": "0-0", "pf": 0, "reb": 0, "pts": 0},
+            {"name": "Wagar", "fg": "0-0", "ft": "1-2", "pf": 0, "reb": 1, "pts": 1}
+          ]
+        },
+        {
+          "name": "Utah State",
+          "score": 95,
+          "players": [
+            {"name": "Roberts", "fg": "9-20", "ft": "5-6", "pf": 3, "reb": 17, "pts": 23},
+            {"name": "Williams", "fg": "7-15", "ft": "6-7", "pf": 4, "reb": 2, "pts": 20},
+            {"name": "Love", "fg": "6-9", "ft": "5-8", "pf": 4, "reb": 7, "pts": 17},
+            {"name": "Tebbs", "fg": "2-3", "ft": "2-2", "pf": 5, "reb": 5, "pts": 6},
+            {"name": "Lauriski", "fg": "5-11", "ft": "3-3", "pf": 4, "reb": 5, "pts": 13},
+            {"name": "Hatch", "fg": "4-8", "ft": "4-4", "pf": 1, "reb": 2, "pts": 12},
+            {"name": "Wakefield", "fg": "2-4", "ft": "0-0", "pf": 2, "reb": 1, "pts": 4},
+            {"name": "Bess", "fg": "0-1", "ft": "0-0", "pf": 1, "reb": 0, "pts": 0},
+            {"name": "Epps", "fg": "0-1", "ft": "0-0", "pf": 0, "reb": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

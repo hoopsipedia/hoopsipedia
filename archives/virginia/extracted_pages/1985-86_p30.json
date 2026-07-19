@@ -1,0 +1,46 @@
+{
+  "page": 30,
+  "games": [
+    {
+      "date": "1986-03-13",
+      "opponent": "DePaul",
+      "site": "Greensboro, N.C.",
+      "teams": [
+        {
+          "name": "DePaul",
+          "score": 72,
+          "players": [
+            {"name": "Kevin Holmes", "min": 16, "fg": "5-8", "ft": "2-3", "reb": 3, "pf": 4, "ast": 1, "to": 0, "blk": 0, "stl": 0, "pts": 12},
+            {"name": "Lemone Lampley", "min": 29, "fg": "5-9", "ft": "5-6", "reb": 7, "pf": 1, "ast": 1, "to": 1, "blk": 2, "stl": 1, "pts": 15},
+            {"name": "Marty Embry", "min": 40, "fg": "2-6", "ft": "1-2", "reb": 11, "pf": 3, "ast": 1, "to": 2, "blk": 0, "stl": 0, "pts": 5},
+            {"name": "Rod Strickland", "min": 39, "fg": "6-11", "ft": "0-2", "reb": 1, "pf": 4, "ast": 3, "to": 1, "blk": 0, "stl": 1, "pts": 12},
+            {"name": "Tony Jackson", "min": 35, "fg": "3-8", "ft": "3-5", "reb": 3, "pf": 3, "ast": 7, "to": 3, "blk": 0, "stl": 2, "pts": 9},
+            {"name": "Terence Greene", "min": 12, "fg": "1-1", "ft": "5-6", "reb": 0, "pf": 2, "ast": 1, "to": 3, "blk": 0, "stl": 0, "pts": 7},
+            {"name": "Andy Laux", "min": 5, "fg": "0-2", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Stanley Brundy", "min": 1, "fg": "0-1", "ft": "0-0", "reb": 1, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Dallas Comegys", "min": 23, "fg": "4-8", "ft": "4-5", "reb": 5, "pf": 5, "ast": 0, "to": 2, "blk": 1, "stl": 0, "pts": 12}
+          ]
+        },
+        {
+          "name": "Virginia Cavaliers",
+          "score": 68,
+          "players": [
+            {"name": "Tom Sheehey", "min": 36, "fg": "4-7", "ft": "2-2", "reb": 3, "pf": 4, "ast": 2, "to": 1, "blk": 0, "stl": 1, "pts": 10},
+            {"name": "Andrew Kennedy", "min": 30, "fg": "8-12", "ft": "2-5", "reb": 9, "pf": 4, "ast": 1, "to": 2, "blk": 0, "stl": 1, "pts": 18},
+            {"name": "Olden Polynice", "min": 37, "fg": "4-9", "ft": "5-11", "reb": 9, "pf": 4, "ast": 0, "to": 2, "blk": 1, "stl": 0, "pts": 13},
+            {"name": "Mel Kennedy", "min": 37, "fg": "3-9", "ft": "1-3", "reb": 6, "pf": 5, "ast": 2, "to": 1, "blk": 0, "stl": 0, "pts": 7},
+            {"name": "Tom Calloway", "min": 23, "fg": "5-7", "ft": "2-2", "reb": 1, "pf": 5, "ast": 4, "to": 2, "blk": 0, "stl": 2, "pts": 12},
+            {"name": "John Johnson", "min": 23, "fg": "2-7", "ft": "0-0", "reb": 1, "pf": 1, "ast": 1, "to": 0, "blk": 0, "stl": 1, "pts": 4},
+            {"name": "Richard Morgan", "min": 8, "fg": "1-4", "ft": "0-0", "reb": 1, "pf": 1, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Anthony Soloman", "min": 1, "fg": "1-1", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Jeff Daniel", "min": 5, "fg": "0-1", "ft": "0-0", "reb": 1, "pf": 2, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true,
+      "score_by_periods": {"DePaul": {"1st": 34, "2nd": 38, "final": 72}, "Virginia": {"1st": 26, "2nd": 42, "final": 68}},
+      "notes": "1986 NCAA Tournament game (site Greensboro, N.C.). Both team checksums verified: DePaul player pts sum to 72; Virginia player pts sum to 68, matching team totals on sheet."
+    }
+  ],
+  "skipped": []
+}

@@ -1,0 +1,48 @@
+{
+  "page": 16,
+  "games": [
+    {
+      "date": "1989-01-25",
+      "opponent": "Virginia Tech Hokies",
+      "site": "Richmond Coliseum",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 113,
+          "players": [
+            {"name": "Bryant Stith", "min": 35, "fg": "6-13", "ft": "3-4", "reb": 6, "ast": 1, "pf": 5, "to": 6, "stl": 3, "pts": 15},
+            {"name": "Matt Blundin", "min": 37, "fg": "5-7", "ft": "3-5", "reb": 15, "pf": 3, "to": 2, "pts": 13},
+            {"name": "Brent Dabbs", "min": 32, "fg": "5-12", "ft": "0-2", "reb": 9, "ast": 2, "pf": 2, "to": 2, "stl": 1, "pts": 10},
+            {"name": "Richard Morgan", "min": 38, "fg": "8-25", "tp": "2-7", "ft": "10-14", "reb": 9, "ast": 4, "pf": 3, "to": 1, "stl": 2, "pts": 28},
+            {"name": "John Crotty", "min": 42, "fg": "6-12", "tp": "1-2", "ft": "8-11", "reb": 7, "ast": 8, "pf": 4, "to": 4, "stl": 1, "pts": 21},
+            {"name": "Brent Bair", "min": 2, "pts": 0},
+            {"name": "Dirk Katstra", "min": 1, "fg": "0-1", "tp": "0-1", "pts": 0},
+            {"name": "Kenny Turner", "min": 23, "fg": "4-6", "ft": "6-8", "reb": 8, "pf": 3, "to": 1, "stl": 1, "blk": 1, "pts": 14},
+            {"name": "Curtis Williams", "min": 6, "fg": "1-2", "reb": 2, "to": 4, "stl": 1, "pts": 2},
+            {"name": "Anthony Oliver", "min": 4, "fg": "1-2", "reb": 2, "to": 3, "pts": 2},
+            {"name": "Jeff Daniel", "min": 13, "fg": "3-3", "ft": "2-3", "reb": 6, "ast": 1, "to": 3, "pts": 8}
+          ],
+          "checksum_ok": true
+        },
+        {
+          "name": "Virginia Tech Hokies",
+          "score": 106,
+          "players": [
+            {"name": "John Rivers", "min": 38, "fg": "3-6", "reb": 9, "ast": 4, "pf": 4, "to": 3, "stl": 1, "pts": 6},
+            {"name": "Anthony Moses", "min": 24, "fg": "2-6", "ft": "1-3", "reb": 4, "ast": 1, "pf": 3, "to": 2, "stl": 1, "pts": 5},
+            {"name": "Eric Sanders", "min": 18, "fg": "1-2", "reb": 3, "to": 2, "stl": 2, "pts": 2},
+            {"name": "Vernell Coles", "min": 41, "fg": "17-33", "tp": "3-10", "ft": "6-8", "reb": 4, "ast": 8, "pf": 3, "to": 5, "stl": 1, "pts": 43},
+            {"name": "Wally Lancaster", "min": 31, "fg": "9-21", "tp": "3-8", "ft": "3-4", "reb": 5, "ast": 2, "pf": 5, "to": 2, "stl": 2, "pts": 24},
+            {"name": "Quinton Nottingham", "min": 18, "fg": "0-3", "tp": "0-1", "reb": 2, "ast": 1, "to": 2, "pts": 0},
+            {"name": "George Caesar", "min": 22, "fg": "8-13", "tp": "1-5", "ft": "4-5", "reb": 4, "ast": 3, "pf": 5, "to": 2, "pts": 21},
+            {"name": "David Herbster", "min": 17, "fg": "1-1", "reb": 2, "pf": 2, "pts": 2},
+            {"name": "Sam Cannon", "min": 15, "fg": "0-1", "reb": 6, "pf": 3, "ast": 1, "to": 4, "pts": 0},
+            {"name": "Scott Davis", "min": 1, "fg": "1-2", "ft": "1-2", "reb": 2, "pts": 3}
+          ],
+          "checksum_ok": true
+        }
+      ]
+    }
+  ],
+  "skipped": []
+}

@@ -1,0 +1,9 @@
+{
+  "page": 29,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Feb 28, 1982 - Michigan at Ohio State (St. John Arena, Columbus OH; final 64-63 OSU) - Michigan (visitors) side checksums perfectly (player points sum to 63 = final score, and FG/FT team totals reconcile exactly: FG 3+3+6+10+3+0+4=29, FT 0+1+0+3+0+1+0=5, TP 6+7+12+23+6+1+8=63). However Ohio State (home) side does not reconcile: player point sums range 61-65 depending on how the ambiguous Taylor, Troy row (FG2 FGA4, FT/FTA both look like 4-4 but TP column reads 4, which is inconsistent with 2*FG+FT under either interpretation) is read, versus the team TOTALS row of FG27 FGA48 FT10 FTA16 TP64. Re-read the page once (max allowed) and could not resolve the Taylor row or fully reconcile FG (27 vs summed 27-28) and FT (10 vs summed 5-9) columns with confidence. Skipping the whole game rather than guessing individual handwritten digits on the Ohio State side."
+    }
+  ]
+}

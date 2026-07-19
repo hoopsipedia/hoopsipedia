@@ -1,0 +1,45 @@
+{
+  "page": 4,
+  "games": [
+    {
+      "date": "1975-12-06",
+      "opponent": "Illinois",
+      "location": "Assembly Hall, Champaign, Illinois",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 66,
+          "players": [
+            {"name": "Larry Forte", "min": "31:10", "fg": "2-4", "ft": "1-2", "pf": 4, "ast": 0, "to": 3, "pts": 5},
+            {"name": "George Berry", "min": "40:53", "fg": "8-13", "ft": "4-9", "reb": "1-4", "pf": 0, "ast": 1, "to": 3, "pts": 20},
+            {"name": "Larry Gray", "min": "40:22", "fg": "2-8", "ft": "4-8", "reb": "5-7", "pf": 4, "ast": 3, "to": 5, "pts": 8},
+            {"name": "Ricky Williams", "min": "32:21", "fg": "7-13", "ft": "2-3", "reb": "5-7", "pf": 4, "ast": 3, "to": 3, "pts": 16},
+            {"name": "Dan Davis", "min": "34:12", "fg": "2-8", "ft": "2-2", "reb": "3-1", "pf": 3, "ast": 2, "to": 6, "pts": 6},
+            {"name": "Dale Slaughter", "min": "12:39", "fg": "3-6", "ft": "0-0", "reb": "0-2", "pf": 1, "ast": 0, "to": 1, "pts": 6},
+            {"name": "Norm Cacy", "min": "8:03", "fg": "1-1", "ft": "1-2", "reb": "1-0", "pf": 1, "ast": 0, "to": 0, "pts": 3},
+            {"name": "Mike Patterson", "min": "13:05", "fg": "0-1", "ft": "2-4", "reb": "1-0", "pf": 2, "ast": 1, "to": 1, "pts": 2},
+            {"name": "Steve Davis", "min": "0:01", "fg": "0-0", "ft": "0-0", "reb": "0-1", "pf": 0, "ast": 0, "to": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Illinois Fighting Illini",
+          "score": 67,
+          "players": [
+            {"name": "Audie Matthews", "min": "42:24", "fg": "7-9", "ft": "2-3", "reb": "2-4", "pf": 1, "ast": 2, "to": 1, "pts": 16},
+            {"name": "Rich Adams", "min": "39:14", "fg": "4-12", "ft": "0-0", "reb": "1-3", "pf": 3, "ast": 4, "to": 2, "pts": 8},
+            {"name": "Mike Washington", "fg": "1-2", "ft": "0-0", "reb": "0-1", "pf": 4, "ast": 1, "to": 0, "pts": 2},
+            {"name": "Nate Williams", "min": "42:51", "fg": "10-20", "ft": "0-2", "reb": "3-3", "pf": 1, "ast": 3, "to": 3, "pts": 20},
+            {"name": "Rick Leighty", "min": "32:35", "fg": "4-8", "ft": "1-2", "reb": "3-1", "pf": 5, "ast": 2, "to": 1, "pts": 9},
+            {"name": "Ken Ferdinand", "min": "10:47", "fg": "2-4", "ft": "0-1", "reb": "0-2", "pf": 3, "ast": 0, "to": 0, "pts": 4},
+            {"name": "Tom Gerhardt", "fg": "1-2", "ft": "0-0", "reb": "1-1", "pf": 1, "ast": 0, "to": 1, "pts": 2},
+            {"name": "Larry Lubin", "fg": "0-3", "ft": "0-0", "reb": "1-0", "pf": 2, "ast": 3, "to": 3, "pts": 0},
+            {"name": "Otho Tucker", "min": "24:45", "fg": "1-6", "ft": "4-6", "reb": "0-3", "pf": 5, "ast": 1, "to": 2, "pts": 6}
+          ]
+        }
+      ],
+      "checksum_ok": true,
+      "notes": "Overtime game (final 60-60 after regulation, OT: NM 6, ILL 7). New Mexico player-points sum to 66, matching the handwritten final-score annotation ('Illinois 67, New Mexico 66'); the sheet's own New Mexico TOTALS row prints TP=67, an apparent scorekeeper arithmetic error (used 66, the reconciled/official value, for checksum). Illinois player points sum to 67, matching both the TOTALS row and final score exactly. New Mexico's Larry Gray had an illegible TO cell; value 5 was derived by reconciling team TOTALS TO (22) minus the sum of all other legible NM player TO values (17) -- not directly read off the sheet. New Mexico's Larry Forte had a blank REB cell; omitted rather than assumed, though team rebound totals reconcile exactly (49) if treated as 0. Illinois REB column sums to 37 (players 29 + team 8) vs printed TOTALS REB of 36 -- off by one, likely a minor read/print error on one player's rebound split; individual values kept as read. Illinois TO column sums to 13 across players vs printed TOTALS TO of 25 -- large unresolved discrepancy, likely an error on the printed totals row (the TOTALS row shows 25 for both PF and TO, and PF=25 independently reconciles exactly against player sums, casting doubt on TO=25); individual per-player TO values were kept as directly read since they are legible. Minutes for Illinois players Mike Washington, Tom Gerhardt, and Larry Lubin were partially illegible in the scan (digits obscured) and were omitted rather than guessed."
+    }
+  ],
+  "skipped": []
+}

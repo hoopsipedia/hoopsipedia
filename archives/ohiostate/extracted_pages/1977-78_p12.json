@@ -1,0 +1,9 @@
+{
+  "page": 12,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Handwritten NCAA box score, Jan 5 1978, St. John Arena, Columbus OH: Wisconsin at Ohio State (final Ohio State 77, Wisconsin 61 per score-by-periods and TOTALS rows). Ohio State's 13 player rows and team totals (FG 35, FT 7, TP 77) were legible and checksummed exactly against the printed team score of 77 (sum of player TP = 77; sum of individual FG = 35 and FT = 7 also matched the team TOTALS row exactly). However, 4 of Wisconsin's 9 player rows (Carlson, Roth, Buchheit, Comer) have illegible/ambiguous handwritten digits in the FG/FGA/FT/FTA/TP columns -- multiple plausible readings were tried and none reconciled cleanly with Wisconsin's TOTALS row (FG 33, FT 17, TP 61) or the team's final score of 61. Rather than invent digits for those four players, the entire game is skipped since a full, confidently-checksummed box score requires both teams."
+    }
+  ]
+}

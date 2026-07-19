@@ -1,0 +1,51 @@
+{
+  "page": 12,
+  "games": [
+    {
+      "date": "1960-01-20",
+      "opponent": "Michigan",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 103,
+          "players": [
+            {"name": "Howell", "fg": "12-18", "ft": "5-8", "reb": 4, "pf": 2, "pts": 29},
+            {"name": "Hosket", "fg": "8-17", "ft": "3-5", "reb": 12, "pf": 4, "pts": 20},
+            {"name": "Sorenson", "fg": "9-15", "ft": "3-5", "reb": 16, "pf": 3, "pts": 21},
+            {"name": "Swain", "fg": "2-3", "ft": "0-0", "reb": 2, "pf": 1, "pts": 4},
+            {"name": "Meadors", "fg": "2-5", "ft": "3-5", "reb": 7, "pf": 3, "pts": 7},
+            {"name": "Geddes", "fg": "1-4", "ft": "0-0", "reb": 0, "pf": 2, "pts": 2},
+            {"name": "Schnabel", "fg": "0-0", "ft": "0-0", "reb": 1, "pf": 0, "pts": 0},
+            {"name": "Andreas", "fg": "3-5", "ft": "0-1", "reb": 2, "pf": 1, "pts": 6},
+            {"name": "Smith", "fg": "0-4", "ft": "0-3", "reb": 5, "pf": 0, "pts": 0},
+            {"name": "Finney", "fg": "3-6", "ft": "4-5", "reb": 3, "pf": 3, "pts": 10},
+            {"name": "Barnard", "fg": "0-2", "ft": "0-1", "reb": 4, "pf": 3, "pts": 0},
+            {"name": "Barclay", "fg": "0-0", "ft": "0-0", "reb": 1, "pf": 0, "pts": 0},
+            {"name": "McDavid", "fg": "2-2", "ft": "0-0", "reb": 0, "pf": 0, "pts": 4},
+            {"name": "Walkey", "fg": "0-0", "ft": "0-1", "reb": 1, "pf": 0, "pts": 0},
+            {"name": "Spies", "fg": "0-3", "ft": "0-0", "reb": 2, "pf": 2, "pts": 0}
+          ]
+        },
+        {
+          "name": "Michigan",
+          "score": 70,
+          "players": [
+            {"name": "Fraumann", "fg": "1-2", "ft": "1-1", "reb": 8, "pf": 4, "pts": 3},
+            {"name": "Pitts", "fg": "4-9", "ft": "8-13", "reb": 5, "pf": 1, "pts": 16},
+            {"name": "Tomjanovich", "fg": "6-15", "ft": "2-2", "reb": 8, "pf": 3, "pts": 14},
+            {"name": "Bloodworth", "fg": "1-5", "ft": "0-1", "reb": 2, "pf": 3, "pts": 2},
+            {"name": "Maxey", "fg": "3-7", "ft": "0-1", "reb": 1, "pf": 1, "pts": 6},
+            {"name": "Stewart", "fg": "5-16", "ft": "7-10", "reb": 10, "pf": 4, "pts": 17},
+            {"name": "McClellan", "fg": "2-7", "ft": "3-4", "reb": 5, "pf": 4, "pts": 7},
+            {"name": "Edwards", "fg": "1-6", "ft": "0-0", "reb": 2, "pf": 2, "pts": 2},
+            {"name": "Maundrell", "fg": "0-0", "ft": "0-0", "reb": 1, "pf": 0, "pts": 0},
+            {"name": "Henry", "fg": "1-1", "ft": "1-1", "reb": 1, "pf": 3, "pts": 3},
+            {"name": "Fishman", "fg": "0-1", "ft": "0-0", "reb": 0, "pf": 1, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

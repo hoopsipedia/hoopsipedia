@@ -1,0 +1,9 @@
+{
+  "page": 34,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page shows Game 33: Ohio State vs Connecticut, NIT Championship, March 30 1988, Madison Square Garden, final Ohio State 67 - Connecticut 72. Box score is typed/clean but has tight column kerning that caused a dropped digit (missing PF column) in at least 5 of 9 Ohio State player rows on careful re-read, making exact per-player OR/DR/PF/TP values unreliable. Computing points independently via 2*(FG-3FG)+3*3FG+FT for all 9 Ohio State players summed to 68, one off from the printed team total of 67 (checksum fails by 1), indicating at least one digit misread that I could not resolve with confidence even after a second read of the page (max reads used). Per instructions, skipping rather than guessing/inventing a correction. Connecticut side has the same tight-kerning column-alignment issue and was not transcribed for the same reason."
+    }
+  ]
+}

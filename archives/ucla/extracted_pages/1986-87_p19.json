@@ -1,0 +1,50 @@
+{
+  "page": 19,
+  "games": [
+    {
+      "date": "1987-02-05",
+      "opponent": "Stanford",
+      "ucla_score": 93,
+      "opp_score": 62,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 93,
+          "players": [
+            {"name": "Reggie Miller", "min": 34, "fg": "11-16", "tp": "5-6", "ft": "2-2", "reb": 5, "pf": 3, "ast": 2, "to": 3, "blk": 0, "stl": 0, "pts": 29},
+            {"name": "Charles Rochelin", "min": 18, "fg": "5-6", "tp": "0-0", "ft": "0-0", "reb": 5, "pf": 5, "ast": 1, "to": 0, "blk": 2, "stl": 0, "pts": 10},
+            {"name": "Jack Haley", "min": 18, "fg": "1-4", "tp": "0-0", "ft": "0-0", "reb": 4, "pf": 2, "ast": 2, "to": 1, "blk": 1, "stl": 0, "pts": 2},
+            {"name": "Jerome Richardson", "min": 31, "fg": "5-11", "tp": "0-0", "ft": "0-0", "reb": 5, "pf": 3, "ast": 6, "to": 3, "blk": 0, "stl": 0, "pts": 10},
+            {"name": "Dave Immel", "min": 28, "fg": "8-14", "tp": "4-7", "ft": "0-0", "reb": 2, "pf": 0, "ast": 5, "to": 0, "blk": 0, "stl": 0, "pts": 20},
+            {"name": "Montel Hatcher", "min": 20, "fg": "4-6", "tp": "1-1", "ft": "0-0", "reb": 1, "pf": 0, "ast": 2, "to": 0, "blk": 0, "stl": 0, "pts": 9},
+            {"name": "Trevor Wilson", "min": 19, "fg": "2-4", "tp": "0-0", "ft": "1-2", "reb": 10, "pf": 3, "ast": 2, "to": 1, "blk": 0, "stl": 0, "pts": 5},
+            {"name": "Greg Foster", "min": 18, "fg": "1-6", "tp": "0-0", "ft": "0-0", "reb": 4, "pf": 3, "ast": 2, "to": 0, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Kevin Walker", "min": 4, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Craig Jackson", "min": 4, "fg": "1-3", "tp": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 2, "pts": 2},
+            {"name": "Rod Palmer", "min": 3, "fg": "1-2", "tp": "0-0", "ft": "0-0", "reb": 0, "pf": 2, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Kelvin Butler", "min": 3, "fg": "1-1", "tp": "0-0", "ft": "0-0", "reb": 1, "pf": 0, "ast": 1, "to": 0, "blk": 0, "stl": 0, "pts": 2}
+          ]
+        },
+        {
+          "name": "Stanford Cardinal",
+          "score": 62,
+          "players": [
+            {"name": "Todd Lichti", "min": 30, "fg": "2-9", "tp": "0-1", "ft": "0-0", "reb": 4, "pf": 1, "ast": 1, "to": 1, "blk": 0, "stl": 1, "pts": 4},
+            {"name": "Eric Reveno", "min": 21, "fg": "3-7", "tp": "0-0", "ft": "0-0", "reb": 3, "pf": 1, "ast": 2, "to": 0, "blk": 0, "stl": 0, "pts": 6},
+            {"name": "Howard Wright", "min": 27, "fg": "4-8", "tp": "0-0", "ft": "4-6", "reb": 3, "pf": 1, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pts": 12},
+            {"name": "Terry Taylor", "min": 25, "fg": "3-5", "tp": "3-3", "ft": "0-0", "reb": 1, "pf": 1, "ast": 5, "to": 2, "blk": 0, "stl": 0, "pts": 9},
+            {"name": "Novion Whitsitt", "min": 29, "fg": "4-8", "tp": "1-1", "ft": "6-7", "reb": 4, "pf": 0, "ast": 2, "to": 1, "blk": 0, "stl": 0, "pts": 15},
+            {"name": "Scott Meinert", "min": 15, "fg": "1-1", "tp": "0-0", "ft": "2-2", "reb": 0, "pf": 0, "ast": 1, "to": 0, "blk": 0, "stl": 0, "pts": 4},
+            {"name": "Greg Butler", "min": 21, "fg": "1-5", "tp": "0-0", "ft": "0-2", "reb": 3, "pf": 2, "ast": 1, "to": 0, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Bryan McSweeney", "min": 16, "fg": "1-5", "tp": "0-2", "ft": "1-2", "reb": 0, "pf": 1, "ast": 4, "to": 0, "blk": 0, "stl": 0, "pts": 3},
+            {"name": "Derek Bruton", "min": 7, "fg": "1-2", "tp": "0-0", "ft": "2-2", "reb": 0, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 4},
+            {"name": "Oliver Cunningham", "min": 5, "fg": "0-0", "tp": "0-0", "ft": "3-4", "reb": 1, "pf": 0, "ast": 1, "to": 0, "blk": 0, "stl": 0, "pts": 3},
+            {"name": "Stuart Thomas", "min": 4, "fg": "0-1", "tp": "0-0", "ft": "0-0", "reb": 1, "pf": 0, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

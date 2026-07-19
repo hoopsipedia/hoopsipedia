@@ -1,0 +1,38 @@
+{
+  "page": 12,
+  "games": [
+    {
+      "date": "1929-02-16",
+      "opponent": "Illinois",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 35,
+          "players": [
+            {"name": "Evans", "pos": "F", "min": "40:00", "fgm": 3, "ftm": 0, "pts": 6},
+            {"name": "Ervin", "pos": "F", "min": "40:00", "fgm": 4, "ftm": 2, "pts": 10},
+            {"name": "Van Heyde", "pos": "C", "min": "40:00", "fgm": 2, "ftm": 2, "pts": 6},
+            {"name": "Fesler", "pos": "G", "min": "40:00", "fgm": 5, "ftm": 0, "pts": 10},
+            {"name": "Larkins", "pos": "G", "min": "40:00", "fgm": 1, "ftm": 1, "pts": 3}
+          ]
+        },
+        {
+          "name": "Illinois",
+          "score": 30,
+          "players": [
+            {"name": "How", "pos": "F", "fgm": 3, "ftm": 2, "pts": 8},
+            {"name": "Harper", "pos": "F", "fgm": 1, "ftm": 0, "pts": 2},
+            {"name": "Hill", "pos": "F", "fgm": 1, "ftm": 0, "pts": 2},
+            {"name": "May", "pos": "C", "fgm": 0, "ftm": 3, "pts": 3},
+            {"name": "Dorn", "pos": "G", "fgm": 0, "ftm": 9, "pts": 9},
+            {"name": "Mills", "pos": "G", "fgm": 1, "ftm": 2, "pts": 4},
+            {"name": "Hummer", "pos": "G", "fgm": 1, "ftm": 0, "pts": 2}
+          ]
+        }
+      ],
+      "checksum_ok": true,
+      "notes": "Sheet's 'G' column is field goals made (not attempted) and 'F' column is free throws made; no attempt counts are shown, so fgm/ftm are used instead of a made-attempted fg/ft pair. Per-player pts not printed on sheet; computed as pts = 2*fgm + ftm (valid pre-3-point era), matching the printed team TOT column and final score for both teams. Referee: Young (Illinois Wesleyan); Umpire: Malony (Notre Dame). Location: Champaign; Coach: H.G. Olsen; Captain: Wesley Fesler; Manager: Herbert Wise."
+    }
+  ],
+  "skipped": []
+}

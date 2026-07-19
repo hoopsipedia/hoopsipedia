@@ -1,0 +1,50 @@
+{
+  "page": 17,
+  "games": [
+    {
+      "date": "1986-01-16",
+      "opponent": "San Diego State University",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 68,
+          "players": [
+            {"name": "Johnny Brown", "min": 38, "fg": "10-16", "ft": "0-1", "reb": 8, "pf": 5, "pts": 20, "ast": 0, "to": 5, "blk": 0, "stl": 1},
+            {"name": "Mike Winters", "min": 38, "fg": "1-5", "ft": "0-2", "reb": 1, "pf": 3, "pts": 2, "ast": 6, "to": 4, "blk": 1, "stl": 1},
+            {"name": "Robert Loeffel", "min": 24, "fg": "5-7", "ft": "0-0", "reb": 4, "pf": 2, "pts": 10, "ast": 2, "to": 1, "blk": 1, "stl": 0},
+            {"name": "Kelvin Scarborough", "min": 17, "fg": "2-4", "ft": "0-0", "reb": 1, "pf": 2, "pts": 4, "ast": 3, "to": 0, "blk": 0, "stl": 0},
+            {"name": "Paul Lawson", "min": 13, "fg": "0-2", "ft": "0-0", "reb": 2, "pf": 2, "pts": 0, "ast": 5, "to": 3, "blk": 0, "stl": 1},
+            {"name": "Randall Moos", "min": null, "reb": 0, "pf": null, "pts": null, "note": "DNP (marked D-N-P)"},
+            {"name": "Shawn Brooks", "min": 35, "fg": "8-18", "ft": "4-7", "reb": 6, "pf": 4, "pts": 20, "ast": 1, "to": 2, "blk": 0, "stl": 3},
+            {"name": "Larry Markland", "min": 4, "fg": "1-2", "ft": "0-0", "reb": 0, "pf": 1, "pts": 2, "ast": 0, "to": 0, "blk": 0, "stl": 0},
+            {"name": "Bob Arnold", "min": null, "reb": 0, "pf": null, "pts": null, "note": "DNP (marked D-N-P)"},
+            {"name": "Kelly Graves", "min": 31, "fg": "5-7", "ft": "0-0", "reb": 7, "pf": 1, "pts": 10, "ast": 3, "to": 0, "blk": 0, "stl": 0},
+            {"name": "Brian Parker", "min": null, "reb": 0, "pf": null, "pts": null, "note": "DNP (marked D-N-P)"}
+          ]
+        },
+        {
+          "name": "San Diego State Aztecs",
+          "score": 71,
+          "players": [
+            {"name": "Anthony Watson", "min": 37, "fg": "5-17", "ft": "4-7", "reb": 4, "pf": 4, "pts": 14, "ast": 8, "to": 2, "blk": 0, "stl": 3},
+            {"name": "John Martins", "min": 37, "fg": "7-9", "ft": "5-6", "reb": 7, "pf": 1, "pts": 19, "ast": 0, "to": 1, "blk": 1, "stl": 0},
+            {"name": "Steffond Johnson", "min": 23, "fg": "3-7", "ft": "0-0", "reb": 7, "pf": 3, "pts": 6, "ast": 0, "to": 3, "blk": 0, "stl": 1},
+            {"name": "Creon Dorsey", "min": 32, "fg": "6-11", "ft": "3-3", "reb": 4, "pf": 3, "pts": 15, "ast": 2, "to": 2, "blk": 0, "stl": 3},
+            {"name": "Bobby Owens", "min": 27, "fg": "2-5", "ft": "4-6", "reb": 2, "pf": 3, "pts": 8, "ast": 3, "to": 3, "blk": 1, "stl": 2},
+            {"name": "Darryl Gaines", "min": null, "reb": 0, "pf": null, "pts": null, "note": "DNP (marked D-N-P)"},
+            {"name": "Johnny Scruggs", "min": 8, "fg": "0-1", "ft": "2-2", "reb": 3, "pf": 0, "pts": 2, "ast": 0, "to": 2, "blk": 0, "stl": 0},
+            {"name": "Tracy Dildy", "min": 8, "fg": "0-1", "ft": "0-0", "reb": 1, "pf": 1, "pts": 0, "ast": 0, "to": 1, "blk": 0, "stl": 0},
+            {"name": "Josh Lowery", "min": 12, "fg": "2-4", "ft": "0-0", "reb": 4, "pf": 0, "pts": 4, "ast": 0, "to": 1, "blk": 0, "stl": 0},
+            {"name": "Kevin Brown", "min": 16, "fg": "1-3", "ft": "1-2", "reb": 4, "pf": 1, "pts": 3, "ast": 0, "to": 1, "blk": 1, "stl": 2},
+            {"name": "Jeff Bobin", "min": null, "reb": 0, "pf": null, "pts": null, "note": "DNP (marked D-N-P)"},
+            {"name": "Rob Hawkins", "min": null, "reb": 0, "pf": null, "pts": null, "note": "DNP (marked D-N-P)"},
+            {"name": "Dave Desrochers", "min": null, "reb": 0, "pf": null, "pts": null, "note": "DNP (marked D-N-P)"}
+          ]
+        }
+      ],
+      "checksum_ok": true,
+      "notes": "Score by periods: New Mexico 34-34=68; San Diego State 38-33=71. Site: San Diego Sports Arena. Team totals on sheet: UNM FG 32-61 FT 4-10 REB 32 PF 20 TP 68 MIN 200 A 20 TO 15 BLK 2 S 6; SDSU FG 26-58 FT 19-26 REB 39 PF 13 TP 71 MIN 200 A 13 TO 16 BLK 3 S 11. Player pts sums match team totals exactly for both squads."
+    }
+  ],
+  "skipped": []
+}

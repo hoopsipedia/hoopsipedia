@@ -1,0 +1,44 @@
+{
+  "page": 18,
+  "games": [
+    {
+      "date": "1977-01-30",
+      "opponent": "Tennessee",
+      "ucla_score": 103,
+      "opp_score": 89,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 103,
+          "players": [
+            {"name": "David Greenwood", "min": 26, "fg": "10-14", "ft": "2-4", "reb": 10, "pf": 4, "ast": 3, "to": 2, "stl": 0, "blk": 2, "pts": 22},
+            {"name": "Marques Johnson", "min": 37, "fg": "11-16", "ft": "2-5", "reb": 9, "pf": 2, "ast": 3, "to": 4, "stl": 2, "blk": 0, "pts": 24},
+            {"name": "Greg Sims", "min": 29, "fg": "5-7", "ft": "0-0", "reb": 3, "pf": 3, "ast": 0, "to": 0, "stl": 1, "blk": 1, "pts": 10},
+            {"name": "Roy Hamilton", "min": 39, "fg": "11-15", "ft": "8-10", "reb": 1, "pf": 3, "ast": 11, "to": 2, "stl": 3, "blk": 0, "pts": 30},
+            {"name": "Jim Spillane", "min": 38, "fg": "2-10", "ft": "2-3", "reb": 4, "pf": 2, "ast": 12, "to": 1, "stl": 2, "blk": 0, "pts": 6},
+            {"name": "Brett Vroman", "min": 12, "fg": "3-7", "ft": "1-2", "reb": 4, "pf": 2, "ast": 1, "to": 1, "stl": 1, "blk": 3, "pts": 7},
+            {"name": "Kiki Vandeweghe", "min": 14, "fg": "2-4", "ft": "0-0", "reb": 3, "pf": 3, "ast": 0, "to": 1, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Brad Holland", "min": 3, "fg": "0-1", "ft": "0-0", "reb": 0, "pf": 1, "ast": 1, "to": 0, "stl": 1, "blk": 0, "pts": 0},
+            {"name": "James Wilkes", "min": 2, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Tennessee Volunteers",
+          "score": 89,
+          "players": [
+            {"name": "Ernie Grunfeld", "min": 35, "fg": "8-17", "ft": "7-8", "reb": 4, "pf": 5, "ast": 5, "to": 1, "stl": 0, "blk": 0, "pts": 23},
+            {"name": "Bernard King", "min": 40, "fg": "13-22", "ft": "5-8", "reb": 15, "pf": 3, "ast": 4, "to": 4, "stl": 0, "blk": 2, "pts": 31},
+            {"name": "Reggie Johnson", "min": 30, "fg": "3-7", "ft": "0-0", "reb": 12, "pf": 5, "ast": 0, "to": 2, "stl": 0, "blk": 0, "pts": 6},
+            {"name": "Johnny Darden", "min": 36, "fg": "2-5", "ft": "0-0", "reb": 1, "pf": 1, "ast": 10, "to": 5, "stl": 1, "blk": 0, "pts": 4},
+            {"name": "Mike Jackson", "min": 39, "fg": "7-18", "ft": "3-4", "reb": 7, "pf": 5, "ast": 6, "to": 5, "stl": 1, "blk": 0, "pts": 17},
+            {"name": "Chuck Threete", "min": 10, "fg": "1-2", "ft": "0-1", "reb": 0, "pf": 1, "ast": 0, "to": 1, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Terry Crosby", "min": 5, "fg": "1-2", "ft": "0-0", "reb": 0, "pf": 0, "ast": 1, "to": 0, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Bert Bertelkamp", "min": 5, "fg": "2-2", "ft": "0-0", "reb": 1, "pf": 1, "ast": 0, "to": 0, "stl": 0, "blk": 0, "pts": 4}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

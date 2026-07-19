@@ -1,0 +1,44 @@
+{
+  "page": 8,
+  "games": [
+    {
+      "date": "1995-01-07",
+      "opponent": "Oregon State Beavers",
+      "ucla_score": 87,
+      "opp_score": 78,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 87,
+          "players": [
+            {"name": "Charles O'Bannon", "min": 27, "fg": "4-10", "ft": "2-2", "tp": "0-0", "reb": 7, "ast": 5, "pf": 1, "to": 1, "stl": 2, "blk": 0, "pts": 10},
+            {"name": "Ed O'Bannon", "min": 37, "fg": "6-8", "ft": "6-6", "tp": "0-1", "reb": 7, "ast": 2, "pf": 3, "to": 3, "stl": 5, "blk": 0, "pts": 18},
+            {"name": "George Zidek", "min": 32, "fg": "5-12", "ft": "1-1", "tp": "0-0", "reb": 8, "ast": 0, "pf": 3, "to": 1, "stl": 1, "blk": 0, "pts": 11},
+            {"name": "Tyus Edney", "min": 36, "fg": "7-9", "ft": "6-8", "tp": "3-4", "reb": 2, "ast": 5, "pf": 3, "to": 3, "stl": 1, "blk": 0, "pts": 23},
+            {"name": "J.R. Henderson", "min": 35, "fg": "6-10", "ft": "4-5", "tp": "0-0", "reb": 6, "ast": 3, "pf": 4, "to": 3, "stl": 3, "blk": 0, "pts": 16},
+            {"name": "Kris Johnson", "min": 3, "fg": "1-1", "ft": "0-0", "tp": "0-0", "reb": 1, "ast": 1, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Toby Bailey", "min": 17, "fg": "3-6", "ft": "0-1", "tp": "1-3", "reb": 2, "ast": 1, "pf": 3, "to": 0, "stl": 0, "blk": 0, "pts": 7},
+            {"name": "omm'A Givens", "min": 5, "fg": "0-1", "ft": "0-0", "tp": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Cameron Dollar", "min": 8, "fg": "0-1", "ft": "0-0", "tp": "0-1", "reb": 1, "ast": 1, "pf": 0, "to": 2, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Oregon State Beavers",
+          "score": 78,
+          "players": [
+            {"name": "Brent Barry", "min": 37, "fg": "5-8", "ft": "4-4", "tp": "3-5", "reb": 3, "ast": 4, "pf": 5, "to": 1, "stl": 2, "blk": 0, "pts": 17},
+            {"name": "Mustapha Hoff", "min": 39, "fg": "13-22", "ft": "2-3", "tp": "3-6", "reb": 8, "ast": 2, "pf": 2, "to": 5, "stl": 2, "blk": 0, "pts": 31},
+            {"name": "Vladimir Heredia", "min": 36, "fg": "5-8", "ft": "3-5", "tp": "1-1", "reb": 7, "ast": 4, "pf": 4, "to": 2, "stl": 2, "blk": 0, "pts": 14},
+            {"name": "Stephane Brown", "min": 40, "fg": "4-8", "ft": "1-3", "tp": "0-3", "reb": 2, "ast": 5, "pf": 2, "to": 3, "stl": 0, "blk": 0, "pts": 9},
+            {"name": "Jelani Boline", "min": 24, "fg": "1-3", "ft": "0-2", "tp": "0-1", "reb": 0, "ast": 3, "pf": 3, "to": 4, "stl": 1, "blk": 0, "pts": 2},
+            {"name": "Rob Williams", "min": 12, "fg": "1-2", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 2, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Sonny Benjamin", "min": 5, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "J.D. Vetter", "min": 7, "fg": "1-2", "ft": "0-0", "tp": "1-2", "reb": 0, "ast": 0, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 3}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

@@ -1,0 +1,43 @@
+{
+  "page": 3,
+  "games": [
+    {
+      "date": "1963-12-02",
+      "opponent": "Butler",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 74,
+          "players": [
+            {"name": "Flatt", "fg": "1-4", "ft": "2-2", "reb": 3, "pf": 4, "pts": 4},
+            {"name": "DeVoe", "fg": "12-15", "ft": "2-6", "reb": 8, "pf": 2, "pts": 26},
+            {"name": "Bradds", "fg": "11-21", "ft": "9-13", "reb": 7, "pf": 2, "pts": 31},
+            {"name": "Ricketts", "fg": "2-6", "ft": "0-2", "reb": 4, "pf": 4, "pts": 4},
+            {"name": "Bowman", "fg": "1-9", "ft": "5-6", "reb": 4, "pf": 2, "pts": 7},
+            {"name": "Frazier", "fg": "1-5", "ft": "0-1", "reb": 4, "pf": 2, "pts": 2},
+            {"name": "Brown", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Shaffer", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Butler",
+          "score": 68,
+          "players": [
+            {"name": "Iwema", "fg": "1-8", "ft": "1-1", "reb": 4, "pf": 2, "pts": 3},
+            {"name": "Sanders", "fg": "2-8", "ft": "1-2", "reb": 6, "pf": 4, "pts": 5},
+            {"name": "Blue", "fg": "13-18", "ft": "5-8", "reb": 11, "pf": 3, "pts": 31},
+            {"name": "Shade", "fg": "7-9", "ft": "1-2", "reb": 5, "pf": 3, "pts": 15},
+            {"name": "FledderJohn", "fg": "3-7", "ft": "0-0", "reb": 1, "pf": 1, "pts": 6},
+            {"name": "Perrin", "fg": "1-9", "ft": "0-0", "reb": 6, "pf": 2, "pts": 2},
+            {"name": "Chapman", "fg": "2-3", "ft": "0-1", "reb": 4, "pf": 3, "pts": 4},
+            {"name": "Schwartz", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 1, "pts": 0},
+            {"name": "Knight", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 1, "pts": 0},
+            {"name": "Jones", "fg": "0-2", "ft": "2-2", "reb": 1, "pf": 0, "pts": 2}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

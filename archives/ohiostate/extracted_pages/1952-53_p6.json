@@ -1,0 +1,61 @@
+{
+  "page": 6,
+  "games": [
+    {
+      "date": "1952-12-29",
+      "opponent": "Northwestern",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 82,
+          "players": [
+            {"name": "Williams", "fg": "3-15", "ft": "5-8", "reb": 6, "pf": 5, "pts": 11},
+            {"name": "Miller", "fg": "0-1", "ft": "6-8", "reb": 5, "pf": 4, "pts": 6},
+            {"name": "Annis", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 1, "pts": 0},
+            {"name": "Wilkes", "fg": "5-9", "ft": "1-3", "reb": 7, "pf": 1, "pts": 11},
+            {"name": "Croy", "fg": "0-0", "ft": "0-0", "reb": 2, "pf": 1, "pts": 0},
+            {"name": "Smith", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Ebert", "fg": "11-28", "ft": "8-15", "reb": 21, "pf": 3, "pts": 30},
+            {"name": "Ropes", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Hatfield", "fg": "1-4", "ft": "0-0", "reb": 2, "pf": 4, "pts": 2},
+            {"name": "Jones", "fg": "1-5", "ft": "2-2", "reb": 5, "pf": 2, "pts": 4},
+            {"name": "Cook", "fg": "4-11", "ft": "2-3", "reb": 3, "pf": 1, "pts": 10},
+            {"name": "Leggett", "fg": "0-1", "ft": "1-2", "reb": 2, "pf": 2, "pts": 1},
+            {"name": "Keeling", "fg": "0-0", "ft": "7-8", "reb": 0, "pf": 2, "pts": 7}
+          ],
+          "team_only_rebounds": 7,
+          "checksum_ok": true
+        },
+        {
+          "name": "Northwestern",
+          "score": 70,
+          "players": [
+            {"name": "Dellefield", "fg": "4-8", "ft": "5-9", "reb": 9, "pf": 1, "pts": 13},
+            {"name": "Blaha", "fg": "1-7", "ft": "0-0", "reb": 3, "pf": 0, "pts": 2},
+            {"name": "Ehmann", "fg": "4-8", "ft": "0-4", "reb": 5, "pf": 3, "pts": 8},
+            {"name": "Kurka", "fg": "5-14", "ft": "1-4", "reb": 3, "pf": 3, "pts": 11},
+            {"name": "Petrancek", "fg": "1-7", "ft": "4-5", "reb": 3, "pf": 5, "pts": 6},
+            {"name": "Grant", "fg": "1-5", "ft": "1-1", "reb": 1, "pf": 4, "pts": 3},
+            {"name": "Weyburg", "fg": "0-6", "ft": "1-1", "reb": 2, "pf": 0, "pts": 1},
+            {"name": "Biever", "fg": "4-11", "ft": "6-9", "reb": 4, "pf": 5, "pts": 14},
+            {"name": "LeBuhn", "fg": "1-4", "ft": "1-2", "reb": 2, "pf": 3, "pts": 3},
+            {"name": "Bragiel", "fg": "2-9", "ft": "1-1", "reb": 5, "pf": 1, "pts": 5},
+            {"name": "Stoeppelwerth", "fg": "0-1", "ft": "4-4", "reb": 1, "pf": 4, "pts": 4}
+          ],
+          "team_only_rebounds": 3,
+          "checksum_ok": true
+        }
+      ],
+      "checksum_ok": true,
+      "meta": {
+        "half_time_score": "Ohio State 33, Northwestern 29",
+        "technical_fouls": "none",
+        "officials": "Dwight Wilkey and Don Elser",
+        "attendance": 3919,
+        "authenticated_by": "Marv Homan (scorer)",
+        "form": "Official Western Conference Basketball Box Score, Form 3190"
+      }
+    }
+  ],
+  "skipped": []
+}

@@ -1,0 +1,9 @@
+{
+  "page": 26,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Official NCAA box score dated 3/6/78, site Albuquerque, NM, Colorado State (84) at New Mexico (111) per score-by-periods line (CSU 30-54=84, UNM 47-64=111). Player names and the MIN column (red ink) are legible and internally consistent (sums to exactly 200 team-minutes for Colorado State's 12 players), but the tightly-packed FG/FGA/FT/FTA/REB/PF/TP columns for both teams are handwritten and ambiguous enough that a confident digit-by-digit transcription could not be made. A trial reading of the Colorado State TP column summed to ~121 vs. the actual team score of 84, failing checksum, indicating column misalignment/misreading risk. Skipping rather than guessing per instructions; page allows only one read pass so re-verification wasn't possible."
+    }
+  ]
+}

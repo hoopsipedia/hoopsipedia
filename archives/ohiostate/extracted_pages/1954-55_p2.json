@@ -1,0 +1,9 @@
+{
+  "page": 2,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "1954-12-04 Ohio State (98) vs Butler (80), Official Western Conference Basketball Box Score. Butler side checksums cleanly (player PTS sum = 80, matches team score, and TOTALS row FG27/FT26 also gives 2*27+26=80). Ohio State side fails checksum: summing the recorded PTS column (24+25+0+38+9+0+2+2+0+0+0) = 100, but the team final score is 98 and the TOTALS row (FG34, FT30) gives 2*34+30=98. The discrepancy traces to Kelley F's line (FG 8, FGA 15, FT 7, FTM 2, PF 4, PTS 25) — the formula 2*FGmade+FTmade gives 23, not the 25 written on the sheet, a 2-point mismatch that exactly accounts for the team total being off by 2. Re-read the page once to confirm the digits were transcribed correctly (they were); this appears to be an original 1954 scorekeeper error/inconsistency on the sheet itself rather than a legibility issue. Per instructions not to invent values, skipping rather than silently 'correcting' Kelley's PTS to 23."
+    }
+  ]
+}

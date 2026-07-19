@@ -1,0 +1,9 @@
+{
+  "page": 1,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Handwritten official NCAA box score, New Mexico Highlands @ New Mexico, 11/26/82. Most rows are legible, but two Highlands player rows (Kloefkel, Mike and Rivas, Terry) have ambiguous/illegible FG-FGA-FT-FTA digits, and several New Mexico (home team) player rows also have hard-to-read REB/PF/TP figures. Cross-checking the legible Highlands players against the team TOTALS row (FG 32, FT 20, TP 84) using pts=2*FG_made+FT_made leaves an unresolved 3-point discrepancy attributable to the two ambiguous rows, so the team checksum cannot be confirmed without guessing digits. New Mexico's total points also appear to read as 122, which is unusually high and could not be independently verified against clearly legible individual rows. Skipping per instructions rather than inventing values; only one Read pass was used since a re-read of the same scan resolution would not resolve the illegible handwriting."
+    }
+  ]
+}

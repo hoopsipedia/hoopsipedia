@@ -1,0 +1,12 @@
+{
+  "page": 11,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page contains a scanned newspaper clipping with an Ohio State vs. Illinois varsity box score (columns B./F./MF./FF./Pts., halftime note 'Illinois, 26; Ohio State, 19', officials Ropp/Orwig listed) but the clipping is reproduced at very small size with blurry/low-contrast digits; individual player stat values cannot be read with confidence and risk transcription errors, so this game is skipped rather than guessed."
+    },
+    {
+      "reason": "Same page also contains a second clipping with an Ohio State Freshmen vs. Lockbourne box score (halftime note 'OSU Freshmen, 20; Lockbourne, 16') in the same tiny/blurry print; player-level digits are not legible enough to transcribe or checksum reliably, so this game is skipped rather than guessed."
+    }
+  ]
+}

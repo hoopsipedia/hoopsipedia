@@ -1,0 +1,45 @@
+{
+  "page": 22,
+  "games": [
+    {
+      "date": "1990-02-10",
+      "opponent": "Wyoming Cowboys",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 82,
+          "players": [
+            {"name": "Darrell McGee", "min": 24, "fg": "1-4", "tp": "1-3", "ft": "2-3", "reb": 2, "ast": 4, "pf": 2, "to": 2, "stl": 0, "blk": 0, "pts": 5},
+            {"name": "Andre McGee", "min": 23, "fg": "1-2", "tp": "1-1", "ft": "0-2", "reb": 1, "ast": 1, "pf": 2, "to": 1, "stl": 1, "blk": 0, "pts": 3},
+            {"name": "Luc Longley", "min": 37, "fg": "11-14", "ft": "7-9", "reb": 10, "ast": 1, "pf": 4, "to": 2, "stl": 2, "blk": 2, "pts": 29},
+            {"name": "Marvin McBurrows", "min": 21, "fg": "2-4", "ft": "0-0", "reb": 4, "ast": 2, "pf": 4, "to": 0, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Kurt Miller", "min": 25, "fg": "9-14", "ft": "3-4", "reb": 6, "ast": 2, "pf": 2, "to": 4, "stl": 2, "blk": 1, "pts": 21},
+            {"name": "Willie Banks", "min": 17, "fg": "0-2", "ft": "2-2", "reb": 0, "ast": 3, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Rob Robbins", "min": 35, "fg": "3-8", "tp": "1-5", "ft": "2-3", "reb": 1, "ast": 7, "pf": 3, "to": 2, "stl": 0, "blk": 0, "pts": 9},
+            {"name": "Rob Newton", "min": 18, "fg": "4-6", "ft": "1-4", "reb": 5, "ast": 2, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 9}
+          ]
+        },
+        {
+          "name": "Wyoming Cowboys",
+          "score": 79,
+          "players": [
+            {"name": "Rick Henry", "min": 4, "fg": "0-0", "ft": "1-2", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 1},
+            {"name": "Todd Barnett", "min": 18, "fg": "3-8", "tp": "2-5", "ft": "0-1", "reb": 2, "ast": 2, "pf": 3, "to": 2, "stl": 1, "blk": 0, "pts": 8},
+            {"name": "Kenny Smith", "min": 36, "fg": "8-12", "tp": "1-2", "ft": "0-1", "reb": 3, "ast": 3, "pf": 4, "to": 4, "stl": 1, "blk": 0, "pts": 17},
+            {"name": "Lee Mayberry", "min": 4, "fg": "0-2", "ft": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Brian Rewers", "min": 1, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Travis Butler", "min": 30, "fg": "4-8", "tp": "0-1", "ft": "5-6", "reb": 4, "ast": 4, "pf": 5, "to": 2, "stl": 3, "blk": 0, "pts": 13},
+            {"name": "Queintonia Higgins", "min": 12, "fg": "2-8", "ft": "0-1", "reb": 4, "ast": 0, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Michael Brown", "min": 6, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Reggie Page", "min": 21, "fg": "3-6", "ft": "0-0", "reb": 6, "ast": 3, "pf": 2, "to": 2, "stl": 2, "blk": 0, "pts": 6},
+            {"name": "Tim Breaux", "min": 33, "fg": "4-9", "tp": "3-5", "ft": "3-4", "reb": 4, "ast": 5, "pf": 3, "to": 1, "stl": 0, "blk": 0, "pts": 14},
+            {"name": "Reginald Slater", "min": 38, "fg": "5-11", "ft": "6-7", "reb": 12, "ast": 4, "pf": 4, "to": 3, "stl": 1, "blk": 2, "pts": 16}
+          ]
+        }
+      ],
+      "checksum_ok": true,
+      "notes": "New Mexico pts sum = 82 (matches final). Wyoming pts sum = 79 (matches final), confirmed via cross-check against team FT-made total (15) which required Rick Henry's FT to be 1-2 (pts=1) rather than an initially misread 0-2. Wyoming FGA total (64) and FG made total (29) also cross-verified exactly against roster sums. Michael Brown's 6 minutes and a few bench players' minor stat cells (reb/ast/to for very-low-minute reserves) are lower-confidence reads but do not affect points checksum. DNP players (New Mexico: Walker, Liberatore, Griego; Wyoming: McIntyre, Gleich, Bean) omitted."
+    }
+  ],
+  "skipped": []
+}

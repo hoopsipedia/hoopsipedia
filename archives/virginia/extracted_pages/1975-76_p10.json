@@ -1,0 +1,45 @@
+{
+  "page": 10,
+  "games": [
+    {
+      "date": "1976-01-10",
+      "opponent": "North Carolina Tar Heels",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 82,
+          "players": [
+            {"name": "Wally Walker", "fg": "13-20", "ft": "8-8", "reb": 9, "pf": 4, "pts": 34},
+            {"name": "Marc Iavaroni", "fg": "7-14", "ft": "7-10", "reb": 2, "pf": 3, "pts": 21},
+            {"name": "Otis Fulton", "fg": "4-7", "ft": "0-0", "reb": 8, "pf": 3, "pts": 8},
+            {"name": "David Koestner", "fg": "1-4", "ft": "0-0", "reb": 2, "pf": 4, "pts": 2},
+            {"name": "Bill Lanslow", "fg": "3-10", "ft": "1-2", "reb": 0, "pf": 5, "pts": 7},
+            {"name": "Robert Stokes", "fg": "2-3", "ft": "0-0", "reb": 2, "pf": 2, "pts": 4},
+            {"name": "Steve Castellan", "fg": "1-2", "ft": "2-3", "reb": 1, "pf": 3, "pts": 4},
+            {"name": "Mark Newlen", "fg": "0-0", "ft": "0-1", "reb": 0, "pf": 2, "pts": 0},
+            {"name": "Lamont Carr", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Tom Briggs", "fg": "1-1", "ft": "0-2", "reb": 1, "pf": 3, "pts": 2}
+          ]
+        },
+        {
+          "name": "North Carolina Tar Heels",
+          "score": 85,
+          "players": [
+            {"name": "Walter Davis", "fg": "4-10", "ft": "10-10", "reb": 5, "pf": 2, "pts": 18},
+            {"name": "Tom LaBarge", "fg": "4-9", "ft": "2-2", "reb": 5, "pf": 4, "pts": 10},
+            {"name": "Mitch Kupchak", "fg": "4-7", "ft": "4-6", "reb": 9, "pf": 4, "pts": 12},
+            {"name": "Phil Ford", "fg": "9-19", "ft": "9-13", "reb": 0, "pf": 2, "pts": 27},
+            {"name": "John Kuester", "fg": "6-10", "ft": "2-3", "reb": 1, "pf": 4, "pts": 14},
+            {"name": "Bruce Buckley", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 2, "pts": 0},
+            {"name": "Dave Hammers", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Dudley Bradley", "fg": "0-3", "ft": "0-2", "reb": 1, "pf": 1, "pts": 0},
+            {"name": "Bill Chambers", "fg": "1-1", "ft": "0-0", "reb": 1, "pf": 0, "pts": 2},
+            {"name": "Tom Zaliagiris", "fg": "1-1", "ft": "0-0", "reb": 0, "pf": 2, "pts": 2}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

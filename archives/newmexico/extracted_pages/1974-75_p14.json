@@ -1,0 +1,47 @@
+{
+  "page": 14,
+  "games": [
+    {
+      "date": "1975-01-18",
+      "opponent": "Arizona State",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 76,
+          "players": [
+            {"name": "Little, Bruce", "min": 30, "fg": "3-6", "ft": "2-2", "reb": 1, "pf": 2, "ast": 1, "to": 2, "blk": 0, "stl": 0, "pts": 8},
+            {"name": "Pokorski, Rich", "min": 29, "fg": "3-4", "ft": "0-2", "reb": 4, "pf": 3, "ast": 1, "to": 3, "blk": 0, "stl": 1, "pts": 6},
+            {"name": "Hagins, Bill", "min": 37, "fg": "8-16", "ft": "8-10", "reb": 15, "pf": 2, "ast": 0, "to": 3, "blk": 2, "stl": 0, "pts": 24},
+            {"name": "King, Pat", "min": 30, "fg": "3-6", "ft": "0-1", "reb": 2, "pf": 1, "ast": 6, "to": 7, "blk": 0, "stl": 3, "pts": 6},
+            {"name": "Davis, Dan", "min": 26, "fg": "5-10", "ft": "6-6", "reb": 2, "pf": 3, "ast": 3, "to": 6, "blk": 0, "stl": 0, "pts": 16},
+            {"name": "Williams, Ricky", "min": 12, "fg": "4-8", "ft": "0-2", "reb": 3, "pf": 1, "ast": 0, "to": 2, "blk": 1, "stl": 1, "pts": 8},
+            {"name": "Casey, Norm", "min": 9, "fg": "1-1", "ft": "0-0", "reb": 0, "pf": 1, "ast": 0, "to": 2, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Davis, Steve", "min": 12, "fg": "2-3", "ft": "0-0", "reb": 1, "pf": 0, "ast": 3, "to": 2, "blk": 0, "stl": 0, "pts": 4},
+            {"name": "Koller, Mike", "min": 12, "fg": "0-3", "ft": "0-0", "reb": 0, "pf": 2, "ast": 1, "to": 1, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Kruse, Paul", "min": 3, "fg": "0-0", "ft": "2-2", "reb": 0, "pf": 0, "ast": 0, "to": 0, "blk": 2, "stl": 0, "pts": 2}
+          ]
+        },
+        {
+          "name": "Arizona State",
+          "score": 93,
+          "players": [
+            {"name": "Moon, Mike", "min": 29, "fg": "3-6", "ft": "0-0", "reb": 4, "pf": 2, "ast": 2, "to": 2, "blk": 0, "stl": 2, "pts": 6},
+            {"name": "Collins, Lionel", "min": 38, "fg": "11-19", "ft": "1-2", "reb": 2, "pf": 2, "ast": 5, "to": 3, "blk": 0, "stl": 5, "pts": 23},
+            {"name": "Lloyd, Scott", "min": 12, "fg": "2-4", "ft": "0-0", "reb": 1, "pf": 5, "ast": 1, "to": 1, "blk": 0, "stl": 1, "pts": 4},
+            {"name": "White, Rudy", "min": 27, "fg": "10-16", "ft": "4-5", "reb": 2, "pf": 3, "ast": 4, "to": 3, "blk": 0, "stl": 5, "pts": 24},
+            {"name": "Schrader, Jack", "min": 30, "fg": "5-7", "ft": "0-0", "reb": 12, "pf": 2, "ast": 5, "to": 3, "blk": 0, "stl": 0, "pts": 10},
+            {"name": "Jackson, Cary", "min": 13, "fg": "2-4", "ft": "1-2", "reb": 2, "pf": 0, "ast": 1, "to": 0, "blk": 0, "stl": 0, "pts": 5},
+            {"name": "Holliman, James", "min": 10, "fg": "3-6", "ft": "2-2", "reb": 1, "pf": 1, "ast": 1, "to": 2, "blk": 0, "stl": 0, "pts": 8},
+            {"name": "Drayton, Nate", "min": 3, "fg": "0-2", "ft": "0-0", "reb": 3, "pf": 0, "ast": 1, "to": 1, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Wright, Ken", "min": 19, "fg": "4-8", "ft": "0-0", "reb": 4, "pf": 3, "ast": 0, "to": 2, "blk": 1, "stl": 1, "pts": 8},
+            {"name": "White, Greg", "min": 16, "fg": "1-4", "ft": "0-0", "reb": 3, "pf": 3, "ast": 2, "to": 1, "blk": 1, "stl": 0, "pts": 2},
+            {"name": "Taylor, Rick", "min": 3, "fg": "1-3", "ft": "1-1", "reb": 1, "pf": 1, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 3}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": [],
+  "notes": "Home team scoresheet header abbreviated as 'SU' but score-by-periods box clearly labels 'ARIZONA STATE'; used Arizona State as opponent name. Players with no recorded stats (New Mexico's Hudson, Bruce; Arizona State's Ring, Erroyl) omitted as DNP/no data rather than invented. Team totals row for Arizona State's assists column reads '83' which appears to be an OCR/scoresheet total inconsistent with individual ast values (sum ~22); not used since checksum only requires points, which matched exactly (76 and 93) for both teams."
+}

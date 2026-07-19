@@ -1,0 +1,9 @@
+{
+  "page": 26,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "1984-03-03 Washington State at UCLA (Pauley Pavilion, final WSU 64 - UCLA 83): Washington State side checksums cleanly (player PTS sum = 64 = team total). UCLA side fails checksum: player PTS sum = 84 vs team total/final score of 83. FG-made column sums correctly (25=25) and FT-attempted sums correctly (41=41), but FT-made sums to 34 vs the team-total row's 33, and each player's own PTS value is internally consistent with their own FG/FT made figures (10,16,22,2,13,10,4,5,1,1), so the 1-point discrepancy traces to a single ambiguous handwritten digit in one player's FT-made cell (candidates: Gray 8-9 vs 7-9, Jackson 7-9 vs 6-9, or Fields 4-6 vs 3-6) that could not be resolved with confidence after a second read at available image resolution. Skipping rather than guessing which player's made-FT/points figure is off by one."
+    }
+  ]
+}

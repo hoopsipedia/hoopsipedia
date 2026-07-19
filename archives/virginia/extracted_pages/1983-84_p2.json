@@ -1,0 +1,44 @@
+{
+  "page": 2,
+  "games": [
+    {
+      "date": "1983-11-26",
+      "opponent": "George Mason",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 87,
+          "players": [
+            {"name": "Sheehey, Tom", "min": 27, "fg": "7-10", "ft": "3-3", "reb": 3, "ast": 1, "pf": 4, "to": 2, "blk": 1, "pts": 17},
+            {"name": "Mullen, Tim", "min": 23, "fg": "2-5", "ft": "4-4", "reb": 3, "pf": 3, "to": 4, "pts": 8},
+            {"name": "Miller, Jim", "min": 31, "fg": "6-8", "ft": "5-10", "reb": 5, "ast": 1, "pf": 2, "blk": 1, "pts": 17},
+            {"name": "Stokes, Ricky", "min": 30, "fg": "1-7", "ft": "4-6", "reb": 2, "ast": 3, "pf": 2, "to": 3, "stl": 2, "pts": 6},
+            {"name": "Carlisle, Rick", "min": 36, "fg": "4-5", "ft": "6-8", "reb": 6, "ast": 6, "pf": 1, "to": 2, "stl": 2, "pts": 14},
+            {"name": "Polynice, Olden", "min": 21, "fg": "4-4", "ft": "4-7", "reb": 6, "ast": 1, "pf": 1, "to": 1, "pts": 12},
+            {"name": "Lamblotte, Ken", "min": 13, "fg": "1-3", "ft": "3-4", "reb": 1, "pf": 0, "to": 1, "pts": 5},
+            {"name": "Merrifield, Dan", "min": 13, "fg": "2-3", "ft": "4-6", "reb": 2, "pf": 4, "to": 1, "pts": 8},
+            {"name": "Johnson, Kenny", "min": 6, "reb": 1, "pf": 1, "pts": 0}
+          ]
+        },
+        {
+          "name": "George Mason Patriots",
+          "score": 63,
+          "players": [
+            {"name": "Rose, Rob", "min": 36, "fg": "2-5", "ft": "2-2", "reb": 8, "ast": 1, "pf": 3, "to": 1, "pts": 6},
+            {"name": "Yates, Carlos", "min": 37, "fg": "4-13", "ft": "9-12", "reb": 2, "ast": 1, "pf": 3, "to": 3, "stl": 2, "pts": 17},
+            {"name": "Dillard, Ricky", "min": 16, "fg": "3-4", "ft": "1-1", "reb": 5, "pf": 5, "to": 2, "pts": 7},
+            {"name": "Niehoff, John", "min": 23, "fg": "1-3", "ft": "2-3", "reb": 1, "ast": 1, "pf": 5, "to": 1, "pts": 4},
+            {"name": "Wilson, Ricky", "min": 34, "fg": "6-14", "reb": 4, "pf": 5, "to": 2, "pts": 12},
+            {"name": "McQueen, Vince", "min": 13, "fg": "2-2", "reb": 3, "pf": 3, "pts": 4},
+            {"name": "Dufrene, Mike", "min": 7, "reb": 1, "pf": 1, "to": 2, "pts": 0},
+            {"name": "Bolden, Andy", "min": 25, "fg": "4-16", "ft": "1-1", "reb": 3, "ast": 3, "pf": 5, "to": 4, "stl": 2, "pts": 9},
+            {"name": "Nieberlein, Rob", "min": 8, "fg": "2-3", "reb": 4, "pf": 3, "blk": 1, "pts": 4},
+            {"name": "Green, Warren", "min": 1, "fg": "0-1", "reb": 1, "pf": 2, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

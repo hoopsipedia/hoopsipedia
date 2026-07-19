@@ -1,0 +1,48 @@
+{
+  "page": 9,
+  "games": [
+    {
+      "date": "1962-12-29",
+      "opponent": "Wichita",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 54,
+          "players": [
+            {"name": "McDonald F", "fg": "1-1", "ft": "0-2", "pf": 1, "reb": 1, "pts": 2},
+            {"name": "Doughty F", "fg": "5-12", "ft": "2-3", "pf": 4, "reb": 3, "pts": 12},
+            {"name": "Bradds C", "fg": "3-10", "ft": "5-5", "pf": 5, "reb": 9, "pts": 11},
+            {"name": "Ressbeck G", "fg": "6-10", "ft": "3-4", "pf": 5, "reb": 2, "pts": 15},
+            {"name": "Taylor G", "fg": "0-0", "ft": "1-2", "pf": 3, "reb": 1, "pts": 1},
+            {"name": "Ricketts G", "fg": "4-7", "ft": "1-1", "pf": 1, "reb": 3, "pts": 9},
+            {"name": "Bowman F", "fg": "0-1", "ft": "0-0", "pf": 1, "reb": 4, "pts": 0},
+            {"name": "Shaffer C", "fg": "0-0", "ft": "2-3", "pf": 0, "reb": 0, "pts": 2},
+            {"name": "DeVoe F", "fg": "0-0", "ft": "0-0", "pf": 0, "reb": 0, "pts": 0},
+            {"name": "Platt F", "fg": "1-1", "ft": "0-0", "pf": 0, "reb": 2, "pts": 2},
+            {"name": "Frazier G", "fg": "0-3", "ft": "0-0", "pf": 1, "reb": 0, "pts": 0},
+            {"name": "Brown G", "fg": "0-0", "ft": "0-0", "pf": 2, "reb": 1, "pts": 0}
+          ]
+        },
+        {
+          "name": "Wichita",
+          "score": 71,
+          "players": [
+            {"name": "Stallworth F", "fg": "9-12", "ft": "4-5", "pf": 3, "reb": 6, "pts": 22},
+            {"name": "Durham F", "fg": "3-5", "ft": "1-2", "pf": 2, "reb": 3, "pts": 7},
+            {"name": "Bowman C", "fg": "6-8", "ft": "3-9", "pf": 4, "reb": 8, "pts": 15},
+            {"name": "Moore G", "fg": "5-9", "ft": "6-7", "pf": 2, "pts": 16},
+            {"name": "Kelley G", "fg": "4-12", "ft": "1-2", "pf": 2, "pts": 9},
+            {"name": "Leach F", "fg": "0-0", "ft": "0-0", "pf": 0, "reb": 1, "pts": 0},
+            {"name": "Maddox F", "fg": "1-1", "ft": "0-0", "pf": 1, "reb": 1, "pts": 2},
+            {"name": "Nosich C", "fg": "0-0", "ft": "0-1", "pf": 1, "reb": 0, "pts": 0},
+            {"name": "Kittiko F", "fg": "0-1", "ft": "0-0", "pf": 0, "reb": 1, "pts": 0},
+            {"name": "Long G", "fg": "0-0", "ft": "0-0", "pf": 1, "reb": 1, "pts": 0},
+            {"name": "Baraczk G", "fg": "0-0", "ft": "0-2", "pf": 0, "reb": 1, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

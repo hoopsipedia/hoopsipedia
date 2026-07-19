@@ -1,0 +1,47 @@
+{
+  "page": 19,
+  "games": [
+    {
+      "date": "1985-02-07",
+      "opponent": "Washington State",
+      "ucla_score": 58,
+      "opp_score": 66,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 58,
+          "players": [
+            {"name": "Reggie Miller", "min": 44, "fg": "7-13", "ft": "5-6", "reb": 6, "ast": 2, "pf": 2, "to": 5, "blk": 0, "stl": 4, "pts": 19},
+            {"name": "Gary Maloncon", "min": 30, "fg": "3-9", "ft": "2-2", "reb": 3, "ast": 1, "pf": 3, "to": 3, "blk": 0, "stl": 1, "pts": 8},
+            {"name": "Brad Wright", "min": 36, "fg": "3-6", "ft": "3-5", "reb": 5, "ast": 1, "pf": 5, "to": 1, "blk": 0, "stl": 0, "pts": 9},
+            {"name": "Montel Hatcher", "min": 19, "fg": "1-3", "ft": "0-0", "reb": 1, "ast": 1, "pf": 3, "to": 2, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Nigel Miguel", "min": 33, "fg": "5-9", "ft": "1-2", "reb": 2, "ast": 0, "pf": 5, "to": 2, "blk": 0, "stl": 3, "pts": 11},
+            {"name": "Corey Gaines", "min": 17, "fg": "1-2", "ft": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 2, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Jack Haley", "min": 4, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Dave Immel", "min": 24, "fg": "2-8", "ft": "0-0", "reb": 2, "ast": 4, "pf": 4, "to": 2, "blk": 0, "stl": 0, "pts": 4},
+            {"name": "Kevin Butler", "min": 5, "fg": "1-2", "ft": "0-0", "reb": 4, "ast": 0, "pf": 2, "to": 0, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Craig Jackson", "min": 13, "fg": "0-2", "ft": "1-2", "reb": 4, "ast": 0, "pf": 0, "to": 1, "blk": 1, "stl": 1, "pts": 1}
+          ]
+        },
+        {
+          "name": "Washington State Cougars",
+          "score": 66,
+          "players": [
+            {"name": "Otis Jennings", "min": 40, "fg": "6-13", "ft": "2-2", "reb": 4, "ast": 2, "pf": 2, "to": 3, "blk": 3, "stl": 1, "pts": 14},
+            {"name": "Joe Wallace", "min": 40, "fg": "6-11", "ft": "6-9", "reb": 6, "ast": 1, "pf": 3, "to": 5, "blk": 0, "stl": 1, "pts": 18},
+            {"name": "Ken Mathia", "min": 26, "fg": "4-9", "ft": "1-2", "reb": 10, "ast": 0, "pf": 1, "to": 5, "blk": 0, "stl": 0, "pts": 9},
+            {"name": "Mark Babich", "min": 15, "fg": "0-3", "ft": "4-5", "reb": 0, "ast": 0, "pf": 3, "to": 1, "blk": 0, "stl": 1, "pts": 4},
+            {"name": "Keith Morrison", "min": 43, "fg": "2-6", "ft": "2-5", "reb": 7, "ast": 2, "pf": 3, "to": 3, "blk": 0, "stl": 7, "pts": 6},
+            {"name": "Al Durr", "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Kitrick Taylor", "min": 35, "fg": "1-4", "ft": "7-9", "reb": 4, "ast": 3, "pf": 2, "to": 0, "blk": 0, "stl": 2, "pts": 9},
+            {"name": "Rigo Moore", "min": 1, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Brian Quinnett", "min": 5, "fg": "1-4", "ft": "0-0", "reb": 1, "ast": 0, "pf": 2, "to": 1, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Todd Anderson", "min": 20, "fg": "1-2", "ft": "2-2", "reb": 1, "ast": 0, "pf": 3, "to": 0, "blk": 0, "stl": 0, "pts": 4}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

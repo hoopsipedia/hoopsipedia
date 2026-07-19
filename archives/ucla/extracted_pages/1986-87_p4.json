@@ -1,0 +1,46 @@
+{
+  "page": 4,
+  "games": [
+    {
+      "date": "1986-12-13",
+      "opponent": "St. John's",
+      "ucla_score": 63,
+      "opp_score": 70,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 63,
+          "players": [
+            {"name": "Craig Jackson", "min": 27, "fg": "2-5", "ft": "1-3", "tp": "0-0", "reb": 4, "pf": 4, "ast": 1, "to": 2, "blk": 2, "stl": 0, "pts": 5},
+            {"name": "Reggie Miller", "min": 35, "fg": "7-12", "ft": "1-2", "tp": "3-6", "reb": 9, "pf": 3, "ast": 0, "to": 2, "pts": 18},
+            {"name": "Jack Haley", "min": 40, "fg": "2-5", "ft": "2-2", "tp": "0-0", "reb": 5, "pf": 5, "ast": 1, "to": 2, "stl": 1, "pts": 6},
+            {"name": "Montel Hatcher", "min": 29, "fg": "9-17", "ft": "0-0", "tp": "0-2", "reb": 3, "pf": 2, "ast": 14, "to": 2, "pts": 18},
+            {"name": "Jerome Richardson", "min": 17, "fg": "5-10", "ft": "2-2", "tp": "0-1", "reb": 3, "pf": 4, "ast": 0, "to": 3, "stl": 1, "pts": 12},
+            {"name": "Trevor Wilson", "min": 40, "fg": "2-6", "ft": "0-0", "tp": "0-0", "reb": 3, "pf": 3, "ast": 0, "to": 3, "stl": 1, "pts": 4},
+            {"name": "Greg Foster", "min": 12, "fg": "0-1", "ft": "0-0", "reb": 1, "pf": 0, "ast": 0, "to": 2, "pts": 0},
+            {"name": "Dave Immel", "min": 10, "fg": "0-4", "ft": "0-0", "reb": 2, "pf": 1, "ast": 0, "to": 1, "pts": 0},
+            {"name": "Kevin Walker", "min": 0, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 0, "pts": 0},
+            {"name": "Rod Palmer", "min": 1, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "St. John's",
+          "score": 70,
+          "players": [
+            {"name": "Willie Glass", "min": 36, "fg": "5-10", "ft": "4-7", "tp": "0-0", "reb": 8, "pf": 2, "ast": 1, "to": 3, "stl": 2, "pts": 14},
+            {"name": "Shelton Jones", "min": 38, "fg": "7-15", "ft": "7-10", "tp": "0-0", "reb": 11, "pf": 2, "ast": 2, "to": 1, "stl": 2, "pts": 21},
+            {"name": "Terry Bross", "min": 17, "fg": "0-3", "ft": "0-0", "tp": "0-0", "reb": 1, "pf": 3, "ast": 0, "to": 0, "stl": 1, "pts": 0},
+            {"name": "Mark Jackson", "min": 40, "fg": "5-11", "ft": "3-5", "tp": "1-2", "reb": 5, "pf": 1, "ast": 7, "to": 3, "pts": 14},
+            {"name": "Elander Lewis", "min": 6, "fg": "0-1", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 0, "pts": 0},
+            {"name": "Steve Shurina", "min": 17, "fg": "3-6", "ft": "2-2", "reb": 3, "pf": 1, "to": 1, "blk": 1, "pts": 8},
+            {"name": "Marco Baldi", "min": 23, "fg": "1-5", "ft": "4-4", "reb": 4, "pf": 4, "ast": 2, "to": 1, "stl": 1, "pts": 6},
+            {"name": "John Bempel", "min": 6, "fg": "2-3", "ft": "0-0", "reb": 1, "pf": 2, "ast": 0, "to": 0, "pts": 4},
+            {"name": "Matt Brust", "min": 17, "fg": "0-3", "ft": "3-4", "reb": 3, "pf": 3, "ast": 0, "to": 0, "pts": 3}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

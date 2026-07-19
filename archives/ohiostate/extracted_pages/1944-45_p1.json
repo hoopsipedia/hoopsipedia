@@ -1,0 +1,49 @@
+{
+  "page": 1,
+  "notes": "Sheet columns are only G (field goals made), F (free throws made), P (points) — no attempt counts recorded, so fg/ft are given as made-only counts (fg_made, ft_made) instead of the 'made-attempted' format; attempts were never invented. Points are taken directly from the sheet's P column (which already equals 2*fg_made + ft_made for every player, confirming the transcription).",
+  "games": [
+    {
+      "date": "1944-12-09",
+      "opponent": "Michigan State",
+      "notes": "Labeled '1st game of 1944-45 season', a 'Clinic Game', played at Home. Score at half: Ohio State 29, Michigan State 19. Officials: Bill Orwig (Michigan) and Russ Rupp (Lebanon Valley).",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 58,
+          "players": [
+            {"name": "Grate", "pos": "f", "fg_made": 7, "ft_made": 4, "pts": 18},
+            {"name": "Caudill", "pos": "f", "fg_made": 4, "ft_made": 0, "pts": 8},
+            {"name": "Dugger", "pos": "f", "fg_made": 0, "ft_made": 0, "pts": 0},
+            {"name": "Snyder", "pos": "f", "fg_made": 0, "ft_made": 1, "pts": 1},
+            {"name": "Donham", "pos": "f", "fg_made": 0, "ft_made": 0, "pts": 0},
+            {"name": "Risen", "pos": "c", "fg_made": 4, "ft_made": 2, "pts": 10},
+            {"name": "Pfeiffer", "pos": "c", "fg_made": 2, "ft_made": 0, "pts": 4},
+            {"name": "Huston", "pos": "g", "fg_made": 3, "ft_made": 4, "pts": 10},
+            {"name": "Sims", "pos": "g", "fg_made": 2, "ft_made": 1, "pts": 5},
+            {"name": "Amling", "pos": "g", "fg_made": 1, "ft_made": 0, "pts": 2},
+            {"name": "Jacobs", "pos": "g", "fg_made": 0, "ft_made": 0, "pts": 0},
+            {"name": "McFadden", "pos": "g", "fg_made": 0, "ft_made": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Michigan State",
+          "score": 31,
+          "players": [
+            {"name": "Fortino", "pos": "f", "fg_made": 6, "ft_made": 1, "pts": 13},
+            {"name": "Bauman", "pos": "f", "fg_made": 0, "ft_made": 2, "pts": 2},
+            {"name": "Burdick", "pos": "f", "fg_made": 0, "ft_made": 0, "pts": 0},
+            {"name": "Young", "pos": "f", "fg_made": 0, "ft_made": 0, "pts": 0},
+            {"name": "Frankel", "pos": "c", "fg_made": 0, "ft_made": 0, "pts": 0},
+            {"name": "Krail", "pos": "c", "fg_made": 1, "ft_made": 3, "pts": 5},
+            {"name": "Hashu", "pos": "g", "fg_made": 1, "ft_made": 2, "pts": 4},
+            {"name": "Beyer", "pos": "g", "fg_made": 3, "ft_made": 0, "pts": 6},
+            {"name": "O'Leary", "pos": "g", "fg_made": 0, "ft_made": 1, "pts": 1},
+            {"name": "Massuch", "pos": "g", "fg_made": 0, "ft_made": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

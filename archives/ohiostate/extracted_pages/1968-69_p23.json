@@ -1,0 +1,44 @@
+{
+  "page": 23,
+  "games": [
+    {
+      "date": "1969-03-01",
+      "opponent": "Michigan State",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 72,
+          "players": [
+            {"name": "Andreas", "fg": "5-7", "ft": "0-1", "reb": 3, "pf": 3, "pts": 10},
+            {"name": "Cleamons", "fg": "4-7", "ft": "4-6", "reb": 8, "pf": 4, "pts": 12},
+            {"name": "Sorenson", "fg": "14-27", "ft": "3-4", "reb": 11, "pf": 1, "pts": 31},
+            {"name": "Meadors", "fg": "4-9", "ft": "0-0", "reb": 4, "pf": 3, "pts": 8},
+            {"name": "Finney", "fg": "1-9", "ft": "1-1", "reb": 1, "pf": 1, "pts": 3},
+            {"name": "Schnabel", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Barclay", "fg": "2-6", "ft": "2-3", "reb": 4, "pf": 1, "pts": 6},
+            {"name": "Howell", "fg": "0-1", "ft": "2-2", "reb": 1, "pf": 1, "pts": 2},
+            {"name": "Smith", "fg": "0-3", "ft": "0-0", "reb": 2, "pf": 2, "pts": 0}
+          ]
+        },
+        {
+          "name": "Michigan State",
+          "score": 85,
+          "players": [
+            {"name": "Holms", "fg": "1-1", "ft": "0-0", "reb": 0, "pf": 0, "pts": 2},
+            {"name": "Lafayette", "fg": "9-15", "ft": "4-7", "reb": 9, "pf": 0, "pts": 22},
+            {"name": "Lick", "fg": "4-6", "ft": "1-1", "reb": 3, "pf": 5, "pts": 8},
+            {"name": "Stepter", "fg": "5-12", "ft": "2-4", "reb": 4, "pf": 3, "pts": 12},
+            {"name": "Copeland", "fg": "10-21", "ft": "1-2", "reb": 22, "pf": 3, "pts": 21},
+            {"name": "Bograkos", "fg": "5-9", "ft": "0-1", "reb": 1, "pf": 3, "pts": 10},
+            {"name": "Gibbons", "fg": "3-7", "ft": "4-4", "reb": 3, "pf": 2, "pts": 10},
+            {"name": "Ward", "fg": "0-3", "ft": "0-0", "reb": 1, "pf": 0, "pts": 0},
+            {"name": "Kirkpatrick", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Gale", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

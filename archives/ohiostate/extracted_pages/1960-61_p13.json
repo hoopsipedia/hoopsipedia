@@ -1,0 +1,48 @@
+{
+  "page": 13,
+  "games": [
+    {
+      "date": "1961-01-14",
+      "opponent": "Northwestern",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 79,
+          "players": [
+            {"name": "Havlicek", "fg": "3-6", "ft": "2-2", "reb": 5, "pf": 2, "pts": 8},
+            {"name": "Hoyt", "fg": "2-2", "ft": "0-1", "reb": 2, "pf": 0, "pts": 4},
+            {"name": "Lucas", "fg": "11-18", "ft": "8-8", "reb": 18, "pf": 0, "pts": 30},
+            {"name": "Nowell", "fg": "6-12", "ft": "1-1", "reb": 3, "pf": 3, "pts": 13},
+            {"name": "Siegfried", "fg": "6-12", "ft": "2-2", "reb": 4, "pf": 2, "pts": 14},
+            {"name": "Knight", "fg": "0-1", "ft": "0-0", "reb": 0, "pf": 2, "pts": 0},
+            {"name": "Gearhart", "fg": "1-2", "ft": "0-0", "reb": 1, "pf": 0, "pts": 2},
+            {"name": "McDonald", "fg": "1-1", "ft": "0-0", "reb": 1, "pf": 1, "pts": 2},
+            {"name": "Lee", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 1, "pts": 0},
+            {"name": "Reasbeck", "fg": "3-3", "ft": "0-0", "reb": 1, "pf": 1, "pts": 6},
+            {"name": "Apple", "fg": "0-1", "ft": "0-0", "reb": 1, "pf": 0, "pts": 0},
+            {"name": "Landes", "fg": "0-1", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Miller", "fg": "0-1", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Northwestern",
+          "score": 45,
+          "players": [
+            {"name": "Snyder", "fg": "2-8", "ft": "2-2", "reb": 6, "pf": 1, "pts": 6},
+            {"name": "Miller", "fg": "3-5", "ft": "0-2", "reb": 7, "pf": 3, "pts": 6},
+            {"name": "Woislaw", "fg": "1-15", "ft": "0-1", "reb": 4, "pf": 2, "pts": 2},
+            {"name": "Wells", "fg": "5-13", "ft": "3-4", "reb": 0, "pf": 4, "pts": 13},
+            {"name": "Cacciatore", "fg": "3-6", "ft": "1-1", "reb": 1, "pf": 1, "pts": 7},
+            {"name": "Bone", "fg": "3-5", "ft": "1-1", "reb": 1, "pf": 2, "pts": 7},
+            {"name": "Gibbs", "fg": "1-2", "ft": "0-1", "reb": 1, "pf": 0, "pts": 2},
+            {"name": "Lutgens", "fg": "1-2", "ft": "0-0", "reb": 1, "pf": 1, "pts": 2},
+            {"name": "Potter", "fg": "0-1", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": [],
+  "notes": "Official Western Conference Basketball Box Score sheet. Column order on sheet is FGA, FG, FTA, FT (attempts before made, per legend at bottom of page), reformatted here to standard made-attempted (fg/ft). Both teams' player points checksum exactly to final score (OSU 79, Northwestern 45). No minutes/ast/to/stl/blk columns present on sheet, so omitted. Officials: Louis Filippi and Zigmund Mihalik; attendance 9,000; authenticated by scorer Marv Homan."
+}

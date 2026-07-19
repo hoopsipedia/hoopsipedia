@@ -1,0 +1,46 @@
+{
+  "page": 8,
+  "games": [
+    {
+      "date": "1986-12-16",
+      "opponent": "Dayton",
+      "site": "University of Dayton Arena",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 86,
+          "players": [
+            {"name": "Hopson, Dennis", "min": "37", "fg": "11-29", "tp": "3-9", "ft": "6-6", "reb": "14", "ast": "4", "to": "4", "blk": "2", "stl": "3", "pf": "4", "pts": 41},
+            {"name": "Francis, Jerry", "min": "27", "fg": "2-4", "ft": "3-5", "reb": "6", "ast": "1", "to": "1", "blk": "0", "stl": "1", "pf": "5", "pts": 7},
+            {"name": "Anderson, John", "min": "38", "fg": "1-3", "ft": "2-2", "reb": "5", "ast": "0", "to": "0", "blk": "1", "stl": "0", "pf": "3", "pts": 4},
+            {"name": "Burson, Jay", "min": "28", "fg": "2-7", "tp": "1-1", "ft": "0-0", "reb": "5", "ast": "0", "to": "2", "blk": "0", "stl": "1", "pf": "5", "pts": 5},
+            {"name": "Wilson, Curtis", "min": "31", "fg": "6-17", "tp": "1-2", "ft": "10-10", "reb": "1", "ast": "2", "to": "1", "blk": "1", "stl": "4", "pf": "5", "pts": 23},
+            {"name": "White, Tony", "min": "14", "fg": "0-2", "ft": "0-0", "reb": "3", "pf": "0", "pts": 0},
+            {"name": "Anderson, Scott", "min": "21", "fg": "3-5", "reb": "3", "ast": "4", "to": "1", "pf": "1", "pts": 6},
+            {"name": "Dumas, Joe", "min": "2", "fg": "0-0", "pts": 0},
+            {"name": "Martin, Jim", "min": "1", "fg": "0-0", "pts": 0},
+            {"name": "Printup, Randy", "fg": "0-0", "pts": 0}
+          ],
+          "checksum_ok": true
+        },
+        {
+          "name": "Dayton Flyers",
+          "score": 89,
+          "players": [
+            {"name": "Grant, Anthony", "min": "36", "fg": "7-12", "ft": "2-2", "reb": "6", "ast": "5", "to": "6", "pf": "1", "pts": 17},
+            {"name": "Young, Ed", "min": "32", "fg": "5-11", "ft": "4-5", "reb": "6", "pf": "2", "pts": 14},
+            {"name": "McCracken, Trutt", "fg": "3-6", "ft": "1-2", "reb": "11", "pf": "6", "pts": 7},
+            {"name": "Smith, Steve", "min": "40", "fg": "5-7", "tp": "1-3", "ft": "5-6", "reb": "6", "ast": "9", "to": "1", "pf": "3", "pts": 12},
+            {"name": "Christie, Dan", "min": "26", "fg": "5-10", "tp": "4-5", "ft": "5-8", "reb": "3", "ast": "4", "to": "1", "blk": "2", "pf": "4", "pts": 19},
+            {"name": "Robinson, Noland", "min": "5", "fg": "4-12", "reb": "3", "pf": "2", "pts": 12},
+            {"name": "Uhl, Bill", "min": "6", "fg": "0-0", "ft": "0-0", "reb": "1", "pf": "0", "pts": 0},
+            {"name": "Grotty, Bill", "min": "8", "fg": "0-1", "ft": "6-6", "reb": "2", "pf": "1", "pts": 6},
+            {"name": "Corsig, Anthony", "fg": "1-1", "pts": 2}
+          ],
+          "checksum_ok": true
+        }
+      ]
+    }
+  ],
+  "skipped": []
+}

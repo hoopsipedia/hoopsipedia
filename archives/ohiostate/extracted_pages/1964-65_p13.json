@@ -1,0 +1,41 @@
+{
+  "page": 13,
+  "games": [
+    {
+      "date": "1965-01-16",
+      "opponent": "Indiana",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 72,
+          "players": [
+            {"name": "Dove", "fg": "2-2", "ft": "2-3", "reb": 8, "pf": 4, "pts": 6},
+            {"name": "Sepic", "fg": "7-19", "ft": "5-10", "reb": 11, "pf": 4, "pts": 19},
+            {"name": "Shaffer", "fg": "7-13", "ft": "2-4", "reb": 15, "pf": 1, "pts": 16},
+            {"name": "Rowley", "fg": "2-11", "ft": "3-5", "reb": 0, "pf": 2, "pts": 7},
+            {"name": "Ricketts", "fg": "4-10", "ft": "4-5", "reb": 4, "pf": 5, "pts": 12},
+            {"name": "Tischer", "fg": "4-6", "ft": "0-2", "reb": 1, "pf": 2, "pts": 8},
+            {"name": "Peters", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Brown", "fg": "1-4", "ft": "2-2", "reb": 3, "pf": 1, "pts": 4}
+          ]
+        },
+        {
+          "name": "Indiana Hoosiers",
+          "score": 84,
+          "players": [
+            {"name": "T. Van Arsdale", "fg": "8-16", "ft": "5-6", "reb": 15, "pf": 4, "pts": 21},
+            {"name": "D. Van Arsdale", "fg": "5-15", "ft": "5-7", "reb": 12, "pf": 2, "pts": 15},
+            {"name": "Peyser", "fg": "4-7", "ft": "0-0", "reb": 1, "pf": 5, "pts": 8},
+            {"name": "Redenbaugh", "fg": "3-11", "ft": "0-1", "reb": 4, "pf": 3, "pts": 6},
+            {"name": "McGlocklin", "fg": "8-12", "ft": "1-1", "reb": 7, "pf": 1, "pts": 17},
+            {"name": "Harden", "fg": "2-3", "ft": "3-4", "reb": 0, "pf": 3, "pts": 7},
+            {"name": "Grieger", "fg": "1-1", "ft": "2-2", "reb": 1, "pf": 0, "pts": 4},
+            {"name": "Cooper", "fg": "3-6", "ft": "0-1", "reb": 3, "pf": 2, "pts": 6}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

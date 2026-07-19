@@ -1,0 +1,47 @@
+{
+  "page": 19,
+  "games": [
+    {
+      "date": "1971-02-13",
+      "opponent": "Wake Forest",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 71,
+          "players": [
+            {"name": "Bill Gerry", "min": 35, "fg": "4-7", "ft": "8-9", "reb": 8, "pf": 3, "ast": 0, "to": 3, "blk": 0, "stl": 0, "pts": 16},
+            {"name": "Barry Parkhill", "min": 37, "fg": "8-16", "ft": "5-5", "reb": 5, "pf": 4, "ast": 3, "to": 4, "blk": 0, "stl": 0, "pts": 21},
+            {"name": "Scott McCandlish", "min": 36, "fg": "5-17", "ft": "4-5", "reb": 12, "pf": 2, "ast": 0, "to": 5, "blk": 0, "stl": 0, "pts": 14},
+            {"name": "Tim Rash", "min": 25, "fg": "1-8", "ft": "2-2", "reb": 1, "pf": 1, "ast": 1, "to": 3, "blk": 0, "stl": 0, "pts": 4},
+            {"name": "Frank DeWitt", "min": 38, "fg": "3-8", "ft": "3-5", "reb": 8, "pf": 2, "ast": 1, "to": 1, "blk": 0, "stl": 0, "pts": 9},
+            {"name": "Jim Hobgood", "min": 8, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 2, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Chip Miller", "min": 18, "fg": "3-7", "ft": "1-2", "reb": 2, "pf": 2, "ast": 1, "to": 2, "blk": 0, "stl": 0, "pts": 7},
+            {"name": "John Hill", "min": 3, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Wake Forest",
+          "score": 95,
+          "players": [
+            {"name": "Charlie Davis", "min": 37, "fg": "11-19", "ft": "1-2", "reb": 4, "pf": 3, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 23},
+            {"name": "Gil McGregor", "min": 29, "fg": "9-17", "ft": "0-0", "reb": 11, "pf": 4, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 18},
+            {"name": "Rich Habegger", "min": 33, "fg": "6-9", "ft": "2-4", "reb": 8, "pf": 3, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 14},
+            {"name": "Neil Pastushok", "min": 37, "fg": "6-14", "ft": "5-6", "reb": 6, "pf": 3, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 17},
+            {"name": "Bob Rhoads", "min": 35, "fg": "3-9", "ft": "2-3", "reb": 8, "pf": 3, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 8},
+            {"name": "John Orenczak", "min": 12, "fg": "3-5", "ft": "1-2", "reb": 1, "pf": 2, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 7},
+            {"name": "John Lewkowicz", "min": 5, "fg": "0-0", "ft": "1-2", "reb": 1, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 1},
+            {"name": "Pat Kelly", "min": 4, "fg": "1-3", "ft": "1-2", "reb": 4, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 3},
+            {"name": "Willie Griffin", "min": 3, "fg": "1-3", "ft": "0-0", "reb": 1, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Bob Hook", "min": 3, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Eddie Payne", "min": 2, "fg": "0-1", "ft": "0-0", "reb": 1, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Joe Neal", "min": 0, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Jeff Stewart", "min": 0, "fg": "1-1", "ft": "0-0", "reb": 0, "pf": 1, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 2}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": [],
+  "notes": "Wake Forest sheet also has a non-player 'TEAM TOTALS' line (assists=14, TO=7, aggregate not attributed to individuals) and both teams have a rebounds-only 'Team' line; both excluded from player lists as they are not individual player stats. Team assist/turnover totals (VA A=6/TO=18, WF A=14/TO=7) reconciled against per-player sums where tracked."
+}

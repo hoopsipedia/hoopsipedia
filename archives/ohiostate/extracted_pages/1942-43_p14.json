@@ -1,0 +1,9 @@
+{
+  "page": 14,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page contains a tiny newspaper clipping box score (Ohio State vs. Iowa, dated by handwritten note 'March 1, 1943') embedded in an otherwise mostly-blank tracking sheet page. The clipping text is legible enough to identify team names and general layout (G./F./PF./TP columns for both Ohio State and Iowa, plus a free-throws-missed note and umpire names), but the individual digit columns are too small/blurry to read with confidence -- several numbers are ambiguous or could be misread (e.g., possible OCR confusion between totals and individual figures), making it impossible to reliably compute a checksum against the team final score. Skipping rather than guessing at player stats."
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "page": 8,
+  "games": [
+    {
+      "date": "1937-01-09",
+      "opponent": "New York University",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 39,
+          "players": [
+            {"name": "Hull", "fg": "4", "ft": "1", "pts": 9},
+            {"name": "Baker", "fg": "1", "ft": "1", "pts": 3},
+            {"name": "Ritchclt", "fg": "0", "ft": "1", "pts": 1},
+            {"name": "McDonald", "fg": "3", "ft": "0", "pts": 6},
+            {"name": "Thomas", "fg": "4", "ft": "0", "pts": 8},
+            {"name": "Dye", "fg": "0", "ft": "4", "pts": 4},
+            {"name": "Radabaugh", "fg": "3", "ft": "2", "pts": 8},
+            {"name": "Boughner", "fg": "0", "ft": "0", "pts": 0}
+          ]
+        },
+        {
+          "name": "New York University",
+          "score": 32,
+          "players": [
+            {"name": "Boardman", "fg": "1", "ft": "2", "pts": 4},
+            {"name": "Brown", "fg": "1", "ft": "2", "pts": 4},
+            {"name": "Carnevale", "fg": "4", "ft": "4", "pts": 12},
+            {"name": "Tarlow", "fg": "3", "ft": "2", "pts": 8},
+            {"name": "Geffen", "fg": "0", "ft": "0", "pts": 0},
+            {"name": "Schulman", "fg": "2", "ft": "0", "pts": 4},
+            {"name": "Dowd", "fg": "0", "ft": "0", "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

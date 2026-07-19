@@ -1,0 +1,9 @@
+{
+  "page": 8,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page shows a full official box score (Ohio State vs Maryland-Baltimore County, December 22, 1987, St. John Arena) but the scan has heavy overlaid/bleed-through annotation text crossing multiple player rows on both teams (visitor rows for Franklin; home team rows for Wilson, Burson, Doss, Anderson(Scott), Hatten), making several FG/FT/rebound/TP cells unreadable with confidence. A checksum attempt on the legible visitor (Maryland-Baltimore) player TP values summed to 70 vs. the team total of 68, confirming at least one misread cell, likely the obscured Franklin line. Given the instruction to be ruthless about skipping rather than guessing, and having already used the single permitted read, this game is skipped entirely rather than transcribed with unreliable values."
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "page": 3,
+  "games": [
+    {
+      "date": "1996-12-07",
+      "opponent": "Kansas Jayhawks",
+      "teams": [
+        {
+          "name": "Kansas Jayhawks",
+          "score": 96,
+          "players": [
+            {"name": "Paul Pierce", "min": 30, "fg": "3-10", "ft": "5-6", "tp": "1-2", "reb": 5, "ast": 2, "pf": 3, "to": 6, "stl": 2, "blk": 1, "pts": 12},
+            {"name": "Raef LaFrentz", "min": 30, "fg": "13-21", "ft": "5-7", "tp": "0-0", "reb": 11, "ast": 3, "pf": 3, "to": 0, "stl": 2, "blk": 1, "pts": 31},
+            {"name": "Scot Pollard", "min": 20, "fg": "3-7", "ft": "4-6", "tp": "0-0", "reb": 7, "ast": 0, "pf": 5, "to": 0, "stl": 3, "blk": 1, "pts": 10},
+            {"name": "Jerod Haase", "min": 30, "fg": "7-12", "ft": "7-7", "tp": "1-2", "reb": 6, "ast": 2, "pf": 3, "to": 6, "stl": 3, "blk": 0, "pts": 22},
+            {"name": "Ryan Robertson", "min": 38, "fg": "0-4", "ft": "0-0", "tp": "0-1", "reb": 2, "ast": 11, "pf": 1, "to": 2, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "B.J. Williams", "min": 22, "fg": "0-2", "ft": "1-2", "tp": "0-0", "reb": 2, "ast": 0, "pf": 1, "to": 0, "stl": 2, "blk": 0, "pts": 1},
+            {"name": "Billy Thomas", "min": 15, "fg": "7-10", "ft": "0-0", "tp": "4-6", "reb": 1, "ast": 1, "pf": 1, "to": 2, "stl": 0, "blk": 0, "pts": 18},
+            {"name": "T.J. Pugh", "min": 6, "fg": "0-1", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 2, "to": 2, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "C.B. McGrath", "min": 2, "fg": "0-0", "ft": "2-2", "tp": "0-0", "reb": 1, "ast": 1, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Nick Bradford", "min": 4, "fg": "0-1", "ft": "0-0", "tp": "0-0", "reb": 1, "ast": 0, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Steve Ransom", "min": 1, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Terry Nooner", "min": 1, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Joel Branstrom", "min": 1, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "UCLA Bruins",
+          "score": 83,
+          "players": [
+            {"name": "Charles O'Bannon", "min": 35, "fg": "6-10", "ft": "7-10", "tp": "1-2", "reb": 6, "ast": 3, "pf": 3, "to": 4, "stl": 2, "blk": 1, "pts": 20},
+            {"name": "J.R. Henderson", "min": 24, "fg": "4-6", "ft": "3-5", "tp": "0-0", "reb": 7, "ast": 1, "pf": 4, "to": 1, "stl": 2, "blk": 0, "pts": 11},
+            {"name": "Jelani McCoy", "min": 28, "fg": "7-8", "ft": "1-2", "tp": "0-0", "reb": 5, "ast": 1, "pf": 4, "to": 8, "stl": 0, "blk": 3, "pts": 15},
+            {"name": "Toby Bailey", "min": 32, "fg": "5-10", "ft": "2-4", "tp": "2-3", "reb": 4, "ast": 2, "pf": 3, "to": 3, "stl": 0, "blk": 1, "pts": 14},
+            {"name": "Cameron Dollar", "min": 30, "fg": "3-8", "ft": "2-2", "tp": "0-0", "reb": 0, "ast": 5, "pf": 4, "to": 3, "stl": 5, "blk": 0, "pts": 8},
+            {"name": "Kris Johnson", "min": 28, "fg": "3-9", "ft": "2-4", "tp": "1-4", "reb": 3, "ast": 0, "pf": 4, "to": 7, "stl": 0, "blk": 0, "pts": 9},
+            {"name": "Brandon Loyd", "min": 16, "fg": "2-3", "ft": "0-0", "tp": "2-3", "reb": 1, "ast": 1, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 6},
+            {"name": "Bob Myers", "min": 7, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

@@ -1,0 +1,9 @@
+{
+  "page": 6,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page shows a handwritten Official NCAA Basketball Box Score for New Mexico at Hawaii, Dec. 10, 1976 (Klum/Klas... Center Arena), final score New Mexico 77, Hawaii ~78 per the score-by-periods line. However, the player-line handwriting is too faint/overlapping to transcribe confidently: individual FG/FGA/FT/FTA digits are ambiguous (e.g. rebound column appears split into two sub-values with unclear meaning, several TP entries are illegible or smudged), and totals rows are not reliably legible either. Rather than guess values that could fail or falsely pass the pts-sum checksum, this game is skipped entirely."
+    }
+  ]
+}

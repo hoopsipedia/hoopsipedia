@@ -1,0 +1,42 @@
+{
+  "page": 3,
+  "games": [
+    {
+      "date": "1974-12-07",
+      "opponent": "Davidson",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 80,
+          "players": [
+            {"name": "Stiegemeier", "fg": "6-16", "ft": "1-2", "reb": 5, "ast": 3, "pf": 2, "pts": 13},
+            {"name": "Bolden", "fg": "5-13", "ft": "1-2", "reb": 0, "ast": 5, "pf": 5, "pts": 11},
+            {"name": "Bayless", "fg": "2-6", "ft": "4-7", "reb": 3, "ast": 4, "pf": 5, "pts": 8},
+            {"name": "Andreas", "fg": "10-15", "ft": "6-7", "reb": 7, "ast": 1, "pf": 5, "pts": 26},
+            {"name": "Taylor", "fg": "5-12", "ft": "0-0", "reb": 9, "ast": 0, "pf": 5, "pts": 10},
+            {"name": "Wenner", "fg": "6-14", "ft": "0-1", "reb": 12, "ast": 0, "pf": 4, "pts": 12},
+            {"name": "Shields", "fg": "0-1", "ft": "0-0", "reb": 1, "ast": 0, "pf": 1, "pts": 0},
+            {"name": "Weston", "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "pts": 0},
+            {"name": "Hammond", "fg": "0-1", "ft": "0-0", "reb": 1, "ast": 0, "pf": 1, "pts": 0}
+          ]
+        },
+        {
+          "name": "Davidson",
+          "score": 88,
+          "players": [
+            {"name": "Dunn", "fg": "7-14", "ft": "8-12", "reb": 4, "ast": 4, "pf": 2, "pts": 22},
+            {"name": "Horowitz", "fg": "10-16", "ft": "5-9", "reb": 14, "ast": 7, "pf": 4, "pts": 25},
+            {"name": "Powell", "fg": "6-12", "ft": "8-9", "reb": 5, "ast": 3, "pf": 3, "pts": 20},
+            {"name": "Lowry", "fg": "3-4", "ft": "2-3", "reb": 2, "ast": 2, "pf": 0, "pts": 8},
+            {"name": "Parker", "fg": "1-5", "ft": "2-2", "reb": 8, "ast": 1, "pf": 2, "pts": 4},
+            {"name": "Rixey", "fg": "2-3", "ft": "0-0", "reb": 1, "ast": 0, "pf": 4, "pts": 4},
+            {"name": "Gadaire", "fg": "2-4", "ft": "1-2", "reb": 4, "ast": 4, "pf": 1, "pts": 5},
+            {"name": "Verlin", "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

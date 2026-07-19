@@ -1,0 +1,43 @@
+{
+  "page": 15,
+  "games": [
+    {
+      "date": "1999-01-14",
+      "opponent": "California",
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 72,
+          "players": [
+            {"name": "Jerome Moiso", "min": 30, "fg": "4-8", "tp": "0-1", "ft": "2-4", "reb": 4, "ast": 2, "pf": 0, "to": 3, "stl": 1, "blk": 1, "pts": 10},
+            {"name": "JaRon Rush", "min": 22, "fg": "3-8", "tp": "1-3", "ft": "0-0", "reb": 7, "ast": 0, "pf": 4, "to": 3, "stl": 0, "blk": 0, "pts": 7},
+            {"name": "Dan Gadzuric", "min": 32, "fg": "2-10", "tp": "0-0", "ft": "1-4", "reb": 13, "ast": 1, "pf": 2, "to": 0, "stl": 0, "blk": 1, "pts": 5},
+            {"name": "Earl Watson", "min": 32, "fg": "7-11", "tp": "1-1", "ft": "2-2", "reb": 2, "ast": 5, "pf": 4, "to": 4, "stl": 0, "blk": 0, "pts": 17},
+            {"name": "Baron Davis", "min": 32, "fg": "6-11", "tp": "1-3", "ft": "6-9", "reb": 5, "ast": 8, "pf": 3, "to": 3, "stl": 5, "blk": 0, "pts": 19},
+            {"name": "Travis Reed", "min": 17, "fg": "4-5", "tp": "0-0", "ft": "0-1", "reb": 3, "ast": 1, "pf": 3, "to": 1, "stl": 1, "blk": 0, "pts": 8},
+            {"name": "Ryan Bailey", "min": 16, "fg": "2-2", "tp": "0-0", "ft": "0-0", "reb": 3, "ast": 2, "pf": 2, "to": 4, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Matt Barnes", "min": 6, "fg": "0-1", "tp": "0-1", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Ray Young", "min": 13, "fg": "1-4", "tp": "0-1", "ft": "0-0", "reb": 1, "ast": 0, "pf": 2, "to": 2, "stl": 2, "blk": 0, "pts": 2}
+          ]
+        },
+        {
+          "name": "California Golden Bears",
+          "score": 61,
+          "players": [
+            {"name": "Sean Lampley", "min": 33, "fg": "3-10", "tp": "0-2", "ft": "3-5", "reb": 8, "ast": 2, "pf": 2, "to": 4, "stl": 0, "blk": 0, "pts": 9},
+            {"name": "Carl Boyd", "min": 30, "fg": "2-9", "tp": "0-2", "ft": "0-0", "reb": 8, "ast": 2, "pf": 1, "to": 2, "stl": 2, "blk": 0, "pts": 4},
+            {"name": "Francisco Elson", "min": 29, "fg": "3-5", "tp": "0-0", "ft": "1-2", "reb": 6, "ast": 0, "pf": 2, "to": 2, "stl": 0, "blk": 2, "pts": 7},
+            {"name": "Thomas Kilgore", "min": 30, "fg": "4-9", "tp": "1-2", "ft": "3-4", "reb": 2, "ast": 1, "pf": 5, "to": 4, "stl": 0, "blk": 0, "pts": 12},
+            {"name": "Geno Carlisle", "min": 37, "fg": "3-15", "tp": "2-5", "ft": "6-7", "reb": 3, "ast": 6, "pf": 1, "to": 3, "stl": 0, "blk": 0, "pts": 14},
+            {"name": "Sean Hughes", "min": 8, "fg": "1-1", "tp": "0-0", "ft": "0-0", "reb": 2, "ast": 0, "pf": 3, "to": 1, "stl": 0, "blk": 1, "pts": 2},
+            {"name": "Michael Gill", "min": 18, "fg": "4-6", "tp": "0-0", "ft": "2-2", "reb": 1, "ast": 0, "pf": 3, "to": 3, "stl": 0, "blk": 0, "pts": 10},
+            {"name": "Dennis Gates", "min": 12, "fg": "1-1", "tp": "1-1", "ft": "0-0", "reb": 1, "ast": 0, "pf": 2, "to": 1, "stl": 2, "blk": 0, "pts": 3},
+            {"name": "Raymond King", "min": 3, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

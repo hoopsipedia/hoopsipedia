@@ -1,0 +1,46 @@
+{
+  "page": 13,
+  "games": [
+    {
+      "date": "1982-01-09",
+      "date_note": "Handwritten date field only legibly shows '1982' (month/day illegible/scratched). Site abbreviation reads like 'Chapel Hill, N.C.'. Final score 65-60 UNC over Virginia matches the well-documented Jan. 9, 1982 Chapel Hill meeting (Jordan/Perkins/Worthy vs. Sampson); date is inferred from that historical match, not directly legible on the sheet.",
+      "opponent": "North Carolina",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 60,
+          "players": [
+            {"name": "Mullen", "min": "17", "fg": "2-5", "ft": "0-0", "reb": "1", "pf": "4", "pts": 4},
+            {"name": "Robinson", "min": "20", "fg": "2-6", "ft": "0-0", "reb": "4", "pf": "4", "pts": 4},
+            {"name": "Sampson", "min": "38", "fg": "13-23", "ft": "4-12", "reb": "17", "pf": "4", "pts": 30},
+            {"name": "Wilson (name unclear, read as Wilson/Willard)", "min": "28", "fg": "3-7", "ft": "0-0", "reb": "3", "pf": "6", "pts": 6},
+            {"name": "Jones", "min": "37", "fg": "3-7", "ft": "1-2", "reb": "0", "pf": "3", "pts": 7},
+            {"name": "Miller", "min": "29", "fg": "0-3", "ft": "6-6", "reb": "3", "pf": "1", "pts": 6},
+            {"name": "Stokes", "min": "19", "fg": "1-3", "ft": "1-1", "reb": "0", "pf": "4", "pts": 3},
+            {"name": "Unknown (name illegible)", "min": "10", "fg": "0-0", "ft": "0-0", "reb": "0", "pf": "0", "pts": 0},
+            {"name": "Unknown (name illegible)", "min": "1", "fg": "0-0", "ft": "0-0", "reb": "0", "pf": "0", "pts": 0},
+            {"name": "Johnson", "min": "6", "fg": "0-1", "ft": "0-0", "reb": "0", "pf": "1", "pts": 0}
+          ]
+        },
+        {
+          "name": "North Carolina Tar Heels",
+          "score": 65,
+          "players": [
+            {"name": "Doherty (name unclear)", "min": "40", "fg": "3-8", "ft": "2-2", "reb": "2", "pf": "0", "pts": 8},
+            {"name": "Worthy", "min": "40", "fg": "5-11", "ft": "7-12", "reb": "3", "pf": "3", "pts": 17},
+            {"name": "Perkins", "min": "35", "fg": "4-10", "ft": "4-5", "reb": "8", "pf": "4", "pts": 12},
+            {"name": "Jordan", "min": "37", "fg": "5-10", "ft": "6-8", "reb": "7", "pf": "3", "pts": 16},
+            {"name": "Black", "min": "29", "fg": "2-8", "ft": "0-0", "reb": "3", "pf": "5", "pts": 4},
+            {"name": "Unknown (name illegible)", "min": "13", "fg": "2-2", "ft": "4-4", "reb": "0", "pf": "0", "pts": 8},
+            {"name": "Unknown (name illegible)", "min": "4", "fg": "0-0", "ft": "0-0", "reb": "1", "pf": "0", "pts": 0},
+            {"name": "Unknown (name illegible)", "min": "1", "fg": "0-0", "ft": "0-0", "reb": "0", "pf": "0", "pts": 0},
+            {"name": "Peterson (name unclear)", "min": "1", "fg": "0-0", "ft": "0-0", "reb": "0", "pf": "0", "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true,
+      "checksum_notes": "Player pts sums: Virginia 4+4+30+6+7+6+3+0+0+0=60 (matches final score 60). North Carolina 8+17+12+16+4+8+0+0+0=65 (matches final score 65). FG-made and FT-made column sums also match each team's TOTALS row exactly (Virginia FG 24, FT 12; UNC FG 21, FT 23). One inconsistency noted: Virginia's individual FTA (attempts) figures sum to ~21 vs. the TOTALS-row FTA of 16 -- Sampson's FTA is written as 12, which alone accounts for most of the discrepancy; FT-made and points still check out, so this is flagged as a minor secondary-stat read uncertainty rather than a checksum failure. UNC's FTA sums match team total exactly (31=31)."
+    }
+  ],
+  "skipped": []
+}

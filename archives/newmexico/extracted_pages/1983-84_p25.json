@@ -1,0 +1,41 @@
+{
+  "page": 25,
+  "games": [
+    {
+      "date": "1984-02-11",
+      "opponent": "San Diego State Aztecs",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 60,
+          "players": [
+            {"name": "Tim Garrett", "min": 38, "fg": "6-15", "ft": "0-0", "reb": 4, "ast": 1, "pf": 4, "to": 2, "stl": 0, "blk": 0, "pts": 12},
+            {"name": "Alan Dolensky", "min": 40, "fg": "2-10", "ft": "0-1", "reb": 7, "ast": 6, "pf": 4, "to": 3, "stl": 3, "blk": 0, "pts": 5},
+            {"name": "T.J. Drake", "min": 8, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 3, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Nelson Franse", "min": 36, "fg": "11-15", "ft": "0-0", "reb": 0, "ast": 1, "pf": 5, "to": 0, "stl": 0, "blk": 0, "pts": 22},
+            {"name": "Phil Smith", "min": 40, "fg": "3-6", "ft": "1-2", "reb": 2, "ast": 14, "pf": 2, "to": 4, "stl": 3, "blk": 0, "pts": 7},
+            {"name": "Kelvin Scarborough", "min": 25, "fg": "7-12", "ft": "0-0", "reb": 1, "ast": 0, "pf": 2, "to": 0, "stl": 1, "blk": 0, "pts": 14},
+            {"name": "Hunter Greene", "min": 4, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Mike Winters", "min": 9, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 1, "pf": 0, "to": 0, "stl": 1, "blk": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "San Diego State Aztecs",
+          "score": 61,
+          "players": [
+            {"name": "Andre Ross", "min": 35, "fg": "2-3", "ft": "2-3", "reb": 7, "ast": 8, "pf": 1, "to": 4, "stl": 2, "blk": 0, "pts": 6},
+            {"name": "Michael Cage", "min": 40, "fg": "5-7", "ft": "7-11", "reb": 8, "ast": 0, "pf": 3, "to": 2, "stl": 0, "blk": 2, "pts": 17},
+            {"name": "Leonard Allen", "min": 21, "fg": "3-7", "ft": "1-2", "reb": 6, "ast": 0, "pf": 2, "to": 3, "stl": 0, "blk": 1, "pts": 7},
+            {"name": "Anthony Watson", "min": 32, "fg": "5-8", "ft": "2-2", "reb": 1, "ast": 3, "pf": 3, "to": 5, "stl": 1, "blk": 0, "pts": 12},
+            {"name": "Bobby Ojens", "min": 26, "fg": "3-3", "ft": "1-2", "reb": 2, "ast": 1, "pf": 0, "to": 2, "stl": 2, "blk": 0, "pts": 7},
+            {"name": "Jeff Konek", "min": 26, "fg": "1-5", "ft": "5-6", "reb": 0, "ast": 1, "pf": 1, "to": 2, "stl": 2, "blk": 0, "pts": 7},
+            {"name": "Steve Holland", "min": 2, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Michael Kennedy", "min": 12, "fg": "2-3", "ft": "1-2", "reb": 3, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 5}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

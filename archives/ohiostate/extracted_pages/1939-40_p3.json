@@ -1,0 +1,44 @@
+{
+  "page": 3,
+  "games": [
+    {
+      "date": "1939-12-27",
+      "opponent": "Kentucky",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 30,
+          "players": [
+            {"name": "Shick", "fg_made": 3, "ft_made": 1, "pts": 7},
+            {"name": "Goss", "fg_made": 1, "ft_made": 0, "pts": 2},
+            {"name": "Bowhler", "fg_made": 0, "ft_made": 0, "pts": 0},
+            {"name": "Mickelson", "fg_made": 2, "ft_made": 0, "pts": 4},
+            {"name": "Graff", "fg_made": 0, "ft_made": 0, "pts": 0},
+            {"name": "McLain", "fg_made": 0, "ft_made": 0, "pts": 0},
+            {"name": "Sattler", "fg_made": 6, "ft_made": 1, "pts": 13},
+            {"name": "Fisher", "fg_made": 0, "ft_made": 0, "pts": 0},
+            {"name": "Dawson", "fg_made": 0, "ft_made": 0, "pts": 0},
+            {"name": "Nichols", "fg_made": 1, "ft_made": 0, "pts": 2},
+            {"name": "Lynch", "fg_made": 1, "ft_made": 0, "pts": 2},
+            {"name": "Meen", "fg_made": 0, "ft_made": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Kentucky",
+          "score": 36,
+          "players": [
+            {"name": "White", "fg_made": 1, "ft_made": 0, "pts": 2},
+            {"name": "Farnsley", "fg_made": 1, "ft_made": 3, "pts": 5},
+            {"name": "Claggish", "fg_made": 3, "ft_made": 0, "pts": 6},
+            {"name": "King", "fg_made": 0, "ft_made": 0, "pts": 0},
+            {"name": "Rouse", "fg_made": 6, "ft_made": 2, "pts": 14},
+            {"name": "Huber", "fg_made": 4, "ft_made": 1, "pts": 9},
+            {"name": "Staker", "fg_made": 0, "ft_made": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

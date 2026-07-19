@@ -1,0 +1,49 @@
+{
+  "page": 21,
+  "games": [
+    {
+      "date": "1992-02-18",
+      "opponent": "California",
+      "ucla_score": 82,
+      "opp_score": 76,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 82,
+          "players": [
+            {"name": "MacLean", "min": 31, "fg": "10-19", "tp": "0-1", "ft": "5-6", "reb": "2-1-3", "ast": 2, "to": 3, "bl": 0, "st": 0, "pf": 2, "pts": 25},
+            {"name": "Murray", "min": 30, "fg": "3-10", "tp": "0-3", "ft": "7-10", "reb": "1-6-7", "ast": 2, "to": 1, "bl": 0, "st": 0, "pf": 3, "pts": 13},
+            {"name": "Butler", "min": 21, "fg": "3-10", "tp": "0-2", "ft": "0-0", "reb": "4-0-4", "ast": 0, "to": 1, "bl": 1, "st": 2, "pf": 3, "pts": 6},
+            {"name": "Madkins", "min": 14, "fg": "1-2", "tp": "1-1", "ft": "0-0", "reb": "1-0-1", "ast": 1, "to": 0, "bl": 0, "st": 0, "pf": 0, "pts": 3},
+            {"name": "Tarver", "min": 23, "fg": "2-4", "tp": "0-0", "ft": "4-8", "reb": "1-4-5", "ast": 1, "to": 2, "bl": 0, "st": 1, "pf": 0, "pts": 8},
+            {"name": "Zimmerman", "min": 13, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": "0-3-3", "ast": 0, "to": 2, "bl": 0, "st": 0, "pf": 2, "pts": 0},
+            {"name": "Martin", "min": 18, "fg": "1-2", "tp": "1-1", "ft": "3-4", "reb": "0-0-0", "ast": 4, "to": 2, "bl": 0, "st": 1, "pf": 1, "pts": 6},
+            {"name": "O'Bannon", "min": 17, "fg": "5-5", "tp": "1-1", "ft": "0-0", "reb": "1-5-6", "ast": 1, "to": 0, "bl": 0, "st": 1, "pf": 4, "pts": 11},
+            {"name": "Edney", "min": 27, "fg": "1-4", "tp": "1-2", "ft": "6-8", "reb": "1-3-4", "ast": 6, "to": 0, "bl": 0, "st": 2, "pf": 0, "pts": 9},
+            {"name": "Lanier", "min": 0, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": "0-0-0", "ast": 0, "to": 0, "bl": 0, "st": 0, "pf": 0, "pts": 0},
+            {"name": "Zidek", "min": 6, "fg": "0-0", "tp": "0-0", "ft": "1-2", "reb": "1-0-1", "ast": 0, "to": 0, "bl": 0, "st": 0, "pf": 2, "pts": 1},
+            {"name": "Elkind", "min": 0, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": "0-0-0", "ast": 0, "to": 0, "bl": 0, "st": 0, "pf": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "California",
+          "score": 76,
+          "players": [
+            {"name": "Grigsby", "min": 32, "fg": "8-9", "tp": "0-0", "ft": "3-7", "reb": "2-5-7", "ast": 0, "to": 2, "bl": 1, "st": 0, "pf": 5, "pts": 19},
+            {"name": "Murray", "min": 32, "fg": "8-16", "tp": "0-2", "ft": "7-8", "reb": "0-6-6", "ast": 3, "to": 4, "bl": 0, "st": 1, "pf": 3, "pts": 23},
+            {"name": "Jamison", "min": 15, "fg": "1-1", "tp": "0-0", "ft": "0-0", "reb": "0-2-2", "ast": 3, "to": 1, "bl": 1, "st": 1, "pf": 5, "pts": 2},
+            {"name": "Roberts", "min": 37, "fg": "3-8", "tp": "1-4", "ft": "1-2", "reb": "2-3-5", "ast": 5, "to": 5, "bl": 1, "st": 1, "pf": 2, "pts": 8},
+            {"name": "Elleby", "min": 24, "fg": "3-6", "tp": "1-3", "ft": "2-2", "reb": "1-0-1", "ast": 3, "to": 2, "bl": 0, "st": 1, "pf": 2, "pts": 9},
+            {"name": "Branham", "min": 24, "fg": "4-7", "tp": "1-1", "ft": "2-4", "reb": "2-1-3", "ast": 3, "to": 2, "bl": 0, "st": 0, "pf": 4, "pts": 11},
+            {"name": "Buckley", "min": 5, "fg": "0-1", "tp": "0-1", "ft": "0-0", "reb": "0-0-0", "ast": 0, "to": 0, "bl": 0, "st": 0, "pf": 0, "pts": 0},
+            {"name": "Dreher", "min": 20, "fg": "1-2", "tp": "0-0", "ft": "0-0", "reb": "0-0-0", "ast": 0, "to": 1, "bl": 0, "st": 1, "pf": 4, "pts": 2},
+            {"name": "Campanelli", "min": 3, "fg": "1-1", "tp": "0-0", "ft": "0-0", "reb": "0-0-0", "ast": 0, "to": 1, "bl": 0, "st": 1, "pf": 0, "pts": 2},
+            {"name": "Graves", "min": 8, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": "0-2-2", "ast": 0, "to": 0, "bl": 0, "st": 0, "pf": 2, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

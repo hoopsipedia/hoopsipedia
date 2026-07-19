@@ -1,0 +1,43 @@
+{
+  "page": 6,
+  "games": [
+    {
+      "date": "1977-12-03",
+      "opponent": "Vermont",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 76,
+          "players": [
+            {"name": "Kelvin Ransey", "min": "40", "fg": "5-14", "ft": "4-4", "pf": 3, "ast": 6, "to": 4, "blk": 0, "stl": 1, "pts": 14},
+            {"name": "Carter Scott", "min": "35", "fg": "6-11", "ft": "2-3", "pf": 4, "ast": 5, "to": 4, "blk": 1, "stl": 2, "pts": 14},
+            {"name": "Jim Smith", "min": "17", "fg": "1-2", "ft": "1-3", "pf": 4, "ast": 1, "to": 0, "blk": 2, "stl": 1, "pts": 3},
+            {"name": "Todd Penn", "min": "26", "fg": "6-12", "ft": "0-0", "pf": 1, "ast": 3, "to": 1, "blk": 0, "stl": 1, "pts": 12, "note": "printed TP looked like 13; corrected to 12 = 2*fg_made+ft_made, required for team checksum to reach 76"},
+            {"name": "Fred Foyle", "min": "5", "fg": "0-0", "ft": "0-0", "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Herb Williams", "min": "40", "fg": "9-12", "ft": "3-5", "pf": 3, "ast": 2, "to": 4, "blk": 6, "stl": 1, "pts": 21},
+            {"name": "Mike Cline", "fg": "0-6", "ft": "0-0", "pf": 1, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Jim Billinghausen", "min": "32", "fg": "5-9", "ft": "2-2", "pf": 3, "ast": 5, "to": 0, "blk": 1, "stl": 0, "pts": 12},
+            {"name": "Terry Burris", "min": "3", "fg": "0-0", "ft": "0-0", "pf": 1, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0}
+          ],
+          "checksum_ok": true
+        },
+        {
+          "name": "Vermont Catamounts",
+          "score": 77,
+          "players": [
+            {"name": "Mark Sobolewski", "fg": "10-15", "ft": "3-4", "ast": 4, "to": 2, "blk": 1, "stl": 2, "pts": 23},
+            {"name": "Corey Wielgus", "fg": "0-4", "ft": "0-0", "ast": 0, "to": 1, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Charlie Trapani", "fg": "4-9", "ft": "2-2", "ast": 1, "to": 0, "blk": 0, "stl": 0, "pts": 10},
+            {"name": "Tom Perrin", "fg": "1-4", "ft": "0-1", "pf": 3, "ast": 1, "to": 0, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Kevin Kelly", "fg": "5-10", "ft": "6-6", "pf": 2, "ast": 2, "to": 3, "blk": 0, "stl": 0, "pts": 16},
+            {"name": "Mike Kern", "fg": "7-19", "ft": "0-2", "ast": 3, "to": 3, "blk": 1, "stl": 2, "pts": 14, "note": "FT read as 6-2 on sheet which is impossible (makes>attempts); corrected to 0-2 so pts=2*fg_made matches printed TP 14"},
+            {"name": "Dane Correll", "fg": "2-5", "ft": "2-5", "pf": 3, "ast": 1, "to": 2, "blk": 0, "stl": 0, "pts": 6},
+            {"name": "Greg Davis", "fg": "2-8", "ft": "2-2", "pf": 2, "ast": 2, "to": 4, "blk": 0, "stl": 1, "pts": 6}
+          ],
+          "checksum_ok": true
+        }
+      ]
+    }
+  ],
+  "skipped": []
+}

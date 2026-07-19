@@ -1,0 +1,40 @@
+{
+  "page": 9,
+  "games": [
+    {
+      "date": "1942-01-12",
+      "opponent": "Illinois",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 49,
+          "players": [
+            {"name": "R. Fisher", "pts": 4},
+            {"name": "Miller", "pts": 5},
+            {"name": "Trautz", "pts": 8},
+            {"name": "Sims", "pts": 2},
+            {"name": "Rizzuto", "pts": 4},
+            {"name": "Wilke", "pts": 7},
+            {"name": "Geowaski", "pts": 17},
+            {"name": "Graft (C)", "pts": 1},
+            {"name": "Schoenbaum", "pts": 1}
+          ]
+        },
+        {
+          "name": "Illinois",
+          "score": 58,
+          "players": [
+            {"name": "K. Menke", "pts": 15},
+            {"name": "Smiley", "pts": 3},
+            {"name": "Wukovits", "pts": 10},
+            {"name": "Mathisen", "pts": 8},
+            {"name": "Vance", "pts": 9},
+            {"name": "Phillips", "pts": 13}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

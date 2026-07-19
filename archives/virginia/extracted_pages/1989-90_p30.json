@@ -1,0 +1,42 @@
+{
+  "page": 30,
+  "games": [
+    {
+      "date": "1990-03-11",
+      "opponent": "Georgia Tech",
+      "note": "ACC Championship, Charlotte Coliseum",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 61,
+          "players": [
+            {"name": "Kenny Turner", "min": 38, "fg": "5-15", "tp": "3-7", "ft": "2-4", "reb": 11, "ast": 2, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 15},
+            {"name": "Bryant Stith", "min": 39, "fg": "7-21", "tp": "1-6", "ft": "2-3", "reb": 9, "ast": 1, "pf": 0, "to": 0, "stl": 1, "blk": 0, "pts": 17},
+            {"name": "Ted Jeffries", "min": 15, "fg": "0-1", "ft": "1-2", "reb": 3, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 1, "pts": 1},
+            {"name": "Anthony Oliver", "min": 26, "fg": "6-13", "tp": "1-3", "ft": "0-0", "reb": 6, "ast": 0, "pf": 4, "to": 2, "stl": 2, "blk": 0, "pts": 13},
+            {"name": "John Crotty", "min": 35, "fg": "2-9", "tp": "0-6", "ft": "3-4", "reb": 2, "ast": 6, "pf": 4, "to": 2, "stl": 0, "blk": 0, "pts": 7},
+            {"name": "Matt Blundin", "min": 27, "fg": "1-4", "ft": "0-0", "reb": 12, "ast": 0, "pf": 4, "to": 1, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Doug Smith", "min": 5, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 1, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Mark Cooke", "min": 4, "fg": "2-3", "tp": "0-1", "ft": "0-0", "reb": 1, "ast": 0, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Terry Kirby", "min": 11, "fg": "1-4", "tp": "0-2", "ft": "0-0", "reb": 1, "ast": 1, "pf": 5, "to": 0, "stl": 1, "blk": 0, "pts": 2}
+          ]
+        },
+        {
+          "name": "Georgia Tech Yellow Jackets",
+          "score": 70,
+          "players": [
+            {"name": "Dennis Scott", "min": 40, "fg": "7-15", "tp": "2-7", "ft": "2-2", "reb": 13, "ast": 1, "pf": 2, "to": 1, "stl": 1, "blk": 1, "pts": 18},
+            {"name": "Malcolm Mackey", "min": 29, "fg": "3-7", "ft": "3-4", "reb": 7, "ast": 2, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 9},
+            {"name": "Johnny McNeil", "min": 21, "fg": "1-2", "ft": "2-4", "reb": 4, "ast": 1, "pf": 5, "to": 0, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Kenny Anderson", "min": 40, "fg": "7-17", "tp": "4-10", "ft": "0-1", "reb": 3, "ast": 4, "pf": 3, "to": 1, "stl": 1, "blk": 0, "pts": 18},
+            {"name": "Brian Oliver", "min": 36, "fg": "5-15", "tp": "4-8", "ft": "3-4", "reb": 4, "ast": 1, "pf": 1, "to": 0, "stl": 1, "blk": 1, "pts": 17},
+            {"name": "Karl Brown", "min": 31, "fg": "0-0", "ft": "4-5", "reb": 2, "ast": 2, "pf": 2, "to": 3, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "James Munlyn", "min": 3, "fg": "0-1", "ft": "0-0", "reb": 2, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

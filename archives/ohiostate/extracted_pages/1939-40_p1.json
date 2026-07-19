@@ -1,0 +1,50 @@
+{
+  "page": 1,
+  "games": [
+    {
+      "date": "1939-12-14",
+      "opponent": "Wabash",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 34,
+          "players": [
+            {"name": "R. Fisher", "pts": 8},
+            {"name": "Mickelson", "pts": 7},
+            {"name": "Goss", "pts": 6},
+            {"name": "Kinkade", "pts": 4},
+            {"name": "Bowshier", "pts": 5},
+            {"name": "Young", "pts": 0},
+            {"name": "Scott", "pts": 2},
+            {"name": "McLain", "pts": 0},
+            {"name": "Fox", "pts": 2},
+            {"name": "Dawson", "pts": 0},
+            {"name": "Mees", "pts": 0},
+            {"name": "Graf", "pts": 0},
+            {"name": "Hallabrin", "pts": 0},
+            {"name": "Marrano", "pts": 0}
+          ]
+        },
+        {
+          "name": "Wabash",
+          "score": 22,
+          "players": [
+            {"name": "W. Fisher", "pts": 2},
+            {"name": "Klein", "pts": 0},
+            {"name": "Montgomery", "pts": 1},
+            {"name": "Rhode", "pts": 0},
+            {"name": "Scheivly (c)", "pts": 4},
+            {"name": "Ransom", "pts": 4},
+            {"name": "Craven", "pts": 8},
+            {"name": "Clawson", "pts": 0},
+            {"name": "Phillips", "pts": 2},
+            {"name": "Seller", "pts": 1},
+            {"name": "Stoner", "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

@@ -1,0 +1,44 @@
+{
+  "page": 16,
+  "games": [
+    {
+      "date": "1969-02-01",
+      "opponent": "Purdue",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 85,
+          "players": [
+            {"name": "Howell", "fg": "6-10", "ft": "1-3", "reb": 1, "pf": 1, "pts": 13},
+            {"name": "Cleamons", "fg": "6-15", "ft": "5-7", "reb": 6, "pf": 2, "pts": 17},
+            {"name": "Sorenson", "fg": "9-18", "ft": "12-12", "reb": 7, "pf": 5, "pts": 30},
+            {"name": "Finney", "fg": "2-6", "ft": "3-4", "reb": 3, "pf": 1, "pts": 7},
+            {"name": "Meadors", "fg": "3-6", "ft": "4-5", "reb": 2, "pf": 3, "pts": 10},
+            {"name": "Barclay", "fg": "3-5", "ft": "0-0", "reb": 1, "pf": 3, "pts": 6},
+            {"name": "Andreas", "fg": "0-2", "ft": "0-0", "reb": 3, "pf": 0, "pts": 0},
+            {"name": "Smith", "fg": "1-1", "ft": "0-1", "reb": 2, "pf": 0, "pts": 2}
+          ]
+        },
+        {
+          "name": "Purdue Boilermakers",
+          "score": 95,
+          "players": [
+            {"name": "Gilliam", "fg": "10-16", "ft": "2-2", "reb": 7, "pf": 3, "pts": 22},
+            {"name": "Faerber", "fg": "4-6", "ft": "1-2", "pf": 4, "pts": 9},
+            {"name": "Davis", "fg": "0-3", "ft": "0-0", "pf": 4, "pts": 0},
+            {"name": "Keller", "fg": "7-12", "ft": "7-7", "reb": 3, "pf": 1, "pts": 21},
+            {"name": "Mount", "fg": "8-22", "ft": "4-4", "pf": 2, "pts": 20},
+            {"name": "Weatherford", "fg": "3-7", "ft": "1-1", "reb": 2, "pf": 2, "pts": 7},
+            {"name": "Kaufman", "fg": "3-3", "ft": "0-1", "pf": 4, "pts": 6},
+            {"name": "Bedford", "fg": "2-2", "ft": "0-0", "reb": 4, "pf": 1, "pts": 4},
+            {"name": "Johnson", "fg": "1-2", "ft": "2-3", "reb": 3, "pf": 0, "pts": 4},
+            {"name": "Taylor", "fg": "1-2", "ft": "0-0", "reb": 1, "pf": 2, "pts": 2}
+          ]
+        }
+      ],
+      "checksum_ok": true,
+      "notes": "Overtime game (regulation ended 73-73: OSU 42+41=83? actually box shows quarter scores OSU 42, 41, 2(OT)=85; Purdue 54,29,12(OT)=95). Some Purdue rebound cells were obscured by scan marks/checkmarks (Faerber, Davis, Mount, Kaufman) and were omitted rather than guessed; individual points and both team totals verified exactly (85 and 95) via both the PTS column sum and independent 2*FG+FT recomputation for every player on both teams."
+    }
+  ],
+  "skipped": []
+}

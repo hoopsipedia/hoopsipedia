@@ -1,0 +1,11 @@
+{
+  "page": 3,
+  "games": [],
+  "skipped": [
+    {
+      "date": "1936-12-22",
+      "opponent": "Nebraska",
+      "reason": "Checksum failure: Nebraska player line points (Baker 8, Amen 11, Shaugh 4, Sorenson 1, Parsons 5, Dohrmann 5) sum to 34, but Nebraska's final score is 32 (per headline 'Dropping Game, 32 to 23', the SCORE box, and the printed box-score Totals row itself which reads 10 G / 12 F / 32 Pts even though the individual F values sum to 14, not 12). Each individual player row is internally consistent (2*FG+FT=Pts), but the team total does not reconcile, indicating an OCR/transcription-resistant error in at least one player's line on the original clipping. Re-read the page once; the ambiguity persisted. Ohio State's own line (Ritchell 2, Baker 2, McDonald 0, Thomas 6, Hull 7, Dye 4, Raudebaugh 2, Prewitt 0 = 23) checksums correctly against Ohio's final score of 23, but per instructions the whole game is skipped rather than guessing which Nebraska number is wrong."
+    }
+  ]
+}

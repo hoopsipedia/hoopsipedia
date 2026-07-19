@@ -1,0 +1,9 @@
+{
+  "page": 16,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page contains a single newspaper-clipping box score for Ohio State (22) at Chicago (31), played March 7, 1931 (clearly legible header/footer metadata: date, opponent, place, coach, final score). However, the per-player FG/FT/TP columns are printed in very small newspaper agate type on a scanned clipping and are not legible with enough confidence to transcribe accurate digits for each player (e.g. Erwin, Fesler, Lentz, Mattison, Larkins, Hoffer, Gardner for Ohio State; Yates, Sieghsman/Stephenson, Parsons, Fitch, Porter, Ashley for Chicago). A best-effort reading did not sum cleanly to the final scores (22 and 31), and rather than guess ambiguous digits to force a checksum match, the game was skipped per instructions to avoid inventing values."
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "page": 8,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Typed official box score for Ohio State (7-0) vs Tennessee State (2-7), December 17, 1990, St. John Arena, final OSU 103 - Tennessee St 66. Team-level totals rows are clear and checksum (TP=66 and TP=103 match the final scores), but several individual player rows in the small print are not legible enough to transcribe with confidence: Tennessee State's Howard and Robinson lines, and Ohio State's Robinson, Davis, Skelton, Brandewie, and Ratliff lines have ambiguous/uncertain digit groupings across the FG/3FG/FT/rebound/PF/TP/AS/TO/BK/ST/MIN columns that could not be resolved even after a second read. Rather than invent values for those players, the entire game was skipped per instructions to be ruthless about skipping instead of guessing; a per-team checksum could not be honestly verified without fabricating some player lines."
+    }
+  ]
+}

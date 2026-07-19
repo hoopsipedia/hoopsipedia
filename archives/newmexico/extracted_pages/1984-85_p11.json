@@ -1,0 +1,41 @@
+{
+  "page": 11,
+  "games": [
+    {
+      "date": "1985-01-03",
+      "opponent": "Utah",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 63,
+          "players": [
+            {"name": "Brown", "min": 39, "fg": "6-13", "ft": "1-1", "reb": 7, "ast": 1, "pf": 0, "to": 6, "blk": 1, "pts": 13},
+            {"name": "Winters", "min": 32, "fg": "2-3", "ft": "0-0", "reb": 5, "ast": 3, "pf": 5, "to": 1, "stl": 1, "pts": 4},
+            {"name": "Scott", "min": 32, "fg": "9-12", "ft": "1-4", "reb": 10, "ast": 1, "pf": 5, "to": 4, "pts": 19},
+            {"name": "Scarborough", "min": 36, "fg": "1-6", "ft": "2-3", "reb": 3, "ast": 9, "pf": 1, "to": 3, "pts": 4},
+            {"name": "Greene", "min": 38, "fg": "7-12", "ft": "2-2", "reb": 10, "ast": 5, "pf": 4, "to": 5, "blk": 1, "stl": 2, "pts": 16},
+            {"name": "Dockery", "min": 6, "fg": "0-1", "ft": "0-0", "reb": 2, "ast": 1, "pf": 0, "to": 1, "pts": 0},
+            {"name": "Lawson", "min": 6, "fg": "0-0", "ft": "1-2", "reb": 0, "ast": 1, "pf": 1, "to": 0, "pts": 1},
+            {"name": "Brooks", "min": 11, "fg": "3-5", "ft": "0-2", "reb": 1, "ast": 0, "pf": 0, "to": 0, "blk": 1, "pts": 6}
+          ]
+        },
+        {
+          "name": "Utah",
+          "score": 68,
+          "players": [
+            {"name": "Stroman", "min": 8, "fg": "4-4", "ft": "0-1", "reb": 1, "ast": 0, "pf": 0, "stl": 1, "pts": 8},
+            {"name": "McLaughlin", "min": 35, "fg": "2-7", "ft": "0-0", "reb": 7, "ast": 1, "pf": 2, "to": 0, "stl": 1, "pts": 4},
+            {"name": "Dodd", "min": 26, "fg": "1-8", "ft": "2-2", "reb": 9, "ast": 1, "pf": 3, "to": 1, "blk": 1, "stl": 2, "pts": 4},
+            {"name": "Hendrix", "min": 39, "fg": "10-17", "ft": "4-5", "reb": 3, "ast": 2, "pf": 2, "to": 2, "stl": 1, "pts": 24},
+            {"name": "Upshaw", "min": 34, "fg": "5-13", "ft": "7-8", "reb": 2, "ast": 8, "pf": 2, "to": 1, "stl": 3, "pts": 17},
+            {"name": "Gondrezick", "min": 40, "fg": "1-6", "ft": "1-2", "reb": 1, "ast": 3, "pf": 2, "to": 1, "pts": 3},
+            {"name": "Springs", "min": 1, "fg": "0-1", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "pts": 0},
+            {"name": "Adair", "min": 17, "fg": "2-5", "ft": "4-4", "reb": 6, "ast": 0, "pf": 1, "to": 2, "blk": 1, "pts": 8}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

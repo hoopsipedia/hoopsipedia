@@ -1,0 +1,42 @@
+{
+  "page": 5,
+  "games": [
+    {
+      "date": "1936-12-28",
+      "opponent": "California Golden Bears",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 30,
+          "players": [
+            {"name": "McDonald", "fg_made": 1, "ft_made": 1, "pts": 3},
+            {"name": "Ritchell", "fg_made": 1, "ft_made": 0, "pts": 2},
+            {"name": "Hull", "fg_made": 3, "ft_made": 0, "pts": 6},
+            {"name": "Baker", "fg_made": 2, "ft_made": 0, "pts": 4},
+            {"name": "Thomas", "fg_made": 1, "ft_made": 1, "pts": 3},
+            {"name": "George", "fg_made": 1, "ft_made": 1, "pts": 3},
+            {"name": "Raudebaugh", "fg_made": 3, "ft_made": 2, "pts": 8},
+            {"name": "Dye", "fg_made": 0, "ft_made": 1, "pts": 1}
+          ]
+        },
+        {
+          "name": "California Golden Bears",
+          "score": 28,
+          "players": [
+            {"name": "Bailey", "fg_made": 4, "ft_made": 3, "pts": 11},
+            {"name": "Dougherty", "fg_made": 2, "ft_made": 0, "pts": 4},
+            {"name": "Duffy", "fg_made": 0, "ft_made": 0, "pts": 0},
+            {"name": "Cox", "fg_made": 0, "ft_made": 0, "pts": 0},
+            {"name": "Carlisle", "fg_made": 3, "ft_made": 4, "pts": 10},
+            {"name": "Chalmers", "fg_made": 0, "ft_made": 0, "pts": 0},
+            {"name": "Patrick", "fg_made": 0, "ft_made": 2, "pts": 2},
+            {"name": "Knight", "fg_made": 0, "ft_made": 1, "pts": 1},
+            {"name": "Hillsman", "fg_made": 0, "ft_made": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

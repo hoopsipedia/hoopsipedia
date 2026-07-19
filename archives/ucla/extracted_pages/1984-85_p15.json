@@ -1,0 +1,9 @@
+{
+  "page": 15,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "1984-85: Jan 24, 1985 vs California at Pauley Pavilion (Cal 69, UCLA 80). California side checksums fine (player TP sum 4+18+0+13+19+6+0+2+4+3+0=69 == final 69), but UCLA player TP sum (4+23+6+7+19+6+2+3+0=70) does not match UCLA's final score of 80 or the TOTALS row's TP=80/FG=29 (player FG values sum to only 24 against a team FG total of 29, a 5-FG/10-point gap). Every individual player row's FG*2+FT=TP checks out internally, and FGA/FT/PF/MIN/AST/TO/BLK column sums all match the TOTALS row exactly, so no single obviously-misread digit explains the FG shortfall (re-read page once, same result) -- likely an error in the original scorer's TOTALS line rather than a transcription error, but per instructions the game fails checksum and is skipped rather than guessed at."
+    }
+  ]
+}

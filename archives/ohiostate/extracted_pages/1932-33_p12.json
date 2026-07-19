@@ -1,0 +1,11 @@
+{
+  "page": 12,
+  "games": [],
+  "skipped": [
+    {
+      "date": "1933-02-06",
+      "opponent": "Wisconsin",
+      "reason": "Ohio State 31, Wisconsin 30 (Madison) game clipping present with a small box-score table, but checksum fails for Wisconsin: individual player points (Smith 2, Knabe 0, Poser 8, McDonald 4, Hinman 6, Miller 1) sum to 21, not the reported final score of 30, and the printed Wisconsin Totals row itself (FG 10, FT 1, TP 30) is internally inconsistent (2*10+1=21, not 30), suggesting a misread/misprinted digit in the small scanned font that could not be resolved confidently within the allowed re-read. Ohio State's player lines (Hinchman 3, Brown 2, Colburn 9, Hosket 12, Mattison 4, Beltner 1 = 31) do pass checksum against Ohio State's 31, but per instructions the whole game is skipped since the paired team fails."
+    }
+  ]
+}

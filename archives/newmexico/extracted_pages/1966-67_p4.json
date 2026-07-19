@@ -1,0 +1,45 @@
+{
+  "page": 4,
+  "games": [
+    {
+      "date": "1966-12-10",
+      "opponent": "Texas Tech",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 80,
+          "players": [
+            {"name": "Hoover", "fg": "2-5", "ft": "1-2", "reb": 2, "pf": 3, "pts": 5},
+            {"name": "Morgan", "fg": "4-8", "ft": "0-0", "reb": 3, "pf": 4, "pts": 8},
+            {"name": "Monroe", "fg": "5-14", "ft": "0-1", "reb": 8, "pf": 5, "pts": 10},
+            {"name": "Judge", "fg": "9-15", "ft": "1-5", "reb": 3, "pts": 19},
+            {"name": "Daniels", "fg": "11-16", "ft": "3-7", "reb": 9, "pf": 2, "pts": 25},
+            {"name": "Dupree", "fg": "1-2", "ft": "0-0", "reb": 1, "pf": 2, "pts": 2},
+            {"name": "Sanford", "fg": "4-6", "ft": "3-3", "reb": 3, "pf": 1, "pts": 11},
+            {"name": "Shropshire", "fg": "0-2", "ft": "0-0", "reb": 1, "pf": 1, "pts": 0},
+            {"name": "Grimes", "fg": "0-3", "ft": "0-0", "reb": 1, "pf": 2, "pts": 0},
+            {"name": "Ladd", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Texas Tech",
+          "score": 59,
+          "players": [
+            {"name": "Tapp", "fg": "5-9", "ft": "6-6", "reb": 2, "pf": 2, "pts": 16},
+            {"name": "Fullerton", "fg": "3-4", "ft": "0-0", "reb": 0, "pf": 0, "pts": 6},
+            {"name": "Haggard", "fg": "4-8", "ft": "6-6", "reb": 1, "pf": 4, "pts": 14},
+            {"name": "Olsen", "fg": "2-4", "ft": "0-0", "reb": 6, "pf": 5, "pts": 4},
+            {"name": "Dobbs", "fg": "1-5", "ft": "0-0", "reb": 1, "pf": 5, "pts": 2},
+            {"name": "Bul", "fg": "2-4", "ft": "2-3", "reb": 3, "pf": 5, "pts": 6},
+            {"name": "Lewis", "fg": "0-2", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Nelson", "fg": "0-0", "ft": "2-2", "reb": 1, "pf": 0, "pts": 2},
+            {"name": "Bonner", "fg": "0-0", "ft": "5-6", "reb": 2, "pf": 0, "pts": 5},
+            {"name": "Wiggins", "fg": "2-4", "ft": "0-0", "reb": 1, "pf": 0, "pts": 4}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

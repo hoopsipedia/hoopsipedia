@@ -1,0 +1,9 @@
+{
+  "page": 3,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Handwritten scoresheet (New Mexico Lobos vs New Mexico State, Dec 8 1979, Las Cruces NM) is too dark/blurry to reliably read individual player FG/FT digits. Attempted checksum reconciliation (2*FGmade+FTmade vs final score) required inferring corrected digits (e.g. Lobos FG made appeared to read '29' but only reconciles to the 53-point final if actually '21'), which is exactly the kind of guessing the task prohibits. Skipping rather than transcribing unreliable player lines for both teams."
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "page": 11,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page contains a legible Louisville Stat Crew FINAL III official box score for Virginia at Louisville, 01-04-89 (final: Virginia 71, Louisville 74). Team-level summary lines (shooting splits, score by periods, attendance, comments) are clearly legible and internally consistent. However the dense per-player stat grid (FG-FGA, 3FG-3FGA, FT-FTA, OFF-DEF-TOT reb, PF, TP, A, TO, BLK, S, MIN across ~10 players per team, 16+ small numeric columns) could not be transcribed with confident accuracy: recomputing each player's points from their FG/3FG/FT columns did not reliably match the printed TP (points) column (e.g. one row implied 9 pts from made shots vs a printed TP of 5; another implied 15 vs a printed TP of 16), indicating the small dense digits are being misread rather than that the source data is inconsistent. Per instructions, skipping rather than guessing individual player lines to avoid inventing/mis-transcribing values."
+    }
+  ]
+}

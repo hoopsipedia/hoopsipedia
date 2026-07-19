@@ -1,0 +1,9 @@
+{
+  "page": 20,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page shows a game vs Michigan (typed header: SCORE Ohio 45, Opp 37; Attendance 4,070; Captain Mickelson; Manager Bolton; index card: 1941 Basketball Mar. 1, Michigan, Coliseum, Coach Olsen), but the per-player box score is a tiny, low-resolution newspaper clipping insert. Individual player names and numeric columns (G/F/FM/PF/Tot for both Michigan and Ohio State) are too small and blurry to read with confidence, so no player lines or checksum could be produced without guessing. Final team scores (Ohio State 45, Michigan 37) are legible from the typed header but are not sufficient alone to satisfy the required per-player transcription, so the whole game was skipped rather than fabricating player stats."
+    }
+  ]
+}

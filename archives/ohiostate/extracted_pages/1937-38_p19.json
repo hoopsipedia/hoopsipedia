@@ -1,0 +1,9 @@
+{
+  "page": 19,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page 19 is a newspaper clipping (Ohio State 41, Northwestern 36, Feb 28 1938, Coliseum, coach Olsen) with a legible headline/final score and a small embedded box-score table, but the per-player G/F/T columns are rendered too small and blurry to read digit-by-digit with confidence. Team totals rows are legible and checksum correctly against the final score (Northwestern: 2*13+10=36; Ohio State: 2*15+11=41), but individual player FG/FT/PTS values could not be transcribed reliably (e.g. summing the visible Ohio State player rows does not reach the 15 team FG total, indicating at least one row was misread or a player line was missed), so per the instruction to skip rather than guess, no player-level data was recorded for this game."
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "page": 3,
+  "games": [
+    {
+      "date": "1992-11-25",
+      "opponent": "Seton Hall",
+      "ucla_score": 64,
+      "opp_score": 73,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 64,
+          "players": [
+            {"name": "Mitchell Butler", "min": 35, "fg": "6-13", "tp": "0-4", "ft": "0-4", "reb": 2, "ast": 3, "to": 4, "blk": 0, "stl": 3, "pf": 3, "pts": 12},
+            {"name": "Ed O'Bannon", "min": 31, "fg": "7-13", "tp": "0-1", "ft": "2-6", "reb": 4, "ast": 1, "to": 1, "blk": 0, "stl": 1, "pf": 3, "pts": 16},
+            {"name": "Richard Petruska", "min": 35, "fg": "2-6", "tp": "0-0", "ft": "3-4", "reb": 4, "ast": 2, "to": 4, "blk": 1, "stl": 1, "pf": 3, "pts": 7},
+            {"name": "Tyus Edney", "min": 40, "fg": "3-8", "tp": "0-3", "ft": "4-4", "reb": 1, "ast": 5, "to": 6, "blk": 0, "stl": 3, "pf": 3, "pts": 10},
+            {"name": "Shon Tarver", "min": 38, "fg": "5-11", "tp": "0-3", "ft": "5-8", "reb": 8, "ast": 1, "to": 1, "blk": 0, "stl": 0, "pf": 2, "pts": 15},
+            {"name": "Rodney Zimmerman", "min": 20, "fg": "2-2", "tp": "0-0", "ft": "0-1", "reb": 8, "ast": 2, "to": 2, "blk": 3, "stl": 1, "pf": 4, "pts": 4},
+            {"name": "Marquis Burns", "min": 1, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pf": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Seton Hall Pirates",
+          "score": 73,
+          "players": [
+            {"name": "John Leahy", "min": 23, "fg": "2-5", "tp": "0-2", "ft": "0-0", "reb": 4, "ast": 3, "to": 0, "blk": 0, "stl": 1, "pf": 3, "pts": 4},
+            {"name": "Jerry Walker", "min": 37, "fg": "5-8", "tp": "0-0", "ft": "2-2", "reb": 5, "ast": 2, "to": 4, "blk": 0, "stl": 1, "pf": 3, "pts": 12},
+            {"name": "Luther Wright", "min": 22, "fg": "6-13", "tp": "0-0", "ft": "1-2", "reb": 10, "ast": 1, "to": 2, "blk": 1, "stl": 0, "pf": 4, "pts": 13},
+            {"name": "Bryan Caver", "min": 23, "fg": "1-4", "tp": "0-2", "ft": "2-2", "reb": 2, "ast": 2, "to": 6, "blk": 0, "stl": 1, "pf": 2, "pts": 4},
+            {"name": "Terry Dehere", "min": 37, "fg": "7-15", "tp": "3-6", "ft": "2-2", "reb": 2, "ast": 0, "to": 0, "blk": 0, "stl": 1, "pf": 0, "pts": 27},
+            {"name": "Arturas Karnishovas", "min": 21, "fg": "3-10", "tp": "0-3", "ft": "0-0", "reb": 6, "ast": 0, "to": 0, "blk": 0, "stl": 1, "pf": 5, "pts": 6},
+            {"name": "Danny Hurley", "min": 21, "fg": "0-4", "tp": "0-1", "ft": "0-1", "reb": 1, "ast": 3, "to": 1, "blk": 0, "stl": 2, "pf": 4, "pts": 0},
+            {"name": "Adrian Griffin", "min": 16, "fg": "2-0", "tp": "0-0", "ft": "3-3", "reb": 1, "ast": 2, "to": 0, "blk": 0, "stl": 0, "pf": 0, "pts": 7}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

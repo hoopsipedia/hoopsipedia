@@ -1,0 +1,46 @@
+{
+  "page": 20,
+  "games": [
+    {
+      "date": "1987-01-24",
+      "opponent": "Colorado State",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 75,
+          "players": [
+            {"name": "Hunter Greene", "min": 37, "fg": "8-13", "tp": "1-1", "ft": "5-6", "reb": 4, "ast": 2, "pf": 4, "to": 0, "stl": 1, "blk": 0, "pts": 22},
+            {"name": "Mike Winters", "min": 33, "fg": "4-8", "tp": "1-4", "ft": "0-1", "reb": 5, "ast": 2, "pf": 2, "to": 1, "stl": 2, "blk": 0, "pts": 9},
+            {"name": "Rob Loeffel", "min": 31, "fg": "4-7", "tp": "0-0", "ft": "4-10", "reb": 5, "ast": 1, "pf": 2, "to": 2, "stl": 1, "blk": 0, "pts": 12},
+            {"name": "Kelvin Scarborough", "min": 37, "fg": "3-6", "tp": "0-1", "ft": "3-3", "reb": 4, "ast": 11, "pf": 1, "to": 1, "stl": 4, "blk": 0, "pts": 9},
+            {"name": "Kelly Graves", "min": 34, "fg": "4-11", "tp": "3-6", "ft": "0-0", "reb": 0, "ast": 2, "pf": 2, "to": 1, "stl": 1, "blk": 1, "pts": 11},
+            {"name": "Darrell McGee", "min": 9, "fg": "0-1", "tp": "0-0", "ft": "4-4", "reb": 2, "ast": 2, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Stan Whisenant", "min": 1, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "George Adams", "min": 17, "fg": "3-6", "tp": "0-1", "ft": "2-4", "reb": 5, "ast": 0, "pf": 3, "to": 1, "stl": 1, "blk": 3, "pts": 8},
+            {"name": "Bob Arnold", "min": 0, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Paul Connery", "min": 1, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Colorado State Rams",
+          "score": 54,
+          "players": [
+            {"name": "Pat Durham", "min": 39, "fg": "3-5", "tp": "0-0", "ft": "5-6", "reb": 9, "ast": 2, "pf": 2, "to": 7, "stl": 0, "blk": 1, "pts": 11},
+            {"name": "Barry Bailey", "min": 29, "fg": "2-8", "tp": "0-3", "ft": "1-2", "reb": 4, "ast": 3, "pf": 5, "to": 2, "stl": 1, "blk": 0, "pts": 5},
+            {"name": "Paco Larsen", "min": 16, "fg": "2-4", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "pf": 5, "to": 0, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Anthony Lee", "min": 39, "fg": "5-11", "tp": "1-1", "ft": "0-0", "reb": 9, "ast": 5, "pf": 0, "to": 5, "stl": 0, "blk": 0, "pts": 11},
+            {"name": "David Turcotte", "min": 40, "fg": "5-12", "tp": "2-7", "ft": "0-0", "reb": 4, "ast": 1, "pf": 3, "to": 3, "stl": 0, "blk": 0, "pts": 12},
+            {"name": "Sean Murphy", "min": 1, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Anthony Goodrum", "min": 2, "fg": "0-4", "tp": "0-1", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Max Nicholson", "min": 16, "fg": "2-6", "tp": "0-3", "ft": "3-4", "reb": 4, "ast": 1, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 7},
+            {"name": "Todd Graf", "min": 3, "fg": "0-1", "tp": "0-1", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Scott Mabey", "min": 15, "fg": "2-2", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "pf": 3, "to": 2, "stl": 0, "blk": 0, "pts": 4}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": [],
+  "notes": "Site: Albuquerque, NM. Officials: Tate, Hunt, Reynolds. Scarborough's TP (9) reflects FT-only points on a 3-6 FG line with 0-1 3pt (3 FG makes at 2pt each = 6, plus 3 FT = 9, consistent with 3-pt attempts missed). Graves Kelly's TP was initially misread as a smudged '18' but recomputed from the box math (1 two-pointer + 3 threes = 11) and confirmed via team-total checksum (75), so 11 was used. Colorado State Mabey's rebound Off/Def/Tot cells were partly illegible; total rebounds recorded as 1 based on best-fit reading, does not affect points checksum. Bob Arnold has a blank stat line (DNP) recorded as all zeros. Both teams' player point totals sum exactly to final scores (NM 75, CSU 54)."
+}

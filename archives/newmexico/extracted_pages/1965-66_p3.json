@@ -1,0 +1,37 @@
+{
+  "page": 3,
+  "games": [
+    {
+      "date": "1965-12-06",
+      "opponent": "Iowa State",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 56,
+          "players": [
+            {"name": "Bill Morgan", "fg": "2-8", "ft": "3-3", "pf": 2, "pts": 7},
+            {"name": "Ben Monroe", "fg": "8-18", "ft": "2-4", "pf": 3, "pts": 18},
+            {"name": "Mel Daniels", "fg": "5-18", "ft": "3-5", "pf": 5, "pts": 13},
+            {"name": "Don Hoover", "fg": "2-5", "ft": "2-4", "pf": 1, "pts": 6},
+            {"name": "Jim Howard", "fg": "4-10", "ft": "1-2", "pf": 1, "pts": 9},
+            {"name": "Jim Patterson", "fg": "1-9", "ft": "1-1", "pf": 1, "pts": 3}
+          ]
+        },
+        {
+          "name": "Iowa State",
+          "score": 52,
+          "players": [
+            {"name": "Don Smith", "fg": "5-9", "ft": "3-5", "pf": 2, "pts": 13},
+            {"name": "Raul Duarte", "fg": "3-8", "ft": "0-3", "pf": 3, "pts": 6},
+            {"name": "Dave Fleming", "fg": "2-2", "ft": "0-0", "pf": 2, "pts": 4},
+            {"name": "Bob Zingler", "fg": "8-12", "ft": "4-5", "pf": 3, "pts": 20},
+            {"name": "Al Koch", "fg": "3-7", "ft": "3-3", "pf": 2, "pts": 9},
+            {"name": "John McGonigle", "fg": "0-5", "ft": "0-0", "pf": 1, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

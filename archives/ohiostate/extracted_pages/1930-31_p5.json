@@ -1,0 +1,9 @@
+{
+  "page": 5,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Newspaper box score for Ohio State at Indiana, January 12, 1931 (final score Ohio State 21, Indiana 23, per headline and score box). Transcribed both teams' player lines (R=field goals, F=free throws, T=total points), and each individual player row is internally consistent (2*R+F=T), but neither team's summed player totals reconcile with the printed 'Totals' row on this scan: Indiana sums to R=8/F=9/T=25 vs printed Totals 7/9/23, and Ohio State sums to R=7/F=6/T=20 vs printed/scoreboard total of 21. This points to at least one misread digit in the old newsprint scan that could not be resolved confidently without guessing, so per instructions the game is skipped rather than transcribed with an uncertain checksum."
+    }
+  ]
+}

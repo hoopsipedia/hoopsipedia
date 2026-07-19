@@ -1,0 +1,12 @@
+{
+  "page": 7,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Ohio State vs Indiana, 1944-01-14, Auditorium, final Ohio 72 - Indiana 46 (attendance 1648, captain Grate, coach Olsen) - header/summary line is clearly legible, but the player-line box score below it is a very small typewritten table with dot-leader columns (B./FT./M.F./PF./TP.) that is too degraded in the scan to read individual digits with confidence. Attempted cross-checks (TP should equal 2*B+FT per player, pre-3pt era) did not reconcile cleanly against the printed Totals row, indicating at least one digit was misread. Rather than guess values to force a checksum match, skipping the full player-line transcription for both Ohio State and Indiana."
+    },
+    {
+      "reason": "Second, smaller box score on same page: Curtiss-Wright vs Ohio State Reserves (score at half Curtiss-Wright 15, Ohio State Reserves 17; referee Tompkins/Wittenberg, umpire Schneider Ohio U., 15-minute halves). Final totals rows appear to read roughly Curtiss-Wright 13-8-5-5-34 and Ohio State Reserves 11-5-1-8-27, but individual player digits (Cannell, Whalen, Gildan, McQuaid, Umberger, Kominding for Curtiss-Wright; McQuade, Hurley, Davis, Updike, Guston, Melvin, Fink for Ohio State Reserves) are in extremely small, blurred dot-leader print, not legible with confidence. Skipping rather than inventing values."
+    }
+  ]
+}

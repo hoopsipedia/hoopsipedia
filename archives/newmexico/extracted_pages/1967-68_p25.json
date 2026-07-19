@@ -1,0 +1,43 @@
+{
+  "page": 25,
+  "games": [
+    {
+      "date": "1968-03-01",
+      "opponent": "Wyoming",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 75,
+          "players": [
+            {"name": "Howard Grimes", "fg": "2-5", "ft": "3-3", "reb": 8, "pf": 4, "pts": 7},
+            {"name": "Greg Howard", "fg": "1-5", "ft": "3-6", "reb": 11, "pf": 4, "pts": 5},
+            {"name": "Ron Sanford", "fg": "3-4", "ft": "0-1", "reb": 3, "pf": 4, "pts": 6},
+            {"name": "Ron Nelson", "fg": "11-25", "ft": "7-8", "reb": 6, "pf": 2, "pts": 29},
+            {"name": "Ron Becker", "fg": "8-10", "ft": "1-1", "reb": 7, "pf": 3, "pts": 17},
+            {"name": "Dave Culver", "fg": "0-0", "ft": "2-2", "reb": 6, "pf": 1, "pts": 2},
+            {"name": "Steve Shropshire", "fg": "3-3", "ft": "0-0", "reb": 1, "pf": 0, "pts": 6},
+            {"name": "Terry Schaafsma", "fg": "0-1", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Leonard Lopez", "fg": "1-1", "ft": "0-0", "reb": 0, "pf": 0, "pts": 2},
+            {"name": "Keith Griffith", "fg": "0-0", "ft": "1-2", "reb": 0, "pf": 0, "pts": 1}
+          ]
+        },
+        {
+          "name": "Wyoming Cowboys",
+          "score": 62,
+          "players": [
+            {"name": "Stan Dodds", "fg": "4-14", "ft": "2-5", "reb": 13, "pf": 1, "pts": 10},
+            {"name": "Steve Popovich", "fg": "5-10", "ft": "0-1", "reb": 8, "pf": 3, "pts": 10},
+            {"name": "Carl Ashley", "fg": "6-13", "ft": "8-12", "reb": 17, "pf": 1, "pts": 20},
+            {"name": "Harry Hall", "fg": "6-24", "ft": "2-3", "reb": 6, "pf": 4, "pts": 14},
+            {"name": "Mike Eberle", "fg": "1-8", "ft": "1-1", "reb": 2, "pf": 4, "pts": 3},
+            {"name": "Bob Wilson", "fg": "1-5", "ft": "1-2", "reb": 3, "pf": 5, "pts": 3},
+            {"name": "Gary VonKrosigk", "fg": "0-2", "ft": "0-0", "reb": 0, "pf": 1, "pts": 0},
+            {"name": "Cliff Nelson", "fg": "1-2", "ft": "0-0", "reb": 1, "pf": 0, "pts": 2}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

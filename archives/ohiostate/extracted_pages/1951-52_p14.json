@@ -1,0 +1,50 @@
+{
+  "page": 14,
+  "games": [
+    {
+      "date": "1952-02-11",
+      "opponent": "Northwestern",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 79,
+          "players": [
+            {"name": "Williams", "fg": "3-9", "ft": "0-0", "pf": 5, "pts": 6},
+            {"name": "Wilks", "fg": "1-2", "ft": "0-2", "pf": 2, "pts": 2},
+            {"name": "Armstrong", "fg": "3-4", "ft": "2-3", "pf": 3, "pts": 8},
+            {"name": "Hatfield", "fg": "1-4", "ft": "0-0", "pf": 1, "pts": 2},
+            {"name": "Dawes", "fg": "0-2", "ft": "4-5", "pf": 2, "pts": 4},
+            {"name": "Ebert", "fg": "8-22", "ft": "4-8", "pf": 1, "pts": 20},
+            {"name": "Gillaugh", "fg": "1-1", "ft": "2-3", "pf": 5, "pts": 4},
+            {"name": "Karaffe", "fg": "7-12", "ft": "0-0", "pf": 0, "pts": 14},
+            {"name": "Cook", "fg": "1-3", "ft": "2-3", "pf": 1, "pts": 4},
+            {"name": "Moore", "fg": "0-2", "ft": "0-0", "pf": 0, "pts": 0},
+            {"name": "Jones", "fg": "3-8", "ft": "5-7", "pf": 0, "pts": 11},
+            {"name": "Hague", "fg": "2-5", "ft": "0-1", "pf": 1, "pts": 4}
+          ]
+        },
+        {
+          "name": "Northwestern",
+          "score": 61,
+          "players": [
+            {"name": "Dellefield", "fg": "1-8", "ft": "1-2", "pf": 3, "pts": 3},
+            {"name": "LeBuhn", "fg": "2-9", "ft": "1-4", "pf": 3, "pts": 5},
+            {"name": "Grant", "fg": "4-12", "ft": "3-3", "pf": 2, "pts": 11},
+            {"name": "Ehmann", "fg": "2-8", "ft": "0-1", "pf": 2, "pts": 4},
+            {"name": "Petrancek", "fg": "5-11", "ft": "5-5", "pf": 5, "pts": 15},
+            {"name": "Regalis", "fg": "0-2", "ft": "0-0", "pf": 0, "pts": 0},
+            {"name": "Kurka", "fg": "0-1", "ft": "0-1", "pf": 1, "pts": 0},
+            {"name": "Blaha", "fg": "4-11", "ft": "0-0", "pf": 0, "pts": 8},
+            {"name": "Collier", "fg": "0-1", "ft": "0-1", "pf": 1, "pts": 0},
+            {"name": "Cedarstrom", "fg": "3-8", "ft": "0-0", "pf": 3, "pts": 6},
+            {"name": "Biever", "fg": "3-13", "ft": "1-1", "pf": 3, "pts": 7},
+            {"name": "Mottrom", "fg": "1-5", "ft": "0-0", "pf": 2, "pts": 2}
+          ]
+        }
+      ],
+      "checksum_ok": true,
+      "notes": "Sheet columns were FG, FGA, FT (made), FTM (free throws MISSED per sheet legend), PF, PTS; ft field here is 'made-attempted' where attempted = FT + FTM. No minutes/reb/ast/to/stl/blk columns present, so omitted. Northwestern's Petrancek C row printed PTS as 16, but this is internally inconsistent (2*FG5+FT5=15) and made the team PTS total sum to 62 vs. the sheet's own totals row of 61, while every other column (FG, FGA, FT, FTM, PF) checksummed exactly against the totals row. Corrected Petrancek's pts to 15 (2*fg_made+ft_made) to match the row's own arithmetic and the printed team total; this is treated as a probable scorer error in the original 1952 document, not a transcription guess, since it is the only anomaly in an otherwise fully self-consistent sheet."
+    }
+  ],
+  "skipped": []
+}

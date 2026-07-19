@@ -1,0 +1,51 @@
+{
+  "page": 1,
+  "games": [
+    {
+      "date": "1979-11-30",
+      "opponent": "Idaho State",
+      "ucla_score": 82,
+      "opp_score": 40,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 82,
+          "players": [
+            {"name": "Wilkes", "min": 18, "fg": "5-9", "ft": "0-0", "reb": 5, "pf": 1, "to": 4, "pts": 10},
+            {"name": "Vandeweghe", "min": 19, "fg": "7-11", "ft": "2-2", "reb": 9, "pf": 2, "pts": 16},
+            {"name": "Allums", "min": 13, "fg": "1-2", "ft": "0-0", "reb": 5, "pf": 3, "to": 1, "blk": 1, "pts": 2},
+            {"name": "Naulls", "min": 18, "fg": "3-5", "ft": "0-0", "reb": 0, "pf": 0, "to": 2, "pts": 6},
+            {"name": "Anderson", "min": 16, "fg": "2-5", "ft": "3-4", "reb": 1, "pf": 0, "to": 2, "stl": 3, "pts": 7},
+            {"name": "Sims", "min": 19, "fg": "2-4", "ft": "0-0", "reb": 5, "pf": 1, "ast": 4, "pts": 4},
+            {"name": "Sanders", "min": 18, "fg": "3-4", "ft": "0-1", "reb": 3, "pf": 2, "to": 1, "blk": 2, "pts": 6},
+            {"name": "Daye", "min": 18, "fg": "4-7", "ft": "2-3", "reb": 3, "pf": 0, "ast": 4, "stl": 3, "pts": 10},
+            {"name": "Foster", "min": 16, "fg": "2-6", "ft": "0-0", "reb": 2, "pf": 2, "ast": 1, "blk": 1, "pts": 4},
+            {"name": "Pruitt", "min": 20, "fg": "4-5", "ft": "0-0", "reb": 2, "pf": 2, "ast": 3, "to": 1, "pts": 8},
+            {"name": "Holton", "min": 11, "fg": "1-2", "ft": "0-0", "reb": 2, "pf": 3, "ast": 3, "pts": 2},
+            {"name": "Lippert", "min": 9, "fg": "0-3", "ft": "2-4", "reb": 1, "pf": 0, "to": 2, "stl": 1, "pts": 2},
+            {"name": "Arrillaga", "min": 5, "fg": "1-1", "ft": "3-5", "reb": 1, "pf": 1, "pts": 5}
+          ]
+        },
+        {
+          "name": "Idaho State Bengals",
+          "score": 40,
+          "players": [
+            {"name": "Wilson", "min": 21, "fg": "1-5", "ft": "0-0", "reb": 2, "pf": 2, "to": 1, "pts": 2},
+            {"name": "Banks", "min": 24, "fg": "1-5", "ft": "2-2", "reb": 4, "pf": 2, "ast": 1, "to": 3, "pts": 4},
+            {"name": "Fazekas", "min": 28, "fg": "2-11", "ft": "1-4", "reb": 8, "pf": 2, "to": 1, "pts": 5},
+            {"name": "Watson", "min": 17, "fg": "0-4", "ft": "0-1", "reb": 1, "pf": 2, "ast": 1, "to": 4, "stl": 1, "pts": 0},
+            {"name": "Freeman", "min": 26, "fg": "2-8", "ft": "1-2", "reb": 2, "pf": 1, "to": 2, "blk": 1, "pts": 5},
+            {"name": "Goold", "min": 12, "fg": "2-4", "ft": "0-0", "reb": 2, "pf": 0, "to": 1, "pts": 4},
+            {"name": "Thompson", "min": 19, "fg": "3-7", "ft": "2-2", "reb": 2, "pf": 1, "to": 2, "pts": 8},
+            {"name": "Stewart", "min": 10, "fg": "2-8", "ft": "0-0", "reb": 1, "pf": 4, "to": 2, "pts": 4},
+            {"name": "McQuaid", "min": 9, "fg": "2-5", "ft": "0-0", "reb": 4, "pf": 4, "to": 1, "blk": 1, "pts": 4},
+            {"name": "Herndon", "min": 18, "fg": "0-2", "ft": "0-1", "reb": 3, "pf": 2, "ast": 1, "to": 3, "pts": 0},
+            {"name": "Wilkinson", "min": 16, "fg": "2-6", "ft": "0-0", "reb": 8, "pf": 1, "to": 2, "pts": 4}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

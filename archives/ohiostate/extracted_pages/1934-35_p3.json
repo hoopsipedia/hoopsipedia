@@ -1,0 +1,9 @@
+{
+  "page": 3,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Dec 15, 1934: Ohio State vs Carleton (final 24-13, O.S.U., attendance 3872, captain Beitner, coach Olsen). Ohio State's own column (G./F./MF./PF./P.) transcribes cleanly and checksums: player points sum to 24 (matches team score) and PF sums to 14 (matches team total row). However Carleton's stat block is faint/low-contrast and its per-player G/F/MF/PF/P digits could not be read reliably even after a second pass -- my best-effort reading of Carleton's points column summed to 14 against an actual final score of 13, a mismatch that could not be resolved. Per instructions, skipping the entire game rather than guessing Carleton's values or reporting only one team's box score."
+    }
+  ]
+}

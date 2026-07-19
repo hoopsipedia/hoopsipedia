@@ -1,0 +1,45 @@
+{
+  "page": 20,
+  "games": [
+    {
+      "date": "1976-02-07",
+      "opponent": "Washington State",
+      "ucla_score": 91,
+      "opp_score": 71,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 91,
+          "players": [
+            {"name": "Brad Holland", "min": 3, "fg": "0-1", "ft": "2-2", "pf": 1, "ast": 1, "pts": 2},
+            {"name": "Ray Townsend", "min": 32, "fg": "4-7", "ast": 4, "stl": 2, "pts": 8},
+            {"name": "Roy Hamilton", "min": 3, "fg": "0-1", "reb": 1, "pts": 0},
+            {"name": "Richard Washington", "min": 36, "fg": "9-16", "ft": "1-1", "reb": 10, "pf": 4, "ast": 5, "to": 4, "blk": 1, "pts": 19},
+            {"name": "David Greenwood", "min": 20, "fg": "6-15", "ft": "2-2", "reb": 13, "pf": 2, "ast": 1, "to": 2, "pts": 14},
+            {"name": "Ralph Drollinger", "min": 17, "fg": "2-3", "reb": 4, "pf": 2, "ast": 1, "to": 2, "pts": 4},
+            {"name": "Jim Spillane", "min": 6, "fg": "0-1", "pts": 0},
+            {"name": "Andre McCarter", "min": 36, "fg": "4-12", "reb": 5, "ast": 7, "to": 3, "pts": 8},
+            {"name": "Marques Johnson", "min": 38, "fg": "13-18", "ft": "6-6", "reb": 15, "pf": 1, "ast": 2, "to": 2, "pts": 32},
+            {"name": "Gavin Smith", "min": 7, "fg": "2-5", "reb": 1, "pf": 2, "ast": 1, "pts": 4}
+          ]
+        },
+        {
+          "name": "Washington State Cougars",
+          "score": 71,
+          "players": [
+            {"name": "Brian Orum", "min": 6, "fg": "1-3", "pf": 1, "pts": 2},
+            {"name": "Ken Jones", "min": 24, "fg": "2-7", "pf": 2, "ast": 3, "pts": 4},
+            {"name": "Harold Rhodes", "min": 12, "fg": "1-4", "reb": 3, "pf": 2, "pts": 2},
+            {"name": "Marty Giovacchini", "min": 16, "fg": "1-3", "ft": "0-1", "pf": 1, "ast": 1, "to": 2, "stl": 1, "pts": 2},
+            {"name": "Edgar Jeffries", "min": 28, "fg": "2-7", "reb": 3, "pf": 2, "ast": 2, "to": 1, "pts": 4},
+            {"name": "Norton Barnhill", "min": 40, "fg": "11-17", "ft": "5-5", "reb": 6, "pf": 4, "ast": 4, "to": 2, "blk": 1, "stl": 1, "pts": 27},
+            {"name": "Ron Davis", "min": 34, "fg": "3-15", "ft": "1-4", "reb": 5, "pf": 2, "ast": 3, "to": 3, "pts": 7},
+            {"name": "Steve Puidokas", "min": 40, "fg": "11-16", "ft": "1-2", "reb": 9, "pf": 3, "pts": 23}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

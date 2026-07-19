@@ -1,0 +1,43 @@
+{
+  "page": 21,
+  "games": [
+    {
+      "date": "1964-02-17",
+      "opponent": "Iowa",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 99,
+          "players": [
+            {"name": "DeVoe", "fg": "7-11", "ft": "9-14", "pf": 3, "reb": 3, "pts": 23},
+            {"name": "Shaffer", "fg": "2-4", "ft": "1-1", "pf": 4, "reb": 2, "pts": 5},
+            {"name": "Bradds", "fg": "12-22", "ft": "6-7", "pf": 4, "reb": 15, "pts": 30},
+            {"name": "Ricketts", "fg": "7-14", "ft": "4-5", "pf": 4, "reb": 3, "pts": 18},
+            {"name": "Bowman", "fg": "5-7", "ft": "2-5", "pf": 3, "reb": 3, "pts": 12},
+            {"name": "Dove", "fg": "3-7", "ft": "1-1", "pf": 5, "reb": 4, "pts": 7},
+            {"name": "Brown", "fg": "2-5", "ft": "0-0", "pf": 3, "reb": 1, "pts": 4},
+            {"name": "Flatt", "fg": "0-0", "ft": "0-0", "pf": 0, "reb": 0, "pts": 0},
+            {"name": "Frazier", "fg": "0-0", "ft": "0-0", "pf": 0, "reb": 1, "pts": 0}
+          ]
+        },
+        {
+          "name": "Iowa Hawkeyes",
+          "score": 82,
+          "players": [
+            {"name": "Roach", "fg": "4-19", "ft": "5-7", "pf": 3, "reb": 8, "pts": 13},
+            {"name": "Jessen", "fg": "4-10", "ft": "4-5", "pf": 4, "reb": 6, "pts": 12},
+            {"name": "Bastian", "fg": "5-17", "ft": "1-2", "pf": 4, "reb": 7, "pts": 11},
+            {"name": "Rodgers", "fg": "10-18", "ft": "5-6", "pf": 5, "reb": 6, "pts": 25},
+            {"name": "Pauling", "fg": "3-4", "ft": "2-2", "pf": 2, "reb": 3, "pts": 8},
+            {"name": "Olson", "fg": "2-5", "ft": "5-6", "pf": 4, "reb": 4, "pts": 9},
+            {"name": "Skea", "fg": "0-0", "ft": "0-0", "pf": 0, "reb": 0, "pts": 0},
+            {"name": "Hankins", "fg": "1-1", "ft": "2-5", "pf": 1, "reb": 3, "pts": 4},
+            {"name": "Banaszek", "fg": "0-2", "ft": "0-0", "pf": 2, "reb": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

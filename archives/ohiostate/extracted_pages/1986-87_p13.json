@@ -1,0 +1,9 @@
+{
+  "page": 13,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Handwritten official scoresheet (Ohio State vs Florida, date partially legible ~12/30/8x) is too blurry/ambiguous in the FT, rebound, and final-player rows to transcribe confidently. Final scores are legible (Ohio State 88, Florida 84, from 1st/2nd half splits 40+48 and 51+33), and most player rows can be read, but attempts to reconstruct full player-by-player lines produced point sums that would not independently checksum against the final score without guessing (Ohio State: 8 of 9 players sum to 79, leaving a 9-point gap on an illegible final row for Francis, Jerry; Florida: best-effort read of 9 players sums to 82 vs a final of 84, with several FT/rebound cells too smudged to resolve). Per instructions, skipping rather than inventing values to force a match."
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "page": 9,
+  "games": [
+    {
+      "date": "1995-01-12",
+      "opponent": "Washington",
+      "ucla_score": 75,
+      "opp_score": 57,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 75,
+          "players": [
+            {"name": "Ed O'Bannon", "min": 32, "fg": "6-10", "ft": "2-2", "tp": "1-2", "reb": 9, "ast": 1, "pf": 2, "to": 5, "stl": 4, "blk": 0, "pts": 15},
+            {"name": "Charles O'Bannon", "min": 28, "fg": "7-12", "ft": "4-4", "tp": "0-1", "reb": 10, "ast": 3, "pf": 1, "to": 2, "stl": 1, "blk": 0, "pts": 18},
+            {"name": "George Zidek", "min": 24, "fg": "1-9", "ft": "5-7", "tp": "0-0", "reb": 3, "ast": 0, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 7},
+            {"name": "J.R. Henderson", "min": 29, "fg": "3-9", "ft": "0-2", "tp": "0-1", "reb": 7, "ast": 2, "pf": 3, "to": 4, "stl": 1, "blk": 1, "pts": 6},
+            {"name": "Tyus Edney", "min": 26, "fg": "6-10", "ft": "2-2", "tp": "0-2", "reb": 6, "ast": 5, "pf": 4, "to": 5, "stl": 2, "blk": 2, "pts": 14},
+            {"name": "omm'A Givens", "min": 10, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 3, "ast": 0, "pf": 4, "to": 2, "stl": 0, "blk": 1, "pts": 0},
+            {"name": "Toby Bailey", "min": 20, "fg": "2-4", "ft": "0-0", "tp": "1-1", "reb": 2, "ast": 2, "pf": 3, "to": 2, "stl": 0, "blk": 0, "pts": 5},
+            {"name": "Cameron Dollar", "min": 14, "fg": "1-2", "ft": "0-0", "tp": "0-0", "reb": 1, "ast": 3, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Kris Johnson", "min": 14, "fg": "2-6", "ft": "0-0", "tp": "0-0", "reb": 2, "ast": 1, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Ike Nwankwo", "min": 2, "fg": "2-2", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Bob Myers", "min": 1, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Washington Huskies",
+          "score": 57,
+          "players": [
+            {"name": "Mark Sanford", "min": 26, "fg": "5-18", "ft": "0-1", "tp": "0-5", "reb": 7, "ast": 1, "pf": 3, "to": 4, "stl": 0, "blk": 0, "pts": 10},
+            {"name": "Jamie Booker", "min": 20, "fg": "0-2", "ft": "0-0", "tp": "0-2", "reb": 2, "pf": 0, "pts": 0},
+            {"name": "Mike Amos", "min": 22, "fg": "5-6", "ft": "2-3", "tp": "0-0", "reb": 5, "ast": 1, "pf": 2, "to": 6, "stl": 0, "blk": 0, "pts": 12},
+            {"name": "Michael McClain", "min": 18, "fg": "0-4", "ft": "0-0", "tp": "0-4", "reb": 1, "pf": 0, "pts": 0},
+            {"name": "Bryant Boston", "min": 32, "fg": "6-9", "ft": "2-4", "tp": "0-1", "reb": 4, "ast": 1, "pf": 2, "to": 2, "stl": 3, "blk": 1, "pts": 14},
+            {"name": "Jason Hamilton", "min": 26, "fg": "1-3", "ft": "3-4", "tp": "0-2", "reb": 1, "ast": 3, "pf": 2, "to": 3, "stl": 1, "blk": 0, "pts": 5},
+            {"name": "Jason Hartman", "min": 18, "fg": "2-9", "ft": "0-2", "tp": "0-4", "reb": 3, "ast": 1, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "David Hawken", "min": 7, "fg": "0-1", "ft": "0-0", "tp": "0-0", "reb": 2, "ast": 0, "pf": 2, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Alex Lopez", "min": 14, "fg": "0-2", "ft": "2-5", "tp": "0-0", "reb": 3, "ast": 0, "pf": 3, "to": 1, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Scott Didrickson", "min": 11, "fg": "2-5", "ft": "0-0", "tp": "1-2", "reb": 2, "ast": 1, "pf": 1, "to": 0, "stl": 2, "blk": 0, "pts": 5},
+            {"name": "Roberto Bergersen", "min": 5, "fg": "1-5", "ft": "3-4", "tp": "0-1", "reb": 6, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 5},
+            {"name": "Andy Roberson", "min": 1, "fg": "0-1", "ft": "0-0", "tp": "0-1", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": [],
+  "notes": "Washington rows for Jamie Booker and Michael McClain were one digit short in the PF/TP/AST/TO/BLK/STL run (6 numbers present instead of the expected 7); kept the unambiguous MIN, PF, and PTS values for those two players and omitted ast/to/stl/blk rather than guess. All other fields read cleanly. Both teams' player point totals sum exactly to the printed team TOTALS (UCLA 75, Washington 57)."
+}

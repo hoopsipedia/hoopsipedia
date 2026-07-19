@@ -1,0 +1,9 @@
+{
+  "page": 6,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page shows an Official NCAA Basketball Box Score, Kentucky at Ohio State, Dec 5 1981, St. John Arena, Columbus OH. Team-level info is clear and legible: final score Kentucky 78, Ohio State 62 (Kentucky 1st half 33 / 2nd half 45; Ohio State 1st half 30 / 2nd half 32); Kentucky team totals FG 31-66, FT 16-23, REB 41, PF 18, TP 78, A 13, TO 11, BLK 1, S 5, MIN 200; Ohio State team totals FG 24-61, FT 14-19, REB 37, PF 21, TP 62, A 15, TO 13, BLK 5, S 3, MIN 200 (both team-total rows self-check: 2*FG+FT = final score). However, the individual player rows are handwritten in cursive/print that is too ambiguous to transcribe digit-by-digit with confidence (e.g. FG/FT/TP cell values for players like Hord, Verderber, Turpin, Minniefield, Master for Kentucky and Huggins, Campbell, Walters, Stokes, Taylor for Ohio State could not be pinned down consistently -- a cross-check of the MIN column against the 200 team-minute total came up short by roughly 20 minutes, indicating my digit reads are not reliable enough to trust for a player-level checksum). Per instructions, skipping rather than guessing/inventing individual player stat lines; only the clearly legible team/game-level facts are noted here."
+    }
+  ]
+}

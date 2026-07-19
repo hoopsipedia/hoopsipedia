@@ -1,0 +1,42 @@
+{
+  "page": 16,
+  "games": [
+    {
+      "date": "1946-02-16",
+      "opponent": "Michigan State",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 41,
+          "players": [
+            {"name": "Bowen, f", "pts": 13},
+            {"name": "Snyder, f", "pts": 7},
+            {"name": "Wells, f", "pts": 2},
+            {"name": "Biel, f", "pts": 0},
+            {"name": "Underman, c", "pts": 7},
+            {"name": "Elliott, c", "pts": 3},
+            {"name": "Huston, g", "pts": 4},
+            {"name": "Amling, g", "pts": 5},
+            {"name": "Johnston, g", "pts": 0}
+          ]
+        },
+        {
+          "name": "Michigan State",
+          "score": 64,
+          "players": [
+            {"name": "Fortnio, f", "pts": 11},
+            {"name": "Roberts, f", "pts": 10},
+            {"name": "Krall, c", "pts": 3},
+            {"name": "Wulf, c", "pts": 0},
+            {"name": "Mazza, c", "pts": 5},
+            {"name": "White, g", "pts": 21},
+            {"name": "Waldron, g", "pts": 13},
+            {"name": "Granack, g", "pts": 1}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

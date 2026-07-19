@@ -1,0 +1,9 @@
+{
+  "page": 1,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page is a newspaper clipping for Ohio State 42, Denison 16 (Dec 11, 1936, Columbus, coach Olsen) — date/opponent/final score are legible from the article headline and handwritten summary card, but the actual box score table (small agate-type newsprint, G./FT/P columns for both teams) is too low-resolution/blurry to transcribe individual player FG/FT/PTS digits with confidence. Several rows produce internally inconsistent totals when read (e.g., a player line appearing as FG=0, FT=10, PTS=0, which cannot be reconciled), and player name/position abbreviations (e.g., 'Rands gh,lg', 'Bulterelen') are ambiguous OCR-of-scan artifacts. Per instructions, skipping rather than guessing at player lines / checksums."
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "page": 28,
+  "games": [
+    {
+      "date": "1987-03-06",
+      "opponent": "Arizona State",
+      "ucla_score": 99,
+      "opp_score": 83,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 99,
+          "players": [
+            {"name": "Miller", "min": 34, "fg": "15-20", "ft": "6-6", "tp": "3-6", "reb": 6, "ast": 1, "pf": 1, "to": 1, "stl": 3, "blk": 0, "pts": 39},
+            {"name": "Rochelin", "min": 15, "fg": "0-2", "ft": "0-0", "tp": "0-0", "reb": 1, "ast": 0, "pf": 2, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Haley", "min": 18, "fg": "4-5", "ft": "1-1", "tp": "0-0", "reb": 3, "ast": 0, "pf": 3, "to": 0, "stl": 0, "blk": 1, "pts": 9},
+            {"name": "Immel", "min": 20, "fg": "2-8", "ft": "1-4", "tp": "1-4", "reb": 3, "ast": 4, "pf": 4, "to": 2, "stl": 3, "blk": 0, "pts": 6},
+            {"name": "Richardson", "min": 30, "fg": "3-11", "ft": "0-0", "tp": "0-0", "reb": 6, "ast": 7, "pf": 2, "to": 3, "stl": 1, "blk": 0, "pts": 6},
+            {"name": "Hatcher", "min": 25, "fg": "2-7", "ft": "0-0", "tp": "0-1", "reb": 2, "ast": 4, "pf": 2, "to": 1, "stl": 1, "blk": 0, "pts": 4},
+            {"name": "Foster", "min": 22, "fg": "5-6", "ft": "2-2", "tp": "0-0", "reb": 2, "ast": 2, "pf": 2, "to": 0, "stl": 0, "blk": 1, "pts": 12},
+            {"name": "Wilson", "min": 20, "fg": "5-8", "ft": "5-7", "tp": "0-0", "reb": 6, "ast": 1, "pf": 3, "to": 3, "stl": 0, "blk": 0, "pts": 15},
+            {"name": "Jackson", "min": 3, "fg": "0-1", "ft": "0-0", "tp": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Palmer", "min": 5, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 2, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Walker", "min": 6, "fg": "2-3", "ft": "2-2", "tp": "0-1", "reb": 1, "ast": 0, "pf": 0, "to": 2, "stl": 2, "blk": 0, "pts": 6},
+            {"name": "Butler", "min": 2, "fg": "1-1", "ft": "0-0", "tp": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 2}
+          ]
+        },
+        {
+          "name": "Arizona State",
+          "score": 83,
+          "players": [
+            {"name": "Austin", "min": 31, "fg": "3-9", "ft": "2-2", "tp": "1-1", "reb": 7, "ast": 0, "pf": 3, "to": 2, "stl": 0, "blk": 0, "pts": 9},
+            {"name": "Becker", "min": 28, "fg": "4-9", "ft": "0-0", "tp": "0-0", "reb": 7, "ast": 2, "pf": 4, "to": 1, "stl": 0, "blk": 0, "pts": 8},
+            {"name": "Isiah", "min": 26, "fg": "4-7", "ft": "1-2", "tp": "0-0", "reb": 6, "ast": 0, "pf": 3, "to": 2, "stl": 0, "blk": 1, "pts": 9},
+            {"name": "Thompson", "min": 17, "fg": "1-1", "ft": "2-3", "tp": "1-1", "reb": 0, "ast": 1, "pf": 1, "to": 4, "stl": 0, "blk": 0, "pts": 5},
+            {"name": "Beck", "min": 29, "fg": "5-18", "ft": "7-7", "tp": "1-5", "reb": 1, "ast": 3, "pf": 2, "to": 2, "stl": 2, "blk": 0, "pts": 18},
+            {"name": "Carlino", "min": 23, "fg": "2-5", "ft": "0-0", "tp": "0-0", "reb": 5, "ast": 1, "pf": 4, "to": 2, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Thomas", "min": 33, "fg": "9-15", "ft": "5-8", "tp": "0-1", "reb": 2, "ast": 1, "pf": 1, "to": 2, "stl": 4, "blk": 0, "pts": 23},
+            {"name": "Ryan", "min": 11, "fg": "3-3", "ft": "0-0", "tp": "1-1", "reb": 1, "ast": 1, "pf": 2, "to": 1, "stl": 3, "blk": 0, "pts": 7},
+            {"name": "Mitchell", "min": 2, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 1, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

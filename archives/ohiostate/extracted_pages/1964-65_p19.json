@@ -1,0 +1,11 @@
+{
+  "page": 19,
+  "games": [],
+  "skipped": [
+    {
+      "date": "1965-02-16",
+      "opponent": "Illinois",
+      "reason": "Ohio State side checksums correctly (players sum to 72 = final score 72), but Illinois side does not: player PTS column sums to 94 while the sheet's own TOTALS row and final score read 95. Traced the 1-point gap to the Redmon F-C line (FGA17 FG9 FTA3 FT2 PF3 PTS19) — 2*FG+FT = 20, not the 19 printed in the PTS column. Re-read the page a second time and confirmed identical digits both times, so this is not a legibility/OCR issue but an apparent arithmetic error on the original 1965 scoresheet. Per policy, skipping rather than guessing which figure (FG, FT, or PTS) is the typo."
+    }
+  ]
+}

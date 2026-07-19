@@ -1,0 +1,43 @@
+{
+  "page": 30,
+  "games": [
+    {
+      "date": "2001-03-15",
+      "opponent": "Hofstra",
+      "note": "NCAA Tournament, first round, at Greensboro Coliseum, Greensboro, N.C. Attendance 14235.",
+      "teams": [
+        {
+          "name": "Hofstra",
+          "score": 48,
+          "players": [
+            {"name": "Roberto Gittens", "min": 39, "fg": "3-5", "tp": "0-0", "ft": "1-4", "reb": 8, "ast": 1, "pf": 1, "to": 4, "stl": 2, "blk": 0, "pts": 7},
+            {"name": "Norman Richardson", "min": 39, "fg": "5-13", "tp": "2-8", "ft": "0-0", "reb": 5, "ast": 1, "pf": 1, "to": 3, "stl": 0, "blk": 0, "pts": 12},
+            {"name": "Greg Springfield", "min": 31, "fg": "0-2", "tp": "0-0", "ft": "0-0", "reb": 6, "ast": 1, "pf": 4, "to": 1, "stl": 2, "blk": 0, "pts": 0},
+            {"name": "Jason Hernandez", "min": 34, "fg": "3-8", "tp": "3-6", "ft": "2-3", "reb": 1, "ast": 6, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 11},
+            {"name": "Rick Apodaca", "min": 37, "fg": "4-14", "tp": "4-11", "ft": "4-6", "reb": 5, "ast": 1, "pf": 3, "to": 8, "stl": 2, "blk": 0, "pts": 16},
+            {"name": "Joel Suarez", "min": 2, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Abdou Sylla", "min": 1, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Danny Walker", "min": 9, "fg": "0-0", "tp": "0-0", "ft": "2-2", "reb": 3, "ast": 0, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Lars Grubler", "min": 8, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 3, "ast": 0, "pf": 1, "to": 0, "stl": 1, "blk": 1, "pts": 0}
+          ]
+        },
+        {
+          "name": "UCLA Bruins",
+          "score": 61,
+          "players": [
+            {"name": "Matt Barnes", "min": 35, "fg": "3-7", "tp": "0-0", "ft": "2-4", "reb": 4, "ast": 4, "pf": 2, "to": 1, "stl": 2, "blk": 1, "pts": 8},
+            {"name": "Jason Kapono", "min": 33, "fg": "2-8", "tp": "1-5", "ft": "2-2", "reb": 3, "ast": 2, "pf": 0, "to": 1, "stl": 1, "blk": 0, "pts": 7},
+            {"name": "Dan Gadzuric", "min": 37, "fg": "7-11", "tp": "0-0", "ft": "0-2", "reb": 13, "ast": 1, "pf": 4, "to": 2, "stl": 1, "blk": 2, "pts": 14},
+            {"name": "Billy Knight", "min": 31, "fg": "6-12", "tp": "3-6", "ft": "2-2", "reb": 2, "ast": 2, "pf": 3, "to": 1, "stl": 3, "blk": 0, "pts": 17},
+            {"name": "Earl Watson", "min": 38, "fg": "7-10", "tp": "1-2", "ft": "0-2", "reb": 2, "ast": 7, "pf": 3, "to": 5, "stl": 4, "blk": 0, "pts": 15, "note": "FT read as 0-2 (attempts/makes reconciled against team FT totals 6-12 and TP=15; printed digits were ambiguous, appeared closer to 2-3)"},
+            {"name": "Ryan Bailey", "min": 9, "fg": "0-3", "tp": "0-2", "ft": "0-0", "reb": 1, "ast": 1, "pf": 2, "to": 0, "stl": 2, "blk": 0, "pts": 0},
+            {"name": "Ray Young", "min": 10, "fg": "0-1", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "T.J. Cummings", "min": 7, "fg": "0-1", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 1, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

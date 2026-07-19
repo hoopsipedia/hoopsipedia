@@ -1,0 +1,44 @@
+{
+  "page": 23,
+  "games": [
+    {
+      "date": "1956-03-05",
+      "opponent": "Minnesota",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 89,
+          "players": [
+            {"name": "Howard", "fg": "8-17", "ft": "4-5", "reb": 12, "pf": 4, "pts": 20},
+            {"name": "Laughlin", "fg": "1-12", "ft": "2-2", "reb": 9, "pf": 3, "pts": 4},
+            {"name": "Kelley", "fg": "4-9", "ft": "12-17", "reb": 15, "pf": 4, "pts": 20},
+            {"name": "Ellis", "fg": "0-1", "ft": "4-4", "pf": 5, "pts": 4},
+            {"name": "Freeman", "fg": "12-27", "ft": "9-10", "reb": 2, "pf": 2, "pts": 33},
+            {"name": "Short", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 2, "pts": 0},
+            {"name": "Millard", "fg": "2-7", "ft": "4-5", "pf": 3, "pts": 8},
+            {"name": "Martin", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 1, "pts": 0}
+          ]
+        },
+        {
+          "name": "Minnesota",
+          "score": 95,
+          "players": [
+            {"name": "Tucker", "fg": "13-30", "ft": "2-6", "reb": 18, "pf": 3, "pts": 28},
+            {"name": "Kline", "fg": "4-10", "ft": "1-2", "reb": 11, "pf": 3, "pts": 9},
+            {"name": "Simonovich", "fg": "0-0", "ft": "0-0", "reb": 1, "pf": 1, "pts": 0},
+            {"name": "Hanson", "fg": "2-8", "ft": "4-4", "reb": 1, "pf": 4, "pts": 8},
+            {"name": "Noack", "fg": "0-0", "ft": "2-4", "reb": 1, "pf": 2, "pts": 2},
+            {"name": "Dommeyer", "fg": "8-20", "ft": "10-12", "pf": 3, "pts": 26},
+            {"name": "DeHarais", "fg": "3-8", "ft": "8-10", "pf": 3, "pts": 14},
+            {"name": "Stoltman", "fg": "0-0", "ft": "2-2", "pf": 2, "pts": 2},
+            {"name": "Kindall", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 1, "pts": 0},
+            {"name": "Lindsley", "fg": "2-4", "ft": "2-2", "reb": 0, "pf": 1, "pts": 6},
+            {"name": "Fix", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 1, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

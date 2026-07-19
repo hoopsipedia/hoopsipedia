@@ -1,0 +1,9 @@
+{
+  "page": 1,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Fairfield vs UCLA Bruins, 11/23/99, Pauley Pavilion. Fairfield side (57 pts) checksums perfectly (player pts sum = FG/FT/3P sums = team totals all match exactly). UCLA side fails checksum: summing player TP column gives 82 (and player FG-made sum gives 31-61) but the team totals row lists 28-61 FG and TP=76, and the official final score (both the game header 'UCLA Bruins 76' and the 1st/2nd-half period breakdown 29+47=76) independently confirms 76 as the true final score. Every UCLA player row is internally self-consistent (TP = 2*FGm + 3Pm + FTm holds exactly for all 10 players) and FGA/3Pm/3PA/FTm/FTA all sum correctly to the team total row, so no obvious single-cell misread is identifiable — the discrepancy is exactly 3 field goals / 6 points, isolated to the FGm/TP columns only, and could not be resolved even after one permitted re-read of the page. Skipping the whole game rather than guessing which player's made-FG/points value is wrong."
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "page": 26,
+  "games": [
+    {
+      "date": "1985-02-20",
+      "opponent": "Clemson Tigers",
+      "site": "Charlottesville, VA",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 69,
+          "players": [
+            {"name": "Merrifield, Dan", "min": 16, "fg": "2-3", "reb": 2, "ast": 1, "pf": 2, "to": 1, "pts": 4},
+            {"name": "Sheehey, Tom", "min": 28, "fg": "6-11", "ft": "4-6", "reb": 5, "ast": 3, "pf": 1, "to": 2, "stl": 1, "pts": 16},
+            {"name": "Polinice, Olden", "min": 38, "fg": "8-11", "ft": "1-5", "reb": 10, "pf": 0, "to": 3, "blk": 2, "stl": 1, "pts": 17},
+            {"name": "Calloway, Tom", "min": 28, "fg": "0-4", "reb": 6, "ast": 1, "pf": 3, "to": 3, "stl": 2, "pts": 0},
+            {"name": "Mullen, Tim", "min": 35, "fg": "5-8", "reb": 0, "ast": 2, "pf": 3, "to": 4, "pts": 10},
+            {"name": "Kennedy, Mel", "min": 19, "fg": "5-7", "reb": 3, "ast": 1, "pf": 3, "to": 2, "stl": 1, "pts": 10},
+            {"name": "Miller, Jim", "min": 22, "fg": "4-5", "ft": "2-4", "reb": 3, "ast": 2, "pf": 2, "pts": 10},
+            {"name": "Simms, Darrick", "min": 14, "fg": "0-2", "ft": "2-2", "reb": 1, "ast": 4, "pf": 1, "pts": 2}
+          ]
+        },
+        {
+          "name": "Clemson Tigers",
+          "score": 66,
+          "players": [
+            {"name": "Michael, Chris", "min": 40, "fg": "12-22", "ft": "1-1", "reb": 4, "ast": 4, "pf": 4, "to": 0, "stl": 1, "blk": 0, "pts": 25},
+            {"name": "Corbit, Glenn", "min": 21, "fg": "2-7", "reb": 2, "ast": 1, "pf": 1, "to": 1, "stl": 1, "pts": 4},
+            {"name": "Grant, Horace", "min": 38, "fg": "2-5", "ft": "5-6", "reb": 9, "ast": 3, "pf": 2, "to": 3, "stl": 2, "pts": 9},
+            {"name": "Marshall, Grayson", "min": 26, "fg": "1-6", "ft": "0-1", "ast": 3, "pf": 2, "to": 2, "stl": 2, "pts": 2},
+            {"name": "Hamilton, Vincent", "min": 40, "fg": "4-12", "reb": 7, "ast": 3, "pf": 3, "to": 3, "stl": 2, "pts": 8},
+            {"name": "Jones, Raymond", "min": 18, "fg": "2-3", "ft": "2-3", "ast": 1, "to": 0, "stl": 0, "pts": 6},
+            {"name": "Grant, Harvey", "min": 17, "fg": "6-8", "reb": 4, "pf": 1, "to": 1, "stl": 1, "pts": 12},
+            {"name": "Graham, Harlan", "min": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true,
+      "notes": "Points column (TP) taken directly from sheet, not computed from FG/FT. Clemson's Jones row has an ambiguous circled '5' with tally marks in the PF column that could not be confidently read, so pf was omitted for that player only. Blank cells in REB/PF/TO/STL/BLK columns treated as 0 per standard scoresheet convention (column exists on sheet, cell left blank = no occurrence). Final score by periods: Clemson 35+31=66, Virginia 35+34=69, both matching team TP totals and player-sum checksums."
+    }
+  ],
+  "skipped": []
+}

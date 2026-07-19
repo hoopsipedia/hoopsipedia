@@ -1,0 +1,43 @@
+{
+  "page": 2,
+  "games": [
+    {
+      "date": "1974-12-04",
+      "opponent": "Kent State",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 58,
+          "players": [
+            {"name": "Bonner", "fg": "3-6", "ft": "3-5", "reb": 6, "pf": 3, "ast": 3, "to": 0, "min": 24, "pts": 9},
+            {"name": "Walker", "fg": "3-8", "ft": "0-0", "reb": 2, "pf": 5, "ast": 2, "to": 4, "min": 26, "pts": 6},
+            {"name": "Iavaroni", "fg": "5-10", "ft": "2-2", "reb": 3, "pf": 1, "ast": 2, "to": 0, "min": 27, "pts": 12},
+            {"name": "Langloh", "fg": "2-8", "ft": "0-0", "reb": 3, "pf": 2, "ast": 4, "to": 3, "min": 28, "pts": 4},
+            {"name": "Boninti", "fg": "2-7", "ft": "0-0", "reb": 3, "pf": 0, "ast": 3, "to": 3, "min": 28, "pts": 4},
+            {"name": "Newlen", "fg": "3-8", "ft": "1-2", "reb": 1, "pf": 0, "ast": 1, "to": 1, "min": 15, "pts": 7},
+            {"name": "Koesters", "fg": "5-8", "ft": "6-6", "reb": 0, "pf": 1, "ast": 0, "to": 1, "min": 22, "pts": 16},
+            {"name": "Carr", "fg": "0-0", "ft": "0-1", "reb": 0, "pf": 2, "ast": 0, "to": 0, "min": 3, "pts": 0},
+            {"name": "Gaskins", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 0, "min": 2, "pts": 0}
+          ]
+        },
+        {
+          "name": "Kent State Golden Flashes",
+          "score": 40,
+          "players": [
+            {"name": "Jamison", "fg": "1-10", "ft": "0-0", "reb": 3, "pf": 2, "ast": 0, "to": 3, "min": 20, "pts": 2},
+            {"name": "Robinson", "fg": "2-6", "ft": "2-3", "reb": 4, "pf": 3, "ast": 1, "to": 2, "min": 26, "pts": 6},
+            {"name": "Ball", "fg": "0-1", "ft": "0-0", "reb": 3, "pf": 3, "ast": 1, "to": 3, "min": 18, "pts": 0},
+            {"name": "Felhaber", "fg": "4-11", "ft": "0-0", "reb": 3, "pf": 3, "ast": 0, "min": 31, "pts": 8},
+            {"name": "Miller", "fg": "2-4", "ft": "4-4", "reb": 2, "pf": 3, "ast": 2, "min": 36, "pts": 8},
+            {"name": "Gates", "fg": "6-13", "ft": "0-0", "reb": 4, "pf": 4, "ast": 1, "min": 32, "pts": 12},
+            {"name": "Toet", "fg": "2-3", "ft": "0-0", "reb": 2, "pf": 0, "ast": 1, "min": 27, "pts": 4},
+            {"name": "Buhas", "fg": "0-2", "ft": "0-0", "reb": 1, "pf": 1, "ast": 2, "to": 1, "min": 9, "pts": 0},
+            {"name": "Richards", "fg": "0-0", "ft": "0-0", "reb": 1, "pf": 0, "ast": 0, "to": 0, "min": 1, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

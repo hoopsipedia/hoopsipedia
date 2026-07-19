@@ -1,0 +1,41 @@
+{
+  "page": 3,
+  "games": [
+    {
+      "date": "1955-12-05",
+      "opponent": "Vanderbilt Commodores",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 67,
+          "players": [
+            {"name": "Howard", "fg": "5-10", "ft": "3-5", "pf": 4, "reb": 11, "pts": 13},
+            {"name": "Sidle", "fg": "2-4", "ft": "0-2", "pf": 5, "reb": 8, "pts": 4},
+            {"name": "Kelley", "fg": "1-9", "ft": "2-5", "pf": 2, "reb": 4, "pts": 4},
+            {"name": "Freeman", "fg": "15-25", "ft": "10-13", "pf": 3, "reb": 1, "pts": 40},
+            {"name": "Ellis", "fg": "0-6", "ft": "2-2", "pf": 5, "reb": 2, "pts": 2},
+            {"name": "Millard", "fg": "0-0", "ft": "0-2", "pf": 0, "reb": 0, "pts": 0},
+            {"name": "Barkstall", "fg": "0-0", "ft": "0-0", "pf": 0, "reb": 0, "pts": 0},
+            {"name": "Laughlin", "fg": "2-4", "ft": "0-0", "pf": 1, "reb": 2, "pts": 4},
+            {"name": "Allen", "fg": "0-0", "ft": "0-0", "pf": 1, "reb": 0, "pts": 0},
+            {"name": "Martin", "fg": "0-0", "ft": "0-0", "pf": 0, "reb": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Vanderbilt Commodores",
+          "score": 76,
+          "players": [
+            {"name": "Thyme", "fg": "2-8", "ft": "10-10", "pf": 2, "reb": 7, "pts": 14},
+            {"name": "Gibbs", "fg": "1-4", "ft": "1-3", "pf": 3, "reb": 8, "pts": 3},
+            {"name": "Harrison", "fg": "8-12", "ft": "2-7", "pf": 3, "reb": 6, "pts": 18},
+            {"name": "Taylor", "fg": "6-14", "ft": "4-4", "pf": 4, "reb": 2, "pts": 16},
+            {"name": "Rochelle", "fg": "7-10", "ft": "9-10", "pf": 4, "reb": 4, "pts": 23},
+            {"name": "French", "fg": "0-2", "ft": "2-3", "pf": 2, "reb": 1, "pts": 2}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

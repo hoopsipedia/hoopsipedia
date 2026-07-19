@@ -1,0 +1,48 @@
+{
+  "page": 25,
+  "games": [
+    {
+      "date": "1990-02-24",
+      "opponent": "Oregon State",
+      "ucla_score": 74,
+      "opp_score": 83,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 74,
+          "players": [
+            {"name": "Trevor Wilson", "min": 29, "fg": "4-12", "ft": "2-3", "reb": 15, "ast": 4, "to": 4, "stl": 2, "pf": 5, "pts": 10},
+            {"name": "Don MacLean", "min": 37, "fg": "11-15", "ft": "10-10", "reb": 7, "ast": 2, "to": 2, "pf": 4, "pts": 32},
+            {"name": "Tracy Murray", "min": 23, "fg": "2-5", "tp": "1-2", "ft": "0-1", "reb": 1, "to": 2, "blk": 1, "stl": 1, "pf": 5, "pts": 5},
+            {"name": "Gerald Madkins", "min": 28, "fg": "4-8", "tp": "2-4", "reb": 4, "ast": 3, "to": 2, "stl": 2, "pf": 4, "pts": 10},
+            {"name": "Darrick Martin", "min": 36, "fg": "1-7", "tp": "0-4", "ft": "6-6", "reb": 1, "ast": 5, "to": 2, "pf": 3, "pts": 8},
+            {"name": "Zan Mason", "min": 16, "fg": "1-4", "reb": 5, "to": 1, "blk": 2, "stl": 1, "pf": 2, "pts": 2},
+            {"name": "Mitchell Butler", "min": 16, "fg": "2-4", "ft": "1-1", "stl": 1, "pf": 4, "pts": 5},
+            {"name": "Keith Owens", "min": 5, "reb": 1, "pf": 1, "pts": 0},
+            {"name": "Kevin Walker", "min": 9, "fg": "1-2", "to": 2, "pts": 2},
+            {"name": "Kevin Williams", "min": 1, "pts": 0}
+          ]
+        },
+        {
+          "name": "Oregon State Beavers",
+          "score": 83,
+          "players": [
+            {"name": "Teo Alibegovic", "min": 24, "fg": "4-8", "ft": "6-9", "reb": 4, "ast": 1, "pf": 4, "pts": 14},
+            {"name": "Earl Martin", "min": 39, "fg": "4-13", "tp": "2-5", "ft": "4-4", "reb": 9, "ast": 4, "pf": 1, "pts": 14},
+            {"name": "Scott Haskin", "min": 28, "fg": "5-5", "ft": "1-3", "reb": 8, "to": 1, "blk": 1, "stl": 2, "pf": 4, "pts": 11},
+            {"name": "Gary Payton", "min": 38, "fg": "7-18", "tp": "1-2", "ft": "8-12", "reb": 3, "ast": 12, "to": 5, "stl": 1, "pf": 4, "pts": 23},
+            {"name": "Allan Celestine", "min": 10, "fg": "1-2", "tp": "1-1", "pts": 3},
+            {"name": "Karl Anderson", "min": 18, "fg": "1-3", "reb": 5, "pf": 3, "pts": 2},
+            {"name": "Bob Cavell", "min": 1, "pts": 0},
+            {"name": "Will Brantley", "min": 30, "fg": "7-9", "ft": "0-1", "reb": 4, "ast": 3, "to": 1, "blk": 1, "stl": 3, "pf": 3, "pts": 14},
+            {"name": "Lamont McIntosh", "min": 10, "fg": "0-2", "ft": "2-2", "reb": 3, "pf": 1, "pts": 2},
+            {"name": "Charles McKinney", "min": 1, "fg": "0-1", "pts": 0},
+            {"name": "Rich Wold", "min": 1, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

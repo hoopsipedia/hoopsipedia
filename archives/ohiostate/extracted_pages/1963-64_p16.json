@@ -1,0 +1,44 @@
+{
+  "page": 16,
+  "games": [
+    {
+      "date": "1964-01-27",
+      "opponent": "Michigan State",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 99,
+          "players": [
+            {"name": "DeVoe", "fg": "3-6", "ft": "3-5", "reb": 5, "pf": 4, "pts": 9},
+            {"name": "Shaffer", "fg": "8-12", "ft": "1-4", "reb": 10, "pf": 4, "pts": 17},
+            {"name": "Bradds", "fg": "15-24", "ft": "18-20", "reb": 7, "pf": 2, "pts": 48},
+            {"name": "Ricketts", "fg": "2-2", "ft": "0-0", "reb": 0, "pf": 2, "pts": 4},
+            {"name": "Bowman", "fg": "2-8", "ft": "1-2", "reb": 10, "pf": 2, "pts": 5},
+            {"name": "Peters", "fg": "2-6", "ft": "0-1", "reb": 6, "pf": 3, "pts": 4},
+            {"name": "Brown", "fg": "3-6", "ft": "4-8", "reb": 1, "pf": 5, "pts": 10},
+            {"name": "Dove", "fg": "1-4", "ft": "0-0", "reb": 0, "pf": 1, "pts": 2}
+          ]
+        },
+        {
+          "name": "Michigan State Spartans",
+          "score": 102,
+          "players": [
+            {"name": "Gent", "fg": "6-17", "ft": "3-7", "reb": 13, "pf": 3, "pts": 15},
+            {"name": "Sanders", "fg": "11-22", "ft": "5-9", "reb": 4, "pf": 2, "pts": 27},
+            {"name": "Thomann", "fg": "4-12", "ft": "2-2", "reb": 6, "pf": 4, "pts": 10},
+            {"name": "Washington", "fg": "3-3", "ft": "2-2", "reb": 1, "pf": 3, "pts": 8},
+            {"name": "Schwarz", "fg": "9-18", "ft": "4-5", "reb": 5, "pf": 3, "pts": 22},
+            {"name": "Curtis", "fg": "2-5", "ft": "0-0", "reb": 6, "pf": 5, "pts": 4},
+            {"name": "Berry", "fg": "3-8", "ft": "5-6", "reb": 2, "pf": 5, "pts": 11},
+            {"name": "Noack", "fg": "2-3", "ft": "1-2", "reb": 2, "pf": 0, "pts": 5},
+            {"name": "Kupper", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 1, "pts": 0},
+            {"name": "Holmes", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 1, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": [],
+  "notes": "Points columns not present as separate typed totals distinct from computed - sheet DOES have a PTS column directly (not computed by me), verified pts sum equals team score for both teams (99 and 102). Also cross-checked FG/FT made totals against team totals row for Michigan State (40 FG, 22 FT team totals matched player sums exactly). Rebound (Reb.) column values transcribed as read but not checksummed (task only requires points checksum); Ohio State reb sum (39) + team extra reb (10) = 49 matches team total exactly, but Michigan State player reb sum (39) + team extra reb (9) = 48 vs stated team total 55 - a discrepancy of 7, likely a minor OCR misread on the Reb column for one or two Spartan players (column is faint/offset in the scan); left as-is since not required for checksum and no confident correction available."
+}

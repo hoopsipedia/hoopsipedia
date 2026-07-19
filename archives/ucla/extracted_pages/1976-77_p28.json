@@ -1,0 +1,47 @@
+{
+  "page": 28,
+  "games": [
+    {
+      "date": "1977-03-12",
+      "opponent": "Louisville",
+      "ucla_score": 87,
+      "opp_score": 79,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 87,
+          "players": [
+            {"name": "Marques Johnson", "min": "40:00", "fg": "7-14", "ft": "3-4", "reb": 14, "ast": 2, "pf": 3, "to": 1, "stl": 2, "blk": 1, "pts": 17},
+            {"name": "David Greenwood", "min": "23:40", "fg": "2-8", "ft": "4-4", "reb": 7, "ast": 2, "pf": 3, "to": 2, "stl": 2, "blk": 1, "pts": 8},
+            {"name": "Gig Sims", "min": "15:45", "fg": "2-3", "ft": "0-0", "reb": 3, "ast": 0, "pf": 0, "to": 3, "stl": 0, "blk": 1, "pts": 4},
+            {"name": "Roy Hamilton", "min": "17:00", "fg": "4-6", "ft": "3-3", "reb": 2, "ast": 2, "pf": 1, "to": 5, "stl": 2, "blk": 0, "pts": 11},
+            {"name": "Jim Spillane", "min": "34:20", "fg": "4-12", "ft": "8-10", "reb": 4, "ast": 6, "pf": 2, "to": 0, "stl": 3, "blk": 0, "pts": 16},
+            {"name": "Brad Holland", "min": "13:50", "fg": "7-12", "ft": "2-3", "reb": 3, "ast": 3, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 16},
+            {"name": "Raymond Townsend", "min": "14:50", "fg": "1-6", "ft": "0-0", "reb": 0, "ast": 2, "pf": 1, "to": 2, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Brett Vroman", "min": "12:35", "fg": "2-3", "ft": "5-5", "reb": 2, "ast": 0, "pf": 4, "to": 1, "stl": 0, "blk": 0, "pts": 9},
+            {"name": "Wilbert Olinde", "min": "9:10", "fg": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 2, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Kiki Vandeweghe", "min": "18:50", "fg": "2-4", "ft": "0-1", "reb": 2, "ast": 1, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 4}
+          ]
+        },
+        {
+          "name": "Louisville Cardinals",
+          "score": 79,
+          "players": [
+            {"name": "Wesley Cox", "min": "35:20", "fg": "8-14", "ft": "7-11", "reb": 12, "ast": 2, "pf": 3, "to": 5, "stl": 1, "blk": 3, "pts": 23},
+            {"name": "Larry Williams", "min": "32:23", "fg": "7-13", "ft": "0-0", "reb": 7, "ast": 2, "pf": 5, "to": 5, "stl": 1, "blk": 0, "pts": 14},
+            {"name": "Ricky Gallon", "min": "29:05", "fg": "1-5", "ft": "2-2", "reb": 5, "ast": 1, "pf": 1, "to": 1, "stl": 1, "blk": 0, "pts": 4},
+            {"name": "Rick Wilson", "min": "22:30", "fg": "3-10", "ft": "0-0", "reb": 1, "ast": 2, "pf": 5, "to": 3, "stl": 1, "blk": 0, "pts": 6},
+            {"name": "Phillip Bond", "min": "37:00", "fg": "4-10", "ft": "2-2", "reb": 5, "ast": 14, "pf": 3, "to": 3, "stl": 0, "blk": 0, "pts": 10},
+            {"name": "Danny Brown", "min": "1:10", "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Tony Branch", "min": "2:20", "fg": "0-1", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Bobby Turner", "min": "23:40", "fg": "3-5", "ft": "2-3", "reb": 1, "ast": 1, "pf": 0, "to": 0, "stl": 1, "blk": 0, "pts": 8},
+            {"name": "Billy Barmon", "min": "0:02", "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Darrell Griffith", "min": "16:30", "fg": "6-10", "ft": "2-6", "reb": 6, "ast": 1, "pf": 4, "to": 1, "stl": 1, "blk": 0, "pts": 14}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

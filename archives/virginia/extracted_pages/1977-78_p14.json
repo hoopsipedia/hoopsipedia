@@ -1,0 +1,9 @@
+{
+  "page": 14,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "1/21/1978 Virginia @ Clemson (final Virginia 70, Clemson 79). Virginia side checksums perfectly (player pts sum 8+6+7+29+6+0+0+14=70, matches team total 70). Clemson side FAILS checksum: player pts sum 4+10+6+11+10+2+2+19+4+9=77, but team total is 79 (a 2-point gap). Cross-checked: Clemson FT-made sum from player lines is 19-29, but team total row explicitly lists FT 21-29 (72.4%, which matches 21/29 exactly, confirming 21 is the printed total, not a misread). Attempts sum correctly (29 for both FG and FT), so this isn't an attempt-column misread -- 2 made free throws (and 2 points) present in the team total are not attributable to any individual player line. Likely explanation: box score notes 'Technical Fouls: Virginia 1 -- Bench 1; Clemson 0', so Clemson shot technical free throws that were credited only to the team total, not to a specific player. Per instructions to be ruthless about checksum failures rather than guess/split a game, the whole game is skipped even though Virginia's own numbers are internally consistent."
+    }
+  ]
+}

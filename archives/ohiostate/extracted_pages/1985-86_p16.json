@@ -1,0 +1,12 @@
+{
+  "page": 16,
+  "games": [],
+  "skipped": [
+    {
+      "date": "1986-01-18",
+      "opponent": "Boston College",
+      "site": "Boston Garden, Boston, MA",
+      "reason": "Official NCAA box score sheet for Ohio State (visitors) at Boston College (home), final score Ohio State 74, Boston College 87. Ohio State (visitors) side is legible and checksums correctly: Sellers 20 + Hopson 18 + McGee 7 + Lomax 2 + Burson 16 + Wilson 0 + White 0 + Dumas 0 + Anderson 0 + Francis 11 (FG 5-5, FT 1-2, inferred to make team total match TP=74; row partly obscured by strike/hatch marks) = 74, matching team total. However, the Boston College (home) player-line numbers are too degraded/ambiguous in the scan to transcribe with confidence -- FG/FGA/FT/FTA digits for several rows (McCrea, Bowers, Pressley, etc.) are inconsistent (e.g. FGA appearing smaller than FG) suggesting bleed-through or scan smearing, and the per-player point sum could not be reliably reconciled to the team total of 87. Per instructions to be ruthless about skipping rather than guessing, the entire game is skipped since a valid transcription requires both teams."
+    }
+  ]
+}

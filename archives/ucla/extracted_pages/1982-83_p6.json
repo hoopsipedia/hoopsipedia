@@ -1,0 +1,46 @@
+{
+  "page": 6,
+  "games": [
+    {
+      "date": "1982-12-20",
+      "opponent": "LSU",
+      "ucla_score": 82,
+      "opp_score": 68,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 82,
+          "players": [
+            {"name": "Daye", "min": 35, "fg": "5-11", "ft": "3-4", "reb": 4, "pf": 1, "ast": 4, "to": 1, "stl": 2, "pts": 13},
+            {"name": "Fields", "min": 36, "fg": "11-19", "ft": "5-6", "reb": 14, "pf": 3, "ast": 4, "to": 2, "blk": 1, "stl": 1, "pts": 27},
+            {"name": "Gray", "min": 19, "fg": "2-7", "ft": "0-4", "reb": 5, "pf": 3, "blk": 1, "pts": 4},
+            {"name": "Jackson", "min": 32, "fg": "4-8", "ft": "3-3", "reb": 2, "pf": 0, "ast": 7, "to": 3, "stl": 2, "pts": 11},
+            {"name": "Foster", "min": 26, "fg": "3-8", "ft": "2-3", "reb": 2, "pf": 2, "to": 1, "blk": 1, "pts": 8},
+            {"name": "Wright", "min": 18, "fg": "3-5", "ft": "0-0", "reb": 4, "pf": 5, "to": 1, "blk": 2, "pts": 6},
+            {"name": "Miguel", "min": 6, "fg": "1-1", "ft": "0-0", "reb": 2, "pf": 1, "pts": 2},
+            {"name": "Holton", "min": 22, "fg": "4-7", "ft": "3-4", "reb": 2, "pf": 1, "ast": 3, "pts": 11},
+            {"name": "Maloncon", "min": 5, "fg": "0-1", "ft": "0-0", "reb": 1, "pf": 0, "pts": 0},
+            {"name": "Arrillaga", "min": 0, "pts": 0, "note": "DNP"},
+            {"name": "Knight", "min": 1, "fg": "0-1", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "LSU Tigers",
+          "score": 68,
+          "players": [
+            {"name": "Mitchell", "min": 40, "fg": "9-10", "ft": "0-0", "reb": 8, "pf": 4, "ast": 1, "blk": 1, "stl": 2, "pts": 18},
+            {"name": "Reynolds", "min": 27, "fg": "1-4", "ft": "1-2", "reb": 2, "pf": 3, "ast": 2, "to": 6, "pts": 3},
+            {"name": "Johnson", "min": 26, "fg": "5-10", "ft": "3-5", "reb": 7, "pf": 4, "ast": 1, "to": 1, "pts": 13},
+            {"name": "Jones", "min": 40, "fg": "3-9", "ft": "4-8", "reb": 3, "pf": 2, "ast": 2, "to": 2, "blk": 1, "stl": 1, "pts": 10},
+            {"name": "Carter", "min": 31, "fg": "5-16", "ft": "0-0", "reb": 7, "pf": 2, "ast": 1, "to": 4, "stl": 1, "pts": 10},
+            {"name": "Tudor", "min": 5, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 1, "to": 2, "pts": 0},
+            {"name": "Black", "min": 19, "fg": "5-9", "ft": "0-0", "reb": 3, "pf": 0, "to": 2, "pts": 10},
+            {"name": "Perkins", "min": 12, "fg": "2-4", "ft": "0-0", "reb": 3, "pf": 2, "pts": 4}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

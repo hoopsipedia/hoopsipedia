@@ -1,0 +1,47 @@
+{
+  "page": 23,
+  "games": [
+    {
+      "date": "1992-02-22",
+      "opponent": "Notre Dame",
+      "ucla_score": 71,
+      "opp_score": 84,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 71,
+          "players": [
+            {"name": "Tracy Murray", "min": 36, "fg": "7-15", "tp": "0-5", "ft": "6-10", "reb": 10, "ast": 0, "to": 1, "blk": 0, "stl": 1, "pf": 3, "pts": 20},
+            {"name": "Don MacLean", "min": 36, "fg": "6-14", "tp": "0-0", "ft": "4-4", "reb": 9, "ast": 2, "to": 4, "blk": 0, "stl": 0, "pf": 3, "pts": 16},
+            {"name": "Gerald Madkins", "min": 31, "fg": "1-3", "tp": "1-2", "ft": "0-0", "reb": 3, "ast": 4, "to": 1, "blk": 0, "stl": 0, "pf": 2, "pts": 3},
+            {"name": "Shon Tarver", "min": 27, "fg": "2-3", "tp": "1-2", "ft": "2-2", "reb": 1, "ast": 1, "to": 1, "blk": 0, "stl": 2, "pf": 4, "pts": 7},
+            {"name": "Mitchell Butler", "min": 28, "fg": "4-11", "tp": "0-5", "ft": "4-8", "reb": 5, "ast": 2, "to": 3, "blk": 0, "stl": 2, "pf": 4, "pts": 12},
+            {"name": "Tyus Edney", "min": 9, "fg": "1-1", "tp": "1-1", "ft": "0-0", "reb": 1, "ast": 2, "to": 3, "blk": 0, "stl": 0, "pf": 1, "pts": 3},
+            {"name": "Rodney Zimmerman", "min": 3, "fg": "0-1", "ft": "0-0", "reb": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pf": 0, "pts": 0},
+            {"name": "Darrick Martin", "min": 13, "fg": "1-1", "ft": "0-1", "reb": 1, "ast": 1, "to": 1, "blk": 0, "stl": 2, "pf": 3, "pts": 2},
+            {"name": "Ed O'Bannon", "min": 17, "fg": "4-9", "ft": "0-0", "reb": 2, "ast": 1, "to": 1, "blk": 0, "stl": 0, "pf": 0, "pts": 8}
+          ]
+        },
+        {
+          "name": "Notre Dame Fighting Irish",
+          "score": 84,
+          "players": [
+            {"name": "LaPhonso Ellis", "min": 34, "fg": "10-12", "tp": "0-0", "ft": "2-3", "reb": 14, "ast": 1, "to": 2, "blk": 2, "stl": 2, "pf": 3, "pts": 22},
+            {"name": "Billy Taylor", "min": 17, "fg": "0-1", "ft": "0-0", "reb": 2, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pf": 2, "pts": 0},
+            {"name": "Keith Tower", "min": 27, "fg": "3-7", "ft": "3-6", "reb": 6, "ast": 5, "to": 1, "blk": 1, "stl": 0, "pf": 5, "pts": 9},
+            {"name": "Elmer Bennett", "min": 37, "fg": "7-14", "tp": "2-5", "ft": "2-4", "reb": 5, "ast": 8, "to": 6, "blk": 0, "stl": 3, "pf": 3, "pts": 18},
+            {"name": "Daimon Sweet", "min": 38, "fg": "10-19", "tp": "2-4", "ft": "3-5", "reb": 2, "ast": 2, "to": 1, "blk": 0, "stl": 1, "pf": 1, "pts": 25},
+            {"name": "Brooks Boyer", "min": 3, "fg": "0-1", "ft": "0-0", "reb": 0, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pf": 1, "pts": 0},
+            {"name": "Malik Russell", "min": 25, "fg": "2-2", "ft": "0-0", "reb": 4, "ast": 3, "to": 1, "blk": 0, "stl": 0, "pf": 3, "pts": 4},
+            {"name": "Lamarr Justice", "min": 2, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pf": 0, "pts": 0},
+            {"name": "Carl Cozen", "min": 1, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pf": 1, "pts": 0},
+            {"name": "Joe Ross", "min": 3, "fg": "1-2", "ft": "0-1", "reb": 2, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pf": 1, "pts": 2},
+            {"name": "Jon Ross", "min": 13, "fg": "2-4", "ft": "0-0", "reb": 3, "ast": 1, "to": 1, "blk": 0, "stl": 0, "pf": 2, "pts": 4}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

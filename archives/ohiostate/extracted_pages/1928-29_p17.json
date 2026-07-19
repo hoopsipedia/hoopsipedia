@@ -1,0 +1,46 @@
+{
+  "page": 17,
+  "games": [
+    {
+      "date": "1929-03-04",
+      "opponent": "Purdue",
+      "location": "Lafayette",
+      "note": "Sheet columns are G (field goals made), F (free throws made), PF (personal fouls), TP (total points) — no attempt data given, so fg/ft are recorded as 'made' counts only (fgm/ftm), not made-attempted. TP taken directly from sheet's TP column. Ohio State player minutes come from the separate 'Minutes Played' table on the page; Purdue has no minutes listed. Player 'Tittel' is printed as 'ittel' on the sheet (scan cuts off the leading T) but matches the Minutes Played table.",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 34,
+          "players": [
+            {"name": "Ervin", "pos": "F", "min": "30:15", "fgm": 2, "ftm": 2, "pf": 1, "pts": 6},
+            {"name": "Hinchman", "pos": "F", "min": "5:25", "fgm": 1, "ftm": 0, "pf": 0, "pts": 2},
+            {"name": "Evans", "pos": "F", "min": "25:50", "fgm": 2, "ftm": 0, "pf": 3, "pts": 4},
+            {"name": "Tittel", "pos": "F", "min": "18:30", "fgm": 1, "ftm": 0, "pf": 2, "pts": 2},
+            {"name": "Van Heyde", "pos": "C", "min": "14:50", "fgm": 3, "ftm": 1, "pf": 1, "pts": 7},
+            {"name": "Morrison", "pos": "C", "min": "25:10", "fgm": 2, "ftm": 0, "pf": 3, "pts": 4},
+            {"name": "Fesler", "pos": "G", "min": "40:00", "fgm": 1, "ftm": 0, "pf": 0, "pts": 2},
+            {"name": "Larkins", "pos": "G", "min": "40:00", "fgm": 3, "ftm": 1, "pf": 2, "pts": 7}
+          ]
+        },
+        {
+          "name": "Purdue",
+          "score": 45,
+          "players": [
+            {"name": "Harmeson", "pos": "F", "fgm": 2, "ftm": 1, "pf": 1, "pts": 5},
+            {"name": "Eibel", "pos": "F", "fgm": 0, "ftm": 0, "pf": 1, "pts": 0},
+            {"name": "Cummins", "pos": "F", "fgm": 5, "ftm": 1, "pf": 0, "pts": 11},
+            {"name": "Murphy", "pos": "C", "fgm": 8, "ftm": 6, "pf": 2, "pts": 22},
+            {"name": "Schnalter", "pos": "G", "fgm": 1, "ftm": 1, "pf": 0, "pts": 3},
+            {"name": "Lyle", "pos": "G", "fgm": 1, "ftm": 0, "pf": 0, "pts": 2},
+            {"name": "Roots", "pos": "G", "fgm": 1, "ftm": 0, "pf": 1, "pts": 2},
+            {"name": "Sleight", "pos": "G", "fgm": 0, "ftm": 0, "pf": 1, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true,
+      "referee": "Kearns (DePaul)",
+      "umpire": "Schommer (Chicago)",
+      "coach": "H.G. Olsen"
+    }
+  ],
+  "skipped": []
+}

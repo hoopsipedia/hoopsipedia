@@ -1,0 +1,44 @@
+{
+  "page": 15,
+  "games": [
+    {
+      "date": "1977-01-15",
+      "opponent": "Stanford Cardinal",
+      "ucla_score": 100,
+      "opp_score": 86,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 100,
+          "players": [
+            {"name": "David Greenwood", "min": "36.5", "fg": "8-19", "ft": "4-4", "reb": 5, "ast": 4, "pf": 2, "to": 3, "stl": 1, "blk": 0, "pts": 20},
+            {"name": "Marques Johnson", "min": "38.5", "fg": "13-18", "ft": "1-2", "reb": 14, "ast": 4, "pf": 3, "to": 2, "stl": 0, "blk": 0, "pts": 27},
+            {"name": "Gig Sims", "min": "33", "fg": "5-10", "ft": "3-3", "reb": 7, "ast": 2, "pf": 4, "to": 2, "stl": 1, "blk": 4, "pts": 13},
+            {"name": "Roy Hamilton", "min": "39", "fg": "10-16", "ft": "2-6", "reb": 1, "ast": 7, "pf": 3, "to": 4, "stl": 4, "blk": 0, "pts": 22},
+            {"name": "Jim Spillane", "min": "36", "fg": "7-12", "ft": "4-4", "reb": 5, "ast": 4, "pf": 4, "to": 2, "stl": 3, "blk": 0, "pts": 18},
+            {"name": "Brett Vroman", "min": "9", "fg": "0-1", "ft": "0-2", "reb": 1, "ast": 0, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Kiki Vandeweghe", "min": "3", "fg": "0-1", "ft": "0-0", "reb": 1, "ast": 2, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Brad Holland", "min": "5", "fg": "0-1", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Stanford Cardinal",
+          "score": 86,
+          "players": [
+            {"name": "Kimberly Belton", "min": "28.5", "fg": "3-6", "ft": "2-3", "reb": 4, "ast": 3, "pf": 4, "to": 7, "stl": 1, "blk": 0, "pts": 8},
+            {"name": "Jeff McHugh", "min": "39", "fg": "10-12", "ft": "0-0", "reb": 4, "ast": 2, "pf": 3, "to": 0, "stl": 0, "blk": 1, "pts": 20},
+            {"name": "Tom Schmalzried", "min": "9", "fg": "1-2", "ft": "0-0", "reb": 2, "ast": 0, "pf": 5, "to": 4, "stl": 1, "blk": 0, "pts": 2},
+            {"name": "Wolfe Perry", "min": "37.5", "fg": "10-17", "ft": "1-2", "reb": 2, "ast": 2, "pf": 5, "to": 3, "stl": 0, "blk": 0, "pts": 21},
+            {"name": "Mike Bratz", "min": "37.5", "fg": "7-16", "ft": "8-9", "reb": 3, "ast": 8, "pf": 4, "to": 2, "stl": 1, "blk": 0, "pts": 22},
+            {"name": "Mark Fitzner", "min": "29", "fg": "5-6", "ft": "0-0", "reb": 3, "ast": 4, "pf": 1, "to": 3, "stl": 1, "blk": 0, "pts": 10},
+            {"name": "Daryle Morgan", "min": "4.5", "fg": "0-2", "ft": "0-0", "reb": 1, "ast": 1, "pf": 1, "to": 0, "stl": 1, "blk": 0, "pts": 0},
+            {"name": "Dick Dohrmann", "min": "10.5", "fg": "0-1", "ft": "1-2", "reb": 4, "ast": 2, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 1},
+            {"name": "Paul Giovacchini", "min": "4.5", "fg": "1-1", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 2}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

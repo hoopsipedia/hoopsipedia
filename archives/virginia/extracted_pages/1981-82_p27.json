@@ -1,0 +1,40 @@
+{
+  "page": 27,
+  "games": [
+    {
+      "date": "1982-02-20",
+      "opponent": "N.C. State Wolfpack",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 45,
+          "players": [
+            {"name": "Craig Robinson", "min": 29, "fg": "3-5", "ft": "4-4", "reb": 1, "pf": 3, "ast": 0, "to": 2, "stl": 1, "pts": 10},
+            {"name": "Tim Mullen", "fg": "0-5", "ft": "0-0", "reb": 0, "pf": 0, "ast": 1, "to": 0, "blk": 1, "pts": 0},
+            {"name": "Ralph Sampson", "fg": "2-5", "ft": "4-5", "reb": 11, "pf": 2, "ast": 1, "to": 0, "blk": 4, "pts": 8},
+            {"name": "Othell Wilson", "min": 34, "fg": "6-11", "reb": 2, "pf": 3, "ast": 2, "to": 1, "stl": 3, "pts": 12},
+            {"name": "Jeff Jones", "min": 35, "fg": "1-7", "ft": "2-2", "reb": 0, "pf": 0, "ast": 6, "to": 1, "pts": 4},
+            {"name": "Ricky Stokes", "min": 8, "fg": "1-1", "ft": "1-2", "reb": 0, "pf": 1, "ast": 0, "to": 1, "stl": 2, "pts": 3},
+            {"name": "Kenton Edelin", "min": 12, "fg": "0-1", "reb": 1, "pf": 2, "ast": 0, "to": 1, "pts": 0},
+            {"name": "Jim Miller", "min": 23, "fg": "4-6", "reb": 1, "pf": 1, "ast": 1, "pts": 8}
+          ]
+        },
+        {
+          "name": "N.C. State Wolfpack",
+          "score": 40,
+          "players": [
+            {"name": "Thurl Bailey", "min": 38, "fg": "5-9", "ft": "2-2", "reb": 5, "pf": 3, "ast": 0, "to": 3, "pts": 12},
+            {"name": "Scott Parzych", "min": 37, "fg": "5-7", "ft": "0-0", "reb": 4, "pf": 4, "ast": 0, "to": 4, "pts": 10},
+            {"name": "Chuck Nevitt", "min": 26, "fg": "1-4", "ft": "0-6", "reb": 2, "pf": 0, "ast": 0, "to": 3, "blk": 1, "pts": 2},
+            {"name": "Sidney Lowe", "min": 40, "fg": "4-6", "ft": "0-0", "reb": 2, "pf": 2, "ast": 4, "to": 3, "pts": 8},
+            {"name": "Dereck Whittenburg", "fg": "3-9", "ft": "2-2", "reb": 4, "pf": 4, "ast": 3, "to": 1, "pts": 8},
+            {"name": "Cozell McQueen", "min": 23, "fg": "0-1", "reb": 2, "pf": 4, "ast": 0, "to": 0, "pts": 0},
+            {"name": "Walter Proctor", "min": 3, "fg": "0-0", "reb": 1, "pf": 0, "ast": 0, "to": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

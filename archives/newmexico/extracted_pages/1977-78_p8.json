@@ -1,0 +1,9 @@
+{
+  "page": 8,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page 8 is a handwritten official NCAA box score (Vermont at New Mexico, date 12/29/77, site Albuquerque). Team final scores are legible (New Mexico 104, Vermont 81), but the individual player stat rows are handwritten in cursive over a dense pre-printed grid with many ambiguous digits (e.g. 0 vs 6, 4 vs 9, overlapping columns for FG/FGA/FT/FTA/REB/PF/TP/A/TO/S/B/MIN). Could not transcribe player-by-player lines with enough confidence to pass a reliable pts-sum checksum without guessing digits, so the game was skipped per the ruthless-skip-over-guess instruction rather than invented."
+    }
+  ]
+}

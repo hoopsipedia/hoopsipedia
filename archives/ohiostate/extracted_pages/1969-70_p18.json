@@ -1,0 +1,39 @@
+{
+  "page": 18,
+  "games": [
+    {
+      "date": "1970-02-07",
+      "opponent": "Purdue",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 85,
+          "players": [
+            {"name": "Cleamons", "fg": "11-17", "ft": "6-8", "reb": 4, "pf": 3, "pts": 28},
+            {"name": "Andreas", "fg": "5-9", "ft": "0-0", "reb": 4, "pf": 2, "pts": 10},
+            {"name": "Sorenson", "fg": "7-12", "ft": "10-11", "reb": 9, "pf": 4, "pts": 24},
+            {"name": "Barclay", "fg": "1-4", "ft": "4-6", "reb": 4, "pf": 4, "pts": 6},
+            {"name": "Finney", "fg": "6-15", "ft": "5-5", "reb": 3, "pf": 3, "pts": 17},
+            {"name": "Minor", "fg": "0-0", "ft": "0-0", "reb": 1, "pf": 2, "pts": 0}
+          ]
+        },
+        {
+          "name": "Purdue Boilermakers",
+          "score": 88,
+          "players": [
+            {"name": "Faerber", "fg": "4-7", "ft": "2-3", "reb": 10, "pf": 2, "pts": 10},
+            {"name": "Bedford", "fg": "5-9", "ft": "3-3", "reb": 10, "pf": 3, "pts": 13},
+            {"name": "Ford", "fg": "3-4", "ft": "0-0", "reb": 8, "pf": 4, "pts": 6},
+            {"name": "Mount", "fg": "11-23", "ft": "10-12", "reb": 3, "pf": 3, "pts": 32},
+            {"name": "Weatherford", "fg": "9-22", "ft": "2-2", "reb": 2, "pf": 2, "pts": 20},
+            {"name": "Kaufman", "fg": "2-2", "ft": "0-0", "reb": 2, "pf": 3, "pts": 4},
+            {"name": "Franklin", "fg": "1-1", "ft": "1-2", "reb": 3, "pf": 4, "pts": 3},
+            {"name": "Longfellow", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

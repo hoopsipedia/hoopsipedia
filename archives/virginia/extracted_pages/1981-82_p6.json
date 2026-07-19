@@ -1,0 +1,46 @@
+{
+  "page": 6,
+  "games": [
+    {
+      "date": "1981-12-09",
+      "opponent": "Duke",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 92,
+          "players": [
+            {"name": "Craig Robinson", "min": 27, "fg": "5-10", "ft": "1-3", "reb": 8, "ast": 3, "pf": 4, "to": 4, "pts": 11},
+            {"name": "Tim Mullen", "min": 17, "fg": "2-6", "ft": "1-2", "reb": 2, "ast": 0, "pf": 3, "to": 3, "blk": 1, "pts": 5},
+            {"name": "Dean Carpenter", "min": 7, "fg": "2-2", "ft": "0-0", "reb": 0, "ast": 0, "pf": 2, "to": 0, "pts": 4},
+            {"name": "Jeff Jones", "min": 34, "fg": "4-9", "ft": "2-2", "reb": 2, "ast": 5, "pf": 3, "to": 2, "stl": 1, "pts": 10},
+            {"name": "Othell Wilson", "min": 34, "fg": "8-13", "ft": "2-2", "reb": 6, "ast": 6, "pf": 4, "to": 2, "stl": 4, "pts": 18},
+            {"name": "Ken Johnson", "min": 3, "reb": 0, "ast": 1, "pf": 0, "stl": 0, "pts": 0},
+            {"name": "Jim Miller", "min": 27, "fg": "7-10", "ft": "12-12", "reb": 5, "ast": 1, "pf": 3, "to": 0, "stl": 2, "pts": 26},
+            {"name": "Kenton Edelin", "min": 11, "ast": 0, "to": 1, "stl": 2, "pts": 2},
+            {"name": "Ricky Stokes", "min": 20, "fg": "1-4", "ft": "4-5", "reb": 0, "ast": 1, "pf": 2, "to": 1, "pts": 6},
+            {"name": "Dan Merrifield", "min": 5, "fg": "1-2", "ft": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 0, "pts": 2},
+            {"name": "Ralph Sampson", "min": 13, "fg": "2-5", "ft": "4-7", "reb": 8, "ast": 1, "pf": 0, "to": 2, "pts": 8}
+          ]
+        },
+        {
+          "name": "Duke Blue Devils",
+          "score": 83,
+          "players": [
+            {"name": "Chip Engelland", "min": 37, "fg": "9-12", "ft": "0-0", "reb": 2, "ast": 4, "pf": 2, "to": 6, "stl": 2, "pts": 18},
+            {"name": "Allen Williams", "min": 30, "fg": "3-6", "ft": "7-8", "reb": 3, "ast": 3, "pf": 5, "to": 1, "stl": 0, "pts": 13},
+            {"name": "Mike Tissaw", "min": 86, "fg": "0-0", "ft": "2-2", "reb": 3, "ast": 0, "pf": 5, "to": 1, "stl": 0, "pts": 2},
+            {"name": "Tom Emma", "min": 39, "fg": "7-13", "ft": "3-3", "reb": 4, "ast": 2, "pf": 4, "to": 2, "stl": 4, "pts": 17},
+            {"name": "Vince Taylor", "min": 38, "fg": "11-18", "ft": "9-11", "reb": 5, "ast": 2, "pf": 3, "to": 7, "stl": 2, "pts": 31},
+            {"name": "Jay Bryan", "min": 10, "fg": "0-0", "ft": "0-3", "reb": 2, "ast": 0, "pf": 4, "to": 0, "stl": 1, "pts": 0},
+            {"name": "Todd Anderson", "min": 15, "fg": "0-1", "ft": "2-2", "reb": 1, "pf": 5, "to": 1, "stl": 1, "pts": 2},
+            {"name": "Doug McNeely", "min": 9, "reb": 1, "pf": 1, "to": 0, "pts": 0},
+            {"name": "Dan Meagher", "min": 3, "reb": 0, "pf": 1, "to": 2, "pts": 0},
+            {"name": "Greg Wendt", "min": 3, "reb": 0, "pf": 1, "to": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

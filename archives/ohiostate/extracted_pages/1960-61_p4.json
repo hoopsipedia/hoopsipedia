@@ -1,0 +1,9 @@
+{
+  "page": 4,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Game: 1960-12-10, Ohio State (home) 105 vs Army (visitor) 54. Army side checksums perfectly (player PTS sum = 54 = team score). Ohio State side does NOT checksum: summing the printed player PTS column gives 103, not the recorded team score of 105 (also, TOTALS row itself: 2*FG(40)+FT(23)=103, inconsistent with printed TOTALS PTS of 105). One row (Hoyt F) is internally inconsistent between FG/FT (implies 3 pts) and printed PTS (2), suggesting a scan/legibility issue in the FG/FT/PTS digits for one or more Ohio State rows that could not be resolved without guessing. Per policy, skipping rather than inventing corrected digits."
+    }
+  ]
+}

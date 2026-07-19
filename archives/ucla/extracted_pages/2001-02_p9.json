@@ -1,0 +1,44 @@
+{
+  "page": 9,
+  "games": [
+    {
+      "date": "2001-12-22",
+      "opponent": "Washington State",
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 79,
+          "players": [
+            {"name": "Matt Barnes", "min": 34, "fg": "7-14", "tp": "1-2", "ft": "0-1", "reb": 5, "ast": 4, "pf": 3, "to": 2, "stl": 0, "blk": 0, "pts": 15},
+            {"name": "Jason Kapono", "min": 37, "fg": "5-10", "tp": "2-6", "ft": "2-3", "reb": 4, "ast": 4, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 14},
+            {"name": "Dan Gadzuric", "min": 29, "fg": "7-8", "tp": "0-0", "ft": "6-12", "reb": 4, "ast": 0, "pf": 3, "to": 1, "stl": 0, "blk": 0, "pts": 20},
+            {"name": "Billy Knight", "min": 34, "fg": "4-9", "tp": "2-5", "ft": "6-9", "reb": 3, "ast": 4, "pf": 0, "to": 4, "stl": 2, "blk": 0, "pts": 16},
+            {"name": "Rico Hines", "min": 27, "fg": "0-1", "tp": "0-1", "ft": "0-0", "reb": 1, "ast": 1, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Dijon Thompson", "min": 10, "fg": "1-5", "tp": "1-3", "ft": "0-0", "reb": 1, "ast": 1, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 3},
+            {"name": "Andre Patterson", "min": 11, "fg": "2-2", "tp": "0-0", "ft": "1-2", "reb": 6, "ast": 1, "pf": 2, "to": 0, "stl": 0, "blk": 1, "pts": 5},
+            {"name": "Ryan Walcott", "min": 2, "fg": "0-0", "tp": "0-0", "ft": "2-2", "reb": 1, "ast": 0, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "T.J. Cummings", "min": 16, "fg": "2-4", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "pf": 1, "to": 3, "stl": 0, "blk": 0, "pts": 4}
+          ]
+        },
+        {
+          "name": "Washington State Cougars",
+          "score": 74,
+          "players": [
+            {"name": "Milton Riley", "min": 28, "fg": "1-3", "tp": "0-0", "ft": "0-0", "reb": 6, "ast": 0, "pf": 5, "to": 1, "stl": 0, "blk": 1, "pts": 2},
+            {"name": "J. Locklier", "min": 27, "fg": "4-5", "tp": "0-0", "ft": "0-0", "reb": 8, "ast": 0, "pf": 4, "to": 1, "stl": 0, "blk": 1, "pts": 8},
+            {"name": "Marcus Moore", "min": 31, "fg": "6-11", "tp": "1-4", "ft": "4-4", "reb": 1, "ast": 8, "pf": 5, "to": 5, "stl": 1, "blk": 0, "pts": 17},
+            {"name": "Jerry McNair", "min": 32, "fg": "5-13", "tp": "2-10", "ft": "4-4", "reb": 2, "ast": 0, "pf": 1, "to": 1, "stl": 2, "blk": 2, "pts": 16},
+            {"name": "Mike Bush", "min": 31, "fg": "4-13", "tp": "1-5", "ft": "5-5", "reb": 6, "ast": 3, "pf": 5, "to": 2, "stl": 0, "blk": 0, "pts": 14},
+            {"name": "Justin Lyman", "min": 9, "fg": "2-6", "tp": "2-6", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 6},
+            {"name": "Thomas Kelati", "min": 14, "fg": "1-3", "tp": "1-3", "ft": "0-0", "reb": 1, "ast": 2, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 3},
+            {"name": "Cedrick Hughey", "min": 5, "fg": "2-2", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "pf": 1, "to": 2, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Pawel Stasiak", "min": 15, "fg": "1-1", "tp": "0-0", "ft": "0-0", "reb": 2, "ast": 0, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Shami Gill", "min": 8, "fg": "1-1", "tp": "0-0", "ft": "0-0", "reb": 2, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 2}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

@@ -1,0 +1,41 @@
+{
+  "page": 15,
+  "games": [
+    {
+      "date": "1974-01-28",
+      "opponent": "Purdue",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 65,
+          "players": [
+            {"name": "Jackson", "fg": "4-9", "ft": "3-4", "pf": 4, "pts": 11},
+            {"name": "Wenner", "fg": "5-9", "ft": "1-2", "pf": 2, "pts": 11},
+            {"name": "Andreas", "fg": "6-11", "ft": "1-2", "pf": 4, "pts": 13},
+            {"name": "Repella", "fg": "0-1", "ft": "0-0", "pf": 1, "pts": 0},
+            {"name": "Bolden", "fg": "8-15", "ft": "2-7", "pf": 4, "pts": 18},
+            {"name": "Stiegemeier", "fg": "1-5", "ft": "0-0", "pf": 1, "pts": 2},
+            {"name": "Gerhard", "fg": "0-2", "ft": "0-0", "pf": 3, "pts": 0},
+            {"name": "Wolfe", "fg": "5-6", "ft": "0-0", "pf": 3, "pts": 10}
+          ]
+        },
+        {
+          "name": "Purdue Boilermakers",
+          "score": 67,
+          "players": [
+            {"name": "Nichols", "fg": "4-11", "ft": "0-1", "pf": 0, "pts": 8},
+            {"name": "Kendrick", "fg": "5-16", "ft": "7-8", "pf": 4, "pts": 17},
+            {"name": "Garrett", "fg": "1-7", "ft": "7-8", "pf": 4, "pts": 9},
+            {"name": "Parkinson", "fg": "6-12", "ft": "6-9", "pf": 3, "pts": 18},
+            {"name": "Luke", "fg": "2-7", "ft": "0-0", "pf": 3, "pts": 4},
+            {"name": "Rose", "fg": "3-5", "ft": "1-2", "pf": 1, "pts": 7},
+            {"name": "Scheffler", "fg": "2-7", "ft": "0-0", "pf": 2, "pts": 4},
+            {"name": "Steele", "fg": "0-0", "ft": "0-0", "pf": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

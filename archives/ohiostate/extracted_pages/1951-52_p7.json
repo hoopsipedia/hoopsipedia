@@ -1,0 +1,9 @@
+{
+  "page": 7,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Ohio State @ Washington State, 1951-12-29 (Official Western Conference Basketball Box Score, attendance 11,892, officials Tim McCullough and John Gordon, scorer Marv Homan). Washington State's player PTS column sums exactly to their recorded team score (62), but Ohio State's player PTS column sums to 55 against a recorded team score of 54 -- fails checksum by 1. Several Ohio State rows (Karaffa, Dawe, Cook) also show internal inconsistency between FG/FT made and the printed PTS value (e.g. Karaffa: FG 1, FT(made) 2 implies 4 pts but sheet shows 2), consistent with a smudged/uncertain scan in that section of the visiting-team table. Skipping the whole game rather than guessing which digit is misread."
+    }
+  ]
+}

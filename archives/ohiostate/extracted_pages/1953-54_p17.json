@@ -1,0 +1,42 @@
+{
+  "page": 17,
+  "games": [
+    {
+      "date": "1954-02-06",
+      "opponent": "Wisconsin",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 73,
+          "players": [
+            {"name": "Kelley", "fg": "3-7", "ft": "1-1", "reb": 11, "pf": 4, "pts": 7},
+            {"name": "Miller", "fg": "1-10", "ft": "3-5", "reb": 7, "pf": 5, "pts": 5},
+            {"name": "Ebert", "fg": "8-22", "ft": "6-10", "reb": 16, "pf": 3, "pts": 22},
+            {"name": "Freeman", "fg": "10-20", "ft": "7-10", "reb": 4, "pf": 5, "pts": 27},
+            {"name": "Cook", "fg": "2-11", "ft": "4-5", "reb": 3, "pf": 4, "pts": 8},
+            {"name": "Ellis", "fg": "1-6", "ft": "0-2", "reb": 3, "pf": 2, "pts": 2},
+            {"name": "Vaughn", "fg": "0-1", "ft": "2-2", "reb": 2, "pf": 2, "pts": 2},
+            {"name": "Keeling", "fg": "0-0", "ft": "0-0", "reb": 1, "pf": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Wisconsin Badgers",
+          "score": 79,
+          "players": [
+            {"name": "Cable", "fg": "9-19", "ft": "3-3", "reb": 4, "pf": 3, "pts": 21},
+            {"name": "Stracka", "fg": "1-9", "ft": "5-6", "reb": 10, "pf": 3, "pts": 7},
+            {"name": "Morrow", "fg": "6-16", "ft": "6-11", "reb": 15, "pf": 2, "pts": 18},
+            {"name": "Weisner", "fg": "5-14", "ft": "7-9", "reb": 4, "pf": 4, "pts": 17},
+            {"name": "Weber", "fg": "3-7", "ft": "3-3", "reb": 8, "pf": 3, "pts": 9},
+            {"name": "Daly", "fg": "1-4", "ft": "2-4", "reb": 0, "pf": 3, "pts": 4},
+            {"name": "Spika", "fg": "0-1", "ft": "1-1", "reb": 2, "pf": 2, "pts": 1},
+            {"name": "Folz", "fg": "0-2", "ft": "2-2", "reb": 1, "pf": 3, "pts": 2}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": [],
+  "notes": "Official Western Conference Basketball Box Score sheet. Sheet columns are FG, FGA, FT(made), FTM(missed), PF, PTS, Reb (no assists/steals/blocks/turnovers columns present, so those keys omitted). FT attempted was computed as FT(made) + FTM(missed) per player to produce the ft 'made-attempted' field. All player PTS values matched the printed PTS column directly (no need to derive pts from 2*fg+ft, though it was cross-checked and matches). Both teams' player-point sums and rebound/PF/FG/FT sums match the sheet's own TOTALS row and both teams' final scores (Wisconsin 79, Ohio State 73)."
+}

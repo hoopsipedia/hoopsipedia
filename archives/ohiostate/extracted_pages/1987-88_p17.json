@@ -1,0 +1,9 @@
+{
+  "page": 17,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "1987-88 Game 16, Indiana at Ohio State, Jan 27 1988 (final Indiana 75, Ohio State 71). Indiana's box score is clean and checksums exactly (player pts sum 11+4+22+21+13+4+0+0=75=team total). However Ohio State's reserve rows (Scott Anderson, John Anderson, Grady Mateen) have ambiguous/misaligned FT-FTA-TP columns in the scan -- individual FT figures for the five starters alone (White 3, Carter 0, Francis 6, Wilson 3 or 2, Burson 5) already sum to 24-25 against a team FT total of 20 (per the FT% line: 1st half 5-8, 2nd half 15-19 = 20-27), so at least two starter/reserve FT values are misread, and the reserve rows compress enough digits that FT/FTA/TP cannot be reliably disambiguated without inventing values. Declining to guess per instructions; skipping the whole game since a confident full both-teams transcription isn't possible from this scan alone."
+    }
+  ]
+}

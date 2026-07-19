@@ -1,0 +1,50 @@
+{
+  "page": 7,
+  "games": [
+    {
+      "date": "1962-12-22",
+      "opponent": "Detroit",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 101,
+          "players": [
+            {"name": "McDonald", "fg": "4-12", "ft": "1-2", "reb": 5, "pf": 1, "pts": 9},
+            {"name": "Doughty", "fg": "1-5", "ft": "0-1", "reb": 5, "pf": 4, "pts": 2},
+            {"name": "Bradds", "fg": "8-16", "ft": "3-6", "reb": 16, "pf": 3, "pts": 19},
+            {"name": "Reasbeck", "fg": "12-17", "ft": "4-5", "reb": 3, "pf": 4, "pts": 28},
+            {"name": "Taylor", "fg": "5-9", "ft": "1-1", "reb": 7, "pf": 1, "pts": 11},
+            {"name": "Ricketts", "fg": "5-9", "ft": "2-2", "reb": 6, "pf": 0, "pts": 12},
+            {"name": "Bowman", "fg": "1-10", "ft": "2-2", "reb": 12, "pf": 3, "pts": 4},
+            {"name": "DeVoe", "fg": "1-2", "ft": "0-0", "reb": 0, "pf": 0, "pts": 2},
+            {"name": "Flatt", "fg": "1-3", "ft": "1-2", "reb": 4, "pf": 1, "pts": 3},
+            {"name": "Brown", "fg": "3-3", "ft": "0-0", "reb": 2, "pf": 0, "pts": 6},
+            {"name": "Shaffer", "fg": "1-7", "ft": "3-6", "reb": 5, "pf": 1, "pts": 5},
+            {"name": "Castilow", "fg": "0-3", "ft": "0-1", "reb": 1, "pf": 1, "pts": 0}
+          ]
+        },
+        {
+          "name": "Detroit",
+          "score": 66,
+          "players": [
+            {"name": "Dzik", "fg": "7-17", "ft": "1-3", "reb": 14, "pf": 1, "pts": 15},
+            {"name": "Page", "fg": "2-7", "ft": "1-1", "reb": 2, "pf": 2, "pts": 5},
+            {"name": "Schramm", "fg": "1-12", "ft": "5-8", "reb": 11, "pf": 4, "pts": 7},
+            {"name": "Cech", "fg": "2-7", "ft": "1-1", "reb": 2, "pf": 4, "pts": 5},
+            {"name": "Watson", "fg": "6-11", "ft": "2-2", "reb": 7, "pf": 3, "pts": 14},
+            {"name": "Munson", "fg": "3-11", "ft": "5-5", "reb": 7, "pf": 1, "pts": 11},
+            {"name": "Downs", "fg": "1-1", "ft": "0-0", "reb": 1, "pf": 1, "pts": 2},
+            {"name": "Flynn", "fg": "0-1", "ft": "1-2", "reb": 1, "pf": 1, "pts": 0},
+            {"name": "Connolly", "fg": "1-7", "ft": "0-2", "reb": 0, "pf": 0, "pts": 3},
+            {"name": "McDaniel", "fg": "1-1", "ft": "0-0", "reb": 2, "pf": 1, "pts": 2},
+            {"name": "Bozgyevac", "fg": "1-1", "ft": "0-0", "reb": 2, "pf": 1, "pts": 2},
+            {"name": "Goetz", "fg": "0-1", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Vertovac", "fg": "0-1", "ft": "0-0", "reb": 0, "pf": 1, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

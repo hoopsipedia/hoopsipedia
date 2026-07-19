@@ -1,0 +1,45 @@
+{
+  "page": 4,
+  "games": [
+    {
+      "date": "1983-12-03",
+      "opponent": "James Madison",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 53,
+          "players": [
+            {"name": "Tim Mullen", "min": 27, "fg": "3-6", "ft": "1-1", "reb": 2, "ast": 1, "stl": 2, "pts": 7},
+            {"name": "Tom Sheehey", "min": 27, "fg": "2-6", "ft": "1-2", "reb": 6, "ast": 2, "pf": 2, "stl": 1, "pts": 5},
+            {"name": "Jim Miller", "min": 30, "fg": "2-7", "reb": 3, "pf": 5, "to": 2, "pts": 4},
+            {"name": "Rick Carlisle", "min": 32, "fg": "5-8", "ft": "5-5", "reb": 1, "ast": 2, "pf": 1, "to": 1, "pts": 15},
+            {"name": "Ricky Stokes", "min": 32, "fg": "2-7", "ft": "4-4", "reb": 2, "ast": 1, "pf": 2, "to": 5, "stl": 3, "pts": 8},
+            {"name": "Olden Polynice", "min": 16, "fg": "1-2", "reb": 5, "pf": 3, "to": 1, "pts": 2},
+            {"name": "Othell Wilson", "min": 14, "fg": "1-4", "reb": 2, "ast": 3, "pf": 3, "stl": 1, "pts": 2},
+            {"name": "Kenny Johnson", "min": 3, "fg": "0-1", "reb": 1, "pts": 0},
+            {"name": "Anthony Solomon", "min": 3, "pts": 0},
+            {"name": "Dan Merrifield", "min": 13, "fg": "5-5", "reb": 2, "pf": 1, "to": 1, "stl": 1, "pts": 10},
+            {"name": "Ken Lambiotte", "min": 3, "fg": "0-1", "reb": 2, "pf": 2, "pts": 0}
+          ]
+        },
+        {
+          "name": "James Madison Dukes",
+          "score": 50,
+          "players": [
+            {"name": "Jim Masloff", "min": 24, "fg": "0-5", "ft": "1-2", "reb": 3, "pf": 2, "ast": 4, "to": 2, "pts": 1},
+            {"name": "Greg Mosten", "min": 36, "fg": "3-5", "ft": "4-7", "reb": 7, "pf": 3, "ast": 0, "to": 1, "pts": 10},
+            {"name": "Eric Esch", "min": 31, "fg": "4-6", "ft": "1-2", "reb": 5, "pf": 3, "ast": 1, "to": 2, "pts": 9},
+            {"name": "Eric Brent", "min": 35, "fg": "3-8", "ft": "0-1", "reb": 2, "pf": 1, "ast": 0, "to": 0, "pts": 6},
+            {"name": "Derek Steele", "min": 29, "fg": "3-10", "ft": "0-2", "reb": 5, "pf": 3, "ast": 2, "to": 4, "pts": 6},
+            {"name": "George Kingland", "min": 18, "fg": "5-6", "ft": "3-4", "reb": 2, "pf": 0, "ast": 0, "to": 1, "blk": 1, "pts": 13},
+            {"name": "Keith Bradley", "min": 10, "fg": "1-3", "ft": "3-3", "reb": 4, "pf": 0, "ast": 0, "to": 1, "pts": 5},
+            {"name": "Darrell Jackson", "min": 15, "fg": "0-4", "reb": 4, "pf": 2, "ast": 2, "to": 1, "pts": 0},
+            {"name": "Todd Banks", "min": 2, "fg": "0-1", "reb": 1, "pf": 0, "ast": 0, "to": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

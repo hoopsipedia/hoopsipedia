@@ -1,0 +1,9 @@
+{
+  "page": 8,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "1984-85 Georgetown vs New Mexico box score (12/22/84, Albuquerque, NM). Georgetown side checksums cleanly (player TP sum 69 = team TOTALS TP 69, FG/FT totals consistent). However New Mexico side fails checksum: individual player TP sum = 57 (Jerry [surname illegible, ~\"Drowdy\"] 15, Winters 12, Scott 13, Scarborough 8, Garcia 6, Duncan 0, Lindsey 0, Davis T.J. 0, R. Brown 3) vs team TOTALS TP row = 61, and TOTALS FG (24) exceeds player FG sum (22) by 2 made field goals unaccounted for — each individual row is internally consistent (TP=2*FG+FT) but does not reconcile with the team total, indicating at least one player's FG/TP value is misread due to messy handwriting (most likely row 1, 'Jerry ___', FGA=21 is high and the FG/TP digits are ambiguous, could be 6-of-21/15pts or 8-of-21/19pts). Additionally the small handwritten final-score box (Georgetown final digit, New Mexico final '61') does not reconcile with the period-by-period halves shown (44+25=69 for Georgetown, not the final shown; 29+34=63 for New Mexico, not 61), further confirming portions of this sheet are illegible/inconsistent. Re-read the page once per instructions but could not resolve the ambiguity without guessing, so skipping the entire game rather than transcribing uncertain values."
+    }
+  ]
+}

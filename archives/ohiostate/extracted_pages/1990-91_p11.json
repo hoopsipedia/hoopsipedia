@@ -1,0 +1,9 @@
+{
+  "page": 11,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page contains a legible official NCAA box score (OSU 85, Miami-OH 67, licensed to University of Miami) with team TOTALS rows that checksum correctly (OSU: 2*(35-4)+3*4+11=85; MU-OH: 2*(20-4)+3*4+23=67), but the individual player-line columns (16 columns: FG FGA 3P 3PA FT FTA OR DR TOT PF PTS A TO BLK S MIN) are too densely packed/small in the scan to reliably distinguish column-by-column for every player row. Reconstructed player point sums did not reliably reconcile to the team final score, so per instructions this game is skipped rather than guessed at the player-line level."
+    }
+  ]
+}

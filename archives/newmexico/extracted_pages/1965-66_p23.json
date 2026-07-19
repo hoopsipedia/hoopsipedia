@@ -1,0 +1,9 @@
+{
+  "page": 23,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page is a per-half shot-chart scoresheet (New Mexico vs Arizona, Albuquerque, 3 March, labeled 'Half 2d') rather than a clean full-game box score. New Mexico (UNM) side's Fld Gls / Fr Thrs / RB / PF / TP columns are partially legible but several free-throw cells and the Monroe/Daniels rows are ambiguous handwriting that cannot be read with confidence, and the Grand Totals row is cut off at the bottom edge of the page. The Arizona side is almost entirely illegible: player names are unreadable, most Fld Gls/Fr Thrs cells are blank or indecipherable, and only the team FG/FT total row at the very bottom is faintly legible. Because per-player points aren't reliably readable for either team (especially Arizona), a checksum cannot be computed confidently, and since this is a half-only shot-chart page (not confirmed to hold full-game cumulative totals), the whole game is skipped per the ruthless-skip instruction rather than guessing values."
+    }
+  ]
+}

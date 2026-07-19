@@ -1,0 +1,52 @@
+{
+  "page": 1,
+  "games": [
+    {
+      "date": "1994-11-26",
+      "opponent": "CS Northridge",
+      "ucla_score": 83,
+      "opp_score": 60,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 83,
+          "players": [
+            {"name": "Ed O'Bannon", "min": 28, "fg": "4-7", "tp": "1-1", "ft": "2-2", "reb": 6, "ast": 3, "pf": 2, "to": 3, "stl": 1, "blk": 1, "pts": 11},
+            {"name": "Charles O'Bannon", "min": 23, "fg": "4-6", "tp": "0-1", "ft": "5-5", "reb": 4, "ast": 1, "pf": 1, "to": 3, "stl": 0, "blk": 1, "pts": 13},
+            {"name": "George Zidek", "min": 20, "fg": "5-7", "tp": "0-0", "ft": "4-6", "reb": 3, "ast": 1, "pf": 4, "to": 2, "stl": 1, "blk": 2, "pts": 14},
+            {"name": "Cameron Dollar", "min": 19, "fg": "1-3", "tp": "0-0", "ft": "4-4", "reb": 1, "ast": 5, "pf": 3, "to": 2, "stl": 0, "blk": 0, "pts": 6},
+            {"name": "Tyus Edney", "min": 26, "fg": "3-7", "tp": "1-1", "ft": "1-2", "reb": 5, "ast": 4, "pf": 0, "to": 1, "stl": 0, "blk": 3, "pts": 8},
+            {"name": "Toby Bailey", "min": 15, "fg": "3-5", "tp": "2-2", "ft": "1-1", "reb": 2, "ast": 2, "pf": 2, "to": 2, "stl": 0, "blk": 0, "pts": 9},
+            {"name": "Kris Johnson", "min": 12, "fg": "1-6", "tp": "0-0", "ft": "2-2", "reb": 4, "ast": 1, "pf": 2, "to": 1, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "J.R. Henderson", "min": 18, "fg": "4-6", "tp": "0-1", "ft": "0-2", "reb": 4, "ast": 0, "pf": 1, "to": 2, "stl": 0, "blk": 1, "pts": 8},
+            {"name": "Omm'A Givens", "min": 12, "fg": "0-5", "tp": "0-0", "ft": "0-2", "reb": 5, "ast": 1, "pf": 1, "to": 3, "stl": 1, "blk": 0, "pts": 0},
+            {"name": "Marquis Burns", "min": 12, "fg": "1-2", "tp": "1-2", "ft": "0-0", "reb": 2, "ast": 0, "pf": 0, "to": 2, "stl": 0, "blk": 1, "pts": 3},
+            {"name": "Ike Nwankwo", "min": 6, "fg": "2-4", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 2, "to": 1, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Kevin Dempsey", "min": 8, "fg": "1-1", "tp": "1-1", "ft": "0-0", "reb": 2, "ast": 1, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 3},
+            {"name": "Bob Myers", "min": 1, "fg": "0-2", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 1, "pts": 0}
+          ]
+        },
+        {
+          "name": "CS Northridge Matadors",
+          "score": 60,
+          "players": [
+            {"name": "Ruben Oronoz", "min": 26, "fg": "5-12", "tp": "4-8", "ft": "1-4", "reb": 7, "ast": 3, "pf": 4, "to": 4, "stl": 1, "blk": 1, "pts": 15},
+            {"name": "Mike Dorsey", "min": 33, "fg": "2-4", "tp": "0-0", "ft": "5-8", "reb": 2, "ast": 1, "pf": 2, "to": 3, "stl": 1, "blk": 0, "pts": 9},
+            {"name": "Peter Micelli", "min": 27, "fg": "6-12", "tp": "0-1", "ft": "5-8", "reb": 6, "ast": 3, "pf": 2, "to": 0, "stl": 0, "blk": 1, "pts": 17},
+            {"name": "Shawn Stone", "min": 22, "fg": "0-5", "tp": "0-2", "ft": "1-2", "reb": 2, "ast": 0, "pf": 1, "to": 4, "stl": 0, "blk": 2, "pts": 1},
+            {"name": "Robert Hill", "min": 26, "fg": "1-3", "tp": "0-1", "ft": "0-0", "reb": 2, "ast": 0, "pf": 3, "to": 2, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Shane O'Doherty", "min": 16, "fg": "2-3", "tp": "0-0", "ft": "0-0", "reb": 3, "ast": 1, "pf": 1, "to": 2, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Eric Gray", "min": 14, "fg": "1-7", "tp": "1-4", "ft": "0-0", "reb": 2, "ast": 0, "pf": 2, "to": 1, "stl": 0, "blk": 0, "pts": 3},
+            {"name": "Trenton Cross", "min": 14, "fg": "2-6", "tp": "0-0", "ft": "3-3", "reb": 0, "ast": 1, "pf": 1, "to": 2, "stl": 0, "blk": 0, "pts": 7},
+            {"name": "Ozan Korkut", "min": 5, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Ryan Martin", "min": 8, "fg": "1-3", "tp": "0-2", "ft": "0-0", "reb": 1, "ast": 1, "pf": 2, "to": 0, "stl": 1, "blk": 0, "pts": 2},
+            {"name": "Tom Samson", "min": 4, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 1, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Josh Willis", "min": 5, "fg": "0-1", "tp": "0-1", "ft": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 2, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

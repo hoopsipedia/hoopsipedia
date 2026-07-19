@@ -1,0 +1,9 @@
+{
+  "page": 17,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Iowa vs Ohio State, 1977-01-27, Iowa 84 - Ohio State 66. Iowa's player lines checksum cleanly (FG/FT-derived points sum to exactly 84, matching the printed final score, with no digit corrections needed). However, Ohio State's player-line digits are illegible or internally inconsistent for several players (FG for Hall, Ramsey, Cline, Hammond, Wood, Retz all have scan quality issues where the printed points column does not reconcile with 2*FG+FT using the most plausible digit reads, off by ~2 points even after best-effort reads). Rather than guess corrected digits to force a checksum match, the entire game (both teams) is skipped since a complete, confidently-transcribed box score requires both sides."
+    }
+  ]
+}

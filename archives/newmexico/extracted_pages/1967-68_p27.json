@@ -1,0 +1,24 @@
+{
+  "page": 27,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Santa Clara 86, New Mexico 73 (NCAA West Region 1st Round, 1968-03-15, Albuquerque, N.M.): Santa Clara player table has a repeated surname 'Ogden' on two different rows (likely OCR misread of a different player), and summed player TP (78) does not match the team total (86); checksum fails, skipping rather than guessing at the missing/misread rows."
+    },
+    {
+      "reason": "New Mexico State 62, New Mexico 58 (NCAA West Region Consolation, 1968-03-16, Albuquerque, N.M.): NMSU player table has a repeated surname 'Collins' on two different rows, and summed player TP (57) does not match the team total (62); checksum fails."
+    },
+    {
+      "reason": "New Mexico 73, Idaho State 65 (NCAA West Region 1st Round, 1974-03-09, Pocatello, Idaho): although team FGM/FTM totals reconcile to 73 via 2*FGM+FTM, individual player rows (e.g. King: FG 2-5, FT 1-2 implies 5 pts but sheet shows 4) don't reconcile consistently and summed player TP (65) does not match team total (73); column alignment in the OCR text is unreliable for this row set, skipping rather than guessing at per-player values."
+    },
+    {
+      "reason": "New Mexico 61, San Francisco 64 (NCAA West Regional Semifinal, 1974-03-14, Tucson, Ariz.): same multi-column box score layout as the other tables on this page which failed checksum; not attempted due to same OCR column-misalignment risk seen elsewhere on the page."
+    },
+    {
+      "reason": "Dayton 61, New Mexico 66 (NCAA West Region Consolation, 1974-03-16, Tucson, Ariz.): same multi-column box score layout as the other tables on this page which failed checksum; not attempted due to same OCR column-misalignment risk seen elsewhere on the page."
+    },
+    {
+      "reason": "Cal State Fullerton 90, New Mexico 85 (NCAA West Region 1st Round, 1978-03-11, Tempe, Ariz.): same multi-column box score layout as the other tables on this page which failed checksum; not attempted due to same OCR column-misalignment risk seen elsewhere on the page."
+    }
+  ]
+}

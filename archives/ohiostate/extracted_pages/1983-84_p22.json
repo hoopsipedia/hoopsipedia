@@ -1,0 +1,43 @@
+{
+  "page": 22,
+  "games": [
+    {
+      "date": "1984-02-11",
+      "opponent": "Wisconsin Badgers",
+      "site": "St. John Arena, Columbus, OH",
+      "teams": [
+        {
+          "name": "Wisconsin Badgers",
+          "score": 65,
+          "players": [
+            {"name": "Cory Blackwell", "fg": "6-14", "ft": "4-6", "reb": 4, "pf": 3, "ast": 2, "to": 1, "blk": 0, "stl": 0, "min": 39, "pts": 16},
+            {"name": "Scott Roth", "fg": "7-10", "ft": "3-3", "reb": 6, "pf": 1, "ast": 3, "to": 2, "blk": 0, "stl": 1, "min": 31, "pts": 17},
+            {"name": "John Ploss", "fg": "0-3", "ft": "2-4", "reb": 3, "pf": 3, "ast": 1, "to": 3, "blk": 1, "stl": 0, "min": 23, "pts": 2},
+            {"name": "David Miller", "fg": "5-11", "ft": "2-2", "reb": 3, "pf": 3, "ast": 1, "to": 3, "blk": 0, "stl": 1, "min": 33, "pts": 12},
+            {"name": "Rick Olson", "fg": "6-13", "ft": "2-2", "reb": 2, "pf": 4, "ast": 3, "to": 2, "blk": 0, "stl": 1, "min": 40, "pts": 14},
+            {"name": "Mike Heineman", "fg": "1-1", "ft": "0-0", "reb": 0, "pf": 0, "ast": 1, "to": 1, "blk": 0, "stl": 0, "min": 20, "pts": 2},
+            {"name": "Jay Laszewski", "fg": "1-1", "ft": "0-0", "reb": 2, "pf": 0, "ast": 1, "to": 1, "blk": 0, "stl": 0, "min": 3, "pts": 2},
+            {"name": "Gregg Steinhaus", "fg": "0-1", "ft": "0-0", "reb": 0, "pf": 4, "ast": 0, "to": 0, "blk": 0, "stl": 0, "min": 11, "pts": 0}
+          ]
+        },
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 71,
+          "players": [
+            {"name": "Tony Campbell", "fg": "8-14", "ft": "4-4", "reb": 9, "pf": 3, "ast": 4, "to": 5, "blk": 1, "stl": 2, "min": 40, "pts": 20},
+            {"name": "Dave Jones", "fg": "3-5", "ft": "1-2", "reb": 2, "pf": 3, "ast": 1, "to": 0, "blk": 0, "stl": 0, "min": 35, "pts": 7},
+            {"name": "Clarence McGee", "fg": "3-5", "ft": "0-0", "reb": 2, "pf": 3, "ast": 0, "to": 0, "blk": 1, "stl": 0, "min": 14, "pts": 6},
+            {"name": "Troy Taylor", "fg": "5-10", "ft": "2-3", "reb": 1, "pf": 3, "ast": 6, "to": 5, "blk": 0, "stl": 1, "min": 38, "pts": 12},
+            {"name": "Ron Stokes", "fg": "7-8", "ft": "1-2", "reb": 6, "pf": 2, "ast": 4, "to": 3, "blk": 0, "stl": 0, "min": 40, "pts": 15},
+            {"name": "Keith Wesson", "fg": "4-4", "ft": "0-0", "reb": 1, "pf": 1, "ast": 1, "to": 3, "blk": 0, "stl": 0, "min": 26, "pts": 8},
+            {"name": "Dennis Hopson", "fg": "1-1", "ft": "1-1", "reb": 0, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "min": 5, "pts": 3},
+            {"name": "Curtis Wilson", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 1, "to": 0, "blk": 0, "stl": 0, "min": 2, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true,
+      "notes": "Wisconsin player points computed from box (TP column present, verified sum=65 matches final score and team TOTALS row TP=65). Ohio State TP column present, verified sum=71 matches final score and team TOTALS row TP=71. Dave Jones row had one ambiguous blank cell between TP and MIN (likely a 0 for TO or BLK not clearly printed); assumed 0 since it does not affect points checksum."
+    }
+  ],
+  "skipped": []
+}

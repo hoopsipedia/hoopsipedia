@@ -1,0 +1,9 @@
+{
+  "page": 4,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page shows one game: Ohio State (visiting, 90) at Loyola (home, 72), Dec 10 1955, officials Keis and McGinnis, attendance 7,634. Ohio State's box score (Howard, Sidle, Kelley, Freeman, Ellis, Laughlin, Millard, Martin, Allen, Dressler, Short, Mosier) is legible and checksums perfectly against the printed team totals (FG 37, FGA 90, FT made 16, FT missed 10, PTS 90 == final score 90). However, Loyola's box score rows (Stuber, Carpenter, Dorwil, Meszler/Mezler, Shirk, Crucker, Werbiski, Howard) are heavily shaded/degraded in the scan; several FG/FT digits are ambiguous and only resolve to consistency with the printed per-player PTS (or team totals FG 28, FGA 89, FT made 16, FT missed 12, PTS 72) if I selectively re-guess individual digits (e.g. Carpenter FG read as 9 vs required 8; Dorwil FT read as 6 vs required 4; Meszler FG read as 5 vs required 3). Since both teams are required for a complete game record and I cannot transcribe Loyola's player lines without inventing/correcting digits, skipping the entire game per instructions rather than guessing."
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "page": 3,
+  "games": [
+    {
+      "date": "2000-11-21",
+      "opponent": "Cal State Northridge",
+      "teams": [
+        {
+          "name": "Cal State Northridge",
+          "score": 78,
+          "players": [
+            {"name": "Joey Busch", "min": 17, "fg": "2-5", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "pf": 3, "to": 2, "stl": 1, "blk": 0, "pts": 4},
+            {"name": "Jeff Parris", "min": 28, "fg": "8-11", "tp": "0-1", "ft": "11-13", "reb": 5, "ast": 1, "pf": 4, "to": 4, "stl": 1, "blk": 0, "pts": 27},
+            {"name": "Brian Heinle", "min": 29, "fg": "5-12", "tp": "2-3", "ft": "1-6", "reb": 4, "ast": 3, "pf": 3, "to": 6, "stl": 3, "blk": 3, "pts": 13},
+            {"name": "Markus Carr", "min": 35, "fg": "2-6", "tp": "1-4", "ft": "2-4", "reb": 4, "ast": 8, "pf": 3, "to": 3, "stl": 2, "blk": 0, "pts": 7},
+            {"name": "John Burrell", "min": 27, "fg": "7-15", "tp": "1-5", "ft": "2-2", "reb": 5, "ast": 2, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 17},
+            {"name": "Craig Calloway", "min": 2, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Marco McCain", "min": 24, "fg": "2-7", "tp": "2-4", "ft": "1-2", "reb": 3, "ast": 1, "pf": 3, "to": 1, "stl": 0, "blk": 0, "pts": 7},
+            {"name": "Carl Holmes", "min": 22, "fg": "0-2", "tp": "0-2", "ft": "3-6", "reb": 3, "ast": 0, "pf": 1, "to": 0, "stl": 2, "blk": 0, "pts": 3},
+            {"name": "Jermar Welch", "min": 5, "fg": "0-1", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Dan Read", "min": 11, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 4, "ast": 0, "pf": 2, "to": 1, "stl": 0, "blk": 1, "pts": 0}
+          ]
+        },
+        {
+          "name": "UCLA Bruins",
+          "score": 74,
+          "players": [
+            {"name": "Matt Barnes", "min": 27, "fg": "4-6", "tp": "1-1", "ft": "2-3", "reb": 10, "ast": 2, "pf": 5, "to": 7, "stl": 0, "blk": 2, "pts": 11},
+            {"name": "Jason Kapono", "min": 40, "fg": "2-8", "tp": "2-6", "ft": "0-0", "reb": 3, "ast": 1, "pf": 4, "to": 3, "stl": 2, "blk": 0, "pts": 6},
+            {"name": "T.J. Cummings", "min": 25, "fg": "5-8", "tp": "0-0", "ft": "0-1", "reb": 4, "ast": 1, "pf": 2, "to": 3, "stl": 0, "blk": 0, "pts": 10},
+            {"name": "Earl Watson", "min": 40, "fg": "5-14", "tp": "2-6", "ft": "3-4", "reb": 2, "ast": 6, "pf": 4, "to": 7, "stl": 2, "blk": 1, "pts": 15},
+            {"name": "Ray Young", "min": 22, "fg": "4-10", "tp": "3-6", "ft": "4-4", "reb": 2, "ast": 4, "pf": 4, "to": 0, "stl": 1, "blk": 1, "pts": 15},
+            {"name": "Jason Flowers", "min": 2, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Billy Knight", "min": 10, "fg": "1-1", "tp": "0-0", "ft": "0-3", "reb": 3, "ast": 2, "pf": 2, "to": 1, "stl": 1, "blk": 0, "pts": 2},
+            {"name": "Ryan Bailey", "min": 7, "fg": "0-1", "tp": "0-1", "ft": "3-4", "reb": 0, "ast": 0, "pf": 1, "to": 0, "stl": 1, "blk": 0, "pts": 3},
+            {"name": "Dan Gadzuric", "min": 27, "fg": "6-12", "tp": "0-0", "ft": "0-0", "reb": 8, "ast": 1, "pf": 3, "to": 3, "stl": 1, "blk": 2, "pts": 12}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

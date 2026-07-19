@@ -1,0 +1,42 @@
+{
+  "page": 3,
+  "games": [
+    {
+      "date": "1944-12-23",
+      "opponent": "Kentucky",
+      "note": "3rd game of season; played away; went to overtime. Sheet columns are G (field goals made), F (free throws made), P (points) — no attempt counts given, so fg/ft are 'made' only (no attempted). Points are as printed on the sheet, not computed.",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 48,
+          "players": [
+            {"name": "Grate", "pos": "f", "fg_made": 7, "ft_made": 2, "pts": 16},
+            {"name": "Dugger", "pos": "f", "fg_made": 1, "ft_made": 1, "pts": 3},
+            {"name": "Risen", "pos": "c", "fg_made": 6, "ft_made": 2, "pts": 14},
+            {"name": "Huston", "pos": "g", "fg_made": 1, "ft_made": 0, "pts": 2},
+            {"name": "Sims", "pos": "g", "fg_made": 2, "ft_made": 3, "pts": 7},
+            {"name": "Caudill", "pos": "f", "fg_made": 1, "ft_made": 0, "pts": 2},
+            {"name": "Amling", "pos": "g", "fg_made": 1, "ft_made": 0, "pts": 2},
+            {"name": "Snyder", "pos": "f", "fg_made": 0, "ft_made": 0, "pts": 0},
+            {"name": "Pfeiffer", "pos": "c", "fg_made": 1, "ft_made": 0, "pts": 2}
+          ]
+        },
+        {
+          "name": "Kentucky",
+          "score": 53,
+          "players": [
+            {"name": "Tingle", "pos": "f", "fg_made": 6, "ft_made": 3, "pts": 15},
+            {"name": "Schu", "pos": "f", "fg_made": 1, "ft_made": 0, "pts": 2},
+            {"name": "Groza", "pos": "c", "fg_made": 4, "ft_made": 8, "pts": 16},
+            {"name": "Parkinson", "pos": "g", "fg_made": 7, "ft_made": 1, "pts": 15},
+            {"name": "Stough", "pos": "g", "fg_made": 1, "ft_made": 3, "pts": 5},
+            {"name": "Durham", "pos": "f", "fg_made": 0, "ft_made": 0, "pts": 0},
+            {"name": "Campbell", "pos": "c", "fg_made": 0, "ft_made": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

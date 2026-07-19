@@ -1,0 +1,50 @@
+{
+  "page": 7,
+  "games": [
+    {
+      "date": "1979-12-29",
+      "opponent": "San Jose State",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 79,
+          "players": [
+            {"name": "Lee Raker", "min": 36, "fg": "7-11", "ft": "10-11", "reb": "5-1", "pf": 5, "ast": 3, "to": 4, "blk": 0, "stl": 3, "pts": 24},
+            {"name": "Mike Owens", "min": 25, "fg": "3-9", "ft": "3-6", "reb": "2-1", "pf": 3, "ast": 0, "to": 1, "blk": 0, "stl": 1, "pts": 9},
+            {"name": "Ralph Sampson", "min": 22, "fg": "5-8", "ft": "2-2", "reb": "3-2", "pf": 4, "ast": 0, "to": 3, "blk": 0, "stl": 0, "pts": 12},
+            {"name": "Jeff Lamp", "min": 32, "fg": "9-18", "ft": "4-4", "reb": "1-2", "pf": 2, "ast": 1, "to": 6, "blk": 0, "stl": 0, "pts": 22},
+            {"name": "Jeff Jones", "min": 34, "fg": "0-0", "ft": "3-4", "reb": "0-2", "pf": 4, "ast": 4, "to": 2, "blk": 0, "stl": 1, "pts": 3},
+            {"name": "Craig Robinson", "min": 9, "fg": "0-0", "ft": "2-2", "reb": "0-1", "pf": 2, "ast": 0, "to": 0, "blk": 0, "stl": 1, "pts": 2},
+            {"name": "Garland Jefferson", "min": 0, "pts": 0, "notes": "DNP"},
+            {"name": "Dean Carpenter", "min": 0, "pts": 0, "notes": "DNP"},
+            {"name": "Darren Cross", "min": 1, "fg": "0-0", "ft": "0-0", "reb": "0-0", "pf": 0, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pts": 0, "notes": "sheet labels row DNP but lists min 1 / to 1 — transcribed as written, contradictory on source"},
+            {"name": "Jeff Klein", "min": 15, "fg": "1-1", "ft": "2-2", "reb": "1-0", "pf": 1, "ast": 2, "to": 1, "blk": 0, "stl": 1, "pts": 4},
+            {"name": "Terry Gates", "min": 20, "fg": "0-1", "ft": "3-4", "reb": "2-2", "pf": 0, "ast": 0, "blk": 0, "stl": 0, "pts": 3, "notes": "TO cell illegible (circled/overwritten mark), omitted rather than guessed"},
+            {"name": "Lewis Lattimore", "min": 3, "fg": "0-0", "ft": "0-0", "reb": "0-0", "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Doug Newberg", "min": 3, "fg": "0-0", "ft": "0-0", "reb": "0-0", "pf": 1, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "San Jose State Spartans",
+          "score": 83,
+          "players": [
+            {"name": "Walt Rank", "min": 23, "fg": "3-6", "ft": "1-2", "reb": "2-5", "pf": 4, "ast": 2, "to": 3, "blk": 0, "stl": 0, "pts": 7},
+            {"name": "Sid Williams", "min": 18, "fg": "3-3", "ft": "0-0", "reb": "0-0", "pf": 4, "ast": 1, "to": 0, "blk": 0, "stl": 0, "pts": 2, "notes": "FG 3-3 as written is inconsistent with TP 2 (would imply 6 pts); TP kept as printed since it reconciles the team checksum"},
+            {"name": "Arthur Graham", "min": 28, "fg": "10-12", "ft": "5-8", "reb": "3-2", "pf": 2, "ast": 4, "to": 4, "blk": 0, "stl": 0, "pts": 25},
+            {"name": "Michael Mendez", "min": 34, "fg": "4-7", "ft": "0-0", "reb": "0-0", "pf": 2, "ast": 2, "to": 1, "blk": 0, "stl": 1, "pts": 8, "notes": "last name partly illegible, read as Mendez"},
+            {"name": "Douglas Murray", "min": 27, "fg": "5-6", "ft": "0-0", "reb": "1-1", "pf": 4, "ast": 1, "to": 2, "blk": 0, "stl": 2, "pts": 10},
+            {"name": "Ron Chisholm", "min": 9, "fg": "2-2", "ft": "2-2", "reb": "0-0", "pf": 1, "ast": 0, "to": 3, "blk": 0, "stl": 0, "pts": 6},
+            {"name": "Ed Saunders", "min": 0, "pts": 0, "notes": "DNP"},
+            {"name": "David Ryrd", "min": 0, "pts": 0, "notes": "DNP"},
+            {"name": "John Russo", "min": 12, "fg": "0-0", "ft": "2-2", "reb": "0-0", "pf": 0, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Steve Swarbrick", "min": 7, "fg": "1-2", "ft": "2-2", "reb": "0-1", "pf": 2, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 4},
+            {"name": "Mickey Jackson", "min": 22, "fg": "4-4", "ft": "3-5", "reb": "2-2", "pf": 4, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pts": 11},
+            {"name": "Dan Sullivan", "min": 20, "fg": "3-4", "ft": "2-2", "reb": "1-0", "pf": 3, "ast": 3, "to": 2, "blk": 0, "stl": 0, "pts": 8}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

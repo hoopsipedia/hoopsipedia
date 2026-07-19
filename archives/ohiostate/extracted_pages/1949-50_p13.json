@@ -1,0 +1,43 @@
+{
+  "page": 13,
+  "games": [
+    {
+      "date": "1950-01-21",
+      "opponent": "Illinois",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 50,
+          "players": [
+            {"name": "Donham F", "min": "28:00", "fg": "1-8", "ft": "6-8", "pf": 5, "pts": 8},
+            {"name": "Schnittker F", "min": "40:00", "fg": "5-23", "ft": "6-7", "pf": 4, "pts": 16},
+            {"name": "Taylor C", "min": "38:15", "fg": "3-13", "ft": "4-6", "pf": 4, "pts": 10},
+            {"name": "Armstrong C-G", "min": "11:45", "fg": "0-4", "ft": "2-3", "pf": 5, "pts": 2},
+            {"name": "Brown G", "min": "31:30", "fg": "2-7", "ft": "0-0", "pf": 2, "pts": 4},
+            {"name": "Burkholder G", "min": "18:00", "fg": "1-7", "ft": "1-2", "pf": 6, "pts": 3},
+            {"name": "Jacobs G-F", "min": "26:30", "fg": "2-17", "ft": "2-3", "pf": 4, "pts": 6},
+            {"name": "Giacomelli G", "min": "6:00", "fg": "0-0", "ft": "1-1", "pf": 0, "pts": 1}
+          ]
+        },
+        {
+          "name": "Illinois",
+          "score": 66,
+          "players": [
+            {"name": "Erickson F", "fg": "0-5", "ft": "1-1", "pf": 5, "pts": 1},
+            {"name": "Sunderlage F", "fg": "9-16", "ft": "2-3", "pf": 4, "pts": 20},
+            {"name": "Anderson F", "fg": "0-3", "ft": "2-3", "pf": 2, "pts": 2},
+            {"name": "Follmer F-C", "fg": "0-1", "ft": "0-2", "pf": 0, "pts": 0},
+            {"name": "Gatewood F", "fg": "1-1", "ft": "0-0", "pf": 0, "pts": 2},
+            {"name": "Beach F", "fg": "0-0", "ft": "0-0", "pf": 0, "pts": 0},
+            {"name": "Osterkorn C-F", "fg": "10-17", "ft": "4-14", "pf": 4, "pts": 24},
+            {"name": "Kersulis C-G", "fg": "1-5", "ft": "0-0", "pf": 2, "pts": 2},
+            {"name": "Thurlby G", "fg": "4-17", "ft": "4-6", "pf": 3, "pts": 12},
+            {"name": "Fletcher G", "fg": "0-13", "ft": "3-7", "pf": 3, "pts": 3}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

@@ -1,0 +1,40 @@
+{
+  "page": 24,
+  "games": [
+    {
+      "date": "1973-03-03",
+      "opponent": "Illinois",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 65,
+          "players": [
+            {"name": "Wolfe", "fg": "2-6", "ft": "2-5", "reb": 10, "pf": 1, "pts": 6},
+            {"name": "Jackson", "fg": "3-9", "ft": "2-4", "reb": 8, "pf": 3, "pts": 8},
+            {"name": "Witte", "fg": "7-12", "ft": "1-4", "reb": 11, "pf": 4, "pts": 15},
+            {"name": "Gerhard", "fg": "6-13", "ft": "3-4", "reb": 6, "pf": 0, "pts": 15},
+            {"name": "Hornyak", "fg": "8-20", "ft": "4-4", "reb": 7, "pf": 2, "pts": 20},
+            {"name": "Taylor", "fg": "0-1", "ft": "1-2", "reb": 2, "pf": 1, "pts": 1}
+          ]
+        },
+        {
+          "name": "Illinois",
+          "score": 64,
+          "players": [
+            {"name": "Weatherspoon", "fg": "4-22", "ft": "1-2", "reb": 13, "pf": 4, "pts": 9},
+            {"name": "Schmidt", "fg": "1-4", "ft": "0-0", "reb": 3, "pf": 5, "pts": 2},
+            {"name": "Conner", "fg": "8-21", "ft": "0-1", "reb": 11, "pf": 4, "pts": 16},
+            {"name": "Tucker", "fg": "4-9", "ft": "0-0", "reb": 2, "pf": 5, "pts": 8},
+            {"name": "Dawson", "fg": "10-21", "ft": "2-2", "reb": 3, "pf": 1, "pts": 22},
+            {"name": "Foster", "fg": "2-9", "ft": "1-1", "reb": 7, "pf": 3, "pts": 5},
+            {"name": "Roberts", "fg": "0-0", "ft": "0-0", "reb": 1, "pf": 0, "pts": 0},
+            {"name": "Roberson", "fg": "1-2", "ft": "0-0", "reb": 1, "pf": 2, "pts": 2},
+            {"name": "Schroeder", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

@@ -1,0 +1,40 @@
+{
+  "page": 5,
+  "games": [
+    {
+      "date": "1999-12-18",
+      "opponent": "DePaul",
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 76,
+          "players": [
+            {"name": "Jerome Moiso", "min": 30, "fg": "6-10", "ft": "5-6", "tp": "0-0", "reb": 6, "ast": 0, "pf": 5, "to": 0, "stl": 0, "blk": 2, "pts": 17},
+            {"name": "Jason Kapono", "min": 39, "fg": "7-14", "ft": "3-4", "tp": "3-6", "reb": 4, "ast": 0, "pf": 2, "to": 4, "stl": 0, "blk": 0, "pts": 20},
+            {"name": "Dan Gadzuric", "min": 35, "fg": "7-9", "ft": "1-2", "tp": "0-0", "reb": 14, "ast": 1, "pf": 1, "to": 3, "stl": 1, "blk": 1, "pts": 15},
+            {"name": "Earl Watson", "min": 33, "fg": "1-9", "ft": "2-4", "tp": "1-5", "reb": 2, "ast": 6, "pf": 4, "to": 1, "stl": 4, "blk": 0, "pts": 5},
+            {"name": "Ray Young", "min": 28, "fg": "5-15", "ft": "5-9", "tp": "0-5", "reb": 6, "ast": 3, "pf": 0, "to": 5, "stl": 0, "blk": 0, "pts": 15},
+            {"name": "Ryan Bailey", "min": 26, "fg": "1-4", "ft": "2-4", "tp": "0-0", "reb": 7, "ast": 5, "pf": 1, "to": 3, "stl": 3, "blk": 0, "pts": 4},
+            {"name": "Rico Hines", "min": 9, "fg": "0-3", "ft": "0-0", "tp": "0-2", "reb": 2, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "DePaul Blue Demons",
+          "score": 58,
+          "players": [
+            {"name": "Quentin Richardson", "min": 38, "fg": "8-23", "ft": "3-6", "tp": "3-10", "reb": 15, "ast": 1, "pf": 3, "to": 3, "stl": 0, "blk": 0, "pts": 22},
+            {"name": "Bobby Simmons", "min": 38, "fg": "3-11", "ft": "4-4", "tp": "0-2", "reb": 13, "ast": 2, "pf": 4, "to": 2, "stl": 3, "blk": 1, "pts": 10},
+            {"name": "Steven Hunter", "min": 27, "fg": "4-8", "ft": "1-4", "tp": "0-1", "reb": 7, "ast": 0, "pf": 2, "to": 3, "stl": 0, "blk": 2, "pts": 9},
+            {"name": "Paul McPherson", "min": 34, "fg": "4-13", "ft": "0-1", "tp": "0-1", "reb": 7, "ast": 0, "pf": 5, "to": 8, "stl": 3, "blk": 0, "pts": 8},
+            {"name": "Kerry Hartfield", "min": 35, "fg": "1-9", "ft": "2-2", "tp": "0-5", "reb": 3, "ast": 4, "pf": 4, "to": 3, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Joe Tulley", "min": 9, "fg": "0-3", "ft": "0-0", "tp": "0-3", "reb": 1, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "George Baker", "min": 5, "fg": "0-1", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Lance Williams", "min": 14, "fg": "2-5", "ft": "1-2", "tp": "0-0", "reb": 4, "ast": 0, "pf": 1, "to": 2, "stl": 0, "blk": 2, "pts": 5}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

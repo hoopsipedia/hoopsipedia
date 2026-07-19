@@ -1,0 +1,43 @@
+{
+  "page": 8,
+  "games": [
+    {
+      "date": "1997-12-22",
+      "opponent": "Boise State",
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 81,
+          "players": [
+            {"name": "Henderson, J.R.", "min": 37, "fg": "6-10", "tp": "0-0", "ft": "10-17", "reb": 15, "ast": 0, "pf": 1, "to": 4, "stl": 0, "blk": 0, "pts": 22},
+            {"name": "Johnson, Kris", "min": 34, "fg": "8-11", "tp": "1-2", "ft": "5-6", "reb": 4, "ast": 2, "pf": 5, "to": 5, "stl": 5, "blk": 0, "pts": 22},
+            {"name": "Bailey, Toby", "min": 40, "fg": "6-15", "tp": "0-3", "ft": "9-11", "reb": 5, "ast": 5, "pf": 4, "to": 8, "stl": 1, "blk": 1, "pts": 21},
+            {"name": "Watson, Earl", "min": 37, "fg": "1-5", "tp": "0-0", "ft": "0-0", "reb": 6, "ast": 4, "pf": 3, "to": 4, "stl": 2, "blk": 1, "pts": 2},
+            {"name": "Davis, Baron", "min": 35, "fg": "5-11", "tp": "0-1", "ft": "4-5", "reb": 7, "ast": 4, "pf": 3, "to": 2, "stl": 1, "blk": 3, "pts": 14},
+            {"name": "Reed, Travis", "min": 7, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 2, "ast": 0, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Loyd, Brandon", "min": 3, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Knight, Billy", "min": 5, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 1, "pts": 0},
+            {"name": "Hines, Rico", "min": 2, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Boise State Broncos",
+          "score": 75,
+          "players": [
+            {"name": "Bergersen, Roberto", "min": 28, "fg": "5-13", "tp": "0-4", "ft": "1-2", "reb": 2, "ast": 2, "pf": 5, "to": 4, "stl": 0, "blk": 1, "pts": 11},
+            {"name": "Tolman, Mike", "min": 32, "fg": "7-11", "tp": "5-7", "ft": "0-0", "reb": 4, "ast": 2, "pf": 4, "to": 6, "stl": 2, "blk": 0, "pts": 19},
+            {"name": "Tillman, Trevor", "min": 5, "fg": "0-2", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 1, "pf": 3, "to": 0, "stl": 1, "blk": 0, "pts": 0},
+            {"name": "Hagman, Mike", "min": 35, "fg": "4-7", "tp": "4-5", "ft": "0-1", "reb": 4, "ast": 2, "pf": 4, "to": 2, "stl": 1, "blk": 0, "pts": 12},
+            {"name": "Shephard, Steve", "min": 14, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 3, "pf": 0, "to": 1, "stl": 2, "blk": 0, "pts": 0},
+            {"name": "Van Kirk, Kenny", "min": 27, "fg": "2-5", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 2, "pf": 4, "to": 0, "stl": 2, "blk": 2, "pts": 4},
+            {"name": "Washington, Gerry", "min": 28, "fg": "6-14", "tp": "1-3", "ft": "2-2", "reb": 6, "ast": 5, "pf": 4, "to": 1, "stl": 1, "blk": 0, "pts": 15},
+            {"name": "Woods, Kejuan", "min": 24, "fg": "3-6", "tp": "1-1", "ft": "5-6", "reb": 4, "ast": 1, "pf": 5, "to": 3, "stl": 4, "blk": 0, "pts": 12},
+            {"name": "Graham, Scottie", "min": 7, "fg": "1-2", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 1, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 2}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

@@ -1,0 +1,43 @@
+{
+  "page": 28,
+  "games": [
+    {
+      "date": "1979-03-07",
+      "opponent": "Northeastern Louisiana",
+      "note": "NIT First Round, Charlottesville VA; TP values cross-checked as pts = 2*fg_made + ft_made against team totals row where individual digits were ambiguous (e.g. Natt, Calvin's FT corrected from an ambiguous 3/8 to 8, and Straker's FGA corrected from an ambiguous 13/18 to 18) using team-total checksums for FG/FT/FGA/AST/TO/MIN, which all reconciled exactly after correction.",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 79,
+          "players": [
+            {"name": "Lee Straker", "min": 27, "fg": "7-18", "ft": "1-2", "reb": 2, "pf": 5, "ast": 1, "to": 3, "pts": 15},
+            {"name": "Mike Owens", "min": 25, "fg": "8-13", "ft": "1-2", "reb": 4, "pf": 3, "ast": 0, "to": 1, "pts": 17},
+            {"name": "Steve Castellan", "min": 38, "fg": "5-10", "ft": "1-2", "reb": 10, "pf": 1, "ast": 5, "to": 0, "pts": 11},
+            {"name": "Jeff Lamp", "min": 32, "fg": "8-13", "ft": "4-5", "reb": 5, "pf": 0, "ast": 2, "to": 0, "pts": 20},
+            {"name": "Bobby Stokes", "min": 30, "fg": "2-3", "ft": "0-1", "reb": 0, "pf": 1, "ast": 3, "to": 1, "pts": 4},
+            {"name": "Tommy Hicks", "min": 6, "fg": "1-2", "ft": "0-0", "reb": 0, "pf": 0, "ast": 2, "to": 0, "pts": 2},
+            {"name": "Jeff Jones", "min": 22, "fg": "1-1", "ft": "2-2", "reb": 1, "pf": 2, "ast": 6, "to": 4, "pts": 4},
+            {"name": "Terry Gates", "min": 12, "fg": "1-1", "ft": "0-0", "reb": 0, "pf": 2, "ast": 1, "to": 0, "pts": 2},
+            {"name": "Garland Jefferson", "min": 3, "fg": "2-2", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 0, "pts": 4}
+          ]
+        },
+        {
+          "name": "Northeastern Louisiana",
+          "score": 78,
+          "players": [
+            {"name": "Calvin Natt", "min": 39, "fg": "15-18", "ft": "8-12", "reb": 8, "pf": 2, "ast": 4, "to": 1, "pts": 38},
+            {"name": "David Hall", "min": 40, "fg": "9-16", "ft": "0-0", "reb": 1, "pf": 4, "ast": 2, "to": 4, "pts": 18},
+            {"name": "Eugene Robinson", "min": 38, "fg": "0-5", "ft": "0-0", "reb": 15, "pf": 6, "ast": 0, "to": 4, "pts": 0},
+            {"name": "Jimmie Mayo", "min": 19, "fg": "0-5", "ft": "0-0", "reb": 2, "pf": 4, "ast": 0, "to": 2, "pts": 0},
+            {"name": "John Pickett", "min": 38, "fg": "5-9", "ft": "0-0", "reb": 3, "pf": 3, "ast": 2, "to": 5, "pts": 10},
+            {"name": "Kenny Natt", "min": 23, "fg": "6-9", "ft": "0-0", "reb": 3, "pf": 2, "ast": 0, "to": 1, "pts": 12},
+            {"name": "Ronald Frazier", "min": 2, "fg": "0-0", "ft": "0-0", "reb": 1, "pf": 1, "ast": 0, "to": 0, "pts": 0},
+            {"name": "Donald Wilson", "min": 1, "fg": "0-0", "ft": "0-0", "reb": 1, "pf": 0, "ast": 0, "to": 1, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

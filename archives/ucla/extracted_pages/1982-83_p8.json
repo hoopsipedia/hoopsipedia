@@ -1,0 +1,45 @@
+{
+  "page": 8,
+  "games": [
+    {
+      "date": "1982-12-28",
+      "opponent": "Louisville",
+      "ucla_score": 76,
+      "opp_score": 72,
+      "teams": [
+        {
+          "name": "Louisville Cardinals",
+          "score": 72,
+          "players": [
+            {"name": "S. McCray", "min": 33, "fg": "3-7", "ft": "1-2", "reb": 10, "ast": 5, "pf": 2, "to": 5, "stl": 3, "blk": 0, "pts": 7},
+            {"name": "R. McCray", "min": 38, "fg": "5-8", "ft": "0-0", "reb": 5, "ast": 6, "pf": 3, "to": 3, "stl": 2, "blk": 1, "pts": 10},
+            {"name": "C. Jones", "min": 31, "fg": "8-12", "ft": "2-3", "reb": 6, "ast": 0, "pf": 3, "to": 2, "stl": 4, "blk": 2, "pts": 18},
+            {"name": "Wagner", "min": 34, "fg": "6-15", "ft": "3-6", "reb": 3, "ast": 4, "pf": 2, "to": 3, "stl": 0, "blk": 1, "pts": 15},
+            {"name": "Gordon", "min": 35, "fg": "4-9", "ft": "3-4", "reb": 2, "ast": 6, "pf": 0, "to": 1, "stl": 2, "blk": 0, "pts": 11},
+            {"name": "Hall", "min": 11, "fg": "1-3", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Thompson", "min": 18, "fg": "4-6", "ft": "1-2", "reb": 4, "ast": 0, "pf": 4, "to": 3, "stl": 1, "blk": 1, "pts": 9},
+            {"name": "Team", "reb": 1, "pts": 0}
+          ]
+        },
+        {
+          "name": "UCLA Bruins",
+          "score": 76,
+          "players": [
+            {"name": "Daye", "min": 36, "fg": "4-16", "ft": "4-5", "reb": 7, "ast": 4, "pf": 1, "to": 4, "stl": 2, "blk": 0, "pts": 12},
+            {"name": "Fields", "min": 35, "fg": "6-12", "ft": "3-6", "reb": 4, "ast": 0, "pf": 3, "to": 2, "stl": 3, "blk": 0, "pts": 15},
+            {"name": "Gray", "min": 27, "fg": "7-8", "ft": "0-0", "reb": 9, "ast": 0, "pf": 4, "to": 0, "stl": 0, "blk": 1, "pts": 14},
+            {"name": "Jackson", "min": 23, "fg": "4-7", "ft": "0-0", "reb": 0, "ast": 3, "pf": 2, "to": 3, "stl": 0, "blk": 0, "pts": 8},
+            {"name": "Foster", "min": 31, "fg": "7-12", "ft": "2-2", "reb": 2, "ast": 3, "pf": 2, "to": 3, "stl": 2, "blk": 1, "pts": 16},
+            {"name": "Wright", "min": 13, "fg": "1-3", "ft": "0-2", "reb": 5, "ast": 0, "pf": 0, "to": 1, "stl": 1, "blk": 0, "pts": 2},
+            {"name": "Holton", "min": 26, "fg": "2-6", "ft": "0-0", "reb": 3, "ast": 4, "pf": 2, "to": 1, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Miguel", "min": 6, "fg": "1-2", "ft": "1-2", "reb": 2, "ast": 1, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 3},
+            {"name": "Maloncon", "min": 3, "fg": "1-2", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Team", "reb": 4, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

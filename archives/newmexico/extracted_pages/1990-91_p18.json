@@ -1,0 +1,50 @@
+{
+  "page": 18,
+  "games": [
+    {
+      "date": "1991-01-19",
+      "opponent": "Hawaii",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 84,
+          "players": [
+            {"name": "George Powdrill", "min": "DNP"},
+            {"name": "Ike Williams", "min": 26, "fg": "3-6", "ft": "2-3", "reb": 3, "ast": 4, "to": 0, "stl": 2, "pf": 1, "pts": 8},
+            {"name": "Luc Longley", "min": 36, "fg": "8-10", "ft": "2-3", "reb": 10, "ast": 2, "to": 5, "blk": 3, "stl": 0, "pf": 1, "pts": 18},
+            {"name": "Marvin McBurrows", "min": 4, "fg": "0-2", "tp": "0-1", "ft": "0-0", "reb": 1, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pf": 0, "pts": 0},
+            {"name": "Kurt Miller", "min": 13, "fg": "2-6", "ft": "2-2", "reb": 2, "ast": 0, "to": 3, "blk": 0, "stl": 0, "pf": 3, "pts": 6},
+            {"name": "Jimmy Taylor", "min": 16, "fg": "0-0", "ft": "2-2", "reb": 0, "ast": 5, "to": 0, "blk": 0, "stl": 0, "pf": 1, "pts": 2},
+            {"name": "Willie Banks", "min": 39, "fg": "5-6", "ft": "1-1", "reb": 3, "ast": 1, "to": 3, "blk": 2, "stl": 2, "pf": 0, "pts": 11},
+            {"name": "Khari Jaxon", "min": "DNP"},
+            {"name": "Vladimir McCrary", "min": 26, "fg": "5-8", "ft": "3-4", "reb": 4, "ast": 0, "to": 2, "blk": 2, "stl": 2, "pf": 1, "pts": 13},
+            {"name": "Rob Robbins", "min": 36, "fg": "8-11", "tp": "4-6", "ft": "4-5", "reb": 2, "ast": 4, "to": 2, "blk": 3, "stl": 3, "pf": 1, "pts": 24},
+            {"name": "Rob Newton", "min": 4, "fg": "1-1", "ft": "0-0", "reb": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pf": 0, "pts": 2},
+            {"name": "Lance Milford", "min": "DNP"}
+          ]
+        },
+        {
+          "name": "Hawaii Rainbow Warriors",
+          "score": 77,
+          "players": [
+            {"name": "Wendell Navaeta", "min": "DNP"},
+            {"name": "Troy Bowe", "min": 37, "fg": "6-10", "tp": "0-2", "ft": "0-0", "reb": 1, "ast": 6, "to": 2, "blk": 1, "stl": 0, "pf": 4, "pts": 12},
+            {"name": "Marty Winter", "min": "DNP"},
+            {"name": "Joe Hudson", "min": 5, "fg": "1-1", "ft": "2-2", "reb": 1, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pf": 0, "pts": 4},
+            {"name": "Ray Reed", "min": 40, "fg": "16-24", "tp": "0-3", "ft": "0-0", "reb": 4, "ast": 0, "to": 3, "blk": 4, "stl": 0, "pf": 3, "pts": 32},
+            {"name": "Andre Stovall", "min": "DNP"},
+            {"name": "Phil Lott", "min": 38, "fg": "4-13", "tp": "1-1", "ft": "0-0", "reb": 1, "ast": 3, "to": 1, "blk": 1, "stl": 1, "pf": 4, "pts": 9},
+            {"name": "Mike Gilless", "fg": "0-1", "ft": "0-0", "reb": 2, "ast": 1, "to": 2, "blk": 0, "stl": 0, "pf": 1, "pts": 0},
+            {"name": "Chip Thompson", "min": "DNP"},
+            {"name": "Tim Shepherd", "min": 36, "fg": "5-11", "tp": "0-1", "ft": "0-0", "reb": 6, "ast": 5, "to": 0, "blk": 2, "pf": 4, "pts": 10},
+            {"name": "Chris Walz", "min": 33, "fg": "4-7", "ft": "2-2", "reb": 4, "ast": 2, "to": 2, "blk": 1, "stl": 0, "pf": 2, "pts": 10},
+            {"name": "Phil Addington", "min": "DNP"},
+            {"name": "Mark Benford", "min": "DNP"}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

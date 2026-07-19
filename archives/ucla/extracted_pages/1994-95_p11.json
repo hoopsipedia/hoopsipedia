@@ -1,0 +1,47 @@
+{
+  "page": 11,
+  "games": [
+    {
+      "date": "1995-01-19",
+      "opponent": "Arizona",
+      "site": "McKale Center (Tucson, AZ)",
+      "ucla_score": 71,
+      "opp_score": 61,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 71,
+          "players": [
+            {"name": "F. O'Bannon", "min": 39, "fg": "8-21", "tp": "2-5", "ft": "3-4", "reb": 11, "ast": 1, "pf": 1, "to": 4, "blk": 1, "stl": 2, "pts": 21},
+            {"name": "J.R. Henderson", "min": 12, "fg": "0-4", "tp": "0-1", "ft": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 0, "blk": 0, "stl": 1, "pts": 0},
+            {"name": "Zidek", "min": 32, "fg": "2-5", "tp": "0-0", "ft": "0-0", "reb": 4, "ast": 0, "pf": 3, "to": 5, "blk": 1, "stl": 1, "pts": 4},
+            {"name": "Edney", "min": 37, "fg": "5-9", "tp": "0-1", "ft": "9-12", "reb": 9, "ast": 5, "pf": 2, "to": 2, "blk": 0, "stl": 0, "pts": 19},
+            {"name": "C. O'Bannon", "min": 32, "fg": "4-11", "tp": "0-2", "ft": "4-6", "reb": 3, "ast": 2, "pf": 2, "to": 1, "blk": 0, "stl": 2, "pts": 12},
+            {"name": "Bailey", "min": 23, "fg": "3-8", "tp": "0-0", "ft": "3-4", "reb": 12, "ast": 1, "pf": 1, "to": 0, "blk": 0, "stl": 1, "pts": 9},
+            {"name": "Dollar", "min": 17, "fg": "0-1", "tp": "0-0", "ft": "2-2", "reb": 1, "ast": 4, "pf": 5, "to": 1, "blk": 0, "stl": 1, "pts": 2},
+            {"name": "Nwankwo", "min": 4, "fg": "1-2", "tp": "0-0", "ft": "0-0", "reb": 2, "ast": 0, "pf": 1, "to": 0, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Givens", "min": 3, "fg": "1-1", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 2, "to": 0, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Johnson", "min": 1, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Arizona Wildcats",
+          "score": 61,
+          "players": [
+            {"name": "Owes", "min": 30, "fg": "5-10", "tp": "1-1", "ft": "3-5", "reb": 5, "ast": 0, "pf": 5, "to": 1, "blk": 0, "stl": 0, "pts": 14},
+            {"name": "Davis", "min": 24, "fg": "1-9", "tp": "0-0", "ft": "3-4", "reb": 5, "ast": 0, "pf": 1, "to": 1, "blk": 0, "stl": 1, "pts": 5},
+            {"name": "McLean", "min": 6, "fg": "0-2", "tp": "0-2", "ft": "0-0", "reb": 2, "ast": 0, "pf": 1, "to": 1, "blk": 0, "stl": 1, "pts": 0},
+            {"name": "Stoudamire", "min": 35, "fg": "6-21", "tp": "1-12", "ft": "2-2", "reb": 4, "ast": 6, "pf": 4, "to": 3, "blk": 0, "stl": 3, "pts": 15},
+            {"name": "Geary", "min": 34, "fg": "1-4", "tp": "0-3", "ft": "0-0", "reb": 5, "ast": 8, "pf": 2, "to": 3, "blk": 0, "stl": 4, "pts": 2},
+            {"name": "Blair", "min": 26, "fg": "4-7", "tp": "0-0", "ft": "1-2", "reb": 9, "ast": 1, "pf": 2, "to": 4, "blk": 0, "stl": 0, "pts": 9},
+            {"name": "Dickerson", "min": 23, "fg": "2-6", "tp": "1-4", "ft": "1-2", "reb": 5, "ast": 0, "pf": 2, "to": 0, "blk": 0, "stl": 0, "pts": 6},
+            {"name": "Williams", "min": 21, "fg": "4-6", "tp": "2-4", "ft": "0-0", "reb": 4, "ast": 1, "pf": 2, "to": 0, "blk": 1, "stl": 0, "pts": 10},
+            {"name": "Eaton", "min": 1, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "to": 0, "blk": 0, "stl": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

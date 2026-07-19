@@ -1,0 +1,44 @@
+{
+  "page": 31,
+  "games": [
+    {
+      "date": "1980-03-10",
+      "opponent": "Boston College",
+      "note": "NIT 2nd Round, site Charlottesville, VA. Officials: Wortman, Roach, Cosby. Technical fouls: Lattimore, Adams. Attendance 9000. Score by periods: Boston College 23-32, Virginia 29-28.",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 57,
+          "players": [
+            {"name": "Terry Gates", "min": 21, "fg": "1-1", "ft": "1-3", "reb": 4, "pf": 4, "ast": 0, "to": 2, "pts": 3},
+            {"name": "Garland Jefferson", "min": 10, "fg": "2-4", "reb": 0, "pf": 3, "ast": 0, "to": 0, "pts": 4},
+            {"name": "Ralph Sampson", "min": 31, "fg": "5-9", "ft": "0-0", "reb": 14, "pf": 5, "ast": 0, "to": 2, "blk": 6, "pts": 10},
+            {"name": "Jeff Jones", "min": 40, "fg": "1-5", "ft": "2-4", "reb": 1, "pf": 3, "ast": 9, "to": 1, "pts": 4},
+            {"name": "Jeff Lamp", "min": 39, "fg": "5-13", "ft": "4-5", "reb": 4, "pf": 1, "ast": 0, "to": 6, "stl": 2, "pts": 14},
+            {"name": "Lee Raker", "min": 31, "fg": "4-8", "ft": "9-12", "reb": 2, "pf": 1, "ast": 1, "to": 0, "pts": 17},
+            {"name": "Mike Owens", "min": 15, "fg": "1-2", "reb": 3, "pf": 0, "ast": 0, "to": 1, "pts": 2},
+            {"name": "Lewis Latimore", "min": 8, "fg": "1-2", "reb": 2, "pf": 1, "ast": 0, "to": 1, "pts": 2},
+            {"name": "Craig Robinson", "min": 5, "ft": "1-2", "reb": 0, "pf": 0, "ast": 0, "to": 0, "pts": 1}
+          ]
+        },
+        {
+          "name": "Boston College Eagles",
+          "score": 55,
+          "players": [
+            {"name": "Rich Shrigley", "min": 32, "fg": "1-4", "ft": "1-4", "reb": 6, "pf": 5, "ast": 4, "to": 2, "blk": 0, "stl": 3, "pts": 3},
+            {"name": "Vin Caraher", "min": 33, "fg": "10-15", "ft": "4-6", "reb": 7, "pf": 5, "ast": 0, "to": 3, "blk": 1, "stl": 2, "pts": 24},
+            {"name": "Joe Beaulieu", "min": 21, "fg": "0-6", "ft": "0-0", "reb": 3, "pf": 4, "ast": 3, "to": 2, "blk": 0, "stl": 1, "pts": 0},
+            {"name": "Dwan Chandler", "min": 22, "fg": "3-7", "ft": "0-0", "reb": 4, "pf": 5, "ast": 1, "to": 1, "blk": 0, "stl": 0, "pts": 6},
+            {"name": "Jim Sweeney", "min": 33, "fg": "2-7", "ft": "1-1", "reb": 4, "pf": 1, "ast": 3, "to": 0, "blk": 0, "stl": 0, "pts": 5},
+            {"name": "John Bagley", "min": 30, "fg": "4-11", "ft": "3-4", "reb": 2, "pf": 1, "ast": 1, "to": 1, "blk": 0, "stl": 2, "pts": 11},
+            {"name": "Burnett Adams", "min": 17, "fg": "2-4", "ft": "0-1", "reb": 6, "pf": 4, "ast": 0, "to": 1, "blk": 3, "stl": 0, "pts": 4},
+            {"name": "Chris Foy", "min": 8, "fg": "1-1", "ft": "0-0", "reb": 1, "pf": 1, "ast": 1, "to": 0, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Ron Crevier", "min": 17, "fg": "0-1", "ft": "0-0", "reb": 0, "pf": 2, "ast": 1, "to": 6, "blk": 0, "stl": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

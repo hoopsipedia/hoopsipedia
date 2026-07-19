@@ -1,0 +1,46 @@
+{
+  "page": 33,
+  "games": [
+    {
+      "date": "1993-03-21",
+      "opponent": "Michigan",
+      "note": "NCAA West Regional Second Round, McKale Center, Tucson AZ; overtime (final 52-25-7 UCLA, 39-38-9 Michigan)",
+      "ucla_score": 84,
+      "opp_score": 86,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 84,
+          "players": [
+            {"name": "Mitchell Butler", "min": 35, "fg": "6-9", "ft": "2-2", "tp": "0-0", "reb": 7, "ast": 2, "pf": 4, "to": 1, "stl": 1, "blk": 0, "pts": 14},
+            {"name": "Ed O'Bannon", "min": 35, "fg": "6-11", "ft": "4-5", "tp": "3-5", "reb": 3, "ast": 0, "pf": 2, "to": 0, "stl": 1, "blk": 0, "pts": 19},
+            {"name": "Richard Petruska", "min": 37, "fg": "3-12", "ft": "0-0", "tp": "1-4", "reb": 3, "ast": 2, "pf": 5, "to": 2, "stl": 2, "blk": 1, "pts": 7},
+            {"name": "Tyus Edney", "min": 45, "fg": "3-8", "ft": "4-4", "tp": "0-1", "reb": 7, "ast": 6, "pf": 3, "to": 3, "stl": 2, "blk": 0, "pts": 10},
+            {"name": "Shon Tarver", "min": 42, "fg": "10-18", "ft": "4-7", "tp": "0-1", "reb": 3, "ast": 1, "pf": 1, "to": 1, "stl": 3, "blk": 0, "pts": 24},
+            {"name": "Rodney Zimmerman", "min": 16, "fg": "0-0", "ft": "1-2", "tp": "0-0", "reb": 1, "ast": 0, "pf": 4, "to": 1, "stl": 1, "blk": 0, "pts": 1},
+            {"name": "Kevin Dempsey", "min": 14, "fg": "3-6", "ft": "0-0", "tp": "3-4", "reb": 2, "ast": 6, "pf": 0, "to": 0, "stl": 1, "blk": 0, "pts": 9},
+            {"name": "Jiri Zidek", "min": 0.5, "fg": "0-0", "ft": "0-0", "tp": "0-0", "pts": 0},
+            {"name": "David Boyle", "min": 0.5, "fg": "0-0", "ft": "0-0", "tp": "0-0", "pts": 0}
+          ]
+        },
+        {
+          "name": "Michigan Wolverines",
+          "score": 86,
+          "players": [
+            {"name": "Chris Webber", "min": 42, "fg": "12-16", "ft": "2-4", "tp": "1-1", "reb": 14, "ast": 2, "pf": 1, "to": 4, "stl": 2, "blk": 1, "pts": 27},
+            {"name": "Ray Jackson", "min": 39, "fg": "7-10", "ft": "5-6", "tp": "0-1", "reb": 4, "ast": 9, "pf": 4, "to": 2, "stl": 1, "blk": 0, "pts": 19},
+            {"name": "Juwan Howard", "min": 39, "fg": "6-11", "ft": "2-2", "tp": "0-1", "reb": 5, "ast": 3, "pf": 4, "to": 3, "stl": 0, "blk": 0, "pts": 14},
+            {"name": "Jalen Rose", "min": 40, "fg": "4-11", "ft": "1-2", "tp": "3-6", "reb": 2, "ast": 4, "pf": 3, "to": 5, "stl": 1, "blk": 0, "pts": 12},
+            {"name": "Jimmy King", "min": 41, "fg": "4-8", "ft": "0-2", "tp": "3-4", "reb": 5, "ast": 4, "pf": 2, "to": 1, "stl": 0, "blk": 1, "pts": 11},
+            {"name": "Eric Riley", "min": 10, "fg": "1-4", "ft": "1-3", "tp": "0-0", "reb": 6, "ast": 0, "pf": 2, "to": 1, "stl": 0, "blk": 0, "pts": 3},
+            {"name": "Rob Pelinka", "min": 10, "fg": "0-1", "ft": "0-0", "tp": "0-1", "reb": 1, "ast": 0, "pf": 2, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Michael Talley", "min": 4, "fg": "0-2", "ft": "0-0", "tp": "0-1", "reb": 0, "ast": 0, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "James Voskuil", "min": 0, "fg": "0-1", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

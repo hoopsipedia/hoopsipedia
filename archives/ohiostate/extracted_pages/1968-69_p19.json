@@ -1,0 +1,43 @@
+{
+  "page": 19,
+  "games": [
+    {
+      "date": "1969-02-15",
+      "opponent": "Minnesota",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 58,
+          "players": [
+            {"name": "Howell", "fg": "4-10", "ft": "3-4", "reb": 8, "pf": 3, "pts": 11},
+            {"name": "Cleamons", "fg": "5-8", "ft": "5-7", "reb": 10, "pf": 1, "pts": 15},
+            {"name": "Sorenson", "fg": "5-12", "ft": "2-2", "reb": 5, "pf": 4, "pts": 12},
+            {"name": "Finney", "fg": "2-6", "ft": "3-3", "reb": 6, "pf": 2, "pts": 7},
+            {"name": "Meadors", "fg": "3-9", "ft": "3-4", "reb": 2, "pf": 2, "pts": 9},
+            {"name": "Barclay", "fg": "0-2", "ft": "1-2", "reb": 2, "pf": 0, "pts": 1},
+            {"name": "Miller", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Schnabel", "fg": "0-0", "ft": "1-2", "reb": 0, "pf": 0, "pts": 1},
+            {"name": "Andreas", "fg": "1-1", "ft": "0-0", "reb": 1, "pf": 0, "pts": 2},
+            {"name": "Smith", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Minnesota",
+          "score": 41,
+          "players": [
+            {"name": "Gardner", "fg": "3-7", "ft": "0-0", "reb": 3, "pf": 5, "pts": 6},
+            {"name": "Overskei", "fg": "0-1", "ft": "3-6", "reb": 5, "pf": 2, "pts": 3},
+            {"name": "L. Mikan", "fg": "7-17", "ft": "1-1", "reb": 13, "pf": 1, "pts": 15},
+            {"name": "Hill", "fg": "2-6", "ft": "3-4", "reb": 3, "pf": 3, "pts": 7},
+            {"name": "Nuness", "fg": "4-16", "ft": "2-2", "reb": 5, "pf": 3, "pts": 10},
+            {"name": "Masterson", "fg": "0-0", "ft": "0-1", "reb": 2, "pf": 3, "pts": 0},
+            {"name": "T. Mikan", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Fitzsimmons", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

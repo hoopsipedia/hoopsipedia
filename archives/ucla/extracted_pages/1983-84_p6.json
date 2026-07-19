@@ -1,0 +1,46 @@
+{
+  "page": 6,
+  "games": [
+    {
+      "date": "1983-12-19",
+      "opponent": "Howard",
+      "ucla_score": 63,
+      "opp_score": 52,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 63,
+          "players": [
+            {"name": "Fields", "min": 38, "fg": "3-12", "ft": "6-8", "reb": 6, "pf": 1, "pts": 12, "stl": 3, "blk": 2, "ast": 2, "to": 2},
+            {"name": "Maloncon", "min": 31, "fg": "4-4", "ft": "3-4", "reb": 5, "pf": 2, "pts": 11, "stl": 1, "to": 2},
+            {"name": "Gray", "min": 30, "fg": "3-5", "ft": "7-8", "reb": 5, "pf": 2, "pts": 13, "stl": 1, "ast": 1, "to": 1},
+            {"name": "Hatcher", "min": 23, "fg": "3-7", "ft": "0-0", "reb": 2, "pf": 4, "pts": 6},
+            {"name": "Jackson", "min": 37, "fg": "2-6", "ft": "0-0", "reb": 2, "pf": 4, "pts": 4, "stl": 1, "ast": 8, "to": 4},
+            {"name": "Gaines", "min": 12, "fg": "2-3", "ft": "0-0", "reb": 0, "pf": 0, "pts": 4, "ast": 3},
+            {"name": "Wright", "min": 10, "fg": "0-1", "ft": "1-2", "reb": 3, "pf": 0, "pts": 1, "blk": 1, "to": 1},
+            {"name": "Miguel", "min": 9, "fg": "4-5", "ft": "2-5", "reb": 4, "pf": 0, "pts": 10, "to": 1},
+            {"name": "Immel", "min": 8, "fg": "1-1", "ft": "0-0", "reb": 0, "pf": 0, "pts": 2, "ast": 1},
+            {"name": "Miller", "min": 2, "fg": "0-1", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0, "to": 2}
+          ]
+        },
+        {
+          "name": "Howard Bison",
+          "score": 52,
+          "players": [
+            {"name": "Jones, Robert", "min": 37, "fg": "4-6", "ft": "1-2", "reb": 5, "pf": 5, "pts": 9, "stl": 2, "blk": 1, "ast": 3, "to": 3},
+            {"name": "Hamilton", "min": 35, "fg": "6-13", "ft": "2-2", "reb": 4, "pf": 1, "pts": 14, "stl": 1, "ast": 1, "to": 1},
+            {"name": "Caracciolo", "min": 40, "fg": "2-5", "ft": "1-2", "reb": 3, "pf": 4, "pts": 5, "stl": 1, "to": 2},
+            {"name": "Hill", "min": 34, "fg": "4-11", "ft": "8-9", "reb": 2, "pf": 1, "pts": 16, "ast": 3, "to": 6},
+            {"name": "Jones, Mike", "min": 14, "fg": "0-1", "ft": "0-0", "reb": 0, "pf": 2, "pts": 0, "to": 1},
+            {"name": "Wynn", "min": 23, "fg": "4-8", "ft": "0-0", "reb": 3, "pf": 5, "pts": 8},
+            {"name": "McIlwaine", "min": 15, "fg": "0-2", "ft": "0-0", "reb": 0, "pf": 2, "pts": 0, "stl": 3, "to": 1},
+            {"name": "Williams", "min": 1, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Felton", "min": 1, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

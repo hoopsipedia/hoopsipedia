@@ -1,0 +1,44 @@
+{
+  "page": 19,
+  "games": [
+    {
+      "date": "1996-02-01",
+      "opponent": "Oregon",
+      "ucla_score": 85,
+      "opp_score": 78,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 85,
+          "players": [
+            {"name": "Charles O'Bannon", "fg": "4-9", "tp": "1-2", "ft": "3-3", "reb": 5, "ast": 2, "to": 4, "blk": 0, "stl": 1, "pf": 3, "pts": 12, "min": 27},
+            {"name": "J.R. Henderson", "fg": "5-9", "tp": "0-0", "ft": "5-8", "reb": 7, "ast": 3, "to": 1, "blk": 2, "stl": 0, "pf": 1, "pts": 15, "min": 36},
+            {"name": "Jelani McCoy", "fg": "4-7", "tp": "0-0", "ft": "1-1", "reb": 5, "ast": 0, "to": 1, "blk": 1, "stl": 0, "pf": 1, "pts": 9, "min": 26},
+            {"name": "Kris Johnson", "fg": "6-10", "tp": "1-1", "ft": "3-7", "reb": 3, "ast": 2, "to": 1, "blk": 1, "stl": 0, "pf": 0, "pts": 16, "min": 32},
+            {"name": "Toby Bailey", "fg": "10-17", "tp": "5-8", "ft": "0-0", "reb": 3, "ast": 3, "to": 5, "blk": 0, "stl": 1, "pf": 3, "pts": 25, "min": 36},
+            {"name": "omm'A Givens", "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 3, "ast": 0, "to": 2, "blk": 0, "stl": 0, "pf": 0, "pts": 0, "min": 5},
+            {"name": "Cameron Dollar", "fg": "1-4", "tp": "1-1", "ft": "3-4", "reb": 7, "ast": 10, "to": 4, "blk": 0, "stl": 3, "pf": 2, "pts": 6, "min": 33},
+            {"name": "Bob Myers", "fg": "1-1", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pf": 1, "pts": 2, "min": 5}
+          ]
+        },
+        {
+          "name": "Oregon Ducks",
+          "score": 78,
+          "players": [
+            {"name": "Kyle Milling", "fg": "3-6", "tp": "0-0", "ft": "4-4", "reb": 12, "ast": 1, "to": 2, "blk": 0, "stl": 0, "pf": 3, "pts": 10, "min": 33},
+            {"name": "Jamar Curry", "fg": "6-9", "tp": "0-1", "ft": "0-1", "reb": 7, "ast": 0, "to": 4, "blk": 0, "stl": 1, "pf": 4, "pts": 12, "min": 29},
+            {"name": "Rob Ramaker", "fg": "9-14", "tp": "1-2", "ft": "0-0", "reb": 8, "ast": 3, "to": 3, "blk": 0, "stl": 1, "pf": 2, "pts": 19, "min": 29},
+            {"name": "Kenya Wilkins", "fg": "4-15", "tp": "0-3", "ft": "6-6", "reb": 3, "ast": 9, "to": 1, "blk": 0, "stl": 3, "pf": 3, "pts": 14, "min": 39},
+            {"name": "Jamal Lawrence", "fg": "7-16", "tp": "7-12", "ft": "0-0", "reb": 1, "ast": 1, "to": 3, "blk": 0, "stl": 1, "pf": 3, "pts": 21, "min": 35},
+            {"name": "Michael Carson", "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 3, "ast": 0, "to": 1, "blk": 1, "stl": 0, "pf": 0, "pts": 0, "min": 15},
+            {"name": "Terik Brown", "fg": "1-7", "tp": "0-5", "ft": "0-0", "reb": 0, "ast": 1, "to": 1, "blk": 0, "stl": 0, "pf": 4, "pts": 2, "min": 14},
+            {"name": "Donte Quinine", "fg": "0-1", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pf": 0, "pts": 0, "min": 3},
+            {"name": "A.D. Smith", "fg": "0-1", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pf": 0, "pts": 0, "min": 3}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

@@ -1,0 +1,39 @@
+{
+  "page": 17,
+  "games": [
+    {
+      "date": "1965-02-08",
+      "opponent": "Illinois",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 71,
+          "players": [
+            {"name": "Ahijevych", "fg": "8-14", "ft": "1-1", "reb": 13, "pf": 3, "pts": 17},
+            {"name": "Sepic", "fg": "8-20", "ft": "3-4", "reb": 16, "pf": 4, "pts": 19},
+            {"name": "Shaffer", "fg": "4-15", "ft": "0-3", "reb": 13, "pf": 4, "pts": 8},
+            {"name": "Ricketts", "fg": "4-13", "ft": "0-1", "reb": 2, "pf": 4, "pts": 8},
+            {"name": "Rowley", "fg": "1-4", "ft": "2-3", "reb": 1, "pf": 2, "pts": 4},
+            {"name": "Peters", "fg": "7-15", "ft": "1-1", "reb": 4, "pf": 1, "pts": 15}
+          ]
+        },
+        {
+          "name": "Illinois",
+          "score": 86,
+          "players": [
+            {"name": "Redmon", "fg": "3-9", "ft": "1-1", "reb": 5, "pf": 0, "pts": 7},
+            {"name": "Freeman", "fg": "8-19", "ft": "4-6", "reb": 11, "pf": 3, "pts": 20},
+            {"name": "Thoren", "fg": "11-14", "ft": "5-8", "reb": 13, "pf": 4, "pts": 27},
+            {"name": "Brody", "fg": "10-18", "ft": "4-9", "reb": 6, "pf": 3, "pts": 24},
+            {"name": "Vopicka", "fg": "3-4", "ft": "0-1", "reb": 3, "pf": 2, "pts": 6},
+            {"name": "Dawson", "fg": "1-3", "ft": "0-0", "reb": 0, "pf": 0, "pts": 2},
+            {"name": "Johansen", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Brown", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 1, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

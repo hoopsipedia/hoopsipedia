@@ -1,0 +1,41 @@
+{
+  "page": 2,
+  "games": [
+    {
+      "date": "1935-12-14",
+      "opponent": "Evansville",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 38,
+          "players": [
+            {"name": "Whitlinger", "pf": 2, "pts": 18},
+            {"name": "Nihousen", "pf": 0, "pts": 4},
+            {"name": "Fais", "pf": 0, "pts": 0},
+            {"name": "McDonald", "pf": 3, "pts": 2},
+            {"name": "Laybourne", "pf": 0, "pts": 2},
+            {"name": "Borland", "pf": 1, "pts": 0},
+            {"name": "Bates", "pf": 0, "pts": 0},
+            {"name": "George", "pf": 1, "pts": 6},
+            {"name": "Bishop", "pf": 0, "pts": 0},
+            {"name": "Crow", "pf": 0, "pts": 0},
+            {"name": "Rhodes", "pf": 0, "pts": 0},
+            {"name": "Dye", "pf": 1, "pts": 5},
+            {"name": "Wasylik", "pf": 1, "pts": 0},
+            {"name": "Feeman", "pf": 0, "pts": 0},
+            {"name": "Raudabaugh", "pf": 2, "pts": 1},
+            {"name": "Smith", "pf": 1, "pts": 0},
+            {"name": "Prewitt", "pf": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Evansville",
+          "score": 21,
+          "players": []
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

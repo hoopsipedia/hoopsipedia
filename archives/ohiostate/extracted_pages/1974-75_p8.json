@@ -1,0 +1,42 @@
+{
+  "page": 8,
+  "games": [
+    {
+      "date": "1974-12-27",
+      "opponent": "Pennsylvania",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 106,
+          "players": [
+            {"name": "Stiegemeier", "fg": "8-16", "ft": "2-2", "reb": 7, "ast": 6, "pf": 4, "pts": 18},
+            {"name": "Bolden", "fg": "10-17", "ft": "5-6", "reb": 4, "ast": 6, "pf": 5, "pts": 25},
+            {"name": "Shields", "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "pts": 0},
+            {"name": "Bayless", "fg": "5-13", "ft": "2-2", "reb": 5, "ast": 8, "pf": 2, "pts": 12},
+            {"name": "Wenner", "fg": "2-3", "ft": "3-3", "reb": 3, "ast": 0, "pf": 1, "pts": 7},
+            {"name": "Andreas", "fg": "7-12", "ft": "9-11", "reb": 7, "ast": 3, "pf": 5, "pts": 23},
+            {"name": "Burris", "fg": "0-1", "ft": "0-0", "reb": 3, "ast": 1, "pf": 2, "pts": 0},
+            {"name": "Taylor", "fg": "9-13", "ft": "3-7", "reb": 9, "ast": 3, "pf": 4, "pts": 21}
+          ]
+        },
+        {
+          "name": "Pennsylvania Quakers",
+          "score": 94,
+          "players": [
+            {"name": "Lonetto", "fg": "3-9", "ft": "2-4", "reb": 1, "ast": 10, "pf": 2, "pts": 8},
+            {"name": "Enoch", "fg": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "pf": 0, "pts": 0},
+            {"name": "Haigler", "fg": "13-19", "ft": "2-4", "reb": 8, "ast": 5, "pf": 4, "pts": 28},
+            {"name": "Lewis", "fg": "6-10", "ft": "0-0", "reb": 2, "ast": 1, "pf": 3, "pts": 12},
+            {"name": "Engles", "fg": "3-7", "ft": "2-2", "reb": 5, "ast": 1, "pf": 5, "pts": 8},
+            {"name": "Johnson", "fg": "3-6", "ft": "0-1", "reb": 5, "ast": 2, "pf": 4, "pts": 6},
+            {"name": "Stefranski", "fg": "0-0", "ft": "2-2", "reb": 0, "ast": 4, "pf": 1, "pts": 2},
+            {"name": "Bigela", "fg": "6-7", "ft": "0-0", "reb": 8, "ast": 1, "pf": 4, "pts": 12},
+            {"name": "Beecroft", "fg": "8-17", "ft": "2-2", "reb": 3, "ast": 4, "pf": 4, "pts": 18}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

@@ -1,0 +1,46 @@
+{
+  "page": 3,
+  "games": [
+    {
+      "date": "1969-12-06",
+      "opponent": "Butler",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 112,
+          "players": [
+            {"name": "Andreas", "fg": "7-14", "ft": "0-0", "reb": 12, "pf": 3, "pts": 14},
+            {"name": "Cleamons", "fg": "6-9", "ft": "0-0", "reb": 7, "pf": 5, "pts": 12},
+            {"name": "Sorenson", "fg": "10-17", "ft": "2-2", "reb": 2, "pf": 2, "pts": 22},
+            {"name": "Finney", "fg": "13-18", "ft": "6-6", "reb": 6, "pf": 1, "pts": 32},
+            {"name": "Barclay", "fg": "4-8", "ft": "1-1", "reb": 6, "pf": 3, "pts": 9},
+            {"name": "Minor", "fg": "0-2", "ft": "2-2", "reb": 2, "pf": 2, "pts": 2},
+            {"name": "Geddes", "fg": "4-9", "ft": "5-6", "reb": 3, "pf": 3, "pts": 13},
+            {"name": "Spies", "fg": "1-1", "ft": "0-0", "reb": 0, "pf": 0, "pts": 2},
+            {"name": "Smith", "fg": "0-1", "ft": "0-0", "reb": 1, "pf": 1, "pts": 0},
+            {"name": "Hexlmer", "fg": "1-1", "ft": "0-0", "reb": 0, "pf": 0, "pts": 2},
+            {"name": "Macknin", "fg": "2-2", "ft": "0-0", "reb": 0, "pf": 0, "pts": 4}
+          ]
+        },
+        {
+          "name": "Butler",
+          "score": 89,
+          "players": [
+            {"name": "Schroeder", "fg": "1-5", "ft": "0-0", "reb": 1, "pf": 0, "pts": 2},
+            {"name": "Bennett", "fg": "6-13", "ft": "2-5", "reb": 9, "pf": 4, "pts": 14},
+            {"name": "Radecki", "fg": "2-4", "ft": "0-1", "reb": 6, "pf": 2, "pts": 4},
+            {"name": "Norris", "fg": "12-16", "ft": "5-6", "reb": 1, "pf": 3, "pts": 29},
+            {"name": "Shepherd", "fg": "9-19", "ft": "6-8", "reb": 1, "pf": 1, "pts": 24},
+            {"name": "Ferguson", "fg": "5-9", "ft": "1-1", "reb": 4, "pf": 1, "pts": 11},
+            {"name": "Seal", "fg": "0-3", "ft": "2-3", "reb": 2, "pf": 0, "pts": 2},
+            {"name": "Marsh", "fg": "0-0", "ft": "0-0", "reb": 1, "pf": 0, "pts": 0},
+            {"name": "Garrott", "fg": "0-0", "ft": "0-0", "reb": 1, "pf": 0, "pts": 0},
+            {"name": "Watson", "fg": "1-1", "ft": "1-1", "reb": 0, "pf": 0, "pts": 3}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

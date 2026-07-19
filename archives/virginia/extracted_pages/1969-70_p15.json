@@ -1,0 +1,45 @@
+{
+  "page": 15,
+  "games": [
+    {
+      "date": "1970-01-29",
+      "opponent": "William & Mary",
+      "location": "Hampton, Va.",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 87,
+          "players": [
+            {"name": "Chip Case", "min": 0, "fg": "9-21", "ft": "5-6", "reb": 7, "ast": 2, "pf": 4, "to": 6, "stl": 0, "blk": 0, "pts": 23},
+            {"name": "Bill Gerry", "min": 0, "fg": "6-12", "ft": "6-10", "reb": 18, "ast": 1, "pf": 3, "to": 6, "stl": 0, "blk": 0, "pts": 18},
+            {"name": "Scott McCandlish", "min": 0, "fg": "11-22", "ft": "7-8", "reb": 14, "ast": 1, "pf": 4, "to": 0, "stl": 0, "blk": 0, "pts": 29},
+            {"name": "Kevin Kennelly", "min": 0, "fg": "1-4", "ft": "1-2", "reb": 1, "ast": 1, "pf": 3, "to": 6, "stl": 0, "blk": 0, "pts": 3},
+            {"name": "Tim Rash", "min": 0, "fg": "3-10", "ft": "2-4", "reb": 4, "ast": 3, "pf": 1, "to": 3, "stl": 0, "blk": 0, "pts": 8},
+            {"name": "Frank DeWitt", "min": 0, "fg": "2-3", "ft": "1-1", "reb": 2, "ast": 0, "pf": 0, "to": 2, "stl": 0, "blk": 0, "pts": 5},
+            {"name": "John Hill", "min": 0, "fg": "0-3", "ft": "1-2", "reb": 2, "ast": 0, "pf": 1, "to": 3, "stl": 0, "blk": 0, "pts": 1},
+            {"name": "Chip Miller", "min": 0, "fg": "0-2", "ft": "0-0", "reb": 1, "ast": 0, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Mike Slaysman", "min": 0, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "William & Mary",
+          "score": 81,
+          "players": [
+            {"name": "Steve Dodge", "min": 0, "fg": "4-11", "ft": "6-9", "reb": 3, "ast": 2, "pf": 4, "to": 4, "stl": 0, "blk": 0, "pts": 14},
+            {"name": "Tom Jasper", "min": 0, "fg": "9-23", "ft": "2-3", "reb": 11, "ast": 1, "pf": 5, "to": 0, "stl": 0, "blk": 0, "pts": 20},
+            {"name": "Jim Warns", "min": 0, "fg": "0-1", "ft": "1-2", "reb": 1, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 1},
+            {"name": "Mike Schemering", "min": 0, "fg": "3-5", "ft": "4-4", "reb": 5, "ast": 2, "pf": 5, "to": 8, "stl": 0, "blk": 0, "pts": 10},
+            {"name": "Harry Kent", "min": 0, "fg": "2-10", "ft": "2-2", "reb": 5, "ast": 0, "pf": 4, "to": 2, "stl": 0, "blk": 0, "pts": 6},
+            {"name": "Bob Sherwood", "min": 0, "fg": "12-17", "ft": "3-3", "reb": 8, "ast": 0, "pf": 4, "to": 5, "stl": 0, "blk": 0, "pts": 27},
+            {"name": "Neil Gewirtzman", "min": 0, "fg": "1-3", "ft": "1-3", "reb": 1, "ast": 2, "pf": 2, "to": 4, "stl": 0, "blk": 0, "pts": 3},
+            {"name": "Dave Stout", "min": 0, "fg": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Herb Moss", "min": 0, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true,
+      "note": "Overtime game (1OT). Minutes column on the printed sheet shows 0 for every player (not actually tracked/entered) — recorded as-is rather than invented. Pts values are as printed and independently verified via 2*FGmade+FTmade for every player."
+    }
+  ],
+  "skipped": []
+}

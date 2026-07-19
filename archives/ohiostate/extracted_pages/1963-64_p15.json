@@ -1,0 +1,47 @@
+{
+  "page": 15,
+  "games": [
+    {
+      "date": "1964-01-25",
+      "opponent": "Purdue",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 98,
+          "players": [
+            {"name": "DeVoe", "fg": "3-10", "ft": "1-1", "reb": 8, "pf": 4, "pts": 7},
+            {"name": "Dove", "fg": "0-4", "ft": "1-2", "reb": 5, "pf": 1, "pts": 1},
+            {"name": "Bradds", "fg": "20-30", "ft": "7-7", "reb": 12, "pf": 3, "pts": 47},
+            {"name": "Ricketts", "fg": "4-11", "ft": "4-7", "reb": 7, "pf": 1, "pts": 12},
+            {"name": "Bowman", "fg": "3-13", "ft": "1-2", "reb": 6, "pf": 3, "pts": 7},
+            {"name": "Shaffer", "fg": "5-14", "ft": "0-2", "reb": 13, "pf": 4, "pts": 10},
+            {"name": "Peters", "fg": "4-7", "ft": "6-6", "reb": 6, "pf": 2, "pts": 14},
+            {"name": "Brown", "fg": "0-1", "ft": "0-0", "reb": 1, "pf": 4, "pts": 0},
+            {"name": "Frazier", "fg": "0-1", "ft": "0-0", "reb": 0, "pf": 1, "pts": 0},
+            {"name": "Ahijevych", "fg": "0-1", "ft": "0-0", "reb": 1, "pf": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Purdue",
+          "score": 87,
+          "players": [
+            {"name": "Schellhase", "fg": "4-7", "ft": "7-9", "reb": 8, "pf": 5, "pts": 15},
+            {"name": "Trudeau", "fg": "3-8", "ft": "2-3", "reb": 3, "pf": 2, "pts": 8},
+            {"name": "Brown", "fg": "3-5", "ft": "2-5", "reb": 7, "pf": 3, "pts": 8},
+            {"name": "Purkhiser", "fg": "13-25", "ft": "2-3", "reb": 6, "pf": 3, "pts": 28},
+            {"name": "Garland", "fg": "0-4", "ft": "1-1", "reb": 4, "pf": 3, "pts": 1},
+            {"name": "Hicks", "fg": "2-7", "ft": "1-1", "reb": 1, "pf": 1, "pts": 5},
+            {"name": "Hughes", "fg": "0-1", "ft": "2-2", "reb": 1, "pf": 0, "pts": 2},
+            {"name": "Harber", "fg": "2-2", "ft": "1-2", "reb": 3, "pf": 1, "pts": 5},
+            {"name": "Ward", "fg": "1-5", "ft": "2-2", "reb": 1, "pf": 1, "pts": 4},
+            {"name": "Dawkins", "fg": "3-6", "ft": "3-4", "reb": 2, "pf": 2, "pts": 9},
+            {"name": "McFarland", "fg": "0-1", "ft": "0-0", "reb": 1, "pf": 0, "pts": 0},
+            {"name": "Grams", "fg": "0-1", "ft": "2-2", "reb": 1, "pf": 0, "pts": 2}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

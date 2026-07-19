@@ -1,0 +1,49 @@
+{
+  "page": 20,
+  "games": [
+    {
+      "date": "1982-01-29",
+      "opponent": "Michigan Wolverines",
+      "site": "Ann Arbor, Michigan",
+      "note": "Official NCAA box score sheet, page numbered '19' in top-right corner (page image printed with prior page's number). Game went to 1 overtime (score-by-periods: 1st, 2nd, OT, FINAL).",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 60,
+          "score_by_period": {"1st": 27, "2nd": 29, "OT": 4},
+          "players": [
+            {"name": "Kellogg, Clark", "fg": "7-13", "ft": "0-0", "reb": 17, "ast": 1, "pf": 3, "to": 2, "stl": 0, "blk": 0, "pts": 14},
+            {"name": "Campbell, Tony", "fg": "5-12", "ft": "2-3", "reb": 1, "ast": 0, "pf": 4, "to": 3, "stl": 0, "blk": 0, "pts": 12},
+            {"name": "Waiters, Granville", "fg": "3-6", "ft": "1-3", "reb": 8, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 2, "pts": 7},
+            {"name": "Taylor, Troy", "fg": "1-5", "ft": "3-4", "reb": 1, "ast": 2, "pf": 3, "to": 6, "stl": 1, "blk": 0, "pts": 5},
+            {"name": "Skates, Ron", "fg": "4-8", "ft": "0-0", "reb": 1, "ast": 1, "pf": 2, "to": 1, "stl": 1, "blk": 1, "pts": 8, "note": "surname hard to read, transcribed as written"},
+            {"name": "Huggins, Larry", "fg": "3-6", "ft": "0-0", "reb": 2, "ast": 1, "pf": 2, "to": 4, "stl": 0, "blk": 0, "pts": 6},
+            {"name": "Sims, Nate", "fg": "0-1", "ft": "2-2", "reb": 0, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Kirchner, Cliff", "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 0, "note": "surname hard to read, transcribed as written"},
+            {"name": "Johnson, Bryant", "fg": "3-6", "ft": "0-1", "reb": 6, "ast": 0, "pf": 4, "to": 1, "stl": 0, "blk": 1, "pts": 6}
+          ],
+          "team_totals_from_sheet": {"fg": "26-62", "ft": "8-13", "reb": 38, "pf": 21, "tp": 60, "ast": 5, "to": 17, "blk": 3, "stl": 3},
+          "checksum_ok": true
+        },
+        {
+          "name": "Michigan Wolverines",
+          "score": 62,
+          "score_by_period": {"1st": 31, "2nd": 25, "OT": 6},
+          "players": [
+            {"name": "Garner, Thad", "fg": "3-8", "ft": "7-9", "reb": 4, "ast": 2, "pf": 3, "to": 1, "stl": 1, "blk": 1, "pts": 13},
+            {"name": "Carter, Willis", "fg": "0-3", "ft": "0-0", "reb": 1, "ast": 0, "pf": 2, "to": 0, "stl": 1, "blk": 0, "pts": 0},
+            {"name": "Person, Ike", "fg": "7-12", "ft": "0-0", "reb": 10, "ast": 1, "pf": 2, "to": 1, "stl": 1, "blk": 1, "pts": 14, "note": "starting center, name hard to read"},
+            {"name": "Pelakoudas, Dan", "fg": "3-5", "ft": "2-3", "reb": 2, "ast": 3, "pf": 3, "to": 5, "stl": 0, "blk": 0, "pts": 8, "note": "surname hard to read"},
+            {"name": "Turner, Eric", "fg": "9-18", "ft": "2-5", "reb": 4, "ast": 7, "pf": 2, "to": 8, "stl": 2, "blk": 0, "pts": 20, "note": "FT figure inferred via points checksum (2*FG+FT=TP); raw FT digit ambiguous on scan"},
+            {"name": "Rupsen, Dan", "fg": "2-3", "ft": "1-4", "reb": 4, "ast": 2, "pf": 3, "to": 1, "stl": 0, "blk": 0, "pts": 5, "note": "surname hard to read"},
+            {"name": "Rockmore, Leslie", "fg": "1-2", "ft": "0-0", "reb": 0, "ast": 2, "pf": 1, "to": 0, "stl": 0, "blk": 1, "pts": 2}
+          ],
+          "team_totals_from_sheet": {"fg": "25-51", "ft": "12-21", "reb": 29, "pf": 14, "tp": 62, "ast": 17, "to": 17, "blk": 2, "stl": 5},
+          "checksum_ok": true
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

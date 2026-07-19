@@ -1,0 +1,52 @@
+{
+  "page": 15,
+  "games": [
+    {
+      "date": "1946-02-11",
+      "opponent": "Chicago",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 46,
+          "players": [
+            {"name": "Bowen", "fg_made": 5, "ft_made": 0, "pts": 10},
+            {"name": "Wells", "fg_made": 0, "ft_made": 0, "pts": 0},
+            {"name": "Snyder", "fg_made": 3, "ft_made": 1, "pts": 7},
+            {"name": "Wallin", "fg_made": 0, "ft_made": 0, "pts": 0},
+            {"name": "Underman", "fg_made": 7, "ft_made": 0, "pts": 14},
+            {"name": "Hall", "fg_made": 1, "ft_made": 0, "pts": 2},
+            {"name": "Huston", "fg_made": 0, "ft_made": 0, "pts": 0},
+            {"name": "Hackett", "fg_made": 0, "ft_made": 0, "pts": 0},
+            {"name": "Amling", "fg_made": 0, "ft_made": 0, "pts": 0},
+            {"name": "Lovett", "fg_made": 0, "ft_made": 0, "pts": 0},
+            {"name": "Kuhn", "fg_made": 1, "ft_made": 0, "pts": 2},
+            {"name": "Elliott", "fg_made": 1, "ft_made": 1, "pts": 3},
+            {"name": "Johnston", "fg_made": 3, "ft_made": 0, "pts": 6},
+            {"name": "Biel", "fg_made": 0, "ft_made": 1, "pts": 1},
+            {"name": "Goldman", "fg_made": 0, "ft_made": 0, "pts": 0},
+            {"name": "Russell", "fg_made": 0, "ft_made": 1, "pts": 1},
+            {"name": "Merrell", "fg_made": 0, "ft_made": 0, "pts": 0},
+            {"name": "Palmer", "fg_made": 0, "ft_made": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Chicago",
+          "score": 25,
+          "players": [
+            {"name": "DeGraw", "fg_made": 1, "ft_made": 3, "pts": 5},
+            {"name": "Sharp", "fg_made": 1, "ft_made": 0, "pts": 2},
+            {"name": "Raby", "fg_made": 1, "ft_made": 1, "pts": 3},
+            {"name": "Rifas", "fg_made": 0, "ft_made": 0, "pts": 0},
+            {"name": "Riley", "fg_made": 0, "ft_made": 1, "pts": 1},
+            {"name": "Freeark", "fg_made": 5, "ft_made": 2, "pts": 12},
+            {"name": "Goedecke", "fg_made": 0, "ft_made": 1, "pts": 1},
+            {"name": "Sisco", "fg_made": 0, "ft_made": 1, "pts": 1},
+            {"name": "Bradley", "fg_made": 0, "ft_made": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

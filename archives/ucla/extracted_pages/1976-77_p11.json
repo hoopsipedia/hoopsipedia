@@ -1,0 +1,9 @@
+{
+  "page": 11,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "1977-01-02 Houston at UCLA (Pauley Pavilion). Houston's line is internally consistent and checksums perfectly: player FG sum 34 (=team FG 34), FGA sum 69 (=69), FT sum 15 (=15), FTA sum 23 (=23), PF sum 26 (=26), AST sum 13 (=13), PTS sum 83 (=team total 83, matches final score). However UCLA's player point sum computes to 106 (11-19/4-5=26, 6-18/5-9=17, 9-12/6-8=24, 3-8/3-4=9, 5-5/7-7=17, 1-5/0-0=2, 3-3/2-2=8, 0-0/1-2=1, 0-2/0-0=0, 0-1/0-0=0, 1-3/0-0=2, 0-0/0-0=0) versus the team TOTALS row of 96 points, which also matches the final score line (UCLA 37+59=96) and the recorded FG%/FT% (35/76=.461, 26/37=.703). FGA (76), FTA (37), and PF (21) column sums for UCLA DO match the team totals exactly, but FG sum (39 vs 35), FT sum (28 vs 26), REB sum (48 vs expected 54), and AST sum (30 vs 24) all fail to reconcile, indicating one or more UCLA player made-FG/made-FT/REB/AST digits are misread on this scan (likely among Vroman, Townsend, Hamilton, or Sims) without a way to isolate which cell(s) are wrong from this scan alone. Per policy, skipped rather than guessing corrected values."
+    }
+  ]
+}

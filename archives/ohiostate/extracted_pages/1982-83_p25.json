@@ -1,0 +1,9 @@
+{
+  "page": 25,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page contains a handwritten Big Ten box score, apparently Ohio State vs Michigan State (page numbered '24'/'43' in the sheet's own corner stamps, unrelated to PDF page numbering). Attempted transcription of both team rosters, but checksum (sum of player pts vs. team final score) failed for both teams: Ohio State's TOTALS row (FG 33-68, FT 23-31, TP 74) does not reconcile with 2*FG+FT (=89, a 15-point gap), and several individual OSU rows (Huggins, Jones, Haas) also did not reconcile with printed team column values, indicating my column alignment/digit reads on that handwriting were unreliable. Michigan State's roster reconciled row-by-row against its own printed TP column but the summed player TP (103) still missed the printed team TOTALS TP (101) by 2, a near-miss that could not be resolved without a clearer scan. Per instructions, skipping rather than guessing at the illegible/inconsistent handwriting."
+    }
+  ]
+}

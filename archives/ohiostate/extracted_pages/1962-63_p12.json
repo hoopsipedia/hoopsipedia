@@ -1,0 +1,45 @@
+{
+  "page": 12,
+  "games": [
+    {
+      "date": "1963-01-07",
+      "opponent": "Illinois",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 78,
+          "players": [
+            {"name": "McDonald", "fg": "4-8", "ft": "2-3", "reb": 4, "pf": 1, "pts": 10},
+            {"name": "Doughty", "fg": "4-17", "ft": "2-2", "reb": 12, "pf": 4, "pts": 10},
+            {"name": "Bradds", "fg": "13-33", "ft": "7-9", "reb": 12, "pf": 3, "pts": 33},
+            {"name": "Reasbeck", "fg": "5-22", "ft": "0-0", "reb": 9, "pf": 3, "pts": 10},
+            {"name": "Taylor", "fg": "0-2", "ft": "0-0", "reb": 2, "pf": 2, "pts": 0},
+            {"name": "Ricketts", "fg": "4-7", "ft": "4-4", "reb": 1, "pf": 3, "pts": 12},
+            {"name": "Flatt", "fg": "0-1", "ft": "0-0", "reb": 1, "pf": 0, "pts": 0},
+            {"name": "Bowman", "fg": "1-1", "ft": "1-2", "reb": 3, "pf": 1, "pts": 3},
+            {"name": "DeVoe", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Frazier", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Shaffer", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Brown", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Illinois Fighting Illini",
+          "score": 90,
+          "players": [
+            {"name": "Starnes", "fg": "3-9", "ft": "2-2", "reb": 14, "pf": 3, "pts": 8},
+            {"name": "Downey", "fg": "9-22", "ft": "3-4", "reb": 18, "pf": 2, "pts": 21},
+            {"name": "Burwell", "fg": "5-10", "ft": "4-5", "reb": 4, "pf": 3, "pts": 14},
+            {"name": "Brody", "fg": "8-15", "ft": "7-8", "reb": 3, "pf": 3, "pts": 23},
+            {"name": "Small", "fg": "8-14", "ft": "6-6", "reb": 4, "pf": 2, "pts": 22},
+            {"name": "Redmon", "fg": "0-1", "ft": "0-0", "reb": 1, "pf": 1, "pts": 0},
+            {"name": "Edwards", "fg": "0-1", "ft": "0-0", "reb": 1, "pf": 0, "pts": 0},
+            {"name": "Thoren", "fg": "1-1", "ft": "0-0", "reb": 2, "pf": 0, "pts": 2}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

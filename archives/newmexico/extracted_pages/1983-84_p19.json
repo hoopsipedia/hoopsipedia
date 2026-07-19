@@ -1,0 +1,40 @@
+{
+  "page": 19,
+  "games": [
+    {
+      "date": "1984-01-21",
+      "opponent": "Colorado State",
+      "site": "Fort Collins, Colorado",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 55,
+          "players": [
+            {"name": "Tim Carrett", "min": 39, "fg": "6-12", "ft": "2-2", "reb": "0-3", "pf": 4, "ast": 0, "to": 2, "blk": 0, "stl": 0, "pts": 14},
+            {"name": "Alan Dolensky", "min": 40, "fg": "4-7", "ft": "5-7", "reb": "1-12", "pf": 2, "ast": 4, "to": 2, "blk": 1, "stl": 0, "pts": 13},
+            {"name": "T.J. Drake", "fg": "0-0", "ft": "0-0", "reb": "1-2", "pf": 1, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Nelson Franke", "min": 42, "fg": "2-4", "ft": "0-0", "reb": "1-4", "pf": 1, "to": 1, "blk": 0, "stl": 2, "pts": 4},
+            {"name": "Phil Smith", "min": 42, "fg": "6-11", "ft": "4-4", "reb": "0-3", "pf": 3, "ast": 5, "to": 5, "blk": 0, "stl": 0, "pts": 16},
+            {"name": "Mike Winders", "fg": "3-3", "ft": "2-2", "reb": "2-2", "pf": 0, "ast": 0, "to": 1, "blk": 0, "stl": 2, "pts": 8}
+          ]
+        },
+        {
+          "name": "Colorado State Rams",
+          "score": 47,
+          "players": [
+            {"name": "Scott Hano", "min": 33, "fg": "3-7", "ft": "1-2", "reb": "4-9", "pf": 4, "ast": 1, "to": 1, "blk": 0, "stl": 1, "pts": 7},
+            {"name": "Rich Strong", "min": 38, "fg": "3-10", "ft": "2-4", "reb": "2-5", "pf": 2, "ast": 5, "to": 0, "blk": 0, "stl": 0, "pts": 8},
+            {"name": "Mike Gray", "min": 38, "fg": "4-14", "ft": "0-0", "reb": "3-5", "pf": 1, "ast": 2, "to": 0, "blk": 0, "stl": 0, "pts": 8},
+            {"name": "John Dudley", "min": 40, "fg": "5-13", "ft": "2-2", "reb": "5-7", "pf": 4, "ast": 1, "to": 2, "blk": 0, "stl": 2, "pts": 12},
+            {"name": "Todd Benn", "min": 46, "fg": "5-11", "ft": "0-0", "reb": "0-0", "pf": 4, "ast": 3, "to": 1, "blk": 0, "stl": 1, "pts": 10},
+            {"name": "Andy Johanneen", "min": 9, "fg": "1-1", "ft": "0-0", "reb": "0-0", "pf": 1, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Curtis Myles", "min": 2, "fg": "0-0", "ft": "0-2", "reb": "0-0", "pf": 0, "ast": 1, "to": 0, "blk": 0, "stl": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true,
+      "notes": "Points taken directly from sheet's TP column. UNM player pts sum 14+13+0+4+16+8=55 matches final score 55; CSU player pts sum 7+8+8+12+10+2+0=47 matches final score 47. Team FG/FT sheet totals for New Mexico (21 FG, 13 FT) match player-line sums exactly. Colorado State's printed FG total (20) is one less than the player-line sum (21) computed from individual FG-FGA entries -- likely a handwriting misread of one player's FGA/FG digit -- but since the point checksum (the ruthless-skip criterion) matches exactly via the sheet's own TP column, this game is kept. T.J. Drake's and Mike Winders' MIN values were illegible/ambiguous and omitted rather than guessed; Nelson Franke's assist count was ambiguous and omitted for the same reason."
+    }
+  ],
+  "skipped": []
+}

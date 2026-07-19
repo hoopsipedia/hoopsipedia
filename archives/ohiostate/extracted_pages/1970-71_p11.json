@@ -1,0 +1,49 @@
+{
+  "page": 11,
+  "games": [
+    {
+      "date": "1971-01-09",
+      "opponent": "Iowa Hawkeyes",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 97,
+          "players": [
+            {"name": "Minor", "fg": "5-7", "ft": "4-5", "pf": 2, "reb": 11, "pts": 14},
+            {"name": "Wagar", "fg": "2-4", "ft": "0-0", "pf": 2, "reb": 1, "pts": 4},
+            {"name": "Witte", "fg": "5-13", "ft": "4-5", "pf": 3, "reb": 14, "pts": 14},
+            {"name": "Hornyak", "fg": "12-19", "ft": "6-8", "pf": 2, "reb": 3, "pts": 30},
+            {"name": "Cleamons", "fg": "8-17", "ft": "7-8", "pf": 4, "reb": 8, "pts": 23},
+            {"name": "Siekmann", "fg": "2-4", "ft": "2-2", "pf": 2, "reb": 4, "pts": 6},
+            {"name": "Merchant", "fg": "0-0", "ft": "2-2", "pf": 1, "reb": 2, "pts": 2},
+            {"name": "Macknin", "fg": "2-2", "ft": "0-0", "pf": 0, "reb": 3, "pts": 4},
+            {"name": "Petty", "fg": "0-0", "ft": "0-0", "pf": 0, "reb": 0, "pts": 0},
+            {"name": "Testerman", "fg": "0-0", "ft": "0-0", "pf": 0, "reb": 0, "pts": 0},
+            {"name": "Painter", "fg": "0-1", "ft": "0-0", "pf": 0, "reb": 0, "pts": 0},
+            {"name": "Heximer", "fg": "0-1", "ft": "0-0", "pf": 0, "reb": 0, "pts": 0},
+            {"name": "Kiracofe", "fg": "0-0", "ft": "0-0", "pf": 0, "reb": 0, "pts": 0}
+          ],
+          "checksum_ok": true
+        },
+        {
+          "name": "Iowa Hawkeyes",
+          "score": 76,
+          "players": [
+            {"name": "Grabinski", "fg": "3-7", "ft": "2-2", "pf": 4, "reb": 2, "pts": 8},
+            {"name": "Williams", "fg": "3-13", "ft": "0-0", "pf": 2, "reb": 1, "pts": 6},
+            {"name": "Kunnert", "fg": "0-3", "ft": "1-1", "pf": 5, "reb": 9, "pts": 1},
+            {"name": "Brown", "fg": "14-28", "ft": "7-7", "pf": 5, "reb": 10, "pts": 35},
+            {"name": "Angelino", "fg": "3-12", "ft": "0-1", "pf": 3, "reb": 2, "pts": 6},
+            {"name": "Lusk", "fg": "0-3", "ft": "2-2", "pf": 0, "reb": 1, "pts": 2},
+            {"name": "Hasley", "fg": "1-4", "ft": "1-2", "pf": 0, "reb": 3, "pts": 3},
+            {"name": "Rowat", "fg": "4-9", "ft": "0-0", "pf": 1, "reb": 4, "pts": 8, "note": "printed pts digit ambiguous on scan; value computed as 2*fg_made+ft_made to reconcile with team total"},
+            {"name": "Gould", "fg": "2-8", "ft": "3-6", "pf": 1, "reb": 5, "pts": 7},
+            {"name": "Angersola", "fg": "0-0", "ft": "0-0", "pf": 0, "reb": 0, "pts": 0}
+          ],
+          "checksum_ok": true
+        }
+      ]
+    }
+  ],
+  "skipped": []
+}

@@ -1,0 +1,11 @@
+{
+  "page": 10,
+  "games": [],
+  "skipped": [
+    {
+      "date": "1938-01-22",
+      "opponent": "Illinois",
+      "reason": "Newspaper clipping box score ('Buck Cagers Wallop Illini', Coliseum, attendance 6,145). Article text and Illinois player-line totals confirm final score Ohio State 46, Illinois 26 (Illinois player pts sum to exactly 26, checksum OK). However Ohio State player pts (computed as 2*FG+FT per player, each individually self-consistent with its own row) sum to 47, one more than the reported 46, and the printed team totals row for Ohio State (G/F/PF columns) also does not internally reconcile with the individual rows in this low-resolution scan. Could not confidently identify which single digit is the OCR/scan misread, and only one re-read of the page is permitted, so the Ohio State side is skipped rather than guessed. Top-of-page score box ('.6 / 28') is also scan-garbled and was not used."
+    }
+  ]
+}

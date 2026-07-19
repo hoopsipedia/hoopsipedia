@@ -1,0 +1,9 @@
+{
+  "page": 3,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "1976-12-01 New Mexico Lobos @ New Mexico State Aggies (Las Cruces, NM, Final 103-112): fully legible typed box score, but New Mexico Lobos side fails checksum. Sum of Lobos player points (Smiley 6 + Cacy 4 + Davis 5 + Johnson 22 + Cooper 8 + Howard 14 + Reid 19 + Felix 2 + Allen 21) = 101, which does not equal the recorded team final score of 103 (also confirmed by period score box 45+58=103). Individually each player's FT/FG made figures are internally consistent with that player's own printed PTS value, and the team FT total (15) matches the sum of individual FT made exactly, but team FG-made total printed on the sheet (44) is 1 higher than the sum of individual FG-made values (43), producing the 2-point gap. Re-read the page once and could not identify which specific player's FG count was mistyped/misread vs. an original scorer arithmetic error on the sheet; skipping rather than guessing. New Mexico State Aggies side, by contrast, checksums perfectly (player pts sum 112 = team total 112 = final score 112; FG 44/FT 24 sums match team totals exactly) but is skipped as part of the same two-team game record per instructions."
+    }
+  ]
+}

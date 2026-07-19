@@ -1,0 +1,49 @@
+{
+  "page": 1,
+  "games": [
+    {
+      "date": "1973-12-01",
+      "opponent": "New Mexico State Aggies",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 75,
+          "players": [
+            {"name": "Gabe Nava", "min": 29, "fg": "5-9", "ft": "5-6", "reb": 3, "ast": 0, "pf": 3, "to": 5, "pts": 15},
+            {"name": "Wendell Taylor", "min": 26, "fg": "4-5", "ft": "4-4", "reb": 6, "ast": 3, "pf": 4, "to": 2, "pts": 12},
+            {"name": "Bernard Hardin", "min": 24, "fg": "7-13", "ft": "2-2", "reb": 8, "ast": 0, "pf": 4, "to": 3, "pts": 16},
+            {"name": "Mark Saiers", "min": 35, "fg": "3-7", "ft": "2-3", "reb": 6, "ast": 3, "pf": 2, "to": 0, "pts": 8},
+            {"name": "Bill Hagins", "min": 22, "fg": "6-10", "ft": "4-4", "reb": 10, "ast": 3, "pf": 3, "to": 7, "pts": 16},
+            {"name": "Bruce Hudson", "min": 0, "pts": 0, "note": "DNP"},
+            {"name": "Pat King", "min": 23, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 1, "pf": 2, "to": 1, "pts": 0},
+            {"name": "Bob Toppert", "min": 4, "fg": "1-2", "ft": "0-0", "reb": 1, "ast": 0, "pf": 1, "to": 0, "pts": 2},
+            {"name": "Bruce Battle", "min": 15, "fg": "0-4", "ft": "4-4", "reb": 2, "ast": 1, "pf": 2, "to": 2, "pts": 4},
+            {"name": "Rich Pokorski", "min": 10, "fg": "1-1", "ft": "0-1", "reb": 1, "ast": 0, "pf": 0, "to": 1, "pts": 2},
+            {"name": "Mike Patterson", "min": 0, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "pts": 0, "note": "DNP"},
+            {"name": "Paul Kruse", "min": 2, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "pts": 0},
+            {"name": "Dan Davis", "min": 0, "pts": 0, "note": "DNP"}
+          ]
+        },
+        {
+          "name": "New Mexico State Aggies",
+          "score": 66,
+          "players": [
+            {"name": "John DiBiase", "min": 16, "ft": "0-0", "reb": 1, "ast": 2, "pf": 5, "to": 6, "pts": 2, "note": "FG attempts illegible (blotted on sheet); made=1 legible"},
+            {"name": "Bill Allen", "min": 13, "fg": "1-2", "ft": "3-5", "reb": 0, "ast": 2, "pf": 1, "to": 3, "pts": 5},
+            {"name": "Steve White", "min": 36, "fg": "4-10", "ft": "1-2", "reb": 2, "ast": 6, "pf": 4, "to": 3, "pts": 9},
+            {"name": "Roland Grant", "min": 38, "fg": "8-15", "ft": "0-1", "reb": 9, "ast": 3, "pf": 3, "to": 1, "pts": 16},
+            {"name": "Hal Robinson", "min": 33, "fg": "8-14", "ft": "2-2", "reb": 6, "ast": 1, "pf": 3, "to": 1, "pts": 18},
+            {"name": "Richard Robinson", "min": 27, "fg": "3-14", "ft": "4-4", "reb": 2, "ast": 0, "pf": 1, "to": 2, "pts": 10},
+            {"name": "Dexter Hawkins", "min": 1, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "to": 0, "pts": 0},
+            {"name": "George Pannell", "min": 0, "pts": 0, "note": "DNP"},
+            {"name": "Allan Graham", "min": 21, "fg": "2-4", "ft": "0-1", "reb": 4, "ast": 2, "pf": 4, "to": 1, "pts": 4},
+            {"name": "Jim Bostic", "min": 9, "fg": "0-2", "ft": "0-0", "reb": 2, "ast": 0, "pf": 1, "to": 1, "pts": 0},
+            {"name": "Russell Letz", "min": 6, "fg": "1-1", "ft": "0-0", "reb": 0, "ast": 2, "pf": 0, "to": 0, "pts": 2}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

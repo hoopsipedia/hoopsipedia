@@ -1,0 +1,40 @@
+{
+  "page": 15,
+  "games": [
+    {
+      "date": "1938-02-07",
+      "opponent": "Chicago",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 36,
+          "players": [
+            {"name": "Hull", "fg": "8", "ft": "1", "pts": 17},
+            {"name": "Baker", "fg": "1", "ft": "0", "pts": 2},
+            {"name": "Schick", "fg": "5", "ft": "0", "pts": 10},
+            {"name": "Goletz", "fg": "0", "ft": "0", "pts": 0},
+            {"name": "Stafford", "fg": "1", "ft": "0", "pts": 2},
+            {"name": "McDonald", "fg": "2", "ft": "0", "pts": 4},
+            {"name": "Boughner", "fg": "0", "ft": "1", "pts": 1},
+            {"name": "Prewitt", "fg": "0", "ft": "0", "pts": 0}
+          ]
+        },
+        {
+          "name": "Chicago Maroons",
+          "score": 34,
+          "players": [
+            {"name": "Lounsbury", "fg": "1", "ft": "0", "pts": 2},
+            {"name": "Mullins", "fg": "2", "ft": "1", "pts": 5},
+            {"name": "Canella", "fg": "4", "ft": "2", "pts": 10},
+            {"name": "Amundsen", "fg": "0", "ft": "1", "pts": 1},
+            {"name": "Meyer", "fg": "2", "ft": "0", "pts": 4},
+            {"name": "Rosslin", "fg": "2", "ft": "2", "pts": 6},
+            {"name": "Eggemeyer", "fg": "3", "ft": "0", "pts": 6}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

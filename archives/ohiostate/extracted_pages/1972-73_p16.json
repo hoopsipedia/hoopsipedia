@@ -1,0 +1,46 @@
+{
+  "page": 16,
+  "games": [
+    {
+      "date": "1973-02-03",
+      "opponent": "Wisconsin",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 76,
+          "players": [
+            {"name": "Jackson", "fg": "3-10", "ft": "2-2", "reb": 7, "pf": 4, "pts": 8},
+            {"name": "Andreas", "fg": "3-7", "ft": "0-1", "reb": 9, "pf": 5, "pts": 6},
+            {"name": "Taylor", "fg": "0-2", "ft": "0-0", "reb": 1, "pf": 2, "pts": 0},
+            {"name": "Hornyak", "fg": "11-31", "ft": "13-17", "reb": 3, "pf": 2, "pts": 35},
+            {"name": "Merchant", "fg": "4-12", "ft": "0-0", "reb": 5, "pf": 4, "pts": 8},
+            {"name": "Witte", "fg": "5-9", "ft": "5-6", "reb": 10, "pf": 5, "pts": 15},
+            {"name": "Wenner", "fg": "1-1", "ft": "0-0", "reb": 1, "pf": 1, "pts": 2},
+            {"name": "Wolfe", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Gerhard", "fg": "1-2", "ft": "0-0", "reb": 0, "pf": 1, "pts": 2},
+            {"name": "Siekmann", "fg": "0-1", "ft": "0-0", "reb": 0, "pf": 1, "pts": 0},
+            {"name": "Wagar", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Wisconsin Badgers",
+          "score": 84,
+          "players": [
+            {"name": "Howard", "fg": "7-12", "ft": "10-12", "reb": 4, "pf": 1, "pts": 24},
+            {"name": "Kerry Hughes", "fg": "7-14", "ft": "7-7", "reb": 14, "pf": 1, "pts": 21},
+            {"name": "Kim Hughes", "fg": "3-8", "ft": "3-5", "reb": 13, "pf": 5, "pts": 9},
+            {"name": "Anderson", "fg": "6-8", "ft": "0-0", "reb": 3, "pf": 5, "pts": 12},
+            {"name": "McCoy", "fg": "6-14", "ft": "0-0", "reb": 11, "pf": 2, "pts": 12},
+            {"name": "Luehsinger", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 5, "pts": 0},
+            {"name": "McCauley", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Koehler", "fg": "1-4", "ft": "2-3", "reb": 3, "pf": 2, "pts": 4},
+            {"name": "Paterick", "fg": "1-1", "ft": "0-0", "reb": 0, "pf": 4, "pts": 2}
+          ]
+        }
+      ],
+      "checksum_ok": true,
+      "notes": "Sheet has no per-player MIN/AST/TO/STL/BLK columns; pts column present directly (not computed). Team rebound totals (2 for each team, listed on a 'Team' row) are included in the printed reb totals (38 and 50) but not attributed to any individual player, so summed player rebounds are slightly less than the printed team total."
+    }
+  ],
+  "skipped": []
+}

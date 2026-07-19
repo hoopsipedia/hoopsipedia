@@ -1,0 +1,49 @@
+{
+  "page": 5,
+  "games": [
+    {
+      "date": "1981-12-12",
+      "opponent": "Boston University",
+      "ucla_score": 77,
+      "opp_score": 43,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 77,
+          "players": [
+            {"name": "Sanders", "min": 30, "fg": "8-17", "ft": "5-6", "reb": 9, "pf": 1, "ast": 2, "to": 1, "blk": 1, "stl": 1, "pts": 21},
+            {"name": "Fields", "min": 29, "fg": "6-11", "ft": "0-0", "reb": 9, "pf": 2, "ast": 1, "to": 1, "blk": 1, "stl": 1, "pts": 12},
+            {"name": "Gray", "min": 23, "fg": "0-1", "ft": "1-5", "reb": 7, "pf": 3, "to": 1, "stl": 1, "pts": 1},
+            {"name": "Jackson", "min": 30, "fg": "5-8", "ft": "4-6", "reb": 6, "pf": 2, "ast": 4, "to": 1, "blk": 1, "stl": 2, "pts": 14},
+            {"name": "Holton", "min": 27, "fg": "1-7", "ft": "4-5", "reb": 2, "pf": 0, "to": 2, "pts": 6},
+            {"name": "Miguel", "min": 16, "fg": "1-5", "ft": "0-1", "reb": 2, "pf": 3, "ast": 1, "to": 1, "pts": 2},
+            {"name": "Foster", "min": 14, "fg": "1-4", "ft": "0-0", "reb": 0, "pf": 0, "ast": 1, "stl": 1, "pts": 2},
+            {"name": "Daye", "min": 10, "fg": "0-0", "ft": "0-0", "reb": 1, "pf": 1, "ast": 4, "stl": 1, "pts": 0},
+            {"name": "Sears", "min": 5, "fg": "2-2", "ft": "0-0", "reb": 2, "pf": 0, "blk": 1, "pts": 4},
+            {"name": "Maloncon", "min": 5, "fg": "2-4", "ft": "0-0", "reb": 1, "pf": 1, "ast": 1, "to": 1, "pts": 4},
+            {"name": "Eaton", "min": 5, "fg": "2-3", "ft": "0-0", "reb": 2, "pf": 1, "pts": 4},
+            {"name": "Anderson", "min": 3, "fg": "3-3", "ft": "1-2", "reb": 1, "pf": 0, "pts": 7},
+            {"name": "Wright", "min": 2, "fg": "0-0", "ft": "0-0", "reb": 1, "pf": 1, "ast": 1, "pts": 0},
+            {"name": "Pruitt", "min": 1, "fg": "0-0", "ft": "0-0", "reb": 1, "pf": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Boston University Terriers",
+          "score": 43,
+          "players": [
+            {"name": "Twyman", "min": 34, "fg": "5-14", "ft": "2-2", "reb": 5, "pf": 3, "ast": 1, "to": 4, "pts": 12},
+            {"name": "Brown, Arturo", "min": 27, "fg": "3-10", "ft": "3-4", "reb": 4, "pf": 5, "pts": 9},
+            {"name": "Fiedor", "min": 20, "fg": "0-1", "ft": "0-0", "reb": 5, "pf": 5, "ast": 0, "to": 2, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Brown, Brett", "min": 38, "fg": "1-4", "ft": "0-1", "reb": 5, "pf": 3, "ast": 2, "to": 4, "pts": 2},
+            {"name": "Wall", "min": 21, "fg": "0-3", "ft": "1-4", "reb": 3, "pf": 4, "pts": 1},
+            {"name": "Simms", "min": 24, "fg": "6-12", "ft": "1-2", "reb": 3, "pf": 1, "to": 1, "pts": 13},
+            {"name": "Teague", "min": 28, "fg": "1-3", "ft": "2-4", "reb": 1, "pf": 1, "ast": 4, "to": 1, "pts": 4},
+            {"name": "Lehman", "min": 8, "fg": "1-3", "ft": "0-0", "reb": 0, "pf": 0, "pts": 2}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

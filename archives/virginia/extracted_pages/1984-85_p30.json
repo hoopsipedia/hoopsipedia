@@ -1,0 +1,44 @@
+{
+  "page": 30,
+  "games": [
+    {
+      "date": "1985-03-08",
+      "opponent": "Georgia Tech",
+      "notes_game": "ACC Tournament First Round - Game 1, Atlanta, GA (The Omni). Site listed as Atlanta, Ga.",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 48,
+          "players": [
+            {"name": "Tom Sheehey", "min": 20, "fg": "1-4", "ft": "0-0", "reb": 1, "pf": 4, "ast": 2, "to": 3, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Dan Merrifield", "min": 20, "fg": "1-4", "ft": "0-0", "reb": 0, "pf": 2, "ast": 1, "to": 4, "stl": 2, "blk": 0, "pts": 2},
+            {"name": "Olden Polynice", "min": 34, "fg": "6-10", "ft": "1-1", "reb": 8, "pf": 4, "ast": 2, "to": 3, "stl": 0, "blk": 0, "pts": 13},
+            {"name": "Tom Calloway", "min": 11, "fg": "0-2", "ft": "0-0", "reb": 0, "pf": 2, "ast": 0, "to": 2, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Tim Mullen", "min": 34, "fg": "0-3", "ft": "0-0", "reb": 0, "pf": 2, "ast": 1, "to": 5, "stl": 1, "blk": 1, "pts": 0},
+            {"name": "Jim Miller", "min": 33, "fg": "7-9", "ft": "2-3", "reb": 5, "pf": 3, "ast": 2, "to": 0, "stl": 0, "blk": 0, "pts": 16},
+            {"name": "Darrick Simms", "min": 17, "fg": "1-5", "ft": "3-5", "reb": 1, "pf": 2, "ast": 2, "to": 3, "stl": 2, "blk": 0, "pts": 5},
+            {"name": "Mel Kennedy", "min": 31, "fg": "4-10", "ft": "2-2", "reb": 1, "pf": 1, "ast": 2, "to": 2, "stl": 2, "blk": 0, "pts": 10}
+          ]
+        },
+        {
+          "name": "Georgia Tech Yellow Jackets",
+          "score": 55,
+          "players": [
+            {"name": "John Salley", "min": 39, "fg": "3-8", "ft": "3-4", "ast": 2, "to": 4, "blk": 3, "pts": 9},
+            {"name": "Duane Ferrell", "min": 9, "fg": "0-3", "ft": "0-0", "ast": 1, "to": 0, "blk": 0, "pts": 0},
+            {"name": "Yvon Joseph", "min": 33, "fg": "5-9", "ft": "3-4", "ast": 0, "to": 5, "blk": 0, "pts": 13},
+            {"name": "Mark Price", "min": 39, "fg": "5-12", "ft": "0-0", "ast": 7, "to": 3, "blk": 0, "pts": 10},
+            {"name": "Bruce Dalrymple", "min": 38, "fg": "6-9", "ft": "3-8", "ast": 4, "to": 1, "blk": 0, "pts": 15},
+            {"name": "Scott Petway", "min": 32, "fg": "2-5", "ft": "2-2", "ast": 2, "to": 1, "blk": 0, "pts": 6},
+            {"name": "Antoine Ford", "min": 7, "fg": "0-0", "ft": "0-0", "ast": 0, "to": 0, "blk": 0, "pts": 0},
+            {"name": "John Martinson", "min": 2, "fg": "0-0", "ft": "2-3", "ast": 0, "to": 0, "blk": 0, "pts": 2},
+            {"name": "Jack Mansell", "min": 1, "fg": "0-0", "ft": "0-0", "ast": 0, "to": 0, "blk": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": [],
+  "notes": "Team-level score-by-periods box confirms 48-55 (VA 19+29, GT 30+25). Virginia FG/FGA/FT/FTA/pts/min/ast/to/blk/stl all cross-validated to exact match against the sheet's TOTALS row (20-47 FG, 8-11 FT, 48 pts, 200 min, 12 ast, 22 to, 1 blk, 7 stl), so reb and pf are included for Virginia with high confidence (pf sum 20 also matches team PF total). For Georgia Tech, fg/ft/pts/min/ast/to/blk were likewise cross-validated exactly against team totals (21-46 FG, 13-21 FT, 55 pts, 200 min, 16 ast, 14 to, 3 blk) and are reported; the reb, pf, and stl columns for Georgia Tech could not be reconciled against the team totals row (summed values came out well above the printed team totals, indicating a column-read error on this scan), so those three fields were omitted for Georgia Tech players rather than guessed."
+}

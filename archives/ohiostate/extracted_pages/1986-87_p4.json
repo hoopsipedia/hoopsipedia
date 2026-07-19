@@ -1,0 +1,9 @@
+{
+  "page": 4,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page 4 holds one game: Siena at Ohio State, Dec 4 1986, St. John Arena, Columbus OH (final Ohio State 101, Siena 57 -- clearly legible in the TOTALS and 'SCORE BY PERIODS' rows). However this is a handwritten official scoresheet scan with heavy degradation: many player rows are overlaid with shading/strikethrough marks and overlapping ink (e.g. Siena rows for Henderson, Garver/Carver, Hipp, Smith; Ohio State rows for Hopson, Wilson, White, Duncan, Martinez, Printup) that make individual FG/FT/rebound/point cells impossible to read with confidence. Guessing values risked producing a false-passing checksum, so per instructions the whole game was skipped rather than transcribed. Team-level totals (Siena 26-62 FG, 57 pts; Ohio State 36-70 FG, 101 pts) are visible but per-player lines needed for the required schema could not be reliably extracted from this single read pass."
+    }
+  ]
+}

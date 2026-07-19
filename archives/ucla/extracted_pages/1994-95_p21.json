@@ -1,0 +1,43 @@
+{
+  "page": 21,
+  "games": [
+    {
+      "date": "1995-02-21",
+      "opponent": "Stanford",
+      "ucla_score": 88,
+      "opp_score": 77,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 88,
+          "players": [
+            {"name": "O'Bannon, C.", "min": 38, "fg": "6-9", "tp": "1-1", "ft": "0-0", "reb": 7, "ast": 4, "pf": 3, "to": 1, "stl": 2, "blk": 0, "pts": 13},
+            {"name": "O'Bannon, E.", "min": 38, "fg": "5-12", "tp": "0-1", "ft": "12-13", "reb": 9, "ast": 5, "pf": 2, "to": 2, "stl": 3, "blk": 5, "pts": 22},
+            {"name": "Zidek", "min": 17, "fg": "3-5", "tp": "0-0", "ft": "0-0", "reb": 4, "ast": 1, "pf": 4, "to": 3, "stl": 0, "blk": 0, "pts": 6},
+            {"name": "Edney", "min": 37, "fg": "5-5", "tp": "0-0", "ft": "4-6", "reb": 3, "ast": 10, "pf": 3, "to": 3, "stl": 2, "blk": 0, "pts": 14},
+            {"name": "Bailey", "min": 37, "fg": "4-12", "tp": "1-4", "ft": "3-4", "reb": 6, "ast": 1, "pf": 1, "to": 2, "stl": 1, "blk": 2, "pts": 12},
+            {"name": "Dollar", "min": 6, "fg": "1-1", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 1, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Henderson", "min": 27, "fg": "8-13", "tp": "0-0", "ft": "3-3", "reb": 4, "ast": 2, "pf": 4, "to": 2, "stl": 1, "blk": 1, "pts": 19}
+          ]
+        },
+        {
+          "name": "Stanford Cardinal",
+          "score": 77,
+          "players": [
+            {"name": "Allaway", "min": 30, "fg": "4-7", "tp": "0-0", "ft": "1-2", "reb": 4, "ast": 0, "pf": 5, "to": 1, "stl": 0, "blk": 1, "pts": 9},
+            {"name": "Poppink", "min": 38, "fg": "10-16", "tp": "1-1", "ft": "2-3", "reb": 9, "ast": 4, "pf": 5, "to": 3, "stl": 0, "blk": 0, "pts": 23},
+            {"name": "Young", "min": 24, "fg": "5-10", "tp": "0-2", "ft": "2-2", "reb": 7, "ast": 1, "pf": 3, "to": 2, "stl": 0, "blk": 1, "pts": 12},
+            {"name": "Cross", "min": 39, "fg": "5-14", "tp": "2-7", "ft": "4-4", "reb": 3, "ast": 2, "pf": 1, "to": 3, "stl": 1, "blk": 0, "pts": 16},
+            {"name": "Knight", "min": 30, "fg": "2-12", "tp": "1-2", "ft": "2-3", "reb": 5, "ast": 9, "pf": 2, "to": 3, "stl": 3, "blk": 0, "pts": 7},
+            {"name": "Harbour", "min": 26, "fg": "2-11", "tp": "1-6", "ft": "5-8", "reb": 5, "ast": 0, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 10},
+            {"name": "Lammersen", "min": 3, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Gravely", "min": 1, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Manley", "min": 1, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "pf": 3, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

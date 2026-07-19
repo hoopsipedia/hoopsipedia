@@ -1,0 +1,40 @@
+{
+  "page": 9,
+  "games": [
+    {
+      "date": null,
+      "opponent": "Indiana",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 27,
+          "players": [
+            {"name": "Colburn", "fg": "3", "ft": "1", "pf": "1", "pts": 8},
+            {"name": "Low", "fg": "0", "ft": "0", "pf": "0", "pts": 0},
+            {"name": "Itlinger", "fg": "3", "ft": "1", "pf": "2", "pts": 6},
+            {"name": "Sequist", "fg": "1", "ft": "1", "pf": "3", "pts": 2},
+            {"name": "Olson", "fg": "2", "ft": "0", "pf": "0", "pts": 4},
+            {"name": "Itner", "fg": "3", "ft": "0", "pf": "1", "pts": 6},
+            {"name": "Conrad", "fg": "0", "ft": "1", "pf": "2", "pts": 1}
+          ]
+        },
+        {
+          "name": "Indiana",
+          "score": 23,
+          "players": [
+            {"name": "Ehrt", "fg": "0", "ft": "0", "pf": "2", "pts": 2},
+            {"name": "Lker", "fg": "0", "ft": "0", "pf": "1", "pts": 0},
+            {"name": "Out", "fg": "2", "ft": "2", "pf": "1", "pts": 5},
+            {"name": "Ffman", "fg": "1", "ft": "0", "pf": "1", "pts": 2},
+            {"name": "Ulter", "fg": "0", "ft": "0", "pf": "0", "pts": 0},
+            {"name": "Ir", "fg": "3", "ft": "0", "pf": "0", "pts": 7},
+            {"name": "Rter", "fg": "2", "ft": "1", "pf": "1", "pts": 7}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": [],
+  "notes": "Ohio State vs Indiana, 1933-34 season, at the Coliseum (Columbus), coach H.G. Olsen; captain Conrad; referee 'Frank Lane-Cincinnati'; halftime score Ohio 15, Indiana 15. Left margin of the scoresheet is cropped/cut off on the scan, truncating the first 1-2 letters of every player surname on the page (e.g. header 'chio State' for 'Ohio State', 'olburn' for what is confidently 'Colburn'). High-confidence reconstructions used for 'Colburn', 'Olson' (common surnames) and 'Conrad' (cross-verified against the printed Captain field). All other player names (OSU: Low/Itlinger/Sequist/Itner; Indiana: all seven) are transcribed as the literal visible fragment only -- the true full surnames could not be confidently reconstructed and should be treated as incomplete/uncertain, not invented. The sheet's columns are G. (field goals made), F. (ambiguous - times fouled/free-throw opportunities, could not be reliably mapped to a standard stat and was omitted), M.F. (free throws made), P. (personal fouls), PTS. (points, printed directly). No attempts (FGA/FTA), minutes, rebounds, assists, turnovers, steals, or blocks are on this sheet, so fg/ft values given are MAKES ONLY (not 'made-attempted' format) and reb/ast/to/stl/blk/min keys are omitted entirely. Exact game date is illegible handwritten cursive at the bottom of the page (only 'YEAR 1934' is clearly legible); left as null rather than guessed. Checksum passes for both teams: OSU player pts sum to 27 (matches team score and printed TOTALS), Indiana player pts sum to 23 (matches team score and printed TOTALS); the G/F/M.F./P. column sums also independently match the printed TOTALS row for both teams, confirming the numeric transcription is accurate even though the PTS column does not equal a simple 2*FG+FTmade formula for individual rows (an idiosyncrasy of this era's scoresheet, not a transcription error)."
+}

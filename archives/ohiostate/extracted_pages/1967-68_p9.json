@@ -1,0 +1,9 @@
+{
+  "page": 9,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Single game on page: Hawaii at Ohio State, 1967-12-30 (final Hawaii 80, Ohio State 76). Hawaii's box score is legible and checksums cleanly (FG 32-66, FT 16-21, player points sum to 80). However Ohio State's box score is too faint/ambiguous to transcribe confidently: several free-throw made/attempt cells (Sorenson, Hosket, Gedves, Schnabel) are smudged or overlapping digits, multiple rows (Kinsey, Spies, Barnard) are blank or crossed out, and Barclay/Rogers entries at the bottom appear to be in different handwriting with incomplete data, making it impossible to reliably reconstruct a player-point sum that checksums against the final score of 76. Skipping the entire game rather than reporting a one-sided or guessed box score."
+    }
+  ]
+}

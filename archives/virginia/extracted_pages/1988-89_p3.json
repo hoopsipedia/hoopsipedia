@@ -1,0 +1,50 @@
+{
+  "page": 3,
+  "games": [
+    {
+      "date": "1988-11-30",
+      "opponent": "Arkansas Razorbacks",
+      "site": "Charlottesville, VA",
+      "attendance": "8864 (sellout)",
+      "teams": [
+        {
+          "name": "Arkansas Razorbacks",
+          "score": 65,
+          "record": "1-1",
+          "players": [
+            {"name": "Larry Marks", "min": 30, "fg": "5-7", "tp": "0-0", "reb": 5, "pf": 2, "ast": 1, "to": 1, "stl": 1, "pts": 10},
+            {"name": "Lenzie Howell", "min": 23, "fg": "4-9", "tp": "0-1", "ft": "1-1", "reb": 4, "pf": 1, "ast": 1, "to": 5, "pts": 9},
+            {"name": "Mario Credit", "min": 25, "fg": "4-5", "reb": 6, "pf": 5, "ast": 1, "to": 3, "stl": 1, "pts": 8, "note": "fouled out (5 PF)"},
+            {"name": "Lee Mayberry", "min": 37, "fg": "1-6", "tp": "0-2", "reb": 3, "ast": 2, "to": 2, "stl": 1, "pts": 2},
+            {"name": "Keith Wilson", "min": 26, "fg": "2-7", "tp": "0-4", "ft": "1-2", "reb": 2, "pf": 4, "ast": 2, "to": 2, "stl": 1, "pts": 5},
+            {"name": "Arlyn Bowers", "min": 16, "fg": "1-4", "tp": "0-1", "reb": 2, "pf": 2, "ast": 5, "to": 3, "stl": 1, "pts": 2},
+            {"name": "Todd Day", "min": 28, "fg": "7-12", "tp": "2-2", "ft": "4-6", "reb": 3, "pf": 3, "to": 1, "stl": 1, "pts": 20},
+            {"name": "Oliver Miller", "min": 13, "fg": "4-5", "ft": "1-2", "reb": 1, "pf": 1, "pts": 9},
+            {"name": "Cannon Whitby", "min": 1, "fg": "0-1", "pts": 0}
+          ]
+        },
+        {
+          "name": "Virginia Cavaliers",
+          "score": 75,
+          "record": "3-0",
+          "players": [
+            {"name": "Bill Batts", "min": 18, "fg": "1-3", "ft": "3-5", "reb": 3, "pf": 2, "to": 4, "stl": 1, "pts": 5},
+            {"name": "Bryant Stith", "min": 19, "fg": "4-7", "ft": "1-1", "reb": 4, "pf": 3, "to": 5, "pts": 9},
+            {"name": "Brent Bair", "min": 13, "fg": "0-3", "reb": 1, "pf": 1, "pts": 0},
+            {"name": "Richard Morgan", "min": 34, "fg": "9-15", "tp": "3-6", "ft": "0-1", "pf": 2, "ast": 2, "pts": 21},
+            {"name": "John Crotty", "min": 35, "fg": "4-7", "tp": "0-3", "ft": "1-3", "reb": 5, "pf": 1, "ast": 7, "stl": 1, "pts": 9},
+            {"name": "Kenny Turner", "min": 21, "fg": "6-7", "ft": "1-2", "reb": 1, "pf": 3, "ast": 1, "pts": 13},
+            {"name": "Curtis Williams", "min": 21, "fg": "6-9", "reb": 4, "pf": 1, "ast": 2, "to": 1, "pts": 12},
+            {"name": "Brent Dabbs", "min": 14, "fg": "1-2", "ft": "1-2", "reb": 1, "pf": 1, "pts": 3},
+            {"name": "Anthony Oliver", "min": 6, "fg": "1-2", "tp": "0-1", "ft": "1-2", "reb": 1, "pf": 1, "stl": 1, "pts": 3},
+            {"name": "Dirk Katstra", "min": 5, "reb": 1, "pf": 1, "pts": 0},
+            {"name": "Jeff Daniel", "min": 14, "fg": "0-2", "reb": 2, "pf": 2, "ast": 1, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true,
+      "notes": "Points column (TP) explicit on sheet for all players; verified consistent with 2*FGmade(non-3)+3*3PTmade+FTmade formula. Rebound values taken from the 'Tot' rebounds sub-column; some individual Off/Def sub-splits were hard to read precisely but totals used for checksum are from explicit TP column, not rebounds, so accuracy of reb splits does not affect the pts checksum. Ast/TO/Stl/Blk blank cells treated as 0/omitted where illegible or absent. Arkansas Darrell Hawkins listed on roster but no stats recorded (did not play) - omitted."
+    }
+  ],
+  "skipped": []
+}

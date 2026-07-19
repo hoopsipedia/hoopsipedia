@@ -1,0 +1,41 @@
+{
+  "page": 24,
+  "games": [
+    {
+      "date": "1973-03-08",
+      "opponent": "Duke Blue Devils",
+      "note": "ACC Tournament Quarterfinals; attendance 15,182; officials Allmond & Nichols",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 59,
+          "players": [
+            {"name": "Drummond", "min": 40, "fg": "3-6", "ft": "0-0", "reb": 3, "pf": 2, "ast": 1, "to": 2, "pts": 6},
+            {"name": "Gerard", "min": 38, "fg": "6-10", "ft": "0-1", "reb": 6, "pf": 2, "ast": 1, "to": 2, "pts": 12},
+            {"name": "Hobgood", "min": 28, "fg": "1-3", "ft": "3-3", "reb": 5, "pf": 0, "ast": 0, "to": 0, "pts": 5},
+            {"name": "Walker", "min": 31, "fg": "5-8", "ft": "2-2", "reb": 2, "pf": 3, "ast": 0, "to": 3, "pts": 12},
+            {"name": "Parkhill", "min": 37, "fg": "9-16", "ft": "4-4", "reb": 5, "pf": 3, "ast": 5, "to": 1, "pts": 22},
+            {"name": "McKeag", "min": 23, "fg": "1-2", "ft": "0-2", "reb": 2, "pf": 1, "ast": 0, "to": 1, "pts": 2},
+            {"name": "Boninti", "min": 3, "fg": "0-1", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Duke Blue Devils",
+          "score": 55,
+          "players": [
+            {"name": "Billerman", "min": 38, "fg": "6-13", "ft": "0-0", "reb": 4, "pf": 2, "ast": 1, "to": 2, "pts": 12},
+            {"name": "Fleischer", "min": 24, "fg": "1-3", "ft": "4-4", "reb": 8, "pf": 3, "ast": 0, "to": 2, "pts": 6, "note": "assists digit illegible on sheet; value derived from team assist-total checksum (6)"},
+            {"name": "Shaw", "min": 36, "fg": "2-2", "ft": "0-0", "reb": 3, "pf": 1, "ast": 0, "to": 2, "pts": 4, "note": "assists digit illegible on sheet; value derived from team assist-total checksum (6)"},
+            {"name": "Kramer", "min": 17, "fg": "1-3", "ft": "0-0", "reb": 0, "pf": 2, "ast": 0, "to": 0, "pts": 2},
+            {"name": "Melchionni", "min": 40, "fg": "7-16", "ft": "0-2", "reb": 3, "pf": 3, "ast": 2, "to": 1, "pts": 14},
+            {"name": "Redding", "min": 27, "fg": "5-11", "ft": "3-3", "reb": 3, "pf": 2, "ast": 1, "to": 2, "pts": 13},
+            {"name": "Suk", "min": 17, "fg": "1-1", "ft": "0-0", "reb": 1, "pf": 2, "ast": 2, "to": 1, "pts": 2},
+            {"name": "O'Connell", "min": 1, "fg": "1-2", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 0, "pts": 2, "note": "assists digit illegible on sheet; value derived from team assist-total checksum (6)"}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

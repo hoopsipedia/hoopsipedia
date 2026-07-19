@@ -1,0 +1,9 @@
+{
+  "page": 14,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page contains a legible official NCAA/ACC box score (North Carolina at Virginia, 1/15/83, Charlottesville, VA) with a 3PT FG-FGA column (ACC's experimental 3-point line era), but handwritten digits in several fields (notably Perkins' 3PT/FG line, Daugherty's FT-FTA, and several MIN/TP entries) are ambiguous enough that summing player TP values against the team final score fails checksum (player TP sum ~101 vs. an apparent final score in the 120s/95 range). Given only one allowed re-read and no way to gain image resolution, skipping rather than guessing at ambiguous handwritten totals."
+    }
+  ]
+}

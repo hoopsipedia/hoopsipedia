@@ -1,0 +1,45 @@
+{
+  "page": 12,
+  "games": [
+    {
+      "date": "1986-01-16",
+      "opponent": "Arizona State",
+      "ucla_score": 86,
+      "opp_score": 75,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 86,
+          "players": [
+            {"name": "Miller", "min": 40, "fg": "9-15", "ft": "17-17", "reb": 9, "ast": 2, "pf": 2, "to": 4, "stl": 3, "blk": 0, "pts": 35},
+            {"name": "Jackson", "min": 29, "fg": "1-3", "ft": "2-3", "reb": 6, "ast": 2, "pf": 1, "to": 1, "stl": 1, "blk": 0, "pts": 4},
+            {"name": "Haley", "min": 30, "fg": "1-4", "ft": "2-3", "reb": 5, "ast": 1, "pf": 4, "to": 1, "stl": 1, "blk": 0, "pts": 4},
+            {"name": "Hatcher", "min": 34, "fg": "13-16", "ft": "1-1", "reb": 0, "ast": 2, "pf": 1, "to": 2, "stl": 0, "blk": 1, "pts": 27},
+            {"name": "Richardson", "min": 28, "fg": "3-6", "ft": "4-4", "reb": 3, "ast": 6, "pf": 3, "to": 6, "stl": 1, "blk": 0, "pts": 10},
+            {"name": "Palmer", "min": 17, "fg": "0-1", "ft": "0-0", "reb": 1, "ast": 0, "pf": 1, "to": 2, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Rochelin", "min": 20, "fg": "2-2", "ft": "2-2", "reb": 5, "ast": 1, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 6},
+            {"name": "Morris", "min": 1, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Dunlap", "min": 1, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Arizona State Sun Devils",
+          "score": 75,
+          "players": [
+            {"name": "Beck", "min": 28, "fg": "0-4", "ft": "2-2", "reb": 4, "ast": 0, "pf": 5, "to": 3, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Austin", "min": 23, "fg": "6-10", "ft": "2-2", "reb": 1, "ast": 1, "pf": 3, "to": 2, "stl": 1, "blk": 1, "pts": 14},
+            {"name": "Holloway", "min": 29, "fg": "5-10", "ft": "4-4", "reb": 2, "ast": 2, "pf": 3, "to": 0, "stl": 1, "blk": 0, "pts": 14},
+            {"name": "Thomas", "min": 33, "fg": "7-17", "ft": "3-5", "reb": 6, "ast": 2, "pf": 4, "to": 3, "stl": 0, "blk": 0, "pts": 17},
+            {"name": "Thompson", "min": 36, "fg": "4-12", "ft": "2-2", "reb": 2, "ast": 3, "pf": 2, "to": 2, "stl": 3, "blk": 0, "pts": 10},
+            {"name": "Carlino", "min": 30, "fg": "9-12", "ft": "0-1", "reb": 8, "ast": 0, "pf": 3, "to": 2, "stl": 3, "blk": 0, "pts": 18},
+            {"name": "Kleckner", "min": 12, "fg": "0-1", "ft": "0-0", "reb": 3, "ast": 2, "pf": 2, "to": 0, "stl": 0, "blk": 1, "pts": 0},
+            {"name": "Isiah", "min": 4, "fg": "0-1", "ft": "0-0", "reb": 0, "ast": 0, "pf": 2, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Ryan", "min": 5, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

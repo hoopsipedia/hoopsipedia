@@ -1,0 +1,42 @@
+{
+  "page": 18,
+  "games": [
+    {
+      "date": "1985-01-26",
+      "opponent": "Wake Forest",
+      "site": "U-Hall, Charlottesville, VA",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 58,
+          "players": [
+            {"name": "Tom Sheehey", "min": 30, "fg": "7-9", "ft": "4-5", "reb": 5, "ast": 0, "pf": 3, "to": 3, "stl": 0, "blk": 0, "pts": 18},
+            {"name": "Dan Merrifield", "min": 9, "fg": "0-0", "ft": "0-0", "reb": 1, "ast": 1, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Olden Polynice", "min": 27, "fg": "7-9", "ft": "2-4", "reb": 6, "ast": 1, "pf": 2, "to": 5, "stl": 0, "blk": 2, "pts": 16},
+            {"name": "Tom Calloway", "min": 25, "fg": "1-4", "ft": "0-0", "reb": 5, "ast": 0, "pf": 2, "to": 4, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Tim Mullen", "min": 36, "fg": "1-4", "ft": "2-2", "reb": 7, "ast": 2, "pf": 3, "to": 2, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Mel Kennedy", "min": 26, "fg": "3-5", "ft": "0-0", "reb": 4, "ast": 2, "pf": 1, "to": 0, "stl": 0, "blk": 1, "pts": 6},
+            {"name": "Jim Miller", "min": 18, "fg": "0-2", "ft": "1-2", "reb": 1, "ast": 1, "pf": 2, "to": 0, "stl": 0, "blk": 2, "pts": 1},
+            {"name": "Darrick Simms", "min": 19, "fg": "3-4", "ft": "5-6", "reb": 1, "ast": 4, "pf": 1, "to": 3, "stl": 0, "blk": 0, "pts": 11}
+          ]
+        },
+        {
+          "name": "Wake Forest Demon Deacons",
+          "score": 56,
+          "players": [
+            {"name": "Mark Cline", "min": 37, "fg": "6-13", "ft": "2-2", "reb": 4, "pf": 1, "pts": 14},
+            {"name": "Kenny Green", "min": 40, "fg": "4-13", "ft": "4-4", "reb": 9, "pf": 2, "pts": 12},
+            {"name": "Lee Garber", "min": 23, "fg": "2-6", "ft": "2-2", "reb": 3, "pf": 4, "pts": 6},
+            {"name": "Delaney Rudd", "min": 38, "fg": "7-22", "ft": "0-0", "reb": 1, "pf": 2, "pts": 14},
+            {"name": "Tyrone Bogues", "min": 39, "fg": "4-5", "ft": "0-0", "reb": 2, "pf": 4, "pts": 8},
+            {"name": "Charlie Thomas", "min": 22, "fg": "1-4", "ft": "0-0", "reb": 2, "pf": 5, "pts": 2, "note": "circled PF (fouled out)"},
+            {"name": "Harout Ortmann", "min": 1, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 1, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true,
+      "checksum_note": "Player pts sums match final scores exactly for both teams (Virginia 18+0+16+2+4+6+1+11=58; Wake Forest 14+12+6+14+8+2+0=56), and Virginia's team totals for FG/FGA/FT/FTA/A/TO/BLK/STL all reconcile exactly with the sheet's TOTALS row. Wake Forest's ast/to/blk/stl per-player values could not be reconciled against the team totals row (A=8,TO=6,BLK=2,S=9) with confidence due to cramped/ambiguous handwriting in those columns, so those fields were omitted for Wake Forest players rather than guessed; min/fg/ft/reb/pf/pts for Wake Forest are solid and fully reconcile with team totals (FG 24-63, FT 8-8, REB25, PF19, TP56)."
+    }
+  ],
+  "skipped": []
+}

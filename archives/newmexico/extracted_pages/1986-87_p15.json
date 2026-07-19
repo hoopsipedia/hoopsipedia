@@ -1,0 +1,43 @@
+{
+  "page": 15,
+  "games": [
+    {
+      "date": "1987-01-05",
+      "opponent": "Hawaii Rainbows",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 99,
+          "players": [
+            {"name": "Darrell McGee", "min": 5, "fg": "0-1", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "to": 0, "stl": 0, "pts": 0},
+            {"name": "Kelvin Scarborough", "min": 40, "fg": "9-19", "tp": "3-5", "ft": "11-14", "reb": 5, "ast": 7, "pf": 2, "to": 1, "stl": 2, "pts": 32},
+            {"name": "Hunter Greene", "min": 40, "fg": "12-28", "tp": "3-7", "ft": "1-4", "reb": 13, "ast": 5, "pf": 4, "to": 2, "blk": 1, "stl": 4, "pts": 28},
+            {"name": "Mike Winters", "min": 40, "fg": "4-8", "tp": "2-3", "ft": "0-0", "reb": 7, "ast": 6, "pf": 1, "to": 1, "stl": 0, "pts": 10},
+            {"name": "Kelly Graves", "min": 27, "fg": "4-6", "tp": "3-4", "ft": "0-0", "reb": 6, "ast": 3, "pf": 1, "to": 1, "stl": 0, "pts": 11},
+            {"name": "Brian Parker", "min": 9, "fg": "1-3", "ft": "2-4", "reb": 2, "ast": 0, "pf": 1, "to": 1, "stl": 0, "pts": 4},
+            {"name": "George Adams", "min": 16, "fg": "3-7", "ft": "1-2", "reb": 4, "ast": 1, "pf": 3, "to": 0, "stl": 1, "pts": 7},
+            {"name": "Rob Loeffel", "min": 23, "fg": "2-5", "ft": "3-5", "reb": 7, "ast": 1, "pf": 3, "to": 0, "blk": 1, "stl": 2, "pts": 7}
+          ]
+        },
+        {
+          "name": "Hawaii Rainbows",
+          "score": 86,
+          "players": [
+            {"name": "Craig Murray", "min": 9, "fg": "1-5", "ft": "0-1", "reb": 2, "ast": 0, "pf": 1, "to": 2, "stl": 0, "pts": 2},
+            {"name": "Chris Gaines", "min": 32, "fg": "4-11", "tp": "1-3", "ft": "2-3", "reb": 5, "ast": 3, "pf": 0, "to": 0, "stl": 0, "pts": 11},
+            {"name": "Billy Koch", "min": 19, "fg": "6-10", "tp": "4-7", "ft": "0-0", "reb": 5, "ast": 4, "pf": 4, "to": 2, "stl": 0, "pts": 16},
+            {"name": "Jerald Wrightsil", "min": 30, "fg": "6-12", "ft": "0-0", "reb": 3, "ast": 7, "pf": 4, "to": 5, "stl": 0, "pts": 12},
+            {"name": "Jamie Weaver", "min": 6, "fg": "0-5", "tp": "0-4", "ft": "0-0", "reb": 2, "ast": 0, "pf": 0, "to": 0, "stl": 0, "pts": 0},
+            {"name": "M. Kleine-Brockhoff", "min": 1, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "to": 0, "stl": 0, "pts": 0},
+            {"name": "Alan Andrus", "min": 27, "fg": "6-8", "ft": "0-2", "reb": 6, "ast": 3, "pf": 4, "to": 1, "stl": 0, "pts": 12},
+            {"name": "Rick Domonkos", "min": 17, "fg": "1-2", "ft": "0-2", "reb": 4, "ast": 2, "pf": 1, "to": 1, "stl": 0, "pts": 2},
+            {"name": "John Gabriel", "min": 36, "fg": "9-14", "ft": "7-8", "reb": 10, "ast": 0, "pf": 3, "to": 3, "blk": 2, "stl": 0, "pts": 25},
+            {"name": "Bill Holcomb", "min": 24, "fg": "2-5", "ft": "2-2", "reb": 2, "ast": 4, "pf": 5, "to": 0, "blk": 1, "stl": 0, "pts": 6}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

@@ -1,0 +1,9 @@
+{
+  "page": 6,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Purdue vs Ohio State, 1932-01-08 at the Coliseum: page contains a game box score but the final score is inconsistent between the article text (\"Purdue beat Ohio State 38 to 33\"), the header score box (appears to read Ohio 35, Purdue 38, with a crossed-out prior number), and the tabulated team totals (Purdue totals row reads 38 which matches, but Ohio State totals row reads 23, matching none of the reported final scores). Individual player Pts columns are too small/degraded to read with confidence and would not satisfy checksum against any candidate final score. Skipping rather than guessing per instructions."
+    }
+  ]
+}

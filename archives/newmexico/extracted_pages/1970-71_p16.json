@@ -1,0 +1,41 @@
+{
+  "page": 16,
+  "games": [
+    {
+      "date": "1971-01-29",
+      "opponent": "Wyoming",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 59,
+          "players": [
+            {"name": "Faulkner", "fg": "3-9", "ft": "5-7", "reb": 4, "pf": 5, "pts": 11},
+            {"name": "Johnson", "fg": "8-15", "ft": "0-0", "reb": 3, "pf": 0, "pts": 16},
+            {"name": "Long", "fg": "6-10", "ft": "2-3", "reb": 4, "pf": 3, "pts": 14, "note": "pts illegible on sheet, computed as 2*fg_made+ft_made; confirmed by team checksum"},
+            {"name": "Little", "fg": "6-8", "ft": "1-1", "reb": 4, "pf": 5, "pts": 13},
+            {"name": "Gibson", "fg": "1-6", "ft": "1-1", "reb": 4, "pf": 3, "pts": 3},
+            {"name": "Stewart", "fg": "0-0", "ft": "0-1", "reb": 3, "pf": 1, "pts": 0},
+            {"name": "Roberts", "fg": "0-5", "ft": "0-0", "reb": 0, "pf": 1, "pts": 0},
+            {"name": "Wright", "fg": "1-1", "ft": "0-0", "reb": 0, "pf": 0, "pts": 2}
+          ]
+        },
+        {
+          "name": "Wyoming Cowboys",
+          "score": 74,
+          "players": [
+            {"name": "Smith", "fg": "0-3", "ft": "0-0", "pf": 0, "pts": 0, "note": "rebound cell illegible (scan blot), omitted"},
+            {"name": "Penner", "fg": "0-1", "ft": "0-0", "pf": 3, "pts": 0, "note": "rebound cell illegible (scan blot), omitted"},
+            {"name": "Brucks", "fg": "9-14", "ft": "2-3", "reb": 7, "pf": 3, "pts": 20},
+            {"name": "Mountz", "fg": "2-2", "ft": "0-1", "reb": 1, "pf": 0, "pts": 4},
+            {"name": "Wilson", "fg": "2-4", "ft": "9-9", "reb": 5, "pf": 0, "pts": 13},
+            {"name": "Mountjoy", "fg": "2-4", "ft": "5-5", "reb": 9, "pf": 2, "pts": 9},
+            {"name": "Roberson", "fg": "10-15", "ft": "2-2", "reb": 2, "pf": 2, "pts": 22},
+            {"name": "Irvin", "fg": "2-5", "ft": "2-2", "reb": 4, "pf": 0, "pts": 6}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

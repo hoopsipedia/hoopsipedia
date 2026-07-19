@@ -1,0 +1,51 @@
+{
+  "page": 7,
+  "games": [
+    {
+      "date": "1995-12-18",
+      "opponent": "Stephen F. Austin",
+      "ucla_score": 109,
+      "opp_score": 88,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 109,
+          "players": [
+            {"name": "Charles O'Bannon", "min": 25, "fg": "5-9", "tp": "0-1", "ft": "4-4", "reb": 7, "ast": 3, "pf": 2, "to": 2, "stl": 0, "blk": 1, "pts": 14},
+            {"name": "J.R. Henderson", "min": 21, "fg": "5-10", "tp": "0-0", "ft": "1-1", "reb": 7, "ast": 4, "pf": 3, "to": 3, "stl": 0, "blk": 3, "pts": 11},
+            {"name": "Jelani McCoy", "min": 18, "fg": "2-2", "tp": "0-0", "ft": "1-1", "reb": 4, "ast": 2, "pf": 1, "to": 3, "stl": 0, "blk": 4, "pts": 5},
+            {"name": "Kris Johnson", "min": 21, "fg": "3-9", "tp": "0-1", "ft": "0-2", "reb": 1, "ast": 3, "pf": 1, "to": 3, "stl": 0, "blk": 2, "pts": 6},
+            {"name": "Toby Bailey", "min": 27, "fg": "10-17", "tp": "3-6", "ft": "0-0", "reb": 10, "ast": 10, "pf": 2, "to": 2, "stl": 3, "blk": 1, "pts": 23},
+            {"name": "Kevin Dempsey", "min": 21, "fg": "5-8", "tp": "4-6", "ft": "0-0", "reb": 3, "ast": 4, "pf": 1, "to": 1, "stl": 2, "blk": 0, "pts": 14},
+            {"name": "omm'A Givens", "min": 25, "fg": "7-10", "tp": "0-0", "ft": "4-5", "reb": 6, "ast": 1, "pf": 3, "to": 1, "stl": 1, "blk": 0, "pts": 18},
+            {"name": "Ike Nwankwo", "min": 16, "fg": "2-7", "tp": "0-0", "ft": "1-2", "reb": 7, "ast": 0, "pf": 3, "to": 1, "stl": 2, "blk": 0, "pts": 5},
+            {"name": "Brandon Loyd", "min": 17, "fg": "3-6", "tp": "1-4", "ft": "0-0", "reb": 0, "ast": 1, "pf": 3, "to": 0, "stl": 0, "blk": 0, "pts": 7},
+            {"name": "Bob Myers", "min": 6, "fg": "2-3", "tp": "0-0", "ft": "2-4", "reb": 1, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 6},
+            {"name": "Harold Sylvester", "min": 3, "fg": "0-4", "tp": "0-2", "ft": "0-0", "reb": 1, "ast": 1, "pf": 1, "to": 2, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Stephen F. Austin Lumberjacks",
+          "score": 88,
+          "players": [
+            {"name": "Eric Leftwich", "min": 35, "fg": "6-16", "tp": "1-3", "ft": "5-6", "reb": 6, "ast": 0, "pf": 1, "to": 4, "stl": 0, "blk": 0, "pts": 18},
+            {"name": "Vasco Tonch", "min": 28, "fg": "5-6", "tp": "1-2", "ft": "0-0", "reb": 6, "ast": 1, "pf": 1, "to": 2, "stl": 2, "blk": 0, "pts": 11},
+            {"name": "Javan Rouzan", "min": 38, "fg": "8-18", "tp": "0-1", "ft": "3-6", "reb": 17, "ast": 4, "pf": 4, "to": 5, "stl": 1, "blk": 0, "pts": 19},
+            {"name": "Rontrek Floyd", "min": 19, "fg": "2-11", "tp": "0-7", "ft": "0-0", "reb": 1, "ast": 1, "pf": 1, "to": 2, "stl": 1, "blk": 0, "pts": 4},
+            {"name": "Roynal Bridgeforth", "min": 27, "fg": "6-11", "tp": "3-3", "ft": "2-5", "reb": 5, "ast": 5, "pf": 3, "to": 4, "stl": 0, "blk": 1, "pts": 17},
+            {"name": "Jermaine Lyons", "min": 9, "fg": "0-1", "tp": "0-1", "ft": "0-0", "reb": 3, "ast": 3, "pf": 3, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Craig Stallings", "min": 13, "fg": "4-10", "tp": "0-4", "ft": "0-0", "reb": 3, "ast": 0, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 8},
+            {"name": "Keith Tate", "min": 10, "fg": "1-2", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 1, "pf": 3, "to": 0, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Shane Gray", "min": 16, "fg": "3-7", "tp": "0-2", "ft": "3-6", "reb": 5, "ast": 1, "pf": 1, "to": 4, "stl": 1, "blk": 0, "pts": 9},
+            {"name": "Paul Jackson", "min": 1, "fg": "0-1", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Edwin Gray", "min": 2, "fg": "0-0", "tp": "0-0", "ft": "0-2", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Cliff Drummond", "min": 1, "fg": "0-1", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Johnny Summers", "min": 1, "fg": "0-1", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

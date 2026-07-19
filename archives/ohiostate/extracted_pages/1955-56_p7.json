@@ -1,0 +1,40 @@
+{
+  "page": 7,
+  "games": [
+    {
+      "date": "1955-12-19",
+      "opponent": "Tulane",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 72,
+          "players": [
+            {"name": "Howard", "fg": "7-15", "ft": "4-9", "reb": 7, "pf": 2, "pts": 18},
+            {"name": "Sidle", "fg": "2-3", "ft": "0-0", "reb": 2, "pf": 5, "pts": 4},
+            {"name": "Kelley", "fg": "3-6", "ft": "2-2", "reb": 7, "pf": 1, "pts": 8},
+            {"name": "Freeman", "fg": "7-19", "ft": "7-9", "reb": 5, "pf": 1, "pts": 21},
+            {"name": "Ellis", "fg": "5-8", "ft": "1-2", "reb": 5, "pf": 1, "pts": 11},
+            {"name": "Laughlin", "fg": "4-6", "ft": "2-4", "reb": 2, "pf": 1, "pts": 10},
+            {"name": "Millard", "fg": "0-1", "ft": "0-0", "reb": 1, "pf": 1, "pts": 0}
+          ]
+        },
+        {
+          "name": "Tulane",
+          "score": 66,
+          "players": [
+            {"name": "Grosscup", "fg": "8-20", "ft": "4-5", "reb": 12, "pf": 3, "pts": 20},
+            {"name": "Stumpf", "fg": "5-12", "ft": "2-2", "reb": 14, "pf": 3, "pts": 12},
+            {"name": "Murphy", "fg": "3-9", "ft": "3-5", "reb": 4, "pf": 3, "pts": 9},
+            {"name": "Stoll", "fg": "7-12", "ft": "2-3", "reb": 5, "pf": 2, "pts": 16},
+            {"name": "Delpit", "fg": "3-13", "ft": "0-0", "reb": 3, "pf": 1, "pts": 6},
+            {"name": "Ebker", "fg": "1-7", "ft": "1-4", "reb": 3, "pf": 1, "pts": 3},
+            {"name": "Cothern", "fg": "0-2", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Jargstorf", "fg": "0-1", "ft": "0-0", "reb": 2, "pf": 1, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

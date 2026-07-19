@@ -1,0 +1,44 @@
+{
+  "page": 28,
+  "games": [
+    {
+      "date": "1988-02-27",
+      "opponent": "NC State Wolfpack",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 63,
+          "players": [
+            {"name": "Mel Kennedy", "min": 39, "fg": "10-23", "tp": "1-2", "ft": "1-2", "reb": 5, "pf": 2, "stl": 1, "pts": 22},
+            {"name": "Kenny Turner", "min": 31, "fg": "3-8", "reb": 5, "pf": 2, "ast": 1, "to": 3, "stl": 1, "pts": 6},
+            {"name": "Bill Batts", "min": 32, "fg": "3-8", "ft": "0-1", "reb": 11, "pf": 1, "ast": 2, "pts": 6},
+            {"name": "John Crotty", "min": 37, "fg": "3-8", "tp": "1-2", "ft": "2-2", "reb": 3, "pf": 3, "ast": 10, "to": 4, "pts": 9},
+            {"name": "Darrick Simms", "min": 28, "fg": "6-10", "reb": 6, "pf": 3, "ast": 2, "to": 1, "blk": 2, "stl": 1, "pts": 12},
+            {"name": "Richard Morgan", "min": 18, "fg": "2-5", "to": 3, "pts": 4},
+            {"name": "Jeff Daniel", "min": 2, "pts": 0},
+            {"name": "Ron Price", "min": 2, "to": 2, "pts": 0},
+            {"name": "Brent Bair", "min": 7, "pts": 2},
+            {"name": "Matt Blundin", "min": 4, "reb": 3, "pf": 2, "pts": 2}
+          ]
+        },
+        {
+          "name": "NC State Wolfpack",
+          "score": 64,
+          "players": [
+            {"name": "Chucky Brown", "min": 37, "fg": "6-10", "ft": "1-2", "reb": 9, "ast": 1, "pf": 2, "blk": 1, "pts": 13},
+            {"name": "Brian Howard", "min": 17, "fg": "1-5", "tp": "0-1", "ft": "1-2", "ast": 1, "pf": 3, "to": 2, "stl": 1, "pts": 3},
+            {"name": "Charles Shackleford", "min": 38, "fg": "8-15", "ft": "2-2", "reb": 10, "ast": 2, "pf": 3, "to": 1, "pts": 18},
+            {"name": "Vinny Del Negro", "min": 32, "fg": "4-10", "tp": "0-1", "reb": 5, "ast": 2, "to": 1, "stl": 3, "pts": 8},
+            {"name": "Chris Corchiani", "min": 28, "fg": "0-5", "tp": "0-2", "pf": 3, "ast": 5, "to": 2, "stl": 3, "pts": 0},
+            {"name": "Rodney Monroe", "min": 28, "fg": "7-11", "tp": "2-5", "ft": "2-2", "reb": 4, "pf": 1, "ast": 1, "to": 1, "stl": 1, "pts": 18},
+            {"name": "Quentin Jackson", "min": 8, "fg": "0-1", "tp": "0-1", "reb": 1, "ast": 2, "to": 1, "stl": 1, "pts": 0},
+            {"name": "Kelsey Weems", "min": 4, "fg": "1-3", "pf": 1, "to": 1, "stl": 1, "pts": 2},
+            {"name": "Avie Lester", "min": 8, "fg": "1-1", "stl": 1, "pts": 2}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

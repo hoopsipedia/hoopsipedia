@@ -1,0 +1,11 @@
+{
+  "page": 1,
+  "games": [],
+  "skipped": [
+    {
+      "date": "1980-11-28",
+      "opponent": "Bucknell",
+      "reason": "Official NCAA box score, Bucknell @ Virginia (Charlottesville). Virginia's individual player point totals sum exactly to 64, matching Virginia's TOTALS row (TP 64) and the final score (29+35=64) -- checksum PASSES for Virginia. However Bucknell's individual player point totals sum to only 43, while Bucknell's own TOTALS row shows TP 45 and the period score line also shows 18+27=45 -- checksum FAILS for Bucknell by 2 points. Individual FGA, FT-made, and FTA columns for Bucknell all sum exactly to the team totals (55, 7, 12), isolating the discrepancy to one made-field-goal that is likely misread due to a smudged/overlapping digit in the team TOTALS row's FG cell (appears as '19' overlapping '55' but individual FG sum is 18, implying the true team FG total is probably 19 with one player's made-FG undercounted by 1). Could not confidently identify which specific player row is off, so skipping the entire game per instructions rather than guessing. Two player rows (Vallo #33 and Schoeck #20) also have illegible/superscript minutes values that could not be transcribed confidently."
+    }
+  ]
+}

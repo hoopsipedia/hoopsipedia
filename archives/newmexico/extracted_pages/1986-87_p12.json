@@ -1,0 +1,42 @@
+{
+  "page": 12,
+  "games": [
+    {
+      "date": "1986-12-27",
+      "opponent": "Drake Bulldogs",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 52,
+          "players": [
+            {"name": "Hunter Greene", "min": 37, "fg": "6-20", "tp": "0-7", "ft": "5-6", "reb": 9, "ast": 1, "pf": 2, "to": 1, "stl": 2, "blk": 0, "pts": 17},
+            {"name": "Mike Winters", "min": 36, "fg": "2-6", "tp": "0-0", "ft": "0-0", "reb": 5, "ast": 2, "pf": 2, "to": 1, "stl": 1, "blk": 0, "pts": 4},
+            {"name": "Rob Loeffel", "min": 14, "fg": "2-4", "tp": "0-0", "ft": "1-2", "reb": 2, "ast": 0, "pf": 1, "to": 0, "stl": 1, "blk": 1, "pts": 5},
+            {"name": "Kelvin Scarborough", "min": 40, "fg": "7-16", "tp": "0-2", "ft": "5-6", "reb": 6, "ast": 1, "pf": 4, "to": 2, "stl": 0, "blk": 0, "pts": 19},
+            {"name": "Kelly Graves", "min": 25, "fg": "0-2", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 2, "pf": 0, "to": 0, "stl": 0, "blk": 1, "pts": 0},
+            {"name": "Darrell McGee", "min": 13, "fg": "1-3", "tp": "1-2", "ft": "0-1", "reb": 0, "ast": 3, "pf": 3, "to": 1, "stl": 4, "blk": 0, "pts": 3},
+            {"name": "Stan Whisenant", "min": 1, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Brian Parker", "min": 10, "fg": "1-1", "tp": "0-0", "ft": "0-1", "reb": 1, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "George Adams", "min": 24, "fg": "1-7", "tp": "0-1", "ft": "0-1", "reb": 7, "ast": 1, "pf": 3, "to": 0, "stl": 0, "blk": 1, "pts": 2}
+          ]
+        },
+        {
+          "name": "Drake Bulldogs",
+          "score": 59,
+          "players": [
+            {"name": "Michael Morgan", "min": 40, "fg": "7-14", "tp": "0-0", "ft": "8-14", "reb": 11, "ast": 0, "pf": 0, "to": 2, "stl": 1, "blk": 1, "pts": 22},
+            {"name": "David Danlke", "min": 26, "fg": "1-2", "tp": "0-0", "ft": "0-0", "reb": 3, "ast": 0, "pf": 4, "to": 1, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Bart Friedrick", "min": 32, "fg": "2-4", "tp": "0-0", "ft": "2-2", "reb": 4, "ast": 1, "pf": 4, "to": 0, "stl": 0, "blk": 0, "pts": 6},
+            {"name": "Doug Nauman", "min": 10, "fg": "0-1", "tp": "0-1", "ft": "0-0", "reb": 0, "ast": 2, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "David Miller", "min": 40, "fg": "9-17", "tp": "5-10", "ft": "0-1", "reb": 2, "ast": 4, "pf": 2, "to": 4, "stl": 0, "blk": 0, "pts": 23},
+            {"name": "Walter James", "min": 22, "fg": "2-6", "tp": "0-1", "ft": "0-0", "reb": 7, "ast": 2, "pf": 3, "to": 1, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Terry Robinson", "min": 8, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 1, "pf": 2, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Glenn Martin", "min": 22, "fg": "1-4", "tp": "0-1", "ft": "0-0", "reb": 2, "ast": 2, "pf": 2, "to": 2, "stl": 0, "blk": 0, "pts": 2}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

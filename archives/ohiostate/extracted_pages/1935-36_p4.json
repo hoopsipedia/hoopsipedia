@@ -1,0 +1,9 @@
+{
+  "page": 4,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page shows a newspaper clipping 'OHIO STATE TRIMS HARVARD, 38 TO 13' with a season-log header (Ohio 38, Opp 13, Attendance 4,049, Captain Whittinger, Manager Magaziner) and a bottom stub confirming Jan. 1, 1936 vs Harvard at Columbus (Coach Olsen), so the game identity (date 1936-01-01, opponent Harvard, final score Ohio State 38 - Harvard 13) is legible. However, the embedded box score table (columns labeled 'B.F.T.' for Harvard and what appears to be 'B.F.P.' for Ohio State) is reproduced at very small newsprint scale with column bleed/artifacting (stray characters like '1', '4', 'c' bleeding into name fields), making individual player made-basket/free-throw/point figures too unreliable to transcribe with confidence. Skipping the player-level box score rather than guessing values; the game-level result (38-13, date, opponent) is confirmed by the surrounding page but no player lines could be captured with adequate confidence."
+    }
+  ]
+}

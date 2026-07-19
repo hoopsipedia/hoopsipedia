@@ -1,0 +1,52 @@
+{
+  "page": 24,
+  "games": [
+    {
+      "date": "1976-02-2?",
+      "date_note": "Scoresheet date field reads 'DATE Feb. 2_' — tens digit '2' is legible but the ones digit is cut off/illegible at the page edge, so the exact day (20-29) could not be confirmed. Month/year (February 1976) and all other data are clear.",
+      "opponent": "Minnesota",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 73,
+          "players": [
+            {"name": "Daugherty-f", "fg": "8-17", "ft": "1-5", "reb": 11, "ast": 1, "pf": 2, "pts": 17},
+            {"name": "Cline-f", "fg": "2-5", "ft": "2-2", "reb": 3, "ast": 1, "pf": 3, "pts": 6},
+            {"name": "Taylor-c", "fg": "2-7", "ft": "0-0", "reb": 3, "ast": 1, "pf": 3, "pts": 4},
+            {"name": "Wood-g", "fg": "6-12", "ft": "0-0", "reb": 6, "ast": 5, "pf": 3, "pts": 12},
+            {"name": "Bolden-g", "fg": "1-7", "ft": "0-0", "reb": 0, "ast": 2, "pf": 1, "pts": 2},
+            {"name": "Burris-c-f", "fg": "0-2", "ft": "0-2", "reb": 2, "ast": 1, "pf": 0, "pts": 0, "note": "name badly scanned/garbled on sheet; best-effort reading"},
+            {"name": "Bayless-g", "fg": "4-10", "ft": "2-4", "reb": 5, "ast": 6, "pf": 2, "pts": 10},
+            {"name": "Poole-f", "fg": "9-14", "ft": "0-0", "reb": 2, "ast": 0, "pf": 1, "pts": 18},
+            {"name": "Hammond-c", "fg": "2-3", "ft": "0-0", "reb": 1, "ast": 0, "pf": 2, "pts": 4},
+            {"name": "Shields-g", "fg": "0-0", "ft": "0-0", "reb": 2, "ast": 0, "pf": 0, "pts": 0}
+          ],
+          "checksum_ok": true,
+          "checksum_note": "Player pts sum = 73, matches team final score 73. Team totals row also lists FG 34-77, FT 5-13, REB 44."
+        },
+        {
+          "name": "Minnesota Golden Gophers",
+          "score": 89,
+          "players": [
+            {"name": "Ray Williams-f", "fg": "5-9", "ft": "0-0", "reb": 5, "ast": 11, "pf": 3, "pts": 10},
+            {"name": "Dave Winey-f", "fg": "5-10", "ft": "0-0", "reb": 5, "ast": 3, "pf": 3, "pts": 10},
+            {"name": "Mike Thompson-c", "fg": "14-19", "ft": "2-3", "reb": 10, "ast": 2, "pf": 0, "pts": 30},
+            {"name": "Osborne Lockhart-g", "fg": "12-17", "ft": "2-2", "reb": 5, "ast": 3, "pf": 2, "pts": 26},
+            {"name": "Phil Saunders-g", "fg": "2-8", "ft": "4-4", "reb": 2, "ast": 2, "pf": 2, "pts": 8},
+            {"name": "Gus Johnson-g", "fg": "1-1", "ft": "0-0", "reb": 2, "ast": 0, "pf": 1, "pts": 2},
+            {"name": "Gary Korkowski-f-c", "fg": "0-2", "ft": "1-2", "reb": 4, "ast": 1, "pf": 1, "pts": 1},
+            {"name": "David Carroll-f", "fg": "1-1", "ft": "0-0", "reb": 0, "ast": 1, "pf": 0, "pts": 2, "note": "printed PTS glyph was a scan artifact ('g'); value derived as 2*FGM+FTM = 2, consistent with team total checksum"},
+            {"name": "Craig Carlson-f", "fg": "0-1", "ft": "0-0", "reb": 0, "ast": 1, "pf": 0, "pts": 0},
+            {"name": "Chris Weber-f", "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "pts": 0}
+          ],
+          "checksum_ok": true,
+          "checksum_note": "Player pts sum = 89, matches team final score 89. Team totals row also lists FG 40-68, FT 9-11, REB 37."
+        }
+      ],
+      "checksum_ok": true,
+      "attendance": 5794,
+      "officials": ["Jerry Menz", "Robert Brodbeck", "Robert Showalter"]
+    }
+  ],
+  "skipped": []
+}

@@ -1,0 +1,42 @@
+{
+  "page": 9,
+  "games": [
+    {
+      "date": "1982-01-02",
+      "opponent": "Washington State",
+      "ucla_score": 51,
+      "opp_score": 57,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 51,
+          "players": [
+            {"name": "Mike Sanders", "min": 52, "fg": "2-8", "ft": "2-3", "reb": 7, "pf": 3, "pts": 6, "ast": 1, "to": 3, "blk": 0, "stl": 0},
+            {"name": "Kenny Fields", "min": 44, "fg": "4-9", "ft": "3-4", "reb": 2, "pf": 4, "pts": 11, "ast": 0, "to": 4, "blk": 0, "stl": 2},
+            {"name": "Stuart Gray", "min": 27, "fg": "5-6", "ft": "1-2", "reb": 4, "pf": 2, "pts": 11, "ast": 0, "to": 1, "blk": 0, "stl": 0},
+            {"name": "Ralph Jackson", "min": 46, "fg": "2-5", "ft": "0-0", "reb": 5, "pf": 3, "pts": 4, "ast": 2, "to": 4, "blk": 0, "stl": 2},
+            {"name": "Michael Holton", "min": 50, "fg": "2-4", "ft": "1-3", "reb": 1, "pf": 3, "pts": 5, "ast": 3, "to": 3, "blk": 0, "stl": 0},
+            {"name": "Rod Foster", "min": 14, "fg": "1-2", "ft": "3-3", "reb": 0, "pf": 2, "pts": 5, "ast": 0, "to": 0, "blk": 0, "stl": 0},
+            {"name": "Darren Daye", "min": 42, "fg": "3-6", "ft": "3-4", "reb": 10, "pf": 1, "pts": 9, "ast": 3, "to": 5, "blk": 0, "stl": 0}
+          ]
+        },
+        {
+          "name": "Washington State Cougars",
+          "score": 57,
+          "players": [
+            {"name": "Ronnie Joyner", "min": 14, "fg": "1-5", "ft": "0-0", "reb": 1, "pf": 2, "pts": 2, "ast": 0, "to": 0, "blk": 0, "stl": 0},
+            {"name": "Steve Harriel", "min": 55, "fg": "8-15", "ft": "4-4", "reb": 7, "pf": 2, "pts": 20, "ast": 0, "to": 2, "blk": 0, "stl": 1},
+            {"name": "Aaron Baskins", "min": 48, "fg": "3-6", "ft": "2-6", "reb": 5, "pf": 4, "pts": 8, "ast": 0, "to": 2, "blk": 0, "stl": 0},
+            {"name": "Tyrone Brown", "min": 51, "fg": "2-3", "ft": "0-2", "reb": 2, "pf": 3, "pts": 4, "ast": 3, "to": 5, "blk": 0, "stl": 3},
+            {"name": "Brad Ness", "min": 16, "fg": "1-3", "ft": "0-0", "reb": 0, "pf": 3, "pts": 2, "ast": 0, "to": 2, "blk": 0, "stl": 0},
+            {"name": "Guy Williams", "min": 40, "fg": "6-13", "ft": "1-1", "reb": 3, "pf": 2, "pts": 13, "ast": 3, "to": 0, "blk": 0, "stl": 0},
+            {"name": "Craig Ehlo", "min": 43, "fg": "3-6", "ft": "2-2", "reb": 6, "pf": 2, "pts": 8, "ast": 2, "to": 3, "blk": 0, "stl": 3},
+            {"name": "Mike Wurm", "min": 8, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 1, "pts": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

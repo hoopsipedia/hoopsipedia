@@ -1,0 +1,41 @@
+{
+  "page": 25,
+  "games": [
+    {
+      "date": "1979-02-21",
+      "opponent": "William & Mary",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 44,
+          "players": [
+            {"name": "Jeff Lamp", "min": 37, "fg": "5-11", "ft": "4-4", "reb": 5, "pf": 3, "ast": 1, "to": 6, "blk": 0, "stl": 1, "pts": 14},
+            {"name": "Lee Raker", "min": 32, "fg": "6-12", "ft": "4-4", "reb": 1, "pf": 3, "ast": 0, "to": 3, "blk": 0, "stl": 0, "pts": 16},
+            {"name": "Steve Castellan", "min": 23, "fg": "2-5", "ft": "0-1", "reb": 10, "pf": 1, "ast": 0, "to": 1, "blk": 2, "stl": 1, "pts": 4},
+            {"name": "Bobby Stokes", "min": 33, "fg": "1-3", "ft": "2-2", "reb": 0, "pf": 2, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 4},
+            {"name": "Jeff Jones", "min": 20, "fg": "1-3", "ft": "0-0", "reb": 1, "pf": 0, "ast": 4, "to": 2, "blk": 0, "stl": 3, "pts": 2},
+            {"name": "Mike Owens", "min": 19, "fg": "0-2", "ft": "0-0", "reb": 4, "pf": 3, "ast": 1, "to": 1, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Terry Gates", "min": 22, "fg": "1-1", "ft": "0-1", "reb": 5, "pf": 3, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Garland Jefferson", "min": 9, "fg": "1-3", "ft": "0-0", "reb": 1, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 2}
+          ]
+        },
+        {
+          "name": "William & Mary",
+          "score": 40,
+          "players": [
+            {"name": "Scott Whitley", "min": 37, "fg": "6-11", "ft": "3-5", "reb": 9, "pf": 3, "ast": 2, "to": 3, "blk": 0, "stl": 1, "pts": 15},
+            {"name": "Dale Moats", "min": 33, "fg": "6-10", "ft": "1-1", "reb": 3, "pf": 3, "ast": 1, "to": 0, "blk": 0, "stl": 2, "pts": 13},
+            {"name": "Ken Rowen", "min": 25, "fg": "3-8", "ft": "2-2", "reb": 2, "pf": 4, "ast": 1, "to": 0, "blk": 0, "stl": 0, "pts": 8},
+            {"name": "Billy Barnes", "min": 30, "fg": "1-5", "ft": "0-0", "reb": 4, "pf": 4, "ast": 1, "to": 3, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Billy Harrington", "min": 33, "fg": "0-4", "ft": "0-0", "reb": 4, "pf": 3, "ast": 1, "to": 4, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Bobby Boyd", "min": 21, "fg": "0-1", "ft": "1-2", "reb": 2, "pf": 1, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 1},
+            {"name": "Mark Risinger", "min": 2, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Guy Courage", "min": 9, "fg": "0-2", "ft": "1-3", "reb": 2, "pf": 0, "ast": 0, "to": 3, "blk": 0, "stl": 0, "pts": 1}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

@@ -1,0 +1,9 @@
+{
+  "page": 11,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "1935-01-26 Ohio State vs Northwestern (Evanston, IL; final score Ohio State 29, Northwestern 19 per article prose). Ohio State's box score table is legible and checksums perfectly (players: Wilson 4-0/3, Thomas 4-0/-, Smith 0-1, Beitner 0-1, Lashbrook 0-0, Dye 1-0, George 3-0, summing to 29 pts, matching G*2+F=Pts per row). However Northwestern's box score table print is too small/blurry to transcribe confidently: reading the printed FG/FT/PF/Pts columns for Fisher, Blume, McAnally, Vance, Kawal, Dorsey, Roseczlik, Pendergast, Mercer, and Jones yields a total of only 14 points, which fails checksum against the actual final score of 19 and also contradicts the article's play-by-play (e.g. 'four consecutive free throws by Kawal' implies Kawal FT=4, but the table appears to show FT=2). Since both teams must checksum to include the game and only one Read of this page was permitted, the entire game is skipped rather than guessing at the illegible Northwestern digits."
+    }
+  ]
+}

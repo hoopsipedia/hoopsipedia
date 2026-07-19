@@ -1,0 +1,9 @@
+{
+  "page": 6,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page 6 is a newspaper clipping (Washington Post-style article 'Bucks Are Second Big 10 Team Taken By Colonial Five') covering Ohio State at George Washington, Jan. 3, 1938 (final: George Washington 46, Ohio State 35, per article text and team-totals rows R=19/F=8/T=46 and R=12/F=11/T=35). However the embedded box score table is a low-resolution scan and most individual player rows (Farin, Freeman, Auerbach, Borum, Garber, Silkowitz for George Washington; Hull, Baker, Stafford, Shirk, McDonald, Boughner, Golety, Prewitt for Ohio State) have illegible or missing R/F/T digits -- only a few values (O'Brien T=14, Butterworth T=16, and the two team Totals rows) are confidently legible. Cannot reconstruct full player lines or pass a per-player checksum without guessing, so the game is skipped rather than transcribed with invented values."
+    }
+  ]
+}

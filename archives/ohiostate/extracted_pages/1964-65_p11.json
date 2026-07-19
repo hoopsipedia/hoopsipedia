@@ -1,0 +1,42 @@
+{
+  "page": 11,
+  "games": [
+    {
+      "date": "1965-01-02",
+      "opponent": "Georgia Tech",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 73,
+          "players": [
+            {"name": "Sepic", "fg": "5-17", "ft": "0-5", "reb": 9, "pf": 2, "pts": 10},
+            {"name": "Peters", "fg": "0-6", "ft": "3-5", "reb": 9, "pf": 3, "pts": 3},
+            {"name": "Shaffer", "fg": "9-16", "ft": "5-7", "reb": 19, "pf": 4, "pts": 23},
+            {"name": "Ricketts", "fg": "6-11", "ft": "5-5", "reb": 4, "pf": 4, "pts": 17},
+            {"name": "Rowley", "fg": "4-9", "ft": "1-3", "reb": 5, "pf": 2, "pts": 9},
+            {"name": "Dove", "fg": "1-4", "ft": "2-2", "reb": 8, "pf": 3, "pts": 4},
+            {"name": "Ablijevych", "fg": "1-3", "ft": "1-2", "reb": 0, "pf": 1, "pts": 3},
+            {"name": "Brown", "fg": "2-5", "ft": "0-0", "reb": 1, "pf": 1, "pts": 4}
+          ]
+        },
+        {
+          "name": "Georgia Tech",
+          "score": 68,
+          "players": [
+            {"name": "Scharf", "fg": "3-14", "ft": "2-3", "reb": 10, "pf": 5, "pts": 8},
+            {"name": "Judy", "fg": "3-9", "ft": "0-0", "reb": 7, "pf": 3, "pts": 6},
+            {"name": "J. Caldwell", "fg": "5-20", "ft": "9-15", "reb": 18, "pf": 3, "pts": 19},
+            {"name": "Kenney", "fg": "4-11", "ft": "4-5", "reb": 7, "pf": 3, "pts": 12},
+            {"name": "Craddock", "fg": "6-15", "ft": "2-2", "reb": 2, "pf": 1, "pts": 14},
+            {"name": "P. Caldwell", "fg": "1-5", "ft": "3-3", "reb": 2, "pf": 1, "pts": 5},
+            {"name": "Arnold", "fg": "1-3", "ft": "0-0", "reb": 1, "pf": 2, "pts": 2},
+            {"name": "Field", "fg": "1-1", "ft": "0-1", "reb": 4, "pf": 3, "pts": 2},
+            {"name": "Priestly", "fg": "0-1", "ft": "0-0", "reb": 0, "pf": 1, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

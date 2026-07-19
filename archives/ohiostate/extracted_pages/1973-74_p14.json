@@ -1,0 +1,41 @@
+{
+  "page": 14,
+  "games": [
+    {
+      "date": "1974-01-26",
+      "opponent": "Wisconsin Badgers",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 64,
+          "players": [
+            {"name": "Jackson", "fg": "5-10", "ft": "0-0", "reb": 8, "ast": 1, "pf": 5, "pts": 10},
+            {"name": "Wenner", "fg": "5-11", "ft": "3-3", "reb": 11, "ast": 5, "pf": 3, "pts": 13},
+            {"name": "Andreas", "fg": "6-14", "ft": "0-0", "reb": 5, "ast": 2, "pf": 2, "pts": 12},
+            {"name": "Repella", "fg": "3-8", "ft": "0-0", "reb": 0, "ast": 2, "pf": 1, "pts": 6},
+            {"name": "Bolden", "fg": "3-11", "ft": "0-0", "reb": 3, "ast": 1, "pf": 0, "pts": 6},
+            {"name": "Wolfe", "fg": "0-1", "ft": "2-2", "reb": 2, "ast": 2, "pf": 1, "pts": 2},
+            {"name": "Gerhard", "fg": "3-8", "ft": "1-2", "reb": 3, "ast": 3, "pf": 3, "pts": 7},
+            {"name": "Stiegemeier", "fg": "4-6", "ft": "0-0", "reb": 3, "ast": 0, "pf": 2, "pts": 8}
+          ]
+        },
+        {
+          "name": "Wisconsin Badgers",
+          "score": 69,
+          "players": [
+            {"name": "Hughes, Kerry", "fg": "4-8", "ft": "0-0", "reb": 7, "ast": 5, "pts": 8},
+            {"name": "Koehler", "fg": "4-10", "ft": "2-2", "reb": 8, "ast": 0, "pf": 3, "pts": 10},
+            {"name": "Hughes, Kim", "fg": "6-9", "ft": "5-6", "reb": 13, "ast": 2, "pf": 2, "pts": 17},
+            {"name": "McCoy", "fg": "5-9", "ft": "0-0", "reb": 3, "ast": 3, "pf": 1, "pts": 10},
+            {"name": "Anderson", "fg": "6-15", "ft": "2-3", "reb": 2, "ast": 4, "pf": 1, "pts": 18},
+            {"name": "Piacenza", "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "pts": 0},
+            {"name": "Weaver", "fg": "3-6", "ft": "0-1", "reb": 1, "ast": 4, "pf": 3, "pts": 6}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": [],
+  "notes": "Official Western Conference (Big Ten) box score, Jan 26, 1974: Ohio State at Wisconsin. PF omitted for Wisconsin's Hughes, Kerry (value not legibly distinct on scan, though team PF total of 14 implies 3 for consistency with other 6 players' PF sum of 11 -- not written to avoid inventing). Player 'Stiegemeier' had first letter obscured on scan ('*tiegemeier') but is confidently Stiegemeier based on Big Ten OSU rosters of the era. Both team point sums match final scores exactly (OSU 64, Wisconsin 69)."
+}

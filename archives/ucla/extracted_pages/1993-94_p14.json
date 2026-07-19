@@ -1,0 +1,9 @@
+{
+  "page": 14,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "01-27-94 UCLA (69) at Stanford (65), Maples Pavilion: box score is present and mostly legible (FG and 3PT columns for UCLA sum exactly to team totals: FG 30/57, 3P 4/8), but the FT/FTA column is inconsistent - individual UCLA player FT makes sum to 7 and FTA sum to 17, versus team-total row FT 5/12. This makes player PTS sum to 71 instead of the actual final score of 69, a 2-point checksum failure concentrated in the FT column (likely O'Bannon E. and/or Zimmerman) that could not be confidently resolved without guessing digits, so the game was skipped rather than transcribed with unreliable free-throw values."
+    }
+  ]
+}

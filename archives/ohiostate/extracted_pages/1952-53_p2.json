@@ -1,0 +1,47 @@
+{
+  "page": 2,
+  "games": [
+    {
+      "date": "1952-12-06",
+      "opponent": "St. Louis",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 81,
+          "players": [
+            {"name": "Wilks", "fg": "3-5", "ft": "6-9", "reb": 4, "pf": 4, "pts": 12},
+            {"name": "Miller", "fg": "0-2", "ft": "2-4", "reb": 2, "pf": 4, "pts": 2},
+            {"name": "Williams", "fg": "3-6", "ft": "2-3", "reb": 5, "pf": 0, "pts": 8},
+            {"name": "Hague", "fg": "2-5", "ft": "1-1", "reb": 0, "pf": 2, "pts": 5},
+            {"name": "Ebert", "fg": "7-16", "ft": "5-8", "reb": 11, "pf": 4, "pts": 19},
+            {"name": "Ropes", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Hatfield", "fg": "7-12", "ft": "3-5", "reb": 4, "pf": 4, "pts": 17},
+            {"name": "Leggett", "fg": "0-2", "ft": "1-1", "reb": 2, "pf": 2, "pts": 1},
+            {"name": "Keesling", "fg": "0-0", "ft": "1-2", "reb": 1, "pf": 0, "pts": 1},
+            {"name": "Cook", "fg": "5-13", "ft": "3-4", "reb": 3, "pf": 1, "pts": 13},
+            {"name": "Jones", "fg": "0-3", "ft": "3-3", "reb": 0, "pf": 1, "pts": 3}
+          ]
+        },
+        {
+          "name": "St. Louis",
+          "score": 71,
+          "players": [
+            {"name": "Russell", "fg": "1-4", "ft": "0-2", "reb": 4, "pf": 3, "pts": 2},
+            {"name": "Boushka", "fg": "7-12", "ft": "6-6", "reb": 7, "pf": 3, "pts": 20},
+            {"name": "Partington", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 1, "pts": 0},
+            {"name": "Koch", "fg": "2-10", "ft": "4-6", "reb": 3, "pf": 4, "pts": 8},
+            {"name": "Dubinski", "fg": "4-8", "ft": "0-2", "reb": 1, "pf": 1, "pts": 8},
+            {"name": "T. Lillis", "fg": "2-8", "ft": "2-4", "reb": 4, "pf": 6, "pts": 6},
+            {"name": "Shockley", "fg": "3-7", "ft": "1-2", "reb": 7, "pf": 5, "pts": 7},
+            {"name": "Sykes", "fg": "0-0", "ft": "1-2", "reb": 1, "pf": 0, "pts": 2},
+            {"name": "Klostermeyer", "fg": "2-4", "ft": "0-0", "reb": 1, "pf": 4, "pts": 4},
+            {"name": "Stanton", "fg": "2-3", "ft": "0-2", "reb": 1, "pf": 2, "pts": 4},
+            {"name": "H. Lillis", "fg": "3-7", "ft": "4-7", "reb": 3, "pf": 1, "pts": 10}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

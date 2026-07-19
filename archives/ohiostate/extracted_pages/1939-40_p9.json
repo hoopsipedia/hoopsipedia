@@ -1,0 +1,9 @@
+{
+  "page": 9,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page shows Ohio 37, Illinois (opp) 31, date 1-13-40, place Coliseum, coach Olsen, captain Lynch, manager Scharff, attendance 4046 -- header info is legible. However the embedded player box-score table (Ohio and Illinois rosters with O./F./MF./PF./Pts. columns) is reproduced at very small scale and is too blurry to transcribe individual player stat lines with confidence. An attempted reading of Ohio's per-player Pts column summed to ~48, failing checksum against the team total of 37, confirming the print is not reliably legible at this resolution. Skipping per-player data rather than guessing; game omitted entirely per instructions since both teams' player lines could not be transcribed confidently."
+    }
+  ]
+}

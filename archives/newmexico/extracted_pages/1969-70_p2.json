@@ -1,0 +1,44 @@
+{
+  "page": 2,
+  "games": [
+    {
+      "date": "1969-12-06",
+      "opponent": "Oregon",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 59,
+          "players": [
+            {"name": "Gibson", "min": 37, "fg": "6-16", "ft": "5-7", "reb": 1, "ast": 4, "pf": 0, "pts": 17},
+            {"name": "Long", "min": 22, "fg": "5-13", "ft": "4-6", "reb": 10, "ast": 1, "pf": 5, "pts": 14},
+            {"name": "Becker", "min": 37, "fg": "2-5", "ft": "6-8", "reb": 4, "ast": 1, "pf": 2, "pts": 10},
+            {"name": "Culver", "min": 18, "fg": "3-3", "ft": "0-1", "reb": 4, "ast": 0, "pf": 2, "pts": 6},
+            {"name": "Gaimes", "min": 37, "fg": "3-8", "ft": "1-2", "reb": 6, "ast": 2, "pf": 3, "pts": 7},
+            {"name": "Wright", "min": 3, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "pts": 0},
+            {"name": "Otteni", "min": 3, "fg": "0-1", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "pts": 0},
+            {"name": "Stephens", "min": 3, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "pts": 0},
+            {"name": "Somogyi", "min": 37, "fg": "1-11", "ft": "3-4", "reb": 7, "ast": 2, "pf": 3, "pts": 5},
+            {"name": "Bowden", "min": 3, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "pts": 0},
+            {"name": "Henckel", "min": 3, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "pts": 0}
+          ]
+        },
+        {
+          "name": "Oregon",
+          "score": 60,
+          "players": [
+            {"name": "Slater", "min": 18, "fg": "0-2", "ft": "0-0", "reb": 2, "ast": 0, "pf": 4, "pts": 0},
+            {"name": "Gaskins", "min": 40, "fg": "4-10", "ft": "3-7", "reb": 4, "ast": 3, "pf": 0, "pts": 11},
+            {"name": "Love", "min": 36, "fg": "9-19", "ft": "7-9", "reb": 14, "ast": 1, "pf": 5, "pts": 25},
+            {"name": "Holliday", "min": 40, "fg": "7-12", "ft": "3-4", "reb": 4, "ast": 1, "pf": 2, "pts": 17},
+            {"name": "Drozdiak", "min": 25, "fg": "1-4", "ft": "2-2", "reb": 3, "ast": 3, "pf": 4, "pts": 4},
+            {"name": "Jackson", "min": 29, "fg": "0-2", "ft": "1-1", "reb": 8, "ast": 2, "pf": 3, "pts": 1},
+            {"name": "Strand", "min": 9, "fg": "1-1", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "pts": 2},
+            {"name": "Blair", "min": 4, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 2, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

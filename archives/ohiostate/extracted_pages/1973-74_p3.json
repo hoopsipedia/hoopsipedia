@@ -1,0 +1,42 @@
+{
+  "page": 3,
+  "games": [
+    {
+      "date": "1973-12-08",
+      "opponent": "Penn State",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 72,
+          "players": [
+            {"name": "Wolfe-F", "fg": "8-11", "ft": "2-4", "reb": 8, "ast": 5, "pf": 4, "pts": 18},
+            {"name": "Jackson-F", "fg": "7-19", "ft": "6-9", "reb": 13, "ast": 0, "pf": 3, "pts": 20},
+            {"name": "Andreas-C", "fg": "7-16", "ft": "2-2", "reb": 7, "ast": 0, "pf": 2, "pts": 16},
+            {"name": "Gerhard-G", "fg": "4-12", "ft": "2-4", "reb": 4, "ast": 4, "pf": 3, "pts": 10},
+            {"name": "Repella-G", "fg": "2-4", "ft": "4-4", "reb": 6, "ast": 6, "pf": 2, "pts": 8},
+            {"name": "Bolden-G", "fg": "0-1", "ft": "0-0", "reb": 1, "ast": 1, "pf": 1, "pts": 0},
+            {"name": "Weston-G", "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 1, "pf": 1, "pts": 0},
+            {"name": "Wenner", "fg": "0-2", "ft": "0-0", "reb": 2, "ast": 0, "pf": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Penn State",
+          "score": 65,
+          "players": [
+            {"name": "Angstadt-F", "fg": "4-6", "ft": "0-0", "reb": 3, "ast": 4, "pf": 2, "pts": 8},
+            {"name": "Marshall-F", "fg": "0-5", "ft": "1-2", "reb": 10, "ast": 3, "pf": 5, "pts": 1},
+            {"name": "Meister-C", "fg": "3-6", "ft": "0-0", "reb": 1, "ast": 1, "pf": 5, "pts": 6},
+            {"name": "Brown-G", "fg": "10-16", "ft": "6-7", "reb": 3, "ast": 2, "pf": 4, "pts": 26},
+            {"name": "Burke-G", "fg": "7-17", "ft": "4-4", "reb": 5, "ast": 3, "pf": 2, "pts": 18},
+            {"name": "Erichson-F", "fg": "3-7", "ft": "0-0", "reb": 3, "ast": 0, "pf": 2, "pts": 6},
+            {"name": "Preston-F", "fg": "0-1", "ft": "0-0", "reb": 1, "ast": 0, "pf": 1, "pts": 0},
+            {"name": "Raffin-C", "fg": "0-0", "ft": "0-1", "reb": 0, "ast": 0, "pf": 1, "pts": 0},
+            {"name": "Cadle-G", "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

@@ -1,0 +1,41 @@
+{
+  "page": 28,
+  "games": [
+    {
+      "date": "1977-03-05",
+      "opponent": "Indiana",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 69,
+          "players": [
+            {"name": "Burris", "fg": "3-6", "ft": "3-3", "reb": 5, "pf": 4, "pts": 9, "ast": 0},
+            {"name": "Hall", "fg": "0-3", "ft": "0-0", "reb": 2, "pf": 2, "pts": 0, "ast": 3},
+            {"name": "Ellinghausen", "fg": "6-10", "ft": "4-4", "reb": 10, "pf": 4, "pts": 16, "ast": 3},
+            {"name": "Ransey", "fg": "7-17", "ft": "0-0", "reb": 3, "pf": 5, "pts": 14, "ast": 3},
+            {"name": "Bolden", "fg": "3-9", "ft": "3-6", "reb": 1, "pf": 5, "pts": 9, "ast": 0},
+            {"name": "Daughrty", "fg": "5-9", "ft": "0-0", "reb": 2, "pf": 2, "pts": 10, "ast": 1},
+            {"name": "Hammond", "fg": "2-3", "ft": "0-0", "reb": 1, "pf": 1, "pts": 4, "ast": 0},
+            {"name": "Poole", "fg": "2-4", "ft": "1-2", "reb": 4, "pf": 1, "pts": 5, "ast": 0},
+            {"name": "Wood", "fg": "1-4", "ft": "0-0", "reb": 2, "pf": 0, "pts": 2, "ast": 2}
+          ]
+        },
+        {
+          "name": "Indiana",
+          "score": 75,
+          "players": [
+            {"name": "Woodson", "fg": "6-12", "ft": "3-4", "reb": 6, "pf": 2, "pts": 15, "ast": 2},
+            {"name": "Grunwald", "fg": "3-8", "ft": "0-0", "reb": 5, "pf": 3, "pts": 6, "ast": 5},
+            {"name": "Holcomb", "fg": "8-13", "ft": "7-8", "reb": 15, "pf": 4, "pts": 23, "ast": 2},
+            {"name": "Cunningham", "fg": "2-5", "ft": "5-7", "reb": 3, "pf": 2, "pts": 9, "ast": 7},
+            {"name": "Radford", "fg": "7-12", "ft": "3-5", "reb": 4, "pf": 4, "pts": 17, "ast": 1},
+            {"name": "Carter", "fg": "0-0", "ft": "1-3", "reb": 3, "pf": 1, "pts": 1, "ast": 0},
+            {"name": "Eells", "fg": "2-3", "ft": "0-0", "reb": 0, "pf": 1, "pts": 4, "ast": 2}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

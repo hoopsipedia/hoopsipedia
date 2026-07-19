@@ -1,0 +1,42 @@
+{
+  "page": 6,
+  "games": [
+    {
+      "date": "1945-01-01",
+      "opponent": "Great Lakes",
+      "location": "Cleveland (neutral site)",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 50,
+          "players": [
+            {"name": "Dugger", "fg": "2", "ft": "1", "pts": 5},
+            {"name": "Grate", "fg": "7", "ft": "2", "pts": 16},
+            {"name": "Snyder", "fg": "0", "ft": "0", "pts": 0},
+            {"name": "Risen", "fg": "5", "ft": "7", "pts": 17},
+            {"name": "Pfeiffer", "fg": "1", "ft": "0", "pts": 2},
+            {"name": "Sims", "fg": "1", "ft": "0", "pts": 2},
+            {"name": "Huston", "fg": "2", "ft": "1", "pts": 5},
+            {"name": "Amling", "fg": "1", "ft": "1", "pts": 3},
+            {"name": "Candill", "fg": "0", "ft": "0", "pts": 0}
+          ]
+        },
+        {
+          "name": "Great Lakes",
+          "score": 60,
+          "players": [
+            {"name": "Majorki", "fg": "3", "ft": "0", "pts": 6},
+            {"name": "Cloyd", "fg": "2", "ft": "0", "pts": 4},
+            {"name": "Clarke", "fg": "2", "ft": "2", "pts": 6},
+            {"name": "Budko", "fg": "3", "ft": "2", "pts": 8},
+            {"name": "Ove", "fg": "1", "ft": "1", "pts": 3},
+            {"name": "Ajax", "fg": "5", "ft": "3", "pts": 13},
+            {"name": "McGuire", "fg": "8", "ft": "4", "pts": 20}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

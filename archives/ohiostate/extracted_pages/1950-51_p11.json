@@ -1,0 +1,45 @@
+{
+  "page": 11,
+  "games": [
+    {
+      "date": "1951-01-13",
+      "opponent": "Wisconsin",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 67,
+          "players": [
+            {"name": "Remington", "min": "17:00", "fg": "4-10", "ft": "1-2", "pf": 1, "pts": 9},
+            {"name": "Wilks", "min": "23:30", "fg": "4-8", "ft": "4-6", "pf": 4, "pts": 12},
+            {"name": "Gillaugh", "min": "15:00", "fg": "0-2", "ft": "2-3", "pf": 1, "pts": 2},
+            {"name": "Hatfield", "min": "11:40", "fg": "1-3", "ft": "3-3", "pf": 5, "pts": 5},
+            {"name": "Armstrong", "min": "24:10", "fg": "2-9", "ft": "0-0", "pf": 5, "pts": 4},
+            {"name": "Williams", "min": "25:30", "fg": "5-13", "ft": "5-7", "pf": 0, "pts": 15},
+            {"name": "Karaffa", "min": "19:40", "fg": "4-9", "ft": "0-0", "pf": 0, "pts": 8},
+            {"name": "Jones", "min": "19:50", "fg": "2-7", "ft": "0-3", "pf": 3, "pts": 4},
+            {"name": "Dawa", "min": "21:00", "fg": "1-3", "ft": "0-0", "pf": 5, "pts": 2},
+            {"name": "Maher", "min": "18:10", "fg": "2-5", "ft": "1-2", "pf": 1, "pts": 5},
+            {"name": "Hoag", "min": "4:20", "fg": "0-2", "ft": "1-1", "pf": 1, "pts": 1},
+            {"name": "Worthley", "min": ":10", "fg": "0-1", "ft": "0-2", "pf": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Wisconsin",
+          "score": 74,
+          "players": [
+            {"name": "Markham", "fg": "3-12", "ft": "4-7", "pf": 3, "pts": 10},
+            {"name": "Bencriscutto", "fg": "1-1", "ft": "0-1", "pf": 3, "pts": 2},
+            {"name": "Clinton", "fg": "3-9", "ft": "5-5", "pf": 6, "pts": 11},
+            {"name": "Anderson", "fg": "3-9", "ft": "1-1", "pf": 3, "pts": 7},
+            {"name": "Dahlke", "fg": "0-6", "ft": "0-1", "pf": 4, "pts": 0},
+            {"name": "Van Dien", "fg": "7-11", "ft": "3-4", "pf": 3, "pts": 17},
+            {"name": "Johnson", "fg": "0-0", "ft": "0-0", "pf": 0, "pts": 0},
+            {"name": "Nicholas", "fg": "9-19", "ft": "9-12", "pf": 0, "pts": 27}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

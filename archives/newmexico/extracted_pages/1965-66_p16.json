@@ -1,0 +1,9 @@
+{
+  "page": 16,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page is a 'Cage Chart' (shot chart + box score) for ASU vs New Mexico at Tempe, AZ on 2/5/66, second half. ASU's box score (home team) is clearly legible and checksums correctly (player pts sum 23+8+8+18+6+0+2+4+5+0=74, matches team total FG29/FGA71/FT16/FTA23/TP74). However, the New Mexico (Lobos) box score on the right side is handwritten in faint/smudged pencil and red ink, with player names (e.g. 'Daniels', 'Morgan', 'Howard', 'Johnson', 'Cleveland', 'Spennholtz') and nearly all individual FG/FGA/FT/FTA/RB/P/TP figures too illegible to transcribe confidently, even though the team totals row is readable (FG27 FGA68 FT14 FTA30 RB49 P18 TP68, final score NM 68 vs ASU 74). Since the task requires both teams' player lines and Lobos individual stats cannot be read reliably, the entire game is skipped rather than guessed."
+    }
+  ]
+}

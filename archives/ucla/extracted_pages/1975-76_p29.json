@@ -1,0 +1,44 @@
+{
+  "page": 29,
+  "games": [
+    {
+      "date": "1976-03-18",
+      "opponent": "Pepperdine",
+      "ucla_score": 70,
+      "opp_score": 61,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 70,
+          "players": [
+            {"name": "Rich Washington", "min": 37, "fg": "7-18", "ft": "2-5", "reb": 6, "ast": 4, "pf": 2, "pts": 16},
+            {"name": "Marques Johnson", "min": 39, "fg": "6-14", "ft": "6-6", "reb": 10, "ast": 2, "pf": 3, "pts": 18},
+            {"name": "David Greenwood", "min": 24, "fg": "5-9", "ft": "0-0", "reb": 7, "ast": 0, "pf": 5, "pts": 10},
+            {"name": "Andre McCarter", "min": 39, "fg": "2-4", "ft": "0-0", "reb": 2, "ast": 7, "pf": 1, "pts": 4},
+            {"name": "Raymond Townsend", "min": 37, "fg": "4-6", "ft": "0-0", "reb": 4, "ast": 3, "pf": 2, "pts": 8},
+            {"name": "Ralph Drollinger", "min": 14, "fg": "4-7", "ft": "0-0", "reb": 6, "ast": 2, "pf": 5, "pts": 8},
+            {"name": "Gavin Smith", "min": 4, "fg": "3-4", "ft": "0-2", "reb": 0, "ast": 0, "pf": 0, "pts": 6},
+            {"name": "Jim Spillane", "min": 4, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "pts": 0},
+            {"name": "Brett Vroman", "min": 2, "fg": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "pf": 1, "pts": 0}
+          ]
+        },
+        {
+          "name": "Pepperdine",
+          "score": 61,
+          "players": [
+            {"name": "Ollie Matson", "min": 34, "fg": "4-9", "ft": "2-3", "reb": 5, "ast": 3, "pf": 5, "pts": 10},
+            {"name": "Dick Skophammer", "min": 39, "fg": "4-11", "ft": "0-0", "reb": 9, "ast": 2, "pf": 4, "pts": 8},
+            {"name": "Marcos Leite", "min": 40, "fg": "4-14", "ft": "8-10", "reb": 8, "ast": 1, "pf": 3, "pts": 16},
+            {"name": "Flintie Williams", "min": 38, "fg": "4-10", "ft": "2-2", "reb": 0, "ast": 2, "pf": 3, "pts": 10},
+            {"name": "Dennis Johnson", "min": 39, "fg": "7-14", "ft": "2-5", "reb": 6, "ast": 0, "pf": 2, "pts": 16},
+            {"name": "Howie Dallmar", "min": 3, "fg": "0-0", "ft": "0-2", "reb": 2, "ast": 0, "pf": 1, "pts": 0},
+            {"name": "Brian Goorjian", "min": 3, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "pts": 0},
+            {"name": "Ray Ellis", "min": 4, "fg": "0-0", "ft": "1-2", "reb": 2, "ast": 0, "pf": 0, "pts": 1}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

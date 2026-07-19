@@ -1,0 +1,50 @@
+{
+  "page": 10,
+  "games": [
+    {
+      "date": "1990-12-27",
+      "opponent": "Fresno State",
+      "ucla_score": 110,
+      "opp_score": 89,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 110,
+          "players": [
+            {"name": "MacLean", "min": 30, "fg": "7-17", "ft": "8-10", "tp": "0-0", "reb": 8, "ast": 7, "pf": 3, "to": 3, "stl": 0, "blk": 0, "pts": 22},
+            {"name": "Butler", "min": 28, "fg": "9-10", "ft": "0-3", "tp": "1-1", "reb": 7, "ast": 5, "pf": 2, "to": 1, "stl": 1, "blk": 0, "pts": 19},
+            {"name": "Murray", "min": 25, "fg": "10-14", "ft": "3-3", "tp": "3-6", "reb": 14, "ast": 1, "pf": 2, "to": 1, "stl": 0, "blk": 2, "pts": 26},
+            {"name": "Martin", "min": 29, "fg": "5-10", "ft": "1-2", "tp": "0-2", "reb": 2, "ast": 6, "pf": 2, "to": 3, "stl": 2, "blk": 0, "pts": 11},
+            {"name": "Madkins", "min": 28, "fg": "2-7", "ft": "0-0", "tp": "2-5", "reb": 4, "ast": 5, "pf": 1, "to": 3, "stl": 1, "blk": 1, "pts": 6},
+            {"name": "Owens", "min": 20, "fg": "4-6", "ft": "0-0", "tp": "0-0", "reb": 4, "ast": 0, "pf": 3, "to": 2, "stl": 0, "blk": 1, "pts": 8},
+            {"name": "Tarver", "min": 14, "fg": "3-8", "ft": "2-6", "tp": "0-1", "reb": 4, "ast": 2, "pf": 2, "to": 1, "stl": 1, "blk": 0, "pts": 8},
+            {"name": "Mason", "min": 10, "fg": "1-1", "ft": "0-0", "tp": "0-0", "reb": 3, "ast": 1, "pf": 5, "to": 0, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Zimmerman", "min": 9, "fg": "1-2", "ft": "3-4", "tp": "0-0", "reb": 5, "ast": 0, "pf": 1, "to": 1, "stl": 0, "blk": 1, "pts": 5},
+            {"name": "Richie", "min": 3, "fg": "1-1", "ft": "0-0", "tp": "1-1", "reb": 0, "ast": 0, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 3},
+            {"name": "Kenny", "min": 2, "fg": "0-1", "ft": "0-0", "tp": "0-0", "reb": 1, "ast": 1, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Paulsell", "min": 2, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 2, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Fresno State",
+          "score": 89,
+          "players": [
+            {"name": "Riddlesprigger", "min": 22, "fg": "3-5", "ft": "0-0", "tp": "0-0", "reb": 4, "ast": 0, "pf": 4, "to": 2, "stl": 0, "blk": 0, "pts": 6},
+            {"name": "Hooker", "min": 32, "fg": "5-13", "ft": "1-5", "tp": "4-10", "reb": 3, "ast": 1, "pf": 3, "to": 4, "stl": 1, "blk": 0, "pts": 15},
+            {"name": "Lambrecht", "min": 20, "fg": "4-5", "ft": "0-0", "tp": "0-0", "reb": 6, "ast": 1, "pf": 2, "to": 1, "stl": 1, "blk": 0, "pts": 8},
+            {"name": "Harris, C.", "min": 27, "fg": "5-7", "ft": "1-2", "tp": "0-0", "reb": 3, "ast": 2, "pf": 4, "to": 0, "stl": 1, "blk": 0, "pts": 11},
+            {"name": "Barnett", "min": 29, "fg": "4-12", "ft": "0-0", "tp": "1-3", "reb": 5, "ast": 9, "pf": 2, "to": 2, "stl": 1, "blk": 0, "pts": 11},
+            {"name": "Bernard", "min": 27, "fg": "10-21", "ft": "4-7", "tp": "1-2", "reb": 2, "ast": 1, "pf": 4, "to": 2, "stl": 1, "blk": 0, "pts": 25},
+            {"name": "Pearson", "min": 12, "fg": "0-1", "ft": "1-4", "tp": "0-1", "reb": 0, "ast": 3, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 1},
+            {"name": "Harris, D.", "min": 12, "fg": "2-5", "ft": "1-1", "tp": "1-3", "reb": 0, "ast": 4, "pf": 1, "to": 1, "stl": 2, "blk": 0, "pts": 6},
+            {"name": "Taylor", "min": 8, "fg": "1-2", "ft": "0-0", "tp": "0-1", "reb": 1, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Young", "min": 6, "fg": "1-3", "ft": "0-2", "tp": "0-0", "reb": 1, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Lindsey", "min": 5, "fg": "0-0", "ft": "2-4", "tp": "0-0", "reb": 1, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 2}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

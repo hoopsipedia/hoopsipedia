@@ -1,0 +1,39 @@
+{
+  "page": 29,
+  "games": [
+    {
+      "date": "1961-03-25",
+      "opponent": "Cincinnati",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 65,
+          "players": [
+            {"name": "Havlicek", "fg": "1-5", "ft": "2-2", "pf": 2, "reb": 4, "pts": 4},
+            {"name": "Hoyt", "fg": "3-5", "ft": "1-1", "pf": 3, "reb": 1, "pts": 7},
+            {"name": "Lucas", "fg": "10-17", "ft": "7-7", "pf": 4, "reb": 12, "pts": 27},
+            {"name": "Nowell", "fg": "3-9", "ft": "3-3", "pf": 1, "reb": 3, "pts": 9},
+            {"name": "Siegfried", "fg": "6-10", "ft": "2-3", "pf": 2, "reb": 3, "pts": 14},
+            {"name": "Knight", "fg": "1-3", "ft": "0-0", "pf": 1, "reb": 1, "pts": 2},
+            {"name": "Gearhart", "fg": "1-1", "ft": "0-0", "pf": 1, "reb": 0, "pts": 2}
+          ]
+        },
+        {
+          "name": "Cincinnati",
+          "score": 70,
+          "players": [
+            {"name": "Wiesenhahn", "fg": "8-15", "ft": "1-1", "pf": 3, "reb": 9, "pts": 17},
+            {"name": "Thacker", "fg": "7-21", "ft": "1-4", "pf": 0, "reb": 7, "pts": 15},
+            {"name": "Hogue", "fg": "3-8", "ft": "3-6", "pf": 3, "reb": 7, "pts": 9},
+            {"name": "Yates", "fg": "4-8", "ft": "5-5", "pf": 3, "reb": 2, "pts": 13},
+            {"name": "Bouldin", "fg": "7-12", "ft": "2-3", "pf": 4, "reb": 4, "pts": 16},
+            {"name": "Sizer", "fg": "0-0", "ft": "0-0", "pf": 0, "reb": 1, "pts": 0},
+            {"name": "Heidotting", "fg": "0-0", "ft": "0-0", "pf": 0, "reb": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

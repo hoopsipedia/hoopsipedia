@@ -1,0 +1,9 @@
+{
+  "page": 24,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "1960-61-03-04 Michigan State at Ohio State (final 83-91): Michigan State side checksums correctly (player PTS sum 22+14+14+21+8+1+3+0=83 matches team score 83), but Ohio State side fails checksum. Transcribed OSU player PTS (Havlicek 26, Hoyt 8, Lucas 23, Nowell 17, Siegfried 13, McDonald 2, Gearhart 0, Reasbeck 2, Lee 0, Apple 0, Milliken 1, Allen 1, Knight 0) sum to 93, but the sheet's own TOTALS row and 'Score:' field both say 91 (also matches quarter total 43+48=91). The sheet's FGA (80) and FG (38) column sums match the individual rows exactly, but FTA (individuals sum to 20 vs sheet total 18) and FT (individuals sum to 17 vs sheet total 15) are each off by 2, propagating a +2 error into the PTS sum. Re-read the page a second time and confirmed identical values both times, so this appears to be an arithmetic error on the original 1961 scorer's sheet itself rather than a transcription error. Skipping per checksum-failure rule rather than guessing which player row(s) are wrong."
+    }
+  ]
+}

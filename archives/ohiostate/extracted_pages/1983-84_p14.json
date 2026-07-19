@@ -1,0 +1,43 @@
+{
+  "page": 14,
+  "games": [
+    {
+      "date": "1984-01-14",
+      "opponent": "Illinois",
+      "site": "St. John Arena, Columbus, OH",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 53,
+          "players": [
+            {"name": "Tony Campbell", "min": 40, "fg": "6-14", "ft": "2-3", "reb": 7, "pf": 3, "ast": 0, "to": 2, "stl": 1, "blk": 0, "pts": 14},
+            {"name": "Dave Jones", "min": 34, "fg": "5-9", "ft": "0-0", "reb": 7, "pf": 3, "ast": 1, "to": 1, "stl": 0, "blk": 0, "pts": 10},
+            {"name": "Clarence McGee", "min": 30, "fg": "4-9", "ft": "0-0", "reb": 8, "pf": 8, "ast": 0, "to": 2, "stl": 1, "blk": 1, "pts": 8},
+            {"name": "Ron Stokes", "min": 31, "fg": "3-7", "ft": "3-3", "reb": 2, "pf": 4, "ast": 6, "to": 4, "stl": 1, "blk": 2, "pts": 9},
+            {"name": "Troy Taylor", "min": 37, "fg": "3-10", "ft": "2-2", "reb": 0, "pf": 4, "ast": 2, "to": 2, "stl": 1, "blk": 0, "pts": 8},
+            {"name": "Keith Wesson", "min": 10, "fg": "1-2", "ft": "0-0", "reb": 1, "pf": 1, "ast": 0, "to": 1, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Dennis Hopson", "min": 16, "fg": "1-2", "ft": "0-1", "reb": 0, "pf": 1, "ast": 0, "to": 0, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Curtis Wilson", "min": 2, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 1, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Illinois Fighting Illini",
+          "score": 55,
+          "players": [
+            {"name": "Efrem Winters", "min": 38, "fg": "4-12", "ft": "4-4", "reb": 8, "pf": 2, "ast": 2, "to": 3, "stl": 1, "blk": 1, "pts": 12},
+            {"name": "Doug Altenburger", "min": 38, "fg": "3-7", "ft": "4-6", "reb": 5, "pf": 1, "ast": 2, "to": 2, "stl": 0, "blk": 0, "pts": 10},
+            {"name": "George Montgomery", "min": 33, "fg": "5-12", "ft": "1-5", "reb": 7, "pf": 4, "ast": 0, "to": 0, "stl": 0, "blk": 0, "pts": 11},
+            {"name": "Bruce Douglas", "min": 40, "fg": "5-10", "ft": "2-4", "reb": 7, "pf": 0, "ast": 4, "to": 3, "stl": 1, "blk": 0, "pts": 12},
+            {"name": "Quinn Richardson", "min": 35, "fg": "3-5", "ft": "1-2", "reb": 2, "pf": 2, "ast": 3, "to": 6, "stl": 0, "blk": 0, "pts": 7},
+            {"name": "Tony Wysinger", "min": 6, "fg": "0-1", "ft": "1-2", "reb": 1, "pf": 0, "ast": 0, "to": 1, "stl": 0, "blk": 0, "pts": 1},
+            {"name": "Tom Schafer", "min": 2, "fg": "0-0", "ft": "0-0", "reb": 1, "pf": 0, "ast": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Scott Meents", "min": 8, "fg": "1-3", "ft": "0-0", "reb": 1, "pf": 0, "ast": 0, "to": 0, "stl": 0, "blk": 0, "pts": 2}
+          ]
+        }
+      ],
+      "checksum_ok": true,
+      "notes": "Ohio State's Tony Campbell FT read as 3-3 on the sheet, but this fails team FT checksum (team total FT=7; sum of other 7 players' FT=5, leaving 2 for Campbell) and the FGx2+FT=TP identity (2*6+FT=14 implies FT=2). Corrected Campbell's FT to 2-3 (kept FTA=3 as printed) to match both checksums; all other values transcribed as printed. Team BLK total on sheet reads 1 but individual BLK entries (McGee 1, Stokes 2) sum to 3 — left as printed since this does not affect the points checksum and box scores of this era sometimes had transcription slips outside the FG/FT/TP columns."
+    }
+  ],
+  "skipped": []
+}

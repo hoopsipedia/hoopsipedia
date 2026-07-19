@@ -1,0 +1,49 @@
+{
+  "page": 18,
+  "games": [
+    {
+      "date": "1983-02-05",
+      "opponent": "Washington",
+      "ucla_score": 84,
+      "opp_score": 65,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 84,
+          "players": [
+            {"name": "Daye", "min": 29, "fg": "3-8", "ft": "5-6", "reb": 8, "ast": 9, "pf": 2, "to": 2, "stl": 3, "pts": 11},
+            {"name": "Fields", "min": 32, "fg": "10-12", "ft": "2-4", "reb": 10, "ast": 3, "pf": 2, "to": 2, "stl": 2, "pts": 22},
+            {"name": "Gray", "min": 28, "fg": "6-7", "ft": "2-3", "reb": 10, "pf": 3, "to": 4, "pts": 14},
+            {"name": "Jackson", "min": 30, "fg": "1-4", "ft": "0-0", "reb": 3, "ast": 9, "pf": 3, "to": 8, "stl": 1, "pts": 2},
+            {"name": "Foster", "min": 20, "fg": "2-9", "ft": "1-1", "reb": 2, "pf": 4, "to": 2, "pts": 5},
+            {"name": "Holton", "min": 27, "fg": "6-10", "ft": "3-3", "reb": 6, "ast": 1, "pf": 2, "to": 2, "pts": 15},
+            {"name": "Maloncon", "min": 20, "fg": "5-6", "ft": "0-1", "reb": 4, "ast": 1, "pf": 2, "stl": 2, "pts": 10},
+            {"name": "Miguel", "min": 12, "fg": "2-2", "ft": "0-5", "reb": 0, "ast": 1, "pf": 2, "pts": 4},
+            {"name": "Knight", "min": 1, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Arrillaga", "min": 1, "fg": "0-0", "ft": "1-2", "reb": 0, "pf": 0, "pts": 1}
+          ]
+        },
+        {
+          "name": "Washington Huskies",
+          "score": 65,
+          "players": [
+            {"name": "Tanner", "min": 24, "fg": "2-10", "ft": "1-3", "reb": 2, "ast": 2, "pf": 1, "to": 1, "stl": 2, "pts": 5},
+            {"name": "Rogers", "min": 30, "fg": "5-13", "ft": "3-5", "reb": 4, "ast": 1, "pf": 4, "to": 2, "stl": 3, "pts": 13},
+            {"name": "Schrempf", "min": 34, "fg": "10-15", "ft": "2-2", "reb": 9, "ast": 3, "pf": 3, "to": 1, "stl": 1, "pts": 22},
+            {"name": "Koehler", "min": 24, "fg": "0-2", "ft": "0-1", "reb": 2, "ast": 2, "pf": 4, "to": 1, "pts": 0},
+            {"name": "Watson", "min": 32, "fg": "2-7", "ft": "0-0", "reb": 1, "ast": 1, "pf": 1, "to": 1, "pts": 4},
+            {"name": "Fortier", "min": 18, "fg": "3-10", "ft": "0-0", "reb": 6, "pf": 2, "to": 2, "stl": 1, "pts": 6},
+            {"name": "Gardner", "min": 15, "fg": "1-2", "ft": "1-1", "reb": 1, "ast": 1, "pf": 0, "to": 3, "stl": 1, "pts": 3},
+            {"name": "Howell", "min": 3, "fg": "0-2", "ft": "0-0", "reb": 1, "pf": 2, "pts": 0},
+            {"name": "Kuyper", "min": 15, "fg": "3-7", "ft": "4-8", "reb": 3, "ast": 1, "pf": 2, "pts": 10},
+            {"name": "Barge", "min": 2, "fg": "1-2", "ft": "0-0", "reb": 0, "pf": 0, "pts": 2},
+            {"name": "Sigurdsson", "min": 2, "fg": "0-2", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Riva", "min": 1, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

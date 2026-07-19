@@ -1,0 +1,43 @@
+{
+  "page": 23,
+  "games": [
+    {
+      "date": "1982-02-18",
+      "opponent": "Hawaii",
+      "teams": [
+        {
+          "name": "Hawaii",
+          "score": 77,
+          "players": [
+            {"name": "Rodney Jones", "fg": "1-7", "ft": "0-0", "reb": 5, "pf": 4, "ast": 2, "to": 1, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "David Hopkins", "fg": "4-6", "ft": "4-7", "reb": 9, "pf": 1, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pts": 12},
+            {"name": "Bobby Hancock", "fg": "11-17", "ft": "1-3", "reb": 6, "pf": 5, "ast": 0, "to": 0, "blk": 0, "stl": 1, "pts": 23},
+            {"name": "Racky Sesler", "fg": "2-5", "ft": "2-5", "reb": 1, "pf": 4, "ast": 5, "to": 1, "blk": 0, "stl": 3, "pts": 6},
+            {"name": "Clarence Dickerson", "fg": "4-11", "ft": "8-8", "reb": 5, "pf": 5, "ast": 6, "to": 5, "blk": 0, "stl": 2, "pts": 16},
+            {"name": "Brad Pineau", "fg": "2-4", "ft": "0-0", "reb": 4, "pf": 5, "ast": 1, "to": 2, "blk": 0, "stl": 0, "pts": 4},
+            {"name": "William Colston", "fg": "2-5", "ft": "1-2", "reb": 1, "pf": 1, "ast": 0, "to": 3, "blk": 0, "stl": 0, "pts": 5},
+            {"name": "Garland Hughes", "fg": "0-0", "ft": "1-2", "reb": 0, "pf": 1, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 1},
+            {"name": "Larry Connors", "fg": "0-1", "ft": "0-0", "reb": 0, "pf": 1, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Sam Johnson", "fg": "2-3", "ft": "4-6", "reb": 1, "pf": 2, "ast": 1, "to": 1, "blk": 0, "stl": 0, "pts": 8}
+          ]
+        },
+        {
+          "name": "New Mexico Lobos",
+          "score": 78,
+          "players": [
+            {"name": "Don Brkovich", "fg": "6-12", "ft": "3-4", "reb": 2, "pf": 5, "ast": 2, "to": 1, "blk": 1, "pts": 15},
+            {"name": "Craig Allison", "fg": "7-9", "ft": "2-7", "reb": 4, "pf": 4, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 16},
+            {"name": "Larry Tarrance", "fg": "5-9", "ft": "7-8", "reb": 10, "pf": 5, "ast": 2, "to": 1, "blk": 0, "stl": 1, "pts": 17},
+            {"name": "Phil Smith", "fg": "5-10", "ft": "2-4", "reb": 2, "pf": 4, "ast": 7, "to": 7, "blk": 0, "stl": 1, "pts": 12},
+            {"name": "Tim Fullmer", "fg": "2-9", "ft": "8-8", "reb": 6, "pf": 2, "ast": 7, "to": 3, "blk": 0, "stl": 1, "pts": 12},
+            {"name": "Brad Evangelho", "fg": "1-1", "ft": "0-0", "reb": 2, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Alan Dolensky", "fg": "0-1", "ft": "4-5", "reb": 1, "pf": 3, "ast": 2, "to": 1, "blk": 0, "stl": 2, "pts": 4}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": [],
+  "notes": "Official NCAA box score, Hawaii at New Mexico, 2/18/82, Albuquerque NM. Officials Dibler & Tate, attendance 15,534. Score by periods: Hawaii 39-33-5=77, New Mexico 39-33-6=78 (game went to OT). Willie Wright, Dan Hale (Hawaii) and Bill Harvey, Jeff Reinert (New Mexico) did not play (blank rows) and are omitted. MIN column omitted for all players - digits were not reliably legible. Stl omitted for Don Brkovich only - value illegible. Both team point totals verified against player pts sums (Hawaii 77, New Mexico 78) and both match the final scoreboard exactly."
+}

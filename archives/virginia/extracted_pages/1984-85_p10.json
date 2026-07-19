@@ -1,0 +1,9 @@
+{
+  "page": 10,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page contains one game (Virginia vs Alabama, Sugar Bowl Championship, 12/22/84, Louisiana Superdome) but the handwritten official scoresheet has ambiguous digits in the FG/FGA columns for multiple Virginia players (e.g. Tom Sheehey and Tim Mullen rows appear to show FG values exceeding FGA, which is impossible), making precise per-player transcription unreliable. Attempted checksum against the team's individual player TP (points) column summed to 52, which did not match either the team totals-row TP (~48) or the final score implied by the score-by-periods line (33+25=58) for Virginia, so no self-consistent reading could be confirmed. Skipping rather than guessing digit values, per instructions to be ruthless about illegible/checksum-failing sheets."
+    }
+  ]
+}

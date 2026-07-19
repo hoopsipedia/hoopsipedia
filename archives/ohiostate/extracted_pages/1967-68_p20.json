@@ -1,0 +1,42 @@
+{
+  "page": 20,
+  "games": [
+    {
+      "date": "1968-02-17",
+      "opponent": "Minnesota",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 79,
+          "players": [
+            {"name": "Howell", "fg": "4-13", "ft": "1-1", "reb": 4, "pf": 3, "pts": 9},
+            {"name": "Hosket", "fg": "12-22", "ft": "1-3", "reb": 10, "pf": 4, "pts": 25},
+            {"name": "Sorenson", "fg": "11-18", "ft": "2-3", "reb": 11, "pf": 4, "pts": 24},
+            {"name": "Meadors", "fg": "6-15", "ft": "7-7", "reb": 7, "pf": 3, "pts": 19},
+            {"name": "Finney", "fg": "0-4", "ft": "1-1", "reb": 1, "pf": 0, "pts": 1},
+            {"name": "Swain", "fg": "0-2", "ft": "1-1", "reb": 2, "pf": 3, "pts": 1},
+            {"name": "Andreas", "fg": "0-8", "ft": "0-0", "reb": 5, "pf": 1, "pts": 0},
+            {"name": "Schnabel", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Geddes", "fg": "0-2", "ft": "0-0", "reb": 1, "pf": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Minnesota",
+          "score": 83,
+          "players": [
+            {"name": "Overskei", "fg": "5-12", "ft": "1-2", "reb": 11, "pf": 3, "pts": 11},
+            {"name": "Mikan", "fg": "4-7", "ft": "0-0", "reb": 12, "pf": 0, "pts": 8},
+            {"name": "Kondla", "fg": "10-23", "ft": "12-15", "reb": 12, "pf": 5, "pts": 32},
+            {"name": "Gardner", "fg": "9-13", "ft": "1-2", "reb": 0, "pf": 5, "pts": 19},
+            {"name": "Nuness", "fg": "4-15", "ft": "1-1", "reb": 4, "pf": 2, "pts": 9},
+            {"name": "Barry", "fg": "1-2", "ft": "2-3", "reb": 0, "pf": 0, "pts": 4},
+            {"name": "Moore", "fg": "0-1", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Regenfuss", "fg": "0-0", "ft": "0-0", "reb": 1, "pf": 1, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

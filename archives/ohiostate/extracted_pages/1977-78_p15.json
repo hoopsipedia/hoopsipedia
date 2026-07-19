@@ -1,0 +1,9 @@
+{
+  "page": 15,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page 15 is an official NCAA box score for Ohio State @ Minnesota (team totals legible: Ohio State 20/66 FG, 7/14 FT = 47 pts; Minnesota 29/48 FG, 14/23 FT = 72 pts; line score by half 20+27=47 and 38+34=72, all internally consistent, likely dated Jan 14 1978). However, the photocopy is too degraded to confidently read individual player FG/FT/TP digits for several rows on both rosters. In particular the Ohio State rows for Ken Page and Kelvin Ransey have digits that do not satisfy the 2*FG+FT=TP arithmetic under any plausible reading, and other player cells (e.g. Minnesota's Mychal Thompson, Osborne Lockhart) are similarly smudged/ambiguous. Since a full, checksummed player-by-player box score cannot be produced with confidence for either team, the game is skipped rather than guessed."
+    }
+  ]
+}

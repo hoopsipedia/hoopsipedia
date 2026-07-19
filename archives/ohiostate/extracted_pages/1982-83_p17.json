@@ -1,0 +1,9 @@
+{
+  "page": 17,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Official Big Ten box score, Ohio State (visitors) vs Iowa (home), double-overtime game (score by periods 40-40, 28-28, 8-8, 13-7; final Ohio State 89, Iowa 83). Team-level totals/final score are legible, but individual player rows for both teams are cramped handwriting with several circled/corrected digits in REB, PF, and MIN columns that cannot be read with confidence. Only 2 of 12 Ohio State rows (Smith, Campbell) had FG/FT/TP values legible enough to cross-check (both consistent: 1-1 FG/0-0 FT=2pts; 4-12 FG/3-5 FT=11pts), not enough to safely reconstruct or checksum full box scores for either team without risking fabricated values. Skipping per instruction to be ruthless rather than guess."
+    }
+  ]
+}

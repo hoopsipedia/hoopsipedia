@@ -1,0 +1,9 @@
+{
+  "page": 1,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Dec 11, 1943 Ohio State (60) vs Denison (49) at Cols. Auditorium: Ohio State side checksums cleanly (player PTS sum = 60, matches team total, and each row satisfies 2*FGM+FTM=PTS). However the Denison (opponents) side does not reconcile: summing individual player PTS values gives 50, not the recorded final score of 49, and the printed team-total row for FTM (3) is far below the sum of the individual FTM values read (8), and the FTA total (10) doesn't match the row sum (9) either. Re-read the page once (max allowed) and could not resolve the discrepancy with confidence -- likely a scorer arithmetic error or an illegible/misread digit in the handwritten Denison rows. Skipping the whole game per instructions rather than guessing at the opponent's box score."
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "page": 2,
+  "games": [
+    {
+      "date": "1973-12-05",
+      "opponent": "Penn State",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 68,
+          "players": [
+            {"name": "Al Drummond", "fg": "4-9", "ft": "1-2", "reb": 2, "pf": 1, "ast": 2, "to": 2, "pts": 9},
+            {"name": "Andy Benini", "fg": "2-9", "reb": 1, "pf": 2, "ast": 1, "to": 1, "pts": 4},
+            {"name": "Gus Gerard", "fg": "4-15", "reb": 5, "pf": 4, "ast": 1, "to": 2, "pts": 8},
+            {"name": "Wally Walker", "fg": "6-18", "reb": 3, "pf": 3, "pts": 12},
+            {"name": "Lanny Stahurski", "fg": "1-2", "reb": 1, "pf": 1, "to": 2, "pts": 2},
+            {"name": "Billy Landolt", "fg": "3-7", "ft": "1-2", "reb": 1, "pf": 1, "ast": 1, "to": 5, "pts": 7},
+            {"name": "Bob McBeay", "fg": "2-8", "ft": "3-4", "reb": 3, "pf": 1, "ast": 3, "to": 1, "pts": 7},
+            {"name": "Dan Bonner", "fg": "6-7", "reb": 8, "pf": 1, "ast": 3, "pts": 12},
+            {"name": "Steve Morris", "fg": "2-3", "ast": 2, "pts": 4},
+            {"name": "Ed Sichetlick", "fg": "1-1", "ft": "0-1", "reb": 1, "pts": 2},
+            {"name": "Brian Tully", "ft": "1-2", "reb": 1, "pts": 1},
+            {"name": "Bob Sefcik", "pts": 0}
+          ]
+        },
+        {
+          "name": "Penn State Nittany Lions",
+          "score": 93,
+          "players": [
+            {"name": "Dave Dingstadt", "fg": "3-7", "ft": "8-9", "reb": 8, "pf": 3, "ast": 4, "to": 1, "pts": 14},
+            {"name": "Ron Brown", "fg": "16-22", "ft": "4-4", "reb": 8, "ast": 3, "to": 7, "pts": 36},
+            {"name": "Kevin Burke", "fg": "5-8", "reb": 4, "ast": 2, "to": 5, "pts": 10},
+            {"name": "Jon Marshall", "fg": "2-6", "ft": "2-2", "reb": 9, "pf": 4, "ast": 5, "to": 2, "pts": 6},
+            {"name": "Randy Meister", "fg": "8-15", "ft": "1-2", "reb": 16, "pf": 1, "ast": 1, "to": 8, "pts": 17},
+            {"name": "John McDermott", "fg": "1-1", "ast": 1, "to": 1, "pts": 2},
+            {"name": "Keenan Preston", "fg": "1-3", "reb": 2, "pf": 1, "pts": 2},
+            {"name": "Jim Outterfive (surname uncertain)", "fg": "1-2", "reb": 1, "ast": 1, "to": 1, "pts": 2},
+            {"name": "Chris Erichsen", "fg": "1-2", "reb": 1, "pts": 2},
+            {"name": "Romel Raffin", "reb": 1, "pf": 2, "pts": 0},
+            {"name": "Tom Peady", "fg": "1-2", "reb": 1, "pts": 2},
+            {"name": "Kevin Cadle", "fg": "0-1", "reb": 1, "pts": 0},
+            {"name": "Bill Batts", "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

@@ -1,0 +1,9 @@
+{
+  "page": 6,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "1949-12-28 Ohio State vs Cornell (at East Lansing), Official Western Conference Basketball Box Score. Column layout: Time, FG (made), FGA, FT (made), FTM (missed), PF, PTS. Verified via formula PTS = 2*FG + FT for every player on both teams. Cornell side checksums perfectly (individual PTS sum = 42 = team Score 42, and Totals row FG 15/FT 12 match column sums). Ohio State side fails checksum: summing the printed PTS column (16+8+3+2+6+0+7+0=42) does not equal the team's final Score of 43, and Brown's row (FG1, FT1 made -> formula gives 3 pts) is printed as PTS=2, a 1-point internal inconsistency on the original scoresheet that could not be resolved by re-reading (digit reads clearly as '2' both times). Per instructions, skipping rather than silently altering the sheet's recorded value to force a match."
+    }
+  ]
+}

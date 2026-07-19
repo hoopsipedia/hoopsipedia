@@ -1,0 +1,9 @@
+{
+  "page": 16,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Ohio State (visiting, score 77) vs Purdue (home, score 73), dated Jan. 30, 1954, at Purdue. Ohio State's box score is fully legible and checksums perfectly (player PTS sum = 77, matching FG/FGA/FT/FTM/PF/Reb column totals). However, Purdue's box score (home team table) is heavily smudged/degraded by a scan stain covering large portions of the PF, PTS, and Reb columns for several players (Sexson, Vecha, Blinn, Roshoburg, Dunn rows). Team-level FG/FGA/FT/FTM totals for Purdue (31/91/11/11) do reconcile with column sums, but the PF column does not reconcile (individual PF values sum to ~14 vs printed team total of 19) and several PTS/Reb cells require guesswork rather than confident reads (e.g. Blinn's and Roshoburg's printed PTS digits are illegible/smudged and had to be inferred via the 2*FG+FT formula, which is not a confident direct transcription). Since a complete game entry requires both teams' player lines transcribed with confidence, and Purdue's line cannot be transcribed without guessing several values, the entire game is skipped per the no-guessing policy despite Ohio State's side being clean. Re-read the page once (allowed maximum) and the smudging persisted identically on the second read, confirming it is a scan artifact rather than a rendering fluke."
+    }
+  ]
+}

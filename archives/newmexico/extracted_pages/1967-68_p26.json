@@ -1,0 +1,9 @@
+{
+  "page": 26,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "1968-03-02 Denver vs University of New Mexico: Denver (typed) side transcribes cleanly and checksums (players' 2*FGmade+FTmade sum to 70, matching Denver's final score, and rebounds sum to 46 exactly), but the New Mexico (handwritten) side fails checksum and is not confidently legible. The scoresheet's own NM team FG-made total (circled in red, apparently flagged as suspicious) reads as 36, which combined with FT-made of 16 would imply 88 points (2*36+16), far exceeding NM's actual score of 68; the true FG-made figure is likely ~26 but several individual player rows (Ron Becker, Howard Grimes, Leonard Lopez, Dave Culver) have ambiguous handwritten digits that cannot be reconciled to the team total without guessing. Per instructions, skipping rather than inventing values for the New Mexico side; since a full two-team box score cannot be produced for this game, the whole game is omitted."
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "page": 22,
+  "games": [],
+  "skipped": [
+    {
+      "date": "1953-03-07",
+      "opponent": "Illinois",
+      "reason": "Ohio State (home) team checksum fails: player PTS sum = 75 (8+0+14+2+3+25+0+15+0+0+8+0) but team final score / TOTALS row = 74, a discrepancy of 1. Traced to Ropes P row: FG 1-1, FT 0-0 implies 2 pts (2*FGM+FTM), but sheet's PTS column shows 3 for Ropes. Confirmed identical values on a second read of the page (Miller F 0-2 FG, 2-2 FT, PTS 2; Ropes P 1-1 FG, 0-0 FT, PTS 3) -- this is an inconsistency in the original 1953 scoresheet itself, not a misread. Illinois (visiting) team box score is fully legible and checksums correctly (player PTS sum = 93 = team score 93; 40 FGM*2+13 FTM=93), but per instructions the whole game is skipped since the paired team's checksum fails."
+    }
+  ]
+}

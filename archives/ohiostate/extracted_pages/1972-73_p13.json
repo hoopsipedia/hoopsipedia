@@ -1,0 +1,45 @@
+{
+  "page": 13,
+  "games": [
+    {
+      "date": "1973-01-15",
+      "opponent": "Georgia Tech",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 85,
+          "players": [
+            {"name": "Jackson", "fg": "6-19", "ft": "6-7", "reb": 13, "pf": 2, "pts": 18},
+            {"name": "Wenner", "fg": "5-10", "ft": "3-3", "reb": 9, "pf": 4, "pts": 13},
+            {"name": "Taylor", "fg": "4-8", "ft": "0-0", "reb": 8, "pf": 4, "pts": 8},
+            {"name": "Hornyak", "fg": "9-22", "ft": "6-8", "reb": 4, "pf": 3, "pts": 24},
+            {"name": "Merchant", "fg": "2-4", "ft": "0-1", "reb": 3, "pf": 4, "pts": 4},
+            {"name": "Gerhard", "fg": "3-4", "ft": "0-0", "reb": 0, "pf": 3, "pts": 6},
+            {"name": "Witte", "fg": "3-4", "ft": "4-6", "reb": 3, "pf": 4, "pts": 10},
+            {"name": "Wolfe", "fg": "0-0", "ft": "0-0", "reb": 1, "pf": 0, "pts": 0},
+            {"name": "Siekmann", "fg": "1-1", "ft": "0-0", "reb": 2, "pf": 0, "pts": 2},
+            {"name": "Stiegemeier", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Georgia Tech",
+          "score": 79,
+          "players": [
+            {"name": "Sonnenberg", "fg": "3-5", "ft": "0-0", "reb": 2, "pf": 3, "pts": 6},
+            {"name": "Lockin", "fg": "0-1", "ft": "2-2", "reb": 1, "pf": 3, "pts": 2},
+            {"name": "Davis", "fg": "4-8", "ft": "1-2", "reb": 2, "pf": 4, "pts": 9},
+            {"name": "Sherbak", "fg": "8-17", "ft": "3-3", "reb": 6, "pf": 4, "pts": 19},
+            {"name": "Murphy", "fg": "2-9", "ft": "5-5", "reb": 4, "pf": 0, "pts": 9},
+            {"name": "McCain", "fg": "9-15", "ft": "7-8", "reb": 7, "pf": 2, "pts": 25},
+            {"name": "Allen", "fg": "2-6", "ft": "0-2", "reb": 4, "pf": 4, "pts": 4},
+            {"name": "Post", "fg": "0-1", "ft": "2-2", "reb": 1, "pf": 2, "pts": 2},
+            {"name": "Hyder", "fg": "0-1", "ft": "1-2", "reb": 1, "pf": 1, "pts": 1},
+            {"name": "Peters", "fg": "1-3", "ft": "0-0", "reb": 3, "pf": 2, "pts": 2}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

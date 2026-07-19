@@ -1,0 +1,44 @@
+{
+  "page": 3,
+  "games": [
+    {
+      "date": "1986-12-02",
+      "opponent": "Western Michigan",
+      "location": "St. John Arena, Columbus, Ohio",
+      "teams": [
+        {
+          "name": "Western Michigan Broncos",
+          "score": 92,
+          "players": [
+            {"name": "Jones, Andre", "min": 35, "pts": 22},
+            {"name": "Rakonen, Steve", "min": 14, "pts": 4},
+            {"name": "Baumgardt, Tony", "min": 37, "pts": 10},
+            {"name": "Bolden, Randy", "min": 38, "pts": 20},
+            {"name": "Stainback, Billy", "min": 5, "pts": 9},
+            {"name": "Slater, Joe", "min": 4, "pts": 0},
+            {"name": "Mobley, Tony", "pts": 0},
+            {"name": "Amundson, Steve", "min": 31, "pts": 27}
+          ],
+          "checksum_ok": true
+        },
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 98,
+          "players": [
+            {"name": "Hopson, Dennis", "min": 35, "pts": 33},
+            {"name": "Francis, Jerry", "min": 36, "pts": 15},
+            {"name": "Andrews (uncertain reading, #44)", "min": 20, "pts": 4},
+            {"name": "Dennis, Ray (uncertain reading)", "min": 35, "pts": 17},
+            {"name": "Wilson, Curtis", "min": 38, "pts": 17},
+            {"name": "Uhrig, Tony (uncertain reading, #20)", "min": 20, "pts": 12},
+            {"name": "Dumas, Joe", "min": 8, "pts": 0},
+            {"name": "Anderson, Scott", "min": 7, "pts": 0},
+            {"name": "Martin, John (#24)", "min": 1, "pts": 0}
+          ],
+          "checksum_ok": true
+        }
+      ]
+    }
+  ],
+  "skipped": []
+}

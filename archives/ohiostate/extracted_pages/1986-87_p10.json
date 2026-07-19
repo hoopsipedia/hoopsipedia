@@ -1,0 +1,9 @@
+{
+  "page": 10,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Handwritten official NCAA box score, Ohio State (7-2) at Univ. of Florida (8-1), Date 12-20-86, Site Jacksonville Coliseum, Final Ohio St 72 - Florida 82 (per score-by-periods box: 33+39=72, 38+44=82). Page is legible enough to identify the game and final score, but individual player stat cells (FG/FGA, FT/FTA, rebounds) are too faint/overlapping to transcribe with confidence. Summed player TP columns did not checksum cleanly against team final scores (Ohio State players summed to ~74 vs final 72; Florida players summed to ~86 vs final 82), indicating unreliable digit reads. Per instructions, skipping rather than guessing individual player lines."
+    }
+  ]
+}

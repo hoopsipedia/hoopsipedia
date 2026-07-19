@@ -1,0 +1,44 @@
+{
+  "page": 30,
+  "games": [
+    {
+      "date": "1988-03-16",
+      "opponent": "Old Dominion",
+      "notes": "NIT 1st Round, St. John Arena, Columbus, Ohio. Sheet labeled 'Game 29' (circled '29' at top). Attendance 10,009. Officials: Paul Sternberger, Charles Greene, Ed Schumer.",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 86,
+          "players": [
+            {"name": "Tony White", "min": 27, "fg": "4-8", "tp": "0-1", "ft": "0-1", "pts": 8},
+            {"name": "Jerry Francis", "min": 27, "fg": "4-6", "tp": "0-1", "ft": "1-2", "pts": 9},
+            {"name": "Perry Carter", "min": 36, "fg": "12-18", "tp": "0-1", "ft": "1-4", "pts": 25},
+            {"name": "Curtis Wilson", "min": 36, "fg": "5-12", "tp": "0-6", "ft": "0-0", "pts": 10},
+            {"name": "Jay Burson", "min": 38, "fg": "7-16", "tp": "0-4", "ft": "4-4", "pts": 18},
+            {"name": "James Bradley", "min": 5, "fg": "0-0", "tp": "0-0", "ft": "0-0", "pts": 0},
+            {"name": "Randy Doss", "min": 1, "fg": "0-1", "tp": "0-0", "ft": "0-0", "pts": 0},
+            {"name": "Scott Anderson", "min": 1, "fg": "0-0", "tp": "0-0", "ft": "0-0", "pts": 0},
+            {"name": "John Anderson", "min": 10, "fg": "2-6", "tp": "0-1", "ft": "1-2", "pts": 5},
+            {"name": "Gracy Mateen", "min": 26, "fg": "3-6", "tp": "0-5", "ft": "5-7", "pts": 11}
+          ]
+        },
+        {
+          "name": "Old Dominion",
+          "score": 73,
+          "players": [
+            {"name": "Anthony Carver", "min": 34, "fg": "5-10", "tp": "1-2", "ft": "0-0", "reb": 4, "pf": 5, "ast": 0, "to": 3, "blk": 0, "stl": 1, "pts": 11},
+            {"name": "Steve Trax", "min": 30, "fg": "5-11", "tp": "4-8", "ft": "0-0", "reb": 7, "pf": 3, "ast": 4, "to": 1, "blk": 0, "stl": 0, "pts": 14},
+            {"name": "Garrick Davis", "min": 37, "fg": "6-10", "tp": "0-0", "ft": "5-7", "reb": 6, "pf": 1, "ast": 3, "to": 1, "blk": 2, "stl": 2, "pts": 17},
+            {"name": "Frank Smith", "min": 39, "fg": "5-12", "tp": "0-5", "ft": "0-0", "reb": 2, "pf": 0, "ast": 7, "to": 6, "blk": 0, "stl": 0, "pts": 10},
+            {"name": "Darrin McDonald", "min": 27, "fg": "3-7", "tp": "0-0", "ft": "0-1", "reb": 1, "pf": 5, "ast": 2, "to": 5, "blk": 0, "stl": 0, "pts": 6},
+            {"name": "Donald Grant", "min": 9, "fg": "1-2", "tp": "1-1", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pts": 3},
+            {"name": "Bernard Royster", "min": 23, "fg": "6-8", "tp": "0-0", "ft": "0-0", "reb": 5, "pf": 3, "ast": 0, "to": 2, "blk": 0, "stl": 0, "pts": 12},
+            {"name": "Gerald Lofton", "min": 1, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

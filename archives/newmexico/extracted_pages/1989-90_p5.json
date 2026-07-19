@@ -1,0 +1,50 @@
+{
+  "page": 5,
+  "games": [
+    {
+      "date": "1989-12-05",
+      "opponent": "Tennessee Volunteers",
+      "site": "Knoxville, Tenn.",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 85,
+          "record_entering": "3-2",
+          "players": [
+            {"name": "Marvin McBurrows", "min": 28, "fg": "4-9", "ft": "2-3", "reb": 6, "pf": 1, "to": 1, "pts": 10},
+            {"name": "Kurt Miller", "min": 22, "fg": "4-5", "ft": "0-0", "reb": 6, "pf": 4, "to": 2, "pts": 8},
+            {"name": "Luc Longley", "min": 41, "fg": "9-16", "ft": "4-4", "reb": 7, "pf": 4, "ast": 7, "to": 4, "blk": 2, "pts": 22},
+            {"name": "Darrell McGee", "min": 43, "fg": "1-8", "tp": "1-6", "ft": "0-0", "reb": 2, "pf": 5, "ast": 7, "to": 2, "stl": 3, "pts": 3},
+            {"name": "Rob Robbins", "min": 35, "fg": "6-17", "tp": "4-11", "ft": "2-2", "reb": 3, "pf": 4, "ast": 2, "to": 1, "pts": 18},
+            {"name": "Andre McGee", "min": 12, "fg": "0-1", "ft": "0-0", "reb": 1, "pf": 1, "to": 2, "pts": 0},
+            {"name": "Willie Banks", "min": 32, "fg": "10-19", "tp": "3-4", "ft": "0-0", "reb": 5, "pf": 2, "ast": 5, "to": 1, "stl": 1, "pts": 23},
+            {"name": "Omar Sierra", "min": 6, "fg": "0-0", "ft": "0-0", "reb": 1, "pf": 0, "pts": 0},
+            {"name": "Rob Newton", "min": 6, "fg": "0-0", "ft": "1-2", "reb": 0, "pf": 0, "pts": 1}
+          ]
+        },
+        {
+          "name": "Tennessee Volunteers",
+          "score": 96,
+          "record_entering": "2-2",
+          "players": [
+            {"name": "Ronnie Reese", "min": 12, "fg": "1-5", "ft": "0-0", "reb": 1, "pf": 0, "pts": 2},
+            {"name": "Ron Taylor", "min": 21, "fg": "0-4", "tp": "0-4", "ft": "1-2", "reb": 3, "pf": 0, "ast": 1, "to": 1, "pts": 1},
+            {"name": "Ian Lockhart", "min": 24, "fg": "6-10", "ft": "0-1", "reb": 7, "pf": 4, "ast": 2, "blk": 1, "stl": 2, "pts": 12},
+            {"name": "Allan Houston", "min": 42, "fg": "6-10", "tp": "4-5", "ft": "1-2", "reb": 3, "pf": 0, "ast": 3, "to": 2, "stl": 2, "pts": 17},
+            {"name": "Greg Bell", "min": 37, "fg": "10-12", "tp": "5-7", "ft": "9-10", "reb": 6, "pf": 1, "ast": 6, "to": 4, "stl": 1, "pts": 34},
+            {"name": "Jay Price", "min": 3, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Eric Smith", "min": 5, "fg": "1-2", "ft": "1-2", "reb": 1, "pf": 0, "ast": 1, "to": 2, "pts": 3},
+            {"name": "Lang Wiseman", "min": 27, "fg": "2-4", "ft": "4-5", "reb": 2, "pf": 2, "ast": 4, "pts": 8},
+            {"name": "Michael Curry", "min": 31, "fg": "5-11", "ft": "1-2", "reb": 7, "pf": 3, "ast": 2, "blk": 2, "pts": 11},
+            {"name": "Carlus Groves", "min": 16, "fg": "3-5", "ft": "2-2", "reb": 4, "pf": 2, "ast": 1, "to": 1, "stl": 1, "pts": 8},
+            {"name": "Shaun Thompson", "min": 5, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Gannon Goodson", "min": 2, "fg": "0-0", "ft": "0-0", "reb": 1, "pf": 2, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true,
+      "checksum_note": "New Mexico player pts sum to 85 (matches final score); Tennessee player pts sum to 96 (matches final score). Final was NM 41-40-4(OT)=85, Tenn 46-35-15(OT)=96."
+    }
+  ],
+  "skipped": []
+}

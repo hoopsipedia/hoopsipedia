@@ -1,0 +1,9 @@
+{
+  "page": 26,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "March 7, 1981 vs San Diego State (San Diego Sports Arena, final NM 84 - SDSU 92). New Mexico's line is clean and checksums exactly (Page 22 + Dolensky 20 + Reinert 7 + Williams 17 + Smith 17 + Duggin 0 + Tarrance 1 + Wolf 0 = 84, matching final score and matching team FG/FT totals of 27-59 FG / 30-38 FT). However San Diego State's TP column has scan/legibility issues on several rows that are internally inconsistent with the pre-3pt formula pts = 2*FG_made + FT_made even though the team totals line (35 FG, 22 FT, 92 TP) is internally consistent: Gwynn (FG 5, apparent TP 2 -- impossible, minimum 10 from field goals alone), Jones (FG 3, FT 6, apparent TP 16 vs formula value 12), Gordon (FG 2, FT 1, apparent TP 10 vs formula value 5), Smith (apparent TP inconsistent with 0 FG/0 FT), and Head's FTA/PF cells are blank/illegible. Guessing corrected values for 4-5 rows to force a match was judged too unreliable, so per the ruthless-skip guidance this whole game (which requires both teams' verified lines) is skipped rather than including a partially-guessed opponent box score."
+    }
+  ]
+}

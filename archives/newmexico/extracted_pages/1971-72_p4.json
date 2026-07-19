@@ -1,0 +1,42 @@
+{
+  "page": 4,
+  "games": [
+    {
+      "date": "1971-12-09",
+      "opponent": "Oklahoma Christian College",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 88,
+          "players": [
+            {"name": "Chester Fuller", "min": 22, "fg": "4-8", "ft": "2-3", "reb": 3, "ast": 3, "pf": 3, "pts": 10},
+            {"name": "Tom Roberts", "min": 40, "fg": "5-7", "ft": "3-5", "reb": 3, "ast": 3, "pf": 3, "pts": 13},
+            {"name": "Mike Faulkner", "min": 43, "fg": "10-19", "ft": "0-3", "reb": 9, "ast": 2, "pf": 4, "pts": 20},
+            {"name": "John Mulligan", "min": 13, "fg": "1-3", "ft": "0-0", "reb": 3, "ast": 2, "pf": 3, "pts": 2},
+            {"name": "Darryl Mannisfield", "min": 37, "fg": "6-12", "ft": "1-4", "reb": 14, "ast": 9, "pf": 4, "pts": 13},
+            {"name": "Mike Stewart", "min": 32, "fg": "6-10", "ft": "4-6", "reb": 6, "ast": 2, "pf": 4, "pts": 16},
+            {"name": "John Fifield", "min": 5, "fg": "1-2", "ft": "0-0", "reb": 0, "ast": 1, "pf": 0, "pts": 2},
+            {"name": "Mark Saiers", "min": 10, "fg": "1-3", "ft": "2-2", "reb": 2, "ast": 0, "pf": 1, "pts": 4},
+            {"name": "Harold Little", "min": 23, "fg": "4-12", "ft": "0-0", "reb": 6, "ast": 4, "pf": 4, "pts": 8}
+          ]
+        },
+        {
+          "name": "Oklahoma Christian College",
+          "score": 81,
+          "players": [
+            {"name": "Mike Milluce", "min": 42, "fg": "6-13", "ft": "4-5", "reb": 2, "ast": 5, "pf": 4, "pts": 16},
+            {"name": "Allen Dukes", "min": 27, "fg": "3-8", "ft": "8-9", "reb": 2, "ast": 4, "pf": 2, "pts": 14},
+            {"name": "Don Whitehead", "min": 45, "fg": "5-8", "ft": "1-4", "reb": 7, "ast": 3, "pf": 3, "pts": 11},
+            {"name": "Donnie Best", "min": 45, "fg": "1-3", "ft": "2-5", "reb": 4, "ast": 4, "pf": 4, "pts": 4},
+            {"name": "Reed Johnson", "min": 37, "fg": "9-19", "ft": "4-7", "reb": 10, "ast": 0, "pf": 5, "pts": 22},
+            {"name": "Jerry Holderby", "min": 3, "fg": "0-1", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "pts": 0},
+            {"name": "Shelly Yore", "min": 26, "fg": "6-6", "ft": "2-6", "reb": 6, "ast": 0, "pf": 2, "pts": 14}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": [],
+  "notes": "Players with blank rows (no FG/FT/reb/ast/pf/pts recorded) were treated as did-not-play and omitted: UNM's Rick Wright, Gabe Nava, Paul Kruse; OCC's John Irvin, Fred Jones, Roger Hawyer (surname handwriting unclear). Per-player 'pts' values are as printed on the sheet (not all computed) and both team sums match the printed totals (88 and 81), which also match the final score line. Player names are best-effort reads of handwriting (e.g., 'Darryl Mannisfield', 'Shelly Yore', 'Jerry Holderby') and may contain minor transcription errors. Turnovers and blocks/steals columns are not present per-player on this sheet (only team turnover totals), so 'to', 'stl', 'blk' keys were omitted entirely."
+}

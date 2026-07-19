@@ -1,0 +1,40 @@
+{
+  "page": 6,
+  "games": [
+    {
+      "date": "1967-12-16",
+      "opponent": "Hawaii",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 84,
+          "players": [
+            {"name": "Nelson", "fg": "11-18", "ft": "8-9", "reb": 8, "pf": 3, "pts": 30},
+            {"name": "Sanford", "fg": "5-10", "ft": "5-7", "reb": 11, "pf": 1, "pts": 15},
+            {"name": "Becker", "fg": "5-10", "ft": "2-5", "reb": 3, "pf": 4, "pts": 12},
+            {"name": "Howard", "fg": "5-7", "ft": "8-9", "reb": 8, "pf": 4, "pts": 18},
+            {"name": "Grimes", "fg": "1-5", "ft": "1-3", "reb": 9, "pf": 2, "pts": 3},
+            {"name": "Shropshire", "fg": "3-7", "ft": "0-2", "reb": 5, "pf": 2, "pts": 6},
+            {"name": "Lopez", "fg": "0-1", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Hawaii",
+          "score": 75,
+          "players": [
+            {"name": "Smith", "fg": "8-17", "ft": "4-5", "reb": 2, "pf": 3, "pts": 20},
+            {"name": "Ash", "fg": "1-5", "ft": "2-2", "reb": 2, "pf": 4, "pts": 4},
+            {"name": "Harmon", "fg": "5-10", "ft": "0-1", "reb": 0, "pf": 3, "pts": 10},
+            {"name": "Caldwell", "fg": "3-5", "ft": "0-1", "reb": 3, "pf": 4, "pts": 6},
+            {"name": "Halm", "fg": "6-14", "ft": "3-5", "reb": 8, "pf": 3, "pts": 15},
+            {"name": "Ritte", "fg": "1-1", "ft": "0-0", "reb": 3, "pf": 2, "pts": 2},
+            {"name": "O'Neil", "fg": "3-5", "ft": "1-1", "reb": 3, "pf": 1, "pts": 7},
+            {"name": "Reynolds", "fg": "4-7", "ft": "3-5", "reb": 5, "pf": 4, "pts": 11}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

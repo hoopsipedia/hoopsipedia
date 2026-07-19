@@ -1,0 +1,48 @@
+{
+  "page": 10,
+  "games": [
+    {
+      "date": "1979-12-22",
+      "opponent": "New Mexico State",
+      "teams": [
+        {
+          "name": "New Mexico State",
+          "score": 103,
+          "players": [
+            {"name": "Webb, Greg", "min": "27", "fg": "13-20", "ft": "4-6", "reb": "5", "pf": "4", "ast": "2", "to": "4", "blk": "0", "stl": "1", "pts": 30},
+            {"name": "Owens, Micah", "min": "31", "fg": "5-10", "ft": "6-7", "reb": "4", "pf": "3", "ast": "1", "to": "3", "blk": "0", "stl": "1", "pts": 16},
+            {"name": "Jones, Sam", "min": "39", "fg": "8-12", "ft": "2-4", "reb": "9", "pf": "1", "ast": "6", "to": "4", "blk": "1", "stl": "1", "pts": 18},
+            {"name": "Akins, Jerome", "min": "38", "fg": "5-7", "ft": "4-6", "reb": "4", "pf": "2", "ast": "6", "to": "2", "blk": "0", "stl": "4", "pts": 14},
+            {"name": "Myers, Bill", "min": "30", "fg": "4-8", "ft": "3-4", "reb": "2", "pf": "4", "ast": "2", "to": "2", "blk": "0", "stl": "1", "pts": 11},
+            {"name": "Gascin, Chuck", "min": "12", "fg": "2-3", "ft": "4-4", "reb": "4", "pf": "3", "ast": "2", "to": "1", "blk": "0", "stl": "0", "pts": 8},
+            {"name": "Braxton, David", "min": "1", "fg": "0-1", "ft": "0-0", "reb": "0", "pf": "1", "ast": "0", "to": "1", "blk": "0", "stl": "0", "pts": 0},
+            {"name": "Britton, Derek", "min": "1", "fg": "0-0", "ft": "0-0", "reb": "2", "pf": "0", "ast": "0", "to": "0", "blk": "0", "stl": "0", "pts": 0},
+            {"name": "Elders, Phil", "min": "4", "fg": "0-0", "ft": "0-0", "reb": "1", "pf": "1", "ast": "1", "to": "0", "blk": "0", "stl": "0", "pts": 0},
+            {"name": "Rodriguez, Frank", "min": "7", "fg": "2-2", "ft": "0-0", "reb": "0", "pf": "1", "ast": "0", "to": "1", "blk": "0", "stl": "0", "pts": 4},
+            {"name": "Patterson, Ernest", "min": "6", "fg": "1-2", "ft": "0-2", "reb": "0", "pf": "1", "ast": "1", "to": "1", "blk": "0", "stl": "1", "pts": 2},
+            {"name": "Temple, Mark", "min": "3", "fg": "0-0", "ft": "0-0", "reb": "0", "pf": "2", "ast": "1", "to": "0", "blk": "0", "stl": "0", "pts": 0},
+            {"name": "Sailors, Derek", "min": "1", "fg": "0-0", "ft": "0-0", "reb": "0", "pf": "1", "ast": "0", "to": "1", "blk": "0", "stl": "0", "pts": 0}
+          ],
+          "checksum_ok": true
+        },
+        {
+          "name": "New Mexico Lobos",
+          "score": 84,
+          "players": [
+            {"name": "Page, Kenny", "min": "39", "fg": "12-19", "ft": "7-8", "reb": "8", "pf": "4", "ast": "0", "to": "3", "blk": "0", "stl": "1", "pts": 31},
+            {"name": "Jefferson, Everette", "min": "38", "fg": "7-12", "ft": "6-10", "reb": "7", "pf": "5", "ast": "1", "to": "5", "blk": "1", "stl": "1", "pts": 20},
+            {"name": "Williams, Jim", "min": "32", "fg": "5-8", "ft": "6-8", "reb": "9", "pf": "4", "ast": "0", "to": "2", "blk": "0", "stl": "1", "pts": 16},
+            {"name": "Massey, Keith", "min": "31", "fg": "2-4", "ft": "2-4", "reb": "3", "pf": "4", "ast": "4", "to": "4", "blk": "0", "stl": "2", "pts": 6},
+            {"name": "Johnson, Michael", "min": "39", "fg": "2-5", "ft": "4-4", "reb": "2", "pf": "4", "ast": "4", "to": "5", "blk": "0", "stl": "3", "pts": 8},
+            {"name": "Rogers, David", "min": "1", "fg": "0-0", "ft": "0-1", "reb": "1", "pf": "0", "ast": "0", "to": "0", "blk": "0", "stl": "0", "pts": 0},
+            {"name": "Zerwin, Lex", "min": "10", "fg": "0-2", "ft": "0-0", "reb": "0", "pf": "1", "ast": "0", "to": "0", "blk": "0", "stl": "0", "pts": 0},
+            {"name": "Faulkner, Darryl", "min": "1", "fg": "0-0", "ft": "0-0", "reb": "0", "pf": "0", "ast": "0", "to": "0", "blk": "0", "stl": "0", "pts": 0},
+            {"name": "Curole, Anthony", "min": "2", "fg": "1-1", "ft": "1-1", "reb": "0", "pf": "0", "ast": "0", "to": "0", "blk": "0", "stl": "0", "pts": 3}
+          ],
+          "checksum_ok": true
+        }
+      ]
+    }
+  ],
+  "skipped": []
+}

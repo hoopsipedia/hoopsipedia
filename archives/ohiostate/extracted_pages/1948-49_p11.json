@@ -1,0 +1,40 @@
+{
+  "page": 11,
+  "games": [
+    {
+      "date": "1949-01-17",
+      "opponent": "Wisconsin",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 57,
+          "players": [
+            {"name": "Donham (F)", "pf": 5, "pts": 17},
+            {"name": "Jacobs (F)", "pf": 1, "pts": 7},
+            {"name": "Remington (F)", "pf": 2, "pts": 4},
+            {"name": "Raidiger (C)", "pf": 4, "pts": 23},
+            {"name": "Pfeiffer (C)", "pf": 2, "pts": 2},
+            {"name": "Burkholder (G)", "pf": 3, "pts": 3},
+            {"name": "Brown (G)", "pf": 2, "pts": 1},
+            {"name": "Franchimont (G)", "pf": 1, "pts": 0}
+          ]
+        },
+        {
+          "name": "Wisconsin Badgers",
+          "score": 54,
+          "players": [
+            {"name": "Schneider (F)", "pf": 3, "pts": 16},
+            {"name": "Page (F)", "pf": 3, "pts": 6},
+            {"name": "Zorn (F)", "pf": 0, "pts": 0},
+            {"name": "Rehfeldt (C)", "pf": 2, "pts": 17},
+            {"name": "Rogers (F/G)", "pf": 5, "pts": 9},
+            {"name": "Mader (G)", "pf": 1, "pts": 6},
+            {"name": "Moore (G)", "pf": 3, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

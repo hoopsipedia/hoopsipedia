@@ -1,0 +1,50 @@
+{
+  "page": 20,
+  "games": [
+    {
+      "date": "1951-02-17",
+      "opponent": "Minnesota",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 56,
+          "players": [
+            {"name": "Wilkes", "min": "14:30", "fg": "1-4", "ft": "0-2", "pf": 4, "pts": 2},
+            {"name": "Remington", "min": "17:30", "fg": "3-7", "ft": "1-1", "pf": 3, "pts": 7},
+            {"name": "Williams", "min": "25:10", "fg": "2-9", "ft": "1-3", "pf": 5, "pts": 5},
+            {"name": "Gillaugh", "min": "21:00", "fg": "5-7", "ft": "4-6", "pf": 1, "pts": 14},
+            {"name": "Hatfield", "min": "5:30", "fg": "1-2", "ft": "0-0", "pf": 1, "pts": 2},
+            {"name": "Armstrong", "min": "28:10", "fg": "2-11", "ft": "3-6", "pf": 5, "pts": 7},
+            {"name": "Worthley", "min": "5:40", "fg": "2-3", "ft": "1-1", "pf": 1, "pts": 5},
+            {"name": "Jones", "min": "17:50", "fg": "2-5", "ft": "1-1", "pf": 0, "pts": 5},
+            {"name": "Maher", "min": "8:00", "fg": "2-4", "ft": "1-1", "pf": 2, "pts": 5},
+            {"name": "Karaffa", "min": "34:30", "fg": "2-12", "ft": "0-1", "pf": 1, "pts": 4},
+            {"name": "Dawe", "min": "22:10", "fg": "0-4", "ft": "0-0", "pf": 0, "pts": 0}
+          ],
+          "checksum_ok": true
+        },
+        {
+          "name": "Minnesota",
+          "score": 70,
+          "players": [
+            {"name": "Miller", "fg": "5-12", "ft": "3-3", "pf": 3, "pts": 13},
+            {"name": "Johnson", "fg": "5-11", "ft": "1-3", "pf": 4, "pts": 13},
+            {"name": "Holmes", "fg": "0-0", "ft": "0-0", "pf": 0, "pts": 0},
+            {"name": "Gelle", "fg": "3-10", "ft": "2-6", "pf": 3, "pts": 8},
+            {"name": "Means", "fg": "1-1", "ft": "1-1", "pf": 5, "pts": 3},
+            {"name": "Wallerius", "fg": "0-3", "ft": "3-3", "pf": 0, "pts": 3},
+            {"name": "Blies", "fg": "0-1", "ft": "0-0", "pf": 0, "pts": 0},
+            {"name": "Skoog", "fg": "8-23", "ft": "4-5", "pf": 2, "pts": 20},
+            {"name": "McGonagle", "fg": "0-1", "ft": "0-0", "pf": 1, "pts": 0},
+            {"name": "Sabourin", "fg": "0-0", "ft": "0-0", "pf": 1, "pts": 0},
+            {"name": "Sehnobrich", "fg": "1-8", "ft": "5-6", "pf": 1, "pts": 7},
+            {"name": "Weiss", "fg": "1-3", "ft": "0-0", "pf": 2, "pts": 2},
+            {"name": "Anderson", "fg": "0-1", "ft": "1-1", "pf": 0, "pts": 1}
+          ],
+          "checksum_ok": true
+        }
+      ]
+    }
+  ],
+  "skipped": []
+}

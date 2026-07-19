@@ -1,0 +1,9 @@
+{
+  "page": 16,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Official ACC Tournament box score, N.C. State vs Virginia, 2-2-74 (#14, Raleigh), Virginia 93 - N.C. State 105 (game 2 of ACC tourney). Virginia's player lines are legible and checksum correctly (player points sum to 93, matching final score). However, N.C. State's line has several cramped/tiny handwritten reserve entries (Hunt, Kubiak, Gehring, Smith rows overlap/illegible) plus uncertain digits for Towe's assists, Nuce, and Spence stat lines. Best-effort summation of legible N.C. State player points totals 103, which does not match the team's final score of 105 (2-point discrepancy), so the checksum fails. Per instructions, skipping the entire game rather than guessing values for the illegible N.C. State entries to force a match."
+    }
+  ]
+}

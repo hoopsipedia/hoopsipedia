@@ -1,0 +1,45 @@
+{
+  "page": 4,
+  "games": [
+    {
+      "date": "1944-12-28",
+      "opponent": "Michigan State",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 67,
+          "players": [
+            {"name": "Grate", "fg": "8", "ft": "4", "pts": 20},
+            {"name": "Dugger", "fg": "3", "ft": "1", "pts": 7},
+            {"name": "Caudill", "fg": "4", "ft": "0", "pts": 8},
+            {"name": "McFadden", "fg": "0", "ft": "0", "pts": 0},
+            {"name": "Snyder", "fg": "0", "ft": "0", "pts": 0},
+            {"name": "Risen", "fg": "2", "ft": "0", "pts": 4},
+            {"name": "Pfeiffer", "fg": "5", "ft": "3", "pts": 13},
+            {"name": "Huston", "fg": "2", "ft": "0", "pts": 4},
+            {"name": "Sims", "fg": "2", "ft": "2", "pts": 6},
+            {"name": "Jacobs", "fg": "2", "ft": "1", "pts": 5},
+            {"name": "Amlong", "fg": "0", "ft": "0", "pts": 0}
+          ]
+        },
+        {
+          "name": "Michigan State",
+          "score": 31,
+          "players": [
+            {"name": "Fortino", "fg": "0", "ft": "5", "pts": 5},
+            {"name": "Papchak", "fg": "2", "ft": "3", "pts": 7},
+            {"name": "Burdick", "fg": "0", "ft": "0", "pts": 0},
+            {"name": "Krail", "fg": "1", "ft": "2", "pts": 4},
+            {"name": "Frankel", "fg": "1", "ft": "0", "pts": 2},
+            {"name": "Beyer", "fg": "2", "ft": "2", "pts": 6},
+            {"name": "Bauman", "fg": "0", "ft": "1", "pts": 1},
+            {"name": "Hashu", "fg": "0", "ft": "0", "pts": 0},
+            {"name": "O'Leary", "fg": "1", "ft": "4", "pts": 6}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

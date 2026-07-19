@@ -1,0 +1,11 @@
+{
+  "page": 9,
+  "games": [],
+  "skipped": [
+    {
+      "date": "1931-01-31",
+      "opponent": "Army",
+      "reason": "Page is a season-log summary sheet (SCORE/ATTENDANCE/CAPTAIN/MANAGER header: Ohio 29, Opp 40, Manager Harold Goldman; footer: Basketball 1931 Jan. 31 Army West Point Coach H.G. Olsen) with an embedded newspaper clipping box score ('Ohio State Bows to Cadets, 40-29', West Point, NY). Final score (Ohio State 29, Army 40) and team totals rows are legible and internally consistent (Army: 17 FG + 6 FT = 40; Ohio State: 10 FG + 9 FT = 29), but the individual player rows (names: Stecker, Kroeger, Egler, Blanning, Strother, Malloy, Herb, Abell, Besson for Army; Wrigley, Hinchman, Lively, Brown, Mattison, Russell, Larding, Hoffer, Fesler for Ohio State) are printed in very small newsprint type and the individual B/F/T digits could not be read with confidence to reconstruct a reliable per-player line that would pass a checksum against the team totals. Skipping per instructions rather than guessing player-level values."
+    }
+  ]
+}

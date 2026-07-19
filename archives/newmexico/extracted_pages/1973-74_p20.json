@@ -1,0 +1,46 @@
+{
+  "page": 20,
+  "games": [
+    {
+      "date": "1974-02-07",
+      "opponent": "Brigham Young",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 96,
+          "players": [
+            {"name": "Hardin", "min": "27:30", "fg": "6-11", "ft": "4-5", "reb": 3, "pf": 5, "ast": 2, "pts": 16},
+            {"name": "Saiers", "min": "37:00", "fg": "6-7", "ft": "0-0", "reb": 4, "pf": 2, "ast": 4, "pts": 12},
+            {"name": "Hagins", "min": "34:05", "fg": "7-8", "ft": "4-5", "reb": 9, "pf": 4, "ast": 3, "pts": 18},
+            {"name": "Nava", "min": "34:05", "fg": "10-17", "ft": "3-5", "reb": 3, "pf": 3, "ast": 2, "pts": 23},
+            {"name": "Taylor", "min": "25:10", "fg": "4-10", "ft": "0-0", "reb": 4, "pf": 4, "ast": 8, "pts": 8},
+            {"name": "Pokorski", "min": "11:05", "fg": "2-2", "ft": "1-2", "reb": 2, "pf": 4, "ast": 0, "pts": 5},
+            {"name": "King", "min": "13:05", "fg": "2-2", "ft": "0-0", "reb": 2, "pf": 2, "ast": 1, "pts": 4},
+            {"name": "Toppert", "min": "7:15", "fg": "1-1", "ft": "2-2", "reb": 2, "pf": 0, "ast": 3, "pts": 4},
+            {"name": "Kruse", "min": "4:45", "fg": "3-4", "ft": "0-0", "reb": 1, "pf": 2, "ast": 0, "pts": 6},
+            {"name": "Battle", "min": "5:25", "fg": "0-1", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Brigham Young",
+          "score": 77,
+          "players": [
+            {"name": "Jones", "min": "17:05", "fg": "1-2", "ft": "1-2", "reb": 4, "pf": 4, "ast": 4, "pts": 3},
+            {"name": "Williams", "min": "15:20", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 2, "pts": 0},
+            {"name": "Handy", "min": "39:20", "fg": "9-13", "ft": "0-0", "reb": 7, "pf": 3, "ast": 2, "pts": 18},
+            {"name": "Anderson", "min": "36:45", "fg": "8-17", "ft": "3-5", "reb": 4, "pf": 4, "ast": 1, "pts": 19},
+            {"name": "Richards", "min": "37:20", "fg": "9-23", "ft": "8-9", "reb": 8, "pf": 2, "ast": 5, "pts": 26},
+            {"name": "Snow", "min": "9:45", "fg": "0-1", "ft": "0-0", "reb": 2, "pf": 2, "ast": 0, "pts": 0},
+            {"name": "Clawson", "min": "6:45", "fg": "1-1", "ft": "0-0", "reb": 0, "pf": 1, "ast": 0, "pts": 2},
+            {"name": "Nielsen", "min": "24:00", "fg": "0-2", "ft": "5-8", "reb": 1, "pf": 3, "ast": 3, "pts": 5},
+            {"name": "Cheesman", "min": "10:10", "fg": "1-2", "ft": "2-2", "reb": 2, "pf": 1, "ast": 1, "pts": 4},
+            {"name": "Ainge", "min": ":40", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": [],
+  "notes": "New Mexico's printed points total for King showed as '.4' (smudged/typo on scanned sheet); read as 4, consistent with FG 2-2/FT 0-0 (2*2+0=4) and with team checksum (16+12+18+23+8+5+4+4+6+0=96, matches final score). BYU checksum: 3+0+18+19+26+0+2+5+4+0=77, matches final score. Team rebounds (BYU 5, UNM 2) omitted from player lists as they are not attributable to a player. Playing time (min) taken from 'playing time' column; assists (ast) from 'assists' column."
+}

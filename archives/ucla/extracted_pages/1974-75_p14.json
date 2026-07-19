@@ -1,0 +1,51 @@
+{
+  "page": 14,
+  "games": [
+    {
+      "date": "1975-01-23",
+      "opponent": "UC Santa Barbara",
+      "ucla_score": 104,
+      "opp_score": 76,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 104,
+          "players": [
+            {"name": "Washington", "fg": "9-13", "ft": "2-4", "reb": 11, "pf": 2, "ast": 1, "pts": 20},
+            {"name": "Meyers", "fg": "8-17", "ft": "3-3", "reb": 8, "pf": 2, "ast": 2, "pts": 19},
+            {"name": "Drollinger", "fg": "2-5", "ft": "0-0", "reb": 7, "pf": 2, "ast": 3, "pts": 4},
+            {"name": "Trgovich", "fg": "5-11", "ft": "2-2", "reb": 3, "pf": 0, "ast": 2, "pts": 12},
+            {"name": "McCarter", "fg": "1-4", "ft": "0-0", "reb": 4, "pf": 1, "ast": 1, "pts": 2},
+            {"name": "Johnson", "fg": "6-9", "ft": "3-4", "reb": 5, "pf": 3, "ast": 6, "pts": 15},
+            {"name": "Spillane", "fg": "2-8", "ft": "0-0", "reb": 1, "pf": 0, "ast": 2, "pts": 4},
+            {"name": "Smith", "fg": "2-3", "ft": "1-1", "reb": 2, "pf": 3, "ast": 3, "pts": 5},
+            {"name": "Olinde", "fg": "0-3", "ft": "1-2", "reb": 4, "pf": 2, "ast": 3, "pts": 1},
+            {"name": "Corliss", "fg": "1-2", "ft": "0-0", "reb": 1, "pf": 0, "ast": 2, "pts": 2},
+            {"name": "Uroman", "fg": "3-6", "ft": "1-1", "reb": 7, "pf": 4, "ast": 2, "pts": 7},
+            {"name": "Townsend", "fg": "4-7", "ft": "1-1", "reb": 1, "pf": 0, "ast": 2, "pts": 9},
+            {"name": "Thomas", "fg": "1-4", "ft": "2-2", "reb": 2, "pf": 1, "ast": 0, "pts": 4}
+          ]
+        },
+        {
+          "name": "UC Santa Barbara Gauchos",
+          "score": 76,
+          "players": [
+            {"name": "Ford", "fg": "10-17", "ft": "4-4", "reb": 8, "pf": 1, "ast": 2, "pts": 24},
+            {"name": "Brown", "fg": "5-10", "ft": "1-2", "reb": 7, "pf": 2, "ast": 3, "pts": 11},
+            {"name": "Service", "fg": "0-3", "ft": "0-0", "reb": 0, "pf": 1, "ast": 1, "pts": 0},
+            {"name": "Turner", "fg": "2-5", "ft": "2-2", "reb": 1, "pf": 1, "ast": 5, "pts": 6},
+            {"name": "Bell", "fg": "4-11", "ft": "0-0", "reb": 7, "pf": 3, "ast": 0, "pts": 8},
+            {"name": "Walker", "fg": "3-13", "ft": "2-2", "reb": 5, "pf": 4, "ast": 3, "pts": 8},
+            {"name": "Oliveira", "fg": "4-9", "ft": "0-0", "reb": 0, "pf": 2, "ast": 6, "pts": 8},
+            {"name": "Campanaro", "fg": "2-3", "ft": "0-0", "reb": 1, "pf": 0, "ast": 1, "pts": 4},
+            {"name": "Marschall", "fg": "1-3", "ft": "0-1", "reb": 5, "pf": 2, "ast": 2, "pts": 2},
+            {"name": "Lipscomb", "fg": "1-4", "ft": "1-2", "reb": 2, "pf": 2, "ast": 0, "pts": 3},
+            {"name": "McCown", "fg": "1-3", "ft": "0-0", "reb": 1, "pf": 2, "ast": 2, "pts": 2}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

@@ -1,0 +1,9 @@
+{
+  "page": 10,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Dec 30, 1985 — Ohio State at Nebraska (site: El Paso, TX). Visitors (Ohio State) box score is fully legible and checksums cleanly: player points 13+6+2+14+16+6+0+9+0=66, matching team FINAL/TOTALS TP of 66. However the home team (Nebraska) box score has two player rows (jersey #13 and #20) that are heavily obscured by dark ink smudging/marker over the FG/FT/REB/PF/TP columns, making those two players' point totals illegible. Nebraska's team TOTALS TP=69 cannot be confidently checksummed without those two rows, and guessing their values would violate the never-invent-values rule. Per instructions, skipping the whole game rather than submitting a partial/unverifiable home roster."
+    }
+  ]
+}

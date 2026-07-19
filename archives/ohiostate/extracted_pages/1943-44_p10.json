@@ -1,0 +1,9 @@
+{
+  "page": 10,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page contains a scorebook summary header (SCORE OHIO 83 OPP 44, CAPTAIN Grate) followed by a very small pasted-in newspaper box score clipping (Ohio State vs Chicago, Jan. 24 1944, Coach Olsen) and, at the bottom, the start of a new game log entry (Basketball 1944 Jan 24 Chicago Chicago, Coach Olsen) whose actual box score appears on a later page. Player names are legible (Ohio State: Grate, Duggey, Griffith, Rison, Hammett, Bowen, Huston, McQuade, Gunston; Chicago: DeGraw, Furry, Dinnbaum, Finnegan, Flanagan, Lauferman, Whitaker) but the numeric G/F/PF/TP columns are rendered too small and blurry to read digit-by-digit with confidence. A rough read of the Ohio State totals row did not reconcile with the 83 stated at the top of the page (totals read closer to 68), while Chicago's totals read as 44, matching the header -- indicating some Ohio State digits were misread. Given the checksum failed and digit-level confidence is low, the game was skipped rather than guessed at."
+    }
+  ]
+}

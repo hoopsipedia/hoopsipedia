@@ -1,0 +1,42 @@
+{
+  "page": 15,
+  "games": [
+    {
+      "date": "1943-03-06",
+      "opponent": "Northwestern Wildcats",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 54,
+          "players": [
+            {"name": "Wise", "fg": "5", "ft": "2", "pts": 12},
+            {"name": "Miller", "fg": "6", "ft": "0", "pts": 12},
+            {"name": "Trabitz", "fg": "2", "ft": "0", "pts": 4},
+            {"name": "Dugger", "fg": "5", "ft": "3", "pts": 13},
+            {"name": "Fekete", "fg": "2", "ft": "0", "pts": 4},
+            {"name": "White", "fg": "2", "ft": "1", "pts": 5},
+            {"name": "Shrider", "fg": "1", "ft": "2", "pts": 4},
+            {"name": "Sims", "fg": "0", "ft": "0", "pts": 0}
+          ]
+        },
+        {
+          "name": "Northwestern Wildcats",
+          "score": 63,
+          "players": [
+            {"name": "Graham", "fg": "5", "ft": "2", "pts": 12},
+            {"name": "Jake", "fg": "4", "ft": "3", "pts": 11},
+            {"name": "Jenson", "fg": "0", "ft": "0", "pts": 0},
+            {"name": "Vodick", "fg": "3", "ft": "5", "pts": 11},
+            {"name": "Seigle", "fg": "0", "ft": "0", "pts": 0},
+            {"name": "Wendland", "fg": "6", "ft": "3", "pts": 15},
+            {"name": "Chalberg", "fg": "0", "ft": "0", "pts": 0},
+            {"name": "Hasse", "fg": "6", "ft": "2", "pts": 14},
+            {"name": "Krelling", "fg": "0", "ft": "0", "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

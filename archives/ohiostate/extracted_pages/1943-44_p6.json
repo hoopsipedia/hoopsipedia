@@ -1,0 +1,9 @@
+{
+  "page": 6,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page shows a game vs Pittsburgh on Jan 8, 1944 at the Auditorium (Ohio State 59, Pittsburgh 38, attendance 2234, captain Crate, coach Olsen) confirmed via the scoreboard header and the bottom identifying strip, but the embedded box-score clipping (player names, B/F/M.F./P.F./Pts columns for both teams) is rendered too small and blurry to confidently read individual digits. A first-pass reading attempt produced Pittsburgh player point totals summing to ~32 against a final score of 38, indicating misread digits, so the row-level data was discarded rather than guessed to avoid inventing values."
+    }
+  ]
+}

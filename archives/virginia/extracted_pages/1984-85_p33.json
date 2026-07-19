@@ -1,0 +1,50 @@
+{
+  "page": 33,
+  "games": [
+    {
+      "date": "1985-03-23",
+      "opponent": "Tennessee Volunteers",
+      "note": "NCAA/NIT Quarterfinal box score, Stokely Center, Knoxville, TN. Ast/TO/Stl/Blk per-player columns present on sheet but too faint to transcribe confidently; omitted rather than guessed.",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 54,
+          "players": [
+            {"name": "Jim Miller", "min": 36, "fg": "4-8", "ft": "0-0", "reb": 9, "pf": 1, "pts": 8},
+            {"name": "Tom Sheehey", "min": 29, "fg": "4-9", "ft": "0-0", "reb": 5, "pf": 0, "pts": 8},
+            {"name": "John Dyslin", "min": 9, "fg": "2-4", "ft": "0-0", "reb": 0, "pf": 0, "pts": 4},
+            {"name": "Tim Mullen", "min": 26, "fg": "0-1", "ft": "0-0", "reb": 1, "pf": 4, "pts": 0},
+            {"name": "Mel Kennedy", "min": 23, "fg": "4-5", "ft": "0-0", "reb": 3, "pf": 2, "pts": 8},
+            {"name": "Olden Polynice", "min": 31, "fg": "10-12", "ft": "1-2", "reb": 5, "pf": 2, "pts": 21},
+            {"name": "Tom Calloway", "min": 8, "fg": "0-2", "ft": "0-0", "reb": 0, "pf": 2, "pts": 0},
+            {"name": "Darrick Simms", "min": 17, "fg": "0-2", "ft": "0-0", "reb": 1, "pf": 2, "pts": 0},
+            {"name": "Dan Merrifield", "min": 6, "fg": "0-0", "ft": "0-0", "reb": 1, "pf": 0, "pts": 0},
+            {"name": "John Johnson", "min": 14, "fg": "2-4", "ft": "1-2", "reb": 1, "pf": 2, "pts": 5},
+            {"name": "Anthony Solomon", "min": 1, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0}
+          ],
+          "checksum_ok": true
+        },
+        {
+          "name": "Tennessee Volunteers",
+          "score": 61,
+          "players": [
+            {"name": "Anthony Richardson", "min": 39, "fg": "2-5", "ft": "4-4", "reb": 5, "pf": 0, "pts": 8},
+            {"name": "Fred Jenkins", "min": 39, "fg": "4-8", "ft": "1-2", "reb": 10, "pf": 3, "pts": 9},
+            {"name": "Rob Jones", "min": 29, "fg": "3-4", "ft": "0-1", "reb": 3, "pf": 2, "pts": 6},
+            {"name": "Myron Carter", "min": 9, "fg": "1-1", "ft": "0-0", "reb": 1, "pf": 1, "pts": 2},
+            {"name": "Michael Brooks", "min": 39, "fg": "6-15", "ft": "1-1", "reb": 0, "pf": 0, "pts": 13},
+            {"name": "Tony White", "min": 31, "fg": "9-21", "ft": "5-5", "reb": 2, "pf": 1, "pts": 23},
+            {"name": "Kirk Haler", "min": 1, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Kevin Woods", "min": 9, "fg": "0-1", "ft": "0-0", "reb": 2, "pf": 1, "pts": 0},
+            {"name": "Sam Arterburn", "min": 1, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Ron Heasley", "min": 1, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Mike Johenson", "min": 1, "fg": "0-0", "ft": "0-1", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "John Snodgrass", "min": 1, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0}
+          ],
+          "checksum_ok": true
+        }
+      ]
+    }
+  ],
+  "skipped": []
+}

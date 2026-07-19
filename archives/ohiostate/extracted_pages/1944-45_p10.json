@@ -1,0 +1,48 @@
+{
+  "page": 10,
+  "games": [
+    {
+      "date": "1945-01-20",
+      "opponent": "Michigan",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 61,
+          "players": [
+            {"name": "Grate", "fg": "2", "ft": "3", "pts": 7},
+            {"name": "Dugger", "fg": "4", "ft": "1", "pts": 9},
+            {"name": "Caudill", "fg": "3", "ft": "0", "pts": 6},
+            {"name": "Snyder", "fg": "1", "ft": "0", "pts": 2},
+            {"name": "Risen", "fg": "5", "ft": "1", "pts": 11},
+            {"name": "Donham", "fg": "1", "ft": "0", "pts": 2},
+            {"name": "Pfeiffer", "fg": "3", "ft": "1", "pts": 7},
+            {"name": "Huston", "fg": "3", "ft": "2", "pts": 8},
+            {"name": "Amling", "fg": "2", "ft": "1", "pts": 5},
+            {"name": "Sims", "fg": "1", "ft": "0", "pts": 2},
+            {"name": "Jacobs", "fg": "0", "ft": "2", "pts": 2},
+            {"name": "Davis", "fg": "0", "ft": "0", "pts": 0},
+            {"name": "McFadden", "fg": "0", "ft": "0", "pts": 0}
+          ]
+        },
+        {
+          "name": "Michigan Wolverines",
+          "score": 47,
+          "players": [
+            {"name": "Geahan", "fg": "3", "ft": "3", "pts": 9},
+            {"name": "Harder", "fg": "3", "ft": "0", "pts": 6},
+            {"name": "Mullaney", "fg": "3", "ft": "1", "pts": 7},
+            {"name": "Berce", "fg": "0", "ft": "0", "pts": 0},
+            {"name": "Lund", "fg": "3", "ft": "1", "pts": 7},
+            {"name": "Hilkene", "fg": "2", "ft": "0", "pts": 4},
+            {"name": "Lindquist", "fg": "2", "ft": "0", "pts": 4},
+            {"name": "Kell", "fg": "4", "ft": "2", "pts": 10},
+            {"name": "Gregor", "fg": "0", "ft": "0", "pts": 0},
+            {"name": "Norris", "fg": "0", "ft": "0", "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

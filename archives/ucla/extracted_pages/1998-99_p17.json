@@ -1,0 +1,47 @@
+{
+  "page": 17,
+  "games": [
+    {
+      "date": "1999-01-20",
+      "opponent": "USC Trojans",
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 98,
+          "players": [
+            {"name": "Jerome Moiso", "min": 32, "fg": "8-15", "tp": "1-1", "ft": "0-1", "reb": 9, "ast": 2, "pf": 3, "to": 1, "stl": 2, "blk": 2, "pts": 17},
+            {"name": "JaRon Rush", "min": 28, "fg": "6-12", "tp": "3-5", "ft": "0-2", "reb": 8, "ast": 1, "pf": 3, "to": 2, "stl": 0, "blk": 1, "pts": 15},
+            {"name": "Dan Gadzuric", "min": 12, "fg": "7-7", "tp": "0-0", "ft": "2-4", "reb": 4, "ast": 1, "pf": 3, "to": 3, "stl": 0, "blk": 2, "pts": 16},
+            {"name": "Baron Davis", "min": 34, "fg": "5-12", "tp": "2-3", "ft": "4-6", "reb": 3, "ast": 2, "pf": 5, "to": 1, "stl": 3, "blk": 2, "pts": 16},
+            {"name": "Earl Watson", "min": 27, "fg": "2-8", "tp": "1-3", "ft": "2-2", "reb": 3, "ast": 8, "pf": 5, "to": 4, "stl": 0, "blk": 1, "pts": 7},
+            {"name": "Todd Ramasar", "min": 1, "fg": "0-0", "tp": "0-0", "ft": "0-2", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Travis Reed", "min": 8, "fg": "0-3", "tp": "0-0", "ft": "0-1", "reb": 3, "ast": 0, "pf": 1, "to": 2, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Brandon Loyd", "min": 8, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Ryan Bailey", "min": 19, "fg": "2-4", "tp": "1-1", "ft": "3-6", "reb": 4, "ast": 3, "pf": 2, "to": 3, "stl": 2, "blk": 0, "pts": 8},
+            {"name": "Matt Barnes", "min": 16, "fg": "1-2", "tp": "0-1", "ft": "3-5", "reb": 2, "ast": 1, "pf": 4, "to": 0, "stl": 1, "blk": 0, "pts": 5},
+            {"name": "Sean Farnham", "min": 1, "fg": "1-1", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 1, "pts": 2},
+            {"name": "Ray Young", "min": 14, "fg": "5-5", "tp": "2-2", "ft": "0-0", "reb": 4, "ast": 1, "pf": 5, "to": 0, "stl": 0, "blk": 0, "pts": 12}
+          ]
+        },
+        {
+          "name": "USC Trojans",
+          "score": 80,
+          "players": [
+            {"name": "Jeff Trepagnier", "min": 20, "fg": "4-10", "tp": "0-2", "ft": "2-2", "reb": 4, "ast": 1, "pf": 4, "to": 2, "stl": 0, "blk": 2, "pts": 10},
+            {"name": "Sam Clancy", "min": 6, "fg": "1-3", "tp": "0-0", "ft": "0-0", "reb": 3, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Brian Scalabrine", "min": 28, "fg": "3-10", "tp": "0-0", "ft": "7-9", "reb": 8, "ast": 1, "pf": 1, "to": 5, "stl": 3, "blk": 2, "pts": 13},
+            {"name": "Brandon Granville", "min": 20, "fg": "2-7", "tp": "0-4", "ft": "2-2", "reb": 3, "ast": 2, "pf": 1, "to": 2, "stl": 1, "blk": 0, "pts": 6},
+            {"name": "Elias Ayuso", "min": 32, "fg": "4-9", "tp": "3-7", "ft": "5-7", "reb": 2, "ast": 0, "pf": 5, "to": 3, "stl": 3, "blk": 0, "pts": 16},
+            {"name": "Quincy Wilder", "min": 29, "fg": "1-10", "tp": "0-1", "ft": "1-3", "reb": 7, "ast": 4, "pf": 2, "to": 2, "stl": 4, "blk": 0, "pts": 3},
+            {"name": "Adam Spanich", "min": 20, "fg": "3-7", "tp": "1-2", "ft": "1-2", "reb": 1, "ast": 3, "pf": 1, "to": 2, "stl": 0, "blk": 0, "pts": 8},
+            {"name": "Jarvis Turner", "min": 19, "fg": "2-6", "tp": "0-0", "ft": "9-12", "reb": 5, "ast": 0, "pf": 1, "to": 0, "stl": 2, "blk": 2, "pts": 13},
+            {"name": "David Bluthenthal", "min": 8, "fg": "0-1", "tp": "0-0", "ft": "0-0", "reb": 2, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Greg Lakey", "min": 18, "fg": "3-7", "tp": "0-0", "ft": "3-4", "reb": 5, "ast": 0, "pf": 2, "to": 3, "stl": 0, "blk": 0, "pts": 9}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

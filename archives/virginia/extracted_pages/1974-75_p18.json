@@ -1,0 +1,45 @@
+{
+  "page": 18,
+  "games": [
+    {
+      "date": "unknown",
+      "opponent": "Wake Forest",
+      "note": "Date not printed on scoresheet. Official ACC Statistical Form, page marked '#18', stamped 'FINAL'. Score by periods: Virginia 33-38=71, Wake Forest 29-29=58. Attendance 3250, Officials Mikel/Nichols. Records shown beneath scores appear to be 'Virginia 10-8 (3-6 ACC)' and 'Wake Forest 16-10 (2-8 ACC)' but are not fully legible and were not used to infer a date.",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 71,
+          "players": [
+            {"name": "Walker", "min": 21, "fg": "3-6", "ft": "2-2", "reb": 4, "ast": 3, "pf": 3, "to": 2, "pts": 8},
+            {"name": "Donner", "min": 35, "fg": "5-5", "ft": "5-10", "reb": 8, "ast": 3, "pf": 3, "to": 5, "pts": 15},
+            {"name": "Lavaroni", "min": 32, "fg": "6-12", "ft": "4-6", "reb": 8, "ast": 2, "pf": 5, "to": 2, "pts": 16},
+            {"name": "Dowinti", "min": 28, "fg": "4-6", "ft": "4-7", "reb": 6, "ast": 4, "pf": 4, "to": 2, "pts": 12},
+            {"name": "Langlom", "min": 32, "fg": "4-8", "ft": "2-3", "reb": 5, "ast": 4, "pf": 0, "to": 2, "pts": 10},
+            {"name": "Koesters", "min": 27, "fg": "4-9", "ft": "2-4", "reb": 1, "ast": 6, "pf": 3, "to": 2, "pts": 10},
+            {"name": "Carr", "min": 4, "fg": "0-2", "ft": "0-0", "reb": 2, "ast": 0, "pf": 0, "to": 3, "pts": 0},
+            {"name": "Newlen", "min": 11, "fg": "0-2", "ft": "0-0", "reb": 3, "ast": 1, "pf": 1, "to": 1, "pts": 0}
+          ]
+        },
+        {
+          "name": "Wake Forest",
+          "score": 58,
+          "players": [
+            {"name": "Tarrish", "min": 6, "fg": "0-1", "ft": "0-0", "reb": 1, "ast": 0, "pf": 2, "to": 0, "pts": 0},
+            {"name": "Griffin", "min": 21, "fg": "3-6", "ft": "2-4", "reb": 7, "ast": 0, "pf": 4, "to": 0, "pts": 8},
+            {"name": "Peterson", "min": 7, "fg": "1-1", "ft": "0-0", "reb": 0, "ast": 1, "pf": 4, "to": 3, "pts": 2},
+            {"name": "Brown", "min": 36, "fg": "8-18", "ft": "3-3", "reb": 1, "ast": 1, "pf": 4, "to": 2, "pts": 19},
+            {"name": "Skuellenberg", "min": 33, "fg": "2-8", "ft": "0-0", "reb": 1, "ast": 3, "pf": 3, "to": 1, "pts": 4},
+            {"name": "Stamp", "min": 31, "fg": "5-10", "ft": "3-5", "reb": 8, "ast": 0, "pf": 3, "to": 0, "pts": 13},
+            {"name": "Moody", "min": 33, "fg": "3-6", "ft": "2-4", "reb": 5, "ast": 1, "pf": 1, "to": 0, "pts": 8},
+            {"name": "Foye", "min": 5, "fg": "0-2", "ft": "0-0", "reb": 0, "ast": 0, "pf": 2, "to": 0, "pts": 0},
+            {"name": "Floyd", "min": 7, "fg": "0-2", "ft": "0-0", "reb": 3, "ast": 1, "pf": 2, "to": 1, "pts": 0},
+            {"name": "Perry", "min": 8, "fg": "0-1", "ft": "4-5", "reb": 0, "ast": 0, "pf": 2, "to": 1, "pts": 4},
+            {"name": "Hicks", "min": 2, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 1, "pf": 0, "to": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

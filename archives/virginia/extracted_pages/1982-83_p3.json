@@ -1,0 +1,48 @@
+{
+  "page": 3,
+  "games": [
+    {
+      "date": "1982-12-01",
+      "opponent": "James Madison University",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 51,
+          "players": [
+            {"name": "Lier, Jim", "min": 19, "fg": "2-4", "ft": "0-0", "reb": 1, "ast": 0, "pf": 2, "to": 2, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Robinson, Craig", "min": 25, "fg": "0-4", "ft": "0-1", "reb": 5, "ast": 0, "pf": 3, "to": 1, "stl": 0, "blk": 1, "pts": 0},
+            {"name": "Wilson, Othell", "min": 35, "fg": "6-10", "ft": "2-2", "reb": 3, "ast": 2, "pf": 1, "to": 1, "stl": 1, "blk": 0, "pts": 14},
+            {"name": "Stokes, Ricky", "min": 20, "fg": "4-5", "ft": "3-4", "reb": 2, "ast": 1, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 11},
+            {"name": "Edelin, Kenton", "min": 14, "fg": "0-1", "ft": "0-0", "reb": 4, "ast": 0, "pf": 1, "to": 1, "stl": 0, "blk": 1, "pts": 0},
+            {"name": "Newburg, Doug", "min": 1, "fg": "0-0", "ft": "1-2", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 1},
+            {"name": "Johnson, Kenny", "min": 1, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Carlisle, Rick", "min": 29, "fg": "2-4", "ft": "0-0", "reb": 1, "ast": 0, "pf": 3, "to": 3, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Smith, Wimp", "min": 1, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Lambiotte, Kenny", "min": 4, "fg": "0-0", "ft": "0-1", "reb": 0, "ast": 0, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Molen, Tim", "min": 19, "fg": "1-2", "ft": "2-2", "reb": 1, "ast": 0, "pf": 3, "to": 3, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Sampson, Ralph", "min": 29, "fg": "4-11", "ft": "1-1", "reb": 6, "ast": 3, "pf": 3, "to": 2, "stl": 0, "blk": 2, "pts": 9},
+            {"name": "Merrifield, Dan", "min": 3, "fg": "1-2", "ft": "2-2", "reb": 3, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 4}
+          ]
+        },
+        {
+          "name": "James Madison University",
+          "score": 34,
+          "players": [
+            {"name": "Fisher, Charles", "min": 36, "fg": "6-12", "ft": "2-2", "reb": 3, "ast": 0, "pf": 4, "to": 1, "stl": 0, "blk": 0, "pts": 14},
+            {"name": "Dupont, David", "min": 35, "fg": "0-5", "ft": "1-2", "reb": 5, "ast": 2, "pf": 2, "to": 1, "stl": 2, "blk": 0, "pts": 1},
+            {"name": "Jackson, Darrell", "min": 20, "fg": "0-1", "ft": "2-2", "reb": 1, "ast": 0, "pf": 2, "to": 1, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Steele, Derek", "min": 19, "fg": "0-4", "ft": "0-0", "reb": 2, "ast": 2, "pf": 0, "to": 3, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Williams, Tracy", "min": 20, "fg": "2-8", "ft": "2-4", "reb": 4, "ast": 0, "pf": 4, "to": 2, "stl": 1, "blk": 0, "pts": 6},
+            {"name": "Bradley, Keith", "min": 13, "fg": "0-1", "ft": "0-0", "reb": 0, "ast": 2, "pf": 1, "to": 4, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Boler, Woody", "min": 17, "fg": "1-1", "ft": "1-2", "reb": 2, "ast": 0, "pf": 4, "to": 1, "stl": 0, "blk": 0, "pts": 3},
+            {"name": "Niland, Dan", "min": 39, "fg": "2-9", "ft": "4-4", "reb": 7, "ast": 0, "pf": 2, "to": 2, "stl": 3, "blk": 0, "pts": 8},
+            {"name": "Esch, Eric", "min": 1, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true,
+      "notes": "James Madison players Masloff, Hughes, Misten, Banks, Donohoe listed as DNP with no stats, omitted from player list. James Madison's Niland FGA shown ambiguously as '-2' on the sheet but read as 2 (2-9) since 9 attempts recorded and this reading balances with team totals FG 11-41; Bradley's PF cell similarly showed a stray '-1' mark, read as 1. Both Virginia and JMU player point sums match team final scores exactly (51 and 34)."
+    }
+  ],
+  "skipped": []
+}

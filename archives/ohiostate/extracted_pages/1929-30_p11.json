@@ -1,0 +1,38 @@
+{
+  "page": 11,
+  "games": [
+    {
+      "date": "1930-02-15",
+      "opponent": "Purdue Boilermakers",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 25,
+          "players": [
+            {"name": "Ervin", "min": "45 minutes (overtime)", "pf": 1, "pts": 6},
+            {"name": "Evens", "min": "45 minutes", "pf": 2, "pts": 9},
+            {"name": "Stewart", "min": "36 minutes, 28 seconds", "pf": 4, "pts": 4},
+            {"name": "Fesler", "min": "46 minutes (uncertain OCR)", "pf": 2, "pts": 5},
+            {"name": "Larkins", "min": "40 minutes, 3 seconds", "pf": 4, "pts": 0},
+            {"name": "Holcomb", "min": "8 minutes, 32 seconds", "pf": 0, "pts": 0},
+            {"name": "Hinchman", "min": "4 minutes, 57 seconds", "pf": 0, "pts": 1}
+          ]
+        },
+        {
+          "name": "Purdue Boilermakers",
+          "score": 27,
+          "players": [
+            {"name": "Gibbons", "pf": 1, "pts": 0},
+            {"name": "Keller", "pf": 1, "pts": 5},
+            {"name": "Harmeson", "pf": 4, "pts": 5},
+            {"name": "Murphy", "pf": 1, "pts": 7},
+            {"name": "Wooden", "pf": 2, "pts": 10},
+            {"name": "Boots", "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

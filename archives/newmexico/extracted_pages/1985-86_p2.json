@@ -1,0 +1,48 @@
+{
+  "page": 2,
+  "games": [
+    {
+      "date": "1985-11-29",
+      "opponent": "San Diego",
+      "teams": [
+        {
+          "name": "San Diego Toreros",
+          "score": 46,
+          "players": [
+            {"name": "Mark Bostic", "min": 31, "fg": "3-10", "ft": "2-2", "reb": 12, "pf": 0, "ast": 1, "to": 1, "blk": 0, "stl": 0, "pts": 8},
+            {"name": "Nils Madden", "min": 19, "fg": "1-4", "ft": "2-2", "reb": 3, "pf": 4, "ast": 0, "to": 2, "blk": 0, "stl": 0, "pts": 4},
+            {"name": "Scott Thompson", "min": 33, "fg": "4-7", "ft": "0-0", "reb": 8, "pf": 1, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pts": 8},
+            {"name": "Paul Leonard", "min": 31, "fg": "2-5", "ft": "0-0", "reb": 0, "pf": 2, "ast": 4, "to": 0, "blk": 0, "stl": 0, "pts": 4},
+            {"name": "Kiki Jackson", "min": 22, "fg": "4-10", "ft": "2-2", "reb": 1, "pf": 2, "ast": 2, "to": 4, "blk": 0, "stl": 0, "pts": 10},
+            {"name": "Danny Means", "min": 4, "fg": "1-1", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Pete Murphy", "min": 18, "fg": "3-10", "ft": "0-0", "reb": 0, "pf": 2, "ast": 0, "to": 2, "blk": 0, "stl": 0, "pts": 6},
+            {"name": "Mark Manor", "min": 10, "fg": "0-2", "ft": "0-0", "reb": 0, "pf": 1, "ast": 1, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Charlie Wickstrand", "min": 1, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "James Knight", "min": 12, "fg": "1-2", "ft": "0-0", "reb": 0, "pf": 3, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Steve Krallman", "min": 13, "fg": "1-2", "ft": "0-0", "reb": 4, "pf": 4, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 2}
+          ]
+        },
+        {
+          "name": "New Mexico Lobos",
+          "score": 61,
+          "players": [
+            {"name": "Johnny Brown", "min": 30, "fg": "5-10", "ft": "10-14", "reb": 5, "pf": 1, "ast": 1, "to": 0, "blk": 1, "stl": 2, "pts": 20},
+            {"name": "Mike Winters", "min": 32, "fg": "2-8", "ft": "1-3", "reb": 2, "pf": 0, "ast": 8, "to": 1, "blk": 1, "stl": 0, "pts": 5},
+            {"name": "Shawn Brooks", "min": 28, "fg": "3-8", "ft": "3-5", "reb": 1, "pf": 1, "ast": 0, "to": 0, "blk": 1, "stl": 2, "pts": 9},
+            {"name": "Kelvin Scarborough", "min": 37, "fg": "6-10", "ft": "2-3", "reb": 1, "pf": 2, "ast": 6, "to": 2, "blk": 0, "stl": 0, "pts": 14},
+            {"name": "Kelly Graves", "min": 24, "fg": "3-7", "ft": "0-0", "reb": 1, "pf": 0, "ast": 2, "to": 0, "blk": 0, "stl": 0, "pts": 6},
+            {"name": "Paul Lawson", "min": 19, "fg": "0-3", "ft": "0-0", "reb": 2, "pf": 2, "ast": 3, "to": 2, "blk": 0, "stl": 1, "pts": 0},
+            {"name": "Randal Midos", "min": 1, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Larry Markland", "min": 4, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 1, "blk": 0, "stl": 1, "pts": 0},
+            {"name": "Bob Arnold", "min": 1, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Brian Parker", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Michael Moore", "min": 5, "fg": "0-0", "ft": "1-3", "reb": 0, "pf": 1, "ast": 1, "to": 0, "blk": 0, "stl": 0, "pts": 1},
+            {"name": "Robert Loeffel", "min": 15, "fg": "3-3", "ft": "0-0", "reb": 0, "pf": 1, "ast": 0, "to": 1, "blk": 3, "stl": 1, "pts": 6}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

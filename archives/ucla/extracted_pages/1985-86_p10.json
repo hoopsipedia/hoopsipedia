@@ -1,0 +1,9 @@
+{
+  "page": 10,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "1986-01-09 UCLA 65 @ Washington 90 (Hec Edmundson Pavilion): UCLA starters/bench lines transcribe cleanly and checksum exactly to 65 (verified against MIN sum=200, FGM sum=27, FGA sum=56, FTM sum=11, FTA sum=20, all matching team totals). However Washington's bench rows (WILSON, EVENSON, and to a lesser extent DAMON/ZEVENBERGEN) have faint/ambiguous digits that do not cleanly resolve to the 14-field FGM-FGA-FTM-FTA-O-D-REB-PF-TP-MIN-A-TO-BLK-S structure -- multiple internally-inconsistent parses were possible and at least two players' FG-made counts would need to be guessed to force the team point total to 90. Per instructions, skipping rather than inventing values for those player lines; the whole game is omitted since a complete, checksummed box for both teams could not be confidently produced."
+    }
+  ]
+}

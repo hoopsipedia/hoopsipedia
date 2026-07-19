@@ -1,0 +1,36 @@
+{
+  "page": 10,
+  "games": [
+    {
+      "date": "1970-01-03",
+      "opponent": "Minnesota",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 78,
+          "players": [
+            {"name": "Cleamons", "fg": "8-19", "ft": "4-6", "reb": 12, "pf": 2, "pts": 20},
+            {"name": "Andreas", "fg": "5-8", "ft": "0-0", "reb": 6, "pf": 2, "pts": 10},
+            {"name": "Sorenson", "fg": "7-17", "ft": "3-3", "reb": 7, "pf": 4, "pts": 17},
+            {"name": "Barclay", "fg": "3-5", "ft": "1-1", "reb": 5, "pf": 0, "pts": 7},
+            {"name": "Finney", "fg": "10-13", "ft": "4-5", "reb": 2, "pf": 1, "pts": 24}
+          ]
+        },
+        {
+          "name": "Minnesota",
+          "score": 71,
+          "players": [
+            {"name": "Mikan", "fg": "10-19", "ft": "2-2", "reb": 17, "pf": 2, "pts": 22},
+            {"name": "Overskei", "fg": "5-13", "ft": "0-0", "reb": 7, "pf": 2, "pts": 10},
+            {"name": "Masterson", "fg": "6-11", "ft": "3-5", "reb": 9, "pf": 4, "pts": 15},
+            {"name": "Hill", "fg": "8-21", "ft": "2-2", "reb": 4, "pf": 2, "pts": 18},
+            {"name": "Regenfuss", "fg": "3-7", "ft": "0-0", "reb": 1, "pf": 2, "pts": 6},
+            {"name": "Bowser", "fg": "0-2", "ft": "0-0", "reb": 0, "pf": 1, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

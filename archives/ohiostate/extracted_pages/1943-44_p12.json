@@ -1,0 +1,31 @@
+{
+  "page": 12,
+  "games": [
+    {
+      "date": "1944-01-29",
+      "opponent": "Michigan",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 52,
+          "players": [
+            {"name": "Grate", "fg": "6", "ft": "1-1", "pf": 2, "pts": 13},
+            {"name": "Dugger", "fg": "4", "ft": "4-5", "pf": 1, "pts": 12},
+            {"name": "Risen", "fg": "6", "ft": "3-4", "pf": 2, "pts": 15},
+            {"name": "Huston", "fg": "2", "ft": "1-1", "pf": 3, "pts": 5},
+            {"name": "Bowen", "fg": "1", "ft": "0-0", "pf": 1, "pts": 2},
+            {"name": "Hammitt", "fg": "0", "ft": "0-0", "pf": 1, "pts": 0},
+            {"name": "Gunton", "fg": "2", "ft": "1-4", "pf": 0, "pts": 5}
+          ]
+        },
+        {
+          "name": "Michigan Wolverines",
+          "score": 39,
+          "players": []
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

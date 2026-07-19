@@ -1,0 +1,43 @@
+{
+  "page": 31,
+  "games": [
+    {
+      "date": "1990-03-16",
+      "opponent": "UAB",
+      "ucla_score": 68,
+      "opp_score": 56,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 68,
+          "players": [
+            {"name": "Wilson", "min": 35, "fg": "9-17", "tp": "0-0", "ft": "5-9", "reb": 9, "ast": 0, "pf": 4, "to": 2, "blk": 1, "stl": 3, "pts": 23},
+            {"name": "MacLean", "min": 34, "fg": "3-14", "tp": "0-0", "ft": "4-4", "reb": 7, "ast": 2, "pf": 3, "to": 2, "blk": 0, "stl": 1, "pts": 10},
+            {"name": "Murray", "min": 29, "fg": "7-13", "tp": "0-2", "ft": "0-0", "reb": 7, "ast": 0, "pf": 4, "to": 1, "blk": 1, "stl": 3, "pts": 14},
+            {"name": "Madkins", "min": 31, "fg": "2-3", "tp": "0-0", "ft": "3-4", "reb": 2, "ast": 2, "pf": 0, "to": 1, "blk": 0, "stl": 2, "pts": 7},
+            {"name": "Martin", "min": 36, "fg": "2-7", "tp": "0-0", "ft": "4-4", "reb": 2, "ast": 8, "pf": 1, "to": 4, "blk": 0, "stl": 1, "pts": 8},
+            {"name": "Butler", "min": 21, "fg": "2-3", "tp": "0-0", "ft": "0-2", "reb": 4, "ast": 3, "pf": 0, "to": 0, "blk": 0, "stl": 0, "pts": 4},
+            {"name": "Walker", "min": 14, "fg": "1-4", "tp": "0-3", "ft": "0-0", "reb": 3, "ast": 0, "pf": 1, "to": 1, "blk": 0, "stl": 0, "pts": 2}
+          ]
+        },
+        {
+          "name": "UAB Blazers",
+          "score": 56,
+          "players": [
+            {"name": "Kennedy", "min": 33, "fg": "2-9", "tp": "1-5", "ft": "4-4", "reb": 8, "ast": 2, "pf": 5, "to": 2, "blk": 0, "stl": 1, "pts": 9},
+            {"name": "Rembert", "min": 20, "fg": "3-5", "tp": "0-0", "ft": "0-0", "reb": 3, "ast": 0, "pf": 1, "to": 1, "blk": 0, "stl": 0, "pts": 6},
+            {"name": "Ogg", "min": 25, "fg": "4-8", "tp": "0-0", "ft": "0-0", "reb": 8, "ast": 0, "pf": 1, "to": 1, "blk": 2, "stl": 0, "pts": 8},
+            {"name": "Bearden", "min": 35, "fg": "3-10", "tp": "2-6", "ft": "0-0", "reb": 2, "ast": 2, "pf": 3, "to": 3, "blk": 0, "stl": 0, "pts": 8},
+            {"name": "Kramer", "min": 34, "fg": "4-16", "tp": "2-12", "ft": "0-0", "reb": 5, "ast": 4, "pf": 4, "to": 5, "blk": 0, "stl": 1, "pts": 10},
+            {"name": "Rogers", "min": 21, "fg": "4-9", "tp": "0-0", "ft": "3-4", "reb": 4, "ast": 0, "pf": 4, "to": 3, "blk": 0, "stl": 0, "pts": 11},
+            {"name": "Wilkerson", "min": 10, "fg": "0-2", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 1, "blk": 0, "stl": 1, "pts": 0},
+            {"name": "DeVaughn", "min": 14, "fg": "2-4", "tp": "0-0", "ft": "0-0", "reb": 3, "ast": 1, "pf": 2, "to": 0, "blk": 3, "stl": 0, "pts": 4},
+            {"name": "Jackson", "min": 8, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 1, "blk": 0, "stl": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

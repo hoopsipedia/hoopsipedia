@@ -1,0 +1,44 @@
+{
+  "page": 16,
+  "games": [
+    {
+      "date": "1988-01-21",
+      "opponent": "Arizona State",
+      "ucla_score": 94,
+      "opp_score": 81,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 94,
+          "players": [
+            {"name": "Trevor Wilson", "min": 35, "fg": "10-16", "tp": "0-0", "ft": "3-6", "reb": 14, "ast": 5, "pf": 2, "to": 1, "stl": 0, "blk": 0, "pts": 23},
+            {"name": "Ralph Jackson", "min": 28, "fg": "6-9", "tp": "0-1", "ft": "1-2", "reb": 4, "ast": 1, "pf": 2, "to": 1, "stl": 1, "blk": 0, "pts": 13},
+            {"name": "Kelvin Butler", "min": 21, "fg": "5-6", "tp": "0-0", "ft": "1-1", "reb": 1, "ast": 1, "pf": 3, "to": 1, "stl": 0, "blk": 0, "pts": 10},
+            {"name": "Pooh Richardson", "min": 35, "fg": "5-7", "tp": "0-0", "ft": "0-0", "reb": 5, "ast": 9, "pf": 0, "to": 2, "stl": 2, "blk": 0, "pts": 10},
+            {"name": "Dave Immel", "min": 31, "fg": "6-14", "tp": "1-6", "ft": "5-5", "reb": 3, "ast": 4, "pf": 0, "to": 2, "stl": 0, "blk": 0, "pts": 18},
+            {"name": "Charles Rochelin", "min": 17, "fg": "4-7", "tp": "0-1", "ft": "0-0", "reb": 2, "ast": 0, "pf": 3, "to": 0, "stl": 2, "blk": 1, "pts": 8},
+            {"name": "Kevin Walker", "min": 19, "fg": "2-5", "tp": "1-3", "ft": "2-2", "reb": 1, "ast": 1, "pf": 2, "to": 2, "stl": 1, "blk": 0, "pts": 7},
+            {"name": "Gerald Madkins", "min": 14, "fg": "2-4", "tp": "0-0", "ft": "1-2", "reb": 0, "ast": 1, "pf": 0, "to": 0, "stl": 1, "blk": 0, "pts": 5}
+          ]
+        },
+        {
+          "name": "Arizona State Sun Devils",
+          "score": 81,
+          "players": [
+            {"name": "Eric Holloway", "min": 31, "fg": "6-12", "tp": "2-3", "ft": "3-5", "reb": 4, "ast": 1, "pf": 4, "to": 2, "stl": 1, "blk": 0, "pts": 17},
+            {"name": "John Jerome", "min": 7, "fg": "0-5", "tp": "0-2", "ft": "0-0", "reb": 4, "ast": 0, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Mark Becker", "min": 33, "fg": "8-12", "tp": "0-0", "ft": "3-3", "reb": 9, "ast": 10, "pf": 2, "to": 2, "stl": 2, "blk": 0, "pts": 19},
+            {"name": "Arthur Thomas", "min": 30, "fg": "6-14", "tp": "1-4", "ft": "1-2", "reb": 2, "ast": 4, "pf": 4, "to": 1, "stl": 1, "blk": 0, "pts": 14},
+            {"name": "Tarence Wheeler", "min": 29, "fg": "4-10", "tp": "2-4", "ft": "0-0", "reb": 1, "ast": 6, "pf": 3, "to": 3, "stl": 1, "blk": 0, "pts": 10},
+            {"name": "Trent Edwards", "min": 25, "fg": "3-7", "tp": "0-0", "ft": "1-2", "reb": 9, "ast": 0, "pf": 2, "to": 3, "stl": 1, "blk": 0, "pts": 7},
+            {"name": "Mark Carlino", "min": 13, "fg": "2-3", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Mike Redhair", "min": 9, "fg": "1-1", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 1, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Joey Johnson", "min": 23, "fg": "4-7", "tp": "0-2", "ft": "0-0", "reb": 4, "ast": 1, "pf": 1, "to": 3, "stl": 1, "blk": 0, "pts": 8}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

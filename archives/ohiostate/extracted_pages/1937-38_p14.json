@@ -1,0 +1,44 @@
+{
+  "page": 14,
+  "games": [
+    {
+      "date": "1938-02-05",
+      "opponent": "Iowa",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 51,
+          "players": [
+            {"name": "Hull", "fg_made": 7, "ft_made": 0, "pf": 2, "pts": 14},
+            {"name": "Baker", "fg_made": 2, "ft_made": 8, "pf": 3, "pts": 12},
+            {"name": "Stafford", "fg_made": 0, "ft_made": 1, "pf": 0, "pts": 1},
+            {"name": "Sattler", "fg_made": 0, "ft_made": 0, "pf": 0, "pts": 0},
+            {"name": "Schick", "fg_made": 5, "ft_made": 2, "pf": 4, "pts": 12},
+            {"name": "Goletz", "fg_made": 0, "ft_made": 0, "pf": 1, "pts": 0},
+            {"name": "McDonald", "fg_made": 0, "ft_made": 0, "pf": 3, "pts": 0},
+            {"name": "Prewitt", "fg_made": 1, "ft_made": 0, "pf": 0, "pts": 2},
+            {"name": "Baughner", "fg_made": 4, "ft_made": 2, "pf": 0, "pts": 10}
+          ]
+        },
+        {
+          "name": "Iowa Hawkeyes",
+          "score": 43,
+          "players": [
+            {"name": "Johnson", "fg_made": 1, "ft_made": 0, "pf": 2, "pts": 2},
+            {"name": "Stephens", "fg_made": 8, "ft_made": 2, "pf": 2, "pts": 18},
+            {"name": "Kinnick", "fg_made": 7, "ft_made": 1, "pf": 1, "pts": 15},
+            {"name": "Drees", "fg_made": 0, "ft_made": 1, "pf": 4, "pts": 1},
+            {"name": "Plett", "fg_made": 0, "ft_made": 1, "pf": 3, "pts": 1},
+            {"name": "Lind", "fg_made": 0, "ft_made": 0, "pf": 1, "pts": 0},
+            {"name": "Van Ysseldyk", "fg_made": 0, "ft_made": 1, "pf": 1, "pts": 1},
+            {"name": "Hohenhorst", "fg_made": 0, "ft_made": 0, "pf": 1, "pts": 0},
+            {"name": "Suesens", "fg_made": 2, "ft_made": 1, "pf": 3, "pts": 5}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": [],
+  "notes": "Sheet's box score only lists FG-made, FT-made, PF, and TP (points) columns (no attempt counts, no min/ast/reb/stl/blk), so fg_made/ft_made are used instead of the standard 'made-attempted' fg/ft fields. All player pts sums verified exactly against each team's printed Totals row and the final score (Ohio State 51, Iowa 43); one scan-ambiguous value (Baker's FT figure, initially misread) was resolved by cross-checking against the team FG/FT/PF column totals, which reconciled perfectly for both teams."
+}

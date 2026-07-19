@@ -1,0 +1,9 @@
+{
+  "page": 24,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "1985-02-14 New Mexico at Hawaii (MRC Arena, Honolulu, HI): New Mexico side checksums cleanly (player TP sum = 68 = final score 68, from box: Brooks 2, Brown 11, Dockery 2, Drake 0, Greene 16, Lawson 3, Scarborough 18, Scott 8, Winters 8). However Hawaii side fails checksum: player TP sum = 74 (Morgan 15, Colston 2, Gaule 8, Walker 2, Hughes 13, Cowen 8, Arthur 19, Jones 7; Hutcherson and Moiser DNP) vs Hawaii team TOTALS row TP = 72, and 2*teamFGmade+teamFTmade (2*30+13=73) also disagrees with both. The scoreboard/final-score line for Hawaii is smudged/ambiguous (reads as either 72 or 73) and individual FT/FTA entries for a couple of Hawaii players (esp. Morgan, Walker) are hard to read cleanly on the scan, so the source of the 1-2 point discrepancy cannot be confidently resolved. Skipping the whole game rather than guessing which entry is wrong."
+    }
+  ]
+}

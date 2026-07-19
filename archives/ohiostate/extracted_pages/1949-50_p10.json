@@ -1,0 +1,41 @@
+{
+  "page": 10,
+  "games": [
+    {
+      "date": "1950-01-09",
+      "opponent": "DePaul Blue Demons",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 70,
+          "players": [
+            {"name": "Donham F-G", "min": "40:00", "fg": "6-16", "ft": "2-4", "pf": 3, "pts": 14},
+            {"name": "Schnittker F", "min": "36:45", "fg": "7-16", "ft": "3-4", "pf": 3, "pts": 17},
+            {"name": "Jacobs F", "min": "15:30", "fg": "4-7", "ft": "1-1", "pf": 2, "pts": 9},
+            {"name": "Taylor C", "min": "28:45", "fg": "6-11", "ft": "0-2", "pf": 3, "pts": 12},
+            {"name": "Armstrong C-F", "min": "19:45", "fg": "2-3", "ft": "0-1", "pf": 2, "pts": 4},
+            {"name": "Burkholder G", "min": "33:00", "fg": "3-13", "ft": "4-1", "pf": 2, "pts": 10},
+            {"name": "Brown G", "min": "28:15", "fg": "0-7", "ft": "4-3", "pf": 2, "pts": 4}
+          ]
+        },
+        {
+          "name": "DePaul Blue Demons",
+          "score": 62,
+          "players": [
+            {"name": "Benson F", "fg": "8", "ft": "2-1", "pf": 5, "pts": 18},
+            {"name": "Lahey F", "fg": "0", "ft": "1-0", "pf": 1, "pts": 1},
+            {"name": "Kampa F", "fg": "3", "ft": "1-0", "pf": 3, "pts": 7},
+            {"name": "Hauser F", "fg": "0", "ft": "0-0", "pf": 2, "pts": 0},
+            {"name": "Pavilonis C", "fg": "4", "ft": "4-1", "pf": 4, "pts": 12},
+            {"name": "Gowedarica G", "fg": "2", "ft": "2-1", "pf": 1, "pts": 6},
+            {"name": "Luksta G", "fg": "1", "ft": "0-0", "pf": 1, "pts": 2},
+            {"name": "Vucovich G", "fg": "3", "ft": "0-0", "pf": 5, "pts": 6},
+            {"name": "Federinko G", "fg": "3", "ft": "4-1", "pf": 0, "pts": 10}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

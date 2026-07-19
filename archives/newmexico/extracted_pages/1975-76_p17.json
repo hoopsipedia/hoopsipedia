@@ -1,0 +1,9 @@
+{
+  "page": 17,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Official NCAA box score sheet (Arizona at New Mexico, final Arizona 80 - New Mexico 79) is present, but it is handwritten in cursive and the scan quality is too poor to confidently read player names and several per-player numeric cells (FG/FT made-attempted, rebounds, fouls) for either team. Team-level totals and the final score are legible (Arizona 80, New Mexico 79, matching the 'Score by Periods' box: Arizona 40-40, New Mexico 35(?)-44), but individual player lines could not be transcribed with enough confidence to pass a reliable checksum, so the game was skipped per the ruthless-skip instruction rather than guess at illegible handwriting."
+    }
+  ]
+}

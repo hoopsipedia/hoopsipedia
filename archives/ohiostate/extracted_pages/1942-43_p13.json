@@ -1,0 +1,39 @@
+{
+  "page": 13,
+  "games": [
+    {
+      "date": "1943-02-27",
+      "opponent": "Iowa",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 41,
+          "players": [
+            {"name": "Trabits", "fg_made": 0, "ft_made": 0, "pts": 0},
+            {"name": "Miller", "fg_made": 5, "ft_made": 0, "pts": 10},
+            {"name": "Wise", "fg_made": 6, "ft_made": 2, "pts": 14},
+            {"name": "Dugger", "fg_made": 0, "ft_made": 1, "pts": 1},
+            {"name": "Fekete", "fg_made": 0, "ft_made": 0, "pts": 0},
+            {"name": "Shrider", "fg_made": 4, "ft_made": 1, "pts": 9},
+            {"name": "White", "fg_made": 3, "ft_made": 1, "pts": 7},
+            {"name": "Sims", "fg_made": 0, "ft_made": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Iowa",
+          "score": 43,
+          "players": [
+            {"name": "Trickey", "fg_made": 6, "ft_made": 0, "pts": 12},
+            {"name": "Lundstedt", "fg_made": 7, "ft_made": 4, "pts": 18},
+            {"name": "O'Brien", "fg_made": 3, "ft_made": 2, "pts": 8},
+            {"name": "Nesmith", "fg_made": 1, "ft_made": 3, "pts": 5},
+            {"name": "Humphrey", "fg_made": 0, "ft_made": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": [],
+  "notes": "Sheet only lists FG (made) and F (free throws made) columns, no attempts, no min/reb/ast/pf/to/stl/blk. TP column present and matches computed 2*fg_made+ft_made for every player and both team totals (Ohio State 41, Iowa 43), so fg/ft are reported as fg_made/ft_made (attempts not on sheet). Ohio State player 'Fekete' name is an OCR-uncertain read of 'Fckete' in the scan (likely Fekete); Iowa opponent name given simply as 'Iowa' as printed on sheet header. Date handwritten as 'Feb. 27 1943' at bottom of page."
+}

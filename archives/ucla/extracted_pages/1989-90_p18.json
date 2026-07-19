@@ -1,0 +1,44 @@
+{
+  "page": 18,
+  "games": [
+    {
+      "date": "1990-02-01",
+      "opponent": "USC",
+      "ucla_score": 75,
+      "opp_score": 76,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 75,
+          "players": [
+            {"name": "Wilson, Trevor", "min": 27, "fg": "8-11", "ft": "3-11", "tp": "0-0", "reb": 4, "ast": 2, "pf": 1, "to": 1, "stl": 1, "blk": 0, "pts": 19},
+            {"name": "MacLean, Don", "min": 38, "fg": "5-16", "ft": "2-5", "tp": "0-0", "reb": 16, "ast": 0, "pf": 4, "to": 5, "stl": 0, "blk": 0, "pts": 12},
+            {"name": "Murray, Tracy", "min": 35, "fg": "6-11", "ft": "5-5", "tp": "2-4", "reb": 4, "ast": 1, "pf": 2, "to": 2, "stl": 1, "blk": 0, "pts": 19},
+            {"name": "Madkins, Gerald", "min": 31, "fg": "0-0", "ft": "3-4", "tp": "0-0", "reb": 3, "ast": 7, "pf": 4, "to": 1, "stl": 0, "blk": 0, "pts": 3},
+            {"name": "Martin, Darrick", "min": 37, "fg": "6-9", "ft": "0-1", "tp": "2-2", "reb": 2, "ast": 4, "pf": 3, "to": 0, "stl": 1, "blk": 0, "pts": 14},
+            {"name": "Butler, Mitchell", "min": 15, "fg": "2-5", "ft": "0-0", "tp": "0-0", "reb": 2, "ast": 0, "pf": 3, "to": 0, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Walker, Kevin", "min": 11, "fg": "1-4", "ft": "0-0", "tp": "0-1", "reb": 2, "ast": 1, "pf": 3, "to": 3, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Mason, Zan", "min": 6, "fg": "1-1", "ft": "0-2", "tp": "0-0", "reb": 0, "ast": 1, "pf": 1, "to": 0, "stl": 0, "blk": 1, "pts": 2}
+          ]
+        },
+        {
+          "name": "USC Trojans",
+          "score": 76,
+          "players": [
+            {"name": "Coleman, Ronnie", "min": 38, "fg": "9-18", "ft": "1-6", "tp": "0-0", "reb": 9, "ast": 2, "pf": 2, "to": 3, "stl": 4, "blk": 2, "pts": 19},
+            {"name": "Banks, Calvin", "min": 36, "fg": "2-6", "ft": "2-2", "tp": "0-0", "reb": 7, "ast": 1, "pf": 3, "to": 3, "stl": 0, "blk": 0, "pts": 6},
+            {"name": "Munk, Chris", "min": 34, "fg": "4-8", "ft": "0-2", "tp": "0-0", "reb": 11, "ast": 2, "pf": 5, "to": 3, "stl": 0, "blk": 1, "pts": 8},
+            {"name": "Pack, Robert", "min": 30, "fg": "5-8", "ft": "4-5", "tp": "2-2", "reb": 2, "ast": 6, "pf": 3, "to": 3, "stl": 1, "blk": 0, "pts": 16},
+            {"name": "Miner, Harold", "min": 37, "fg": "9-18", "ft": "5-7", "tp": "4-10", "reb": 6, "ast": 1, "pf": 4, "to": 1, "stl": 1, "blk": 0, "pts": 27},
+            {"name": "Chatman, Rodney", "min": 11, "fg": "0-2", "ft": "0-0", "tp": "0-2", "reb": 1, "ast": 3, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Greeley, Keith", "min": 10, "fg": "0-1", "ft": "0-0", "tp": "0-0", "reb": 1, "ast": 1, "pf": 2, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Fuller, Tyrone", "min": 3, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 1, "ast": 1, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Carter, Turi", "min": 1, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

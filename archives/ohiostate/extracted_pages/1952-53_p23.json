@@ -1,0 +1,45 @@
+{
+  "page": 23,
+  "games": [
+    {
+      "date": "1953-03-09",
+      "opponent": "Michigan",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 95,
+          "players": [
+            {"name": "Williams", "fg": "5-15", "ft": "3-4", "pf": 4, "pts": 13},
+            {"name": "Leggett", "fg": "1-1", "ft": "0-0", "pf": 0, "pts": 2},
+            {"name": "Wilks", "fg": "6-16", "ft": "3-7", "pf": 2, "pts": 15},
+            {"name": "Miller", "fg": "0-0", "ft": "0-0", "pf": 1, "pts": 0},
+            {"name": "Annis", "fg": "0-0", "ft": "0-0", "pf": 1, "pts": 0},
+            {"name": "Ebert", "fg": "14-31", "ft": "6-10", "pf": 4, "pts": 34},
+            {"name": "Ropes", "fg": "0-0", "ft": "0-0", "pf": 0, "pts": 0},
+            {"name": "Hatfield", "fg": "4-13", "ft": "4-5", "pf": 3, "pts": 12},
+            {"name": "Jones", "fg": "3-6", "ft": "0-0", "pf": 1, "pts": 6},
+            {"name": "Cook", "fg": "4-17", "ft": "3-4", "pf": 1, "pts": 11},
+            {"name": "Kesling", "fg": "0-0", "ft": "0-0", "pf": 0, "pts": 0},
+            {"name": "Smith", "fg": "1-1", "ft": "0-0", "pf": 0, "pts": 2}
+          ]
+        },
+        {
+          "name": "Michigan",
+          "score": 71,
+          "players": [
+            {"name": "Codwell", "fg": "4-14", "ft": "4-8", "pf": 4, "pts": 12},
+            {"name": "Allen", "fg": "0-0", "ft": "2-2", "pf": 1, "pts": 2},
+            {"name": "Mead", "fg": "3-15", "ft": "4-4", "pf": 3, "pts": 10},
+            {"name": "Kauffman", "fg": "6-12", "ft": "4-6", "pf": 3, "pts": 16},
+            {"name": "Groffsky", "fg": "3-9", "ft": "1-4", "pf": 5, "pts": 7},
+            {"name": "Baddy", "fg": "3-7", "ft": "0-0", "pf": 1, "pts": 6},
+            {"name": "Pavichevich", "fg": "2-7", "ft": "0-0", "pf": 1, "pts": 4},
+            {"name": "Lawrence", "fg": "6-15", "ft": "2-3", "pf": 3, "pts": 14}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

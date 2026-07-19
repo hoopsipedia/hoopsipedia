@@ -1,0 +1,11 @@
+{
+  "page": 28,
+  "games": [],
+  "skipped": [
+    {
+      "date": "1984-03-03",
+      "opponent": "Purdue Boilermakers (at W. Lafayette, IN)",
+      "reason": "Checksum failure for Ohio State (visitors): individual player points transcribed clearly and self-consistently (each player's 2*FG+FT equals their own TP column) sum to 65, but the sheet's own TOTALS row (FT 13-14, TP 63) and the Score-by-Periods final (35+28=63) both say 63 -- a 2-point discrepancy baked into the original scoresheet (likely an FT total transcription error by the 1984 scorekeeper, e.g. McGee's FT 2-2/TP 2 looks anomalous but is written plainly and unambiguous on the page). Re-read the page a second time to confirm; the numbers are legible, not blurry -- the inconsistency is in the source document itself. Per instructions, skipping rather than guessing which figure is wrong. Purdue (home team) box score DOES check out (players sum to 85, matches final score 85) but is being skipped along with the whole game/page per task scope (per-page output, one game spanning both teams)."
+    }
+  ]
+}

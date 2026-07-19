@@ -1,0 +1,9 @@
+{
+  "page": 6,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page shows a UCLA vs Washington State box score (Date 12-19-86, Site: Friel Court, Final III UCLA 73 - Washington State 81, Attendance 3500), but the scanned/rotated column layout (TOTAL FG/FGA, 3-POINT FG/FGA, FT/FTA, REB O-D-T, PF, TP, A, TO, S, BLK, MIN) is garbled enough that individual player stat values cannot be reliably mapped to the correct player rows without guessing. Skipping rather than risking invented per-player values; only the game header/date/site/final score/attendance are confidently legible."
+    }
+  ]
+}

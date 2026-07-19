@@ -1,0 +1,47 @@
+{
+  "page": 19,
+  "games": [
+    {
+      "date": "1955-02-19",
+      "opponent": "Purdue",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 70,
+          "players": [
+            {"name": "J. Miller", "fg": "4-20", "ft": "11-14", "pf": 2, "pts": 19},
+            {"name": "Kelley", "fg": "4-13", "ft": "4-6", "pf": 3, "pts": 12},
+            {"name": "Ropes", "fg": "1-6", "ft": "2-3", "pf": 5, "pts": 4},
+            {"name": "Millard", "fg": "2-6", "ft": "5-6", "pf": 2, "pts": 9},
+            {"name": "Ellis", "fg": "8-18", "ft": "4-6", "pf": 4, "pts": 20},
+            {"name": "Musier", "fg": "1-2", "ft": "0-2", "pf": 1, "pts": 2},
+            {"name": "Short", "fg": "0-1", "ft": "0-0", "pf": 1, "pts": 0},
+            {"name": "Wigton", "fg": "1-1", "ft": "0-0", "pf": 0, "pts": 2},
+            {"name": "Keeling", "fg": "1-2", "ft": "0-0", "pf": 1, "pts": 2},
+            {"name": "C. Miller", "fg": "0-0", "ft": "0-0", "pf": 0, "pts": 0},
+            {"name": "Muroff", "fg": "0-0", "ft": "0-0", "pf": 1, "pts": 0}
+          ]
+        },
+        {
+          "name": "Purdue Boilermakers",
+          "score": 82,
+          "players": [
+            {"name": "Jecha", "fg": "0-7", "ft": "4-6", "pf": 3, "pts": 4},
+            {"name": "Lundy", "fg": "1-4", "ft": "1-2", "pf": 4, "pts": 3},
+            {"name": "Beck", "fg": "8-12", "ft": "4-4", "pf": 4, "pts": 20},
+            {"name": "Blind", "fg": "7-17", "ft": "1-3", "pf": 3, "pts": 15},
+            {"name": "Sexson", "fg": "7-23", "ft": "10-11", "pf": 1, "pts": 24},
+            {"name": "Dunn", "fg": "1-5", "ft": "1-2", "pf": 2, "pts": 3},
+            {"name": "Thornburg", "fg": "1-5", "ft": "0-2", "pf": 2, "pts": 2},
+            {"name": "Lorenz", "fg": "4-5", "ft": "0-0", "pf": 2, "pts": 8},
+            {"name": "Campbell", "fg": "0-0", "ft": "3-4", "pf": 0, "pts": 3},
+            {"name": "Bonhomme", "fg": "0-0", "ft": "0-0", "pf": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": [],
+  "notes": "Typed official Western Conference box score, fully legible. FGA/FG/FTA/FT/PF/PTS columns present for all players; no MIN/REB/AST/TO/STL/BLK columns on this era sheet, so omitted. PTS column was printed directly (not computed), but cross-checked against 2*FG_made+FT_made for every player and all matched exactly. Player team totals sum to final scores for both teams (Ohio State 70, Purdue 82)."
+}

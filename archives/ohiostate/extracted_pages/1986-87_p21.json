@@ -1,0 +1,45 @@
+{
+  "page": 21,
+  "games": [
+    {
+      "date": "1987-01-24",
+      "opponent": "Iowa Hawkeyes",
+      "site": "Carver-Hawkeye Arena",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 80,
+          "players": [
+            {"name": "Dennis Hopson", "fg": "12-21", "tp": "1-4", "ft": "11-13", "reb": 7, "ast": 2, "to": 1, "stl": 1, "pf": 2, "pts": 36},
+            {"name": "Jerry Francis", "fg": "4-6", "ft": "4-4", "reb": 3, "pf": 3, "pts": 12},
+            {"name": "John Anderson", "pts": 0},
+            {"name": "Curtis Wilson", "fg": "6-15", "tp": "4-8", "ft": "4-9", "reb": 3, "pf": 3, "ast": 6, "to": 2, "pts": 20},
+            {"name": "Jay Burson", "fg": "5-10", "ft": "0-0", "ast": 5, "to": 1, "pts": 10},
+            {"name": "Tony White", "pts": 0},
+            {"name": "Keith Wesson", "fg": "1-1", "ft": "0-0", "pts": 2}
+          ],
+          "checksum_ok": true
+        },
+        {
+          "name": "Iowa Hawkeyes",
+          "score": 76,
+          "players": [
+            {"name": "Roy Marble", "fg": "3-5", "ft": "1-3", "reb": 6, "pf": 2, "ast": 1, "to": 3, "pts": 7},
+            {"name": "Brad Lohaus", "fg": "5-8", "tp": "2-3", "ft": "3-5", "pf": 3, "pts": 15},
+            {"name": "Ed Horton", "fg": "4-9", "pts": 8},
+            {"name": "Kevin Gamble", "fg": "8-14", "tp": "2-3", "ft": "1-2", "pf": 3, "pts": 19},
+            {"name": "B.J. Armstrong", "fg": "9-16", "tp": "2-3", "ft": "0-0", "pts": 20},
+            {"name": "Jeff Moe", "fg": "1-3", "pts": 2},
+            {"name": "Bill Jones", "fg": "1-2", "ft": "1-1", "pts": 3},
+            {"name": "Al Lorenzen", "pts": 0},
+            {"name": "Gerry Wright", "fg": "1-1", "pts": 2}
+          ],
+          "checksum_ok": true
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": [],
+  "notes": "Official NCAA box score, Ohio State at Iowa, 1-24-87, Carver-Hawkeye Arena. Ohio State (visitors) side is clearly typed/printed and TP column read directly; sum of player pts (36+12+0+20+10+0+2=80) checksums exactly against the final score and team TOTALS row (28 FG-54, 5 3FG-13, 19 FT-27, TP80). Iowa (home) side is smaller/less crisp print; FG and 3FG makes/attempts were legible but several FT figures and the printed TP digits were uncertain, so per-player pts for Iowa were computed as 2*fg_made + tp_made(3s counted once extra) + ft_made rather than read directly off a blurry TP digit; this computed set sums to exactly 76, matching the final score and the Iowa TOTALS row (33 FG-66, 4 3FG-11, 6 FT-14, TP76), so it checksums but confidence on individual Iowa FT splits is lower than Ohio State's. Minutes (MIN) column was cut off/illegible for essentially every player on both teams and was omitted rather than guessed. Reserve players on both benches whose rows were shaded/crossed through (Kip Lomax, Scott Anderson for OSU; a few unlabeled Iowa bench rows) appeared to be did-not-play and were omitted rather than invented as zero-stat entries."
+}

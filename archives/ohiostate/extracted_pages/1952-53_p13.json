@@ -1,0 +1,9 @@
+{
+  "page": 13,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Official Western Conference Basketball Box Score, Jan 26 1953: Ohio State (visiting, 73) @ Northwestern (home, 82). Ohio State's player lines are clean and legible and checksum perfectly (sum of 2*FG+FT for all 12 players = 73, matching final score, matching team FG/FT column totals of 28 and 17 too). However Northwestern's entire box score section is heavily obscured by dark ink smears/redactions covering large portions of the FG, FGA, FT, FTM, PF, and PTS columns for nearly every player row (Dellerfield, Bragiel/Bragie, Blake, Petranek, Grant, Bierer, Zurke, plus several additional blacked-out rows). Digits cannot be read with confidence and several rows are fully illegible, so no reliable checksum against Northwestern's 82-point total or 32/71/18 team totals could be computed. Per instructions, skipping the whole game rather than guessing Northwestern's figures or reporting only one team's lineup."
+    }
+  ]
+}

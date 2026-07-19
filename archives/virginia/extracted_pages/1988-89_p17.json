@@ -1,0 +1,47 @@
+{
+  "page": 17,
+  "games": [
+    {
+      "date": "1989-01-28",
+      "opponent": "Wake Forest",
+      "site": "Charlottesville, VA",
+      "teams": [
+        {
+          "name": "Wake Forest Demon Deacons",
+          "score": 69,
+          "players": [
+            {"name": "Sam Ivy", "fg": "6-12", "tp": "0-0", "ft": "1-3", "reb": 8, "pf": 2, "pts": 13},
+            {"name": "Chris King", "fg": "1-4", "tp": "0-0", "ft": "0-0", "reb": 1, "pf": 3, "pts": 2},
+            {"name": "Phil Medlin", "fg": "2-4", "tp": "0-0", "ft": "1-2", "reb": 7, "pf": 2, "pts": 5},
+            {"name": "Derrick McQueen", "fg": "8-13", "tp": "1-3", "ft": "1-2", "reb": 2, "pf": 3, "pts": 18},
+            {"name": "David Carlyle", "fg": "4-6", "tp": "2-3", "ft": "3-4", "pf": 5, "pts": 13, "note": "PF circled on sheet (possible foul-out); rebound total illegible"},
+            {"name": "Robert Siler", "fg": "2-7", "tp": "1-4", "ft": "0-0", "reb": 3, "pf": 4, "pts": 5},
+            {"name": "Ralph Kitley", "pts": 0, "note": "only TP visible; other columns blank, likely DNP"},
+            {"name": "Antonio Johnson", "fg": "2-9", "tp": "2-6", "ft": "0-0", "pf": 3, "pts": 6},
+            {"name": "Todd Sanders", "fg": "1-1", "pf": 1, "pts": 2},
+            {"name": "Cal Boyd", "fg": "0-1", "tp": "0-1", "ft": "2-2", "pf": 1, "pts": 2},
+            {"name": "Tom Wise", "reb": 1, "pts": 0},
+            {"name": "Darryl Cheeley", "fg": "1-3", "tp": "1-3", "ft": "0-0", "pf": 3, "pts": 3}
+          ]
+        },
+        {
+          "name": "Virginia Cavaliers",
+          "score": 88,
+          "players": [
+            {"name": "Bryant Stith", "fg": "3-5", "tp": "0-0", "ft": "8-10", "reb": 9, "pf": 2, "pts": 14},
+            {"name": "Matt Blundin", "fg": "1-2", "reb": 2, "pf": 4, "pts": 2},
+            {"name": "Brent Dabbs", "fg": "2-5", "tp": "0-1", "ft": "0-1", "reb": 5, "pf": 2, "pts": 4},
+            {"name": "Richard Morgan", "fg": "8-18", "tp": "3-6", "ft": "6-6", "reb": 3, "pf": 2, "pts": 25},
+            {"name": "John Crotty", "fg": "4-9", "tp": "1-4", "ft": "9-12", "reb": 2, "pf": 2, "pts": 18},
+            {"name": "Curtis Williams", "fg": "6-7", "tp": "0-0", "ft": "3-4", "reb": 8, "pf": 2, "pts": 15},
+            {"name": "Kenny Turner", "fg": "2-2", "ft": "0-0", "reb": 3, "pf": 3, "pts": 4},
+            {"name": "Jeff Daniel", "fg": "1-4", "ft": "2-2", "reb": 5, "pts": 4},
+            {"name": "Anthony Oliver", "fg": "1-3", "pts": 2}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

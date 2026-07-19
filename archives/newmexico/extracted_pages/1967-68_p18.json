@@ -1,0 +1,9 @@
+{
+  "page": 18,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Arizona vs New Mexico, 3/3/68 at Tucson (2-in-1-shot chart and box score). Arizona's box score checksummed cleanly (TOTALS TP=69 matches final score by periods 69; individual player points cross-checked via 2*FGM+FTM formula). However New Mexico's player lines fail checksum: summing individual points (using listed TP column and cross-checking with 2*FGM+FTM) yields 78, while the final score by periods for New Mexico (visitors) is 68 -- a 10-point discrepancy that could not be reconciled. The New Mexico team TOTALS row is also partially illegible/inconsistent with the sum of the individual player rows (e.g. FGM column total appears to read 26 but individual FGM values sum to 31). Handwriting for the Howard line (New Mexico #35) in particular is ambiguous between the FT and TP/PF columns. Skipping the whole game rather than guessing, per instructions."
+    }
+  ]
+}

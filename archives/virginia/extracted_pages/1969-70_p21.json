@@ -1,0 +1,11 @@
+{
+  "page": 21,
+  "games": [],
+  "skipped": [
+    {
+      "date": "1970-02-21",
+      "opponent": "Clemson",
+      "reason": "Virginia team checksum fails: summing each player's points (computed as 2*FG_made+FT_made per the pre-3-point-line rule, and cross-checked against the printed Pts column) yields 97, but Virginia's official final score is 94 (confirmed independently by the period-scoring table: 45+49=94, and by the team totals row 39-74 FG / 16-22 FT = 78+16=94). All individual FG makes/attempts sum correctly to the team's 39-74, isolating the error to the FT column: individual FT makes sum to 19 (attempts 25) vs. the team row's 16 (attempts 22), a discrepancy of exactly 3 made and 3 attempted. This points to one player's FT/points figure being misread or illegible on the scan -- most likely Chip Miller's line, whose FT ('0-0' vs '3-3') and Pts ('0' vs '3') values are ambiguous at this scan resolution -- but I could not confirm which figure is wrong even after a second read of the page, and was unwilling to guess a correction. Clemson's box score on this same page (32-62 FG, 15-24 FT, individual pts sum 9+8+25+4+18+15+0=79) checksums cleanly against Clemson's final score of 79, but since this is a single two-team game record, the whole game is skipped rather than transcribing only one side."
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "page": 17,
+  "games": [
+    {
+      "date": "1993-01-24",
+      "opponent": "California",
+      "ucla_score": 82,
+      "opp_score": 104,
+      "teams": [
+        {
+          "name": "California",
+          "score": 104,
+          "players": [
+            {"name": "Alfred Grigsby", "min": 30, "fg": "8-12", "tp": "0-0", "ft": "7-8", "reb": 6, "ast": 3, "to": 2, "blk": 0, "stl": 0, "pf": 2, "pts": 23},
+            {"name": "Lamond Murray", "min": 32, "fg": "8-15", "tp": "1-2", "ft": "1-7", "reb": 3, "ast": 3, "to": 2, "blk": 0, "stl": 1, "pf": 0, "pts": 18},
+            {"name": "Brian Hendrick", "min": 30, "fg": "10-12", "tp": "0-0", "ft": "3-4", "reb": 8, "ast": 2, "to": 0, "blk": 1, "stl": 0, "pf": 2, "pts": 23},
+            {"name": "Jason Kidd", "min": 30, "fg": "4-10", "tp": "1-1", "ft": "2-2", "reb": 8, "ast": 6, "to": 4, "blk": 0, "stl": 6, "pf": 3, "pts": 11},
+            {"name": "Jerod Haase", "min": 30, "fg": "4-7", "tp": "3-3", "ft": "5-7", "reb": 2, "ast": 5, "to": 3, "blk": 0, "stl": 1, "pf": 3, "pts": 16},
+            {"name": "Stevie Johnson", "min": 8, "fg": "0-1", "tp": "0-0", "ft": "2-2", "reb": 1, "ast": 0, "to": 1, "blk": 0, "stl": 1, "pf": 1, "pts": 2},
+            {"name": "Ryan Jamison", "min": 8, "fg": "2-3", "tp": "0-0", "ft": "0-0", "reb": 5, "ast": 2, "to": 3, "blk": 0, "stl": 0, "pf": 2, "pts": 4},
+            {"name": "K.J. Roberts", "min": 18, "fg": "0-3", "tp": "0-1", "ft": "2-4", "reb": 0, "ast": 1, "to": 1, "blk": 0, "stl": 0, "pf": 2, "pts": 2},
+            {"name": "Monty Buckley", "min": 2, "fg": "1-1", "tp": "0-0", "ft": "1-2", "reb": 2, "ast": 1, "to": 0, "blk": 0, "stl": 0, "pf": 1, "pts": 3},
+            {"name": "Akili Jones", "min": 2, "fg": "0-2", "tp": "0-1", "ft": "0-0", "reb": 1, "ast": 1, "to": 0, "blk": 0, "stl": 0, "pf": 0, "pts": 0},
+            {"name": "Brendan Graves", "min": 2, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pf": 0, "pts": 0},
+            {"name": "Richard Branham", "min": 2, "fg": "1-2", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pf": 2, "pts": 2}
+          ]
+        },
+        {
+          "name": "UCLA Bruins",
+          "score": 82,
+          "players": [
+            {"name": "Mitchell Butler", "min": 29, "fg": "2-6", "tp": "0-1", "ft": "4-5", "reb": 5, "ast": 1, "to": 2, "blk": 0, "stl": 1, "pf": 4, "pts": 8},
+            {"name": "Ed O'Bannon", "min": 34, "fg": "6-14", "tp": "0-2", "ft": "5-5", "reb": 8, "ast": 4, "to": 3, "blk": 2, "stl": 1, "pf": 2, "pts": 17},
+            {"name": "Richard Petruska", "min": 12, "fg": "2-5", "tp": "0-0", "ft": "1-2", "reb": 2, "ast": 0, "to": 4, "blk": 1, "stl": 0, "pf": 3, "pts": 5},
+            {"name": "Shon Tarver", "min": 34, "fg": "9-14", "tp": "2-4", "ft": "1-1", "reb": 5, "ast": 2, "to": 4, "blk": 1, "stl": 1, "pf": 2, "pts": 21},
+            {"name": "Tyus Edney", "min": 34, "fg": "3-7", "tp": "1-2", "ft": "4-6", "reb": 1, "ast": 3, "to": 4, "blk": 0, "stl": 1, "pf": 3, "pts": 11},
+            {"name": "Rodney Zimmerman", "min": 13, "fg": "3-4", "tp": "0-0", "ft": "3-4", "reb": 2, "ast": 0, "to": 0, "blk": 4, "stl": 1, "pf": 5, "pts": 9},
+            {"name": "Marquis Burns", "min": 15, "fg": "1-5", "tp": "1-3", "ft": "0-0", "reb": 0, "ast": 2, "to": 0, "blk": 0, "stl": 1, "pf": 2, "pts": 3},
+            {"name": "Kevin Dempsey", "min": 20, "fg": "2-7", "tp": "2-4", "ft": "0-0", "reb": 5, "ast": 1, "to": 3, "blk": 0, "stl": 0, "pf": 3, "pts": 6},
+            {"name": "Jiri Zidek", "min": 7, "fg": "0-0", "tp": "0-0", "ft": "2-2", "reb": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pf": 1, "pts": 2},
+            {"name": "David Boyle", "min": 2, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pf": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

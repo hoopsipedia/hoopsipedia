@@ -1,0 +1,44 @@
+{
+  "page": 16,
+  "games": [
+    {
+      "date": "1975-02-01",
+      "opponent": "USC",
+      "ucla_score": 89,
+      "opp_score": 84,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 89,
+          "players": [
+            {"name": "Washington", "min": 20, "fg": "7-8", "ft": "1-2", "reb": 5, "pf": 5, "ast": 1, "pts": 15},
+            {"name": "Meyers", "min": 40, "fg": "9-20", "ft": "5-6", "reb": 9, "pf": 2, "ast": 6, "pts": 23},
+            {"name": "Drollinger", "min": 28, "fg": "5-9", "ft": "2-4", "reb": 11, "pf": 4, "ast": 2, "pts": 12},
+            {"name": "Trgovich", "min": 35, "fg": "8-12", "ft": "6-6", "reb": 4, "pf": 3, "ast": 4, "pts": 22},
+            {"name": "McCarter", "min": 40, "fg": "3-9", "ft": "4-7", "reb": 5, "pf": 4, "ast": 6, "pts": 10},
+            {"name": "Johnson", "min": 31, "fg": "3-7", "ft": "0-0", "reb": 9, "pf": 5, "ast": 1, "pts": 6},
+            {"name": "Spillane", "min": 5, "fg": "0-1", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "pts": 0},
+            {"name": "Olinde", "min": 0.5, "fg": "0-1", "ft": "1-2", "reb": 0, "pf": 0, "ast": 0, "pts": 1}
+          ]
+        },
+        {
+          "name": "USC Trojans",
+          "score": 84,
+          "players": [
+            {"name": "Chapman", "min": 23, "fg": "6-14", "ft": "2-2", "reb": 6, "pf": 4, "ast": 1, "pts": 14},
+            {"name": "Trowbridge", "min": 32, "fg": "4-9", "ft": "5-9", "reb": 13, "pf": 4, "ast": 1, "pts": 13},
+            {"name": "Lambert", "min": 36, "fg": "4-8", "ft": "1-4", "reb": 10, "pf": 3, "ast": 4, "pts": 9},
+            {"name": "Williams", "min": 39, "fg": "12-29", "ft": "5-6", "reb": 2, "pf": 4, "ast": 8, "pts": 29},
+            {"name": "Burrell", "min": 20.5, "fg": "1-6", "ft": "2-2", "reb": 1, "pf": 5, "ast": 4, "pts": 4},
+            {"name": "White", "min": 11, "fg": "0-2", "ft": "0-0", "reb": 2, "pf": 2, "ast": 1, "pts": 0},
+            {"name": "Malovic", "min": 17, "fg": "4-7", "ft": "1-4", "reb": 6, "pf": 2, "ast": 0, "pts": 9},
+            {"name": "Safford", "min": 20.5, "fg": "3-6", "ft": "0-0", "reb": 0, "pf": 1, "ast": 5, "pts": 6},
+            {"name": "Evans", "min": 1, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

@@ -1,0 +1,52 @@
+{
+  "page": 2,
+  "games": [
+    {
+      "date": "1944-12-18",
+      "opponent": "Utah",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 64,
+          "players": [
+            {"name": "Grate", "pts": 15},
+            {"name": "Caudill", "pts": 4},
+            {"name": "Dugger", "pts": 10},
+            {"name": "Snyder", "pts": 4},
+            {"name": "McFadden", "pts": 0},
+            {"name": "Davis", "pts": 4},
+            {"name": "Donham", "pts": 0},
+            {"name": "Risen", "pts": 12},
+            {"name": "Pfeiffer", "pts": 0},
+            {"name": "Motejzik", "pts": 0},
+            {"name": "Soppel", "pts": 2},
+            {"name": "Huston", "pts": 5},
+            {"name": "Sims", "pts": 8},
+            {"name": "Amling", "pts": 0},
+            {"name": "Jacobs", "pts": 0},
+            {"name": "Paulus", "pts": 0}
+          ]
+        },
+        {
+          "name": "Utah",
+          "score": 36,
+          "players": [
+            {"name": "Hamblin", "pts": 2},
+            {"name": "Howard", "pts": 5},
+            {"name": "Barnes", "pts": 0},
+            {"name": "Dorton", "pts": 0},
+            {"name": "Smith", "pts": 3},
+            {"name": "Satterfield", "pts": 9},
+            {"name": "Tolich", "pts": 0},
+            {"name": "Ferrin", "pts": 15},
+            {"name": "Keil", "pts": 2},
+            {"name": "Winslow", "pts": 0},
+            {"name": "Jones", "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

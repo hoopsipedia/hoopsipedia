@@ -1,0 +1,44 @@
+{
+  "page": 5,
+  "games": [
+    {
+      "date": "1980-12-12",
+      "opponent": "Duke Blue Devils",
+      "location": "Durham, NC",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 91,
+          "players": [
+            {"name": "Lee Baker", "fg": "8-13", "ft": "5-6", "reb": 3, "pf": 3, "pts": 21, "ast": 1, "to": 1, "blk": 0, "stl": 2, "min": 40},
+            {"name": "Craig Robinson", "fg": "4-8", "ft": "2-2", "reb": 3, "pf": 2, "pts": 10, "ast": 3, "to": 1, "blk": 0, "stl": 0, "min": 19},
+            {"name": "Ralph Sampson", "fg": "12-17", "ft": "6-9", "reb": 17, "pf": 4, "pts": 30, "ast": 3, "to": 4, "blk": 4, "stl": 2, "min": 30},
+            {"name": "Jeff Jones", "fg": "3-4", "ft": "2-2", "reb": 1, "pf": 1, "pts": 8, "ast": 3, "to": 2, "blk": 1, "stl": 2, "min": 39},
+            {"name": "Jeff Lamp", "fg": "4-8", "ft": "2-2", "reb": 1, "pf": 0, "pts": 10, "ast": 4, "to": 0, "blk": 0, "stl": 1, "min": 29},
+            {"name": "Terry Gates", "fg": "2-4", "ft": "0-1", "reb": 5, "pf": 4, "pts": 4, "ast": 0, "to": 3, "blk": 0, "stl": 0, "min": 25},
+            {"name": "Othell Wilson", "fg": "3-5", "ft": "0-0", "reb": 3, "pf": 1, "pts": 6, "ast": 1, "to": 5, "blk": 0, "stl": 1, "min": 15},
+            {"name": "Ricky Stokes", "fg": "1-1", "ft": "0-0", "reb": 0, "pf": 0, "pts": 2, "ast": 0, "to": 0, "blk": 0, "stl": 0, "min": 3}
+          ]
+        },
+        {
+          "name": "Duke Blue Devils",
+          "score": 79,
+          "players": [
+            {"name": "Gene Banks", "fg": "10-15", "ft": "7-8", "reb": 4, "pf": 3, "pts": 27, "ast": 2, "to": 2, "blk": 0, "stl": 0, "min": 39},
+            {"name": "Kenny Dennard", "fg": "6-12", "ft": "0-0", "reb": 3, "pf": 3, "pts": 12, "ast": 1, "to": 3, "blk": 0, "stl": 3, "min": 36},
+            {"name": "Mike Tissaw", "fg": "0-5", "ft": "2-2", "reb": 3, "pf": 4, "pts": 2, "ast": 1, "to": 0, "blk": 0, "stl": 0, "min": 31},
+            {"name": "Tom Emma", "fg": "6-13", "ft": "2-2", "reb": 2, "pf": 3, "pts": 14, "ast": 3, "to": 1, "blk": 0, "stl": 1, "min": 32},
+            {"name": "Vince Taylor", "fg": "3-7", "ft": "4-4", "reb": 1, "pf": 2, "pts": 10, "ast": 2, "to": 4, "blk": 0, "stl": 2, "min": 27},
+            {"name": "Allen Williams", "fg": "0-0", "ft": "0-0", "reb": 1, "pf": 0, "pts": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "min": 3},
+            {"name": "Chip Engelland", "fg": "5-6", "ft": "0-0", "reb": 1, "pf": 2, "pts": 10, "ast": 0, "to": 2, "blk": 0, "stl": 1},
+            {"name": "Jim Suddath", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 1, "pts": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "min": 2},
+            {"name": "Larry Linney", "fg": "2-4", "ft": "0-0", "reb": 2, "pf": 2, "pts": 4, "ast": 0, "to": 1, "blk": 0, "stl": 1, "min": 12}
+          ]
+        }
+      ],
+      "checksum_ok": true,
+      "notes": "Score by periods confirms final: Duke 43+36=79, Virginia 43+48=91. Chip Engelland's minutes value on the sheet was obscured by a scanner color-calibration artifact overlapping that row; omitted rather than guessed. One row directly below Engelland's line was entirely covered by the same artifact/color-bar and contained no legible player data, so it was not transcribed as a player."
+    }
+  ],
+  "skipped": []
+}

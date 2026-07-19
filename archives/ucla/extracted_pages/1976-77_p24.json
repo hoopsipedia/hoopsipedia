@@ -1,0 +1,45 @@
+{
+  "page": 24,
+  "games": [
+    {
+      "date": "1977-02-19",
+      "opponent": "Oregon",
+      "ucla_score": 55,
+      "opp_score": 64,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 55,
+          "players": [
+            {"name": "Marques Johnson", "min": 40, "fg": "10-17", "ft": "2-5", "reb": 9, "ast": 1, "pf": 3, "pts": 22},
+            {"name": "David Greenwood", "min": 40, "fg": "4-9", "ft": "2-2", "reb": 5, "ast": 2, "pf": 1, "pts": 10},
+            {"name": "Brett Vroman", "min": 13, "fg": "1-1", "ft": "0-0", "reb": 2, "ast": 0, "pf": 1, "pts": 2},
+            {"name": "Roy Hamilton", "min": 35, "fg": "4-8", "ft": "3-4", "reb": 2, "ast": 4, "pf": 3, "pts": 11},
+            {"name": "Jim Spillane", "min": 37, "fg": "1-8", "ft": "4-4", "reb": 2, "ast": 0, "pf": 2, "pts": 6},
+            {"name": "James Wilkes", "min": 7, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "pts": 0},
+            {"name": "Kiki Vandeweghe", "min": 20, "fg": "2-4", "ft": "0-0", "reb": 1, "ast": 0, "pf": 2, "pts": 4},
+            {"name": "Raymond Townsend", "min": 8, "fg": "0-1", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Oregon Ducks",
+          "score": 64,
+          "players": [
+            {"name": "Greg Ballard", "min": 40, "fg": "11-16", "ft": "6-7", "reb": 5, "ast": 2, "pf": 3, "pts": 28},
+            {"name": "Ernie Kent", "min": 27, "fg": "2-7", "ft": "0-0", "reb": 2, "ast": 1, "pf": 3, "pts": 4},
+            {"name": "Kelvin Small", "min": 38, "fg": "3-4", "ft": "2-2", "reb": 6, "ast": 2, "pf": 1, "pts": 8},
+            {"name": "Mike Drummond", "min": 29, "fg": "3-5", "ft": "2-2", "reb": 2, "ast": 6, "pf": 3, "pts": 8},
+            {"name": "Bob Closs", "min": 25, "fg": "1-2", "ft": "0-0", "reb": 0, "ast": 3, "pf": 1, "pts": 2},
+            {"name": "John Murray", "min": 19, "fg": "7-9", "ft": "0-0", "reb": 0, "ast": 3, "pf": 3, "pts": 14},
+            {"name": "Greg Graham", "min": 7, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 2, "pf": 0, "pts": 0},
+            {"name": "Danny Mack", "min": 11, "fg": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "pf": 0, "pts": 0},
+            {"name": "Joe Moreck", "min": 2, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "pts": 0},
+            {"name": "Gary Nelson", "min": 2, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

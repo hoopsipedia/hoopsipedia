@@ -1,0 +1,44 @@
+{
+  "page": 12,
+  "games": [
+    {
+      "date": "1977-01-07",
+      "opponent": "Oregon",
+      "ucla_score": 60,
+      "opp_score": 61,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 60,
+          "players": [
+            {"name": "Greenwood", "min": 31, "fg": "7-10", "ft": "1-2", "reb": 7, "ast": 0, "pf": 4, "pts": 15},
+            {"name": "Johnson", "min": 39, "fg": "7-11", "ft": "7-10", "reb": 7, "ast": 3, "pf": 3, "pts": 21},
+            {"name": "Vroman", "min": 35, "fg": "3-8", "ft": "0-1", "reb": 5, "ast": 3, "pf": 3, "pts": 6},
+            {"name": "Townsend", "min": 40, "fg": "4-9", "ft": "2-2", "reb": 0, "ast": 5, "pf": 2, "pts": 10},
+            {"name": "Spillane", "min": 35, "fg": "2-4", "ft": "2-2", "reb": 2, "ast": 2, "pf": 2, "pts": 6},
+            {"name": "Sims", "min": 6, "fg": "1-1", "ft": "0-0", "reb": 0, "ast": 0, "pf": 2, "pts": 2},
+            {"name": "Hamilton", "min": 5, "fg": "0-0", "ft": "0-1", "reb": 0, "ast": 0, "pf": 0, "pts": 0},
+            {"name": "Wilkes", "min": 9, "fg": "0-1", "ft": "0-0", "reb": 1, "ast": 2, "pf": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Oregon Ducks",
+          "score": 61,
+          "players": [
+            {"name": "Kent", "min": 21, "fg": "4-10", "ft": "0-0", "reb": 3, "ast": 1, "pf": 2, "pts": 8},
+            {"name": "Ballard", "min": 39, "fg": "8-21", "ft": "6-6", "reb": 9, "ast": 4, "pf": 4, "pts": 22},
+            {"name": "Small", "min": 19, "fg": "1-2", "ft": "1-2", "reb": 5, "ast": 0, "pf": 4, "pts": 3},
+            {"name": "Drummond", "min": 21, "fg": "0-1", "ft": "0-0", "reb": 2, "ast": 3, "pf": 2, "pts": 0},
+            {"name": "Closs", "min": 31, "fg": "3-6", "ft": "2-4", "reb": 4, "ast": 3, "pf": 1, "pts": 8},
+            {"name": "Graham", "min": 17, "fg": "0-1", "ft": "0-0", "reb": 1, "ast": 4, "pf": 3, "pts": 0},
+            {"name": "Murray", "min": 11, "fg": "2-4", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "pts": 4},
+            {"name": "Mack", "min": 20, "fg": "1-3", "ft": "0-0", "reb": 3, "ast": 0, "pf": 3, "pts": 2},
+            {"name": "Nelson", "min": 21, "fg": "6-9", "ft": "2-2", "reb": 3, "ast": 0, "pf": 0, "pts": 14}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

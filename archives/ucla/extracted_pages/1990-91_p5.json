@@ -1,0 +1,9 @@
+{
+  "page": 5,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "12/05/90 UCLA vs St. Mary's box score (Pauley Pavilion): UCLA final score is 123 (63+60, corroborated by both the TOTALS row and the FINAL score row), but summing UCLA's 13 individually printed player TP values (9,24,20,16,14,11,15,8,4,4,0,0,0) yields 125 -- a 2-point discrepancy. Cross-checked FG-made, 3PT-made, and FT-made against each player's own printed TP (all internally consistent per row), and re-read the page a second time; could not isolate which single cell is misread or misprinted (team FT-made sum from player rows is 34 vs. the team totals row's 32, matching the same 2-point gap). Rather than guess which player's line is wrong, skipping the whole game per instructions. (St. Mary's side alone would checksum correctly: player TP sum = 93 = team final score, assuming DANIEL's FG line, printed ambiguously as 0-0, is actually 4-8 to be consistent with his printed TP of 8 -- also not confidently transcribable.)"
+    }
+  ]
+}

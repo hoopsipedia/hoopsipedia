@@ -1,0 +1,45 @@
+{
+  "page": 3,
+  "games": [
+    {
+      "date": "1989-12-02",
+      "opponent": "Washington State",
+      "ucla_score": 68,
+      "opp_score": 64,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 68,
+          "players": [
+            {"name": "Trevor Wilson", "min": 37, "fg": "7-15", "ft": "9-14", "tp": "0-0", "reb": 16, "ast": 4, "to": 1, "blk": 0, "stl": 1, "pf": 2, "pts": 23},
+            {"name": "Gerald Madkins", "min": 32, "fg": "2-5", "ft": "0-3", "tp": "1-4", "reb": 5, "ast": 1, "to": 1, "blk": 0, "stl": 3, "pf": 3, "pts": 5},
+            {"name": "Darnick Martin", "min": 25, "fg": "0-5", "ft": "1-2", "tp": "0-1", "reb": 1, "ast": 2, "to": 4, "blk": 0, "stl": 0, "pf": 2, "pts": 1},
+            {"name": "Mitchell Butler", "min": 23, "fg": "3-3", "ft": "0-0", "tp": "0-0", "reb": 3, "ast": 5, "to": 0, "blk": 0, "stl": 1, "pf": 3, "pts": 6},
+            {"name": "Keith Owens", "min": 7, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 1, "ast": 0, "to": 2, "blk": 0, "stl": 0, "pf": 0, "pts": 0},
+            {"name": "Tracy Murray", "min": 16, "fg": "1-6", "ft": "0-0", "tp": "0-4", "reb": 2, "ast": 0, "to": 0, "blk": 1, "stl": 0, "pf": 4, "pts": 2},
+            {"name": "Don MacLean", "min": 31, "fg": "12-17", "ft": "5-7", "tp": "0-0", "reb": 6, "ast": 1, "to": 0, "blk": 0, "stl": 0, "pf": 3, "pts": 29},
+            {"name": "Zan Mason", "min": 4, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 1, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pf": 0, "pts": 0},
+            {"name": "Kevin Walker", "min": 25, "fg": "1-7", "ft": "0-0", "tp": "0-4", "reb": 2, "ast": 2, "to": 0, "blk": 0, "stl": 0, "pf": 3, "pts": 2}
+          ]
+        },
+        {
+          "name": "Washington State Cougars",
+          "score": 64,
+          "players": [
+            {"name": "Neil Evans", "min": 27, "fg": "5-9", "ft": "2-2", "tp": "0-0", "reb": 4, "ast": 0, "to": 2, "blk": 0, "stl": 0, "pf": 1, "pts": 12},
+            {"name": "Juan Thomas", "min": 30, "fg": "2-3", "ft": "2-4", "tp": "0-0", "reb": 4, "ast": 0, "to": 3, "blk": 0, "stl": 1, "pf": 1, "pts": 6},
+            {"name": "Bennie Seltzer", "min": 39, "fg": "6-13", "ft": "0-2", "tp": "3-6", "reb": 3, "ast": 0, "to": 5, "blk": 0, "stl": 0, "pf": 2, "pts": 15},
+            {"name": "David Martin", "min": 2, "fg": "0-0", "reb": 1, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pf": 0, "pts": 0},
+            {"name": "David Sanders", "min": 25, "fg": "2-5", "ft": "0-0", "tp": "0-2", "reb": 2, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pf": 4, "pts": 4},
+            {"name": "Darryl Woods", "min": 23, "fg": "2-8", "ft": "7-8", "tp": "0-3", "reb": 4, "ast": 1, "to": 1, "blk": 0, "stl": 0, "pf": 4, "pts": 11},
+            {"name": "Jason Thompson", "min": 39, "fg": "3-12", "ft": "4-6", "tp": "1-2", "reb": 10, "ast": 1, "to": 0, "blk": 2, "stl": 0, "pf": 1, "pts": 11},
+            {"name": "Winston Bell", "min": 1, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pf": 1, "pts": 0},
+            {"name": "Herb Delaney", "min": 14, "fg": "1-2", "ft": "3-4", "tp": "0-0", "reb": 1, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pf": 1, "pts": 5}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

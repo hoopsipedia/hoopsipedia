@@ -1,0 +1,42 @@
+{
+  "page": 13,
+  "games": [
+    {
+      "date": "1934-02-03",
+      "opponent": "Minnesota",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 39,
+          "players": [
+            {"name": "Waitlinger", "fg": 0, "ft": "0-1", "pf": 4, "pts": 0},
+            {"name": "Golburn", "fg": 4, "ft": "1-2", "pf": 1, "pts": 9},
+            {"name": "Conrad", "fg": 6, "ft": "3-5", "pf": 3, "pts": 15},
+            {"name": "Wilson", "fg": 3, "ft": "2-3", "pf": 3, "pts": 8},
+            {"name": "Beitner", "fg": 1, "ft": "5-8", "pf": 1, "pts": 7},
+            {"name": "Laybourne", "fg": 0, "ft": "0-0", "pf": 1, "pts": 0},
+            {"name": "Fisher", "fg": 0, "ft": "0-0", "pf": 1, "pts": 0}
+          ]
+        },
+        {
+          "name": "Minnesota",
+          "score": 41,
+          "players": [
+            {"name": "Wallblom", "fg": 0, "ft": "0-0", "pf": 0, "pts": 0},
+            {"name": "Roscoe", "fg": 2, "ft": "1-1", "pf": 3, "pts": 5},
+            {"name": "Norman", "fg": 8, "ft": "2-4", "pf": 1, "pts": 18},
+            {"name": "Farrell", "fg": 2, "ft": "2-3", "pf": 2, "pts": 6},
+            {"name": "Svensen", "fg": 4, "ft": "2-4", "pf": 4, "pts": 10},
+            {"name": "Sochaki", "fg": 0, "ft": "0-0", "pf": 2, "pts": 0},
+            {"name": "Braun (name uncertain, faded scan)", "fg": 0, "ft": "0-0", "pf": 1, "pts": 0},
+            {"name": "Unknown (name illegible on scan)", "fg": 0, "ft": "0-1", "pf": 1, "pts": 0},
+            {"name": "Baker", "fg": 0, "ft": "3-3", "pf": 0, "pts": 2}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": [],
+  "notes": "Sheet columns were G. (field goals made), F. (free throws made), M.F. (free throws missed), P. (personal fouls), PTS. (points) - PTS was read directly from the sheet, not computed. fg values are made-only since the sheet does not record FG attempts. ft values use made-attempted = F-(F+M.F). Two Minnesota player names were partly illegible on the scan (rows for 'Braun' and 'Unknown'); their stat lines are legible and included in the checksum, which passes (both teams' summed player PTS match the printed TOTALS and the game score box at top of page: Ohio 39, Minnesota 41). Minor internal inconsistency noted: Minnesota's Baker line shows F.=3 (3 made FT) but PTS.=2, which doesn't reconcile arithmetically (2*fg+ft would be 3) - kept as literally printed since it does not affect the team-total checksum. Half-time score (Ohio 19, Minn 15) and officials (referee Stanley Feezle, umpire Frank Lane) were on the page but omitted per the requested schema."
+}

@@ -1,0 +1,42 @@
+{
+  "page": 25,
+  "games": [
+    {
+      "date": "1966-03-07",
+      "opponent": "Purdue",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 86,
+          "players": [
+            {"name": "Hosket", "fg": "13-23", "ft": "6-8", "reb": 15, "pf": 4, "pts": 32},
+            {"name": "Peters", "fg": "9-20", "ft": "7-8", "reb": 5, "pf": 4, "pts": 25},
+            {"name": "Dove", "fg": "4-13", "ft": "3-4", "reb": 4, "pf": 2, "pts": 11},
+            {"name": "Sepic", "fg": "6-19", "ft": "4-4", "reb": 9, "pf": 5, "pts": 16},
+            {"name": "Rowley", "fg": "0-1", "ft": "2-2", "reb": 4, "pf": 2, "pts": 2},
+            {"name": "Walkey", "fg": "0-0", "ft": "0-3", "reb": 2, "pf": 3, "pts": 0},
+            {"name": "Gregory", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Purdue",
+          "score": 92,
+          "players": [
+            {"name": "Jameson", "fg": "0-1", "ft": "0-0", "reb": 13, "pf": 2, "pts": 0},
+            {"name": "Trudeau", "fg": "4-12", "ft": "4-4", "reb": 3, "pf": 3, "pts": 12},
+            {"name": "Grams", "fg": "3-4", "ft": "0-0", "reb": 3, "pf": 4, "pts": 6},
+            {"name": "Ebershoff", "fg": "7-18", "ft": "4-4", "reb": 3, "pf": 4, "pts": 18},
+            {"name": "Schellhase", "fg": "11-27", "ft": "9-9", "reb": 10, "pf": 4, "pts": 31},
+            {"name": "Brady", "fg": "7-8", "ft": "3-4", "reb": 5, "pf": 3, "pts": 17},
+            {"name": "Johnson", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 1, "pts": 0},
+            {"name": "Suerth", "fg": "3-7", "ft": "0-1", "reb": 3, "pf": 1, "pts": 6},
+            {"name": "O'Neill", "fg": "1-1", "ft": "0-0", "reb": 0, "pf": 1, "pts": 2},
+            {"name": "Saal", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

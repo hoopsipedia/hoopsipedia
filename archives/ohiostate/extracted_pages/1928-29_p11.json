@@ -1,0 +1,43 @@
+{
+  "page": 11,
+  "games": [
+    {
+      "date": "1929-02-09",
+      "opponent": "Michigan",
+      "place": "Ann Arbor",
+      "notes": "Sheet gives only field-goals-made (G), personal fouls (P), free-throws-made (F), and points total (TOT) per player — no attempt counts, so 'fg_made'/'ft_made' are used instead of the standard made-attempted 'fg'/'ft' keys (attempts were never on the sheet, not invented). Points column (TOT) was printed on the sheet, not computed. Ohio State player 'Trvin' in the box-score summary matches 'Ervin' in the Minutes Played list (same player, standardized to Ervin). Referee: Feezle, Buttler. Umpire: Miller, Indianapolis. Coach: H.G. Olsen. Captain: Herbert Wise (Ohio State).",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 24,
+          "players": [
+            {"name": "Evans", "min": "37:08", "fg_made": 1, "pf": 2, "ft_made": 0, "pts": 2},
+            {"name": "Tittel", "min": "2:52", "fg_made": 1, "pf": 1, "ft_made": 0, "pts": 2},
+            {"name": "Ervin", "min": "40:00", "fg_made": 4, "pf": 1, "ft_made": 1, "pts": 9},
+            {"name": "Van Heyde", "min": "40:00", "fg_made": 2, "pf": 1, "ft_made": 2, "pts": 6},
+            {"name": "Fesler", "min": "40:00", "fg_made": 2, "pf": 0, "ft_made": 1, "pts": 5},
+            {"name": "Larkins", "min": "17:03", "fg_made": 0, "pf": 4, "ft_made": 0, "pts": 0},
+            {"name": "Hinchman", "min": "22:57", "fg_made": 0, "pf": 0, "ft_made": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Michigan Wolverines",
+          "score": 34,
+          "players": [
+            {"name": "Truskowski", "fg_made": 4, "pf": 1, "ft_made": 4, "pts": 12},
+            {"name": "Orwig", "fg_made": 6, "pf": 0, "ft_made": 0, "pts": 12},
+            {"name": "Chapman", "fg_made": 3, "pf": 1, "ft_made": 1, "pts": 7},
+            {"name": "McCoy", "fg_made": 1, "pf": 2, "ft_made": 1, "pts": 3},
+            {"name": "Rose", "fg_made": 0, "pf": 0, "ft_made": 0, "pts": 0},
+            {"name": "Kanitz", "fg_made": 0, "pf": 1, "ft_made": 0, "pts": 0},
+            {"name": "Whittle", "fg_made": 0, "pf": 0, "ft_made": 0, "pts": 0},
+            {"name": "Cushing", "fg_made": 0, "pf": 1, "ft_made": 0, "pts": 0},
+            {"name": "Lavell", "fg_made": 0, "pf": 0, "ft_made": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

@@ -1,0 +1,9 @@
+{
+  "page": 12,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page 12 contains a single game (Ohio State 56, Mexico City Y.M.C.A. 33, Feb. 5, 1940, Fairgrounds Coliseum) with a small scanned-newsprint box score table (columns B./F./PF./T. for Ohio State; B./F./PF./T. for Mexico City). Per-player digit columns are too tightly kerned/blurry to reliably distinguish; a first-pass transcription of the Ohio State 'T.' (points) column summed to 50, which does not checksum against either the team final score (56) or the printed column total (56). Because per-player stats could not be transcribed with confidence and the checksum failed, the entire game was skipped rather than guessed, per instructions."
+    }
+  ]
+}

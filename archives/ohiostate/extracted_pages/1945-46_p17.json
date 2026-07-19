@@ -1,0 +1,43 @@
+{
+  "page": 17,
+  "games": [
+    {
+      "date": "1946-02-22",
+      "opponent": "Chicago",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 53,
+          "players": [
+            {"name": "Bowen, f", "fgm": 8, "ftm": 2, "pts": 18},
+            {"name": "Lovett, f", "fgm": 0, "ftm": 0, "pts": 0},
+            {"name": "Snyder, f", "fgm": 0, "ftm": 1, "pts": 1},
+            {"name": "Kuhn, f", "fgm": 0, "ftm": 1, "pts": 1},
+            {"name": "Wells, f", "fgm": 6, "ftm": 3, "pts": 15},
+            {"name": "Johnston, f", "fgm": 0, "ftm": 0, "pts": 0},
+            {"name": "Underman, c", "fgm": 2, "ftm": 4, "pts": 8},
+            {"name": "Elliott, c", "fgm": 3, "ftm": 2, "pts": 8},
+            {"name": "Russell, c", "fgm": 0, "ftm": 1, "pts": 1},
+            {"name": "Huston, g", "fgm": 0, "ftm": 0, "pts": 0},
+            {"name": "Amling, g", "fgm": 0, "ftm": 1, "pts": 1}
+          ]
+        },
+        {
+          "name": "Chicago",
+          "score": 31,
+          "players": [
+            {"name": "DeGraw, f", "fgm": 2, "ftm": 6, "pts": 10},
+            {"name": "Sisco, f", "fgm": 0, "ftm": 0, "pts": 0},
+            {"name": "Sharp, f", "fgm": 3, "ftm": 0, "pts": 6},
+            {"name": "Ruby, c", "fgm": 2, "ftm": 0, "pts": 4},
+            {"name": "Freeark, g", "fgm": 3, "ftm": 0, "pts": 6},
+            {"name": "Riley, g", "fgm": 1, "ftm": 3, "pts": 5},
+            {"name": "Goedecke, g", "fgm": 0, "ftm": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

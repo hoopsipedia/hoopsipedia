@@ -1,0 +1,44 @@
+{
+  "page": 19,
+  "games": [
+    {
+      "date": "1946-03-22",
+      "opponent": "Harvard Crimson",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 46,
+          "players": [
+            {"name": "Bowen", "fg": "3", "ft": "0", "pts": 6},
+            {"name": "Snyder", "fg": "1", "ft": "1", "pts": 3},
+            {"name": "Wells", "fg": "2", "ft": "0", "pts": 4},
+            {"name": "Kuhn", "fg": "0", "ft": "0", "pts": 0},
+            {"name": "Underman", "fg": "5", "ft": "4", "pts": 14},
+            {"name": "Elliott", "fg": "0", "ft": "1", "pts": 1},
+            {"name": "Huston", "fg": "3", "ft": "6", "pts": 12},
+            {"name": "Amling", "fg": "3", "ft": "0", "pts": 6}
+          ]
+        },
+        {
+          "name": "Harvard Crimson",
+          "score": 38,
+          "players": [
+            {"name": "Ganit", "fg": "1", "ft": "2", "pf": 1, "pts": 4},
+            {"name": "Swegan", "fg": "1", "ft": "0", "pf": 3, "pts": 2},
+            {"name": "Clark", "fg": "0", "ft": "0", "pf": 0, "pts": 0},
+            {"name": "Gray", "fg": "3", "ft": "7", "pf": 3, "pts": 13},
+            {"name": "Page", "fg": "0", "ft": "0", "pf": 0, "pts": 0},
+            {"name": "Decsi", "fg": "1", "ft": "3", "pf": 4, "pts": 5},
+            {"name": "Davis", "fg": "0", "ft": "0", "pf": 0, "pts": 0},
+            {"name": "Mariaschin", "fg": "5", "ft": "1", "pf": 2, "pts": 11},
+            {"name": "Petrillo", "fg": "0", "ft": "1", "pf": 1, "pts": 1},
+            {"name": "McDaniels", "fg": "0", "ft": "0", "pf": 0, "pts": 0},
+            {"name": "Champion", "fg": "0", "ft": "2", "pf": 4, "pts": 2}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

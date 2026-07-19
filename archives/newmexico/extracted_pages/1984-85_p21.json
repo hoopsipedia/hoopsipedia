@@ -1,0 +1,43 @@
+{
+  "page": 21,
+  "games": [
+    {
+      "date": "1985-02-02",
+      "opponent": "Colorado State",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 52,
+          "players": [
+            {"name": "Mike Winters", "min": 30, "fg": "3-10", "ft": "1-1", "reb": 2, "ast": 3, "pf": 2, "to": 2, "stl": 0, "pts": 7},
+            {"name": "George Scott", "min": 34, "fg": "3-7", "ft": "2-3", "reb": 9, "ast": 0, "pf": 1, "to": 2, "stl": 1, "pts": 8},
+            {"name": "Hunter Greene", "min": 27, "fg": "2-9", "ft": "2-2", "reb": 6, "ast": 2, "pf": 2, "to": 1, "blk": 1, "stl": 0, "pts": 6},
+            {"name": "Johnny Brown", "min": 29, "fg": "2-8", "ft": "2-2", "reb": 4, "ast": 1, "pf": 4, "to": 0, "stl": 0, "pts": 6},
+            {"name": "K. Scarborough", "min": 37, "fg": "1-7", "ft": "6-7", "reb": 2, "ast": 3, "pf": 4, "to": 4, "stl": 4, "pts": 8},
+            {"name": "Niles Dockery", "min": 13, "fg": "2-4", "ft": "2-2", "reb": 1, "ast": 1, "pf": 1, "stl": 1, "pts": 6},
+            {"name": "Paul Lawson", "min": 16, "fg": "1-4", "ft": "3-4", "pf": 5, "pts": 5},
+            {"name": "T.J. Drake", "min": 2, "fg": "0-0", "ft": "0-0", "pf": 0, "pts": 0},
+            {"name": "Shawn Brooks", "min": 12, "fg": "2-7", "ft": "2-2", "reb": 5, "pf": 3, "to": 1, "blk": 1, "pts": 6}
+          ]
+        },
+        {
+          "name": "Colorado State Rams",
+          "score": 61,
+          "players": [
+            {"name": "Andy Johannsen", "min": 32, "fg": "0-6", "ft": "3-4", "reb": 6, "ast": 5, "pf": 3, "to": 1, "blk": 1, "stl": 1, "pts": 3},
+            {"name": "Rich Strong", "min": 40, "fg": "8-9", "ft": "5-5", "reb": 7, "ast": 1, "pf": 4, "to": 1, "blk": 2, "pts": 21},
+            {"name": "Mike Gray", "min": 27, "fg": "4-8", "ft": "2-2", "reb": 3, "ast": 4, "pf": 4, "to": 4, "pts": 10},
+            {"name": "Todd Benn", "min": 40, "fg": "5-9", "ft": "4-4", "reb": 5, "ast": 5, "pf": 2, "to": 2, "pts": 14},
+            {"name": "David Turcotte", "min": 26, "fg": "4-5", "ft": "0-0", "reb": 3, "ast": 1, "pf": 2, "to": 2, "pts": 8},
+            {"name": "John Dudley", "min": 14, "fg": "1-2", "ft": "1-3", "reb": 3, "pf": 5, "to": 2, "stl": 2, "pts": 3},
+            {"name": "Ron McCrary", "min": 12, "fg": "1-2", "ft": "0-2", "reb": 3, "pf": 0, "to": 3, "stl": 1, "pts": 2},
+            {"name": "Mick DELavallade", "min": 7, "fg": "0-1", "ft": "0-0", "reb": 2, "pf": 0, "to": 2, "pts": 0},
+            {"name": "Barry Bailey", "min": 2, "fg": "0-2", "ft": "0-0", "reb": 2, "pf": 0, "to": 0, "blk": 1, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

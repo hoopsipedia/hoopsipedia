@@ -1,0 +1,9 @@
+{
+  "page": 5,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Dec 29, 1934 Ohio State @ Maryland (College Park, coach Olsen). Ohio State has full individual player lines (Laybourne, Wilson, Peters, Busich, Thomas, Beitner, Smith, Dye, Wendt) with columns G(field goals made) FG(free throws made, mislabeled) PF MF(missed free throws) TP; player TP sum = 41, matching the team totals row (18 5 17 9 -> 41) and consistent with formula TP=2*FGmade+FTmade. However Maryland is shown only as a single aggregate team-totals row (19 14 12 6 50), not individual players, so the required both-teams player-line breakdown cannot be produced for Maryland. Additionally the header score line reads OHIO '1' vs OPP '50', which is ambiguous/likely an OCR-clipped '41' (matches the OSU column-sum total) rather than a legible 1-point score. Skipping rather than guessing Maryland's per-player stats or the header digit."
+    }
+  ]
+}

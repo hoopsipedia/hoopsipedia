@@ -1,0 +1,51 @@
+{
+  "page": 3,
+  "games": [
+    {
+      "date": "1988-12-03",
+      "opponent": "Brigham Young",
+      "ucla_score": 97,
+      "opp_score": 87,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 97,
+          "players": [
+            {"name": "Trevor Wilson", "min": "34", "fg": "10-21", "ft": "5-9", "tp": "0-0", "reb": 14, "ast": 2, "pf": 2, "to": 2, "stl": 1, "blk": 0, "pts": 25},
+            {"name": "Kevin Williams", "min": "21", "fg": "3-5", "ft": "1-3", "tp": "0-0", "reb": 2, "ast": 1, "pf": 2, "to": 1, "stl": 0, "blk": 0, "pts": 7},
+            {"name": "Darrick Martin", "min": "20", "fg": "2-6", "ft": "0-0", "tp": "0-0", "reb": 3, "ast": 1, "pf": 2, "to": 1, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Jeff Bronner", "min": "0", "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Darrin Dafney", "min": "1", "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Pooh Richardson", "min": "38", "fg": "5-8", "ft": "5-5", "tp": "1-1", "reb": 6, "ast": 12, "pf": 2, "to": 1, "stl": 2, "blk": 0, "pts": 16},
+            {"name": "Keith Owens", "min": "1", "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Sean Lamb", "min": "0", "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Don MacLean", "min": "31", "fg": "8-10", "ft": "10-10", "tp": "0-0", "reb": 8, "ast": 0, "pf": 4, "to": 3, "stl": 0, "blk": 0, "pts": 26},
+            {"name": "Stephen Brumbach", "min": "0", "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Charles Rochelin", "min": "21", "fg": "3-7", "ft": "0-0", "tp": "0-1", "reb": 1, "ast": 0, "pf": 3, "to": 0, "stl": 0, "blk": 0, "pts": 6},
+            {"name": "Kevin Walker", "min": "33", "fg": "5-11", "ft": "0-0", "tp": "3-7", "reb": 7, "ast": 0, "pf": 3, "to": 1, "stl": 0, "blk": 1, "pts": 13}
+          ]
+        },
+        {
+          "name": "Brigham Young",
+          "score": 87,
+          "players": [
+            {"name": "Michael Smith", "min": "38.5", "fg": "14-26", "ft": "2-2", "tp": "3-7", "reb": 9, "ast": 1, "pf": 2, "to": 2, "stl": 0, "blk": 0, "pts": 33},
+            {"name": "Marty Haws", "min": "38.6", "fg": "3-10", "ft": "2-2", "tp": "0-1", "reb": 3, "ast": 6, "pf": 3, "to": 1, "stl": 0, "blk": 0, "pts": 8},
+            {"name": "Andy Toolson", "min": "36.3", "fg": "6-9", "ft": "3-4", "tp": "3-5", "reb": 8, "ast": 1, "pf": 4, "to": 1, "stl": 0, "blk": 0, "pts": 18},
+            {"name": "Mark Heslop", "min": "9.8", "fg": "1-2", "ft": "2-2", "tp": "1-1", "reb": 0, "ast": 1, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 5},
+            {"name": "Paul Briggs", "min": "0.4", "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Mike Herring", "min": "1.2", "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Kevin Santiago", "min": "28.7", "fg": "1-2", "ft": "0-0", "tp": "1-2", "reb": 0, "ast": 4, "pf": 5, "to": 1, "stl": 0, "blk": 0, "pts": 3},
+            {"name": "Steve Schreiner", "min": "16.7", "fg": "4-8", "ft": "2-2", "tp": "1-1", "reb": 4, "ast": 1, "pf": 3, "to": 1, "stl": 1, "blk": 0, "pts": 11},
+            {"name": "John Fish", "min": "21.1", "fg": "2-7", "ft": "2-2", "tp": "0-1", "reb": 4, "ast": 0, "pf": 6, "to": 1, "stl": 0, "blk": 0, "pts": 6},
+            {"name": "Alan Astle", "min": "1.2", "fg": "1-1", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "David Wolfe", "min": "6.3", "fg": "0-1", "ft": "1-2", "tp": "0-0", "reb": 0, "ast": 0, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 1},
+            {"name": "Steve Andrus", "min": "1.2", "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

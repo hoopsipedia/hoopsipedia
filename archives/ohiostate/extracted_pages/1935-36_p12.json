@@ -1,0 +1,9 @@
+{
+  "page": 12,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Newspaper clipping (game: Ohio State 21, Minnesota 42, 1936-02-01, at the Coliseum, coach Olsen) is legible for header/final score/date/opponent, but the two-team player statistics table ('G. F. M.F. P.F. Pts.' columns) is printed too small/blurry to reliably parse per-player values. A test reconstruction using the Minnesota totals row (16-10-4-16-42) matched Pts = 2*FG + FT (2*16+10=42), but the same formula did not reconcile for Ohio State's totals row or for individual players (e.g., narrative text states Thomas was high scorer with 11 points, but the corresponding tabulated row did not compute to 11 under any consistent column assignment). Given the ambiguity, transcribing player lines would require guessing, so the entire game is skipped per instructions rather than risk invented values."
+    }
+  ]
+}

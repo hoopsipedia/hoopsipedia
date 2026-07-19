@@ -1,0 +1,9 @@
+{
+  "page": 10,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Newspaper clipping for Ohio State 74, Pittsburgh 56 (Jan 17, 1948, Coliseum) is present with a full box score table for both teams, but the agate-type player stat lines are too small/low-resolution to transcribe individual FG/FT/PF numbers with confidence. Attempted transcription failed checksum: Ohio State player point sums totaled ~72 vs. the printed team total of 74, and Pittsburgh's table had internal inconsistencies (e.g., a free-throws-made figure exceeding the free-throws-attempted figure for the leading scorer). Per instructions, skipping rather than guessing at the illegible digits. Team final scores (Ohio State 74, Pittsburgh 56) and game metadata (date 1948-01-17, opponent Pittsburgh, site Coliseum, coach Tippy Dye) are legible from the article header/footer if a future pass wants to record just the final score without player lines."
+    }
+  ]
+}

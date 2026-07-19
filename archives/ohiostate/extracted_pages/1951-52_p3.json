@@ -1,0 +1,46 @@
+{
+  "page": 3,
+  "games": [
+    {
+      "date": "1951-12-11",
+      "opponent": "Denver",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 58,
+          "players": [
+            {"name": "Armstrong", "pos": "F", "min": "28:32", "fg": "2-6", "ft": "2-4", "pf": 3, "pts": 6},
+            {"name": "Bowling", "pos": "F", "min": "20:07", "fg": "1-11", "ft": "1-5", "pf": 3, "pts": 3},
+            {"name": "Wilks", "pos": "F", "min": "26:44", "fg": "5-12", "ft": "2-3", "pf": 4, "pts": 12},
+            {"name": "Hague", "pos": "F", "min": "4:37", "fg": "0-1", "ft": "0-0", "pf": 0, "pts": 0},
+            {"name": "Ebert", "pos": "C", "fg": "5-17", "ft": "8-14", "pf": 5, "pts": 18},
+            {"name": "Uhl", "pos": "C", "fg": "0-0", "ft": "2-3", "pf": 0, "pts": 2},
+            {"name": "Keraffa", "pos": "G", "fg": "3-7", "ft": "0-1", "pf": 2, "pts": 6},
+            {"name": "Kranco", "pos": "G", "fg": "2-6", "ft": "3-4", "pf": 3, "pts": 7},
+            {"name": "Jones", "pos": "G", "fg": "0-2", "ft": "0-0", "pf": 1, "pts": 0},
+            {"name": "Cook", "pos": "G", "fg": "2-7", "ft": "0-0", "pf": 2, "pts": 4}
+          ]
+        },
+        {
+          "name": "Denver",
+          "score": 67,
+          "players": [
+            {"name": "Griffin", "pos": "F", "fg": "5-12", "ft": "1-1", "pf": 3, "pts": 11},
+            {"name": "Knickrehm", "pos": "F", "fg": "0-1", "ft": "1-1", "pf": 2, "pts": 1},
+            {"name": "Patton", "pos": "F", "fg": "4-6", "ft": "0-0", "pf": 4, "pts": 8},
+            {"name": "Toft", "pos": "C", "fg": "8-16", "ft": "6-9", "pf": 3, "pts": 22},
+            {"name": "Kalas", "pos": "C", "fg": "0-0", "ft": "0-0", "pf": 3, "pts": 0},
+            {"name": "Blair", "pos": "C", "fg": "0-1", "ft": "0-1", "pf": 2, "pts": 0},
+            {"name": "Hughes", "pos": "G", "fg": "2-12", "ft": "1-2", "pf": 3, "pts": 5},
+            {"name": "Ehone", "pos": "G", "fg": "0-0", "ft": "0-0", "pf": 1, "pts": 0},
+            {"name": "Howell", "pos": "G", "fg": "5-12", "ft": "4-7", "pf": 5, "pts": 14},
+            {"name": "Gray", "pos": "G", "fg": "2-9", "ft": "2-2", "pf": 1, "pts": 6}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": [],
+  "notes": "Official Western Conference Basketball Box Score form. Column header 'FT' = free throws made, 'FTM' = free throws missed (per legend at bottom of form: 'FTM-Free Throws Missed'); ft field above is expressed as made-attempted (attempts = FT+FTM). Per-player PTS column was present directly on the sheet (not computed) and verified: 2*FG+FT matches printed PTS for every player on both teams, and player PTS sums (58 for Ohio State, 67 for Denver) match the printed team final scores. Halftime: Denver 35, Ohio State 35. Attendance 3,500."
+}

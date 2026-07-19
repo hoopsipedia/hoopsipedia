@@ -1,0 +1,42 @@
+{
+  "page": 27,
+  "games": [
+    {
+      "date": "1985-02-20",
+      "opponent": "N.C. State Wolfpack",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 55,
+          "players": [
+            {"name": "Tom Sheehey", "min": "38", "fg": "2-5", "ft": "0-0", "reb": 2, "ast": 2, "pf": 2, "to": 2, "blk": 0, "pts": 4},
+            {"name": "Dan Merrifield", "min": "14", "fg": "2-4", "ft": "0-0", "reb": 1, "pf": 1, "pts": 4},
+            {"name": "Olden Polynice", "min": "36", "fg": "3-9", "ft": "0-0", "reb": 9, "ast": 1, "pf": 4, "to": 4, "blk": 2, "pts": 6},
+            {"name": "Tom Calloway", "min": "31", "fg": "2-10", "ft": "4-4", "reb": 9, "ast": 1, "pf": 2, "to": 1, "pts": 8},
+            {"name": "Tim Mullen", "min": "29", "fg": "3-5", "ft": "1-1", "reb": 2, "ast": 2, "pf": 2, "to": 2, "stl": 2, "pts": 7},
+            {"name": "Jim Miller", "min": "25", "fg": "5-8", "ft": "4-5", "reb": 0, "pf": 1, "to": 1, "blk": 1, "pts": 14},
+            {"name": "Mel Kennedy", "min": "18", "fg": "3-5", "ft": "0-1", "reb": 3, "ast": 1, "pf": 2, "to": 3, "blk": 1, "pts": 6},
+            {"name": "Darrick Simms", "min": "17", "fg": "2-5", "ft": "2-2", "reb": 2, "ast": 1, "pf": 1, "to": 1, "pts": 6}
+          ]
+        },
+        {
+          "name": "N.C. State Wolfpack",
+          "score": 57,
+          "players": [
+            {"name": "Lorenzo Charles", "min": "34", "fg": "2-7", "ft": "4-5", "reb": 5, "pf": 3, "to": 1, "blk": 1, "pts": 8},
+            {"name": "Nate McMillan", "min": "29", "fg": "1-5", "reb": 6, "ast": 1, "pf": 4, "to": 2, "stl": 1, "pts": 2},
+            {"name": "Cozell McQueen", "min": "38", "fg": "0-1", "ft": "3-4", "reb": 6, "pf": 2, "to": 1, "pts": 3},
+            {"name": "Ernie Myers", "min": "23", "fg": "4-10", "ft": "3-4", "reb": 3, "ast": 2, "to": 1, "blk": 1, "stl": 2, "pts": 11},
+            {"name": "Anthony Webb", "min": "35", "fg": "5-8", "reb": 2, "ast": 1, "pf": 4, "to": 2, "stl": 3, "pts": 10},
+            {"name": "Terry Gannon", "min": "19", "fg": "6-10", "ft": "1-1", "to": 1, "pts": 13},
+            {"name": "Russell Pierre", "min": "14", "fg": "2-6", "ft": "2-2", "reb": 3, "to": 1, "pts": 6},
+            {"name": "Mike Warren", "min": "5", "fg": "0-1", "reb": 1, "pts": 0},
+            {"name": "Bennie Bolton", "min": "5", "fg": "2-3", "reb": 2, "pts": 4}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

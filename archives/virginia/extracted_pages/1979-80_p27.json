@@ -1,0 +1,45 @@
+{
+  "page": 27,
+  "games": [
+    {
+      "date": "1980-02-20",
+      "opponent": "William & Mary",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 63,
+          "players": [
+            {"name": "Mike Owens", "min": 20, "fg": "1-5", "ft": "1-1", "reb": 2, "ast": 1, "pf": 1, "to": 0, "stl": 1, "pts": 3},
+            {"name": "Lee Raker", "min": 26, "fg": "3-7", "ft": "1-2", "reb": 4, "ast": 1, "pf": 5, "to": 0, "stl": 2, "blk": 0, "pts": 7},
+            {"name": "Ralph Sampson", "min": 38, "fg": "5-12", "ft": "3-5", "reb": 12, "ast": 2, "pf": 2, "to": 7, "stl": 2, "blk": 7, "pts": 13},
+            {"name": "Garland Jefferson", "min": 19, "reb": 3, "ast": 2, "pf": 2, "to": 2, "pts": 4},
+            {"name": "Jeff Lamp", "min": 35, "fg": "8-11", "ft": "3-3", "reb": 2, "ast": 0, "pf": 2, "to": 1, "stl": 1, "pts": 19},
+            {"name": "Jeff Jones", "min": 27, "fg": "3-4", "ft": "5-5", "reb": 1, "ast": 3, "pf": 2, "to": 1, "pts": 11},
+            {"name": "Doug Newburg", "min": 15, "fg": "1-3", "ft": "2-4", "reb": 2, "ast": 1, "pf": 1, "to": 2, "pts": 4},
+            {"name": "Lewis Lattimore", "min": 2, "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Craig Robinson", "min": 3, "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Terry Bates", "min": 15, "ft": "2-2", "reb": 2, "ast": 0, "pf": 1, "to": 1, "pts": 2}
+          ]
+        },
+        {
+          "name": "William & Mary",
+          "score": 55,
+          "players": [
+            {"name": "Guy Courage", "min": 27, "fg": "5-9", "ft": "0-0", "reb": 4, "ast": 3, "pf": 3, "to": 3, "stl": 1, "pts": 10},
+            {"name": "Scott Whitley", "min": 38, "fg": "7-16", "ft": "2-4", "reb": 6, "ast": 1, "pf": 4, "to": 1, "pts": 16},
+            {"name": "Brant Weiner", "min": 33, "fg": "4-13", "ft": "2-2", "reb": 8, "ast": 0, "pf": 3, "to": 3, "stl": 1, "pts": 10},
+            {"name": "Rich Veres", "min": 27, "fg": "2-4", "ft": "1-3", "reb": 1, "ast": 3, "pf": 5, "to": 4, "stl": 3, "pts": 5},
+            {"name": "Billy Barnes", "min": 35, "fg": "3-13", "ft": "4-6", "reb": 6, "ast": 3, "pf": 4, "to": 3, "stl": 2, "pts": 10},
+            {"name": "Dale Moats", "min": 11, "fg": "2-4", "ft": "0-0", "reb": 2, "ast": 0, "pf": 2, "to": 0, "stl": 0, "pts": 4},
+            {"name": "Bobby Boyd", "min": 12, "reb": 1, "pf": 0, "pts": 0},
+            {"name": "Tim Wagner", "min": 13, "reb": 0, "ast": 1, "pf": 1, "pts": 0},
+            {"name": "Kenny Bowen", "min": 7, "fg": "0-2", "reb": 3, "pf": 1, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true,
+      "notes": "Virginia FG/FT for Jeff Lamp and Jeff Jones read through faint bleed-through ghosting from scan; values chosen are those consistent with pts = 2*fg+ft matching the legible TP column. Garland Jefferson's FG/FT cells were too obscured by ghosting to transcribe confidently and were omitted (min/reb/ast/pf/to/pts read clearly and independently)."
+    }
+  ],
+  "skipped": []
+}

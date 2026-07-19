@@ -1,0 +1,45 @@
+{
+  "page": 3,
+  "games": [
+    {
+      "date": "1928-12-17",
+      "opponent": "Pittsburgh",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 26,
+          "players": [
+            {"name": "Holman, Allen", "min": "6:10", "pf": 1, "pts": 0},
+            {"name": "Wilson, Ted", "min": "18:40", "pf": 0, "pts": 2},
+            {"name": "Fesler, W.E.", "min": "38:51", "pf": 0, "pts": 5},
+            {"name": "Evans, J.G.", "min": "15:10", "pf": 0, "pts": 5},
+            {"name": "Van Heyde, Geo.", "min": "33:50", "pf": 3, "pts": 8},
+            {"name": "Dyer, George", "min": "6:10", "pf": 1, "pts": 1},
+            {"name": "Hinchman, Wm.", "min": "24:30", "pf": 1, "pts": 1},
+            {"name": "Larkins, Richard", "min": "15:30", "pf": 1, "pts": 2},
+            {"name": "Cox, Joe", "min": "40:00", "pf": 2, "pts": 2},
+            {"name": "Stull, Tom", "min": "1:09", "pf": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Pittsburgh",
+          "score": 34,
+          "players": [
+            {"name": "M. Cohen", "pf": 0, "pts": 10},
+            {"name": "Zehfuss", "pf": 0, "pts": 2},
+            {"name": "Sandberg", "pf": 0, "pts": 3},
+            {"name": "Hyatt", "pf": 1, "pts": 11},
+            {"name": "Arthurs", "pf": 2, "pts": 3},
+            {"name": "Cohen, L.", "pf": 1, "pts": 4},
+            {"name": "Moritz", "pf": 2, "pts": 1},
+            {"name": "Ferrare", "pf": 0, "pts": 0},
+            {"name": "Baker", "pf": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": [],
+  "notes": "Sheet lists 'Goals made' (field goals made) and 'Fouls made' (free throws made) with no attempt counts, so fg/ft keys were omitted (never invented). Team totals for goals made, fouls made, personal fouls, and points all cross-checked against the printed row totals and both final scores (OSU 26, Pittsburgh 34); this required correcting an initial misread of Pittsburgh's Sandberg/Ferrare personal-foul and free-throw-made cells, resolved via the arithmetic checksum without a second page read. Place: Columbus. Coach: H.G. Olsen."
+}

@@ -1,0 +1,9 @@
+{
+  "page": 6,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Official NCAA box score, Virginia (78) at Arkansas (66), Dec. 20, 1986, Pine Bluff AR. Virginia's side checksums perfectly (player points sum to 78, matching the final score) and is fully legible, but Arkansas's handwritten FG/FT/TP entries do not reconcile: summing the Arkansas player point columns as best read (7+6+6+16+14+12+10+0+0+2+0+0+0) gives 73, and re-checking with alternate readings of the TP column (e.g. Scott's total-points cell, which looks like a cramped '6' but must arithmetically be '16' given FG 7-9 incl. 2 three-pointers) still fails to reconcile against the team final of 66; team FG-made sum (29) also doesn't match the printed team total (25). The Arkansas handwriting is too cramped/ambiguous in the FT/FTA and TP columns to transcribe with confidence even after a second read. Skipping the whole game per the ruthless-skip rule rather than guessing at Arkansas's digits."
+    }
+  ]
+}

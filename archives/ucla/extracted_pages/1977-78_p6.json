@@ -1,0 +1,49 @@
+{
+  "page": 6,
+  "games": [
+    {
+      "date": "1977-12-16",
+      "opponent": "Southern Illinois",
+      "ucla_score": 90,
+      "opp_score": 75,
+      "teams": [
+        {
+          "name": "Southern Illinois",
+          "score": 75,
+          "players": [
+            {"name": "Wilson", "min": 38, "fg": "10-16", "ft": "2-2", "reb": 12, "pf": 2, "ast": 5, "pts": 22},
+            {"name": "Smith", "min": 33, "fg": "4-11", "ft": "2-2", "reb": 6, "pf": 0, "ast": 3, "pts": 10},
+            {"name": "Grant", "min": 26, "fg": "5-11", "ft": "0-0", "reb": 5, "pf": 4, "ast": 1, "pts": 10},
+            {"name": "Huggins", "min": 28, "fg": "6-15", "ft": "1-2", "reb": 3, "pf": 2, "ast": 1, "pts": 13},
+            {"name": "Abrams", "min": 31, "fg": "3-9", "ft": "3-4", "reb": 1, "pf": 4, "ast": 3, "pts": 9},
+            {"name": "Giles", "min": 26, "fg": "2-5", "ft": "0-0", "reb": 2, "pf": 2, "ast": 2, "pts": 4},
+            {"name": "Kieszkowski", "min": 5, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 2, "ast": 1, "pts": 0},
+            {"name": "Frazier", "min": 4, "fg": "0-0", "ft": "0-0", "reb": 1, "pf": 0, "ast": 0, "pts": 0},
+            {"name": "Cliatt", "min": 3, "fg": "0-1", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "pts": 0},
+            {"name": "Orr", "min": 2, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 1, "ast": 1, "pts": 0},
+            {"name": "Moore", "min": 2, "fg": "3-3", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "pts": 6},
+            {"name": "Russ", "min": 2, "fg": "0-0", "ft": "1-2", "reb": 0, "pf": 0, "ast": 0, "pts": 1}
+          ]
+        },
+        {
+          "name": "UCLA Bruins",
+          "score": 90,
+          "players": [
+            {"name": "Greenwood", "min": 38, "fg": "8-15", "ft": "3-4", "reb": 12, "pf": 3, "ast": 1, "pts": 19},
+            {"name": "Vandeweghe", "min": 27, "fg": "6-13", "ft": "0-1", "reb": 6, "pf": 4, "ast": 3, "pts": 12},
+            {"name": "Sims", "min": 28, "fg": "4-8", "ft": "1-2", "reb": 8, "pf": 3, "ast": 1, "pts": 9},
+            {"name": "Townsend", "min": 29, "fg": "4-11", "ft": "0-0", "reb": 1, "pf": 1, "ast": 6, "pts": 8},
+            {"name": "Hamilton", "min": 30, "fg": "7-9", "ft": "5-6", "reb": 4, "pf": 0, "ast": 8, "pts": 19},
+            {"name": "Holland", "min": 19, "fg": "4-8", "ft": "0-0", "reb": 0, "pf": 2, "ast": 2, "pts": 8},
+            {"name": "Allums", "min": 12, "fg": "0-0", "ft": "6-6", "reb": 2, "pf": 0, "ast": 0, "pts": 6},
+            {"name": "Wilkes", "min": 13, "fg": "2-4", "ft": "1-2", "reb": 6, "pf": 2, "ast": 0, "pts": 5},
+            {"name": "Thomas", "min": 2, "fg": "2-2", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "pts": 4},
+            {"name": "Anderson", "min": 2, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 1, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

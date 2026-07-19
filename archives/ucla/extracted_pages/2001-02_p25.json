@@ -1,0 +1,45 @@
+{
+  "page": 25,
+  "games": [
+    {
+      "date": "2002-02-16",
+      "opponent": "Arizona State University",
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 68,
+          "players": [
+            {"name": "Matt Barnes", "min": 26, "fg": "3-7", "tp": "1-3", "ft": "3-5", "reb": 6, "ast": 3, "pf": 5, "to": 3, "stl": 2, "blk": 0, "pts": 10},
+            {"name": "Jason Kapono", "min": 37, "fg": "3-7", "tp": "3-6", "ft": "4-4", "reb": 4, "ast": 1, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 13},
+            {"name": "Dan Gadzuric", "min": 32, "fg": "8-15", "tp": "0-0", "ft": "1-2", "reb": 5, "ast": 0, "pf": 2, "to": 2, "stl": 0, "blk": 1, "pts": 17},
+            {"name": "Billy Knight", "min": 33, "fg": "2-8", "tp": "1-5", "ft": "2-2", "reb": 7, "ast": 3, "pf": 4, "to": 4, "stl": 0, "blk": 1, "pts": 7},
+            {"name": "Cedric Bozeman", "min": 25, "fg": "5-6", "tp": "1-1", "ft": "2-3", "reb": 4, "ast": 4, "pf": 2, "to": 2, "stl": 0, "blk": 0, "pts": 13},
+            {"name": "Dijon Thompson", "min": 8, "fg": "1-3", "tp": "1-2", "ft": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 1, "stl": 1, "blk": 0, "pts": 3},
+            {"name": "Andre Patterson", "min": 5, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Ryan Walcott", "min": 14, "fg": "1-2", "tp": "1-1", "ft": "0-0", "reb": 0, "ast": 1, "pf": 2, "to": 2, "stl": 0, "blk": 0, "pts": 3},
+            {"name": "Rico Hines", "min": 3, "fg": "0-1", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 1, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "T.J. Cummings", "min": 17, "fg": "1-4", "tp": "0-0", "ft": "0-0", "reb": 5, "ast": 0, "pf": 2, "to": 3, "stl": 0, "blk": 0, "pts": 2}
+          ]
+        },
+        {
+          "name": "Arizona State University",
+          "score": 69,
+          "players": [
+            {"name": "Donnell Knight", "min": 16, "fg": "1-1", "tp": "0-0", "ft": "0-0", "reb": 2, "ast": 0, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Tommy Smith", "min": 20, "fg": "3-9", "tp": "0-1", "ft": "2-2", "reb": 3, "ast": 0, "pf": 3, "to": 0, "stl": 1, "blk": 0, "pts": 8},
+            {"name": "Chad Prewitt", "min": 37, "fg": "7-12", "tp": "5-5", "ft": "3-5", "reb": 8, "ast": 0, "pf": 4, "to": 1, "stl": 0, "blk": 1, "pts": 22},
+            {"name": "Jason Braxton", "min": 25, "fg": "4-11", "tp": "0-4", "ft": "0-1", "reb": 2, "ast": 1, "pf": 3, "to": 2, "stl": 1, "blk": 1, "pts": 8},
+            {"name": "Curtis Millage", "min": 32, "fg": "4-10", "tp": "1-3", "ft": "2-2", "reb": 3, "ast": 0, "pf": 2, "to": 0, "stl": 2, "blk": 0, "pts": 11},
+            {"name": "Kyle Dodd", "min": 15, "fg": "1-2", "tp": "0-1", "ft": "0-1", "reb": 2, "ast": 4, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Brad Nahra", "min": 32, "fg": "1-6", "tp": "1-4", "ft": "0-1", "reb": 2, "ast": 4, "pf": 0, "to": 2, "stl": 1, "blk": 0, "pts": 3},
+            {"name": "Justin Allen", "min": 4, "fg": "1-1", "tp": "1-1", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 3},
+            {"name": "Chris Osborne", "min": 4, "fg": "1-1", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Shawn Redhage", "min": 15, "fg": "3-6", "tp": "0-0", "ft": "2-2", "reb": 6, "ast": 0, "pf": 3, "to": 1, "stl": 0, "blk": 0, "pts": 8}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

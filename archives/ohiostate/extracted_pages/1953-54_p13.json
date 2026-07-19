@@ -1,0 +1,9 @@
+{
+  "page": 13,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Official Western Conference Basketball Box Score, Illinois (82) at Ohio State (78), January 16, 1954. Attempted transcription of both teams' player lines (FG made/attempted, FT made/missed, PF, PTS, Reb columns are all present and legible as printed), but the individual PTS figures do not reconcile with the 2*FG_made + FT_made formula for multiple players, and the resulting player-PTS sums do not exactly match the printed team totals/final score for either team: Illinois player PTS sum = 80 vs printed team total/final score 82 (Dutcher's printed PTS of 16 vs formula-implied 18 is the likely culprit); Ohio State player PTS sum = 77 vs printed team total/final score 78 (Freeman's printed PTS of 26 vs formula-implied 28, and Cook's printed PTS of 16 vs formula-implied 15, are inconsistent). Because digits on this typed carbon-copy scan are ambiguous in places and the checksum fails for both teams, skipping rather than guessing at corrected values."
+    }
+  ]
+}

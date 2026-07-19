@@ -1,0 +1,9 @@
+{
+  "page": 17,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Handwritten official NCAA/ACC box score for Jan 22, 1983, Virginia (home, final 105) vs Clemson (visitor, final 87) at Charlottesville, VA. Team-level totals rows and SCORE BY PERIODS table are legible and clear (Clemson 38+49=87, Virginia 52+53=105), but individual player stat cells (3PT FG-FGA, FG, FGA, FT, FTA columns are cramped/overlapping in tiny handwriting) could not be read with confidence. Best-effort transcription of the Clemson TP column summed to 84, failing checksum against the team final of 87 (off by 3, consistent with one misread cell rather than a systemic error). Cross-checking Virginia player rows against the FG/FT formula (2*2pt makes + 3*3pt makes + FT makes) also produced mismatches against several printed TP values (e.g. Mullen: formula gives 11 vs printed TP 14). Page was read twice (initial + one allowed re-read) without resolving the ambiguity. Per instructions, skipping rather than guessing individual player stat lines; team names/date/final scores are known with confidence (Virginia 105, Clemson 87, 1983-01-22) but full player-by-player lines were not transcribed."
+    }
+  ]
+}

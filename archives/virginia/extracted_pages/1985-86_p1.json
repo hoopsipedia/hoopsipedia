@@ -1,0 +1,49 @@
+{
+  "page": 1,
+  "games": [
+    {
+      "date": "1985-11-23",
+      "opponent": "Houston Cougars",
+      "site": "Landover, MD",
+      "teams": [
+        {
+          "name": "Houston Cougars",
+          "score": 77,
+          "players": [
+            {"name": "Rickie Winslow", "min": 37, "fg": "8-14", "ft": "5-5", "reb": 8, "pf": 5, "ast": 2, "to": 5, "pts": 21},
+            {"name": "Greg Anderson", "min": 34, "fg": "10-15", "ft": "6-11", "reb": 14, "pf": 5, "to": 3, "blk": 1, "pts": 26},
+            {"name": "Stacey Belcher", "min": 14, "fg": "0-3", "ft": "0-0", "reb": 2, "pf": 5, "blk": 1, "pts": 0},
+            {"name": "Reginald Thomas", "min": 25, "fg": "3-5", "ft": "0-1", "reb": 1, "pf": 5, "ast": 2, "pts": 6},
+            {"name": "Alvin Franklin", "min": 40, "fg": "8-26", "ft": "6-6", "reb": 4, "pf": 3, "ast": 8, "to": 2, "pts": 20},
+            {"name": "Riley Jackson", "min": 10, "reb": 1, "to": 2, "pts": 0},
+            {"name": "Earl Small", "min": 16, "fg": "1-3", "reb": 3, "pf": 1, "to": 0, "pts": 2},
+            {"name": "Perry Russell", "min": 6, "pf": 2, "to": 0, "pts": 0},
+            {"name": "Gerry McGee", "min": 11, "fg": "0-2", "ft": "0-1", "reb": 1, "pf": 5, "to": 3, "pts": 0},
+            {"name": "Steve Smith", "min": 2, "reb": 0, "pts": 0},
+            {"name": "Aaron Rivera", "min": 3, "fg": "0-2", "reb": 0, "pts": 0},
+            {"name": "Verne Carter", "min": 2, "fg": "1-2", "reb": 1, "pf": 1, "pts": 2}
+          ]
+        },
+        {
+          "name": "Virginia Cavaliers",
+          "score": 92,
+          "players": [
+            {"name": "Mel Kennedy", "min": 37, "fg": "6-12", "ft": "1-1", "reb": 7, "pf": 4, "ast": 0, "to": 1, "blk": 1, "pts": 13},
+            {"name": "Tom Sheehey", "min": 28, "fg": "5-10", "ft": "5-5", "reb": 10, "pf": 2, "ast": 2, "to": 5, "pts": 15},
+            {"name": "Olden Polynice", "min": 38, "fg": "9-13", "ft": "7-10", "reb": 15, "pf": 3, "to": 1, "blk": 1, "pts": 25},
+            {"name": "Tom Galloway", "min": 29, "fg": "4-9", "ft": "10-12", "reb": 4, "pf": 5, "ast": 3, "to": 2, "pts": 18},
+            {"name": "Damon Simms", "min": 18, "fg": "1-4", "ft": "1-2", "reb": 4, "pf": 2, "ast": 3, "to": 8, "pts": 3},
+            {"name": "Andrew Kennedy", "min": 22, "fg": "4-7", "ft": "5-7", "reb": 2, "pf": 4, "ast": 1, "pts": 13},
+            {"name": "Richard Morgan", "min": 5, "fg": "0-4", "reb": 0, "to": 1, "pts": 0},
+            {"name": "John Johnson", "min": 9, "fg": "0-1", "ft": "5-6", "reb": 1, "pf": 2, "ast": 2, "to": 4, "pts": 5},
+            {"name": "John Dyslin", "min": 7, "fg": "0-1", "ft": "0-2", "reb": 0, "pts": 0},
+            {"name": "Jeff Daniel", "min": 6, "to": 2, "pts": 0},
+            {"name": "Lance Blanks", "min": 1, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

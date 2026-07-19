@@ -1,0 +1,40 @@
+{
+  "page": 16,
+  "games": [
+    {
+      "date": "1971-02-06",
+      "opponent": "Michigan State",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 87,
+          "players": [
+            {"name": "Wagar", "fg": "3-9", "ft": "4-4", "reb": 1, "pf": 4, "pts": 10},
+            {"name": "Minor", "fg": "3-7", "ft": "0-1", "reb": 6, "pf": 4, "pts": 6},
+            {"name": "Witte", "fg": "4-7", "ft": "1-2", "reb": 10, "pf": 5, "pts": 9},
+            {"name": "Hornyak", "fg": "11-22", "ft": "3-5", "reb": 5, "pf": 2, "pts": 25},
+            {"name": "Cleamons", "fg": "8-14", "ft": "5-6", "reb": 10, "pf": 3, "pts": 21},
+            {"name": "Siekmann", "fg": "4-10", "ft": "4-4", "reb": 7, "pf": 4, "pts": 12},
+            {"name": "Merchant", "fg": "2-5", "ft": "0-2", "reb": 0, "pf": 3, "pts": 4}
+          ]
+        },
+        {
+          "name": "Michigan State",
+          "score": 76,
+          "players": [
+            {"name": "Gutkowski", "fg": "5-12", "ft": "7-7", "reb": 8, "pf": 4, "pts": 17},
+            {"name": "Miller", "fg": "2-10", "ft": "2-2", "reb": 5, "pf": 1, "pts": 6},
+            {"name": "Kilgore", "fg": "8-12", "ft": "5-9", "reb": 16, "pf": 4, "pts": 21},
+            {"name": "Dean", "fg": "1-13", "ft": "0-0", "reb": 3, "pf": 4, "pts": 2},
+            {"name": "Benjamin", "fg": "8-21", "ft": "4-11", "reb": 4, "pf": 4, "pts": 20},
+            {"name": "Ganakas", "fg": "2-4", "ft": "1-2", "reb": 3, "pf": 2, "pts": 5},
+            {"name": "Van Pelt", "fg": "1-2", "ft": "0-0", "reb": 1, "pf": 1, "pts": 2},
+            {"name": "Breslin", "fg": "1-1", "ft": "1-3", "reb": 3, "pf": 1, "pts": 3}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

@@ -1,0 +1,44 @@
+{
+  "page": 8,
+  "games": [
+    {
+      "date": null,
+      "opponent": "Duke",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 80,
+          "players": [
+            {"name": "Hobgood", "min": 45, "fg": "7-13", "ft": "1-2", "reb": 8, "pf": 1, "ast": 3, "to": 4, "pts": 15},
+            {"name": "Walker", "min": 33, "fg": "7-11", "ft": "2-2", "reb": 6, "pf": 3, "ast": 1, "to": 0, "pts": 16},
+            {"name": "Gerard", "min": 22, "fg": "3-9", "ft": "0-0", "reb": 6, "pf": 5, "ast": 2, "to": 1, "pts": 6},
+            {"name": "Drummond", "min": 41, "fg": "6-10", "ft": "4-4", "reb": 6, "pf": 2, "ast": 1, "to": 2, "pts": 16},
+            {"name": "Parkhill", "min": 45, "fg": "6-20", "ft": "4-6", "reb": 1, "pf": 4, "ast": 8, "to": 11, "pts": 16},
+            {"name": "Stahurski", "min": 15, "fg": "2-6", "ft": "2-4", "reb": 6, "pf": 3, "ast": 0, "to": 1, "pts": 6},
+            {"name": "McKeag", "min": 15, "fg": "2-3", "ft": "0-0", "reb": 2, "pf": 2, "ast": 1, "to": 1, "pts": 4},
+            {"name": "Morris", "min": 6, "fg": "0-0", "ft": "1-2", "reb": 0, "pf": 1, "ast": 0, "to": 1, "pts": 1},
+            {"name": "Bonner", "min": 3, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 1, "ast": 0, "to": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Duke",
+          "score": 74,
+          "players": [
+            {"name": "Redding", "min": 37, "fg": "10-12", "ft": "6-7", "reb": 10, "pf": 1, "ast": 1, "to": 4, "pts": 26},
+            {"name": "Melchionni", "min": 43, "fg": "4-18", "ft": "2-2", "reb": 1, "pf": 4, "ast": 3, "to": 2, "pts": 10},
+            {"name": "Shaw", "min": 35, "fg": "4-5", "ft": "3-3", "reb": 8, "pf": 0, "ast": 1, "to": 5, "pts": 11},
+            {"name": "Fleischer", "min": 11, "fg": "1-4", "ft": "0-0", "reb": 5, "pf": 1, "ast": 0, "to": 1, "pts": 2},
+            {"name": "Billerman", "min": 28, "fg": "0-5", "ft": "4-4", "reb": 1, "pf": 5, "ast": 0, "to": 3, "pts": 4},
+            {"name": "Burdette", "min": 9, "fg": "0-0", "ft": "0-1", "reb": 1, "pf": 3, "ast": 2, "to": 0, "pts": 0},
+            {"name": "Hodge", "min": 7, "fg": "1-1", "ft": "1-2", "reb": 3, "pf": 0, "ast": 1, "to": 2, "pts": 3},
+            {"name": "Kramer", "min": 23, "fg": "3-7", "ft": "4-4", "reb": 1, "pf": 1, "ast": 0, "to": 3, "pts": 10},
+            {"name": "Suk", "min": 22, "fg": "2-4", "ft": "2-2", "reb": 5, "pf": 5, "ast": 2, "to": 1, "pts": 6},
+            {"name": "O'Connell", "min": 10, "fg": "0-3", "ft": "2-4", "reb": 1, "pf": 0, "ast": 3, "to": 2, "pts": 2}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

@@ -1,0 +1,9 @@
+{
+  "page": 9,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "1935-36 Ohio State vs Iowa (1/18/36, Ohio 34, Iowa 26, Columbus). Iowa's box score column fully checksums (2*FG+FT per player sums to 26, matching every printed Pts value: Rosenthal 5, Burke 5, Dress 1, Suesens 3, Van Yseeldyk 8, Johnson 2, Walsh 2, Buss 0). However, Ohio State's five starters (Whitlinger 11, McDonald 4, Thomas 8, Raudabaugh 5, Dye 2 = 30 pts, all individually checksum-consistent as 2*FG+FT) leave the team total short by 4 points versus the printed Totals row (FG 14, FT 6 -> 34 pts) and the game's final score of 34. The shortfall (1 made FG + 2 made FT) must belong to the three reserves (Eschmemke, George, Smith), but their small agate-type figures are too degraded/ambiguous on this scan to confidently attribute per-player values even after a second read -- re-reading did not resolve which reserve(s) hold the missing FG/FT. Skipping the whole game rather than inventing reserve stats, per instructions; only individual line that could be salvaged with certainty is the Iowa roster, but a game record requires both teams' checksums to pass."
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "page": 7,
+  "games": [
+    {
+      "date": "1977-12-17",
+      "opponent": "UC Santa Barbara",
+      "ucla_score": 71,
+      "opp_score": 55,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 71,
+          "players": [
+            {"name": "Greenwood", "min": 34, "fg": "5-12", "ft": "4-4", "reb": 12, "ast": 1, "pf": 2, "blk": 1, "pts": 14},
+            {"name": "Vandeweghe", "min": 25, "fg": "1-7", "ft": "2-2", "reb": 4, "ast": 2, "pf": 2, "blk": 0, "pts": 4},
+            {"name": "Sims", "min": 27, "fg": "4-6", "ft": "1-2", "reb": 3, "ast": 0, "pf": 3, "blk": 2, "pts": 9},
+            {"name": "Townsend", "min": 35, "fg": "9-9", "ft": "0-1", "reb": 4, "ast": 2, "pf": 1, "blk": 0, "pts": 18},
+            {"name": "Hamilton", "min": 37, "fg": "4-13", "ft": "3-4", "reb": 2, "ast": 8, "pf": 0, "blk": 0, "pts": 11},
+            {"name": "Wilkes", "min": 21, "fg": "3-8", "ft": "1-2", "reb": 7, "ast": 4, "pf": 2, "blk": 1, "pts": 7},
+            {"name": "Holland", "min": 8, "fg": "2-2", "ft": "0-0", "reb": 0, "ast": 0, "pf": 3, "blk": 0, "pts": 4},
+            {"name": "Allums", "min": 13, "fg": "1-3", "ft": "2-2", "reb": 3, "ast": 0, "pf": 1, "blk": 0, "pts": 4}
+          ]
+        },
+        {
+          "name": "UC Santa Barbara Gauchos",
+          "score": 55,
+          "players": [
+            {"name": "Flavin", "min": 31, "fg": "11-15", "ft": "0-0", "reb": 9, "ast": 2, "pf": 4, "blk": 0, "pts": 22},
+            {"name": "Aronchick", "min": 29, "fg": "3-10", "ft": "2-5", "reb": 6, "ast": 1, "pf": 3, "blk": 1, "pts": 8},
+            {"name": "Maderos", "min": 31, "fg": "6-8", "ft": "2-2", "reb": 1, "ast": 4, "pf": 2, "blk": 0, "pts": 14},
+            {"name": "Perry", "min": 31, "fg": "0-5", "ft": "2-2", "reb": 2, "ast": 4, "pf": 0, "blk": 0, "pts": 2},
+            {"name": "Ridgway", "min": 32, "fg": "0-5", "ft": "3-4", "reb": 3, "ast": 4, "pf": 2, "blk": 0, "pts": 3},
+            {"name": "Howard", "min": 13, "fg": "1-2", "ft": "0-0", "reb": 4, "ast": 0, "pf": 2, "blk": 0, "pts": 2},
+            {"name": "Tate", "min": 10, "fg": "0-1", "ft": "0-0", "reb": 2, "ast": 0, "pf": 1, "blk": 0, "pts": 0},
+            {"name": "Schell", "min": 10, "fg": "0-4", "ft": "0-0", "reb": 0, "ast": 1, "pf": 0, "blk": 0, "pts": 0},
+            {"name": "Turrell", "min": 7, "fg": "1-2", "ft": "0-0", "reb": 1, "ast": 0, "pf": 4, "blk": 0, "pts": 2},
+            {"name": "Hunter", "min": 2, "fg": "1-2", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "blk": 0, "pts": 2},
+            {"name": "Hummel", "min": 2, "fg": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "pf": 0, "blk": 0, "pts": 0},
+            {"name": "Busacca", "min": 2, "fg": "0-1", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "blk": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

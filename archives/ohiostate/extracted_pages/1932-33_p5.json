@@ -1,0 +1,11 @@
+{
+  "page": 5,
+  "games": [],
+  "skipped": [
+    {
+      "date": "1933-01-02",
+      "opponent": "Kentucky",
+      "reason": "Page is a scanned newspaper clipping ('Ohio State Wins, 46-30') with an embedded lineup table (Ohio State 46, Kentucky 30, at Lexington, attendance 500, captain Mattison, coach H.G. Olsen). Team-level info (date, opponent, final score) is legible, but the individual player-line digits (FG/FT columns for Hinchman, Colburn, Hosket, Beltner, Mattison, Brown, Wilson, Conrad for Ohio State and Demolsey, Kreuter, Sale, Davis, Johlon, Yates for Kentucky) are too small and low-resolution in the scan to transcribe with confidence. Team totals rows are legible and internally consistent (Ohio State: FG 21, FT 4, Total 46 = 21*2+4; Kentucky: FG 11, FT 8, Total 30 = 11*2+8), but per-player values could not be read reliably, so the game was skipped rather than guessed per instructions."
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "page": 28,
+  "games": [
+    {
+      "date": "1975-03-22",
+      "opponent": "Arizona State",
+      "ucla_score": 89,
+      "opp_score": 75,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 89,
+          "players": [
+            {"name": "Pete Trgovich", "min": 40, "fg": "4-14", "ft": "0-1", "reb": 4, "ast": 5, "pf": 3, "to": 7, "stl": 2, "blk": 0, "pts": 8},
+            {"name": "Rich Washington", "min": 34, "fg": "8-13", "ft": "0-0", "reb": 12, "ast": 2, "pf": 5, "to": 3, "stl": 1, "blk": 3, "pts": 16},
+            {"name": "Dave Meyers", "min": 38, "fg": "4-15", "ft": "3-4", "reb": 13, "ast": 3, "pf": 3, "to": 1, "stl": 3, "blk": 3, "pts": 11},
+            {"name": "Ralph Drollinger", "min": 9, "fg": "3-4", "ft": "3-3", "reb": 3, "ast": 0, "pf": 5, "to": 1, "stl": 0, "blk": 0, "pts": 9},
+            {"name": "Andre McCarter", "min": 40, "fg": "2-5", "ft": "5-8", "reb": 5, "ast": 5, "pf": 1, "to": 5, "stl": 0, "blk": 1, "pts": 9},
+            {"name": "Wilbert Olinde", "min": 2, "fg": "0-0", "ft": "1-2", "reb": 1, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 1},
+            {"name": "Marques Johnson", "min": 37, "fg": "14-20", "ft": "7-8", "reb": 12, "ast": 3, "pf": 1, "to": 2, "stl": 2, "blk": 1, "pts": 35}
+          ]
+        },
+        {
+          "name": "Arizona State",
+          "score": 75,
+          "players": [
+            {"name": "James Holliman", "min": 23, "fg": "1-5", "ft": "1-2", "reb": 7, "ast": 1, "pf": 3, "to": 4, "stl": 0, "blk": 0, "pts": 3},
+            {"name": "Mike Moon", "min": 18, "fg": "2-5", "ft": "0-0", "reb": 0, "ast": 1, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Rudy White", "min": 34, "fg": "6-13", "ft": "3-4", "reb": 5, "ast": 3, "pf": 5, "to": 4, "stl": 1, "blk": 1, "pts": 15},
+            {"name": "Lionel Hollins", "min": 38, "fg": "8-22", "ft": "0-1", "reb": 0, "ast": 6, "pf": 4, "to": 1, "stl": 0, "blk": 1, "pts": 16},
+            {"name": "Jack Schrader", "min": 27, "fg": "4-12", "ft": "1-2", "reb": 12, "ast": 1, "pf": 4, "to": 2, "stl": 2, "blk": 2, "pts": 9},
+            {"name": "Ken Wright", "min": 8, "fg": "2-4", "ft": "0-1", "reb": 3, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Scott Lloyd", "min": 38, "fg": "8-13", "ft": "4-8", "reb": 9, "ast": 0, "pf": 4, "to": 1, "stl": 0, "blk": 0, "pts": 20},
+            {"name": "Greg White", "min": 2, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Gary Jackson", "min": 12, "fg": "2-4", "ft": "0-0", "reb": 2, "ast": 0, "pf": 2, "to": 2, "stl": 0, "blk": 0, "pts": 4}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

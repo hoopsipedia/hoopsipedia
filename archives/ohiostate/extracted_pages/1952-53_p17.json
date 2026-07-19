@@ -1,0 +1,43 @@
+{
+  "page": 17,
+  "games": [
+    {
+      "date": "1953-02-09",
+      "opponent": "Minnesota",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 81,
+          "players": [
+            {"name": "Williams", "fg": "4-9", "ft": "1-1", "pf": 4, "pts": 9},
+            {"name": "Miller", "fg": "1-3", "ft": "1-2", "pf": 1, "pts": 3},
+            {"name": "Wilks", "fg": "4-9", "ft": "7-8", "pf": 4, "pts": 15},
+            {"name": "Ebert", "fg": "7-17", "ft": "8-9", "pf": 3, "pts": 22},
+            {"name": "Hatfield", "fg": "7-16", "ft": "7-7", "pf": 3, "pts": 21},
+            {"name": "Jones", "fg": "0-0", "ft": "1-2", "pf": 0, "pts": 1},
+            {"name": "Cook", "fg": "4-10", "ft": "2-3", "pf": 4, "pts": 10},
+            {"name": "Keeling", "fg": "0-0", "ft": "0-0", "pf": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Minnesota",
+          "score": 71,
+          "players": [
+            {"name": "Gelle", "fg": "3-18", "ft": "8-11", "pf": 4, "pts": 14},
+            {"name": "Dommeyer", "fg": "0-0", "ft": "0-0", "pf": 0, "pts": 0},
+            {"name": "Reed", "fg": "1-1", "ft": "1-1", "pf": 1, "pts": 3},
+            {"name": "Johnson", "fg": "6-10", "ft": "3-3", "pf": 3, "pts": 15},
+            {"name": "Kalafat", "fg": "10-20", "ft": "6-6", "pf": 5, "pts": 26},
+            {"name": "Wallorius", "fg": "1-3", "ft": "1-1", "pf": 2, "pts": 3},
+            {"name": "McNamara", "fg": "1-9", "ft": "2-2", "pf": 4, "pts": 4},
+            {"name": "Bolstorff", "fg": "0-0", "ft": "0-0", "pf": 0, "pts": 0},
+            {"name": "Bennett", "fg": "1-9", "ft": "2-4", "pf": 3, "pts": 4},
+            {"name": "Weiss", "fg": "1-3", "ft": "0-0", "pf": 2, "pts": 2}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

@@ -1,0 +1,44 @@
+{
+  "page": 17,
+  "games": [
+    {
+      "date": "1984-02-02",
+      "opponent": "Washington State",
+      "ucla_score": 73,
+      "opp_score": 59,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 73,
+          "players": [
+            {"name": "Gary Maloncon", "min": 21, "fg": "1-6", "ft": "0-0", "reb": 1, "ast": 0, "pf": 3, "to": 0, "stl": 1, "blk": 0, "pts": 2},
+            {"name": "Kenny Fields", "min": 34, "fg": "8-21", "ft": "4-6", "reb": 6, "ast": 3, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 20},
+            {"name": "Stuart Gray", "min": 34, "fg": "4-6", "ft": "3-6", "reb": 12, "ast": 1, "pf": 4, "to": 0, "stl": 0, "blk": 3, "pts": 11},
+            {"name": "Ralph Jackson", "min": 36, "fg": "7-10", "ft": "2-4", "reb": 3, "pf": 2, "to": 3, "pts": 16},
+            {"name": "Corey Gaines", "min": 12, "fg": "0-3", "ft": "1-2", "reb": 1, "ast": 2, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 1},
+            {"name": "Montel Hatcher", "min": 12, "fg": "4-6", "ft": "2-4", "reb": 0, "ast": 0, "pf": 3, "to": 3, "stl": 0, "blk": 2, "pts": 10},
+            {"name": "Reggie Miller", "min": 25, "fg": "3-5", "ft": "5-6", "reb": 5, "ast": 0, "pf": 1, "to": 1, "stl": 2, "blk": 0, "pts": 11},
+            {"name": "Brad Wright", "min": 6, "fg": "1-1", "ft": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 2}
+          ]
+        },
+        {
+          "name": "Washington State Cougars",
+          "score": 59,
+          "players": [
+            {"name": "Otis Jennings", "min": 32, "fg": "4-13", "ft": "2-4", "pts": 10},
+            {"name": "Bryan Pollard", "min": 27, "fg": "1-7", "ft": "3-4", "pts": 5},
+            {"name": "Ricky Brown", "min": 31, "fg": "4-14", "ft": "2-2", "pts": 10},
+            {"name": "Keith Morrison", "min": 40, "fg": "5-11", "ft": "6-6", "pts": 16},
+            {"name": "Chris Winkler", "min": 39, "fg": "6-7", "ft": "2-2", "pts": 14},
+            {"name": "Joe Wallace", "min": 2, "fg": "0-1", "ft": "0-0", "pts": 0},
+            {"name": "Rigo Moore", "min": 3, "fg": "0-0", "ft": "0-0", "pts": 0},
+            {"name": "Ken Mathia", "min": 2, "fg": "0-0", "ft": "0-0", "pts": 0},
+            {"name": "Mike Wurm", "min": 24, "fg": "2-6", "ft": "0-0", "pts": 4}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

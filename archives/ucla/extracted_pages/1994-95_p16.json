@@ -1,0 +1,50 @@
+{
+  "page": 16,
+  "games": [
+    {
+      "date": "1995-02-05",
+      "opponent": "Notre Dame",
+      "ucla_score": 92,
+      "opp_score": 55,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 92,
+          "players": [
+            {"name": "Ed O'Bannon", "min": 31, "fg": "4-10", "tp": "0-2", "ft": "2-4", "reb": 5, "ast": 7, "pf": 1, "to": 3, "stl": 4, "blk": 0, "pts": 10},
+            {"name": "Charles O'Bannon", "min": 30, "fg": "3-7", "tp": "0-1", "ft": "3-4", "reb": 5, "ast": 2, "pf": 3, "to": 3, "stl": 1, "blk": 1, "pts": 9},
+            {"name": "George Zidek", "min": 28, "fg": "7-10", "tp": "0-0", "ft": "6-9", "reb": 6, "ast": 0, "pf": 3, "to": 0, "stl": 0, "blk": 0, "pts": 20},
+            {"name": "J.R. Henderson", "min": 22, "fg": "3-5", "tp": "0-0", "ft": "3-5", "reb": 2, "ast": 2, "pf": 0, "to": 1, "stl": 4, "blk": 0, "pts": 9},
+            {"name": "Tyus Edney", "min": 24, "fg": "3-11", "tp": "1-2", "ft": "9-10", "reb": 3, "ast": 5, "pf": 0, "to": 2, "stl": 2, "blk": 0, "pts": 15},
+            {"name": "Cameron Dollar", "min": 16, "fg": "2-2", "tp": "0-0", "ft": "2-2", "reb": 1, "ast": 3, "pf": 0, "to": 2, "stl": 2, "blk": 0, "pts": 6},
+            {"name": "Toby Bailey", "min": 16, "fg": "6-10", "tp": "1-3", "ft": "2-4", "reb": 2, "ast": 0, "pf": 2, "to": 0, "stl": 4, "blk": 0, "pts": 15},
+            {"name": "Kris Johnson", "min": 11, "fg": "1-5", "tp": "0-1", "ft": "1-2", "reb": 2, "ast": 0, "pf": 2, "to": 1, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "omm'A Givens", "min": 12, "fg": "2-4", "tp": "0-0", "ft": "0-0", "reb": 4, "ast": 0, "pf": 2, "to": 0, "stl": 2, "blk": 1, "pts": 4},
+            {"name": "Ike Nwankwo", "min": 6, "fg": "1-1", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Kevin Dempsey", "min": 2, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 1, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Bob Myers", "min": 2, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Notre Dame Fighting Irish",
+          "score": 55,
+          "players": [
+            {"name": "Jason Williams", "min": 16, "fg": "0-4", "tp": "0-2", "ft": "1-2", "reb": 4, "ast": 0, "pf": 4, "to": 3, "stl": 1, "blk": 0, "pts": 1},
+            {"name": "Pat Garrity", "min": 25, "fg": "4-12", "tp": "0-1", "ft": "1-1", "reb": 2, "ast": 1, "pf": 3, "to": 4, "stl": 0, "blk": 0, "pts": 9},
+            {"name": "Marcus Young", "min": 25, "fg": "2-3", "tp": "0-0", "ft": "0-0", "reb": 6, "ast": 0, "pf": 2, "to": 3, "stl": 0, "blk": 1, "pts": 4},
+            {"name": "Ryan Hoover", "min": 20, "fg": "1-7", "tp": "0-5", "ft": "7-7", "reb": 1, "ast": 1, "pf": 3, "to": 0, "stl": 0, "blk": 0, "pts": 9},
+            {"name": "Lamarr Justice", "min": 27, "fg": "3-6", "tp": "0-2", "ft": "0-0", "reb": 1, "ast": 2, "pf": 2, "to": 4, "stl": 0, "blk": 1, "pts": 6},
+            {"name": "Peter Miller", "min": 16, "fg": "0-3", "tp": "0-2", "ft": "1-2", "reb": 0, "ast": 1, "pf": 1, "to": 3, "stl": 1, "blk": 0, "pts": 1},
+            {"name": "Matt Gotsch", "min": 13, "fg": "4-7", "tp": "0-0", "ft": "0-0", "reb": 4, "ast": 1, "pf": 4, "to": 3, "stl": 0, "blk": 1, "pts": 8},
+            {"name": "Billy Taylor", "min": 13, "fg": "0-2", "tp": "0-0", "ft": "2-2", "reb": 3, "ast": 0, "pf": 0, "to": 1, "stl": 1, "blk": 0, "pts": 2},
+            {"name": "Derek Manner", "min": 18, "fg": "5-8", "tp": "0-0", "ft": "1-1", "reb": 4, "ast": 3, "pf": 4, "to": 1, "stl": 1, "blk": 0, "pts": 11},
+            {"name": "Admore White", "min": 20, "fg": "1-3", "tp": "0-1", "ft": "0-0", "reb": 5, "ast": 1, "pf": 1, "to": 6, "stl": 2, "blk": 0, "pts": 2},
+            {"name": "Brian Watkins", "min": 7, "fg": "1-3", "tp": "0-0", "ft": "0-0", "reb": 5, "ast": 0, "pf": 1, "to": 3, "stl": 0, "blk": 0, "pts": 2}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

@@ -1,0 +1,11 @@
+{
+  "page": 17,
+  "games": [],
+  "skipped": [
+    {
+      "date": "1940-02-24",
+      "opponent": "Minnesota",
+      "reason": "Newspaper clipping box score (Ohio State 48, Minnesota 43, Coliseum, coach Olsen) is present but the fg/ft columns are printed in very small, blurred type. Transcribed individual player fg/ft figures do not sum to the printed team totals for either side (Minnesota individual ft summed to 9 vs printed total 13; Ohio State individual fg summed to 12 vs printed total 18 and ft summed to 9 vs printed total 12), so checksum fails for both teams. Digits are too small/degraded to confidently correct, and only one read of this page was permitted, so the full player-line box score was skipped rather than guessed. Game metadata (date, opponent, final score 48-43, site, coach) is legible and confirmed from the season log line at the bottom of the page, but no player stat lines are included."
+    }
+  ]
+}

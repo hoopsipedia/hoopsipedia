@@ -1,0 +1,9 @@
+{
+  "page": 27,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "March 5, 1977 UCLA at Southern Cal (L.A. Sports Arena), final UCLA 78 - USC 69. UCLA side checksums cleanly (player points 16+25+0+10+14+4+2+1+6=78, matches team total). USC side fails checksum after re-reading the page once: player points sum to 67 (21+18+8+8+12+0+0+0) vs team total of 69, and player rebounds sum to 31 (11+5+4+1+10) vs team total of 29 — the two discrepancies (missing 2 pts / 1 FG, and 2 extra rebounds) could not be reconciled to a specific cell given handwriting quality on the USC FG/FGA/REB columns, so the full game was skipped rather than guess which digit(s) are misread."
+    }
+  ]
+}

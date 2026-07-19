@@ -1,0 +1,42 @@
+{
+  "page": 8,
+  "games": [
+    {
+      "date": "2001-12-20",
+      "opponent": "Washington",
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 85,
+          "players": [
+            {"name": "Barnes, Matt", "min": 29, "fg": "4-6", "tp": "1-2", "ft": "3-5", "reb": 4, "ast": 4, "pf": 1, "to": 4, "stl": 1, "blk": 0, "pts": 12},
+            {"name": "Kapono, Jason", "min": 39, "fg": "6-14", "tp": "4-10", "ft": "4-4", "reb": 4, "ast": 3, "pf": 4, "to": 3, "stl": 3, "blk": 0, "pts": 19},
+            {"name": "Gadzuric, Dan", "min": 35, "fg": "9-13", "tp": "0-0", "ft": "5-8", "reb": 13, "ast": 1, "pf": 3, "to": 1, "stl": 1, "blk": 1, "pts": 23},
+            {"name": "Knight, Billy", "min": 28, "fg": "5-9", "tp": "1-4", "ft": "6-8", "reb": 4, "ast": 3, "pf": 5, "to": 2, "stl": 1, "blk": 0, "pts": 17},
+            {"name": "Hines, Rico", "min": 28, "fg": "1-1", "tp": "0-0", "ft": "0-2", "reb": 2, "ast": 3, "pf": 2, "to": 2, "stl": 1, "blk": 0, "pts": 2},
+            {"name": "Thompson, Dijon", "min": 19, "fg": "1-4", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 2, "pf": 3, "to": 1, "stl": 0, "blk": 1, "pts": 2},
+            {"name": "Walcott, Ryan", "min": 6, "fg": "0-1", "tp": "0-1", "ft": "0-0", "reb": 0, "ast": 0, "pf": 2, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Cummings, T.J.", "min": 16, "fg": "4-8", "tp": "0-0", "ft": "2-2", "reb": 2, "ast": 0, "pf": 3, "to": 1, "stl": 0, "blk": 0, "pts": 10}
+          ]
+        },
+        {
+          "name": "Washington Huskies",
+          "score": 79,
+          "players": [
+            {"name": "Leep, Grant", "min": 32, "fg": "3-6", "tp": "2-4", "ft": "2-2", "reb": 6, "ast": 0, "pf": 4, "to": 2, "stl": 2, "blk": 0, "pts": 10},
+            {"name": "Dixon, David", "min": 12, "fg": "2-5", "tp": "0-0", "ft": "0-2", "reb": 2, "ast": 0, "pf": 5, "to": 2, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Massingale, C.J.", "min": 16, "fg": "0-3", "tp": "0-1", "ft": "5-6", "reb": 4, "ast": 0, "pf": 2, "to": 2, "stl": 0, "blk": 0, "pts": 5},
+            {"name": "Allen, Curtis", "min": 32, "fg": "5-13", "tp": "1-4", "ft": "2-2", "reb": 5, "ast": 5, "pf": 0, "to": 4, "stl": 2, "blk": 0, "pts": 13},
+            {"name": "Knight, Erroll", "min": 30, "fg": "4-10", "tp": "1-2", "ft": "0-1", "reb": 6, "ast": 4, "pf": 5, "to": 2, "stl": 1, "blk": 0, "pts": 9},
+            {"name": "Day, Jeffrey", "min": 12, "fg": "0-2", "tp": "0-0", "ft": "1-2", "reb": 3, "ast": 0, "pf": 5, "to": 3, "stl": 1, "blk": 0, "pts": 1},
+            {"name": "Conroy, Will", "min": 10, "fg": "0-2", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 3, "pf": 2, "to": 0, "stl": 0, "blk": 1, "pts": 0},
+            {"name": "Barnard, Josh", "min": 23, "fg": "5-8", "tp": "4-7", "ft": "0-0", "reb": 2, "ast": 3, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 14},
+            {"name": "Wrenn, Doug", "min": 33, "fg": "10-17", "tp": "0-1", "ft": "3-6", "reb": 7, "ast": 0, "pf": 0, "to": 2, "stl": 1, "blk": 0, "pts": 23}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

@@ -1,0 +1,45 @@
+{
+  "page": 8,
+  "games": [
+    {
+      "date": "1965-12-28",
+      "opponent": "Tulane",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 78,
+          "players": [
+            {"name": "Hoover", "fg": "3-6", "ft": "1-1", "reb": 1, "pf": 1, "pts": 7},
+            {"name": "Morgan", "fg": "6-14", "ft": "2-6", "pf": 5, "pts": 14},
+            {"name": "Howard", "fg": "3-7", "ft": "3-3", "pf": 2, "pts": 9},
+            {"name": "Monroe", "fg": "5-9", "ft": "3-5", "reb": 7, "pf": 1, "pts": 13},
+            {"name": "Daniels", "fg": "6-18", "ft": "7-9", "pf": 3, "pts": 19},
+            {"name": "Dupree", "fg": "0-1", "ft": "2-3", "reb": 1, "pf": 1, "pts": 2},
+            {"name": "Johnston", "fg": "2-3", "ft": "2-2", "reb": 1, "pf": 1, "pts": 6},
+            {"name": "Cleveland", "fg": "0-1", "ft": "0-0", "pts": 0},
+            {"name": "Patterson", "fg": "2-4", "ft": "4-8", "reb": 8, "pf": 2, "pts": 8},
+            {"name": "Rose", "fg": "0-2", "ft": "0-1", "reb": 2, "pf": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Tulane",
+          "score": 56,
+          "players": [
+            {"name": "Andrews", "fg": "12-24", "ft": "8-9", "reb": 9, "pf": 3, "pts": 32},
+            {"name": "Spitzge", "fg": "3-7", "ft": "1-2", "reb": 2, "pf": 5, "pts": 7},
+            {"name": "Urbanski", "fg": "0-7", "ft": "0-0", "reb": 3, "pf": 5, "pts": 0},
+            {"name": "Moeser", "fg": "3-5", "ft": "2-5", "reb": 5, "pf": 1, "pts": 8},
+            {"name": "LaCour", "fg": "0-2", "ft": "0-0", "reb": 2, "pf": 2, "pts": 0},
+            {"name": "Goodman", "fg": "0-3", "ft": "2-2", "reb": 1, "pf": 4, "pts": 2},
+            {"name": "Fisher", "fg": "0-1", "ft": "0-0", "pts": 0},
+            {"name": "Mucklin", "fg": "1-6", "ft": "2-2", "reb": 1, "pf": 5, "pts": 4},
+            {"name": "Beandt", "pf": 2, "pts": 0},
+            {"name": "Schweres", "fg": "1-5", "ft": "1-2", "reb": 5, "pf": 1, "pts": 3}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

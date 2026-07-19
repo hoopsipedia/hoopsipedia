@@ -1,0 +1,9 @@
+{
+  "page": 15,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "01-23-97 UCLA @ USC (final UCLA 96, USC 87). UCLA's box score is fully legible and checksums cleanly (player PTS sum = 96, matching final score and TOTALS row 33-49 FG/4-10 3P/26-45 FT/96 PTS), except one bench player (Kris Johnson, 19 pts) has an illegible free-throw-attempts cell. USC's team TOTALS row (32-78 FG, 8-31 3P, 15-25 FT, 87 PTS) and most starters are legible, but several individual player rows (notably Gary Johnson and Jarvis Turner) have faint/ambiguous cell values where field-goal/free-throw/rebound columns do not consistently reconcile to 16 fields, and reconstructing them produces conflicting point totals that fail to sum to USC's 87-point final score with confidence. Skipping the whole game rather than guessing at the unclear USC bench cells."
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "page": 20,
+  "games": [
+    {
+      "date": "1945-03-23",
+      "opponent": "NYU",
+      "note": "NCAA Tournament Eastern Championship Final at Madison Square Garden (overtime game, 62-62 at end of regulation). Handwritten date at top of sheet only legible as 'March ____' (day illegible); 1945-03-23 filled in from the well-documented historical record of this NCAA East Regional Final (Ohio State vs NYU, NYU 70-65 OT, featuring Dolph Schayes) rather than read directly off the scan.",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 65,
+          "players": [
+            {"name": "Grate", "fg": 2, "ft": 2, "pf": 4, "pts": 6},
+            {"name": "Sims", "fg": 2, "ft": 3, "pf": 3, "pts": 7},
+            {"name": "Snyder", "fg": 0, "ft": 0, "pf": 0, "pts": 0},
+            {"name": "Dugger", "fg": 1, "ft": 2, "pf": 5, "pts": 4},
+            {"name": "Caudill", "fg": 3, "ft": 1, "pf": 3, "pts": 7},
+            {"name": "Risen", "fg": 8, "ft": 10, "pf": 5, "pts": 26},
+            {"name": "Huston", "fg": 2, "ft": 1, "pf": 5, "pts": 5},
+            {"name": "Amling", "fg": 5, "ft": 0, "pf": 1, "pts": 10}
+          ]
+        },
+        {
+          "name": "NYU",
+          "score": 70,
+          "players": [
+            {"name": "Grenert", "fg": 2, "ft": 2, "pts": 6},
+            {"name": "Benanti", "fg": 0, "ft": 0, "pf": 1, "pts": 0},
+            {"name": "Forman", "fg": 4, "ft": 2, "pf": 2, "pts": 10},
+            {"name": "Schayes", "fg": 5, "ft": 4, "pf": 4, "pts": 14},
+            {"name": "Walsh", "fg": 2, "ft": 2, "pf": 5, "pts": 6},
+            {"name": "Most", "fg": 1, "ft": 0, "pf": 2, "pts": 2},
+            {"name": "Tannenbaum", "fg": 5, "ft": 3, "pf": 2, "pts": 13},
+            {"name": "Mangiapane", "fg": 7, "ft": 3, "pf": 4, "pts": 17},
+            {"name": "Goldstein", "fg": 1, "ft": 0, "pf": 2, "pts": 2}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

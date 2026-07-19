@@ -1,0 +1,39 @@
+{
+  "page": 4,
+  "games": [
+    {
+      "date": "1930-01-01",
+      "opponent": "Pennsylvania",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 25,
+          "players": [
+            {"name": "Ervin", "pf": 0, "pts": 7},
+            {"name": "Evans", "pf": 3, "pts": 3},
+            {"name": "Hinchman", "pf": 0, "pts": 4},
+            {"name": "Condon", "pf": 2, "pts": 0},
+            {"name": "Wrigley", "pf": 0, "pts": 7},
+            {"name": "Fesler", "pf": 0, "pts": 2},
+            {"name": "Larkins", "pf": 1, "pts": 2},
+            {"name": "Holcomb", "pf": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Pennsylvania",
+          "score": 31,
+          "players": [
+            {"name": "Brodbeck", "pf": 0, "pts": 10},
+            {"name": "Ullrich", "pf": 2, "pts": 6},
+            {"name": "Peterson", "pf": 1, "pts": 3},
+            {"name": "Lobley", "pf": 0, "pts": 0},
+            {"name": "Wagner", "pf": 1, "pts": 2},
+            {"name": "Tanseer", "pf": 2, "pts": 10}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

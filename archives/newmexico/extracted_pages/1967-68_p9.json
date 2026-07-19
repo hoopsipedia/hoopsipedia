@@ -1,0 +1,9 @@
+{
+  "page": 9,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "12/27/67 San Jose State (Spartans) at New Mexico (Lobos) box score. The Lobos side transcribes cleanly and every player line checksums exactly against the printed team totals (FG 32, FGA 78, FT 29, FTA 44, RB 65, PF 24, TP 93 -- sum of player points = 93, matching the sheet's own TOTALS row). However the Spartans (opponent) side is too illegible/inconsistent to transcribe confidently: several player names are unreadable (e.g. row 21 'IOLMAN/TOLMAN?'), a hand-drawn checkmark/correction mark overlays the Dietrick row obscuring at least one digit, and at least one row (Woodfin) has a printed TP that does not reconcile with 2*FG+FT from the same row, indicating unreliable digit reads elsewhere in that column. Only one read pass is permitted, so rather than guess at the Spartans stat lines the entire game is skipped -- a game record requires both teams' checksums to pass."
+    }
+  ]
+}

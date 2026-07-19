@@ -1,0 +1,9 @@
+{
+  "page": 17,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Handwritten official NCAA box score, Wake Forest at Virginia, Jan 22 1986 (final: Wake Forest 47, Virginia 54). Team TOTALS rows are typed/legible and checksum-consistent with the final score, but individual player lines have ambiguous cell boundaries: FT/FTA columns are frequently blank or merged with adjacent REB/PF/TP digits, several cells contain unclear circled marks, and MIN/A/TO/BLK/STL entries for multiple players (both teams) are too faint or cramped to assign confidently to the correct column. Because per-player FG/FT values could not be read with enough confidence to satisfy the per-player + team checksum requirement without guessing, this game was skipped rather than risk invented stat lines."
+    }
+  ]
+}

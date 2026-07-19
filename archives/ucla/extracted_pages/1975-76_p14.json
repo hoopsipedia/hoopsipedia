@@ -1,0 +1,46 @@
+{
+  "page": 14,
+  "games": [
+    {
+      "date": "1976-01-16",
+      "opponent": "Stanford",
+      "ucla_score": 68,
+      "opp_score": 67,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 68,
+          "players": [
+            {"name": "Washington", "min": 36, "fg": "6-15", "ft": "0-1", "reb": 5, "ast": 4, "pf": 4, "pts": 12},
+            {"name": "Johnson", "min": 22, "fg": "2-6", "ft": "0-0", "reb": 3, "ast": 1, "pf": 1, "pts": 4},
+            {"name": "Drollinger", "min": 39, "fg": "4-8", "ft": "3-5", "reb": 8, "ast": 1, "pf": 2, "pts": 11},
+            {"name": "Townsend", "min": 30, "fg": "3-5", "ft": "3-4", "reb": 3, "ast": 1, "pf": 3, "pts": 9},
+            {"name": "McCarter", "min": 40, "fg": "13-19", "ft": "0-1", "reb": 0, "ast": 2, "pf": 0, "pts": 26},
+            {"name": "Smith", "min": 16, "fg": "2-7", "ft": "0-1", "reb": 4, "ast": 2, "pf": 1, "pts": 4},
+            {"name": "Spillane", "min": 6, "fg": "1-4", "ft": "0-0", "reb": 0, "ast": 0, "pf": 2, "pts": 2},
+            {"name": "Greenwood", "min": 1, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "pts": 0},
+            {"name": "Holland", "min": 4, "fg": "0-3", "ft": "0-0", "reb": 1, "ast": 1, "pf": 0, "pts": 0},
+            {"name": "Olinde", "min": 6, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Stanford Cardinal",
+          "score": 67,
+          "players": [
+            {"name": "Schader", "min": 39, "fg": "8-18", "ft": "0-0", "reb": 17, "ast": 1, "pf": 3, "pts": 16},
+            {"name": "Schweitzer", "min": 39, "fg": "8-15", "ft": "1-1", "reb": 15, "ast": 2, "pf": 3, "pts": 17},
+            {"name": "Patterson", "min": 38, "fg": "4-7", "ft": "1-2", "reb": 6, "ast": 3, "pf": 3, "pts": 9},
+            {"name": "Perry", "min": 9, "fg": "2-3", "ft": "0-0", "reb": 0, "ast": 0, "pf": 5, "pts": 4},
+            {"name": "Bratz", "min": 40, "fg": "5-9", "ft": "3-4", "reb": 5, "ast": 4, "pf": 4, "pts": 13},
+            {"name": "Carter", "min": 28, "fg": "4-10", "ft": "0-0", "reb": 6, "ast": 2, "pf": 0, "pts": 8},
+            {"name": "Simons", "min": 4, "fg": "0-3", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "pts": 0},
+            {"name": "McHugh", "min": 1, "fg": "0-1", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "pts": 0},
+            {"name": "Fitzner", "min": 2, "fg": "0-1", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

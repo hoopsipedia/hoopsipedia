@@ -1,0 +1,44 @@
+{
+  "page": 25,
+  "games": [
+    {
+      "date": "1991-02-16",
+      "opponent": "Stanford",
+      "ucla_score": 89,
+      "opp_score": 86,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 89,
+          "players": [
+            {"name": "Butler", "min": 26, "fg": "2-3", "tp": "0-1", "ft": "7-9", "reb": 6, "ast": 3, "pf": 3, "to": 0, "stl": 0, "blk": 1, "pts": 11},
+            {"name": "Murray", "min": 39, "fg": "5-15", "tp": "0-1", "ft": "8-12", "reb": 7, "ast": 2, "pf": 4, "to": 3, "stl": 0, "blk": 1, "pts": 18},
+            {"name": "Owens", "min": 29, "fg": "0-2", "tp": "0-0", "ft": "0-0", "reb": 7, "ast": 3, "pf": 4, "to": 1, "stl": 0, "blk": 1, "pts": 0},
+            {"name": "Madkins", "min": 33, "fg": "7-9", "tp": "3-4", "ft": "4-4", "reb": 3, "ast": 1, "pf": 4, "to": 0, "stl": 0, "blk": 0, "pts": 21},
+            {"name": "Martin", "min": 38, "fg": "8-13", "tp": "0-2", "ft": "4-6", "reb": 5, "ast": 3, "pf": 1, "to": 3, "stl": 1, "blk": 0, "pts": 20},
+            {"name": "Tarver", "min": 21, "fg": "5-10", "tp": "3-5", "ft": "2-2", "reb": 2, "ast": 3, "pf": 1, "to": 1, "stl": 2, "blk": 0, "pts": 15},
+            {"name": "Zimmerman", "min": 12, "fg": "2-2", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 1, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Mason", "min": 2, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Stanford Cardinal",
+          "score": 86,
+          "players": [
+            {"name": "Williams", "min": 34, "fg": "5-10", "tp": "0-0", "ft": "4-7", "reb": 9, "ast": 3, "pf": 5, "to": 1, "stl": 0, "blk": 0, "pts": 14},
+            {"name": "Wingate", "min": 37, "fg": "3-8", "tp": "0-0", "ft": "2-4", "reb": 9, "ast": 0, "pf": 4, "to": 1, "stl": 1, "blk": 0, "pts": 8},
+            {"name": "Keefe", "min": 40, "fg": "9-15", "tp": "0-0", "ft": "3-4", "reb": 7, "ast": 6, "pf": 0, "to": 2, "stl": 0, "blk": 0, "pts": 21},
+            {"name": "Patrick", "min": 31, "fg": "7-11", "tp": "6-9", "ft": "2-2", "reb": 2, "ast": 5, "pf": 1, "to": 4, "stl": 0, "blk": 0, "pts": 22},
+            {"name": "Ammann", "min": 20, "fg": "4-9", "tp": "3-8", "ft": "0-0", "reb": 0, "ast": 3, "pf": 5, "to": 1, "stl": 2, "blk": 0, "pts": 11},
+            {"name": "Lollie", "min": 17, "fg": "3-6", "tp": "0-1", "ft": "1-2", "reb": 0, "ast": 3, "pf": 5, "to": 0, "stl": 1, "blk": 0, "pts": 7},
+            {"name": "Morgan", "min": 9, "fg": "1-1", "tp": "0-0", "ft": "1-3", "reb": 0, "ast": 0, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 3},
+            {"name": "Dukes", "min": 4, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Hicks", "min": 0, "fg": "0-1", "tp": "0-1", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

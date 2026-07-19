@@ -1,0 +1,9 @@
+{
+  "page": 7,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page 7 is a handwritten SWC official scoresheet: Ohio State (70) at Arkansas (79), Dec 14 1985, Pine Bluff AR (OT game, team MIN totals=225 confirm 1 OT). Team-level TOTALS rows are legible and internally consistent (OSU: FG 22-58, FT 26-36, 2*22+26=70 match; ARK: FG 27-77, FT 25-32, 2*27+25=79 match), but individual player rows are handwritten in a cramped multi-column format (FG/FGA/FT/FTA, OR/DR/T rebounds, PF, TP, then a separate A/TO/BLK/S/MIN box) with numerous ambiguous or internally-inconsistent digits (e.g. apparent FT-made exceeding FT-attempted on some rows, a implausible one-player TP value exceeding what that player's FG/FT digits could support, and MIN values that don't parse as sensible clock minutes). Could not reach confident, non-invented per-player lines for either team from a single read, so per the ruthless-skip instruction this game is skipped entirely rather than guessing individual stat lines."
+    }
+  ]
+}

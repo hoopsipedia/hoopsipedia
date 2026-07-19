@@ -1,0 +1,46 @@
+{
+  "page": 28,
+  "games": [
+    {
+      "date": "1991-02-28",
+      "opponent": "Washington State",
+      "ucla_score": 99,
+      "opp_score": 91,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 99,
+          "players": [
+            {"name": "Don MacLean", "min": 39, "fg": "12-19", "ft": "9-10", "reb": 15, "ast": 1, "pf": 3, "to": 3, "stl": 1, "pts": 33},
+            {"name": "Tracy Murray", "min": 38, "fg": "8-17", "tp": "0-3", "ft": "4-5", "reb": 11, "ast": 2, "pf": 3, "to": 3, "stl": 3, "blk": 1, "pts": 20},
+            {"name": "Gerald Madkins", "min": 30, "fg": "3-8", "tp": "0-1", "ft": "4-6", "reb": 5, "ast": 4, "pf": 2, "to": 4, "pts": 10},
+            {"name": "Darrick Martin", "min": 38, "fg": "11-15", "tp": "1-1", "ft": "8-12", "reb": 2, "ast": 5, "pf": 4, "to": 2, "stl": 3, "pts": 31},
+            {"name": "Mitchell Butler", "min": 15, "fg": "0-3", "reb": 4, "ast": 2, "to": 1, "stl": 1, "pts": 0},
+            {"name": "Shon Tarver", "min": 23, "fg": "1-3", "ft": "1-3", "reb": 2, "ast": 3, "pf": 3, "to": 1, "pts": 3},
+            {"name": "Keith Owens", "min": 7, "fg": "1-1", "reb": 3, "ast": 2, "pf": 2, "to": 1, "pts": 2},
+            {"name": "Zan Mason", "min": 2, "pts": 0},
+            {"name": "Rodney Zimmerman", "min": 8, "pts": 0}
+          ]
+        },
+        {
+          "name": "Washington State Cougars",
+          "score": 91,
+          "players": [
+            {"name": "Ken Critton", "min": 36, "fg": "4-9", "reb": 7, "pf": 4, "pts": 8},
+            {"name": "David Vik", "min": 12, "fg": "1-4", "reb": 2, "pf": 4, "pts": 2},
+            {"name": "Bennie Seltzer", "min": 17, "fg": "3-11", "tp": "0-1", "ft": "3-4", "reb": 4, "ast": 1, "pf": 2, "to": 3, "pts": 9},
+            {"name": "Terrence Lewis", "min": 35, "fg": "4-18", "tp": "1-9", "ft": "4-4", "reb": 7, "ast": 5, "pf": 4, "to": 3, "pts": 13},
+            {"name": "Neil Derrick", "min": 34, "fg": "3-12", "ft": "2-2", "reb": 2, "pf": 1, "to": 1, "stl": 3, "pts": 8},
+            {"name": "Tyrone Maxey", "min": 24, "fg": "2-5", "tp": "0-1", "ft": "4-5", "reb": 1, "ast": 2, "pf": 4, "stl": 1, "pts": 8},
+            {"name": "Brian Paine", "min": 22, "fg": "10-12", "ft": "1-2", "reb": 6, "ast": 1, "pf": 3, "to": 2, "blk": 3, "stl": 1, "pts": 21},
+            {"name": "Eddie Hill", "min": 12, "fg": "4-6", "tp": "1-3", "ft": "7-9", "reb": 2, "pf": 2, "to": 2, "pts": 16},
+            {"name": "Rob Corkrum", "min": 7, "fg": "2-3", "reb": 2, "to": 2, "pts": 4},
+            {"name": "Juan Thomas", "min": 1, "fg": "1-1", "reb": 2, "pf": 3, "to": 2, "pts": 2}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

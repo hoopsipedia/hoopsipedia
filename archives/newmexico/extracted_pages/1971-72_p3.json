@@ -1,0 +1,47 @@
+{
+  "page": 3,
+  "games": [
+    {
+      "date": "1971-12-06",
+      "opponent": "New Mexico State Aggies",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 79,
+          "players": [
+            {"name": "Mike Stewart", "min": 28, "fg": "2-9", "ft": "0-0", "reb": 4, "ast": 2, "pf": 2, "to": 2, "pts": 4},
+            {"name": "Rick Wright", "min": 0, "pts": 0},
+            {"name": "Gabe Nava", "min": 1, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 1, "pts": 0},
+            {"name": "John Fifield", "min": 9, "fg": "1-5", "ft": "0-1", "reb": 3, "ast": 0, "pf": 1, "to": 3, "pts": 2},
+            {"name": "Chester Fuller", "min": 18, "fg": "5-13", "ft": "7-7", "reb": 2, "ast": 1, "pf": 5, "to": 2, "pts": 17},
+            {"name": "Tommy Roberts", "min": 31, "fg": "5-6", "ft": "6-7", "reb": 0, "ast": 5, "pf": 5, "to": 1, "pts": 16},
+            {"name": "Mike Faulkner", "min": 25, "fg": "5-11", "ft": "3-6", "reb": 14, "ast": 0, "pf": 3, "to": 7, "pts": 13},
+            {"name": "John Mulligan", "min": 6, "fg": "0-2", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "to": 0, "pts": 0},
+            {"name": "Mark Saiers", "min": 17, "fg": "2-8", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "pts": 4},
+            {"name": "Harold Little", "min": 26, "fg": "5-8", "ft": "3-5", "reb": 7, "ast": 3, "pf": 2, "to": 5, "pts": 13},
+            {"name": "Darryl Minniefield", "min": 35, "fg": "4-8", "ft": "2-4", "reb": 11, "ast": 3, "pf": 5, "to": 2, "pts": 10},
+            {"name": "Paul Kruse", "min": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "New Mexico State Aggies",
+          "score": 94,
+          "players": [
+            {"name": "John Williamson", "min": 16, "fg": "3-10", "ft": "0-0", "reb": 2, "ast": 1, "pf": 4, "to": 2, "pts": 6},
+            {"name": "Roland Grant", "min": 30, "fg": "9-19", "ft": "5-9", "reb": 8, "ast": 1, "pf": 2, "to": 2, "pts": 23},
+            {"name": "Truman Ward", "min": 30, "fg": "5-10", "ft": "2-4", "reb": 10, "ast": 1, "pf": 3, "to": 4, "pts": 12},
+            {"name": "Alex Scott", "min": 38, "fg": "10-18", "ft": "5-7", "reb": 6, "ast": 7, "pf": 2, "to": 4, "pts": 25},
+            {"name": "Roy Neal", "min": 11, "fg": "0-0", "ft": "2-2", "reb": 2, "ast": 1, "pf": 1, "to": 0, "pts": 2},
+            {"name": "Hal Robinson", "min": 19, "fg": "2-3", "ft": "3-4", "reb": 5, "ast": 2, "pf": 1, "to": 2, "pts": 7},
+            {"name": "Elgren Green", "min": 2, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 1, "pts": 0},
+            {"name": "Bill Moore", "min": 25, "fg": "3-8", "ft": "0-0", "reb": 0, "ast": 8, "pf": 5, "to": 1, "pts": 6},
+            {"name": "Bill Ford", "min": 29, "fg": "5-6", "ft": "3-4", "reb": 4, "ast": 3, "pf": 3, "to": 4, "pts": 13}
+          ]
+        }
+      ],
+      "checksum_ok": true,
+      "notes": "Points for Mike Stewart and Mark Saiers (New Mexico) were computed as 2*fg_made+ft_made since the printed total-points digit was ambiguous; the resulting values were cross-validated because they make both teams' player point sums equal the recorded final scores (79 and 94) and player FG-made/FT-made sums equal the team totals rows exactly."
+    }
+  ],
+  "skipped": []
+}

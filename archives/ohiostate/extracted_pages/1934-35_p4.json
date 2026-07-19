@@ -1,0 +1,9 @@
+{
+  "page": 4,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page holds a faint/blurry newspaper clipping box score for Ohio State vs Temple (Dec. 28, 1934, Philadelphia; final Temple 28, Ohio State 24; halftime 16-16 per article prose). Two player lines are corroborated by the article's narrative text (Laybourne f. 3-0-6 field goals for OSU; Messikomer g. 5-1-11 for Temple), but the rest of both lineups' G/F/T columns (Wilson, Whittinger, Peters, Busick, Thomas, George, Beitner, Dye, Wendt for Ohio State; Fox, Dubin, Junger, Rosan, Casper for Temple) and both totals rows are too degraded/small in the scan to read with confidence, and several cells appear internally inconsistent (e.g. a computed 2*FG+FT mismatch on at least one Temple line). A header table at the top of the page ('SCORE OHIO 4 OPP 25, ATTENDANCE 3,500, CAPTAIN Beitner') also does not match the clipping's actual final score (24-28), suggesting it belongs to a different entry and should not be trusted as a substitute. Per instructions, skipping rather than guessing at the illegible cells and checksum."
+    }
+  ]
+}

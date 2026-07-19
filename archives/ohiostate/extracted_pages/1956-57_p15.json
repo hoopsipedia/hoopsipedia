@@ -1,0 +1,44 @@
+{
+  "page": 15,
+  "games": [
+    {
+      "date": "1957-01-26",
+      "opponent": "Northwestern",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 83,
+          "players": [
+            {"name": "Sidle", "fg": "8-13", "ft": "3-3", "reb": 10, "pf": 3, "pts": 19},
+            {"name": "Howard", "fg": "7-15", "ft": "6-7", "reb": 11, "pf": 4, "pts": 20},
+            {"name": "Huston", "fg": "5-10", "ft": "3-5", "reb": 12, "pf": 3, "pts": 13},
+            {"name": "Laughlin", "fg": "9-20", "ft": "2-3", "reb": 5, "pf": 1, "pts": 20},
+            {"name": "Millard", "fg": "4-12", "ft": "3-4", "reb": 2, "pf": 1, "pts": 11},
+            {"name": "Martin", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Snyder", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Mosier", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Steagall", "fg": "0-0", "ft": "0-1", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Barkstall", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Northwestern",
+          "score": 73,
+          "players": [
+            {"name": "Warren", "fg": "1-7", "ft": "2-2", "reb": 4, "pf": 1, "pts": 4},
+            {"name": "Duhart", "fg": "3-9", "ft": "0-0", "reb": 6, "pf": 3, "pts": 6},
+            {"name": "Ruklick", "fg": "8-22", "ft": "3-4", "reb": 12, "pf": 5, "pts": 19},
+            {"name": "Mantis", "fg": "7-16", "ft": "0-0", "reb": 4, "pf": 3, "pts": 14},
+            {"name": "Hook", "fg": "1-4", "ft": "1-1", "reb": 1, "pf": 2, "pts": 3},
+            {"name": "Mast", "fg": "5-8", "ft": "0-2", "reb": 2, "pf": 1, "pts": 10},
+            {"name": "Johnson", "fg": "8-16", "ft": "1-2", "reb": 4, "pf": 1, "pts": 17},
+            {"name": "Schulz", "fg": "0-2", "ft": "0-0", "reb": 1, "pf": 0, "pts": 0},
+            {"name": "Uebele", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

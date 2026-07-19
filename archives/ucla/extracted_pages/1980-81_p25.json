@@ -1,0 +1,45 @@
+{
+  "page": 25,
+  "games": [
+    {
+      "date": "1981-03-05",
+      "opponent": "Washington State",
+      "ucla_score": 59,
+      "opp_score": 50,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 59,
+          "players": [
+            {"name": "Ralph Jackson", "min": 37, "fg": "4-6", "ft": "3-4", "reb": 2, "pf": 0, "ast": 4, "to": 2, "blk": 0, "stl": 4, "pts": 11},
+            {"name": "Michael Holton", "min": 37, "fg": "0-4", "ft": "3-4", "reb": 1, "pf": 3, "to": 3, "pts": 3},
+            {"name": "Cliff Pruitt", "min": 27, "fg": "4-8", "ft": "1-3", "reb": 5, "pf": 3, "to": 1, "pts": 9},
+            {"name": "Mike Sanders", "min": 38, "fg": "3-6", "ft": "4-4", "reb": 4, "pf": 2, "ast": 3, "to": 3, "blk": 4, "stl": 1, "pts": 10},
+            {"name": "Derren Daye", "min": 26, "fg": "3-5", "ft": "3-3", "reb": 3, "pf": 1, "ast": 3, "pts": 9},
+            {"name": "Dean Sears", "min": 8, "fg": "0-1", "ft": "0-0", "reb": 0, "pf": 1, "to": 3, "pts": 0},
+            {"name": "Rory Anderson", "min": 10, "fg": "1-2", "ft": "1-2", "reb": 2, "pf": 3, "to": 2, "pts": 3},
+            {"name": "Kenny Fields", "min": 17, "fg": "6-7", "ft": "2-2", "reb": 2, "pf": 2, "to": 2, "pts": 14}
+          ]
+        },
+        {
+          "name": "Washington State Cougars",
+          "score": 50,
+          "players": [
+            {"name": "Dennis Hicks", "min": 40, "fg": "4-6", "ft": "2-6", "reb": 3, "pf": 3, "ast": 2, "to": 4, "blk": 1, "pts": 10},
+            {"name": "Steve Harfiel", "min": 40, "fg": "3-6", "ft": "4-4", "reb": 3, "pf": 3, "to": 2, "stl": 1, "pts": 10},
+            {"name": "Ollie Johnson", "min": 16, "fg": "3-6", "ft": "0-0", "reb": 3, "pf": 1, "to": 3, "pts": 6},
+            {"name": "Tyrone Brown", "min": 22, "fg": "4-5", "ft": "0-0", "reb": 0, "pf": 1, "ast": 2, "to": 5, "pts": 8},
+            {"name": "Ken McFadden", "min": 40, "fg": "4-14", "ft": "2-2", "reb": 2, "pf": 3, "to": 3, "stl": 1, "pts": 10},
+            {"name": "Ronnie Joyner", "min": 3, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "to": 1, "pts": 0},
+            {"name": "Brad Ness", "min": 18, "fg": "0-2", "ft": "2-2", "reb": 1, "pf": 4, "ast": 1, "to": 2, "stl": 2, "pts": 2},
+            {"name": "Bryan Bollard", "min": 10, "fg": "1-3", "ft": "2-2", "reb": 1, "pf": 1, "stl": 1, "pts": 4},
+            {"name": "Aaron Haskins", "min": 7, "fg": "0-1", "ft": "0-0", "reb": 1, "pf": 2, "pts": 0},
+            {"name": "Mike Wurm", "min": 4, "fg": "0-0", "ft": "0-0", "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

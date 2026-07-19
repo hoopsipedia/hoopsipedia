@@ -1,0 +1,9 @@
+{
+  "page": 12,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Official Western Conference box score, Ohio State (visiting, 76) at Illinois (home, 90), date January 11, 1954. Ohio State's player lines checksum perfectly (FG, FGA, FT-made, FT-attempted, PF all sum to team totals; sum of player PTS = 76 = final score). However Illinois's player lines fail checksum: summing the legible player PTS column (5+10+38+16+16+2+2+6+0+0=95) does not reconcile with the team total of 90 or the final score of 90, and several individual rows (Wright G, Paul Judson G) don't satisfy PTS = 2*FG + FT as the clean Ohio State rows do, indicating OCR/legibility issues in the Illinois FT or PTS columns (faded/smudged photocopy). Since the game requires both teams' data and Illinois cannot be transcribed with confidence, the entire game is skipped rather than guessing values."
+    }
+  ]
+}

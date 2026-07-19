@@ -1,0 +1,39 @@
+{
+  "page": 20,
+  "games": [
+    {
+      "date": "1970-02-17",
+      "opponent": "George Washington",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 84,
+          "players": [
+            {"name": "Chip Case", "fg": "9-20", "ft": "2-3", "reb": 4, "ast": 4, "pf": 5, "to": 0, "stl": 0, "blk": 0, "pts": 20},
+            {"name": "Bill Gerry", "fg": "10-13", "ft": "8-11", "reb": 11, "ast": 4, "pf": 1, "to": 8, "stl": 0, "blk": 0, "pts": 28},
+            {"name": "John Hill", "fg": "10-19", "ft": "3-5", "reb": 15, "ast": 3, "pf": 3, "to": 0, "stl": 0, "blk": 0, "pts": 23},
+            {"name": "Tim Rash", "fg": "1-7", "ft": "0-0", "reb": 3, "ast": 2, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Kevin Kannelly", "fg": "1-2", "ft": "0-1", "reb": 2, "ast": 8, "pf": 1, "to": 3, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Chip Miller", "fg": "2-9", "ft": "0-0", "reb": 3, "ast": 1, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Frank DeWitt", "fg": "2-5", "ft": "1-1", "reb": 1, "ast": 0, "pf": 3, "to": 0, "stl": 0, "blk": 0, "pts": 5}
+          ]
+        },
+        {
+          "name": "George Washington",
+          "score": 87,
+          "players": [
+            {"name": "Mike Tallent", "fg": "7-14", "ft": "3-4", "reb": 2, "ast": 4, "pf": 3, "to": 0, "stl": 0, "blk": 0, "pts": 17},
+            {"name": "Ronnie Nunn", "fg": "1-7", "ft": "2-2", "reb": 2, "ast": 3, "pf": 0, "to": 5, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Bill Knorr", "fg": "6-10", "ft": "0-0", "reb": 8, "ast": 3, "pf": 2, "to": 6, "stl": 0, "blk": 0, "pts": 12},
+            {"name": "Walt Szczerbiak", "fg": "13-19", "ft": "5-7", "reb": 12, "ast": 1, "pf": 1, "to": 5, "stl": 0, "blk": 0, "pts": 31},
+            {"name": "John Conrad", "fg": "3-7", "ft": "2-2", "reb": 5, "ast": 2, "pf": 3, "to": 0, "stl": 0, "blk": 0, "pts": 8},
+            {"name": "Lenny Baltimore", "fg": "5-7", "ft": "3-3", "reb": 5, "ast": 4, "pf": 3, "to": 0, "stl": 0, "blk": 0, "pts": 13},
+            {"name": "Ralph Barnett", "fg": "0-4", "ft": "2-2", "reb": 2, "ast": 6, "pf": 3, "to": 4, "stl": 0, "blk": 0, "pts": 2}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

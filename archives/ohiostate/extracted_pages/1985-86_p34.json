@@ -1,0 +1,42 @@
+{
+  "page": 34,
+  "games": [
+    {
+      "date": "1986-03-26",
+      "opponent": "Wyoming Cowboys (1986 NIT Championship, Madison Square Garden, New York, NY)",
+      "teams": [
+        {
+          "name": "Wyoming Cowboys",
+          "score": 63,
+          "players": [
+            {"name": "Fennis Lembo", "min": 40, "fg": "10-17", "ft": "7-8", "reb": "1-6", "ast": 3, "pf": 3, "to": 3, "stl": 1, "pts": 27},
+            {"name": "Jon Sommers", "min": 38, "fg": "2-4", "ft": "0-1", "reb": "2-7", "ast": 6, "pf": 4, "to": 5, "stl": 0, "pts": 4},
+            {"name": "Eric Leckner", "min": 24, "fg": "3-7", "ft": "0-0", "reb": "0-2", "ast": 0, "pf": 5, "to": 5, "stl": 0, "pts": 6},
+            {"name": "Les Bolden", "min": 40, "fg": "5-8", "ft": "4-4", "reb": "0-5", "ast": 5, "pf": 2, "to": 4, "stl": 1, "pts": 14},
+            {"name": "Sean Dent", "min": 22, "fg": "0-0", "ft": "0-1", "reb": "0-2", "ast": 6, "pf": 5, "to": 0, "stl": 0, "pts": 0},
+            {"name": "Turk Boyd", "min": 18, "fg": "3-7", "ft": "0-0", "reb": "1-1", "ast": 1, "pf": 0, "to": 1, "stl": 0, "pts": 6},
+            {"name": "Dave Lodgins", "min": 17, "fg": "3-7", "ft": "0-0", "reb": "1-0", "ast": 0, "pf": 1, "to": 0, "stl": 0, "pts": 6},
+            {"name": "Chris Hiti", "min": 1, "fg": "0-1", "ft": "0-0", "reb": "0-0", "ast": 0, "pf": 0, "to": 0, "stl": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 73,
+          "players": [
+            {"name": "Jerry Francis", "min": 34, "fg": "1-2", "ft": "2-3", "reb": "1-1", "ast": 5, "pf": 3, "to": 0, "stl": 2, "pts": 4},
+            {"name": "Brad Sellers", "min": 40, "fg": "7-16", "ft": "3-3", "reb": "4-8", "ast": 1, "pf": 2, "to": 3, "stl": 2, "pts": 17},
+            {"name": "Keith Wesson", "min": 21, "fg": "1-4", "ft": "3-4", "reb": "1-3", "ast": 0, "pf": 4, "to": 1, "stl": 0, "pts": 5},
+            {"name": "Dennis Hopson", "min": 40, "fg": "12-17", "ft": "2-3", "reb": "1-3", "ast": 3, "pf": 1, "to": 1, "blk": 1, "stl": 1, "pts": 26},
+            {"name": "Curtis Wilson", "min": 28, "fg": "4-10", "ft": "2-4", "reb": "1-2", "ast": 6, "pf": 3, "to": 3, "blk": 4, "stl": 0, "pts": 10},
+            {"name": "Kip Lomax", "min": 21, "fg": "0-2", "ft": "3-4", "reb": "0-0", "ast": 2, "pf": 0, "to": 0, "blk": 0, "stl": 0, "pts": 3},
+            {"name": "Clarence McGee", "min": 10, "fg": "1-5", "ft": "0-0", "reb": "1-0", "ast": 0, "pf": 0, "to": 0, "blk": 1, "stl": 0, "pts": 2},
+            {"name": "Jay Burson", "min": 6, "fg": "2-3", "ft": "2-2", "ast": 1, "pf": 1, "to": 1, "blk": 0, "stl": 0, "pts": 6}
+          ]
+        }
+      ],
+      "checksum_ok": true,
+      "notes": "1986 NIT Championship game, March 26, 1986, Madison Square Garden. Points transcribed directly from the sheet's TP column (not computed). Points checksum passes exactly for both teams (Wyoming 63=63, Ohio State 73=73), as does the assists column for Ohio State (sum 18 = team total 18) and turnovers (sum 9 = team total 9). Ohio State's individual FG-made sum (28) is 1 off the team total (29), and individual BLK/STL sums do not cleanly reconcile against the team totals row (3 BLK / 9 STL) — likely a scorer tally quirk or a hard-to-read digit in a secondary column; since these are not the required checksum field (points) and points reconcile exactly, the game is kept rather than skipped."
+    }
+  ],
+  "skipped": []
+}

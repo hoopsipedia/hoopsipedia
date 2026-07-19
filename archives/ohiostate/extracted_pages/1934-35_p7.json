@@ -1,0 +1,12 @@
+{
+  "page": 7,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Top-of-page 'SCORE OHIO OPP. 32 / ATTENDANCE 5067 / CAPTAIN Beitner' box appears to be the tail end of a different game's summary carried over from a prior page; no opponent name, date, or player lines are present on this page, so it cannot be transcribed as a complete game record."
+    },
+    {
+      "reason": "Newspaper clipping for the Jan. 5, 1935 Ohio State at Iowa game (final score legible in the article text and season-log footer as Iowa 32, Ohio State 21) includes a 'Lineups' box score for both teams (Iowa: Rosenthal, Barko, Bruggeman, Blackmer, Gribi, Bobzy; Ohio State: Laybourne, Wilms, Boesch, George, Thomas, Bellner, Whitlinger, Smith, Dye) with G/F/PF/Pts columns, but the scanned print is too small and degraded to confidently read individual digits in the G, F, PF, and Pts columns for each player. Rather than guess values that could fail or falsely pass the checksum, this game's per-player box score is skipped."
+    }
+  ]
+}

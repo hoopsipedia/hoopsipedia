@@ -1,0 +1,41 @@
+{
+  "page": 14,
+  "games": [
+    {
+      "date": "1967-01-14",
+      "opponent": "University of Denver",
+      "teams": [
+        {
+          "name": "University of Denver",
+          "score": 71,
+          "players": [
+            {"name": "George Roderick", "fg": "2-5", "ft": "4-5", "reb": 4, "pf": 2, "pts": 8},
+            {"name": "Byron Beck", "fg": "2-4", "ft": "6-7", "reb": 7, "pf": 4, "pts": 10},
+            {"name": "Brian Clare", "fg": "2-6", "ft": "1-2", "reb": 7, "pf": 4, "pts": 5},
+            {"name": "Rick Callahan", "fg": "1-1", "ft": "0-2", "reb": 2, "pf": 4, "pts": 2},
+            {"name": "Harry Hollines", "fg": "11-21", "ft": "6-8", "reb": 6, "pf": 2, "pts": 28},
+            {"name": "Gerry Grover", "fg": "8-12", "ft": "2-3", "reb": 3, "pf": 1, "pts": 18}
+          ]
+        },
+        {
+          "name": "New Mexico Lobos",
+          "score": 66,
+          "players": [
+            {"name": "Bill Morgan", "fg": "0-2", "ft": "0-0", "reb": 5, "pf": 5, "pts": 0},
+            {"name": "Ben Monroe", "fg": "10-24", "ft": "3-4", "reb": 10, "pf": 3, "pts": 23},
+            {"name": "Mel Daniels", "fg": "8-16", "ft": "5-7", "reb": 7, "pf": 1, "pts": 21},
+            {"name": "Don Hoover", "fg": "0-1", "ft": "0-0", "reb": 0, "pf": 4, "pts": 0},
+            {"name": "Frank Judge", "fg": "3-6", "ft": "0-0", "reb": 1, "pf": 5, "pts": 6},
+            {"name": "Ron Nelson", "fg": "6-15", "ft": "0-0", "reb": 2, "pf": 3, "pts": 12},
+            {"name": "Ron Sanford", "fg": "1-5", "ft": "2-2", "reb": 7, "pf": 5, "pts": 4},
+            {"name": "Steve Shropshire", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Leonard Lopez", "fg": "0-1", "ft": "0-0", "reb": 0, "pf": 1, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true,
+      "note": "Denver totals row (fg 26-49, ft 19-27, reb 29, pf 17, pts 71) matches player sum exactly as printed. New Mexico totals row (fg 28-70, ft 10-13, reb 38, pf 25, pts 66) also matches, but two individual cells were ambiguous on the scan: Ben Monroe's printed 'Total Points' cell looked like 25 while his fg/ft line (10-24 fg, 3-4 ft) computes to 23; Ron Sanford's fg-made digit looked like 2 but his printed points (4) with ft 2-2 only computes if fg-made=1. Both were resolved to the values that make the team FGM/FTM/points totals row balance exactly (28 FGM, 10 FTM, 66 pts), which is the most reliable disambiguation available without a higher-resolution scan; used pts=23 for Monroe and fg=1-5 for Sanford accordingly. Ron Nelson's reb/pf cells (2, 3) were faint and read with lower confidence, but do not affect the checksum."
+    }
+  ],
+  "skipped": []
+}

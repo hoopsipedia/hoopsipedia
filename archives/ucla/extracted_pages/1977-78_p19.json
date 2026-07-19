@@ -1,0 +1,50 @@
+{
+  "page": 19,
+  "games": [
+    {
+      "date": "1978-02-10",
+      "opponent": "California",
+      "ucla_score": 78,
+      "opp_score": 64,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 78,
+          "players": [
+            {"name": "James Wilkes", "min": "18", "fg": "1-3", "ft": "2-2", "reb": "1+5", "ast": 1, "to": 5, "blk": 1, "stl": 1, "pf": 3, "pts": 4},
+            {"name": "David Greenwood", "min": "35.5", "fg": "6-16", "ft": "8-10", "reb": "3+10", "ast": 3, "to": 2, "blk": 0, "stl": 1, "pf": 3, "pts": 20},
+            {"name": "Sig Sims", "min": "18.5", "fg": "1-1", "ft": "1-2", "reb": "1+5", "ast": 1, "to": 0, "blk": 2, "stl": 1, "pf": 5, "pts": 3},
+            {"name": "Roy Hamilton", "min": "36", "fg": "8-13", "ft": "3-4", "reb": "0+0", "ast": 5, "to": 2, "blk": 0, "stl": 0, "pf": 2, "pts": 19},
+            {"name": "Raymond Townsend", "min": "35.5", "fg": "6-14", "ft": "2-2", "reb": "0+3", "ast": 9, "to": 2, "blk": 1, "stl": 1, "pf": 1, "pts": 14},
+            {"name": "Darrell Allums", "min": "17.5", "fg": "2-5", "ft": "2-2", "reb": "1+2", "ast": 1, "to": 2, "blk": 0, "stl": 1, "pf": 4, "pts": 6},
+            {"name": "Kiki Vandeweghe", "min": "25", "fg": "4-5", "ft": "4-8", "reb": "4+4", "ast": 0, "to": 2, "blk": 0, "stl": 0, "pf": 2, "pts": 12},
+            {"name": "Brad Holland", "min": "7", "fg": "0-1", "ft": "0-0", "reb": "0+1", "ast": 0, "to": 3, "blk": 0, "stl": 0, "pf": 1, "pts": 0},
+            {"name": "Marvin Thomas", "min": "2.5", "fg": "0-3", "ft": "0-0", "reb": "1+1", "ast": 0, "to": 1, "blk": 0, "stl": 0, "pf": 0, "pts": 0},
+            {"name": "Tony Anderson", "min": "1.5", "fg": "0-2", "ft": "0-0", "reb": "2+0", "ast": 0, "to": 0, "blk": 0, "stl": 0, "pf": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "California",
+          "score": 64,
+          "players": [
+            {"name": "Kevin Singleton", "min": "24.5", "fg": "2-8", "ft": "3-4", "reb": "1+1", "ast": 0, "to": 1, "blk": 0, "stl": 0, "pf": 3, "pts": 7},
+            {"name": "Doug True", "min": "22.5", "fg": "1-7", "ft": "1-2", "reb": "2+3", "ast": 1, "to": 0, "blk": 0, "stl": 0, "pf": 5, "pts": 3},
+            {"name": "Tom Schneiderjohn", "min": "29.5", "fg": "6-14", "ft": "3-5", "reb": "5+5", "ast": 2, "to": 2, "blk": 0, "stl": 0, "pf": 4, "pts": 15},
+            {"name": "Gene Ransom", "min": "30.5", "fg": "3-15", "ft": "0-0", "reb": "2+1", "ast": 4, "to": 4, "blk": 0, "stl": 1, "pf": 3, "pts": 6},
+            {"name": "John Caselli", "min": "25", "fg": "2-6", "ft": "0-3", "reb": "1+2", "ast": 3, "to": 1, "blk": 1, "stl": 2, "pf": 2, "pts": 4},
+            {"name": "Charles Mitchell", "min": "22.5", "fg": "2-6", "ft": "3-4", "reb": "0+5", "ast": 0, "to": 1, "blk": 0, "stl": 0, "pf": 4, "pts": 7},
+            {"name": "Doug Vilotti", "min": "16", "fg": "4-5", "ft": "0-0", "reb": "1+2", "ast": 2, "to": 0, "blk": 0, "stl": 2, "pf": 1, "pts": 8},
+            {"name": "Tyrone Davis", "min": "21", "fg": "5-10", "ft": "0-0", "reb": "0+1", "ast": 4, "to": 1, "blk": 0, "stl": 2, "pf": 1, "pts": 10},
+            {"name": "Walt Gillespie", "min": "2", "fg": "2-2", "ft": "0-0", "reb": "0+2", "ast": 0, "to": 1, "blk": 2, "stl": 0, "pf": 0, "pts": 4},
+            {"name": "Eric Vial", "min": "2", "fg": "0-1", "ft": "0-0", "reb": "0+0", "ast": 1, "to": 0, "blk": 1, "stl": 0, "pf": 0, "pts": 0},
+            {"name": "Phil Wilhite", "min": "1.5", "fg": "0-1", "ft": "0-0", "reb": "0+1", "ast": 0, "to": 1, "blk": 0, "stl": 0, "pf": 1, "pts": 0},
+            {"name": "Jim Griffith", "min": "1.5", "fg": "0-1", "ft": "0-0", "reb": "1+0", "ast": 0, "to": 0, "blk": 0, "stl": 0, "pf": 0, "pts": 0},
+            {"name": "Dan Besovich", "min": "1.5", "fg": "0-0", "ft": "0-0", "reb": "0+0", "ast": 0, "to": 0, "blk": 0, "stl": 0, "pf": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

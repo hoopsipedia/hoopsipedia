@@ -1,0 +1,45 @@
+{
+  "page": 14,
+  "games": [
+    {
+      "date": "1980-01-12",
+      "opponent": "N.C. State",
+      "location": "Reynolds Coliseum, Raleigh, N.C.",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 56,
+          "players": [
+            {"name": "Craig Robinson", "min": "17", "fg": "2-3", "ft": "1-2", "reb": 2, "pf": 1, "pts": 5, "ast": 0, "to": 1, "blk": 0, "stl": 0},
+            {"name": "Mike Owens", "min": "17", "fg": "0-5", "ft": "0-4", "reb": 1, "pf": 1, "pts": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0},
+            {"name": "Ralph Sampson", "min": "38", "fg": "4-10", "ft": "3-4", "reb": 11, "pf": 2, "pts": 11, "ast": 2, "to": 0, "blk": 2, "stl": 0},
+            {"name": "Jeff Lamp", "min": "46", "fg": "8-14", "ft": "9-10", "reb": 3, "pf": 3, "pts": 25, "ast": 0, "to": 3, "blk": 0, "stl": 0},
+            {"name": "Jeff Jones", "min": "25", "fg": "1-3", "ft": "2-2", "reb": 0, "pf": 5, "pts": 4, "ast": 3, "to": 3, "blk": 1, "stl": 0},
+            {"name": "Jeff Klein", "min": "8", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 1, "pts": 0, "ast": 2, "to": 0, "blk": 0, "stl": 0},
+            {"name": "Terry Gates", "min": "16", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 3, "pts": 0, "ast": 3, "to": 0, "blk": 0, "stl": 0},
+            {"name": "Doug Newburg", "min": "19", "fg": "1-2", "ft": "1-2", "reb": 0, "pf": 5, "pts": 3, "ast": 1, "to": 0, "blk": 0, "stl": 0},
+            {"name": "Garland Jefferson", "min": "20", "fg": "4-6", "ft": "0-0", "reb": 1, "pf": 4, "pts": 8, "ast": 0, "to": 0, "blk": 0, "stl": 1}
+          ]
+        },
+        {
+          "name": "N.C. State Wolfpack",
+          "score": 64,
+          "players": [
+            {"name": "Art Jones", "min": "21", "fg": "2-3", "ft": "1-4", "reb": 1, "pf": 4, "pts": 5, "ast": 1, "to": 1, "blk": 0, "stl": 1},
+            {"name": "Hawkeye Whitney", "min": "38", "fg": "8-15", "ft": "5-6", "reb": 6, "pf": 1, "pts": 21, "ast": 3, "to": 1, "blk": 1, "stl": 1},
+            {"name": "Craig Watts", "min": "30", "fg": "2-3", "ft": "2-4", "reb": 4, "pf": 4, "pts": 6, "ast": 2, "to": 1, "blk": 0, "stl": 1},
+            {"name": "Clyde Austin", "min": "19", "fg": "1-1", "ft": "0-0", "reb": 1, "pf": 2, "pts": 2, "ast": 3, "to": 2, "blk": 0, "stl": 1},
+            {"name": "Kenny Matthews", "min": "22", "fg": "3-5", "ft": "2-3", "reb": 2, "pf": 1, "pts": 8, "ast": 0, "to": 0, "blk": 0, "stl": 0},
+            {"name": "Scott Parzych", "min": "16", "fg": "1-1", "ft": "0-0", "reb": 2, "pf": 0, "pts": 2, "ast": 1, "to": 0, "blk": 0, "stl": 0},
+            {"name": "Derek Whittenburg", "min": "20", "fg": "2-4", "ft": "5-8", "reb": 2, "pf": 1, "pts": 9, "ast": 3, "to": 1, "blk": 0, "stl": 1},
+            {"name": "Sidney Lowe", "min": "23", "fg": "2-2", "ft": "7-9", "reb": 1, "pf": 2, "pts": 11, "ast": 0, "to": 0, "blk": 0, "stl": 0},
+            {"name": "Thurl Bailey", "min": "11", "fg": "0-1", "ft": "0-0", "reb": 2, "pf": 2, "pts": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": [],
+  "notes": "Points taken directly from the sheet's TP column (not derived) and checksummed against final scores: Virginia 56=56, N.C. State 64=64 (score by periods box also confirms VA 18+38=56, NCSU 28+36=64). Team-total row on the sheet has minor internal inconsistencies (e.g. printed FGA/REB team totals don't perfectly sum from player rows), but player-level pts, fg, ft figures were transcribed as written and pts sums match the final scores exactly, so both team lines pass checksum."
+}

@@ -1,0 +1,47 @@
+{
+  "page": 7,
+  "games": [
+    {
+      "date": "1988-12-19",
+      "opponent": "Jacksonville",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 86,
+          "players": [
+            {"name": "Bill Batts", "min": 20, "fg": "3-5", "ft": "4-4", "reb": 3, "pf": 1, "ast": 1, "to": 1, "blk": 2, "pts": 10},
+            {"name": "Kenny Turner", "min": 18, "fg": "2-4", "reb": 1, "pf": 1, "ast": 1, "pts": 4},
+            {"name": "Brent Bair", "min": 8, "fg": "0-2", "reb": 2, "pts": 0},
+            {"name": "Richard Morgan", "min": 32, "fg": "8-14", "tp": "2-4", "reb": 2, "pf": 2, "ast": 5, "stl": 2, "pts": 18},
+            {"name": "John Crotty", "min": 34, "fg": "5-10", "tp": "2-5", "ft": "3-5", "reb": 6, "pf": 2, "ast": 7, "to": 2, "stl": 1, "pts": 15},
+            {"name": "Curtis Williams", "min": 19, "fg": "5-8", "ft": "1-2", "reb": 2, "pf": 1, "to": 2, "pts": 11},
+            {"name": "Brent Dabbs", "min": 23, "fg": "4-9", "ft": "2-2", "reb": 10, "pf": 2, "ast": 1, "to": 7, "stl": 1, "pts": 10},
+            {"name": "Bryant Stith", "min": 18, "fg": "4-6", "ft": "2-2", "reb": 11, "pf": 2, "ast": 1, "to": 3, "pts": 10},
+            {"name": "Dirk Katstra", "min": 6, "fg": "0-1", "tp": "0-1", "pf": 1, "ast": 2, "to": 1, "pts": 0},
+            {"name": "Anthony Oliver", "min": 16, "fg": "4-7", "reb": 1, "pf": 2, "ast": 2, "to": 1, "stl": 1, "pts": 8},
+            {"name": "Jeff Daniel", "min": 3, "fg": "0-2", "reb": 1, "pts": 0},
+            {"name": "Matt Blundin", "min": 2, "pf": 1}
+          ]
+        },
+        {
+          "name": "Jacksonville Dolphins",
+          "score": 81,
+          "players": [
+            {"name": "Dee Brown", "min": 40, "fg": "11-26", "tp": "2-3", "ft": "7-7", "reb": 6, "pf": 2, "ast": 2, "to": 3, "stl": 2, "pts": 31},
+            {"name": "Reggie Law", "min": 29, "fg": "2-6", "ft": "1-2", "reb": 3, "pf": 3, "to": 6, "blk": 1, "pts": 5},
+            {"name": "Steve Gilbert", "min": 28, "fg": "2-4", "reb": 3, "pf": 3, "ast": 2, "stl": 2, "pts": 4},
+            {"name": "Pat Laguerre", "min": 28, "fg": "4-7", "tp": "3-5", "ft": "1-1", "reb": 4, "pf": 3, "ast": 7, "to": 1, "pts": 12},
+            {"name": "Curtis Taylor", "min": 39, "fg": "12-24", "tp": "0-2", "ft": "2-2", "reb": 7, "pf": 1, "ast": 2, "to": 1, "stl": 1, "pts": 26},
+            {"name": "Tyrone Boykin", "min": 12, "fg": "1-2", "tp": "0-1", "ft": "1-1", "pf": 2, "pts": 3},
+            {"name": "Jim Cavanaugh", "min": 6},
+            {"name": "Adrian Simmons", "min": 1, "to": 2},
+            {"name": "Ken Aldrich", "min": 17, "reb": 4},
+            {"name": "Willie Ivery", "min": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

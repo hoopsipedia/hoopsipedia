@@ -1,0 +1,9 @@
+{
+  "page": 25,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Official Western Conference box score, Wisconsin (87) at Ohio State (96), March 7, 1970. Wisconsin's full player line reads cleanly and checksums exactly (player pts sum = 87 = printed team score). However, two Ohio State bench players (Smith F and Spies F) have faint/ambiguous typewriter digits in the FTA/FT/PTS columns that cannot be reconciled with confidence: multiple plausible readings each satisfy pts=2*FG+FT for the individual row, but no combination reproduces the team's printed FT total (16) and PTS total (96) simultaneously across all 11 Ohio State players (best attempts land on FT=17-18 vs printed 16). Since the full game requires both teams and Ohio State's checksum cannot be confirmed without guessing, the entire game is skipped rather than inventing values for the ambiguous rows."
+    }
+  ]
+}

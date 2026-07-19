@@ -1,0 +1,9 @@
+{
+  "page": 1,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Official NCAA box score, UNC-Charlotte @ New Mexico, 11/26/86, Maui Invitational (Maui, Hawaii). Final score legible and team-total checksums pass (UNC-Charlotte: FG 30-72, 3FG 2-11, FT 10-15 -> 72 pts, matches final 40+32=72; New Mexico: FG 27-55, 3FG 5-14, FT 15-24 -> 74 pts, matches final 27+47=74). However the ~30 individual handwritten player rows (names, and rebound Off/Def splits, assists, turnovers, blocks, steals, minutes columns) are too faded/water-damaged/small to transcribe confidently for every player. Transcribing only the legible subset would break the required per-team player-points-sum checksum against the final score, so the game is skipped rather than guessed at."
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "page": 18,
+  "games": [
+    {
+      "date": "1975-02-08",
+      "opponent": "Oregon",
+      "ucla_score": 107,
+      "opp_score": 103,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 107,
+          "players": [
+            {"name": "Ray Townsend", "min": 0, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "pts": 0},
+            {"name": "Pete Trgovich", "min": 32, "fg": "5-9", "ft": "4-4", "reb": 2, "ast": 6, "pf": 2, "to": 4, "pts": 14},
+            {"name": "Richard Washington", "min": 34, "fg": "4-11", "ft": "2-4", "reb": 6, "ast": 2, "pf": 4, "to": 2, "stl": 2, "blk": 1, "pts": 10},
+            {"name": "Brett Vroman", "min": 0, "pts": 0},
+            {"name": "Dave Meyers", "min": 39, "fg": "14-18", "ft": "11-11", "reb": 7, "ast": 2, "pf": 3, "to": 6, "stl": 3, "blk": 1, "pts": 39},
+            {"name": "Ralph Drollinger", "min": 23, "fg": "5-7", "ft": "8-10", "reb": 4, "ast": 0, "pf": 4, "to": 2, "blk": 2, "pts": 18},
+            {"name": "Casey Corliss", "min": 0, "pts": 0},
+            {"name": "Jim Spillane", "min": 9, "fg": "2-2", "ft": "1-2", "reb": 0, "pf": 2, "stl": 1, "pts": 5},
+            {"name": "Andre McCarter", "min": 30, "fg": "3-7", "ft": "2-3", "reb": 5, "ast": 9, "pf": 5, "to": 3, "pts": 8},
+            {"name": "Wilbert Olinde", "min": 0, "pts": 0},
+            {"name": "Marques Johnson", "min": 32, "fg": "6-7", "ft": "1-3", "reb": 6, "ast": 0, "pf": 2, "to": 4, "pts": 13},
+            {"name": "Gavin Smith", "min": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Oregon Ducks",
+          "score": 103,
+          "players": [
+            {"name": "Greg Graham", "min": 9, "fg": "1-1", "ft": "2-2", "reb": 0, "ast": 3, "pf": 3, "to": 0, "stl": 2, "pts": 4},
+            {"name": "Mark Barwig", "min": 8, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 3, "pf": 3, "to": 0, "pts": 0},
+            {"name": "Ron Lee", "min": 39, "fg": "12-31", "ft": "3-4", "reb": 10, "ast": 4, "pf": 5, "to": 0, "stl": 3, "pts": 27},
+            {"name": "Stu Jackson", "min": 29, "fg": "11-20", "ft": "5-6", "reb": 4, "pf": 5, "pts": 27},
+            {"name": "Bruce Coldren", "min": 13, "fg": "3-7", "ft": "0-0", "reb": 3, "ast": 0, "pf": 1, "to": 1, "pts": 6},
+            {"name": "Daryl Banks", "min": 0, "pts": 0},
+            {"name": "Ernie Kent", "min": 25, "fg": "5-13", "ft": "5-6", "reb": 1, "ast": 2, "pf": 4, "to": 2, "stl": 2, "pts": 15},
+            {"name": "Burt Fredrickson", "min": 0, "pts": 0},
+            {"name": "Greg Ballard", "min": 40, "fg": "7-15", "ft": "4-5", "reb": 14, "ast": 7, "pf": 4, "to": 3, "stl": 2, "pts": 18},
+            {"name": "Ken Stringer", "min": 0, "pts": 0},
+            {"name": "Geoff Nelson", "min": 8, "fg": "0-0", "ft": "0-1", "reb": 2, "pf": 2, "pts": 0},
+            {"name": "Gerald Willett", "min": 29, "fg": "2-3", "ft": "2-2", "reb": 4, "ast": 0, "pf": 3, "to": 2, "pts": 6}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

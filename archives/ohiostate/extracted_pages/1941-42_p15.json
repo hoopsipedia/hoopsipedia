@@ -1,0 +1,9 @@
+{
+  "page": 15,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page contains a game record card (Basketball, 1942, Feb 2, Indiana, Columbus, coach Olsen) with an embedded newspaper clipping box score for Ohio State 43 - Indiana 46 (attendance 3365, captain Graf, designated the Naismith Memorial game). However, the clipping's typeset box score table (columns B./FT./MF/PF./TP. for both Ohio State and Indiana rosters) is rendered too small and blurry to reliably read individual digits (many FG/FT/PF/TP values are ambiguous between similar digits, e.g. 0/6/8/3). Transcribing player lines under this uncertainty risks inventing values and would not reliably pass the checksum, so the game is skipped rather than guessed. Final score only (Ohio State 43, Indiana 46) is legible from the score header at top of the page."
+    }
+  ]
+}

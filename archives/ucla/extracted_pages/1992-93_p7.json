@@ -1,0 +1,48 @@
+{
+  "page": 7,
+  "games": [
+    {
+      "date": "1992-12-19",
+      "opponent": "Georgia",
+      "ucla_score": 68,
+      "opp_score": 63,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 68,
+          "players": [
+            {"name": "Mitchell Butler", "min": 33, "fg": "3-10", "tp": "0-1", "ft": "0-0", "reb": 7, "ast": 1, "pf": 3, "to": 0, "stl": 0, "blk": 3, "pts": 6},
+            {"name": "Ed O'Bannon", "min": 37, "fg": "9-18", "tp": "1-2", "ft": "5-7", "reb": 13, "ast": 4, "pf": 3, "to": 2, "stl": 1, "blk": 1, "pts": 24},
+            {"name": "Richard Petruska", "min": 25, "fg": "6-10", "tp": "0-0", "ft": "2-2", "reb": 4, "ast": 1, "pf": 5, "to": 5, "stl": 0, "blk": 2, "pts": 14},
+            {"name": "Tyus Edney", "min": 38, "fg": "4-7", "tp": "1-1", "ft": "3-6", "reb": 2, "ast": 3, "pf": 2, "to": 2, "stl": 3, "blk": 1, "pts": 12},
+            {"name": "Shon Tarver", "min": 38, "fg": "5-14", "tp": "0-2", "ft": "0-0", "reb": 1, "ast": 3, "pf": 0, "to": 4, "stl": 1, "blk": 1, "pts": 10},
+            {"name": "Kevin Dempsey", "min": 17, "fg": "0-1", "tp": "0-1", "ft": "0-0", "reb": 1, "ast": 1, "pf": 1, "to": 2, "stl": 4, "blk": 0, "pts": 0},
+            {"name": "Jiri Zidek", "min": 6, "fg": "0-1", "tp": "0-0", "ft": "0-0", "reb": 2, "ast": 0, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Rodney Zimmerman", "min": 6, "fg": "0-2", "tp": "0-0", "ft": "2-2", "reb": 2, "ast": 0, "pf": 1, "to": 2, "stl": 0, "blk": 0, "pts": 2}
+          ]
+        },
+        {
+          "name": "Georgia Bulldogs",
+          "score": 63,
+          "players": [
+            {"name": "Kendall Rhine", "min": 24, "fg": "0-6", "tp": "0-4", "ft": "3-4", "reb": 2, "ast": 3, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 3},
+            {"name": "Carlos Strong", "min": 25, "fg": "7-16", "tp": "0-0", "ft": "0-0", "reb": 6, "ast": 0, "pf": 4, "to": 4, "stl": 2, "blk": 0, "pts": 14},
+            {"name": "Charles Claxton", "min": 29, "fg": "7-11", "tp": "0-0", "ft": "2-6", "reb": 13, "ast": 0, "pf": 2, "to": 4, "stl": 0, "blk": 2, "pts": 16},
+            {"name": "Tyrone Wilson", "min": 18, "fg": "0-5", "tp": "0-2", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Bernard Davis", "min": 33, "fg": "3-9", "tp": "3-7", "ft": "1-2", "reb": 1, "ast": 4, "pf": 3, "to": 3, "stl": 2, "blk": 0, "pts": 10},
+            {"name": "Arlando Bennett", "min": 9, "fg": "1-3", "tp": "0-0", "ft": "0-1", "reb": 1, "ast": 0, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Cleveland Jackson", "min": 8, "fg": "0-3", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 3, "pf": 1, "to": 2, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Steve Jones", "min": 7, "fg": "2-3", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Shandon Anderson", "min": 23, "fg": "1-5", "tp": "0-0", "ft": "0-0", "reb": 8, "ast": 1, "pf": 4, "to": 3, "stl": 1, "blk": 0, "pts": 2},
+            {"name": "Pertha Robinson", "min": 7, "fg": "1-1", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 1, "pf": 1, "to": 2, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Terrell Bell", "min": 7, "fg": "1-1", "tp": "0-0", "ft": "0-0", "reb": 3, "ast": 2, "pf": 1, "to": 0, "stl": 0, "blk": 1, "pts": 2},
+            {"name": "Dathon Brown", "min": 13, "fg": "4-5", "tp": "0-0", "ft": "0-0", "reb": 3, "ast": 0, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 8},
+            {"name": "Shaun Golden", "min": 1, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

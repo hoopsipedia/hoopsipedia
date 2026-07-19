@@ -1,0 +1,9 @@
+{
+  "page": 24,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page contains a legible official scoresheet for Air Force Academy at New Mexico (final score New Mexico 79, Air Force 69). Both teams' FG/FT/points columns are legible and self-consistent (2*FGmade+FTmade = TP for every player, and per-player TP sums exactly match each team's final score: Air Force players sum to 69, New Mexico players sum to 79; FG-made and FT-made column sums also exactly match the printed team totals of 31/7 for Air Force and 25/29 for New Mexico). However, no date is printed or legible anywhere on this page (top margin is too faded/cut off to read), so the required YYYY-MM-DD date cannot be confidently assigned. Skipping per instructions rather than inventing a date. Also note: rebounds, personal fouls, assists, turnovers, blocks, and steals columns on this scan are too faint/inconsistent to transcribe reliably (my reads did not reconcile against the printed team totals for those columns), so even if the date were known this page's secondary stat columns would need a second pass or a cleaner scan."
+    }
+  ]
+}

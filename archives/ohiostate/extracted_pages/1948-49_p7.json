@@ -1,0 +1,9 @@
+{
+  "page": 7,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page 7 is a newspaper-clipping compilation (two AP wire stories: 'Boryla Is Held To 15 Points' and 'Buck Cagers Score Their 5th Victory') plus a blank official scoring form. The game is identifiable from the headline scorebox and form fields: Ohio State 66, Denver University (Opp) 57, played December 27, 1948 at Denver, coach Tippy Dye, attendance 4,200. A small embedded box-score table with per-player FG/FT/PF/Pts columns for both Denver and Ohio State is present in the clipping, but the newsprint scan is too small/low-resolution to reliably OCR individual player names and stat digits (players partially legible include Schnittker, Donham, Boryla, Hughes for one side and similar for the other, but attempted/made and points figures are not confidently distinguishable letter-by-letter). Skipping rather than guessing per instructions; only one page-read was used so no re-read was attempted to avoid risking a wasted second pass on a fundamentally low-resolution table."
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "page": 24,
+  "games": [
+    {
+      "date": "1971-02-27",
+      "opponent": "Wyoming",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 80,
+          "players": [
+            {"name": "Petie Gibson", "fg": "3-15", "ft": "0-0", "reb": 6, "ast": 12, "pf": 3, "pts": 6},
+            {"name": "Mike Stewart", "min": 40, "fg": "3-3", "ft": "4-4", "reb": 2, "ast": 1, "pf": 1, "pts": 10},
+            {"name": "Rick Wright", "min": 17},
+            {"name": "John Johnson", "min": 23, "fg": "3-6", "ft": "1-1", "reb": 4, "ast": 2, "pf": 1, "pts": 7},
+            {"name": "Tom Roberts", "min": 18, "fg": "6-6", "ft": "0-0", "reb": 2, "ast": 2, "pf": 3, "pts": 8},
+            {"name": "Mike Faulkner", "min": 40, "fg": "6-14", "ft": "0-5", "reb": 8, "ast": 0, "pf": 3, "pts": 12},
+            {"name": "Harold Little", "min": 23, "fg": "3-7", "ft": "0-0", "reb": 4, "ast": 1, "pf": 3, "pts": 6},
+            {"name": "Willie Long", "min": 40, "fg": "11-22", "ft": "9-10", "reb": 5, "ast": 0, "pf": 0, "pts": 31}
+          ]
+        },
+        {
+          "name": "Wyoming Cowboys",
+          "score": 91,
+          "players": [
+            {"name": "Roy Wilson", "min": 40, "fg": "3-5", "ft": "2-4", "reb": 2, "ast": 13, "pf": 1, "pts": 8},
+            {"name": "Willie Roberson", "min": 40},
+            {"name": "Franklyn Irvin", "min": 40, "fg": "12-20", "ft": "4-5", "reb": 6, "ast": 2, "pf": 0, "pts": 28},
+            {"name": "Denny Mountz", "min": 40, "fg": "7-10", "ft": "3-3", "reb": 3, "ast": 5, "pf": 2, "pts": 17},
+            {"name": "Rod Penner", "min": 30, "fg": "5-8", "ft": "2-3", "reb": 6, "ast": 1, "pf": 4, "pts": 12},
+            {"name": "Steve Mountjoy", "min": 24, "fg": "3-6", "ft": "1-1", "reb": 5, "ast": 1, "pf": 3, "pts": 7},
+            {"name": "Jerry Brucks", "min": 26, "fg": "9-11", "ft": "1-1", "reb": 6, "ast": 0, "pf": 4, "pts": 19}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

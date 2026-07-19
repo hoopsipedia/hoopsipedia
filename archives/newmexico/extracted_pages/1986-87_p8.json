@@ -1,0 +1,48 @@
+{
+  "page": 8,
+  "games": [
+    {
+      "date": "1986-12-10",
+      "opponent": "New Mexico Highlands Cowboys",
+      "teams": [
+        {
+          "name": "New Mexico Highlands Cowboys",
+          "score": 91,
+          "players": [
+            {"name": "Anthony Aikin", "min": 33, "fg": "7-17", "tp": "3-7", "ft": "0-0", "reb": 2, "ast": 1, "pf": 4, "to": 3, "stl": 2, "blk": 0, "pts": 17},
+            {"name": "Jorge Leon", "min": 38, "fg": "4-12", "tp": "0-0", "ft": "3-6", "reb": 12, "ast": 0, "pf": 2, "to": 3, "stl": 2, "blk": 0, "pts": 11},
+            {"name": "William Love", "min": 15, "fg": "1-1", "tp": "0-0", "ft": "2-3", "reb": 2, "ast": 0, "pf": 4, "to": 1, "stl": 1, "blk": 0, "pts": 4},
+            {"name": "Darren Sanchez", "min": 34, "fg": "7-13", "tp": "4-8", "ft": "2-2", "reb": 4, "ast": 8, "pf": 5, "to": 5, "stl": 1, "blk": 0, "pts": 20},
+            {"name": "Gary Cooper", "min": 27, "fg": "7-16", "tp": "0-0", "ft": "8-9", "reb": 3, "ast": 1, "pf": 4, "to": 0, "stl": 2, "blk": 0, "pts": 22},
+            {"name": "Fernie Si Fuentes", "min": 3, "fg": "0-1", "tp": "0-1", "ft": "0-0", "reb": 0, "ast": 1, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Ervin Woods", "min": 1, "fg": "0-1", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Joe Eckert", "min": 6, "fg": "0-0", "tp": "0-0", "ft": "2-2", "reb": 1, "ast": 2, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Alex Darley", "min": 16, "fg": "4-5", "tp": "0-0", "ft": "2-2", "reb": 0, "ast": 0, "pf": 2, "to": 1, "stl": 1, "blk": 0, "pts": 10},
+            {"name": "Chris Beaver", "min": 1, "fg": "0-1", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "John Miles", "min": 13, "fg": "0-0", "tp": "0-0", "ft": "2-2", "reb": 0, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Brad Darnell", "min": 13, "fg": "1-2", "tp": "0-0", "ft": "1-3", "reb": 2, "ast": 0, "pf": 3, "to": 1, "stl": 1, "blk": 0, "pts": 3}
+          ]
+        },
+        {
+          "name": "New Mexico Lobos",
+          "score": 106,
+          "players": [
+            {"name": "Hunter Greene", "min": 31, "fg": "9-15", "tp": "2-3", "ft": "6-7", "reb": 6, "ast": 4, "pf": 4, "to": 2, "stl": 1, "blk": 0, "pts": 26},
+            {"name": "Mike Winters", "min": 28, "fg": "3-5", "tp": "1-1", "ft": "2-2", "reb": 7, "ast": 2, "pf": 1, "to": 2, "stl": 3, "blk": 0, "pts": 9},
+            {"name": "Brian Parker", "min": 18, "fg": "5-5", "tp": "0-0", "ft": "1-3", "reb": 3, "ast": 0, "pf": 3, "to": 1, "stl": 0, "blk": 0, "pts": 11},
+            {"name": "Kelvin Scarborough", "min": 32, "fg": "3-8", "tp": "0-1", "ft": "4-6", "reb": 4, "ast": 9, "pf": 2, "to": 3, "stl": 1, "blk": 0, "pts": 10},
+            {"name": "Kelly Graves", "min": 28, "fg": "5-11", "tp": "2-4", "ft": "3-4", "reb": 2, "ast": 5, "pf": 2, "to": 4, "stl": 1, "blk": 0, "pts": 15},
+            {"name": "Darrell McGee", "min": 16, "fg": "2-3", "tp": "0-0", "ft": "1-2", "reb": 4, "ast": 2, "pf": 2, "to": 1, "stl": 0, "blk": 0, "pts": 5},
+            {"name": "Stan Whisenant", "min": 6, "fg": "2-2", "tp": "2-2", "ft": "0-0", "reb": 1, "ast": 2, "pf": 2, "to": 1, "stl": 0, "blk": 0, "pts": 6},
+            {"name": "Bob Arnold", "min": 3, "fg": "0-0", "tp": "0-0", "ft": "0-1", "reb": 1, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Paul Connery", "min": 1, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "George Adams", "min": 21, "fg": "8-12", "tp": "0-3", "ft": "3-4", "reb": 9, "ast": 0, "pf": 4, "to": 1, "stl": 2, "blk": 2, "pts": 19},
+            {"name": "Rob Loeffel", "min": 16, "fg": "2-7", "tp": "0-1", "ft": "1-4", "reb": 5, "ast": 0, "pf": 2, "to": 2, "stl": 1, "blk": 0, "pts": 5}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

@@ -1,0 +1,41 @@
+{
+  "page": 2,
+  "games": [
+    {
+      "date": "1968-12-07",
+      "opponent": "George Washington",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 84,
+          "players": [
+            {"name": "Norm Carmichael", "fg": "6-11", "ft": "1-2", "reb": 6, "ast": 0, "pf": 2, "to": 3, "pts": 13},
+            {"name": "John Gidding", "fg": "11-19", "ft": "2-6", "reb": 22, "ast": 5, "pf": 2, "to": 3, "pts": 24},
+            {"name": "Mike Wilkes", "fg": "5-13", "ft": "1-7", "reb": 4, "ast": 3, "pf": 2, "to": 1, "pts": 11},
+            {"name": "Tony Kinn", "fg": "5-15", "ft": "1-2", "reb": 5, "ast": 1, "pf": 2, "to": 4, "pts": 11},
+            {"name": "Chip Case", "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "pts": 0},
+            {"name": "John English", "fg": "4-8", "ft": "0-0", "reb": 1, "ast": 2, "pf": 5, "to": 3, "pts": 8},
+            {"name": "Buddy Reams", "fg": "4-11", "ft": "0-0", "reb": 7, "ast": 4, "pf": 2, "to": 1, "pts": 8},
+            {"name": "Bill Gerry", "fg": "0-1", "ft": "0-0", "reb": 1, "ast": 1, "pf": 1, "to": 0, "pts": 0},
+            {"name": "Kevin Kennelly", "fg": "4-9", "ft": "1-2", "reb": 2, "ast": 3, "pf": 2, "to": 2, "pts": 9}
+          ]
+        },
+        {
+          "name": "George Washington",
+          "score": 98,
+          "players": [
+            {"name": "Bob Tallent", "fg": "14-30", "ft": "5-6", "reb": 1, "ast": 11, "pf": 2, "to": 0, "pts": 33},
+            {"name": "Mike Tallent", "fg": "12-23", "ft": "2-3", "reb": 2, "ast": 7, "pf": 3, "to": 0, "pts": 26},
+            {"name": "John Conrad", "fg": "1-1", "ft": "0-0", "reb": 1, "ast": 2, "pf": 3, "to": 0, "pts": 2},
+            {"name": "Bill Knorr", "fg": "6-8", "ft": "2-4", "reb": 11, "ast": 3, "pf": 4, "to": 0, "pts": 14},
+            {"name": "Roger Strong", "fg": "4-7", "ft": "0-3", "reb": 11, "ast": 0, "pf": 4, "to": 0, "pts": 8},
+            {"name": "Harold Rhyne", "fg": "4-5", "ft": "4-6", "reb": 13, "ast": 3, "pf": 2, "to": 0, "pts": 12},
+            {"name": "Francis Mooney", "fg": "0-0", "ft": "3-5", "reb": 0, "ast": 0, "pf": 2, "to": 0, "pts": 3}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

@@ -1,0 +1,41 @@
+{
+  "page": 5,
+  "games": [
+    {
+      "date": "1934-01-03",
+      "opponent": "Princeton",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 41,
+          "players": [
+            {"name": "Colburn", "ft": "7-8", "pf": 2, "pts": 17},
+            {"name": "Whitlinger", "ft": "2-4", "pf": 1, "pts": 8},
+            {"name": "Paclow", "ft": "0-0", "pf": 2, "pts": 2},
+            {"name": "Rosequist", "ft": "2-5", "pf": 4, "pts": 10},
+            {"name": "Wilson", "ft": "0-0", "pf": 0, "pts": 0},
+            {"name": "Beltner", "ft": "0-0", "pf": 1, "pts": 2},
+            {"name": "Conrad", "ft": "0-1", "pf": 4, "pts": 2},
+            {"name": "Fisher", "ft": "0-0", "pf": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Princeton",
+          "score": 34,
+          "players": [
+            {"name": "Willett", "ft": "1-1", "pf": 4, "pts": 1},
+            {"name": "Weaver", "ft": "0-0", "pf": 1, "pts": 0},
+            {"name": "Samuels", "ft": "0-0", "pf": 1, "pts": 0},
+            {"name": "Fairman", "ft": "0-0", "pf": 4, "pts": 6},
+            {"name": "Jones", "ft": "0-0", "pf": 0, "pts": 0},
+            {"name": "F'lbert", "ft": "4-5", "pf": 1, "pts": 10},
+            {"name": "Millen", "ft": "3-3", "pf": 3, "pts": 7},
+            {"name": "Grebauskas", "ft": "2-8", "pf": 0, "pts": 10}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

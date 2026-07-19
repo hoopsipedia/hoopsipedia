@@ -1,0 +1,40 @@
+{
+  "page": 4,
+  "games": [
+    {
+      "date": "1934-01-01",
+      "opponent": "Dayton",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 47,
+          "players": [
+            {"name": "Padlow", "fgm": 4, "ftm": 1, "ft_missed": 2, "pf": 0, "pts": 9},
+            {"name": "Colburn", "fgm": 3, "ftm": 1, "ft_missed": 0, "pf": 0, "pts": 7},
+            {"name": "Rosequist", "fgm": 6, "ftm": 3, "ft_missed": 2, "pf": 2, "pts": 15},
+            {"name": "Conrad", "fgm": 2, "ftm": 0, "ft_missed": 2, "pf": 2, "pts": 4},
+            {"name": "Beltner", "fgm": 0, "ftm": 0, "ft_missed": 0, "pf": 0, "pts": 0},
+            {"name": "Wilson", "fgm": 2, "ftm": 0, "ft_missed": 0, "pf": 1, "pts": 4},
+            {"name": "Lowe", "fgm": 1, "ftm": 0, "ft_missed": 0, "pf": 0, "pts": 2},
+            {"name": "Whitlinger", "fgm": 1, "ftm": 2, "ft_missed": 2, "pf": 0, "pts": 4},
+            {"name": "Cox", "fgm": 1, "ftm": 0, "ft_missed": 0, "pf": 0, "pts": 2}
+          ]
+        },
+        {
+          "name": "Dayton",
+          "score": 25,
+          "players": [
+            {"name": "Leichtle", "fgm": 1, "ftm": 1, "ft_missed": 1, "pf": 2, "pts": 3},
+            {"name": "MacCarthy", "fgm": 4, "ftm": 1, "ft_missed": 2, "pf": 4, "pts": 9},
+            {"name": "Corbett", "fgm": 4, "ftm": 1, "ft_missed": 0, "pf": 2, "pts": 9},
+            {"name": "Payne", "fgm": 1, "ftm": 0, "ft_missed": 0, "pf": 2, "pts": 2},
+            {"name": "Armoruster", "fgm": 0, "ftm": 1, "ft_missed": 2, "pf": 2, "pts": 1},
+            {"name": "Brockman", "fgm": 0, "ftm": 1, "ft_missed": 0, "pf": 2, "pts": 1}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

@@ -1,0 +1,42 @@
+{
+  "page": 12,
+  "games": [
+    {
+      "date": "1971-01-13",
+      "opponent": "Wake Forest",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 86,
+          "players": [
+            {"name": "Frank DeWitt", "min": 0, "fg": "0-2", "ft": "0-0", "reb": 1, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Bill Gerry", "min": 0, "fg": "10-17", "ft": "4-7", "reb": 11, "pf": 3, "ast": 2, "to": 3, "blk": 0, "stl": 0, "pts": 24},
+            {"name": "Scott McCandlish", "min": 0, "fg": "5-7", "ft": "4-6", "reb": 11, "pf": 2, "ast": 1, "to": 0, "blk": 0, "stl": 0, "pts": 14},
+            {"name": "Tim Rash", "min": 0, "fg": "8-15", "ft": "4-4", "reb": 2, "pf": 2, "ast": 5, "to": 4, "blk": 0, "stl": 0, "pts": 20},
+            {"name": "Barry Parkhill", "min": 0, "fg": "1-9", "ft": "6-7", "reb": 3, "pf": 3, "ast": 13, "to": 3, "blk": 0, "stl": 0, "pts": 8},
+            {"name": "Jim Hobgood", "min": 0, "fg": "8-14", "ft": "4-6", "reb": 5, "pf": 4, "ast": 0, "to": 2, "blk": 0, "stl": 0, "pts": 20},
+            {"name": "Mike Wilkes", "min": 0, "fg": "0-0", "ft": "0-1", "reb": 0, "pf": 1, "ast": 1, "to": 0, "blk": 0, "stl": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Wake Forest Demon Deacons",
+          "score": 81,
+          "players": [
+            {"name": "Charlie Davis", "min": 0, "fg": "9-17", "ft": "6-8", "reb": 5, "pf": 4, "ast": 2, "to": 3, "blk": 0, "stl": 0, "pts": 24},
+            {"name": "Gil McGregor", "min": 0, "fg": "4-10", "ft": "2-5", "reb": 8, "pf": 4, "ast": 1, "to": 1, "blk": 0, "stl": 0, "pts": 10},
+            {"name": "Bob Rhoads", "min": 0, "fg": "3-8", "ft": "0-0", "reb": 1, "pf": 1, "ast": 4, "to": 3, "blk": 0, "stl": 0, "pts": 6},
+            {"name": "Neil Pastushak", "min": 0, "fg": "6-9", "ft": "0-0", "reb": 2, "pf": 1, "ast": 1, "to": 2, "blk": 0, "stl": 0, "pts": 12},
+            {"name": "Rich Habegger", "min": 0, "fg": "6-12", "ft": "1-2", "reb": 15, "pf": 4, "ast": 3, "to": 1, "blk": 0, "stl": 0, "pts": 13},
+            {"name": "Bob Hook", "min": 0, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 1, "to": 1, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "John Lewkowicz", "min": 0, "fg": "6-9", "ft": "0-3", "reb": 1, "pf": 3, "ast": 4, "to": 1, "blk": 0, "stl": 0, "pts": 12},
+            {"name": "John Orenczak", "min": 0, "fg": "1-1", "ft": "2-2", "reb": 2, "pf": 2, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 4},
+            {"name": "Pat Kelly", "min": 0, "fg": "0-1", "ft": "0-0", "reb": 1, "pf": 2, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true,
+      "notes": "Sheet's Minutes column is entirely 0 (not tracked/not printed) — carried through as 0 rather than omitted. Sheet includes a '3 Pt' FG column but all entries are 0-0 across both teams (expected: 3-point line did not exist in 1970-71; this is an artifact of a modern stat-sheet template) — omitted as a tp key per instructions. Virginia player Frank DeWitt's PF value appeared to read as an implausible '9' (max individual fouls before disqualification is 5); omitted the pf field for that one player rather than invent/guess a value. All other fields read directly from printed Pts/FG/FT/Reb/Ast/TO columns, no values computed."
+    }
+  ],
+  "skipped": []
+}

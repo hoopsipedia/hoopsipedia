@@ -1,0 +1,46 @@
+{
+  "page": 10,
+  "games": [
+    {
+      "date": "1976-12-29",
+      "opponent": "Utah State",
+      "ucla_score": 88,
+      "opp_score": 68,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 88,
+          "players": [
+            {"name": "Linde", "min": 5, "fg": "1-1", "ft": "0-0", "reb": 3, "pf": 0, "ast": 0, "pts": 2},
+            {"name": "Johnson", "min": 39, "fg": "15-21", "ft": "1-3", "reb": 7, "pf": 2, "ast": 3, "pts": 31},
+            {"name": "Greenwood", "min": 31, "fg": "3-7", "ft": "4-4", "reb": 11, "pf": 2, "ast": 1, "pts": 10},
+            {"name": "Holland", "min": 7, "fg": "0-1", "ft": "0-0", "reb": 0, "pf": 1, "ast": 0, "pts": 0},
+            {"name": "Hamilton", "min": 9, "fg": "1-6", "ft": "0-0", "reb": 0, "pf": 1, "ast": 2, "pts": 2},
+            {"name": "Townsend", "min": 35, "fg": "5-13", "ft": "2-2", "reb": 4, "pf": 0, "ast": 6, "pts": 12},
+            {"name": "Vroman", "min": 16, "fg": "3-8", "ft": "0-0", "reb": 4, "pf": 5, "ast": 0, "pts": 6},
+            {"name": "Spillane", "min": 31, "fg": "6-9", "ft": "5-5", "reb": 2, "pf": 0, "ast": 9, "pts": 17},
+            {"name": "Wilkes", "min": 4, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "pts": 0},
+            {"name": "Sims", "min": 23, "fg": "4-6", "ft": "0-0", "reb": 4, "pf": 1, "ast": 1, "pts": 8}
+          ]
+        },
+        {
+          "name": "Utah State Aggies",
+          "score": 68,
+          "players": [
+            {"name": "Owens", "min": 29, "fg": "10-16", "ft": "0-0", "reb": 8, "pf": 5, "ast": 2, "pts": 20},
+            {"name": "Bailess", "min": 31, "fg": "3-13", "ft": "0-0", "reb": 9, "pf": 2, "ast": 4, "pts": 6},
+            {"name": "Santos", "min": 40, "fg": "13-20", "ft": "4-9", "reb": 12, "pf": 4, "ast": 0, "pts": 30},
+            {"name": "Martineau", "min": 40, "fg": "3-10", "ft": "0-0", "reb": 3, "pf": 4, "ast": 3, "pts": 6},
+            {"name": "Williams", "min": 40, "fg": "2-8", "ft": "0-0", "reb": 1, "pf": 4, "ast": 10, "pts": 4},
+            {"name": "Hunger", "min": 6, "fg": "1-2", "ft": "0-0", "reb": 2, "pf": 0, "ast": 0, "pts": 2},
+            {"name": "Meyer", "min": 6, "fg": "0-2", "ft": "0-0", "reb": 1, "pf": 0, "ast": 0, "pts": 0},
+            {"name": "Perkins", "min": 2, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "pts": 0},
+            {"name": "Wilson", "min": 6, "fg": "0-3", "ft": "0-0", "reb": 0, "pf": 0, "ast": 1, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

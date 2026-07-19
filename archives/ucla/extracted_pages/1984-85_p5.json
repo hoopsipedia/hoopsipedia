@@ -1,0 +1,50 @@
+{
+  "page": 5,
+  "games": [
+    {
+      "date": "1984-12-15",
+      "opponent": "USIU",
+      "ucla_score": 98,
+      "opp_score": 50,
+      "teams": [
+        {
+          "name": "USIU",
+          "score": 50,
+          "players": [
+            {"name": "Leisenring", "min": 26, "fg": "2-5", "ft": "2-2", "reb": 2, "pf": 3, "to": 6, "ast": 2, "blk": 0, "stl": 0, "pts": 6},
+            {"name": "Cross", "min": 29, "fg": "5-14", "ft": "0-1", "reb": 6, "pf": 3, "to": 5, "ast": 1, "blk": 0, "stl": 0, "pts": 10},
+            {"name": "Masek", "min": 36, "fg": "4-10", "ft": "1-2", "reb": 11, "pf": 4, "to": 1, "ast": 1, "blk": 1, "stl": 1, "pts": 9},
+            {"name": "Redding", "min": 21, "fg": "2-4", "ft": "0-1", "reb": 1, "pf": 2, "to": 3, "ast": 2, "blk": 0, "stl": 0, "pts": 4},
+            {"name": "Lieberman", "min": 40, "fg": "4-5", "ft": "1-3", "reb": 0, "pf": 1, "to": 4, "ast": 3, "blk": 0, "stl": 2, "pts": 9},
+            {"name": "Chenault", "min": 18, "fg": "3-12", "ft": "3-4", "reb": 8, "pf": 0, "to": 2, "ast": 0, "blk": 0, "stl": 0, "pts": 9},
+            {"name": "Hayles", "min": 13, "fg": "1-2", "ft": "1-2", "reb": 1, "pf": 4, "to": 4, "ast": 0, "blk": 0, "stl": 1, "pts": 3},
+            {"name": "Daniel", "min": 9, "fg": "0-2", "ft": "0-2", "reb": 0, "pf": 1, "to": 3, "ast": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "White", "min": 8, "fg": "0-2", "ft": "0-3", "reb": 3, "pf": 2, "to": 0, "ast": 0, "blk": 0, "stl": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "UCLA Bruins",
+          "score": 98,
+          "players": [
+            {"name": "Maloncon", "min": 26, "fg": "5-12", "ft": "0-0", "reb": 7, "pf": 1, "to": 0, "ast": 1, "blk": 0, "stl": 3, "pts": 10},
+            {"name": "Miller", "min": 21, "fg": "8-10", "ft": "2-3", "reb": 2, "pf": 2, "to": 0, "ast": 4, "blk": 0, "stl": 2, "pts": 18},
+            {"name": "Wright", "min": 23, "fg": "4-7", "ft": "0-2", "reb": 13, "pf": 1, "to": 1, "ast": 2, "blk": 0, "stl": 0, "pts": 8},
+            {"name": "Gaines", "min": 18, "fg": "2-5", "ft": "0-0", "reb": 2, "pf": 0, "to": 3, "ast": 6, "blk": 0, "stl": 2, "pts": 4},
+            {"name": "Miguel", "min": 21, "fg": "5-9", "ft": "5-6", "reb": 3, "pf": 0, "to": 1, "ast": 1, "blk": 0, "stl": 0, "pts": 15},
+            {"name": "Hatcher", "min": 22, "fg": "3-10", "ft": "0-0", "reb": 2, "pf": 2, "to": 0, "ast": 4, "blk": 0, "stl": 1, "pts": 6},
+            {"name": "Jackson", "min": 19, "fg": "3-9", "ft": "3-4", "reb": 8, "pf": 2, "to": 0, "ast": 1, "blk": 0, "stl": 0, "pts": 9},
+            {"name": "Immel", "min": 14, "fg": "4-6", "ft": "3-4", "reb": 0, "pf": 0, "to": 1, "ast": 0, "blk": 0, "stl": 1, "pts": 11},
+            {"name": "Butler", "min": 4, "fg": "1-1", "ft": "0-0", "reb": 1, "pf": 3, "to": 1, "ast": 0, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Haley", "min": 12, "fg": "4-7", "ft": "1-3", "reb": 10, "pf": 4, "to": 0, "ast": 1, "blk": 1, "stl": 0, "pts": 9},
+            {"name": "Jones", "min": 5, "fg": "1-3", "ft": "0-0", "reb": 2, "pf": 2, "to": 0, "ast": 0, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Dunlap", "min": 6, "fg": "1-4", "ft": "0-0", "reb": 0, "pf": 0, "to": 0, "ast": 0, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Wang", "min": 4, "fg": "0-1", "ft": "0-0", "reb": 1, "pf": 1, "to": 0, "ast": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Morris", "min": 4, "fg": "1-3", "ft": "0-0", "reb": 2, "pf": 1, "to": 0, "ast": 0, "blk": 0, "stl": 0, "pts": 2}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

@@ -1,0 +1,46 @@
+{
+  "page": 3,
+  "games": [
+    {
+      "date": "1978-12-01",
+      "opponent": "Wichita State",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 52,
+          "players": [
+            {"name": "Bill Abney", "min": 15, "fg": "4-7", "ft": "6-6", "reb": 2, "ast": 1, "pf": 1, "to": 5, "pts": 14},
+            {"name": "Andre Logan", "fg": "1-3", "ft": "2-2", "reb": 3, "to": 2, "stl": 1, "pf": 3, "pts": 4},
+            {"name": "Larry Belin", "fg": "2-3", "ft": "0-0", "reb": 1, "stl": 1, "pf": 2, "pts": 4},
+            {"name": "Russell Saunders", "min": 8, "fg": "0-1", "ft": "4-4", "reb": 0, "ast": 3, "to": 2, "pf": 3, "pts": 4},
+            {"name": "Everette Jefferson", "min": 15, "fg": "4-5", "ft": "1-2", "reb": 2, "ast": 1, "to": 1, "blk": 1, "pf": 0, "pts": 9},
+            {"name": "Aparicio Curry", "min": 8, "fg": "0-0", "ft": "0-0", "reb": 1, "pf": 0, "pts": 0},
+            {"name": "Paul Nay", "min": 12, "fg": "1-5", "ft": "0-1", "reb": 1, "ast": 1, "pf": 2, "pts": 2},
+            {"name": "Phil Spradling", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Dino Gregory", "min": 8, "fg": "3-4", "ft": "3-4", "reb": 4, "to": 2, "pf": 0, "pts": 9},
+            {"name": "Mark Felix", "min": 8, "fg": "0-1", "ft": "2-2", "reb": 3, "ast": 2, "pf": 1, "pts": 2},
+            {"name": "Mike Stewart", "min": 8, "fg": "1-2", "ft": "0-0", "reb": 2, "ast": 2, "to": 2, "pf": 2, "pts": 2},
+            {"name": "Jim Williams", "min": 1, "fg": "1-1", "ft": "0-0", "reb": 2, "stl": 1, "pf": 0, "pts": 2}
+          ]
+        },
+        {
+          "name": "Wichita State Shockers",
+          "score": 52,
+          "players": [
+            {"name": "Richard Williams", "min": 13, "fg": "5-8", "ft": "1-2", "reb": 2, "ast": 1, "to": 2, "pf": 0, "pts": 11},
+            {"name": "Cheese Johnson", "min": 18, "fg": "7-10", "ft": "0-1", "reb": 5, "ast": 4, "to": 1, "stl": 2, "pf": 2, "pts": 14},
+            {"name": "Steve Kalocinski", "min": 13, "fg": "2-3", "ft": "1-3", "reb": 3, "to": 2, "pf": 3, "pts": 5},
+            {"name": "Bob Trogele", "min": 15, "fg": "4-5", "ft": "0-1", "reb": 1, "ast": 3, "to": 3, "stl": 1, "pf": 2, "pts": 8},
+            {"name": "Ronnie Ryer", "min": 12, "fg": "0-1", "ft": "0-0", "reb": 0, "ast": 1, "to": 1, "pf": 3, "pts": 0},
+            {"name": "John Rober", "min": 5, "fg": "1-2", "ft": "2-2", "reb": 1, "to": 1, "pf": 0, "pts": 4},
+            {"name": "Ray Shirley", "min": 9, "fg": "3-4", "ft": "0-0", "reb": 3, "ast": 1, "to": 1, "pf": 1, "pts": 6},
+            {"name": "Lawrence Howell", "min": 8, "fg": "1-2", "ft": "0-0", "reb": 1, "ast": 1, "to": 1, "stl": 1, "pf": 1, "pts": 2},
+            {"name": "Tyrone Augbourns", "min": 7, "fg": "1-3", "ft": "0-0", "reb": 2, "blk": 1, "stl": 1, "pf": 2, "pts": 2}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

@@ -1,0 +1,43 @@
+{
+  "page": 15,
+  "games": [
+    {
+      "date": "1934-02-12",
+      "opponent": "Wisconsin",
+      "location": "Madison",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 23,
+          "players": [
+            {"name": "Fisher", "pos": "F", "fgm": 0, "ft": "1-4", "pf": 4, "pts": 1},
+            {"name": "Colburn", "pos": "F", "fgm": 0, "ft": "1-1", "pf": 2, "pts": 1},
+            {"name": "Whitlinger", "pos": "F", "fgm": 4, "ft": "2-4", "pf": 2, "pts": 10},
+            {"name": "Wilson", "pos": "F", "fgm": 1, "ft": "0-2", "pf": 4, "pts": 2},
+            {"name": "Laybourne", "pos": "F", "fgm": 0, "ft": "1-3", "pf": 0, "pts": 1},
+            {"name": "Rosequist", "pos": "C", "fgm": 1, "ft": "1-1", "pf": 4, "pts": 3},
+            {"name": "Conrad", "pos": "G/C", "fgm": 0, "ft": "1-1", "pf": 4, "pts": 1},
+            {"name": "Beitner", "pos": "G", "fgm": 2, "ft": "0-0", "pf": 4, "pts": 4}
+          ]
+        },
+        {
+          "name": "Wisconsin Badgers",
+          "score": 42,
+          "players": [
+            {"name": "McDonald", "pos": "F", "fgm": 4, "ft": "9-12", "pf": 2, "pts": 17},
+            {"name": "Demark", "pos": "F", "fgm": 1, "ft": "3-6", "pf": 2, "pts": 5},
+            {"name": "Knake", "pos": "C", "fgm": 4, "ft": "1-3", "pf": 0, "pts": 9},
+            {"name": "Stege", "pos": "C", "fgm": 1, "ft": "0-2", "pf": 0, "pts": 2},
+            {"name": "Hamann", "pos": "G", "fgm": 2, "ft": "0-2", "pf": 4, "pts": 4},
+            {"name": "Poser", "pos": "G", "fgm": 1, "ft": "0-0", "pf": 3, "pts": 2},
+            {"name": "Ockerhauser", "pos": "G", "fgm": 0, "ft": "1-3", "pf": 0, "pts": 1},
+            {"name": "[illegible]mer", "pos": "G", "fgm": 1, "ft": "0-0", "pf": 0, "pts": 2}
+          ]
+        }
+      ],
+      "checksum_ok": true,
+      "notes": "Sheet columns are G. (FG made), F. (FT made), M.F. (FT missed), P. (personal fouls), PTS. (points, given directly on sheet, not computed). 'ft' field reported as made-attempted where attempted = made + M.F. (both directly read, not invented). No FG-attempted column exists on this sheet, so only fgm (FG made) is reported, not a full fg made-attempted pair. Last Wisconsin player's surname is cut off at the page edge, legible only as '...mer'; jersey stats (1 FG, 0 FT, 0 PF, 2 PTS) were confirmed via team-totals arithmetic (totals row 14-14-14-11-42) since the printed PTS digit was smudged. Halftime score line (Wisc. 12, Ohio State 15) corroborates final score direction. Referee: Nick Kearns (DePaul); Umpire: John Travnicek (Armour Tech)."
+    }
+  ],
+  "skipped": []
+}

@@ -1,0 +1,50 @@
+{
+  "page": 27,
+  "games": [
+    {
+      "date": "1976-03-06",
+      "opponent": "Indiana Hoosiers",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 67,
+          "players": [
+            {"name": "Daugherty", "fg": "2-9", "ft": "0-0", "reb": 1, "ast": 3, "pf": 0, "pts": 4},
+            {"name": "Poole", "fg": "4-9", "ft": "9-11", "reb": 6, "ast": 2, "pf": 3, "pts": 17},
+            {"name": "Hammond", "fg": "4-8", "ft": "2-6", "reb": 12, "ast": 2, "pf": 3, "pts": 10},
+            {"name": "Wood", "fg": "6-14", "ft": "1-1", "reb": 4, "ast": 1, "pf": 4, "pts": 13},
+            {"name": "Bayless", "fg": "5-7", "ft": "1-1", "reb": 1, "ast": 0, "pf": 3, "pts": 11},
+            {"name": "Cline", "fg": "3-7", "ft": "0-0", "reb": 4, "ast": 0, "pf": 3, "pts": 6},
+            {"name": "Bolden", "fg": "2-8", "ft": "0-0", "reb": 2, "ast": 1, "pf": 0, "pts": 4},
+            {"name": "Smith", "fg": "1-2", "ft": "0-0", "reb": 1, "ast": 0, "pf": 2, "pts": 2},
+            {"name": "Shields", "fg": "0-1", "ft": "0-0", "reb": 1, "ast": 0, "pf": 1, "pts": 0},
+            {"name": "Burris", "fg": "0-1", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "pts": 0},
+            {"name": "Scott", "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Indiana Hoosiers",
+          "score": 96,
+          "players": [
+            {"name": "Scott May", "fg": "10-18", "ft": "1-2", "reb": 9, "ast": 0, "pf": 2, "pts": 21},
+            {"name": "Tom Abernethy", "fg": "3-7", "ft": "2-3", "reb": 0, "ast": 2, "pf": 2, "pts": 8},
+            {"name": "Kent Benson", "fg": "10-16", "ft": "1-3", "reb": 11, "ast": 2, "pf": 2, "pts": 21},
+            {"name": "Quinn Buckner", "fg": "4-7", "ft": "1-2", "reb": 3, "ast": 10, "pf": 2, "pts": 9},
+            {"name": "Bobby Wilkerson", "fg": "2-8", "ft": "0-0", "reb": 4, "ast": 5, "pf": 1, "pts": 4},
+            {"name": "Jim Crews", "fg": "3-5", "ft": "2-2", "reb": 0, "ast": 0, "pf": 1, "pts": 8},
+            {"name": "Rich Valavicius", "fg": "3-4", "ft": "0-1", "reb": 5, "ast": 0, "pf": 3, "pts": 6},
+            {"name": "Wayne Radford", "fg": "4-6", "ft": "0-1", "reb": 6, "ast": 1, "pf": 0, "pts": 8},
+            {"name": "Jim Wisman", "fg": "0-2", "ft": "0-0", "reb": 2, "ast": 3, "pf": 2, "pts": 0},
+            {"name": "Bob Bender", "fg": "1-4", "ft": "0-0", "reb": 3, "ast": 2, "pf": 0, "pts": 2},
+            {"name": "Mark Haymore", "fg": "0-1", "ft": "0-0", "reb": 4, "ast": 0, "pf": 2, "pts": 0},
+            {"name": "Scott Eells", "fg": "1-3", "ft": "0-0", "reb": 2, "ast": 0, "pf": 0, "pts": 2},
+            {"name": "Jim Roberson", "fg": "2-4", "ft": "3-3", "reb": 4, "ast": 0, "pf": 2, "pts": 7}
+          ]
+        }
+      ],
+      "checksum_ok": true,
+      "note": "Ohio State's Poole had a printed PTS of 14, which is inconsistent with his own FG 4-9 / FT 9-11 (2*4+9=17) and with the team FG/FT totals (27 FG, 13 FT team-wide -> 2*27+13=67, matching the final score). Corrected Poole's pts to 17 (computed from his FG/FT line) so the player-pts sum equals the final score of 67; this is the only value not taken verbatim from the printed PTS column."
+    }
+  ],
+  "skipped": []
+}

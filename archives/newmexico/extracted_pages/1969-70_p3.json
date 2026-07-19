@@ -1,0 +1,41 @@
+{
+  "page": 3,
+  "games": [
+    {
+      "date": null,
+      "opponent": "New Mexico State",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 83,
+          "players": [
+            {"name": "Gibson", "min": 37, "fg": "8-17", "ft": "1-2", "reb": 3, "ast": 6, "pf": 4, "pts": 17},
+            {"name": "Long", "min": 39, "fg": "6-11", "ft": "6-8", "reb": 13, "ast": 1, "pf": 3, "pts": 18},
+            {"name": "Becker", "min": 40, "fg": "6-16", "ft": "9-10", "reb": 8, "ast": 6, "pf": 3, "pts": 21},
+            {"name": "Culver", "min": 40, "fg": "3-14", "ft": "0-0", "reb": 6, "ast": 3, "pf": 3, "pts": 6},
+            {"name": "Grimes", "min": 37, "fg": "8-12", "ft": "1-1", "reb": 5, "ast": 2, "pf": 3, "pts": 17},
+            {"name": "Somogyi", "min": 7, "fg": "2-2", "ft": "0-0", "reb": 0, "ast": 1, "pf": 3, "pts": 4}
+          ]
+        },
+        {
+          "name": "New Mexico State",
+          "score": 90,
+          "players": [
+            {"name": "Horne", "min": 37, "fg": "7-9", "ft": "3-5", "reb": 4, "ast": 9, "pf": 3, "pts": 17},
+            {"name": "Collins", "min": 36, "fg": "11-19", "ft": "4-4", "reb": 8, "ast": 6, "pf": 2, "pts": 26},
+            {"name": "Burgess", "min": 22, "fg": "2-5", "ft": "0-0", "reb": 7, "ast": 3, "pf": 2, "pts": 4},
+            {"name": "Smith", "min": 34, "fg": "4-7", "ft": "4-5", "reb": 2, "ast": 1, "pf": 4, "pts": 12},
+            {"name": "Lacey", "min": 38, "fg": "8-12", "ft": "3-3", "reb": 9, "ast": 2, "pf": 3, "pts": 19},
+            {"name": "Moore", "min": 2},
+            {"name": "Franco", "min": 1},
+            {"name": "LeFerre", "min": 1},
+            {"name": "Neal", "min": 7, "fg": "1-4", "ft": "0-2", "reb": 3, "pf": 0, "pts": 2},
+            {"name": "Reyes", "min": 22, "fg": "4-7", "ft": "2-4", "reb": 4, "pf": 2, "pts": 10}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

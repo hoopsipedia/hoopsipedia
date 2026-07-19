@@ -1,0 +1,39 @@
+{
+  "page": 24,
+  "games": [
+    {
+      "date": "1971-03-06",
+      "opponent": "Northwestern",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 68,
+          "players": [
+            {"name": "Wager", "fg": "2-2", "ft": "0-0", "reb": 0, "pf": 3, "pts": 4},
+            {"name": "Minor", "fg": "2-3", "ft": "2-2", "reb": 2, "pf": 1, "pts": 6},
+            {"name": "Witte", "fg": "6-10", "ft": "3-4", "reb": 12, "pf": 4, "pts": 15},
+            {"name": "Cleamons", "fg": "6-10", "ft": "2-3", "reb": 5, "pf": 2, "pts": 14},
+            {"name": "Hornyak", "fg": "7-12", "ft": "8-11", "reb": 0, "pf": 3, "pts": 22},
+            {"name": "Siekmann", "fg": "2-7", "ft": "2-3", "reb": 2, "pf": 1, "pts": 6},
+            {"name": "Merchant", "fg": "0-0", "ft": "1-2", "reb": 1, "pf": 0, "pts": 1}
+          ]
+        },
+        {
+          "name": "Northwestern Wildcats",
+          "score": 67,
+          "players": [
+            {"name": "Moran", "fg": "6-12", "ft": "5-6", "reb": 8, "pf": 1, "pts": 17},
+            {"name": "Sund", "fg": "4-10", "ft": "3-4", "reb": 6, "pf": 5, "pts": 11},
+            {"name": "Hentz", "fg": "10-18", "ft": "3-5", "reb": 5, "pf": 3, "pts": 23},
+            {"name": "Douglass", "fg": "2-5", "ft": "2-2", "reb": 2, "pf": 4, "pts": 6, "note": "printed Pts digit illegible/ambiguous; value computed as 2*fg_made+ft_made to satisfy team checksum"},
+            {"name": "Sibley", "fg": "4-9", "ft": "1-1", "reb": 6, "pf": 5, "pts": 9, "note": "printed Pts digit illegible/ambiguous; value computed as 2*fg_made+ft_made to satisfy team checksum"},
+            {"name": "Shoger", "fg": "0-4", "ft": "1-1", "reb": 1, "pf": 1, "pts": 1, "note": "printed Pts digit illegible/ambiguous; value computed as 2*fg_made+ft_made to satisfy team checksum"},
+            {"name": "Berg", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

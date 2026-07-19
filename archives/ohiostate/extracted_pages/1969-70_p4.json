@@ -1,0 +1,42 @@
+{
+  "page": 4,
+  "games": [
+    {
+      "date": "1969-12-08",
+      "opponent": "Northern Illinois",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 106,
+          "players": [
+            {"name": "Cleamons", "fg": "12-21", "ft": "4-5", "reb": 10, "pf": 2, "pts": 28},
+            {"name": "Andreas", "fg": "2-6", "ft": "0-0", "reb": 6, "pf": 5, "pts": 4},
+            {"name": "Sorenson", "fg": "10-17", "ft": "8-9", "reb": 15, "pf": 1, "pts": 28},
+            {"name": "Barclay", "fg": "4-8", "ft": "11-11", "reb": 4, "pf": 3, "pts": 19},
+            {"name": "Finney", "fg": "6-12", "ft": "13-15", "reb": 2, "pf": 1, "pts": 25},
+            {"name": "Minor", "fg": "1-2", "ft": "0-0", "reb": 1, "pf": 4, "pts": 2},
+            {"name": "Smith", "fg": "0-0", "ft": "0-0", "reb": 1, "pf": 3, "pts": 0}
+          ],
+          "checksum_ok": true
+        },
+        {
+          "name": "Northern Illinois Huskies",
+          "score": 99,
+          "players": [
+            {"name": "Zielinski", "fg": "8-17", "ft": "4-4", "reb": 6, "pf": 4, "pts": 20},
+            {"name": "Ivey", "fg": "11-24", "ft": "5-7", "reb": 10, "pf": 4, "pts": 27},
+            {"name": "Taylor", "fg": "1-3", "ft": "5-7", "reb": 6, "pf": 4, "pts": 7},
+            {"name": "Mason", "fg": "5-6", "ft": "5-7", "reb": 2, "pf": 4, "pts": 15},
+            {"name": "Russell", "fg": "8-14", "ft": "1-1", "reb": 2, "pf": 5, "pts": 17},
+            {"name": "Turner", "fg": "2-3", "ft": "0-1", "reb": 3, "pf": 5, "pts": 4},
+            {"name": "Naves", "fg": "3-7", "ft": "1-1", "reb": 3, "pf": 1, "pts": 7},
+            {"name": "McKiernan", "fg": "1-3", "ft": "0-0", "reb": 1, "pf": 2, "pts": 2},
+            {"name": "Rohlman", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0}
+          ],
+          "checksum_ok": true
+        }
+      ]
+    }
+  ],
+  "skipped": []
+}

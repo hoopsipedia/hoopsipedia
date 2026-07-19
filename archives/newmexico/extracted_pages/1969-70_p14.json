@@ -1,0 +1,41 @@
+{
+  "page": 14,
+  "games": [
+    {
+      "date": "1970-01-20",
+      "opponent": "Arizona State Sun Devils",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 97,
+          "players": [
+            {"name": "Gibson", "min": 40, "fg": "5-10", "ft": "3-3", "reb": 8, "ast": 13, "pf": 3, "pts": 13},
+            {"name": "Somogyi", "min": 41, "fg": "11-21", "ft": "3-4", "reb": 2, "ast": 2, "pf": 4, "pts": 25},
+            {"name": "Long", "min": 40, "fg": "12-23", "ft": "5-7", "reb": 16, "ast": 1, "pf": 4, "pts": 29},
+            {"name": "Backer", "min": 40, "fg": "5-14", "ft": "10-13", "reb": 9, "ast": 4, "pf": 2, "pts": 20},
+            {"name": "Grimes", "min": 15, "fg": "1-7", "ft": "0-0", "reb": 6, "ast": 0, "pf": 5, "pts": 2},
+            {"name": "Culver", "min": 20, "fg": "2-6", "ft": "4-5", "reb": 6, "ast": 2, "pf": 1, "pts": 8}
+          ]
+        },
+        {
+          "name": "Arizona State Sun Devils",
+          "score": 86,
+          "players": [
+            {"name": "Howard", "min": 33, "fg": "5-11", "ft": "2-2", "reb": 8, "ast": 1, "pf": 4, "pts": 12},
+            {"name": "Owens", "min": 39, "fg": "1-4", "ft": "0-2", "reb": 6, "ast": 9, "pf": 1, "pts": 2},
+            {"name": "Hill", "min": 40, "fg": "12-22", "ft": "6-9", "reb": 5, "ast": 4, "pf": 4, "pts": 30},
+            {"name": "Huffman", "min": 24, "fg": "3-3", "ft": "1-2", "reb": 4, "ast": 2, "pf": 2, "pts": 7},
+            {"name": "Johnson", "min": 22, "fg": "7-10", "ft": "4-4", "reb": 9, "ast": 2, "pf": 3, "pts": 18},
+            {"name": "Bacon", "min": 1, "fg": "0-0", "ft": "0-1", "reb": 0, "ast": 1, "pf": 0, "pts": 0},
+            {"name": "English", "min": 0, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "pts": 0, "note": "DNP"},
+            {"name": "Dubbit", "min": 9, "fg": "1-4", "ft": "0-0", "reb": 1, "ast": 3, "pf": 3, "pts": 2},
+            {"name": "Floyd", "min": 1, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "pts": 0},
+            {"name": "Schroer", "min": 31, "fg": "6-8", "ft": "3-4", "reb": 4, "ast": 3, "pf": 4, "pts": 15}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

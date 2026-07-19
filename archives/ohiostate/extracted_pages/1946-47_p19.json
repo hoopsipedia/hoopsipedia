@@ -1,0 +1,9 @@
+{
+  "page": 19,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page is a newspaper clipping (State Journal, Clarence Young byline) covering a March 3, 1947 game at Coliseum: Ohio State 62, Michigan 66 (article headline 'Ohio State Defeated In Final 16 Seconds'). Header block clearly shows SCORE Ohio 62 / Opp 66, Attendance 5325, Captain Huston, Manager DeLeone, and footer confirms Date March 3 1946-47, Opponent Michigan, Place Coliseum, Coach Dye. However, the actual VARSITY and JUNIOR VARSITY player box-score tables (Michigan and Ohio State player lines with B/FT/FTM/PF/TP columns) are printed in very small newspaper agate type and are too blurry/low-resolution in the scan to read individual digits with confidence. Guessing at per-player made-FG/FT/points/fouls values would risk fabricating stats that could fail the checksum silently, so the player lines were not transcribed. Team final scores (62-66) are legible from the headline/score box but per-player data is not reliable enough to include."
+    }
+  ]
+}

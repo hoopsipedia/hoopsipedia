@@ -1,0 +1,42 @@
+{
+  "page": 28,
+  "games": [
+    {
+      "date": "1979-03-08",
+      "opponent": "UTEP (Texas-El Paso)",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 83,
+          "players": [
+            {"name": "Phil Abney", "min": 30, "fg": "7-10", "ft": "3-4", "reb": 2, "pf": 3, "ast": 2, "to": 4, "stl": 1, "blk": 0, "pts": 17},
+            {"name": "Andre Logan", "min": 38, "fg": "2-10", "ft": "2-2", "reb": 6, "pf": 3, "ast": 1, "to": 6, "stl": 0, "blk": 1, "pts": 6},
+            {"name": "Paul Roby", "min": 26, "fg": "0-4", "ft": "0-1", "reb": 6, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Everette Jefferson", "min": 22, "fg": "1-4", "ft": "0-0", "reb": 5, "pf": 5, "ast": 1, "to": 2, "stl": 1, "blk": 0, "pts": 2},
+            {"name": "Mark Felix", "min": 10, "fg": "2-2", "ft": "2-2", "reb": 1, "pf": 4, "to": 1, "stl": 0, "blk": 0, "pts": 6},
+            {"name": "Russell Saunders", "min": 30, "fg": "9-16", "ft": "9-10", "reb": 1, "pf": 3, "ast": 6, "to": 3, "stl": 1, "blk": 0, "pts": 27},
+            {"name": "Larry Belin", "min": 15, "fg": "5-6", "ft": "3-5", "reb": 6, "pf": 2, "to": 2, "pts": 13},
+            {"name": "Mike Stewart", "min": 29, "fg": "4-9", "ft": "4-6", "reb": 3, "pf": 2, "ast": 1, "to": 3, "stl": 1, "blk": 0, "pts": 12}
+          ]
+        },
+        {
+          "name": "UTEP Miners",
+          "score": 82,
+          "players": [
+            {"name": "Kevin Hill", "min": 32, "fg": "5-11", "ft": "3-4", "reb": 6, "pf": 5, "ast": 3, "to": 4, "stl": 4, "blk": 1, "pts": 13},
+            {"name": "Roshown Amie", "min": 24, "fg": "5-7", "ft": "2-2", "reb": 4, "pf": 4, "ast": 1, "to": 2, "stl": 0, "blk": 1, "pts": 12},
+            {"name": "Anthony Burns", "min": 22, "fg": "2-4", "ft": "2-2", "reb": 7, "pf": 4, "to": 0, "stl": 0, "blk": 1, "pts": 6},
+            {"name": "Gary Wilson", "min": 40, "fg": "6-18", "ft": "2-4", "reb": 1, "pf": 2, "ast": 4, "to": 4, "stl": 2, "blk": 0, "pts": 14},
+            {"name": "Tim Crenshaw", "min": 29, "fg": "2-6", "ft": "0-0", "reb": 3, "pf": 1, "ast": 2, "to": 1, "pts": 4},
+            {"name": "Steve Yellen", "min": 2, "fg": "0-1", "ft": "0-0", "reb": 0, "pf": 1, "pts": 0},
+            {"name": "Earl Fuller", "min": 32, "fg": "7-11", "ft": "5-6", "reb": 0, "pf": 4, "ast": 2, "to": 2, "stl": 1, "blk": 0, "pts": 19},
+            {"name": "Terry White", "min": 19, "fg": "6-11", "ft": "2-6", "reb": 12, "pf": 3, "to": 2, "stl": 1, "blk": 0, "pts": 14}
+          ]
+        }
+      ],
+      "checksum_ok": true,
+      "notes": "REB column on sheet is offensive-defensive split (e.g. '2-4'); individual reb values here are the sum of that split. Team totals row: New Mexico REB 36 (incl. team rebounds), PF 22; UTEP REB 38, PF 24. Site: Texas-El Paso; attendance 12,222 (sellout). Score by periods: UNM 39-44=83, UTEP 44-38=82."
+    }
+  ],
+  "skipped": []
+}

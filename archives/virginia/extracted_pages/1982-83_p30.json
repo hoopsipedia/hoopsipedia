@@ -1,0 +1,9 @@
+{
+  "page": 30,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "1983 ACC Tournament Semifinal, Georgia Tech vs Virginia, 3/12/83, Omni-Atlanta (final 67-96). Georgia Tech's line is internally fully consistent (player TP sum = 67 = team total; each player's TP also matches 2*(FG-3PTmade)+3*3PTmade+FT exactly, including Mark Price's 8-11 on 3-pointers). Virginia's line fails checksum: player TP sum = 95 vs team total of 96, and the underlying FG/FGA columns also don't reconcile (individual FG sum = 30 vs team FG total 29; individual FGA sum = 58 vs team FGA total 56). Several Virginia player rows (notably Jim Miller and Kenny Johnson) have TP values that don't match FG/FT via the standard formula given their listed FG/FT, indicating one or more digits were misread from the dense handwritten scoresheet. Rather than guess which cells are wrong, the entire game (both teams) is skipped per instructions to be ruthless about checksum failures."
+    }
+  ]
+}

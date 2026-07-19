@@ -1,0 +1,42 @@
+{
+  "page": 24,
+  "games": [
+    {
+      "date": "1984-02-09",
+      "opponent": "Hawaii",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 46,
+          "players": [
+            {"name": "Nelson Franse", "min": 42, "fg": "8-13", "ft": "0-0", "reb": 0, "ast": 2, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 16},
+            {"name": "Kelvin Scarborough", "min": 17, "fg": "2-3", "ft": "1-1", "reb": 0, "ast": 1, "pf": 1, "to": 1, "stl": 1, "blk": 0, "pts": 5},
+            {"name": "Phil Smith", "min": 41, "fg": "3-9", "ft": "4-4", "reb": 5, "ast": 8, "pf": 1, "to": 6, "stl": 0, "blk": 0, "pts": 10},
+            {"name": "T.J. Drake", "min": 21, "fg": "1-1", "ft": "0-0", "reb": 3, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Tim Garrett", "min": 42, "fg": "2-8", "ft": "0-2", "reb": 3, "ast": 0, "pf": 2, "to": 0, "stl": 1, "blk": 0, "pts": 5},
+            {"name": "Mike Winters", "min": 17, "fg": "0-0", "ft": "0-0", "reb": 1, "ast": 1, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Alan Dolensky", "min": 45, "fg": "4-9", "ft": "0-2", "reb": 4, "ast": 3, "pf": 1, "to": 2, "stl": 1, "blk": 0, "pts": 8}
+          ]
+        },
+        {
+          "name": "Hawaii Rainbows",
+          "score": 44,
+          "players": [
+            {"name": "Larry Connors", "min": 24, "fg": "1-4", "ft": "0-2", "reb": 4, "ast": 0, "pf": 1, "to": 2, "stl": 1, "blk": 0, "pts": 2},
+            {"name": "Andre Morgan", "min": 35, "fg": "3-7", "ft": "0-0", "reb": 4, "ast": 1, "pf": 2, "to": 3, "stl": 0, "blk": 0, "pts": 6},
+            {"name": "William Colston", "min": 42, "fg": "3-5", "ft": "0-0", "reb": 2, "ast": 5, "pf": 1, "to": 3, "stl": 0, "blk": 0, "pts": 6},
+            {"name": "Crosetti Speight", "min": 11, "fg": "1-1", "ft": "0-0", "reb": 0, "ast": 0, "pf": 2, "to": 2, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Greg Hicks", "min": 41, "fg": "8-18", "ft": "0-0", "reb": 4, "ast": 2, "pf": 4, "to": 2, "stl": 1, "blk": 3, "pts": 16},
+            {"name": "Dan Hale", "min": 14, "fg": "0-2", "ft": "0-0", "reb": 2, "ast": 1, "pf": 1, "to": 1, "stl": 2, "blk": 0, "pts": 0},
+            {"name": "Sam Johnson", "min": 2, "fg": "0-1", "ft": "0-0", "reb": 0, "ast": 1, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Jack Miller", "min": 35, "fg": "3-5", "ft": "2-2", "reb": 2, "ast": 0, "pf": 2, "to": 1, "stl": 0, "blk": 0, "pts": 8},
+            {"name": "Ray Arthur", "min": 21, "fg": "2-2", "ft": "0-0", "reb": 2, "ast": 1, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 4}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": [],
+  "notes": "Both teams' printed TP (points) column used directly rather than computed from FG/FT, since the sheet has an explicit points column. Player pts sums match final scores exactly (NM 46, Hawaii 44; team total row also shows 46/44). Note: Tim Garrett's row shows FG 2-8, FT 0-2 but printed TP=5 (arithmetically would be 4) — used the sheet's printed TP as source of truth per instructions rather than overriding it. Greg Hicks' FGA is handwritten ambiguously (looks like '48'); read as 18 (8-18) as the more plausible value — makes/points figure (16) is unaffected either way. DNP (did-not-play) players omitted: New Mexico's Hunter Greeve, Larry Markland, Richard Merritt, Paul Connery, Richard Waugh; Hawaii's Rogue Harris, Michael Eutcherson, Bill Mosier. Game went to one overtime (final periods 20-24-2=46 / 26-18-0=44; team MIN totals of 225 consistent with 45 min/5-man split). Site listed on scoresheet as 'NBC Arena' (likely a scan misread of Hawaii's arena name); opponent recorded simply as Hawaii."
+}

@@ -1,0 +1,9 @@
+{
+  "page": 15,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page shows a full Big Ten box score for a game vs. Michigan (final: Ohio State 75, Michigan 68, per 'SCORE BY PERIODS' line and legible TOTALS rows: OSU FG/FGA 27-53, FT/FTA 20-26, REB 29, TP 75; opponent TOTALS FG/FGA 29-61, FT/FTA ~10-12, REB 32, TP 68). Ohio State's own player-by-player lines (Campbell 23, [illegible 2nd-row name] 4, Waiters 7, Taylor 16, Huggins 13, Wisson 4, Smith 2, Stukes 4, Haas 0, Jones 2) sum cleanly to 75 and would checksum, but the opposing team's (Michigan) handwritten player rows are too faint/inconsistent to transcribe confidently -- several FG/FT/TP cell values conflict with each other (e.g. a row showing FG 0-1, FT 0-0 but TP 2), and multiple player names are only partially legible (fragments like 'nderson,Robert', '..orenzo,Tim' probably McCormick, 'Wade,Butch', 'Tarpley,Roy'). Since both teams' player lines are required and Michigan's cannot be transcribed without inventing values, the whole game is skipped rather than guessing."
+    }
+  ]
+}

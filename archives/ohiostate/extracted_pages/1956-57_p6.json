@@ -1,0 +1,40 @@
+{
+  "page": 6,
+  "games": [
+    {
+      "date": "1956-12-26",
+      "opponent": "Temple",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 64,
+          "players": [
+            {"name": "Howard", "fg": "6-12", "ft": "6-8", "pf": 3, "reb": 20, "pts": 18},
+            {"name": "Sidle", "fg": "6-13", "ft": "4-5", "pf": 2, "reb": 15, "pts": 16},
+            {"name": "Huston", "fg": "2-7", "ft": "0-0", "pf": 2, "reb": 7, "pts": 4},
+            {"name": "Millard", "fg": "4-9", "ft": "2-4", "pf": 3, "reb": 1, "pts": 10},
+            {"name": "Laughlin", "fg": "5-19", "ft": "2-3", "pf": 4, "reb": 6, "pts": 12},
+            {"name": "Martin", "fg": "2-4", "ft": "0-0", "pf": 0, "reb": 2, "pts": 4},
+            {"name": "Barkstall", "fg": "0-0", "ft": "0-0", "pf": 0, "reb": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Temple",
+          "score": 63,
+          "players": [
+            {"name": "Norman", "fg": "6-14", "ft": "8-9", "pf": 2, "pts": 20},
+            {"name": "Fleming", "fg": "3-14", "ft": "3-4", "pf": 1, "pts": 9},
+            {"name": "Franklin", "fg": "0-3", "ft": "1-2", "pf": 3, "pts": 1},
+            {"name": "Rodgers", "fg": "8-29", "ft": "4-5", "pf": 3, "pts": 20},
+            {"name": "Brodsky", "fg": "4-16", "ft": "1-2", "pf": 1, "pts": 9},
+            {"name": "Goss", "fg": "0-2", "ft": "2-2", "pf": 1, "pts": 2},
+            {"name": "Smith", "fg": "0-0", "ft": "0-0", "pf": 1, "pts": 0},
+            {"name": "Goldstein", "fg": "1-4", "ft": "0-0", "pf": 0, "pts": 2}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

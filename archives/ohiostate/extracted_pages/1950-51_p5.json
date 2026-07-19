@@ -1,0 +1,46 @@
+{
+  "page": 5,
+  "games": [
+    {
+      "date": "1950-12-11",
+      "opponent": "Missouri",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 51,
+          "players": [
+            {"name": "Remington", "min": "23:25", "fg": "2-8", "ft": "4-6", "pf": 2, "pts": 8},
+            {"name": "Wilks", "min": "21:05", "fg": "2-5", "ft": "5-6", "pf": 3, "pts": 9},
+            {"name": "Gillaugh", "min": "29:30", "fg": "1-8", "ft": "8-8", "pf": 3, "pts": 10},
+            {"name": "Armstrong", "min": "33:35", "fg": "1-7", "ft": "4-6", "pf": 2, "pts": 6},
+            {"name": "Williams", "min": "6:25", "fg": "0-1", "ft": "0-0", "pf": 1, "pts": 0},
+            {"name": "Dawe", "min": "31:15", "fg": "2-8", "ft": "2-2", "pf": 2, "pts": 6},
+            {"name": "Karaffa", "min": "31:10", "fg": "2-10", "ft": "4-5", "pf": 2, "pts": 8},
+            {"name": "Maher", "min": "13:15", "fg": "1-5", "ft": "0-2", "pf": 0, "pts": 2},
+            {"name": "Jones", "min": "4:20", "fg": "1-1", "ft": "0-0", "pf": 1, "pts": 2},
+            {"name": "Hatfield", "min": "6:00", "fg": "0-2", "ft": "0-1", "pf": 1, "pts": 0}
+          ]
+        },
+        {
+          "name": "Missouri",
+          "score": 61,
+          "players": [
+            {"name": "Heineman", "fg": "1-7", "ft": "4-5", "pf": 3, "pts": 6},
+            {"name": "Rubin", "fg": "2-5", "ft": "0-1", "pf": 2, "pts": 4},
+            {"name": "Witt", "fg": "5-14", "ft": "2-2", "pf": 3, "pts": 12},
+            {"name": "Zimmerman", "fg": "0-3", "ft": "0-0", "pf": 1, "pts": 0},
+            {"name": "Stauffer", "fg": "5-15", "ft": "2-2", "pf": 5, "pts": 12},
+            {"name": "Loomis", "fg": "0-0", "ft": "0-0", "pf": 0, "pts": 0},
+            {"name": "Lafferty", "fg": "2-6", "ft": "5-6", "pf": 5, "pts": 9},
+            {"name": "Adams", "fg": "2-5", "ft": "1-1", "pf": 4, "pts": 5},
+            {"name": "Landolt", "fg": "6-11", "ft": "1-1", "pf": 4, "pts": 13},
+            {"name": "Gosen", "fg": "0-0", "ft": "0-0", "pf": 3, "pts": 0},
+            {"name": "Clark", "fg": "0-0", "ft": "0-0", "pf": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

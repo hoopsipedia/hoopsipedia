@@ -1,0 +1,40 @@
+{
+  "page": 23,
+  "games": [
+    {
+      "date": "1971-03-02",
+      "opponent": "Minnesota",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 84,
+          "players": [
+            {"name": "Minor", "fg": "4-10", "ft": "1-1", "reb": 8, "pf": 2, "pts": 9},
+            {"name": "Wager", "fg": "3-5", "ft": "2-2", "reb": 3, "pf": 5, "pts": 8},
+            {"name": "Witte", "fg": "7-13", "ft": "12-15", "reb": 20, "pf": 3, "pts": 26},
+            {"name": "Hornyak", "fg": "8-25", "ft": "6-8", "reb": 9, "pf": 3, "pts": 22},
+            {"name": "Merchant", "fg": "1-1", "ft": "1-1", "reb": 0, "pf": 1, "pts": 3},
+            {"name": "Cleamons", "fg": "5-9", "ft": "4-7", "reb": 6, "pf": 2, "pts": 14},
+            {"name": "Siekmann", "fg": "1-4", "ft": "0-1", "reb": 2, "pf": 2, "pts": 2}
+          ]
+        },
+        {
+          "name": "Minnesota Golden Gophers",
+          "score": 70,
+          "players": [
+            {"name": "Brewer", "fg": "5-13", "ft": "4-4", "reb": 15, "pf": 5, "pts": 14},
+            {"name": "Pyle", "fg": "0-2", "ft": "0-0", "reb": 6, "pf": 3, "pts": 0},
+            {"name": "Masterson", "fg": "2-10", "ft": "3-6", "reb": 12, "pf": 5, "pts": 7},
+            {"name": "Hill", "fg": "8-18", "ft": "2-4", "reb": 6, "pf": 3, "pts": 18},
+            {"name": "Shannon", "fg": "5-17", "ft": "5-5", "reb": 0, "pf": 4, "pts": 15},
+            {"name": "Murphy", "fg": "3-9", "ft": "3-4", "reb": 1, "pf": 1, "pts": 9},
+            {"name": "Taylor", "fg": "3-5", "ft": "1-2", "reb": 7, "pf": 3, "pts": 7},
+            {"name": "Hurtgen", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

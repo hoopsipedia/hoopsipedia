@@ -1,0 +1,49 @@
+{
+  "page": 16,
+  "games": [
+    {
+      "date": "1968-01-20",
+      "opponent": "BYU Cougars",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 84,
+          "players": [
+            {"name": "Nelson", "fg": "11-18", "ft": "3-4", "reb": 6, "pf": 0, "pts": 25},
+            {"name": "Saiford", "fg": "2-8", "ft": "4-6", "reb": 8, "pf": 3, "pts": 8},
+            {"name": "Beiker", "fg": "4-4", "ft": "0-1", "reb": 0, "pf": 4, "pts": 8},
+            {"name": "Howard", "fg": "6-11", "ft": "2-4", "reb": 8, "pf": 9, "pts": 14},
+            {"name": "Grimes", "fg": "8-13", "ft": "3-3", "reb": 5, "pf": 2, "pts": 19},
+            {"name": "Culver", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Shropshire", "fg": "3-4", "ft": "0-0", "reb": 5, "pf": 2, "pts": 6},
+            {"name": "Griffith", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 1, "pts": 0},
+            {"name": "Maes", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Schraefsma", "fg_made": 2, "ft": "2-2", "reb": 0, "pf": 0, "pts": 2},
+            {"name": "Jones", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 1, "pts": 0},
+            {"name": "Lopez", "fg": "0-0", "ft": "2-2", "reb": 0, "pf": 0, "pts": 2}
+          ]
+        },
+        {
+          "name": "BYU Cougars",
+          "score": 69,
+          "players": [
+            {"name": "Schouten", "fg": "8-11", "ft": "6-10", "reb": 3, "pf": 2, "pts": 22},
+            {"name": "Dresser", "fg": "1-2", "ft": "0-0", "reb": 1, "pf": 3, "pts": 2},
+            {"name": "Howard", "fg": "1-3", "ft": "0-0", "reb": 1, "pf": 2, "pts": 2},
+            {"name": "Liimo", "fg": "7-15", "ft": "0-1", "reb": 6, "pf": 2, "pts": 14},
+            {"name": "Lythgoe", "fg": "8-14", "ft": "0-0", "reb": 4, "pf": 2, "pts": 16},
+            {"name": "Eakins", "fg": "3-10", "ft": "5-10", "reb": 6, "pf": 4, "pts": 11},
+            {"name": "Parsons", "fg": "1-1", "ft": "0-0", "reb": 1, "pf": 0, "pts": 2},
+            {"name": "Schnieder", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Barron", "note": "DNP"},
+            {"name": "Davis", "fg": "0-1", "ft": "0-0", "reb": 0, "pf": 1, "pts": 0},
+            {"name": "Fisher", "note": "DNP"},
+            {"name": "Warner", "fg": "0-3", "ft": "0-0", "reb": 1, "pf": 2, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

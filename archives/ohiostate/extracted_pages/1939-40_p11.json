@@ -1,0 +1,9 @@
+{
+  "page": 11,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page contains one game (Ohio State 51, Butler 45, Feb 3 1940, Indianapolis, Captain Lynch, Manager Scharff, Coach Olsen) with a clearly legible header/score line and newspaper article ('Schick Stars As Ohio Wins From Butler'), but the accompanying player-by-player line-up table (Ohio State and Butler columns: G./F./MF./PF./Pts.) is a small newspaper clipping reproduced at low resolution -- individual digits in the stat columns are too blurry/small to transcribe with confidence for either team. Article text corroborates some totals (Goss: 6 FG + 1 FT = 13 pts; Lynch: 5 FG + 3 FT = 13 pts) but the full player roster and remaining stat lines could not be read reliably enough to pass checksum without guessing, so the game was skipped per instructions rather than risk inventing values."
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "page": 19,
+  "games": [
+    {
+      "date": "1987-01-17",
+      "opponent": "Air Force Falcons",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 80,
+          "players": [
+            {"name": "Darrell McGee", "min": 9.0, "tp": "0-0", "fg": "1-2", "ft": "0-0", "pts": 2},
+            {"name": "K. Scarborough", "min": 34.0, "tp": "0-1", "fg": "4-5", "ft": "7-8", "pts": 15},
+            {"name": "Hunter Greene", "min": 37.0, "tp": "0-2", "fg": "6-15", "ft": "5-7", "pts": 17},
+            {"name": "Stan Whisenant", "min": 0.0, "tp": "0-0", "fg": "0-0", "ft": "0-0", "pts": 0},
+            {"name": "Mike Winters", "min": 40.0, "tp": "2-4", "fg": "4-6", "ft": "5-7", "pts": 15},
+            {"name": "Kelly Graves", "min": 37.0, "tp": "6-11", "fg": "7-12", "ft": "1-2", "pts": 21},
+            {"name": "Bob Arnold", "min": 0.0, "tp": "0-0", "fg": "0-0", "ft": "0-0", "pts": 0},
+            {"name": "Brian Parker", "min": 3.0, "tp": "0-0", "fg": "0-0", "ft": "2-2", "pts": 2},
+            {"name": "George Adams", "min": 8.0, "tp": "0-0", "fg": "0-1", "ft": "0-0", "pts": 0},
+            {"name": "Robert Loeffel", "min": 32.0, "tp": "0-0", "fg": "4-5", "ft": "0-0", "pts": 8}
+          ]
+        },
+        {
+          "name": "Air Force Falcons",
+          "score": 65,
+          "players": [
+            {"name": "Jeff Bowling", "min": 36.0, "tp": "1-4", "fg": "3-8", "ft": "2-3", "pts": 9},
+            {"name": "Scott Kindsvater", "min": 0.0, "tp": "0-0", "fg": "0-0", "ft": "0-0", "pts": 0},
+            {"name": "Mike Hammond", "min": 21.0, "tp": "0-1", "fg": "3-8", "ft": "4-4", "pts": 10},
+            {"name": "Rob Marr", "min": 35.0, "tp": "2-5", "fg": "4-11", "ft": "1-2", "pts": 11},
+            {"name": "Raymond Dudley", "min": 26.0, "tp": "1-5", "fg": "5-11", "ft": "4-5", "pts": 15},
+            {"name": "Mike Lockwood", "min": 15.0, "tp": "0-0", "fg": "0-0", "ft": "0-0", "pts": 0},
+            {"name": "Mark Slimko", "min": 23.0, "tp": "0-0", "fg": "0-2", "ft": "0-0", "pts": 0},
+            {"name": "Chad Kimble", "min": 0.0, "tp": "0-0", "fg": "3-10", "ft": "0-0", "pts": 6},
+            {"name": "Bob Sledzik", "min": 0.0, "tp": "0-0", "fg": "0-0", "ft": "0-0", "pts": 0},
+            {"name": "Matt Sobolewski", "min": 10.0, "tp": "0-0", "fg": "0-1", "ft": "3-4", "pts": 3},
+            {"name": "Doug Thayer", "min": 0.0, "tp": "0-0", "fg": "0-0", "ft": "0-0", "pts": 0},
+            {"name": "Gary Wagner", "min": 3.0, "tp": "0-0", "fg": "0-0", "ft": "0-0", "pts": 0},
+            {"name": "Eric Kjome", "min": 25.0, "tp": "1-2", "fg": "5-7", "ft": "0-0", "pts": 11}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": [],
+  "extraction_notes": "Typed official scoresheet (New Mexico vs Air Force, 1/17/87, final NM 80 - AF 65). Columns transcribed: 3PT made-att (tp), FG made-att (fg, includes 3PT makes as subset per standard convention), FT made-att (ft), MIN. Per-player pts computed as 2*FG_made + 3PG_made + FT_made (no explicit points column was confidently mapped from the ambiguous rebound/assist/steal/block column block on the right side of the sheet, so those columns -- REB, PF, AST, STL, BLK, TO -- were omitted entirely rather than guess at their positions). Team-level aggregate totals rows independently confirm 3PT/FG/FT made-attempted-pct for both teams and the derived formula sums to each team's final score exactly (NM 80, AF 65) after two OCR corrections: Sobolewski's FG made corrected 1->0 (was double-counting with FT) and Scarborough's FT corrected 6-7/88% -> 7-8/88% (7/8=87.5% fits the printed 88% far better than 6/7=85.7%, and this is the unique correction that makes NM's player-pts sum equal the team total of 80)."
+}

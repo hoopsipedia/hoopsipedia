@@ -1,0 +1,50 @@
+{
+  "page": 1,
+  "games": [
+    {
+      "date": "1975-12-01",
+      "opponent": "Hampden-Sydney Tigers",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 113,
+          "players": [
+            {"name": "Walker, Wally", "fg": "12-16", "ft": "3-4", "reb": 6, "pf": 1, "to": 1, "pts": 27},
+            {"name": "Iavaroni, Marc", "fg": "7-12", "ft": "4-8", "reb": 8, "pf": 3, "to": 1, "pts": 18},
+            {"name": "Fulton, Otis", "fg": "4-6", "ft": "1-3", "reb": 2, "pf": 2, "to": 1, "blk": 3, "pts": 9},
+            {"name": "Langloh, Billy", "fg": "3-8", "ft": "4-4", "reb": 4, "pf": 2, "to": 1, "pts": 10},
+            {"name": "Koesters, Dave", "fg": "2-8", "ft": "2-2", "reb": 3, "pf": 2, "to": 0, "pts": 6},
+            {"name": "Stokes, Bob", "fg": "4-6", "ft": "1-1", "reb": 6, "pf": 3, "to": 1, "pts": 9},
+            {"name": "Briscoe, Tom", "fg": "1-3", "ft": "1-1", "reb": 2, "pf": 3, "to": 1, "pts": 3},
+            {"name": "Castellan, Steve", "fg": "1-4", "ft": "0-1", "reb": 2, "pf": 4, "to": 1, "blk": 2, "pts": 2},
+            {"name": "Schetlick, Ed", "fg": "2-2", "ft": "1-2", "reb": 1, "pf": 2, "to": 0, "pts": 5},
+            {"name": "Newlon, Mark", "fg": "3-6", "ft": "4-4", "reb": 9, "pf": 2, "to": 2, "pts": 10},
+            {"name": "Moore, Kevin", "fg": "3-8", "ft": "0-0", "reb": 2, "pf": 2, "to": 0, "pts": 6},
+            {"name": "Carr, Lamont", "fg": "2-4", "ft": "2-3", "reb": 2, "pf": 0, "to": 0, "pts": 6},
+            {"name": "Sepcic, Bob", "fg": "1-3", "ft": "0-0", "reb": 1, "pf": 1, "to": 0, "pts": 2}
+          ]
+        },
+        {
+          "name": "Hampden-Sydney Tigers",
+          "score": 65,
+          "players": [
+            {"name": "Burrell, Bob", "fg": "1-6", "ft": "0-0", "reb": 4, "pf": 4, "ast": 0, "to": 1, "pts": 2},
+            {"name": "McNerny, Marty", "fg": "2-2", "ft": "2-2", "reb": 0, "pf": 2, "ast": 1, "to": 3, "pts": 6},
+            {"name": "Peebles, Finn", "fg": "1-5", "ft": "0-0", "reb": 2, "pf": 3, "ast": 2, "to": 5, "pts": 2},
+            {"name": "Ponti, Dale", "fg": "2-7", "ft": "6-9", "reb": 13, "pf": 3, "ast": 0, "to": 4, "pts": 10},
+            {"name": "Tierman, Ed", "fg": "5-13", "ft": "2-2", "reb": 4, "pf": 4, "ast": 0, "to": 3, "pts": 12},
+            {"name": "Wood, Kirby", "fg": "0-1", "ft": "4-4", "reb": 1, "pf": 1, "ast": 1, "to": 1, "pts": 4},
+            {"name": "Hill, Broderick", "fg": "2-8", "ft": "7-8", "reb": 3, "pf": 2, "ast": 0, "to": 4, "pts": 11},
+            {"name": "Elliott, Lewis", "fg": "1-2", "ft": "4-4", "reb": 3, "pf": 3, "ast": 0, "to": 2, "pts": 6},
+            {"name": "Donahue, Mike", "fg": "1-7", "ft": "4-4", "reb": 0, "pf": 0, "ast": 0, "to": 0, "pts": 6},
+            {"name": "Vicars, Scap", "fg": "2-3", "ft": "0-0", "reb": 1, "pf": 2, "ast": 0, "to": 1, "pts": 4},
+            {"name": "Davenport, Carter", "fg": "0-0", "ft": "2-2", "reb": 1, "pf": 0, "ast": 0, "to": 1, "pts": 2},
+            {"name": "Lanigan, Rob", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

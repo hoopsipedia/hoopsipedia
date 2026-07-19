@@ -1,0 +1,44 @@
+{
+  "page": 1,
+  "games": [
+    {
+      "date": "1966-12-01",
+      "opponent": "William & Mary",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 80,
+          "players": [
+            {"name": "Chip Case", "min": 34, "fg": "6-18", "ft": "7-9", "reb": 2, "ast": 2, "pf": 3, "to": 0, "stl": 0, "blk": 0, "pts": 19},
+            {"name": "John Quinn", "min": 34, "fg": "6-13", "ft": "1-1", "reb": 2, "ast": 4, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 13},
+            {"name": "Jim Connelly", "min": 36, "fg": "6-13", "ft": "5-9", "reb": 2, "ast": 1, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 17},
+            {"name": "Buddy Reams", "min": 33, "fg": "3-10", "ft": "1-1", "reb": 11, "ast": 0, "pf": 4, "to": 0, "stl": 0, "blk": 0, "pts": 7},
+            {"name": "Mike Katos", "min": 21, "fg": "4-8", "ft": "2-2", "reb": 4, "ast": 3, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 10},
+            {"name": "John Naponick", "min": 14, "fg": "4-6", "ft": "3-3", "reb": 8, "ast": 0, "pf": 3, "to": 0, "stl": 0, "blk": 0, "pts": 11},
+            {"name": "Mike Smith", "min": 2, "fg": "0-1", "ft": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Gary Laws", "min": 1, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Sam Harvey", "min": 6, "fg": "1-4", "ft": "1-1", "reb": 3, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 3},
+            {"name": "John Gidding", "min": 0, "fg": "0-2", "ft": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "William & Mary",
+          "score": 65,
+          "players": [
+            {"name": "Rama", "min": 0, "fg": "8-18", "ft": "3-3", "reb": 4, "ast": 0, "pf": 5, "to": 0, "stl": 0, "blk": 0, "pts": 19},
+            {"name": "Pomeroy", "min": 0, "fg": "7-21", "ft": "5-7", "reb": 10, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 19},
+            {"name": "Panneton", "min": 0, "fg": "1-4", "ft": "3-3", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 5},
+            {"name": "Daugherty", "min": 0, "fg": "2-7", "ft": "0-0", "reb": 8, "ast": 0, "pf": 3, "to": 0, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Walker", "min": 0, "fg": "4-8", "ft": "0-1", "reb": 2, "ast": 0, "pf": 5, "to": 0, "stl": 0, "blk": 0, "pts": 8},
+            {"name": "Derringe", "min": 0, "fg": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Downing", "min": 0, "fg": "0-1", "ft": "1-1", "reb": 2, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 1},
+            {"name": "Taylor", "min": 0, "fg": "3-7", "ft": "3-5", "reb": 7, "ast": 0, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 9},
+            {"name": "Mitchell", "min": 0, "fg": "0-4", "ft": "0-0", "reb": 3, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

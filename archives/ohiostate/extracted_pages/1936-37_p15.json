@@ -1,0 +1,9 @@
+{
+  "page": 15,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page identifies a game clearly (Ohio State at Wisconsin, Madison, 1937-02-08, final score Ohio 33 - Wisconsin 35, per header box and article headline 'Scarlet Bows by 35 to 33'), but the per-player box score table (right side, small print, faint/low-contrast newspaper scan) is not legible enough to transcribe individual player min/fg/ft/pts values with confidence. Best-effort reads of the player rows produced inconsistent totals that failed to reconcile against the final scores (Wisconsin summed to ~32-35 depending on read, Ohio State summed to ~32 vs actual 33), indicating at least one misread digit. Per instructions, skipping rather than guessing at uncertain player-line values."
+    }
+  ]
+}

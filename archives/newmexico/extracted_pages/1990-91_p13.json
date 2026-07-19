@@ -1,0 +1,43 @@
+{
+  "page": 13,
+  "games": [
+    {
+      "date": "1991-01-08",
+      "opponent": "Colorado State",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 54,
+          "players": [
+            {"name": "Williams, Ike", "min": 17, "fg": "0-2", "ft": "2-2", "tp": "0-2", "reb": 3, "ast": 2, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Longley, Luc", "min": 39, "fg": "6-8", "ft": "5-8", "reb": 9, "ast": 2, "pf": 3, "to": 7, "stl": 1, "blk": 4, "pts": 17},
+            {"name": "Miller, Kurt", "min": 3, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Taylor, Jimmy", "min": 23, "fg": "1-2", "ft": "1-1", "tp": "0-1", "reb": 3, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 3},
+            {"name": "Banks, Willie", "min": 40, "fg": "0-3", "ft": "2-2", "reb": 4, "ast": 2, "pf": 0, "to": 4, "stl": 1, "blk": 0, "pts": 2},
+            {"name": "Jaxon, Khari", "min": 18, "fg": "4-5", "ft": "1-2", "reb": 6, "ast": 0, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 9},
+            {"name": "Robbins, Rob", "min": 37, "fg": "1-8", "ft": "15-17", "tp": "0-5", "reb": 2, "ast": 2, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 17},
+            {"name": "Newton, Rob", "min": 23, "fg": "2-3", "ft": "0-1", "reb": 5, "ast": 0, "pf": 3, "to": 1, "stl": 0, "blk": 0, "pts": 4}
+          ]
+        },
+        {
+          "name": "Colorado State Rams",
+          "score": 46,
+          "players": [
+            {"name": "White, Chuckie", "min": 30, "fg": "3-7", "ft": "2-2", "reb": 3, "ast": 1, "pf": 3, "to": 1, "stl": 1, "blk": 0, "pts": 8},
+            {"name": "Gipson, Wayne", "min": 12, "fg": "1-2", "ft": "0-0", "reb": 0, "ast": 0, "pf": 2, "to": 1, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Crawford, Damon", "min": 25, "fg": "2-4", "ft": "0-0", "reb": 3, "ast": 2, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Jordan, Tracy", "min": 13, "fg": "1-2", "ft": "2-2", "reb": 5, "ast": 1, "pf": 1, "to": 2, "stl": 2, "blk": 0, "pts": 4},
+            {"name": "Meredith, Mark", "min": 40, "fg": "3-8", "tp": "2-7", "ft": "1-1", "reb": 0, "ast": 2, "pf": 4, "to": 1, "stl": 4, "blk": 0, "pts": 9},
+            {"name": "Tryon, Lynn", "min": 40, "fg": "3-15", "tp": "2-7", "ft": "0-0", "reb": 2, "ast": 4, "pf": 0, "to": 0, "stl": 2, "blk": 0, "pts": 8},
+            {"name": "Larson, Doug", "min": 13, "fg": "0-2", "ft": "0-0", "reb": 1, "ast": 0, "pf": 3, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Atkinson, Aaron", "min": 5, "fg": "0-1", "ft": "0-0", "reb": 1, "ast": 0, "pf": 3, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Manna, Wagner", "min": 22, "fg": "5-12", "pf": 3, "pts": 11}
+          ]
+        }
+      ],
+      "checksum_ok": true,
+      "notes": "TP column on scoresheet is Total Points (scorer-recorded), not turnovers; used directly as pts. Player pts sums match team totals and final score exactly for both teams (NM 54, CSU 46). Bavaresco, Adriano (CSU) row is heavily obscured/scratched out with no legible stats — treated as did-not-play/0, consistent with checksum closing exactly. Manna, Wagner (CSU) row partly covered by an ink blot obscuring FT/FTA and rebound columns — those fields omitted rather than guessed; FG, MIN, PF, and TP (11) were legible and TP is used directly as pts. 3-point column abbreviated as 'tp' per schema (made-attempted) only included where the sheet shows non-zero/legible 3pt data."
+    }
+  ],
+  "skipped": []
+}

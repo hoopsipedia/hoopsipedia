@@ -1,0 +1,47 @@
+{
+  "page": 22,
+  "games": [
+    {
+      "date": "1985-02-18",
+      "opponent": "Stanford",
+      "ucla_score": 72,
+      "opp_score": 66,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 72,
+          "players": [
+            {"name": "Reggie Miller", "min": "36", "fg": "1-7", "ft": "6-6", "reb": 5, "ast": 4, "pf": 3, "to": 5, "blk": 0, "stl": 1, "pts": 8},
+            {"name": "Craig Jackson", "min": "19", "fg": "3-5", "ft": "3-4", "reb": 8, "ast": 1, "pf": 4, "to": 2, "blk": 0, "stl": 0, "pts": 9},
+            {"name": "Brad Wright", "min": "20.5", "fg": "2-4", "ft": "0-2", "reb": 11, "ast": 0, "pf": 4, "to": 3, "blk": 1, "stl": 0, "pts": 4},
+            {"name": "Montel Hatcher", "min": "21.5", "fg": "2-5", "ft": "3-3", "reb": 1, "ast": 2, "pf": 1, "to": 0, "blk": 0, "stl": 0, "pts": 7},
+            {"name": "Nigel Miguel", "min": "26.5", "fg": "5-8", "ft": "8-9", "reb": 3, "ast": 1, "pf": 2, "to": 2, "blk": 0, "stl": 0, "pts": 18},
+            {"name": "Dave Immel", "min": "17.5", "fg": "1-4", "ft": "0-0", "reb": 2, "ast": 2, "pf": 3, "to": 1, "blk": 0, "stl": 1, "pts": 2},
+            {"name": "Gary Maloncon", "min": "26.5", "fg": "8-15", "ft": "1-2", "reb": 7, "ast": 1, "pf": 4, "to": 1, "blk": 2, "stl": 0, "pts": 17},
+            {"name": "Corey Gaines", "min": "18.5", "fg": "2-3", "ft": "3-4", "reb": 5, "ast": 2, "pf": 2, "to": 1, "blk": 0, "stl": 0, "pts": 7},
+            {"name": "Kelvin Butler", "min": "3", "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 2, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Torald Jones", "min": "1", "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 1, "blk": 0, "stl": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Stanford Cardinal",
+          "score": 66,
+          "players": [
+            {"name": "Andy Fischer", "min": "23", "fg": "2-5", "ft": "2-2", "reb": 2, "ast": 1, "pf": 5, "to": 4, "blk": 0, "stl": 2, "pts": 6},
+            {"name": "Greg Butler", "min": "24.5", "fg": "4-10", "ft": "5-7", "reb": 4, "ast": 1, "pf": 3, "to": 0, "blk": 1, "stl": 0, "pts": 13},
+            {"name": "Eric Reveno", "min": "20", "fg": "2-3", "ft": "1-2", "reb": 4, "ast": 0, "pf": 4, "to": 3, "blk": 0, "stl": 1, "pts": 5},
+            {"name": "Tinh Paye", "min": "28.5", "fg": "3-6", "ft": "2-4", "reb": 6, "ast": 3, "pf": 4, "to": 1, "blk": 0, "stl": 1, "pts": 8},
+            {"name": "Novian Whitsitt", "min": "25", "fg": "3-12", "ft": "0-0", "reb": 1, "ast": 1, "pf": 1, "to": 0, "blk": 0, "stl": 1, "pts": 6},
+            {"name": "Scott Meinert", "min": "12", "fg": "2-9", "ft": "2-2", "reb": 2, "ast": 0, "pf": 1, "to": 1, "blk": 0, "stl": 0, "pts": 6},
+            {"name": "Kent Seymour", "min": "20", "fg": "2-6", "ft": "4-4", "reb": 10, "ast": 0, "pf": 2, "to": 1, "blk": 1, "stl": 2, "pts": 8},
+            {"name": "Keith Ramos", "min": "20", "fg": "2-2", "ft": "1-2", "reb": 2, "ast": 6, "pf": 5, "to": 2, "blk": 0, "stl": 0, "pts": 5},
+            {"name": "Earl Koberlein", "min": "15.5", "fg": "3-7", "ft": "3-5", "reb": 6, "ast": 1, "pf": 5, "to": 1, "blk": 0, "stl": 0, "pts": 9},
+            {"name": "Charles Hunt", "min": "11.5", "fg": "0-1", "ft": "0-2", "reb": 1, "ast": 1, "pf": 1, "to": 0, "blk": 0, "stl": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

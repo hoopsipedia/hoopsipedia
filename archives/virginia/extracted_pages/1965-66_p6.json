@@ -1,0 +1,42 @@
+{
+  "page": 6,
+  "games": [
+    {
+      "date": "1965-12-18",
+      "opponent": "Duke",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 72,
+          "players": [
+            {"name": "Jim Connelly", "fg": "3-8", "ft": "1-1", "reb": 3, "pf": 5, "pts": 7},
+            {"name": "Dale Hilsmier", "fg": "0-3", "ft": "0-0", "reb": 1, "pf": 2, "pts": 0},
+            {"name": "John Naponick", "fg": "0-0", "ft": "1-2", "reb": 2, "pf": 2, "pts": 1},
+            {"name": "Jerry Sanders", "fg": "4-8", "ft": "7-9", "reb": 7, "pf": 1, "pts": 15},
+            {"name": "John Schroeder", "fg": "4-4", "ft": "3-3", "reb": 8, "pf": 2, "pts": 11},
+            {"name": "Buddy Reams", "fg": "5-9", "ft": "3-5", "reb": 7, "pf": 5, "pts": 13},
+            {"name": "Mike Katos", "fg": "10-16", "ft": "3-4", "reb": 2, "pf": 5, "pts": 23},
+            {"name": "Jack Lettice", "fg": "0-2", "ft": "0-0", "reb": 0, "pf": 2, "pts": 0},
+            {"name": "Fred Stant", "fg": "1-1", "ft": "0-1", "reb": 1, "pf": 0, "pts": 2}
+          ]
+        },
+        {
+          "name": "Duke",
+          "score": 75,
+          "players": [
+            {"name": "Bob Verga", "fg": "6-20", "ft": "3-4", "reb": 4, "pf": 1, "pts": 15},
+            {"name": "Bob Riedy", "fg": "5-9", "ft": "2-5", "reb": 8, "pf": 4, "pts": 12},
+            {"name": "Jack Marin", "fg": "5-14", "ft": "6-6", "reb": 8, "pf": 3, "pts": 16},
+            {"name": "Steve Vacendak", "fg": "3-16", "ft": "4-7", "reb": 2, "pf": 3, "pts": 10},
+            {"name": "Mike Lewis", "fg": "4-15", "ft": "9-10", "reb": 20, "pf": 4, "pts": 17},
+            {"name": "Jim Liccardo", "fg": "1-1", "ft": "0-0", "reb": 0, "pf": 1, "pts": 2},
+            {"name": "Ron Wendelin", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 1, "pts": 0},
+            {"name": "Warren Chapman", "fg": "1-1", "ft": "1-2", "reb": 0, "pf": 2, "pts": 3}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

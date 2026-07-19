@@ -1,0 +1,44 @@
+{
+  "page": 7,
+  "games": [
+    {
+      "date": "1934-01-08",
+      "opponent": "Indiana",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 22,
+          "players": [
+            {"name": "Padlow", "fg": "0", "ft": "2-4", "pf": 2, "pts": 2},
+            {"name": "Colburn", "fg": "0", "ft": "0-0", "pf": 0, "pts": 0},
+            {"name": "Freshwater", "fg": "1", "ft": "0-0", "pf": 0, "pts": 2},
+            {"name": "Whitlinger", "fg": "1", "ft": "0-0", "pf": 0, "pts": 2},
+            {"name": "Laybourne", "fg": "0", "ft": "0-0", "pf": 4, "pts": 0},
+            {"name": "Rosequist", "fg": "0", "ft": "2-4", "pf": 4, "pts": 2},
+            {"name": "Fisher", "fg": "4", "ft": "0-0", "pf": 0, "pts": 8},
+            {"name": "Beitner", "fg": "0", "ft": "0-0", "pf": 0, "pts": 0},
+            {"name": "Conrad", "fg": "2", "ft": "2-4", "pf": 3, "pts": 6},
+            {"name": "Wendt", "fg": "0", "ft": "0-0", "pf": 3, "pts": 0}
+          ]
+        },
+        {
+          "name": "Indiana",
+          "score": 38,
+          "players": [
+            {"name": "Kehrt", "fg": "4", "ft": "0-0", "pf": 3, "pts": 8},
+            {"name": "Stout", "fg": "1", "ft": "4-6", "pf": 0, "pts": 6},
+            {"name": "Ga Inger", "fg": "1", "ft": "1-1", "pf": 0, "pts": 3},
+            {"name": "Hulman", "fg": "3", "ft": "2-4", "pf": 0, "pts": 8},
+            {"name": "Weir", "fg": "2", "ft": "2-3", "pf": 0, "pts": 6},
+            {"name": "Porter", "fg": "1", "ft": "1-1", "pf": 4, "pts": 3},
+            {"name": "Carter", "fg": "1", "ft": "0-0", "pf": 0, "pts": 2},
+            {"name": "Walker", "fg": "0", "ft": "0-0", "pf": 1, "pts": 0},
+            {"name": "Henry", "fg": "1", "ft": "0-0", "pf": 0, "pts": 2}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

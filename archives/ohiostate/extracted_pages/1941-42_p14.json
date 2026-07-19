@@ -1,0 +1,9 @@
+{
+  "page": 14,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page 14 is a scorebook page for the Jan 31, 1942 Ohio State vs Purdue game at the Coliseum (scorebook header clearly shows: SCORE Ohio 46, Opp 40; Attendance 3326; Coach Olsen). However, the actual box score is a tiny embedded newspaper clipping ('Crowd of 3326...') whose player-stat table (columns B/F/MF/PF/Pts for both Purdue and 'This State') is too degraded/low-resolution to transcribe reliably. Computed spot-checks don't reconcile (e.g. Blanken's row reads as FG3/FT3 but Pts column reads 22, inconsistent with 2*FG+FT=9; Ohio State's team total reads as 68 vs the official final score of 46). Since per-player values can't be trusted and would fail checksum, the whole game is skipped rather than guessed."
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "page": 4,
+  "games": [
+    {
+      "date": "1965-12-06",
+      "opponent": "North Carolina Tar Heels",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 72,
+          "players": [
+            {"name": "Hosket", "fg": "3-9", "ft": "6-8", "reb": 12, "pf": 3, "pts": 12},
+            {"name": "Ahijevych", "fg": "2-2", "ft": "1-1", "reb": 4, "pf": 5, "pts": 5},
+            {"name": "Dove", "fg": "12-16", "ft": "4-6", "reb": 7, "pf": 4, "pts": 28},
+            {"name": "Sepic", "fg": "7-16", "ft": "0-2", "reb": 3, "pf": 4, "pts": 14},
+            {"name": "Peters", "fg": "2-2", "ft": "0-0", "reb": 1, "pf": 0, "pts": 4},
+            {"name": "Tischer", "fg": "2-7", "ft": "4-5", "reb": 5, "pf": 2, "pts": 8},
+            {"name": "Rowley", "fg": "0-2", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Gregory", "fg": "0-1", "ft": "1-2", "reb": 1, "pf": 4, "pts": 1},
+            {"name": "Team", "reb": 6}
+          ]
+        },
+        {
+          "name": "North Carolina Tar Heels",
+          "score": 82,
+          "players": [
+            {"name": "Lewis", "fg": "11-15", "ft": "8-11", "reb": 4, "pf": 0, "pts": 30},
+            {"name": "Gauntlett", "fg": "0-1", "ft": "2-2", "reb": 1, "pf": 3, "pts": 2},
+            {"name": "Bennett", "fg": "0-4", "ft": "1-1", "reb": 1, "pf": 5, "pts": 1},
+            {"name": "Miller", "fg": "15-18", "ft": "3-5", "reb": 7, "pf": 2, "pts": 33},
+            {"name": "Yokley", "fg": "1-3", "ft": "8-9", "reb": 1, "pf": 3, "pts": 10},
+            {"name": "Mirken", "fg": "3-6", "ft": "0-0", "reb": 4, "pf": 2, "pts": 6},
+            {"name": "Moe", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 1, "pts": 0},
+            {"name": "Hassell", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Smithwick", "fg": "0-1", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Campbell", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 1, "pts": 0},
+            {"name": "Moore", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Team", "reb": 3}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

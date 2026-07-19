@@ -1,0 +1,9 @@
+{
+  "page": 23,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page 23 contains 'Game 22' box score: Ohio State at Illinois, February 17, 1988, Assembly Hall, Champaign IL (final: Illinois 118, Ohio State 86). The four starters at the top (White, Francis, Carter, Burson) transcribe cleanly with exactly 16 numeric fields matching the FG-FGA-3FG-3GA-FT-FTA-OR-DR-REB-PF-TP-A-TO-BK-S-MIN header and pass an individual FG/3FG/FT->TP checksum. However Curtis Wilson's row is missing a field (only 15 numbers visible where 16 are expected, ambiguous FT made/attempt split needed to hit his TP), and every bench player row on both the Ohio State side (Bradley, Doss, S. Anderson, Reeves, Dumas, J. Anderson, Mateen) and the Illinois side (Gill, Smith, Small, Scheuneman, MacDonald, Kennedy, Kunz, Hamilton) has long runs of adjacent 0/1 values in the OR/DR/REB/PF/A/TO/BK/S columns that compress at this scan resolution, making exact column alignment for those rows unconfident. Since team checksums require every player's points to sum to the final score (86 / 118), and several individual values could not be pinned down without guessing, the whole game is skipped rather than reporting a partial/uncertain box score. Used both allowed page reads; did not invent any values."
+    }
+  ]
+}

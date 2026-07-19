@@ -1,0 +1,45 @@
+{
+  "page": 8,
+  "games": [
+    {
+      "date": "1977-12-17",
+      "opponent": "Washington State Cougars",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 79,
+          "players": [
+            {"name": "Ken Page", "min": "19", "fg": "2-4", "ft": "4-4", "reb": 4, "pf": 0, "pts": 8},
+            {"name": "Kelvin Ransey", "min": "28", "fg": "5-12", "ft": "4-4", "reb": 5, "pf": 4, "pts": 14},
+            {"name": "Carter Scott", "min": "15", "fg": "0-9", "ft": "2-4", "reb": 2, "pf": 1, "pts": 2},
+            {"name": "Jim Smith", "min": "26", "fg": "3-6", "ft": "4-5", "reb": 4, "pf": 4, "pts": 10},
+            {"name": "Fred Poole", "min": "20", "fg": "1-8", "ft": "0-0", "reb": 5, "pf": 2, "pts": 2},
+            {"name": "Herb Williams", "min": "40", "fg": "9-23", "ft": "0-0", "reb": 12, "pf": 3, "pts": 18},
+            {"name": "Mike Cline", "min": "30", "fg": "8-13", "ft": "5-7", "reb": 4, "pf": 1, "pts": 21},
+            {"name": "Jim Ellenghausen", "min": "22", "fg": "1-2", "ft": "0-0", "reb": 5, "pf": 2, "pts": 2},
+            {"name": "Mark Hetz", "fg": "1-1", "ft": "0-0", "reb": 1, "pf": 0, "pts": 2}
+          ],
+          "checksum_ok": true
+        },
+        {
+          "name": "Washington State Cougars",
+          "score": 73,
+          "players": [
+            {"name": "Tim Jankovich", "min": "22", "fg": "1-6", "ft": "0-0", "reb": 2, "pf": 4, "pts": 2},
+            {"name": "Clarence Clark", "min": "21", "fg": "3-8", "ft": "1-2", "reb": 2, "pf": 4, "pts": 7},
+            {"name": "Steve Johnson", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Ken Jones", "min": "22", "fg": "2-5", "ft": "2-2", "reb": 4, "pf": 5, "pts": 6},
+            {"name": "Dennis Smith / Kevin Graffis (combined row, ambiguous which player)", "fg": "0-0", "ft": "1-2", "reb": 0, "pf": 0, "pts": 1},
+            {"name": "Don Collins", "min": "30", "fg": "3-7", "ft": "0-0", "reb": 2, "pf": 4, "pts": 6},
+            {"name": "Rick Forsyth", "min": "35", "fg": "7-17", "ft": "5-6", "reb": 5, "pf": 5, "pts": 19},
+            {"name": "Terry Kelly", "min": "35", "fg": "4-9", "ft": "4-9", "reb": 8, "pf": 1, "pts": 12},
+            {"name": "John Preston", "min": "45", "fg": "9-19", "ft": "2-4", "reb": 19, "pf": 2, "pts": 20},
+            {"name": "James Donaldson", "min": "11", "fg": "0-4", "ft": "0-0", "reb": 2, "pf": 1, "pts": 0}
+          ],
+          "checksum_ok": true
+        }
+      ]
+    }
+  ],
+  "skipped": []
+}

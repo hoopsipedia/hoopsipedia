@@ -1,0 +1,51 @@
+{
+  "page": 2,
+  "games": [
+    {
+      "date": "1990-11-24",
+      "opponent": "Alaska-Anchorage",
+      "ucla_score": 80,
+      "opp_score": 67,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 80,
+          "players": [
+            {"name": "Mitchell Butler", "min": 25, "fg": "0-5", "tp": "0-1", "ft": "1-2", "reb": 7, "ast": 0, "pf": 1, "to": 2, "stl": 0, "blk": 0, "pts": 1},
+            {"name": "Tracy Murray", "min": 30, "fg": "5-12", "tp": "0-3", "ft": "3-3", "reb": 7, "ast": 0, "pf": 5, "to": 1, "stl": 0, "blk": 0, "pts": 13},
+            {"name": "Don MacLean", "min": 36, "fg": "8-13", "tp": "0-0", "ft": "11-13", "reb": 11, "ast": 1, "pf": 3, "to": 2, "stl": 0, "blk": 2, "pts": 27},
+            {"name": "Gerald Madkins", "min": 25, "fg": "6-9", "tp": "1-2", "ft": "2-2", "reb": 4, "ast": 8, "pf": 1, "to": 2, "stl": 2, "blk": 0, "pts": 15},
+            {"name": "Darrick Martin", "min": 27, "fg": "2-4", "tp": "0-2", "ft": "7-8", "reb": 1, "ast": 2, "pf": 2, "to": 3, "stl": 0, "blk": 0, "pts": 11},
+            {"name": "Lou Richie", "min": 1, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Rodney Zimmerman", "min": 1, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Shon Tarver", "min": 19, "fg": "2-6", "tp": "0-1", "ft": "0-1", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 4, "blk": 0, "pts": 4},
+            {"name": "Keith Owens", "min": 25, "fg": "2-5", "ft": "3-6", "reb": 6, "ast": 0, "pf": 1, "to": 2, "stl": 0, "blk": 6, "pts": 7},
+            {"name": "Zan Mason", "min": 11, "fg": "1-1", "ft": "0-0", "reb": 1, "ast": 0, "pf": 2, "to": 0, "stl": 1, "blk": 0, "pts": 2}
+          ]
+        },
+        {
+          "name": "Alaska-Anchorage Seawolves",
+          "score": 67,
+          "players": [
+            {"name": "Jeff Jones", "min": 20, "fg": "4-13", "tp": "1-4", "ft": "4-5", "reb": 3, "ast": 1, "pf": 4, "to": 2, "stl": 0, "blk": 0, "pts": 13},
+            {"name": "Jackie Johnson", "min": 34, "fg": "11-17", "tp": "0-0", "ft": "2-2", "reb": 5, "ast": 0, "pf": 4, "to": 2, "stl": 0, "blk": 0, "pts": 24},
+            {"name": "Del Willis", "min": 36, "fg": "1-7", "tp": "0-0", "ft": "0-0", "reb": 12, "ast": 2, "pf": 3, "to": 2, "stl": 0, "blk": 3, "pts": 2},
+            {"name": "Mark Lenoir", "min": 36, "fg": "6-13", "tp": "3-8", "ft": "0-0", "reb": 8, "ast": 1, "pf": 1, "to": 0, "stl": 3, "blk": 2, "pts": 15},
+            {"name": "Van Evans", "min": 28, "fg": "3-13", "tp": "2-8", "ft": "0-2", "reb": 1, "ast": 1, "pf": 1, "to": 3, "stl": 3, "blk": 0, "pts": 8},
+            {"name": "Tom Greenfield", "min": 7, "fg": "1-1", "ft": "0-0", "reb": 2, "ast": 0, "pf": 4, "to": 1, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Mark Gisseman", "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Erick Caver", "min": 1, "fg": "0-1", "ft": "1-2", "reb": 2, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 1},
+            {"name": "Bill Withrow", "fg": "0-1", "tp": "0-1", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Lauren Johns", "fg": "0-1", "ft": "0-0", "reb": 1, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Harold Garves", "min": 12, "fg": "1-6", "tp": "0-4", "ft": "0-0", "reb": 1, "ast": 4, "pf": 4, "to": 1, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Jerry Morgan", "fg": "0-1", "ft": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Jeff Thompson", "fg": "0-1", "ft": "0-0", "reb": 0, "ast": 1, "pf": 3, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Shane Southwick", "min": 1, "fg": "0-1", "tp": "0-1", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

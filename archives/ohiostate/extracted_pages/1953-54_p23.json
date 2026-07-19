@@ -1,0 +1,48 @@
+{
+  "page": 23,
+  "games": [
+    {
+      "date": "1954-03-01",
+      "opponent": "Iowa",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 71,
+          "players": [
+            {"name": "Kelley", "fg": "4-10", "ft": "3-3", "reb": 9, "pf": 4, "pts": 11},
+            {"name": "Miller", "fg": "4-8", "ft": "5-6", "reb": 5, "pf": 4, "pts": 13},
+            {"name": "Ebert", "fg": "7-17", "ft": "5-6", "reb": 10, "pf": 5, "pts": 19},
+            {"name": "Freeman", "fg": "8-21", "ft": "5-5", "reb": 2, "pf": 3, "pts": 21},
+            {"name": "Cook", "fg": "1-8", "ft": "2-4", "reb": 2, "pf": 5, "pts": 4},
+            {"name": "Ellis", "fg": "0-0", "ft": "1-1", "reb": 0, "pf": 0, "pts": 1},
+            {"name": "Short", "fg": "0-2", "ft": "1-2", "reb": 1, "pf": 2, "pts": 1},
+            {"name": "Keeling", "fg": "0-0", "ft": "1-2", "reb": 0, "pf": 1, "pts": 1},
+            {"name": "Smith", "fg": "0-0", "ft": "0-0", "reb": 1, "pf": 0, "pts": 0},
+            {"name": "Wigton", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 1, "pts": 0},
+            {"name": "Hartley", "fg": "0-1", "ft": "0-2", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Ropes", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Iowa",
+          "score": 84,
+          "players": [
+            {"name": "Cain", "fg": "4-11", "ft": "9-14", "reb": 9, "pf": 4, "pts": 17},
+            {"name": "Schoof", "fg": "4-10", "ft": "1-5", "reb": 6, "pf": 2, "pts": 9},
+            {"name": "Logan", "fg": "7-19", "ft": "4-7", "reb": 15, "pf": 5, "pts": 18},
+            {"name": "Seaberg", "fg": "2-9", "ft": "3-5", "reb": 4, "pf": 5, "pts": 7},
+            {"name": "Scheuerman", "fg": "6-11", "ft": "5-5", "pf": 1, "pts": 17},
+            {"name": "Davis", "fg": "3-9", "ft": "1-1", "pf": 2, "pts": 7},
+            {"name": "Duncan", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 1, "pts": 0},
+            {"name": "Hawthorne", "fg": "3-3", "ft": "2-2", "reb": 2, "pf": 1, "pts": 8},
+            {"name": "Jarnagin", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "DeGunther", "fg": "0-0", "ft": "1-2", "reb": 1, "pf": 1, "pts": 1},
+            {"name": "Midley", "fg": "0-0", "ft": "0-0", "reb": 1, "pf": 1, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

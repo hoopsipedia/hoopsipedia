@@ -1,0 +1,37 @@
+{
+  "page": 15,
+  "games": [
+    {
+      "date": "1972-01-25",
+      "opponent": "Minnesota Golden Gophers",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 50,
+          "players": [
+            {"name": "Minor", "fg": "0-3", "ft": "0-1", "pf": 5, "reb": 3, "pts": 0},
+            {"name": "Jackson", "fg": "7-13", "ft": "2-4", "pf": 3, "reb": 9, "pts": 16},
+            {"name": "Witte", "fg": "4-9", "ft": "6-9", "pf": 2, "reb": 13, "pts": 14},
+            {"name": "Hornyak", "fg": "4-9", "ft": "2-2", "pf": 2, "reb": 1, "pts": 10},
+            {"name": "Gerhard", "fg": "4-8", "ft": "2-3", "pf": 2, "reb": 1, "pts": 10},
+            {"name": "Merchant", "fg": "0-0", "ft": "0-0", "pf": 0, "reb": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Minnesota Golden Gophers",
+          "score": 44,
+          "players": [
+            {"name": "Turner", "fg": "5-15", "ft": "3-5", "pf": 2, "reb": 6, "pts": 13},
+            {"name": "Behagen", "fg": "3-7", "ft": "0-0", "pf": 5, "reb": 4, "pts": 6},
+            {"name": "Brewer", "fg": "1-5", "ft": "4-6", "pf": 4, "reb": 8, "pts": 6},
+            {"name": "Nix", "fg": "3-7", "ft": "5-5", "pf": 3, "reb": 2, "pts": 11},
+            {"name": "Young", "fg": "3-8", "ft": "0-1", "pf": 1, "reb": 3, "pts": 6},
+            {"name": "Taylor", "fg": "1-1", "ft": "0-0", "pf": 1, "reb": 1, "pts": 2}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

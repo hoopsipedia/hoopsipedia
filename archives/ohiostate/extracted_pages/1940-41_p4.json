@@ -1,0 +1,9 @@
+{
+  "page": 4,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page 4 holds a single box score (Ohio State 31 @ Princeton 40, 12/28/40, Coliseum, double header with Pitt-Michigan; captain Mickelson, manager Bolton, coach Olsen), but the printed player-line table is too small/blurred in the scan to read individual digits reliably. Cross-checking attempted reads against the bottom 'Totals' rows and the header scoreline (OHIO 31, OPP 40) showed inconsistencies (e.g. Ohio State per-player FG/FT columns summed to values well below the Totals row of 13 FG / 5 FT / 31 TP), indicating the per-player digits cannot be transcribed confidently without inventing values. Only the team Totals rows appear legible/consistent (Ohio State: FG 13, FTM 5, FT-missed 11, PF 12, TP 31 - matches header; Princeton: FG 15, FTM 10, FT-missed 6, PF 13, TP inferred 40 via 2*FG+FTM formula matching header OPP score), but full player-by-player lines were skipped per instructions rather than guessed."
+    }
+  ]
+}

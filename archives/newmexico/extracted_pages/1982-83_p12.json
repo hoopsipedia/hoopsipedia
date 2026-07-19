@@ -1,0 +1,51 @@
+{
+  "page": 12,
+  "games": [
+    {
+      "date": "1983-01-04",
+      "opponent": "Grand Canyon",
+      "site": "Albuquerque, NM",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 76,
+          "players": [
+            {"name": "Tim Tullmer", "min": 17, "fg": "1-2", "ft": "0-0", "reb": 4, "ast": 2, "pf": 1, "to": 0, "stl": 2, "blk": 1, "pts": 2},
+            {"name": "Craig Allison", "min": 21, "fg": "5-8", "ft": "1-1", "reb": 6, "ast": 4, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 11},
+            {"name": "George Scott", "min": 22, "fg": "4-6", "ft": "3-4", "reb": 12, "ast": 1, "pf": 3, "to": 4, "stl": 0, "blk": 0, "pts": 11},
+            {"name": "Phil Smith", "min": 18, "fg": "1-3", "ft": "3-4", "reb": 1, "ast": 2, "pf": 4, "to": 0, "stl": 2, "blk": 0, "pts": 5},
+            {"name": "Don Bakovich", "min": 18, "fg": "3-6", "ft": "1-2", "reb": 1, "ast": 0, "pf": 1, "to": 2, "stl": 2, "blk": 0, "pts": 7},
+            {"name": "Niles Dockery", "min": 17, "fg": "5-8", "ft": "0-1", "reb": 3, "ast": 3, "pf": 0, "to": 1, "stl": 0, "blk": 2, "pts": 10},
+            {"name": "T.J. Drake", "min": 10, "fg": "0-1", "ft": "0-2", "reb": 1, "ast": 2, "pf": 3, "to": 2, "stl": 1, "blk": 0, "pts": 0},
+            {"name": "Tim Garrett", "min": 20, "fg": "9-13", "ft": "0-0", "reb": 3, "ast": 0, "pf": 2, "to": 0, "stl": 1, "blk": 2, "pts": 18},
+            {"name": "Brad Evangelho", "min": 7, "fg": "1-1", "ft": "0-1", "reb": 3, "ast": 0, "pf": 1, "to": 3, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Carvin Blocker", "min": 7, "fg": "2-3", "ft": "0-0", "reb": 5, "ast": 0, "pf": 0, "to": 3, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Mark Snow", "min": 7, "fg": "0-3", "ft": "0-4", "reb": 2, "ast": 0, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Alan Dolensky", "min": 16, "fg": "1-5", "ft": "0-0", "reb": 6, "ast": 1, "pf": 2, "to": 1, "stl": 2, "blk": 0, "pts": 2},
+            {"name": "Michael Johnson", "min": 20, "fg": "0-4", "ft": "4-4", "reb": 3, "ast": 2, "pf": 2, "to": 1, "stl": 0, "blk": 0, "pts": 4}
+          ]
+        },
+        {
+          "name": "Grand Canyon Antelopes",
+          "score": 51,
+          "players": [
+            {"name": "Carl Powell", "min": 14, "fg": "1-10", "ft": "2-2", "reb": 2, "ast": 0, "pf": 4, "to": 1, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Anthony McKinney", "min": 17, "fg": "1-6", "ft": "0-0", "reb": 2, "ast": 0, "pf": 3, "to": 1, "stl": 1, "blk": 0, "pts": 2},
+            {"name": "Mike Boatwright", "min": 23, "fg": "2-5", "ft": "3-4", "reb": 6, "ast": 0, "pf": 0, "to": 3, "stl": 0, "blk": 1, "pts": 7},
+            {"name": "Jim Pyeas", "min": 26, "fg": "1-4", "ft": "0-0", "reb": 2, "ast": 0, "pf": 2, "to": 1, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Elliot Jones", "min": 30, "fg": "3-9", "ft": "2-2", "reb": 1, "ast": 3, "pf": 1, "to": 3, "stl": 0, "blk": 0, "pts": 8},
+            {"name": "Randy Mead", "min": 7, "fg": "4-5", "ft": "1-1", "reb": 1, "ast": 0, "pf": 1, "to": 1, "stl": 1, "blk": 0, "pts": 9},
+            {"name": "Ray Fearen", "min": 10, "fg": "0-2", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Billy Carter", "min": 10, "fg": "1-1", "ft": "0-1", "reb": 0, "ast": 0, "pf": 0, "to": 2, "stl": 1, "blk": 0, "pts": 2},
+            {"name": "Cornell Staples", "min": 30, "fg": "2-3", "ft": "5-8", "reb": 3, "ast": 1, "pf": 1, "to": 5, "stl": 1, "blk": 0, "pts": 9},
+            {"name": "Bryan Gillis", "min": 14, "fg": "2-4", "ft": "1-2", "reb": 1, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 1, "pts": 5},
+            {"name": "Bob Kulovitz", "min": 14, "fg": "0-5", "ft": "3-4", "reb": 4, "ast": 0, "pf": 2, "to": 0, "stl": 1, "blk": 1, "pts": 3},
+            {"name": "Ray Jackson", "min": 5, "fg": "0-1", "ft": "0-0", "reb": 2, "ast": 0, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

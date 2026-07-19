@@ -1,0 +1,9 @@
+{
+  "page": 3,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page contains a real game box score (newspaper clipping headline 'Bucks Win Opener from Illini', Ohio State 50, Illinois 46, Champaign IL, Dec. 15 1945 — Ohio State's season opener) with two player-stat tables (OHIO STATE and ILLINOIS), but the scanned newsprint is too small/low-resolution to confidently read individual digits in the FG/FT/PF/TP columns for most players. Narrative text confirms only a few figures with confidence (Bowen: 7 FG, 4 FT = 18 pts; Risen: fouled out, 17 pts; Illinois' Doster: 6 FG, 6 FT = 18 pts), which is insufficient to reconstruct full rosters with a reliable per-team point checksum against the final scores (50 and 46). Skipped rather than risk inventing/misreading digits."
+    }
+  ]
+}

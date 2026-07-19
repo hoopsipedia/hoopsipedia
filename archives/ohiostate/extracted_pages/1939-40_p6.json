@@ -1,0 +1,11 @@
+{
+  "page": 6,
+  "games": [],
+  "skipped": [
+    {
+      "date": "1940-01-03",
+      "opponent": "California",
+      "reason": "Page contains a newspaper-clipping box score (Ohio State 49, California 45, Coliseum, coach Olsen, captain Lynch, manager Scharff, attendance 2,178) but the embedded clipping photo is too small/low-resolution for the per-player FG/FT/TP digits to be read with confidence — many cells are ambiguous or overlapping in the scan. Team-level metadata (date, opponent, final score, venue, coach, captain, manager, attendance) is legible, but individual player stat lines are not, so the whole game was skipped rather than guessed. Only the team totals row is legible enough to suggest FG 18 / FT 9 / TP 45 for California (2*18+9=45, consistent with the final score), but Ohio State's totals row and all individual player rows for both teams were not legible enough to trust."
+    }
+  ]
+}

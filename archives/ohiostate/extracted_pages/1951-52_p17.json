@@ -1,0 +1,46 @@
+{
+  "page": 17,
+  "games": [
+    {
+      "date": "1952-02-23",
+      "opponent": "Michigan",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 80,
+          "players": [
+            {"name": "Williams", "fg": "4-9", "ft": "1-1", "pf": 4, "pts": 9},
+            {"name": "Wilks", "fg": "0-4", "ft": "0-0", "pf": 3, "pts": 0},
+            {"name": "Miller", "fg": "1-3", "ft": "0-3", "pf": 0, "pts": 2},
+            {"name": "Armstrong", "fg": "4-10", "ft": "1-5", "pf": 4, "pts": 9},
+            {"name": "Hague", "fg": "0-0", "ft": "0-0", "pf": 0, "pts": 0},
+            {"name": "Ebert", "fg": "15-29", "ft": "10-18", "pf": 4, "pts": 40},
+            {"name": "Gillough", "fg": "0-2", "ft": "1-2", "pf": 2, "pts": 1},
+            {"name": "Karaffa", "fg": "4-6", "ft": "2-2", "pf": 4, "pts": 10},
+            {"name": "Hatfield", "fg": "1-4", "ft": "3-5", "pf": 3, "pts": 5},
+            {"name": "Jones", "fg": "2-6", "ft": "0-0", "pf": 0, "pts": 4},
+            {"name": "D. Cook", "fg": "0-5", "ft": "0-0", "pf": 2, "pts": 0}
+          ]
+        },
+        {
+          "name": "Michigan",
+          "score": 67,
+          "players": [
+            {"name": "Pavichevich", "fg": "1-5", "ft": "2-4", "pf": 3, "pts": 4},
+            {"name": "Codwell", "fg": "0-2", "ft": "1-1", "pf": 5, "pts": 1},
+            {"name": "Leavitt", "fg": "1-4", "ft": "2-3", "pf": 3, "pts": 4},
+            {"name": "Skala", "fg": "5-18", "ft": "3-5", "pf": 2, "pts": 13},
+            {"name": "Stern", "fg": "3-5", "ft": "1-2", "pf": 1, "pts": 7},
+            {"name": "Mead", "fg": "5-9", "ft": "9-11", "pf": 5, "pts": 19},
+            {"name": "Reddy", "fg": "2-12", "ft": "2-2", "pf": 0, "pts": 6},
+            {"name": "Topp", "fg": "1-2", "ft": "0-1", "pf": 2, "pts": 2},
+            {"name": "Lawrence", "fg": "4-9", "ft": "0-2", "pf": 3, "pts": 8},
+            {"name": "S. Cook", "fg": "0-0", "ft": "3-3", "pf": 0, "pts": 3}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

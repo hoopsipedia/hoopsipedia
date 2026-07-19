@@ -1,0 +1,44 @@
+{
+  "page": 28,
+  "games": [
+    {
+      "date": "1984-03-10",
+      "opponent": "Oregon State",
+      "ucla_score": 65,
+      "opp_score": 70,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 65,
+          "players": [
+            {"name": "Kenny Fields", "min": 39, "fg": "12-19", "ft": "4-4", "reb": 7, "ast": 2, "pf": 2, "to": 1, "stl": 1, "pts": 28},
+            {"name": "Gary Maloncon", "min": 31, "fg": "2-3", "reb": 1, "pf": 4, "to": 1, "pts": 4},
+            {"name": "Stuart Gray", "min": 32, "fg": "4-8", "reb": 6, "pf": 5, "to": 3, "stl": 1, "pts": 8},
+            {"name": "Ralph Jackson", "min": 40, "fg": "9-15", "ft": "3-4", "reb": 2, "ast": 1, "pf": 3, "to": 1, "stl": 2, "pts": 21},
+            {"name": "Nigel Miguel", "min": 26, "ft": "2-2", "reb": 1, "pf": 4, "to": 1, "stl": 1, "pts": 2},
+            {"name": "Corey Gaines", "min": 10, "fg": "1-3", "ast": 1, "pf": 1, "pts": 2},
+            {"name": "Reggie Miller", "min": 13, "fg": "0-1", "ft": "0-1", "to": 2, "pts": 0},
+            {"name": "Brad Wright", "min": 5, "reb": 1, "pf": 3, "pts": 0},
+            {"name": "Dave Immel", "min": 4, "ast": 1, "pts": 0}
+          ]
+        },
+        {
+          "name": "Oregon State Beavers",
+          "score": 70,
+          "players": [
+            {"name": "A.C. Green", "min": 33, "fg": "7-13", "ft": "10-11", "reb": 8, "ast": 2, "pf": 4, "to": 5, "stl": 2, "pts": 24},
+            {"name": "Charlie Sitton", "min": 40, "fg": "10-12", "ft": "2-3", "reb": 1, "ast": 2, "pf": 2, "to": 3, "pts": 22},
+            {"name": "Steve Woodside", "min": 40, "fg": "5-7", "ft": "2-2", "reb": 5, "ast": 3, "to": 4, "stl": 1, "pts": 12},
+            {"name": "Darryl Flowers", "min": 38, "fg": "1-4", "ft": "2-2", "reb": 1, "ast": 4, "pf": 1, "to": 1, "pts": 4},
+            {"name": "Alan Tait", "min": 38, "fg": "3-3", "ft": "2-2", "reb": 3, "ast": 1, "pf": 3, "to": 1, "stl": 1, "pts": 8},
+            {"name": "Darrin Houston", "min": 4, "pts": 0},
+            {"name": "Rick Berry", "min": 1, "pts": 0},
+            {"name": "Jamie Stangel", "min": 6, "ft": "0-2", "ast": 1, "pf": 3, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

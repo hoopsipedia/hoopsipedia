@@ -1,0 +1,11 @@
+{
+  "page": 2,
+  "games": [],
+  "skipped": [
+    {
+      "date": "1951-12-03",
+      "opponent": "Kansas State",
+      "reason": "Ohio State (visiting, score 54) player lines transcribe cleanly and checksum exactly (2*FG+FT per player sums to 54). Kansas State (home, score 78) FG and FGA columns are legible and sum correctly to the printed totals (32 and 71), but the FT, FTM, PF, and PTS columns are smudged/obscured by scan artifacts on this copy: individual PF values sum to 32 against a printed team total of 27, and several PTS entries do not reconcile with 2*FG+FT using the readable digits. Since a confident, non-guessed transcription of both teams is required and Kansas State's scoring/foul columns cannot be read reliably, the entire game is skipped rather than guessing at illegible digits."
+    }
+  ]
+}

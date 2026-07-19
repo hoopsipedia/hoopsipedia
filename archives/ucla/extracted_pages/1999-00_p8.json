@@ -1,0 +1,43 @@
+{
+  "page": 8,
+  "games": [
+    {
+      "date": "1999-12-23",
+      "opponent": "South Florida Bulls",
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 103,
+          "players": [
+            {"name": "Moiso, Jerome", "min": 35, "fg": "7-14", "tp": "0-0", "ft": "6-8", "reb": 8, "ast": 2, "pf": 2, "to": 2, "stl": 4, "blk": 0, "pts": 20},
+            {"name": "Kapono, Jason", "min": 34, "fg": "7-12", "tp": "3-5", "ft": "0-0", "reb": 7, "ast": 1, "pf": 5, "to": 1, "stl": 0, "blk": 0, "pts": 17},
+            {"name": "Gadzuric, Dan", "min": 21, "fg": "2-4", "tp": "0-0", "ft": "4-9", "reb": 7, "ast": 1, "pf": 5, "to": 1, "stl": 0, "blk": 1, "pts": 8},
+            {"name": "Watson, Earl", "min": 44, "fg": "7-10", "tp": "3-5", "ft": "3-4", "reb": 4, "ast": 7, "pf": 3, "to": 6, "stl": 3, "blk": 0, "pts": 20},
+            {"name": "Young, Ray", "min": 27, "fg": "5-8", "tp": "2-5", "ft": "2-2", "reb": 2, "ast": 0, "pf": 5, "to": 0, "stl": 0, "blk": 1, "pts": 14},
+            {"name": "Bailey, Ryan", "min": 23, "fg": "4-7", "tp": "0-2", "ft": "1-2", "reb": 1, "ast": 1, "pf": 4, "to": 3, "stl": 2, "blk": 0, "pts": 9},
+            {"name": "Hines, Rico", "min": 22, "fg": "2-4", "tp": "0-2", "ft": "1-2", "reb": 2, "ast": 1, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 5},
+            {"name": "Barnes, Matt", "min": 14, "fg": "3-6", "tp": "0-1", "ft": "1-2", "reb": 5, "ast": 0, "pf": 1, "to": 1, "stl": 0, "blk": 1, "pts": 7},
+            {"name": "Knight, Billy", "min": 5, "fg": "1-4", "tp": "0-2", "ft": "1-2", "reb": 2, "ast": 0, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 3}
+          ]
+        },
+        {
+          "name": "South Florida Bulls",
+          "score": 98,
+          "players": [
+            {"name": "Jackson, Altron", "min": 28, "fg": "6-16", "tp": "0-1", "ft": "5-6", "reb": 2, "ast": 0, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 17},
+            {"name": "Smith, Cedric", "min": 36, "fg": "6-11", "tp": "4-8", "ft": "2-2", "reb": 5, "ast": 0, "pf": 0, "to": 4, "stl": 1, "blk": 0, "pts": 18},
+            {"name": "Waldon, B.B.", "min": 32, "fg": "6-8", "tp": "2-2", "ft": "9-14", "reb": 7, "ast": 1, "pf": 4, "to": 4, "stl": 1, "blk": 0, "pts": 23},
+            {"name": "Johnson, Scott", "min": 33, "fg": "6-8", "tp": "3-4", "ft": "1-2", "reb": 3, "ast": 1, "pf": 4, "to": 2, "stl": 0, "blk": 1, "pts": 16},
+            {"name": "Kohn, Reggie", "min": 28, "fg": "2-8", "tp": "2-6", "ft": "0-0", "reb": 1, "ast": 2, "pf": 1, "to": 1, "stl": 3, "blk": 0, "pts": 6},
+            {"name": "Asbury, Chonsey", "min": 19, "fg": "1-6", "tp": "0-1", "ft": "2-2", "reb": 2, "ast": 2, "pf": 4, "to": 2, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Sanders, Sam", "min": 12, "fg": "1-1", "tp": "0-0", "ft": "4-4", "reb": 2, "ast": 0, "pf": 5, "to": 1, "stl": 0, "blk": 1, "pts": 6},
+            {"name": "Dawson, Marlon", "min": 17, "fg": "0-3", "tp": "0-1", "ft": "0-0", "reb": 1, "ast": 0, "pf": 2, "to": 2, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Reeves, Artha", "min": 20, "fg": "2-3", "tp": "0-0", "ft": "4-8", "reb": 5, "ast": 1, "pf": 1, "to": 1, "stl": 0, "blk": 1, "pts": 8}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

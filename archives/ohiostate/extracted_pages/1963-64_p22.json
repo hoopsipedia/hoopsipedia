@@ -1,0 +1,40 @@
+{
+  "page": 22,
+  "games": [
+    {
+      "date": "1964-02-22",
+      "opponent": "Northwestern Wildcats",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 72,
+          "players": [
+            {"name": "De Voe", "fg": "1-3", "ft": "1-2", "reb": 1, "pf": 3, "pts": 3},
+            {"name": "Shaffer", "fg": "11-16", "ft": "1-2", "reb": 9, "pf": 5, "pts": 23},
+            {"name": "Bradds", "fg": "3-21", "ft": "6-9", "reb": 19, "pf": 2, "pts": 12},
+            {"name": "Ricketts", "fg": "3-14", "ft": "4-5", "reb": 5, "pf": 1, "pts": 10},
+            {"name": "Bowman", "fg": "4-8", "ft": "3-4", "reb": 7, "pf": 2, "pts": 11},
+            {"name": "Flatt", "fg": "5-8", "ft": "1-2", "reb": 2, "pf": 2, "pts": 11},
+            {"name": "Dovo", "fg": "0-0", "ft": "2-2", "reb": 0, "pf": 0, "pts": 2}
+          ]
+        },
+        {
+          "name": "Northwestern Wildcats",
+          "score": 61,
+          "players": [
+            {"name": "Lopossa", "fg": "8-10", "ft": "4-8", "reb": 11, "pf": 2, "pts": 20},
+            {"name": "Jackson", "fg": "2-8", "ft": "2-4", "reb": 11, "pf": 4, "pts": 6},
+            {"name": "Keeley", "fg": "3-8", "ft": "1-2", "reb": 1, "pf": 5, "pts": 7},
+            {"name": "Riessen", "fg": "2-9", "ft": "0-0", "reb": 10, "pf": 1, "pts": 4},
+            {"name": "Falk", "fg": "7-20", "ft": "6-6", "reb": 8, "pf": 2, "pts": 20},
+            {"name": "Wood", "fg": "0-3", "ft": "0-0", "reb": 1, "pf": 1, "pts": 0},
+            {"name": "Hansen", "fg": "1-2", "ft": "0-0", "reb": 5, "pf": 3, "pts": 2},
+            {"name": "Nelson", "fg": "1-1", "ft": "0-0", "reb": 0, "pf": 1, "pts": 2}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

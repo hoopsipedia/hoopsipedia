@@ -1,0 +1,9 @@
+{
+  "page": 18,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Official Western Conference box score, Ohio State (visiting, 71) at Northwestern (home, 89), 1954-02-08. Ohio State's side is clean and legible (FG/FT-made/PF/PTS columns; player PTS sum 4+13+17+24+9+1+2+1+0=71 matches team total, checksum OK), but the Northwestern side has three player rows (Kurka, Drake, and a fourth partly-illegible row, likely 'Kraft'/'Braplin') plus the totals row heavily obscured by dark diagonal scan/overlay marks across the FG/FGA/FT/FTM/PTS cells. Individual player values in those rows could not be read with confidence (only Ehmann, Stoeppelworth, Petrancek, LeBuhn, and a bottom row were clearly legible), so a per-player checksum for Northwestern could not be verified even though the printed team totals (FG36 FGA78 FT17 FTM14 PF20 PTS89) are internally consistent (2*36+17=89). Per instructions, skipping the entire game rather than guessing at the obscured cells."
+    }
+  ]
+}

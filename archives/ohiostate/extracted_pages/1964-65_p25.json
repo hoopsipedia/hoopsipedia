@@ -1,0 +1,40 @@
+{
+  "page": 25,
+  "games": [
+    {
+      "date": "1965-03-08",
+      "opponent": "Michigan",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 93,
+          "players": [
+            {"name": "Ahijevych", "fg": "3-6", "ft": "5-5", "reb": 8, "pf": 4, "pts": 11},
+            {"name": "Sepic", "fg": "8-18", "ft": "0-0", "reb": 8, "pf": 2, "pts": 16},
+            {"name": "Dove", "fg": "6-10", "ft": "3-4", "reb": 6, "pf": 5, "pts": 15},
+            {"name": "Ricketts", "fg": "14-24", "ft": "4-7", "reb": 5, "pf": 3, "pts": 32},
+            {"name": "Rowley", "fg": "0-2", "ft": "2-3", "reb": 0, "pf": 0, "pts": 2},
+            {"name": "Shaffer", "fg": "6-7", "ft": "3-4", "reb": 7, "pf": 4, "pts": 15},
+            {"name": "Tischer", "fg": "1-1", "ft": "0-0", "reb": 1, "pf": 1, "pts": 2}
+          ]
+        },
+        {
+          "name": "Michigan Wolverines",
+          "score": 85,
+          "players": [
+            {"name": "Tregoning", "fg": "3-10", "ft": "2-2", "reb": 8, "pf": 4, "pts": 8},
+            {"name": "Darden", "fg": "7-20", "ft": "8-11", "reb": 15, "pf": 4, "pts": 22},
+            {"name": "Buntin", "fg": "9-12", "ft": "9-10", "reb": 5, "pf": 5, "pts": 27},
+            {"name": "Thompson", "fg": "5-13", "ft": "3-3", "reb": 2, "pf": 3, "pts": 13},
+            {"name": "Pomey", "fg": "5-10", "ft": "3-4", "reb": 3, "pf": 1, "pts": 13},
+            {"name": "Dill", "fg": "0-0", "ft": "2-2", "reb": 1, "pf": 1, "pts": 2},
+            {"name": "Myers", "fg": "0-1", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Ludwig", "fg": "0-2", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

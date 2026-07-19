@@ -1,0 +1,41 @@
+{
+  "page": 18,
+  "games": [
+    {
+      "date": "1988-01-23",
+      "opponent": "Georgia Tech",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 58,
+          "players": [
+            {"name": "Kennedy, Mel", "min": 38, "fg": "5-12", "ft": "7-7", "tp": "1-3", "reb": 8, "ast": 1, "pf": 1, "stl": 1, "pts": 18},
+            {"name": "Turner, Kenny", "min": 32, "fg": "4-9", "ft": "2-2", "tp": "0-0", "reb": 7, "pf": 1, "pts": 10},
+            {"name": "Batts, Bill", "min": 38, "fg": "2-7", "ft": "0-0", "tp": "0-0", "reb": 7, "pf": 1, "pts": 4},
+            {"name": "Johnson, John", "min": 38, "fg": "3-13", "ft": "3-3", "tp": "0-3", "reb": 2, "ast": 8, "to": 1, "stl": 2, "pf": 2, "pts": 9},
+            {"name": "Morgan, Richard", "min": 28, "fg": "5-8", "ft": "0-0", "tp": "1-2", "reb": 3, "ast": 2, "to": 3, "pf": 2, "pts": 11},
+            {"name": "Simms, Darrick", "min": 18, "fg": "3-5", "ft": "0-0", "tp": "0-1", "reb": 3, "ast": 3, "to": 1, "blk": 1, "pf": 2, "pts": 6},
+            {"name": "Daniel, Jeff", "min": 6, "to": 2, "pts": 0},
+            {"name": "Crotty, John", "min": 2, "pts": 0}
+          ],
+          "checksum_ok": true
+        },
+        {
+          "name": "Georgia Tech",
+          "score": 55,
+          "players": [
+            {"name": "Scott, Dennis", "min": 39, "fg": "6-13", "ft": "1-1", "tp": "4-8", "reb": 8, "ast": 4, "to": 1, "pf": 1, "pts": 17},
+            {"name": "Ferrell, Duane", "min": 40, "fg": "6-13", "ft": "2-2", "tp": "0-0", "reb": 5, "to": 2, "pf": 3, "pts": 14},
+            {"name": "Hammonds, Tom", "min": 38, "fg": "6-15", "ft": "3-4", "tp": "0-0", "reb": 8, "ast": 1, "to": 3, "pf": 1, "pts": 15},
+            {"name": "Neal, Craig", "min": 38, "fg": "1-6", "ft": "0-0", "tp": "0-3", "reb": 3, "ast": 6, "to": 2, "blk": 1, "pf": 4, "pts": 2},
+            {"name": "Oliver, Brian", "min": 28, "fg": "3-9", "ft": "0-0", "tp": "1-2", "reb": 6, "ast": 4, "to": 2, "pf": 4, "pts": 7},
+            {"name": "Munlyn, James", "min": 15, "fg": "0-2", "ft": "0-0", "tp": "0-0", "reb": 1, "blk": 1, "pf": 1, "pts": 0},
+            {"name": "Sherrod, Anthony", "min": 2, "reb": 1, "pts": 0}
+          ],
+          "checksum_ok": true
+        }
+      ]
+    }
+  ],
+  "skipped": []
+}

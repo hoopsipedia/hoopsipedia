@@ -1,0 +1,40 @@
+{
+  "page": 33,
+  "games": [
+    {
+      "date": "1984-03-31",
+      "opponent": "Houston",
+      "notes": "NCAA Tournament First Semifinal (Final Four), Kingdome, Seattle. Score by periods: Virginia 23-20-4(OT)=47, Houston 25-18-6(OT)=49. Blank FT/FTA cells inferred as 0-0 where checksum (pts = 2*fg + ft) confirms; not otherwise invented.",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 47,
+          "players": [
+            {"name": "Jim Miller", "fg": "6-15", "ft": "0-0", "reb": 4, "pf": 2, "pts": 12, "min": 37, "ast": 1, "to": 3},
+            {"name": "Kenton Edelin", "fg": "1-2", "ft": "0-0", "reb": 3, "pf": 3, "pts": 2, "min": 38.5, "ast": 2, "to": 1, "blk": 1},
+            {"name": "Olden Polynice", "fg": "4-7", "ft": "1-1", "reb": 7, "pf": 1, "pts": 9, "min": 43, "to": 1, "stl": 1},
+            {"name": "Othell Wilson", "fg": "5-12", "ft": "2-2", "reb": 3, "pf": 2, "pts": 12, "min": 45, "ast": 5, "to": 4, "blk": 1, "stl": 2},
+            {"name": "Rick Carlisle", "fg": "3-14", "ft": "2-2", "reb": 6, "pf": 2, "pts": 8, "min": 29.5},
+            {"name": "Ricky Stokes", "fg": "1-1", "ft": "0-2", "reb": 2, "pf": 4, "pts": 2, "min": 24, "ast": 3, "stl": 2},
+            {"name": "Tom Sheehey", "fg": "1-3", "ft": "0-0", "reb": 1, "pf": 0, "pts": 2, "min": 8, "ast": 1}
+          ]
+        },
+        {
+          "name": "Houston Cougars",
+          "score": 49,
+          "players": [
+            {"name": "Rickie Winslow", "fg": "4-7", "ft": "0-0", "reb": 7, "pf": 2, "pts": 8, "min": 44, "to": 1, "blk": 1, "stl": 2},
+            {"name": "Michael Young", "fg": "8-16", "ft": "1-4", "reb": 7, "pf": 1, "pts": 17, "min": 45, "ast": 1, "to": 2},
+            {"name": "Akeem Olajuwon", "fg": "4-5", "ft": "4-6", "reb": 11, "pf": 3, "pts": 12, "min": 45, "ast": 1, "to": 8, "blk": 5, "stl": 2},
+            {"name": "Alvin Franklin", "fg": "2-7", "ft": "2-2", "reb": 4, "pf": 1, "pts": 6, "min": 45, "ast": 7, "to": 1, "stl": 1},
+            {"name": "Reid Gettys", "fg": "3-7", "ft": "0-0", "reb": 3, "pf": 3, "pts": 6, "min": 45, "ast": 6, "to": 3},
+            {"name": "Eric Dickens", "min": 0.5},
+            {"name": "Marvin Alexander", "min": 0.5}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

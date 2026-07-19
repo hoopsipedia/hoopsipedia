@@ -1,0 +1,11 @@
+{
+  "page": 6,
+  "games": [],
+  "skipped": [
+    {
+      "date": "1953-12-21",
+      "opponent": "Miami (OH)",
+      "reason": "Official Western Conference box score, Ohio State 106 - Miami 81. Ohio State (visiting) side is clean and legible; player PTS sum = 106 matching the team total exactly, and FG/FT-made/FT-missed columns cross-check consistently (pts = 2*FG_made + FT_made for every player). However the Miami (home) side is heavily smudged/faded in the scan: several player surnames and digits are illegible, and best-effort reconstruction of Miami's per-player points only sums to ~78 vs the listed team total of 81, failing the checksum. Per instructions, skipping the whole game rather than mixing a confident team with an unreliable one or guessing at the missing/illegible Miami values."
+    }
+  ]
+}

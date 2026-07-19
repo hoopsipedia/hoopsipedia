@@ -1,0 +1,43 @@
+{
+  "page": 12,
+  "games": [
+    {
+      "date": "1976-01-08",
+      "opponent": "Oregon",
+      "ucla_score": 62,
+      "opp_score": 61,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 62,
+          "players": [
+            {"name": "Raymond Townsend", "fg": "2-4", "ft": "3-6", "reb": 1, "pf": 3, "pts": 7},
+            {"name": "Richard Washington", "fg": "10-17", "ft": "3-5", "reb": 10, "pf": 4, "pts": 23},
+            {"name": "Ralph Drollinger", "fg": "4-7", "ft": "5-9", "reb": 11, "pf": 3, "pts": 13},
+            {"name": "Jim Spillane", "fg": "1-5", "ft": "2-3", "reb": 3, "pf": 2, "pts": 4},
+            {"name": "Andre McCarter", "fg": "3-9", "ft": "1-2", "reb": 2, "pf": 4, "pts": 7},
+            {"name": "Wilbert Olinde", "fg": "0-0", "ft": "0-0", "reb": 1, "pf": 0, "pts": 0},
+            {"name": "Marques Johnson", "fg": "4-8", "ft": "0-1", "reb": 14, "pf": 2, "pts": 8}
+          ]
+        },
+        {
+          "name": "Oregon Ducks",
+          "score": 61,
+          "players": [
+            {"name": "Mike Drummond", "fg": "2-3", "ft": "0-0", "reb": 0, "pf": 3, "pts": 4},
+            {"name": "Mark Barwig", "fg": "1-1", "ft": "0-1", "reb": 0, "pf": 5, "pts": 2},
+            {"name": "Ron Lee", "fg": "8-16", "ft": "1-1", "reb": 2, "pf": 5, "pts": 17},
+            {"name": "Stu Jackson", "fg": "7-16", "ft": "1-2", "reb": 9, "pf": 2, "pts": 15},
+            {"name": "Danny Mack", "fg": "2-4", "ft": "0-0", "reb": 2, "pf": 2, "pts": 4},
+            {"name": "Ernie Kent", "fg": "2-4", "ft": "2-5", "reb": 0, "pf": 2, "pts": 6},
+            {"name": "Greg Ballard", "fg": "3-10", "ft": "0-0", "reb": 5, "pf": 3, "pts": 6},
+            {"name": "Gary Nelson", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Dan Hartshorne", "fg": "3-9", "ft": "1-2", "reb": 13, "pf": 2, "pts": 7}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

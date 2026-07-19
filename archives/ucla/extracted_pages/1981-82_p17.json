@@ -1,0 +1,52 @@
+{
+  "page": 17,
+  "games": [
+    {
+      "date": "1982-01-30",
+      "opponent": "Oregon",
+      "ucla_score": 84,
+      "opp_score": 61,
+      "teams": [
+        {
+          "name": "Oregon Ducks",
+          "score": 61,
+          "players": [
+            {"name": "Grieg", "min": 35, "fg": "8-18", "ft": "4-4", "reb": 10, "ast": 1, "pf": 3, "to": 4, "stl": 1, "pts": 20},
+            {"name": "Williams", "min": 25, "fg": "3-10", "ft": "1-6", "reb": 14, "ast": 0, "pf": 4, "to": 4, "stl": 1, "pts": 7},
+            {"name": "Rasmussen", "min": 16, "fg": "0-5", "ft": "2-4", "reb": 4, "ast": 1, "pf": 4, "to": 4, "blk": 1, "pts": 2},
+            {"name": "Cofield", "min": 26, "fg": "4-8", "ft": "3-3", "reb": 2, "ast": 3, "pf": 2, "to": 4, "stl": 1, "pts": 11},
+            {"name": "Bain", "min": 24, "fg": "1-3", "ft": "2-2", "reb": 1, "ast": 0, "pf": 0, "to": 2, "pts": 4},
+            {"name": "Gatewood", "min": 12, "fg": "1-4", "ft": "1-2", "reb": 0, "ast": 1, "pf": 0, "to": 2, "pts": 3},
+            {"name": "Adams", "min": 21, "fg": "2-7", "ft": "2-2", "reb": 3, "ast": 1, "pf": 0, "to": 0, "stl": 1, "pts": 6},
+            {"name": "Brantley", "min": 6, "fg": "0-2", "ft": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 0, "pts": 0},
+            {"name": "Walker", "min": 10, "fg": "0-1", "ft": "3-5", "reb": 2, "ast": 3, "pf": 0, "to": 1, "pts": 3},
+            {"name": "Taylor", "min": 17, "fg": "1-3", "ft": "1-2", "reb": 2, "ast": 1, "pf": 4, "to": 0, "pts": 3},
+            {"name": "Trendall", "min": 4, "fg": "1-2", "ft": "0-0", "reb": 1, "ast": 0, "pf": 1, "to": 0, "pts": 2},
+            {"name": "Perry", "min": 4, "fg": "0-0", "ft": "0-1", "reb": 0, "ast": 0, "pf": 0, "to": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "UCLA Bruins",
+          "score": 84,
+          "players": [
+            {"name": "Sanders", "min": 34, "fg": "6-10", "ft": "4-6", "reb": 9, "ast": 0, "pf": 3, "to": 3, "stl": 1, "pts": 16},
+            {"name": "Fields", "min": 29, "fg": "6-12", "ft": "0-0", "reb": 5, "ast": 0, "pf": 3, "to": 1, "blk": 1, "pts": 12},
+            {"name": "Gray", "min": 21, "fg": "4-7", "ft": "0-1", "reb": 3, "ast": 0, "pf": 4, "to": 2, "blk": 1, "pts": 8},
+            {"name": "Jackson", "min": 20, "fg": "3-6", "ft": "0-0", "reb": 3, "ast": 3, "pf": 4, "to": 2, "pts": 6},
+            {"name": "Foster", "min": 29, "fg": "7-12", "ft": "2-2", "reb": 5, "ast": 4, "pf": 1, "to": 1, "stl": 2, "pts": 16},
+            {"name": "Daye", "min": 22, "fg": "5-7", "ft": "1-5", "reb": 1, "ast": 6, "pf": 3, "to": 2, "stl": 3, "pts": 11},
+            {"name": "Holton", "min": 24, "fg": "4-8", "ft": "1-2", "reb": 5, "ast": 1, "pf": 4, "to": 2, "stl": 1, "pts": 9},
+            {"name": "Wright", "min": 5, "fg": "0-3", "ft": "0-0", "reb": 2, "ast": 0, "pf": 0, "to": 0, "blk": 1, "pts": 0},
+            {"name": "Miguel", "min": 4, "fg": "0-1", "ft": "0-2", "reb": 0, "ast": 1, "pf": 0, "to": 0, "pts": 0},
+            {"name": "Maloncon", "min": 4, "fg": "1-3", "ft": "0-0", "reb": 3, "ast": 0, "pf": 0, "to": 1, "pts": 2},
+            {"name": "Anderson", "min": 3, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 1, "pf": 0, "to": 1, "pts": 0},
+            {"name": "Eaton", "min": 2, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "to": 1, "pts": 0},
+            {"name": "Sears", "min": 3, "fg": "2-2", "ft": "0-0", "reb": 1, "ast": 0, "pf": 1, "to": 0, "pts": 4}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

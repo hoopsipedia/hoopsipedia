@@ -1,0 +1,9 @@
+{
+  "page": 17,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "1935-02-18 Ohio State at Illinois (Illinois won 43-36 per newspaper clipping headline/summary box). Team-level totals are legible (Ohio State: 14 FG / 8 FT / 36 pts; Illinois: 17 FG / 9 FT / 43 pts, both consistent with reported final score), and the article text confirms Whitlinger scored 11 (3 in the first half + 8 in the second) and Henry scored 15 for Illinois. However, the six-row per-player box score for both teams (Wilson, Whitlinger, Laybourne, Thomas, Beitner, Dye for Ohio State; Froschauer, Guttschow, Riegel, Henry, Combs, Seymon for Illinois) is a small, low-resolution scan where individual FG/FT digit columns cannot be read with confidence -- attempted reconstructions did not sum to the known team totals, indicating misread digits rather than a genuine checksum failure. Skipping rather than guessing per instructions."
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "page": 1,
+  "games": [
+    {
+      "date": "1989-11-23",
+      "opponent": "Providence Friars",
+      "teams": [
+        {
+          "name": "Providence Friars",
+          "score": 75,
+          "players": [
+            {"name": "Keith Lomax", "min": 22, "fg": "3-4", "ft": "0-0", "reb": 2, "pf": 5, "stl": 2, "pts": 6},
+            {"name": "Brian Waller", "min": 39, "fg": "5-18", "ft": "4-4", "reb": 5, "pf": 5, "ast": 1, "to": 4, "stl": 1, "pts": 14},
+            {"name": "Ray Knight", "min": 40, "fg": "4-7", "ft": "4-5", "reb": 8, "pf": 3, "ast": 1, "to": 3, "blk": 2, "stl": 1, "pts": 12},
+            {"name": "Donnie Brown", "min": 20, "fg": "3-8", "reb": 0, "pf": 3, "to": 1, "stl": 2, "pts": 6},
+            {"name": "Harold Starks", "min": 33, "fg": "5-6", "ft": "6-8", "reb": 3, "pf": 4, "ast": 6, "to": 3, "stl": 2, "pts": 16},
+            {"name": "Steve Wright", "min": 6, "ast": 1, "pts": 0},
+            {"name": "Bill Donovan", "min": 12, "fg": "2-3", "reb": 0, "pf": 1, "ast": 1, "pts": 4},
+            {"name": "Matt Palazzi", "min": 24, "fg": "6-9", "reb": 2, "pf": 2, "ast": 3, "to": 1, "stl": 3, "pts": 12},
+            {"name": "Jack Duda", "min": 6, "reb": 1, "pf": 2, "pts": 0},
+            {"name": "Earnie Lewis", "min": 7, "fg": "0-2", "blk": 1, "pts": 0},
+            {"name": "David Kipper", "min": 17, "fg": "2-3", "ft": "1-2", "reb": 1, "pf": 4, "to": 2, "pts": 5}
+          ]
+        },
+        {
+          "name": "Virginia Cavaliers",
+          "score": 71,
+          "players": [
+            {"name": "Jim Miller", "min": 14, "fg": "0-2", "ft": "0-2", "reb": 0, "pf": 2, "to": 2, "pts": 0},
+            {"name": "Tom Sheshey", "min": 41, "fg": "1-9", "ft": "0-1", "reb": 8, "pf": 2, "ast": 3, "to": 2, "pts": 18},
+            {"name": "Olden Polynice", "min": 41, "fg": "4-6", "ft": "8-12", "reb": 11, "pf": 3, "ast": 1, "to": 8, "blk": 1, "stl": 2, "pts": 16},
+            {"name": "Tim Mullen", "min": 20, "fg": "2-3", "ft": "4-4", "reb": 0, "pf": 4, "ast": 1, "to": 1, "blk": 1, "pts": 8},
+            {"name": "John Johnson", "min": 38, "fg": "2-6", "ft": "3-5", "reb": 3, "pf": 1, "ast": 4, "to": 3, "pts": 7},
+            {"name": "Darrick Simms", "min": 30, "fg": "7-11", "ft": "4-4", "reb": 2, "pf": 2, "ast": 2, "to": 1, "pts": 18},
+            {"name": "Dan Merrifield", "min": 24, "fg": "0-1", "ft": "0-1", "reb": 3, "pf": 5, "ast": 1, "to": 4, "pts": 0},
+            {"name": "John Dyslin", "min": 4, "fg": "2-3", "ft": "0-1", "reb": 1, "pf": 0, "pts": 4},
+            {"name": "Mel Kennedy", "min": 13, "reb": 1, "pf": 2, "ast": 1, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

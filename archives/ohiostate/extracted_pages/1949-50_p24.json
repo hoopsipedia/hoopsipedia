@@ -1,0 +1,43 @@
+{
+  "page": 24,
+  "games": [
+    {
+      "date": "1950-03-09",
+      "opponent": "Butler",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 66,
+          "players": [
+            {"name": "Donham F-C", "min": "38:00", "fg": "11-19", "ft": "3-5", "pf": 3, "pts": 25},
+            {"name": "Schnittker F", "min": "40:00", "fg": "4-20", "ft": "7-6", "pf": 2, "pts": 15},
+            {"name": "Taylor C", "min": "34:00", "fg": "4-11", "ft": "0-0", "pf": 3, "pts": 8},
+            {"name": "Armstrong C", "min": "2:00", "fg": "0-2", "ft": "0-0", "pf": 1, "pts": 0},
+            {"name": "Jacobs F-G", "min": "11:00", "fg": "0-2", "ft": "3-0", "pf": 0, "pts": 3},
+            {"name": "Burkholder G", "min": "35:00", "fg": "1-5", "ft": "3-3", "pf": 2, "pts": 5},
+            {"name": "Brown G", "min": "40:00", "fg": "4-6", "ft": "2-1", "pf": 2, "pts": 10}
+          ]
+        },
+        {
+          "name": "Butler",
+          "score": 65,
+          "players": [
+            {"name": "Burdsall F", "fg": "2-8", "ft": "0-0", "pf": 2, "pts": 4},
+            {"name": "Hall F", "fg": "1-8", "ft": "0-0", "pf": 3, "pts": 2},
+            {"name": "Chapman C", "fg": "3-9", "ft": "4-1", "pf": 5, "pts": 10},
+            {"name": "R. O'Brien G", "fg": "19-30", "ft": "1-2", "pf": 5, "pts": 39},
+            {"name": "Doyle G", "fg": "2-5", "ft": "1-1", "pf": 5, "pts": 5},
+            {"name": "Baker F", "fg": "0-2", "ft": "0-0", "pf": 2, "pts": 0},
+            {"name": "Wood F", "fg": "1-4", "ft": "0-0", "pf": 2, "pts": 2},
+            {"name": "Cranny G", "fg": "0-0", "ft": "0-0", "pf": 2, "pts": 0},
+            {"name": "Waller O'Brien G", "fg": "0-0", "ft": "3-0", "pf": 3, "pts": 3},
+            {"name": "Jackson G-C", "fg": "0-0", "ft": "0-0", "pf": 0, "pts": 0},
+            {"name": "Wilhoite C", "fg": "0-0", "ft": "0-0", "pf": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

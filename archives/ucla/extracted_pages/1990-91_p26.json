@@ -1,0 +1,50 @@
+{
+  "page": 26,
+  "games": [
+    {
+      "date": "1991-02-21",
+      "opponent": "Oregon",
+      "ucla_score": 100,
+      "opp_score": 83,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 100,
+          "players": [
+            {"name": "MacLean", "min": 25, "fg": "8-17", "ft": "1-3", "tp": "0-0", "reb": 5, "ast": 1, "pf": 2, "to": 2, "stl": 1, "blk": 0, "pts": 17},
+            {"name": "Murray", "min": 27, "fg": "9-18", "ft": "5-5", "tp": "4-9", "reb": 4, "ast": 2, "pf": 4, "to": 1, "stl": 0, "blk": 0, "pts": 27},
+            {"name": "Butler", "min": 17, "fg": "2-3", "ft": "0-1", "tp": "1-1", "reb": 2, "ast": 1, "pf": 1, "to": 0, "stl": 0, "blk": 1, "pts": 5},
+            {"name": "Martin", "min": 28, "fg": "4-7", "ft": "1-2", "tp": "2-2", "reb": 3, "ast": 13, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 11},
+            {"name": "Madkins", "min": 23, "fg": "2-7", "ft": "0-0", "tp": "2-4", "reb": 3, "ast": 4, "pf": 1, "to": 0, "stl": 1, "blk": 0, "pts": 6},
+            {"name": "Tarver", "min": 24, "fg": "5-11", "ft": "1-1", "tp": "0-3", "reb": 3, "ast": 2, "pf": 0, "to": 2, "stl": 2, "blk": 0, "pts": 11},
+            {"name": "Owens", "min": 23, "fg": "4-7", "ft": "4-5", "tp": "0-0", "reb": 7, "ast": 2, "pf": 1, "to": 2, "stl": 0, "blk": 1, "pts": 12},
+            {"name": "Mason", "min": 19, "fg": "3-4", "ft": "0-0", "tp": "0-0", "reb": 5, "ast": 0, "pf": 1, "to": 1, "stl": 0, "blk": 1, "pts": 6},
+            {"name": "Zimmerman", "min": 10, "fg": "1-1", "ft": "0-0", "tp": "0-0", "reb": 1, "ast": 1, "pf": 1, "to": 0, "stl": 0, "blk": 1, "pts": 2},
+            {"name": "Richie", "min": 2, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Paulsell", "min": 1, "fg": "0-3", "ft": "0-0", "tp": "0-1", "reb": 1, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Kenny", "min": 1, "fg": "1-1", "ft": "0-2", "tp": "1-1", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 3}
+          ]
+        },
+        {
+          "name": "Oregon Ducks",
+          "score": 83,
+          "players": [
+            {"name": "Fife", "min": 32, "fg": "2-6", "ft": "0-0", "tp": "0-0", "reb": 3, "ast": 5, "pf": 1, "to": 1, "stl": 0, "blk": 1, "pts": 4},
+            {"name": "Lyden", "min": 28, "fg": "5-9", "ft": "0-0", "tp": "5-7", "reb": 5, "ast": 2, "pf": 4, "to": 2, "stl": 0, "blk": 0, "pts": 15},
+            {"name": "Lucas", "min": 33, "fg": "6-15", "ft": "3-4", "tp": "1-3", "reb": 10, "ast": 1, "pf": 1, "to": 2, "stl": 0, "blk": 2, "pts": 15},
+            {"name": "Brandon", "min": 34, "fg": "10-17", "ft": "0-0", "tp": "1-3", "reb": 1, "ast": 6, "pf": 1, "to": 8, "stl": 1, "blk": 0, "pts": 21},
+            {"name": "Mixon", "min": 33, "fg": "6-10", "ft": "2-2", "tp": "3-5", "reb": 3, "ast": 3, "pf": 1, "to": 2, "stl": 0, "blk": 0, "pts": 17},
+            {"name": "Jordan", "min": 14, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 2, "ast": 1, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Van Der Veen", "min": 8, "fg": "0-1", "ft": "0-2", "tp": "0-0", "reb": 0, "ast": 1, "pf": 1, "to": 1, "stl": 0, "blk": 1, "pts": 0},
+            {"name": "Patterson", "min": 6, "fg": "1-2", "ft": "0-0", "tp": "0-0", "reb": 3, "ast": 0, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Johnson", "min": 4, "fg": "1-1", "ft": "0-0", "tp": "0-0", "reb": 1, "ast": 1, "pf": 1, "to": 2, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "O'Neil", "min": 4, "fg": "2-5", "ft": "0-0", "tp": "0-0", "reb": 2, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Blair", "min": 4, "fg": "1-2", "ft": "0-0", "tp": "1-1", "reb": 2, "ast": 0, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 3}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

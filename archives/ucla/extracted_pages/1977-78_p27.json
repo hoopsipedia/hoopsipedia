@@ -1,0 +1,44 @@
+{
+  "page": 27,
+  "games": [
+    {
+      "date": "1978-03-11",
+      "opponent": "Kansas Jayhawks",
+      "ucla_score": 83,
+      "opp_score": 76,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 83,
+          "players": [
+            {"name": "David Greenwood", "min": 39, "fg": "7-15", "ft": "0-1", "reb": 10, "ast": 2, "pf": 3, "to": 4, "stl": 2, "blk": 0, "pts": 14},
+            {"name": "James Wilkes", "min": 23, "fg": "0-3", "ft": "5-6", "reb": 3, "ast": 2, "pf": 0, "to": 0, "stl": 1, "blk": 1, "pts": 5},
+            {"name": "Gig Sims", "min": 10, "fg": "1-2", "ft": "0-0", "reb": 3, "ast": 0, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Roy Hamilton", "min": 40, "fg": "6-16", "ft": "11-18", "reb": 7, "ast": 10, "pf": 3, "to": 3, "stl": 4, "blk": 0, "pts": 23},
+            {"name": "Raymond Townsend", "min": 40, "fg": "8-12", "ft": "6-6", "reb": 5, "ast": 4, "pf": 2, "to": 2, "stl": 0, "blk": 0, "pts": 22},
+            {"name": "Darrell Allums", "min": 30, "fg": "2-4", "ft": "2-2", "reb": 11, "ast": 1, "pf": 3, "to": 4, "stl": 1, "blk": 1, "pts": 6},
+            {"name": "Kiki Vandeweghe", "min": 18, "fg": "4-7", "ft": "3-6", "reb": 6, "ast": 0, "pf": 1, "to": 2, "stl": 0, "blk": 0, "pts": 11}
+          ]
+        },
+        {
+          "name": "Kansas Jayhawks",
+          "score": 76,
+          "players": [
+            {"name": "Ken Koenig", "min": 25, "fg": "4-6", "ft": "0-0", "reb": 6, "ast": 2, "pf": 5, "to": 5, "stl": 0, "blk": 0, "pts": 8},
+            {"name": "Paul Mokeski", "min": 32, "fg": "9-15", "ft": "0-2", "reb": 12, "ast": 0, "pf": 4, "to": 1, "stl": 1, "blk": 1, "pts": 18},
+            {"name": "Clint Johnson", "min": 37, "fg": "7-11", "ft": "1-3", "reb": 1, "ast": 4, "pf": 5, "to": 1, "stl": 3, "blk": 0, "pts": 15},
+            {"name": "John Douglas", "min": 35, "fg": "5-17", "ft": "4-6", "reb": 7, "ast": 1, "pf": 4, "to": 2, "stl": 1, "blk": 1, "pts": 14},
+            {"name": "Darnell Valentine", "min": 29, "fg": "5-14", "ft": "1-2", "reb": 3, "ast": 4, "pf": 5, "to": 2, "stl": 1, "blk": 0, "pts": 11},
+            {"name": "Wilmore Fowler", "min": 9, "fg": "0-4", "ft": "0-0", "reb": 0, "ast": 1, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Milt Gibson", "min": 1, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 1, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Donnie Von Moore", "min": 21, "fg": "3-8", "ft": "2-4", "reb": 4, "ast": 3, "pf": 4, "to": 1, "stl": 0, "blk": 0, "pts": 8},
+            {"name": "Brad Sanders", "min": 5, "fg": "1-1", "ft": "0-0", "reb": 0, "ast": 1, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Scott Anderson", "min": 6, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

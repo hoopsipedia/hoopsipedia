@@ -1,0 +1,42 @@
+{
+  "page": 8,
+  "games": [
+    {
+      "date": "1930-02-01",
+      "opponent": "Minnesota",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 26,
+          "players": [
+            {"name": "Evans", "min": "39:45", "fg": "1", "ft": "1", "pf": 1, "pts": 3},
+            {"name": "Ervin", "min": "37:07", "fg": "4", "ft": "2", "pf": 0, "pts": 10},
+            {"name": "Hinchman", "min": "3:08", "fg": "0", "ft": "0", "pf": 0, "pts": 0},
+            {"name": "Wrigley", "min": "29:13", "fg": "2", "ft": "0", "pf": 1, "pts": 4},
+            {"name": "Condon", "min": "10:47", "fg": "0", "ft": "1", "pf": 1, "pts": 1},
+            {"name": "Holcomb", "min": "32:07", "fg": "1", "ft": "2", "pf": 3, "pts": 4},
+            {"name": "Fesler", "min": "40:00", "fg": "2", "ft": "0", "pf": 2, "pts": 4},
+            {"name": "Larkins", "min": "7:58", "fg": "0", "ft": "0", "pf": 2, "pts": 0}
+          ]
+        },
+        {
+          "name": "Minnesota",
+          "score": 29,
+          "players": [
+            {"name": "Loose", "fg": "5", "ft": "0", "pf": 1, "pts": 10},
+            {"name": "Schoening", "fg": "2", "ft": "3", "pf": 1, "pts": 7},
+            {"name": "Sommer", "fg": "0", "ft": "1", "pf": 0, "pts": 1},
+            {"name": "Nordgaard", "fg": "0", "ft": "2", "pf": 1, "pts": 2},
+            {"name": "Nowotny", "fg": "1", "ft": "0", "pf": 1, "pts": 2},
+            {"name": "Bondy", "fg": "1", "ft": "1", "pf": 1, "pts": 3},
+            {"name": "Karstner", "fg": "1", "ft": "0", "pf": 1, "pts": 2},
+            {"name": "Gadler", "fg": "1", "ft": "0", "pf": 2, "pts": 2},
+            {"name": "Hutchison", "fg": "0", "ft": "0", "pf": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

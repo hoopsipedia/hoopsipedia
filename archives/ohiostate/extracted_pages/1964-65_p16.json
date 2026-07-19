@@ -1,0 +1,40 @@
+{
+  "page": 16,
+  "games": [
+    {
+      "date": "1965-02-06",
+      "opponent": "Wisconsin",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 73,
+          "players": [
+            {"name": "Sepic", "fg": "5-15", "ft": "1-1", "reb": 6, "pf": 4, "pts": 11},
+            {"name": "Ahijevych", "fg": "5-8", "ft": "2-4", "reb": 9, "pf": 3, "pts": 12},
+            {"name": "Shaffer", "fg": "5-15", "ft": "3-4", "reb": 11, "pf": 2, "pts": 13},
+            {"name": "Ricketts", "fg": "10-15", "ft": "3-3", "reb": 9, "pf": 0, "pts": 23},
+            {"name": "Rowley", "fg": "7-15", "ft": "0-1", "reb": 3, "pf": 2, "pts": 14},
+            {"name": "Peters", "fg": "0-1", "ft": "0-0", "reb": 1, "pf": 1, "pts": 0},
+            {"name": "Dove", "fg": "0-1", "ft": "0-0", "reb": 1, "pf": 0, "pts": 0},
+            {"name": "Brautigam", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 1, "pts": 0}
+          ]
+        },
+        {
+          "name": "Wisconsin",
+          "score": 71,
+          "players": [
+            {"name": "Barnes", "fg": "6-12", "ft": "4-6", "reb": 13, "pf": 0, "pts": 16},
+            {"name": "Roberts", "fg": "1-6", "ft": "4-8", "reb": 12, "pf": 4, "pts": 6},
+            {"name": "Zubor", "fg": "7-13", "ft": "0-0", "reb": 9, "pf": 3, "pts": 14},
+            {"name": "Bohen", "fg": "8-15", "ft": "0-1", "reb": 2, "pf": 2, "pts": 16},
+            {"name": "Sweeney", "fg": "8-19", "ft": "0-0", "reb": 4, "pf": 0, "pts": 16},
+            {"name": "Gustafson", "fg": "0-4", "ft": "1-1", "reb": 3, "pf": 1, "pts": 1},
+            {"name": "Gardner", "fg": "1-3", "ft": "0-0", "reb": 0, "pf": 1, "pts": 2}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

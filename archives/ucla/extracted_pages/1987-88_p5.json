@@ -1,0 +1,44 @@
+{
+  "page": 5,
+  "games": [
+    {
+      "date": "1987-12-12",
+      "opponent": "St. John's",
+      "ucla_score": 64,
+      "opp_score": 72,
+      "teams": [
+        {
+          "name": "St. John's Red Storm",
+          "score": 72,
+          "players": [
+            {"name": "Jones", "min": 40, "fg": "6-10", "tp": "0-1", "ft": "5-5", "reb": 14, "ast": 0, "to": 1, "blk": 1, "stl": 0, "pf": 0, "pts": 17},
+            {"name": "Brust", "min": 33, "fg": "3-6", "tp": "0-0", "ft": "5-5", "reb": 2, "ast": 1, "to": 2, "blk": 0, "stl": 1, "pf": 3, "pts": 11},
+            {"name": "Baldi", "min": 32, "fg": "5-7", "tp": "0-0", "ft": "3-3", "reb": 3, "ast": 0, "to": 3, "blk": 0, "stl": 0, "pf": 3, "pts": 13},
+            {"name": "Harvey", "min": 40, "fg": "3-9", "tp": "0-0", "ft": "1-1", "reb": 2, "ast": 5, "to": 2, "blk": 0, "stl": 0, "pf": 3, "pts": 7},
+            {"name": "Porter", "min": 34, "fg": "7-11", "tp": "0-0", "ft": "4-4", "reb": 7, "ast": 1, "to": 2, "blk": 0, "stl": 0, "pf": 1, "pts": 18},
+            {"name": "Williams", "min": 14, "fg": "2-7", "tp": "0-0", "ft": "0-0", "reb": 2, "ast": 0, "to": 1, "blk": 0, "stl": 1, "pf": 4, "pts": 4},
+            {"name": "Lewis", "min": 6, "fg": "1-1", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "to": 3, "blk": 0, "stl": 0, "pf": 1, "pts": 2},
+            {"name": "Muto", "min": 1, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pf": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "UCLA Bruins",
+          "score": 64,
+          "players": [
+            {"name": "Walker", "min": 20, "fg": "4-12", "tp": "2-3", "ft": "0-0", "reb": 4, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pf": 1, "pts": 10},
+            {"name": "Wilson", "min": 39, "fg": "8-15", "tp": "0-1", "ft": "2-5", "reb": 7, "ast": 4, "to": 2, "blk": 0, "stl": 0, "pf": 2, "pts": 18},
+            {"name": "Foster", "min": 36, "fg": "2-5", "tp": "0-0", "ft": "1-2", "reb": 3, "ast": 2, "to": 2, "blk": 2, "stl": 1, "pf": 3, "pts": 5},
+            {"name": "Richardson", "min": 40, "fg": "9-18", "tp": "0-0", "ft": "4-6", "reb": 5, "ast": 6, "to": 1, "blk": 0, "stl": 2, "pf": 3, "pts": 22},
+            {"name": "Immel", "min": 23, "fg": "1-5", "tp": "0-2", "ft": "0-0", "reb": 0, "ast": 2, "to": 0, "blk": 0, "stl": 1, "pf": 3, "pts": 2},
+            {"name": "Rochelin", "min": 12, "fg": "0-3", "tp": "0-0", "ft": "2-2", "reb": 2, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pf": 0, "pts": 2},
+            {"name": "Madkins", "min": 17, "fg": "0-1", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 1, "to": 0, "blk": 0, "stl": 0, "pf": 3, "pts": 0},
+            {"name": "Butler", "min": 1, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pf": 0, "pts": 0},
+            {"name": "Jackson", "min": 12, "fg": "2-4", "tp": "0-0", "ft": "1-2", "reb": 2, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pf": 1, "pts": 5}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

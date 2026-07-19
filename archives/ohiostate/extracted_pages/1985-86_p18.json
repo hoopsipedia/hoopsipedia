@@ -1,0 +1,42 @@
+{
+  "page": 18,
+  "games": [
+    {
+      "date": "1986-01-25",
+      "opponent": "Purdue Boilermakers",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 73,
+          "players": [
+            {"name": "Francis, Jerry", "min": "20", "fg": "2-3", "ft": "3-3", "ast": "4", "to": "2", "pts": 7},
+            {"name": "Sellers, Brad", "min": "40", "fg": "11-15", "ft": "4-4", "ast": "2", "to": "2", "blk": "2", "stl": "1", "pts": 26},
+            {"name": "Wesson (name uncertain)", "min": "24", "pts": 5},
+            {"name": "Hopson, Dennis (name uncertain, sheet reads unclear)", "min": "38", "fg": "7-13", "ft": "1-1", "reb": "5", "pf": "2", "pts": 15},
+            {"name": "LaWay (name uncertain)", "min": "36", "fg": "5-5", "ft": "2-2", "pts": 12},
+            {"name": "McGee, Clarence", "min": "16", "reb": "2", "pts": 2},
+            {"name": "Burson, Jay (name uncertain)", "min": "22", "fg": "2-5", "ft": "2-3", "reb": "2", "pf": "2", "ast": "5", "to": "1", "stl": "1", "pts": 6},
+            {"name": "Wilson, Curtis", "min": "4", "fg": "0-0", "ft": "0-0", "reb": "1", "pf": "1", "to": "2", "stl": "1", "pts": 0}
+          ]
+        },
+        {
+          "name": "Purdue Boilermakers",
+          "score": 66,
+          "players": [
+            {"name": "Lee, Doug", "min": "31", "fg": "5-13", "ft": "0-1", "reb": "8", "ast": "2", "pf": "3", "to": "2", "blk": "0", "stl": "2", "pts": 10},
+            {"name": "Mitchell, Todd", "min": "35", "fg": "8-13", "ft": "0-0", "reb": "7", "ast": "2", "pf": "3", "to": "3", "blk": "0", "stl": "1", "pts": 16},
+            {"name": "McCants, Melvin", "min": "31", "fg": "8-12", "ft": "1-1", "reb": "5", "pf": "4", "to": "2", "blk": "0", "stl": "0", "pts": 17},
+            {"name": "Lewis, Troy", "min": "36", "fg": "7-15", "ft": "3-3", "reb": "3", "pf": "0", "to": "0", "blk": "0", "stl": "0", "pts": 17},
+            {"name": "Gadis, Mack", "min": "33", "fg": "2-6", "ft": "2-2", "reb": "3", "ast": "8", "pf": "3", "to": "3", "blk": "0", "stl": "2", "pts": 6},
+            {"name": "Stephens, Everett", "min": "11", "fg": "0-2", "ft": "0-0", "reb": "0", "pf": "0", "ast": "2", "to": "3", "blk": "0", "stl": "0", "pts": 0},
+            {"name": "Robinson, Herb", "min": "10", "fg": "0-0", "ft": "0-0", "reb": "2", "pf": "0", "ast": "1", "to": "1", "blk": "0", "stl": "1", "pts": 0},
+            {"name": "Jones, Kip", "min": "11", "fg": "0-0", "ft": "0-2", "reb": "0", "pf": "0", "ast": "0", "to": "0", "blk": "0", "stl": "0", "pts": 0},
+            {"name": "Arnold, Jeff", "min": "2", "fg": "0-0", "ft": "0-0", "reb": "0", "pf": "0", "ast": "0", "to": "0", "blk": "0", "stl": "0", "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

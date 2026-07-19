@@ -1,0 +1,41 @@
+{
+  "page": 1,
+  "games": [
+    {
+      "date": "1933-12-09",
+      "opponent": "Ohio Wesleyan",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 23,
+          "players": [
+            {"name": "Padlow", "fg": "0", "ft": "3-3", "pf": 2, "pts": 3},
+            {"name": "Whitlinger", "fg": "0", "ft": "0-0", "pf": 1, "pts": 0},
+            {"name": "Low", "fg": "1", "ft": "0-0", "pf": 1, "pts": 2},
+            {"name": "Wilson", "fg": "1", "ft": "1-2", "pf": 3, "pts": 3},
+            {"name": "Freshwater", "fg": "0", "ft": "0-0", "pf": 0, "pts": 0},
+            {"name": "Hosket", "fg": "5", "ft": "3-4", "pf": 4, "pts": 13},
+            {"name": "Rosequist", "fg": "0", "ft": "0-0", "pf": 0, "pts": 0},
+            {"name": "Conrad", "fg": "1", "ft": "0-0", "pf": 2, "pts": 2},
+            {"name": "Beltner", "fg": "0", "ft": "0-0", "pf": 3, "pts": 0},
+            {"name": "Fisher", "fg": "0", "ft": "0-0", "pf": 1, "pts": 0}
+          ]
+        },
+        {
+          "name": "Ohio Wesleyan",
+          "score": 34,
+          "players": [
+            {"name": "Prech", "fg": "3", "ft": "1-2", "pf": 1, "pts": 7},
+            {"name": "Stark", "fg": "0", "ft": "2-2", "pf": 1, "pts": 2},
+            {"name": "Hendricks", "fg": "1", "ft": "0-0", "pf": 2, "pts": 2},
+            {"name": "Youtt", "fg": "2", "ft": "1-1", "pf": 1, "pts": 5},
+            {"name": "Talos", "fg": "3", "ft": "3-5", "pf": 2, "pts": 9},
+            {"name": "Stammler", "fg": "1", "ft": "7-8", "pf": 1, "pts": 9}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

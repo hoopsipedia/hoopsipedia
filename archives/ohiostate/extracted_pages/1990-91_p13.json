@@ -1,0 +1,9 @@
+{
+  "page": 13,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page shows one full box score: Ohio State at Michigan, dated 'January 5, 1990' on the sheet (note: date as printed is inconsistent with this being the 1990-91 season file, which suggests either a mislabeled/misfiled page or a typo on the original scoresheet; not corrected, just flagging). Ohio State's side transcribes cleanly and checksums exactly (FG 25/53, FT 17/23, TP sum 67 == final score 67, all individual rows self-consistent with OR+DR=REB and 2*(FG-3FG)+3*3FG+FT=TP). However, Michigan's side (Home team, bottom half of page) has several bench player rows (Riley, Talley, Mitchell, Pelinka, Tolbert, McIver, Voskuil) where the OR/DR/REB/PF/FT/FTA columns are too tightly spaced/compressed in the scan to confidently disambiguate digit boundaries -- multiple plausible column alignments were tried and none reconciled Michigan's player-points sum to the team final score of 57 within reasonable confidence (attempts ranged from 63 to other values, none matching). Rather than guess or invent values for Michigan's roster, skipping the entire game per instructions (checksum must pass for both teams)."
+    }
+  ]
+}

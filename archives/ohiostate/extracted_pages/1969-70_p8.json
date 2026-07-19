@@ -1,0 +1,43 @@
+{
+  "page": 8,
+  "games": [
+    {
+      "date": "1969-12-27",
+      "opponent": "Fresno State",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 84,
+          "players": [
+            {"name": "Cleamons", "fg": "9-12", "ft": "6-7", "reb": 9, "pf": 1, "pts": 24},
+            {"name": "Andreas", "fg": "3-6", "ft": "3-3", "reb": 5, "pf": 3, "pts": 9},
+            {"name": "Sorenson", "fg": "7-13", "ft": "5-8", "reb": 8, "pf": 1, "pts": 19},
+            {"name": "Finney", "fg": "10-13", "ft": "4-5", "reb": 3, "pf": 2, "pts": 24},
+            {"name": "Barclay", "fg": "1-5", "ft": "2-2", "reb": 6, "pf": 2, "pts": 4},
+            {"name": "Minor", "fg": "0-1", "ft": "0-0", "reb": 0, "pf": 1, "pts": 0},
+            {"name": "Geddes", "fg": "1-2", "ft": "0-0", "reb": 0, "pf": 0, "pts": 2},
+            {"name": "Mackmin", "fg": "1-1", "ft": "0-0", "reb": 1, "pf": 0, "pts": 2},
+            {"name": "Herzimer", "fg": "0-1", "ft": "0-1", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Spies", "fg": "0-1", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Fresno State",
+          "score": 77,
+          "players": [
+            {"name": "Davis", "fg": "12-22", "ft": "5-5", "reb": 8, "pf": 1, "pts": 29},
+            {"name": "Henricksen", "fg": "2-8", "ft": "3-6", "reb": 10, "pf": 5, "pts": 7},
+            {"name": "Kleinholz", "fg": "1-1", "ft": "0-0", "reb": 0, "pf": 4, "pts": 2},
+            {"name": "Stephens", "fg": "6-13", "ft": "1-1", "reb": 4, "pf": 4, "pts": 13},
+            {"name": "Vasilovich", "fg": "5-16", "ft": "0-2", "reb": 4, "pf": 1, "pts": 10},
+            {"name": "Warner", "fg": "1-3", "ft": "0-0", "reb": 7, "pf": 0, "pts": 2},
+            {"name": "Hill", "fg": "5-8", "ft": "0-0", "reb": 0, "pf": 4, "pts": 10},
+            {"name": "Leonard", "fg": "2-4", "ft": "0-0", "reb": 1, "pf": 1, "pts": 4}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

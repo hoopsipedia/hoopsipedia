@@ -1,0 +1,9 @@
+{
+  "page": 8,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page contains one full box score (Game #9: Texas Christian 69 at New Mexico 76, played in Albuquerque, NM; team final scores confirmed via the printed 'SCORE BY PERIODS' block: TCU 35+34=69, New Mexico 44+32=76). However, this is a faxed, low-resolution scan of a handwritten scoresheet (visible fax header 'TEL: Apr 12,96 13:41 No.016 P.02'), and the per-player FG/FGA/FT/FTA/REB/PF/TP/A/TO/BLK/S/MIN handwritten digits are too ambiguous to transcribe with confidence -- several rows produce inconsistent checksums depending on how an ambiguous leading digit or smudged number is read (e.g. Cucinella's line reads as either TP=6 or TP=8 depending on interpretation, and other rows have similar ambiguity), and some player rows (Blackwell, Luke, Hart, Collier, Nealy, Moore, Menning, Reinbt, Wofe) are partially blank or illegible. Per instructions to never invent values and be ruthless about skipping over guessing, both teams' full rosters are skipped rather than risk fabricated per-player stats; only the game-level final score (TCU 69, New Mexico 76) is confidently legible from the periods box, but that alone is insufficient for a full player-line transcription."
+    }
+  ]
+}

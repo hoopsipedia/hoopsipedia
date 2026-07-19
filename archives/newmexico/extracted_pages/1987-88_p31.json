@@ -1,0 +1,9 @@
+{
+  "page": 31,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Typed computer-generated box score for New Mexico @ Brigham Young, 3/3/1988, Provo UT (Visitor 82, Home 89, per team totals row) is present and its header/totals rows are legible, but the detailed per-player stat columns for several bench players (New Mexico: Rogers, Longley, Robbins, Loeffel; likely similarly for some BYU bench players) are obscured by ghost bleed-through text from an adjacent play-by-play page (fragments like 'row 1-2 Chatman', 'Foul by...', 'TIME OUT' overlaid on the numeric columns) plus dense small-font 16-column layout. Attempted digit-by-digit reconstruction using column arithmetic against the team totals row produced an internal contradiction (made 3-pointers exceeding attempts once known-good rows were subtracted from team 3FG/3FGA totals), indicating at least one attempts-column read is unreliable. Since points-only checksum could be partially reverse-engineered but several individual player point totals for the remaining bench players could not be pinned down with confidence (multiple hypotheses summed to different totals), and per-player rebound/assist/foul columns for those rows are similarly unverifiable, the game was skipped rather than risk invented values."
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "page": 7,
+  "games": [
+    {
+      "date": "1966-12-23",
+      "opponent": "Army",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 61,
+          "players": [
+            {"name": "Sepic", "fg": "5-15", "ft": "3-4", "reb": 9, "pf": 3, "pts": 13},
+            {"name": "Miller", "fg": "3-5", "ft": "0-1", "reb": 7, "pf": 3, "pts": 6},
+            {"name": "Hosket", "fg": "5-10", "ft": "2-4", "reb": 6, "pf": 2, "pts": 12},
+            {"name": "Rowley", "fg": "1-3", "ft": "0-1", "reb": 1, "pf": 3, "pts": 2},
+            {"name": "Meadors", "fg": "3-8", "ft": "4-7", "reb": 6, "pf": 2, "pts": 10},
+            {"name": "Schnabel", "fg": "2-6", "ft": "4-5", "reb": 3, "pf": 0, "pts": 8},
+            {"name": "Howell", "fg": "2-4", "ft": "6-9", "reb": 4, "pf": 1, "pts": 10}
+          ]
+        },
+        {
+          "name": "Army",
+          "score": 59,
+          "players": [
+            {"name": "Schrage", "fg": "0-6", "ft": "2-3", "reb": 4, "pf": 3, "pts": 2},
+            {"name": "Schutzky", "fg": "5-12", "ft": "8-9", "reb": 7, "pf": 5, "pts": 18},
+            {"name": "Hunt", "fg": "5-8", "ft": "2-2", "reb": 5, "pf": 5, "pts": 12},
+            {"name": "Jordan", "fg": "10-21", "ft": "1-1", "reb": 10, "pf": 4, "pts": 21},
+            {"name": "Kryzewski", "fg": "1-4", "ft": "4-4", "reb": 5, "pf": 4, "pts": 6},
+            {"name": "George", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Noonan", "fg": "0-1", "ft": "0-0", "reb": 2, "pf": 0, "pts": 0},
+            {"name": "Mikrula", "fg": "0-2", "ft": "0-0", "reb": 0, "pf": 2, "pts": 0},
+            {"name": "Hughes", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

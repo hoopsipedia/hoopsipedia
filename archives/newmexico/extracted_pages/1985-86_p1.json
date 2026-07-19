@@ -1,0 +1,44 @@
+{
+  "page": 1,
+  "games": [
+    {
+      "date": "1985-11-22",
+      "opponent": "Bucknell",
+      "site": "Albuquerque, NM",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 71,
+          "players": [
+            {"name": "Johnny Brown", "min": 37, "fg": "8-14", "ft": "4-6", "reb": 3, "ast": 0, "pf": 2, "to": 2, "blk": 0, "stl": 1, "pts": 20},
+            {"name": "Mike Winters", "min": 28, "fg": "2-6", "ft": "0-0", "reb": 4, "ast": 5, "pf": 2, "to": 2, "blk": 1, "stl": 3, "pts": 4},
+            {"name": "Shawn Brooks", "min": 28, "fg": "3-7", "ft": "1-1", "reb": 4, "ast": 0, "pf": 3, "to": 2, "blk": 0, "stl": 0, "pts": 7},
+            {"name": "Kelvin Scarborough", "min": 35, "fg": "6-7", "ft": "7-10", "reb": 2, "ast": 5, "pf": 1, "to": 2, "blk": 1, "stl": 0, "pts": 19},
+            {"name": "Kelly Graves", "min": 22, "fg": "5-10", "ft": "2-2", "reb": 0, "ast": 0, "pf": 0, "to": 0, "blk": 0, "stl": 1, "pts": 12},
+            {"name": "Paul Lawson", "min": 21, "fg": "0-2", "ft": "2-2", "reb": 0, "ast": 3, "pf": 4, "to": 3, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Larry Markland", "min": 13, "fg": "1-1", "ft": "3-4", "reb": 1, "ast": 1, "pf": 1, "to": 1, "blk": 0, "stl": 0, "pts": 5},
+            {"name": "Michael Moore", "min": 11, "fg": "1-3", "ft": "0-0", "reb": 2, "ast": 0, "pf": 2, "to": 0, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Robert Loeffel", "min": 5, "fg": "0-2", "ft": "0-0", "reb": 0, "ast": 1, "pf": 1, "to": 0, "blk": 0, "stl": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Bucknell",
+          "score": 57,
+          "players": [
+            {"name": "Steve Beecy", "min": 38, "fg": "1-5", "ft": "0-0", "reb": 3, "ast": 2, "pf": 3, "to": 2, "blk": 0, "stl": 3, "pts": 2},
+            {"name": "Steve Schrader", "min": 28, "fg": "6-11", "ft": "1-2", "reb": 6, "ast": 1, "pf": 4, "to": 0, "blk": 0, "stl": 1, "pts": 13},
+            {"name": "Mike Butts", "min": 23, "fg": "1-3", "ft": "2-2", "reb": 2, "ast": 1, "pf": 3, "to": 1, "blk": 3, "stl": 0, "pts": 4},
+            {"name": "Chris Seneca", "min": 40, "fg": "8-16", "ft": "1-3", "reb": 2, "ast": 4, "pf": 4, "to": 5, "blk": 0, "stl": 0, "pts": 17},
+            {"name": "Mark Allstedt", "min": 24, "fg": "5-10", "ft": "3-3", "reb": 0, "ast": 1, "pf": 5, "to": 3, "blk": 0, "stl": 0, "pts": 13},
+            {"name": "Mark Lezanic", "min": 10, "fg": "2-5", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "to": 2, "blk": 0, "stl": 0, "pts": 4},
+            {"name": "Bo Heisen", "min": 31, "fg": "2-6", "ft": "0-0", "reb": 3, "ast": 1, "pf": 1, "to": 0, "blk": 2, "stl": 0, "pts": 4},
+            {"name": "Ted Aceto", "min": 6, "fg": "0-2", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "to": 0, "blk": 0, "stl": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": [],
+  "notes": "Official NCAA box score, Bucknell at New Mexico, 11/22/1985, Albuquerque NM (final: Bucknell 57, New Mexico 71). Both team checksums pass exactly against final score (Bucknell player pts sum=57, New Mexico=71). Per-player REB column had two handwritten sub-numbers (likely off/total-rebound split); the second (total) number was used for the 'reb' field to keep row column-count consistent with MIN/A/TO/BLK/S. Several bench players (Malarkey, Watson, Moylan, Grady for Bucknell; Moos, Arnold, Parker for New Mexico) had no stat entries and were omitted as they did not play/record stats."
+}

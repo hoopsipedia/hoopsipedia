@@ -1,0 +1,48 @@
+{
+  "page": 14,
+  "games": [
+    {
+      "date": "1940-02-12",
+      "opponent": "Iowa",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 33,
+          "players": [
+            {"name": "Michelson", "pf": 2, "pts": 12},
+            {"name": "Stevens", "pf": 0, "pts": 0},
+            {"name": "Goss", "pf": 0, "pts": 3},
+            {"name": "Mellain", "pf": 1, "pts": 0},
+            {"name": "Schick", "pf": 4, "pts": 7},
+            {"name": "Sattler", "pf": 4, "pts": 5},
+            {"name": "Marzano", "pf": 0, "pts": 1},
+            {"name": "Dawson", "pf": 2, "pts": 2},
+            {"name": "Mion", "pf": 0, "pts": 0},
+            {"name": "Nichols", "pf": 0, "pts": 0},
+            {"name": "Lynch", "pf": 1, "pts": 0},
+            {"name": "Graf", "pf": 0, "pts": 3}
+          ]
+        },
+        {
+          "name": "Iowa",
+          "score": 43,
+          "players": [
+            {"name": "Seizel", "pf": 2, "pts": 19},
+            {"name": "Hohenhorst", "pf": 0, "pts": 0},
+            {"name": "Lind", "pf": 0, "pts": 7},
+            {"name": "Wheeler", "pf": 2, "pts": 0},
+            {"name": "Evans", "pf": 3, "pts": 11},
+            {"name": "Hill", "pf": 0, "pts": 0},
+            {"name": "Kuhl", "pf": 0, "pts": 2},
+            {"name": "Prasse", "pf": 3, "pts": 1},
+            {"name": "Soderquist", "pf": 2, "pts": 2},
+            {"name": "Harshu", "pf": 1, "pts": 1},
+            {"name": "Sigfin", "pf": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

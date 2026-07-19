@@ -1,0 +1,44 @@
+{
+  "page": 10,
+  "games": [
+    {
+      "date": "1983-01-10",
+      "opponent": "Arizona State",
+      "ucla_score": 87,
+      "opp_score": 86,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 87,
+          "players": [
+            {"name": "Darrin Daye", "min": 38, "fg": "5-10", "ft": "3-4", "reb": 6, "pf": 2, "ast": 3, "to": 0, "blk": 2, "stl": 1, "pts": 13},
+            {"name": "Kenny Fields", "min": 31, "fg": "8-14", "ft": "3-4", "reb": 3, "pf": 3, "ast": 0, "to": 3, "blk": 1, "stl": 3, "pts": 19},
+            {"name": "Stuart Gray", "min": 35, "fg": "3-7", "ft": "1-3", "reb": 11, "pf": 2, "ast": 2, "to": 1, "blk": 0, "stl": 0, "pts": 7},
+            {"name": "Ralph Jackson", "min": 28, "fg": "4-7", "ft": "0-0", "reb": 1, "pf": 3, "ast": 7, "to": 1, "blk": 0, "stl": 2, "pts": 8},
+            {"name": "Rod Foster", "min": 32, "fg": "13-20", "ft": "4-4", "reb": 1, "pf": 2, "ast": 0, "to": 1, "blk": 0, "stl": 1, "pts": 30},
+            {"name": "Michael Holton", "min": 20, "fg": "2-6", "ft": "2-2", "reb": 3, "pf": 4, "ast": 7, "to": 3, "blk": 0, "stl": 0, "pts": 6},
+            {"name": "Nigel Miguel", "min": 8, "fg": "2-5", "ft": "0-0", "reb": 3, "pf": 2, "ast": 0, "to": 0, "blk": 0, "stl": 2, "pts": 4},
+            {"name": "Brad Wright", "min": 5, "fg": "0-1", "ft": "0-2", "reb": 3, "pf": 1, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Gary Malancon", "min": 3, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Arizona State",
+          "score": 86,
+          "players": [
+            {"name": "Billy Jordan", "min": 24, "fg": "4-6", "ft": "3-3", "reb": 3, "pf": 3, "ast": 0, "to": 5, "blk": 0, "stl": 1, "pts": 11},
+            {"name": "Paul Williams", "min": 36, "fg": "10-22", "ft": "3-6", "reb": 7, "pf": 2, "ast": 3, "to": 0, "blk": 0, "stl": 2, "pts": 23},
+            {"name": "Corey McMullen", "min": 30, "fg": "2-5", "ft": "0-0", "reb": 11, "pf": 3, "ast": 1, "to": 2, "blk": 2, "stl": 0, "pts": 4},
+            {"name": "Byron Scott", "min": 34, "fg": "10-15", "ft": "4-4", "reb": 6, "pf": 4, "ast": 9, "to": 5, "blk": 0, "stl": 0, "pts": 24},
+            {"name": "Shawn Holiday", "min": 28, "fg": "4-5", "ft": "0-0", "reb": 1, "pf": 2, "ast": 9, "to": 0, "blk": 1, "stl": 0, "pts": 8},
+            {"name": "Chris Beasley", "min": 19, "fg": "1-4", "ft": "0-1", "reb": 1, "pf": 0, "ast": 0, "to": 2, "blk": 1, "stl": 0, "pts": 2},
+            {"name": "Walt Stone", "min": 20, "fg": "4-10", "ft": "4-8", "reb": 8, "pf": 3, "ast": 1, "to": 2, "blk": 0, "stl": 0, "pts": 12},
+            {"name": "Phil McKinney", "min": 9, "fg": "1-3", "ft": "0-0", "reb": 5, "pf": 0, "ast": 1, "to": 1, "blk": 0, "stl": 0, "pts": 2}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

@@ -1,0 +1,44 @@
+{
+  "page": 20,
+  "games": [
+    {
+      "date": "1979-02-03",
+      "opponent": "Wake Forest",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 83,
+          "players": [
+            {"name": "Jeff Lamp", "min": 35, "fg": "6-15", "ft": "2-4", "reb": 2, "ast": 0, "pf": 2, "to": 3, "stl": 1, "blk": 0, "pts": 14},
+            {"name": "Terry Gates", "min": 29, "fg": "1-2", "ft": "1-1", "reb": 3, "ast": 1, "pf": 5, "to": 1, "stl": 0, "blk": 0, "pts": 5},
+            {"name": "Steve Castellan", "min": 34, "fg": "6-10", "ft": "7-8", "reb": 9, "ast": 3, "pf": 3, "to": 2, "stl": 1, "blk": 2, "pts": 19},
+            {"name": "Bobby Stokes", "min": 32, "fg": "5-9", "ft": "6-9", "reb": 1, "ast": 3, "pf": 2, "to": 1, "stl": 2, "blk": 0, "pts": 16},
+            {"name": "Jeff Jones", "min": 35, "fg": "3-5", "ft": "0-0", "reb": 1, "ast": 5, "pf": 3, "to": 2, "stl": 2, "blk": 0, "pts": 6},
+            {"name": "Mike Owens", "min": 29, "fg": "10-15", "ft": "1-3", "reb": 9, "ast": 5, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 21},
+            {"name": "Otis Fulton", "min": 6, "fg": "1-2", "ft": "0-0", "reb": 1, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 2}
+          ]
+        },
+        {
+          "name": "Wake Forest",
+          "score": 76,
+          "players": [
+            {"name": "Alvis Rogers", "min": 33, "fg": "8-14", "ft": "2-3", "reb": 5, "ast": 0, "pf": 3, "to": 2, "stl": 0, "blk": 0, "pts": 18},
+            {"name": "Guy Morgan", "min": 29, "fg": "5-10", "ft": "0-2", "reb": 11, "ast": 0, "pf": 4, "to": 2, "stl": 0, "blk": 2, "pts": 10},
+            {"name": "Jim Johnstone", "min": 30, "fg": "4-9", "ft": "4-5", "reb": 4, "ast": 0, "pf": 4, "to": 3, "stl": 0, "blk": 0, "pts": 12},
+            {"name": "Mark Dale", "min": 28, "fg": "1-2", "ft": "0-0", "reb": 2, "ast": 0, "pf": 2, "to": 2, "stl": 1, "blk": 0, "pts": 2},
+            {"name": "Frank Johnson", "min": 31, "fg": "9-12", "ft": "9-10", "reb": 3, "ast": 4, "pf": 3, "to": 3, "stl": 0, "blk": 0, "pts": 27},
+            {"name": "Mike Helms", "min": 14, "fg": "0-1", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "to": 2, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Will Singleton", "min": 12, "fg": "3-4", "ft": "0-0", "reb": 1, "ast": 0, "pf": 1, "to": 2, "stl": 0, "blk": 0, "pts": 6},
+            {"name": "Eddie Thurman", "min": 6, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Justin Ellis", "min": 6, "fg": "0-2", "ft": "0-0", "reb": 2, "ast": 0, "pf": 1, "to": 1, "stl": 0, "blk": 1, "pts": 0},
+            {"name": "John Hendler", "min": 6, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Larry Harrison", "min": 3, "fg": "0-0", "ft": "1-2", "reb": 0, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 1},
+            {"name": "David Morris", "min": 2, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

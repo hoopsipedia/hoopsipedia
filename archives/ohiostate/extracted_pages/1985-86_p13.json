@@ -1,0 +1,9 @@
+{
+  "page": 13,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Official NCAA box score, Ohio State at Wisconsin, January 9, 1986, Madison WI (attendance 7883). Ohio State (visitors) side is fully legible and checksums correctly: player points 23+15+7+14+6+7+0+2+2+2+0+0=78, matching Ohio State's final score (30+48=78 from score-by-periods). However Wisconsin (home team) side is heavily obscured by a dark scan/highlighter overlay across multiple rows (No. 40, the row below No. 52/near No. 24, No. 24 Smith, and parts of No. 12 Olson's FTA field which reads as 'OUT') making FG/FT/rebound/TP figures illegible or unreliable for several players. Only ~5 of 8 Wisconsin players are readable with any confidence (Olson ~29, Heineman 4, Steinhaus 4, Schuhring 2, Molaski 0, Robertson 0 = ~39 of the team's 61 points), leaving the remainder unaccounted for and no way to verify a per-player checksum for Wisconsin. Since the schema requires both teams' player lines transcribed confidently, skipping the entire game rather than guessing Wisconsin's obscured figures."
+    }
+  ]
+}

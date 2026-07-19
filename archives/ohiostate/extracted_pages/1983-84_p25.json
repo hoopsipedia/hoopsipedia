@@ -1,0 +1,47 @@
+{
+  "page": 25,
+  "games": [
+    {
+      "date": "1984-02-22",
+      "opponent": "Michigan State",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 86,
+          "players": [
+            {"name": "Tony Campbell", "min": 35, "fg": "8-15", "ft": "7-9", "reb": 9, "pf": 3, "ast": 0, "to": 3, "blk": 1, "stl": 2, "pts": 23},
+            {"name": "Dave Jones", "min": 29, "fg": "2-6", "ft": "0-0", "reb": 8, "pf": 2, "ast": 1, "to": 0, "blk": 1, "stl": 1, "pts": 4},
+            {"name": "Keith Wesson", "min": 17, "fg": "3-5", "ft": "4-4", "reb": 5, "pf": 4, "ast": 2, "to": 0, "blk": 0, "stl": 0, "pts": 10},
+            {"name": "Troy Taylor", "min": 30, "fg": "4-8", "ft": "5-9", "reb": 2, "pf": 3, "ast": 2, "to": 3, "blk": 0, "stl": 5, "pts": 13},
+            {"name": "Ron Stokes", "min": 22, "fg": "4-4", "ft": "9-10", "reb": 2, "pf": 3, "ast": 1, "to": 1, "blk": 0, "stl": 2, "pts": 17},
+            {"name": "Dennis Hopson", "min": 22, "fg": "6-11", "ft": "1-2", "reb": 10, "pf": 2, "ast": 1, "to": 2, "blk": 0, "stl": 1, "pts": 13},
+            {"name": "Clarence McGee", "min": 23, "fg": "2-3", "ft": "0-0", "reb": 2, "pf": 2, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pts": 4},
+            {"name": "Curtis Wilson", "min": 12, "fg": "0-3", "ft": "2-2", "reb": 3, "pf": 3, "ast": 5, "to": 5, "blk": 0, "stl": 1, "pts": 2},
+            {"name": "Jim Honigford", "min": 5, "fg": "0-0", "ft": "0-1", "reb": 0, "pf": 0, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Henry Grace", "min": 5, "fg": "0-1", "ft": "0-0", "reb": 0, "pf": 1, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Michigan State Spartans",
+          "score": 70,
+          "players": [
+            {"name": "Larry Polec", "min": 20, "fg": "3-4", "ft": "2-2", "reb": 0, "pf": 5, "ast": 0, "to": 1, "blk": 0, "stl": 1, "pts": 8},
+            {"name": "Richard Mudd", "min": 18, "fg": "0-2", "ft": "0-0", "reb": 6, "pf": 4, "ast": 0, "to": 2, "blk": 1, "stl": 0, "pts": 0},
+            {"name": "Kevin Willis", "min": 28, "fg": "5-13", "ft": "2-4", "reb": 8, "pf": 4, "ast": 2, "to": 5, "blk": 0, "stl": 0, "pts": 12},
+            {"name": "Scott Skiles", "min": 33, "fg": "7-15", "ft": "1-4", "reb": 4, "pf": 4, "ast": 2, "to": 4, "blk": 0, "stl": 0, "pts": 15},
+            {"name": "Sam Vincent", "min": 33, "fg": "7-18", "ft": "7-9", "reb": 2, "pf": 4, "ast": 1, "to": 4, "blk": 0, "stl": 0, "pts": 21},
+            {"name": "Ralph Walker", "min": 11, "fg": "0-2", "ft": "0-0", "reb": 1, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Darryl Johnson", "min": 22, "fg": "2-4", "ft": "0-0", "reb": 2, "pf": 3, "ast": 1, "to": 1, "blk": 0, "stl": 1, "pts": 4},
+            {"name": "Ken Johnson", "min": 19, "fg": "3-9", "ft": "0-0", "reb": 8, "pf": 4, "ast": 1, "to": 1, "blk": 1, "stl": 1, "pts": 6},
+            {"name": "Barry Fordham", "min": 5, "fg": "0-2", "ft": "0-0", "reb": 3, "pf": 2, "ast": 0, "to": 0, "blk": 0, "stl": 1, "pts": 0},
+            {"name": "Tim Gore", "min": 3, "fg": "0-1", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Greg Pedro", "min": 3, "fg": "1-1", "ft": "0-0", "reb": 0, "pf": 0, "ast": 1, "to": 0, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Patrick Ford", "min": 3, "fg": "1-3", "ft": "0-0", "reb": 1, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 2}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

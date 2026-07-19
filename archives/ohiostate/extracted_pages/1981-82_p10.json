@@ -1,0 +1,44 @@
+{
+  "page": 10,
+  "games": [
+    {
+      "date": "1981-12-22",
+      "opponent": "Florida",
+      "teams": [
+        {
+          "name": "Florida",
+          "score": 58,
+          "players": [
+            {"name": "Rodney Williams", "min": 25, "fg": "0-1", "ft": "0-0", "reb": 1, "pf": 4, "ast": 0, "to": 3, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Ronnie Williams", "min": 38, "fg": "7-15", "ft": "7-11", "reb": 5, "pf": 1, "ast": 2, "to": 3, "stl": 1, "blk": 0, "pts": 21},
+            {"name": "E. McDowell", "min": 40, "fg": "5-10", "ft": "0-0", "reb": 14, "pf": 0, "ast": 2, "to": 6, "stl": 0, "blk": 0, "pts": 10},
+            {"name": "Mike Moses", "min": 30, "fg": "2-3", "ft": "4-4", "reb": 1, "pf": 5, "ast": 1, "to": 6, "stl": 0, "blk": 0, "pts": 8},
+            {"name": "Rob Horden", "min": 38, "fg": "4-6", "ft": "6-6", "reb": 2, "pf": 2, "ast": 2, "to": 7, "stl": 1, "blk": 0, "pts": 14},
+            {"name": "George Jackson", "min": 16, "fg": "1-2", "ft": "1-2", "reb": 2, "pf": 1, "ast": 1, "to": 4, "stl": 0, "blk": 0, "pts": 3},
+            {"name": "Anthony Rogers", "min": 12, "fg": "1-1", "ft": "0-0", "reb": 2, "pf": 2, "ast": 1, "to": 0, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Nabe Palmer", "min": 1, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 61,
+          "players": [
+            {"name": "Tony Campbell", "fg": "4-10", "ft": "0-0", "reb": 8, "pf": 1, "pts": 8},
+            {"name": "Clark Kellogg", "fg": "9-19", "ft": "3-4", "reb": 10, "pf": 2, "pts": 21},
+            {"name": "Granville Walters", "fg": "1-6", "ft": "0-1", "reb": 3, "pf": 5, "pts": 2},
+            {"name": "Dave Jones", "fg": "1-3", "ft": "0-0", "reb": 1, "pf": 0, "pts": 2},
+            {"name": "Ron Stokes", "fg": "2-8", "ft": "0-1", "reb": 0, "pf": 3, "pts": 4},
+            {"name": "Larry Huggins", "fg": "4-5", "ft": "0-0", "reb": 3, "pf": 2, "pts": 8},
+            {"name": "Troy Taylor", "fg": "2-3", "ft": "10-12", "reb": 0, "pf": 3, "pts": 14},
+            {"name": "Cliff Kirchner", "fg": "1-2", "ft": "0-0", "reb": 0, "pf": 2, "pts": 2},
+            {"name": "Derick Polk", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Mitch Haas", "fg": "0-1", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Bryant Johnson", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

@@ -1,0 +1,44 @@
+{
+  "page": 8,
+  "games": [
+    {
+      "date": "2000-12-23",
+      "opponent": "North Carolina",
+      "teams": [
+        {
+          "name": "North Carolina Tar Heels",
+          "score": 80,
+          "players": [
+            {"name": "Jason Capel", "min": 37, "fg": "1-4", "tp": "1-4", "ft": "9-9", "reb": 10, "ast": 3, "pf": 2, "to": 5, "stl": 2, "blk": 0, "pts": 12},
+            {"name": "Kris Lang", "min": 22, "fg": "3-7", "tp": "0-0", "ft": "1-2", "reb": 2, "ast": 0, "pf": 4, "to": 1, "stl": 0, "blk": 1, "pts": 7},
+            {"name": "Brendan Haywood", "min": 31, "fg": "3-5", "tp": "0-0", "ft": "0-6", "reb": 13, "ast": 0, "pf": 4, "to": 3, "stl": 0, "blk": 0, "pts": 6},
+            {"name": "Ronald Curry", "min": 24, "fg": "2-3", "tp": "0-1", "ft": "1-2", "reb": 3, "ast": 3, "pf": 4, "to": 8, "stl": 5, "blk": 0, "pts": 5},
+            {"name": "Joseph Forte", "min": 34, "fg": "10-20", "tp": "1-5", "ft": "8-10", "reb": 3, "ast": 3, "pf": 2, "to": 1, "stl": 2, "blk": 1, "pts": 29},
+            {"name": "Brian Morisson", "min": 6, "fg": "3-4", "tp": "1-2", "ft": "0-0", "reb": 0, "ast": 1, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 7},
+            {"name": "Max Owens", "min": 3, "fg": "0-4", "tp": "0-0", "ft": "1-2", "reb": 1, "ast": 0, "pf": 2, "to": 2, "stl": 0, "blk": 0, "pts": 1},
+            {"name": "Adam Boone", "min": 16, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 3, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Will Johnson", "min": 14, "fg": "2-3", "tp": "1-1", "ft": "0-0", "reb": 3, "ast": 1, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 5},
+            {"name": "Julius Peppers", "min": 12, "fg": "2-3", "tp": "0-0", "ft": "2-2", "reb": 4, "ast": 0, "pf": 3, "to": 1, "stl": 0, "blk": 0, "pts": 6},
+            {"name": "Brian Bersticker", "min": 1, "fg": "1-1", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 2}
+          ]
+        },
+        {
+          "name": "UCLA Bruins",
+          "score": 70,
+          "players": [
+            {"name": "Jason Kapono", "min": 39, "fg": "4-13", "tp": "3-7", "ft": "1-2", "reb": 4, "ast": 1, "pf": 3, "to": 5, "stl": 3, "blk": 0, "pts": 12},
+            {"name": "T.J. Cummings", "min": 17, "fg": "0-1", "tp": "0-0", "ft": "0-0", "reb": 4, "ast": 0, "pf": 4, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Matt Barnes", "min": 36, "fg": "6-15", "tp": "0-3", "ft": "6-8", "reb": 10, "ast": 2, "pf": 3, "to": 3, "stl": 2, "blk": 1, "pts": 18},
+            {"name": "Earl Watson", "min": 40, "fg": "10-18", "tp": "3-8", "ft": "7-11", "reb": 7, "ast": 3, "pf": 4, "to": 0, "stl": 4, "blk": 0, "pts": 30},
+            {"name": "Ray Young", "min": 27, "fg": "0-8", "tp": "0-5", "ft": "0-0", "reb": 2, "ast": 2, "pf": 5, "to": 1, "stl": 1, "blk": 1, "pts": 0},
+            {"name": "Billy Knight", "min": 1, "fg": "0-1", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Ryan Bailey", "min": 13, "fg": "1-2", "tp": "0-1", "ft": "1-2", "reb": 2, "ast": 0, "pf": 3, "to": 2, "stl": 0, "blk": 0, "pts": 3},
+            {"name": "Dan Gadzuric", "min": 27, "fg": "2-10", "tp": "0-0", "ft": "3-6", "reb": 7, "ast": 0, "pf": 2, "to": 2, "stl": 1, "blk": 2, "pts": 7}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

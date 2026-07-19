@@ -1,0 +1,9 @@
+{
+  "page": 8,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Ohio State (79) vs Michigan (Jan 5, 1953) official Western Conference box score is present but fails checksum on both sides. Ohio State: FG-made column sums correctly to the printed team total (24), but FT-made column sums to 34 against a printed total of 31, and the printed per-player Points column sums to 81 against the printed team total/score of 79 -- discrepancies concentrated in the Cook G and Jones G rows, where 2*FG_made+FT_made does not match the printed Points value for those two rows (Cook: FG 3/9, FT 5/4 gives 11 vs printed 9; Jones: FG 1/2, FT 1/1 gives 3 vs printed 4), indicating an illegible/misprinted digit in FT-made or Points for at least one row. Michigan's team score header reads '16' (clearly inconsistent with its own printed Points total of 46 and with the half-time score line 'Ohio State 32, Michigan 21'), and the Codwell F points cell is smudged/illegible, so Michigan's totals cannot be confidently reconciled either. Per instructions, skipping rather than guessing corrected digits; only one read of the page was used since the scan resolution would not improve on a second read."
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "page": 7,
+  "games": [
+    {
+      "date": "1982-12-23",
+      "opponent": "Maryland",
+      "ucla_score": 79,
+      "opp_score": 80,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 79,
+          "players": [
+            {"name": "Darren Dave", "min": 48, "fg": "6-12", "ft": "4-4", "reb": 8, "pf": 3, "ast": 1, "to": 2, "blk": 0, "stl": 1, "pts": 16},
+            {"name": "Kenny Fields", "min": 45, "fg": "10-12", "ft": "3-6", "reb": 6, "pf": 4, "ast": 0, "to": 0, "blk": 0, "stl": 1, "pts": 23},
+            {"name": "Stuart Gray", "min": 23, "fg": "4-8", "ft": "0-1", "reb": 7, "pf": 1, "ast": 0, "to": 0, "blk": 0, "stl": 1, "pts": 8},
+            {"name": "Ralph Jackson", "min": 34, "fg": "0-6", "ft": "0-0", "reb": 1, "pf": 4, "ast": 5, "to": 1, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Rod Foster", "min": 42, "fg": "9-17", "ft": "4-4", "reb": 3, "pf": 4, "ast": 2, "to": 1, "blk": 0, "stl": 4, "pts": 22},
+            {"name": "Michael Holton", "min": 36, "fg": "3-12", "ft": "2-2", "reb": 3, "pf": 5, "ast": 3, "to": 1, "blk": 0, "stl": 0, "pts": 8},
+            {"name": "Nigel Miguel", "min": 16, "fg": "0-3", "ft": "0-0", "reb": 4, "pf": 4, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Brad Wright", "min": 6, "fg": "1-1", "ft": "0-0", "reb": 1, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 2}
+          ]
+        },
+        {
+          "name": "Maryland Terrapins",
+          "score": 80,
+          "players": [
+            {"name": "Mark Fothergill", "min": 49, "fg": "5-5", "ft": "4-7", "reb": 7, "pf": 4, "ast": 2, "to": 3, "blk": 0, "stl": 0, "pts": 14},
+            {"name": "Len Bias", "min": 28, "fg": "0-5", "ft": "0-0", "reb": 2, "pf": 1, "ast": 1, "to": 2, "blk": 1, "stl": 0, "pts": 0},
+            {"name": "Ben Coleman", "min": 50, "fg": "11-12", "ft": "5-8", "reb": 12, "pf": 4, "ast": 0, "to": 4, "blk": 0, "stl": 0, "pts": 27},
+            {"name": "Jeff Adkins", "min": 45, "fg": "3-5", "ft": "5-5", "reb": 3, "pf": 4, "ast": 1, "to": 2, "blk": 1, "stl": 0, "pts": 11},
+            {"name": "Adrian Branch", "min": 50, "fg": "9-20", "ft": "8-11", "reb": 10, "pf": 4, "ast": 1, "to": 5, "blk": 0, "stl": 1, "pts": 26},
+            {"name": "Jeff Baxter", "min": 5, "fg": "0-2", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Herman Veal", "min": 22, "fg": "0-0", "ft": "2-5", "reb": 4, "pf": 1, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Pete Holbert", "min": 1, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 1, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

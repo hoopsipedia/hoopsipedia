@@ -1,0 +1,42 @@
+{
+  "page": 15,
+  "games": [
+    {
+      "date": "1979-01-20",
+      "opponent": "Clemson",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 61,
+          "players": [
+            {"name": "Lee Baker", "min": 40, "fg": "10-17", "ft": "9-9", "reb": 8, "ast": 0, "pf": 2, "to": 4, "stl": 5, "blk": 1, "pts": 29},
+            {"name": "Terry Gates", "min": 26, "fg": "0-0", "ft": "1-2", "reb": 4, "ast": 0, "pf": 3, "to": 0, "stl": 0, "blk": 0, "pts": 1},
+            {"name": "Steve Castellan", "min": 31, "fg": "0-2", "ft": "0-0", "reb": 3, "ast": 1, "pf": 2, "to": 5, "stl": 1, "blk": 2, "pts": 0},
+            {"name": "Jeff Lamp", "min": 39, "fg": "5-12", "ft": "8-12", "reb": 4, "ast": 2, "pf": 1, "to": 5, "stl": 3, "blk": 0, "pts": 18},
+            {"name": "Bobby Stokes", "min": 21, "fg": "1-4", "ft": "3-4", "reb": 4, "ast": 2, "pf": 5, "to": 5, "stl": 1, "blk": 0, "pts": 5},
+            {"name": "Mike Owens", "min": 21, "fg": "3-4", "ft": "0-0", "reb": 1, "ast": 1, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 6},
+            {"name": "Jeff Jones", "min": 20, "fg": "0-3", "ft": "2-2", "reb": 1, "ast": 5, "pf": 4, "to": 1, "stl": 2, "blk": 0, "pts": 2},
+            {"name": "Otis Fulton", "min": 2, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Clemson Tigers",
+          "score": 54,
+          "players": [
+            {"name": "Larry Nance", "min": 38, "fg": "5-7", "ft": "0-0", "reb": 7, "ast": 0, "pf": 3, "to": 7, "stl": 1, "blk": 0, "pts": 10},
+            {"name": "Marvin Dickerson", "min": 32, "fg": "8-10", "ft": "2-4", "reb": 4, "ast": 2, "pf": 3, "to": 3, "stl": 1, "blk": 0, "pts": 18},
+            {"name": "Bill Ross", "min": 23, "fg": "0-4", "ft": "2-2", "reb": 3, "ast": 0, "pf": 1, "to": 3, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Billy Williams", "min": 28, "fg": "5-10", "ft": "0-0", "reb": 3, "ast": 3, "pf": 4, "to": 2, "stl": 2, "blk": 0, "pts": 10},
+            {"name": "Bob Conrad", "min": 30, "fg": "0-2", "ft": "0-0", "reb": 0, "ast": 1, "pf": 5, "to": 2, "stl": 2, "blk": 0, "pts": 0},
+            {"name": "Derrick Johnson", "min": 27, "fg": "5-9", "ft": "0-0", "reb": 0, "ast": 0, "pf": 4, "to": 3, "stl": 3, "blk": 0, "pts": 10},
+            {"name": "Horace Wyatt", "min": 14, "fg": "2-3", "ft": "0-0", "reb": 1, "ast": 0, "pf": 2, "to": 2, "stl": 1, "blk": 0, "pts": 4},
+            {"name": "John Campbell", "min": 2, "fg": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Keith Walker", "min": 6, "fg": "0-0", "ft": "0-1", "reb": 0, "ast": 0, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

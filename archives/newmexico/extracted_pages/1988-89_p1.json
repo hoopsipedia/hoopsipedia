@@ -1,0 +1,50 @@
+{
+  "page": 1,
+  "games": [
+    {
+      "date": "1988-11-26",
+      "opponent": "Loyola",
+      "site": "Albuquerque, NM",
+      "teams": [
+        {
+          "name": "Loyola",
+          "score": 71,
+          "players": [
+            {"name": "Ellmond, Byron", "fg": "4-11", "tp": "1-3", "ft": "1-2", "reb": 3, "pf": 3, "ast": 1, "to": 2, "blk": 0, "stl": 0, "pts": 10},
+            {"name": "Boney, John", "fg": "4-6", "ft": "1-2", "reb": 1, "pf": 3, "ast": 1, "to": 2, "blk": 0, "stl": 3, "pts": 9},
+            {"name": "Foley, Stephen", "fg": "4-9", "tp": "2-5", "ft": "0-0", "reb": 5, "pf": 3, "ast": 1, "to": 3, "blk": 0, "stl": 0, "pts": 10},
+            {"name": "Spelz, Brian", "fg": "0-5", "ft": "0-0", "reb": 1, "pf": 2, "ast": 2, "to": 4, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Morrison, Mike", "fg": "6-21", "tp": "0-4", "ft": "5-8", "reb": 0, "pf": 3, "ast": 1, "to": 1, "blk": 0, "stl": 2, "pts": 17},
+            {"name": "Boullips, Hollivan", "fg": "1-1", "ft": "0-0", "reb": 2, "pf": 3, "ast": 7, "to": 0, "blk": 0, "stl": 1, "pts": 2},
+            {"name": "Wojcik, Dave", "fg": "1-2", "ft": "0-0", "reb": 2, "pf": 0, "ast": 1, "to": 0, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Green, Kevin", "fg": "4-9", "tp": "0-1", "ft": "1-1", "reb": 2, "pf": 2, "ast": 1, "to": 2, "blk": 0, "stl": 2, "pts": 9},
+            {"name": "Hatcher, Charles", "fg": "3-10", "tp": "0-1", "ft": "2-2", "reb": 2, "pf": 2, "ast": 1, "to": 0, "blk": 0, "stl": 1, "pts": 8},
+            {"name": "Hamwright, Marqus", "fg": "0-2", "ft": "0-0", "reb": 1, "pf": 2, "ast": 1, "to": 2, "blk": 0, "stl": 3, "pts": 0},
+            {"name": "Campbell, Derek", "fg": "1-1", "ft": "2-4", "reb": 7, "pf": 2, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pts": 4},
+            {"name": "Wagner, Mike", "fg": "0-0", "ft": "0-0", "reb": 1, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "New Mexico Lobos",
+          "score": 96,
+          "players": [
+            {"name": "McBurrous, Marvin", "fg": "6-8", "tp": "2-2", "ft": "0-1", "reb": 6, "pf": 2, "ast": 2, "to": 6, "blk": 0, "stl": 0, "pts": 14},
+            {"name": "Thomas, Charlie", "fg": "12-16", "ft": "5-7", "reb": 12, "pf": 2, "ast": 2, "to": 3, "blk": 0, "stl": 4, "pts": 29},
+            {"name": "Loeffel, Rob", "fg": "4-10", "ft": "0-3", "reb": 9, "pf": 1, "ast": 1, "to": 0, "blk": 0, "stl": 0, "pts": 8},
+            {"name": "McGee, Darrell", "fg": "3-7", "tp": "0-3", "ft": "4-5", "reb": 2, "pf": 2, "ast": 15, "to": 3, "blk": 0, "stl": 4, "pts": 10},
+            {"name": "Robbins, Rob", "fg": "6-9", "tp": "1-3", "ft": "1-1", "reb": 2, "pf": 3, "ast": 4, "to": 3, "blk": 1, "stl": 1, "pts": 14},
+            {"name": "Longley, Luc", "fg": "2-3", "ft": "0-0", "reb": 6, "pf": 2, "ast": 1, "to": 5, "blk": 4, "stl": 0, "pts": 4},
+            {"name": "Steffan, Tony", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Walker, Dwannie", "fg": "0-0", "ft": "0-1", "reb": 0, "pf": 2, "ast": 2, "to": 3, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Miller, Kurt", "fg": "2-2", "ft": "1-2", "reb": 3, "pf": 0, "ast": 1, "to": 1, "blk": 0, "stl": 0, "pts": 5},
+            {"name": "Banks, Willie", "fg": "4-6", "tp": "0-1", "ft": "0-1", "reb": 1, "pf": 1, "ast": 2, "to": 1, "blk": 0, "stl": 1, "pts": 8},
+            {"name": "Arnold, Bob", "fg": "0-0", "ft": "2-2", "reb": 0, "pf": 2, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Tower, Chris", "fg": "1-1", "ft": "0-1", "reb": 2, "pf": 1, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 2}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

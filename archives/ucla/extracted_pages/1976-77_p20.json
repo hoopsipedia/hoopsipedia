@@ -1,0 +1,45 @@
+{
+  "page": 20,
+  "games": [
+    {
+      "date": "1977-02-05",
+      "opponent": "Washington State",
+      "ucla_score": 72,
+      "opp_score": 59,
+      "teams": [
+        {
+          "name": "Washington State Cougars",
+          "score": 59,
+          "players": [
+            {"name": "House", "min": 19, "fg": "1-8", "ft": "0-0", "reb": 4, "pf": 1, "ast": 0, "pts": 2},
+            {"name": "Johnson", "min": 15, "fg": "3-5", "ft": "0-2", "reb": 3, "pf": 5, "ast": 1, "pts": 7},
+            {"name": "Donaldson", "min": 29, "fg": "5-9", "ft": "1-2", "reb": 4, "pf": 3, "ast": 3, "pts": 11},
+            {"name": "Rhodes", "min": 40, "fg": "11-24", "ft": "4-5", "reb": 8, "pf": 3, "ast": 3, "pts": 26},
+            {"name": "Giovacchini", "min": 32, "fg": "0-5", "ft": "1-1", "reb": 2, "pf": 1, "ast": 1, "pts": 1},
+            {"name": "Schilleci", "min": 21, "fg": "0-4", "ft": "2-3", "reb": 5, "pf": 3, "ast": 1, "pts": 2},
+            {"name": "Grun", "min": 22, "fg": "3-6", "ft": "0-0", "reb": 2, "pf": 3, "ast": 1, "pts": 6},
+            {"name": "Collins", "min": 12, "fg": "1-4", "ft": "2-2", "reb": 1, "pf": 2, "ast": 0, "pts": 4},
+            {"name": "Preston", "min": 2, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "pts": 0},
+            {"name": "Jones", "min": 8, "fg": "0-1", "ft": "0-0", "reb": 0, "pf": 0, "ast": 2, "pts": 0}
+          ]
+        },
+        {
+          "name": "UCLA Bruins",
+          "score": 72,
+          "players": [
+            {"name": "Greenwood", "min": 40, "fg": "6-12", "ft": "6-6", "reb": 6, "pf": 3, "ast": 2, "pts": 18},
+            {"name": "Johnson", "min": 40, "fg": "3-12", "ft": "4-6", "reb": 10, "pf": 3, "ast": 1, "pts": 10},
+            {"name": "Sims", "min": 22, "fg": "2-4", "ft": "0-0", "reb": 4, "pf": 3, "ast": 3, "pts": 4},
+            {"name": "Hamilton", "min": 37, "fg": "7-10", "ft": "4-5", "reb": 2, "pf": 2, "ast": 8, "pts": 18},
+            {"name": "Spillane", "min": 35, "fg": "7-10", "ft": "0-0", "reb": 5, "pf": 2, "ast": 7, "pts": 14},
+            {"name": "Vroman", "min": 15, "fg": "2-2", "ft": "0-0", "reb": 3, "pf": 2, "ast": 2, "pts": 4},
+            {"name": "Holland", "min": 8, "fg": "2-4", "ft": "0-0", "reb": 0, "pf": 1, "ast": 1, "pts": 4},
+            {"name": "Vandeweghe", "min": 3, "fg": "0-2", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

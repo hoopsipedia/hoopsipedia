@@ -1,0 +1,46 @@
+{
+  "page": 17,
+  "games": [
+    {
+      "date": "1983-02-03",
+      "opponent": "Washington State",
+      "ucla_score": 89,
+      "opp_score": 87,
+      "teams": [
+        {
+          "name": "Washington State Cougars",
+          "score": 87,
+          "players": [
+            {"name": "Harriel", "min": "45", "fg": "11-19", "ft": "7-8", "reb": 6, "pf": 2, "to": 1, "ast": 1, "stl": 1, "pts": 29},
+            {"name": "Haskins", "min": "43", "fg": "9-15", "ft": "1-2", "reb": 13, "pf": 4, "to": 1, "ast": 4, "stl": 1, "pts": 19},
+            {"name": "Brown", "min": "31", "fg": "6-10", "ft": "0-0", "reb": 4, "pf": 4, "to": 3, "ast": 2, "pts": 12},
+            {"name": "Winkler", "min": "30.5", "fg": "4-9", "ft": "2-2", "reb": 1, "pf": 1, "to": 1, "ast": 1, "stl": 1, "pts": 10},
+            {"name": "Ehlo", "min": "37", "fg": "5-9", "ft": "3-3", "reb": 5, "pf": 4, "to": 8, "ast": 8, "stl": 4, "pts": 13},
+            {"name": "Wurm", "min": "10", "fg": "1-2", "ft": "0-0", "reb": 0, "pf": 2, "to": 1, "ast": 1, "pts": 2},
+            {"name": "Morrison", "min": "1.5", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 1, "pts": 0},
+            {"name": "Rubin", "min": "22", "fg": "1-2", "ft": "0-0", "reb": 1, "pf": 1, "to": 1, "ast": 1, "pts": 2},
+            {"name": "Jennings", "min": "2", "fg": "0-0", "ft": "0-0", "reb": 1, "pf": 0, "to": 1, "pts": 0},
+            {"name": "Pollard", "min": "3", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 1, "pts": 0}
+          ]
+        },
+        {
+          "name": "UCLA Bruins",
+          "score": 89,
+          "players": [
+            {"name": "Daye", "min": "41", "fg": "10-14", "ft": "5-5", "reb": 6, "pf": 4, "to": 3, "ast": 1, "stl": 2, "pts": 25},
+            {"name": "Fields", "min": "39", "fg": "12-23", "ft": "2-3", "reb": 3, "pf": 4, "to": 4, "ast": 1, "pts": 26},
+            {"name": "Gray", "min": "38", "fg": "6-10", "ft": "4-5", "reb": 12, "pf": 2, "to": 1, "ast": 1, "blk": 1, "stl": 1, "pts": 16},
+            {"name": "Jackson", "min": "29", "fg": "4-8", "ft": "0-0", "reb": 2, "pf": 3, "to": 4, "ast": 5, "pts": 8},
+            {"name": "Foster", "min": "26", "fg": "2-6", "ft": "0-0", "reb": 0, "pf": 3, "to": 2, "pts": 4},
+            {"name": "Holton", "min": "36", "fg": "3-5", "ft": "2-3", "reb": 1, "pf": 1, "to": 1, "ast": 7, "blk": 2, "stl": 1, "pts": 8},
+            {"name": "Miguel", "min": "5", "fg": "1-2", "ft": "0-0", "reb": 1, "pf": 1, "pts": 2},
+            {"name": "Wright", "min": "4", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Maloncon", "min": "7", "fg": "0-0", "ft": "0-0", "reb": 2, "pf": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

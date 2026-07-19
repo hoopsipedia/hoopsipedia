@@ -1,0 +1,45 @@
+{
+  "page": 30,
+  "games": [
+    {
+      "date": "1980-03-05",
+      "opponent": "Lafayette Leopards",
+      "notes": "NCAA Tournament First Round, Charlottesville VA. Attendance 6804. Technical fouls: Sampson (VA), Lamp (VA). Score by half - Lafayette 28-28, Virginia 34-33.",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 67,
+          "players": [
+            {"name": "Gates, Terry", "fg": "1-1", "ft": "3-6", "reb": 8, "pf": 2, "ast": 0, "to": 2, "stl": 0, "blk": 0, "pts": 5},
+            {"name": "Jefferson, Garland", "min": 31, "fg": "2-6", "ft": "6-7", "reb": 6, "pf": 3, "ast": 1, "to": 3, "stl": 1, "blk": 0, "pts": 10},
+            {"name": "Sampson, Ralph", "min": 38, "fg": "9-15", "ft": "1-3", "reb": 13, "pf": 2, "ast": 1, "to": 8, "stl": 1, "blk": 9, "pts": 19},
+            {"name": "Jones, Jeff", "min": 36, "fg": "4-7", "ft": "1-3", "reb": 6, "pf": 1, "ast": 9, "to": 8, "stl": 3, "blk": 0, "pts": 9},
+            {"name": "Lamp, Jeff", "fg": "9-10", "ft": "1-2", "reb": 2, "pf": 3, "ast": 1, "to": 3, "stl": 2, "blk": 0, "pts": 19},
+            {"name": "Robinson, Craig", "min": 2, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Raker, Lee", "min": 16, "fg": "1-3", "ft": "2-4", "reb": 1, "pf": 1, "ast": 2, "to": 0, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Lattimore, Lewis", "min": 2, "fg": "0-1", "ft": "1-2", "reb": 1, "pf": 0, "ast": 0, "to": 0, "stl": 0, "blk": 0, "pts": 1},
+            {"name": "Newburg, Doug", "min": 9, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 1, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Lafayette Leopards",
+          "score": 56,
+          "players": [
+            {"name": "Best, Thomas", "min": 39, "fg": "3-6", "ft": "0-0", "reb": 9, "pf": 4, "ast": 5, "to": 2, "stl": 1, "blk": 0, "pts": 6},
+            {"name": "Congo, Richard", "min": 32, "fg": "0-7", "ft": "0-0", "reb": 2, "pf": 4, "ast": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Naddaff, Charlie", "min": 22, "fg": "7-10", "ft": "0-0", "reb": 4, "pf": 4, "ast": 0, "to": 3, "stl": 2, "blk": 0, "pts": 14},
+            {"name": "Whitman, Mike", "min": 31, "fg": "5-18", "ft": "0-0", "reb": 3, "pf": 4, "ast": 2, "to": 3, "stl": 3, "blk": 0, "pts": 10},
+            {"name": "Falconiero, Bob", "min": 40, "fg": "9-18", "ft": "4-5", "reb": 2, "pf": 4, "ast": 4, "to": 2, "stl": 2, "blk": 0, "pts": 22},
+            {"name": "Boulander, Paul", "min": 2, "fg": "0-2", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Wolff, Bob", "min": 1, "fg": "0-1", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "King, Don", "min": 18, "fg": "1-3", "ft": "0-0", "reb": 2, "pf": 3, "ast": 1, "to": 1, "stl": 1, "blk": 0, "pts": 2},
+            {"name": "Furey, Tony", "min": 7, "fg": "0-1", "ft": "0-0", "reb": 0, "pf": 2, "ast": 0, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Keller, Chaz", "min": 8, "fg": "0-3", "ft": "2-2", "reb": 1, "pf": 2, "ast": 1, "to": 0, "stl": 2, "blk": 0, "pts": 2}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

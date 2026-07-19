@@ -1,0 +1,45 @@
+{
+  "page": 23,
+  "games": [
+    {
+      "date": "1981-02-16",
+      "opponent": "Georgia Tech",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 83,
+          "players": [
+            {"name": "Othell Wilson", "min": 28, "fg": "3-6", "ft": "2-3", "reb": 6, "ast": 8, "pf": 3, "to": 1, "stl": 3, "pts": 8},
+            {"name": "Craig Robinson", "min": 26, "fg": "4-9", "ft": "1-1", "reb": 10, "ast": 0, "pf": 4, "to": 0, "stl": 0, "pts": 9},
+            {"name": "Ralph Sampson", "min": 25, "fg": "6-11", "ft": "3-4", "reb": 12, "ast": 1, "pf": 3, "to": 1, "blk": 1, "pts": 15},
+            {"name": "Jeff Lamp", "min": 28, "fg": "9-11", "ft": "1-3", "reb": 2, "ast": 3, "pf": 2, "to": 2, "stl": 2, "pts": 19},
+            {"name": "Jeff Jones", "min": 31, "fg": "5-10", "ft": "2-2", "reb": 3, "ast": 1, "pf": 0, "to": 1, "stl": 0, "pts": 12},
+            {"name": "Ricky Stokes", "min": 13, "fg": "0-0", "ft": "2-3", "reb": 3, "ast": 1, "pf": 1, "to": 0, "stl": 0, "pts": 2},
+            {"name": "Lewis Lattimore", "min": 20, "fg": "3-8", "ft": "4-4", "reb": 6, "ast": 0, "pf": 2, "to": 0, "stl": 1, "pts": 10},
+            {"name": "Terry Gates", "min": 8, "fg": "1-1", "ft": "0-0", "reb": 2, "ast": 1, "pf": 5, "to": 1, "stl": 0, "pts": 2},
+            {"name": "Jeff Klein", "min": 14, "fg": "1-5", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 1, "pts": 2},
+            {"name": "Louis Collins", "min": 7, "fg": "2-5", "ft": "0-0", "reb": 0, "ast": 1, "pf": 0, "to": 0, "stl": 0, "pts": 4}
+          ]
+        },
+        {
+          "name": "Georgia Tech Yellow Jackets",
+          "score": 42,
+          "players": [
+            {"name": "Dave Kowalski", "min": 34, "fg": "3-8", "ft": "2-3", "reb": 4, "ast": 0, "pf": 4, "to": 4, "stl": 1, "pts": 8},
+            {"name": "Steve Shaw", "min": 26, "fg": "3-7", "ft": "0-3", "reb": 3, "ast": 0, "pf": 2, "to": 2, "pts": 6},
+            {"name": "Lee Goza", "min": 29, "fg": "1-4", "ft": "1-2", "reb": 5, "ast": 1, "pf": 3, "to": 4, "pts": 3},
+            {"name": "Fred Hall", "min": 32, "fg": "4-15", "ft": "2-2", "reb": 5, "ast": 1, "pf": 4, "to": 2, "pts": 10},
+            {"name": "Stu Lyon", "min": 28, "fg": "2-8", "ft": "2-3", "reb": 1, "ast": 0, "pf": 3, "to": 1, "stl": 2, "pts": 6},
+            {"name": "Greg Wilson", "min": 16, "fg": "4-7", "ft": "1-4", "reb": 5, "ast": 0, "pf": 1, "to": 1, "blk": 1, "pts": 9},
+            {"name": "Dave Cole", "min": 9, "fg": "0-1", "ft": "0-1", "reb": 1, "ast": 0, "pf": 2, "to": 0, "pts": 0},
+            {"name": "David New", "min": 14, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "pts": 0},
+            {"name": "Henry Lee", "min": 12, "fg": "0-3", "ft": "0-2", "reb": 1, "ast": 0, "pf": 1, "to": 1, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": [],
+  "notes": "Jersey #11 for Virginia has an ambiguous overlapping name on the scoresheet reading 'WILSON, OHZEL' with 'BAKER, LEE' written directly above/overlapping it; only one stat line is present for that row. Transcribed as Othell Wilson (matches known 1980-81 UVA roster) since only one set of stats exists for the row; the second name could not be confidently attributed to separate stats and was omitted rather than guessed. All other names/stats read clearly from a typed official NCAA box score. Both team point checksums (Virginia 83, Georgia Tech 42) and both FG-made and FT-made column sums matched the sheet's own TOTALS row exactly."
+}

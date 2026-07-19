@@ -1,0 +1,43 @@
+{
+  "page": 19,
+  "games": [
+    {
+      "date": "1934-03-03",
+      "opponent": "Notre Dame",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 21,
+          "players": [
+            {"name": "Wilson", "fg": 3, "ft": 1, "pf": 1, "pts": 7},
+            {"name": "Colburn", "fg": 0, "ft": 0, "pf": 1, "pts": 0},
+            {"name": "Whitlinger", "fg": 1, "ft": 0, "pf": 1, "pts": 2},
+            {"name": "Conrad", "fg": 3, "ft": 0, "pf": 3, "pts": 6},
+            {"name": "Beltner", "fg": 0, "ft": 1, "pf": 3, "pts": 1},
+            {"name": "Rosequist", "fg": 0, "ft": 0, "pf": 4, "pts": 0},
+            {"name": "Busich", "fg": 0, "ft": 2, "pf": 1, "pts": 2},
+            {"name": "Fisher", "fg": 1, "ft": 0, "pf": 0, "pts": 2},
+            {"name": "Laybourne", "fg": 0, "ft": 1, "pf": 0, "pts": 1}
+          ]
+        },
+        {
+          "name": "Notre Dame",
+          "score": 33,
+          "players": [
+            {"name": "Jordan", "fg": 1, "ft": 1, "pf": 1, "pts": 3},
+            {"name": "Voegel", "fg": 4, "ft": 4, "pf": 4, "pts": 12},
+            {"name": "Okane", "fg": 1, "ft": 0, "pf": 0, "pts": 2},
+            {"name": "Ford", "fg": 0, "ft": 0, "pf": 0, "pts": 0},
+            {"name": "Peters", "fg": 0, "ft": 0, "pf": 1, "pts": 0},
+            {"name": "Krause", "fg": 3, "ft": 4, "pf": 3, "pts": 10},
+            {"name": "Ireland", "fg": 0, "ft": 0, "pf": 1, "pts": 0},
+            {"name": "Crowe", "fg": 3, "ft": 0, "pf": 1, "pts": 6},
+            {"name": "Newbold", "fg": 0, "ft": 0, "pf": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

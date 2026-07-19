@@ -1,0 +1,9 @@
+{
+  "page": 26,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Official NCAA/ACC box score, NC State (16-9,7-5) at Virginia (23-3,14-1), 1983-02-27, Charlottesville VA, final NC State 75 - Virginia 86. NC State's side transcribes cleanly and checksums exactly (individual TP column sums to 75, matching the team total and final score). However Virginia's handwritten player rows (esp. the FT/FTA and TP columns for Mullen, Robinson, Sampson, Wilson, Carlisle, Miller, Stokes, Edelin, Merrifield) are ambiguous enough that two independent reconstructions (reading the TP column directly vs. computing 2*FGmade+FTmade+3PTmade) disagree and neither reconciles cleanly to the team final of 86 (one pass totaled 90). Rather than invent/force values to hit the checksum, skipping the entire game per the ruthless-skip instruction."
+    }
+  ]
+}

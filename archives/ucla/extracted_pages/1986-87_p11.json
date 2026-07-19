@@ -1,0 +1,48 @@
+{
+  "page": 11,
+  "games": [
+    {
+      "date": "1987-01-04",
+      "opponent": "California",
+      "ucla_score": 86,
+      "opp_score": 81,
+      "teams": [
+        {
+          "name": "California Golden Bears",
+          "score": 81,
+          "players": [
+            {"name": "Butler", "min": 38, "fg": "5-15", "ft": "2-2", "tp": "0-0", "reb": 7, "ast": 1, "pf": 3, "to": 1, "stl": 1, "blk": 0, "pts": 12},
+            {"name": "Wheeler", "min": 23, "fg": "5-8", "ft": "2-2", "tp": "0-0", "reb": 3, "ast": 1, "pf": 4, "to": 0, "stl": 0, "blk": 0, "pts": 12},
+            {"name": "Taylor", "min": 13, "fg": "3-5", "ft": "3-3", "tp": "0-0", "reb": 3, "ast": 0, "pf": 2, "to": 2, "stl": 0, "blk": 0, "pts": 9},
+            {"name": "Walton", "min": 19, "fg": "1-2", "ft": "1-2", "tp": "1-1", "reb": 0, "ast": 1, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Johnson", "min": 38, "fg": "7-22", "ft": "7-9", "tp": "1-5", "reb": 6, "ast": 7, "pf": 4, "to": 1, "stl": 0, "blk": 0, "pts": 22},
+            {"name": "Smith", "min": 2, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Washington", "min": 16, "fg": "1-1", "ft": "1-2", "tp": "0-0", "reb": 0, "ast": 0, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 3},
+            {"name": "Javius", "min": 21, "fg": "3-5", "ft": "2-2", "tp": "0-0", "reb": 4, "ast": 3, "pf": 5, "to": 1, "stl": 0, "blk": 0, "pts": 8},
+            {"name": "Ortmann", "min": 19, "fg": "2-3", "ft": "2-3", "tp": "0-0", "reb": 4, "ast": 1, "pf": 4, "to": 0, "stl": 0, "blk": 0, "pts": 6},
+            {"name": "Huling", "min": 3, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 1, "pf": 0, "to": 0, "stl": 1, "blk": 0, "pts": 0},
+            {"name": "Sears", "min": 8, "fg": "2-3", "ft": "1-2", "tp": "0-0", "reb": 3, "ast": 1, "pf": 3, "to": 0, "stl": 0, "blk": 0, "pts": 5}
+          ]
+        },
+        {
+          "name": "UCLA Bruins",
+          "score": 86,
+          "players": [
+            {"name": "Miller", "min": 39, "fg": "10-19", "ft": "10-10", "tp": "4-7", "reb": 5, "ast": 1, "pf": 3, "to": 1, "stl": 0, "blk": 0, "pts": 34},
+            {"name": "Rochelin", "min": 7, "fg": "0-3", "ft": "0-0", "tp": "0-0", "reb": 4, "ast": 0, "pf": 3, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Haley", "min": 12, "fg": "2-2", "ft": "0-0", "tp": "0-0", "reb": 1, "ast": 0, "pf": 3, "to": 0, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Immel", "min": 26, "fg": "3-6", "ft": "2-4", "tp": "1-3", "reb": 4, "ast": 2, "pf": 2, "to": 3, "stl": 2, "blk": 0, "pts": 9},
+            {"name": "Richardson", "min": 38, "fg": "5-9", "ft": "1-5", "tp": "0-0", "reb": 3, "ast": 5, "pf": 2, "to": 3, "stl": 1, "blk": 1, "pts": 11},
+            {"name": "Wilson", "min": 33, "fg": "1-2", "ft": "10-15", "tp": "0-0", "reb": 8, "ast": 2, "pf": 4, "to": 3, "stl": 0, "blk": 0, "pts": 12},
+            {"name": "Foster", "min": 28, "fg": "3-5", "ft": "0-0", "tp": "0-0", "reb": 1, "ast": 0, "pf": 4, "to": 0, "stl": 1, "blk": 0, "pts": 6},
+            {"name": "Hatcher", "min": 14, "fg": "3-6", "ft": "4-6", "tp": "0-1", "reb": 2, "ast": 3, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 10},
+            {"name": "Palmer", "min": 2, "fg": "0-1", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Walker", "min": 1, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 1, "ast": 1, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

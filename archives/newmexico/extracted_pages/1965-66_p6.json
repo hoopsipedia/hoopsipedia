@@ -1,0 +1,9 @@
+{
+  "page": 6,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Dec 17, 1965 vs Hawaii: New Mexico side checksums perfectly (period score 34+38=72, TOTALS row points=72, sum of all 14 player point values=72). Hawaii side fails checksum: header period score reads 10+31=41 final, but Hawaii's own TOTALS row shows 40 points, and the independently computed sum of all 11 Hawaii players' points (each cross-checked as 2*FGmade+FTmade against the sheet's printed per-player Total Points column, all matching exactly) also sums to 40, not 41. This 1-point discrepancy appears to be an arithmetic error by the original 1965 scorekeeper in adding period scores (or a digit misread in the period-score box, e.g. '10'/'31'), not a transcription error on my part -- but per instructions, skipping rather than guessing which figure (40 or 41) is the 'true' final score."
+    }
+  ]
+}

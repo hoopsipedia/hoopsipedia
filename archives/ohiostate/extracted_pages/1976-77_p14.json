@@ -1,0 +1,9 @@
+{
+  "page": 14,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Northwestern @ Ohio State, Jan 15 1977 (final OSU 69, Northwestern 57). Ohio State's box score is fully legible and checksums exactly (sum of player pts = 69, matching computed 2*FGtot+FTtot = 2*26+17 = 69). However Northwestern's box score has multiple illegible/faded cells (Hildebrand-g and McKinney-g rows: FGA/FT/FTA columns reduced to unreadable marks; Cartwright-f FG value ambiguous), and reconstructing pts = 2*FG+FT for those rows does not reconcile cleanly to Northwestern's official total of 57 without guessing. Re-read the page once (max allowed) and the ambiguity persisted. Skipping the entire game rather than inventing values, per instructions."
+    }
+  ]
+}

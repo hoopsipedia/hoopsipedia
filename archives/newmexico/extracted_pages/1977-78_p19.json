@@ -1,0 +1,47 @@
+{
+  "page": 19,
+  "games": [
+    {
+      "date": "1978-02-04",
+      "opponent": "Colorado State Rams",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 91,
+          "players": [
+            {"name": "Russell Saunders", "min": "29 1/2", "fg": "6-9", "ft": "2-5", "reb": 1, "ast": 1, "pf": 4, "to": 2, "stl": 0, "blk": 0, "pts": 14},
+            {"name": "Michael Cooper", "min": "25 1/2", "fg": "7-15", "ft": "2-2", "reb": 4, "ast": 2, "pf": 4, "to": 4, "stl": 1, "blk": 0, "pts": 16},
+            {"name": "Wil Smiley", "min": 17, "fg": "2-3", "ft": "0-0", "reb": 4, "ast": 0, "pf": 2, "to": 0, "stl": 1, "blk": 0, "pts": 4},
+            {"name": "Phil Abney", "min": "28 1/2", "fg": "6-11", "ft": "2-3", "reb": 4, "ast": 0, "pf": 4, "to": 4, "stl": 2, "blk": 2, "pts": 14},
+            {"name": "Marvin Johnson", "min": "18 1/2", "fg": "6-12", "ft": "0-0", "reb": 4, "ast": 1, "pf": 2, "to": 1, "stl": 1, "blk": 0, "pts": 12},
+            {"name": "Gregg Polinsky", "min": 11, "fg": "0-1", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Willie Howard", "min": "28 1/2", "fg": "3-7", "ft": "5-7", "reb": 7, "ast": 0, "pf": 3, "to": 2, "stl": 0, "blk": 1, "pts": 11},
+            {"name": "Mark Felix", "min": "10 1/2", "fg": "2-2", "ft": "0-0", "reb": 0, "ast": 2, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Mike Stewart", "min": "9 1/2", "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Jimmy Allen", "min": 22, "fg": "5-8", "ft": "6-6", "reb": 11, "ast": 1, "pf": 1, "to": 1, "stl": 0, "blk": 1, "pts": 16}
+          ]
+        },
+        {
+          "name": "Colorado State Rams",
+          "score": 82,
+          "players": [
+            {"name": "Alton Brandon", "min": 31, "fg": "3-6", "ft": "0-0", "reb": 2, "ast": 2, "pf": 5, "to": 3, "stl": 1, "blk": 0, "pts": 6},
+            {"name": "Lawrence Neal", "min": 40, "fg": "3-11", "ft": "6-6", "reb": 6, "ast": 2, "pf": 0, "to": 5, "stl": 1, "blk": 0, "pts": 12},
+            {"name": "Larry Paige", "min": 39, "fg": "9-15", "ft": "0-0", "reb": 8, "ast": 1, "pf": 5, "to": 0, "stl": 1, "blk": 0, "pts": 18},
+            {"name": "Alan Cunningham", "min": 18, "fg": "4-10", "ft": "5-5", "reb": 2, "ast": 1, "pf": 4, "to": 1, "stl": 4, "blk": 2, "pts": 13},
+            {"name": "Barry Young", "min": 38, "fg": "14-21", "ft": "3-5", "reb": 13, "ast": 3, "pf": 3, "to": 6, "stl": 0, "blk": 0, "pts": 31},
+            {"name": "Ron Gold", "min": 12, "fg": "0-4", "ft": "1-2", "reb": 0, "ast": 1, "pf": 5, "to": 1, "stl": 0, "blk": 0, "pts": 1},
+            {"name": "Reggie Talley", "min": "5 1/2", "fg": "0-1", "ft": "0-0", "reb": 0, "ast": 3, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Barry Grier", "min": "1/2", "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Al Baker", "min": "15 1/2", "fg": "0-5", "ft": "1-2", "reb": 5, "ast": 4, "pf": 3, "to": 2, "stl": 0, "blk": 2, "pts": 1},
+            {"name": "David Walker", "min": "1/2", "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": [
+    {"reason": "New Mexico players Shanks, Prolow, Williams; and Colorado State players Manahan, Watley, Combs are marked DNP (did not play) with no stats recorded on the sheet, so they were omitted from the players list."}
+  ]
+}

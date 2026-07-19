@@ -1,0 +1,9 @@
+{
+  "page": 16,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "1978-01-28 Virginia vs N.C. State: N.C. State side checksums perfectly (individual player points sum to 73, matching team final score 73, and matches FG/FT team totals 30-63/13-23 -> 60+13=73). However Virginia side does not checksum: individual player points (Owens 18, Iavaroni 9, Castellan 8, Lamp 18, Hicks 0, Raker 13, Stokes 2, Koesters 9) sum to 77, and this matches Virginia's team FG/FT totals (24-48 FG, 29-42 FT -> 48+29=77), but the sheet's printed team Pts total (81) and the period-by-period scoring line (32+32+17=81) both disagree by 4 points. Since the team final score (81) does not equal the summed player points (77), this game fails the required checksum and is skipped rather than guessed at."
+    }
+  ]
+}

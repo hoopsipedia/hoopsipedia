@@ -1,0 +1,50 @@
+{
+  "page": 4,
+  "games": [
+    {
+      "date": "1980-12-06",
+      "opponent": "William & Mary",
+      "site": "W&M Hall",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 88,
+          "players": [
+            {"name": "Craig Robinson", "min": 32, "fg": "3-6", "ft": "5-5", "reb": 10, "pf": 1, "ast": 3, "to": 4, "blk": 2, "stl": 1, "pts": 11},
+            {"name": "Lee Raker", "min": 26, "fg": "1-4", "ft": "0-1", "reb": 7, "pf": 4, "ast": 0, "to": 3, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Ralph Sampson", "min": 26, "fg": "7-13", "ft": "2-3", "reb": 9, "pf": 3, "ast": 3, "to": 4, "blk": 3, "stl": 0, "pts": 16},
+            {"name": "Jeff Lamp", "min": 36, "fg": "7-10", "ft": "9-9", "reb": 3, "pf": 2, "ast": 0, "to": 0, "blk": 0, "stl": 1, "pts": 23},
+            {"name": "Jeff Jones", "min": 36, "fg": "2-4", "ft": "2-2", "reb": 4, "pf": 2, "ast": 6, "to": 4, "blk": 0, "stl": 1, "pts": 6},
+            {"name": "Terry Gates", "fg": "0-0", "ft": "2-3", "reb": 0, "pf": 5, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Othell Wilson", "min": 17, "fg": "5-5", "ft": "5-5", "reb": 1, "pf": 1, "ast": 0, "to": 2, "blk": 0, "stl": 4, "pts": 15},
+            {"name": "Ricky Stokes", "min": 10, "fg": "1-2", "ft": "4-5", "reb": 1, "pf": 2, "ast": 1, "to": 2, "blk": 0, "stl": 1, "pts": 6},
+            {"name": "Lewis Lattimore", "min": 9, "fg": "2-2", "ft": "3-5", "reb": 1, "pf": 1, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 7},
+            {"name": "Jeff Klein", "min": 8, "fg": "0-2", "ft": "0-0", "reb": 1, "pf": 2, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Louis Collins", "min": 3, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 2, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0}
+          ],
+          "checksum_ok": true
+        },
+        {
+          "name": "William & Mary",
+          "score": 68,
+          "players": [
+            {"name": "Scott Whitley", "fg": "2-8", "ft": "2-3", "reb": 5, "pf": 1, "ast": 2, "to": 4, "blk": 0, "stl": 1, "pts": 6},
+            {"name": "Dale Moats", "min": 12, "fg": "1-4", "ft": "0-0", "reb": 1, "pf": 1, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Ken Bowen", "min": 26, "fg": "5-9", "ft": "2-3", "reb": 5, "pf": 4, "ast": 2, "to": 1, "blk": 0, "stl": 3, "pts": 12},
+            {"name": "Bill Barnes", "min": 33, "fg": "5-12", "ft": "11-14", "reb": 7, "pf": 1, "ast": 1, "to": 1, "blk": 0, "stl": 3, "pts": 21},
+            {"name": "Rich Veres", "min": 19, "fg": "1-3", "ft": "1-2", "reb": 1, "pf": 5, "ast": 1, "to": 3, "blk": 0, "stl": 3, "pts": 3},
+            {"name": "Brant Weidner", "min": 14, "fg": "2-8", "ft": "3-4", "reb": 4, "pf": 4, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pts": 7},
+            {"name": "Guy Courage", "min": 16, "fg": "3-10", "ft": "0-0", "reb": 2, "pf": 3, "ast": 0, "to": 3, "blk": 0, "stl": 1, "pts": 6},
+            {"name": "Tim Wagner", "min": 8, "fg": "0-1", "ft": "0-0", "reb": 2, "pf": 2, "ast": 0, "to": 3, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Gary Bland", "min": 16, "fg": "1-4", "ft": "2-2", "reb": 4, "pf": 3, "ast": 3, "to": 0, "blk": 0, "stl": 0, "pts": 4},
+            {"name": "Tony Traver", "min": 10, "fg": "0-2", "ft": "0-0", "reb": 0, "pf": 3, "ast": 1, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Rick Cooper", "min": 10, "fg": "3-3", "ft": "0-1", "reb": 1, "pf": 2, "ast": 0, "to": 2, "blk": 0, "stl": 0, "pts": 6},
+            {"name": "Herb Harris", "min": 6, "fg": "0-0", "ft": "1-2", "reb": 3, "pf": 0, "ast": 0, "to": 0, "blk": 1, "stl": 1, "pts": 1}
+          ],
+          "checksum_ok": true
+        }
+      ]
+    }
+  ],
+  "skipped": []
+}

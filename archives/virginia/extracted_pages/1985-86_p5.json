@@ -1,0 +1,44 @@
+{
+  "page": 5,
+  "games": [
+    {
+      "date": "1985-12-07",
+      "opponent": "Duke",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 64,
+          "players": [
+            {"name": "Sheehey, Tom", "min": "35", "fg": "6-13", "ft": "1-2", "reb": "7", "ast": "2", "pf": "3", "to": "5", "blk": "0", "pts": "13"},
+            {"name": "Kennedy, Mel", "min": "35", "fg": "8-15", "ft": "4-7", "reb": "7", "ast": "0", "pf": "2", "to": "2", "blk": "0", "pts": "20"},
+            {"name": "Polynice, Olden", "min": "35", "fg": "4-7", "ft": "2-4", "reb": "6", "ast": "0", "pf": "4", "to": "1", "blk": "0", "pts": "10"},
+            {"name": "Calloway, Tom", "min": "26", "fg": "0-4", "ft": "2-2", "reb": "3", "ast": "0", "pf": "3", "to": "2", "blk": "0", "pts": "2"},
+            {"name": "Simms, Darrick", "min": "12", "fg": "0-3", "ft": "0-0", "reb": "2", "ast": "3", "pf": "2", "to": "5", "blk": "0", "pts": "0"},
+            {"name": "Johnson, John", "min": "20", "fg": "3-6", "ft": "4-4", "reb": "3", "ast": "2", "pf": "0", "to": "1", "blk": "0", "pts": "10"},
+            {"name": "Kennedy, Andrew", "min": "25", "fg": "1-4", "ft": "5-7", "reb": "10", "ast": "1", "pf": "2", "to": "0", "blk": "0", "pts": "7"},
+            {"name": "Dyslin, John", "min": "6", "fg": "1-1", "ft": "0-1", "reb": "1", "ast": "0", "pf": "4", "to": "0", "blk": "0", "pts": "2"},
+            {"name": "Plants, Lance", "min": "4", "fg": "0-0", "ft": "0-0", "reb": "0", "ast": "0", "pf": "1", "to": "1", "blk": "0", "pts": "0"},
+            {"name": "Daniel, Jeff", "min": "1", "fg": "0-0", "ft": "0-0", "reb": "0", "ast": "0", "pf": "0", "to": "0", "blk": "0", "pts": "0"},
+            {"name": "Morgan, Richard", "min": "1", "fg": "0-0", "ft": "0-0", "reb": "0", "ast": "0", "pf": "0", "to": "1", "blk": "0", "pts": "0"}
+          ]
+        },
+        {
+          "name": "Duke Blue Devils",
+          "score": 72,
+          "players": [
+            {"name": "Henderson, David", "min": "33", "fg": "7-12", "ft": "6-9", "reb": "10", "ast": "2", "pf": "4", "to": "0", "blk": "0", "pts": "20"},
+            {"name": "Alarie, Mark", "min": "27", "fg": "4-10", "ft": "1-2", "reb": "7", "ast": "0", "pf": "4", "to": "4", "blk": "0", "pts": "9"},
+            {"name": "Ferry, Danny", "min": "22", "fg": "2-5", "ft": "0-1", "reb": "6", "ast": "1", "pf": "3", "to": "2", "blk": "0", "pts": "4"},
+            {"name": "Amaker, Tommy", "min": "36", "fg": "5-12", "ft": "0-0", "reb": "2", "ast": "13", "pf": "3", "to": "2", "blk": "0", "pts": "10"},
+            {"name": "Dawkins, Johnny", "min": "36", "fg": "9-17", "ft": "6-8", "reb": "5", "ast": "2", "pf": "2", "to": "2", "blk": "0", "pts": "24"},
+            {"name": "Bilas, Jay", "min": "21", "fg": "0-2", "ft": "1-2", "reb": "1", "ast": "0", "pf": "3", "to": "0", "blk": "0", "pts": "1"},
+            {"name": "King, Billy", "min": "20", "fg": "0-1", "ft": "2-5", "reb": "5", "ast": "1", "pf": "4", "to": "0", "blk": "0", "pts": "2"},
+            {"name": "Snyder, Quin", "min": "5", "fg": "1-2", "ft": "0-0", "reb": "0", "ast": "1", "pf": "0", "to": "0", "blk": "0", "pts": "2"}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

@@ -1,0 +1,43 @@
+{
+  "page": 23,
+  "games": [
+    {
+      "date": "1976-02-21",
+      "opponent": "Iowa",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 66,
+          "players": [
+            {"name": "Daugherty", "fg": "5-11", "ft": "5-7", "reb": 5, "ast": 5, "pf": 3, "pts": 15},
+            {"name": "Poole", "fg": "1-5", "ft": "0-0", "reb": 2, "ast": 0, "pf": 0, "pts": 2},
+            {"name": "Taylor", "fg": "1-5", "ft": "0-1", "reb": 4, "ast": 0, "pf": 5, "pts": 2},
+            {"name": "Wood", "fg": "4-14", "ft": "0-0", "reb": 4, "ast": 4, "pf": 2, "pts": 8},
+            {"name": "Bolden", "fg": "7-16", "ft": "2-3", "reb": 3, "ast": 2, "pf": 1, "pts": 16},
+            {"name": "Burris", "fg": "3-4", "ft": "0-0", "reb": 4, "ast": 0, "pf": 3, "pts": 6},
+            {"name": "Cline", "fg": "6-13", "ft": "5-6", "reb": 10, "ast": 3, "pf": 1, "pts": 17},
+            {"name": "Bayless", "fg": "0-3", "ft": "0-0", "reb": 0, "ast": 1, "pf": 3, "pts": 0}
+          ]
+        },
+        {
+          "name": "Iowa Hawkeyes",
+          "score": 69,
+          "players": [
+            {"name": "Bruce King", "fg": "6-14", "ft": "6-6", "reb": 14, "ast": 0, "pf": 4, "pts": 18},
+            {"name": "Dan Frost", "fg": "2-9", "ft": "1-2", "reb": 11, "ast": 1, "pf": 4, "pts": 5},
+            {"name": "Fred Haberecht", "fg": "6-13", "ft": "0-0", "reb": 11, "ast": 1, "pf": 2, "pts": 12},
+            {"name": "Scott Thompson", "fg": "6-20", "ft": "1-2", "reb": 6, "ast": 2, "pf": 2, "pts": 13},
+            {"name": "Cal Wulfsberg", "fg": "5-5", "ft": "2-3", "reb": 3, "ast": 7, "pf": 2, "pts": 12},
+            {"name": "Mike Gatens", "fg": "1-1", "ft": "2-2", "reb": 4, "ast": 0, "pf": 1, "pts": 4},
+            {"name": "Dick Peth", "fg": "1-5", "ft": "3-4", "reb": 1, "ast": 1, "pf": 2, "pts": 5},
+            {"name": "Archie Mays", "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "pts": 0},
+            {"name": "William Mayfield", "fg": "0-1", "ft": "0-0", "reb": 1, "ast": 1, "pf": 0, "pts": 0},
+            {"name": "John Hairston", "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

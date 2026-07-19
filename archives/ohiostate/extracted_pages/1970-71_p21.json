@@ -1,0 +1,38 @@
+{
+  "page": 21,
+  "games": [
+    {
+      "date": "1971-02-23",
+      "opponent": "Iowa Hawkeyes",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 80,
+          "players": [
+            {"name": "Minor", "fg": "3-8", "ft": "3-4", "reb": 11, "pf": 2, "pts": 9},
+            {"name": "Wagar", "fg": "4-9", "ft": "1-1", "reb": 1, "pf": 3, "pts": 9},
+            {"name": "Witte", "fg": "9-11", "ft": "4-7", "reb": 19, "pf": 4, "pts": 22},
+            {"name": "Hornyak", "fg": "8-19", "ft": "7-8", "reb": 2, "pf": 4, "pts": 23},
+            {"name": "Merchant", "fg": "2-9", "ft": "2-2", "reb": 3, "pf": 1, "pts": 6},
+            {"name": "Siekmann", "fg": "4-8", "ft": "3-3", "reb": 7, "pts": 11}
+          ]
+        },
+        {
+          "name": "Iowa Hawkeyes",
+          "score": 71,
+          "players": [
+            {"name": "Grabinski", "fg": "0-3", "ft": "1-2", "reb": 0, "pf": 1, "pts": 1},
+            {"name": "Williams", "fg": "0-5", "ft": "1-3", "reb": 2, "pf": 4, "pts": 1},
+            {"name": "Harley", "fg": "1-5", "ft": "1-2", "reb": 7, "pf": 2, "pts": 3},
+            {"name": "Lusk", "fg": "5-13", "ft": "2-2", "reb": 9, "pf": 1, "pts": 12},
+            {"name": "Brown", "fg": "11-26", "ft": "2-2", "reb": 11, "pf": 4, "pts": 24},
+            {"name": "Kunnert", "fg": "12-18", "ft": "4-5", "reb": 1, "pf": 4, "pts": 28},
+            {"name": "Angelino", "fg": "1-2", "ft": "0-0", "reb": 1, "pf": 1, "pts": 2}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

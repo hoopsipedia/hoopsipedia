@@ -1,0 +1,9 @@
+{
+  "page": 35,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page 35 is an official NCAA box score for NCAA Southeast Regional - Second Round Game #1, Ohio State at Georgetown, 3/15/1987 in Atlanta, GA (final: Ohio State 79, Georgetown 82). Ohio State's 9-player line is clearly legible and checksums exactly to 79 (Hopson 20, Francis 18, Anderson J. 10, Wilson 10, Burson 16, Lomax 1, White 4, Wesson 0, Anderson S. 0). However, Georgetown's bench rows (Bryant, Tillmon, Highsmith, Winston, Allen, Edwards, Jackson, Jefferson - 8 of 12 players, combining for only 18 of the team's 82 points per the printed team totals) are cramped handwritten entries that could not be read with confidence to individually distinguish FG/FGA/FT/FTA/rebound/PF values row-to-row (rows appear visually similar and risk transposition). Only Georgetown's top 4 scorers (McDonald 16, Williams 24, Gillery 2, Smith 22 = 64 pts, each internally checksum-consistent via 2*FG+3FG_made+FT=TP) could be transcribed with high confidence, which is insufficient to reach the team's 82-point final score without guessing the remaining 8 players' stat lines. Skipping the full game rather than inventing bench-player values, per instructions."
+    }
+  ]
+}

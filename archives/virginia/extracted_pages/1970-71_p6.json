@@ -1,0 +1,9 @@
+{
+  "page": 6,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "1970-71 12/12 Virginia vs West Virginia (at Morgantown, W.Va.), final Virginia 94, West Virginia 91 (1OT). West Virginia player Pts column sums correctly to 91 (13+17+23+1+22+9+6=91), matching the team total. However Virginia's player Pts column sums to only 92 (22+10+16+14+30+0+0+0), 2 short of the recorded team total of 94. The discrepancy traces to Jim Hobgood, recorded as 1-1 on field goals (1 made) but 0 Pts, which is internally inconsistent (1 made FG should be worth 2 points, and 92+2=94 would reconcile exactly with the team total, FG made total of 31, and FT made total of 32). Re-read the page once to confirm the printed digit; it is genuinely printed as 0 Pts for Hobgood despite the 1-1 FG line, an apparent error/inconsistency on the original scoresheet. Rather than guess/correct the source figure, skipping the whole game per checksum-failure policy instead of fabricating a fix."
+    }
+  ]
+}

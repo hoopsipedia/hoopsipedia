@@ -1,0 +1,41 @@
+{
+  "page": 14,
+  "games": [
+    {
+      "date": "1934-02-10",
+      "opponent": "Marquette",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 28,
+          "players": [
+            {"name": "Whitlinger", "ft": "0-0", "pf": 1, "pts": 2},
+            {"name": "Wilson", "ft": "1-2", "pf": 1, "pts": 7},
+            {"name": "Colburn", "ft": "4-5", "pf": 0, "pts": 8},
+            {"name": "Laybourne", "ft": "0-0", "pf": 0, "pts": 0},
+            {"name": "Rosequist", "ft": "1-2", "pf": 4, "pts": 5},
+            {"name": "Conrad", "ft": "0-0", "pf": 3, "pts": 2},
+            {"name": "Busich", "ft": "0-0", "pf": 0, "pts": 0},
+            {"name": "Beitner", "ft": "0-0", "pf": 4, "pts": 4},
+            {"name": "Fisher", "ft": "0-0", "pf": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Marquette",
+          "score": 39,
+          "players": [
+            {"name": "Gorychka", "ft": "5-7", "pf": 0, "pts": 5},
+            {"name": "Rasmusen", "ft": "1-1", "pf": 0, "pts": 1},
+            {"name": "Morstadt", "ft": "2-2", "pf": 1, "pts": 10},
+            {"name": "Kukla", "ft": "2-4", "pf": 2, "pts": 8},
+            {"name": "Rubado", "ft": "1-1", "pf": 3, "pts": 15},
+            {"name": "Black", "ft": "0-0", "pf": 0, "pts": 0},
+            {"name": "Mullen", "ft": "0-1", "pf": 2, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

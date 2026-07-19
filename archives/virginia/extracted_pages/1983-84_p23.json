@@ -1,0 +1,43 @@
+{
+  "page": 23,
+  "games": [
+    {
+      "date": "1984-02-18",
+      "opponent": "Houston",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 65,
+          "players": [
+            {"name": "Jim Miller", "min": 30, "fg": "6-17", "ft": "4-4", "reb": 9, "pf": 3, "ast": 1, "to": 2, "stl": 3, "pts": 16},
+            {"name": "Rick Carlisle", "min": 23, "fg": "4-9", "ft": "2-3", "reb": 4, "pf": 4, "ast": 3, "to": 1, "pts": 10},
+            {"name": "Kenton Edelin", "min": 29, "fg": "1-1", "ft": "1-2", "reb": 10, "pf": 4, "ast": 1, "pts": 3},
+            {"name": "Othell Wilson", "min": 36, "fg": "6-13", "ft": "1-4", "reb": 5, "pf": 3, "ast": 6, "to": 6, "stl": 2, "pts": 13},
+            {"name": "Ricky Stokes", "min": 17, "fg": "0-2", "ft": "1-2", "reb": 0, "pf": 2, "to": 1, "stl": 2, "pts": 1},
+            {"name": "Tom Sheehey", "min": 18, "fg": "2-9", "ft": "1-2", "reb": 2, "pf": 1, "ast": 1, "to": 1, "stl": 1, "pts": 5},
+            {"name": "Olden Polynice", "min": 28, "fg": "3-7", "ft": "5-8", "reb": 5, "pf": 2, "ast": 1, "to": 2, "pts": 11},
+            {"name": "Tim Mullen", "min": 16, "fg": "3-6", "ft": "0-0", "reb": 2, "pf": 4, "pts": 6},
+            {"name": "Dan Merrifield", "min": 3, "fg": "0-1", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Houston Cougars",
+          "score": 74,
+          "players": [
+            {"name": "Rickie Winslow", "min": 31, "fg": "5-6", "ft": "0-4", "reb": 8, "pf": 4, "ast": 1, "to": 3, "stl": 1, "pts": 10},
+            {"name": "Michael Young", "min": 37, "fg": "11-17", "ft": "0-1", "reb": 5, "pf": 3, "ast": 3, "to": 1, "pts": 22},
+            {"name": "Akeem Olajuwon", "min": 35, "fg": "4-9", "ft": "4-10", "reb": 14, "pf": 3, "ast": 1, "blk": 4, "stl": 1, "pts": 12},
+            {"name": "Alvin Franklin", "min": 39, "fg": "5-9", "ft": "3-5", "reb": 1, "pf": 0, "ast": 5, "to": 2, "stl": 4, "pts": 13},
+            {"name": "Reid Gettys", "min": 34, "fg": "2-3", "ft": "0-0", "reb": 0, "pf": 5, "ast": 11, "to": 4, "blk": 1, "stl": 1, "pts": 4},
+            {"name": "Derek Giles", "min": 3, "fg": "1-1", "ft": "2-4", "reb": 1, "pf": 0, "pts": 4},
+            {"name": "Eric Dickens", "min": 1, "fg": "1-1", "ft": "1-2", "reb": 0, "pf": 1, "pts": 3},
+            {"name": "Benny Anders", "min": 5, "fg": "0-2", "ft": "2-2", "reb": 2, "pf": 1, "ast": 1, "to": 1, "stl": 1, "pts": 2},
+            {"name": "Greg Anderson", "min": 15, "fg": "2-4", "ft": "0-0", "reb": 6, "pf": 1, "ast": 1, "to": 1, "pts": 4}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

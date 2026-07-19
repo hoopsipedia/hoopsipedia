@@ -1,0 +1,9 @@
+{
+  "page": 20,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "1965-02-20 Ohio State @ Michigan (final 61-100): Ohio State's box score transcribes cleanly and checksums perfectly (player PTS sum = 61 = team score; FGA/FG/FTA/FT/PF/Reb column totals all match exactly). Michigan's box score fails checksum: the literal PTS column sums to 93, not 100. Using PTS=2*FG+FT (which held exactly for every other team/row on this page) instead gives 99, still 1 short of 100. The Tregoning row is the main culprit (FG=7, FT=3 imply PTS=17, but the printed PTS cell reads as 9 — an 8-point gap consistent with a misread '17' vs '9') and there is a second, smaller 1-point ambiguity between the Thompson and Clawson rows (each has FTA=1 and PTS printed as 3, but FT printed as 0, which is internally inconsistent for one of them; correcting either alone still doesn't reconcile all totals simultaneously). Re-read the page once (max allowed) and could not resolve these with confidence, so the whole game is skipped per the ruthless-skip-over-guess instruction rather than transcribing Michigan's player lines with fabricated/uncertain digits."
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "page": 10,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page is a shot-chart/box-score scoresheet for a game dated approximately 12/30/66, with a legible left-side box score for 'CSU' (Colorado State) whose player points checksum to the team total of 49, but the right-side opponent table (presumably New Mexico's own line, given this is the New Mexico archive) is heavily faded/illegible: several player names and most FG/FT/REB/PF cells are unreadable or blank (Nelson, Dupree, Shrapshire, Grimes, and multiple unnamed jersey numbers 25/31/35/41/43/Fisher/Lund have partial or missing data), and the one fully legible row (Daniels: FG 12-28, FT 4-8) computes to 28 points but the sheet's written total for him reads 29, a 1-point discrepancy that could not be resolved by a second look. Opponent team name is also not clearly printed on this page. Because a full, checksummed box score cannot be produced for both teams with confidence, and per instructions re-reading is capped at one additional pass (reserved for cases with higher confidence of resolution), this game is skipped rather than guessed."
+    }
+  ]
+}

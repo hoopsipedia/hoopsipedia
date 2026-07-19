@@ -1,0 +1,47 @@
+{
+  "page": 14,
+  "games": [
+    {
+      "date": "1993-01-14",
+      "opponent": "Oregon",
+      "ucla_score": 99,
+      "opp_score": 87,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 99,
+          "players": [
+            {"name": "Mitchell Butler", "min": 29, "fg": "6-11", "tp": "0-1", "ft": "3-6", "reb": 4, "ast": 0, "pf": 3, "to": 2, "stl": 0, "blk": 1, "pts": 15},
+            {"name": "Ed O'Bannon", "min": 32, "fg": "9-12", "tp": "1-2", "ft": "2-4", "reb": 6, "ast": 3, "pf": 2, "to": 3, "stl": 0, "blk": 1, "pts": 21},
+            {"name": "Richard Petruska", "min": 25, "fg": "6-12", "tp": "0-1", "ft": "0-0", "reb": 12, "ast": 2, "pf": 2, "to": 4, "stl": 3, "blk": 3, "pts": 12},
+            {"name": "Tyus Edney", "min": 33, "fg": "5-11", "tp": "1-2", "ft": "4-4", "reb": 2, "ast": 5, "pf": 2, "to": 3, "stl": 1, "blk": 0, "pts": 15},
+            {"name": "Shon Tarver", "min": 33, "fg": "10-16", "tp": "1-3", "ft": "2-2", "reb": 4, "ast": 3, "pf": 2, "to": 1, "stl": 2, "blk": 1, "pts": 23},
+            {"name": "Jiri Zidek", "min": 14, "fg": "3-3", "tp": "0-0", "ft": "0-0", "reb": 5, "ast": 0, "pf": 4, "to": 0, "stl": 0, "blk": 0, "pts": 6},
+            {"name": "Kevin Dempsey", "min": 16, "fg": "0-4", "tp": "0-2", "ft": "1-2", "reb": 3, "ast": 2, "pf": 2, "to": 1, "stl": 0, "blk": 1, "pts": 1},
+            {"name": "Marcus Burns", "min": 7, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 1, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Rodney Zimmerman", "min": 9, "fg": "2-3", "tp": "0-0", "ft": "2-3", "reb": 3, "ast": 0, "pf": 2, "to": 0, "stl": 1, "blk": 0, "pts": 6},
+            {"name": "David Boyle", "min": 2, "fg": "0-0", "tp": "0-0", "ft": "0-2", "reb": 0, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Oregon Ducks",
+          "score": 87,
+          "players": [
+            {"name": "Antoine Stoudamire", "min": 33, "fg": "9-16", "tp": "2-5", "ft": "8-11", "reb": 5, "ast": 4, "pf": 3, "to": 1, "stl": 3, "blk": 1, "pts": 28},
+            {"name": "Jeff Potter", "min": 29, "fg": "7-13", "tp": "0-0", "ft": "3-3", "reb": 10, "ast": 0, "pf": 3, "to": 3, "stl": 0, "blk": 0, "pts": 17},
+            {"name": "Aaron Johnson", "min": 24, "fg": "3-9", "tp": "0-0", "ft": "0-4", "reb": 7, "ast": 1, "pf": 3, "to": 4, "stl": 1, "blk": 0, "pts": 6},
+            {"name": "Johnnie Reece", "min": 13, "fg": "1-4", "tp": "0-0", "ft": "0-0", "reb": 2, "ast": 2, "pf": 2, "to": 1, "stl": 1, "blk": 0, "pts": 2},
+            {"name": "Jon Mitchell", "min": 23, "fg": "4-7", "tp": "2-3", "ft": "1-2", "reb": 3, "ast": 2, "pf": 3, "to": 1, "stl": 0, "blk": 0, "pts": 11},
+            {"name": "Clyde Jordan", "min": 11, "fg": "1-4", "tp": "0-1", "ft": "0-2", "reb": 3, "ast": 1, "pf": 1, "to": 1, "stl": 0, "blk": 1, "pts": 2},
+            {"name": "Andre Collier", "min": 27, "fg": "2-7", "tp": "0-2", "ft": "0-0", "reb": 0, "ast": 13, "pf": 4, "to": 5, "stl": 1, "blk": 0, "pts": 4},
+            {"name": "Orlando Williams", "min": 13, "fg": "4-6", "tp": "2-4", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "to": 2, "stl": 0, "blk": 0, "pts": 10},
+            {"name": "Bob Fife", "min": 15, "fg": "1-3", "tp": "0-0", "ft": "1-3", "reb": 4, "ast": 1, "pf": 0, "to": 0, "stl": 1, "blk": 0, "pts": 3},
+            {"name": "Damon Runyon", "min": 12, "fg": "2-2", "tp": "0-0", "ft": "0-2", "reb": 1, "ast": 0, "pf": 2, "to": 0, "stl": 1, "blk": 0, "pts": 4}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

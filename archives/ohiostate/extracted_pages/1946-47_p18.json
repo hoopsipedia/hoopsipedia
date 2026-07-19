@@ -1,0 +1,9 @@
+{
+  "page": 18,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page 18 contains newspaper clippings for the 1946-47 Ohio State vs Northwestern game (Feb 28, 1947, at Chicago Stadium, final score Ohio State 62, Northwestern 42, coach Dye, captain Huston). A box score table with 'G. F. P.' columns for both teams is present and legible enough to attempt transcription, and per-row values are internally consistent (P = 2*G + F for every player, matching pre-3pt scoring). However, the sum of individual player points does not reconcile with the final score for either team: Ohio State player points sum to approximately 51 vs. the reported final score of 62, and Northwestern player points sum to approximately 32 vs. the reported final score of 42 -- both off by roughly 10-11 points. The printed team 'Totals' row is also partially obscured/illegible (leading digit of Ohio State's FG total unreadable) and does not match either the individual-row sum or the boxscore-implied total using 2*FG+FT. This indicates one or more digits in the scanned table were misread or the scan quality is insufficient to confidently distinguish some numerals. Rather than guess at ambiguous digits, this game is skipped per checksum-failure policy."
+    }
+  ]
+}

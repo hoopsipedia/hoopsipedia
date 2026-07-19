@@ -1,0 +1,9 @@
+{
+  "page": 6,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page is a player-info form with a pasted newspaper clipping ('Hoosiers Take Bucks, 62-39', Indiana vs Ohio State) containing a box score table (fg/ft/pf columns per team). Scan quality/font size make several digits ambiguous; computed player-line point sums (pts=2*fg+ft) do not reconcile with the reported final score (Ohio State sum ~48 vs reported 39; Indiana sum ~59 vs reported 62), so checksum fails. Skipping rather than guessing at illegible/uncertain digits."
+    }
+  ]
+}

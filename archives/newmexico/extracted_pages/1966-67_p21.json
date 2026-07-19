@@ -1,0 +1,40 @@
+{
+  "page": 21,
+  "games": [
+    {
+      "date": "1967-02-17",
+      "opponent": "Arizona",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 64,
+          "players": [
+            {"name": "Monroe", "fg": "7-12", "ft": "2-2", "reb": 4, "pf": 4, "pts": 16},
+            {"name": "Morgan", "fg": "2-7", "ft": "0-0", "reb": 6, "pf": 4, "pts": 4},
+            {"name": "Daniels", "fg": "12-22", "ft": "2-2", "reb": 14, "pf": 2, "pts": 26},
+            {"name": "Nelson", "fg": "3-9", "ft": "2-4", "reb": 2, "pf": 5, "pts": 8},
+            {"name": "Hoover", "fg": "4-14", "ft": "0-1", "reb": 5, "pf": 2, "pts": 8},
+            {"name": "Burwitz", "fg": "1-1", "ft": "0-0", "reb": 0, "pf": 2, "pts": 2},
+            {"name": "Shropsmire", "fg": "0-2", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Grimes", "fg": "0-0", "ft": "0-1", "reb": 1, "pf": 5, "pts": 0}
+          ]
+        },
+        {
+          "name": "Arizona Wildcats",
+          "score": 70,
+          "players": [
+            {"name": "Abold", "fg": "0-1", "ft": "0-0", "reb": 1, "pf": 2, "pts": 0},
+            {"name": "Davis", "fg": "8-12", "ft": "2-2", "reb": 8, "pf": 1, "pts": 18},
+            {"name": "Kordik", "fg": "6-9", "ft": "2-2", "reb": 9, "pf": 3, "pts": 14},
+            {"name": "Greene", "fg": "5-10", "ft": "5-6", "reb": 3, "pf": 4, "pts": 15},
+            {"name": "Hansen", "fg": "0-7", "ft": "0-0", "reb": 4, "pf": 2, "pts": 0},
+            {"name": "Root", "fg": "2-6", "ft": "3-5", "reb": 7, "pf": 3, "pts": 7},
+            {"name": "Welton", "fg": "6-10", "ft": "4-8", "reb": 2, "pf": 3, "pts": 16}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

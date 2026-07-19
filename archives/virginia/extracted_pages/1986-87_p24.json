@@ -1,0 +1,45 @@
+{
+  "page": 24,
+  "games": [
+    {
+      "date": "1987-02-16",
+      "opponent": "Dayton Flyers",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 74,
+          "players": [
+            {"name": "Andrew Kennedy", "min": 27, "fg": "8-15", "ft": "11-14", "reb": 9, "ast": 0, "pf": 3, "to": 2, "stl": 1, "pts": 27},
+            {"name": "Mel Kennedy", "min": 27, "fg": "3-11", "ft": "1-1", "reb": 3, "ast": 3, "pf": 5, "to": 2, "blk": 0, "pts": 7, "notes": "name read as 'Nel' on sheet, transcribed as Mel Kennedy (known UVA twin); fouled out (5 PF circled)"},
+            {"name": "Tom Sheehy", "min": 37, "fg": "4-8", "ft": "2-2", "reb": 6, "ast": 2, "pf": 3, "to": 1, "stl": 1, "pts": 10},
+            {"name": "Richard Morgan", "min": 16, "fg": "3-7", "ft": "0-0", "reb": 0, "ast": 2, "pf": 4, "to": 0, "blk": 1, "stl": 2, "pts": 6},
+            {"name": "John Johnson", "min": 34, "fg": "3-6", "ft": "4-8", "reb": 3, "ast": 4, "pf": 2, "to": 4, "stl": 1, "pts": 10},
+            {"name": "Bill Batts", "min": 23, "fg": "1-2", "ft": "1-3", "reb": 7, "ast": 0, "pf": 1, "to": 0, "pts": 3},
+            {"name": "Darrick Sims", "min": 25, "fg": "1-3", "ft": "5-6", "reb": 6, "ast": 0, "pf": 2, "to": 2, "blk": 1, "stl": 1, "pts": 7},
+            {"name": "Lance Blanes", "min": 6, "fg": "1-1", "ast": 1, "stl": 1, "pts": 2},
+            {"name": "Mark Cooke", "min": 4, "fg": "1-1", "pts": 2},
+            {"name": "Tim Martin", "min": 1, "fg": "0-0", "pts": 0}
+          ],
+          "checksum_ok": true
+        },
+        {
+          "name": "Dayton Flyers",
+          "score": 67,
+          "players": [
+            {"name": "Anthony Grant", "min": 37, "fg": "3-10", "tp": "0-2", "ft": "3-4", "reb": 7, "ast": 6, "pf": 4, "to": 3, "stl": 1, "pts": 9},
+            {"name": "Anthony Corbitt", "min": 27, "fg": "6-10", "ft": "0-0", "reb": 6, "ast": 0, "pf": 4, "to": 1, "blk": 0, "pts": 12},
+            {"name": "Bill Uhl", "min": 16, "fg": "1-5", "ft": "0-0", "reb": 3, "ast": 0, "pf": 2, "to": 0, "blk": 0, "pts": 2},
+            {"name": "Noland Robinson", "min": 37, "fg": "5-13", "ft": "6-7", "reb": 6, "ast": 6, "pf": 4, "to": 0, "blk": 2, "pts": 16},
+            {"name": "Dan Christie", "min": 37, "fg": "5-12", "tp": "3-6", "ft": "0-0", "reb": 3, "ast": 3, "pf": 5, "to": 4, "blk": 2, "pts": 13, "notes": "fouled out (5 PF circled)"},
+            {"name": "Steve Pittman", "min": 16, "fg": "2-4", "ft": "0-0", "reb": 2, "pf": 4, "to": 1, "pts": 4},
+            {"name": "Steve Smith", "min": 5, "fg": "0-1", "tp": "0-1", "ft": "0-0", "reb": 0, "pf": 1, "to": 3, "stl": 0, "pts": 0},
+            {"name": "Troy McCracken", "min": 24, "fg": "2-4", "ft": "7-9", "reb": 8, "pf": 1, "to": 2, "blk": 2, "stl": 1, "pts": 11},
+            {"name": "Eric Mathews", "min": 1, "fg": "0-0", "pts": 0}
+          ],
+          "checksum_ok": true
+        }
+      ]
+    }
+  ],
+  "skipped": []
+}

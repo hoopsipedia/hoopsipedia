@@ -1,0 +1,9 @@
+{
+  "page": 16,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Official Western Conference box score, Ohio State (visitor) at Purdue (home), Jan. 30, 1950. Columns read as FG(made), FGA, FT(made), FTM(missed), PF, PTS. Ohio State side checks out cleanly: player PTS sum = 5+4+0+25+15+0+4+6 = 59, matching both the printed team TOTALS row (59) and the header 'Score: 59', and each player's PTS also equals 2*FG+FT individually. Purdue side fails checksum: the printed header 'Score: 62' and the table's TOTALS PTS cell also read 62, but the sum of the seven Purdue players' PTS column (5+10+2+20+9+2+4) is only 52 -- a 10-point discrepancy. All other Purdue TOTALS columns (FG=21, FGA=74, FT=10, FTM=16, PF=16) check out exactly against the column sums, and every individual player's PTS is internally consistent with 2*FG+FT, so the anomaly is isolated to the final score/PTS-total field, not a misread of the player rows. Re-read the page a second time and got an identical result, so this looks like a genuine 1950-era scorer arithmetic error (or a stat missing from a player line) rather than a transcription error on my part. Skipping the whole game rather than guessing which number is correct, per instructions."
+    }
+  ]
+}

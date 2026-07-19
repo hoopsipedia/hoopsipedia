@@ -1,0 +1,50 @@
+{
+  "page": 23,
+  "games": [
+    {
+      "date": "1995-02-26",
+      "opponent": "Duke Blue Devils",
+      "ucla_score": 100,
+      "opp_score": 77,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 100,
+          "players": [
+            {"name": "Ed O'Bannon", "min": 35, "fg": "14-22", "tp": "4-7", "ft": "5-6", "reb": 13, "ast": 3, "to": 0, "blk": 0, "stl": 1, "pf": 2, "pts": 37},
+            {"name": "Charles O'Bannon", "min": 33, "fg": "5-9", "tp": "0-0", "ft": "3-4", "reb": 11, "ast": 4, "to": 0, "blk": 3, "stl": 2, "pf": 3, "pts": 13},
+            {"name": "George Zidek", "min": 22, "fg": "6-10", "tp": "0-1", "ft": "1-1", "reb": 8, "ast": 0, "to": 3, "blk": 0, "stl": 0, "pf": 3, "pts": 13},
+            {"name": "Toby Bailey", "min": 22, "fg": "3-8", "tp": "0-1", "ft": "0-0", "reb": 5, "ast": 1, "to": 2, "blk": 1, "stl": 0, "pf": 3, "pts": 6},
+            {"name": "Tyus Edney", "min": 35, "fg": "6-10", "tp": "0-0", "ft": "4-4", "reb": 3, "ast": 9, "to": 4, "blk": 0, "stl": 2, "pf": 1, "pts": 16},
+            {"name": "Cameron Dollar", "min": 22, "fg": "1-3", "tp": "0-1", "ft": "1-1", "reb": 0, "ast": 3, "to": 2, "blk": 0, "stl": 1, "pf": 2, "pts": 3},
+            {"name": "J.R. Henderson", "min": 23, "fg": "3-7", "tp": "0-0", "ft": "0-2", "reb": 6, "ast": 2, "to": 1, "blk": 0, "stl": 0, "pf": 4, "pts": 6},
+            {"name": "Ike Nwankwo", "min": 3, "fg": "2-3", "tp": "0-0", "ft": "0-1", "reb": 1, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pf": 0, "pts": 4},
+            {"name": "Bob Myers", "min": 2, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pf": 0, "pts": 0},
+            {"name": "Kevin Dempsey", "min": 2, "fg": "0-1", "tp": "0-1", "ft": "0-1", "reb": 1, "ast": 1, "to": 1, "blk": 0, "stl": 1, "pf": 1, "pts": 0},
+            {"name": "omm'A Givens", "min": 2, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "to": 2, "blk": 0, "stl": 0, "pf": 1, "pts": 0},
+            {"name": "Kris Johnson", "min": 2, "fg": "1-1", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pf": 0, "pts": 2}
+          ]
+        },
+        {
+          "name": "Duke Blue Devils",
+          "score": 77,
+          "players": [
+            {"name": "Ricky Price", "min": 30, "fg": "3-5", "tp": "0-0", "ft": "4-7", "reb": 3, "ast": 2, "to": 1, "blk": 0, "stl": 2, "pf": 0, "pts": 10},
+            {"name": "Cherokee Parks", "min": 34, "fg": "8-16", "tp": "1-3", "ft": "4-7", "reb": 7, "ast": 1, "to": 2, "blk": 1, "stl": 0, "pf": 3, "pts": 21},
+            {"name": "Erik Meek", "min": 25, "fg": "6-11", "tp": "0-0", "ft": "0-1", "reb": 8, "ast": 0, "to": 1, "blk": 0, "stl": 1, "pf": 5, "pts": 12},
+            {"name": "Jeff Capel", "min": 29, "fg": "4-11", "tp": "2-6", "ft": "0-1", "reb": 0, "ast": 4, "to": 1, "blk": 0, "stl": 0, "pf": 0, "pts": 10},
+            {"name": "Trajan Langdon", "min": 32, "fg": "4-16", "tp": "2-8", "ft": "0-0", "reb": 3, "ast": 3, "to": 1, "blk": 2, "stl": 0, "pf": 4, "pts": 10},
+            {"name": "Chris Collins", "min": 13, "fg": "0-4", "tp": "0-2", "ft": "0-0", "reb": 0, "ast": 2, "to": 0, "blk": 0, "stl": 0, "pf": 0, "pts": 0},
+            {"name": "Greg Newton", "min": 18, "fg": "5-6", "tp": "0-0", "ft": "2-3", "reb": 9, "ast": 0, "to": 2, "blk": 1, "stl": 1, "pf": 3, "pts": 12},
+            {"name": "Kenny Blakeney", "min": 7, "fg": "0-1", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 4, "to": 0, "blk": 0, "stl": 0, "pf": 0, "pts": 0},
+            {"name": "Steve Woiciechowski", "min": 6, "fg": "0-3", "tp": "0-2", "ft": "1-2", "reb": 1, "ast": 1, "to": 2, "blk": 0, "stl": 1, "pf": 1, "pts": 1},
+            {"name": "Carmen Wallace", "min": 4, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pf": 0, "pts": 0},
+            {"name": "Tony Moore", "min": 2, "fg": "0-0", "tp": "0-0", "ft": "1-2", "reb": 1, "ast": 1, "to": 0, "blk": 0, "stl": 0, "pf": 0, "pts": 1}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

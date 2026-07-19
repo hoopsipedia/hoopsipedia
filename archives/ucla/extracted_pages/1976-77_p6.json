@@ -1,0 +1,50 @@
+{
+  "page": 6,
+  "games": [
+    {
+      "date": "1976-12-18",
+      "opponent": "Tulsa",
+      "ucla_score": 110,
+      "opp_score": 85,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 110,
+          "players": [
+            {"name": "Greenwood", "min": 34, "fg": "13-23", "ft": "5-8", "reb": 23, "pf": 3, "ast": 3, "pts": 31},
+            {"name": "Townsend", "min": 32, "fg": "5-12", "ft": "0-1", "reb": 5, "pf": 1, "ast": 6, "pts": 10},
+            {"name": "Vroman", "min": 13, "fg": "2-5", "ft": "0-0", "reb": 1, "pf": 4, "ast": 1, "pts": 4},
+            {"name": "Holland", "min": 27, "fg": "6-13", "ft": "4-4", "reb": 3, "pf": 2, "ast": 3, "pts": 16},
+            {"name": "Hamilton", "min": 30, "fg": "6-12", "ft": "7-8", "reb": 2, "pf": 3, "ast": 7, "pts": 19},
+            {"name": "Olinde", "min": 20, "fg": "3-7", "ft": "1-1", "reb": 5, "pf": 2, "ast": 0, "pts": 7},
+            {"name": "Sims", "min": 16, "fg": "2-3", "ft": "0-0", "reb": 2, "pf": 0, "ast": 1, "pts": 4},
+            {"name": "Spillane", "min": 8, "fg": "1-2", "ft": "2-2", "reb": 0, "pf": 1, "ast": 0, "pts": 4},
+            {"name": "Lippert", "min": 4, "fg": "1-2", "ft": "1-2", "reb": 1, "pf": 1, "ast": 0, "pts": 3},
+            {"name": "Vandeweghe", "min": 10, "fg": "1-3", "ft": "2-3", "reb": 4, "pf": 0, "ast": 1, "pts": 4},
+            {"name": "Thomas", "min": 3, "fg": "2-2", "ft": "4-4", "reb": 0, "pf": 0, "ast": 0, "pts": 8},
+            {"name": "Allums", "min": 3, "fg": "0-0", "ft": "0-0", "reb": 1, "pf": 0, "ast": 1, "pts": 0}
+          ]
+        },
+        {
+          "name": "Tulsa",
+          "score": 85,
+          "players": [
+            {"name": "M. Dowell", "min": 19, "fg": "2-6", "ft": "2-2", "reb": 3, "pf": 5, "ast": 1, "pts": 6},
+            {"name": "O'Leary", "min": 28, "fg": "5-12", "ft": "1-2", "reb": 7, "pf": 3, "ast": 1, "pts": 11},
+            {"name": "Adams", "min": 25, "fg": "5-9", "ft": "0-0", "reb": 4, "pf": 4, "ast": 1, "pts": 10},
+            {"name": "Gibson", "min": 23, "fg": "1-5", "ft": "0-0", "reb": 0, "pf": 4, "ast": 6, "pts": 2},
+            {"name": "Winder", "min": 34, "fg": "13-22", "ft": "2-5", "reb": 7, "pf": 3, "ast": 2, "pts": 28},
+            {"name": "Hamilton", "min": 21, "fg": "3-4", "ft": "0-0", "reb": 3, "pf": 0, "ast": 0, "pts": 6},
+            {"name": "Dobbins", "min": 17, "fg": "3-5", "ft": "3-3", "reb": 3, "pf": 3, "ast": 5, "pts": 9},
+            {"name": "Lange", "min": 15, "fg": "1-4", "ft": "2-2", "reb": 4, "pf": 2, "ast": 1, "pts": 4},
+            {"name": "Meier", "min": 12, "fg": "1-2", "ft": "0-1", "reb": 0, "pf": 2, "ast": 0, "pts": 2},
+            {"name": "Sims", "min": 3, "fg": "0-1", "ft": "0-0", "reb": 0, "pf": 1, "ast": 0, "pts": 0},
+            {"name": "Lacey", "min": 3, "fg": "3-5", "ft": "1-1", "reb": 0, "pf": 1, "ast": 0, "pts": 7}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

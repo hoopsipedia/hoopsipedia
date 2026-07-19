@@ -1,0 +1,49 @@
+{
+  "page": 4,
+  "games": [
+    {
+      "date": "1984-12-08",
+      "opponent": "Memphis State",
+      "ucla_score": 70,
+      "opp_score": 86,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 70,
+          "players": [
+            {"name": "Gary Maloncon", "min": 29, "fg": "5-13", "ft": "0-0", "reb": 6, "ast": 0, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 10},
+            {"name": "Reggie Miller", "min": 20, "fg": "0-4", "ft": "2-2", "reb": 1, "ast": 1, "pf": 1, "to": 3, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Brad Wright", "min": 27, "fg": "2-9", "ft": "3-3", "reb": 4, "ast": 0, "pf": 4, "to": 2, "stl": 1, "blk": 0, "pts": 7},
+            {"name": "Nigel Miguel", "min": 28, "fg": "2-6", "ft": "4-4", "reb": 7, "ast": 5, "pf": 2, "to": 2, "stl": 0, "blk": 0, "pts": 8},
+            {"name": "Corey Gaines", "min": 25, "fg": "4-9", "ft": "1-2", "reb": 1, "ast": 9, "pf": 3, "to": 5, "stl": 3, "blk": 0, "pts": 9},
+            {"name": "Montel Hatcher", "min": 20, "fg": "4-8", "ft": "4-6", "reb": 1, "ast": 1, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 12},
+            {"name": "Craig Jackson", "min": 28, "fg": "5-8", "ft": "3-4", "reb": 3, "ast": 2, "pf": 3, "to": 1, "stl": 2, "blk": 0, "pts": 13},
+            {"name": "Kelvin Butler", "min": 4, "fg": "0-0", "ft": "4-4", "reb": 1, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Jack Haley", "min": 13, "fg": "0-0", "ft": "1-2", "reb": 1, "ast": 0, "pf": 2, "to": 1, "stl": 0, "blk": 0, "pts": 1},
+            {"name": "Jerald Jones", "min": 5, "fg": "1-3", "ft": "2-2", "reb": 1, "ast": 1, "pf": 3, "to": 0, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Darryl Morris", "min": 1, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 1, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Memphis State Tigers",
+          "score": 86,
+          "players": [
+            {"name": "Keith Lee", "min": 31, "fg": "10-13", "ft": "4-6", "reb": 15, "ast": 3, "pf": 4, "to": 3, "stl": 0, "blk": 1, "pts": 24},
+            {"name": "Baskerville Holmes", "min": 30, "fg": "3-7", "ft": "1-2", "reb": 3, "ast": 0, "pf": 1, "to": 0, "stl": 2, "blk": 0, "pts": 7},
+            {"name": "William Bedford", "min": 30, "fg": "5-12", "ft": "2-4", "reb": 9, "ast": 2, "pf": 3, "to": 3, "stl": 0, "blk": 3, "pts": 12},
+            {"name": "Andre Turner", "min": 30, "fg": "4-8", "ft": "1-1", "reb": 1, "ast": 9, "pf": 3, "to": 2, "stl": 2, "blk": 0, "pts": 9},
+            {"name": "Vincent Askew", "min": 27, "fg": "5-7", "ft": "2-2", "reb": 4, "ast": 3, "pf": 2, "to": 3, "stl": 0, "blk": 0, "pts": 12},
+            {"name": "John Wilfong", "min": 6, "fg": "0-2", "ft": "2-2", "reb": 1, "ast": 1, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Dwight Boyd", "min": 13, "fg": "1-4", "ft": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Willie Becton", "min": 5, "fg": "2-2", "ft": "0-0", "reb": 0, "ast": 1, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Ricky McCoy", "min": 13, "fg": "2-2", "ft": "2-2", "reb": 0, "ast": 1, "pf": 1, "to": 1, "stl": 1, "blk": 0, "pts": 6},
+            {"name": "Dewayne Bailey", "min": 12, "fg": "1-3", "ft": "4-6", "reb": 1, "ast": 0, "pf": 3, "to": 0, "stl": 0, "blk": 0, "pts": 6},
+            {"name": "David Jensen", "min": 3, "fg": "1-2", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 2}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

@@ -1,0 +1,9 @@
+{
+  "page": 24,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page is an official NCAA box score (Michigan @ Ohio State, Feb 5 1987, St. John Arena, final Michigan 87 - Ohio State 95) but the handwritten player-level FG/FGA/FT/FTA/rebound/PF/TP/A/TO/BLK/S/MIN entries are heavily overwritten with strikeouts, corrections, and overlapping annotations, making individual player stat lines too illegible to transcribe confidently without risking invented values. Only the team TOTALS rows and final score-by-periods line are clearly legible (Michigan totals: FG 38-69, FT 6-8, TP 87, A17 TO20 BLK0 S5; Ohio State totals: FG 33-63, FT 29-37, TP 95, A19 TO14 BLK1 S12), which is insufficient to build required per-player rosters, so the game was skipped rather than guessed."
+    }
+  ]
+}

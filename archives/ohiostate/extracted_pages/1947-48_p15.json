@@ -1,0 +1,9 @@
+{
+  "page": 15,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page is a newspaper clipping (Chicago-area paper, Feb 9 1947-48: Ohio State 45, Northwestern 47 at Evanston) with a box score table for both teams (columns G/F/PF/TP), but the scanned text is too degraded/low-resolution to reliably read individual player field-goal, free-throw, and point values. Player names are legible (Ohio State: Denham, Winter, Schnittker, Jacobs, Raidiger, Johnsen, Hite, Burkholder, Hudson; Northwestern: Sticklen, Barr, Maddock, Washington, Stremilo, Toureg) but numeric columns are ambiguous/conflicting between the article text and the box table, and team totals could not be confirmed to sum to the reported final score (45-47) with confidence. Skipped per ruthless-skip / no-guessing policy rather than risk inventing values."
+    }
+  ]
+}

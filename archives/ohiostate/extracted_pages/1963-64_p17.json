@@ -1,0 +1,38 @@
+{
+  "page": 17,
+  "games": [
+    {
+      "date": "1964-02-03",
+      "opponent": "Michigan",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 86,
+          "players": [
+            {"name": "DeVoe", "fg": "5-9", "ft": "1-2", "reb": 7, "pf": 5, "pts": 11},
+            {"name": "Shaffer", "fg": "3-4", "ft": "1-1", "reb": 4, "pf": 4, "pts": 7},
+            {"name": "Bradds", "fg": "16-29", "ft": "10-12", "reb": 7, "pf": 3, "pts": 42},
+            {"name": "Ricketts", "fg": "5-9", "ft": "2-2", "reb": 6, "pf": 2, "pts": 12},
+            {"name": "Bowman", "fg": "3-10", "ft": "4-6", "reb": 7, "pf": 3, "pts": 10},
+            {"name": "Dove", "fg": "2-5", "ft": "0-0", "reb": 0, "pf": 0, "pts": 4},
+            {"name": "Peters", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Michigan Wolverines",
+          "score": 85,
+          "players": [
+            {"name": "Tregoning", "fg": "3-8", "ft": "3-3", "reb": 6, "pf": 3, "pts": 9},
+            {"name": "Darden", "fg": "3-10", "ft": "6-7", "reb": 10, "pf": 3, "pts": 12},
+            {"name": "Buntin", "fg": "10-16", "ft": "6-8", "reb": 9, "pf": 2, "pts": 26},
+            {"name": "Russell", "fg": "11-23", "ft": "8-10", "reb": 11, "pf": 4, "pts": 30},
+            {"name": "Cantrell", "fg": "4-9", "ft": "0-0", "reb": 1, "pf": 3, "pts": 8},
+            {"name": "Pomey", "fg": "0-2", "ft": "0-0", "reb": 0, "pf": 3, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

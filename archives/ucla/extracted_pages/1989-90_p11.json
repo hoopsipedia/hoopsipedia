@@ -1,0 +1,9 @@
+{
+  "page": 11,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "01/07/90 UCLA at Louisville (Freedom Hall), final score UCLA 80, Louisville 97: page contains a full official NCAA box score for both teams, but several densely-packed numeric columns (esp. rebounds OFF/DEF/TOT, PF, and TP for multiple players, e.g. MACLEAN Don's row yields an internally inconsistent PF=13 and TOT rebounds not equal to OFF+DEF) could not be transcribed with enough confidence to pass the points-checksum for either team. Rather than guess digits, skipping the whole game per instructions."
+    }
+  ]
+}

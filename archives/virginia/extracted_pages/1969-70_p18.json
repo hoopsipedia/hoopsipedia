@@ -1,0 +1,9 @@
+{
+  "page": 18,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "2/7/1970 vs N.C. State at Charlottesville (Virginia 66, N.C. State 71). N.C. State player-point sum checks out (25+8+3+16+4+2+13=71, matches team total 71), but Virginia player-point sum is 64 (26+13+12+11+2+0+0), which does not match Virginia's final score of 66. The discrepancy traces to Frank DeWitt's line, which lists FT as made-attempted 2-2 (implying 2 points) but a printed Pts value of 0 -- an internal inconsistency in the source sheet's typed stat printout. Re-read the page once to confirm the same reading both times; could not resolve confidently without inventing a value, so the whole game is skipped per instructions rather than guessing DeWitt's points."
+    }
+  ]
+}

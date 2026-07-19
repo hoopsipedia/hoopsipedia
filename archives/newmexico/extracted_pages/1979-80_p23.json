@@ -1,0 +1,40 @@
+{
+  "page": 23,
+  "games": [
+    {
+      "date": "",
+      "opponent": "Colorado State",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 80,
+          "players": [
+            {"name": "Kenny Page", "min": "45", "fg": "14-30", "ft": "10-14", "reb": 4, "pf": 1, "pts": 38, "ast": 7, "to": 5, "blk": 0, "stl": 1},
+            {"name": "Jim Williams", "min": "45", "fg": "4-6", "ft": "7-9", "reb": 13, "pf": 4, "pts": 15, "ast": 1, "to": 2, "blk": 1, "stl": 0},
+            {"name": "Jerome Henderson", "min": "45", "fg": "8-14", "ft": "3-6", "reb": 9, "pf": 3, "pts": 19, "ast": 0, "to": 3, "blk": 0, "stl": 1},
+            {"name": "Lex Zervas", "min": "31", "fg": "1-1", "ft": "0-0", "reb": 3, "pf": 1, "pts": 2, "ast": 1, "to": 2, "blk": 0, "stl": 2},
+            {"name": "David Duggin", "min": "45", "fg": "3-7", "ft": "0-0", "reb": 1, "pf": 5, "pts": 6, "ast": 6, "to": 4, "blk": 0, "stl": 1},
+            {"name": "Anthony Guame", "min": "12", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 1, "pts": 0, "ast": 1, "to": 0, "blk": 0, "stl": 0}
+          ]
+        },
+        {
+          "name": "Colorado State Rams",
+          "score": 79,
+          "players": [
+            {"name": "R.J. Lego", "min": "41", "fg": "4-10", "ft": "0-0", "reb": 0, "pf": 4, "pts": 8, "ast": 1, "to": 2, "blk": 0, "stl": 0},
+            {"name": "Barry Young", "min": "26", "fg": "5-12", "ft": "0-2", "reb": 7, "pf": 4, "pts": 10, "ast": 0, "to": 3, "blk": 0, "stl": 0},
+            {"name": "Williamson", "min": "13", "fg": "1-1", "ft": "0-0", "reb": 1, "pf": 3, "pts": 2, "ast": 0, "to": 1, "blk": 0, "stl": 0},
+            {"name": "John Ellis", "min": "35", "fg": "8-14", "ft": "4-10", "reb": 5, "pf": 3, "pts": 20, "ast": 7, "to": 1, "blk": 0, "stl": 4},
+            {"name": "Eddie Hughes", "min": "45", "fg": "11-20", "ft": "2-2", "reb": 2, "pf": 0, "pts": 24, "ast": 6, "to": 4, "blk": 0, "stl": 2},
+            {"name": "Reggie Talley", "min": "14", "fg": "1-2", "ft": "1-1", "reb": 4, "pf": 2, "pts": 3, "ast": 2, "to": 2, "blk": 0, "stl": 0},
+            {"name": "Rudy Watley", "min": "29", "fg": "3-3", "ft": "0-1", "reb": 6, "pf": 5, "pts": 6, "ast": 4, "to": 0, "blk": 0, "stl": 1},
+            {"name": "Solomon Williams", "min": "19", "fg": "3-5", "ft": "0-0", "reb": 3, "pf": 3, "pts": 6, "ast": 3, "to": 2, "blk": 0, "stl": 1}
+          ]
+        }
+      ],
+      "checksum_ok": true,
+      "notes": "Final score 80-79, New Mexico won in overtime (score by periods: CSU 35-36-8=79, New Mexico 34-37-9=80). No date visible on this scoresheet page (only officials, attendance 15,274, and box score grid are shown). Minutes (min) column is handwritten and slightly ambiguous in a few spots (e.g. Williamson's, Zervas's) but was legible enough to transcribe with reasonable confidence; not part of the checksum."
+    }
+  ],
+  "skipped": []
+}

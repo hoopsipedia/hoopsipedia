@@ -1,0 +1,9 @@
+{
+  "page": 11,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page contains a newspaper clipping box score for Ohio State (26) vs Michigan (29), Jan. 24 1938 at Coliseum, Columbus. The Michigan side of the table is legible and its player-point column self-checksums to 29 (Townsend 12, Thomas 4, Rae 6, Smith 0, Fischer 0, Pink 2, Beebe 5), but the Ohio State side of the table is cut off/too small to read reliably on the scan — only one numeric column per player is faintly legible (Baker 4, Lynch 0, Hull 4, Barker 0, Schick 1, Boughner 5, McDonald 0, Goletz 0, Stafford 0) and it does not sum to either the printed Ohio State totals row or the final score of 26, so it cannot be trusted as points. Skipping the whole game rather than guessing Ohio State's per-player point values, since both teams' lines are required."
+    }
+  ]
+}

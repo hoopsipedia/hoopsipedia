@@ -1,0 +1,44 @@
+{
+  "page": 14,
+  "games": [
+    {
+      "date": "unknown",
+      "opponent": "Clemson Tigers",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 64,
+          "players": [
+            {"name": "Walker", "min": 35, "fg": "4-14", "ft": "2-2", "reb": 9, "pf": 3, "ast": 1, "to": 0, "pts": 10},
+            {"name": "Bonner", "min": 34, "fg": "2-6", "ft": "8-8", "reb": 5, "pf": 1, "ast": 2, "to": 8, "pts": 12},
+            {"name": "Lanaroni", "min": 37, "fg": "5-8", "ft": "4-6", "reb": 13, "pf": 2, "ast": 1, "to": 2, "pts": 14},
+            {"name": "Bonini", "min": 24, "fg": "4-9", "ft": "0-2", "reb": 0, "pf": 3, "ast": 1, "to": 2, "pts": 8},
+            {"name": "Langdon", "min": 29, "fg": "6-13", "ft": "0-0", "reb": 6, "pf": 4, "ast": 2, "to": 3, "pts": 12},
+            {"name": "Koesters", "min": 23, "fg": "1-4", "ft": "4-4", "reb": 0, "pf": 4, "ast": 0, "to": 5, "pts": 6},
+            {"name": "Carr", "min": 9, "fg": "1-1", "ft": "0-0", "reb": 0, "pf": 0, "ast": 1, "to": 1, "pts": 2},
+            {"name": "Briscoe", "min": 5, "fg": "0-2", "ft": "0-0", "reb": 0, "pf": 2, "ast": 1, "to": 1, "pts": 0},
+            {"name": "Newlen", "min": 4, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Clemson Tigers",
+          "score": 74,
+          "players": [
+            {"name": "Croft", "min": 24, "fg": "4-5", "ft": "1-1", "reb": 3, "pf": 5, "ast": 2, "to": 3, "pts": 9},
+            {"name": "Rome", "min": 33, "fg": "4-7", "ft": "2-2", "reb": 2, "pf": 4, "ast": 0, "to": 1, "pts": 10},
+            {"name": "Collins", "min": 38, "fg": "11-18", "ft": "4-8", "reb": 11, "pf": 1, "ast": 1, "to": 2, "pts": 26},
+            {"name": "Bethea", "min": 29, "fg": "3-8", "ft": "9-11", "reb": 4, "pf": 2, "ast": 4, "to": 6, "pts": 13},
+            {"name": "Franken", "min": 13, "fg": "2-3", "ft": "0-0", "reb": 0, "pf": 3, "ast": 2, "to": 0, "pts": 4},
+            {"name": "Wise", "min": 20, "fg": "3-7", "ft": "4-4", "reb": 2, "pf": 3, "ast": 1, "to": 5, "pts": 10},
+            {"name": "Brown", "min": 9, "fg": "0-1", "ft": "0-0", "reb": 1, "pf": 1, "ast": 1, "to": 0, "pts": 0},
+            {"name": "Harman", "min": 18, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 2, "ast": 1, "to": 1, "pts": 0},
+            {"name": "Abraham", "min": 12, "fg": "0-2", "ft": "0-0", "reb": 0, "pf": 1, "ast": 1, "to": 0, "pts": 0},
+            {"name": "Gregg", "min": 4, "fg": "1-1", "ft": "0-0", "reb": 0, "pf": 1, "ast": 0, "to": 0, "pts": 2}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

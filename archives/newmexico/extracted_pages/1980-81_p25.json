@@ -1,0 +1,43 @@
+{
+  "page": 25,
+  "games": [
+    {
+      "date": "1981-03-05",
+      "opponent": "Hawaii",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 80,
+          "players": [
+            {"name": "Page, Kenny", "fg": "14-20", "ft": "5-7", "pts": 33},
+            {"name": "Williams, Wallace", "fg": "4-9", "ft": "2-2", "pts": 10},
+            {"name": "Smith, Phil", "fg": "2-4", "ft": "2-2", "pts": 6},
+            {"name": "Pigbir, David", "fg": "3-8", "ft": "2-4", "pts": 8},
+            {"name": "Torrance, Larry", "fg": "2-3", "ft": "1-1", "pts": 5},
+            {"name": "Reibert, Jeff", "fg": "3-3", "ft": "1-1", "pts": 7},
+            {"name": "Wolfe, Ron", "fg": "0-0", "ft": "0-0", "pts": 0},
+            {"name": "Zlensky, Alan", "fg": "3-5", "ft": "5-5", "pts": 11}
+          ]
+        },
+        {
+          "name": "Hawaii",
+          "score": 85,
+          "players": [
+            {"name": "Fayhorn, Aaron", "fg": "7-14", "ft": "3-6", "pts": 17},
+            {"name": "Jones, Rodney", "fg": "4-9", "ft": "2-2", "pts": 10},
+            {"name": "Bisler, Ricky", "fg": "0-2", "ft": "0-0", "pts": 0},
+            {"name": "Jones, Larry", "fg": "3-4", "ft": "0-1", "pts": 6},
+            {"name": "Dickerson, Clarence", "fg": "3-8", "ft": "2-2", "pts": 8},
+            {"name": "Webster, Tony", "fg": "11-20", "ft": "6-8", "pts": 28},
+            {"name": "Zoolow, Antoine", "fg": "4-7", "ft": "4-5", "pts": 12},
+            {"name": "Foehle, Tom", "fg": "1-2", "ft": "2-2", "pts": 4},
+            {"name": "Blier, Jack", "fg": "0-2", "ft": "0-0", "pts": 0},
+            {"name": "Infad, Brad", "fg": "0-0", "ft": "0-0", "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

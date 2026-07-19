@@ -1,0 +1,9 @@
+{
+  "page": 15,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "1982-01-14 New Mexico Lobos at San Diego State Aztecs (San Diego Sports Arena). New Mexico's player-points sum checks out exactly against the team final score (9+10+2+8+2+6+6+4+10+5 = 62 = final 62, confirmed via score-by-periods 30+32=62). However San Diego State's player-points sum (15+6+0+16+16+14+2+4+0+3 = 76) does not match SDSU's final score of 78 (score-by-periods 38+40=78), a 2-point shortfall. Every individual player line is internally consistent (TP = 2*FGmade + FTmade for each player), so the error is likely a single misread digit in one player's FG/TP (e.g. Gordon, Eddy's FG could be 7 or 8 depending on handwriting) rather than a transcription-wide legibility problem, but I could not resolve which value is wrong without guessing. Per checksum policy, skipping the whole game rather than inventing a fix. Team totals row for SDSU (22 FG / 61 FGA / 12 FT / 26 FTA / 78 TP) is also internally inconsistent (2*22+12=56, not 78), reinforcing that some digits in that box were misread or the scoresheet's own totals row has an error, not just my transcription."
+    }
+  ]
+}

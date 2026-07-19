@@ -1,0 +1,9 @@
+{
+  "page": 5,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Official Western Conference box score, Ohio State (visiting, 76) at Louisville (home, 85), December 19, 1953. Ohio State's side transcribed with confidence (FG/FGA and PTS columns clear; player PTS sum 0+24+16+21+7+2+6+0=76 matches team score, checksum OK). However Louisville's side of the sheet is heavily blurred/redacted in several rows (Gastevich, Cox, Harrah, Moreman), and a best-effort read of Louisville player PTS sums to ~90, which does not match the printed team score of 85 -- checksum fails. Also a secondary numeric column on both tables (adjacent to the 'FT' made column, team totals 15 for OSU / 7 for Louisville) could not be reliably identified as free-throw attempts: applying it as FTA produces impossible made>attempted results for several OSU players (Miller 14 made vs 4 in that column; Freeman 3 made vs 0; Cook 3 made vs 2), so it was not reported as 'ft' to avoid inventing/misattributing values. Given the failed checksum on Louisville and the ambiguous secondary column, skipping the whole game rather than reporting a partial or uncertain box score."
+    }
+  ]
+}

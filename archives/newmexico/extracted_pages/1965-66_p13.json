@@ -1,0 +1,39 @@
+{
+  "page": 13,
+  "games": [
+    {
+      "date": "1966-01-15",
+      "opponent": "Utah",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 55,
+          "players": [
+            {"name": "Hoover", "fg": "1-4", "ft": "0-0", "reb": 1, "pf": 1, "pts": 2},
+            {"name": "Morgan", "fg": "5-13", "ft": "2-3", "reb": 5, "pf": 4, "pts": 12},
+            {"name": "Howard", "fg": "2-9", "ft": "0-0", "reb": 5, "pf": 0, "pts": 4},
+            {"name": "Monroe", "fg": "5-12", "ft": "4-5", "reb": 5, "pf": 1, "pts": 14},
+            {"name": "Daniels", "fg": "4-11", "ft": "4-4", "reb": 7, "pf": 0, "pts": 12},
+            {"name": "Patterson", "fg": "4-8", "ft": "3-5", "reb": 3, "pf": 1, "pts": 11}
+          ]
+        },
+        {
+          "name": "Utah",
+          "score": 57,
+          "players": [
+            {"name": "Tate", "fg": "2-6", "ft": "1-1", "reb": 2, "pf": 2, "pts": 5},
+            {"name": "Jackson", "fg": "6-7", "ft": "0-0", "reb": 1, "pf": 2, "pts": 12},
+            {"name": "Mackay", "fg": "2-3", "ft": "0-0", "reb": 3, "pf": 3, "pts": 4},
+            {"name": "Fisher", "fg": "3-5", "ft": "1-3", "reb": 7, "pf": 3, "pts": 7},
+            {"name": "Chambers", "fg": "5-11", "ft": "4-5", "reb": 3, "pf": 1, "pts": 14},
+            {"name": "Ockel", "fg": "3-5", "ft": "1-1", "reb": 3, "pf": 3, "pts": 7},
+            {"name": "Lake", "fg": "3-10", "ft": "0-0", "reb": 6, "pf": 0, "pts": 6},
+            {"name": "Cunningham", "fg": "1-3", "ft": "0-0", "reb": 3, "pf": 2, "pts": 2}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

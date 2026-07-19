@@ -1,0 +1,9 @@
+{
+  "page": 10,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page 10 is a handwritten official scoresheet for 12/27/85, New Mexico (home) vs Kent State (visitors), but the scan is faint/messy handwriting with ambiguous column boundaries (REB split into two sub-columns, and MIN/A/TO/STL/BLK columns run together without clear separators). Kent State's team TP total (40) matches the final score (40) and appears internally consistent, but the home team's TOTALS row appears to read as TP=57 while the final score box reads 52 (5-point mismatch), and the home team's own name is not legibly printed on the roster header. Given the checksum failure on the home side and low confidence in per-player column assignment for both teams, skipping the entire game rather than risk invented/misattributed stats."
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "page": 16,
+  "games": [
+    {
+      "date": "1974-02-02",
+      "opponent": "Northwestern",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 61,
+          "players": [
+            {"name": "Wenner", "fg": "7-13", "ft": "0-1", "reb": 16, "ast": 4, "pf": 3, "pts": 14},
+            {"name": "Andreas", "fg": "10-19", "ft": "3-8", "reb": 7, "ast": 2, "pf": 3, "pts": 23},
+            {"name": "Wolfe", "fg": "3-4", "ft": "0-0", "reb": 2, "ast": 1, "pf": 4, "pts": 6},
+            {"name": "Bolden", "fg": "3-7", "ft": "2-2", "reb": 2, "ast": 1, "pf": 4, "pts": 8},
+            {"name": "Gerhard", "fg": "1-6", "ft": "2-2", "reb": 2, "ast": 2, "pf": 1, "pts": 4},
+            {"name": "Stiegemeier", "fg": "0-2", "ft": "0-0", "reb": 1, "ast": 0, "pf": 0, "pts": 0},
+            {"name": "Allison", "fg": "1-3", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "pts": 2},
+            {"name": "Repella", "fg": "0-4", "ft": "0-0", "reb": 3, "ast": 1, "pf": 0, "pts": 0},
+            {"name": "Jackson", "fg": "2-7", "ft": "0-1", "reb": 2, "ast": 0, "pf": 0, "pts": 4}
+          ]
+        },
+        {
+          "name": "Northwestern",
+          "score": 68,
+          "players": [
+            {"name": "Otis", "fg": "3-6", "ft": "2-2", "reb": 6, "ast": 0, "pf": 1, "pts": 8},
+            {"name": "Cartwright", "fg": "0-2", "ft": "0-0", "reb": 0, "ast": 0, "pf": 2, "pts": 0},
+            {"name": "Ashbaugh", "fg": "8-13", "ft": "0-0", "reb": 5, "ast": 1, "pf": 4, "pts": 16},
+            {"name": "McKinney", "fg": "5-10", "ft": "4-4", "reb": 3, "ast": 1, "pf": 0, "pts": 14},
+            {"name": "Teasley", "fg": "2-8", "ft": "0-0", "reb": 2, "ast": 1, "pf": 1, "pts": 4},
+            {"name": "Williams", "fg": "6-14", "ft": "10-10", "reb": 10, "ast": 3, "pf": 4, "pts": 22},
+            {"name": "Kachan", "fg": "1-3", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "pts": 2},
+            {"name": "Dean", "fg": "1-3", "ft": "0-0", "reb": 2, "ast": 1, "pf": 2, "pts": 2}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

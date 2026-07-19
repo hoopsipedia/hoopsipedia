@@ -1,0 +1,44 @@
+{
+  "page": 12,
+  "games": [
+    {
+      "date": "1957-01-14",
+      "opponent": "Minnesota",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 85,
+          "players": [
+            {"name": "Sidle", "fg": "10-21", "ft": "1-1", "reb": 7, "pf": 4, "pts": 21},
+            {"name": "Howard", "fg": "13-23", "ft": "5-7", "reb": 18, "pf": 2, "pts": 31},
+            {"name": "Huston", "fg": "4-9", "ft": "3-4", "reb": 7, "pf": 1, "pts": 11},
+            {"name": "Millard", "fg": "5-10", "ft": "3-3", "reb": 1, "pf": 0, "pts": 13},
+            {"name": "Laughlin", "fg": "4-13", "ft": "0-1", "reb": 3, "pf": 0, "pts": 8},
+            {"name": "Barkstall", "fg": "0-0", "ft": "1-1", "reb": 0, "pf": 0, "pts": 1},
+            {"name": "Martin", "fg": "0-0", "ft": "0-1", "reb": 1, "pf": 0, "pts": 0},
+            {"name": "Mosier", "fg": "0-0", "ft": "0-0", "reb": 1, "pf": 0, "pts": 0},
+            {"name": "Steagall", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Snyder", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Minnesota",
+          "score": 73,
+          "players": [
+            {"name": "Tucker", "fg": "8-19", "ft": "0-0", "reb": 11, "pf": 4, "pts": 16},
+            {"name": "Dommeyer", "fg": "7-17", "ft": "4-5", "reb": 10, "pf": 2, "pts": 18},
+            {"name": "Jeppesen", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Hanson", "fg": "3-9", "ft": "0-0", "reb": 5, "pf": 2, "pts": 6},
+            {"name": "Lindsley", "fg": "12-19", "ft": "0-1", "reb": 5, "pf": 1, "pts": 24},
+            {"name": "Kline", "fg": "2-7", "ft": "3-4", "reb": 6, "pf": 2, "pts": 7},
+            {"name": "Anderstrom", "fg": "0-1", "ft": "0-0", "reb": 0, "pf": 2, "pts": 0},
+            {"name": "Fix", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Johnson", "fg": "1-3", "ft": "0-0", "reb": 2, "pf": 0, "pts": 2}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

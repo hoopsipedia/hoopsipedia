@@ -1,0 +1,9 @@
+{
+  "page": 3,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Game identifiable from clear header fields (SPORT Basketball, YEAR 1940-41, DATE 12/21/40, OPPONENT Michigan State, PLACE East Lansing, COACH Olsen, CAPTAIN Mickelson, MANAGER Bolton, SCORE Ohio 38 - Opp. 46), but the inset player-by-player box score table is a very small, low-resolution scanned clipping with faint/smudged print. Column headers and individual FG/FT/PF/Pts figures cannot be read with confidence -- repeated attempts to parse the rows produced inconsistent totals (Michigan State's team total appeared alternately as 44, 46, and 48 across re-readings of the same cells), so no reconstruction reliably checksums to the known final score of 46. Per instructions, skipping rather than guessing at player lines."
+    }
+  ]
+}

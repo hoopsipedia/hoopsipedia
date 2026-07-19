@@ -1,0 +1,56 @@
+{
+  "page": 27,
+  "games": [
+    {
+      "date": "1974-01-09",
+      "date_confidence": "low - only fragment '...9, 1974' legible in header; month inferred, not confirmed",
+      "opponent": "Idaho State Bengals",
+      "location": "Pocatello, Idaho (Idaho State home)",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 73,
+          "players": [
+            {"name": "Dana Hays", "min": "36", "fg": "3-12", "ft": "0-0", "reb": 2, "pf": 2, "pts": 6},
+            {"name": "Kendall Taylor", "min": "16", "fg": "1-9", "ft": "0-2", "reb": 4, "pf": 4, "pts": 2},
+            {"name": "Bernard Hardin", "min": "34", "fg": "8-22", "ft": "3-3", "reb": 6, "pf": 2, "pts": 19},
+            {"name": "Pat King", "min": "26", "fg": "2-5", "ft": "0-1", "reb": 1, "pf": 1, "pts": 4},
+            {"name": "Mike Koller", "min": "0", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Dan Davis", "fg": "1-1", "ft": "0-0", "reb": 0, "pf": 0, "pts": 2},
+            {"name": "Bob Tappert", "min": "4", "fg": "0-1", "ft": "0-0", "reb": 0, "pf": 2, "pts": 0},
+            {"name": "Dance Battle", "name_confidence": "low - handwritten first name unclear, could be 'Vance'", "min": "14", "fg": "2-6", "ft": "0-0", "reb": 3, "pf": 0, "pts": 4},
+            {"name": "Mark Saiers", "min": "34", "fg": "8-15", "ft": "2-2", "reb": 14, "pf": 3, "pts": 18},
+            {"name": "Rick Pokorski", "min": "6", "fg": "1-1", "ft": "0-0", "reb": 4, "pts": 2},
+            {"name": "Mike Patterson", "min": "1", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Bill Hagins", "min": "31", "fg": "6-8", "ft": "2-2", "reb": 10, "pf": 3, "pts": 14, "note": "printed pts digit illegible/looked like 19 but team checksum requires 14, which matches computed 2*6+2=14; used computed value"},
+            {"name": "Paul Kruse", "min": "3", "fg": "1-1", "ft": "0-0", "reb": 3, "pf": 1, "pts": 2}
+          ]
+        },
+        {
+          "name": "Idaho State Bengals",
+          "score": 65,
+          "players": [
+            {"name": "Kevin Hoyt", "min": "39", "fg": "7-18", "ft": "0-0", "reb": 5, "pf": 0, "pts": 14},
+            {"name": "Mark Adams", "min": "0", "note": "DNP", "pts": 0},
+            {"name": "Matt Strannigan", "min": "22", "fg": "1-5", "ft": "2-2", "reb": 0, "pf": 3, "pts": 4},
+            {"name": "Dennis Green", "min": "14", "fg": "0-1", "ft": "1-2", "reb": 1, "pf": 0, "pts": 1},
+            {"name": "Leroy Gibbons", "name_confidence": "low - handwritten, could be 'Gibhons'", "min": "28", "fg": "3-7", "ft": "0-0", "reb": 10, "pf": 4, "pts": 6},
+            {"name": "Frank Krahn", "min": "4", "fg": "0-1", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Jim Anderson", "min": "32", "fg": "6-14", "ft": "1-1", "reb": 9, "pf": 2, "pts": 13},
+            {"name": "George Rodriguez", "min": "20", "fg": "0-3", "ft": "2-2", "pf": 4, "pts": 2},
+            {"name": "Dan Spindler", "min": "25", "fg": "6-9", "ft": "2-3", "reb": 5, "pf": 1, "pts": 14},
+            {"name": "Brian Beals", "min": "0", "note": "DNP", "pts": 0},
+            {"name": "Dan Knichel", "min": "7", "fg": "0-2", "ft": "0-0", "reb": 1, "pf": 0, "pts": 0},
+            {"name": "Steve Hayes", "min": "18", "fg": "3-5", "ft": "3-4", "reb": 1, "pf": 2, "pts": 9},
+            {"name": "Paul Boos", "min": "9", "fg": "1-3", "ft": "0-0", "reb": 2, "pf": 0, "pts": 2},
+            {"name": "Dave Allen", "min": "0", "note": "DNP", "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true,
+      "checksum_detail": "NM: player pts sum 73 == team score 73 (FG made sum 33, FT made sum 7: 33*2+7=73). ISU: player pts sum 65 == team score 65 (FG made sum 27, FT made sum 11: 27*2+11=65)."
+    }
+  ],
+  "skipped": [],
+  "notes": "Assist, Turnover/Errors, Blocked Shots, and Steals columns exist on the sheet but individual handwritten digits in those narrow columns were not legible enough to transcribe confidently across all 27 players, so they were omitted entirely rather than guessed (per instructions to be ruthless about skipping vs. guessing). Bill Hagins' printed points total appeared to read '19' but this broke the New Mexico team checksum (73); using the computed value 2*6+2=14 (from his 6-8 FG, 2-2 FT line) restores an exact match, so 14 was used with a note. Game date is only partially legible in the header ('...9, 1974 ... Pocatello, Idaho'); day '9' and year '1974' are legible but the month is not confidently readable, so 1974-01-09 is a low-confidence placeholder flagged via a date_confidence field - should be verified against the official 1973-74 schedule before use. A few minutes-played and rebound cells for Idaho State bench players (Strannigan, Green, Rodriguez, Knichel, Hayes, Boos) were faint/small and are best-effort reads."
+}

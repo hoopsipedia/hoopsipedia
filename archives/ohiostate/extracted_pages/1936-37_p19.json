@@ -1,0 +1,43 @@
+{
+  "page": 19,
+  "games": [
+    {
+      "date": "1937-02-22",
+      "opponent": "Northwestern",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 29,
+          "players": [
+            {"name": "Hull", "fg": 3, "ft": 3, "pts": 9},
+            {"name": "Baker", "fg": 1, "ft": 2, "pts": 4},
+            {"name": "McDonald", "fg": 1, "ft": 0, "pts": 2},
+            {"name": "Prewitt", "fg": 0, "ft": 0, "pts": 0},
+            {"name": "Thomas", "fg": 1, "ft": 2, "pts": 4},
+            {"name": "Raudebaugh", "fg": 0, "ft": 1, "pts": 1},
+            {"name": "Boughner", "fg": 1, "ft": 0, "pts": 2},
+            {"name": "Dye", "fg": 3, "ft": 1, "pts": 7}
+          ]
+        },
+        {
+          "name": "Northwestern",
+          "score": 44,
+          "players": [
+            {"name": "McMichael", "fg": 3, "ft": 4, "pts": 10},
+            {"name": "Blume", "fg": 0, "ft": 0, "pts": 0},
+            {"name": "Smith", "fg": 8, "ft": 5, "pts": 21},
+            {"name": "Worland", "fg": 0, "ft": 0, "pts": 0},
+            {"name": "Nagode", "fg": 1, "ft": 5, "pts": 7},
+            {"name": "Vance", "fg": 0, "ft": 0, "pts": 0},
+            {"name": "Currie", "fg": 3, "ft": 0, "pts": 6},
+            {"name": "Mercer", "fg": 0, "ft": 0, "pts": 0},
+            {"name": "Voigts", "fg": 0, "ft": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": [],
+  "notes": "Newspaper clipping 'Vicious Cats' box score, game footer confirms Feb 22 1937 at Evanston vs Northwestern (Ohio State coach Olsen). Sheet has FG-made and FT-made columns plus a printed 'T.' (points) column but no attempts, minutes, rebounds, assists, steals, blocks, or turnovers, so those keys are omitted; fg/ft values given as made-count only (attempts not on sheet). Northwestern's printed player totals, FG sum (15), FT sum (14), and points sum (44) all self-consistently match the printed Totals row and the game score line (Ohio 29, Opp 44). Ohio State's printed FG sum (10) and FT sum (9) match the Totals row, but the printed individual point total for Boughner (3) is inconsistent with his own FG/FT (1 made FG + 0 made FT = 2 pts) and using the printed 3 would make Ohio State's summed player points 30, one more than the official final score of 29 shown at the top of the page and in the Totals row. Treated this as an original-document misprint and used the FG/FT-derived value (2) for Boughner so the team checksum reconciles exactly to 29; this is the one deliberate deviation from a literal printed digit on the page."
+}

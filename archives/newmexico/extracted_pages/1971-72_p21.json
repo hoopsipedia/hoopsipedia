@@ -1,0 +1,39 @@
+{
+  "page": 21,
+  "games": [
+    {
+      "date": "1972-02-12",
+      "opponent": "Colorado State",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 77,
+          "players": [
+            {"name": "Harold Little", "min": "44", "fg": "6-17", "ft": "0-0", "reb": 7, "ast": 7, "pf": 3, "pts": 12},
+            {"name": "Darryl Minniefield", "min": "40", "fg": "6-9", "ft": "1-4", "reb": 11, "ast": 1, "pf": 4, "pts": 13},
+            {"name": "Mike Faulkner", "min": "45", "fg": "9-16", "ft": "7-11", "reb": 12, "ast": 0, "pf": 4, "pts": 25},
+            {"name": "Gabe Nava", "min": "45", "fg": "4-13", "ft": "4-5", "reb": 5, "ast": 5, "pf": 1, "pts": 12},
+            {"name": "Tom Roberts", "min": "45", "fg": "5-9", "ft": "3-4", "reb": 2, "ast": 4, "pf": 3, "pts": 13},
+            {"name": "Mike Stewart", "min": "5", "fg": "1-1", "ft": "0-0", "reb": 1, "ast": 0, "pf": 1, "pts": 2},
+            {"name": "Mark Saiers", "min": "1", "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 1, "pf": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Colorado State",
+          "score": 75,
+          "players": [
+            {"name": "Mark Nordin", "min": "36", "fg": "4-7", "ft": "0-0", "reb": 2, "ast": 2, "pf": 5, "pts": 8},
+            {"name": "Travis Lackey", "min": "41", "fg": "6-9", "ft": "2-2", "reb": 14, "ast": 1, "pf": 5, "pts": 14},
+            {"name": "George Price", "min": "45", "fg": "9-22", "ft": "4-4", "reb": 6, "ast": 4, "pf": 0, "pts": 22},
+            {"name": "Gary Rhoades", "min": "45", "fg": "4-9", "ft": "4-5", "reb": 6, "ast": 5, "pf": 2, "pts": 12},
+            {"name": "Paul Ball", "min": "37", "fg": "5-11", "ft": "4-5", "reb": 1, "ast": 0, "pf": 4, "pts": 14},
+            {"name": "Rudy Corey", "min": "21", "fg": "1-6", "ft": "0-0", "reb": 1, "ast": 3, "pf": 2, "pts": 2},
+            {"name": "Brent Baum", "min": "10", "fg": "0-0", "ft": "3-4", "reb": 1, "ast": 0, "pf": 1, "pts": 3}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

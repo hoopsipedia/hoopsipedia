@@ -1,0 +1,9 @@
+{
+  "page": 5,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "1988-89 UCLA at North Carolina, 12-17-88, Smith Center, Chapel Hill NC (final UCLA 78, North Carolina 104, per period scores 36+42 and 55+49). North Carolina's box score is fully legible and its player points sum to exactly 104 (checksum passes). However UCLA's player point total, as legibly transcribed, sums to 80 (Wilson 17, MacLean 8, Walker 8, Williams 4, Richardson 21, Martin 7, Kocholin/Rochelin 9, Owens 2, Dafney 2, Brumbach 0, Bronner 2) against a team total of 78 confirmed independently via the printed shooting-percentage footnotes (FG 32-78/41.0%, 3FG 3-10/30.0%, FT 11-19/57.9%) and the period-score sum. The 2-point discrepancy traces to ambiguous handwritten FG/FT digits for Walker and Bronner (e.g. Walker's FT could be 2-3 or 3-3, Bronner's FG could be 0-1 or 1-1) that cannot be confidently resolved without guessing at exact digits, and the rebound sub-columns for several UCLA players also do not reconcile to the team rebound total (44, incl. 2 team rebounds) when summed. Per instructions, skipping rather than fabricating/back-solving the ambiguous UCLA cells to force a checksum match."
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "page": 23,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page shows a handwritten/typed Big Ten box score for Northwestern @ Ohio State (final score by periods: Northwestern 24+31=55, Ohio State 30+41=71). Ohio State side is legible enough to transcribe, but the Northwestern side has several illegible player names (row 2 reads as 'Rosco'/'Bosco, Art'; row 5 reads as 'Bethe_, addis' or similar, both unreadable with confidence) and summing the legible Northwestern player TP column (21+12+6+6+4+0+0+2+0+0=51) does not reconcile with the team's printed TOTALS/TP of 55 (also does not match the score-by-periods total of 55). Given the checksum failure and name illegibility, skipping rather than guessing or inventing values, per instructions."
+    }
+  ]
+}

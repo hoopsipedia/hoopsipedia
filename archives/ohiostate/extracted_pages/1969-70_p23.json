@@ -1,0 +1,39 @@
+{
+  "page": 23,
+  "games": [
+    {
+      "date": "1970-02-28",
+      "opponent": "Michigan State Spartans",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 80,
+          "players": [
+            {"name": "Cleamons", "fg": "9-16", "ft": "2-4", "reb": 7, "pf": 3, "pts": 20},
+            {"name": "Andreas", "fg": "2-4", "ft": "0-0", "reb": 0, "pf": 3, "pts": 4},
+            {"name": "Sorenson", "fg": "8-17", "ft": "4-4", "reb": 11, "pf": 4, "pts": 20},
+            {"name": "Finney", "fg": "12-19", "ft": "4-4", "reb": 9, "pf": 2, "pts": 28},
+            {"name": "Barclay", "fg": "3-4", "ft": "0-0", "reb": 4, "pf": 2, "pts": 6},
+            {"name": "Minor", "fg": "1-2", "ft": "0-0", "reb": 3, "pf": 0, "pts": 2}
+          ]
+        },
+        {
+          "name": "Michigan State Spartans",
+          "score": 82,
+          "players": [
+            {"name": "Simpson", "fg": "14-34", "ft": "1-3", "reb": 14, "pf": 1, "pts": 29},
+            {"name": "Miller", "fg": "5-6", "ft": "0-0", "reb": 4, "pf": 2, "pts": 10},
+            {"name": "Gibbons", "fg": "2-3", "ft": "4-4", "reb": 3, "pf": 2, "pts": 8},
+            {"name": "Benjamin", "fg": "6-12", "ft": "0-1", "reb": 0, "pf": 1, "pts": 12},
+            {"name": "Bograkos", "fg": "2-6", "ft": "1-1", "reb": 3, "pf": 0, "pts": 5},
+            {"name": "Gutkowski", "fg": "5-9", "ft": "3-4", "reb": 4, "pf": 3, "pts": 13},
+            {"name": "Cohrs", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Gale", "fg": "2-3", "ft": "1-1", "reb": 1, "pf": 0, "pts": 5}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

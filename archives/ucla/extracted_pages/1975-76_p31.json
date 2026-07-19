@@ -1,0 +1,46 @@
+{
+  "page": 31,
+  "games": [
+    {
+      "date": "1976-03-27",
+      "opponent": "Indiana",
+      "ucla_score": 51,
+      "opp_score": 65,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 51,
+          "players": [
+            {"name": "Richard Washington", "min": 38, "fg": "6-15", "ft": "3-4", "reb": 8, "pf": 3, "ast": 3, "to": 1, "blk": 0, "stl": 0, "pts": 15},
+            {"name": "Marques Johnson", "min": 36, "fg": "6-10", "ft": "0-1", "reb": 6, "pf": 2, "ast": 0, "to": 3, "blk": 0, "stl": 1, "pts": 12},
+            {"name": "Raymond Townsend", "min": 36, "fg": "2-10", "ft": "0-0", "reb": 3, "pf": 1, "ast": 2, "to": 2, "blk": 0, "stl": 2, "pts": 4},
+            {"name": "Andre McCarter", "min": 27, "fg": "2-9", "ft": "0-0", "reb": 4, "pf": 5, "ast": 3, "to": 3, "blk": 0, "stl": 0, "pts": 4},
+            {"name": "David Greenwood", "min": 26, "fg": "2-5", "ft": "1-2", "reb": 10, "pf": 2, "ast": 0, "to": 2, "blk": 2, "stl": 0, "pts": 5},
+            {"name": "Gavin Smith", "min": 9, "fg": "3-4", "ft": "0-0", "reb": 0, "pf": 3, "ast": 0, "to": 0, "blk": 0, "stl": 1, "pts": 6},
+            {"name": "Ralph Drollinger", "min": 8, "fg": "0-3", "ft": "2-2", "reb": 1, "pf": 3, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Jim Spillane", "min": 7, "fg": "0-2", "ft": "0-0", "reb": 1, "pf": 0, "ast": 2, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Roy Hamilton", "min": 4, "fg": "0-1", "ft": "1-2", "reb": 0, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 1},
+            {"name": "Brad Holland", "min": 4, "fg": "0-2", "ft": "0-0", "reb": 0, "pf": 0, "ast": 3, "to": 0, "blk": 0, "stl": 1, "pts": 0},
+            {"name": "Brett Vroman", "min": 3, "fg": "0-0", "ft": "0-0", "reb": 1, "pf": 2, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Chris Lippert", "min": 1, "fg": "0-0", "ft": "2-2", "reb": 0, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Wilbert Olinde", "min": 1, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Indiana Hoosiers",
+          "score": 65,
+          "players": [
+            {"name": "Scott May", "min": 40, "fg": "5-16", "ft": "4-6", "reb": 4, "pf": 2, "ast": 5, "to": 3, "blk": 0, "stl": 2, "pts": 14},
+            {"name": "Quinn Buckner", "min": 40, "fg": "6-14", "ft": "0-1", "reb": 3, "pf": 3, "ast": 2, "to": 5, "blk": 0, "stl": 1, "pts": 12},
+            {"name": "Kent Benson", "min": 38, "fg": "6-15", "ft": "4-6", "reb": 9, "pf": 4, "ast": 0, "to": 3, "blk": 0, "stl": 0, "pts": 16},
+            {"name": "Bob Wilkerson", "min": 38, "fg": "1-5", "ft": "3-4", "reb": 19, "pf": 3, "ast": 7, "to": 4, "blk": 1, "stl": 2, "pts": 5},
+            {"name": "Tom Abernethy", "min": 33, "fg": "7-8", "ft": "0-1", "reb": 6, "pf": 3, "ast": 2, "to": 1, "blk": 0, "stl": 1, "pts": 14},
+            {"name": "Jim Crews", "min": 11, "fg": "1-1", "ft": "2-3", "reb": 3, "pf": 0, "ast": 3, "to": 0, "blk": 0, "stl": 1, "pts": 4}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

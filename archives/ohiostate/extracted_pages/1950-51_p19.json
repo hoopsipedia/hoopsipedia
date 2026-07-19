@@ -1,0 +1,49 @@
+{
+  "page": 19,
+  "games": [
+    {
+      "date": "1951-02-12",
+      "opponent": "Illinois",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 59,
+          "players": [
+            {"name": "Gillaugh", "pos": "F", "min": "16:15", "fg": "0-9", "ft": "0-2", "pf": 1, "pts": 2},
+            {"name": "Remington", "pos": "F", "min": "8:45", "fg": "1-6", "ft": "0-0", "pf": 2, "pts": 2},
+            {"name": "Wilkes", "pos": "F", "min": "31:15", "fg": "3-18", "ft": "0-3", "pf": 5, "pts": 9},
+            {"name": "Williams", "pos": "F", "min": "26:50", "fg": "6-17", "ft": "0-2", "pf": 4, "pts": 14},
+            {"name": "Hatfield", "pos": "F", "min": "5:10", "fg": "1-3", "ft": "0-1", "pf": 0, "pts": 3},
+            {"name": "Armstrong", "pos": "C", "min": "28:35", "fg": "3-10", "ft": "4-7", "pf": 4, "pts": 13},
+            {"name": "Worthley", "pos": "C", "min": "3:10", "fg": "2-5", "ft": "1-2", "pf": 1, "pts": 6},
+            {"name": "Karaffa", "pos": "G", "min": "30:25", "fg": "0-7", "ft": "0-0", "pf": 3, "pts": 0},
+            {"name": "Maher", "pos": "G", "min": "9:35", "fg": "1-1", "ft": "0-0", "pf": 1, "pts": 2},
+            {"name": "Jones", "pos": "G", "min": "31:00", "fg": "3-12", "ft": "0-2", "pf": 3, "pts": 8},
+            {"name": "Dawe", "pos": "G", "min": "9:00", "fg": "0-2", "ft": "1-0", "pf": 2, "pts": 0}
+          ]
+        },
+        {
+          "name": "Illinois",
+          "score": 79,
+          "players": [
+            {"name": "C. Follmer", "pos": "F", "fg": "3-11", "ft": "2-0", "pf": 3, "pts": 6},
+            {"name": "Beach", "pos": "F", "fg": "4-11", "ft": "1-3", "pf": 0, "pts": 11},
+            {"name": "Bamoras", "pos": "F", "fg": "4-15", "ft": "1-3", "pf": 2, "pts": 11},
+            {"name": "Marks", "pos": "F", "fg": "0-0", "ft": "0-0", "pf": 0, "pts": 0},
+            {"name": "Christiansen", "pos": "F", "fg": "0-2", "ft": "0-0", "pf": 0, "pts": 0},
+            {"name": "Paterson", "pos": "C", "fg": "8-12", "ft": "5-1", "pf": 5, "pts": 17},
+            {"name": "Baumgardner", "pos": "C", "fg": "1-9", "ft": "0-0", "pf": 3, "pts": 2},
+            {"name": "M. Follmer", "pos": "C", "fg": "2-2", "ft": "0-0", "pf": 0, "pts": 4},
+            {"name": "Sunderlage", "pos": "G", "fg": "4-18", "ft": "2-5", "pf": 0, "pts": 13},
+            {"name": "Bredar", "pos": "G", "fg": "0-2", "ft": "1-1", "pf": 0, "pts": 1},
+            {"name": "Fletcher", "pos": "G", "fg": "4-11", "ft": "3-5", "pf": 4, "pts": 13},
+            {"name": "Schuldt", "pos": "G", "fg": "0-0", "ft": "0-1", "pf": 1, "pts": 1}
+          ]
+        }
+      ],
+      "checksum_ok": true,
+      "notes": "Sheet's column layout is FG-made, FGA-attempted, FT (=free throw ATTEMPTS), FTM (=free throw MAKES), PF, PTS; ft field here is formatted made-attempted (FTM-FT) to match project convention. PTS column values transcribed directly from the sheet (not computed) and both team sums match the printed team totals and final scores exactly (OSU 59, Illinois 79). Ohio State's Dawe row has an internal sheet inconsistency (FT attempts=0 but FTM makes=1, i.e. makes>attempts) yet still nets PTS=0 as printed; transcribed as-is per source, not invented. Illinois players have no per-player minutes column on this sheet (only team FG/FGA/FT/FTM/PF/PTS), so min omitted for that team. Team/game metadata (half-time score Illinois 32-Ohio State 23, technical foul on Williams, officials James Skinner & Ross Dean, attendance 6,905) visible on sheet but not requested in output schema."
+    }
+  ],
+  "skipped": []
+}

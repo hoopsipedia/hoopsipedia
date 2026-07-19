@@ -1,0 +1,52 @@
+{
+  "page": 3,
+  "games": [
+    {
+      "date": "1990-11-28",
+      "opponent": "Delaware State",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 116,
+          "players": [
+            {"name": "Treg Lee", "min": 14, "fg": "5-7", "ft": "2-2", "tp": "0-0", "reb": 4, "ast": 2, "pf": 2, "to": 2, "pts": 12},
+            {"name": "Jim Jackson", "min": 29, "fg": "11-20", "ft": "6-8", "tp": "1-2", "reb": 8, "ast": 2, "pf": 1, "to": 5, "blk": 1, "stl": 4, "pts": 29},
+            {"name": "Perry Carter", "min": 27, "fg": "6-10", "ft": "3-4", "tp": "0-0", "reb": 13, "ast": 1, "pf": 1, "to": 3, "blk": 0, "stl": 3, "pts": 15},
+            {"name": "Mark Baker", "min": 30, "fg": "6-10", "ft": "7-10", "tp": "0-0", "reb": 5, "ast": 8, "pf": 0, "to": 3, "blk": 1, "stl": 4, "pts": 19},
+            {"name": "Jamaal Brown", "min": 21, "fg": "4-5", "tp": "1-2", "ast": 2, "to": 3, "pts": 11},
+            {"name": "Bill Robinson", "min": 15, "fg": "0-0", "ft": "0-0", "pts": 0},
+            {"name": "Chris Jent", "min": 22, "fg": "4-8", "ft": "1-1", "tp": "1-2", "reb": 3, "ast": 2, "pf": 3, "to": 3, "blk": 0, "stl": 1, "pts": 10},
+            {"name": "Jamie Skelton", "min": 11, "fg": "2-5", "ft": "0-0", "tp": "1-2", "reb": 2, "ast": 2, "pf": 4, "to": 0, "pts": 5},
+            {"name": "Jimmy Ratliff", "min": 8, "fg": "1-3", "ft": "0-0", "tp": "0-0", "pts": 2},
+            {"name": "Tom Brandewie", "min": 7, "fg": "3-4", "ft": "0-1", "tp": "0-0", "reb": 7, "pf": 0, "ast": 1, "to": 0, "pts": 6},
+            {"name": "Scott Reeves", "min": 6, "fg": "0-1", "ft": "1-2", "tp": "0-0", "reb": 1, "pf": 0, "ast": 6, "to": 1, "pts": 1},
+            {"name": "Steve Hall", "min": 5, "fg": "2-3", "ft": "2-3", "tp": "0-0", "reb": 4, "pf": 1, "ast": 1, "to": 0, "blk": 0, "stl": 2, "pts": 6},
+            {"name": "Joe Reid", "min": 3, "fg": "0-0", "ft": "0-0", "pts": 0},
+            {"name": "Nick Hodak", "min": 2, "fg": "0-0", "ft": "0-1", "pts": 0}
+          ]
+        },
+        {
+          "name": "Delaware State",
+          "score": 67,
+          "players": [
+            {"name": "Paul Newman", "min": 25, "fg": "3-5", "ft": "2-7", "tp": "0-0", "reb": 3, "ast": 2, "pf": 2, "to": 3, "stl": 0, "blk": 0, "pts": 8},
+            {"name": "Tom Davis", "min": 37, "fg": "9-23", "ft": "11-14", "tp": "0-0", "reb": 12, "ast": 1, "pf": 3, "to": 4, "stl": 0, "blk": 0, "pts": 29},
+            {"name": "Donnell Thomas", "min": 12, "fg": "0-2", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 5, "to": 5, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Emanual Davis", "min": 37, "fg": "7-19", "ft": "2-5", "tp": "1-3", "reb": 8, "ast": 8, "pf": 1, "to": 6, "stl": 1, "blk": 1, "pts": 17},
+            {"name": "Victor Ford", "min": 30, "fg": "3-11", "ft": "0-0", "tp": "2-4", "reb": 4, "ast": 2, "pf": 2, "to": 3, "stl": 3, "blk": 0, "pts": 8},
+            {"name": "Roy Williams", "min": 5, "fg": "0-2", "ft": "0-0", "tp": "0-1", "reb": 0, "ast": 1, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Tyrone Boger", "min": 10, "fg": "0-1", "ft": "1-2", "tp": "0-0", "reb": 1, "ast": 0, "pf": 2, "to": 3, "stl": 0, "blk": 0, "pts": 1},
+            {"name": "Hijr Sabree", "min": 8, "fg": "0-1", "ft": "0-1", "tp": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 1, "stl": 1, "blk": 0, "pts": 0},
+            {"name": "William Phillips", "min": 12, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Guy Fowler", "min": 8, "fg": "0-2", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 3, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Raphael Spencer", "min": 6, "fg": "1-3", "ft": "0-0", "tp": "0-0", "reb": 2, "ast": 0, "pf": 2, "to": 0, "stl": 1, "blk": 1, "pts": 2},
+            {"name": "James Thompson", "min": 5, "fg": "0-1", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 1, "blk": 0, "pts": 0},
+            {"name": "Sonel Shropshire", "min": 3, "fg": "1-2", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 2}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

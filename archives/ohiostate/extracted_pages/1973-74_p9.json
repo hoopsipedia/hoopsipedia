@@ -1,0 +1,39 @@
+{
+  "page": 9,
+  "games": [
+    {
+      "date": "1973-12-29",
+      "opponent": "Ohio University",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 79,
+          "players": [
+            {"name": "Repella", "fg": "4-5", "ft": "0-1", "reb": 3, "ast": 3, "pf": 1, "pts": 8},
+            {"name": "Bolden", "fg": "10-19", "ft": "3-5", "reb": 7, "ast": 6, "pf": 3, "pts": 23},
+            {"name": "Wolfe", "fg": "7-10", "ft": "0-0", "reb": 2, "ast": 1, "pf": 4, "pts": 14},
+            {"name": "Jackson", "fg": "6-13", "ft": "0-0", "reb": 11, "ast": 3, "pf": 4, "pts": 12},
+            {"name": "Wenner", "fg": "8-17", "ft": "0-0", "reb": 13, "ast": 3, "pf": 3, "pts": 16},
+            {"name": "Andreas", "fg": "0-2", "ft": "2-2", "reb": 0, "ast": 1, "pf": 4, "pts": 2},
+            {"name": "Gerhard", "fg": "1-1", "ft": "2-2", "reb": 0, "ast": 1, "pf": 0, "pts": 4}
+          ]
+        },
+        {
+          "name": "Ohio University",
+          "score": 84,
+          "players": [
+            {"name": "Luckett", "fg": "9-22", "ft": "4-8", "reb": 4, "ast": 8, "pf": 0, "pts": 22},
+            {"name": "Green", "fg": "6-15", "ft": "4-6", "reb": 18, "ast": 1, "pf": 0, "pts": 16},
+            {"name": "Rusch", "fg": "6-10", "ft": "1-2", "reb": 6, "ast": 1, "pf": 3, "pts": 13},
+            {"name": "Slappy", "fg": "4-6", "ft": "0-2", "reb": 1, "ast": 3, "pf": 5, "pts": 8},
+            {"name": "Brown", "fg": "4-6", "ft": "2-3", "reb": 8, "ast": 2, "pf": 3, "pts": 10},
+            {"name": "Payne", "fg": "3-9", "ft": "2-2", "reb": 2, "ast": 0, "pf": 1, "pts": 8},
+            {"name": "Thompson", "fg": "3-4", "reb": 0, "ast": 1, "pf": 6, "pts": 7}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

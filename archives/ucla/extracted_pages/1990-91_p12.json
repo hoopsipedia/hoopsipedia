@@ -1,0 +1,9 @@
+{
+  "page": 12,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "1991-01-02 UCLA vs USC (Pauley Pavilion, final USC 81 - UCLA 98): UCLA side checks out perfectly (player pts sum = 98 = team final score, matches TOTALS row). USC side fails checksum: summing each player's printed TP column gives 82, but the team final score / printed TOTALS TP is 81. USC's team FG-FT-3PT aggregates (33-66 FG, 3-5 3PT, 12-21 FT) independently compute to exactly 81 (2*33+3+12=81), matching the final score, so the team subtotal row is internally consistent. The lone discrepancy is player #11 GLENN, printed with FG 0-0 and FT 0-0 but a TP of 1 -- mathematically he should score 0 points from those splits, so his printed point total is inconsistent with his own shooting line (likely a scan/print artifact on the original scoresheet). Rather than silently zeroing his point total (which would be altering a printed value, not transcribing it), skipping this game per instructions to be ruthless about discrepancies rather than guess."
+    }
+  ]
+}

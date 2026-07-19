@@ -1,0 +1,46 @@
+{
+  "page": 2,
+  "games": [
+    {
+      "date": "1968-11-30",
+      "opponent": "Ohio University",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 85,
+          "players": [
+            {"name": "Howell", "fg": "9-16", "ft": "2-4", "reb": 9, "pf": 3, "pts": 20},
+            {"name": "Cleamons", "fg": "6-15", "ft": "3-5", "reb": 9, "pf": 4, "pts": 15},
+            {"name": "Sorenson", "fg": "4-8", "ft": "6-8", "reb": 9, "pf": 4, "pts": 14},
+            {"name": "Pinney", "fg": "4-10", "ft": "2-2", "reb": 6, "pf": 2, "pts": 10},
+            {"name": "Meadors", "fg": "3-8", "ft": "3-4", "reb": 4, "pf": 2, "pts": 9},
+            {"name": "Smith", "fg": "1-5", "ft": "1-3", "reb": 7, "pf": 2, "pts": 3},
+            {"name": "Andreas", "fg": "1-4", "ft": "0-0", "reb": 3, "pf": 2, "pts": 2},
+            {"name": "Schnabel", "fg": "1-2", "ft": "6-7", "reb": 1, "pf": 4, "pts": 8},
+            {"name": "Barclay", "fg": "2-2", "ft": "0-1", "reb": 1, "pf": 0, "pts": 4},
+            {"name": "Spies", "fg": "0-0", "ft": "0-0", "reb": 2, "pf": 2, "pts": 0}
+          ]
+        },
+        {
+          "name": "Ohio University",
+          "score": 77,
+          "players": [
+            {"name": "McKee", "fg": "6-23", "ft": "1-2", "reb": 9, "pf": 3, "pts": 13},
+            {"name": "McDivitt", "fg": "5-8", "ft": "4-5", "reb": 2, "pf": 4, "pts": 14},
+            {"name": "Love", "fg": "1-1", "ft": "1-2", "reb": 7, "pf": 5, "pts": 3},
+            {"name": "Canine", "fg": "4-13", "ft": "3-3", "reb": 2, "pf": 2, "pts": 11},
+            {"name": "Kowall", "fg": "6-13", "ft": "6-8", "reb": 12, "pf": 3, "pts": 18},
+            {"name": "Groff", "fg": "2-7", "ft": "1-1", "reb": 1, "pf": 4, "pts": 5},
+            {"name": "Miller", "fg": "1-3", "ft": "0-1", "reb": 1, "pf": 3, "pts": 2},
+            {"name": "Battle", "fg": "2-4", "ft": "1-2", "reb": 1, "pf": 1, "pts": 5},
+            {"name": "Wolfe", "fg": "1-4", "ft": "0-0", "reb": 3, "pf": 0, "pts": 2},
+            {"name": "Parker", "fg": "1-2", "ft": "2-4", "reb": 5, "pf": 2, "pts": 4},
+            {"name": "Coon", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

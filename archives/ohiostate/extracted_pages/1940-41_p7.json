@@ -1,0 +1,9 @@
+{
+  "page": 7,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Ohio State Buckeyes vs Michigan, 1/6/1941 at Ann Arbor (Coach Olsen; captain Mickelson; manager Bolton). Team-level box is legible: Ohio State 49 (Totals row shows B=17, F=15, PF=16, T=49, and 2*17+15=49 checks out) vs Michigan 39 (Totals row shows B=14, F=11, PF=13, T=39, and 2*14+11=39 checks out). However, the per-player rows (Miller, Fisher, Mickelson, Mees, Ferguson, McLain, Goodreich, Graf, Dawson for Ohio State; Sofiak, Herrmann, Doyle, Mandler, Cartmill, Brogan, Ruston, Glasner for Michigan) are printed too small/blurry in this scan to read individual B/F/PF/T digits with confidence, so a reliable per-player checksum could not be constructed. Skipping per ruthless-skip policy rather than guessing individual stat lines."
+    }
+  ]
+}

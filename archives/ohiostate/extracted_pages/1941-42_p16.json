@@ -1,0 +1,9 @@
+{
+  "page": 16,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page shows a legible header (date 1942-02-09, opponent Iowa at Iowa City, coach Olsen, final score Ohio State 44 - Iowa 52 after a visible correction/strikeout of an earlier '52-44' entry) and a small inset team-stats table with column totals (Ohio State totals: B=17 F=10 PF=21 TP=44; Iowa totals: B=18 F=18 PF=16 TP=52, matching the final score). However, the individual player rows inside that inset table are rendered too small and blurry to reliably read digit-by-digit (field-goal/free-throw/foul/points columns for each of the ~9 Ohio State and ~8 Iowa players are ambiguous at this resolution), so per-player lines cannot be transcribed with confidence without risking invented values. Skipping the game rather than guessing player stats, per instructions."
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "page": 10,
+  "games": [
+    {
+      "date": "1984-01-04",
+      "opponent": "Virginia Tech",
+      "site": "Roanoke Civic Center",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 74,
+          "players": [
+            {"name": "Jim Miller", "min": 34, "fg": "4-9", "ft": "0-0", "reb": 3, "pf": 1, "ast": 2, "to": 1, "blk": 0, "stl": 0, "pts": 8},
+            {"name": "Tom Sheehey", "min": 26, "fg": "3-7", "ft": "6-9", "reb": 1, "pf": 3, "ast": 2, "to": 2, "blk": 0, "stl": 1, "pts": 12},
+            {"name": "Olden Polynice", "min": 18, "fg": "2-5", "ft": "0-0", "reb": 5, "pf": 1, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 4},
+            {"name": "Rick Carlisle", "min": 25, "fg": "5-7", "ft": "2-3", "reb": 1, "pf": 2, "ast": 2, "to": 0, "blk": 1, "stl": 0, "pts": 12},
+            {"name": "Othell Wilson", "min": 31, "fg": "6-9", "ft": "6-8", "reb": 5, "pf": 1, "ast": 6, "to": 4, "blk": 2, "stl": 4, "pts": 18},
+            {"name": "Ricky Stokes", "min": 17, "fg": "3-6", "ft": "0-0", "reb": 1, "pf": 1, "ast": 2, "to": 0, "blk": 0, "stl": 1, "pts": 6},
+            {"name": "Kenton Edelin", "min": 28, "fg": "3-3", "ft": "2-2", "reb": 10, "pf": 3, "ast": 2, "to": 4, "blk": 1, "stl": 1, "pts": 8},
+            {"name": "Dan Merrifield", "min": 12, "fg": "1-1", "ft": "0-0", "reb": 0, "pf": 2, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Tim Mullen", "min": 9, "fg": "2-5", "ft": "0-0", "reb": 2, "pf": 0, "ast": 2, "to": 2, "blk": 0, "stl": 1, "pts": 4}
+          ],
+          "checksum_ok": true
+        },
+        {
+          "name": "Virginia Tech Hokies",
+          "score": 64,
+          "players": [
+            {"name": "Perry Young", "min": 37, "fg": "5-12", "ft": "0-0", "reb": 4, "pf": 5, "ast": 2, "to": 2, "blk": 0, "stl": 0, "pts": 10},
+            {"name": "Bobby Beecher", "min": 31, "fg": "5-7", "ft": "1-1", "reb": 6, "pf": 4, "ast": 0, "to": 2, "blk": 1, "stl": 4, "pts": 11},
+            {"name": "John Dixon", "min": 22, "fg": "3-6", "ft": "0-1", "reb": 4, "pf": 2, "ast": 1, "to": 3, "blk": 0, "stl": 0, "pts": 6},
+            {"name": "Dell Curry", "min": 40, "fg": "9-18", "ft": "1-2", "reb": 3, "pf": 4, "ast": 3, "to": 3, "blk": 0, "stl": 2, "pts": 19},
+            {"name": "Al Young", "min": 40, "fg": "6-9", "ft": "0-0", "reb": 0, "pf": 2, "ast": 5, "to": 3, "blk": 0, "stl": 2, "pts": 12},
+            {"name": "Keith Colbert", "min": 26, "fg": "1-6", "ft": "4-4", "reb": 3, "pf": 5, "ast": 1, "to": 0, "blk": 0, "stl": 0, "pts": 6},
+            {"name": "Gerald Kennedy", "min": 3, "fg": "0-1", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Phil Williams", "min": 1, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0}
+          ],
+          "checksum_ok": true
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

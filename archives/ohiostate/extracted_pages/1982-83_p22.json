@@ -1,0 +1,9 @@
+{
+  "page": 22,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Official Big Ten box score, Ohio State (74) at Minnesota (69), Feb 12 1983, Minneapolis. Transcribed both team player lines but checksum failed: Ohio State player-line points summed to 71 vs. official final score of 74 (a 3-point gap), and several supporting team totals (FTA 20 vs summed 20... actually FTA total 26 vs summed individual FTA of ~20, minutes total 204 vs official 200, assists/turnovers/steals off by 1 each) indicate at least one misread digit on a dense, small-print scanned form. Minnesota side also showed an inconsistency for Tommy Davis (listed FG 9, FT unclear between 0-1 and 1-1, TP 19 only reconciles with FT=1 not FT=0), suggesting the FT/FTA and possible 3-point-column cells are ambiguous on this scan. Rather than guess at the unclear digits, skipping per instructions to be ruthless about checksum failures."
+    }
+  ]
+}

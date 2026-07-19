@@ -1,0 +1,42 @@
+{
+  "page": 8,
+  "games": [
+    {
+      "date": null,
+      "date_note": "Article headline says the game was played 'Wednesday night' at Pittsburgh, ending the Panthers' six-game win streak; no calendar date is printed on the page, so date left null rather than invented.",
+      "opponent": "Pittsburgh Panthers",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 43,
+          "players": [
+            {"name": "Wells, f.", "fg": "1-?", "ft": "1-?", "pts": 3},
+            {"name": "Snyder, f.", "fg": "2-?", "ft": "3-?", "pts": 7},
+            {"name": "Bowen, f.", "fg": "2-?", "ft": "4-?", "pts": 8},
+            {"name": "Elliott, c.", "fg": "2-?", "ft": "0-?", "pts": 4},
+            {"name": "Underman, c.", "fg": "4-?", "ft": "2-?", "pts": 10},
+            {"name": "Ambling, g.", "fg": "2-?", "ft": "2-?", "pts": 6},
+            {"name": "Huston, g.", "fg": "2-?", "ft": "1-?", "pts": 5}
+          ]
+        },
+        {
+          "name": "Pittsburgh Panthers",
+          "score": 33,
+          "players": [
+            {"name": "Cortenlino, f.", "note": "surname partly illegible on scan", "fg": "1-?", "ft": "0-?", "pts": 2},
+            {"name": "Apple, f.", "fg": "4-?", "ft": "3-?", "pts": 11},
+            {"name": "David, f.", "note": "surname partly illegible on scan", "fg": "1-?", "ft": "3-?", "pts": 5},
+            {"name": "Zeller, c.", "fg": "1-?", "ft": "3-?", "pts": 5},
+            {"name": "Garnham, c.", "fg": "0-?", "ft": "0-?", "pts": 0},
+            {"name": "Maruzewski, g.", "fg": "0-?", "ft": "3-?", "pts": 3},
+            {"name": "Medich, g.", "fg": "0-?", "ft": "1-?", "pts": 1},
+            {"name": "Marlarkey, g.", "fg": "3-?", "ft": "0-?", "pts": 6, "note": "field-goal digit is smudged on the scan; value 3 inferred from checksum (team FG total 10, other 7 players sum to 7) and cross-checked via pts = 2*fg + ft (6 = 2*3 + 0)"}
+          ]
+        }
+      ],
+      "checksum_ok": true,
+      "checksum_note": "Only made-FG (G) and made-FT (F) columns are printed per player, plus a printed points (T) column - used printed T directly as pts rather than computing. OSU player pts sum 3+7+8+4+10+6+5=43 matches final score 43 and printed team FG/FT totals (15-13). PITT player pts sum 2+11+5+5+0+3+1+6=33 matches final score 33 and printed team totals (10-13); PITT team FG total of 10 required correcting Marlarkey's FG from an apparently-smudged low digit to 3, verified via pts=2*fg+ft identity for every row on both teams. FT-attempt and FG-attempt (attempts) columns are not present on this sheet, so fg/ft are recorded as 'made-?' rather than invented attempt counts."
+    }
+  ],
+  "skipped": []
+}

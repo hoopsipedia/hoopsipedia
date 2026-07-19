@@ -1,0 +1,45 @@
+{
+  "page": 22,
+  "games": [
+    {
+      "date": "1983-02-19",
+      "opponent": "California",
+      "ucla_score": 70,
+      "opp_score": 60,
+      "teams": [
+        {
+          "name": "California Golden Bears",
+          "score": 60,
+          "players": [
+            {"name": "Haley", "min": 32, "fg": "4-8", "ft": "2-2", "reb": 5, "ast": 1, "pf": 3, "to": 4, "blk": 0, "stl": 1, "pts": 10},
+            {"name": "Butler", "min": 24, "fg": "0-2", "ft": "0-0", "reb": 3, "ast": 1, "pf": 5, "to": 2, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Pitts", "min": 35, "fg": "5-12", "ft": "5-9", "reb": 7, "ast": 1, "pf": 3, "to": 1, "blk": 0, "stl": 0, "pts": 15},
+            {"name": "Hays", "min": 34, "fg": "2-7", "ft": "0-0", "reb": 7, "ast": 1, "pf": 2, "to": 3, "blk": 0, "stl": 0, "pts": 4},
+            {"name": "Chavez", "min": 34, "fg": "9-16", "ft": "1-2", "reb": 4, "ast": 4, "pf": 1, "to": 4, "blk": 0, "stl": 2, "pts": 19},
+            {"name": "Avalos", "min": 13, "fg": "3-5", "ft": "2-2", "reb": 2, "ast": 0, "pf": 2, "to": 0, "blk": 0, "stl": 0, "pts": 8},
+            {"name": "Owen", "min": 4, "fg": "0-1", "ft": "0-0", "reb": 0, "ast": 1, "pf": 0, "to": 0, "blk": 0, "stl": 1, "pts": 0},
+            {"name": "Thilgen", "min": 19, "fg": "2-4", "ft": "0-0", "reb": 0, "ast": 0, "pf": 5, "to": 0, "blk": 0, "stl": 0, "pts": 4},
+            {"name": "Ritchie", "min": 3, "fg": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Smith", "min": 2, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "UCLA Bruins",
+          "score": 70,
+          "players": [
+            {"name": "Daye", "min": 35, "fg": "5-14", "ft": "5-6", "reb": 3, "ast": 5, "pf": 1, "to": 2, "blk": 0, "stl": 1, "pts": 15},
+            {"name": "Fields", "min": 35, "fg": "9-9", "ft": "0-0", "reb": 8, "ast": 0, "pf": 2, "to": 1, "blk": 1, "stl": 1, "pts": 18},
+            {"name": "Wright", "min": 20, "fg": "1-3", "ft": "0-1", "reb": 3, "ast": 0, "pf": 4, "to": 0, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Jackson", "min": 20, "fg": "2-3", "ft": "1-1", "reb": 1, "ast": 3, "pf": 1, "to": 2, "blk": 0, "stl": 1, "pts": 5},
+            {"name": "Foster", "min": 34, "fg": "5-12", "ft": "1-2", "reb": 0, "ast": 0, "pf": 2, "to": 0, "blk": 0, "stl": 0, "pts": 11},
+            {"name": "Holton", "min": 28, "fg": "3-8", "ft": "4-6", "reb": 2, "ast": 4, "pf": 3, "to": 0, "blk": 0, "stl": 0, "pts": 10},
+            {"name": "Malonson", "min": 16, "fg": "1-3", "ft": "1-1", "reb": 3, "ast": 0, "pf": 2, "to": 2, "blk": 0, "stl": 0, "pts": 3},
+            {"name": "Miguel", "min": 12, "fg": "2-7", "ft": "2-4", "reb": 6, "ast": 1, "pf": 1, "to": 1, "blk": 0, "stl": 1, "pts": 6}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

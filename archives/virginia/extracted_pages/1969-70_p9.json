@@ -1,0 +1,42 @@
+{
+  "page": 9,
+  "games": [
+    {
+      "date": "1970-01-02",
+      "opponent": "Wake Forest",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 58,
+          "players": [
+            {"name": "Chip Case", "min": 30, "fg": "2-8", "ft": "4-6", "reb": 6, "ast": 1, "pf": 2, "to": 4, "blk": 0, "stl": 0, "pts": 8},
+            {"name": "Bill Gerry", "min": 33, "fg": "5-15", "ft": "8-9", "reb": 11, "ast": 0, "pf": 4, "to": 0, "blk": 0, "stl": 0, "pts": 18},
+            {"name": "Scott McCandlish", "min": 36, "fg": "2-12", "ft": "5-7", "reb": 6, "ast": 1, "pf": 4, "to": 2, "blk": 0, "stl": 0, "pts": 9},
+            {"name": "Kevin Kennelly", "min": 35, "fg": "2-5", "ft": "0-0", "reb": 2, "ast": 3, "pf": 0, "to": 4, "blk": 0, "stl": 0, "pts": 4},
+            {"name": "Tim Rash", "min": 35, "fg": "3-6", "ft": "0-0", "reb": 2, "ast": 0, "pf": 3, "to": 4, "blk": 0, "stl": 0, "pts": 6},
+            {"name": "John Hill", "min": 10, "fg": "2-3", "ft": "0-0", "reb": 0, "ast": 1, "pf": 0, "to": 0, "blk": 0, "stl": 0, "pts": 4},
+            {"name": "Frank DeWitt", "min": 21, "fg": "4-9", "ft": "1-2", "reb": 3, "ast": 0, "pf": 4, "to": 1, "blk": 0, "stl": 0, "pts": 9}
+          ]
+        },
+        {
+          "name": "Wake Forest",
+          "score": 65,
+          "players": [
+            {"name": "Charlie Davis", "min": 40, "fg": "3-5", "ft": "4-5", "reb": 3, "ast": 0, "pf": 2, "to": 3, "blk": 0, "stl": 0, "pts": 10},
+            {"name": "Gil McGregor", "min": 37, "fg": "9-15", "ft": "3-5", "reb": 18, "ast": 1, "pf": 4, "to": 2, "blk": 0, "stl": 0, "pts": 21},
+            {"name": "Dan Ackley", "min": 20, "fg": "3-8", "ft": "2-3", "reb": 9, "ast": 1, "pf": 4, "to": 3, "blk": 0, "stl": 0, "pts": 8},
+            {"name": "Bob Rhoads", "min": 39, "fg": "3-12", "ft": "1-2", "reb": 4, "ast": 6, "pf": 0, "to": 4, "blk": 0, "stl": 0, "pts": 7},
+            {"name": "Dickie Walker", "min": 36, "fg": "4-8", "ft": "9-11", "reb": 5, "ast": 1, "pf": 4, "to": 2, "blk": 0, "stl": 0, "pts": 17},
+            {"name": "John Lewkowicz", "min": 1, "fg": "0-0", "ft": "0-1", "reb": 0, "ast": 0, "pf": 0, "to": 1, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Norwood Todmann", "min": 3, "fg": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 1, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Neil Pastushok", "min": 4, "fg": "1-1", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 1, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Larry Habegger", "min": 20, "fg": "0-1", "ft": "0-0", "reb": 2, "ast": 1, "pf": 3, "to": 0, "blk": 0, "stl": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true,
+      "note": "Printed team FG/FT/rebound/scoring totals were used to cross-validate every player line. Larry Habegger's 'Pts' column on the sheet reads 1, but his printed FG (0-1) and FT (0-0) both compute to 0 points, and the team's printed FG-made (23) and FT-made (19) totals are already fully accounted for by the other 8 players without him contributing any makes. Recorded his pts as 0 (computed from fg/ft, corroborated by team FG/FT totals) to reconcile an apparent typo on the original 1970 stat sheet; with this correction both teams' player-point sums exactly match their final scores (Virginia 58, Wake Forest 65)."
+    }
+  ],
+  "skipped": []
+}

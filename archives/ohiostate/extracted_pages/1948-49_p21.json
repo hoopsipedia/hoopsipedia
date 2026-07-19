@@ -1,0 +1,15 @@
+{
+  "page": 21,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Feb 28, 1949 Ohio State vs Michigan State game (final score clearly readable as Ohio State 70, Michigan State 51, attendance 5170, at the State Fairgrounds Coliseum) has two small per-player box score tables on the page (Michigan State FG/F/MF/PF/TP and a separate Ohio State FG/F/MF/PF/TP table), but both are low-resolution newsprint with misaligned/missing columns and several illegible or ambiguous digits per row. Could not transcribe individual player lines with enough confidence to pass a points checksum against the final score, so skipping rather than guessing values."
+    },
+    {
+      "reason": "The large 'OHIO STATE SCORING' table on this page (columns Player, Min., G., F.G., F., M.F., P.F., T.P., Ave.) is a season-to-date cumulative statistics table (through 20 games), not a single-game box score, so it was not used for any game entry."
+    },
+    {
+      "reason": "A preliminary game box score (Ohio State JVs 63, Freshmen 53/43) also appears on the page but is likewise small, faint newsprint with unclear digit alignment across the Freshmen/JVs columns, and is a non-varsity preliminary contest; skipped due to illegibility and being outside the varsity season game log."
+    }
+  ]
+}

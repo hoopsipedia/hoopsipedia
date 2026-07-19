@@ -1,0 +1,9 @@
+{
+  "page": 8,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page 8 is a single newspaper clipping ('Hold Off Late Buck Rally in Hectic Battle', Illinois 61, Ohio State 58, at Champaign, attendance 6,905) with a full 'Battling Buckeyes!' box-score table for both teams. The team total rows are legible and self-consistent (Illinois: fga103 fgm24 ftm13 fta27 pf29 tp61, with 2*24+13=61 matching the final score; Ohio State: fga79 fgm20 ftm19(or 18) fta14 pf24 tp58, with 2*20+18=58 matching), but the individual player rows are not reliably legible from the scan/OCR. At least one player row fails its own internal checksum as transcribed (Osterkorn: fgm6 ftm3 -> 2*6+3=15, but tp column shows 17; narrative text separately states Osterkorn missed 7 of 12 free throws, implying ftm5/fta12, which does not match the table digits I could read), indicating digit misreads in the fg/ft/fta columns. Rather than invent or guess corrected per-player fg/ft splits, skipping the whole game per instructions to be ruthless about skipping over guessing."
+    }
+  ]
+}

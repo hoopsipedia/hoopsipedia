@@ -1,0 +1,42 @@
+{
+  "page": 10,
+  "games": [
+    {
+      "date": "1990-01-06",
+      "opponent": "Duke",
+      "site": "Cameron Indoor Stadium",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 68,
+          "players": [
+            {"name": "Kenny Turner", "min": 35, "fg": "4-5", "ft": "6-6", "reb": 7, "ast": 1, "pf": 3, "to": 3, "stl": 1, "blk": 2, "pts": 14},
+            {"name": "Bryant Stith", "min": 36, "fg": "4-12", "ft": "6-8", "reb": 5, "ast": 0, "pf": 2, "to": 3, "stl": 1, "blk": 0, "pts": 14},
+            {"name": "Ted Jeffries", "min": 21, "fg": "1-4", "ft": "0-0", "reb": 2, "ast": 0, "pf": 3, "to": 2, "stl": 1, "blk": 0, "pts": 2},
+            {"name": "Anthony Oliver", "min": 32, "fg": "3-6", "ft": "0-0", "reb": 3, "ast": 3, "pf": 3, "to": 3, "stl": 1, "blk": 0, "pts": 6},
+            {"name": "John Crotty", "min": 36, "fg": "11-15", "tp": "4-7", "ft": "4-7", "reb": 2, "ast": 1, "pf": 4, "to": 9, "stl": 3, "blk": 0, "pts": 30},
+            {"name": "Jeff Daniel", "min": 18, "fg": "0-1", "ft": "0-0", "reb": 3, "ast": 0, "pf": 2, "to": 2, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Matt Blundin", "min": 12, "fg": "0-0", "ft": "0-0", "reb": 2, "ast": 0, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Doug Smith", "min": 10, "fg": "1-2", "tp": "0-1", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 2, "stl": 0, "blk": 0, "pts": 2}
+          ]
+        },
+        {
+          "name": "Duke Blue Devils",
+          "score": 76,
+          "players": [
+            {"name": "Robert Brickey", "min": 30, "fg": "2-9", "ft": "0-0", "reb": 4, "ast": 2, "pf": 4, "to": 7, "stl": 3, "blk": 0, "pts": 4},
+            {"name": "Christian Laettner", "min": 28, "fg": "3-12", "ft": "5-5", "reb": 8, "ast": 3, "pf": 5, "to": 3, "stl": 1, "blk": 0, "pts": 11},
+            {"name": "Alaa Abdelnaby", "min": 34, "fg": "7-10", "ft": "2-3", "reb": 7, "ast": 0, "pf": 2, "to": 4, "stl": 2, "blk": 2, "pts": 16},
+            {"name": "Phil Henderson", "min": 34, "fg": "6-10", "tp": "2-5", "ft": "1-2", "reb": 3, "ast": 2, "pf": 3, "to": 3, "stl": 3, "blk": 0, "pts": 15},
+            {"name": "Bobby Hurley", "min": 36, "fg": "2-5", "tp": "1-2", "ft": "4-4", "reb": 1, "ast": 9, "pf": 4, "to": 2, "stl": 2, "blk": 0, "pts": 9},
+            {"name": "Greg Koubek", "min": 21, "fg": "3-5", "ft": "0-0", "reb": 1, "ast": 1, "pf": 2, "to": 1, "stl": 1, "blk": 0, "pts": 6},
+            {"name": "Bill McCaffrey", "min": 12, "fg": "6-7", "tp": "0-1", "ft": "2-2", "reb": 1, "ast": 0, "pf": 1, "to": 0, "stl": 2, "blk": 0, "pts": 14},
+            {"name": "Brian Davis", "min": 5, "fg": "0-0", "ft": "1-2", "reb": 1, "ast": 2, "pf": 1, "to": 0, "stl": 2, "blk": 0, "pts": 1}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

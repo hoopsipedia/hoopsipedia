@@ -1,0 +1,42 @@
+{
+  "page": 9,
+  "games": [
+    {
+      "date": "1946-01-12",
+      "opponent": "Illinois",
+      "note": "Sheet columns are G (field goals made), F (free throws made), P (points) only — no attempts, minutes, rebounds, assists, fouls, turnovers, steals, or blocks given. fg/ft fields below hold made-count only (no attempts available), not 'made-attempted' format.",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 41,
+          "players": [
+            {"name": "Snyder, F", "fg": "6", "ft": "1", "pts": 13},
+            {"name": "Bowen, F-C", "fg": "0", "ft": "2", "pts": 2},
+            {"name": "Underman, C", "fg": "4", "ft": "1", "pts": 9},
+            {"name": "Huston, G", "fg": "6", "ft": "1", "pts": 13},
+            {"name": "Amling, G", "fg": "1", "ft": "1", "pts": 3},
+            {"name": "Wells, F", "fg": "0", "ft": "1", "pts": 1}
+          ]
+        },
+        {
+          "name": "Illinois",
+          "score": 35,
+          "players": [
+            {"name": "Doster, F", "fg": "8", "ft": "1", "pts": 17},
+            {"name": "Mroz, F", "fg": "1", "ft": "0", "pts": 2},
+            {"name": "Rowe, C", "fg": "1", "ft": "1", "pts": 3},
+            {"name": "Menke, C", "fg": "1", "ft": "0", "pts": 2},
+            {"name": "Leddy, G", "fg": "1", "ft": "1", "pts": 3},
+            {"name": "Burmaster, G", "fg": "1", "ft": "0", "pts": 2},
+            {"name": "Seyler, G", "fg": "1", "ft": "2", "pts": 4},
+            {"name": "Humphrey, F", "fg": "1", "ft": "0", "pts": 2},
+            {"name": "Gedvalis, G", "fg": "0", "ft": "0", "pts": 0},
+            {"name": "Olson, G", "fg": "0", "ft": "0", "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

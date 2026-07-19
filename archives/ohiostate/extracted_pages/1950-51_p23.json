@@ -1,0 +1,47 @@
+{
+  "page": 23,
+  "games": [
+    {
+      "date": "1951-03-03",
+      "opponent": "DePaul",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 67,
+          "players": [
+            {"name": "Remington", "min": 27, "fg": "2-9", "ft": "7-7", "pf": 5, "pts": 11},
+            {"name": "Gillaugh", "min": 5, "fg": "0-0", "ft": "0-0", "pf": 1, "pts": 0},
+            {"name": "Wilks", "min": 25, "fg": "1-9", "ft": "1-1", "pf": 4, "pts": 3},
+            {"name": "Williams", "min": 22, "fg": "4-11", "ft": "5-6", "pf": 2, "pts": 13},
+            {"name": "Hatfield", "min": 6, "fg": "1-3", "ft": "1-2", "pf": 1, "pts": 3},
+            {"name": "Armstrong", "min": 21, "fg": "3-9", "ft": "2-3", "pf": 5, "pts": 8},
+            {"name": "Worthley", "min": 11, "fg": "1-4", "ft": "0-2", "pf": 3, "pts": 2},
+            {"name": "Jones", "min": 34, "fg": "5-11", "ft": "0-2", "pf": 1, "pts": 10},
+            {"name": "Dawe", "min": 6, "fg": "0-0", "ft": "0-0", "pf": 0, "pts": 0},
+            {"name": "Karaffa", "min": 34, "fg": "8-17", "ft": "1-1", "pf": 3, "pts": 17},
+            {"name": "Maher", "min": 9, "fg": "0-4", "ft": "0-0", "pf": 1, "pts": 0}
+          ]
+        },
+        {
+          "name": "DePaul Blue Demons",
+          "score": 94,
+          "players": [
+            {"name": "Sohyman", "fg": "6", "ft": "2-5", "pf": 4, "pts": 14},
+            {"name": "Luksta", "fg": "2", "ft": "0-1", "pf": 1, "pts": 4},
+            {"name": "Pappish", "fg": "0", "ft": "0-0", "pf": 0, "pts": 0},
+            {"name": "Lahey", "fg": "6", "ft": "5-5", "pf": 3, "pts": 17},
+            {"name": "Slattery", "fg": "0", "ft": "0-0", "pf": 0, "pts": 0},
+            {"name": "Pavilonis", "fg": "6", "ft": "2-4", "pf": 5, "pts": 14},
+            {"name": "Dyker", "fg": "5", "ft": "4-5", "pf": 1, "pts": 14},
+            {"name": "Govedarica", "fg": "4", "ft": "4-5", "pf": 2, "pts": 12},
+            {"name": "Kieres", "fg": "0", "ft": "0-0", "pf": 1, "pts": 0},
+            {"name": "Feiereisel", "fg": "5", "ft": "5-5", "pf": 3, "pts": 15},
+            {"name": "Hoover", "fg": "1", "ft": "2-3", "pf": 0, "pts": 4}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

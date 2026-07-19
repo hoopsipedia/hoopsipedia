@@ -1,0 +1,9 @@
+{
+  "page": 3,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Game identity is legible (Ohio State 30, Notre Dame 24, Dec 28 1932, at the Coliseum, coach H.G. Olsen, captain Howard Mattison, attendance 3138) but the printed player-line box score table for both teams is reproduced at too small a scale / too low resolution to reliably read individual digits in the F./FT./MF./TP. columns (player names like Hinschman, Wilson, Colburn, Hostet, Conrad, Beitner, Mattison for Ohio State and Metller, Alberts, Voegele, Krause, McNulty, Baldwin, O'Neill, Jordan, Newbold for Notre Dame are legible, but the numeric stat columns are not confidently distinguishable, e.g. digits blur between 1/4/7 and 0/6/8). Per instructions, skipping rather than guessing values that could fail checksum silently. The surrounding newspaper clipping text is also mirrored/rotated and largely illegible, but is not part of the box score."
+    }
+  ]
+}

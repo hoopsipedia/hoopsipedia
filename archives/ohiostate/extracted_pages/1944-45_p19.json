@@ -1,0 +1,42 @@
+{
+  "page": 19,
+  "games": [
+    {
+      "date": "1945-03-20",
+      "opponent": "Kentucky Wildcats",
+      "notes_inline": "NCAA Tournament, Eastern First Round, at Madison Square Garden. Date not printed on page; inferred from historical record of this NCAA first-round matchup and flagged as approximate.",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 45,
+          "players": [
+            {"name": "Grate", "pts": 15},
+            {"name": "Sims", "pts": 2},
+            {"name": "Dugger", "pts": 0},
+            {"name": "Caudill", "pts": 14},
+            {"name": "Snyder", "pts": 0},
+            {"name": "Risen", "pts": 9},
+            {"name": "Huston", "pts": 5},
+            {"name": "Amling", "pts": 0}
+          ]
+        },
+        {
+          "name": "Kentucky Wildcats",
+          "score": 37,
+          "players": [
+            {"name": "Tingle", "pts": 11},
+            {"name": "Schu", "pts": 8},
+            {"name": "Parker", "pts": 0},
+            {"name": "Campbell", "pts": 6},
+            {"name": "Vulich", "pts": 2},
+            {"name": "Parkinson", "pts": 7},
+            {"name": "Stough", "pts": 3},
+            {"name": "Sturgill", "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

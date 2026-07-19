@@ -1,0 +1,47 @@
+{
+  "page": 4,
+  "games": [
+    {
+      "date": "1978-12-02",
+      "opponent": "Arizona State Sun Devils",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 100,
+          "players": [
+            {"name": "Phil Abney", "min": 34, "fg": "7-19", "ft": "9-10", "reb": 9, "pf": 4, "ast": 4, "stl": 2, "pts": 23},
+            {"name": "Andre Logan", "min": 17, "fg": "3-7", "ft": "1-1", "reb": 3, "pf": 5, "ast": 1, "to": 2, "pts": 7},
+            {"name": "Larry Belin", "min": 18, "fg": "5-9", "ft": "1-1", "reb": 5, "pf": 5, "to": 1, "pts": 11},
+            {"name": "Russell Saunders", "min": 32, "fg": "5-7", "ft": "3-7", "reb": 1, "pf": 5, "ast": 4, "to": 2, "stl": 3, "pts": 13},
+            {"name": "Everette Jefferson", "min": 30, "fg": "6-19", "ft": "6-7", "reb": 7, "pf": 5, "ast": 2, "to": 1, "blk": 1, "stl": 1, "pts": 18},
+            {"name": "Aparicio Curry", "min": 17, "fg": "4-4", "ft": "2-2", "reb": 1, "pf": 2, "ast": 5, "pts": 10},
+            {"name": "Paul Roby", "min": 18, "fg": "3-8", "ft": "0-0", "reb": 6, "pf": 0, "to": 1, "pts": 6},
+            {"name": "Phil Spradling", "min": 1, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Dijon Gregory", "min": 14, "fg": "5-8", "ft": "2-3", "reb": 4, "pf": 3, "to": 1, "pts": 12},
+            {"name": "Mark Felix", "min": 7, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 2, "blk": 1, "pts": 0},
+            {"name": "Mike Stewart", "min": 10, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 2, "ast": 1, "to": 1, "pts": 0},
+            {"name": "Jim Williams", "min": 2, "fg": "0-0", "ft": "0-1", "reb": 0, "pf": 0, "to": 2, "pts": 0}
+          ]
+        },
+        {
+          "name": "Arizona State Sun Devils",
+          "score": 104,
+          "players": [
+            {"name": "Johnny Nash", "min": 21, "fg": "1-2", "ft": "2-2", "reb": 2, "pf": 4, "ast": 4, "to": 2, "pts": 4},
+            {"name": "Tony Zeno", "min": 38, "fg": "6-13", "ft": "2-3", "reb": 12, "pf": 1, "to": 3, "pts": 14},
+            {"name": "Kurt Nimphius", "min": 16, "fg": "6-6", "ft": "1-3", "reb": 8, "pf": 4, "to": 2, "blk": 1, "pts": 13},
+            {"name": "Blake Taylor", "min": 26, "fg": "7-11", "ft": "4-4", "reb": 4, "pf": 3, "ast": 3, "to": 3, "stl": 3, "pts": 18},
+            {"name": "Roy Joshua", "min": 17, "fg": "0-3", "ft": "2-2", "reb": 0, "pf": 1, "ast": 1, "pts": 2},
+            {"name": "Greg Goorjian", "min": 20, "fg": "6-9", "ft": "4-8", "reb": 0, "pf": 3, "ast": 5, "to": 2, "pts": 16},
+            {"name": "Alton Lister", "min": 24, "fg": "7-8", "ft": "4-8", "reb": 8, "pf": 4, "to": 3, "blk": 2, "pts": 18},
+            {"name": "Lafayette Leyer", "min": 17, "fg": "3-5", "ft": "3-5", "reb": 1, "pf": 3, "ast": 8, "to": 1, "blk": 1, "stl": 3, "pts": 9},
+            {"name": "Bill Kucharsky", "min": 2, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "to": 2, "blk": 1, "pts": 0},
+            {"name": "Sam Williams", "min": 19, "fg": "4-8", "ft": "2-6", "reb": 10, "pf": 2, "to": 3, "blk": 1, "stl": 1, "pts": 10}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

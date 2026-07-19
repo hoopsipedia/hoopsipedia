@@ -1,0 +1,45 @@
+{
+  "page": 13,
+  "games": [
+    {
+      "date": "1994-01-22",
+      "opponent": "Arizona State",
+      "ucla_score": 98,
+      "opp_score": 81,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 98,
+          "players": [
+            {"name": "Ed O'Bannon", "min": 36, "fg": "9-19", "ft": "3-3", "tp": "0-1", "reb": 9, "ast": 1, "pf": 1, "to": 0, "stl": 1, "blk": 1, "pts": 21},
+            {"name": "Charles O'Bannon", "min": 29, "fg": "4-9", "ft": "2-2", "tp": "0-0", "reb": 4, "ast": 2, "pf": 3, "to": 1, "stl": 1, "blk": 0, "pts": 10},
+            {"name": "George Zidek", "min": 32, "fg": "7-10", "ft": "4-5", "tp": "0-0", "reb": 9, "ast": 1, "pf": 4, "to": 1, "stl": 1, "blk": 3, "pts": 18},
+            {"name": "Tyus Edney", "min": 33, "fg": "7-10", "ft": "7-7", "tp": "0-1", "reb": 5, "ast": 8, "pf": 2, "to": 6, "stl": 0, "blk": 0, "pts": 21},
+            {"name": "Shon Tarver", "min": 29, "fg": "6-13", "ft": "5-8", "tp": "0-2", "reb": 3, "ast": 2, "pf": 3, "to": 1, "stl": 2, "blk": 0, "pts": 17},
+            {"name": "Rodney Zimmerman", "min": 8, "fg": "0-1", "ft": "0-0", "tp": "0-0", "reb": 6, "ast": 1, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Cameron Dollar", "min": 14, "fg": "2-4", "ft": "0-0", "tp": "1-1", "reb": 2, "ast": 2, "pf": 2, "to": 2, "stl": 0, "blk": 1, "pts": 5},
+            {"name": "Marquis Burns", "min": 13, "fg": "2-6", "ft": "0-0", "tp": "0-2", "reb": 3, "ast": 2, "pf": 2, "to": 0, "stl": 2, "blk": 0, "pts": 4},
+            {"name": "Kevin Dempsey", "min": 4, "fg": "0-2", "ft": "2-2", "tp": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "David Boyle", "min": 1, "fg": "0-1", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Ike Nwankwo", "min": 1, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Arizona State Sun Devils",
+          "score": 81,
+          "players": [
+            {"name": "Dwayne Fontana", "min": 38, "fg": "2-7", "ft": "2-4", "tp": "0-0", "reb": 3, "ast": 2, "pf": 2, "to": 2, "stl": 0, "blk": 0, "pts": 6},
+            {"name": "Ron Riley", "min": 35, "fg": "5-17", "ft": "1-2", "tp": "2-9", "reb": 6, "ast": 1, "pf": 4, "to": 1, "stl": 0, "blk": 0, "pts": 13},
+            {"name": "Mario Bennett", "min": 37, "fg": "10-15", "ft": "6-9", "tp": "0-1", "reb": 9, "ast": 2, "pf": 4, "to": 3, "stl": 0, "blk": 0, "pts": 26},
+            {"name": "Isaac Burton", "min": 39, "fg": "9-15", "ft": "2-2", "tp": "4-8", "reb": 1, "ast": 3, "pf": 4, "to": 2, "stl": 4, "blk": 0, "pts": 24},
+            {"name": "Stevin Smith", "min": 40, "fg": "2-10", "ft": "1-2", "tp": "1-7", "reb": 6, "ast": 6, "pf": 3, "to": 5, "stl": 3, "blk": 1, "pts": 6},
+            {"name": "James Bacon", "min": 8, "fg": "3-3", "ft": "0-0", "tp": "0-0", "reb": 2, "ast": 0, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 6},
+            {"name": "Jimmy Kolyszko", "min": 3, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

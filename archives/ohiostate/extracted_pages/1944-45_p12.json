@@ -1,0 +1,40 @@
+{
+  "page": 12,
+  "games": [
+    {
+      "date": "1945-02-03",
+      "opponent": "Wisconsin",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 40,
+          "players": [
+            {"name": "Grate", "pos": "f", "fgm": 5, "ftm": 4, "pts": 14},
+            {"name": "Dugger", "pos": "f", "fgm": 0, "ftm": 0, "pts": 0},
+            {"name": "Sims", "pos": "f", "fgm": 1, "ftm": 1, "pts": 3},
+            {"name": "Caudill", "pos": "f", "fgm": 0, "ftm": 0, "pts": 0},
+            {"name": "Risen", "pos": "c", "fgm": 0, "ftm": 6, "pts": 6},
+            {"name": "Pfeiffer", "pos": "c", "fgm": 2, "ftm": 0, "pts": 4},
+            {"name": "Huston", "pos": "g", "fgm": 2, "ftm": 0, "pts": 4},
+            {"name": "Amling", "pos": "g", "fgm": 3, "ftm": 3, "pts": 9}
+          ]
+        },
+        {
+          "name": "Wisconsin",
+          "score": 36,
+          "players": [
+            {"name": "Smith", "pos": "f", "fgm": 5, "ftm": 0, "pts": 10},
+            {"name": "Patterson (AC)", "pos": "f", "fgm": 3, "ftm": 4, "pts": 10},
+            {"name": "Bachman", "pos": "c", "fgm": 1, "ftm": 0, "pts": 2},
+            {"name": "Goering", "pos": "c", "fgm": 4, "ftm": 2, "pts": 10},
+            {"name": "Sullivan", "pos": "g", "fgm": 0, "ftm": 0, "pts": 0},
+            {"name": "Johnson", "pos": "g", "fgm": 0, "ftm": 3, "pts": 3},
+            {"name": "Mathews", "pos": "g", "fgm": 0, "ftm": 1, "pts": 1}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

@@ -1,0 +1,9 @@
+{
+  "page": 19,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page contains a newspaper article and small compact box score for Ohio State (60) vs Indiana (45), played 1948-02-23 at the Coliseum, plus a separate season-cumulative 'Ohio State Basketball Scoring' stats table (not a single-game box score, correctly excluded). The compact per-game box score's FG/FT/PF/TP columns are cramped and low-resolution in the scan; attempted transcription produced internally inconsistent free-throw made/attempted values (made exceeding attempted for some players depending on column-order assumption) and the player-points sums did not checksum against the final scores (Ohio State players summed to ~61 vs official 60; Indiana players summed to ~41 vs official 45). Per instructions, skipping rather than guessing/inventing values. Game info (date 1948-02-23, opponent Indiana, OSU 60-Indiana 45) is legible from the article header but full player lines could not be transcribed confidently within the single allowed read."
+    }
+  ]
+}

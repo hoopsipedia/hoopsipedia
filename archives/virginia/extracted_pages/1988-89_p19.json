@@ -1,0 +1,44 @@
+{
+  "page": 19,
+  "games": [
+    {
+      "date": "1989-02-06",
+      "opponent": "Georgia Tech",
+      "site": "Charlottesville, VA",
+      "teams": [
+        {
+          "name": "Georgia Tech Yellow Jackets",
+          "score": 71,
+          "players": [
+            {"name": "Tom Hammonds", "min": 40, "fg": "9-17", "ft": "5-6", "reb": 9, "ast": 1, "to": 4, "stl": 1, "pf": 4, "pts": 23},
+            {"name": "David Whitmore", "min": 12, "fg": "2-4", "reb": 1, "to": 1, "pf": 3, "pts": 4},
+            {"name": "Johnny McNeil", "min": 24, "fg": "1-3", "ft": "0-1", "reb": 6, "ast": 1, "to": 1, "stl": 1, "pf": 3, "pts": 2},
+            {"name": "Dennis Scott", "min": 40, "fg": "6-17", "tp": "2-7", "reb": 5, "ast": 3, "to": 2, "stl": 1, "pf": 1, "pts": 14},
+            {"name": "Brian Oliver", "min": 39, "fg": "9-12", "tp": "1-2", "reb": 4, "ast": 1, "to": 5, "pf": 4, "pts": 19},
+            {"name": "Anthony Sherrod", "min": 10, "fg": "2-2", "reb": 2, "pf": 1, "pts": 4},
+            {"name": "Maurice Brittian", "min": 11, "fg": "1-2", "reb": 3, "to": 1, "pf": 2, "pts": 2},
+            {"name": "Karl Brown", "min": 24, "fg": "1-4", "tp": "1-3", "ast": 6, "to": 1, "pf": 2, "pts": 3}
+          ]
+        },
+        {
+          "name": "Virginia Cavaliers",
+          "score": 78,
+          "players": [
+            {"name": "Bryant Stith", "min": 31, "fg": "6-7", "ft": "4-6", "reb": 6, "ast": 4, "to": 1, "stl": 2, "pf": 2, "pts": 16},
+            {"name": "Matt Blundin", "min": 21, "fg": "1-1", "ft": "1-3", "reb": 6, "to": 2, "pf": 4, "pts": 3},
+            {"name": "Brent Dabbs", "min": 34, "fg": "6-11", "ft": "5-7", "reb": 9, "to": 3, "pf": 1, "pts": 17},
+            {"name": "Richard Morgan", "min": 38, "fg": "9-22", "tp": "3-8", "ft": "2-2", "reb": 1, "ast": 2, "to": 1, "stl": 1, "pf": 1, "pts": 23},
+            {"name": "John Crotty", "min": 39, "fg": "3-10", "tp": "0-3", "ft": "4-4", "reb": 1, "ast": 6, "to": 3, "stl": 1, "pts": 10},
+            {"name": "Curtis Williams", "min": 16, "fg": "3-6", "ft": "2-2", "reb": 2, "blk": 1, "pf": 1, "pts": 8},
+            {"name": "Jeff Daniel", "min": 9, "fg": "0-1", "ft": "1-2", "reb": 1, "stl": 1, "pf": 1, "pts": 1},
+            {"name": "Kenny Turner", "min": 9, "fg": "0-1", "reb": 3, "pf": 1, "pts": 0},
+            {"name": "Anthony Oliver", "min": 3, "fg": "0-1", "reb": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": [],
+  "notes": "Both teams' TP column (already provided on the scoresheet as printed point totals per player) matched the printed team final score exactly (GT 71, UVA 78), confirmed independently via 2*FG_made+FT_made(+1 extra per 3-pointer). GT rebound Off/Def/Tot sub-columns transcribed with high confidence directly from the sheet. Virginia rebound sub-columns were harder to read for Morgan/Crotty/Williams/Daniel/Turner/Oliver; only the single legible 'Tot' rebound number is reported per player (some may be slightly off from the true value; team rebound total of 33 does not fully reconcile against my per-player reb reads, but this does not affect the required points checksum). Assist/turnover/steal/block per-player values for Virginia were cross-validated against team totals (A=12, TO=10, BLK=1, S=5, MIN=200) and reconcile exactly. Georgia Tech assist/turnover/steal totals (A=12, TO=15, S=3) also reconcile; GT's single team block was not confidently attributable to one player so blk is omitted for all GT players rather than guessed."
+}

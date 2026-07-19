@@ -1,0 +1,47 @@
+{
+  "page": 2,
+  "games": [
+    {
+      "date": "1933-12-16",
+      "opponent": "University of Western Ontario",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 41,
+          "players": [
+            {"name": "Whitlinger", "pf": 3, "pts": 4},
+            {"name": "Low", "pf": 0, "pts": 2},
+            {"name": "Paclow", "pf": 0, "pts": 5},
+            {"name": "Freshwater", "pf": 0, "pts": 2},
+            {"name": "Hosket", "pf": 2, "pts": 10},
+            {"name": "Rosequist", "pf": 1, "pts": 0},
+            {"name": "Beltner", "pf": 1, "pts": 2},
+            {"name": "Wendt", "pf": 1, "pts": 0},
+            {"name": "Conrad", "pf": 0, "pts": 13},
+            {"name": "Fisher", "pf": 0, "pts": 0},
+            {"name": "Wilson", "pf": 0, "pts": 0},
+            {"name": "Rhoades", "pf": 0, "pts": 2},
+            {"name": "Thies", "pf": 1, "pts": 1}
+          ]
+        },
+        {
+          "name": "University of Western Ontario",
+          "score": 20,
+          "players": [
+            {"name": "Wilson", "pf": 0, "pts": 0},
+            {"name": "Garrett", "pf": 0, "pts": 6},
+            {"name": "Zavitz", "pf": 0, "pts": 0},
+            {"name": "Fletcher", "pf": 1, "pts": 2},
+            {"name": "Whitwill", "pf": 1, "pts": 6},
+            {"name": "Gettas", "pf": 1, "pts": 0},
+            {"name": "Rider", "pf": 3, "pts": 0},
+            {"name": "Cherniak", "pf": 0, "pts": 0},
+            {"name": "Hogan", "pf": 1, "pts": 6}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

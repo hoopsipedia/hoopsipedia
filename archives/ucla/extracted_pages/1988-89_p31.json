@@ -1,0 +1,9 @@
+{
+  "page": 31,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Official NCAA box score for UCLA vs North Carolina, 3/19/89 (The Omni, Atlanta), NCAA Tournament Sweet 16. Team final scores are clearly legible (UCLA 52+29=81, North Carolina 44+44=88), but the dense typewriter-grid player stat lines (FG/3FG/FT made-attempted columns, especially for North Carolina's bench: Williams, Lebo, Chilcutt, Davis, Denny) could not be reconciled to a confident checksum against team point totals in a single read pass -- attempted arithmetic reconciliation (points = 2*(FGM-3FGM)+3*3FGM+FTM) produced inconsistent results for several North Carolina players, and the sheet shows apparent jersey-number duplication suggesting misreads. Per instructions, skipping rather than guessing at individual player stats for a real historical game."
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "page": 22,
+  "games": [
+    {
+      "date": "1956-03-03",
+      "opponent": "Michigan State",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 96,
+          "players": [
+            {"name": "Howard", "fg": "5-12", "ft": "2-4", "reb": 15, "pf": 3, "pts": 12},
+            {"name": "Laughlin", "fg": "5-15", "ft": "0-0", "reb": 7, "pf": 3, "pts": 10},
+            {"name": "Kelley", "fg": "4-7", "ft": "0-0", "reb": 13, "pf": 4, "pts": 8},
+            {"name": "Ellis", "fg": "6-14", "ft": "9-11", "reb": 6, "pf": 3, "pts": 21},
+            {"name": "Freeman", "fg": "15-28", "ft": "13-14", "reb": 1, "pf": 1, "pts": 43},
+            {"name": "Slout", "fg": "0-1", "ft": "0-0", "reb": 1, "pf": 0, "pts": 0},
+            {"name": "Millard", "fg": "1-1", "ft": "0-0", "reb": 0, "pf": 0, "pts": 2}
+          ]
+        },
+        {
+          "name": "Michigan State",
+          "score": 84,
+          "players": [
+            {"name": "McCoy", "fg": "9-27", "ft": "3-7", "reb": 6, "pf": 2, "pts": 21},
+            {"name": "Ferguson", "fg": "3-9", "ft": "0-0", "reb": 7, "pf": 2, "pts": 6},
+            {"name": "Peterson", "fg": "6-18", "ft": "3-4", "reb": 12, "pf": 0, "pts": 15},
+            {"name": "Godfrey", "fg": "8-20", "ft": "2-2", "reb": 3, "pf": 4, "pts": 18},
+            {"name": "Wilson", "fg": "1-4", "ft": "2-2", "reb": 0, "pf": 2, "pts": 4},
+            {"name": "Quiggle", "fg": "5-10", "ft": "0-3", "reb": 6, "pf": 5, "pts": 10},
+            {"name": "Hedden", "fg": "4-7", "ft": "2-5", "reb": 4, "pf": 0, "pts": 10},
+            {"name": "Bencie", "fg": "0-2", "ft": "0-0", "reb": 2, "pf": 1, "pts": 0},
+            {"name": "Lux", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

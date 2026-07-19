@@ -1,0 +1,41 @@
+{
+  "page": 23,
+  "games": [
+    {
+      "date": "1976-02-20",
+      "opponent": "Arizona Wildcats",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 65,
+          "players": [
+            {"name": "Berry", "fg": "7-13", "ft": "3-3", "reb": 11, "pts": 17},
+            {"name": "Gray", "fg": "1-6", "ft": "3-6", "reb": 5, "pts": 5},
+            {"name": "Patterson", "fg": "2-4", "ft": "0-0", "reb": 3, "pts": 4},
+            {"name": "Williams", "fg": "4-9", "ft": "2-2", "reb": 2, "pts": 10},
+            {"name": "Davis, D", "fg": "3-6", "ft": "0-0", "reb": 1, "pts": 6},
+            {"name": "Cacy", "fg": "1-3", "ft": "0-1", "reb": 2, "pts": 2},
+            {"name": "Slaughter", "fg": "9-10", "ft": "1-2", "reb": 3, "pts": 19},
+            {"name": "Davis, S", "fg": "1-1", "ft": "0-0", "reb": 2, "pts": 2}
+          ]
+        },
+        {
+          "name": "Arizona Wildcats",
+          "score": 67,
+          "players": [
+            {"name": "Traylor", "fg": "3-9", "ft": "0-0", "reb": 2, "pts": 6},
+            {"name": "Fleming", "fg": "6-10", "ft": "4-6", "reb": 11, "pts": 16},
+            {"name": "Elliott", "fg": "8-13", "ft": "7-9", "reb": 6, "pts": 23},
+            {"name": "Harris", "fg": "3-13", "ft": "1-2", "reb": 8, "pts": 7},
+            {"name": "Rappis", "fg": "4-13", "ft": "0-0", "reb": 1, "pts": 8},
+            {"name": "Myles", "fg": "2-8", "ft": "3-4", "reb": 3, "pts": 7},
+            {"name": "Gordy", "fg": "0-0", "ft": "0-0", "reb": 0, "pts": 0},
+            {"name": "Maxey", "fg": "0-0", "ft": "0-0", "reb": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

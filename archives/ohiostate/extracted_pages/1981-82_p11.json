@@ -1,0 +1,9 @@
+{
+  "page": 11,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Dec 29, 1981 game vs Washington State at St. John Arena (Ohio State 63, Washington State 54 per team TOTALS rows and scoreboard, both of which arithmetically reconcile: OSU 2*19+25=63 matches printed TOTALS TP and 35+28 half-score sum; WSU 2*23+9-ish and half-score sum ~28+26=54). Washington State's individual player rows are legible and independently sum to 54, checksumming cleanly. However, several Ohio State bench player rows (Taylor, and roughly 5 further reserves below him, including at least one crossed-out/DNP row) are cramped, faint handwritten entries where FT/FTA and some FG digits could not be read with confidence independently of the team total (attempts to construct plausible bench values only reconciled with 63 by fitting to the target rather than honest independent reading, which risks invented values). Because a per-team, per-player checksum could not be honestly verified for Ohio State, the whole game is skipped rather than partially transcribed."
+    }
+  ]
+}

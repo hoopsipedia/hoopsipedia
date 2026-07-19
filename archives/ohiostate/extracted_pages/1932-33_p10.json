@@ -1,0 +1,9 @@
+{
+  "page": 10,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page is a newspaper clipping for Ohio State vs Western Reserve, Jan. 27, 1933 (Cleveland), final score 43-28 (confirmed by both the header score box 'OHIO 43 OPP 28' and article text). A small 'Lineup' box score table is present with columns B. (baskets made) F. (free throws made) T. (total points), but the scan resolution is too low to confidently read individual player values for several rows (Hosket, Beltner, Schneerer, Burke appear blank/illegible; Hinchman's total is unreadable). Only a few rows (Colburn 6-3-15, Mattison, Conrad, Wilson, Charllip 10, Berwald 5, Finnigan 8, Cohen 3, Wiggers 2) are legible, and team totals (18-7-43 / 12-4-28) do check out via pts=2*fg+ft, but transcribing the remaining illegible individual cells would require guessing. Skipping the whole game rather than risk invented per-player stats; only the final score and date/opponent are reliably known from this page."
+    }
+  ]
+}

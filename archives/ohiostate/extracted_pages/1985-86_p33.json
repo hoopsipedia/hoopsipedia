@@ -1,0 +1,9 @@
+{
+  "page": 33,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "1986 NIT Semifinal, March 24 1986, Madison Square Garden: Louisiana Tech vs Ohio State. Louisiana Tech's full box score is clean and legible and checksums perfectly (player TP sum 13+18+8+3+10+4+10=66 matches team final score 66; MIN/FG/FGA/FT/FTA/REB/PF/A/TO/BLK/S column sums all match the printed TOTALS row exactly). However, four Ohio State player rows (Hopson, Wilson, Lomax, and Moore) are obscured by dark scan smudging/shading over the numeric cells and cannot be transcribed confidently -- these are likely among Ohio State's top scorers, so guessing would risk inventing values. Because per-player figures for those rows are unreadable, the Ohio State side cannot be checksummed against its final score of 79, so per instructions the whole game is skipped rather than submitting a partial/guessed box score."
+    }
+  ]
+}

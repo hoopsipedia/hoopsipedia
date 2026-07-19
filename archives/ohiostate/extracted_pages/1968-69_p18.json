@@ -1,0 +1,44 @@
+{
+  "page": 18,
+  "games": [
+    {
+      "date": "1969-02-11",
+      "opponent": "Purdue Boilermakers",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 88,
+          "players": [
+            {"name": "Howell", "fg": "3-12", "ft": "0-0", "reb": 6, "pf": 1, "pts": 6},
+            {"name": "Cleamons", "fg": "8-9", "ft": "5-5", "reb": 8, "pf": 2, "pts": 21},
+            {"name": "Sorenson", "fg": "8-14", "ft": "8-12", "reb": 11, "pf": 4, "pts": 24},
+            {"name": "Finney", "fg": "9-12", "ft": "10-10", "reb": 5, "pf": 1, "pts": 28},
+            {"name": "Meadors", "fg": "2-4", "ft": "3-4", "reb": 0, "pf": 2, "pts": 7},
+            {"name": "Smith", "fg": "0-2", "ft": "0-0", "reb": 0, "pf": 2, "pts": 0},
+            {"name": "Miller", "fg": "1-4", "ft": "0-0", "reb": 3, "pf": 0, "pts": 2},
+            {"name": "Barclay", "fg": "0-1", "ft": "0-0", "reb": 1, "pf": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Purdue Boilermakers",
+          "score": 85,
+          "players": [
+            {"name": "Faerber", "fg": "2-2", "ft": "2-2", "reb": 6, "pf": 4, "pts": 6},
+            {"name": "Gilliam", "fg": "5-13", "ft": "0-1", "reb": 9, "pf": 2, "pts": 10},
+            {"name": "Davis", "fg": "2-4", "ft": "0-0", "reb": 4, "pf": 4, "pts": 4},
+            {"name": "Keller", "fg": "5-10", "ft": "2-2", "reb": 3, "pf": 4, "pts": 12},
+            {"name": "Mount", "fg": "16-27", "ft": "3-5", "reb": 6, "pf": 2, "pts": 35},
+            {"name": "Johnson", "fg": "0-1", "ft": "0-1", "reb": 1, "pf": 0, "pts": 0},
+            {"name": "Weatherford", "fg": "5-9", "ft": "0-0", "reb": 0, "pf": 0, "pts": 10},
+            {"name": "Bedford", "fg": "0-2", "ft": "0-0", "reb": 2, "pf": 2, "pts": 0},
+            {"name": "Kaufman", "fg": "0-1", "ft": "0-0", "reb": 1, "pf": 2, "pts": 0},
+            {"name": "Reasoner", "fg": "1-5", "ft": "0-1", "reb": 2, "pf": 4, "pts": 2},
+            {"name": "Taylor", "fg": "3-3", "ft": "0-1", "reb": 3, "pf": 1, "pts": 6}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

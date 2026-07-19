@@ -1,0 +1,9 @@
+{
+  "page": 5,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Ohio State at Virginia Tech, Dec 17 1973 (Official Western Conference Basketball Box Score). Final score unambiguous (67-68, also confirmed by quarter breakdown 32+35=67). Virginia Tech's line checksums perfectly: player points (16,14,6,18,4,8,2,0,0,0) sum to 68, and FGA/FG/FT columns sum to team totals (72/31/6) exactly. Ohio State's FG column is illegible/inconsistent for the Wolfe, Gerhard, and Repella rows (all read as FG=4, which cannot be correct): summing all player FG as read gives 35 and points 75, but the team totals row and final score require FG=31 and points=67. The needed correction (likely one or more of those three rows misread due to faint/ambiguous handwriting) could not be determined without guessing digits, so the entire game was skipped rather than transcribed with an inconsistent Ohio State line."
+    }
+  ]
+}

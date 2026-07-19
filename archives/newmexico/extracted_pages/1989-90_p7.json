@@ -1,0 +1,9 @@
+{
+  "page": 7,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page shows one game (New Mexico at Louisville, 1989-12-16, Freedom Hall) with both official typed box scores stacked on the page, but the dense multi-column numeric fields (Tot FG made/att, 3-pt FG made/att, FT made/att, rebounds OFF/DEF/TOT, PF, TP per player) are too garbled/overlapping in the scan to transcribe individual player lines confidently without risking fabricated numbers (e.g. cells rendering as '13*4', merged digit strings). Only the team-level final score is legible with confidence: New Mexico 49, Louisville 78 (per the 'SCORE BY PERIODS' summary: New Mexico 31+18=49, Louisville 29+49=78, consistent with each team's TOTALS-row TP figure). Skipping per-player transcription rather than guess at illegible FG/FT/PTS splits."
+    }
+  ]
+}

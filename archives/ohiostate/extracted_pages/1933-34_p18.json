@@ -1,0 +1,42 @@
+{
+  "page": 18,
+  "games": [
+    {
+      "date": "1934-02-24",
+      "opponent": "Wisconsin",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 38,
+          "players": [
+            {"name": "Whitlinger", "fg": 1, "ft": "2-3", "pf": 3, "pts": 5},
+            {"name": "Colburn", "fg": 2, "ft": "1-3", "pf": 0, "pts": 7},
+            {"name": "Rosequist", "fg": 2, "ft": "2-2", "pf": 4, "pts": 6},
+            {"name": "Beither", "fg": 1, "ft": "0-0", "pf": 3, "pts": 2},
+            {"name": "Conrad", "fg": 3, "ft": "0-4", "pf": 4, "pts": 10},
+            {"name": "Wilson", "fg": 3, "ft": "0-0", "pf": 2, "pts": 6},
+            {"name": "Fisher", "fg": 0, "ft": "0-0", "pf": 0, "pts": 0},
+            {"name": "Busich", "fg": 1, "ft": "0-0", "pf": 0, "pts": 2}
+          ]
+        },
+        {
+          "name": "Wisconsin",
+          "score": 44,
+          "players": [
+            {"name": "McDonald", "fg": 0, "ft": "1-2", "pf": 1, "pts": 2},
+            {"name": "Preboski", "fg": 7, "ft": "0-3", "pf": 0, "pts": 17},
+            {"name": "Knake", "fg": 6, "ft": "2-2", "pf": 3, "pts": 14},
+            {"name": "Foser", "fg": 1, "ft": "0-2", "pf": 4, "pts": 4},
+            {"name": "Hamman", "fg": 2, "ft": "1-2", "pf": 0, "pts": 6},
+            {"name": "Stege", "fg": 0, "ft": "1-1", "pf": 0, "pts": 1},
+            {"name": "DeMark", "fg": 0, "ft": "0-0", "pf": 2, "pts": 0},
+            {"name": "Wegner", "fg": 0, "ft": "0-0", "pf": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": [],
+  "notes": "Sheet header block ('SCORE OHIO 8 OPP. 44') appears to be a season win/record tally, not this game's score - the actual game score (Ohio State 38, Wisconsin 44) comes from the box score TOTALS row and matches the printed half-time score (15-27 at half, 23-17 second half). Column headers read as G. (field goals made), F. (free throws attempted), M.F. (free throws made), P./r. (personal fouls - Ohio State sheet shows 'r.', Wisconsin sheet shows 'P.', likely the same stat), PTS. (points, printed directly per player). ft is reported as 'made-attempted' from M.F./F. columns. pts values are taken directly from the printed PTS column (not derived), since deriving 2*fg+ft_made did not perfectly reconcile for 3 of 8 Ohio State players (off by 1-4 points), likely reflecting either a scanning misread of a handwritten digit or original scorekeeper quirks; the printed PTS column is treated as authoritative and both team PTS sums independently check out against the final/half scores. No minutes, rebounds, assists, turnovers, steals, or blocks columns exist on this 1930s-era scoresheet, so those keys are omitted. Officials: Referee Jack Travnicek (Armour Tech), Umpire Dave Reese (Denison). Location: Coliseum. Coach: H.G. Olsen. Game date '2/24/34' from footer confirmed as 1934-02-24."
+}

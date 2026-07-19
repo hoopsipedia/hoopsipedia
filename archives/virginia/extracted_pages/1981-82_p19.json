@@ -1,0 +1,9 @@
+{
+  "page": 19,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Handwritten Metro Conference box score, Virginia at Louisville (Freedom Hall), attendance 16,613, final score by periods Virginia 38-36=74, Louisville 35-21=56. Louisville's side reconciles cleanly (sum of player points = 56, matches team totals row and final score, using computed pts = 2*fg+ft). Virginia's side does not reconcile: team totals row shows FG 26 / FT 22 / TP 74 (internally consistent: 2*26+22=74), but individual player FG/TP digits are cramped and ambiguous (e.g. Wilson, Othell and Jones, Jeff rows have FG/FT/TP figures that could plausibly be read multiple ways), and every reasonable reading of the individual player lines sums to 72-73 points rather than the required 74. Rather than guess which digit(s) are misread to force a match, skipping the whole game per instructions to be ruthless about skipping over guessing."
+    }
+  ]
+}

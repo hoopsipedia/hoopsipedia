@@ -1,0 +1,49 @@
+{
+  "page": 15,
+  "games": [
+    {
+      "date": "1986-01-14",
+      "opponent": "Penn",
+      "site": "Charlottesville, VA",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 81,
+          "players": [
+            {"name": "Andrew Kennedy", "min": "28", "fg": "4-6", "ft": "3-4", "reb": 7, "ast": 3, "pf": 0, "pts": 11},
+            {"name": "Tom Sheehey", "min": "24", "fg": "0-4", "reb": 4, "ast": 3, "pf": 4, "to": 3, "pts": 0},
+            {"name": "Olden Polynice", "min": "34", "fg": "8-14", "ft": "4-7", "reb": 11, "pf": 1, "to": 2, "blk": 3, "pts": 20},
+            {"name": "Tom Calloway", "min": "26", "fg": "3-8", "ft": "3-5", "reb": 3, "ast": 4, "pf": 1, "to": 2, "blk": 1, "pts": 9},
+            {"name": "Mel Kennedy", "min": "29", "fg": "8-10", "ft": "2-2", "reb": 4, "ast": 1, "pf": 3, "to": 1, "blk": 1, "pts": 18},
+            {"name": "John Johnson", "min": "11", "fg": "0-3", "reb": 1, "ast": 2, "pf": 1, "to": 2, "pts": 0},
+            {"name": "Richard Morgan", "min": "11", "fg": "2-4", "pts": 4},
+            {"name": "Joune Dyslin", "min": "15", "fg": "2-2", "ft": "2-2", "reb": 4, "pf": 5, "blk": 1, "pts": 6},
+            {"name": "Lance Blanks", "min": "8", "fg": "2-3", "ft": "2-2", "reb": 2, "to": 1, "pts": 6},
+            {"name": "Jeff Daniel", "min": "6", "fg": "0-1", "reb": 2, "blk": 1, "pts": 0},
+            {"name": "Darrick Simms", "min": "6", "fg": "3-3", "pf": 2, "pts": 6},
+            {"name": "Anthony Solomon", "min": "2", "ft": "1-2", "pts": 1}
+          ]
+        },
+        {
+          "name": "Penn Quakers",
+          "score": 52,
+          "players": [
+            {"name": "Tyrone Pitts", "min": "36", "fg": "2-9", "ft": "2-7", "reb": 8, "pf": 5, "to": 2, "pts": 6},
+            {"name": "Sour Stovall", "min": "30", "fg": "3-8", "ft": "0-0", "reb": 7, "ast": 1, "pf": 3, "to": 2, "pts": 6},
+            {"name": "Bruce Lefkowitz", "min": "38", "fg": "5-13", "ft": "8-10", "reb": 10, "pf": 4, "to": 5, "pts": 18},
+            {"name": "Perry Bromwell", "min": "10", "fg": "0-3", "reb": 0, "ast": 2, "pf": 5, "to": 4, "pts": 0},
+            {"name": "Chas Elzey", "min": "40", "fg": "6-10", "ft": "2-2", "reb": 1, "pf": 2, "pts": 14},
+            {"name": "John Wilson", "min": "20", "fg": "2-2", "ast": 4, "pf": 1, "pts": 4},
+            {"name": "Neil Bernstein", "min": "14", "fg": "2-6", "ast": 1, "pf": 3, "pts": 4},
+            {"name": "Walt Frazier", "min": "10", "fg": "0-1", "ast": 1, "to": 2, "pts": 0},
+            {"name": "Abraham Okoroduow", "min": "2", "fg": "0-1", "pts": 0},
+            {"name": "Marshall Uzzle", "min": "0", "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true,
+      "notes": "Both team checksums verified against final box (Virginia 81, Penn 52). Steals column header cut off at right edge of scan and digits ambiguous, so 'stl' omitted for all players. FG/FT columns split into made-attempted per source columns (no pts=2*fg+ft computation needed; TP column present)."
+    }
+  ],
+  "skipped": []
+}

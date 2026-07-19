@@ -1,0 +1,11 @@
+{
+  "page": 14,
+  "games": [],
+  "skipped": [
+    {
+      "date": "1948-02-07",
+      "opponent": "Minnesota",
+      "reason": "Newspaper clipping box score (Ohio State 55, Minnesota 68, at Minneapolis). Ohio State's 7-player line (Schnittker, Donham, Raidiger, Burkholder, Brown, Johnston, Winter) with columns FG / FT-made / FT-missed / PF checksums perfectly to the final score (2*16 FG + 23 FT-made = 55, matching team totals row 16-23-5-22 and article text confirming Schnittker 10 FG + 11 FT = 31 pts). However Minnesota's mirrored table (Grant, Apponzeller, McIntyre, Kernan, Holewa, Wheelaug/Wheeler, Tomcryk) is smaller/blurrier print and the individually transcribed digits do not self-consistently sum to either the printed totals row or the final score of 68, despite McIntyre's computed 27 pts (2*9+9) matching the article's claim of McIntyre scoring 27. Since the game record requires both teams' box scores and Minnesota's column values cannot be confidently reconciled without risking invented digits, skipping the whole game per the ruthless-skip rule rather than shipping a partially-guessed box score."
+    }
+  ]
+}

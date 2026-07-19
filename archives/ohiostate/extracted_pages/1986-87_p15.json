@@ -1,0 +1,9 @@
+{
+  "page": 15,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page contains a handwritten official NCAA box score for Ohio State vs. Indiana (St. John Arena, Columbus, Jan 1987), but the scan is heavily blurred/smudged with overlapping handwriting and strikethroughs in the numeric columns (FG-FGA, FT-FTA, rebounds, TP, etc.) for both the Indiana (visitors) and Ohio State (home) rosters. Digits could not be read with confidence sufficient to pass a player-point checksum against the team final scores, so the game was skipped rather than guessed at, per instructions to be ruthless about illegible sheets."
+    }
+  ]
+}

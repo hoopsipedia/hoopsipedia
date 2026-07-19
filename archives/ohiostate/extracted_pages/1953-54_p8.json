@@ -1,0 +1,45 @@
+{
+  "page": 8,
+  "games": [
+    {
+      "date": "1953-12-29",
+      "opponent": "Denver",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 74,
+          "players": [
+            {"name": "Vaughn F", "fg": "0-3", "ft": "1-3", "reb": 4, "pf": 3, "pts": 1},
+            {"name": "Miller F", "fg": "4-10", "ft": "7-10", "reb": 11, "pf": 0, "pts": 15},
+            {"name": "Ebert C", "fg": "9-17", "ft": "5-7", "reb": 9, "pf": 4, "pts": 23},
+            {"name": "Freeman G", "fg": "8-21", "ft": "4-9", "reb": 1, "pf": 2, "pts": 20},
+            {"name": "Cook G", "fg": "1-10", "ft": "3-3", "reb": 2, "pf": 2, "pts": 5},
+            {"name": "Kelley F", "fg": "1-1", "ft": "2-2", "reb": 7, "pf": 2, "pts": 4},
+            {"name": "Ellis G", "fg": "3-3", "ft": "0-0", "reb": 2, "pf": 0, "pts": 6},
+            {"name": "Smith G", "fg": "0-2", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Wigton F", "fg": "0-1", "ft": "0-0", "reb": 1, "pf": 0, "pts": 0},
+            {"name": "Ropes C", "fg": "0-1", "ft": "0-0", "reb": 3, "pf": 0, "pts": 0},
+            {"name": "Keeling G", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Denver",
+          "score": 56,
+          "players": [
+            {"name": "Rhone F", "fg": "5-14", "ft": "1-2", "reb": 11, "pf": 3, "pts": 11},
+            {"name": "Patton F", "fg": "5-16", "ft": "4-6", "reb": 13, "pf": 5, "pts": 14},
+            {"name": "McClure C", "fg": "2-6", "ft": "1-6", "reb": 3, "pf": 5, "pts": 5},
+            {"name": "Helzer G", "fg": "3-11", "ft": "2-2", "reb": 6, "pf": 3, "pts": 8},
+            {"name": "Russ G", "fg": "5-9", "ft": "0-0", "reb": 2, "pf": 5, "pts": 10},
+            {"name": "McCallum G", "fg": "2-4", "ft": "2-2", "reb": 1, "pf": 2, "pts": 6},
+            {"name": "Furman G", "fg": "1-3", "ft": "0-1", "reb": 1, "pf": 1, "pts": 2},
+            {"name": "Krumm C", "fg": "0-1", "ft": "0-2", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Brawner F", "fg": "0-1", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

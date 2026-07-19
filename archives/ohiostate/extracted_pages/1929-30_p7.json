@@ -1,0 +1,43 @@
+{
+  "page": 7,
+  "games": [
+    {
+      "date": "1930-01-25",
+      "opponent": "Minnesota",
+      "notes": "Official box score sheet. Columns are labeled B / F / MF / P / Total = FG made / FT made / FT missed (Missed Free) / Personal fouls / Total points. Total points column is printed on the sheet (not computed by us) and was used directly for pts and for checksum. FG attempts are not recorded on this sheet (only made baskets, column B), so fg is reported as makes-only (no attempted figure invented). FT attempted was derived as F(made)+MF(missed) since both counts are given. Minnesota row before 'Schoening, g' has a smudged/stylized first letter transcribed as best-effort 'Rondy'; low confidence on exact spelling but math/points checksum for the row and team total both confirm the numeric values are read correctly.",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 30,
+          "players": [
+            {"name": "Ervin, f", "fg": "3", "ft": "0-1", "pf": 0, "pts": 6},
+            {"name": "Hinchman, f", "fg": "2", "ft": "0-1", "pf": 1, "pts": 4},
+            {"name": "Evans, f", "fg": "2", "ft": "1-1", "pf": 0, "pts": 5},
+            {"name": "Condon, c", "fg": "1", "ft": "2-3", "pf": 0, "pts": 4},
+            {"name": "Trigley, c", "fg": "3", "ft": "0-1", "pf": 0, "pts": 6},
+            {"name": "Fesler, g", "fg": "1", "ft": "1-1", "pf": 1, "pts": 3},
+            {"name": "Holcomb, g", "fg": "1", "ft": "0-2", "pf": 1, "pts": 2}
+          ]
+        },
+        {
+          "name": "Minnesota Golden Gophers",
+          "score": 19,
+          "players": [
+            {"name": "Loose, f (C)", "fg": "2", "ft": "0-0", "pf": 0, "pts": 4},
+            {"name": "Sommer, f", "fg": "2", "ft": "0-0", "pf": 1, "pts": 4},
+            {"name": "Karsener, f", "fg": "0", "ft": "0-0", "pf": 0, "pts": 0},
+            {"name": "Gadler, f", "fg": "0", "ft": "0-0", "pf": 2, "pts": 0},
+            {"name": "Nordgaard, c", "fg": "0", "ft": "0-0", "pf": 2, "pts": 0},
+            {"name": "Nowotny, c", "fg": "0", "ft": "0-0", "pf": 2, "pts": 0},
+            {"name": "Rondy, g", "fg": "4", "ft": "2-2", "pf": 1, "pts": 10},
+            {"name": "Schoening, g", "fg": "0", "ft": "1-4", "pf": 2, "pts": 1},
+            {"name": "Hutchison, g", "fg": "0", "ft": "0-0", "pf": 0, "pts": 0},
+            {"name": "Sommer, f/g", "fg": "0", "ft": "0-0", "pf": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

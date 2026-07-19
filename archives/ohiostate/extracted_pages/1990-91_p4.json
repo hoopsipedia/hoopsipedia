@@ -1,0 +1,9 @@
+{
+  "page": 4,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Ohio State vs Youngstown State, December 1, 1990, St. John Arena (page 4) — typed official box score with legible team-level totals (FG 30-75, 3FG 3-8, FT 4-10, final score 67 for Youngstown; OSU totals FG 38-61, 3FG 2-8, FT 34-38, TP 112), but individual player free-throw and ancillary-stat columns (PF/AST/TO/BLK/STL) could not be read with sufficient confidence at this scan resolution. Cross-checking computed player points (2*FG made + 3*3FG made + FT made) against legible team FG/3FG totals produced a free-throw reconciliation mismatch (individually-read FT-made values summed to 6 vs. the team total of 4), so any per-player line constructed would fail the required checksum against the final score. Skipped rather than guess at ambiguous digits, per instructions and the one-read limit."
+    }
+  ]
+}

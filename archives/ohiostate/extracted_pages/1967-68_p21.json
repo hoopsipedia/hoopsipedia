@@ -1,0 +1,48 @@
+{
+  "page": 21,
+  "games": [
+    {
+      "date": "1968-02-20",
+      "opponent": "Northwestern",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 87,
+          "players": [
+            {"name": "Smith", "fg": "5-9", "ft": "5-7", "pf": 5, "pts": 15},
+            {"name": "Hosket", "fg": "9-15", "ft": "5-7", "pf": 5, "pts": 23},
+            {"name": "Sorenson", "fg": "9-16", "ft": "4-6", "pf": 5, "pts": 22},
+            {"name": "Schmabel", "fg": "4-7", "ft": "2-2", "pf": 3, "pts": 10},
+            {"name": "Meadors", "fg": "4-5", "ft": "3-6", "pf": 1, "pts": 11},
+            {"name": "Howell", "fg": "0-2", "ft": "0-0", "pf": 3, "pts": 0},
+            {"name": "Barclay", "fg": "0-5", "ft": "0-0", "pf": 0, "pts": 0},
+            {"name": "Andreas", "fg": "0-0", "ft": "0-0", "pf": 0, "pts": 0},
+            {"name": "Swain", "fg": "1-1", "ft": "0-0", "pf": 0, "pts": 2},
+            {"name": "Barnard", "fg": "2-2", "ft": "0-0", "pf": 0, "pts": 4}
+          ]
+        },
+        {
+          "name": "Northwestern",
+          "score": 67,
+          "players": [
+            {"name": "Weaver", "fg": "4-11", "ft": "4-6", "pf": 3, "pts": 12},
+            {"name": "Adams", "fg": "3-11", "ft": "1-2", "pf": 2, "pts": 7},
+            {"name": "Sarno", "fg": "3-6", "ft": "0-2", "pf": 2, "pts": 6},
+            {"name": "Gamber", "fg": "4-14", "ft": "4-7", "pf": 3, "pts": 12},
+            {"name": "Kelley", "fg": "3-16", "ft": "3-4", "pf": 0, "pts": 9},
+            {"name": "Burke", "fg": "1-4", "ft": "0-1", "pf": 5, "pts": 2},
+            {"name": "Reeves", "fg": "1-5", "ft": "0-0", "pf": 1, "pts": 2},
+            {"name": "Davis", "fg": "2-4", "ft": "4-4", "pf": 2, "pts": 8},
+            {"name": "Saunders", "fg": "0-0", "ft": "1-2", "pf": 0, "pts": 1},
+            {"name": "Hurley", "fg": "0-3", "ft": "1-2", "pf": 0, "pts": 1},
+            {"name": "Bresnahan", "fg": "1-1", "ft": "0-0", "pf": 0, "pts": 2},
+            {"name": "Sutton", "fg": "2-3", "ft": "1-2", "pf": 0, "pts": 5},
+            {"name": "Bradof", "fg": "0-2", "ft": "0-0", "pf": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

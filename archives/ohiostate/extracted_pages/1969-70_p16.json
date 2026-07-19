@@ -1,0 +1,42 @@
+{
+  "page": 16,
+  "games": [
+    {
+      "date": "1970-01-26",
+      "opponent": "Georgia Tech",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 74,
+          "players": [
+            {"name": "Cleamons", "fg": "6-9", "ft": "9-10", "reb": 10, "pf": 0, "pts": 21},
+            {"name": "Andreas", "fg": "3-7", "ft": "3-3", "reb": 5, "pf": 1, "pts": 9},
+            {"name": "Sorenson", "fg": "9-15", "ft": "8-9", "reb": 8, "pf": 3, "pts": 26},
+            {"name": "Barclay", "fg": "4-8", "ft": "1-1", "reb": 1, "pf": 3, "pts": 9},
+            {"name": "Minor", "fg": "1-6", "ft": "3-4", "reb": 3, "pf": 4, "pts": 5},
+            {"name": "Spies", "fg": "2-3", "ft": "0-0", "reb": 0, "pf": 0, "pts": 4},
+            {"name": "Smith", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Georgia Tech",
+          "score": 71,
+          "players": [
+            {"name": "Mayer", "fg": "6-9", "ft": "4-5", "reb": 6, "pf": 4, "pts": 16},
+            {"name": "Seemer", "fg": "3-10", "ft": "0-0", "reb": 3, "pf": 2, "pts": 6},
+            {"name": "Tumkus", "fg": "11-22", "ft": "5-5", "reb": 8, "pf": 4, "pts": 27},
+            {"name": "Thorne", "fg": "4-9", "ft": "0-2", "reb": 7, "pf": 1, "pts": 8},
+            {"name": "Veryzer", "fg": "0-1", "ft": "0-0", "reb": 0, "pf": 2, "pts": 0},
+            {"name": "Wilson", "fg": "0-3", "ft": "0-0", "reb": 1, "pf": 0, "pts": 0},
+            {"name": "Hoggle", "fg": "5-7", "ft": "0-0", "reb": 0, "pf": 2, "pts": 10},
+            {"name": "Wright", "fg": "0-1", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Taylor", "fg": "2-2", "ft": "0-0", "reb": 1, "pf": 0, "pts": 4},
+            {"name": "Thompson", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 2, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

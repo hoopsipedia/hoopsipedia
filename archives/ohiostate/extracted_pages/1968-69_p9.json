@@ -1,0 +1,44 @@
+{
+  "page": 9,
+  "games": [
+    {
+      "date": "1968-12-30",
+      "opponent": "Washington",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 59,
+          "players": [
+            {"name": "Howell", "fg": "2-7", "ft": "2-3", "reb": 6, "pf": 0, "pts": 6},
+            {"name": "Cleamons", "fg": "2-9", "ft": "4-7", "reb": 11, "pf": 2, "pts": 8},
+            {"name": "Sorenson", "fg": "6-14", "ft": "4-7", "reb": 8, "pf": 4, "pts": 16},
+            {"name": "Finney", "fg": "4-7", "ft": "4-5", "reb": 3, "pf": 0, "pts": 12},
+            {"name": "Meadors", "fg": "1-6", "ft": "7-9", "reb": 2, "pf": 1, "pts": 9},
+            {"name": "Smith", "fg": "0-1", "ft": "0-1", "reb": 2, "pf": 2, "pts": 0},
+            {"name": "Barclay", "fg": "2-2", "ft": "2-2", "reb": 2, "pf": 2, "pts": 6},
+            {"name": "Miller", "fg": "1-4", "ft": "0-0", "reb": 1, "pf": 0, "pts": 2},
+            {"name": "Schnabel", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 2, "pts": 0}
+          ]
+        },
+        {
+          "name": "Washington",
+          "score": 64,
+          "players": [
+            {"name": "Irvine", "fg": "11-17", "ft": "1-3", "reb": 6, "pf": 3, "pts": 23},
+            {"name": "Woolcock", "fg": "1-8", "ft": "0-1", "reb": 7, "pf": 4, "pts": 2},
+            {"name": "Bond", "fg": "3-7", "ft": "6-9", "reb": 4, "pf": 5, "pts": 12},
+            {"name": "Stone", "fg": "4-10", "ft": "1-1", "reb": 2, "pf": 3, "pts": 9},
+            {"name": "Willenborg", "fg": "2-5", "ft": "0-0", "reb": 1, "pf": 3, "pts": 4},
+            {"name": "West", "fg": "4-5", "ft": "1-1", "reb": 2, "pf": 1, "pts": 9},
+            {"name": "Bullock", "fg": "1-1", "ft": "1-1", "reb": 7, "pf": 2, "pts": 3},
+            {"name": "Slettedahl", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 1, "pts": 0},
+            {"name": "Troyer", "fg": "0-1", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Larsen", "fg": "1-1", "ft": "0-0", "reb": 1, "pf": 1, "pts": 2}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

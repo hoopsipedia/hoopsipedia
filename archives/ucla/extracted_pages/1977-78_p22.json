@@ -1,0 +1,51 @@
+{
+  "page": 22,
+  "games": [
+    {
+      "date": "1978-02-18",
+      "opponent": "Washington",
+      "ucla_score": 104,
+      "opp_score": 64,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 104,
+          "players": [
+            {"name": "David Greenwood", "min": 29, "fg": "7-13", "ft": "6-8", "reb": 19, "pf": 3, "ast": 0, "to": 3, "blk": 2, "stl": 0, "pts": 20},
+            {"name": "James Wilkes", "min": 25, "fg": "1-6", "ft": "1-1", "reb": 4, "pf": 3, "ast": 2, "to": 2, "blk": 0, "stl": 1, "pts": 3},
+            {"name": "Gig Sims", "min": 24, "fg": "2-7", "ft": "0-0", "reb": 10, "pf": 3, "ast": 3, "to": 1, "blk": 7, "stl": 2, "pts": 4},
+            {"name": "Raymond Townsend", "min": 27, "fg": "6-15", "ft": "0-1", "reb": 6, "pf": 1, "ast": 6, "to": 0, "blk": 2, "stl": 7, "pts": 12},
+            {"name": "Roy Hamilton", "min": 28, "fg": "12-17", "ft": "2-2", "reb": 6, "pf": 0, "ast": 1, "to": 1, "blk": 0, "stl": 1, "pts": 26},
+            {"name": "Kiki Vandeweghe", "min": 14, "fg": "4-5", "ft": "3-3", "reb": 3, "pf": 0, "ast": 1, "to": 0, "blk": 0, "stl": 1, "pts": 11},
+            {"name": "Darrell Allums", "min": 16, "fg": "3-4", "ft": "0-0", "reb": 3, "pf": 4, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pts": 6},
+            {"name": "Brad Holland", "min": 12, "fg": "4-7", "ft": "2-2", "reb": 1, "pf": 3, "ast": 2, "to": 1, "blk": 0, "stl": 1, "pts": 10},
+            {"name": "Tony Anderson", "min": 10, "fg": "2-5", "ft": "2-2", "reb": 3, "pf": 1, "ast": 2, "to": 0, "blk": 0, "stl": 0, "pts": 6},
+            {"name": "Chris Lippert", "min": 7, "fg": "1-1", "ft": "2-2", "reb": 3, "pf": 0, "ast": 0, "to": 2, "blk": 0, "stl": 0, "pts": 4},
+            {"name": "Rennie Kelly", "min": 5, "fg": "0-2", "ft": "2-2", "reb": 1, "pf": 0, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Bill Leonard", "min": 3, "fg": "0-3", "ft": "0-0", "reb": 1, "pf": 2, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Washington Huskies",
+          "score": 64,
+          "players": [
+            {"name": "Mark Scott", "min": 25, "fg": "0-6", "ft": "0-0", "reb": 4, "pf": 1, "ast": 3, "to": 2, "blk": 0, "stl": 2, "pts": 0},
+            {"name": "Stan Walker", "min": 20, "fg": "2-12", "ft": "0-0", "reb": 5, "pf": 3, "ast": 1, "to": 1, "blk": 0, "stl": 2, "pts": 4},
+            {"name": "James Woods", "min": 30, "fg": "4-14", "ft": "2-5", "reb": 7, "pf": 4, "ast": 2, "to": 2, "blk": 3, "stl": 0, "pts": 10},
+            {"name": "Steve Matzen", "min": 26, "fg": "1-3", "ft": "0-0", "reb": 2, "pf": 2, "ast": 1, "to": 1, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Don Vaughn", "min": 21, "fg": "2-5", "ft": "4-4", "reb": 0, "pf": 2, "ast": 1, "to": 3, "blk": 0, "stl": 1, "pts": 8},
+            {"name": "Andra Griffin", "min": 23, "fg": "6-16", "ft": "0-0", "reb": 6, "pf": 2, "ast": 2, "to": 2, "blk": 1, "stl": 0, "pts": 12},
+            {"name": "Bob Fronk", "min": 22, "fg": "6-12", "ft": "3-3", "reb": 3, "pf": 1, "ast": 1, "to": 1, "blk": 0, "stl": 1, "pts": 15},
+            {"name": "Petur Gudmundsson", "min": 13, "fg": "5-9", "ft": "0-1", "reb": 3, "pf": 2, "ast": 1, "to": 1, "blk": 1, "stl": 1, "pts": 10},
+            {"name": "Mike Neill", "min": 3, "fg": "0-2", "ft": "0-0", "reb": 0, "pf": 0, "ast": 1, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Bart Hess", "min": 8, "fg": "1-1", "ft": "0-0", "reb": 0, "pf": 0, "ast": 1, "to": 0, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Scott Hartman", "min": 5, "fg": "0-0", "ft": "1-2", "reb": 1, "pf": 4, "ast": 0, "to": 0, "blk": 1, "stl": 0, "pts": 1},
+            {"name": "Marty Mattila", "min": 4, "fg": "0-0", "ft": "0-0", "reb": 1, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

@@ -1,0 +1,9 @@
+{
+  "page": 9,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "1979-12-29 Stanford at UCLA (Pauley Pavilion), final 60-92. UCLA side checksums perfectly (player pts sum to 92, matching FG 36-71/FT 20-28/REB totals exactly). Stanford (visitors) player point total sums to 58 vs team final score of 60 -- checksum fails. Stanford FG makes (23 vs team total 24), FGA (55 vs 56), and PF (20 vs 22) also each show small discrepancies vs the printed team totals row, consistent with one or more misread handwritten cells (most likely the Ward line) that could not be resolved confidently even after one re-read of the page. Per instructions, skipping rather than guessing corrected digit values."
+    }
+  ]
+}

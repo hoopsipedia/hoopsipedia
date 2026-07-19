@@ -1,0 +1,9 @@
+{
+  "page": 6,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Typed FINAL III computer box score for New Mexico @ Arizona State (Tempe, AZ), 12-05-90, final NM 54 - ASU 59. Team, date, opponent, and final score are legible, and the top of the New Mexico roster (Williams 3-6 FG/1-1 3pt/0-0 FT = 7 pts; Jaxon 5-7/0-0/4-9 = 14 pts; Longley 4-7/0-0/2-2 = 10 pts) individually checksum against their own printed TP values. However the dense multi-column stat block (REB/PF/TP/A/TO/BLK/S packed into narrow columns, two players per printed line-pair) could not be read with confidence for the remaining bench players on both teams. Cross-checking the printed team FG total (32-39 made-attempted) against the sum of individually read made/attempted values produced an impossible result (implied makes exceeding remaining attempts for the unread players), proving the column alignment for at least some rows was being misread. Per instructions to be ruthless about skipping rather than guessing, and since a second Read of the same scanned page would return identical pixel data (no higher resolution available), the full page is skipped rather than publishing a partially-fabricated/uncertain box score."
+    }
+  ]
+}

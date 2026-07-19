@@ -1,0 +1,46 @@
+{
+  "page": 14,
+  "games": [
+    {
+      "date": "1988-01-09",
+      "opponent": "Duke Blue Devils",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 59,
+          "players": [
+            {"name": "Kennedy, Mel", "min": "30", "fg": "4-15", "tp": "1-1", "ft": "2-2", "reb": 6, "ast": 1, "pf": 4, "to": 4, "pts": 11},
+            {"name": "Turner, Kenny", "min": "37", "fg": "2-6", "ft": "4-4", "reb": 5, "ast": 1, "pf": 2, "to": 2, "pts": 8},
+            {"name": "Batts, Bill", "min": "33", "fg": "3-4", "ft": "1-3", "reb": 7, "pf": 4, "stl": 1, "pts": 7},
+            {"name": "Johnson, John", "min": "34", "fg": "5-15", "tp": "0-2", "ft": "7-12", "reb": 6, "pf": 3, "ast": 2, "to": 1, "stl": 2, "pts": 17},
+            {"name": "Morgan, Richard", "min": "16", "fg": "1-11", "tp": "0-1", "reb": 4, "ast": 2, "to": 1, "stl": 1, "pts": 2},
+            {"name": "Daniel, Jeff", "min": "20", "fg": "1-4", "ft": "0-1", "reb": 3, "pf": 2, "pts": 2},
+            {"name": "Simms, Darrick", "min": "6", "fg": "3-4", "tp": "1-1", "pf": 1, "pts": 7},
+            {"name": "Crotty, John", "min": "24", "fg": "2-6", "tp": "1-4", "ft": "0-1", "reb": 4, "pf": 5, "ast": 2, "stl": 1, "pts": 5}
+          ]
+        },
+        {
+          "name": "Duke Blue Devils",
+          "score": 77,
+          "players": [
+            {"name": "Ferry, Danny", "min": "35", "fg": "10-16", "tp": "3-5", "ft": "6-6", "reb": 9, "ast": 5, "pf": 1, "to": 2, "pts": 29},
+            {"name": "King, Billy", "min": "33", "fg": "1-3", "ft": "1-4", "reb": 4, "pf": 2, "ast": 1, "to": 2, "blk": 1, "stl": 2, "pts": 3},
+            {"name": "Brickey, Robert", "min": "20", "fg": "2-9", "ft": "3-5", "reb": 6, "pf": 2, "ast": 1, "to": 3, "pts": 7},
+            {"name": "Snyder, Quin", "min": "29", "fg": "2-4", "tp": "1-2", "ft": "5-6", "reb": 4, "pf": 4, "ast": 4, "to": 2, "stl": 1, "pts": 10},
+            {"name": "Strickland, Kevin", "min": "28", "fg": "5-8", "tp": "1-3", "reb": 3, "pf": 2, "ast": 1, "pts": 11},
+            {"name": "Smith, John", "min": "26", "fg": "3-7", "reb": 5, "pf": 3, "pts": 6},
+            {"name": "Abdelnaby, Alaa", "fg": "1-2", "reb": 3, "pf": 1, "pts": 2},
+            {"name": "Henderson, Phil", "min": "18", "fg": "1-4", "tp": "1-2", "ft": "5-6", "ast": 1, "to": 1, "pts": 8},
+            {"name": "Koubek, Greg", "min": "2", "fg": "0-1", "ft": "1-1", "reb": 1, "pf": 1, "pts": 1},
+            {"name": "Cook, Joe", "min": "1", "pts": 0},
+            {"name": "Buckley, Clay", "min": "1", "pts": 0},
+            {"name": "Burgin, George", "min": "0", "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": [],
+  "notes": "MIN for Duke's Abdelnaby was illegible (crossed/overlapping digits) so omitted; that player's reb/pf/pts still legible and used. Blank FG3/FT cells for several players were treated as 'no attempts' and the tp/ft keys omitted for those players rather than assumed 0-0. Rebound totals used the sheet's 'Tot' rebound column value where legible. pts values are the sheet's own TP (total points) column, not derived. Both teams' player pts sum to the official final score (VA 59, Duke 77) — checksum passes exactly."
+}

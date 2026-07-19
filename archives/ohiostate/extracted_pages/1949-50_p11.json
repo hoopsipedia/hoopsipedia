@@ -1,0 +1,42 @@
+{
+  "page": 11,
+  "games": [
+    {
+      "date": "1950-01-14",
+      "opponent": "Northwestern Wildcats",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 61,
+          "players": [
+            {"name": "Schnittker", "min": "40:00", "fg": "7-17", "ft": "8-13", "pf": 1, "pts": 22},
+            {"name": "Donham", "min": "40:00", "fg": "6-15", "ft": "3-6", "pf": 3, "pts": 15},
+            {"name": "Taylor", "min": "27:47", "fg": "2-7", "ft": "1-1", "pf": 4, "pts": 5},
+            {"name": "Burkholder", "min": "39:17", "fg": "1-8", "ft": "3-3", "pf": 2, "pts": 5},
+            {"name": "Brown", "min": "17:31", "fg": "1-13", "ft": "1-1", "pf": 1, "pts": 3},
+            {"name": "Armstrong", "min": "15:27", "fg": "0-3", "ft": "2-3", "pf": 1, "pts": 2},
+            {"name": "Jacobs", "min": "19:58", "fg": "4-9", "ft": "1-1", "pf": 2, "pts": 9}
+          ]
+        },
+        {
+          "name": "Northwestern Wildcats",
+          "score": 51,
+          "players": [
+            {"name": "Ragelis", "fg": "8-13", "ft": "1-6", "pf": 5, "pts": 17},
+            {"name": "Chochron", "fg": "0-1", "ft": "0-0", "pf": 0, "pts": 0},
+            {"name": "Fendley", "fg": "4-14", "ft": "3-3", "pf": 4, "pts": 11},
+            {"name": "Cadarstrom", "fg": "0-1", "ft": "0-0", "pf": 0, "pts": 0},
+            {"name": "Blasius", "fg": "3-14", "ft": "1-1", "pf": 4, "pts": 7},
+            {"name": "Barr", "fg": "3-7", "ft": "0-0", "pf": 2, "pts": 6},
+            {"name": "Horvatich", "fg": "3-7", "ft": "0-5", "pf": 4, "pts": 6},
+            {"name": "Bielenberg", "fg": "1-3", "ft": "1-1", "pf": 3, "pts": 3},
+            {"name": "Hughes", "fg": "0-7", "ft": "1-1", "pf": 1, "pts": 1}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": [],
+  "notes": "Official Western Conference Box Score form. Column headers read 'FG FGA FT FTM PF PTS'; verified against printed PTS totals that 'FT' = free throws MADE and 'FTM' = free throws MISSED (not attempts), so ft field here is made-attempted with attempted = FT+FTM. Both teams' player points and totals reconcile exactly to the printed final scores (OSU 61, Northwestern 51) and to printed FG/FT/PF column totals. Home team (Ohio State) sheet includes a Time column (min); visiting team (Northwestern) sheet has no time column so min omitted. Attendance figure had a crossed-out/corrected digit but that field wasn't required for extraction."
+}

@@ -1,0 +1,9 @@
+{
+  "page": 20,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Ohio State at Michigan, 1948-02-28, Ann Arbor, final score Ohio 36 - Michigan 40 (both clearly legible in headline/scorebox). Team-level shooting totals for both squads check out against the printed team score using pts = 2*FGmade + FTmade (Michigan totals row 15-10-12-8 -> 40; Ohio State totals row 14-8-17-6 -> 36). However, the individual player rows in the small box-score table are too degraded/low-resolution to read confidently: summing the legible per-player FG/FT figures gives only 14 of Michigan's 15 team field goals and just 9 of Ohio State's 14 team field goals, a discrepancy too large to attribute to a single misread digit. Rather than guess at illegible player-line numbers to force a checksum match, skipping full transcription of this game per instructions to be ruthless about skipping over guessing."
+    }
+  ]
+}

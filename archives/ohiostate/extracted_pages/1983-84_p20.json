@@ -1,0 +1,45 @@
+{
+  "page": 20,
+  "games": [
+    {
+      "date": "1984-02-04",
+      "opponent": "Minnesota",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 61,
+          "players": [
+            {"name": "Tony Campbell", "fg": "3-10", "ft": "6-7", "reb": 5, "pf": 3, "ast": 2, "to": 1, "blk": 1, "stl": 3, "pts": 12},
+            {"name": "Dave Jones", "fg": "6-9", "ft": "0-0", "reb": 3, "pf": 1, "ast": 1, "to": 0, "blk": 1, "stl": 0, "pts": 12},
+            {"name": "Clarence McGee", "fg": "3-3", "ft": "0-0", "reb": 1, "pf": 3, "ast": 0, "to": 3, "blk": 1, "stl": 0, "pts": 6},
+            {"name": "Ron Stokes", "fg": "2-14", "ft": "2-2", "reb": 3, "pf": 3, "ast": 3, "to": 1, "blk": 0, "stl": 3, "pts": 6},
+            {"name": "Troy Taylor", "fg": "8-16", "ft": "2-2", "reb": 2, "pf": 1, "ast": 4, "to": 2, "blk": 0, "stl": 1, "pts": 18},
+            {"name": "Keith Wesson", "fg": "0-0", "ft": "1-2", "reb": 2, "pf": 5, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 1},
+            {"name": "Dennis Hopson", "fg": "1-2", "ft": "2-2", "reb": 1, "pf": 1, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 4},
+            {"name": "Curtis Wilson", "fg": "1-4", "ft": "0-1", "reb": 1, "pf": 0, "ast": 0, "to": 2, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Henry Grace", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Jim Honigford", "fg": "0-1", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Minnesota Golden Gophers",
+          "score": 83,
+          "players": [
+            {"name": "Roland Brooks", "fg": "9-11", "ft": "1-2", "reb": 1, "pf": 2, "ast": 4, "to": 2, "blk": 1, "stl": 0, "pts": 19},
+            {"name": "Jim Petersen", "fg": "11-15", "ft": "0-1", "reb": 9, "pf": 4, "ast": 2, "to": 1, "blk": 2, "stl": 3, "pts": 22},
+            {"name": "John Shasky", "fg": "1-1", "ft": "0-1", "reb": 2, "pf": 3, "ast": 0, "to": 2, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Marc Wilson", "fg": "5-11", "ft": "4-4", "reb": 8, "pf": 3, "ast": 7, "to": 5, "blk": 0, "stl": 0, "pts": 14},
+            {"name": "Tommy Davis", "fg": "5-10", "ft": "6-7", "reb": 7, "pf": 0, "ast": 4, "to": 3, "blk": 0, "stl": 0, "pts": 16},
+            {"name": "Kevin Smith", "fg": "2-4", "ft": "0-0", "reb": 5, "pf": 0, "ast": 2, "to": 1, "blk": 0, "stl": 0, "pts": 4},
+            {"name": "Gerald Jackson", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 1, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Alonzo Skanes", "fg": "1-1", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Dave Dahlke", "fg": "2-3", "ft": "0-0", "reb": 0, "pf": 1, "ast": 0, "to": 0, "blk": 1, "stl": 1, "pts": 4},
+            {"name": "Paul Van Den Einde", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 1, "to": 0, "blk": 1, "stl": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

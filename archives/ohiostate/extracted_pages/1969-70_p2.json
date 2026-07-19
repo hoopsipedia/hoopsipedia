@@ -1,0 +1,40 @@
+{
+  "page": 2,
+  "games": [
+    {
+      "date": "1969-12-01",
+      "opponent": "Wake Forest",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 96,
+          "players": [
+            {"name": "Clemons", "fg": "11-18", "ft": "4-4", "pf": 4, "reb": 11, "pts": 26},
+            {"name": "Andreas", "fg": "3-7", "ft": "2-3", "pf": 3, "reb": 11, "pts": 8},
+            {"name": "Sorenson", "fg": "10-18", "ft": "11-13", "pf": 3, "reb": 10, "pts": 31},
+            {"name": "Finney", "fg": "7-14", "ft": "9-11", "pf": 4, "reb": 5, "pts": 23},
+            {"name": "Barclay", "fg": "1-5", "ft": "6-7", "pf": 4, "reb": 5, "pts": 8},
+            {"name": "Minor", "fg": "0-1", "ft": "0-0", "pf": 0, "reb": 2, "pts": 0}
+          ]
+        },
+        {
+          "name": "Wake Forest",
+          "score": 92,
+          "players": [
+            {"name": "Todmann", "fg": "4-11", "ft": "1-2", "pf": 3, "reb": 3, "pts": 9},
+            {"name": "Walker", "fg": "7-17", "ft": "4-7", "pf": 4, "reb": 4, "pts": 18},
+            {"name": "Mc Gregor", "fg": "3-5", "ft": "0-0", "pf": 4, "reb": 6, "pts": 6},
+            {"name": "Davis", "fg": "9-25", "ft": "9-10", "pf": 4, "reb": 10, "pts": 27},
+            {"name": "Rhoads", "fg": "0-1", "ft": "0-1", "pf": 0, "reb": 2, "pts": 0},
+            {"name": "Pastushok", "fg": "7-10", "ft": "2-2", "pf": 1, "reb": 4, "pts": 16},
+            {"name": "Lewkowicz", "fg": "5-13", "ft": "2-2", "pf": 5, "reb": 2, "pts": 12},
+            {"name": "Ackley", "fg": "2-2", "ft": "0-0", "pf": 4, "reb": 3, "pts": 4},
+            {"name": "L. Habegger", "fg": "0-0", "ft": "0-0", "pf": 1, "reb": 4, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

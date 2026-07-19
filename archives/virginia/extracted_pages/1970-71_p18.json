@@ -1,0 +1,47 @@
+{
+  "page": 18,
+  "games": [
+    {
+      "date": "1971-02-10",
+      "opponent": "Maryland",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 78,
+          "players": [
+            {"name": "Frank DeWitt", "fg": "6-10", "ft": "4-5", "reb": 7, "ast": 1, "pf": 2, "to": 3, "blk": 0, "stl": 0, "min": 0, "pts": 16},
+            {"name": "Bill Gerry", "fg": "0-2", "ft": "2-5", "reb": 9, "ast": 0, "pf": 5, "to": 1, "blk": 0, "stl": 0, "min": 0, "pts": 2},
+            {"name": "Scott McCandlish", "fg": "5-10", "ft": "7-7", "reb": 10, "ast": 3, "pf": 1, "to": 1, "blk": 0, "stl": 0, "min": 0, "pts": 17},
+            {"name": "Tim Rash", "fg": "3-5", "ft": "3-3", "reb": 0, "ast": 1, "pf": 0, "to": 2, "blk": 0, "stl": 0, "min": 0, "pts": 9},
+            {"name": "Barry Parkhill", "fg": "9-17", "ft": "3-5", "reb": 5, "ast": 5, "pf": 3, "to": 2, "blk": 0, "stl": 0, "min": 0, "pts": 21},
+            {"name": "Jim Hobgood", "fg": "3-6", "ft": "3-4", "reb": 3, "ast": 1, "pf": 2, "to": 1, "blk": 0, "stl": 0, "min": 0, "pts": 9},
+            {"name": "Chip Miller", "fg": "2-5", "ft": "0-0", "reb": 2, "ast": 1, "pf": 3, "to": 1, "blk": 0, "stl": 0, "min": 0, "pts": 4},
+            {"name": "John Hill", "fg": "0-1", "ft": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 0, "blk": 0, "stl": 0, "min": 0, "pts": 0},
+            {"name": "Larry Gerry", "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "to": 0, "blk": 0, "stl": 0, "min": 0, "pts": 0},
+            {"name": "Kevin Kennelly", "fg": "0-1", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 2, "blk": 0, "stl": 0, "min": 0, "pts": 0},
+            {"name": "Jim Farmer", "fg": "0-1", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "to": 0, "blk": 0, "stl": 0, "min": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Maryland",
+          "score": 63,
+          "players": [
+            {"name": "Jim O'Brien", "fg": "2-7", "ft": "4-4", "reb": 2, "ast": 2, "pf": 4, "to": 5, "blk": 0, "stl": 0, "min": 0, "pts": 8},
+            {"name": "Howard White", "fg": "5-12", "ft": "2-2", "reb": 2, "ast": 2, "pf": 1, "to": 0, "blk": 0, "stl": 0, "min": 0, "pts": 12},
+            {"name": "Barry Yates", "fg": "4-10", "ft": "1-2", "reb": 6, "ast": 2, "pf": 4, "to": 0, "blk": 0, "stl": 0, "min": 0, "pts": 9},
+            {"name": "Sparky Still", "fg": "2-6", "ft": "1-2", "reb": 2, "ast": 1, "pf": 2, "to": 0, "blk": 0, "stl": 0, "min": 0, "pts": 5},
+            {"name": "Charlie Blank", "fg": "5-13", "ft": "2-2", "reb": 4, "ast": 1, "pf": 4, "to": 2, "blk": 0, "stl": 0, "min": 0, "pts": 12},
+            {"name": "Bob Bodell", "fg": "1-2", "ft": "0-0", "reb": 2, "ast": 1, "pf": 2, "to": 3, "blk": 0, "stl": 0, "min": 0, "pts": 2},
+            {"name": "Darrell Brown", "fg": "0-0", "ft": "1-2", "reb": 0, "ast": 0, "pf": 1, "to": 1, "blk": 0, "stl": 0, "min": 0, "pts": 1},
+            {"name": "Steve Kebeck", "fg": "2-5", "ft": "0-0", "reb": 1, "ast": 0, "pf": 1, "to": 1, "blk": 0, "stl": 0, "min": 0, "pts": 4},
+            {"name": "Jack Neal", "fg": "2-3", "ft": "2-3", "reb": 3, "ast": 0, "pf": 0, "to": 0, "blk": 0, "stl": 0, "min": 0, "pts": 6},
+            {"name": "Jay Flowers", "fg": "0-2", "ft": "4-4", "reb": 2, "ast": 0, "pf": 0, "to": 0, "blk": 0, "stl": 0, "min": 0, "pts": 4}
+          ]
+        }
+      ],
+      "checksum_ok": true,
+      "notes": "3-point column present on printed sheet but all 0-0 (pre-3pt-line era) and omitted per instructions; Min/Blk/Stl columns printed as all-zero on the sheet (not tracked in 1970-71) and are included as-shown, not invented."
+    }
+  ],
+  "skipped": []
+}

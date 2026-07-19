@@ -1,0 +1,9 @@
+{
+  "page": 12,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page 12 is a newspaper clipping box score for Ohio State (32) at Navy (35), 1932-02-09 (per the sheet's structured date/opponent/place fields; article dateline reads 'Feb. 6' but conflicts with the printed date field). The Navy player table (Chittenden, Loughlin, Osier, Raskin, Bedell, Fraser) is legible enough that field-goal/free-throw/point values are internally consistent (2*FG+FT=PTS per row, summing to team total 35), but the Ohio State player table (Ryan, Traut, Colburn, Bishop, Council, Mattison, Hoffer) only has a legible field-goal-made column (1,4,3,0,0,2,3, summing correctly to the team total of 13 FG) -- the individual free-throw and points columns are too faint/small in the scan to read confidently, though team totals (FG 13, FT 6, PTS 32) are legible. Since per-player points cannot be confirmed for Ohio State, the game fails the per-team checksum requirement and is skipped in full rather than guessing individual free-throw splits."
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "page": 10,
+  "games": [
+    {
+      "date": "1953-01-12",
+      "opponent": "Indiana",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 68,
+          "players": [
+            {"name": "Williams", "fg": "2-7", "ft": "3-6", "reb": 2, "pf": 4, "pts": 7},
+            {"name": "Miller", "fg": "1-4", "ft": "0-1", "reb": 4, "pf": 3, "pts": 2},
+            {"name": "Wilks", "fg": "5-13", "ft": "1-?", "reb": 6, "pf": 4, "pts": 11},
+            {"name": "Leggett", "fg": "0-2", "ft": "0-2", "reb": 2, "pf": 0, "pts": 0},
+            {"name": "Ebert", "fg": "7-16", "ft": "8-14", "reb": 9, "pf": 3, "pts": 22},
+            {"name": "Annis", "fg": "0-1", "ft": "2-4", "reb": 1, "pf": 0, "pts": 2},
+            {"name": "Hatfield", "fg": "4-13", "ft": "6-6", "reb": 4, "pf": 2, "pts": 14},
+            {"name": "Jones", "fg": "0-5", "ft": "0-0", "reb": 3, "pf": 0, "pts": 0},
+            {"name": "Smith", "fg": "0-0", "ft": "0-0", "reb": 2, "pf": 0, "pts": 0},
+            {"name": "Cook", "fg": "4-15", "ft": "2-6", "reb": 3, "pf": 0, "pts": 10},
+            {"name": "Keeling", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0}
+          ],
+          "checksum_ok": true
+        },
+        {
+          "name": "Indiana Hoosiers",
+          "score": 88,
+          "players": [
+            {"name": "Kraak", "fg": "4-14", "ft": "3-4", "reb": 8, "pf": 4, "pts": 11},
+            {"name": "Dea Kyne", "fg": "0-3", "ft": "0-0", "reb": 1, "pf": 3, "pts": 0},
+            {"name": "Farley", "fg": "2-4", "ft": "1-1", "reb": 2, "pf": 4, "pts": 5},
+            {"name": "White", "fg": "4-11", "ft": "2-2", "reb": 6, "pf": 2, "pts": 10},
+            {"name": "Schlundt", "fg": "5-15", "ft": "5-5", "reb": 9, "pf": 4, "pts": 15},
+            {"name": "L. Scott", "fg": "5-11", "ft": "2-4", "reb": 9, "pf": 1, "pts": 12},
+            {"name": "Schooley", "fg": "0-0", "ft": "0-0", "reb": 1, "pf": 2, "pts": 0},
+            {"name": "B. Scott", "fg": "4-9", "ft": "3-5", "reb": 5, "pf": 2, "pts": 11},
+            {"name": "Leonard", "fg": "10-18", "ft": "2-2", "reb": 1, "pf": 4, "pts": 22},
+            {"name": "Byers", "fg": "1-4", "ft": "0-0", "reb": 2, "pf": 1, "pts": 2}
+          ],
+          "checksum_ok": true
+        }
+      ]
+    }
+  ],
+  "skipped": []
+}

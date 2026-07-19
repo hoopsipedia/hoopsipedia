@@ -1,0 +1,47 @@
+{
+  "page": 10,
+  "games": [
+    {
+      "date": "1971-12-30",
+      "opponent": "UCLA Bruins",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 53,
+          "players": [
+            {"name": "Minor", "fg": "3-6", "ft": "0-1", "reb": 6, "pf": 2, "pts": 6},
+            {"name": "Jackson", "fg": "2-5", "ft": "0-0", "reb": 8, "pf": 5, "pts": 4},
+            {"name": "Witte", "fg": "7-21", "ft": "5-5", "reb": 13, "pf": 4, "pts": 19},
+            {"name": "Hornyak", "fg": "4-16", "ft": "2-2", "reb": 2, "pf": 4, "pts": 10},
+            {"name": "Gerhard", "fg": "5-18", "ft": "2-3", "reb": 9, "pf": 2, "pts": 12},
+            {"name": "Merchant", "fg": "1-1", "ft": "0-0", "reb": 0, "pf": 1, "pts": 2},
+            {"name": "Wolfe", "fg": "0-1", "ft": "0-0", "reb": 1, "pf": 1, "pts": 0},
+            {"name": "Siekmann", "fg": "0-1", "ft": "0-0", "reb": 1, "pf": 1, "pts": 0},
+            {"name": "Wagar", "fg": "0-2", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Repella", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Kiracofe", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "UCLA Bruins",
+          "score": 79,
+          "players": [
+            {"name": "Wilkes", "fg": "5-10", "ft": "3-3", "reb": 8, "pf": 0, "pts": 13},
+            {"name": "Farmer", "fg": "6-12", "ft": "0-0", "reb": 2, "pf": 1, "pts": 12},
+            {"name": "Walton", "fg": "6-10", "ft": "2-4", "reb": 13, "pf": 4, "pts": 14},
+            {"name": "Curtis", "fg": "6-11", "ft": "1-3", "reb": 5, "pf": 2, "pts": 13},
+            {"name": "Bibby", "fg": "3-11", "ft": "4-4", "reb": 3, "pf": 2, "pts": 10},
+            {"name": "Nater", "fg": "3-7", "ft": "1-2", "reb": 7, "pf": 1, "pts": 7},
+            {"name": "Hollyfield", "fg": "2-4", "ft": "2-2", "reb": 3, "pf": 0, "pts": 6},
+            {"name": "Chapman", "fg": "0-1", "ft": "0-0", "reb": 4, "pf": 0, "pts": 0},
+            {"name": "Carson", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Hill", "fg": "0-1", "ft": "4-5", "reb": 1, "pf": 0, "pts": 4},
+            {"name": "Franklin", "fg": "0-0", "ft": "0-0", "reb": 1, "pf": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

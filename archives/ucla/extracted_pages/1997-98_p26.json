@@ -1,0 +1,52 @@
+{
+  "page": 26,
+  "games": [
+    {
+      "date": "1998-02-22",
+      "opponent": "Duke Blue Devils",
+      "location": "Durham, NC",
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 84,
+          "players": [
+            {"name": "Toby Bailey", "min": 36, "fg": "5-16", "ft": "5-5", "tp": "2-5", "reb": 9, "ast": 4, "pf": 4, "to": 3, "stl": 0, "blk": 1, "pts": 17},
+            {"name": "Kris Johnson", "min": 31, "fg": "5-15", "ft": "9-10", "tp": "1-4", "reb": 7, "ast": 0, "pf": 2, "to": 2, "stl": 1, "blk": 1, "pts": 20},
+            {"name": "J.R. Henderson", "min": 18, "fg": "5-9", "ft": "4-6", "tp": "0-4", "reb": 4, "ast": 5, "pf": 5, "to": 4, "stl": 0, "blk": 0, "pts": 14},
+            {"name": "Baron Davis", "min": 36, "fg": "6-14", "ft": "2-2", "tp": "4-6", "reb": 5, "ast": 2, "pf": 5, "to": 4, "stl": 3, "blk": 1, "pts": 18},
+            {"name": "Earl Watson", "min": 27, "fg": "0-2", "ft": "2-4", "tp": "0-1", "reb": 1, "ast": 1, "pf": 1, "to": 2, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Travis Reed", "min": 22, "fg": "4-6", "ft": "0-0", "tp": "0-0", "reb": 4, "ast": 0, "pf": 2, "to": 0, "stl": 1, "blk": 1, "pts": 8},
+            {"name": "Rico Hines", "min": 19, "fg": "1-4", "ft": "1-1", "tp": "0-2", "reb": 3, "ast": 0, "pf": 4, "to": 0, "stl": 0, "blk": 0, "pts": 3},
+            {"name": "Brandon Loyd", "min": 1, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Billy Knight", "min": 3, "fg": "1-2", "ft": "0-0", "tp": "0-1", "reb": 0, "ast": 0, "pf": 2, "to": 1, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Kevin Daley", "min": 4, "fg": "0-1", "ft": "0-0", "tp": "0-1", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Vince McGautha", "min": 2, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Sean Farnham", "min": 1, "fg": "0-1", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Duke Blue Devils",
+          "score": 120,
+          "players": [
+            {"name": "Roshown McLeod", "min": 21, "fg": "9-14", "ft": "2-2", "tp": "3-4", "reb": 4, "ast": 0, "pf": 4, "to": 1, "stl": 1, "blk": 1, "pts": 23},
+            {"name": "Chris Carrawell", "min": 18, "fg": "2-6", "ft": "2-5", "tp": "1-1", "reb": 4, "ast": 0, "pf": 1, "to": 2, "stl": 2, "blk": 0, "pts": 7},
+            {"name": "Shane Battier", "min": 25, "fg": "3-5", "ft": "2-4", "tp": "0-0", "reb": 7, "ast": 3, "pf": 3, "to": 0, "stl": 0, "blk": 2, "pts": 8},
+            {"name": "Steve Wojciechowski", "min": 24, "fg": "3-6", "ft": "3-4", "tp": "2-5", "reb": 7, "ast": 4, "pf": 2, "to": 0, "stl": 2, "blk": 0, "pts": 11},
+            {"name": "Trajan Langdon", "min": 29, "fg": "11-16", "ft": "6-6", "tp": "6-10", "reb": 5, "ast": 4, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 34},
+            {"name": "Chris Burgess", "min": 16, "fg": "2-5", "ft": "0-0", "tp": "0-0", "reb": 4, "ast": 2, "pf": 3, "to": 0, "stl": 0, "blk": 4, "pts": 4},
+            {"name": "Mike Chappell", "min": 13, "fg": "1-5", "ft": "1-2", "tp": "1-3", "reb": 0, "ast": 0, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "William Avery", "min": 21, "fg": "3-6", "ft": "3-4", "tp": "2-4", "reb": 3, "ast": 4, "pf": 2, "to": 4, "stl": 0, "blk": 0, "pts": 11},
+            {"name": "Elton Brand", "min": 16, "fg": "5-7", "ft": "4-8", "tp": "0-0", "reb": 7, "ast": 0, "pf": 2, "to": 2, "stl": 1, "blk": 0, "pts": 14},
+            {"name": "Ricky Price", "min": 12, "fg": "2-7", "ft": "0-0", "tp": "0-1", "reb": 2, "ast": 1, "pf": 4, "to": 0, "stl": 1, "blk": 0, "pts": 4},
+            {"name": "Taymon Domzalski", "min": 2, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "J.D. Simpson", "min": 1, "fg": "0-0", "ft": "0-1", "tp": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Jay Heaps", "min": 1, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Todd Singleton", "min": 1, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

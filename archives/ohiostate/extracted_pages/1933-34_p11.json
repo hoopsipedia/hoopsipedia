@@ -1,0 +1,39 @@
+{
+  "page": 11,
+  "games": [
+    {
+      "date": "1934-01-22",
+      "opponent": "Northwestern",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 31,
+          "players": [
+            {"name": "Whitlinger", "fg": "2", "ft": "0-0", "pf": 3, "pts": 4},
+            {"name": "Paclow", "fg": "2", "ft": "0-2", "pf": 4, "pts": 4},
+            {"name": "Colburn", "fg": "6", "ft": "0-3", "pf": 3, "pts": 12},
+            {"name": "Conrad", "fg": "0", "ft": "1-4", "pf": 4, "pts": 1},
+            {"name": "Beitner", "fg": "2", "ft": "0-0", "pf": 2, "pts": 4},
+            {"name": "Laybourne", "fg": "1", "ft": "0-0", "pf": 0, "pts": 2},
+            {"name": "Wilson", "fg": "0", "ft": "2-2", "pf": 0, "pts": 2},
+            {"name": "Fisher", "fg": "1", "ft": "0-0", "pf": 0, "pts": 2}
+          ]
+        },
+        {
+          "name": "Northwestern",
+          "score": 42,
+          "players": [
+            {"name": "Brewer", "fg": "3", "ft": "2-2", "pf": 0, "pts": 8},
+            {"name": "Kopecky", "fg": "1", "ft": "3-6", "pf": 4, "pts": 5},
+            {"name": "Rosenfeld", "fg": "1", "ft": "0-0", "pf": 0, "pts": 2},
+            {"name": "L. Fisher", "fg": "3", "ft": "0-0", "pf": 2, "pts": 6},
+            {"name": "Manske", "fg": "1", "ft": "2-2", "pf": 2, "pts": 4},
+            {"name": "Culver", "fg": "7", "ft": "3-4", "pf": 1, "pts": 17}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

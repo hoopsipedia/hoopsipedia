@@ -1,0 +1,9 @@
+{
+  "page": 6,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Ohio State vs Wright State, December 12, 1990 (St. John Arena). Wright State (visitor) box score is fully legible and checksums perfectly: player points sum to 60, matching the final score (60-90). However, the Ohio State (home) team box score has several rows (Lee, Carter, Baker, Brown) whose FT/FTA figures do not reconcile with the printed team FT/FTA totals (11-17) when cross-checked against the other confidently-read players -- suggesting digit ambiguity/misalignment in those specific rows. Rather than invent or guess values to force a checksum match, the entire game is skipped since both teams are required for a complete, verified game record."
+    }
+  ]
+}

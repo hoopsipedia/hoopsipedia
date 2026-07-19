@@ -1,0 +1,48 @@
+{
+  "page": 30,
+  "games": [
+    {
+      "date": "1985-03-08",
+      "opponent": "San Diego State",
+      "note": "WAC Post-Season Tournament, Semi-Finals, Special Events Center, El Paso. reb field is off-def rebound split as written on sheet (e.g. '2-4').",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 84,
+          "players": [
+            {"name": "Johnny Brown", "min": 38, "fg": "9-17", "ft": "4-7", "reb": "2-4", "pf": 4, "ast": 2, "to": 2, "blk": 0, "stl": 2, "pts": 22},
+            {"name": "Mike Winters", "min": 30, "fg": "1-5", "ft": "0-0", "reb": "2-7", "pf": 4, "ast": 1, "to": 0, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "George Scott", "min": 34, "fg": "6-14", "ft": "6-7", "reb": "8-2", "pf": 3, "ast": 0, "to": 2, "blk": 0, "stl": 1, "pts": 18},
+            {"name": "Kelvin Scarborough", "min": 37, "fg": "3-6", "ft": "2-3", "reb": "2-4", "pf": 4, "ast": 10, "to": 6, "blk": 0, "stl": 3, "pts": 8},
+            {"name": "Hunter Greene", "min": 34, "fg": "10-26", "ft": "1-2", "reb": "1-1", "pf": 4, "ast": 5, "to": 3, "blk": 0, "stl": 2, "pts": 21},
+            {"name": "Niles Dockery", "min": 6, "fg": "0-4", "ft": "0-0", "reb": "1-0", "pf": 1, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Paul Lawson", "min": 7, "fg": "2-2", "ft": "0-0", "reb": "0-0", "pf": 0, "ast": 1, "to": 0, "blk": 0, "stl": 0, "pts": 4},
+            {"name": "T.J. Drake", "min": 5, "fg": "2-2", "ft": "0-0", "reb": "0-0", "pf": 3, "ast": 0, "to": 0, "blk": 1, "stl": 0, "pts": 4},
+            {"name": "Shawn Brooks", "min": 9, "fg": "2-6", "ft": "1-2", "reb": "1-0", "pf": 4, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pts": 5},
+            {"name": "Randall Moos", "note": "DNP"}
+          ]
+        },
+        {
+          "name": "San Diego State Aztecs",
+          "score": 98,
+          "players": [
+            {"name": "Michael Kennedy", "min": 28, "fg": "3-5", "ft": "0-0", "reb": "2-6", "pf": 3, "ast": 2, "to": 4, "blk": 2, "stl": 0, "pts": 6},
+            {"name": "John Martens", "min": 23, "fg": "5-8", "ft": "1-1", "reb": "1-6", "pf": 2, "ast": 1, "to": 2, "blk": 0, "stl": 2, "pts": 11},
+            {"name": "Leonard Allen", "min": 34, "fg": "8-11", "ft": "11-18", "reb": "7-7", "pf": 1, "ast": 0, "to": 2, "blk": 6, "stl": 0, "pts": 27},
+            {"name": "Anthony Watson", "min": 22, "fg": "9-18", "ft": "3-4", "reb": "0-0", "pf": 2, "ast": 3, "to": 2, "blk": 0, "stl": 1, "pts": 21},
+            {"name": "Creon Dorsey", "min": 33, "fg": "4-8", "ft": "3-6", "reb": "0-5", "pf": 4, "ast": 2, "to": 2, "blk": 0, "stl": 2, "pts": 11},
+            {"name": "Jeff Konek", "min": 26, "fg": "1-6", "ft": "0-0", "reb": "0-2", "pf": 3, "ast": 4, "to": 2, "blk": 0, "stl": 2, "pts": 2},
+            {"name": "Anthony Sands", "min": 2, "fg": "0-2", "ft": "2-2", "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Bobby Owens", "min": 7, "fg": "3-5", "ft": "0-0", "reb": "0-0", "pf": 3, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pts": 6},
+            {"name": "Andre Ross", "min": 2, "fg": "0-0", "ft": "0-0", "reb": "0-0", "pf": 1, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Tod Monteiro", "note": "DNP"},
+            {"name": "Ira Harge", "min": 2, "fg": "0-0", "ft": "0-2", "reb": "0-0", "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Gerald Murray", "min": 22, "fg": "5-9", "ft": "2-3", "reb": "6-1", "pf": 1, "ast": 0, "to": 2, "blk": 0, "stl": 0, "pts": 12}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

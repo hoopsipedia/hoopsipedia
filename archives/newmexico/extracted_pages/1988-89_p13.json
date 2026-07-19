@@ -1,0 +1,9 @@
+{
+  "page": 13,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "1989-01-14 New Mexico Lobos at Wyoming Cowboys (Arena-Auditorium, Laramie, WY; final NM 106, WYO 89). New Mexico Lobos side transcribes cleanly and checksums correctly (player points sum to 106 matching team total: McGee 12, Longley 15, Steffan 0, McBurrows 5, Walker 2, Miller 8, Thomas 16, Banks 15, Robbins 19, Loeffel 14). However Wyoming Cowboys' handwritten box score has several ambiguous/overlapping digits in the FG/FT columns (esp. Davis, Smith, Barnett, Remme rows) where the printed TP/TF column does not reconcile with the team total of 89 on this reading, and cross-checking against 2*FGmade+3*3Pmade+FTmade also fails to close the gap without guessing digits. Rather than invent Wyoming player values, skipping the whole game per instructions; already used the single allotted re-read (careful re-examination) without resolving the mismatch."
+    }
+  ]
+}

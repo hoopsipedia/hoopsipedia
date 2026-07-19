@@ -1,0 +1,51 @@
+{
+  "page": 8,
+  "games": [
+    {
+      "date": "1996-12-28",
+      "opponent": "Morgan State",
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 87,
+          "players": [
+            {"name": "Charles O'Bannon", "min": 29, "fg": "4-9", "tp": "0-2", "ft": "3-5", "reb": 5, "ast": 5, "pf": 1, "to": 0, "stl": 2, "blk": 0, "pts": 11},
+            {"name": "Toby Bailey", "min": 30, "fg": "4-8", "tp": "0-2", "ft": "1-2", "reb": 2, "ast": 5, "pf": 1, "to": 2, "stl": 1, "blk": 0, "pts": 9},
+            {"name": "Bob Myers", "min": 21, "fg": "3-4", "tp": "0-0", "ft": "0-0", "reb": 8, "ast": 0, "pf": 3, "to": 2, "stl": 2, "blk": 0, "pts": 6},
+            {"name": "Brandon Loyd", "min": 17, "fg": "0-2", "tp": "0-2", "ft": "0-0", "reb": 0, "ast": 1, "pf": 1, "to": 0, "stl": 0, "blk": 1, "pts": 0},
+            {"name": "Cameron Dollar", "min": 28, "fg": "3-5", "tp": "1-2", "ft": "6-8", "reb": 2, "ast": 3, "pf": 3, "to": 2, "stl": 2, "blk": 0, "pts": 13},
+            {"name": "Kris Johnson", "min": 21, "fg": "4-5", "tp": "1-1", "ft": "5-6", "reb": 2, "ast": 4, "pf": 3, "to": 3, "stl": 1, "blk": 0, "pts": 14},
+            {"name": "J.R. Henderson", "min": 23, "fg": "6-8", "tp": "0-0", "ft": "2-4", "reb": 5, "ast": 1, "pf": 1, "to": 5, "stl": 1, "blk": 1, "pts": 14},
+            {"name": "Jelani McCoy", "min": 21, "fg": "7-7", "tp": "0-0", "ft": "2-5", "reb": 5, "ast": 3, "pf": 2, "to": 5, "stl": 0, "blk": 2, "pts": 16},
+            {"name": "Sean Farnham", "min": 2, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Harold Sylvester", "min": 2, "fg": "0-0", "tp": "0-0", "ft": "2-2", "reb": 1, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Matt Harbour", "min": 2, "fg": "0-0", "tp": "0-0", "ft": "2-4", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 1, "pts": 2},
+            {"name": "Vince McGautha", "min": 2, "fg": "0-3", "tp": "0-0", "ft": "0-0", "reb": 2, "ast": 0, "pf": 2, "to": 2, "stl": 1, "blk": 0, "pts": 0},
+            {"name": "Dave Parker", "min": 2, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Morgan State Bears",
+          "score": 72,
+          "players": [
+            {"name": "O'Tes Alston", "min": 26, "fg": "3-4", "tp": "0-0", "ft": "3-4", "reb": 8, "ast": 1, "pf": 4, "to": 3, "stl": 1, "blk": 1, "pts": 9},
+            {"name": "Chris Watson", "min": 37, "fg": "7-12", "tp": "2-5", "ft": "2-3", "reb": 8, "ast": 1, "pf": 3, "to": 5, "stl": 0, "blk": 0, "pts": 18},
+            {"name": "Ira Crawley", "min": 18, "fg": "1-1", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 2, "pf": 4, "to": 2, "stl": 1, "blk": 0, "pts": 2},
+            {"name": "Tremaine Byrd", "min": 32, "fg": "8-17", "tp": "5-9", "ft": "0-0", "reb": 2, "ast": 1, "pf": 3, "to": 2, "stl": 0, "blk": 0, "pts": 21},
+            {"name": "Jerard Rucker", "min": 17, "fg": "0-4", "tp": "0-1", "ft": "0-0", "reb": 1, "ast": 4, "pf": 0, "to": 4, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Angelo Herron", "min": 13, "fg": "0-1", "tp": "0-0", "ft": "0-0", "reb": 3, "ast": 1, "pf": 2, "to": 3, "stl": 1, "blk": 0, "pts": 0},
+            {"name": "Scott Deas", "min": 17, "fg": "3-8", "tp": "0-0", "ft": "0-1", "reb": 2, "ast": 0, "pf": 2, "to": 1, "stl": 1, "blk": 0, "pts": 6},
+            {"name": "Rasheed Sparks", "min": 13, "fg": "1-9", "tp": "0-3", "ft": "2-4", "reb": 2, "ast": 1, "pf": 0, "to": 2, "stl": 1, "blk": 0, "pts": 4},
+            {"name": "Jeric Lewis", "min": 7, "fg": "0-0", "tp": "0-0", "ft": "0-2", "reb": 3, "ast": 0, "pf": 2, "to": 1, "stl": 0, "blk": 1, "pts": 0},
+            {"name": "Dwayne Holmes", "min": 5, "fg": "2-4", "tp": "0-0", "ft": "0-1", "reb": 2, "ast": 0, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Lorenzo Hutchinson", "min": 11, "fg": "0-2", "tp": "0-1", "ft": "0-0", "reb": 1, "ast": 4, "pf": 3, "to": 0, "stl": 2, "blk": 0, "pts": 0},
+            {"name": "Jason Demory", "min": 2, "fg": "2-3", "tp": "1-2", "ft": "2-2", "reb": 2, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 7},
+            {"name": "Doug Qualls", "min": 2, "fg": "0-0", "tp": "0-0", "ft": "1-2", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 1}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

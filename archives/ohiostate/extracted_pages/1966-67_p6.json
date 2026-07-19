@@ -1,0 +1,44 @@
+{
+  "page": 6,
+  "games": [
+    {
+      "date": "1966-12-20",
+      "opponent": "Texas Christian",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 84,
+          "players": [
+            {"name": "Sepic", "fg": "7-20", "ft": "5-6", "reb": 14, "pf": 5, "pts": 19},
+            {"name": "Miller", "fg": "6-17", "ft": "8-10", "reb": 11, "pf": 1, "pts": 20},
+            {"name": "Hosket", "fg": "3-9", "ft": "7-9", "reb": 16, "pf": 5, "pts": 13},
+            {"name": "Rowley", "fg": "0-1", "ft": "1-1", "reb": 0, "pf": 2, "pts": 1},
+            {"name": "Meadors", "fg": "3-9", "ft": "3-5", "reb": 4, "pf": 2, "pts": 9},
+            {"name": "Barnard", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 1, "pts": 0},
+            {"name": "Howell", "fg": "5-9", "ft": "3-7", "reb": 2, "pf": 3, "pts": 13},
+            {"name": "Schnabel", "fg": "4-10", "ft": "1-2", "reb": 6, "pf": 3, "pts": 9}
+          ]
+        },
+        {
+          "name": "Texas Christian Horned Frogs",
+          "score": 78,
+          "players": [
+            {"name": "McCarty", "fg": "7-13", "ft": "3-5", "reb": 16, "pf": 3, "pts": 17},
+            {"name": "Sauer", "fg": "4-12", "ft": "0-1", "reb": 2, "pf": 2, "pts": 8},
+            {"name": "Cash", "fg": "1-7", "ft": "1-5", "reb": 14, "pf": 5, "pts": 3},
+            {"name": "Kreis", "fg": "4-9", "ft": "3-4", "reb": 1, "pf": 2, "pts": 11},
+            {"name": "White", "fg": "4-12", "ft": "6-7", "reb": 5, "pf": 4, "pts": 14},
+            {"name": "Evans", "fg": "7-10", "ft": "2-3", "reb": 7, "pf": 5, "pts": 16},
+            {"name": "Sloan", "fg": "0-0", "ft": "1-2", "reb": 0, "pf": 2, "pts": 1},
+            {"name": "Farr", "fg": "1-2", "ft": "0-2", "reb": 2, "pf": 2, "pts": 2},
+            {"name": "Isaacs", "fg": "1-3", "ft": "0-0", "reb": 0, "pf": 1, "pts": 2},
+            {"name": "Kerth", "fg": "0-2", "ft": "2-2", "reb": 3, "pf": 0, "pts": 2},
+            {"name": "Gowan", "fg": "1-1", "ft": "0-0", "reb": 0, "pf": 0, "pts": 2}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

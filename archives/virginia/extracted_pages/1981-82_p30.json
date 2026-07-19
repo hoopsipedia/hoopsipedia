@@ -1,0 +1,45 @@
+{
+  "page": 30,
+  "games": [
+    {
+      "date": "1982-03-05",
+      "opponent": "Clemson Tigers",
+      "note": "ACC Tournament - 1st Round, Greensboro Coliseum",
+      "teams": [
+        {
+          "name": "Clemson Tigers",
+          "score": 54,
+          "players": [
+            {"name": "Fred Gilliam", "min": 27, "fg": "3-7", "ft": "0-0", "reb": 4, "pf": 4, "ast": 0, "to": 2, "stl": 1, "pts": 6},
+            {"name": "David Shafer", "min": 32, "fg": "2-5", "ft": "2-3", "reb": 5, "ast": 3, "to": 0, "pts": 6},
+            {"name": "Horace Wyatt", "min": 36, "fg": "5-14", "ft": "2-2", "reb": 3, "ast": 1, "to": 2, "blk": 1, "pts": 12},
+            {"name": "Vince Hamilton", "min": 36, "fg": "11-18", "ft": "0-0", "reb": 6, "pf": 5, "ast": 2, "to": 3, "pts": 22},
+            {"name": "Mike Eppley", "min": 35, "fg": "4-6", "ft": "0-0", "reb": 2, "pf": 2, "ast": 5, "to": 4, "pts": 8},
+            {"name": "Chris Dodds", "min": 5, "fg": "0-2", "ft": "0-0", "reb": 0, "pf": 0, "ast": 1, "to": 1, "pts": 0},
+            {"name": "Clarke Bynum", "min": 11, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 2, "ast": 0, "to": 0, "pts": 0},
+            {"name": "Bill Ross", "min": 17, "fg": "0-2", "ft": "0-0", "reb": 0, "pf": 2, "ast": 0, "to": 0, "blk": 1, "pts": 0}
+          ]
+        },
+        {
+          "name": "Virginia Cavaliers",
+          "score": 56,
+          "players": [
+            {"name": "Tim Mullen", "min": 25, "fg": "2-4", "ft": "2-2", "reb": 4, "pf": 3, "ast": 2, "to": 1, "stl": 1, "pts": 6},
+            {"name": "Craig Robinson", "min": 25, "fg": "2-5", "ft": "2-2", "reb": 5, "pf": 1, "ast": 1, "to": 4, "blk": 1, "pts": 6},
+            {"name": "Ralph Sampson", "min": 34, "fg": "5-10", "ft": "3-3", "reb": 11, "pf": 3, "ast": 3, "to": 0, "blk": 2, "pts": 13},
+            {"name": "Othell Wilson", "min": 11, "fg": "3-6", "ft": "0-0", "reb": 0, "pf": 1, "ast": 2, "to": 1, "stl": 1, "pts": 6},
+            {"name": "Jeff Jones", "min": 32, "fg": "3-7", "ft": "1-2", "reb": 1, "pf": 3, "ast": 2, "to": 1, "pts": 7},
+            {"name": "Kenton Edelin", "min": 19, "fg": "1-1", "ft": "1-2", "reb": 3, "pf": 2, "ast": 0, "to": 2, "stl": 1, "pts": 3},
+            {"name": "Ricky Stokes", "min": 25, "fg": "3-4", "ft": "3-4", "reb": 0, "pf": 0, "ast": 1, "to": 1, "stl": 1, "pts": 9},
+            {"name": "Jimmy Miller", "min": 27, "fg": "3-3", "ft": "0-1", "reb": 3, "pf": 0, "ast": 2, "to": 1, "pts": 6},
+            {"name": "Kenny Johnson", "min": 5, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 1, "pts": 0},
+            {"name": "Dan Harris", "min": 7, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 1, "ast": 0, "to": 0, "pts": 0},
+            {"name": "Dex Carpenter", "min": 2, "fg": "0-0", "ft": "0-1", "reb": 1, "pf": 0, "ast": 0, "to": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

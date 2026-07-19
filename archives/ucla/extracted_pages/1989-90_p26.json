@@ -1,0 +1,9 @@
+{
+  "page": 26,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "03/01/1990 UCLA vs Washington St. (final UCLA 96, Washington St 89) - UCLA box score fails checksum: sum of printed player TP values = 99 (7+26+20+12+23+2+7+2) vs team final TP = 96. Discrepancy traces to MADKINS line: printed TP=23 (confirmed on two separate reads) but FG 6-9 / 3PT 5-8 / FT 3-3 computes to 20 points; every other UCLA player's TP matches its FG/3PT/FT columns exactly, and team-total FG/3PT/FT/rebound columns all reconcile precisely to the sum of individual player lines. This looks like an arithmetic error on the original typewritten scorer's sheet rather than a misread. Washington St.'s own box score checksums correctly (player TP sum = 89 = team final), but skipping the whole game since the UCLA side does not pass, per instructions to be ruthless about skipping rather than guessing/correcting a source value."
+    }
+  ]
+}

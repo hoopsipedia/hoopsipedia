@@ -1,0 +1,9 @@
+{
+  "page": 17,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "1967-68 Virginia vs Navy (2/3/1968, final Virginia 96, Navy 80). Virginia's box score checksums perfectly (player points sum to 96, matches final score). Navy's player points sum to 81, which is 1 point higher than Navy's printed team total of 80 and the boxscore header final score. Cross-checked team FG totals (35-75 made-attempted) and FT totals (10-17) against summed individual FG/FT: FG sums match exactly (35-75), but individual FT makes sum to 11 (vs printed team total 10) and FT attempts sum to 16 (vs printed team total 17) -- indicating one player's FT line (likely Carroll 1-3, Parks 1-2, or Seeley 1-1) was misprinted/misread by one make/attempt on the source sheet, and it is not possible to tell which without re-reading the page. Per instructions, skipping the whole game rather than guessing which player's FT value is wrong."
+    }
+  ]
+}

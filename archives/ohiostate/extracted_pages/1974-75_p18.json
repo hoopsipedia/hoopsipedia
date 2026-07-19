@@ -1,0 +1,42 @@
+{
+  "page": 18,
+  "games": [
+    {
+      "date": "1975-01-27",
+      "opponent": "Purdue",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 93,
+          "players": [
+            {"name": "Andreas", "fg": "12-14", "ft": "6-6", "reb": 12, "ast": 0, "pf": 4, "pts": 30},
+            {"name": "Stiegemeier", "fg": "2-5", "ft": "2-2", "reb": 1, "ast": 0, "pf": 1, "pts": 6},
+            {"name": "Taylor", "fg": "3-10", "ft": "2-2", "reb": 4, "ast": 1, "pf": 5, "pts": 8},
+            {"name": "Bayless", "fg": "6-11", "ft": "0-1", "reb": 5, "ast": 5, "pf": 4, "pts": 12},
+            {"name": "Bolden", "fg": "6-9", "ft": "2-5", "reb": 7, "ast": 9, "pf": 4, "pts": 14},
+            {"name": "Wenner", "fg": "6-10", "ft": "0-0", "reb": 10, "ast": 4, "pf": 4, "pts": 12},
+            {"name": "Burris", "fg": "3-6", "ft": "1-2", "reb": 1, "ast": 1, "pf": 3, "pts": 7},
+            {"name": "Wood", "fg": "2-3", "ft": "0-0", "reb": 1, "ast": 1, "pf": 0, "pts": 4}
+          ]
+        },
+        {
+          "name": "Purdue",
+          "score": 87,
+          "players": [
+            {"name": "Jordon", "fg": "9-21", "ft": "3-3", "reb": 8, "ast": 1, "pf": 3, "pts": 21},
+            {"name": "Walls", "fg": "4-6", "ft": "0-0", "reb": 4, "ast": 1, "pf": 4, "pts": 8},
+            {"name": "Garrett", "fg": "10-21", "ft": "2-3", "reb": 13, "ast": 2, "pf": 2, "pts": 22},
+            {"name": "Parker", "fg": "5-8", "ft": "2-2", "reb": 4, "ast": 4, "pf": 3, "pts": 12},
+            {"name": "Parkinson", "fg": "5-11", "ft": "2-7", "reb": 4, "ast": 7, "pf": 4, "pts": 12},
+            {"name": "Thomas", "fg": "4-7", "ft": "4-9", "reb": 2, "ast": 0, "pf": 1, "pts": 12},
+            {"name": "Steele", "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 1, "pf": 0, "pts": 0},
+            {"name": "Scheffler", "fg": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "pf": 3, "pts": 0},
+            {"name": "Satterfield", "fg": "0-2", "ft": "0-0", "reb": 0, "ast": 0, "pf": 2, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

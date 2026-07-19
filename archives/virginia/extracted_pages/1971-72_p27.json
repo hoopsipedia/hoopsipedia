@@ -1,0 +1,43 @@
+{
+  "page": 27,
+  "games": [
+    {
+      "date": "1972-03-10",
+      "opponent": "Maryland (ACC Tournament, at Greensboro, N.C.)",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 57,
+          "players": [
+            {"name": "Frank DeWitt", "min": 32, "fg": "3-8", "ft": "1-1", "reb": 3, "ast": 2, "pf": 3, "to": 0, "stl": 0, "blk": 0, "pts": 7},
+            {"name": "Jim Hobgood", "min": 39, "fg": "3-9", "ft": "0-0", "reb": 3, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 6},
+            {"name": "Scott McCandlish", "min": 36, "fg": "3-5", "ft": "1-2", "reb": 7, "ast": 0, "pf": 5, "to": 0, "stl": 0, "blk": 0, "pts": 7},
+            {"name": "Barry Parkhill", "min": 40, "fg": "10-24", "ft": "4-5", "reb": 3, "ast": 3, "pf": 2, "to": 3, "stl": 0, "blk": 0, "pts": 24},
+            {"name": "Tim Rash", "min": 28, "fg": "3-5", "ft": "1-1", "reb": 0, "ast": 1, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 7},
+            {"name": "Al Drummond", "min": 7, "fg": "1-3", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Bob McKeag", "min": 5, "fg": "0-1", "ft": "0-0", "reb": 2, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Chip Miller", "min": 5, "fg": "1-1", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Steve Morris", "min": 3, "fg": "1-2", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Lanny Stahurski", "min": 4, "fg": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "pf": 4, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Maryland Terrapins",
+          "score": 62,
+          "players": [
+            {"name": "Howard White", "min": 40, "fg": "2-6", "ft": "7-7", "reb": 2, "ast": 0, "pf": 1, "to": 4, "stl": 0, "blk": 0, "pts": 11},
+            {"name": "Bob Bodell", "min": 34, "fg": "2-4", "ft": "3-4", "reb": 6, "ast": 2, "pf": 5, "to": 4, "stl": 0, "blk": 0, "pts": 7},
+            {"name": "Tom McMillen", "min": 40, "fg": "5-8", "ft": "7-8", "reb": 5, "ast": 2, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 17},
+            {"name": "Len Elmore", "min": 40, "fg": "2-5", "ft": "1-1", "reb": 13, "ast": 0, "pf": 1, "to": 4, "stl": 0, "blk": 0, "pts": 5},
+            {"name": "Darrell Brown", "min": 25, "fg": "5-8", "ft": "0-1", "reb": 2, "ast": 0, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 10},
+            {"name": "Jap Trimble", "min": 1, "fg": "0-1", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Jim O'Brien", "min": 20, "fg": "3-4", "ft": "6-6", "reb": 5, "ast": 1, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 12}
+          ]
+        }
+      ],
+      "checksum_ok": true,
+      "notes": "ACC Tournament game. Sheet includes a '3 Pt' column but this pre-1986 season has no three-point line; all values shown were 0-0 template artifacts, so the tp field was omitted entirely. Jim O'Brien's FG line was transcribed as 3-4 (not the ambiguous '5-4' rendering) because that is the only value consistent with his 12 pts (3*2+6=12) and the team FG-made total of 19."
+    }
+  ],
+  "skipped": []
+}

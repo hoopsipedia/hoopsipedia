@@ -1,0 +1,9 @@
+{
+  "page": 4,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page shows a full game recap (Ohio State 55, Oklahoma 64 OT, Dec 18 1948-49 at Norman, coach Tippy Dye) with a play-by-play log and a small player box-score table at the bottom, but the box-score table's print is too small/blurry to transcribe digits reliably. Attempted OCR produced internally inconsistent results (e.g. 'Burkholder' appearing in the Oklahoma column even though the article text identifies him as an Ohio State player who hit the game-tying shot), indicating rows/columns are being misread or cross-contaminated between the two teams' tables. Only Oklahoma's partial line appears legible-ish and Ohio State's full player lineup was not confidently readable at all. Skipping rather than risk inventing/misattributing player stats; a second read of the same static scan would not improve resolution so the one allowed re-read was not used."
+    }
+  ]
+}

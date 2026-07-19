@@ -1,0 +1,44 @@
+{
+  "page": 13,
+  "games": [
+    {
+      "date": "1980-01-17",
+      "opponent": "Arizona State",
+      "ucla_score": 76,
+      "opp_score": 78,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 76,
+          "players": [
+            {"name": "Wilkes", "min": 30, "fg": "5-12", "ft": "1-5", "reb": 6, "pf": 2, "pts": 11, "ast": 1, "to": 2, "stl": 1},
+            {"name": "Vandeweghe", "min": 37, "fg": "10-17", "ft": "4-6", "reb": 6, "pf": 3, "pts": 24, "ast": 1, "to": 2, "stl": 1},
+            {"name": "Allums", "min": 41, "fg": "4-5", "ft": "0-0", "reb": 4, "pf": 5, "pts": 8, "stl": 1},
+            {"name": "Foster", "min": 33, "fg": "5-10", "ft": "0-2", "reb": 0, "pf": 1, "pts": 10, "ast": 2, "to": 1, "stl": 1},
+            {"name": "Holton", "min": 26, "fg": "4-5", "ft": "1-2", "reb": 6, "pf": 0, "pts": 9, "ast": 2, "to": 1, "stl": 2},
+            {"name": "Sims", "min": 26, "fg": "2-7", "ft": "0-1", "reb": 4, "pf": 3, "pts": 4, "ast": 3, "to": 4, "blk": 1, "stl": 2},
+            {"name": "Anderson", "min": 3, "fg": "1-1", "ft": "0-0", "reb": 1, "pf": 0, "pts": 2, "ast": 1},
+            {"name": "Daye", "min": 21, "fg": "0-0", "ft": "2-4", "reb": 2, "pf": 1, "pts": 2, "ast": 3, "to": 5},
+            {"name": "Sanders", "min": 13, "fg": "3-6", "ft": "0-0", "reb": 3, "pf": 5, "pts": 6, "ast": 3, "to": 1},
+            {"name": "Pruitt", "min": 7, "fg": "0-3", "ft": "0-0", "reb": 3, "pf": 3, "pts": 0, "to": 1}
+          ]
+        },
+        {
+          "name": "Arizona State Sun Devils",
+          "score": 78,
+          "players": [
+            {"name": "Nash", "min": 26, "fg": "4-8", "ft": "0-0", "reb": 3, "pf": 4, "pts": 8, "ast": 6, "to": 2, "stl": 3},
+            {"name": "Nimphius", "min": 32, "fg": "4-8", "ft": "2-4", "reb": 7, "pf": 3, "pts": 10, "to": 3, "blk": 1},
+            {"name": "Lister", "min": 37, "fg": "9-16", "ft": "3-7", "reb": 12, "pf": 3, "pts": 21, "ast": 1, "to": 2, "blk": 3},
+            {"name": "Scott", "min": 38, "fg": "9-14", "ft": "1-4", "reb": 3, "pf": 3, "pts": 19, "ast": 1, "to": 3, "stl": 2},
+            {"name": "Lever", "min": 37, "fg": "2-6", "ft": "0-1", "reb": 1, "pf": 4, "pts": 4, "ast": 6, "to": 6, "stl": 1},
+            {"name": "S. Williams", "min": 25, "fg": "6-6", "ft": "4-6", "reb": 2, "pf": 2, "pts": 16, "ast": 1, "blk": 1, "stl": 3},
+            {"name": "P. Williams", "min": 5, "fg": "0-0", "ft": "0-0", "reb": 1, "pf": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

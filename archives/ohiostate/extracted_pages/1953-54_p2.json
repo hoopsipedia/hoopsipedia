@@ -1,0 +1,9 @@
+{
+  "page": 2,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Official Western Conference box score: Ohio State 93, Butler 78 (Dec 5, 1953 per season context; scoresheet itself reads '1955', likely a scorer's date slip). Ohio State's player lines and both team totals are clearly typed and checksum cleanly (OSU: 35 FGM x2 + 23 FTM = 93, matching all 13 player PTS summing to 93). However Butler's individual player rows are heavily degraded by scan noise/fading — FG and FT-made digits for Greve, Read, Mustain, Crosley, Ellenberger, Mackenzie, Porter, and Labda are not confidently legible even though Butler's team totals row (28-72 FG, 22-14 FT, 24 PF, 78 PTS) is readable and itself checksums (2*28+22=78). Since both teams' player lines are required and Butler's cannot be transcribed without guessing digits, the whole game is skipped rather than fabricating opponent stat lines."
+    }
+  ]
+}

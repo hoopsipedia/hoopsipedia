@@ -1,0 +1,44 @@
+{
+  "page": 9,
+  "games": [
+    {
+      "date": "1976-12-20",
+      "opponent": "San Diego State",
+      "site": "Albuquerque",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 107,
+          "players": [
+            {"name": "Marvin Johnson", "min": 34, "fg": "9-15", "ft": "2-4", "reb": 7, "ast": 4, "pf": 2, "to": 4, "stl": 1, "blk": 0, "pts": 20},
+            {"name": "Willie Howard", "min": 24, "fg": "7-11", "ft": "3-4", "reb": 5, "ast": 1, "pf": 4, "to": 2, "stl": 1, "blk": 2, "pts": 17},
+            {"name": "Jimmy Allen", "min": 28, "fg": "13-24", "ft": "6-9", "reb": 17, "ast": 0, "pf": 0, "to": 3, "stl": 0, "blk": 0, "pts": 32},
+            {"name": "Billy Reid", "min": 29, "fg": "4-12", "ft": "3-5", "reb": 1, "ast": 1, "pf": 2, "to": 6, "stl": 1, "blk": 0, "pts": 11},
+            {"name": "Mark Felix", "min": 12, "fg": "1-1", "ft": "0-2", "reb": 2, "ast": 3, "pf": 1, "to": 1, "stl": 1, "blk": 0, "pts": 2},
+            {"name": "Wil Smiley", "min": 9, "fg": "0-3", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Steve Davis", "min": 14, "fg": "2-2", "ft": "0-0", "reb": 3, "ast": 2, "pf": 4, "to": 0, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Michael Cooper", "min": 36, "fg": "6-12", "ft": "4-5", "reb": 9, "ast": 5, "pf": 4, "to": 1, "stl": 1, "blk": 3, "pts": 16},
+            {"name": "Dan Davis", "min": 13, "fg": "2-2", "ft": "1-4", "reb": 0, "ast": 3, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 5}
+          ]
+        },
+        {
+          "name": "San Diego State Aztecs",
+          "score": 104,
+          "players": [
+            {"name": "Brian Frishman", "min": 33, "fg": "14-26", "ft": "4-6", "reb": 5, "ast": 2, "pf": 4, "to": 3, "stl": 0, "blk": 0, "pts": 32},
+            {"name": "Percy Gilbert", "min": 19, "fg": "7-11", "ft": "0-0", "reb": 5, "ast": 1, "pf": 5, "to": 3, "stl": 0, "blk": 0, "pts": 14},
+            {"name": "Fred Branch", "min": 11, "fg": "4-5", "ft": "1-2", "reb": 0, "ast": 0, "pf": 5, "to": 0, "stl": 0, "blk": 0, "pts": 9},
+            {"name": "Dean Decker", "min": 29, "fg": "2-3", "ft": "0-0", "reb": 2, "ast": 5, "pf": 4, "to": 5, "stl": 2, "blk": 0, "pts": 4},
+            {"name": "Mark Delsman", "min": 24, "fg": "3-8", "ft": "2-2", "reb": 5, "ast": 6, "pf": 4, "to": 2, "stl": 0, "blk": 0, "pts": 8},
+            {"name": "Jerry Brown", "min": 13, "fg": "2-7", "ft": "2-2", "reb": 3, "ast": 1, "pf": 2, "to": 1, "stl": 0, "blk": 0, "pts": 6},
+            {"name": "Ia Saipaia", "min": 22, "fg": "4-5", "ft": "2-3", "reb": 1, "ast": 3, "pf": 1, "to": 2, "stl": 0, "blk": 0, "pts": 10},
+            {"name": "Mike Dodd", "min": 20, "fg": "2-12", "ft": "3-4", "reb": 1, "ast": 2, "pf": 2, "to": 3, "stl": 3, "blk": 0, "pts": 7},
+            {"name": "Joel Kramer", "min": 29, "fg": "7-11", "ft": "0-0", "reb": 13, "ast": 3, "pf": 3, "to": 1, "stl": 2, "blk": 0, "pts": 14}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

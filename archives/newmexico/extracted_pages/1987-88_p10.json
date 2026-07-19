@@ -1,0 +1,9 @@
+{
+  "page": 10,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page is an official NCAA box score for New Mexico (home, Albuquerque NM) vs Grambling (State), final score New Mexico 87, Grambling 71 (period scores 43-44 and 33-38 respectively), but it is a handwritten scoresheet with very small, faint, and overlapping digits in every per-player stat cell (FG, 3FG, FT, rebounds, PF, TP, A/TO/BLK/S, MIN) for both ~14-player rosters. Individual point values could not be read with confidence sufficient to pass a player-points-sum checksum against the final scores of 87 and 71, so transcription was skipped rather than risk invented values. Date field is also illegible (appears to read roughly '_/19/8_', possibly 12/19/87, but not reliable enough to record)."
+    }
+  ]
+}

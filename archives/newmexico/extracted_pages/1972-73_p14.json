@@ -1,0 +1,45 @@
+{
+  "page": 14,
+  "games": [
+    {
+      "date": "1973-01-13",
+      "opponent": "Utah",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 78,
+          "players": [
+            {"name": "Bernard Hardin", "min": "33", "fg": "6-14", "ft": "2-5", "reb": "4", "ast": "1", "pf": "3", "pts": 14},
+            {"name": "Don Ford", "min": "14", "fg": "0-3", "ft": "0-0", "reb": "4", "ast": "1", "pf": "1", "pts": 0},
+            {"name": "Marc Saiers", "min": "37", "fg": "7-10", "ft": "0-1", "reb": "5", "ast": "1", "pf": "1", "pts": 14},
+            {"name": "Tommy Roberts", "min": "23", "fg": "2-4", "ft": "0-0", "reb": "2", "ast": "2", "pf": "2", "pts": 4},
+            {"name": "Chester Fuller", "min": "24", "fg": "3-6", "ft": "6-8", "reb": "5", "ast": "0", "pf": "2", "pts": 12},
+            {"name": "Mike Stewart", "min": "4", "fg": "2-2", "ft": "0-0", "reb": "0", "ast": "0", "pf": "1", "pts": 4},
+            {"name": "Gabe Nava", "min": "17", "fg": "1-2", "ft": "2-3", "reb": "0", "ast": "2", "pf": "0", "pts": 4},
+            {"name": "Wendell Taylor", "min": "14", "fg": "6-9", "ft": "0-0", "reb": "2", "ast": "3", "pf": "3", "pts": 12},
+            {"name": "Bob Toppert", "min": "2", "fg": "1-1", "ft": "0-0", "reb": "1", "ast": "1", "pf": "1", "pts": 2},
+            {"name": "Rich Pokorski", "min": "2", "fg": "0-1", "ft": "0-0", "reb": "0", "ast": "1", "pf": "1", "pts": 0},
+            {"name": "Darryl Minniefield", "min": "30", "fg": "5-9", "ft": "2-4", "reb": "5", "ast": "4", "pf": "4", "pts": 12}
+          ]
+        },
+        {
+          "name": "Utah",
+          "score": 75,
+          "players": [
+            {"name": "Scot Jones", "min": "40", "fg": "8-15", "ft": "2-2", "reb": "3", "ast": "7", "pf": "2", "pts": 18},
+            {"name": "Charlie Whiting", "min": "40", "fg": "1-7", "ft": "5-6", "reb": "10", "ast": "0", "pf": "1", "pts": 7},
+            {"name": "Mike Sojourner", "min": "37", "fg": "6-9", "ft": "0-1", "reb": "11", "ast": "1", "pf": "5", "pts": 12},
+            {"name": "Eddie Trail", "min": "37", "fg": "3-9", "ft": "7-8", "reb": "6", "ast": "6", "pf": "4", "pts": 13},
+            {"name": "Luther Burden", "min": "39", "fg": "11-21", "ft": "3-4", "reb": "3", "ast": "3", "pf": "5", "pts": 25},
+            {"name": "Tyrone Medley", "min": "3", "fg": "0-0", "ft": "0-0", "reb": "0", "ast": "1", "pf": "0", "pts": 0},
+            {"name": "Bernard Tomlin", "min": "1", "fg": "0-0", "ft": "0-0", "reb": "0", "ast": "0", "pf": "0", "pts": 0},
+            {"name": "Jim Sorensen", "min": "3", "fg": "0-0", "ft": "0-0", "reb": "0", "ast": "1", "pf": "0", "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true,
+      "notes": "Sheet had no per-player points column with independently distinct FG/FT-derived totals discrepancy; per-player pts on sheet matched 2*fg_made+ft_made in all cases, used sheet's own 'Total Points' column directly. Pat King (New Mexico #22), Charles Monatti (#21) and Craig Nielsen (#35) had blank stat lines (did not play) and were omitted. Bernard Hardin's FG attempts figure is hard to read ('14' vs possibly another digit) but made=6 and pts=14 checksum independently via FT of 2, consistent either way. Date on scoresheet ('1/13/73' vs possibly '1/23/73') is slightly ambiguous handwriting; used 1973-01-13 as best reading."
+    }
+  ],
+  "skipped": []
+}

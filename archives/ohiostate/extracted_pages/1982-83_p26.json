@@ -1,0 +1,9 @@
+{
+  "page": 26,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page is a handwritten/dot-matrix box score for Ohio State (or opponent) vs Michigan, but the scan is too faint and blurry to reliably read player names or numeric stat values (many digits ambiguous between 0/6/8, columns misaligned, several player names partially illegible e.g. 'Cor?beck, ?ce', 'Wolfman, Gr?nville', 'St?l?en, Ron'). Bottom team is legible as 'MICHIGAN' with players Gelderson Robert, (Rol/Bol)ford Richard, (A/U)nderson Tim, Robinson, Nida Butch, but numeric columns are not confidently readable enough to compute a trustworthy checksum. Also note: physical page number handwritten on the sheet reads '25', not '26', suggesting possible pagination offset in this PDF. Skipping rather than guessing values."
+    }
+  ]
+}

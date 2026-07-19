@@ -1,0 +1,9 @@
+{
+  "page": 2,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Ohio State vs Bethune-Cookman, 1990-11-25, St. John Arena, final OSU 111 - Bethune-Cookman 72. Title/date/final score and all starters are clearly legible and checksum correctly individually, but several bench player rows for BOTH teams (Bethune-Cookman: Carter, Glass, Taylor, Robinson; Ohio State: Jent, Skelton, Hall, Reeves, Brandewie, Ratliff) have low-resolution/crowded digit columns where rebound/FT/points figures are ambiguous. After careful cross-checking against team FG/3FG/FT/TP totals printed on the sheet, the Bethune-Cookman side could be reconciled to sum exactly to 72, but doing so required inferring several digits rather than reading them directly, which risks invented values. The Ohio State side could not be reconciled at all: literal point-column readings sum to 112 against a final score of 111 (FT column sums to 23 vs a printed team total of 20), and I could not isolate which specific bench player's digit is misread within the one allowed re-read. Skipping the whole page's game per the checksum-failure/no-guessing rule rather than publishing partially-invented player lines."
+    }
+  ]
+}

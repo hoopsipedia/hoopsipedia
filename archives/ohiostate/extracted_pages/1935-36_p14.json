@@ -1,0 +1,9 @@
+{
+  "page": 14,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page 14 is a single newspaper clipping for the 1936-02-10 game at Minnesota (final score Ohio State 44, Minnesota 28). Ohio State's box score column (Whitlinger, Dye, Thomas, McDonald, Raudabaugh, Laybourne, Pruett, Packer, Crow) is legible and reconstructable with a clean checksum against the team total of 44 and the article's narrative (Dye 3 FG/6 FT=12, Thomas 5 FG=10, Laybourne 4 FG/2 FT=10, etc.), but the adjoining Minnesota column (Roscoe, Baker, Jones, Seebach, Rolek, Barnum, Nasland, Manly, Wallbloom, Halvorson, Nash) is small, faint newsprint that yields inconsistent digit reads across two passes (e.g. a Manly field-goal count that alone would exceed the team FG total of 8), so individual Minnesota player lines cannot be reconciled to the required checksum with confidence. Because the task requires both teams' player lines with a passing checksum, the entire game is skipped rather than guessed, per the ruthless-skip instruction. Both re-reads of the page (initial + one allowed re-read) were used."
+    }
+  ]
+}

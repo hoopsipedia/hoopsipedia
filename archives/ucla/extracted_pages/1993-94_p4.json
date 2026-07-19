@@ -1,0 +1,51 @@
+{
+  "page": 4,
+  "games": [
+    {
+      "date": "1993-12-11",
+      "opponent": "Long Beach St.",
+      "ucla_score": 93,
+      "opp_score": 51,
+      "teams": [
+        {
+          "name": "Long Beach St.",
+          "score": 51,
+          "players": [
+            {"name": "Atkinson, Mike", "min": 22, "fg": "7-9", "tp": "0-0", "ft": "1-4", "reb": 1, "pf": 3, "pts": 15, "ast": 1, "to": 8, "blk": 0, "stl": 0},
+            {"name": "Hannibal, Rod", "min": 23, "fg": "0-9", "tp": "0-6", "ft": "1-2", "reb": 1, "pf": 3, "pts": 1, "ast": 1, "to": 2, "blk": 0, "stl": 0},
+            {"name": "O'Kelley, Terrance", "min": 27, "fg": "2-8", "tp": "1-2", "ft": "0-0", "reb": 1, "pf": 4, "pts": 5, "ast": 0, "to": 0, "blk": 2, "stl": 1},
+            {"name": "Rogers, Jeff", "min": 27, "fg": "1-3", "tp": "0-2", "ft": "0-0", "reb": 3, "pf": 4, "pts": 2, "ast": 2, "to": 1, "blk": 0, "stl": 0},
+            {"name": "Camper, Brian", "min": 31, "fg": "3-9", "tp": "1-4", "ft": "1-2", "reb": 1, "pf": 0, "pts": 8, "ast": 1, "to": 2, "blk": 0, "stl": 2},
+            {"name": "Cotton, James", "min": 22, "fg": "1-7", "tp": "1-6", "ft": "0-2", "reb": 3, "pf": 1, "pts": 3, "ast": 1, "to": 1, "blk": 0, "stl": 0},
+            {"name": "Hawkins, Juaquin", "min": 23, "fg": "3-4", "tp": "0-0", "ft": "2-6", "reb": 4, "pf": 4, "pts": 8, "ast": 1, "to": 3, "blk": 0, "stl": 2},
+            {"name": "Caviezel, Tim", "min": 9, "fg": "1-3", "tp": "1-3", "ft": "1-2", "reb": 2, "pf": 1, "pts": 4, "ast": 1, "to": 1, "blk": 0, "stl": 0},
+            {"name": "Branner, Gerry", "min": 9, "fg": "2-3", "tp": "0-0", "ft": "0-0", "reb": 1, "pf": 0, "pts": 4, "ast": 0, "to": 0, "blk": 0, "stl": 0},
+            {"name": "Mays, Tyrone", "min": 5, "fg": "0-0", "tp": "0-0", "ft": "1-2", "reb": 1, "pf": 1, "pts": 1, "ast": 3, "to": 1, "blk": 0, "stl": 0},
+            {"name": "Brown, Eric", "min": 3, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0, "ast": 1, "to": 3, "blk": 0, "stl": 2}
+          ]
+        },
+        {
+          "name": "UCLA Bruins",
+          "score": 93,
+          "players": [
+            {"name": "O'Bannon, Charles", "min": 27, "fg": "5-7", "tp": "0-1", "ft": "5-7", "reb": 5, "pf": 2, "pts": 15, "ast": 2, "to": 5, "blk": 1, "stl": 2},
+            {"name": "O'Bannon, Ed", "min": 33, "fg": "3-8", "tp": "0-1", "ft": "8-8", "reb": 10, "pf": 1, "pts": 14, "ast": 4, "to": 4, "blk": 3, "stl": 0},
+            {"name": "Zidek, George", "min": 21, "fg": "2-4", "tp": "0-0", "ft": "2-2", "reb": 3, "pf": 2, "pts": 6, "ast": 0, "to": 0, "blk": 0, "stl": 0},
+            {"name": "Edney, Tyus", "min": 22, "fg": "4-5", "tp": "1-1", "ft": "3-6", "reb": 1, "pf": 2, "pts": 12, "ast": 4, "to": 2, "blk": 0, "stl": 1},
+            {"name": "Tarver, Shon", "min": 32, "fg": "8-11", "tp": "0-1", "ft": "0-0", "reb": 8, "pf": 3, "pts": 16, "ast": 0, "to": 2, "blk": 0, "stl": 1},
+            {"name": "Dempsey, Kevin", "min": 12, "fg": "1-4", "tp": "0-2", "ft": "1-3", "reb": 1, "pf": 2, "pts": 3, "ast": 0, "to": 1, "blk": 0, "stl": 0},
+            {"name": "Zimmerman, Rodney", "min": 15, "fg": "3-3", "tp": "0-0", "ft": "0-0", "reb": 6, "pf": 2, "pts": 6, "ast": 0, "to": 3, "blk": 1, "stl": 0},
+            {"name": "Dollar, Cameron", "min": 17, "fg": "3-4", "tp": "0-0", "ft": "1-2", "reb": 3, "pf": 2, "pts": 7, "ast": 6, "to": 3, "blk": 0, "stl": 1},
+            {"name": "Nwankwo, Ike", "min": 8, "fg": "3-5", "tp": "0-0", "ft": "0-2", "reb": 3, "pf": 3, "pts": 6, "ast": 0, "to": 0, "blk": 0, "stl": 0},
+            {"name": "Burns, Marquis", "min": 7, "fg": "2-3", "tp": "0-0", "ft": "0-0", "reb": 1, "pf": 0, "pts": 4, "ast": 1, "to": 0, "blk": 0, "stl": 3},
+            {"name": "Boyle, David", "min": 4, "fg": "1-1", "tp": "0-0", "ft": "0-0", "reb": 0, "pf": 1, "pts": 2, "ast": 0, "to": 0, "blk": 0, "stl": 0},
+            {"name": "Walden, Tom", "min": 4, "fg": "0-1", "tp": "0-0", "ft": "0-0", "reb": 1, "pf": 1, "pts": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0},
+            {"name": "Myers, Bob", "min": 1, "fg": "1-1", "tp": "0-0", "ft": "0-0", "reb": 2, "pf": 0, "pts": 2, "ast": 0, "to": 0, "blk": 0, "stl": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

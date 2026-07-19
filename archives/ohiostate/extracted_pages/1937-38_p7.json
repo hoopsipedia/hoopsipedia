@@ -1,0 +1,9 @@
+{
+  "page": 7,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Jan 8, 1938 Ohio State @ Northwestern (newspaper box score, 'Wildcats, 35-34 Win Jolts Scarlet Hope'). Ohio State's player lines (Baker, Hull, Sattler, McDonald, Boughner, Schick, Galetz, Lynch) transcribe cleanly and checksum perfectly to the team total of 34 (baskets 15, FT 4, PF 13, Pts 34). However Northwestern's column is smudged/misaligned in the scan (personal-foul digits bleed into the basket/FT columns, e.g. Nagode line reads as 4-1-1-13 which cannot reconcile to 2*FG+FT, and the PF column sums to 14 against a team total of 8, which is impossible). Individual Northwestern lines could not be transcribed confidently enough to pass checksum, so the whole game is skipped rather than guessing at the opponent's stat line."
+    }
+  ]
+}

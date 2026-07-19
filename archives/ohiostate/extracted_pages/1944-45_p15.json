@@ -1,0 +1,43 @@
+{
+  "page": 15,
+  "games": [
+    {
+      "date": "1945-02-16",
+      "opponent": "Illinois",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 41,
+          "players": [
+            {"name": "Dugger", "pts": 1},
+            {"name": "Grate", "pts": 6},
+            {"name": "Snyder", "pts": 2},
+            {"name": "Risen", "pts": 14},
+            {"name": "Amling", "pts": 13},
+            {"name": "Davis", "pts": 0},
+            {"name": "Huston", "pts": 5},
+            {"name": "Caudill", "pts": 0},
+            {"name": "Sims", "pts": 0},
+            {"name": "McFadden", "pts": 0},
+            {"name": "Jacobs", "pts": 0}
+          ]
+        },
+        {
+          "name": "Illinois",
+          "score": 56,
+          "players": [
+            {"name": "Judson", "pts": 9},
+            {"name": "Orr", "pts": 9},
+            {"name": "Delaney", "pts": 0},
+            {"name": "Kersulis", "pts": 14},
+            {"name": "Burmaster", "pts": 10},
+            {"name": "Kirk", "pts": 12},
+            {"name": "Gedwilas", "pts": 2}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

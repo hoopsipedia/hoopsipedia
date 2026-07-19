@@ -1,0 +1,51 @@
+{
+  "page": 3,
+  "games": [
+    {
+      "date": "1979-12-08",
+      "opponent": "Santa Clara",
+      "ucla_score": 92,
+      "opp_score": 79,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 92,
+          "players": [
+            {"name": "Wilkes", "min": 22, "fg": "3-9", "ft": "2-2", "reb": 8, "pf": 3, "ast": 4, "to": 2, "pts": 8},
+            {"name": "Vandeweghe", "min": 30, "fg": "9-14", "ft": "10-14", "reb": 9, "pf": 3, "to": 2, "blk": 2, "stl": 1, "pts": 28},
+            {"name": "Allums", "min": 18, "fg": "3-5", "ft": "1-2", "reb": 12, "pf": 2, "ast": 2, "to": 2, "pts": 7},
+            {"name": "Naulls", "min": 18, "fg": "2-6", "ft": "2-3", "reb": 2, "pf": 2, "ast": 3, "to": 1, "pts": 6},
+            {"name": "Anderson", "min": 19, "fg": "4-4", "ft": "0-0", "reb": 2, "pf": 2, "ast": 1, "to": 2, "blk": 1, "stl": 3, "pts": 8},
+            {"name": "Holton", "min": 14, "fg": "1-1", "ft": "2-2", "reb": 3, "pf": 2, "ast": 1, "to": 3, "pts": 4},
+            {"name": "Daye", "min": 14, "fg": "1-1", "ft": "1-3", "reb": 0, "pf": 0, "ast": 1, "to": 3, "pts": 3},
+            {"name": "Sims", "min": 17, "fg": "2-4", "ft": "3-5", "reb": 4, "pf": 2, "to": 1, "blk": 2, "stl": 1, "pts": 7},
+            {"name": "Sanders", "min": 16, "fg": "2-3", "ft": "0-0", "reb": 3, "pf": 4, "to": 3, "stl": 2, "pts": 4},
+            {"name": "Foster", "min": 14, "fg": "4-4", "ft": "2-2", "reb": 1, "pf": 3, "ast": 2, "to": 3, "pts": 10},
+            {"name": "Pruitt", "min": 14, "fg": "2-7", "ft": "2-4", "reb": 3, "pf": 0, "ast": 2, "to": 3, "pts": 6},
+            {"name": "Lippert", "min": 5, "fg": "0-1", "ft": "1-3", "reb": 1, "pf": 2, "to": 1, "stl": 1, "pts": 1},
+            {"name": "Arrillaga", "min": 2, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "to": 1, "stl": 1, "pts": 0}
+          ]
+        },
+        {
+          "name": "Santa Clara Broncos",
+          "score": 79,
+          "players": [
+            {"name": "Whittington", "min": 26, "fg": "5-10", "ft": "0-1", "reb": 6, "pf": 5, "ast": 3, "to": 2, "stl": 1, "pts": 10},
+            {"name": "Carpenter", "min": 32, "fg": "4-10", "ft": "2-4", "reb": 10, "pf": 3, "ast": 1, "pts": 10},
+            {"name": "Rambis", "min": 27, "fg": "5-16", "ft": "3-5", "reb": 4, "pf": 5, "to": 1, "blk": 3, "pts": 13},
+            {"name": "Kovaleski", "min": 30, "fg": "2-6", "ft": "6-8", "reb": 2, "pf": 3, "ast": 6, "to": 3, "stl": 1, "pts": 10},
+            {"name": "Theus", "min": 23, "fg": "6-15", "ft": "0-0", "reb": 3, "pf": 3, "ast": 1, "to": 4, "blk": 2, "stl": 2, "pts": 12},
+            {"name": "Bowers", "min": 20, "fg": "0-2", "ft": "0-0", "reb": 2, "pf": 5, "to": 3, "stl": 1, "pts": 0},
+            {"name": "Mendenhall", "min": 14, "fg": "4-8", "ft": "4-4", "reb": 1, "pf": 1, "pts": 12},
+            {"name": "Morris", "min": 8, "fg": "1-2", "ft": "0-0", "reb": 3, "pf": 0, "ast": 1, "to": 1, "pts": 2},
+            {"name": "Gower", "min": 13, "fg": "4-9", "ft": "2-2", "reb": 1, "pf": 2, "ast": 3, "to": 1, "pts": 10},
+            {"name": "Hopkins", "min": 5, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Jackson", "min": 2, "fg": "0-0", "ft": "0-0", "reb": 1, "pf": 1, "ast": 1, "to": 1, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

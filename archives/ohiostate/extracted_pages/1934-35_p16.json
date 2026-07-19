@@ -1,0 +1,9 @@
+{
+  "page": 16,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page is a newspaper clipping/scoresheet for Ohio State 41, Northwestern 29 (Feb 11, 1935, Columbus, attendance 5909, coach Olsen) with a legible header and team totals row (Northwestern: 11 FG / 7 FT / 29 pts; Ohio State: 17 FG / 9 FT / 41 pts per the clipping's own 'Totals' line), but the individual player rows (Fisher, Blane, Grosberg, McAnally, Vance, Kawal, Pendergast, Bender for Northwestern; Wilson, Whittinger, Thomas, Beitner, Dye for Ohio State) are too low-resolution/blurry to reliably read per-player FG and FT digits. Additionally the printed team totals fail the pre-3-point checksum for Ohio State (2*17+9=43 vs. official final score of 41), indicating at least one digit in the clipping's own totals row is misread or a typographical error in the original, so no player-level or team-level line could be transcribed with confidence. Skipping rather than guessing."
+    }
+  ]
+}

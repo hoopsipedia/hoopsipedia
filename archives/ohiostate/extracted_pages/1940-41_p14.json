@@ -1,0 +1,11 @@
+{
+  "page": 14,
+  "games": [],
+  "skipped": [
+    {
+      "date": "1941-02-03",
+      "opponent": "Indiana",
+      "reason": "Box score present (Ohio State 25, Indiana 45, at Bloomington, coach Olsen) but the embedded scorecard scan is too small/low-resolution to reliably read individual player digits in the R./F./P.F./T. columns. Team-level totals row (R=7, F=11, T=25) is legible and matches the final score (2*7+11=25), but attempts to reconcile individual player rows (esp. Fisher and Gecowets) against that totals row produced a 3-point discrepancy, indicating at least one misread digit. Per instructions, skipping rather than guessing since a self-consistent checksum could not be achieved after a second read of the page."
+    }
+  ]
+}

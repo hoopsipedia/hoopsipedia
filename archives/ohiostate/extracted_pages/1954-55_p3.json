@@ -1,0 +1,44 @@
+{
+  "page": 3,
+  "games": [
+    {
+      "date": "1954-12-11",
+      "opponent": "St. Louis",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 91,
+          "players": [
+            {"name": "J. Miller", "fg": "10-16", "ft": "6-8", "pf": 3, "pts": 26},
+            {"name": "Kelley", "fg": "6-15", "ft": "2-4", "pf": 4, "pts": 14},
+            {"name": "Ropes", "fg": "1-3", "ft": "0-0", "pf": 5, "pts": 2},
+            {"name": "Freeman", "fg": "13-25", "ft": "11-12", "pf": 2, "pts": 37},
+            {"name": "Ellis", "fg": "2-6", "ft": "6-7", "pf": 2, "pts": 10},
+            {"name": "Woster", "fg": "1-2", "ft": "0-0", "pf": 1, "pts": 2},
+            {"name": "Short", "fg": "0-1", "ft": "0-0", "pf": 2, "pts": 0},
+            {"name": "Millard", "fg": "0-0", "ft": "0-0", "pf": 0, "pts": 0},
+            {"name": "C. Miller", "fg": "0-0", "ft": "0-0", "pf": 0, "pts": 0},
+            {"name": "Wigton", "fg": "0-0", "ft": "0-0", "pf": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "St. Louis",
+          "score": 86,
+          "players": [
+            {"name": "Boushka", "fg": "9-24", "ft": "10-16", "pf": 2, "pts": 28},
+            {"name": "Kooh", "fg": "6-12", "ft": "2-2", "pf": 4, "pts": 14},
+            {"name": "McLaughlin", "fg": "9-15", "ft": "8-9", "pf": 2, "pts": 26},
+            {"name": "Slattery", "fg": "0-4", "ft": "1-3", "pf": 4, "pts": 1},
+            {"name": "Dubinick", "fg": "3-17", "ft": "0-0", "pf": 4, "pts": 6},
+            {"name": "Smith", "fg": "1-5", "ft": "0-0", "pf": 0, "pts": 2},
+            {"name": "Todd", "fg": "0-0", "ft": "0-0", "pf": 1, "pts": 0},
+            {"name": "Hohl", "fg": "2-5", "ft": "0-1", "pf": 0, "pts": 4},
+            {"name": "Bennett", "fg": "2-3", "ft": "1-2", "pf": 1, "pts": 5}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

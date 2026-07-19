@@ -1,0 +1,9 @@
+{
+  "page": 14,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Handwritten official NCAA box score, BYU (visitors, 26-of-61 FG, final 57) at New Mexico (home, 20-of-51 FG, final 60), date on header illegible ('1/../86'), site Albuquerque. BYU player points (computed as 2*FG+FT, no printed points column) checksum exactly to the team total of 57 (10+5+8+10+9+9+0+6=57). However New Mexico's printed per-player TP column sums to 59, one short of the team TOTALS row value of 60, and the discrepancy could not be resolved to a specific digit with confidence (candidate rows Loaffel FT/FTA and Lawson FT/FTA have internally inconsistent or borderline-illegible digits) even after a second look at the page. Per instructions, skipping rather than guessing since the New Mexico side fails the player-pts-sum-equals-team-score checksum by 1 point."
+    }
+  ]
+}

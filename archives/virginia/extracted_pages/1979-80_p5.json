@@ -1,0 +1,53 @@
+{
+  "page": 5,
+  "games": [
+    {
+      "date": "1979-12-15",
+      "opponent": "BYU-Hawaii",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 82,
+          "players": [
+            {"name": "Raker", "min": 22, "fg": "8-11", "ft": "2-2", "reb": 5, "pf": 4, "ast": 3, "to": 3, "blk": 0, "stl": 1, "pts": 18},
+            {"name": "Owens", "min": 26, "fg": "3-5", "ft": "0-0", "reb": 8, "pf": 1, "ast": 4, "to": 4, "blk": 0, "stl": 1, "pts": 6},
+            {"name": "Sampson", "min": 9, "fg": "3-4", "ft": "0-0", "reb": 7, "pf": 2, "ast": 0, "to": 3, "blk": 4, "stl": 1, "pts": 6},
+            {"name": "Lamp", "min": 27, "fg": "4-13", "ft": "7-9", "reb": 7, "pf": 2, "ast": 2, "to": 7, "blk": 0, "stl": 1, "pts": 15},
+            {"name": "Jones", "min": 21, "fg": "1-3", "ft": "0-0", "reb": 5, "pf": 1, "ast": 5, "to": 4, "blk": 1, "stl": 5, "pts": 2},
+            {"name": "Jefferson", "min": 15, "fg": "3-8", "ft": "1-4", "reb": 5, "pf": 0, "ast": 2, "to": 2, "blk": 0, "stl": 0, "pts": 7},
+            {"name": "Klein", "min": 18, "fg": "2-3", "ft": "3-4", "reb": 1, "pf": 3, "ast": 2, "to": 2, "blk": 0, "stl": 1, "pts": 7},
+            {"name": "Robinson", "min": 19, "fg": "6-9", "ft": "1-2", "reb": 6, "pf": 3, "ast": 1, "to": 2, "blk": 0, "stl": 1, "pts": 13},
+            {"name": "Gates", "min": 15, "fg": "0-2", "ft": "4-4", "reb": 4, "pf": 5, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pts": 4},
+            {"name": "Lattimore", "min": 14, "fg": "0-2", "ft": "0-1", "reb": 5, "pf": 3, "ast": 1, "to": 1, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Newburg", "min": 6, "fg": "1-4", "ft": "0-0", "reb": 0, "pf": 0, "ast": 1, "to": 1, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Cross", "min": 4, "fg": "0-1", "ft": "0-0", "reb": 0, "pf": 1, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Carpenter", "min": 4, "fg": "1-1", "ft": "0-0", "reb": 4, "pf": 0, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pts": 2}
+          ]
+        },
+        {
+          "name": "BYU-Hawaii",
+          "score": 64,
+          "players": [
+            {"name": "Pickard", "min": null, "fg": "0-3", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "pts": 0},
+            {"name": "Holland", "min": null, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 1, "pts": 0},
+            {"name": "Hawkins", "min": null, "fg": "4-7", "ft": "4-6", "reb": 1, "pf": 4, "ast": 2, "pts": 12},
+            {"name": "Barrett", "min": null, "fg": "2-6", "ft": "0-0", "reb": 3, "pf": 2, "ast": 6, "pts": 4},
+            {"name": "Colburn", "min": null, "fg": "1-1", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "pts": 2},
+            {"name": "Day", "min": null, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "pts": 0},
+            {"name": "Tingey", "min": null, "fg": "2-4", "ft": "0-0", "reb": 0, "pf": 1, "ast": 0, "pts": 4},
+            {"name": "Matthews", "min": null, "fg": "6-10", "ft": "2-4", "reb": 3, "pf": 4, "ast": 7, "pts": 14},
+            {"name": "B. Scott", "min": null, "fg": "0-1", "ft": "1-2", "reb": 3, "pf": 0, "ast": 0, "pts": 1},
+            {"name": "Koelliker", "min": null, "fg": "2-6", "ft": "0-0", "reb": 6, "pf": 3, "ast": 1, "pts": 4},
+            {"name": "Rowberry", "min": null, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "pts": 0},
+            {"name": "Davis", "min": null, "fg": "5-10", "ft": "0-4", "reb": 4, "pf": 2, "ast": 0, "pts": 10},
+            {"name": "Pickering", "min": null, "fg": "1-1", "ft": "0-1", "reb": 1, "pf": 4, "ast": 0, "pts": 2},
+            {"name": "Pierce", "min": null, "fg": "4-16", "ft": "3-6", "reb": 6, "pf": 3, "ast": 1, "pts": 11}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": [],
+  "notes": "Official NCAA box score, Virginia vs BYU-Hawaii, Dec 15 1979. Score by periods: UVA 53-29=82, BYU-H 31-33=64. Both teams' player pts sums match final scores (82 and 64) and team TP row totals. BYU-Hawaii minutes-per-player column was not clearly legible (right edge of sheet cut off/faint) so 'min' omitted (null) for that team; team total MIN row read as 200 (partially obscured, likely '20X'). Sampson's rebound digit (7) and Carpenter's FGA (read as 1, i.e. 1-1) were slightly ambiguous handwriting but did not affect the points checksum. Technical fouls noted on sheet: UVA Bench (1), Robinson (1) - not reflected in the transcribed stat columns since sheet has no technical-foul column."
+}

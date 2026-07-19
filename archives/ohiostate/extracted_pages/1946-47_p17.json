@@ -1,0 +1,12 @@
+{
+  "page": 17,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Varsity game Ohio State (43) at Indiana (46), Feb 24 1947 - box score table present (OHIO STATE / INDIANA, columns G./F./FT./Pt.) but printed in tiny agate newsprint type that is too degraded/illegible to confidently transcribe individual player digits. A best-effort read of the Ohio State column (Bowen, Fenton, Underman, Boston, Amling, Winters, Schnittker, Pfeiffer) summed to ~36 points, which fails checksum against the reported final score of 43 for Ohio State, confirming the digits cannot be trusted. Skipped per instructions rather than guess."
+    },
+    {
+      "reason": "Junior varsity game 'Scarlet J-V's' Ohio State J-V (48) vs Butler J-V (49) - a second box score table appears in the same clipping (Ohio State J-V / Butler J-V, columns G./F./P.) but is even smaller agate type and similarly illegible; also this is the JV squad rather than the primary varsity roster referenced by season records. Skipped rather than guess at unreliable digits."
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "page": 26,
+  "games": [
+    {
+      "date": "1971-03-18",
+      "opponent": "Marquette",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 60,
+          "players": [
+            {"name": "Wagar", "fg": "0-2", "ft": "1-3", "reb": 2, "pf": 1, "pts": 1},
+            {"name": "Minor", "fg": "1-5", "ft": "0-2", "reb": 3, "pf": 2, "pts": 2},
+            {"name": "Witte", "fg": "5-13", "ft": "3-4", "reb": 11, "pf": 3, "pts": 13},
+            {"name": "Hornyak", "fg": "4-15", "ft": "3-3", "reb": 4, "pf": 4, "pts": 11},
+            {"name": "Cleamons", "fg": "7-13", "ft": "7-8", "reb": 4, "pf": 2, "pts": 21},
+            {"name": "Siekmann", "fg": "4-5", "ft": "2-2", "reb": 4, "pf": 4, "pts": 10},
+            {"name": "Merchant", "fg": "1-3", "ft": "0-0", "reb": 1, "pf": 1, "pts": 2}
+          ]
+        },
+        {
+          "name": "Marquette",
+          "score": 59,
+          "players": [
+            {"name": "Brell", "fg": "5-10", "ft": "0-0", "reb": 8, "pf": 0, "pts": 10},
+            {"name": "Lackey", "fg": "1-9", "ft": "6-8", "reb": 9, "pf": 4, "pts": 8},
+            {"name": "Chones", "fg": "9-19", "ft": "0-2", "reb": 10, "pf": 3, "pts": 18},
+            {"name": "Meminger", "fg": "4-11", "ft": "3-7", "reb": 3, "pf": 5, "pts": 11},
+            {"name": "McGuire", "fg": "5-11", "ft": "2-3", "reb": 1, "pf": 4, "pts": 12},
+            {"name": "Frazier", "fg": "0-1", "ft": "0-1", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "McMahon", "fg": "0-1", "ft": "0-0", "reb": 2, "pf": 3, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

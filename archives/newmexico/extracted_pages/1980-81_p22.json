@@ -1,0 +1,41 @@
+{
+  "page": 22,
+  "games": [
+    {
+      "date": "1981-02-21",
+      "opponent": "Brigham Young",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 72,
+          "players": [
+            {"name": "Alan Dolensky", "min": "30.9", "fg": "5-7", "ft": "0-1", "reb": 3, "ast": 2, "pf": 5, "to": 2, "stl": 0, "blk": 0, "pts": 10},
+            {"name": "Tony Persley", "min": "17.6", "fg": "1-3", "ft": "0-0", "reb": 2, "ast": 1, "pf": 2, "to": 1, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Jerome Henderson", "min": "38.7", "fg": "9-17", "ft": "0-0", "reb": 10, "ast": 0, "pf": 4, "to": 1, "stl": 0, "blk": 2, "pts": 18},
+            {"name": "Kenny Page", "min": "39.1", "fg": "6-22", "ft": "4-10", "reb": 6, "ast": 2, "pf": 4, "to": 3, "stl": 2, "blk": 0, "pts": 16},
+            {"name": "Phil Smith", "min": "29.2", "fg": "3-8", "ft": "8-10", "reb": 2, "ast": 5, "pf": 4, "to": 4, "stl": 4, "blk": 0, "pts": 14},
+            {"name": "Jeff Reinert", "min": "18.4", "fg": "0-3", "ft": "0-0", "reb": 0, "ast": 0, "pf": 4, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "David Duggin", "min": "20.3", "fg": "4-7", "ft": "2-2", "reb": 1, "ast": 3, "pf": 3, "to": 1, "stl": 1, "blk": 0, "pts": 10},
+            {"name": "Larry Tarrance", "min": "5.0", "fg": "1-1", "ft": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 2}
+          ]
+        },
+        {
+          "name": "Brigham Young Cougars",
+          "score": 78,
+          "players": [
+            {"name": "Fred Roberts", "min": "38.9", "fg": "6-10", "ft": "7-9", "reb": 10, "ast": 3, "pf": 4, "to": 1, "stl": 1, "blk": 0, "pts": 19},
+            {"name": "Steve Trumbo", "min": "38.9", "fg": "4-5", "ft": "3-9", "reb": 11, "ast": 3, "pf": 1, "to": 3, "stl": 1, "blk": 1, "pts": 11},
+            {"name": "Greg Kite", "min": "26.4", "fg": "5-8", "ft": "6-6", "reb": 9, "ast": 0, "pf": 4, "to": 3, "stl": 0, "blk": 0, "pts": 16},
+            {"name": "Danny Ainge", "min": "38.0", "fg": "6-14", "ft": "7-8", "reb": 2, "ast": 3, "pf": 4, "to": 3, "stl": 0, "blk": 0, "pts": 19},
+            {"name": "Steve Craig", "min": "18.3", "fg": "2-7", "ft": "0-0", "reb": 5, "ast": 3, "pf": 5, "to": 3, "stl": 2, "blk": 0, "pts": 4},
+            {"name": "Greg Ballif", "min": "22.8", "fg": "3-4", "ft": "0-0", "reb": 1, "ast": 5, "pf": 1, "to": 4, "stl": 1, "blk": 2, "pts": 6},
+            {"name": "Timo Saarelainen", "min": "9.0", "fg": "1-2", "ft": "1-2", "reb": 3, "ast": 1, "pf": 0, "to": 1, "stl": 0, "blk": 1, "pts": 3}
+          ]
+        }
+      ],
+      "checksum_ok": true,
+      "notes": "New Mexico Tarrance's steal (S) value appeared visually as a stray '6' but is transcribed as 0 to reconcile with team S total of 7 (sum of other 7 players' S already equals 7); likely OCR/scan artifact on the scoresheet. All other columns (FG, FGA, FT, FTA, REB, PF, A, TO, BLK, S) reconcile exactly to printed team totals for both teams, and both team point totals match the final score line (72-78)."
+    }
+  ],
+  "skipped": []
+}

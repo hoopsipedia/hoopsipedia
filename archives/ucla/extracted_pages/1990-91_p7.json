@@ -1,0 +1,45 @@
+{
+  "page": 7,
+  "games": [
+    {
+      "date": "1990-12-15",
+      "opponent": "DePaul",
+      "ucla_score": 92,
+      "opp_score": 90,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 92,
+          "players": [
+            {"name": "Gerald Madkins", "min": 29, "fg": "3-6", "tp": "0-3", "ft": "3-4", "reb": 6, "ast": 2, "pf": 5, "to": 4, "stl": 1, "pts": 9},
+            {"name": "Darrick Martin", "min": 29, "fg": "2-5", "tp": "0-1", "ft": "4-6", "reb": 5, "ast": 8, "pf": 3, "to": 1, "stl": 1, "pts": 8},
+            {"name": "Shon Tarver", "min": 19, "fg": "6-9", "tp": "1-3", "ft": "0-2", "reb": 4, "ast": 5, "pf": 4, "to": 2, "stl": 1, "pts": 13},
+            {"name": "Mitchell Butler", "min": 15, "fg": "2-4", "tp": "0-1", "ft": "1-3", "reb": 3, "ast": 1, "pf": 3, "to": 1, "stl": 1, "pts": 5},
+            {"name": "Keith Owens", "min": 26, "fg": "3-5", "ft": "2-3", "reb": 11, "ast": 3, "pf": 4, "to": 3, "blk": 1, "pts": 8},
+            {"name": "Tracy Murray", "min": 38, "fg": "12-21", "tp": "4-8", "ft": "3-4", "reb": 4, "pf": 1, "to": 2, "stl": 1, "pts": 31},
+            {"name": "Don MacLean", "min": 34, "fg": "8-13", "ft": "2-3", "reb": 7, "ast": 3, "pf": 3, "to": 5, "pts": 18},
+            {"name": "Zan Mason", "min": 10, "fg": "0-4", "reb": 3, "pf": 1, "pts": 0}
+          ]
+        },
+        {
+          "name": "DePaul Blue Demons",
+          "score": 90,
+          "players": [
+            {"name": "Joe Daughrity", "min": 7, "fg": "0-2", "tp": "0-1", "ft": "0-1", "ast": 1, "to": 1, "stl": 1, "pts": 0},
+            {"name": "Chuck Murphy", "min": 4, "fg": "1-4", "tp": "1-4", "pts": 3},
+            {"name": "Kevin Holland", "min": 29, "fg": "4-9", "reb": 8, "pf": 2, "to": 1, "stl": 2, "pts": 8},
+            {"name": "Melvon Foster", "min": 29, "fg": "3-7", "tp": "0-1", "ft": "1-2", "reb": 2, "pf": 1, "ast": 7, "to": 1, "stl": 3, "pts": 7},
+            {"name": "Brad Niemann", "min": 21, "fg": "3-8", "tp": "3-8", "reb": 1, "pf": 2, "ast": 3, "to": 1, "pts": 9},
+            {"name": "Curtis Price", "min": 13, "reb": 4, "pf": 5, "stl": 1, "pts": 0},
+            {"name": "Terry Davis", "min": 22, "fg": "3-4", "tp": "1-1", "ft": "2-2", "ast": 1, "pts": 9},
+            {"name": "David Booth", "min": 37, "fg": "14-23", "tp": "0-1", "ft": "12-17", "reb": 9, "pf": 4, "ast": 2, "to": 2, "blk": 2, "stl": 2, "pts": 40},
+            {"name": "Jeff Stern", "min": 5, "fg": "1-1", "reb": 4, "pf": 1, "to": 1, "blk": 2, "pts": 2},
+            {"name": "Stephen Howard", "min": 33, "fg": "3-12", "tp": "1-1", "ft": "5-6", "reb": 6, "pf": 5, "ast": 2, "to": 4, "stl": 1, "pts": 12}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

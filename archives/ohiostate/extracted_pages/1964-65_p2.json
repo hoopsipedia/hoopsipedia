@@ -1,0 +1,52 @@
+{
+  "page": 2,
+  "games": [
+    {
+      "date": "1964-12-02",
+      "opponent": "South Dakota",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 86,
+          "players": [
+            {"name": "Dove", "fg": "4-6", "ft": "2-2", "reb": 6, "pf": 2, "pts": 10},
+            {"name": "Peters", "fg": "8-13", "ft": "3-3", "reb": 9, "pf": 4, "pts": 19},
+            {"name": "Shaffer", "fg": "2-7", "ft": "0-2", "reb": 7, "pf": 2, "pts": 4},
+            {"name": "Ricketts", "fg": "6-9", "ft": "4-5", "reb": 3, "pf": 2, "pts": 16},
+            {"name": "Brown", "fg": "2-5", "ft": "0-0", "reb": 2, "pf": 1, "pts": 4},
+            {"name": "Sepic", "fg": "5-10", "ft": "6-7", "reb": 10, "pf": 2, "pts": 16},
+            {"name": "Rowley", "fg": "4-7", "ft": "2-3", "reb": 3, "pf": 3, "pts": 10},
+            {"name": "Ahlijewich", "fg": "0-2", "ft": "3-4", "reb": 5, "pf": 4, "pts": 3},
+            {"name": "Gregory", "fg": "0-1", "ft": "0-2", "reb": 3, "pf": 2, "pts": 0},
+            {"name": "Whitlinger", "fg": "1-2", "ft": "0-0", "reb": 2, "pf": 3, "pts": 2},
+            {"name": "Tischer", "fg": "1-2", "ft": "0-0", "reb": 2, "pf": 3, "pts": 2},
+            {"name": "Glover", "fg": "0-1", "ft": "0-0", "reb": 3, "pf": 0, "pts": 0},
+            {"name": "Brautigam", "fg": "0-1", "ft": "0-1", "reb": 3, "pf": 1, "pts": 0},
+            {"name": "Arlin", "fg": "0-0", "ft": "0-0", "reb": 1, "pf": 2, "pts": 0},
+            {"name": "Richardson", "fg": "0-2", "ft": "0-0", "pf": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "South Dakota Coyotes",
+          "score": 54,
+          "players": [
+            {"name": "Bruns", "fg": "4-13", "ft": "2-5", "reb": 4, "pf": 2, "pts": 10},
+            {"name": "Pinney", "fg": "4-7", "ft": "3-10", "reb": 8, "pf": 0, "pts": 11},
+            {"name": "Kruse", "fg": "2-2", "ft": "1-3", "reb": 4, "pf": 5, "pts": 5},
+            {"name": "Bennatt", "fg": "1-6", "ft": "3-6", "reb": 3, "pf": 2, "pts": 5},
+            {"name": "Hennies", "fg": "5-9", "ft": "0-1", "reb": 1, "pf": 4, "pts": 10},
+            {"name": "Wilson", "fg": "1-9", "ft": "2-2", "reb": 1, "pf": 2, "pts": 4},
+            {"name": "Schaffer", "fg": "0-5", "ft": "3-4", "reb": 4, "pf": 2, "pts": 3},
+            {"name": "Christensen", "fg": "1-3", "ft": "0-0", "reb": 1, "pf": 4, "pts": 2},
+            {"name": "Larsen", "fg": "1-6", "ft": "0-3", "reb": 9, "pf": 1, "pts": 2},
+            {"name": "Hultgen", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 1, "pts": 0},
+            {"name": "Kelly", "fg": "0-1", "ft": "1-1", "reb": 0, "pf": 1, "pts": 1},
+            {"name": "Henningsen", "fg": "0-2", "ft": "1-2", "reb": 0, "pf": 0, "pts": 1}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

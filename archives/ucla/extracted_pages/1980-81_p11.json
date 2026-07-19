@@ -1,0 +1,44 @@
+{
+  "page": 11,
+  "games": [
+    {
+      "date": "1981-01-16",
+      "opponent": "Arizona State",
+      "ucla_score": 74,
+      "opp_score": 78,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 74,
+          "players": [
+            {"name": "Sanders, Mike", "min": 53, "fg": "8-16", "ft": "3-7", "reb": 8, "ast": 2, "pf": 4, "to": 3, "stl": 1, "pts": 19},
+            {"name": "Daye, Darren", "fg": "7-10", "ft": "1-2", "reb": 3, "ast": 3, "pf": 3, "to": 2, "stl": 3, "pts": 15},
+            {"name": "Fields, Kenny", "min": 47, "fg": "4-6", "ft": "2-2", "reb": 6, "ast": 1, "pf": 2, "to": 4, "stl": 2, "pts": 10},
+            {"name": "Foster, Rod", "min": 33, "fg": "7-15", "ft": "0-1", "reb": 5, "ast": 5, "pf": 1, "to": 2, "stl": 1, "pts": 14},
+            {"name": "Holton, Michael", "min": 32, "fg": "1-3", "ft": "4-6", "reb": 5, "ast": 2, "pf": 0, "stl": 2, "pts": 6},
+            {"name": "Jackson, Ralph", "min": 46, "fg": "2-7", "ft": "3-5", "reb": 2, "ast": 6, "pf": 3, "to": 6, "stl": 1, "pts": 7},
+            {"name": "Pruitt, Cliff", "min": 17, "fg": "1-4", "ft": "1-2", "reb": 1, "ast": 1, "pf": 2, "to": 1, "stl": 1, "pts": 3},
+            {"name": "Eaton, Mark", "min": 3, "fg": "0-1", "ft": "0-0", "pf": 2, "pts": 0},
+            {"name": "Anderson, Tony", "min": 2, "fg": "0-1", "ft": "0-0", "pts": 0}
+          ]
+        },
+        {
+          "name": "Arizona State Sun Devils",
+          "score": 78,
+          "players": [
+            {"name": "Nash, Johnny", "min": 55, "fg": "6-14", "ft": "1-3", "reb": 11, "pf": 3, "ast": 9, "to": 2, "blk": 1, "stl": 3, "pts": 13},
+            {"name": "Williams, Sam", "min": 40, "fg": "5-10", "ft": "3-4", "reb": 12, "pf": 5, "to": 3, "blk": 2, "stl": 1, "pts": 13},
+            {"name": "Lister, Alton", "min": 52, "fg": "10-13", "ft": "2-2", "reb": 12, "pf": 5, "ast": 6, "to": 6, "blk": 1, "pts": 22},
+            {"name": "Scott, Byron", "min": 51, "fg": "4-16", "ft": "7-11", "reb": 8, "pf": 5, "ast": 2, "to": 4, "blk": 1, "stl": 2, "pts": 15},
+            {"name": "Lever, Lafayette", "min": 49, "fg": "4-11", "ft": "1-2", "reb": 4, "pf": 5, "ast": 3, "to": 4, "stl": 5, "pts": 9},
+            {"name": "Williams, Paul", "min": 16, "fg": "2-3", "ft": "2-2", "reb": 2, "pf": 2, "to": 3, "pts": 6},
+            {"name": "Kuyper, Tom", "min": 1, "fg": "0-0", "ft": "0-1", "pts": 0},
+            {"name": "Stone, Walt", "min": 10, "fg": "0-2", "ft": "0-0", "pf": 2, "to": 2, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

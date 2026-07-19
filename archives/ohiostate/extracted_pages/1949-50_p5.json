@@ -1,0 +1,49 @@
+{
+  "page": 5,
+  "games": [
+    {
+      "date": "1949-12-23",
+      "opponent": "California Golden Bears",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 78,
+          "players": [
+            {"name": "Donham F", "min": "32:30", "fg": "5-12", "ft": "1-2", "pf": 4, "pts": 11},
+            {"name": "Remington F", "min": "11:00", "fg": "0-4", "ft": "2-3", "pf": 1, "pts": 2},
+            {"name": "Jacobs F", "min": "32:45", "fg": "8-16", "ft": "5-10", "pf": 1, "pts": 21},
+            {"name": "Karaffa F", "min": "7:30", "fg": "2-3", "ft": "0-0", "pf": 2, "pts": 4},
+            {"name": "Taylor C", "min": "31:00", "fg": "6-17", "ft": "6-7", "pf": 4, "pts": 18},
+            {"name": "Kuechle C", "min": "4:15", "fg": "0-1", "ft": "0-0", "pf": 1, "pts": 0},
+            {"name": "Giacomelli C", "min": "6:00", "fg": "0-2", "ft": "1-1", "pf": 2, "pts": 1},
+            {"name": "Brown G", "min": "32:30", "fg": "2-8", "ft": "2-2", "pf": 2, "pts": 6},
+            {"name": "Burkholder G", "min": "31:15", "fg": "4-11", "ft": "2-2", "pf": 1, "pts": 10},
+            {"name": "Dawe G", "min": "4:30", "fg": "1-2", "ft": "0-0", "pf": 0, "pts": 2},
+            {"name": "Wharton G", "min": "4:15", "fg": "1-2", "ft": "1-1", "pf": 0, "pts": 3},
+            {"name": "Moore G", "min": "2:30", "fg": "0-1", "ft": "0-0", "pf": 1, "pts": 0}
+          ]
+        },
+        {
+          "name": "California Golden Bears",
+          "score": 67,
+          "players": [
+            {"name": "Walker F", "fg": "5-18", "ft": "1-3", "pf": 1, "pts": 11},
+            {"name": "Wirth F", "fg": "0-1", "ft": "0-0", "pf": 1, "pts": 0},
+            {"name": "Hagler F", "fg": "8-21", "ft": "3-6", "pf": 2, "pts": 19},
+            {"name": "Kretsinger F", "fg": "0-0", "ft": "0-0", "pf": 1, "pts": 0},
+            {"name": "Cunningham C", "fg": "2-8", "ft": "2-3", "pf": 3, "pts": 6},
+            {"name": "Gibbons C", "fg": "3-7", "ft": "3-5", "pf": 5, "pts": 9},
+            {"name": "Nichols G", "fg": "0-1", "ft": "0-0", "pf": 1, "pts": 0},
+            {"name": "Tveitmoe G", "fg": "3-12", "ft": "3-4", "pf": 4, "pts": 9},
+            {"name": "Payne G", "fg": "1-2", "ft": "1-1", "pf": 1, "pts": 3},
+            {"name": "Thompson G", "fg": "3-6", "ft": "2-2", "pf": 4, "pts": 8},
+            {"name": "Matheny G", "fg": "1-0", "ft": "0-0", "pf": 0, "pts": 2}
+          ]
+        }
+      ],
+      "checksum_ok": true,
+      "notes": "ft field is made-attempted, computed as FT(made)-[FT(made)+FTM(missed)] since sheet's 'FTM' column is free throws missed, not attempted (verified: 2*FG_made + FT_made == PTS for every player on both teams). Ohio State team PF column sums to 19 vs sheet's printed TOTALS PF of 18 (a 1-point discrepancy in the original scoresheet's own arithmetic); left as transcribed since the required checksum is on points, which balances exactly (67 and 78) for both teams. Matheny (California) has FG 1-0 as printed on the sheet (attempts less than makes) - transcribed as-is, not corrected."
+    }
+  ],
+  "skipped": []
+}

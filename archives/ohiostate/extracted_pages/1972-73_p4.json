@@ -1,0 +1,42 @@
+{
+  "page": 4,
+  "games": [
+    {
+      "date": "1972-12-04",
+      "opponent": "Notre Dame",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 81,
+          "players": [
+            {"name": "Jackson", "fg": "4-11", "ft": "2-2", "reb": 2, "pf": 3, "pts": 10},
+            {"name": "Andreas", "fg": "9-15", "ft": "1-2", "reb": 10, "pf": 4, "pts": 19},
+            {"name": "Witte", "fg": "7-17", "ft": "0-0", "reb": 9, "pf": 3, "pts": 14},
+            {"name": "Hornyak", "fg": "10-19", "ft": "2-2", "reb": 2, "pf": 4, "pts": 22},
+            {"name": "Gerhard", "fg": "3-9", "ft": "2-2", "reb": 3, "pf": 4, "pts": 8},
+            {"name": "Wolfe", "fg": "0-0", "ft": "0-0", "reb": 1, "pf": 0, "pts": 0},
+            {"name": "Marchant", "fg": "0-0", "ft": "0-0", "reb": 1, "pf": 0, "pts": 0},
+            {"name": "Wenner", "fg": "4-8", "ft": "0-0", "reb": 3, "pf": 0, "pts": 8}
+          ]
+        },
+        {
+          "name": "Notre Dame Fighting Irish",
+          "score": 75,
+          "players": [
+            {"name": "Crotty", "fg": "2-4", "ft": "4-4", "reb": 4, "pf": 4, "pts": 8},
+            {"name": "Novak", "fg": "3-5", "ft": "0-2", "reb": 13, "pf": 3, "pts": 6},
+            {"name": "Schumate", "fg": "11-18", "ft": "5-6", "reb": 15, "pf": 3, "pts": 27},
+            {"name": "Clay", "fg": "7-18", "ft": "0-0", "reb": 1, "pf": 1, "pts": 14},
+            {"name": "Brokaw", "fg": "8-18", "ft": "2-4", "reb": 4, "pf": 4, "pts": 18},
+            {"name": "Silinski", "fg": "0-2", "ft": "2-2", "reb": 0, "pf": 0, "pts": 2},
+            {"name": "Stevens", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Varga", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true,
+      "notes": "Game went to overtime (final score listed as 81 (ot) / 75). Quarter-by-quarter: OSU 29-40-(12 OT)=81; ND 37-32-(6 OT)=75. Team rebound totals (non-player 'Team' row: OSU 7, ND 7) included in official Reb totals of 38 and 44 but not attributed to any player, so omitted from player list. All FGA/FG/FTA/FT/PF/PTS columns cross-checked against printed team totals and match exactly; player PTS values were printed on the sheet (not computed)."
+    }
+  ],
+  "skipped": []
+}

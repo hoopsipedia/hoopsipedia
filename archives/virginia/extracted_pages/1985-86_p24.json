@@ -1,0 +1,46 @@
+{
+  "page": 24,
+  "games": [
+    {
+      "date": "1986-02-19",
+      "opponent": "NC State Wolfpack",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 69,
+          "players": [
+            {"name": "Andrew Kennedy", "min": "35", "fg": "5-6", "ft": "2-4", "ast": 3, "to": 2, "pts": 12},
+            {"name": "Tom Sheehey", "min": "25", "fg": "2-6", "ft": "2-2", "ast": 1, "to": 2, "pts": 6},
+            {"name": "Olden Polynice", "min": "40", "fg": "10-11", "ft": "7-9", "to": 3, "pts": 27},
+            {"name": "Mel Kennedy", "min": "34", "fg": "4-9", "ft": "0-0", "ast": 3, "to": 1, "pts": 8},
+            {"name": "Tom Calloway", "min": "17", "fg": "2-4", "ft": "0-0", "to": 2, "pts": 4},
+            {"name": "John Johnson", "min": "24", "fg": "2-4", "ft": "4-4", "ast": 3, "pts": 8},
+            {"name": "Richard Morgan", "min": "9", "fg": "1-4", "ft": "0-0", "to": 3, "pts": 2},
+            {"name": "John Dyslin", "min": "2", "fg": "0-0", "ft": "0-0", "pts": 0},
+            {"name": "Darrick Simms", "min": "13", "fg": "1-1", "ft": "0-0", "to": 1, "pts": 2}
+          ]
+        },
+        {
+          "name": "NC State Wolfpack",
+          "score": 60,
+          "players": [
+            {"name": "Bennie Bolton", "min": "34", "fg": "4-9", "ft": "2-2", "ast": 1, "to": 2, "pts": 10},
+            {"name": "Charles Shackleford", "min": "35", "fg": "1-6", "ft": "4-4", "to": 3, "pts": 6},
+            {"name": "Chris Washburn", "min": "37", "fg": "9-15", "ft": "0-0", "ast": 1, "to": 4, "pts": 18},
+            {"name": "Nate McMillan", "min": "39", "fg": "6-9", "ft": "0-0", "ast": 10, "to": 1, "blk": 1, "pts": 12},
+            {"name": "Ernie Myers", "min": "36", "fg": "4-10", "ft": "2-2", "ast": 3, "to": 2, "pts": 10},
+            {"name": "Chucky Brown", "min": "4", "fg": "1-1", "ft": "0-0", "pts": 2},
+            {"name": "Walker Lambiotte", "min": "6", "fg": "0-1", "ft": "0-1", "to": 1, "pts": 0},
+            {"name": "Panagiotis Fasoulas", "min": "2", "fg": "0-0", "ft": "0-0", "pts": 0},
+            {"name": "Kelsey Weems", "min": "1", "fg": "0-0", "ft": "0-0", "ast": 1, "pts": 0},
+            {"name": "Tevlin Binns", "min": "6", "fg": "1-1", "ft": "0-0", "pts": 2},
+            {"name": "Vincent Del Negro", "fg": "0-0", "ft": "0-0", "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": [],
+  "notes": "Official NCAA box score form, Feb 19 1986, Charlottesville VA, NC State (visitors) 60 at Virginia (home) 69. Both teams' player point totals verified against team TOTALS row and against final score (Virginia 69, NC State 60) - checksums pass exactly. FG/FGA/FT/FTA per-player sums also verified to equal team totals for both squads. REB and PF columns were present on the sheet but individual digits were too ambiguous/overlapping in the scan to transcribe confidently without risk of inventing values, so they were omitted entirely for both teams (team totals for REB/PF exist on the sheet but were not reliably attributable per player). Assist/turnover/block figures included only where the digit was clearly legible and/or corroborated by team-total reconciliation (NC State AST/TO/BLK sums match team totals exactly: 16/13/1; Virginia TO sum matches team total exactly: 14; Virginia AST figures included only for the four players with clearly legible digits, summing to 10 vs team total of 11, so one assist elsewhere on the Virginia side is not attributed to any player). Vincent Del Negro (NC State) is listed with no recorded stats and blank minutes (a stray '21' near his row did not fit into team MIN total of 200 and was excluded as likely misread/unrelated); he is included with pts=0 since he appears on the sheet. No 3-point column existed this era."
+}

@@ -1,0 +1,49 @@
+{
+  "page": 28,
+  "games": [
+    {
+      "date": "1981-03-06",
+      "opponent": "Maryland",
+      "note": "ACC Tournament (Capital Centre); Virginia was home team on the scoresheet",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 62,
+          "players": [
+            {"name": "Craig Robinson", "min": 20, "fg": "0-3", "ft": "0-0", "reb": 5, "pf": 1, "ast": 0, "to": 2, "blk": 0, "stl": 1, "pts": 0},
+            {"name": "Lee Baker", "min": 9, "fg": "2-5", "ft": "2-2", "reb": 1, "pf": 2, "ast": 0, "to": 2, "blk": 0, "stl": 0, "pts": 6},
+            {"name": "Ralph Sampson", "min": 33, "fg": "5-13", "ft": "0-0", "reb": 8, "pf": 4, "ast": 0, "to": 1, "blk": 4, "stl": 1, "pts": 10},
+            {"name": "Jeff Lamp", "min": 37, "fg": "9-16", "ft": "7-8", "reb": 6, "pf": 2, "ast": 1, "to": 2, "blk": 1, "stl": 0, "pts": 25},
+            {"name": "Jeff Jones", "min": 31, "fg": "3-6", "ft": "1-2", "reb": 3, "pf": 4, "ast": 4, "to": 1, "blk": 0, "stl": 2, "pts": 7},
+            {"name": "Othell Wilson", "min": 28, "fg": "4-13", "ft": "0-0", "reb": 4, "pf": 5, "ast": 3, "to": 7, "blk": 0, "stl": 1, "pts": 8},
+            {"name": "Lewis Lattimore", "min": 6, "fg": "2-6", "ft": "0-0", "reb": 5, "pf": 1, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 4},
+            {"name": "Ricky Stokes", "min": 14, "fg": "0-0", "ft": "0-2", "reb": 5, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Terry Gates", "min": 17, "fg": "0-1", "ft": "0-0", "reb": 2, "pf": 2, "ast": 1, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Louis Collins", "min": 3, "fg": "1-4", "ft": "0-0", "reb": 0, "pf": 1, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Jeff Klein", "min": 2, "fg": "0-0", "ft": "0-1", "reb": 0, "pf": 0, "ast": 1, "to": 0, "blk": 0, "stl": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Maryland",
+          "score": 85,
+          "players": [
+            {"name": "Ernest Graham", "min": 23, "fg": "4-8", "ft": "4-10", "reb": 4, "pf": 3, "ast": 1, "to": 3, "blk": 0, "stl": 0, "pts": 9},
+            {"name": "Albert King", "min": 27, "fg": "8-13", "ft": "8-8", "reb": 6, "pf": 4, "ast": 3, "to": 2, "blk": 1, "stl": 0, "pts": 24},
+            {"name": "Buck Williams", "min": 35, "fg": "5-7", "ft": "1-4", "reb": 14, "pf": 1, "ast": 2, "to": 2, "blk": 0, "stl": 1, "pts": 11},
+            {"name": "Greg Manning", "min": 33, "fg": "7-12", "ft": "3-4", "reb": 3, "pf": 2, "ast": 2, "to": 2, "blk": 0, "stl": 1, "pts": 17},
+            {"name": "Reggie Jackson", "min": 34, "fg": "4-6", "ft": "0-0", "reb": 1, "pf": 3, "ast": 3, "to": 2, "blk": 1, "stl": 0, "pts": 8},
+            {"name": "Charles Pittman", "min": 18, "fg": "4-4", "ft": "0-0", "reb": 4, "pf": 1, "ast": 3, "to": 1, "blk": 1, "stl": 0, "pts": 8},
+            {"name": "Steve Rivers", "min": 7, "fg": "4-4", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pts": 2, "note": "TP as printed (2) is inconsistent with FG/FGA as read (4-4); likely a digit misread on FG, kept TP since it is a direct sheet column and the team checksum passes"},
+            {"name": "Herman Veal", "min": 7, "fg": "1-2", "ft": "0-1", "reb": 2, "pf": 1, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Dutch Morley", "min": 5, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 1, "to": 0, "blk": 0, "stl": 1, "pts": 0},
+            {"name": "Taylor Baldwin", "min": 5, "fg": "0-0", "ft": "0-0", "reb": 3, "pf": 0, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Pete Holbert", "min": 3, "fg": "1-2", "ft": "0-1", "reb": 1, "pf": 1, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Jon Robinson", "min": 3, "fg": "1-1", "ft": "0-2", "reb": 2, "pf": 1, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 2}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

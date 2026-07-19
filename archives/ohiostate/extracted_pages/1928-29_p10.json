@@ -1,0 +1,43 @@
+{
+  "page": 10,
+  "games": [
+    {
+      "date": "1929-02-02",
+      "opponent": "Army",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 44,
+          "players": [
+            {"name": "Evans", "min": "38:07", "fg": "3", "ft": "0", "pf": 2, "pts": 6},
+            {"name": "Tittel", "min": "1:53", "fg": "0", "ft": "0", "pf": 0, "pts": 0},
+            {"name": "Ervin", "min": "39:00", "fg": "6", "ft": "8", "pf": 3, "pts": 20},
+            {"name": "Schuler", "min": "1:00", "fg": "0", "ft": "0", "pf": 0, "pts": 0},
+            {"name": "Van Heyde", "min": "39:40", "fg": "5", "ft": "1", "pf": 2, "pts": 11},
+            {"name": "Kirn", "min": ":20", "fg": "0", "ft": "0", "pf": 0, "pts": 0},
+            {"name": "Fesler", "min": "39:00", "fg": "1", "ft": "0", "pf": 2, "pts": 2},
+            {"name": "Stull", "min": "1:00", "fg": "0", "ft": "0", "pf": 0, "pts": 0},
+            {"name": "Larkins", "min": "38:00", "fg": "1", "ft": "1", "pf": 3, "pts": 3},
+            {"name": "Hinchman", "min": "2:00", "fg": "1", "ft": "0", "pf": 0, "pts": 2}
+          ]
+        },
+        {
+          "name": "Army",
+          "score": 30,
+          "players": [
+            {"name": "Draper", "fg": "4", "ft": "2", "pf": 2, "pts": 10},
+            {"name": "Krueger", "fg": "3", "ft": "3", "pf": 2, "pts": 9},
+            {"name": "Mansfield", "fg": "0", "ft": "0", "pf": 1, "pts": 0},
+            {"name": "Strother", "fg": "3", "ft": "4", "pf": 0, "pts": 10},
+            {"name": "Messinger", "fg": "0", "ft": "0", "pf": 2, "pts": 0},
+            {"name": "McIlroy", "fg": "0", "ft": "1", "pf": 0, "pts": 1},
+            {"name": "Hutchinson", "fg": "0", "ft": "0", "pf": 1, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": [],
+  "notes": "Scoresheet columns are labeled 'G F P Pts' (field goals made, free throws made, personal fouls, points) — no attempt counts given, so fg/ft store made-count only (as plain numeric strings, not 'made-attempted'). Per-row Pts values were verified against 2*FG+FT for every player with nonzero scoring; both team Pts columns cross-checked exactly against final scores (Ohio State 44, Army 30). Note: the printed team-total row at the bottom of each roster (e.g. 'G F P Pts' totals '17 12 10 44' for OSU) does not sum cleanly to the same G/F/P split as the individual rows — likely an original-document column-total transcription quirk — but this does not affect player-level values or the final-score checksum, which is what was used to validate. Ohio State's 'Minutes Played' side table (separate box on the page) supplied the min field for OSU players only; Army had no minutes table. One OSU player name is partly obscured by an ink dot but is unambiguous via the adjacent Minutes Played list ('Ervin', 'Schuler')."
+}

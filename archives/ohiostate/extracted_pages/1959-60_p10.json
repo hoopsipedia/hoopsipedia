@@ -1,0 +1,41 @@
+{
+  "page": 10,
+  "games": [
+    {
+      "date": "1959-12-28",
+      "opponent": "Kentucky",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 93,
+          "players": [
+            {"name": "Havlicek", "fg": "6-10", "ft": "4-4", "reb": 7, "pf": 3, "pts": 16},
+            {"name": "Roberts", "fg": "7-15", "ft": "0-1", "reb": 15, "pf": 2, "pts": 14},
+            {"name": "Lucas", "fg": "13-22", "ft": "6-10", "reb": 11, "pf": 2, "pts": 34},
+            {"name": "Nowell", "fg": "5-14", "ft": "2-2", "reb": 3, "pf": 5, "pts": 12},
+            {"name": "Siegfried", "fg": "6-12", "ft": "3-4", "reb": 4, "pf": 4, "pts": 15},
+            {"name": "Hoyt", "fg": "1-4", "ft": "0-0", "reb": 2, "pf": 2, "pts": 2},
+            {"name": "Gearhart", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 2, "pts": 0},
+            {"name": "Furry", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 1, "pts": 0}
+          ]
+        },
+        {
+          "name": "Kentucky Wildcats",
+          "score": 96,
+          "players": [
+            {"name": "Mills", "fg": "5-9", "ft": "3-4", "reb": 11, "pf": 4, "pts": 13},
+            {"name": "Burchett", "fg": "5-6", "ft": "3-3", "reb": 11, "pf": 0, "pts": 13},
+            {"name": "Jennings", "fg": "3-8", "ft": "2-3", "reb": 2, "pf": 5, "pts": 8},
+            {"name": "Coffman", "fg": "10-15", "ft": "6-6", "reb": 4, "pf": 2, "pts": 26},
+            {"name": "Lickert", "fg": "12-23", "ft": "5-6", "reb": 4, "pf": 3, "pts": 29},
+            {"name": "Feldhaus", "fg": "1-3", "ft": "1-2", "reb": 3, "pf": 0, "pts": 3},
+            {"name": "Pursiful", "fg": "0-1", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Cohen", "fg": "0-0", "ft": "4-5", "reb": 0, "pf": 1, "pts": 4}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

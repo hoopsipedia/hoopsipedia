@@ -1,0 +1,42 @@
+{
+  "page": 10,
+  "games": [
+    {
+      "date": "1965-02-27",
+      "opponent": "Clemson",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 69,
+          "players": [
+            {"name": "Connelly", "fg": "8-23", "ft": "5-6", "reb": 4, "pf": 4, "pts": 21},
+            {"name": "Davis", "fg": "2-7", "ft": "3-4", "reb": 5, "pf": 3, "pts": 7},
+            {"name": "Meyer", "fg": "0-5", "ft": "5-6", "reb": 1, "pf": 1, "pts": 5},
+            {"name": "Sanders", "fg": "4-9", "ft": "5-8", "reb": 6, "pf": 5, "pts": 13},
+            {"name": "Barnes", "fg": "1-7", "ft": "0-0", "reb": 1, "pf": 1, "pts": 2},
+            {"name": "Wafle", "fg": "2-8", "ft": "2-4", "reb": 8, "pf": 3, "pts": 6},
+            {"name": "Coble", "fg": "4-7", "ft": "4-5", "reb": 1, "pf": 2, "pts": 12},
+            {"name": "Stant", "fg": "0-1", "ft": "1-3", "reb": 1, "pf": 0, "pts": 1},
+            {"name": "Wilcox", "fg": "1-2", "ft": "0-0", "reb": 0, "pf": 1, "pts": 2}
+          ]
+        },
+        {
+          "name": "Clemson",
+          "score": 67,
+          "players": [
+            {"name": "Sutherland", "fg": "8-12", "ft": "0-0", "reb": 4, "pf": 4, "pts": 16},
+            {"name": "Helms", "fg": "3-12", "ft": "2-2", "reb": 4, "pf": 4, "pts": 8},
+            {"name": "Gardner", "fg": "2-3", "ft": "4-6", "reb": 4, "pf": 3, "pts": 8},
+            {"name": "Mahaffey", "fg": "4-8", "ft": "9-11", "reb": 17, "pf": 4, "pts": 17},
+            {"name": "Benedict", "fg": "4-8", "ft": "2-2", "reb": 6, "pf": 3, "pts": 10},
+            {"name": "Ayoob", "fg": "0-1", "ft": "1-2", "reb": 0, "pf": 3, "pts": 1},
+            {"name": "Ayers", "fg": "1-5", "ft": "0-2", "reb": 5, "pf": 3, "pts": 2},
+            {"name": "Channell", "fg": "2-4", "ft": "1-1", "reb": 4, "pf": 1, "pts": 5}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

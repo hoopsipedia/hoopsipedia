@@ -1,0 +1,39 @@
+{
+  "page": 24,
+  "games": [
+    {
+      "date": "1966-03-05",
+      "opponent": "Minnesota",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 94,
+          "players": [
+            {"name": "Hosket", "fg": "16-28", "ft": "1-2", "reb": 20, "pf": 3, "pts": 33},
+            {"name": "Peters", "fg": "6-15", "ft": "2-3", "reb": 7, "pf": 3, "pts": 14},
+            {"name": "Dove", "fg": "6-15", "ft": "5-6", "reb": 13, "pf": 3, "pts": 17},
+            {"name": "Sepic", "fg": "7-20", "ft": "8-8", "reb": 13, "pf": 4, "pts": 22},
+            {"name": "Rowley", "fg": "2-9", "ft": "4-9", "reb": 7, "pf": 1, "pts": 8},
+            {"name": "Walkey", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Tischer", "fg": "0-1", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Minnesota Golden Gophers",
+          "score": 89,
+          "players": [
+            {"name": "Hudson", "fg": "14-23", "ft": "6-7", "reb": 13, "pf": 3, "pts": 34},
+            {"name": "Dvoracek", "fg": "6-18", "ft": "5-5", "reb": 13, "pf": 4, "pts": 17},
+            {"name": "Kondla", "fg": "3-8", "ft": "1-2", "reb": 4, "pf": 3, "pts": 7},
+            {"name": "Clark", "fg": "9-21", "ft": "3-3", "reb": 5, "pf": 3, "pts": 21},
+            {"name": "Martins", "fg": "1-8", "ft": "0-0", "reb": 7, "pf": 5, "pts": 2},
+            {"name": "Presthus", "fg": "3-9", "ft": "2-2", "reb": 4, "pf": 3, "pts": 8},
+            {"name": "Moore", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

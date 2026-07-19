@@ -1,0 +1,9 @@
+{
+  "page": 6,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page 6 is a single official box score sheet: Virginia Cavaliers vs Georgetown, 12-27-72, final score Virginia 72 (37+35), Georgetown 58 (30+28) per the Score by Periods table. Virginia's player lines transcribe cleanly and checksum exactly to 72 (Parkhill 18, Drummond 8, Gerard 21, Horgood 14, Walker 8, McHeag 2, Stahurski 0, Morris 0, Baninti 1, Ranher 0, Gerry 0, Tilly 0 = 72; Virginia FG-made column also sums to the team total of 26). However, Georgetown's handwritten line items (FG attempts, FT made/attempted, and the total-points column for several players such as Smith, Gallagher, Wilson, Stokes, Edwards) are ambiguous/illegible enough that reconstructing per-player points that sum confidently to Georgetown's final score of 58 was not possible without guessing at digits -- cross-checks against the team FG-made total (24, which does match the sum of legible per-player FG-made figures) did not resolve the points-column ambiguity for several rows. Since a game entry requires both teams' box scores to checksum, and Georgetown's cannot be transcribed without inventing values, the entire game is skipped rather than shipping a half-fabricated opposing lineup. Only one Read call was used; a second re-read would not add resolution since the source is a single fixed-resolution scan of handwritten data."
+    }
+  ]
+}

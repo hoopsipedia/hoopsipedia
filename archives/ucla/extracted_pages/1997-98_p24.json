@@ -1,0 +1,11 @@
+{
+  "page": 24,
+  "games": [],
+  "skipped": [
+    {
+      "date": "1998-02-14",
+      "opponent": "California",
+      "reason": "UCLA side fails points checksum: summed player points = 88 (Henderson 23, Johnson 28, Bailey 7, Watson 7, Davis 10, McCoy 4, Hines 9, Knight 0) vs team final score of 87 printed on sheet. Root cause traceable to the FT line: individual FTM sum = 23 vs team TOTALS row FT of 22-34 (the 22-34 figure is independently corroborated by the printed 1st/2nd-half FT split 8-15 + 14-19 = 22-34, so the team total is reliable and one player row's FT/TP is off by 1 in the original document or in a way I cannot resolve without guessing which player). Additionally the team PF total (19) does not match the sum of individual PF values (23), a 4-foul gap, reinforcing that this box score page has an unresolved internal arithmetic inconsistency. California side (final 84) checksums perfectly (8+4+31+0+4+2+12+23+0=84) and rebounds for both teams checksum perfectly, so the page is legible and confidently transcribable value-by-value, but per instructions I'm skipping rather than guessing which UCLA figure is wrong. Re-read the page once already (max reached); did not resolve the discrepancy."
+    }
+  ]
+}

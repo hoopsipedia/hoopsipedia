@@ -1,0 +1,9 @@
+{
+  "page": 19,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Official Western Conference box score, Ohio State (visiting, 67) at Indiana (home, 81), dated Feb 21 1953. Ohio State's rows were legible and the PTS column (12,2,8,0,13,2,14,1,9,6) summed to exactly 67, matching the final score. However, several individual FG/FT cells for Ohio State did not internally reconcile (e.g. 2*FG+FT != PTS for multiple rows), and the Indiana (home team) box was heavily obscured by scan noise/checkerboard artifacts across nearly every player row, making confident digit-level transcription of Indiana's FG/FT/PF/PTS values impossible without guessing. Since both teams' player lines are required and Indiana could not be read with confidence, the whole game was skipped rather than risk inventing values."
+    }
+  ]
+}

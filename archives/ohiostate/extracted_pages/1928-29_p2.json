@@ -1,0 +1,44 @@
+{
+  "page": 2,
+  "games": [
+    {
+      "date": "1928-12-14",
+      "opponent": "Pennsylvania",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 29,
+          "players": [
+            {"name": "Ervin", "min": "17:04", "fg_made": 1, "ft_made": 3, "pf": 0, "pts": 5},
+            {"name": "Van Heyde", "min": "22:56", "fg_made": 3, "ft_made": 0, "pf": 1, "pts": 6},
+            {"name": "Evans", "min": "12:27", "fg_made": 1, "ft_made": 1, "pf": 0, "pts": 3},
+            {"name": "Wilson", "min": "24:37", "fg_made": 1, "ft_made": 0, "pf": 0, "pts": 2},
+            {"name": "Fesler", "min": "39:25", "fg_made": 0, "ft_made": 1, "pf": 2, "pts": 1},
+            {"name": "Coffee", "min": "0:35", "fg_made": 0, "ft_made": 0, "pf": 0, "pts": 0},
+            {"name": "Hinchman", "min": "27:30", "fg_made": 2, "ft_made": 3, "pf": 1, "pts": 7},
+            {"name": "Stull", "min": "8:32", "fg_made": 1, "ft_made": 0, "pf": 0, "pts": 2},
+            {"name": "Cox", "min": "40:00", "fg_made": 1, "ft_made": 1, "pf": 2, "pts": 3},
+            {"name": "Larkins", "min": "3:58", "fg_made": 0, "ft_made": 0, "pf": 0, "pts": 0},
+            {"name": "Holman", "min": "2:56", "fg_made": 0, "ft_made": 0, "pf": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Pennsylvania",
+          "score": 23,
+          "players": [
+            {"name": "Brodbeck", "fg_made": 0, "ft_made": 2, "pf": 0, "pts": 2},
+            {"name": "Noble", "fg_made": 1, "ft_made": 0, "pf": 1, "pts": 2},
+            {"name": "Lobley", "fg_made": 3, "ft_made": 2, "pf": 3, "pts": 8},
+            {"name": "Garber", "fg_made": 0, "ft_made": 0, "pf": 0, "pts": 0},
+            {"name": "Peterson", "fg_made": 0, "ft_made": 0, "pf": 1, "pts": 0},
+            {"name": "Schaaf", "fg_made": 1, "ft_made": 1, "pf": 2, "pts": 3},
+            {"name": "Lazar", "fg_made": 3, "ft_made": 0, "pf": 2, "pts": 6},
+            {"name": "Hartnett", "fg_made": 1, "ft_made": 0, "pf": 0, "pts": 2}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

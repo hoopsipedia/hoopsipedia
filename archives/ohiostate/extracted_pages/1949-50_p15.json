@@ -1,0 +1,9 @@
+{
+  "page": 15,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Official Western Conference box score, Ohio State (63) at Minnesota (58), Jan. 28, 1950. Ohio State side checksums perfectly (player PTS sum = 14+12+14+15+8+0 = 63 = final score). Minnesota side FAILS checksum: literal player PTS column sums to 11+8+13+6+10+0+0+5+0+0 = 53, vs. official final score of 58 (5-point gap). All other 9 Minnesota rows satisfy pts = 2*FG_made + FT_made exactly, and only Skoog F (7 FG, 2 FT, printed PTS '11') breaks the pattern -- formula predicts 16, which would make the total sum 58 exactly. Re-read the page once (2 reads total, at the allowed max) and both times the printed digit still reads '11', so I'm not confident enough to silently substitute 16. Also note the printed team totals row for the FTM/misses column (4) does not match the sum of individual FTM entries I read (9), suggesting the scoresheet itself or my transcription has additional unresolved digit ambiguity in that column. Skipping the whole game rather than guessing Skoog's actual point total."
+    }
+  ]
+}

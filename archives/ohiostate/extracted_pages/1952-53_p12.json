@@ -1,0 +1,47 @@
+{
+  "page": 12,
+  "games": [
+    {
+      "date": "1953-01-24",
+      "opponent": "Minnesota",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 64,
+          "players": [
+            {"name": "Williams", "fg": "1-5", "ft": "1-4", "pf": 4, "pts": 3},
+            {"name": "Miller", "fg": "0-0", "ft": "2-2", "pf": 1, "pts": 2},
+            {"name": "Wilks", "fg": "6-16", "ft": "6-6", "pf": 2, "pts": 18},
+            {"name": "Ebert", "fg": "4-19", "ft": "7-14", "pf": 4, "pts": 15},
+            {"name": "Annis", "fg": "0-0", "ft": "0-0", "pf": 0, "pts": 0},
+            {"name": "Hatfield", "fg": "3-7", "ft": "0-2", "pf": 5, "pts": 6},
+            {"name": "Jones", "fg": "3-7", "ft": "0-0", "pf": 0, "pts": 6},
+            {"name": "Smith", "fg": "0-0", "ft": "1-2", "pf": 0, "pts": 1},
+            {"name": "Cook", "fg": "4-17", "ft": "5-6", "pf": 3, "pts": 13},
+            {"name": "Keeling", "fg": "0-1", "ft": "0-2", "pf": 2, "pts": 0}
+          ]
+        },
+        {
+          "name": "Minnesota Golden Gophers",
+          "score": 82,
+          "players": [
+            {"name": "Gelle", "fg": "7-17", "ft": "2-2", "pf": 3, "pts": 16},
+            {"name": "Dommeyer", "fg": "0-0", "ft": "0-0", "pf": 2, "pts": 0},
+            {"name": "Weiss", "fg": "2-14", "ft": "1-4", "pf": 2, "pts": 5},
+            {"name": "Reed", "fg": "0-0", "ft": "0-0", "pf": 3, "pts": 0},
+            {"name": "Smith", "fg": "0-3", "ft": "0-0", "pf": 1, "pts": 0},
+            {"name": "Xalafat", "fg": "6-10", "ft": "4-4", "pf": 5, "pts": 16},
+            {"name": "Wallerius", "fg": "1-1", "ft": "1-1", "pf": 4, "pts": 3},
+            {"name": "Mensal", "fg": "9-25", "ft": "14-17", "pf": 5, "pts": 32},
+            {"name": "Bolstorff", "fg": "0-0", "ft": "0-0", "pf": 0, "pts": 0},
+            {"name": "Bennett", "fg": "3-6", "ft": "2-2", "pf": 4, "pts": 8},
+            {"name": "McNamara", "fg": "0-0", "ft": "0-0", "pf": 1, "pts": 0},
+            {"name": "Fagarness", "fg": "1-1", "ft": "0-0", "pf": 0, "pts": 2}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

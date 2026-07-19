@@ -1,0 +1,42 @@
+{
+  "page": 8,
+  "games": [
+    {
+      "date": "1983-12-20",
+      "opponent": "Bowling Green Falcons",
+      "teams": [
+        {
+          "name": "Bowling Green Falcons",
+          "score": 70,
+          "players": [
+            {"name": "Colin Irish", "fg": "9-19", "ft": "4-7", "reb": 12, "pf": 3, "ast": 3, "to": 5, "blk": 0, "stl": 1, "min": 25, "pts": 22},
+            {"name": "David Jenkins", "fg": "11-15", "ft": "2-2", "reb": 8, "pf": 1, "ast": 1, "to": 2, "blk": 0, "stl": 1, "min": 37, "pts": 24},
+            {"name": "Bill Faine", "fg": "4-10", "ft": "0-0", "reb": 5, "pf": 3, "ast": 1, "to": 3, "blk": 0, "stl": 0, "min": 38, "pts": 8},
+            {"name": "Keith Taylor", "fg": "4-10", "ft": "2-2", "reb": 2, "pf": 4, "ast": 2, "to": 1, "blk": 2, "stl": 0, "min": 37, "pts": 10},
+            {"name": "Brian Miller", "fg": "2-7", "ft": "2-2", "reb": 2, "pf": 2, "ast": 8, "to": 4, "blk": 0, "stl": 0, "min": 40, "pts": 6},
+            {"name": "Frank Booker", "fg": "0-1", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "min": 3, "pts": 0},
+            {"name": "Mike Maleske", "fg": "0-0", "ft": "0-0", "reb": 1, "pf": 1, "ast": 0, "to": 1, "blk": 0, "stl": 0, "min": 17, "pts": 0},
+            {"name": "Paul Abendroth", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 1, "ast": 0, "to": 0, "blk": 0, "stl": 0, "min": 3, "pts": 0}
+          ]
+        },
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 64,
+          "players": [
+            {"name": "Tony Campbell", "fg": "9-20", "ft": "5-6", "reb": 16, "pf": 4, "ast": 2, "to": 5, "blk": 0, "stl": 3, "min": 38, "pts": 23},
+            {"name": "Dennis Hopson", "fg": "0-4", "ft": "0-0", "reb": 5, "pf": 0, "ast": 4, "to": 0, "blk": 1, "stl": 0, "min": 25, "pts": 0},
+            {"name": "Keith Wesson", "fg": "2-4", "ft": "2-2", "reb": 1, "pf": 1, "ast": 0, "to": 4, "blk": 0, "stl": 0, "min": 26, "pts": 6},
+            {"name": "Troy Taylor", "fg": "3-9", "ft": "1-1", "reb": 2, "pf": 2, "ast": 1, "to": 5, "blk": 0, "stl": 0, "min": 34, "pts": 7},
+            {"name": "Ron Stokes", "fg": "7-9", "ft": "4-7", "reb": 2, "pf": 4, "ast": 4, "to": 2, "blk": 0, "stl": 1, "min": 33, "pts": 18},
+            {"name": "Dave Jones", "fg": "2-6", "ft": "0-0", "reb": 6, "pf": 3, "ast": 1, "to": 2, "blk": 0, "stl": 0, "min": 25, "pts": 4},
+            {"name": "Clarence McGee", "fg": "3-7", "ft": "0-0", "reb": 2, "pf": 1, "ast": 0, "to": 0, "blk": 0, "stl": 1, "min": 15, "pts": 6},
+            {"name": "Curtis Wilson", "fg": "0-1", "ft": "0-0", "reb": 0, "pf": 1, "ast": 0, "to": 1, "blk": 0, "stl": 0, "min": 4, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true,
+      "notes": "Ohio State TP column for Wesson read as '8' on first pass but corrected to 6 (2*FG+FT=6, and only value that makes the team point total of 64 reconcile); all other values transcribed as printed on the official NCAA box score sheet."
+    }
+  ],
+  "skipped": []
+}

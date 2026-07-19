@@ -1,0 +1,9 @@
+{
+  "page": 13,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page is a newspaper clipping (Columbus/Ohio State article 'Hard Battle Annexed By Scarlet Five') covering Ohio State 29, Illinois 26 on 2/13/1932 at the Coliseum, and it does include a printed box score table for both teams (columns: Fr./FG, Ft., P.F., M.F., Pts). However the scan resolution is too low to transcribe individual player FG/FT/PTS digits with confidence — my reading of individual player point values summed to totals inconsistent with the team FG/FT totals shown in the 'Totals' row and with the final score (29) reported in the article and header line. Rather than guess at ambiguous digits, both teams' player lines are skipped for failing checksum/legibility. Final score (Ohio State 29, Illinois 26, date 1932-02-13) is clearly legible from the article text but per instructions a game is only included if per-player lines can be transcribed and checksummed, so no game entry was created."
+    }
+  ]
+}

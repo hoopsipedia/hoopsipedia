@@ -1,0 +1,42 @@
+{
+  "page": 11,
+  "games": [
+    {
+      "date": "1973-01-06",
+      "opponent": "Michigan",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 62,
+          "players": [
+            {"name": "Jackson", "fg": "3-10", "ft": "1-2", "reb": 8, "pf": 5, "pts": 7},
+            {"name": "Wenner", "fg": "2-2", "ft": "0-0", "reb": 4, "pf": 2, "pts": 4},
+            {"name": "Andreas", "fg": "3-9", "ft": "0-0", "reb": 5, "pf": 5, "pts": 6},
+            {"name": "Hornyak", "fg": "13-28", "ft": "2-3", "reb": 1, "pf": 4, "pts": 28},
+            {"name": "Repella", "fg": "0-3", "ft": "1-2", "reb": 4, "pf": 1, "pts": 1},
+            {"name": "Witte", "fg": "3-7", "ft": "0-1", "reb": 4, "pf": 5, "pts": 6},
+            {"name": "Gerhard", "fg": "3-5", "ft": "0-0", "reb": 2, "pf": 1, "pts": 6},
+            {"name": "Wolfe", "fg": "2-3", "ft": "0-0", "reb": 7, "pf": 1, "pts": 4},
+            {"name": "Siekmann", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Michigan Wolverines",
+          "score": 68,
+          "players": [
+            {"name": "Russell", "fg": "8-17", "ft": "7-10", "reb": 9, "pf": 3, "pts": 23},
+            {"name": "E. Johnson", "fg": "7-10", "ft": "2-5", "reb": 9, "pf": 4, "pts": 16},
+            {"name": "Brady", "fg": "1-1", "ft": "3-4", "reb": 3, "pf": 5, "pts": 5},
+            {"name": "Wilmore", "fg": "5-13", "ft": "4-6", "reb": 7, "pf": 1, "pts": 14},
+            {"name": "J. Johnson", "fg": "1-2", "ft": "0-0", "reb": 0, "pf": 1, "pts": 2},
+            {"name": "Buss", "fg": "0-1", "ft": "0-1", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Kupec", "fg": "1-3", "ft": "2-2", "reb": 1, "pf": 0, "pts": 4},
+            {"name": "Lockard", "fg": "1-2", "ft": "2-3", "reb": 1, "pf": 0, "pts": 4}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

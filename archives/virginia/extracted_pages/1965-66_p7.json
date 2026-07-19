@@ -1,0 +1,9 @@
+{
+  "page": 7,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "1965-66, 1/5 at Maryland (College Park, Md.), final Virginia 65 - Maryland 62. Virginia's player point totals sum to exactly 65 (checksum OK), but Maryland's individual player Pts column sums to 63 (Ward 15, McMillen 9, Harrington 14, Brayton 22, Williams 1, Clark 0, Wise 2), which does not match Maryland's box-score team total/final score of 62. The discrepancy traces to the FT column: individual FT-made values sum to 7, but the team FT row (and the First Half 2-6 + Second Half 4-7 = 6 breakdown) confirms team FT made is 6, i.e. one player's printed FT value is off by one make/point on the scan. Re-read the page once (max allowed) and could not confidently identify which specific player's FT/Pts figure is wrong, so the whole game was skipped rather than guessed at."
+    }
+  ]
+}

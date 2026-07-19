@@ -1,0 +1,41 @@
+{
+  "page": 13,
+  "games": [
+    {
+      "date": "1930-02-22",
+      "opponent": "Army",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 31,
+          "players": [
+            {"name": "Evans", "min": "40:00", "fg": "2", "ft": "1", "pf": "0", "pts": 5},
+            {"name": "Finchman", "min": "40:00", "fg": "6", "ft": "3", "pf": "3", "pts": 15},
+            {"name": "Stewart", "min": "35:10", "fg": "2", "ft": "1", "pf": "0", "pts": 5},
+            {"name": "Russell", "min": "4:50", "fg": "0", "ft": "0", "pf": "1", "pts": 0},
+            {"name": "Fesler", "min": "40:00", "fg": "2", "ft": "1", "pf": "0", "pts": 5},
+            {"name": "Larkins", "min": "40:00", "fg": "0", "ft": "1", "pf": "3", "pts": 1}
+          ]
+        },
+        {
+          "name": "Army",
+          "score": 30,
+          "players": [
+            {"name": "Stecker", "fg": "2", "ft": "2", "pf": "1", "pts": 5},
+            {"name": "Besson", "fg": "0", "ft": "0", "pf": "0", "pts": 0},
+            {"name": "Krueger", "fg": "3", "ft": "1", "pf": "0", "pts": 8},
+            {"name": "Blanning", "fg": "4", "ft": "2", "pf": "1", "pts": 10},
+            {"name": "Messinger", "fg": "0", "ft": "0", "pf": "0", "pts": 0},
+            {"name": "Strother", "fg": "2", "ft": "0", "pf": "0", "pts": 4},
+            {"name": "Malloy", "fg": "0", "ft": "1", "pf": "1", "pts": 1},
+            {"name": "Wood", "fg": "0", "ft": "0", "pf": "1", "pts": 0},
+            {"name": "Abell", "fg": "1", "ft": "0", "pf": "1", "pts": 2},
+            {"name": "Hutchinson (Capt)", "fg": "0", "ft": "0", "pf": "2", "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

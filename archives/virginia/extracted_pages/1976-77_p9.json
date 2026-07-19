@@ -1,0 +1,51 @@
+{
+  "page": 9,
+  "games": [
+    {
+      "date": "1977-01-08",
+      "opponent": "North Carolina Tar Heels",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 67,
+          "players": [
+            {"name": "Iavaroni", "min": "36", "fg": "8-19", "ft": "3-5", "reb": 14, "ast": 2, "pf": 3, "to": 5, "blk": 1, "pts": 19},
+            {"name": "Owens", "min": "31", "fg": "0-1", "ft": "2-2", "reb": 3, "ast": 2, "pf": 3, "to": 1, "stl": 2, "pts": 2},
+            {"name": "Castellan", "min": "30", "fg": "2-8", "ft": "2-2", "reb": 8, "ast": 0, "pf": 4, "to": 3, "pts": 6},
+            {"name": "Langloh", "min": "32", "fg": "8-19", "ft": "4-5", "reb": 2, "ast": 2, "pf": 2, "to": 2, "stl": 2, "pts": 20},
+            {"name": "Stokes", "min": "12", "fg": "2-3", "ft": "2-3", "reb": 1, "ast": 1, "pf": 1, "to": 1, "pts": 6},
+            {"name": "Napier", "min": "18", "fg": "2-6", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "to": 3, "stl": 1, "pts": 4},
+            {"name": "Schetlick", "min": "13", "fg": "1-3", "ft": "0-0", "reb": 1, "ast": 0, "pf": 4, "to": 0, "pts": 2},
+            {"name": "Koesters", "min": "8", "fg": "2-3", "ft": "0-0", "reb": 1, "ast": 0, "pf": 5, "to": 4, "stl": 1, "pts": 4},
+            {"name": "Jefferson", "min": "10", "fg": "2-9", "ft": "0-0", "reb": 3, "ast": 0, "pf": 1, "to": 0, "pts": 4},
+            {"name": "Briscoe", "min": "7", "fg": "0-1", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "to": 1, "pts": 0},
+            {"name": "Newllen", "min": "3", "fg": "0-1", "ft": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "North Carolina Tar Heels",
+          "score": 91,
+          "players": [
+            {"name": "Davis", "min": "27", "fg": "5-5", "ft": "7-10", "reb": 4, "ast": 4, "pf": 4, "to": 1, "stl": 5, "pts": 17},
+            {"name": "O'Koren", "min": "27", "fg": "2-4", "ft": "0-0", "reb": 2, "ast": 0, "pf": 4, "to": 2, "stl": 1, "pts": 4},
+            {"name": "LaGarde", "min": "31", "fg": "10-13", "ft": "4-5", "reb": 10, "ast": 0, "pf": 4, "to": 2, "blk": 1, "pts": 24},
+            {"name": "Kuester", "min": "19", "fg": "2-3", "ft": "0-1", "reb": 3, "ast": 3, "pf": 4, "to": 2, "pts": 4},
+            {"name": "Ford", "min": "30", "fg": "8-15", "ft": "5-6", "reb": 1, "ast": 8, "pf": 3, "to": 3, "stl": 2, "pts": 21},
+            {"name": "Krafcisin", "min": "8", "fg": "1-1", "ft": "0-2", "reb": 3, "ast": 1, "pf": 0, "to": 2, "blk": 2, "stl": 2, "pts": 2},
+            {"name": "Bradley", "min": "9", "fg": "0-1", "ft": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 1, "pts": 0},
+            {"name": "Zaliagiris", "min": "19", "fg": "3-3", "ft": "1-2", "reb": 0, "ast": 1, "pf": 0, "to": 1, "pts": 7},
+            {"name": "Buckley", "min": "7", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Doughton", "min": "6", "fg": "0-2", "ft": "2-2", "reb": 0, "ast": 0, "pf": 2, "to": 0, "pts": 2},
+            {"name": "Yonakor", "min": "5", "fg": "2-2", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "to": 1, "pts": 4},
+            {"name": "Virgil", "min": "6", "fg": "1-1", "ft": "2-2", "reb": 0, "ast": 0, "pf": 0, "to": 0, "pts": 4},
+            {"name": "Coley", "min": "4", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 2, "pts": 0},
+            {"name": "Wiel", "min": "2", "fg": "1-1", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "pts": 2}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": [],
+  "notes": "Official NCAA box score, Virginia at North Carolina, played 1977-01-08 (handwritten date at bottom of sheet). Both teams' player points sums match final scores exactly (Virginia 67, UNC 91), and every individual player's pts value equals 2*FG_made+FT_made, confirming pre-3-point-line scoring consistency. Note: UNC team-total FG row reads 36 made, but summing the individual FG-made column yields 35 (likely a single digit misread on one player's FG cell); this does not affect the points checksum and the game is retained. Minutes (MIN) and a few ancillary stat cells (blk/stl) were partly faint at page edges; values are best-effort visual reads and a small number of blank/illegible cells were omitted rather than guessed."
+}

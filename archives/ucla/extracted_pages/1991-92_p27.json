@@ -1,0 +1,42 @@
+{
+  "page": 27,
+  "games": [
+    {
+      "date": "1992-03-08",
+      "opponent": "Washington Huskies",
+      "ucla_score": 80,
+      "opp_score": 79,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 80,
+          "players": [
+            {"name": "Tracy Murray", "min": 33, "fg": "9-16", "tp": "3-7", "ft": "4-4", "reb": 3, "ast": 4, "pf": 4, "to": 0, "blk": 1, "stl": 0, "pts": 25},
+            {"name": "Don MacLean", "min": 38, "fg": "11-21", "tp": "0-0", "ft": "4-4", "reb": 9, "ast": 3, "pf": 2, "to": 3, "blk": 0, "stl": 2, "pts": 26},
+            {"name": "Gerald Madkins", "min": 32, "fg": "3-4", "tp": "2-3", "ft": "0-0", "reb": 0, "ast": 4, "pf": 2, "to": 1, "blk": 0, "stl": 1, "pts": 8},
+            {"name": "Shon Tarver", "min": 23, "fg": "3-6", "tp": "0-1", "ft": "2-4", "reb": 1, "ast": 0, "pf": 1, "to": 0, "blk": 0, "stl": 1, "pts": 8},
+            {"name": "Mitchell Butler", "min": 32, "fg": "2-2", "tp": "0-0", "ft": "3-4", "reb": 3, "ast": 3, "pf": 4, "to": 2, "blk": 1, "stl": 2, "pts": 7},
+            {"name": "Ed O'Bannon", "min": 16, "fg": "0-0", "tp": "0-0", "ft": "4-4", "reb": 3, "ast": 0, "pf": 0, "to": 1, "blk": 0, "stl": 0, "pts": 4},
+            {"name": "Darrick Martin", "min": 26, "fg": "0-2", "tp": "0-1", "ft": "2-2", "reb": 1, "ast": 5, "pf": 1, "to": 1, "blk": 0, "stl": 0, "pts": 2}
+          ]
+        },
+        {
+          "name": "Washington Huskies",
+          "score": 79,
+          "players": [
+            {"name": "Mark Pope", "min": 33, "fg": "6-7", "tp": "1-1", "ft": "2-2", "reb": 10, "ast": 3, "pf": 3, "to": 1, "blk": 1, "stl": 2, "pts": 15},
+            {"name": "Doug Meekins", "min": 31, "fg": "7-14", "tp": "0-0", "ft": "0-0", "reb": 3, "ast": 2, "pf": 4, "to": 2, "blk": 1, "stl": 1, "pts": 14},
+            {"name": "Rich Manning", "min": 26, "fg": "8-14", "tp": "0-1", "ft": "1-1", "reb": 5, "ast": 0, "pf": 5, "to": 0, "blk": 0, "stl": 0, "pts": 17},
+            {"name": "James French", "min": 14, "fg": "4-5", "tp": "1-1", "ft": "0-0", "reb": 1, "ast": 0, "pf": 2, "to": 4, "blk": 0, "stl": 0, "pts": 9},
+            {"name": "Brett Pagett", "min": 38, "fg": "1-1", "tp": "1-1", "ft": "0-0", "reb": 1, "ast": 4, "pf": 1, "to": 1, "blk": 0, "stl": 1, "pts": 3},
+            {"name": "Chandler Nairn", "min": 24, "fg": "4-8", "tp": "1-3", "ft": "2-2", "reb": 2, "ast": 3, "pf": 3, "to": 0, "blk": 2, "stl": 0, "pts": 11},
+            {"name": "Tim Caviezel", "min": 28, "fg": "3-11", "tp": "2-7", "ft": "0-1", "reb": 0, "ast": 3, "pf": 1, "to": 1, "blk": 0, "stl": 0, "pts": 8},
+            {"name": "Andy Woods", "min": 6, "fg": "1-2", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 2, "pf": 1, "to": 0, "blk": 0, "stl": 0, "pts": 2}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

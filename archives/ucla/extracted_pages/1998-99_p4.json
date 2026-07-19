@@ -1,0 +1,53 @@
+{
+  "page": 4,
+  "games": [
+    {
+      "date": "1998-11-28",
+      "opponent": "Kentucky",
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 62,
+          "players": [
+            {"name": "JaRon Rush", "min": 32, "fg": "5-15", "tp": "1-4", "ft": "3-5", "reb": 5, "ast": 2, "pf": 3, "to": 2, "stl": 0, "blk": 1, "pts": 14},
+            {"name": "Dan Gadzuric", "min": 14, "fg": "0-3", "tp": "0-0", "ft": "1-2", "reb": 2, "ast": 0, "pf": 3, "to": 0, "stl": 0, "blk": 2, "pts": 1},
+            {"name": "Ryan Bailey", "min": 23, "fg": "0-1", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 4, "pf": 5, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Rico Hines", "min": 23, "fg": "0-2", "tp": "0-2", "ft": "0-2", "reb": 3, "ast": 0, "pf": 3, "to": 3, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Earl Watson", "min": 39, "fg": "4-10", "tp": "1-4", "ft": "5-6", "reb": 4, "ast": 5, "pf": 0, "to": 1, "stl": 5, "blk": 1, "pts": 14},
+            {"name": "Matt Barnes", "min": 24, "fg": "3-8", "tp": "1-3", "ft": "1-3", "reb": 4, "ast": 1, "pf": 4, "to": 2, "stl": 3, "blk": 0, "pts": 8},
+            {"name": "Jerome Moiso", "min": 25, "fg": "11-17", "tp": "0-0", "ft": "3-5", "reb": 7, "ast": 0, "pf": 1, "to": 2, "stl": 0, "blk": 0, "pts": 25},
+            {"name": "Travis Reed", "min": 6, "fg": "0-2", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Ray Young", "min": 4, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 1, "pf": 1, "to": 0, "stl": 0, "blk": 1, "pts": 0},
+            {"name": "Sean Farnham", "min": 6, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Brandon Loyd", "min": 4, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Billy Knight", "min": 0, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Baron Davis", "min": 0, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Tod Ramasar", "min": 0, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Kentucky Wildcats",
+          "score": 66,
+          "players": [
+            {"name": "Heshimu Evans", "min": 29, "fg": "6-12", "tp": "2-4", "ft": "2-5", "reb": 6, "ast": 0, "pf": 4, "to": 3, "stl": 0, "blk": 0, "pts": 16},
+            {"name": "Michael Bradley", "min": 17, "fg": "2-4", "tp": "0-0", "ft": "0-2", "reb": 5, "ast": 0, "pf": 2, "to": 4, "stl": 1, "blk": 2, "pts": 4},
+            {"name": "Scott Padgett", "min": 24, "fg": "0-2", "tp": "0-1", "ft": "4-6", "reb": 6, "ast": 5, "pf": 4, "to": 1, "stl": 1, "blk": 0, "pts": 4},
+            {"name": "Wayne Turner", "min": 29, "fg": "3-9", "tp": "0-2", "ft": "6-6", "reb": 4, "ast": 4, "pf": 2, "to": 2, "stl": 1, "blk": 0, "pts": 12},
+            {"name": "Tayshaun Prince", "min": 24, "fg": "4-9", "tp": "3-6", "ft": "0-0", "reb": 6, "ast": 1, "pf": 1, "to": 2, "stl": 0, "blk": 1, "pts": 11},
+            {"name": "Souleymane Camara", "min": 4, "fg": "0-1", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "to": 1, "stl": 0, "blk": 1, "pts": 0},
+            {"name": "Jamaal Magloire", "min": 22, "fg": "1-3", "tp": "0-0", "ft": "2-4", "reb": 3, "ast": 1, "pf": 3, "to": 1, "stl": 1, "blk": 0, "pts": 4},
+            {"name": "Saul Smith", "min": 21, "fg": "1-3", "tp": "1-2", "ft": "3-4", "reb": 3, "ast": 1, "pf": 3, "to": 0, "stl": 0, "blk": 0, "pts": 6},
+            {"name": "Myron Anthony", "min": 12, "fg": "1-3", "tp": "0-0", "ft": "1-2", "reb": 1, "ast": 0, "pf": 1, "to": 3, "stl": 0, "blk": 0, "pts": 3},
+            {"name": "Ryan Hogan", "min": 14, "fg": "2-4", "tp": "2-4", "ft": "0-0", "reb": 1, "ast": 1, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 6},
+            {"name": "Desmond Allison", "min": 4, "fg": "0-1", "tp": "0-1", "ft": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "JP Blevins", "min": 0, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Steve Masiello", "min": 0, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Todd Tackett", "min": 0, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

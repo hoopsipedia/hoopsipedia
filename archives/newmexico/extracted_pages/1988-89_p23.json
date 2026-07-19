@@ -1,0 +1,45 @@
+{
+  "page": 23,
+  "games": [
+    {
+      "date": "1989-02-16",
+      "opponent": "Utah",
+      "site": "Huntsman Center - SLC",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 79,
+          "players": [
+            {"name": "McBurrows", "min": 15, "fg": "4-4", "ft": "1-2", "reb": 2, "ast": 0, "pf": 0, "to": 3, "stl": 0, "blk": 0, "pts": 9},
+            {"name": "Thomas", "min": 32, "fg": "5-10", "ft": "0-1", "reb": 3, "ast": 1, "pf": 5, "to": 2, "stl": 1, "blk": 0, "pts": 10},
+            {"name": "Longsley", "min": 32, "fg": "9-16", "ft": "3-6", "reb": 7, "ast": 1, "pf": 2, "to": 1, "stl": 3, "blk": 3, "pts": 21},
+            {"name": "McGee", "min": 38, "fg": "3-4", "tp": "1-1", "ft": "0-0", "reb": 4, "ast": 6, "pf": 0, "to": 5, "stl": 3, "blk": 0, "pts": 7},
+            {"name": "Robbins", "min": 33, "fg": "2-6", "tp": "0-3", "ft": "6-7", "reb": 3, "ast": 2, "pf": 2, "to": 0, "stl": 2, "blk": 0, "pts": 10},
+            {"name": "Walker", "min": 2, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Miller", "min": 14, "fg": "5-6", "ft": "2-3", "reb": 4, "ast": 0, "pf": 2, "to": 0, "stl": 0, "blk": 1, "pts": 12},
+            {"name": "Banks", "min": 32, "fg": "4-9", "tp": "0-1", "ft": "0-0", "reb": 3, "ast": 5, "pf": 1, "to": 1, "stl": 1, "blk": 0, "pts": 8},
+            {"name": "Loeffel", "min": 2, "fg": "1-1", "ft": "0-0", "reb": 0, "ast": 0, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 2}
+          ]
+        },
+        {
+          "name": "Utah Utes",
+          "score": 76,
+          "players": [
+            {"name": "Grant", "min": 35, "fg": "7-17", "tp": "1-2", "ft": "0-1", "reb": 19, "ast": 6, "pf": 3, "to": 4, "stl": 0, "blk": 0, "pts": 15},
+            {"name": "Smith", "min": 22, "fg": "5-10", "ft": "0-0", "reb": 3, "ast": 3, "pf": 4, "to": 1, "stl": 0, "blk": 1, "pts": 10},
+            {"name": "Singletary", "min": 28, "fg": "4-7", "ft": "8-9", "reb": 5, "ast": 3, "pf": 2, "to": 1, "stl": 1, "blk": 1, "pts": 16},
+            {"name": "Lenoir", "min": 40, "fg": "2-6", "tp": "0-2", "ft": "0-1", "reb": 1, "ast": 3, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Hansen", "min": 8, "fg": "0-1", "ft": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 2, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Gray", "min": 27, "fg": "2-6", "tp": "1-5", "ft": "0-0", "reb": 0, "ast": 1, "pf": 0, "to": 1, "stl": 1, "blk": 0, "pts": 5},
+            {"name": "Christensen", "min": 5, "fg": "0-0", "ft": "0-0", "reb": 1, "ast": 1, "pf": 0, "to": 3, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Chapman", "min": 6, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "to": 1, "stl": 1, "blk": 0, "pts": 0},
+            {"name": "Madison", "min": 29, "fg": "11-21", "ft": "4-6", "reb": 4, "ast": 0, "pf": 4, "to": 1, "stl": 0, "blk": 0, "pts": 26}
+          ]
+        }
+      ],
+      "checksum_ok": true,
+      "notes": "Score by periods: New Mexico 34-45=79 (Final); Utah 36-40=76 (Final). reb column here is total rebounds (Off+Def) as shown on sheet; players with no stats listed (O'Gorman, Steffan, Tower for New Mexico; Perkins, Monson, Sampson, Watts, Brooks for Utah) did not play and are omitted."
+    }
+  ],
+  "skipped": []
+}

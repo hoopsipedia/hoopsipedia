@@ -1,0 +1,46 @@
+{
+  "page": 32,
+  "games": [
+    {
+      "date": "1976-03-29",
+      "opponent": "Rutgers",
+      "ucla_score": 106,
+      "opp_score": 92,
+      "notes": "NCAA Tournament - Third Place Game, The Spectrum (Philadelphia)",
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 106,
+          "players": [
+            {"name": "Washington, Rich", "min": 22, "fg": "5-8", "ft": "1-2", "reb": 0, "pf": 4, "ast": 2, "to": 3, "pts": 11},
+            {"name": "Greenwood, David", "min": 18.5, "fg": "2-4", "ft": "1-2", "reb": 8, "pf": 5, "ast": 0, "to": 2, "pts": 5},
+            {"name": "Drollinger, Ralph", "min": 29.5, "fg": "6-8", "ft": "0-0", "reb": 16, "pf": 5, "ast": 3, "to": 4, "blk": 4, "pts": 12},
+            {"name": "McCarter, Andre", "min": 40, "fg": "11-19", "ft": "4-4", "reb": 5, "pf": 1, "ast": 11, "to": 2, "stl": 2, "pts": 26},
+            {"name": "Johnson, Marques", "min": 40, "fg": "11-21", "ft": "8-12", "reb": 18, "pf": 1, "ast": 6, "to": 4, "stl": 4, "blk": 2, "pts": 30},
+            {"name": "Townsend, Ray", "min": 22, "fg": "3-7", "ft": "2-2", "reb": 2, "pf": 3, "ast": 2, "to": 1, "stl": 3, "pts": 8},
+            {"name": "Vroman, Brett", "min": 2, "fg": "0-0", "ft": "0-0", "reb": 1, "pf": 1, "ast": 0, "to": 1, "pts": 0},
+            {"name": "Smith, Gavin", "min": 15, "fg": "3-9", "ft": "2-2", "reb": 4, "pf": 2, "ast": 0, "to": 5, "stl": 1, "pts": 8},
+            {"name": "Spillane, Jim", "min": 7, "fg": "2-3", "ft": "0-0", "reb": 0, "pf": 1, "ast": 0, "to": 3, "pts": 4},
+            {"name": "Olinde, Wilbert", "min": 4, "fg": "1-1", "ft": "0-0", "reb": 1, "pf": 0, "ast": 1, "to": 1, "pts": 2}
+          ]
+        },
+        {
+          "name": "Rutgers Scarlet Knights",
+          "score": 92,
+          "players": [
+            {"name": "Sellers, Phil", "min": 32, "fg": "8-21", "ft": "7-10", "reb": 12, "pf": 3, "ast": 3, "to": 3, "pts": 23},
+            {"name": "Copeland, Hollis", "min": 38, "fg": "9-19", "ft": "0-2", "reb": 13, "pf": 3, "ast": 4, "to": 3, "stl": 2, "pts": 18},
+            {"name": "Bailey, Jim", "min": 22.5, "fg": "3-10", "ft": "1-1", "reb": 5, "pf": 2, "ast": 1, "to": 0, "blk": 2, "pts": 7},
+            {"name": "Jordan, Ed", "min": 39, "fg": "4-16", "ft": "0-2", "reb": 4, "pf": 3, "ast": 7, "to": 6, "stl": 3, "pts": 8},
+            {"name": "Dabney, Mike", "min": 31, "fg": "9-18", "ft": "3-5", "reb": 5, "pf": 3, "ast": 4, "to": 3, "stl": 6, "pts": 21},
+            {"name": "Anderson, Abdel", "min": 27.5, "fg": "4-13", "ft": "5-6", "reb": 4, "pf": 2, "ast": 2, "to": 3, "stl": 1, "pts": 13},
+            {"name": "Conlin, Mark", "min": 1, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 0, "pts": 0},
+            {"name": "Hefele, Steve", "min": 9, "fg": "1-3", "ft": "0-0", "reb": 5, "pf": 4, "to": 1, "pts": 2}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

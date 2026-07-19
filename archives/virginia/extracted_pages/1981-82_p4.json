@@ -1,0 +1,51 @@
+{
+  "page": 4,
+  "games": [
+    {
+      "date": "1981-12-02",
+      "opponent": "Randolph-Macon",
+      "site": "U-Hall, Charlottesville",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 82,
+          "players": [
+            {"name": "Tim Mullen", "min": 22, "fg": "4-9", "ft": "0-0", "reb": 4, "pf": 3, "ast": 2, "to": 2, "blk": 1, "stl": 1, "pts": 8},
+            {"name": "Craig Robinson", "min": 21, "fg": "5-9", "ft": "3-5", "reb": 4, "pf": 2, "ast": 1, "to": 1, "blk": 0, "stl": 2, "pts": 13},
+            {"name": "Dean Carpenter", "min": 20, "fg": "0-4", "ft": "1-2", "reb": 4, "pf": 0, "ast": 1, "to": 0, "blk": 0, "stl": 1, "pts": 1},
+            {"name": "Othell Wilson", "min": 28, "fg": "4-8", "ft": "2-2", "reb": 3, "pf": 2, "ast": 3, "to": 0, "blk": 3, "pts": 10},
+            {"name": "Jeff Jones", "min": 24, "fg": "5-10", "ft": "1-4", "reb": 4, "pf": 2, "ast": 1, "to": 2, "stl": 1, "pts": 11},
+            {"name": "Ken Johnson", "min": 10, "fg": "3-6", "ft": "0-0", "reb": 2, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 6},
+            {"name": "Jim Miller", "min": 20, "fg": "3-4", "ft": "1-2", "reb": 5, "pf": 3, "ast": 3, "to": 1, "blk": 1, "stl": 1, "pts": 7},
+            {"name": "Kenton Edelin", "min": 21, "fg": "5-5", "ft": "6-7", "reb": 6, "pf": 2, "ast": 1, "to": 3, "blk": 1, "stl": 1, "pts": 16},
+            {"name": "Ricky Stokes", "min": 16, "fg": "2-4", "ft": "1-1", "reb": 0, "pf": 3, "ast": 4, "to": 0, "blk": 1, "stl": 1, "pts": 5},
+            {"name": "Dan Merrifield", "min": 8, "fg": "0-1", "ft": "1-2", "reb": 1, "pf": 5, "ast": 1, "to": 0, "blk": 0, "stl": 1, "pts": 1},
+            {"name": "Doug Newburg", "min": 5, "fg": "1-2", "ft": "0-0", "reb": 1, "pf": 0, "ast": 1, "to": 1, "blk": 0, "stl": 1, "pts": 2},
+            {"name": "Jim Runcie", "min": 5, "fg": "1-2", "ft": "0-0", "reb": 0, "pf": 1, "ast": 1, "to": 0, "blk": 0, "stl": 1, "pts": 2}
+          ]
+        },
+        {
+          "name": "Randolph-Macon",
+          "score": 50,
+          "players": [
+            {"name": "Jimmy Griffin", "min": 31, "fg": "1-2", "ft": "4-4", "reb": 6, "pf": 5, "ast": 2, "to": 2, "blk": 2, "stl": 1, "pts": 6},
+            {"name": "Mark Martino", "min": 26, "fg": "5-10", "ft": "2-3", "reb": 1, "pf": 5, "ast": 1, "to": 6, "blk": 0, "stl": 0, "pts": 12},
+            {"name": "Jesse Hellyer", "min": 20, "fg": "0-2", "ft": "0-0", "reb": 4, "pf": 5, "ast": 0, "to": 2, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Harry Barker", "min": 26, "fg": "1-4", "ft": "0-2", "reb": 2, "pf": 2, "ast": 2, "to": 1, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Bryan Vacca", "min": 35, "fg": "8-14", "ft": "2-2", "reb": 1, "pf": 1, "ast": 1, "to": 2, "blk": 2, "stl": 2, "pts": 18},
+            {"name": "Thad Vermillion", "min": 13, "fg": "0-1", "ft": "0-0", "reb": 0, "pf": 3, "ast": 0, "to": 2, "blk": 0, "stl": 1, "pts": 0},
+            {"name": "Greg Marshall", "min": 12, "fg": "0-0", "ft": "0-0", "reb": 1, "pf": 1, "ast": 0, "to": 2, "blk": 1, "stl": 1, "pts": 0},
+            {"name": "Rod Wood", "min": 18, "fg": "2-6", "ft": "3-4", "reb": 2, "pf": 1, "ast": 4, "to": 2, "blk": 1, "stl": 1, "pts": 7},
+            {"name": "George McGovern", "min": 9, "fg": "0-0", "ft": "2-3", "reb": 1, "pf": 2, "ast": 0, "to": 1, "blk": 0, "stl": 1, "pts": 2},
+            {"name": "Rick Hancock", "min": 5, "fg": "0-0", "ft": "1-6", "reb": 0, "pf": 1, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 1},
+            {"name": "Drew Catlett", "min": 3, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Dan Schmitt", "min": 2, "fg": "1-2", "ft": "0-0", "reb": 1, "pf": 1, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pts": 2}
+          ]
+        }
+      ],
+      "checksum_ok": true,
+      "notes": "Some blank cells on the scoresheet (a few players' FT/FTA, A, BLK, S entries) were read as 0 per standard box-score convention; all clearly legible digits transcribed directly. Both team point sums verified against final scores (Virginia 82, Randolph-Macon 50) and match the periods table (39+43=82, 25+25=50)."
+    }
+  ],
+  "skipped": []
+}

@@ -1,0 +1,9 @@
+{
+  "page": 5,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page 5 is an official NCAA box score for Ohio State vs. Stetson, 1977-11-30, Columbus OH (final Stetson 71 - Ohio State 108, confirmed by the clearly printed score-by-periods line: Stetson 37+34=71, Ohio St. 48+60=108). The Ohio State (home team) player rows are legible enough to transcribe with reasonable confidence and internally satisfy pts = 2*FGM + FTM for nearly every row. However, the Stetson (visiting team) player rows are handwritten in dense cursive over a mimeographed form and several rows (notably a 'Reynolds'-type row and another with an illegible surname resembling 'ARFS'/'Harris') could not be read with confidence -- digits for FG/FT/REB in those rows are ambiguous or smudged, and guessing them would violate the never-invent-values rule and could not be checksummed reliably against the clearly printed Stetson team total of 71. Since a game entry requires confident player lines for both teams, and only one re-read of the page was permitted, the entire game is skipped rather than submitting a partially-guessed roster."
+    }
+  ]
+}

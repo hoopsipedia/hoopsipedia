@@ -1,0 +1,45 @@
+{
+  "page": 11,
+  "games": [
+    {
+      "date": "2000-01-06",
+      "opponent": "Washington",
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 62,
+          "players": [
+            {"name": "Jason Kapono", "min": 36, "fg": "8-11", "tp": "3-4", "ft": "0-0", "reb": 3, "ast": 1, "pf": 3, "to": 1, "stl": 2, "blk": 0, "pts": 19},
+            {"name": "Jerome Moiso", "min": 27, "fg": "4-11", "tp": "0-1", "ft": "5-10", "reb": 10, "ast": 2, "pf": 4, "to": 6, "stl": 0, "blk": 2, "pts": 13},
+            {"name": "Dan Gadzuric", "min": 32, "fg": "4-9", "tp": "0-0", "ft": "1-4", "reb": 13, "ast": 2, "pf": 1, "to": 2, "stl": 2, "blk": 4, "pts": 9},
+            {"name": "Earl Watson", "min": 36, "fg": "4-8", "tp": "1-3", "ft": "0-0", "reb": 3, "ast": 4, "pf": 2, "to": 4, "stl": 1, "blk": 1, "pts": 9},
+            {"name": "Ray Young", "min": 22, "fg": "3-7", "tp": "1-2", "ft": "1-2", "reb": 3, "ast": 2, "pf": 4, "to": 0, "stl": 1, "blk": 0, "pts": 8},
+            {"name": "Ryan Bailey", "min": 16, "fg": "0-6", "tp": "0-1", "ft": "0-0", "reb": 2, "ast": 4, "pf": 1, "to": 2, "stl": 1, "blk": 0, "pts": 0},
+            {"name": "Rico Hines", "min": 10, "fg": "0-2", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "pf": 3, "to": 2, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Matt Barnes", "min": 14, "fg": "1-3", "tp": "0-1", "ft": "2-3", "reb": 3, "ast": 1, "pf": 1, "to": 2, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Billy Knight", "min": 6, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Sean Farnham", "min": 1, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Washington Huskies",
+          "score": 63,
+          "players": [
+            {"name": "Will Perkins", "min": 26, "fg": "3-10", "tp": "0-0", "ft": "3-5", "reb": 10, "ast": 1, "pf": 4, "to": 0, "stl": 0, "blk": 1, "pts": 9},
+            {"name": "Thalo Green", "min": 24, "fg": "2-6", "tp": "0-0", "ft": "1-2", "reb": 4, "ast": 2, "pf": 2, "to": 1, "stl": 3, "blk": 0, "pts": 5},
+            {"name": "Senque Carey", "min": 39, "fg": "2-12", "tp": "0-4", "ft": "1-2", "reb": 7, "ast": 11, "pf": 0, "to": 4, "stl": 0, "blk": 0, "pts": 5},
+            {"name": "Deon Luton", "min": 35, "fg": "10-15", "tp": "3-6", "ft": "3-4", "reb": 3, "ast": 0, "pf": 2, "to": 1, "stl": 1, "blk": 0, "pts": 26},
+            {"name": "Michael Johnson", "min": 30, "fg": "3-9", "tp": "1-2", "ft": "0-2", "reb": 3, "ast": 1, "pf": 1, "to": 5, "stl": 1, "blk": 0, "pts": 7},
+            {"name": "Greg Clark", "min": 17, "fg": "0-2", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 2, "pf": 1, "to": 1, "stl": 1, "blk": 0, "pts": 0},
+            {"name": "Chris Walcott", "min": 14, "fg": "2-3", "tp": "0-0", "ft": "1-2", "reb": 4, "ast": 0, "pf": 3, "to": 1, "stl": 0, "blk": 0, "pts": 5},
+            {"name": "Marlon Shelton", "min": 12, "fg": "2-4", "tp": "0-0", "ft": "1-2", "reb": 2, "ast": 0, "pf": 2, "to": 0, "stl": 2, "blk": 1, "pts": 5},
+            {"name": "David Dixon", "min": 3, "fg": "0-0", "tp": "0-0", "ft": "1-2", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 1, "pts": 1}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": [],
+  "notes": "Typed official box score, fully legible. Header column labeled 'TP' is per-player total points (verified: Kapono 2*8fg+3pt(counted once more? see below)=19 matches; formula used to cross-check pts = 2*FGmade+3Pmade+FTmade). Used TP column directly as pts. UCLA reb column shown is Tot rebounds (Off+Def); team rebounds row (UCLA 2, WASH 4) excluded from player list as it's not a player. Both team checksums pass exactly (UCLA 62, Washington 63)."
+}

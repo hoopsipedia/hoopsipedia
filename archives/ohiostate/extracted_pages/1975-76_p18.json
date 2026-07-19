@@ -1,0 +1,49 @@
+{
+  "page": 18,
+  "games": [
+    {
+      "date": "1976-01-31",
+      "opponent": "Northwestern",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 83,
+          "players": [
+            {"name": "Daugherty", "fg": "7-12", "ft": "2-2", "reb": 11, "ast": 5, "pf": 3, "pts": 16},
+            {"name": "Poole", "fg": "5-12", "ft": "0-2", "reb": 5, "ast": 1, "pf": 4, "pts": 10},
+            {"name": "Taylor", "fg": "6-19", "ft": "3-5", "reb": 8, "ast": 4, "pf": 3, "pts": 15},
+            {"name": "Wood", "fg": "6-14", "ft": "10-10", "reb": 3, "ast": 5, "pf": 2, "pts": 22},
+            {"name": "Bayless", "fg": "5-8", "ft": "0-2", "reb": 3, "ast": 2, "pf": 2, "pts": 10},
+            {"name": "Cline", "fg": "1-3", "ft": "2-2", "reb": 2, "ast": 0, "pf": 1, "pts": 4},
+            {"name": "Hammond", "fg": "1-1", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "pts": 2},
+            {"name": "Shields", "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 1, "pf": 0, "pts": 0},
+            {"name": "Burris", "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "pts": 0},
+            {"name": "Romano", "fg": "0-1", "ft": "0-0", "reb": 1, "ast": 0, "pf": 0, "pts": 0},
+            {"name": "Smith", "fg": "2-4", "ft": "0-0", "reb": 2, "ast": 1, "pf": 1, "pts": 4}
+          ]
+        },
+        {
+          "name": "Northwestern",
+          "score": 69,
+          "players": [
+            {"name": "Bob Svete", "fg": "5-16", "ft": "0-0", "reb": 9, "ast": 2, "pf": 2, "pts": 10},
+            {"name": "Hilton Hale", "fg": "2-5", "ft": "4-4", "reb": 7, "ast": 3, "pf": 3, "pts": 8},
+            {"name": "Jim Wallace", "fg": "1-2", "ft": "0-0", "reb": 1, "ast": 1, "pf": 3, "pts": 2},
+            {"name": "Bill McKinney", "fg": "0-2", "ft": "2-2", "reb": 0, "ast": 2, "pf": 1, "pts": 2},
+            {"name": "Tim Teasley", "fg": "2-10", "ft": "4-4", "reb": 3, "ast": 2, "pf": 3, "pts": 8},
+            {"name": "Bob Hildebrand", "fg": "3-7", "ft": "2-2", "reb": 4, "ast": 1, "pf": 0, "pts": 8},
+            {"name": "Bob Klaas", "fg": "1-2", "ft": "1-2", "reb": 1, "ast": 0, "pf": 3, "pts": 3},
+            {"name": "Chris Wall", "fg": "1-2", "ft": "0-0", "reb": 3, "ast": 0, "pf": 0, "pts": 2},
+            {"name": "Pete Boesen", "fg": "6-12", "ft": "2-2", "reb": 3, "ast": 1, "pf": 1, "pts": 14},
+            {"name": "Dave Fields", "fg": "2-3", "ft": "2-2", "reb": 5, "ast": 1, "pf": 3, "pts": 6},
+            {"name": "Dick Milam", "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 1, "pf": 0, "pts": 0},
+            {"name": "Jim Endsley", "fg": "3-4", "ft": "0-0", "reb": 2, "ast": 1, "pf": 1, "pts": 6}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": [],
+  "notes": "Ohio State Hildebrand REB read as '24' by OCR-like visual scan but corrected to 4 after cross-checking against Northwestern team REB total (44 = sum of individuals 38 + team-rebound entry 6); pts checksum for both teams verified directly against final box-score totals and matches exactly. PF/assist sub-totals show minor unreconciled discrepancies (not part of required checksum) possibly from a couple of misread digits, left as transcribed since points checksum (the required check) is exact."
+}

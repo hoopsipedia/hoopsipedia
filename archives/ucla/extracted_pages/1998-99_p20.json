@@ -1,0 +1,45 @@
+{
+  "page": 20,
+  "games": [
+    {
+      "date": "1999-01-31",
+      "opponent": "Washington",
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 83,
+          "players": [
+            {"name": "Jerome Moiso", "min": 31, "fg": "7-15", "ft": "5-6", "tp": "1-2", "reb": 2, "ast": 1, "pf": 4, "to": 4, "stl": 0, "blk": 2, "pts": 20},
+            {"name": "Matt Barnes", "min": 12, "fg": "1-4", "ft": "2-2", "tp": "0-1", "reb": 4, "ast": 1, "pf": 4, "to": 0, "stl": 1, "blk": 0, "pts": 2},
+            {"name": "Dan Gadzuric", "min": 18, "fg": "5-7", "ft": "2-4", "tp": "0-0", "reb": 8, "ast": 0, "pf": 5, "to": 1, "stl": 2, "blk": 0, "pts": 12},
+            {"name": "Baron Davis", "min": 34, "fg": "9-18", "ft": "0-1", "tp": "2-3", "reb": 4, "ast": 5, "pf": 5, "to": 2, "stl": 5, "blk": 0, "pts": 20},
+            {"name": "Earl Watson", "min": 39, "fg": "10-19", "ft": "2-3", "tp": "2-7", "reb": 1, "ast": 3, "pf": 4, "to": 7, "stl": 1, "blk": 0, "pts": 24},
+            {"name": "JaRon Rush", "min": 30, "fg": "2-7", "ft": "0-0", "tp": "1-4", "reb": 3, "ast": 0, "pf": 4, "to": 1, "stl": 1, "blk": 0, "pts": 5},
+            {"name": "Travis Reed", "min": 13, "fg": "0-3", "ft": "0-0", "tp": "0-0", "reb": 2, "ast": 0, "pf": 1, "to": 2, "stl": 2, "blk": 0, "pts": 0},
+            {"name": "Brandon Loyd", "min": 2, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Sean Farnham", "min": 1, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Ray Young", "min": 20, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 1, "pf": 0, "to": 0, "stl": 1, "blk": 0, "pts": 0}
+          ],
+          "checksum_ok": true
+        },
+        {
+          "name": "Washington Huskies",
+          "score": 93,
+          "players": [
+            {"name": "Chris Walcott", "min": 25, "fg": "5-6", "ft": "0-0", "tp": "0-0", "reb": 4, "ast": 1, "pf": 2, "to": 3, "stl": 1, "blk": 0, "pts": 10},
+            {"name": "Todd MacCulloch", "min": 38, "fg": "10-14", "ft": "6-12", "tp": "0-0", "reb": 21, "ast": 0, "pf": 4, "to": 4, "stl": 1, "blk": 0, "pts": 26},
+            {"name": "Senque Carey", "min": 39, "fg": "5-9", "ft": "3-6", "tp": "1-3", "reb": 5, "ast": 8, "pf": 2, "to": 4, "stl": 0, "blk": 0, "pts": 14},
+            {"name": "Deon Luton", "min": 37, "fg": "6-14", "ft": "8-12", "tp": "1-5", "reb": 3, "ast": 5, "pf": 2, "to": 4, "stl": 0, "blk": 1, "pts": 21},
+            {"name": "Donald Watts", "min": 39, "fg": "3-10", "ft": "7-9", "tp": "1-1", "reb": 4, "ast": 4, "pf": 2, "to": 5, "stl": 1, "blk": 0, "pts": 14},
+            {"name": "Greg Clark", "min": 12, "fg": "1-2", "ft": "3-4", "tp": "0-1", "reb": 3, "ast": 0, "pf": 3, "to": 1, "stl": 1, "blk": 0, "pts": 5},
+            {"name": "Michael Johnson", "min": 6, "fg": "0-0", "ft": "2-2", "tp": "0-0", "reb": 1, "ast": 1, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Grant Leep", "min": 2, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Thalo Green", "min": 2, "fg": "0-0", "ft": "1-2", "tp": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 1}
+          ],
+          "checksum_ok": true
+        }
+      ]
+    }
+  ],
+  "skipped": []
+}

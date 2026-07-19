@@ -1,0 +1,9 @@
+{
+  "page": 2,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Handwritten official NCAA box score, UCLA at New Mexico, 11/25/87, Albuquerque NM, NIT Second Round, final UCLA 66 - New Mexico 77. Visitor (UCLA) side transcribed and checksums perfectly to 66 (Wilson 19, Rochester 4, Foster 12, Richardson 6, Immel 10, Williams/Madkins/Morris/Owens/Butler 0, Walker 5, Jackson 10). However the home team (New Mexico) side has cramped/ambiguous handwriting in the FG/FT columns for several rows (Loeffler, McGee, McBurrows, Rogers, Arnold); best-effort per-player point reads summed to ~92, which does not reconcile with the official final score of 77 (off by 15) even after a second full read of the page. Team FG/3FG/FT shooting-percentage footnotes on the page (28-78 FG, 6-16 3FG, 15-23 FT -> 2*28+6+15=77) confirm the home team totals but the row-level attribution to individual players could not be pinned down confidently within the one allowed re-read, so per instructions this game is skipped rather than guessed."
+    }
+  ]
+}

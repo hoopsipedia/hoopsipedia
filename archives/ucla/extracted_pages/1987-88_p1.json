@@ -1,0 +1,51 @@
+{
+  "page": 1,
+  "games": [
+    {
+      "date": "1987-11-20",
+      "opponent": "Oral Roberts",
+      "ucla_score": 119,
+      "opp_score": 79,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 119,
+          "players": [
+            {"name": "Wilson", "min": 19, "fg": "9-12", "tp": "0-0", "ft": "5-7", "reb": 8, "ast": 2, "pf": 4, "to": 2, "stl": 1, "blk": 0, "pts": 23},
+            {"name": "Rochelin", "min": 18, "fg": "3-9", "tp": "0-0", "ft": "0-0", "reb": 5, "ast": 1, "pf": 2, "to": 1, "stl": 0, "blk": 1, "pts": 6},
+            {"name": "Foster", "min": 26, "fg": "3-6", "tp": "0-0", "ft": "3-5", "reb": 12, "ast": 1, "pf": 3, "to": 7, "stl": 0, "blk": 1, "pts": 9},
+            {"name": "Richardson", "min": 32, "fg": "9-14", "tp": "0-0", "ft": "5-8", "reb": 7, "ast": 11, "pf": 0, "to": 1, "stl": 2, "blk": 0, "pts": 23},
+            {"name": "Immel", "min": 26, "fg": "5-8", "tp": "1-3", "ft": "4-5", "reb": 1, "ast": 7, "pf": 3, "to": 2, "stl": 1, "blk": 0, "pts": 15},
+            {"name": "Walker", "min": 27, "fg": "9-18", "tp": "3-7", "ft": "0-0", "reb": 11, "ast": 0, "pf": 2, "to": 1, "stl": 1, "blk": 1, "pts": 21},
+            {"name": "Jackson", "min": 21, "fg": "4-6", "tp": "0-0", "ft": "0-0", "reb": 7, "ast": 1, "pf": 2, "to": 1, "stl": 1, "blk": 0, "pts": 9},
+            {"name": "Madkins", "min": 18, "fg": "4-5", "tp": "0-1", "ft": "3-4", "reb": 1, "ast": 2, "pf": 2, "to": 3, "stl": 1, "blk": 0, "pts": 11},
+            {"name": "Butler", "min": 7, "fg": "0-1", "tp": "0-0", "ft": "0-2", "reb": 3, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Owens", "min": 2, "fg": "1-1", "tp": "0-0", "ft": "0-0", "reb": 3, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Morris", "min": 2, "fg": "0-2", "tp": "0-0", "ft": "2-2", "reb": 2, "ast": 1, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Williams", "min": 2, "fg": "0-3", "tp": "0-1", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Oral Roberts",
+          "score": 79,
+          "players": [
+            {"name": "Feiler", "min": 24, "fg": "3-16", "tp": "0-5", "ft": "0-0", "reb": 6, "ast": 0, "pf": 1, "to": 2, "stl": 1, "blk": 0, "pts": 6},
+            {"name": "Washington", "min": 24, "fg": "2-10", "tp": "0-0", "ft": "1-6", "reb": 6, "ast": 0, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 5},
+            {"name": "Scott", "min": 38, "fg": "9-19", "tp": "0-0", "ft": "2-4", "reb": 10, "ast": 1, "pf": 2, "to": 3, "stl": 1, "blk": 1, "pts": 20},
+            {"name": "Irons", "min": 32, "fg": "5-16", "tp": "0-1", "ft": "1-2", "reb": 3, "ast": 4, "pf": 4, "to": 2, "stl": 4, "blk": 0, "pts": 11},
+            {"name": "Workman", "min": 27, "fg": "6-11", "tp": "2-4", "ft": "4-8", "reb": 4, "ast": 3, "pf": 5, "to": 2, "stl": 1, "blk": 0, "pts": 18},
+            {"name": "Kelley", "min": 15, "fg": "2-5", "tp": "1-2", "ft": "1-1", "reb": 3, "ast": 2, "pf": 5, "to": 2, "stl": 0, "blk": 0, "pts": 6},
+            {"name": "Davis, R.", "min": 6, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 1, "stl": 1, "blk": 0, "pts": 0},
+            {"name": "Springs", "min": 8, "fg": "1-3", "tp": "0-0", "ft": "0-0", "reb": 2, "ast": 1, "pf": 2, "to": 1, "stl": 0, "blk": 2, "pts": 2},
+            {"name": "Smith", "min": 5, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Houston", "min": 6, "fg": "2-4", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 3, "to": 0, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Schaffitzel", "min": 3, "fg": "1-4", "tp": "1-2", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 3},
+            {"name": "Davis, A.", "min": 12, "fg": "2-2", "tp": "0-0", "ft": "0-1", "reb": 3, "ast": 0, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 4}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

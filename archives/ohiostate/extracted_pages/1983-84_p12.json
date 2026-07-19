@@ -1,0 +1,41 @@
+{
+  "page": 12,
+  "games": [
+    {
+      "date": "1984-01-07",
+      "opponent": "Indiana Hoosiers",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 62,
+          "players": [
+            {"name": "Campbell, Tony", "min": 40, "fg": "6-15", "ft": "4-5", "reb": 7, "pf": 3, "ast": 1, "to": 3, "blk": 0, "stl": 2, "pts": 16},
+            {"name": "Jones, Dave", "min": 30, "fg": "3-8", "ft": "0-0", "reb": 3, "pf": 3, "ast": 1, "to": 0, "blk": 0, "stl": 0, "pts": 6},
+            {"name": "Wesson, Keith", "min": 20, "fg": "0-3", "ft": "0-0", "reb": 1, "pf": 1, "ast": 2, "to": 1, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Taylor, Troy", "min": 35, "fg": "4-13", "ft": "0-1", "reb": 1, "pf": 4, "ast": 1, "to": 0, "blk": 0, "stl": 2, "pts": 8},
+            {"name": "Stokes, Ron", "min": 37, "fg": "6-16", "ft": "3-4", "reb": 4, "pf": 6, "ast": 1, "to": 1, "blk": 0, "stl": 4, "pts": 15},
+            {"name": "McGee, Clarence", "min": 20, "fg": "5-10", "ft": "3-6", "reb": 7, "pf": 4, "ast": 2, "to": 0, "blk": 0, "stl": 0, "pts": 13},
+            {"name": "Wilson, Curtis", "min": 5, "fg": "1-1", "ft": "0-0", "reb": 0, "pf": 1, "ast": 1, "to": 1, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Hopson, Dennis", "min": 13, "fg": "1-5", "ft": "0-0", "reb": 3, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 2}
+          ]
+        },
+        {
+          "name": "Indiana Hoosiers",
+          "score": 73,
+          "players": [
+            {"name": "Witte, Courtney", "min": 7, "fg": "1-1", "ft": "0-0", "reb": 2, "pf": 2, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Simmon, Marty", "min": 40, "fg": "4-9", "ft": "3-6", "reb": 7, "pf": 3, "ast": 2, "to": 4, "blk": 0, "stl": 0, "pts": 11},
+            {"name": "Blab, Uwe", "min": 36, "fg": "9-14", "ft": "1-2", "reb": 8, "pf": 4, "ast": 3, "to": 1, "blk": 4, "stl": 0, "pts": 19},
+            {"name": "Alford, Steve", "min": 39, "fg": "9-15", "ft": "6-7", "reb": 7, "pf": 3, "ast": 2, "to": 3, "blk": 0, "stl": 0, "pts": 24},
+            {"name": "Franz, Chuck", "min": 12, "fg": "0-1", "ft": "0-0", "reb": 1, "pf": 0, "ast": 0, "to": 2, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Robinson, Stew", "min": 31, "fg": "3-5", "ft": "1-1", "reb": 5, "pf": 2, "ast": 4, "to": 6, "blk": 0, "stl": 0, "pts": 7},
+            {"name": "Meier, Todd", "min": 21, "fg": "2-3", "ft": "0-0", "reb": 1, "pf": 2, "ast": 1, "to": 2, "blk": 0, "stl": 0, "pts": 4},
+            {"name": "Giomi, Mike", "min": 14, "fg": "3-4", "ft": "0-1", "reb": 5, "pf": 4, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 6}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

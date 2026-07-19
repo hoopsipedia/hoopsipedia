@@ -1,0 +1,9 @@
+{
+  "page": 9,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page is a newspaper clipping (Jan 12, 1948, Ohio State 54 at Indiana 71) with two small typeset box-score tables (Ohio State and Indiana), but the scan resolution/print quality makes the G/F/PF/PTS columns for individual players ambiguous (many digits indistinguishable, e.g. 1 vs 9, 0 vs blank, column misalignment). Attempted checksum on the legible team Totals rows did not reconcile with the standard 2*FG+FT=PTS formula for either team, indicating the OCR read of the digits is unreliable rather than a true scorebook discrepancy. Per instructions, skipping rather than guessing at individual player lines."
+    }
+  ]
+}

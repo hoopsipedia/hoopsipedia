@@ -1,0 +1,9 @@
+{
+  "page": 15,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Game identified (Ohio State 49, Iowa 44, 1941-02-08, at Coliseum, coach Olsen, captain Mickelson, manager Bolton, attendance 3277) but the embedded per-player box score table is a tiny, blurry inset image with ambiguous digits and garbled player surnames (e.g. Iowa names read inconsistently as 'Vzbalzy'/'Zbaracki', 'Grosvenls', 'Dieffenpfefer', 'Karahs'). Summing the legible 'T' (points) column for Ohio State yields 59, which does not match the recorded final score of 49, so the checksum fails. Iowa's leading scorer 'Chapman' has an illegible points value (shown as a dash), making Iowa's total unverifiable as well. Per instructions, skipping rather than guessing at values."
+    }
+  ]
+}

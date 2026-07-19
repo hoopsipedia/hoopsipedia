@@ -1,0 +1,47 @@
+{
+  "page": 26,
+  "games": [
+    {
+      "date": "1979-03-01",
+      "opponent": "California",
+      "ucla_score": 79,
+      "opp_score": 68,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 79,
+          "players": [
+            {"name": "Greenwood", "min": 35, "fg": "10-13", "ft": "2-2", "reb": 12, "pf": 2, "ast": 2, "to": 4, "blk": 4, "stl": 1, "pts": 22},
+            {"name": "Vandeweghe", "min": 33, "fg": "6-9", "ft": "0-0", "reb": 3, "pf": 0, "ast": 1, "pts": 12},
+            {"name": "Sims", "min": 16, "fg": "2-2", "ft": "0-0", "reb": 4, "pf": 3, "ast": 1, "to": 3, "stl": 1, "pts": 4},
+            {"name": "Holland", "min": 35, "fg": "10-12", "ft": "5-5", "reb": 0, "pf": 2, "ast": 5, "to": 1, "stl": 4, "pts": 25},
+            {"name": "Hamilton", "min": 36, "fg": "4-10", "ft": "2-2", "reb": 0, "pf": 3, "ast": 5, "to": 1, "pts": 10},
+            {"name": "Allums", "min": 9, "fg": "0-2", "ft": "2-2", "reb": 2, "pf": 0, "blk": 2, "pts": 2},
+            {"name": "Wilkes", "min": 22, "fg": "0-4", "ft": "2-2", "reb": 5, "pf": 2, "to": 3, "stl": 1, "pts": 2},
+            {"name": "Naulls", "min": 7, "fg": "1-1", "ft": "0-0", "reb": 1, "pf": 1, "pts": 2},
+            {"name": "Sanders", "min": 3, "fg": "0-0", "ft": "0-0", "reb": 1, "pf": 1, "pts": 0},
+            {"name": "Thomas", "min": 2, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "to": 2, "pts": 0},
+            {"name": "Kelly", "min": 2, "fg": "0-1", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "California",
+          "score": 68,
+          "players": [
+            {"name": "Singleton", "min": 35, "fg": "8-18", "ft": "1-2", "reb": 11, "pf": 4, "ast": 2, "to": 3, "blk": 1, "pts": 17},
+            {"name": "True", "min": 30, "fg": "4-6", "ft": "0-0", "reb": 6, "pf": 2, "ast": 4, "to": 1, "pts": 8},
+            {"name": "Schneiderjohn", "min": 28, "fg": "3-10", "ft": "3-4", "reb": 6, "pf": 2, "to": 3, "stl": 1, "pts": 9},
+            {"name": "Caselli", "min": 39, "fg": "3-8", "ft": "0-0", "reb": 0, "pf": 1, "to": 1, "stl": 4, "pts": 6},
+            {"name": "Sparks", "min": 20, "fg": "1-8", "ft": "0-2", "reb": 2, "pf": 0, "ast": 2, "to": 2, "stl": 1, "pts": 2},
+            {"name": "Wilhite", "min": 19, "fg": "2-3", "ft": "2-2", "reb": 0, "pf": 3, "ast": 5, "to": 3, "stl": 1, "pts": 6},
+            {"name": "Holland", "min": 10, "fg": "4-7", "ft": "2-2", "reb": 2, "pf": 0, "to": 1, "pts": 10},
+            {"name": "Vial", "min": 3, "fg": "0-1", "ft": "1-2", "reb": 2, "pf": 0, "pts": 1},
+            {"name": "Gillespie", "min": 16, "fg": "4-5", "ft": "1-2", "reb": 1, "pf": 2, "pts": 9}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

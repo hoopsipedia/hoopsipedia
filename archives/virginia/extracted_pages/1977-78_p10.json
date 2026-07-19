@@ -1,0 +1,44 @@
+{
+  "page": 10,
+  "games": [
+    {
+      "date": "1978-01-11",
+      "opponent": "Delaware",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 71,
+          "players": [
+            {"name": "Mike Owens", "min": 34, "fg": "5-10", "ft": "6-6", "reb": 8, "ast": 0, "pf": 4, "to": 1, "stl": 0, "blk": 0, "pts": 16},
+            {"name": "Marc Iavaroni", "min": 29, "fg": "0-1", "ft": "0-7", "reb": 7, "ast": 2, "pf": 2, "to": 1, "stl": 1, "blk": 1, "pts": 0},
+            {"name": "Steve Castellan", "min": 22, "fg": "0-2", "ft": "0-0", "reb": 4, "ast": 0, "pf": 5, "to": 2, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Jeff Lamp", "min": 38, "fg": "7-15", "ft": "9-10", "reb": 7, "ast": 2, "pf": 1, "to": 2, "stl": 1, "blk": 0, "pts": 23},
+            {"name": "Tommy Hicks", "min": 15, "fg": "1-3", "ft": "1-2", "reb": 0, "ast": 5, "pf": 0, "to": 4, "stl": 1, "blk": 0, "pts": 3},
+            {"name": "Bobby Stokes", "min": 29, "fg": "2-4", "ft": "4-5", "reb": 3, "ast": 3, "pf": 1, "to": 2, "stl": 1, "blk": 0, "pts": 8},
+            {"name": "Lee Raker", "min": 18, "fg": "3-4", "ft": "1-1", "reb": 3, "ast": 2, "pf": 4, "to": 2, "stl": 0, "blk": 0, "pts": 7},
+            {"name": "Garland Jefferson", "min": 3, "fg": "1-2", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Dave Koesters", "min": 12, "fg": "5-7", "ft": "2-2", "reb": 3, "ast": 1, "pf": 2, "to": 2, "stl": 2, "blk": 0, "pts": 12}
+          ]
+        },
+        {
+          "name": "Delaware",
+          "score": 59,
+          "players": [
+            {"name": "Al Brown", "min": 0, "fg": "1-2", "ft": "2-2", "reb": 0, "ast": 0, "pf": 4, "to": 1, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Tom Carluccio", "min": 0, "fg": "4-13", "ft": "2-4", "reb": 0, "ast": 0, "pf": 4, "to": 2, "stl": 1, "blk": 0, "pts": 10},
+            {"name": "Brian Downie", "min": 0, "fg": "3-8", "ft": "3-5", "reb": 10, "ast": 4, "pf": 3, "to": 0, "stl": 0, "blk": 1, "pts": 9},
+            {"name": "Mark Mancini", "min": 0, "fg": "8-19", "ft": "2-2", "reb": 3, "ast": 3, "pf": 3, "to": 1, "stl": 4, "blk": 1, "pts": 18},
+            {"name": "Rick Meccariello", "min": 0, "fg": "4-9", "ft": "4-5", "reb": 8, "ast": 6, "pf": 5, "to": 3, "stl": 2, "blk": 0, "pts": 12},
+            {"name": "Leon Stevenson", "min": 0, "fg": "2-6", "ft": "0-0", "reb": 4, "ast": 0, "pf": 3, "to": 2, "stl": 2, "blk": 0, "pts": 4},
+            {"name": "John Morgan", "min": 0, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 1, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "David Gruber", "min": 0, "fg": "0-2", "ft": "2-2", "reb": 1, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Tom Campbell", "min": 0, "fg": "0-2", "ft": "0-0", "reb": 0, "ast": 1, "pf": 3, "to": 2, "stl": 1, "blk": 0, "pts": 0},
+            {"name": "Peter Mullenberg", "min": 0, "fg": "0-1", "ft": "0-0", "reb": 2, "ast": 0, "pf": 4, "to": 2, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

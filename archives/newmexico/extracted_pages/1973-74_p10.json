@@ -1,0 +1,9 @@
+{
+  "page": 10,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page 10 shows one full game (New Mexico vs Minnesota, date 12/29/73 per handwritten 'DATE 12-29-73', final score New Mexico 102 - Minnesota 68, crowd 15,300, officials Koste & Barlow). Team TOTALS rows are legible and internally consistent (NM: 43-64 FG, 16-24 FT -> 2*43+16=102 matches game total exactly; Minnesota: 21-64 FG, 26-32 FT -> 2*21+26=68 matches game total exactly). However, the individual player statistical lines for both teams (rebounds, assists, personal fouls, turnovers, and several ambiguous FG/FT digits per row) are handwritten in faint/smudged ink with jersey numbers and several names only partially legible (e.g. 'Marv Sailors', 'Gabe Nea' in red ink, 'Peter Gileud', 'Kirby Robinson' uncertain spellings). Could not transcribe full 12-player rosters for both teams with confidence sufficient to guarantee no invented values, so the game is skipped per instructions to avoid guessing rather than fabricating a player-level checksum."
+    }
+  ]
+}

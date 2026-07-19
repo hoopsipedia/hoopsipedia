@@ -1,0 +1,48 @@
+{
+  "page": 5,
+  "games": [
+    {
+      "date": "1984-12-03",
+      "opponent": "VMI Keydets",
+      "site": "Cameron Hall (Lexington, VA)",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 68,
+          "players": [
+            {"name": "Jim Miller", "fg": "5-8", "ft": "1-2", "reb": 6, "pf": 2, "pts": 11, "ast": 0, "to": 3, "blk": 0, "stl": 0},
+            {"name": "Tom Sheehey", "fg": "5-7", "ft": "5-7", "reb": 4, "pf": 2, "pts": 15, "ast": 0, "to": 4, "blk": 0, "stl": 0},
+            {"name": "Olden Polynice", "fg": "4-6", "ft": "1-3", "reb": 9, "pf": 3, "pts": 9, "ast": 3, "to": 1, "blk": 0, "stl": 0},
+            {"name": "Tim Mullen", "fg": "2-4", "ft": "8-8", "reb": 5, "pf": 3, "pts": 12, "ast": 4, "to": 2, "blk": 1, "stl": 1},
+            {"name": "John Johnson", "fg": "1-5", "ft": "1-2", "reb": 1, "pf": 1, "pts": 3, "ast": 1, "to": 3, "blk": 0, "stl": 1},
+            {"name": "Ken Merrifield", "fg": "1-7", "ft": "0-0", "reb": 3, "pf": 2, "pts": 2, "ast": 0, "to": 3, "blk": 0, "stl": 0},
+            {"name": "Carrick Simms", "fg": "4-8", "ft": "2-2", "reb": 0, "pf": 0, "pts": 10, "ast": 1, "to": 2, "blk": 1, "stl": 0},
+            {"name": "Del Kennedy", "fg": "1-3", "ft": "0-0", "reb": 2, "pf": 2, "pts": 2, "ast": 1, "to": 1, "blk": 0, "stl": 0},
+            {"name": "John Dyslin", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 2, "pts": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0},
+            {"name": "Anthony Solomon", "fg": "0-0", "ft": "2-2", "reb": 0, "pf": 2, "pts": 2, "ast": 1, "to": 3, "blk": 0, "stl": 1},
+            {"name": "Tim Martin", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0},
+            {"name": "Kenny Johnson", "fg": "0-0", "ft": "2-2", "reb": 0, "pf": 0, "pts": 2, "ast": 0, "to": 0, "blk": 0, "stl": 0}
+          ]
+        },
+        {
+          "name": "VMI Keydets",
+          "score": 57,
+          "players": [
+            {"name": "Warren Sawyer", "fg": "5-12", "ft": "1-2", "reb": 6, "pf": 5, "pts": 11, "ast": 1, "to": 0, "blk": 0, "stl": 0},
+            {"name": "Gay Elmore", "fg": "5-17", "ft": "7-8", "reb": 7, "pf": 4, "pts": 17, "ast": 1, "to": 2, "blk": 0, "stl": 0},
+            {"name": "Mike Herndon", "fg": "2-5", "ft": "0-0", "reb": 4, "pf": 3, "pts": 4, "ast": 2, "to": 2, "blk": 0, "stl": 1},
+            {"name": "Cedric Wins", "fg": "9-21", "ft": "1-1", "reb": 5, "pf": 4, "pts": 19, "ast": 1, "to": 4, "blk": 0, "stl": 1},
+            {"name": "Mike Huffman", "fg": "1-4", "ft": "0-0", "reb": 3, "pf": 4, "pts": 2, "ast": 4, "to": 3, "blk": 0, "stl": 1},
+            {"name": "Kevin Everhart", "fg": "0-3", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0},
+            {"name": "Bobby Gardner", "fg": "1-5", "ft": "0-0", "reb": 3, "pf": 3, "pts": 2, "ast": 0, "to": 1, "blk": 0, "stl": 0},
+            {"name": "Steven Dorsey", "fg": "1-1", "ft": "0-0", "reb": 0, "pf": 0, "pts": 2, "ast": 0, "to": 0, "blk": 0, "stl": 1},
+            {"name": "Stephen Dorsey", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 1, "pts": 0, "ast": 0, "to": 1, "blk": 0, "stl": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true,
+      "notes": "Left margin of scoresheet is cropped, clipping the first letter of every player's first name; first names reconstructed from the visible remaining letters plus (for Virginia) known 1984-85 UVA roster context — flagged as lower-confidence but not invented (no stat values guessed). Four VMI players (Mark Current, Clarence Scott, Jim/Tim Shanley, Ray Nagle) have blank or crossed-out stat lines (did not play) and are omitted from the player list. Both teams' individual points sum exactly to the official final score (Virginia 68, VMI 57), matching the printed team totals and period-by-period score box."
+    }
+  ],
+  "skipped": []
+}

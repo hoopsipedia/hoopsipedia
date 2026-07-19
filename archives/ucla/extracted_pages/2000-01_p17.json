@@ -1,0 +1,9 @@
+{
+  "page": 17,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "01/27/01 Oregon vs UCLA at Pauley Pavilion (Oregon 88, UCLA 98) — UCLA player points sum to exactly 98 (checksum OK), but Oregon player points sum to 85, 3 short of the printed team total/final score of 88. The gap traces to Norwood, Anthony (1-9 FG, 1-9 3FG, 2-3 FT, TP column printed as 2): the standard 2*(FGM-3FGM)+3*3FGM+FTM formula for his own line yields 5 points (0 + 3 + 2), not 2, and 85+3=88 matches the team total exactly. Re-read the page once (as permitted) and the TP cell still renders as 2, so this looks like a printed/scan artifact on that single cell rather than a transcription slip, but I cannot confirm the true value from the image with confidence. Per checksum-failure policy, skipping the whole game rather than guessing Norwood's points."
+    }
+  ]
+}

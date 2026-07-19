@@ -1,0 +1,9 @@
+{
+  "page": 9,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Official NCAA box score, Dec 29 1985, Ohio State (visitors) at UTEP (El Paso, TX). Ohio State's line is fully legible and checksums cleanly (Sellers 27 + Hopson 12 + Wesson 2 + Lomax 2 + Wilson 0 + Burson 4 + Anderson,S 0 + McGee-Baker(?) 10 + Anderson,J 0 + Francis 0 = 57, matching Ohio State's final score of 57 from the score-by-periods line). However, UTEP's box score has multiple player rows heavily obscured by ink smudging/shading (jersey #33, #22, plus large portions of #10, #24, #49, and the 'Kevin Hamilton' and 'Dave ___' entries), and the UTEP TOTALS row is illegible/internally inconsistent, so UTEP's per-player points cannot be read confidently and the game cannot pass a checksum on both teams. Skipping the whole game rather than inventing UTEP player stats, per instructions to be ruthless about skipping."
+    }
+  ]
+}

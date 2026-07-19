@@ -1,0 +1,47 @@
+{
+  "page": 15,
+  "games": [
+    {
+      "date": "1987-01-18",
+      "opponent": "Oregon State",
+      "ucla_score": 69,
+      "opp_score": 67,
+      "teams": [
+        {
+          "name": "Oregon State Beavers",
+          "score": 67,
+          "players": [
+            {"name": "Hargc", "min": 16, "fg": "2-3", "tp": "0-0", "ft": "0-0", "reb": 2, "ast": 1, "pf": 1, "to": 3, "stl": 1, "blk": 0, "pts": 4},
+            {"name": "Martin", "min": 32, "fg": "2-9", "tp": "0-0", "ft": "0-0", "reb": 7, "ast": 0, "pf": 2, "to": 2, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Ortiz", "min": 44, "fg": "12-24", "tp": "0-0", "ft": "7-7", "reb": 12, "ast": 1, "pf": 2, "to": 2, "stl": 2, "blk": 0, "pts": 31},
+            {"name": "Payton", "min": 44, "fg": "7-10", "tp": "1-1", "ft": "3-4", "reb": 5, "ast": 12, "pf": 3, "to": 5, "stl": 2, "blk": 0, "pts": 18},
+            {"name": "Knox", "min": 19, "fg": "0-2", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 2, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Freeman", "min": 23, "fg": "2-5", "tp": "1-2", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "to": 1, "stl": 1, "blk": 0, "pts": 5},
+            {"name": "Sherwood", "min": 20, "fg": "1-4", "tp": "1-1", "ft": "0-2", "reb": 2, "ast": 0, "pf": 2, "to": 2, "stl": 2, "blk": 1, "pts": 3},
+            {"name": "Brundage", "min": 21, "fg": "1-4", "tp": "0-0", "ft": "0-0", "reb": 6, "ast": 1, "pf": 3, "to": 2, "stl": 1, "blk": 0, "pts": 2},
+            {"name": "Thomas", "min": 1, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Berry", "min": 5, "fg": "0-0", "ft": "0-0", "reb": 1, "pf": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "UCLA Bruins",
+          "score": 69,
+          "players": [
+            {"name": "Miller", "min": 38, "fg": "7-17", "tp": "2-2", "ft": "3-4", "reb": 6, "ast": 3, "pf": 3, "to": 4, "stl": 3, "blk": 0, "pts": 19},
+            {"name": "Rochelin", "min": 21, "fg": "4-6", "tp": "0-0", "ft": "0-1", "reb": 1, "ast": 0, "pf": 1, "to": 1, "stl": 0, "blk": 2, "pts": 8},
+            {"name": "Haley", "min": 23, "fg": "2-4", "tp": "0-0", "ft": "0-0", "reb": 3, "ast": 1, "pf": 2, "to": 2, "stl": 2, "blk": 0, "pts": 4},
+            {"name": "Immel", "min": 22, "fg": "3-7", "tp": "2-2", "ft": "1-2", "reb": 0, "ast": 3, "pf": 1, "to": 1, "stl": 2, "blk": 0, "pts": 9},
+            {"name": "Richardson", "min": 41, "fg": "4-6", "tp": "0-0", "ft": "2-2", "reb": 9, "ast": 2, "pf": 0, "to": 2, "stl": 1, "blk": 0, "pts": 10},
+            {"name": "Foster", "min": 10, "fg": "1-3", "tp": "0-0", "ft": "0-0", "reb": 2, "ast": 1, "pf": 3, "to": 2, "stl": 0, "blk": 1, "pts": 2},
+            {"name": "Hatcher", "min": 28, "fg": "3-9", "tp": "0-0", "ft": "2-3", "reb": 1, "ast": 1, "pf": 1, "to": 1, "stl": 2, "blk": 0, "pts": 8},
+            {"name": "Wilson", "min": 25, "fg": "1-7", "tp": "0-0", "ft": "0-0", "reb": 11, "ast": 1, "pf": 2, "to": 2, "stl": 2, "blk": 1, "pts": 2},
+            {"name": "Walker", "min": 12, "fg": "3-8", "tp": "0-1", "ft": "1-1", "reb": 2, "ast": 1, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 7},
+            {"name": "Jackson", "min": 5, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

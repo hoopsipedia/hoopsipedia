@@ -1,0 +1,9 @@
+{
+  "page": 14,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page contains a handwritten NCAA official box score (Ohio State vs Florida, 12/30/8x, Rainbow Classic 5th place game, Blaisdell Arena, Honolulu). Final scores are legible (Ohio State 88, Florida 84, by half 40-48 and 51-33/39), and a few individual lines are readable with high confidence (e.g. Wilson 3-5 FG/6-6 FT for 12 pts; Hopson 11-20 FG, 2-5 3pt, 12-15 FT for 36 pts, checksum: 2*(11-2)+3*2+12=36). However, many of the handwritten made/attempted digits for the remaining players on both rosters (Burson, White, Anderson-S, Martin, Prinjup, Dumas, Nesson, Anderson-J, Francis for Ohio State; Montgomery, Lawrence x2, Moten, Aaron, Maxwell, Crafton, McClary, Capers, Lett, Schintzius, Jones, Castineyra for Florida) are ambiguous or smudged enough that transcribed values did not reconcile with either team's printed final score (attempted reconstruction of Ohio State's team FG/3PT/FT totals against the 88 final left an unresolved ~4-point gap). Per instructions to be ruthless about skipping rather than guessing, and having only one non-repeatable read of this scanned page, the full box score is skipped rather than risk fabricated/incorrect per-player stats."
+    }
+  ]
+}

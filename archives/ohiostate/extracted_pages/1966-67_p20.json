@@ -1,0 +1,49 @@
+{
+  "page": 20,
+  "games": [
+    {
+      "date": "1967-02-18",
+      "opponent": "Michigan",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 97,
+          "players": [
+            {"name": "Sepic", "fg": "6-14", "ft": "4-4", "reb": 6, "pf": 3, "pts": 16},
+            {"name": "Miller", "fg": "10-19", "ft": "7-7", "reb": 10, "pf": 3, "pts": 27},
+            {"name": "Hosket", "fg": "10-15", "ft": "6-6", "reb": 9, "pf": 5, "pts": 26},
+            {"name": "Rowley", "fg": "0-1", "ft": "0-0", "reb": 2, "pf": 0, "pts": 0},
+            {"name": "Swain", "fg": "3-5", "ft": "3-3", "reb": 6, "pf": 4, "pts": 9},
+            {"name": "Schnabel", "fg": "5-10", "ft": "3-4", "reb": 3, "pf": 3, "pts": 13},
+            {"name": "McDavid", "fg": "0-3", "ft": "0-0", "reb": 1, "pf": 0, "pts": 0},
+            {"name": "Howell", "fg": "2-3", "ft": "0-0", "reb": 3, "pf": 2, "pts": 4},
+            {"name": "Barnard", "fg": "0-0", "ft": "0-0", "reb": 2, "pf": 0, "pts": 0},
+            {"name": "Bauer", "fg": "0-1", "ft": "2-2", "reb": 0, "pf": 1, "pts": 2},
+            {"name": "Tischer", "fg": "0-1", "ft": "0-0", "reb": 1, "pf": 0, "pts": 0},
+            {"name": "Richardson", "fg": "0-1", "ft": "0-1", "reb": 0, "pf": 1, "pts": 0},
+            {"name": "Brautigam", "fg": "0-1", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0}
+          ],
+          "checksum_ok": true
+        },
+        {
+          "name": "Michigan Wolverines",
+          "score": 85,
+          "players": [
+            {"name": "Stewart", "fg": "7-22", "ft": "2-4", "reb": 4, "pf": 4, "pts": 16},
+            {"name": "McClellan", "fg": "4-8", "ft": "3-5", "reb": 10, "pf": 4, "pts": 11},
+            {"name": "Dill", "fg": "8-17", "ft": "12-12", "reb": 5, "pf": 1, "pts": 28},
+            {"name": "Pitts", "fg": "4-14", "ft": "5-8", "reb": 4, "pf": 3, "pts": 13},
+            {"name": "Bankey", "fg": "4-6", "ft": "2-2", "reb": 3, "pf": 3, "pts": 10},
+            {"name": "Sullivan", "fg": "0-1", "ft": "1-1", "reb": 2, "pf": 2, "pts": 1},
+            {"name": "Maxey", "fg": "2-6", "ft": "2-2", "reb": 1, "pf": 3, "pts": 6},
+            {"name": "Edwards", "fg": "0-1", "ft": "0-0", "reb": 0, "pf": 3, "pts": 0},
+            {"name": "Maundrell", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Delzer", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0}
+          ],
+          "checksum_ok": true
+        }
+      ]
+    }
+  ],
+  "skipped": []
+}

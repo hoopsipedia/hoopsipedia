@@ -1,0 +1,43 @@
+{
+  "page": 21,
+  "games": [
+    {
+      "date": "1974-02-23",
+      "opponent": "Wisconsin Badgers",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 56,
+          "players": [
+            {"name": "Wenner", "fg": "4-17", "ft": "1-4", "pf": 3, "ast": 1, "pts": 9},
+            {"name": "Stiegemeier", "fg": "0-0", "ft": "0-0", "pf": 0, "ast": 0, "pts": 0},
+            {"name": "Taylor", "fg": "3-9", "ft": "2-2", "pf": 4, "ast": 0, "pts": 8},
+            {"name": "Repella", "fg": "1-8", "ft": "0-1", "pf": 2, "ast": 1, "pts": 2},
+            {"name": "Bolden", "fg": "6-14", "ft": "1-4", "pf": 2, "ast": 2, "pts": 13},
+            {"name": "Wolfe", "fg": "0-2", "ft": "0-1", "pf": 0, "ast": 0, "pts": 0},
+            {"name": "Shields", "fg": "0-1", "ft": "0-0", "pf": 1, "ast": 0, "pts": 0},
+            {"name": "Andreas", "fg": "8-20", "ft": "2-2", "pf": 4, "ast": 1, "pts": 18},
+            {"name": "Gerhard", "fg": "1-2", "ft": "0-1", "pf": 2, "ast": 3, "pts": 2},
+            {"name": "Jackson", "fg": "2-3", "ft": "0-0", "pf": 4, "ast": 0, "pts": 4}
+          ]
+        },
+        {
+          "name": "Wisconsin Badgers",
+          "score": 68,
+          "players": [
+            {"name": "Fiacenza", "fg": "4-7", "ft": "0-0", "pf": 2, "ast": 1, "pts": 8},
+            {"name": "Koehler", "fg": "6-13", "ft": "4-5", "pf": 2, "ast": 5, "pts": 16},
+            {"name": "Hughes, Kim", "fg": "2-8", "ft": "1-2", "pf": 4, "ast": 1, "pts": 5},
+            {"name": "Anderson", "fg": "6-16", "ft": "5-5", "pf": 5, "ast": 0, "pts": 17},
+            {"name": "Weaver", "fg": "5-12", "ft": "0-0", "pf": 5, "ast": 2, "pts": 10},
+            {"name": "Hughes, Kerry", "fg": "1-3", "ft": "0-0", "pf": 1, "ast": 1, "pts": 2},
+            {"name": "McCoy", "fg": "0-2", "ft": "4-4", "pf": 0, "ast": 1, "pts": 4},
+            {"name": "McCauley", "fg": "1-3", "ft": "4-5", "pf": 3, "ast": 2, "pts": 6}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

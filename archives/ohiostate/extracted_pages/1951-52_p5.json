@@ -1,0 +1,9 @@
+{
+  "page": 5,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Official Western Conference Box Score, Dec 26 1951: Ohio State 61, Oregon State 57. Ohio State (visiting) side is clean typed and checksums correctly once Karaffa's points are computed as 2*FG+FT=2 (sheet appears to show 0, but only value 2 reconciles the team total of 61; 12+0+5+10+21+2+0+4+7=61). Oregon State (home) side has heavy scan noise/overlapping marks across the FG/FGA/FT/FTM/PF columns for nearly every row (Sugrue, Orr, Romanoff, Edwards, Toole, Nau, Padgett, Johnston, Whiteman, Robbins, Frantz), and computed points (2*FG+FT) do not reliably reconcile with the sheet's PTS column or the team total of 57 for multiple players (e.g. Padgett line is illegible/inconsistent). Per instructions to be ruthless about skipping rather than guessing, and having already used the single allotted read of this page, the entire game is skipped rather than transcribing only the Ohio State half or inventing Oregon State values."
+    }
+  ]
+}

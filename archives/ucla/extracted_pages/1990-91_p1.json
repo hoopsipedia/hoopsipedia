@@ -1,0 +1,52 @@
+{
+  "page": 1,
+  "games": [
+    {
+      "date": "1990-11-23",
+      "opponent": "UC Irvine",
+      "ucla_score": 134,
+      "opp_score": 101,
+      "notes": "Game Three, Great Alaska Shootout, Sullivan Arena, Anchorage. Attendance 7,947 (sellout).",
+      "teams": [
+        {
+          "name": "UC Irvine Anteaters",
+          "score": 101,
+          "players": [
+            {"name": "Jeff Herdman", "min": 20, "fg": "5-15", "tp": "3-11", "ft": "2-3", "reb": 9, "ast": 0, "pf": 5, "to": 5, "stl": 3, "blk": 0, "pts": 15},
+            {"name": "Jeff Von Lutzow", "min": 18, "fg": "3-11", "tp": "1-2", "ft": "5-9", "reb": 8, "ast": 0, "pf": 4, "to": 5, "stl": 2, "blk": 0, "pts": 12},
+            {"name": "Ricky Butler", "min": 25, "fg": "3-10", "ft": "4-7", "reb": 5, "ast": 0, "pf": 5, "to": 0, "stl": 1, "blk": 0, "pts": 10},
+            {"name": "Gerald McDonald", "min": 27, "fg": "4-15", "tp": "3-10", "ft": "0-0", "reb": 6, "ast": 1, "pf": 3, "to": 3, "stl": 1, "blk": 0, "pts": 11},
+            {"name": "Dylan Rigdon", "min": 28, "fg": "2-7", "tp": "2-6", "ft": "2-4", "reb": 1, "ast": 4, "pf": 2, "to": 6, "stl": 1, "blk": 0, "pts": 8},
+            {"name": "Cornelius Banks", "min": 22, "fg": "5-14", "tp": "5-12", "ft": "5-6", "reb": 2, "ast": 0, "pf": 5, "to": 3, "stl": 0, "blk": 0, "pts": 20},
+            {"name": "Craig Marshall", "min": 19, "fg": "2-5", "ft": "6-8", "reb": 8, "ast": 2, "pf": 1, "to": 2, "stl": 7, "blk": 0, "pts": 10},
+            {"name": "David Holloway", "min": 12, "fg": "2-4", "tp": "1-1", "ft": "0-0", "reb": 0, "ast": 2, "pf": 2, "to": 2, "stl": 0, "blk": 0, "pts": 5},
+            {"name": "Don May", "min": 7, "fg": "0-2", "ft": "1-2", "reb": 4, "ast": 0, "pf": 3, "to": 0, "stl": 0, "blk": 0, "pts": 1},
+            {"name": "Khari Johnson", "min": 10, "fg": "2-5", "ft": "0-0", "reb": 2, "ast": 0, "pf": 2, "to": 1, "stl": 1, "blk": 0, "pts": 4},
+            {"name": "Rick Swanwick", "min": 2, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Elgin Rogers", "min": 2, "fg": "0-2", "ft": "2-2", "reb": 1, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Gabe Higa", "min": 8, "fg": "1-1", "ft": "1-1", "reb": 0, "ast": 1, "pf": 0, "to": 1, "stl": 3, "blk": 0, "pts": 3}
+          ]
+        },
+        {
+          "name": "UCLA Bruins",
+          "score": 134,
+          "players": [
+            {"name": "Tracy Murray", "min": 23, "fg": "10-16", "tp": "1-4", "ft": "3-4", "reb": 2, "ast": 0, "pf": 4, "to": 4, "stl": 5, "blk": 4, "pts": 24},
+            {"name": "Mitchell Butler", "min": 19, "fg": "6-7", "ft": "3-9", "reb": 3, "ast": 1, "pf": 4, "to": 1, "stl": 2, "blk": 3, "pts": 15},
+            {"name": "Don McLean", "min": 28, "fg": "8-12", "ft": "6-9", "reb": 6, "ast": 4, "pf": 2, "to": 0, "stl": 4, "blk": 0, "pts": 22},
+            {"name": "Gerald Madkins", "min": 26, "fg": "4-9", "tp": "0-3", "ft": "2-2", "reb": 8, "ast": 10, "pf": 2, "to": 5, "stl": 4, "blk": 0, "pts": 10},
+            {"name": "Derrick Martin", "min": 29, "fg": "5-9", "tp": "0-2", "ft": "7-8", "reb": 4, "ast": 9, "pf": 2, "to": 5, "stl": 4, "blk": 1, "pts": 17},
+            {"name": "Lou Richie", "min": 2, "pts": 0},
+            {"name": "Rodney Zimmerman", "min": 7, "fg": "1-1", "ft": "1-1", "reb": 2, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 3},
+            {"name": "Shon Tarver", "min": 25, "fg": "7-10", "tp": "4-4", "ft": "2-2", "reb": 7, "ast": 3, "pf": 2, "to": 1, "stl": 1, "blk": 1, "pts": 20},
+            {"name": "Chris Kenny", "min": 2, "fg": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Keith Owens", "min": 25, "fg": "5-8", "ft": "1-1", "reb": 13, "ast": 0, "pf": 3, "to": 4, "stl": 1, "blk": 4, "pts": 11},
+            {"name": "Zan Mason", "min": 14, "fg": "2-5", "ft": "8-8", "reb": 8, "ast": 0, "pf": 4, "to": 1, "stl": 0, "blk": 2, "pts": 12}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

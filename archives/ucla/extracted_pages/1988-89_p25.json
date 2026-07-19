@@ -1,0 +1,42 @@
+{
+  "page": 25,
+  "games": [
+    {
+      "date": "1989-02-26",
+      "opponent": "Washington State",
+      "ucla_score": 56,
+      "opp_score": 55,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 56,
+          "players": [
+            {"name": "Wilson", "min": 25, "fg": "1-5", "tp": "0-0", "ft": "2-3", "reb": 11, "ast": 3, "pf": 4, "to": 5, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Maclean", "min": 33, "fg": "7-12", "tp": "0-0", "ft": "5-5", "reb": 10, "ast": 0, "pf": 5, "to": 2, "stl": 0, "blk": 1, "pts": 19},
+            {"name": "Walker", "min": 28, "fg": "2-7", "tp": "2-5", "ft": "0-0", "reb": 3, "ast": 3, "pf": 4, "to": 3, "stl": 0, "blk": 0, "pts": 6},
+            {"name": "Martin", "min": 38, "fg": "4-7", "tp": "1-2", "ft": "1-2", "reb": 2, "ast": 4, "pf": 3, "to": 6, "stl": 1, "blk": 0, "pts": 10},
+            {"name": "Richardson", "min": 40, "fg": "2-9", "tp": "1-5", "ft": "0-0", "reb": 3, "ast": 5, "pf": 2, "to": 3, "stl": 4, "blk": 0, "pts": 5},
+            {"name": "Rochelin", "min": 29, "fg": "6-10", "tp": "0-0", "ft": "0-0", "reb": 4, "ast": 1, "pf": 2, "to": 0, "stl": 0, "blk": 5, "pts": 12},
+            {"name": "Owens", "min": 7, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 2, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Washington State Cougars",
+          "score": 55,
+          "players": [
+            {"name": "Wright, Harold", "min": 26, "fg": "2-6", "tp": "0-0", "ft": "4-4", "reb": 4, "ast": 0, "pf": 4, "to": 3, "stl": 4, "blk": 0, "pts": 8},
+            {"name": "Wallenborn", "min": 25, "fg": "1-5", "tp": "1-1", "ft": "0-0", "reb": 2, "ast": 1, "pf": 1, "to": 1, "stl": 1, "blk": 0, "pts": 3},
+            {"name": "Quinnett", "min": 35, "fg": "8-18", "tp": "1-2", "ft": "0-0", "reb": 6, "ast": 1, "pf": 1, "to": 1, "stl": 1, "blk": 2, "pts": 17},
+            {"name": "Kidd", "min": 31, "fg": "0-5", "tp": "0-0", "ft": "2-2", "reb": 2, "ast": 2, "pf": 1, "to": 3, "stl": 2, "blk": 0, "pts": 2},
+            {"name": "Wright, Brian", "min": 22, "fg": "2-7", "tp": "2-3", "ft": "0-0", "reb": 5, "ast": 1, "pf": 1, "to": 1, "stl": 1, "blk": 0, "pts": 6},
+            {"name": "Rowe", "min": 13, "fg": "1-6", "tp": "0-5", "ft": "2-2", "reb": 0, "ast": 1, "pf": 2, "to": 1, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Woods", "min": 29, "fg": "1-7", "tp": "0-2", "ft": "4-6", "reb": 6, "ast": 1, "pf": 2, "to": 0, "stl": 2, "blk": 0, "pts": 6},
+            {"name": "Delaney", "min": 19, "fg": "2-4", "tp": "0-0", "ft": "5-7", "reb": 3, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 1, "pts": 9}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

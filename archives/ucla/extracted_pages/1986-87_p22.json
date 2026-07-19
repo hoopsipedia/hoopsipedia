@@ -1,0 +1,9 @@
+{
+  "page": 22,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "UCLA at USC, Feb 14 1987, LA Sports Arena, final UCLA 77 - USC 65. UCLA side transcribes cleanly and checksums exactly (player points sum to 77: Miller 20, Rochelin 6, Haley 8, Richardson 13, Immel 14, Wilson 8, Hatcher 8). USC side does not reconcile: the rebounds/PF/TP columns are cramped and overwritten (esp. Keller, Winslow, Grande, Dowell rows), and summing plausible per-player point readings against the printed team total of 65 overshoots by several points depending on how ambiguous digits are read (e.g. Keller's TP looks like 9 but that alone plus the other legible totals already exceeds 65). Since one team's box score cannot be confidently checksummed, the whole game is skipped rather than guessing at USC's player lines."
+    }
+  ]
+}

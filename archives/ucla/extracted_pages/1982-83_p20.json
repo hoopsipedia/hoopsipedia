@@ -1,0 +1,43 @@
+{
+  "page": 20,
+  "games": [
+    {
+      "date": "1983-02-12",
+      "opponent": "Oregon State",
+      "ucla_score": 65,
+      "opp_score": 69,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 65,
+          "players": [
+            {"name": "Darren Daye", "min": 37, "fg": "6-13", "ft": "1-2", "reb": 9, "ast": 4, "pf": 4, "to": 3, "pts": 13},
+            {"name": "Kenny Fields", "min": 10, "fg": "2-3", "reb": 1, "pf": 1, "to": 2, "pts": 4},
+            {"name": "Stuart Gray", "min": 1, "pts": 0},
+            {"name": "Ralph Jackson", "min": 28, "fg": "4-8", "reb": 2, "pf": 3, "ast": 1, "to": 2, "pts": 8},
+            {"name": "Rod Foster", "min": 30, "fg": "6-14", "ft": "5-6", "reb": 5, "pf": 3, "stl": 2, "pts": 17},
+            {"name": "Michael Holton", "min": 29, "fg": "2-3", "reb": 3, "pf": 3, "to": 2, "pts": 4},
+            {"name": "Nigel Miguel", "min": 18, "fg": "2-4", "ft": "1-2", "reb": 3, "pf": 3, "ast": 3, "to": 2, "pts": 5},
+            {"name": "Gary Maloncon", "min": 30, "fg": "4-10", "ft": "2-2", "reb": 7, "pf": 4, "blk": 1, "pts": 10},
+            {"name": "Brad Wright", "min": 17, "fg": "2-2", "pf": 4, "to": 2, "pts": 4}
+          ]
+        },
+        {
+          "name": "Oregon State Beavers",
+          "score": 69,
+          "players": [
+            {"name": "Danny Evans", "min": 40, "fg": "2-8", "ft": "6-6", "reb": 2, "pf": 3, "ast": 2, "to": 2, "stl": 2, "blk": 1, "pts": 10},
+            {"name": "A.C. Green", "min": 30, "fg": "7-12", "ft": "2-6", "reb": 9, "pf": 3, "ast": 2, "to": 2, "pts": 16},
+            {"name": "Charlie Sitton", "min": 34, "fg": "10-17", "ft": "5-6", "reb": 6, "pf": 4, "ast": 5, "to": 3, "pts": 25},
+            {"name": "Darryl Flowers", "min": 39, "fg": "1-7", "ft": "4-6", "reb": 6, "pf": 4, "ast": 4, "to": 2, "pts": 6},
+            {"name": "William Brew", "min": 40, "fg": "1-2", "ft": "4-7", "reb": 3, "pf": 1, "ast": 1, "stl": 1, "pts": 6},
+            {"name": "Steve Woodside", "min": 16, "fg": "3-4", "reb": 3, "pf": 1, "ast": 4, "to": 2, "pts": 6},
+            {"name": "Andy Hott", "min": 1, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

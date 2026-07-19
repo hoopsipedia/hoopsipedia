@@ -1,0 +1,38 @@
+{
+  "page": 1,
+  "games": [
+    {
+      "date": "1966-12-01",
+      "opponent": "ACC",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 62,
+          "players": [
+            {"name": "Hoover", "fg": "2-2", "ft": "0-2", "reb": 4, "pf": 0, "pts": 4},
+            {"name": "Morgan", "fg": "4-8", "ft": "2-2", "reb": 4, "pf": 4, "pts": 10},
+            {"name": "Monroe", "fg": "4-12", "ft": "1-3", "reb": 9, "pf": 3, "pts": 9},
+            {"name": "Judge", "fg": "3-10", "ft": "1-2", "reb": 2, "pf": 3, "pts": 7},
+            {"name": "Daniels", "fg": "9-16", "ft": "1-1", "reb": 12, "pf": 4, "pts": 19},
+            {"name": "Nelson", "fg": "1-3", "ft": "0-0", "reb": 2, "pf": 1, "pts": 2},
+            {"name": "Sanford", "fg": "4-6", "ft": "3-3", "reb": 4, "pf": 5, "pts": 11}
+          ]
+        },
+        {
+          "name": "ACC",
+          "score": 53,
+          "players": [
+            {"name": "Adams", "fg": "2-5", "ft": "0-0", "reb": 2, "pf": 3, "pts": 4},
+            {"name": "Godfrey", "fg": "5-11", "ft": "2-2", "reb": 1, "pf": 4, "pts": 12},
+            {"name": "Nicholas", "fg": "0-6", "ft": "0-1", "reb": 3, "pf": 3, "pts": 0},
+            {"name": "Wray, D", "fg": "9-12", "ft": "1-3", "reb": 3, "pf": 4, "pts": 19},
+            {"name": "Stewart", "fg": "4-5", "ft": "10-12", "reb": 7, "pf": 4, "pts": 18},
+            {"name": "Wray, R", "fg": "0-1", "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

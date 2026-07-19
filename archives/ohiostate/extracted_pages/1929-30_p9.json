@@ -1,0 +1,47 @@
+{
+  "page": 9,
+  "games": [
+    {
+      "date": "1930-02-03",
+      "opponent": "Purdue Boilermakers",
+      "location": "Lafayette, IN",
+      "attendance": 4000,
+      "referee": "Stanley Feezle",
+      "umpire": "J. J. Schommer",
+      "ohio_state_captain": "R. Larkins",
+      "ohio_state_coach": "H. G. Olsen",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 14,
+          "players": [
+            {"name": "Ervin", "min": "24:45", "ft": "0-0", "pf": 2, "pts": 4},
+            {"name": "Hinchman", "min": "21:30", "ft": "1-3", "pf": 4, "pts": 3},
+            {"name": "Russell", "min": "26:00", "ft": "0-1", "pf": 1, "pts": 4},
+            {"name": "Evans", "min": "0:50", "ft": "0-0", "pf": 0, "pts": 0},
+            {"name": "Condon", "min": "28:30", "ft": "0-0", "pf": 1, "pts": 0},
+            {"name": "Wrigley", "min": "18:35", "ft": "0-0", "pf": 4, "pts": 0},
+            {"name": "Larkins", "min": "40:00", "ft": "1-1", "pf": 3, "pts": 1},
+            {"name": "Holcomb", "min": "40:00", "ft": "0-1", "pf": 2, "pts": 2}
+          ]
+        },
+        {
+          "name": "Purdue Boilermakers",
+          "score": 60,
+          "players": [
+            {"name": "Harmeson", "ft": "2-3", "pf": 1, "pts": 4},
+            {"name": "Porter", "ft": "1-1", "pf": 0, "pts": 1},
+            {"name": "Gibbons", "ft": "0-0", "pf": 0, "pts": 2},
+            {"name": "Kaehler (name uncertain)", "ft": "0-0", "pf": 0, "pts": 0},
+            {"name": "Murphy", "ft": "0-6", "pf": 0, "pts": 28},
+            {"name": "Wooden", "ft": "3-4", "pf": 2, "pts": 17},
+            {"name": "Mills", "ft": "2-2", "pf": 0, "pts": 4},
+            {"name": "Boots", "ft": "2-3", "pf": 1, "pts": 4}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

@@ -1,0 +1,45 @@
+{
+  "page": 2,
+  "games": [
+    {
+      "date": "1964-12-17",
+      "opponent": "Wake Forest",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 75,
+          "players": [
+            {"name": "Mac Caldwell", "fg": "8-14", "ft": "0-0", "reb": 6, "pf": 5, "pts": 16},
+            {"name": "Jerry Sanders", "fg": "5-11", "ft": "1-1", "reb": 7, "pf": 2, "pts": 11},
+            {"name": "Jim Connelly", "fg": "9-21", "ft": "3-9", "reb": 7, "pf": 3, "pts": 21},
+            {"name": "Ted Wafle", "fg": "3-10", "ft": "0-1", "reb": 7, "pf": 3, "pts": 6},
+            {"name": "Bernie Meyer", "fg": "4-13", "ft": "3-6", "reb": 4, "pf": 3, "pts": 11},
+            {"name": "Ken Gobie", "fg": "2-4", "ft": "0-0", "reb": 0, "pf": 2, "pts": 4},
+            {"name": "Dale Hilsmier", "fg": "1-4", "ft": "4-5", "reb": 6, "pf": 2, "pts": 6},
+            {"name": "Renny Barnes", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Mack Wilcox", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Fred Stant", "fg": "0-0", "ft": "0-3", "reb": 0, "pf": 4, "pts": 0}
+          ]
+        },
+        {
+          "name": "Wake Forest",
+          "score": 88,
+          "players": [
+            {"name": "Jim Boshart", "fg": "7-14", "ft": "6-8", "reb": 9, "pf": 4, "pts": 20},
+            {"name": "Jim Altengarten", "fg": "1-3", "ft": "2-3", "reb": 6, "pf": 2, "pts": 4},
+            {"name": "Ronny Watts", "fg": "9-14", "ft": "4-6", "reb": 14, "pf": 4, "pts": 22},
+            {"name": "Bob Leonard", "fg": "4-10", "ft": "6-8", "reb": 9, "pf": 2, "pts": 14},
+            {"name": "John Anderson", "fg": "5-12", "ft": "4-4", "reb": 4, "pf": 4, "pts": 14},
+            {"name": "Dick Myers", "fg": "2-4", "ft": "2-3", "reb": 2, "pf": 2, "pts": 6},
+            {"name": "Sherrill Whitaker", "fg": "1-2", "ft": "0-0", "reb": 2, "pf": 1, "pts": 2},
+            {"name": "Richard Herring", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 1, "pts": 0},
+            {"name": "Clark Pool", "fg": "1-1", "ft": "2-2", "reb": 2, "pf": 1, "pts": 4},
+            {"name": "Bill Joyner", "fg": "1-2", "ft": "0-0", "reb": 0, "pf": 1, "pts": 2}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

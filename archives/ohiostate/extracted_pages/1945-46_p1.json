@@ -1,0 +1,39 @@
+{
+  "page": 1,
+  "games": [
+    {
+      "date": "1945-12-04",
+      "opponent": "Wright Field",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 45,
+          "players": [
+            {"name": "Snyder", "pts": 2},
+            {"name": "Wells", "pts": 6},
+            {"name": "Bowen", "pts": 20},
+            {"name": "Risen", "pts": 5},
+            {"name": "Kuhn", "pts": 0},
+            {"name": "Amling", "pts": 10},
+            {"name": "Houston", "pts": 2}
+          ]
+        },
+        {
+          "name": "Wright Field",
+          "score": 47,
+          "players": [
+            {"name": "Hale", "pts": 15},
+            {"name": "Eddleman", "pts": 6},
+            {"name": "Hansen", "pts": 0},
+            {"name": "Mahnken", "pts": 12},
+            {"name": "Negratti", "pts": 10},
+            {"name": "Schick", "pts": 4},
+            {"name": "McNeil", "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

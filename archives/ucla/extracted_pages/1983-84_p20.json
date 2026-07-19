@@ -1,0 +1,44 @@
+{
+  "page": 20,
+  "games": [
+    {
+      "date": "1984-02-11",
+      "opponent": "Oregon State",
+      "ucla_score": 63,
+      "opp_score": 72,
+      "teams": [
+        {
+          "name": "Oregon State Beavers",
+          "score": 72,
+          "players": [
+            {"name": "Green", "min": 38, "fg": "7-10", "ft": "4-4", "reb": 6, "pf": 0, "stl": 2, "to": 2, "pts": 18},
+            {"name": "Sexton", "min": 38, "fg": "9-10", "ft": "3-6", "reb": 3, "pf": 4, "stl": 3, "to": 2, "pts": 21},
+            {"name": "Woodside", "min": 34, "fg": "2-5", "ft": "3-5", "reb": 6, "pf": 1, "stl": 4, "to": 3, "pts": 7},
+            {"name": "Flowers", "min": 38, "fg": "5-6", "ft": "0-0", "reb": 4, "pf": 2, "stl": 1, "ast": 6, "to": 4, "pts": 10},
+            {"name": "Tait", "min": 14, "fg": "0-1", "ft": "0-0", "reb": 1, "pf": 4, "stl": 1, "pts": 0},
+            {"name": "Houston", "min": 28, "fg": "5-7", "ft": "2-3", "reb": 1, "pf": 0, "stl": 3, "to": 2, "pts": 12},
+            {"name": "Stangel", "min": 8, "fg": "2-2", "ft": "0-1", "reb": 0, "pf": 2, "pts": 4},
+            {"name": "Berry", "min": 2, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 1, "pts": 0}
+          ]
+        },
+        {
+          "name": "UCLA Bruins",
+          "score": 63,
+          "players": [
+            {"name": "Fields", "min": 33, "fg": "10-15", "ft": "3-4", "reb": 6, "pf": 4, "stl": 1, "ast": 1, "to": 1, "pts": 23},
+            {"name": "Maloncon", "min": 33, "fg": "2-7", "ft": "0-0", "reb": 6, "pf": 2, "stl": 1, "to": 1, "pts": 4},
+            {"name": "Gray", "min": 26, "fg": "3-3", "ft": "0-0", "reb": 4, "pf": 4, "pts": 6},
+            {"name": "Gaines", "min": 8, "fg": "1-1", "ft": "0-2", "reb": 2, "pf": 1, "pts": 2},
+            {"name": "Jackson", "min": 40, "fg": "6-10", "ft": "2-3", "reb": 2, "pf": 1, "stl": 1, "ast": 4, "to": 4, "pts": 14},
+            {"name": "Hatcher", "min": 4, "fg": "0-2", "ft": "0-0", "reb": 0, "pf": 0, "ast": 1, "pts": 0},
+            {"name": "Miller", "min": 17, "fg": "0-3", "ft": "0-0", "reb": 0, "pf": 4, "ast": 3, "pts": 0},
+            {"name": "Wright", "min": 12, "fg": "4-5", "ft": "2-2", "reb": 2, "pf": 1, "ast": 1, "pts": 10},
+            {"name": "Miguel", "min": 28, "fg": "2-6", "ft": "0-0", "reb": 0, "pf": 3, "ast": 3, "to": 3, "pts": 4}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

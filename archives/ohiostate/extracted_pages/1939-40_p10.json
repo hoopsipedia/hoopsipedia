@@ -1,0 +1,9 @@
+{
+  "page": 10,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Jan. 15, 1939-40 vs Northwestern at Coliseum (Ohio State 32, Northwestern 31). Northwestern's player lines are legible and their point sum (31) matches the final score cleanly. However, the Ohio State player-line block (B./F./P.F./T. columns for Moss, McLain, Stevens, Schick, Fisher, Mikkelson, Sattler, Dawson, Lynch) is too small/blurry to reliably resolve digit-by-digit; a best-effort read produced a player-point sum far below the team's printed totals row (14 FG / 4 FT / 32 pts, which is internally consistent: 14*2+4=32) and below the final score of 32, indicating misread cells rather than a real discrepancy. Rather than invent per-player values to force a match, the whole game is skipped per instructions to be ruthless about skipping over guessing."
+    }
+  ]
+}

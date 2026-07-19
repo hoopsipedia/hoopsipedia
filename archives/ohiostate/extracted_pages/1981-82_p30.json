@@ -1,0 +1,43 @@
+{
+  "page": 30,
+  "games": [
+    {
+      "date": "1982-03-04",
+      "opponent": "Wisconsin Badgers",
+      "site": "Madison, WI",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 77,
+          "players": [
+            {"name": "Clark Kellogg", "min": "38", "fg": "4-13", "ft": "0-0", "reb": 8, "ast": 3, "pf": 2, "to": 1, "stl": 0, "blk": 0, "pts": 16},
+            {"name": "Tony Campbell", "min": "36", "fg": "4-9", "ft": "3-3", "reb": 11, "ast": 2, "pf": 3, "to": 2, "stl": 1, "blk": 1, "pts": 16},
+            {"name": "Granville Waiters", "min": "28", "fg": "5-5", "ft": "0-1", "reb": 2, "ast": 1, "pf": 3, "to": 3, "stl": 0, "blk": 2, "pts": 10},
+            {"name": "Troy Taylor", "min": "28", "fg": "5-8", "ft": "0-1", "reb": 2, "ast": 5, "pf": 1, "to": 3, "stl": 0, "blk": 0, "pts": 10},
+            {"name": "Larry Huggins", "min": "29", "fg": "6-8", "ft": "3-5", "reb": 2, "ast": 0, "pf": 2, "to": 2, "stl": 0, "blk": 0, "pts": 15},
+            {"name": "Cliff Kirchner", "min": "8", "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 3, "to": 0, "stl": 1, "blk": 0, "pts": 0},
+            {"name": "Ron Stokes", "min": "23", "fg": "0-5", "ft": "10-10", "reb": 4, "ast": 4, "pf": 1, "to": 3, "stl": 1, "blk": 0, "pts": 10},
+            {"name": "Bryant Johnson", "min": "6", "fg": "0-1", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Nate Sims", "min": "4", "fg": "0-1", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Wisconsin Badgers",
+          "score": 75,
+          "players": [
+            {"name": "Brad Sellers", "min": "36", "ft": "0-0", "reb": 13, "ast": 3, "pf": 3, "to": 1, "stl": 2, "blk": 2, "pts": 22},
+            {"name": "Cory Blackwell", "fg": "2-5", "ft": "2-2", "reb": 1, "ast": 3, "pf": 5, "to": 1, "stl": 1, "blk": 0, "pts": 6},
+            {"name": "Keith Mitchell", "fg": "3-7", "ft": "5-5", "reb": 3, "ast": 1, "pf": 2, "to": 4, "stl": 0, "blk": 0, "pts": 11},
+            {"name": "John Bailey", "min": "34", "fg": "8-18", "ft": "0-0", "reb": 1, "ast": 4, "pf": 4, "to": 1, "stl": 0, "blk": 0, "pts": 16},
+            {"name": "Carl Golston", "fg": "2-6", "ft": "0-0", "reb": 0, "ast": 2, "pf": 3, "to": 3, "stl": 1, "blk": 0, "pts": 4},
+            {"name": "Scott Roth", "fg": "4-7", "ft": "1-1", "reb": 3, "ast": 0, "pf": 3, "to": 0, "stl": 0, "blk": 0, "pts": 9},
+            {"name": "John Ploss", "min": "6", "fg": "0-2", "ft": "4-4", "reb": 1, "ast": 0, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Greg Dandridge", "fg": "1-2", "ft": "0-2", "reb": 2, "pf": 2, "pts": 3}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

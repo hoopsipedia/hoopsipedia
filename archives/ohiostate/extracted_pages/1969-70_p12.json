@@ -1,0 +1,40 @@
+{
+  "page": 12,
+  "games": [
+    {
+      "date": "1970-01-13",
+      "opponent": "Michigan",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 103,
+          "players": [
+            {"name": "Cleamons", "fg": "13-17", "ft": "2-4", "reb": 3, "pf": 2, "pts": 28},
+            {"name": "Andreas", "fg": "5-7", "ft": "1-1", "reb": 5, "pf": 4, "pts": 11},
+            {"name": "Sorenson", "fg": "12-22", "ft": "5-7", "reb": 8, "pf": 4, "pts": 29},
+            {"name": "Barclay", "fg": "6-9", "ft": "1-1", "reb": 5, "pf": 1, "pts": 13},
+            {"name": "Finney", "fg": "8-15", "ft": "6-7", "reb": 10, "pf": 2, "pts": 22},
+            {"name": "Smith", "fg": "0-3", "ft": "0-0", "reb": 4, "pf": 0, "pts": 0},
+            {"name": "Minor", "fg": "0-1", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Michigan Wolverines",
+          "score": 95,
+          "players": [
+            {"name": "Carter", "fg": "4-7", "ft": "0-1", "reb": 4, "pf": 3, "pts": 8},
+            {"name": "Ford", "fg": "4-10", "ft": "4-4", "reb": 8, "pf": 1, "pts": 12},
+            {"name": "Tomjanovich", "fg": "13-29", "ft": "8-10", "reb": 13, "pf": 2, "pts": 34},
+            {"name": "Bloodworth", "fg": "5-8", "ft": "0-0", "reb": 5, "pf": 1, "pts": 10},
+            {"name": "Fife", "fg": "9-17", "ft": "1-1", "reb": 7, "pf": 5, "pts": 19},
+            {"name": "Henry", "fg": "1-4", "ft": "2-2", "reb": 1, "pf": 3, "pts": 4},
+            {"name": "Grabiec", "fg": "0-3", "ft": "2-2", "reb": 1, "pf": 0, "pts": 2},
+            {"name": "Hayward", "fg": "3-5", "ft": "0-0", "reb": 1, "pf": 0, "pts": 6}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

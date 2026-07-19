@@ -1,0 +1,42 @@
+{
+  "page": 11,
+  "games": [
+    {
+      "date": "1975-01-11",
+      "opponent": "Washington State",
+      "ucla_score": 77,
+      "opp_score": 69,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 77,
+          "players": [
+            {"name": "Washington", "fg": "5-8", "ft": "2-2", "reb": 5, "ast": 1, "pf": 4, "pts": 12},
+            {"name": "Meyers", "fg": "7-21", "ft": "3-7", "reb": 8, "ast": 7, "pf": 0, "pts": 17},
+            {"name": "Drollinger", "fg": "8-18", "ft": "1-1", "reb": 10, "ast": 2, "pf": 5, "pts": 17},
+            {"name": "Trgovich", "fg": "5-13", "ft": "2-3", "reb": 6, "ast": 1, "pf": 1, "pts": 12},
+            {"name": "McCarter", "fg": "1-6", "ft": "0-0", "reb": 3, "ast": 4, "pf": 3, "pts": 2},
+            {"name": "Johnson", "fg": "5-10", "ft": "5-5", "reb": 10, "ast": 2, "pf": 2, "pts": 15},
+            {"name": "Spillane", "fg": "1-4", "ft": "0-0", "reb": 2, "ast": 2, "pf": 1, "pts": 2}
+          ]
+        },
+        {
+          "name": "Washington State Cougars",
+          "score": 69,
+          "players": [
+            {"name": "Davis", "fg": "4-10", "ft": "3-4", "reb": 3, "ast": 1, "pf": 3, "pts": 11},
+            {"name": "Brown", "fg": "1-3", "ft": "4-4", "reb": 14, "ast": 0, "pf": 4, "pts": 6},
+            {"name": "Puidokas", "fg": "8-20", "ft": "3-5", "reb": 10, "ast": 0, "pf": 2, "pts": 19},
+            {"name": "Giovacchini", "fg": "2-7", "ft": "0-0", "reb": 0, "ast": 7, "pf": 1, "pts": 4},
+            {"name": "Jeffries", "fg": "4-6", "ft": "0-0", "reb": 5, "ast": 6, "pf": 2, "pts": 8},
+            {"name": "G. Johnson", "fg": "3-4", "ft": "1-2", "reb": 6, "ast": 0, "pf": 2, "pts": 7},
+            {"name": "Barnhill", "fg": "5-10", "ft": "0-0", "reb": 2, "ast": 3, "pf": 3, "pts": 10},
+            {"name": "Jones", "fg": "1-4", "ft": "2-2", "reb": 0, "ast": 2, "pf": 2, "pts": 4}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

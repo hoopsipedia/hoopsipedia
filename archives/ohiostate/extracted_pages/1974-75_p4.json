@@ -1,0 +1,45 @@
+{
+  "page": 4,
+  "games": [
+    {
+      "date": "1974-12-14",
+      "opponent": "Ohio University",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 96,
+          "players": [
+            {"name": "Andreas", "fg": "8-13", "ft": "1-1", "reb": 5, "ast": 1, "pf": 5, "pts": 17},
+            {"name": "Stiegemeier", "fg": "8-14", "ft": "4-5", "reb": 4, "ast": 0, "pf": 4, "pts": 20},
+            {"name": "Taylor", "fg": "4-9", "ft": "6-6", "reb": 9, "ast": 4, "pf": 4, "pts": 14},
+            {"name": "Bayless", "fg": "6-11", "ft": "5-7", "reb": 5, "ast": 1, "pf": 4, "pts": 17},
+            {"name": "Bolden", "fg": "8-14", "ft": "4-5", "reb": 5, "ast": 10, "pf": 1, "pts": 20},
+            {"name": "Wenner", "fg": "1-2", "ft": "0-1", "reb": 5, "ast": 0, "pf": 2, "pts": 2},
+            {"name": "Shields", "fg": "0-1", "ft": "0-0", "reb": 1, "ast": 0, "pf": 0, "pts": 0},
+            {"name": "Hammond", "fg": "2-2", "ft": "0-1", "reb": 1, "ast": 0, "pf": 2, "pts": 4},
+            {"name": "Burris", "fg": "1-2", "ft": "0-0", "reb": 1, "ast": 0, "pf": 1, "pts": 2},
+            {"name": "Wood", "fg": "0-1", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Ohio University",
+          "score": 87,
+          "players": [
+            {"name": "Greene", "fg": "4-7", "ft": "2-2", "reb": 9, "ast": 1, "pf": 4, "pts": 10},
+            {"name": "Love", "fg": "10-17", "ft": "7-7", "reb": 10, "ast": 2, "pf": 3, "pts": 27},
+            {"name": "Hester", "fg": "1-2", "ft": "2-2", "reb": 4, "ast": 1, "pf": 3, "pts": 4},
+            {"name": "Miller", "fg": "6-11", "ft": "0-0", "reb": 3, "ast": 4, "pf": 4, "pts": 12},
+            {"name": "Luckett", "fg": "11-28", "ft": "3-7", "reb": 5, "ast": 3, "pf": 4, "pts": 25},
+            {"name": "Janch", "fg": "1-2", "ft": "0-0", "reb": 2, "ast": 1, "pf": 0, "pts": 2},
+            {"name": "Corde", "fg": "0-6", "ft": "3-4", "reb": 2, "ast": 0, "pf": 4, "pts": 3},
+            {"name": "Terek", "fg": "1-3", "ft": "0-0", "reb": 2, "ast": 0, "pf": 2, "pts": 2},
+            {"name": "Seltzer", "fg": "0-1", "ft": "2-3", "reb": 0, "ast": 0, "pf": 0, "pts": 2}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": [],
+  "notes": "Attendance 9,960; officials Roger Parramore & Gary Muncy. Ohio State FG% .550/FT% .769, Ohio Univ FG% .441/FT% .760 per sheet footer. Luckett's PF column was smudged/misread as '29' on first pass; corrected to 4 using the Ohio University team PF total (23) as a cross-check, which along with matching FG/FT/AST/REB totals confirms the correction. Ohio University's rebound total (45) includes a separate 'Team/Dead Ball Rebounds' line of 7/1 not attributable to individual players; Ohio State's individual rebounds sum to 36 vs team total 41, implying ~5 unlisted team rebounds (no such line was printed for OSU on this sheet) - this does not affect the points checksum."
+}

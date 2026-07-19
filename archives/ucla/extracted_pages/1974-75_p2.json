@@ -1,0 +1,48 @@
+{
+  "page": 2,
+  "games": [
+    {
+      "date": "1974-11-30",
+      "opponent": "De Paul",
+      "ucla_score": 79,
+      "opp_score": 64,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 79,
+          "players": [
+            {"name": "Washington", "fg": "9-12", "ft": "2-2", "reb": 7, "pf": 3, "ast": 0, "pts": 20},
+            {"name": "Meyers", "fg": "9-17", "ft": "0-2", "reb": 8, "pf": 2, "ast": 0, "pts": 18},
+            {"name": "Drollinger", "fg": "3-5", "ft": "0-0", "reb": 12, "pf": 4, "ast": 2, "pts": 6},
+            {"name": "Trgovich", "fg": "3-8", "ft": "0-0", "reb": 5, "pf": 1, "ast": 2, "pts": 6},
+            {"name": "Spillane", "fg": "2-4", "ft": "0-0", "reb": 1, "pf": 0, "ast": 0, "pts": 4},
+            {"name": "McCarter", "fg": "1-6", "ft": "0-0", "reb": 1, "pf": 0, "ast": 5, "pts": 2},
+            {"name": "Olinde", "fg": "2-2", "ft": "3-4", "reb": 3, "pf": 0, "ast": 1, "pts": 7},
+            {"name": "Vroman", "fg": "2-5", "ft": "0-0", "reb": 3, "pf": 4, "ast": 2, "pts": 4},
+            {"name": "Townsend", "fg": "1-3", "ft": "2-3", "reb": 2, "pf": 0, "ast": 1, "pts": 4},
+            {"name": "Smith", "fg": "1-2", "ft": "0-0", "reb": 1, "pf": 1, "ast": 1, "pts": 2},
+            {"name": "Corliss", "fg": "2-4", "ft": "0-0", "reb": 2, "pf": 0, "ast": 0, "pts": 4},
+            {"name": "Thomas", "fg": "1-3", "ft": "0-0", "reb": 1, "pf": 0, "ast": 0, "pts": 2}
+          ]
+        },
+        {
+          "name": "De Paul Blue Demons",
+          "score": 64,
+          "players": [
+            {"name": "Pancratz", "fg": "0-3", "ft": "0-0", "reb": 1, "pf": 4, "ast": 1, "pts": 0},
+            {"name": "Robinzine", "fg": "7-16", "ft": "3-5", "reb": 11, "pf": 4, "ast": 3, "pts": 17},
+            {"name": "Corzine", "fg": "7-16", "ft": "0-0", "reb": 3, "pf": 0, "ast": 2, "pts": 14},
+            {"name": "Norwood", "fg": "1-9", "ft": "0-0", "reb": 2, "pf": 2, "ast": 2, "pts": 2},
+            {"name": "Boyd", "fg": "6-16", "ft": "0-0", "reb": 7, "pf": 2, "ast": 4, "pts": 12},
+            {"name": "Sukley", "fg": "1-4", "ft": "2-2", "reb": 4, "pf": 2, "ast": 2, "pts": 4},
+            {"name": "Bocinsky", "fg": "3-4", "ft": "1-2", "reb": 0, "pf": 1, "ast": 1, "pts": 7},
+            {"name": "Sloger", "fg": "1-1", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "pts": 2},
+            {"name": "Baris", "fg": "3-3", "ft": "0-0", "reb": 3, "pf": 1, "ast": 0, "pts": 6}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

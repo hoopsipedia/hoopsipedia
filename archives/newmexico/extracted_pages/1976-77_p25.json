@@ -1,0 +1,52 @@
+{
+  "page": 25,
+  "games": [
+    {
+      "date": "1977-02-18",
+      "opponent": "Arizona",
+      "site": "University of Arizona",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 84,
+          "players": [
+            {"name": "Johnson H", "fg": "5-12", "ft": "10-11", "reb": 5, "ast": 2, "pf": 1, "stl": 2, "blk": 1, "pts": 20},
+            {"name": "Howard W", "fg": "6-10", "ft": "0-0", "reb": 4, "pf": 5, "blk": 2, "pts": 12},
+            {"name": "Allen J", "fg": "0-2", "ft": "1-2", "reb": 4, "ast": 1, "pf": 5, "pts": 1},
+            {"name": "Cooper M", "fg": "9-15", "ft": "5-6", "reb": 2, "ast": 5, "pf": 1, "stl": 5, "pts": 23},
+            {"name": "Reid B", "fg": "4-9", "ft": "4-4", "reb": 6, "ast": 3, "pf": 2, "stl": 1, "pts": 12},
+            {"name": "Davis D", "fg": "0-1", "ft": "0-0", "reb": 2, "ast": 2, "pf": 1, "pts": 0},
+            {"name": "Smiley W", "fg": "6-8", "ft": "2-2", "reb": 7, "pf": 3, "blk": 2, "stl": 1, "pts": 14},
+            {"name": "Felix M", "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 1, "pf": 0, "pts": 0},
+            {"name": "Davis S", "fg": "1-1", "ft": "0-0", "reb": 2, "pf": 0, "stl": 1, "pts": 2}
+          ],
+          "team_totals": {"fg": "31-58", "ft": "22-25", "reb": 36, "team_rebounds": 4, "pf": 18, "pts": 84, "ast": 19}
+        },
+        {
+          "name": "Arizona Wildcats",
+          "score": 88,
+          "players": [
+            {"name": "Goede L", "fg": "4-7", "ft": "2-2", "reb": 2, "pf": 3, "pts": 10},
+            {"name": "Elliott B", "fg": "8-13", "ft": "5-7", "reb": 7, "ast": 2, "pf": 4, "stl": 4, "pts": 21},
+            {"name": "Taylor P", "fg": "6-9", "ft": "2-2", "reb": 9, "pf": 3, "blk": 3, "pts": 14},
+            {"name": "Harrison G", "fg": "4-6", "ft": "0-1", "reb": 0, "ast": 6, "pf": 4, "blk": 2, "pts": 8},
+            {"name": "Harris H", "fg": "9-25", "ft": "5-6", "reb": 3, "ast": 6, "pf": 3, "blk": 1, "pts": 23},
+            {"name": "Gladney J", "fg": "0-1", "ft": "1-2", "reb": 0, "pf": 0, "pts": 1},
+            {"name": "Davis K", "fg": "5-11", "ft": "1-1", "reb": 9, "pf": 2, "stl": 2, "pts": 11},
+            {"name": "Marshall T", "fg": "0-2", "ft": "0-0", "reb": 0, "pf": 1, "pts": 0},
+            {"name": "Williams T", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0}
+          ],
+          "team_totals": {"fg": "36-74", "ft": "16-21", "reb": 37, "team_rebounds": 7, "pf": 20, "pts": 88, "ast": 19}
+        }
+      ],
+      "final_score_by_period": {
+        "New Mexico Lobos": {"1st": 44, "2nd": 40, "final": 84},
+        "Arizona Wildcats": {"1st": 42, "2nd": 46, "final": 88}
+      },
+      "officials": "Stubing - Reed",
+      "attendance": 14248,
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

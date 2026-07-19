@@ -1,0 +1,44 @@
+{
+  "page": 15,
+  "games": [
+    {
+      "date": "1947-02-15",
+      "opponent": "Michigan State Spartans",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 58,
+          "players": [
+            {"name": "Bowen", "ft": "5-5", "pf": 1, "pts": 21},
+            {"name": "Donham", "ft": "0-5", "pf": 4, "pts": 10},
+            {"name": "Underman", "ft": "3-5", "pf": 2, "pts": 13},
+            {"name": "Huston", "ft": "2-2", "pf": 3, "pts": 4},
+            {"name": "Amling", "ft": "0-1", "pf": 3, "pts": 8},
+            {"name": "Winter", "ft": "0-0", "pf": 1, "pts": 0},
+            {"name": "Harris", "ft": "1-1", "pf": 0, "pts": 1},
+            {"name": "Johnston", "ft": "1-2", "pf": 0, "pts": 1}
+          ]
+        },
+        {
+          "name": "Michigan State Spartans",
+          "score": 46,
+          "players": [
+            {"name": "Robert", "ft": "0-4", "pf": 2, "pts": 4},
+            {"name": "Geshan", "ft": "0-1", "pf": 2, "pts": 6},
+            {"name": "Kaywood", "ft": "0-1", "pf": 3, "pts": 12},
+            {"name": "White", "ft": "3-3", "pf": 3, "pts": 11},
+            {"name": "Waldron", "ft": "0-0", "pf": 1, "pts": 2},
+            {"name": "Peppler", "ft": "2-2", "pf": 1, "pts": 4},
+            {"name": "Chandrois", "ft": "0-1", "pf": 1, "pts": 4},
+            {"name": "Robbins", "ft": "0-0", "pf": 1, "pts": 0},
+            {"name": "Kowalt", "ft": "1-1", "pf": 1, "pts": 1},
+            {"name": "Stevens", "ft": "0-0", "pf": 2, "pts": 0},
+            {"name": "Wulff", "ft": "0-0", "pf": 1, "pts": 2}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

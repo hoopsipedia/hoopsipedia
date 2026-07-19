@@ -1,0 +1,9 @@
+{
+  "page": 7,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page 7 contains a scanned newspaper article (Iowa City Daily Iowan, Jan 11 1946-47, Ohio State at Iowa) with a small embedded box score table listing both teams' fg/ft/pf per player, but the print is too small/blurry to confidently read individual player digits. Final scores are legible in the header (Ohio 35, Iowa/Opp 61, halftime Iowa 40-Ohio State 16), but attempted reads of the per-player fg/ft/pf columns did not produce team totals that reconcile with the final scores under the standard pts=2*fg+ft formula (best-guess Ohio State totals fg12/ft7 => 31 pts, short of the 35 final score), so checksum cannot be confirmed. Skipping rather than guessing at illegible digits."
+    }
+  ]
+}

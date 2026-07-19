@@ -1,0 +1,9 @@
+{
+  "page": 21,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "UCLA vs DePaul, 02/10/01 at Rosemont, Ill. (Allstate Arena) — UCLA side checksums fine (player pts sum 28+10+7+18+20+2+9+0=94 matches team score 94), but DePaul side fails checksum: sum of player TP column (13+9+6+15+24+2+7+10=86) does not match DePaul's final score of 88, and sum of individual FT-made (0+3+0+7+12+0+2+0=24) does not match team FT total of 26-32. Re-read the page a second time to confirm the numbers were transcribed correctly (values identical both reads); the inconsistency appears to be in the source scoresheet's own totals row, not a transcription error. Skipping per instructions rather than guessing which entry is wrong."
+    }
+  ]
+}

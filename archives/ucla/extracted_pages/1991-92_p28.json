@@ -1,0 +1,48 @@
+{
+  "page": 28,
+  "games": [
+    {
+      "date": "1992-03-12",
+      "opponent": "Arizona",
+      "ucla_score": 89,
+      "opp_score": 81,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 89,
+          "players": [
+            {"name": "MacLean", "min": 34, "fg": "10-18", "tp": "0-1", "ft": "8-8", "reb": 3, "ast": 2, "pf": 3, "to": 2, "stl": 2, "blk": 0, "pts": 28},
+            {"name": "Murray", "min": 38, "fg": "7-14", "tp": "4-7", "ft": "5-6", "reb": 9, "ast": 3, "pf": 3, "to": 2, "stl": 0, "blk": 3, "pts": 23},
+            {"name": "Butler", "min": 33, "fg": "4-10", "tp": "0-1", "ft": "3-3", "reb": 6, "ast": 1, "pf": 3, "to": 1, "stl": 0, "blk": 1, "pts": 11},
+            {"name": "Madkins", "min": 34, "fg": "3-8", "tp": "0-3", "ft": "6-9", "reb": 4, "ast": 5, "pf": 2, "to": 1, "stl": 2, "blk": 1, "pts": 12},
+            {"name": "Tarver", "min": 13, "fg": "0-1", "tp": "0-0", "ft": "0-2", "reb": 3, "ast": 1, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Zimmerman", "min": 6, "fg": "1-2", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "pf": 3, "to": 1, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Martin", "min": 8, "fg": "0-1", "tp": "0-1", "ft": "1-2", "reb": 0, "ast": 0, "pf": 0, "to": 2, "stl": 0, "blk": 0, "pts": 1},
+            {"name": "O'Bannon", "min": 8, "fg": "0-1", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 3, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Edney", "min": 26, "fg": "5-6", "tp": "0-0", "ft": "2-2", "reb": 4, "ast": 5, "pf": 4, "to": 0, "stl": 1, "blk": 0, "pts": 12},
+            {"name": "Lanier", "min": 0, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Zidek", "min": 0, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Elkind", "min": 0, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Arizona Wildcats",
+          "score": 81,
+          "players": [
+            {"name": "Womack", "min": 31, "fg": "3-5", "tp": "0-0", "ft": "0-2", "reb": 4, "ast": 1, "pf": 4, "to": 2, "stl": 0, "blk": 1, "pts": 6},
+            {"name": "Mills", "min": 30, "fg": "4-12", "tp": "1-3", "ft": "1-1", "reb": 3, "ast": 2, "pf": 3, "to": 1, "stl": 0, "blk": 0, "pts": 10},
+            {"name": "Rooks", "min": 36, "fg": "7-10", "tp": "0-0", "ft": "9-13", "reb": 10, "ast": 3, "pf": 5, "to": 2, "stl": 1, "blk": 0, "pts": 23},
+            {"name": "Reeves", "min": 23, "fg": "4-9", "tp": "1-4", "ft": "1-3", "reb": 4, "ast": 1, "pf": 4, "to": 3, "stl": 1, "blk": 0, "pts": 10},
+            {"name": "Othick", "min": 36, "fg": "5-10", "tp": "5-9", "ft": "2-2", "reb": 2, "ast": 5, "pf": 2, "to": 3, "stl": 0, "blk": 0, "pts": 17},
+            {"name": "Stokes", "min": 20, "fg": "4-4", "tp": "0-0", "ft": "0-0", "reb": 7, "ast": 1, "pf": 1, "to": 3, "stl": 0, "blk": 1, "pts": 8},
+            {"name": "Stoudamire", "min": 21, "fg": "2-7", "tp": "1-2", "ft": "2-2", "reb": 1, "ast": 2, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 7},
+            {"name": "Johnson", "min": 1, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Owes", "min": 2, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

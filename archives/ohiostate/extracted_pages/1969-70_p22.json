@@ -1,0 +1,47 @@
+{
+  "page": 22,
+  "games": [
+    {
+      "date": "1970-02-24",
+      "opponent": "Wisconsin",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 98,
+          "players": [
+            {"name": "Cleamons", "fg": "11-16", "ft": "5-6", "reb": 7, "pf": 4, "pts": 27},
+            {"name": "Andreas", "fg": "1-5", "ft": "0-0", "reb": 4, "pf": 4, "pts": 2},
+            {"name": "Sorenson", "fg": "9-18", "ft": "7-8", "reb": 13, "pf": 1, "pts": 25},
+            {"name": "Finney", "fg": "7-13", "ft": "5-5", "reb": 6, "pf": 2, "pts": 19},
+            {"name": "Barclay", "fg": "5-9", "ft": "2-2", "reb": 6, "pf": 1, "pts": 12},
+            {"name": "Minor", "fg": "3-3", "ft": "3-3", "reb": 1, "pf": 2, "pts": 9},
+            {"name": "Spies", "fg": "0-1", "ft": "0-2", "reb": 0, "pf": 1, "pts": 0},
+            {"name": "Macknin", "fg": "0-1", "ft": "0-0", "reb": 2, "pf": 2, "pts": 0},
+            {"name": "Heximer", "fg": "0-2", "ft": "2-2", "reb": 1, "pf": 2, "pts": 2, "note": "FT column had a possible smudge; value confirmed via 2*fg+ft=pts and team FT-total checksum"},
+            {"name": "Painter", "fg": "0-0", "ft": "0-1", "reb": 1, "pf": 1, "pts": 0},
+            {"name": "Smith", "fg": "0-0", "ft": "2-4", "reb": 2, "pf": 0, "pts": 2}
+          ],
+          "checksum_ok": true
+        },
+        {
+          "name": "Wisconsin",
+          "score": 86,
+          "players": [
+            {"name": "Adams", "fg": "2-9", "ft": "2-3", "reb": 5, "pf": 0, "pts": 6},
+            {"name": "Oler", "fg": "1-6", "ft": "1-1", "reb": 2, "pf": 4, "pts": 3},
+            {"name": "Henry", "fg": "5-10", "ft": "1-1", "reb": 12, "pf": 5, "pts": 11},
+            {"name": "Sherrod", "fg": "9-28", "ft": "12-12", "reb": 10, "pf": 4, "pts": 30},
+            {"name": "Frasor", "fg": "3-10", "ft": "2-3", "reb": 3, "pf": 2, "pts": 8},
+            {"name": "DeCremer", "fg": "2-2", "ft": "0-0", "reb": 1, "pf": 1, "pts": 4},
+            {"name": "Conlon", "fg": "5-16", "ft": "2-2", "reb": 6, "pf": 3, "pts": 12},
+            {"name": "Mayberry", "fg": "5-10", "ft": "0-1", "reb": 11, "pf": 1, "pts": 10},
+            {"name": "Barao", "fg": "1-5", "ft": "0-0", "reb": 2, "pf": 2, "pts": 2}
+          ],
+          "checksum_ok": true
+        }
+      ]
+    }
+  ],
+  "skipped": [],
+  "notes": "Typed 'Official Western Conference Basketball Box Score' sheet, Ohio State (visitor) at Wisconsin (home), Feb 24 1970 (game date printed, differs from filename season). Sheet has no MIN, AST, TO, STL, BLK, or 3P columns (pre-3pt era, and this stat set wasn't tracked) so those keys are omitted. Team point totals check out exactly (OSU 98, Wisconsin 86) and every individual player row satisfies pts = 2*fg_made + ft_made, which also let me self-correct one smudged FT digit for Heximer (2, not 0) via cross-check against the printed FT team total (26) and PTS (2). Rebound and PF column sums printed on the sheet (48 and both team totals) do not fully match my row-by-row reads (off by a few), likely OCR/handwriting ambiguity in those columns on the scan; since checksum requirement is points-only, these were left as best-effort reads rather than blocking the page."
+}

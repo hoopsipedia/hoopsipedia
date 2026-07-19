@@ -1,0 +1,38 @@
+{
+  "page": 13,
+  "games": [
+    {
+      "date": "1929-02-18",
+      "opponent": "Chicago",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 35,
+          "players": [
+            {"name": "Hinchman", "min": "21:15", "fg": "2", "ft": "0", "pf": "1", "pts": 4},
+            {"name": "Evans", "min": "10:45", "fg": "2", "ft": "0", "pf": "3", "pts": 4},
+            {"name": "Ervin", "min": "40:00", "fg": "3", "ft": "2", "pf": "2", "pts": 8},
+            {"name": "Van Heyde", "min": "40:00", "fg": "6", "ft": "5", "pf": "0", "pts": 17},
+            {"name": "Fesler", "min": "40:00", "fg": "0", "ft": "0", "pf": "3", "pts": 0},
+            {"name": "Larkins", "min": "40:00", "fg": "1", "ft": "0", "pf": "0", "pts": 2}
+          ]
+        },
+        {
+          "name": "Chicago",
+          "score": 31,
+          "players": [
+            {"name": "Cooper", "fg": "0", "ft": "0", "pf": "0", "pts": 0},
+            {"name": "Kaplan", "fg": "4", "ft": "1", "pf": "0", "pts": 9},
+            {"name": "Yates", "fg": "1", "ft": "0", "pf": "1", "pts": 2},
+            {"name": "Gist", "fg": "3", "ft": "1", "pf": "3", "pts": 7},
+            {"name": "Abbott", "fg": "0", "ft": "0", "pf": "0", "pts": 0},
+            {"name": "Crawford", "fg": "2", "ft": "3", "pf": "2", "pts": 7},
+            {"name": "Chanknon", "fg": "2", "ft": "2", "pf": "2", "pts": 6}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

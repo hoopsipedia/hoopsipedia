@@ -1,0 +1,48 @@
+{
+  "page": 20,
+  "games": [
+    {
+      "date": "1975-02-03",
+      "opponent": "Michigan State Spartans",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 83,
+          "players": [
+            {"name": "Andreas", "fg": "8-14", "ft": "3-5", "reb": 6, "ast": 2, "pf": 3, "pts": 19},
+            {"name": "Wenner", "fg": "0-4", "ft": "0-0", "reb": 1, "ast": 4, "pf": 4, "pts": 0},
+            {"name": "Taylor", "fg": "14-24", "ft": "0-0", "reb": 15, "ast": 3, "pf": 3, "pts": 28},
+            {"name": "Bayless", "fg": "2-9", "ft": "0-0", "reb": 2, "ast": 2, "pf": 1, "pts": 4},
+            {"name": "Bolden", "fg": "7-13", "ft": "4-5", "reb": 3, "ast": 5, "pf": 3, "pts": 18},
+            {"name": "Wood", "fg": "2-4", "ft": "0-0", "reb": 1, "ast": 1, "pf": 1, "pts": 4},
+            {"name": "Burris", "fg": "0-3", "ft": "2-5", "reb": 0, "ast": 1, "pf": 0, "pts": 2},
+            {"name": "Stiegemeier", "fg": "4-8", "ft": "0-0", "reb": 5, "ast": 1, "pf": 2, "pts": 8},
+            {"name": "Weston", "fg": "0-0", "ft": "0-0", "reb": 2, "ast": 0, "pf": 0, "pts": 0},
+            {"name": "Shields", "fg": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "pf": 1, "pts": 0},
+            {"name": "Hammond", "fg": "0-2", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Michigan State Spartans",
+          "score": 101,
+          "players": [
+            {"name": "Furlow", "fg": "12-19", "ft": "12-13", "reb": 6, "ast": 5, "pf": 2, "pts": 36},
+            {"name": "Tropf", "fg": "2-5", "ft": "1-1", "reb": 7, "ast": 4, "pf": 3, "pts": 5},
+            {"name": "Hariston", "fg": "11-16", "ft": "0-1", "reb": 13, "ast": 2, "pf": 3, "pts": 22},
+            {"name": "Davis", "fg": "6-10", "ft": "0-0", "reb": 2, "ast": 3, "pf": 1, "pts": 12},
+            {"name": "Glover", "fg": "7-12", "ft": "2-2", "reb": 0, "ast": 5, "pf": 1, "pts": 16},
+            {"name": "Chapman", "fg": "2-4", "ft": "0-0", "reb": 2, "ast": 1, "pf": 4, "pts": 4},
+            {"name": "Wilson", "fg": "0-3", "ft": "0-0", "reb": 1, "ast": 2, "pf": 2, "pts": 0},
+            {"name": "White", "fg": "1-2", "ft": "2-3", "reb": 1, "ast": 0, "pf": 0, "pts": 4},
+            {"name": "McGill", "fg": "1-1", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "pts": 2},
+            {"name": "Milton", "fg": "0-0", "ft": "0-0", "reb": 2, "ast": 0, "pf": 1, "pts": 0},
+            {"name": "Rivers", "fg": "0-1", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "pts": 0},
+            {"name": "Dudley", "fg": "0-0", "ft": "0-0", "reb": 2, "ast": 0, "pf": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

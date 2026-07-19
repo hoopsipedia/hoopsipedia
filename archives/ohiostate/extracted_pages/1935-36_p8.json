@@ -1,0 +1,9 @@
+{
+  "page": 8,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "1936-01-13 Ohio State (18) at Illinois (13) box score is present (Ohio State and Illinois columns with F.G./F.T./T. per player), and Ohio State's per-player point (T.) column sums exactly to 18 matching the final score, giving confidence in that team's row-level digits. However, the printed team Totals row for Ohio State's F.T. column (read as 4) conflicts with the accompanying newspaper article text, which explicitly states Ohio State made 6 of 9 free throws; this indicates at least one Ohio State F.T. digit was misread on the scan. Illinois's individual player F.G./F.T./T. rows (Vopicka, Combes, Benham, Riegel, Henry, Braun) are small, low-contrast newsprint and could not be read with confidence row-by-row, even though the Illinois team totals line (4 F.G., 5 F.T., 13 T.) is legible and matches the final score. Since both teams' player lines are required and Illinois's individual rows cannot be transcribed without guessing, and the Ohio State F.T. digits have a demonstrated discrepancy, the game is skipped rather than risking invented values."
+    }
+  ]
+}

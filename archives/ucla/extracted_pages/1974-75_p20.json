@@ -1,0 +1,43 @@
+{
+  "page": 20,
+  "games": [
+    {
+      "date": "1975-02-15",
+      "opponent": "Oregon State",
+      "ucla_score": 74,
+      "opp_score": 62,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 74,
+          "players": [
+            {"name": "Meyers", "min": "40", "fg": "3-12", "ft": "8-11", "reb": 6, "ast": 2, "pf": 2, "pts": 14},
+            {"name": "Johnson", "min": "35.5", "fg": "2-6", "ft": "5-6", "reb": 11, "ast": 3, "pf": 2, "pts": 9},
+            {"name": "Washington", "min": "22", "fg": "6-7", "ft": "2-4", "reb": 8, "ast": 1, "pf": 4, "pts": 14},
+            {"name": "Trgovich", "min": "22", "fg": "3-9", "ft": "1-2", "reb": 1, "ast": 1, "pf": 1, "pts": 7},
+            {"name": "McCarter", "min": "36", "fg": "5-10", "ft": "8-11", "reb": 4, "ast": 4, "pf": 0, "pts": 18},
+            {"name": "Drollinger", "min": "22.5", "fg": "2-4", "ft": "4-4", "reb": 7, "ast": 3, "pf": 4, "pts": 8},
+            {"name": "Spillane", "min": "18", "fg": "0-3", "ft": "0-0", "reb": 1, "ast": 3, "pf": 3, "pts": 0},
+            {"name": "Olinde", "min": "4", "fg": "2-3", "ft": "0-0", "reb": 0, "ast": 1, "pf": 0, "pts": 4}
+          ]
+        },
+        {
+          "name": "Oregon State Beavers",
+          "score": 62,
+          "players": [
+            {"name": "Smith", "min": "34", "fg": "5-13", "ft": "0-2", "reb": 2, "ast": 0, "pf": 3, "pts": 10},
+            {"name": "Shelton", "min": "33", "fg": "5-12", "ft": "7-9", "reb": 12, "ast": 3, "pf": 5, "pts": 17},
+            {"name": "Oxsen", "min": "22", "fg": "4-7", "ft": "1-2", "reb": 2, "ast": 1, "pf": 2, "pts": 9},
+            {"name": "Neal", "min": "34.5", "fg": "3-8", "ft": "0-0", "reb": 1, "ast": 4, "pf": 4, "pts": 6},
+            {"name": "Tucker", "min": "37", "fg": "4-7", "ft": "0-0", "reb": 3, "ast": 8, "pf": 1, "pts": 8},
+            {"name": "Miller", "min": "22", "fg": "5-12", "ft": "0-0", "reb": 5, "ast": 0, "pf": 3, "pts": 10},
+            {"name": "Lee", "min": "11.5", "fg": "1-2", "ft": "0-1", "reb": 4, "ast": 0, "pf": 2, "pts": 2},
+            {"name": "Daniel", "min": "6", "fg": "0-2", "ft": "0-0", "reb": 4, "ast": 0, "pf": 4, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

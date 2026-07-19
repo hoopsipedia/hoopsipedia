@@ -1,0 +1,45 @@
+{
+  "page": 12,
+  "games": [
+    {
+      "date": "1955-01-24",
+      "opponent": "Iowa",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 66,
+          "players": [
+            {"name": "J. Miller", "fg": "10-18", "ft": "6-10", "pf": 4, "pts": 26},
+            {"name": "Short", "fg": "1-5", "ft": "2-3", "pf": 2, "pts": 4},
+            {"name": "Kelley", "fg": "8-24", "ft": "5-7", "pf": 4, "pts": 21},
+            {"name": "Ellis", "fg": "3-11", "ft": "2-3", "pf": 4, "pts": 8},
+            {"name": "Millard", "fg": "2-10", "ft": "0-0", "pf": 3, "pts": 4},
+            {"name": "Wigton", "fg": "1-4", "ft": "0-0", "pf": 3, "pts": 2},
+            {"name": "Keeling", "fg": "0-2", "ft": "1-2", "pf": 2, "pts": 1},
+            {"name": "Ropes", "fg": "0-0", "ft": "0-0", "pf": 0, "pts": 0},
+            {"name": "C. Miller", "fg": "0-0", "ft": "0-0", "pf": 0, "pts": 0},
+            {"name": "Steagall", "fg": "0-0", "ft": "0-0", "pf": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Iowa",
+          "score": 79,
+          "players": [
+            {"name": "Cain", "fg": "9-24", "ft": "2-4", "pf": 3, "pts": 20},
+            {"name": "Schoof", "fg": "1-11", "ft": "3-4", "pf": 4, "pts": 5},
+            {"name": "Logan", "fg": "4-17", "ft": "9-13", "pf": 4, "pts": 17},
+            {"name": "Seaburg", "fg": "6-12", "ft": "1-2", "pf": 4, "pts": 13},
+            {"name": "Scheuerman", "fg": "1-1", "ft": "4-5", "pf": 0, "pts": 6},
+            {"name": "Hawthorne", "fg": "2-6", "ft": "3-6", "pf": 0, "pts": 7},
+            {"name": "Davis", "fg": "4-7", "ft": "3-5", "pf": 1, "pts": 11},
+            {"name": "Johnson", "fg": "0-0", "ft": "0-0", "pf": 0, "pts": 0},
+            {"name": "George", "fg": "0-0", "ft": "0-0", "pf": 0, "pts": 0},
+            {"name": "Martol", "fg": "0-1", "ft": "0-0", "pf": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

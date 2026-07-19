@@ -1,0 +1,50 @@
+{
+  "page": 5,
+  "games": [
+    {
+      "date": "1945-12-27",
+      "opponent": "Michigan State",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 62,
+          "players": [
+            {"name": "Bowen", "fg": 3, "ft": 0, "pts": 6},
+            {"name": "Snyder", "fg": 7, "ft": 4, "pts": 18},
+            {"name": "Risen", "fg": 7, "ft": 3, "pts": 17},
+            {"name": "Amling", "fg": 0, "ft": 0, "pts": 0},
+            {"name": "Huston", "fg": 1, "ft": 0, "pts": 2},
+            {"name": "Wells", "fg": 1, "ft": 0, "pts": 2},
+            {"name": "Kuhn", "fg": 0, "ft": 2, "pts": 2},
+            {"name": "Biel", "fg": 0, "ft": 0, "pts": 0},
+            {"name": "Johnston", "fg": 0, "ft": 0, "pts": 0},
+            {"name": "Watson", "fg": 2, "ft": 0, "pts": 4},
+            {"name": "Elliot", "fg": 0, "ft": 0, "pts": 0},
+            {"name": "Underman", "fg": 4, "ft": 0, "pts": 8},
+            {"name": "Russell", "fg": 1, "ft": 1, "pts": 3}
+          ]
+        },
+        {
+          "name": "Michigan State",
+          "score": 42,
+          "players": [
+            {"name": "Granack", "fg": 2, "ft": 0, "pts": 4},
+            {"name": "Fortino", "fg": 1, "ft": 1, "pts": 3},
+            {"name": "Roberts", "fg": 3, "ft": 1, "pts": 7},
+            {"name": "Mazza", "fg": 3, "ft": 3, "pts": 9},
+            {"name": "White", "fg": 0, "ft": 0, "pts": 0},
+            {"name": "Peppler", "fg": 2, "ft": 0, "pts": 4},
+            {"name": "Cawood", "fg": 0, "ft": 0, "pts": 0},
+            {"name": "Krall", "fg": 2, "ft": 0, "pts": 4},
+            {"name": "Franke", "fg": 0, "ft": 0, "pts": 0},
+            {"name": "Jones", "fg": 1, "ft": 3, "pts": 5},
+            {"name": "Waldron", "fg": 2, "ft": 2, "pts": 6},
+            {"name": "Pjesky", "fg": 0, "ft": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

@@ -1,0 +1,43 @@
+{
+  "page": 5,
+  "games": [
+    {
+      "date": "1972-12-09",
+      "opponent": "Missouri",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 62,
+          "players": [
+            {"name": "Andreas", "fg": "7-8", "ft": "0-0", "reb": 6, "pf": 4, "pts": 14},
+            {"name": "Jackson", "fg": "0-4", "ft": "0-0", "reb": 0, "pf": 4, "pts": 0},
+            {"name": "Witte", "fg": "3-14", "ft": "3-4", "reb": 8, "pf": 4, "pts": 9},
+            {"name": "Gerhard", "fg": "0-6", "ft": "1-2", "reb": 2, "pf": 2, "pts": 1},
+            {"name": "Hornyak", "fg": "11-23", "ft": "6-8", "reb": 7, "pf": 2, "pts": 28},
+            {"name": "Wenner", "fg": "3-6", "ft": "0-1", "reb": 3, "pf": 3, "pts": 6},
+            {"name": "Wolfe", "fg": "1-1", "ft": "0-0", "reb": 1, "pf": 1, "pts": 2},
+            {"name": "Sickmenn", "fg": "1-1", "ft": "0-0", "reb": 0, "pf": 1, "pts": 2},
+            {"name": "Merchant", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Missouri",
+          "score": 69,
+          "players": [
+            {"name": "Jerman", "fg": "3-9", "ft": "3-6", "reb": 6, "pf": 4, "pts": 9},
+            {"name": "Eberhard", "fg": "7-10", "ft": "0-0", "reb": 5, "pf": 3, "pts": 14},
+            {"name": "Brown", "fg": "9-21", "ft": "6-6", "reb": 10, "pf": 3, "pts": 24},
+            {"name": "Salmon", "fg": "4-7", "ft": "0-0", "reb": 3, "pf": 3, "pts": 8},
+            {"name": "Jeffries", "fg": "3-7", "ft": "0-0", "reb": 6, "pf": 3, "pts": 6},
+            {"name": "Link", "fg": "1-1", "ft": "0-0", "reb": 1, "pf": 2, "pts": 2},
+            {"name": "King", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Turner", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Blind", "fg": "3-3", "ft": "0-0", "reb": 2, "pf": 0, "pts": 6}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

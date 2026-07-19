@@ -1,0 +1,47 @@
+{
+  "page": 20,
+  "games": [
+    {
+      "date": "1984-01-23",
+      "opponent": "Wyoming Cowboys",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 40,
+          "players": [
+            {"name": "Nelson Franse", "min": 40, "fg": "4-8", "ft": "0-0", "reb": 2, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 8},
+            {"name": "Kelvin Scarborough", "min": 1, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Phil Smith", "min": 40, "fg": "4-7", "ft": "3-5", "reb": 3, "pf": 1, "ast": 3, "to": 5, "blk": 0, "stl": 1, "pts": 11},
+            {"name": "T.J. Drake", "min": 25, "fg": "0-2", "ft": "0-0", "reb": 7, "pf": 5, "ast": 0, "to": 0, "blk": 1, "stl": 0, "pts": 0},
+            {"name": "Tim Garrett", "min": 39, "fg": "2-6", "ft": "0-0", "reb": 3, "pf": 5, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pts": 4},
+            {"name": "Hunter Greene", "min": 0, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Mike Winters", "min": 21, "fg": "2-2", "ft": "0-2", "reb": 2, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 4},
+            {"name": "Larry Markland", "min": 0, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Alan Dolensky", "min": 39, "fg": "4-7", "ft": "5-8", "reb": 2, "pf": 3, "ast": 3, "to": 6, "blk": 0, "stl": 1, "pts": 13},
+            {"name": "Richard Mettitt", "min": 0, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Richard Waugh", "min": 0, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Wyoming Cowboys",
+          "score": 38,
+          "players": [
+            {"name": "Rodney Cowens", "min": 39, "fg": "2-7", "ft": "1-1", "reb": 4, "pf": 2, "ast": 3, "to": 2, "blk": 0, "stl": 1, "pts": 5},
+            {"name": "Tony Brown", "min": 13, "fg": "0-2", "ft": "0-0", "reb": 0, "pf": 1, "ast": 1, "to": 0, "blk": 0, "stl": 1, "pts": 0},
+            {"name": "Sean Dent", "min": 13, "fg": "0-0", "ft": "0-0", "reb": 1, "pf": 2, "ast": 1, "to": 1, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Troy Waspun", "min": 40, "fg": "7-16", "ft": "1-2", "reb": 1, "pf": 1, "ast": 1, "to": 0, "blk": 0, "stl": 0, "pts": 15},
+            {"name": "David Ortiz", "min": 15, "fg": "1-4", "ft": "0-0", "reb": 1, "pf": 0, "ast": 0, "to": 1, "blk": 0, "stl": 1, "pts": 2},
+            {"name": "Tony Martin", "min": 38, "fg": "4-8", "ft": "3-4", "reb": 7, "pf": 5, "ast": 0, "to": 2, "blk": 1, "stl": 0, "pts": 11},
+            {"name": "Mike Amundson", "min": 0, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Tim Hunt", "min": 0, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Jamal Hasey", "min": 40, "fg": "1-4", "ft": "3-4", "reb": 6, "pf": 2, "ast": 0, "to": 2, "blk": 0, "stl": 0, "pts": 5},
+            {"name": "Mark Getty", "min": 6, "fg": "0-1", "ft": "0-0", "reb": 2, "pf": 1, "ast": 1, "to": 0, "blk": 0, "stl": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": [],
+  "notes": "Official NCAA box score sheet, New Mexico (visitors) at Wyoming, Laramie WY, Jan 23 1984. Points taken directly from sheet's TP column (not computed). New Mexico player sum 8+0+11+0+4+0+4+0+13+0+0=40 matches final score 40. Wyoming player sum 5+0+0+15+2+11+0+0+5+0=38 matches final score 38. Team totals rows (FG 16-32/8-15, FG 15-42/8-11) also consistent. Some handwritten player names had ambiguous letters (e.g. 'Rodney Cowens', 'Troy Waspun', 'Jamal Hasey') but numeric columns were legible enough to pass checksum."
+}

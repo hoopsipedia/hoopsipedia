@@ -1,0 +1,42 @@
+{
+  "page": 11,
+  "games": [
+    {
+      "date": "1985-01-02",
+      "opponent": "Virginia Tech",
+      "site": "Norfolk, VA",
+      "teams": [
+        {
+          "name": "Virginia Tech Hokies",
+          "score": 59,
+          "players": [
+            {"name": "Perry Young", "min": "39", "fg": "5-12", "ft": "3-3", "reb": "1", "pf": "3", "ast": "1", "to": "1", "stl": "1", "pts": "13"},
+            {"name": "Keith Colbert", "min": "36", "fg": "2-9", "ft": "1-4", "reb": "7", "pf": "4", "ast": "3", "to": "2", "stl": "1", "pts": "5"},
+            {"name": "Bob Beecher", "min": "38", "fg": "4-10", "ft": "3-4", "reb": "7", "pf": "3", "to": "3", "pts": "11"},
+            {"name": "Al Young", "min": "39", "fg": "5-8", "reb": "6", "pf": "4", "ast": "3", "to": "3", "stl": "4", "pts": "10"},
+            {"name": "Dell Curry", "min": "37", "fg": "10-16", "ft": "0-1", "reb": "2", "pf": "4", "ast": "3", "stl": "1", "pts": "20"},
+            {"name": "Tim Lewis", "min": "4", "pts": "0"},
+            {"name": "Phil Williams", "min": "1", "pts": "0"},
+            {"name": "Ray Brown", "min": "6", "fg": "0-2", "pf": "3", "pts": "0"}
+          ]
+        },
+        {
+          "name": "Virginia Cavaliers",
+          "score": 67,
+          "players": [
+            {"name": "Tom Sheehey", "min": "24", "fg": "2-6", "reb": "3", "pf": "1", "ast": "2", "to": "1", "pts": "4"},
+            {"name": "Dan Merrifield", "min": "23", "fg": "2-3", "reb": "3", "pf": "3", "ast": "2", "to": "1", "stl": "1", "pts": "4"},
+            {"name": "Olden Polynice", "min": "39", "fg": "9-10", "ft": "3-6", "reb": "6", "pf": "0", "ast": "2", "to": "2", "pts": "21"},
+            {"name": "Darrick Simms", "min": "19", "fg": "1-2", "ft": "1-1", "reb": "1", "pf": "3", "to": "1", "blk": "1", "pts": "3"},
+            {"name": "Tim Mullen", "min": "30", "fg": "4-5", "ft": "2-3", "reb": "2", "pf": "3", "ast": "2", "to": "4", "stl": "1", "pts": "10"},
+            {"name": "Mel Kennedy", "min": "26", "fg": "3-3", "ft": "5-5", "reb": "1", "pf": "3", "to": "1", "pts": "11"},
+            {"name": "Jim Miller", "min": "25", "fg": "4-8", "ft": "6-7", "reb": "2", "pf": "0", "ast": "2", "to": "3", "stl": "2", "pts": "14"},
+            {"name": "John Johnson", "min": "14", "reb": "1", "pf": "0", "to": "1", "stl": "2", "pts": "0"}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

@@ -1,0 +1,9 @@
+{
+  "page": 12,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Jan. 8, 1983 vs Maryland at Cole Field House. Official NCAA/ACC box score is largely legible: MIN, REB, PF, AST, BLK, STL columns and team-level FG/FT (and their 1st/2nd-half splits) all cross-check exactly against the printed team TOTALS row (Virginia: MIN 200, REB 49, PF 24, AST 7, BLK 5, STL 4; FG 29-61, FT 24-34). However several low-minute bench players' individual FG/FGA and FT/FTA cells (esp. Johnson, Smith, Newberg, and possibly Mullen) are faint/ambiguous, and the resulting sum of individual player points (~78-80) does not reconcile to Virginia's printed final score of 83 (short by 3-5 points). Final score (Virginia 83, Maryland 64) itself is clearly legible from the Score-by-Periods box, but per-player point checksum fails, so the game is skipped rather than transcribed with guessed values."
+    }
+  ]
+}

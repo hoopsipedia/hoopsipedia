@@ -1,0 +1,49 @@
+{
+  "page": 18,
+  "games": [
+    {
+      "date": "1989-02-01",
+      "opponent": "Miami (FL) Hurricanes",
+      "site": "Miami Arena",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 110,
+          "record_entering": "13-5",
+          "players": [
+            {"name": "Charlie Thomas", "min": 33, "fg": "11-15", "tp": "0-0", "ft": "6-8", "reb": 9, "ast": 2, "pf": 3, "to": 2, "stl": 0, "blk": 0, "pts": 28},
+            {"name": "Marvin McBurrows", "min": 10, "fg": "1-1", "tp": "0-0", "ft": "0-0", "reb": 2, "ast": 1, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Luc Longley", "min": 37, "fg": "9-18", "tp": "0-0", "ft": "4-5", "reb": 13, "ast": 3, "pf": 3, "to": 1, "stl": 0, "blk": 2, "pts": 22},
+            {"name": "Darrell McGee", "min": 31, "fg": "4-7", "tp": "0-2", "ft": "7-8", "reb": 8, "ast": 7, "pf": 0, "to": 1, "stl": 2, "blk": 0, "pts": 15},
+            {"name": "Rob Robbins", "min": 29, "fg": "6-13", "tp": "2-4", "ft": "2-2", "reb": 5, "ast": 4, "pf": 2, "to": 4, "stl": 0, "blk": 3, "pts": 16},
+            {"name": "Willie Banks", "min": 35, "fg": "5-8", "tp": "0-2", "ft": "5-5", "reb": 2, "ast": 5, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 15},
+            {"name": "Kurt Miller", "min": 8, "fg": "4-4", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 8},
+            {"name": "Rob Loeffel", "min": 9, "fg": "0-2", "tp": "0-0", "ft": "2-2", "reb": 2, "ast": 2, "pf": 2, "to": 2, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Donnie Walker", "min": 7, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 2, "ast": 1, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Chris Tower", "min": 6, "fg": "1-1", "tp": "0-0", "ft": "0-0", "reb": 2, "ast": 1, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Tony Steffan", "min": 1, "fg": "0-0", "ft": "0-0", "pts": 0},
+            {"name": "Chris O'Gorman", "min": 1, "fg": "0-1", "ft": "0-0", "pts": 0}
+          ]
+        },
+        {
+          "name": "Miami Hurricanes",
+          "score": 93,
+          "record_entering": "11-9",
+          "players": [
+            {"name": "Dennis Burns", "min": 40, "fg": "11-24", "tp": "1-2", "ft": "0-0", "reb": 8, "ast": 1, "pf": 1, "to": 2, "stl": 1, "blk": 0, "pts": 23},
+            {"name": "Joseph Randon", "min": 26, "fg": "6-9", "tp": "0-1", "ft": "3-4", "reb": 5, "ast": 2, "pf": 4, "to": 0, "stl": 1, "blk": 0, "pts": 15},
+            {"name": "Eric Brown", "min": 32, "fg": "10-20", "tp": "0-3", "ft": "5-8", "reb": 7, "ast": 3, "pf": 5, "to": 2, "stl": 1, "blk": 0, "pts": 25},
+            {"name": "Thomas Hocker", "min": 13, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Jake Morton", "min": 16, "fg": "2-7", "tp": "1-3", "ft": "0-0", "reb": 1, "ast": 0, "pf": 3, "to": 2, "stl": 2, "blk": 0, "pts": 5},
+            {"name": "Kevin Presto", "min": 30, "fg": "4-11", "tp": "3-8", "ft": "0-0", "reb": 1, "ast": 4, "pf": 4, "to": 2, "stl": 0, "blk": 0, "pts": 11},
+            {"name": "Levertis Williams", "min": 21, "fg": "0-4", "tp": "0-4", "ft": "0-0", "reb": 4, "ast": 3, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Joel Warren", "min": 22, "fg": "5-8", "tp": "2-3", "ft": "2-5", "reb": 5, "ast": 1, "pf": 4, "to": 2, "stl": 1, "blk": 0, "pts": 14}
+          ]
+        }
+      ],
+      "score_by_period": {"New Mexico": [44, 66], "Miami": [48, 45]},
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

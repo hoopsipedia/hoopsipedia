@@ -1,0 +1,9 @@
+{
+  "page": 14,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Official Western Conference box score, Ohio State (visiting, 72) at Indiana (home, 94), Jan. 18, 1954. Ohio State's rows (Kelley, Miller, Ebert, Freeman, Cook, Ellis, Wigton, Ropes, Keeling) read cleanly and the PTS column sums to 72, matching the team score. However, roughly half of Indiana's roster rows (Schlundt C, Leonard G, B. Scott G, White F, Choice F, Pisher P) are obscured by heavy highlighter/scan overlay making FG/FT/PTS digits illegible with confidence, and the per-row FT/FTM (made/attempted) column order is internally inconsistent even on legible Ohio State rows (some rows show made > attempted), so individual player FT splits could not be trusted. Since a full game requires both teams verified, skipping rather than guessing at the Indiana lineup or FT breakdowns."
+    }
+  ]
+}

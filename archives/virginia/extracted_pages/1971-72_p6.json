@@ -1,0 +1,11 @@
+{
+  "page": 6,
+  "games": [],
+  "skipped": [
+    {
+      "date": "1971-12-20",
+      "opponent": "VMI",
+      "reason": "Checksum failure for VMI: sum of individual player Pts column = 50 (4+9+9+10+0+8+5+3+2+0+0), but VMI's official final score (per Scoring by Period table and team totals row) is 51. FG/FT team totals (21-76 FG, 9-12 FT) compute to exactly 51 (2*21+9), so the discrepancy is an internal inconsistency on the printed sheet, most likely a single-digit error in one player's Pts field (Tyler's line reads FG 3-13, FT 4-5, which computes to 10 pts by the 2*fg+ft formula but is printed as 9). Re-read the page once to confirm the printed digit was indeed 9, not 10/misread. Virginia's own line (players sum to exactly 93, matching final score) checksums cleanly, but since this is a single game with a failing opposing-team checksum, the whole game is skipped per instructions rather than guessed at."
+    }
+  ]
+}

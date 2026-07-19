@@ -1,0 +1,9 @@
+{
+  "page": 16,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "01-25-97 UCLA at Louisville (Freedom Hall) — UCLA side checksums correctly (player pts sum 24+13+10+4+15+5+0=71 == final score 71), but Louisville side does not: player pts sum (10 Johnson,N + 5 Dantzler + 4 Sanders + 11 Sims + 17 Wheat + 10 Johnson,E + 16 Flynn + 0 Smith = 73) is 1 point short of Louisville's declared final score of 74 and of the team TOTALS row TP=74. The team FT-made total shown (10) also does not match the sum of individual FT-made values (9), a 1-point discrepancy consistent with the point gap — appears to be an inconsistency in the original 1997 official box score itself (team totals row vs. player rows), not a legibility issue; re-read the page once and confirmed identical digits both times. Skipped per checksum-failure rule rather than guessing which player's FT/TP cell is understated."
+    }
+  ]
+}

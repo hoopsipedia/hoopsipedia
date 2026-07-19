@@ -1,0 +1,45 @@
+{
+  "page": 31,
+  "games": [
+    {
+      "date": "1980-03-22",
+      "opponent": "Purdue Boilermakers",
+      "ucla_score": 67,
+      "opp_score": 62,
+      "teams": [
+        {
+          "name": "Purdue Boilermakers",
+          "score": 62,
+          "players": [
+            {"name": "Drake Morris", "min": "30", "fg": "5-14", "ft": "2-2", "reb": 6, "pf": 2, "ast": 2, "to": 3, "blk": 0, "stl": 0, "pts": 12},
+            {"name": "Arnette Hallman", "min": "33", "fg": "1-7", "ft": "0-0", "reb": 7, "pf": 4, "ast": 1, "to": 2, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Joe Barry Carroll", "min": "40", "fg": "8-14", "ft": "1-4", "reb": 8, "pf": 3, "ast": 1, "to": 6, "blk": 2, "stl": 0, "pts": 17},
+            {"name": "Keith Edmonson", "min": "37.5", "fg": "9-16", "ft": "5-6", "reb": 3, "pf": 3, "ast": 1, "to": 1, "blk": 0, "stl": 1, "pts": 23},
+            {"name": "Brian Walker", "min": "36.5", "fg": "1-3", "ft": "4-5", "reb": 1, "pf": 4, "ast": 5, "to": 1, "blk": 0, "stl": 2, "pts": 6},
+            {"name": "Kevin Stallings", "min": "1", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Mike Scearce", "min": "4.5", "fg": "0-2", "ft": "0-0", "reb": 0, "pf": 3, "ast": 0, "to": 1, "blk": 1, "stl": 0, "pts": 0},
+            {"name": "Roosevelt Barnes", "min": "6", "fg": "1-1", "ft": "0-0", "reb": 0, "pf": 1, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Steve Walker", "min": "12.5", "fg": "0-1", "ft": "0-0", "reb": 1, "pf": 4, "ast": 2, "to": 1, "blk": 0, "stl": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "UCLA Bruins",
+          "score": 67,
+          "players": [
+            {"name": "James Wilkes", "min": "8", "fg": "2-2", "ft": "0-0", "reb": 1, "pf": 5, "ast": 0, "to": 2, "blk": 0, "stl": 0, "pts": 4},
+            {"name": "Kiki Vandeweghe", "min": "40", "fg": "9-12", "ft": "6-6", "reb": 5, "pf": 1, "ast": 2, "to": 0, "blk": 0, "stl": 0, "pts": 24},
+            {"name": "Mike Sanders", "min": "38", "fg": "3-7", "ft": "6-6", "reb": 6, "pf": 2, "ast": 1, "to": 1, "blk": 1, "stl": 4, "pts": 12},
+            {"name": "Rod Foster", "min": "23", "fg": "4-7", "ft": "1-2", "reb": 3, "pf": 5, "ast": 1, "to": 4, "blk": 0, "stl": 0, "pts": 9},
+            {"name": "Michael Holton", "min": "32.5", "fg": "1-3", "ft": "2-2", "reb": 1, "pf": 1, "ast": 2, "to": 3, "blk": 0, "stl": 0, "pts": 4},
+            {"name": "Darrell Allums", "min": "16", "fg": "0-0", "ft": "0-2", "reb": 4, "pf": 3, "ast": 2, "to": 2, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Darren Daye", "min": "24.5", "fg": "1-5", "ft": "4-5", "reb": 3, "pf": 2, "ast": 3, "to": 0, "blk": 1, "stl": 0, "pts": 6},
+            {"name": "Gig Sims", "min": "2", "fg": "0-3", "ft": "0-0", "reb": 3, "pf": 1, "ast": 0, "to": 0, "blk": 1, "stl": 0, "pts": 0},
+            {"name": "Cliff Pruitt", "min": "16", "fg": "3-7", "ft": "2-2", "reb": 1, "pf": 1, "ast": 0, "to": 2, "blk": 0, "stl": 0, "pts": 8}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

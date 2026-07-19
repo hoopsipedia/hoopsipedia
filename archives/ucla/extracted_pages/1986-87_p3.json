@@ -1,0 +1,9 @@
+{
+  "page": 3,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Dec 6, 1986 - Pepperdine at UCLA (final 82-95, Pauley Pavilion). Pepperdine player-points sum checks out exactly (82=82). UCLA player-points sum to 94 (Miller 20 + Jackson 12 + Haley 7 + Hatcher 3 + Richardson 11 + Wilson 6 + Immel 22 + Foster 13 + 0s) vs printed FINAL of 95. Root cause: individual FT-made cells for UCLA sum to 16 but the TOTALS row shows FT made = 17, and every individual player's printed TP is internally self-consistent with their own FG/3FG/FT cells, so the 1-point gap traces to the original scorer's sheet rather than an OCR/legibility issue on one specific cell. Page was re-read once (max allowed) specifically to re-verify every UCLA FT/FTA and TP cell; the discrepancy persisted. Per ruthless-checksum policy, skipping the whole game rather than guess which single digit the original scorer mis-totaled."
+    }
+  ]
+}

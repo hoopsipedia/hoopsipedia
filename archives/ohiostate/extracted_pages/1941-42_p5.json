@@ -1,0 +1,9 @@
+{
+  "page": 5,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page shows a newspaper clipping box score for Ohio State (45) at Stanford (60), Berkeley CA, 12/29/1941 ('Buck Defeats At Three In a Row'), but the scanned newsprint table is too small/low-resolution to transcribe player lines with confidence. Column headers read as 'R. F. PF. Pts.' (not FG made-attempted / FT made-attempted as expected for this era's typical format), and summed player points do not reconcile with the printed team totals (Ohio State player pts sum to roughly 39 vs. official final of 45; several digits, e.g. one player row showing an implausible '40' in the fouls column, are illegible/likely OCR-garbled). Given the checksum failure and column ambiguity, skipping rather than guessing at values."
+    }
+  ]
+}

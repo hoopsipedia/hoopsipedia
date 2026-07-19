@@ -1,0 +1,43 @@
+{
+  "page": 26,
+  "games": [
+    {
+      "date": "1994-03-10",
+      "opponent": "Oregon State",
+      "ucla_score": 78,
+      "opp_score": 67,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 78,
+          "players": [
+            {"name": "Charles O'Bannon", "min": 27, "fg": "8-11", "ft": "0-2", "tp": "2-2", "reb": 9, "ast": 1, "to": 3, "blk": 4, "stl": 0, "pf": 5, "pts": 18},
+            {"name": "Ed O'Bannon", "min": 38, "fg": "4-14", "ft": "7-8", "tp": "0-0", "reb": 5, "ast": 1, "to": 4, "blk": 0, "stl": 3, "pf": 3, "pts": 15},
+            {"name": "George Zidek", "min": 28, "fg": "6-11", "ft": "6-8", "tp": "0-0", "reb": 14, "ast": 1, "to": 3, "blk": 0, "stl": 1, "pf": 4, "pts": 18},
+            {"name": "Tyus Edney", "min": 38, "fg": "7-12", "ft": "2-2", "tp": "1-2", "reb": 3, "ast": 3, "to": 3, "blk": 0, "stl": 0, "pf": 1, "pts": 17},
+            {"name": "Shon Tarver", "min": 37, "fg": "2-7", "ft": "4-8", "tp": "0-1", "reb": 6, "ast": 2, "to": 2, "blk": 0, "stl": 0, "pf": 3, "pts": 8},
+            {"name": "Cameron Dollar", "min": 23, "fg": "1-3", "ft": "0-0", "tp": "0-0", "reb": 4, "ast": 3, "to": 1, "blk": 0, "stl": 1, "pf": 1, "pts": 2},
+            {"name": "Rodney Zimmerman", "min": 5, "fg": "0-1", "ft": "0-0", "tp": "0-0", "reb": 2, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pf": 1, "pts": 0},
+            {"name": "Marquis Burns", "min": 4, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 2, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pf": 1, "pts": 0}
+          ]
+        },
+        {
+          "name": "Oregon State Beavers",
+          "score": 67,
+          "players": [
+            {"name": "Brent Barry", "min": 38, "fg": "11-19", "ft": "6-6", "tp": "3-6", "reb": 8, "ast": 2, "to": 3, "blk": 0, "stl": 1, "pf": 5, "pts": 31},
+            {"name": "Kareem Anderson", "min": 34, "fg": "2-11", "ft": "0-0", "tp": "0-4", "reb": 6, "ast": 4, "to": 4, "blk": 0, "stl": 1, "pf": 2, "pts": 4},
+            {"name": "Jerohn Brown", "min": 31, "fg": "2-7", "ft": "1-2", "tp": "0-0", "reb": 4, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pf": 4, "pts": 5},
+            {"name": "Stephane Brown", "min": 39, "fg": "6-15", "ft": "6-8", "tp": "0-2", "reb": 7, "ast": 3, "to": 4, "blk": 0, "stl": 2, "pf": 5, "pts": 18},
+            {"name": "David Drakeford", "min": 38, "fg": "2-9", "ft": "4-9", "tp": "0-5", "reb": 3, "ast": 0, "to": 3, "blk": 0, "stl": 1, "pf": 1, "pts": 8},
+            {"name": "David Brown", "min": 8, "fg": "0-3", "ft": "1-2", "tp": "0-2", "reb": 2, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pf": 1, "pts": 1},
+            {"name": "Tony Rocklin", "min": 11, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 1, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pf": 2, "pts": 0},
+            {"name": "Trent Inglesby", "min": 1, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pf": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

@@ -1,0 +1,9 @@
+{
+  "page": 19,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page is a newspaper clipping (article 'Bucks Are Beaten by Illini Five', Champaign IL, Feb. 24 1941, Illinois 53 - Ohio State 36) with two box-score tables (Illinois and Ohio State) in tiny newsprint. Team header/score line (OHIO 36, OPP 53, Captain Mickelson, Manager Bolton; game log row: Basketball 1941 Feb 24 Illinois Urbana Olsen) is legible, and the team totals rows are legible enough to roughly infer (Illinois FG 22 / FT 9 / PF 10 / Pts 53; Ohio State FG 14 / FT 8 / PF 12 / Pts 36, both consistent with the final score via pts=2*fg+ft), but the individual player rows (Drish, Shapiro, Dixon, Mathisen, Shreyl, Wukovits, Richmond for Illinois; Fisher, Mickelson, McLain, Young, Grossman, Miller, Dawson, Graf, Geswein for Ohio State) are too small/blurry to read individual FG/FT/PF digits with confidence. Fabricating per-player numbers that merely happen to sum to the known team total would risk inventing values, so the whole game is skipped rather than transcribed."
+    }
+  ]
+}

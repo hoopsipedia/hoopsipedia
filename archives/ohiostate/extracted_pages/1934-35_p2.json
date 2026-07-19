@@ -1,0 +1,41 @@
+{
+  "page": 2,
+  "games": [
+    {
+      "date": "1934-12-12",
+      "opponent": "Marietta",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 32,
+          "players": [
+            {"name": "Wilson", "pts": 2},
+            {"name": "Dye", "pts": 7},
+            {"name": "Whitlinger", "pts": 6},
+            {"name": "Laybourne", "pts": 4},
+            {"name": "Thomas", "pts": 6},
+            {"name": "Boitner", "pts": 4},
+            {"name": "Smith", "pts": 0},
+            {"name": "Peters", "pts": 2},
+            {"name": "Rees", "pts": 1}
+          ]
+        },
+        {
+          "name": "Marietta",
+          "score": 21,
+          "players": [
+            {"name": "Bickel", "pts": 6},
+            {"name": "Bowser", "pts": 0},
+            {"name": "Fenton", "pts": 5},
+            {"name": "Ball", "pts": 1},
+            {"name": "Summers", "pts": 4},
+            {"name": "Ziegler", "pts": 2},
+            {"name": "Clark", "pts": 3}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

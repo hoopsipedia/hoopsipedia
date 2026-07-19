@@ -1,0 +1,9 @@
+{
+  "page": 2,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "1965-12-04 Virginia (73) at Kentucky (99), Charlottesville, VA (Officials: Michalic, Scobey; Attendance 8000). Sheet is a clean typed box score, fully legible for both teams. Virginia's line checksums perfectly: individual FG made sum 27 (matches team 27-73), FT made sum 19 (matches team 19-33), and individual pts sum = 5+27+10+9+6+2+12+2+0 = 73, exactly matching Virginia's final score of 73 (2*27+19=73). Kentucky FAILS checksum: individual FG made sums to 41 (matches team line 41-84), but individual FT made sums to only 15 (8+1+3+2+0+0+0+0+0+0+1) while the printed team FT line reads 17-24 (attempted 24 does match the individual sum, but made does not). Consequently individual player points (22+29+11+4+22+0+4+0+2+2+1 = 97) do not equal Kentucky's stated final score of 99 (44+55 by half), a 2-point gap. Each Kentucky player's own pts value is internally consistent with 2*FG_made+FT_made for that row, so the discrepancy appears to be an error in the original 1965 team-total line (or an OCR-ambiguous digit in one player's FT that I could not resolve with confidence after re-inspection), not a simple misread on a single field. Rather than guess which player's FT is actually 2 higher, skipping the whole game per instructions since one team fails checksum."
+    }
+  ]
+}

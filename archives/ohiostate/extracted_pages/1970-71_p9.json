@@ -1,0 +1,42 @@
+{
+  "page": 9,
+  "games": [
+    {
+      "date": "1970-12-30",
+      "opponent": "Indiana Hoosiers",
+      "location": "Portland, Ore.",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 77,
+          "players": [
+            {"name": "Wagar", "pos": "F", "fg": "4-9", "ft": "2-2", "reb": 3, "pf": 4, "pts": 10},
+            {"name": "Minor", "pos": "F", "fg": "9-12", "ft": "0-0", "reb": 3, "pf": 2, "pts": 18},
+            {"name": "Witte", "pos": "C", "fg": "6-10", "ft": "1-2", "reb": 5, "pf": 5, "pts": 13},
+            {"name": "Hornyak", "pos": "G", "fg": "7-13", "ft": "1-2", "reb": 5, "pf": 3, "pts": 15},
+            {"name": "Cleamons", "pos": "G", "fg": "5-12", "ft": "3-4", "reb": 8, "pf": 3, "pts": 13},
+            {"name": "Siekmann", "pos": "F", "fg": "3-6", "ft": "0-0", "reb": 0, "pf": 0, "pts": 6},
+            {"name": "Merchant", "pos": "G", "fg": "1-2", "ft": "0-0", "reb": 1, "pf": 0, "pts": 2}
+          ]
+        },
+        {
+          "name": "Indiana Hoosiers",
+          "score": 85,
+          "players": [
+            {"name": "Wright", "pos": "F", "fg": "7-10", "ft": "0-6", "reb": 4, "pf": 1, "pts": 14},
+            {"name": "Downing", "pos": "F", "fg": "0-1", "ft": "0-1", "reb": 2, "pf": 0, "pts": 0},
+            {"name": "McGinnis", "pos": "C", "fg": "8-17", "ft": "3-7", "reb": 17, "pf": 2, "pts": 19},
+            {"name": "Harris", "pos": "G", "fg": "11-19", "ft": "2-3", "reb": 3, "pf": 2, "pts": 24},
+            {"name": "Ritter", "pos": "G", "fg": "1-3", "ft": "0-0", "reb": 7, "pf": 0, "pts": 2},
+            {"name": "Ford", "pos": "G", "fg": "7-13", "ft": "4-4", "reb": 2, "pf": 2, "pts": 18},
+            {"name": "Daniels", "pos": "F", "fg": "1-3", "ft": "0-0", "reb": 2, "pf": 0, "pts": 2},
+            {"name": "Wilson", "pos": "G", "fg": "3-5", "ft": "0-0", "reb": 2, "pf": 2, "pts": 6}
+          ]
+        }
+      ],
+      "checksum_ok": true,
+      "notes": "Team totals row also listed on sheet: OSU FG 35-64, FT 7-10, PF 17, Reb 30 (incl. 5 team reb), Pts 77; Indiana FG 38-71, FT 9-21, PF 10, Reb 48 (incl. 9 team reb), Pts 85. Halftime score OSU 37-40=77, Indiana 42-43=85. Officials Jack Johnson and Jack Ditty; attendance 6,016."
+    }
+  ],
+  "skipped": []
+}

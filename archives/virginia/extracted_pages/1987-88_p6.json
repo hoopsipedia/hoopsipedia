@@ -1,0 +1,9 @@
+{
+  "page": 6,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Dec 12, 1987 — Virginia at Arkansas (Razorback Box Score, final Virginia 52, Arkansas 66). Virginia's line reconciles cleanly (sum of player TP = 52 = final score). However Arkansas's box score has a crossed-out/heavily struck-through line for No. 25 Tim Scott (g) whose FG/FT/TP digits are illegible under the strikethrough; summing the remaining 10 legible Arkansas players' TP gives only 56 vs the official final of 66 (~10 pts unaccounted for), failing the team checksum. Rather than guess Scott's stat line, the whole game is skipped since both teams' box scores are required and Arkansas's does not reconcile without fabricating data. Also note: Virginia's Kenny Turner FT line (handwritten '1-2' amid a smudged rebound cell) was inferred from points arithmetic (2*FG+FT=TP) rather than read with full confidence, though it did not affect the team-level checksum."
+    }
+  ]
+}

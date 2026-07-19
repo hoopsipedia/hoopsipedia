@@ -1,0 +1,51 @@
+{
+  "page": 26,
+  "games": [
+    {
+      "date": "1977-02-26",
+      "opponent": "California",
+      "ucla_score": 91,
+      "opp_score": 69,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 91,
+          "players": [
+            {"name": "Greenwood", "min": 27, "fg": "6-15", "ft": "2-2", "reb": 14, "pf": 4, "ast": 0, "pts": 14},
+            {"name": "Johnson", "min": 36, "fg": "17-22", "ft": "3-5", "reb": 13, "pf": 4, "ast": 3, "pts": 37},
+            {"name": "Sims", "min": 22, "fg": "3-6", "ft": "1-1", "reb": 3, "pf": 4, "ast": 2, "pts": 7},
+            {"name": "Hamilton", "min": 33, "fg": "3-8", "ft": "1-1", "reb": 3, "pf": 3, "ast": 4, "pts": 7},
+            {"name": "Spillane", "min": 29, "fg": "6-10", "ft": "2-2", "reb": 1, "pf": 5, "ast": 5, "pts": 14},
+            {"name": "Vroman", "min": 6, "fg": "2-4", "ft": "0-0", "reb": 2, "pf": 1, "ast": 0, "pts": 4},
+            {"name": "Vandeweghe", "min": 15, "fg": "3-6", "ft": "0-1", "reb": 5, "pf": 4, "ast": 1, "pts": 6},
+            {"name": "Townsend", "min": 15, "fg": "0-3", "ft": "0-1", "reb": 0, "pf": 1, "ast": 1, "pts": 0},
+            {"name": "Wilkes", "min": 6, "fg": "1-2", "ft": "0-0", "reb": 2, "pf": 0, "ast": 0, "pts": 2},
+            {"name": "Olinde", "min": 7, "fg": "0-1", "ft": "0-0", "reb": 2, "pf": 1, "ast": 0, "pts": 0},
+            {"name": "Holland", "min": 3, "fg": "0-3", "ft": "0-1", "reb": 1, "pf": 1, "ast": 0, "pts": 0},
+            {"name": "Thomas", "min": 1, "fg": "0-4", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "California",
+          "score": 69,
+          "players": [
+            {"name": "True", "min": 25, "fg": "2-7", "ft": "1-2", "reb": 9, "pf": 3, "ast": 3, "pts": 5},
+            {"name": "Murry", "min": 33, "fg": "5-13", "ft": "5-7", "reb": 7, "pf": 4, "ast": 2, "pts": 15},
+            {"name": "Schneiderjohn", "min": 38, "fg": "12-17", "ft": "4-5", "reb": 7, "pf": 1, "ast": 0, "pts": 28},
+            {"name": "Miller", "min": 12, "fg": "1-4", "ft": "3-4", "reb": 0, "pf": 1, "ast": 1, "pts": 5},
+            {"name": "Caselli", "min": 31, "fg": "3-4", "ft": "0-1", "reb": 1, "pf": 0, "ast": 0, "pts": 6},
+            {"name": "Ransom", "min": 26, "fg": "1-10", "ft": "2-3", "reb": 2, "pf": 5, "ast": 2, "pts": 4},
+            {"name": "Griffith", "min": 19, "fg": "3-6", "ft": "0-0", "reb": 1, "pf": 2, "ast": 0, "pts": 6},
+            {"name": "Whitfield", "min": 7, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 1, "pts": 0},
+            {"name": "Singleton", "min": 3, "fg": "0-1", "ft": "0-0", "reb": 0, "pf": 0, "ast": 1, "pts": 0},
+            {"name": "Gillespie", "min": 2, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "pts": 0},
+            {"name": "Creighton", "min": 2, "fg": "0-0", "ft": "0-2", "reb": 1, "pf": 0, "ast": 0, "pts": 0},
+            {"name": "Fassette", "min": 2, "fg": "0-0", "ft": "0-2", "reb": 1, "pf": 0, "ast": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

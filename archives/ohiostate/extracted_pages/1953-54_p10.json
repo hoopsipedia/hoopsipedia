@@ -1,0 +1,48 @@
+{
+  "page": 10,
+  "games": [
+    {
+      "date": "1954-01-06",
+      "opponent": "Pittsburgh",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 74,
+          "players": [
+            {"name": "Kelley", "fg": "6-15", "ft": "1-2", "pf": 4, "pts": 13},
+            {"name": "Wigton", "fg": "1-5", "ft": "2-2", "pf": 3, "pts": 4},
+            {"name": "Ebert", "fg": "6-20", "ft": "9-12", "pf": 0, "pts": 21},
+            {"name": "Freeman", "fg": "9-25", "ft": "4-5", "pf": 2, "pts": 22},
+            {"name": "Cook", "fg": "4-10", "ft": "2-5", "pf": 2, "pts": 10},
+            {"name": "Paumier", "fg": "0-0", "ft": "0-0", "pf": 0, "pts": 0},
+            {"name": "Ropes", "fg": "0-5", "ft": "1-2", "pf": 2, "pts": 1},
+            {"name": "Ellis", "fg": "0-0", "ft": "0-0", "pf": 3, "pts": 0},
+            {"name": "Keeling", "fg": "1-2", "ft": "0-0", "pf": 3, "pts": 2},
+            {"name": "Keller", "fg": "0-1", "ft": "0-0", "pf": 0, "pts": 0},
+            {"name": "Short", "fg": "0-0", "ft": "1-2", "pf": 0, "pts": 1},
+            {"name": "Bagley", "fg": "0-1", "ft": "0-0", "pf": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Pittsburgh Panthers",
+          "score": 55,
+          "players": [
+            {"name": "Pavlick", "fg": "3-14", "ft": "5-6", "pf": 3, "pts": 11},
+            {"name": "Artman", "fg": "3-15", "ft": "2-5", "pf": 3, "pts": 8},
+            {"name": "Deitrick", "fg": "0-5", "ft": "2-2", "pf": 3, "pts": 2},
+            {"name": "Penwick", "fg": "8-17", "ft": "1-6", "pf": 2, "pts": 17},
+            {"name": "Burch", "fg": "3-8", "ft": "2-3", "pf": 3, "pts": 8},
+            {"name": "Duessel", "fg": "1-7", "ft": "0-2", "pf": 2, "pts": 2},
+            {"name": "Lepkowski", "fg": "0-4", "ft": "1-1", "pf": 1, "pts": 1},
+            {"name": "Zimmovan", "fg": "2-4", "ft": "0-0", "pf": 0, "pts": 4},
+            {"name": "Matthews", "fg": "1-4", "ft": "0-4", "pf": 1, "pts": 2},
+            {"name": "Novakovich", "fg": "0-3", "ft": "0-0", "pf": 0, "pts": 0},
+            {"name": "Resutek", "fg": "0-1", "ft": "0-0", "pf": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

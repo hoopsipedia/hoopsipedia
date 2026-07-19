@@ -1,0 +1,37 @@
+{
+  "page": 7,
+  "games": [
+    {
+      "date": "1931-01-24",
+      "opponent": "Northwestern",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 22,
+          "players": [
+            {"name": "Ervin", "fg": "2", "ft": "1", "pf": 3, "pts": 5},
+            {"name": "Lewis", "fg": "2", "ft": "0", "pf": 4, "pts": 4},
+            {"name": "Hinchman", "fg": "2", "ft": "1", "pf": 4, "pts": 5},
+            {"name": "Fesler", "fg": "4", "ft": "0", "pf": 1, "pts": 8},
+            {"name": "Larkins", "fg": "0", "ft": "0", "pf": 0, "pts": 0},
+            {"name": "Mattison", "fg": "0", "ft": "0", "pf": 1, "pts": 0},
+            {"name": "Hoffer", "fg": "0", "ft": "0", "pf": 2, "pts": 0}
+          ]
+        },
+        {
+          "name": "Northwestern",
+          "score": 35,
+          "players": [
+            {"name": "Riel", "fg": "5", "ft": "0", "pf": 2, "pts": 10},
+            {"name": "Rieff", "fg": "4", "ft": "0", "pf": 0, "pts": 8},
+            {"name": "McCarnes", "fg": "4", "ft": "0", "pf": 1, "pts": 8},
+            {"name": "Marshall", "fg": "2", "ft": "1", "pf": 1, "pts": 5},
+            {"name": "Smith", "fg": "1", "ft": "2", "pf": 3, "pts": 4}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

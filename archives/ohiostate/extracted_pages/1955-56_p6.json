@@ -1,0 +1,9 @@
+{
+  "page": 6,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Ohio State vs St. Louis, 1955-12-17 (Official Western Conference box score, page 6). Ohio State (visiting) player rows are individually internally consistent (each player's PTS = 2*FG_made + FT_made matches the row's printed PTS), but the sum of Ohio State player PTS (13+4+11+18+39+3+2+0+0+0+0 = 90) does not equal the sheet's recorded team Score/Totals of 89 -- checksum fails by 1 point, traceable to the Totals row FT figure (27) being 1 less than the sum of individual FT values (28). Additionally, the Short F row has multiple cells (FGA, PTS, Reb) obscured by ink blots/marks and cannot be read with confidence. On the St. Louis (home) side, several rows (Alcorn, Smith, Mimlitz, Uelk, Millenbine, Stipanovich) have shaded/overlapping print making individual digits (especially FG and PTS) ambiguous, and at least one row (Stipanovich F, FG 0 FT 0 but PTS printed as non-zero) is internally inconsistent, so a reliable player-level transcription and checksum for St. Louis could not be produced either. Per instructions to be ruthless about skipping rather than guessing, the entire game is skipped despite two re-reads of the page."
+    }
+  ]
+}

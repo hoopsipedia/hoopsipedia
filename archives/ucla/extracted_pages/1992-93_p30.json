@@ -1,0 +1,44 @@
+{
+  "page": 30,
+  "games": [
+    {
+      "date": "1993-03-11",
+      "opponent": "Arizona State",
+      "ucla_score": 77,
+      "opp_score": 74,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 77,
+          "players": [
+            {"name": "Butler", "min": "34:09", "fg": "5-8", "tp": "0-1", "ft": "0-0", "reb": 8, "ast": 4, "pf": 1, "to": 4, "stl": 1, "blk": 1, "pts": 10},
+            {"name": "O'Bannon", "min": "35:53", "fg": "7-11", "tp": "1-1", "ft": "0-2", "reb": 10, "ast": 3, "pf": 2, "to": 3, "stl": 0, "blk": 2, "pts": 15},
+            {"name": "Petruska", "min": "31:23", "fg": "5-8", "tp": "0-0", "ft": "3-3", "reb": 8, "ast": 0, "pf": 3, "to": 2, "stl": 2, "blk": 0, "pts": 13},
+            {"name": "Edney", "min": "39:02", "fg": "6-12", "tp": "1-1", "ft": "4-4", "reb": 6, "ast": 4, "pf": 4, "to": 8, "stl": 0, "blk": 0, "pts": 17},
+            {"name": "Tarver", "min": "36:38", "fg": "8-12", "tp": "1-2", "ft": "1-2", "reb": 3, "ast": 6, "pf": 1, "to": 3, "stl": 3, "blk": 0, "pts": 18},
+            {"name": "Burns", "min": "9:05", "fg": "0-1", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 1, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Zimmerman", "min": "12:44", "fg": "2-2", "tp": "0-0", "ft": "0-0", "reb": 4, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Dempsey", "min": "2:05", "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Arizona State Sun Devils",
+          "score": 74,
+          "players": [
+            {"name": "Fontana", "min": "35:07", "fg": "4-12", "tp": "0-0", "ft": "2-4", "reb": 7, "ast": 2, "pf": 6, "to": 1, "stl": 1, "blk": 0, "pts": 10},
+            {"name": "Riley", "min": "28:38", "fg": "5-12", "tp": "2-7", "ft": "0-0", "reb": 6, "ast": 2, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 12},
+            {"name": "Neal", "min": "37:02", "fg": "7-9", "tp": "0-0", "ft": "0-0", "reb": 12, "ast": 4, "pf": 4, "to": 4, "stl": 2, "blk": 0, "pts": 14},
+            {"name": "Capers", "min": "29:00", "fg": "4-12", "tp": "1-2", "ft": "2-2", "reb": 0, "ast": 7, "pf": 2, "to": 3, "stl": 3, "blk": 0, "pts": 11},
+            {"name": "Smith", "min": "37:18", "fg": "4-17", "tp": "4-15", "ft": "4-4", "reb": 2, "ast": 4, "pf": 4, "to": 0, "stl": 0, "blk": 0, "pts": 16},
+            {"name": "Versher", "min": "18:22", "fg": "4-12", "tp": "3-8", "ft": "0-2", "reb": 1, "ast": 1, "pf": 0, "to": 0, "stl": 0, "blk": 1, "pts": 11},
+            {"name": "Whitlock", "min": "6:42", "fg": "0-2", "tp": "0-1", "ft": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 0, "stl": 1, "blk": 0, "pts": 0},
+            {"name": "Bacon", "min": "6:58", "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Conlisk", "min": "0:53", "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

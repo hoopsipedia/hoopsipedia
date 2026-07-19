@@ -1,0 +1,46 @@
+{
+  "page": 3,
+  "games": [
+    {
+      "date": "1974-12-07",
+      "opponent": "New Mexico State Aggies",
+      "site": "Las Cruces, N.M.",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 59,
+          "players": [
+            {"name": "Ricky Williams", "min": 7, "fg": "0-1", "ft": "2-3", "ast": 1, "pf": 0, "to": 0, "pts": 2},
+            {"name": "Norm Cacy", "min": 13, "fg": "4-5", "ft": "0-2", "ast": 0, "pf": 3, "to": 1, "pts": 8},
+            {"name": "Mike Patterson", "min": 9, "fg": "0-0", "ft": "1-3", "ast": 1, "pf": 2, "to": 2, "pts": 1},
+            {"name": "Pat King", "min": 38, "fg": "1-6", "ft": "5-7", "ast": 4, "pf": 4, "to": 3, "pts": 7},
+            {"name": "Mike Koller", "min": 16, "fg": "1-2", "ft": "0-0", "ast": 1, "pf": 2, "to": 3, "pts": 2},
+            {"name": "Dan Davis", "min": 8, "fg": "1-3", "ft": "1-2", "ast": 0, "pf": 2, "to": 1, "pts": 3},
+            {"name": "Bob Toppert", "min": 27, "fg": "4-9", "ft": "2-2", "ast": 0, "pf": 5, "to": 3, "pts": 10},
+            {"name": "Bruce Battle", "min": 28, "fg": "2-8", "ft": "6-6", "ast": 2, "pf": 2, "to": 3, "pts": 10},
+            {"name": "Rich Pokorski", "min": 32, "fg": "3-9", "ft": "0-0", "ast": 1, "pf": 3, "to": 3, "pts": 6},
+            {"name": "Bill Hagins", "min": 22, "fg": "5-8", "ft": "0-1", "ast": 0, "pf": 5, "to": 3, "pts": 10}
+          ]
+        },
+        {
+          "name": "New Mexico State Aggies",
+          "score": 65,
+          "players": [
+            {"name": "George Pannell", "min": 1, "fg": "0-0", "ft": "0-0", "ast": 0, "pf": 0, "to": 0, "pts": 0},
+            {"name": "John DiBiase", "min": 32, "fg": "1-5", "ft": "0-1", "ast": 4, "pf": 3, "to": 2, "pts": 2},
+            {"name": "Bill Allen", "min": 31, "fg": "3-9", "ft": "2-2", "ast": 0, "pf": 4, "to": 2, "pts": 8},
+            {"name": "Dexter Hawkins", "min": 15, "fg": "1-2", "ft": "0-2", "ast": 0, "pf": 2, "to": 2, "pts": 2},
+            {"name": "Danny Lopez", "min": 8, "fg": "1-1", "ft": "0-0", "ast": 0, "pf": 2, "to": 2, "pts": 2},
+            {"name": "Alan Graham", "min": 31, "fg": "1-2", "ft": "7-8", "ast": 0, "pf": 5, "to": 2, "pts": 9},
+            {"name": "Jim Bostic", "min": 39, "fg": "6-17", "ft": "2-4", "ast": 1, "pf": 4, "to": 6, "pts": 14},
+            {"name": "Russell Letz", "min": 18, "fg": "5-7", "ft": "3-5", "ast": 2, "pf": 4, "to": 2, "pts": 13},
+            {"name": "Richard Robinson", "min": 25, "fg": "6-10", "ft": "3-4", "ast": 4, "pf": 4, "to": 2, "pts": 15}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": [],
+  "notes": "Points computed/verified as 2*FG_made + FT_made where consistent with printed PTS column (pre-3pt era, no tp column). Player-points sum matches each team's own box-score Totals row exactly (UNM 59, NMSU 65) -- this checksum passes. NOTE: the sheet's separate 'Score By Periods' summary box lists the two teams' final scores swapped relative to each team's own box totals (it shows UNM 65 / NMSU 59), i.e. a likely scorer's-sheet labeling inconsistency between the two boxes; final scores used here (UNM 59, NMSU 65) are taken from each team's own Md/Att/PTS box since those independently checksum against summed player points. Minutes, assists, and turnovers for both teams were cross-validated against each team's printed Totals row (all sums matched exactly, including total minutes = 200 for each team). Rebounds (Off/Def/Tot columns) were present on the sheet but omitted per-player: handwriting/scan resolution made individual rebound digits unreliable to distinguish from adjacent columns, and per-player sums did not cleanly reconcile against the team rebound totals, so they were dropped rather than risk invented values. PF values are included and closely validated (NMSU sum=28 matches team total exactly; UNM sum=28 vs team total 29, off by one, likely single-digit misread)."
+}

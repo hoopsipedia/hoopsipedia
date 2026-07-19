@@ -1,0 +1,50 @@
+{
+  "page": 27,
+  "games": [
+    {
+      "date": "1985-03-07",
+      "opponent": "Oregon State",
+      "ucla_score": 59,
+      "opp_score": 51,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 59,
+          "players": [
+            {"name": "Maloncon", "min": 22, "fg": "0-1", "ft": "0-0", "reb": 2, "ast": 0, "pf": 3, "to": 1, "blk": 1, "stl": 0, "pts": 0},
+            {"name": "Miller", "min": 39, "fg": "6-13", "ft": "11-13", "reb": 7, "ast": 2, "pf": 2, "to": 2, "blk": 0, "stl": 1, "pts": 23},
+            {"name": "Wright", "min": 39, "fg": "3-6", "ft": "3-4", "reb": 6, "ast": 2, "pf": 2, "to": 1, "blk": 2, "stl": 1, "pts": 9},
+            {"name": "Hatcher", "min": 25, "fg": "2-4", "ft": "2-2", "reb": 1, "ast": 0, "pf": 2, "to": 3, "blk": 1, "stl": 3, "pts": 6},
+            {"name": "Miguel", "min": 34, "fg": "4-6", "ft": "11-12", "reb": 2, "ast": 3, "pf": 2, "to": 5, "blk": 2, "stl": 0, "pts": 19},
+            {"name": "Gaines", "min": 13, "fg": "0-2", "ft": "0-0", "reb": 2, "ast": 1, "pf": 1, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Immel", "min": 7, "fg": "0-1", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "to": 1, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Butler", "min": 17, "fg": "1-1", "ft": "0-1", "reb": 3, "ast": 0, "pf": 5, "to": 1, "blk": 0, "stl": 1, "pts": 2},
+            {"name": "Haley", "min": 0, "fg": "0-1", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "blk": 0, "stl": 1, "pts": 0},
+            {"name": "Jones", "min": 1, "fg": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Dunlap", "min": 0, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Morris", "min": 1, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Oregon State Beavers",
+          "score": 51,
+          "players": [
+            {"name": "Green", "min": 38, "fg": "8-13", "ft": "1-4", "reb": 11, "ast": 0, "pf": 1, "to": 2, "blk": 1, "stl": 1, "pts": 17},
+            {"name": "Miller", "min": 25, "fg": "2-4", "ft": "0-0", "reb": 4, "ast": 1, "pf": 3, "to": 4, "blk": 0, "stl": 1, "pts": 4},
+            {"name": "Woodside", "min": 38, "fg": "3-8", "ft": "0-0", "reb": 4, "ast": 3, "pf": 3, "to": 4, "blk": 0, "stl": 1, "pts": 6},
+            {"name": "Knox", "min": 28, "fg": "2-6", "ft": "0-0", "reb": 2, "ast": 1, "pf": 4, "to": 1, "blk": 0, "stl": 0, "pts": 4},
+            {"name": "Flowers", "min": 38, "fg": "5-10", "ft": "4-4", "reb": 1, "ast": 4, "pf": 3, "to": 2, "blk": 1, "stl": 0, "pts": 14},
+            {"name": "Darrah", "min": 15, "fg": "0-5", "ft": "0-2", "reb": 3, "ast": 1, "pf": 5, "to": 1, "blk": 0, "stl": 3, "pts": 0},
+            {"name": "Houston", "min": 10, "fg": "1-4", "ft": "0-0", "reb": 1, "ast": 1, "pf": 2, "to": 0, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Hales", "min": 3, "fg": "0-1", "ft": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Thomas", "min": 1, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Giusti", "min": 2, "fg": "2-4", "ft": "0-1", "reb": 3, "ast": 0, "pf": 0, "to": 1, "blk": 1, "stl": 1, "pts": 4},
+            {"name": "Thierry", "min": 2, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

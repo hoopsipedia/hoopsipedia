@@ -1,0 +1,48 @@
+{
+  "page": 25,
+  "games": [
+    {
+      "date": "1992-03-01",
+      "opponent": "Duke",
+      "ucla_score": 65,
+      "opp_score": 75,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 65,
+          "players": [
+            {"name": "MacLean", "min": 36, "fg": "6-17", "tp": "0-2", "ft": "8-8", "reb": 10, "ast": 1, "to": 3, "blk": 0, "stl": 0, "pf": 4, "pts": 20},
+            {"name": "Murray", "min": 34, "fg": "9-18", "tp": "0-5", "ft": "4-4", "reb": 8, "ast": 0, "to": 1, "blk": 0, "stl": 3, "pf": 4, "pts": 22},
+            {"name": "Butler", "min": 30, "fg": "2-9", "tp": "0-2", "ft": "0-0", "reb": 8, "ast": 2, "to": 2, "blk": 0, "stl": 3, "pf": 5, "pts": 4},
+            {"name": "Madkins", "min": 31, "fg": "4-7", "tp": "0-2", "ft": "0-0", "reb": 2, "ast": 4, "to": 4, "blk": 0, "stl": 3, "pf": 4, "pts": 8},
+            {"name": "Tarver", "min": 18, "fg": "0-6", "tp": "0-0", "ft": "1-2", "reb": 1, "ast": 1, "to": 1, "blk": 0, "stl": 1, "pf": 3, "pts": 1},
+            {"name": "Zimmerman", "min": 4, "fg": "0-1", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pf": 1, "pts": 0},
+            {"name": "Martin", "min": 15, "fg": "0-3", "tp": "0-1", "ft": "3-3", "reb": 1, "ast": 1, "to": 2, "blk": 1, "stl": 0, "pf": 1, "pts": 3},
+            {"name": "O'Bannon", "min": 18, "fg": "0-4", "tp": "0-2", "ft": "0-0", "reb": 5, "ast": 7, "to": 1, "blk": 1, "stl": 1, "pf": 3, "pts": 0},
+            {"name": "Edney", "min": 14, "fg": "3-4", "tp": "0-0", "ft": "1-1", "reb": 0, "ast": 2, "to": 1, "blk": 0, "stl": 1, "pf": 1, "pts": 7},
+            {"name": "Lanier", "min": 0, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pf": 0, "pts": 0},
+            {"name": "Zidek", "min": 0, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pf": 0, "pts": 0},
+            {"name": "Elkind", "min": 0, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pf": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Duke",
+          "score": 75,
+          "players": [
+            {"name": "Davis", "min": 34, "fg": "6-11", "tp": "0-1", "ft": "7-10", "reb": 11, "ast": 4, "to": 3, "blk": 1, "stl": 0, "pf": 3, "pts": 19},
+            {"name": "Lang", "min": 32, "fg": "2-3", "tp": "0-0", "ft": "1-6", "reb": 9, "ast": 1, "to": 2, "blk": 0, "stl": 0, "pf": 3, "pts": 5},
+            {"name": "Laettner", "min": 36, "fg": "8-17", "tp": "2-4", "ft": "11-12", "reb": 13, "ast": 2, "to": 6, "blk": 1, "stl": 3, "pf": 4, "pts": 29},
+            {"name": "Hill, Thomas", "min": 32, "fg": "4-13", "tp": "0-3", "ft": "0-3", "reb": 2, "ast": 1, "to": 2, "blk": 4, "stl": 2, "pf": 4, "pts": 8},
+            {"name": "Hurley", "min": 30, "fg": "3-5", "tp": "2-3", "ft": "3-4", "reb": 0, "ast": 4, "to": 4, "blk": 0, "stl": 1, "pf": 0, "pts": 11},
+            {"name": "Blakeney", "min": 25, "fg": "1-1", "tp": "1-1", "ft": "0-0", "reb": 3, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pf": 1, "pts": 3},
+            {"name": "Parks", "min": 9, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "to": 3, "blk": 0, "stl": 0, "pf": 2, "pts": 0},
+            {"name": "Clark", "min": 1, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pf": 0, "pts": 0},
+            {"name": "Meek", "min": 1, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pf": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

@@ -1,0 +1,44 @@
+{
+  "page": 12,
+  "games": [
+    {
+      "date": "1972-01-08",
+      "opponent": "Wyoming",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 62,
+          "players": [
+            {"name": "Darryl Minniefield", "min": 37, "fg": "7-8", "ft": "1-1", "reb": 5, "ast": 2, "pf": 4, "pts": 15},
+            {"name": "Harold Little", "min": 36, "fg": "3-12", "ft": "0-0", "reb": 8, "ast": 1, "pf": 4, "pts": 6},
+            {"name": "Mike Faulkner", "min": 37, "fg": "6-12", "ft": "4-9", "reb": 12, "ast": 2, "pf": 3, "pts": 16},
+            {"name": "Mark Saiers", "min": 35, "fg": "1-7", "ft": "0-0", "reb": 4, "ast": 3, "pf": 4, "pts": 2},
+            {"name": "Tom Roberts", "min": 38, "fg": "5-8", "ft": "9-10", "reb": 1, "ast": 4, "pf": 2, "pts": 19},
+            {"name": "John Mulligan", "min": 3, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "pts": 0},
+            {"name": "Chester Fuller", "min": 6, "fg": "1-2", "ft": "2-3", "reb": 2, "ast": 1, "pf": 0, "pts": 4},
+            {"name": "Mike Stewart", "min": 6, "fg": "0-1", "ft": "0-0", "reb": 1, "ast": 0, "pf": 2, "pts": 0},
+            {"name": "Gabe Nava", "min": 0, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "pts": 0},
+            {"name": "John Fifield", "min": 2, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Wyoming Cowboys",
+          "score": 69,
+          "players": [
+            {"name": "Bruno Konopka", "min": 24, "fg": "2-8", "ft": "1-1", "reb": 3, "ast": 0, "pf": 0, "pts": 5},
+            {"name": "Franklyn Irvin", "min": 28, "fg": "3-8", "ft": "4-4", "reb": 6, "ast": 1, "pf": 3, "pts": 10},
+            {"name": "Rod Penner", "min": 40, "fg": "6-15", "ft": "7-9", "reb": 12, "ast": 0, "pf": 0, "pts": 19},
+            {"name": "Mountz", "min": 26, "fg": "5-10", "ft": "7-9", "reb": 3, "ast": 2, "pf": 3, "pts": 17},
+            {"name": "Ken Randle", "min": 34, "fg": "4-12", "ft": "3-5", "reb": 1, "ast": 2, "pf": 4, "pts": 11},
+            {"name": "Ted Roney", "min": 17, "fg": "0-1", "ft": "1-2", "reb": 0, "ast": 3, "pf": 3, "pts": 1},
+            {"name": "Mike Colby", "min": 18, "fg": "2-2", "ft": "0-0", "reb": 4, "ast": 2, "pf": 3, "pts": 4},
+            {"name": "Pat Green", "min": 10, "fg": "1-1", "ft": "0-0", "reb": 2, "ast": 0, "pf": 1, "pts": 2}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": [],
+  "notes": "Wyoming's Penner had a blank assist cell on the sheet; inferred as 0 since it reconciles the team assist total (10). Fuller's points cell had a stray pen mark next to the '4' but the digit is unambiguous and checksum confirms it. Both teams' player point sums match final scores exactly (NM 62, Wyoming 69)."
+}

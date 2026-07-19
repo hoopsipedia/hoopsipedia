@@ -1,0 +1,9 @@
+{
+  "page": 23,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "2-23-67 Brigham Young Univ. at New Mexico ('CASE CHART', 2nd half shot-chart with box score table at bottom). The New Mexico (Lobos) column is legible and checksums cleanly (player TP sum 4+0+2+41+26+8+0+12+2+2+0+0+0=97, matches printed team total TP 97). However the BYU (Cougars) column is heavily handwritten/cursive with overwritten digits in FG/FGA/FT/FTA/P/TP fields for nearly every player (Timas, Roberts, Limo, Hill, Eakins, Raymond, James, House, Dresser, Loveday, Luthgoe, Fisher) - could not derive a confident player-by-player reading whose TP sum reconciles with the printed Cougars team total. Since one team fails checksum/legibility, skipping the whole game per instructions rather than guessing."
+    }
+  ]
+}

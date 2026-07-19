@@ -1,0 +1,9 @@
+{
+  "page": 18,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page is a newspaper article (Chicago, Feb. 23 game, Ohio State 53, Northwestern 46) with a small box-score table at the bottom, but the table's column values (G, F, FF, MF, TP per player) are too blurry/garbled in the scan to transcribe individual player lines with confidence. Final team scores (Ohio State 53, Northwestern 46) are legible in the article text, but per-player fg/ft/pts breakdown could not be read reliably enough to pass checksum, so the game was skipped per instructions to be ruthless about illegible data rather than guess."
+    }
+  ]
+}

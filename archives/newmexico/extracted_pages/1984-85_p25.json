@@ -1,0 +1,47 @@
+{
+  "page": 25,
+  "games": [
+    {
+      "date": "1985-02-16",
+      "opponent": "San Diego State Aztecs",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 80,
+          "players": [
+            {"name": "Johnny Brown", "min": 36, "fg": "9-16", "ft": "2-3", "reb": 8, "pf": 5, "ast": 3, "to": 1, "blk": 1, "stl": 1, "pts": 20},
+            {"name": "Mike Winters", "min": 26, "fg": "0-1", "ft": "0-2", "reb": 2, "pf": 0, "ast": 1, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "George Scott", "min": 27, "fg": "2-5", "ft": "2-2", "reb": 1, "pf": 5, "ast": 1, "to": 2, "blk": 0, "stl": 0, "pts": 6},
+            {"name": "K. Scarborough", "min": 33, "fg": "11-18", "ft": "5-6", "reb": 3, "pf": 4, "ast": 6, "to": 5, "blk": 0, "stl": 1, "pts": 27},
+            {"name": "Hunter Greene", "min": 34, "fg": "6-13", "ft": "2-2", "reb": 6, "pf": 1, "ast": 5, "to": 4, "blk": 0, "stl": 0, "pts": 14},
+            {"name": "Niles Dockery", "min": 13, "fg": "3-4", "ft": "2-2", "reb": 0, "pf": 0, "ast": 1, "to": 0, "blk": 0, "stl": 2, "pts": 8},
+            {"name": "Paul Lawson", "min": 9, "fg": "0-3", "ft": "0-0", "reb": 0, "pf": 3, "ast": 0, "to": 3, "blk": 0, "stl": 1, "pts": 0},
+            {"name": "T.E. Drake", "min": 7, "fg": "1-1", "ft": "0-0", "reb": 1, "pf": 3, "ast": 0, "to": 1, "blk": 1, "stl": 0, "pts": 2},
+            {"name": "Shawn Brooks", "min": 15, "fg": "1-5", "ft": "1-4", "reb": 3, "pf": 5, "ast": 0, "to": 2, "blk": 0, "stl": 1, "pts": 3}
+          ]
+        },
+        {
+          "name": "San Diego State Aztecs",
+          "score": 99,
+          "players": [
+            {"name": "Andre Ross", "min": 33, "fg": "2-6", "ft": "1-2", "reb": 8, "pf": 3, "ast": 5, "to": 2, "blk": 0, "stl": 2, "pts": 5},
+            {"name": "Michael Kennedy", "min": 22, "fg": "7-13", "ft": "3-4", "reb": 4, "pf": 3, "ast": 0, "to": 1, "blk": 0, "stl": 1, "pts": 17},
+            {"name": "Leonard Allen", "min": 21, "fg": "3-5", "ft": "2-2", "reb": 3, "pf": 4, "ast": 0, "to": 0, "blk": 4, "stl": 0, "pts": 8},
+            {"name": "Anthony Watson", "min": 39, "fg": "9-15", "ft": "7-7", "reb": 3, "pf": 2, "ast": 9, "to": 4, "blk": 0, "stl": 4, "pts": 25},
+            {"name": "Creon Dorsey", "min": 15, "fg": "2-2", "ft": "5-6", "reb": 1, "pf": 1, "ast": 1, "to": 3, "blk": 0, "stl": 1, "pts": 9},
+            {"name": "Jeff Konek", "min": 28, "fg": "7-10", "ft": "0-0", "reb": 2, "pf": 3, "ast": 4, "to": 2, "blk": 0, "stl": 1, "pts": 14},
+            {"name": "Anthony Sands", "min": 1, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Mike Haupt", "min": 1, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Bobby Owens", "min": 6, "fg": "1-2", "ft": "0-0", "reb": 0, "pf": 0, "ast": 2, "to": 1, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Tod Monteiro", "min": 1, "fg": "0-0", "ft": "2-2", "reb": 0, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Ira Harge", "min": 2, "fg": "0-0", "ft": "1-2", "reb": 1, "pf": 1, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pts": 1},
+            {"name": "Gerald Murray", "min": 19, "fg": "3-4", "ft": "0-2", "reb": 4, "pf": 0, "ast": 1, "to": 0, "blk": 0, "stl": 0, "pts": 6},
+            {"name": "John Martens", "min": 12, "fg": "2-2", "ft": "6-6", "reb": 0, "pf": 0, "ast": 2, "to": 0, "blk": 0, "stl": 0, "pts": 10}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

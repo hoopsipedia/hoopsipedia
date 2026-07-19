@@ -1,0 +1,9 @@
+{
+  "page": 23,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page 23 is a single official NCAA/ACC box score: Georgia Tech (11-3, 3-3) at Virginia (20-3, 9-2), 2/14/83, Charlottesville VA, final score Georgia Tech 69, Virginia 92 (confirmed via 'SCORE BY PERIODS' line: GT 27+42=69, UVA 41+51=92). However, the per-player stat grid has an extra, ambiguous numeric sub-column preceding the FG-FGA column for several players on both teams (e.g. Price '5-13', Thomas '2-3', Byrd '2-5' for Georgia Tech; Mullens '0-2', Wilson '2-4', Carlisle '0-1', Miller '1-2', Newburg '1-1' for Virginia) whose meaning could not be determined with confidence (not consistently O-D rebound split, half-time FG, or GS marker). Cross-checking internal arithmetic (2*FG_made + FT_made should equal TP) failed for BOTH team totals rows as read (Georgia Tech totals and Virginia totals), indicating at least one digit is being misread per row due to this ambiguous column and handwriting/scan quality. Rather than reverse-engineer or guess digits to force the checksum to pass, skipping the full game per instructions to be ruthless about skipping over guessing."
+    }
+  ]
+}

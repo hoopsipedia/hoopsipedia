@@ -1,0 +1,46 @@
+{
+  "page": 32,
+  "games": [
+    {
+      "date": "1983-03-19",
+      "opponent": "Washington State",
+      "site": "BSU Pavilion (Boise, ID)",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 54,
+          "players": [
+            {"name": "Jim Miller", "min": 28, "fg": "3-4", "ft": "1-2", "reb": 0, "ast": 3, "pf": 2, "to": 2, "stl": 0, "blk": 0, "pts": 7},
+            {"name": "Craig Robinson", "min": 38, "fg": "3-9", "ft": "1-3", "reb": 3, "ast": 0, "pf": 2, "to": 1, "stl": 0, "blk": 0, "pts": 7},
+            {"name": "Ralph Sampson", "min": 38, "fg": "6-8", "ft": "3-7", "reb": 12, "ast": 2, "pf": 3, "to": 0, "stl": 0, "blk": 4, "pts": 15},
+            {"name": "Othell Wilson", "min": 30, "fg": "4-11", "ft": "6-10", "reb": 4, "ast": 5, "pf": 4, "to": 4, "stl": 5, "blk": 0, "pts": 14},
+            {"name": "Rick Carlisle", "min": 36, "fg": "1-3", "ft": "4-4", "reb": 4, "ast": 3, "pf": 2, "to": 1, "stl": 0, "blk": 0, "pts": 6},
+            {"name": "Ricky Stokes", "min": 23, "fg": "2-3", "ft": "1-1", "reb": 1, "ast": 5, "pf": 4, "to": 3, "stl": 0, "blk": 0, "pts": 5},
+            {"name": "Kenton Edelin", "min": 9, "pf": 1, "to": 1, "stl": 1},
+            {"name": "Dan Merrifield", "min": 3, "pf": 1, "to": 1}
+          ]
+        },
+        {
+          "name": "Washington State Cougars",
+          "score": 49,
+          "players": [
+            {"name": "Bryan Pollard", "min": 27, "fg": "2-5", "reb": 4, "to": 2, "blk": 1, "pts": 4},
+            {"name": "Steve Harriel", "min": 23, "fg": "2-6", "ft": "0-1", "reb": 2, "pf": 5, "ast": 2, "to": 2, "stl": 4, "pts": 4},
+            {"name": "Ricky Brown", "min": 34, "fg": "3-10", "ft": "3-4", "reb": 7, "pf": 3, "ast": 2, "to": 1, "blk": 1, "pts": 9},
+            {"name": "Craig Ehlo", "min": 39, "fg": "5-10", "ft": "2-4", "reb": 6, "pf": 4, "ast": 5, "to": 7, "blk": 1, "stl": 1, "pts": 12},
+            {"name": "Chris Winkler", "min": 28, "fg": "2-4", "reb": 1, "pf": 5, "ast": 4, "to": 1, "pts": 4},
+            {"name": "Otis Jennings", "min": 0},
+            {"name": "Don Rubin", "min": 6, "reb": 1, "pf": 3, "to": 2},
+            {"name": "Chris Monson", "min": 1, "fg": "1-1", "pts": 2},
+            {"name": "Billy Joe Rhymes", "min": 0},
+            {"name": "Keith Morrison", "min": 6, "reb": 1, "pf": 2, "ast": 1},
+            {"name": "Aaron Haskins", "min": 33, "fg": "5-10", "ft": "4-5", "reb": 9, "pf": 2, "pts": 14},
+            {"name": "Mike Wurm", "min": 3, "pf": 1}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

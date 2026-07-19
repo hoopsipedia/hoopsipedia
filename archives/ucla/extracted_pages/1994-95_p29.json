@@ -1,0 +1,44 @@
+{
+  "page": 29,
+  "games": [
+    {
+      "date": "1995-03-19",
+      "opponent": "Missouri",
+      "location": "Boise, Idaho",
+      "ucla_score": 75,
+      "opp_score": 74,
+      "teams": [
+        {
+          "name": "Missouri",
+          "score": 74,
+          "players": [
+            {"name": "K. Moore", "min": 32, "fg": "4-12", "tp": "0-0", "ft": "2-2", "reb": 4, "ast": 3, "pf": 2, "to": 3, "stl": 0, "blk": 0, "pts": 10},
+            {"name": "J. Sutherlan", "min": 36, "fg": "5-10", "tp": "4-8", "ft": "1-1", "reb": 4, "ast": 1, "pf": 3, "to": 0, "stl": 0, "blk": 0, "pts": 15},
+            {"name": "C. Walther", "min": 3, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "J. Winfield", "min": 21, "fg": "3-6", "tp": "0-0", "ft": "2-2", "reb": 7, "ast": 3, "pf": 4, "to": 3, "stl": 0, "blk": 0, "pts": 8},
+            {"name": "P. O'Liney", "min": 39, "fg": "9-13", "tp": "0-0", "ft": "0-0", "reb": 4, "ast": 2, "pf": 2, "to": 2, "stl": 1, "blk": 0, "pts": 23},
+            {"name": "S. Combs", "min": 2, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "D. Grimm", "min": 38, "fg": "5-10", "tp": "3-5", "ft": "0-0", "reb": 4, "ast": 3, "pf": 4, "to": 0, "stl": 0, "blk": 0, "pts": 13},
+            {"name": "Sam Haley", "min": 20, "fg": "1-5", "tp": "0-0", "ft": "1-2", "reb": 5, "ast": 1, "pf": 2, "to": 1, "stl": 0, "blk": 1, "pts": 3},
+            {"name": "Sim Haley", "min": 9, "fg": "1-3", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 2}
+          ]
+        },
+        {
+          "name": "UCLA Bruins",
+          "score": 75,
+          "players": [
+            {"name": "C. Dollar", "min": 25, "fg": "0-4", "tp": "0-2", "ft": "0-0", "reb": 2, "ast": 3, "pf": 2, "to": 1, "stl": 1, "blk": 0, "pts": 0},
+            {"name": "T. Edney", "min": 35, "fg": "5-8", "tp": "3-5", "ft": "0-0", "reb": 3, "ast": 7, "pf": 4, "to": 2, "stl": 3, "blk": 0, "pts": 15},
+            {"name": "T. Bailey", "min": 27, "fg": "3-7", "tp": "1-3", "ft": "2-2", "reb": 4, "ast": 2, "pf": 1, "to": 3, "stl": 1, "blk": 0, "pts": 9},
+            {"name": "C. O'Bannon", "min": 31, "fg": "3-7", "tp": "0-1", "ft": "0-0", "reb": 5, "ast": 2, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 6},
+            {"name": "G. Zidek", "min": 20, "fg": "4-7", "tp": "0-0", "ft": "2-2", "reb": 0, "ast": 2, "pf": 2, "to": 0, "stl": 1, "blk": 1, "pts": 10},
+            {"name": "E. O'Bannon", "min": 39, "fg": "9-16", "tp": "2-5", "ft": "4-6", "reb": 7, "ast": 1, "pf": 0, "to": 2, "stl": 1, "blk": 1, "pts": 24},
+            {"name": "J.R. Henderson", "min": 23, "fg": "4-5", "tp": "0-0", "ft": "3-3", "reb": 5, "ast": 2, "pf": 2, "to": 1, "stl": 1, "blk": 0, "pts": 11}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

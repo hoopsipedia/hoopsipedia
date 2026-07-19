@@ -1,0 +1,50 @@
+{
+  "page": 5,
+  "games": [
+    {
+      "date": "1996-12-17",
+      "opponent": "Jackson State",
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 93,
+          "players": [
+            {"name": "Charles O'Bannon", "min": 30, "fg": "8-9", "ft": "3-3", "tp": "0-1", "reb": 5, "ast": 2, "pf": 0, "to": 3, "stl": 1, "blk": 0, "pts": 19},
+            {"name": "J.R. Henderson", "min": 28, "fg": "6-7", "ft": "8-9", "tp": "0-0", "reb": 3, "ast": 1, "pf": 1, "to": 0, "stl": 2, "blk": 1, "pts": 20},
+            {"name": "Jelani McCoy", "min": 27, "fg": "5-8", "ft": "2-7", "tp": "0-0", "reb": 10, "ast": 3, "pf": 3, "to": 2, "stl": 0, "blk": 4, "pts": 12},
+            {"name": "Toby Bailey", "min": 31, "fg": "7-9", "ft": "3-4", "tp": "1-2", "reb": 5, "ast": 5, "pf": 3, "to": 3, "stl": 0, "blk": 0, "pts": 18},
+            {"name": "Cameron Dollar", "min": 25, "fg": "0-1", "ft": "2-2", "tp": "0-0", "reb": 3, "ast": 7, "pf": 3, "to": 3, "stl": 2, "blk": 0, "pts": 2},
+            {"name": "Kris Johnson", "min": 21, "fg": "4-5", "ft": "5-6", "tp": "0-0", "reb": 4, "ast": 1, "pf": 3, "to": 4, "stl": 0, "blk": 0, "pts": 13},
+            {"name": "Brandon Loyd", "min": 12, "fg": "0-3", "ft": "1-2", "tp": "0-3", "reb": 1, "ast": 0, "pf": 1, "to": 3, "stl": 0, "blk": 0, "pts": 1},
+            {"name": "Bob Myers", "min": 17, "fg": "0-3", "ft": "1-2", "tp": "0-3", "reb": 4, "ast": 0, "pf": 3, "to": 2, "stl": 0, "blk": 0, "pts": 3},
+            {"name": "Sean Farnham", "min": 4, "fg": "1-1", "ft": "1-4", "tp": "0-0", "reb": 3, "ast": 0, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 3},
+            {"name": "Vince McGautha", "min": 2, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 1, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Dave Parker", "min": 1, "fg": "0-0", "ft": "2-2", "tp": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Harold Sylvester", "min": 1, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Matt Harbour", "min": 1, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 1, "blk": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Jackson State Tigers",
+          "score": 67,
+          "players": [
+            {"name": "Trent Pulliam", "min": 30, "fg": "4-19", "ft": "0-0", "tp": "0-9", "reb": 8, "ast": 0, "pf": 4, "to": 2, "stl": 3, "blk": 0, "pts": 8},
+            {"name": "Marino Walker", "min": 27, "fg": "5-9", "ft": "2-2", "tp": "2-3", "reb": 3, "ast": 4, "pf": 3, "to": 3, "stl": 0, "blk": 0, "pts": 13},
+            {"name": "Robert Fairley", "min": 17, "fg": "4-7", "ft": "1-3", "tp": "0-0", "reb": 4, "ast": 0, "pf": 4, "to": 1, "stl": 0, "blk": 0, "pts": 9},
+            {"name": "DeCarto Draper", "min": 32, "fg": "4-13", "ft": "0-0", "tp": "3-10", "reb": 2, "ast": 4, "pf": 2, "to": 2, "stl": 4, "blk": 0, "pts": 11},
+            {"name": "Doug Williams", "min": 29, "fg": "4-9", "ft": "0-1", "tp": "2-4", "reb": 5, "ast": 0, "pf": 2, "to": 2, "stl": 3, "blk": 0, "pts": 10},
+            {"name": "Jermaine Harden", "min": 7, "fg": "2-2", "ft": "0-0", "tp": "0-0", "reb": 1, "ast": 0, "pf": 3, "to": 1, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Keith Montgomery", "min": 6, "fg": "0-0", "ft": "1-2", "tp": "0-0", "reb": 1, "ast": 0, "pf": 4, "to": 3, "stl": 0, "blk": 0, "pts": 1},
+            {"name": "Sorrell Valentine", "min": 9, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 2, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Tyrone Moten", "min": 5, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 1, "ast": 0, "pf": 1, "to": 2, "stl": 1, "blk": 0, "pts": 0},
+            {"name": "Antwan McAfee", "min": 18, "fg": "3-9", "ft": "0-2", "tp": "1-3", "reb": 0, "ast": 0, "pf": 2, "to": 0, "stl": 1, "blk": 0, "pts": 7},
+            {"name": "Fidel Woods", "min": 8, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 1, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Joseph McKinney", "min": 12, "fg": "1-6", "ft": "1-2", "tp": "1-4", "reb": 3, "ast": 1, "pf": 2, "to": 1, "stl": 0, "blk": 0, "pts": 4}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

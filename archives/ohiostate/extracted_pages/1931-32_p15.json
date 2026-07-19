@@ -1,0 +1,40 @@
+{
+  "page": 15,
+  "games": [
+    {
+      "date": "1932-02-20",
+      "opponent": "Chicago",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 26,
+          "players": [
+            {"name": "Colburn", "fg": "1", "ft": "2", "pts": 4},
+            {"name": "Brown", "fg": "4", "ft": "2", "pts": 10},
+            {"name": "Fugitt", "fg": "0", "ft": "1", "pts": 1},
+            {"name": "Livdy", "fg": "0", "ft": "1", "pts": 1},
+            {"name": "Conrad", "fg": "1", "ft": "5", "pts": 7},
+            {"name": "Mattison", "fg": "0", "ft": "0", "pts": 0},
+            {"name": "Hoffer", "fg": "1", "ft": "0", "pts": 2},
+            {"name": "Fisher", "fg": "0", "ft": "1", "pts": 1}
+          ]
+        },
+        {
+          "name": "Chicago Maroons",
+          "score": 29,
+          "players": [
+            {"name": "Stephenson", "fg": "1", "ft": "0", "pts": 2},
+            {"name": "Aumer", "fg": "0", "ft": "0", "pts": 0},
+            {"name": "Evans", "fg": "5", "ft": "5", "pts": 15},
+            {"name": "Parsons", "fg": "0", "ft": "1", "pts": 1},
+            {"name": "Fraider", "fg": "0", "ft": "0", "pts": 0},
+            {"name": "Porter", "fg": "2", "ft": "1", "pts": 5},
+            {"name": "Wien", "fg": "3", "ft": "0", "pts": 6}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

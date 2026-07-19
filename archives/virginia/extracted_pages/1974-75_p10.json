@@ -1,0 +1,42 @@
+{
+  "page": 10,
+  "games": [
+    {
+      "date": "1975-01-13",
+      "opponent": "Davidson Wildcats",
+      "teams": [
+        {
+          "name": "Davidson Wildcats",
+          "score": 56,
+          "players": [
+            {"name": "Greg Dunn", "min": "36:50", "fg": "4-10", "ft": "1-2", "reb": 5, "ast": 6, "pf": 2, "to": 3, "pts": 9},
+            {"name": "Larry Horowitz", "min": "30:22", "fg": "4-8", "ft": "0-0", "reb": 6, "ast": 1, "pf": 4, "to": 2, "pts": 8},
+            {"name": "Eppa Rixey", "min": "21:02", "fg": "2-5", "ft": "1-2", "reb": 4, "ast": 0, "pf": 4, "to": 2, "pts": 5},
+            {"name": "Jay Powell", "min": "17:46", "fg": "5-16", "ft": "4-5", "reb": 3, "ast": 5, "pf": 0, "to": 1, "pts": 14},
+            {"name": "Tom Verlin", "min": "15:39", "fg": "3-6", "ft": "0-0", "reb": 2, "ast": 4, "pf": 2, "to": 1, "pts": 6},
+            {"name": "Kevin Doherty", "min": "24:12", "fg": "4-5", "ft": "2-2", "reb": 2, "ast": 1, "pf": 1, "to": 4, "pts": 10},
+            {"name": "Sheldon Parker", "min": "15:53", "fg": "1-2", "ft": "0-0", "reb": 4, "ast": 0, "pf": 3, "to": 3, "pts": 2},
+            {"name": "Steve Badaire", "min": "9:17", "fg": "0-1", "ft": "0-1", "reb": 1, "ast": 0, "pf": 2, "to": 0, "pts": 0},
+            {"name": "Jim Lowry", "min": "9:19", "fg": "1-3", "ft": "0-0", "reb": 0, "ast": 1, "pf": 0, "to": 0, "pts": 2}
+          ]
+        },
+        {
+          "name": "Virginia Cavaliers",
+          "score": 58,
+          "players": [
+            {"name": "Andy Boninti", "min": "23:24", "fg": "6-15", "ft": "0-0", "reb": 3, "ast": 0, "pf": 0, "to": 2, "pts": 12},
+            {"name": "Billy Langloh", "min": "22:30", "fg": "3-6", "ft": "2-2", "reb": 3, "ast": 6, "pf": 3, "to": 6, "pts": 8},
+            {"name": "Wally Walker", "fg": "2-7", "ft": "2-3", "reb": 3, "ast": 1, "pf": 4, "to": 6, "pts": 6},
+            {"name": "Dan Bonner", "min": "32:09", "fg": "5-9", "ft": "2-3", "reb": 10, "ast": 2, "pf": 0, "to": 1, "pts": 12},
+            {"name": "Marc Iavaroni", "min": "27:52", "fg": "1-4", "ft": "2-2", "reb": 3, "ast": 0, "pf": 4, "to": 1, "pts": 4},
+            {"name": "Dave Koesters", "min": "34:06", "fg": "3-6", "ft": "0-0", "reb": 2, "ast": 3, "pf": 3, "to": 5, "pts": 6},
+            {"name": "Mark Newlen", "min": "18:24", "fg": "2-?", "ft": "4-4", "reb": 5, "ast": 4, "pf": 0, "to": 1, "pts": 8},
+            {"name": "Lamont Carr", "min": "13:58", "fg": "1-1", "ft": "0-0", "reb": 1, "ast": 1, "pf": 1, "to": 2, "pts": 2}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

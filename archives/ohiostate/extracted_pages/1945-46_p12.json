@@ -1,0 +1,9 @@
+{
+  "page": 12,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Newspaper recap of Ohio State at Michigan, Ann Arbor, Jan 26 (Michigan won 62-46; halftime Michigan 27, Ohio 21). Both team box score tables are present but the scanned print quality makes the per-player column digits unreliable: column headers are garbled (appears to be FG/FT/Pts/PF but row token counts are inconsistent, e.g. some rows show 4 numbers and others 5), and best-effort reading of the Ohio State 'points' column sums to ~51 versus the team's actual final score of 46 (fails checksum). Rather than guess at ambiguous digits, skipping this game entirely per instructions to be ruthless about skipping over guessing."
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "page": 2,
+  "games": [
+    {
+      "date": "1985-11-30",
+      "opponent": "Towson State",
+      "teams": [
+        {
+          "name": "Towson State Tigers",
+          "score": 55,
+          "players": [
+            {"name": "Roddy Kirk", "min": "37", "fg": "3-9", "ft": "0-0", "reb": "5", "pf": "1", "ast": "6", "to": "5", "pts": "6"},
+            {"name": "Stefan Bunsavage", "min": "32", "fg": "4-7", "ft": "3-3", "reb": "5", "pf": "4", "ast": "4", "to": "1", "stl": "1", "pts": "11"},
+            {"name": "Greg McClinton", "min": "38", "fg": "6-11", "ft": "0-0", "reb": "10", "pf": "5", "ast": "1", "to": "2", "blk": "2", "pts": "12"},
+            {"name": "Bill Leonard", "min": "38", "fg": "7-13", "ft": "5-6", "reb": "2", "pf": "3", "ast": "2", "to": "3", "stl": "1", "pts": "19"},
+            {"name": "Michael Fink", "min": "35", "fg": "3-11", "ft": "1-2", "reb": "1", "pf": "2", "ast": "3", "to": "3", "stl": "1", "pts": "7"},
+            {"name": "James Bays", "min": "11", "fg": "0-0", "ft": "0-0", "reb": "0", "pf": "0", "to": "2", "pts": "0"},
+            {"name": "Ricky Byrd", "min": "7", "fg": "0-1", "reb": "2", "pf": "2", "to": "2", "stl": "1", "pts": "0"},
+            {"name": "Mike Colclough", "min": "2", "fg": "0-1", "reb": "1", "to": "0", "pts": "0"}
+          ]
+        },
+        {
+          "name": "Virginia Cavaliers",
+          "score": 68,
+          "players": [
+            {"name": "Tom Sheehey", "min": "24", "fg": "3-5", "ft": "3-4", "reb": "3", "pf": "1", "ast": "0", "stl": "1", "pts": "9"},
+            {"name": "Mel Kennedy", "min": "29", "fg": "6-12", "ft": "0-0", "reb": "5", "pf": "2", "ast": "4", "to": "1", "blk": "2", "pts": "12"},
+            {"name": "Olden Polynice", "min": "33", "fg": "4-11", "ft": "6-9", "reb": "6", "ast": "1", "to": "3", "blk": "1", "pts": "14"},
+            {"name": "Tom Calloway", "min": "29", "fg": "2-3", "ft": "0-0", "reb": "2", "pf": "2", "ast": "0", "to": "1", "pts": "4"},
+            {"name": "Derrick Simms", "min": "24", "fg": "5-8", "ft": "0-0", "reb": "5", "pf": "1", "ast": "4", "to": "2", "stl": "1", "pts": "10"},
+            {"name": "John Johnson", "min": "11", "fg": "1-4", "ft": "1-2", "reb": "1", "pf": "1", "pts": "3"},
+            {"name": "Andrew Kennedy", "min": "18", "fg": "2-6", "ft": "0-1", "reb": "2", "pf": "2", "blk": "1", "pts": "4"},
+            {"name": "John Dyslin", "min": "9", "fg": "0-1", "reb": "1", "pf": "1", "to": "1", "pts": "0"},
+            {"name": "Richard Morgan", "min": "8", "fg": "3-3", "reb": "1", "to": "1", "pts": "6"},
+            {"name": "Lance Blankes", "min": "7", "fg": "2-3", "reb": "1", "pf": "3", "ast": "3", "to": "1", "pts": "4"},
+            {"name": "Jeff Daniel", "min": "7", "fg": "0-0", "ft": "2-2", "reb": "1", "pf": "1", "to": "1", "pts": "2"},
+            {"name": "Anthony Solomon", "min": "1", "reb": "1", "pf": "0", "pts": "0"}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

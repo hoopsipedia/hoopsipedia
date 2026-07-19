@@ -1,0 +1,43 @@
+{
+  "page": 5,
+  "games": [
+    {
+      "date": "1965-12-14",
+      "opponent": "N.C. State",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 87,
+          "players": [
+            {"name": "Jim Connelly", "fg": "6-11", "ft": "5-7", "reb": 4, "pf": 3, "pts": 17},
+            {"name": "Mike Katos", "fg": "7-10", "ft": "5-7", "reb": 8, "pf": 4, "pts": 19},
+            {"name": "John Schroeder", "fg": "2-6", "ft": "0-0", "reb": 4, "pf": 5, "pts": 4},
+            {"name": "John Naponick", "fg": "1-1", "ft": "2-2", "reb": 0, "pf": 1, "pts": 4},
+            {"name": "Jerry Sanders", "fg": "12-15", "ft": "7-11", "reb": 9, "pf": 3, "pts": 31},
+            {"name": "Jeff Crackel", "fg": "0-1", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Buddy Reams", "fg": "2-4", "ft": "0-0", "reb": 2, "pf": 1, "pts": 4},
+            {"name": "Dale Hilsmier", "fg": "3-4", "ft": "2-3", "reb": 4, "pf": 0, "pts": 8}
+          ]
+        },
+        {
+          "name": "N.C. State",
+          "score": 98,
+          "players": [
+            {"name": "Tommy Mattocks", "fg": "10-18", "ft": "8-9", "reb": 8, "pf": 4, "pts": 28},
+            {"name": "Pete Coker", "fg": "8-10", "ft": "1-1", "reb": 5, "pf": 4, "pts": 17},
+            {"name": "Larry Worsley", "fg": "8-12", "ft": "5-6", "reb": 4, "pf": 4, "pts": 21},
+            {"name": "Billy Moffitt", "fg": "5-8", "ft": "0-0", "reb": 3, "pf": 4, "pts": 10},
+            {"name": "Eddie Bledenbach", "fg": "9-12", "ft": "4-6", "reb": 1, "pf": 4, "pts": 22},
+            {"name": "Hal Blondeau", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 1, "pts": 0},
+            {"name": "Bill Kretzer", "fg": "0-1", "ft": "0-1", "reb": 2, "pf": 1, "pts": 0},
+            {"name": "Paul Hudson", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 2, "pts": 0},
+            {"name": "Sam Gealy", "fg": "0-3", "ft": "0-0", "reb": 0, "pf": 1, "pts": 0},
+            {"name": "John Sellers", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 1, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

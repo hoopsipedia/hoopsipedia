@@ -1,0 +1,40 @@
+{
+  "page": 10,
+  "games": [
+    {
+      "date": "1960-12-31",
+      "opponent": "St. Bonaventure",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 84,
+          "players": [
+            {"name": "Havlicek", "fg": "6-13", "ft": "1-2", "reb": 6, "pf": 3, "pts": 13},
+            {"name": "Knight", "fg": "0-3", "ft": "0-0", "reb": 1, "pf": 1, "pts": 0},
+            {"name": "Lucas", "fg": "13-20", "ft": "6-9", "reb": 21, "pf": 2, "pts": 32},
+            {"name": "Siegfried", "fg": "6-10", "ft": "4-4", "reb": 3, "pf": 3, "pts": 16},
+            {"name": "Howell", "fg": "1-5", "ft": "2-2", "reb": 3, "pf": 4, "pts": 4},
+            {"name": "Hoyt", "fg": "4-6", "ft": "0-0", "reb": 2, "pf": 3, "pts": 8},
+            {"name": "Gearhart", "fg": "4-7", "ft": "3-3", "reb": 1, "pf": 3, "pts": 11},
+            {"name": "Reasbeck", "fg": "0-1", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "St. Bonaventure",
+          "score": 82,
+          "players": [
+            {"name": "Stith", "fg": "14-26", "ft": "7-8", "reb": 8, "pf": 3, "pts": 35},
+            {"name": "Crawford", "fg": "11-19", "ft": "2-5", "reb": 8, "pf": 2, "pts": 24},
+            {"name": "McCully", "fg": "4-7", "ft": "0-1", "reb": 6, "pf": 5, "pts": 8},
+            {"name": "Martin", "fg": "2-7", "ft": "1-1", "reb": 3, "pf": 4, "pts": 5},
+            {"name": "Jirele", "fg": "2-8", "ft": "4-8", "reb": 5, "pf": 1, "pts": 8},
+            {"name": "Hannon", "fg": "0-1", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Fitzmaurice", "fg": "1-1", "ft": "0-0", "reb": 1, "pf": 0, "pts": 2}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

@@ -1,0 +1,51 @@
+{
+  "page": 3,
+  "games": [
+    {
+      "date": "1976-12-01",
+      "opponent": "Jacksonville",
+      "ucla_score": 99,
+      "opp_score": 68,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 99,
+          "players": [
+            {"name": "Greenwood", "min": 25, "fg": "6-13", "ft": "2-3", "reb": 5, "pf": 1, "ast": 1, "pts": 14},
+            {"name": "Johnson", "min": 30, "fg": "7-18", "ft": "6-8", "reb": 12, "pf": 3, "ast": 2, "pts": 20},
+            {"name": "Vroman", "min": 22, "fg": "2-8", "ft": "0-0", "reb": 8, "pf": 3, "ast": 2, "pts": 4},
+            {"name": "Holland", "min": 20, "fg": "9-14", "ft": "0-0", "reb": 2, "pf": 0, "ast": 5, "pts": 18},
+            {"name": "Hamilton", "min": 26, "fg": "7-11", "ft": "1-2", "reb": 3, "pf": 2, "ast": 5, "pts": 15},
+            {"name": "Townsend", "min": 18, "fg": "1-5", "ft": "0-2", "reb": 2, "pf": 0, "ast": 3, "pts": 2},
+            {"name": "Olinde", "min": 13, "fg": "4-5", "ft": "0-1", "reb": 2, "pf": 1, "ast": 0, "pts": 8},
+            {"name": "Spillane", "min": 11, "fg": "2-3", "ft": "0-1", "reb": 0, "pf": 3, "ast": 2, "pts": 4},
+            {"name": "Wilkes", "min": 9, "fg": "2-3", "ft": "0-0", "reb": 3, "pf": 0, "ast": 1, "pts": 4},
+            {"name": "Sims", "min": 6, "fg": "1-2", "ft": "1-2", "reb": 1, "pf": 2, "ast": 0, "pts": 3},
+            {"name": "Van de Weghe", "min": 4, "fg": "1-1", "ft": "1-1", "reb": 0, "pf": 1, "ast": 0, "pts": 3},
+            {"name": "Lippert", "min": 4, "fg": "1-1", "ft": "0-0", "reb": 1, "pf": 0, "ast": 0, "pts": 2},
+            {"name": "Thomas", "min": 3, "fg": "0-2", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "pts": 0},
+            {"name": "Allums", "min": 3, "fg": "1-1", "ft": "0-1", "reb": 0, "pf": 1, "ast": 0, "pts": 2}
+          ]
+        },
+        {
+          "name": "Jacksonville Dolphins",
+          "score": 68,
+          "players": [
+            {"name": "Ray", "min": 24, "fg": "7-12", "ft": "2-2", "reb": 5, "pf": 5, "ast": 2, "pts": 16},
+            {"name": "Suarez", "min": 40, "fg": "2-9", "ft": "0-0", "reb": 7, "pf": 4, "ast": 7, "pts": 4},
+            {"name": "Young", "min": 27, "fg": "6-18", "ft": "1-2", "reb": 7, "pf": 5, "ast": 0, "pts": 13},
+            {"name": "Rick Williams", "min": 30, "fg": "0-0", "ft": "0-0", "reb": 2, "pf": 2, "ast": 3, "pts": 0},
+            {"name": "Glover", "min": 40, "fg": "8-23", "ft": "0-0", "reb": 8, "pf": 1, "ast": 1, "pts": 16},
+            {"name": "Flaiz", "min": 9, "fg": "1-2", "ft": "0-0", "reb": 5, "pf": 4, "ast": 0, "pts": 2},
+            {"name": "J. Williams", "min": 1, "fg": "0-1", "ft": "0-0", "reb": 0, "pf": 1, "ast": 0, "pts": 0},
+            {"name": "Randy Williams", "min": 6, "fg": "0-1", "ft": "0-2", "reb": 0, "pf": 0, "ast": 0, "pts": 0},
+            {"name": "Richards", "min": 13, "fg": "4-4", "ft": "2-4", "reb": 6, "pf": 3, "ast": 0, "pts": 10},
+            {"name": "Parisi", "min": 10, "fg": "2-2", "ft": "3-4", "reb": 0, "pf": 1, "ast": 4, "pts": 7}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

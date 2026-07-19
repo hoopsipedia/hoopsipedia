@@ -1,0 +1,9 @@
+{
+  "page": 28,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Handwritten official scoresheet, Virginia vs Maryland, final score legible as Maryland 81 - Virginia 83 (periods 46-35 and 45-38) and team TOTALS rows are readable, but individual player stat cells (FG-FGA, FT-FTA, REB with superscript offensive/defensive splits, PF, TP, MIN, A, TO, BLK, S) are cramped, faded, and ambiguous in the cursive handwriting for both rosters (Maryland: Bias, Fothergill, Loughran, Adkins, Branch, Baxter, Farmer, Ovens, Holmes, Blevins; Virginia: Mullen, Robinson, Sampson, Wilson, Newbold, Carlisle, Miller, Edelin, Stokes, Merrifield). Could not confidently transcribe per-player lines or pass a checksum without risking invented values, so the game is skipped per instructions rather than guessed. Date on the header is also unclear (reads approximately '3/7/8x'; most plausibly a March 1983 regular-season or ACC tournament date given the 1982-83 season, but the exact day/year digit is not legible enough to state with confidence)."
+    }
+  ]
+}

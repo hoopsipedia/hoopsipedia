@@ -1,0 +1,47 @@
+{
+  "page": 8,
+  "games": [
+    {
+      "date": "1975-01-08",
+      "opponent": "Wake Forest",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 66,
+          "players": [
+            {"name": "Wally Walker", "min": "20", "fg": "6-14", "ft": "1-2", "reb": 3, "pf": 3, "ast": 0, "pts": 13},
+            {"name": "Dan Bonner", "min": "22", "fg": "0-6", "ft": "0-0", "reb": 4, "pf": 5, "ast": 1, "pts": 0},
+            {"name": "Marc Iavaroni", "min": "37.5", "fg": "7-19", "ft": "4-5", "reb": 11, "pf": 3, "ast": 0, "pts": 18},
+            {"name": "Billy Langloh", "min": "29", "fg": "3-10", "ft": "0-1", "reb": 1, "pf": 5, "ast": 1, "pts": 6},
+            {"name": "Andy Boninti", "min": "25.5", "fg": "3-6", "ft": "1-2", "reb": 7, "pf": 3, "ast": 4, "pts": 7},
+            {"name": "Dave Koesters", "min": "26.5", "fg": "5-12", "ft": "6-8", "reb": 4, "pf": 4, "ast": 2, "pts": 16},
+            {"name": "Lamont Carr", "min": "26.5", "fg": "1-5", "ft": "3-4", "reb": 8, "pf": 2, "ast": 1, "pts": 5},
+            {"name": "Brian Tully", "min": "8.5", "fg": "0-0", "ft": "1-2", "reb": 3, "pf": 1, "ast": 1, "pts": 1},
+            {"name": "Tom Briscoe", "min": "4.5", "fg": "0-1", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Wake Forest Demon Deacons",
+          "score": 83,
+          "players": [
+            {"name": "Mike Parrish", "min": "20.5", "fg": "3-7", "ft": "0-0", "reb": 7, "pf": 3, "ast": 5, "pts": 6},
+            {"name": "Rod Griffin", "min": "35.5", "fg": "5-10", "ft": "8-8", "reb": 9, "pf": 2, "ast": 2, "pts": 18},
+            {"name": "Cal Stamp", "min": "32.5", "fg": "3-8", "ft": "1-2", "reb": 5, "pf": 4, "pts": 7},
+            {"name": "Skip Brown", "min": "37.5", "fg": "10-16", "ft": "0-0", "reb": 5, "pf": 2, "ast": 7, "pts": 20},
+            {"name": "Jerry Schellenberg", "min": "34", "fg": "7-8", "ft": "6-7", "reb": 3, "pf": 0, "ast": 7, "stl": 7, "pts": 20},
+            {"name": "Charlie Floyd", "min": "15", "fg": "2-5", "ft": "4-5", "reb": 1, "pf": 3, "ast": 1, "pts": 8},
+            {"name": "Daryl Peterson", "min": "3.5", "fg": "0-0", "ft": "0-1", "reb": 1, "pf": 1, "ast": 0, "pts": 0},
+            {"name": "Lee Faye", "min": "6", "fg": "0-3", "ft": "0-0", "reb": 1, "pf": 2, "ast": 0, "pts": 0},
+            {"name": "Phil Perry", "min": "7", "fg": "0-1", "ft": "0-0", "reb": 1, "pf": 2, "ast": 0, "pts": 0},
+            {"name": "Harry Hicks", "min": "2.5", "fg": "0-0", "ft": "4-5", "reb": 1, "pf": 1, "ast": 0, "pts": 4},
+            {"name": "Dan Moody", "min": "3.5", "fg": "0-0", "ft": "0-1", "reb": 0, "pf": 1, "ast": 1, "pts": 0},
+            {"name": "Haley Hall", "min": "1.5", "fg": "0-0", "ft": "0-0", "reb": 1, "pf": 0, "ast": 0, "pts": 0},
+            {"name": "Al Hyatt", "min": "1", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

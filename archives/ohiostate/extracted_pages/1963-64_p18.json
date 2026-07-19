@@ -1,0 +1,44 @@
+{
+  "page": 18,
+  "games": [
+    {
+      "date": "1964-02-08",
+      "opponent": "Indiana",
+      "notes": "OT game; final score by quarters OSU 45-45-8=98 (OT), Indiana 42-48-6=96 (OT); attendance 10,012; officials Floyd Magnusson and Donald Wedge",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 98,
+          "players": [
+            {"name": "DeVoe", "fg": "6-18", "ft": "5-6", "pf": 5, "pts": 17},
+            {"name": "Shaffer", "fg": "1-4", "ft": "0-0", "pf": 5, "pts": 2},
+            {"name": "Bradds", "fg": "13-25", "ft": "14-18", "pf": 5, "pts": 40},
+            {"name": "Ricketts", "fg": "11-18", "ft": "2-3", "pf": 3, "pts": 24},
+            {"name": "Bowman", "fg": "2-8", "ft": "2-4", "pf": 2, "pts": 6},
+            {"name": "Dove", "fg": "3-3", "ft": "1-1", "pf": 5, "pts": 7},
+            {"name": "Peters", "fg": "0-2", "ft": "0-0", "pf": 0, "pts": 0},
+            {"name": "Flatt", "fg": "1-1", "ft": "0-0", "pf": 1, "pts": 2},
+            {"name": "Ahijevych", "fg": "0-0", "ft": "0-0", "pf": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Indiana Hoosiers",
+          "score": 96,
+          "players": [
+            {"name": "D. Van Arsdale", "fg": "5-15", "ft": "17-18", "pf": 3, "pts": 27},
+            {"name": "T. Van Arsdale", "fg": "5-18", "ft": "9-11", "pf": 5, "pts": 19},
+            {"name": "McGlocklin", "fg": "11-21", "ft": "5-5", "pf": 5, "pts": 27},
+            {"name": "Redenbaugh", "fg": "4-12", "ft": "0-0", "pf": 5, "pts": 8},
+            {"name": "Pfaff", "fg": "4-10", "ft": "0-0", "pf": 1, "pts": 8},
+            {"name": "Walker", "fg": "0-2", "ft": "0-0", "pf": 0, "pts": 0},
+            {"name": "Harden", "fg": "3-9", "ft": "0-0", "pf": 3, "pts": 6},
+            {"name": "Cooper", "fg": "0-5", "ft": "0-0", "pf": 2, "pts": 0},
+            {"name": "Grieger", "fg": "0-1", "ft": "1-1", "pf": 2, "pts": 1}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

@@ -1,0 +1,47 @@
+{
+  "page": 12,
+  "games": [
+    {
+      "date": "1984-01-14",
+      "opponent": "Oregon",
+      "ucla_score": 51,
+      "opp_score": 62,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 51,
+          "players": [
+            {"name": "Ralph Jackson", "min": 40, "fg": "6-15", "ft": "4-5", "reb": 4, "ast": 4, "pf": 2, "to": 4, "stl": 2, "blk": 0, "pts": 16},
+            {"name": "Montel Hatcher", "min": 23, "fg": "3-8", "ft": "0-0", "reb": 3, "ast": 0, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 6},
+            {"name": "Gary Maloncon", "min": 32, "fg": "5-6", "ft": "0-0", "reb": 6, "ast": 0, "pf": 2, "to": 0, "stl": 1, "blk": 0, "pts": 10},
+            {"name": "Kenny Fields", "min": 31, "fg": "3-9", "ft": "4-6", "reb": 6, "ast": 2, "pf": 4, "to": 5, "stl": 2, "blk": 0, "pts": 10},
+            {"name": "Stuart Gray", "min": 34, "fg": "3-8", "ft": "0-0", "reb": 7, "ast": 0, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 6},
+            {"name": "Corey Gaines", "min": 2, "fg": "0-1", "ft": "0-0", "reb": 0, "ast": 0, "pf": 3, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Nigel Miguel", "min": 15, "fg": "0-1", "ft": "0-2", "reb": 0, "ast": 0, "pf": 2, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Dave Immel", "min": 4, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Reggie Miller", "min": 13, "fg": "0-1", "ft": "0-0", "reb": 1, "ast": 0, "pf": 3, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Brad Wright", "min": 6, "fg": "1-4", "ft": "1-1", "reb": 2, "ast": 0, "pf": 2, "to": 1, "stl": 1, "blk": 0, "pts": 3}
+          ]
+        },
+        {
+          "name": "Oregon Ducks",
+          "score": 62,
+          "players": [
+            {"name": "Chris Harper", "min": 35, "fg": "7-13", "ft": "2-2", "reb": 3, "ast": 3, "pf": 1, "to": 3, "stl": 1, "blk": 0, "pts": 16},
+            {"name": "Gary Gatewood", "min": 30, "fg": "3-5", "ft": "2-2", "reb": 3, "ast": 2, "pf": 1, "to": 5, "stl": 2, "blk": 0, "pts": 8},
+            {"name": "David Brantley", "min": 37, "fg": "2-9", "ft": "4-6", "reb": 10, "ast": 4, "pf": 4, "to": 3, "stl": 2, "blk": 0, "pts": 8},
+            {"name": "Greg Trapp", "min": 15, "fg": "0-3", "ft": "0-0", "reb": 0, "ast": 1, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Blair Rasmussen", "min": 35, "fg": "9-17", "ft": "2-2", "reb": 8, "ast": 2, "pf": 4, "to": 0, "stl": 0, "blk": 1, "pts": 20},
+            {"name": "Mike Matheson", "min": 25, "fg": "1-1", "ft": "1-2", "reb": 5, "ast": 0, "pf": 4, "to": 1, "stl": 1, "blk": 0, "pts": 3},
+            {"name": "David Girley", "min": 4, "fg": "0-1", "ft": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Donald Dutton", "min": 11, "fg": "2-3", "ft": "1-1", "reb": 0, "ast": 1, "pf": 0, "to": 2, "stl": 0, "blk": 0, "pts": 5},
+            {"name": "Reggie Wallace", "min": 3, "fg": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Kenny Sprague", "min": 5, "fg": "1-1", "ft": "0-0", "reb": 1, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 2}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

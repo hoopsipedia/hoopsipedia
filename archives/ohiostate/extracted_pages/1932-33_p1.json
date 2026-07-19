@@ -1,0 +1,9 @@
+{
+  "page": 1,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "1932-33 Ohio State vs Toledo (Dec 6, 1932, final 64-10) box score present but player-line digits in the 'The line-up:' table are too small/blurry in the scan to transcribe confidently. Attempted transcription of Ohio State's 8 players sums to only 25 FG / 4 FT = 54 pts, which fails checksum against the reported 64-point final score. Article text corroborates the team totals independently (\"Roll Up 30 Baskets\" + \"totaled ... four free throws\" => 2*30+4=64), confirming several individual player FG digits (for Wilson, Fisher, Griffith, Mattison, and/or Traut) were misread or illegible rather than the team total being wrong. Re-read the page once per instructions but resolution did not improve enough to resolve the ambiguous digits, so the full box score (both teams) was skipped rather than guessed."
+    }
+  ]
+}

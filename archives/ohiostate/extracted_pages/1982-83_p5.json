@@ -1,0 +1,9 @@
+{
+  "page": 5,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Handwritten official NCAA box score, Ohio State (2-0) vs Syracuse (7-0). Team final scores are legible from the 'Score by Periods' table (Ohio St. 37+48=85, Syracuse 41+50=91), but individual player statistical columns (FG, FGA, FT, FTA, REB, PF, TP, MIN, A, TO, BLK, S) are largely illegible handwriting with ambiguous column alignment for both rosters, and the top date field is not legibly readable. Attempted to sum the TP/points column for a checksum against the final scores but the visible entries do not come close to summing to 85 or 91, indicating the columns cannot be reliably read/aligned. Skipping rather than guessing at player lines and stats per instructions."
+    }
+  ]
+}

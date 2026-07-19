@@ -1,0 +1,9 @@
+{
+  "page": 5,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Handwritten official NCAA box score, New Mexico vs Lamar, 1978-12-05, Albuquerque NM (New Mexico 97, Lamar 84 per team TOTALS/period-score rows). Team-level totals (FG/FT/REB/PF/TP/A/TO/BLK/S) are legible for both teams, but individual player FG/FGA/FT/FTA cells for the Lamar (visitors) rows are too faint/ambiguous to transcribe with confidence (digits collide, e.g. rows read as FG0 FGA7 or FG8 FGA19 which are internally inconsistent), so a reliable player-by-player checksum against the team point totals (84 for Lamar, 97 for New Mexico) cannot be guaranteed without risking invented values. Skipping per instructions to be ruthless rather than guess; only one read of the page was used."
+    }
+  ]
+}

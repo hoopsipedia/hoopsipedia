@@ -1,0 +1,12 @@
+{
+  "page": 20,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Top table on the page is the tail end of a box score continued from the prior (unread) page: no team-name header is visible on this page, several player names are illegible handwriting (e.g. 'Crockwell/Cary', 'Zellers/Brad', two blank/illegible rows), and multiple stat cells are unclear. Cannot identify the team or verify a checksum without guessing."
+    },
+    {
+      "reason": "Bottom table is a fully-headed 'Official Big Ten Basketball Box Score' for Ohio State (opponent appears to be Wisconsin per the partial 'Score by Periods' block showing Wisconsin 26-43), but several player rows have ambiguous/hard-to-read point values (Hoos/Mitch, Grace/Henry, Reid/Derick) and Ohio State's own final score in the Score-by-Periods table is cut off/not legibly filled in at the bottom of the page. Summing the legible TP column does not cleanly reconcile with the printed team TOTALS TP figure, so checksum cannot be confirmed without guessing at illegible digits. Skipped per instructions to be ruthless rather than guess."
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "page": 15,
+  "games": [
+    {
+      "date": "1988-01-16",
+      "opponent": "Louisville",
+      "ucla_score": 79,
+      "opp_score": 92,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 79,
+          "players": [
+            {"name": "Trevor Wilson", "min": 35, "fg": "7-12", "ft": "3-5", "reb": 10, "pf": 3, "ast": 1, "to": 7, "blk": 1, "pts": 17},
+            {"name": "Craig Jackson", "min": 17, "fg": "4-8", "ft": "2-4", "reb": 6, "pf": 4, "ast": 1, "to": 1, "blk": 1, "stl": 1, "pts": 10},
+            {"name": "Kelvin Butler", "min": 28, "fg": "3-5", "ft": "1-1", "reb": 4, "pf": 1, "ast": 2, "to": 2, "stl": 2, "pts": 7},
+            {"name": "Pooh Richardson", "min": 29, "fg": "4-15", "tp": "0-1", "ft": "4-5", "reb": 4, "pf": 4, "ast": 5, "to": 4, "stl": 1, "pts": 12},
+            {"name": "Dave Immel", "min": 32, "fg": "4-12", "tp": "2-5", "pf": 4, "ast": 3, "to": 4, "stl": 1, "pts": 10},
+            {"name": "Charles Rochelin", "min": 20, "fg": "3-7", "tp": "2-4", "blk": 1, "pts": 8},
+            {"name": "Gerald Madkins", "min": 17, "fg": "0-1", "ft": "2-2", "pf": 2, "ast": 3, "to": 3, "stl": 1, "pts": 2},
+            {"name": "Kevin Walker", "min": 18, "fg": "5-6", "tp": "3-3", "reb": 3, "pf": 1, "stl": 2, "pts": 13},
+            {"name": "Darryl Morris", "min": 1},
+            {"name": "Keith Owens", "min": 1, "blk": 1},
+            {"name": "Kevin Williams", "min": 1},
+            {"name": "Chris Kenny", "min": 1}
+          ]
+        },
+        {
+          "name": "Louisville Cardinals",
+          "score": 92,
+          "players": [
+            {"name": "Kenny Payne", "min": 35, "fg": "8-10", "tp": "1-2", "reb": 5, "pf": 2, "ast": 1, "to": 4, "blk": 1, "stl": 2, "pts": 17},
+            {"name": "Herbert Crook", "min": 31, "fg": "7-13", "ft": "2-2", "reb": 4, "pf": 3, "ast": 3, "to": 5, "blk": 1, "stl": 1, "pts": 16},
+            {"name": "Pervis Ellison", "min": 33, "fg": "5-10", "ft": "3-3", "reb": 8, "pf": 3, "ast": 3, "to": 2, "blk": 4, "stl": 1, "pts": 13},
+            {"name": "Keith Williams", "min": 30, "fg": "6-9", "tp": "4-4", "ft": "1-1", "reb": 3, "pf": 3, "ast": 4, "to": 1, "stl": 1, "pts": 17},
+            {"name": "A. Bradford Smith", "min": 24, "fg": "3-7", "tp": "1-1", "ft": "4-7", "reb": 2, "pf": 3, "ast": 2, "to": 7, "stl": 2, "pts": 11},
+            {"name": "Mike Abram", "min": 21, "fg": "2-3", "ft": "3-4", "reb": 8, "pf": 3, "to": 3, "stl": 2, "pts": 7},
+            {"name": "Felton Spencer", "min": 16, "fg": "2-6", "ft": "5-6", "reb": 8, "pf": 1, "blk": 2, "pts": 9},
+            {"name": "Craig Hawley", "min": 6, "ft": "2-2", "pf": 3, "ast": 1, "to": 1, "pts": 2},
+            {"name": "Avery Marshall", "min": 2, "ast": 1},
+            {"name": "Will Olliges", "min": 1, "fg": "0-1", "pts": 0},
+            {"name": "Shannon Fraley", "min": 1, "fg": "0-1", "ft": "0-1", "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

@@ -1,0 +1,48 @@
+{
+  "page": 7,
+  "games": [
+    {
+      "date": "1979-12-22",
+      "opponent": "Colorado State",
+      "ucla_score": 86,
+      "opp_score": 63,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 86,
+          "players": [
+            {"name": "Wilkes", "fg": "10-19", "ft": "6-7", "reb": 12, "pf": 5, "pts": 26},
+            {"name": "Vandeweghe", "fg": "6-16", "ft": "6-9", "reb": 7, "pf": 2, "pts": 18},
+            {"name": "Allums", "fg": "4-9", "ft": "1-1", "reb": 5, "pf": 3, "pts": 9},
+            {"name": "Foster", "fg": "2-10", "ft": "2-2", "reb": 1, "pf": 3, "pts": 6},
+            {"name": "Naulls", "fg": "2-3", "ft": "2-2", "reb": 2, "pf": 1, "pts": 6},
+            {"name": "Holton", "fg": "0-3", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Sanders", "fg": "2-7", "ft": "1-2", "reb": 8, "pf": 0, "pts": 5},
+            {"name": "Daye", "fg": "3-5", "ft": "2-4", "reb": 3, "pf": 2, "pts": 8},
+            {"name": "Pruitt", "fg": "2-6", "ft": "4-6", "reb": 5, "pf": 1, "pts": 8},
+            {"name": "Anderson", "fg": "0-1", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Colorado State Rams",
+          "score": 63,
+          "players": [
+            {"name": "Young", "fg": "12-22", "ft": "13-14", "reb": 3, "pf": 5, "pts": 37},
+            {"name": "Watley", "fg": "0-1", "ft": "0-0", "reb": 6, "pf": 5, "pts": 0},
+            {"name": "Jung", "fg": "8-15", "ft": "2-2", "reb": 5, "pf": 3, "pts": 18},
+            {"name": "Hughes", "fg": "1-8", "ft": "0-0", "reb": 4, "pf": 2, "pts": 2},
+            {"name": "Talley", "fg": "1-3", "ft": "0-0", "reb": 1, "pf": 3, "pts": 2},
+            {"name": "Ellis", "fg": "0-0", "ft": "2-2", "reb": 1, "pf": 1, "pts": 2},
+            {"name": "Williams", "fg": "0-1", "ft": "0-0", "reb": 5, "pf": 2, "pts": 0},
+            {"name": "Lego", "fg": "0-1", "ft": "0-0", "reb": 1, "pf": 1, "pts": 0},
+            {"name": "Nickell", "fg": "1-3", "ft": "0-0", "reb": 3, "pf": 3, "pts": 2},
+            {"name": "Head", "fg": "0-1", "ft": "0-0", "reb": 2, "pf": 1, "pts": 0},
+            {"name": "Bland", "fg": "0-2", "ft": "0-0", "reb": 0, "pf": 1, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

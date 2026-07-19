@@ -1,0 +1,48 @@
+{
+  "page": 5,
+  "games": [
+    {
+      "date": "1965-01-13",
+      "opponent": "Hampden-Sydney",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 106,
+          "players": [
+            {"name": "Jim Connelly", "ft": "2-4", "reb": 6, "pf": 4, "pts": 28},
+            {"name": "Bernie Meyer", "ft": "2-2", "reb": 9, "pf": 4, "pts": 20},
+            {"name": "Mac Caldwell", "ft": "6-7", "reb": 15, "pf": 4, "pts": 18},
+            {"name": "Mack Wilcox", "ft": "1-1", "reb": 3, "pf": 5, "pts": 7},
+            {"name": "Fred Stant", "ft": "5-6", "reb": 3, "pf": 3, "pts": 15},
+            {"name": "Teed Wafle", "ft": "0-3", "reb": 3, "pf": 1, "pts": 4},
+            {"name": "Ken Goble", "ft": "3-3", "reb": 3, "pf": 1, "pts": 7},
+            {"name": "Jerry Sanders", "ft": "0-0", "reb": 1, "pf": 1, "pts": 4},
+            {"name": "Bob Engel", "ft": "1-2", "reb": 1, "pf": 2, "pts": 1},
+            {"name": "Dale Hilsmeier", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0},
+            {"name": "Renny Barnes", "ft": "0-0", "reb": 0, "pf": 1, "pts": 2}
+          ]
+        },
+        {
+          "name": "Hampden-Sydney",
+          "score": 73,
+          "players": [
+            {"name": "Trickler", "ft": "4-5", "reb": 7, "pf": 3, "pts": 6},
+            {"name": "Snyder", "ft": "1-3", "reb": 6, "pf": 5, "pts": 5},
+            {"name": "Rathman", "ft": "0-0", "reb": 4, "pf": 4, "pts": 6},
+            {"name": "Perkins", "ft": "0-2", "reb": 2, "pf": 1, "pts": 8},
+            {"name": "Quarles", "ft": "2-2", "reb": 5, "pf": 2, "pts": 4},
+            {"name": "Beach", "ft": "5-7", "reb": 1, "pf": 2, "pts": 7},
+            {"name": "Parker", "ft": "1-1", "reb": 1, "pf": 0, "pts": 1},
+            {"name": "Richardson", "ft": "2-3", "reb": 3, "pf": 0, "pts": 8},
+            {"name": "Ed Witthoefft", "ft": "1-1", "reb": 1, "pf": 0, "pts": 5},
+            {"name": "Lawrence", "ft": "5-8", "reb": 11, "pf": 3, "pts": 17},
+            {"name": "Soden", "ft": "0-2", "reb": 1, "pf": 1, "pts": 6},
+            {"name": "Glasseri", "ft": "0-0", "reb": 0, "pf": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

@@ -1,0 +1,39 @@
+{
+  "page": 17,
+  "games": [
+    {
+      "date": "1934-02-19",
+      "opponent": "Chicago",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 33,
+          "players": [
+            {"name": "Whitlinger", "fg": "5", "ft": "1", "pf": 2, "pts": 11},
+            {"name": "Colburn", "fg": "2", "ft": "2", "pf": 3, "pts": 6},
+            {"name": "Conrad", "fg": "1", "ft": "0", "pf": 3, "pts": 2},
+            {"name": "Mosequist", "fg": "2", "ft": "3", "pf": 3, "pts": 7},
+            {"name": "Beitner", "fg": "0", "ft": "1", "pf": 4, "pts": 1},
+            {"name": "Wilson", "fg": "3", "ft": "0", "pf": 3, "pts": 6}
+          ]
+        },
+        {
+          "name": "Chicago",
+          "score": 30,
+          "players": [
+            {"name": "Haarlowe", "fg": "3", "ft": "5", "pf": 2, "pts": 11},
+            {"name": "Flinn", "fg": "0", "ft": "1", "pf": 1, "pts": 1},
+            {"name": "Pyle", "fg": "0", "ft": "0", "pf": 0, "pts": 0},
+            {"name": "Peterson", "fg": "1", "ft": "2", "pf": 3, "pts": 4},
+            {"name": "Eldred", "fg": "0", "ft": "0", "pf": 2, "pts": 0},
+            {"name": "Oppenheim", "fg": "2", "ft": "2", "pf": 2, "pts": 6},
+            {"name": "Lang", "fg": "3", "ft": "2", "pf": 2, "pts": 8},
+            {"name": "Neiff", "fg": "0", "ft": "0", "pf": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

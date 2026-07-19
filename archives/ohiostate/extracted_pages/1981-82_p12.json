@@ -1,0 +1,52 @@
+{
+  "page": 12,
+  "games": [
+    {
+      "date": null,
+      "date_note": "Handwritten date field at top of sheet is illegible (year appears to be 1982; month/day not legibly readable). Site: St. John Arena, Columbus, OH.",
+      "opponent": "Butler",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 66,
+          "players": [
+            {"name": "Johnson, Bryant", "min": 22, "fg": "2-4", "ft": "0-2", "reb": 5, "pf": 2, "ast": 1, "to": 0, "blk": 0, "stl": 0, "pts": 4},
+            {"name": "Kellogg, Clark", "min": 34, "fg": "7-9", "ft": "1-1", "reb": 9, "pf": 4, "ast": 1, "to": 4, "blk": 0, "stl": 1, "pts": 15},
+            {"name": "Wellington, Granville", "name_note": "Likely Granville Waiters (OSU center this era); handwriting reads closer to 'Wellington'", "min": 28, "fg": "3-4", "ft": "2-2", "reb": 4, "pf": 2, "ast": 0, "to": 2, "blk": 1, "stl": 0, "pts": 8},
+            {"name": "Huggins, Larry", "min": 29, "fg": "5-9", "ft": "0-0", "reb": 0, "pf": 1, "ast": 2, "to": 0, "blk": 0, "stl": 0, "pts": 10},
+            {"name": "Frazier, Troy", "min": 34, "fg": "6-13", "ft": "2-3", "reb": 3, "pf": 2, "ast": 7, "to": 4, "blk": 0, "stl": 2, "pts": 14},
+            {"name": "Campbell, Tony", "min": 18, "fg": "4-7", "ft": "0-0", "reb": 5, "pf": 3, "ast": 2, "to": 2, "blk": 0, "stl": 1, "pts": 8},
+            {"name": "Sikes, Ron", "min": 18, "fg": "1-3", "ft": "0-0", "reb": 0, "pf": 3, "ast": 3, "to": 2, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Kindner, Cliff", "min": 3, "fg": "0-1", "ft": "1-2", "reb": 0, "pf": 1, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 1},
+            {"name": "Jones, Dave", "min": 3, "fg": "1-2", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Folk, Derick", "min": 4, "fg": "1-2", "ft": "0-0", "reb": 2, "pf": 1, "ast": 1, "to": 0, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Concheck, Joe", "name_note": "surname uncertain, handwriting hard to parse", "min": 2, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Haas, Mitch", "min": 2, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Butler",
+          "score": 48,
+          "players": [
+            {"name": "Butler, Tom", "name_note": "surname coincidentally matches team name on sheet; uncertain reading, possibly 'Buhler'", "min": 23, "fg": "0-1", "ft": "1-2", "reb": 3, "pf": 3, "ast": 3, "to": 3, "blk": 0, "stl": 0, "pts": 1},
+            {"name": "Mitchem, Lynn", "name_note": "surname uncertain (read as 'Michigan' on sheet, likely 'Mitchem')", "min": 35, "fg": "6-12", "ft": "4-6", "reb": 8, "pf": 2, "ast": 0, "to": 4, "blk": 0, "stl": 0, "pts": 16},
+            {"name": "Ganley, Tom", "name_note": "surname uncertain", "min": 20, "fg": "1-1", "ft": "0-0", "reb": 2, "pf": 3, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Unknown, Troy", "name_note": "surname illegible", "min": 34, "fg": "4-8", "ft": "0-1", "reb": 4, "pf": 1, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pts": 8},
+            {"name": "Deary, Darrell", "min": 31, "fg": "4-9", "ft": "2-5", "reb": 2, "pf": 1, "ast": 3, "to": 4, "blk": 0, "stl": 2, "pts": 10},
+            {"name": "Richardson, Joe", "min": 6, "fg": "0-1", "ft": "0-0", "reb": 1, "pf": 1, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Sears, Greg", "min": 10, "fg": "0-0", "ft": "1-2", "reb": 0, "pf": 0, "ast": 1, "to": 2, "blk": 0, "stl": 0, "pts": 1},
+            {"name": "Jose, John", "min": 10, "fg": "1-4", "ft": "2-2", "reb": 0, "pf": 1, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pts": 4},
+            {"name": "McRoberts, Tim", "min": 4, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Peters, Ron", "min": 3, "fg": "2-2", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 4},
+            {"name": "Ikerd, Larry", "min": 2, "fg": "0-1", "ft": "2-2", "reb": 1, "pf": 1, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Davis, Claude", "min": 1, "fg": "0-1", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Rodgers, Chris", "min": 1, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 1, "to": 0, "blk": 0, "stl": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true,
+      "checksum_note": "Ohio State player pts sum = 66 (matches final 66). Butler player pts sum = 48 (matches final 48). Each player's pts also independently equals 2*FGmade+FTmade, consistent with the sheet's own TP column."
+    }
+  ],
+  "skipped": []
+}

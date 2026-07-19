@@ -1,0 +1,43 @@
+{
+  "page": 9,
+  "games": [
+    {
+      "date": "1952-01-05",
+      "opponent": "Northwestern",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 70,
+          "players": [
+            {"name": "Wilks", "fg": "3-16", "ft": "2-3", "pf": 2, "pts": 8},
+            {"name": "Hague", "fg": "0-0", "ft": "0-0", "pf": 0, "pts": 0},
+            {"name": "Williams", "fg": "4-10", "ft": "3-4", "pf": 5, "pts": 11},
+            {"name": "Armstrong", "fg": "0-1", "ft": "2-3", "pf": 5, "pts": 2},
+            {"name": "Ebert", "fg": "10-27", "ft": "5-8", "pf": 4, "pts": 25},
+            {"name": "Jones", "fg": "1-11", "ft": "0-0", "pf": 1, "pts": 2},
+            {"name": "Cook", "fg": "3-6", "ft": "0-0", "pf": 2, "pts": 6},
+            {"name": "Karaffa", "fg": "7-14", "ft": "2-2", "pf": 5, "pts": 16},
+            {"name": "Dawe", "fg": "0-0", "ft": "0-0", "pf": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Northwestern",
+          "score": 75,
+          "players": [
+            {"name": "Dellefield", "fg": "9-18", "ft": "3-6", "pf": 2, "pts": 21},
+            {"name": "Ehmann", "fg": "6-12", "ft": "0-0", "pf": 3, "pts": 12},
+            {"name": "Blaha", "fg": "2-6", "ft": "1-2", "pf": 1, "pts": 5},
+            {"name": "Petranicek", "fg": "4-8", "ft": "3-5", "pf": 5, "pts": 11},
+            {"name": "Collier", "fg": "2-4", "ft": "2-3", "pf": 0, "pts": 6},
+            {"name": "Grant", "fg": "2-6", "ft": "0-1", "pf": 1, "pts": 4},
+            {"name": "Brady", "fg": "2-10", "ft": "1-3", "pf": 5, "pts": 5},
+            {"name": "Bragiel", "fg": "2-4", "ft": "1-1", "pf": 0, "pts": 5},
+            {"name": "Biever", "fg": "2-9", "ft": "2-2", "pf": 5, "pts": 6}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

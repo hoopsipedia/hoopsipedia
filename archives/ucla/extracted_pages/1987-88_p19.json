@@ -1,0 +1,48 @@
+{
+  "page": 19,
+  "games": [
+    {
+      "date": "1988-01-30",
+      "opponent": "Washington",
+      "ucla_score": 78,
+      "opp_score": 71,
+      "teams": [
+        {
+          "name": "Washington Huskies",
+          "score": 71,
+          "players": [
+            {"name": "Hayward", "min": 26, "fg": "2-12", "tp": "0-1", "ft": "3-4", "reb": 7, "ast": 0, "pf": 5, "to": 0, "stl": 2, "blk": 1, "pts": 7},
+            {"name": "Jenkins", "min": 15, "fg": "0-3", "tp": "0-0", "ft": "2-2", "reb": 1, "ast": 1, "pf": 0, "to": 1, "stl": 0, "blk": 1, "pts": 2},
+            {"name": "Lautenbach", "min": 9, "fg": "1-1", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 1, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Recasner", "min": 39, "fg": "5-13", "tp": "1-4", "ft": "4-4", "reb": 3, "ast": 1, "pf": 2, "to": 2, "stl": 0, "blk": 0, "pts": 15},
+            {"name": "Morrell", "min": 29, "fg": "0-4", "tp": "0-1", "ft": "0-0", "reb": 5, "ast": 5, "pf": 4, "to": 2, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "West", "min": 35, "fg": "6-10", "tp": "0-0", "ft": "3-5", "reb": 8, "ast": 1, "pf": 3, "to": 3, "stl": 0, "blk": 0, "pts": 15},
+            {"name": "Sahor", "min": 32, "fg": "6-12", "tp": "3-6", "ft": "5-6", "reb": 4, "ast": 2, "pf": 3, "to": 2, "stl": 0, "blk": 0, "pts": 20},
+            {"name": "Brady", "min": 7, "fg": "1-1", "tp": "0-0", "ft": "0-0", "reb": 3, "ast": 1, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Robinson", "min": 6, "fg": "1-1", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Wilson", "min": 2, "fg": "2-3", "tp": "2-2", "ft": "0-0", "reb": 2, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 6}
+          ]
+        },
+        {
+          "name": "UCLA Bruins",
+          "score": 78,
+          "players": [
+            {"name": "Jackson", "min": 23, "fg": "2-8", "tp": "0-0", "ft": "1-2", "reb": 4, "ast": 0, "pf": 4, "to": 2, "stl": 0, "blk": 1, "pts": 5},
+            {"name": "Wilson", "min": 24, "fg": "8-13", "tp": "0-0", "ft": "6-7", "reb": 12, "ast": 2, "pf": 4, "to": 2, "stl": 0, "blk": 0, "pts": 22},
+            {"name": "Butler", "min": 32, "fg": "4-5", "tp": "0-0", "ft": "0-0", "reb": 6, "ast": 2, "pf": 4, "to": 1, "stl": 0, "blk": 0, "pts": 8},
+            {"name": "Richardson", "min": 36, "fg": "4-10", "tp": "0-0", "ft": "4-4", "reb": 9, "ast": 7, "pf": 0, "to": 1, "stl": 0, "blk": 1, "pts": 12},
+            {"name": "Immel", "min": 26, "fg": "4-10", "tp": "0-3", "ft": "3-4", "reb": 2, "ast": 2, "pf": 2, "to": 0, "stl": 0, "blk": 1, "pts": 11},
+            {"name": "Rochelin", "min": 8, "fg": "1-4", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 0, "stl": 1, "blk": 0, "pts": 2},
+            {"name": "Madkins", "min": 16, "fg": "4-5", "tp": "2-2", "ft": "0-0", "reb": 0, "ast": 4, "pf": 2, "to": 1, "stl": 2, "blk": 0, "pts": 10},
+            {"name": "Walker", "min": 21, "fg": "3-7", "tp": "0-0", "ft": "2-2", "reb": 3, "ast": 0, "pf": 3, "to": 0, "stl": 1, "blk": 0, "pts": 8},
+            {"name": "Morris", "min": 1, "fg": "0-0", "tp": "0-0", "ft": "0-1", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Owens", "min": 1, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Kenny", "min": 1, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

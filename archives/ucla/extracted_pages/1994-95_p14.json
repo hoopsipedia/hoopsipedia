@@ -1,0 +1,48 @@
+{
+  "page": 14,
+  "games": [
+    {
+      "date": "1995-01-28",
+      "opponent": "California",
+      "ucla_score": 93,
+      "opp_score": 100,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 93,
+          "players": [
+            {"name": "Ed O'Bannon", "min": 35, "fg": "9-18", "tp": "2-8", "ft": "3-3", "reb": 6, "ast": 1, "pf": 5, "to": 4, "stl": 2, "blk": 0, "pts": 23},
+            {"name": "Charles O'Bannon", "min": 24, "fg": "3-9", "tp": "0-1", "ft": "1-2", "reb": 4, "ast": 4, "pf": 2, "to": 3, "stl": 1, "blk": 2, "pts": 7},
+            {"name": "George Zidek", "min": 29, "fg": "7-9", "tp": "0-0", "ft": "3-4", "reb": 8, "ast": 0, "pf": 3, "to": 1, "stl": 0, "blk": 0, "pts": 17},
+            {"name": "Tyus Edney", "min": 36, "fg": "7-16", "tp": "2-6", "ft": "5-8", "reb": 1, "ast": 8, "pf": 4, "to": 3, "stl": 2, "blk": 0, "pts": 21},
+            {"name": "J.R. Henderson", "min": 33, "fg": "9-15", "tp": "2-4", "ft": "2-4", "reb": 9, "ast": 1, "pf": 3, "to": 2, "stl": 1, "blk": 3, "pts": 22},
+            {"name": "Toby Bailey", "min": 19, "fg": "1-4", "tp": "0-3", "ft": "0-1", "reb": 3, "ast": 4, "pf": 5, "to": 2, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Cameron Dollar", "min": 13, "fg": "0-3", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 3, "pf": 4, "to": 1, "stl": 3, "blk": 0, "pts": 0},
+            {"name": "Ike Nwankwo", "min": 5, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 1, "pts": 0},
+            {"name": "Kris Johnson", "min": 4, "fg": "0-1", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "omm'A Givens", "min": 2, "fg": "0-0", "tp": "0-0", "ft": "1-2", "reb": 1, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 1}
+          ]
+        },
+        {
+          "name": "California Golden Bears",
+          "score": 100,
+          "players": [
+            {"name": "Monty Buckley", "min": 37, "fg": "4-12", "tp": "2-6", "ft": "4-7", "reb": 9, "ast": 3, "pf": 2, "to": 4, "stl": 2, "blk": 0, "pts": 14},
+            {"name": "Michael Stewart", "min": 24, "fg": "3-6", "tp": "0-0", "ft": "1-3", "reb": 4, "ast": 0, "pf": 2, "to": 0, "stl": 0, "blk": 1, "pts": 7},
+            {"name": "Ryan Jamison", "min": 19, "fg": "3-4", "tp": "0-0", "ft": "1-2", "reb": 6, "ast": 1, "pf": 4, "to": 2, "stl": 0, "blk": 0, "pts": 7},
+            {"name": "Jelani Gardner", "min": 26, "fg": "3-7", "tp": "3-4", "ft": "9-10", "reb": 3, "ast": 6, "pf": 3, "to": 6, "stl": 2, "blk": 0, "pts": 18},
+            {"name": "Anwar McQueen", "min": 16, "fg": "0-2", "tp": "0-2", "ft": "2-2", "reb": 4, "ast": 3, "pf": 1, "to": 1, "stl": 1, "blk": 0, "pts": 2},
+            {"name": "Randy Duck", "min": 24, "fg": "4-7", "tp": "2-3", "ft": "5-6", "reb": 2, "ast": 1, "pf": 1, "to": 2, "stl": 0, "blk": 0, "pts": 15},
+            {"name": "Tremaine Fowlkes", "min": 26, "fg": "8-9", "tp": "2-2", "ft": "6-7", "reb": 7, "ast": 1, "pf": 3, "to": 0, "stl": 0, "blk": 0, "pts": 24},
+            {"name": "Tony Gonzalez", "min": 9, "fg": "2-3", "tp": "0-0", "ft": "2-2", "reb": 0, "ast": 0, "pf": 2, "to": 2, "stl": 0, "blk": 0, "pts": 6},
+            {"name": "K.J. Roberts", "min": 16, "fg": "2-7", "tp": "1-6", "ft": "1-2", "reb": 1, "ast": 3, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 6},
+            {"name": "Alfred Grigsby", "min": 2, "fg": "0-0", "tp": "0-0", "ft": "1-2", "reb": 1, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 1},
+            {"name": "Sean Marks", "min": 1, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

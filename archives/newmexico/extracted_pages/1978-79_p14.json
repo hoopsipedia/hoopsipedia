@@ -1,0 +1,45 @@
+{
+  "page": 14,
+  "games": [
+    {
+      "date": "1979-01-11",
+      "opponent": "Utah",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 90,
+          "players": [
+            {"name": "Logan", "min": 27, "fg": "2-6", "ft": "1-2", "reb": 10, "pf": 2, "to": 5, "ast": 0, "blk": 1, "pts": 5},
+            {"name": "Gregory", "min": 6, "fg": "0-3", "ft": "0-0", "reb": 1, "pf": 1, "to": 0, "ast": 0, "pts": 0},
+            {"name": "Roby", "min": 9, "fg": "2-3", "ft": "0-0", "reb": 1, "pf": 0, "to": 1, "ast": 0, "blk": 1, "pts": 4},
+            {"name": "Abney", "min": 34, "fg": "6-9", "ft": "10-13", "reb": 5, "pf": 4, "to": 4, "ast": 4, "blk": 1, "pts": 22},
+            {"name": "Jefferson", "min": 29, "fg": "5-18", "ft": "4-5", "reb": 3, "pf": 4, "to": 3, "ast": 1, "stl": 1, "pts": 14},
+            {"name": "Curry", "min": 7, "fg": "1-2", "ft": "0-0", "reb": 0, "pf": 0, "to": 0, "ast": 0, "pts": 2},
+            {"name": "Belin", "min": 29, "fg": "11-14", "ft": "7-7", "reb": 11, "pf": 5, "to": 2, "ast": 0, "stl": 1, "pts": 29},
+            {"name": "Felix", "min": 28, "fg": "1-3", "ft": "0-0", "reb": 0, "pf": 3, "to": 3, "ast": 3, "stl": 1, "pts": 2},
+            {"name": "Stewart", "min": 17, "fg": "3-5", "ft": "0-0", "reb": 0, "pf": 1, "to": 1, "ast": 0, "stl": 1, "pts": 6},
+            {"name": "Williams, J.", "min": 14, "fg": "2-4", "ft": "2-2", "reb": 2, "pf": 5, "to": 1, "ast": 1, "stl": 1, "pts": 6}
+          ]
+        },
+        {
+          "name": "Utah",
+          "score": 101,
+          "players": [
+            {"name": "Vranes", "min": 28, "fg": "6-13", "ft": "0-1", "reb": 11, "pf": 4, "to": 2, "ast": 1, "blk": 1, "pts": 12},
+            {"name": "Deane", "min": 37, "fg": "16-25", "ft": "3-4", "reb": 4, "pf": 2, "to": 7, "ast": 1, "pts": 35},
+            {"name": "Chambers", "min": 30, "fg": "9-16", "ft": "6-11", "reb": 7, "pf": 5, "to": 2, "ast": 1, "blk": 1, "pts": 24},
+            {"name": "Martin", "min": 33, "fg": "0-2", "ft": "0-1", "reb": 4, "pf": 3, "to": 3, "ast": 12, "stl": 2, "pts": 0},
+            {"name": "Williams, E.", "min": 35, "fg": "6-8", "ft": "2-4", "reb": 4, "pf": 4, "to": 2, "ast": 6, "stl": 7, "pts": 14},
+            {"name": "Johnson", "min": 7, "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 2, "to": 2, "ast": 1, "pts": 0},
+            {"name": "Rice", "min": 5, "fg": "1-2", "ft": "0-0", "reb": 2, "pf": 1, "to": 0, "ast": 1, "pts": 2},
+            {"name": "Bankowski", "min": 3, "fg": "0-0", "ft": "0-0", "reb": 1, "pf": 3, "to": 1, "ast": 0, "pts": 0},
+            {"name": "Leavitt", "min": 12, "fg": "3-4", "ft": "0-0", "reb": 2, "pf": 0, "to": 1, "ast": 2, "pts": 6},
+            {"name": "Larson", "min": 10, "fg": "1-1", "ft": "6-6", "reb": 4, "pf": 3, "to": 0, "ast": 0, "pts": 8}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

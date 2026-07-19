@@ -1,0 +1,43 @@
+{
+  "page": 25,
+  "games": [
+    {
+      "date": "1990-02-25",
+      "opponent": "NC State Wolfpack",
+      "teams": [
+        {
+          "name": "NC State Wolfpack",
+          "score": 71,
+          "players": [
+            {"name": "Brian Howard", "min": 34, "fg": "5-12", "tp": "0-1", "ft": "0-2", "reb": 6, "ast": 2, "pf": 4, "to": null, "stl": 3, "blk": 1, "pts": 10},
+            {"name": "Tom Gugliotta", "min": 25, "fg": "3-6", "tp": "2-2", "ft": "1-2", "reb": 2, "ast": null, "pf": 4, "to": 1, "stl": 1, "blk": null, "pts": 9},
+            {"name": "Brian D'Amico", "min": 15, "fg": "1-5", "tp": "0-2", "ft": null, "reb": 4, "ast": null, "pf": 4, "to": null, "stl": null, "blk": null, "pts": 2},
+            {"name": "Chris Corchiani", "min": 35, "fg": "3-10", "tp": "1-2", "ft": "4-5", "reb": 2, "ast": 4, "pf": 4, "to": 4, "stl": 2, "blk": null, "pts": 11},
+            {"name": "Rodney Monroe", "min": 35, "fg": "8-20", "tp": "5-8", "ft": "4-4", "reb": 6, "ast": 2, "pf": 2, "to": 3, "stl": 2, "blk": null, "pts": 25},
+            {"name": "Mickey Hinnant", "min": 23, "fg": "1-4", "tp": "0-2", "ft": null, "reb": null, "ast": null, "pf": 3, "to": null, "stl": 1, "blk": null, "pts": 2},
+            {"name": "Bryant Feggins", "min": 19, "fg": "4-10", "ft": "2-2", "reb": 6, "ast": null, "pf": 5, "to": null, "stl": null, "blk": 1, "pts": 10},
+            {"name": "Kevin Thompson", "min": 14, "fg": "1-2", "ft": null, "reb": 4, "ast": null, "pf": 1, "to": 1, "stl": null, "blk": null, "pts": 2},
+            {"name": "Roland Whitley", "min": 0, "fg": null, "ft": null, "reb": null, "ast": null, "pf": 2, "to": null, "stl": null, "blk": null, "pts": 0}
+          ]
+        },
+        {
+          "name": "Virginia Cavaliers",
+          "score": 77,
+          "players": [
+            {"name": "Bryant Stith", "min": 38, "fg": "10-14", "tp": "0-2", "ft": "7-10", "reb": 12, "ast": 1, "pf": 1, "to": null, "stl": 2, "blk": 2, "pts": 27},
+            {"name": "Kenny Turner", "min": 32, "fg": "5-10", "tp": "1-2", "ft": null, "reb": 8, "ast": 1, "pf": 4, "to": 2, "stl": null, "blk": 1, "pts": 11},
+            {"name": "Ted Jeffries", "min": 20, "fg": "1-4", "ft": "4-6", "reb": 9, "ast": 1, "pf": 3, "to": null, "stl": null, "blk": null, "pts": 6},
+            {"name": "Anthony Oliver", "min": 32, "fg": "4-11", "tp": "1-1", "ft": "1-2", "reb": 2, "ast": null, "pf": 5, "to": 2, "stl": 5, "blk": null, "pts": 10},
+            {"name": "John Crotty", "min": 39, "fg": "4-7", "tp": "1-2", "ft": "5-8", "reb": 3, "ast": 7, "pf": 2, "to": 8, "stl": null, "blk": null, "pts": 14},
+            {"name": "Terry Kirby", "min": 18, "fg": "1-5", "tp": "0-1", "ft": "1-5", "reb": 4, "ast": null, "pf": 4, "to": null, "stl": 1, "blk": null, "pts": 3},
+            {"name": "Jeff Daniel", "min": 2, "fg": null, "ft": null, "reb": null, "ast": null, "pf": null, "to": null, "stl": null, "blk": null, "pts": 0},
+            {"name": "Matt Blundin", "min": 25, "fg": "3-4", "tp": "0-1", "ft": "0-1", "reb": 4, "ast": null, "pf": 2, "to": null, "stl": null, "blk": 3, "pts": 6},
+            {"name": "Doug Smith", "min": 1, "fg": null, "ft": null, "reb": null, "ast": null, "pf": null, "to": 3, "stl": null, "blk": null, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

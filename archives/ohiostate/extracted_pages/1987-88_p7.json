@@ -1,0 +1,9 @@
+{
+  "page": 7,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Typed official box score for OHIO STATE vs DAYTON (Dec 19, 1987, St. John Arena, Columbus). Team totals lines are legible and internally consistent (Dayton 31-57 FG, 1-6 3FG, 18-23 FT = 81 pts matching final score 81-80; Ohio State 33-68 FG, 1-2 3FG, 13-21 FT = 80 pts matching final score), but several individual player rows on both sides (Dayton: Uhl, Pittman, Brevey, Knight, Robinson, McCreimon; Ohio State: several bench rows) contain smudged/typewriter-faint digits that cannot be read with confidence (e.g. ambiguous 0 vs blank marks, garbled characters in rebound/assist/turnover columns). Since a per-player checksum requires every player line on both teams to be accurate, skipping rather than guessing at the illegible entries."
+    }
+  ]
+}

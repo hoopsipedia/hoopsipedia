@@ -1,0 +1,40 @@
+{
+  "page": 10,
+  "games": [
+    {
+      "date": "1985-12-28",
+      "opponent": "Loyola of Chicago",
+      "note": "Championship Game, Rochester Basketball Classic, Rochester, New York",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 71,
+          "players": [
+            {"name": "Tom Calloway", "min": 33, "fg": "2-6", "ft": "2-3", "reb": 2, "pf": 4, "pts": 6, "ast": 1, "to": 2, "blk": 0, "stl": 1},
+            {"name": "John Johnson", "min": 18, "fg": "2-6", "ft": "5-6", "reb": 2, "pf": 2, "pts": 9, "ast": 4, "to": 0, "blk": 0, "stl": 2},
+            {"name": "Richard Morgan", "min": 25, "fg": "4-11", "ft": "0-0", "reb": 2, "pf": 1, "pts": 8, "ast": 6, "to": 2, "blk": 0, "stl": 1},
+            {"name": "Mel Kennedy", "min": 34, "fg": "7-12", "ft": "2-4", "reb": 7, "pf": 0, "pts": 16, "ast": 2, "to": 1, "blk": 0, "stl": 0},
+            {"name": "Tom Sheehey", "min": 32, "fg": "4-6", "ft": "0-0", "reb": 4, "pf": 0, "pts": 8, "ast": 2, "to": 0, "blk": 0, "stl": 0},
+            {"name": "Olden Polynice", "min": 37, "fg": "10-13", "ft": "0-0", "reb": 7, "pf": 1, "pts": 20, "ast": 1, "to": 4, "blk": 1, "stl": 1},
+            {"name": "Andrew Kennedy", "min": 19, "fg": "2-5", "ft": "0-0", "reb": 3, "pf": 1, "pts": 4, "ast": 1, "to": 3, "blk": 0, "stl": 0},
+            {"name": "John Dyslin", "min": 2, "fg": "0-0", "ft": "0-0", "reb": 1, "pf": 0, "pts": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0}
+          ]
+        },
+        {
+          "name": "Loyola of Chicago",
+          "score": 70,
+          "players": [
+            {"name": "Carl Golston", "min": 40, "fg": "11-25", "ft": "2-2", "reb": 1, "pf": 4, "pts": 24, "ast": 10, "to": 4, "blk": 0, "stl": 0},
+            {"name": "Bernard Jackson", "min": 40, "fg": "9-16", "ft": "2-3", "reb": 6, "pf": 3, "pts": 20, "ast": 7, "to": 3, "blk": 0, "stl": 6},
+            {"name": "Bobby Clark", "min": 40, "fg": "2-4", "ft": "0-0", "reb": 11, "pf": 3, "pts": 4, "ast": 3, "to": 1, "blk": 0, "stl": 0},
+            {"name": "Bryan Boyle", "min": 9, "fg": "0-1", "ft": "0-0", "reb": 0, "pf": 1, "pts": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0},
+            {"name": "Ivan Young", "min": 31, "fg": "2-4", "ft": "0-0", "reb": 2, "pf": 4, "pts": 4, "ast": 0, "to": 2, "blk": 0, "stl": 1},
+            {"name": "Andre Moore", "min": 40, "fg": "9-12", "ft": "0-2", "reb": 9, "pf": 1, "pts": 18, "ast": 0, "to": 3, "blk": 1, "stl": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

@@ -1,0 +1,51 @@
+{
+  "page": 24,
+  "games": [
+    {
+      "date": "1976-02-21",
+      "opponent": "Oregon",
+      "ucla_score": 45,
+      "opp_score": 65,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 45,
+          "players": [
+            {"name": "Washington", "min": 36, "fg": "3-12", "ft": "3-5", "reb": 13, "ast": 0, "pf": 3, "pts": 9},
+            {"name": "Johnson", "min": 38, "fg": "5-10", "ft": "0-0", "reb": 12, "ast": 0, "pf": 4, "pts": 10},
+            {"name": "Greenwood", "min": 9, "fg": "0-2", "ft": "0-0", "reb": 1, "ast": 0, "pf": 1, "pts": 0},
+            {"name": "Townsend", "min": 31, "fg": "5-10", "ft": "0-0", "reb": 3, "ast": 1, "pf": 3, "pts": 10},
+            {"name": "McCarter", "min": 23, "fg": "1-7", "ft": "0-0", "reb": 0, "ast": 4, "pf": 3, "pts": 2},
+            {"name": "Spillane", "min": 19, "fg": "1-7", "ft": "1-2", "reb": 0, "ast": 4, "pf": 4, "pts": 3},
+            {"name": "Drollinger", "min": 3, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 2, "pts": 0},
+            {"name": "Smith", "min": 22, "fg": "4-12", "ft": "0-0", "reb": 3, "ast": 0, "pf": 5, "pts": 8},
+            {"name": "Holland", "min": 5, "fg": "0-1", "ft": "0-0", "reb": 0, "ast": 0, "pf": 3, "pts": 0},
+            {"name": "Vroman", "min": 3, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 2, "pts": 0},
+            {"name": "Hamilton", "min": 5, "fg": "0-2", "ft": "1-2", "reb": 0, "ast": 0, "pf": 1, "pts": 1},
+            {"name": "Olinde", "min": 6, "fg": "1-3", "ft": "0-0", "reb": 1, "ast": 0, "pf": 0, "pts": 2}
+          ]
+        },
+        {
+          "name": "Oregon Ducks",
+          "score": 65,
+          "players": [
+            {"name": "Mack", "min": 28, "fg": "1-2", "ft": "0-0", "reb": 5, "ast": 1, "pf": 1, "pts": 2},
+            {"name": "Ballard", "min": 31, "fg": "6-9", "ft": "4-8", "reb": 10, "ast": 2, "pf": 3, "pts": 16},
+            {"name": "Geoff Nelson", "min": 9, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 3, "pts": 0},
+            {"name": "Barwig", "min": 20, "fg": "3-3", "ft": "6-9", "reb": 1, "ast": 1, "pf": 2, "pts": 12},
+            {"name": "Lee", "min": 37, "fg": "4-8", "ft": "5-7", "reb": 6, "ast": 8, "pf": 0, "pts": 13},
+            {"name": "Drummond", "min": 11, "fg": "0-0", "ft": "0-0", "reb": 1, "ast": 2, "pf": 0, "pts": 0},
+            {"name": "Gary Nelson", "min": 14, "fg": "2-5", "ft": "4-4", "reb": 3, "ast": 1, "pf": 2, "pts": 8},
+            {"name": "Jackson", "min": 20, "fg": "4-6", "ft": "2-2", "reb": 4, "ast": 1, "pf": 1, "pts": 10},
+            {"name": "Moreck", "min": 6, "fg": "0-0", "ft": "0-1", "reb": 1, "ast": 0, "pf": 0, "pts": 0},
+            {"name": "Hartshorne", "min": 10, "fg": "0-1", "ft": "0-0", "reb": 0, "ast": 0, "pf": 4, "pts": 0},
+            {"name": "Graham", "min": 12, "fg": "1-2", "ft": "0-0", "reb": 3, "ast": 1, "pf": 1, "pts": 2},
+            {"name": "Coldren", "min": 2, "fg": "1-2", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "pts": 2}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

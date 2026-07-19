@@ -1,0 +1,54 @@
+{
+  "page": 14,
+  "games": [
+    {
+      "date": "2002-01-10",
+      "opponent": "USC",
+      "location": "Los Angeles, Calif. (The Forum)",
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 77,
+          "record_after": "11-3, 4-1",
+          "players": [
+            {"name": "Barnes, Matt", "min": 37, "fg": "12-17", "tp": "7-11", "ft": "3-4", "oreb": 2, "dreb": 3, "reb": 5, "pf": 4, "ast": 2, "to": 3, "blk": 0, "stl": 0, "pts": 34},
+            {"name": "Kapono, Jason", "min": 24, "fg": "5-10", "tp": "3-4", "ft": "0-0", "oreb": 0, "dreb": 1, "reb": 1, "pf": 3, "ast": 1, "to": 2, "blk": 0, "stl": 0, "pts": 13},
+            {"name": "Gadzuric, Dan", "min": 34, "fg": "3-10", "tp": "0-0", "ft": "1-3", "oreb": 5, "dreb": 11, "reb": 16, "pf": 4, "ast": 0, "to": 3, "blk": 1, "stl": 1, "pts": 7},
+            {"name": "Knight, Billy", "min": 33, "fg": "4-11", "tp": "2-6", "ft": "7-8", "oreb": 1, "dreb": 1, "reb": 2, "pf": 4, "ast": 1, "to": 2, "blk": 0, "stl": 1, "pts": 17},
+            {"name": "Hines, Rico", "min": 24, "fg": "1-2", "tp": "0-0", "ft": "0-0", "oreb": 0, "dreb": 1, "reb": 1, "pf": 3, "ast": 3, "to": 0, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Thompson, Dijon", "min": 8, "fg": "0-1", "tp": "0-0", "ft": "0-0", "oreb": 0, "dreb": 0, "reb": 0, "pf": 4, "ast": 0, "to": 1, "blk": 1, "stl": 0, "pts": 0},
+            {"name": "Patterson, Andre", "min": 2, "fg": "0-0", "tp": "0-0", "ft": "0-0", "oreb": 0, "dreb": 0, "reb": 0, "pf": 0, "ast": 0, "to": 0, "blk": 2, "stl": 0, "pts": 0},
+            {"name": "Walcott, Ryan", "min": 1, "fg": "1-1", "tp": "0-0", "ft": "0-0", "oreb": 0, "dreb": 0, "reb": 0, "pf": 2, "ast": 0, "to": 0, "blk": 0, "stl": 1, "pts": 2},
+            {"name": "Bozeman, Cedric", "min": 7, "fg": "0-0", "tp": "0-0", "ft": "0-0", "oreb": 0, "dreb": 0, "reb": 0, "pf": 1, "ast": 1, "to": 1, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Cummings, T.J.", "min": 17, "fg": "1-6", "tp": "0-0", "ft": "0-0", "oreb": 0, "dreb": 1, "reb": 1, "pf": 2, "ast": 3, "to": 2, "blk": 0, "stl": 0, "pts": 2}
+          ],
+          "team_totals": {"fg": "27-58", "tp": "12-21", "ft": "11-15", "oreb": 11, "dreb": 22, "reb": 33, "pf": 27, "ast": 12, "to": 14, "blk": 4, "stl": 3, "min": 200, "pts": 77},
+          "checksum_ok": true
+        },
+        {
+          "name": "USC Trojans",
+          "score": 81,
+          "record_after": "13-2, 5-0",
+          "players": [
+            {"name": "Bluthenthal, David", "min": 40, "fg": "4-12", "tp": "3-6", "ft": "5-8", "oreb": 8, "dreb": 10, "reb": 18, "pf": 4, "ast": 1, "to": 2, "blk": 1, "stl": 1, "pts": 16},
+            {"name": "Clancy, Sam", "min": 40, "fg": "5-15", "tp": "0-0", "ft": "9-11", "oreb": 6, "dreb": 6, "reb": 12, "pf": 2, "ast": 1, "to": 1, "blk": 2, "stl": 0, "pts": 19, "note": "minutes digit partially obscured on scan, printed as '40-'; read as 40"},
+            {"name": "Charissis, Kostas", "min": 9, "fg": "2-3", "tp": "0-0", "ft": "0-0", "oreb": 1, "dreb": 0, "reb": 1, "pf": 4, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pts": 4},
+            {"name": "Granville, Brandon", "min": 33, "fg": "5-12", "tp": "3-7", "ft": "5-6", "oreb": 3, "dreb": 0, "reb": 3, "pf": 3, "ast": 3, "to": 0, "blk": 0, "stl": 2, "pts": 18},
+            {"name": "Craven, Errick", "min": 28, "fg": "6-14", "tp": "1-5", "ft": "0-2", "oreb": 2, "dreb": 3, "reb": 5, "pf": 2, "ast": 2, "to": 2, "blk": 0, "stl": 2, "pts": 13},
+            {"name": "Hutchinson, Robert", "min": 8, "fg": "0-0", "tp": "0-0", "ft": "1-2", "oreb": 0, "dreb": 1, "reb": 1, "pf": 0, "ast": 1, "to": 2, "blk": 0, "stl": 1, "pts": 1},
+            {"name": "O'Neil, Rory", "min": 13, "fg": "1-4", "tp": "0-0", "ft": "0-0", "oreb": 1, "dreb": 0, "reb": 1, "pf": 4, "ast": 1, "to": 0, "blk": 1, "stl": 0, "pts": 2},
+            {"name": "Dupree, Jerry", "min": 3, "fg": "0-0", "tp": "0-0", "ft": "0-0", "oreb": 0, "dreb": 0, "reb": 0, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Farmer, Desmon", "min": 26, "fg": "2-7", "tp": "0-2", "ft": "4-8", "oreb": 1, "dreb": 1, "reb": 2, "pf": 1, "ast": 3, "to": 1, "blk": 0, "stl": 0, "pts": 8}
+          ],
+          "team_totals": {"fg": "25-67", "tp": "7-20", "ft": "24-37", "oreb": 24, "dreb": 22, "reb": 46, "pf": 17, "ast": 12, "to": 10, "blk": 4, "stl": 6, "min": 200, "pts": 81},
+          "checksum_ok": true
+        }
+      ],
+      "score_by_periods": {"UCLA": {"1st": 29, "2nd": 48, "total": 77}, "USC": {"1st": 37, "2nd": 44, "total": 81}},
+      "officials": ["Dave Libbey", "Scott Thornley", "Mark Ayotte"],
+      "attendance": 15903,
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

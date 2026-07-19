@@ -1,0 +1,40 @@
+{
+  "page": 4,
+  "games": [
+    {
+      "date": "1980-12-13",
+      "opponent": "Arizona State Sun Devils",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 83,
+          "players": [
+            {"name": "Kenny Pace", "min": 41, "fg": "15-26", "ft": "5-5", "reb": 5, "ast": 2, "pf": 1, "to": 1, "stl": 3, "blk": 1, "pts": 35},
+            {"name": "Tony Persley", "min": 38, "fg": "8-14", "ft": "2-2", "reb": 10, "ast": 3, "pf": 4, "to": 2, "stl": 0, "blk": 0, "pts": 18},
+            {"name": "Jerome Henderson", "min": 29, "fg": "3-14", "ft": "0-0", "reb": 3, "ast": 0, "pf": 5, "to": 2, "stl": 0, "blk": 2, "pts": 6},
+            {"name": "Phil Smith", "min": 38, "fg": "3-5", "ft": "2-2", "reb": 3, "ast": 12, "pf": 1, "to": 2, "stl": 2, "blk": 0, "pts": 8},
+            {"name": "Michael Johnson", "min": 36, "fg": "3-9", "ft": "0-2", "reb": 6, "ast": 0, "pf": 3, "to": 2, "stl": 0, "blk": 0, "pts": 6},
+            {"name": "Wallace Williams", "min": 1, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 1, "blk": 0, "pts": 0},
+            {"name": "David Duzgin", "min": 9, "fg": "2-3", "ft": "2-2", "reb": 1, "ast": 0, "pf": 5, "to": 1, "stl": 0, "blk": 0, "pts": 6},
+            {"name": "Larry Tarrance", "min": 30, "fg": "2-6", "ft": "0-0", "reb": 5, "ast": 0, "pf": 1, "to": 0, "stl": 2, "blk": 0, "pts": 4}
+          ]
+        },
+        {
+          "name": "Arizona State Sun Devils",
+          "score": 86,
+          "players": [
+            {"name": "Johnny Nash", "min": 20, "fg": "0-2", "ft": "0-2", "reb": 8, "ast": 4, "pf": 0, "to": 3, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Sam Williams", "min": 37, "fg": "4-6", "ft": "3-6", "reb": 6, "ast": 3, "pf": 3, "to": 1, "stl": 0, "blk": 2, "pts": 11},
+            {"name": "Alton Lister", "min": 45, "fg": "8-14", "ft": "6-8", "reb": 13, "ast": 2, "pf": 4, "to": 1, "stl": 1, "blk": 5, "pts": 22},
+            {"name": "Byron Scott", "min": 45, "fg": "14-20", "ft": "5-7", "reb": 2, "ast": 5, "pf": 2, "to": 1, "stl": 0, "blk": 1, "pts": 33},
+            {"name": "Lafayette Lever", "min": 42, "fg": "4-13", "ft": "1-2", "reb": 2, "ast": 7, "pf": 1, "to": 3, "stl": 2, "blk": 0, "pts": 9},
+            {"name": "Paul Williams", "min": 25, "fg": "4-7", "ft": "1-1", "reb": 5, "ast": 3, "pf": 3, "to": 4, "stl": 0, "blk": 0, "pts": 9},
+            {"name": "Walt Stone", "min": 8, "fg": "1-2", "ft": "0-0", "reb": 0, "ast": 1, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 2}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

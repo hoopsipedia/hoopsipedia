@@ -1,0 +1,37 @@
+{
+  "page": 3,
+  "games": [
+    {
+      "date": "1931-01-06",
+      "opponent": "Notre Dame",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 24,
+          "players": [
+            {"name": "Ervin", "fg": "1", "ft": "0", "pts": 2},
+            {"name": "Lively", "fg": "2", "ft": "4", "pts": 8},
+            {"name": "Hinchman", "fg": "3", "ft": "0", "pts": 6},
+            {"name": "Russell", "fg": "0", "ft": "0", "pts": 0},
+            {"name": "Larkins", "fg": "2", "ft": "0", "pts": 4},
+            {"name": "Fesler", "fg": "2", "ft": "0", "pts": 4}
+          ]
+        },
+        {
+          "name": "Notre Dame",
+          "score": 27,
+          "players": [
+            {"name": "Newbold", "fg": "6", "ft": "2", "pts": 14},
+            {"name": "Crowe", "fg": "0", "ft": "1", "pts": 1},
+            {"name": "Gavin", "fg": "1", "ft": "0", "pts": 2},
+            {"name": "DeCook", "fg": "3", "ft": "1", "pts": 7},
+            {"name": "Baldwin", "fg": "1", "ft": "1", "pts": 3}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": [],
+  "notes": "Newspaper box score (South Bend Tribune-style clipping) plus header index card confirming date/opponent/coach. Sheet shows only FG-made ('B.' column) and FT-made ('F.' column) with a total points column ('T.') for each player -- no attempts, minutes, rebounds, assists, fouls, turnovers, steals, or blocks were listed, so fg/ft fields here hold made-count only (not 'made-attempted' format; attempts unavailable, not invented). Team totals from the sheet (OSU 10 FG/4 FT/24 PTS, Notre Dame 11 FG/5 FT/27 PTS) match both the summed player points and the final score line (24-27), so checksum passes cleanly for both teams."
+}

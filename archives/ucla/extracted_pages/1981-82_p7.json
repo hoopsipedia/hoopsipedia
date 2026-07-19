@@ -1,0 +1,45 @@
+{
+  "page": 7,
+  "games": [
+    {
+      "date": "1981-12-23",
+      "opponent": "LSU",
+      "ucla_score": 83,
+      "opp_score": 76,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 83,
+          "players": [
+            {"name": "Ralph Jackson", "min": 38, "fg": "4-8", "ft": "2-2", "reb": 6, "ast": 6, "pf": 4, "to": 1, "stl": 0, "blk": 0, "pts": 10},
+            {"name": "Michael Holton", "min": 28, "fg": "4-8", "ft": "5-6", "reb": 1, "ast": 2, "pf": 2, "to": 5, "stl": 0, "blk": 0, "pts": 13},
+            {"name": "Stuart Gray", "min": 16, "fg": "1-1", "ft": "0-0", "reb": 1, "ast": 0, "pf": 3, "to": 3, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Michael Sanders", "min": 39, "fg": "5-11", "ft": "0-0", "reb": 14, "ast": 1, "pf": 3, "to": 4, "stl": 0, "blk": 0, "pts": 10},
+            {"name": "Kenny Fields", "min": 35, "fg": "9-16", "ft": "5-8", "reb": 12, "ast": 1, "pf": 2, "to": 2, "stl": 0, "blk": 1, "pts": 23},
+            {"name": "Rod Foster", "min": 17, "fg": "2-5", "ft": "3-4", "reb": 1, "ast": 2, "pf": 2, "to": 4, "stl": 0, "blk": 0, "pts": 7},
+            {"name": "Nigel Miguel", "min": 1, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Darren Daye", "min": 26, "fg": "5-7", "ft": "8-9", "reb": 7, "ast": 2, "pf": 2, "to": 1, "stl": 0, "blk": 1, "pts": 18}
+          ]
+        },
+        {
+          "name": "LSU Tigers",
+          "score": 76,
+          "players": [
+            {"name": "Leonard Mitchell", "min": 32, "fg": "5-10", "ft": "3-6", "reb": 3, "ast": 0, "pf": 5, "to": 2, "stl": 2, "blk": 1, "pts": 13},
+            {"name": "Howard Carter", "min": 40, "fg": "8-19", "ft": "2-2", "reb": 6, "ast": 2, "pf": 2, "to": 2, "stl": 3, "blk": 1, "pts": 18},
+            {"name": "Ray Bodner", "min": 18, "fg": "2-4", "ft": "0-0", "reb": 4, "ast": 2, "pf": 3, "to": 1, "stl": 1, "blk": 0, "pts": 4},
+            {"name": "Derrick Taylor", "min": 38, "fg": "10-16", "ft": "3-6", "reb": 3, "ast": 4, "pf": 4, "to": 0, "stl": 1, "blk": 0, "pts": 23},
+            {"name": "Johnny Jones", "min": 26, "fg": "3-6", "ft": "0-2", "reb": 2, "ast": 0, "pf": 4, "to": 3, "stl": 1, "blk": 0, "pts": 6},
+            {"name": "John Tudor", "min": 5, "fg": "1-1", "ft": "0-0", "reb": 0, "ast": 0, "pf": 2, "to": 0, "stl": 1, "blk": 0, "pts": 2},
+            {"name": "Drexal Allen", "min": 5, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Tyrone Black", "min": 5, "fg": "0-2", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Steffond Johnson", "min": 22, "fg": "3-5", "ft": "4-5", "reb": 4, "ast": 0, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 10},
+            {"name": "Matt England", "min": 9, "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

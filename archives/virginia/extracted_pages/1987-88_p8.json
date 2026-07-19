@@ -1,0 +1,9 @@
+{
+  "page": 8,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Handwritten official NCAA box score, VCU (visitors) at Virginia (home), date 12/19/87, site Richmond Coliseum, final VCU 75 - Virginia 66 (score-by-periods box: VCU 34/41=75, Virginia 31/35=66). The header/date/site/final-score block is legible, but the per-player FG/FGA, 3pt, FT/FTA, rebound and TP handwritten digits are too cramped and ambiguous to transcribe with confidence -- e.g. VCU row 1 (Thompson) appears to show FG made around 7 which would already exceed that player's own TP of 6, indicating the digit reads are unreliable. Additionally the VCU TOTALS row TP (75) matches the final score but the Virginia TOTALS row TP reads as 65 vs a final score of 66, a 1-point discrepancy that cannot be resolved from the scan. Skipping rather than guessing at individual player stat lines to avoid inventing values."
+    }
+  ]
+}

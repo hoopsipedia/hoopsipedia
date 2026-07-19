@@ -1,0 +1,40 @@
+{
+  "page": 12,
+  "games": [
+    {
+      "date": "1967-01-16",
+      "opponent": "Georgia Tech",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 73,
+          "players": [
+            {"name": "Sepic", "fg": "7-15", "ft": "3-3", "reb": 11, "pf": 3, "pts": 17},
+            {"name": "Miller", "fg": "5-15", "ft": "3-3", "reb": 6, "pf": 2, "pts": 13},
+            {"name": "Hosket", "fg": "4-10", "ft": "0-0", "reb": 12, "pf": 2, "pts": 8},
+            {"name": "Schnabel", "fg": "0-3", "ft": "0-1", "reb": 4, "pf": 2, "pts": 0},
+            {"name": "Sadelfeld", "fg": "6-7", "ft": "1-1", "reb": 5, "pf": 2, "pts": 13},
+            {"name": "Howell", "fg": "3-10", "ft": "3-4", "reb": 3, "pf": 2, "pts": 9},
+            {"name": "Rowley", "fg": "2-7", "ft": "5-8", "reb": 3, "pf": 2, "pts": 9},
+            {"name": "McDavid", "fg": "2-2", "ft": "0-1", "reb": 2, "pf": 0, "pts": 4}
+          ]
+        },
+        {
+          "name": "Georgia Tech",
+          "score": 84,
+          "players": [
+            {"name": "Judy", "fg": "8-16", "ft": "3-3", "reb": 4, "pf": 2, "pts": 19},
+            {"name": "Tomasovich", "fg": "7-15", "ft": "2-3", "reb": 6, "pf": 2, "pts": 16},
+            {"name": "Thorne", "fg": "5-10", "ft": "4-4", "reb": 10, "pf": 3, "pts": 14},
+            {"name": "Cuth", "fg": "6-12", "ft": "3-3", "reb": 4, "pf": 4, "pts": 15},
+            {"name": "Wagner", "fg": "7-16", "ft": "6-7", "reb": 7, "pf": 3, "pts": 20},
+            {"name": "Partin", "fg": "0-1", "ft": "0-0", "reb": 0, "pf": 3, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true,
+      "notes": "PTS computed/verified as 2*FG_made+FT_made for every player (pre-3-point era); sums match team scores exactly (OSU 73, Georgia Tech 84). Sheet lacks MIN/AST/TO/STL/BLK columns. Team rebound totals (69/50 OSU, 70... /35 GT) exceed player-rebound sums by 4 each, consistent with a separate 'team rebounds' entry on the sheet not attributed to a player, so player reb values are used as-is. PF sums match team PF totals (16 OSU incl. 1 unattributed team foul difference; 17 GT exact)."
+    }
+  ],
+  "skipped": []
+}

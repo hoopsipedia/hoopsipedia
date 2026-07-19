@@ -1,0 +1,11 @@
+{
+  "page": 12,
+  "games": [],
+  "skipped": [
+    {
+      "date": "1941-01-27",
+      "opponent": "Minnesota",
+      "reason": "Page contains a genuine box score (Ohio State 43 @ Minnesota 46, Minneapolis, coach Olsen, attendance 6500, captain Mickelson, manager Bolton) but the scoresheet is a very small, low-resolution newsprint clipping. The player-line columns (B./F./P.F./T.) are not reliably separable from the scan quality — digits run together and column alignment is ambiguous for multiple rows on both teams (e.g. Fisher, Graf, Dawson for Ohio State; Carlson, Thune, Warhol for Minnesota). Guessing individual player stats risked fabricating values and failing checksum, so the game was skipped per instructions rather than transcribed with low confidence."
+    }
+  ]
+}

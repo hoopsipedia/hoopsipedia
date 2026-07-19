@@ -1,0 +1,46 @@
+{
+  "page": 7,
+  "games": [
+    {
+      "date": "1974-12-20",
+      "opponent": "Jacksonville",
+      "site": "L.A. Sports Arena",
+      "note": "Sheet lists New Mexico as 'HOME' and Jacksonville as 'VISITORS' despite neutral site (L.A. Sports Arena); pts computed as 2*fg_made+ft_made where no explicit per-player pts column discrepancy existed (sheet actually has a PTS column, used directly, and verified equal to 2*fg+ft in every row).",
+      "teams": [
+        {
+          "name": "Jacksonville",
+          "score": 64,
+          "players": [
+            {"name": "Bobby Alvarez", "min": "33:30", "fg": "2-4", "ft": "2-2", "reb": 4, "pf": 3, "to": 1, "pts": 6},
+            {"name": "Carlo Fermudez", "min": "31:50", "fg": "6-12", "ft": "1-3", "reb": 8, "pf": 4, "ast": 2, "to": 2, "pts": 13},
+            {"name": "Marvin Lloyd", "min": "35:10", "fg": "6-9", "ft": "1-2", "reb": 7, "pf": 2, "ast": 0, "to": 7, "pts": 13},
+            {"name": "Ricky Coleman", "min": "34:10", "fg": "7-14", "ft": "2-4", "reb": 0, "pf": 3, "ast": 2, "to": 5, "pts": 16},
+            {"name": "Jimmie Clark", "min": "30:00", "fg": "3-5", "ft": "0-0", "reb": 2, "pf": 3, "ast": 1, "to": 3, "pts": 6},
+            {"name": "Marty Cross", "min": "0:30", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 0, "pts": 0},
+            {"name": "Randy Williams", "min": "12:50", "fg": "1-4", "ft": "0-2", "reb": 4, "pf": 1, "ast": 0, "to": 2, "pts": 2},
+            {"name": "Donnie Tyler", "min": "18:50", "fg": "2-4", "ft": "0-0", "reb": 2, "pf": 4, "ast": 0, "to": 3, "pts": 4},
+            {"name": "Arnold Stone", "min": "7:10", "fg": "2-3", "ft": "0-1", "reb": 0, "pf": 1, "ast": 0, "to": 0, "pts": 4}
+          ]
+        },
+        {
+          "name": "New Mexico Lobos",
+          "score": 72,
+          "players": [
+            {"name": "Bruce Battle", "min": "29:10", "fg": "2-7", "ft": "2-2", "reb": 3, "pf": 4, "ast": 0, "to": 3, "pts": 6},
+            {"name": "Rich Pokorski", "min": "32:40", "fg": "7-7", "ft": "3-7", "reb": 7, "pf": 4, "ast": 1, "to": 5, "pts": 17},
+            {"name": "Bill Hagins", "min": "35:40", "fg": "5-15", "ft": "1-2", "reb": 11, "pf": 3, "ast": 0, "to": 2, "pts": 11},
+            {"name": "Pat King", "min": "35:30", "fg": "4-7", "ft": "5-6", "reb": 3, "pf": 3, "ast": 3, "to": 4, "pts": 13},
+            {"name": "Bob Toppert", "min": "29:10", "fg": "5-16", "ft": "4-4", "reb": 3, "pf": 2, "ast": 1, "to": 6, "pts": 14},
+            {"name": "Ricky Williams", "min": "4:30", "fg": "0-1", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 1, "pts": 0},
+            {"name": "Norm Cacy", "min": "10:50", "fg": "3-4", "ft": "0-0", "reb": 2, "pf": 0, "ast": 1, "to": 2, "pts": 6},
+            {"name": "Steve Davis", "min": "0:10", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 0, "pts": 0},
+            {"name": "Mike Koller", "min": "9:10", "fg": "0-2", "ft": "0-0", "reb": 3, "pf": 1, "ast": 0, "to": 0, "pts": 0},
+            {"name": "Dan Davis", "min": "13:10", "fg": "2-3", "ft": "1-2", "reb": 2, "pf": 0, "ast": 1, "to": 0, "pts": 5}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

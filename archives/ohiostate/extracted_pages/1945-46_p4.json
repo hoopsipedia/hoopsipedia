@@ -1,0 +1,9 @@
+{
+  "page": 4,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Box score vs Oregon is present (Ohio State FG/F/NF/PF/TP columns and Oregon FG/F/NF/PF/TP columns, with TP-column totals cross-checking cleanly to player sums: Ohio State 57, Oregon 41; PF-column totals also cross-check: Ohio State 18, Oregon 13), but no date appears anywhere on this page, and the required date field cannot be invented. Additionally the FG/FT (F/NF) column meaning is internally inconsistent between the two teams' blocks (e.g. Ohio State's Wells row only balances to his TP=16 if NF=made-FT and F=attempted-FT, while Oregon's Wilkins row only balances to TP=0 if F=made-FT and NF=attempted-FT), and several individual FG cells are illegible/overwritten (e.g. Snyder's FG cell reads as a smeared '210' that does not cleanly reconcile with his TP=22 under either column-order hypothesis; Hamilton's and Berg's F cells have dark ink blots obscuring the digit). Given the missing date and the unreliable FG/FT breakdown, this game was skipped rather than guessed at; only player point totals (from the TP column) and personal fouls (PF column) were confidently reconstructible, which is not enough to satisfy the required transcription fields without inventing data."
+    }
+  ]
+}

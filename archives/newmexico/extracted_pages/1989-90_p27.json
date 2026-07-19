@@ -1,0 +1,9 @@
+{
+  "page": 27,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "02-28-90 New Mexico @ Air Force (final NM 62, AF 54). New Mexico's box score is clean and checksums perfectly (player pts sum to 62). Air Force's team totals row is also internally consistent (FG 25, 3P 4, FT 0, PTS 54 = final score; rebounds OR7+DR15=TOT22). However two Air Force individual player rows (13 FRENCH, 35 BENSON) are too faint/worn on this carbon-copy scan to transcribe confidently: the FG/3P/PTS digits read for these two rows are internally inconsistent with the basketball scoring formula (pts = 2*FG + 3P + FT) and their printed PTS values (13 and 8) don't reconcile with the team-derived combined total for those two players (FG=7, 3P=1, FT=0 => 15 pts combined, required for the team to sum to 54). Taking the printed per-player PTS at face value for all 10 non-DNP Air Force players yields a sum of 60, which fails checksum against the actual final score of 54. Re-read the page once (allowed max) and could not resolve the French/Benson ambiguity. Per instructions, skipping rather than guessing an individual split for these two rows; the rest of the game (New Mexico full box, Air Force team totals) is reliable but the schema requires both teams' full player-level data, so the whole game is skipped."
+    }
+  ]
+}

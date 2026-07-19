@@ -1,0 +1,45 @@
+{
+  "page": 24,
+  "games": [
+    {
+      "date": "1986-02-20",
+      "opponent": "Purdue Boilermakers",
+      "site": "W. Lafayette, IN (Mackey Arena)",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 79,
+          "players": [
+            {"name": "Brad Sellers", "min": 40, "fg": "6-16", "ft": "10-16", "reb": 10, "pf": 4, "ast": 2, "to": 5, "blk": 3, "stl": 2, "pts": 22},
+            {"name": "Jerry Francis", "min": 23, "fg": "1-1", "ft": "0-0", "reb": 4, "pf": 2, "ast": 1, "to": 2, "pts": 2},
+            {"name": "Keith Wesson", "min": 16, "fg": "1-3", "ft": "2-3", "reb": 2, "pf": 5, "pts": 4, "note": "fouled out, 5:33 remaining"},
+            {"name": "Kip Lomax", "min": 16, "fg": "0-0", "ft": "0-0", "pf": 4, "ast": 4, "to": 1, "pts": 0},
+            {"name": "Dennis Hopson", "min": 37, "fg": "12-28", "ft": "3-7", "reb": 7, "pf": 2, "ast": 3, "to": 2, "blk": 1, "stl": 2, "pts": 27},
+            {"name": "Clarence McGee", "min": 7, "fg": "1-4", "ft": "0-0", "reb": 1, "pts": 2},
+            {"name": "Curtis Wilson", "min": 29, "fg": "6-12", "ft": "0-0", "reb": 4, "pf": 5, "ast": 3, "to": 5, "stl": 1, "pts": 12, "note": "fouled out, 3:07 remaining"},
+            {"name": "Tony White", "min": 12, "fg": "1-1", "ft": "2-2", "reb": 1, "pf": 1, "pts": 4},
+            {"name": "Jay Burson", "min": 20, "fg": "2-6", "ft": "2-2", "reb": 4, "pf": 4, "ast": 4, "to": 1, "stl": 1, "pts": 6}
+          ]
+        },
+        {
+          "name": "Purdue Boilermakers",
+          "score": 85,
+          "players": [
+            {"name": "Doug Lee", "min": 36, "fg": "7-10", "ft": "3-5", "reb": 6, "pf": 4, "ast": 4, "to": 5, "stl": 3, "pts": 17},
+            {"name": "Todd Mitchell", "min": 16, "fg": "4-6", "ft": "3-4", "reb": 2, "pf": 5, "pts": 11, "note": "fouled out, 3:31 remaining"},
+            {"name": "Melvin McCants", "min": 28, "fg": "4-5", "ft": "3-4", "reb": 1, "pf": 1, "ast": 2, "to": 4, "pts": 11},
+            {"name": "Mack Gray", "min": 27, "fg": "3-6", "ft": "6-8", "reb": 1, "pf": 1, "ast": 6, "to": 2, "pts": 12},
+            {"name": "Troy Lewis", "min": 36, "fg": "8-12", "ft": "4-4", "reb": 3, "pf": 3, "ast": 4, "to": 2, "pts": 20},
+            {"name": "Everette Stephens", "min": 21, "fg": "0-2", "ft": "7-8", "reb": 2, "ast": 1, "blk": 1, "stl": 2, "pts": 7},
+            {"name": "Kevin Richardson", "min": 17, "fg": "2-2", "ft": "0-0", "reb": 5, "pf": 5, "ast": 5, "to": 3, "pts": 4, "note": "fouled out, 6:56 remaining"},
+            {"name": "Kip Jones", "min": 15, "fg": "0-0", "ft": "0-0", "reb": 3, "pf": 3, "ast": 2, "to": 1, "pts": 0},
+            {"name": "Jeff Arnold", "min": 4, "fg": "1-1", "ft": "1-2", "pts": 3}
+          ]
+        }
+      ],
+      "checksum_ok": true,
+      "notes": "1st page (labeled '23' in a hand-drawn circle, top right) is a fully legible official NCAA box score, Ohio State at Purdue, Feb 20 1986. Player points computed/read directly from TP column (not derived via 2*fg+ft) but verified via 2*fg_made+ft_made == TP per player and via team FG/FT-made sums matching printed team totals (OSU: FG 30/63 FT 19/30 TP79; Purdue: FG 29/46 FT 27/37 TP85), both of which reconcile exactly with the final score line (Ohio State 79, Purdue 85)."
+    }
+  ],
+  "skipped": []
+}

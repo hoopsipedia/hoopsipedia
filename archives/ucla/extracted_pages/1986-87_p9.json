@@ -1,0 +1,45 @@
+{
+  "page": 9,
+  "games": [
+    {
+      "date": "1986-12-29",
+      "opponent": "Cal State Fullerton",
+      "ucla_score": 72,
+      "opp_score": 71,
+      "site": "Pauley Pavilion",
+      "teams": [
+        {
+          "name": "Cal State Fullerton",
+          "score": 71,
+          "players": [
+            {"name": "Turner", "min": 37, "fg": "8-23", "tp": "1-5", "ft": "4-6", "reb": 9, "ast": 0, "pf": 2, "to": 2, "stl": 1, "blk": 0, "pts": 21},
+            {"name": "Jones", "min": 26, "fg": "0-2", "tp": "0-0", "ft": "1-2", "reb": 3, "ast": 0, "pf": 4, "to": 3, "stl": 1, "blk": 0, "pts": 1},
+            {"name": "Miller", "min": 14, "fg": "3-4", "tp": "0-0", "ft": "1-2", "reb": 4, "ast": 0, "pf": 2, "to": 1, "stl": 0, "blk": 0, "pts": 7},
+            {"name": "Morton", "min": 39, "fg": "3-13", "tp": "1-8", "ft": "1-2", "reb": 0, "ast": 1, "pf": 3, "to": 1, "stl": 0, "blk": 0, "pts": 8},
+            {"name": "Jackson", "min": 33, "fg": "1-5", "tp": "0-0", "ft": "3-4", "reb": 3, "ast": 4, "pf": 3, "to": 1, "stl": 0, "blk": 0, "pts": 5},
+            {"name": "Blow", "min": 18, "fg": "4-4", "tp": "0-0", "ft": "2-2", "reb": 8, "ast": 0, "pf": 5, "to": 2, "stl": 1, "blk": 0, "pts": 10},
+            {"name": "Hamilton", "min": 9, "fg": "1-1", "tp": "0-0", "ft": "1-2", "reb": 0, "ast": 0, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 3},
+            {"name": "Webster", "min": 24, "fg": "5-7", "tp": "0-0", "ft": "6-9", "reb": 5, "ast": 0, "pf": 4, "to": 0, "stl": 0, "blk": 1, "pts": 16}
+          ]
+        },
+        {
+          "name": "UCLA Bruins",
+          "score": 72,
+          "players": [
+            {"name": "Miller", "min": 39, "fg": "3-7", "tp": "0-1", "ft": "8-10", "reb": 1, "ast": 6, "pf": 0, "to": 1, "stl": 3, "blk": 0, "pts": 14},
+            {"name": "Rochelin", "min": 31, "fg": "8-9", "tp": "0-0", "ft": "1-2", "reb": 6, "ast": 0, "pf": 2, "to": 0, "stl": 0, "blk": 3, "pts": 17},
+            {"name": "Haley", "min": 22, "fg": "2-3", "tp": "0-0", "ft": "1-2", "reb": 1, "ast": 1, "pf": 5, "to": 2, "stl": 0, "blk": 0, "pts": 5},
+            {"name": "Immel", "min": 22, "fg": "4-6", "tp": "1-1", "ft": "0-1", "reb": 4, "ast": 1, "pf": 3, "to": 4, "stl": 1, "blk": 0, "pts": 9},
+            {"name": "Richardson", "min": 40, "fg": "3-7", "tp": "0-0", "ft": "3-3", "reb": 4, "ast": 4, "pf": 3, "to": 4, "stl": 0, "blk": 1, "pts": 9},
+            {"name": "Foster", "min": 9, "fg": "1-1", "tp": "0-0", "ft": "0-0", "reb": 3, "ast": 0, "pf": 3, "to": 1, "stl": 0, "blk": 1, "pts": 2},
+            {"name": "Palmer", "min": 5, "fg": "0-1", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Wilson", "min": 23, "fg": "2-5", "tp": "0-0", "ft": "9-11", "reb": 6, "ast": 3, "pf": 2, "to": 2, "stl": 0, "blk": 0, "pts": 13},
+            {"name": "Walker", "min": 9, "fg": "1-2", "tp": "1-2", "ft": "0-0", "reb": 2, "ast": 0, "pf": 3, "to": 0, "stl": 0, "blk": 0, "pts": 3}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

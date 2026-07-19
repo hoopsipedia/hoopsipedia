@@ -1,0 +1,9 @@
+{
+  "page": 29,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Date 1983-03-11, Duke @ Virginia (ACC Tournament semifinal, Omni-Atlanta). Fully legible typed box score for both teams, but fails checksum on the Virginia side. Duke checks out perfectly: player pts sum (9+8+10+7+17+0+5+6+0+2+2+0+0)=66 == Duke's team TOTALS TP (66) == final score (Duke 41+25=66). Virginia's 13 players sum to 107 pts (19+3+18+23+7+2+12+8+8+5+2+0+0), but the sheet's TOTALS row shows TP=109 and the final score (50+59) is also 109 — a 2-point gap. Cross-check: team FGA sums exactly to the sheet's 71 and team FT sums exactly to 26, but individual made-FG values sum to only 39 vs the sheet's team total of 40 (independently corroborated by the printed 1st/2nd-half FG% lines: 19-40 + 21-31 = 40-71). So one Virginia player's made-FG (and correspondingly their TP) is under-transcribed by 1 basket somewhere among the 13 names, but every individual row is internally self-consistent (2*FG_2pt+3*FG_3pt+FT == that player's own printed TP), so the error can't be isolated to one row without finer image resolution than the PDF render provides. Page was already re-read once (the one allowed re-read) without resolving it. Skipping per the checksum rule rather than guessing which player's line to alter. Note for a future finer-resolution pass: likely candidates to re-check closely are Sampson (8-11), Robinson (8-10), Wilsbn (9-13), Miller (3-9), and Merrifield (2-5) — the FG columns most prone to 8/9 or 2/3 misreads on this typed sheet."
+    }
+  ]
+}

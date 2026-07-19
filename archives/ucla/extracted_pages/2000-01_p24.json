@@ -1,0 +1,45 @@
+{
+  "page": 24,
+  "games": [
+    {
+      "date": "2001-02-22",
+      "opponent": "Oregon",
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 88,
+          "players": [
+            {"name": "Matt Barnes", "min": 38, "fg": "10-18", "tp": "0-1", "ft": "1-4", "reb": 8, "ast": 4, "pf": 3, "to": 2, "stl": 3, "blk": 0, "pts": 21},
+            {"name": "Jason Kapono", "min": 38, "fg": "5-15", "tp": "2-7", "ft": "8-9", "reb": 13, "ast": 3, "pf": 2, "to": 3, "stl": 1, "blk": 0, "pts": 20},
+            {"name": "Dan Gadzuric", "min": 30, "fg": "4-8", "tp": "0-0", "ft": "8-17", "reb": 8, "ast": 0, "pf": 2, "to": 1, "stl": 1, "blk": 2, "pts": 16},
+            {"name": "Billy Knight", "min": 18, "fg": "1-5", "tp": "0-1", "ft": "3-5", "reb": 4, "ast": 0, "pf": 3, "to": 0, "stl": 0, "blk": 0, "pts": 5},
+            {"name": "Earl Watson", "min": 14, "fg": "2-5", "tp": "0-2", "ft": "0-0", "reb": 6, "ast": 2, "pf": 5, "to": 3, "stl": 3, "blk": 1, "pts": 4},
+            {"name": "Jason Flowers", "min": 1, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Ryan Bailey", "min": 26, "fg": "1-3", "tp": "0-2", "ft": "4-6", "reb": 5, "ast": 4, "pf": 2, "to": 3, "stl": 1, "blk": 0, "pts": 6},
+            {"name": "Ray Young", "min": 25, "fg": "6-7", "tp": "0-1", "ft": "0-0", "reb": 0, "ast": 1, "pf": 2, "to": 1, "stl": 0, "blk": 1, "pts": 12},
+            {"name": "T.J. Cummings", "min": 10, "fg": "2-3", "tp": "0-0", "ft": "0-0", "reb": 4, "ast": 0, "pf": 1, "to": 1, "stl": 0, "blk": 1, "pts": 4}
+          ]
+        },
+        {
+          "name": "Oregon Ducks",
+          "score": 73,
+          "players": [
+            {"name": "Luke Jackson", "min": 25, "fg": "3-10", "tp": "1-4", "ft": "1-2", "reb": 7, "ast": 4, "pf": 3, "to": 3, "stl": 0, "blk": 1, "pts": 8},
+            {"name": "Bryan Bracey", "min": 33, "fg": "8-18", "tp": "2-6", "ft": "3-5", "reb": 10, "ast": 0, "pf": 3, "to": 2, "stl": 2, "blk": 0, "pts": 21},
+            {"name": "Julius Hicks", "min": 5, "fg": "0-1", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 4, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Luke Ridnour", "min": 30, "fg": "1-9", "tp": "1-5", "ft": "2-2", "reb": 1, "ast": 4, "pf": 3, "to": 1, "stl": 0, "blk": 0, "pts": 5},
+            {"name": "Frederick Jones", "min": 35, "fg": "1-10", "tp": "0-5", "ft": "7-9", "reb": 9, "ast": 5, "pf": 3, "to": 3, "stl": 3, "blk": 0, "pts": 9},
+            {"name": "James Davis", "min": 12, "fg": "3-8", "tp": "3-8", "ft": "0-0", "reb": 0, "ast": 2, "pf": 2, "to": 2, "stl": 0, "blk": 0, "pts": 9},
+            {"name": "Ben Lindquist", "min": 3, "fg": "0-1", "tp": "0-1", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "C. Christoffersen", "min": 22, "fg": "3-7", "tp": "0-0", "ft": "1-5", "reb": 12, "ast": 0, "pf": 4, "to": 3, "stl": 0, "blk": 2, "pts": 7},
+            {"name": "Anthony Norwood", "min": 18, "fg": "3-8", "tp": "2-5", "ft": "4-4", "reb": 1, "ast": 0, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 12},
+            {"name": "Flo Hartenstein", "min": 16, "fg": "1-1", "tp": "0-0", "ft": "0-1", "reb": 2, "ast": 0, "pf": 4, "to": 1, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Jay Anderson", "min": 1, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

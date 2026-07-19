@@ -1,0 +1,45 @@
+{
+  "page": 22,
+  "games": [
+    {
+      "date": "1981-02-21",
+      "opponent": "Stanford",
+      "ucla_score": 72,
+      "opp_score": 74,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 72,
+          "players": [
+            {"name": "Sanders, Mike", "fg": "5-11", "ft": "0-0", "reb": 5, "pf": 4, "ast": 2, "to": 4, "blk": 1, "stl": 3, "pts": 10},
+            {"name": "Daye, Darren", "fg": "5-6", "ft": "4-5", "reb": 5, "pf": 4, "ast": 0, "to": 2, "blk": 0, "stl": 1, "pts": 14},
+            {"name": "Pruitt, Cliff", "fg": "2-7", "ft": "6-6", "reb": 3, "pf": 3, "ast": 2, "to": 2, "blk": 0, "stl": 0, "pts": 10},
+            {"name": "Holton, Michael", "fg": "3-7", "ft": "2-2", "reb": 5, "pf": 3, "ast": 3, "to": 1, "blk": 0, "stl": 1, "pts": 8},
+            {"name": "Foster, Rod", "fg": "10-17", "ft": "4-4", "reb": 1, "pf": 2, "ast": 2, "to": 1, "blk": 0, "stl": 2, "pts": 24},
+            {"name": "Jackson, Ralph", "fg": "2-5", "ft": "0-0", "reb": 2, "pf": 4, "ast": 6, "to": 2, "blk": 0, "stl": 2, "pts": 4},
+            {"name": "Anderson, Tony", "fg": "0-0", "ft": "2-4", "reb": 4, "pf": 1, "ast": 2, "to": 2, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Sears, Dean", "fg": "0-1", "ft": "0-0", "reb": 2, "pf": 3, "ast": 1, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Eaton, Mark", "fg": "0-0", "ft": "0-0", "reb": 1, "pf": 1, "ast": 0, "to": 0, "blk": 1, "stl": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Stanford",
+          "score": 74,
+          "players": [
+            {"name": "Welch, Brian", "fg": "3-13", "ft": "3-7", "reb": 5, "pf": 1, "ast": 4, "to": 1, "blk": 0, "stl": 0, "pts": 9},
+            {"name": "Wichary, Hans", "fg": "6-10", "ft": "2-4", "reb": 8, "pf": 4, "ast": 2, "to": 3, "blk": 1, "stl": 2, "pts": 14},
+            {"name": "Revelli, John", "fg": "6-9", "ft": "4-6", "reb": 7, "pf": 4, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pts": 16},
+            {"name": "Jones, Keith", "fg": "9-10", "ft": "5-6", "reb": 2, "pf": 5, "ast": 4, "to": 3, "blk": 0, "stl": 3, "pts": 23},
+            {"name": "Marty, Doug", "fg": "4-5", "ft": "3-4", "reb": 4, "pf": 2, "ast": 3, "to": 1, "blk": 0, "stl": 0, "pts": 11},
+            {"name": "Lemons, Roger", "fg": "0-1", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Lallas, Peter", "fg": "0-1", "ft": "1-2", "reb": 1, "pf": 2, "ast": 0, "to": 2, "blk": 0, "stl": 0, "pts": 1},
+            {"name": "Ryan, Jeff", "fg": "0-3", "ft": "0-0", "reb": 0, "pf": 0, "ast": 1, "to": 0, "blk": 0, "stl": 3, "pts": 0},
+            {"name": "Smith, Terry", "fg": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

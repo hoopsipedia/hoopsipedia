@@ -1,0 +1,47 @@
+{
+  "page": 8,
+  "games": [
+    {
+      "date": "1950-12-30",
+      "opponent": "Penn State",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 58,
+          "players": [
+            {"name": "Remington", "min": "23:30", "fg": "2-16", "ft": "0-0", "pf": 3, "pts": 4},
+            {"name": "Gillaugh", "min": "11:30", "fg": "2-5", "ft": "6-7", "pf": 5, "pts": 10},
+            {"name": "Armstrong", "min": "21:00", "fg": "4-12", "ft": "0-2", "pf": 5, "pts": 8},
+            {"name": "Karaffa", "min": "35:15", "fg": "8-22", "ft": "2-3", "pf": 2, "pts": 18},
+            {"name": "Dawe", "min": "32:45", "fg": "1-5", "ft": "1-2", "pf": 1, "pts": 3},
+            {"name": "Hatfield", "min": "28:30", "fg": "2-5", "ft": "3-6", "pf": 3, "pts": 7},
+            {"name": "Wilks", "min": "14:30", "fg": "0-5", "ft": "0-1", "pf": 1, "pts": 0},
+            {"name": "Williams", "min": "19:00", "fg": "0-4", "ft": "3-5", "pf": 2, "pts": 3},
+            {"name": "Jones", "min": "7:15", "fg": "2-6", "ft": "1-1", "pf": 0, "pts": 5},
+            {"name": "Maher", "min": "4:45", "fg": "0-0", "ft": "0-0", "pf": "D (disqualified)", "pts": 0},
+            {"name": "Hoag", "min": "2:00", "fg": "0-0", "ft": "0-0", "pf": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Penn State",
+          "score": 67,
+          "players": [
+            {"name": "Lamie", "fg": "4-14", "ft": "5-7", "pf": 3, "pts": 13},
+            {"name": "Williams", "fg": "2-8", "ft": "0-2", "pf": 4, "pts": 4},
+            {"name": "McMahan", "fg": "3-9", "ft": "4-6", "pf": 4, "pts": 10},
+            {"name": "Panoplos", "fg": "9-15", "ft": "1-2", "pf": 2, "pts": 19},
+            {"name": "Moore", "fg": "3-7", "ft": "1-1", "pf": 4, "pts": 7},
+            {"name": "Piorkowski", "fg": "3-4", "ft": "1-2", "pf": 4, "pts": 7},
+            {"name": "Lynch", "fg": "0-4", "ft": "4-6", "pf": 0, "pts": 4},
+            {"name": "Makarewicz", "fg": "0-3", "ft": "0-3", "pf": 1, "pts": 0},
+            {"name": "Bouldin", "fg": "0-2", "ft": "0-0", "pf": 0, "pts": 0},
+            {"name": "Shuptar", "fg": "0-2", "ft": "0-0", "pf": 1, "pts": 0},
+            {"name": "Phillips", "fg": "1-4", "ft": "1-1", "pf": 3, "pts": 3}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

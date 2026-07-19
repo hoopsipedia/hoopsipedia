@@ -1,0 +1,47 @@
+{
+  "page": 3,
+  "games": [
+    {
+      "date": "1971-12-08",
+      "opponent": "Maryland",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 78,
+          "players": [
+            {"name": "Frank DeWitt", "fg": "5-10", "ft": "3-3", "reb": 2, "ast": 2, "pf": 1, "to": 1, "blk": 0, "stl": 0, "pts": 13},
+            {"name": "Jim Hobgood", "fg": "7-9", "ft": "1-4", "reb": 9, "ast": 0, "pf": 1, "to": 4, "blk": 0, "stl": 0, "pts": 15},
+            {"name": "Scott McCandlish", "fg": "4-5", "ft": "0-0", "reb": 3, "ast": 1, "pf": 3, "to": 1, "blk": 0, "stl": 0, "pts": 8},
+            {"name": "Barry Parkhill", "fg": "9-22", "ft": "3-4", "reb": 3, "ast": 8, "pf": 3, "to": 2, "blk": 0, "stl": 0, "pts": 21},
+            {"name": "Tim Rash", "fg": "1-1", "ft": "0-0", "reb": 0, "ast": 2, "pf": 2, "to": 0, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Chip Miller", "fg": "3-3", "ft": "0-0", "reb": 2, "ast": 2, "pf": 3, "to": 4, "blk": 0, "stl": 0, "pts": 6},
+            {"name": "Al Drummond", "fg": "2-3", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "blk": 0, "stl": 0, "pts": 4},
+            {"name": "Bob McCurdy", "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Lanny Stahurski", "fg": "1-3", "ft": "2-2", "reb": 3, "ast": 1, "pf": 1, "to": 0, "blk": 0, "stl": 0, "pts": 4},
+            {"name": "Steve Morris", "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 1, "pf": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Bob McKeag", "fg": "2-2", "ft": "1-1", "reb": 0, "ast": 1, "pf": 0, "to": 0, "blk": 0, "stl": 0, "pts": 5},
+            {"name": "Larry Gerry", "fg": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Maryland Terrapins",
+          "score": 57,
+          "players": [
+            {"name": "Len Elmore", "fg": "5-9", "ft": "0-0", "reb": 6, "ast": 1, "pf": 1, "to": 3, "blk": 0, "stl": 0, "pts": 10},
+            {"name": "Jim O'Brien", "fg": "3-4", "ft": "7-8", "reb": 4, "ast": 1, "pf": 1, "to": 1, "blk": 0, "stl": 0, "pts": 13},
+            {"name": "Tom McMillen", "fg": "1-4", "ft": "2-4", "reb": 8, "ast": 1, "pf": 0, "to": 1, "blk": 0, "stl": 0, "pts": 4},
+            {"name": "Howard White", "fg": "2-5", "ft": "1-2", "reb": 1, "ast": 3, "pf": 1, "to": 0, "blk": 0, "stl": 0, "pts": 5},
+            {"name": "Jap Trimble", "fg": "3-5", "ft": "1-2", "reb": 0, "ast": 2, "pf": 3, "to": 3, "blk": 0, "stl": 0, "pts": 7},
+            {"name": "Mark Cartwright", "fg": "4-8", "ft": "1-2", "reb": 0, "ast": 0, "pf": 2, "to": 3, "blk": 0, "stl": 0, "pts": 9},
+            {"name": "Darrell Brown", "fg": "1-3", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Bob Bodell", "fg": "1-1", "ft": "0-0", "reb": 0, "ast": 1, "pf": 1, "to": 0, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Rich Porac", "fg": "2-3", "ft": "1-2", "reb": 1, "ast": 2, "pf": 2, "to": 8, "blk": 0, "stl": 0, "pts": 5}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": [],
+  "notes": "Single game, typed official stat sheet: Virginia 78, Maryland 57 at Charlottesville, 12/8/1971. Sheet included a '3 Pt' column showing 0-0 for every player (pre-3-point-line era, template artifact) so it was omitted per instructions. A 'Min' column was present but showed 0 for every player on both teams with no exceptions -- treated as not-recorded rather than real data, so omitted rather than invented. Points taken directly from the sheet's own Pts column (not computed from FG/FT) and both teams' player Pts sums match the final scores exactly (78 and 57)."
+}

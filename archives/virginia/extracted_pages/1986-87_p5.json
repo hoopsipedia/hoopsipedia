@@ -1,0 +1,49 @@
+{
+  "page": 5,
+  "games": [
+    {
+      "date": "1986-12-10",
+      "opponent": "East Tennessee State",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 83,
+          "players": [
+            {"name": "Andrew Kennedy", "min": 11, "fg": "2-4", "ft": "2-3", "reb": 4, "ast": 1, "pf": 1, "to": 1, "pts": 6},
+            {"name": "Tom Sheehey", "min": 21, "fg": "3-6", "ft": "1-1", "reb": 7, "ast": 3, "pf": 4, "to": 2, "blk": 1, "stl": 2, "pts": 7},
+            {"name": "John Dyslin", "min": 16, "fg": "2-4", "reb": 4, "pf": 1, "to": 1, "blk": 2, "stl": 1, "pts": 4},
+            {"name": "Richard Morgan", "min": 24, "fg": "5-9", "reb": 5, "ast": 7, "pf": 1, "to": 2, "pts": 10},
+            {"name": "John Johnson", "min": 29, "fg": "4-7", "ft": "3-4", "reb": 2, "ast": 2, "pf": 2, "to": 3, "stl": 1, "pts": 11},
+            {"name": "Mel Kennedy", "min": 23, "fg": "5-11", "ft": "2-2", "reb": 7, "ast": 2, "pf": 1, "pts": 12},
+            {"name": "Darrick Simms", "min": 12, "fg": "3-5", "tp": "0-1", "ft": "3-3", "reb": 1, "ast": 2, "pf": 1, "pts": 9},
+            {"name": "Tim Martin", "min": 16, "fg": "2-4", "ft": "2-3", "reb": 5, "ast": 3, "pf": 1, "pts": 6},
+            {"name": "Lance Blanks", "min": 13, "fg": "3-5", "tp": "0-1", "reb": 4, "ast": 1, "pf": 3, "pts": 6},
+            {"name": "Mark Cooke", "min": 11, "fg": "0-1", "ft": "6-6", "reb": 3, "pts": 6},
+            {"name": "Rob Metcalf", "min": 4, "fg": "0-1", "tp": "0-1", "reb": 1, "pf": 1, "pts": 0},
+            {"name": "Bill Batts", "min": 6, "fg": "0-2", "ft": "5-8", "reb": 4, "pf": 1, "blk": 1, "pts": 5},
+            {"name": "Anthony Solomon", "min": 4, "fg": "0-1", "tp": "0-1", "ft": "1-4", "reb": 2, "ast": 1, "pf": 1, "pts": 1}
+          ]
+        },
+        {
+          "name": "East Tennessee State",
+          "score": 56,
+          "players": [
+            {"name": "Lavelle Webster", "min": 29, "fg": "2-8", "ft": "3-4", "reb": 7, "ast": 1, "pf": 3, "to": 5, "stl": 1, "pts": 7},
+            {"name": "Steve Shirley", "min": 10, "fg": "1-4", "reb": 1, "to": 2, "pts": 2},
+            {"name": "David Vaught", "min": 23, "fg": "3-10", "ft": "3-4", "reb": 3, "pf": 3, "to": 1, "pts": 9},
+            {"name": "Tim Austin", "min": 22, "fg": "2-7", "tp": "0-3", "reb": 3, "ast": 1, "pf": 3, "to": 1, "stl": 3, "pts": 4},
+            {"name": "Carniel Manuel", "min": 30, "fg": "4-10", "tp": "2-2", "ft": "2-2", "reb": 4, "ast": 2, "pf": 1, "to": 1, "pts": 12},
+            {"name": "Roy Donaldson", "min": 21, "fg": "1-11", "tp": "1-10", "ft": "4-4", "reb": 3, "ast": 1, "pf": 2, "to": 1, "pts": 7},
+            {"name": "Mark Larkey", "min": 17, "fg": "3-5", "ft": "2-2", "reb": 2, "pf": 2, "to": 2, "blk": 1, "pts": 8},
+            {"name": "Rodney Jones", "min": 10, "fg": "0-1", "reb": 2, "pf": 1, "to": 2, "blk": 1, "pts": 0},
+            {"name": "Vernard Goode", "min": 15, "fg": "2-3", "ft": "2-3", "reb": 2, "pf": 5, "to": 3, "blk": 3, "pts": 6},
+            {"name": "Sam Brown", "min": 8, "fg": "0-1", "ft": "0-1", "reb": 1, "pf": 1, "pts": 0},
+            {"name": "Lewis Morris", "min": 11, "fg": "0-1", "tp": "0-1", "ft": "1-3", "reb": 3, "pf": 1, "pts": 1}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

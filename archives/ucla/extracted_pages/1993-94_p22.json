@@ -1,0 +1,43 @@
+{
+  "page": 22,
+  "games": [
+    {
+      "date": "1994-02-24",
+      "opponent": "California",
+      "ucla_score": 88,
+      "opp_score": 92,
+      "teams": [
+        {
+          "name": "UCLA Bruins",
+          "score": 88,
+          "players": [
+            {"name": "Charles O'Bannon", "min": 31, "fg": "4-12", "tp": "2-3", "ft": "2-4", "reb": 8, "ast": 1, "pf": 3, "to": 2, "stl": 5, "blk": 2, "pts": 12},
+            {"name": "Ed O'Bannon", "min": 34, "fg": "5-14", "tp": "0-2", "ft": "6-8", "reb": 9, "ast": 2, "pf": 5, "to": 6, "stl": 1, "blk": 1, "pts": 16},
+            {"name": "George Zidek", "min": 36, "fg": "2-9", "tp": "0-0", "ft": "2-3", "reb": 9, "ast": 2, "pf": 4, "to": 1, "stl": 0, "blk": 0, "pts": 6},
+            {"name": "Tyus Edney", "min": 38, "fg": "6-11", "tp": "1-4", "ft": "4-6", "reb": 5, "ast": 6, "pf": 4, "to": 3, "stl": 4, "blk": 0, "pts": 17},
+            {"name": "Shon Tarver", "min": 40, "fg": "11-18", "tp": "3-5", "ft": "5-6", "reb": 5, "ast": 3, "pf": 4, "to": 1, "stl": 4, "blk": 0, "pts": 30},
+            {"name": "Cameron Dollar", "min": 13, "fg": "1-3", "tp": "0-1", "ft": "2-2", "reb": 2, "ast": 0, "pf": 4, "to": 3, "stl": 1, "blk": 0, "pts": 4},
+            {"name": "Marquis Burns", "min": 5, "fg": "1-2", "tp": "1-1", "ft": "0-0", "reb": 0, "ast": 1, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 3},
+            {"name": "Rodney Zimmerman", "min": 2, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Kevin Dempsey", "min": 1, "fg": "0-1", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "California",
+          "score": 92,
+          "players": [
+            {"name": "Lamond Murray", "min": 39, "fg": "13-22", "tp": "2-5", "ft": "8-15", "reb": 7, "ast": 4, "pf": 3, "to": 4, "stl": 1, "blk": 1, "pts": 36},
+            {"name": "Michael Stewart", "min": 25, "fg": "2-2", "tp": "0-0", "ft": "2-2", "reb": 4, "ast": 0, "pf": 4, "to": 0, "stl": 0, "blk": 2, "pts": 6},
+            {"name": "Ryan Jamison", "min": 31, "fg": "2-4", "tp": "0-0", "ft": "1-5", "reb": 11, "ast": 2, "pf": 4, "to": 4, "stl": 0, "blk": 0, "pts": 5},
+            {"name": "Monty Buckley", "min": 26, "fg": "4-7", "tp": "2-3", "ft": "0-0", "reb": 4, "ast": 1, "pf": 5, "to": 5, "stl": 0, "blk": 0, "pts": 10},
+            {"name": "Jason Kidd", "min": 38, "fg": "6-15", "tp": "2-7", "ft": "9-11", "reb": 4, "ast": 11, "pf": 1, "to": 3, "stl": 0, "blk": 0, "pts": 23},
+            {"name": "Anwar McQueen", "min": 29, "fg": "2-4", "tp": "1-2", "ft": "0-1", "reb": 3, "ast": 3, "pf": 3, "to": 1, "stl": 0, "blk": 0, "pts": 5},
+            {"name": "Akili Jones", "min": 12, "fg": "2-5", "tp": "1-3", "ft": "2-2", "reb": 5, "ast": 0, "pf": 3, "to": 3, "stl": 1, "blk": 0, "pts": 7}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

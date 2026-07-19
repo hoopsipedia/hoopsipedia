@@ -1,0 +1,9 @@
+{
+  "page": 28,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page 28 is a multi-game NCAA tournament box score compilation spanning several seasons (1968 Santa Clara/NM State, 1974 Idaho State/San Francisco/Dayton, 1978 Cal State Fullerton). Only the 1978 Cal State Fullerton vs New Mexico game (March 11, 1978, Tempe, Ariz., circled on the page) belongs to the 1977-78 season. Cal State Fullerton's player-TP column sums exactly to their final score (23+6+18+2+19+22=90), but New Mexico's player-TP column sums to 82 (vs. final score 85), and re-deriving via 2*FG_made+FT_made per player also fails to reconcile to 85 (gives 81) even though team FG-A totals (37-72) match the printed team total exactly, indicating one or more New Mexico players' FT-A or TP figures are misread/illegible on the scan. Skipped the entire game rather than publish a half-reconciled or guessed box score; re-scan/higher-res source needed to resolve New Mexico's free-throw column."
+    }
+  ]
+}
