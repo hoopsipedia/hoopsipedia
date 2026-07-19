@@ -224,11 +224,22 @@ function conferenceTeams(teams, conf, excludeEspnId) {
   return out;
 }
 
-function renderTeamSsr(team, seasons, teams, origin) {
+function renderTeamSsr(team, seasons, teams, origin, history) {
   const slug = teamSlug(team.name);
   const parts = [];
 
   parts.push(`<h1>${escapeHtml(team.name)} basketball — program history</h1>`);
+
+  // Program story prose from team_history.json (curated, fact-checked).
+  const hist = history && history[team.espnId];
+  if (hist) {
+    const prose = [];
+    if (hist.blurb) prose.push(`<p>${escapeHtml(hist.blurb)}</p>`);
+    if (hist.mascotOrigin) prose.push(`<h2>The name</h2><p>${escapeHtml(hist.mascotOrigin)}</p>`);
+    if (hist.iconicMoment) prose.push(`<h2>Signature moment</h2><p>${escapeHtml(hist.iconicMoment)}</p>`);
+    if (hist.funFact) prose.push(`<p>${escapeHtml(hist.funFact)}</p>`);
+    if (prose.length) parts.push(prose.join('\n'));
+  }
 
   const nSeasons = seasons ? seasons.length : 0;
   const firstYear = nSeasons ? seasons[seasons.length - 1].year : null;
@@ -283,6 +294,37 @@ function renderTeamSsr(team, seasons, teams, origin) {
   return ssrWrap(parts.join('\n'));
 }
 
+// Per-isolate cache of team_history.json (program prose: blurb, mascot
+// origin, iconic moment, fun fact) — one 350KB fetch, cached for the isolate.
+let teamHistoryCache = null;
+async function getTeamHistory(assetFetcher, originUrl) {
+  if (teamHistoryCache) return teamHistoryCache;
+  try {
+    const resp = await assetFetcher.fetch(new URL('/team_history.json', originUrl).toString());
+    if (!resp.ok) return null;
+    teamHistoryCache = await resp.json();
+    return teamHistoryCache;
+  } catch (e) {
+    return null;
+  }
+}
+
+// Per-isolate cache of recaps/{espnId}.json (date -> recap prose generated
+// from the box-score store by scripts/generate_game_recaps.py).
+const recapsCache = new Map();
+async function getTeamRecaps(assetFetcher, originUrl, espnId) {
+  if (recapsCache.has(espnId)) return recapsCache.get(espnId);
+  try {
+    const resp = await assetFetcher.fetch(new URL(`/recaps/${espnId}.json`, originUrl).toString());
+    const recaps = resp.ok ? await resp.json() : {};
+    if (recapsCache.size > 60) recapsCache.clear();
+    recapsCache.set(espnId, recaps);
+    return recaps;
+  } catch (e) {
+    return {};
+  }
+}
+
 // Per-isolate cache of games/{espnId}.json slices for season pages.
 const gamesCache = new Map();
 
@@ -334,7 +376,7 @@ function seasonHref(origin, slug, seasonStr) {
   return `${origin}/teams/${encodeParam(slug)}/${encodeParam(seasonStr)}`;
 }
 
-function renderSeasonSsr(team, seasonRow, games, teams, origin, slugIdx) {
+function renderSeasonSsr(team, seasonRow, games, teams, origin, slugIdx, recaps) {
   const slug = teamSlug(team.name);
   const parts = [];
   const seasonStr = seasonRow.year;
@@ -372,6 +414,16 @@ function renderSeasonSsr(team, seasonRow, games, teams, origin, slugIdx) {
     );
     if (games.some(g => g.vacated)) {
       parts.push(`<p>* Result later vacated by the NCAA and not counted in official records.</p>`);
+    }
+
+    // Game recaps composed from archived box scores (generate_game_recaps.py).
+    if (recaps) {
+      const recapParas = games
+        .filter(g => recaps[g.date])
+        .map(g => `<p><strong>${escapeHtml(g.date)}:</strong> ${escapeHtml(recaps[g.date])}</p>`);
+      if (recapParas.length) {
+        parts.push(`<h2>Game recaps</h2>` + recapParas.join('\n'));
+      }
     }
   }
 
@@ -690,10 +742,18 @@ export async function onRequest(context) {
       { name: seasonParam, url: canonicalUrl },
     ]));
 
-    const allGames = await getTeamGames(assetFetcher, originUrl, team.espnId);
+    const [allGames, slugIdx, recaps] = await Promise.all([
+      getTeamGames(assetFetcher, originUrl, team.espnId),
+      getSrSlugIndex(assetFetcher, originUrl),
+      getTeamRecaps(assetFetcher, originUrl, team.espnId),
+    ]);
     const seasonGames = allGames ? gamesForSeason(allGames, seasonParam) : [];
-    const slugIdx = await getSrSlugIndex(assetFetcher, originUrl);
-    ssrHtml = renderSeasonSsr(team, seasonRow, seasonGames, teams, origin, slugIdx);
+    // Thin-page guard: a season page with almost no recorded games has no
+    // content value — keep it reachable but out of the index.
+    if (seasonGames.length < 3) {
+      metaTags.push({ key: 'robots', value: 'noindex, follow' });
+    }
+    ssrHtml = renderSeasonSsr(team, seasonRow, seasonGames, teams, origin, slugIdx, recaps);
   } else if (teamParam) {
     const team = lookupTeam(teamParam, teams, index);
     if (!team) return isPathRoute ? notFound() : context.next();
@@ -743,8 +803,11 @@ export async function onRequest(context) {
 
     // Visible SSR block: full program history (season table, championships,
     // conference links). index.html removes #ssr-content on SPA hydration.
-    const seasons = await getTeamSeasons(assetFetcher, originUrl, team.espnId);
-    ssrHtml = renderTeamSsr(team, seasons, teams, origin);
+    const [seasons, history] = await Promise.all([
+      getTeamSeasons(assetFetcher, originUrl, team.espnId),
+      getTeamHistory(assetFetcher, originUrl),
+    ]);
+    ssrHtml = renderTeamSsr(team, seasons, teams, origin, history);
   } else if (compareParam) {
     const parts = compareParam.split('/');
     if (parts.length !== 2) return context.next();
