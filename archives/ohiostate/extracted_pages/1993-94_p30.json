@@ -1,0 +1,43 @@
+{
+  "page": 30,
+  "games": [
+    {
+      "date": "1994-03-13",
+      "opponent": "Iowa Hawkeyes",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 74,
+          "players": [
+            {"name": "Lawrence Funderburke", "min": 36, "fg": "7-13", "ft": "1-2", "tp": "0-0", "reb": 10, "ast": 2, "pf": 3, "to": 1, "stl": 1, "blk": 1, "pts": 15},
+            {"name": "Antonio Watson", "min": 18, "fg": "1-4", "ft": "2-2", "tp": "0-0", "reb": 3, "ast": 1, "pf": 2, "to": 1, "stl": 1, "blk": 1, "pts": 4},
+            {"name": "Jimmy Ratliff", "min": 13, "fg": "0-2", "ft": "3-4", "tp": "0-0", "reb": 2, "ast": 1, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 3},
+            {"name": "Greg Simpson", "min": 36, "fg": "5-12", "ft": "2-2", "tp": "0-3", "reb": 7, "ast": 3, "pf": 3, "to": 5, "stl": 2, "blk": 0, "pts": 12},
+            {"name": "Jamie Skelton", "min": 38, "fg": "10-21", "ft": "1-4", "tp": "2-9", "reb": 3, "ast": 7, "pf": 4, "to": 4, "stl": 2, "blk": 1, "pts": 23},
+            {"name": "Rickey Dudley", "min": 5, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Charles Macon", "min": 21, "fg": "4-4", "ft": "0-0", "tp": "0-0", "reb": 8, "ast": 0, "pf": 3, "to": 4, "stl": 0, "blk": 2, "pts": 8},
+            {"name": "Doug Etzler", "min": 30, "fg": "3-7", "ft": "0-0", "tp": "3-6", "reb": 0, "ast": 4, "pf": 3, "to": 1, "stl": 1, "blk": 0, "pts": 9},
+            {"name": "Nate Wilbourne", "min": 3, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Iowa Hawkeyes",
+          "score": 83,
+          "players": [
+            {"name": "Kenyon Murray", "min": 28, "fg": "6-10", "ft": "4-5", "tp": "0-1", "reb": 8, "ast": 1, "pf": 2, "to": 3, "stl": 0, "blk": 1, "pts": 16},
+            {"name": "Jess Settles", "min": 31, "fg": "5-8", "ft": "6-6", "tp": "1-3", "reb": 10, "ast": 3, "pf": 2, "to": 2, "stl": 4, "blk": 0, "pts": 17},
+            {"name": "Russ Millard", "min": 29, "fg": "6-8", "ft": "2-3", "tp": "1-2", "reb": 7, "ast": 2, "pf": 2, "to": 3, "stl": 3, "blk": 1, "pts": 15},
+            {"name": "Chris Kingsbury", "min": 24, "fg": "5-10", "ft": "4-6", "tp": "4-7", "reb": 1, "ast": 1, "pf": 3, "to": 2, "stl": 1, "blk": 0, "pts": 18},
+            {"name": "Mon'ter Glasper", "min": 25, "fg": "1-5", "ft": "0-1", "pts": 2},
+            {"name": "Jim Bartels", "min": 28, "fg": "3-13", "ft": "2-2", "pts": 11},
+            {"name": "John Carter", "min": 20, "fg": "1-4", "ft": "2-4", "tp": "0-0", "pts": 4},
+            {"name": "Kevin Skillett", "min": 14, "fg": "0-3", "ft": "0-0", "tp": "0-0", "pts": 0},
+            {"name": "James Schraut", "min": 1, "fg": "0-0", "ft": "0-0", "tp": "0-0", "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

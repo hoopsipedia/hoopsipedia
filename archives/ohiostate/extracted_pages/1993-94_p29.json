@@ -1,0 +1,9 @@
+{
+  "page": 29,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Game 28: Ohio State vs Northwestern, 1994-03-09, St. John Arena, Columbus, Ohio. Final score Northwestern 73, Ohio State 76 (39+37). Northwestern box score checksums perfectly (player points sum = 73 = team total, and FG/3PT/FT columns all reconcile exactly against team totals). However, Ohio State's box score fails the free-throw checksum: summing individual FT-made across all 9 players (Funderburke 5-6, Ratliff 1-2, Dudley 4-4, Simpson 1-2, Skelton 6-7, Watson 0-0, Etzler 0-0, Macon 5-5, Wilbourne 0-0) gives 22 made / 26 attempted, but the team TOTALS row (confirmed independently via the FT% summary line '.818 GAME (18-22)') shows only 18 made / 22 attempted -- a clean 4-point/4-attempt overcount. FG and 3PT columns for Ohio State reconcile exactly (27-54 FG, 4-13 3PT match team totals perfectly), isolating the error to the FT column, but re-reading the page (allowed once) could not determine which single player's FT entry (most likely Dudley 4-4 or Macon 5-5, both suspiciously round) is the source of the discrepancy without guessing. Individual point sum for Ohio State comes to 80 vs team total of 76, a 4-point mismatch. Skipping the entire game rather than guessing which player's FT/points line is wrong."
+    }
+  ]
+}

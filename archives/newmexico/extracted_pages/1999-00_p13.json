@@ -1,0 +1,11 @@
+{
+  "page": 13,
+  "games": [],
+  "skipped": [
+    {
+      "date": "1999-12-29",
+      "opponent": "Alabama State (New Mexico 68, Alabama State 47, at Albuquerque, NM)",
+      "reason": "Alabama State's box score (visitors) is cleanly typed and fully checksums (player points sum to 47), but New Mexico's box score (home team) has handwritten ink corrections overlapping the printed FG/FGA, 3PT-FG/FGA, and FT/FTA columns for most players (e.g. Walker's FGA cell reads as a garbled '8875', Hannah's as '33530', Long's FGA/FTA as '112731'/'2500', Henry's as '5003'/'3751', Lightfoot's as '4001', Parmer's as '4290'/'66671'). The printed team TOTALS row (FG 27-54, 3PT 5-17, FT 9-13) and the per-player TP (points), PF, assists, turnovers, blocks, steals, and minutes columns are legible and the points column sums correctly to New Mexico's final score of 68, but individual player FG-made/FGA, 3PT, and FT figures cannot be confidently disambiguated from the overlapping handwriting, and at least one player (Smith) produces a contradictory point checksum depending on how the ambiguous FT cell is read. Since both teams' full shooting lines are required and New Mexico's cannot be transcribed confidently without guessing, the entire game is skipped rather than transcribed with invented values."
+    }
+  ]
+}

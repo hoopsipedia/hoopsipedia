@@ -1,0 +1,40 @@
+{
+  "page": 20,
+  "games": [
+    {
+      "date": "1999-01-23",
+      "opponent": "Georgia Tech",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 65,
+          "players": [
+            {"name": "Willie Dersch", "min": 36, "fg": "6-12", "tp": "2-6", "ft": "4-4", "reb": 3, "ast": 3, "pf": 1, "to": 2, "stl": 2, "blk": 0, "pts": 18},
+            {"name": "Chris Williams", "min": 30, "fg": "6-16", "tp": "2-6", "ft": "2-2", "reb": 7, "ast": 0, "pf": 5, "to": 2, "stl": 2, "blk": 2, "pts": 16},
+            {"name": "Kris Hunter", "min": 27, "fg": "1-2", "tp": "0-1", "ft": "1-2", "reb": 1, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 3, "pts": 3},
+            {"name": "Chezley Watson", "min": 32, "fg": "2-6", "tp": "1-4", "ft": "2-2", "reb": 1, "ast": 5, "pf": 3, "to": 2, "stl": 2, "blk": 0, "pts": 7},
+            {"name": "Donald Hand", "min": 38, "fg": "5-15", "tp": "2-6", "ft": "3-5", "reb": 4, "ast": 2, "pf": 4, "to": 5, "stl": 3, "blk": 0, "pts": 15},
+            {"name": "Adam Hall", "min": 30, "fg": "3-10", "tp": "0-4", "ft": "0-1", "reb": 10, "ast": 2, "pf": 4, "to": 1, "stl": 3, "blk": 1, "pts": 6},
+            {"name": "Cade Lemcke", "min": 4, "fg": "0-1", "tp": "0-1", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Jason Dowling", "min": 3, "fg": "0-1", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Georgia Tech Yellow Jackets",
+          "score": 77,
+          "players": [
+            {"name": "Jon Babul", "min": 36, "fg": "4-8", "tp": "0-0", "ft": "4-5", "reb": 9, "ast": 3, "pf": 2, "to": 3, "stl": 2, "blk": 0, "pts": 12},
+            {"name": "Jason Collier", "min": 26, "fg": "5-10", "tp": "0-2", "ft": "2-2", "reb": 7, "ast": 1, "pf": 4, "to": 3, "stl": 1, "blk": 0, "pts": 12},
+            {"name": "Alvin Jones", "min": 35, "fg": "5-9", "tp": "0-0", "ft": "1-2", "reb": 7, "ast": 3, "pf": 1, "to": 2, "stl": 1, "blk": 4, "pts": 11},
+            {"name": "Tony Akins", "min": 37, "fg": "3-7", "tp": "2-5", "ft": "1-2", "reb": 1, "ast": 3, "pf": 2, "to": 1, "stl": 0, "blk": 0, "pts": 9},
+            {"name": "Jason Floyd", "min": 33, "fg": "8-9", "tp": "3-4", "ft": "0-0", "reb": 4, "ast": 1, "pf": 4, "to": 3, "stl": 1, "blk": 0, "pts": 19},
+            {"name": "T.J. Vines", "min": 27, "fg": "3-5", "tp": "3-4", "ft": "2-2", "reb": 0, "ast": 2, "pf": 4, "to": 5, "stl": 3, "blk": 0, "pts": 11},
+            {"name": "Darryl LaBarrie", "min": 6, "fg": "1-3", "tp": "1-2", "ft": "0-0", "reb": 2, "ast": 1, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 3}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

@@ -1,0 +1,9 @@
+{
+  "page": 19,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Air Force vs New Mexico, 01/22/00 at Albuquerque (final AF 72, UNM 89). Air Force (visitor) box score is clean and checksums exactly to 72 once Jenkins' printed TP (read as 6) is corrected to 5 via 2*(FGmade-3FGmade)+3*3FGmade+FTmade recomputation — but the home team (New Mexico) columns for TOT-FG/FGA, 3-PT FG/FGA, and FT/FTA are garbled/overtyped on the scan (e.g. Walker's FGA shows as '86250', Henry's FT shows as '4750 1'), apparently from corrections retyped over the original entries and captured as concatenated digit strings. These columns cannot be confidently parsed to made-attempted splits. The New Mexico player TP column, taken at face value (13,7,26,9,12,15,0,0,0,0,4), sums to 86 vs. the official final score of 89 — a 3-point checksum failure — confirming at least one figure is misread/illegible. Skipping the entire game rather than reporting only the Air Force half."
+    }
+  ]
+}

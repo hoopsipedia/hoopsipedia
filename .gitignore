@@ -50,3 +50,5 @@ games_to_scrape.json
 _scrape_interim_*.json
 _sr_audit.json
 game_ids_progress.json
+archives/**/*.pdf
+archives/**/*.zip
