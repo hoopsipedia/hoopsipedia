@@ -447,8 +447,55 @@
         @media (max-width: 768px) {
             .masthead-inner { padding: 10px 16px; flex-wrap: wrap; gap: 8px; }
             .masthead-meta { display: none; }
-            .masthead-nav { padding: 0 16px; flex-wrap: wrap; }
-            .masthead-nav a { padding: 10px 12px; font-size: 13px; }
+            /* Single-row horizontally scrollable nav (never a stacked wall) */
+            .masthead-nav {
+                padding: 0 8px;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+                scrollbar-width: none;
+            }
+            .masthead-nav::-webkit-scrollbar { display: none; }
+            .masthead-nav a {
+                padding: 12px 12px;
+                font-size: 13px;
+                white-space: nowrap;
+                flex-shrink: 0;
+                border-right: none;
+            }
+            .masthead-nav a:first-child { border-left: none; }
+            .masthead-nav .spacer { flex: 0 0 4px; border-right: none; }
+            /* Hero wordmark: inline-styled at 120px on desktop — scale to fit */
+            #home span[style*="font-size:120px"] { font-size: clamp(44px, 14vw, 64px) !important; }
+            /* Safety net: nothing gets to widen the page */
+            html, body { overflow-x: hidden; }
+            img, svg { max-width: 100%; height: auto; }
+            /* Team/coach hero: 3-col inline grid (logo | info | record) clips
+               its record column at phone widths — drop the record row below. */
+            div[style*="grid-template-columns:auto 1fr auto"] {
+                grid-template-columns: auto 1fr !important;
+                gap: 16px !important;
+            }
+            div[style*="grid-template-columns:auto 1fr auto"] > div:last-child {
+                grid-column: 1 / -1;
+                flex-direction: row !important;
+                align-items: center !important;
+                justify-content: space-between;
+                flex-wrap: wrap;
+            }
+            /* Wide data tables scroll sideways instead of clipping */
+            .data-table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+            /* Filter/tab/control rows become swipeable single rows */
+            .rankings-tabs, .filter-buttons, .conference-filters, .teams-controls {
+                flex-wrap: nowrap;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+                scrollbar-width: none;
+            }
+            .rankings-tabs::-webkit-scrollbar, .filter-buttons::-webkit-scrollbar,
+            .conference-filters::-webkit-scrollbar, .teams-controls::-webkit-scrollbar { display: none; }
+            .rankings-tabs > *, .filter-buttons > *, .conference-filters > *, .teams-controls > * { flex-shrink: 0; }
         }
 
         /* ── Homepage redesign responsive ── */
