@@ -8406,8 +8406,8 @@
                 return;
             }
 
-            // #view (home, bracket, rankings, teams, coaches)
-            const viewMatch = hash.match(/^#(home|bracket|rankings|teams|coaches)$/);
+            // #view (home, bracket, rankings, teams, coaches, comparison)
+            const viewMatch = hash.match(/^#(home|bracket|rankings|teams|coaches|comparison)$/);
             if (viewMatch) {
                 switchView(viewMatch[1], true);
             }
@@ -8467,6 +8467,67 @@
         function updateCompareButton() {
             const btn = document.getElementById('compareButton');
             btn.disabled = !selectedTeam1 || !selectedTeam2 || selectedTeam1.espnId === selectedTeam2.espnId;
+        }
+
+        // Resolve two team names (via the homepage picker plumbing) and run the
+        // comparison. Works from any view — the hidden home inputs stay in the DOM.
+        function compareByNames(t1Name, t2Name) {
+            const inp1 = document.getElementById('compareTeam1Input');
+            const inp2 = document.getElementById('compareTeam2Input');
+            if (!inp1 || !inp2) return;
+            inp1.value = t1Name;
+            inp2.value = t2Name;
+            updateCompareDropdown(inp1, 'compareTeam1Dropdown', 1);
+            updateCompareDropdown(inp2, 'compareTeam2Dropdown', 2);
+            setTimeout(() => {
+                const dd1 = document.getElementById('compareTeam1Dropdown');
+                const dd2 = document.getElementById('compareTeam2Dropdown');
+                if (dd1 && dd1.firstChild) dd1.firstChild.click();
+                setTimeout(() => {
+                    if (dd2 && dd2.firstChild) dd2.firstChild.click();
+                    setTimeout(() => {
+                        const cmpBtn = document.getElementById('compareButton');
+                        if (cmpBtn && !cmpBtn.disabled) cmpBtn.click();
+                    }, 100);
+                }, 100);
+            }, 100);
+        }
+
+        // Landing for the Compare tab when no matchup is active yet.
+        function renderCompareLanding() {
+            const cc = document.getElementById('comparisonContent');
+            if (!cc) return;
+            const classics = [
+                ['Duke', 'Kentucky'], ['Duke', 'North Carolina'], ['Kansas', 'UCLA'],
+                ['Indiana', 'Purdue'], ['UConn', 'Villanova'], ['Michigan', 'Ohio State'],
+                ['Arkansas', 'Kentucky'], ['Louisville', 'Kentucky'],
+            ];
+            const cards = classics.map(([a, b]) => `
+                <button onclick="compareByNames('${a}','${b}')"
+                        style="background:var(--paper); border:1px solid var(--rule-soft); border-left:3px solid var(--navy); border-radius:var(--r-md); padding:16px 14px; cursor:pointer; text-align:center;">
+                    <span class="h-slab" style="font-size:15px; color:var(--navy);">${a}</span>
+                    <span class="h-display" style="font-size:12px; color:var(--rust); margin:0 6px;">VS</span>
+                    <span class="h-slab" style="font-size:15px; color:var(--navy);">${b}</span>
+                </button>`).join('');
+            cc.innerHTML = `
+                <div style="max-width:860px; margin:0 auto; padding:48px 20px;">
+                    <div class="label-mono" style="color:var(--ink-muted); text-align:center;">HEAD TO HEAD</div>
+                    <h2 class="h-slab" style="font-size:clamp(28px,4vw,44px); color:var(--navy); text-align:center; margin:8px 0 28px;">Pick any two programs. Settle it.</h2>
+                    <div style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin-bottom:14px;">
+                        <input id="compareLandInp1" placeholder="First team…" style="font-size:16px; padding:12px 16px; border:2px solid var(--navy); border-radius:var(--r-md); min-width:220px;">
+                        <input id="compareLandInp2" placeholder="Second team…" style="font-size:16px; padding:12px 16px; border:2px solid var(--navy); border-radius:var(--r-md); min-width:220px;">
+                        <button class="ds-btn" onclick="compareByNames(document.getElementById('compareLandInp1').value, document.getElementById('compareLandInp2').value)"
+                                style="background:var(--rust); color:var(--cream); border:none; border-radius:var(--r-md); padding:12px 26px; font-size:15px; cursor:pointer;">Settle it →</button>
+                    </div>
+                    <div class="label-mono" style="color:var(--ink-muted); text-align:center; margin:24px 0 12px;">OR START WITH A CLASSIC</div>
+                    <div style="display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:12px;">${cards}</div>
+                </div>`;
+            const go = () => compareByNames(
+                document.getElementById('compareLandInp1').value,
+                document.getElementById('compareLandInp2').value);
+            ['compareLandInp1', 'compareLandInp2'].forEach(id => {
+                document.getElementById(id).addEventListener('keydown', e => { if (e.key === 'Enter') go(); });
+            });
         }
 
         function navigateToRanking(statKey) {
@@ -8812,6 +8873,12 @@
                 renderTeamsView();
                 if (bracketRefreshInterval) clearInterval(bracketRefreshInterval);
             } else if (view === 'comparison') {
+                // Direct nav to Compare with no matchup yet: show the picker
+                // landing instead of a blank page.
+                const cc = document.getElementById('comparisonContent');
+                if (cc && (!selectedTeam1 || !selectedTeam2) && cc.innerHTML.trim().length < 200) {
+                    renderCompareLanding();
+                }
                 if (bracketRefreshInterval) clearInterval(bracketRefreshInterval);
             } else if (view === 'profile') {
                 if (bracketRefreshInterval) clearInterval(bracketRefreshInterval);
