@@ -1,0 +1,9 @@
+{
+  "page": 9,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page contains a full official box score: Pittsburgh at Ohio State, 2001-12-19, Value City Arena (final Pittsburgh 62, Ohio State 55; periods PITT 30-32, OSU 24-31). Pittsburgh's 9-player box is clean and checksums perfectly (individual TP: Brown 4, Zavackas 12, Morris 5, Page 17, Knight 8, Troutman 0, Johnson 1, McCarroll 0, Lett 15 = 62, matching team total and final score). However, Ohio State's bench rows (Dials, Dudley, Martin, and possibly a Savovic/Connolly rounding issue) are too degraded/small in this scan to read with confidence -- top 7 OSU players (Williams 10, Radinovic 10, Darby 12, Brown 3, Savovic 4, Fuss-Cheatham 4, Connolly 4 = 47) leave 8 unaccounted points against the team total of 55, and I could not confidently assign exact FG/FT splits to the remaining 3 low-minute players across two read passes without risking invented values. Per instructions, skipping rather than guessing; recommend a higher-resolution re-scan/zoom of this page for a future extraction pass."
+    }
+  ]
+}

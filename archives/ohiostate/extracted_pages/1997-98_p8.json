@@ -1,0 +1,42 @@
+{
+  "page": 8,
+  "games": [
+    {
+      "date": "1997-12-15",
+      "opponent": "Cal State Northridge",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 89,
+          "players": [
+            {"name": "Jason Singleton", "min": 29, "fg": "3-8", "ft": "4-8", "tp": "0-0", "reb": 5, "ast": 2, "pf": 5, "to": 3, "stl": 1, "blk": 0, "pts": 10},
+            {"name": "Jon Sanderson", "min": 40, "fg": "6-11", "ft": "3-4", "tp": "2-6", "reb": 12, "ast": 3, "pf": 1, "to": 2, "stl": 1, "blk": 1, "pts": 17},
+            {"name": "Ken Johnson", "min": 29, "fg": "5-8", "ft": "0-2", "tp": "0-0", "reb": 8, "ast": 0, "pf": 5, "to": 2, "stl": 2, "blk": 0, "pts": 10},
+            {"name": "Carlos Davis", "min": 34, "fg": "4-10", "ft": "6-10", "tp": "0-1", "reb": 4, "ast": 8, "pf": 1, "to": 7, "stl": 1, "blk": 1, "pts": 14},
+            {"name": "Michael Redd", "min": 20, "fg": "12-20", "ft": "3-12", "tp": "1-4", "reb": 6, "ast": 8, "pf": 2, "to": 2, "stl": 0, "blk": 0, "pts": 28},
+            {"name": "Neshaun Coleman", "min": 11, "fg": "3-6", "ft": "0-0", "tp": "2-3", "reb": 5, "ast": 2, "pf": 0, "to": 0, "stl": 1, "blk": 0, "pts": 8},
+            {"name": "Shamar Herron", "min": 11, "fg": "1-1", "ft": "0-1", "tp": "0-0", "reb": 3, "ast": 0, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 2}
+          ]
+        },
+        {
+          "name": "Cal State Northridge",
+          "score": 81,
+          "players": [
+            {"name": "Mike O'Quinn", "min": 25, "fg": "2-7", "ft": "5-7", "tp": "1-5", "reb": 7, "ast": 1, "pf": 4, "to": 4, "stl": 1, "blk": 0, "pts": 10},
+            {"name": "Jeffrey Parris", "min": 16, "fg": "3-5", "ft": "2-4", "tp": "0-0", "reb": 2, "ast": 1, "pf": 4, "to": 0, "stl": 0, "blk": 1, "pts": 8},
+            {"name": "Jabari Simmons", "min": 32, "fg": "5-10", "ft": "2-4", "tp": "0-1", "reb": 8, "ast": 0, "pf": 0, "to": 4, "stl": 1, "blk": 0, "pts": 12},
+            {"name": "Trenton Cross", "min": 31, "fg": "2-7", "ft": "1-2", "tp": "1-3", "reb": 3, "ast": 2, "pf": 5, "to": 5, "stl": 0, "blk": 0, "pts": 6},
+            {"name": "Greg Minor", "min": 26, "fg": "4-12", "ft": "0-0", "tp": "4-11", "reb": 7, "ast": 2, "pf": 3, "to": 3, "stl": 0, "blk": 0, "pts": 12},
+            {"name": "Kevin Taylor", "min": 12, "fg": "1-2", "ft": "0-0", "tp": "0-0", "reb": 3, "ast": 1, "pf": 2, "to": 1, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Lucky Grundy", "min": 13, "fg": "2-3", "ft": "0-0", "tp": "1-2", "reb": 1, "ast": 4, "pf": 4, "to": 1, "stl": 0, "blk": 0, "pts": 5},
+            {"name": "Brian Mainle", "min": 12, "fg": "1-2", "ft": "0-0", "tp": "1-2", "reb": 1, "ast": 2, "pf": 2, "to": 0, "stl": 1, "blk": 0, "pts": 3},
+            {"name": "Brian Hagens", "min": 8, "fg": "1-3", "ft": "0-0", "tp": "0-0", "reb": 2, "ast": 1, "pf": 3, "to": 2, "stl": 1, "blk": 0, "pts": 2},
+            {"name": "Carl Holmes", "min": 25, "fg": "8-12", "ft": "0-1", "tp": "5-7", "reb": 2, "ast": 1, "pf": 3, "to": 2, "stl": 1, "blk": 1, "pts": 21}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

@@ -1,0 +1,9 @@
+{
+  "page": 6,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Official printed box score: Eastern Kentucky (2-2 entering) at Ohio State (3-2 entering) at Value City Arena, Columbus, Ohio; attendance 15,501; final score by periods Eastern Kentucky 16+28=44, Ohio State 51+39=90 (date not legible on this scan crop — top margin text is cut off, only a partial fragment like '?-00 4 p.m.' is visible). Attempted full transcription of both team box scores, but Eastern Kentucky's checksum fails: summing each player's points (derived consistently from that player's own FG/3PT/FT columns) gives 43, while the team TOTALS row and period-score total both confirm 44 points (team FT line 5-10 made-attempted, independently corroborated by the 1st/2nd-half FT shooting split 2-3 + 3-7 = 5-10). The gap traces to free-throw makes/attempts (individual FTA sum to 8 vs team 10, individual FT makes sum to 4 vs team 5) that must belong to one of the low-usage bench players (Miller, Ryan or Carswell, Chris), both of whose FT columns read as 0-0 on this scan but cannot be confirmed against the higher-resolution original; re-read once already without resolving the ambiguity. Ohio State's own totals appear internally plausible but were not fully re-verified once the paired opponent line failed. Skipping per instructions rather than guessing which player's free throw to invent."
+    }
+  ]
+}

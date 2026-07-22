@@ -1,0 +1,56 @@
+{
+  "page": 20,
+  "games": [
+    {
+      "date": "1998-01-08",
+      "date_confidence": "low - date partly obscured by page fold; only a trailing '8' and 'MINNESOTA' visible; year/season inferred from PDF filename",
+      "opponent": "Minnesota",
+      "location": "Minneapolis, Minn. (Williams Arena)",
+      "attendance": 14402,
+      "score_by_periods": {"Ohio State": [27, 26], "Minnesota": [42, 34]},
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 53,
+          "players": [
+            {"name": "Jason Singleton", "min": 21, "fg": "7-11", "tp": "0-0", "ft": "1-2", "reb": 1, "pf": 3, "ast": 0, "to": 1, "blk": 0, "stl": 2, "pts": 15},
+            {"name": "Jon Sanderson", "min": 25, "fg": "1-6", "tp": "0-5", "ft": "2-2", "reb": 5, "pf": 3, "ast": 3, "to": 4, "blk": 1, "stl": 1, "pts": 4},
+            {"name": "Ken Johnson", "min": 25, "fg": "2-4", "tp": "0-0", "ft": "4-5", "reb": 2, "pf": 2, "ast": 0, "to": 0, "blk": 1, "stl": 0, "pts": 8},
+            {"name": "Carlos Davis", "min": 34, "fg": "2-8", "tp": "0-4", "ft": "2-2", "reb": 4, "pf": 3, "ast": 2, "to": 2, "blk": 0, "stl": 0, "pts": 6},
+            {"name": "Michael Redd", "min": 29, "fg": "5-14", "tp": "0-2", "ft": "1-1", "reb": 1, "pf": 3, "ast": 2, "to": 2, "blk": 0, "stl": 0, "pts": 11},
+            {"name": "Neshaun Coleman", "min": 3, "fg": "2-6", "tp": "2-5", "ft": "0-0", "reb": 0, "pf": 3, "ast": 1, "to": 1, "blk": 0, "stl": 0, "pts": 6},
+            {"name": "Eric Hanna", "min": 9, "fg": "0-1", "tp": "0-0", "ft": "0-0", "reb": 3, "pf": 1, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "John Lumpkin", "min": 3, "fg": "0-2", "tp": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Byron Wilson", "min": 0, "fg": "0-1", "tp": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Shamar Herron", "min": 3, "fg": "0-3", "tp": "0-0", "ft": "1-1", "reb": 0, "pf": 3, "ast": 3, "to": 0, "blk": 1, "stl": 0, "pts": 1},
+            {"name": "Kwadjo Steele", "min": 3, "fg": "1-5", "tp": "0-2", "ft": "0-2", "reb": 3, "pf": 1, "ast": 0, "to": 1, "blk": 0, "stl": 1, "pts": 2}
+          ],
+          "team_totals_from_sheet": {"fg": "20-61", "tp": "2-18", "ft": "11-15", "reb": "16-19-35", "pf": 17, "pts": 53, "ast": 10, "to": 14, "blk": 3, "stl": 7, "min": 200},
+          "checksum_ok": true
+        },
+        {
+          "name": "Minnesota Golden Gophers",
+          "score": 76,
+          "players": [
+            {"name": "Sam Jacobson", "min": 33, "fg": "7-17", "tp": "2-7", "ft": "5-6", "reb": 6, "pf": 1, "ast": 6, "to": 1, "blk": 0, "stl": 0, "pts": 21},
+            {"name": "Quincy Lewis", "min": 32, "fg": "7-11", "tp": "0-0", "ft": "3-4", "reb": 5, "pf": 2, "ast": 3, "to": 1, "blk": 5, "stl": 0, "pts": 17},
+            {"name": "Kyle Sanden", "min": 27, "fg": "4-5", "tp": "0-0", "ft": "2-2", "reb": 9, "pf": 1, "ast": 1, "to": 1, "blk": 1, "stl": 0, "pts": 10},
+            {"name": "Kevin Clark", "min": 33, "fg": "4-8", "tp": "2-5", "ft": "1-1", "reb": 3, "pf": 2, "ast": 5, "to": 2, "blk": 0, "stl": 2, "pts": 11},
+            {"name": "Eric Harris", "min": 21, "fg": "3-8", "tp": "2-3", "ft": "3-4", "reb": 3, "pf": 6, "ast": 3, "to": 0, "blk": 1, "stl": 0, "pts": 11},
+            {"name": "Kevin Nathaniel", "min": 0, "fg": "0-3", "tp": "0-0", "ft": "2-3", "reb": 3, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Rob Schoenrock", "min": 0, "fg": "0-1", "tp": "0-1", "ft": "0-0", "reb": 1, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Jason Stanford", "min": 0, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Jermaine Stanford", "min": 1, "fg": "0-1", "tp": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 2, "to": 2, "blk": 1, "stl": 1, "pts": 0},
+            {"name": "Antoine Broxsie", "min": 1, "fg": "0-1", "tp": "0-0", "ft": "2-2", "reb": 3, "pf": 1, "ast": 2, "to": 0, "blk": 0, "stl": 1, "pts": 2},
+            {"name": "Miles Tarver", "min": 1, "fg": "0-1", "tp": "0-0", "ft": "2-2", "reb": 5, "pf": 1, "ast": 0, "to": 0, "blk": 1, "stl": 1, "pts": 2}
+          ],
+          "team_totals_from_sheet": {"fg": "25-55", "tp": "6-16", "ft": "20-27", "reb": "15-27-42", "pf": 15, "pts": 76, "ast": 20, "to": 12, "blk": 8, "stl": 5, "min": 200},
+          "checksum_ok": true
+        }
+      ],
+      "checksum_ok": true,
+      "confidence_notes": "FG-made, 3PT-made, and FT-made columns for both teams were cross-verified: individual sums reconcile exactly to the sheet's own team TOTALS row (OSU: FG 20/61, 3PT 2/18, FT 11/15; Minnesota: FG 25/55, 3PT 6/16, FT 20/27), and computed pts (2*2pt-made + 3*3pt-made + FT-made) sum to the final scores (53 and 76) exactly. Ancillary columns (min, reb, ast, to, blk, stl, pf) for several bench players on both teams -- OSU: Wilson, Herron; Minnesota: Nathaniel, Schoenrock, J.Stanford, Je.Stanford, Broxsie, Tarver -- were read from a cramped/lower-resolution section of the scan and carry lower confidence than the scoring columns, though they are internally consistent with visible digits and rebound/PF team totals were not individually re-derived per player."
+    }
+  ],
+  "skipped": []
+}

@@ -1,0 +1,9 @@
+{
+  "page": 4,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page 4 holds one full official box score: Albany at Ohio State (date printed as '1-20-01', which is almost certainly OCR/scan truncation of 11-20-01 given Albany 0-2 / Ohio State 2-0 season records shown as early-season; Value City Arena, Columbus; final Albany 62, Ohio State 87). Albany's team totals transcribe cleanly and checksum perfectly (player TP column sums to exactly 62, matching the printed team total, and FG made sums to 25-48 matching the printed totals row). However, Ohio State's player rows do not checksum: summing only four players' printed 3-PT FG-FGA column (Williams 2-4, Darby 3-7, Brown 1-5, Savovic 2-3) already yields 8 made three-pointers, which exceeds the printed team total of 6-17 threes for the entire 14-man roster -- an impossibility, indicating the small typed 3-PT/FT-FTA columns for Ohio State are misaligned or misread at this scan resolution. Re-reading the page once (the maximum allowed) did not resolve the ambiguity; attempts to reconcile individual TP values against the printed team total of 87 came up short (~84) without a confident correction. Per instructions to be ruthless about skipping rather than guessing, the entire Albany-vs-Ohio-State game is skipped rather than publishing a partially-fabricated or unverified Ohio State box score."
+    }
+  ]
+}

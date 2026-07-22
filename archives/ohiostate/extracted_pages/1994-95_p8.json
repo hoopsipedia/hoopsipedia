@@ -6,32 +6,32 @@
       "opponent": "Bowling Green State University",
       "teams": [
         {
-          "name": "Bowling Green State University",
-          "score": 59,
-          "players": [
-            {"name": "Shane Komives", "min": 36, "fg": "2-7", "tp": "1-5", "ft": "2-2", "reb": 5, "ast": 4, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 7},
-            {"name": "Floyd Miller", "min": 30, "fg": "7-7", "tp": "0-0", "ft": "1-2", "reb": 3, "ast": 0, "pf": 3, "to": 1, "stl": 2, "blk": 0, "pts": 15},
-            {"name": "Shane Kline-Ruminski", "min": 36, "fg": "5-10", "tp": "0-1", "ft": "0-0", "reb": 5, "ast": 1, "pf": 3, "to": 4, "stl": 0, "blk": 0, "pts": 10},
-            {"name": "Antonio Daniels", "min": 37, "fg": "5-8", "tp": "1-1", "ft": "0-2", "reb": 6, "ast": 6, "pf": 1, "to": 3, "stl": 1, "blk": 1, "pts": 11},
-            {"name": "Jay Larranaga", "min": 31, "fg": "3-9", "tp": "2-4", "ft": "1-2", "reb": 5, "ast": 2, "pf": 1, "to": 2, "stl": 0, "blk": 0, "pts": 9},
-            {"name": "Mike Swanson", "min": 4, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
-            {"name": "Ray Lynch", "min": 1, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 1, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
-            {"name": "James Cerisier", "min": 13, "fg": "1-4", "tp": "0-0", "ft": "0-1", "reb": 2, "ast": 0, "pf": 2, "to": 1, "stl": 0, "blk": 0, "pts": 2},
-            {"name": "Denny Amrhein", "min": 12, "fg": "1-1", "tp": "1-1", "ft": "2-2", "reb": 1, "ast": 1, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 5}
-          ]
-        },
-        {
           "name": "Ohio State Buckeyes",
           "score": 50,
           "players": [
-            {"name": "Kevin Martin", "min": 28, "fg": "1-4", "tp": "0-1", "ft": "2-2", "reb": 0, "ast": 1, "pf": 3, "to": 2, "stl": 0, "blk": 0, "pts": 4},
-            {"name": "Otis Winston", "min": 32, "fg": "3-4", "tp": "0-0", "ft": "0-0", "reb": 5, "ast": 0, "pf": 3, "to": 0, "stl": 1, "blk": 1, "pts": 6},
-            {"name": "Antonio Watson", "min": 40, "fg": "7-11", "tp": "0-0", "ft": "4-4", "reb": 12, "ast": 0, "pf": 1, "to": 5, "stl": 1, "blk": 1, "pts": 18},
-            {"name": "Doug Etzler", "min": 36, "fg": "7-16", "tp": "4-7", "ft": "0-2", "reb": 3, "ast": 2, "pf": 3, "to": 0, "stl": 1, "blk": 0, "pts": 18},
-            {"name": "Carlos Davis", "min": 33, "fg": "1-6", "tp": "0-1", "ft": "0-1", "reb": 4, "ast": 5, "pf": 4, "to": 1, "stl": 2, "blk": 0, "pts": 2},
-            {"name": "Rick Yudt", "min": 19, "fg": "1-7", "tp": "0-2", "ft": "0-2", "reb": 1, "ast": 0, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 2},
-            {"name": "Marlon Minifee", "min": 4, "fg": "0-0", "tp": "0-0", "ft": "0-2", "reb": 1, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 0},
-            {"name": "Don Jantonio", "min": 8, "fg": "0-1", "tp": "0-1", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 0}
+            {"name": "Kevin Martin", "min": 28, "fg": "1-4", "ft": "2-2", "tp": "0-1", "reb": 0, "ast": 1, "pf": 3, "to": 2, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Otis Winston", "min": 32, "fg": "3-4", "ft": "0-0", "tp": "0-0", "reb": 5, "ast": 0, "pf": 3, "to": 1, "stl": 0, "blk": 1, "pts": 6},
+            {"name": "Antonio Watson", "min": 40, "fg": "7-11", "ft": "4-4", "tp": "0-0", "reb": 12, "ast": 0, "pf": 1, "to": 5, "stl": 1, "blk": 1, "pts": 18},
+            {"name": "Doug Etzler", "min": 36, "fg": "7-16", "ft": "0-0", "tp": "4-8", "reb": 2, "ast": 2, "pf": 3, "to": 0, "stl": 1, "blk": 0, "pts": 18},
+            {"name": "Carlos Davis", "min": 33, "fg": "1-6", "ft": "0-1", "tp": "0-1", "reb": 4, "ast": 5, "pf": 1, "to": 1, "stl": 2, "blk": 0, "pts": 2},
+            {"name": "Rick Yudt", "min": 19, "fg": "1-7", "ft": "0-2", "tp": "0-2", "reb": 1, "ast": 0, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Marlon Minifee", "min": 4, "fg": "0-0", "ft": "0-2", "tp": "0-0", "reb": 1, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Don Jantonio", "min": 8, "fg": "0-1", "ft": "0-0", "tp": "0-1", "reb": 0, "ast": 0, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Bowling Green State Falcons",
+          "score": 59,
+          "players": [
+            {"name": "Shane Komives", "min": 36, "fg": "2-7", "ft": "2-2", "tp": "1-5", "reb": 5, "ast": 4, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 7},
+            {"name": "Floyd Miller", "min": 30, "fg": "7-7", "ft": "1-2", "tp": "0-0", "reb": 3, "ast": 0, "pf": 3, "to": 1, "stl": 2, "blk": 0, "pts": 15},
+            {"name": "Shane Kline-Ruminski", "min": 36, "fg": "5-10", "ft": "0-0", "tp": "0-1", "reb": 5, "ast": 1, "pf": 3, "to": 4, "stl": 0, "blk": 0, "pts": 10},
+            {"name": "Antonio Daniels", "min": 37, "fg": "5-8", "ft": "0-0", "tp": "1-1", "reb": 6, "ast": 6, "pf": 1, "to": 3, "stl": 1, "blk": 1, "pts": 11},
+            {"name": "Jay Larranaga", "min": 31, "fg": "3-9", "ft": "1-2", "tp": "2-4", "reb": 5, "ast": 2, "pf": 1, "to": 2, "stl": 0, "blk": 0, "pts": 9},
+            {"name": "Mike Swanson", "min": 4, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Ray Lynch", "min": 1, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 1, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "James Cerisier", "min": 13, "fg": "1-4", "ft": "0-1", "tp": "0-0", "reb": 2, "ast": 0, "pf": 2, "to": 1, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Denny Amrhein", "min": 12, "fg": "1-1", "ft": "2-2", "tp": "1-1", "reb": 1, "ast": 1, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 5}
           ]
         }
       ],

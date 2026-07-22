@@ -1,0 +1,46 @@
+{
+  "page": 26,
+  "games": [
+    {
+      "date": "1998-02-16",
+      "date_note": "Left edge of scan is cropped throughout the page (e.g. 'hio State', 'isitors', 'ome Team', 'otal', 'ttendance', 'coRE', 'fficials', 'omments' are all missing their leading letter). The date line reads '/16/98 8:00 PM at State College, PA' with the leading digit cut off. Inferred as February 16, 1998 based on typical Big Ten late-season scheduling and Ohio State's 0-12 conference record at this point; could alternatively be January 16, 1998 - not fully certain.",
+      "opponent": "Penn State Nittany Lions",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 81,
+          "record_note": "7-18 overall, 0-12 Big Ten entering/after this game per sheet comments",
+          "players": [
+            {"name": "Jason Singleton", "min": 39, "fg": "7-13", "tp": "0-0", "ft": "1-6", "reb": 9, "ast": 0, "to": 1, "blk": 1, "stl": 0, "pf": 4, "pts": 15},
+            {"name": "Jon Sanderson", "min": 33, "fg": "9-16", "tp": "1-5", "ft": "2-2", "reb": 5, "ast": 5, "to": 1, "blk": 0, "stl": 1, "pf": 3, "pts": 21},
+            {"name": "Shamar Herron", "min": 15, "fg": "0-1", "tp": "0-0", "ft": "0-0", "reb": 2, "ast": 0, "to": 2, "blk": 0, "stl": 0, "pf": 3, "pts": 0},
+            {"name": "Carlos Davis", "min": 37, "fg": "4-9", "tp": "1-3", "ft": "0-1", "reb": 3, "ast": 7, "to": 1, "blk": 0, "stl": 6, "pf": 2, "pts": 9},
+            {"name": "Michael Redd", "min": 38, "fg": "9-19", "tp": "1-4", "ft": "9-10", "reb": 7, "ast": 5, "to": 3, "blk": 1, "stl": 3, "pf": 4, "pts": 28},
+            {"name": "Neshaun Coleman", "min": 14, "fg": "0-3", "tp": "0-2", "ft": "0-0", "reb": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pf": 2, "pts": 0},
+            {"name": "Ken Johnson", "min": 23, "fg": "4-7", "tp": "0-0", "ft": "0-0", "reb": 5, "ast": 1, "to": 0, "blk": 4, "stl": 0, "pf": 5, "pts": 8},
+            {"name": "Kwadjo Steele", "min": 1, "fg": "0-1", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pf": 2, "pts": 0}
+          ]
+        },
+        {
+          "name": "Penn State Nittany Lions",
+          "score": 90,
+          "record_note": "13-9 overall, 6-6 Big Ten entering/after this game per sheet comments",
+          "players": [
+            {"name": "Titus Ivory", "min": 16, "fg": "4-6", "tp": "4-6", "ft": "2-2", "reb": 2, "ast": 3, "to": 1, "blk": 0, "stl": 1, "pf": 4, "pts": 14},
+            {"name": "Carl Jackson", "min": 4, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 2, "to": 0, "blk": 0, "stl": 0, "pf": 0, "pts": 0},
+            {"name": "Calvin Booth", "min": 37, "fg": "4-7", "tp": "0-0", "ft": "4-5", "reb": 8, "ast": 1, "to": 4, "blk": 6, "stl": 0, "pf": 1, "pts": 12},
+            {"name": "Joe Crispin", "min": 30, "fg": "2-4", "tp": "0-2", "ft": "2-2", "reb": 0, "ast": 3, "to": 3, "blk": 0, "stl": 1, "pf": 0, "pts": 6},
+            {"name": "Pete Lisicky", "min": 36, "fg": "4-10", "tp": "3-8", "ft": "9-9", "reb": 4, "ast": 6, "to": 2, "blk": 0, "stl": 0, "pf": 1, "pts": 20},
+            {"name": "Gyasi Cline-Heard", "min": 8, "fg": "0-1", "tp": "0-0", "ft": "1-2", "reb": 2, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pf": 2, "pts": 1},
+            {"name": "Greg Grays", "min": 16, "fg": "2-3", "tp": "2-3", "ft": "2-2", "reb": 1, "ast": 2, "to": 1, "blk": 0, "stl": 0, "pf": 1, "pts": 8},
+            {"name": "Jarrett Stephens", "min": 31, "fg": "8-13", "tp": "0-0", "ft": "6-7", "reb": 9, "ast": 2, "to": 0, "blk": 1, "stl": 1, "pf": 1, "pts": 22},
+            {"name": "Greg Stevenson", "min": 22, "fg": "3-6", "tp": "1-3", "ft": "0-2", "reb": 2, "ast": 3, "to": 1, "blk": 0, "stl": null, "pf": 5, "pts": 7}
+          ]
+        }
+      ],
+      "checksum_ok": true,
+      "checksum_note": "Ohio State player pts sum = 81 (matches final score and 42+39 half totals). Penn State player pts sum = 90 (matches final score and 27+63 half totals). pts computed directly from the sheet's own TP column, which was verified against 2*(FG-3FG)+3*3FG+FT for every player and matched exactly."
+    }
+  ],
+  "skipped": []
+}

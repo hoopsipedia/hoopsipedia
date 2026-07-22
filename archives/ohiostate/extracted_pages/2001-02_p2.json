@@ -1,0 +1,11 @@
+{
+  "page": 2,
+  "games": [],
+  "skipped": [
+    {
+      "date": "2001-12-12",
+      "opponent": "Santa Clara",
+      "reason": "Visitors (Santa Clara) box score checksums cleanly (player TP column sums to 41, matching final score 41). However the Ohio State (home team) block does not reconcile after two read attempts: individual player TP column sums to 79 vs. the team's printed final score of 88 (a 9-point gap), and recomputing points from each player's FG/FT made columns only sums to 31 made field goals / 64 attempted vs. the team totals row of 34-68 -- a 3-make/4-attempt gap suggesting a misread or missing row in the home-team table. Since both teams must check out and the home side could not be reconciled confidently within the two-read limit, the whole game is skipped rather than guessed."
+    }
+  ]
+}

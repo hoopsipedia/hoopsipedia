@@ -1,0 +1,50 @@
+{
+  "page": 12,
+  "games": [
+    {
+      "date": "1996-01-10",
+      "opponent": "Iowa",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 53,
+          "players": [
+            {"name": "Steve Belter", "min": 26, "fg": "2-4", "ft": "0-0", "tp": "0-0", "reb": 2, "ast": 0, "pf": 3, "to": 5, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Shawn Stonerook", "min": 29, "fg": "2-6", "ft": "0-0", "tp": "0-1", "reb": 4, "ast": 4, "pf": 4, "to": 4, "stl": 2, "blk": 0, "pts": 4},
+            {"name": "Jermaine Tate", "min": 24, "fg": "5-7", "ft": "0-2", "tp": "0-0", "reb": 10, "ast": 0, "pf": 4, "to": 4, "stl": 1, "blk": 1, "pts": 10},
+            {"name": "Damon Stringer", "min": 28, "fg": "5-12", "ft": "2-2", "tp": "2-5", "reb": 3, "ast": 3, "pf": 0, "to": 7, "stl": 1, "blk": 0, "pts": 14},
+            {"name": "Jami Rosley", "min": 17, "fg": "1-5", "ft": "2-4", "tp": "0-1", "reb": 3, "ast": 1, "pf": 1, "to": 5, "stl": 3, "blk": 0, "pts": 4},
+            {"name": "Neshaun Coleman", "min": 26, "fg": "0-4", "ft": "0-0", "tp": "0-4", "reb": 2, "ast": 3, "pf": 3, "to": 2, "stl": 2, "blk": 0, "pts": 0},
+            {"name": "Jason Singleton", "min": 19, "fg": "3-9", "ft": "1-1", "tp": "0-0", "reb": 2, "ast": 0, "pf": 4, "to": 1, "stl": 0, "blk": 0, "pts": 7},
+            {"name": "Rick Yudt", "min": 1, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Don Jantonio", "min": 8, "fg": "2-4", "ft": "0-0", "tp": "0-0", "reb": 2, "ast": 0, "pf": 4, "to": 1, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Scott Gradney", "min": 15, "fg": "2-4", "ft": "0-0", "tp": "0-0", "reb": 2, "ast": 1, "pf": 0, "to": 0, "stl": 0, "blk": 1, "pts": 4},
+            {"name": "Carlos Davis", "min": 7, "fg": "0-2", "ft": "2-2", "tp": "0-1", "reb": 0, "ast": 1, "pf": 0, "to": 1, "stl": 0, "blk": 2, "pts": 2}
+          ]
+        },
+        {
+          "name": "Iowa Hawkeyes",
+          "score": 81,
+          "players": [
+            {"name": "Kenyon Murray", "min": 21, "fg": "4-5", "ft": "2-3", "tp": "0-0", "reb": 2, "ast": 0, "pf": 3, "to": 3, "stl": 1, "blk": 0, "pts": 10},
+            {"name": "Jess Settles", "min": 25, "fg": "7-11", "ft": "2-2", "tp": "4-7", "reb": 9, "ast": 2, "pf": 1, "to": 4, "stl": 4, "blk": 1, "pts": 20},
+            {"name": "Russ Millard", "min": 25, "fg": "4-6", "ft": "6-6", "tp": "0-1", "reb": 5, "ast": 3, "pf": 3, "to": 2, "stl": 1, "blk": 0, "pts": 14},
+            {"name": "Andre Woolridge", "min": 25, "fg": "0-3", "ft": "4-4", "tp": "0-0", "reb": 2, "ast": 6, "pf": 3, "to": 7, "stl": 1, "blk": 0, "pts": 4},
+            {"name": "Chris Kingsbury", "min": 26, "fg": "3-9", "ft": "0-1", "tp": "3-8", "reb": 9, "ast": 1, "pf": 5, "to": 3, "stl": 4, "blk": 1, "pts": 9},
+            {"name": "Ryan Bowen", "min": 21, "fg": "2-4", "ft": "4-4", "tp": "0-0", "reb": 4, "ast": 0, "pf": 1, "to": 3, "stl": 4, "blk": 1, "pts": 8},
+            {"name": "Mon'ter Glasper", "min": 18, "fg": "1-4", "ft": "3-3", "tp": "1-3", "reb": 6, "ast": 2, "pf": 3, "to": 3, "stl": 3, "blk": 0, "pts": 6},
+            {"name": "Greg Helmers", "min": 10, "fg": "1-2", "ft": "0-4", "tp": "0-0", "reb": 5, "ast": 0, "pf": 2, "to": 1, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "J.R. Koch", "min": 10, "fg": "0-2", "ft": "0-0", "tp": "0-0", "reb": 2, "ast": 0, "pf": 1, "to": 2, "stl": 0, "blk": 1, "pts": 0},
+            {"name": "Kent McCausland", "min": 6, "fg": "2-3", "ft": "0-0", "tp": "2-3", "reb": 1, "ast": 0, "pf": 0, "to": 0, "stl": 1, "blk": 0, "pts": 6},
+            {"name": "Jason Bauer", "min": 3, "fg": "1-2", "ft": "0-0", "tp": "0-0", "reb": 1, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Alvin Robinson", "min": 3, "fg": "0-2", "ft": "0-0", "tp": "0-2", "reb": 1, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Brian Haberer", "min": 2, "fg": "0-2", "ft": "0-0", "tp": "0-2", "reb": 2, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Kerry Koberg", "min": 2, "fg": "0-1", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

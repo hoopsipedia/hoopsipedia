@@ -1,0 +1,50 @@
+{
+  "page": 18,
+  "games": [
+    {
+      "date": "1998-01-17",
+      "opponent": "Michigan",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 61,
+          "players": [
+            {"name": "Michael Redd", "min": 36, "fg": "8-25", "tp": "0-3", "ft": "4-6", "reb": 11, "pf": 1, "ast": 3, "to": 3, "blk": 0, "stl": 3, "pts": 20},
+            {"name": "Jason Singleton", "min": 30, "fg": "3-8", "tp": "0-0", "ft": "0-0", "reb": 5, "pf": 1, "ast": 3, "to": 4, "blk": 0, "stl": 0, "pts": 6},
+            {"name": "Ken Johnson", "min": 23, "fg": "4-7", "tp": "0-0", "ft": "3-3", "reb": 6, "pf": 3, "ast": 1, "to": 3, "blk": 0, "stl": 1, "pts": 11},
+            {"name": "Neshaun Coleman", "min": 27, "fg": "2-5", "tp": "1-4", "ft": "0-0", "reb": 1, "pf": 4, "ast": 3, "to": 2, "blk": 0, "stl": 1, "pts": 5},
+            {"name": "Carlos Davis", "min": 26, "fg": "0-5", "tp": "0-2", "ft": "2-2", "reb": 2, "pf": 1, "ast": 3, "to": 1, "blk": 0, "stl": 1, "pts": 2},
+            {"name": "Jon Sanderson", "min": 28, "fg": "3-9", "tp": "1-5", "ft": "1-2", "reb": 4, "pf": 3, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 9},
+            {"name": "Shamar Herron", "min": 20, "fg": "2-3", "tp": "0-0", "ft": "1-2", "reb": 4, "pf": 1, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pts": 5},
+            {"name": "John Lumpkin", "min": 4, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Eric Hanna", "min": 2, "fg": "1-2", "tp": "1-1", "ft": "0-0", "reb": 1, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 3},
+            {"name": "Kwadjo Steele", "min": 2, "fg": "0-1", "tp": "0-1", "ft": "1-2", "reb": 0, "pf": 1, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Byron Wilson", "min": 1, "fg": "0-0", "tp": "0-0", "ft": "2-2", "reb": 0, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Sean Tucker", "min": 1, "fg": "0-1", "tp": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Michigan Wolverines",
+          "score": 79,
+          "players": [
+            {"name": "Maceo Baston", "min": 28, "fg": "3-5", "tp": "0-1", "ft": "2-2", "reb": 7, "pf": 3, "ast": 0, "to": 5, "blk": 1, "stl": 1, "pts": 7},
+            {"name": "Jerod Ward", "min": 21, "fg": "2-5", "tp": "1-2", "ft": "0-0", "reb": 7, "pf": 4, "ast": 1, "to": 3, "blk": 0, "stl": 0, "pts": 5},
+            {"name": "Robert Traylor", "min": 21, "fg": "5-11", "tp": "0-0", "ft": "0-0", "reb": 7, "pf": 3, "ast": 2, "to": 4, "blk": 1, "stl": 1, "pts": 10},
+            {"name": "Robbie Reid", "min": 33, "fg": "3-8", "tp": "3-7", "ft": "0-0", "reb": 7, "pf": 1, "ast": 3, "to": 2, "blk": 0, "stl": 0, "pts": 9},
+            {"name": "Louis Bullock", "min": 32, "fg": "5-9", "tp": "5-7", "ft": "13-13", "reb": 4, "pf": 1, "ast": 4, "to": 3, "blk": 0, "stl": 1, "pts": 28},
+            {"name": "Travis Conlan", "min": 32, "fg": "3-6", "tp": "3-6", "ft": "0-0", "reb": 2, "pf": 3, "ast": 6, "to": 0, "blk": 0, "stl": 0, "pts": 9},
+            {"name": "Brandon Smith", "min": 10, "fg": "1-2", "tp": "0-1", "ft": "1-2", "reb": 0, "pf": 1, "ast": 2, "to": 0, "blk": 0, "stl": 2, "pts": 3},
+            {"name": "Josh Asselin", "min": 7, "fg": "0-0", "tp": "0-0", "ft": "0-1", "reb": 0, "pf": 2, "ast": 0, "to": 2, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Peter Vignier", "min": 6, "fg": "1-3", "tp": "0-0", "ft": "0-0", "reb": 1, "pf": 3, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Ron Oliver", "min": 6, "fg": "2-3", "tp": "0-0", "ft": "0-0", "reb": 1, "pf": 1, "ast": 0, "to": 0, "blk": 0, "stl": 1, "pts": 4},
+            {"name": "Darius Taylor", "min": 2, "fg": "0-1", "tp": "0-1", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Donte' Scott", "min": 1, "fg": "1-1", "tp": "0-0", "ft": "0-0", "reb": 0, "pf": 1, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Erik Szyndlar", "min": 1, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

@@ -1,0 +1,9 @@
+{
+  "page": 30,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Illinois Fighting Illini vs Ohio State Buckeyes, 3/9/02 at Conseco Fieldhouse, Indianapolis (final Illinois 88, Ohio State 94). Illinois (visitors) box fully transcribes and checksums cleanly (players sum to 88 pts, matching team FG 29-53/3PT 10-19/FT 20-24 and final score). However, the Ohio State (home) box has a player, BROWN, Brian, whose stat line is missing/illegible on the scanned page -- only his name appears with no FG/FT/rebound/points columns visible, apparently due to a row overlap/scan artifact near the DARBY, Brent line. The 8 other Ohio State players sum to only 162 of the required 200 team minutes and 67 of the team's 94 total points (FG makes sum to 23 of 30, 3PT makes 4 of 7, FT makes 15 of 27), so Brown's line accounts for the remainder but cannot be read or reconstructed without guessing. Checksum cannot be verified for the Ohio State side, so the whole game is skipped rather than risk inventing Brown's stats."
+    }
+  ]
+}

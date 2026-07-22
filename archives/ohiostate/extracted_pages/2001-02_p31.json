@@ -1,0 +1,9 @@
+{
+  "page": 31,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Typed official box score, Big Ten Tournament Championship 3/10/2002, Iowa Hawkeyes 64 at Ohio State Buckeyes 81. Ohio State's line checksums cleanly (FG 27-56, FT 18-25, points sum to 81). However, Iowa's box score has internally inconsistent digits: FG (22-51) and FT (12-15) columns check out, but the 3-point made/attempted column and several players' TP/MIN values do not reconcile with the team totals (3PT made sums to 5-8 short of the team's listed 8, and a naive read of points sums to 61 vs the team's actual 64) without guessing at specific digits to force a match. Since resolving the discrepancy would require inventing values rather than confidently reading them off the page, and only one re-read was used, this game is skipped rather than published with unverifiable numbers."
+    }
+  ]
+}

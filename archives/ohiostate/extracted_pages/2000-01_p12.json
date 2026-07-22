@@ -1,0 +1,46 @@
+{
+  "page": 12,
+  "games": [
+    {
+      "date": "2000-12-02",
+      "opponent": "Kansas Jayhawks",
+      "teams": [
+        {
+          "name": "Kansas Jayhawks",
+          "score": 69,
+          "players": [
+            {"name": "Drew Gooden", "min": 33, "fg": "7-13", "tp": "0-1", "ft": "2-3", "reb": 10, "ast": 2, "pf": 3, "to": 8, "stl": 0, "blk": 1, "pts": 16},
+            {"name": "Kenny Gregory", "min": 32, "fg": "8-12", "tp": "1-2", "ft": "0-0", "reb": 6, "ast": 3, "pf": 3, "to": 2, "stl": 0, "blk": 1, "pts": 17},
+            {"name": "Eric Chenowith", "min": 19, "fg": "1-8", "tp": "0-0", "ft": "1-4", "reb": 5, "ast": 1, "pf": 4, "to": 3, "stl": 0, "blk": 1, "pts": 3},
+            {"name": "Kirk Hinrich", "min": 30, "fg": "3-7", "tp": "1-3", "ft": "0-1", "reb": 5, "ast": 5, "pf": 4, "to": 2, "stl": 0, "blk": 0, "pts": 7},
+            {"name": "Jeff Boschee", "min": 29, "fg": "1-4", "tp": "0-2", "ft": "2-3", "reb": 1, "ast": 1, "pf": 4, "to": 1, "stl": 1, "blk": 0, "pts": 4},
+            {"name": "Mario Kinsey", "min": 16, "fg": "2-4", "tp": "1-2", "ft": "0-0", "reb": 1, "ast": 0, "pf": 3, "to": 0, "stl": 3, "blk": 0, "pts": 5},
+            {"name": "Nick Collison", "min": 21, "fg": "5-5", "tp": "0-0", "ft": "0-0", "reb": 6, "ast": 2, "pf": 4, "to": 3, "stl": 1, "blk": 0, "pts": 10},
+            {"name": "Bryant Nash", "min": 0, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Jeff Carey", "min": 7, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Luke Axtell", "min": 13, "fg": "2-4", "tp": "2-3", "ft": "1-2", "reb": 3, "ast": 1, "pf": 4, "to": 2, "stl": 0, "blk": 0, "pts": 7}
+          ],
+          "checksum_ok": true
+        },
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 68,
+          "players": [
+            {"name": "Zach Williams", "min": 20, "fg": "1-5", "tp": "0-0", "ft": "0-0", "reb": 2, "ast": 0, "pf": 3, "to": 1, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Ken Johnson", "min": 37, "fg": "3-9", "tp": "0-0", "ft": "6-9", "reb": 9, "ast": 0, "pf": 3, "to": 3, "stl": 0, "blk": 6, "pts": 12},
+            {"name": "Brent Darby", "min": 21, "fg": "1-7", "tp": "1-5", "ft": "2-4", "reb": 2, "ast": 1, "pf": 2, "to": 3, "stl": 2, "blk": 0, "pts": 5},
+            {"name": "Brian Brown", "min": 35, "fg": "5-14", "tp": "2-6", "ft": "5-9", "reb": 3, "ast": 6, "pf": 4, "to": 1, "stl": 1, "blk": 0, "pts": 17},
+            {"name": "Boban Savovic", "min": 34, "fg": "2-8", "tp": "1-5", "ft": "10-10", "reb": 5, "ast": 6, "pf": 3, "to": 1, "stl": 3, "blk": 0, "pts": 15},
+            {"name": "Sean Connolly", "min": 29, "fg": "3-5", "tp": "2-4", "ft": "3-3", "reb": 5, "ast": 2, "pf": 4, "to": 1, "stl": 3, "blk": 0, "pts": 11},
+            {"name": "Shaun Smith", "min": 0, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Cobe Ocokoljic", "min": 1, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Will Dudley", "min": 3, "fg": "0-1", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Tim Martin", "min": 20, "fg": "2-2", "tp": "0-0", "ft": "2-4", "reb": 1, "ast": 0, "pf": 1, "to": 1, "stl": 1, "blk": 0, "pts": 6}
+          ],
+          "checksum_ok": true
+        }
+      ]
+    }
+  ],
+  "skipped": []
+}

@@ -1,0 +1,9 @@
+{
+  "page": 22,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page is an OFFICIAL NCAA BASKETBALL BOX SCORE (STATMAN II typed sheet) for Ohio State at Michigan State, 01-27-99, East Lansing MI, final Ohio State 71 - Michigan State 76 (attendance 14,659). Team-level TOTALS rows and 3 of ~9 OSU player lines (Penn 17pts, Redd 20pts, Reese 14pts) read cleanly and checksummed correctly against the formula pts = 2*FG + 3P + FT. However, the remaining player rows on both rosters use extremely tight column kerning in the OR/DR/TOT/PF/PTS block and, for at least one player (Ken Johnson), the FT-FTA pair appears internally impossible as read (makes exceeding attempts), indicating a misread digit that could not be resolved with confidence even after a second full-page read. Rather than invent or back-solve uncertain values for ~12-14 players across both teams, the entire game is skipped per the ruthless-skip instruction. A higher-resolution scan or targeted crop of this page would likely allow full transcription."
+    }
+  ]
+}

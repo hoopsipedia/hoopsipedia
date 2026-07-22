@@ -1,0 +1,11 @@
+{
+  "page": 9,
+  "games": [],
+  "skipped": [
+    {
+      "date": "1997-12-17",
+      "opponent": "USL Ragin' Cajuns",
+      "reason": "Official box score, Ohio State at USL Ragin' Cajuns (CAJUNDOME, Lafayette, LA), final OSU 64 - USL 68 (period scores 32+32=64 and 31+37=68 confirm team totals). Ohio State's TOTALS row (FG 24-55, 3FG 6-18, FT 10-12, TP 64) is internally consistent and matches the scoreboard, but the sum of the 8 individual player TP values printed on the sheet (12+7+4+15+20+13+0+0=71) exceeds the team total by 7 points. Two player rows (Jason Singleton, Ken Johnson) print one fewer stat value than the other rows in the A/TO/BLK/S region, suggesting a column-alignment issue on the original scoresheet; reconciling the discrepancy would require guessing which digits are wrong, which the task instructions prohibit. Skipping per checksum-failure policy rather than inventing values. (USL Ragin' Cajuns' own team TOTALS row is internally self-consistent: FG 23-55, 3FG 8-28, FT 14-19, TP 68, matching the scoreboard, but was not independently re-verified player-by-player once the game was skipped.)"
+    }
+  ]
+}

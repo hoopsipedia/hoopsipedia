@@ -1,0 +1,46 @@
+{
+  "page": 32,
+  "games": [
+    {
+      "date": "1999-03-06",
+      "opponent": "Illinois Fighting Illini",
+      "location": "United Center, Chicago, IL (neutral - Big Ten Tournament)",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 77,
+          "players": [
+            {"name": "Jason Singleton", "min": 24, "fg": "2-8", "tp": "0-0", "ft": "3-4", "reb": 7, "ast": 2, "to": 4, "stl": 4, "blk": 0, "pf": 5, "pts": 7},
+            {"name": "Jon Sanderson", "min": 19, "fg": "1-6", "tp": "0-3", "ft": "0-0", "reb": 3, "ast": 0, "to": 1, "stl": 0, "blk": 0, "pf": 0, "pts": 2},
+            {"name": "Ken Johnson", "min": 23, "fg": "2-6", "tp": "0-0", "ft": "0-3", "reb": 4, "ast": 0, "to": 1, "stl": 1, "blk": 0, "pf": 4, "pts": 4},
+            {"name": "Scoonie Penn", "min": 36, "fg": "5-13", "tp": "3-9", "ft": "2-6", "reb": 3, "ast": 8, "to": 2, "stl": 1, "blk": 0, "pf": 4, "pts": 15},
+            {"name": "Michael Redd", "min": 36, "fg": "11-18", "tp": "2-4", "ft": "8-11", "reb": 7, "ast": 3, "to": 4, "stl": 3, "blk": 0, "pf": 3, "pts": 32},
+            {"name": "Neshaun Coleman", "min": 17, "fg": "2-5", "tp": "2-5", "ft": "0-1", "reb": 1, "ast": 1, "to": 1, "stl": 0, "blk": 0, "pf": 2, "pts": 6},
+            {"name": "Brian Brown", "min": 14, "fg": "3-4", "tp": "1-1", "ft": "0-0", "reb": 2, "ast": 3, "to": 2, "stl": 1, "blk": 0, "pf": 1, "pts": 7},
+            {"name": "Boban Savovic", "min": 13, "fg": "0-3", "tp": "0-2", "ft": "0-0", "reb": 2, "ast": 2, "to": 0, "stl": 1, "blk": 0, "pf": 2, "pts": 0},
+            {"name": "George Reese", "min": 18, "fg": "1-3", "tp": "0-0", "ft": "2-2", "reb": 3, "ast": 0, "to": 2, "stl": 0, "blk": 1, "pf": 3, "pts": 4}
+          ],
+          "checksum_ok": true
+        },
+        {
+          "name": "Illinois Fighting Illini",
+          "score": 79,
+          "players": [
+            {"name": "Damir Krupalija", "min": 12, "fg": "1-1", "tp": "1-1", "ft": "1-2", "reb": 2, "ast": 1, "to": 3, "stl": 0, "blk": 0, "pf": 5, "pts": 4},
+            {"name": "Sergio McClain", "min": 30, "fg": "3-6", "tp": "0-0", "ft": "1-3", "reb": 4, "ast": 4, "to": 3, "stl": 2, "blk": 0, "pf": 2, "pts": 7},
+            {"name": "Victor Chukwudebe", "min": 26, "fg": "6-10", "tp": "0-0", "ft": "1-2", "reb": 6, "ast": 2, "to": 1, "stl": 0, "blk": 1, "pf": 2, "pts": 13},
+            {"name": "Cory Bradford", "min": 37, "fg": "5-15", "tp": "1-8", "ft": "6-6", "reb": 0, "ast": 4, "to": 2, "stl": 1, "blk": 0, "pf": 2, "pts": 17},
+            {"name": "Lucas Johnson", "min": 29, "fg": "4-7", "tp": "2-5", "ft": "2-2", "reb": 2, "ast": 1, "to": 6, "stl": 1, "blk": 0, "pf": 4, "pts": 12},
+            {"name": "Fess Hawkins", "min": 17, "fg": "1-3", "tp": "0-0", "ft": "4-7", "reb": 5, "ast": 0, "to": 1, "stl": 0, "blk": 1, "pf": 2, "pts": 6},
+            {"name": "Nate Mast", "min": 4, "fg": "0-0", "tp": "0-0", "ft": "2-2", "reb": 0, "ast": 2, "to": 0, "stl": 0, "blk": 0, "pf": 0, "pts": 2},
+            {"name": "Robert Archibald", "min": 25, "fg": "2-4", "tp": "0-0", "ft": "3-4", "reb": 6, "ast": 3, "to": 2, "stl": 1, "blk": 0, "pf": 3, "pts": 7},
+            {"name": "Cleotis Brown", "min": 20, "fg": "4-5", "tp": "1-2", "ft": "2-2", "reb": 7, "ast": 1, "to": 2, "stl": 2, "blk": 1, "pf": 2, "pts": 11}
+          ],
+          "checksum_ok": true
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

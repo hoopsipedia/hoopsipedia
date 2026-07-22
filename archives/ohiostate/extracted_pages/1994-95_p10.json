@@ -1,0 +1,9 @@
+{
+  "page": 10,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page 10 holds one official NCAA box score: 12/30/94, Ohio State (69) at West Virginia (79, OT). Ohio State's player lines transcribed cleanly and checksummed exactly (player pts sum = 69 = final score; assists/turnovers/blocks/steals/minutes columns also reconciled against the team TOTALS row). West Virginia's player-line digits, however, could not be read with confidence after two full read passes of the page: summed player points did not reconcile with the official final score of 79, and FG/FT column sums did not match the printed TOTALS row (off by several makes/attempts), indicating at least one WVU row was misread. Rather than publish a partially guessed opponent box score, the entire game is skipped per instructions to be ruthless about skipping over guessing. Note for any future re-attempt: WVU starters were Sain/Bain Shaw (#20), Damian Owens (#24), Brent Solheim (#45), Cyrus Jones (#21), Seldon Jefferson (#25); bench included Leon Agnew (#33), David Liguori (#22), LeVon Lamb (#42), Lawrence Pollard (#32), Jarrod West (#23); official WVU totals row read as FG 28-60, 3P 4-16, FT 19-29, PTS 79, MIN 200 — a sharper scan/zoom of just the West Virginia table would likely resolve this."
+    }
+  ]
+}

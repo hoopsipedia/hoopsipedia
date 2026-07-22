@@ -1,0 +1,9 @@
+{
+  "page": 25,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page contains one full official box score (Ohio State at University of Iowa, apparent date fragment '1/4/98' at Iowa City IA; final score legible as Ohio State 70, Iowa 82 via both the TOTALS row and the score-by-periods line 41+29=70 / 47+35=82), but the scan is heavily degraded by dense speckle/noise artifacts and overlapping header text bleeding into several player rows. Most individual player statistical columns (rebounds, assists, TO, blocks, steals, and several FG/FT figures) are not confidently legible, particularly for the Iowa roster (e.g. Bowen, Gallowy, McCausland, Bauer, Rucker, Luehrsmann, Koch, Moore, Smith, Gomes rows) and a few Ohio State rows (Johnson, Davis). A handful of Ohio State player lines (Singleton, Sanderson, Redd) could be reconstructed with checksum-consistent values, but since a majority of both rosters cannot be transcribed with confidence, the full game is skipped per the instruction to be ruthless about skipping rather than guessing, rather than submit a game with a checksum built on partially invented/uncertain data."
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "page": 27,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Ohio State vs Illinois, 1997-03-05, Assembly Hall, Champaign IL. Ohio State side checksums perfectly (player points sum to 83, matching final score 83-90). However Illinois player point totals sum to only 87 vs the final score of 90 and box-score TOTALS line (team FG 23-52, 3PT 10-22, FT 34-40, TP 90) - summed individual FT makes (31) do not match the team FT total (34), indicating an OCR/transcription misread of one Illinois player's free-throw line on this scanned scoresheet. Could not confidently resolve which player's FT figure is wrong within the two allowed reads of the page, so the entire game is skipped per instructions to be ruthless about skipping rather than guessing."
+    }
+  ]
+}

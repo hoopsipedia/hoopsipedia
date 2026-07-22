@@ -1,0 +1,46 @@
+{
+  "page": 15,
+  "games": [
+    {
+      "date": "1998-12-27",
+      "opponent": "Miami (FL) Hurricanes",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 64,
+          "players": [
+            {"name": "Jon Sanderson", "min": 31, "fg": "6-10", "tp": "1-2", "ft": "0-2", "reb": 3, "ast": 0, "pf": 3, "to": 2, "stl": 0, "blk": 0, "pts": 13},
+            {"name": "Jason Singleton", "min": 29, "fg": "3-6", "tp": "0-0", "ft": "1-2", "reb": 9, "ast": 1, "pf": 4, "to": 4, "stl": 3, "blk": 0, "pts": 7},
+            {"name": "Ken Johnson", "min": 29, "fg": "4-8", "tp": "0-0", "ft": "0-4", "reb": 11, "ast": 0, "pf": 2, "to": 1, "stl": 0, "blk": 1, "pts": 8},
+            {"name": "Scoonie Penn", "min": 39, "fg": "4-17", "tp": "3-9", "ft": "0-0", "reb": 5, "ast": 5, "pf": 3, "to": 2, "stl": 0, "blk": 0, "pts": 11},
+            {"name": "Michael Redd", "min": 34, "fg": "6-20", "tp": "0-5", "ft": "7-10", "reb": 7, "ast": 3, "pf": 0, "to": 2, "stl": 6, "blk": 0, "pts": 19},
+            {"name": "George Reese", "min": 13, "fg": "0-2", "tp": "0-0", "ft": "1-2", "reb": 2, "ast": 1, "pf": 1, "to": 3, "stl": 0, "blk": 0, "pts": 1},
+            {"name": "Brian Brown", "min": 17, "fg": "2-5", "tp": "0-2", "ft": "1-1", "reb": 0, "ast": 0, "pf": 2, "to": 2, "stl": 2, "blk": 0, "pts": 5},
+            {"name": "Boban Savovic", "min": 3, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Neshaun Coleman", "min": 4, "fg": "0-1", "tp": "0-1", "ft": "0-0", "reb": 1, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Will Dudley", "min": 1, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Miami (FL) Hurricanes",
+          "score": 72,
+          "players": [
+            {"name": "Johnny Hemsley", "min": 35, "fg": "3-13", "tp": "0-3", "ft": "8-9", "reb": 7, "ast": 2, "pf": 0, "to": 4, "stl": 0, "blk": 0, "pts": 14},
+            {"name": "Tim James", "min": 33, "fg": "11-19", "tp": "2-4", "ft": "5-5", "reb": 11, "ast": 1, "pf": 1, "to": 2, "stl": 3, "blk": 5, "pts": 29},
+            {"name": "Mario Bland", "min": 25, "fg": "1-6", "tp": "0-0", "ft": "1-2", "reb": 3, "ast": 1, "pf": 2, "to": 2, "stl": 2, "blk": 0, "pts": 3},
+            {"name": "Vernon Jennings", "min": 29, "fg": "6-8", "tp": "2-3", "ft": "5-6", "reb": 3, "ast": 3, "pf": 3, "to": 5, "stl": 4, "blk": 0, "pts": 19},
+            {"name": "Michael Simmons", "min": 24, "fg": "1-3", "tp": "0-0", "ft": "1-1", "pts": 3},
+            {"name": "John Salmons", "min": 29, "fg": "1-2", "tp": "0-0", "ft": "0-0", "pts": 2},
+            {"name": "Dwayne Wimbley", "min": 15, "fg": "0-1", "tp": "0-0", "ft": "2-2", "pts": 2},
+            {"name": "Elton Tyler", "min": 7, "fg": "0-2", "tp": "0-0", "ft": "0-0", "pts": 0},
+            {"name": "Joao Paulo Coelho", "min": 2, "fg": "0-0", "tp": "0-0", "ft": "0-0", "pts": 0},
+            {"name": "Jerry Schlie", "min": 1, "fg": "0-1", "tp": "0-0", "ft": "0-1", "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": [],
+  "notes": "Typed official NCAA box score (Orange Bowl Classic at Sunrise, FL), fully legible for both team TOTALS rows and the 4 Miami starters plus all 10 Ohio State players; full checksum match on FG/FGA/3P/3PA/FT/FTA/PTS/MIN against printed team TOTALS row for Ohio State (64) and PTS/FG/3P/FT vs TOTALS for Miami (72). Ken Johnson's FT/FTA (0-4) and Miami's Michael Simmons/bench FT values were disambiguated by solving against the team TOTALS row after an initial misread; for Simmons and the 5 Miami bench players (Salmons, Wimbley, Tyler, Coelho, Schlie) secondary columns (reb/ast/pf/to/stl/blk) were too tightly packed/ambiguous in the scan to transcribe confidently and were omitted rather than guessed, per instructions -- min/fg/tp/ft/pts for those players were cross-validated via the TOTALS-row algebra and are trustworthy. No page-level date/opponent header printed opponent name, but 'Miami' is stated on the HOME line; date read from the header line '12-27-98'."
+}

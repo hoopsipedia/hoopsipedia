@@ -1,0 +1,48 @@
+{
+  "page": 15,
+  "games": [
+    {
+      "date": "2001-01-06",
+      "opponent": "University of Illinois",
+      "location": "Assembly Hall, Champaign, IL",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 68,
+          "players": [
+            {"name": "Boban Savovic", "min": "26", "fg": "2-5", "tp": "1-2", "ft": "4-6", "reb": 6, "ast": 2, "pf": 4, "to": 2, "stl": 1, "blk": 0, "pts": 9},
+            {"name": "Zach Williams", "min": "19", "fg": "1-3", "tp": "0-0", "ft": "0-2", "reb": 4, "ast": 2, "pf": 2, "to": 1, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Ken Johnson", "min": "38", "fg": "3-7", "tp": "0-0", "ft": "9-10", "reb": 11, "ast": 1, "pf": 0, "to": 3, "stl": 1, "blk": 1, "pts": 15},
+            {"name": "Brent Darby", "min": "32", "fg": "5-15", "tp": "2-6", "ft": "2-2", "reb": 4, "ast": 2, "pf": 1, "to": 4, "stl": 1, "blk": 0, "pts": 14},
+            {"name": "Brian Brown", "min": "32", "fg": "6-17", "tp": "1-3", "ft": "2-4", "reb": 2, "ast": 2, "pf": 4, "to": 4, "stl": 0, "blk": 1, "pts": 15},
+            {"name": "Sean Connolly", "min": "25", "fg": "2-6", "tp": "2-4", "ft": "2-2", "reb": 3, "ast": 1, "pf": 4, "to": 2, "stl": 0, "blk": 0, "pts": 8},
+            {"name": "Ryan Heflin", "min": "2", "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 2, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Cobe Ocokoljic", "min": "13", "fg": "0-1", "tp": "0-0", "ft": "0-0", "reb": 2, "ast": 1, "pf": 1, "to": 2, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Will Dudley", "min": "7", "fg": "1-3", "tp": "0-0", "ft": "1-2", "reb": 2, "ast": 1, "pf": 2, "to": 4, "stl": 0, "blk": 0, "pts": 3},
+            {"name": "Tim Martin", "min": "0+", "fg": "1-3", "tp": "0-0", "ft": "0-0", "reb": 2, "ast": 1, "pf": 1, "to": 2, "stl": 0, "blk": 0, "pts": 2}
+          ],
+          "checksum_ok": true
+        },
+        {
+          "name": "University of Illinois",
+          "score": 83,
+          "players": [
+            {"name": "Lucas Johnson", "min": "18", "fg": "1-2", "tp": "0-1", "ft": "3-4", "reb": 3, "ast": 4, "pf": 2, "to": 0, "stl": 1, "blk": 0, "pts": 5},
+            {"name": "Brian Cook", "min": "28", "fg": "4-7", "tp": "2-4", "ft": "3-3", "reb": 2, "ast": 4, "pf": 3, "to": 2, "stl": 1, "blk": 3, "pts": 13},
+            {"name": "Marcus Griffin", "min": "25", "fg": "4-6", "tp": "0-0", "ft": "2-5", "reb": 11, "ast": 0, "pf": 4, "to": 4, "stl": 0, "blk": 2, "pts": 10},
+            {"name": "Cory Bradford", "min": "37", "fg": "5-9", "tp": "2-4", "ft": "0-0", "reb": 3, "ast": 6, "pf": 3, "to": 1, "stl": 1, "blk": 0, "pts": 12},
+            {"name": "Frank Williams", "min": "37", "fg": "6-12", "tp": "2-5", "ft": "7-7", "reb": 3, "ast": 6, "pf": 3, "to": 1, "stl": 1, "blk": 0, "pts": 21},
+            {"name": "Brett Melton", "min": "4", "fg": "1-2", "tp": "1-2", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 3},
+            {"name": "Robert Archibald", "min": "14", "fg": "2-4", "tp": "0-0", "ft": "1-5", "reb": 3, "ast": 0, "pf": 3, "to": 0, "stl": 1, "blk": 1, "pts": 5},
+            {"name": "Sean Harrington", "min": "11", "fg": "1-3", "tp": "1-2", "ft": "2-2", "reb": 0, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 5},
+            {"name": "Jerrance Howard", "min": "0+", "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Damir Krupalija", "min": "9", "fg": "1-1", "tp": "1-1", "ft": "0-0", "reb": 2, "ast": 0, "pf": 2, "to": 0, "stl": 1, "blk": 1, "pts": 3},
+            {"name": "Sergio McClain", "min": "23", "fg": "2-3", "tp": "0-0", "ft": "2-3", "reb": 6, "ast": 2, "pf": 2, "to": 2, "stl": 3, "blk": 3, "pts": 6}
+          ],
+          "checksum_ok": true
+        }
+      ]
+    }
+  ],
+  "skipped": []
+}

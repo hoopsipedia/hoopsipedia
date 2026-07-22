@@ -1,0 +1,52 @@
+{
+  "page": 28,
+  "games": [
+    {
+      "date": "1995-03-04",
+      "opponent": "Wisconsin",
+      "site": "UW Fieldhouse, Madison, WI",
+      "attendance": 11500,
+      "score_by_periods": {"ohio_state": [30, 39], "wisconsin": [36, 44]},
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 69,
+          "players": [
+            {"name": "Yudt, Rick", "min": "25:36", "fg": "2-6", "tp": "0-1", "ft": "0-1", "pts": 4},
+            {"name": "Dudley, Rickey", "min": "38:29", "fg": "7-12", "tp": "0-0", "ft": "6-9", "pts": 20},
+            {"name": "Watson, Antonio", "min": "24:27", "fg": "3-8", "tp": "0-0", "ft": "0-0", "pts": 6},
+            {"name": "Etzler, Doug", "min": "37:14", "fg": "7-15", "tp": "5-10", "ft": "2-2", "pts": 21},
+            {"name": "Winston, Otis", "min": "17:02", "fg": "1-5", "tp": "0-0", "ft": "0-1", "pts": 2},
+            {"name": "Lumpkin, John", "min": "17:59", "fg": "1-3", "tp": "0-0", "ft": "2-2", "pts": 4},
+            {"name": "Davis, Carlos", "min": "17:01", "fg": "3-6", "tp": "1-2", "ft": "3-3", "pts": 10},
+            {"name": "Jantonio, Don", "min": "14:08", "fg": "1-1", "tp": "0-0", "ft": "0-1", "pts": 2},
+            {"name": "Martin, Kevin", "min": "7:40", "fg": "0-1", "tp": "0-0", "ft": "0-1", "pts": 0},
+            {"name": "Zack, Scott", "min": "0:24", "fg": "0-0", "tp": "0-0", "ft": "0-0", "pts": 0}
+          ]
+        },
+        {
+          "name": "Wisconsin Badgers",
+          "score": 80,
+          "players": [
+            {"name": "Finley, Michael", "min": "33:24", "fg": "2-8", "tp": "0-3", "ft": "9-9", "pts": 13},
+            {"name": "Daugherty, Sean", "min": "14:32", "fg": "2-7", "tp": "0-1", "ft": "0-0", "pts": 4},
+            {"name": "Griffith, Rashar", "min": "31:49", "fg": "5-8", "tp": "0-1", "ft": "4-8", "pts": 14},
+            {"name": "Hoskins, Darnell", "min": "22:37", "fg": "3-5", "tp": "2-4", "ft": "5-7", "pts": 13},
+            {"name": "Kilbride, Andy", "min": "34:54", "fg": "3-7", "tp": "3-7", "ft": "0-1", "pts": 9},
+            {"name": "Peterson, Mo.", "min": "4:32", "fg": "3-7", "tp": "2-6", "ft": "2-2", "pts": 10},
+            {"name": "Moore, Howard", "fg": "0-0", "tp": "0-0", "ft": "0-1", "pts": 0},
+            {"name": "Mason, Sean", "min": "17:23", "fg": "2-5", "tp": "0-3", "ft": "2-2", "pts": 6},
+            {"name": "Kelley, Brian", "min": "14:32", "fg": "3-5", "tp": "0-1", "ft": "0-1", "pts": 6},
+            {"name": "Nwachukwu, Osita", "min": "9:37", "fg": "1-2", "tp": "0-0", "ft": "0-1", "pts": 2},
+            {"name": "Coleman, Booker", "min": "2:15", "fg": "0-1", "tp": "0-0", "ft": "0-0", "pts": 0},
+            {"name": "Conger, Chris", "min": "2:15", "fg": "1-1", "tp": "1-1", "ft": "0-0", "pts": 3},
+            {"name": "Carlin, Shawn", "min": "1:25", "fg": "0-1", "tp": "0-1", "ft": "0-0", "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": [],
+  "notes": "Typed University of Wisconsin Stat Crew (FINAL III) box score. FG/3PT/FT/PTS reconciled via arithmetic (pts = 2*fg_made + 3pt_made + ft_made) and cross-checked against each team's printed TOTALS row (OSU 25-57 FG, 6-13 3PT, 13-16 FT, 69 PTS; Wisconsin 25-57 FG, 8-26 3PT, 22-30 FT, 80 PTS) and final score (69-80) -- all sums matched exactly, one correction made during verification (Finley FT read as 9-9/13pts instead of initial 8-9/12pts read, which brought the Wisconsin sum from 79 to the correct 80). Rebounds/assists/PF/TO/BLK/STL columns present on the sheet but omitted from this transcription due to low OCR confidence in column alignment at scan resolution (a token-count check showed possible misalignment in those minor columns for at least one row), to avoid inventing values. Moore, Howard's MIN value omitted -- not confidently legible; residual minutes math is consistent with him playing roughly 10 minutes."
+}

@@ -1,0 +1,47 @@
+{
+  "page": 32,
+  "games": [
+    {
+      "date": "2001-03-16",
+      "opponent": "Utah State Aggies (NCAA Tournament First Round, Greensboro Coliseum, Greensboro NC)",
+      "teams": [
+        {
+          "name": "Utah State Aggies",
+          "score": 77,
+          "players": [
+            {"name": "Curtis Bobb", "min": 23, "fg": "5-10", "ft": "2-3", "tp": "2-4", "reb": 2, "ast": 0, "pf": 4, "to": 0, "stl": 3, "blk": 0, "pts": 14},
+            {"name": "Shawn Daniels", "min": 35, "fg": "3-8", "ft": "3-4", "tp": "0-0", "reb": 5, "ast": 2, "pf": 3, "to": 1, "stl": 1, "blk": 2, "pts": 9},
+            {"name": "Dimitri Jorssen", "min": 34, "fg": "4-14", "ft": "3-4", "tp": "0-0", "reb": 9, "ast": 1, "pf": 4, "to": 1, "stl": 1, "blk": 2, "pts": 11},
+            {"name": "Bernard Rock", "min": 42, "fg": "7-10", "ft": "2-4", "tp": "2-3", "reb": 14, "ast": 2, "pf": 3, "to": 1, "stl": 2, "blk": 0, "pts": 18},
+            {"name": "Tony Brown", "min": 41, "fg": "6-10", "ft": "4-6", "tp": "1-4", "reb": 1, "ast": 4, "pf": 1, "to": 0, "stl": 1, "blk": 1, "pts": 17},
+            {"name": "Thomas Vincent", "min": 3, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 1, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Jeremy Vague", "min": 10, "fg": "1-4", "ft": "0-0", "tp": "0-0", "reb": 2, "ast": 1, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Brennan Ray", "min": 11, "fg": "1-2", "ft": "0-0", "tp": "0-0", "reb": 2, "ast": 1, "pf": 1, "to": 1, "stl": 4, "blk": 0, "pts": 2},
+            {"name": "Dion Bailey", "min": 22, "fg": "2-4", "ft": "0-0", "tp": "0-0", "reb": 1, "ast": 0, "pf": 1, "to": 0, "stl": 4, "blk": 0, "pts": 4},
+            {"name": "Toraino Johnson", "min": 4, "fg": "0-1", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ],
+          "checksum_ok": true
+        },
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 68,
+          "players": [
+            {"name": "Boban Savovic", "min": 39, "fg": "4-8", "ft": "0-1", "tp": "1-2", "reb": 4, "ast": 3, "pf": 5, "to": 3, "stl": 2, "blk": 0, "pts": 9},
+            {"name": "Zach Williams", "min": 22, "fg": "3-4", "ft": "0-0", "tp": "0-0", "reb": 5, "ast": 0, "pf": 1, "to": 3, "stl": 0, "blk": 0, "pts": 6},
+            {"name": "Ken Johnson", "min": 41, "fg": "4-7", "ft": "6-8", "tp": "0-0", "reb": 14, "ast": 0, "pf": 3, "to": 3, "stl": 0, "blk": 5, "pts": 14},
+            {"name": "Brent Darby", "min": 33, "fg": "4-11", "ft": "2-2", "tp": "2-6", "reb": 4, "ast": 5, "pf": 5, "to": 4, "stl": 0, "blk": 0, "pts": 12},
+            {"name": "Brian Brown", "min": 37, "fg": "4-14", "ft": "0-0", "tp": "2-4", "reb": 4, "ast": 5, "pf": 3, "to": 4, "stl": 0, "blk": 0, "pts": 10},
+            {"name": "Sean Connolly", "min": 27, "fg": "4-5", "ft": "0-0", "tp": "3-4", "reb": 3, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 11},
+            {"name": "Doylan Robinson", "min": 1, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Ryan Heflin", "min": 1, "fg": "0-1", "ft": "0-1", "tp": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Shaun Smith", "min": 0, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Will Dudley", "min": 7, "fg": "1-1", "ft": "0-1", "tp": "0-0", "reb": 1, "ast": 0, "pf": 3, "to": 0, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Tim Martin", "min": 17, "fg": "1-1", "ft": "2-4", "tp": "0-0", "reb": 3, "ast": 0, "pf": 4, "to": 0, "stl": 0, "blk": 1, "pts": 4}
+          ],
+          "checksum_ok": true
+        }
+      ]
+    }
+  ],
+  "skipped": []
+}

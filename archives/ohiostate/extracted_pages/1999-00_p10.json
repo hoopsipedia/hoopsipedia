@@ -1,0 +1,45 @@
+{
+  "page": 10,
+  "games": [
+    {
+      "date": "1999-12-27",
+      "opponent": "Oakland",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 76,
+          "players": [
+            {"name": "Cobe Ocokoljic", "fg": "4-8", "tp": "1-2", "ft": "1-2", "reb": 6, "ast": 2, "pf": 4, "to": 2, "stl": 2, "blk": 0, "pts": 10},
+            {"name": "Ken Johnson", "fg": "2-4", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "to": 2, "stl": 0, "blk": 1, "pts": 4},
+            {"name": "Scoonie Penn", "fg": "3-4", "tp": "2-3", "ft": "0-0", "reb": 2, "ast": 4, "pf": 3, "to": 3, "stl": 3, "blk": 0, "pts": 8},
+            {"name": "Brian Brown", "fg": "8-9", "tp": "2-2", "ft": "3-3", "reb": 6, "ast": 4, "pf": 0, "to": 1, "stl": 1, "blk": 0, "pts": 21},
+            {"name": "Michael Redd", "fg": "2-6", "tp": "0-2", "ft": "0-3", "reb": 3, "ast": 4, "pf": 0, "to": 2, "stl": 2, "blk": 0, "pts": 4},
+            {"name": "Brent Darby", "fg": "4-6", "tp": "3-5", "ft": "1-3", "reb": 2, "ast": 0, "pf": 2, "to": 4, "stl": 1, "blk": 0, "pts": 12},
+            {"name": "Devon Smith", "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Kwadjo Steele", "fg": "1-3", "tp": "0-2", "ft": "0-0", "reb": 3, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "George Reese", "fg": "5-7", "tp": "0-0", "ft": "4-5", "reb": 7, "ast": 0, "pf": 0, "to": 2, "stl": 0, "blk": 0, "pts": 14},
+            {"name": "Will Dudley", "fg": "0-4", "tp": "0-0", "ft": "1-4", "reb": 4, "ast": 1, "pf": 4, "to": 1, "stl": 1, "blk": 0, "pts": 1}
+          ]
+        },
+        {
+          "name": "Oakland Golden Grizzlies",
+          "score": 50,
+          "players": [
+            {"name": "Myke Thom", "fg": "2-5", "tp": "2-5", "ft": "0-0", "reb": 5, "ast": 0, "pf": 3, "to": 1, "stl": 1, "blk": 0, "pts": 6},
+            {"name": "Sebastien Bellin", "fg": "2-7", "tp": "0-1", "ft": "2-2", "reb": 4, "ast": 1, "pf": 3, "to": 2, "stl": 0, "blk": 0, "pts": 6},
+            {"name": "Mychal Covington", "fg": "7-12", "tp": "1-4", "ft": "0-0", "reb": 4, "ast": 2, "pf": 2, "to": 4, "stl": 0, "blk": 0, "pts": 15},
+            {"name": "Jason Rozycki", "fg": "0-3", "tp": "0-3", "ft": "0-0", "reb": 1, "ast": 2, "pf": 1, "to": 5, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Brad Buddenborg", "fg": "4-14", "tp": "2-7", "ft": "1-2", "reb": 3, "ast": 3, "pf": 1, "to": 3, "stl": 0, "blk": 2, "pts": 11},
+            {"name": "Steve Houston", "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "to": 1, "stl": 1, "blk": 0, "pts": 0},
+            {"name": "Steve Reynolds", "fg": "2-4", "tp": "2-3", "ft": "0-1", "reb": 0, "ast": 2, "pf": 3, "to": 1, "stl": 0, "blk": 0, "pts": 6},
+            {"name": "Ryan Williams", "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "to": 1, "pts": 0},
+            {"name": "Jeff Mullett", "fg": "0-0", "tp": "0-0", "ft": "1-2", "reb": 1, "pf": 0, "to": 0, "stl": 1, "pts": 1},
+            {"name": "Jon Champagne", "fg": "2-4", "tp": "0-0", "ft": "1-4", "reb": 4, "ast": 1, "pf": 3, "to": 0, "stl": 0, "blk": 0, "pts": 5}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

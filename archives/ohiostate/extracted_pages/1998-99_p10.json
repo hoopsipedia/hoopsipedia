@@ -1,0 +1,9 @@
+{
+  "page": 10,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "1998-99 Tennessee Martin @ Ohio State (12-14-98, final Ohio State 92, Tennessee Martin 56): Tennessee Martin player-line points checksum correctly (sum of 9 players = 56, matches final score and printed team totals FG 24-50/3PT 5-19/FT 3-6). However, Ohio State's 11 player lines sum to 94 points, which does not match the official final score of 92 (confirmed twice on the page: team totals row TP=92, and the by-period score line '51 41 = 92'). Individual player rows each pass their own internal make/attempt-to-points check, and FG/FGA/3FG/3FGA column sums match the printed OSU team totals exactly, but the FT column sum (9) does not match the printed team FT total (7), and rebound column sums also show small unresolved discrepancies versus team totals -- indicating one or more small digits (likely in the FT or FTA columns) were misread on this low-resolution scan in a way that is self-consistent within a row but not across the team total. Already used the single allowed re-read of this page and could not resolve which specific row(s) contain the misread digit with confidence, so skipping rather than guessing to avoid introducing incorrect box score data."
+    }
+  ]
+}

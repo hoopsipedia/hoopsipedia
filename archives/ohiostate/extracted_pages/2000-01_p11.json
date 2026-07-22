@@ -1,0 +1,9 @@
+{
+  "page": 11,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Official box score 'Robert Morris (1-10) vs Ohio State (8-2)' at Value City Arena, Columbus, OH, attendance 14,965, final Robert Morris 46 - Ohio State 88 (17-29 / 46-42 by half). Date partially illegible on scan (shown as '.0-0 8 p.m.'). Checksum fails for BOTH teams and could not be resolved within the two-read limit: Robert Morris - individual FG-makes sum to 17 vs team total 18-56, and individual TP column sums to 44 vs team total 46. Ohio State - individual 3PT-makes sum to 9 vs team total 7-14, and individual TP column sums to 83 vs team total 88 (FG-makes 34 and FT-makes 13 do match team totals for Ohio State). Several rows (e.g., Smith/Richburg/Jackson for Robert Morris; Frazier/Smith for Ohio State) have OCR-ambiguous digits likely responsible for the discrepancy. Skipping rather than guessing per instructions."
+    }
+  ]
+}

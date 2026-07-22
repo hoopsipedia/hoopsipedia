@@ -1,0 +1,11 @@
+{
+  "page": 34,
+  "games": [],
+  "skipped": [
+    {
+      "date": "1999-03-13",
+      "opponent": "Detroit Mercy Titans",
+      "reason": "Detroit's box score checksummed cleanly (individual points sum to 44, matching the final score, after cross-validating FG/3PT/FT-made columns against the team TOTALS row). Ohio State's box score could not be reconciled despite a full second read: summing individually-legible FG-made, 3PT-made, and FT-made columns against the printed team TOTALS row (FG 27-61, 3PT 10-21, FT 11-16, TP 75) leaves shortfalls of 2 FG-made, 4 3PT-made, and 2 FT-made, and the resulting player point total (65) falls ~10 points short of the team's 75. Digits for at least two players (REDD and BROWN) are genuinely ambiguous in the scan (e.g. 3 vs 7, 4 vs 5), and correcting them to match a locally-read TP value still leaves the team-wide sums unreconciled. Since checksum could not be confirmed for Ohio State and this is a single two-team game, the whole game is skipped rather than publishing guessed values."
+    }
+  ]
+}

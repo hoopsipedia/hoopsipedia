@@ -1,0 +1,9 @@
+{
+  "page": 27,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Official box score, Ohio State University vs Univ. of Alabama, 02/17/01 at Coleman Coliseum (Tuscaloosa, AL). Ohio State's side transcribes cleanly and checksums exactly (sum of player TP = 67 = team score/TOTALS TP), but the Univ. of Alabama side has ambiguous/misaligned columns in the small typed print: naive fixed-width parsing of several rows (e.g. Dudley, Grizzard, Stinnett) yields internally inconsistent or impossible values (points computed from FG/3PT/FT not matching printed TP; apparent PF values of 10-15). The Alabama TOTALS row itself is internally consistent and matches the final score (29-57 FG, 10-18 3PT, 17-25 FT => 85 pts = final score), so the game total is correct, but individual Alabama player lines could not be confidently reconstructed without guessing digits, even after a second read of the page. Since checksum must hold for both teams and the schema requires both teams per game, the whole game is skipped rather than guessed. Ohio State player-line data was solid but is being withheld from output since the game record requires both teams to pass checksum."
+    }
+  ]
+}

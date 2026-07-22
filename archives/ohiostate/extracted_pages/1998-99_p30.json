@@ -1,0 +1,47 @@
+{
+  "page": 30,
+  "games": [
+    {
+      "date": "1999-01-27",
+      "opponent": "Penn State",
+      "location": "State College, Pa.",
+      "note": "OT game; final score by periods OSU 39-35-11=85, Penn State 38-36-24=98",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 85,
+          "players": [
+            {"name": "Jason Singleton", "min": 24, "fg": "1-7", "tp": "0-0", "ft": "3-4", "reb": 5, "ast": 1, "to": 4, "blk": 1, "stl": 3, "pf": 5, "pts": 5},
+            {"name": "Jon Sanderson", "min": 25, "fg": "1-4", "tp": "0-3", "ft": "0-0", "reb": 4, "ast": 1, "to": 1, "blk": 0, "stl": 0, "pf": 2, "pts": 2},
+            {"name": "Ken Johnson", "min": 24, "fg": "3-8", "tp": "0-0", "ft": "2-2", "reb": 6, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pf": 4, "pts": 8},
+            {"name": "Scoonie Penn", "min": 41, "fg": "8-15", "tp": "2-7", "ft": "4-6", "reb": 4, "ast": 6, "to": 2, "blk": 0, "stl": 1, "pf": 0, "pts": 22},
+            {"name": "Michael Redd", "min": 37, "fg": "11-18", "tp": "4-5", "ft": "0-1", "reb": 6, "ast": 4, "to": 6, "blk": 0, "stl": 0, "pf": 5, "pts": 26},
+            {"name": "Neshaun Coleman", "min": 21, "fg": "3-5", "tp": "3-5", "ft": "0-0", "reb": 2, "ast": 0, "to": 0, "blk": 1, "stl": 0, "pf": 2, "pts": 9},
+            {"name": "Brian Brown", "min": 24, "fg": "2-3", "tp": "1-1", "ft": "4-4", "reb": 1, "ast": 2, "to": 2, "blk": 0, "stl": 2, "pf": 1, "pts": 9},
+            {"name": "Devon Smith", "min": 1, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pf": 0, "pts": 0},
+            {"name": "George Reese", "min": 26, "fg": "2-5", "tp": "0-0", "ft": "0-0", "reb": 3, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pf": 4, "pts": 4},
+            {"name": "Shamar Herron", "min": 2, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pf": 2, "pts": 0}
+          ]
+        },
+        {
+          "name": "Penn State Nittany Lions",
+          "score": 98,
+          "players": [
+            {"name": "Titus Ivory", "min": 34, "fg": "2-6", "tp": "1-4", "ft": "4-4", "reb": 8, "ast": 4, "to": 5, "blk": 0, "stl": 4, "pf": 1, "pts": 9},
+            {"name": "Carl Jackson", "min": 12, "fg": "0-0", "tp": "0-0", "ft": "0-2", "reb": 2, "ast": 1, "to": 1, "blk": 0, "stl": 0, "pf": 3, "pts": 0, "note": "FT read as 0-2 makes-attempts based on checksum reconciliation; original scan showed ambiguous 2-2"},
+            {"name": "Calvin Booth", "min": 38, "fg": "7-9", "tp": "0-0", "ft": "7-8", "reb": 10, "ast": 2, "to": 4, "blk": 4, "stl": 0, "pf": 1, "pts": 21},
+            {"name": "Joe Crispin", "min": 36, "fg": "9-17", "tp": "7-14", "ft": "4-7", "reb": 5, "ast": 4, "to": 1, "blk": 0, "stl": 1, "pf": 1, "pts": 29},
+            {"name": "Dan Earl", "min": 36, "fg": "8-16", "tp": "2-6", "ft": "4-4", "reb": 4, "ast": 2, "to": 1, "blk": 0, "stl": 2, "pf": 0, "pts": 22},
+            {"name": "Ken Krimmel", "min": 1, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pf": 0, "pts": 0},
+            {"name": "Gyasi Cline-Heard", "min": 31, "fg": "2-4", "tp": "0-0", "ft": "7-8", "reb": 2, "ast": 0, "to": 1, "blk": 0, "stl": 2, "pf": 3, "pts": 11},
+            {"name": "Greg Grays", "min": 29, "fg": "3-9", "tp": "0-2", "ft": "0-0", "reb": 1, "ast": 3, "to": 1, "blk": 0, "stl": 2, "pf": 1, "pts": 6},
+            {"name": "Tyler Smith", "min": 5, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pf": 1, "pts": 0},
+            {"name": "Scott Witkowsky", "min": 3, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pf": 1, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

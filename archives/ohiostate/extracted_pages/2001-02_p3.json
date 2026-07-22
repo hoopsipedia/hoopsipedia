@@ -1,0 +1,9 @@
+{
+  "page": 3,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Winthrop @ Ohio State box score (date partially cut off in scan, reads '-18-01' = likely 2001-11-18 based on early-season records Winthrop 1-1 / Ohio State 1-0; final score Winthrop 54, Ohio State 78, at Value City Arena, Columbus). Winthrop side transcribes cleanly and checksums perfectly (individual pts sum = 54 = team score, using pts = 2*FGmade + 3PTmade + FTmade, verified against every player's printed TP value). However, the Ohio State side has several low-minute bench rows (Dials Terence, Sylvester Matt, Martin Tim, Marinochk Matt) where the FG-FGA / 3PT-FGA / FT-FTA and TP digits are ambiguous/illegible in the scan and internally inconsistent (e.g. a 3PT attempt count exceeding the printed total FG attempt count for one row), so individual OSU player points do not reconcile confidently to the clearly-printed team total line (27-51 FG, 8-14 3PT, 16-26 FT, 78 pts). Re-read the page once already; digits for these bench rows remain unreadable with confidence. Skipping the whole game rather than guessing bench-player stats, per instructions."
+    }
+  ]
+}

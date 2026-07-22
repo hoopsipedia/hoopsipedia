@@ -1,0 +1,9 @@
+{
+  "page": 33,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Typed 1998-99 NCAA Tournament box score (Murray State vs Ohio State, 3-11-99, RCA Dome, final 72-58 Ohio State). Most rows are legible, but several player lines are ambiguous/low-confidence at this resolution: Murray State's BURDINE,Justin row has an internally inconsistent FGA/MIN pairing, and GAY,Marvin's line is largely blank yet a nonzero point total is required to reconcile the team TOTALS (58); cross-checking FG/FGA column sums against the printed team TOTALS also does not reconcile cleanly. On the Ohio State side, the SAVOVIC,Slobodan and SANDERSON,John rows are hard to distinguish from each other at this resolution. Re-read the page once (both reads used) and could not resolve these rows with confidence, so per instructions this game is skipped rather than guessed to force a checksum match."
+    }
+  ]
+}

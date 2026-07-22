@@ -1,0 +1,9 @@
+{
+  "page": 27,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "02-17-99 Ohio State (20-6/10-3) at Indiana (19-9/6-7), Bloomington, Ind. — OFFICIAL NCAA BASKETBALL BOX SCORE, OT game, final Ohio State 69, Indiana 67. Visitor (Ohio State) player lines are fully legible: all 9 players' 16 stat columns (FG-FGA, 3P-3PA, FT-FTA, OR, DR, TOT, PF, PTS, A, TO, BLK, S, MIN) transcribed and checksummed cleanly — sum of player PTS (4+7+7+20+16+10+5+0+0) = 69, matching the team total and final score exactly. However the home team (Indiana) rows are too small/tightly kerned in the scan to transcribe individual player stats with confidence: while FG and 3P columns summed correctly across the 9 Indiana players to match team totals (FG 25, 3P 3), the 3PA column summed to 15 across players vs. the team total of 11, and per-player PTS values (via the 2*FG+3P+FT formula) did not consistently reconcile with the printed PTS figures for several players (e.g. Recker, Richardson) — indicating column misalignment/misread digits rather than a reliable transcription. Re-read the page once (max allowed) and the ambiguity persisted. Per accuracy policy, skipping the full game rather than guessing at Indiana's box score; Ohio State's confirmed line: Singleton 2-5fg 0-0ft 4pts, Sanderson 2-6fg 1-3 3p 2-2ft 7pts, Johnson 3-4fg 1-2ft 7pts, Penn 7-16fg 1-7 3p 5-6ft 20pts, Redd 3-14fg 0-3 3p 10-12ft 16pts, Reese 4-6fg 2-3ft 10pts, Coleman 1-5fg 1-4 3p 2-2ft 5pts, Brown 0-3fg 0pts, Savovic 0-1fg 0pts (Dudley/Steele/Herron/Smith DNP)."
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "page": 27,
+  "games": [
+    {
+      "date": "1996-03-09",
+      "date_note": "Header date OCR is unclear (printed as '05-09-96' on a dot-matrix STATMAN sheet, which cannot be a May date mid-basketball-season); best inference from context (OSU 10-17/3-15, PSU 21-6/12-6 entering game, late-season Big Ten matchup at University Park, PA) is 1996-03-09, but this should be verified against a schedule source.",
+      "opponent": "Penn State Nittany Lions",
+      "location": "University Park, PA (Bryce Jordan Center)",
+      "attendance": 15190,
+      "final_period_scores": {"Ohio State Buckeyes": [26, 44], "Penn State Nittany Lions": [39, 47]},
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 70,
+          "players": [
+            {"name": "Rick Yudt", "min": 19, "fg": "3-3", "tp": "1-1", "ft": "2-3", "reb": 3, "ast": 1, "pf": 0, "to": 4, "stl": 0, "blk": 0, "pts": 9},
+            {"name": "Shaun Stonebrook", "min": 34, "fg": "5-8", "tp": "0-0", "ft": "0-0", "reb": 10, "ast": 4, "pf": 4, "to": 3, "stl": 0, "blk": 1, "pts": 10},
+            {"name": "Jermaine Tate", "min": 28, "fg": "3-11", "tp": "0-0", "ft": "3-6", "reb": 3, "ast": 1, "pf": 2, "to": 3, "stl": 3, "blk": 2, "pts": 9},
+            {"name": "Damon Stringer", "min": 28, "fg": "2-11", "tp": "1-3", "ft": "3-5", "reb": 4, "ast": 7, "pf": 5, "to": 1, "stl": 0, "blk": 0, "pts": 8},
+            {"name": "Jason Singleton", "min": 26, "fg": "7-12", "tp": "0-0", "ft": "1-2", "reb": 1, "ast": 0, "pf": 5, "to": 1, "stl": 2, "blk": 0, "pts": 15},
+            {"name": "Neshaun Coleman", "min": 20, "fg": "0-5", "tp": "0-3", "ft": "1-2", "reb": 1, "ast": 3, "pf": 2, "to": 1, "stl": 0, "blk": 0, "pts": 1},
+            {"name": "Steve Belter", "min": 13, "fg": "0-2", "tp": "0-0", "ft": "0-0", "reb": 4, "ast": 1, "pf": 1, "to": 0, "stl": 1, "blk": 0, "pts": 0},
+            {"name": "Don Jantonio", "min": 5, "fg": "2-3", "tp": "0-0", "ft": "0-0", "reb": 2, "ast": 0, "pf": 3, "to": 0, "stl": 1, "blk": 0, "pts": 4},
+            {"name": "Jami Bosley", "min": 10, "fg": "2-4", "tp": "0-1", "ft": "0-0", "reb": 2, "ast": 0, "pf": 3, "to": 0, "stl": 1, "blk": 0, "pts": 4},
+            {"name": "Scott Gradney", "min": 17, "fg": "5-9", "tp": "0-0", "ft": "0-1", "reb": 4, "ast": 0, "pf": 0, "to": 1, "stl": 1, "blk": 0, "pts": 10}
+          ],
+          "dnp": ["Marlon Minifee", "Carlos Davis"],
+          "team_only_stats": {"reb_note": "team rebounds row (unassigned) OR2 DR2 TOT4, not attributed to a player"}
+        },
+        {
+          "name": "Penn State Nittany Lions",
+          "score": 86,
+          "players": [
+            {"name": "Matt Gaudio", "min": 20, "fg": "4-6", "tp": "0-0", "ft": "5-6", "reb": 4, "ast": 1, "pf": 3, "to": 3, "stl": 0, "blk": 0, "pts": 13},
+            {"name": "Glenn Sekunda", "min": 25, "fg": "8-12", "tp": "2-5", "ft": "3-3", "reb": 5, "ast": 2, "pf": 4, "to": 4, "stl": 1, "blk": 0, "pts": 21},
+            {"name": "Calvin Booth", "min": 22, "fg": "3-4", "tp": "0-0", "ft": "4-4", "reb": 6, "ast": 2, "pf": 2, "to": 0, "stl": 0, "blk": 4, "pts": 10},
+            {"name": "Chris Rogers", "min": 10, "fg": "1-1", "tp": "1-1", "ft": "1-2", "reb": 1, "ast": 1, "pf": 0, "to": 1, "stl": 3, "blk": 0, "pts": 4},
+            {"name": "Donovan Williams", "min": 26, "fg": "4-8", "tp": "0-0", "ft": "0-0", "reb": 3, "ast": 2, "pf": 3, "to": 4, "stl": 3, "blk": 0, "pts": 8},
+            {"name": "Dan Earl", "min": 20, "fg": "3-5", "tp": "2-4", "ft": "3-4", "reb": 2, "ast": 2, "pf": 1, "to": 1, "stl": 1, "blk": 0, "pts": 11},
+            {"name": "Pete Lisicky", "min": 20, "fg": "2-5", "tp": "1-3", "ft": "0-0", "reb": 0, "ast": 3, "pf": 1, "to": 0, "stl": 0, "blk": 2, "pts": 5},
+            {"name": "Jarrett Stephens", "min": 20, "fg": "3-6", "tp": "0-0", "ft": "1-4", "reb": 3, "ast": 0, "pf": 1, "to": 2, "stl": 0, "blk": 0, "pts": 7},
+            {"name": "Phil Williams", "min": 12, "fg": "0-2", "tp": "0-0", "ft": "3-6", "reb": 9, "ast": 0, "pf": 3, "to": 0, "stl": 0, "blk": 0, "pts": 3},
+            {"name": "Jeremy Metzger", "min": 10, "fg": "1-2", "tp": "0-0", "ft": "1-1", "reb": 7, "ast": 0, "pf": 0, "to": 3, "stl": 1, "blk": 0, "pts": 3},
+            {"name": "Damien McKnight", "min": 10, "fg": "0-2", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 2, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Dana Fritz", "min": 1, "fg": "0-1", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "John Robinson", "min": 1, "fg": "0-0", "tp": "0-0", "ft": "1-2", "reb": 0, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 1}
+          ],
+          "dnp": ["Bryan Machamer"],
+          "team_only_stats": {"reb_note": "team rebounds row (unassigned) OR1 DR1 TOT2, not attributed to a player"}
+        }
+      ],
+      "checksum_ok": true,
+      "checksum_note": "OSU player pts sum = 70 (matches final score 70). PSU player pts sum = 86 (matches final score 86). Both verified against the printed TOTALS rows (OSU PTS=70, PSU PTS=86) and against final-score line (OSU 70, PSU 86). Rebound (OR/DR/TOT) totals for a few players have minor internal inconsistencies on the original scoresheet (common scorer's-table arithmetic slips) that do not affect the points checksum; those reb values are reported as printed."
+    }
+  ],
+  "skipped": []
+}

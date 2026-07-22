@@ -1,0 +1,44 @@
+{
+  "page": 4,
+  "games": [
+    {
+      "date": "1996-12-03",
+      "opponent": "Kent State University",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 71,
+          "players": [
+            {"name": "Jason Singleton", "min": 36, "fg": "5-12", "tp": "0-1", "ft": "5-6", "reb": 4, "ast": 3, "pf": 4, "to": 3, "stl": 1, "blk": 0, "pts": 15},
+            {"name": "Shaun Stonerook", "min": 36, "fg": "3-7", "tp": "0-0", "ft": "6-10", "reb": 6, "ast": 3, "pf": 1, "to": 5, "stl": 0, "blk": 0, "pts": 12},
+            {"name": "Jermaine Tate", "min": 25, "fg": "8-11", "tp": "0-0", "ft": "2-3", "reb": 7, "ast": 1, "pf": 1, "to": 2, "stl": 3, "blk": 0, "pts": 18},
+            {"name": "Neshaun Coleman", "min": 29, "fg": "4-9", "tp": "2-4", "ft": "0-0", "reb": 3, "ast": 3, "pf": 2, "to": 0, "stl": 4, "blk": 0, "pts": 10},
+            {"name": "Damon Stringer", "min": 19, "fg": "2-7", "tp": "0-3", "ft": "6-6", "reb": 1, "ast": 5, "pf": 4, "to": 2, "stl": 0, "blk": 0, "pts": 10},
+            {"name": "Sean Tucker", "min": 11, "fg": "1-3", "tp": "0-0", "ft": "0-0", "reb": 2, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Carlos Davis", "min": 10, "fg": "0-2", "tp": "0-1", "ft": "2-2", "reb": 2, "ast": 1, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Don Jantonio", "min": 5, "fg": "0-1", "tp": "0-1", "ft": "2-2", "reb": 0, "ast": 1, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 2}
+          ]
+        },
+        {
+          "name": "Kent State University",
+          "score": 55,
+          "players": [
+            {"name": "Art Robertson", "min": 27, "fg": "3-7", "tp": "0-0", "ft": "1-2", "reb": 3, "ast": 2, "pf": 4, "to": 9, "stl": 2, "blk": 0, "pts": 7},
+            {"name": "D.J. Bosse", "min": 38, "fg": "5-11", "tp": "5-10", "ft": "0-0", "reb": 7, "ast": 1, "pf": 3, "to": 5, "stl": 0, "blk": 0, "pts": 15},
+            {"name": "John Whorton", "min": 22, "fg": "3-3", "tp": "0-0", "ft": "0-0", "reb": 3, "ast": 0, "pf": 4, "to": 4, "stl": 0, "blk": 0, "pts": 6},
+            {"name": "Ed Norvell", "min": 37, "fg": "2-7", "tp": "0-3", "ft": "5-7", "reb": 3, "ast": 7, "pf": 4, "to": 6, "stl": 0, "blk": 0, "pts": 9},
+            {"name": "Scott Effertz", "min": 22, "fg": "0-3", "tp": "0-1", "ft": "3-4", "reb": 1, "ast": 0, "pf": 4, "to": 1, "stl": 1, "blk": 0, "pts": 3},
+            {"name": "Craig Glenn", "min": 22, "fg": "3-4", "tp": "0-0", "ft": "1-2", "reb": 5, "ast": 0, "pf": 4, "to": 4, "stl": 0, "blk": 0, "pts": 7},
+            {"name": "Geoffrey Vaughn", "min": 19, "fg": "3-3", "tp": "0-0", "ft": "2-6", "reb": 1, "ast": 0, "pf": 2, "to": 1, "stl": 0, "blk": 0, "pts": 8},
+            {"name": "Al Moore", "min": 9, "fg": "0-5", "tp": "0-2", "ft": "0-0", "pts": 0},
+            {"name": "Pete Paule", "min": 2, "fg": "0-0", "tp": "0-0", "ft": "0-0", "pts": 0},
+            {"name": "Damione Thompson", "min": 1, "fg": "0-0", "tp": "0-0", "ft": "0-0", "pts": 0},
+            {"name": "Ben Bakken", "min": 1, "fg": "0-0", "tp": "0-0", "ft": "0-0", "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

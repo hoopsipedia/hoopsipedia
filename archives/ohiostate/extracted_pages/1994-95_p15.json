@@ -1,0 +1,9 @@
+{
+  "page": 15,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page 14 (per scoresheet corner numbering) is a legible official NCAA box score: Ohio State 61 at Minnesota 81, 01-18-95. Ohio State's player lines transcribe cleanly and checksum exactly (15+13+11+12+6+0+2+0+0+2+0 = 61, matches team total and final score). However, Minnesota's player-line columns (starting with Chad Kolander) are misaligned/compressed in the scan -- several rows appear to be missing a digit (16 stat columns vs. 15 visible tokens per row), and two rows (Eric Harris #33 and Darrell Whaley #28) print with overlapping/ambiguous stat lines that cannot be confidently disambiguated. Minnesota's TEAM TOTALS row is internally consistent (28 FG, 6 3P, 19 FT -> 81 pts, matches final score), so the aggregate is trustworthy, but individual Minnesota player stat lines are not reconstructable with confidence without guessing, so per instructions the whole game (both teams together) is skipped rather than transcribing a mismatched pair of team rosters."
+    }
+  ]
+}

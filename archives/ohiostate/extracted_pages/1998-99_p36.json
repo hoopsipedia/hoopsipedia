@@ -1,0 +1,45 @@
+{
+  "page": 36,
+  "games": [
+    {
+      "date": "1999-03-20",
+      "opponent": "St. John's Red Storm",
+      "note": "NCAA Tournament second round, Knoxville, Tenn. (Thompson-Boling Arena). Officials: David Libbey, Gene Monje, Mark Whitehead. For St. John's players Tyrone Grant, Chudney Gray, and Reggie Jessie, the scanned FT/PTS digits were internally inconsistent (printed PTS did not match 2*FG+3P+FT, and their FT figures didn't sum to the team FT total of 15). Their FG and 3P columns were unambiguous and summed exactly to team totals (FG 26, 3P 7), so pts/ft for those three were reconciled using pts=2*fg+3p+ft together with the team FT total (15) and PTS total (74) as constraints; rebounds for these three were omitted rather than guessed since OR/DR/TOT digits did not reconcile.",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 77,
+          "players": [
+            {"name": "Brian Brown", "min": 28, "fg": "0-1", "tp": "0-1", "ft": "0-1", "reb": 1, "ast": 2, "pf": 4, "to": 2, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "J. Singleton", "min": 21, "fg": "6-7", "tp": "0-0", "ft": "1-1", "reb": 2, "ast": 2, "pf": 4, "to": 1, "stl": 1, "blk": 0, "pts": 13},
+            {"name": "Ken Johnson", "min": 37, "fg": "6-9", "tp": "0-0", "ft": "0-0", "reb": 4, "ast": 0, "pf": 3, "to": 1, "stl": 0, "blk": 7, "pts": 12},
+            {"name": "Scoonie Penn", "min": 38, "fg": "7-13", "tp": "3-6", "ft": "5-6", "reb": 8, "ast": 8, "pf": 2, "to": 3, "stl": 0, "blk": 0, "pts": 22},
+            {"name": "Michael Redd", "min": 38, "fg": "8-17", "tp": "3-4", "ft": "1-3", "reb": 6, "ast": 5, "pf": 0, "to": 2, "stl": 0, "blk": 1, "pts": 20},
+            {"name": "Neshaun Coleman", "min": 2, "fg": "0-1", "tp": "0-1", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "S. Savovic", "min": 15, "fg": "1-2", "tp": "1-2", "ft": "4-5", "reb": 3, "ast": 3, "pf": 1, "to": 2, "stl": 0, "blk": 0, "pts": 7},
+            {"name": "J. Sanderson", "min": 2, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "George Reese", "min": 19, "fg": "1-3", "tp": "0-0", "ft": "1-2", "reb": 2, "ast": 1, "pf": 3, "to": 1, "stl": 2, "blk": 1, "pts": 3}
+          ],
+          "checksum_ok": true
+        },
+        {
+          "name": "St. John's Red Storm",
+          "score": 74,
+          "players": [
+            {"name": "Ron Artest", "min": 31, "fg": "4-10", "tp": "1-5", "ft": "0-0", "reb": 9, "ast": 2, "pf": 4, "to": 5, "stl": 2, "blk": 0, "pts": 9},
+            {"name": "Lavor Postell", "min": 38, "fg": "8-19", "tp": "4-7", "ft": "4-6", "reb": 9, "ast": 2, "pf": 2, "to": 1, "stl": 0, "blk": 0, "pts": 24},
+            {"name": "Tyrone Grant", "min": 19, "fg": "1-5", "tp": "0-1", "ft": "2-3", "ast": 0, "pf": 3, "to": 0, "stl": 0, "blk": 1, "pts": 4},
+            {"name": "Bootsy Thornton", "min": 37, "fg": "7-12", "tp": "1-3", "ft": "3-4", "reb": 3, "ast": 3, "pf": 1, "to": 2, "stl": 1, "blk": 0, "pts": 18},
+            {"name": "Erick Barkley", "min": 37, "fg": "4-15", "tp": "1-3", "ft": "4-7", "reb": 7, "ast": 7, "pf": 4, "to": 1, "stl": 0, "blk": 0, "pts": 13},
+            {"name": "Chudney Gray", "min": 7, "fg": "1-1", "tp": "0-1", "ft": "0-2", "to": 1, "pts": 2},
+            {"name": "Donald Emanuel", "min": 6, "fg": "0-0", "tp": "0-0", "ft": "2-2", "reb": 1, "ast": 0, "pf": 1, "to": 1, "stl": 1, "blk": 0, "pts": 2},
+            {"name": "Reggie Jessie", "min": 24, "fg": "1-4", "tp": "0-0", "ft": "0-1", "ast": 1, "pf": 2, "to": 0, "stl": 1, "blk": 0, "pts": 2},
+            {"name": "A. Richardson", "min": 1, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ],
+          "checksum_ok": true
+        }
+      ]
+    }
+  ],
+  "skipped": []
+}

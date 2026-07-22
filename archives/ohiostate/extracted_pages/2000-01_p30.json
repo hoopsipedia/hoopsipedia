@@ -1,0 +1,9 @@
+{
+  "page": 30,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Ohio State vs Penn State, 2/3/01 at State College, PA (final OSU 93, Penn State 87). Ohio State side transcribed cleanly and checksums perfectly (player points sum to 93, matching FG 35-62/3PT 5-13/FT 18-26 team totals). Penn State side checksums fail by exactly 1: player point sum = 88 vs printed team total TP 87, and player FT sum = 18-23 vs printed team FT totals 17-22 (which match the printed FT% splits 7-7 1st half + 10-15 2nd half = 17-22, .773). The single-point/single-FT discrepancy traces to one ambiguous FT digit among Ivory, Tate, or Banta (all show FT made=1 with internally consistent TP on the sheet, so a genuine misprint/OCR ambiguity could not be resolved even after a second read of the same page). Per instructions, skipping rather than guessing which player's line to alter."
+    }
+  ]
+}

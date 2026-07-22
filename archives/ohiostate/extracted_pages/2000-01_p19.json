@@ -1,0 +1,9 @@
+{
+  "page": 19,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Typed official NCAA box score dated 01-21-01, Ohio State at #3 Michigan State (East Lansing, MI), final score OSU 56 - MSU 71. Ohio State's (visitors) player lines were legible and internally consistent (FG/3P/FT-derived points for each player summed to exactly 56, matching the final score: Savovic 13, Williams 6, Johnson 12, Darby 0, Brown 14, Connolly 5, Dudley 6, Martin 0). However, Michigan State's (home) player rows are a poor-quality scan/typewriter print with several rows (Randolph, Taylor, Bell, Wolfe, Thomas, Tabbia, Chappell, Anagonye, Andreas) showing misaligned or ambiguous rebound/foul/points columns that could not be transcribed confidently without guessing digits (rebound totals repeatedly fail internal OR+DR=TOT consistency checks). Since both teams must checksum and the home team cannot be transcribed reliably, skipping the entire game rather than inventing Michigan State's box score. Already used the one permitted re-read of this page."
+    }
+  ]
+}

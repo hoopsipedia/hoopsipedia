@@ -1,0 +1,44 @@
+{
+  "page": 12,
+  "games": [
+    {
+      "date": "1995-01-08",
+      "opponent": "George Mason University",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 121,
+          "players": [
+            {"name": "Rick Yudt", "min": 29, "fg": "10-19", "ft": "4-4", "tp": "2-8", "reb": 17, "ast": 0, "pf": 1, "to": 2, "stl": 1, "blk": 0, "pts": 26},
+            {"name": "Rickey Dudley", "min": 35, "fg": "8-15", "ft": "0-3", "tp": "0-1", "reb": 5, "ast": 1, "pf": 1, "to": 3, "stl": 0, "blk": 3, "pts": 16},
+            {"name": "Antonio Watson", "min": 19, "fg": "2-7", "ft": "1-2", "tp": "0-0", "reb": 3, "ast": 0, "pf": 5, "to": 5, "stl": 0, "blk": 0, "pts": 5},
+            {"name": "Doug Etzler", "min": 32, "fg": "12-15", "ft": "4-6", "tp": "8-11", "reb": 6, "ast": 10, "pf": 3, "to": 3, "stl": 2, "blk": 0, "pts": 36},
+            {"name": "Carlos Davis", "min": 28, "fg": "9-14", "ft": "3-3", "tp": "1-3", "reb": 5, "ast": 7, "pf": 2, "to": 6, "stl": 1, "blk": 0, "pts": 22},
+            {"name": "Kevin Martin", "min": 17, "fg": "2-7", "ft": "3-3", "tp": "0-0", "reb": 2, "ast": 2, "pf": 3, "to": 1, "stl": 0, "blk": 0, "pts": 7},
+            {"name": "Don Jantonio", "min": 16, "fg": "0-0", "ft": "3-4", "tp": "0-0", "reb": 2, "ast": 2, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 3},
+            {"name": "John Lumpkin", "min": 1, "fg": "1-4", "ft": "1-2", "tp": "0-0", "reb": 7, "ast": 0, "pf": 4, "to": 0, "stl": 0, "blk": 0, "pts": 3},
+            {"name": "Marlon Minifee", "min": 1, "fg": "1-2", "ft": "1-2", "tp": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 3}
+          ]
+        },
+        {
+          "name": "George Mason Patriots",
+          "score": 96,
+          "players": [
+            {"name": "Kevin Ward", "min": 29, "fg": "6-13", "ft": "6-8", "tp": "0-6", "reb": 6, "ast": 0, "pf": 0, "to": 3, "stl": 1, "blk": 0, "pts": 18},
+            {"name": "Pharoah Davis", "min": 27, "fg": "2-7", "ft": "1-2", "tp": "0-1", "reb": 1, "ast": 1, "pf": 3, "to": 0, "stl": 0, "blk": 0, "pts": 5},
+            {"name": "Andrew Fingall", "min": 22, "fg": "0-3", "ft": "0-2", "tp": "0-2", "reb": 5, "ast": 2, "pf": 0, "to": 2, "stl": 0, "blk": 1, "pts": 0},
+            {"name": "Curtis McCants", "min": 30, "fg": "9-11", "ft": "6-7", "tp": "3-4", "reb": 4, "ast": 9, "pf": 2, "to": 5, "stl": 3, "blk": 0, "pts": 27},
+            {"name": "G.C. Marcaccini", "min": 29, "fg": "6-15", "ft": "0-0", "tp": "1-4", "reb": 2, "ast": 0, "pf": 4, "to": 1, "stl": 1, "blk": 0, "pts": 13},
+            {"name": "Riley Trone", "min": 27, "fg": "3-11", "ft": "1-2", "tp": "2-8", "reb": 2, "ast": 3, "pf": 0, "to": 3, "stl": 1, "blk": 0, "pts": 9},
+            {"name": "Bernard Wanjara", "min": 5, "fg": "0-1", "ft": "0-1", "tp": "0-0", "reb": 2, "ast": 0, "pf": 2, "to": 0, "stl": 0, "blk": 2, "pts": 0},
+            {"name": "Kenwan Alford", "min": 22, "fg": "7-8", "ft": "3-5", "tp": "0-0", "reb": 2, "ast": 0, "pf": 5, "to": 1, "stl": 0, "blk": 0, "pts": 17},
+            {"name": "Donald Ross", "min": 7, "fg": "2-3", "ft": "2-2", "tp": "1-2", "reb": 0, "ast": 0, "pf": 1, "to": 2, "stl": 0, "blk": 0, "pts": 7},
+            {"name": "Mike Myers", "min": 2, "fg": "0-1", "ft": "0-0", "tp": "0-1", "reb": 0, "ast": 0, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

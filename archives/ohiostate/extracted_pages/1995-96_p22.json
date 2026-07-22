@@ -1,0 +1,9 @@
+{
+  "page": 22,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Official NCAA box score, Ohio State vs. University of Illinois, Feb 17 1996 (St. John Arena). Fully legible typed sheet. Illinois side checksums perfectly (player TP sum 8+2+8+23+10+0+2+9+12+2+0=76 == final score 76). Ohio State side FAILS checksum: player TP sum = 5+12+18+11+7+2+9+1+0+0 = 65, but team final score is 67. Each individual player's own TP is internally consistent with their own FG/3PT/FT columns (no single-row transcription error found), so the 2-point gap is at the team-total level, not an isolated misread. Confirmed via redundant fields: team FT totals (20-30, .667) are corroborated by the printed halftime splits (8-13 1st + 12-17 2nd = 20-30) and by 3PT totals (9-20, .450, corroborated by 4-9 1st + 5-11 2nd), yet summing the ten individual player FT lines only yields 18-28 made-attempted. Could not identify which specific player line the missing 2 FT belong to without guessing (tried reassigning to Coleman's row but that breaks his own printed TP=11). Skipping per checksum-failure policy rather than guessing."
+    }
+  ]
+}

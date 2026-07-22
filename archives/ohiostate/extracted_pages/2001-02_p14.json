@@ -1,0 +1,9 @@
+{
+  "page": 14,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Ohio State vs Massachusetts, 01/09/02 at Amherst MA (Mullins Center), final OSU 70 - UMass 62. Ohio State's player lines checksum cleanly (10+0+13+17+19+1+2+7+0+1=70, matches team TOTALS TP=70 and final score). However Massachusetts' player point totals could not be reconciled with the official team total (TOTALS TP=62, matching the final score 62): summing the sheet's own TP column gives 64, and recomputing via 2*FGmade+3PTmade+FTmade gives 63 — both off from 62. The discrepancy traces to a few illegible/circled entries (PUGH, RHYMER, LAMB rows have handwritten circles around TOT/TP digits and are ambiguous between two plausible readings each), so no confident transcription of Massachusetts' box score is possible. Per instructions, the whole two-team game is skipped rather than guessed."
+    }
+  ]
+}

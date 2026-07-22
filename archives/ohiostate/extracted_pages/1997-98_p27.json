@@ -1,0 +1,42 @@
+{
+  "page": 27,
+  "games": [
+    {
+      "date": "1998-02-19",
+      "opponent": "Indiana Hoosiers",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 72,
+          "players": [
+            {"name": "Jason Singleton", "min": 37, "fg": "6-9", "ft": "2-3", "tp": "0-0", "reb": 5, "ast": 2, "pf": 4, "to": 1, "stl": 3, "blk": 0, "pts": 14},
+            {"name": "Jon Sanderson", "min": 33, "fg": "3-12", "ft": "0-1", "tp": "1-4", "reb": 6, "ast": 4, "pf": 4, "to": 4, "stl": 0, "blk": 0, "pts": 7},
+            {"name": "Shamar Herron", "min": 17, "fg": "1-2", "ft": "1-2", "tp": "0-1", "reb": 1, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 3},
+            {"name": "Carlos Davis", "min": 35, "fg": "6-9", "ft": "2-2", "tp": "0-1", "reb": 3, "ast": 1, "pf": 3, "to": 4, "stl": 3, "blk": 0, "pts": 14},
+            {"name": "Michael Redd", "min": 38, "fg": "9-16", "ft": "1-1", "tp": "0-3", "reb": 8, "ast": 4, "pf": 2, "to": 2, "stl": 4, "blk": 0, "pts": 19},
+            {"name": "Neshaun Coleman", "min": 21, "fg": "4-7", "ft": "0-0", "tp": "2-5", "reb": 1, "ast": 3, "pf": 1, "to": 3, "stl": 0, "blk": 0, "pts": 10},
+            {"name": "Ken Johnson", "min": 19, "fg": "2-4", "ft": "1-1", "tp": "0-0", "reb": 2, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 5}
+          ]
+        },
+        {
+          "name": "Indiana Hoosiers",
+          "score": 74,
+          "players": [
+            {"name": "Luke Recker", "min": 21, "fg": "6-9", "ft": "2-2", "tp": "1-2", "reb": 3, "ast": 6, "pf": 3, "to": 3, "stl": 2, "blk": 0, "pts": 15},
+            {"name": "William Gladness", "min": 38, "fg": "5-6", "ft": "3-6", "tp": "0-0", "reb": 4, "ast": 1, "pf": 3, "to": 3, "stl": 2, "blk": 0, "pts": 13},
+            {"name": "Andrae Patterson", "min": 38, "fg": "2-6", "ft": "1-2", "tp": "1-1", "reb": 9, "ast": 2, "pf": 3, "to": 3, "stl": 0, "blk": 1, "pts": 6},
+            {"name": "Michael Lewis", "min": 15, "fg": "0-1", "ft": "1-2", "tp": "0-1", "reb": 1, "ast": 1, "pf": 0, "to": 3, "stl": 0, "blk": 0, "pts": 1},
+            {"name": "A.J. Guyton", "min": 38, "fg": "11-19", "ft": "0-0", "tp": "5-8", "reb": 1, "ast": 3, "pf": 1, "to": 1, "stl": 2, "blk": 0, "pts": 27},
+            {"name": "Rob Turner", "min": 16, "fg": "1-2", "ft": "0-0", "tp": "0-1", "reb": 2, "ast": 0, "pf": 0, "to": 3, "stl": 1, "blk": 0, "pts": 2},
+            {"name": "Richard Mandeville", "min": 10, "fg": "3-5", "ft": "1-3", "tp": "0-1", "reb": 4, "ast": 1, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 7},
+            {"name": "Charlie Miller", "min": 6, "fg": "0-1", "ft": "0-0", "tp": "0-0", "reb": 1, "ast": 1, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Luke Jimenez", "min": 18, "fg": "1-2", "ft": "0-0", "tp": "1-1", "reb": 1, "ast": 4, "pf": 0, "to": 2, "stl": 0, "blk": 0, "pts": 3}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": [],
+  "notes": "Official NCAA box score, St. John Arena, Feb 19 1998, Indiana at Ohio State. 'tp' key holds 3-point FG made-attempted per sheet header ('3-Pts'); per-player scoring points are in 'pts' (taken directly from sheet's TP/points column, not computed). Rebound figures are total rebounds only (OF+DF sheet columns condensed to single 'reb' total); individual OF/DF split omitted per schema. Both teams' individual point totals reconciled exactly against final score (OSU 72, IND 74) via cross-checks against team-total FG/FT/3pt/assist/turnover/steal/block/minute sums printed on the sheet (all matched after resolving a few OCR ambiguities: Davis assist/turnover values, Jimenez's 3pt vs FT make, one Sanderson FT value). DNP players (OSU: Hanna, Lumpkin, Wilson, Steele; IND: Eggers, Richardson) omitted — no stats. Minor imprecision possible in offensive/defensive rebound sub-splits (not carried into output) but total rebound and points figures are checksum-verified against printed team totals."
+}

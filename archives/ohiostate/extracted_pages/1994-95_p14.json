@@ -1,0 +1,9 @@
+{
+  "page": 14,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Penn State @ Ohio State, 1/14/1995 (St. John Arena) — page is a clear, fully typed official NCAA box score, both team rosters transcribed. Ohio State's checksum verifies exactly (player TP sum 10+10+8+9+17+0+6+4=64 == team final score 64). Penn State's does not: individually self-consistent player TP values (2*(FG-3FG)+3*3FG+FT for every player checks out against each player's own printed TP) sum to 76, but the box score's own TOTALS row (78) and the independent halftime/final score table (35+43=78) both say 78 — a 2-point gap. FG made/attempted also fail to foot (player sum 24-of-54 vs printed TOTALS 25-of-56), while FT and 3PT columns foot perfectly (23-of-28 and 5-of-15), so one PSU player's FG line is likely off by one make/two attempts, but which player is not determinable from the scan even after a second full read. Minor ancillary-column footing gaps (PF, AST, TO, BLK) also appear on both teams' rows, consistent with normal 1990s hand-tallied box-score noise, and were not treated as disqualifying since points is the checksum stat — but PSU's points-column failure is disqualifying per instructions. Skipping rather than guessing which PSU player line to adjust."
+    }
+  ]
+}

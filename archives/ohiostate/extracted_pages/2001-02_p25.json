@@ -1,0 +1,43 @@
+{
+  "page": 25,
+  "games": [
+    {
+      "date": "2002-01-20",
+      "opponent": "Indiana",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 57,
+          "players": [
+            {"name": "Zach Williams", "min": 34, "fg": "4-7", "tp": "0-0", "ft": "0-0", "reb": 3, "ast": 2, "pf": 2, "to": 4, "stl": 0, "blk": 0, "pts": 8},
+            {"name": "Velimir Radinovic", "min": 8, "fg": "2-2", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 3, "to": 2, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Brent Darby", "min": 27, "fg": "2-7", "tp": "0-1", "ft": "1-6", "reb": 7, "ast": 1, "pf": 3, "to": 4, "stl": 1, "blk": 0, "pts": 4},
+            {"name": "Brian Brown", "min": 38, "fg": "9-16", "tp": "3-5", "ft": "2-3", "reb": 6, "ast": 3, "pf": 3, "to": 0, "stl": 0, "blk": 0, "pts": 23},
+            {"name": "Boban Savovic", "min": 31, "fg": "1-4", "tp": "0-1", "ft": "5-5", "reb": 2, "ast": 0, "pf": 4, "to": 3, "stl": 1, "blk": 1, "pts": 7},
+            {"name": "B. Fuss-Cheatham", "min": 7, "fg": "0-1", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 1, "blk": 0, "pts": 0},
+            {"name": "Sean Connolly", "min": 20, "fg": "2-5", "tp": "1-3", "ft": "0-0", "reb": 2, "ast": 1, "pf": 3, "to": 1, "stl": 1, "blk": 1, "pts": 5},
+            {"name": "Terence Dials", "min": 26, "fg": "3-6", "tp": "0-0", "ft": "0-0", "reb": 6, "ast": 0, "pf": 3, "to": 0, "stl": 0, "blk": 2, "pts": 6},
+            {"name": "Will Dudley", "min": 3, "fg": "0-1", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 1, "pts": 0},
+            {"name": "Tim Martin", "min": 6, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 2, "ast": 0, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Indiana Hoosiers",
+          "score": 63,
+          "players": [
+            {"name": "Jared Jeffries", "min": 39, "fg": "3-12", "tp": "2-5", "ft": "2-4", "reb": 5, "ast": 3, "pf": 1, "to": 2, "stl": 2, "blk": 0, "pts": 10},
+            {"name": "Jarrad Odle", "min": 13, "fg": "5-7", "tp": "0-0", "ft": "0-1", "reb": 6, "ast": 1, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 10},
+            {"name": "Tom Coverdale", "min": 35, "fg": "2-8", "tp": "0-6", "ft": "1-3", "reb": 4, "ast": 8, "pf": 2, "to": 0, "stl": 2, "blk": 1, "pts": 5},
+            {"name": "Dane Fife", "min": 39, "fg": "2-5", "tp": "1-4", "ft": "5-6", "reb": 2, "ast": 2, "pf": 3, "to": 1, "stl": 3, "blk": 0, "pts": 10},
+            {"name": "Kyle Hornsby", "min": 30, "fg": "2-6", "tp": "2-6", "ft": "1-2", "reb": 5, "ast": 0, "pf": 3, "to": 0, "stl": 0, "blk": 0, "pts": 7},
+            {"name": "A.J. Moye", "min": 10, "fg": "2-3", "tp": "1-2", "ft": "0-0", "reb": 4, "ast": 0, "pf": 3, "to": 1, "stl": 0, "blk": 0, "pts": 5},
+            {"name": "Donald Perry", "min": 6, "fg": "0-1", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 2, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Jeff Newton", "min": 28, "fg": "5-12", "tp": "0-0", "ft": "6-6", "reb": 6, "ast": 2, "pf": 1, "to": 3, "stl": 0, "blk": 0, "pts": 16}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

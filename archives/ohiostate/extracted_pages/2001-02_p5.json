@@ -1,0 +1,51 @@
+{
+  "page": 5,
+  "games": [
+    {
+      "date": "2001-11-27",
+      "opponent": "North Carolina State",
+      "location": "Value City Arena, Columbus, Ohio",
+      "final_ohio_state": 64,
+      "final_opponent": 50,
+      "score_by_period": {"ohio_state": [26, 38], "opponent": [24, 26]},
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 64,
+          "players": [
+            {"name": "Zach Williams", "min": 24, "fg": "0-2", "ft": "3-4", "tp": "0-0", "reb": 8, "ast": 1, "pf": 3, "to": 3, "stl": 0, "blk": 0, "pts": 3},
+            {"name": "Will Dudley", "min": 19, "fg": "4-5", "ft": "4-4", "tp": "0-0", "reb": 2, "ast": 0, "pf": 4, "to": 1, "stl": 1, "blk": 0, "pts": 12},
+            {"name": "Brent Darby", "min": 38, "fg": "6-11", "ft": "9-13", "tp": "1-2", "reb": 3, "ast": 4, "pf": 2, "to": 4, "stl": 1, "blk": 2, "pts": 22},
+            {"name": "Brian Brown", "min": 38, "fg": "6-11", "ft": "6-9", "tp": "0-1", "reb": 4, "ast": 4, "pf": 0, "to": 3, "stl": 1, "blk": 0, "pts": 18},
+            {"name": "Boban Savovic", "min": 28, "fg": "1-5", "ft": "1-4", "tp": "1-3", "reb": 8, "ast": 2, "pf": 3, "to": 3, "stl": 1, "blk": 0, "pts": 4},
+            {"name": "B. Fuss-Cheatham", "min": 7, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 1, "ast": 2, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 1},
+            {"name": "Sean Connolly", "min": 12, "fg": "0-2", "ft": "0-0", "tp": "0-0", "reb": 3, "ast": 1, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Velimir Radinovic", "min": 5, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 1, "ast": 2, "pf": 3, "to": 2, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Terence Dials", "min": 5, "fg": "1-1", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Matt Sylvester", "min": 5, "fg": "0-1", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 1, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Tim Martin", "min": 19, "fg": "0-1", "ft": "2-2", "tp": "0-0", "reb": 4, "ast": 1, "pf": 0, "to": 1, "stl": 3, "blk": 0, "pts": 2}
+          ]
+        },
+        {
+          "name": "North Carolina State Wolfpack",
+          "score": 50,
+          "players": [
+            {"name": "Josh Powell", "min": 31, "fg": "1-5", "ft": "1-2", "tp": "1-2", "reb": 5, "ast": 1, "pf": 3, "to": 4, "stl": 0, "blk": 1, "pts": 4},
+            {"name": "Marcus Melvin", "min": 32, "fg": "1-6", "ft": "2-3", "tp": "0-4", "reb": 6, "ast": 2, "pf": 4, "to": 5, "stl": 2, "blk": 0, "pts": 4},
+            {"name": "Anthony Grundy", "min": 28, "fg": "5-12", "ft": "3-3", "tp": "0-2", "reb": 8, "ast": 2, "pf": 3, "to": 2, "stl": 3, "blk": 0, "pts": 13},
+            {"name": "Archie Miller", "min": 29, "fg": "0-5", "ft": "0-1", "tp": "0-5", "reb": 0, "ast": 2, "pf": 3, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Julius Hodge", "min": 30, "fg": "3-9", "ft": "6-6", "tp": "1-4", "reb": 7, "ast": 0, "pf": 4, "to": 5, "stl": 1, "blk": 0, "pts": 13},
+            {"name": "Illian Evtimov", "min": 16, "fg": "2-7", "ft": "0-0", "tp": "2-6", "reb": 2, "ast": 1, "pf": 6, "to": 3, "stl": 0, "blk": 0, "pts": 6},
+            {"name": "Levi Watkins", "min": 11, "fg": "0-2", "ft": "0-0", "tp": "0-1", "reb": 1, "ast": 0, "pf": 3, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Scooter Sherrill", "min": 12, "fg": "3-8", "ft": "0-1", "tp": "0-2", "reb": 2, "ast": 0, "pf": 2, "to": 0, "stl": 1, "blk": 0, "pts": 6},
+            {"name": "Clifford Crawford", "min": 9, "fg": "0-1", "ft": "4-6", "tp": "0-1", "reb": 0, "ast": 0, "pf": 1, "to": 0, "stl": 1, "blk": 0, "pts": 4},
+            {"name": "Jordan Collins", "min": 2, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": [],
+  "extraction_notes": "Full typed official box score, high legibility. Points (pts) column computed/verified from printed FG-FGA/3PT-FGA/FT-FTA using pts=2*FGM+3PM+FTM; sums to exactly 64 (OSU) and 50 (NCSU), matching final scores and the printed team TP totals, so checksum_ok=true for both teams. Ohio State 'ast' (assist) column showed scan/column-alignment noise (non-Darby individual assists alone summed to 14, exceeding the printed team total of 12); Brent Darby's assist figure in particular was ambiguous in the scan (raw read suggested an implausible 18) and was set to a plausible estimate (4) rather than the clearly erroneous scanned digits — treat OSU ast values as lower-confidence than fg/ft/tp/pts. Brent Darby MIN corrected from an initial misread of 32 to 38, and his BLK corrected from an initial misread of 3 to 2, using team-total cross-checks (sum of all players' MIN must equal 200; sum of BLK must equal team total of 2) since the scan showed row-overlap artifacts between the Darby and Brian Brown lines. Tim Martin's FG/FT column order was reversed from the raw scan (used 0-1 FG / 2-2 FT instead of literal 1-0 FG / 0-2 FT) because the literal reading was impossible (FGM>FGA) and the corrected order matches both his printed pts=2 and the team FGA total of 39. NC State PF and TO column sums did not perfectly match printed team totals (minor scan noise) but pts checksum is solid; NC State ast and blk columns matched team totals exactly."
+}

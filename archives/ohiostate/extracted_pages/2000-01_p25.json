@@ -1,0 +1,43 @@
+{
+  "page": 25,
+  "games": [
+    {
+      "date": "2001-02-11",
+      "opponent": "Wisconsin Badgers",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 63,
+          "players": [
+            {"name": "Zach Williams", "min": 17, "fg": "1-1", "ft": "1-2", "tp": "0-0", "reb": 2, "ast": 0, "pf": 1, "to": 2, "stl": 2, "blk": 0, "pts": 3},
+            {"name": "Ken Johnson", "min": 36, "fg": "5-9", "ft": "3-3", "tp": "0-0", "reb": 7, "ast": 0, "pf": 2, "to": 3, "stl": 0, "blk": 1, "pts": 13},
+            {"name": "Sean Connolly", "min": 29, "fg": "3-6", "ft": "3-4", "tp": "1-2", "reb": 2, "ast": 2, "pf": 0, "to": 0, "stl": 1, "blk": 0, "pts": 10},
+            {"name": "Brian Brown", "min": 38, "fg": "5-7", "ft": "2-5", "tp": "1-2", "reb": 5, "ast": 5, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 13},
+            {"name": "Boban Savovic", "min": 15, "fg": "1-5", "ft": "0-0", "tp": "0-2", "reb": 2, "ast": 1, "pf": 2, "to": 0, "stl": 1, "blk": 0, "pts": 2},
+            {"name": "Brent Darby", "min": 35, "fg": "5-9", "ft": "7-11", "tp": "1-5", "reb": 6, "ast": 4, "pf": 3, "to": 1, "stl": 0, "blk": 0, "pts": 18},
+            {"name": "Cobe Ocokoljic", "min": 2, "fg": "0-2", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Will Dudley", "min": 15, "fg": "1-3", "ft": "0-0", "tp": "0-0", "reb": 2, "ast": 0, "pf": 2, "to": 1, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Tim Martin", "min": 13, "fg": "1-1", "ft": "0-0", "tp": "0-0", "reb": 2, "ast": 0, "pf": 2, "to": 1, "stl": 0, "blk": 0, "pts": 2}
+          ]
+        },
+        {
+          "name": "Wisconsin Badgers",
+          "score": 58,
+          "players": [
+            {"name": "Andy Kowske", "min": 30, "fg": "4-7", "ft": "2-4", "tp": "0-1", "reb": 7, "ast": 2, "pf": 5, "to": 0, "stl": 0, "blk": 1, "pts": 10},
+            {"name": "Mark Vershaw", "min": 36, "fg": "3-8", "ft": "7-8", "tp": "0-2", "reb": 3, "ast": 5, "pf": 1, "to": 3, "stl": 0, "blk": 0, "pts": 13},
+            {"name": "Kirk Penney", "min": 29, "fg": "4-10", "ft": "0-0", "tp": "4-6", "reb": 2, "ast": 2, "pf": 1, "to": 0, "stl": 3, "blk": 0, "pts": 12},
+            {"name": "Mike Kelley", "min": 35, "fg": "3-4", "ft": "0-0", "tp": "2-3", "reb": 2, "ast": 5, "pf": 3, "to": 2, "stl": 3, "blk": 2, "pts": 8},
+            {"name": "Roy Boone", "min": 32, "fg": "2-9", "ft": "0-0", "tp": "1-5", "reb": 3, "ast": 2, "pf": 4, "to": 2, "stl": 1, "blk": 0, "pts": 5},
+            {"name": "Travon Davis", "min": 5, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 1, "ast": 1, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Maurice Linton", "min": 13, "fg": "0-2", "ft": "0-0", "tp": "0-1", "reb": 2, "ast": 0, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Ricky Bower", "min": 13, "fg": "2-3", "ft": "0-0", "tp": "2-3", "reb": 0, "ast": 1, "pf": 4, "to": 0, "stl": 0, "blk": 0, "pts": 6},
+            {"name": "Charlie Wills", "min": 15, "fg": "2-3", "ft": "0-0", "tp": "0-1", "reb": 1, "ast": 1, "pf": 2, "to": 1, "stl": 0, "blk": 0, "pts": 4}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

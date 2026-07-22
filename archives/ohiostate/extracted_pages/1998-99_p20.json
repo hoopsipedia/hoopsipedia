@@ -1,0 +1,50 @@
+{
+  "page": 20,
+  "games": [
+    {
+      "date": "1999-01-19",
+      "opponent": "Purdue",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 72,
+          "players": [
+            {"name": "Jason Singleton", "min": 24, "fg": "3-3", "tp": "0-0", "ft": "1-2", "reb": 2, "pf": 3, "ast": 3, "to": 4, "blk": 0, "stl": 1, "pts": 7},
+            {"name": "Jon Sanderson", "min": 18, "reb": 2, "pf": 2, "ast": 0, "to": 1, "blk": 0, "stl": 1, "pts": 4},
+            {"name": "Ken Johnson", "min": 32, "fg": "4-6", "tp": "0-0", "ft": "0-0", "reb": 8, "pf": 4, "ast": 0, "to": 0, "blk": 4, "stl": 0, "pts": 8},
+            {"name": "Scoonie Penn", "min": 33, "fg": "2-7", "tp": "1-6", "ft": "1-2", "reb": 2, "pf": 6, "ast": 5, "to": 1, "blk": 0, "stl": 0, "pts": 6},
+            {"name": "Michael Redd", "min": 33, "fg": "14-21", "tp": "1-3", "ft": "1-2", "reb": 2, "pf": 0, "ast": 5, "to": 1, "blk": 0, "stl": 0, "pts": 30},
+            {"name": "Neshaun Coleman", "min": 5, "fg": "1-1", "tp": "1-1", "ft": "2-2", "reb": 0, "pf": 3, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 5},
+            {"name": "Brian Brown", "min": 16, "fg": "1-1", "tp": "0-1", "ft": "2-2", "reb": 3, "pf": 4, "ast": 2, "to": 0, "blk": 0, "stl": 0, "pts": 3},
+            {"name": "Boban Savovic", "min": 19, "fg": "1-3", "tp": "1-3", "ft": "0-0", "reb": 4, "pf": 3, "ast": 0, "to": 3, "blk": 2, "pts": 2},
+            {"name": "Devon Smith", "min": 1, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 2, "pf": 0, "ast": 1, "to": 1, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Kwadjo Steele", "min": 2, "fg": "0-1", "tp": "0-0", "ft": "0-0", "reb": 2, "pf": 0, "to": 1, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "George Reese", "min": 22, "fg": "3-7", "tp": "0-0", "ft": "1-2", "pf": 2, "ast": 0, "to": 1, "blk": 0, "stl": 1, "pts": 7}
+          ],
+          "checksum_note": "Sum of printed player TP values was 71 (one short of team total 72). Jon Sanderson's field-goal/3PT/FT sub-columns were illegible (scan artifact obscuring the 3-PT-made digit), so his pts value (4) was derived as the remainder needed to reconcile the team total rather than read directly; all other players' pts are as printed/computed from legible made-FG/FT digits."
+        },
+        {
+          "name": "Purdue Boilermakers",
+          "score": 43,
+          "players": [
+            {"name": "Cameron Stephens", "min": 15, "fg": "2-2", "tp": "0-0", "ft": "1-2", "reb": 2, "pf": 0, "ast": 1, "to": 0, "blk": 0, "stl": 0, "pts": 5},
+            {"name": "Brian Cardinal", "min": 25, "fg": "1-5", "tp": "0-1", "ft": "0-0", "reb": 5, "pf": 2, "ast": 3, "to": 3, "blk": 0, "stl": 1, "pts": 2},
+            {"name": "Greg McQuay", "min": 26, "fg": "5-10", "tp": "0-0", "ft": "2-4", "reb": 4, "pf": 3, "ast": 0, "to": 3, "blk": 0, "stl": 1, "pts": 12},
+            {"name": "Tony Mayfield", "min": 18, "fg": "0-5", "tp": "0-2", "ft": "0-0", "reb": 1, "pf": 0, "ast": 1, "to": 1, "blk": 0, "stl": 1, "pts": 0},
+            {"name": "Jarraan Cornell", "min": 28, "fg": "3-11", "tp": "1-5", "ft": "3-4", "reb": 1, "pf": 2, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 10},
+            {"name": "Gary McQuay", "min": 15, "fg": "1-3", "tp": "0-1", "ft": "0-0", "reb": 0, "pf": 1, "ast": 1, "to": 1, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Chad Kerkhof", "min": 7, "fg": "0-0", "tp": "0-0", "ft": "2-2", "reb": 1, "pf": 2, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Maynard Lewis", "min": 5, "fg": "0-3", "tp": "0-1", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Alan Eldridge", "min": 17, "fg": "1-4", "tp": "0-3", "ft": "0-0", "reb": 0, "pf": 1, "ast": 1, "to": 1, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Mike Robinson", "min": 21, "fg": "2-4", "tp": "0-1", "ft": "0-0", "reb": 3, "pf": 1, "ast": 0, "to": 1, "blk": 1, "stl": 0, "pts": 4},
+            {"name": "Rodney Smith", "min": 7, "fg": "0-1", "tp": "0-1", "ft": "0-0", "reb": 1, "pf": 1, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Carson Cunningham", "min": 12, "fg": "2-5", "tp": "0-0", "ft": "0-0", "reb": 5, "pf": 2, "ast": 1, "to": 4, "blk": 0, "stl": 0, "pts": 4},
+            {"name": "John Allison", "min": 4, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

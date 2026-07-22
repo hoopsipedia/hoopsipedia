@@ -1,0 +1,9 @@
+{
+  "page": 6,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page 6 contains a single game (North Carolina-Wilmington at Ohio State, 12-02-01, Value City Arena; final NCW 54, OSU 80). The visitor (UNC-Wilmington) box score is legible and checksums cleanly (player points sum to 54 = final score). However, the Ohio State (home) player rows have several stat columns (notably FT-FTA and the rebound/assist/steal block) that are too faint/ambiguous to transcribe with confidence -- individual player point totals computed from FG/FT made do not reconcile with the printed TP column for multiple players (e.g. Brown, Brian: FG 4-9 & FT 3-4 implies 11 pts but printed TP shows 8; similar mismatches for later rows), even though the team totals line (26-51 FG, 25-33 FT, TP 80) matches the final score. Rather than guess at which digits are misread, the full game is skipped since both teams' box scores are required and the Ohio State side cannot be transcribed confidently within the two-read limit."
+    }
+  ]
+}

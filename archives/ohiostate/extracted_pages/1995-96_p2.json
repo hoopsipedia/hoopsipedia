@@ -1,0 +1,43 @@
+{
+  "page": 2,
+  "games": [
+    {
+      "date": "1995-11-28",
+      "opponent": "West Virginia Mountaineers",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 77,
+          "players": [
+            {"name": "Rick Yudt", "min": 30, "fg": "5-8", "tp": "2-3", "ft": "9-10", "reb": 4, "pf": 3, "pts": 21},
+            {"name": "Shaun Stonerook", "min": 32, "fg": "3-6", "tp": "0-3", "ft": "3-4", "reb": 8, "pf": 3, "pts": 9},
+            {"name": "Jermaine Tate", "min": 31, "fg": "1-3", "tp": "0-0", "ft": "0-0", "reb": 5, "pf": 3, "pts": 2},
+            {"name": "Damon Stringer", "min": 32, "fg": "6-17", "tp": "2-7", "ft": "2-3", "reb": 2, "pf": 2, "pts": 16},
+            {"name": "Jami Bosley", "min": 25, "fg": "5-8", "tp": "0-0", "ft": "0-2", "reb": 4, "pf": 3, "pts": 10},
+            {"name": "Steve Belter", "min": 18, "fg": "1-4", "tp": "0-0", "ft": "0-0", "reb": 4, "pf": 2, "pts": 2},
+            {"name": "Neshaun Coleman", "min": 18, "fg": "2-6", "tp": "1-4", "ft": "2-2", "reb": 0, "pf": 1, "pts": 7},
+            {"name": "Jason Singleton", "min": 14, "fg": "5-6", "tp": "0-0", "ft": "0-0", "reb": 0, "pf": 2, "pts": 10}
+          ]
+        },
+        {
+          "name": "West Virginia Mountaineers",
+          "score": 68,
+          "players": [
+            {"name": "Damian Owens", "min": 34, "fg": "7-16", "tp": "2-4", "ft": "2-4", "reb": 13, "ast": 2, "pf": 3, "to": 3, "blk": 1, "pts": 18},
+            {"name": "Brent Solheim", "min": 15, "fg": "1-4", "tp": "0-0", "ft": "0-0", "reb": 2, "ast": 0, "pf": 1, "to": 2, "blk": 0, "pts": 2},
+            {"name": "Sandro Varejao", "min": 18, "fg": "3-5", "tp": "0-0", "ft": "1-2", "reb": 3, "ast": 1, "pf": 1, "to": 1, "blk": 0, "pts": 7},
+            {"name": "Cyrus Jones", "min": 36, "fg": "10-19", "tp": "4-10", "ft": "4-5", "reb": 3, "ast": 2, "pf": 4, "to": 4, "blk": 0, "stl": 1, "pts": 28},
+            {"name": "Seldon Jefferson", "min": 36, "fg": "1-6", "tp": "0-3", "ft": "3-5", "reb": 3, "ast": 8, "pf": 2, "to": 7, "blk": 0, "stl": 1, "pts": 5},
+            {"name": "Gordon Malone", "min": 17, "fg": "1-1", "tp": "0-0", "ft": "3-6", "reb": 5, "ast": 0, "pf": 3, "to": 5, "blk": 0, "pts": 5},
+            {"name": "David Liguori", "min": 12, "fg": "1-1", "tp": "0-0", "ft": "1-2", "reb": 2, "ast": 0, "pf": 3, "to": 1, "blk": 0, "pts": 3},
+            {"name": "Leon Agnew", "min": 12, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "pf": 1, "to": 2, "blk": 1, "stl": 0, "pts": 0},
+            {"name": "Jarrod West", "min": 8, "fg": "0-3", "tp": "0-1", "ft": "0-0", "reb": 2, "ast": 1, "pf": 0, "to": 3, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "LeVon Lamb", "min": 5, "fg": "0-1", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 0, "blk": 0, "stl": 1, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

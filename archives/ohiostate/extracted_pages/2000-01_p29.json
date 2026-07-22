@@ -1,0 +1,9 @@
+{
+  "page": 29,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Ohio State Buckeyes at Northwestern Wildcats, 02/24/01, Welsh-Ryan Arena, Evanston IL. Team-level totals and final score are clearly legible and internally consistent (OSU: FG 26-53, 3PT 5-13, FT 12-17 -> 69 pts, matching period score 31+38=69; Northwestern: FG 20-52, 3PT 4-17, FT 13-21 -> 57 pts, matching period score 28+29=57), but the individual player stat lines are printed in very small, tightly-kerned type and the per-player FG/FT/attempt digits could not be read with confidence even after a second pass -- summed player FG/FT makes did not reconcile against the team totals row (e.g. OSU player FG makes summed to ~23 vs team total 26, FT makes summed to ~8 vs team total 12), so no reliable per-player checksum could be achieved. Skipping rather than guessing digits, per instructions."
+    }
+  ]
+}

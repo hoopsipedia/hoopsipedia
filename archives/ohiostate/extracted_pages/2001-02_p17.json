@@ -1,0 +1,9 @@
+{
+  "page": 17,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Official box score for Indiana at Ohio State, 2002-01-18 (Value City Arena), final score Ohio State 73, Indiana 67 (per Score by Periods line). Indiana's table (top) transcribes cleanly and checksums exactly (player TP sum 22+16+12+4+5+3+0+1+4=67, matching both the team Totals row and the final score). However, Ohio State's table (bottom, home team) has compressed/misaligned row spacing for the bench players (Radinovic, Darby, Savovic, Fuss-Cheatham, Connolly, Dials, Dudley, Martin) such that the printed per-player TP column values sum to 87, not the actual final score of 73. Recomputing points from FG-FGA/3PT/FT-FTA columns instead also failed to reconcile: summed FG attempts across OSU players came to 60 vs. the team Totals row's 57. Two read-throughs of the page (the maximum allowed) were not enough to resolve the pixel-level column ambiguity in the lower table well enough to transcribe OSU's player lines confidently. Skipping the whole game rather than submitting a one-sided or guessed box score."
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "page": 7,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Official box score 'Denver vs Ohio State' (final Denver 46, Ohio State 83, at Columbus, per period totals 18+28=46 and 43+40=83). Date fragment on scan reads only '-7-0 8 p.m. at Columbus, Ohio' (left edge cut off), so date could not be confidently determined. Ohio State side checksums perfectly (player TP sum = 83 = team total). However Denver's player lines do not reconcile: individual TP sum = 45 vs team total TP = 46; individual 3PT-made sum = 4 vs team 3PT total 5-15 (cross-confirmed by 1st/2nd half splits 2-6 + 3-9 = 5-15); individual 3PT-attempted sum = 13 vs team total 15 attempts (off by 2). This points to at least one misread digit in Denver's handwritten/typed 3PT column that a second read at the same resolution could not resolve. Per instructions, skipping rather than guessing/inventing values; entire game (both teams) held out since Denver side is unreliable and the date itself is unconfirmed. Recommend re-scanning/higher-res capture of this page to re-attempt."
+    }
+  ]
+}

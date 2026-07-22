@@ -1,0 +1,9 @@
+{
+  "page": 7,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Checksum failure: page shows Dec 6, 1997 box score, South Florida 67 at Ohio State 49 (St. John Arena). South Florida's printed player TP column sums to 69, not the team's final score of 67 (cross-validated via 1st/2nd-half score line 34+33=67). Ohio State's individual FT-made sum (18) does not match the team FT-made total of 19 (cross-validated via half-by-half FT% breakdown 11-14 + 8-12 = 19-26). FG and 3FG made/attempted sums for both teams do match their printed totals exactly, and FT attempted sums match too, so the discrepancy is isolated to a small number of FT-made/TP digits that are ambiguous in the scan. Re-read the page once already per budget; could not confidently resolve which specific digit(s) are misprinted/misread without further zoom, so both teams are skipped rather than guessed."
+    }
+  ]
+}

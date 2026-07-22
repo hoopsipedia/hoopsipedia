@@ -1,0 +1,43 @@
+{
+  "page": 8,
+  "games": [
+    {
+      "date": "1996-12-21",
+      "opponent": "USC",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 68,
+          "players": [
+            {"name": "Jason Singleton", "min": 34, "fg": "3-8", "ft": "1-2", "tp": "0-0", "reb": 7, "ast": 2, "pf": 3, "to": 3, "stl": 0, "blk": 0, "pts": 7},
+            {"name": "Jermaine Tate", "min": 35, "fg": "7-13", "ft": "5-7", "tp": "0-0", "reb": 5, "ast": 0, "pf": 3, "to": 5, "stl": 0, "blk": 1, "pts": 19},
+            {"name": "Shaun Stonerook", "min": 34, "fg": "3-7", "ft": "8-8", "tp": "0-0", "reb": 10, "ast": 4, "pf": 3, "to": 2, "stl": 3, "blk": 0, "pts": 14},
+            {"name": "Neshaun Coleman", "min": 23, "fg": "2-7", "ft": "0-0", "tp": "1-6", "reb": 0, "ast": 1, "pf": 3, "to": 5, "stl": 0, "blk": 0, "pts": 5},
+            {"name": "Damon Stringer", "min": 36, "fg": "6-15", "ft": "3-3", "tp": "1-5", "reb": 3, "ast": 5, "pf": 4, "to": 5, "stl": 4, "blk": 2, "pts": 16},
+            {"name": "Sean Tucker", "min": 8, "fg": "0-1", "ft": "0-0", "tp": "0-0", "reb": 1, "ast": 0, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Don Jantonio", "min": 4, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Otis Winston", "min": 13, "fg": "1-4", "ft": "0-0", "tp": "0-0", "reb": 1, "ast": 0, "pf": 1, "to": 0, "stl": 1, "blk": 0, "pts": 2},
+            {"name": "Carlos Davis", "min": 13, "fg": "2-3", "ft": "1-2", "tp": "0-1", "reb": 3, "ast": 3, "pf": 1, "to": 1, "stl": 0, "blk": 1, "pts": 5}
+          ]
+        },
+        {
+          "name": "USC Trojans",
+          "score": 79,
+          "players": [
+            {"name": "Anthony White", "min": 23, "fg": "3-5", "ft": "1-2", "tp": "0-0", "reb": 5, "ast": 2, "pf": 5, "to": 1, "stl": 0, "blk": 0, "pts": 7},
+            {"name": "Jaha Wilson", "min": 40, "fg": "6-13", "ft": "4-4", "tp": "0-1", "reb": 9, "ast": 4, "pf": 1, "to": 3, "stl": 0, "blk": 1, "pts": 16},
+            {"name": "David Crouse", "min": 34, "fg": "6-9", "ft": "3-5", "tp": "0-0", "reb": 8, "ast": 1, "pf": 4, "to": 2, "stl": 1, "blk": 1, "pts": 15},
+            {"name": "Ken Sims", "min": 38, "fg": "5-10", "ft": "2-2", "tp": "5-9", "reb": 4, "ast": 4, "pf": 1, "to": 6, "stl": 0, "blk": 0, "pts": 17},
+            {"name": "Elias Ayuso", "min": 40, "fg": "5-12", "ft": "5-8", "tp": "2-6", "reb": 1, "ast": 4, "pf": 4, "to": 4, "stl": 4, "blk": 0, "pts": 17},
+            {"name": "Jarvis Turner", "min": 8, "fg": "1-1", "ft": "0-0", "tp": "0-0", "reb": 2, "ast": 1, "pf": 4, "to": 0, "stl": 1, "blk": 0, "pts": 2},
+            {"name": "Ramy Shoukry", "min": 3, "fg": "0-1", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Gary Johnson", "min": 10, "fg": "1-3", "ft": "0-0", "tp": "0-1", "reb": 4, "ast": 2, "pf": 1, "to": 4, "stl": 1, "blk": 0, "pts": 2},
+            {"name": "Behzad Souferian", "min": 4, "fg": "0-0", "ft": "3-4", "tp": "0-0", "reb": 2, "ast": 0, "pf": 0, "to": 3, "stl": 0, "blk": 1, "pts": 3}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

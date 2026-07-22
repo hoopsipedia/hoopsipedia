@@ -1,0 +1,9 @@
+{
+  "page": 24,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page 24 is an official NCAA box score (faxed sheet, 'SENT BY: University of Iowa 2-18-95') for Ohio State @ Iowa, 1994-95, final Iowa 85 - Ohio State 66. The visitor (Ohio State) side is legible and its player PTS column checksums exactly to the team total (66), but the home (Iowa) side is degraded by fax scan quality: column alignment for OR/DR/TOT/PF/PTS is ambiguous/inconsistent row to row (token counts don't reliably map to the 16-column header), and a best-effort reading of Iowa's PTS column sums to well over 85, indicating misreads rather than a legitimate discrepancy. Since one full team's stat line cannot be transcribed confidently and the task requires both teams' checksums, the entire game is skipped rather than guessed. Only one Read pass was used per instructions, so a corrective re-read of the home-team columns was not attempted."
+    }
+  ]
+}

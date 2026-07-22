@@ -1,0 +1,53 @@
+{
+  "page": 2,
+  "games": [
+    {
+      "date": "1997-11-19",
+      "opponent": "Kent State",
+      "site": "St. John Arena, Columbus, Ohio",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 73,
+          "players": [
+            {"name": "Jason Singleton", "min": 35, "fg": "11-16", "ft": "1-8", "tp": "0-0", "reb": 7, "ast": 2, "pf": 2, "to": 3, "stl": 0, "blk": 0, "pts": 23},
+            {"name": "Jon Sanderson", "min": 29, "fg": "2-6", "ft": "1-3", "tp": "0-3", "reb": 3, "ast": 1, "pf": 4, "to": 0, "stl": 0, "blk": 0, "pts": 5},
+            {"name": "Ken Johnson", "min": 40, "fg": "4-7", "ft": "3-7", "tp": "0-0", "reb": 2, "ast": 1, "pf": 3, "to": 1, "stl": 1, "blk": 2, "pts": 11},
+            {"name": "Carlos Davis", "min": 38, "fg": "5-9", "ft": "2-6", "tp": "0-1", "reb": 5, "ast": 9, "pf": 1, "to": 4, "stl": 3, "blk": 0, "pts": 12},
+            {"name": "Michael Redd", "min": 39, "fg": "9-17", "ft": "2-4", "tp": "1-3", "reb": 9, "ast": 2, "pf": 2, "to": 3, "stl": 3, "blk": 0, "pts": 21},
+            {"name": "Kwadjo Steele", "min": 13, "fg": "0-1", "ft": "1-1", "tp": "0-1", "reb": 0, "ast": 1, "pf": 3, "to": 2, "stl": 0, "blk": 0, "pts": 1},
+            {"name": "Neshaun Coleman", "min": 6, "fg": "0-1", "ft": "0-0", "tp": "0-0", "reb": 1, "ast": 0, "pf": 3, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Byron Wilson", "min": 0, "pts": 0, "note": "DNP"},
+            {"name": "Damon Stringer", "min": 0, "pts": 0, "note": "DNP"},
+            {"name": "Brad Hosket", "min": 0, "pts": 0, "note": "DNP"},
+            {"name": "Eric Hanna", "min": 0, "pts": 0, "note": "DNP"},
+            {"name": "Sean Tucker", "min": 0, "pts": 0, "note": "DNP"},
+            {"name": "John Lumpkin", "min": 0, "pts": 0, "note": "DNP"},
+            {"name": "Shamar Herron", "min": 0, "pts": 0, "note": "DNP"}
+          ]
+        },
+        {
+          "name": "Kent State Golden Flashes",
+          "score": 67,
+          "players": [
+            {"name": "Kyrem Massey", "min": 21, "fg": "7-16", "ft": "5-8", "tp": "1-5", "reb": 4, "ast": 2, "pf": 3, "to": 1, "stl": 3, "blk": 0, "pts": 20},
+            {"name": "John Whorton", "min": 34, "fg": "4-7", "ft": "1-1", "tp": "0-0", "reb": 7, "ast": 1, "pf": 4, "to": 1, "stl": 3, "blk": 0, "pts": 9},
+            {"name": "Mike Perry", "min": 14, "fg": "4-6", "ft": "2-2", "tp": "0-1", "reb": 6, "ast": 0, "pf": 2, "to": 4, "stl": 0, "blk": 0, "pts": 10},
+            {"name": "Ed Norvell", "min": 37, "fg": "4-9", "ft": "0-2", "tp": "1-4", "reb": 4, "ast": 5, "pf": 5, "to": 4, "stl": 0, "blk": 0, "pts": 9},
+            {"name": "Scott Effertz", "min": 25, "fg": "0-5", "ft": "0-0", "tp": "0-4", "reb": 4, "ast": 4, "pf": 5, "to": 2, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Geoffrey Vaughn", "min": 15, "fg": "2-3", "ft": "2-3", "tp": "0-2", "ast": 2, "to": 3, "stl": 0, "blk": 0, "pts": 6},
+            {"name": "Al Moore", "min": 8, "fg": "2-5", "ft": "0-0", "tp": "2-4", "reb": 2, "ast": 1, "pf": 0, "to": 2, "stl": 1, "blk": 0, "pts": 6},
+            {"name": "John Callaway", "min": 7, "fg": "2-10", "ft": "0-3", "tp": "0-3", "reb": 4, "ast": 0, "pf": 4, "to": 0, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Nate Meers", "min": 3, "fg": "0-6", "ft": "1-2", "tp": "0-6", "reb": 1, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 1},
+            {"name": "Rashaun Warren", "min": 2, "fg": "1-1", "ft": "0-0", "tp": "0-0", "reb": 3, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Tim Martin", "min": 0, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0, "note": "DNP"},
+            {"name": "Ryan Lehrke", "min": 0, "pts": 0, "note": "DNP"}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": [],
+  "extraction_notes": "Both team point-checksums are exact (OSU players sum to 73, Kent State players sum to 67), matching the final scoreboard (OSU 73, Kent State 67; halftime 36-32/37-35 for OSU, 32-35 for Kent). FG/3FG/FT made-attempted pairs for both full team totals also reconcile exactly against the printed TOTALS row (Kent 26-68 FG/4-27 3FG/11-21 FT; OSU 31-57 FG/1-8 3FG/10-29 FT), with one row (Ken Johnson, OSU) corrected from an initial misread (4-8 FT) to 3-7 FT after cross-checking against team FT totals and rebound consistency (his rebound cell was also ambiguous on first pass). Minutes (MN), steals (STL), blocks (BLK), and Geoffrey Vaughn's rebound/PF cells are lower-confidence OCR reads (team-total cross-checks show small residual mismatches, e.g. Kent MN sums to 166 vs printed 200, BK/ST off by 1) — these did not affect the points checksum and were left as best-effort reads rather than invented; treat MN/STL/BLK for a few players as approximate."
+}

@@ -1,0 +1,9 @@
+{
+  "page": 7,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Ohio State vs Kansas (at Lawrence, Kan., date cropped off left edge showing only '/99 8:05 p.m.'). Ohio State side transcribes cleanly and checksums exactly (player points sum to 67, matching team total FG 23-64, 3PT 7-23, FT 14-20, TP 67). However the Kansas box score is too degraded/blurry to transcribe confidently: several player rows (Chenowith, Boschee, Hinrich, and others) have ambiguous digits in the FT/TP columns, and summing the legible per-player TP values yields only ~66 points versus the team total of 80 (FG 31-65, 3PT 4-11, FT 14-21, TP 80) -- a 14-point gap that could not be resolved even after a second read. Per instructions, skipping the whole game rather than guessing values for either roster."
+    }
+  ]
+}

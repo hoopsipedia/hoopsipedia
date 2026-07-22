@@ -1,0 +1,9 @@
+{
+  "page": 9,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page shows an OSU box score dated 1990-01-17 (Ohio State at San Diego State, San Diego Sports Arena) — this falls in the 1989-90 season, not 1996-97, so the page appears misfiled in this compilation and was excluded. Additionally, even setting the season mismatch aside, the OSU checksum fails: sum of player TP values (Singleton 6, Stonerook 18, Tate 12, Coleman 6, Stringer 27, Jackson 0, Davis 2, Winston 2, May 0, Jantonio 0, Hanna 0, Tucker 4, Steele 0) = 77, vs. the printed team TOTALS TP of 75. Individually each player's TP is internally consistent with their own FG/3pt/FT-made line, but the FT-made total across players (2+3+0+0+1+0+2=8) does not match the team's printed FT line of 6-10 (confirmed by the FT% summary: 1st Half 4-6, 2nd Half 2-4, Game 6-10 = .600), a 2-point discrepancy likely due to a scorekeeping error on the original 1990 scoresheet. Not transcribed per instructions to be ruthless about skipping failed-checksum games."
+    }
+  ]
+}

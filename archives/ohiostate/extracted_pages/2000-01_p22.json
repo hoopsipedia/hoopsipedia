@@ -1,0 +1,9 @@
+{
+  "page": 22,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Single game on page: Indiana at Ohio State, 2001-01-11 (Value City Arena). Visitor (Indiana) box score is clean and passes checksum (player TP sum = 70 = team final score, FG/FGA sums also reconcile to 23-54). However the home team (Ohio State) rows are not confidently legible in several places, especially Johnson (No. 32) and Connolly rows, where FG-FGA and rebound digits read inconsistently between two passes (e.g. Johnson's FGA read as both '4' and '10'). Best-effort point sum for Ohio State (61-63) does not reconcile with the team's final score of 67, and team FG/FT attempt sums (40-46 FGA, 23-28 FTA) also don't match the printed team totals. Rather than guess the ambiguous digits, skipping the entire game since a complete, checksummed two-team record could not be produced within the 2-read limit."
+    }
+  ]
+}

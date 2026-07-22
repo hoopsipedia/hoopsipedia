@@ -1,0 +1,9 @@
+{
+  "page": 9,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Toledo vs Ohio State, 12-22-99, Value City Arena, Columbus OH. Toledo's box score transcribes cleanly and checksums perfectly: FG 22-56, 3PT 12-28, FT 5-7, individual player points (9,13,2,12,17,3,2,3,0) sum to 61, matching the team total and final score (Toledo 61). However Ohio State's box score fails the points checksum: individual player TP values as printed (17,10,17,16,2,0,2,1,2) sum to 67, but Ohio State's official team FT/FTA total (15-22) and final score (64, confirmed twice: TOTALS row and SCORE BY PERIODS 26+38) do not reconcile with the sum of individual FT made/attempted figures (18 made / 24 attempted read from player rows). The discrepancy (+3 pts) likely traces to a misread of Scoonie Penn's or Ken Johnson's free-throw made figure on the scan. FG/FGA/3PT columns for Ohio State all sum correctly to team totals (23-49, 3-9), isolating the error to the FT column for one or two players. Already used the one permitted re-read of this page without resolving the ambiguity; per instructions, skipping rather than inventing/guessing the correct FT value. Game and both full rosters (with all other stat columns) could be recovered with a higher-resolution scan or manual verification of the Penn/Johnson FT cells."
+    }
+  ]
+}

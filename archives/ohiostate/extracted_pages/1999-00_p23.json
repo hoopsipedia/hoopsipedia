@@ -1,0 +1,51 @@
+{
+  "page": 23,
+  "games": [
+    {
+      "date": "2000-02-15",
+      "opponent": "Michigan State Spartans",
+      "location": "East Lansing, MI",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 72,
+          "players": [
+            {"name": "Michael Redd", "min": 36, "fg": "7-18", "tp": "1-6", "ft": "3-3", "reb": 5, "ast": 3, "to": 3, "blk": 0, "stl": 1, "pf": 0, "pts": 18},
+            {"name": "George Reese", "min": 34, "fg": "5-10", "tp": "0-0", "ft": "0-1", "reb": 4, "ast": 0, "to": 0, "blk": 0, "stl": 3, "pf": 4, "pts": 10},
+            {"name": "Ken Johnson", "min": 34, "fg": "2-6", "tp": "0-0", "ft": "1-1", "reb": 8, "ast": 0, "to": 1, "blk": 3, "stl": 0, "pf": 4, "pts": 5},
+            {"name": "James \"Scoonie\" Penn", "min": 38, "fg": "8-17", "tp": "5-10", "ft": "9-10", "reb": 3, "ast": 7, "to": 5, "blk": 0, "stl": 2, "pf": 2, "pts": 30},
+            {"name": "Brian Brown", "min": 27, "fg": "4-6", "tp": "0-1", "ft": "1-1", "reb": 1, "ast": 1, "to": 3, "blk": 0, "stl": 4, "pf": 4, "pts": 9},
+            {"name": "Brent Darby", "min": 14, "fg": "0-1", "tp": "0-0", "ft": "0-1", "reb": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pf": 4, "pts": 0},
+            {"name": "Doylan Robinson", "min": 9, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 3, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pf": 2, "pts": 0},
+            {"name": "S. Savovic", "min": 1, "fg": "0-0", "ft": "0-1", "pts": 0, "note": "row partially illegible/misaligned on scan; pts derived as 2*fg_made+ft_made and cross-checked against team TOTALS row rather than a directly read PTS digit"},
+            {"name": "S. Ocokoljic", "min": 2, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pf": 0, "pts": 0},
+            {"name": "Will Dudley", "min": 5, "pts": 0, "note": "row has a dropped/misaligned column on scan (one fewer digit than expected); only MIN was confidently legible, PTS set to 0 via checksum against team TOTALS row (26/59 FG, PTS 72 accounted for entirely by the 5 starters)"}
+          ],
+          "checksum_ok": true
+        },
+        {
+          "name": "Michigan State Spartans",
+          "score": 83,
+          "players": [
+            {"name": "Morris Peterson", "min": 33, "fg": "7-18", "tp": "3-9", "ft": "9-12", "reb": 11, "ast": 1, "to": 3, "blk": 1, "stl": 2, "pf": 2, "pts": 26},
+            {"name": "A.J. Granger", "min": 31, "fg": "0-4", "tp": "0-2", "ft": "0-0", "reb": 9, "ast": 2, "to": 0, "blk": 1, "stl": 2, "pf": 2, "pts": 0},
+            {"name": "Andre Hutson", "min": 26, "fg": "2-7", "tp": "0-0", "ft": "1-5", "reb": 6, "ast": 1, "to": 1, "blk": 0, "stl": 0, "pf": 4, "pts": 5},
+            {"name": "Mateen Cleaves", "min": 36, "fg": "6-10", "tp": "3-4", "ft": "9-12", "reb": 3, "ast": 7, "to": 6, "blk": 0, "stl": 1, "pf": 2, "pts": 24},
+            {"name": "Charlie Bell", "min": 30, "fg": "9-14", "tp": "1-4", "ft": "4-4", "reb": 6, "ast": 0, "to": 2, "blk": 0, "stl": 2, "pf": 2, "pts": 23},
+            {"name": "David Thomas", "min": 5, "fg": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "to": 1, "pf": 0, "pts": 0},
+            {"name": "Chappell", "min": 5, "pts": 2, "note": "surname truncated on scan (left margin cropped, e.g. \"...ke Chappell\"); row has a dropped/misaligned digit, exact FG/FT split not confidently legible; pts derived via checksum against team TOTALS row (must total 5 across the 5 bench scorers to reach 83)"},
+            {"name": "Jason Richardson", "min": 11, "fg": "0-1", "ft": "1-2", "pts": 1, "note": "pts computed as 2*fg_made+ft_made; some secondary columns (reb/ast/pf) not confidently legible on scan"},
+            {"name": "Aloysius Anagonye", "min": 20, "fg": "1-1", "ft": "0-2", "reb": 5, "ast": 2, "to": 0, "blk": 1, "stl": 1, "pf": 2, "pts": 2},
+            {"name": "Adam Ballinger", "min": 9, "fg": "0-0", "ft": "0-0", "pts": 0}
+          ],
+          "checksum_ok": true
+        }
+      ],
+      "score_by_periods": {"Ohio State": [33, 39], "Michigan State": [44, 39]},
+      "attendance": 14659,
+      "officials": ["Jim Burr", "Tom O'Neill", "Gene Monje"],
+      "notes": "Typed official NCAA box score (Avid Sports @game software). Left margin of scan is cropped, truncating some names (e.g. \"Michael Redd\" -> \".chael Redd\", a Michigan State bench player's first name truncated to \"...ke Chappell\"). Ohio State starters' points (18+10+5+30+9=72) exactly match team final score/TOTALS row with no bench scoring, confirmed clean. Michigan State starters total 78; the 5-point gap to the final score of 83 is distributed across 5 low-minute bench players whose stat-line columns were partially illegible/misaligned on the scan (Chappell, Jason Richardson, Aloysius Anagonye reported nonzero; David Thomas and Adam Ballinger 0) -- their PTS values were derived via pts = 2*fg_made + ft_made and cross-checked against the printed team TOTALS rows (OSU 72, MSU 83) rather than read directly off a possibly-misaligned PTS column. Devon Smith, Kwadjo Steele (OSU) and Brandon Smith, Matt/\"...t\" Ishbia, Steve Cherry (MSU) were marked DNP on the sheet and are omitted from the player lists."
+    }
+  ],
+  "skipped": []
+}

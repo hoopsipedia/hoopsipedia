@@ -1,0 +1,9 @@
+{
+  "page": 16,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "01-27-96 Ohio State @ Purdue (West Lafayette). Official NCAA box score is a dot-matrix printout with very small, low-resolution digits in the FG/FGA/FT/FTA/PTS columns. Team TOTALS rows checksum correctly (OSU 53, Purdue 70), and most individual OSU player rows match the pts=2*(FG-3P)+3*3P+FT formula, but three rows (Stonerook, Belter, Gradney) do not match their printed PTS values, and even after correcting those via the formula the player-PTS sum for Ohio State comes to 52, one short of the official team total of 53. Given the ambiguity in the scanned digits (8/9 and 6/8 confusions typical of this scan quality) and inability to reconcile the discrepancy confidently, both teams' full box scores are skipped rather than guessed at."
+    }
+  ]
+}

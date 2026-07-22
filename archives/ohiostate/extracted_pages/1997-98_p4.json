@@ -1,0 +1,9 @@
+{
+  "page": 4,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "1997-98-11-25 Rider @ Ohio State (St. John Arena). Rider (visitors) box score checksums perfectly on two independent reads: player PTS sum = 57 = team final score 57; FG sum 19, FT sum 10, 3FG sum 9, and MIN sum 200 all match the printed TOTALS row exactly. However Ohio State (home) does not reconcile: team FG/FGA (25-41) and FT (15-29) and 3FG (3-10) totals are independently confirmed via the printed 1st/2nd-half shooting splits, but summing individual OSU player FG makes gives 26 (one basket too many) and FGA sums to 45 (four attempts too many) versus the printed totals - indicating at least one misread digit in the OSU player rows that could not be pinned to a specific player after a second full read. Additionally Neshaun Coleman's line is internally inconsistent (FT read as 3-4 made/attempted, which cannot yield the printed PTS of 0) and could not be resolved with confidence. Because OSU's player PTS cannot be reconciled exactly to the final score of 68 without inventing a digit, and per instructions to be ruthless about skipping rather than guessing, the whole game (both teams) is skipped rather than publishing a partially-verified box score."
+    }
+  ]
+}

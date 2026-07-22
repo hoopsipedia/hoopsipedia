@@ -1,0 +1,9 @@
+{
+  "page": 24,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Official NCAA box score for Ohio State @ Northwestern, 02-24-96 (Evanston, IL; final Ohio State 82, Northwestern 69) is present but the dot-matrix/typewriter print is degraded enough that individual player stat columns (FG-FGA, OR-DR-TOT, PF, A, TO, BLK, S) cannot be reliably distinguished column-by-column — several rows show fewer legible digit groups than the 16-column header (FG FGA 3P 3PA FT FTA OR DR TOT PF PTS A TO BLK S MIN) requires, and rebound subtotals (OR+DR) do not consistently sum to the printed TOT for multiple players even after a second read. Attempted PTS-column checksum against team total (82) came to 84 on best-effort digit reads, a mismatch that could not be resolved without guessing individual digits. Per instructions, skipping rather than transcribing low-confidence values. Only 2 reads permitted and both are exhausted for this page."
+    }
+  ]
+}

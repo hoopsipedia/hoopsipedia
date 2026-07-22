@@ -1,0 +1,9 @@
+{
+  "page": 11,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page contains one game (Ohio State @ Illinois, 1995-01-04, official UIUC box score, final Illinois 79 - Ohio State 70). Team-level TOTALS rows are clearly printed and match the final score (Ohio State TOTALS TP=70, Illinois TOTALS TP=79), but individual player-line digits in the scanned image are too ambiguous to transcribe with confidence: several bench rows (Ohio State Nos. 12 Martin, 13 Minifee, 35 Jantonio, 40 Dudley) have overlapping/smudged FT and rebound columns, and my best-effort manual sum of Ohio State player points came to 71 vs. the printed team total of 70 (off by one, likely a misread FT digit for No. 13 Minifee) with no way to confirm which digit is wrong without guessing. Illinois player rows (esp. Nos. 21 Heldman, 22 Garris, 33 Turner, 34 Johnson, 30 Bennett) also had column-alignment ambiguity in rebounds/PF/TP that I could not resolve to a clean checksum. Per instructions, skipping rather than inventing/guessing exact values."
+    }
+  ]
+}

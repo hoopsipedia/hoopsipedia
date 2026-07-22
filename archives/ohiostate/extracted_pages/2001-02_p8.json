@@ -1,0 +1,9 @@
+{
+  "page": 8,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Official box score, Ohio State @ Louisville, 12/15/01 at Freedom Hall (final OSU 61, Louisville 66). Ohio State's line is fully legible and checksums perfectly (player pts sum to 61). However, Louisville's top three rows (Myles, Whitehead, Northern) have jersey numbers cropped/illegible at the page's left margin, and the 3-PT FG and TP columns for the Louisville roster do not reconcile: individual 3-pointers-made sum to 2 vs. team total of 4, and 3-point attempts sum to 22 vs. team total of 28 (FG-FGA and FT-FTA columns DO sum correctly to the team totals of 22-58 and 18-34, so those are trustworthy, but per-player TP/3PT values would require guessing). Re-read the page once (allowed max) and the ambiguity persisted, so skipping rather than inventing values for the Louisville roster."
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "page": 26,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Official box score: Ohio State vs University of Iowa, 1999-02-13 at Carver-Hawkeye Arena (OSU 73, Iowa 69). Iowa's player line checksummed perfectly on every column (FG 22-54, 3PT 4-19, FT 21-39, points sum 14+11+8+7+13+5+0+7+0+4=69 matching final score exactly) after re-reading the page once. However, Ohio State's player point sum (Singleton 11 + Sanderson 11 + Johnson 0 + Penn 27 + Redd 22 + Coleman 6 + Brown 0 + Savovic 2 + Reese 2 = 81) does not match OSU's final score of 73, an 8-point discrepancy, even though every individual player row is internally self-consistent (2*(FG-3FG)+3*3FG+FT equals that player's printed TP). Re-read the page once (the one permitted re-read) and could not isolate which specific digit was misread or misprinted, so per instructions I am being ruthless and skipping the whole game rather than guessing which Ohio State number is wrong."
+    }
+  ]
+}

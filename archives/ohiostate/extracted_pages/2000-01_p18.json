@@ -1,0 +1,9 @@
+{
+  "page": 18,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page shows a full official box score for Michigan @ Ohio State (Value City Arena, Columbus; attendance 18,653; final score Michigan 61, Ohio State 78; likely 2001-01-08 based on a partially legible date/time stamp in the header). Team-level totals and several starters' lines are legible and the Michigan team total (61) checksums correctly against summed player TP values. However, on close re-read (2nd and final allowed read) multiple individual player rows show internal arithmetic contradictions that could not be reconciled confidently: e.g. Ohio State's C. Young-equivalent bench rows and Michigan's Young/Jones lines show FG-FGA and FT-FTA makes that imply more points than the printed TP column shows, and several Ohio State bench rows (Ocokoljic, Dudley, Martin) have ambiguous/truncated column alignment (Martin's line is cut off after rebounds, missing PF/TP/A/TO/BLK/S/MIN). Given the instruction to be ruthless about skipping rather than guessing, and having exhausted the one permitted re-read, the full per-player box score was not transcribed to avoid inventing or misattributing values for individual FG/FT/TP splits on the smaller/bench print rows."
+    }
+  ]
+}

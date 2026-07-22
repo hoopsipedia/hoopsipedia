@@ -1,0 +1,47 @@
+{
+  "page": 5,
+  "games": [
+    {
+      "date": "1995-12-16",
+      "opponent": "Seton Hall",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 105,
+          "players": [
+            {"name": "Rick Yudt", "min": 29, "fg": "7-10", "ft": "9-9", "tp": "1-1", "reb": 4, "ast": 3, "pf": 2, "to": 3, "stl": 0, "blk": 0, "pts": 24},
+            {"name": "Shaun Stonerook", "min": 25, "fg": "3-5", "ft": "7-9", "tp": "0-0", "reb": 11, "ast": 1, "pf": 3, "to": 2, "stl": 1, "blk": 0, "pts": 13},
+            {"name": "Jermaine Tate", "min": 27, "fg": "6-6", "ft": "2-4", "tp": "0-0", "reb": 8, "ast": 0, "pf": 4, "to": 2, "stl": 0, "blk": 1, "pts": 14},
+            {"name": "Damon Stringer", "min": 28, "fg": "8-16", "ft": "6-6", "tp": "0-4", "reb": 3, "ast": 8, "pf": 1, "to": 6, "stl": 1, "blk": 0, "pts": 22},
+            {"name": "Jami Bosley", "min": 19, "fg": "2-4", "ft": "1-1", "tp": "0-0", "reb": 4, "ast": 3, "pf": 5, "to": 1, "stl": 1, "blk": 0, "pts": 5},
+            {"name": "Carlos Davis", "min": 1, "fg": "0-1", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 1, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Neshaun Coleman", "min": 28, "fg": "5-8", "ft": "2-2", "tp": "2-3", "reb": 3, "ast": 1, "pf": 3, "to": 3, "stl": 1, "blk": 0, "pts": 14},
+            {"name": "Jason Singleton", "min": 10, "fg": "4-8", "ft": "0-2", "tp": "0-0", "reb": 3, "ast": 0, "pf": 4, "to": 1, "stl": 0, "blk": 0, "pts": 8},
+            {"name": "Steve Belter", "min": 21, "fg": "0-1", "ft": "3-6", "tp": "0-0", "reb": 6, "ast": 2, "pf": 3, "to": 0, "stl": 1, "blk": 2, "pts": 3},
+            {"name": "Scott Gradney", "min": 1, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Marlon Minifee", "min": 6, "fg": "1-1", "ft": "0-2", "tp": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Don Jantonio", "min": 5, "fg": "0-0", "ft": "0-2", "tp": "0-0", "reb": 1, "ast": 0, "pf": 3, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Seton Hall Pirates",
+          "score": 96,
+          "players": [
+            {"name": "Bayonne Taty", "min": 17, "fg": "1-4", "ft": "0-7", "tp": "0-0", "reb": 8, "ast": 0, "pf": 2, "to": 1, "stl": 0, "blk": 1, "pts": 2},
+            {"name": "Jacky Kaba", "min": 11, "fg": "4-6", "ft": "1-2", "tp": "0-0", "reb": 4, "ast": 1, "pf": 3, "to": 0, "stl": 0, "blk": 0, "pts": 9},
+            {"name": "Adrian Griffin", "min": 33, "fg": "6-15", "ft": "10-11", "tp": "0-0", "reb": 4, "ast": 3, "pf": 4, "to": 2, "stl": 4, "blk": 0, "pts": 22},
+            {"name": "Danny Hurley", "min": 35, "fg": "7-13", "ft": "7-9", "tp": "2-4", "reb": 1, "ast": 2, "pf": 5, "to": 4, "stl": 2, "blk": 0, "pts": 23},
+            {"name": "Levell Sanders", "min": 37, "fg": "5-12", "ft": "4-4", "tp": "2-4", "reb": 3, "ast": 6, "pf": 2, "to": 2, "stl": 2, "blk": 0, "pts": 16},
+            {"name": "Donnell Williams", "min": 33, "fg": "5-12", "ft": "0-1", "tp": "2-5", "reb": 2, "ast": 3, "pf": 4, "to": 0, "stl": 0, "blk": 0, "pts": 12},
+            {"name": "Roger Ingraham", "min": 11, "fg": "1-2", "ft": "0-0", "tp": "0-0", "reb": 4, "ast": 0, "pf": 3, "to": 1, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Duane Jordan", "min": 6, "fg": "0-2", "ft": "0-0", "tp": "0-0", "reb": 1, "ast": 0, "pf": 3, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Kelland Payton", "min": 16, "fg": "5-7", "ft": "0-1", "tp": "0-0", "reb": 2, "ast": 0, "pf": 2, "to": 0, "stl": 1, "blk": 0, "pts": 10},
+            {"name": "John Yablonski", "min": 1, "fg": "0-0", "ft": "0-1", "tp": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

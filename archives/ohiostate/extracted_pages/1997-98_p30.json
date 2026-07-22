@@ -1,0 +1,48 @@
+{
+  "page": 30,
+  "games": [
+    {
+      "date": "1998-02-28",
+      "opponent": "Penn State Nittany Lions",
+      "site": "St. John Arena, Columbus, Ohio",
+      "note": "Game went to overtime (PSU 36-40-13=89, OSU 39-37-9=85). Comments on sheet: 'This is the final men's basketball game in St. John Arena.' Attendance 13,276. Officials: Phil Bova, Randy Drury, Ron Grissom.",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 85,
+          "players": [
+            {"name": "Jon Sanderson", "min": 43, "fg": "4-8", "tp": "1-1", "ft": "3-6", "reb": 10, "ast": 0, "pf": 3, "to": 2, "stl": 1, "blk": 0, "pts": 12},
+            {"name": "Eric Hanna", "min": 17, "fg": "3-7", "tp": "0-0", "ft": "3-4", "reb": 1, "ast": 0, "pf": 4, "to": 0, "stl": 0, "blk": 0, "pts": 9},
+            {"name": "Carlos Davis", "min": 43, "fg": "6-9", "tp": "1-2", "ft": "1-1", "reb": 13, "ast": 1, "pf": 2, "to": 4, "stl": 2, "blk": 0, "pts": 14},
+            {"name": "Neshaun Coleman", "min": 45, "fg": "3-7", "tp": "1-6", "ft": "1-1", "reb": 2, "ast": 7, "pf": 3, "to": 2, "stl": 2, "blk": 0, "pts": 8},
+            {"name": "Michael Redd", "min": 35, "fg": "11-23", "tp": "2-5", "ft": "8-16", "reb": 6, "ast": 7, "pf": 4, "to": 2, "stl": 2, "blk": 0, "pts": 32},
+            {"name": "Ken Johnson", "min": 16, "fg": "2-2", "tp": "0-0", "ft": "1-3", "ast": 0, "pf": 4, "to": 0, "stl": 0, "blk": 0, "pts": 5},
+            {"name": "Jason Singleton", "min": 13, "fg": "1-4", "tp": "0-0", "ft": "1-2", "reb": 2, "ast": 0, "pf": 3, "to": 0, "stl": 0, "blk": 0, "pts": 3},
+            {"name": "Shamar Herron", "min": 7, "fg": "1-2", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "John Lumpkin", "min": 5, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Kwadjo Steele", "min": 1, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 2, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Penn State Nittany Lions",
+          "score": 89,
+          "players": [
+            {"name": "Titus Ivory", "min": 19, "fg": "2-6", "tp": "2-6", "ft": "3-4", "reb": 3, "ast": 1, "pf": 4, "to": 1, "stl": 1, "blk": 0, "pts": 9},
+            {"name": "Carl Jackson", "min": 6, "fg": "0-0", "tp": "0-0", "ft": "2-4", "reb": 3, "ast": 1, "pf": 2, "to": 2, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Calvin Booth", "min": 37, "fg": "5-10", "tp": "0-0", "ft": "2-4", "reb": 6, "ast": 1, "pf": 4, "to": 2, "stl": 0, "blk": 5, "pts": 12},
+            {"name": "Joe Crispin", "min": 29, "fg": "4-9", "tp": "4-8", "ft": "0-0", "reb": 3, "ast": 1, "pf": 0, "to": 2, "stl": 0, "blk": 5, "pts": 12},
+            {"name": "Pete Lisicky", "min": 37, "fg": "5-10", "tp": "4-8", "ft": "10-10", "reb": 1, "ast": 7, "pf": 2, "to": 0, "stl": 1, "blk": 0, "pts": 24},
+            {"name": "Greg Grays", "min": 28, "fg": "2-3", "tp": "1-2", "ft": "0-0", "reb": 0, "ast": 2, "pf": 2, "to": 1, "stl": 1, "blk": 0, "pts": 5},
+            {"name": "Jarrett Stephens", "min": 38, "fg": "5-6", "tp": "0-0", "ft": "7-8", "reb": 7, "ast": 2, "pf": 4, "to": 1, "stl": 1, "blk": 0, "pts": 17},
+            {"name": "Sam Crenshaw", "min": 2, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Gyasi Cline-Heard", "min": 20, "fg": "1-1", "tp": "0-0", "ft": "2-2", "reb": 2, "ast": 3, "pf": 4, "to": 2, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Greg Stevenson", "min": 20, "fg": "1-4", "tp": "0-1", "ft": "2-3", "reb": 4, "ast": 0, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Scott Witkowsky", "min": 2, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

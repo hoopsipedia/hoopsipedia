@@ -1,0 +1,11 @@
+{
+  "page": 17,
+  "games": [],
+  "skipped": [
+    {
+      "date": "1995-01-25",
+      "opponent": "Iowa Hawkeyes",
+      "reason": "Official NCAA box score, Iowa (visitors) at Ohio State (home), St. John Arena, Jan 25 1995. Fully legible, typed/computer-generated (CourtSide software) sheet. OSU side checksums perfectly (player pts sum 9+15+1+11+6+21+3+0=66 == OSU final score 66, and 8 of 10 team-total columns reconcile exactly: FG, 3FG, FT, PF, TO, BK, ST, MN). Iowa side FAILS checksum: player pts sum (13+18+8+19+15+2+0+6+1+0=82) does not match Iowa's final score (81) or the sheet's own TOTALS TP field (81). Traced likely source to the FT column: summing individual Iowa players' FT gives 20-26 made-attempted, but the printed Iowa TOTALS row (cross-checked against the printed FT% splits 9-12 1st half + 10-10 2nd half = 19-22, .864, which matches the printed Game FT% exactly) is 19-22. Also ST sums to 13 vs printed team total 12, and MN sums to 198 vs printed 200 -- both off by small amounts. Re-read the page once (full allowance used) and re-verified every Iowa row field-by-field (16 columns each: FG,AT,3FG,AT,FT,AT,OF,DF,To,PF,TP,A,TO,BK,ST,MN); each row is internally self-consistent (printed TP matches 2*(FG-3FG)+3*3FG+FT for every player), and 6 of 10 team-total columns (FG,3FG,PF,A,TO,BK) reconcile exactly, so transcription of individual rows appears accurate -- the 1-point discrepancy could not be isolated to a single misreadable digit without further access to the source. Since the game requires both teams to pass checksum and Iowa is off by 1 point, skipping the whole game per instructions rather than guessing which cell to correct."
+    }
+  ]
+}

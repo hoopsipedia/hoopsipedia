@@ -1,0 +1,9 @@
+{
+  "page": 15,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "1996-01-24 Ohio State (46) at Illinois (77), Assembly Hall — official UIUC printed box score. Team-level data (date, opponent, final score by period, team shooting splits, TOTALS row for each team) is clearly legible and both TOTALS rows checksum correctly against the final score (Ohio State TOTALS TP=46, Illinois TOTALS TP=77). However, individual player stat lines are a dense 16-column table (FG-FGA, 3FG-3FGA, FT-FTA, OFF-DEF-TOT reb, PF, TP, AS, TO, BK, ST, MIN) and the scan quality/small print made it impossible to confidently align every player's digits to the correct column across all rows on this pass (several rows appeared to be missing a digit and rebound sub-totals did not reconcile against OFF+DEF=TOT when reconstructed). Rather than guess or misassign player stats, the whole game is skipped per the ruthless-skip rule; only one re-read was permitted and was already used without resolving the ambiguity."
+    }
+  ]
+}

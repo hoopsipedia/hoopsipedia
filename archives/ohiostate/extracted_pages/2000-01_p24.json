@@ -1,0 +1,45 @@
+{
+  "page": 24,
+  "games": [
+    {
+      "date": "2001-01-07",
+      "opponent": "Iowa Hawkeyes",
+      "notes": "At Carver-Hawkeye Arena, Iowa City, IA, 7:05 p.m. Officials: Ted Hillary, Gene Monje, Dan Chrisman. No technical fouls, no OT. Attendance 15,500. Score by periods: OSU 28-41=69, Iowa 32-36=68.",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 69,
+          "players": [
+            {"name": "Zach Williams", "min": 11, "fg": "0-2", "tp": "0-0", "ft": "0-0", "reb": 0, "pf": 3, "pts": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0},
+            {"name": "Ken Johnson", "min": 37, "fg": "5-8", "tp": "0-0", "ft": "0-2", "reb": 9, "pf": 3, "pts": 10, "ast": 1, "to": 5, "blk": 6, "stl": 1},
+            {"name": "Sean Connolly", "min": 32, "fg": "3-9", "tp": "3-7", "ft": "2-2", "reb": 3, "pf": 2, "pts": 11, "ast": 6, "to": 1, "blk": 0, "stl": 0},
+            {"name": "Brian Brown", "min": 27, "fg": "7-12", "tp": "4-4", "ft": "2-4", "reb": 3, "pf": 4, "pts": 20, "ast": 3, "to": 3, "blk": 1, "stl": 0},
+            {"name": "Bohan Savovic", "min": 24, "fg": "1-6", "tp": "1-5", "ft": "0-0", "reb": 5, "pf": 2, "pts": 3, "ast": 5, "to": 1, "blk": 0, "stl": 2},
+            {"name": "Brent Darby", "min": 30, "fg": "4-8", "tp": "2-3", "ft": "5-8", "reb": 5, "pf": 2, "pts": 15, "ast": 5, "to": 2, "blk": 0, "stl": 2},
+            {"name": "Velimir Radinovic", "min": 7, "fg": "0-0", "tp": "0-2", "ft": "2-2", "reb": 0, "pf": 1, "pts": 2, "ast": 0, "to": 0, "blk": 0, "stl": 0},
+            {"name": "Cobe Ocokoljic", "min": 5, "fg": "0-1", "tp": "0-1", "ft": "0-1", "reb": 2, "pf": 2, "pts": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0},
+            {"name": "Will Dudley", "min": 17, "fg": "3-4", "tp": "0-0", "ft": "0-0", "reb": 3, "pf": 1, "pts": 6, "ast": 1, "to": 0, "blk": 2, "stl": 0},
+            {"name": "Tim Martin", "min": 10, "fg": "1-1", "tp": "0-0", "ft": "0-0", "reb": 4, "pf": 2, "pts": 2, "ast": 0, "to": 1, "blk": 0, "stl": 1}
+          ]
+        },
+        {
+          "name": "Iowa Hawkeyes",
+          "score": 68,
+          "players": [
+            {"name": "Duez Henderson", "min": 23, "fg": "3-7", "tp": "1-2", "ft": "0-0", "reb": 3, "pf": 5, "pts": 7, "ast": 0, "to": 0, "blk": 0, "stl": 1, "notes": "PF shown circled on sheet, likely fouled out; read with slightly lower confidence"},
+            {"name": "Reggie Evans", "min": 37, "fg": "2-7", "tp": "0-0", "ft": "10-14", "reb": 11, "pf": 4, "pts": 14, "ast": 1, "to": 4, "blk": 0, "stl": 0},
+            {"name": "Jared Reiner", "min": 13, "fg": "1-4", "tp": "0-0", "ft": "0-0", "reb": 4, "pf": 2, "pts": 2, "ast": 0, "to": 0, "blk": 2, "stl": 0},
+            {"name": "Ryan Hogan", "min": 32, "fg": "2-9", "tp": "0-2", "ft": "0-1", "reb": 5, "pf": 1, "pts": 4, "ast": 2, "to": 2, "blk": 0, "stl": 1},
+            {"name": "Dean Oliver", "min": 39, "fg": "8-16", "tp": "4-6", "ft": "7-8", "reb": 4, "pf": 0, "pts": 27, "ast": 5, "to": 2, "blk": 1, "stl": 2},
+            {"name": "Glen Worley", "min": 21, "fg": "4-8", "tp": "1-2", "ft": "0-0", "reb": 1, "pf": 5, "pts": 9, "ast": 1, "to": 1, "blk": 0, "stl": 1, "notes": "PF shown circled on sheet, likely fouled out; read with slightly lower confidence"},
+            {"name": "Brody Boyd", "min": 15, "fg": "1-3", "tp": "1-3", "ft": "0-0", "reb": 1, "pf": 1, "pts": 3, "ast": 2, "to": 0, "blk": 0, "stl": 0},
+            {"name": "Kyle Galloway", "min": 10, "fg": "0-2", "tp": "0-2", "ft": "0-0", "reb": 1, "pf": 1, "pts": 0, "ast": 1, "to": 0, "blk": 0, "stl": 0},
+            {"name": "Cortney Scott", "min": 10, "fg": "1-3", "tp": "0-0", "ft": "0-0", "reb": 1, "pf": 1, "pts": 2, "ast": 0, "to": 1, "blk": 0, "stl": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

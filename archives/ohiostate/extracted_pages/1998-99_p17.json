@@ -1,0 +1,9 @@
+{
+  "page": 17,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page contains a typed official box score for Indiana vs Ohio State at Value City Arena (date partially cut off, reads '-9-99', attendance 18,068, final score Indiana 56 - Ohio State 73 per Score By Periods). However, individual player stat rows for Luke Jimenez (Indiana) and Jon Sanderson (Ohio State) do not cleanly align to the 16-column header (TOT-FG, 3-PT, FT, OF/DE/TOT rebounds, PF, TP, A, TO, BLK, S, MIN) at the available image resolution — computed points from FG/3FG/FT makes do not match the printed TP for Jimenez (1 vs 2), and Sanderson's row has an apparent extra/misaligned digit making OF/DE/TOT/PF/TP/A/TO ambiguous. Indiana's summed player TP (57) also does not match the team TOTALS TP (56), failing checksum. Already used the one allowed re-read of this page without resolving the ambiguity, so skipping rather than guessing at values."
+    }
+  ]
+}

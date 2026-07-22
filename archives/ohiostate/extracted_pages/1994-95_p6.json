@@ -5,19 +5,19 @@
       "date": "1994-12-15",
       "opponent": "Tennessee-Chattanooga",
       "venue": "St. John Arena, Columbus, OH",
-      "note": "Game went to overtime (final scores include OT period)",
+      "note": "Game went to overtime (score by periods: TENN-CHAT 37-34-12=83; OHIO STATE 34-37-13=84)",
       "teams": [
         {
           "name": "Ohio State Buckeyes",
           "score": 84,
           "players": [
-            {"name": "Kevin Martin", "min": 42, "fg": "6-14", "tp": "4-9", "ft": "1-4", "reb": 10, "ast": 4, "to": 3, "blk": 0, "stl": 0, "pf": 2, "pts": 17},
-            {"name": "Otis Winston", "min": 38, "fg": "3-10", "tp": "0-1", "ft": "2-2", "reb": 6, "ast": 1, "to": 4, "blk": 0, "stl": 1, "pf": 5, "pts": 8},
-            {"name": "Antonio Watson", "min": 39, "fg": "9-13", "tp": "0-0", "ft": "4-6", "reb": 14, "ast": 1, "to": 4, "blk": 0, "stl": 0, "pf": 3, "pts": 22},
-            {"name": "Doug Etzler", "min": 42, "fg": "7-18", "tp": "4-10", "ft": "6-6", "reb": 2, "ast": 5, "to": 3, "blk": 0, "stl": 3, "pf": 0, "pts": 24},
-            {"name": "Carlos Davis", "min": 38, "fg": "3-11", "tp": "0-2", "ft": "0-0", "reb": 5, "ast": 0, "to": 0, "blk": 1, "stl": 0, "pf": 4, "pts": 6},
-            {"name": "Scott Zack", "min": 8, "fg": "1-2", "tp": "0-0", "ft": "0-0", "reb": 2, "ast": 0, "to": 0, "blk": 1, "stl": 0, "pf": 3, "pts": 2},
-            {"name": "Don Jantonio", "min": 18, "fg": "2-4", "tp": "1-2", "ft": "0-1", "reb": 0, "ast": 2, "to": 0, "blk": 0, "stl": 0, "pf": 0, "pts": 5}
+            {"name": "Kevin Martin", "min": 42, "fg": "6-14", "tp": "4-9", "ft": "1-4", "reb": 4, "ast": 7, "pf": 4, "to": 4, "stl": 0, "blk": 3, "pts": 17},
+            {"name": "Otis Winston", "min": 38, "fg": "3-10", "tp": "0-1", "ft": "2-2", "reb": 6, "ast": 2, "pf": 5, "to": 4, "stl": 1, "blk": 0, "pts": 8},
+            {"name": "Antonio Watson", "min": 39, "fg": "9-13", "tp": "0-0", "ft": "4-6", "reb": 14, "ast": 1, "pf": 3, "to": 4, "stl": 0, "blk": 0, "pts": 22},
+            {"name": "Doug Etzler", "min": 42, "fg": "7-18", "tp": "4-10", "ft": "6-6", "reb": 2, "ast": 5, "pf": 0, "to": 3, "stl": 1, "blk": 0, "pts": 24},
+            {"name": "Carlos Davis", "min": 38, "fg": "3-11", "tp": "0-2", "ft": "0-0", "reb": 5, "ast": 0, "pf": 4, "to": 0, "stl": 0, "blk": 1, "pts": 6},
+            {"name": "Scott Zack", "min": 8, "fg": "1-2", "tp": "0-0", "ft": "0-0", "reb": 2, "ast": 0, "pf": 3, "to": 0, "stl": 0, "blk": 1, "pts": 2},
+            {"name": "Don Jantonio", "min": 18, "fg": "2-4", "tp": "1-2", "ft": "0-1", "reb": 0, "ast": 2, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 5}
           ],
           "checksum_ok": true
         },
@@ -25,17 +25,17 @@
           "name": "Tennessee-Chattanooga",
           "score": 83,
           "players": [
-            {"name": "Brandon Born", "min": 41, "fg": "7-18", "tp": "5-10", "ft": "6-7", "reb": 5, "ast": 3, "to": 3, "blk": 0, "stl": 3, "pf": 4, "pts": 25},
-            {"name": "Maurio Hanson", "min": 40, "fg": "3-12", "tp": "2-5", "ft": "1-2", "reb": 10, "ast": 4, "to": 2, "blk": 2, "stl": 1, "pf": 1, "pts": 9},
-            {"name": "Julian Scott", "min": 35, "fg": "3-6", "tp": "0-0", "ft": "0-1", "reb": 9, "ast": 0, "to": 2, "blk": 0, "stl": 2, "pf": 3, "pts": 6},
-            {"name": "Rodney Lemons", "min": 15, "fg": "1-3", "tp": "0-2", "ft": "0-0", "reb": 1, "ast": 2, "to": 1, "blk": 0, "stl": 0, "pf": 2, "pts": 2},
-            {"name": "Marcus Watkins", "min": 30, "fg": "4-7", "tp": "4-5", "ft": "1-3", "reb": 2, "ast": 5, "to": 3, "blk": 1, "stl": 1, "pf": 4, "pts": 13},
-            {"name": "John Oliver", "min": 23, "fg": "8-13", "tp": "5-9", "ft": "0-0", "reb": 1, "ast": 4, "to": 1, "blk": 0, "stl": 0, "pf": 1, "pts": 21},
-            {"name": "Shane Neal", "min": 16, "fg": "1-2", "tp": "0-0", "ft": "2-2", "reb": 3, "ast": 1, "to": 1, "blk": 0, "stl": 1, "pf": 0, "pts": 4},
-            {"name": "Roger Smith", "min": 10, "fg": "1-1", "tp": "0-0", "ft": "1-1", "reb": 5, "ast": 0, "to": 2, "blk": 1, "stl": 0, "pf": 3, "pts": 3},
-            {"name": "Pat Henderson", "min": 4, "fg": "0-1", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pf": 2, "pts": 0},
-            {"name": "Fred Moore", "min": 0, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pf": 0, "pts": 0},
-            {"name": "Hiram Thomas", "min": 1, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pf": 0, "pts": 0}
+            {"name": "Brandon Born", "min": 41, "fg": "7-18", "tp": "5-10", "ft": "6-7", "reb": 5, "ast": 3, "pf": 4, "to": 3, "stl": 3, "blk": 0, "pts": 25},
+            {"name": "Mauro Hanson", "min": 40, "fg": "3-12", "tp": "2-5", "ft": "1-2", "reb": 10, "ast": 4, "pf": 1, "to": 2, "stl": 1, "blk": 2, "pts": 9},
+            {"name": "Julian Scott", "min": 35, "fg": "3-6", "tp": "0-0", "ft": "0-1", "reb": 9, "ast": 0, "pf": 3, "to": 2, "stl": 2, "blk": 0, "pts": 6},
+            {"name": "Rodney Lemons", "min": 15, "fg": "1-3", "tp": "0-2", "ft": "0-0", "reb": 1, "ast": 2, "pf": 2, "to": 1, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Marcus Watkins", "min": 30, "fg": "4-7", "tp": "4-5", "ft": "1-3", "reb": 2, "ast": 5, "pf": 4, "to": 3, "stl": 1, "blk": 1, "pts": 13},
+            {"name": "John Oliver", "min": 23, "fg": "8-13", "tp": "5-9", "ft": "0-0", "reb": 1, "ast": 4, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 21},
+            {"name": "Shane Neal", "min": 16, "fg": "1-2", "tp": "0-0", "ft": "2-2", "reb": 3, "ast": 4, "pf": 0, "to": 1, "stl": 1, "blk": 0, "pts": 4},
+            {"name": "Roger Smith", "min": 10, "fg": "1-1", "tp": "0-0", "ft": "1-1", "reb": 5, "ast": 0, "pf": 3, "to": 2, "stl": 0, "blk": 1, "pts": 3},
+            {"name": "Pat Henderson", "min": 4, "fg": "0-1", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Fred Moore", "min": 10, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Hiram Thomas", "min": 1, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0}
           ],
           "checksum_ok": true
         }

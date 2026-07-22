@@ -1,0 +1,9 @@
+{
+  "page": 15,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page shows OSU vs Northwestern, 01/12/02 at Welsh-Ryan Arena, Evanston IL, final OSU 55 - Northwestern 48 (28+27 / 22+26). Ohio State (visitors) box is fully legible and checksums perfectly (player TP sum 6+4+7+13+2+0+5+12+2+4 = 55 = team score). However the Northwestern (home) box has several player rows with ambiguous/inconsistent digits that will not reconcile: Jennings (line 55) shows FG 2-4, 3PT 0-2, FT 0-0 which computes to 4 points, but the printed TP column appears to read 9 (with an unclear circled mark obscuring the PF/TP cells); Drayton and Burke rows also show FG/FT figures that don't cleanly compute to their printed TP. Summing the printed TP column for Northwestern (4+21+9+4+5+5+0+3=51) does not match the team total of 48, and I could not confidently determine which individual digit(s) are misread without guessing. Per instructions, skipping the full game rather than fabricating values for the ambiguous Northwestern player lines."
+    }
+  ]
+}

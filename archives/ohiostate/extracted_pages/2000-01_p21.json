@@ -1,0 +1,9 @@
+{
+  "page": 21,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "1-27-01 Michigan State @ Ohio State (Value City Arena) — Michigan State box score checksums cleanly (player TP sum = 9+17+2+9+5+0+5+4+2+0+0 = 55, matches printed team total 55). However Ohio State's box score does not checksum: summing the printed per-player TP column gives 9+6+0+25+4+11+0+2+2+2 = 61, but the team TOTALS line (and score-by-periods 26+38) shows 64. Cross-checking via pts=2*FGmade+3PTmade+FTmade confirms the TOTALS row itself is internally consistent (2*20+4+20=64) and that individual FG-made and 3PT-made columns sum correctly to the team totals (20 and 4) once Brent Darby's 3-PT FG-FGA is read as 2-2 rather than 0-0 (needed so the team 3PT-made total of 4 reconciles and his printed TP of 11 = 2*0+3*2+5 checks out). But the FT-made column only sums to 17 across players (1+0+0+7+2+5+0+0+0+2) versus the team total of 20 — a 3-point gap that must come from a misread FT digit on one or more OSU bench players (Radinovic, Ockoljic, Dudley, or Martin), and the scan is not sharp enough to identify which one confidently even after a second read. Since Ohio State's team checksum fails by 3 points and cannot be resolved without guessing, skipping the entire game rather than transcribing with an unverified line."
+    }
+  ]
+}

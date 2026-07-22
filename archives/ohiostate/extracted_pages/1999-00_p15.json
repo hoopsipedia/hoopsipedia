@@ -1,0 +1,47 @@
+{
+  "page": 15,
+  "games": [
+    {
+      "date": "2000-01-15",
+      "opponent": "Northwestern Wildcats",
+      "location": "Welsh-Ryan Arena, Evanston, Illinois",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 58,
+          "players": [
+            {"name": "Cobe Ocokolijic", "fg": "0-0", "tp": "0-0", "ft": "0-0", "pts": 0},
+            {"name": "Ken Johnson", "fg": "4-6", "tp": "0-0", "ft": "4-5", "pts": 12},
+            {"name": "Sconnie Penn", "fg": "6-12", "tp": "2-8", "ft": "1-2", "pts": 15},
+            {"name": "Brian Brown", "fg": "4-4", "tp": "2-2", "ft": "4-4", "pts": 14},
+            {"name": "Michael Redd", "fg": "4-14", "tp": "0-4", "ft": "2-2", "pts": 10},
+            {"name": "Brent Darby", "fg": "0-0", "tp": "0-0", "ft": "0-0", "pts": 0},
+            {"name": "Doylan Robinson", "fg": "0-0", "tp": "0-0", "ft": "0-0", "pts": 0},
+            {"name": "Boban Savovic", "fg": "1-2", "tp": "1-2", "ft": "0-0", "pts": 3},
+            {"name": "Devon Smith", "fg": "0-0", "tp": "0-0", "ft": "0-0", "pts": 0},
+            {"name": "Kwadjo Steele", "fg": "0-2", "tp": "0-1", "ft": "0-0", "pts": 0},
+            {"name": "George Reese", "fg": "2-7", "tp": "0-0", "ft": "0-0", "pts": 4},
+            {"name": "Will Dudley", "fg": "0-1", "tp": "0-0", "ft": "0-0", "pts": 0}
+          ]
+        },
+        {
+          "name": "Northwestern Wildcats",
+          "score": 44,
+          "players": [
+            {"name": "Steve Lepore", "fg": "0-3", "tp": "0-1", "ft": "0-0", "pts": 0},
+            {"name": "Jason Burke", "fg": "3-5", "tp": "2-3", "ft": "1-2", "pts": 9},
+            {"name": "Brody Deren", "fg": "3-7", "tp": "0-0", "ft": "1-3", "pts": 7},
+            {"name": "Ben Johnson", "fg": "7-13", "tp": "2-3", "ft": "2-2", "pts": 18},
+            {"name": "Collier Drayton", "fg": "1-4", "tp": "1-3", "ft": "1-2", "pts": 4},
+            {"name": "Winston Blake", "fg": "1-3", "tp": "1-1", "ft": "0-0", "pts": 3},
+            {"name": "David Newman", "fg": "1-3", "tp": "1-3", "ft": "0-0", "pts": 3},
+            {"name": "Tavaras Hardy", "fg": "0-3", "tp": "0-1", "ft": "0-1", "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": [],
+  "notes": "Typed official box score, Ohio State 58, Northwestern 44 (01/15/00 at Welsh-Ryan Arena, Evanston IL). Fields min/reb/ast/pf/to/stl/blk omitted for all players: those columns are printed but the right margin of the scan is faint/cropped and per-player digits could not be read with confidence, so they were left out rather than guessed. fg, tp (3-pointers), ft, and pts were read with high confidence and independently cross-checked: summing each team's player fg-made, fg-attempted, 3pt-made, 3pt-attempted, ft-made, and ft-attempted all exactly match that team's printed TOTALS row, and each team's player pts sum exactly equals that team's final score (58 and 44). One value (Deren's FT) was adjusted from an initial read of 1-4 to 1-3 to reconcile the team FTA total (10), consistent with all other cross-checks."
+}

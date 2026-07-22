@@ -1,0 +1,44 @@
+{
+  "page": 11,
+  "games": [
+    {
+      "date": "1997-01-02",
+      "opponent": "Michigan Wolverines",
+      "location": "Ann Arbor, Michigan",
+      "teams": [
+        {
+          "name": "Ohio State Buckeyes",
+          "score": 73,
+          "players": [
+            {"name": "Singleton", "fg": "5-8", "tp": "0-1", "ft": "1-2", "reb": 1, "ast": 1, "pf": 4, "to": 4, "stl": 0, "blk": 0, "pts": 11},
+            {"name": "Onerook (name partially illegible)", "fg": "2-6", "tp": "0-1", "ft": "5-8", "reb": 4, "ast": 3, "pf": 2, "to": 2, "stl": 2, "blk": 1, "pts": 9},
+            {"name": "Tate", "fg": "5-9", "tp": "0-0", "ft": "2-5", "reb": 8, "ast": 0, "pf": 2, "to": 3, "stl": 0, "blk": 2, "pts": 12},
+            {"name": "Coleman", "fg": "2-6", "tp": "1-1", "ft": "0-0", "reb": 1, "ast": 0, "pf": 3, "to": 1, "stl": 0, "blk": 0, "pts": 5},
+            {"name": "Stringer", "fg": "4-9", "tp": "1-3", "ft": "12-14", "reb": 7, "ast": 8, "pf": 2, "to": 4, "stl": 1, "blk": 0, "pts": 21},
+            {"name": "Winston", "fg": "2-4", "tp": "0-1", "ft": "2-2", "reb": 0, "ast": 2, "pf": 3, "to": 1, "stl": 2, "blk": 0, "pts": 6},
+            {"name": "Tucker", "fg": "1-1", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Davis", "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Lumpkin", "fg": "1-1", "tp": "0-0", "ft": "2-2", "reb": 1, "ast": 0, "pf": 2, "to": 1, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Jantonio", "fg": "1-1", "tp": "1-1", "ft": "0-0", "reb": 0, "ast": 0, "pf": 3, "to": 1, "stl": 0, "blk": 0, "pts": 3}
+          ]
+        },
+        {
+          "name": "Michigan Wolverines",
+          "score": 71,
+          "players": [
+            {"name": "Taylor", "fg": "3-6", "tp": "0-0", "ft": "1-1", "reb": 3, "ast": 3, "pf": 2, "to": 4, "stl": 2, "blk": 0, "pts": 7},
+            {"name": "Player (name illegible, printed fragment \":D\")", "fg": "4-8", "tp": "1-4", "ft": "1-2", "reb": 2, "ast": 2, "pf": 3, "to": 0, "stl": 0, "blk": 0, "pts": 10},
+            {"name": "Traylor", "fg": "7-11", "tp": "0-0", "ft": "3-8", "reb": 8, "ast": 0, "pf": 4, "to": 2, "stl": 0, "blk": 1, "pts": 17},
+            {"name": "Bullock", "fg": "5-12", "tp": "3-8", "ft": "3-4", "reb": 5, "ast": 0, "pf": 2, "to": 1, "stl": 0, "blk": 0, "pts": 16},
+            {"name": "Conlan", "fg": "1-7", "tp": "1-4", "ft": "0-0", "reb": 3, "ast": 1, "pf": 3, "to": 0, "stl": 5, "blk": 0, "pts": 3},
+            {"name": "Baston", "fg": "4-5", "tp": "0-0", "ft": "7-7", "reb": 8, "ast": 1, "pf": 5, "to": 1, "stl": 2, "blk": 0, "pts": 15},
+            {"name": "Hughes", "fg": "0-7", "tp": "0-3", "ft": "3-4", "reb": 1, "ast": 5, "pf": 4, "to": 0, "stl": 1, "blk": 0, "pts": 3},
+            {"name": "Oliver", "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

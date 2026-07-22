@@ -1,0 +1,9 @@
+{
+  "page": 3,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Alabama vs Ohio State box score (sheet dated '1-15-98', almost certainly 1999-01-15 given the 1998-99 season file and 'Ohio State 2-0' home-team record header; final score Alabama 70, Ohio State 78 per period line and printed TOTALS rows). Alabama's team checksum passed exactly (player TP column sums to 70 = final score). Ohio State's player TP column sums to 77, but the printed team TOTALS row and the period-score line both independently show 78 -- a 1-point discrepancy that could not be resolved even after a second full read of the page (same scan resolution, no zoom available). Internal FG/3FG/FT-derived point checks also flagged two Ohio State rows (Johnson, Ken and Coleman, Neshaun) as inconsistent with their printed TP values, suggesting at least one digit in that team's box (FG, FT, or TP) is a scanning/typing artifact I can't confidently disambiguate. Per instructions, skipping rather than guessing which digit is wrong."
+    }
+  ]
+}

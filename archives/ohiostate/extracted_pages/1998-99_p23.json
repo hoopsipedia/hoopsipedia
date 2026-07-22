@@ -1,0 +1,9 @@
+{
+  "page": 23,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Official box score: Ohio State (16-6, 6-3) at Illinois (9-12, 1-8), Assembly Hall, Champaign IL, final Ohio State 64, Illinois 61 (date partially cut off at left margin, reads '-30-99', likely 1-30-99 / Jan 30 1999). Ohio State's player rows transcribed cleanly and checksummed perfectly (player pts sum 10+0+10+15+15+10+2+0+2 = 64, matches team total and final score). However, Illinois's (home team) individual player rows are inconsistent/misaligned in the scan even after a second read of the page: several rows show a total-FG-made value lower than the 3-point-FG-made value in the same row (e.g., Lucas Johnson's row appears as FG 0 vs 3PT-FG 2-3, which is impossible since made 3s are a subset of total made FG), and at least one row (Bradford) is missing an apparent PF value, making column alignment unreliable. Illinois's TEAM TOTALS row (FG 21-59, 3FG 8-20, FT 11-23, TP 61) is legible and internally consistent with the final score, but individual player lines could not be reconstructed with confidence without guessing digits, so per instructions the full game (both teams' player lines required) is skipped rather than partially guessed."
+    }
+  ]
+}
