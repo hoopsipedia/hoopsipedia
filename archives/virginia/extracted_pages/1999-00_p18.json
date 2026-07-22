@@ -1,0 +1,44 @@
+{
+  "page": 18,
+  "games": [
+    {
+      "date": "2000-01-24",
+      "opponent": "Virginia Tech",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 71,
+          "players": [
+            {"name": "Adam Hall", "min": 35, "fg": "5-7", "tp": "0-1", "ft": "2-2", "reb": 3, "ast": 1, "pf": 3, "to": 3, "stl": 0, "blk": 1, "pts": 12},
+            {"name": "Chris Williams", "min": 42, "fg": "4-8", "tp": "2-3", "ft": "1-2", "reb": 4, "ast": 1, "pf": 2, "to": 6, "stl": 0, "blk": 1, "pts": 11},
+            {"name": "Travis Watson", "min": 33, "fg": "2-7", "tp": "0-0", "ft": "2-6", "reb": 10, "ast": 1, "pf": 4, "to": 3, "stl": 2, "blk": 2, "pts": 6},
+            {"name": "Donald Hand", "min": 39, "fg": "5-12", "tp": "0-3", "ft": "11-13", "reb": 2, "ast": 3, "pf": 2, "to": 4, "stl": 2, "blk": 0, "pts": 21},
+            {"name": "Willie Dersch", "min": 6, "fg": "0-3", "tp": "0-1", "ft": "0-0", "reb": 0, "ast": 1, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Stephane Dondon", "min": 13, "fg": "0-1", "tp": "0-1", "ft": "0-0", "reb": 3, "ast": 0, "pf": 1, "to": 0, "stl": 1, "blk": 0, "pts": 0},
+            {"name": "Majestic Mapp", "min": 13, "fg": "1-6", "tp": "1-4", "ft": "0-0", "reb": 0, "ast": 1, "pf": 1, "to": 0, "stl": 1, "blk": 0, "pts": 3},
+            {"name": "Keith Friel", "min": 5, "fg": "1-2", "tp": "1-2", "ft": "0-0", "reb": 1, "ast": 1, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 3},
+            {"name": "Roger Mason", "min": 35, "fg": "6-11", "tp": "1-2", "ft": "0-0", "reb": 4, "ast": 1, "pf": 1, "to": 1, "stl": 1, "blk": 1, "pts": 13},
+            {"name": "Colin Ducharme", "min": 4, "fg": "1-1", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 2}
+          ],
+          "checksum_ok": true
+        },
+        {
+          "name": "Virginia Tech Hokies",
+          "score": 66,
+          "players": [
+            {"name": "Rolan Roberts", "min": 20, "fg": "5-9", "tp": "0-0", "ft": "0-0", "reb": 6, "ast": 1, "pf": 5, "to": 1, "stl": 0, "blk": 0, "pts": 10},
+            {"name": "Andre' Ray", "min": 43, "fg": "2-6", "tp": "0-1", "ft": "0-0", "reb": 4, "ast": 2, "pf": 3, "to": 6, "stl": 1, "blk": 0, "pts": 4},
+            {"name": "Dennis Mims", "min": 43, "fg": "6-15", "tp": "0-0", "ft": "2-3", "reb": 11, "ast": 3, "pf": 3, "to": 3, "stl": 2, "blk": 3, "pts": 14},
+            {"name": "Brian Chase", "min": 41, "fg": "5-12", "tp": "1-7", "ft": "0-1", "reb": 3, "ast": 2, "pf": 1, "to": 1, "stl": 1, "blk": 0, "pts": 11},
+            {"name": "Tony Dobbins", "min": 24, "fg": "3-7", "tp": "1-2", "ft": "1-2", "reb": 1, "ast": 0, "pf": 0, "to": 1, "stl": 1, "blk": 0, "pts": 8},
+            {"name": "Brendan Dunlop", "min": 25, "fg": "6-9", "tp": "0-0", "ft": "3-3", "reb": 1, "ast": 2, "pf": 1, "to": 5, "stl": 3, "blk": 0, "pts": 15},
+            {"name": "Jon Smith", "min": 1, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Russ Wheeler", "min": 28, "fg": "2-5", "tp": "0-0", "ft": "0-0", "reb": 4, "ast": 1, "pf": 2, "to": 1, "stl": 2, "blk": 3, "pts": 4}
+          ],
+          "checksum_ok": true
+        }
+      ]
+    }
+  ],
+  "skipped": []
+}

@@ -1,0 +1,11 @@
+{
+  "page": 10,
+  "games": [],
+  "skipped": [
+    {
+      "date": "1999-12-21",
+      "opponent": "Richmond",
+      "reason": "Official typed box score, Virginia 69 - Richmond 65 at Robins Center. Virginia's side checksums perfectly (sum of player pts = 2+14+10+4+23+2+2+2+0+10+0+0+0 = 69, matching final score and TOTALS row TP=69; Donald Hand's line had a misaligned/illegible rebounds-PF-ast-TO-blk-stl block but his pts=4 was independently confirmed via FG(2-8)/FT(0-1)/3pt(0-3) formula AND via team-total subtraction, both agreeing). Richmond's side FAILS checksum: summing each player's printed TP column (Stephens 13 + Stevenson 22 + Zwayer 0 + Ungerer 4 + Brown 8 + Myers 0 + Smith 15 + Cunningham 4 + Faulconer 3) = 69, but Richmond's TOTALS row shows TP=65 and the final score by periods confirms Richmond scored 65 (38+27). Each individual Richmond player row is internally self-consistent (printed TP matches 2*FGmade+3FGmade+FTmade for that row), and FG/3FG team sums match exactly, but individual FT-made/FTA sums (17-25) exceed the team FT total (13-21, itself corroborated by the halftime FT splits 4-7 + 9-14) by exactly 4-4 — indicating an arithmetic error on the original 1999 paper scoresheet (most likely in Ungerer's, Cunningham's, or Faulconer's FT line) that cannot be resolved without guessing which player's FT entry is wrong. Re-read the page once (identical deterministic render both times, no new legibility gained) per the one-reread allowance; per instructions this game is skipped rather than guessed at."
+    }
+  ]
+}

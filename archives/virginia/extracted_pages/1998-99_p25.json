@@ -1,0 +1,49 @@
+{
+  "page": 25,
+  "games": [
+    {
+      "date": "1999-02-11",
+      "opponent": "Duke",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 54,
+          "players": [
+            {"name": "Willie Dersch", "min": 31, "fg": "4-8", "tp": "1-4", "ft": "3-6", "oreb": 1, "dreb": 0, "reb": 1, "pf": 3, "ast": 1, "to": 1, "blk": 0, "stl": 1, "pts": 12},
+            {"name": "Adam Hall", "min": 31, "fg": "2-11", "tp": "0-5", "ft": "0-4", "oreb": 2, "dreb": 2, "reb": 4, "pf": 4, "ast": 0, "to": 2, "blk": 0, "stl": 2, "pts": 4},
+            {"name": "Chris Williams", "min": 29, "fg": "4-9", "tp": "0-2", "ft": "2-3", "oreb": 0, "dreb": 6, "reb": 6, "pf": 4, "ast": 1, "to": 1, "blk": 3, "stl": 0, "pts": 10},
+            {"name": "Chezley Watson", "min": 33, "fg": "3-10", "tp": "0-2", "ft": "6-6", "oreb": 1, "dreb": 2, "reb": 3, "pf": 4, "ast": 4, "to": 4, "blk": 0, "stl": 2, "pts": 12},
+            {"name": "Donald Hand", "min": 31, "fg": "2-14", "tp": "1-4", "ft": "3-4", "oreb": 0, "dreb": 2, "reb": 2, "pf": 1, "ast": 1, "to": 1, "blk": 0, "stl": 0, "pts": 8},
+            {"name": "Kris Hunter", "min": 23, "fg": "1-6", "tp": "0-0", "ft": "0-2", "oreb": 2, "dreb": 3, "reb": 5, "pf": 2, "ast": 1, "to": 1, "blk": 3, "stl": 2, "pts": 2},
+            {"name": "Jason Dowling", "min": 6, "fg": "0-0", "tp": "0-0", "ft": "2-2", "oreb": 0, "dreb": 1, "reb": 1, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Cade Lemcke", "min": 8, "fg": "0-2", "tp": "0-2", "ft": "0-0", "oreb": 0, "dreb": 0, "reb": 0, "pf": 2, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Raleigh Harbour", "min": 3, "fg": "1-2", "tp": "0-0", "ft": "0-1", "oreb": 1, "dreb": 0, "reb": 1, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Brandon Lloyd", "min": 3, "fg": "0-0", "tp": "0-0", "ft": "2-2", "oreb": 0, "dreb": 0, "reb": 0, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 2},
+            {"name": "Greg Lyons", "min": 2, "fg": "0-0", "tp": "0-0", "ft": "0-0", "oreb": 0, "dreb": 0, "reb": 0, "pf": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "Duke Blue Devils",
+          "score": 100,
+          "players": [
+            {"name": "Chris Carrawell", "min": 28, "fg": "5-10", "tp": "2-3", "ft": "2-4", "oreb": 2, "dreb": 7, "reb": 9, "pf": 2, "ast": 5, "to": 2, "blk": 1, "stl": 1, "pts": 14},
+            {"name": "Shane Battier", "min": 19, "fg": "1-1", "tp": "1-1", "ft": "0-0", "oreb": 1, "dreb": 4, "reb": 5, "pf": 2, "ast": 0, "to": 0, "blk": 1, "stl": 0, "pts": 3},
+            {"name": "Elton Brand", "min": 22, "fg": "5-6", "tp": "0-0", "ft": "5-8", "oreb": 3, "dreb": 9, "reb": 12, "pf": 3, "ast": 0, "to": 2, "blk": 1, "stl": 0, "pts": 15},
+            {"name": "William Avery", "min": 27, "fg": "6-10", "tp": "2-5", "ft": "1-2", "oreb": 0, "dreb": 1, "reb": 1, "pf": 2, "ast": 8, "to": 4, "blk": 0, "stl": 1, "pts": 15},
+            {"name": "Trajan Langdon", "min": 26, "fg": "5-9", "tp": "2-5", "ft": "0-2", "oreb": 1, "dreb": 1, "reb": 2, "pf": 3, "ast": 2, "to": 3, "blk": 0, "stl": 1, "pts": 12},
+            {"name": "Nate James", "min": 19, "fg": "5-7", "tp": "1-2", "ft": "0-0", "oreb": 3, "dreb": 7, "reb": 10, "pf": 3, "ast": 1, "to": 1, "blk": 0, "stl": 0, "pts": 11},
+            {"name": "Chris Burgess", "min": 14, "fg": "2-5", "tp": "0-0", "ft": "2-2", "oreb": 0, "dreb": 2, "reb": 2, "pf": 1, "ast": 1, "to": 0, "blk": 2, "stl": 0, "pts": 6},
+            {"name": "Corey Maggette", "min": 26, "fg": "5-10", "tp": "0-2", "ft": "4-6", "oreb": 4, "dreb": 6, "reb": 10, "pf": 3, "ast": 1, "to": 3, "blk": 0, "stl": 0, "pts": 15},
+            {"name": "Taymon Domzalski", "min": 6, "fg": "3-3", "tp": "0-0", "ft": "3-3", "oreb": 1, "dreb": 1, "reb": 2, "pf": 1, "ast": 0, "to": 0, "blk": 0, "stl": 1, "pts": 9},
+            {"name": "J.D. Simpson", "min": 4, "fg": "0-0", "tp": "0-0", "ft": "0-0", "oreb": 0, "dreb": 0, "reb": 0, "pf": 0, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "D. Bryant", "min": 3, "fg": "0-1", "tp": "0-0", "ft": "0-0", "oreb": 0, "dreb": 1, "reb": 1, "pf": 1, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Justin Caldbeck", "min": 3, "fg": "0-1", "tp": "0-0", "ft": "0-0", "oreb": 0, "dreb": 0, "reb": 0, "pf": 1, "ast": 1, "to": 0, "blk": 0, "stl": 0, "pts": 0},
+            {"name": "Ryan Caldbeck", "min": 3, "fg": "0-0", "tp": "0-0", "ft": "0-0", "oreb": 0, "dreb": 0, "reb": 0, "pf": 1, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

@@ -1,0 +1,48 @@
+{
+  "page": 11,
+  "games": [
+    {
+      "date": "2001-01-02",
+      "opponent": "Wake Forest",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 73,
+          "players": [
+            {"name": "Adam Hall", "min": 30, "fg": "2-5", "ft": "3-5", "tp": "0-1", "reb": 2, "ast": 0, "pf": 4, "to": 3, "stl": 0, "blk": 1, "pts": 7},
+            {"name": "Chris Williams", "min": 27, "fg": "7-13", "ft": "3-4", "tp": "1-4", "reb": 6, "ast": 0, "pf": 2, "to": 3, "stl": 0, "blk": 2, "pts": 18},
+            {"name": "Travis Watson", "min": 28, "fg": "4-9", "ft": "1-3", "tp": "0-0", "reb": 9, "ast": 1, "pf": 5, "to": 2, "stl": 0, "blk": 2, "pts": 9},
+            {"name": "Donald Hand", "min": 34, "fg": "4-12", "ft": "8-10", "tp": "0-4", "reb": 4, "ast": 7, "pf": 4, "to": 1, "stl": 0, "blk": 0, "pts": 16},
+            {"name": "Roger Mason", "min": 23, "fg": "1-6", "ft": "3-3", "tp": "0-2", "reb": 4, "ast": 1, "pf": 1, "to": 1, "stl": 1, "blk": 0, "pts": 5},
+            {"name": "Stephane Dondon", "min": 17, "fg": "0-2", "ft": "2-2", "tp": "0-1", "reb": 2, "ast": 0, "pf": 2, "to": 2, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Keith Friel", "min": 19, "fg": "3-6", "ft": "1-1", "tp": "3-5", "reb": 2, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 10},
+            {"name": "Josh Hare", "min": 1, "fg": "0-1", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Maurice Young", "min": 6, "fg": "1-2", "ft": "0-0", "tp": "0-0", "reb": 1, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Jason Rogers", "min": 1, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "J.C. Mathias", "min": 14, "fg": "2-3", "ft": "0-1", "tp": "0-0", "reb": 2, "ast": 0, "pf": 4, "to": 1, "stl": 0, "blk": 0, "pts": 4}
+          ]
+        },
+        {
+          "name": "Wake Forest Demon Deacons",
+          "score": 96,
+          "players": [
+            {"name": "Josh Howard", "min": 27, "fg": "4-10", "ft": "5-7", "tp": "0-1", "reb": 5, "ast": 5, "pf": 2, "to": 1, "stl": 3, "blk": 2, "pts": 13},
+            {"name": "Darius Songaila", "min": 25, "fg": "11-12", "ft": "5-7", "tp": "0-0", "reb": 6, "ast": 2, "pf": 3, "to": 4, "stl": 1, "blk": 0, "pts": 27},
+            {"name": "Josh Shoemaker", "min": 26, "fg": "3-4", "ft": "1-2", "tp": "0-0", "reb": 10, "ast": 2, "pf": 4, "to": 0, "stl": 0, "blk": 1, "pts": 7},
+            {"name": "Robert O'Kelley", "min": 21, "fg": "3-7", "ft": "5-5", "tp": "1-2", "reb": 1, "ast": 4, "pf": 4, "to": 3, "stl": 0, "blk": 0, "pts": 12},
+            {"name": "Ervin Murray", "min": 27, "fg": "2-3", "ft": "0-0", "tp": "0-0", "reb": 4, "ast": 3, "pf": 4, "to": 0, "stl": 1, "blk": 0, "pts": 4},
+            {"name": "Broderick Hicks", "min": 20, "fg": "4-7", "ft": "2-3", "tp": "0-1", "reb": 1, "ast": 2, "pf": 3, "to": 0, "stl": 2, "blk": 0, "pts": 10},
+            {"name": "Matt Lineberger", "min": 1, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "A.W. Hamilton", "min": 1, "fg": "0-1", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Alan Williams", "min": 1, "fg": "1-1", "ft": "0-0", "tp": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Antwan Scott", "min": 14, "fg": "1-4", "ft": "2-2", "tp": "0-0", "reb": 3, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 1, "pts": 4},
+            {"name": "Rafael Vidaurreta", "min": 14, "fg": "3-3", "ft": "0-0", "tp": "0-0", "reb": 1, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 6},
+            {"name": "Craig Dawson", "min": 23, "fg": "4-10", "ft": "1-2", "tp": "2-5", "reb": 0, "ast": 4, "pf": 2, "to": 0, "stl": 1, "blk": 0, "pts": 11}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

@@ -1,0 +1,9 @@
+{
+  "page": 1,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Page contains one typed official box score: Virginia 97, Elon 66, 1999-11-19, attendance 7938. Column headers (FG FGA 3P 3PA FT FTA OR DR TOT PF PTS A TO BLK S MIN) are legible and TEAM TOTALS/FGA(74)/3PA(15)/FTA(14) sum correctly against per-player rows for Elon's starters, but several bench rows (Brendon Rowell, Chris Adams, George Dennis, Ross Sims) appear to be missing one column each relative to the 16-column header, producing an inconsistent alignment. Summing free-throw makes across all 10 Elon players (using best-effort column mapping) gives 8, but the printed team totals row and the FT shooting-percentage summary line both confirm the true Elon FT-made total is 6 -- a 2-point discrepancy that could not be resolved to a specific player/digit even after the one permitted re-read. Rather than guess which player's FT-made or points value is wrong, the whole game (both Elon and Virginia sides, since they are one entry) was skipped per instructions to be ruthless about skipping over guessing on failed checksums."
+    }
+  ]
+}

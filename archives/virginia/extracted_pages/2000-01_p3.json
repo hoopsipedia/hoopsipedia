@@ -1,0 +1,13 @@
+{
+  "page": 3,
+  "games": [],
+  "skipped": [
+    {
+      "date": "2000-11-24",
+      "opponent": "Virginia Tech",
+      "location": "Cassell Coliseum, Blacksburg, Va.",
+      "final_scores": {"Virginia Cavaliers": 64, "Virginia Tech": 48},
+      "reason": "Fully legible, typed official box score, but Virginia Tech side fails the player-points checksum: summing the printed TP column for all 8 Hokies players gives 49, not the official final score of 48. The team FG/FT aggregate totals (20-50 FG, 6-18 FT => 2*20+2+6=48) confirm 48 is correct, and 7 of 8 players' printed TP values exactly equal 2*FGmade+FTmade computed from their own made-FG/FT columns. Only Drew Smith's line (FG 1-2, 3PT 0-1, FT 0-0) has a printed TP of 3 where the computation implies 2 -- an apparent 1-point error/typo in the original 2000-11-24 scoresheet itself, not a reading error (verified via a second full read of the page). Per instructions, any game failing the per-team points checksum is skipped rather than guessed at; Virginia's side (64) checksums perfectly (2+9+12+7+10+0+15+0+0+0+0+0+9=64)."
+    }
+  ]
+}

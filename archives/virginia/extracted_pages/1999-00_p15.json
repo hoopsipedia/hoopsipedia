@@ -1,0 +1,9 @@
+{
+  "page": 15,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Virginia at NC State, 01-12-00 (Raleigh, NC). Headline info is clear and legible: final score NCSU 65, Virginia 62 (by periods 31-34 / 28-34), attendance 19,027, officials, technical fouls none, fouled-out players. Team TOTALS rows are also legible (Virginia: FG 17-41, 3P 7-17, FT 21-29, PTS 62; NCSU: FG 25-52, 3P 5-8, FT 10-27, PTS 65). However, the granular per-player stat columns (FG/FGA/3P/3PA/FT/FTA/OR/DR/PF/A/TO/BLK/S) are misaligned/ambiguous throughout the scan for both teams. Cross-checking individual rows against the team TOTALS produced internal contradictions (e.g., a starter's FT exceeding FTA under one plausible column alignment; 3-point attempts for bench players summing to more than the team 3PA total under another plausible alignment), indicating at least two players per team have unreliable column boundaries in this scan. Rather than guess or force-fit values to make the checksum pass, skipping full player-line transcription for this game to avoid inventing stats. Two reads of the page were used; re-reading further would not resolve the underlying scan/column-alignment ambiguity."
+    }
+  ]
+}

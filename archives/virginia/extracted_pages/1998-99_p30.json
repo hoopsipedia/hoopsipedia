@@ -1,0 +1,52 @@
+{
+  "page": 30,
+  "games": [
+    {
+      "date": "1999-03-04",
+      "opponent": "Duke Blue Devils",
+      "location": "Charlotte, NC (ACC Tournament)",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 67,
+          "players": [
+            {"name": "Adam Hall", "min": 26, "fg": "6-16", "tp": "0-2", "ft": "0-0", "reb": 1, "pf": 4, "pts": 12, "ast": 1, "to": 2, "blk": 0, "stl": 2},
+            {"name": "Chris Williams", "min": 35, "fg": "7-15", "tp": "2-4", "ft": "0-0", "reb": 10, "pf": 4, "pts": 16, "ast": 0, "to": 1, "blk": 0, "stl": 0},
+            {"name": "Kris Hunter", "min": 29, "fg": "2-7", "tp": "0-0", "ft": "2-2", "reb": 9, "pf": 1, "pts": 6, "ast": 2, "to": 2, "blk": 4, "stl": 1},
+            {"name": "Donald Hand", "min": 31, "fg": "4-18", "tp": "0-2", "ft": "7-9", "reb": 3, "pf": 4, "pts": 15, "ast": 4, "to": 4, "blk": 0, "stl": 3},
+            {"name": "Willie Dersch", "min": 29, "fg": "3-10", "tp": "1-3", "ft": "0-0", "reb": 5, "pf": 3, "pts": 7, "ast": 0, "to": 0, "blk": 0, "stl": 0},
+            {"name": "Chezley Watson", "min": 23, "fg": "2-10", "tp": "0-0", "ft": "2-3", "reb": 6, "pf": 1, "pts": 6, "ast": 1, "to": 1, "blk": 0, "stl": 2},
+            {"name": "Josh Hare", "min": 15, "fg": "0-1", "tp": "0-1", "ft": "1-1", "reb": 1, "pf": 1, "pts": 1, "ast": 0, "to": 3, "blk": 1, "stl": 0},
+            {"name": "Cade Lemcke", "fg": "0-0", "tp": "0-0", "ft": "0-0", "pts": 0},
+            {"name": "Raleigh Harbour", "min": 1, "fg": "1-2", "tp": "0-0", "ft": "2-2", "reb": 1, "pf": 1, "pts": 4, "ast": 0, "to": 0, "blk": 0, "stl": 0},
+            {"name": "Brandon Lloyd", "fg": "0-0", "tp": "0-0", "ft": "0-0", "pts": 0},
+            {"name": "Jason Dowling", "fg": "0-0", "tp": "0-0", "ft": "0-0", "pts": 0},
+            {"name": "Greg Lyons", "fg": "0-0", "tp": "0-0", "ft": "0-0", "pts": 0},
+            {"name": "Marcus Martin", "fg": "0-0", "tp": "0-0", "ft": "0-0", "pts": 0}
+          ]
+        },
+        {
+          "name": "Duke Blue Devils",
+          "score": 104,
+          "players": [
+            {"name": "Chris Carrawell", "min": 31, "fg": "6-10", "tp": "1-1", "ft": "2-2", "reb": 6, "pf": 2, "pts": 15, "ast": 3, "to": 3, "blk": 1, "stl": 2},
+            {"name": "Chris Burgess", "min": 20, "fg": "5-6", "tp": "0-0", "ft": "1-1", "reb": 6, "pf": 1, "pts": 11, "ast": 2, "to": 0, "blk": 4, "stl": 0},
+            {"name": "Elton Brand", "min": 23, "fg": "5-8", "tp": "0-0", "ft": "5-8", "reb": 6, "pf": 1, "pts": 15, "ast": 2, "to": 0, "blk": 2, "stl": 2},
+            {"name": "Trajan Langdon", "min": 21, "fg": "2-7", "tp": "0-2", "ft": "4-4", "reb": 6, "pf": 2, "pts": 8, "ast": 5, "to": 0, "blk": 1, "stl": 0},
+            {"name": "William Avery", "min": 25, "fg": "7-12", "tp": "1-4", "ft": "3-3", "reb": 4, "pf": 0, "pts": 18, "ast": 4, "to": 2, "blk": 0, "stl": 2},
+            {"name": "Shane Battier", "min": 16, "fg": "3-4", "tp": "2-3", "ft": "0-0", "reb": 6, "pf": 0, "pts": 8, "ast": 1, "to": 0, "blk": 2, "stl": 0},
+            {"name": "Corey Maggette", "min": 19, "fg": "4-8", "tp": "0-2", "ft": "0-2", "reb": 8, "pf": 1, "pts": 8, "ast": 1, "to": 5, "blk": 0, "stl": 0},
+            {"name": "Nate James", "min": 19, "fg": "3-7", "tp": "1-2", "ft": "3-6", "reb": 6, "pf": 4, "pts": 10, "ast": 0, "to": 3, "blk": 0, "stl": 1},
+            {"name": "Taymon Domzalski", "min": 13, "fg": "2-6", "tp": "0-0", "ft": "2-2", "reb": 8, "pf": 2, "pts": 6, "ast": 1, "to": 0, "blk": 2, "stl": 0},
+            {"name": "J.D. Simpson", "min": 5, "fg": "0-2", "tp": "0-2", "ft": "0-0", "reb": 1, "pf": 0, "pts": 0, "ast": 1, "to": 0, "blk": 0, "stl": 0},
+            {"name": "Justin Caldbeck", "min": 4, "fg": "1-2", "tp": "0-0", "ft": "0-0", "reb": 2, "pf": 0, "pts": 2, "ast": 0, "to": 0, "blk": 0, "stl": 0},
+            {"name": "D. Bryant", "min": 3, "fg": "1-2", "tp": "1-1", "ft": "0-0", "reb": 1, "pf": 0, "pts": 3, "ast": 0, "to": 0, "blk": 0, "stl": 0},
+            {"name": "Ryan Caldbeck", "min": 1, "fg": "0-1", "tp": "0-1", "ft": "0-0", "reb": 1, "pf": 1, "pts": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

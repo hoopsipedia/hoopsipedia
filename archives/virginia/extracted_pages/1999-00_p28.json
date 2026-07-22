@@ -1,0 +1,42 @@
+{
+  "page": 28,
+  "games": [
+    {
+      "date": "2000-03-02",
+      "opponent": "Wake Forest",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 75,
+          "players": [
+            {"name": "Adam Hall", "min": 31, "fg": "5-13", "tp": "1-4", "ft": "5-9", "reb": 6, "ast": 1, "pf": 5, "to": 0, "stl": 2, "blk": 0, "pts": 16},
+            {"name": "Chris Williams", "min": 33, "fg": "6-11", "tp": "2-3", "ft": "9-11", "reb": 8, "ast": 0, "pf": 4, "to": 0, "stl": 2, "blk": 0, "pts": 23},
+            {"name": "Travis Watson", "min": 35, "fg": "4-5", "tp": "0-0", "ft": "1-4", "reb": 8, "ast": 1, "pf": 3, "to": 2, "stl": 0, "blk": 1, "pts": 9},
+            {"name": "Donald Hand", "min": 32, "fg": "5-17", "tp": "1-8", "ft": "0-0", "reb": 3, "ast": 1, "pf": 2, "to": 5, "stl": 0, "blk": 0, "pts": 11},
+            {"name": "Roger Mason, Jr.", "min": 17, "fg": "0-3", "tp": "0-1", "pts": 0, "notes": "FT/reb/ast/pf/to/blk/stl illegible on scan; only clearly legible columns (FG, 3P, MIN) plus PTS (confirmed via team FG/FT checksum) reported"},
+            {"name": "Majestic Mapp", "min": 26, "fg": "3-6", "tp": "1-2", "ft": "2-2", "reb": 1, "ast": 3, "pf": 1, "to": 4, "stl": 0, "blk": 0, "pts": 9},
+            {"name": "Stephane Dondon", "min": 13, "fg": "2-4", "tp": "0-1", "ft": "0-1", "reb": 2, "ast": 0, "pf": 3, "to": 0, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Keith Friel", "min": 13, "fg": "1-3", "tp": "1-2", "ft": "0-0", "reb": 2, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 3}
+          ]
+        },
+        {
+          "name": "Wake Forest Demon Deacons",
+          "score": 80,
+          "players": [
+            {"name": "Josh Howard", "min": 26, "fg": "6-9", "tp": "0-0", "ft": "2-4", "reb": 6, "ast": 1, "pf": 5, "to": 3, "stl": 2, "blk": 1, "pts": 14},
+            {"name": "Darius Songaila", "min": 32, "fg": "4-9", "tp": "0-0", "ft": "14-14", "reb": 9, "ast": 2, "pf": 2, "to": 2, "stl": 0, "blk": 0, "pts": 22},
+            {"name": "Rafael Vidaurreta", "min": 20, "fg": "3-5", "tp": "0-0", "ft": "0-0", "reb": 4, "ast": 5, "pf": 4, "to": 6, "stl": 1, "blk": 0, "pts": 6},
+            {"name": "Robert O'Kelley", "min": 23, "fg": "2-5", "tp": "0-3", "ft": "0-0", "reb": 2, "ast": 2, "pf": 4, "to": 4, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Ervin Murray", "min": 28, "fg": "2-5", "tp": "1-3", "ft": "2-2", "reb": 4, "ast": 2, "pf": 2, "to": 3, "stl": 3, "blk": 0, "pts": 7},
+            {"name": "Craig Dawson", "min": 23, "fg": "4-6", "tp": "3-4", "ft": "0-0", "reb": 4, "ast": 0, "pf": 0, "to": 2, "stl": 1, "blk": 0, "pts": 11},
+            {"name": "Broderick Hicks", "min": 20, "fg": "2-5", "tp": "1-3", "ft": "0-0", "reb": 1, "ast": 2, "pf": 1, "to": 5, "stl": 0, "blk": 0, "pts": 5},
+            {"name": "Josh Shoemaker", "min": 23, "fg": "4-4", "tp": "0-0", "ft": "3-6", "reb": 8, "ast": 0, "pf": 1, "to": 1, "stl": 1, "blk": 0, "pts": 11},
+            {"name": "Antwan Scott", "min": 5, "fg": "0-3", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

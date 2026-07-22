@@ -1,0 +1,46 @@
+{
+  "page": 13,
+  "games": [
+    {
+      "date": "2000-01-05",
+      "opponent": "Duke Blue Devils",
+      "location": "Charlottesville, VA",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 100,
+          "players": [
+            {"name": "Willie Dersch", "min": 9, "fg": "0-1", "ft": "0-0", "tp": "0-1", "reb": 1, "ast": 2, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Chris Williams", "min": 38, "fg": "11-17", "ft": "5-7", "tp": "0-1", "reb": 8, "ast": 1, "pf": 4, "to": 4, "stl": 1, "blk": 0, "pts": 27},
+            {"name": "Travis Watson", "min": 42, "fg": "7-18", "ft": "3-6", "tp": "0-0", "reb": 16, "ast": 2, "pf": 2, "to": 4, "stl": 0, "blk": 2, "pts": 17},
+            {"name": "Donald Hand", "min": 42, "fg": "8-21", "ft": "0-2", "tp": "4-9", "reb": 7, "ast": 6, "pf": 4, "to": 2, "stl": 1, "blk": 0, "pts": 20},
+            {"name": "Adam Hall", "min": 28, "fg": "3-6", "ft": "1-2", "tp": "0-1", "reb": 4, "ast": 2, "pf": 5, "to": 4, "stl": 3, "blk": 0, "pts": 7},
+            {"name": "Roger Mason", "min": 28, "fg": "9-12", "ft": "1-1", "tp": "3-3", "reb": 3, "ast": 0, "pf": 3, "to": 0, "stl": 2, "blk": 0, "pts": 22},
+            {"name": "Majestic Mapp", "min": 18, "fg": "1-6", "ft": "0-0", "tp": "0-1", "reb": 0, "ast": 2, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Keith Friel", "min": 15, "fg": "1-4", "ft": "0-0", "tp": "1-4", "reb": 1, "ast": 2, "pf": 3, "to": 1, "stl": 0, "blk": 0, "pts": 3},
+            {"name": "Stephane Dondon", "min": 4, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 1, "ast": 0, "pf": 2, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Colin Ducharme", "min": 1, "fg": "1-2", "ft": "0-0", "tp": "0-0", "reb": 1, "ast": 0, "pf": 1, "to": 0, "stl": 1, "blk": 0, "pts": 2}
+          ]
+        },
+        {
+          "name": "Duke Blue Devils",
+          "score": 109,
+          "players": [
+            {"name": "Chris Carrawell", "min": 43, "fg": "8-15", "ft": "8-8", "tp": "1-2", "reb": 5, "ast": 3, "pf": 0, "to": 6, "stl": 1, "blk": 3, "pts": 25},
+            {"name": "Shane Battier", "min": 37, "fg": "7-15", "ft": "3-4", "tp": "2-3", "reb": 6, "ast": 1, "pf": 5, "to": 1, "stl": 0, "blk": 2, "pts": 19},
+            {"name": "Carlos Boozer", "min": 26, "fg": "4-5", "ft": "0-0", "tp": "0-0", "reb": 10, "ast": 1, "pf": 4, "to": 2, "stl": 1, "blk": 1, "pts": 8},
+            {"name": "Nate James", "min": 33, "fg": "6-9", "ft": "3-4", "tp": "2-3", "reb": 4, "ast": 1, "pf": 2, "to": 4, "stl": 2, "blk": 0, "pts": 17},
+            {"name": "Jason Williams", "min": 41, "fg": "5-18", "ft": "1-2", "tp": "2-8", "reb": 3, "ast": 7, "pf": 3, "to": 2, "stl": 1, "blk": 0, "pts": 13},
+            {"name": "Matt Christensen", "min": 6, "fg": "1-1", "ft": "4-4", "tp": "0-0", "reb": 6, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 1, "pts": 6},
+            {"name": "Mike Dunleavy", "min": 35, "fg": "7-10", "ft": "6-9", "tp": "1-2", "reb": 7, "ast": 2, "pf": 3, "to": 1, "stl": 1, "blk": 0, "pts": 21},
+            {"name": "Casey Sanders", "min": 1, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Nick Horvath", "min": 3, "fg": "0-1", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true,
+      "notes": "OT game (score by periods 43-46-20=109 for Duke, 43-46-11=100 for Virginia). Team-attributed (deadball) rebounds not credited to any player: Duke OR1/DR2, Virginia OR1/DR3 (excluded from player reb sums per sheet's own TEAM row). All player point totals cross-checked and reconcile exactly to final scores (Duke 109, Virginia 100). Several stat columns for Travis Watson, Jason Williams, and Majestic Mapp were faint/misaligned in the scan and were derived by column-arithmetic against the printed TOTALS row (each category summed and cross-verified across FG/FGA/3P/3PA/FT/FTA/OR/DR/PF/PTS/A/TO/BLK/S/MIN) rather than read directly; all derivations were internally consistent (integer, non-negative, and matched every column simultaneously)."
+    }
+  ],
+  "skipped": []
+}

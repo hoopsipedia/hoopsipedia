@@ -1,0 +1,50 @@
+{
+  "page": 2,
+  "games": [
+    {
+      "date": "2000-11-20",
+      "opponent": "Coastal Carolina",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 117,
+          "players": [
+            {"name": "Stephane Dondon", "min": 21, "fg": "2-6", "ft": "2-4", "tp": "0-0", "reb": 4, "ast": 1, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 6},
+            {"name": "Adam Hall", "min": 23, "fg": "3-8", "ft": "0-2", "tp": "0-2", "reb": 3, "ast": 0, "pf": 2, "to": 0, "stl": 1, "blk": 0, "pts": 6},
+            {"name": "Travis Watson", "min": 23, "fg": "7-9", "ft": "3-5", "tp": "0-0", "reb": 7, "ast": 0, "pf": 3, "to": 1, "stl": 1, "blk": 1, "pts": 17},
+            {"name": "Donald Hand", "min": 25, "fg": "4-7", "ft": "4-6", "tp": "0-2", "reb": 5, "ast": 11, "pf": 3, "to": 2, "stl": 3, "blk": 0, "pts": 12},
+            {"name": "Roger Mason Jr.", "min": 32, "fg": "10-14", "ft": "6-7", "tp": "2-3", "reb": 3, "ast": 7, "pf": 3, "to": 3, "stl": 2, "blk": 1, "pts": 28},
+            {"name": "Chris Williams", "min": 18, "fg": "5-7", "ft": "4-7", "tp": "1-2", "reb": 3, "ast": 0, "pf": 3, "to": 2, "stl": 2, "blk": 0, "pts": 15},
+            {"name": "J.C. Mathis", "min": 14, "fg": "1-6", "ft": "4-6", "tp": "0-0", "reb": 2, "ast": 0, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 6},
+            {"name": "Keith Friel", "min": 15, "fg": "3-6", "ft": "1-2", "tp": "2-5", "reb": 1, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 9},
+            {"name": "Maurice Young", "min": 9, "fg": "1-2", "ft": "7-8", "tp": "0-0", "reb": 4, "ast": 1, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 9},
+            {"name": "Josh Hare", "min": 7, "fg": "0-2", "ft": "0-0", "tp": "0-2", "reb": 2, "ast": 1, "pf": 2, "to": 0, "stl": 2, "blk": 0, "pts": 0},
+            {"name": "Jason Rogers", "min": 7, "fg": "2-2", "ft": "0-0", "tp": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Jason Dowling", "min": 4, "fg": "1-1", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Greg Lyons", "min": 2, "fg": "1-1", "ft": "0-0", "tp": "1-1", "reb": 1, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 3}
+          ]
+        },
+        {
+          "name": "Coastal Carolina",
+          "score": 78,
+          "players": [
+            {"name": "Derrick Robinson", "min": 27, "fg": "3-8", "ft": "0-0", "tp": "2-4", "reb": 6, "ast": 4, "pf": 5, "to": 5, "stl": 0, "blk": 0, "pts": 8},
+            {"name": "Torrey Butler", "min": 36, "fg": "10-16", "ft": "6-7", "tp": "2-3", "reb": 4, "ast": 1, "pf": 4, "to": 2, "stl": 0, "blk": 0, "pts": 28},
+            {"name": "Oliver Hinckson", "min": 20, "fg": "3-6", "ft": "2-2", "tp": "0-0", "reb": 4, "ast": 1, "pf": 4, "to": 3, "stl": 0, "blk": 0, "pts": 8},
+            {"name": "Alvin Green", "min": 18, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 1, "ast": 2, "pf": 0, "to": 4, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Brandon Newby", "min": 16, "fg": "3-9", "ft": "0-0", "tp": "1-5", "reb": 1, "ast": 2, "pf": 5, "to": 2, "stl": 0, "blk": 0, "pts": 7},
+            {"name": "Clint Reed", "min": 22, "fg": "0-2", "ft": "6-6", "tp": "0-2", "reb": 7, "ast": 3, "pf": 1, "to": 3, "stl": 1, "blk": 0, "pts": 6},
+            {"name": "Antonio Darden", "min": 19, "fg": "7-10", "ft": "2-2", "tp": "0-0", "reb": 6, "ast": 0, "pf": 5, "to": 2, "stl": 0, "blk": 2, "pts": 16},
+            {"name": "Mihai Raducanu", "min": 10, "fg": "1-2", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 1, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Nick Hermosila", "min": 6, "fg": "0-1", "ft": "0-0", "tp": "0-1", "reb": 0, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Justin Burton", "min": 12, "fg": "0-2", "ft": "0-0", "tp": "0-1", "reb": 2, "ast": 1, "pf": 0, "to": 0, "stl": 0, "blk": 1, "pts": 0},
+            {"name": "Carl Moser", "min": 10, "fg": "1-3", "ft": "0-0", "tp": "1-2", "reb": 0, "ast": 1, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 3},
+            {"name": "Matt Sauers", "min": 4, "fg": "0-1", "ft": "0-0", "tp": "0-1", "reb": 1, "ast": 0, "pf": 3, "to": 1, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

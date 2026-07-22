@@ -1,0 +1,44 @@
+{
+  "page": 23,
+  "games": [
+    {
+      "date": "2001-02-14",
+      "opponent": "Duke Blue Devils",
+      "location": "University Hall, Virginia",
+      "attendance": 8242,
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 91,
+          "players": [
+            {"name": "Adam Hall", "min": 34, "fg": "7-12", "ft": "2-2", "tp": "1-3", "reb": 3, "ast": 3, "pf": 4, "to": 2, "stl": 3, "blk": 0, "pts": 17},
+            {"name": "Chris Williams", "min": 36, "fg": "6-10", "ft": "8-10", "tp": "1-2", "reb": 12, "ast": 4, "pf": 2, "to": 3, "stl": 1, "blk": 4, "pts": 21},
+            {"name": "Travis Watson", "min": 31, "fg": "7-14", "ft": "1-2", "tp": "0-0", "reb": 6, "ast": 0, "pf": 4, "to": 2, "stl": 0, "blk": 1, "pts": 15},
+            {"name": "Donald Hand", "min": 26, "fg": "1-5", "ft": "1-2", "tp": "0-2", "reb": 6, "ast": 3, "pf": 3, "to": 5, "stl": 1, "blk": 0, "pts": 3},
+            {"name": "Roger Mason Jr.", "min": 36, "fg": "8-14", "ft": "2-2", "tp": "2-4", "reb": 7, "ast": 5, "pf": 3, "to": 1, "stl": 1, "blk": 0, "pts": 20},
+            {"name": "J.C. Mathis", "min": 10, "fg": "3-4", "ft": "0-0", "tp": "0-0", "reb": 4, "ast": 1, "pf": 1, "to": 2, "stl": 0, "blk": 0, "pts": 6},
+            {"name": "Keith Friel", "min": 19, "fg": "2-5", "ft": "0-0", "tp": "2-4", "reb": 1, "ast": 1, "pf": 2, "to": 1, "stl": 0, "blk": 0, "pts": 6},
+            {"name": "Stephane Dondon", "min": 8, "fg": "1-1", "ft": "0-0", "tp": "1-1", "reb": 1, "ast": 0, "pf": 2, "to": 1, "stl": 0, "blk": 0, "pts": 3}
+          ]
+        },
+        {
+          "name": "Duke Blue Devils",
+          "score": 89,
+          "players": [
+            {"name": "Shane Battier", "min": 40, "fg": "8-16", "ft": "4-4", "tp": "4-9", "reb": 2, "ast": 0, "pf": 1, "to": 1, "stl": 2, "blk": 2, "pts": 24},
+            {"name": "Mike Dunleavy", "min": 13, "fg": "2-4", "ft": "0-0", "tp": "1-3", "reb": 1, "ast": 1, "pf": 4, "to": 4, "stl": 0, "blk": 0, "pts": 5},
+            {"name": "Carlos Boozer", "min": 24, "fg": "2-5", "ft": "2-4", "tp": "0-0", "reb": 5, "ast": 0, "pf": 4, "to": 1, "stl": 0, "blk": 1, "pts": 6},
+            {"name": "Nate James", "min": 37, "fg": "7-10", "ft": "2-2", "tp": "2-3", "reb": 9, "ast": 1, "pf": 3, "to": 1, "stl": 0, "blk": 0, "pts": 18},
+            {"name": "Jason Williams", "min": 39, "fg": "5-21", "ft": "2-5", "tp": "2-9", "reb": 3, "ast": 9, "pf": 2, "to": 2, "stl": 1, "blk": 0, "pts": 14, "note": "FTA/rebound split reconciled against team totals due to OCR ambiguity on this row; FT makes, PTS, and all other fields directly legible"},
+            {"name": "Chris Duhon", "min": 35, "fg": "7-8", "ft": "1-2", "tp": "5-6", "reb": 4, "ast": 3, "pf": 1, "to": 0, "stl": 2, "blk": 0, "pts": 20},
+            {"name": "Matt Christensen", "min": 5, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Reggie Love", "min": 0, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Casey Sanders", "min": 7, "fg": "1-1", "ft": "0-2", "tp": "0-0", "reb": 1, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 2}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

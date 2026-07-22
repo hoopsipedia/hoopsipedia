@@ -1,0 +1,50 @@
+{
+  "page": 8,
+  "games": [
+    {
+      "date": "2000-12-23",
+      "opponent": "UMBC",
+      "teams": [
+        {
+          "name": "Virginia Cavaliers",
+          "score": 85,
+          "players": [
+            {"name": "Adam Hall", "min": 27, "fg": "8-13", "ft": "2-4", "tp": "0-1", "reb": 9, "ast": 1, "pf": 2, "to": 2, "stl": 0, "blk": 0, "pts": 18},
+            {"name": "Chris Williams", "min": 30, "fg": "5-13", "ft": "3-3", "tp": "0-2", "reb": 6, "ast": 0, "pf": 0, "to": 1, "stl": 0, "blk": 2, "pts": 13},
+            {"name": "Travis Watson", "min": 33, "fg": "8-15", "ft": "3-4", "tp": "0-3", "reb": 16, "ast": 2, "pf": 3, "to": 3, "stl": 1, "blk": 1, "pts": 19},
+            {"name": "Donald Hand", "min": 30, "fg": "0-6", "ft": "2-2", "tp": "0-2", "reb": 2, "ast": 6, "pf": 5, "to": 4, "stl": 2, "blk": 0, "pts": 2},
+            {"name": "Roger Mason Jr.", "min": 33, "fg": "4-9", "ft": "14-14", "tp": "1-3", "reb": 4, "ast": 0, "pf": 4, "to": 0, "stl": 2, "blk": 0, "pts": 23},
+            {"name": "Stephane Dondon", "min": 19, "fg": "2-5", "ft": "0-1", "tp": "0-2", "reb": 2, "ast": 0, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Maurice Young", "min": 14, "fg": "3-7", "ft": "0-0", "tp": "0-1", "reb": 3, "ast": 0, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 6},
+            {"name": "J.C. Mathis", "min": 14, "fg": "0-3", "ft": "0-1", "tp": "0-0", "reb": 2, "ast": 1, "pf": 1, "to": 1, "stl": 0, "blk": 1, "pts": 0},
+            {"name": "Josh Hare", "min": 0, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Jason Rogers", "min": 0, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Jason Dowling", "min": 0, "fg": "0-0", "ft": "0-1", "tp": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Greg Lyons", "min": 0, "fg": "0-2", "ft": "0-0", "tp": "0-2", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        },
+        {
+          "name": "UMBC",
+          "score": 69,
+          "players": [
+            {"name": "Rich Giddens", "min": 13, "fg": "0-2", "ft": "0-0", "tp": "0-2", "reb": 1, "ast": 2, "pf": 4, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Brad Martin", "min": 22, "fg": "2-5", "ft": "1-2", "tp": "0-0", "reb": 2, "ast": 0, "pf": 4, "to": 1, "stl": 0, "blk": 0, "pts": 5},
+            {"name": "Kennedy Okafor", "min": 38, "fg": "7-12", "ft": "2-3", "tp": "0-1", "reb": 11, "ast": 0, "pf": 3, "to": 3, "stl": 0, "blk": 1, "pts": 15},
+            {"name": "Justin Wilson", "min": 16, "fg": "0-0", "ft": "2-2", "tp": "0-0", "reb": 1, "ast": 3, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Terence Ward", "min": 36, "fg": "5-17", "ft": "5-5", "tp": "4-11", "reb": 2, "ast": 3, "pf": 5, "to": 3, "stl": 1, "blk": 0, "pts": 19},
+            {"name": "Ron Yates", "min": 18, "fg": "1-5", "ft": "3-4", "tp": "0-1", "reb": 2, "ast": 2, "pf": 5, "to": 2, "stl": 0, "blk": 0, "pts": 5},
+            {"name": "Peter Mulligan", "min": 32, "fg": "7-12", "ft": "3-4", "tp": "1-4", "reb": 7, "ast": 3, "pf": 3, "to": 5, "stl": 2, "blk": 0, "pts": 18},
+            {"name": "Will McClurkin", "min": 24, "fg": "2-6", "ft": "0-0", "tp": "0-0", "reb": 5, "ast": 1, "pf": 1, "to": 1, "stl": 0, "blk": 1, "pts": 4},
+            {"name": "Eugene Young", "min": 0, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Isaac Brooks", "min": 1, "fg": "0-0", "ft": "1-2", "tp": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 1},
+            {"name": "Kareem Washington", "min": 0, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Andre Williams", "min": 0, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Sam Brand", "min": 0, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}
