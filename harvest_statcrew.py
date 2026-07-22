@@ -47,8 +47,21 @@ PLAYER_RE = re.compile(
     r'(?P<tp>\d+)\s+(?P<a>\d+)\s+(?P<to>\d+)\s+(?P<blk>\d+)\s+(?P<s>\d+)'
     r'(?:\s+(?P<min>\d+))?\s*$')
 TOTALS_RE = re.compile(
-    r'^\s*Totals\.*\s+(?P<fg>\d+-\d+)\s+(?P<tp3>\d+-\d+)\s+(?P<ft>\d+-\d+)\s+'
+    r'^\s*(?:TOTALS?|Totals?)\.*\s+(?P<fg>\d+-\d+)\s+(?P<tp3>\d+-\d+)\s+(?P<ft>\d+-\d+)\s+'
     r'\d+\s+\d+\s+\d+\s+\d+\s+(?P<tp>\d+)')
+
+# Variant B: 1999-era FansOnly/OCSN template — made/attempted as SEPARATED
+# columns ("FG FGA FG FGA FT FTA OF DE TOT PF TP A TO BLK S MIN"), names
+# space-padded instead of dot-padded.
+PLAYER_B_RE = re.compile(
+    r'^\s*\d{1,3}\s+(?P<name>[A-Za-z].*?)\s{2,}(?:[fcg]\s+)?'
+    r'(?P<fgm>\d+)\s+(?P<fga>\d+)\s+(?P<t3m>\d+)\s+(?P<t3a>\d+)\s+'
+    r'(?P<ftm>\d+)\s+(?P<fta>\d+)\s+(?P<of>\d+)\s+(?P<de>\d+)\s+(?P<tot>\d+)\s+'
+    r'(?P<pf>\d+)(?:-\d+)?\s+(?P<tp>\d+)\s+(?P<a>\d+)\s+(?P<to>\d+)\s+(?P<blk>\d+)\s+'
+    r'(?P<s>\d+)\s+(?P<min>\d+)\s*$')
+TOTALS_B_RE = re.compile(
+    r'^\s*(?:TOTALS?|Totals?)\.*\s+\d+\s+\d+\s+\d+\s+\d+\s+\d+\s+\d+\s+'
+    r'\d+\s+\d+\s+\d+\s+\d+(?:-\d+)?\s+(?P<tp>\d+)')
 TEAM_HDR_RE = re.compile(
     r'^\s*(?:VISITORS?|HOME\s*TEAM)\s*:\s*(?P<name>.+?)\s*(?:\d+-\d+.*)?$')
 DATE_RE = re.compile(r'^(?P<m>\d{1,2})[-/](?P<d>\d{1,2})[-/](?P<y>\d{2,4})\b')
@@ -75,7 +88,7 @@ def parse_statcrew(text):
             continue
         if cur is None:
             continue
-        tm = TOTALS_RE.match(plain)
+        tm = TOTALS_RE.match(plain) or TOTALS_B_RE.match(plain)
         if tm:
             cur['score'] = int(tm.group('tp'))
             cur = cur if len(teams) < 2 else None
@@ -91,12 +104,83 @@ def parse_statcrew(text):
             if pm.group('min'):
                 p['min'] = int(pm.group('min'))
             cur['players'].append(p)
+            continue
+        pb = PLAYER_B_RE.match(plain)
+        if pb:
+            cur['players'].append(
+                {'name': re.sub(r'\s+', ' ', pb.group('name')).strip(),
+                 'fg': f"{pb.group('fgm')}-{pb.group('fga')}",
+                 'tp': f"{pb.group('t3m')}-{pb.group('t3a')}",
+                 'ft': f"{pb.group('ftm')}-{pb.group('fta')}",
+                 'reb': int(pb.group('tot')), 'pf': int(pb.group('pf')),
+                 'pts': int(pb.group('tp')), 'ast': int(pb.group('a')),
+                 'to': int(pb.group('to')), 'blk': int(pb.group('blk')),
+                 'stl': int(pb.group('s')), 'min': int(pb.group('min'))})
+    if not date or len(teams) != 2:
+        return parse_variant_c(text)
+    for t in teams:
+        if 'score' not in t or not t['players']:
+            return parse_variant_c(text)
+        # checksum: totals row vs player sum
+        if sum(p['pts'] for p in t['players']) != t['score']:
+            return parse_variant_c(text)
+    return {'date': date, 'teams': teams}
+
+
+# Variant C: 1998-99 FansOnly template — team blocks headed by
+# "{team}   M-A ... PF-D ...", starter asterisks, fouls as "PF-D" pairs,
+# team-name-led totals rows, and prose dates ("January 2, 1999").
+MONTHS = {m: i + 1 for i, m in enumerate(
+    ['January', 'February', 'March', 'April', 'May', 'June', 'July',
+     'August', 'September', 'October', 'November', 'December'])}
+DATE_C_RE = re.compile(r'\b(' + '|'.join(MONTHS) + r')\s+(\d{1,2}),\s*(\d{4})')
+PLAYER_C_RE = re.compile(
+    r'^\s*\*?(?P<name>[A-Za-z][A-Za-z .\'-]*?)\s{2,}'
+    r'(?P<fg>\d+-\d+)\s+(?P<tp3>\d+-\d+)\s+(?P<ft>\d+-\d+)\s+'
+    r'(?P<of>\d+)\s+(?P<de>\d+)\s+(?P<tot>\d+)\s+(?P<pf>\d+)-\d+\s+'
+    r'(?P<tp>\d+)\s+(?P<a>\d+)\s+(?P<to>\d+)\s+(?P<blk>\d+)\s+(?P<s>\d+)\s+(?P<min>\d+)\s*$')
+TEAMROW_C_RE = re.compile(
+    r'^\s*(?:#\d+\s+)?(?P<name>[A-Za-z][A-Za-z .&\'-]*?)\s{2,}'
+    r'\d+-\d+\s+\d+-\d+\s+\d+-\d+\s+\d+\s+\d+\s+\d+\s+\d+-\d+\s+'
+    r'(?P<tp>\d+)\s+\d+\s+\d+\s+\d+\s+\d+\s+\d+\s*$')
+HDR_C_RE = re.compile(r'^\s*(?:#\d+\s+)?(?P<name>[A-Za-z][A-Za-z .&\'-]*?)\s{2,}M-A\s+M-A')
+
+
+def parse_variant_c(text):
+    lines = [strip_tags(l) for l in text.split('\n')]
+    date = None
+    teams, cur = [], None
+    for plain in lines:
+        if date is None:
+            dm = DATE_C_RE.search(plain)
+            if dm:
+                date = f'{int(dm.group(3)):04d}-{MONTHS[dm.group(1)]:02d}-{int(dm.group(2)):02d}'
+        hm = HDR_C_RE.match(plain)
+        if hm:
+            cur = {'name': hm.group('name').strip(), 'players': []}
+            teams.append(cur)
+            continue
+        if cur is None:
+            continue
+        tm = TEAMROW_C_RE.match(plain)
+        if tm and 'score' not in cur and tm.group('name').strip() == cur['name']:
+            cur['score'] = int(tm.group('tp'))
+            cur = None
+            continue
+        pm = PLAYER_C_RE.match(plain)
+        if pm and pm.group('name').strip().lower() != 'team':
+            p = {'name': pm.group('name').strip(),
+                 'fg': pm.group('fg'), 'tp': pm.group('tp3'), 'ft': pm.group('ft'),
+                 'reb': int(pm.group('tot')), 'pf': int(pm.group('pf')),
+                 'pts': int(pm.group('tp')), 'ast': int(pm.group('a')),
+                 'to': int(pm.group('to')), 'blk': int(pm.group('blk')),
+                 'stl': int(pm.group('s')), 'min': int(pm.group('min'))}
+            cur['players'].append(p)
     if not date or len(teams) != 2:
         return None
     for t in teams:
         if 'score' not in t or not t['players']:
             return None
-        # checksum: totals row vs player sum
         if sum(p['pts'] for p in t['players']) != t['score']:
             return None
     return {'date': date, 'teams': teams}
@@ -214,7 +298,7 @@ SOURCE_DEFS = {
                       'file_re': r'/stats/\d{6}[a-z]{3}\.html?$', 'mode': 'wayback'}),
     'ucriverside':  ('27', 'UC Riverside Highlanders', 'static.gohighlanders.com (Wayback)',
                      {'cdx': 'static.gohighlanders.com/custompages/MBasketball/*',
-                      'file_re': r'/MBasketball/\d{6}/[A-Za-z0-9_-]+\.html?$', 'mode': 'wayback'}),
+                      'file_re': r'(?i)/MBasketball/\d{6}/ucrmb[kb]\d+\.html?$', 'mode': 'wayback'}),
     'wrightstate':  ('2750', 'Wright State Raiders', 'wsuraiders.com (Wayback)',
                      {'cdx': 'wsuraiders.com/mbasketball/*',
                       'file_re': r'/mbasketball/\d{4}boxes/\d+\.html?$', 'mode': 'wayback'}),
@@ -253,7 +337,8 @@ def main():
                     return True
         return False
 
-    name_key = src['team_name'].split()[0].lower()
+    ALIASES = {'UConn Huskies': 'connecticut'}
+    name_key = ALIASES.get(src['team_name'], src['team_name'].split()[0].lower())
     results, quarantine = {}, []
     stats = {'ok': 0, 'parse_fail': 0, 'checksum_fail': 0, 'log_mismatch': 0}
     for label, text in src['docs']():

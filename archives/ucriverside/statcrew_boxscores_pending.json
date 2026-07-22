@@ -1,40 +1,339 @@
 {
- "games": {},
+ "games": {
+  "2002/uc-riverside-highlanders-vs-arizona-state-2001-11-27": {
+   "source": "static.gohighlanders.com (Wayback)",
+   "date": "2001-11-27",
+   "teams": [
+    {
+     "name": "UC Riverside Highlanders",
+     "players": [
+      {
+       "name": "Galbreath, John",
+       "fg": "3-5",
+       "tp": "0-0",
+       "ft": "4-4",
+       "reb": 6,
+       "pf": 4,
+       "pts": 10,
+       "ast": 3,
+       "to": 3,
+       "blk": 0,
+       "stl": 0,
+       "min": 32
+      },
+      {
+       "name": "Cook, Lloyd",
+       "fg": "2-6",
+       "tp": "0-0",
+       "ft": "4-4",
+       "reb": 5,
+       "pf": 3,
+       "pts": 8,
+       "ast": 4,
+       "to": 1,
+       "blk": 0,
+       "stl": 2,
+       "min": 27
+      },
+      {
+       "name": "Morton, Vili",
+       "fg": "3-7",
+       "tp": "0-0",
+       "ft": "4-8",
+       "reb": 4,
+       "pf": 4,
+       "pts": 10,
+       "ast": 0,
+       "to": 3,
+       "blk": 3,
+       "stl": 2,
+       "min": 30
+      },
+      {
+       "name": "Wessel, Jake",
+       "fg": "0-0",
+       "tp": "0-0",
+       "ft": "0-0",
+       "reb": 0,
+       "pf": 0,
+       "pts": 0,
+       "ast": 0,
+       "to": 0,
+       "blk": 0,
+       "stl": 0,
+       "min": 1
+      },
+      {
+       "name": "Butler, Kevin",
+       "fg": "2-6",
+       "tp": "0-0",
+       "ft": "1-2",
+       "reb": 0,
+       "pf": 5,
+       "pts": 5,
+       "ast": 0,
+       "to": 4,
+       "blk": 0,
+       "stl": 0,
+       "min": 17
+      },
+      {
+       "name": "Porter, Rickey",
+       "fg": "3-7",
+       "tp": "0-2",
+       "ft": "2-2",
+       "reb": 3,
+       "pf": 1,
+       "pts": 8,
+       "ast": 2,
+       "to": 2,
+       "blk": 0,
+       "stl": 0,
+       "min": 23
+      },
+      {
+       "name": "Bell, Ted",
+       "fg": "2-5",
+       "tp": "1-4",
+       "ft": "2-2",
+       "reb": 2,
+       "pf": 2,
+       "pts": 7,
+       "ast": 1,
+       "to": 2,
+       "blk": 0,
+       "stl": 0,
+       "min": 19
+      },
+      {
+       "name": "Hands, Aaron",
+       "fg": "0-1",
+       "tp": "0-0",
+       "ft": "0-0",
+       "reb": 5,
+       "pf": 2,
+       "pts": 0,
+       "ast": 1,
+       "to": 1,
+       "blk": 1,
+       "stl": 0,
+       "min": 10
+      },
+      {
+       "name": "Miller, Mark",
+       "fg": "4-10",
+       "tp": "2-6",
+       "ft": "1-3",
+       "reb": 3,
+       "pf": 2,
+       "pts": 11,
+       "ast": 0,
+       "to": 6,
+       "blk": 0,
+       "stl": 1,
+       "min": 24
+      },
+      {
+       "name": "Perkins, Jason",
+       "fg": "2-2",
+       "tp": "1-1",
+       "ft": "0-0",
+       "reb": 1,
+       "pf": 0,
+       "pts": 5,
+       "ast": 2,
+       "to": 0,
+       "blk": 0,
+       "stl": 0,
+       "min": 8
+      },
+      {
+       "name": "Zepeda, Mike",
+       "fg": "0-1",
+       "tp": "0-0",
+       "ft": "0-0",
+       "reb": 2,
+       "pf": 1,
+       "pts": 0,
+       "ast": 0,
+       "to": 0,
+       "blk": 2,
+       "stl": 0,
+       "min": 9
+      }
+     ],
+     "score": 64
+    },
+    {
+     "name": "Arizona State",
+     "players": [
+      {
+       "name": "Smith, Tommy",
+       "fg": "2-4",
+       "tp": "0-0",
+       "ft": "3-4",
+       "reb": 2,
+       "pf": 5,
+       "pts": 7,
+       "ast": 1,
+       "to": 5,
+       "blk": 0,
+       "stl": 0,
+       "min": 13
+      },
+      {
+       "name": "Storey, Awvee",
+       "fg": "6-12",
+       "tp": "0-1",
+       "ft": "4-7",
+       "reb": 10,
+       "pf": 4,
+       "pts": 16,
+       "ast": 2,
+       "to": 3,
+       "blk": 1,
+       "stl": 1,
+       "min": 29
+      },
+      {
+       "name": "Prewitt, Chad",
+       "fg": "2-5",
+       "tp": "0-0",
+       "ft": "4-5",
+       "reb": 4,
+       "pf": 3,
+       "pts": 8,
+       "ast": 3,
+       "to": 2,
+       "blk": 1,
+       "stl": 1,
+       "min": 24
+      },
+      {
+       "name": "Dodd, Kyle",
+       "fg": "2-7",
+       "tp": "0-3",
+       "ft": "2-2",
+       "reb": 2,
+       "pf": 0,
+       "pts": 6,
+       "ast": 5,
+       "to": 0,
+       "blk": 0,
+       "stl": 0,
+       "min": 22
+      },
+      {
+       "name": "Millage, Curtis",
+       "fg": "3-7",
+       "tp": "1-3",
+       "ft": "2-3",
+       "reb": 1,
+       "pf": 2,
+       "pts": 9,
+       "ast": 1,
+       "to": 2,
+       "blk": 0,
+       "stl": 2,
+       "min": 24
+      },
+      {
+       "name": "Braxton, Jason",
+       "fg": "3-9",
+       "tp": "2-2",
+       "ft": "0-0",
+       "reb": 3,
+       "pf": 0,
+       "pts": 8,
+       "ast": 1,
+       "to": 1,
+       "blk": 0,
+       "stl": 2,
+       "min": 27
+      },
+      {
+       "name": "Knight, Donnell",
+       "fg": "1-2",
+       "tp": "0-0",
+       "ft": "1-2",
+       "reb": 0,
+       "pf": 1,
+       "pts": 3,
+       "ast": 1,
+       "to": 1,
+       "blk": 0,
+       "stl": 0,
+       "min": 11
+      },
+      {
+       "name": "Crandall, Kenny",
+       "fg": "3-7",
+       "tp": "2-6",
+       "ft": "0-1",
+       "reb": 3,
+       "pf": 3,
+       "pts": 8,
+       "ast": 4,
+       "to": 0,
+       "blk": 0,
+       "stl": 0,
+       "min": 25
+      },
+      {
+       "name": "Nahra, Brad",
+       "fg": "0-1",
+       "tp": "0-1",
+       "ft": "0-0",
+       "reb": 0,
+       "pf": 0,
+       "pts": 0,
+       "ast": 0,
+       "to": 0,
+       "blk": 0,
+       "stl": 1,
+       "min": 7
+      },
+      {
+       "name": "Allen, Justin",
+       "fg": "0-1",
+       "tp": "0-1",
+       "ft": "0-0",
+       "reb": 1,
+       "pf": 0,
+       "pts": 0,
+       "ast": 0,
+       "to": 0,
+       "blk": 0,
+       "stl": 0,
+       "min": 2
+      },
+      {
+       "name": "Redhage, Shawn",
+       "fg": "4-4",
+       "tp": "0-0",
+       "ft": "0-0",
+       "reb": 5,
+       "pf": 5,
+       "pts": 8,
+       "ast": 3,
+       "to": 2,
+       "blk": 1,
+       "stl": 0,
+       "min": 16
+      }
+     ],
+     "score": 73
+    }
+   ]
+  }
+ },
  "quarantine": [
   [
+   "http://web.archive.org/web/20180520042455id_/http://static.gohighlanders.com/custompages/MBasketball/200405/UCRMBK1.HTM",
+   "parse/checksum fail"
+  ],
+  [
    "http://web.archive.org/web/20180519063507id_/http://static.gohighlanders.com/custompages/MBasketball/201213/ucrmbk08.htm",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/20180518210647id_/http://static.gohighlanders.com/custompages/MBasketball/201718/teamgbg.htm",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/20170620191017id_/http://static.gohighlanders.com:80/custompages/MBasketball/201516/teamcume.htm",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/20170624022448id_/http://static.gohighlanders.com:80/custompages/MBasketball/201516/teamgbg.htm",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/20170621005223id_/http://static.gohighlanders.com:80/custompages/MBasketball/201516/teamhigh.htm",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/20170508144316id_/http://static.gohighlanders.com:80/custompages/MBasketball/201617/teamcume.htm",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/20170624022528id_/http://static.gohighlanders.com:80/custompages/MBasketball/201617/teamgbg.htm",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/20170621010404id_/http://static.gohighlanders.com:80/custompages/MBasketball/201617/teamhigh.htm",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/20171130221755id_/http://static.gohighlanders.com:80/custompages/MBasketball/201718/teamcume.htm",
    "parse/checksum fail"
   ],
   [
@@ -46,183 +345,923 @@
    "parse/checksum fail"
   ],
   [
-   "http://web.archive.org/web/20180519064631id_/https://static.gohighlanders.com/custompages/MBasketball/200203/teamcume.htm",
+   "http://web.archive.org/web/20190309055726id_/https://static.gohighlanders.com/custompages/MBasketball/200203/UCRMBK1.HTM",
    "parse/checksum fail"
   ],
   [
-   "http://web.archive.org/web/20180519064734id_/https://static.gohighlanders.com/custompages/MBasketball/200203/teamgbg.htm",
+   "http://web.archive.org/web/20180521042900id_/https://static.gohighlanders.com/custompages/MBasketball/200203/UCRMBK10.HTM",
    "parse/checksum fail"
   ],
   [
-   "http://web.archive.org/web/20180519064735id_/https://static.gohighlanders.com/custompages/MBasketball/200203/teamhigh.htm",
+   "http://web.archive.org/web/20180521040244id_/https://static.gohighlanders.com/custompages/MBasketball/200203/UCRMBK11.HTM",
    "parse/checksum fail"
   ],
   [
-   "http://web.archive.org/web/20180519064630id_/https://static.gohighlanders.com/custompages/MBasketball/200304/teamcume.htm",
+   "http://web.archive.org/web/20190309055738id_/https://static.gohighlanders.com/custompages/MBasketball/200203/UCRMBK12.HTM",
    "parse/checksum fail"
   ],
   [
-   "http://web.archive.org/web/20180519064724id_/https://static.gohighlanders.com/custompages/MBasketball/200304/teamgbg.htm",
+   "http://web.archive.org/web/20190309055739id_/https://static.gohighlanders.com/custompages/MBasketball/200203/UCRMBK13.HTM",
    "parse/checksum fail"
   ],
   [
-   "http://web.archive.org/web/20180519064733id_/https://static.gohighlanders.com/custompages/MBasketball/200304/teamhigh.htm",
+   "http://web.archive.org/web/20180520043951id_/https://static.gohighlanders.com/custompages/MBasketball/200203/UCRMBK14.HTM",
    "parse/checksum fail"
   ],
   [
-   "http://web.archive.org/web/20180519064630id_/https://static.gohighlanders.com/custompages/MBasketball/200405/teamcume.htm",
+   "http://web.archive.org/web/20180521035521id_/https://static.gohighlanders.com/custompages/MBasketball/200203/UCRMBK15.HTM",
    "parse/checksum fail"
   ],
   [
-   "http://web.archive.org/web/20180519064722id_/https://static.gohighlanders.com/custompages/MBasketball/200405/teamgbg.htm",
+   "http://web.archive.org/web/20180521042908id_/https://static.gohighlanders.com/custompages/MBasketball/200203/UCRMBK16.HTM",
    "parse/checksum fail"
   ],
   [
-   "http://web.archive.org/web/20180519064723id_/https://static.gohighlanders.com/custompages/MBasketball/200405/teamhigh.htm",
+   "http://web.archive.org/web/20180519211944id_/https://static.gohighlanders.com/custompages/MBasketball/200203/UCRMBK17.HTM",
    "parse/checksum fail"
   ],
   [
-   "http://web.archive.org/web/20180519064629id_/https://static.gohighlanders.com/custompages/MBasketball/200506/teamcume.htm",
+   "http://web.archive.org/web/20180521040249id_/https://static.gohighlanders.com/custompages/MBasketball/200203/UCRMBK18.HTM",
    "parse/checksum fail"
   ],
   [
-   "http://web.archive.org/web/20180519064720id_/https://static.gohighlanders.com/custompages/MBasketball/200506/teamgbg.htm",
+   "http://web.archive.org/web/20190309055745id_/https://static.gohighlanders.com/custompages/MBasketball/200203/UCRMBK19.HTM",
    "parse/checksum fail"
   ],
   [
-   "http://web.archive.org/web/20180519064721id_/https://static.gohighlanders.com/custompages/MBasketball/200506/teamhigh.htm",
+   "http://web.archive.org/web/20190309055728id_/https://static.gohighlanders.com/custompages/MBasketball/200203/UCRMBK2.HTM",
    "parse/checksum fail"
   ],
   [
-   "http://web.archive.org/web/20180519064628id_/https://static.gohighlanders.com/custompages/MBasketball/200607/teamcume.htm",
+   "http://web.archive.org/web/20190309055746id_/https://static.gohighlanders.com/custompages/MBasketball/200203/UCRMBK20.HTM",
    "parse/checksum fail"
   ],
   [
-   "http://web.archive.org/web/20180519064719id_/https://static.gohighlanders.com/custompages/MBasketball/200607/teamgbg.htm",
+   "http://web.archive.org/web/20180521035526id_/https://static.gohighlanders.com/custompages/MBasketball/200203/UCRMBK21.HTM",
    "parse/checksum fail"
   ],
   [
-   "http://web.archive.org/web/20180519064719id_/https://static.gohighlanders.com/custompages/MBasketball/200607/teamhigh.htm",
+   "http://web.archive.org/web/20190309055749id_/https://static.gohighlanders.com/custompages/MBasketball/200203/UCRMBK22.HTM",
    "parse/checksum fail"
   ],
   [
-   "http://web.archive.org/web/20180519064627id_/https://static.gohighlanders.com/custompages/MBasketball/200708/teamcume.htm",
+   "http://web.archive.org/web/20180520044138id_/https://static.gohighlanders.com/custompages/MBasketball/200203/UCRMBK23.HTM",
    "parse/checksum fail"
   ],
   [
-   "http://web.archive.org/web/20180519064717id_/https://static.gohighlanders.com/custompages/MBasketball/200708/teamgbg.htm",
+   "http://web.archive.org/web/20180521060011id_/https://static.gohighlanders.com/custompages/MBasketball/200203/UCRMBK24.HTM",
    "parse/checksum fail"
   ],
   [
-   "http://web.archive.org/web/20180519064718id_/https://static.gohighlanders.com/custompages/MBasketball/200708/teamhigh.htm",
+   "http://web.archive.org/web/20190309055729id_/https://static.gohighlanders.com/custompages/MBasketball/200203/UCRMBK3.HTM",
    "parse/checksum fail"
   ],
   [
-   "http://web.archive.org/web/20180519064626id_/https://static.gohighlanders.com/custompages/MBasketball/200809/teamcume.htm",
+   "http://web.archive.org/web/20190309055730id_/https://static.gohighlanders.com/custompages/MBasketball/200203/UCRMBK4.HTM",
    "parse/checksum fail"
   ],
   [
-   "http://web.archive.org/web/20180519064715id_/https://static.gohighlanders.com/custompages/MBasketball/200809/teamgbg.htm",
+   "http://web.archive.org/web/20190309055731id_/https://static.gohighlanders.com/custompages/MBasketball/200203/UCRMBK5.HTM",
    "parse/checksum fail"
   ],
   [
-   "http://web.archive.org/web/20180519064716id_/https://static.gohighlanders.com/custompages/MBasketball/200809/teamhigh.htm",
+   "http://web.archive.org/web/20180520043956id_/https://static.gohighlanders.com/custompages/MBasketball/200203/UCRMBK6.HTM",
    "parse/checksum fail"
   ],
   [
-   "http://web.archive.org/web/20180519064625id_/https://static.gohighlanders.com/custompages/MBasketball/200910/teamcume.htm",
+   "http://web.archive.org/web/20180521055912id_/https://static.gohighlanders.com/custompages/MBasketball/200203/UCRMBK7.HTM",
    "parse/checksum fail"
   ],
   [
-   "http://web.archive.org/web/20180519064713id_/https://static.gohighlanders.com/custompages/MBasketball/200910/teamgbg.htm",
+   "http://web.archive.org/web/20180520211125id_/https://static.gohighlanders.com/custompages/MBasketball/200203/UCRMBK8.HTM",
    "parse/checksum fail"
   ],
   [
-   "http://web.archive.org/web/20180519064714id_/https://static.gohighlanders.com/custompages/MBasketball/200910/teamhigh.htm",
+   "http://web.archive.org/web/20180519211942id_/https://static.gohighlanders.com/custompages/MBasketball/200203/UCRMBK9.HTM",
    "parse/checksum fail"
   ],
   [
-   "http://web.archive.org/web/20180519064623id_/https://static.gohighlanders.com/custompages/MBasketball/201011/teamcume.htm",
+   "http://web.archive.org/web/20180520041227id_/https://static.gohighlanders.com/custompages/MBasketball/200405/UCRMBK02.HTM",
    "parse/checksum fail"
   ],
   [
-   "http://web.archive.org/web/20180519064709id_/https://static.gohighlanders.com/custompages/MBasketball/201011/teamgbg.htm",
+   "http://web.archive.org/web/20190309055621id_/https://static.gohighlanders.com/custompages/MBasketball/200405/UCRMBK03.HTM",
    "parse/checksum fail"
   ],
   [
-   "http://web.archive.org/web/20180519064710id_/https://static.gohighlanders.com/custompages/MBasketball/201011/teamhigh.htm",
+   "http://web.archive.org/web/20180521041506id_/https://static.gohighlanders.com/custompages/MBasketball/200405/UCRMBK04.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180520043833id_/https://static.gohighlanders.com/custompages/MBasketball/200405/UCRMBK05.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180520041204id_/https://static.gohighlanders.com/custompages/MBasketball/200405/UCRMBK06.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180521042357id_/https://static.gohighlanders.com/custompages/MBasketball/200405/UCRMBK07.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20190309055626id_/https://static.gohighlanders.com/custompages/MBasketball/200405/UCRMBK08.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20190309055627id_/https://static.gohighlanders.com/custompages/MBasketball/200405/UCRMBK09.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180521035626id_/https://static.gohighlanders.com/custompages/MBasketball/200405/UCRMBK10.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180521040311id_/https://static.gohighlanders.com/custompages/MBasketball/200405/UCRMBK11.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180520210843id_/https://static.gohighlanders.com/custompages/MBasketball/200405/UCRMBK12.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180521042930id_/https://static.gohighlanders.com/custompages/MBasketball/200405/UCRMBK13.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180519212014id_/https://static.gohighlanders.com/custompages/MBasketball/200405/UCRMBK14.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20190309055633id_/https://static.gohighlanders.com/custompages/MBasketball/200405/UCRMBK15.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20190309055634id_/https://static.gohighlanders.com/custompages/MBasketball/200405/UCRMBK16.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180521060034id_/https://static.gohighlanders.com/custompages/MBasketball/200405/UCRMBK17.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180520211203id_/https://static.gohighlanders.com/custompages/MBasketball/200405/UCRMBK18.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180521040316id_/https://static.gohighlanders.com/custompages/MBasketball/200405/UCRMBK19.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180520210847id_/https://static.gohighlanders.com/custompages/MBasketball/200405/UCRMBK20.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180519212020id_/https://static.gohighlanders.com/custompages/MBasketball/200405/UCRMBK21.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180521042938id_/https://static.gohighlanders.com/custompages/MBasketball/200405/UCRMBK22.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20190309055642id_/https://static.gohighlanders.com/custompages/MBasketball/200405/UCRMBK23.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20190309055643id_/https://static.gohighlanders.com/custompages/MBasketball/200405/UCRMBK24.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180520211208id_/https://static.gohighlanders.com/custompages/MBasketball/200405/UCRMBK25.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180521060043id_/https://static.gohighlanders.com/custompages/MBasketball/200405/UCRMBK26.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180521035631id_/https://static.gohighlanders.com/custompages/MBasketball/200405/UCRMBK27.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20190309055649id_/https://static.gohighlanders.com/custompages/MBasketball/200405/UCRMBK28.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20190309055549id_/https://static.gohighlanders.com/custompages/MBasketball/200506/UCRMBK01.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20190309055550id_/https://static.gohighlanders.com/custompages/MBasketball/200506/UCRMBK02.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20190309055551id_/https://static.gohighlanders.com/custompages/MBasketball/200506/UCRMBK03.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20190309055552id_/https://static.gohighlanders.com/custompages/MBasketball/200506/UCRMBK04.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20190309055553id_/https://static.gohighlanders.com/custompages/MBasketball/200506/UCRMBK05.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20190309055555id_/https://static.gohighlanders.com/custompages/MBasketball/200506/UCRMBK06.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180521041622id_/https://static.gohighlanders.com/custompages/MBasketball/200506/UCRMBK07.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180520043853id_/https://static.gohighlanders.com/custompages/MBasketball/200506/UCRMBK08.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180521042503id_/https://static.gohighlanders.com/custompages/MBasketball/200506/UCRMBK09.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20190309055558id_/https://static.gohighlanders.com/custompages/MBasketball/200506/UCRMBK10.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180521060050id_/https://static.gohighlanders.com/custompages/MBasketball/200506/UCRMBK11.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180520211211id_/https://static.gohighlanders.com/custompages/MBasketball/200506/UCRMBK12.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20190309055602id_/https://static.gohighlanders.com/custompages/MBasketball/200506/UCRMBK13.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180521035654id_/https://static.gohighlanders.com/custompages/MBasketball/200506/UCRMBK14.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180521040324id_/https://static.gohighlanders.com/custompages/MBasketball/200506/UCRMBK15.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180521042945id_/https://static.gohighlanders.com/custompages/MBasketball/200506/UCRMBK16.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180519212025id_/https://static.gohighlanders.com/custompages/MBasketball/200506/UCRMBK17.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180520210852id_/https://static.gohighlanders.com/custompages/MBasketball/200506/UCRMBK18.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180521040330id_/https://static.gohighlanders.com/custompages/MBasketball/200506/UCRMBK19.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180521035658id_/https://static.gohighlanders.com/custompages/MBasketball/200506/UCRMBK20.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20190309055611id_/https://static.gohighlanders.com/custompages/MBasketball/200506/UCRMBK21.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180521042949id_/https://static.gohighlanders.com/custompages/MBasketball/200506/UCRMBK22.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20190309055613id_/https://static.gohighlanders.com/custompages/MBasketball/200506/UCRMBK23.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180520211214id_/https://static.gohighlanders.com/custompages/MBasketball/200506/UCRMBK24.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180521060051id_/https://static.gohighlanders.com/custompages/MBasketball/200506/UCRMBK25.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180519212039id_/https://static.gohighlanders.com/custompages/MBasketball/200506/UCRMBK26.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180520043838id_/https://static.gohighlanders.com/custompages/MBasketball/200506/UCRMBK27.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180519065445id_/https://static.gohighlanders.com/custompages/MBasketball/200506/UCRMBK28.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20190309055513id_/https://static.gohighlanders.com/custompages/MBasketball/200607/UCRMBK1.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20190309055523id_/https://static.gohighlanders.com/custompages/MBasketball/200607/UCRMBK10.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20190309055524id_/https://static.gohighlanders.com/custompages/MBasketball/200607/UCRMBK11.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180521060059id_/https://static.gohighlanders.com/custompages/MBasketball/200607/UCRMBK12.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180520211217id_/https://static.gohighlanders.com/custompages/MBasketball/200607/UCRMBK13.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180520045238id_/https://static.gohighlanders.com/custompages/MBasketball/200607/UCRMBK14.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20190309055530id_/https://static.gohighlanders.com/custompages/MBasketball/200607/UCRMBK15.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180521035701id_/https://static.gohighlanders.com/custompages/MBasketball/200607/UCRMBK16.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20190309055532id_/https://static.gohighlanders.com/custompages/MBasketball/200607/UCRMBK17.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180521040334id_/https://static.gohighlanders.com/custompages/MBasketball/200607/UCRMBK18.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180521042953id_/https://static.gohighlanders.com/custompages/MBasketball/200607/UCRMBK19.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20190309055514id_/https://static.gohighlanders.com/custompages/MBasketball/200607/UCRMBK2.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180519212043id_/https://static.gohighlanders.com/custompages/MBasketball/200607/UCRMBK20.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180520210857id_/https://static.gohighlanders.com/custompages/MBasketball/200607/UCRMBK21.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180521040338id_/https://static.gohighlanders.com/custompages/MBasketball/200607/UCRMBK22.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180521035704id_/https://static.gohighlanders.com/custompages/MBasketball/200607/UCRMBK23.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20190309055540id_/https://static.gohighlanders.com/custompages/MBasketball/200607/UCRMBK24.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180521042958id_/https://static.gohighlanders.com/custompages/MBasketball/200607/UCRMBK25.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20190309055541id_/https://static.gohighlanders.com/custompages/MBasketball/200607/UCRMBK26.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180520211220id_/https://static.gohighlanders.com/custompages/MBasketball/200607/UCRMBK27.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180521060104id_/https://static.gohighlanders.com/custompages/MBasketball/200607/UCRMBK28.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180520210901id_/https://static.gohighlanders.com/custompages/MBasketball/200607/UCRMBK29.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180520043922id_/https://static.gohighlanders.com/custompages/MBasketball/200607/UCRMBK3.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180519212048id_/https://static.gohighlanders.com/custompages/MBasketball/200607/UCRMBK30.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180519065446id_/https://static.gohighlanders.com/custompages/MBasketball/200607/UCRMBK31.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20190309055515id_/https://static.gohighlanders.com/custompages/MBasketball/200607/UCRMBK4.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20190309055517id_/https://static.gohighlanders.com/custompages/MBasketball/200607/UCRMBK5.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180521042712id_/https://static.gohighlanders.com/custompages/MBasketball/200607/UCRMBK6.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20190309055520id_/https://static.gohighlanders.com/custompages/MBasketball/200607/UCRMBK7.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180521061213id_/https://static.gohighlanders.com/custompages/MBasketball/200607/UCRMBK8.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180521041623id_/https://static.gohighlanders.com/custompages/MBasketball/200607/UCRMBK9.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180520044000id_/https://static.gohighlanders.com/custompages/MBasketball/200708/UCRMBK01.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20190309055441id_/https://static.gohighlanders.com/custompages/MBasketball/200708/UCRMBK02.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20190309055442id_/https://static.gohighlanders.com/custompages/MBasketball/200708/UCRMBK03.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20190309055443id_/https://static.gohighlanders.com/custompages/MBasketball/200708/UCRMBK04.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20190309055444id_/https://static.gohighlanders.com/custompages/MBasketball/200708/UCRMBK05.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20190309055445id_/https://static.gohighlanders.com/custompages/MBasketball/200708/UCRMBK06.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20190309055446id_/https://static.gohighlanders.com/custompages/MBasketball/200708/UCRMBK07.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180521042713id_/https://static.gohighlanders.com/custompages/MBasketball/200708/UCRMBK08.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180521041507id_/https://static.gohighlanders.com/custompages/MBasketball/200708/UCRMBK09.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180521035436id_/https://static.gohighlanders.com/custompages/MBasketball/200708/UCRMBK10.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20190309055449id_/https://static.gohighlanders.com/custompages/MBasketball/200708/UCRMBK11.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20190309055450id_/https://static.gohighlanders.com/custompages/MBasketball/200708/UCRMBK12.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180520210906id_/https://static.gohighlanders.com/custompages/MBasketball/200708/UCRMBK13.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180521040342id_/https://static.gohighlanders.com/custompages/MBasketball/200708/UCRMBK14.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180521035725id_/https://static.gohighlanders.com/custompages/MBasketball/200708/UCRMBK15.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180519212053id_/https://static.gohighlanders.com/custompages/MBasketball/200708/UCRMBK16.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180521040348id_/https://static.gohighlanders.com/custompages/MBasketball/200708/UCRMBK17.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180521043007id_/https://static.gohighlanders.com/custompages/MBasketball/200708/UCRMBK18.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180521060111id_/https://static.gohighlanders.com/custompages/MBasketball/200708/UCRMBK19.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180520211224id_/https://static.gohighlanders.com/custompages/MBasketball/200708/UCRMBK20.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180519212217id_/https://static.gohighlanders.com/custompages/MBasketball/200708/UCRMBK21.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180521035729id_/https://static.gohighlanders.com/custompages/MBasketball/200708/UCRMBK22.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180521043012id_/https://static.gohighlanders.com/custompages/MBasketball/200708/UCRMBK23.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180521041043id_/https://static.gohighlanders.com/custompages/MBasketball/200708/UCRMBK24.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180520211231id_/https://static.gohighlanders.com/custompages/MBasketball/200708/UCRMBK25.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180521060116id_/https://static.gohighlanders.com/custompages/MBasketball/200708/UCRMBK26.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20190309055508id_/https://static.gohighlanders.com/custompages/MBasketball/200708/UCRMBK27.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180520210910id_/https://static.gohighlanders.com/custompages/MBasketball/200708/UCRMBK28.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180519065447id_/https://static.gohighlanders.com/custompages/MBasketball/200708/UCRMBK29.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180519065448id_/https://static.gohighlanders.com/custompages/MBasketball/200708/UCRMBK30.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180520211236id_/https://static.gohighlanders.com/custompages/MBasketball/200809/UCRMBB12.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20190309055405id_/https://static.gohighlanders.com/custompages/MBasketball/200809/UCRMBK01.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180521042358id_/https://static.gohighlanders.com/custompages/MBasketball/200809/UCRMBK02.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20190309055407id_/https://static.gohighlanders.com/custompages/MBasketball/200809/UCRMBK03.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20190309055408id_/https://static.gohighlanders.com/custompages/MBasketball/200809/UCRMBK04.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20190309055410id_/https://static.gohighlanders.com/custompages/MBasketball/200809/UCRMBK05.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20190309055411id_/https://static.gohighlanders.com/custompages/MBasketball/200809/UCRMBK06.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180520042752id_/https://static.gohighlanders.com/custompages/MBasketball/200809/UCRMBK07.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180520042251id_/https://static.gohighlanders.com/custompages/MBasketball/200809/UCRMBK08.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180520045905id_/https://static.gohighlanders.com/custompages/MBasketball/200809/UCRMBK09.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180521041119id_/https://static.gohighlanders.com/custompages/MBasketball/200809/UCRMBK10.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180521040933id_/https://static.gohighlanders.com/custompages/MBasketball/200809/UCRMBK11.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180521060122id_/https://static.gohighlanders.com/custompages/MBasketball/200809/UCRMBK13.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180520210918id_/https://static.gohighlanders.com/custompages/MBasketball/200809/UCRMBK14.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180521042028id_/https://static.gohighlanders.com/custompages/MBasketball/200809/UCRMBK15.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180521035733id_/https://static.gohighlanders.com/custompages/MBasketball/200809/UCRMBK16.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180521035437id_/https://static.gohighlanders.com/custompages/MBasketball/200809/UCRMBK17.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180519212221id_/https://static.gohighlanders.com/custompages/MBasketball/200809/UCRMBK18.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180521043016id_/https://static.gohighlanders.com/custompages/MBasketball/200809/UCRMBK19.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180521040354id_/https://static.gohighlanders.com/custompages/MBasketball/200809/UCRMBK20.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180521042029id_/https://static.gohighlanders.com/custompages/MBasketball/200809/UCRMBK21.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180520210930id_/https://static.gohighlanders.com/custompages/MBasketball/200809/UCRMBK22.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180519212531id_/https://static.gohighlanders.com/custompages/MBasketball/200809/UCRMBK23.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180521035803id_/https://static.gohighlanders.com/custompages/MBasketball/200809/UCRMBK24.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180521042442id_/https://static.gohighlanders.com/custompages/MBasketball/200809/UCRMBK25.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180521040409id_/https://static.gohighlanders.com/custompages/MBasketball/200809/UCRMBK26.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180521043041id_/https://static.gohighlanders.com/custompages/MBasketball/200809/UCRMBK27.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180521060216id_/https://static.gohighlanders.com/custompages/MBasketball/200809/UCRMBK28.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180520211248id_/https://static.gohighlanders.com/custompages/MBasketball/200809/UCRMBK29.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180519065449id_/https://static.gohighlanders.com/custompages/MBasketball/200809/UCRMBK30.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20190309055327id_/https://static.gohighlanders.com/custompages/MBasketball/200910/UCRMBK01.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180521061257id_/https://static.gohighlanders.com/custompages/MBasketball/200910/UCRMBK02.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180520042214id_/https://static.gohighlanders.com/custompages/MBasketball/200910/UCRMBK03.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180521042442id_/https://static.gohighlanders.com/custompages/MBasketball/200910/UCRMBK04.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180521042359id_/https://static.gohighlanders.com/custompages/MBasketball/200910/UCRMBK05.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180521035438id_/https://static.gohighlanders.com/custompages/MBasketball/200910/UCRMBK06.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20190309055333id_/https://static.gohighlanders.com/custompages/MBasketball/200910/UCRMBK07.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20190309055334id_/https://static.gohighlanders.com/custompages/MBasketball/200910/UCRMBK08.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20190309055336id_/https://static.gohighlanders.com/custompages/MBasketball/200910/UCRMBK09.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180521041623id_/https://static.gohighlanders.com/custompages/MBasketball/200910/UCRMBK10.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180520042806id_/https://static.gohighlanders.com/custompages/MBasketball/200910/UCRMBK11.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180521042714id_/https://static.gohighlanders.com/custompages/MBasketball/200910/UCRMBK12.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180519212611id_/https://static.gohighlanders.com/custompages/MBasketball/200910/UCRMBK13.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180521060237id_/https://static.gohighlanders.com/custompages/MBasketball/200910/UCRMBK14.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180521040435id_/https://static.gohighlanders.com/custompages/MBasketball/200910/UCRMBK15.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180521035822id_/https://static.gohighlanders.com/custompages/MBasketball/200910/UCRMBK16.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180521060351id_/https://static.gohighlanders.com/custompages/MBasketball/200910/UCRMBK17.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180520211257id_/https://static.gohighlanders.com/custompages/MBasketball/200910/UCRMBK18.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180521043200id_/https://static.gohighlanders.com/custompages/MBasketball/200910/UCRMBK19.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180520210945id_/https://static.gohighlanders.com/custompages/MBasketball/200910/UCRMBK20.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180521042030id_/https://static.gohighlanders.com/custompages/MBasketball/200910/UCRMBK21.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180521035838id_/https://static.gohighlanders.com/custompages/MBasketball/200910/UCRMBK22.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180521040457id_/https://static.gohighlanders.com/custompages/MBasketball/200910/UCRMBK23.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180520211309id_/https://static.gohighlanders.com/custompages/MBasketball/200910/UCRMBK24.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180521043220id_/https://static.gohighlanders.com/custompages/MBasketball/200910/UCRMBK25.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180521061438id_/https://static.gohighlanders.com/custompages/MBasketball/200910/UCRMBK26.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180521042041id_/https://static.gohighlanders.com/custompages/MBasketball/200910/UCRMBK27.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180520210956id_/https://static.gohighlanders.com/custompages/MBasketball/200910/UCRMBK28.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180519212635id_/https://static.gohighlanders.com/custompages/MBasketball/200910/UCRMBK29.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180521042213id_/https://static.gohighlanders.com/custompages/MBasketball/201011/UCRMBK02.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180520043937id_/https://static.gohighlanders.com/custompages/MBasketball/201011/UCRMBK03.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180521042505id_/https://static.gohighlanders.com/custompages/MBasketball/201011/UCRMBK04.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180521042231id_/https://static.gohighlanders.com/custompages/MBasketball/201011/UCRMBK05.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180521042443id_/https://static.gohighlanders.com/custompages/MBasketball/201011/UCRMBK06.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180521042839id_/https://static.gohighlanders.com/custompages/MBasketball/201011/UCRMBK07.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180521042802id_/https://static.gohighlanders.com/custompages/MBasketball/201011/UCRMBK08.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180521042822id_/https://static.gohighlanders.com/custompages/MBasketball/201011/UCRMBK09.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180521041624id_/https://static.gohighlanders.com/custompages/MBasketball/201011/UCRMBK10.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180521035456id_/https://static.gohighlanders.com/custompages/MBasketball/201011/UCRMBK11.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180521043249id_/https://static.gohighlanders.com/custompages/MBasketball/201011/UCRMBK12.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180520044143id_/https://static.gohighlanders.com/custompages/MBasketball/201011/UCRMBK13.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180521040531id_/https://static.gohighlanders.com/custompages/MBasketball/201011/UCRMBK14.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180521035854id_/https://static.gohighlanders.com/custompages/MBasketball/201011/UCRMBK15.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180521060419id_/https://static.gohighlanders.com/custompages/MBasketball/201011/UCRMBK16.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180520211322id_/https://static.gohighlanders.com/custompages/MBasketball/201011/UCRMBK17.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180520211009id_/https://static.gohighlanders.com/custompages/MBasketball/201011/UCRMBK18.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180521042042id_/https://static.gohighlanders.com/custompages/MBasketball/201011/UCRMBK19.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180521040118id_/https://static.gohighlanders.com/custompages/MBasketball/201011/UCRMBK20.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180521040551id_/https://static.gohighlanders.com/custompages/MBasketball/201011/UCRMBK21.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180521061048id_/https://static.gohighlanders.com/custompages/MBasketball/201011/UCRMBK22.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180520211335id_/https://static.gohighlanders.com/custompages/MBasketball/201011/UCRMBK23.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180519212657id_/https://static.gohighlanders.com/custompages/MBasketball/201011/UCRMBK24.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180521040954id_/https://static.gohighlanders.com/custompages/MBasketball/201011/UCRMBK25.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180521042113id_/https://static.gohighlanders.com/custompages/MBasketball/201011/UCRMBK26.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180520211021id_/https://static.gohighlanders.com/custompages/MBasketball/201011/UCRMBK27.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180519212706id_/https://static.gohighlanders.com/custompages/MBasketball/201011/UCRMBK28.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180521043326id_/https://static.gohighlanders.com/custompages/MBasketball/201011/UCRMBK29.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180519065511id_/https://static.gohighlanders.com/custompages/MBasketball/201011/UCRMBK30.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180519065536id_/https://static.gohighlanders.com/custompages/MBasketball/201011/UCRMBK31.HTM",
    "parse/checksum fail"
   ],
   [
    "http://web.archive.org/web/20180521061220id_/https://static.gohighlanders.com/custompages/MBasketball/201011/ucrmbk01.htm",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/20190309055949id_/https://static.gohighlanders.com/custompages/MBasketball/201112/plyr_01.htm",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/20190309055950id_/https://static.gohighlanders.com/custompages/MBasketball/201112/plyr_02.htm",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/20190309055951id_/https://static.gohighlanders.com/custompages/MBasketball/201112/plyr_03.htm",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/20190309055953id_/https://static.gohighlanders.com/custompages/MBasketball/201112/plyr_05.htm",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/20190309055954id_/https://static.gohighlanders.com/custompages/MBasketball/201112/plyr_10.htm",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/20190309055955id_/https://static.gohighlanders.com/custompages/MBasketball/201112/plyr_12.htm",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/20190309055956id_/https://static.gohighlanders.com/custompages/MBasketball/201112/plyr_13.htm",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/20190309055957id_/https://static.gohighlanders.com/custompages/MBasketball/201112/plyr_21.htm",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/20190309055958id_/https://static.gohighlanders.com/custompages/MBasketball/201112/plyr_22.htm",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/20190309055959id_/https://static.gohighlanders.com/custompages/MBasketball/201112/plyr_23.htm",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/20190309060000id_/https://static.gohighlanders.com/custompages/MBasketball/201112/plyr_24.htm",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/20190309060001id_/https://static.gohighlanders.com/custompages/MBasketball/201112/plyr_30.htm",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/20190309060003id_/https://static.gohighlanders.com/custompages/MBasketball/201112/plyr_35.htm",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/20190309060004id_/https://static.gohighlanders.com/custompages/MBasketball/201112/plyr_tm.htm",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/20180519064623id_/https://static.gohighlanders.com/custompages/MBasketball/201112/teamcume.htm",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/20180519064708id_/https://static.gohighlanders.com/custompages/MBasketball/201112/teamgbg.htm",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/20180519064708id_/https://static.gohighlanders.com/custompages/MBasketball/201112/teamhigh.htm",
    "parse/checksum fail"
   ],
   [
@@ -350,74 +1389,6 @@
    "parse/checksum fail"
   ],
   [
-   "http://web.archive.org/web/20190309055935id_/https://static.gohighlanders.com/custompages/MBasketball/201213/plyr_01.htm",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/20190309055936id_/https://static.gohighlanders.com/custompages/MBasketball/201213/plyr_02.htm",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/20190309055937id_/https://static.gohighlanders.com/custompages/MBasketball/201213/plyr_03.htm",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/20190309055938id_/https://static.gohighlanders.com/custompages/MBasketball/201213/plyr_05.htm",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/20190309055939id_/https://static.gohighlanders.com/custompages/MBasketball/201213/plyr_10.htm",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/20190309055940id_/https://static.gohighlanders.com/custompages/MBasketball/201213/plyr_11.htm",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/20190309055941id_/https://static.gohighlanders.com/custompages/MBasketball/201213/plyr_12.htm",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/20190309055942id_/https://static.gohighlanders.com/custompages/MBasketball/201213/plyr_15.htm",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/20190309055943id_/https://static.gohighlanders.com/custompages/MBasketball/201213/plyr_21.htm",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/20190309055944id_/https://static.gohighlanders.com/custompages/MBasketball/201213/plyr_22.htm",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/20190309055945id_/https://static.gohighlanders.com/custompages/MBasketball/201213/plyr_24.htm",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/20190309055946id_/https://static.gohighlanders.com/custompages/MBasketball/201213/plyr_35.htm",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/20190309055947id_/https://static.gohighlanders.com/custompages/MBasketball/201213/plyr_54.htm",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/20190309055948id_/https://static.gohighlanders.com/custompages/MBasketball/201213/plyr_tm.htm",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/20180519064622id_/https://static.gohighlanders.com/custompages/MBasketball/201213/teamcume.htm",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/20180519064705id_/https://static.gohighlanders.com/custompages/MBasketball/201213/teamgbg.htm",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/20180519064706id_/https://static.gohighlanders.com/custompages/MBasketball/201213/teamhigh.htm",
-   "parse/checksum fail"
-  ],
-  [
    "http://web.archive.org/web/20180519115521id_/https://static.gohighlanders.com/custompages/MBasketball/201213/ucrmbk01.htm",
    "parse/checksum fail"
   ],
@@ -535,70 +1506,6 @@
   ],
   [
    "http://web.archive.org/web/20180521061152id_/https://static.gohighlanders.com/custompages/MBasketball/201213/ucrmbk31.htm",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/20190309055919id_/https://static.gohighlanders.com/custompages/MBasketball/201314/plyr_00.htm",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/20190309055920id_/https://static.gohighlanders.com/custompages/MBasketball/201314/plyr_01.htm",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/20190309055921id_/https://static.gohighlanders.com/custompages/MBasketball/201314/plyr_04.htm",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/20190309055924id_/https://static.gohighlanders.com/custompages/MBasketball/201314/plyr_05.htm",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/20190309055926id_/https://static.gohighlanders.com/custompages/MBasketball/201314/plyr_10.htm",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/20190309055927id_/https://static.gohighlanders.com/custompages/MBasketball/201314/plyr_11.htm",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/20190309055928id_/https://static.gohighlanders.com/custompages/MBasketball/201314/plyr_15.htm",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/20190309055929id_/https://static.gohighlanders.com/custompages/MBasketball/201314/plyr_20.htm",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/20190309055930id_/https://static.gohighlanders.com/custompages/MBasketball/201314/plyr_21.htm",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/20190309055931id_/https://static.gohighlanders.com/custompages/MBasketball/201314/plyr_24.htm",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/20190309055932id_/https://static.gohighlanders.com/custompages/MBasketball/201314/plyr_35.htm",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/20190309055933id_/https://static.gohighlanders.com/custompages/MBasketball/201314/plyr_54.htm",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/20190309055934id_/https://static.gohighlanders.com/custompages/MBasketball/201314/plyr_tm.htm",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/20180519064621id_/https://static.gohighlanders.com/custompages/MBasketball/201314/teamcume.htm",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/20180519064637id_/https://static.gohighlanders.com/custompages/MBasketball/201314/teamgbg.htm",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/20180519064638id_/https://static.gohighlanders.com/custompages/MBasketball/201314/teamhigh.htm",
    "parse/checksum fail"
   ],
   [
@@ -726,78 +1633,6 @@
    "parse/checksum fail"
   ],
   [
-   "http://web.archive.org/web/20190309055856id_/https://static.gohighlanders.com/custompages/MBasketball/201415/plyr_00.htm",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/20190309055856id_/https://static.gohighlanders.com/custompages/MBasketball/201415/plyr_01.htm",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/20190309055857id_/https://static.gohighlanders.com/custompages/MBasketball/201415/plyr_03.htm",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/20190309055858id_/https://static.gohighlanders.com/custompages/MBasketball/201415/plyr_04.htm",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/20190309055906id_/https://static.gohighlanders.com/custompages/MBasketball/201415/plyr_05.htm",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/20190309055906id_/https://static.gohighlanders.com/custompages/MBasketball/201415/plyr_10.htm",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/20190309055908id_/https://static.gohighlanders.com/custompages/MBasketball/201415/plyr_12.htm",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/20190309055910id_/https://static.gohighlanders.com/custompages/MBasketball/201415/plyr_13.htm",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/20190309055911id_/https://static.gohighlanders.com/custompages/MBasketball/201415/plyr_15.htm",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/20190309055912id_/https://static.gohighlanders.com/custompages/MBasketball/201415/plyr_20.htm",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/20190309055913id_/https://static.gohighlanders.com/custompages/MBasketball/201415/plyr_21.htm",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/20190309055914id_/https://static.gohighlanders.com/custompages/MBasketball/201415/plyr_22.htm",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/20190309055915id_/https://static.gohighlanders.com/custompages/MBasketball/201415/plyr_31.htm",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/20190309055917id_/https://static.gohighlanders.com/custompages/MBasketball/201415/plyr_35.htm",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/20190309055918id_/https://static.gohighlanders.com/custompages/MBasketball/201415/plyr_tm.htm",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/20180519064620id_/https://static.gohighlanders.com/custompages/MBasketball/201415/teamcume.htm",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/20180519064635id_/https://static.gohighlanders.com/custompages/MBasketball/201415/teamgbg.htm",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/20180519064636id_/https://static.gohighlanders.com/custompages/MBasketball/201415/teamhigh.htm",
-   "parse/checksum fail"
-  ],
-  [
    "http://web.archive.org/web/20190309055148id_/https://static.gohighlanders.com/custompages/MBasketball/201415/ucrmbk01.htm",
    "parse/checksum fail"
   ],
@@ -919,62 +1754,6 @@
   ],
   [
    "http://web.archive.org/web/20180519115410id_/https://static.gohighlanders.com/custompages/MBasketball/201415/ucrmbk31.htm",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/20190309055840id_/https://static.gohighlanders.com/custompages/MBasketball/201516/plyr_00.htm",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/20190309055841id_/https://static.gohighlanders.com/custompages/MBasketball/201516/plyr_01.htm",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/20190309055843id_/https://static.gohighlanders.com/custompages/MBasketball/201516/plyr_05.htm",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/20190309055844id_/https://static.gohighlanders.com/custompages/MBasketball/201516/plyr_10.htm",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/20190309055845id_/https://static.gohighlanders.com/custompages/MBasketball/201516/plyr_11.htm",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/20190309055846id_/https://static.gohighlanders.com/custompages/MBasketball/201516/plyr_12.htm",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/20190309055847id_/https://static.gohighlanders.com/custompages/MBasketball/201516/plyr_13.htm",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/20190309055848id_/https://static.gohighlanders.com/custompages/MBasketball/201516/plyr_20.htm",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/20190309055849id_/https://static.gohighlanders.com/custompages/MBasketball/201516/plyr_21.htm",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/20190309055851id_/https://static.gohighlanders.com/custompages/MBasketball/201516/plyr_22.htm",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/20190309055851id_/https://static.gohighlanders.com/custompages/MBasketball/201516/plyr_24.htm",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/20190309055853id_/https://static.gohighlanders.com/custompages/MBasketball/201516/plyr_31.htm",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/20190309055853id_/https://static.gohighlanders.com/custompages/MBasketball/201516/plyr_32.htm",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/20190309055854id_/https://static.gohighlanders.com/custompages/MBasketball/201516/plyr_tm.htm",
    "parse/checksum fail"
   ],
   [
@@ -1110,58 +1889,6 @@
    "parse/checksum fail"
   ],
   [
-   "http://web.archive.org/web/20190309055825id_/https://static.gohighlanders.com/custompages/MBasketball/201617/plyr_00.htm",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/20190309055826id_/https://static.gohighlanders.com/custompages/MBasketball/201617/plyr_01.htm",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/20190309055827id_/https://static.gohighlanders.com/custompages/MBasketball/201617/plyr_03.htm",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/20190309055828id_/https://static.gohighlanders.com/custompages/MBasketball/201617/plyr_11.htm",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/20190309055829id_/https://static.gohighlanders.com/custompages/MBasketball/201617/plyr_13.htm",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/20190309055831id_/https://static.gohighlanders.com/custompages/MBasketball/201617/plyr_14.htm",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/20190309055831id_/https://static.gohighlanders.com/custompages/MBasketball/201617/plyr_15.htm",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/20190309055832id_/https://static.gohighlanders.com/custompages/MBasketball/201617/plyr_20.htm",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/20190309055833id_/https://static.gohighlanders.com/custompages/MBasketball/201617/plyr_21.htm",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/20190309055834id_/https://static.gohighlanders.com/custompages/MBasketball/201617/plyr_24.htm",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/20190309055837id_/https://static.gohighlanders.com/custompages/MBasketball/201617/plyr_32.htm",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/20190309055838id_/https://static.gohighlanders.com/custompages/MBasketball/201617/plyr_40.htm",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/20190309055839id_/https://static.gohighlanders.com/custompages/MBasketball/201617/plyr_tm.htm",
-   "parse/checksum fail"
-  ],
-  [
    "http://web.archive.org/web/20190309055751id_/https://static.gohighlanders.com/custompages/MBasketball/201617/ucrmbb01.htm",
    "parse/checksum fail"
   ],
@@ -1272,15 +1999,11 @@
   [
    "http://web.archive.org/web/20190309055824id_/https://static.gohighlanders.com/custompages/MBasketball/201617/ucrmbb28.htm",
    "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/20180519062320id_/https://static.gohighlanders.com/custompages/MBasketball/201718/teamhigh.htm",
-   "parse/checksum fail"
   ]
  ],
  "stats": {
-  "ok": 0,
-  "parse_fail": 319,
+  "ok": 1,
+  "parse_fail": 418,
   "checksum_fail": 0,
   "log_mismatch": 0
  }
