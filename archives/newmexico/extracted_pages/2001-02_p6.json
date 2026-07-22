@@ -1,0 +1,51 @@
+{
+  "page": 6,
+  "games": [
+    {
+      "date": "2001-12-01",
+      "opponent": "Alcorn State",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 87,
+          "players": [
+            {"name": "Patrick Dennehy", "min": 28, "fg": "3-6", "ft": "4-4", "tp": "0-0", "reb": 17, "ast": 0, "pf": 1, "to": 3, "stl": 1, "blk": 0, "pts": 10},
+            {"name": "Moustapha Diagne", "min": 14, "fg": "3-4", "ft": "0-0", "tp": "0-0", "reb": 3, "ast": 0, "pf": 1, "to": 2, "stl": 0, "blk": 3, "pts": 6},
+            {"name": "Marlon Parmer", "min": 32, "fg": "7-10", "ft": "8-11", "tp": "1-1", "reb": 8, "ast": 5, "pf": 1, "to": 2, "stl": 1, "blk": 0, "pts": 23},
+            {"name": "Senque Carey", "min": 22, "fg": "1-6", "ft": "0-0", "tp": "0-2", "reb": 4, "ast": 4, "pf": 2, "to": 2, "stl": 1, "blk": 0, "pts": 2},
+            {"name": "Eric Chatfield", "min": 31, "fg": "5-9", "ft": "0-2", "tp": "2-4", "reb": 1, "ast": 3, "pf": 2, "to": 0, "stl": 3, "blk": 0, "pts": 12},
+            {"name": "Chad Bell", "min": 15, "fg": "1-4", "ft": "0-0", "tp": "0-0", "reb": 1, "ast": 0, "pf": 3, "to": 1, "stl": 0, "blk": 1, "pts": 2},
+            {"name": "Ruben Douglas", "min": 20, "fg": "4-12", "ft": "0-0", "tp": "1-2", "reb": 3, "ast": 2, "pf": 2, "to": 2, "stl": 1, "blk": 0, "pts": 9},
+            {"name": "Tim Lightfoot", "min": 12, "fg": "1-4", "ft": "2-2", "tp": "1-2", "reb": 1, "ast": 0, "pf": 2, "to": 1, "stl": 0, "blk": 0, "pts": 5},
+            {"name": "Ryan Ashcraft", "min": 1, "fg": "0-1", "ft": "0-0", "tp": "0-1", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Beau Anderson", "min": 1, "fg": "1-1", "ft": "0-0", "tp": "1-1", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 3},
+            {"name": "Jamaal Williams", "min": 15, "fg": "4-7", "ft": "1-1", "tp": "0-0", "reb": 6, "ast": 1, "pf": 1, "to": 0, "stl": 0, "blk": 1, "pts": 9},
+            {"name": "Pat Kelly", "min": 3, "fg": "1-1", "ft": "0-0", "tp": "0-0", "reb": 2, "ast": 0, "pf": 0, "to": 0, "stl": 1, "blk": 0, "pts": 2},
+            {"name": "Cody Payne", "min": 6, "fg": "1-2", "ft": "2-4", "tp": "0-0", "reb": 3, "ast": 2, "pf": 0, "to": 0, "stl": 0, "blk": 1, "pts": 4}
+          ]
+        },
+        {
+          "name": "Alcorn State Braves",
+          "score": 55,
+          "players": [
+            {"name": "Marcus Fleming", "min": 25, "fg": "3-8", "ft": "2-4", "tp": "0-0", "reb": 7, "ast": 3, "pf": 2, "to": 4, "stl": 2, "blk": 1, "pts": 8},
+            {"name": "Walter Harper", "min": 18, "fg": "3-6", "ft": "0-0", "tp": "2-3", "reb": 2, "ast": 0, "pf": 5, "to": 0, "stl": 0, "blk": 0, "pts": 8},
+            {"name": "Tori Harris", "min": 26, "fg": "4-9", "ft": "2-2", "tp": "2-4", "reb": 2, "ast": 1, "pf": 1, "to": 0, "stl": 0, "blk": 1, "pts": 12},
+            {"name": "Jeff Cammon", "min": 27, "fg": "0-3", "ft": "0-0", "tp": "0-2", "reb": 2, "ast": 2, "pf": 0, "to": 2, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Jason Cable", "min": 26, "fg": "3-9", "ft": "2-3", "tp": "0-4", "reb": 1, "ast": 3, "pf": 2, "to": 4, "stl": 1, "blk": 0, "pts": 8},
+            {"name": "Cory Jackson", "min": 14, "fg": "0-2", "ft": "0-0", "tp": "0-2", "reb": 1, "ast": 0, "pf": 1, "to": 1, "stl": 1, "blk": 0, "pts": 0},
+            {"name": "Lee Cook", "min": 17, "fg": "5-10", "ft": "2-3", "tp": "0-1", "reb": 3, "ast": 1, "pf": 5, "to": 4, "stl": 1, "blk": 0, "pts": 12},
+            {"name": "Travis Norris", "min": 10, "fg": "0-1", "ft": "0-0", "tp": "0-1", "reb": 1, "ast": 1, "pf": 1, "to": 2, "stl": 1, "blk": 0, "pts": 0},
+            {"name": "Dion Callans", "min": 4, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Brian Jackson", "min": 11, "fg": "0-3", "ft": "1-1", "tp": "0-1", "reb": 5, "ast": 1, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 1},
+            {"name": "Steve Wallace", "min": 1, "fg": "1-2", "ft": "0-0", "tp": "0-1", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Myles Howard", "min": 1, "fg": "0-0", "ft": "0-2", "tp": "0-0", "reb": 1, "ast": 0, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Larry Robinson", "min": 20, "fg": "2-6", "ft": "0-2", "tp": "0-0", "reb": 1, "ast": 1, "pf": 0, "to": 2, "stl": 0, "blk": 0, "pts": 4}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

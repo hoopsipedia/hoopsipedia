@@ -1,0 +1,11 @@
+{
+  "page": 2,
+  "games": [],
+  "skipped": [
+    {
+      "date": "2000-11-15",
+      "opponent": "Temple University",
+      "reason": "Checksum failure for Temple: player points sum to 59 (WESBY 5, ROLLERSON 0, LYDE 10, GREER 18, WADLEY 15, BLACKSHEAR 0, AARON 0, HAWKINS 11) but printed team total is 61 (score-by-periods 29+32=61). FT-made sum is 6 (2+0+0+2+2+0+0+0) but printed team FT total is 8-11. Re-read the page a second time to confirm values were transcribed correctly; the discrepancy appears to be an inconsistency in the original 1999-2000 printed box score itself, not a transcription error. New Mexico's own line checksums correctly (12+0+5+10+16+6+0+0=49, matches final score 49-61), but skipping the whole game per instructions since Temple's side cannot be verified."
+    }
+  ]
+}

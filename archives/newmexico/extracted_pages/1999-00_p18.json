@@ -1,0 +1,44 @@
+{
+  "page": 18,
+  "games": [
+    {
+      "date": "2000-01-17",
+      "opponent": "UNLV Rebels",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 73,
+          "players": [
+            {"name": "Damion Walker", "min": 35, "fg": "5-10", "tp": "0-0", "ft": "2-3", "reb": 8, "ast": 0, "pf": 2, "to": 5, "stl": 2, "blk": 3, "pts": 12},
+            {"name": "R.T. Guinn", "min": 13, "fg": "3-6", "tp": "1-1", "ft": "1-2", "reb": 4, "ast": 0, "pf": 4, "to": 1, "stl": 0, "blk": 1, "pts": 8},
+            {"name": "Lamont Long", "min": 36, "fg": "5-18", "tp": "2-5", "ft": "0-0", "reb": 2, "ast": 2, "pf": 1, "to": 0, "stl": 3, "blk": 0, "pts": 12},
+            {"name": "Wayland White", "min": 31, "fg": "6-11", "tp": "0-1", "ft": "1-4", "reb": 7, "ast": 1, "pf": 0, "to": 2, "stl": 0, "blk": 7, "pts": 13},
+            {"name": "Kevin Henry", "min": 31, "fg": "4-13", "tp": "1-9", "ft": "3-5", "reb": 5, "ast": 4, "pf": 4, "to": 1, "stl": 1, "blk": 0, "pts": 12},
+            {"name": "Tim Lightfoot", "min": 3, "fg": "1-2", "tp": "1-2", "ft": "0-0", "reb": 2, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 3},
+            {"name": "Rafael Berumen", "min": 11, "fg": "1-3", "tp": "0-1", "ft": "1-2", "reb": 8, "ast": 1, "pf": 4, "to": 0, "stl": 0, "blk": 1, "pts": 3},
+            {"name": "Marlon Parmer", "min": 26, "fg": "1-6", "tp": "1-2", "ft": "5-8", "reb": 4, "ast": 5, "pf": 3, "to": 2, "stl": 0, "blk": 0, "pts": 8},
+            {"name": "Roland Hannah", "min": 14, "fg": "1-2", "tp": "0-1", "ft": "0-0", "reb": 4, "ast": 0, "pf": 1, "to": 1, "stl": 1, "blk": 0, "pts": 2}
+          ],
+          "checksum_ok": true
+        },
+        {
+          "name": "UNLV Rebels",
+          "score": 85,
+          "players": [
+            {"name": "Dalron Johnson", "min": 19, "fg": "4-10", "tp": "0-1", "ft": "4-6", "reb": 11, "ast": 2, "pf": 2, "to": 1, "stl": 1, "blk": 3, "pts": 12},
+            {"name": "Donovan Stewart", "min": 15, "fg": "3-5", "tp": "1-1", "ft": "1-1", "reb": 3, "ast": 0, "pf": 3, "to": 0, "stl": 0, "blk": 0, "pts": 8},
+            {"name": "Kaspars Kambala", "min": 38, "fg": "12-20", "tp": "0-0", "ft": "8-11", "reb": 18, "ast": 0, "pf": 2, "to": 6, "stl": 0, "blk": 2, "pts": 32},
+            {"name": "Trevor Diggs", "min": 35, "fg": "1-13", "tp": "1-6", "ft": "1-2", "reb": 1, "ast": 4, "pf": 3, "to": 1, "stl": 2, "blk": 1, "pts": 4},
+            {"name": "Mark Dickel", "min": 39, "fg": "6-9", "tp": "3-3", "ft": "1-2", "reb": 6, "ast": 9, "pf": 2, "to": 3, "stl": 0, "blk": 0, "pts": 16},
+            {"name": "Danny Brotherson", "min": 26, "fg": "3-9", "tp": "0-0", "ft": "2-3", "reb": 5, "ast": 1, "pf": 1, "to": 2, "stl": 1, "blk": 0, "pts": 8},
+            {"name": "Sylvester Dotson", "min": 6, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 2, "ast": 2, "pf": 4, "to": 1, "stl": 0, "blk": 1, "pts": 0},
+            {"name": "Lou Kelly", "min": 5, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Chris Richardson", "min": 17, "fg": "2-3", "tp": "0-0", "ft": "1-2", "reb": 4, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 5}
+          ],
+          "checksum_ok": true
+        }
+      ]
+    }
+  ],
+  "skipped": []
+}

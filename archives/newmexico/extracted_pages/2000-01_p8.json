@@ -1,0 +1,43 @@
+{
+  "page": 8,
+  "games": [
+    {
+      "date": "2000-12-23",
+      "opponent": "Mercer Bears",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 69,
+          "players": [
+            {"name": "Broussard, Alvin", "min": 15, "fg": "0-4", "ft": "0-0", "tp": "0-1", "reb": 3, "ast": 1, "pf": 3, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Smith, Brian", "min": 34, "fg": "4-4", "ft": "3-3", "tp": "0-0", "reb": 3, "ast": 1, "pf": 3, "to": 1, "stl": 0, "blk": 0, "pts": 11},
+            {"name": "Parmer, Marlon", "min": 34, "fg": "4-7", "ft": "3-5", "tp": "1-3", "reb": 4, "ast": 7, "pf": 1, "to": 5, "stl": 1, "blk": 0, "pts": 12},
+            {"name": "Douglas, Ruben", "min": 34, "fg": "3-13", "ft": "6-11", "tp": "2-4", "reb": 8, "ast": 1, "pf": 4, "to": 3, "stl": 1, "blk": 0, "pts": 14},
+            {"name": "Chatfield, Eric", "min": 34, "fg": "5-13", "ft": "8-12", "tp": "1-4", "reb": 7, "ast": 1, "pf": 3, "to": 3, "stl": 1, "blk": 0, "pts": 19},
+            {"name": "Lightfoot, Tim", "min": 11, "fg": "3-6", "ft": "0-0", "tp": "1-3", "reb": 0, "ast": 1, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 7},
+            {"name": "Johnson, Isaiah Zeke", "min": 18, "fg": "0-3", "ft": "2-6", "tp": "0-1", "reb": 3, "ast": 1, "pf": 2, "to": 1, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Dennehy, Patrick", "min": 20, "fg": "2-4", "ft": "0-6", "tp": "0-0", "reb": 11, "ast": 1, "pf": 4, "to": 2, "stl": 0, "blk": 0, "pts": 4}
+          ]
+        },
+        {
+          "name": "Mercer Bears",
+          "score": 62,
+          "players": [
+            {"name": "Emerson, Scott", "min": 27, "fg": "2-12", "ft": "2-6", "tp": "0-4", "reb": 4, "ast": 2, "pf": 5, "to": 4, "stl": 1, "blk": 2, "pts": 6},
+            {"name": "Kirtz, Rodney", "min": 33, "fg": "6-13", "ft": "1-2", "tp": "4-8", "reb": 11, "ast": 3, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 17},
+            {"name": "Howard, Justin", "min": 16, "fg": "2-7", "ft": "0-0", "tp": "0-0", "reb": 6, "ast": 2, "pf": 4, "to": 0, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Sagester, Josh", "min": 31, "fg": "1-4", "ft": "0-0", "tp": "1-4", "reb": 1, "ast": 3, "pf": 3, "to": 4, "stl": 1, "blk": 0, "pts": 3},
+            {"name": "McCray, Korey", "min": 27, "fg": "1-4", "ft": "0-0", "tp": "0-3", "reb": 1, "ast": 3, "pf": 2, "to": 1, "stl": 1, "blk": 0, "pts": 2},
+            {"name": "Zujovic, Vladimir", "min": 21, "fg": "4-8", "ft": "5-6", "tp": "2-4", "reb": 0, "ast": 1, "pf": 0, "to": 1, "stl": 1, "blk": 0, "pts": 15},
+            {"name": "Hansen, Bobby", "min": 16, "fg": "3-5", "ft": "0-0", "tp": "0-0", "reb": 9, "ast": 1, "pf": 4, "to": 2, "stl": 1, "blk": 2, "pts": 6},
+            {"name": "Boles, Ryan", "min": 7, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 2, "ast": 0, "pf": 2, "to": 1, "stl": 0, "blk": 1, "pts": 0},
+            {"name": "Duke, Wesley", "min": 17, "fg": "3-9", "ft": "0-2", "tp": "0-0", "reb": 3, "ast": 1, "pf": 4, "to": 2, "stl": 0, "blk": 0, "pts": 6},
+            {"name": "Walker, Andrew", "min": 5, "fg": "1-1", "ft": "0-0", "tp": "1-1", "reb": 1, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 3}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

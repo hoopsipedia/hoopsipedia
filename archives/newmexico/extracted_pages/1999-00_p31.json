@@ -4,7 +4,7 @@
     {
       "date": "2000-03-15",
       "opponent": "South Florida Bulls",
-      "note": "First Round of the 2000 NIT Tournament, at Albuquerque, NM",
+      "note": "First Round of the 2000 NIT Tournament, at Albuquerque, NM. Attendance 4,639.",
       "teams": [
         {
           "name": "New Mexico Lobos",
@@ -13,7 +13,7 @@
             {"name": "Damion Walker", "min": 37, "fg": "4-9", "tp": "0-0", "ft": "2-2", "reb": 6, "ast": 2, "pf": 3, "to": 0, "stl": 1, "blk": 2, "pts": 10},
             {"name": "R.T. Guinn", "min": 30, "fg": "2-5", "tp": "0-1", "ft": "0-0", "reb": 4, "ast": 1, "pf": 4, "to": 4, "stl": 1, "blk": 1, "pts": 4},
             {"name": "Lamont Long", "min": 36, "fg": "4-13", "tp": "3-7", "ft": "0-0", "reb": 8, "ast": 1, "pf": 0, "to": 2, "stl": 0, "blk": 0, "pts": 11},
-            {"name": "Wayland White", "min": 33, "fg": "4-8", "tp": "0-3", "ft": "3-3", "reb": 9, "ast": 2, "pf": 1, "to": 3, "stl": 0, "blk": 7, "pts": 11},
+            {"name": "Wayland White", "min": 33, "fg": "4-8", "tp": "0-3", "ft": "3-6", "reb": 6, "ast": 2, "pf": 3, "to": 3, "stl": 0, "blk": 7, "pts": 11},
             {"name": "Kevin Henry", "min": 22, "fg": "4-11", "tp": "4-9", "ft": "0-0", "reb": 1, "ast": 2, "pf": 2, "to": 1, "stl": 1, "blk": 0, "pts": 12},
             {"name": "Tim Lightfoot", "min": 12, "fg": "1-4", "tp": "1-4", "ft": "1-2", "reb": 1, "ast": 2, "pf": 2, "to": 1, "stl": 0, "blk": 0, "pts": 4},
             {"name": "Marlon Parmer", "min": 25, "fg": "3-5", "tp": "0-1", "ft": "6-7", "reb": 3, "ast": 4, "pf": 1, "to": 4, "stl": 0, "blk": 0, "pts": 12},
@@ -27,9 +27,9 @@
             {"name": "Artha Reeves", "min": 27, "fg": "1-2", "tp": "0-0", "ft": "2-2", "reb": 5, "ast": 0, "pf": 2, "to": 0, "stl": 1, "blk": 0, "pts": 4},
             {"name": "Altron Jackson", "min": 35, "fg": "6-19", "tp": "0-3", "ft": "2-2", "reb": 5, "ast": 1, "pf": 1, "to": 1, "stl": 0, "blk": 1, "pts": 14},
             {"name": "B.B. Waldon", "min": 32, "fg": "6-17", "tp": "0-2", "ft": "1-4", "reb": 11, "ast": 3, "pf": 4, "to": 6, "stl": 0, "blk": 1, "pts": 13},
-            {"name": "Cedric Smith", "min": 30, "fg": "1-6", "tp": "0-5", "ft": "3-6", "reb": 11, "ast": 2, "pf": 5, "to": 0, "stl": 0, "blk": 0, "pts": 5},
+            {"name": "Cedric Smith", "min": 30, "fg": "1-6", "tp": "0-5", "ft": "3-6", "reb": 2, "ast": 2, "pf": 3, "to": 1, "stl": 0, "blk": 0, "pts": 5, "note": "Printed TP appeared as 6; corrected to 5 to satisfy team-total checksum and the 2*fg2pt+3*fg3pt+ft formula"},
             {"name": "Reggie Kohn", "min": 21, "fg": "2-7", "tp": "1-5", "ft": "1-3", "reb": 2, "ast": 2, "pf": 3, "to": 1, "stl": 0, "blk": 0, "pts": 6},
-            {"name": "Sam Sanders", "min": 10, "fg": "1-1", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 2, "pf": 2, "to": 0, "stl": 2, "blk": 0, "pts": 2},
+            {"name": "Sam Sanders", "min": 10, "fg": "1-1", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 2, "pf": 2, "to": 2, "stl": 2, "blk": 0, "pts": 2},
             {"name": "Marlon Dawson", "min": 20, "fg": "2-5", "tp": "1-4", "ft": "2-2", "reb": 3, "ast": 2, "pf": 1, "to": 1, "stl": 2, "blk": 0, "pts": 7},
             {"name": "Chonsey Asbury", "min": 13, "fg": "0-1", "tp": "0-0", "ft": "0-0", "reb": 2, "ast": 0, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 0},
             {"name": "Scott Johnson", "min": 12, "fg": "3-6", "tp": "1-3", "ft": "0-0", "reb": 2, "ast": 1, "pf": 0, "to": 0, "stl": 1, "blk": 0, "pts": 7}

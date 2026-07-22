@@ -1,0 +1,9 @@
+{
+  "page": 26,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "Utah vs New Mexico, 02/19/00 at Albuquerque (Utah 65, New Mexico 72). Utah (visitor) box score is clean and checksums exactly (player TP sum = 65 = final score: Harvey 19, Jensen 16, Althoff 17, Killion 6, Johnsen 0, Colbert 0, Sharp 2, Cullen 3, Puzey 2). However, New Mexico (home) box score has overlapping/garbled ink -- apparent handwritten corrections over printed numbers -- in the FG/FGA, 3PT-FG/FGA, and FT/FTA columns for the top several players (White, Walker, Long, Henry, Parmer rows show concatenated illegible digit blobs such as '8750', '11545', '13538', '10900', '400'). This makes it impossible to confidently reconstruct New Mexico's per-player shooting lines or verify the required team point checksum (72) without guessing at values. Since a full game record requires both teams and no values may be invented, the entire game (both teams) was skipped rather than partially transcribed."
+    }
+  ]
+}

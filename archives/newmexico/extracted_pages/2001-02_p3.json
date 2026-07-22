@@ -1,0 +1,11 @@
+{
+  "page": 3,
+  "games": [],
+  "skipped": [
+    {
+      "date": "2001-11-23",
+      "opponent": "Pacific",
+      "reason": "Checksum failure for University of New Mexico: player point column (TP) sums to 86 (13+0+12+35+6+6+5+1+0+0+8+0) but the sheet's printed team total is 85 (matches period score 40+45=85). Discrepancy traced to Tim Lightfoot's line, which shows TP=1 despite FG 0-0 and FT 0-0 (no makes recorded) — inconsistent with the rest of the sheet, likely a scorer's-era data error. Visiting team (Pacific) checksums correctly at 66=66, but per instructions the whole game is skipped rather than guessed at. Date is partially obscured by a hole-punch mark on the original scan (only '/23/01' visible); '11/23/01' inferred as the likely season-opener date vs Pacific at The Pit but not certain."
+    }
+  ]
+}

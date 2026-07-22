@@ -1,0 +1,9 @@
+{
+  "page": 32,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "New Mexico @ Wake Forest, 2000-03-21, Winston-Salem NC (final NM 65, Wake Forest 72). New Mexico's player-line PTS sum checksums correctly to 65, but Wake Forest's does not: summed player PTS = 71 vs team total 72, and one row (42 Craig Dawson: FG 5-5, FT 0-0, printed PTS column reads 5) is internally inconsistent since 5 made field goals with zero free throws implies a minimum of 10 points, not 5 — indicates a misread/ambiguous digit on this scan in that row. Re-read the page once (max allowed) and the ambiguity persisted, so the full game (both team box scores) is skipped rather than guessed."
+    }
+  ]
+}

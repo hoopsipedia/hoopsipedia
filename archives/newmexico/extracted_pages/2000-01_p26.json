@@ -1,0 +1,9 @@
+{
+  "page": 26,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "New Mexico Lobos @ Wyoming, 2001-02-26, Laramie WY. New Mexico side checksums perfectly (player TP sum = 61 = TOTALS row TP = 61 = score-by-periods total 32+29=61). Wyoming side is internally inconsistent in the source document: printed score-by-periods total is 81 (47+34), but the printed TOTALS row TP column sums to 84, and summing the individual players' printed TP values also gives 84 (20+8+11+21+12+6+3+0+3+0=84). Re-checked by re-reading the page once (second read, same content) to rule out an OCR misread — numbers are identical both times. Cross-checked each Wyoming player's TP against the standard formula 2*(FG_made-3PT_made)+3*3PT_made+FT_made: all players match except McMillian, Chris (FG 6-10, 3PT 4-7, FT 2-3) whose formula points = 18 but printed TP = 21, a 3-point discrepancy that exactly accounts for the 81-vs-84 team-total gap. Cannot determine without guessing whether the true final score was 81 or 84, or which of McMillian's stat-line fields (FG/3PT/FT) has a typo in the original 1950s-2000s-era typed scoresheet. Skipping per instructions rather than guessing a value."
+    }
+  ]
+}

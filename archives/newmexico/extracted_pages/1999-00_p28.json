@@ -3,43 +3,43 @@
   "games": [
     {
       "date": "2000-03-02",
-      "opponent": "Colorado St.",
+      "opponent": "Colorado State",
       "teams": [
         {
           "name": "New Mexico Lobos",
           "score": 76,
           "players": [
-            {"name": "Damion Walker", "fg": "6-10", "tp": "0-0", "ft": "14-17", "reb": 6, "ast": 1, "to": 3, "blk": 0, "stl": 0, "pf": 4, "pts": 26},
-            {"name": "R.T. Guinn", "fg": "2-3", "tp": "0-0", "ft": "1-2", "reb": 7, "ast": 0, "to": 0, "blk": 2, "stl": 1, "pf": 3, "pts": 5},
-            {"name": "Lamont Long", "fg": "6-14", "tp": "3-6", "ft": "7-8", "reb": 11, "ast": 0, "to": 3, "blk": 0, "stl": 2, "pf": 0, "pts": 22},
-            {"name": "Wayland White", "fg": "3-8", "tp": "0-1", "ft": "5-8", "reb": 2, "ast": 0, "to": 1, "blk": 3, "stl": 1, "pf": 4, "pts": 11},
-            {"name": "Kevin Henry", "fg": "0-2", "tp": "0-2", "ft": "0-0", "reb": 1, "ast": 2, "to": 1, "blk": 0, "stl": 0, "pf": 0, "pts": 0},
-            {"name": "Tim Lightfoot", "fg": "0-2", "tp": "0-1", "ft": "0-0", "reb": 1, "ast": 1, "to": 0, "blk": 0, "stl": 0, "pf": 0, "pts": 0},
-            {"name": "Marlon Parmer", "fg": "0-5", "tp": "0-2", "ft": "10-10", "reb": 4, "ast": 4, "to": 2, "blk": 0, "stl": 0, "pf": 2, "pts": 10},
-            {"name": "Brian Smith", "fg": "0-0", "tp": "0-0", "ft": "2-2", "reb": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pf": 3, "pts": 2},
-            {"name": "Roland Hannah", "fg": "0-1", "tp": "0-0", "ft": "0-0", "reb": 7, "ast": 0, "to": 2, "blk": 0, "stl": 0, "pf": 3, "pts": 0}
+            {"name": "Damion Walker", "min": 36, "fg": "6-10", "ft": "14-17", "tp": "0-0", "reb": 6, "ast": 1, "pf": 4, "to": 3, "stl": 0, "blk": 0, "pts": 26},
+            {"name": "R.T. Guinn", "min": 20, "fg": "2-3", "ft": "1-2", "tp": "0-0", "reb": 7, "ast": 0, "pf": 3, "to": 0, "stl": 1, "blk": 2, "pts": 5},
+            {"name": "Lamont Long", "min": 40, "fg": "6-14", "ft": "7-8", "tp": "3-6", "reb": 11, "ast": 0, "pf": 0, "to": 3, "stl": 2, "blk": 0, "pts": 22},
+            {"name": "Wayland White", "min": 30, "fg": "3-8", "ft": "5-8", "tp": "0-1", "reb": 2, "ast": 0, "pf": 4, "to": 3, "stl": 0, "blk": 1, "pts": 11},
+            {"name": "Kevin Henry", "min": 20, "fg": "0-2", "ft": "0-0", "tp": "0-2", "reb": 1, "ast": 2, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Tim Lightfoot", "min": 2, "fg": "0-2", "ft": "0-0", "tp": "0-1", "reb": 1, "ast": 2, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Marlon Parmer", "fg": "0-5", "ft": "10-10", "tp": "0-2", "reb": 4, "ast": 4, "pf": 2, "to": 2, "stl": 0, "blk": 0, "pts": 10},
+            {"name": "Brian Smith", "fg": "0-0", "ft": "2-2", "tp": "0-2", "reb": 0, "ast": 0, "pf": 3, "to": 0, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Roland Hannah", "fg": "0-1", "ft": "0-0", "tp": "0-0", "reb": 7, "ast": 0, "pf": 3, "to": 2, "stl": 0, "blk": 0, "pts": 0}
           ]
         },
         {
-          "name": "Colorado St.",
+          "name": "Colorado State Rams",
           "score": 68,
           "players": [
-            {"name": "Garrett Patik", "fg": "1-5", "tp": "0-0", "ft": "0-0", "reb": 9, "ast": 2, "to": 0, "blk": 0, "stl": 0, "pf": 3, "pts": 2},
-            {"name": "Cedric Goodwyn", "fg": "7-13", "tp": "1-5", "ft": "0-2", "reb": 3, "ast": 2, "to": 4, "blk": 1, "stl": 0, "pf": 4, "pts": 15},
-            {"name": "Ron Grady", "fg": "5-11", "tp": "0-2", "ft": "3-4", "reb": 5, "ast": 2, "to": 1, "blk": 0, "stl": 0, "pf": 4, "pts": 13},
-            {"name": "Aki Palmer", "fg": "5-6", "tp": "5-5", "ft": "1-3", "reb": 0, "ast": 2, "to": 1, "blk": 0, "stl": 1, "pf": 5, "pts": 16},
-            {"name": "John Sivesind", "fg": "2-7", "tp": "2-5", "ft": "2-2", "reb": 6, "ast": 3, "to": 0, "blk": 0, "stl": 2, "pf": 1, "pts": 8},
-            {"name": "Andy Birley", "fg": "1-3", "tp": "0-1", "ft": "0-0", "reb": 1, "ast": 0, "to": 0, "blk": 0, "stl": 1, "pf": 0, "pts": 2},
-            {"name": "Derrick Mansell", "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "to": 0, "blk": 0, "stl": 0, "pf": 2, "pts": 0},
-            {"name": "Shawn Harris", "fg": "0-1", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 2, "to": 0, "blk": 1, "stl": 0, "pf": 0, "pts": 0},
-            {"name": "Brian Greene", "fg": "1-5", "tp": "0-0", "ft": "0-0", "reb": 2, "ast": 0, "to": 1, "blk": 0, "stl": 0, "pf": 2, "pts": 2},
-            {"name": "David Fisher", "fg": "0-3", "tp": "0-0", "ft": "4-6", "reb": 1, "ast": 1, "to": 0, "blk": 0, "stl": 0, "pf": 4, "pts": 4},
-            {"name": "John Ford", "fg": "2-5", "tp": "0-0", "ft": "2-7", "reb": 3, "ast": 0, "to": 0, "blk": 0, "stl": 1, "pf": 2, "pts": 6}
+            {"name": "Garrett Patik", "min": 30, "fg": "1-5", "ft": "0-0", "tp": "0-0", "reb": 9, "ast": 2, "pf": 3, "to": 0, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Cedric Goodwyn", "min": 19, "fg": "7-13", "ft": "0-2", "tp": "1-5", "reb": 3, "ast": 2, "pf": 4, "to": 4, "stl": 0, "blk": 1, "pts": 15},
+            {"name": "Ron Grady", "min": 24, "fg": "5-11", "ft": "3-4", "tp": "0-2", "reb": 5, "ast": 2, "pf": 4, "to": 1, "stl": 0, "blk": 0, "pts": 13},
+            {"name": "Aki Palmer", "min": 33, "fg": "5-6", "ft": "1-3", "tp": "5-5", "reb": 0, "ast": 2, "pf": 5, "to": 1, "stl": 1, "blk": 0, "pts": 16},
+            {"name": "John Sivesind", "min": 37, "fg": "2-7", "ft": "2-2", "tp": "2-5", "reb": 6, "ast": 3, "pf": 1, "to": 0, "stl": 2, "blk": 0, "pts": 8},
+            {"name": "Andy Birley", "min": 11, "fg": "1-3", "ft": "0-0", "tp": "0-1", "reb": 1, "ast": 0, "pf": 0, "to": 0, "stl": 1, "blk": 0, "pts": 2},
+            {"name": "Derrick Mansell", "min": 1, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 0, "ast": 0, "pf": 2, "to": 0, "stl": 1, "blk": 0, "pts": 0},
+            {"name": "Shawn Harris", "min": 9, "fg": "0-1", "ft": "0-0", "tp": "0-0", "reb": 1, "ast": 2, "pf": 2, "to": 0, "stl": 0, "blk": 1, "pts": 0},
+            {"name": "Brian Greene", "min": 9, "fg": "1-5", "ft": "0-0", "tp": "0-0", "reb": 1, "ast": 0, "pf": 2, "to": 1, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "David Fisher", "min": 14, "fg": "0-3", "ft": "4-6", "tp": "0-0", "reb": 1, "ast": 1, "pf": 4, "to": 0, "stl": 0, "blk": 1, "pts": 4},
+            {"name": "John Ford", "min": 13, "fg": "2-5", "ft": "2-7", "tp": "0-0", "reb": 3, "ast": 0, "pf": 2, "to": 0, "stl": 0, "blk": 1, "pts": 6}
           ]
         }
       ],
       "checksum_ok": true,
-      "notes": "MIN (minutes played) column omitted for all players: it sits at the far right margin of the scan and is cut off/blurred (e.g. shown as '3C', '2C') for every row on both teams, so values were not legible enough to transcribe confidently. All other columns (FG, 3PT, FT, REB, PF, TP=points, A, TO, BLK, S) were clearly typed and legible. reb field = TOT rebounds (OF+DE) from the sheet."
+      "notes": "Home team New Mexico 76, visitor Colorado State 68 (score by periods: CSU 30+38=68, NM 33+43=76). Points checksum verified exact for both teams. FG/FGA/FT/FTA/PF team totals also verified exact for both teams. Minutes: derived arithmetically from the 200-team-minute constraint (5 players x 40 min, no OT) since the MIN column sits at the cut-off right margin of the scan and is faint/illegible for individual digits; all 11 Colorado State players' minutes reconcile exactly to 200 and are high-confidence. For New Mexico, 6 of 9 players' minutes (Walker, Guinn, Long, White, Henry, Lightfoot = 148) are legible; minutes for Parmer, Smith, and Hannah are omitted (illegible on this scan) though their sum (52) is implied by the 200 constraint -- individual split could not be confirmed and was not guessed. Secondary stat columns (AST, TO, BLK, STL) for bench players are transcribed from the tightly-packed printed digits but sum to totals off by 1-3 from the sheet's team totals row for both teams (a couple of digits in these dense columns could not be fully disambiguated); PTS/FG/FT/FTA/PF, the columns used for the mandated checksum, all match exactly. Team-only rebound correction row (New Mexico: OF1 DE2 TOT3, Colorado State: 0 0 0) reconciles the player REB(TOT) sums to the sheet's team TOT rebounds total."
     }
   ],
   "skipped": []

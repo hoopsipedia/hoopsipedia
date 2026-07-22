@@ -1,0 +1,44 @@
+{
+  "page": 18,
+  "games": [
+    {
+      "date": "2001-01-29",
+      "opponent": "Wyoming Cowboys",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 78,
+          "players": [
+            {"name": "Wayland White", "min": 23, "fg": "4-8", "tp": "0-0", "ft": "0-3", "reb": 3, "ast": 2, "pf": 5, "to": 3, "stl": 2, "blk": 3, "pts": 8},
+            {"name": "Brian Smith", "min": 25, "fg": "4-6", "tp": "0-0", "ft": "6-6", "reb": 5, "ast": 0, "pf": 3, "to": 1, "stl": 2, "blk": 1, "pts": 14},
+            {"name": "Marlon Parmer", "min": 33, "fg": "4-10", "tp": "0-2", "ft": "7-10", "reb": 2, "ast": 3, "pf": 5, "to": 3, "stl": 2, "blk": 0, "pts": 15},
+            {"name": "Ruben Douglas", "min": 34, "fg": "7-15", "tp": "1-3", "ft": "4-5", "reb": 3, "ast": 1, "pf": 4, "to": 1, "stl": 2, "blk": 1, "pts": 19},
+            {"name": "Eric Chatfield", "min": 35, "fg": "0-9", "tp": "0-3", "ft": "2-6", "reb": 4, "ast": 3, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Tim Lightfoot", "min": 16, "fg": "3-5", "tp": "2-2", "ft": "4-4", "reb": 1, "ast": 0, "pf": 0, "to": 1, "stl": 0, "blk": 0, "pts": 12},
+            {"name": "Isaiah Zeke Johnson", "min": 3, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 2, "ast": 0, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Patrick Dennehy", "min": 10, "fg": "2-3", "tp": "0-0", "ft": "0-0", "reb": 3, "ast": 1, "pf": 5, "to": 1, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Alvin Broussard", "min": 21, "fg": "2-3", "tp": "0-1", "ft": "0-0", "reb": 5, "ast": 0, "pf": 2, "to": 0, "stl": 1, "blk": 1, "pts": 4}
+          ]
+        },
+        {
+          "name": "Wyoming Cowboys",
+          "score": 82,
+          "players": [
+            {"name": "Josh Davis", "min": 32, "fg": "5-10", "tp": "0-2", "ft": "1-2", "reb": 5, "ast": 1, "pf": 3, "to": 0, "stl": 1, "blk": 3, "pts": 11},
+            {"name": "Marcus Bailey", "min": 40, "fg": "4-12", "tp": "0-3", "ft": "8-10", "reb": 6, "ast": 9, "pf": 1, "to": 3, "stl": 0, "blk": 0, "pts": 16},
+            {"name": "Uche Nsonwu-Amadi", "min": 38, "fg": "9-9", "tp": "0-0", "ft": "4-6", "reb": 11, "ast": 0, "pf": 3, "to": 3, "stl": 1, "blk": 0, "pts": 22},
+            {"name": "Chris McMillian", "min": 30, "fg": "3-6", "tp": "2-2", "ft": "1-2", "reb": 1, "ast": 4, "pf": 3, "to": 2, "stl": 2, "blk": 0, "pts": 9},
+            {"name": "David Rottinghaus", "min": 22, "fg": "2-4", "tp": "1-2", "ft": "0-1", "reb": 1, "ast": 3, "pf": 3, "to": 1, "stl": 0, "blk": 0, "pts": 5},
+            {"name": "Ronell Mingo", "min": 7, "fg": "1-1", "tp": "0-0", "ft": "4-6", "reb": 4, "ast": 0, "pf": 1, "to": 2, "stl": 0, "blk": 1, "pts": 6},
+            {"name": "Ugo Udezue", "min": 3, "fg": "0-0", "tp": "0-0", "ft": "1-2", "reb": 0, "ast": 0, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 1},
+            {"name": "Brett McFall", "min": 23, "fg": "2-4", "tp": "2-3", "ft": "6-8", "reb": 1, "ast": 3, "pf": 4, "to": 2, "stl": 1, "blk": 0, "pts": 12},
+            {"name": "Paris Corner", "min": 5, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ]
+        }
+      ],
+      "checksum_ok": true,
+      "notes": "Typed official box score, played at The Pit/Bob King Court, Albuquerque; attendance 16,876. Score by periods: WYO 32-50=82, UNM 35-43=78. TP column is printed player points; not computed."
+    }
+  ],
+  "skipped": []
+}

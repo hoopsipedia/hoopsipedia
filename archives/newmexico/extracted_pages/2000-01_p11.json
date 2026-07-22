@@ -1,0 +1,44 @@
+{
+  "page": 11,
+  "games": [
+    {
+      "date": "2001-01-02",
+      "opponent": "Gonzaga Bulldogs",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 81,
+          "players": [
+            {"name": "Wayland White", "min": 27, "fg": "2-9", "ft": "0-1", "tp": "0-0", "reb": 9, "ast": 0, "pf": 5, "to": 1, "stl": 2, "blk": 2, "pts": 4},
+            {"name": "Brian Smith", "min": 38, "fg": "4-6", "ft": "2-2", "tp": "0-0", "reb": 8, "ast": 1, "pf": 4, "to": 1, "stl": 0, "blk": 0, "pts": 10},
+            {"name": "Marlon Parmer", "min": 40, "fg": "5-12", "ft": "5-7", "tp": "2-5", "reb": 6, "ast": 7, "pf": 3, "to": 3, "stl": 3, "blk": 1, "pts": 17},
+            {"name": "Ruben Douglas", "min": 38, "fg": "8-19", "ft": "4-6", "tp": "3-8", "reb": 6, "ast": 1, "pf": 2, "to": 1, "stl": 1, "blk": 0, "pts": 23},
+            {"name": "Eric Chatfield", "min": 43, "fg": "6-16", "ft": "2-2", "tp": "2-4", "reb": 4, "ast": 3, "pf": 2, "to": 1, "stl": 1, "blk": 0, "pts": 16},
+            {"name": "Tim Lightfoot", "min": 8, "fg": "2-3", "ft": "0-0", "tp": "1-1", "reb": 0, "ast": 0, "pf": 5, "to": 2, "stl": 0, "blk": 0, "pts": 5},
+            {"name": "Isaiah Zeke Johnson", "min": 16, "fg": "2-5", "ft": "0-0", "tp": "2-3", "reb": 1, "ast": 0, "pf": 3, "to": 0, "stl": 0, "blk": 0, "pts": 6},
+            {"name": "Patrick Dennehy", "min": 9, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 3, "ast": 0, "pf": 2, "to": 2, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Alvin Broussard", "min": 6, "fg": "0-1", "ft": "0-1", "tp": "0-1", "reb": 1, "ast": 0, "pf": 2, "to": 0, "stl": 1, "blk": 0, "pts": 0}
+          ],
+          "checksum_ok": true
+        },
+        {
+          "name": "Gonzaga Bulldogs",
+          "score": 80,
+          "players": [
+            {"name": "Mark Spink", "min": 30, "fg": "3-5", "ft": "7-10", "tp": "0-0", "reb": 5, "ast": 1, "pf": 4, "to": 3, "stl": 0, "blk": 1, "pts": 13},
+            {"name": "Casey Calvary", "min": 43, "fg": "6-16", "ft": "9-13", "tp": "1-1", "reb": 11, "ast": 2, "pf": 4, "to": 2, "stl": 0, "blk": 2, "pts": 22},
+            {"name": "Zach Gourde", "min": 37, "fg": "5-9", "ft": "0-3", "tp": "0-0", "reb": 4, "ast": 2, "pf": 3, "to": 1, "stl": 0, "blk": 2, "pts": 10},
+            {"name": "Blake Stepp", "min": 44, "fg": "3-10", "ft": "6-6", "tp": "1-6", "reb": 5, "ast": 2, "pf": 1, "to": 2, "stl": 1, "blk": 2, "pts": 13},
+            {"name": "Germayne Forbes", "min": 34, "fg": "4-8", "ft": "0-0", "tp": "4-7", "reb": 4, "ast": 0, "pf": 2, "to": 1, "stl": 2, "blk": 0, "pts": 12},
+            {"name": "Jimmy Tricco", "min": 2, "fg": "0-1", "ft": "0-0", "tp": "0-1", "reb": 0, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Kyle Bankhead", "min": 14, "fg": "1-4", "ft": "0-0", "tp": "1-4", "reb": 4, "ast": 2, "pf": 2, "to": 1, "stl": 0, "blk": 0, "pts": 3},
+            {"name": "Anthony Reason", "min": 20, "fg": "2-3", "ft": "3-5", "tp": "0-0", "reb": 3, "ast": 2, "pf": 1, "to": 2, "stl": 1, "blk": 0, "pts": 7},
+            {"name": "Cory Violette", "min": 1, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0}
+          ],
+          "checksum_ok": true
+        }
+      ]
+    }
+  ],
+  "skipped": []
+}

@@ -1,9 +1,43 @@
 {
   "page": 20,
-  "games": [],
-  "skipped": [
+  "games": [
     {
-      "reason": "01/29/00 Brigham Young @ New Mexico (BYU 69, New Mexico 78, Albuquerque NM): visiting team (BYU) box score is clean and typed, checksums correctly (player pts sum = 69 = final score). However the home team (New Mexico) rows have garbled/overlapping digit clusters in the FG/FGA/FT/FTA columns (e.g. '3 83750 0 3 5600' for Walker, '7 116361 2 12 148571' for Long, '1 6 1671 4' for Henry, '5 7714 0 0 4 5800' for Hannah) that appear to be correction marks or scan bleed-through overlapping the printed numbers. Player points (TP) column and rebound/assist/steal/block/minute columns are legible and internally consistent (e.g. Walker's TP=9 matches 2*FG(3)+FT(3) with 3PT=0), but FGA and FTA (attempt) values cannot be confidently disambiguated from the noise digits, and the schema requires reliable made-attempted pairs. Per instructions to be ruthless about skipping rather than guessing, and since a complete game requires both teams' player lines, the entire game is skipped rather than transcribing New Mexico's attempts speculatively."
+      "date": "2000-01-29",
+      "opponent": "Brigham Young",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 78,
+          "players": [
+            {"name": "Damion Walker", "min": 18, "fg": "3-8", "tp": "0-0", "ft": "3-5", "reb": 6, "ast": 0, "pf": 4, "to": 2, "stl": 1, "blk": 1, "pts": 9},
+            {"name": "R.T. Guinn", "min": 18, "fg": "3-7", "tp": "0-0", "ft": "0-0", "reb": 4, "ast": 0, "pf": 1, "to": 1, "stl": 1, "blk": 0, "pts": 6},
+            {"name": "Lamont Long", "min": 37, "fg": "7-11", "tp": "1-2", "ft": "12-14", "reb": 9, "ast": 2, "pf": 2, "to": 0, "stl": 1, "blk": 0, "pts": 27},
+            {"name": "Wayland White", "min": 27, "fg": "5-10", "tp": "0-0", "ft": "0-0", "reb": 6, "ast": 3, "pf": 4, "to": 2, "stl": 2, "blk": 2, "pts": 10},
+            {"name": "Kevin Henry", "min": 20, "fg": "1-6", "tp": "1-4", "ft": "0-0", "reb": 4, "ast": 1, "pf": 3, "to": 1, "stl": 0, "blk": 0, "pts": 3},
+            {"name": "Tim Lightfoot", "min": 22, "fg": "3-5", "tp": "0-0", "reb": 1, "ast": 0, "pf": 1, "to": 1, "stl": 0, "blk": 1, "pts": 7},
+            {"name": "Marlon Parmer", "min": 21, "fg": "0-4", "tp": "0-1", "ft": "0-0", "reb": 1, "ast": 5, "pf": 0, "to": 2, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Brian Smith", "min": 11, "fg": "1-4", "tp": "0-0", "ft": "0-0", "reb": 4, "ast": 1, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Roland Hannah", "min": 26, "fg": "5-7", "tp": "0-0", "ft": "4-5", "reb": 11, "ast": 0, "pf": 3, "to": 3, "stl": 1, "blk": 0, "pts": 14}
+          ]
+        },
+        {
+          "name": "Brigham Young Cougars",
+          "score": 69,
+          "players": [
+            {"name": "Mekeli Wesley", "min": 27, "fg": "3-12", "tp": "0-2", "ft": "4-6", "reb": 7, "ast": 0, "pf": 4, "to": 3, "stl": 2, "blk": 2, "pts": 10},
+            {"name": "Eric Nielsen", "min": 21, "fg": "4-6", "tp": "0-0", "ft": "0-0", "reb": 5, "ast": 0, "pf": 4, "to": 1, "stl": 0, "blk": 0, "pts": 8},
+            {"name": "Michael Vranes", "min": 26, "fg": "1-6", "tp": "0-2", "ft": "1-2", "reb": 2, "ast": 2, "pf": 1, "to": 2, "stl": 0, "blk": 0, "pts": 3},
+            {"name": "Terrell Lyday", "min": 38, "fg": "7-18", "tp": "1-7", "ft": "6-7", "reb": 4, "ast": 2, "pf": 3, "to": 3, "stl": 2, "blk": 0, "pts": 21},
+            {"name": "Matt Montague", "min": 36, "fg": "2-4", "tp": "0-0", "ft": "0-0", "reb": 2, "ast": 6, "pf": 1, "to": 1, "stl": 1, "blk": 0, "pts": 4},
+            {"name": "Silester Rivers", "min": 29, "fg": "3-5", "tp": "0-0", "ft": "6-12", "reb": 9, "ast": 2, "pf": 3, "to": 2, "stl": 0, "blk": 0, "pts": 12},
+            {"name": "Todd Christensen", "min": 8, "fg": "0-1", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 1, "stl": 1, "blk": 0, "pts": 0},
+            {"name": "Marc Roberts", "min": 3, "fg": "0-0", "tp": "0-0", "ft": "0-0", "reb": 0, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Nathan Cooper", "min": 12, "fg": "3-5", "tp": "0-2", "ft": "5-5", "reb": 5, "ast": 0, "pf": 4, "to": 1, "stl": 0, "blk": 0, "pts": 11}
+          ]
+        }
+      ],
+      "checksum_ok": true
     }
-  ]
+  ],
+  "skipped": []
 }

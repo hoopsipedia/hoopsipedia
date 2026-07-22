@@ -1,0 +1,11 @@
+{
+  "page": 5,
+  "games": [],
+  "skipped": [
+    {
+      "date": "2000-12-02",
+      "opponent": "Western Kentucky Hilltoppers",
+      "reason": "Official typed box score (WKU Hilltoppers 57 at New Mexico Lobos 75, 12-02-00, The Pit). New Mexico's line checksums perfectly (player-point sum = 75 = printed team total = final score). Western Kentucky's FG (19-49) and 3PT (3-19) columns both sum exactly to the printed team totals, but the FT column sums to 17-25 (makes-attempts) across players versus the printed team total of 16-24, and the resulting player-point sum is 58 versus the printed team total/final score of 57 — a 1-point discrepancy that traces to a single player's FT entry (each player row is internally self-consistent per FG/3PT/FT->points, so the source document itself appears to contain a genuine 25-year-old keying error in one WKU player's free-throw line). Could not determine which player's FT value is wrong without guessing, so skipping the whole game rather than fabricating a correction, per the checksum-failure rule."
+    }
+  ]
+}

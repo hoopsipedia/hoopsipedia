@@ -1,0 +1,45 @@
+{
+  "page": 1,
+  "games": [
+    {
+      "date": "2001-11-17",
+      "opponent": "Stanford",
+      "teams": [
+        {
+          "name": "New Mexico Lobos",
+          "score": 66,
+          "players": [
+            {"name": "Patrick Dennehy", "min": 23, "fg": "4-11", "ft": "1-2", "tp": "0-0", "reb": 7, "ast": 0, "pf": 2, "to": 2, "stl": 2, "blk": 0, "pts": 9},
+            {"name": "Moustapha Diagne", "min": 18, "fg": "3-6", "ft": "0-0", "tp": "0-0", "reb": 3, "ast": 0, "pf": 3, "to": 2, "stl": 0, "blk": 1, "pts": 6},
+            {"name": "Marlon Parmer", "min": 35, "fg": "4-13", "ft": "1-5", "tp": "1-3", "reb": 8, "ast": 4, "pf": 3, "to": 3, "stl": 0, "blk": 0, "pts": 10},
+            {"name": "Ruben Douglas", "min": 25, "fg": "3-14", "ft": "0-0", "tp": "0-5", "reb": 4, "ast": 3, "pf": 4, "to": 1, "stl": 0, "blk": 0, "pts": 6},
+            {"name": "Eric Chatfield", "min": 31, "fg": "6-10", "ft": "1-4", "tp": "4-5", "reb": 0, "ast": 5, "pf": 3, "to": 1, "stl": 2, "blk": 0, "pts": 17},
+            {"name": "Chad Bell", "min": 19, "fg": "1-4", "ft": "1-1", "tp": "0-0", "reb": 1, "ast": 1, "pf": 3, "to": 0, "stl": 1, "blk": 4, "pts": 2},
+            {"name": "Senque Carey", "min": 22, "fg": "2-8", "ft": "0-0", "tp": "0-2", "reb": 2, "ast": 0, "pf": 2, "to": 2, "stl": 0, "blk": 0, "pts": 4},
+            {"name": "Tim Lightfoot", "min": 8, "fg": "1-3", "ft": "0-0", "tp": "1-2", "reb": 1, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 3},
+            {"name": "Jamaal Williams", "min": 19, "fg": "3-6", "ft": "2-4", "tp": "1-1", "reb": 6, "ast": 1, "pf": 1, "to": 0, "stl": 1, "blk": 0, "pts": 9}
+          ]
+        },
+        {
+          "name": "Stanford",
+          "score": 81,
+          "players": [
+            {"name": "Justin Davis", "min": 19, "fg": "5-5", "ft": "0-0", "tp": "0-0", "reb": 8, "ast": 1, "pf": 4, "to": 2, "stl": 0, "blk": 1, "pts": 10},
+            {"name": "Casey Jacobsen", "min": 35, "fg": "5-14", "ft": "6-6", "tp": "1-3", "reb": 3, "ast": 8, "pf": 2, "to": 4, "stl": 0, "blk": 0, "pts": 17},
+            {"name": "Curtis Borchardt", "min": 35, "fg": "6-18", "ft": "3-4", "tp": "2-3", "reb": 11, "ast": 2, "pf": 1, "to": 2, "stl": 1, "blk": 4, "pts": 17},
+            {"name": "Josh Childress", "min": 30, "fg": "5-11", "ft": "0-0", "tp": "2-3", "reb": 4, "ast": 1, "pf": 3, "to": 1, "stl": 0, "blk": 1, "pts": 12},
+            {"name": "Tony Giovacchini", "min": 29, "fg": "4-5", "ft": "2-3", "tp": "3-3", "reb": 3, "ast": 1, "pf": 2, "to": 0, "stl": 0, "blk": 0, "pts": 13},
+            {"name": "Joe Kirchofer", "min": 6, "fg": "1-2", "ft": "0-0", "tp": "0-0", "reb": 2, "ast": 0, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 2},
+            {"name": "Chris Hernandez", "min": 3, "fg": "0-0", "ft": "0-0", "tp": "0-0", "reb": 2, "ast": 1, "pf": 0, "to": 0, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Nick Robinson", "min": 11, "fg": "0-2", "ft": "0-0", "tp": "0-1", "reb": 3, "ast": 0, "pf": 1, "to": 1, "stl": 0, "blk": 0, "pts": 0},
+            {"name": "Julius Barnes", "min": 20, "fg": "2-6", "ft": "0-1", "tp": "1-3", "reb": 3, "ast": 2, "pf": 1, "to": 1, "stl": 1, "blk": 0, "pts": 5},
+            {"name": "Matt Lottich", "min": 3, "fg": "1-2", "ft": "1-2", "tp": "0-0", "reb": 1, "ast": 0, "pf": 0, "to": 0, "stl": 1, "blk": 0, "pts": 3},
+            {"name": "Rob Little", "min": 9, "fg": "1-1", "ft": "0-0", "tp": "0-0", "reb": 3, "ast": 0, "pf": 1, "to": 0, "stl": 0, "blk": 0, "pts": 2}
+          ]
+        }
+      ],
+      "checksum_ok": true
+    }
+  ],
+  "skipped": []
+}

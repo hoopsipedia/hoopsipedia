@@ -1,0 +1,9 @@
+{
+  "page": 23,
+  "games": [],
+  "skipped": [
+    {
+      "reason": "2001-02-17 San Diego State Aztecs (54) at New Mexico Lobos (72), The Pit. Fully legible typed box score, transcribed and checksummed twice (identical on re-read). New Mexico's player-points sum to exactly 72, matching the team total/final score (checksum OK). However San Diego State's player-points sum to 55 (Holcomb 17 + Epps 9 + Correa 5 + Faux 6 + Abramowitz 2 + Roban 8 + Walton 5 + Kovacic 0 + Wardrop 0 + Marion 3 = 55), which does not match the team TOTALS row (54) or the final score (54); the mismatch traces to the FT-made column, where individual makes sum to 22 (7+5+1+2+2+2+3+0+0+0) versus the team TOTALS row's 21. This appears to be an arithmetic error in the original scoresheet itself (all FG/3PT columns and the other team check out exactly), not a transcription error, but per instructions the game is skipped rather than including a team whose data fails checksum."
+    }
+  ]
+}
