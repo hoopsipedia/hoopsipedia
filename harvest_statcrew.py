@@ -114,27 +114,114 @@ def get_retry(url, timeout=180, attempts=6, wait=30):
     raise RuntimeError(f'gave up on {url}')
 
 
-def charlotte_docs():
-    """Enumerate the live legacy stats dir via Wayback CDX, fetch LIVE files."""
-    cdx = get_retry('http://web.archive.org/cdx/search/cdx?url=static.charlotte49ers.com/old_site/sports/m-baskbl/stats/*&collapse=urlkey&fl=original&limit=2000').decode()
-    files = sorted({u.strip().split('?')[0] for u in cdx.splitlines()
-                    if re.search(r'/stats/\d{6}[a-z]{3}\.html?(\?|$)', u)})
-    # also probe the live dir listing pattern beyond what wayback saw
-    print(f'{len(files)} game files from CDX')
-    for u in files:
-        live = re.sub(r'^https?://[^/]+', 'https://static.charlotte49ers.com', u)
-        try:
-            yield live, get(live).decode('utf-8', 'replace')
-        except Exception as e:
-            print(f'  fetch fail {live}: {e}')
-        time.sleep(0.5)
+def make_docs(cfg):
+    """Generic enumerator: Wayback CDX listing -> fetch live or via snapshot.
+
+    cfg keys: cdx (url pattern), file_re (path filter, men's games only),
+    mode ('live'|'wayback'), live_host (for live mode host rewrite)."""
+    def docs():
+        cdx = get_retry(
+            'http://web.archive.org/cdx/search/cdx?url=' + cfg['cdx'] +
+            '&collapse=urlkey&fl=timestamp,original&limit=4000').decode()
+        rows = []
+        seen = set()
+        for line in cdx.splitlines():
+            parts = line.strip().split(' ', 1)
+            if len(parts) != 2:
+                continue
+            ts, orig = parts
+            path = orig.split('?')[0]
+            if not re.search(cfg['file_re'], path) or path in seen:
+                continue
+            seen.add(path)
+            rows.append((ts, path))
+        print(f'{len(rows)} game files from CDX')
+        for ts, orig in sorted(rows, key=lambda r: r[1]):
+            if cfg['mode'] == 'live':
+                url = re.sub(r'^https?://[^/]+', cfg['live_host'], orig)
+            else:
+                url = f'http://web.archive.org/web/{ts}id_/{orig}'
+            for attempt in range(3):
+                try:
+                    yield url, get(url).decode('utf-8', 'replace')
+                    break
+                except Exception as e:
+                    if attempt == 2:
+                        print(f'  fetch fail {url}: {e}')
+                    else:
+                        time.sleep(20)
+            time.sleep(1.0 if cfg['mode'] == 'wayback' else 0.4)
+    return docs
 
 
-SOURCES = {
-    'charlotte': {'team_id': '2429', 'team_name': 'Charlotte 49ers',
-                  'site': 'static.charlotte49ers.com legacy archive',
-                  'docs': charlotte_docs},
+# Every source publishes StatCrew 'Official Basketball Box Score' text.
+# file_re must select MEN'S single-game files only.
+SOURCE_DEFS = {
+    'charlotte':    ('2429', 'Charlotte 49ers', 'static.charlotte49ers.com legacy archive',
+                     {'cdx': 'static.charlotte49ers.com/old_site/sports/m-baskbl/stats/*',
+                      'file_re': r'/stats/\d{6}[a-z]{3}\.html?$', 'mode': 'live',
+                      'live_host': 'https://static.charlotte49ers.com'}),
+    'bowlinggreen': ('189', 'Bowling Green Falcons', 'static.bgsufalcons.com legacy archive',
+                     {'cdx': 'static.bgsufalcons.com/custompages/stats/mbasketball/*',
+                      'file_re': r'/mbasketball/\d{4}/[a-z0-9_-]+\.html?$', 'mode': 'live',
+                      'live_host': 'https://static.bgsufalcons.com'}),
+    'chicagostate': ('2130', 'Chicago State Cougars', 'static.gocsucougars.com legacy archive',
+                     {'cdx': 'static.gocsucougars.com/custompages/MBBSTATS/*',
+                      'file_re': r'/MBBSTATS/\d{6}/[a-z0-9_-]+\.html?$', 'mode': 'live',
+                      'live_host': 'https://static.gocsucougars.com'}),
+    'northerniowa': ('2460', 'Northern Iowa Panthers', 'static.unipanthers.com legacy archive',
+                     {'cdx': 'static.unipanthers.com/custompages/Stats/MBB/*',
+                      'file_re': r'/MBB/\d{4}MBB/HTML/game\d+\.html?$', 'mode': 'live',
+                      'live_host': 'https://static.unipanthers.com'}),
+    'airforce':     ('2005', 'Air Force Falcons', 'airforcesports.com (Wayback)',
+                     {'cdx': 'airforcesports.com/bko/bkc/*',
+                      'file_re': r'/bko/bkc/.*box.*\.html?$', 'mode': 'wayback'}),
+    'uconn':        ('41', 'UConn Huskies', 'uconnhuskies.com (Wayback)',
+                     {'cdx': 'uconnhuskies.com/bko/bkc/*',
+                      'file_re': r'/bko/bkc/.*box.*\.html?$', 'mode': 'wayback'}),
+    'brown':        ('225', 'Brown Bears', 'brownbears.com (Wayback)',
+                     {'cdx': 'brownbears.com/bko/bkc/*',
+                      'file_re': r'/bko/bkc/.*box.*\.html?$', 'mode': 'wayback'}),
+    'sanfrancisco': ('2539', 'San Francisco Dons', 'usfdons.com (Wayback)',
+                     {'cdx': 'usfdons.com/bko/bkc/*',
+                      'file_re': r'/bko/bkc/.*box.*\.html?$', 'mode': 'wayback'}),
+    'ohio':         ('195', 'Ohio Bobcats', 'ohiobobcats.com (Wayback)',
+                     {'cdx': 'ohiobobcats.com/bko/bkc/*',
+                      'file_re': r'/bko/bkc/.*box.*\.html?$', 'mode': 'wayback'}),
+    'arizonastate': ('9', 'Arizona State Sun Devils', 'thesundevils.com (Wayback)',
+                     {'cdx': 'thesundevils.com/sports/m-baskbl/stats/*',
+                      'file_re': r'/stats/\d{6}[a-z]{3}\.html?$', 'mode': 'wayback'}),
+    'california':   ('25', 'California Golden Bears', 'calbears.com (Wayback)',
+                     {'cdx': 'calbears.com/sports/m-baskbl/stats/*',
+                      'file_re': r'/stats/\d{6}[a-z]{3}\.html?$', 'mode': 'wayback'}),
+    'clemson':      ('228', 'Clemson Tigers', 'clemsontigers.com (Wayback)',
+                     {'cdx': 'clemsontigers.com/sports/m-baskbl/stats/*',
+                      'file_re': r'/stats/\d{6}[a-z]{3}\.html?$', 'mode': 'wayback'}),
+    'umass':        ('113', 'Massachusetts Minutemen', 'umassathletics.com (Wayback)',
+                     {'cdx': 'umassathletics.com/sports/m-baskbl/stats/*',
+                      'file_re': r'/stats/\d{6}[a-z]{3}\.html?$', 'mode': 'wayback'}),
+    'bucknell':     ('2083', 'Bucknell Bison', 'bucknellbison.com (Wayback)',
+                     {'cdx': 'bucknellbison.com/sports/m-baskbl/stats/*',
+                      'file_re': r'/stats/\d{6}[a-z]{3}\.html?$', 'mode': 'wayback'}),
+    'rutgers':      ('164', 'Rutgers Scarlet Knights', 'scarletknights.com (Wayback)',
+                     {'cdx': 'scarletknights.com/basketball-men/stats/*',
+                      'file_re': r'/stats/.*\.html?$', 'mode': 'wayback'}),
+    'northerncolorado': ('2458', 'Northern Colorado Bears', 'uncbears.fansonly.com (Wayback)',
+                     {'cdx': 'uncbears.fansonly.com/sports/m-baskbl/stats/*',
+                      'file_re': r'/stats/\d{6}[a-z]{3}\.html?$', 'mode': 'wayback'}),
+    'portlandstate': ('2502', 'Portland State Vikings', 'goviks.fansonly.com (Wayback)',
+                     {'cdx': 'goviks.fansonly.com/sports/m-baskbl/stats/*',
+                      'file_re': r'/stats/\d{6}[a-z]{3}\.html?$', 'mode': 'wayback'}),
+    'ucriverside':  ('27', 'UC Riverside Highlanders', 'static.gohighlanders.com (Wayback)',
+                     {'cdx': 'static.gohighlanders.com/custompages/MBasketball/*',
+                      'file_re': r'/MBasketball/\d{6}/[A-Za-z0-9_-]+\.html?$', 'mode': 'wayback'}),
+    'wrightstate':  ('2750', 'Wright State Raiders', 'wsuraiders.com (Wayback)',
+                     {'cdx': 'wsuraiders.com/mbasketball/*',
+                      'file_re': r'/mbasketball/\d{4}boxes/\d+\.html?$', 'mode': 'wayback'}),
 }
+
+SOURCES = {k: {'team_id': tid, 'team_name': name, 'site': site, 'docs': make_docs(cfg)}
+           for k, (tid, name, site, cfg) in SOURCE_DEFS.items()}
 
 
 def main():
