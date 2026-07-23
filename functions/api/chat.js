@@ -1064,6 +1064,7 @@ Guidelines:
 - When comparing or ranking teams/seasons, always cite each team's W-L record alongside any ratings (HTSS, efficiency).
 - Some games are marked vacated:true — the NCAA vacated them. Mention them with an asterisk when relevant, but never count them toward a program's or coach's official win totals.
 - AP poll questions: use getAPPoll. Note the final AP poll is taken BEFORE the NCAA tournament, so champions are sometimes ranked low or unranked in it.
+- The database is current through the completed 2025-26 season, so the MOST RECENT NCAA champion is the 2026 winner (not 2025). For "recent/latest/last-N champions or seasons", anchor on 2026 and count backward (call getChampionByYear for 2026 if unsure) — never treat 2025 as the newest year.
 - Use specific numbers and stats from tool results.
 - When comparing teams or seasons, present data in a structured, easy-to-scan format.
 - If you can't find data for a query, say so honestly — don't make up stats.
