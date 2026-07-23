@@ -1837,10 +1837,6 @@
    "parse/checksum fail"
   ],
   [
-   "http://web.archive.org/web/20010421175946id_/http://www.usfdons.com:80/bko/bkc/030301box.html",
-   "parse/checksum fail"
-  ],
-  [
    "http://web.archive.org/web/20010302094333id_/http://www.usfdons.com:80/bko/bkc/bkc_1121ucsbbox.html",
    "parse/checksum fail"
   ],
@@ -1866,10 +1862,6 @@
   ],
   [
    "http://web.archive.org/web/20010129000200id_/http://www.usfdons.com:80/bko/bkc/bkcbox021300.html",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/20010129002600id_/http://www.usfdons.com:80/bko/bkc/bkcbox021600.html",
    "parse/checksum fail"
   ],
   [
@@ -1905,10 +1897,6 @@
    "parse/checksum fail"
   ],
   [
-   "http://web.archive.org/web/20010129025100id_/http://www.usfdons.com:80/bko/bkc/bkcbox120900.html",
-   "parse/checksum fail"
-  ],
-  [
    "http://web.archive.org/web/20010129032000id_/http://www.usfdons.com:80/bko/bkc/bkcbox122300.html",
    "parse/checksum fail"
   ],
@@ -1923,7 +1911,7 @@
  ],
  "stats": {
   "ok": 6,
-  "parse_fail": 22,
+  "parse_fail": 19,
   "checksum_fail": 0,
   "log_mismatch": 0
  }

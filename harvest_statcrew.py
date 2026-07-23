@@ -206,7 +206,7 @@ def make_docs(cfg):
     def docs():
         cdx = get_retry(
             'http://web.archive.org/cdx/search/cdx?url=' + cfg['cdx'] +
-            '&collapse=urlkey&fl=timestamp,original&limit=4000').decode()
+            '&filter=statuscode:200&collapse=urlkey&fl=timestamp,original&limit=4000').decode()
         rows = []
         seen = set()
         for line in cdx.splitlines():
