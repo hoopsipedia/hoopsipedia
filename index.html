@@ -5793,6 +5793,9 @@
                         <a href="#" onclick="switchView('rankings'); return false;" style="font-size: 0.85rem; color: rgba(245,243,238,0.65); text-decoration: none; font-family: var(--font-serif);">Rankings</a>
                         <a href="#" onclick="switchView('bracket'); return false;" style="font-size: 0.85rem; color: rgba(245,243,238,0.65); text-decoration: none; font-family: var(--font-serif);">Bracket</a>
                         <a href="#" onclick="switchView('coaches'); return false;" style="font-size: 0.85rem; color: rgba(245,243,238,0.65); text-decoration: none; font-family: var(--font-serif);">Coaches</a>
+                        <a href="#champions" style="font-size: 0.85rem; color: rgba(245,243,238,0.65); text-decoration: none; font-family: var(--font-serif);">Champions</a>
+                        <a href="#rivalries" style="font-size: 0.85rem; color: rgba(245,243,238,0.65); text-decoration: none; font-family: var(--font-serif);">Rivalries</a>
+                        <a href="#classics" style="font-size: 0.85rem; color: rgba(245,243,238,0.65); text-decoration: none; font-family: var(--font-serif);">Classics</a>
                     </div>
                 </div>
                 <div>
@@ -8225,6 +8228,10 @@
             if (coachMatch) {
                 const c = findCoachBySlug(coachMatch[1]);
                 if (c) { renderCoachDetail(c); _skipHashUpdate = false; return; }
+                // Unknown coach slug — land on the coaches leaderboard, not a blank page
+                switchView('coaches', true);
+                _skipHashUpdate = false;
+                return;
             }
 
             // #compare-coaches/slug1/slug2
@@ -8234,6 +8241,10 @@
                 const c2 = findCoachBySlug(coachCompareMatch[2]);
                 if (c1 && c2) {
                     renderCoachComparison(c1, c2);
+                } else {
+                    // Either coach slug unresolvable — fall back to the coaches
+                    // leaderboard instead of leaving the page blank.
+                    switchView('coaches', true);
                 }
                 _skipHashUpdate = false;
                 return;
@@ -8256,6 +8267,11 @@
                     openProfile(byId, true);
                 } else if (/^\d+$/.test(key)) {
                     openProfileById(key);
+                } else {
+                    // Unresolvable slug (renamed/retired program, stale shared link).
+                    // #team/ is the most shareable/crawled URL shape — land on the
+                    // Teams directory instead of a blank page.
+                    switchView('teams', true);
                 }
                 _skipHashUpdate = false;
                 return;
@@ -8410,6 +8426,11 @@
             const viewMatch = hash.match(/^#(home|bracket|rankings|teams|coaches|comparison)$/);
             if (viewMatch) {
                 switchView(viewMatch[1], true);
+            } else {
+                // Catch-all: a hash that matched no route above must never leave the
+                // page blank. init() only renders home for an EMPTY hash, so an
+                // unrecognized/stale hash on load/refresh would otherwise show white.
+                switchView('home', true);
             }
 
             _skipHashUpdate = false;
@@ -24797,6 +24818,10 @@
                 document.getElementById('rivalryPageContent').innerHTML = '<div style="text-align:center;padding:3rem;color:#8892A0;">Rivalry not found.</div>';
                 return;
             }
+
+            // Synchronous loading state so direct-nav/refresh never shows a blank
+            // container while the team game slices load (mirrors renderGameDetail).
+            document.getElementById('rivalryPageContent').innerHTML = '<div style="text-align:center;padding:3rem;color:#8892A0;">Loading rivalry…</div>';
 
             // Lazy-load both teams' game slices for game-level rivalry data
             await Promise.all([
