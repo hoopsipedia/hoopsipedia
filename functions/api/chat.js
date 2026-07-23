@@ -245,7 +245,18 @@ async function toolGetTeamSeasons(input, ctx) {
   const teamData = seasons[String(input.espnId)];
   if (!teamData || !teamData.seasons) return { error: `No season data for team ${input.espnId}` };
 
-  let filtered = teamData.seasons;
+  const all = teamData.seasons;
+  // Seasons are ordered most-recent-first, so the last element is the earliest
+  // on record. Surface the program span ALWAYS — this lets "when did they first
+  // play / how far back does your data go" be answered without the model having
+  // to guess a startYear (the old unfiltered path only returned recent seasons).
+  const span = all.length ? {
+    firstSeason: all[all.length - 1]?.year || null,
+    lastSeason: all[0]?.year || null,
+    totalSeasons: all.length,
+  } : null;
+
+  let filtered = all;
   if (input.startYear || input.endYear) {
     filtered = filtered.filter(s => {
       const yr = parseInt(s.year?.split('-')[0]) + 1;
@@ -253,14 +264,14 @@ async function toolGetTeamSeasons(input, ctx) {
       if (input.endYear && yr > input.endYear) return false;
       return true;
     });
+  } else if (filtered.length > 15) {
+    // Unfiltered: 13 most recent + the 2 earliest on record, so origin/founding
+    // questions work out of the box. Each season carries its own year label, so
+    // the non-contiguous slice is unambiguous.
+    filtered = [...filtered.slice(0, 13), ...filtered.slice(-2)];
   }
 
-  // Limit to 15 most recent seasons to keep context manageable
-  if (filtered.length > 15 && !input.startYear && !input.endYear) {
-    filtered = filtered.slice(0, 15);
-  }
-
-  return { espnId: input.espnId, seasonCount: filtered.length, seasons: filtered };
+  return { espnId: input.espnId, span, seasonCount: filtered.length, seasons: filtered };
 }
 
 async function toolGetHeadToHead(input, ctx) {
@@ -820,7 +831,7 @@ const TOOLS = [
   },
   {
     name: 'getTeamSeasons',
-    description: 'Get season-by-season records for a team. Includes wins, losses, conference record, SRS, SOS, PPG, AP rankings, coach, NCAA tournament result and seed.',
+    description: 'Get season-by-season records for a team. Includes wins, losses, conference record, SRS, SOS, PPG, AP rankings, coach, NCAA tournament result and seed. Always returns a `span` object (firstSeason, lastSeason, totalSeasons) covering the program\'s ENTIRE history — use span.firstSeason to answer "when did they first play / how far back does the data go". When called with no year filter it returns the 13 most recent plus the 2 earliest seasons; pass startYear/endYear to pull any specific range in between.',
     input_schema: {
       type: 'object',
       properties: {
@@ -1019,9 +1030,10 @@ You have access to tools that query Hoopsipedia's proprietary data. Use them to 
 
 Available data includes:
 - Team profiles: all-time records, championships, Final Fours, conference history (365 teams)
-- Season-by-season records: W/L, conference records, SRS, SOS, PPG, AP rankings, tournament results (back to each program's first season, many pre-1949)
+- Season-by-season records: W/L, conference records, SRS, SOS, PPG, AP rankings, tournament results (back to each program's first season, many pre-1949). getTeamSeasons returns a span field with the program's firstSeason — use it for founding/first-season questions.
 - Head-to-head records between any two teams (all-time)
 - Game-by-game results with scores for every team (searchable by season, opponent, tournament)
+- Box scores with per-player stat lines (getBoxScore): every NCAA tournament game 1939-2026, most games from 2002 on, plus a large and growing set of archived regular-season games (many from the 1990s-2000s). Use it to answer "who led X in scoring / how many points did player Y have" — do not claim you lack box-score data without calling the tool first.
 - Championship history: look up champion by year (1939-2026)
 - Conference rosters: list all teams in any conference
 - HTSS Rankings: Hoopsipedia's proprietary Historical Team-Season Score ranking 25,000+ team-seasons across history (scale: 50=avg, 60-65 good, 65-70 very good, 70-80 elite, 80-85 transcendent, 85+ GOAT tier)
@@ -1069,7 +1081,7 @@ async function callClaude(messages, apiKey, tools) {
       'anthropic-version': '2023-06-01'
     },
     body: JSON.stringify({
-      model: 'claude-haiku-4-5-20251001',
+      model: 'claude-sonnet-5',
       max_tokens: 2200,
       system: SYSTEM_PROMPT,
       messages,
@@ -1088,7 +1100,7 @@ async function callClaude(messages, apiKey, tools) {
         'x-api-key': apiKey,
         'anthropic-version': '2023-06-01'
       },
-      body: JSON.stringify({ model: 'claude-haiku-4-5-20251001', max_tokens: 2200, system: SYSTEM_PROMPT, messages, tools, stream: true })
+      body: JSON.stringify({ model: 'claude-sonnet-5', max_tokens: 2200, system: SYSTEM_PROMPT, messages, tools, stream: true })
     });
     if (!retry.ok) {
       const err = await retry.text().catch(() => 'Unknown error');
