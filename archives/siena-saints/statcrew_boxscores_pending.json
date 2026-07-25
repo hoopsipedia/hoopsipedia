@@ -1,0 +1,39 @@
+{
+ "games": {},
+ "quarantine": [
+  [
+   "http://web.archive.org/web/20081204151338id_/http://sienasaints.cstv.com/sports/m-baskbl/stats/081903aaa.html",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20080719005908id_/http://sienasaints.cstv.com/sports/m-baskbl/stats/082003aaa.html",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20081204151418id_/http://sienasaints.cstv.com/sports/m-baskbl/stats/082303aaa.html",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20081204151934id_/http://sienasaints.cstv.com/sports/m-baskbl/stats/082303aab.html",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20080703210318id_/http://sienasaints.cstv.com/sports/m-baskbl/stats/082503aaa.html",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20081016001044id_/http://sienasaints.cstv.com/sports/m-baskbl/stats/082503aab.html",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20090413124904id_/http://sienasaints.cstv.com:80/sports/m-baskbl/stats/102701aaa.html",
+   "parse/checksum fail"
+  ]
+ ],
+ "stats": {
+  "ok": 0,
+  "parse_fail": 7,
+  "checksum_fail": 0,
+  "log_mismatch": 0
+ }
+}

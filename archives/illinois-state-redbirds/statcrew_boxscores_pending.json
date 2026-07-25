@@ -1,0 +1,59 @@
+{
+ "games": {},
+ "quarantine": [
+  [
+   "http://web.archive.org/web/20140109183209id_/http://www.goredbirds.com/sports/m-baskbl/stats/010814aaa.html",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20121119091239id_/http://www.goredbirds.com/sports/m-baskbl/stats/110512aaa.html",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20121119091154id_/http://www.goredbirds.com/sports/m-baskbl/stats/111212aaa.html",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20121119085159id_/http://www.goredbirds.com/sports/m-baskbl/stats/111812aaa.html",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20110101081655id_/http://www.goredbirds.com/sports/m-baskbl/stats/120810aaa.html",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20110101081821id_/http://www.goredbirds.com/sports/m-baskbl/stats/121110aaa.html",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20101231192433id_/http://www.goredbirds.com/sports/m-baskbl/stats/123010aaa.html",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20100120153940id_/http://www.goredbirds.com:80/sports/m-baskbl/stats/011310aaa.html",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20120201042909id_/http://www.goredbirds.com:80/sports/m-baskbl/stats/012812aaa.html",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20130312025417id_/http://www.goredbirds.com:80/sports/m-baskbl/stats/030913aaa.html",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20091203123546id_/http://www.goredbirds.com:80/sports/m-baskbl/stats/112909aaa.html",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20121226044840id_/http://www.goredbirds.com:80/sports/m-baskbl/stats/121612aaa.html",
+   "parse/checksum fail"
+  ]
+ ],
+ "stats": {
+  "ok": 0,
+  "parse_fail": 12,
+  "checksum_fail": 0,
+  "log_mismatch": 0
+ }
+}

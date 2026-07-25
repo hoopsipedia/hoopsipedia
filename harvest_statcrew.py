@@ -347,6 +347,12 @@ SOURCE_DEFS = {
                        'file_re': r'/stats/\d{6}[a-z]{3}\.html?$', 'mode': 'wayback'}),
 }
 
+# Supplementary sources (census wave-2+) live in _extra_sources.json so large
+# batches can be generated programmatically. Format: {key: [tid, name, site, cfg]}.
+if os.path.exists('_extra_sources.json'):
+    for _k, _v in json.load(open('_extra_sources.json')).items():
+        SOURCE_DEFS[_k] = tuple(_v)
+
 SOURCES = {k: {'team_id': tid, 'team_name': name, 'site': site, 'docs': make_docs(cfg)}
            for k, (tid, name, site, cfg) in SOURCE_DEFS.items()}
 
@@ -380,7 +386,17 @@ def main():
                     return True
         return False
 
-    ALIASES = {'UConn Huskies': 'connecticut'}
+    # Disambiguate name-collision programs (first-word matching is ambiguous when
+    # two teams share a first word, e.g. Michigan / Michigan St). Values are a
+    # substring that uniquely identifies THIS team in a box-score team name.
+    ALIASES = {
+        'UConn Huskies': 'connecticut',
+        'Michigan State Spartans': 'michigan st', 'Ohio State Buckeyes': 'ohio st',
+        'North Carolina Tar Heels': 'north carolina', 'San Diego State Aztecs': 'san diego st',
+        'San Jose State Spartans': 'san jose', 'Washington State Cougars': 'washington st',
+        'Oregon State Beavers': 'oregon st', 'Illinois State Redbirds': 'illinois st',
+        'Oklahoma State Cowboys': 'oklahoma st', 'Colorado State Rams': 'colorado st',
+    }
     name_key = ALIASES.get(src['team_name'], src['team_name'].split()[0].lower())
     results, quarantine = {}, []
     stats = {'ok': 0, 'parse_fail': 0, 'checksum_fail': 0, 'log_mismatch': 0}

@@ -1,0 +1,39 @@
+{
+ "games": {},
+ "quarantine": [
+  [
+   "http://web.archive.org/web/20010415204924id_/http://www.purpleeagles.com:80/bko/bkc/canisiusbox2.html",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20010124074200id_/http://www.purpleeagles.com:80/bko/bkc/loyolabox.html",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20010309050529id_/http://www.purpleeagles.com:80/bko/bkc/loyolabox2.html",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20010215042336id_/http://www.purpleeagles.com:80/bko/bkc/manhattanbox.html",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20010212015403id_/http://www.purpleeagles.com:80/bko/bkc/maristbox2.html",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20010301221900id_/http://www.purpleeagles.com:80/bko/bkc/riderbox2.html",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20010415204013id_/http://www.purpleeagles.com:80/bko/bkc/sienabox2.html",
+   "parse/checksum fail"
+  ]
+ ],
+ "stats": {
+  "ok": 0,
+  "parse_fail": 7,
+  "checksum_fail": 0,
+  "log_mismatch": 0
+ }
+}

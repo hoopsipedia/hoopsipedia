@@ -1,0 +1,67 @@
+{
+ "games": {},
+ "quarantine": [
+  [
+   "http://web.archive.org/web/20000226144845id_/http://goaztecs.com:80/sports/m-baskbl/stats/022699aaa.html",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20140808082220id_/http://www.goaztecs.com/sports/m-baskbl/stats/031310aaa.html",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20150926220100id_/http://www.goaztecs.com/sports/m-baskbl/stats/060609aaa.html",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20150926221252id_/http://www.goaztecs.com/sports/m-baskbl/stats/070103aaa.html",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20150926204806id_/http://www.goaztecs.com/sports/m-baskbl/stats/081502aaa.html",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20150926204717id_/http://www.goaztecs.com/sports/m-baskbl/stats/121108aaa.html",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20170709172352id_/http://www.goaztecs.com/sports/m-baskbl/stats/123009aaa.html",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20140404061323id_/http://www.goaztecs.com/sports/m-baskbl/stats/123110aaa.html",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20180219005940id_/http://www.goaztecs.com:80/sports/m-baskbl/stats/021418aab.html",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20160318213542id_/http://www.goaztecs.com:80/sports/m-baskbl/stats/031516aaa.html",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20171106092012id_/http://www.goaztecs.com:80/sports/m-baskbl/stats/110217aac.html",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20161115051925id_/http://www.goaztecs.com:80/sports/m-baskbl/stats/111116aab.html",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20160408093810id_/http://www.goaztecs.com:80/sports/m-baskbl/stats/112809aaa.html",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20171213142253id_/http://www.goaztecs.com:80/sports/m-baskbl/stats/120917aaa.html",
+   "parse/checksum fail"
+  ]
+ ],
+ "stats": {
+  "ok": 0,
+  "parse_fail": 14,
+  "checksum_fail": 0,
+  "log_mismatch": 0
+ }
+}

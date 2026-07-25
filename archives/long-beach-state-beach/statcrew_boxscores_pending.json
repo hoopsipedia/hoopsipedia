@@ -1,0 +1,39 @@
+{
+ "games": {},
+ "quarantine": [
+  [
+   "http://web.archive.org/web/20000517221609id_/http://www.longbeachstate.com:80/bko/bkc/bask120899box.html",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20000302034426id_/http://www.longbeachstate.com:80/bko/bkc/lbs-calpolybox.html",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20000302045946id_/http://www.longbeachstate.com:80/bko/bkc/lbs-ksubox.html",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20000302102151id_/http://www.longbeachstate.com:80/bko/bkc/lbs-lmubox.html",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20000302112122id_/http://www.longbeachstate.com:80/bko/bkc/lbs-ucsbbox129.html",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20000302133022id_/http://www.longbeachstate.com:80/bko/bkc/lbs-uscbox.html",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20010123175000id_/http://www.longbeachstate.com:80/bko/bkc/lbu-siubox.html",
+   "parse/checksum fail"
+  ]
+ ],
+ "stats": {
+  "ok": 0,
+  "parse_fail": 7,
+  "checksum_fail": 0,
+  "log_mismatch": 0
+ }
+}

@@ -1,0 +1,47 @@
+{
+ "games": {},
+ "quarantine": [
+  [
+   "http://web.archive.org/web/20151030051046id_/http://www.niuhuskies.com/sports/m-baskbl/stats/010910aaa.html",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20151030051051id_/http://www.niuhuskies.com/sports/m-baskbl/stats/012010aaa.html",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20151030051121id_/http://www.niuhuskies.com/sports/m-baskbl/stats/020110aaa.html",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20151030051114id_/http://www.niuhuskies.com/sports/m-baskbl/stats/020310aab.html",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20151030051158id_/http://www.niuhuskies.com/sports/m-baskbl/stats/022010aaa.html",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20120422050448id_/http://www.niuhuskies.com/sports/m-baskbl/stats/110709aac.html",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20151007082820id_/http://www.niuhuskies.com/sports/m-baskbl/stats/112108aaa.html",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20151030051017id_/http://www.niuhuskies.com/sports/m-baskbl/stats/123009aab.html",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20091206033332id_/http://www.niuhuskies.com:80/sports/m-baskbl/stats/120209aaa.html",
+   "parse/checksum fail"
+  ]
+ ],
+ "stats": {
+  "ok": 0,
+  "parse_fail": 9,
+  "checksum_fail": 0,
+  "log_mismatch": 0
+ }
+}

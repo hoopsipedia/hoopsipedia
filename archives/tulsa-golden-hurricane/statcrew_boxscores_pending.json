@@ -1,0 +1,35 @@
+{
+ "games": {},
+ "quarantine": [
+  [
+   "http://web.archive.org/web/20080410114247id_/http://tulsahurricane.cstv.com:80/sports/m-baskbl/stats/010607aaa.html",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20060928092122id_/http://tulsahurricane.cstv.com:80/sports/m-baskbl/stats/072803aaa.html",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20080405103207id_/http://tulsahurricane.cstv.com:80/sports/m-baskbl/stats/110206aaa.html",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20071210032045id_/http://tulsahurricane.cstv.com:80/sports/m-baskbl/stats/110507aaa.html",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20080410114252id_/http://tulsahurricane.cstv.com:80/sports/m-baskbl/stats/121006aaa.html",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20071220032908id_/http://tulsahurricane.cstv.com:80/sports/m-baskbl/stats/121507aaa.html",
+   "parse/checksum fail"
+  ]
+ ],
+ "stats": {
+  "ok": 0,
+  "parse_fail": 6,
+  "checksum_fail": 0,
+  "log_mismatch": 0
+ }
+}

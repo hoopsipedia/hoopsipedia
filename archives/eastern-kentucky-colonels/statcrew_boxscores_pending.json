@@ -1,0 +1,67 @@
+{
+ "games": {},
+ "quarantine": [
+  [
+   "http://web.archive.org/web/20030426220651id_/http://www.ekusports.com:80/bko/bkc/20022003/20030109box.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20030310032051id_/http://www.ekusports.com:80/bko/bkc/20022003/20030111box.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20030310032301id_/http://www.ekusports.com:80/bko/bkc/20022003/20030118box.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20030310033914id_/http://www.ekusports.com:80/bko/bkc/20022003/20030129box.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20030310032405id_/http://www.ekusports.com:80/bko/bkc/20022003/20030201box.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20030310031046id_/http://www.ekusports.com:80/bko/bkc/20022003/20030210box.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20030310031628id_/http://www.ekusports.com:80/bko/bkc/20022003/20030217box.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20030310032006id_/http://www.ekusports.com:80/bko/bkc/20022003/20030220box.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20030310033000id_/http://www.ekusports.com:80/bko/bkc/20022003/20030222box.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20010311185318id_/http://www.ekusports.com:80/bko/bkc/bkc/1117urbanabox.html",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20010311185837id_/http://www.ekusports.com:80/bko/bkc/bkc_1128capitalbox.html",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20010311190244id_/http://www.ekusports.com:80/bko/bkc/bkcbox112200.html",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20010311190615id_/http://www.ekusports.com:80/bko/bkc/box110700.html",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20010311191315id_/http://www.ekusports.com:80/bko/bkc/box111100.html",
+   "parse/checksum fail"
+  ]
+ ],
+ "stats": {
+  "ok": 0,
+  "parse_fail": 14,
+  "checksum_fail": 0,
+  "log_mismatch": 0
+ }
+}
