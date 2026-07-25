@@ -1,0 +1,852 @@
+{
+ "michigan-wolverines": [
+  "130",
+  "Michigan Wolverines",
+  "mgoblue.com (Wayback)",
+  {
+   "cdx": "mgoblue.com/sports/m-baskbl/stats/*",
+   "file_re": "/stats/\\d{6}[a-z]{3}\\.html?$",
+   "mode": "wayback"
+  }
+ ],
+ "rhode-island-rams": [
+  "227",
+  "Rhode Island Rams",
+  "gorhody.com (Wayback)",
+  {
+   "cdx": "gorhody.com/sports/m-baskbl/stats/*",
+   "file_re": "/stats/\\d{6}[a-z]{3}\\.html?$",
+   "mode": "wayback"
+  }
+ ],
+ "milwaukee-panthers": [
+  "270",
+  "Milwaukee Panthers",
+  "uwmpanthers.com (Wayback)",
+  {
+   "cdx": "uwmpanthers.com/sports/m-baskbl/stats/*",
+   "file_re": "/stats/\\d{6}[a-z]{3}\\.html?$",
+   "mode": "wayback"
+  }
+ ],
+ "michigan-state-spartans": [
+  "127",
+  "Michigan State Spartans",
+  "msuspartans.com (Wayback)",
+  {
+   "cdx": "msuspartans.com/sports/m-baskbl/stats/*",
+   "file_re": "/stats/\\d{6}[a-z]{3}\\.html?$",
+   "mode": "wayback"
+  }
+ ],
+ "gonzaga-bulldogs": [
+  "2250",
+  "Gonzaga Bulldogs",
+  "gozags.com (Wayback)",
+  {
+   "cdx": "gozags.com/sports/m-baskbl/stats/*",
+   "file_re": "/stats/\\d{6}[a-z]{3}\\.html?$",
+   "mode": "wayback"
+  }
+ ],
+ "long-beach-state-beach": [
+  "299",
+  "Long Beach State Beach",
+  "longbeachstate.com (Wayback)",
+  {
+   "cdx": "longbeachstate.com/bko/bkc/*",
+   "file_re": "/bko/bkc/.*box.*\\.html?$",
+   "mode": "wayback"
+  }
+ ],
+ "usc-trojans": [
+  "30",
+  "USC Trojans",
+  "usctrojans.com (Wayback)",
+  {
+   "cdx": "usctrojans.com/sports/m-baskbl/stats/*",
+   "file_re": "/stats/\\d{6}[a-z]{3}\\.html?$",
+   "mode": "wayback"
+  }
+ ],
+ "loyola-marymount-lions": [
+  "2351",
+  "Loyola Marymount Lions",
+  "lmulions.com (Wayback)",
+  {
+   "cdx": "lmulions.com/sports/m-baskbl/stats/*",
+   "file_re": "/stats/\\d{6}[a-z]{3}\\.html?$",
+   "mode": "wayback"
+  }
+ ],
+ "stony-brook-seawolves": [
+  "2619",
+  "Stony Brook Seawolves",
+  "stonybrookathletics.com (Wayback)",
+  {
+   "cdx": "stonybrookathletics.com/sports/m-baskbl/stats/*",
+   "file_re": "/stats/\\d{6}[a-z]{3}\\.html?$",
+   "mode": "wayback"
+  }
+ ],
+ "ucla-bruins": [
+  "26",
+  "UCLA Bruins",
+  "uclabruins.com (Wayback)",
+  {
+   "cdx": "uclabruins.com/sports/m-baskbl/stats/*",
+   "file_re": "/stats/\\d{6}[a-z]{3}\\.html?$",
+   "mode": "wayback"
+  }
+ ],
+ "american-university-eagles": [
+  "44",
+  "American University Eagles",
+  "aueagles.com (Wayback)",
+  {
+   "cdx": "aueagles.com/sports/m-baskbl/stats/*",
+   "file_re": "/stats/\\d{6}[a-z]{3}\\.html?$",
+   "mode": "wayback"
+  }
+ ],
+ "unlv-rebels": [
+  "2439",
+  "UNLV Rebels",
+  "unlvrebels.fansonly.com (Wayback)",
+  {
+   "cdx": "unlvrebels.fansonly.com/sports/m-baskbl/stats/*",
+   "file_re": "/stats/\\d{6}[a-z]{3}\\.html?$",
+   "mode": "wayback"
+  }
+ ],
+ "ohio-state-buckeyes": [
+  "194",
+  "Ohio State Buckeyes",
+  "ohiostatebuckeyes.com (Wayback)",
+  {
+   "cdx": "ohiostatebuckeyes.com/sports/m-baskbl/stats/*",
+   "file_re": "/stats/\\d{6}[a-z]{3}\\.html?$",
+   "mode": "wayback"
+  }
+ ],
+ "george-washington-revolutionaries": [
+  "45",
+  "George Washington Revolutionaries",
+  "gwsports.com (Wayback)",
+  {
+   "cdx": "gwsports.com/sports/m-baskbl/stats/*",
+   "file_re": "/stats/\\d{6}[a-z]{3}\\.html?$",
+   "mode": "wayback"
+  }
+ ],
+ "maryland-terrapins": [
+  "120",
+  "Maryland Terrapins",
+  "umterps.com (Wayback)",
+  {
+   "cdx": "umterps.com/sports/m-baskbl/stats/*",
+   "file_re": "/stats/\\d{6}[a-z]{3}\\.html?$",
+   "mode": "wayback"
+  }
+ ],
+ "illinois-fighting-illini": [
+  "356",
+  "Illinois Fighting Illini",
+  "fightingillini.com (Wayback)",
+  {
+   "cdx": "fightingillini.com/sports/m-baskbl/stats/*",
+   "file_re": "/stats/\\d{6}[a-z]{3}\\.html?$",
+   "mode": "wayback"
+  }
+ ],
+ "florida-state-seminoles": [
+  "52",
+  "Florida State Seminoles",
+  "seminoles.fansonly.com (Wayback)",
+  {
+   "cdx": "seminoles.fansonly.com/sports/m-baskbl/stats/*",
+   "file_re": "/stats/\\d{6}[a-z]{3}\\.html?$",
+   "mode": "wayback"
+  }
+ ],
+ "north-dakota-fighting-hawks": [
+  "155",
+  "North Dakota Fighting Hawks",
+  "und.fansonly.com (Wayback)",
+  {
+   "cdx": "und.fansonly.com/sports/m-baskbl/stats/*",
+   "file_re": "/stats/\\d{6}[a-z]{3}\\.html?$",
+   "mode": "wayback"
+  }
+ ],
+ "wake-forest-demon-deacons": [
+  "154",
+  "Wake Forest Demon Deacons",
+  "wakeforestsports.fansonly.com (Wayback)",
+  {
+   "cdx": "wakeforestsports.fansonly.com/sports/m-baskbl/stats/*",
+   "file_re": "/stats/\\d{6}[a-z]{3}\\.html?$",
+   "mode": "wayback"
+  }
+ ],
+ "texas-tech-red-raiders": [
+  "2641",
+  "Texas Tech Red Raiders",
+  "texastech.fansonly.com (Wayback)",
+  {
+   "cdx": "texastech.fansonly.com/sports/m-baskbl/stats/*",
+   "file_re": "/stats/\\d{6}[a-z]{3}\\.html?$",
+   "mode": "wayback"
+  }
+ ],
+ "kentucky-wildcats": [
+  "96",
+  "Kentucky Wildcats",
+  "ukathletics.com (Wayback)",
+  {
+   "cdx": "ukathletics.com/sports/m-baskbl/stats/*",
+   "file_re": "/stats/\\d{6}[a-z]{3}\\.html?$",
+   "mode": "wayback"
+  }
+ ],
+ "north-carolina-tar-heels": [
+  "153",
+  "North Carolina Tar Heels",
+  "tarheelblue.fansonly.com (Wayback)",
+  {
+   "cdx": "tarheelblue.fansonly.com/sports/m-baskbl/stats/*",
+   "file_re": "/stats/\\d{6}[a-z]{3}\\.html?$",
+   "mode": "wayback"
+  }
+ ],
+ "notre-dame-fighting-irish": [
+  "87",
+  "Notre Dame Fighting Irish",
+  "und.com (Wayback)",
+  {
+   "cdx": "und.com/sports/m-baskbl/stats/*",
+   "file_re": "/stats/\\d{6}[a-z]{3}\\.html?$",
+   "mode": "wayback"
+  }
+ ],
+ "iowa-hawkeyes": [
+  "2294",
+  "Iowa Hawkeyes",
+  "hawkeyesports.com (Wayback)",
+  {
+   "cdx": "hawkeyesports.com/sports/m-baskbl/stats/*",
+   "file_re": "/stats/\\d{6}[a-z]{3}\\.html?$",
+   "mode": "wayback"
+  }
+ ],
+ "duquesne-dukes": [
+  "2184",
+  "Duquesne Dukes",
+  "goduquesne.com (Wayback)",
+  {
+   "cdx": "goduquesne.com/sports/m-baskbl/stats/*",
+   "file_re": "/stats/\\d{6}[a-z]{3}\\.html?$",
+   "mode": "wayback"
+  }
+ ],
+ "loyola-maryland-greyhounds": [
+  "2352",
+  "Loyola Maryland Greyhounds",
+  "loyolagreyhounds.com (Wayback)",
+  {
+   "cdx": "loyolagreyhounds.com/sports/m-baskbl/stats/*",
+   "file_re": "/stats/\\d{6}[a-z]{3}\\.html?$",
+   "mode": "wayback"
+  }
+ ],
+ "san-diego-toreros": [
+  "301",
+  "San Diego Toreros",
+  "usdtoreros.com (Wayback)",
+  {
+   "cdx": "usdtoreros.com/sports/m-baskbl/stats/*",
+   "file_re": "/stats/\\d{6}[a-z]{3}\\.html?$",
+   "mode": "wayback"
+  }
+ ],
+ "georgetown-hoyas": [
+  "46",
+  "Georgetown Hoyas",
+  "guhoyas.com (Wayback)",
+  {
+   "cdx": "guhoyas.com/sports/m-baskbl/stats/*",
+   "file_re": "/stats/\\d{6}[a-z]{3}\\.html?$",
+   "mode": "wayback"
+  }
+ ],
+ "northwestern-wildcats": [
+  "77",
+  "Northwestern Wildcats",
+  "nusports.fansonly.com (Wayback)",
+  {
+   "cdx": "nusports.fansonly.com/sports/m-baskbl/stats/*",
+   "file_re": "/stats/\\d{6}[a-z]{3}\\.html?$",
+   "mode": "wayback"
+  }
+ ],
+ "old-dominion-monarchs": [
+  "295",
+  "Old Dominion Monarchs",
+  "odusports.com (Wayback)",
+  {
+   "cdx": "odusports.com/bko/bkc/*",
+   "file_re": "/bko/bkc/.*box.*\\.html?$",
+   "mode": "wayback"
+  }
+ ],
+ "new-mexico-lobos": [
+  "167",
+  "New Mexico Lobos",
+  "golobos.com (Wayback)",
+  {
+   "cdx": "golobos.com/bko/bkc/*",
+   "file_re": "/bko/bkc/.*box.*\\.html?$",
+   "mode": "wayback"
+  }
+ ],
+ "villanova-wildcats": [
+  "222",
+  "Villanova Wildcats",
+  "villanova.fansonly.com (Wayback)",
+  {
+   "cdx": "villanova.fansonly.com/sports/m-baskbl/stats/*",
+   "file_re": "/stats/\\d{6}[a-z]{3}\\.html?$",
+   "mode": "wayback"
+  }
+ ],
+ "texas-longhorns": [
+  "251",
+  "Texas Longhorns",
+  "texassports.com (Wayback)",
+  {
+   "cdx": "texassports.com/bko/bkc/*",
+   "file_re": "/bko/bkc/.*box.*\\.html?$",
+   "mode": "wayback"
+  }
+ ],
+ "uc-davis-aggies": [
+  "302",
+  "UC Davis Aggies",
+  "ucdavisaggies.com (Wayback)",
+  {
+   "cdx": "ucdavisaggies.com/sports/m-baskbl/stats/*",
+   "file_re": "/stats/\\d{6}[a-z]{3}\\.html?$",
+   "mode": "wayback"
+  }
+ ],
+ "oregon-state-beavers": [
+  "204",
+  "Oregon State Beavers",
+  "osubeavers.fansonly.com (Wayback)",
+  {
+   "cdx": "osubeavers.fansonly.com/sports/m-baskbl/stats/*",
+   "file_re": "/stats/\\d{6}[a-z]{3}\\.html?$",
+   "mode": "wayback"
+  }
+ ],
+ "temple-owls": [
+  "218",
+  "Temple Owls",
+  "owlsports.com (Wayback)",
+  {
+   "cdx": "owlsports.com/bko/bkc/*",
+   "file_re": "/bko/bkc/.*box.*\\.html?$",
+   "mode": "wayback"
+  }
+ ],
+ "utah-state-aggies": [
+  "328",
+  "Utah State Aggies",
+  "utahstateaggies.fansonly.com (Wayback)",
+  {
+   "cdx": "utahstateaggies.fansonly.com/sports/m-baskbl/stats/*",
+   "file_re": "/stats/\\d{6}[a-z]{3}\\.html?$",
+   "mode": "wayback"
+  }
+ ],
+ "utah-utes": [
+  "254",
+  "Utah Utes",
+  "utahutes.com (Wayback)",
+  {
+   "cdx": "utahutes.com/sports/m-baskbl/stats/*",
+   "file_re": "/stats/\\d{6}[a-z]{3}\\.html?$",
+   "mode": "wayback"
+  }
+ ],
+ "miami-oh-redhawks": [
+  "193",
+  "Miami (OH) RedHawks",
+  "muredhawks.collegesports.com (Wayback)",
+  {
+   "cdx": "muredhawks.collegesports.com/sports/m-baskbl/stats/*",
+   "file_re": "/stats/\\d{6}[a-z]{3}\\.html?$",
+   "mode": "wayback"
+  }
+ ],
+ "saint-mary-s-gaels": [
+  "2608",
+  "Saint Mary's Gaels",
+  "smcgaels.com (Wayback)",
+  {
+   "cdx": "smcgaels.com/bko/bkc/*",
+   "file_re": "/bko/bkc/.*box.*\\.html?$",
+   "mode": "wayback"
+  }
+ ],
+ "depaul-blue-demons": [
+  "305",
+  "DePaul Blue Demons",
+  "depaulbluedemons.com (Wayback)",
+  {
+   "cdx": "depaulbluedemons.com/bko/bkc/*",
+   "file_re": "/bko/bkc/.*box.*\\.html?$",
+   "mode": "wayback"
+  }
+ ],
+ "georgia-tech-yellow-jackets": [
+  "59",
+  "Georgia Tech Yellow Jackets",
+  "ramblinwreck.com (Wayback)",
+  {
+   "cdx": "ramblinwreck.com/sports/m-baskbl/stats/*",
+   "file_re": "/stats/\\d{6}[a-z]{3}\\.html?$",
+   "mode": "wayback"
+  }
+ ],
+ "cincinnati-bearcats": [
+  "2132",
+  "Cincinnati Bearcats",
+  "ucbearcats.com (Wayback)",
+  {
+   "cdx": "ucbearcats.com/bko/bkc/*",
+   "file_re": "/bko/bkc/.*box.*\\.html?$",
+   "mode": "wayback"
+  }
+ ],
+ "virginia-cavaliers": [
+  "258",
+  "Virginia Cavaliers",
+  "virginiasports.com (Wayback)",
+  {
+   "cdx": "virginiasports.com/sports/m-baskbl/stats/*",
+   "file_re": "/stats/\\d{6}[a-z]{3}\\.html?$",
+   "mode": "wayback"
+  }
+ ],
+ "duke-blue-devils": [
+  "150",
+  "Duke Blue Devils",
+  "goduke.com (Wayback)",
+  {
+   "cdx": "goduke.com/bko/bkc/*",
+   "file_re": "/bko/bkc/.*box.*\\.html?$",
+   "mode": "wayback"
+  }
+ ],
+ "navy-midshipmen": [
+  "2426",
+  "Navy Midshipmen",
+  "navysports.com (Wayback)",
+  {
+   "cdx": "navysports.com/bko/bkc/*",
+   "file_re": "/bko/bkc/.*box.*\\.html?$",
+   "mode": "wayback"
+  }
+ ],
+ "purdue-boilermakers": [
+  "2509",
+  "Purdue Boilermakers",
+  "purduesports.com (Wayback)",
+  {
+   "cdx": "purduesports.com/sports/m-baskbl/stats/*",
+   "file_re": "/stats/\\d{6}[a-z]{3}\\.html?$",
+   "mode": "wayback"
+  }
+ ],
+ "iowa-state-cyclones": [
+  "66",
+  "Iowa State Cyclones",
+  "cyclones.com (Wayback)",
+  {
+   "cdx": "cyclones.com/sports/m-baskbl/stats/*",
+   "file_re": "/stats/\\d{6}[a-z]{3}\\.html?$",
+   "mode": "wayback"
+  }
+ ],
+ "pittsburgh-panthers": [
+  "221",
+  "Pittsburgh Panthers",
+  "pittsburghpanthers.com (Wayback)",
+  {
+   "cdx": "pittsburghpanthers.com/sports/m-baskbl/stats/*",
+   "file_re": "/stats/\\d{6}[a-z]{3}\\.html?$",
+   "mode": "wayback"
+  }
+ ],
+ "houston-cougars": [
+  "248",
+  "Houston Cougars",
+  "uhcougars.com (Wayback)",
+  {
+   "cdx": "uhcougars.com/bko/bkc/*",
+   "file_re": "/bko/bkc/.*box.*\\.html?$",
+   "mode": "wayback"
+  }
+ ],
+ "missouri-tigers": [
+  "142",
+  "Missouri Tigers",
+  "mutigers.cstv.com (Wayback)",
+  {
+   "cdx": "mutigers.cstv.com/sports/m-baskbl/stats/*",
+   "file_re": "/stats/\\d{6}[a-z]{3}\\.html?$",
+   "mode": "wayback"
+  }
+ ],
+ "santa-clara-broncos": [
+  "2541",
+  "Santa Clara Broncos",
+  "santaclarabroncos.com (Wayback)",
+  {
+   "cdx": "santaclarabroncos.com/sports/m-baskbl/stats/*",
+   "file_re": "/stats/\\d{6}[a-z]{3}\\.html?$",
+   "mode": "wayback"
+  }
+ ],
+ "washington-state-cougars": [
+  "265",
+  "Washington State Cougars",
+  "wsucougars.com (Wayback)",
+  {
+   "cdx": "wsucougars.com/sports/m-baskbl/stats/*",
+   "file_re": "/stats/\\d{6}[a-z]{3}\\.html?$",
+   "mode": "wayback"
+  }
+ ],
+ "akron-zips": [
+  "2006",
+  "Akron Zips",
+  "gozips.com (Wayback)",
+  {
+   "cdx": "gozips.com/bko/bkc/*",
+   "file_re": "/bko/bkc/.*box.*\\.html?$",
+   "mode": "wayback"
+  }
+ ],
+ "samford-bulldogs": [
+  "2535",
+  "Samford Bulldogs",
+  "samfordsports.fansonly.com (Wayback)",
+  {
+   "cdx": "samfordsports.fansonly.com/sports/m-baskbl/stats/*",
+   "file_re": "/stats/\\d{6}[a-z]{3}\\.html?$",
+   "mode": "wayback"
+  }
+ ],
+ "ole-miss-rebels": [
+  "145",
+  "Ole Miss Rebels",
+  "olemisssports.com (Wayback)",
+  {
+   "cdx": "olemisssports.com/sports/m-baskbl/stats/*",
+   "file_re": "/stats/\\d{6}[a-z]{3}\\.html?$",
+   "mode": "wayback"
+  }
+ ],
+ "marquette-golden-eagles": [
+  "269",
+  "Marquette Golden Eagles",
+  "gomarquette.com (Wayback)",
+  {
+   "cdx": "gomarquette.com/sports/m-baskbl/stats/*",
+   "file_re": "/stats/\\d{6}[a-z]{3}\\.html?$",
+   "mode": "wayback"
+  }
+ ],
+ "south-dakota-coyotes": [
+  "233",
+  "South Dakota Coyotes",
+  "usdcoyotes.fansonly.com (Wayback)",
+  {
+   "cdx": "usdcoyotes.fansonly.com/sports/m-baskbl/stats/*",
+   "file_re": "/stats/\\d{6}[a-z]{3}\\.html?$",
+   "mode": "wayback"
+  }
+ ],
+ "unc-greensboro-spartans": [
+  "2430",
+  "UNC Greensboro Spartans",
+  "uncgspartans.com (Wayback)",
+  {
+   "cdx": "uncgspartans.com/bko/bkc/*",
+   "file_re": "/bko/bkc/.*box.*\\.html?$",
+   "mode": "wayback"
+  }
+ ],
+ "tennessee-volunteers": [
+  "2633",
+  "Tennessee Volunteers",
+  "utsports.com (Wayback)",
+  {
+   "cdx": "utsports.com/bko/bkc/*",
+   "file_re": "/bko/bkc/.*box.*\\.html?$",
+   "mode": "wayback"
+  }
+ ],
+ "eastern-kentucky-colonels": [
+  "2198",
+  "Eastern Kentucky Colonels",
+  "ekusports.com (Wayback)",
+  {
+   "cdx": "ekusports.com/bko/bkc/*",
+   "file_re": "/bko/bkc/.*box.*\\.html?$",
+   "mode": "wayback"
+  }
+ ],
+ "minnesota-golden-gophers": [
+  "135",
+  "Minnesota Golden Gophers",
+  "gophersports.com (Wayback)",
+  {
+   "cdx": "gophersports.com/sports/m-baskbl/stats/*",
+   "file_re": "/stats/\\d{6}[a-z]{3}\\.html?$",
+   "mode": "wayback"
+  }
+ ],
+ "oklahoma-state-cowboys": [
+  "197",
+  "Oklahoma State Cowboys",
+  "okstate.com (Wayback)",
+  {
+   "cdx": "okstate.com/sports/m-baskbl/stats/*",
+   "file_re": "/stats/\\d{6}[a-z]{3}\\.html?$",
+   "mode": "wayback"
+  }
+ ],
+ "stanford-cardinal": [
+  "24",
+  "Stanford Cardinal",
+  "gostanford.com (Wayback)",
+  {
+   "cdx": "gostanford.com/sports/m-baskbl/stats/*",
+   "file_re": "/stats/\\d{6}[a-z]{3}\\.html?$",
+   "mode": "wayback"
+  }
+ ],
+ "detroit-mercy-titans": [
+  "2174",
+  "Detroit Mercy Titans",
+  "detroittitans.com (Wayback)",
+  {
+   "cdx": "detroittitans.com/bko/bkc/*",
+   "file_re": "/bko/bkc/.*box.*\\.html?$",
+   "mode": "wayback"
+  }
+ ],
+ "memphis-tigers": [
+  "235",
+  "Memphis Tigers",
+  "gotigersgo.com (Wayback)",
+  {
+   "cdx": "gotigersgo.com/sports/m-baskbl/stats/*",
+   "file_re": "/stats/\\d{6}[a-z]{3}\\.html?$",
+   "mode": "wayback"
+  }
+ ],
+ "virginia-tech-hokies": [
+  "259",
+  "Virginia Tech Hokies",
+  "hokiesports.com (Wayback)",
+  {
+   "cdx": "hokiesports.com/sports/m-baskbl/stats/*",
+   "file_re": "/stats/\\d{6}[a-z]{3}\\.html?$",
+   "mode": "wayback"
+  }
+ ],
+ "chattanooga-mocs": [
+  "236",
+  "Chattanooga Mocs",
+  "gomocs.com (Wayback)",
+  {
+   "cdx": "gomocs.com/bko/bkc/*",
+   "file_re": "/bko/bkc/.*box.*\\.html?$",
+   "mode": "wayback"
+  }
+ ],
+ "san-jose-state-spartans": [
+  "23",
+  "San Jose State Spartans",
+  "sjsuspartans.com (Wayback)",
+  {
+   "cdx": "sjsuspartans.com/bko/bkc/*",
+   "file_re": "/bko/bkc/.*box.*\\.html?$",
+   "mode": "wayback"
+  }
+ ],
+ "east-tennessee-state-buccaneers": [
+  "2193",
+  "East Tennessee State Buccaneers",
+  "etsubucs.com (Wayback)",
+  {
+   "cdx": "etsubucs.com/bko/bkc/*",
+   "file_re": "/bko/bkc/.*box.*\\.html?$",
+   "mode": "wayback"
+  }
+ ],
+ "san-diego-state-aztecs": [
+  "21",
+  "San Diego State Aztecs",
+  "goaztecs.com (Wayback)",
+  {
+   "cdx": "goaztecs.com/sports/m-baskbl/stats/*",
+   "file_re": "/stats/\\d{6}[a-z]{3}\\.html?$",
+   "mode": "wayback"
+  }
+ ],
+ "tulane-green-wave": [
+  "2655",
+  "Tulane Green Wave",
+  "tulanegreenwave.cstv.com (Wayback)",
+  {
+   "cdx": "tulanegreenwave.cstv.com/sports/m-baskbl/stats/*",
+   "file_re": "/stats/\\d{6}[a-z]{3}\\.html?$",
+   "mode": "wayback"
+  }
+ ],
+ "illinois-state-redbirds": [
+  "2287",
+  "Illinois State Redbirds",
+  "goredbirds.com (Wayback)",
+  {
+   "cdx": "goredbirds.com/sports/m-baskbl/stats/*",
+   "file_re": "/stats/\\d{6}[a-z]{3}\\.html?$",
+   "mode": "wayback"
+  }
+ ],
+ "alabama-crimson-tide": [
+  "333",
+  "Alabama Crimson Tide",
+  "rolltide.com (Wayback)",
+  {
+   "cdx": "rolltide.com/bko/bkc/*",
+   "file_re": "/bko/bkc/.*box.*\\.html?$",
+   "mode": "wayback"
+  }
+ ],
+ "southern-miss-golden-eagles": [
+  "2572",
+  "Southern Miss Golden Eagles",
+  "southernmiss.com (Wayback)",
+  {
+   "cdx": "southernmiss.com/bko/bkc/*",
+   "file_re": "/bko/bkc/.*box.*\\.html?$",
+   "mode": "wayback"
+  }
+ ],
+ "kansas-state-wildcats": [
+  "2306",
+  "Kansas State Wildcats",
+  "kstatesports.fansonly.com (Wayback)",
+  {
+   "cdx": "kstatesports.fansonly.com/sports/m-baskbl/stats/*",
+   "file_re": "/stats/\\d{6}[a-z]{3}\\.html?$",
+   "mode": "wayback"
+  }
+ ],
+ "northern-illinois-huskies": [
+  "2459",
+  "Northern Illinois Huskies",
+  "niuhuskies.com (Wayback)",
+  {
+   "cdx": "niuhuskies.com/sports/m-baskbl/stats/*",
+   "file_re": "/stats/\\d{6}[a-z]{3}\\.html?$",
+   "mode": "wayback"
+  }
+ ],
+ "louisiana-tech-bulldogs": [
+  "2348",
+  "Louisiana Tech Bulldogs",
+  "latechsports.com (Wayback)",
+  {
+   "cdx": "latechsports.com/bko/bkc/*",
+   "file_re": "/bko/bkc/.*box.*\\.html?$",
+   "mode": "wayback"
+  }
+ ],
+ "southeast-missouri-state-redhawks": [
+  "2546",
+  "Southeast Missouri State Redhawks",
+  "gosoutheast.fansonly.com (Wayback)",
+  {
+   "cdx": "gosoutheast.fansonly.com/sports/m-baskbl/stats/*",
+   "file_re": "/stats/\\d{6}[a-z]{3}\\.html?$",
+   "mode": "wayback"
+  }
+ ],
+ "siena-saints": [
+  "2561",
+  "Siena Saints",
+  "sienasaints.cstv.com (Wayback)",
+  {
+   "cdx": "sienasaints.cstv.com/sports/m-baskbl/stats/*",
+   "file_re": "/stats/\\d{6}[a-z]{3}\\.html?$",
+   "mode": "wayback"
+  }
+ ],
+ "dayton-flyers": [
+  "2168",
+  "Dayton Flyers",
+  "daytonflyers.com (Wayback)",
+  {
+   "cdx": "daytonflyers.com/bko/bkc/*",
+   "file_re": "/bko/bkc/.*box.*\\.html?$",
+   "mode": "wayback"
+  }
+ ],
+ "niagara-purple-eagles": [
+  "315",
+  "Niagara Purple Eagles",
+  "purpleeagles.com (Wayback)",
+  {
+   "cdx": "purpleeagles.com/bko/bkc/*",
+   "file_re": "/bko/bkc/.*box.*\\.html?$",
+   "mode": "wayback"
+  }
+ ],
+ "oklahoma-sooners": [
+  "201",
+  "Oklahoma Sooners",
+  "soonersports.com (Wayback)",
+  {
+   "cdx": "soonersports.com/sports/m-baskbl/stats/*",
+   "file_re": "/stats/\\d{6}[a-z]{3}\\.html?$",
+   "mode": "wayback"
+  }
+ ],
+ "tulsa-golden-hurricane": [
+  "202",
+  "Tulsa Golden Hurricane",
+  "tulsahurricane.cstv.com (Wayback)",
+  {
+   "cdx": "tulsahurricane.cstv.com/sports/m-baskbl/stats/*",
+   "file_re": "/stats/\\d{6}[a-z]{3}\\.html?$",
+   "mode": "wayback"
+  }
+ ],
+ "south-florida-bulls": [
+  "58",
+  "South Florida Bulls",
+  "gousfbulls.com (Wayback)",
+  {
+   "cdx": "gousfbulls.com/bko/bkc/*",
+   "file_re": "/bko/bkc/.*box.*\\.html?$",
+   "mode": "wayback"
+  }
+ ]
+}
