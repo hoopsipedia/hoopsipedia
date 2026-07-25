@@ -177,11 +177,70 @@ def parse_variant_c(text):
                  'stl': int(pm.group('s')), 'min': int(pm.group('min'))}
             cur['players'].append(p)
     if not date or len(teams) != 2:
-        return None
+        return parse_variant_d(text)
     for t in teams:
         if 'score' not in t or not t['players']:
-            return None
+            return parse_variant_d(text)
         if sum(p['pts'] for p in t['players']) != t['score']:
+            return parse_variant_d(text)
+    return {'date': date, 'teams': teams}
+
+
+# Variant D: FansOnly / Student Advantage AP-agate prose box (~1998-2001).
+# Not fixed-width — a wire-service recap: a "Team A NN, Team B NN" score head,
+# a prose date, then per-team blocks of comma-separated "Name FG-FGA FT-FTA PTS"
+# entries that wrap freely across lines, closed by "Totals FG-FGA FT-FTA PTS."
+# Thin box (per-player FG/FT/PTS only; rebounds/assists live in the footer), but
+# the Totals-row checksum still gates every game. Example (Utah 74, Ripon 49):
+#   RIPON (4-2)
+#        Becker 4-14 2-2 10, VanDyken 6-11 2-2 17, ... Totals 15-42 14-16 49.
+TEAMHDR_D_RE = re.compile(r'^\s*(?P<name>[A-Z][A-Za-z.&\'-]+(?:\s+[A-Z][A-Za-z.&\'-]+)*)\s*\(\d+-\d+\)\s*$')
+TOTALS_D_RE = re.compile(r'\bTotals\s+\d+-\d+\s+\d+-\d+\s+(?P<tp>\d+)\s*\.')
+PLAYER_D_RE = re.compile(
+    r'(?P<name>[A-Za-z][A-Za-z.\'-]*(?:\s[A-Za-z.\'-]+)*?)\s+'
+    r'(?P<fg>\d+-\d+)\s+(?P<ft>\d+-\d+)\s+(?P<pts>\d+)\s*(?=[,.])')
+
+
+def parse_variant_d(text):
+    lines = [strip_tags(l) for l in text.split('\n')]
+    dm = DATE_C_RE.search('\n'.join(lines))
+    if not dm:
+        return None
+    date = f'{int(dm.group(3)):04d}-{MONTHS[dm.group(1)]:02d}-{int(dm.group(2)):02d}'
+    teams = []
+    i = 0
+    while i < len(lines) and len(teams) < 2:
+        hm = TEAMHDR_D_RE.match(lines[i])
+        if not hm:
+            i += 1
+            continue
+        # accumulate this team's block until (and including) its Totals row
+        blob, j = [], i + 1
+        while j < len(lines):
+            blob.append(lines[j])
+            if TOTALS_D_RE.search(lines[j]):
+                break
+            j += 1
+        if j >= len(lines):
+            break
+        joined = re.sub(r'\s+', ' ', ' '.join(blob))
+        tm = TOTALS_D_RE.search(joined)
+        # cut the blob at Totals so the footer/notes can't leak in as players
+        body = joined[:tm.start()]
+        players = []
+        for pm in PLAYER_D_RE.finditer(body):
+            nm = pm.group('name').strip()
+            if nm.lower() in ('team', 'totals'):
+                continue
+            players.append({'name': nm, 'fg': pm.group('fg'),
+                            'ft': pm.group('ft'), 'pts': int(pm.group('pts'))})
+        teams.append({'name': hm.group('name').strip().title(),
+                      'score': int(tm.group('tp')), 'players': players})
+        i = j + 1
+    if len(teams) != 2:
+        return None
+    for t in teams:
+        if not t['players'] or sum(p['pts'] for p in t['players']) != t['score']:
             return None
     return {'date': date, 'teams': teams}
 
