@@ -570,7 +570,7 @@
      "name": "Air Force",
      "players": [
       {
-       "name": "KUHLE, A.J.",
+       "name": "KUHLE, A.J",
        "fg": "0-4",
        "tp": "0-2",
        "ft": "0-0",
@@ -1449,6 +1449,132 @@
       }
      ],
      "score": 60
+    }
+   ]
+  },
+  "1999/unlv-rebels-vs-rice-1999-01-15": {
+   "source": "unlvrebels.fansonly.com (Wayback)",
+   "date": "1999-01-15",
+   "teams": [
+    {
+     "name": "UNLV Rebels",
+     "score": 78,
+     "players": [
+      {
+       "name": "Simmons",
+       "fg": "2-8",
+       "ft": "5-6",
+       "pts": 10
+      },
+      {
+       "name": "Marion",
+       "fg": "5-9",
+       "ft": "8-10",
+       "pts": 18
+      },
+      {
+       "name": "Kambala",
+       "fg": "7-12",
+       "ft": "10-12",
+       "pts": 24
+      },
+      {
+       "name": "Keefe",
+       "fg": "6-9",
+       "ft": "0-0",
+       "pts": 16
+      },
+      {
+       "name": "Dickel",
+       "fg": "1-4",
+       "ft": "3-6",
+       "pts": 5
+      },
+      {
+       "name": "Herod",
+       "fg": "1-2",
+       "ft": "0-0",
+       "pts": 3
+      },
+      {
+       "name": "Stewart",
+       "fg": "0-1",
+       "ft": "0-0",
+       "pts": 0
+      },
+      {
+       "name": "Daniels",
+       "fg": "1-3",
+       "ft": "0-2",
+       "pts": 2
+      },
+      {
+       "name": "Epps",
+       "fg": "0-1",
+       "ft": "0-0",
+       "pts": 0
+      }
+     ]
+    },
+    {
+     "name": "Rice",
+     "score": 72,
+     "players": [
+      {
+       "name": "Armstrong",
+       "fg": "0-3",
+       "ft": "0-0",
+       "pts": 0
+      },
+      {
+       "name": "Johnson",
+       "fg": "8-15",
+       "ft": "3-4",
+       "pts": 23
+      },
+      {
+       "name": "Michaelis",
+       "fg": "2-6",
+       "ft": "0-0",
+       "pts": 5
+      },
+      {
+       "name": "Wilks",
+       "fg": "1-7",
+       "ft": "0-0",
+       "pts": 2
+      },
+      {
+       "name": "Skaer",
+       "fg": "6-13",
+       "ft": "0-1",
+       "pts": 17
+      },
+      {
+       "name": "Graham",
+       "fg": "0-0",
+       "ft": "0-0",
+       "pts": 0
+      },
+      {
+       "name": "Tyndell",
+       "fg": "2-5",
+       "ft": "0-0",
+       "pts": 6
+      },
+      {
+       "name": "Cooper",
+       "fg": "5-8",
+       "ft": "0-0",
+       "pts": 12
+      },
+      {
+       "name": "Bougaieff",
+       "fg": "2-3",
+       "ft": "3-4",
+       "pts": 7
+      }
+     ]
     }
    ]
   },
@@ -6314,7 +6440,7 @@
        "min": 7
       },
       {
-       "name": "DUNNINGTON, Charles.",
+       "name": "DUNNINGTON, Charles",
        "fg": "1-2",
        "tp": "0-0",
        "ft": "0-2",
@@ -6360,7 +6486,7 @@
   ],
   [
    "http://web.archive.org/web/20020215182328id_/http://unlvrebels.fansonly.com:80/sports/m-baskbl/stats/011202aaa.html",
-   "parse/checksum fail"
+   "no own-team match"
   ],
   [
    "http://web.archive.org/web/20010513074741id_/http://unlvrebels.fansonly.com:80/sports/m-baskbl/stats/011500aaa.html",
@@ -6604,7 +6730,7 @@
   ]
  ],
  "stats": {
-  "ok": 33,
+  "ok": 34,
   "parse_fail": 65,
   "checksum_fail": 0,
   "log_mismatch": 2

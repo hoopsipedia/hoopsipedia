@@ -255,11 +255,143 @@
      "score": 65
     }
    ]
+  },
+  "1999/oklahoma-state-cowboys-vs-texas-christian-1998-11-28": {
+   "source": "okstate.com (Wayback)",
+   "date": "1998-11-28",
+   "teams": [
+    {
+     "name": "Oklahoma State Cowboys",
+     "score": 79,
+     "players": [
+      {
+       "name": "Mason",
+       "fg": "9-16",
+       "ft": "8-10",
+       "pts": 26
+      },
+      {
+       "name": "Webber",
+       "fg": "4-5",
+       "ft": "2-4",
+       "pts": 10
+      },
+      {
+       "name": "Peterson",
+       "fg": "8-16",
+       "ft": "2-2",
+       "pts": 22
+      },
+      {
+       "name": "Adkins",
+       "fg": "4-12",
+       "ft": "0-1",
+       "pts": 9
+      },
+      {
+       "name": "Gottlieb",
+       "fg": "1-4",
+       "ft": "1-2",
+       "pts": 3
+      },
+      {
+       "name": "Jonzen",
+       "fg": "0-0",
+       "ft": "0-0",
+       "pts": 0
+      },
+      {
+       "name": "Montonati",
+       "fg": "1-7",
+       "ft": "5-6",
+       "pts": 7
+      },
+      {
+       "name": "Robisch",
+       "fg": "1-3",
+       "ft": "0-0",
+       "pts": 2
+      }
+     ]
+    },
+    {
+     "name": "Texas Christian",
+     "score": 74,
+     "players": [
+      {
+       "name": "Carroll",
+       "fg": "5-10",
+       "ft": "2-4",
+       "pts": 14
+      },
+      {
+       "name": "Gainous",
+       "fg": "4-9",
+       "ft": "3-4",
+       "pts": 11
+      },
+      {
+       "name": "Nailon",
+       "fg": "11-17",
+       "ft": "8-10",
+       "pts": 30
+      },
+      {
+       "name": "Fowler",
+       "fg": "2-5",
+       "ft": "0-0",
+       "pts": 5
+      },
+      {
+       "name": "Jaksic",
+       "fg": "0-5",
+       "ft": "2-2",
+       "pts": 2
+      },
+      {
+       "name": "Long",
+       "fg": "0-1",
+       "ft": "1-2",
+       "pts": 1
+      },
+      {
+       "name": "Wilson",
+       "fg": "3-3",
+       "ft": "1-2",
+       "pts": 8
+      },
+      {
+       "name": "Day",
+       "fg": "1-1",
+       "ft": "0-0",
+       "pts": 3
+      },
+      {
+       "name": "Gradney",
+       "fg": "0-0",
+       "ft": "0-0",
+       "pts": 0
+      }
+     ]
+    }
+   ]
   }
  },
  "quarantine": [
   [
    "http://web.archive.org/web/19991008084651id_/http://www.okstate.com:80/sports/m-baskbl/stats/010299aaa.html",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/19991114080922id_/http://www.okstate.com:80/sports/m-baskbl/stats/011099aaa.html",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/19991008133309id_/http://www.okstate.com:80/sports/m-baskbl/stats/012899aaa.html",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/19990830060230id_/http://www.okstate.com:80/sports/m-baskbl/stats/020799aaa.html",
    "parse/checksum fail"
   ],
   [
@@ -271,11 +403,23 @@
    "parse/checksum fail"
   ],
   [
+   "http://web.archive.org/web/19990427233135id_/http://www.okstate.com:80/sports/m-baskbl/stats/021998aaa.html",
+   "parse/checksum fail"
+  ],
+  [
    "http://web.archive.org/web/19990830072246id_/http://www.okstate.com:80/sports/m-baskbl/stats/022199aab.html",
    "parse/checksum fail"
   ],
   [
    "http://web.archive.org/web/19990427234542id_/http://www.okstate.com:80/sports/m-baskbl/stats/022298aaa.html",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/19990427235832id_/http://www.okstate.com:80/sports/m-baskbl/stats/022598aaa.html",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/19990428004409id_/http://www.okstate.com:80/sports/m-baskbl/stats/030198aaa.html",
    "parse/checksum fail"
   ],
   [
@@ -299,13 +443,21 @@
    "parse/checksum fail"
   ],
   [
+   "http://web.archive.org/web/19990507231019id_/http://www.okstate.com:80/sports/m-baskbl/stats/112098aaa.html",
+   "parse/checksum fail"
+  ],
+  [
    "http://web.archive.org/web/19990422121105id_/http://www.okstate.com:80/sports/m-baskbl/stats/112198aaa.html",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/19990210061811id_/http://www.okstate.com:80/sports/m-baskbl/stats/112998aaa.html",
    "parse/checksum fail"
   ]
  ],
  "stats": {
-  "ok": 1,
-  "parse_fail": 11,
+  "ok": 2,
+  "parse_fail": 19,
   "checksum_fail": 0,
   "log_mismatch": 0
  }

@@ -4126,7 +4126,7 @@
      "name": "Iowa",
      "players": [
       {
-       "name": "KOCH, J.R.",
+       "name": "KOCH, J.R",
        "fg": "3-7",
        "tp": "2-3",
        "ft": "3-4",
@@ -4720,13 +4720,13 @@
   ],
   [
    "http://web.archive.org/web/20070702201707id_/http://mutigers.cstv.com:80/sports/m-baskbl/stats/110606aab.html",
-   "parse/checksum fail"
+   "log mismatch 94-40 2006-11-06"
   ]
  ],
  "stats": {
   "ok": 16,
-  "parse_fail": 14,
+  "parse_fail": 13,
   "checksum_fail": 0,
-  "log_mismatch": 3
+  "log_mismatch": 4
  }
 }

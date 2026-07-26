@@ -958,7 +958,7 @@
      "name": "Southern Miss Golden Eagles",
      "players": [
       {
-       "name": "CAUTHEN, Mel........ *",
+       "name": "CAUTHEN, Mel",
        "fg": "0-1",
        "tp": "0-0",
        "ft": "0-0",
@@ -972,7 +972,7 @@
        "min": 23
       },
       {
-       "name": "MYLES, Mario........ *",
+       "name": "MYLES, Mario",
        "fg": "1-4",
        "tp": "1-2",
        "ft": "2-3",
@@ -986,7 +986,7 @@
        "min": 15
       },
       {
-       "name": "THOMPSON, Kilavorus. *",
+       "name": "THOMPSON, Kilavorus",
        "fg": "2-3",
        "tp": "0-1",
        "ft": "3-4",
@@ -1000,7 +1000,7 @@
        "min": 23
       },
       {
-       "name": "WALL, David......... *",
+       "name": "WALL, David",
        "fg": "5-11",
        "tp": "2-5",
        "ft": "3-4",
@@ -1014,7 +1014,7 @@
        "min": 30
       },
       {
-       "name": "JONES, Vandarel..... *",
+       "name": "JONES, Vandarel",
        "fg": "2-3",
        "tp": "0-0",
        "ft": "0-1",
@@ -1132,7 +1132,7 @@
      "name": "Western Illinois",
      "players": [
       {
-       "name": "Richardson, Jamel... *",
+       "name": "Richardson, Jamel",
        "fg": "2-11",
        "tp": "0-0",
        "ft": "1-4",
@@ -1146,7 +1146,7 @@
        "min": 35
       },
       {
-       "name": "Williams, Brian..... *",
+       "name": "Williams, Brian",
        "fg": "2-5",
        "tp": "0-0",
        "ft": "5-7",
@@ -1160,7 +1160,7 @@
        "min": 29
       },
       {
-       "name": "Heisler, Bill....... *",
+       "name": "Heisler, Bill",
        "fg": "1-4",
        "tp": "0-2",
        "ft": "0-0",
@@ -1174,7 +1174,7 @@
        "min": 12
       },
       {
-       "name": "Petersen, Karl...... *",
+       "name": "Petersen, Karl",
        "fg": "2-4",
        "tp": "0-0",
        "ft": "2-2",
@@ -1188,7 +1188,7 @@
        "min": 25
       },
       {
-       "name": "Turner, Brian....... *",
+       "name": "Turner, Brian",
        "fg": "1-5",
        "tp": "0-0",
        "ft": "1-2",
@@ -2532,7 +2532,7 @@
        "min": 26
       },
       {
-       "name": "THOMPSON, Kilavorus.",
+       "name": "THOMPSON, Kilavorus",
        "fg": "3-7",
        "tp": "3-5",
        "ft": "4-6",
@@ -3023,11 +3023,20 @@
    ]
   }
  },
- "quarantine": [],
+ "quarantine": [
+  [
+   "http://web.archive.org/web/20010224000637id_/http://southernmiss.com:80/bko/bkc/1109box.html",
+   "log mismatch 89-84 2000-11-09"
+  ],
+  [
+   "http://web.archive.org/web/20010224000630id_/http://southernmiss.com:80/bko/bkc/111400box.html",
+   "log mismatch 93-61 2000-11-14"
+  ]
+ ],
  "stats": {
   "ok": 10,
   "parse_fail": 0,
   "checksum_fail": 0,
-  "log_mismatch": 0
+  "log_mismatch": 2
  }
 }
