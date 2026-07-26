@@ -14,6 +14,7 @@ must equal the printed Totals TP) + date/scores triple-match against the
 team's game log. Output: archives/{source}/statcrew_boxscores_pending.json
 """
 
+import html
 import json
 import os
 import re
@@ -218,7 +219,7 @@ def parse_variant_d(text):
     lines = [strip_tags(l) for l in text.split('\n')]
     dm = DATE_C_RE.search('\n'.join(lines))
     if not dm:
-        return None
+        return parse_variant_e(text)
     date = f'{int(dm.group(3)):04d}-{MONTHS[dm.group(1)]:02d}-{int(dm.group(2)):02d}'
     teams = []
     i = 0
@@ -250,6 +251,83 @@ def parse_variant_d(text):
         teams.append({'name': hm.group('name').strip().title(),
                       'score': int(tm.group('tp')), 'players': players})
         i = j + 1
+    if len(teams) != 2:
+        return parse_variant_e(text)
+    for t in teams:
+        if not t['players'] or sum(p['pts'] for p in t['players']) != t['score']:
+            return parse_variant_e(text)
+    return {'date': date, 'teams': teams}
+
+
+# Variant E: DakStats "custompages" HTML-TABLE box score (~2008-2013), e.g.
+# hawaiiathletics.com/custompages/Stats/Mbskb/01022010.HTM. Not <pre>: each
+# player is a <tr> of 15 <td> cells
+#   [##, "Last,First", p, fg m-a, 3pt m-a, ft m-a, off-def, tot, pf, tp, a, to,
+#    blk, stl, min]
+# The page holds several tables (full-game box for each team, a "1st Half Box
+# Score", and play-analysis tables). Only the two FULL-GAME boxes are wanted:
+# they appear first and their per-player minutes sum to ~200 (half-boxes ~100),
+# so we accept only the first two player tables whose min-sum > 150 and STOP.
+# Each team's printed final is an independent <h4>Team   NN</h4> caption above
+# its table; the checksum gate is sum(player tp) == that printed final (NOT the
+# player sum itself), matching the other parsers' gate.
+def _e_cells(tr):
+    tds = re.findall(r'<td[^>]*>(.*?)</td>', tr, re.S | re.I)
+    return [re.sub(r'\s+', ' ', html.unescape(strip_tags(c)).replace('\xa0', ' ')).strip()
+            for c in tds]
+
+
+def parse_variant_e(text):
+    if 'fgm-fga' not in text:
+        return None
+    plain = strip_tags(text)
+    dm = re.search(r'(\d{1,2})/(\d{1,2})/(\d{2,4})', plain)
+    if dm:
+        mo, dy, y = int(dm.group(1)), int(dm.group(2)), int(dm.group(3))
+        y += 2000 if y < 50 else (1900 if y < 100 else 0)
+    else:
+        # some headers write the date concatenated as "(MMDDYYYY at ...)"
+        dm = re.search(r'\((\d{2})(\d{2})(\d{4})\b', plain)
+        if not dm:
+            return None
+        mo, dy, y = int(dm.group(1)), int(dm.group(2)), int(dm.group(3))
+    if not (1 <= mo <= 12 and 1 <= dy <= 31):
+        return None
+    date = f"{y:04d}-{mo:02d}-{dy:02d}"
+    teams, cur, cap = [], None, None
+    for tok in re.finditer(r'<h4>(?P<h4>.*?)</h4>|<tr[^>]*>(?P<tr>.*?)</tr>',
+                           text, re.S | re.I):
+        if tok.group('h4') is not None:
+            cm = re.match(
+                r'^(?P<n>.*?)\s+(?P<s>\d+)\s*$',
+                html.unescape(strip_tags(tok.group('h4'))).replace('\xa0', ' ').strip())
+            if cm:
+                cap = (clean_name(cm.group('n')), int(cm.group('s')))
+            continue
+        cs = _e_cells(tok.group('tr'))
+        if len(cs) == 15 and cs[0] == '##':          # column header -> new table
+            cur = {'name': cap[0], 'score': cap[1], 'players': []} \
+                if (cap and len(teams) < 2) else None
+            continue
+        if cur is None:
+            continue
+        if len(cs) >= 2 and cs[1].lower().startswith('total'):   # Totals row -> close
+            if sum(p['min'] for p in cur['players']) > 150 and cur['players']:
+                teams.append(cur)
+            cur = None
+            if len(teams) == 2:
+                break
+            continue
+        if len(cs) == 15 and re.fullmatch(r'\d+', cs[0]):        # player row
+            try:
+                cur['players'].append(
+                    {'name': clean_name(cs[1]),
+                     'fg': cs[3], 'tp': cs[4], 'ft': cs[5],
+                     'reb': int(cs[7]), 'pf': int(cs[8]), 'pts': int(cs[9]),
+                     'ast': int(cs[10]), 'to': int(cs[11]), 'blk': int(cs[12]),
+                     'stl': int(cs[13]), 'min': int(cs[14])})
+            except ValueError:
+                pass
     if len(teams) != 2:
         return None
     for t in teams:
@@ -468,6 +546,7 @@ def main():
         'San Jose State Spartans': 'san jose', 'Washington State Cougars': 'washington st',
         'Oregon State Beavers': 'oregon st', 'Illinois State Redbirds': 'illinois st',
         'Oklahoma State Cowboys': 'oklahoma st', 'Colorado State Rams': 'colorado st',
+        "Hawai'i Rainbow Warriors": 'hawai',  # box name uses a backtick: "Hawai`i"
     }
     name_key = ALIASES.get(src['team_name'], src['team_name'].split()[0].lower())
     results, quarantine = {}, []
