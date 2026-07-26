@@ -1,6 +1,855 @@
 {
- "games": {},
+ "games": {
+  "2003/purdue-fort-wayne-mastodons-vs-utah-2003-01-11": {
+   "source": "gomastodons.com (Wayback)",
+   "date": "2003-01-11",
+   "teams": [
+    {
+     "name": "Purdue Fort Wayne Mastodons",
+     "players": [
+      {
+       "name": "Brandon Jennings",
+       "fg": "1-1",
+       "tp": "0-0",
+       "ft": "0-0",
+       "reb": 1,
+       "pf": 1,
+       "pts": 2,
+       "ast": 0,
+       "to": 1,
+       "blk": 0,
+       "stl": 0,
+       "min": 18
+      },
+      {
+       "name": "Jim Kessenich",
+       "fg": "4-7",
+       "tp": "0-0",
+       "ft": "0-0",
+       "reb": 3,
+       "pf": 2,
+       "pts": 8,
+       "ast": 0,
+       "to": 1,
+       "blk": 0,
+       "stl": 2,
+       "min": 24
+      },
+      {
+       "name": "David Simon",
+       "fg": "3-6",
+       "tp": "0-0",
+       "ft": "9-12",
+       "reb": 6,
+       "pf": 2,
+       "pts": 15,
+       "ast": 2,
+       "to": 3,
+       "blk": 0,
+       "stl": 1,
+       "min": 34
+      },
+      {
+       "name": "COLLINS, Terry",
+       "fg": "2-11",
+       "tp": "2-5",
+       "ft": "2-2",
+       "reb": 3,
+       "pf": 3,
+       "pts": 8,
+       "ast": 1,
+       "to": 2,
+       "blk": 0,
+       "stl": 1,
+       "min": 27
+      },
+      {
+       "name": "WOODALL, DeAngelo",
+       "fg": "2-7",
+       "tp": "0-4",
+       "ft": "1-3",
+       "reb": 2,
+       "pf": 1,
+       "pts": 5,
+       "ast": 2,
+       "to": 1,
+       "blk": 0,
+       "stl": 0,
+       "min": 28
+      },
+      {
+       "name": "Brad Noll",
+       "fg": "2-6",
+       "tp": "1-4",
+       "ft": "2-2",
+       "reb": 1,
+       "pf": 1,
+       "pts": 7,
+       "ast": 0,
+       "to": 2,
+       "blk": 0,
+       "stl": 1,
+       "min": 19
+      },
+      {
+       "name": "Tyler Clevenger",
+       "fg": "2-2",
+       "tp": "2-2",
+       "ft": "2-2",
+       "reb": 1,
+       "pf": 2,
+       "pts": 8,
+       "ast": 1,
+       "to": 1,
+       "blk": 0,
+       "stl": 1,
+       "min": 15
+      },
+      {
+       "name": "Grahman Nesbitt",
+       "fg": "0-0",
+       "tp": "0-0",
+       "ft": "0-0",
+       "reb": 0,
+       "pf": 0,
+       "pts": 0,
+       "ast": 0,
+       "to": 0,
+       "blk": 0,
+       "stl": 1,
+       "min": 2
+      },
+      {
+       "name": "Kyle Thrasher",
+       "fg": "0-1",
+       "tp": "0-0",
+       "ft": "2-3",
+       "reb": 5,
+       "pf": 4,
+       "pts": 2,
+       "ast": 0,
+       "to": 2,
+       "blk": 0,
+       "stl": 1,
+       "min": 19
+      },
+      {
+       "name": "CAROUTHERS, Quintin",
+       "fg": "1-4",
+       "tp": "0-1",
+       "ft": "2-2",
+       "reb": 3,
+       "pf": 1,
+       "pts": 4,
+       "ast": 1,
+       "to": 2,
+       "blk": 0,
+       "stl": 0,
+       "min": 14
+      }
+     ],
+     "score": 59
+    },
+    {
+     "name": "Utah",
+     "players": [
+      {
+       "name": "CATON, Trace",
+       "fg": "1-3",
+       "tp": "1-2",
+       "ft": "0-0",
+       "reb": 1,
+       "pf": 0,
+       "pts": 3,
+       "ast": 1,
+       "to": 0,
+       "blk": 0,
+       "stl": 1,
+       "min": 16
+      },
+      {
+       "name": "JOHNSEN, Britton",
+       "fg": "2-4",
+       "tp": "1-2",
+       "ft": "1-2",
+       "reb": 9,
+       "pf": 2,
+       "pts": 6,
+       "ast": 5,
+       "to": 1,
+       "blk": 0,
+       "stl": 0,
+       "min": 20
+      },
+      {
+       "name": "FROST, Tim",
+       "fg": "5-12",
+       "tp": "2-5",
+       "ft": "0-0",
+       "reb": 2,
+       "pf": 3,
+       "pts": 12,
+       "ast": 2,
+       "to": 0,
+       "blk": 1,
+       "stl": 1,
+       "min": 21
+      },
+      {
+       "name": "DRISDOM, Tim",
+       "fg": "3-4",
+       "tp": "2-3",
+       "ft": "0-0",
+       "reb": 4,
+       "pf": 2,
+       "pts": 8,
+       "ast": 6,
+       "to": 3,
+       "blk": 0,
+       "stl": 1,
+       "min": 23
+      },
+      {
+       "name": "JACOBSON, Nick",
+       "fg": "8-11",
+       "tp": "6-7",
+       "ft": "0-0",
+       "reb": 1,
+       "pf": 1,
+       "pts": 22,
+       "ast": 0,
+       "to": 0,
+       "blk": 0,
+       "stl": 1,
+       "min": 21
+      },
+      {
+       "name": "CHANEY, Richard",
+       "fg": "5-10",
+       "tp": "2-3",
+       "ft": "0-2",
+       "reb": 4,
+       "pf": 5,
+       "pts": 12,
+       "ast": 2,
+       "to": 3,
+       "blk": 0,
+       "stl": 0,
+       "min": 19
+      },
+      {
+       "name": "REICHNER, David",
+       "fg": "0-0",
+       "tp": "0-0",
+       "ft": "0-1",
+       "reb": 0,
+       "pf": 1,
+       "pts": 0,
+       "ast": 0,
+       "to": 2,
+       "blk": 0,
+       "stl": 0,
+       "min": 1
+      },
+      {
+       "name": "JACKSON, Marc",
+       "fg": "1-1",
+       "tp": "0-0",
+       "ft": "0-0",
+       "reb": 1,
+       "pf": 1,
+       "pts": 2,
+       "ast": 4,
+       "to": 2,
+       "blk": 0,
+       "stl": 2,
+       "min": 19
+      },
+      {
+       "name": "MARKSON, Bryant",
+       "fg": "2-6",
+       "tp": "0-3",
+       "ft": "1-2",
+       "reb": 4,
+       "pf": 0,
+       "pts": 5,
+       "ast": 3,
+       "to": 1,
+       "blk": 1,
+       "stl": 1,
+       "min": 22
+      },
+      {
+       "name": "JACKSON, Chris",
+       "fg": "1-2",
+       "tp": "0-0",
+       "ft": "2-2",
+       "reb": 5,
+       "pf": 4,
+       "pts": 4,
+       "ast": 1,
+       "to": 1,
+       "blk": 0,
+       "stl": 0,
+       "min": 18
+      },
+      {
+       "name": "OYZERSKIY, Ilya",
+       "fg": "0-0",
+       "tp": "0-0",
+       "ft": "0-1",
+       "reb": 0,
+       "pf": 0,
+       "pts": 0,
+       "ast": 0,
+       "to": 0,
+       "blk": 0,
+       "stl": 0,
+       "min": 1
+      },
+      {
+       "name": "KOFORD, Cameron",
+       "fg": "1-4",
+       "tp": "0-0",
+       "ft": "0-0",
+       "reb": 2,
+       "pf": 2,
+       "pts": 2,
+       "ast": 0,
+       "to": 1,
+       "blk": 1,
+       "stl": 0,
+       "min": 19
+      }
+     ],
+     "score": 76
+    }
+   ]
+  },
+  "2006/purdue-fort-wayne-mastodons-vs-southeast-missouri-state-2005-11-21": {
+   "source": "gomastodons.com (Wayback)",
+   "date": "2005-11-21",
+   "teams": [
+    {
+     "name": "Purdue Fort Wayne Mastodons",
+     "players": [
+      {
+       "name": "DeWitt Scott",
+       "fg": "8-13",
+       "tp": "4-4",
+       "ft": "4-4",
+       "reb": 5,
+       "pf": 0,
+       "pts": 24,
+       "ast": 0,
+       "to": 1,
+       "blk": 1,
+       "stl": 3,
+       "min": 40
+      },
+      {
+       "name": "Justin Hawkins",
+       "fg": "4-9",
+       "tp": "2-4",
+       "ft": "0-0",
+       "reb": 3,
+       "pf": 3,
+       "pts": 10,
+       "ast": 0,
+       "to": 0,
+       "blk": 1,
+       "stl": 0,
+       "min": 38
+      },
+      {
+       "name": "Tyler Best",
+       "fg": "3-7",
+       "tp": "0-1",
+       "ft": "1-2",
+       "reb": 2,
+       "pf": 2,
+       "pts": 7,
+       "ast": 4,
+       "to": 2,
+       "blk": 0,
+       "stl": 1,
+       "min": 30
+      },
+      {
+       "name": "Quintin Carouthers",
+       "fg": "7-10",
+       "tp": "0-0",
+       "ft": "0-0",
+       "reb": 4,
+       "pf": 4,
+       "pts": 14,
+       "ast": 0,
+       "to": 3,
+       "blk": 1,
+       "stl": 2,
+       "min": 21
+      },
+      {
+       "name": "Brad Pompey",
+       "fg": "2-13",
+       "tp": "2-5",
+       "ft": "0-1",
+       "reb": 8,
+       "pf": 3,
+       "pts": 6,
+       "ast": 7,
+       "to": 1,
+       "blk": 0,
+       "stl": 1,
+       "min": 39
+      },
+      {
+       "name": "Kyle Savely",
+       "fg": "0-5",
+       "tp": "0-1",
+       "ft": "2-2",
+       "reb": 2,
+       "pf": 3,
+       "pts": 2,
+       "ast": 1,
+       "to": 1,
+       "blk": 0,
+       "stl": 2,
+       "min": 20
+      },
+      {
+       "name": "Mohamed Esseghir",
+       "fg": "0-2",
+       "tp": "0-0",
+       "ft": "0-0",
+       "reb": 1,
+       "pf": 2,
+       "pts": 0,
+       "ast": 1,
+       "to": 0,
+       "blk": 0,
+       "stl": 0,
+       "min": 5
+      },
+      {
+       "name": "Zeljko Egeric",
+       "fg": "1-2",
+       "tp": "0-0",
+       "ft": "0-0",
+       "reb": 2,
+       "pf": 1,
+       "pts": 2,
+       "ast": 1,
+       "to": 1,
+       "blk": 0,
+       "stl": 0,
+       "min": 7
+      }
+     ],
+     "score": 65
+    },
+    {
+     "name": "Southeast Missouri State",
+     "players": [
+      {
+       "name": "THORNTON, Andrais",
+       "fg": "3-6",
+       "tp": "0-0",
+       "ft": "1-3",
+       "reb": 8,
+       "pf": 4,
+       "pts": 7,
+       "ast": 0,
+       "to": 2,
+       "blk": 1,
+       "stl": 1,
+       "min": 22
+      },
+      {
+       "name": "FRANCIS, Waylon",
+       "fg": "0-1",
+       "tp": "0-0",
+       "ft": "0-0",
+       "reb": 3,
+       "pf": 1,
+       "pts": 0,
+       "ast": 0,
+       "to": 1,
+       "blk": 0,
+       "stl": 0,
+       "min": 8
+      },
+      {
+       "name": "WILLOUGHBY, Terrick. g",
+       "fg": "3-9",
+       "tp": "1-2",
+       "ft": "1-2",
+       "reb": 3,
+       "pf": 1,
+       "pts": 8,
+       "ast": 1,
+       "to": 3,
+       "blk": 2,
+       "stl": 0,
+       "min": 30
+      },
+      {
+       "name": "PARADOSKI, Paul",
+       "fg": "3-6",
+       "tp": "1-2",
+       "ft": "2-2",
+       "reb": 4,
+       "pf": 3,
+       "pts": 9,
+       "ast": 5,
+       "to": 2,
+       "blk": 0,
+       "stl": 1,
+       "min": 34
+      },
+      {
+       "name": "BOOKER, Roy",
+       "fg": "7-18",
+       "tp": "3-7",
+       "ft": "8-8",
+       "reb": 0,
+       "pf": 3,
+       "pts": 25,
+       "ast": 2,
+       "to": 4,
+       "blk": 0,
+       "stl": 2,
+       "min": 37
+      },
+      {
+       "name": "BURTIN, Eric",
+       "fg": "1-2",
+       "tp": "0-0",
+       "ft": "0-0",
+       "reb": 4,
+       "pf": 0,
+       "pts": 2,
+       "ast": 2,
+       "to": 1,
+       "blk": 2,
+       "stl": 2,
+       "min": 21
+      },
+      {
+       "name": "JONES, Eric",
+       "fg": "1-3",
+       "tp": "0-0",
+       "ft": "0-0",
+       "reb": 5,
+       "pf": 1,
+       "pts": 2,
+       "ast": 0,
+       "to": 0,
+       "blk": 2,
+       "stl": 0,
+       "min": 16
+      },
+      {
+       "name": "GUERRIER, Ketshner",
+       "fg": "5-12",
+       "tp": "0-0",
+       "ft": "1-3",
+       "reb": 11,
+       "pf": 1,
+       "pts": 11,
+       "ast": 3,
+       "to": 1,
+       "blk": 2,
+       "stl": 0,
+       "min": 32
+      }
+     ],
+     "score": 64
+    }
+   ]
+  }
+ },
  "quarantine": [
+  [
+   "http://web.archive.org/web/20101128054909id_/http://gomastodons.com/custompages/Stats/MBB/0102MBB/Teamcume.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20101128061331id_/http://gomastodons.com/custompages/Stats/MBB/0203MBB/teamcume.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20101128061931id_/http://gomastodons.com/custompages/Stats/MBB/0304MBB/teamcume.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20101128060706id_/http://gomastodons.com/custompages/Stats/MBB/0405MBB/teamcume.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20101128041419id_/http://gomastodons.com/custompages/Stats/MBB/0506MBB/teamcume.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20101128060007id_/http://gomastodons.com/custompages/Stats/MBB/0607MBB/teamcume.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20101128055503id_/http://gomastodons.com/custompages/Stats/MBB/0708MBB/teamcume.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20101128040824id_/http://gomastodons.com/custompages/Stats/MBB/0809MBB/teamcume.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20101128052622id_/http://gomastodons.com/custompages/Stats/MBB/0910MBB/teamcume.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20101123190611id_/http://gomastodons.com/custompages/Stats/MBB/1011MBB/GAME03.HTM",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20101202144143id_/http://gomastodons.com/custompages/Stats/MBB/1011MBB/exhib.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20101128064936id_/http://gomastodons.com/custompages/Stats/MBB/1011MBB/game01.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20101128065537id_/http://gomastodons.com/custompages/Stats/MBB/1011MBB/game02.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150910194509id_/http://www.gomastodons.com/custompages/Stats/MBB/0102MBB/010802mb.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150910194710id_/http://www.gomastodons.com/custompages/Stats/MBB/0102MBB/011502mb.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20150910194434id_/http://www.gomastodons.com/custompages/Stats/MBB/0102MBB/011902mb.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912000047id_/http://www.gomastodons.com/custompages/Stats/MBB/0102MBB/012802mb.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150910194823id_/http://www.gomastodons.com/custompages/Stats/MBB/0102MBB/013102mb.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912000022id_/http://www.gomastodons.com/custompages/Stats/MBB/0102MBB/020202mb.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912000018id_/http://www.gomastodons.com/custompages/Stats/MBB/0102MBB/020402mb.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150909155145id_/http://www.gomastodons.com/custompages/Stats/MBB/0102MBB/021202mb.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150910194545id_/http://www.gomastodons.com/custompages/Stats/MBB/0102MBB/021402mb.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20150912000038id_/http://www.gomastodons.com/custompages/Stats/MBB/0102MBB/021902mb.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150910194854id_/http://www.gomastodons.com/custompages/Stats/MBB/0102MBB/03.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150910194631id_/http://www.gomastodons.com/custompages/Stats/MBB/0102MBB/111601mb.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912000042id_/http://www.gomastodons.com/custompages/Stats/MBB/0102MBB/120601mb.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150910195014id_/http://www.gomastodons.com/custompages/Stats/MBB/0102MBB/120901mb.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20150910194743id_/http://www.gomastodons.com/custompages/Stats/MBB/0102MBB/121701mb.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150909155343id_/http://www.gomastodons.com/custompages/Stats/MBB/0102MBB/122201mb.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150909155957id_/http://www.gomastodons.com/custompages/Stats/MBB/0102MBB/2002-27.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912000058id_/http://www.gomastodons.com/custompages/Stats/MBB/0102MBB/fiu05.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912000102id_/http://www.gomastodons.com/custompages/Stats/MBB/0102MBB/ipfw-cs.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150909154711id_/http://www.gomastodons.com/custompages/Stats/MBB/0102MBB/ipfw-me.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912000034id_/http://www.gomastodons.com/custompages/Stats/MBB/0102MBB/ipfw-msu.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912000025id_/http://www.gomastodons.com/custompages/Stats/MBB/0102MBB/ipfw-sd.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150910194938id_/http://www.gomastodons.com/custompages/Stats/MBB/0102MBB/ipfw.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150909154924id_/http://www.gomastodons.com/custompages/Stats/MBB/0102MBB/lbsumb12.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150909155550id_/http://www.gomastodons.com/custompages/Stats/MBB/0102MBB/mbb23.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20150912000105id_/http://www.gomastodons.com/custompages/Stats/MBB/0102MBB/osu-ipfw.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150910194400id_/http://www.gomastodons.com/custompages/Stats/MBB/0102MBB/utfw1121.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912000030id_/http://www.gomastodons.com/custompages/Stats/MBB/0102MBB/ysuipfw.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150910195507id_/http://www.gomastodons.com/custompages/Stats/MBB/0203MBB/010703mb.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20150910195154id_/http://www.gomastodons.com/custompages/Stats/MBB/0203MBB/012503mb.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20150912000222id_/http://www.gomastodons.com/custompages/Stats/MBB/0203MBB/020303mb.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150909175315id_/http://www.gomastodons.com/custompages/Stats/MBB/0203MBB/020803mb.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150909173244id_/http://www.gomastodons.com/custompages/Stats/MBB/0203MBB/021803mb.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20150909172722id_/http://www.gomastodons.com/custompages/Stats/MBB/0203MBB/022003mb.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150909163343id_/http://www.gomastodons.com/custompages/Stats/MBB/0203MBB/022203mb.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150909164250id_/http://www.gomastodons.com/custompages/Stats/MBB/0203MBB/03-14.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150910234159id_/http://www.gomastodons.com/custompages/Stats/MBB/0203MBB/112202mb.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150910195539id_/http://www.gomastodons.com/custompages/Stats/MBB/0203MBB/113002mb.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150909185312id_/http://www.gomastodons.com/custompages/Stats/MBB/0203MBB/121002mb.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20150912000135id_/http://www.gomastodons.com/custompages/Stats/MBB/0203MBB/122002mb.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150910200003id_/http://www.gomastodons.com/custompages/Stats/MBB/0203MBB/eighteen.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150909185344id_/http://www.gomastodons.com/custompages/Stats/MBB/0203MBB/fa-ipfw.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150909163822id_/http://www.gomastodons.com/custompages/Stats/MBB/0203MBB/game-02.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150909173000id_/http://www.gomastodons.com/custompages/Stats/MBB/0203MBB/ipfw-cc1.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912000218id_/http://www.gomastodons.com/custompages/Stats/MBB/0203MBB/ipfw-cs.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150910234025id_/http://www.gomastodons.com/custompages/Stats/MBB/0203MBB/ipfw-csu.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150909171212id_/http://www.gomastodons.com/custompages/Stats/MBB/0203MBB/ipfw-lv.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150909164946id_/http://www.gomastodons.com/custompages/Stats/MBB/0203MBB/ipfw-nm.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150909163750id_/http://www.gomastodons.com/custompages/Stats/MBB/0203MBB/ipfw-sd.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912000138id_/http://www.gomastodons.com/custompages/Stats/MBB/0203MBB/ipfw-tpa.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150910195045id_/http://www.gomastodons.com/custompages/Stats/MBB/0203MBB/ipfw-wy.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150909163541id_/http://www.gomastodons.com/custompages/Stats/MBB/0203MBB/ipfw1.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20150912000214id_/http://www.gomastodons.com/custompages/Stats/MBB/0203MBB/ipfw2-25.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20150910195658id_/http://www.gomastodons.com/custompages/Stats/MBB/0203MBB/mt20.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150910195734id_/http://www.gomastodons.com/custompages/Stats/MBB/0203MBB/nugm7.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150910200400id_/http://www.gomastodons.com/custompages/Stats/MBB/0203MBB/ucim08.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150910200034id_/http://www.gomastodons.com/custompages/Stats/MBB/0203MBB/uic23.htm",
+   "no own-team match"
+  ],
   [
    "http://web.archive.org/web/20160331130031id_/http://www.gomastodons.com/custompages/Stats/MBB/0213fwdu.htm",
    "no own-team match"
@@ -12,6 +861,1038 @@
   [
    "http://web.archive.org/web/20160329152847id_/http://www.gomastodons.com/custompages/Stats/MBB/022716.htm",
    "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150910012602id_/http://www.gomastodons.com/custompages/Stats/MBB/0405MBB/game01.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912064002id_/http://www.gomastodons.com/custompages/Stats/MBB/0405MBB/game02.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912075110id_/http://www.gomastodons.com/custompages/Stats/MBB/0405MBB/game03.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912064138id_/http://www.gomastodons.com/custompages/Stats/MBB/0405MBB/game04.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912074447id_/http://www.gomastodons.com/custompages/Stats/MBB/0405MBB/game05.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912074211id_/http://www.gomastodons.com/custompages/Stats/MBB/0405MBB/game06.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912063132id_/http://www.gomastodons.com/custompages/Stats/MBB/0405MBB/game07.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150910012450id_/http://www.gomastodons.com/custompages/Stats/MBB/0405MBB/game08.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912073859id_/http://www.gomastodons.com/custompages/Stats/MBB/0405MBB/game09.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912063750id_/http://www.gomastodons.com/custompages/Stats/MBB/0405MBB/game10.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912064241id_/http://www.gomastodons.com/custompages/Stats/MBB/0405MBB/game11.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912073828id_/http://www.gomastodons.com/custompages/Stats/MBB/0405MBB/game12.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912074105id_/http://www.gomastodons.com/custompages/Stats/MBB/0405MBB/game13.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912063409id_/http://www.gomastodons.com/custompages/Stats/MBB/0405MBB/game14.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912073757id_/http://www.gomastodons.com/custompages/Stats/MBB/0405MBB/game15.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912064342id_/http://www.gomastodons.com/custompages/Stats/MBB/0405MBB/game16.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912064105id_/http://www.gomastodons.com/custompages/Stats/MBB/0405MBB/game17.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912074344id_/http://www.gomastodons.com/custompages/Stats/MBB/0405MBB/game18.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20150912074803id_/http://www.gomastodons.com/custompages/Stats/MBB/0405MBB/game19.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20150912063613id_/http://www.gomastodons.com/custompages/Stats/MBB/0405MBB/game20.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912074834id_/http://www.gomastodons.com/custompages/Stats/MBB/0405MBB/game21.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20150912063307id_/http://www.gomastodons.com/custompages/Stats/MBB/0405MBB/game22.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912063440id_/http://www.gomastodons.com/custompages/Stats/MBB/0405MBB/game23.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912073930id_/http://www.gomastodons.com/custompages/Stats/MBB/0405MBB/game24.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20150912063027id_/http://www.gomastodons.com/custompages/Stats/MBB/0405MBB/game25.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912075008id_/http://www.gomastodons.com/custompages/Stats/MBB/0405MBB/game26.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912064034id_/http://www.gomastodons.com/custompages/Stats/MBB/0405MBB/game27.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912063542id_/http://www.gomastodons.com/custompages/Stats/MBB/0405MBB/game28.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912074905id_/http://www.gomastodons.com/custompages/Stats/MBB/0405MBB/game29.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150910011410id_/http://www.gomastodons.com/custompages/Stats/MBB/0506MBB/game01.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912060751id_/http://www.gomastodons.com/custompages/Stats/MBB/0506MBB/game03.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20150912061344id_/http://www.gomastodons.com/custompages/Stats/MBB/0506MBB/game04.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20150912070722id_/http://www.gomastodons.com/custompages/Stats/MBB/0506MBB/game05.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150910011003id_/http://www.gomastodons.com/custompages/Stats/MBB/0506MBB/game06.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912010155id_/http://www.gomastodons.com/custompages/Stats/MBB/0506MBB/game07.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912061858id_/http://www.gomastodons.com/custompages/Stats/MBB/0506MBB/game08.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912073449id_/http://www.gomastodons.com/custompages/Stats/MBB/0506MBB/game09.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20150912070856id_/http://www.gomastodons.com/custompages/Stats/MBB/0506MBB/game10.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912071913id_/http://www.gomastodons.com/custompages/Stats/MBB/0506MBB/game11.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912061650id_/http://www.gomastodons.com/custompages/Stats/MBB/0506MBB/game12.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912073104id_/http://www.gomastodons.com/custompages/Stats/MBB/0506MBB/game13.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912073343id_/http://www.gomastodons.com/custompages/Stats/MBB/0506MBB/game14.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912072853id_/http://www.gomastodons.com/custompages/Stats/MBB/0506MBB/game15.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20150912060941id_/http://www.gomastodons.com/custompages/Stats/MBB/0506MBB/game16.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150911224822id_/http://www.gomastodons.com/custompages/Stats/MBB/0506MBB/game17.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912070825id_/http://www.gomastodons.com/custompages/Stats/MBB/0506MBB/game18.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150911001641id_/http://www.gomastodons.com/custompages/Stats/MBB/0506MBB/game19.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912071323id_/http://www.gomastodons.com/custompages/Stats/MBB/0506MBB/game20.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20150910012235id_/http://www.gomastodons.com/custompages/Stats/MBB/0506MBB/game21.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912072122id_/http://www.gomastodons.com/custompages/Stats/MBB/0506MBB/game22.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912062257id_/http://www.gomastodons.com/custompages/Stats/MBB/0506MBB/game23.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912062507id_/http://www.gomastodons.com/custompages/Stats/MBB/0506MBB/game24.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912071707id_/http://www.gomastodons.com/custompages/Stats/MBB/0506MBB/game26.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150910005212id_/http://www.gomastodons.com/custompages/Stats/MBB/0506MBB/game27.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912071252id_/http://www.gomastodons.com/custompages/Stats/MBB/0506MBB/game28.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150910014424id_/http://www.gomastodons.com/custompages/Stats/MBB/0607MBB/game-01.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912065015id_/http://www.gomastodons.com/custompages/Stats/MBB/0607MBB/game02.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150914171341id_/http://www.gomastodons.com/custompages/Stats/MBB/0607MBB/game03.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912064449id_/http://www.gomastodons.com/custompages/Stats/MBB/0607MBB/game04.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150914172420id_/http://www.gomastodons.com/custompages/Stats/MBB/0607MBB/game05.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912065657id_/http://www.gomastodons.com/custompages/Stats/MBB/0607MBB/game06.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150918171905id_/http://www.gomastodons.com/custompages/Stats/MBB/0607MBB/game07.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150918171456id_/http://www.gomastodons.com/custompages/Stats/MBB/0607MBB/game08.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150914173247id_/http://www.gomastodons.com/custompages/Stats/MBB/0607MBB/game09.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150914171649id_/http://www.gomastodons.com/custompages/Stats/MBB/0607MBB/game10.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150914170204id_/http://www.gomastodons.com/custompages/Stats/MBB/0607MBB/game11.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150910020049id_/http://www.gomastodons.com/custompages/Stats/MBB/0607MBB/game12.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150914173632id_/http://www.gomastodons.com/custompages/Stats/MBB/0607MBB/game13.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912065418id_/http://www.gomastodons.com/custompages/Stats/MBB/0607MBB/game14.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150918165727id_/http://www.gomastodons.com/custompages/Stats/MBB/0607MBB/game15.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150914170832id_/http://www.gomastodons.com/custompages/Stats/MBB/0607MBB/game16.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912065203id_/http://www.gomastodons.com/custompages/Stats/MBB/0607MBB/game17.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150914170015id_/http://www.gomastodons.com/custompages/Stats/MBB/0607MBB/game19.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150911002157id_/http://www.gomastodons.com/custompages/Stats/MBB/0607MBB/game22.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150910015312id_/http://www.gomastodons.com/custompages/Stats/MBB/0607MBB/game23.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912065449id_/http://www.gomastodons.com/custompages/Stats/MBB/0607MBB/game24.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150914170539id_/http://www.gomastodons.com/custompages/Stats/MBB/0607MBB/game26.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150914172054id_/http://www.gomastodons.com/custompages/Stats/MBB/0607MBB/game28.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912070433id_/http://www.gomastodons.com/custompages/Stats/MBB/0708MBB/game01.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150911001743id_/http://www.gomastodons.com/custompages/Stats/MBB/0708MBB/game02.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912010158id_/http://www.gomastodons.com/custompages/Stats/MBB/0708MBB/game03.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912072513id_/http://www.gomastodons.com/custompages/Stats/MBB/0708MBB/game04.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912070545id_/http://www.gomastodons.com/custompages/Stats/MBB/0708MBB/game06.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150910010304id_/http://www.gomastodons.com/custompages/Stats/MBB/0708MBB/game07.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20150912060555id_/http://www.gomastodons.com/custompages/Stats/MBB/0708MBB/game08.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20150910012020id_/http://www.gomastodons.com/custompages/Stats/MBB/0708MBB/game09.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912073209id_/http://www.gomastodons.com/custompages/Stats/MBB/0708MBB/game10.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912071842id_/http://www.gomastodons.com/custompages/Stats/MBB/0708MBB/game12.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912071008id_/http://www.gomastodons.com/custompages/Stats/MBB/0708MBB/game13.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150911224520id_/http://www.gomastodons.com/custompages/Stats/MBB/0708MBB/game14.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912071811id_/http://www.gomastodons.com/custompages/Stats/MBB/0708MBB/game15.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912062003id_/http://www.gomastodons.com/custompages/Stats/MBB/0708MBB/game16.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912073312id_/http://www.gomastodons.com/custompages/Stats/MBB/0708MBB/game17.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150910011137id_/http://www.gomastodons.com/custompages/Stats/MBB/0708MBB/game18.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912062148id_/http://www.gomastodons.com/custompages/Stats/MBB/0708MBB/game20.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912061546id_/http://www.gomastodons.com/custompages/Stats/MBB/0708MBB/game21.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912061236id_/http://www.gomastodons.com/custompages/Stats/MBB/0708MBB/game22.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20150912070319id_/http://www.gomastodons.com/custompages/Stats/MBB/0708MBB/game24.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912071635id_/http://www.gomastodons.com/custompages/Stats/MBB/0708MBB/game25.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912072718id_/http://www.gomastodons.com/custompages/Stats/MBB/0708MBB/game26.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912072155id_/http://www.gomastodons.com/custompages/Stats/MBB/0708MBB/game29.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150910011828id_/http://www.gomastodons.com/custompages/Stats/MBB/0809MBB/game01.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912075141id_/http://www.gomastodons.com/custompages/Stats/MBB/0809MBB/game02.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912063856id_/http://www.gomastodons.com/custompages/Stats/MBB/0809MBB/game03.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20150912063822id_/http://www.gomastodons.com/custompages/Stats/MBB/0809MBB/game04.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150910013605id_/http://www.gomastodons.com/custompages/Stats/MBB/0809MBB/game05.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150910012532id_/http://www.gomastodons.com/custompages/Stats/MBB/0809MBB/game06.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912063511id_/http://www.gomastodons.com/custompages/Stats/MBB/0809MBB/game07.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912063338id_/http://www.gomastodons.com/custompages/Stats/MBB/0809MBB/game08.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912063101id_/http://www.gomastodons.com/custompages/Stats/MBB/0809MBB/game09.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912074938id_/http://www.gomastodons.com/custompages/Stats/MBB/0809MBB/game10.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912074243id_/http://www.gomastodons.com/custompages/Stats/MBB/0809MBB/game11.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912074034id_/http://www.gomastodons.com/custompages/Stats/MBB/0809MBB/game12.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912063236id_/http://www.gomastodons.com/custompages/Stats/MBB/0809MBB/game13.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912062956id_/http://www.gomastodons.com/custompages/Stats/MBB/0809MBB/game14.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912074001id_/http://www.gomastodons.com/custompages/Stats/MBB/0809MBB/game15.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912074629id_/http://www.gomastodons.com/custompages/Stats/MBB/0809MBB/game16.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912075039id_/http://www.gomastodons.com/custompages/Stats/MBB/0809MBB/game17.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912064311id_/http://www.gomastodons.com/custompages/Stats/MBB/0809MBB/game18.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20150912074314id_/http://www.gomastodons.com/custompages/Stats/MBB/0809MBB/game19.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20150910013654id_/http://www.gomastodons.com/custompages/Stats/MBB/0809MBB/game20.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912063644id_/http://www.gomastodons.com/custompages/Stats/MBB/0809MBB/game21.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912074136id_/http://www.gomastodons.com/custompages/Stats/MBB/0809MBB/game22.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912063204id_/http://www.gomastodons.com/custompages/Stats/MBB/0809MBB/game23.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912062852id_/http://www.gomastodons.com/custompages/Stats/MBB/0809MBB/game24.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150910012640id_/http://www.gomastodons.com/custompages/Stats/MBB/0809MBB/game25.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912064210id_/http://www.gomastodons.com/custompages/Stats/MBB/0809MBB/game28.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912063716id_/http://www.gomastodons.com/custompages/Stats/MBB/0809MBB/game29.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912073725id_/http://www.gomastodons.com/custompages/Stats/MBB/0910MBB/game01.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912070512id_/http://www.gomastodons.com/custompages/Stats/MBB/0910MBB/game02.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912071354id_/http://www.gomastodons.com/custompages/Stats/MBB/0910MBB/game03.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20150912072015id_/http://www.gomastodons.com/custompages/Stats/MBB/0910MBB/game04.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912070754id_/http://www.gomastodons.com/custompages/Stats/MBB/0910MBB/game05.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912072956id_/http://www.gomastodons.com/custompages/Stats/MBB/0910MBB/game06.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150910010513id_/http://www.gomastodons.com/custompages/Stats/MBB/0910MBB/game07.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912072615id_/http://www.gomastodons.com/custompages/Stats/MBB/0910MBB/game08.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912073622id_/http://www.gomastodons.com/custompages/Stats/MBB/0910MBB/game09.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150911001611id_/http://www.gomastodons.com/custompages/Stats/MBB/0910MBB/game10.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20150912061050id_/http://www.gomastodons.com/custompages/Stats/MBB/0910MBB/game11.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912061506id_/http://www.gomastodons.com/custompages/Stats/MBB/0910MBB/game12.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20150910012419id_/http://www.gomastodons.com/custompages/Stats/MBB/0910MBB/game13.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912062538id_/http://www.gomastodons.com/custompages/Stats/MBB/0910MBB/game14.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20150912072749id_/http://www.gomastodons.com/custompages/Stats/MBB/0910MBB/game15.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912060829id_/http://www.gomastodons.com/custompages/Stats/MBB/0910MBB/game16.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150911001539id_/http://www.gomastodons.com/custompages/Stats/MBB/0910MBB/game17.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912060521id_/http://www.gomastodons.com/custompages/Stats/MBB/0910MBB/game18.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912061124id_/http://www.gomastodons.com/custompages/Stats/MBB/0910MBB/game19.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150910012051id_/http://www.gomastodons.com/custompages/Stats/MBB/0910MBB/game20.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912010140id_/http://www.gomastodons.com/custompages/Stats/MBB/0910MBB/game21.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912061617id_/http://www.gomastodons.com/custompages/Stats/MBB/0910MBB/game22.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912010220id_/http://www.gomastodons.com/custompages/Stats/MBB/0910MBB/game23.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912062401id_/http://www.gomastodons.com/custompages/Stats/MBB/0910MBB/game24.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912072822id_/http://www.gomastodons.com/custompages/Stats/MBB/0910MBB/game25.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912060907id_/http://www.gomastodons.com/custompages/Stats/MBB/0910MBB/game26.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150911224658id_/http://www.gomastodons.com/custompages/Stats/MBB/0910MBB/game27.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912060414id_/http://www.gomastodons.com/custompages/Stats/MBB/0910MBB/game28.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912071944id_/http://www.gomastodons.com/custompages/Stats/MBB/0910MBB/game29.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912061827id_/http://www.gomastodons.com/custompages/Stats/MBB/0910MBB/game30.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912062714id_/http://www.gomastodons.com/custompages/Stats/MBB/0910MBB/game31.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20150912000123id_/http://www.gomastodons.com/custompages/Stats/MBB/1011MBB/game04.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150910195931id_/http://www.gomastodons.com/custompages/Stats/MBB/1011MBB/game05.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150909174230id_/http://www.gomastodons.com/custompages/Stats/MBB/1011MBB/game06.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20150910234300id_/http://www.gomastodons.com/custompages/Stats/MBB/1011MBB/game07.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150909175226id_/http://www.gomastodons.com/custompages/Stats/MBB/1011MBB/game08.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150910233954id_/http://www.gomastodons.com/custompages/Stats/MBB/1011MBB/game09.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150910200143id_/http://www.gomastodons.com/custompages/Stats/MBB/1011MBB/game10.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150909163510id_/http://www.gomastodons.com/custompages/Stats/MBB/1011MBB/game11.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20150912000210id_/http://www.gomastodons.com/custompages/Stats/MBB/1011MBB/game12.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912000202id_/http://www.gomastodons.com/custompages/Stats/MBB/1011MBB/game13.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150909173110id_/http://www.gomastodons.com/custompages/Stats/MBB/1011MBB/game14.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20150909175945id_/http://www.gomastodons.com/custompages/Stats/MBB/1011MBB/game15.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20150910195402id_/http://www.gomastodons.com/custompages/Stats/MBB/1011MBB/game16.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20150912000146id_/http://www.gomastodons.com/custompages/Stats/MBB/1011MBB/game17.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150909171115id_/http://www.gomastodons.com/custompages/Stats/MBB/1011MBB/game18.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150909163439id_/http://www.gomastodons.com/custompages/Stats/MBB/1011MBB/game19.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912000142id_/http://www.gomastodons.com/custompages/Stats/MBB/1011MBB/game20.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912000119id_/http://www.gomastodons.com/custompages/Stats/MBB/1011MBB/game21.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150910234230id_/http://www.gomastodons.com/custompages/Stats/MBB/1011MBB/game22.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150910234055id_/http://www.gomastodons.com/custompages/Stats/MBB/1011MBB/game23.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150909172649id_/http://www.gomastodons.com/custompages/Stats/MBB/1011MBB/game24.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150909185241id_/http://www.gomastodons.com/custompages/Stats/MBB/1011MBB/game25.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150910195808id_/http://www.gomastodons.com/custompages/Stats/MBB/1011MBB/game26.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150910200215id_/http://www.gomastodons.com/custompages/Stats/MBB/1011MBB/game27.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150910200106id_/http://www.gomastodons.com/custompages/Stats/MBB/1011MBB/game28.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150909163612id_/http://www.gomastodons.com/custompages/Stats/MBB/1011MBB/game29.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912000206id_/http://www.gomastodons.com/custompages/Stats/MBB/1011MBB/game30.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20151003050713id_/http://www.gomastodons.com/custompages/Stats/MBB/1112MBB/HISTCARR.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20150918181418id_/http://www.gomastodons.com/custompages/Stats/MBB/1112MBB/exhib1.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150918174834id_/http://www.gomastodons.com/custompages/Stats/MBB/1112MBB/game01.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150910053128id_/http://www.gomastodons.com/custompages/Stats/MBB/1112MBB/game02.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912003454id_/http://www.gomastodons.com/custompages/Stats/MBB/1112MBB/game03.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150918180521id_/http://www.gomastodons.com/custompages/Stats/MBB/1112MBB/game04.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912020257id_/http://www.gomastodons.com/custompages/Stats/MBB/1112MBB/game05.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150918174429id_/http://www.gomastodons.com/custompages/Stats/MBB/1112MBB/game06.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912072921id_/http://www.gomastodons.com/custompages/Stats/MBB/1112MBB/game07.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150918175804id_/http://www.gomastodons.com/custompages/Stats/MBB/1112MBB/game08.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150918174906id_/http://www.gomastodons.com/custompages/Stats/MBB/1112MBB/game09.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150918181246id_/http://www.gomastodons.com/custompages/Stats/MBB/1112MBB/game10.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912074022id_/http://www.gomastodons.com/custompages/Stats/MBB/1112MBB/game11.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150910052243id_/http://www.gomastodons.com/custompages/Stats/MBB/1112MBB/game12.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912001528id_/http://www.gomastodons.com/custompages/Stats/MBB/1112MBB/game13.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912072713id_/http://www.gomastodons.com/custompages/Stats/MBB/1112MBB/game14.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150918175628id_/http://www.gomastodons.com/custompages/Stats/MBB/1112MBB/game15.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150918180101id_/http://www.gomastodons.com/custompages/Stats/MBB/1112MBB/game16.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912074339id_/http://www.gomastodons.com/custompages/Stats/MBB/1112MBB/game17.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912074629id_/http://www.gomastodons.com/custompages/Stats/MBB/1112MBB/game18.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150918180624id_/http://www.gomastodons.com/custompages/Stats/MBB/1112MBB/game19.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150918181347id_/http://www.gomastodons.com/custompages/Stats/MBB/1112MBB/game20.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912073913id_/http://www.gomastodons.com/custompages/Stats/MBB/1112MBB/game21.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912011411id_/http://www.gomastodons.com/custompages/Stats/MBB/1112MBB/game22.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150918174316id_/http://www.gomastodons.com/custompages/Stats/MBB/1112MBB/game23.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150918175125id_/http://www.gomastodons.com/custompages/Stats/MBB/1112MBB/game24.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912011445id_/http://www.gomastodons.com/custompages/Stats/MBB/1112MBB/game25.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150910052657id_/http://www.gomastodons.com/custompages/Stats/MBB/1112MBB/game26.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150918181038id_/http://www.gomastodons.com/custompages/Stats/MBB/1112MBB/game27.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912020253id_/http://www.gomastodons.com/custompages/Stats/MBB/1112MBB/game28.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150910052956id_/http://www.gomastodons.com/custompages/Stats/MBB/1112MBB/game29.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150918175731id_/http://www.gomastodons.com/custompages/Stats/MBB/1112MBB/game30.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150912005717id_/http://www.gomastodons.com/custompages/Stats/MBB/1314MBB/game10.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150910004655id_/http://www.gomastodons.com/custompages/Stats/MBB/1314MBB/game36.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20140528091336id_/http://www.gomastodons.com/custompages/Stats/MBB/1314MBB/teamstat.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20150906073413id_/http://www.gomastodons.com/custompages/Stats/MBB/1415MBB/game01.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150906021627id_/http://www.gomastodons.com/custompages/Stats/MBB/1415MBB/game02.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20150906014631id_/http://www.gomastodons.com/custompages/Stats/MBB/1415MBB/game04.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150906032456id_/http://www.gomastodons.com/custompages/Stats/MBB/1415MBB/game05.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150906033449id_/http://www.gomastodons.com/custompages/Stats/MBB/1415MBB/game06.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150906073602id_/http://www.gomastodons.com/custompages/Stats/MBB/1415MBB/game07.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150906141218id_/http://www.gomastodons.com/custompages/Stats/MBB/1415MBB/game08.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150906074004id_/http://www.gomastodons.com/custompages/Stats/MBB/1415MBB/game09.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150906073144id_/http://www.gomastodons.com/custompages/Stats/MBB/1415MBB/game10.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150906030201id_/http://www.gomastodons.com/custompages/Stats/MBB/1415MBB/game11.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150906074213id_/http://www.gomastodons.com/custompages/Stats/MBB/1415MBB/game12.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150906140509id_/http://www.gomastodons.com/custompages/Stats/MBB/1415MBB/game13.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150906095200id_/http://www.gomastodons.com/custompages/Stats/MBB/1415MBB/game14.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150906080047id_/http://www.gomastodons.com/custompages/Stats/MBB/1415MBB/game15.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150906024707id_/http://www.gomastodons.com/custompages/Stats/MBB/1415MBB/game16.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150906031428id_/http://www.gomastodons.com/custompages/Stats/MBB/1415MBB/game17.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20150906031916id_/http://www.gomastodons.com/custompages/Stats/MBB/1415MBB/game18.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150906094707id_/http://www.gomastodons.com/custompages/Stats/MBB/1415MBB/game19.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150906094739id_/http://www.gomastodons.com/custompages/Stats/MBB/1415MBB/game20.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150906073654id_/http://www.gomastodons.com/custompages/Stats/MBB/1415MBB/game21.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150906140935id_/http://www.gomastodons.com/custompages/Stats/MBB/1415MBB/game22.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150906073828id_/http://www.gomastodons.com/custompages/Stats/MBB/1415MBB/game23.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150906140723id_/http://www.gomastodons.com/custompages/Stats/MBB/1415MBB/game24.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150906073808id_/http://www.gomastodons.com/custompages/Stats/MBB/1415MBB/game25.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150906072515id_/http://www.gomastodons.com/custompages/Stats/MBB/1415MBB/game26.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150906072757id_/http://www.gomastodons.com/custompages/Stats/MBB/1415MBB/game27.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150906031813id_/http://www.gomastodons.com/custompages/Stats/MBB/1415MBB/game28.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150906125523id_/http://www.gomastodons.com/custompages/Stats/MBB/1415MBB/game29.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20150906040413id_/http://www.gomastodons.com/custompages/Stats/MBB/1415MBB/game30.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150906033704id_/http://www.gomastodons.com/custompages/Stats/MBB/1415MBB/game31.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20151017141831id_/http://www.gomastodons.com/custompages/Stats/MBB/1415MBB/plyr_03.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20151020230854id_/http://www.gomastodons.com/custompages/Stats/MBB/1415MBB/plyr_14.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20151022193801id_/http://www.gomastodons.com/custompages/Stats/MBB/1415MBB/plyr_21.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20151017140731id_/http://www.gomastodons.com/custompages/Stats/MBB/1415MBB/plyr_23.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20151020230038id_/http://www.gomastodons.com/custompages/Stats/MBB/1415MBB/plyr_tm.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20150912050816id_/http://www.gomastodons.com/custompages/Stats/MBB/1415MBB/teamcume.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20150911011647id_/http://www.gomastodons.com/custompages/Stats/MBB/1415MBB/teamhigh.htm",
+   "parse/checksum fail"
   ],
   [
    "http://web.archive.org/web/20160329150239id_/http://www.gomastodons.com/custompages/Stats/MBB/wiu0225.htm",
@@ -58,6 +1939,214 @@
    "no own-team match"
   ],
   [
+   "http://web.archive.org/web/20141126232156id_/http://www.gomastodons.com:80/custompages/Stats/MBB/1314MBB/game01.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20141126232201id_/http://www.gomastodons.com:80/custompages/Stats/MBB/1314MBB/game02.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20141126232207id_/http://www.gomastodons.com:80/custompages/Stats/MBB/1314MBB/game03.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20141126232212id_/http://www.gomastodons.com:80/custompages/Stats/MBB/1314MBB/game04.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20141126232217id_/http://www.gomastodons.com:80/custompages/Stats/MBB/1314MBB/game05.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20141126232222id_/http://www.gomastodons.com:80/custompages/Stats/MBB/1314MBB/game06.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20141126232029id_/http://www.gomastodons.com:80/custompages/Stats/MBB/1314MBB/game07.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20141126232034id_/http://www.gomastodons.com:80/custompages/Stats/MBB/1314MBB/game08.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20141126232040id_/http://www.gomastodons.com:80/custompages/Stats/MBB/1314MBB/game09.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20141126232045id_/http://www.gomastodons.com:80/custompages/Stats/MBB/1314MBB/game11.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20141126232227id_/http://www.gomastodons.com:80/custompages/Stats/MBB/1314MBB/game12.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20141126232233id_/http://www.gomastodons.com:80/custompages/Stats/MBB/1314MBB/game13.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20141126232238id_/http://www.gomastodons.com:80/custompages/Stats/MBB/1314MBB/game14.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20141126232243id_/http://www.gomastodons.com:80/custompages/Stats/MBB/1314MBB/game15.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20141126232050id_/http://www.gomastodons.com:80/custompages/Stats/MBB/1314MBB/game16.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20141126232055id_/http://www.gomastodons.com:80/custompages/Stats/MBB/1314MBB/game17.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20141126232100id_/http://www.gomastodons.com:80/custompages/Stats/MBB/1314MBB/game18.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20141126232106id_/http://www.gomastodons.com:80/custompages/Stats/MBB/1314MBB/game19.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20141126232111id_/http://www.gomastodons.com:80/custompages/Stats/MBB/1314MBB/game20.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20141126232116id_/http://www.gomastodons.com:80/custompages/Stats/MBB/1314MBB/game21.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20141126232249id_/http://www.gomastodons.com:80/custompages/Stats/MBB/1314MBB/game22.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20141126232121id_/http://www.gomastodons.com:80/custompages/Stats/MBB/1314MBB/game23.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20141126232254id_/http://www.gomastodons.com:80/custompages/Stats/MBB/1314MBB/game24.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20141126232127id_/http://www.gomastodons.com:80/custompages/Stats/MBB/1314MBB/game25.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20141126232131id_/http://www.gomastodons.com:80/custompages/Stats/MBB/1314MBB/game26.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20141126232259id_/http://www.gomastodons.com:80/custompages/Stats/MBB/1314MBB/game27.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20141126232305id_/http://www.gomastodons.com:80/custompages/Stats/MBB/1314MBB/game28.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20141126232136id_/http://www.gomastodons.com:80/custompages/Stats/MBB/1314MBB/game29.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20141126232309id_/http://www.gomastodons.com:80/custompages/Stats/MBB/1314MBB/game30.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20141126232315id_/http://www.gomastodons.com:80/custompages/Stats/MBB/1314MBB/game31.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20141126232319id_/http://www.gomastodons.com:80/custompages/Stats/MBB/1314MBB/game32.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20141126232324id_/http://www.gomastodons.com:80/custompages/Stats/MBB/1314MBB/game33.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20141126232329id_/http://www.gomastodons.com:80/custompages/Stats/MBB/1314MBB/game34.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20141126232141id_/http://www.gomastodons.com:80/custompages/Stats/MBB/1314MBB/game35.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20141126232419id_/http://www.gomastodons.com:80/custompages/Stats/MBB/1314MBB/teamcume.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20141126232146id_/http://www.gomastodons.com:80/custompages/Stats/MBB/1314MBB/teamgbg.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20141126232151id_/http://www.gomastodons.com:80/custompages/Stats/MBB/1314MBB/teamhigh.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20141115032055id_/http://www.gomastodons.com:80/custompages/Stats/MBB/1314MBB/teamstat.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20141213010741id_/http://www.gomastodons.com:80/custompages/Stats/MBB/1415MBB/game03.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20150120060141id_/http://www.gomastodons.com:80/custompages/Stats/MBB/1415MBB/plyr_00.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20150120060146id_/http://www.gomastodons.com:80/custompages/Stats/MBB/1415MBB/plyr_10.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20150120052823id_/http://www.gomastodons.com:80/custompages/Stats/MBB/1415MBB/plyr_11.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20150120060152id_/http://www.gomastodons.com:80/custompages/Stats/MBB/1415MBB/plyr_12.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20150120060157id_/http://www.gomastodons.com:80/custompages/Stats/MBB/1415MBB/plyr_32.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20150120060204id_/http://www.gomastodons.com:80/custompages/Stats/MBB/1415MBB/plyr_44.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20150120060209id_/http://www.gomastodons.com:80/custompages/Stats/MBB/1415MBB/plyr_50.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20150120060217id_/http://www.gomastodons.com:80/custompages/Stats/MBB/1415MBB/plyr_53.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20150120060243id_/http://www.gomastodons.com:80/custompages/Stats/MBB/1415MBB/plyr_54.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20150120044325id_/http://www.gomastodons.com:80/custompages/Stats/MBB/1415MBB/teamgbg.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20150120050522id_/http://www.gomastodons.com:80/custompages/Stats/MBB/1415MBB/teamstat.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20160217015535id_/http://www.gomastodons.com:80/custompages/Stats/MBB/1516MBB/1106fwob.htm",
+   "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20160217015853id_/http://www.gomastodons.com:80/custompages/Stats/MBB/1516MBB/vu1.htm",
+   "no own-team match"
+  ],
+  [
    "http://web.archive.org/web/20160217015858id_/http://www.gomastodons.com:80/custompages/Stats/MBB/1516gm10.htm",
    "parse/checksum fail"
   ],
@@ -72,6 +2161,10 @@
   [
    "http://web.archive.org/web/20160217015545id_/http://www.gomastodons.com:80/custompages/Stats/MBB/16sdmb24.htm",
    "no own-team match"
+  ],
+  [
+   "http://web.archive.org/web/20160210015009id_/http://www.gomastodons.com:80/custompages/Stats/MBB/TEAMSTAT.HTM",
+   "parse/checksum fail"
   ],
   [
    "http://web.archive.org/web/20160217015551id_/http://www.gomastodons.com:80/custompages/Stats/MBB/apu1118.htm",
@@ -119,8 +2212,8 @@
   ]
  ],
  "stats": {
-  "ok": 0,
-  "parse_fail": 29,
+  "ok": 2,
+  "parse_fail": 410,
   "checksum_fail": 0,
   "log_mismatch": 0
  }
