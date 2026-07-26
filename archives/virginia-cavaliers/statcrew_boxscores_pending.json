@@ -1,5 +1,155 @@
 {
  "games": {
+  "1999/virginia-cavaliers-vs-st-john-s-1998-12-12": {
+   "source": "virginiasports.com (Wayback)",
+   "date": "1998-12-12",
+   "teams": [
+    {
+     "name": "Virginia Cavaliers",
+     "score": 68,
+     "players": [
+      {
+       "name": "Dersch",
+       "fg": "1-6",
+       "ft": "0-0",
+       "pts": 2
+      },
+      {
+       "name": "Williams",
+       "fg": "9-14",
+       "ft": "5-6",
+       "pts": 25
+      },
+      {
+       "name": "Hunter",
+       "fg": "4-5",
+       "ft": "1-2",
+       "pts": 9
+      },
+      {
+       "name": "Hand",
+       "fg": "3-9",
+       "ft": "4-4",
+       "pts": 11
+      },
+      {
+       "name": "Hall",
+       "fg": "2-12",
+       "ft": "2-4",
+       "pts": 7
+      },
+      {
+       "name": "Hare",
+       "fg": "1-5",
+       "ft": "0-0",
+       "pts": 2
+      },
+      {
+       "name": "Watson",
+       "fg": "2-4",
+       "ft": "0-0",
+       "pts": 6
+      },
+      {
+       "name": "Lemcke",
+       "fg": "0-1",
+       "ft": "0-0",
+       "pts": 0
+      },
+      {
+       "name": "Dowling",
+       "fg": "0-1",
+       "ft": "0-0",
+       "pts": 0
+      },
+      {
+       "name": "Lyons",
+       "fg": "2-2",
+       "ft": "0-0",
+       "pts": 6
+      },
+      {
+       "name": "Harbour",
+       "fg": "0-1",
+       "ft": "0-0",
+       "pts": 0
+      }
+     ]
+    },
+    {
+     "name": "St. John'S",
+     "score": 95,
+     "players": [
+      {
+       "name": "Artest",
+       "fg": "6-8",
+       "ft": "5-8",
+       "pts": 20
+      },
+      {
+       "name": "Grant",
+       "fg": "7-10",
+       "ft": "5-9",
+       "pts": 19
+      },
+      {
+       "name": "Emanuel",
+       "fg": "1-3",
+       "ft": "0-0",
+       "pts": 2
+      },
+      {
+       "name": "Barkley",
+       "fg": "4-8",
+       "ft": "2-2",
+       "pts": 12
+      },
+      {
+       "name": "Thornton",
+       "fg": "8-21",
+       "ft": "2-2",
+       "pts": 19
+      },
+      {
+       "name": "Richardson",
+       "fg": "0-1",
+       "ft": "0-2",
+       "pts": 0
+      },
+      {
+       "name": "Postell",
+       "fg": "7-16",
+       "ft": "1-2",
+       "pts": 15
+      },
+      {
+       "name": "Jessie",
+       "fg": "0-3",
+       "ft": "0-0",
+       "pts": 0
+      },
+      {
+       "name": "Charles",
+       "fg": "0-2",
+       "ft": "2-2",
+       "pts": 2
+      },
+      {
+       "name": "Gray",
+       "fg": "3-7",
+       "ft": "0-0",
+       "pts": 6
+      },
+      {
+       "name": "Syed",
+       "fg": "0-0",
+       "ft": "0-0",
+       "pts": 0
+      }
+     ]
+    }
+   ]
+  },
   "2003/virginia-cavaliers-vs-chaminade-2002-11-25": {
    "source": "virginiasports.com (Wayback)",
    "date": "2002-11-25",
@@ -311,15 +461,1397 @@
      "score": 72
     }
    ]
+  },
+  "1999/virginia-cavaliers-vs-wake-forest-1999-01-02": {
+   "source": "virginiasports.com (Wayback)",
+   "date": "1999-01-02",
+   "teams": [
+    {
+     "name": "Virginia Cavaliers",
+     "score": 53,
+     "players": [
+      {
+       "name": "Williams",
+       "fg": "3-8",
+       "ft": "2-5",
+       "pts": 9
+      },
+      {
+       "name": "Dersch",
+       "fg": "1-6",
+       "ft": "0-1",
+       "pts": 2
+      },
+      {
+       "name": "Hunter",
+       "fg": "3-4",
+       "ft": "0-0",
+       "pts": 6
+      },
+      {
+       "name": "Watson",
+       "fg": "5-13",
+       "ft": "0-0",
+       "pts": 11
+      },
+      {
+       "name": "Hand",
+       "fg": "6-17",
+       "ft": "0-2",
+       "pts": 13
+      },
+      {
+       "name": "Hall",
+       "fg": "4-13",
+       "ft": "0-0",
+       "pts": 10
+      },
+      {
+       "name": "Lemcke",
+       "fg": "1-1",
+       "ft": "0-1",
+       "pts": 2
+      },
+      {
+       "name": "Harbour",
+       "fg": "0-0",
+       "ft": "0-0",
+       "pts": 0
+      },
+      {
+       "name": "Dowling",
+       "fg": "0-0",
+       "ft": "0-0",
+       "pts": 0
+      },
+      {
+       "name": "Lyons",
+       "fg": "0-2",
+       "ft": "0-0",
+       "pts": 0
+      }
+     ]
+    },
+    {
+     "name": "Wake Forest",
+     "score": 69,
+     "players": [
+      {
+       "name": "Shoemaker",
+       "fg": "2-4",
+       "ft": "4-5",
+       "pts": 8
+      },
+      {
+       "name": "Songalia",
+       "fg": "7-15",
+       "ft": "8-12",
+       "pts": 22
+      },
+      {
+       "name": "Vidaurreta",
+       "fg": "1-3",
+       "ft": "4-4",
+       "pts": 6
+      },
+      {
+       "name": "O'Kelley",
+       "fg": "2-9",
+       "ft": "3-4",
+       "pts": 8
+      },
+      {
+       "name": "Murray",
+       "fg": "4-8",
+       "ft": "4-4",
+       "pts": 14
+      },
+      {
+       "name": "Dawson",
+       "fg": "3-8",
+       "ft": "1-3",
+       "pts": 9
+      },
+      {
+       "name": "Hicks",
+       "fg": "0-0",
+       "ft": "0-0",
+       "pts": 0
+      },
+      {
+       "name": "Fitzpatrick",
+       "fg": "0-0",
+       "ft": "0-0",
+       "pts": 0
+      },
+      {
+       "name": "Amonett",
+       "fg": "0-1",
+       "ft": "0-0",
+       "pts": 0
+      },
+      {
+       "name": "Scott",
+       "fg": "0-0",
+       "ft": "2-2",
+       "pts": 2
+      }
+     ]
+    }
+   ]
+  },
+  "1999/virginia-cavaliers-vs-maryland-1999-01-07": {
+   "source": "virginiasports.com (Wayback)",
+   "date": "1999-01-07",
+   "teams": [
+    {
+     "name": "Virginia Cavaliers",
+     "score": 66,
+     "players": [
+      {
+       "name": "Dersch",
+       "fg": "4-11",
+       "ft": "4-4",
+       "pts": 15
+      },
+      {
+       "name": "Williams",
+       "fg": "6-10",
+       "ft": "1-3",
+       "pts": 14
+      },
+      {
+       "name": "Hunter",
+       "fg": "3-8",
+       "ft": "1-2",
+       "pts": 7
+      },
+      {
+       "name": "Watson",
+       "fg": "2-9",
+       "ft": "1-2",
+       "pts": 6
+      },
+      {
+       "name": "Hand",
+       "fg": "1-8",
+       "ft": "10-11",
+       "pts": 12
+      },
+      {
+       "name": "Hall",
+       "fg": "4-14",
+       "ft": "1-3",
+       "pts": 10
+      },
+      {
+       "name": "Lemcke",
+       "fg": "0-0",
+       "ft": "0-0",
+       "pts": 0
+      },
+      {
+       "name": "Dowling",
+       "fg": "0-0",
+       "ft": "2-2",
+       "pts": 2
+      }
+     ]
+    },
+    {
+     "name": "Maryland",
+     "score": 71,
+     "players": [
+      {
+       "name": "Profit",
+       "fg": "4-7",
+       "ft": "1-5",
+       "pts": 9
+      },
+      {
+       "name": "Morris",
+       "fg": "5-8",
+       "ft": "7-10",
+       "pts": 17
+      },
+      {
+       "name": "Ekezie",
+       "fg": "5-8",
+       "ft": "7-8",
+       "pts": 17
+      },
+      {
+       "name": "Stokes",
+       "fg": "0-0",
+       "ft": "2-2",
+       "pts": 2
+      },
+      {
+       "name": "Francis",
+       "fg": "5-10",
+       "ft": "4-7",
+       "pts": 14
+      },
+      {
+       "name": "Miller",
+       "fg": "0-3",
+       "ft": "0-0",
+       "pts": 0
+      },
+      {
+       "name": "Dixon",
+       "fg": "1-2",
+       "ft": "2-2",
+       "pts": 4
+      },
+      {
+       "name": "Baxter",
+       "fg": "1-2",
+       "ft": "1-2",
+       "pts": 3
+      },
+      {
+       "name": "Mardesich",
+       "fg": "2-8",
+       "ft": "1-2",
+       "pts": 5
+      }
+     ]
+    }
+   ]
+  },
+  "1999/virginia-cavaliers-vs-duke-1999-01-10": {
+   "source": "virginiasports.com (Wayback)",
+   "date": "1999-01-10",
+   "teams": [
+    {
+     "name": "Virginia Cavaliers",
+     "score": 69,
+     "players": [
+      {
+       "name": "Dersch",
+       "fg": "5-15",
+       "ft": "1-1",
+       "pts": 13
+      },
+      {
+       "name": "Williams",
+       "fg": "7-13",
+       "ft": "0-0",
+       "pts": 15
+      },
+      {
+       "name": "Hall",
+       "fg": "3-14",
+       "ft": "0-0",
+       "pts": 7
+      },
+      {
+       "name": "Watson",
+       "fg": "3-8",
+       "ft": "0-0",
+       "pts": 6
+      },
+      {
+       "name": "Hand",
+       "fg": "8-15",
+       "ft": "6-6",
+       "pts": 24
+      },
+      {
+       "name": "Hunter",
+       "fg": "1-2",
+       "ft": "2-4",
+       "pts": 4
+      },
+      {
+       "name": "Lemcke",
+       "fg": "0-2",
+       "ft": "0-0",
+       "pts": 0
+      },
+      {
+       "name": "Dowling",
+       "fg": "0-0",
+       "ft": "0-0",
+       "pts": 0
+      },
+      {
+       "name": "Harbour",
+       "fg": "0-0",
+       "ft": "0-0",
+       "pts": 0
+      },
+      {
+       "name": "Martin",
+       "fg": "0-4",
+       "ft": "0-0",
+       "pts": 0
+      }
+     ]
+    },
+    {
+     "name": "Duke",
+     "score": 115,
+     "players": [
+      {
+       "name": "Carrawell",
+       "fg": "7-13",
+       "ft": "0-0",
+       "pts": 14
+      },
+      {
+       "name": "Battier",
+       "fg": "5-8",
+       "ft": "2-2",
+       "pts": 14
+      },
+      {
+       "name": "Brand",
+       "fg": "12-14",
+       "ft": "9-11",
+       "pts": 33
+      },
+      {
+       "name": "Avery",
+       "fg": "5-8",
+       "ft": "0-0",
+       "pts": 10
+      },
+      {
+       "name": "Langdon",
+       "fg": "6-14",
+       "ft": "1-2",
+       "pts": 17
+      },
+      {
+       "name": "Maggette",
+       "fg": "8-11",
+       "ft": "4-4",
+       "pts": 21
+      },
+      {
+       "name": "James",
+       "fg": "0-4",
+       "ft": "0-0",
+       "pts": 0
+      },
+      {
+       "name": "Burgess",
+       "fg": "0-0",
+       "ft": "0-0",
+       "pts": 0
+      },
+      {
+       "name": "Domzalski",
+       "fg": "0-0",
+       "ft": "0-0",
+       "pts": 0
+      },
+      {
+       "name": "Simpson",
+       "fg": "0-1",
+       "ft": "0-0",
+       "pts": 0
+      },
+      {
+       "name": "J.Caldbeck",
+       "fg": "1-1",
+       "ft": "0-0",
+       "pts": 2
+      },
+      {
+       "name": "Bryant",
+       "fg": "2-2",
+       "ft": "0-0",
+       "pts": 4
+      },
+      {
+       "name": "R.Caldbeck",
+       "fg": "0-0",
+       "ft": "0-0",
+       "pts": 0
+      }
+     ]
+    }
+   ]
+  },
+  "1999/virginia-cavaliers-vs-clemson-1999-01-17": {
+   "source": "virginiasports.com (Wayback)",
+   "date": "1999-01-17",
+   "teams": [
+    {
+     "name": "Virginia Cavaliers",
+     "score": 65,
+     "players": [
+      {
+       "name": "Dersch",
+       "fg": "1-7",
+       "ft": "1-2",
+       "pts": 3
+      },
+      {
+       "name": "Williams",
+       "fg": "4-11",
+       "ft": "3-4",
+       "pts": 11
+      },
+      {
+       "name": "Hunter",
+       "fg": "2-4",
+       "ft": "1-1",
+       "pts": 5
+      },
+      {
+       "name": "Watson",
+       "fg": "4-8",
+       "ft": "0-0",
+       "pts": 9
+      },
+      {
+       "name": "Hand",
+       "fg": "7-13",
+       "ft": "7-7",
+       "pts": 27
+      },
+      {
+       "name": "Hall",
+       "fg": "2-2",
+       "ft": "2-8",
+       "pts": 7
+      },
+      {
+       "name": "Lemcke",
+       "fg": "1-1",
+       "ft": "0-0",
+       "pts": 3
+      }
+     ]
+    },
+    {
+     "name": "Clemson",
+     "score": 58,
+     "players": [
+      {
+       "name": "Jurkunas",
+       "fg": "6-9",
+       "ft": "0-0",
+       "pts": 16
+      },
+      {
+       "name": "Jamison",
+       "fg": "5-13",
+       "ft": "3-5",
+       "pts": 13
+      },
+      {
+       "name": "Wideman",
+       "fg": "0-1",
+       "ft": "0-0",
+       "pts": 0
+      },
+      {
+       "name": "Miller",
+       "fg": "0-7",
+       "ft": "0-0",
+       "pts": 0
+      },
+      {
+       "name": "McIntyre",
+       "fg": "1-9",
+       "ft": "0-0",
+       "pts": 2
+      },
+      {
+       "name": "Allenspach",
+       "fg": "1-2",
+       "ft": "2-2",
+       "pts": 4
+      },
+      {
+       "name": "Solomon",
+       "fg": "0-2",
+       "ft": "1-2",
+       "pts": 1
+      },
+      {
+       "name": "Christie",
+       "fg": "3-5",
+       "ft": "2-3",
+       "pts": 9
+      },
+      {
+       "name": "Whitt",
+       "fg": "6-9",
+       "ft": "0-1",
+       "pts": 13
+      }
+     ]
+    }
+   ]
+  },
+  "1999/virginia-cavaliers-vs-gatech-1999-01-23": {
+   "source": "virginiasports.com (Wayback)",
+   "date": "1999-01-23",
+   "teams": [
+    {
+     "name": "Virginia Cavaliers",
+     "score": 65,
+     "players": [
+      {
+       "name": "Dersch",
+       "fg": "6-12",
+       "ft": "4-4",
+       "pts": 18
+      },
+      {
+       "name": "Williams",
+       "fg": "6-16",
+       "ft": "2-2",
+       "pts": 16
+      },
+      {
+       "name": "Hunter",
+       "fg": "1-2",
+       "ft": "1-2",
+       "pts": 3
+      },
+      {
+       "name": "Watson",
+       "fg": "2-6",
+       "ft": "2-2",
+       "pts": 7
+      },
+      {
+       "name": "Hand",
+       "fg": "5-15",
+       "ft": "3-5",
+       "pts": 15
+      },
+      {
+       "name": "Hall",
+       "fg": "3-10",
+       "ft": "0-1",
+       "pts": 6
+      },
+      {
+       "name": "Lemcke",
+       "fg": "0-1",
+       "ft": "0-0",
+       "pts": 0
+      }
+     ]
+    },
+    {
+     "name": "Gatech",
+     "score": 77,
+     "players": [
+      {
+       "name": "Babul",
+       "fg": "4-8",
+       "ft": "4-5",
+       "pts": 12
+      },
+      {
+       "name": "Collier",
+       "fg": "5-10",
+       "ft": "2-2",
+       "pts": 12
+      },
+      {
+       "name": "Jones",
+       "fg": "5-9",
+       "ft": "1-2",
+       "pts": 11
+      },
+      {
+       "name": "Akins",
+       "fg": "3-7",
+       "ft": "1-2",
+       "pts": 9
+      },
+      {
+       "name": "Floyd",
+       "fg": "8-9",
+       "ft": "3-4",
+       "pts": 19
+      },
+      {
+       "name": "Vines",
+       "fg": "3-5",
+       "ft": "2-2",
+       "pts": 11
+      },
+      {
+       "name": "LaBarrie",
+       "fg": "1-3",
+       "ft": "0-0",
+       "pts": 3
+      }
+     ]
+    }
+   ]
+  },
+  "1999/virginia-cavaliers-vs-florida-st-1999-01-30": {
+   "source": "virginiasports.com (Wayback)",
+   "date": "1999-01-30",
+   "teams": [
+    {
+     "name": "Virginia Cavaliers",
+     "score": 67,
+     "players": [
+      {
+       "name": "Watson",
+       "fg": "1-2",
+       "ft": "4-5",
+       "pts": 6
+      },
+      {
+       "name": "Hand",
+       "fg": "6-11",
+       "ft": "6-6",
+       "pts": 22
+      },
+      {
+       "name": "Hall",
+       "fg": "4-8",
+       "ft": "0-1",
+       "pts": 11
+      },
+      {
+       "name": "Dersch",
+       "fg": "1-5",
+       "ft": "6-7",
+       "pts": 8
+      },
+      {
+       "name": "Williams",
+       "fg": "9-14",
+       "ft": "0-0",
+       "pts": 18
+      },
+      {
+       "name": "Lemcke",
+       "fg": "0-0",
+       "ft": "0-0",
+       "pts": 0
+      },
+      {
+       "name": "Hunter",
+       "fg": "1-5",
+       "ft": "0-0",
+       "pts": 2
+      }
+     ]
+    },
+    {
+     "name": "Florida St.",
+     "score": 60,
+     "players": [
+      {
+       "name": "Arrington",
+       "fg": "2-6",
+       "ft": "5-6",
+       "pts": 9
+      },
+      {
+       "name": "Baker",
+       "fg": "2-12",
+       "ft": "1-3",
+       "pts": 6
+      },
+      {
+       "name": "Mott",
+       "fg": "0-2",
+       "ft": "0-0",
+       "pts": 0
+      },
+      {
+       "name": "Hale",
+       "fg": "7-13",
+       "ft": "4-7",
+       "pts": 19
+      },
+      {
+       "name": "Simmons",
+       "fg": "1-5",
+       "ft": "1-3",
+       "pts": 3
+      },
+      {
+       "name": "Dixon",
+       "fg": "0-0",
+       "ft": "0-0",
+       "pts": 0
+      },
+      {
+       "name": "Crawford",
+       "fg": "5-11",
+       "ft": "0-0",
+       "pts": 13
+      },
+      {
+       "name": "Chlebek",
+       "fg": "0-0",
+       "ft": "0-0",
+       "pts": 0
+      },
+      {
+       "name": "Anderson",
+       "fg": "4-10",
+       "ft": "2-2",
+       "pts": 10
+      }
+     ]
+    }
+   ]
+  },
+  "1999/virginia-cavaliers-vs-wake-forest-1999-02-03": {
+   "source": "virginiasports.com (Wayback)",
+   "date": "1999-02-03",
+   "teams": [
+    {
+     "name": "Virginia Cavaliers",
+     "score": 64,
+     "players": [
+      {
+       "name": "Dersch",
+       "fg": "5-11",
+       "ft": "1-1",
+       "pts": 14
+      },
+      {
+       "name": "Hall",
+       "fg": "0-5",
+       "ft": "3-4",
+       "pts": 3
+      },
+      {
+       "name": "Williams",
+       "fg": "6-10",
+       "ft": "2-5",
+       "pts": 14
+      },
+      {
+       "name": "Watson",
+       "fg": "0-5",
+       "ft": "5-6",
+       "pts": 5
+      },
+      {
+       "name": "Hand",
+       "fg": "6-15",
+       "ft": "12-12",
+       "pts": 25
+      },
+      {
+       "name": "Hunter",
+       "fg": "0-3",
+       "ft": "3-4",
+       "pts": 3
+      },
+      {
+       "name": "Lemcke",
+       "fg": "0-0",
+       "ft": "0-0",
+       "pts": 0
+      }
+     ]
+    },
+    {
+     "name": "Wake Forest",
+     "score": 54,
+     "players": [
+      {
+       "name": "Songalia",
+       "fg": "4-10",
+       "ft": "4-4",
+       "pts": 12
+      },
+      {
+       "name": "Dawson",
+       "fg": "1-7",
+       "ft": "0-0",
+       "pts": 2
+      },
+      {
+       "name": "Vidaurreta",
+       "fg": "2-3",
+       "ft": "2-2",
+       "pts": 6
+      },
+      {
+       "name": "O'Kelley",
+       "fg": "4-10",
+       "ft": "1-2",
+       "pts": 12
+      },
+      {
+       "name": "Murray",
+       "fg": "1-1",
+       "ft": "0-0",
+       "pts": 2
+      },
+      {
+       "name": "Amonett",
+       "fg": "1-9",
+       "ft": "0-0",
+       "pts": 2
+      },
+      {
+       "name": "Shoemaker",
+       "fg": "0-1",
+       "ft": "0-0",
+       "pts": 0
+      },
+      {
+       "name": "Hicks",
+       "fg": "2-3",
+       "ft": "0-0",
+       "pts": 5
+      },
+      {
+       "name": "Scott",
+       "fg": "4-5",
+       "ft": "5-5",
+       "pts": 13
+      },
+      {
+       "name": "Fitzpatrick",
+       "fg": "0-0",
+       "ft": "0-0",
+       "pts": 0
+      },
+      {
+       "name": "Fuller",
+       "fg": "0-1",
+       "ft": "0-0",
+       "pts": 0
+      }
+     ]
+    }
+   ]
+  },
+  "1999/virginia-cavaliers-vs-north-carolina-state-1999-02-14": {
+   "source": "virginiasports.com (Wayback)",
+   "date": "1999-02-14",
+   "teams": [
+    {
+     "name": "Virginia Cavaliers",
+     "score": 82,
+     "players": [
+      {
+       "name": "Dersch",
+       "fg": "1-10",
+       "ft": "5-5",
+       "pts": 7
+      },
+      {
+       "name": "Hall",
+       "fg": "2-4",
+       "ft": "0-2",
+       "pts": 4
+      },
+      {
+       "name": "Williams",
+       "fg": "5-12",
+       "ft": "2-3",
+       "pts": 12
+      },
+      {
+       "name": "Watson",
+       "fg": "3-8",
+       "ft": "4-4",
+       "pts": 10
+      },
+      {
+       "name": "Hand",
+       "fg": "11-17",
+       "ft": "14-15",
+       "pts": 41
+      },
+      {
+       "name": "Hunter",
+       "fg": "0-2",
+       "ft": "3-4",
+       "pts": 3
+      },
+      {
+       "name": "Hare",
+       "fg": "2-3",
+       "ft": "0-0",
+       "pts": 5
+      }
+     ]
+    },
+    {
+     "name": "North Carolina State",
+     "score": 79,
+     "players": [
+      {
+       "name": "Thornton",
+       "fg": "2-5",
+       "ft": "2-2",
+       "pts": 6
+      },
+      {
+       "name": "Inge",
+       "fg": "4-8",
+       "ft": "2-2",
+       "pts": 10
+      },
+      {
+       "name": "Wells",
+       "fg": "3-7",
+       "ft": "4-4",
+       "pts": 11
+      },
+      {
+       "name": "Gainey",
+       "fg": "4-9",
+       "ft": "6-6",
+       "pts": 15
+      },
+      {
+       "name": "Grundy",
+       "fg": "1-4",
+       "ft": "3-4",
+       "pts": 5
+      },
+      {
+       "name": "Harrington",
+       "fg": "2-8",
+       "ft": "0-0",
+       "pts": 6
+      },
+      {
+       "name": "Kelley",
+       "fg": "8-16",
+       "ft": "7-11",
+       "pts": 24
+      },
+      {
+       "name": "Bean",
+       "fg": "0-0",
+       "ft": "0-0",
+       "pts": 0
+      },
+      {
+       "name": "Anderson",
+       "fg": "1-2",
+       "ft": "0-0",
+       "pts": 2
+      }
+     ]
+    }
+   ]
+  },
+  "1999/virginia-cavaliers-vs-georgia-tech-1999-02-25": {
+   "source": "virginiasports.com (Wayback)",
+   "date": "1999-02-25",
+   "teams": [
+    {
+     "name": "Virginia Cavaliers",
+     "score": 68,
+     "players": [
+      {
+       "name": "Hall",
+       "fg": "3-6",
+       "ft": "2-2",
+       "pts": 10
+      },
+      {
+       "name": "Williams",
+       "fg": "4-11",
+       "ft": "2-2",
+       "pts": 12
+      },
+      {
+       "name": "Hunter",
+       "fg": "1-10",
+       "ft": "2-2",
+       "pts": 4
+      },
+      {
+       "name": "Watson",
+       "fg": "2-4",
+       "ft": "0-0",
+       "pts": 4
+      },
+      {
+       "name": "Hand",
+       "fg": "8-22",
+       "ft": "9-10",
+       "pts": 28
+      },
+      {
+       "name": "Dersch",
+       "fg": "1-1",
+       "ft": "0-0",
+       "pts": 2
+      },
+      {
+       "name": "Hare",
+       "fg": "1-3",
+       "ft": "2-2",
+       "pts": 5
+      },
+      {
+       "name": "Lemcke",
+       "fg": "1-1",
+       "ft": "0-0",
+       "pts": 3
+      },
+      {
+       "name": "Dowling",
+       "fg": "0-0",
+       "ft": "0-0",
+       "pts": 0
+      }
+     ]
+    },
+    {
+     "name": "Georgia Tech",
+     "score": 74,
+     "players": [
+      {
+       "name": "Kelly",
+       "fg": "0-0",
+       "ft": "0-0",
+       "pts": 0
+      },
+      {
+       "name": "Babul",
+       "fg": "1-6",
+       "ft": "2-4",
+       "pts": 4
+      },
+      {
+       "name": "Collier",
+       "fg": "3-11",
+       "ft": "13-16",
+       "pts": 19
+      },
+      {
+       "name": "Akins",
+       "fg": "2-8",
+       "ft": "1-4",
+       "pts": 5
+      },
+      {
+       "name": "Floyd",
+       "fg": "5-18",
+       "ft": "4-4",
+       "pts": 15
+      },
+      {
+       "name": "Jones",
+       "fg": "5-8",
+       "ft": "6-7",
+       "pts": 16
+      },
+      {
+       "name": "Vines",
+       "fg": "3-6",
+       "ft": "3-4",
+       "pts": 12
+      },
+      {
+       "name": "LaBarrie",
+       "fg": "1-1",
+       "ft": "1-2",
+       "pts": 3
+      }
+     ]
+    }
+   ]
+  },
+  "1999/virginia-cavaliers-vs-duke-1999-03-04": {
+   "source": "virginiasports.com (Wayback)",
+   "date": "1999-03-04",
+   "teams": [
+    {
+     "name": "Virginia Cavaliers",
+     "score": 67,
+     "players": [
+      {
+       "name": "Hall",
+       "fg": "6-16",
+       "ft": "0-0",
+       "pts": 12
+      },
+      {
+       "name": "Williams",
+       "fg": "7-15",
+       "ft": "0-0",
+       "pts": 16
+      },
+      {
+       "name": "Hunter",
+       "fg": "2-7",
+       "ft": "2-2",
+       "pts": 6
+      },
+      {
+       "name": "Hand",
+       "fg": "4-18",
+       "ft": "7-9",
+       "pts": 15
+      },
+      {
+       "name": "Dersch",
+       "fg": "3-10",
+       "ft": "0-0",
+       "pts": 7
+      },
+      {
+       "name": "Watson",
+       "fg": "2-10",
+       "ft": "2-3",
+       "pts": 6
+      },
+      {
+       "name": "Hare",
+       "fg": "0-1",
+       "ft": "0-1",
+       "pts": 0
+      },
+      {
+       "name": "Lemcke",
+       "fg": "0-0",
+       "ft": "0-0",
+       "pts": 0
+      },
+      {
+       "name": "Harbour",
+       "fg": "1-2",
+       "ft": "2-2",
+       "pts": 4
+      },
+      {
+       "name": "Lloyd",
+       "fg": "0-0",
+       "ft": "1-2",
+       "pts": 1
+      },
+      {
+       "name": "Dowling",
+       "fg": "0-0",
+       "ft": "0-0",
+       "pts": 0
+      },
+      {
+       "name": "Lyons",
+       "fg": "0-0",
+       "ft": "0-0",
+       "pts": 0
+      },
+      {
+       "name": "Martin",
+       "fg": "0-0",
+       "ft": "0-0",
+       "pts": 0
+      }
+     ]
+    },
+    {
+     "name": "Duke",
+     "score": 104,
+     "players": [
+      {
+       "name": "Carrawell",
+       "fg": "6-10",
+       "ft": "2-2",
+       "pts": 15
+      },
+      {
+       "name": "Burgess",
+       "fg": "5-6",
+       "ft": "1-1",
+       "pts": 11
+      },
+      {
+       "name": "Brand",
+       "fg": "5-8",
+       "ft": "5-8",
+       "pts": 15
+      },
+      {
+       "name": "Langdon",
+       "fg": "2-7",
+       "ft": "4-4",
+       "pts": 8
+      },
+      {
+       "name": "Avery",
+       "fg": "7-12",
+       "ft": "3-3",
+       "pts": 18
+      },
+      {
+       "name": "Battier",
+       "fg": "3-4",
+       "ft": "0-0",
+       "pts": 8
+      },
+      {
+       "name": "Maggette",
+       "fg": "4-8",
+       "ft": "0-0",
+       "pts": 8
+      },
+      {
+       "name": "James",
+       "fg": "3-7",
+       "ft": "3-6",
+       "pts": 10
+      },
+      {
+       "name": "Domzalski",
+       "fg": "2-6",
+       "ft": "2-2",
+       "pts": 6
+      },
+      {
+       "name": "Simpson",
+       "fg": "0-2",
+       "ft": "0-0",
+       "pts": 0
+      },
+      {
+       "name": "J.Caldbeck",
+       "fg": "1-2",
+       "ft": "0-0",
+       "pts": 2
+      },
+      {
+       "name": "Bryant",
+       "fg": "1-2",
+       "ft": "0-0",
+       "pts": 3
+      },
+      {
+       "name": "R.Caldbeck",
+       "fg": "0-1",
+       "ft": "0-0",
+       "pts": 0
+      }
+     ]
+    }
+   ]
+  },
+  "1999/virginia-cavaliers-vs-delaware-1998-12-27": {
+   "source": "virginiasports.com (Wayback)",
+   "date": "1998-12-27",
+   "teams": [
+    {
+     "name": "Virginia Cavaliers",
+     "score": 72,
+     "players": [
+      {
+       "name": "Dersch",
+       "fg": "7-13",
+       "ft": "0-0",
+       "pts": 15
+      },
+      {
+       "name": "Williams",
+       "fg": "10-17",
+       "ft": "6-8",
+       "pts": 26
+      },
+      {
+       "name": "Hunter",
+       "fg": "2-3",
+       "ft": "4-7",
+       "pts": 8
+      },
+      {
+       "name": "Watson",
+       "fg": "3-7",
+       "ft": "1-4",
+       "pts": 8
+      },
+      {
+       "name": "Hand",
+       "fg": "2-7",
+       "ft": "7-10",
+       "pts": 11
+      },
+      {
+       "name": "Hare",
+       "fg": "0-0",
+       "ft": "0-0",
+       "pts": 0
+      },
+      {
+       "name": "Hall",
+       "fg": "1-4",
+       "ft": "0-0",
+       "pts": 2
+      },
+      {
+       "name": "Lemcke",
+       "fg": "0-0",
+       "ft": "2-2",
+       "pts": 2
+      }
+     ]
+    },
+    {
+     "name": "Delaware",
+     "score": 64,
+     "players": [
+      {
+       "name": "Pegues",
+       "fg": "12-26",
+       "ft": "11-11",
+       "pts": 35
+      },
+      {
+       "name": "Miller",
+       "fg": "1-5",
+       "ft": "0-0",
+       "pts": 2
+      },
+      {
+       "name": "Bennett",
+       "fg": "3-3",
+       "ft": "0-0",
+       "pts": 6
+      },
+      {
+       "name": "Perry",
+       "fg": "1-6",
+       "ft": "0-1",
+       "pts": 2
+      },
+      {
+       "name": "Gordon",
+       "fg": "3-15",
+       "ft": "0-0",
+       "pts": 6
+      },
+      {
+       "name": "Ndiaye",
+       "fg": "1-1",
+       "ft": "1-1",
+       "pts": 3
+      },
+      {
+       "name": "Marciulionis",
+       "fg": "4-10",
+       "ft": "0-0",
+       "pts": 10
+      }
+     ]
+    }
+   ]
   }
  },
  "quarantine": [
   [
    "http://web.archive.org/web/19991005084352id_/http://virginiasports.com:80/sports/m-baskbl/stats/021299aaa.html",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/19991006042359id_/http://virginiasports.com:80/sports/m-baskbl/stats/121298aaa.html",
    "parse/checksum fail"
   ],
   [
@@ -335,27 +1867,11 @@
    "parse/checksum fail"
   ],
   [
-   "http://web.archive.org/web/19990501202015id_/http://www.virginiasports.com:80/sports/m-baskbl/stats/010299aaa.html",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/19990501204135id_/http://www.virginiasports.com:80/sports/m-baskbl/stats/010899aaa.html",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/19990501210644id_/http://www.virginiasports.com:80/sports/m-baskbl/stats/011099aaa.html",
-   "parse/checksum fail"
-  ],
-  [
    "http://web.archive.org/web/19990501212149id_/http://www.virginiasports.com:80/sports/m-baskbl/stats/011599aaa.html",
-   "parse/checksum fail"
+   "log mismatch 82-62 1999-01-14"
   ],
   [
    "http://web.archive.org/web/19991002184109id_/http://www.virginiasports.com:80/sports/m-baskbl/stats/011599aab.html",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/19990501213240id_/http://www.virginiasports.com:80/sports/m-baskbl/stats/011799aaa.html",
    "parse/checksum fail"
   ],
   [
@@ -363,31 +1879,15 @@
    "parse/checksum fail"
   ],
   [
-   "http://web.archive.org/web/19990501221128id_/http://www.virginiasports.com:80/sports/m-baskbl/stats/012399aaa.html",
-   "parse/checksum fail"
-  ],
-  [
    "http://web.archive.org/web/19990501223340id_/http://www.virginiasports.com:80/sports/m-baskbl/stats/012899aaa.html",
    "log mismatch 55-64 1999-01-27"
   ],
   [
-   "http://web.archive.org/web/19990501224713id_/http://www.virginiasports.com:80/sports/m-baskbl/stats/013099aaa.html",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/19991002202757id_/http://www.virginiasports.com:80/sports/m-baskbl/stats/020499aaa.html",
-   "parse/checksum fail"
-  ],
-  [
    "http://web.archive.org/web/19991002214603id_/http://www.virginiasports.com:80/sports/m-baskbl/stats/020499aab.html",
-   "parse/checksum fail"
+   "log mismatch 59-58 1999-02-03"
   ],
   [
    "http://web.archive.org/web/19991003001943id_/http://www.virginiasports.com:80/sports/m-baskbl/stats/020699aaa.html",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/19991003030500id_/http://www.virginiasports.com:80/sports/m-baskbl/stats/021599aaa.html",
    "parse/checksum fail"
   ],
   [
@@ -404,14 +1904,6 @@
   ],
   [
    "http://web.archive.org/web/19991116173241id_/http://www.virginiasports.com:80/sports/m-baskbl/stats/022598aaa.html",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/19991003064318id_/http://www.virginiasports.com:80/sports/m-baskbl/stats/022699aaa.html",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/19991003084449id_/http://www.virginiasports.com:80/sports/m-baskbl/stats/030599aaa.html",
    "parse/checksum fail"
   ],
   [
@@ -457,16 +1949,12 @@
   [
    "http://web.archive.org/web/19990502020723id_/http://www.virginiasports.com:80/sports/m-baskbl/stats/122398aaa.html",
    "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/19990502022939id_/http://www.virginiasports.com:80/sports/m-baskbl/stats/122898aaa.html",
-   "parse/checksum fail"
   ]
  ],
  "stats": {
-  "ok": 1,
-  "parse_fail": 36,
+  "ok": 13,
+  "parse_fail": 22,
   "checksum_fail": 0,
-  "log_mismatch": 1
+  "log_mismatch": 3
  }
 }

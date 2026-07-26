@@ -1746,6 +1746,132 @@
     }
    ]
   },
+  "1999/missouri-tigers-vs-iowa-st-1999-02-24": {
+   "source": "mutigers.cstv.com (Wayback)",
+   "date": "1999-02-24",
+   "teams": [
+    {
+     "name": "Missouri Tigers",
+     "score": 75,
+     "players": [
+      {
+       "name": "Hafer",
+       "fg": "1-3",
+       "ft": "0-1",
+       "pts": 2
+      },
+      {
+       "name": "White",
+       "fg": "6-12",
+       "ft": "4-4",
+       "pts": 16
+      },
+      {
+       "name": "Hardge",
+       "fg": "5-9",
+       "ft": "3-7",
+       "pts": 13
+      },
+      {
+       "name": "Gilbert",
+       "fg": "1-2",
+       "ft": "0-1",
+       "pts": 2
+      },
+      {
+       "name": "Grawer",
+       "fg": "6-7",
+       "ft": "9-11",
+       "pts": 27
+      },
+      {
+       "name": "Dooling",
+       "fg": "0-1",
+       "ft": "0-0",
+       "pts": 0
+      },
+      {
+       "name": "Parker",
+       "fg": "0-3",
+       "ft": "0-0",
+       "pts": 0
+      },
+      {
+       "name": "Woods",
+       "fg": "5-14",
+       "ft": "2-2",
+       "pts": 15
+      },
+      {
+       "name": "Schumacher",
+       "fg": "0-0",
+       "ft": "0-0",
+       "pts": 0
+      }
+     ]
+    },
+    {
+     "name": "Iowa St.",
+     "score": 64,
+     "players": [
+      {
+       "name": "Fizer",
+       "fg": "10-17",
+       "ft": "6-6",
+       "pts": 26
+      },
+      {
+       "name": "Rancik",
+       "fg": "3-9",
+       "ft": "2-2",
+       "pts": 8
+      },
+      {
+       "name": "Johnson",
+       "fg": "4-10",
+       "ft": "0-1",
+       "pts": 9
+      },
+      {
+       "name": "Hampton",
+       "fg": "2-5",
+       "ft": "0-0",
+       "pts": 5
+      },
+      {
+       "name": "Nurse",
+       "fg": "4-12",
+       "ft": "0-0",
+       "pts": 12
+      },
+      {
+       "name": "Corner",
+       "fg": "2-4",
+       "ft": "0-0",
+       "pts": 4
+      },
+      {
+       "name": "Gregg",
+       "fg": "0-3",
+       "ft": "0-0",
+       "pts": 0
+      },
+      {
+       "name": "Edwards",
+       "fg": "0-1",
+       "ft": "0-0",
+       "pts": 0
+      },
+      {
+       "name": "Rampton",
+       "fg": "0-0",
+       "ft": "0-0",
+       "pts": 0
+      }
+     ]
+    }
+   ]
+  },
   "1999/missouri-tigers-vs-texas-1999-02-27": {
    "source": "mutigers.cstv.com (Wayback)",
    "date": "1999-02-27",
@@ -4557,10 +4683,6 @@
    "parse/checksum fail"
   ],
   [
-   "http://web.archive.org/web/20061028132643id_/http://mutigers.cstv.com/sports/m-baskbl/stats/022599aaa.html",
-   "parse/checksum fail"
-  ],
-  [
    "http://web.archive.org/web/20061028104652id_/http://mutigers.cstv.com/sports/m-baskbl/stats/082903aaa.html",
    "parse/checksum fail"
   ],
@@ -4602,8 +4724,8 @@
   ]
  ],
  "stats": {
-  "ok": 15,
-  "parse_fail": 15,
+  "ok": 16,
+  "parse_fail": 14,
   "checksum_fail": 0,
   "log_mismatch": 3
  }

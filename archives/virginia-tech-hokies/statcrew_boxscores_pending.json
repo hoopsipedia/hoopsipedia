@@ -284,6 +284,174 @@
     }
    ]
   },
+  "1999/virginia-tech-hokies-vs-st-joseph-s-1999-01-09": {
+   "source": "hokiesports.com (Wayback)",
+   "date": "1999-01-09",
+   "teams": [
+    {
+     "name": "Virginia Tech Hokies",
+     "score": 66,
+     "players": [
+      {
+       "name": "Roberts",
+       "fg": "6-10",
+       "ft": "5-9",
+       "pts": 17
+      },
+      {
+       "name": "Ray",
+       "fg": "2-4",
+       "ft": "0-0",
+       "pts": 4
+      },
+      {
+       "name": "Wheeler",
+       "fg": "3-8",
+       "ft": "1-1",
+       "pts": 7
+      },
+      {
+       "name": "Dunlop",
+       "fg": "3-6",
+       "ft": "2-2",
+       "pts": 9
+      },
+      {
+       "name": "Lucas",
+       "fg": "2-5",
+       "ft": "0-1",
+       "pts": 4
+      },
+      {
+       "name": "Kimbrough",
+       "fg": "3-9",
+       "ft": "2-2",
+       "pts": 9
+      },
+      {
+       "name": "Whaley",
+       "fg": "0-1",
+       "ft": "0-0",
+       "pts": 0
+      },
+      {
+       "name": "Floyd",
+       "fg": "0-0",
+       "ft": "0-0",
+       "pts": 0
+      },
+      {
+       "name": "Viegas",
+       "fg": "0-1",
+       "ft": "0-0",
+       "pts": 0
+      },
+      {
+       "name": "Mims",
+       "fg": "6-12",
+       "ft": "3-5",
+       "pts": 15
+      },
+      {
+       "name": "Tor",
+       "fg": "0-0",
+       "ft": "1-2",
+       "pts": 1
+      }
+     ]
+    },
+    {
+     "name": "St. Joseph'S",
+     "score": 78,
+     "players": [
+      {
+       "name": "Mazzio",
+       "fg": "0-0",
+       "ft": "0-0",
+       "pts": 0
+      },
+      {
+       "name": "Leib",
+       "fg": "0-0",
+       "ft": "0-0",
+       "pts": 0
+      },
+      {
+       "name": "Brown",
+       "fg": "1-2",
+       "ft": "1-4",
+       "pts": 3
+      },
+      {
+       "name": "Gallagher",
+       "fg": "0-0",
+       "ft": "0-2",
+       "pts": 0
+      },
+      {
+       "name": "Zielenbach",
+       "fg": "0-0",
+       "ft": "0-0",
+       "pts": 0
+      },
+      {
+       "name": "Crenshaw",
+       "fg": "2-10",
+       "ft": "5-7",
+       "pts": 10
+      },
+      {
+       "name": "Reid",
+       "fg": "3-3",
+       "ft": "1-2",
+       "pts": 7
+      },
+      {
+       "name": "Woods",
+       "fg": "0-1",
+       "ft": "0-0",
+       "pts": 0
+      },
+      {
+       "name": "Jennings",
+       "fg": "3-6",
+       "ft": "7-8",
+       "pts": 15
+      },
+      {
+       "name": "Ikenokwalu",
+       "fg": "0-0",
+       "ft": "0-0",
+       "pts": 0
+      },
+      {
+       "name": "Howard",
+       "fg": "8-14",
+       "ft": "4-6",
+       "pts": 20
+      },
+      {
+       "name": "Haskins",
+       "fg": "9-12",
+       "ft": "0-1",
+       "pts": 23
+      },
+      {
+       "name": "Sazanov",
+       "fg": "0-3",
+       "ft": "0-0",
+       "pts": 0
+      },
+      {
+       "name": "Ngounou",
+       "fg": "0-1",
+       "ft": "0-0",
+       "pts": 0
+      }
+     ]
+    }
+   ]
+  },
   "1999/virginia-tech-hokies-vs-virginia-1999-01-27": {
    "source": "hokiesports.com (Wayback)",
    "date": "1999-01-27",
@@ -2079,10 +2247,6 @@
    "parse/checksum fail"
   ],
   [
-   "http://web.archive.org/web/19990418011057id_/http://www.hokiesports.com:80/sports/m-baskbl/stats/011099aaa.html",
-   "parse/checksum fail"
-  ],
-  [
    "http://web.archive.org/web/19990418013347id_/http://www.hokiesports.com:80/sports/m-baskbl/stats/011399aaa.html",
    "parse/checksum fail"
   ],
@@ -2116,8 +2280,8 @@
   ]
  ],
  "stats": {
-  "ok": 7,
-  "parse_fail": 9,
+  "ok": 8,
+  "parse_fail": 8,
   "checksum_fail": 0,
   "log_mismatch": 1
  }

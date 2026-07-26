@@ -1703,10 +1703,6 @@
    "parse/checksum fail"
   ],
   [
-   "http://web.archive.org/web/20010303220116id_/http://www.goduke.com:80/bko/bkc/bkcbox021801.html",
-   "no own-team match"
-  ],
-  [
    "http://web.archive.org/web/20010304194445id_/http://www.goduke.com:80/bko/bkc/bkcbox022401.html",
    "parse/checksum fail"
   ],
@@ -1769,7 +1765,7 @@
  ],
  "stats": {
   "ok": 5,
-  "parse_fail": 27,
+  "parse_fail": 26,
   "checksum_fail": 0,
   "log_mismatch": 3
  }

@@ -3023,20 +3023,11 @@
    ]
   }
  },
- "quarantine": [
-  [
-   "http://web.archive.org/web/20010224000637id_/http://southernmiss.com:80/bko/bkc/1109box.html",
-   "log mismatch 89-84 2000-11-09"
-  ],
-  [
-   "http://web.archive.org/web/20010224000630id_/http://southernmiss.com:80/bko/bkc/111400box.html",
-   "log mismatch 93-61 2000-11-14"
-  ]
- ],
+ "quarantine": [],
  "stats": {
   "ok": 10,
   "parse_fail": 0,
   "checksum_fail": 0,
-  "log_mismatch": 2
+  "log_mismatch": 0
  }
 }

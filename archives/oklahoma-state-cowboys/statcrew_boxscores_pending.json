@@ -263,18 +263,6 @@
    "parse/checksum fail"
   ],
   [
-   "http://web.archive.org/web/19991114080922id_/http://www.okstate.com:80/sports/m-baskbl/stats/011099aaa.html",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/19991008133309id_/http://www.okstate.com:80/sports/m-baskbl/stats/012899aaa.html",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/19990830060230id_/http://www.okstate.com:80/sports/m-baskbl/stats/020799aaa.html",
-   "parse/checksum fail"
-  ],
-  [
    "http://web.archive.org/web/19990830062505id_/http://www.okstate.com:80/sports/m-baskbl/stats/021199aaa.html",
    "parse/checksum fail"
   ],
@@ -283,23 +271,11 @@
    "parse/checksum fail"
   ],
   [
-   "http://web.archive.org/web/19990427233135id_/http://www.okstate.com:80/sports/m-baskbl/stats/021998aaa.html",
-   "parse/checksum fail"
-  ],
-  [
    "http://web.archive.org/web/19990830072246id_/http://www.okstate.com:80/sports/m-baskbl/stats/022199aab.html",
    "parse/checksum fail"
   ],
   [
    "http://web.archive.org/web/19990427234542id_/http://www.okstate.com:80/sports/m-baskbl/stats/022298aaa.html",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/19990427235832id_/http://www.okstate.com:80/sports/m-baskbl/stats/022598aaa.html",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/19990428004409id_/http://www.okstate.com:80/sports/m-baskbl/stats/030198aaa.html",
    "parse/checksum fail"
   ],
   [
@@ -323,25 +299,13 @@
    "parse/checksum fail"
   ],
   [
-   "http://web.archive.org/web/19990507231019id_/http://www.okstate.com:80/sports/m-baskbl/stats/112098aaa.html",
-   "parse/checksum fail"
-  ],
-  [
    "http://web.archive.org/web/19990422121105id_/http://www.okstate.com:80/sports/m-baskbl/stats/112198aaa.html",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/19990210061811id_/http://www.okstate.com:80/sports/m-baskbl/stats/112998aaa.html",
-   "parse/checksum fail"
-  ],
-  [
-   "http://web.archive.org/web/19990503115538id_/http://www.okstate.com:80/sports/m-baskbl/stats/112998aab.html",
    "parse/checksum fail"
   ]
  ],
  "stats": {
   "ok": 1,
-  "parse_fail": 20,
+  "parse_fail": 11,
   "checksum_fail": 0,
   "log_mismatch": 0
  }
