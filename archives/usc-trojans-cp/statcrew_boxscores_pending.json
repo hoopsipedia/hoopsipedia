@@ -1,0 +1,51 @@
+{
+ "games": {},
+ "quarantine": [
+  [
+   "http://web.archive.org/web/20190508183834id_/https://static.usctrojans.com/custompages/m-baskbl/itn-boatwright.html",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20190811022305id_/https://static.usctrojans.com/custompages/m-baskbl/itn-dhillon.html",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20190508183439id_/https://static.usctrojans.com/custompages/m-baskbl/itn-enfield.html",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20190811234826id_/https://static.usctrojans.com/custompages/m-baskbl/itn-jacobs.html",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20190811081650id_/https://static.usctrojans.com/custompages/m-baskbl/itn-jovanovic.html",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20190809210340id_/https://static.usctrojans.com/custompages/m-baskbl/itn-mclaughlin.html",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20190809210352id_/https://static.usctrojans.com/custompages/m-baskbl/itn-metu.html",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20191112093358id_/https://static.usctrojans.com/custompages/m-baskbl/itn-reinhardt.html",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20190811133338id_/https://static.usctrojans.com/custompages/m-baskbl/ncaacentral/ncaa-2017.html",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20190402181421id_/https://static.usctrojans.com/custompages/m-baskbl/usc-14-m-baskbl-calendar-panel.html",
+   "parse/checksum fail"
+  ]
+ ],
+ "stats": {
+  "ok": 0,
+  "parse_fail": 10,
+  "checksum_fail": 0,
+  "log_mismatch": 0
+ }
+}
