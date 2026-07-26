@@ -67,6 +67,13 @@ TEAM_HDR_RE = re.compile(
 DATE_RE = re.compile(r'^(?P<m>\d{1,2})[-/](?P<d>\d{1,2})[-/](?P<y>\d{2,4})\b')
 
 
+def clean_name(s):
+    """Collapse whitespace, then strip trailing dot-leaders / starter asterisk
+    the newer (mo2do) template appends after the name ("Rebassoo....... *").
+    Trailing-only, so mid-name initials ("A.J. Smith") are preserved."""
+    return re.sub(r'[.*\s]+$', '', re.sub(r'\s+', ' ', s).strip())
+
+
 def parse_statcrew(text):
     """Parse one StatCrew box score text -> game dict or None."""
     lines = text.split('\n')
@@ -82,9 +89,15 @@ def parse_statcrew(text):
                 y += 2000 if y < 50 else (1900 if y < 100 else 0)
                 date = f"{y:04d}-{int(dm.group('m')):02d}-{int(dm.group('d')):02d}"
         hm = TEAM_HDR_RE.match(plain)
-        if hm and 'Player Name' not in plain:
-            cur = {'name': hm.group('name').strip().title(), 'players': []}
-            teams.append(cur)
+        # Guard against the mo2do/CSTV template (post-2005): the SAME "HOME TEAM:"
+        # prefix heads the play-by-play columns ("...TIME SCORE MAR VISI"). Reject
+        # those, and cap at the first complete box so a duplicated box can't add a
+        # 3rd/4th team and break the len(teams)==2 check.
+        if (hm and 'Player Name' not in plain
+                and 'SCORE' not in plain and 'TIME' not in plain):
+            if len(teams) < 2:
+                cur = {'name': hm.group('name').strip().title(), 'players': []}
+                teams.append(cur)
             continue
         if cur is None:
             continue
@@ -95,7 +108,7 @@ def parse_statcrew(text):
             continue
         pm = PLAYER_RE.match(plain)
         if pm:
-            p = {'name': re.sub(r'\s+', ' ', pm.group('name')).strip(),
+            p = {'name': clean_name(pm.group('name')),
                  'fg': pm.group('fg'), 'tp': pm.group('tp3'), 'ft': pm.group('ft'),
                  'reb': int(pm.group('tot')), 'pf': int(pm.group('pf')),
                  'pts': int(pm.group('tp')), 'ast': int(pm.group('a')),
@@ -108,7 +121,7 @@ def parse_statcrew(text):
         pb = PLAYER_B_RE.match(plain)
         if pb:
             cur['players'].append(
-                {'name': re.sub(r'\s+', ' ', pb.group('name')).strip(),
+                {'name': clean_name(pb.group('name')),
                  'fg': f"{pb.group('fgm')}-{pb.group('fga')}",
                  'tp': f"{pb.group('t3m')}-{pb.group('t3a')}",
                  'ft': f"{pb.group('ftm')}-{pb.group('fta')}",
