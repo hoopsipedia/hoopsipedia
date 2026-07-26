@@ -569,6 +569,9 @@ def main():
         "Hawai'i Rainbow Warriors": 'hawai',  # box name uses a backtick: "Hawai`i"
         'UC Riverside Highlanders': 'riverside',  # first word "UC" too short/ambiguous
         'Purdue Fort Wayne Mastodons': 'fort wayne',  # "purdue" matches opp Purdue North Central
+        'Portland State Vikings': 'portland st',  # plain "portland" = Portland Pilots
+        'Idaho State Bengals': 'idaho st',        # plain "idaho" = Idaho Vandals
+        'North Carolina Central Eagles': 'central',  # first word "north" is useless
     }
     name_key = ALIASES.get(src['team_name'], src['team_name'].split()[0].lower())
     results, quarantine = {}, []
