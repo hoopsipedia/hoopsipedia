@@ -68,6 +68,19 @@ TEAM_HDR_RE = re.compile(
 DATE_RE = re.compile(r'^(?P<m>\d{1,2})[-/](?P<d>\d{1,2})[-/](?P<y>\d{2,4})\b')
 
 
+def mk_date(y, m, d):
+    """Build YYYY-MM-DD, or None if the source printed an impossible date.
+
+    Real box scores do contain typos (a Troy 2007 file says "11/31/07"). An
+    invalid date means we can't trust the game key, so the caller quarantines
+    that game rather than storing it — and a bad date can no longer crash a
+    whole harvest run mid-flight."""
+    try:
+        return datetime(y, m, d).strftime('%Y-%m-%d')
+    except ValueError:
+        return None
+
+
 def clean_name(s):
     """Collapse whitespace, then strip trailing dot-leaders / starter asterisk
     the newer (mo2do) template appends after the name ("Rebassoo....... *").
@@ -88,7 +101,7 @@ def parse_statcrew(text):
             if dm:
                 y = int(dm.group('y'))
                 y += 2000 if y < 50 else (1900 if y < 100 else 0)
-                date = f"{y:04d}-{int(dm.group('m')):02d}-{int(dm.group('d')):02d}"
+                date = mk_date(y, int(dm.group('m')), int(dm.group('d')))
         hm = TEAM_HDR_RE.match(plain)
         # Guard against the mo2do/CSTV template (post-2005): the SAME "HOME TEAM:"
         # prefix heads the play-by-play columns ("...TIME SCORE MAR VISI"). Reject
@@ -168,7 +181,7 @@ def parse_variant_c(text):
         if date is None:
             dm = DATE_C_RE.search(plain)
             if dm:
-                date = f'{int(dm.group(3)):04d}-{MONTHS[dm.group(1)]:02d}-{int(dm.group(2)):02d}'
+                date = mk_date(int(dm.group(3)), MONTHS[dm.group(1)], int(dm.group(2)))
         hm = HDR_C_RE.match(plain)
         if hm:
             cur = {'name': hm.group('name').strip(), 'players': []}
@@ -220,7 +233,9 @@ def parse_variant_d(text):
     dm = DATE_C_RE.search('\n'.join(lines))
     if not dm:
         return parse_variant_e(text)
-    date = f'{int(dm.group(3)):04d}-{MONTHS[dm.group(1)]:02d}-{int(dm.group(2)):02d}'
+    date = mk_date(int(dm.group(3)), MONTHS[dm.group(1)], int(dm.group(2)))
+    if not date:
+        return None
     teams = []
     i = 0
     while i < len(lines) and len(teams) < 2:
@@ -293,7 +308,9 @@ def parse_variant_e(text):
         mo, dy, y = int(dm.group(1)), int(dm.group(2)), int(dm.group(3))
     if not (1 <= mo <= 12 and 1 <= dy <= 31):
         return None
-    date = f"{y:04d}-{mo:02d}-{dy:02d}"
+    date = mk_date(y, mo, dy)
+    if not date:
+        return None
     teams, cur, cap = [], None, None
     for tok in re.finditer(r'<h4>(?P<h4>.*?)</h4>|<tr[^>]*>(?P<tr>.*?)</tr>',
                            text, re.S | re.I):
@@ -528,7 +545,10 @@ def main():
     def log_match(date, own, opp):
         if date < log_start:
             return True
-        base = datetime.strptime(date, '%Y-%m-%d')
+        try:
+            base = datetime.strptime(date, '%Y-%m-%d')
+        except (ValueError, TypeError):
+            return False  # unparseable date -> quarantine this game, not the run
         for off in (0, -1, 1):
             dd = (base + timedelta(days=off)).strftime('%Y-%m-%d')
             for g in by_date.get(dd, []):
