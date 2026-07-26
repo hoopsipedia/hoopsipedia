@@ -858,5 +858,85 @@
    "file_re": "/bko/bkc/.*box.*\\.html?$",
    "mode": "wayback"
   }
+ ],
+ "hofstra-pride": [
+  "2275",
+  "Hofstra Pride",
+  "gohofstra.com (Wayback)",
+  {
+   "cdx": "gohofstra.com/custompages/stats/mbb/*",
+   "file_re": "(?i)\\.html?$",
+   "mode": "wayback"
+  }
+ ],
+ "bowling-green-falcons": [
+  "189",
+  "Bowling Green Falcons",
+  "bgsufalcons.com (Wayback)",
+  {
+   "cdx": "bgsufalcons.com/custompages/stats/mbasketball/*",
+   "file_re": "(?i)\\.html?$",
+   "mode": "wayback"
+  }
+ ],
+ "troy-trojans": [
+  "2653",
+  "Troy Trojans",
+  "troytrojans.com (Wayback)",
+  {
+   "cdx": "troytrojans.com/custompages/stats/mbb/*",
+   "file_re": "(?i)\\.html?$",
+   "mode": "wayback"
+  }
+ ],
+ "eastern-michigan-eagles": [
+  "2199",
+  "Eastern Michigan Eagles",
+  "emueagles.com (Wayback)",
+  {
+   "cdx": "emueagles.com/custompages/mbball/*",
+   "file_re": "(?i)\\.html?$",
+   "mode": "wayback"
+  }
+ ],
+ "uc-riverside-highlanders": [
+  "27",
+  "UC Riverside Highlanders",
+  "gohighlanders.com (Wayback)",
+  {
+   "cdx": "gohighlanders.com/custompages/MBasketball/*",
+   "file_re": "(?i)\\.html?$",
+   "mode": "wayback"
+  }
+ ],
+ "purdue-fort-wayne-mastodons": [
+  "2870",
+  "Purdue Fort Wayne Mastodons",
+  "gomastodons.com (Wayback)",
+  {
+   "cdx": "gomastodons.com/custompages/Stats/MBB/*",
+   "file_re": "(?i)\\.html?$",
+   "mode": "wayback"
+  }
+ ],
+ "longwood-lancers": [
+  "2344",
+  "Longwood Lancers",
+  "longwoodlancers.com (Wayback)",
+  {
+   "cdx": "longwoodlancers.com/custompages/mbasket/*",
+   "file_re": "(?i)\\.html?$",
+   "mode": "wayback"
+  }
+ ],
+ "iupui-jaguars": [
+  "85",
+  "IU Indianapolis Jaguars",
+  "iupuijags.com (Wayback)",
+  {
+   "cdx": "iupuijags.com/custompages/M-Basketball/*",
+   "file_re": "(?i)\\.html?$",
+   "mode": "wayback"
+  }
  ]
 }
