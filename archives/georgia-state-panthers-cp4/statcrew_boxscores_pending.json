@@ -1,0 +1,695 @@
+{
+ "games": {},
+ "quarantine": [
+  [
+   "http://web.archive.org/web/20200805103215id_/https://static.georgiastatesports.com/custompages/stats/2010football/teamcume.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20200805102411id_/https://static.georgiastatesports.com/custompages/stats/2011football/teamcume.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20191127131856id_/https://static.georgiastatesports.com/custompages/stats/2012football/GSU01.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20191127131905id_/https://static.georgiastatesports.com/custompages/stats/2012football/GSU03.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20200805112434id_/https://static.georgiastatesports.com/custompages/stats/2012football/GSU04.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20191127132014id_/https://static.georgiastatesports.com/custompages/stats/2012football/GSU06.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20191127132020id_/https://static.georgiastatesports.com/custompages/stats/2012football/GSU08.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20191127132029id_/https://static.georgiastatesports.com/custompages/stats/2012football/GSU10.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20191127132025id_/https://static.georgiastatesports.com/custompages/stats/2012football/JMU-1027.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20191127132018id_/https://static.georgiastatesports.com/custompages/stats/2012football/RIGAME6.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20191127132055id_/https://static.georgiastatesports.com/custompages/stats/2012football/UMGS1110.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20200805112308id_/https://static.georgiastatesports.com/custompages/stats/2012football/UT0908.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20200805112522id_/https://static.georgiastatesports.com/custompages/stats/2012football/WMFB1205.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20200805102333id_/https://static.georgiastatesports.com/custompages/stats/2012football/teamcume.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20200805112107id_/https://static.georgiastatesports.com/custompages/stats/2013football/asu11.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20200805110924id_/https://static.georgiastatesports.com/custompages/stats/2013football/gsu01.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20200805111004id_/https://static.georgiastatesports.com/custompages/stats/2013football/gsu02.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20200805111109id_/https://static.georgiastatesports.com/custompages/stats/2013football/gsu04.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20200805111745id_/https://static.georgiastatesports.com/custompages/stats/2013football/gsu06.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20200805111949id_/https://static.georgiastatesports.com/custompages/stats/2013football/gsu09.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20200805112029id_/https://static.georgiastatesports.com/custompages/stats/2013football/gsu10.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20200805112147id_/https://static.georgiastatesports.com/custompages/stats/2013football/gsu12.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20200805102256id_/https://static.georgiastatesports.com/custompages/stats/2013football/teamcume.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20200805111831id_/https://static.georgiastatesports.com/custompages/stats/2013football/txst0713.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20200805111710id_/https://static.georgiastatesports.com/custompages/stats/2013football/uafb05.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20200805111908id_/https://static.georgiastatesports.com/custompages/stats/2013football/ulm08.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20200805111034id_/https://static.georgiastatesports.com/custompages/stats/2013football/wvugsu.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20200805110558id_/https://static.georgiastatesports.com/custompages/stats/2014football/gsu01.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20200805110645id_/https://static.georgiastatesports.com/custompages/stats/2014football/gsu02.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20200805110725id_/https://static.georgiastatesports.com/custompages/stats/2014football/gsu03.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20200805110807id_/https://static.georgiastatesports.com/custompages/stats/2014football/gsuwash.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20191127130106id_/https://static.georgiastatesports.com/custompages/stats/2014football/teamcume.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20200805110846id_/https://static.georgiastatesports.com/custompages/stats/2014football/ul05.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20200805105810id_/https://static.georgiastatesports.com/custompages/stats/2015football/176ed132.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20200805105933id_/https://static.georgiastatesports.com/custompages/stats/2015football/app05.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20200805110143id_/https://static.georgiastatesports.com/custompages/stats/2015football/asu08.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20200805110103id_/https://static.georgiastatesports.com/custompages/stats/2015football/bsufb07.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20200805110524id_/https://static.georgiastatesports.com/custompages/stats/2015football/cure15.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20200805110500id_/https://static.georgiastatesports.com/custompages/stats/2015football/gs1205.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20200805105651id_/https://static.georgiastatesports.com/custompages/stats/2015football/gsu01.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20200805105856id_/https://static.georgiastatesports.com/custompages/stats/2015football/gsu04.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20200805110224id_/https://static.georgiastatesports.com/custompages/stats/2015football/gsu08.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20200805110335id_/https://static.georgiastatesports.com/custompages/stats/2015football/gsu10.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20200805110420id_/https://static.georgiastatesports.com/custompages/stats/2015football/gsu11.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20200805105732id_/https://static.georgiastatesports.com/custompages/stats/2015football/nmsu0912.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20200805102137id_/https://static.georgiastatesports.com/custompages/stats/2015football/teamcume.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20200805110300id_/https://static.georgiastatesports.com/custompages/stats/2015football/txst0915.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20200805105609id_/https://static.georgiastatesports.com/custompages/stats/2016football/gsu01.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20191127130052id_/https://static.georgiastatesports.com/custompages/stats/2016football/teamcume.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20200805104944id_/https://static.georgiastatesports.com/custompages/stats/2017football/ccu05.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20200805104912id_/https://static.georgiastatesports.com/custompages/stats/2017football/chafb04.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20200805105526id_/https://static.georgiastatesports.com/custompages/stats/2017football/cure17.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20200805105218id_/https://static.georgiastatesports.com/custompages/stats/2017football/gs-8.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20200805104754id_/https://static.georgiastatesports.com/custompages/stats/2017football/gsu01.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20200805105103id_/https://static.georgiastatesports.com/custompages/stats/2017football/gsu06.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20200805105141id_/https://static.georgiastatesports.com/custompages/stats/2017football/gsu07.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20200805105342id_/https://static.georgiastatesports.com/custompages/stats/2017football/gsu10.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20200805105431id_/https://static.georgiastatesports.com/custompages/stats/2017football/gsu11.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20200805104830id_/https://static.georgiastatesports.com/custompages/stats/2017football/psugsu.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20200805101938id_/https://static.georgiastatesports.com/custompages/stats/2017football/teamcume.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20200805105301id_/https://static.georgiastatesports.com/custompages/stats/2017football/txst1017.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20200805105028id_/https://static.georgiastatesports.com/custompages/stats/2017football/ulm06.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20200805104633id_/https://static.georgiastatesports.com/custompages/stats/2018football/app10.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20200805104429id_/https://static.georgiastatesports.com/custompages/stats/2018football/asu07.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20200805104510id_/https://static.georgiastatesports.com/custompages/stats/2018football/ccu08.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20200805102447id_/https://static.georgiastatesports.com/custompages/stats/2018football/gsu01.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20200805104240id_/https://static.georgiastatesports.com/custompages/stats/2018football/gsu04.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20200805104312id_/https://static.georgiastatesports.com/custompages/stats/2018football/gsu05.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20200805104520id_/https://static.georgiastatesports.com/custompages/stats/2018football/gsu09.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20200805104712id_/https://static.georgiastatesports.com/custompages/stats/2018football/gsu12.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20200805104557id_/https://static.georgiastatesports.com/custompages/stats/2018football/la10.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20200805104124id_/https://static.georgiastatesports.com/custompages/stats/2018football/st090818.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20200805101638id_/https://static.georgiastatesports.com/custompages/stats/2018football/teamcume.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20200805104343id_/https://static.georgiastatesports.com/custompages/stats/2018football/troy06.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20200805104207id_/https://static.georgiastatesports.com/custompages/stats/2018football/umgame3.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20191127130123id_/https://static.georgiastatesports.com/custompages/stats/2019football/ccu06.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20191127130058id_/https://static.georgiastatesports.com/custompages/stats/2019football/gsu02.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20191127130119id_/https://static.georgiastatesports.com/custompages/stats/2019football/gsu05.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20191127130315id_/https://static.georgiastatesports.com/custompages/stats/2019football/gsu07.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20191127130533id_/https://static.georgiastatesports.com/custompages/stats/2019football/gsu08.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20191127130543id_/https://static.georgiastatesports.com/custompages/stats/2019football/gsu10.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20191127130549id_/https://static.georgiastatesports.com/custompages/stats/2019football/gsu11.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20191127130026id_/https://static.georgiastatesports.com/custompages/stats/2019football/teamcume.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20191127130102id_/https://static.georgiastatesports.com/custompages/stats/2019football/txst0419.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20191127130537id_/https://static.georgiastatesports.com/custompages/stats/2019football/ulm09.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20191127130029id_/https://static.georgiastatesports.com/custompages/stats/2019football/ut0831.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20191127130101id_/https://static.georgiastatesports.com/custompages/stats/2019football/wmu0914.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20201003064059id_/https://static.georgiastatesports.com/custompages/stats/2020football/teamcume.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20220626111110id_/https://static.georgiastatesports.com/custompages/stats/baseball/2008/plyr_16.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20241204233723id_/https://static.georgiastatesports.com/custompages/stats/mensbasketball/2010-11/teamcume.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20220626002846id_/https://static.georgiastatesports.com/custompages/stats/mensbasketball/2013-14/gsu11.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20250125100919id_/https://static.georgiastatesports.com/custompages/stats/mensbasketball/2014-15/teamcume.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20250612075207id_/https://static.georgiastatesports.com/custompages/stats/mensbasketball/2015-16/teamcume.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20250612131108id_/https://static.georgiastatesports.com/custompages/stats/mensbasketball/2016-17/teamcume.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20250612121947id_/https://static.georgiastatesports.com/custompages/stats/mensbasketball/2017-18/teamcume.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20250618162737id_/https://static.georgiastatesports.com/custompages/stats/menssoccer/2016/teamcume.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20220626115918id_/https://static.georgiastatesports.com/custompages/stats/softball/2013/gsu27.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20250613003159id_/https://static.georgiastatesports.com/custompages/stats/softball/2016/teamcume.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20200808164750id_/https://static.georgiastatesports.com/custompages/stats/volleyball/2007/teamcume.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20200808164705id_/https://static.georgiastatesports.com/custompages/stats/volleyball/2008/teamcume.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20200808164619id_/https://static.georgiastatesports.com/custompages/stats/volleyball/2009/teamcume.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20200808164539id_/https://static.georgiastatesports.com/custompages/stats/volleyball/2010/teamcume.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20200808164428id_/https://static.georgiastatesports.com/custompages/stats/volleyball/2011/teamcume.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20191130160148id_/https://static.georgiastatesports.com/custompages/stats/volleyball/2012/gsu_11.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20200808164347id_/https://static.georgiastatesports.com/custompages/stats/volleyball/2012/teamstat.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20191130160210id_/https://static.georgiastatesports.com/custompages/stats/volleyball/2012/troy01.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20200808164301id_/https://static.georgiastatesports.com/custompages/stats/volleyball/2013/teamcume.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20191130160032id_/https://static.georgiastatesports.com/custompages/stats/volleyball/2014/GSU24.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20191130160023id_/https://static.georgiastatesports.com/custompages/stats/volleyball/2014/GSU28.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20191130160022id_/https://static.georgiastatesports.com/custompages/stats/volleyball/2014/GSU29.HTM",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20200808164219id_/https://static.georgiastatesports.com/custompages/stats/volleyball/2014/teamstat.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20191130155928id_/https://static.georgiastatesports.com/custompages/stats/volleyball/2015/gsu19.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20200808164134id_/https://static.georgiastatesports.com/custompages/stats/volleyball/2015/teamstat.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20191130160409id_/https://static.georgiastatesports.com/custompages/stats/volleyball/2016/plyr_14.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20191130160420id_/https://static.georgiastatesports.com/custompages/stats/volleyball/2016/plyr_3.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20240713153541id_/https://static.georgiastatesports.com/custompages/stats/volleyball/2016/teamcume.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20200808164046id_/https://static.georgiastatesports.com/custompages/stats/volleyball/2016/teamstat.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20191130155745id_/https://static.georgiastatesports.com/custompages/stats/volleyball/2017/bi_2.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20250612213514id_/https://static.georgiastatesports.com/custompages/stats/volleyball/2017/teamcume.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20200808163933id_/https://static.georgiastatesports.com/custompages/stats/volleyball/2017/teamstat.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20191130155612id_/https://static.georgiastatesports.com/custompages/stats/volleyball/2018/gsu18.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20220626081238id_/https://static.georgiastatesports.com/custompages/stats/volleyball/2018/plyr_18.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20200808163829id_/https://static.georgiastatesports.com/custompages/stats/volleyball/2018/teamstat.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20191130155458id_/https://static.georgiastatesports.com/custompages/stats/volleyball/2019/asu23.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20191130155519id_/https://static.georgiastatesports.com/custompages/stats/volleyball/2019/ccu14.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20191130155545id_/https://static.georgiastatesports.com/custompages/stats/volleyball/2019/gsu01.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20191130155543id_/https://static.georgiastatesports.com/custompages/stats/volleyball/2019/gsu02.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20191130155540id_/https://static.georgiastatesports.com/custompages/stats/volleyball/2019/gsu03.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20191130155538id_/https://static.georgiastatesports.com/custompages/stats/volleyball/2019/gsu04.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20191130155537id_/https://static.georgiastatesports.com/custompages/stats/volleyball/2019/gsu05.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20191130155536id_/https://static.georgiastatesports.com/custompages/stats/volleyball/2019/gsu06.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20191130155532id_/https://static.georgiastatesports.com/custompages/stats/volleyball/2019/gsu07.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20191130155528id_/https://static.georgiastatesports.com/custompages/stats/volleyball/2019/gsu08.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20191130155526id_/https://static.georgiastatesports.com/custompages/stats/volleyball/2019/gsu09.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20191130155524id_/https://static.georgiastatesports.com/custompages/stats/volleyball/2019/gsu10.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20191130155522id_/https://static.georgiastatesports.com/custompages/stats/volleyball/2019/gsu11.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20191130155520id_/https://static.georgiastatesports.com/custompages/stats/volleyball/2019/gsu12.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20191130155518id_/https://static.georgiastatesports.com/custompages/stats/volleyball/2019/gsu14.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20191130155516id_/https://static.georgiastatesports.com/custompages/stats/volleyball/2019/gsu15.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20191130155511id_/https://static.georgiastatesports.com/custompages/stats/volleyball/2019/gsu16.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20191130155510id_/https://static.georgiastatesports.com/custompages/stats/volleyball/2019/gsu17.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20191130155508id_/https://static.georgiastatesports.com/custompages/stats/volleyball/2019/gsu18.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20191130155506id_/https://static.georgiastatesports.com/custompages/stats/volleyball/2019/gsu19.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20191130155505id_/https://static.georgiastatesports.com/custompages/stats/volleyball/2019/gsu20.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20191130155501id_/https://static.georgiastatesports.com/custompages/stats/volleyball/2019/gsu22.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20191130155451id_/https://static.georgiastatesports.com/custompages/stats/volleyball/2019/gsu24.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20191130155435id_/https://static.georgiastatesports.com/custompages/stats/volleyball/2019/gsu25.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20191130155434id_/https://static.georgiastatesports.com/custompages/stats/volleyball/2019/gsu26.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20191130155433id_/https://static.georgiastatesports.com/custompages/stats/volleyball/2019/gsu27.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20191130160215id_/https://static.georgiastatesports.com/custompages/stats/volleyball/2019/plyr_1.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20191130160223id_/https://static.georgiastatesports.com/custompages/stats/volleyball/2019/plyr_10.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20191130160233id_/https://static.georgiastatesports.com/custompages/stats/volleyball/2019/plyr_11.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20191130160218id_/https://static.georgiastatesports.com/custompages/stats/volleyball/2019/plyr_12.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20191130160237id_/https://static.georgiastatesports.com/custompages/stats/volleyball/2019/plyr_13.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20191130160235id_/https://static.georgiastatesports.com/custompages/stats/volleyball/2019/plyr_14.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20191130160216id_/https://static.georgiastatesports.com/custompages/stats/volleyball/2019/plyr_16.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20191130160228id_/https://static.georgiastatesports.com/custompages/stats/volleyball/2019/plyr_17.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20191130160231id_/https://static.georgiastatesports.com/custompages/stats/volleyball/2019/plyr_18.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20191130160234id_/https://static.georgiastatesports.com/custompages/stats/volleyball/2019/plyr_2.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20191130160230id_/https://static.georgiastatesports.com/custompages/stats/volleyball/2019/plyr_20.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20191130160225id_/https://static.georgiastatesports.com/custompages/stats/volleyball/2019/plyr_4.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20191130160217id_/https://static.georgiastatesports.com/custompages/stats/volleyball/2019/plyr_5.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20191130160241id_/https://static.georgiastatesports.com/custompages/stats/volleyball/2019/plyr_7.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20191130160221id_/https://static.georgiastatesports.com/custompages/stats/volleyball/2019/plyr_8.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20191130160244id_/https://static.georgiastatesports.com/custompages/stats/volleyball/2019/plyr_tm.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20191130155426id_/https://static.georgiastatesports.com/custompages/stats/volleyball/2019/teamcume.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20191130155430id_/https://static.georgiastatesports.com/custompages/stats/volleyball/2019/teamgbg.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20191130155334id_/https://static.georgiastatesports.com/custompages/stats/volleyball/2019/teamstat.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20191130155503id_/https://static.georgiastatesports.com/custompages/stats/volleyball/2019/usa19-24.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20240721090926id_/https://static.georgiastatesports.com/custompages/stats/womensbasketball/2015-16/teamstat.htm",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20250612205149id_/https://static.georgiastatesports.com/custompages/stats/womensbasketball/2016-17/teamcume.htm",
+   "parse/checksum fail"
+  ]
+ ],
+ "stats": {
+  "ok": 0,
+  "parse_fail": 171,
+  "checksum_fail": 0,
+  "log_mismatch": 0
+ }
+}
