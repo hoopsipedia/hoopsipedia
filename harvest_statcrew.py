@@ -572,6 +572,13 @@ def main():
         'Portland State Vikings': 'portland st',  # plain "portland" = Portland Pilots
         'Idaho State Bengals': 'idaho st',        # plain "idaho" = Idaho Vandals
         'North Carolina Central Eagles': 'central',  # first word "north" is useless
+        # round-3 custompages: first word collides with a different program
+        'Alabama A&M Bulldogs': 'alabama a', 'Texas State Bobcats': 'texas st',
+        'Long Island University Sharks': 'long island', 'Le Moyne Dolphins': 'moyne',
+        'Western Illinois Leathernecks': 'western illinois',
+        'Prairie View A&M Panthers': 'prairie view',
+        'Southeast Missouri State Redhawks': 'southeast missouri',
+        'Tarleton State Texans': 'tarleton', 'Weber State Wildcats': 'weber',
     }
     name_key = ALIASES.get(src['team_name'], src['team_name'].split()[0].lower())
     results, quarantine = {}, []
