@@ -1,0 +1,35 @@
+{
+ "games": {},
+ "quarantine": [
+  [
+   "http://web.archive.org/web/20150906135328id_/http://www.sienasaints.com/sports/m-baskbl/stats/081903aaa.html",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20150906134555id_/http://www.sienasaints.com/sports/m-baskbl/stats/082003aaa.html",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20150912075257id_/http://www.sienasaints.com/sports/m-baskbl/stats/082303aaa.html",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20150906135439id_/http://www.sienasaints.com/sports/m-baskbl/stats/082303aab.html",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20150906133419id_/http://www.sienasaints.com/sports/m-baskbl/stats/082503aaa.html",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20150906133457id_/http://www.sienasaints.com/sports/m-baskbl/stats/082503aab.html",
+   "parse/checksum fail"
+  ]
+ ],
+ "stats": {
+  "ok": 0,
+  "parse_fail": 6,
+  "checksum_fail": 0,
+  "log_mismatch": 0
+ }
+}

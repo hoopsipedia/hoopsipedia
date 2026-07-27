@@ -1,0 +1,27 @@
+{
+ "games": {},
+ "quarantine": [
+  [
+   "http://web.archive.org/web/20080105184344id_/http://guhoyas.cstv.com:80/sports/m-baskbl/stats/012505aaa.html",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20070613115612id_/http://guhoyas.cstv.com:80/sports/m-baskbl/stats/031707aaa.html",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20070513015136id_/http://guhoyas.cstv.com:80/sports/m-baskbl/stats/032507aaa.html",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20080105184349id_/http://guhoyas.cstv.com:80/sports/m-baskbl/stats/120805aaa.html",
+   "parse/checksum fail"
+  ]
+ ],
+ "stats": {
+  "ok": 0,
+  "parse_fail": 4,
+  "checksum_fail": 0,
+  "log_mismatch": 0
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "games": {},
+ "quarantine": [
+  [
+   "http://web.archive.org/web/20060319065523id_/http://smumustangs.collegesports.com:80/sports/m-baskbl/stats/012406aaa.html",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20060314204316id_/http://smumustangs.collegesports.com:80/sports/m-baskbl/stats/012906aaa.html",
+   "parse/checksum fail"
+  ],
+  [
+   "http://web.archive.org/web/20060314230122id_/http://smumustangs.collegesports.com:80/sports/m-baskbl/stats/020406aaa.html",
+   "parse/checksum fail"
+  ]
+ ],
+ "stats": {
+  "ok": 0,
+  "parse_fail": 3,
+  "checksum_fail": 0,
+  "log_mismatch": 0
+ }
+}
