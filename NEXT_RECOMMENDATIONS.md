@@ -54,11 +54,36 @@ commit messages rather than the diffs — the regenerated data files dominate
 the diff but the reasoning is in the messages. Nothing yet reads `players/`,
 so merging changes no user-facing behaviour except the corrected data.
 
-### 2. Narrative repair pass (unchanged from June — still the top content risk)
-354 findings, **245 provably wrong**, including wholesale fabrications, all
-still live on team pages. Mechanics unchanged: an agent drafts corrections
-from the already-collected sources, you approve in batches of ~25, a script
-applies only approved entries. Two or three 20-minute sessions.
+### 2. Narrative repairs — **almost done already**; 5 entries await approval
+Correcting the June doc, which I initially carried forward unchecked: this
+pass is not pending. **368 repairs were drafted and applied on 2026-07-07**
+and I verified all 368 landed in `team_history.json`. Cross-checking the
+351 findings in the two FACTCHECK files against the applied repairs (joined
+by team **id**, not display name — USF's narratives live under "USF Bulls",
+which hides them from a name join) leaves only four genuinely unaddressed,
+and one of those has since been fixed on the data side:
+
+- **Georgia Southern** — the finding was an internal contradiction (blurb
+  claimed NCAA appearances, `data.json` said zero). `data.json` H now shows
+  3 appearances, so the contradiction is gone. No action.
+- **American** `founded` 1925 → 1926, plus the matching blurb sentence.
+- **George Washington** `founded` 1906 → 1912, plus its blurb sentence.
+- **Quinnipiac** `iconicMoment` — a fabricated "2018 MAAC tournament run"
+  (they went 12-21 that year; it appears to conflate the women's program).
+
+All five edits are drafted in `narrative_repairs.json` under batch
+`sweep2_2026-07-28` with `status: "proposed"`, so they are inert —
+`apply_narrative_repairs.py` only touches `approved`. Each carries its
+sources and a note on what corroborates it; I pre-validated that every
+`find` string matches exactly once, so approving them cannot fail
+mid-apply. GW and Quinnipiac are confirmed by the repo's own `seasons.json`
+(GW's seasons start 1912-13; Quinnipiac's best season is 2023-24 at 24-10).
+American rests on the external source alone — `seasons.json` only reaches
+back to 1966-67 for them — so it is flagged medium confidence.
+
+**Your step:** flip `status` to `"approved"` on the ones you accept, then
+run `python3 scripts/apply_narrative_repairs.py`. Five minutes, not three
+sessions.
 
 ### 3. Re-scrape the four known season gaps — needs your laptop
 `web.archive.org` and the live site are both blocked from Claude Code's
@@ -114,7 +139,8 @@ still deployed; dropping them is still one release cycle away.
   additions (Bellarmine, Stonehill, Le Moyne, Mercyhurst, Lindenwood).
 
 ## What I'd explicitly NOT do next
-- Don't bulk-apply narrative fixes without batch approval — accuracy
-  culture is the product.
+- Don't bulk-approve the 5 proposed narrative fixes without reading them —
+  accuracy culture is the product, and one of them (American's 1926) has no
+  in-repo corroboration.
 - Don't ship a players page ranked by archive totals. See finding 3.
 - Don't delete the monoliths until one full release cycle has passed.
