@@ -70,5 +70,25 @@
  {
   "key": "2016/notre-dame-fighting-irish-vs-michigan-wolverines",
   "note": "ND 70-63 (winner was flipped)"
+ },
+ {
+  "key": "1957/byu-vs-idaho-state",
+  "note": "internally consistent box left in store; verify vs BYU 1956-57 season (suspected SR log gap) and re-scrape the season into games files"
+ },
+ {
+  "key": "games-gap/michigan-1992",
+  "note": "Michigan 1991-92 season missing from games_1.json (only the two Final Four games present) \u2014 re-scrape SR gamelog"
+ },
+ {
+  "key": "games-gap/oklahoma-state-1992",
+  "note": "Oklahoma State 1991-92 season missing from games files \u2014 re-scrape SR gamelog"
+ },
+ {
+  "key": "games-gap/purdue-1996",
+  "note": "Purdue 1995-96 season missing (documented June) \u2014 re-scrape SR gamelog"
+ },
+ {
+  "key": "quarantine/2026-07-28",
+  "note": "8 entries in sr_boxscores_quarantine.json need source re-fetch to recover opponent identity (UCA custompages, SD/UC Davis statcrew, 1957 USF-Idaho State)"
  }
 ]
