@@ -201,6 +201,13 @@ no longer does, and shipping this ordering as a "legends" list would repeat
 the fabricated-narrative failure mode this project has already paid for.
 Use `players/index.json` → `pointsPerGame` for anything user-facing.
 
+Independent confirmation of the recovered pre-1980 lines: the NCAA record
+book (`notable_lines.json`) carries "115 — Pete Maravich (64), LSU and Dan
+Issel (51), Kentucky, Feb. 21, 1970". The store's parsed box score for
+`1970/kentucky-wildcats-vs-louisiana-state-1970-02-21` independently gives
+Issel 51 and Maravich 64. Two unrelated sources agreeing to the point on a
+game that the old parser discarded entirely.
+
 Validation performed (2026-07-28): union of `players/` slices is
 byte-identical to `players.json` (49,811 records, no duplicates, no
 orphans); every referenced slice file loads; leaderboards contain no
