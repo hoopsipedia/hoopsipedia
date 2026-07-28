@@ -16,7 +16,8 @@ never "career".**
 The June framing of this file — "~2,892 games, heavily NCAA-tournament
 weighted" — **is obsolete and the old guidance to label the data
 "tournament archive" is now wrong.** After the July Wayback/StatCrew
-harvest the archive is **20,679 games**, and:
+harvest the archive is **20,320 unique games** (359 duplicate entries were
+collapsed on 2026-07-28), and:
 
 | slice | share |
 |---|---|
@@ -103,7 +104,7 @@ ever recorded for a player is `null` in both `totals` and `perGame`.
 
 This exists because box scores did not always track every stat: assists,
 steals and blocks are absent from most pre-1980 lines, and early-1950s
-lines often print only points/FG/FT. 4,258 of 54,377 players have blocks
+lines often print only points/FG/FT. 4,258 of 53,916 players have blocks
 that were never recorded. Publishing those as `0` would state, as fact,
 that a 1954 player recorded no blocks in a game nobody was counting blocks
 in. **A UI must render null as "—", not 0**, and should prefer `perGame`
@@ -138,12 +139,12 @@ the cap unnecessary.
 
 | Metric | Value | (2026-06-12) |
 |---|---|---|
-| Games processed | 20,679 | 2,892 |
-| Stat lines parsed | 409,365 | 56,637 |
+| Games processed | 20,320 (post-dedup) | 2,892 |
+| Stat lines parsed | 402,500 | 56,637 |
 | Stat lines skipped (unparseable) | 174 (0.04%) | 0 |
-| Player-team entries before filter | 94,143 | 19,023 |
-| Player-team entries written | 54,377 | 11,768 |
-| Master size | 18,471,807 bytes | 3,324,497 |
+| Player-team entries before filter | 93,950 | 19,023 |
+| Player-team entries written | 53,916 | 11,768 |
+| Master size | 18,314,175 bytes | 3,324,497 |
 | D-I programs with archived players | 354 of 365 | — |
 
 ### The parser was rejecting a third of a million real stat lines
@@ -181,16 +182,16 @@ era — all 179 of that file's entries are already merged into
 
 | # | Player | Team | G | Pts |
 |---|---|---|---|---|
-| 1 | Charles Jenkins | hofstra | 118 | 2,301 |
-| 2 | Bryant Stith | virginia | 105 | 2,063 |
-| 3 | Troy Bell | boston-college | 87 | 1,909 |
-| 4 | Antwan Carter | longwood | 122 | 1,873 |
-| 5 | Jeff Lamp | virginia | 93 | 1,761 |
-| 6 | Jermaine Hall | wagner | 85 | 1,736 |
-| 7 | Adrian Oliver | san-jose-state | 80 | 1,725 |
-| 8 | Steven Smith | la-salle | 95 | 1,703 |
-| 9 | Chris Williams | virginia | 111 | 1,700 |
-| 10 | Rodney Green | la-salle | 106 | 1,645 |
+| 1 | Jenkins, Charles | hofstra | 117 | 2,282 |
+| 2 | Bryant Stith | virginia | 104 | 2,023 |
+| 3 | Todd Day | arkansas | 100 | 1,918 |
+| 4 | BELL, Troy | boston-college | 87 | 1,909 |
+| 5 | Carter, Antwan | longwood | 122 | 1,873 |
+| 6 | Jeff Lamp | virginia | 93 | 1,774 |
+| 7 | Hall, Jermaine | wagner | 85 | 1,736 |
+| 8 | Chris Williams | virginia | 110 | 1,688 |
+| 9 | SMITH, Steven | la-salle | 92 | 1,663 |
+| 10 | GREEN, Rodney | la-salle | 106 | 1,645 |
 
 Read this table as a **coverage diagnostic**: it is Hofstra, Virginia,
 Longwood, Wagner and La Salle because those programs were harvested to
@@ -209,7 +210,7 @@ Issel 51 and Maravich 64. Two unrelated sources agreeing to the point on a
 game that the old parser discarded entirely.
 
 Validation performed (2026-07-28): union of `players/` slices is
-byte-identical to `players.json` (49,811 records, no duplicates, no
+byte-identical to `players.json` (53,916 records, no duplicates, no
 orphans); every referenced slice file loads; leaderboards contain no
 non-D-I team slug; the rate leaderboard respects its own 8-game floor. All
 six assertions run in `tests/test_engine_invariants.py`. Earlier

@@ -12,13 +12,14 @@ than merely large:
 | | before | after |
 |---|---|---|
 | box scores contradicted by the game logs | 84 | **1** |
-| box scores log-verified | 16,906 | **19,502** |
+| box scores log-verified | 16,906 | **19,143** |
 | `upset_history.json` contradictions | 13 | **0** (332/332) |
 | unparseable player stat lines | 33,413 (8.2%) | **174 (0.04%)** |
-| players indexed | 11,768 | **54,377** |
-| invariant tests | 48 | **54** |
+| duplicate box-score entries | 359 | **0** (28 flagged for manual merge) |
+| players indexed | 11,768 | **53,916** |
+| invariant tests | 48 | **57** |
 
-Everything below is on `claude/hoopsipedia-work-kctyau` (13 commits), not
+Everything below is on `claude/hoopsipedia-work-kctyau` (20 commits), not
 merged. **Nothing here is deployed yet.**
 
 ### The three findings that matter
@@ -38,7 +39,16 @@ merged. **Nothing here is deployed yet.**
    population the site exists for — Austin Carr, Issel, Bradds, Maravich's
    64-point game.
 
-3. **The archive stopped being tournament-shaped, which broke a premise.**
+3. **359 games were stored twice**, under two key generations
+   (`1996/princeton-vs-ucla` and `1996/princeton-tigers-vs-ucla-bruins`).
+   That inflated `players.json` game counts for 4,703 players — and the
+   duplicates cluster in famous upsets, i.e. exactly what a player page
+   would showcase. Deduped, but conservatively: 28 groups are left alone
+   because the two copies carry genuinely different rosters (one holds
+   Junior Burrough, another Metta World Peace on the 1999 St. John's
+   roster), and collapsing them would drop a real player.
+
+4. **The archive stopped being tournament-shaped, which broke a premise.**
    It is now ~72% regular season and unevenly harvested (Arkansas 69.6% of
    its games, Duke 13.7%). Any leaderboard sorted by archive totals ranks
    *harvest depth*, not players: Laettner drops off entirely and Hofstra's
@@ -49,7 +59,7 @@ merged. **Nothing here is deployed yet.**
 ## Recommended priority order
 
 ### 1. Review and merge the branch
-13 commits, all data-integrity work, 54 tests passing. Worth reading the
+20 commits, all data-integrity work, 57 tests passing. Worth reading the
 commit messages rather than the diffs — the regenerated data files dominate
 the diff but the reasoning is in the messages. Nothing yet reads `players/`,
 so merging changes no user-facing behaviour except the corrected data.
@@ -112,7 +122,7 @@ frontend refactor and mixing it into a data-repair branch would make both
 unreviewable. Worth its own branch.
 
 ### 6. Payload cut, continued
-`players.json` (18.5MB) joins `games_1/2/3` and `sr_boxscores` as a master
+`players.json` (18.3MB) joins `games_1/2/3` and `sr_boxscores` as a master
 build artifact the browser never fetches. The transition fallbacks are
 still deployed; dropping them is still one release cycle away.
 
@@ -122,7 +132,7 @@ still deployed; dropping them is still one release cycle away.
 - **Michigan as 2026 champion** in data.json (NCY) — 10-second check.
 - **Fact-check review** — the two FACTCHECK_FINDINGS files.
 - **Backups off-machine** — tarballs still live only on the laptop.
-- **`players.json` in git** — 18.5MB of build artifact per rebuild is real
+- **`players.json` in git** — 18.3MB of build artifact per rebuild is real
   repo weight. Fine for now; worth deciding whether it belongs in the repo
   at all or should be generated at deploy time.
 
