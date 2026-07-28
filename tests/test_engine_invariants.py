@@ -514,6 +514,73 @@ def test_games_shard_disjointness(fnames):
           not dupes, first_bad(dupes))
 
 
+def test_games_keys_are_real_teams(fnames, data_h):
+    # Every games-file key must be a live data.json H id. A key that is not
+    # owns games no page can ever render: VMI's real 1,913-game log sat under
+    # orphan id 157 for months while VMI's own id held a copy of
+    # Valparaiso's, so the VMI page showed Valpo's history (July 2026). Four
+    # more orphans (2563/2566/2656/2631) were duplicate logs that also
+    # double-counted their games into the ranking engine.
+    orphans = []
+    for fname in fnames:
+        try:
+            d = load(fname)
+        except Exception:
+            return
+        if not isinstance(d, dict):
+            continue
+        orphans += [(tid, fname) for tid in d if tid not in data_h]
+    check("games files: every team key exists in data.json H",
+          not orphans, first_bad(orphans))
+
+
+def test_games_text_is_not_mojibake(fnames):
+    # Double-encoded UTF-8 (latin-1 bytes re-read as UTF-8) mangled 1,997
+    # opp_slug/arena strings — en-dashes and accents in names like
+    # "Southern-New Orleans" and "Coliseo Ruben Rodriguez". The tell is a
+    # lone 'Â'/'â'/'Ã' before punctuation, which real names never contain.
+    bad = []
+    for fname in fnames:
+        try:
+            d = load(fname)
+        except Exception:
+            return
+        if not isinstance(d, dict):
+            continue
+        for tid, v in d.items():
+            rows = v.get("games") if isinstance(v, dict) else v
+            for g in rows or []:
+                for field in ("opp_slug", "arena"):
+                    s = g.get(field)
+                    if isinstance(s, str) and re.search("[ÂâÃ]", s):
+                        bad.append((fname, tid, field, s))
+    check("games files: no double-encoded UTF-8 in opp_slug/arena",
+          not bad, first_bad(bad))
+
+
+def test_boxscores_have_two_distinct_teams():
+    # A box score whose two sides are the same program is a parser failure,
+    # not a game (July 2026: four "Central Arkansas vs Central Arkansas"
+    # entries plus South Dakota and UC Davis self-pairs). They are moved to
+    # sr_boxscores_quarantine.json, never left in the store.
+    try:
+        store = load("sr_boxscores.json")
+    except Exception as exc:
+        check("sr_boxscores.json: parses", False, repr(exc))
+        return
+    selfpairs = []
+    for key, entry in store.items():
+        if key == "_metadata" or not isinstance(entry, dict):
+            continue
+        teams = entry.get("teams") or []
+        if len(teams) == 2:
+            a, b = (str(t.get("name", "")).strip().lower() for t in teams)
+            if a and a == b:
+                selfpairs.append(key)
+    check("sr_boxscores.json: no entry pairs a team against itself",
+          not selfpairs, first_bad(selfpairs))
+
+
 def test_players_slices(data_h):
     # players/ slices are what the browser fetches; players.json is the
     # master. A slice set that does not reconstitute the master exactly means
@@ -575,6 +642,9 @@ def main():
     for f in games_files:
         test_games_file(f)
     test_games_shard_disjointness(games_files)
+    test_games_keys_are_real_teams(games_files, data_h)
+    test_games_text_is_not_mojibake(games_files)
+    test_boxscores_have_two_distinct_teams()
     test_players_slices(data_h)
     print("-" * 70)
     print("%d passed, %d failed, %d skipped (known data issues)"
