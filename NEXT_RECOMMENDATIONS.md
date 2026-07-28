@@ -1,7 +1,7 @@
 # What To Do Next — Recommendation for Josh (2026-07-28)
 
 Supersedes the 2026-06-12 version, which predates the July box-score
-expansion (2,895 → 20,679 games) and the integrity pass that followed it.
+expansion (2,895 → 20,320 unique games) and the integrity pass that followed.
 
 ## Where things stand
 
@@ -19,10 +19,10 @@ than merely large:
 | players indexed | 11,768 | **53,916** |
 | invariant tests | 48 | **57** |
 
-Everything below is on `claude/hoopsipedia-work-kctyau` (20 commits), not
+Everything below is on `claude/hoopsipedia-work-kctyau` (19 commits), not
 merged. **Nothing here is deployed yet.**
 
-### The three findings that matter
+### The four findings that matter
 
 1. **VMI's team page was rendering Valparaiso's history.** VMI's real
    1,913-game log sat under orphan id `157`, which no page owns, while
@@ -59,7 +59,7 @@ merged. **Nothing here is deployed yet.**
 ## Recommended priority order
 
 ### 1. Review and merge the branch
-20 commits, all data-integrity work, 57 tests passing. Worth reading the
+19 commits, all data-integrity work, 57 tests passing. Worth reading the
 commit messages rather than the diffs — the regenerated data files dominate
 the diff but the reasoning is in the messages. Nothing yet reads `players/`,
 so merging changes no user-facing behaviour except the corrected data.
@@ -114,14 +114,49 @@ non-negotiables, both documented in `PLAYERS_NOTES.md`: default the sort to
 4,258 players have blocks that were never recorded, and printing 0 would
 assert a fact about eras that didn't count them.
 
-### 5. Wave 3: index.html modularization
+### 5. Fix the box-score matcher in index.html — it shows the wrong game
+**Found late in this session; user-facing and worth doing before the
+players page.** `index.html` matches a game to its box score by testing
+whether either team name contains the *last word* of the other, within a
+year, then takes the first hit and stops:
+
+```js
+const hasT1 = srTeams.some(n => t1Short.includes(n.split(' ').pop())
+                             || n.includes(t1Short.split(' ').pop()));
+```
+
+Last-word matching cannot tell programs apart. Measured against the real
+store: **51.9% of entries (10,537 of 20,320) match more than one game in
+their own year, and 5,776 of those collisions are with a different pair of
+programs entirely.** Concretely, `arkansas-vs-iowa` collides with
+`arkansas-razorbacks-vs-iowa-st`; `illinois-vs-georgia` with
+`georgia-tech-vs-illinois`; `ohio-state-vs-iowa-state` with
+`illinois-state-vs-usc` (both end in "State"). Which one a user sees is
+iteration order. Deduping the store helped the count but not this — the
+cause is the matcher.
+
+The fix is already sitting in the repo: `team_name_canon.json` (64KB) maps
+every team-name string in the store to one canonical program slug, which is
+exactly the identity this comparison needs. Match on canonical slug pair,
+and when both the key and the game carry a date, require the dates to agree
+(that last part is what separates the three Louisville–Memphis State
+meetings of 1985). Simulated over the full store, that combination drops
+ambiguity from 51.9% to **0.5%** (98 entries, all genuine same-season
+repeat meetings with no date on one side).
+
+I did not implement it: it is a frontend change to the 23.5K-line monolith
+that I cannot exercise end-to-end from here, and it belongs with the other
+frontend work rather than in a data-repair branch. The simulation above is
+the acceptance test — port the matcher, re-run it, expect ~98.
+
+### 6. Wave 3: index.html modularization
 The 23.5K-line monolith is the last structural debt, and it gates the
 queued UI work (On This Day module, unified-rankings page, XSS/CSP polish,
 mobile/a11y sweep). I deliberately did **not** start this — it is a large
 frontend refactor and mixing it into a data-repair branch would make both
 unreviewable. Worth its own branch.
 
-### 6. Payload cut, continued
+### 7. Payload cut, continued
 `players.json` (18.3MB) joins `games_1/2/3` and `sr_boxscores` as a master
 build artifact the browser never fetches. The transition fallbacks are
 still deployed; dropping them is still one release cycle away.

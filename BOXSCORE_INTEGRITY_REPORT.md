@@ -342,3 +342,31 @@ over Michigan, 1990). Critically, `findUpsetEventId` in index.html looks up
 these entries are live — the 2026 Kentucky–Santa Clara buzzer-beater is one
 of them. **Do not "clean up" unmatched keys in these files by rule;** check
 each against the game logs first.
+
+### Addendum 3 — store duplicates, and the matcher that hides them (2026-07-28)
+
+Simulating `index.html`'s box-score matcher against the store surfaced two
+independent defects.
+
+**1. 359 games were stored twice.** The same game existed under an early
+short-name key and a later full-name key (`1996/princeton-vs-ucla` /
+`1996/princeton-tigers-vs-ucla-bruins`). Beyond the count, `players.json`
+counts a player once per stored game, so 4,703 players carried inflated
+game totals and depressed per-game averages — concentrated in famous
+upsets. Collapsed by `dedupe_boxscore_store.py` (store 20,679 → 20,320),
+which refuses to merge when entries carry different dates (10 real second
+meetings with identical scores) or when the keeper's roster does not cover
+the duplicate's (28 groups held a player the other lacked — Junior
+Burrough, Albert Mouring, Metta World Peace on the 1999 St. John's roster).
+Removals are itemised in `boxscore_duplicates_removed.json`.
+
+**2. The frontend matcher cannot tell programs apart.** It compares the
+*last word* of team names within a year and takes the first hit. Post-dedup,
+**51.9% of entries still match more than one game in their year, and 5,776
+of those collisions are with a different program pair** — `arkansas-vs-iowa`
+against `arkansas-razorbacks-vs-iowa-st`, `illinois-vs-georgia` against
+`georgia-tech-vs-illinois`, any two games where both teams end in "State".
+Matching on `team_name_canon.json`'s canonical slug pair plus a date
+agreement check drops that to 0.5%. Not fixed here (frontend); see
+NEXT_RECOMMENDATIONS.md item 5, which carries the simulation as its
+acceptance test.
