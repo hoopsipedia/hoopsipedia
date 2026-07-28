@@ -347,9 +347,12 @@ def check_undated(per_team, slug_map, a, b, lo, hi, global_max,
     cov = [me for me in (a, b) if me['tid'] and covered_in(per_team, me['tid'], lo, hi)]
     # A contradiction needs a season-DENSE log: a stray row or two in the
     # window (Michigan's 1991-92 log holds only the two Final Four games)
-    # says nothing about what's absent from the rest of the season.
+    # says nothing about what's absent from the rest of the season. Scale
+    # the bar to the window: a full-season window should show 8+ games, a
+    # tournament window (upsets: Mar 1 - Apr 30) only ~3.
+    min_rows = 8 if (int(hi[:4]) - int(lo[:4])) * 12 + int(hi[5:7]) - int(lo[5:7]) > 3 else 3
     dense = [me for me in cov if sum(
-        lo <= g['date'] <= hi for g in per_team.get(me['tid'], [])) >= 8]
+        lo <= g['date'] <= hi for g in per_team.get(me['tid'], [])) >= min_rows]
     if dense and a['tid'] and b['tid']:
         # Both programs identified, and a game involves both teams: its
         # absence from one team's season-complete log is a contradiction.
@@ -463,6 +466,21 @@ UPSET_DELETIONS = [
      'no Stanford-Kansas State game in 2014; score 60-57 belongs to Stanford-Kansas on 2014-03-23'),
     ('8v9', {'year': 2025, 'winner': 'Georgia', 'loser': 'Maryland'},
      'no Georgia-Maryland game in 2025; Georgia lost to Gonzaga 2025-03-20'),
+    # --- 2026-07-28 adjudication of the remaining 13 contradictions ---
+    ('5v12', {'year': 1999, 'winner': 'Charlotte', 'loser': 'Stanford'},
+     'fabricated: the only Charlotte-Stanford meeting ever is 1995-03-17, which Charlotte LOST 68-70'),
+    ('5v12', {'year': 2001, 'winner': 'Creighton', 'loser': 'Virginia'},
+     'fabricated: Creighton and Virginia have never met in the logs'),
+    ('5v12', {'year': 2004, 'winner': 'Nevada', 'loser': 'Gonzaga'},
+     'corrupt duplicate of the correct 7v10 2004 Nevada-Michigan State 72-66; the real Gonzaga game was 91-72 as 10-over-2, outside tracked matchups'),
+    ('6v11', {'year': 2016, 'winner': 'Michigan', 'loser': 'Notre Dame'},
+     'flipped winner: Notre Dame (6) beat Michigan (11) 70-63 on 2016-03-18 — not an upset'),
+    ('7v10', {'year': 2014, 'winner': 'Dayton', 'loser': 'Providence'},
+     'corrupt duplicate of the correct 6v11 2015 Dayton-Providence 66-53'),
+    ('7v10', {'year': 2022, 'winner': 'Loyola Chicago', 'loser': 'Ohio State'},
+     'flipped winner: Ohio State (7) beat Loyola (10) 54-41 on 2022-03-18 — not an upset'),
+    ('7v10', {'year': 2023, 'winner': 'Utah State', 'loser': 'Missouri'},
+     'flipped winner: Missouri (7) beat Utah State (10) 76-65 on 2023-03-16 — not an upset'),
 ]
 
 # Score fixes: exact game found in both logs with a different score.
@@ -471,6 +489,24 @@ UPSET_SCORE_FIXES = [
               'loser': 'Maryland'}, '75-68', '75-66'),
     ('5v12', {'year': 1999, 'winner': 'Southwest Missouri State',
               'loser': 'Wisconsin'}, '43-41', '43-32'),
+    # --- 2026-07-28 adjudication (all log-verified, winner confirmed) ---
+    ('5v12', {'year': 1992, 'winner': 'New Mexico State', 'loser': 'DePaul'},
+     '68-62', '81-73'),
+    ('5v12', {'year': 2010, 'winner': 'Cornell', 'loser': 'Temple'},
+     '78-63', '78-65'),
+    ('6v11', {'year': 2025, 'winner': 'Drake', 'loser': 'Missouri'},
+     '74-65', '67-57'),
+    ('7v10', {'year': 2025, 'winner': 'New Mexico', 'loser': 'Marquette'},
+     '69-63', '75-66'),
+    ('8v9', {'year': 2025, 'winner': 'Baylor', 'loser': 'Mississippi State'},
+     '75-70', '75-72'),
+]
+
+# Year fixes: the exact game (teams, score, winner) is log-verified in a
+# DIFFERENT season than the entry claims. Gated like score fixes.
+UPSET_YEAR_FIXES = [
+    ('5v12', {'year': 1995, 'winner': 'Drexel', 'loser': 'Memphis',
+              'score': '75-63'}, 1996),   # played 1996-03-14
 ]
 
 # sr_boxscores deletions: the two known-fabricated entries (audit must
@@ -556,6 +592,31 @@ def apply_corrections(ctx, upset_results, sr_results):
         u['score'] = new
         changed.append('FIX upset {} {} {} over {}: score {} -> {} (log-verified on {})'.format(
             mkey, ident['year'], ident['winner'], ident['loser'], old, new, date))
+    for mkey, ident, new_year in UPSET_YEAR_FIXES:
+        ups = doc[mkey]['upsets']
+        hits = [u for u in ups
+                if all(u.get(k) == v for k, v in ident.items())]
+        if len(hits) != 1:
+            changed.append('SKIP year fix {} {}: {} matches'.format(mkey, ident, len(hits)))
+            continue
+        u = hits[0]
+        # Gate: the game must be log-verified in the NEW year's window.
+        sm = SCORE_RE.match(u['score'])
+        a = {'tid': resolve(u['winnerFull']), 'name': u['winnerFull'],
+             'score': int(sm.group(1)), 'slug': slugify(u['winner'])}
+        b = {'tid': resolve(u['loserFull']), 'name': u['loserFull'],
+             'score': int(sm.group(2)), 'slug': slugify(u['loser'])}
+        verdict, detail, date = check_undated(
+            per_team, slug_map, a, b, '{}-03-01'.format(new_year),
+            '{}-04-30'.format(new_year), global_max, require_winner=a['tid'])
+        if verdict != 'VERIFIED':
+            changed.append('SKIP year fix {} {}: not log-verified in {} ({})'.format(
+                mkey, ident, new_year, detail))
+            continue
+        old_year, u['year'] = u['year'], new_year
+        ups.sort(key=lambda x: x['year'])
+        changed.append('FIX upset {} {} over {}: year {} -> {} (log-verified on {})'.format(
+            mkey, ident['winner'], ident['loser'], old_year, new_year, date))
     # Keep the derived counters consistent with the lists we just edited
     # (every group currently satisfies lowerSeedWins == len(upsets) and
     # totalGames == higherSeedWins + lowerSeedWins).

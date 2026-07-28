@@ -254,3 +254,61 @@ H2H fallbacks using sr_boxscores, the old On-This-Day fallback dating). The
 generator's contradiction guards (added earlier) plus this cleanup close the
 known holes; the 13 remaining contradicted upsets above still render on any
 page that reads upset_history.json directly.
+
+---
+
+## Addendum — 2026-07-28 pass (post box-score expansion)
+
+Re-ran the audit after the store grew 2,895 → 20,687 entries (July
+custompages/StatCrew expansion). Initial result: 84 CONTRADICTED. Every one
+was adjudicated; final state: **1 CONTRADICTED / 17,047 VERIFIED /
+3,631 UNCHECKABLE** in sr_boxscores.json and **332/332 VERIFIED** in
+upset_history.json (0 contradicted for the first time).
+
+What the 84 decomposed into:
+
+1. **A games-file identity corruption (≈45 false contradictions).** VMI's
+   real 1,913-game log sat under orphan id **157** while VMI's official id
+   2678 held a byte-duplicate of Valparaiso's log — the VMI team page was
+   rendering Valparaiso's history. Fixed by `repair_vmi_identity.py`
+   (rekey + 1,064 opp-ref rewrites), which also removed four more orphan
+   duplicate logs (South Dakota 2563, South Dakota St 2566, Tulane 2656,
+   Tulsa 2631 — grafting their unique opp/arena fields onto the official
+   entries first). games/ slices now map 1:1 onto data.json H (365).
+2. **Audit matcher gaps.** Log rows carrying raw display names ("Idaho
+   State", "Elon", "Omaha") or long-form slugs instead of canonical slugs;
+   fixed with `extend_slug_map()`. Plus a coverage-density guard: Michigan's
+   1991-92 log holds only the two Final Four games (a real games-file gap —
+   the whole Fab Five regular season is missing), so "log covers the window"
+   was too weak a basis for contradiction.
+3. **7 store entries with the wrong opponent label** — proven by the
+   opponent's printed roster + the log, fixed in
+   `apply_boxscore_team_fixes.py` (Marquette-not-Maryland 1980,
+   VCU-not-UCLA 1980, La Salle-not-SIU 1977, Miami (OH)-not-(FL) 1995,
+   UCF-not-VT 2017 and Texas A&M-not-ND 2011 — both SR scrapes had stitched
+   the adjacent tournament game's names/scores onto the box —
+   and Southern-New Orleans-not-"Southern" 1997).
+4. **8 corrupt/unverifiable entries quarantined** to
+   `sr_boxscores_quarantine.json` (self-pair opponents, pre-log-coverage
+   UCA games, one duplicated-roster 1957 entry). Moved, not deleted.
+5. **The 13 residual upset_history contradictions adjudicated**: 5 score
+   fixes and 1 year fix (Drexel-Memphis was 1996, not 1995), all log-gated;
+   7 deletions — 2 fabricated (Charlotte-Stanford 1999, Creighton-Virginia
+   2001, companions of the March-18 fabrication batch), 2 corrupt
+   duplicates of correct entries (Nevada-Gonzaga 2004, Dayton-Providence
+   2014), 3 flipped winners where the higher seed actually won
+   (ND-Michigan 2016, OSU-Loyola 2022, Missouri-Utah St 2023). Group
+   counters recomputed; orphaned upset_boxscores/upset_highlights keys for
+   the deleted three removed.
+
+Still open:
+- `1957/byu-vs-idaho-state` — the one remaining CONTRADICTED entry.
+  Internally consistent (distinct rosters, sums match scores); only a
+  suspected gap in BYU's 1956-57 log contradicts it. Needs a source check.
+- **Michigan 1991-92 log gap** (and BYU 1956-57, Oklahoma State 1991-92):
+  full-season holes in games files, need SR re-scrape.
+- Pre-existing orphan keys in upset_boxscores/upset_highlights (slug-format
+  mismatches like `miami-hurricanes` vs `miami-fl-hurricanes`) — needs a
+  frontend key-normalization check.
+- The 2011 FSU-Notre Dame upset "highlight" video is the 2011 Champs Sports
+  Bowl (football) — wrong video id.
