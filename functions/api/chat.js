@@ -20,13 +20,46 @@ let cachedTeamHistory = null; // team_history.json
 let cachedUpsets = null;      // upset_history.json
 let cachedTimeMachine = null; // time_machine_results.json
 let cachedAPPolls = null;     // ap_polls.json
-const cachedGameIds = {};     // espnId -> game_ids/{id}.json slice
-const cachedBoxYears = {};    // year -> boxscores/{year}.json slice
+// Per-slice caches are BOUNDED. They live for the isolate's lifetime, and a
+// warm isolate answering varied questions will otherwise accumulate every
+// slice it ever touched. That was harmless when boxscores/ totalled ~18MB;
+// after the July harvest it is 49.9MB across 112 years (2.4MB for 2001
+// alone) and games/ is 365 team slices, so an unbounded cache can drift
+// back toward the ~67MB footprint Wave 2b removed. Least-recently-used
+// eviction keeps the working set flat while still absorbing the repeated
+// hits within one conversation, which is all these caches existed for.
+//
+// 8 entries per cache bounds the worst case at ~19MB for box-score years
+// (8 x the 2.4MB 2001 slice) instead of the full 49.9MB, and a few MB for
+// the much smaller game-id and team-game slices. Note the miss sentinel is
+// `undefined`, not a falsy check: getTeamGames deliberately caches `null`
+// to mean "this team has no data", and that must stay a cache HIT.
+const SLICE_CACHE_MAX = 8;
+
+function sliceCacheGet(cache, key) {
+  if (!cache.has(key)) return undefined;
+  const val = cache.get(key);
+  cache.delete(key);       // reinsert to mark most-recently-used
+  cache.set(key, val);
+  return val;
+}
+
+function sliceCacheSet(cache, key, val) {
+  cache.delete(key);
+  cache.set(key, val);
+  while (cache.size > SLICE_CACHE_MAX) {
+    cache.delete(cache.keys().next().value);   // oldest insertion
+  }
+  return val;
+}
+
+const cachedGameIds = new Map();   // espnId -> game_ids/{id}.json slice
+const cachedBoxYears = new Map();  // year -> boxscores/{year}.json slice
 let cachedGames1 = null;      // games_1.json (legacy fallback only)
 let cachedGames2 = null;      // games_2.json (legacy fallback only)
 let cachedGames3 = null;      // games_3.json (legacy fallback only)
 let cachedGamesManifest;      // games/index.json — undefined = not fetched, null = missing
-const cachedTeamGames = {};   // espnId -> normalized {games, slug} | null (per-team slices)
+const cachedTeamGames = new Map(); // espnId -> normalized {games, slug} | null (per-team slices)
 
 // ── Rate limiting ──
 const rateLimits = new Map();
@@ -105,16 +138,18 @@ async function getTeamGames(ctx, espnId) {
   // Wave 2b: fetch the per-team slice (/games/{espnId}.json, KBs) instead of
   // caching three ~22MB parts — drops worker memory from ~70MB to near zero.
   const id = String(espnId);
-  if (id in cachedTeamGames) return cachedTeamGames[id];
+  const hit = sliceCacheGet(cachedTeamGames, id);
+  if (hit !== undefined) return hit;
   if (cachedGamesManifest === undefined) {
     cachedGamesManifest = await loadJSON(ctx.env.ASSETS, ctx.request.url, '/games/index.json');
   }
   if (cachedGamesManifest) {
-    if (!(id in cachedGamesManifest)) return (cachedTeamGames[id] = null); // no data for this team
+    if (!(id in cachedGamesManifest)) return sliceCacheSet(cachedTeamGames, id, null); // no data for this team
     const entry = await loadJSON(ctx.env.ASSETS, ctx.request.url, `/games/${id}.json`);
     if (entry) {
       // Slices are pre-normalized to {games, slug}, but tolerate bare arrays
-      return (cachedTeamGames[id] = Array.isArray(entry) ? { games: entry } : entry);
+      return sliceCacheSet(cachedTeamGames, id,
+                           Array.isArray(entry) ? { games: entry } : entry);
     }
     // Unexpected 404 despite manifest entry — fall through to legacy path
   }
@@ -128,8 +163,7 @@ async function getTeamGames(ctx, espnId) {
   // ~116 teams are stored as legacy bare arrays (no .games wrapper) — normalize so
   // the tools don't report "no game data" for them
   const norm = Array.isArray(entry) ? { games: entry } : entry;
-  cachedTeamGames[id] = norm;
-  return norm;
+  return sliceCacheSet(cachedTeamGames, id, norm);
 }
 
 // ── Helper: team slug from name ──
@@ -540,12 +574,14 @@ async function toolGetBoxScore(input, ctx) {
   };
 
   // 1) SR tournament slice (covers 1939-2026 tournaments)
-  if (!cachedBoxYears[year]) {
-    cachedBoxYears[year] = await loadJSON(ctx.env.ASSETS, ctx.request.url, `/boxscores/${year}.json`) || {};
+  let boxYear = sliceCacheGet(cachedBoxYears, year);
+  if (boxYear === undefined) {
+    boxYear = sliceCacheSet(cachedBoxYears, year,
+      await loadJSON(ctx.env.ASSETS, ctx.request.url, `/boxscores/${year}.json`) || {});
   }
   const teamName = data.H[tid] ? data.H[tid][F.NAME] : input.team;
   const oppName = oid && data.H[oid] ? data.H[oid][F.NAME] : input.opponent;
-  for (const val of Object.values(cachedBoxYears[year])) {
+  for (const val of Object.values(boxYear)) {
     if (!val || !val.teams || val.teams.length !== 2) continue;
     const [t1, t2] = val.teams;
     if ((overlap(t1.name, teamName) && overlap(t2.name, oppName)) ||
@@ -564,12 +600,14 @@ async function toolGetBoxScore(input, ctx) {
 
   // 2) ESPN event map for 2002+ (regular season + postseason)
   if (year >= 2002 && oid) {
-    if (!cachedGameIds[tid]) {
-      cachedGameIds[tid] = await loadJSON(ctx.env.ASSETS, ctx.request.url, `/game_ids/${tid}.json`) || {};
+    let gameIds = sliceCacheGet(cachedGameIds, tid);
+    if (gameIds === undefined) {
+      gameIds = sliceCacheSet(cachedGameIds, tid,
+        await loadJSON(ctx.env.ASSETS, ctx.request.url, `/game_ids/${tid}.json`) || {});
     }
     const lo = `${year - 1}-08-01`, hi = `${year}-07-31`;
     let eventId = null;
-    for (const [eid, g] of Object.entries(cachedGameIds[tid])) {
+    for (const [eid, g] of Object.entries(gameIds)) {
       if (g.date < lo || g.date > hi) continue;
       if ((String(g.t1) === tid && String(g.t2) === oid) || (String(g.t2) === tid && String(g.t1) === oid)) {
         if (!input.date || Math.abs(new Date(g.date) - new Date(input.date)) < 2 * 86400000) {
