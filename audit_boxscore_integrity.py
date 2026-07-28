@@ -506,7 +506,9 @@ def apply_corrections(ctx, upset_results, sr_results):
             sr['_metadata']['totalGames'] -= n_del
             changed.append('UPDATE sr_boxscores _metadata.totalGames -> {}'.format(
                 sr['_metadata']['totalGames']))
-        save_json_atomic(SR_BOX_JSON, sr, indent=2)
+        # compact, single-line — the 60MB+ store must stay under GitHub's
+        # 100MB hard limit (indent=2 balloons it past that)
+        save_json_atomic(SR_BOX_JSON, sr)
 
     upset_verdicts = {label: v for label, v, _, _ in upset_results}
     with open(UPSETS_JSON) as f:
