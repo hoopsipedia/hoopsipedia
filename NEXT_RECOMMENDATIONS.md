@@ -128,10 +128,29 @@ still deployed; dropping them is still one release cycle away.
 
 ## Smaller things I noticed but did not act on
 - The 2011 FSU–Notre Dame upset "highlight" video is the 2011 Champs Sports
-  Bowl — **football**. Wrong video id, needs a replacement.
-- `upset_boxscores.json` / `upset_highlights_data.json` carry pre-existing
-  orphan keys from slug-format drift (`miami-hurricanes` vs
-  `miami-fl-hurricanes`); worth a key-normalization pass.
+  Bowl — **football**. Wrong video id, needs a replacement (finding a
+  correct one needs network access, so it is left in place, not guessed at).
+- **Two previously-unknown fabricated games** were found sitting in
+  `upset_highlights_data.json` — highlight videos attached to games that
+  never happened: *1989 Xavier over Kansas* (Xavier's actual 1989 tournament
+  game was vs Michigan; Kansas's last March game was vs Kansas State) and
+  *1986 North Carolina A&T over Iowa* (A&T played Kansas, Iowa played NC
+  State). Both had dense March log coverage on both sides, so this is
+  absence of the game, not absence of data. Removed, along with the two
+  leftover side-file records for upsets June already deleted as fabricated.
+  Worth noting for the record: the March-2026 fabrication batch documented
+  in `BOXSCORE_INTEGRITY_REPORT.md` evidently reached the highlights file
+  too, which had never been audited.
+- ~~`upset_boxscores.json` / `upset_highlights_data.json` orphan keys need a
+  normalization pass~~ — **investigated; that advice was wrong.** Those keys
+  are not drift, and normalizing or pruning them would have deleted live
+  data: `findUpsetEventId` looks up `upset_boxscores[gameKey]` before
+  falling back to `INSTANT_CLASSICS`, so entries with no matching
+  `upset_history` upset still serve the Instant Classics strip (the 2026
+  Kentucky–Santa Clara buzzer-beater is one). Nine of the thirteen orphans
+  are real games — some simply key loser-first, others are outside the
+  tracked 1v16…8v9 seed matchups (LMU's 149-115 over Michigan in 1990).
+  Four were fabrications and have been removed; see below.
 - 872 box-score opponent sides stay deliberately unresolved (Hartford,
   Oklahoma City, NYU, Centenary — no D-I log to match against). Correct as
   is; listed so it isn't rediscovered as a bug.

@@ -312,3 +312,33 @@ Still open:
   frontend key-normalization check.
 - The 2011 FSU-Notre Dame upset "highlight" video is the 2011 Champs Sports
   Bowl (football) — wrong video id.
+
+### Addendum 2 — the upset SIDE FILES had never been audited (2026-07-28)
+
+`upset_history.json` has been audited repeatedly; `upset_boxscores.json`
+and `upset_highlights_data.json` had not. Checking all 13 keys in those
+files that match no current upset found **four records of games that never
+happened**, two of them previously unknown:
+
+| record | verdict |
+|---|---|
+| 1989 Xavier over Kansas | **new find** — Xavier's 1989 tournament game was 03-17 vs Michigan (87-92); Kansas's last March game was 03-10 vs Kansas State |
+| 1986 North Carolina A&T over Iowa | **new find** — A&T played Kansas 03-13 (46-71); Iowa played NC State 03-14 (64-66) |
+| 2014 Stanford over Kansas State | leftover side-file record; the upset itself was deleted in June (Stanford's 60-57 on 03-23 was vs *Kansas*) |
+| 1996 Little Rock over Purdue | leftover side-file record; deleted in June |
+
+Both new finds have dense March coverage in both teams' logs, so this is
+the absence of a game rather than the absence of data. The March-2026
+fabrication batch documented above evidently reached the highlights file as
+well — plausibly the same generation step, since a fabricated upset would
+have been handed to a video-lookup pass like any real one.
+
+All four removed. The other nine orphan keys were verified REAL and kept —
+they are not slug drift. Some key the loser first (2023 Drake/Miami, 2021
+Georgia Tech/Loyola Chicago); others are outside the tracked 1v16…8v9 seed
+matchups and so legitimately have no `upset_history` entry (LMU's 149-115
+over Michigan, 1990). Critically, `findUpsetEventId` in index.html looks up
+`upset_boxscores[gameKey]` *before* falling back to `INSTANT_CLASSICS`, so
+these entries are live — the 2026 Kentucky–Santa Clara buzzer-beater is one
+of them. **Do not "clean up" unmatched keys in these files by rule;** check
+each against the game logs first.
