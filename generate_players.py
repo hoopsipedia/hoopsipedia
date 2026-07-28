@@ -301,11 +301,20 @@ def _shrink_to_cap(out):
 
 
 def main():
+    # players.json is the full-fidelity MASTER build artifact, like
+    # games_1/2/3.json and sr_boxscores.json. The browser never fetches it —
+    # scripts/split_players.py produces the per-team players/ slices that
+    # ship. So the 5MB cap is opt-in (--cap): applying it by default silently
+    # destroyed 21,942 players plus every perGame and best.date/best.opponent
+    # field once the archive passed ~20K games.
+    cap = '--cap' in sys.argv
     with open(SRC) as f:
         data = json.load(f)
     players, parsed, skipped, games_seen = aggregate(data)
     out = finalize(players)
-    out, shrink_steps = _shrink_to_cap(out)
+    shrink_steps = []
+    if cap:
+        out, shrink_steps = _shrink_to_cap(out)
     save_json_atomic(OUT, out, separators=(',', ':'), ensure_ascii=False,
                      sort_keys=True)
     size = os.path.getsize(OUT)

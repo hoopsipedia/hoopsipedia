@@ -514,6 +514,53 @@ def test_games_shard_disjointness(fnames):
           not dupes, first_bad(dupes))
 
 
+def test_players_slices(data_h):
+    # players/ slices are what the browser fetches; players.json is the
+    # master. A slice set that does not reconstitute the master exactly means
+    # some player is unreachable from every page that could show them.
+    try:
+        master = load("players.json")
+        index = load(os.path.join("players", "index.json"))
+    except Exception as exc:
+        check("players slices: index + master parse", False, repr(exc))
+        return
+    teams = index.get("teams") or {}
+    merged, dupes, missing = {}, [], []
+    for slug, meta in teams.items():
+        try:
+            sl = load(os.path.join("players", meta["file"]))
+        except Exception:
+            missing.append(slug)
+            continue
+        for k, v in sl.items():
+            if k in merged:
+                dupes.append(k)
+            merged[k] = v
+    check("players slices: every referenced slice file loads",
+          not missing, first_bad(missing))
+    check("players slices: no player appears in two slices",
+          not dupes, first_bad(dupes))
+    check("players slices: union of slices equals players.json (%d)" % len(master),
+          len(merged) == len(master),
+          "union %d vs master %d" % (len(merged), len(master)))
+    # Coverage denominators are what stop the UI presenting archive totals as
+    # career totals, so a D-I team must never be flagged nonD1.
+    bad_flags = [s for s, m in teams.items()
+                 if m.get("espnId") in data_h and m.get("nonD1")]
+    check("players slices: no D-I program flagged nonD1",
+          not bad_flags, first_bad(bad_flags))
+    lb = (index.get("pointsPerGame") or []) + (index.get("mostArchivedPoints") or [])
+    non_d1 = {s for s, m in teams.items() if m.get("nonD1")}
+    leaked = [e for e in lb if e.get("team") in non_d1]
+    check("players slices: leaderboards exclude non-D-I team slugs",
+          not leaked, first_bad(leaked))
+    floor = (index.get("_metadata") or {}).get("minGamesForRateLeaderboard", 0)
+    thin = [e for e in (index.get("pointsPerGame") or [])
+            if e.get("games", 0) < floor]
+    check("players slices: rate leaderboard respects its own games floor",
+          not thin, first_bad(thin))
+
+
 def main():
     print("Hoopsipedia ranking-engine data invariants")
     print("root: %s" % ROOT)
@@ -528,6 +575,7 @@ def main():
     for f in games_files:
         test_games_file(f)
     test_games_shard_disjointness(games_files)
+    test_players_slices(data_h)
     print("-" * 70)
     print("%d passed, %d failed, %d skipped (known data issues)"
           % (_passes, _failures, _skips))
