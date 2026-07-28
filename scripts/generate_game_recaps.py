@@ -56,11 +56,29 @@ def margin_verb(margin, h):
     return 'beat'
 
 
+def stat_int(v):
+    """Stat value as int, or None.
+
+    The archive stores counts as ints in most sources but as numeric
+    STRINGS in the older regex-scraper schema. An isinstance(v, int) test
+    silently skips those: 3,154 player lines across 168 games, which then
+    got a recap with no scorer named in it."""
+    if isinstance(v, bool) or v is None:
+        return None
+    if isinstance(v, int):
+        return v
+    if isinstance(v, str):
+        s = v.strip()
+        if s.isdigit():
+            return int(s)
+    return None
+
+
 def top_scorer(team):
     best = None
     for p in team.get('players', []):
-        pts = p.get('pts')
-        if isinstance(pts, int) and (best is None or pts > best[1]):
+        pts = stat_int(p.get('pts'))
+        if pts is not None and (best is None or pts > best[1]):
             best = (p.get('name', ''), pts)
     return best
 
@@ -68,8 +86,8 @@ def top_scorer(team):
 def line_extras(team):
     """Best secondary stat line among players (20+ pts noted separately)."""
     for p in team.get('players', []):
-        reb = p.get('reb')
-        if isinstance(reb, int) and reb >= 15:
+        reb = stat_int(p.get('reb'))
+        if reb is not None and reb >= 15:
             return f"{p.get('name', '')} grabbed {reb} rebounds"
     return None
 
