@@ -43,12 +43,14 @@ coverage-robust, and it produces an immediately recognisable list:
 
 | ppg | G | player | team |
 |---|---|---|---|
+| 41.5 | 8 | Austin Carr | Notre Dame |
 | 33.7 | 9 | Bill Bradley | Princeton |
 | 32.4 | 10 | Oscar Robertson | Cincinnati |
+| 31.2 | 16 | Dan Issel | Kentucky |
 | 31.2 | 8 | Glenn Robinson | Purdue |
 | 30.8 | 10 | Jerry West | West Virginia |
+| 30.1 | 42 | Gary Bradds | Ohio State |
 | 29.2 | 9 | David Robinson | Navy |
-| 27.9 | 25 | Stephen Curry | Davidson |
 
 Same sanity role the Laettner list played in June: if this list stops
 looking like all-time greats, the aggregation broke.
@@ -78,6 +80,7 @@ Each value:
   "games": 8,                        // archived games with a stat line
   "totals": {"pts":218,"reb":104,"ast":3,"stl":13,"blk":33},
   "perGame": {"pts":27.2,"reb":13.0,"ast":0.4,"stl":1.6,"blk":4.1}, // 1dp
+  "statGames": {"pts":8,"reb":8,"ast":8,"stl":8,"blk":8},
   "best": {                          // highest-scoring archived game
     "pts": 50,
     "year": 1987,                    // season year from the entry key
@@ -91,6 +94,20 @@ Each value:
 
 Inclusion filter: a player needs **>= 2 archived games OR >= 15 points in a
 single archived game** (drops garbage-time one-liners).
+
+### null means "not recorded", never zero
+
+`statGames` counts, per stat, how many archived games actually carried that
+column — and it is the denominator `perGame` divides by. A stat no source
+ever recorded for a player is `null` in both `totals` and `perGame`.
+
+This exists because box scores did not always track every stat: assists,
+steals and blocks are absent from most pre-1980 lines, and early-1950s
+lines often print only points/FG/FT. 4,258 of 54,377 players have blocks
+that were never recorded. Publishing those as `0` would state, as fact,
+that a 1954 player recorded no blocks in a game nobody was counting blocks
+in. **A UI must render null as "—", not 0**, and should prefer `perGame`
+(already correctly denominated) over dividing `totals` by `games`.
 
 ## Delivery: players.json is a master, players/ is what ships
 
@@ -122,17 +139,37 @@ the cap unnecessary.
 | Metric | Value | (2026-06-12) |
 |---|---|---|
 | Games processed | 20,679 | 2,892 |
-| Stat lines parsed | 376,126 | 56,637 |
-| Stat lines skipped (unparseable) | 33,413 | 0 |
-| Player-team entries before filter | 83,314 | 19,023 |
-| Player-team entries written | 49,811 | 11,768 |
-| Master size | 14,192,823 bytes | 3,324,497 |
+| Stat lines parsed | 409,365 | 56,637 |
+| Stat lines skipped (unparseable) | 174 (0.04%) | 0 |
+| Player-team entries before filter | 94,143 | 19,023 |
+| Player-team entries written | 54,377 | 11,768 |
+| Master size | 18,471,807 bytes | 3,324,497 |
 | D-I programs with archived players | 354 of 365 | — |
 
-The 33,413 skipped stat lines (8.2%) are new with the Wayback-harvested
-StatCrew sources and are **not yet characterised** — they are counted and
-discarded, never guessed at. Worth a pass: some are likely team/total rows
-rather than players, but a parser gap would be silently costing coverage.
+### The parser was rejecting a third of a million real stat lines
+
+The first 2026-07-28 build skipped 33,413 lines (8.2%). They were not junk:
+`parse_player_line` dispatched on the presence of a `min`/`mp` column, so
+any box score without a minutes field was discarded wholesale — which is
+most pre-1980 sources. Fixing detection to be content-based (does the line
+carry any stat column?) plus handling four rebound dialects
+(`5`, `{"off":1,"def":4,"tot":5}`, `"1+5"`, `"0-0"`/`"1-1-2"`) and treating
+`null`/`""`/`"-"` as not-recorded rather than fatal took skips to **174**
+— all genuine non-players (DNP notes, `Team`/`TOTALS` rows).
+
+The recovered players are exactly who you would expect from a pre-1980
+blind spot, and they land where the record books say they should:
+
+| ppg | G | player | note |
+|---|---|---|---|
+| 41.5 | 8 | Austin Carr (Notre Dame) | his 61 vs Ohio (1970) is still the NCAA tournament single-game record |
+| 31.2 | 16 | Dan Issel (Kentucky) | |
+| 30.1 | 42 | Gary Bradds (Ohio State) | 1964 national player of the year |
+
+Guard against the obvious failure mode — a `TOTALS` row parsed as a player
+would mint a 70-ppg phantom: **zero** players average above 45 ppg, and the
+only 60-point games in the archive are Maravich's 64, Austin Carr's 61 and
+Eddie House's 61. All three are real.
 
 Both source schemas are handled: the canonical int-valued shape
 (`min/pts/reb/ast/stl/blk/to`) and the older regex-scraper string-valued

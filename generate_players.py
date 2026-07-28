@@ -1,27 +1,27 @@
 #!/usr/bin/env python3
 """Build players.json from the box-score archive (sr_boxscores.json).
 
-Aggregates per-player tournament stat lines into a player index keyed by
-normalized player name + team slug. Handles BOTH box-score schemas that
-coexist in sr_boxscores.json:
+Aggregates per-player stat lines into a player index keyed by normalized
+player name + team slug. The archive mixes many source generations, so
+lines are recognised by CONTENT (does this row carry any stat column?)
+rather than by any one schema's marker field — see parse_player_line.
 
-  1. Canonical schema (int values):
-       {name, min, pts, fg "8-14", tp, ft, reb, ast, stl, blk, to}
-     (a small subset of older canonical lines lacks the "tp" key)
-  2. Older regex-scraper schema (string values, sr_boxscores_modern.json era):
-       {name, mp, pts, fg, fga, fg3, fg3a, ft, fta, trb, ast, stl, blk, tov}
+Unparseable lines are skipped and counted, never guessed at.
 
-Unparseable player lines are skipped and counted, never guessed at.
+IMPORTANT: these are "games in our box-score archive" aggregates — NOT
+career statistics. Coverage is uneven by program, so archive TOTALS rank
+harvest depth rather than players; per-game rates are the comparable
+figure. A stat the source never recorded stays null, never 0. See
+PLAYERS_NOTES.md.
 
-IMPORTANT: these are "games in our box-score archive" aggregates
-(NCAA-tournament-heavy, ~2.9K games) — NOT career statistics.
+players.json is the full-fidelity master; scripts/split_players.py emits
+the per-team players/ slices the browser actually fetches. Output is
+deterministic (sorted keys, stable rounding), written atomically via
+json_io.save_json_atomic.
 
-Output is deterministic (sorted keys, stable rounding) and written
-atomically via json_io.save_json_atomic. Target size: < 5MB; if the
-payload exceeds the cap, stat detail is truncated before any player
-is dropped (see _shrink_to_cap).
-
-Usage: python3 generate_players.py
+Usage: python3 generate_players.py [--cap]
+  --cap  apply the legacy 5MB payload cap (destructive: truncates stat
+         detail, then drops the lowest-scoring players). Off by default.
 """
 
 import json
@@ -100,48 +100,111 @@ def normalize_player_name(name):
 
 
 def _to_int(v):
-    """Parse a stat value that may be an int or a numeric string."""
+    """Parse a stat value that may be an int or a numeric string.
+
+    Returns None for a value that is absent-in-disguise (null, empty
+    string, '-'), which callers must treat as NOT RECORDED rather than
+    zero — see parse_player_line."""
+    if v is None:
+        return None
     if isinstance(v, bool):
         raise ValueError('bool is not a stat')
     if isinstance(v, int):
         return v
     if isinstance(v, str):
         s = v.strip()
-        if s == '':
-            return 0
+        if s == '' or s == '-':
+            return None
         return int(s)
     raise ValueError('unparseable stat value: %r' % (v,))
 
 
+def _to_reb(v):
+    """Rebounds only — the one stat sources split offensive/defensive.
+
+    Four dialects appear in the archive:
+      5                     plain total
+      {"off":1,"def":4,"tot":5}
+      "1+5"                 off+def
+      "0-0" / "1-1-2"       off-def, or off-def-total
+
+    Deliberately NOT folded into _to_int: 'fg' and 'ft' use the same
+    hyphen shape for made-attempted ("8-13"), so summing hyphenated
+    values is only ever correct for a rebound field."""
+    if isinstance(v, dict):
+        for k in ('tot', 'total'):
+            if isinstance(v.get(k), int):
+                return v[k]
+        parts = [v.get('off'), v.get('def')]
+        if all(isinstance(x, int) for x in parts):
+            return sum(parts)
+        raise ValueError('unparseable rebound value: %r' % (v,))
+    if isinstance(v, str):
+        s = v.strip()
+        if s and not s.lstrip('-').isdigit():
+            nums = re.fullmatch(r'(\d+)\s*[-+]\s*(\d+)(?:\s*-\s*(\d+))?', s)
+            if nums:
+                # 3 parts: the last is the printed total. 2 parts: off+def.
+                if nums.group(3) is not None:
+                    return int(nums.group(3))
+                return int(nums.group(1)) + int(nums.group(2))
+            raise ValueError('unparseable rebound value: %r' % (v,))
+    return _to_int(v)
+
+
+# Per-schema source key for each stat we aggregate. The older regex-scraper
+# schema names rebounds 'trb'; everything else agrees.
+_STAT_KEYS = {
+    'pts': ('pts',), 'reb': ('reb', 'trb'), 'ast': ('ast',),
+    'stl': ('stl',), 'blk': ('blk',),
+}
+# Rebounds need the off/def-aware parser; every other stat is a plain count.
+_STAT_PARSERS = {'reb': _to_reb}
+# A line must carry at least one of these to be a player line at all.
+_ANY_STAT_KEY = frozenset(
+    ['pts', 'reb', 'trb', 'ast', 'stl', 'blk', 'fg', 'ft', 'min', 'mp'])
+# Non-player rows that reach us as if they were players.
+_NON_PLAYER_NAMES = frozenset(['totals', 'total', 'team', 'tm', 'totals.',
+                               'team totals', 'opponents'])
+
+
 def parse_player_line(p):
-    """Return (name, stats dict) for either schema, or raise ValueError."""
+    """Return (name, stats) or raise ValueError.
+
+    stats maps each stat to an int WHEN THE SOURCE RECORDED IT and to None
+    when it did not. That distinction matters: pre-1980s box scores simply
+    have no assist/steal/block columns, and early-1950s ones often print
+    only pts/fg/ft. Coercing those to 0 would publish "0 rebounds" as a
+    fact about players from eras that never counted rebounds.
+
+    Schema detection is by CONTENT, not by the presence of a minutes
+    column. Dispatching on 'min'/'mp' rejected 33,413 otherwise-valid
+    stat lines (8.2% of the archive, concentrated in exactly the historical
+    games the site cares most about) purely because they lacked a minutes
+    field."""
     if not isinstance(p, dict):
         raise ValueError('player line is not a dict')
     name = p.get('name')
     if not isinstance(name, str) or not name.strip():
         raise ValueError('missing player name')
     name = ' '.join(name.split())
-    if 'total' in name.lower():
+    low = name.lower().strip('. ')
+    if 'total' in low or low in _NON_PLAYER_NAMES:
         raise ValueError('totals row, not a player')
-    if 'mp' in p:  # older regex-scraper schema (string values)
-        stats = {
-            'pts': _to_int(p.get('pts', 0)),
-            'reb': _to_int(p.get('trb', 0)),
-            'ast': _to_int(p.get('ast', 0)),
-            'stl': _to_int(p.get('stl', 0)),
-            'blk': _to_int(p.get('blk', 0)),
-        }
-    elif 'min' in p:  # canonical schema (int values; 'tp' sometimes absent)
-        stats = {
-            'pts': _to_int(p.get('pts', 0)),
-            'reb': _to_int(p.get('reb', 0)),
-            'ast': _to_int(p.get('ast', 0)),
-            'stl': _to_int(p.get('stl', 0)),
-            'blk': _to_int(p.get('blk', 0)),
-        }
-    else:
-        raise ValueError('unrecognized player-line schema: %s'
-                         % sorted(p.keys()))
+    if not (_ANY_STAT_KEY & set(p)):
+        raise ValueError('no stat columns: %s' % sorted(p.keys()))
+    stats = {}
+    for stat, sources in _STAT_KEYS.items():
+        parse = _STAT_PARSERS.get(stat, _to_int)
+        val = None
+        for src in sources:
+            if src in p:
+                val = parse(p[src])
+                if val is not None:
+                    break
+        stats[stat] = val
+    if all(v is None for v in stats.values()):
+        raise ValueError('no usable stat values: %s' % sorted(p.keys()))
     return name, stats
 
 
@@ -208,21 +271,28 @@ def aggregate(data):
                         'team': team_slug,
                         'games': 0,
                         'totals': Counter(),
+                        'statGames': Counter(),
                         'best': None,
                         'years': [],
                     }
                 rec['names'][pname] += 1
                 rec['games'] += 1
                 for f, v in stats.items():
-                    rec['totals'][f] += v
+                    if v is not None:
+                        rec['totals'][f] += v
+                        # per-stat denominator: only games whose source
+                        # actually carried this column
+                        rec['statGames'][f] += 1
                 if year is not None:
                     rec['years'].append(year)
-                best = rec['best']
-                game_ref = {'pts': stats['pts'], 'year': year,
-                            'date': date, 'opponent': opponent}
-                if best is None or (stats['pts'], year or 0) > \
-                        (best['pts'], best['year'] or 0):
-                    rec['best'] = game_ref
+                pts = stats['pts']
+                if pts is not None:
+                    best = rec['best']
+                    game_ref = {'pts': pts, 'year': year,
+                                'date': date, 'opponent': opponent}
+                    if best is None or (pts, year or 0) > \
+                            (best['pts'], best['year'] or 0):
+                        rec['best'] = game_ref
     return players, parsed, skipped, games_seen
 
 
@@ -237,9 +307,20 @@ def finalize(players):
         # Display name: most frequent spelling, ties broken alphabetically.
         name = sorted(rec['names'].items(), key=lambda kv: (-kv[1], kv[0]))[0][0]
         g = rec['games']
-        totals = {f: int(rec['totals'].get(f, 0))
-                  for f in ('pts', 'reb', 'ast', 'stl', 'blk')}
-        per_game = {f: round(totals[f] / g, 1) for f in totals}
+        # A stat recorded in NO archived game stays null all the way out:
+        # reporting 0 blocks for a 1954 player would be inventing a fact.
+        # perGame divides by that stat's own denominator, so a player with
+        # rebounds in 4 of 11 archived games gets reb/4, not reb/11.
+        stat_games = rec.get('statGames', {})
+        totals, per_game = {}, {}
+        for f in ('pts', 'reb', 'ast', 'stl', 'blk'):
+            n = stat_games.get(f, 0)
+            if n:
+                totals[f] = int(rec['totals'].get(f, 0))
+                per_game[f] = round(totals[f] / n, 1)
+            else:
+                totals[f] = None
+                per_game[f] = None
         years = sorted(rec['years']) or [None]
         out[pkey] = {
             'name': name,
@@ -247,6 +328,8 @@ def finalize(players):
             'games': g,
             'totals': totals,
             'perGame': per_game,
+            'statGames': {f: stat_games.get(f, 0)
+                          for f in ('pts', 'reb', 'ast', 'stl', 'blk')},
             'best': rec['best'],
             'years': [years[0], years[-1]],
         }
@@ -284,7 +367,7 @@ def _shrink_to_cap(out):
     # the joining comma), drop enough to clear the cap in one pass, then
     # verify and top up one at a time (the estimate is near-exact, so the
     # tail loop runs at most a handful of times).
-    ranked = sorted(out, key=lambda k: (out[k]['totals']['pts'], k))
+    ranked = sorted(out, key=lambda k: (out[k]['totals']['pts'] or 0, k))
     dropped = 0
     size = _payload_size(out)
     while ranked and size > SIZE_CAP_BYTES:
@@ -319,7 +402,7 @@ def main():
                      sort_keys=True)
     size = os.path.getsize(OUT)
     top10 = sorted(out.values(),
-                   key=lambda r: (-r['totals']['pts'], r['name']))[:10]
+                   key=lambda r: (-(r['totals']['pts'] or 0), r['name']))[:10]
     report = {
         'gamesProcessed': games_seen,
         'statLinesParsed': parsed,
