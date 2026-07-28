@@ -278,11 +278,24 @@ def _shrink_to_cap(out):
     steps.append('dropped perGame (recompute as totals/games)')
     if _payload_size(out) <= SIZE_CAP_BYTES:
         return out, steps
+    # Drop lowest-total players in bulk. Serializing the whole multi-MB
+    # payload once per dropped player is O(players * bytes) — hours at 20K+
+    # games — so estimate each record's own serialized size (its dump plus
+    # the joining comma), drop enough to clear the cap in one pass, then
+    # verify and top up one at a time (the estimate is near-exact, so the
+    # tail loop runs at most a handful of times).
     ranked = sorted(out, key=lambda k: (out[k]['totals']['pts'], k))
     dropped = 0
-    while ranked and _payload_size(out) > SIZE_CAP_BYTES:
-        out.pop(ranked.pop(0))
-        dropped += 1
+    size = _payload_size(out)
+    while ranked and size > SIZE_CAP_BYTES:
+        overshoot = size - SIZE_CAP_BYTES
+        freed = 0
+        while ranked and freed < overshoot:
+            k = ranked.pop(0)
+            freed += len(json.dumps({k: out.pop(k)}, separators=(',', ':'),
+                                    ensure_ascii=False).encode('utf-8')) - 1
+            dropped += 1
+        size = _payload_size(out)
     steps.append('dropped %d lowest-scoring players' % dropped)
     return out, steps
 
