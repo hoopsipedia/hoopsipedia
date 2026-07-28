@@ -181,7 +181,10 @@ def main():
             # status.type has no period; comp.status.period holds it
             period = (comp.get("status") or {}).get("period", 2)
             if isinstance(period, int) and period > 2:
-                rec["ot"] = period - 2
+                # games-file convention is the display string ('OT', '2OT'),
+                # not an int — generate_on_this_day parses g['ot'][:-2]
+                n_ot = period - 2
+                rec["ot"] = "OT" if n_ot == 1 else "{}OT".format(n_ot)
             additions.setdefault(tid, []).append(rec)
             seen_events.setdefault(eid, []).append(tid)
         if (i + 1) % 75 == 0:
