@@ -82,6 +82,14 @@ SHORT_NAME_SLUGS = {
     'SIU-Edwardsville': 'southern-illinois-edwardsville',
 }
 
+# Log-side opp_slug variants for programs with no usable log of their own
+# (mirror voting needs the opponent's log to exist, so these never get a
+# vote). VMI's log is the Valparaiso duplicate and is merged away.
+SLUG_ALIASES = {
+    'virginia-military-institute': '2678',   # VMI Keydets
+    'vmi': '2678',
+}
+
 URL_DATE_RE = re.compile(r'/boxscores/(\d{4}-\d{2}-\d{2})-')
 SCORE_RE = re.compile(r'^(\d+)-(\d+)')
 
@@ -213,6 +221,37 @@ def build_name_map(slug_map):
     return resolve
 
 
+def extend_slug_map(slug_map, per_team, resolve):
+    """Fold opp_slug VARIANTS onto the tids their canonical slugs map to.
+
+    The games files are not slug-clean: some rows carry long-form slugs
+    ('virginia-military-institute' where the canonical slug is 'vmi') and
+    some carry raw display names ('Idaho State', 'Elon', 'Omaha' — see the
+    1950s NCAA-tournament rows and the 1998-2012 gap-fill rows). Mirror
+    voting cannot map a variant when the opponent has no log of its own,
+    so without this step every such row reads as "some other opponent" and
+    a real game audits as CONTRADICTED.
+
+    Additions are setdefault-only: a slug the voting already resolved is
+    never overridden. A variant is added only when it lands on an already
+    known tid (via data.json full-name slugs, the curated SLUG_ALIASES, a
+    slugified form already in the map, or the display-name resolver), so
+    this can never invent a program."""
+    with open(DATA_JSON) as f:
+        h = json.load(f)['H']
+    for tid, v in h.items():
+        slug_map.setdefault(slugify(v[0]), tid)
+    for slug, tid in SLUG_ALIASES.items():
+        slug_map.setdefault(slug, tid)
+    variants = {g['opp_slug'] for rows in per_team.values() for g in rows}
+    for s in variants:
+        if s in slug_map:
+            continue
+        tid = slug_map.get(slugify(s)) or resolve(s)
+        if tid:
+            slug_map[s] = tid
+
+
 # ---------------------------------------------------------------- matching
 
 def covered_on(per_team, tid, date):
@@ -283,7 +322,8 @@ def check_undated(per_team, slug_map, a, b, lo, hi, global_max,
                 continue
             opp_tid = slug_map.get(g['opp_slug'])
             is_pair = (opp_tid == other['tid'] if opp_tid and other['tid']
-                       else g['opp_slug'] == other['slug'])
+                       else g['opp_slug'] == other['slug']
+                       or slugify(g['opp_slug']) == other['slug'])
             if not is_pair:
                 continue
             pair_rows.append((me, g))
@@ -305,12 +345,17 @@ def check_undated(per_team, slug_map, a, b, lo, hi, global_max,
         return 'CONTRADICTED', 'teams met in window but never with this score/result: {}'.format(
             '; '.join(sorted({fmt_row(g) for _, g in pair_rows}))), None
     cov = [me for me in (a, b) if me['tid'] and covered_in(per_team, me['tid'], lo, hi)]
-    if cov and a['tid'] and b['tid']:
+    # A contradiction needs a season-DENSE log: a stray row or two in the
+    # window (Michigan's 1991-92 log holds only the two Final Four games)
+    # says nothing about what's absent from the rest of the season.
+    dense = [me for me in cov if sum(
+        lo <= g['date'] <= hi for g in per_team.get(me['tid'], [])) >= 8]
+    if dense and a['tid'] and b['tid']:
         # Both programs identified, and a game involves both teams: its
         # absence from one team's season-complete log is a contradiction.
-        names = ' and '.join(m['name'] for m in cov)
+        names = ' and '.join(m['name'] for m in dense)
         return 'CONTRADICTED', 'no game between the teams in {}..{}, though the {} log{} cover the window'.format(
-            lo, hi, names, '' if len(cov) == 1 else 's'), None
+            lo, hi, names, '' if len(dense) == 1 else 's'), None
     missing = [m['name'] + (' (unresolved)' if not m['tid'] else
                             '' if m in cov else ' (no coverage)')
                for m in (a, b)]
@@ -532,6 +577,7 @@ def main():
     per_team, slug_of = load_logs()
     slug_map = build_slug_map(per_team, slug_of)
     resolve = build_name_map(slug_map)
+    extend_slug_map(slug_map, per_team, resolve)
     global_max = max(g['date'] for rows in per_team.values() for g in rows)
     print('log rows for {} teams; {} opp_slugs resolved; log cutoff {}'.format(
         len(per_team), len(slug_map), global_max))
