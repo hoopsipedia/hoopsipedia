@@ -210,6 +210,9 @@ def main():
     by_total = sorted((entry(k, r) for k, r in d1),
                       key=lambda e: (-e['pts'], e['name']))[:LEADERBOARD_SIZE]
 
+    with open(os.path.join(ROOT, 'sr_boxscores.json')) as f:
+        archived_total = sum(1 for k in json.load(f) if k != '_metadata')
+
     index = {
         '_metadata': {
             'note': ('Aggregates over archived box scores ONLY, not career '
@@ -220,6 +223,12 @@ def main():
             'minGamesForRateLeaderboard': MIN_GAMES_FOR_RATE,
             'teams': len(teams),
             'players': len(players),
+            # Counts a UI can quote without double-counting: summing a
+            # team's archivedGames across teams counts each game twice (once
+            # per side), and slug count over-counts programs because several
+            # slugs can share one ESPN id.
+            'archivedGames': archived_total,
+            'd1Programs': len({t['espnId'] for t in teams.values() if t['espnId']}),
         },
         'teams': teams,
         'pointsPerGame': by_rate,

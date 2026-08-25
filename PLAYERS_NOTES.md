@@ -110,6 +110,25 @@ that a 1954 player recorded no blocks in a game nobody was counting blocks
 in. **A UI must render null as "—", not 0**, and should prefer `perGame`
 (already correctly denominated) over dividing `totals` by `games`.
 
+#### Caveat: `statGames` counts the COLUMN, not the record-keeping
+
+`statGames` counts archived games whose source carried that stat's field.
+That is not the same as the stat having been kept at the time. Several
+1950s-60s sources emit a zero-valued assists field for every player in an
+era that did not record assists at all — Bob Burrow (Kentucky, 1955-56) has
+`statGames.ast = 4` with a total of 0, which is a parser artifact, not four
+assist-less games.
+
+So a `perGame` value drawn from only part of a player's archived games is
+weaker evidence than one drawn from all of them, and a 0 from a partial
+sample may mean "not actually recorded". The players page handles this
+without asserting anything it cannot support: a rate from a partial sample
+is marked with an asterisk whose tooltip gives the exact denominator
+("From the 4 of 16 archived games whose box score carried this column"), and
+a partial-sample zero is additionally muted. Fixing it properly means
+knowing which season each stat became official — do not hard-code those
+years without a citation.
+
 ## Delivery: players.json is a master, players/ is what ships
 
 `players.json` is a full-fidelity **build artifact**, exactly like

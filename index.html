@@ -5323,6 +5323,7 @@
             <a data-view="rankings">Rankings</a>
             <a data-view="bracket">Bracket</a>
             <a data-view="coaches">Coaches</a>
+            <a data-view="players">Players</a>
             <div class="spacer"></div>
             <a style="display:flex;align-items:center;gap:8px;color:rgba(245,243,238,0.7);position:relative;" id="mastheadSearchToggle">
                 <span style="font-size:13px;">⌕</span> SEARCH
@@ -5738,6 +5739,11 @@
         <!-- Upsets View -->
         <div id="upsets" class="view">
             <div id="upsetsContent"></div>
+        </div>
+
+        <!-- Player Archive View -->
+        <div id="players" class="view">
+            <div id="playersContent"></div>
         </div>
 
         <!-- Instant Classics View -->
@@ -8423,7 +8429,7 @@
             }
 
             // #view (home, bracket, rankings, teams, coaches, comparison)
-            const viewMatch = hash.match(/^#(home|bracket|rankings|teams|coaches|comparison)$/);
+            const viewMatch = hash.match(/^#(home|bracket|rankings|teams|coaches|comparison|players)$/);
             if (viewMatch) {
                 switchView(viewMatch[1], true);
             } else {
@@ -8912,6 +8918,9 @@
                 if (bracketRefreshInterval) clearInterval(bracketRefreshInterval);
             } else if (view === 'upsets') {
                 renderUpsets();
+                if (bracketRefreshInterval) clearInterval(bracketRefreshInterval);
+            } else if (view === 'players') {
+                renderPlayers();
                 if (bracketRefreshInterval) clearInterval(bracketRefreshInterval);
             } else if (view === 'gameDetail') {
                 if (bracketRefreshInterval) clearInterval(bracketRefreshInterval);
@@ -16900,6 +16909,233 @@
 
                 ${classicsStripHtml}
             `;
+        }
+
+        // ── Players (archive) view ─────────────────────────────────────────
+        // Fed by players/index.json. Two rules are non-negotiable and are
+        // documented in PLAYERS_NOTES.md:
+        //   1. Default the sort to PER GAME, never totals. The archive is
+        //      unevenly harvested (Arkansas 69.6% of its games, Duke 13.7%),
+        //      so a totals leaderboard ranks harvest depth, not players —
+        //      Laettner falls off it entirely while a Hofstra guard tops it.
+        //   2. A null stat means the source never recorded it (pre-1980 box
+        //      scores have no assist/steal/block columns). Render it as an
+        //      em dash. Printing 0 would assert a fact about an era that
+        //      wasn't counting.
+        let _playersIndex = null, _playersIndexPromise = null;
+        window._playersSort = 'ppg';
+        window._playersMinGames = 8;
+        window._playersTeam = '';
+
+        function loadPlayersIndex() {
+            if (_playersIndex) return Promise.resolve(_playersIndex);
+            if (!_playersIndexPromise) {
+                _playersIndexPromise = fetch('/players/index.json')
+                    .then(r => r.ok ? r.json() : null)
+                    .then(j => (_playersIndex = j))
+                    .catch(() => (_playersIndex = null));
+            }
+            return _playersIndexPromise;
+        }
+        // null/undefined => not recorded. 0 is a real zero and must print.
+        const pStat = v => (v === null || v === undefined) ? '—' : v;
+
+        // A rate cell that never overstates what we know. `statGames` counts
+        // games whose source carried the COLUMN, which is not the same as the
+        // stat having been kept: several 1950s sources emit a zero-valued
+        // assists field for every player in an era that did not record
+        // assists at all. So when a stat is present in only some of a
+        // player's archived games we show the denominator rather than a bare
+        // average, and a 0 drawn from a partial sample is muted instead of
+        // stated flatly.
+        function pRateCell(val, statG, games) {
+            const muted = 'color:var(--ink-muted);';
+            if (val === null || val === undefined || !statG) {
+                return `<td style="padding:8px;text-align:right;${muted}" title="No archived box score for this player recorded this stat">—</td>`;
+            }
+            const partial = statG < games;
+            const title = partial
+                ? `From the ${statG} of ${games} archived games whose box score carried this column`
+                : `From all ${games} archived games`;
+            const style = partial && val === 0
+                ? muted + 'opacity:0.55;' : muted;
+            return `<td style="padding:8px;text-align:right;${style}" title="${title}">${val}${partial ? '<span style="font-size:10px;opacity:0.7;">*</span>' : ''}</td>`;
+        }
+
+        async function renderPlayers() {
+            const content = document.getElementById('playersContent');
+            if (!content) return;
+            content.innerHTML = '<div style="padding:60px;text-align:center;color:var(--ink-muted);">Loading player archive…</div>';
+            const idx = await loadPlayersIndex();
+            if (!idx || !idx.teams) {
+                content.innerHTML = renderErrorFallback('renderPlayers()');
+                return;
+            }
+            const meta = idx._metadata || {};
+            const teams = idx.teams;
+            const d1 = Object.entries(teams).filter(([, t]) => !t.nonD1);
+            const covered = d1.filter(([, t]) => t.coveragePct != null)
+                              .sort((a, b) => b[1].coveragePct - a[1].coveragePct);
+            const medianCov = covered.length
+                ? covered[Math.floor(covered.length / 2)][1].coveragePct : 0;
+            // Read the precomputed totals: summing per-team archivedGames
+            // counts each game twice (once per side) and the slug count
+            // over-states programs, since several slugs share one ESPN id.
+            const totalArchived = meta.archivedGames
+                || d1.reduce((s, [, t]) => s + (t.archivedGames || 0), 0);
+            const programCount = meta.d1Programs
+                || new Set(d1.map(([, t]) => t.espnId).filter(Boolean)).size;
+
+            const sort = window._playersSort;
+            const minG = window._playersMinGames;
+            const teamFilter = window._playersTeam;
+            let rows;
+            if (teamFilter && teams[teamFilter]) {
+                // Rank WITHIN the program, from its own slice. Filtering the
+                // global top-250 instead would show only the handful of a
+                // team's players who chart nationally — Virginia would look
+                // like it had 7 archived players rather than 380.
+                const recs = await fetch('/players/' + teams[teamFilter].file)
+                    .then(r => r.ok ? r.json() : {}).catch(() => ({}));
+                rows = Object.entries(recs).map(([key, r]) => ({
+                    key, name: r.name, team: teamFilter, games: r.games,
+                    pts: (r.totals || {}).pts,
+                    ppg: (r.perGame || {}).pts,
+                    rpg: (r.perGame || {}).reb,
+                    apg: (r.perGame || {}).ast,
+                    sg: r.statGames || {},
+                    years: r.years
+                }));
+            } else {
+                rows = ((sort === 'ppg' ? idx.pointsPerGame : idx.mostArchivedPoints) || []).slice();
+            }
+            rows = rows.filter(r => r.games >= minG);
+            // A player with no recorded points sorts last rather than as a 0.
+            const key = r => (sort === 'ppg' ? r.ppg : r.pts);
+            rows.sort((a, b) => {
+                const ka = key(a), kb = key(b);
+                if (ka == null && kb == null) return String(a.name).localeCompare(b.name);
+                if (ka == null) return 1;
+                if (kb == null) return -1;
+                return kb - ka || String(a.name).localeCompare(b.name);
+            });
+            if (teamFilter) rows = rows.slice(0, 250);
+
+            const teamLabel = slug => {
+                const t = teams[slug];
+                if (t && t.espnId && typeof allTeamsData !== 'undefined') {
+                    const m = allTeamsData.find(x => String(x.espnId) === String(t.espnId));
+                    if (m) return m.name;
+                }
+                return slug.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+            };
+
+            const teamOpts = d1.map(([slug]) => slug).sort((a, b) => teamLabel(a).localeCompare(teamLabel(b)))
+                .map(slug => `<option value="${escapeHtml(slug)}" ${teamFilter === slug ? 'selected' : ''}>${escapeHtml(teamLabel(slug))}</option>`).join('');
+
+            const covRow = teamFilter && teams[teamFilter] && teams[teamFilter].logGames
+                ? `<div class="upsets-fun-fact" style="margin-bottom:18px;">
+                     <div class="upsets-fun-fact-icon">◱</div>
+                     <div>
+                       <div class="upsets-fun-fact-label">COVERAGE FOR ${escapeHtml(teamLabel(teamFilter).toUpperCase())}</div>
+                       <div class="upsets-fun-fact-text">${teams[teamFilter].archivedGames.toLocaleString()} of ${teams[teamFilter].logGames.toLocaleString()} games are in the archive (${teams[teamFilter].coveragePct}%). Everything below is drawn from those games only.</div>
+                     </div>
+                   </div>` : '';
+
+            let html = `
+                <section style="padding:28px 0 10px;">
+                  <div style="max-width:1280px;margin:0 auto;">
+                    <h1 class="h-display" style="font-size:44px;margin:0 0 6px;">The Player Archive</h1>
+                    <div style="font-family:var(--font-serif);color:var(--ink-muted);font-size:15px;max-width:860px;">
+                      Every player line we have parsed from ${totalArchived.toLocaleString()} archived box scores across ${programCount} Division I programs — ${(meta.players || 0).toLocaleString()} player-seasons in all.
+                    </div>
+                  </div>
+                </section>
+
+                <section style="padding:0 0 20px;">
+                  <div style="max-width:1280px;margin:0 auto;">
+                    <div class="upsets-fun-fact" style="border-left-color:#B5342E;">
+                      <div class="upsets-fun-fact-icon">!</div>
+                      <div>
+                        <div class="upsets-fun-fact-label">THESE ARE NOT CAREER STATISTICS</div>
+                        <div class="upsets-fun-fact-text">
+                          Every number here counts only games in our box-score archive, and coverage is uneven by program — the median Division I team has just ${medianCov}% of its games archived, while the best-covered has ${covered.length ? covered[0][1].coveragePct : 0}%.
+                          That is why <strong>the default ranking is per game</strong>: sorting by totals would rank how deeply a school was scraped, not how well anyone played. A dash (—) means the era's box scores never recorded that stat.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+                <section style="padding:0 0 22px;">
+                  <div style="max-width:1280px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;">
+                    <div style="display:inline-flex;border:2px solid var(--navy);border-radius:4px;">
+                      <button class="h-display" style="padding:9px 20px;font-size:15px;letter-spacing:0.08em;background:${sort === 'ppg' ? 'var(--navy)' : 'transparent'};color:${sort === 'ppg' ? 'var(--cream)' : 'var(--navy)'};border:none;cursor:pointer;" onclick="window._playersSort='ppg'; renderPlayers();">Points Per Game</button>
+                      <button class="h-display" style="padding:9px 20px;font-size:15px;letter-spacing:0.08em;background:${sort === 'pts' ? 'var(--navy)' : 'transparent'};color:${sort === 'pts' ? 'var(--cream)' : 'var(--navy)'};border:none;cursor:pointer;" onclick="window._playersSort='pts'; renderPlayers();" title="Ranks harvest depth as much as scoring — read with the coverage note above">Most Archived Points</button>
+                    </div>
+                    <div style="display:flex;gap:14px;align-items:center;flex-wrap:wrap;">
+                      <label class="label-mono" style="color:var(--ink-muted);">MIN GAMES
+                        <select onchange="window._playersMinGames=parseInt(this.value); renderPlayers();" style="margin-left:6px;padding:5px 8px;font-family:var(--font-mono);">
+                          ${[1, 5, 8, 15, 30].map(n => `<option value="${n}" ${minG === n ? 'selected' : ''}>${n}</option>`).join('')}
+                        </select>
+                      </label>
+                      <label class="label-mono" style="color:var(--ink-muted);">TEAM
+                        <select onchange="window._playersTeam=this.value; renderPlayers();" style="margin-left:6px;padding:5px 8px;font-family:var(--font-mono);max-width:230px;">
+                          <option value="">All programs</option>${teamOpts}
+                        </select>
+                      </label>
+                    </div>
+                  </div>
+                </section>
+
+                <section style="padding:0 0 60px;">
+                  <div style="max-width:1280px;margin:0 auto;">
+                    ${covRow}`;
+
+            if (!rows.length) {
+                html += `<div style="padding:40px;text-align:center;color:var(--ink-muted);font-family:var(--font-serif);">No players match those filters.${teamFilter ? ' This program may have few or no archived box scores.' : ''}</div>`;
+            } else {
+                html += `
+                    <table style="width:100%;border-collapse:collapse;font-family:var(--font-mono);font-size:14px;">
+                      <thead>
+                        <tr style="border-bottom:2px solid var(--navy);text-align:left;">
+                          <th style="padding:9px 8px;width:52px;">#</th>
+                          <th style="padding:9px 8px;">Player</th>
+                          <th style="padding:9px 8px;">Program</th>
+                          <th style="padding:9px 8px;text-align:right;">Games</th>
+                          <th style="padding:9px 8px;text-align:right;">${sort === 'ppg' ? 'PPG' : 'Points'}</th>
+                          <th style="padding:9px 8px;text-align:right;">${sort === 'ppg' ? 'Points' : 'PPG'}</th>
+                          ${teamFilter ? '<th style="padding:9px 8px;text-align:right;" title="Rebounds per game — a dash means the era\'s box scores did not record rebounds">RPG</th><th style="padding:9px 8px;text-align:right;" title="Assists per game — a dash means the era\'s box scores did not record assists">APG</th>' : ''}
+                          <th style="padding:9px 8px;text-align:right;">Seasons</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        ${rows.map((r, i) => {
+                            const t = teams[r.team] || {};
+                            const yrs = Array.isArray(r.years) && r.years[0]
+                                ? (r.years[0] === r.years[1] ? r.years[0] : r.years[0] + '–' + r.years[1]) : '—';
+                            const teamCell = t.espnId
+                                ? `<a href="#team/${escapeHtml(teamSlug(teamLabel(r.team)))}" style="color:var(--navy);text-decoration:none;font-weight:600;">${escapeHtml(teamLabel(r.team))}</a>`
+                                : escapeHtml(teamLabel(r.team));
+                            return `<tr style="border-bottom:1px solid #E8E2D6;">
+                              <td style="padding:8px;color:var(--ink-muted);">${i + 1}</td>
+                              <td style="padding:8px;font-weight:600;">${escapeHtml(r.name)}</td>
+                              <td style="padding:8px;">${teamCell}</td>
+                              <td style="padding:8px;text-align:right;">${pStat(r.games)}</td>
+                              <td style="padding:8px;text-align:right;font-weight:700;">${sort === 'ppg' ? pStat(r.ppg) : pStat(r.pts != null ? r.pts.toLocaleString() : null)}</td>
+                              <td style="padding:8px;text-align:right;color:var(--ink-muted);">${sort === 'ppg' ? pStat(r.pts != null ? r.pts.toLocaleString() : null) : pStat(r.ppg)}</td>
+                              ${teamFilter ? pRateCell(r.rpg, r.sg.reb, r.games) + pRateCell(r.apg, r.sg.ast, r.games) : ''}
+                              <td style="padding:8px;text-align:right;color:var(--ink-muted);">${yrs}</td>
+                            </tr>`;
+                        }).join('')}
+                      </tbody>
+                    </table>
+                    <div style="margin-top:14px;font-size:12px;color:var(--ink-muted);font-style:italic;font-family:var(--font-serif);">
+                      Showing ${rows.length} player${rows.length === 1 ? '' : 's'} with at least ${minG} archived game${minG === 1 ? '' : 's'}${teamFilter ? ' for ' + escapeHtml(teamLabel(teamFilter)) : ''}. Source: parsed box scores; see the coverage note above.${teamFilter ? ' An asterisk on RPG/APG means only some of that player&rsquo;s archived box scores carried the column — hover for the exact denominator. A dash means none did.' : ''}
+                    </div>`;
+            }
+            html += `</div></section>`;
+            content.innerHTML = html;
         }
 
         async function renderUpsets() {
