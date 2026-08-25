@@ -4016,13 +4016,16 @@
       "kind": "value",
       "confidence": "medium",
       "reviewVerdict": "proposed",
-      "status": "proposed",
+      "status": "applied",
       "find": 1925,
       "replace": 1926,
       "note": "American began intercollegiate basketball in 1926 (first coach George Springston, 1926-29). Repo data cannot corroborate either way: seasons.json for tid 44 only starts 1966-67, so this rests on the external source alone - flagged medium confidence for that reason.",
       "sources": [
         "https://en.wikipedia.org/wiki/American_Eagles_men%27s_basketball"
-      ]
+      ],
+      "approvedBy": "josh",
+      "approvedOn": "2026-07-28",
+      "appliedOn": "2026-08-25"
     },
     {
       "findingId": "fc-am-2",
@@ -4030,13 +4033,16 @@
       "field": "blurb",
       "confidence": "medium",
       "reviewVerdict": "proposed",
-      "status": "proposed",
+      "status": "applied",
       "find": "began in 1925",
       "replace": "began in 1926",
       "note": "Keeps the blurb consistent with the founded fix above; apply both or neither.",
       "sources": [
         "https://en.wikipedia.org/wiki/American_Eagles_men%27s_basketball"
-      ]
+      ],
+      "approvedBy": "josh",
+      "approvedOn": "2026-07-28",
+      "appliedOn": "2026-08-25"
     },
     {
       "findingId": "fc-gw-1",
@@ -4045,14 +4051,17 @@
       "kind": "value",
       "confidence": "high",
       "reviewVerdict": "proposed",
-      "status": "proposed",
+      "status": "applied",
       "find": 1906,
       "replace": 1912,
       "note": "Corroborated in-repo: seasons.json for tid 45 starts at 1912-13 and runs 109 seasons to 2025-26. Nothing in the repo or the cited source supports 1906.",
       "sources": [
         "https://en.wikipedia.org/wiki/George_Washington_Colonials_men%27s_basketball",
         "seasons.json tid 45 (earliest season 1912-13)"
-      ]
+      ],
+      "approvedBy": "josh",
+      "approvedOn": "2026-07-28",
+      "appliedOn": "2026-08-25"
     },
     {
       "findingId": "fc-gw-2",
@@ -4060,13 +4069,16 @@
       "field": "blurb",
       "confidence": "high",
       "reviewVerdict": "proposed",
-      "status": "proposed",
+      "status": "applied",
       "find": "dates to 1906",
       "replace": "dates to 1912",
       "note": "Keeps the blurb consistent with the founded fix above; apply both or neither.",
       "sources": [
         "seasons.json tid 45 (earliest season 1912-13)"
-      ]
+      ],
+      "approvedBy": "josh",
+      "approvedOn": "2026-07-28",
+      "appliedOn": "2026-08-25"
     },
     {
       "findingId": "fc-qu-1",
@@ -4074,13 +4086,16 @@
       "field": "iconicMoment",
       "confidence": "high",
       "reviewVerdict": "proposed",
-      "status": "proposed",
+      "status": "applied",
       "find": "The 2018 MAAC Tournament run, when Quinnipiac made a deep conference tournament push and showed the program's growing competitiveness.",
       "replace": "The 2023-24 season, when Quinnipiac won a program-record 24 games and contended for the MAAC title, the high-water mark of its Division I era.",
       "note": "The existing text is a fabrication: seasons.json shows 2017-18 at 12-21, so there was no deep 2018 run (the finding suggests it conflates the women's program, which did dominate the MAAC then). Replacement is grounded in repo data - 2023-24 went 24-10, the most wins in any of Quinnipiac's 28 recorded seasons.",
       "sources": [
         "seasons.json tid 2514 (2017-18: 12-21; 2023-24: 24-10, best by wins)"
-      ]
+      ],
+      "approvedBy": "josh",
+      "approvedOn": "2026-07-28",
+      "appliedOn": "2026-08-25"
     }
   ]
 }
