@@ -1,0 +1,974 @@
+{
+ "_metadata": {
+  "generated": "2026-08-25",
+  "method": "a season with <=6 games logged while BOTH adjacent seasons have >=20 \u2014 the program was demonstrably active, so this is missing data rather than an inactive year",
+  "excludes": "2021 (13 further cases: Ivy League cancelled its 2020-21 season and several MEAC/other programs were curtailed by COVID \u2014 correct absences, not data loss)",
+  "alsoExcludes": "programs whose gap coincides with genuinely leaving/entering Division I (Seattle U, Abilene Christian, Akron and similar) \u2014 those are filtered out by the both-neighbours-full rule",
+  "count": 107
+ },
+ "gaps": [
+  {
+   "espnId": "9",
+   "team": "Arizona State Sun Devils",
+   "season": 1976,
+   "gamesLogged": 0,
+   "prevSeason": 28,
+   "nextSeason": 28,
+   "kind": "empty"
+  },
+  {
+   "espnId": "2",
+   "team": "Auburn Tigers",
+   "season": 2017,
+   "gamesLogged": 0,
+   "prevSeason": 31,
+   "nextSeason": 34,
+   "kind": "empty"
+  },
+  {
+   "espnId": "239",
+   "team": "Baylor Bears",
+   "season": 1997,
+   "gamesLogged": 0,
+   "prevSeason": 27,
+   "nextSeason": 28,
+   "kind": "empty"
+  },
+  {
+   "espnId": "68",
+   "team": "Boise State Broncos",
+   "season": 1979,
+   "gamesLogged": 0,
+   "prevSeason": 25,
+   "nextSeason": 20,
+   "kind": "empty"
+  },
+  {
+   "espnId": "68",
+   "team": "Boise State Broncos",
+   "season": 1994,
+   "gamesLogged": 0,
+   "prevSeason": 29,
+   "nextSeason": 27,
+   "kind": "empty"
+  },
+  {
+   "espnId": "103",
+   "team": "Boston College Eagles",
+   "season": 1977,
+   "gamesLogged": 0,
+   "prevSeason": 24,
+   "nextSeason": 23,
+   "kind": "empty"
+  },
+  {
+   "espnId": "2083",
+   "team": "Bucknell Bison",
+   "season": 2005,
+   "gamesLogged": 0,
+   "prevSeason": 29,
+   "nextSeason": 32,
+   "kind": "empty"
+  },
+  {
+   "espnId": "25",
+   "team": "California Golden Bears",
+   "season": 1976,
+   "gamesLogged": 0,
+   "prevSeason": 24,
+   "nextSeason": 26,
+   "kind": "empty"
+  },
+  {
+   "espnId": "2132",
+   "team": "Cincinnati Bearcats",
+   "season": 1995,
+   "gamesLogged": 0,
+   "prevSeason": 32,
+   "nextSeason": 33,
+   "kind": "empty"
+  },
+  {
+   "espnId": "2166",
+   "team": "Davidson Wildcats",
+   "season": 1989,
+   "gamesLogged": 0,
+   "prevSeason": 25,
+   "nextSeason": 25,
+   "kind": "empty"
+  },
+  {
+   "espnId": "2168",
+   "team": "Dayton Flyers",
+   "season": 2003,
+   "gamesLogged": 0,
+   "prevSeason": 32,
+   "nextSeason": 33,
+   "kind": "empty"
+  },
+  {
+   "espnId": "305",
+   "team": "DePaul Blue Demons",
+   "season": 1996,
+   "gamesLogged": 0,
+   "prevSeason": 28,
+   "nextSeason": 26,
+   "kind": "empty"
+  },
+  {
+   "espnId": "305",
+   "team": "DePaul Blue Demons",
+   "season": 2017,
+   "gamesLogged": 0,
+   "prevSeason": 31,
+   "nextSeason": 31,
+   "kind": "empty"
+  },
+  {
+   "espnId": "2184",
+   "team": "Duquesne Dukes",
+   "season": 2003,
+   "gamesLogged": 0,
+   "prevSeason": 28,
+   "nextSeason": 29,
+   "kind": "empty"
+  },
+  {
+   "espnId": "2230",
+   "team": "Fordham Rams",
+   "season": 1980,
+   "gamesLogged": 0,
+   "prevSeason": 26,
+   "nextSeason": 26,
+   "kind": "empty"
+  },
+  {
+   "espnId": "2230",
+   "team": "Fordham Rams",
+   "season": 2003,
+   "gamesLogged": 0,
+   "prevSeason": 28,
+   "nextSeason": 28,
+   "kind": "empty"
+  },
+  {
+   "espnId": "59",
+   "team": "Georgia Tech Yellow Jackets",
+   "season": 1995,
+   "gamesLogged": 0,
+   "prevSeason": 29,
+   "nextSeason": 36,
+   "kind": "empty"
+  },
+  {
+   "espnId": "107",
+   "team": "Holy Cross Crusaders",
+   "season": 1996,
+   "gamesLogged": 0,
+   "prevSeason": 27,
+   "nextSeason": 27,
+   "kind": "empty"
+  },
+  {
+   "espnId": "248",
+   "team": "Houston Cougars",
+   "season": 1972,
+   "gamesLogged": 0,
+   "prevSeason": 28,
+   "nextSeason": 24,
+   "kind": "empty"
+  },
+  {
+   "espnId": "356",
+   "team": "Illinois Fighting Illini",
+   "season": 1977,
+   "gamesLogged": 0,
+   "prevSeason": 25,
+   "nextSeason": 27,
+   "kind": "empty"
+  },
+  {
+   "espnId": "84",
+   "team": "Indiana Hoosiers",
+   "season": 1977,
+   "gamesLogged": 0,
+   "prevSeason": 32,
+   "nextSeason": 29,
+   "kind": "empty"
+  },
+  {
+   "espnId": "84",
+   "team": "Indiana Hoosiers",
+   "season": 1996,
+   "gamesLogged": 0,
+   "prevSeason": 31,
+   "nextSeason": 33,
+   "kind": "empty"
+  },
+  {
+   "espnId": "2294",
+   "team": "Iowa Hawkeyes",
+   "season": 1977,
+   "gamesLogged": 0,
+   "prevSeason": 27,
+   "nextSeason": 27,
+   "kind": "empty"
+  },
+  {
+   "espnId": "2294",
+   "team": "Iowa Hawkeyes",
+   "season": 1983,
+   "gamesLogged": 0,
+   "prevSeason": 28,
+   "nextSeason": 27,
+   "kind": "empty"
+  },
+  {
+   "espnId": "2294",
+   "team": "Iowa Hawkeyes",
+   "season": 1996,
+   "gamesLogged": 0,
+   "prevSeason": 33,
+   "nextSeason": 32,
+   "kind": "empty"
+  },
+  {
+   "espnId": "66",
+   "team": "Iowa State Cyclones",
+   "season": 1977,
+   "gamesLogged": 0,
+   "prevSeason": 25,
+   "nextSeason": 27,
+   "kind": "empty"
+  },
+  {
+   "espnId": "66",
+   "team": "Iowa State Cyclones",
+   "season": 1996,
+   "gamesLogged": 0,
+   "prevSeason": 34,
+   "nextSeason": 31,
+   "kind": "empty"
+  },
+  {
+   "espnId": "2306",
+   "team": "Kansas State Wildcats",
+   "season": 1961,
+   "gamesLogged": 0,
+   "prevSeason": 25,
+   "nextSeason": 25,
+   "kind": "empty"
+  },
+  {
+   "espnId": "2306",
+   "team": "Kansas State Wildcats",
+   "season": 1977,
+   "gamesLogged": 0,
+   "prevSeason": 26,
+   "nextSeason": 29,
+   "kind": "empty"
+  },
+  {
+   "espnId": "2306",
+   "team": "Kansas State Wildcats",
+   "season": 1986,
+   "gamesLogged": 0,
+   "prevSeason": 26,
+   "nextSeason": 28,
+   "kind": "empty"
+  },
+  {
+   "espnId": "2306",
+   "team": "Kansas State Wildcats",
+   "season": 1997,
+   "gamesLogged": 0,
+   "prevSeason": 29,
+   "nextSeason": 29,
+   "kind": "empty"
+  },
+  {
+   "espnId": "2309",
+   "team": "Kent State Golden Flashes",
+   "season": 1980,
+   "gamesLogged": 0,
+   "prevSeason": 24,
+   "nextSeason": 25,
+   "kind": "empty"
+  },
+  {
+   "espnId": "2309",
+   "team": "Kent State Golden Flashes",
+   "season": 1989,
+   "gamesLogged": 0,
+   "prevSeason": 24,
+   "nextSeason": 28,
+   "kind": "empty"
+  },
+  {
+   "espnId": "96",
+   "team": "Kentucky Wildcats",
+   "season": 1953,
+   "gamesLogged": 0,
+   "prevSeason": 32,
+   "nextSeason": 25,
+   "kind": "empty"
+  },
+  {
+   "espnId": "2335",
+   "team": "Liberty Flames",
+   "season": 1994,
+   "gamesLogged": 0,
+   "prevSeason": 30,
+   "nextSeason": 28,
+   "kind": "empty"
+  },
+  {
+   "espnId": "269",
+   "team": "Marquette Golden Eagles",
+   "season": 1977,
+   "gamesLogged": 0,
+   "prevSeason": 27,
+   "nextSeason": 27,
+   "kind": "empty"
+  },
+  {
+   "espnId": "235",
+   "team": "Memphis Tigers",
+   "season": 2020,
+   "gamesLogged": 0,
+   "prevSeason": 36,
+   "nextSeason": 28,
+   "kind": "empty"
+  },
+  {
+   "espnId": "127",
+   "team": "Michigan State Spartans",
+   "season": 1977,
+   "gamesLogged": 0,
+   "prevSeason": 26,
+   "nextSeason": 30,
+   "kind": "empty"
+  },
+  {
+   "espnId": "127",
+   "team": "Michigan State Spartans",
+   "season": 1982,
+   "gamesLogged": 0,
+   "prevSeason": 27,
+   "nextSeason": 30,
+   "kind": "empty"
+  },
+  {
+   "espnId": "127",
+   "team": "Michigan State Spartans",
+   "season": 1984,
+   "gamesLogged": 0,
+   "prevSeason": 30,
+   "nextSeason": 29,
+   "kind": "empty"
+  },
+  {
+   "espnId": "135",
+   "team": "Minnesota Golden Gophers",
+   "season": 1977,
+   "gamesLogged": 0,
+   "prevSeason": 24,
+   "nextSeason": 27,
+   "kind": "empty"
+  },
+  {
+   "espnId": "344",
+   "team": "Mississippi State Bulldogs",
+   "season": 2019,
+   "gamesLogged": 0,
+   "prevSeason": 37,
+   "nextSeason": 31,
+   "kind": "empty"
+  },
+  {
+   "espnId": "2623",
+   "team": "Missouri State Bears",
+   "season": 1994,
+   "gamesLogged": 0,
+   "prevSeason": 31,
+   "nextSeason": 27,
+   "kind": "empty"
+  },
+  {
+   "espnId": "2623",
+   "team": "Missouri State Bears",
+   "season": 1997,
+   "gamesLogged": 0,
+   "prevSeason": 28,
+   "nextSeason": 32,
+   "kind": "empty"
+  },
+  {
+   "espnId": "2623",
+   "team": "Missouri State Bears",
+   "season": 2014,
+   "gamesLogged": 0,
+   "prevSeason": 33,
+   "nextSeason": 31,
+   "kind": "empty"
+  },
+  {
+   "espnId": "142",
+   "team": "Missouri Tigers",
+   "season": 1961,
+   "gamesLogged": 0,
+   "prevSeason": 25,
+   "nextSeason": 23,
+   "kind": "empty"
+  },
+  {
+   "espnId": "142",
+   "team": "Missouri Tigers",
+   "season": 1997,
+   "gamesLogged": 0,
+   "prevSeason": 33,
+   "nextSeason": 32,
+   "kind": "empty"
+  },
+  {
+   "espnId": "142",
+   "team": "Missouri Tigers",
+   "season": 2014,
+   "gamesLogged": 0,
+   "prevSeason": 34,
+   "nextSeason": 32,
+   "kind": "empty"
+  },
+  {
+   "espnId": "2426",
+   "team": "Navy Midshipmen",
+   "season": 2005,
+   "gamesLogged": 0,
+   "prevSeason": 28,
+   "nextSeason": 28,
+   "kind": "empty"
+  },
+  {
+   "espnId": "158",
+   "team": "Nebraska Cornhuskers",
+   "season": 1961,
+   "gamesLogged": 0,
+   "prevSeason": 24,
+   "nextSeason": 25,
+   "kind": "empty"
+  },
+  {
+   "espnId": "158",
+   "team": "Nebraska Cornhuskers",
+   "season": 1977,
+   "gamesLogged": 0,
+   "prevSeason": 26,
+   "nextSeason": 30,
+   "kind": "empty"
+  },
+  {
+   "espnId": "158",
+   "team": "Nebraska Cornhuskers",
+   "season": 1997,
+   "gamesLogged": 0,
+   "prevSeason": 35,
+   "nextSeason": 32,
+   "kind": "empty"
+  },
+  {
+   "espnId": "167",
+   "team": "New Mexico Lobos",
+   "season": 1980,
+   "gamesLogged": 0,
+   "prevSeason": 25,
+   "nextSeason": 24,
+   "kind": "empty"
+  },
+  {
+   "espnId": "77",
+   "team": "Northwestern Wildcats",
+   "season": 1977,
+   "gamesLogged": 0,
+   "prevSeason": 26,
+   "nextSeason": 27,
+   "kind": "empty"
+  },
+  {
+   "espnId": "77",
+   "team": "Northwestern Wildcats",
+   "season": 1996,
+   "gamesLogged": 0,
+   "prevSeason": 27,
+   "nextSeason": 29,
+   "kind": "empty"
+  },
+  {
+   "espnId": "194",
+   "team": "Ohio State Buckeyes",
+   "season": 1977,
+   "gamesLogged": 0,
+   "prevSeason": 25,
+   "nextSeason": 27,
+   "kind": "empty"
+  },
+  {
+   "espnId": "194",
+   "team": "Ohio State Buckeyes",
+   "season": 1996,
+   "gamesLogged": 0,
+   "prevSeason": 28,
+   "nextSeason": 27,
+   "kind": "empty"
+  },
+  {
+   "espnId": "201",
+   "team": "Oklahoma Sooners",
+   "season": 2010,
+   "gamesLogged": 0,
+   "prevSeason": 36,
+   "nextSeason": 32,
+   "kind": "empty"
+  },
+  {
+   "espnId": "197",
+   "team": "Oklahoma State Cowboys",
+   "season": 1961,
+   "gamesLogged": 0,
+   "prevSeason": 25,
+   "nextSeason": 23,
+   "kind": "empty"
+  },
+  {
+   "espnId": "197",
+   "team": "Oklahoma State Cowboys",
+   "season": 1977,
+   "gamesLogged": 0,
+   "prevSeason": 24,
+   "nextSeason": 26,
+   "kind": "empty"
+  },
+  {
+   "espnId": "197",
+   "team": "Oklahoma State Cowboys",
+   "season": 1992,
+   "gamesLogged": 0,
+   "prevSeason": 32,
+   "nextSeason": 29,
+   "kind": "empty"
+  },
+  {
+   "espnId": "197",
+   "team": "Oklahoma State Cowboys",
+   "season": 1997,
+   "gamesLogged": 0,
+   "prevSeason": 27,
+   "nextSeason": 29,
+   "kind": "empty"
+  },
+  {
+   "espnId": "2483",
+   "team": "Oregon Ducks",
+   "season": 1976,
+   "gamesLogged": 0,
+   "prevSeason": 30,
+   "nextSeason": 26,
+   "kind": "empty"
+  },
+  {
+   "espnId": "2483",
+   "team": "Oregon Ducks",
+   "season": 1996,
+   "gamesLogged": 0,
+   "prevSeason": 28,
+   "nextSeason": 28,
+   "kind": "empty"
+  },
+  {
+   "espnId": "204",
+   "team": "Oregon State Beavers",
+   "season": 1976,
+   "gamesLogged": 0,
+   "prevSeason": 30,
+   "nextSeason": 29,
+   "kind": "empty"
+  },
+  {
+   "espnId": "204",
+   "team": "Oregon State Beavers",
+   "season": 1996,
+   "gamesLogged": 0,
+   "prevSeason": 27,
+   "nextSeason": 27,
+   "kind": "empty"
+  },
+  {
+   "espnId": "2509",
+   "team": "Purdue Boilermakers",
+   "season": 1974,
+   "gamesLogged": 0,
+   "prevSeason": 23,
+   "nextSeason": 28,
+   "kind": "empty"
+  },
+  {
+   "espnId": "2509",
+   "team": "Purdue Boilermakers",
+   "season": 1977,
+   "gamesLogged": 0,
+   "prevSeason": 27,
+   "nextSeason": 27,
+   "kind": "empty"
+  },
+  {
+   "espnId": "257",
+   "team": "Richmond Spiders",
+   "season": 2003,
+   "gamesLogged": 0,
+   "prevSeason": 36,
+   "nextSeason": 33,
+   "kind": "empty"
+  },
+  {
+   "espnId": "164",
+   "team": "Rutgers Scarlet Knights",
+   "season": 1974,
+   "gamesLogged": 0,
+   "prevSeason": 25,
+   "nextSeason": 27,
+   "kind": "empty"
+  },
+  {
+   "espnId": "2545",
+   "team": "SE Louisiana Lions",
+   "season": 1990,
+   "gamesLogged": 0,
+   "prevSeason": 24,
+   "nextSeason": 28,
+   "kind": "empty"
+  },
+  {
+   "espnId": "2567",
+   "team": "SMU Mustangs",
+   "season": 2014,
+   "gamesLogged": 0,
+   "prevSeason": 32,
+   "nextSeason": 34,
+   "kind": "empty"
+  },
+  {
+   "espnId": "23",
+   "team": "San Jose State Spartans",
+   "season": 1983,
+   "gamesLogged": 0,
+   "prevSeason": 22,
+   "nextSeason": 26,
+   "kind": "empty"
+  },
+  {
+   "espnId": "24",
+   "team": "Stanford Cardinal",
+   "season": 1976,
+   "gamesLogged": 0,
+   "prevSeason": 26,
+   "nextSeason": 24,
+   "kind": "empty"
+  },
+  {
+   "espnId": "24",
+   "team": "Stanford Cardinal",
+   "season": 1996,
+   "gamesLogged": 0,
+   "prevSeason": 29,
+   "nextSeason": 30,
+   "kind": "empty"
+  },
+  {
+   "espnId": "2628",
+   "team": "TCU Horned Frogs",
+   "season": 1996,
+   "gamesLogged": 0,
+   "prevSeason": 27,
+   "nextSeason": 35,
+   "kind": "empty"
+  },
+  {
+   "espnId": "245",
+   "team": "Texas A&M Aggies",
+   "season": 1997,
+   "gamesLogged": 0,
+   "prevSeason": 27,
+   "nextSeason": 27,
+   "kind": "empty"
+  },
+  {
+   "espnId": "251",
+   "team": "Texas Longhorns",
+   "season": 1997,
+   "gamesLogged": 0,
+   "prevSeason": 31,
+   "nextSeason": 31,
+   "kind": "empty"
+  },
+  {
+   "espnId": "2640",
+   "team": "Texas Southern Tigers",
+   "season": 2005,
+   "gamesLogged": 0,
+   "prevSeason": 29,
+   "nextSeason": 30,
+   "kind": "empty"
+  },
+  {
+   "espnId": "119",
+   "team": "Towson Tigers",
+   "season": 1994,
+   "gamesLogged": 0,
+   "prevSeason": 27,
+   "nextSeason": 27,
+   "kind": "empty"
+  },
+  {
+   "espnId": "41",
+   "team": "UConn Huskies",
+   "season": 1980,
+   "gamesLogged": 0,
+   "prevSeason": 29,
+   "nextSeason": 29,
+   "kind": "empty"
+  },
+  {
+   "espnId": "82",
+   "team": "UIC Flames",
+   "season": 1996,
+   "gamesLogged": 0,
+   "prevSeason": 27,
+   "nextSeason": 29,
+   "kind": "empty"
+  },
+  {
+   "espnId": "30",
+   "team": "USC Trojans",
+   "season": 1976,
+   "gamesLogged": 0,
+   "prevSeason": 26,
+   "nextSeason": 25,
+   "kind": "empty"
+  },
+  {
+   "espnId": "328",
+   "team": "Utah State Aggies",
+   "season": 1976,
+   "gamesLogged": 0,
+   "prevSeason": 26,
+   "nextSeason": 23,
+   "kind": "empty"
+  },
+  {
+   "espnId": "254",
+   "team": "Utah Utes",
+   "season": 1980,
+   "gamesLogged": 0,
+   "prevSeason": 29,
+   "nextSeason": 29,
+   "kind": "empty"
+  },
+  {
+   "espnId": "264",
+   "team": "Washington Huskies",
+   "season": 1976,
+   "gamesLogged": 0,
+   "prevSeason": 23,
+   "nextSeason": 26,
+   "kind": "empty"
+  },
+  {
+   "espnId": "264",
+   "team": "Washington Huskies",
+   "season": 1995,
+   "gamesLogged": 0,
+   "prevSeason": 27,
+   "nextSeason": 28,
+   "kind": "empty"
+  },
+  {
+   "espnId": "265",
+   "team": "Washington State Cougars",
+   "season": 1976,
+   "gamesLogged": 0,
+   "prevSeason": 25,
+   "nextSeason": 24,
+   "kind": "empty"
+  },
+  {
+   "espnId": "265",
+   "team": "Washington State Cougars",
+   "season": 1996,
+   "gamesLogged": 0,
+   "prevSeason": 30,
+   "nextSeason": 30,
+   "kind": "empty"
+  },
+  {
+   "espnId": "275",
+   "team": "Wisconsin Badgers",
+   "season": 1977,
+   "gamesLogged": 0,
+   "prevSeason": 23,
+   "nextSeason": 27,
+   "kind": "empty"
+  },
+  {
+   "espnId": "275",
+   "team": "Wisconsin Badgers",
+   "season": 1996,
+   "gamesLogged": 0,
+   "prevSeason": 27,
+   "nextSeason": 28,
+   "kind": "empty"
+  },
+  {
+   "espnId": "12",
+   "team": "Arizona Wildcats",
+   "season": 1999,
+   "gamesLogged": 1,
+   "prevSeason": 35,
+   "nextSeason": 34,
+   "kind": "tournament-only"
+  },
+  {
+   "espnId": "12",
+   "team": "Arizona Wildcats",
+   "season": 2008,
+   "gamesLogged": 1,
+   "prevSeason": 31,
+   "nextSeason": 35,
+   "kind": "tournament-only"
+  },
+  {
+   "espnId": "30",
+   "team": "USC Trojans",
+   "season": 2008,
+   "gamesLogged": 1,
+   "prevSeason": 37,
+   "nextSeason": 35,
+   "kind": "tournament-only"
+  },
+  {
+   "espnId": "61",
+   "team": "Georgia Bulldogs",
+   "season": 1985,
+   "gamesLogged": 2,
+   "prevSeason": 29,
+   "nextSeason": 30,
+   "kind": "tournament-only"
+  },
+  {
+   "espnId": "61",
+   "team": "Georgia Bulldogs",
+   "season": 2002,
+   "gamesLogged": 2,
+   "prevSeason": 31,
+   "nextSeason": 27,
+   "kind": "tournament-only"
+  },
+  {
+   "espnId": "120",
+   "team": "Maryland Terrapins",
+   "season": 1988,
+   "gamesLogged": 2,
+   "prevSeason": 26,
+   "nextSeason": 29,
+   "kind": "tournament-only"
+  },
+  {
+   "espnId": "135",
+   "team": "Minnesota Golden Gophers",
+   "season": 1972,
+   "gamesLogged": 2,
+   "prevSeason": 21,
+   "nextSeason": 22,
+   "kind": "tournament-only"
+  },
+  {
+   "espnId": "2509",
+   "team": "Purdue Boilermakers",
+   "season": 1996,
+   "gamesLogged": 2,
+   "prevSeason": 32,
+   "nextSeason": 30,
+   "kind": "tournament-only"
+  },
+  {
+   "espnId": "333",
+   "team": "Alabama Crimson Tide",
+   "season": 1987,
+   "gamesLogged": 3,
+   "prevSeason": 33,
+   "nextSeason": 31,
+   "kind": "tournament-only"
+  },
+  {
+   "espnId": "228",
+   "team": "Clemson Tigers",
+   "season": 1990,
+   "gamesLogged": 3,
+   "prevSeason": 30,
+   "nextSeason": 27,
+   "kind": "tournament-only"
+  },
+  {
+   "espnId": "96",
+   "team": "Kentucky Wildcats",
+   "season": 1988,
+   "gamesLogged": 3,
+   "prevSeason": 29,
+   "nextSeason": 32,
+   "kind": "tournament-only"
+  },
+  {
+   "espnId": "41",
+   "team": "UConn Huskies",
+   "season": 1996,
+   "gamesLogged": 3,
+   "prevSeason": 33,
+   "nextSeason": 33,
+   "kind": "tournament-only"
+  },
+  {
+   "espnId": "142",
+   "team": "Missouri Tigers",
+   "season": 1994,
+   "gamesLogged": 4,
+   "prevSeason": 33,
+   "nextSeason": 29,
+   "kind": "tournament-only"
+  },
+  {
+   "espnId": "2603",
+   "team": "Saint Joseph's Hawks",
+   "season": 1961,
+   "gamesLogged": 4,
+   "prevSeason": 21,
+   "nextSeason": 24,
+   "kind": "tournament-only"
+  },
+  {
+   "espnId": "2305",
+   "team": "Kansas Jayhawks",
+   "season": 2018,
+   "gamesLogged": 5,
+   "prevSeason": 36,
+   "nextSeason": 36,
+   "kind": "tournament-only"
+  },
+  {
+   "espnId": "235",
+   "team": "Memphis Tigers",
+   "season": 2008,
+   "gamesLogged": 6,
+   "prevSeason": 37,
+   "nextSeason": 37,
+   "kind": "tournament-only"
+  }
+ ]
+}

@@ -90,5 +90,9 @@
  {
   "key": "quarantine/2026-07-28",
   "note": "8 entries in sr_boxscores_quarantine.json need source re-fetch to recover opponent identity (UCA custompages, SD/UC Davis statcrew, 1957 USF-Idaho State)"
+ },
+ {
+  "key": "games-gaps/see-games_season_gaps.json",
+  "note": "107 team-seasons are missing or tournament-only in the game logs while both neighbouring seasons are complete (Arizona 1999, Purdue 1996, Michigan 1992 AND 1993, UConn 1996, Kentucky 1988...). Full list with counts in games_season_gaps.json. Supersedes the four individually-listed gaps."
  }
 ]
