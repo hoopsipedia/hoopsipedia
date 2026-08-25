@@ -38,11 +38,34 @@ correct absences rather than data loss:
 
 ## Player-line box scores
 
-**Overall coverage: 7.2% of the ~280,600 unique games in the logs.** By decade:
-1940s 62.7% (tiny sample), 1950s 2.9%, 1960s 3.7%, 1970s 4.8%, 1980s 5.1%,
-1990s 5.9%, **2000s 15.2%**, 2010s 8.7%, **2020s 2.2%**. The 2020s are the
-least-covered decade despite being the most accessible — worth a pass, since
-recent seasons are reachable through the ESPN event map rather than Wayback.
+**Two sources serve box scores, and counting only one badly understates
+coverage.** `sr_boxscores.json` is the STATIC archive (pre-ESPN eras,
+Wayback/StatCrew harvests). For 2002+ the site resolves a game to an ESPN
+event id via `game_ids/{teamId}.json` — 130,454 mapped events — and fetches
+the box score live. A game is covered if EITHER source has it.
+
+Combined coverage, joined on date + score pair with the ±1 day tolerance the
+site's own lookups use (ESPN stamps events in UTC, so evening games land on
+the next calendar day — without that tolerance the 2020s look like 78.6%
+instead of 93.9%):
+
+| decade | unique games | box score available | coverage |
+|---|---|---|---|
+| 1950s | 15,955 | 207 | 1.3% |
+| 1960s | 18,858 | 402 | 2.1% |
+| 1970s | 25,357 | 918 | 3.6% |
+| 1980s | 36,146 | 1,363 | 3.8% |
+| 1990s | 42,808 | 1,823 | 4.3% |
+| 2000s | 49,724 | 38,617 | 77.7% |
+| 2010s | 56,514 | 51,744 | 91.6% |
+| 2020s | 39,535 | 37,106 | **93.9%** |
+| **total** | **284,905** | **132,180** | **46.4%** |
+
+**The frontier is pre-2002, not the modern era.** Everything from 2002 on is
+78-94% covered through the event map and needs no harvesting. Everything
+before it sits at 1-4% and has no live source, so it can only come from
+Wayback/StatCrew-style archive work — which is exactly what the July
+expansion did, and where any further effort belongs.
 
 Marquee coverage is much better than the headline rate: **73 of 74**
 resolvable NCAA title games have a box score (only 1950 CCNY-Bradley is
