@@ -114,40 +114,22 @@ non-negotiables, both documented in `PLAYERS_NOTES.md`: default the sort to
 4,258 players have blocks that were never recorded, and printing 0 would
 assert a fact about eras that didn't count them.
 
-### 5. Fix the box-score matcher in index.html — it shows the wrong game
-**Found late in this session; user-facing and worth doing before the
-players page.** `index.html` matches a game to its box score by testing
-whether either team name contains the *last word* of the other, within a
-year, then takes the first hit and stops:
+### 5. ~~Fix the box-score matcher~~ — **DONE 2026-07-28**
+`index.html` matched a game to its box score by last-word overlap, so
+`arkansas-vs-iowa` could serve `arkansas-vs-iowa-st` and any two games where
+both teams end in "State" collided. All three fuzzy matchers
+(`findSRSeasonMatch`, the H2H panel, `findChampSRBoxScore`) now resolve both
+sides to ESPN ids via the new `boxscore_match_index.json` (851 names, 20KB)
+and compare identity. Where a name cannot resolve — deliberately ambiguous
+bare names like "Louisiana", plus non-D-I opponents — they fall back to the
+old test, now additionally gated on the score pair, so gaps degrade to prior
+behaviour rather than to a wrong answer. Dated entries whose date disagrees
+are rejected outright, which separates repeat meetings.
 
-```js
-const hasT1 = srTeams.some(n => t1Short.includes(n.split(' ').pop())
-                             || n.includes(t1Short.split(' ').pop()));
-```
-
-Last-word matching cannot tell programs apart. Measured against the real
-store: **51.9% of entries (10,537 of 20,320) match more than one game in
-their own year, and 5,776 of those collisions are with a different pair of
-programs entirely.** Concretely, `arkansas-vs-iowa` collides with
-`arkansas-razorbacks-vs-iowa-st`; `illinois-vs-georgia` with
-`georgia-tech-vs-illinois`; `ohio-state-vs-iowa-state` with
-`illinois-state-vs-usc` (both end in "State"). Which one a user sees is
-iteration order. Deduping the store helped the count but not this — the
-cause is the matcher.
-
-The fix is already sitting in the repo: `team_name_canon.json` (64KB) maps
-every team-name string in the store to one canonical program slug, which is
-exactly the identity this comparison needs. Match on canonical slug pair,
-and when both the key and the game carry a date, require the dates to agree
-(that last part is what separates the three Louisville–Memphis State
-meetings of 1985). Simulated over the full store, that combination drops
-ambiguity from 51.9% to **0.5%** (98 entries, all genuine same-season
-repeat meetings with no date on one side).
-
-I did not implement it: it is a frontend change to the 23.5K-line monolith
-that I cannot exercise end-to-end from here, and it belongs with the other
-frontend work rather than in a data-repair branch. The simulation above is
-the acceptance test — port the matcher, re-run it, expect ~98.
+Measured over the full store: ambiguity **51.86% → 0.83%**, entries matching
+a **different program pair 5,776 → 0**, and **zero regressions** — the
+correct box score is still found for 100% of entries. Verified in headless
+Chromium against the real page, not just in simulation.
 
 ### 6. Wave 3: index.html modularization
 The 23.5K-line monolith is the last structural debt, and it gates the

@@ -581,6 +581,48 @@ def test_boxscores_have_two_distinct_teams():
           not selfpairs, first_bad(selfpairs))
 
 
+def test_boxscore_match_index(data_h):
+    # index.html matches a game to its box score by resolving both sides to
+    # ESPN ids via this map. Before it existed the matcher compared LAST
+    # WORDS, so `arkansas-vs-iowa` matched `arkansas-vs-iowa-st` and any two
+    # games where both teams end in "State" collided — 5,776 entries could
+    # serve a box score for a different pair of programs.
+    try:
+        doc = load("boxscore_match_index.json")
+    except Exception as exc:
+        check("boxscore_match_index.json: parses", False, repr(exc))
+        return
+    names = doc.get("names") or {}
+    check("boxscore_match_index.json: non-empty name map",
+          len(names) > 500, "got %d" % len(names))
+
+    def bxnorm(v):
+        v = str(v or "").lower().replace("'", "").replace("\u2019", "").replace("&", "")
+        return re.sub(r"-{2,}", "-", re.sub(r"[^a-z0-9]+", "-", v)).strip("-")
+
+    # Every program the site can render must resolve, or its games silently
+    # fall back to the fuzzy matcher.
+    unresolved = [v[0] for tid, v in data_h.items() if bxnorm(v[0]) not in names]
+    check("boxscore_match_index: every data.json H team resolves",
+          not unresolved, first_bad(unresolved))
+    bad_ids = [(n, i) for n, i in names.items() if i not in data_h]
+    check("boxscore_match_index: every id is a live data.json H id",
+          not bad_ids, first_bad(bad_ids))
+    # A name that could mean two programs must NOT resolve — a wrong id is a
+    # confidently wrong box score, which is worse than falling back.
+    must_not = ["louisiana", "miami", "loyola", "southern", "saint-marys"]
+    leaked = [n for n in must_not if n in names]
+    check("boxscore_match_index: ambiguous bare names stay unresolved",
+          not leaked, first_bad(leaked))
+    # Programs that differ only by a "State" suffix must get distinct ids.
+    pairs = [("iowa", "iowa-state"), ("ohio", "ohio-state"),
+             ("michigan", "michigan-state"), ("oklahoma", "oklahoma-state")]
+    collide = [(a, b) for a, b in pairs
+               if a in names and b in names and names[a] == names[b]]
+    check("boxscore_match_index: X and X-State resolve to different ids",
+          not collide, first_bad(collide))
+
+
 def test_players_slices(data_h):
     # players/ slices are what the browser fetches; players.json is the
     # master. A slice set that does not reconstitute the master exactly means
@@ -645,6 +687,7 @@ def main():
     test_games_keys_are_real_teams(games_files, data_h)
     test_games_text_is_not_mojibake(games_files)
     test_boxscores_have_two_distinct_teams()
+    test_boxscore_match_index(data_h)
     test_players_slices(data_h)
     print("-" * 70)
     print("%d passed, %d failed, %d skipped (known data issues)"

@@ -14774,6 +14774,58 @@
             return null;
         }
 
+        // ── Box-score identity matching ────────────────────────────────
+        // Team NAMES cannot identify a program: matching on the last word
+        // made `arkansas-vs-iowa` match `arkansas-vs-iowa-st`, and any two
+        // games where both teams end in "State" collide. Measured over the
+        // store, 51.9% of entries matched more than one game in their own
+        // year and 5,776 of those were a different pair of programs.
+        // boxscore_match_index.json maps every team-name string in the
+        // archive (and every name the site uses) to an ESPN id, so the
+        // comparison can be an id-pair equality. Where a name does not
+        // resolve — deliberately ambiguous bare names like "Louisiana", and
+        // non-D-I opponents — we fall back to the old fuzzy test, so gaps
+        // degrade to previous behaviour rather than to a wrong box score.
+        let _bxIndex = null, _bxIndexPromise = null;
+        function loadBoxscoreMatchIndex() {
+            if (_bxIndex) return Promise.resolve(_bxIndex);
+            if (!_bxIndexPromise) {
+                _bxIndexPromise = fetch('/boxscore_match_index.json')
+                    .then(r => r.ok ? r.json() : null)
+                    .then(j => (_bxIndex = (j && j.names) || {}))
+                    .catch(() => (_bxIndex = {}));
+            }
+            return _bxIndexPromise;
+        }
+        // Must stay byte-identical to norm() in scripts/build_boxscore_match_index.py.
+        function bxNorm(s) {
+            return String(s == null ? '' : s).toLowerCase()
+                .replace(/['\u2019]/g, '').replace(/&/g, '')
+                .replace(/[^a-z0-9]+/g, '-').replace(/-{2,}/g, '-')
+                .replace(/^-|-$/g, '');
+        }
+        function bxTeamId(name) {
+            return (_bxIndex && _bxIndex[bxNorm(name)]) || null;
+        }
+        // null  => identity unknown on one side, caller should fall back
+        // true  => same two programs
+        // false => provably different programs
+        function bxSamePair(srTeams, aName, bName, aId, bId) {
+            const s1 = bxTeamId(srTeams[0]), s2 = bxTeamId(srTeams[1]);
+            const g1 = aId || bxTeamId(aName), g2 = bId || bxTeamId(bName);
+            if (!s1 || !s2 || !g1 || !g2) return null;
+            return (s1 === String(g1) && s2 === String(g2)) ||
+                   (s1 === String(g2) && s2 === String(g1));
+        }
+        // Dates disagreeing is proof of a different game (three
+        // Louisville-Memphis State meetings in 1985 share a score pair).
+        function bxDateConflict(key, val, dateStr) {
+            if (!dateStr) return false;
+            const m = String(key).match(/(\d{4}-\d{2}-\d{2})/) ||
+                      String((val && val.url) || '').match(/(\d{4}-\d{2}-\d{2})/);
+            return !!m && m[1] !== dateStr;
+        }
+
         // Find an SR boxscore entry for a season-page game — same matching
         // approach as toggleH2HBoxScore (team-name overlap), tightened with the
         // score pair since SR entries carry final scores.
@@ -14788,6 +14840,13 @@
                 if (!isNaN(scores[0]) && !isNaN(srScores[0]) &&
                     (srScores[0] !== scores[0] || srScores[1] !== scores[1])) continue;
                 const srTeams = val.teams.map(t => (t.name || '').toLowerCase());
+                // Exact program identity when both sides resolve; the
+                // last-word test is only a fallback for unresolvable names.
+                const same = bxSamePair([val.teams[0].name, val.teams[1].name],
+                                        info.teamName, info.oppName,
+                                        info.teamId, info.oppId);
+                if (same === false) continue;
+                if (same === true) return val;
                 const hasT1 = srTeams.some(n => n && (t1Short.includes(n.split(' ').pop()) || n.includes(t1Short.split(' ').pop())));
                 const hasT2 = srTeams.some(n => n && (t2Short.includes(n.split(' ').pop()) || n.includes(t2Short.split(' ').pop())));
                 if (hasT1 && hasT2) return val;
@@ -14923,6 +14982,7 @@
                     eventId: espnOk ? eventId : null,
                     tournamentYear: startYear + 1,
                     teamName: team.name, oppName: oppName,
+                    teamId: team.espnId, oppId: oppTeam ? oppTeam.espnId : null,
                     pts: g.pts, oppPts: g.opp_pts, w: !!g.w
                 };
 
@@ -15069,7 +15129,9 @@
 
             // Sports Reference tournament boxscores — any era
             if (!html && info.tournamentYear) {
-                const srData = await loadSRBoxscoresYear(info.tournamentYear);
+                const [srData] = await Promise.all([
+                    loadSRBoxscoresYear(info.tournamentYear),
+                    loadBoxscoreMatchIndex()]);
                 const srMatch = findSRSeasonMatch(srData, info);
                 if (srMatch) html = renderSRBoxScore(srMatch);
             }
@@ -22768,6 +22830,7 @@
                 // date maps to the following year's key — fetch both candidates
                 const gMonth = parseInt(dateStr.substring(5, 7));
                 const candidateYear = gMonth >= 10 ? gameYear + 1 : gameYear;
+                await loadBoxscoreMatchIndex();
                 const srData = Object.assign({},
                     await loadSRBoxscoresYear(gameYear),
                     candidateYear !== gameYear ? await loadSRBoxscoresYear(candidateYear) : {});
@@ -22776,20 +22839,34 @@
                 if (srData) {
                     for (const [key, val] of Object.entries(srData)) {
                         if (val && val.teams && val.teams.length >= 2) {
-                            // Check if this SR entry matches by looking at team names
+                            const keyYear = key.substring(0, 4);
+                            const month = parseInt(dateStr.substring(5, 7));
+                            const expectedYear = month >= 10 ? String(gameYear + 1) : String(gameYear);
+                            if (keyYear !== String(gameYear) && keyYear !== expectedYear) continue;
+                            // A dated entry whose date differs is a different
+                            // game outright — teams can meet 2-3 times a season.
+                            if (bxDateConflict(key, val, dateStr)) continue;
+                            // Exact program identity where both sides resolve.
+                            const same = bxSamePair([val.teams[0].name, val.teams[1].name],
+                                                    info.t1Name, info.t2Name,
+                                                    info.t1EspnId, info.t2EspnId);
+                            if (same === false) continue;
+                            if (same === true) { srMatch = val; break; }
+                            // Fallback for unresolvable names: the old
+                            // last-word overlap, now additionally gated on the
+                            // score pair so it cannot serve an unrelated game.
                             const srTeams = val.teams.map(t => (t.name || '').toLowerCase());
                             const t1Short = (info.t1Name || '').toLowerCase();
                             const t2Short = (info.t2Name || '').toLowerCase();
                             const hasT1 = srTeams.some(n => t1Short.includes(n.split(' ').pop()) || n.includes(t1Short.split(' ').pop()));
                             const hasT2 = srTeams.some(n => t2Short.includes(n.split(' ').pop()) || n.includes(t2Short.split(' ').pop()));
-                            // Also check if year matches
-                            const keyYear = key.substring(0, 4);
-                            const month = parseInt(dateStr.substring(5, 7));
-                            const expectedYear = month >= 10 ? String(gameYear + 1) : String(gameYear);
-                            if (hasT1 && hasT2 && (keyYear === String(gameYear) || keyYear === expectedYear)) {
-                                srMatch = val;
-                                break;
-                            }
+                            if (!hasT1 || !hasT2) continue;
+                            const want = [Number(info.t1Score), Number(info.t2Score)].sort((a, b) => a - b);
+                            const got = [Number(val.teams[0].score), Number(val.teams[1].score)].sort((a, b) => a - b);
+                            if (!isNaN(want[0]) && !isNaN(got[0]) &&
+                                (want[0] !== got[0] || want[1] !== got[1])) continue;
+                            srMatch = val;
+                            break;
                         }
                     }
                 }
@@ -22950,6 +23027,11 @@
             for (const val of Object.values(srData)) {
                 if (!val || !val.teams || val.teams.length !== 2) continue;
                 const [t1, t2] = val.teams;
+                const same = bxSamePair([t1.name, t2.name], run.teamName, game.opponent);
+                if (same === false) continue;
+                const scoresOk = (t1.score === game.winScore && t2.score === game.loseScore) ||
+                                 (t2.score === game.winScore && t1.score === game.loseScore);
+                if (same === true) { if (scoresOk) return val; continue; }
                 const pairA = t1.score === game.winScore && t2.score === game.loseScore &&
                     overlaps(t1.name, run.teamName) && overlaps(t2.name, game.opponent);
                 const pairB = t2.score === game.winScore && t1.score === game.loseScore &&
@@ -23012,7 +23094,8 @@
             // Our scraped SR tournament box scores cover 1939-2026 — try them
             // first for pre-ESPN years (exact score-pair + both-team match).
             if (year < 2002 && runData && runData.games && runData.games[gameIndex]) {
-                const srData = await loadSRBoxscoresYear(year);
+                const [srData] = await Promise.all([
+                    loadSRBoxscoresYear(year), loadBoxscoreMatchIndex()]);
                 const srMatch = findChampSRBoxScore(srData, runData, runData.games[gameIndex]);
                 if (srMatch) {
                     inner.innerHTML = renderSRBoxScore(srMatch);
