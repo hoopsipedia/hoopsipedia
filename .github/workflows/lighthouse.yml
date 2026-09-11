@@ -21,6 +21,9 @@
 #                          suspect cold Pages-Function TTFB) | CLS 0 | 5.3 MB
 #   /rankings              performance 0.80 | LCP 4.7s | CLS 0 | 2.8 MB
 #   Budgets tightened accordingly: performance ≥0.55, byte weight ≤8 MB.
+#   The default 'simulate' throttling produced bimodal LCP (3.6s or ~17s) on
+#   the team page run to run; with throttlingMethod=devtools (real network
+#   throttling) three consecutive runs gave 0.82 / LCP 2.5s. CI uses devtools.
 #
 # Assertions below are tuned to this baseline with headroom for run-to-run
 # variance, so today's site passes but real regressions fail. The byte-weight
@@ -59,6 +62,9 @@ jobs:
           cat > lighthouserc.json <<'EOF'
           {
             "ci": {
+              "collect": {
+                "settings": { "throttlingMethod": "devtools" }
+              },
               "assert": {
                 "assertions": {
                   "categories:performance": [

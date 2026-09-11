@@ -17,11 +17,14 @@ CRON_JOBS=$(cat <<EOF
 0 2 * 3 1-3 cd $SCRIPT_DIR && $PYTHON nightly_sync.py >> /private/tmp/hoopsipedia_sync.log 2>&1
 # April: nightly at 2 AM (later tournament rounds)
 0 2 * 4 * cd $SCRIPT_DIR && $PYTHON nightly_sync.py >> /private/tmp/hoopsipedia_sync.log 2>&1
+# Content drafts every morning (content/drafts/latest.md) and the weekly Google report (Mondays)
+0 7 * * * cd $SCRIPT_DIR && $PYTHON scripts/daily_content.py >> /private/tmp/hoopsipedia_content.log 2>&1
+0 8 * * 1 cd $SCRIPT_DIR && set -a && . \$HOME/.config/hoopsipedia/google.env && set +a && $PYTHON scripts/google_reports.py >> /private/tmp/hoopsipedia_reports.log 2>&1
 EOF
 )
 
 # Install cron jobs (preserve any existing non-hoopsipedia jobs)
-(crontab -l 2>/dev/null | grep -v "Hoopsipedia" | grep -v "nightly_sync"; echo "$CRON_JOBS") | crontab -
+(crontab -l 2>/dev/null | grep -v "Hoopsipedia" | grep -vE "nightly_sync|daily_content|google_reports"; echo "$CRON_JOBS") | crontab -
 
 echo "✅ Cron jobs installed:"
 crontab -l

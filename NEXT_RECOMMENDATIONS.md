@@ -1,192 +1,77 @@
-# What To Do Next — Recommendation for Josh (2026-07-28)
+# What To Do Next — Recommendation for Josh (2026-09-11)
 
-Supersedes the 2026-06-12 version, which predates the July box-score
-expansion (2,895 → 20,320 unique games) and the integrity pass that followed.
+Supersedes the 2026-07-28 version. That document was written for a site that,
+it turned out, nobody could see: **production had been frozen on the July 24
+build for seven weeks** because `sr_boxscores.json` crossed Cloudflare
+Pages' 25 MiB per-file limit and every deploy since failed silently while CI
+stayed green. Fixed 2026-09-11 (`63c69df`): the store ships only as
+`sr_boxscores.json.gz`, the hook and CI enforce it, and CI now fails on any
+tracked file over 25 MiB. **Rule: after every push, confirm the live
+`app.js?v=` hash matches `index.html`.**
 
-## Where things stand
+## Where things stand (all live, verified on production)
 
-The July harvest grew the box-score archive 7x. This session audited what
-that growth produced and repaired it. The archive is now *verified* rather
-than merely large:
+| Area | State |
+|---|---|
+| Data | 365 programs, 284,905 unique games, 46% with a box score (92% for 2010+, 1–4% pre-2000), 53,916 players, 107 → 2 missing team-seasons, 157 NCAA-vacated seasons shown with an asterisk and excluded from rankings |
+| Performance | HTML shell 1.8 MB → 52 KB; CLS 0 everywhere; home 0.78–0.80, rankings 0.80, team page 0.82 (Lighthouse mobile, real throttling). Analytics/AdSense tags load after first paint. |
+| SEO surface | Forever URLs with server-rendered content for `/rankings`, `/time-machine` (+ any matchup), `/players`, `/rivalries` (+ each), `/coaches`, `/teams`, `/champions`, `/bracket`, `/upsets`, `/classics`; every season page has a computed story + prev/next links; titles say "Basketball" (season pages had been ranking for football queries) |
+| Search Console | 15.9K pages indexed; last 28 days 100 clicks / 15.8K impressions (+450%); sitemap resubmitted 2026-09-11 |
+| Analytics | Site was tagged with a measurement ID nobody could read; retagged to the owned property (528509623, hoopsipedia@gmail.com) 2026-09-11 — first human numbers arrive 09-12 |
+| Tooling | `scripts/google_reports.py` (GA4 + GSC, service account, weekly cron Mon 08:00), `scripts/daily_content.py` (4 post drafts/day, cron 07:00 → `content/drafts/latest.md`), `scripts/indexnow_ping.py` (Bing et al., 584 URLs submitted), `scripts/render_share_cards.py` (1200×630 og:image cards for every team, section, featured matchup and rivalry) |
+| Traffic reality | Cloudflare "uniques" (3K–11K/day) are ~90% bots (Amazonbot, Perplexity, SEO crawlers). Humans are still on the order of 100–200/day. `/api/chat` sees 0–2 human requests a day. |
 
-| | before | after |
-|---|---|---|
-| box scores contradicted by the game logs | 84 | **1** |
-| box scores log-verified | 16,906 | **19,143** |
-| `upset_history.json` contradictions | 13 | **0** (332/332) |
-| unparseable player stat lines | 33,413 (8.2%) | **174 (0.04%)** |
-| duplicate box-score entries | 359 | **0** (28 flagged for manual merge) |
-| players indexed | 11,768 | **53,916** |
-| invariant tests | 48 | **57** |
+## The season calendar is the plan
 
-Everything below is on `claude/hoopsipedia-work-kctyau` (19 commits), not
-merged. **Nothing here is deployed yet.**
+Tipoff ≈ **Nov 3, 2026**. Selection Sunday **Mar 14, 2027**. Phase 1
+(technical foundation) is done. Phase 2 (content engine before tipoff) is
+next; Phase 3 (ride the season, peak in March) follows.
 
-### The four findings that matter
+## Decisions only you can make — these gate Phase 2
 
-1. **VMI's team page was rendering Valparaiso's history.** VMI's real
-   1,913-game log sat under orphan id `157`, which no page owns, while
-   VMI's own id held a byte-copy of Valpo's log. Four more orphan duplicate
-   logs (South Dakota, South Dakota St, Tulane, Tulsa) were double-counting
-   games into the ranking engine's opponent adjustment, which is why every
-   team's efficiency rating shifted slightly when it was regenerated. The
-   games files now map 1:1 onto the 365 teams and a test enforces it.
+1. **Ranking weights.** The three questions in `RANKING_METHODOLOGY.md`. The
+   unified "Hoopsipedia Ranking" page is one tuning session away and is the
+   brand asset the whole marketing motion hangs on.
+2. **Social accounts + newsletter tool.** X, Bluesky, Threads, the college
+   basketball subreddit, and Buttondown/Beehiiv. Drafts are already being
+   generated daily; nothing can be posted without accounts.
+3. **AdSense status.** Confirm in the hoopsipedia@gmail.com account. If
+   approved, ad units go on team and season pages only.
+4. **Michigan as 2026 champion** in `data.json` — still the 10-second check.
 
-2. **The player parser was rejecting every pre-1980 box score.** It
-   dispatched on the presence of a minutes column, which those sources
-   don't print, so a third of a million real stat lines were discarded as
-   "unparseable". Recovering them brought back exactly the historical
-   population the site exists for — Austin Carr, Issel, Bradds, Maravich's
-   64-point game.
+## Recommended order for the next working sessions
 
-3. **359 games were stored twice**, under two key generations
-   (`1996/princeton-vs-ucla` and `1996/princeton-tigers-vs-ucla-bruins`).
-   That inflated `players.json` game counts for 4,703 players — and the
-   duplicates cluster in famous upsets, i.e. exactly what a player page
-   would showcase. Deduped, but conservatively: 28 groups are left alone
-   because the two copies carry genuinely different rosters (one holds
-   Junior Burrough, another Metta World Peace on the 1999 St. John's
-   roster), and collapsing them would drop a real player.
+1. **Ranking page** (after #1 above): ship `unified_rankings.json` as a named
+   ranking with its own forever URL, SSR, share card, and a "how it works"
+   section. Preseason all-time program rankings are the launch moment.
+2. **Time Machine share flow**: the matchup pages exist with forever URLs and
+   cards; add a share button that copies the URL, and a "matchup of the day"
+   module on the homepage fed by `daily_content.py`'s pick.
+3. **Post automation** once accounts exist: turn `daily_content.py` drafts
+   into scheduled posts (Buffer/Typefully API or direct X API), with Josh
+   approving the day's set from `content/drafts/latest.md`.
+4. **Data-driven news hooks for the season**: when a top-25 team loses,
+   generate "worst loss since…" from the database within the hour. The
+   ingredients (game logs, HTSS, efficiency) all exist; needs the live
+   scoreboard hook in `nightly_sync.py` and a template.
+5. **Box-score archaeology** continues as idle-machine work, not the main
+   thrust: remaining custompages/PDF layers per `SCRAPE_STATUS.md`; the
+   `newspapers.com` phase when the free tier is exhausted.
 
-4. **The archive stopped being tournament-shaped, which broke a premise.**
-   It is now ~72% regular season and unevenly harvested (Arkansas 69.6% of
-   its games, Duke 13.7%). Any leaderboard sorted by archive totals ranks
-   *harvest depth*, not players: Laettner drops off entirely and Hofstra's
-   Charles Jenkins tops it. `PLAYERS_NOTES.md`'s old instruction to label
-   this data "tournament archive" was obsolete and actively misleading, and
-   is rewritten.
+## Housekeeping worth doing when convenient
 
-## Recommended priority order
+- `games_1/2/3.json` are 22 MB each against the 25 MiB limit; plan a 4th shard
+  (or stop deploying the monoliths) before the next big fill.
+- Best-practices score 0.79 is third-party cookies (AdSense/doubleclick and a
+  Wikimedia arena photo) — self-host the arena photos if it matters.
+- The August cloud session's branch is merged; `.git` is 1.7 GB — a history
+  rewrite to drop old `sr_boxscores.json` blobs would shrink clones 10×.
+- GA history before 2026-09-11 is unrecoverable; treat that date as day one.
 
-### 1. Review and merge the branch
-19 commits, all data-integrity work, 57 tests passing. Worth reading the
-commit messages rather than the diffs — the regenerated data files dominate
-the diff but the reasoning is in the messages. Nothing yet reads `players/`,
-so merging changes no user-facing behaviour except the corrected data.
+## What I would explicitly NOT do next
 
-### 2. Narrative repairs — **almost done already**; 5 entries await approval
-Correcting the June doc, which I initially carried forward unchecked: this
-pass is not pending. **368 repairs were drafted and applied on 2026-07-07**
-and I verified all 368 landed in `team_history.json`. Cross-checking the
-351 findings in the two FACTCHECK files against the applied repairs (joined
-by team **id**, not display name — USF's narratives live under "USF Bulls",
-which hides them from a name join) leaves only four genuinely unaddressed,
-and one of those has since been fixed on the data side:
-
-- **Georgia Southern** — the finding was an internal contradiction (blurb
-  claimed NCAA appearances, `data.json` said zero). `data.json` H now shows
-  3 appearances, so the contradiction is gone. No action.
-- **American** `founded` 1925 → 1926, plus the matching blurb sentence.
-- **George Washington** `founded` 1906 → 1912, plus its blurb sentence.
-- **Quinnipiac** `iconicMoment` — a fabricated "2018 MAAC tournament run"
-  (they went 12-21 that year; it appears to conflate the women's program).
-
-All five edits are drafted in `narrative_repairs.json` under batch
-`sweep2_2026-07-28` with `status: "proposed"`, so they are inert —
-`apply_narrative_repairs.py` only touches `approved`. Each carries its
-sources and a note on what corroborates it; I pre-validated that every
-`find` string matches exactly once, so approving them cannot fail
-mid-apply. GW and Quinnipiac are confirmed by the repo's own `seasons.json`
-(GW's seasons start 1912-13; Quinnipiac's best season is 2023-24 at 24-10).
-American rests on the external source alone — `seasons.json` only reaches
-back to 1966-67 for them — so it is flagged medium confidence.
-
-**Your step:** flip `status` to `"approved"` on the ones you accept, then
-run `python3 scripts/apply_narrative_repairs.py`. Five minutes, not three
-sessions.
-
-### 3. Re-scrape the four known season gaps — needs your laptop
-`web.archive.org` and the live site are both blocked from Claude Code's
-cloud sessions, so all harvesting has to run locally. Queued in
-`boxscore_rescrape_queue.json`:
-- **Michigan 1991-92** — the entire Fab Five regular season is missing from
-  the game log (only the two Final Four games are present).
-- Oklahoma State 1991-92, BYU 1956-57, Purdue 1995-96.
-- Plus the 8 entries in `sr_boxscores_quarantine.json` needing a source
-  re-fetch, and the 17 deleted season histories from the June impostor fix
-  (Texas A&M first — still showing zero season history).
-
-### 4. Build the players page — the data is now ready and honest
-`players/index.json` carries per-team coverage denominators so the UI can
-state the true thing ("1,355 of Virginia's 2,215 games are archived"). Two
-non-negotiables, both documented in `PLAYERS_NOTES.md`: default the sort to
-**per-game, not totals**, and render a `null` stat as an em dash, never 0 —
-4,258 players have blocks that were never recorded, and printing 0 would
-assert a fact about eras that didn't count them.
-
-### 5. ~~Fix the box-score matcher~~ — **DONE 2026-07-28**
-`index.html` matched a game to its box score by last-word overlap, so
-`arkansas-vs-iowa` could serve `arkansas-vs-iowa-st` and any two games where
-both teams end in "State" collided. All three fuzzy matchers
-(`findSRSeasonMatch`, the H2H panel, `findChampSRBoxScore`) now resolve both
-sides to ESPN ids via the new `boxscore_match_index.json` (851 names, 20KB)
-and compare identity. Where a name cannot resolve — deliberately ambiguous
-bare names like "Louisiana", plus non-D-I opponents — they fall back to the
-old test, now additionally gated on the score pair, so gaps degrade to prior
-behaviour rather than to a wrong answer. Dated entries whose date disagrees
-are rejected outright, which separates repeat meetings.
-
-Measured over the full store: ambiguity **51.86% → 0.83%**, entries matching
-a **different program pair 5,776 → 0**, and **zero regressions** — the
-correct box score is still found for 100% of entries. Verified in headless
-Chromium against the real page, not just in simulation.
-
-### 6. Wave 3: index.html modularization
-The 23.5K-line monolith is the last structural debt, and it gates the
-queued UI work (On This Day module, unified-rankings page, XSS/CSP polish,
-mobile/a11y sweep). I deliberately did **not** start this — it is a large
-frontend refactor and mixing it into a data-repair branch would make both
-unreviewable. Worth its own branch.
-
-### 7. Payload cut, continued
-`players.json` (18.3MB) joins `games_1/2/3` and `sr_boxscores` as a master
-build artifact the browser never fetches. The transition fallbacks are
-still deployed; dropping them is still one release cycle away.
-
-## Open decisions only you can make
-- **Ranking weights** — 3 questions in `RANKING_METHODOLOGY.md`; still the
-  one tuning session between you and a shippable unified-rankings page.
-- **Michigan as 2026 champion** in data.json (NCY) — 10-second check.
-- **Fact-check review** — the two FACTCHECK_FINDINGS files.
-- **Backups off-machine** — tarballs still live only on the laptop.
-- **`players.json` in git** — 18.3MB of build artifact per rebuild is real
-  repo weight. Fine for now; worth deciding whether it belongs in the repo
-  at all or should be generated at deploy time.
-
-## Smaller things I noticed but did not act on
-- The 2011 FSU–Notre Dame upset "highlight" video is the 2011 Champs Sports
-  Bowl — **football**. Wrong video id, needs a replacement (finding a
-  correct one needs network access, so it is left in place, not guessed at).
-- **Two previously-unknown fabricated games** were found sitting in
-  `upset_highlights_data.json` — highlight videos attached to games that
-  never happened: *1989 Xavier over Kansas* (Xavier's actual 1989 tournament
-  game was vs Michigan; Kansas's last March game was vs Kansas State) and
-  *1986 North Carolina A&T over Iowa* (A&T played Kansas, Iowa played NC
-  State). Both had dense March log coverage on both sides, so this is
-  absence of the game, not absence of data. Removed, along with the two
-  leftover side-file records for upsets June already deleted as fabricated.
-  Worth noting for the record: the March-2026 fabrication batch documented
-  in `BOXSCORE_INTEGRITY_REPORT.md` evidently reached the highlights file
-  too, which had never been audited.
-- ~~`upset_boxscores.json` / `upset_highlights_data.json` orphan keys need a
-  normalization pass~~ — **investigated; that advice was wrong.** Those keys
-  are not drift, and normalizing or pruning them would have deleted live
-  data: `findUpsetEventId` looks up `upset_boxscores[gameKey]` before
-  falling back to `INSTANT_CLASSICS`, so entries with no matching
-  `upset_history` upset still serve the Instant Classics strip (the 2026
-  Kentucky–Santa Clara buzzer-beater is one). Nine of the thirteen orphans
-  are real games — some simply key loser-first, others are outside the
-  tracked 1v16…8v9 seed matchups (LMU's 149-115 over Michigan in 1990).
-  Four were fabrications and have been removed; see below.
-- 872 box-score opponent sides stay deliberately unresolved (Hartford,
-  Oklahoma City, NYU, Centenary — no D-I log to match against). Correct as
-  is; listed so it isn't rediscovered as a bug.
-- 11 D-I programs have no archived players at all — mostly recent D-I
-  additions (Bellarmine, Stonehill, Le Moyne, Mercyhurst, Lindenwood).
-
-## What I'd explicitly NOT do next
-- Don't bulk-approve the 5 proposed narrative fixes without reading them —
-  accuracy culture is the product, and one of them (American's 1926) has no
-  in-repo corroboration.
-- Don't ship a players page ranked by archive totals. See finding 3.
-- Don't delete the monoliths until one full release cycle has passed.
+- Don't chase Cloudflare "uniques" — they are bots. Google Analytics and
+  Search Console are the only traffic numbers that mean anything now.
+- Don't start another multi-week harvesting campaign before the ranking page
+  and the distribution channels exist. The site is data-rich and
+  distribution-poor; that is the constraint.
