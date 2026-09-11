@@ -15,8 +15,11 @@ jobs:
         with:
           node-version: 20
 
-      - name: JS syntax check (index.html inline scripts)
+      - name: JS syntax check (app.js + index.html inline scripts)
         run: node --max-old-space-size=8192 scripts/validate_index_js.js
+
+      - name: Asset version stamps are current (app.css/app.js ?v= hashes)
+        run: python3 scripts/stamp_assets.py --check
 
       - name: Validate deploy-critical JSON files
         run: |

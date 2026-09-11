@@ -1,6 +1,7 @@
 // Hoopsipedia Service Worker — PWA offline support
 // v4: evicts cached games_1/2/3.json + sr_boxscores.json megafiles (Wave 2b lazy loading)
-const CACHE_NAME = 'hoopsipedia-v4';
+// v5: app.css/app.js extracted from index.html; served network-first like HTML
+const CACHE_NAME = 'hoopsipedia-v5';
 const STATIC_ASSETS = [
   '/',
   '/index.html',
@@ -51,8 +52,9 @@ self.addEventListener('fetch', event => {
     return;
   }
 
-  // HTML pages: network-first (prevents stale UI after deploys)
-  if (url.pathname === '/' || url.pathname.endsWith('.html')) {
+  // HTML pages + the app bundle (app.js/app.css, versioned by ?v= hash):
+  // network-first (prevents stale UI after deploys)
+  if (url.pathname === '/' || url.pathname.endsWith('.html') || url.pathname === '/app.js' || url.pathname === '/app.css') {
     event.respondWith(
       fetch(event.request)
         .then(resp => {

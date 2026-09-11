@@ -14,12 +14,17 @@ echo "🔍 Running pre-push validation..."
 
 node --max-old-space-size=8192 scripts/validate_index_js.js || exit 1
 
+# app.css/app.js are referenced from index.html with a content hash (?v=...) so
+# browsers/service worker never pair a stale bundle with fresh HTML.
+python3 scripts/stamp_assets.py --check || exit 1
+
 # Verify deploy-critical data files are valid JSON
 for f in data.json h2h.json games_1.json games_2.json games_3.json; do
     node -e "JSON.parse(require('fs').readFileSync('$f','utf8')); console.log('✅ $f is valid JSON');" || { echo "❌ $f is invalid JSON"; exit 1; }
 done
 
-# Slice freshness: the site serves per-team/per-year slices (games/, boxscores/).
+# Slice freshness: the site serves per-team/per-year slices (games/, boxscores/,
+# seasons/ — the Pages Function server-renders team pages from seasons/ slices).
 # If a source monolith was updated without re-running the split scripts, the site
 # would silently serve stale data — block the push instead.
 check_fresh() {
@@ -31,6 +36,7 @@ check_fresh games_1.json games/index.json scripts/split_games.py
 check_fresh games_2.json games/index.json scripts/split_games.py
 check_fresh games_3.json games/index.json scripts/split_games.py
 check_fresh sr_boxscores.json boxscores/index.json scripts/split_boxscores.py
+check_fresh seasons.json seasons/index.json scripts/split_seasons.py
 echo "✅ Data slices are fresh"
 
 echo ""

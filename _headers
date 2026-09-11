@@ -1,0 +1,15 @@
+# Cloudflare Pages custom headers.
+#
+# app.js / app.css are referenced from index.html with a content hash
+# (?v=..., enforced by scripts/stamp_assets.py), and the font files never
+# change once published — so all of them can be cached forever. Every other
+# path keeps the platform defaults (short-lived, revalidated).
+
+/app.js
+  Cache-Control: public, max-age=31536000, immutable
+
+/app.css
+  Cache-Control: public, max-age=31536000, immutable
+
+/fonts/*
+  Cache-Control: public, max-age=31536000, immutable

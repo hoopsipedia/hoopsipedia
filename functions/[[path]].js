@@ -199,7 +199,11 @@ const SSR_TABLE_STYLE = 'border-collapse:collapse;width:100%;font-size:14px';
 const SSR_CELL_STYLE = 'border:1px solid #ccc;padding:4px 8px;text-align:left';
 
 function ssrWrap(inner) {
-  return `<div id="ssr-content"><section style="${SSR_SECTION_STYLE}">${inner}</section></div>`;
+  // The inline script hides the block immediately for JS-enabled browsers so
+  // the SPA's later removal of it causes no layout shift; crawlers and no-JS
+  // users still get the visible content.
+  return `<div id="ssr-content"><section style="${SSR_SECTION_STYLE}">${inner}</section></div>` +
+    `<script>(function(){var s=document.getElementById('ssr-content');if(s)s.style.display='none';})();</script>`;
 }
 
 function teamHref(origin, slug) {
