@@ -1765,12 +1765,12 @@
                 startBackgroundLoads();
                 try { await DATA_LOADS.all; } catch (e) { console.warn('Background data load error:', e); }
             } else if (isTeamProfileRoute()) {
-                // Profile pages need most datasets anyway: start everything now
-                // and wait only for the small ones (≈0.5MB gzipped) so the first
-                // paint is the complete page; seasons.json and h2h.json keep
-                // streaming behind it.
+                // Profile pages need most datasets soon: start everything now
+                // (measured best in production — waiting for even the small
+                // files before the first paint pushed the LCP out) and render
+                // from data.json + the team's seasons slice; the post-load
+                // refresh below fills in the sections that depend on the rest.
                 startBackgroundLoads();
-                try { await whenData('htss', 'teamHistory', 'draft', 'arena'); } catch (e) { /* render anyway */ }
             }
             try {
                 if (window.location.hash) {
