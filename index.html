@@ -4,15 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="fo-verify" content="2a1519ca-508b-41b8-a153-ed96332636b1" />
-    <!-- Google AdSense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1704871235814953" crossorigin="anonymous"></script>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QGEF7RQZCY"></script>
+    <!-- Google Analytics (gtag.js) + Google AdSense.
+         Both tags are injected AFTER the page has painted (window load + idle):
+         together they pull ~600KB of script and open four ad/verification
+         iframes, which sat inside the LCP's critical window on every page while
+         there are not yet any ad units to show. gtag() calls queue in dataLayer
+         until the library arrives, so no events are lost, and the AdSense tag is
+         still present in the DOM for the reviewer/crawler. -->
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-QGEF7RQZCY');
+      (function () {
+        var injected = false;
+        function inject() {
+          if (injected) return; injected = true;
+          var a = document.createElement('script');
+          a.async = true; a.src = 'https://www.googletagmanager.com/gtag/js?id=G-QGEF7RQZCY';
+          document.head.appendChild(a);
+          var b = document.createElement('script');
+          b.async = true; b.crossOrigin = 'anonymous';
+          b.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1704871235814953';
+          document.head.appendChild(b);
+        }
+        function afterLoad() {
+          if ('requestIdleCallback' in window) requestIdleCallback(inject, { timeout: 4000 });
+          else setTimeout(inject, 1500);
+        }
+        if (document.readyState === 'complete') afterLoad();
+        else window.addEventListener('load', afterLoad);
+        // Never wait forever (e.g. a hung third-party image blocking `load`).
+        setTimeout(inject, 8000);
+      })();
     </script>
     <title>Hoopsipedia - College Basketball Historical Database</title>
     <meta name="description" content="The complete historical database of college basketball. Compare programs, explore all-time stats, track the NCAA Tournament bracket, and discover every team's legacy.">
