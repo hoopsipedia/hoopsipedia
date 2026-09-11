@@ -380,7 +380,98 @@ function seasonHref(origin, slug, seasonStr) {
   return `${origin}/teams/${encodeParam(slug)}/${encodeParam(seasonStr)}`;
 }
 
-function renderSeasonSsr(team, seasonRow, games, teams, origin, slugIdx, recaps) {
+// Templated season story built from the game log and the program's other
+// seasons — every sentence is a computed fact, so it is safe to generate for
+// all 26,000 season pages. Gives thin seasons real, page-specific content and
+// links each season to its neighbours (prev/next) for crawl connectivity.
+function fmtDate(d) {
+  const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(d || '');
+  if (!m) return d || '';
+  const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  return `${months[parseInt(m[2], 10) - 1]} ${parseInt(m[3], 10)}, ${m[1]}`;
+}
+
+function ordinal(n) {
+  const s = ['th', 'st', 'nd', 'rd'], v = n % 100;
+  return n + (s[(v - 20) % 10] || s[v] || s[0]);
+}
+
+function renderSeasonStory(team, seasonRow, games, seasons, teams, origin, slugIdx) {
+  const slug = teamSlug(team.name);
+  const nick = team.name.split(' ').slice(1).join(' ') || team.name; // "Wildcats"
+  const oppNameOf = (g) => {
+    let oppT = teams[String(g.opp)];
+    if (!oppT && g.opp_slug && slugIdx && slugIdx[g.opp_slug]) oppT = teams[slugIdx[g.opp_slug]];
+    const name = oppT ? oppT[F.NAME] : (g.opp_slug || 'an unlisted opponent').replace(/-/g, ' ');
+    return oppT ? `<a href="${teamHref(origin, teamSlug(oppT[F.NAME]))}">${escapeHtml(name)}</a>` : escapeHtml(name);
+  };
+  const paras = [];
+
+  if (games.length >= 3) {
+    const counted = games.filter(g => !g.vacated);
+    const split = { H: [0, 0], A: [0, 0], N: [0, 0] };
+    let pf = 0, pa = 0, ot = 0;
+    let streak = 0, bestStreak = 0, streakEnd = null, curStart = null, bestStart = null;
+    let bestWin = null, worstLoss = null, closest = null;
+    for (const g of counted) {
+      const k = split[g.loc] ? g.loc : 'N';
+      split[k][g.w ? 0 : 1]++;
+      pf += g.pts; pa += g.opp_pts;
+      if (g.ot) ot++;
+      const margin = g.pts - g.opp_pts;
+      if (g.w) {
+        if (streak === 0) curStart = g.date;
+        streak++;
+        if (streak > bestStreak) { bestStreak = streak; streakEnd = g.date; bestStart = curStart; }
+        if (!bestWin || margin > bestWin.pts - bestWin.opp_pts) bestWin = g;
+      } else {
+        streak = 0;
+        if (!worstLoss || margin < worstLoss.pts - worstLoss.opp_pts) worstLoss = g;
+      }
+      if (Math.abs(margin) <= 3 && (!closest || Math.abs(margin) < Math.abs(closest.pts - closest.opp_pts))) closest = g;
+    }
+    const n = counted.length;
+    const bits = [];
+    bits.push(`Hoopsipedia's log holds ${n} game${n === 1 ? '' : 's'} from this season: ${split.H[0]}–${split.H[1]} at home, ${split.A[0]}–${split.A[1]} on the road${(split.N[0] + split.N[1]) ? `, and ${split.N[0]}–${split.N[1]} on neutral courts` : ''}.`);
+    if (n > 0) {
+      const diff = (pf - pa) / n;
+      bits.push(` The ${escapeHtml(nick)} scored ${(pf / n).toFixed(1)} points per game and allowed ${(pa / n).toFixed(1)} (${diff >= 0 ? '+' : ''}${diff.toFixed(1)} per game).`);
+    }
+    if (bestStreak >= 3) bits.push(` Their longest winning streak ran ${bestStreak} games, from ${fmtDate(bestStart)} to ${fmtDate(streakEnd)}.`);
+    if (bestWin) bits.push(` The most lopsided win was ${bestWin.pts}–${bestWin.opp_pts} ${bestWin.loc === 'A' ? 'at' : 'over'} ${oppNameOf(bestWin)} on ${fmtDate(bestWin.date)}`);
+    if (worstLoss) bits.push(`${bestWin ? ';' : ''} the heaviest defeat was ${worstLoss.opp_pts}–${worstLoss.pts} ${worstLoss.loc === 'A' ? 'at' : 'to'} ${oppNameOf(worstLoss)} on ${fmtDate(worstLoss.date)}.`);
+    else if (bestWin) bits.push('.');
+    if (closest) bits.push(` The tightest finish was a ${Math.abs(closest.pts - closest.opp_pts)}-point ${closest.w ? 'win' : 'loss'} against ${oppNameOf(closest)} (${closest.pts}–${closest.opp_pts}${closest.ot ? ', overtime' : ''}).`);
+    if (ot) bits.push(` ${ot} game${ot === 1 ? ' went' : 's went'} to overtime.`);
+    paras.push(`<p>${bits.join('')}</p>`);
+  }
+
+  // Program context + prev/next season links
+  if (Array.isArray(seasons) && seasons.length > 1) {
+    const sorted = [...seasons].filter(r => r && r.year).sort((a, b) => String(a.year).localeCompare(String(b.year)));
+    const idx = sorted.findIndex(r => r.year === seasonRow.year);
+    const pct = (r) => (r.wins + r.losses) > 0 ? r.wins / (r.wins + r.losses) : null;
+    const thisPct = pct(seasonRow);
+    const bits = [];
+    if (thisPct != null) {
+      const rated = sorted.filter(r => pct(r) != null && (r.wins + r.losses) >= 10);
+      const better = rated.filter(r => pct(r) > thisPct).length;
+      if (rated.length >= 5 && (seasonRow.wins + seasonRow.losses) >= 10) {
+        const poss = /s$/i.test(team.name) ? `${escapeHtml(team.name)}'` : `${escapeHtml(team.name)}'s`;
+        bits.push(`Among ${poss} ${rated.length} recorded seasons, ${escapeHtml(seasonRow.year)}'s .${Math.round(thisPct * 1000).toString().padStart(3, '0')} winning percentage ranks ${ordinal(better + 1)}.`);
+      }
+    }
+    const prev = idx > 0 ? sorted[idx - 1] : null;
+    const next = idx >= 0 && idx < sorted.length - 1 ? sorted[idx + 1] : null;
+    const link = (r) => `<a href="${seasonHref(origin, slug, r.year)}">${escapeHtml(r.year)} ${escapeHtml(nick)} (${r.wins}–${r.losses})</a>`;
+    if (prev) bits.push(` Previous season: ${link(prev)}.`);
+    if (next) bits.push(` Next season: ${link(next)}.`);
+    if (bits.length) paras.push(`<p>${bits.join('')}</p>`);
+  }
+  return paras.join('\n');
+}
+
+function renderSeasonSsr(team, seasonRow, games, teams, origin, slugIdx, recaps, seasons) {
   const slug = teamSlug(team.name);
   const parts = [];
   const seasonStr = seasonRow.year;
@@ -397,6 +488,7 @@ function renderSeasonSsr(team, seasonRow, games, teams, origin, slugIdx, recaps)
   if (seasonRow.apHigh) bits.push(` The team peaked at #${seasonRow.apHigh} in the AP poll.`);
   if (seasonRow.srs != null) bits.push(` Simple Rating System: ${seasonRow.srs}.`);
   parts.push(`<p>${bits.join('')}</p>`);
+  parts.push(renderSeasonStory(team, seasonRow, games, seasons, teams, origin, slugIdx));
 
   if (games.length) {
     const rows = games.map(g => {
@@ -1018,10 +1110,10 @@ export async function onRequest(context) {
     const seasonGames = allGames ? gamesForSeason(allGames, seasonParam) : [];
     // Thin-page guard: a season page with almost no recorded games has no
     // content value — keep it reachable but out of the index.
-    if (seasonGames.length < 3) {
+    if (seasonGames.length < 8) {
       metaTags.push({ key: 'robots', value: 'noindex, follow' });
     }
-    ssrHtml = renderSeasonSsr(team, seasonRow, seasonGames, teams, origin, slugIdx, recaps);
+    ssrHtml = renderSeasonSsr(team, seasonRow, seasonGames, teams, origin, slugIdx, recaps, seasons);
   } else if (teamParam) {
     const team = lookupTeam(teamParam, teams, index);
     if (!team) return isPathRoute ? notFound() : context.next();
