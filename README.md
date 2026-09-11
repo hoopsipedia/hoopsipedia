@@ -30,6 +30,8 @@ results JSON (htss_v2_results.json, efficiency_ratings.json, time_machine_result
 
 `nightly_sync.py` (installed via `setup_cron.sh`) updates current-season records in `data.json` nightly and pushes to git, which triggers a redeploy.
 
+After any change to the game logs (`fill_season_gaps_from_sr.py`, `compile_schedules.py`) or a `compile_history.py` run, regenerate in this order: `python3 scripts/split_games.py` → `python3 scripts/synthesize_missing_seasons.py` (adds flagged rows for NCAA-vacated seasons that Sports-Reference's season table omits; a full recompile drops them) → `python3 scripts/split_seasons.py` → `python3 generate_on_this_day.py` → `node efficiency_engine.js && node htss_v2.js && node unified_rankings.js` → `python3 scripts/generate_sitemaps.py` → `python3 tests/test_engine_invariants.py`.
+
 ## Deploy
 
 Hosted on **Cloudflare Pages**, connected to this repo — push to `main` deploys automatically. There is no build step; the repo root is the deploy artifact.

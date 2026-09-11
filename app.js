@@ -2354,7 +2354,7 @@
 
                 globalDropdown.innerHTML = '';
                 if (matches.length === 0) {
-                    globalDropdown.innerHTML = '<div style="padding: 0.75rem; color: #8892A0; font-size: 0.85rem;">No teams found</div>';
+                    globalDropdown.innerHTML = '<div style="padding: 0.75rem; color: #5F6B7A; font-size: 0.85rem;">No teams found</div>';
                 } else {
                     matches.forEach(team => {
                         const item = document.createElement('div');
@@ -2556,7 +2556,7 @@
                 container.innerHTML = '<div class="boxscore-loading" style="padding:3rem;">Loading box score...</div>';
                 fetchBoxScoreData(eventId).then(gameData => {
                     if (!gameData) {
-                        container.innerHTML = '<div style="text-align:center;padding:3rem;color:#8892A0;">Could not load box score data.</div>';
+                        container.innerHTML = '<div style="text-align:center;padding:3rem;color:#5F6B7A;">Could not load box score data.</div>';
                         return;
                     }
                     // Extract team info from game data
@@ -3462,19 +3462,19 @@
                         <div style="text-align: center; flex: 1; min-width: 200px;">
                             ${c1Logo ? `<img src="${c1Logo}" alt="" style="width: 64px; height: 64px; object-fit: contain; margin-bottom: 0.5rem;">` : ''}
                             <div style="font-size: 1.3rem; font-weight: 800; color: ${c1Color};">${c1.name}</div>
-                            <div style="font-size: 0.8rem; color: #8892A0; margin-top: 0.25rem;">${c1SchoolName}${c1Active ? ' <span style="display:inline-block;padding:0.1rem 0.4rem;background:#E8F5E9;color:#1B6B3A;border-radius:0.2rem;font-size:0.6rem;font-weight:700;">ACTIVE</span>' : ''}</div>
+                            <div style="font-size: 0.8rem; color: #5F6B7A; margin-top: 0.25rem;">${c1SchoolName}${c1Active ? ' <span style="display:inline-block;padding:0.1rem 0.4rem;background:#E8F5E9;color:#1B6B3A;border-radius:0.2rem;font-size:0.6rem;font-weight:700;">ACTIVE</span>' : ''}</div>
                         </div>
                         <div style="font-size: 1.2rem; color: #A0AAB8; font-weight: 600;">VS</div>
                         <div style="text-align: center; flex: 1; min-width: 200px;">
                             ${c2Logo ? `<img src="${c2Logo}" alt="" style="width: 64px; height: 64px; object-fit: contain; margin-bottom: 0.5rem;">` : ''}
                             <div style="font-size: 1.3rem; font-weight: 800; color: ${c2Color};">${c2.name}</div>
-                            <div style="font-size: 0.8rem; color: #8892A0; margin-top: 0.25rem;">${c2SchoolName}${c2Active ? ' <span style="display:inline-block;padding:0.1rem 0.4rem;background:#E8F5E9;color:#1B6B3A;border-radius:0.2rem;font-size:0.6rem;font-weight:700;">ACTIVE</span>' : ''}</div>
+                            <div style="font-size: 0.8rem; color: #5F6B7A; margin-top: 0.25rem;">${c2SchoolName}${c2Active ? ' <span style="display:inline-block;padding:0.1rem 0.4rem;background:#E8F5E9;color:#1B6B3A;border-radius:0.2rem;font-size:0.6rem;font-weight:700;">ACTIVE</span>' : ''}</div>
                         </div>
                     </div>
                 </div>
 
                 <div style="background: #FFFFFF; border: 1px solid #E0D9CC; border-radius: 0.75rem; padding: 1.5rem; box-shadow: 0 1px 4px rgba(0,0,0,0.04); margin-bottom: 1.5rem;">
-                    <h3 style="font-size: 0.85rem; color: #8892A0; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 1.25rem; text-align: center;">Career Statistics</h3>
+                    <h3 style="font-size: 0.85rem; color: #5F6B7A; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 1.25rem; text-align: center;">Career Statistics</h3>
                     ${renderStatRow('Career Wins', c1.wins, c2.wins, c1Color, c2Color, {espnId: c1School}, {espnId: c2School})}
                     ${renderStatRow('National Titles', c1Acc.titles, c2Acc.titles, c1Color, c2Color, {espnId: c1School}, {espnId: c2School})}
                     ${renderStatRow('Final Fours', c1Acc.finalFours, c2Acc.finalFours, c1Color, c2Color, {espnId: c1School}, {espnId: c2School})}
@@ -3484,21 +3484,21 @@
                 </div>
 
                 <div style="background: #FFFFFF; border: 1px solid #E0D9CC; border-radius: 0.75rem; padding: 1.5rem; box-shadow: 0 1px 4px rgba(0,0,0,0.04); margin-bottom: 1.5rem;">
-                    <h3 style="font-size: 0.85rem; color: #8892A0; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 1.25rem; text-align: center;">Best Season</h3>
+                    <h3 style="font-size: 0.85rem; color: #5F6B7A; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 1.25rem; text-align: center;">Best Season</h3>
                     <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
                         <div style="text-align: center; flex: 1; min-width: 150px;">
                             <div style="font-size: 1.4rem; font-weight: 800; color: ${c1Color};">${c1.bestRec}</div>
-                            <div style="font-size: 0.8rem; color: #8892A0;">${c1.bestYr}</div>
+                            <div style="font-size: 0.8rem; color: #5F6B7A;">${c1.bestYr}</div>
                         </div>
                         <div style="text-align: center; flex: 1; min-width: 150px;">
                             <div style="font-size: 1.4rem; font-weight: 800; color: ${c2Color};">${c2.bestRec}</div>
-                            <div style="font-size: 0.8rem; color: #8892A0;">${c2.bestYr}</div>
+                            <div style="font-size: 0.8rem; color: #5F6B7A;">${c2.bestYr}</div>
                         </div>
                     </div>
                 </div>
 
                 <div style="background: #FFFFFF; border: 1px solid #E0D9CC; border-radius: 0.75rem; padding: 1.5rem; box-shadow: 0 1px 4px rgba(0,0,0,0.04);">
-                    <h3 style="font-size: 0.85rem; color: #8892A0; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 1.25rem; text-align: center;">Coaching Journey</h3>
+                    <h3 style="font-size: 0.85rem; color: #5F6B7A; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 1.25rem; text-align: center;">Coaching Journey</h3>
                     <div style="display: flex; gap: 2rem; flex-wrap: wrap;">
                         <div style="flex: 1; min-width: 200px;">
                             <div style="font-weight: 700; color: ${c1Color}; margin-bottom: 0.5rem; font-size: 0.9rem;">${c1.name}</div>
@@ -3509,7 +3509,7 @@
                                 return `<div style="display:flex;align-items:center;gap:0.5rem;padding:0.4rem 0;border-bottom:1px solid #F0ECE3;">
                                     <img src="${logo}" alt="" style="width:24px;height:24px;object-fit:contain;">
                                     <span style="font-size:0.85rem;color:#2C3345;cursor:pointer;text-decoration:underline;text-decoration-color:#C9A86C;" onclick="openProfileById('${s[0]}')">${sName}</span>
-                                    <span style="font-size:0.75rem;color:#8892A0;margin-left:auto;">${years}</span>
+                                    <span style="font-size:0.75rem;color:#5F6B7A;margin-left:auto;">${years}</span>
                                 </div>`;
                             }).join('')}
                         </div>
@@ -3522,7 +3522,7 @@
                                 return `<div style="display:flex;align-items:center;gap:0.5rem;padding:0.4rem 0;border-bottom:1px solid #F0ECE3;">
                                     <img src="${logo}" alt="" style="width:24px;height:24px;object-fit:contain;">
                                     <span style="font-size:0.85rem;color:#2C3345;cursor:pointer;text-decoration:underline;text-decoration-color:#C9A86C;" onclick="openProfileById('${s[0]}')">${sName}</span>
-                                    <span style="font-size:0.75rem;color:#8892A0;margin-left:auto;">${years}</span>
+                                    <span style="font-size:0.75rem;color:#5F6B7A;margin-left:auto;">${years}</span>
                                 </div>`;
                             }).join('')}
                         </div>
@@ -4225,7 +4225,7 @@
                     if (label && label !== lastDayLabel) {
                         lastDayLabel = label;
                         const header = document.createElement('div');
-                        header.style.cssText = 'grid-column: 1/-1; padding: 1rem 0 0.25rem; font-size: 0.95rem; font-weight: 700; color: #8892A0; text-transform: uppercase; letter-spacing: 0.05em; border-top: 2px solid #E8E2D8; margin-top: 0.5rem;';
+                        header.style.cssText = 'grid-column: 1/-1; padding: 1rem 0 0.25rem; font-size: 0.95rem; font-weight: 700; color: #5F6B7A; text-transform: uppercase; letter-spacing: 0.05em; border-top: 2px solid #E8E2D8; margin-top: 0.5rem;';
                         header.textContent = label;
                         tempGrid.appendChild(header);
                     }
@@ -4360,8 +4360,8 @@
 
                         const t1Seed = team1.curatedRank?.current;
                         const t2Seed = team2.curatedRank?.current;
-                        const t1SeedBadge = t1Seed ? `<span style="font-size:0.7rem;font-weight:700;color:#8892A0;margin-right:0.25rem;">(${t1Seed})</span>` : '';
-                        const t2SeedBadge = t2Seed ? `<span style="font-size:0.7rem;font-weight:700;color:#8892A0;margin-right:0.25rem;">(${t2Seed})</span>` : '';
+                        const t1SeedBadge = t1Seed ? `<span style="font-size:0.7rem;font-weight:700;color:#5F6B7A;margin-right:0.25rem;">(${t1Seed})</span>` : '';
+                        const t2SeedBadge = t2Seed ? `<span style="font-size:0.7rem;font-weight:700;color:#5F6B7A;margin-right:0.25rem;">(${t2Seed})</span>` : '';
 
                         card.innerHTML = `
                             ${badgeHTML}
@@ -4384,7 +4384,7 @@
                                 </div>
                             </div>
                             ${scoreboardHTML}
-                            <div id="${cardId}-h2h" style="text-align: center; font-size: 0.78rem; color: #8892A0; font-weight: 500;">Loading series history...</div>
+                            <div id="${cardId}-h2h" style="text-align: center; font-size: 0.78rem; color: #5F6B7A; font-weight: 500;">Loading series history...</div>
                             <div class="game-matchup-bar" id="${cardId}-bar">
                                 <div class="game-bar-team1" style="flex-basis: 50%; background: ${t1Color};"></div>
                                 <div class="game-bar-team2" style="flex-basis: 50%; background: ${t2Color};"></div>
@@ -4850,7 +4850,7 @@
                             <div style="position: absolute; top: 0.35rem; left: 0.45rem; font-size: 0.7rem; font-weight: 800; color: #C9A86C;">${entry.current}</div>
                             <div class="program-logo" style="background-image: url('${getLogoUrl(espnId)}');"></div>
                             <div class="program-name">${entry.team?.nickname || entry.team?.location || entry.team?.shortDisplayName || entry.team?.displayName || 'Unknown'}</div>
-                            <div style="font-size: 0.72rem; color: #8892A0; margin-top: 0.2rem;">${record}</div>
+                            <div style="font-size: 0.72rem; color: #5F6B7A; margin-top: 0.2rem;">${record}</div>
                         `;
                         card.addEventListener('click', () => {
                             if (teamData) openProfile(teamData);
@@ -5258,7 +5258,7 @@
             // Build quad record HTML helper
             function quadHtml(qr, teamName, espnId) {
                 const hasData = qr && (qr.q1w + qr.q1l + qr.q2w + qr.q2l + qr.q3w + qr.q3l + qr.q4w + qr.q4l > 0);
-                if (!hasData) return `<div class="this-season-quad-team"><h4>${teamName}</h4><div style="color:#8892A0;font-size:0.85rem;text-align:center;padding:0.5rem;">Quad data unavailable</div></div>`;
+                if (!hasData) return `<div class="this-season-quad-team"><h4>${teamName}</h4><div style="color:#5F6B7A;font-size:0.85rem;text-align:center;padding:0.5rem;">Quad data unavailable</div></div>`;
                 const uid = 'cmp-quad-' + espnId;
                 return `
                     <div class="this-season-quad-team">
@@ -5298,7 +5298,7 @@
                     h2hSeasonHtml += `
                         <div style="background:#FAFAF7;border:1px solid #E8E2D6;border-radius:8px;padding:1rem;margin-bottom:0.5rem;text-align:center;">
                             <div style="font-weight:700;color:#1B2A4A;font-size:1rem;margin-bottom:0.25rem;">${winner} ${scoreDisplay}</div>
-                            <div style="color:#8892A0;font-size:0.8rem;">${dateStr}${locStr ? ' \u00B7 ' + locStr : ''}</div>
+                            <div style="color:#5F6B7A;font-size:0.8rem;">${dateStr}${locStr ? ' \u00B7 ' + locStr : ''}</div>
                         </div>`;
                 });
             } else {
@@ -5326,11 +5326,11 @@
                 <div class="this-season-net-row">
                     <div class="this-season-net-block">
                         <div class="this-season-net-label">${t1.name} NET</div>
-                        ${t1Net ? `<span class="net-badge ${getNetBadgeClass(t1Net)}" style="font-size:1rem;padding:0.3rem 0.8rem;">NET #${t1Net}</span>` : '<span style="color:#8892A0;font-size:0.9rem;">Not ranked</span>'}
+                        ${t1Net ? `<span class="net-badge ${getNetBadgeClass(t1Net)}" style="font-size:1rem;padding:0.3rem 0.8rem;">NET #${t1Net}</span>` : '<span style="color:#5F6B7A;font-size:0.9rem;">Not ranked</span>'}
                     </div>
                     <div class="this-season-net-block">
                         <div class="this-season-net-label">${t2.name} NET</div>
-                        ${t2Net ? `<span class="net-badge ${getNetBadgeClass(t2Net)}" style="font-size:1rem;padding:0.3rem 0.8rem;">NET #${t2Net}</span>` : '<span style="color:#8892A0;font-size:0.9rem;">Not ranked</span>'}
+                        ${t2Net ? `<span class="net-badge ${getNetBadgeClass(t2Net)}" style="font-size:1rem;padding:0.3rem 0.8rem;">NET #${t2Net}</span>` : '<span style="color:#5F6B7A;font-size:0.9rem;">Not ranked</span>'}
                     </div>
                 </div>
 
@@ -5371,13 +5371,13 @@
                         if (starters1.length > 0 && starters2.length > 0) {
                             s5Container.innerHTML = renderStarting5Content(t1, t2, starters1, starters2, t1Color, t2Color, { showBench: false, showShare: false });
                         } else {
-                            s5Container.innerHTML = '<div style="color:#8892A0;font-size:0.9rem;padding:1rem;text-align:center;">Not enough player data to determine starting lineups.</div>';
+                            s5Container.innerHTML = '<div style="color:#5F6B7A;font-size:0.9rem;padding:1rem;text-align:center;">Not enough player data to determine starting lineups.</div>';
                         }
                     } else {
-                        s5Container.innerHTML = '<div style="color:#8892A0;font-size:0.9rem;padding:1rem;text-align:center;">Roster data unavailable for one or both teams.</div>';
+                        s5Container.innerHTML = '<div style="color:#5F6B7A;font-size:0.9rem;padding:1rem;text-align:center;">Roster data unavailable for one or both teams.</div>';
                     }
                 } catch(e) {
-                    s5Container.innerHTML = '<div style="color:#8892A0;font-size:0.9rem;padding:1rem;text-align:center;">Failed to load starting lineup data.</div>';
+                    s5Container.innerHTML = '<div style="color:#5F6B7A;font-size:0.9rem;padding:1rem;text-align:center;">Failed to load starting lineup data.</div>';
                 }
             }
         }
@@ -5475,7 +5475,7 @@
                     const t1BarW = totalGames > 0 ? Math.max(5, (t1Wins / totalGames) * 100) : 50;
                     const t2BarW = totalGames > 0 ? Math.max(5, (t2Wins / totalGames) * 100) : 50;
                     const leader = t1Wins > t2Wins ? t1.name : t2Wins > t1Wins ? t2.name : null;
-                    const leaderColor = t1Wins > t2Wins ? t1Color : t2Wins > t1Wins ? t2Color : '#8892A0';
+                    const leaderColor = t1Wins > t2Wins ? t1Color : t2Wins > t1Wins ? t2Color : '#5F6B7A';
 
                     allTimeHtml = `
                         <div style="text-align: center; margin-bottom: 1.5rem; padding: 24px 0;">
@@ -5568,7 +5568,7 @@
                 }).catch(() => {
                     if (hasAllTime) {
                         container.innerHTML = allTimeHtml + `
-                            <div style="text-align: center; padding: 1rem; color: #8892A0; font-size: 0.9rem;">
+                            <div style="text-align: center; padding: 1rem; color: #5F6B7A; font-size: 0.9rem;">
                                 Unable to load recent game scores.
                             </div>
                         `;
@@ -5785,7 +5785,7 @@
 
             if (games.length === 0 && hasAllTime) {
                 container.innerHTML = allTimeHtml + `
-                    <div style="text-align: center; padding: 1rem; color: #8892A0; font-size: 0.9rem;">
+                    <div style="text-align: center; padding: 1rem; color: #5F6B7A; font-size: 0.9rem;">
                         Detailed game data not yet available for this matchup.
                     </div>
                 `;
@@ -5896,7 +5896,7 @@
                         <div class="h2h-game-wrapper" id="h2h-wrap-${uid}" data-decade="${decade}">
                             <div class="h2h-game-row" data-decade="${decade}" onclick="toggleH2HBoxScore('${uid}', '${t1.espnId}', '${t2.espnId}', '${m.date}', event)" title="Click for game details" style="display: flex; align-items: center; padding: 0.6rem 0.8rem; background: #FAFAF7; border-radius: 0.4rem; border-left: 3px solid ${winnerColor}; gap: 0.75rem; font-size: 0.85rem;">
                                 <div style="flex: 1; font-weight: ${m.t1Winner ? '700' : '400'}; color: ${m.t1Winner ? t1Color : '#A0AAB8'};">${t1.name.split(' ').pop()} <span style="font-variant-numeric: tabular-nums;">${m.t1Score}</span>${m.t1Winner ? otStr : ''}</div>
-                                <div style="font-size: 0.7rem; color: #8892A0; min-width: 80px; text-align: center;">${dateStr}${venueStr}</div>
+                                <div style="font-size: 0.7rem; color: #5F6B7A; min-width: 80px; text-align: center;">${dateStr}${venueStr}</div>
                                 <div style="flex: 1; text-align: right; font-weight: ${!m.t1Winner ? '700' : '400'}; color: ${!m.t1Winner ? t2Color : '#A0AAB8'};">${!m.t1Winner ? otStr : ''}<span style="font-variant-numeric: tabular-nums;">${m.t2Score}</span> ${t2.name.split(' ').pop()}</div>
                                 ${chevronIcon}
                             </div>
@@ -5966,15 +5966,15 @@
                 html += `
                     <div style="display: flex; gap: 0.75rem; margin-bottom: 1rem; flex-wrap: wrap; justify-content: center;">
                         <div style="background: #FAFAF7; border-radius: 0.5rem; padding: 0.6rem 1rem; text-align: center; flex: 1; min-width: 120px; max-width: 200px; border-left: 3px solid ${streakInfo.current.color};">
-                            <div style="font-size: 0.65rem; color: #8892A0; text-transform: uppercase; letter-spacing: 0.05em;">Current Streak</div>
+                            <div style="font-size: 0.65rem; color: #5F6B7A; text-transform: uppercase; letter-spacing: 0.05em;">Current Streak</div>
                             <div style="font-size: 1.1rem; font-weight: 700; color: ${streakInfo.current.color};">${streakInfo.current.team} ${streakInfo.current.count}</div>
                         </div>
                         <div style="background: #FAFAF7; border-radius: 0.5rem; padding: 0.6rem 1rem; text-align: center; flex: 1; min-width: 120px; max-width: 200px; border-left: 3px solid ${t1Color};">
-                            <div style="font-size: 0.65rem; color: #8892A0; text-transform: uppercase; letter-spacing: 0.05em;">${t1.name.split(' ').pop()} Longest Streak</div>
+                            <div style="font-size: 0.65rem; color: #5F6B7A; text-transform: uppercase; letter-spacing: 0.05em;">${t1.name.split(' ').pop()} Longest Streak</div>
                             <div style="font-size: 1.1rem; font-weight: 700; color: ${t1Color};">${streakInfo.t1Best} wins</div>
                         </div>
                         <div style="background: #FAFAF7; border-radius: 0.5rem; padding: 0.6rem 1rem; text-align: center; flex: 1; min-width: 120px; max-width: 200px; border-left: 3px solid ${t2Color};">
-                            <div style="font-size: 0.65rem; color: #8892A0; text-transform: uppercase; letter-spacing: 0.05em;">${t2.name.split(' ').pop()} Longest Streak</div>
+                            <div style="font-size: 0.65rem; color: #5F6B7A; text-transform: uppercase; letter-spacing: 0.05em;">${t2.name.split(' ').pop()} Longest Streak</div>
                             <div style="font-size: 1.1rem; font-weight: 700; color: ${t2Color};">${streakInfo.t2Best} wins</div>
                         </div>
                     </div>
@@ -6239,7 +6239,7 @@
                 label.setAttribute('y', y + 4);
                 label.setAttribute('text-anchor', 'end');
                 label.setAttribute('font-size', '10');
-                label.setAttribute('fill', '#8892A0');
+                label.setAttribute('fill', '#5F6B7A');
                 label.textContent = (pct * 100).toFixed(0) + '%';
                 svg.appendChild(label);
             }
@@ -6264,7 +6264,7 @@
                     label.setAttribute('y', pad.top + h + 20);
                     label.setAttribute('text-anchor', 'middle');
                     label.setAttribute('font-size', '10');
-                    label.setAttribute('fill', '#8892A0');
+                    label.setAttribute('fill', '#5F6B7A');
                     label.textContent = yr;
                     svg.appendChild(label);
                 }
@@ -6441,7 +6441,7 @@
                 const row = document.createElement('tr');
                 row.style.opacity = '0.6';
                 row.innerHTML = `
-                    <td><span class="rank-badge" style="background:#E0D9CC;color:#8892A0;">—</span></td>
+                    <td><span class="rank-badge" style="background:#E0D9CC;color:#5F6B7A;">—</span></td>
                     <td>
                         <div class="team-cell" style="cursor: pointer;" onclick="openProfile({espnId: '${team.espnId}', name: '${team.name}'})">
                             <div class="team-logo-small" style="background-image: url('${getLogoUrl(team.espnId, 80)}');"></div>
@@ -6566,7 +6566,7 @@
                     <td>${entry.record}</td>
                     <td style="font-size:0.85rem;">${entry.coach}</td>
                     <td><span class="htss-score ${getHtssClass(entry.htss)}">${entry.htss.toFixed(1)}</span></td>
-                    <td style="font-size:0.82rem;color:#8892A0;">${entry.era}</td>
+                    <td style="font-size:0.82rem;color:#5F6B7A;">${entry.era}</td>
                 </tr>`;
             });
 
@@ -6609,7 +6609,7 @@
                     <td colspan="6" style="padding:0;">
                         <div style="padding:0.5rem 1rem 0.75rem 3rem; background:#FAFAF7;">
                             <table style="width:100%;font-size:0.82rem;border-collapse:collapse;">
-                                <tr style="color:#8892A0;font-size:0.72rem;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;">
+                                <tr style="color:#5F6B7A;font-size:0.72rem;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;">
                                     <td style="padding:0.3rem 0.5rem;">Season</td>
                                     <td style="padding:0.3rem 0.5rem;">Record</td>
                                     <td style="padding:0.3rem 0.5rem;">HTSS</td>
@@ -6653,7 +6653,7 @@
 
             const seasons = eraData[_htssEra] || [];
             if (seasons.length === 0) {
-                html += '<p style="text-align:center;padding:2rem;color:#8892A0;">No data for this era.</p>';
+                html += '<p style="text-align:center;padding:2rem;color:#5F6B7A;">No data for this era.</p>';
                 return html;
             }
 
@@ -6820,7 +6820,7 @@
                 TIME_MACHINE_DATA.matchups.forEach(m => { html += renderTmCard(m); });
                 html += '</div>';
             } else {
-                html += '<p style="text-align:center;padding:3rem;color:#8892A0;">Time Machine data not available.</p>';
+                html += '<p style="text-align:center;padding:3rem;color:#5F6B7A;">Time Machine data not available.</p>';
             }
 
             container.innerHTML = html;
@@ -7265,7 +7265,7 @@
             const teamB = findTeamBySlug(slugB);
             if (!teamA || !teamB) {
                 const container = document.getElementById('tmCustomResult');
-                if (container) container.innerHTML = '<p style="text-align:center;padding:1.5rem;color:#8892A0;">Could not find those teams.</p>';
+                if (container) container.innerHTML = '<p style="text-align:center;padding:1.5rem;color:#5F6B7A;">Could not find those teams.</p>';
                 return;
             }
             _tmTeamA = teamA;
@@ -7421,7 +7421,7 @@
             const { rising, falling } = computeTrajectories(_trajectoryWindow);
 
             const renderCards = (teams, direction) => {
-                if (!teams.length) return '<p style="color:#8892A0;font-size:0.85rem;">Not enough data for this window.</p>';
+                if (!teams.length) return '<p style="color:#5F6B7A;font-size:0.85rem;">Not enough data for this window.</p>';
                 return `<div class="trajectory-grid">${teams.map((t, i) => {
                     const logo = getLogoUrl(t.espnId);
                     const deltaStr = direction === 'up'
@@ -7494,14 +7494,14 @@
             if (NET_RANKINGS_LOADING) return;
             NET_RANKINGS_LOADING = true;
             const tbody = document.getElementById('netRankingsTableBody');
-            tbody.innerHTML = '<tr><td colspan="8" style="text-align:center;padding:3rem;color:#8892A0;">Loading NET rankings...</td></tr>';
+            tbody.innerHTML = '<tr><td colspan="8" style="text-align:center;padding:3rem;color:#5F6B7A;">Loading NET rankings...</td></tr>';
             try {
                 await computeNetRankings();
                 sessionStorage.setItem('NET_RANKINGS', JSON.stringify({ data: NET_RANKINGS, ts: Date.now() }));
                 renderNetRankings();
             } catch(e) {
                 console.error('Failed to load NET rankings:', e);
-                tbody.innerHTML = '<tr><td colspan="8" style="text-align:center;padding:3rem;color:#8892A0;">Unable to load NET rankings. Try refreshing.</td></tr>';
+                tbody.innerHTML = '<tr><td colspan="8" style="text-align:center;padding:3rem;color:#5F6B7A;">Unable to load NET rankings. Try refreshing.</td></tr>';
             } finally { NET_RANKINGS_LOADING = false; }
         }
 
@@ -7749,7 +7749,7 @@
                     <td style="${q4LossColor}">${qr.q4w||0}-${qr.q4l||0}</td>`;
                 tbody.appendChild(row);
             });
-            if (filtered.length === 0) tbody.innerHTML = '<tr><td colspan="8" style="text-align:center;padding:2rem;color:#8892A0;">No teams match your search.</td></tr>';
+            if (filtered.length === 0) tbody.innerHTML = '<tr><td colspan="8" style="text-align:center;padding:2rem;color:#5F6B7A;">No teams match your search.</td></tr>';
         }
 
         function renderHtssProfileSection(team) {
@@ -7785,21 +7785,21 @@
                         <div class="htss-profile-stat">
                             <div class="htss-profile-stat-label">Best Season Score</div>
                             <div class="htss-profile-stat-value"><span class="htss-score ${getHtssClass(best.htss)}" style="font-size:1.1rem;">${best.htss.toFixed(1)}</span></div>
-                            <div style="font-size:0.75rem;color:#8892A0;margin-top:0.2rem;">${best.season} · ${getHtssLabel(best.htss)}</div>
+                            <div style="font-size:0.75rem;color:#5F6B7A;margin-top:0.2rem;">${best.season} · ${getHtssLabel(best.htss)}</div>
                         </div>
                         <div class="htss-profile-stat">
                             <div class="htss-profile-stat-label">Best Season Rank</div>
                             <div class="htss-profile-stat-value">#${best.rank}</div>
-                            <div style="font-size:0.75rem;color:#8892A0;margin-top:0.2rem;">of ${HTSS_V2_DATA.metadata?.totalTeamSeasons?.toLocaleString() || '25,000+'} team-seasons</div>
+                            <div style="font-size:0.75rem;color:#5F6B7A;margin-top:0.2rem;">of ${HTSS_V2_DATA.metadata?.totalTeamSeasons?.toLocaleString() || '25,000+'} team-seasons</div>
                         </div>
                         ${programEntry ? `
                         <div class="htss-profile-stat">
                             <div class="htss-profile-stat-label">Program Score</div>
                             <div class="htss-profile-stat-value"><span class="htss-score ${getHtssClass(programEntry.score)}" style="font-size:1.1rem;">${programEntry.score.toFixed(1)}</span></div>
-                            <div style="font-size:0.75rem;color:#8892A0;margin-top:0.2rem;">${programEntry.qualifyingSeasons} qualifying seasons</div>
+                            <div style="font-size:0.75rem;color:#5F6B7A;margin-top:0.2rem;">${programEntry.qualifyingSeasons} qualifying seasons</div>
                         </div>` : ''}
                     </div>
-                    <div style="font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:0.07em;color:#8892A0;margin-bottom:0.3rem;">HTSS Over Time</div>
+                    <div style="font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:0.07em;color:#5F6B7A;margin-bottom:0.3rem;">HTSS Over Time</div>
                     <div class="htss-sparkline">${sparkBars}</div>
                     <div style="display:flex;justify-content:space-between;font-size:0.68rem;color:#A0AAB8;margin-top:0.25rem;">
                         <span>${recentSeasons[0]?.season || ''}</span>
@@ -7859,7 +7859,7 @@
                     <div class="quad-bar-legend">
                         <div class="quad-bar-legend-item"><div class="quad-bar-legend-dot" style="background:#2D7D46;"></div> Q1 (${q1Pct}%)</div>
                         <div class="quad-bar-legend-item"><div class="quad-bar-legend-dot" style="background:#C9A86C;"></div> Q2 (${q2Pct}%)</div>
-                        <div class="quad-bar-legend-item"><div class="quad-bar-legend-dot" style="background:#8892A0;"></div> Q3 (${q3Pct}%)</div>
+                        <div class="quad-bar-legend-item"><div class="quad-bar-legend-dot" style="background:#5F6B7A;"></div> Q3 (${q3Pct}%)</div>
                         <div class="quad-bar-legend-item"><div class="quad-bar-legend-dot" style="background:#C0392B;"></div> Q4 (${q4Pct}%)</div>
                     </div>` : ''}
                 </div>`;
@@ -7900,7 +7900,7 @@
             // Get team games for current season (lazy-fetch this team's slice)
             const teamData = await ensureTeamGames(teamEspnId).catch(() => null);
             if (!teamData) {
-                expandEl.innerHTML = '<div style="padding:1rem;text-align:center;color:#8892A0;font-size:0.85rem;">Game data not available.</div>';
+                expandEl.innerHTML = '<div style="padding:1rem;text-align:center;color:#5F6B7A;font-size:0.85rem;">Game data not available.</div>';
                 expandEl.classList.add('quad-games-expand--open');
                 return;
             }
@@ -7954,12 +7954,12 @@
                 const ncaaW = ncaaNet?.[qKey + 'w'] || 0;
                 const ncaaL = ncaaNet?.[qKey + 'l'] || 0;
                 if (ncaaW + ncaaL > 0) {
-                    expandEl.innerHTML = `<div style="padding:1rem;text-align:center;color:#8892A0;font-size:0.85rem;">
+                    expandEl.innerHTML = `<div style="padding:1rem;text-align:center;color:#5F6B7A;font-size:0.85rem;">
                         <div style="font-weight:600;color:#1B2A4A;margin-bottom:0.25rem;">Quad ${quadNum} Record: ${ncaaW}-${ncaaL}</div>
                         <div>Individual game details are being compiled. Quad record sourced from NCAA.com.</div>
                     </div>`;
                 } else {
-                    expandEl.innerHTML = '<div style="padding:1rem;text-align:center;color:#8892A0;font-size:0.85rem;">No Quad ' + quadNum + ' games found.</div>';
+                    expandEl.innerHTML = '<div style="padding:1rem;text-align:center;color:#5F6B7A;font-size:0.85rem;">No Quad ' + quadNum + ' games found.</div>';
                 }
                 expandEl.classList.add('quad-games-expand--open');
                 return;
@@ -8400,7 +8400,7 @@
                         <h3>Player Roster &amp; Stats</h3>
                         <button class="player-compare-btn" onclick="openPlayerComparison()">Compare Players</button>
                     </div>
-                    <div id="playerStatsContent" style="text-align:center;padding:1rem;color:#8892A0;">Loading player stats...</div>
+                    <div id="playerStatsContent" style="text-align:center;padding:1rem;color:#5F6B7A;">Loading player stats...</div>
                 </div>
             `;
 
@@ -8555,7 +8555,7 @@
                     psContent.innerHTML = renderPlayerStatsTable(data, team);
                     setupPlayerTableSort();
                 } else if (psContent) {
-                    psContent.innerHTML = '<div style="color:#8892A0;font-size:0.85rem;">Player data unavailable for this team.</div>';
+                    psContent.innerHTML = '<div style="color:#5F6B7A;font-size:0.85rem;">Player data unavailable for this team.</div>';
                 }
             });
         }
@@ -8741,7 +8741,7 @@
 
                 const postseason = mapTourneyResult(s.ncaaTourney);
 
-                seasonData[year] = { wins, losses, confWins, confLosses, postseason, coach: s.coach || '', apRank: s.apRank };
+                seasonData[year] = { wins, losses, confWins, confLosses, postseason, coach: s.coach || '', apRank: s.apRank, synthesized: !!s.synthesized };
                 validYears.push(year);
             });
 
@@ -8786,7 +8786,7 @@
                                 const displayYear = `${year - 1}-${String(year).slice(2)}`;
                                 return `<tr style="background:${bgColor}; border-bottom: 1px solid #F0EDE6;">
                                     <td style="padding: 0.5rem 0.75rem; font-weight: 600; color: #2C3345;"><a class="season-year-link" href="#season/${teamSlug(team.name)}/${displayYear}" title="View ${displayYear} season page">${displayYear}</a></td>
-                                    <td style="padding: 0.5rem 0.75rem; text-align: center; color: #2C3345;">${s.wins}-${s.losses}</td>
+                                    <td style="padding: 0.5rem 0.75rem; text-align: center; color: #2C3345;">${s.wins}-${s.losses}${s.synthesized ? ' <span title="Results vacated by the NCAA; season absent from the official record. Computed from the game log." style="color:#C9463E;font-weight:700;cursor:help;">*</span>' : ''}</td>
                                     <td style="padding: 0.5rem 0.75rem; text-align: center; color: #6B7A8D;">${confStr}</td>
                                     <td style="padding: 0.5rem 0.75rem; color: #2C3345; font-size: 0.82rem;">${s.coach || '-'}</td>
                                     <td style="padding: 0.5rem 0.75rem; text-align: center; color: ${parseFloat(pct) >= 60 ? '#2D7D46' : parseFloat(pct) < 40 ? '#C9463E' : '#2C3345'}; font-weight: 600;">.${pct.replace('.', '').padStart(3, '0')}</td>
@@ -8796,6 +8796,7 @@
                         </tbody>
                     </table>
                 </div>
+                ${validYears.some(y => seasonData[y].synthesized) ? `<div style="margin-top: 0.6rem; font-size: 0.78rem; color: #6F6A5C; text-align: center;">* Season vacated by the NCAA — shown for history, not counted in official records or rankings.</div>` : ''}
                 <div style="margin-top: 0.75rem; font-size: 0.8rem; color: #A0AAB8; text-align: center;">
                     ${validYears.length} seasons on record (${validYears[0] - 1}-${String(validYears[0]).slice(2)} to ${validYears[validYears.length-1] - 1}-${String(validYears[validYears.length-1]).slice(2)})
                 </div>
@@ -8856,7 +8857,7 @@
                 label.setAttribute('y', y + 4);
                 label.setAttribute('text-anchor', 'end');
                 label.setAttribute('font-size', '10');
-                label.setAttribute('fill', '#8892A0');
+                label.setAttribute('fill', '#5F6B7A');
                 label.textContent = (pct * 100).toFixed(0) + '%';
                 svg.appendChild(label);
             }
@@ -8995,7 +8996,7 @@
                     label.setAttribute('y', padding.top + h + 25);
                     label.setAttribute('text-anchor', 'middle');
                     label.setAttribute('font-size', '11');
-                    label.setAttribute('fill', '#8892A0');
+                    label.setAttribute('fill', '#5F6B7A');
                     label.textContent = year.toString();
                     svg.appendChild(label);
                 }
@@ -9006,7 +9007,7 @@
             yLabel.setAttribute('x', 15);
             yLabel.setAttribute('y', padding.top - 10);
             yLabel.setAttribute('font-size', '11');
-            yLabel.setAttribute('fill', '#8892A0');
+            yLabel.setAttribute('fill', '#5F6B7A');
             yLabel.setAttribute('font-weight', '600');
             yLabel.textContent = 'Win %';
             svg.appendChild(yLabel);
@@ -9279,7 +9280,7 @@
                     ? `<img src="${getLogoUrl(oppTeam.espnId)}" alt="" style="width:22px; height:22px; object-fit:contain; flex-shrink:0;" onerror="this.style.display='none'">`
                     : '';
                 const resultPill = `<span style="display:inline-block; min-width:20px; padding:0.1rem 0.45rem; border-radius:0.3rem; font-weight:700; font-size:0.75rem; background:${g.w ? '#E5F2E9' : '#FBEAEA'}; color:${g.w ? '#2D7D46' : '#C9463E'};">${g.w ? 'W' : 'L'}</span>`;
-                const otTag = g.ot ? ` <span style="font-size:0.7rem; color:#8892A0; font-weight:600;">${escapeHtml(String(g.ot))}</span>` : '';
+                const otTag = g.ot ? ` <span style="font-size:0.7rem; color:#5F6B7A; font-weight:600;">${escapeHtml(String(g.ot))}</span>` : '';
                 const vacTag = g.vacated ? ' <span title="Result later vacated by the NCAA" style="color:#C9463E; font-weight:700;">*</span>' : '';
                 const bg = i % 2 === 0 ? '#FFFFFF' : '#FAFAF7';
 
@@ -9321,7 +9322,7 @@
                             <tbody>${scheduleRows}</tbody>
                         </table>
                     </div>
-                    ${anyVacated ? '<div style="margin-top:0.75rem; font-size:0.8rem; color:#8892A0; font-family:var(--font-serif); font-style:italic;">* Result later vacated by the NCAA and not counted in official records.</div>' : ''}
+                    ${anyVacated ? '<div style="margin-top:0.75rem; font-size:0.8rem; color:#5F6B7A; font-family:var(--font-serif); font-style:italic;">* Result later vacated by the NCAA and not counted in official records.</div>' : ''}
                 </div>` : `
                 <div class="chart-section">
                     <h3>Schedule &amp; Results</h3>
@@ -12044,7 +12045,7 @@
                 html += '</tbody></table></div></div>';
             });
 
-            html += '<div style="text-align:center;padding:0.5rem;font-size:0.75rem;color:#8892A0;">Source: Sports Reference</div>';
+            html += '<div style="text-align:center;padding:0.5rem;font-size:0.75rem;color:#5F6B7A;">Source: Sports Reference</div>';
             html += '</div>';
             return html;
         }
@@ -12648,7 +12649,7 @@
             if (!content) return;
 
             // Show loading
-            content.innerHTML = `<div style="text-align:center; padding:4rem 2rem; color:#8892A0;">Loading game details...</div>`;
+            content.innerHTML = `<div style="text-align:center; padding:4rem 2rem; color:#5F6B7A;">Loading game details...</div>`;
 
             // Ensure upset data is loaded
             if (!UPSET_DETAIL_DATA) {
@@ -12751,7 +12752,7 @@
                 } else {
                     content.innerHTML = `<div style="text-align:center; padding:4rem 2rem;">
                         <div style="font-size:2rem; margin-bottom:1rem;">Game not found</div>
-                        <p style="color:#8892A0; margin-bottom:1.5rem;">We couldn't find data for this game.</p>
+                        <p style="color:#5F6B7A; margin-bottom:1.5rem;">We couldn't find data for this game.</p>
                         <a href="#upsets" style="color:#C9A86C; font-weight:600; text-decoration:none;">Back to Upsets</a>
                     </div>`;
                     return;
@@ -18273,7 +18274,7 @@
 
         function renderPlayerStatsTable(data, team) {
             if (!data || !data.players || data.players.length === 0) {
-                return '<div style="color:#8892A0;font-size:0.85rem;padding:1rem;">No player data available for this team.</div>';
+                return '<div style="color:#5F6B7A;font-size:0.85rem;padding:1rem;">No player data available for this team.</div>';
             }
 
             let players = data.players.filter(p => {
@@ -18962,7 +18963,7 @@
 
             let html = '';
 
-            const tieText = edge.ties > 0 ? ` <span style="font-size:0.8rem;color:#8892A0;font-weight:500;">(${edge.ties} tied)</span>` : '';
+            const tieText = edge.ties > 0 ? ` <span style="font-size:0.8rem;color:#5F6B7A;font-weight:500;">(${edge.ties} tied)</span>` : '';
             html += `<div class="s5-edge-bar">
                 <span class="s5-edge-label">Starting 5 Matchup:</span>
                 <span class="s5-edge-score">${t1.name} ${edge.t1Wins} — ${t2.name} ${edge.t2Wins}${tieText}</span>
@@ -19047,7 +19048,7 @@
                 ]);
 
                 if (!data1 || !data2 || !data1.players || !data2.players) {
-                    container.innerHTML = '<div style="color:#8892A0;font-size:0.9rem;padding:2rem;text-align:center;">Roster data unavailable for one or both teams.</div>';
+                    container.innerHTML = '<div style="color:#5F6B7A;font-size:0.9rem;padding:2rem;text-align:center;">Roster data unavailable for one or both teams.</div>';
                     return;
                 }
 
@@ -19055,14 +19056,14 @@
                 const starters2 = determineStarters(data2.players, actual2);
 
                 if (starters1.length === 0 || starters2.length === 0) {
-                    container.innerHTML = '<div style="color:#8892A0;font-size:0.9rem;padding:2rem;text-align:center;">Not enough player data to determine starting lineups.</div>';
+                    container.innerHTML = '<div style="color:#5F6B7A;font-size:0.9rem;padding:2rem;text-align:center;">Not enough player data to determine starting lineups.</div>';
                     return;
                 }
 
                 container.innerHTML = renderStarting5Content(t1, t2, starters1, starters2, t1Color, t2Color, { data1, data2 });
             } catch (e) {
                 console.error('Starting 5 load error:', e);
-                container.innerHTML = '<div style="color:#8892A0;font-size:0.9rem;padding:2rem;text-align:center;">Failed to load Starting 5 data. Please try again.</div>';
+                container.innerHTML = '<div style="color:#5F6B7A;font-size:0.9rem;padding:2rem;text-align:center;">Failed to load Starting 5 data. Please try again.</div>';
             }
         }
 
@@ -19392,13 +19393,13 @@
         async function renderRivalryPage(slug) {
             const rivalry = RIVALRIES.find(r => r.slug === slug);
             if (!rivalry) {
-                document.getElementById('rivalryPageContent').innerHTML = '<div style="text-align:center;padding:3rem;color:#8892A0;">Rivalry not found.</div>';
+                document.getElementById('rivalryPageContent').innerHTML = '<div style="text-align:center;padding:3rem;color:#5F6B7A;">Rivalry not found.</div>';
                 return;
             }
 
             // Synchronous loading state so direct-nav/refresh never shows a blank
             // container while the team game slices load (mirrors renderGameDetail).
-            document.getElementById('rivalryPageContent').innerHTML = '<div style="text-align:center;padding:3rem;color:#8892A0;">Loading rivalry…</div>';
+            document.getElementById('rivalryPageContent').innerHTML = '<div style="text-align:center;padding:3rem;color:#5F6B7A;">Loading rivalry…</div>';
 
             // Lazy-load both teams' game slices for game-level rivalry data
             await Promise.all([
@@ -19410,7 +19411,7 @@
             const t1 = H[rivalry.team1Id];
             const t2 = H[rivalry.team2Id];
             if (!t1 || !t2) {
-                container.innerHTML = '<div style="text-align:center;padding:3rem;color:#8892A0;">Team data not available.</div>';
+                container.innerHTML = '<div style="text-align:center;padding:3rem;color:#5F6B7A;">Team data not available.</div>';
                 return;
             }
 
@@ -19512,7 +19513,7 @@
                         <span class="rivalry-win-date">${d}</span>
                     </div>`;
                 }
-                if (t1BigWins.length === 0) html += '<div style="color:#8892A0;font-size:0.82rem;">No wins found in game data</div>';
+                if (t1BigWins.length === 0) html += '<div style="color:#5F6B7A;font-size:0.82rem;">No wins found in game data</div>';
                 html += `</div><div class="rivalry-biggest-col">
                             <h4><img src="${getLogoUrl(rivalry.team2Id)}" alt="" onerror="this.style.display='none'"> ${t2Name}</h4>`;
                 for (const g of t2BigWins) {
@@ -19522,7 +19523,7 @@
                         <span class="rivalry-win-date">${d}</span>
                     </div>`;
                 }
-                if (t2BigWins.length === 0) html += '<div style="color:#8892A0;font-size:0.82rem;">No wins found in game data</div>';
+                if (t2BigWins.length === 0) html += '<div style="color:#5F6B7A;font-size:0.82rem;">No wins found in game data</div>';
                 html += '</div></div></div>';
             }
 

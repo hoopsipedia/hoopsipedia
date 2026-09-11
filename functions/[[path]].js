@@ -271,7 +271,7 @@ function renderTeamSsr(team, seasons, teams, origin, history) {
 
   if (nSeasons) {
     const rows = seasons.map(s => {
-      const record = s.record || `${s.wins}-${s.losses}`;
+      const record = (s.record || `${s.wins}-${s.losses}`) + (s.synthesized ? ' *' : '');
       const confCell = s.confRecord
         ? `${escapeHtml(s.confRecord)} (${escapeHtml(s.conf || '')})`
         : escapeHtml(s.conf || '');
@@ -283,7 +283,8 @@ function renderTeamSsr(team, seasons, teams, origin, history) {
       `<h2>Season-by-season results</h2>` +
       `<table style="${SSR_TABLE_STYLE}"><thead><tr>` +
       `<th style="${SSR_CELL_STYLE}">Season</th><th style="${SSR_CELL_STYLE}">Record</th><th style="${SSR_CELL_STYLE}">Conference</th><th style="${SSR_CELL_STYLE}">Coach</th><th style="${SSR_CELL_STYLE}">AP peak</th>` +
-      `</tr></thead><tbody>${rows}</tbody></table>`
+      `</tr></thead><tbody>${rows}</tbody></table>` +
+      (seasons.some(s => s.synthesized) ? `<p>* Season vacated by the NCAA — absent from the official season table; record computed from the game log and not counted in official totals or rankings.</p>` : '')
     );
   }
 

@@ -493,6 +493,10 @@ function buildAllSeasons() {
     const teamName = info ? info[0] : `Unknown (${espnId})`;
 
     for (const season of teamSeasons) {
+      // Rows synthesized from the game log for NCAA-vacated seasons
+      // (scripts/synthesize_missing_seasons.py) are shown on the site but
+      // never scored — a vacated title run must not enter a program's top 10.
+      if (season.synthesized) continue;
       const endYear = getSeasonEndYear(season.year);
       const era = getEra(season.year);
       const tourney = parseTournamentResult(season.ncaaTourney);
