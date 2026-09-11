@@ -14,6 +14,14 @@
 #       (full data payload is far larger). Also note the URL redirected to
 #       https://www.hoopsipedia.com/#team/duke-blue-devils (hash route).
 #
+# ── Re-measured 2026-09-11 (production, mobile, 3-run medians) after the
+#    shell split / parallel loads / SSR section pages / deferred ad tags:
+#   /                      performance 0.78–0.80 | LCP ~5.0s | CLS 0 | 1.4 MB
+#   /teams/duke-blue-devils performance 0.61–0.89 (bimodal: LCP 3.6s or ~17s,
+#                          suspect cold Pages-Function TTFB) | CLS 0 | 5.3 MB
+#   /rankings              performance 0.80 | LCP 4.7s | CLS 0 | 2.8 MB
+#   Budgets tightened accordingly: performance ≥0.55, byte weight ≤8 MB.
+#
 # Assertions below are tuned to this baseline with headroom for run-to-run
 # variance, so today's site passes but real regressions fail. The byte-weight
 # ceiling is deliberately loose (80 MB) because the team page's full payload
@@ -46,7 +54,7 @@ jobs:
     steps:
       # No checkout needed — we audit the live site. The LHCI config is
       # generated at runtime so the repo stays clean.
-      - name: Write LHCI assertion config (baseline 2026-06-11, see header)
+      - name: Write LHCI assertion config (baseline 2026-09-11, see header)
         run: |
           cat > lighthouserc.json <<'EOF'
           {
@@ -55,7 +63,7 @@ jobs:
                 "assertions": {
                   "categories:performance": [
                     "error",
-                    { "minScore": 0.4, "aggregationMethod": "median-run" }
+                    { "minScore": 0.55, "aggregationMethod": "median-run" }
                   ],
                   "categories:accessibility": [
                     "error",
@@ -67,7 +75,7 @@ jobs:
                   ],
                   "total-byte-weight": [
                     "error",
-                    { "maxNumericValue": 83886080, "aggregationMethod": "median-run" }
+                    { "maxNumericValue": 8388608, "aggregationMethod": "median-run" }
                   ],
                   "largest-contentful-paint": [
                     "error",
