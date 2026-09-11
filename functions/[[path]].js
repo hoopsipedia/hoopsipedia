@@ -487,6 +487,7 @@ function renderSeasonSsr(team, seasonRow, games, teams, origin, slugIdx, recaps,
   bits.push('.');
   if (seasonRow.apHigh) bits.push(` The team peaked at #${seasonRow.apHigh} in the AP poll.`);
   if (seasonRow.srs != null) bits.push(` Simple Rating System: ${seasonRow.srs}.`);
+  if (seasonRow.synthesized) bits.push(` This season is absent from the official season table (results later vacated by the NCAA); the record shown is computed from the logged games.`);
   parts.push(`<p>${bits.join('')}</p>`);
   parts.push(renderSeasonStory(team, seasonRow, games, seasons, teams, origin, slugIdx));
 
@@ -1072,7 +1073,23 @@ export async function onRequest(context) {
     const team = lookupTeam(teamParam, teams, index);
     if (!team) return notFound();
     const seasons = await getTeamSeasons(assetFetcher, originUrl, team.espnId);
-    const seasonRow = seasons ? seasons.find(s => s.year === seasonParam) : null;
+    let seasonRow = seasons ? seasons.find(s => s.year === seasonParam) : null;
+    // Seasons the record book omits (NCAA-vacated years such as Michigan
+    // 1991-92) have no summary row but do have logged games. Synthesize the
+    // row from the game log so the page exists — vacated-games policy is to
+    // show the history with an asterisk, not to hide it. Only a season with
+    // a real log qualifies; anything else stays a hard 404.
+    let synthesizedRow = false;
+    if (!seasonRow && /^\d{4}-\d{2}$/.test(seasonParam)) {
+      const logged = await getTeamGames(assetFetcher, originUrl, team.espnId);
+      const inSeason = logged ? gamesForSeason(logged, seasonParam) : [];
+      if (inSeason.length >= 8) {
+        const wins = inSeason.filter(g => g.w).length;
+        seasonRow = { year: seasonParam, wins, losses: inSeason.length - wins, record: `${wins}-${inSeason.length - wins}`, conf: team.conf };
+        seasonRow.synthesized = true;
+        synthesizedRow = true;
+      }
+    }
     if (!seasonRow) return notFound();
 
     const slug = teamSlug(team.name);

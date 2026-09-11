@@ -284,12 +284,22 @@
         // whenData(). This is what keeps LCP off the 5MB seasons.json.
         const DATA_LOADS = {};
         let _allDataLoaded = false;
+        let _resolveAllLoaded = null;
+        let _startBackgroundLoads = null;
+        let _bgStarted = false;
+
+        function startBackgroundLoads() {
+            if (_bgStarted || !_startBackgroundLoads) return;
+            _bgStarted = true;
+            _startBackgroundLoads();
+        }
 
         function loadJson(url) {
             return fetch(url).then(r => r.ok ? r.json() : null).catch(() => null);
         }
 
         function whenData(...names) {
+            startBackgroundLoads();
             return Promise.all(names.map(n => DATA_LOADS[n] || Promise.resolve(null)));
         }
 
@@ -322,77 +332,87 @@
                 COACH_RANK = data.COACH_RANK || {};
                 window.NCAA_NET = data.NET || {}; // Real NCAA NET rankings + quad records
 
-                // Pre-compiled historical season data (compile_history.py)
-                DATA_LOADS.seasons = loadJson('/seasons.json').then(d => {
-                    if (d) {
-                        SEASONS_DATA = d;
-                        console.log(`Loaded historical data for ${Object.keys(SEASONS_DATA).length} teams`);
-                        try { buildSeedMatchupHistory(); } catch (e) { console.warn('Seed matchup history failed:', e); }
-                    } else {
-                        console.log('No seasons.json found - will use ESPN API for season data');
-                    }
-                    return d;
-                });
+                // The eight heavy datasets are NOT started here. On the fast
+                // routes (home, team pages) they would sit in the LCP's network
+                // dependency chain and compete with data.json and logos for
+                // bandwidth; init() starts them right after first paint via
+                // startBackgroundLoads(). DATA_LOADS.all exists immediately so
+                // gates can await it; awaiting it also triggers the start.
+                DATA_LOADS.all = new Promise(resolve => { _resolveAllLoaded = resolve; });
+                _startBackgroundLoads = () => {
+                    // Pre-compiled historical season data (compile_history.py)
+                    DATA_LOADS.seasons = loadJson('/seasons.json').then(d => {
+                        if (d) {
+                            SEASONS_DATA = d;
+                            console.log(`Loaded historical data for ${Object.keys(SEASONS_DATA).length} teams`);
+                            try { buildSeedMatchupHistory(); } catch (e) { console.warn('Seed matchup history failed:', e); }
+                        } else {
+                            console.log('No seasons.json found - will use ESPN API for season data');
+                        }
+                        return d;
+                    });
 
-                // All-time head-to-head data (compile_h2h.py)
-                DATA_LOADS.h2h = loadJson('/h2h.json').then(d => {
-                    if (d) { H2H_DATA = d; console.log(`Loaded H2H data for ${Object.keys(H2H_DATA).length} teams`); }
-                    return d;
-                });
+                    // All-time head-to-head data (compile_h2h.py)
+                    DATA_LOADS.h2h = loadJson('/h2h.json').then(d => {
+                        if (d) { H2H_DATA = d; console.log(`Loaded H2H data for ${Object.keys(H2H_DATA).length} teams`); }
+                        return d;
+                    });
 
-                // Upset history for personalized pregame badges
-                DATA_LOADS.upsets = loadJson('/upset_history.json').then(d => {
-                    if (d) {
-                        UPSET_DETAIL_DATA = d;
-                        window.UPSET_TEAM_LOOKUP = buildUpsetTeamLookup(UPSET_DETAIL_DATA);
-                    }
-                    return d;
-                });
+                    // Upset history for personalized pregame badges
+                    DATA_LOADS.upsets = loadJson('/upset_history.json').then(d => {
+                        if (d) {
+                            UPSET_DETAIL_DATA = d;
+                            window.UPSET_TEAM_LOOKUP = buildUpsetTeamLookup(UPSET_DETAIL_DATA);
+                        }
+                        return d;
+                    });
 
-                // Game-level schedule data: tiny manifest now; per-team slices
-                // (games/{espnId}.json) are fetched lazily on demand.
-                DATA_LOADS.gamesIndex = Promise.resolve().then(() => loadGamesIndex()).catch(e => {
-                    console.log('No game data found - will use ESPN API for game details');
-                    return null;
-                });
+                    // Game-level schedule data: tiny manifest now; per-team slices
+                    // (games/{espnId}.json) are fetched lazily on demand.
+                    DATA_LOADS.gamesIndex = Promise.resolve().then(() => loadGamesIndex()).catch(e => {
+                        console.log('No game data found - will use ESPN API for game details');
+                        return null;
+                    });
 
-                // Arena photos for team profile backgrounds
-                DATA_LOADS.arena = loadJson('/arena_photos.json').then(d => {
-                    if (d) { ARENA_PHOTOS = d; delete ARENA_PHOTOS.metadata; }
-                    return d;
-                });
+                    // Arena photos for team profile backgrounds
+                    DATA_LOADS.arena = loadJson('/arena_photos.json').then(d => {
+                        if (d) { ARENA_PHOTOS = d; delete ARENA_PHOTOS.metadata; }
+                        return d;
+                    });
 
-                // Team history prose for the program history section
-                DATA_LOADS.teamHistory = loadJson('/team_history.json').then(d => {
-                    if (d) TEAM_HISTORY = d;
-                    return d;
-                });
+                    // Team history prose for the program history section
+                    DATA_LOADS.teamHistory = loadJson('/team_history.json').then(d => {
+                        if (d) TEAM_HISTORY = d;
+                        return d;
+                    });
 
-                // NBA draft history
-                DATA_LOADS.draft = loadJson('/draft_history.json').then(d => {
-                    if (d) DRAFT_HISTORY = d;
-                    return d;
-                });
+                    // NBA draft history
+                    DATA_LOADS.draft = loadJson('/draft_history.json').then(d => {
+                        if (d) DRAFT_HISTORY = d;
+                        return d;
+                    });
 
-                // HTSS v2 rankings
-                DATA_LOADS.htss = loadJson('/htss_v2_results.json').then(d => {
-                    if (d) { HTSS_V2_DATA = d; console.log(`Loaded HTSS v2 — ${HTSS_V2_DATA.allTimeTop100?.length || 0} top seasons, ${HTSS_V2_DATA.programRankings?.length || 0} programs`); }
-                    return d;
-                });
+                    // HTSS v2 rankings
+                    DATA_LOADS.htss = loadJson('/htss_v2_results.json').then(d => {
+                        if (d) { HTSS_V2_DATA = d; console.log(`Loaded HTSS v2 — ${HTSS_V2_DATA.allTimeTop100?.length || 0} top seasons, ${HTSS_V2_DATA.programRankings?.length || 0} programs`); }
+                        return d;
+                    });
 
-                // Time Machine matchups
-                DATA_LOADS.timeMachine = loadJson('/time_machine_results.json').then(d => {
-                    if (d) TIME_MACHINE_DATA = d;
-                    return d;
-                });
+                    // Time Machine matchups
+                    DATA_LOADS.timeMachine = loadJson('/time_machine_results.json').then(d => {
+                        if (d) TIME_MACHINE_DATA = d;
+                        return d;
+                    });
 
-                // Rivalry definitions (shared with the Pages Function's /rivalries SSR)
-                DATA_LOADS.rivalries = loadJson('/rivalries.json').then(d => {
-                    if (Array.isArray(d)) RIVALRIES = d;
-                    return d;
-                });
+                    // Rivalry definitions (shared with the Pages Function's /rivalries SSR)
+                    DATA_LOADS.rivalries = loadJson('/rivalries.json').then(d => {
+                        if (Array.isArray(d)) RIVALRIES = d;
+                        return d;
+                    });
 
-                DATA_LOADS.all = Promise.all(Object.values(DATA_LOADS)).then(() => { _allDataLoaded = true; });
+                    Promise.all(Object.entries(DATA_LOADS).filter(([k]) => k !== 'all').map(([, p]) => p))
+                        .then(() => { _allDataLoaded = true; _resolveAllLoaded(); });
+                };
             } catch (e) {
                 console.error('Error loading data:', e);
                 document.querySelector('.container').innerHTML = `<div class="error-fallback" style="min-height:60vh;">
@@ -1732,6 +1752,7 @@
             // as data.json is in — they read per-team slices, not the monolith.
             // Every other view waits for the full dataset, exactly as before.
             if (!isFastRoute()) {
+                startBackgroundLoads();
                 try { await DATA_LOADS.all; } catch (e) { console.warn('Background data load error:', e); }
             }
             try {
@@ -1763,6 +1784,11 @@
             // Remove loading screen — router has resolved, correct view is showing
             const loader = document.getElementById('appLoader');
             if (loader) { loader.style.opacity = '0'; setTimeout(() => loader.remove(), 200); }
+
+            // First paint is done: now warm the heavy datasets in the background.
+            // A user who navigates sooner triggers the start via the view gates.
+            if ('requestIdleCallback' in window) requestIdleCallback(startBackgroundLoads, { timeout: 1500 });
+            else setTimeout(startBackgroundLoads, 300);
 
         }
 
@@ -2131,9 +2157,13 @@
         };
         const _logoFailCache = new Set();
 
-        function getLogoUrl(espnId) {
+        // ESPN's 500px masters run 30–100KB each; a table of 365 of them is
+        // ~18MB. Ask ESPN's image combiner for a right-sized rendition instead
+        // (200px covers list rows, cards and the profile crest at 2x DPR).
+        function getLogoUrl(espnId, size = 200) {
             if (LOGO_FALLBACKS[String(espnId)]) return getFallbackLogoUrl(espnId);
-            return `https://a.espncdn.com/i/teamlogos/ncaa/500/${espnId}.png`;
+            if (!size || size >= 500) return `https://a.espncdn.com/i/teamlogos/ncaa/500/${espnId}.png`;
+            return `https://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500/${espnId}.png&w=${size}&h=${size}&transparent=true`;
         }
 
         function getFallbackLogoUrl(espnId) {
@@ -2357,6 +2387,7 @@
             // Views beyond home/team/teams/players read the full datasets;
             // if those are still streaming in, route once they have landed.
             if (!_allDataLoaded && hash && hash !== '#' && !isFastRoute()) {
+                startBackgroundLoads();
                 DATA_LOADS.all.then(() => { if (window.location.hash === hash) handleHashRoute(); });
                 return;
             }
@@ -3099,6 +3130,7 @@
             // already active, so the switch feels instant; content follows).
             const FAST_VIEWS = new Set(['home', 'teams', 'profile', 'seasonPage', 'players']);
             if (!_allDataLoaded && !FAST_VIEWS.has(view)) {
+                startBackgroundLoads();
                 DATA_LOADS.all.then(() => { if (currentView === view) switchView(view, true); });
                 return;
             }
@@ -4907,7 +4939,7 @@
                     <td>${idx + 1}</td>
                     <td>
                         <div class="team-cell" style="cursor: pointer;" onclick="openProfile({espnId: '${team.espnId}', name: '${team.name}'})">
-                            <div class="team-logo-small" style="background-image: url('${getLogoUrl(team.espnId)}');"></div>
+                            <div class="team-logo-small" style="background-image: url('${getLogoUrl(team.espnId, 80)}');"></div>
                             <span>${team.name}${vacNote}</span>
                         </div>
                     </td>
@@ -6377,7 +6409,7 @@
                     <td>${badge}</td>
                     <td>
                         <div class="team-cell" style="cursor: pointer;" onclick="openProfile({espnId: '${team.espnId}', name: '${team.name}'})">
-                            <div class="team-logo-small" style="background-image: url('${getLogoUrl(team.espnId)}');"></div>
+                            <div class="team-logo-small" style="background-image: url('${getLogoUrl(team.espnId, 80)}');"></div>
                             <span>${team.name}${vacNote}</span>
                         </div>
                     </td>
@@ -6395,7 +6427,7 @@
                     <td><span class="rank-badge" style="background:#E0D9CC;color:#8892A0;">—</span></td>
                     <td>
                         <div class="team-cell" style="cursor: pointer;" onclick="openProfile({espnId: '${team.espnId}', name: '${team.name}'})">
-                            <div class="team-logo-small" style="background-image: url('${getLogoUrl(team.espnId)}');"></div>
+                            <div class="team-logo-small" style="background-image: url('${getLogoUrl(team.espnId, 80)}');"></div>
                             <span>${team.name}</span>
                         </div>
                     </td>
