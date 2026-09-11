@@ -11,7 +11,21 @@ _Updated 2026-07-28. Previous versions archived at `docs/archive/SCRAPE_STATUS_2
   - Orphan duplicate logs removed: 2563 (South Dakota), 2566 (South Dakota St), 2656 (Tulane — its ~300 extra opp ids grafted onto 2655 first), 2631 (Tulsa — its 2,118 arena strings grafted onto 202 first).
 - 2026-07-28: 1,997 double-encoded UTF-8 strings (en-dashes, accents) in opp/arena fields repaired (`fix_games_mojibake.py`).
 
-### Known season gaps — 107 team-seasons (was 4)
+### Known season gaps — 2 remaining (was 107) — filled 2026-09-11
+
+`fill_season_gaps_from_sr.py` ran on Josh's laptop on 2026-09-11 and filled
+**105 of the 107** team-seasons from Sports-Reference (each gated at ≥15
+in-window games, additive-only, duplicate-safe). Michigan 1991-92 and 1992-93,
+Kentucky 1987-88, UConn 1995-96, Purdue 1995-96, Arizona 1998-99, Kansas
+2017-18 and Memphis 2007-08 are all complete now. games/ slices,
+efficiency_ratings.json, htss_v2_results.json, unified_rankings.json and
+on_this_day.json were regenerated on the filled logs; 62/62 invariant tests
+pass. The two rejects (0 games scraped) are: **Kentucky 1952-53** — the
+season was cancelled by the NCAA, so the gap is a correct absence, not
+data loss — and **SE Louisiana 1989-90**, which Sports-Reference does not
+carry. The scan below is kept as the record of what was missing.
+
+#### Original scan (2026-08-25) — 107 team-seasons
 
 A systematic scan replaced the hand-listed four. A season counts as a hole
 only when it has **≤6 games logged while BOTH adjacent seasons have ≥20** —

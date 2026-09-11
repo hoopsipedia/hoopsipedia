@@ -92,7 +92,8 @@ jobs:
         with:
           urls: |
             https://www.hoopsipedia.com/
-            https://www.hoopsipedia.com/?team=duke-blue-devils
+            https://www.hoopsipedia.com/teams/duke-blue-devils
+            https://www.hoopsipedia.com/rankings
           runs: 3
           configPath: ./lighthouserc.json
           uploadArtifacts: true

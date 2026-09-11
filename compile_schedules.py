@@ -90,6 +90,12 @@ class ScheduleCompiler:
                     return None
                 response.raise_for_status()
                 self._consecutive_429s = 0  # Reset on success
+                # Sports-Reference serves UTF-8 without a charset header, so
+                # requests falls back to latin-1 and every en-dash/accent in
+                # arena and opponent names comes out double-encoded (the
+                # mojibake fix_games_mojibake.py repairs). Decode as UTF-8.
+                if not response.encoding or response.encoding.lower() in ('iso-8859-1', 'latin-1'):
+                    response.encoding = 'utf-8'
                 return response.text
             except requests.RequestException as e:
                 if attempt < 2:
