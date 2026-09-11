@@ -477,7 +477,7 @@ function renderSeasonSsr(team, seasonRow, games, teams, origin, slugIdx, recaps,
   const parts = [];
   const seasonStr = seasonRow.year;
 
-  parts.push(`<h1>${escapeHtml(seasonStr)} ${escapeHtml(team.name)} — schedule and results</h1>`);
+  parts.push(`<h1>${escapeHtml(seasonStr)} ${escapeHtml(team.name)} basketball — schedule and results</h1>`);
 
   const record = seasonRow.record || `${seasonRow.wins}-${seasonRow.losses}`;
   const bits = [
@@ -1096,7 +1096,7 @@ export async function onRequest(context) {
     const slug = teamSlug(team.name);
     canonicalUrl = seasonHref(origin, slug, seasonParam);
     const record = seasonRow.record || `${seasonRow.wins}-${seasonRow.losses}`;
-    pageTitle = `${seasonParam} ${team.name} — schedule & results — Hoopsipedia`;
+    pageTitle = `${seasonParam} ${team.name} Basketball — Schedule & Results — Hoopsipedia`;
     const description = `${seasonParam} ${team.name} basketball: ${record}${seasonRow.coach ? ` under ${seasonRow.coach}` : ''}${seasonRow.apHigh ? `, peaked at AP #${seasonRow.apHigh}` : ''}. Full game-by-game schedule, scores, and box scores on Hoopsipedia.`;
     const imageUrl = `https://a.espncdn.com/i/teamlogos/ncaa/500/${team.espnId}.png`;
 
@@ -1145,7 +1145,7 @@ export async function onRequest(context) {
       : 'No National Championships';
     const ffText = `${team.finalFours} Final Four${team.finalFours === 1 ? '' : 's'}`;
 
-    pageTitle = `${team.name} — Hoopsipedia`;
+    pageTitle = `${team.name} Basketball — History, Records & Every Season — Hoopsipedia`;
     const description = `${team.name} basketball: ${team.allTimeW}-${team.allTimeL} all-time record, ${ncText}, ${ffText}. Member of the ${team.conf}. Full program history, stats, and head-to-head comparisons on Hoopsipedia.`;
     const imageUrl = `https://a.espncdn.com/i/teamlogos/ncaa/500/${team.espnId}.png`;
 
@@ -1195,7 +1195,7 @@ export async function onRequest(context) {
     if (!team1 || !team2) return context.next();
 
     canonicalUrl = `${origin}/?compare=${encodeParam(compareParam)}`;
-    pageTitle = `${team1.name} vs ${team2.name} — Hoopsipedia`;
+    pageTitle = `${team1.name} vs ${team2.name} Basketball — Head-to-Head History — Hoopsipedia`;
     const description = 'Head-to-head comparison on Hoopsipedia';
     const imageUrl = `https://a.espncdn.com/i/teamlogos/ncaa/500/${team1.espnId}.png`;
 

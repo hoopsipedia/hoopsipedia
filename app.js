@@ -9160,7 +9160,7 @@
             const reqId = ++_seasonPageReq;
 
             const team = findTeamBySlug(slug);
-            if (team) document.title = `${seasonStr} ${team.name} — schedule & results — Hoopsipedia`;
+            if (team) document.title = `${seasonStr} ${team.name} Basketball — Schedule & Results — Hoopsipedia`;
             if (!team) {
                 container.innerHTML = `
                     <div style="text-align:center; padding:4rem 1rem; color:var(--ink-muted); font-family:var(--font-serif);">

@@ -59,5 +59,7 @@ game_ids_progress.json
 archives/**/*.pdf
 archives/**/*.zip
 
-# Daily social-post drafts (scripts/daily_content.py) — local working files
+# Daily social-post drafts (scripts/daily_content.py) and Google reports
+# (scripts/google_reports.py) — local working files
 content/drafts/
+content/reports/
