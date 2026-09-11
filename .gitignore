@@ -58,3 +58,6 @@ _sr_audit.json
 game_ids_progress.json
 archives/**/*.pdf
 archives/**/*.zip
+
+# Daily social-post drafts (scripts/daily_content.py) — local working files
+content/drafts/
