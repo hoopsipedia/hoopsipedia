@@ -62,8 +62,17 @@ def _reject_constant(token):
 
 
 def load(fname):
-    """Parse JSON, rejecting NaN/Infinity tokens outright."""
+    """Parse JSON, rejecting NaN/Infinity tokens outright.
+
+    Falls back to fname + '.gz' when the plain file is absent: the box-score
+    master is committed only as sr_boxscores.json.gz (scripts/pack_store.py),
+    so CI checkouts have no raw sr_boxscores.json.
+    """
     path = os.path.join(ROOT, fname)
+    if not os.path.exists(path) and os.path.exists(path + ".gz"):
+        import gzip
+        with gzip.open(path + ".gz", "rt", encoding="utf-8") as f:
+            return json.load(f, parse_constant=_reject_constant)
     with open(path, "r", encoding="utf-8") as f:
         return json.load(f, parse_constant=_reject_constant)
 

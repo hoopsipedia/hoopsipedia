@@ -36,6 +36,8 @@ check_fresh games_1.json games/index.json scripts/split_games.py
 check_fresh games_2.json games/index.json scripts/split_games.py
 check_fresh games_3.json games/index.json scripts/split_games.py
 check_fresh sr_boxscores.json boxscores/index.json scripts/split_boxscores.py
+# The store master is committed only as sr_boxscores.json.gz (25MiB Pages limit)
+python3 scripts/pack_store.py --check || exit 1
 check_fresh seasons.json seasons/index.json scripts/split_seasons.py
 echo "✅ Data slices are fresh"
 

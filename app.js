@@ -11555,17 +11555,12 @@
             return UPSET_BOXSCORES || {};
         }
 
-        // Legacy whole-file loader (18MB) — only used as deploy-transition
-        // fallback when the per-year boxscores/ slices aren't deployed yet.
+        // The whole-store file (61MB) is no longer deployed — it exceeds
+        // Cloudflare Pages' 25MiB per-file limit and lives in git only as
+        // sr_boxscores.json.gz. Box scores come exclusively from the per-year
+        // boxscores/{year}.json slices below; this stays as a harmless stub
+        // for the few call sites that still reference it.
         async function loadSRBoxscores() {
-            if (SR_BOXSCORES) return SR_BOXSCORES;
-            try {
-                const resp = await fetch('/sr_boxscores.json');
-                if (resp.ok) {
-                    SR_BOXSCORES = await resp.json();
-                    delete SR_BOXSCORES._metadata;
-                }
-            } catch (e) {}
             return SR_BOXSCORES || {};
         }
 

@@ -21,6 +21,14 @@ jobs:
       - name: Asset version stamps are current (app.css/app.js ?v= hashes)
         run: python3 scripts/stamp_assets.py --check
 
+      - name: Box-score master is committed as gzip (Pages 25MiB per-file limit)
+        run: |
+          python3 scripts/pack_store.py --check
+          for f in $(git ls-files); do
+            s=$(stat -c %s "$f"); if [ "$s" -gt 26214400 ]; then echo "❌ $f is $s bytes (>25MiB) — Cloudflare Pages will reject the deploy"; exit 1; fi
+          done
+          echo "OK no tracked file exceeds 25MiB"
+
       - name: Validate deploy-critical JSON files
         run: |
           for f in data.json h2h.json games_1.json games_2.json games_3.json seasons.json espn_to_sr.json slug_aliases.json; do

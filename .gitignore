@@ -19,6 +19,12 @@ node_modules/
 
 # Compressed backups (tracked originals exist)
 *.gz
+# ...except the box-score master, which is committed ONLY as gzip: the raw
+# 61MB JSON exceeds Cloudflare Pages' 25MiB per-file limit and would fail
+# every deploy (it did, silently, from 2026-07-24 to 2026-09-11).
+# Local working copy: python3 scripts/pack_store.py --unpack
+!sr_boxscores.json.gz
+sr_boxscores.json
 
 # Large source file (split into games_1.json + games_2.json for deploy)
 games.json

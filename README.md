@@ -35,7 +35,8 @@ results JSON (htss_v2_results.json, efficiency_ratings.json, time_machine_result
 Hosted on **Cloudflare Pages**, connected to this repo — push to `main` deploys automatically. There is no build step; the repo root is the deploy artifact.
 
 - `ANTHROPIC_API_KEY` must be set as an environment variable in the Cloudflare Pages dashboard (production) and in `.dev.vars` (local, gitignored).
-- Pages rejects files over **25MB** — the games data is split into `games_1/2/3.json` for this reason. Watch `sr_boxscores.json` (growing with scrape runs).
+- Pages rejects files over **25 MiB** and the failure is SILENT (the old build keeps serving — this froze production on the July 24 build for seven weeks in 2026). The games data is split into `games_1/2/3.json` (22MB each — watch them) for this reason, and the box-score master is committed **only as `sr_boxscores.json.gz`** (~7 MiB): the raw `sr_boxscores.json` is gitignored. After a fresh clone run `python3 scripts/pack_store.py --unpack`; after any store change run `python3 scripts/pack_store.py` and commit the `.gz` (the pre-push hook and CI enforce it, and CI fails on any tracked file over 25 MiB).
+- After every push, confirm the deploy actually went live: `curl -s https://www.hoopsipedia.com/ | grep -o 'app.js?v=[a-f0-9]*'` must match `index.html`.
 - Local preview: `npx wrangler pages dev .`
 
 ## Local setup
