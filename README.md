@@ -4,10 +4,12 @@
 
 ## Stack
 
-- **Frontend:** a single hand-written `index.html` (vanilla JS, hash-routed SPA, no framework, no build step) plus static pages (`about.html`, `privacy.html`, `terms.html`, `contact.html`). PWA via `sw.js` + `manifest.json`.
+- **Frontend:** a hand-written vanilla-JS SPA, no framework, no build step: `index.html` (52KB shell + static markup), `app.js` (all application code) and `app.css`, referenced with content-hash versions (`/app.js?v=…`, stamped by `scripts/stamp_assets.py` — run it after editing either file; the pre-push hook and CI enforce it). Self-hosted fonts in `fonts/`. Static pages (`about.html`, `privacy.html`, `terms.html`, `contact.html`). PWA via `sw.js` + `manifest.json`.
+  - Routing: hash routes (`#team/x`, `#compare/a/b`, …) plus forever-URL paths served by the Pages Function with server-rendered content: `/teams/{slug}`, `/teams/{slug}/{season}`, `/coaches/{slug}`, `/rankings`, `/time-machine`, `/time-machine/{a}/{seasonA}/{b}/{seasonB}`, `/players`, `/rivalries`, `/rivalries/{slug}`, `/teams`, `/coaches`, `/bracket`, `/upsets`, `/classics`, `/champions`.
+  - First paint waits only for `data.json`; the heavy datasets load in parallel in the background (`DATA_LOADS` / `whenData()` in app.js) and team pages read `seasons/{espnId}.json` slices.
 - **Backend:** Cloudflare Pages Functions
   - `functions/api/chat.js` — AI chat endpoint (Claude tool-use over the site's datasets, SSE streaming)
-  - `functions/[[path]].js` — dynamic Open Graph meta tags for social sharing
+  - `functions/[[path]].js` — forever-URL routing, server-rendered crawler content (`#ssr-content`), canonical/OG/JSON-LD meta
 - **Data:** flat JSON files at repo root, served as static assets (no database)
 - **Pipeline:** Python scrapers (Sports-Reference, ESPN) + Node.js analytics engines
 
@@ -45,7 +47,7 @@ python3 validate_setup.py         # sanity-check files + dependencies
 python3 test_scraper.py           # scraper smoke tests
 ```
 
-**The pre-push hook is mandatory.** It validates the JS in `index.html` and the deploy-critical JSON files. Never bypass it with `--no-verify` — a syntax error in `index.html` takes down the whole site.
+**The pre-push hook is mandatory.** It validates `app.js` + the inline JS in `index.html`, the asset version stamps, and the deploy-critical JSON files. Never bypass it with `--no-verify` — a syntax error in `index.html` takes down the whole site.
 
 ## Data backup & restore
 

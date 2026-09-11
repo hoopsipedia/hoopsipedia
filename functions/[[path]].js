@@ -293,7 +293,7 @@ function renderTeamSsr(team, seasons, teams, origin, history) {
     parts.push(`<h2>More ${escapeHtml(team.conf)} programs</h2><p>${rivalLinks}</p>`);
   }
 
-  parts.push(`<p><a href="${origin}/?view=teams">All Division I programs</a> · <a href="${origin}/?view=rankings">Historical rankings</a> · <a href="${origin}/?view=champions">Championship journeys</a> · <a href="${origin}/">Hoopsipedia home</a></p>`);
+  parts.push(`<p><a href="${origin}/teams">All Division I programs</a> · <a href="${origin}/rankings">Historical rankings</a> · <a href="${origin}/champions">Championship journeys</a> · <a href="${origin}/">Hoopsipedia home</a></p>`);
 
   return ssrWrap(parts.join('\n'));
 }
@@ -431,7 +431,7 @@ function renderSeasonSsr(team, seasonRow, games, teams, origin, slugIdx, recaps)
     }
   }
 
-  parts.push(`<p><a href="${origin}/teams/${encodeParam(slug)}">${escapeHtml(team.name)} program history</a> · <a href="${origin}/?view=teams">All Division I programs</a> · <a href="${origin}/">Hoopsipedia home</a></p>`);
+  parts.push(`<p><a href="${origin}/teams/${encodeParam(slug)}">${escapeHtml(team.name)} program history</a> · <a href="${origin}/teams">All Division I programs</a> · <a href="${origin}/">Hoopsipedia home</a></p>`);
 
   return ssrWrap(parts.join('\n'));
 }
@@ -558,7 +558,7 @@ function renderCoachSsr(coach, rank, accolades, teams, coaches, coachLb, origin)
     parts.push(`<h2>More all-time winningest coaches</h2><p>${others}</p>`);
   }
 
-  parts.push(`<p><a href="${origin}/?view=coaches">All-time coaches leaderboard</a> · <a href="${origin}/?view=teams">All Division I programs</a> · <a href="${origin}/">Hoopsipedia home</a></p>`);
+  parts.push(`<p><a href="${origin}/coaches">All-time coaches leaderboard</a> · <a href="${origin}/teams">All Division I programs</a> · <a href="${origin}/">Hoopsipedia home</a></p>`);
 
   return ssrWrap(parts.join('\n'));
 }
@@ -584,11 +584,260 @@ function renderHomepageSsr(teams, origin) {
   const parts = [
     `<h1>Hoopsipedia — the college basketball history encyclopedia</h1>`,
     `<p>Hoopsipedia is a free historical database covering ${entries.length}+ Division I men's college basketball programs across 77 seasons (1949–2026): all-time records, season-by-season results, head coaches, NCAA Tournament history, championship runs, historical rankings, and retroactive efficiency ratings.</p>`,
-    `<p>Explore: <a href="${origin}/?view=teams">All teams</a> · <a href="${origin}/?view=rankings">Rankings</a> · <a href="${origin}/?view=bracket">Tournament bracket</a> · <a href="${origin}/?view=coaches">Coaches</a> · <a href="${origin}/?view=champions">Championship journeys</a> · <a href="${origin}/?view=upsets">Greatest upsets</a> · <a href="${origin}/?view=classics">Instant classics</a></p>`,
+    `<p>Explore: <a href="${origin}/teams">All teams</a> · <a href="${origin}/rankings">Rankings</a> · <a href="${origin}/bracket">Tournament bracket</a> · <a href="${origin}/coaches">Coaches</a> · <a href="${origin}/champions">Championship journeys</a> · <a href="${origin}/upsets">Greatest upsets</a> · <a href="${origin}/classics">Instant classics</a></p>`,
     `<h2>Winningest programs of all time</h2><p>${winningest}</p>`,
     `<h2>Recent national champions</h2><p>${champList}</p>`,
   ];
   return ssrWrap(parts.join('\n'));
+}
+
+// ── Section pages (forever URLs) ─────────────────────────────────────────
+// /rankings, /time-machine, /players, /rivalries, /coaches, /teams, /bracket,
+// /upsets, /classics, /champions — plus /rivalries/{slug} and
+// /time-machine/{slugA}/{seasonA}/{slugB}/{seasonB}. Each gets a canonical
+// path, page-specific meta, and a crawler-visible SSR block built from the
+// same JSON the SPA renders. The legacy ?view= form 301s to the path.
+
+const LOGO_IMAGE = 'https://www.hoopsipedia.com/branding/hoopsipedia-logo.png';
+
+const SECTION_META = {
+  'teams': {
+    title: 'All Division I College Basketball Programs — Hoopsipedia',
+    description: 'Browse every Division I men\'s basketball program by conference. All-time records, season-by-season results, coaches, and NCAA Tournament history for 365+ teams.',
+  },
+  'rankings': {
+    title: 'College Basketball Rankings — All-Time Programs & the Greatest Seasons Ever (HTSS) — Hoopsipedia',
+    description: 'The winningest programs, the most championships, and Hoopsipedia\'s HTSS — a cross-era score for every team-season since 1949. Who was better: 1972 UCLA or 2015 Kentucky? Settle it here.',
+  },
+  'time-machine': {
+    title: 'Time Machine — Greatest College Basketball Games Never Played — Hoopsipedia',
+    description: 'Cross-era matchups simulated from adjusted efficiency and HTSS: 1972 UCLA vs 2015 Kentucky, 1992 Duke vs 2018 Villanova, and any two team-seasons you pick. Predicted scores and win probability.',
+  },
+  'players': {
+    title: 'Player Archive — Box-Score Leaders Across 20,000+ Archived Games — Hoopsipedia',
+    description: 'Points per game, rebounds, assists and more from every archived college basketball box score, 1908 to today — with honest coverage denominators for every program.',
+  },
+  'rivalries': {
+    title: 'College Basketball Rivalries — All-Time Series Records — Hoopsipedia',
+    description: 'Duke–UNC, Kentucky–Louisville, Kansas–Missouri and the other great rivalries: all-time series records, decade-by-decade timelines, biggest wins, and recent meetings.',
+  },
+  'coaches': {
+    title: 'All-Time Winningest College Basketball Coaches — Top 100 — Hoopsipedia',
+    description: 'The 100 winningest head coaches in Division I history, verified against the NCAA record book: wins, losses, titles, Final Fours, and career tenures.',
+  },
+  'bracket': {
+    title: 'NCAA Tournament Bracket — Live Scores & Historical Context — Hoopsipedia',
+    description: 'The NCAA Tournament bracket with live scores, seed-matchup history, upset alerts, and every team\'s tournament résumé.',
+  },
+  'upsets': {
+    title: 'Greatest NCAA Tournament Upsets of All Time — Hoopsipedia',
+    description: 'Every Cinderella story, every bracket buster. Explore the most shocking upsets in March Madness history with scores, highlights, and the stories behind the madness.',
+  },
+  'classics': {
+    title: '⚡ Instant Classics — 2026 NCAA Tournament | Hoopsipedia',
+    description: 'Buzzer beaters, overtime thrillers, and games you\'ll never forget from the 2026 NCAA Tournament.',
+  },
+  'champions': {
+    title: '🏆 Championship Journeys — Every Path to Cutting Down the Nets | Hoopsipedia',
+    description: 'Relive every championship run in NCAA Tournament history. Game-by-game breakdowns, box scores, highlights, and the stories behind each title.',
+  },
+};
+
+// Per-isolate cache for the JSON the section pages read.
+const jsonCache = new Map();
+async function getJsonCached(assetFetcher, originUrl, path) {
+  if (jsonCache.has(path)) return jsonCache.get(path);
+  try {
+    const resp = await assetFetcher.fetch(new URL(path, originUrl).toString());
+    if (!resp.ok) return null;
+    const data = await resp.json();
+    jsonCache.set(path, data);
+    return data;
+  } catch (e) {
+    return null;
+  }
+}
+
+function teamLinkByName(origin, name) {
+  return `<a href="${teamHref(origin, teamSlug(name))}">${escapeHtml(name)}</a>`;
+}
+
+function renderRankingsSsr(teams, htss, origin) {
+  const entries = Object.values(teams);
+  const rows = (list, cells) => `<table style="${SSR_TABLE_STYLE}">${list.map(cells).join('')}</table>`;
+  const cell = (v) => `<td style="${SSR_CELL_STYLE}">${v}</td>`;
+
+  const winningest = [...entries].sort((a, b) => b[F.ATW] - a[F.ATW]).slice(0, 25);
+  const champs = [...entries].filter(t => t[F.NC] > 0).sort((a, b) => b[F.NC] - a[F.NC] || b[F.FF] - a[F.FF]).slice(0, 20);
+
+  const parts = [
+    `<h1>College basketball rankings — all-time programs and the greatest seasons ever</h1>`,
+    `<p>Two kinds of ranking live here. The record book: all-time wins, national championships, Final Fours. And Hoopsipedia's own <strong>HTSS (Historical Team-Season Score)</strong>, which scores every Division I team-season since 1949 on one scale — adjusted efficiency, schedule strength, tournament result, quality wins, poll perception, coaching, and NBA draft talent, era-normalized — so a 1972 team and a 2015 team can be compared honestly. Scale: 50 is average, 70–75 elite, 80–85 transcendent, 85+ GOAT tier.</p>`,
+    `<p>Related: <a href="${origin}/time-machine">Time Machine cross-era matchups</a> · <a href="${origin}/players">Player archive</a> · <a href="${origin}/coaches">Winningest coaches</a> · <a href="${origin}/champions">Championship journeys</a></p>`,
+    `<h2>Winningest programs of all time</h2>`,
+    rows(winningest, (t, i) => `<tr>${cell(i + 1)}${cell(teamLinkByName(origin, t[F.NAME]))}${cell(`${t[F.ATW]}–${t[F.ATL]}`)}${cell(((t[F.ATW] / (t[F.ATW] + t[F.ATL])) * 100).toFixed(1) + '%')}</tr>`),
+    `<h2>Most national championships</h2>`,
+    rows(champs, (t, i) => `<tr>${cell(i + 1)}${cell(teamLinkByName(origin, t[F.NAME]))}${cell(`${t[F.NC]} title${t[F.NC] === 1 ? '' : 's'}`)}${cell((Array.isArray(t[F.NCY]) ? t[F.NCY] : []).join(', '))}</tr>`),
+  ];
+
+  if (htss && Array.isArray(htss.allTimeTop100)) {
+    const top = htss.allTimeTop100.slice(0, 25);
+    parts.push(`<h2>HTSS: the 25 greatest team-seasons since 1949</h2>`);
+    parts.push(rows(top, s => `<tr>${cell(s.rank)}${cell(`<a href="${seasonHref(origin, teamSlug(s.team), s.season)}">${escapeHtml(s.season)} ${escapeHtml(s.team)}</a>`)}${cell(escapeHtml(s.record || ''))}${cell(escapeHtml(s.coach || ''))}${cell(escapeHtml(s.tourneyResult || ''))}${cell(`HTSS ${s.htss}`)}</tr>`));
+  }
+  if (htss && Array.isArray(htss.programRankings)) {
+    const top = htss.programRankings.slice(0, 25);
+    parts.push(`<h2>HTSS program rankings — sustained greatness</h2>`);
+    parts.push(`<p>A program's score is the average HTSS of its ten best seasons: a measure of peak sustained quality rather than longevity.</p>`);
+    parts.push(rows(top, p => `<tr>${cell(p.rank)}${cell(teamLinkByName(origin, p.team))}${cell(`Score ${p.score}`)}${cell(`Best season: <a href="${seasonHref(origin, teamSlug(p.team), p.bestSeason)}">${escapeHtml(p.bestSeason)}</a>`)}</tr>`));
+  }
+  return ssrWrap(parts.join('\n'));
+}
+
+// "1971-72" -> 1972: seasons are named by the year the tournament was played.
+function seasonEndYear(season) {
+  return String(parseInt(String(season).slice(0, 4), 10) + 1);
+}
+
+function tmMatchupHref(origin, m) {
+  return `${origin}/time-machine/${teamSlug(m.teamA.name)}/${m.teamA.season}/${teamSlug(m.teamB.name)}/${m.teamB.season}`;
+}
+
+function renderTimeMachineSsr(tm, origin) {
+  const parts = [
+    `<h1>Time Machine — the greatest college basketball games never played</h1>`,
+    `<p>What happens when 1972 UCLA plays 2015 Kentucky? The Time Machine simulates cross-era matchups from each team's adjusted offensive and defensive efficiency (computed retroactively from every game in the database), its HTSS score, tempo, and era context, and produces a predicted score and win probability. Pick any two team-seasons since 1949 on the interactive version of this page.</p>`,
+    `<p>See also: <a href="${origin}/rankings">HTSS rankings — the greatest seasons ever</a> · <a href="${origin}/rivalries">Rivalries</a></p>`,
+  ];
+  const matchups = (tm && Array.isArray(tm.matchups)) ? tm.matchups : [];
+  for (const m of matchups) {
+    const a = m.teamA, b = m.teamB, p = m.prediction || {};
+    const seasonA = seasonEndYear(a.season), seasonB = seasonEndYear(b.season);
+    parts.push(`<h2><a href="${tmMatchupHref(origin, m)}">${escapeHtml(seasonA)} ${escapeHtml(a.name)} vs ${escapeHtml(seasonB)} ${escapeHtml(b.name)}</a></h2>`);
+    parts.push(`<p><strong>Prediction: ${escapeHtml(p.winner || '')} ${p.winnerScore ?? ''}–${p.loserScore ?? ''}</strong> (${p.winProbA ?? ''}% ${escapeHtml(a.name)} · ${p.winProbB ?? ''}% ${escapeHtml(b.name)}). `
+      + `<a href="${seasonHref(origin, teamSlug(a.name), a.season)}">${escapeHtml(a.season)} ${escapeHtml(a.name)}</a> went ${escapeHtml(a.record || '')} under ${escapeHtml(a.coach || '')} (HTSS ${a.htss}, adjEM ${a.adjEM}); `
+      + `<a href="${seasonHref(origin, teamSlug(b.name), b.season)}">${escapeHtml(b.season)} ${escapeHtml(b.name)}</a> went ${escapeHtml(b.record || '')} under ${escapeHtml(b.coach || '')} (HTSS ${b.htss}, adjEM ${b.adjEM}).</p>`);
+    if (m.narrative && m.narrative !== '__loading__') parts.push(`<p>${escapeHtml(m.narrative)}</p>`);
+  }
+  return ssrWrap(parts.join('\n'));
+}
+
+function renderTimeMachineMatchupSsr(teamA, seasonA, rowA, teamB, seasonB, rowB, origin) {
+  const yr = seasonEndYear;
+  const desc = (t, s, r) => `<a href="${seasonHref(origin, teamSlug(t.name), s)}">${escapeHtml(s)} ${escapeHtml(t.name)}</a>`
+    + (r ? ` finished ${r.wins}-${r.losses}${r.coach ? ` under ${escapeHtml(r.coach)}` : ''}${r.ncaaTourney ? ` (${escapeHtml(String(r.ncaaTourney))})` : ''}` : '');
+  const parts = [
+    `<h1>Time Machine: ${escapeHtml(yr(seasonA))} ${escapeHtml(teamA.name)} vs ${escapeHtml(yr(seasonB))} ${escapeHtml(teamB.name)}</h1>`,
+    `<p>${desc(teamA, seasonA, rowA)}. ${desc(teamB, seasonB, rowB)}. The Time Machine simulates this cross-era matchup from each team's retroactive adjusted efficiency, HTSS score, and tempo, and produces a predicted score with win probability — rendered on this page.</p>`,
+    `<p>More: <a href="${origin}/time-machine">All featured Time Machine matchups</a> · <a href="${teamHref(origin, teamSlug(teamA.name))}">${escapeHtml(teamA.name)} history</a> · <a href="${teamHref(origin, teamSlug(teamB.name))}">${escapeHtml(teamB.name)} history</a> · <a href="${origin}/rankings">HTSS rankings</a></p>`,
+  ];
+  return ssrWrap(parts.join('\n'));
+}
+
+function renderPlayersSsr(players, teams, origin) {
+  const meta = (players && players._metadata) || {};
+  const cell = (v) => `<td style="${SSR_CELL_STYLE}">${v}</td>`;
+  const teamLink = (key) => {
+    const t = players.teams && players.teams[key];
+    const eid = t && t.espnId != null ? String(t.espnId) : null;
+    if (eid && teams[eid]) return teamLinkByName(origin, teams[eid][F.NAME]);
+    return escapeHtml(key.replace(/-/g, ' '));
+  };
+  const parts = [
+    `<h1>Player archive — box-score leaders across ${(meta.archivedGames || 0).toLocaleString()} archived games</h1>`,
+    `<p>Every stat here comes from an archived box score in Hoopsipedia's database — ${(meta.players || 0).toLocaleString()} players across ${meta.d1Programs || 0} Division I programs, from 1908 to the current season. It is an archive, not a career-stats service: coverage is uneven by program, so leaderboards are sorted <strong>per game</strong> (minimum ${meta.minGamesForRateLeaderboard || 8} archived games) and every team view states how many of its games are archived.</p>`,
+    `<p>Related: <a href="${origin}/rankings">Team rankings</a> · <a href="${origin}/teams">All programs</a></p>`,
+  ];
+  const ppg = (players && players.pointsPerGame) || [];
+  if (ppg.length) {
+    parts.push(`<h2>Highest points per game in the archive</h2>`);
+    parts.push(`<table style="${SSR_TABLE_STYLE}">${ppg.slice(0, 30).map((p, i) => `<tr>${cell(i + 1)}${cell(escapeHtml(p.name))}${cell(teamLink(p.team))}${cell(`${p.ppg} ppg`)}${cell(`${p.games} archived games, ${Array.isArray(p.years) ? p.years.join('–') : ''}`)}</tr>`).join('')}</table>`);
+  }
+  const most = (players && players.mostArchivedPoints) || [];
+  if (most.length) {
+    parts.push(`<h2>Most archived points</h2><p>Totals reflect how deeply a program's games have been archived, not career scoring — a player from a well-archived program will rank above a greater scorer whose games are not yet in the database.</p>`);
+    parts.push(`<table style="${SSR_TABLE_STYLE}">${most.slice(0, 15).map((p, i) => `<tr>${cell(i + 1)}${cell(escapeHtml(p.name))}${cell(teamLink(p.team))}${cell(`${p.pts.toLocaleString()} pts in ${p.games} archived games`)}</tr>`).join('')}</table>`);
+  }
+  return ssrWrap(parts.join('\n'));
+}
+
+function rivalrySeries(r, h2h, teams) {
+  const t1 = teams[r.team1Id], t2 = teams[r.team2Id];
+  if (!t1 || !t2) return '';
+  const rec = h2h && h2h[r.team1Id] && h2h[r.team1Id][r.team2Id];
+  if (!rec) return '';
+  const n1 = t1[F.NAME], n2 = t2[F.NAME];
+  if (rec.w > rec.l) return `${n1} leads the all-time series ${rec.w}–${rec.l}`;
+  if (rec.l > rec.w) return `${n2} leads the all-time series ${rec.l}–${rec.w}`;
+  return `The all-time series is tied ${rec.w}–${rec.l}`;
+}
+
+function renderRivalriesSsr(rivalries, h2h, teams, origin) {
+  const parts = [
+    `<h1>College basketball rivalries — all-time series records</h1>`,
+    `<p>The games that matter most, with the full record behind them: every meeting in the database, decade-by-decade series timelines, biggest wins, and recent results. Click any rivalry for the complete history, or <a href="${origin}/#comparison">compare any two programs</a>.</p>`,
+  ];
+  for (const r of rivalries) {
+    const t1 = teams[r.team1Id], t2 = teams[r.team2Id];
+    if (!t1 || !t2) continue;
+    const series = rivalrySeries(r, h2h, teams);
+    parts.push(`<h2><a href="${origin}/rivalries/${encodeURIComponent(r.slug)}">${escapeHtml(r.name)}: ${escapeHtml(t1[F.NAME])} vs ${escapeHtml(t2[F.NAME])}</a></h2>`);
+    parts.push(`<p>${series ? `<strong>${escapeHtml(series)}.</strong> ` : ''}${escapeHtml(r.description || '')} <a href="${teamHref(origin, teamSlug(t1[F.NAME]))}">${escapeHtml(t1[F.NAME])}</a> · <a href="${teamHref(origin, teamSlug(t2[F.NAME]))}">${escapeHtml(t2[F.NAME])}</a></p>`);
+  }
+  return ssrWrap(parts.join('\n'));
+}
+
+function renderRivalrySsr(r, h2h, teams, origin) {
+  const t1 = teams[r.team1Id], t2 = teams[r.team2Id];
+  const series = rivalrySeries(r, h2h, teams);
+  const s1 = teamSlug(t1[F.NAME]), s2 = teamSlug(t2[F.NAME]);
+  const parts = [
+    `<h1>${escapeHtml(r.name)}: ${escapeHtml(t1[F.NAME])} vs ${escapeHtml(t2[F.NAME])}</h1>`,
+    `<p>${series ? `<strong>${escapeHtml(series)}.</strong> ` : ''}${escapeHtml(r.description || '')}</p>`,
+    `<p>${escapeHtml(t1[F.NAME])}: ${t1[F.ATW]}–${t1[F.ATL]} all-time, ${t1[F.NC]} national title${t1[F.NC] === 1 ? '' : 's'}, ${t1[F.FF]} Final Fours. ${escapeHtml(t2[F.NAME])}: ${t2[F.ATW]}–${t2[F.ATL]} all-time, ${t2[F.NC]} national title${t2[F.NC] === 1 ? '' : 's'}, ${t2[F.FF]} Final Fours.</p>`,
+    `<p><a href="${origin}/?compare=${encodeParam(`${s1}/${s2}`)}">Full head-to-head comparison</a> · <a href="${teamHref(origin, s1)}">${escapeHtml(t1[F.NAME])} history</a> · <a href="${teamHref(origin, s2)}">${escapeHtml(t2[F.NAME])} history</a> · <a href="${origin}/rivalries">All rivalries</a></p>`,
+  ];
+  return ssrWrap(parts.join('\n'));
+}
+
+function renderCoachesSsr(coachLb, teams, origin) {
+  const cell = (v) => `<td style="${SSR_CELL_STYLE}">${v}</td>`;
+  const school = (c) => {
+    let best = null, span = -1;
+    for (const [tid, start, end] of (c.schools || [])) {
+      if (end - start > span) { span = end - start; best = String(tid); }
+    }
+    return best && teams[best] ? teamLinkByName(origin, teams[best][F.NAME]) : '';
+  };
+  const parts = [
+    `<h1>The 100 winningest coaches in Division I history</h1>`,
+    `<p>Ranked by career Division I wins, verified against the NCAA record book. Each coach page carries the full season-by-season tenure history, titles and Final Fours, and head-to-head comparisons with any other coach.</p>`,
+    `<table style="${SSR_TABLE_STYLE}">${coachLb.slice(0, 100).map((c, i) => `<tr>${cell(i + 1)}${cell(`<a href="${coachHref(origin, teamSlug(c.name))}">${escapeHtml(c.name)}</a>`)}${cell(`${c.wins}–${c.losses}`)}${cell(`${c.pct}%`)}${cell(school(c))}</tr>`).join('')}</table>`,
+  ];
+  return ssrWrap(parts.join('\n'));
+}
+
+function renderChampionsSsr(teams, origin) {
+  const champs = [];
+  for (const t of Object.values(teams)) {
+    for (const y of (Array.isArray(t[F.NCY]) ? t[F.NCY] : [])) champs.push({ year: y, name: t[F.NAME] });
+  }
+  champs.sort((a, b) => b.year - a.year);
+  const parts = [
+    `<h1>Championship journeys — every NCAA champion, 1939 to today</h1>`,
+    `<p>Every national champion's path through the bracket, game by game, with box scores, highlights and the Most Outstanding Player. Click a season to relive the run.</p>`,
+    `<p>${champs.map(c => `<a href="${origin}/?championship=${encodeParam(`${c.year}/${teamSlug(c.name)}`)}">${c.year} ${escapeHtml(c.name)}</a>`).join(' · ')}</p>`,
+  ];
+  return ssrWrap(parts.join('\n'));
+}
+
+function renderSectionIntroSsr(section, origin) {
+  const intro = {
+    bracket: `<h1>NCAA Tournament bracket</h1><p>The full bracket with live scores during the tournament, seed-matchup history on every game ("16-seeds are 2–152 all-time vs 1-seeds"), upset alerts, and each team's tournament résumé. Off-season, it shows the most recent tournament.</p>`,
+    upsets: `<h1>The greatest NCAA Tournament upsets of all time</h1><p>More than 340 verified upsets by seed matchup and era, each with the score, the box score where one exists, highlight video, and why it mattered.</p>`,
+    classics: `<h1>Instant classics</h1><p>Buzzer beaters, overtime thrillers, and the games from the most recent NCAA Tournament nobody will forget.</p>`,
+  }[section] || '';
+  return ssrWrap(`${intro}<p><a href="${origin}/rankings">Rankings</a> · <a href="${origin}/champions">Championship journeys</a> · <a href="${origin}/teams">All programs</a></p>`);
 }
 
 export async function onRequest(context) {
@@ -616,10 +865,25 @@ export async function onRequest(context) {
   const coachPathMatch = url.pathname.match(/^\/coaches\/([a-z0-9-]+)\/?$/);
   if (coachPathMatch) coachParam = coachPathMatch[1];
 
+  // Section forever URLs (see SECTION_META), rivalry pages, Time Machine matchups.
+  let sectionParam = null, rivalrySlug = null, tmRoute = null;
+  const sectionMatch = url.pathname.match(/^\/(teams|rankings|time-machine|players|rivalries|coaches|bracket|upsets|classics|champions)\/?$/);
+  if (sectionMatch) sectionParam = sectionMatch[1];
+  const rivalryMatch = url.pathname.match(/^\/rivalries\/([a-z0-9-]+)\/?$/);
+  if (rivalryMatch) { sectionParam = 'rivalry'; rivalrySlug = rivalryMatch[1]; }
+  const tmMatch = url.pathname.match(/^\/time-machine\/([a-z0-9-]+)\/(\d{4}-\d{2})\/([a-z0-9-]+)\/(\d{4}-\d{2})\/?$/);
+  if (tmMatch) { sectionParam = 'time-machine-matchup'; tmRoute = tmMatch; }
+
+  // Legacy ?view=X for a section that now has a path: 301 to the path so
+  // search engines consolidate on one URL.
+  if (viewParam && SECTION_META[viewParam] && url.pathname === '/') {
+    return Response.redirect(`https://www.hoopsipedia.com/${viewParam}`, 301);
+  }
+
   // Bare homepage gets SSR content too; everything else with no relevant
   // query params passes through to static files.
   const isHomepage = url.pathname === '/' && url.search === '';
-  if (!isHomepage && !teamParam && !compareParam && !gameParam && !champParam && !viewParam && !coachParam) {
+  if (!isHomepage && !teamParam && !compareParam && !gameParam && !champParam && !viewParam && !coachParam && !sectionParam) {
     return context.next();
   }
 
@@ -652,7 +916,7 @@ export async function onRequest(context) {
     `<!doctype html><meta charset="utf-8"><title>Not found — Hoopsipedia</title>` +
     `<div style="font-family:sans-serif;max-width:600px;margin:80px auto;text-align:center">` +
     `<h1>Page not found</h1><p>No such team, coach, or season.</p>` +
-    `<p><a href="/?view=teams">Browse all teams</a> · <a href="/">Hoopsipedia home</a></p></div>`,
+    `<p><a href="/teams">Browse all teams</a> · <a href="/">Hoopsipedia home</a></p></div>`,
     { status: 404, headers: { 'content-type': 'text/html; charset=utf-8' } });
 
   if (coachParam) {
@@ -706,7 +970,7 @@ export async function onRequest(context) {
     });
     jsonLdBlocks.push(breadcrumbLd([
       { name: 'Hoopsipedia', url: `${origin}/` },
-      { name: 'Coaches', url: `${origin}/?view=coaches` },
+      { name: 'Coaches', url: `${origin}/coaches` },
       { name: coach.name, url: canonicalUrl },
     ]));
 
@@ -741,7 +1005,7 @@ export async function onRequest(context) {
     ];
     jsonLdBlocks.push(breadcrumbLd([
       { name: 'Hoopsipedia', url: `${origin}/` },
-      { name: 'Teams', url: `${origin}/?view=teams` },
+      { name: 'Teams', url: `${origin}/teams` },
       { name: team.name, url: `${origin}/teams/${encodeParam(slug)}` },
       { name: seasonParam, url: canonicalUrl },
     ]));
@@ -801,7 +1065,7 @@ export async function onRequest(context) {
     });
     jsonLdBlocks.push(breadcrumbLd([
       { name: 'Hoopsipedia', url: `${origin}/` },
-      { name: 'Teams', url: `${origin}/?view=teams` },
+      { name: 'Teams', url: `${origin}/teams` },
       { name: team.name, url: canonicalUrl },
     ]));
 
@@ -870,13 +1134,96 @@ export async function onRequest(context) {
     });
     jsonLdBlocks.push(breadcrumbLd([
       { name: 'Hoopsipedia', url: `${origin}/` },
-      { name: 'Championship Journeys', url: `${origin}/?view=champions` },
+      { name: 'Championship Journeys', url: `${origin}/champions` },
       { name: `${year} — ${teamName}`, url: canonicalUrl },
     ]));
 
     metaTags = [
       { key: 'description', value: description },
       { key: 'og:type', value: 'article' },
+      { key: 'og:title', value: pageTitle },
+      { key: 'og:description', value: description },
+      { key: 'og:image', value: imageUrl },
+      { key: 'og:url', value: canonicalUrl },
+      { key: 'og:site_name', value: 'Hoopsipedia' },
+      { key: 'twitter:card', value: 'summary_large_image' },
+      { key: 'twitter:title', value: pageTitle },
+      { key: 'twitter:description', value: description },
+      { key: 'twitter:image', value: imageUrl },
+    ];
+  } else if (sectionParam) {
+    let description = '';
+    let imageUrl = LOGO_IMAGE;
+    const crumbs = [{ name: 'Hoopsipedia', url: `${origin}/` }];
+
+    if (sectionParam === 'rivalry') {
+      const rivalries = await getJsonCached(assetFetcher, originUrl, '/rivalries.json');
+      const r = Array.isArray(rivalries) ? rivalries.find(x => x.slug === rivalrySlug) : null;
+      if (!r || !teams[r.team1Id] || !teams[r.team2Id]) return notFound();
+      const h2h = await getJsonCached(assetFetcher, originUrl, '/h2h.json');
+      const t1 = teams[r.team1Id], t2 = teams[r.team2Id];
+      canonicalUrl = `${origin}/rivalries/${encodeURIComponent(r.slug)}`;
+      pageTitle = `${r.name}: ${t1[F.NAME]} vs ${t2[F.NAME]} — Rivalry History — Hoopsipedia`;
+      const series = rivalrySeries(r, h2h, teams);
+      description = `${series ? series + '. ' : ''}${r.description || ''}`.slice(0, 300);
+      imageUrl = `https://a.espncdn.com/i/teamlogos/ncaa/500/${r.team1Id}.png`;
+      ssrHtml = renderRivalrySsr(r, h2h, teams, origin);
+      crumbs.push({ name: 'Rivalries', url: `${origin}/rivalries` }, { name: r.name, url: canonicalUrl });
+    } else if (sectionParam === 'time-machine-matchup') {
+      const [, slugA, seasonA, slugB, seasonB] = tmRoute;
+      const teamA = lookupTeam(slugA, teams, index);
+      const teamB = lookupTeam(slugB, teams, index);
+      if (!teamA || !teamB) return notFound();
+      const [rowsA, rowsB] = await Promise.all([
+        getTeamSeasons(assetFetcher, originUrl, teamA.espnId),
+        getTeamSeasons(assetFetcher, originUrl, teamB.espnId),
+      ]);
+      const rowA = (rowsA || []).find(r => String(r.year) === seasonA);
+      const rowB = (rowsB || []).find(r => String(r.year) === seasonB);
+      if (!rowA || !rowB) return notFound();
+      canonicalUrl = `${origin}/time-machine/${slugA}/${seasonA}/${slugB}/${seasonB}`;
+      pageTitle = `${seasonEndYear(seasonA)} ${teamA.name} vs ${seasonEndYear(seasonB)} ${teamB.name} — Time Machine — Hoopsipedia`;
+      description = `Who wins if ${seasonEndYear(seasonA)} ${teamA.name} (${rowA.wins}-${rowA.losses}) plays ${seasonEndYear(seasonB)} ${teamB.name} (${rowB.wins}-${rowB.losses})? Cross-era simulation from adjusted efficiency and HTSS, with predicted score and win probability.`;
+      imageUrl = `https://a.espncdn.com/i/teamlogos/ncaa/500/${teamA.espnId}.png`;
+      ssrHtml = renderTimeMachineMatchupSsr(teamA, seasonA, rowA, teamB, seasonB, rowB, origin);
+      crumbs.push({ name: 'Time Machine', url: `${origin}/time-machine` }, { name: pageTitle.replace(/ — .*$/, ''), url: canonicalUrl });
+    } else {
+      const meta = SECTION_META[sectionParam];
+      if (!meta) return context.next();
+      canonicalUrl = `${origin}/${sectionParam}`;
+      pageTitle = meta.title;
+      description = meta.description;
+      if (sectionParam === 'teams') {
+        ssrHtml = renderTeamsDirectorySsr(teams, origin);
+      } else if (sectionParam === 'rankings') {
+        const htss = await getJsonCached(assetFetcher, originUrl, '/htss_v2_results.json');
+        ssrHtml = renderRankingsSsr(teams, htss, origin);
+      } else if (sectionParam === 'time-machine') {
+        const tm = await getJsonCached(assetFetcher, originUrl, '/time_machine_results.json');
+        ssrHtml = renderTimeMachineSsr(tm, origin);
+      } else if (sectionParam === 'players') {
+        const players = await getJsonCached(assetFetcher, originUrl, '/players/index.json');
+        ssrHtml = players ? renderPlayersSsr(players, teams, origin) : '';
+      } else if (sectionParam === 'rivalries') {
+        const [rivalries, h2h] = await Promise.all([
+          getJsonCached(assetFetcher, originUrl, '/rivalries.json'),
+          getJsonCached(assetFetcher, originUrl, '/h2h.json'),
+        ]);
+        ssrHtml = renderRivalriesSsr(Array.isArray(rivalries) ? rivalries : [], h2h, teams, origin);
+      } else if (sectionParam === 'coaches') {
+        ssrHtml = renderCoachesSsr(coachLb, teams, origin);
+      } else if (sectionParam === 'champions') {
+        ssrHtml = renderChampionsSsr(teams, origin);
+      } else {
+        ssrHtml = renderSectionIntroSsr(sectionParam, origin);
+      }
+      crumbs.push({ name: pageTitle.replace(/ [—|].*$/, ''), url: canonicalUrl });
+    }
+
+    jsonLdBlocks.push(breadcrumbLd(crumbs));
+    metaTags = [
+      { key: 'description', value: description },
+      { key: 'og:type', value: 'website' },
       { key: 'og:title', value: pageTitle },
       { key: 'og:description', value: description },
       { key: 'og:image', value: imageUrl },
@@ -997,7 +1344,7 @@ export async function onRequest(context) {
     });
     jsonLdBlocks.push(breadcrumbLd([
       { name: 'Hoopsipedia', url: `${origin}/` },
-      { name: 'Greatest Upsets', url: `${origin}/?view=upsets` },
+      { name: 'Greatest Upsets', url: `${origin}/upsets` },
       { name: `${winnerName} vs ${loserName} (${year})`, url: canonicalUrl },
     ]));
 

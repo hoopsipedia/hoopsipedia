@@ -51,20 +51,33 @@ def main():
         data = json.load(f)
     H = data['H']
 
-    # core: carry over non-team entries from the existing flat sitemap
-    core = []
-    old = open(os.path.join(ROOT, 'sitemap.xml')).read()
-    if '<sitemapindex' not in old:
-        for m in re.finditer(r'<url>\s*<loc>(.*?)</loc>.*?</url>', old, re.S):
-            loc = m.group(1)
-            if 'team=' not in loc:
-                pr = re.search(r'<priority>(.*?)</priority>', m.group(0))
-                core.append(url_el(loc, priority=pr.group(1) if pr else None))
-    else:
-        # regenerating over an index: rebuild core from the existing child
-        prev = open(os.path.join(ROOT, 'sitemap-core.xml')).read()
-        for m in re.finditer(r'<url>.*?</url>', prev, re.S):
-            core.append('  ' + m.group(0).strip())
+    # core: homepage + the section forever URLs (server-rendered by the
+    # Pages Function), rivalry pages, the featured Time Machine matchups, and
+    # the ?championship= pages carried over from the previous core sitemap.
+    SECTIONS = ['teams', 'rankings', 'time-machine', 'players', 'rivalries',
+                'coaches', 'bracket', 'upsets', 'classics', 'champions']
+    core = [url_el(f'{ORIGIN}/', priority='1.0')]
+    core += [url_el(f'{ORIGIN}/{sec}', priority='0.9') for sec in SECTIONS]
+    try:
+        with open(os.path.join(ROOT, 'rivalries.json')) as f:
+            core += [url_el(f"{ORIGIN}/rivalries/{r['slug']}", priority='0.8') for r in json.load(f)]
+    except OSError:
+        pass
+    try:
+        with open(os.path.join(ROOT, 'time_machine_results.json')) as f:
+            for m in json.load(f).get('matchups', []):
+                a, b = m['teamA'], m['teamB']
+                core.append(url_el(f"{ORIGIN}/time-machine/{team_slug(a['name'])}/{a['season']}/"
+                                   f"{team_slug(b['name'])}/{b['season']}", priority='0.7'))
+    except (OSError, KeyError):
+        pass
+    prev_path = os.path.join(ROOT, 'sitemap-core.xml')
+    prev = open(prev_path).read() if os.path.exists(prev_path) else open(os.path.join(ROOT, 'sitemap.xml')).read()
+    for m in re.finditer(r'<url>\s*<loc>(.*?)</loc>.*?</url>', prev, re.S):
+        loc = m.group(1)
+        if 'championship=' in loc:
+            pr = re.search(r'<priority>(.*?)</priority>', m.group(0))
+            core.append(url_el(loc, priority=pr.group(1) if pr else None))
     n_core = write_urlset('sitemap-core.xml', core)
 
     # teams at forever URLs

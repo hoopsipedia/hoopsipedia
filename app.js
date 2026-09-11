@@ -386,6 +386,12 @@
                     return d;
                 });
 
+                // Rivalry definitions (shared with the Pages Function's /rivalries SSR)
+                DATA_LOADS.rivalries = loadJson('/rivalries.json').then(d => {
+                    if (Array.isArray(d)) RIVALRIES = d;
+                    return d;
+                });
+
                 DATA_LOADS.all = Promise.all(Object.values(DATA_LOADS)).then(() => { _allDataLoaded = true; });
             } catch (e) {
                 console.error('Error loading data:', e);
@@ -473,7 +479,7 @@
             const h = window.location.hash;
             if (h && h !== '#') return /^#(team\/[^/]+|teams|players)$/.test(h);
             const p = window.location.pathname;
-            return p === '/' || /^\/teams\/[a-z0-9-]+(?:\/\d{4}(?:-\d{2})?)?\/?$/.test(p);
+            return p === '/' || /^\/(teams|players)\/?$/.test(p) || /^\/teams\/[a-z0-9-]+(?:\/\d{4}(?:-\d{2})?)?\/?$/.test(p);
         }
 
         // Forever-URL path routes: /teams/{slug} and /teams/{slug}/{season}.
@@ -483,6 +489,50 @@
         // Returns true when it handled the route.
         function handlePathRoute() {
             if (window.location.hash) return false;
+            const path = window.location.pathname;
+            // Section forever URLs: /rankings, /time-machine, /players, /rivalries, …
+            const sec = path.match(/^\/(rankings|time-machine|players|rivalries|teams|coaches|bracket|upsets|classics|champions)\/?$/);
+            if (sec) {
+                _skipHashUpdate = true;
+                try {
+                    if (sec[1] === 'time-machine') {
+                        switchView('rankings', true);
+                        setTimeout(() => switchRankingsTab('timemachine'), 50);
+                    } else {
+                        switchView(sec[1], true);
+                    }
+                } finally {
+                    _skipHashUpdate = false;
+                }
+                return true;
+            }
+            // /rivalries/{slug}
+            const rv = path.match(/^\/rivalries\/([a-z0-9-]+)\/?$/);
+            if (rv) {
+                _skipHashUpdate = true;
+                try {
+                    switchView('rivalryPage', true);
+                    renderRivalryPage(rv[1]).catch(e => console.error('Rivalry page render failed:', e));
+                } finally {
+                    _skipHashUpdate = false;
+                }
+                return true;
+            }
+            // /time-machine/{slugA}/{seasonA}/{slugB}/{seasonB} — a shareable matchup
+            const tmm = path.match(/^\/time-machine\/([a-z0-9-]+)\/(\d{4}-\d{2})\/([a-z0-9-]+)\/(\d{4}-\d{2})\/?$/);
+            if (tmm) {
+                _skipHashUpdate = true;
+                try {
+                    switchView('rankings', true);
+                    setTimeout(() => {
+                        switchRankingsTab('timemachine');
+                        tmRunCustomFromRoute(tmm[1], tmm[2], tmm[3], tmm[4]);
+                    }, 50);
+                } finally {
+                    _skipHashUpdate = false;
+                }
+                return true;
+            }
             // /coaches/{slug} — coach detail at a forever URL
             const cm = window.location.pathname.match(/^\/coaches\/([a-z0-9-]+)\/?$/);
             if (cm) {
@@ -2096,8 +2146,10 @@
 
         function setupEventListeners() {
             // Navigation — new masthead nav links
-            document.querySelectorAll('.masthead-nav a[data-view]').forEach(link => {
+            document.querySelectorAll('.masthead-nav a[data-view], .ds-footer a[data-view]').forEach(link => {
                 link.addEventListener('click', (e) => {
+                    // Plain click: stay in the SPA. Modified clicks (new tab) follow the real href.
+                    if (e.metaKey || e.ctrlKey || e.shiftKey || e.button === 1) return;
                     e.preventDefault();
                     const view = e.currentTarget.dataset.view;
                     switchView(view);
@@ -2295,6 +2347,12 @@
 
         function handleHashRoute() {
             const hash = window.location.hash;
+
+            // Hash navigation from a forever-URL page (/rankings#compare/a/b)
+            // works, but the shareable form is /#compare/a/b — normalize.
+            if (hash && hash !== '#' && window.location.pathname !== '/') {
+                history.replaceState(null, '', '/' + hash);
+            }
 
             // Views beyond home/team/teams/players read the full datasets;
             // if those are still streaming in, route once they have landed.
@@ -3024,9 +3082,13 @@
             // Update hash for browser history (back button support)
             if (!skipHash && !_skipHashUpdate) {
                 const newHash = (view === 'home') ? '' : `#${view}`;
-                if (window.location.hash !== newHash) {
+                if (window.location.pathname !== '/') {
+                    // Leaving a forever-URL page (/teams/x, /rankings, …): the view
+                    // is already rendered, so just put the clean root+hash URL in place.
+                    history.pushState(null, '', '/' + newHash);
+                } else if (window.location.hash !== newHash) {
                     if (newHash) window.location.hash = newHash;
-                    else history.pushState(null, '', window.location.pathname.startsWith('/teams/') ? '/' : window.location.pathname);
+                    else history.pushState(null, '', window.location.pathname);
                 }
             }
 
@@ -19161,20 +19223,9 @@
         }
 
         // ── RIVALRY PAGES ──
-        const RIVALRIES = [
-            { team1Id: '150', team2Id: '153', slug: 'duke-unc', name: 'The Tobacco Road Rivalry', description: 'The most storied rivalry in college basketball. Duke and North Carolina, separated by just 8 miles on Tobacco Road, have produced countless classic moments since 1920.' },
-            { team1Id: '96', team2Id: '97', slug: 'kentucky-louisville', name: 'The Bluegrass Rivalry', description: 'Kentucky and Louisville divide the Commonwealth. This in-state showdown pits two of the winningest programs in history against each other.' },
-            { team1Id: '2305', team2Id: '142', slug: 'kansas-missouri', name: 'The Border War', description: 'Rooted in Civil War-era conflict, Kansas vs Missouri is one of the oldest and most bitter rivalries in all of sports, dating back to 1907.' },
-            { team1Id: '153', team2Id: '152', slug: 'unc-nc-state', name: 'The Tobacco Road Sibling Rivalry', description: 'North Carolina and NC State share a fierce in-state ACC rivalry. The Wolfpack faithful live to upset their big brother from Chapel Hill.' },
-            { team1Id: '84', team2Id: '2509', slug: 'indiana-purdue', name: 'The Hoosier Rivalry', description: 'Indiana and Purdue battle for Big Ten supremacy and state bragging rights in one of the conference\'s longest-running and most passionate rivalries.' },
-            { team1Id: '46', team2Id: '183', slug: 'georgetown-syracuse', name: 'Big East Classic', description: 'Georgetown and Syracuse defined the golden era of the Big East. Ewing vs Pearl, Thompson vs Boeheim — this rivalry shaped modern college basketball.' },
-            { team1Id: '26', team2Id: '30', slug: 'ucla-usc', name: 'The Crosstown Showdown', description: 'UCLA and USC are crosstown rivals in Los Angeles. The Bruins\' dynasty dominance has fueled decades of fierce competition with the Trojans.' },
-            { team1Id: '130', team2Id: '127', slug: 'michigan-michigan-state', name: 'The Michigan Rivalry', description: 'Michigan and Michigan State is the biggest rivalry in the Big Ten. Wolverines vs Spartans splits the state and fuels year-round debate.' },
-            { team1Id: '96', team2Id: '84', slug: 'kentucky-indiana', name: 'Blue Blood Clash', description: 'Kentucky and Indiana, two of the sport\'s most decorated programs, have produced unforgettable matchups including the iconic 1992 "The Shot" game.' },
-            { team1Id: '2305', team2Id: '96', slug: 'kansas-kentucky', name: 'The Blueblood Showdown', description: 'The two winningest programs in college basketball history. Kansas and Kentucky have combined for 11 national championships.' },
-            { team1Id: '150', team2Id: '96', slug: 'duke-kentucky', name: 'Duke vs Kentucky', description: 'Two titans of the sport. Duke and Kentucky have met in some of the most memorable NCAA Tournament games ever, including Laettner\'s iconic 1992 shot.' },
-            { team1Id: '2250', team2Id: '2608', slug: 'gonzaga-saint-marys', name: 'WCC Showdown', description: 'Gonzaga and Saint Mary\'s battle for West Coast Conference supremacy. The Gaels are the only WCC team that consistently challenges the Bulldogs\' dominance.' }
-        ];
+        // Rivalry definitions live in rivalries.json so the Pages Function can
+        // server-render /rivalries with the same data. Loaded in loadData().
+        let RIVALRIES = [];
 
         function renderRivalries() {
             const container = document.getElementById('rivalriesContent');

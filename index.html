@@ -73,13 +73,13 @@
             </div>
         </div>
         <nav class="masthead-nav" id="mainNav">
-            <a class="active" data-view="home">Home</a>
-            <a data-view="comparison">Compare</a>
-            <a data-view="teams">Teams</a>
-            <a data-view="rankings">Rankings</a>
-            <a data-view="bracket">Bracket</a>
-            <a data-view="coaches">Coaches</a>
-            <a data-view="players">Players</a>
+            <a class="active" data-view="home" href="/">Home</a>
+            <a data-view="comparison" href="/#comparison">Compare</a>
+            <a data-view="teams" href="/teams">Teams</a>
+            <a data-view="rankings" href="/rankings">Rankings</a>
+            <a data-view="bracket" href="/bracket">Bracket</a>
+            <a data-view="coaches" href="/coaches">Coaches</a>
+            <a data-view="players" href="/players">Players</a>
             <div class="spacer"></div>
             <a style="display:flex;align-items:center;gap:8px;color:rgba(245,243,238,0.7);position:relative;" id="mastheadSearchToggle">
                 <span style="font-size:13px;">⌕</span> SEARCH
@@ -549,15 +549,15 @@
                 <div>
                     <div class="label-mono" style="color: rgba(245,243,238,0.4); margin-bottom: 12px;">Navigate</div>
                     <div style="display: flex; flex-direction: column; gap: 6px;">
-                        <a href="#" onclick="switchView('home'); return false;" style="font-size: 0.85rem; color: rgba(245,243,238,0.65); text-decoration: none; font-family: var(--font-serif);">Home</a>
-                        <a href="#" onclick="switchView('comparison'); return false;" style="font-size: 0.85rem; color: rgba(245,243,238,0.65); text-decoration: none; font-family: var(--font-serif);">Compare</a>
-                        <a href="#" onclick="switchView('teams'); return false;" style="font-size: 0.85rem; color: rgba(245,243,238,0.65); text-decoration: none; font-family: var(--font-serif);">Teams</a>
-                        <a href="#" onclick="switchView('rankings'); return false;" style="font-size: 0.85rem; color: rgba(245,243,238,0.65); text-decoration: none; font-family: var(--font-serif);">Rankings</a>
-                        <a href="#" onclick="switchView('bracket'); return false;" style="font-size: 0.85rem; color: rgba(245,243,238,0.65); text-decoration: none; font-family: var(--font-serif);">Bracket</a>
-                        <a href="#" onclick="switchView('coaches'); return false;" style="font-size: 0.85rem; color: rgba(245,243,238,0.65); text-decoration: none; font-family: var(--font-serif);">Coaches</a>
-                        <a href="#champions" style="font-size: 0.85rem; color: rgba(245,243,238,0.65); text-decoration: none; font-family: var(--font-serif);">Champions</a>
-                        <a href="#rivalries" style="font-size: 0.85rem; color: rgba(245,243,238,0.65); text-decoration: none; font-family: var(--font-serif);">Rivalries</a>
-                        <a href="#classics" style="font-size: 0.85rem; color: rgba(245,243,238,0.65); text-decoration: none; font-family: var(--font-serif);">Classics</a>
+                        <a href="/" data-view="home" style="font-size: 0.85rem; color: rgba(245,243,238,0.65); text-decoration: none; font-family: var(--font-serif);">Home</a>
+                        <a href="/#comparison" data-view="comparison" style="font-size: 0.85rem; color: rgba(245,243,238,0.65); text-decoration: none; font-family: var(--font-serif);">Compare</a>
+                        <a href="/teams" data-view="teams" style="font-size: 0.85rem; color: rgba(245,243,238,0.65); text-decoration: none; font-family: var(--font-serif);">Teams</a>
+                        <a href="/rankings" data-view="rankings" style="font-size: 0.85rem; color: rgba(245,243,238,0.65); text-decoration: none; font-family: var(--font-serif);">Rankings</a>
+                        <a href="/bracket" data-view="bracket" style="font-size: 0.85rem; color: rgba(245,243,238,0.65); text-decoration: none; font-family: var(--font-serif);">Bracket</a>
+                        <a href="/coaches" data-view="coaches" style="font-size: 0.85rem; color: rgba(245,243,238,0.65); text-decoration: none; font-family: var(--font-serif);">Coaches</a>
+                        <a href="/champions" data-view="champions" style="font-size: 0.85rem; color: rgba(245,243,238,0.65); text-decoration: none; font-family: var(--font-serif);">Champions</a>
+                        <a href="/rivalries" data-view="rivalries" style="font-size: 0.85rem; color: rgba(245,243,238,0.65); text-decoration: none; font-family: var(--font-serif);">Rivalries</a>
+                        <a href="/classics" data-view="classics" style="font-size: 0.85rem; color: rgba(245,243,238,0.65); text-decoration: none; font-family: var(--font-serif);">Classics</a>
                     </div>
                 </div>
                 <div>
@@ -632,7 +632,7 @@
     <!-- Correction Button -->
     <button class="correction-btn" onclick="openCorrection()" title="Suggest a Correction">✎</button>
 
-    <script src="/app.js?v=e1b5078c75" defer></script>
+    <script src="/app.js?v=dbfdaa3591" defer></script>
 
     <!-- Chat Panel -->
     <div id="chatOverlay" class="chat-overlay" onclick="closeChatPanel()"></div>
