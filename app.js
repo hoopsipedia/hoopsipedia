@@ -497,9 +497,19 @@
         // not need the full seasons/h2h/htss files before first paint.
         function isFastRoute() {
             const h = window.location.hash;
-            if (h && h !== '#') return /^#(team\/[^/]+|teams|players)$/.test(h);
+            if (h && h !== '#') return /^#(team\/[^/]+|teams|players|rankings|htss-rankings|time-machine|trajectories|net-rankings)$/.test(h);
             const p = window.location.pathname;
-            return p === '/' || /^\/(teams|players)\/?$/.test(p) || /^\/teams\/[a-z0-9-]+(?:\/\d{4}(?:-\d{2})?)?\/?$/.test(p);
+            return p === '/' || /^\/(teams|players|rankings|time-machine)\/?$/.test(p) || /^\/teams\/[a-z0-9-]+(?:\/\d{4}(?:-\d{2})?)?\/?$/.test(p);
+        }
+
+        // A team PROFILE route (not a season page): its first render wants the
+        // small datasets too (HTSS section, program history, draft table,
+        // arena photo), so those are awaited before painting — otherwise they
+        // arrive later, re-render the page, and move the LCP out by seconds.
+        function isTeamProfileRoute() {
+            const h = window.location.hash;
+            if (h && h !== '#') return /^#team\/[^/]+$/.test(h);
+            return /^\/teams\/[a-z0-9-]+\/?$/.test(window.location.pathname);
         }
 
         // Forever-URL path routes: /teams/{slug} and /teams/{slug}/{season}.
@@ -1754,6 +1764,13 @@
             if (!isFastRoute()) {
                 startBackgroundLoads();
                 try { await DATA_LOADS.all; } catch (e) { console.warn('Background data load error:', e); }
+            } else if (isTeamProfileRoute()) {
+                // Profile pages need most datasets anyway: start everything now
+                // and wait only for the small ones (≈0.5MB gzipped) so the first
+                // paint is the complete page; seasons.json and h2h.json keep
+                // streaming behind it.
+                startBackgroundLoads();
+                try { await whenData('htss', 'teamHistory', 'draft', 'arena'); } catch (e) { /* render anyway */ }
             }
             try {
                 if (window.location.hash) {
@@ -3128,7 +3145,7 @@
 
             // Views that read the full datasets wait for them (the view is
             // already active, so the switch feels instant; content follows).
-            const FAST_VIEWS = new Set(['home', 'teams', 'profile', 'seasonPage', 'players']);
+            const FAST_VIEWS = new Set(['home', 'teams', 'profile', 'seasonPage', 'players', 'rankings']);
             if (!_allDataLoaded && !FAST_VIEWS.has(view)) {
                 startBackgroundLoads();
                 DATA_LOADS.all.then(() => { if (currentView === view) switchView(view, true); });
@@ -6482,7 +6499,9 @@
         function renderHtssRankings() {
             const container = document.getElementById('htssContent');
             if (!HTSS_V2_DATA) {
-                container.innerHTML = '<p style="text-align:center;padding:3rem;color:#8892A0;">HTSS data not available.</p>';
+                // Still streaming in behind the first paint — render when it lands.
+                container.innerHTML = '<div class="chart-loading">Loading HTSS rankings…</div>';
+                whenData('htss').then(() => { if (HTSS_V2_DATA && currentView === 'rankings') renderHtssRankings(); });
                 return;
             }
 
@@ -6782,6 +6801,9 @@
         function renderTimeMachine() {
             const container = document.getElementById('timeMachineContent');
             if (!container) return;
+            if (!TIME_MACHINE_DATA) {
+                whenData('timeMachine', 'htss').then(() => { if (TIME_MACHINE_DATA && currentView === 'rankings') renderTimeMachine(); });
+            }
 
             let html = `
                 <div id="tmCustomResult" style="max-width:560px;margin:0 auto 1.5rem;">${_tmCustomMatchup ? renderTmCard(_tmCustomMatchup) : ''}</div>
@@ -7391,7 +7413,8 @@
         function renderTrajectories() {
             const container = document.getElementById('trajectoryContent');
             if (!HTSS_V2_DATA || !SEASONS_DATA) {
-                container.innerHTML = '<p style="text-align:center;padding:3rem;color:#8892A0;">Trajectory data not available.</p>';
+                container.innerHTML = '<div class="chart-loading">Loading trajectories…</div>';
+                whenData('htss', 'seasons').then(() => { if (HTSS_V2_DATA && SEASONS_DATA && currentView === 'rankings') renderTrajectories(); });
                 return;
             }
 
