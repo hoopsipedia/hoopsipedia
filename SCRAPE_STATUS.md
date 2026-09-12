@@ -52,6 +52,9 @@ correct absences rather than data loss:
 
 ## Player-line box scores
 
+_2026-09-12: Kentucky completed from bigbluehistory.net (+2,068; store 22,388). See `harvest_bigbluehistory_full.py`. Coverage table below predates this and understates the 1940s-1990s by ~2,000 games._
+
+
 **Two sources serve box scores, and counting only one badly understates
 coverage.** `sr_boxscores.json` is the STATIC archive (pre-ESPN eras,
 Wayback/StatCrew harvests). For 2002+ the site resolves a game to an ESPN
