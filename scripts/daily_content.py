@@ -72,7 +72,7 @@ def draft_on_this_day(date, otd):
         season = season_key_for(it['date'])
         link = f"{ORIGIN}/teams/{slug(winner['name'])}/{season}"
         headline = it.get('headline', '').split(': ', 1)[-1]
-        out.append(f"On this day in {yr}: {headline}.\n\nFull season, game by game: {link}")
+        out.append(f"On this day in {yr}: {headline}.\n\nFull season, game by game: {link}\nMore from {date.strftime('%B %-d')}: {ORIGIN}/on-this-day/{key}")
     return out
 
 

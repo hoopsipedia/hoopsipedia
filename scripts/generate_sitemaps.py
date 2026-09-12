@@ -71,6 +71,15 @@ def main():
                                    f"{team_slug(b['name'])}/{b['season']}", priority='0.7'))
     except (OSError, KeyError):
         pass
+    core.append(url_el(f'{ORIGIN}/on-this-day', priority='0.8'))
+    try:
+        with open(os.path.join(ROOT, 'on_this_day.json')) as f:
+            otd = json.load(f)
+        for mmdd, items in sorted(otd.items()):
+            if not mmdd.startswith('_') and isinstance(items, list) and len(items) >= 3:
+                core.append(url_el(f'{ORIGIN}/on-this-day/{mmdd}', priority='0.6'))
+    except OSError:
+        pass
     prev_path = os.path.join(ROOT, 'sitemap-core.xml')
     prev = open(prev_path).read() if os.path.exists(prev_path) else open(os.path.join(ROOT, 'sitemap.xml')).read()
     for m in re.finditer(r'<url>\s*<loc>(.*?)</loc>.*?</url>', prev, re.S):

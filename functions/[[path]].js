@@ -694,6 +694,15 @@ function renderHomepageSsr(teams, origin) {
 
 const LOGO_IMAGE = 'https://www.hoopsipedia.com/branding/hoopsipedia-logo.png';
 
+// 1200×630 share cards rendered by scripts/render_share_cards.py; share/index.json
+// maps kind/slug -> path. Falls back to the given URL when no card exists.
+async function shareImage(assetFetcher, originUrl, origin, kind, slug, fallback) {
+  const manifest = await getJsonCached(assetFetcher, originUrl, '/share/index.json');
+  if (!manifest) return fallback;
+  const rel = kind === 'default' ? manifest.default : (manifest[kind] || {})[slug];
+  return rel ? `${origin}/${rel}` : fallback;
+}
+
 const SECTION_META = {
   'teams': {
     title: 'All Division I College Basketball Programs — Hoopsipedia',
@@ -726,6 +735,10 @@ const SECTION_META = {
   'upsets': {
     title: 'Greatest NCAA Tournament Upsets of All Time — Hoopsipedia',
     description: 'Every Cinderella story, every bracket buster. Explore the most shocking upsets in March Madness history with scores, highlights, and the stories behind the madness.',
+  },
+  'on-this-day': {
+    title: 'On This Day in College Basketball History — Hoopsipedia',
+    description: 'The biggest upsets, blowouts, overtime thrillers and championship games played on this date, every year since 1908 — with the full box score and season behind each one.',
   },
   'classics': {
     title: '⚡ Instant Classics — 2026 NCAA Tournament | Hoopsipedia',
@@ -925,6 +938,54 @@ function renderChampionsSsr(teams, origin) {
   return ssrWrap(parts.join('\n'));
 }
 
+// ── On This Day: one forever URL per calendar date ─────────────────────
+const MONTH_NAMES = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+const DAYS_IN_MONTH = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+
+function otdShift(mmdd, delta) {
+  let m = parseInt(mmdd.slice(0, 2), 10), d = parseInt(mmdd.slice(3), 10) + delta;
+  while (d < 1) { m = m === 1 ? 12 : m - 1; d += DAYS_IN_MONTH[m - 1]; }
+  while (d > DAYS_IN_MONTH[m - 1]) { d -= DAYS_IN_MONTH[m - 1]; m = m === 12 ? 1 : m + 1; }
+  return `${String(m).padStart(2, '0')}-${String(d).padStart(2, '0')}`;
+}
+
+function otdLabel(mmdd) {
+  return `${MONTH_NAMES[parseInt(mmdd.slice(0, 2), 10) - 1]} ${parseInt(mmdd.slice(3), 10)}`;
+}
+
+function seasonKeyForDate(date) {
+  const y = parseInt(date.slice(0, 4), 10), mo = parseInt(date.slice(5, 7), 10);
+  const start = mo >= 8 ? y : y - 1;
+  return `${start}-${String(start + 1).slice(2)}`;
+}
+
+function renderOnThisDaySsr(mmdd, items, teams, origin) {
+  const label = otdLabel(mmdd);
+  const typeWord = { upset: 'Upset', blowout: 'Blowout', ot: 'Overtime', championship: 'Championship', high_score: 'Scoring' };
+  const parts = [
+    `<h1>On this day in college basketball history: ${escapeHtml(label)}</h1>`,
+    `<p>${items.length ? `${items.length} game${items.length === 1 ? '' : 's'} worth remembering were played on ${escapeHtml(label)}` : `No games in the database were played on ${escapeHtml(label)} — the college season runs November to April`}. Each entry links to the full season, game by game, and to the box score where one exists.</p>`,
+    `<p><a href="${origin}/on-this-day/${otdShift(mmdd, -1)}">← ${escapeHtml(otdLabel(otdShift(mmdd, -1)))}</a> · <a href="${origin}/on-this-day">Today</a> · <a href="${origin}/on-this-day/${otdShift(mmdd, 1)}">${escapeHtml(otdLabel(otdShift(mmdd, 1)))} →</a></p>`,
+  ];
+  for (const it of items) {
+    const year = it.date.slice(0, 4);
+    const season = seasonKeyForDate(it.date);
+    const headline = (it.headline || '').replace(/^\d{4}-\d{2}-\d{2}:\s*/, '');
+    const links = (it.teams || []).map((t, i) => {
+      const team = teams[String(t.espnId)];
+      if (!team) return escapeHtml(t.name);
+      const slug = teamSlug(team[F.NAME]);
+      return i === 0
+        ? `<a href="${seasonHref(origin, slug, season)}">${escapeHtml(team[F.NAME])} ${escapeHtml(season)} season</a>`
+        : `<a href="${teamHref(origin, slug)}">${escapeHtml(team[F.NAME])}</a>`;
+    });
+    parts.push(`<h2>${escapeHtml(year)}: ${escapeHtml(headline)}</h2>`);
+    parts.push(`<p>${typeWord[it.type] ? escapeHtml(typeWord[it.type]) + ' · ' : ''}Final ${escapeHtml(it.score || '')}. ${links.join(' · ')}</p>`);
+  }
+  parts.push(`<p><a href="${origin}/rankings">Rankings</a> · <a href="${origin}/time-machine">Time Machine</a> · <a href="${origin}/teams">All programs</a></p>`);
+  return ssrWrap(parts.join('\n'));
+}
+
 function renderSectionIntroSsr(section, origin) {
   const intro = {
     bracket: `<h1>NCAA Tournament bracket</h1><p>The full bracket with live scores during the tournament, seed-matchup history on every game ("16-seeds are 2–152 all-time vs 1-seeds"), upset alerts, and each team's tournament résumé. Off-season, it shows the most recent tournament.</p>`,
@@ -934,9 +995,119 @@ function renderSectionIntroSsr(section, origin) {
   return ssrWrap(`${intro}<p><a href="${origin}/rankings">Rankings</a> · <a href="${origin}/champions">Championship journeys</a> · <a href="${origin}/teams">All programs</a></p>`);
 }
 
+// ── Embeddable widgets ───────────────────────────────────────────────────
+// /embed/team/{slug} and /embed/time-machine/{a}/{seasonA}/{b}/{seasonB}
+// (featured matchups) return a self-contained page meant to be iframed by
+// bloggers and podcasters. Fonts and logos are absolute URLs, every card
+// links back to hoopsipedia.com (target=_top), and frame-ancestors is open.
+// The SPA's "Embed" buttons hand out the snippet, which pairs the iframe
+// with a visible caption link so the host page carries a real backlink.
+const EMBED_CSS = `
+@font-face{font-family:'Roboto Slab';font-weight:400 900;src:url(https://www.hoopsipedia.com/fonts/roboto-slab-var-latin.woff2) format('woff2')}
+@font-face{font-family:'DM Sans';font-weight:400 700;src:url(https://www.hoopsipedia.com/fonts/dm-sans-var-latin.woff2) format('woff2')}
+@font-face{font-family:'JetBrains Mono';font-weight:400 700;src:url(https://www.hoopsipedia.com/fonts/jetbrains-mono-var-latin.woff2) format('woff2')}
+@font-face{font-family:'Stint Ultra Condensed';src:url(https://www.hoopsipedia.com/fonts/stint-ultra-condensed-400-latin.woff2) format('woff2')}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:transparent}
+body{font-family:'DM Sans',system-ui,sans-serif;color:#F5F3EE}
+.card{background:#1B2A4A;border:1px solid rgba(201,168,108,0.45);border-radius:10px;padding:16px 18px;min-height:100%;position:relative;overflow:hidden}
+.card::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 10% 0%,rgba(232,124,30,0.20),transparent 55%),radial-gradient(ellipse at 100% 100%,rgba(201,168,108,0.16),transparent 50%);pointer-events:none}
+.row{display:flex;align-items:center;gap:16px;position:relative}
+.logo{width:72px;height:72px;object-fit:contain;flex-shrink:0}
+.name{font-family:'Roboto Slab',serif;font-weight:800;font-size:22px;line-height:1.1}
+.mono{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#C9A86C}
+.sub{font-size:14px;color:rgba(245,243,238,0.85);margin-top:4px}
+.big{font-family:'Stint Ultra Condensed',sans-serif;font-size:44px;line-height:1}
+.foot{display:flex;justify-content:space-between;align-items:center;margin-top:12px;padding-top:10px;border-top:1px solid rgba(201,168,108,0.35);position:relative}
+.foot a{color:#C9A86C;text-decoration:none;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.12em;text-transform:uppercase}
+.brand{display:flex;align-items:center;gap:8px;font-family:'Roboto Slab',serif;font-weight:800;font-size:14px;color:#F5F3EE}
+.brand img{width:22px;height:22px}
+a.cover{position:absolute;inset:0;z-index:1}
+`;
+
+function embedPage(title, inner) {
+  return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>${escapeHtml(title)}</title><style>${EMBED_CSS}</style></head><body>${inner}</body></html>`;
+}
+
+function embedResponse(html) {
+  return new Response(html, { status: 200, headers: {
+    'content-type': 'text/html; charset=utf-8',
+    'cache-control': 'public, max-age=3600, s-maxage=86400',
+    'content-security-policy': 'frame-ancestors *',
+    'x-robots-tag': 'noindex',
+    'access-control-allow-origin': '*',
+  } });
+}
+
+function embedFoot(href, label) {
+  return `<div class="foot"><span class="brand"><img src="https://www.hoopsipedia.com/branding/hoopsipedia-logo.png" alt="">Hoopsipedia</span><a href="${escapeAttr(href)}" target="_top" rel="noopener">${escapeHtml(label)} →</a></div>`;
+}
+
+function renderEmbedTeam(team, rows, origin) {
+  const slug = teamSlug(team.name);
+  const href = `${origin}/teams/${encodeParam(slug)}`;
+  const latest = Array.isArray(rows) && rows.length ? rows[0] : null;
+  const bits = [`${team.allTimeW.toLocaleString()}–${team.allTimeL.toLocaleString()} all-time`];
+  if (team.natlChamps) bits.push(`${team.natlChamps} title${team.natlChamps === 1 ? '' : 's'}`);
+  if (team.finalFours) bits.push(`${team.finalFours} Final Four${team.finalFours === 1 ? '' : 's'}`);
+  const latestTxt = latest && latest.wins != null ? `${escapeHtml(latest.year)}: ${latest.wins}-${latest.losses}${latest.coach ? ` under ${escapeHtml(latest.coach)}` : ''}` : '';
+  const inner = `<div class="card"><a class="cover" href="${escapeAttr(href)}" target="_top" aria-label="${escapeAttr(team.name)} on Hoopsipedia"></a>
+    <div class="row"><img class="logo" src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500/${team.espnId}.png&w=200&h=200&transparent=true" alt="">
+      <div><div class="mono">${escapeHtml(team.conf || '')} · Basketball</div><div class="name">${escapeHtml(team.name)}</div>
+      <div class="sub">${escapeHtml(bits.join(' · '))}</div>${latestTxt ? `<div class="sub" style="color:rgba(245,243,238,0.65)">${latestTxt}</div>` : ''}</div></div>
+    ${embedFoot(href, 'Full history')}</div>`;
+  return embedPage(`${team.name} — Hoopsipedia`, inner);
+}
+
+function renderEmbedMatchup(m, teamsByName, origin) {
+  const a = m.teamA, b = m.teamB, p = m.prediction || {};
+  const yr = s => String(parseInt(String(s).slice(0, 4), 10) + 1);
+  const href = `${origin}/time-machine/${teamSlug(a.name)}/${a.season}/${teamSlug(b.name)}/${b.season}`;
+  const winA = p.winner === a.name;
+  const side = (t, won, score) => {
+    const id = teamsByName[t.name];
+    return `<div style="flex:1;text-align:center;min-width:0">${id ? `<img class="logo" style="width:56px;height:56px" src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500/${id}.png&w=200&h=200&transparent=true" alt="">` : ''}
+      <div class="name" style="font-size:17px;margin-top:4px">${yr(t.season)} ${escapeHtml(t.name)}</div>
+      <div class="sub" style="font-size:12px;color:rgba(245,243,238,0.65)">${escapeHtml(t.record || '')}${t.coach ? ' · ' + escapeHtml(t.coach) : ''}</div>
+      <div class="big" style="color:${won ? '#C9A86C' : 'rgba(245,243,238,0.5)'};margin-top:4px">${score ?? ''}</div></div>`;
+  };
+  const inner = `<div class="card"><a class="cover" href="${escapeAttr(href)}" target="_top" aria-label="Open this matchup on Hoopsipedia"></a>
+    <div class="mono" style="text-align:center;margin-bottom:8px">Time Machine · Greatest games never played</div>
+    <div class="row" style="justify-content:space-between">${side(a, winA, p.scoreA)}
+      <div style="text-align:center;width:90px"><div class="big" style="font-size:30px;color:#C2422D">VS</div><div class="mono" style="color:rgba(245,243,238,0.7);font-size:10px;margin-top:4px">${Math.round(Math.max(p.winProbA || 0, p.winProbB || 0))}% ${escapeHtml((winA ? a.name : b.name).split(' ').pop())}</div></div>
+      ${side(b, !winA, p.scoreB)}</div>
+    ${embedFoot(href, 'Argue with it')}</div>`;
+  return embedPage(`${yr(a.season)} ${a.name} vs ${yr(b.season)} ${b.name} — Hoopsipedia Time Machine`, inner);
+}
+
+async function handleEmbed(context, url, origin) {
+  const assetFetcher = context.env.ASSETS;
+  const originUrl = new URL('/', url).toString();
+  const notFound = (msg) => new Response(msg, { status: 404, headers: { 'content-type': 'text/plain; charset=utf-8' } });
+  const teamMatch = url.pathname.match(/^\/embed\/team\/([a-z0-9-]+)\/?$/);
+  const tmMatch = url.pathname.match(/^\/embed\/time-machine\/([a-z0-9-]+)\/(\d{4}-\d{2})\/([a-z0-9-]+)\/(\d{4}-\d{2})\/?$/);
+  if (!teamMatch && !tmMatch) return notFound('No such embed. Available: /embed/team/{slug}, /embed/time-machine/{a}/{seasonA}/{b}/{seasonB}');
+  const data = await getTeamData(assetFetcher, originUrl);
+  if (!data) return notFound('data unavailable');
+  if (teamMatch) {
+    const team = lookupTeam(teamMatch[1], data.teams, data.index);
+    if (!team) return notFound('No such team');
+    const rows = await getTeamSeasons(assetFetcher, originUrl, team.espnId);
+    return embedResponse(renderEmbedTeam(team, rows, origin));
+  }
+  const [, slugA, seasonA, slugB, seasonB] = tmMatch;
+  const tm = await getJsonCached(assetFetcher, originUrl, '/time_machine_results.json');
+  const m = (tm && tm.matchups || []).find(x => teamSlug(x.teamA.name) === slugA && x.teamA.season === seasonA && teamSlug(x.teamB.name) === slugB && x.teamB.season === seasonB);
+  if (!m) return notFound('Only featured Time Machine matchups can be embedded (custom matchups are simulated in the browser). See /time-machine for the featured list.');
+  const teamsByName = {};
+  for (const [tid, t] of Object.entries(data.teams)) teamsByName[t[F.NAME]] = tid;
+  return embedResponse(renderEmbedMatchup(m, teamsByName, origin));
+}
+
 export async function onRequest(context) {
   const { request } = context;
   const url = new URL(request.url);
+  if (url.pathname.startsWith('/embed/')) return handleEmbed(context, url, 'https://www.hoopsipedia.com');
   let teamParam = url.searchParams.get('team');
   const compareParam = url.searchParams.get('compare');
   const gameParam = url.searchParams.get('game');
@@ -963,6 +1134,9 @@ export async function onRequest(context) {
   let sectionParam = null, rivalrySlug = null, tmRoute = null;
   const sectionMatch = url.pathname.match(/^\/(teams|rankings|time-machine|players|rivalries|coaches|bracket|upsets|classics|champions)\/?$/);
   if (sectionMatch) sectionParam = sectionMatch[1];
+  let otdParam = null;
+  const otdMatch = url.pathname.match(/^\/on-this-day(?:\/(\d{2}-\d{2}))?\/?$/);
+  if (otdMatch) { sectionParam = 'on-this-day'; otdParam = otdMatch[1] || null; }
   const rivalryMatch = url.pathname.match(/^\/rivalries\/([a-z0-9-]+)\/?$/);
   if (rivalryMatch) { sectionParam = 'rivalry'; rivalrySlug = rivalryMatch[1]; }
   const tmMatch = url.pathname.match(/^\/time-machine\/([a-z0-9-]+)\/(\d{4}-\d{2})\/([a-z0-9-]+)\/(\d{4}-\d{2})\/?$/);
@@ -1028,9 +1202,8 @@ export async function onRequest(context) {
     for (const [tid, start, end] of coach.schools) {
       if (end - start > primarySpan) { primarySpan = end - start; primaryTid = String(tid); }
     }
-    const imageUrl = primaryTid
-      ? `https://a.espncdn.com/i/teamlogos/ncaa/500/${primaryTid}.png`
-      : `https://www.hoopsipedia.com/branding/hoopsipedia-logo.png`;
+    const imageUrl = await shareImage(assetFetcher, originUrl, origin, 'default', null,
+      primaryTid ? `https://a.espncdn.com/i/teamlogos/ncaa/500/${primaryTid}.png` : LOGO_IMAGE);
 
     pageTitle = `${coach.name} — Coaches — Hoopsipedia`;
     const accBits = [];
@@ -1098,7 +1271,7 @@ export async function onRequest(context) {
     const record = seasonRow.record || `${seasonRow.wins}-${seasonRow.losses}`;
     pageTitle = `${seasonParam} ${team.name} Basketball — Schedule & Results — Hoopsipedia`;
     const description = `${seasonParam} ${team.name} basketball: ${record}${seasonRow.coach ? ` under ${seasonRow.coach}` : ''}${seasonRow.apHigh ? `, peaked at AP #${seasonRow.apHigh}` : ''}. Full game-by-game schedule, scores, and box scores on Hoopsipedia.`;
-    const imageUrl = `https://a.espncdn.com/i/teamlogos/ncaa/500/${team.espnId}.png`;
+    const imageUrl = await shareImage(assetFetcher, originUrl, origin, 'team', slug, `https://a.espncdn.com/i/teamlogos/ncaa/500/${team.espnId}.png`);
 
     metaTags = [
       { key: 'description', value: description },
@@ -1147,7 +1320,7 @@ export async function onRequest(context) {
 
     pageTitle = `${team.name} Basketball — History, Records & Every Season — Hoopsipedia`;
     const description = `${team.name} basketball: ${team.allTimeW}-${team.allTimeL} all-time record, ${ncText}, ${ffText}. Member of the ${team.conf}. Full program history, stats, and head-to-head comparisons on Hoopsipedia.`;
-    const imageUrl = `https://a.espncdn.com/i/teamlogos/ncaa/500/${team.espnId}.png`;
+    const imageUrl = await shareImage(assetFetcher, originUrl, origin, 'team', teamSlug(team.name), `https://a.espncdn.com/i/teamlogos/ncaa/500/${team.espnId}.png`);
 
     metaTags = [
       { key: 'description', value: description },
@@ -1276,7 +1449,7 @@ export async function onRequest(context) {
       pageTitle = `${r.name}: ${t1[F.NAME]} vs ${t2[F.NAME]} — Rivalry History — Hoopsipedia`;
       const series = rivalrySeries(r, h2h, teams);
       description = `${series ? series + '. ' : ''}${r.description || ''}`.slice(0, 300);
-      imageUrl = `https://a.espncdn.com/i/teamlogos/ncaa/500/${r.team1Id}.png`;
+      imageUrl = await shareImage(assetFetcher, originUrl, origin, 'rivalry', r.slug, `https://a.espncdn.com/i/teamlogos/ncaa/500/${r.team1Id}.png`);
       ssrHtml = renderRivalrySsr(r, h2h, teams, origin);
       crumbs.push({ name: 'Rivalries', url: `${origin}/rivalries` }, { name: r.name, url: canonicalUrl });
     } else if (sectionParam === 'time-machine-matchup') {
@@ -1294,15 +1467,36 @@ export async function onRequest(context) {
       canonicalUrl = `${origin}/time-machine/${slugA}/${seasonA}/${slugB}/${seasonB}`;
       pageTitle = `${seasonEndYear(seasonA)} ${teamA.name} vs ${seasonEndYear(seasonB)} ${teamB.name} — Time Machine — Hoopsipedia`;
       description = `Who wins if ${seasonEndYear(seasonA)} ${teamA.name} (${rowA.wins}-${rowA.losses}) plays ${seasonEndYear(seasonB)} ${teamB.name} (${rowB.wins}-${rowB.losses})? Cross-era simulation from adjusted efficiency and HTSS, with predicted score and win probability.`;
-      imageUrl = `https://a.espncdn.com/i/teamlogos/ncaa/500/${teamA.espnId}.png`;
+      imageUrl = await shareImage(assetFetcher, originUrl, origin, 'tm', `${slugA}--${seasonA}--${slugB}--${seasonB}`,
+        await shareImage(assetFetcher, originUrl, origin, 'section', 'time-machine', `https://a.espncdn.com/i/teamlogos/ncaa/500/${teamA.espnId}.png`));
       ssrHtml = renderTimeMachineMatchupSsr(teamA, seasonA, rowA, teamB, seasonB, rowB, origin);
       crumbs.push({ name: 'Time Machine', url: `${origin}/time-machine` }, { name: pageTitle.replace(/ — .*$/, ''), url: canonicalUrl });
+    } else if (sectionParam === 'on-this-day') {
+      // Bare /on-this-day is "today" (US Eastern); every date has its own page.
+      const now = new Date(Date.now() - 4 * 3600 * 1000);
+      const today = `${String(now.getUTCMonth() + 1).padStart(2, '0')}-${String(now.getUTCDate()).padStart(2, '0')}`;
+      const mmdd = otdParam || today;
+      const mo = parseInt(mmdd.slice(0, 2), 10), dd = parseInt(mmdd.slice(3), 10);
+      if (!(mo >= 1 && mo <= 12 && dd >= 1 && dd <= DAYS_IN_MONTH[mo - 1])) return notFound();
+      const otd = await getJsonCached(assetFetcher, originUrl, '/on_this_day.json');
+      const items = ((otd && otd[mmdd]) || []).slice().sort((a, b) => (b.sig || 0) - (a.sig || 0)).slice(0, 25);
+      canonicalUrl = `${origin}/on-this-day/${mmdd}`;
+      pageTitle = `On This Day in College Basketball: ${otdLabel(mmdd)} — Hoopsipedia`;
+      const lead = items[0] ? (items[0].headline || '').replace(/^\d{4}-\d{2}-\d{2}:\s*/, '') : '';
+      description = items.length
+        ? `${items.length} games worth remembering were played on ${otdLabel(mmdd)}${lead ? `, including ${items[0].date.slice(0, 4)}: ${lead}` : ''}. Full seasons and box scores behind every one.`
+        : `College basketball history for ${otdLabel(mmdd)} — browse the surrounding dates for upsets, blowouts, overtime thrillers and championship games.`;
+      imageUrl = await shareImage(assetFetcher, originUrl, origin, 'section', 'on-this-day', await shareImage(assetFetcher, originUrl, origin, 'default', null, LOGO_IMAGE));
+      ssrHtml = renderOnThisDaySsr(mmdd, items, teams, origin);
+      if (items.length < 3) metaTags.push({ key: 'robots', value: 'noindex, follow' });
+      crumbs.push({ name: 'On This Day', url: `${origin}/on-this-day` }, { name: otdLabel(mmdd), url: canonicalUrl });
     } else {
       const meta = SECTION_META[sectionParam];
       if (!meta) return context.next();
       canonicalUrl = `${origin}/${sectionParam}`;
       pageTitle = meta.title;
       description = meta.description;
+      imageUrl = await shareImage(assetFetcher, originUrl, origin, 'section', sectionParam, await shareImage(assetFetcher, originUrl, origin, 'default', null, LOGO_IMAGE));
       if (sectionParam === 'teams') {
         ssrHtml = renderTeamsDirectorySsr(teams, origin);
       } else if (sectionParam === 'rankings') {
@@ -1331,6 +1525,7 @@ export async function onRequest(context) {
     }
 
     jsonLdBlocks.push(breadcrumbLd(crumbs));
+    const sectionNoindex = metaTags.some(t => t.key === 'robots');
     metaTags = [
       { key: 'description', value: description },
       { key: 'og:type', value: 'website' },
@@ -1344,6 +1539,7 @@ export async function onRequest(context) {
       { key: 'twitter:description', value: description },
       { key: 'twitter:image', value: imageUrl },
     ];
+    if (sectionNoindex) metaTags.push({ key: 'robots', value: 'noindex, follow' });
   } else if (viewParam) {
     // ?view=teams, ?view=upsets, ?view=classics, ?view=champions
     const viewMeta = {

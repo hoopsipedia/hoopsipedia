@@ -497,9 +497,9 @@
         // not need the full seasons/h2h/htss files before first paint.
         function isFastRoute() {
             const h = window.location.hash;
-            if (h && h !== '#') return /^#(team\/[^/]+|teams|players|rankings|htss-rankings|time-machine|trajectories|net-rankings)$/.test(h);
+            if (h && h !== '#') return /^#(team\/[^/]+|teams|players|rankings|htss-rankings|time-machine|trajectories|net-rankings|on-this-day(\/\d{2}-\d{2})?)$/.test(h);
             const p = window.location.pathname;
-            return p === '/' || /^\/(teams|players|rankings|time-machine)\/?$/.test(p) || /^\/teams\/[a-z0-9-]+(?:\/\d{4}(?:-\d{2})?)?\/?$/.test(p);
+            return p === '/' || /^\/(teams|players|rankings|time-machine|on-this-day)\/?$/.test(p) || /^\/on-this-day\/\d{2}-\d{2}\/?$/.test(p) || /^\/teams\/[a-z0-9-]+(?:\/\d{4}(?:-\d{2})?)?\/?$/.test(p);
         }
 
         // A team PROFILE route (not a season page): its first render wants the
@@ -534,6 +534,13 @@
                 } finally {
                     _skipHashUpdate = false;
                 }
+                return true;
+            }
+            // /on-this-day and /on-this-day/MM-DD
+            const otd = path.match(/^\/on-this-day(?:\/(\d{2}-\d{2}))?\/?$/);
+            if (otd) {
+                _skipHashUpdate = true;
+                try { switchView('onThisDay', true); renderOnThisDayPage(otd[1] || null); } finally { _skipHashUpdate = false; }
                 return true;
             }
             // /rivalries/{slug}
@@ -766,6 +773,65 @@
          * scanning every team's games (which would require the full 67MB corpus).
          * Legacy mode (full GAMES_DATA in memory): keeps the original scan.
          */
+        // ── On This Day: full page (/on-this-day/MM-DD) ──
+        const OTD_MONTHS = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+        const OTD_DAYS = [31,29,31,30,31,30,31,31,30,31,30,31];
+        function otdShift(mmdd, delta) {
+            let m = parseInt(mmdd.slice(0, 2), 10), d = parseInt(mmdd.slice(3), 10) + delta;
+            while (d < 1) { m = m === 1 ? 12 : m - 1; d += OTD_DAYS[m - 1]; }
+            while (d > OTD_DAYS[m - 1]) { d -= OTD_DAYS[m - 1]; m = m === 12 ? 1 : m + 1; }
+            return `${String(m).padStart(2, '0')}-${String(d).padStart(2, '0')}`;
+        }
+        function otdLabel(mmdd) { return `${OTD_MONTHS[parseInt(mmdd.slice(0, 2), 10) - 1]} ${parseInt(mmdd.slice(3), 10)}`; }
+        function otdSeasonKey(date) { const y = parseInt(date.slice(0, 4), 10), mo = parseInt(date.slice(5, 7), 10); const st = mo >= 8 ? y : y - 1; return `${st}-${String(st + 1).slice(2)}`; }
+
+        async function renderOnThisDayPage(mmdd) {
+            const el = document.getElementById('onThisDayContent');
+            if (!el) return;
+            if (!mmdd) { const n = new Date(); mmdd = `${String(n.getMonth() + 1).padStart(2, '0')}-${String(n.getDate()).padStart(2, '0')}`; }
+            const label = otdLabel(mmdd);
+            document.title = `On This Day in College Basketball: ${label} — Hoopsipedia`;
+            el.innerHTML = `<div class="chart-loading">Loading ${label}…</div>`;
+            const data = await loadOtdData();
+            const items = ((data && data[mmdd]) || []).slice().sort((a, b) => (b.sig || 0) - (a.sig || 0)).slice(0, 25);
+            const typeWord = { upset: 'UPSET', blowout: 'BLOWOUT', ot: 'OVERTIME', championship: 'CHAMPIONSHIP', high_score: 'SCORING' };
+            const typeColor = { upset: 'var(--rust)', championship: 'var(--gold-deep)', ot: 'var(--navy-soft)', blowout: 'var(--ink-muted)', high_score: 'var(--moss)' };
+            const prev = otdShift(mmdd, -1), next = otdShift(mmdd, 1);
+            const nav = `<div style="display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap; margin: 0 0 18px;">
+                    <a class="tm-share-btn" href="#on-this-day/${prev}" style="text-decoration:none;">← ${otdLabel(prev)}</a>
+                    <a class="tm-share-btn" href="#on-this-day" style="text-decoration:none;">Today</a>
+                    <a class="tm-share-btn" href="#on-this-day/${next}" style="text-decoration:none;">${otdLabel(next)} →</a>
+                </div>`;
+            const cards = items.map(it => {
+                const year = it.date.slice(0, 4), season = otdSeasonKey(it.date);
+                const headline = (it.headline || '').replace(/^\d{4}-\d{2}-\d{2}:\s*/, '');
+                const [w, l] = it.teams || [];
+                const wt = w && allTeamsData.find(t => t.espnId === String(w.espnId));
+                const lt = l && allTeamsData.find(t => t.espnId === String(l.espnId));
+                const logo = (t) => t ? `<img src="${getLogoUrl(t.espnId, 80)}" alt="" style="width:40px;height:40px;object-fit:contain;" onerror="this.style.display='none'">` : '';
+                return `<div class="ds-card-bordered" style="padding:18px 22px; display:flex; gap:16px; align-items:flex-start; background:var(--paper);">
+                        <div style="display:flex; flex-direction:column; gap:6px; align-items:center; flex-shrink:0;">${logo(wt)}${logo(lt)}</div>
+                        <div style="flex:1; min-width:0;">
+                            <div class="label-mono" style="color:${typeColor[it.type] || 'var(--ink-muted)'};">${year} · ${typeWord[it.type] || (it.type || '').toUpperCase()}${it.score ? ' · ' + escapeHtml(it.score) : ''}</div>
+                            <div class="h-slab" style="font-size:19px; color:var(--navy); margin-top:4px; line-height:1.3;">${escapeHtml(headline)}</div>
+                            <div style="margin-top:8px; display:flex; gap:14px; flex-wrap:wrap; font-size:13px;">
+                                ${wt ? `<a href="#season/${teamSlug(wt.name)}/${season}" style="color:var(--navy); font-weight:600;">${escapeHtml(wt.name)} ${season} season →</a>` : ''}
+                                ${lt ? `<a href="#team/${teamSlug(lt.name)}" style="color:var(--ink-muted);">${escapeHtml(lt.name)}</a>` : ''}
+                            </div>
+                        </div>
+                    </div>`;
+            }).join('');
+            el.innerHTML = `
+                <div style="max-width: 900px; margin: 0 auto; padding: 8px 0 40px;">
+                    <div class="label-mono" style="color:var(--rust);">● ON THIS DAY IN COLLEGE BASKETBALL</div>
+                    <h1 class="h-display" style="font-size: clamp(36px, 6vw, 64px); color:var(--navy); margin: 6px 0 14px; line-height:1;">${label}</h1>
+                    ${nav}
+                    ${items.length ? `<div style="display:flex; flex-direction:column; gap:12px;">${cards}</div>`
+                        : `<div class="ds-card-bordered" style="padding:28px; text-align:center; color:var(--ink-muted);">No games in the database were played on ${label} — the season runs November to April. Try the arrows above.</div>`}
+                </div>`;
+            window.scrollTo({ top: 0 });
+        }
+
         let _otdDataPromise = null;
         function loadOtdData() {
             if (!_otdDataPromise) {
@@ -1784,7 +1850,7 @@
             // views that depend on them.
             DATA_LOADS.all.then(() => {
                 try {
-                    if (currentView === 'home') renderTrendingMatchups();
+                    if (currentView === 'home') { renderTrendingMatchups(); renderTmDaily(); }
                     else if (currentView === 'profile' && currentProfile) renderProfile();
                 } catch (e) { console.warn('Post-load refresh failed:', e); }
             });
@@ -2193,12 +2259,14 @@
 
         function setupEventListeners() {
             // Navigation — new masthead nav links
-            document.querySelectorAll('.masthead-nav a[data-view], .ds-footer a[data-view]').forEach(link => {
+            document.querySelectorAll('.masthead-nav a[data-view], .ds-footer a[data-view], #tmDailySection a[data-view], #home a[data-view="on-this-day"]').forEach(link => {
                 link.addEventListener('click', (e) => {
                     // Plain click: stay in the SPA. Modified clicks (new tab) follow the real href.
                     if (e.metaKey || e.ctrlKey || e.shiftKey || e.button === 1) return;
                     e.preventDefault();
                     const view = e.currentTarget.dataset.view;
+                    if (view === 'time-machine') { window.location.hash = '#time-machine'; return; }
+                    if (view === 'on-this-day') { window.location.hash = '#on-this-day'; return; }
                     switchView(view);
                 });
             });
@@ -2593,6 +2661,14 @@
                 return;
             }
 
+            // #on-this-day or #on-this-day/MM-DD
+            const otdHash = hash.match(/^#on-this-day(?:\/(\d{2}-\d{2}))?$/);
+            if (otdHash) {
+                switchView('onThisDay', true);
+                renderOnThisDayPage(otdHash[1] || null);
+                _skipHashUpdate = false;
+                return;
+            }
             // #rivalry/slug
             const rivalryMatch = hash.match(/^#rivalry\/([^/]+)$/);
             if (rivalryMatch) {
@@ -3145,7 +3221,7 @@
 
             // Views that read the full datasets wait for them (the view is
             // already active, so the switch feels instant; content follows).
-            const FAST_VIEWS = new Set(['home', 'teams', 'profile', 'seasonPage', 'players', 'rankings']);
+            const FAST_VIEWS = new Set(['home', 'teams', 'profile', 'seasonPage', 'players', 'rankings', 'onThisDay']);
             if (!_allDataLoaded && !FAST_VIEWS.has(view)) {
                 startBackgroundLoads();
                 DATA_LOADS.all.then(() => { if (currentView === view) switchView(view, true); });
@@ -3538,7 +3614,51 @@
             try { renderPopularPrograms(); } catch(e) { console.error('AP Top 25 error:', e); }
             try { renderWinsLeaders(); } catch(e) { console.error('Leaders error:', e); }
             try { renderTrendingMatchups(); } catch(e) { console.error('Trending matchups error:', e); }
+            try { renderTmDaily(); } catch(e) { console.error('Matchup of the day error:', e); }
             try { renderOtdKicker(); } catch(e) { console.error('OTD kicker error:', e); }
+        }
+
+        // ===== Time Machine: matchup of the day =====
+        // Deterministic per date (same pick as scripts/daily_content.py) so the
+        // homepage, the social drafts and the share card all agree.
+        function renderTmDaily() {
+            const section = document.getElementById('tmDailySection');
+            const el = document.getElementById('tmDailyContent');
+            if (!section || !el) return;
+            if (!TIME_MACHINE_DATA || !TIME_MACHINE_DATA.matchups || !TIME_MACHINE_DATA.matchups.length) {
+                whenData('timeMachine').then(() => { if (currentView === 'home' && TIME_MACHINE_DATA) renderTmDaily(); });
+                return;
+            }
+            const now = new Date();
+            const dayOfYear = Math.floor((now - new Date(now.getFullYear(), 0, 0)) / 86400000);
+            const list = TIME_MACHINE_DATA.matchups;
+            const m = list[dayOfYear % list.length];
+            const a = m.teamA, b = m.teamB, p = m.prediction;
+            const ta = allTeamsData.find(t => t.name === a.name), tb = allTeamsData.find(t => t.name === b.name);
+            const yr = s => parseInt(String(s).slice(0, 4), 10) + 1;
+            const url = `/time-machine/${teamSlug(a.name)}/${a.season}/${teamSlug(b.name)}/${b.season}`;
+            const winA = p.winner === a.name;
+            const side = (t, team, score, won) => `
+                <div style="flex:1; min-width:180px; text-align:center;">
+                    ${team ? `<img src="${getLogoUrl(team.espnId, 200)}" alt="" style="width:72px;height:72px;object-fit:contain;" onerror="this.style.display='none'">` : ''}
+                    <div class="h-slab" style="font-size:20px; color:var(--navy); margin-top:6px;">${yr(t.season)} ${escapeHtml(t.name)}</div>
+                    <div class="label-mono" style="color:var(--ink-muted); margin-top:2px;">${escapeHtml(t.record || '')}${t.coach ? ' · ' + escapeHtml(t.coach) : ''}</div>
+                    <div class="numerals" style="font-size:44px; font-weight:700; margin-top:6px; color:${won ? 'var(--navy)' : 'var(--ink-faint)'};">${score}</div>
+                </div>`;
+            el.innerHTML = `
+                <div style="background:var(--paper); border:1px solid var(--rule-soft); border-radius:var(--r-md); padding:22px 24px; display:flex; align-items:center; gap:16px; flex-wrap:wrap;">
+                    ${side(a, ta, p.scoreA, winA)}
+                    <div style="text-align:center; min-width:120px;">
+                        <div class="h-display" style="font-size:30px; color:var(--rust);">VS</div>
+                        <div class="label-mono" style="color:var(--ink-muted); margin-top:4px;">${Math.round(Math.max(p.winProbA, p.winProbB))}% ${escapeHtml((winA ? a.name : b.name).split(' ').pop())}</div>
+                    </div>
+                    ${side(b, tb, p.scoreB, !winA)}
+                    <div style="flex-basis:100%; display:flex; justify-content:center; gap:12px; margin-top:6px; flex-wrap:wrap;">
+                        <a class="btn" href="${url}" style="padding:10px 22px; text-decoration:none;">SEE THE VERDICT →</a>
+                        <button class="tm-share-btn" onclick="tmShareMatchup(this, '${teamSlug(a.name)}', '${a.season}', '${teamSlug(b.name)}', '${b.season}')">Share this matchup</button>
+                    </div>
+                </div>`;
+            section.style.display = '';
         }
 
         // ===== Trending Matchups — populate from H2H data =====
@@ -6761,8 +6881,68 @@
                             <div class="tm-factor-b"></div>
                         </div>`}
                         ${m.narrative === '__loading__' ? `<div class="tm-narrative" style="opacity:0.55;font-style:italic;">Writing the verdict…</div>` : m.narrative ? `<div class="tm-narrative">${m.narrative}</div>` : ''}
+                        ${(m.teamA.season && m.teamB.season) ? `<div class="tm-share"><button class="tm-share-btn" onclick="tmShareMatchup(this, '${teamSlug(m.teamA.name)}', '${m.teamA.season}', '${teamSlug(m.teamB.name)}', '${m.teamB.season}')">Share this matchup</button>${tmIsFeatured(m) ? ` <button class="tm-share-btn" onclick="showEmbedCode('tm', '${teamSlug(m.teamA.name)}/${m.teamA.season}/${teamSlug(m.teamB.name)}/${m.teamB.season}')">&lt;/&gt; Embed</button>` : ''}</div>` : ''}
                     </div>
                 </div>`;
+        }
+
+        function tmIsFeatured(m) {
+            const list = (TIME_MACHINE_DATA && TIME_MACHINE_DATA.matchups) || [];
+            return list.some(x => x.teamA.name === m.teamA.name && x.teamA.season === m.teamA.season && x.teamB.name === m.teamB.name && x.teamB.season === m.teamB.season);
+        }
+
+        // Embeddable widgets: /embed/team/{slug} and /embed/time-machine/{a}/{sa}/{b}/{sb}
+        // (featured only). The snippet pairs the iframe with a visible caption
+        // link so the host page carries a real link back to Hoopsipedia.
+        function embedSnippet(kind, key) {
+            const origin = 'https://www.hoopsipedia.com';
+            const src = kind === 'team' ? `${origin}/embed/team/${key}` : `${origin}/embed/time-machine/${key}`;
+            const page = kind === 'team' ? `${origin}/teams/${key}` : `${origin}/time-machine/${key}`;
+            const height = kind === 'team' ? 190 : 250;
+            const label = kind === 'team' ? 'Team history on Hoopsipedia' : 'Time Machine matchup on Hoopsipedia';
+            return `<iframe src="${src}" width="100%" height="${height}" style="max-width:640px;border:0;border-radius:10px;overflow:hidden" loading="lazy" title="Hoopsipedia"></iframe>\n<p style="font:12px/1.4 system-ui,sans-serif;margin:4px 0 0"><a href="${page}">${label}</a></p>`;
+        }
+
+        function showEmbedCode(kind, key) {
+            const code = embedSnippet(kind, key);
+            let overlay = document.getElementById('embedOverlay');
+            if (!overlay) {
+                overlay = document.createElement('div');
+                overlay.id = 'embedOverlay';
+                overlay.style.cssText = 'position:fixed;inset:0;background:rgba(15,27,51,0.6);z-index:10000;display:flex;align-items:center;justify-content:center;padding:20px;';
+                overlay.addEventListener('click', (e) => { if (e.target === overlay) overlay.remove(); });
+                document.body.appendChild(overlay);
+            }
+            overlay.innerHTML = `
+                <div style="background:var(--paper);border-radius:var(--r-md);max-width:640px;width:100%;padding:22px 24px;box-shadow:0 20px 60px rgba(0,0,0,0.35);">
+                    <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px;">
+                        <div class="h-display" style="font-size:22px;color:var(--navy);">Embed this card</div>
+                        <button onclick="document.getElementById('embedOverlay').remove()" style="background:none;border:none;font-size:22px;cursor:pointer;color:var(--ink-muted);">&times;</button>
+                    </div>
+                    <div style="font-size:13px;color:var(--ink-muted);margin-bottom:12px;">Paste into any blog post, newsletter or CMS that accepts HTML. The card links back here and updates itself.</div>
+                    <textarea id="embedCodeBox" readonly style="width:100%;height:120px;font-family:var(--font-mono);font-size:12px;padding:10px;border:1.5px solid var(--navy);border-radius:6px;background:var(--cream);color:var(--ink);resize:vertical;">${escapeHtml(code)}</textarea>
+                    <div style="display:flex;gap:10px;align-items:center;margin-top:12px;flex-wrap:wrap;">
+                        <button class="btn" onclick="navigator.clipboard.writeText(document.getElementById('embedCodeBox').value).then(()=>{this.textContent='Copied';setTimeout(()=>{this.textContent='Copy code';},1600);})" style="padding:10px 22px;">Copy code</button>
+                        <a href="${kind === 'team' ? '/embed/team/' + key : '/embed/time-machine/' + key}" target="_blank" rel="noopener" class="label-mono" style="color:var(--navy);">Preview ↗</a>
+                    </div>
+                    <div style="margin-top:14px;border:1px dashed var(--rule-soft);border-radius:8px;padding:8px;background:var(--cream-deep);">
+                        <iframe src="${kind === 'team' ? '/embed/team/' + key : '/embed/time-machine/' + key}" width="100%" height="${kind === 'team' ? 190 : 250}" style="border:0;border-radius:8px;display:block;" title="Preview"></iframe>
+                    </div>
+                </div>`;
+        }
+
+        // Every matchup has a forever URL (/time-machine/{a}/{seasonA}/{b}/{seasonB})
+        // with its own server-rendered page and share card. Native share sheet
+        // where available, clipboard otherwise.
+        async function tmShareMatchup(btn, slugA, seasonA, slugB, seasonB) {
+            const url = `https://www.hoopsipedia.com/time-machine/${slugA}/${seasonA}/${slugB}/${seasonB}`;
+            const title = `${parseInt(seasonA, 10) + 1} ${slugA.replace(/-/g, ' ')} vs ${parseInt(seasonB, 10) + 1} ${slugB.replace(/-/g, ' ')} — Hoopsipedia Time Machine`;
+            try {
+                if (navigator.share) { await navigator.share({ title, url }); return; }
+                await navigator.clipboard.writeText(url);
+                const old = btn.textContent; btn.textContent = 'Link copied';
+                setTimeout(() => { btn.textContent = old; }, 1800);
+            } catch (e) { /* user cancelled the share sheet */ }
         }
 
         // "Build Your Own Matchup" card — pick any {team, season} vs any {team, season}.
@@ -8269,6 +8449,9 @@
 
                             <!-- Action stack -->
                             <div style="display:flex; flex-direction:column; gap:10px; align-items:flex-end;">
+                                <button onclick="showEmbedCode('team','${teamSlug(team.name)}')" class="ds-btn ds-btn-ghost" style="font-size:13px; padding:10px 20px;" title="Get an embeddable card for your site or newsletter">
+                                    &lt;/&gt; Embed
+                                </button>
                                 <button onclick="copyShareUrl('team','${teamSlug(team.name)}')" class="ds-btn ds-btn-ghost" style="font-size:13px; padding:10px 20px;">
                                     <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 002 2h12a2 2 0 002-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
                                     Share
