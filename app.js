@@ -11496,7 +11496,7 @@
                      <div class="upsets-fun-fact-icon">◱</div>
                      <div>
                        <div class="upsets-fun-fact-label">COVERAGE FOR ${escapeHtml(teamLabel(teamFilter).toUpperCase())}</div>
-                       <div class="upsets-fun-fact-text">${teams[teamFilter].archivedGames.toLocaleString()} of ${teams[teamFilter].logGames.toLocaleString()} games are in the archive (${teams[teamFilter].coveragePct}%). Everything below is drawn from those games only.</div>
+                       <div class="upsets-fun-fact-text">${(teams[teamFilter].archivedInLog ?? teams[teamFilter].archivedGames).toLocaleString()} of ${teams[teamFilter].logGames.toLocaleString()} logged games are in the archive (${teams[teamFilter].coveragePct}%)${teams[teamFilter].archivedPreLog ? `, plus ${teams[teamFilter].archivedPreLog.toLocaleString()} box scores from before the official game log begins` : ''}. Everything below is drawn from those games only.</div>
                      </div>
                    </div>` : '';
 

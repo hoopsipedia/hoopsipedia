@@ -85,12 +85,39 @@ def file_key(slug):
     return re.sub(r'-{2,}', '-', re.sub(r'[^a-z0-9]+', '-', slug)).strip('-')
 
 
-def archived_games_per_team():
-    """team-slug -> distinct archived box scores featuring that team.
+def first_log_dates():
+    """espnId -> earliest date in that team's game log (games/{id}.json)."""
+    out = {}
+    gdir = os.path.join(ROOT, 'games')
+    for fn in os.listdir(gdir):
+        if fn == 'index.json' or not fn.endswith('.json'):
+            continue
+        try:
+            with open(os.path.join(gdir, fn)) as f:
+                payload = json.load(f)
+        except (OSError, ValueError):
+            continue
+        games = payload.get('games', []) if isinstance(payload, dict) else payload
+        dates = [g.get('date') for g in games if isinstance(g, dict) and g.get('date')]
+        if dates:
+            out[fn[:-5]] = min(dates)
+    return out
+
+
+def archived_games_per_team(slug_to_espn=None, log_start=None):
+    """team-slug -> (all archived box scores featuring that team,
+                    those dated on/after the team's game log begins).
+
+    The second number is the coverage numerator: bigbluehistory gives
+    Kentucky 461 box scores from 1903-1949, before its official log starts,
+    and counting them against a 1949+ denominator read as 121% coverage.
+    Undated entries (SR tournament games) are all in-log era and count.
 
     Reuses generate_players' own canonicalization (same slug space as the
     player index), so the count is the true numerator for coverage."""
     import generate_players as G
+    slug_to_espn = slug_to_espn or {}
+    log_start = log_start or {}
     with open(os.path.join(ROOT, 'sr_boxscores.json')) as f:
         store = json.load(f)
     names = set()
@@ -102,14 +129,21 @@ def archived_games_per_team():
                 names.add(t['name'])
     canon = G.build_team_canonical_map(names)
     counts = defaultdict(int)
+    in_log = defaultdict(int)
+    date_re = re.compile(r'(\d{4}-\d{2}-\d{2})')
     for key, entry in store.items():
         if key == '_metadata' or not isinstance(entry, dict):
             continue
+        m = date_re.search(key)
+        date = entry.get('date') or (m.group(1) if m else None)
         for slug in {G.slugify(canon.get(t['name'], t['name']))
                      for t in entry.get('teams') or []
                      if isinstance(t, dict) and isinstance(t.get('name'), str)}:
             counts[slug] += 1
-    return counts
+            start = log_start.get(str(slug_to_espn.get(slug) or ''))
+            if not date or not start or date >= start:
+                in_log[slug] += 1
+    return counts, in_log
 
 
 def load_team_context():
@@ -168,7 +202,8 @@ def main():
         by_team[slug][key] = rec
 
     ctx = load_team_context()
-    archived_counts = archived_games_per_team()
+    archived_counts, in_log_counts = archived_games_per_team(
+        {slug: espn for slug, (espn, _) in ctx.items() if espn}, first_log_dates())
     os.makedirs(OUT_DIR, exist_ok=True)
 
     teams, seen_files = {}, {}
@@ -181,13 +216,16 @@ def main():
         seen_files[fk] = slug
         espn_id, log_games = ctx.get(slug, (None, None))
         archived = archived_counts.get(slug, 0)
+        archived_in_log = min(in_log_counts.get(slug, 0), log_games) if log_games else in_log_counts.get(slug, 0)
         teams[slug] = {
             'file': fk + '.json',
             'players': len(recs),
             'archivedGames': archived,
+            'archivedInLog': archived_in_log,
+            'archivedPreLog': archived - in_log_counts.get(slug, 0),
             'espnId': espn_id,
             'logGames': log_games,
-            'coveragePct': (round(100.0 * archived / log_games, 1)
+            'coveragePct': (round(100.0 * archived_in_log / log_games, 1)
                             if log_games else None),
             'nonD1': espn_id is None,
         }
