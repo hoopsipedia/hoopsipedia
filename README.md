@@ -28,7 +28,7 @@ results JSON (htss_v2_results.json, efficiency_ratings.json, time_machine_result
         └──► read server-side by the chat function's tools
 ```
 
-`nightly_sync.py` (installed via `setup_cron.sh`) updates current-season records in `data.json` nightly and pushes to git, which triggers a redeploy.
+`nightly_sync.py` (installed as a launchd agent via `setup_launchd.sh`, which catches up on missed runs after sleep) updates current-season records in `data.json` nightly and pushes to git, which triggers a redeploy.
 
 After any change to the game logs (`fill_season_gaps_from_sr.py`, `compile_schedules.py`) or a `compile_history.py` run, regenerate in this order: `python3 scripts/split_games.py` → `python3 scripts/synthesize_missing_seasons.py` (adds flagged rows for NCAA-vacated seasons that Sports-Reference's season table omits; a full recompile drops them) → `python3 scripts/split_seasons.py` → `python3 generate_on_this_day.py` → `node efficiency_engine.js && node htss_v2.js && node unified_rankings.js` → `python3 scripts/generate_sitemaps.py` → `python3 tests/test_engine_invariants.py`.
 
@@ -73,7 +73,7 @@ Copy the tarball off-machine (cloud drive / external disk) — a local backup do
 | `htss_v2.js` | HTSS ranking engine (v2 — the live one) |
 | `efficiency_engine.js` | Adjusted efficiency ratings (1949–2026) |
 | `time_machine.js` | Cross-era matchup simulator |
-| `nightly_sync.py` | Nightly current-season record sync (cron) |
+| `nightly_sync.py` | Nightly current-season record sync (launchd, `setup_launchd.sh`) |
 | `scrape_batch.py` | Game-by-game scraper (the model for safe JSON merging) |
 | `espn_to_sr.json` | ESPN ID ↔ Sports-Reference slug mapping (canonical) |
 | `scripts/hooks/pre-push` | Versioned copy of the pre-push validation hook |

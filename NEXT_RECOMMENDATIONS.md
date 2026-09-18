@@ -18,7 +18,7 @@ tracked file over 25 MiB. **Rule: after every push, confirm the live
 | SEO surface | Forever URLs with server-rendered content for `/rankings`, `/time-machine` (+ any matchup), `/players`, `/rivalries` (+ each), `/coaches`, `/teams`, `/champions`, `/bracket`, `/upsets`, `/classics`; every season page has a computed story + prev/next links; titles say "Basketball" (season pages had been ranking for football queries) |
 | Search Console | 15.9K pages indexed; last 28 days 100 clicks / 15.8K impressions (+450%); sitemap resubmitted 2026-09-11 |
 | Analytics | Site was tagged with a measurement ID nobody could read; retagged to the owned property (528509623, hoopsipedia@gmail.com) 2026-09-11 — first human numbers arrive 09-12 |
-| Tooling | `scripts/google_reports.py` (GA4 + GSC, service account, weekly cron Mon 08:00), `scripts/daily_content.py` (4 post drafts/day, cron 07:00 → `content/drafts/latest.md`), `scripts/indexnow_ping.py` (Bing et al., 584 URLs submitted), `scripts/render_share_cards.py` (1200×630 og:image cards for every team, section, featured matchup and rivalry) |
+| Tooling | `scripts/google_reports.py` (GA4 + GSC, service account, launchd Mon 08:00), `scripts/daily_content.py` (4 post drafts/day, launchd 07:00 → `content/drafts/latest.md`), `scripts/indexnow_ping.py` (Bing et al., 584 URLs submitted), `scripts/render_share_cards.py` (1200×630 og:image cards for every team, section, featured matchup and rivalry) |
 | Traffic reality | Cloudflare "uniques" (3K–11K/day) are ~90% bots (Amazonbot, Perplexity, SEO crawlers). Humans are still on the order of 100–200/day. `/api/chat` sees 0–2 human requests a day. |
 
 ## The season calendar is the plan

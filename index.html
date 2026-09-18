@@ -20,6 +20,11 @@
         var injected = false;
         function inject() {
           if (injected) return; injected = true;
+          // Automated browsers (headless crawlers, Lighthouse, scrapers) set
+          // navigator.webdriver. They are not an audience and must not load
+          // AdSense: ad requests from bots count as invalid traffic. GA4 saw
+          // ~150 such sessions/week from one headless Linux Chrome.
+          if (navigator.webdriver) return;
           var a = document.createElement('script');
           a.async = true; a.src = 'https://www.googletagmanager.com/gtag/js?id=G-R7JXCJWHYV';
           document.head.appendChild(a);

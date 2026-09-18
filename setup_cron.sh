@@ -1,4 +1,10 @@
 #!/bin/bash
+# DEPRECATED 2026-09-18: cron drops any job whose time passes while the Mac
+# sleeps (drafts ran 2 of 7 mornings the week of 09-11). Use setup_launchd.sh,
+# which installs the same three jobs as launchd agents that catch up on wake.
+exec "$(cd "$(dirname "$0")" && pwd)/setup_launchd.sh" "$@"
+
+# ---- original cron installer kept for reference ----
 # Set up cron jobs for Hoopsipedia nightly sync
 # Run this script once to install the cron schedule
 
