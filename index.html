@@ -28,10 +28,20 @@
           var a = document.createElement('script');
           a.async = true; a.src = 'https://www.googletagmanager.com/gtag/js?id=G-R7JXCJWHYV';
           document.head.appendChild(a);
-          var b = document.createElement('script');
-          b.async = true; b.crossOrigin = 'anonymous';
-          b.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1704871235814953';
-          document.head.appendChild(b);
+          // AdSense costs ~400ms of main thread on a phone; it waits for the
+          // first interaction or five more seconds, whichever comes first.
+          var adsDone = false;
+          function ads() {
+            if (adsDone) return; adsDone = true;
+            var b = document.createElement('script');
+            b.async = true; b.crossOrigin = 'anonymous';
+            b.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1704871235814953';
+            document.head.appendChild(b);
+          }
+          ['pointerdown', 'keydown', 'scroll', 'touchstart'].forEach(function (ev) {
+            window.addEventListener(ev, ads, { once: true, passive: true });
+          });
+          setTimeout(ads, 5000);
         }
         function afterLoad() {
           if ('requestIdleCallback' in window) requestIdleCallback(inject, { timeout: 4000 });
@@ -681,7 +691,7 @@
     <!-- Correction Button -->
     <button class="correction-btn" onclick="openCorrection()" title="Suggest a Correction">✎</button>
 
-    <script src="/app.js?v=de8d1a6d78" defer></script>
+    <script src="/app.js?v=ec61d6dce9" defer></script>
 
     <!-- Chat Panel -->
     <div id="chatOverlay" class="chat-overlay" onclick="closeChatPanel()"></div>

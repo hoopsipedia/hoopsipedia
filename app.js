@@ -292,6 +292,30 @@
             if (_bgStarted || !_startBackgroundLoads) return;
             _bgStarted = true;
             _startBackgroundLoads();
+            // The three multi-megabyte files (seasons 6MB, h2h 3.4MB, htss 2.4MB)
+            // cost ~1s of main-thread JSON parsing on a mid-range phone. Unless a
+            // view asks for them (whenData / ensureAllLoads), they wait until the
+            // page has been interactive for a few seconds.
+            const HEAVY_DELAY = 4000;
+            const schedule = () => setTimeout(startHeavyLoads, HEAVY_DELAY);
+            if (document.readyState === 'complete') schedule();
+            else window.addEventListener('load', schedule, { once: true });
+        }
+
+        const HEAVY_LOADS = new Set(['seasons', 'h2h', 'htss']);
+        let _heavyStarted = false;
+        let _startHeavyLoads = null;
+        function startHeavyLoads() {
+            startBackgroundLoads();
+            if (_heavyStarted || !_startHeavyLoads) return;
+            _heavyStarted = true;
+            _startHeavyLoads();
+        }
+
+        // Every dataset, now: the gate for views that genuinely need all of it.
+        function ensureAllLoads() {
+            startHeavyLoads();
+            return DATA_LOADS.all;
         }
 
         function loadJson(url) {
@@ -300,6 +324,7 @@
 
         function whenData(...names) {
             startBackgroundLoads();
+            if (names.some(n => HEAVY_LOADS.has(n))) startHeavyLoads();
             return Promise.all(names.map(n => DATA_LOADS[n] || Promise.resolve(null)));
         }
 
@@ -340,24 +365,6 @@
                 // gates can await it; awaiting it also triggers the start.
                 DATA_LOADS.all = new Promise(resolve => { _resolveAllLoaded = resolve; });
                 _startBackgroundLoads = () => {
-                    // Pre-compiled historical season data (compile_history.py)
-                    DATA_LOADS.seasons = loadJson('/seasons.json').then(d => {
-                        if (d) {
-                            SEASONS_DATA = d;
-                            console.log(`Loaded historical data for ${Object.keys(SEASONS_DATA).length} teams`);
-                            try { buildSeedMatchupHistory(); } catch (e) { console.warn('Seed matchup history failed:', e); }
-                        } else {
-                            console.log('No seasons.json found - will use ESPN API for season data');
-                        }
-                        return d;
-                    });
-
-                    // All-time head-to-head data (compile_h2h.py)
-                    DATA_LOADS.h2h = loadJson('/h2h.json').then(d => {
-                        if (d) { H2H_DATA = d; console.log(`Loaded H2H data for ${Object.keys(H2H_DATA).length} teams`); }
-                        return d;
-                    });
-
                     // Upset history for personalized pregame badges
                     DATA_LOADS.upsets = loadJson('/upset_history.json').then(d => {
                         if (d) {
@@ -392,12 +399,6 @@
                         return d;
                     });
 
-                    // HTSS v2 rankings
-                    DATA_LOADS.htss = loadJson('/htss_v2_results.json').then(d => {
-                        if (d) { HTSS_V2_DATA = d; console.log(`Loaded HTSS v2 — ${HTSS_V2_DATA.allTimeTop100?.length || 0} top seasons, ${HTSS_V2_DATA.programRankings?.length || 0} programs`); }
-                        return d;
-                    });
-
                     // Time Machine matchups
                     DATA_LOADS.timeMachine = loadJson('/time_machine_results.json').then(d => {
                         if (d) TIME_MACHINE_DATA = d;
@@ -407,6 +408,35 @@
                     // Rivalry definitions (shared with the Pages Function's /rivalries SSR)
                     DATA_LOADS.rivalries = loadJson('/rivalries.json').then(d => {
                         if (Array.isArray(d)) RIVALRIES = d;
+                        return d;
+                    });
+
+                };
+
+                // Heavy tier — started by startHeavyLoads(): a view gate, or a
+                // few seconds after `load`, whichever comes first.
+                _startHeavyLoads = () => {
+                    // Pre-compiled historical season data (compile_history.py)
+                    DATA_LOADS.seasons = loadJson('/seasons.json').then(d => {
+                        if (d) {
+                            SEASONS_DATA = d;
+                            console.log(`Loaded historical data for ${Object.keys(SEASONS_DATA).length} teams`);
+                            try { buildSeedMatchupHistory(); } catch (e) { console.warn('Seed matchup history failed:', e); }
+                        } else {
+                            console.log('No seasons.json found - will use ESPN API for season data');
+                        }
+                        return d;
+                    });
+
+                    // All-time head-to-head data (compile_h2h.py)
+                    DATA_LOADS.h2h = loadJson('/h2h.json').then(d => {
+                        if (d) { H2H_DATA = d; console.log(`Loaded H2H data for ${Object.keys(H2H_DATA).length} teams`); }
+                        return d;
+                    });
+
+                    // HTSS v2 rankings
+                    DATA_LOADS.htss = loadJson('/htss_v2_results.json').then(d => {
+                        if (d) { HTSS_V2_DATA = d; console.log(`Loaded HTSS v2 — ${HTSS_V2_DATA.allTimeTop100?.length || 0} top seasons, ${HTSS_V2_DATA.programRankings?.length || 0} programs`); }
                         return d;
                     });
 
@@ -1821,6 +1851,7 @@
             await loadData();
             setupTeamsData();
             setupEventListeners();
+            initLazyBg();
             initCorrectionModal();
             initOnThisDayWidget().catch(e => console.warn('OTD widget init failed:', e));
 
@@ -1828,8 +1859,7 @@
             // as data.json is in — they read per-team slices, not the monolith.
             // Every other view waits for the full dataset, exactly as before.
             if (!isFastRoute()) {
-                startBackgroundLoads();
-                try { await DATA_LOADS.all; } catch (e) { console.warn('Background data load error:', e); }
+                try { await ensureAllLoads(); } catch (e) { console.warn('Background data load error:', e); }
             } else if (isTeamProfileRoute()) {
                 // Profile pages need most datasets soon: start everything now
                 // (measured best in production — waiting for even the small
@@ -2249,6 +2279,59 @@
             return `https://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500/${espnId}.png&w=${size}&h=${size}&transparent=true`;
         }
 
+        // Logos in long tables are declared as data-bg="url" and only become
+        // background-images as they approach the viewport. /rankings used to
+        // decode 364 logos on load (~4s of main-thread image work on a phone).
+        let _lazyBgIO = null;
+        function lazyBgAttach(root) {
+            const els = root.querySelectorAll ? root.querySelectorAll('[data-bg]') : [];
+            if (!els.length) return;
+            if (!('IntersectionObserver' in window)) {
+                els.forEach(lazyBgApply);
+                return;
+            }
+            if (!_lazyBgIO) {
+                _lazyBgIO = new IntersectionObserver(entries => {
+                    for (const en of entries) if (en.isIntersecting) { lazyBgApply(en.target); _lazyBgIO.unobserve(en.target); }
+                }, { rootMargin: '400px 0px' });
+            }
+            els.forEach(el => _lazyBgIO.observe(el));
+        }
+        function lazyBgApply(el) {
+            const url = el.getAttribute('data-bg');
+            if (url) el.style.backgroundImage = `url('${url}')`;
+            el.removeAttribute('data-bg');
+        }
+        function initLazyBg() {
+            lazyBgAttach(document.body);
+            if (!('MutationObserver' in window)) return;
+            new MutationObserver(muts => {
+                for (const m of muts) for (const n of m.addedNodes) if (n.nodeType === 1) {
+                    if (n.hasAttribute && n.hasAttribute('data-bg')) lazyBgAttach(n.parentNode || n);
+                    else lazyBgAttach(n);
+                }
+            }).observe(document.body, { childList: true, subtree: true });
+        }
+
+        // ESPN serves roster headshots at ~270KB each; the combiner resizes them.
+        function espnHeadshot(src, size = 96) {
+            if (!src) return `https://a.espncdn.com/i/headshots/nophoto.png`;
+            const m = String(src).match(/\/i\/headshots\/[^?&]+\.png/);
+            const path = m ? m[0] : (/^\d+$/.test(String(src)) ? `/i/headshots/mens-college-basketball/players/full/${src}.png` : null);
+            if (!path) return src;
+            return `https://a.espncdn.com/combiner/i?img=${path}&w=${size}&h=${size}`;
+        }
+
+        // Wikimedia Commons thumbnail URL for an original-file URL. Only the
+        // production step sizes are served (20, 40, 60, 120, 250, 330, 500, 960,
+        // 1280, 1920, 3840); any other width is a 400.
+        function wikiThumb(url, width = 500) {
+            const m = String(url).match(/^(https?:\/\/upload\.wikimedia\.org\/wikipedia\/commons)\/([0-9a-f])\/([0-9a-f]{2})\/([^\/?#]+)$/);
+            if (!m) return url;
+            const name = m[4];
+            return `${m[1]}/thumb/${m[2]}/${m[3]}/${name}/${width}px-${name}${/\.svg$/i.test(name) ? '.png' : ''}`;
+        }
+
         function getFallbackLogoUrl(espnId) {
             const initials = LOGO_FALLBACKS[String(espnId)];
             if (initials) {
@@ -2473,7 +2556,7 @@
             // if those are still streaming in, route once they have landed.
             if (!_allDataLoaded && hash && hash !== '#' && !isFastRoute()) {
                 startBackgroundLoads();
-                DATA_LOADS.all.then(() => { if (window.location.hash === hash) handleHashRoute(); });
+                ensureAllLoads().then(() => { if (window.location.hash === hash) handleHashRoute(); });
                 return;
             }
 
@@ -3224,7 +3307,7 @@
             const FAST_VIEWS = new Set(['home', 'teams', 'profile', 'seasonPage', 'players', 'rankings', 'onThisDay']);
             if (!_allDataLoaded && !FAST_VIEWS.has(view)) {
                 startBackgroundLoads();
-                DATA_LOADS.all.then(() => { if (currentView === view) switchView(view, true); });
+                ensureAllLoads().then(() => { if (currentView === view) switchView(view, true); });
                 return;
             }
 
@@ -3987,7 +4070,7 @@
                         if (!ppgCat?.leaders?.[0]) continue;
                         const topPlayer = ppgCat.leaders[0];
                         const athlete = topPlayer.athlete || {};
-                        const headshot = typeof athlete.headshot === 'object' ? athlete.headshot.href : (athlete.headshot || '');
+                        const headshot = espnHeadshot(typeof athlete.headshot === 'object' ? athlete.headshot.href : (athlete.headshot || ''), 160);
 
                         // Get RPG and APG for this same player or the leader
                         const rpgVal = rpgCat?.leaders?.[0]?.displayValue || '—';
@@ -4045,7 +4128,7 @@
 
                     html += `
                         <div class="player-spotlight-card" style="border-top-color: ${color}" onclick="window.location.hash='#compare/${p.teamId}/${allTeamsData.find(t=>t.name==='${p.opponentName.replace(/'/g,"\\'")}')?.espnId || ''}'">
-                            <img class="player-spotlight-headshot" src="${headshotUrl}" alt="${p.playerName}" style="border-color: ${color}" onerror="this.src='https://a.espncdn.com/i/headshots/nophoto.png'">
+                            <img class="player-spotlight-headshot" src="${headshotUrl}" alt="${p.playerName}" loading="lazy" decoding="async" style="border-color: ${color}" onerror="this.src='https://a.espncdn.com/i/headshots/nophoto.png'">
                             <div class="player-spotlight-name">${p.playerName}</div>
                             <div class="player-spotlight-meta">
                                 <img src="${logoUrl}" alt="${p.teamName}" onerror="this.style.display='none'">
@@ -6526,7 +6609,10 @@
             const realTeams = sorted.filter(t => t.allTimeW >= 100 || hasGamesData(t.espnId));
             const shellTeams = sorted.filter(t => t.allTimeW < 100 && !hasGamesData(t.espnId));
 
-            // Render real teams with rankings
+            // Rows are built as strings and inserted in chunks: the first screen
+            // synchronously, the rest in idle time, so a 365-row table never
+            // produces one half-second task. A re-render mid-way cancels the tail.
+            const rows = [];
             realTeams.forEach((team, idx) => {
                 const rawValue = team[currentSortStat];
                 const statValue = currentSortStat === 'winPct' ? rawValue + '%' : rawValue;
@@ -6541,39 +6627,48 @@
                 }
 
                 const vacNote = team.vacated ? `<span style="color:#C9A86C; font-size:0.75rem; margin-left:4px;" title="${team.vacated.wins} wins vacated (${team.vacated.seasons})">*</span>` : '';
-                const row = document.createElement('tr');
-                row.innerHTML = `
+                rows.push(`<tr>
                     <td>${badge}</td>
                     <td>
                         <div class="team-cell" style="cursor: pointer;" onclick="openProfile({espnId: '${team.espnId}', name: '${team.name}'})">
-                            <div class="team-logo-small" style="background-image: url('${getLogoUrl(team.espnId, 80)}');"></div>
+                            <div class="team-logo-small" data-bg="${getLogoUrl(team.espnId, 80)}"></div>
                             <span>${team.name}${vacNote}</span>
                         </div>
                     </td>
                     <td>${team.conf}</td>
                     <td>${statValue}</td>
-                `;
-                tbody.appendChild(row);
+                </tr>`);
             });
 
-            // Render shell teams with "Coming Soon"
+            // Shell teams render as "Coming Soon"
             shellTeams.forEach(team => {
-                const row = document.createElement('tr');
-                row.style.opacity = '0.6';
-                row.innerHTML = `
+                rows.push(`<tr style="opacity:0.6;">
                     <td><span class="rank-badge" style="background:#E0D9CC;color:#5F6B7A;">—</span></td>
                     <td>
                         <div class="team-cell" style="cursor: pointer;" onclick="openProfile({espnId: '${team.espnId}', name: '${team.name}'})">
-                            <div class="team-logo-small" style="background-image: url('${getLogoUrl(team.espnId, 80)}');"></div>
+                            <div class="team-logo-small" data-bg="${getLogoUrl(team.espnId, 80)}"></div>
                             <span>${team.name}</span>
                         </div>
                     </td>
                     <td>${team.conf}</td>
                     <td><span style="color:#A0AAB8;font-style:italic;font-size:0.8rem;">Coming Soon</span></td>
-                `;
-                tbody.appendChild(row);
+                </tr>`);
             });
+
+            const token = ++_rankingsRenderToken;
+            const FIRST = 40, CHUNK = 60;
+            tbody.insertAdjacentHTML('beforeend', rows.slice(0, FIRST).join(''));
+            let next = FIRST;
+            const more = () => {
+                if (token !== _rankingsRenderToken || next >= rows.length) return;
+                tbody.insertAdjacentHTML('beforeend', rows.slice(next, next + CHUNK).join(''));
+                next += CHUNK;
+                if ('requestIdleCallback' in window) requestIdleCallback(more, { timeout: 500 });
+                else setTimeout(more, 16);
+            };
+            more();
         }
+        let _rankingsRenderToken = 0;
 
         // ── NET Rankings System ──
 
@@ -6679,7 +6774,7 @@
                 html += `<tr>
                     <td>${badge}</td>
                     <td><div class="team-cell" ${teamClick}>
-                        ${logoUrl ? `<div class="team-logo-small" style="background-image:url('${logoUrl}');"></div>` : ''}
+                        ${logoUrl ? `<div class="team-logo-small" data-bg="${logoUrl}"></div>` : ''}
                         <span>${entry.team}${tourneyBadge}</span>
                     </div></td>
                     <td>${entry.season}</td>
@@ -6717,7 +6812,7 @@
                 html += `<tr>
                     <td>${badge}</td>
                     <td><div class="team-cell" ${teamClick}>
-                        ${logoUrl ? `<div class="team-logo-small" style="background-image:url('${logoUrl}');"></div>` : ''}
+                        ${logoUrl ? `<div class="team-logo-small" data-bg="${logoUrl}"></div>` : ''}
                         <span>${prog.team}</span>
                     </div></td>
                     <td><span class="htss-score ${getHtssClass(prog.score)}">${prog.score.toFixed(1)}</span></td>
@@ -6798,7 +6893,7 @@
                 html += `<tr>
                     <td>${badge}</td>
                     <td><div class="team-cell" ${teamClick}>
-                        ${logoUrl ? `<div class="team-logo-small" style="background-image:url('${logoUrl}');"></div>` : ''}
+                        ${logoUrl ? `<div class="team-logo-small" data-bg="${logoUrl}"></div>` : ''}
                         <span>${entry.team}</span>
                     </div></td>
                     <td>${entry.season}</td>
@@ -8272,10 +8367,12 @@
             const arenaData = ARENA_PHOTOS ? ARENA_PHOTOS[String(team.espnId)] : null;
 
             if (arenaData && arenaData.imageUrl) {
-                // Use real arena photo
+                // Use real arena photo — a 500px Commons thumbnail (it sits at
+                // 6% opacity; the originals run 300KB-3MB), original as fallback.
                 const img = new Image();
+                let arenaSrc = wikiThumb(arenaData.imageUrl, 500);
                 img.onload = function() {
-                    bgEl.style.backgroundImage = `url('${arenaData.imageUrl}')`;
+                    bgEl.style.backgroundImage = `url('${arenaSrc}')`;
                     bgEl.style.backgroundSize = 'cover';
                     bgEl.style.backgroundRepeat = 'no-repeat';
                     bgEl.style.backgroundPosition = 'center center';
@@ -8290,10 +8387,16 @@
                     if (profileView) profileView.appendChild(credit);
                 };
                 img.onerror = function() {
+                    if (arenaSrc !== arenaData.imageUrl) {
+                        // No thumbnail for this file — try the original once
+                        arenaSrc = arenaData.imageUrl;
+                        img.src = arenaSrc;
+                        return;
+                    }
                     // Arena photo failed — fall back to logo watermark
                     loadLogoWatermark(bgEl, team, rgb);
                 };
-                img.src = arenaData.imageUrl;
+                img.src = arenaSrc;
             } else {
                 // No arena photo — use logo watermark as fallback
                 loadLogoWatermark(bgEl, team, rgb);
@@ -18402,7 +18505,7 @@
                     weight: a.displayWeight || '',
                     year: a.experience?.displayValue || '',
                     jersey: a.jersey || '',
-                    headshot: a.headshot?.href || `https://a.espncdn.com/combiner/i?img=/i/headshots/mens-college-basketball/players/full/${a.id}.png&w=64&h=64`,
+                    headshot: espnHeadshot(a.headshot?.href || a.id, 96),
                     stats: {}
                 }));
 
@@ -18496,7 +18599,7 @@
 
                 return `<tr class="${isLeader ? 'leading-scorer' : ''}">
                     <td><div class="player-name-cell">
-                        <img class="player-headshot" src="${p.headshot}" alt="" onerror="this.style.display='none'">
+                        <img class="player-headshot" src="${p.headshot}" alt="" loading="lazy" decoding="async" onerror="this.style.display='none'">
                         <span>${p.name}</span>
                     </div></td>
                     <td>${p.position}</td>
