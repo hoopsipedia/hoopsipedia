@@ -278,7 +278,11 @@
             // cost ~1s of main-thread JSON parsing on a mid-range phone. Unless a
             // view asks for them (whenData / ensureAllLoads), they wait until the
             // page has been interactive for a few seconds.
-            const HEAVY_DELAY = 4000;
+            // Real visitors scroll or tap within a couple of seconds, and that
+            // is the trigger; the timer is only a fallback for a page left idle.
+            const HEAVY_DELAY = 10000;
+            ['pointerdown', 'keydown', 'wheel', 'touchstart', 'scroll'].forEach(ev =>
+                window.addEventListener(ev, startHeavyLoads, { once: true, passive: true }));
             const schedule = () => setTimeout(startHeavyLoads, HEAVY_DELAY);
             if (document.readyState === 'complete') schedule();
             else window.addEventListener('load', schedule, { once: true });

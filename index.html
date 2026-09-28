@@ -29,7 +29,7 @@
           a.async = true; a.src = 'https://www.googletagmanager.com/gtag/js?id=G-R7JXCJWHYV';
           document.head.appendChild(a);
           // AdSense costs ~400ms of main thread on a phone; it waits for the
-          // first interaction or five more seconds, whichever comes first.
+          // first interaction or ten more seconds, whichever comes first.
           var adsDone = false;
           function ads() {
             if (adsDone) return; adsDone = true;
@@ -41,7 +41,7 @@
           ['pointerdown', 'keydown', 'scroll', 'touchstart'].forEach(function (ev) {
             window.addEventListener(ev, ads, { once: true, passive: true });
           });
-          setTimeout(ads, 5000);
+          setTimeout(ads, 10000);
         }
         function afterLoad() {
           if ('requestIdleCallback' in window) requestIdleCallback(inject, { timeout: 4000 });
@@ -691,7 +691,7 @@
     <!-- Correction Button -->
     <button class="correction-btn" onclick="openCorrection()" title="Suggest a Correction">✎</button>
 
-    <script src="/app.js?v=6ad881be04" defer></script>
+    <script src="/app.js?v=4accbb7b73" defer></script>
 
     <!-- Chat Panel -->
     <div id="chatOverlay" class="chat-overlay" onclick="closeChatPanel()"></div>
