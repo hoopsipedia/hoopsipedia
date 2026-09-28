@@ -59,13 +59,19 @@ jobs:
     steps:
       # No checkout needed — we audit the live site. The LHCI config is
       # generated at runtime so the repo stays clean.
+      # disableFullPageScreenshot: Lighthouse's final full-page capture grows
+      # the viewport to the whole document, which fires every lazy logo on
+      # /rankings (364 images, ~2.5s of decode) that no real visitor loads.
       - name: Write LHCI assertion config (baseline 2026-09-11, see header)
         run: |
           cat > lighthouserc.json <<'EOF'
           {
             "ci": {
               "collect": {
-                "settings": { "throttlingMethod": "devtools" }
+                "settings": {
+                  "throttlingMethod": "devtools",
+                  "disableFullPageScreenshot": true
+                }
               },
               "assert": {
                 "assertions": {

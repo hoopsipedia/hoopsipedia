@@ -60,8 +60,9 @@ next; Phase 3 (ride the season, peak in March) follows.
 
 ## Housekeeping worth doing when convenient
 
-- `games_1/2/3.json` are 22 MB each against the 25 MiB limit; plan a 4th shard
-  (or stop deploying the monoliths) before the next big fill.
+- ~~`games_1/2/3.json` are 22 MB each against the 25 MiB limit~~ Done 2026-09-28:
+  the monoliths are no longer deployed; they are gitignored local copies with
+  committed `.gz` twins, handled by `scripts/pack_store.py` like the store.
 - Best-practices score 0.79 is third-party cookies (AdSense/doubleclick and a
   Wikimedia arena photo) — self-host the arena photos if it matters.
 - The August cloud session's branch is merged; `.git` is 1.7 GB — a history

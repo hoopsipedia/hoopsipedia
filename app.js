@@ -428,10 +428,10 @@
             } catch (e) {
                 console.error('Error loading data:', e);
                 document.querySelector('.container').innerHTML = `<div class="error-fallback" style="min-height:60vh;">
-                    <div class="error-fallback-icon" style="font-size:1.4rem;font-weight:700;color:#A0AAB8;">Oops!</div>
+                    <div class="error-fallback-icon" style="font-size:1.4rem;font-weight:700;color:#6A7079;">Oops!</div>
                     <div class="error-fallback-message" style="font-size:1.15rem;">We're having trouble loading Hoopsipedia's data. Try refreshing the page.</div>
                     <button class="error-fallback-retry" onclick="window.location.reload()">Refresh Page</button>
-                    <div style="margin-top:1rem;font-size:0.8rem;color:#A0AAB8;">${e.message}</div>
+                    <div style="margin-top:1rem;font-size:0.8rem;color:#6A7079;">${e.message}</div>
                 </div>`;
                 throw e;
             }
@@ -3605,7 +3605,7 @@
                             <div style="font-size: 1.3rem; font-weight: 800; color: ${c1Color};">${c1.name}</div>
                             <div style="font-size: 0.8rem; color: #5F6B7A; margin-top: 0.25rem;">${c1SchoolName}${c1Active ? ' <span style="display:inline-block;padding:0.1rem 0.4rem;background:#E8F5E9;color:#1B6B3A;border-radius:0.2rem;font-size:0.6rem;font-weight:700;">ACTIVE</span>' : ''}</div>
                         </div>
-                        <div style="font-size: 1.2rem; color: #A0AAB8; font-weight: 600;">VS</div>
+                        <div style="font-size: 1.2rem; color: #6A7079; font-weight: 600;">VS</div>
                         <div style="text-align: center; flex: 1; min-width: 200px;">
                             ${c2Logo ? `<img src="${c2Logo}" alt="" style="width: 64px; height: 64px; object-fit: contain; margin-bottom: 0.5rem;">` : ''}
                             <div style="font-size: 1.3rem; font-weight: 800; color: ${c2Color};">${c2.name}</div>
@@ -3881,7 +3881,7 @@
         // ===== SKELETON HELPERS =====
         function renderErrorFallback(retryFn) {
             return `<div class="error-fallback">
-                <div class="error-fallback-icon" style="font-size:1.4rem;font-weight:700;color:#A0AAB8;">Oops!</div>
+                <div class="error-fallback-icon" style="font-size:1.4rem;font-weight:700;color:#6A7079;">Oops!</div>
                 <div class="error-fallback-message">We're having trouble loading this data. Try again?</div>
                 <button class="error-fallback-retry" onclick="${retryFn}">Retry</button>
             </div>`;
@@ -4478,9 +4478,9 @@
                             const t1Winning = parseInt(t1Score) >= parseInt(t2Score);
                             scoreboardHTML = `
                                 <div class="game-scoreboard">
-                                    <div class="game-score-team" style="color: ${t1Winning ? t1Color : '#A0AAB8'};">${t1Score}</div>
+                                    <div class="game-score-team" style="color: ${t1Winning ? t1Color : '#6A7079'};">${t1Score}</div>
                                     <div class="game-score-divider">-</div>
-                                    <div class="game-score-team" style="color: ${!t1Winning ? t2Color : '#A0AAB8'};">${t2Score}</div>
+                                    <div class="game-score-team" style="color: ${!t1Winning ? t2Color : '#6A7079'};">${t2Score}</div>
                                 </div>
                                 <div class="game-score-status live">&#9679; ${halfStr}</div>`;
                             timeStr = '';
@@ -4492,9 +4492,9 @@
                             const otLabel = gamePeriod > 2 ? (gamePeriod === 3 ? ' (OT)' : ` (${gamePeriod - 2}OT)`) : '';
                             scoreboardHTML = `
                                 <div class="game-scoreboard">
-                                    <div class="game-score-team" style="color: ${t1Won ? t1Color : '#A0AAB8'};">${t1Score}</div>
+                                    <div class="game-score-team" style="color: ${t1Won ? t1Color : '#6A7079'};">${t1Score}</div>
                                     <div class="game-score-divider">-</div>
-                                    <div class="game-score-team" style="color: ${!t1Won ? t2Color : '#A0AAB8'};">${t2Score}</div>
+                                    <div class="game-score-team" style="color: ${!t1Won ? t2Color : '#6A7079'};">${t2Score}</div>
                                 </div>
                                 <div class="game-score-status final">FINAL${otLabel}</div>`;
                             timeStr = '';
@@ -4504,9 +4504,9 @@
                             const t1Winning = parseInt(t1Score) >= parseInt(t2Score);
                             scoreboardHTML = `
                                 <div class="game-scoreboard">
-                                    <div class="game-score-team" style="color: ${t1Winning ? t1Color : '#A0AAB8'};">${t1Score}</div>
+                                    <div class="game-score-team" style="color: ${t1Winning ? t1Color : '#6A7079'};">${t1Score}</div>
                                     <div class="game-score-divider">-</div>
-                                    <div class="game-score-team" style="color: ${!t1Winning ? t2Color : '#A0AAB8'};">${t2Score}</div>
+                                    <div class="game-score-team" style="color: ${!t1Winning ? t2Color : '#6A7079'};">${t2Score}</div>
                                 </div>
                                 <div class="game-score-status halftime">HALFTIME</div>`;
                             timeStr = '';
@@ -5032,7 +5032,7 @@
                         card.style.cursor = 'pointer';
                         card.style.position = 'relative';
                         card.innerHTML = `
-                            <div style="position: absolute; top: 0.35rem; left: 0.45rem; font-size: 0.7rem; font-weight: 800; color: #C9A86C;">${entry.current}</div>
+                            <div style="position: absolute; top: 0.35rem; left: 0.45rem; font-size: 0.7rem; font-weight: 800; color: var(--gold-text);">${entry.current}</div>
                             <div class="program-logo" style="background-image: url('${getLogoUrl(espnId)}');"></div>
                             <div class="program-name">${entry.team?.nickname || entry.team?.location || entry.team?.shortDisplayName || entry.team?.displayName || 'Unknown'}</div>
                             <div style="font-size: 0.72rem; color: #5F6B7A; margin-top: 0.2rem;">${record}</div>
@@ -5761,7 +5761,7 @@
                         container.innerHTML = `
                             <div style="text-align: center; padding: 2.5rem 1.5rem;">
                                 <div style="font-size: 1.1rem; font-weight: 600; color: #2C3345; margin-bottom: 0.5rem;">Unable to Load Matchup History</div>
-                                <div style="font-size: 0.9rem; color: #6B7A8D;">Check the <strong>Full Program Comparison</strong> tab to compare these programs.</div>
+                                <div style="font-size: 0.9rem; color: #667486;">Check the <strong>Full Program Comparison</strong> tab to compare these programs.</div>
                             </div>
                         `;
                     }
@@ -5957,9 +5957,9 @@
             if (games.length === 0 && !hasAllTime) {
                 container.innerHTML = `
                     <div style="text-align: center; padding: 2.5rem 1.5rem;">
-                        <div style="font-size: 1.1rem; font-weight: 700; color: #A0AAB8; margin-bottom: 0.75rem;">No Games</div>
+                        <div style="font-size: 1.1rem; font-weight: 700; color: #6A7079; margin-bottom: 0.75rem;">No Games</div>
                         <div style="font-size: 1.1rem; font-weight: 600; color: #2C3345; margin-bottom: 0.5rem;">No Matchup History Found</div>
-                        <div style="font-size: 0.9rem; color: #6B7A8D; max-width: 400px; margin: 0 auto;">
+                        <div style="font-size: 0.9rem; color: #667486; max-width: 400px; margin: 0 auto;">
                             These teams don't have recorded matchups in our database.
                             Check the <strong>Full Program Comparison</strong> tab to see how their programs stack up historically.
                         </div>
@@ -6020,7 +6020,7 @@
                 const d = new Date(m.date + 'T12:00:00');
                 const dateStr = d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
                 const locIcon = m.loc === 'H' ? 'Home' : m.loc === 'A' ? 'Away' : m.loc === 'N' ? 'Neutral' : '';
-                const venueStr = m.venue ? `<div style="font-size: 0.65rem; color: #A0AAB8; margin-top: 0.1rem; line-height: 1.3;">${locIcon ? locIcon + ' &middot; ' : ''}${m.venue}</div>` : (m.loc ? `<div style="font-size: 0.65rem; color: #A0AAB8; margin-top: 0.1rem;">${locIcon}</div>` : '');
+                const venueStr = m.venue ? `<div style="font-size: 0.65rem; color: #6A7079; margin-top: 0.1rem; line-height: 1.3;">${locIcon ? locIcon + ' &middot; ' : ''}${m.venue}</div>` : (m.loc ? `<div style="font-size: 0.65rem; color: #6A7079; margin-top: 0.1rem;">${locIcon}</div>` : '');
                 const otStr = m.ot ? `<span style="font-size: 0.65rem; color: #C9A86C; margin-left: 0.25rem;">${m.ot}</span>` : '';
                 const uid = m.date.replace(/-/g, '') + '_' + idx;
 
@@ -6044,12 +6044,12 @@
                     const tourneyBadge = isTourneyGame ? `<span style="display: inline-flex; align-items: center; gap: 0.2rem; background: #E8F5E9; color: #1B6B3A; padding: 0.15rem 0.5rem; border-radius: 0.3rem; font-size: 0.6rem; font-weight: 700; text-transform: uppercase;">NCAA TOURNAMENT</span>` : '';
                     html += `
                         <div class="h2h-game-row" data-decade="${decade}" style="display: flex; align-items: center; padding: 0.6rem 0.8rem; background: linear-gradient(135deg, #FFF8F0, #FEF3E8); border-radius: 0.4rem; border-left: 3px solid #E65100; gap: 0.75rem; font-size: 0.85rem; border: 1px solid #FFD9B3;">
-                            <div style="flex: 1; font-weight: ${m.t1Score > m.t2Score ? '700' : '400'}; color: ${m.t1Score > m.t2Score ? t1Color : '#A0AAB8'};">${t1.name.split(' ').pop()} <span style="font-variant-numeric: tabular-nums;">${m.t1Score}</span></div>
+                            <div style="flex: 1; font-weight: ${m.t1Score > m.t2Score ? '700' : '400'}; color: ${m.t1Score > m.t2Score ? t1Color : '#6A7079'};">${t1.name.split(' ').pop()} <span style="font-variant-numeric: tabular-nums;">${m.t1Score}</span></div>
                             <div style="font-size: 0.7rem; color: #E65100; min-width: 80px; text-align: center;">
                                 <div style="font-weight: 700; font-size: 0.6rem; letter-spacing: 0.05em;"><span style="display:inline-block;width:6px;height:6px;background:#E53935;border-radius:50%;animation:pulse 1.5s infinite;margin-right:3px;vertical-align:middle;"></span> LIVE</div>
                                 ${m._liveStatus === 'Halftime' ? 'Halftime' : m._liveDetail || 'In Progress'}${tourneyBadge ? `<div style="margin-top: 0.3rem;">${tourneyBadge}</div>` : ''}${venueStr}
                             </div>
-                            <div style="flex: 1; text-align: right; font-weight: ${m.t2Score > m.t1Score ? '700' : '400'}; color: ${m.t2Score > m.t1Score ? t2Color : '#A0AAB8'};"><span style="font-variant-numeric: tabular-nums;">${m.t2Score}</span> ${t2.name.split(' ').pop()}</div>
+                            <div style="flex: 1; text-align: right; font-weight: ${m.t2Score > m.t1Score ? '700' : '400'}; color: ${m.t2Score > m.t1Score ? t2Color : '#6A7079'};"><span style="font-variant-numeric: tabular-nums;">${m.t2Score}</span> ${t2.name.split(' ').pop()}</div>
                         </div>
                     `;
                 } else if (isUpcoming) {
@@ -6080,9 +6080,9 @@
                     html += `
                         <div class="h2h-game-wrapper" id="h2h-wrap-${uid}" data-decade="${decade}">
                             <div class="h2h-game-row" data-decade="${decade}" onclick="toggleH2HBoxScore('${uid}', '${t1.espnId}', '${t2.espnId}', '${m.date}', event)" title="Click for game details" style="display: flex; align-items: center; padding: 0.6rem 0.8rem; background: #FAFAF7; border-radius: 0.4rem; border-left: 3px solid ${winnerColor}; gap: 0.75rem; font-size: 0.85rem;">
-                                <div style="flex: 1; font-weight: ${m.t1Winner ? '700' : '400'}; color: ${m.t1Winner ? t1Color : '#A0AAB8'};">${t1.name.split(' ').pop()} <span style="font-variant-numeric: tabular-nums;">${m.t1Score}</span>${m.t1Winner ? otStr : ''}</div>
+                                <div style="flex: 1; font-weight: ${m.t1Winner ? '700' : '400'}; color: ${m.t1Winner ? t1Color : '#6A7079'};">${t1.name.split(' ').pop()} <span style="font-variant-numeric: tabular-nums;">${m.t1Score}</span>${m.t1Winner ? otStr : ''}</div>
                                 <div style="font-size: 0.7rem; color: #5F6B7A; min-width: 80px; text-align: center;">${dateStr}${venueStr}</div>
-                                <div style="flex: 1; text-align: right; font-weight: ${!m.t1Winner ? '700' : '400'}; color: ${!m.t1Winner ? t2Color : '#A0AAB8'};">${!m.t1Winner ? otStr : ''}<span style="font-variant-numeric: tabular-nums;">${m.t2Score}</span> ${t2.name.split(' ').pop()}</div>
+                                <div style="flex: 1; text-align: right; font-weight: ${!m.t1Winner ? '700' : '400'}; color: ${!m.t1Winner ? t2Color : '#6A7079'};">${!m.t1Winner ? otStr : ''}<span style="font-variant-numeric: tabular-nums;">${m.t2Score}</span> ${t2.name.split(' ').pop()}</div>
                                 ${chevronIcon}
                             </div>
                             <div class="h2h-boxscore-panel" id="h2h-panel-${uid}">
@@ -6133,12 +6133,12 @@
                 <div style="display: flex; justify-content: center; align-items: center; gap: 1.5rem; margin-bottom: 0.75rem;">
                     <div style="text-align: center;">
                         <div style="font-size: 1.8rem; font-weight: 800; color: ${t1Color}; line-height: 1;">${t1Wins}</div>
-                        <div style="font-size: 0.7rem; color: #6B7A8D;">${t1.name.split(' ').pop()}</div>
+                        <div style="font-size: 0.7rem; color: #667486;">${t1.name.split(' ').pop()}</div>
                     </div>
-                    <div style="font-size: 0.9rem; color: #A0AAB8; font-weight: 600;">-</div>
+                    <div style="font-size: 0.9rem; color: #6A7079; font-weight: 600;">-</div>
                     <div style="text-align: center;">
                         <div style="font-size: 1.8rem; font-weight: 800; color: ${t2Color}; line-height: 1;">${t2Wins}</div>
-                        <div style="font-size: 0.7rem; color: #6B7A8D;">${t2.name.split(' ').pop()}</div>
+                        <div style="font-size: 0.7rem; color: #667486;">${t2.name.split(' ').pop()}</div>
                     </div>
                 </div>
                 <div style="display: flex; height: 6px; border-radius: 3px; overflow: hidden; max-width: 250px; margin: 0 auto 0.75rem;">
@@ -6633,7 +6633,7 @@
                         </div>
                     </td>
                     <td>${team.conf}</td>
-                    <td><span style="color:#A0AAB8;font-style:italic;font-size:0.8rem;">Coming Soon</span></td>
+                    <td><span style="color:#6A7079;font-style:italic;font-size:0.8rem;">Coming Soon</span></td>
                 </tr>`);
             });
 
@@ -8028,7 +8028,7 @@
             const sparkBars = recentSeasons.map(s => {
                 const pct = ((s.htss - minHtss) / range) * 100;
                 const cls = getHtssClass(s.htss);
-                const colors = { goat: '#D4AF37', transcendent: '#1B2A4A', elite: '#2D7D46', 'very-good': '#3A7CA5', good: '#6B7A8D', avg: '#C4BDB0' };
+                const colors = { goat: '#D4AF37', transcendent: '#1B2A4A', elite: '#2D7D46', 'very-good': '#3A7CA5', good: '#667486', avg: '#C4BDB0' };
                 return `<div class="htss-sparkline-bar" style="height:${Math.max(8, pct)}%;background:${colors[cls]};" title="${s.season}: ${s.htss.toFixed(1)}"></div>`;
             }).join('');
 
@@ -8058,7 +8058,7 @@
                     </div>
                     <div style="font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:0.07em;color:#5F6B7A;margin-bottom:0.3rem;">HTSS Over Time</div>
                     <div class="htss-sparkline">${sparkBars}</div>
-                    <div style="display:flex;justify-content:space-between;font-size:0.68rem;color:#A0AAB8;margin-top:0.25rem;">
+                    <div style="display:flex;justify-content:space-between;font-size:0.68rem;color:#6A7079;margin-top:0.25rem;">
                         <span>${recentSeasons[0]?.season || ''}</span>
                         <span>${recentSeasons[recentSeasons.length - 1]?.season || ''}</span>
                     </div>
@@ -8352,7 +8352,9 @@
                 // Use real arena photo — a 500px Commons thumbnail (it sits at
                 // 6% opacity; the originals run 300KB-3MB), original as fallback.
                 const img = new Image();
-                let arenaSrc = wikiThumb(arenaData.imageUrl, 500);
+                // Self-hosted copy first (scripts/fetch_arena_photos.py): no
+                // third-party cookie, no dependency on Commons being up.
+                let arenaSrc = arenaData.localImage || wikiThumb(arenaData.imageUrl, 500);
                 img.onload = function() {
                     bgEl.style.backgroundImage = `url('${arenaSrc}')`;
                     bgEl.style.backgroundSize = 'cover';
@@ -8363,12 +8365,17 @@
                     // Add photo credit at bottom of profile
                     const credit = document.createElement('div');
                     credit.className = 'profile-photo-credit';
-                    credit.style.cssText = 'text-align: center; padding: 0.75rem; font-size: 0.65rem; color: #A0AAB8; border-top: 1px solid #E0D9CC; margin-top: 1rem;';
-                    credit.innerHTML = `${arenaData.arena} — Photo by ${arenaData.photographer}, <a href="${arenaData.licenseUrl}" target="_blank" rel="noopener" style="color: #A0AAB8; text-decoration: underline;">${arenaData.license}</a>`;
+                    credit.style.cssText = 'text-align: center; padding: 0.75rem; font-size: 0.65rem; color: #6A7079; border-top: 1px solid #E0D9CC; margin-top: 1rem;';
+                    credit.innerHTML = `${arenaData.arena} — Photo by ${arenaData.photographer}, <a href="${arenaData.licenseUrl}" target="_blank" rel="noopener" style="color: #6A7079; text-decoration: underline;">${arenaData.license}</a>`;
                     const profileView = document.getElementById('profile');
                     if (profileView) profileView.appendChild(credit);
                 };
                 img.onerror = function() {
+                    if (arenaSrc === arenaData.localImage) {
+                        arenaSrc = wikiThumb(arenaData.imageUrl, 500);
+                        img.src = arenaSrc;
+                        return;
+                    }
                     if (arenaSrc !== arenaData.imageUrl) {
                         // No thumbnail for this file — try the original once
                         arenaSrc = arenaData.imageUrl;
@@ -8723,7 +8730,7 @@
                                     <div style="font-family:var(--font-serif); font-size:15px; font-weight:700; color:var(--navy);">${rival.name}</div>
                                 </div>
                                 <div class="numerals" style="font-size:14px; color:${h2hColor}; font-weight:700;">${h2hText}</div>
-                                <div style="font-family:var(--font-mono); font-size:10px; letter-spacing:0.1em; text-transform:uppercase; color:var(--gold-brand); font-weight:600; margin-top:0.4rem;">Compare Programs →</div>
+                                <div style="font-family:var(--font-mono); font-size:10px; letter-spacing:0.1em; text-transform:uppercase; color:var(--gold-text); font-weight:600; margin-top:0.4rem;">Compare Programs →</div>
                             </div>`;
                         }).join('')}
                     </div>
@@ -8955,11 +8962,11 @@
                                     const bgColor = idx % 2 === 0 ? '#FFFFFF' : '#FAFAF7';
                                     const postBadge = s.postseason === 'Champion' ? 'background:#C9A86C;color:#1B2A4A;font-weight:700;' :
                                                       s.postseason === 'Final Four' ? 'background:#E8DDD0;color:#1B2A4A;font-weight:600;' :
-                                                      s.postseason ? 'color:#6B7A8D;' : 'color:#C4B99A;';
+                                                      s.postseason ? 'color:#667486;' : 'color:#C4B99A;';
                                     return `<tr style="background:${bgColor}; border-bottom: 1px solid #F0EDE6;">
                                         <td style="padding: 0.5rem 0.75rem; font-weight: 600; color: #2C3345;"><a class="season-year-link" href="#season/${teamSlug(team.name)}/${year - 1}-${String(year).slice(2)}" title="View ${year - 1}-${String(year).slice(2)} season page">${year - 1}-${String(year).slice(2)}</a></td>
                                         <td style="padding: 0.5rem 0.75rem; text-align: center; color: #2C3345;">${s.wins}-${s.losses}</td>
-                                        <td style="padding: 0.5rem 0.75rem; text-align: center; color: #6B7A8D;">${confStr}</td>
+                                        <td style="padding: 0.5rem 0.75rem; text-align: center; color: #667486;">${confStr}</td>
                                         <td style="padding: 0.5rem 0.75rem; text-align: center; color: ${parseFloat(pct) >= 60 ? '#2D7D46' : parseFloat(pct) < 40 ? '#C9463E' : '#2C3345'}; font-weight: 600;">.${pct.replace('.', '').padStart(3, '0')}</td>
                                         <td style="padding: 0.5rem 0.75rem;"><span style="font-size: 0.78rem; padding: 0.15rem 0.5rem; border-radius: 0.25rem; ${postBadge}">${s.postseason || '-'}</span></td>
                                     </tr>`;
@@ -8967,7 +8974,7 @@
                             </tbody>
                         </table>
                     </div>
-                    ${currentCoach ? `<div style="margin-top: 1rem; font-size: 0.85rem; color: #6B7A8D;">Current Head Coach: <strong style="color: #2C3345;">${currentCoach}</strong></div>` : ''}
+                    ${currentCoach ? `<div style="margin-top: 1rem; font-size: 0.85rem; color: #667486;">Current Head Coach: <strong style="color: #2C3345;">${currentCoach}</strong></div>` : ''}
                 `;
 
                 const tableEl = document.createElement('div');
@@ -9050,12 +9057,12 @@
                                 const bgColor = idx % 2 === 0 ? '#FFFFFF' : '#FAFAF7';
                                 const postBadge = s.postseason === 'Champion' ? 'background:#C9A86C;color:#1B2A4A;font-weight:700;' :
                                                   s.postseason === 'Final Four' || s.postseason === 'Runner-Up' ? 'background:#E8DDD0;color:#1B2A4A;font-weight:600;' :
-                                                  s.postseason ? 'color:#6B7A8D;' : 'color:#C4B99A;';
+                                                  s.postseason ? 'color:#667486;' : 'color:#C4B99A;';
                                 const displayYear = `${year - 1}-${String(year).slice(2)}`;
                                 return `<tr style="background:${bgColor}; border-bottom: 1px solid #F0EDE6;">
                                     <td style="padding: 0.5rem 0.75rem; font-weight: 600; color: #2C3345;"><a class="season-year-link" href="#season/${teamSlug(team.name)}/${displayYear}" title="View ${displayYear} season page">${displayYear}</a></td>
                                     <td style="padding: 0.5rem 0.75rem; text-align: center; color: #2C3345;">${s.wins}-${s.losses}${s.synthesized ? ' <span title="Results vacated by the NCAA; season absent from the official record. Computed from the game log." style="color:#C9463E;font-weight:700;cursor:help;">*</span>' : ''}</td>
-                                    <td style="padding: 0.5rem 0.75rem; text-align: center; color: #6B7A8D;">${confStr}</td>
+                                    <td style="padding: 0.5rem 0.75rem; text-align: center; color: #667486;">${confStr}</td>
                                     <td style="padding: 0.5rem 0.75rem; color: #2C3345; font-size: 0.82rem;">${s.coach || '-'}</td>
                                     <td style="padding: 0.5rem 0.75rem; text-align: center; color: ${parseFloat(pct) >= 60 ? '#2D7D46' : parseFloat(pct) < 40 ? '#C9463E' : '#2C3345'}; font-weight: 600;">.${pct.replace('.', '').padStart(3, '0')}</td>
                                     <td style="padding: 0.5rem 0.75rem;"><span style="font-size: 0.78rem; padding: 0.15rem 0.5rem; border-radius: 0.25rem; ${postBadge}">${s.postseason || '-'}</span></td>
@@ -9065,7 +9072,7 @@
                     </table>
                 </div>
                 ${validYears.some(y => seasonData[y].synthesized) ? `<div style="margin-top: 0.6rem; font-size: 0.78rem; color: #6F6A5C; text-align: center;">* Season vacated by the NCAA — shown for history, not counted in official records or rankings.</div>` : ''}
-                <div style="margin-top: 0.75rem; font-size: 0.8rem; color: #A0AAB8; text-align: center;">
+                <div style="margin-top: 0.75rem; font-size: 0.8rem; color: #6A7079; text-align: center;">
                     ${validYears.length} seasons on record (${validYears[0] - 1}-${String(validYears[0]).slice(2)} to ${validYears[validYears.length-1] - 1}-${String(validYears[validYears.length-1]).slice(2)})
                 </div>
             `;
@@ -9555,11 +9562,11 @@
                 let html = `
                     <tr class="season-sched-row${expandable ? ' expandable' : ''}" id="season-row-${uid}" style="background:${bg};"${expandable ? ` onclick="toggleSeasonBoxScore('${uid}', event)" title="Click for box score"` : ''}>
                         <td class="numerals" style="white-space:nowrap;">${dateDisplay}</td>
-                        <td style="text-align:center; color:#6B7A8D;">${locLabel}</td>
+                        <td style="text-align:center; color:#667486;">${locLabel}</td>
                         <td><div style="display:flex; align-items:center; gap:0.5rem;">${logoCell}${oppCell}</div></td>
                         <td style="text-align:center;">${resultPill}</td>
                         <td class="numerals" style="text-align:center; font-weight:600;">${g.pts}-${g.opp_pts}${otTag}${vacTag}</td>
-                        <td style="color:#6B7A8D; font-size:0.8rem;">${escapeHtml(String(g.arena || ''))}</td>
+                        <td style="color:#667486; font-size:0.8rem;">${escapeHtml(String(g.arena || ''))}</td>
                         <td style="text-align:right;">${expandable ? '<span class="season-expand-icon">▼</span>' : ''}</td>
                     </tr>`;
                 if (expandable) {
@@ -13856,29 +13863,29 @@
                     0: `<div style="overflow-x:auto;">
                         <div style="font-weight:700;color:#1B2A4A;margin-bottom:0.5rem;font-size:0.95rem;">Villanova 51, Dayton 49 — March 15, 1985</div>
                         <div style="font-weight:600;color:#1B2A4A;margin:0.75rem 0 0.25rem;font-size:0.85rem;">Villanova — 20-42 FG (47.6%), 11-17 FT</div>
-                        <table style="width:100%;border-collapse:collapse;font-size:0.78rem;margin-bottom:1rem;"><thead><tr style="border-bottom:2px solid #E8E2D6;color:#6B7A8D;text-align:right;"><th style="text-align:left;padding:0.3rem 0.5rem;">Player</th><th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th><th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th><th style="padding:0.3rem;">AST</th><th style="padding:0.3rem;font-weight:700;color:#1B2A4A;">PTS</th></tr></thead><tbody>
+                        <table style="width:100%;border-collapse:collapse;font-size:0.78rem;margin-bottom:1rem;"><thead><tr style="border-bottom:2px solid #E8E2D6;color:#667486;text-align:right;"><th style="text-align:left;padding:0.3rem 0.5rem;">Player</th><th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th><th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th><th style="padding:0.3rem;">AST</th><th style="padding:0.3rem;font-weight:700;color:#1B2A4A;">PTS</th></tr></thead><tbody>
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">E. Pinckney</td><td style="text-align:right;padding:0.3rem;">40</td><td style="text-align:right;padding:0.3rem;">6-10</td><td style="text-align:right;padding:0.3rem;">8-13</td><td style="text-align:right;padding:0.3rem;">2</td><td style="text-align:right;padding:0.3rem;">4</td><td style="text-align:right;padding:0.3rem;font-weight:700;">20</td></tr>
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">D. McClain</td><td style="text-align:right;padding:0.3rem;">36</td><td style="text-align:right;padding:0.3rem;">5-9</td><td style="text-align:right;padding:0.3rem;">1-1</td><td style="text-align:right;padding:0.3rem;">1</td><td style="text-align:right;padding:0.3rem;">1</td><td style="text-align:right;padding:0.3rem;font-weight:700;">11</td></tr>
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">H. Pressley</td><td style="text-align:right;padding:0.3rem;">38</td><td style="text-align:right;padding:0.3rem;">4-9</td><td style="text-align:right;padding:0.3rem;">0-1</td><td style="text-align:right;padding:0.3rem;">4</td><td style="text-align:right;padding:0.3rem;">2</td><td style="text-align:right;padding:0.3rem;font-weight:700;">8</td></tr>
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">H. Jensen</td><td style="text-align:right;padding:0.3rem;">24</td><td style="text-align:right;padding:0.3rem;">3-5</td><td style="text-align:right;padding:0.3rem;">2-2</td><td style="text-align:right;padding:0.3rem;">0</td><td style="text-align:right;padding:0.3rem;">0</td><td style="text-align:right;padding:0.3rem;font-weight:700;">8</td></tr>
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">G. McLain</td><td style="text-align:right;padding:0.3rem;">37</td><td style="text-align:right;padding:0.3rem;">1-4</td><td style="text-align:right;padding:0.3rem;">0-0</td><td style="text-align:right;padding:0.3rem;">0</td><td style="text-align:right;padding:0.3rem;">3</td><td style="text-align:right;padding:0.3rem;font-weight:700;">2</td></tr>
-                            <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;color:#6B7A8D;">D. Wilbur</td><td style="text-align:right;padding:0.3rem;">23</td><td style="text-align:right;padding:0.3rem;">1-5</td><td style="text-align:right;padding:0.3rem;">0-0</td><td style="text-align:right;padding:0.3rem;">1</td><td style="text-align:right;padding:0.3rem;">0</td><td style="text-align:right;padding:0.3rem;">2</td></tr>
+                            <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;color:#667486;">D. Wilbur</td><td style="text-align:right;padding:0.3rem;">23</td><td style="text-align:right;padding:0.3rem;">1-5</td><td style="text-align:right;padding:0.3rem;">0-0</td><td style="text-align:right;padding:0.3rem;">1</td><td style="text-align:right;padding:0.3rem;">0</td><td style="text-align:right;padding:0.3rem;">2</td></tr>
                             <tr style="border-bottom:2px solid #E8E2D6;font-weight:700;"><td style="text-align:left;padding:0.3rem 0.5rem;">TOTALS</td><td style="text-align:right;padding:0.3rem;">200</td><td style="text-align:right;padding:0.3rem;">20-42</td><td style="text-align:right;padding:0.3rem;">11-17</td><td style="text-align:right;padding:0.3rem;">8</td><td style="text-align:right;padding:0.3rem;">11</td><td style="text-align:right;padding:0.3rem;">51</td></tr>
                         </tbody></table>
                         <div style="font-weight:600;color:#1B2A4A;margin:0.75rem 0 0.25rem;font-size:0.85rem;">Dayton — 16-43 FG (37.2%), 17-17 FT</div>
-                        <table style="width:100%;border-collapse:collapse;font-size:0.78rem;"><thead><tr style="border-bottom:2px solid #E8E2D6;color:#6B7A8D;text-align:right;"><th style="text-align:left;padding:0.3rem 0.5rem;">Player</th><th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th><th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th><th style="padding:0.3rem;">AST</th><th style="padding:0.3rem;font-weight:700;color:#1B2A4A;">PTS</th></tr></thead><tbody>
+                        <table style="width:100%;border-collapse:collapse;font-size:0.78rem;"><thead><tr style="border-bottom:2px solid #E8E2D6;color:#667486;text-align:right;"><th style="text-align:left;padding:0.3rem 0.5rem;">Player</th><th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th><th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th><th style="padding:0.3rem;">AST</th><th style="padding:0.3rem;font-weight:700;color:#1B2A4A;">PTS</th></tr></thead><tbody>
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">D. Goodwin</td><td style="text-align:right;padding:0.3rem;">38</td><td style="text-align:right;padding:0.3rem;">4-8</td><td style="text-align:right;padding:0.3rem;">8-8</td><td style="text-align:right;padding:0.3rem;">1</td><td style="text-align:right;padding:0.3rem;">0</td><td style="text-align:right;padding:0.3rem;font-weight:700;">16</td></tr>
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">L. Schellenberg</td><td style="text-align:right;padding:0.3rem;">40</td><td style="text-align:right;padding:0.3rem;">3-6</td><td style="text-align:right;padding:0.3rem;">6-6</td><td style="text-align:right;padding:0.3rem;">1</td><td style="text-align:right;padding:0.3rem;">0</td><td style="text-align:right;padding:0.3rem;font-weight:700;">12</td></tr>
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">S. Toney</td><td style="text-align:right;padding:0.3rem;">37</td><td style="text-align:right;padding:0.3rem;">5-16</td><td style="text-align:right;padding:0.3rem;">2-2</td><td style="text-align:right;padding:0.3rem;">1</td><td style="text-align:right;padding:0.3rem;">0</td><td style="text-align:right;padding:0.3rem;font-weight:700;">12</td></tr>
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">D. Colbert</td><td style="text-align:right;padding:0.3rem;">39</td><td style="text-align:right;padding:0.3rem;">2-5</td><td style="text-align:right;padding:0.3rem;">1-1</td><td style="text-align:right;padding:0.3rem;">1</td><td style="text-align:right;padding:0.3rem;">0</td><td style="text-align:right;padding:0.3rem;font-weight:700;">5</td></tr>
                             <tr style="border-bottom:2px solid #E8E2D6;font-weight:700;"><td style="text-align:left;padding:0.3rem 0.5rem;">TOTALS</td><td style="text-align:right;padding:0.3rem;">200</td><td style="text-align:right;padding:0.3rem;">16-43</td><td style="text-align:right;padding:0.3rem;">17-17</td><td style="text-align:right;padding:0.3rem;">5</td><td style="text-align:right;padding:0.3rem;">2</td><td style="text-align:right;padding:0.3rem;">49</td></tr>
                         </tbody></table>
-                        <div style="font-size:0.75rem;color:#6B7A8D;margin-top:0.5rem;">Source: Sports Reference</div>
+                        <div style="font-size:0.75rem;color:#667486;margin-top:0.5rem;">Source: Sports Reference</div>
                     </div>`,
                     1: `<div style="overflow-x:auto;">
                         <div style="font-weight:700;color:#1B2A4A;margin-bottom:0.5rem;font-size:0.95rem;">Villanova 59, Michigan 55 — March 17, 1985</div>
                         <div style="font-weight:600;color:#1B2A4A;margin:0.75rem 0 0.25rem;font-size:0.85rem;">Villanova — 17-35 FG (48.6%), 25-31 FT</div>
-                        <table style="width:100%;border-collapse:collapse;font-size:0.78rem;margin-bottom:1rem;"><thead><tr style="border-bottom:2px solid #E8E2D6;color:#6B7A8D;text-align:right;"><th style="text-align:left;padding:0.3rem 0.5rem;">Player</th><th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th><th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th><th style="padding:0.3rem;">AST</th><th style="padding:0.3rem;font-weight:700;color:#1B2A4A;">PTS</th></tr></thead><tbody>
+                        <table style="width:100%;border-collapse:collapse;font-size:0.78rem;margin-bottom:1rem;"><thead><tr style="border-bottom:2px solid #E8E2D6;color:#667486;text-align:right;"><th style="text-align:left;padding:0.3rem 0.5rem;">Player</th><th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th><th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th><th style="padding:0.3rem;">AST</th><th style="padding:0.3rem;font-weight:700;color:#1B2A4A;">PTS</th></tr></thead><tbody>
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">D. McClain</td><td style="text-align:right;padding:0.3rem;">36</td><td style="text-align:right;padding:0.3rem;">8-12</td><td style="text-align:right;padding:0.3rem;">4-4</td><td style="text-align:right;padding:0.3rem;">5</td><td style="text-align:right;padding:0.3rem;">0</td><td style="text-align:right;padding:0.3rem;font-weight:700;">20</td></tr>
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">E. Pinckney</td><td style="text-align:right;padding:0.3rem;">40</td><td style="text-align:right;padding:0.3rem;">2-4</td><td style="text-align:right;padding:0.3rem;">10-11</td><td style="text-align:right;padding:0.3rem;">8</td><td style="text-align:right;padding:0.3rem;">0</td><td style="text-align:right;padding:0.3rem;font-weight:700;">14</td></tr>
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">H. Pressley</td><td style="text-align:right;padding:0.3rem;">34</td><td style="text-align:right;padding:0.3rem;">3-10</td><td style="text-align:right;padding:0.3rem;">3-5</td><td style="text-align:right;padding:0.3rem;">9</td><td style="text-align:right;padding:0.3rem;">5</td><td style="text-align:right;padding:0.3rem;font-weight:700;">9</td></tr>
@@ -13888,19 +13895,19 @@
                             <tr style="border-bottom:2px solid #E8E2D6;font-weight:700;"><td style="text-align:left;padding:0.3rem 0.5rem;">TOTALS</td><td style="text-align:right;padding:0.3rem;">200</td><td style="text-align:right;padding:0.3rem;">17-35</td><td style="text-align:right;padding:0.3rem;">25-31</td><td style="text-align:right;padding:0.3rem;">31</td><td style="text-align:right;padding:0.3rem;">7</td><td style="text-align:right;padding:0.3rem;">59</td></tr>
                         </tbody></table>
                         <div style="font-weight:600;color:#1B2A4A;margin:0.75rem 0 0.25rem;font-size:0.85rem;">Michigan — 26-51 FG (51.0%), 3-5 FT</div>
-                        <table style="width:100%;border-collapse:collapse;font-size:0.78rem;"><thead><tr style="border-bottom:2px solid #E8E2D6;color:#6B7A8D;text-align:right;"><th style="text-align:left;padding:0.3rem 0.5rem;">Player</th><th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th><th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th><th style="padding:0.3rem;">AST</th><th style="padding:0.3rem;font-weight:700;color:#1B2A4A;">PTS</th></tr></thead><tbody>
+                        <table style="width:100%;border-collapse:collapse;font-size:0.78rem;"><thead><tr style="border-bottom:2px solid #E8E2D6;color:#667486;text-align:right;"><th style="text-align:left;padding:0.3rem 0.5rem;">Player</th><th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th><th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th><th style="padding:0.3rem;">AST</th><th style="padding:0.3rem;font-weight:700;color:#1B2A4A;">PTS</th></tr></thead><tbody>
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">R. Tarpley Jr</td><td style="text-align:right;padding:0.3rem;">40</td><td style="text-align:right;padding:0.3rem;">7-14</td><td style="text-align:right;padding:0.3rem;">0-0</td><td style="text-align:right;padding:0.3rem;">14</td><td style="text-align:right;padding:0.3rem;">0</td><td style="text-align:right;padding:0.3rem;font-weight:700;">14</td></tr>
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">A. Joubert</td><td style="text-align:right;padding:0.3rem;">30</td><td style="text-align:right;padding:0.3rem;">6-13</td><td style="text-align:right;padding:0.3rem;">0-0</td><td style="text-align:right;padding:0.3rem;">4</td><td style="text-align:right;padding:0.3rem;">0</td><td style="text-align:right;padding:0.3rem;font-weight:700;">12</td></tr>
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">R. Rellford</td><td style="text-align:right;padding:0.3rem;">28</td><td style="text-align:right;padding:0.3rem;">5-7</td><td style="text-align:right;padding:0.3rem;">1-2</td><td style="text-align:right;padding:0.3rem;">2</td><td style="text-align:right;padding:0.3rem;">0</td><td style="text-align:right;padding:0.3rem;font-weight:700;">11</td></tr>
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">G. Thompson</td><td style="text-align:right;padding:0.3rem;">18</td><td style="text-align:right;padding:0.3rem;">3-5</td><td style="text-align:right;padding:0.3rem;">2-3</td><td style="text-align:right;padding:0.3rem;">3</td><td style="text-align:right;padding:0.3rem;">2</td><td style="text-align:right;padding:0.3rem;font-weight:700;">8</td></tr>
                             <tr style="border-bottom:2px solid #E8E2D6;font-weight:700;"><td style="text-align:left;padding:0.3rem 0.5rem;">TOTALS</td><td style="text-align:right;padding:0.3rem;">200</td><td style="text-align:right;padding:0.3rem;">26-51</td><td style="text-align:right;padding:0.3rem;">3-5</td><td style="text-align:right;padding:0.3rem;">40</td><td style="text-align:right;padding:0.3rem;">8</td><td style="text-align:right;padding:0.3rem;">55</td></tr>
                         </tbody></table>
-                        <div style="font-size:0.75rem;color:#6B7A8D;margin-top:0.5rem;">Source: Sports Reference</div>
+                        <div style="font-size:0.75rem;color:#667486;margin-top:0.5rem;">Source: Sports Reference</div>
                     </div>`,
                     2: `<div style="overflow-x:auto;">
                         <div style="font-weight:700;color:#1B2A4A;margin-bottom:0.5rem;font-size:0.95rem;">Villanova 46, Maryland 43 — March 22, 1985</div>
                         <div style="font-weight:600;color:#1B2A4A;margin:0.75rem 0 0.25rem;font-size:0.85rem;">Villanova — 17-46 FG (37.0%), 12-18 FT</div>
-                        <table style="width:100%;border-collapse:collapse;font-size:0.78rem;margin-bottom:1rem;"><thead><tr style="border-bottom:2px solid #E8E2D6;color:#6B7A8D;text-align:right;"><th style="text-align:left;padding:0.3rem 0.5rem;">Player</th><th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th><th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th><th style="padding:0.3rem;">AST</th><th style="padding:0.3rem;font-weight:700;color:#1B2A4A;">PTS</th></tr></thead><tbody>
+                        <table style="width:100%;border-collapse:collapse;font-size:0.78rem;margin-bottom:1rem;"><thead><tr style="border-bottom:2px solid #E8E2D6;color:#667486;text-align:right;"><th style="text-align:left;padding:0.3rem 0.5rem;">Player</th><th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th><th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th><th style="padding:0.3rem;">AST</th><th style="padding:0.3rem;font-weight:700;color:#1B2A4A;">PTS</th></tr></thead><tbody>
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">E. Pinckney</td><td style="text-align:right;padding:0.3rem;">36</td><td style="text-align:right;padding:0.3rem;">5-7</td><td style="text-align:right;padding:0.3rem;">6-7</td><td style="text-align:right;padding:0.3rem;">14</td><td style="text-align:right;padding:0.3rem;">1</td><td style="text-align:right;padding:0.3rem;font-weight:700;">16</td></tr>
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">D. McClain</td><td style="text-align:right;padding:0.3rem;">40</td><td style="text-align:right;padding:0.3rem;">5-9</td><td style="text-align:right;padding:0.3rem;">2-2</td><td style="text-align:right;padding:0.3rem;">6</td><td style="text-align:right;padding:0.3rem;">0</td><td style="text-align:right;padding:0.3rem;font-weight:700;">12</td></tr>
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">H. Pressley</td><td style="text-align:right;padding:0.3rem;">35</td><td style="text-align:right;padding:0.3rem;">3-12</td><td style="text-align:right;padding:0.3rem;">1-4</td><td style="text-align:right;padding:0.3rem;">11</td><td style="text-align:right;padding:0.3rem;">1</td><td style="text-align:right;padding:0.3rem;font-weight:700;">7</td></tr>
@@ -13910,19 +13917,19 @@
                             <tr style="border-bottom:2px solid #E8E2D6;font-weight:700;"><td style="text-align:left;padding:0.3rem 0.5rem;">TOTALS</td><td style="text-align:right;padding:0.3rem;">200</td><td style="text-align:right;padding:0.3rem;">17-46</td><td style="text-align:right;padding:0.3rem;">12-18</td><td style="text-align:right;padding:0.3rem;">37</td><td style="text-align:right;padding:0.3rem;">2</td><td style="text-align:right;padding:0.3rem;">46</td></tr>
                         </tbody></table>
                         <div style="font-weight:600;color:#1B2A4A;margin:0.75rem 0 0.25rem;font-size:0.85rem;">Maryland — 19-53 FG (35.8%), 5-7 FT</div>
-                        <table style="width:100%;border-collapse:collapse;font-size:0.78rem;"><thead><tr style="border-bottom:2px solid #E8E2D6;color:#6B7A8D;text-align:right;"><th style="text-align:left;padding:0.3rem 0.5rem;">Player</th><th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th><th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th><th style="padding:0.3rem;">AST</th><th style="padding:0.3rem;font-weight:700;color:#1B2A4A;">PTS</th></tr></thead><tbody>
+                        <table style="width:100%;border-collapse:collapse;font-size:0.78rem;"><thead><tr style="border-bottom:2px solid #E8E2D6;color:#667486;text-align:right;"><th style="text-align:left;padding:0.3rem 0.5rem;">Player</th><th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th><th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th><th style="padding:0.3rem;">AST</th><th style="padding:0.3rem;font-weight:700;color:#1B2A4A;">PTS</th></tr></thead><tbody>
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">A. Branch</td><td style="text-align:right;padding:0.3rem;">39</td><td style="text-align:right;padding:0.3rem;">9-19</td><td style="text-align:right;padding:0.3rem;">3-5</td><td style="text-align:right;padding:0.3rem;">7</td><td style="text-align:right;padding:0.3rem;">1</td><td style="text-align:right;padding:0.3rem;font-weight:700;">21</td></tr>
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">L. Bias</td><td style="text-align:right;padding:0.3rem;">40</td><td style="text-align:right;padding:0.3rem;">4-13</td><td style="text-align:right;padding:0.3rem;">0-0</td><td style="text-align:right;padding:0.3rem;">5</td><td style="text-align:right;padding:0.3rem;">0</td><td style="text-align:right;padding:0.3rem;font-weight:700;">8</td></tr>
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">K. Gatlin</td><td style="text-align:right;padding:0.3rem;">30</td><td style="text-align:right;padding:0.3rem;">2-7</td><td style="text-align:right;padding:0.3rem;">0-0</td><td style="text-align:right;padding:0.3rem;">6</td><td style="text-align:right;padding:0.3rem;">3</td><td style="text-align:right;padding:0.3rem;font-weight:700;">4</td></tr>
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">J. Adkins</td><td style="text-align:right;padding:0.3rem;">29</td><td style="text-align:right;padding:0.3rem;">2-7</td><td style="text-align:right;padding:0.3rem;">0-0</td><td style="text-align:right;padding:0.3rem;">8</td><td style="text-align:right;padding:0.3rem;">1</td><td style="text-align:right;padding:0.3rem;font-weight:700;">4</td></tr>
                             <tr style="border-bottom:2px solid #E8E2D6;font-weight:700;"><td style="text-align:left;padding:0.3rem 0.5rem;">TOTALS</td><td style="text-align:right;padding:0.3rem;">200</td><td style="text-align:right;padding:0.3rem;">19-53</td><td style="text-align:right;padding:0.3rem;">5-7</td><td style="text-align:right;padding:0.3rem;">29</td><td style="text-align:right;padding:0.3rem;">3</td><td style="text-align:right;padding:0.3rem;">43</td></tr>
                         </tbody></table>
-                        <div style="font-size:0.75rem;color:#6B7A8D;margin-top:0.5rem;">Source: Sports Reference</div>
+                        <div style="font-size:0.75rem;color:#667486;margin-top:0.5rem;">Source: Sports Reference</div>
                     </div>`,
                     3: `<div style="overflow-x:auto;">
                         <div style="font-weight:700;color:#1B2A4A;margin-bottom:0.5rem;font-size:0.95rem;">Villanova 56, North Carolina 44 — March 24, 1985</div>
                         <div style="font-weight:600;color:#1B2A4A;margin:0.75rem 0 0.25rem;font-size:0.85rem;">Villanova — 22-47 FG (46.8%), 12-17 FT</div>
-                        <table style="width:100%;border-collapse:collapse;font-size:0.78rem;margin-bottom:1rem;"><thead><tr style="border-bottom:2px solid #E8E2D6;color:#6B7A8D;text-align:right;"><th style="text-align:left;padding:0.3rem 0.5rem;">Player</th><th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th><th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th><th style="padding:0.3rem;">AST</th><th style="padding:0.3rem;font-weight:700;color:#1B2A4A;">PTS</th></tr></thead><tbody>
+                        <table style="width:100%;border-collapse:collapse;font-size:0.78rem;margin-bottom:1rem;"><thead><tr style="border-bottom:2px solid #E8E2D6;color:#667486;text-align:right;"><th style="text-align:left;padding:0.3rem 0.5rem;">Player</th><th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th><th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th><th style="padding:0.3rem;">AST</th><th style="padding:0.3rem;font-weight:700;color:#1B2A4A;">PTS</th></tr></thead><tbody>
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">H. Pressley</td><td style="text-align:right;padding:0.3rem;">38</td><td style="text-align:right;padding:0.3rem;">7-13</td><td style="text-align:right;padding:0.3rem;">1-2</td><td style="text-align:right;padding:0.3rem;">3</td><td style="text-align:right;padding:0.3rem;">0</td><td style="text-align:right;padding:0.3rem;font-weight:700;">15</td></tr>
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">G. McLain</td><td style="text-align:right;padding:0.3rem;">39</td><td style="text-align:right;padding:0.3rem;">3-5</td><td style="text-align:right;padding:0.3rem;">5-6</td><td style="text-align:right;padding:0.3rem;">3</td><td style="text-align:right;padding:0.3rem;">0</td><td style="text-align:right;padding:0.3rem;font-weight:700;">11</td></tr>
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">D. McClain</td><td style="text-align:right;padding:0.3rem;">36</td><td style="text-align:right;padding:0.3rem;">4-11</td><td style="text-align:right;padding:0.3rem;">3-3</td><td style="text-align:right;padding:0.3rem;">7</td><td style="text-align:right;padding:0.3rem;">0</td><td style="text-align:right;padding:0.3rem;font-weight:700;">11</td></tr>
@@ -13931,7 +13938,7 @@
                             <tr style="border-bottom:2px solid #E8E2D6;font-weight:700;"><td style="text-align:left;padding:0.3rem 0.5rem;">TOTALS</td><td style="text-align:right;padding:0.3rem;">200</td><td style="text-align:right;padding:0.3rem;">22-47</td><td style="text-align:right;padding:0.3rem;">12-17</td><td style="text-align:right;padding:0.3rem;">36</td><td style="text-align:right;padding:0.3rem;">2</td><td style="text-align:right;padding:0.3rem;">56</td></tr>
                         </tbody></table>
                         <div style="font-weight:600;color:#1B2A4A;margin:0.75rem 0 0.25rem;font-size:0.85rem;">North Carolina — 20-44 FG (45.5%), 4-7 FT</div>
-                        <table style="width:100%;border-collapse:collapse;font-size:0.78rem;"><thead><tr style="border-bottom:2px solid #E8E2D6;color:#6B7A8D;text-align:right;"><th style="text-align:left;padding:0.3rem 0.5rem;">Player</th><th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th><th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th><th style="padding:0.3rem;">AST</th><th style="padding:0.3rem;font-weight:700;color:#1B2A4A;">PTS</th></tr></thead><tbody>
+                        <table style="width:100%;border-collapse:collapse;font-size:0.78rem;"><thead><tr style="border-bottom:2px solid #E8E2D6;color:#667486;text-align:right;"><th style="text-align:left;padding:0.3rem 0.5rem;">Player</th><th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th><th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th><th style="padding:0.3rem;">AST</th><th style="padding:0.3rem;font-weight:700;color:#1B2A4A;">PTS</th></tr></thead><tbody>
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">B. Daugherty</td><td style="text-align:right;padding:0.3rem;">38</td><td style="text-align:right;padding:0.3rem;">7-9</td><td style="text-align:right;padding:0.3rem;">3-6</td><td style="text-align:right;padding:0.3rem;">12</td><td style="text-align:right;padding:0.3rem;">0</td><td style="text-align:right;padding:0.3rem;font-weight:700;">17</td></tr>
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">R. Smith</td><td style="text-align:right;padding:0.3rem;">20</td><td style="text-align:right;padding:0.3rem;">3-10</td><td style="text-align:right;padding:0.3rem;">0-0</td><td style="text-align:right;padding:0.3rem;">4</td><td style="text-align:right;padding:0.3rem;">0</td><td style="text-align:right;padding:0.3rem;font-weight:700;">6</td></tr>
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">C. Hunter</td><td style="text-align:right;padding:0.3rem;">16</td><td style="text-align:right;padding:0.3rem;">3-4</td><td style="text-align:right;padding:0.3rem;">0-0</td><td style="text-align:right;padding:0.3rem;">2</td><td style="text-align:right;padding:0.3rem;">0</td><td style="text-align:right;padding:0.3rem;font-weight:700;">6</td></tr>
@@ -13940,12 +13947,12 @@
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">J. Wolf</td><td style="text-align:right;padding:0.3rem;">34</td><td style="text-align:right;padding:0.3rem;">2-6</td><td style="text-align:right;padding:0.3rem;">0-0</td><td style="text-align:right;padding:0.3rem;">9</td><td style="text-align:right;padding:0.3rem;">0</td><td style="text-align:right;padding:0.3rem;font-weight:700;">4</td></tr>
                             <tr style="border-bottom:2px solid #E8E2D6;font-weight:700;"><td style="text-align:left;padding:0.3rem 0.5rem;">TOTALS</td><td style="text-align:right;padding:0.3rem;">200</td><td style="text-align:right;padding:0.3rem;">20-44</td><td style="text-align:right;padding:0.3rem;">4-7</td><td style="text-align:right;padding:0.3rem;">39</td><td style="text-align:right;padding:0.3rem;">0</td><td style="text-align:right;padding:0.3rem;">44</td></tr>
                         </tbody></table>
-                        <div style="font-size:0.75rem;color:#6B7A8D;margin-top:0.5rem;">Source: Sports Reference</div>
+                        <div style="font-size:0.75rem;color:#667486;margin-top:0.5rem;">Source: Sports Reference</div>
                     </div>`,
                     4: `<div style="overflow-x:auto;">
                         <div style="font-weight:700;color:#1B2A4A;margin-bottom:0.5rem;font-size:0.95rem;">Villanova 52, Memphis 45 — March 30, 1985</div>
                         <div style="font-weight:600;color:#1B2A4A;margin:0.75rem 0 0.25rem;font-size:0.85rem;">Villanova — 16-38 FG (42.1%), 20-26 FT</div>
-                        <table style="width:100%;border-collapse:collapse;font-size:0.78rem;margin-bottom:1rem;"><thead><tr style="border-bottom:2px solid #E8E2D6;color:#6B7A8D;text-align:right;"><th style="text-align:left;padding:0.3rem 0.5rem;">Player</th><th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th><th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th><th style="padding:0.3rem;">AST</th><th style="padding:0.3rem;font-weight:700;color:#1B2A4A;">PTS</th></tr></thead><tbody>
+                        <table style="width:100%;border-collapse:collapse;font-size:0.78rem;margin-bottom:1rem;"><thead><tr style="border-bottom:2px solid #E8E2D6;color:#667486;text-align:right;"><th style="text-align:left;padding:0.3rem 0.5rem;">Player</th><th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th><th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th><th style="padding:0.3rem;">AST</th><th style="padding:0.3rem;font-weight:700;color:#1B2A4A;">PTS</th></tr></thead><tbody>
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">D. McClain</td><td style="text-align:right;padding:0.3rem;">40</td><td style="text-align:right;padding:0.3rem;">6-9</td><td style="text-align:right;padding:0.3rem;">7-7</td><td style="text-align:right;padding:0.3rem;">4</td><td style="text-align:right;padding:0.3rem;">2</td><td style="text-align:right;padding:0.3rem;font-weight:700;">19</td></tr>
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">E. Pinckney</td><td style="text-align:right;padding:0.3rem;">39</td><td style="text-align:right;padding:0.3rem;">3-7</td><td style="text-align:right;padding:0.3rem;">6-9</td><td style="text-align:right;padding:0.3rem;">9</td><td style="text-align:right;padding:0.3rem;">1</td><td style="text-align:right;padding:0.3rem;font-weight:700;">12</td></tr>
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">G. McLain</td><td style="text-align:right;padding:0.3rem;">39</td><td style="text-align:right;padding:0.3rem;">2-5</td><td style="text-align:right;padding:0.3rem;">5-5</td><td style="text-align:right;padding:0.3rem;">2</td><td style="text-align:right;padding:0.3rem;">2</td><td style="text-align:right;padding:0.3rem;font-weight:700;">9</td></tr>
@@ -13955,7 +13962,7 @@
                             <tr style="border-bottom:2px solid #E8E2D6;font-weight:700;"><td style="text-align:left;padding:0.3rem 0.5rem;">TOTALS</td><td style="text-align:right;padding:0.3rem;">200</td><td style="text-align:right;padding:0.3rem;">16-38</td><td style="text-align:right;padding:0.3rem;">20-26</td><td style="text-align:right;padding:0.3rem;">26</td><td style="text-align:right;padding:0.3rem;">9</td><td style="text-align:right;padding:0.3rem;">52</td></tr>
                         </tbody></table>
                         <div style="font-weight:600;color:#1B2A4A;margin:0.75rem 0 0.25rem;font-size:0.85rem;">Memphis — 19-50 FG (38.0%), 7-9 FT</div>
-                        <table style="width:100%;border-collapse:collapse;font-size:0.78rem;"><thead><tr style="border-bottom:2px solid #E8E2D6;color:#6B7A8D;text-align:right;"><th style="text-align:left;padding:0.3rem 0.5rem;">Player</th><th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th><th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th><th style="padding:0.3rem;">AST</th><th style="padding:0.3rem;font-weight:700;color:#1B2A4A;">PTS</th></tr></thead><tbody>
+                        <table style="width:100%;border-collapse:collapse;font-size:0.78rem;"><thead><tr style="border-bottom:2px solid #E8E2D6;color:#667486;text-align:right;"><th style="text-align:left;padding:0.3rem 0.5rem;">Player</th><th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th><th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th><th style="padding:0.3rem;">AST</th><th style="padding:0.3rem;font-weight:700;color:#1B2A4A;">PTS</th></tr></thead><tbody>
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">A. Turner</td><td style="text-align:right;padding:0.3rem;">40</td><td style="text-align:right;padding:0.3rem;">5-13</td><td style="text-align:right;padding:0.3rem;">1-2</td><td style="text-align:right;padding:0.3rem;">4</td><td style="text-align:right;padding:0.3rem;">3</td><td style="text-align:right;padding:0.3rem;font-weight:700;">11</td></tr>
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">K. Lee</td><td style="text-align:right;padding:0.3rem;">23</td><td style="text-align:right;padding:0.3rem;">3-9</td><td style="text-align:right;padding:0.3rem;">4-4</td><td style="text-align:right;padding:0.3rem;">7</td><td style="text-align:right;padding:0.3rem;">1</td><td style="text-align:right;padding:0.3rem;font-weight:700;">10</td></tr>
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">W. Bedford</td><td style="text-align:right;padding:0.3rem;">32</td><td style="text-align:right;padding:0.3rem;">4-9</td><td style="text-align:right;padding:0.3rem;">0-0</td><td style="text-align:right;padding:0.3rem;">7</td><td style="text-align:right;padding:0.3rem;">0</td><td style="text-align:right;padding:0.3rem;font-weight:700;">8</td></tr>
@@ -13964,13 +13971,13 @@
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">V. Askew</td><td style="text-align:right;padding:0.3rem;">40</td><td style="text-align:right;padding:0.3rem;">1-3</td><td style="text-align:right;padding:0.3rem;">0-1</td><td style="text-align:right;padding:0.3rem;">7</td><td style="text-align:right;padding:0.3rem;">7</td><td style="text-align:right;padding:0.3rem;font-weight:700;">2</td></tr>
                             <tr style="border-bottom:2px solid #E8E2D6;font-weight:700;"><td style="text-align:left;padding:0.3rem 0.5rem;">TOTALS</td><td style="text-align:right;padding:0.3rem;">200</td><td style="text-align:right;padding:0.3rem;">19-50</td><td style="text-align:right;padding:0.3rem;">7-9</td><td style="text-align:right;padding:0.3rem;">33</td><td style="text-align:right;padding:0.3rem;">12</td><td style="text-align:right;padding:0.3rem;">45</td></tr>
                         </tbody></table>
-                        <div style="font-size:0.75rem;color:#6B7A8D;margin-top:0.5rem;">Source: Sports Reference</div>
+                        <div style="font-size:0.75rem;color:#667486;margin-top:0.5rem;">Source: Sports Reference</div>
                     </div>`,
                     5: `<div style="overflow-x:auto;">
                         <div style="font-weight:700;color:#1B2A4A;margin-bottom:0.5rem;font-size:0.95rem;">Villanova 66, Georgetown 64 — April 1, 1985</div>
                         <div style="font-weight:600;color:#1B2A4A;margin:0.75rem 0 0.25rem;font-size:0.85rem;">Villanova — 22-28 FG (78.6%), 22-27 FT</div>
                         <table style="width:100%;border-collapse:collapse;font-size:0.78rem;margin-bottom:1rem;">
-                            <thead><tr style="border-bottom:2px solid #E8E2D6;color:#6B7A8D;text-align:right;">
+                            <thead><tr style="border-bottom:2px solid #E8E2D6;color:#667486;text-align:right;">
                                 <th style="text-align:left;padding:0.3rem 0.5rem;">Player</th><th style="padding:0.3rem 0.3rem;">MIN</th><th style="padding:0.3rem 0.3rem;">FG</th><th style="padding:0.3rem 0.3rem;">FT</th><th style="padding:0.3rem 0.3rem;">REB</th><th style="padding:0.3rem 0.3rem;">AST</th><th style="padding:0.3rem 0.3rem;font-weight:700;color:#1B2A4A;">PTS</th>
                             </tr></thead>
                             <tbody>
@@ -13979,14 +13986,14 @@
                                 <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">H. Jensen</td><td style="text-align:right;padding:0.3rem;">34</td><td style="text-align:right;padding:0.3rem;">5-5</td><td style="text-align:right;padding:0.3rem;">4-5</td><td style="text-align:right;padding:0.3rem;">1</td><td style="text-align:right;padding:0.3rem;">2</td><td style="text-align:right;padding:0.3rem;font-weight:700;">14</td></tr>
                                 <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">H. Pressley</td><td style="text-align:right;padding:0.3rem;">40</td><td style="text-align:right;padding:0.3rem;">4-6</td><td style="text-align:right;padding:0.3rem;">3-4</td><td style="text-align:right;padding:0.3rem;">4</td><td style="text-align:right;padding:0.3rem;">1</td><td style="text-align:right;padding:0.3rem;font-weight:700;">11</td></tr>
                                 <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">G. McLain</td><td style="text-align:right;padding:0.3rem;">40</td><td style="text-align:right;padding:0.3rem;">3-3</td><td style="text-align:right;padding:0.3rem;">2-2</td><td style="text-align:right;padding:0.3rem;">2</td><td style="text-align:right;padding:0.3rem;">2</td><td style="text-align:right;padding:0.3rem;font-weight:700;">8</td></tr>
-                                <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;color:#6B7A8D;">D. Wilbur</td><td style="text-align:right;padding:0.3rem;">5</td><td style="text-align:right;padding:0.3rem;">0-0</td><td style="text-align:right;padding:0.3rem;">0-0</td><td style="text-align:right;padding:0.3rem;">0</td><td style="text-align:right;padding:0.3rem;">0</td><td style="text-align:right;padding:0.3rem;">0</td></tr>
-                                <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;color:#6B7A8D;">C. Everson</td><td style="text-align:right;padding:0.3rem;">3</td><td style="text-align:right;padding:0.3rem;">0-0</td><td style="text-align:right;padding:0.3rem;">0-0</td><td style="text-align:right;padding:0.3rem;">0</td><td style="text-align:right;padding:0.3rem;">0</td><td style="text-align:right;padding:0.3rem;">0</td></tr>
+                                <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;color:#667486;">D. Wilbur</td><td style="text-align:right;padding:0.3rem;">5</td><td style="text-align:right;padding:0.3rem;">0-0</td><td style="text-align:right;padding:0.3rem;">0-0</td><td style="text-align:right;padding:0.3rem;">0</td><td style="text-align:right;padding:0.3rem;">0</td><td style="text-align:right;padding:0.3rem;">0</td></tr>
+                                <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;color:#667486;">C. Everson</td><td style="text-align:right;padding:0.3rem;">3</td><td style="text-align:right;padding:0.3rem;">0-0</td><td style="text-align:right;padding:0.3rem;">0-0</td><td style="text-align:right;padding:0.3rem;">0</td><td style="text-align:right;padding:0.3rem;">0</td><td style="text-align:right;padding:0.3rem;">0</td></tr>
                                 <tr style="border-bottom:2px solid #E8E2D6;font-weight:700;"><td style="text-align:left;padding:0.3rem 0.5rem;">TOTALS</td><td style="text-align:right;padding:0.3rem;">200</td><td style="text-align:right;padding:0.3rem;">22-28</td><td style="text-align:right;padding:0.3rem;">22-27</td><td style="text-align:right;padding:0.3rem;">14</td><td style="text-align:right;padding:0.3rem;">14</td><td style="text-align:right;padding:0.3rem;">66</td></tr>
                             </tbody>
                         </table>
                         <div style="font-weight:600;color:#1B2A4A;margin:0.75rem 0 0.25rem;font-size:0.85rem;">Georgetown — 29-53 FG (54.7%), 6-8 FT</div>
                         <table style="width:100%;border-collapse:collapse;font-size:0.78rem;">
-                            <thead><tr style="border-bottom:2px solid #E8E2D6;color:#6B7A8D;text-align:right;">
+                            <thead><tr style="border-bottom:2px solid #E8E2D6;color:#667486;text-align:right;">
                                 <th style="text-align:left;padding:0.3rem 0.5rem;">Player</th><th style="padding:0.3rem 0.3rem;">MIN</th><th style="padding:0.3rem 0.3rem;">FG</th><th style="padding:0.3rem 0.3rem;">FT</th><th style="padding:0.3rem 0.3rem;">REB</th><th style="padding:0.3rem 0.3rem;">AST</th><th style="padding:0.3rem 0.3rem;font-weight:700;color:#1B2A4A;">PTS</th>
                             </tr></thead>
                             <tbody>
@@ -13995,12 +14002,12 @@
                                 <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">B. Martin</td><td style="text-align:right;padding:0.3rem;">37</td><td style="text-align:right;padding:0.3rem;">4-6</td><td style="text-align:right;padding:0.3rem;">2-2</td><td style="text-align:right;padding:0.3rem;">5</td><td style="text-align:right;padding:0.3rem;">1</td><td style="text-align:right;padding:0.3rem;font-weight:700;">10</td></tr>
                                 <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">R. Williams</td><td style="text-align:right;padding:0.3rem;">29</td><td style="text-align:right;padding:0.3rem;">5-9</td><td style="text-align:right;padding:0.3rem;">0-2</td><td style="text-align:right;padding:0.3rem;">4</td><td style="text-align:right;padding:0.3rem;">2</td><td style="text-align:right;padding:0.3rem;font-weight:700;">10</td></tr>
                                 <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">M. Jackson</td><td style="text-align:right;padding:0.3rem;">37</td><td style="text-align:right;padding:0.3rem;">4-7</td><td style="text-align:right;padding:0.3rem;">0-0</td><td style="text-align:right;padding:0.3rem;">0</td><td style="text-align:right;padding:0.3rem;">9</td><td style="text-align:right;padding:0.3rem;font-weight:700;">8</td></tr>
-                                <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;color:#6B7A8D;">H. Broadnax</td><td style="text-align:right;padding:0.3rem;">13</td><td style="text-align:right;padding:0.3rem;">1-2</td><td style="text-align:right;padding:0.3rem;">2-2</td><td style="text-align:right;padding:0.3rem;">1</td><td style="text-align:right;padding:0.3rem;">2</td><td style="text-align:right;padding:0.3rem;">4</td></tr>
-                                <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;color:#6B7A8D;">R. Dalton</td><td style="text-align:right;padding:0.3rem;">4</td><td style="text-align:right;padding:0.3rem;">0-1</td><td style="text-align:right;padding:0.3rem;">2-2</td><td style="text-align:right;padding:0.3rem;">0</td><td style="text-align:right;padding:0.3rem;">0</td><td style="text-align:right;padding:0.3rem;">2</td></tr>
+                                <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;color:#667486;">H. Broadnax</td><td style="text-align:right;padding:0.3rem;">13</td><td style="text-align:right;padding:0.3rem;">1-2</td><td style="text-align:right;padding:0.3rem;">2-2</td><td style="text-align:right;padding:0.3rem;">1</td><td style="text-align:right;padding:0.3rem;">2</td><td style="text-align:right;padding:0.3rem;">4</td></tr>
+                                <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;color:#667486;">R. Dalton</td><td style="text-align:right;padding:0.3rem;">4</td><td style="text-align:right;padding:0.3rem;">0-1</td><td style="text-align:right;padding:0.3rem;">2-2</td><td style="text-align:right;padding:0.3rem;">0</td><td style="text-align:right;padding:0.3rem;">0</td><td style="text-align:right;padding:0.3rem;">2</td></tr>
                                 <tr style="border-bottom:2px solid #E8E2D6;font-weight:700;"><td style="text-align:left;padding:0.3rem 0.5rem;">TOTALS</td><td style="text-align:right;padding:0.3rem;">200</td><td style="text-align:right;padding:0.3rem;">29-53</td><td style="text-align:right;padding:0.3rem;">6-8</td><td style="text-align:right;padding:0.3rem;">17</td><td style="text-align:right;padding:0.3rem;">18</td><td style="text-align:right;padding:0.3rem;">64</td></tr>
                             </tbody>
                         </table>
-                        <div style="font-size:0.75rem;color:#6B7A8D;margin-top:0.5rem;">Source: Sports Reference</div>
+                        <div style="font-size:0.75rem;color:#667486;margin-top:0.5rem;">Source: Sports Reference</div>
                     </div>`
                 }
             },
@@ -14261,7 +14268,7 @@
                     0: `<div style="overflow-x:auto;">
                         <div style="font-weight:700;color:#1B2A4A;margin-bottom:0.5rem;font-size:0.95rem;">Arkansas 94, North Carolina A&T 79 — March 18, 1994</div>
                         <div style="font-weight:600;color:#1B2A4A;margin:0.75rem 0 0.25rem;font-size:0.85rem;">Arkansas — 36-66 FG (54.5%), 12-14 FT</div>
-                        <table style="width:100%;border-collapse:collapse;font-size:0.78rem;margin-bottom:1rem;"><thead><tr style="border-bottom:2px solid #E8E2D6;color:#6B7A8D;text-align:right;"><th style="text-align:left;padding:0.3rem 0.5rem;">Player</th><th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th><th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th><th style="padding:0.3rem;">AST</th><th style="padding:0.3rem;font-weight:700;color:#1B2A4A;">PTS</th></tr></thead><tbody>
+                        <table style="width:100%;border-collapse:collapse;font-size:0.78rem;margin-bottom:1rem;"><thead><tr style="border-bottom:2px solid #E8E2D6;color:#667486;text-align:right;"><th style="text-align:left;padding:0.3rem 0.5rem;">Player</th><th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th><th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th><th style="padding:0.3rem;">AST</th><th style="padding:0.3rem;font-weight:700;color:#1B2A4A;">PTS</th></tr></thead><tbody>
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Corliss Williamson</td><td style="text-align:right;padding:0.3rem;">34</td><td style="text-align:right;padding:0.3rem;">10-13</td><td style="text-align:right;padding:0.3rem;">4-5</td><td style="text-align:right;padding:0.3rem;">7</td><td style="text-align:right;padding:0.3rem;">2</td><td style="text-align:right;padding:0.3rem;font-weight:700;">24</td></tr>
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Scotty Thurman</td><td style="text-align:right;padding:0.3rem;">37</td><td style="text-align:right;padding:0.3rem;">7-14</td><td style="text-align:right;padding:0.3rem;">2-2</td><td style="text-align:right;padding:0.3rem;">5</td><td style="text-align:right;padding:0.3rem;">9</td><td style="text-align:right;padding:0.3rem;font-weight:700;">19</td></tr>
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Alex Dillard</td><td style="text-align:right;padding:0.3rem;">19</td><td style="text-align:right;padding:0.3rem;">4-9</td><td style="text-align:right;padding:0.3rem;">2-2</td><td style="text-align:right;padding:0.3rem;">0</td><td style="text-align:right;padding:0.3rem;">2</td><td style="text-align:right;padding:0.3rem;font-weight:700;">13</td></tr>
@@ -14274,7 +14281,7 @@
                             <tr style="border-bottom:2px solid #E8E2D6;font-weight:700;"><td style="text-align:left;padding:0.3rem 0.5rem;">TOTALS</td><td style="text-align:right;padding:0.3rem;">200</td><td style="text-align:right;padding:0.3rem;">36-66</td><td style="text-align:right;padding:0.3rem;">12-14</td><td style="text-align:right;padding:0.3rem;">32</td><td style="text-align:right;padding:0.3rem;">25</td><td style="text-align:right;padding:0.3rem;">94</td></tr>
                         </tbody></table>
                         <div style="font-weight:600;color:#1B2A4A;margin:0.75rem 0 0.25rem;font-size:0.85rem;">North Carolina A&T — 24-70 FG (34.3%), 22-26 FT</div>
-                        <table style="width:100%;border-collapse:collapse;font-size:0.78rem;"><thead><tr style="border-bottom:2px solid #E8E2D6;color:#6B7A8D;text-align:right;"><th style="text-align:left;padding:0.3rem 0.5rem;">Player</th><th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th><th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th><th style="padding:0.3rem;">AST</th><th style="padding:0.3rem;font-weight:700;color:#1B2A4A;">PTS</th></tr></thead><tbody>
+                        <table style="width:100%;border-collapse:collapse;font-size:0.78rem;"><thead><tr style="border-bottom:2px solid #E8E2D6;color:#667486;text-align:right;"><th style="text-align:left;padding:0.3rem 0.5rem;">Player</th><th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th><th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th><th style="padding:0.3rem;">AST</th><th style="padding:0.3rem;font-weight:700;color:#1B2A4A;">PTS</th></tr></thead><tbody>
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Tyrone Brice</td><td style="text-align:right;padding:0.3rem;">35</td><td style="text-align:right;padding:0.3rem;">6-13</td><td style="text-align:right;padding:0.3rem;">4-4</td><td style="text-align:right;padding:0.3rem;">3</td><td style="text-align:right;padding:0.3rem;">5</td><td style="text-align:right;padding:0.3rem;font-weight:700;">20</td></tr>
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Joe Bunn</td><td style="text-align:right;padding:0.3rem;">30</td><td style="text-align:right;padding:0.3rem;">5-10</td><td style="text-align:right;padding:0.3rem;">10-11</td><td style="text-align:right;padding:0.3rem;">12</td><td style="text-align:right;padding:0.3rem;">1</td><td style="text-align:right;padding:0.3rem;font-weight:700;">20</td></tr>
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Phillip Allen</td><td style="text-align:right;padding:0.3rem;">37</td><td style="text-align:right;padding:0.3rem;">7-22</td><td style="text-align:right;padding:0.3rem;">0-0</td><td style="text-align:right;padding:0.3rem;">4</td><td style="text-align:right;padding:0.3rem;">4</td><td style="text-align:right;padding:0.3rem;font-weight:700;">19</td></tr>
@@ -14283,12 +14290,12 @@
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">John Floyd</td><td style="text-align:right;padding:0.3rem;">30</td><td style="text-align:right;padding:0.3rem;">1-6</td><td style="text-align:right;padding:0.3rem;">2-2</td><td style="text-align:right;padding:0.3rem;">10</td><td style="text-align:right;padding:0.3rem;">0</td><td style="text-align:right;padding:0.3rem;font-weight:700;">4</td></tr>
                             <tr style="border-bottom:2px solid #E8E2D6;font-weight:700;"><td style="text-align:left;padding:0.3rem 0.5rem;">TOTALS</td><td style="text-align:right;padding:0.3rem;">200</td><td style="text-align:right;padding:0.3rem;">24-70</td><td style="text-align:right;padding:0.3rem;">22-26</td><td style="text-align:right;padding:0.3rem;">40</td><td style="text-align:right;padding:0.3rem;">14</td><td style="text-align:right;padding:0.3rem;">79</td></tr>
                         </tbody></table>
-                        <div style="font-size:0.75rem;color:#6B7A8D;margin-top:0.5rem;">Source: Sports Reference</div>
+                        <div style="font-size:0.75rem;color:#667486;margin-top:0.5rem;">Source: Sports Reference</div>
                     </div>`,
                     1: `<div style="overflow-x:auto;">
                         <div style="font-weight:700;color:#1B2A4A;margin-bottom:0.5rem;font-size:0.95rem;">Arkansas 85, Georgetown 73 — March 20, 1994</div>
                         <div style="font-weight:600;color:#1B2A4A;margin:0.75rem 0 0.25rem;font-size:0.85rem;">Arkansas — 27-44 FG (61.4%), 25-33 FT</div>
-                        <table style="width:100%;border-collapse:collapse;font-size:0.78rem;margin-bottom:1rem;"><thead><tr style="border-bottom:2px solid #E8E2D6;color:#6B7A8D;text-align:right;"><th style="text-align:left;padding:0.3rem 0.5rem;">Player</th><th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th><th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th><th style="padding:0.3rem;">AST</th><th style="padding:0.3rem;font-weight:700;color:#1B2A4A;">PTS</th></tr></thead><tbody>
+                        <table style="width:100%;border-collapse:collapse;font-size:0.78rem;margin-bottom:1rem;"><thead><tr style="border-bottom:2px solid #E8E2D6;color:#667486;text-align:right;"><th style="text-align:left;padding:0.3rem 0.5rem;">Player</th><th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th><th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th><th style="padding:0.3rem;">AST</th><th style="padding:0.3rem;font-weight:700;color:#1B2A4A;">PTS</th></tr></thead><tbody>
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Corliss Williamson</td><td style="text-align:right;padding:0.3rem;">37</td><td style="text-align:right;padding:0.3rem;">8-11</td><td style="text-align:right;padding:0.3rem;">5-6</td><td style="text-align:right;padding:0.3rem;">6</td><td style="text-align:right;padding:0.3rem;">5</td><td style="text-align:right;padding:0.3rem;font-weight:700;">21</td></tr>
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Dwight Stewart</td><td style="text-align:right;padding:0.3rem;">28</td><td style="text-align:right;padding:0.3rem;">6-7</td><td style="text-align:right;padding:0.3rem;">0-1</td><td style="text-align:right;padding:0.3rem;">7</td><td style="text-align:right;padding:0.3rem;">2</td><td style="text-align:right;padding:0.3rem;font-weight:700;">16</td></tr>
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Darnell Robinson</td><td style="text-align:right;padding:0.3rem;">25</td><td style="text-align:right;padding:0.3rem;">5-6</td><td style="text-align:right;padding:0.3rem;">3-3</td><td style="text-align:right;padding:0.3rem;">4</td><td style="text-align:right;padding:0.3rem;">2</td><td style="text-align:right;padding:0.3rem;font-weight:700;">13</td></tr>
@@ -14300,7 +14307,7 @@
                             <tr style="border-bottom:2px solid #E8E2D6;font-weight:700;"><td style="text-align:left;padding:0.3rem 0.5rem;">TOTALS</td><td style="text-align:right;padding:0.3rem;">200</td><td style="text-align:right;padding:0.3rem;">27-44</td><td style="text-align:right;padding:0.3rem;">25-33</td><td style="text-align:right;padding:0.3rem;">30</td><td style="text-align:right;padding:0.3rem;">14</td><td style="text-align:right;padding:0.3rem;">85</td></tr>
                         </tbody></table>
                         <div style="font-weight:600;color:#1B2A4A;margin:0.75rem 0 0.25rem;font-size:0.85rem;">Georgetown — 24-59 FG (40.7%), 19-29 FT</div>
-                        <table style="width:100%;border-collapse:collapse;font-size:0.78rem;"><thead><tr style="border-bottom:2px solid #E8E2D6;color:#6B7A8D;text-align:right;"><th style="text-align:left;padding:0.3rem 0.5rem;">Player</th><th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th><th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th><th style="padding:0.3rem;">AST</th><th style="padding:0.3rem;font-weight:700;color:#1B2A4A;">PTS</th></tr></thead><tbody>
+                        <table style="width:100%;border-collapse:collapse;font-size:0.78rem;"><thead><tr style="border-bottom:2px solid #E8E2D6;color:#667486;text-align:right;"><th style="text-align:left;padding:0.3rem 0.5rem;">Player</th><th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th><th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th><th style="padding:0.3rem;">AST</th><th style="padding:0.3rem;font-weight:700;color:#1B2A4A;">PTS</th></tr></thead><tbody>
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Joey Brown</td><td style="text-align:right;padding:0.3rem;">29</td><td style="text-align:right;padding:0.3rem;">4-9</td><td style="text-align:right;padding:0.3rem;">3-7</td><td style="text-align:right;padding:0.3rem;">4</td><td style="text-align:right;padding:0.3rem;">5</td><td style="text-align:right;padding:0.3rem;font-weight:700;">13</td></tr>
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">George Butler</td><td style="text-align:right;padding:0.3rem;">31</td><td style="text-align:right;padding:0.3rem;">4-14</td><td style="text-align:right;padding:0.3rem;">1-3</td><td style="text-align:right;padding:0.3rem;">0</td><td style="text-align:right;padding:0.3rem;">1</td><td style="text-align:right;padding:0.3rem;font-weight:700;">10</td></tr>
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Othella Harrington</td><td style="text-align:right;padding:0.3rem;">20</td><td style="text-align:right;padding:0.3rem;">2-6</td><td style="text-align:right;padding:0.3rem;">5-6</td><td style="text-align:right;padding:0.3rem;">3</td><td style="text-align:right;padding:0.3rem;">0</td><td style="text-align:right;padding:0.3rem;font-weight:700;">9</td></tr>
@@ -14312,12 +14319,12 @@
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Cheikh Ya-Ya Dia</td><td style="text-align:right;padding:0.3rem;">11</td><td style="text-align:right;padding:0.3rem;">2-4</td><td style="text-align:right;padding:0.3rem;">1-1</td><td style="text-align:right;padding:0.3rem;">2</td><td style="text-align:right;padding:0.3rem;">0</td><td style="text-align:right;padding:0.3rem;font-weight:700;">5</td></tr>
                             <tr style="border-bottom:2px solid #E8E2D6;font-weight:700;"><td style="text-align:left;padding:0.3rem 0.5rem;">TOTALS</td><td style="text-align:right;padding:0.3rem;">200</td><td style="text-align:right;padding:0.3rem;">24-59</td><td style="text-align:right;padding:0.3rem;">19-29</td><td style="text-align:right;padding:0.3rem;">27</td><td style="text-align:right;padding:0.3rem;">10</td><td style="text-align:right;padding:0.3rem;">73</td></tr>
                         </tbody></table>
-                        <div style="font-size:0.75rem;color:#6B7A8D;margin-top:0.5rem;">Source: Sports Reference</div>
+                        <div style="font-size:0.75rem;color:#667486;margin-top:0.5rem;">Source: Sports Reference</div>
                     </div>`,
                     2: `<div style="overflow-x:auto;">
                         <div style="font-weight:700;color:#1B2A4A;margin-bottom:0.5rem;font-size:0.95rem;">Arkansas 103, Tulsa 84 — March 25, 1994</div>
                         <div style="font-weight:600;color:#1B2A4A;margin:0.75rem 0 0.25rem;font-size:0.85rem;">Arkansas — 41-62 FG (66.1%), 12-17 FT</div>
-                        <table style="width:100%;border-collapse:collapse;font-size:0.78rem;margin-bottom:1rem;"><thead><tr style="border-bottom:2px solid #E8E2D6;color:#6B7A8D;text-align:right;"><th style="text-align:left;padding:0.3rem 0.5rem;">Player</th><th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th><th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th><th style="padding:0.3rem;">AST</th><th style="padding:0.3rem;font-weight:700;color:#1B2A4A;">PTS</th></tr></thead><tbody>
+                        <table style="width:100%;border-collapse:collapse;font-size:0.78rem;margin-bottom:1rem;"><thead><tr style="border-bottom:2px solid #E8E2D6;color:#667486;text-align:right;"><th style="text-align:left;padding:0.3rem 0.5rem;">Player</th><th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th><th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th><th style="padding:0.3rem;">AST</th><th style="padding:0.3rem;font-weight:700;color:#1B2A4A;">PTS</th></tr></thead><tbody>
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Corliss Williamson</td><td style="text-align:right;padding:0.3rem;">30</td><td style="text-align:right;padding:0.3rem;">10-13</td><td style="text-align:right;padding:0.3rem;">1-1</td><td style="text-align:right;padding:0.3rem;">9</td><td style="text-align:right;padding:0.3rem;">2</td><td style="text-align:right;padding:0.3rem;font-weight:700;">21</td></tr>
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Scotty Thurman</td><td style="text-align:right;padding:0.3rem;">29</td><td style="text-align:right;padding:0.3rem;">9-13</td><td style="text-align:right;padding:0.3rem;">0-0</td><td style="text-align:right;padding:0.3rem;">5</td><td style="text-align:right;padding:0.3rem;">2</td><td style="text-align:right;padding:0.3rem;font-weight:700;">21</td></tr>
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Clint McDaniel</td><td style="text-align:right;padding:0.3rem;">23</td><td style="text-align:right;padding:0.3rem;">8-9</td><td style="text-align:right;padding:0.3rem;">0-0</td><td style="text-align:right;padding:0.3rem;">12</td><td style="text-align:right;padding:0.3rem;">2</td><td style="text-align:right;padding:0.3rem;font-weight:700;">19</td></tr>
@@ -14329,7 +14336,7 @@
                             <tr style="border-bottom:2px solid #E8E2D6;font-weight:700;"><td style="text-align:left;padding:0.3rem 0.5rem;">TOTALS</td><td style="text-align:right;padding:0.3rem;">200</td><td style="text-align:right;padding:0.3rem;">41-62</td><td style="text-align:right;padding:0.3rem;">12-17</td><td style="text-align:right;padding:0.3rem;">36</td><td style="text-align:right;padding:0.3rem;">31</td><td style="text-align:right;padding:0.3rem;">103</td></tr>
                         </tbody></table>
                         <div style="font-weight:600;color:#1B2A4A;margin:0.75rem 0 0.25rem;font-size:0.85rem;">Tulsa — 26-74 FG (35.1%), 22-27 FT</div>
-                        <table style="width:100%;border-collapse:collapse;font-size:0.78rem;"><thead><tr style="border-bottom:2px solid #E8E2D6;color:#6B7A8D;text-align:right;"><th style="text-align:left;padding:0.3rem 0.5rem;">Player</th><th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th><th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th><th style="padding:0.3rem;">AST</th><th style="padding:0.3rem;font-weight:700;color:#1B2A4A;">PTS</th></tr></thead><tbody>
+                        <table style="width:100%;border-collapse:collapse;font-size:0.78rem;"><thead><tr style="border-bottom:2px solid #E8E2D6;color:#667486;text-align:right;"><th style="text-align:left;padding:0.3rem 0.5rem;">Player</th><th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th><th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th><th style="padding:0.3rem;">AST</th><th style="padding:0.3rem;font-weight:700;color:#1B2A4A;">PTS</th></tr></thead><tbody>
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Gary Collier</td><td style="text-align:right;padding:0.3rem;">39</td><td style="text-align:right;padding:0.3rem;">12-26</td><td style="text-align:right;padding:0.3rem;">5-5</td><td style="text-align:right;padding:0.3rem;">6</td><td style="text-align:right;padding:0.3rem;">1</td><td style="text-align:right;padding:0.3rem;font-weight:700;">35</td></tr>
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Shea Seals</td><td style="text-align:right;padding:0.3rem;">35</td><td style="text-align:right;padding:0.3rem;">4-17</td><td style="text-align:right;padding:0.3rem;">9-9</td><td style="text-align:right;padding:0.3rem;">11</td><td style="text-align:right;padding:0.3rem;">6</td><td style="text-align:right;padding:0.3rem;font-weight:700;">19</td></tr>
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Lou Dawkins</td><td style="text-align:right;padding:0.3rem;">28</td><td style="text-align:right;padding:0.3rem;">6-8</td><td style="text-align:right;padding:0.3rem;">2-5</td><td style="text-align:right;padding:0.3rem;">6</td><td style="text-align:right;padding:0.3rem;">3</td><td style="text-align:right;padding:0.3rem;font-weight:700;">14</td></tr>
@@ -14338,12 +14345,12 @@
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Kwanza Johnson</td><td style="text-align:right;padding:0.3rem;">22</td><td style="text-align:right;padding:0.3rem;">1-5</td><td style="text-align:right;padding:0.3rem;">0-4</td><td style="text-align:right;padding:0.3rem;">3</td><td style="text-align:right;padding:0.3rem;">1</td><td style="text-align:right;padding:0.3rem;font-weight:700;">2</td></tr>
                             <tr style="border-bottom:2px solid #E8E2D6;font-weight:700;"><td style="text-align:left;padding:0.3rem 0.5rem;">TOTALS</td><td style="text-align:right;padding:0.3rem;">200</td><td style="text-align:right;padding:0.3rem;">26-74</td><td style="text-align:right;padding:0.3rem;">22-27</td><td style="text-align:right;padding:0.3rem;">31</td><td style="text-align:right;padding:0.3rem;">20</td><td style="text-align:right;padding:0.3rem;">84</td></tr>
                         </tbody></table>
-                        <div style="font-size:0.75rem;color:#6B7A8D;margin-top:0.5rem;">Source: Sports Reference</div>
+                        <div style="font-size:0.75rem;color:#667486;margin-top:0.5rem;">Source: Sports Reference</div>
                     </div>`,
                     3: `<div style="overflow-x:auto;">
                         <div style="font-weight:700;color:#1B2A4A;margin-bottom:0.5rem;font-size:0.95rem;">Arkansas 76, Michigan 68 — March 27, 1994</div>
                         <div style="font-weight:600;color:#1B2A4A;margin:0.75rem 0 0.25rem;font-size:0.85rem;">Arkansas — 27-57 FG (47.4%), 12-19 FT</div>
-                        <table style="width:100%;border-collapse:collapse;font-size:0.78rem;margin-bottom:1rem;"><thead><tr style="border-bottom:2px solid #E8E2D6;color:#6B7A8D;text-align:right;"><th style="text-align:left;padding:0.3rem 0.5rem;">Player</th><th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th><th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th><th style="padding:0.3rem;">AST</th><th style="padding:0.3rem;font-weight:700;color:#1B2A4A;">PTS</th></tr></thead><tbody>
+                        <table style="width:100%;border-collapse:collapse;font-size:0.78rem;margin-bottom:1rem;"><thead><tr style="border-bottom:2px solid #E8E2D6;color:#667486;text-align:right;"><th style="text-align:left;padding:0.3rem 0.5rem;">Player</th><th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th><th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th><th style="padding:0.3rem;">AST</th><th style="padding:0.3rem;font-weight:700;color:#1B2A4A;">PTS</th></tr></thead><tbody>
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Scotty Thurman</td><td style="text-align:right;padding:0.3rem;">31</td><td style="text-align:right;padding:0.3rem;">7-13</td><td style="text-align:right;padding:0.3rem;">2-2</td><td style="text-align:right;padding:0.3rem;">2</td><td style="text-align:right;padding:0.3rem;">1</td><td style="text-align:right;padding:0.3rem;font-weight:700;">20</td></tr>
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Darnell Robinson</td><td style="text-align:right;padding:0.3rem;">28</td><td style="text-align:right;padding:0.3rem;">6-13</td><td style="text-align:right;padding:0.3rem;">2-3</td><td style="text-align:right;padding:0.3rem;">4</td><td style="text-align:right;padding:0.3rem;">1</td><td style="text-align:right;padding:0.3rem;font-weight:700;">14</td></tr>
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Corliss Williamson</td><td style="text-align:right;padding:0.3rem;">40</td><td style="text-align:right;padding:0.3rem;">6-10</td><td style="text-align:right;padding:0.3rem;">0-2</td><td style="text-align:right;padding:0.3rem;">6</td><td style="text-align:right;padding:0.3rem;">3</td><td style="text-align:right;padding:0.3rem;font-weight:700;">12</td></tr>
@@ -14354,7 +14361,7 @@
                             <tr style="border-bottom:2px solid #E8E2D6;font-weight:700;"><td style="text-align:left;padding:0.3rem 0.5rem;">TOTALS</td><td style="text-align:right;padding:0.3rem;">200</td><td style="text-align:right;padding:0.3rem;">27-57</td><td style="text-align:right;padding:0.3rem;">12-19</td><td style="text-align:right;padding:0.3rem;">27</td><td style="text-align:right;padding:0.3rem;">15</td><td style="text-align:right;padding:0.3rem;">76</td></tr>
                         </tbody></table>
                         <div style="font-weight:600;color:#1B2A4A;margin:0.75rem 0 0.25rem;font-size:0.85rem;">Michigan — 26-64 FG (40.6%), 13-20 FT</div>
-                        <table style="width:100%;border-collapse:collapse;font-size:0.78rem;"><thead><tr style="border-bottom:2px solid #E8E2D6;color:#6B7A8D;text-align:right;"><th style="text-align:left;padding:0.3rem 0.5rem;">Player</th><th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th><th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th><th style="padding:0.3rem;">AST</th><th style="padding:0.3rem;font-weight:700;color:#1B2A4A;">PTS</th></tr></thead><tbody>
+                        <table style="width:100%;border-collapse:collapse;font-size:0.78rem;"><thead><tr style="border-bottom:2px solid #E8E2D6;color:#667486;text-align:right;"><th style="text-align:left;padding:0.3rem 0.5rem;">Player</th><th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th><th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th><th style="padding:0.3rem;">AST</th><th style="padding:0.3rem;font-weight:700;color:#1B2A4A;">PTS</th></tr></thead><tbody>
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Juwan Howard</td><td style="text-align:right;padding:0.3rem;">37</td><td style="text-align:right;padding:0.3rem;">11-17</td><td style="text-align:right;padding:0.3rem;">8-11</td><td style="text-align:right;padding:0.3rem;">13</td><td style="text-align:right;padding:0.3rem;">0</td><td style="text-align:right;padding:0.3rem;font-weight:700;">30</td></tr>
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Jalen Rose</td><td style="text-align:right;padding:0.3rem;">39</td><td style="text-align:right;padding:0.3rem;">5-19</td><td style="text-align:right;padding:0.3rem;">2-5</td><td style="text-align:right;padding:0.3rem;">8</td><td style="text-align:right;padding:0.3rem;">1</td><td style="text-align:right;padding:0.3rem;font-weight:700;">13</td></tr>
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Ray Jackson</td><td style="text-align:right;padding:0.3rem;">33</td><td style="text-align:right;padding:0.3rem;">6-8</td><td style="text-align:right;padding:0.3rem;">0-0</td><td style="text-align:right;padding:0.3rem;">5</td><td style="text-align:right;padding:0.3rem;">2</td><td style="text-align:right;padding:0.3rem;font-weight:700;">12</td></tr>
@@ -14363,12 +14370,12 @@
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Tariq Abdul-Wahad</td><td style="text-align:right;padding:0.3rem;">11</td><td style="text-align:right;padding:0.3rem;">1-3</td><td style="text-align:right;padding:0.3rem;">1-2</td><td style="text-align:right;padding:0.3rem;">3</td><td style="text-align:right;padding:0.3rem;">0</td><td style="text-align:right;padding:0.3rem;font-weight:700;">4</td></tr>
                             <tr style="border-bottom:2px solid #E8E2D6;font-weight:700;"><td style="text-align:left;padding:0.3rem 0.5rem;">TOTALS</td><td style="text-align:right;padding:0.3rem;">200</td><td style="text-align:right;padding:0.3rem;">26-64</td><td style="text-align:right;padding:0.3rem;">13-20</td><td style="text-align:right;padding:0.3rem;">39</td><td style="text-align:right;padding:0.3rem;">14</td><td style="text-align:right;padding:0.3rem;">68</td></tr>
                         </tbody></table>
-                        <div style="font-size:0.75rem;color:#6B7A8D;margin-top:0.5rem;">Source: Sports Reference</div>
+                        <div style="font-size:0.75rem;color:#667486;margin-top:0.5rem;">Source: Sports Reference</div>
                     </div>`,
                     4: `<div style="overflow-x:auto;">
                         <div style="font-weight:700;color:#1B2A4A;margin-bottom:0.5rem;font-size:0.95rem;">Arkansas 91, Arizona 82 — April 2, 1994</div>
                         <div style="font-weight:600;color:#1B2A4A;margin:0.75rem 0 0.25rem;font-size:0.85rem;">Arkansas — 32-70 FG (45.7%), 20-32 FT</div>
-                        <table style="width:100%;border-collapse:collapse;font-size:0.78rem;margin-bottom:1rem;"><thead><tr style="border-bottom:2px solid #E8E2D6;color:#6B7A8D;text-align:right;"><th style="text-align:left;padding:0.3rem 0.5rem;">Player</th><th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th><th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th><th style="padding:0.3rem;">AST</th><th style="padding:0.3rem;font-weight:700;color:#1B2A4A;">PTS</th></tr></thead><tbody>
+                        <table style="width:100%;border-collapse:collapse;font-size:0.78rem;margin-bottom:1rem;"><thead><tr style="border-bottom:2px solid #E8E2D6;color:#667486;text-align:right;"><th style="text-align:left;padding:0.3rem 0.5rem;">Player</th><th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th><th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th><th style="padding:0.3rem;">AST</th><th style="padding:0.3rem;font-weight:700;color:#1B2A4A;">PTS</th></tr></thead><tbody>
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Corliss Williamson</td><td style="text-align:right;padding:0.3rem;">37</td><td style="text-align:right;padding:0.3rem;">11-18</td><td style="text-align:right;padding:0.3rem;">7-9</td><td style="text-align:right;padding:0.3rem;">13</td><td style="text-align:right;padding:0.3rem;">5</td><td style="text-align:right;padding:0.3rem;font-weight:700;">29</td></tr>
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Scotty Thurman</td><td style="text-align:right;padding:0.3rem;">36</td><td style="text-align:right;padding:0.3rem;">5-13</td><td style="text-align:right;padding:0.3rem;">4-6</td><td style="text-align:right;padding:0.3rem;">8</td><td style="text-align:right;padding:0.3rem;">5</td><td style="text-align:right;padding:0.3rem;font-weight:700;">14</td></tr>
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Darnell Robinson</td><td style="text-align:right;padding:0.3rem;">26</td><td style="text-align:right;padding:0.3rem;">5-9</td><td style="text-align:right;padding:0.3rem;">2-3</td><td style="text-align:right;padding:0.3rem;">1</td><td style="text-align:right;padding:0.3rem;">2</td><td style="text-align:right;padding:0.3rem;font-weight:700;">12</td></tr>
@@ -14380,7 +14387,7 @@
                             <tr style="border-bottom:2px solid #E8E2D6;font-weight:700;"><td style="text-align:left;padding:0.3rem 0.5rem;">TOTALS</td><td style="text-align:right;padding:0.3rem;">200</td><td style="text-align:right;padding:0.3rem;">32-70</td><td style="text-align:right;padding:0.3rem;">20-32</td><td style="text-align:right;padding:0.3rem;">42</td><td style="text-align:right;padding:0.3rem;">19</td><td style="text-align:right;padding:0.3rem;">91</td></tr>
                         </tbody></table>
                         <div style="font-weight:600;color:#1B2A4A;margin:0.75rem 0 0.25rem;font-size:0.85rem;">Arizona — 31-80 FG (38.8%), 14-16 FT</div>
-                        <table style="width:100%;border-collapse:collapse;font-size:0.78rem;"><thead><tr style="border-bottom:2px solid #E8E2D6;color:#6B7A8D;text-align:right;"><th style="text-align:left;padding:0.3rem 0.5rem;">Player</th><th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th><th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th><th style="padding:0.3rem;">AST</th><th style="padding:0.3rem;font-weight:700;color:#1B2A4A;">PTS</th></tr></thead><tbody>
+                        <table style="width:100%;border-collapse:collapse;font-size:0.78rem;"><thead><tr style="border-bottom:2px solid #E8E2D6;color:#667486;text-align:right;"><th style="text-align:left;padding:0.3rem 0.5rem;">Player</th><th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th><th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th><th style="padding:0.3rem;">AST</th><th style="padding:0.3rem;font-weight:700;color:#1B2A4A;">PTS</th></tr></thead><tbody>
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Khalid Reeves</td><td style="text-align:right;padding:0.3rem;">33</td><td style="text-align:right;padding:0.3rem;">6-19</td><td style="text-align:right;padding:0.3rem;">8-9</td><td style="text-align:right;padding:0.3rem;">4</td><td style="text-align:right;padding:0.3rem;">4</td><td style="text-align:right;padding:0.3rem;font-weight:700;">20</td></tr>
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Damon Stoudamire</td><td style="text-align:right;padding:0.3rem;">38</td><td style="text-align:right;padding:0.3rem;">5-24</td><td style="text-align:right;padding:0.3rem;">4-4</td><td style="text-align:right;padding:0.3rem;">8</td><td style="text-align:right;padding:0.3rem;">6</td><td style="text-align:right;padding:0.3rem;font-weight:700;">16</td></tr>
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Ray Owes</td><td style="text-align:right;padding:0.3rem;">35</td><td style="text-align:right;padding:0.3rem;">7-15</td><td style="text-align:right;padding:0.3rem;">2-2</td><td style="text-align:right;padding:0.3rem;">12</td><td style="text-align:right;padding:0.3rem;">0</td><td style="text-align:right;padding:0.3rem;font-weight:700;">16</td></tr>
@@ -14389,13 +14396,13 @@
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Reggie Geary</td><td style="text-align:right;padding:0.3rem;">36</td><td style="text-align:right;padding:0.3rem;">2-6</td><td style="text-align:right;padding:0.3rem;">0-0</td><td style="text-align:right;padding:0.3rem;">6</td><td style="text-align:right;padding:0.3rem;">4</td><td style="text-align:right;padding:0.3rem;font-weight:700;">4</td></tr>
                             <tr style="border-bottom:2px solid #E8E2D6;font-weight:700;"><td style="text-align:left;padding:0.3rem 0.5rem;">TOTALS</td><td style="text-align:right;padding:0.3rem;">200</td><td style="text-align:right;padding:0.3rem;">31-80</td><td style="text-align:right;padding:0.3rem;">14-16</td><td style="text-align:right;padding:0.3rem;">48</td><td style="text-align:right;padding:0.3rem;">18</td><td style="text-align:right;padding:0.3rem;">82</td></tr>
                         </tbody></table>
-                        <div style="font-size:0.75rem;color:#6B7A8D;margin-top:0.5rem;">Source: Sports Reference</div>
+                        <div style="font-size:0.75rem;color:#667486;margin-top:0.5rem;">Source: Sports Reference</div>
                     </div>`,
                     5: `<div style="overflow-x:auto;">
                         <div style="font-weight:700;color:#1B2A4A;margin-bottom:0.5rem;font-size:0.95rem;">Arkansas 76, Duke 72 — April 4, 1994</div>
                         <div style="font-weight:600;color:#1B2A4A;margin:0.75rem 0 0.25rem;font-size:0.85rem;">Arkansas — 30-77 FG (.390), 11-19 FT</div>
                         <table style="width:100%;border-collapse:collapse;font-size:0.78rem;margin-bottom:1rem;">
-                            <thead><tr style="border-bottom:2px solid #E8E2D6;color:#6B7A8D;text-align:right;">
+                            <thead><tr style="border-bottom:2px solid #E8E2D6;color:#667486;text-align:right;">
                                 <th style="text-align:left;padding:0.3rem 0.5rem;">Player</th>
                                 <th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th>
                                 <th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th>
@@ -14506,7 +14513,7 @@
                         </table>
                         <div style="font-weight:600;color:#1B2A4A;margin:0.75rem 0 0.25rem;font-size:0.85rem;">Duke — 29-65 FG (.446), 7-11 FT</div>
                         <table style="width:100%;border-collapse:collapse;font-size:0.78rem;margin-bottom:1rem;">
-                            <thead><tr style="border-bottom:2px solid #E8E2D6;color:#6B7A8D;text-align:right;">
+                            <thead><tr style="border-bottom:2px solid #E8E2D6;color:#667486;text-align:right;">
                                 <th style="text-align:left;padding:0.3rem 0.5rem;">Player</th>
                                 <th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th>
                                 <th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th>
@@ -14588,7 +14595,7 @@
                                 </tr>
                             </tbody>
                         </table>
-                        <div style="font-size:0.75rem;color:#6B7A8D;margin-top:0.5rem;">Source: Sports Reference</div>
+                        <div style="font-size:0.75rem;color:#667486;margin-top:0.5rem;">Source: Sports Reference</div>
                     </div>`
                 }
             },
@@ -14618,7 +14625,7 @@
                     0: `<div style="overflow-x:auto;">
                         <div style="font-weight:700;color:#1B2A4A;margin-bottom:0.5rem;font-size:0.95rem;">UCLA 92, Florida International 56 — March 17, 1995</div>
                         <div style="font-weight:600;color:#1B2A4A;margin:0.75rem 0 0.25rem;font-size:0.85rem;">UCLA — 41-68 FG (60.3%), 8-11 FT</div>
-                        <table style="width:100%;border-collapse:collapse;font-size:0.78rem;margin-bottom:1rem;"><thead><tr style="border-bottom:2px solid #E8E2D6;color:#6B7A8D;text-align:right;"><th style="text-align:left;padding:0.3rem 0.5rem;">Player</th><th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th><th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th><th style="padding:0.3rem;">AST</th><th style="padding:0.3rem;font-weight:700;color:#1B2A4A;">PTS</th></tr></thead><tbody>
+                        <table style="width:100%;border-collapse:collapse;font-size:0.78rem;margin-bottom:1rem;"><thead><tr style="border-bottom:2px solid #E8E2D6;color:#667486;text-align:right;"><th style="text-align:left;padding:0.3rem 0.5rem;">Player</th><th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th><th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th><th style="padding:0.3rem;">AST</th><th style="padding:0.3rem;font-weight:700;color:#1B2A4A;">PTS</th></tr></thead><tbody>
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">J.R. Henderson</td><td style="text-align:right;padding:0.3rem;">23</td><td style="text-align:right;padding:0.3rem;">8-12</td><td style="text-align:right;padding:0.3rem;">0-1</td><td style="text-align:right;padding:0.3rem;">5</td><td style="text-align:right;padding:0.3rem;">0</td><td style="text-align:right;padding:0.3rem;font-weight:700;">16</td></tr>
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Charles O'Bannon</td><td style="text-align:right;padding:0.3rem;">25</td><td style="text-align:right;padding:0.3rem;">7-9</td><td style="text-align:right;padding:0.3rem;">0-0</td><td style="text-align:right;padding:0.3rem;">2</td><td style="text-align:right;padding:0.3rem;">2</td><td style="text-align:right;padding:0.3rem;font-weight:700;">14</td></tr>
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Kris Johnson</td><td style="text-align:right;padding:0.3rem;">20</td><td style="text-align:right;padding:0.3rem;">5-8</td><td style="text-align:right;padding:0.3rem;">0-1</td><td style="text-align:right;padding:0.3rem;">6</td><td style="text-align:right;padding:0.3rem;">0</td><td style="text-align:right;padding:0.3rem;font-weight:700;">10</td></tr>
@@ -14631,7 +14638,7 @@
                             <tr style="border-bottom:2px solid #E8E2D6;font-weight:700;"><td style="text-align:left;padding:0.3rem 0.5rem;">TOTALS</td><td style="text-align:right;padding:0.3rem;">200</td><td style="text-align:right;padding:0.3rem;">41-68</td><td style="text-align:right;padding:0.3rem;">8-11</td><td style="text-align:right;padding:0.3rem;">43</td><td style="text-align:right;padding:0.3rem;">17</td><td style="text-align:right;padding:0.3rem;">92</td></tr>
                         </tbody></table>
                         <div style="font-weight:600;color:#1B2A4A;margin:0.75rem 0 0.25rem;font-size:0.85rem;">Florida International — 19-56 FG (33.9%), 15-23 FT</div>
-                        <table style="width:100%;border-collapse:collapse;font-size:0.78rem;"><thead><tr style="border-bottom:2px solid #E8E2D6;color:#6B7A8D;text-align:right;"><th style="text-align:left;padding:0.3rem 0.5rem;">Player</th><th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th><th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th><th style="padding:0.3rem;">AST</th><th style="padding:0.3rem;font-weight:700;color:#1B2A4A;">PTS</th></tr></thead><tbody>
+                        <table style="width:100%;border-collapse:collapse;font-size:0.78rem;"><thead><tr style="border-bottom:2px solid #E8E2D6;color:#667486;text-align:right;"><th style="text-align:left;padding:0.3rem 0.5rem;">Player</th><th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th><th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th><th style="padding:0.3rem;">AST</th><th style="padding:0.3rem;font-weight:700;color:#1B2A4A;">PTS</th></tr></thead><tbody>
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">James Mazyck</td><td style="text-align:right;padding:0.3rem;">24</td><td style="text-align:right;padding:0.3rem;">5-11</td><td style="text-align:right;padding:0.3rem;">10-14</td><td style="text-align:right;padding:0.3rem;">5</td><td style="text-align:right;padding:0.3rem;">4</td><td style="text-align:right;padding:0.3rem;font-weight:700;">21</td></tr>
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Marc Dozier</td><td style="text-align:right;padding:0.3rem;">38</td><td style="text-align:right;padding:0.3rem;">4-10</td><td style="text-align:right;padding:0.3rem;">0-0</td><td style="text-align:right;padding:0.3rem;">2</td><td style="text-align:right;padding:0.3rem;">2</td><td style="text-align:right;padding:0.3rem;font-weight:700;">8</td></tr>
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Brian Davis</td><td style="text-align:right;padding:0.3rem;">17</td><td style="text-align:right;padding:0.3rem;">3-8</td><td style="text-align:right;padding:0.3rem;">0-0</td><td style="text-align:right;padding:0.3rem;">2</td><td style="text-align:right;padding:0.3rem;">0</td><td style="text-align:right;padding:0.3rem;font-weight:700;">7</td></tr>
@@ -14639,12 +14646,12 @@
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Matt Tchir</td><td style="text-align:right;padding:0.3rem;">25</td><td style="text-align:right;padding:0.3rem;">1-4</td><td style="text-align:right;padding:0.3rem;">2-2</td><td style="text-align:right;padding:0.3rem;">1</td><td style="text-align:right;padding:0.3rem;">0</td><td style="text-align:right;padding:0.3rem;font-weight:700;">5</td></tr>
                             <tr style="border-bottom:2px solid #E8E2D6;font-weight:700;"><td style="text-align:left;padding:0.3rem 0.5rem;">TOTALS</td><td style="text-align:right;padding:0.3rem;">200</td><td style="text-align:right;padding:0.3rem;">19-56</td><td style="text-align:right;padding:0.3rem;">15-23</td><td style="text-align:right;padding:0.3rem;">20</td><td style="text-align:right;padding:0.3rem;">12</td><td style="text-align:right;padding:0.3rem;">56</td></tr>
                         </tbody></table>
-                        <div style="font-size:0.75rem;color:#6B7A8D;margin-top:0.5rem;">Source: Sports Reference</div>
+                        <div style="font-size:0.75rem;color:#667486;margin-top:0.5rem;">Source: Sports Reference</div>
                     </div>`,
                     1: `<div style="overflow-x:auto;">
                         <div style="font-weight:700;color:#1B2A4A;margin-bottom:0.5rem;font-size:0.95rem;">UCLA 75, Missouri 74 — March 19, 1995</div>
                         <div style="font-weight:600;color:#1B2A4A;margin:0.75rem 0 0.25rem;font-size:0.85rem;">UCLA — 28-54 FG (51.9%), 13-17 FT</div>
-                        <table style="width:100%;border-collapse:collapse;font-size:0.78rem;margin-bottom:1rem;"><thead><tr style="border-bottom:2px solid #E8E2D6;color:#6B7A8D;text-align:right;"><th style="text-align:left;padding:0.3rem 0.5rem;">Player</th><th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th><th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th><th style="padding:0.3rem;">AST</th><th style="padding:0.3rem;font-weight:700;color:#1B2A4A;">PTS</th></tr></thead><tbody>
+                        <table style="width:100%;border-collapse:collapse;font-size:0.78rem;margin-bottom:1rem;"><thead><tr style="border-bottom:2px solid #E8E2D6;color:#667486;text-align:right;"><th style="text-align:left;padding:0.3rem 0.5rem;">Player</th><th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th><th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th><th style="padding:0.3rem;">AST</th><th style="padding:0.3rem;font-weight:700;color:#1B2A4A;">PTS</th></tr></thead><tbody>
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Ed O'Bannon</td><td style="text-align:right;padding:0.3rem;">39</td><td style="text-align:right;padding:0.3rem;">9-16</td><td style="text-align:right;padding:0.3rem;">4-6</td><td style="text-align:right;padding:0.3rem;">7</td><td style="text-align:right;padding:0.3rem;">1</td><td style="text-align:right;padding:0.3rem;font-weight:700;">24</td></tr>
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Tyus Edney</td><td style="text-align:right;padding:0.3rem;">35</td><td style="text-align:right;padding:0.3rem;">5-8</td><td style="text-align:right;padding:0.3rem;">2-4</td><td style="text-align:right;padding:0.3rem;">3</td><td style="text-align:right;padding:0.3rem;">7</td><td style="text-align:right;padding:0.3rem;font-weight:700;">15</td></tr>
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">J.R. Henderson</td><td style="text-align:right;padding:0.3rem;">23</td><td style="text-align:right;padding:0.3rem;">4-5</td><td style="text-align:right;padding:0.3rem;">3-3</td><td style="text-align:right;padding:0.3rem;">5</td><td style="text-align:right;padding:0.3rem;">2</td><td style="text-align:right;padding:0.3rem;font-weight:700;">11</td></tr>
@@ -14654,7 +14661,7 @@
                             <tr style="border-bottom:2px solid #E8E2D6;font-weight:700;"><td style="text-align:left;padding:0.3rem 0.5rem;">TOTALS</td><td style="text-align:right;padding:0.3rem;">200</td><td style="text-align:right;padding:0.3rem;">28-54</td><td style="text-align:right;padding:0.3rem;">13-17</td><td style="text-align:right;padding:0.3rem;">26</td><td style="text-align:right;padding:0.3rem;">19</td><td style="text-align:right;padding:0.3rem;">75</td></tr>
                         </tbody></table>
                         <div style="font-weight:600;color:#1B2A4A;margin:0.75rem 0 0.25rem;font-size:0.85rem;">Missouri — 28-59 FG (47.5%), 6-7 FT</div>
-                        <table style="width:100%;border-collapse:collapse;font-size:0.78rem;"><thead><tr style="border-bottom:2px solid #E8E2D6;color:#6B7A8D;text-align:right;"><th style="text-align:left;padding:0.3rem 0.5rem;">Player</th><th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th><th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th><th style="padding:0.3rem;">AST</th><th style="padding:0.3rem;font-weight:700;color:#1B2A4A;">PTS</th></tr></thead><tbody>
+                        <table style="width:100%;border-collapse:collapse;font-size:0.78rem;"><thead><tr style="border-bottom:2px solid #E8E2D6;color:#667486;text-align:right;"><th style="text-align:left;padding:0.3rem 0.5rem;">Player</th><th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th><th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th><th style="padding:0.3rem;">AST</th><th style="padding:0.3rem;font-weight:700;color:#1B2A4A;">PTS</th></tr></thead><tbody>
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Paul O'Liney</td><td style="text-align:right;padding:0.3rem;">39</td><td style="text-align:right;padding:0.3rem;">9-13</td><td style="text-align:right;padding:0.3rem;">0-0</td><td style="text-align:right;padding:0.3rem;">4</td><td style="text-align:right;padding:0.3rem;">2</td><td style="text-align:right;padding:0.3rem;font-weight:700;">23</td></tr>
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Jason Sutherland</td><td style="text-align:right;padding:0.3rem;">36</td><td style="text-align:right;padding:0.3rem;">5-10</td><td style="text-align:right;padding:0.3rem;">1-1</td><td style="text-align:right;padding:0.3rem;">4</td><td style="text-align:right;padding:0.3rem;">1</td><td style="text-align:right;padding:0.3rem;font-weight:700;">15</td></tr>
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Derek Grimm</td><td style="text-align:right;padding:0.3rem;">38</td><td style="text-align:right;padding:0.3rem;">5-10</td><td style="text-align:right;padding:0.3rem;">0-0</td><td style="text-align:right;padding:0.3rem;">4</td><td style="text-align:right;padding:0.3rem;">3</td><td style="text-align:right;padding:0.3rem;font-weight:700;">13</td></tr>
@@ -14662,12 +14669,12 @@
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Julian Winfield</td><td style="text-align:right;padding:0.3rem;">21</td><td style="text-align:right;padding:0.3rem;">3-6</td><td style="text-align:right;padding:0.3rem;">2-2</td><td style="text-align:right;padding:0.3rem;">7</td><td style="text-align:right;padding:0.3rem;">3</td><td style="text-align:right;padding:0.3rem;font-weight:700;">8</td></tr>
                             <tr style="border-bottom:2px solid #E8E2D6;font-weight:700;"><td style="text-align:left;padding:0.3rem 0.5rem;">TOTALS</td><td style="text-align:right;padding:0.3rem;">200</td><td style="text-align:right;padding:0.3rem;">28-59</td><td style="text-align:right;padding:0.3rem;">6-7</td><td style="text-align:right;padding:0.3rem;">29</td><td style="text-align:right;padding:0.3rem;">13</td><td style="text-align:right;padding:0.3rem;">74</td></tr>
                         </tbody></table>
-                        <div style="font-size:0.75rem;color:#6B7A8D;margin-top:0.5rem;">Source: Sports Reference</div>
+                        <div style="font-size:0.75rem;color:#667486;margin-top:0.5rem;">Source: Sports Reference</div>
                     </div>`,
                     2: `<div style="overflow-x:auto;">
                         <div style="font-weight:700;color:#1B2A4A;margin-bottom:0.5rem;font-size:0.95rem;">UCLA 86, Mississippi State 67 — March 23, 1995</div>
                         <div style="font-weight:600;color:#1B2A4A;margin:0.75rem 0 0.25rem;font-size:0.85rem;">UCLA — 28-58 FG (48.3%), 26-43 FT</div>
-                        <table style="width:100%;border-collapse:collapse;font-size:0.78rem;margin-bottom:1rem;"><thead><tr style="border-bottom:2px solid #E8E2D6;color:#6B7A8D;text-align:right;"><th style="text-align:left;padding:0.3rem 0.5rem;">Player</th><th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th><th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th><th style="padding:0.3rem;">AST</th><th style="padding:0.3rem;font-weight:700;color:#1B2A4A;">PTS</th></tr></thead><tbody>
+                        <table style="width:100%;border-collapse:collapse;font-size:0.78rem;margin-bottom:1rem;"><thead><tr style="border-bottom:2px solid #E8E2D6;color:#667486;text-align:right;"><th style="text-align:left;padding:0.3rem 0.5rem;">Player</th><th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th><th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th><th style="padding:0.3rem;">AST</th><th style="padding:0.3rem;font-weight:700;color:#1B2A4A;">PTS</th></tr></thead><tbody>
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Ed O'Bannon</td><td style="text-align:right;padding:0.3rem;">29</td><td style="text-align:right;padding:0.3rem;">8-14</td><td style="text-align:right;padding:0.3rem;">2-3</td><td style="text-align:right;padding:0.3rem;">8</td><td style="text-align:right;padding:0.3rem;">1</td><td style="text-align:right;padding:0.3rem;font-weight:700;">21</td></tr>
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Toby Bailey</td><td style="text-align:right;padding:0.3rem;">31</td><td style="text-align:right;padding:0.3rem;">3-11</td><td style="text-align:right;padding:0.3rem;">6-9</td><td style="text-align:right;padding:0.3rem;">5</td><td style="text-align:right;padding:0.3rem;">2</td><td style="text-align:right;padding:0.3rem;font-weight:700;">12</td></tr>
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">George Zidek</td><td style="text-align:right;padding:0.3rem;">28</td><td style="text-align:right;padding:0.3rem;">5-11</td><td style="text-align:right;padding:0.3rem;">1-4</td><td style="text-align:right;padding:0.3rem;">2</td><td style="text-align:right;padding:0.3rem;">0</td><td style="text-align:right;padding:0.3rem;font-weight:700;">11</td></tr>
@@ -14677,19 +14684,19 @@
                             <tr style="border-bottom:2px solid #E8E2D6;font-weight:700;"><td style="text-align:left;padding:0.3rem 0.5rem;">TOTALS</td><td style="text-align:right;padding:0.3rem;">200</td><td style="text-align:right;padding:0.3rem;">28-58</td><td style="text-align:right;padding:0.3rem;">26-43</td><td style="text-align:right;padding:0.3rem;">36</td><td style="text-align:right;padding:0.3rem;">18</td><td style="text-align:right;padding:0.3rem;">86</td></tr>
                         </tbody></table>
                         <div style="font-weight:600;color:#1B2A4A;margin:0.75rem 0 0.25rem;font-size:0.85rem;">Mississippi State — 23-62 FG (37.1%), 12-17 FT</div>
-                        <table style="width:100%;border-collapse:collapse;font-size:0.78rem;"><thead><tr style="border-bottom:2px solid #E8E2D6;color:#6B7A8D;text-align:right;"><th style="text-align:left;padding:0.3rem 0.5rem;">Player</th><th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th><th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th><th style="padding:0.3rem;">AST</th><th style="padding:0.3rem;font-weight:700;color:#1B2A4A;">PTS</th></tr></thead><tbody>
+                        <table style="width:100%;border-collapse:collapse;font-size:0.78rem;"><thead><tr style="border-bottom:2px solid #E8E2D6;color:#667486;text-align:right;"><th style="text-align:left;padding:0.3rem 0.5rem;">Player</th><th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th><th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th><th style="padding:0.3rem;">AST</th><th style="padding:0.3rem;font-weight:700;color:#1B2A4A;">PTS</th></tr></thead><tbody>
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Darryl Wilson</td><td style="text-align:right;padding:0.3rem;">38</td><td style="text-align:right;padding:0.3rem;">7-21</td><td style="text-align:right;padding:0.3rem;">3-5</td><td style="text-align:right;padding:0.3rem;">6</td><td style="text-align:right;padding:0.3rem;">3</td><td style="text-align:right;padding:0.3rem;font-weight:700;">22</td></tr>
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Erick Dampier</td><td style="text-align:right;padding:0.3rem;">34</td><td style="text-align:right;padding:0.3rem;">4-4</td><td style="text-align:right;padding:0.3rem;">3-4</td><td style="text-align:right;padding:0.3rem;">4</td><td style="text-align:right;padding:0.3rem;">1</td><td style="text-align:right;padding:0.3rem;font-weight:700;">11</td></tr>
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Marcus Bullard</td><td style="text-align:right;padding:0.3rem;">19</td><td style="text-align:right;padding:0.3rem;">3-9</td><td style="text-align:right;padding:0.3rem;">2-2</td><td style="text-align:right;padding:0.3rem;">3</td><td style="text-align:right;padding:0.3rem;">2</td><td style="text-align:right;padding:0.3rem;font-weight:700;">10</td></tr>
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Russell Walters</td><td style="text-align:right;padding:0.3rem;">17</td><td style="text-align:right;padding:0.3rem;">3-5</td><td style="text-align:right;padding:0.3rem;">4-6</td><td style="text-align:right;padding:0.3rem;">7</td><td style="text-align:right;padding:0.3rem;">1</td><td style="text-align:right;padding:0.3rem;font-weight:700;">10</td></tr>
                             <tr style="border-bottom:2px solid #E8E2D6;font-weight:700;"><td style="text-align:left;padding:0.3rem 0.5rem;">TOTALS</td><td style="text-align:right;padding:0.3rem;">200</td><td style="text-align:right;padding:0.3rem;">23-62</td><td style="text-align:right;padding:0.3rem;">12-17</td><td style="text-align:right;padding:0.3rem;">37</td><td style="text-align:right;padding:0.3rem;">18</td><td style="text-align:right;padding:0.3rem;">67</td></tr>
                         </tbody></table>
-                        <div style="font-size:0.75rem;color:#6B7A8D;margin-top:0.5rem;">Source: Sports Reference</div>
+                        <div style="font-size:0.75rem;color:#667486;margin-top:0.5rem;">Source: Sports Reference</div>
                     </div>`,
                     3: `<div style="overflow-x:auto;">
                         <div style="font-weight:700;color:#1B2A4A;margin-bottom:0.5rem;font-size:0.95rem;">UCLA 102, Connecticut 96 (OT) — March 25, 1995</div>
                         <div style="font-weight:600;color:#1B2A4A;margin:0.75rem 0 0.25rem;font-size:0.85rem;">UCLA — 36-66 FG (54.5%), 28-39 FT</div>
-                        <table style="width:100%;border-collapse:collapse;font-size:0.78rem;margin-bottom:1rem;"><thead><tr style="border-bottom:2px solid #E8E2D6;color:#6B7A8D;text-align:right;"><th style="text-align:left;padding:0.3rem 0.5rem;">Player</th><th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th><th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th><th style="padding:0.3rem;">AST</th><th style="padding:0.3rem;font-weight:700;color:#1B2A4A;">PTS</th></tr></thead><tbody>
+                        <table style="width:100%;border-collapse:collapse;font-size:0.78rem;margin-bottom:1rem;"><thead><tr style="border-bottom:2px solid #E8E2D6;color:#667486;text-align:right;"><th style="text-align:left;padding:0.3rem 0.5rem;">Player</th><th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th><th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th><th style="padding:0.3rem;">AST</th><th style="padding:0.3rem;font-weight:700;color:#1B2A4A;">PTS</th></tr></thead><tbody>
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Toby Bailey</td><td style="text-align:right;padding:0.3rem;">38</td><td style="text-align:right;padding:0.3rem;">10-16</td><td style="text-align:right;padding:0.3rem;">6-12</td><td style="text-align:right;padding:0.3rem;">9</td><td style="text-align:right;padding:0.3rem;">0</td><td style="text-align:right;padding:0.3rem;font-weight:700;">26</td></tr>
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Tyus Edney</td><td style="text-align:right;padding:0.3rem;">40</td><td style="text-align:right;padding:0.3rem;">5-11</td><td style="text-align:right;padding:0.3rem;">10-10</td><td style="text-align:right;padding:0.3rem;">2</td><td style="text-align:right;padding:0.3rem;">10</td><td style="text-align:right;padding:0.3rem;font-weight:700;">22</td></tr>
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">J.R. Henderson</td><td style="text-align:right;padding:0.3rem;">30</td><td style="text-align:right;padding:0.3rem;">9-12</td><td style="text-align:right;padding:0.3rem;">1-1</td><td style="text-align:right;padding:0.3rem;">2</td><td style="text-align:right;padding:0.3rem;">1</td><td style="text-align:right;padding:0.3rem;font-weight:700;">18</td></tr>
@@ -14699,19 +14706,19 @@
                             <tr style="border-bottom:2px solid #E8E2D6;font-weight:700;"><td style="text-align:left;padding:0.3rem 0.5rem;">TOTALS</td><td style="text-align:right;padding:0.3rem;">200</td><td style="text-align:right;padding:0.3rem;">36-66</td><td style="text-align:right;padding:0.3rem;">28-39</td><td style="text-align:right;padding:0.3rem;">33</td><td style="text-align:right;padding:0.3rem;">23</td><td style="text-align:right;padding:0.3rem;">102</td></tr>
                         </tbody></table>
                         <div style="font-weight:600;color:#1B2A4A;margin:0.75rem 0 0.25rem;font-size:0.85rem;">Connecticut — 33-76 FG (43.4%), 23-27 FT</div>
-                        <table style="width:100%;border-collapse:collapse;font-size:0.78rem;"><thead><tr style="border-bottom:2px solid #E8E2D6;color:#6B7A8D;text-align:right;"><th style="text-align:left;padding:0.3rem 0.5rem;">Player</th><th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th><th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th><th style="padding:0.3rem;">AST</th><th style="padding:0.3rem;font-weight:700;color:#1B2A4A;">PTS</th></tr></thead><tbody>
+                        <table style="width:100%;border-collapse:collapse;font-size:0.78rem;"><thead><tr style="border-bottom:2px solid #E8E2D6;color:#667486;text-align:right;"><th style="text-align:left;padding:0.3rem 0.5rem;">Player</th><th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th><th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th><th style="padding:0.3rem;">AST</th><th style="padding:0.3rem;font-weight:700;color:#1B2A4A;">PTS</th></tr></thead><tbody>
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Ray Allen</td><td style="text-align:right;padding:0.3rem;">38</td><td style="text-align:right;padding:0.3rem;">12-25</td><td style="text-align:right;padding:0.3rem;">9-12</td><td style="text-align:right;padding:0.3rem;">9</td><td style="text-align:right;padding:0.3rem;">3</td><td style="text-align:right;padding:0.3rem;font-weight:700;">36</td></tr>
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Doron Sheffer</td><td style="text-align:right;padding:0.3rem;">35</td><td style="text-align:right;padding:0.3rem;">9-20</td><td style="text-align:right;padding:0.3rem;">4-4</td><td style="text-align:right;padding:0.3rem;">5</td><td style="text-align:right;padding:0.3rem;">4</td><td style="text-align:right;padding:0.3rem;font-weight:700;">24</td></tr>
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Donny Marshall</td><td style="text-align:right;padding:0.3rem;">37</td><td style="text-align:right;padding:0.3rem;">3-11</td><td style="text-align:right;padding:0.3rem;">8-8</td><td style="text-align:right;padding:0.3rem;">9</td><td style="text-align:right;padding:0.3rem;">0</td><td style="text-align:right;padding:0.3rem;font-weight:700;">15</td></tr>
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Travis Knight</td><td style="text-align:right;padding:0.3rem;">26</td><td style="text-align:right;padding:0.3rem;">6-9</td><td style="text-align:right;padding:0.3rem;">1-1</td><td style="text-align:right;padding:0.3rem;">13</td><td style="text-align:right;padding:0.3rem;">0</td><td style="text-align:right;padding:0.3rem;font-weight:700;">12</td></tr>
                             <tr style="border-bottom:2px solid #E8E2D6;font-weight:700;"><td style="text-align:left;padding:0.3rem 0.5rem;">TOTALS</td><td style="text-align:right;padding:0.3rem;">200</td><td style="text-align:right;padding:0.3rem;">33-76</td><td style="text-align:right;padding:0.3rem;">23-27</td><td style="text-align:right;padding:0.3rem;">43</td><td style="text-align:right;padding:0.3rem;">17</td><td style="text-align:right;padding:0.3rem;">96</td></tr>
                         </tbody></table>
-                        <div style="font-size:0.75rem;color:#6B7A8D;margin-top:0.5rem;">Source: Sports Reference</div>
+                        <div style="font-size:0.75rem;color:#667486;margin-top:0.5rem;">Source: Sports Reference</div>
                     </div>`,
                     4: `<div style="overflow-x:auto;">
                         <div style="font-weight:700;color:#1B2A4A;margin-bottom:0.5rem;font-size:0.95rem;">UCLA 74, Oklahoma State 61 — April 1, 1995</div>
                         <div style="font-weight:600;color:#1B2A4A;margin:0.75rem 0 0.25rem;font-size:0.85rem;">UCLA — 24-49 FG (49.0%), 24-28 FT</div>
-                        <table style="width:100%;border-collapse:collapse;font-size:0.78rem;margin-bottom:1rem;"><thead><tr style="border-bottom:2px solid #E8E2D6;color:#6B7A8D;text-align:right;"><th style="text-align:left;padding:0.3rem 0.5rem;">Player</th><th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th><th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th><th style="padding:0.3rem;">AST</th><th style="padding:0.3rem;font-weight:700;color:#1B2A4A;">PTS</th></tr></thead><tbody>
+                        <table style="width:100%;border-collapse:collapse;font-size:0.78rem;margin-bottom:1rem;"><thead><tr style="border-bottom:2px solid #E8E2D6;color:#667486;text-align:right;"><th style="text-align:left;padding:0.3rem 0.5rem;">Player</th><th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th><th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th><th style="padding:0.3rem;">AST</th><th style="padding:0.3rem;font-weight:700;color:#1B2A4A;">PTS</th></tr></thead><tbody>
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Tyus Edney</td><td style="text-align:right;padding:0.3rem;">37</td><td style="text-align:right;padding:0.3rem;">6-12</td><td style="text-align:right;padding:0.3rem;">9-11</td><td style="text-align:right;padding:0.3rem;">1</td><td style="text-align:right;padding:0.3rem;">5</td><td style="text-align:right;padding:0.3rem;font-weight:700;">21</td></tr>
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Charles O'Bannon</td><td style="text-align:right;padding:0.3rem;">37</td><td style="text-align:right;padding:0.3rem;">7-9</td><td style="text-align:right;padding:0.3rem;">5-5</td><td style="text-align:right;padding:0.3rem;">6</td><td style="text-align:right;padding:0.3rem;">2</td><td style="text-align:right;padding:0.3rem;font-weight:700;">19</td></tr>
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Ed O'Bannon</td><td style="text-align:right;padding:0.3rem;">36</td><td style="text-align:right;padding:0.3rem;">6-14</td><td style="text-align:right;padding:0.3rem;">1-2</td><td style="text-align:right;padding:0.3rem;">8</td><td style="text-align:right;padding:0.3rem;">0</td><td style="text-align:right;padding:0.3rem;font-weight:700;">15</td></tr>
@@ -14722,20 +14729,20 @@
                             <tr style="border-bottom:2px solid #E8E2D6;font-weight:700;"><td style="text-align:left;padding:0.3rem 0.5rem;">TOTALS</td><td style="text-align:right;padding:0.3rem;">200</td><td style="text-align:right;padding:0.3rem;">24-49</td><td style="text-align:right;padding:0.3rem;">24-28</td><td style="text-align:right;padding:0.3rem;">22</td><td style="text-align:right;padding:0.3rem;">9</td><td style="text-align:right;padding:0.3rem;">74</td></tr>
                         </tbody></table>
                         <div style="font-weight:600;color:#1B2A4A;margin:0.75rem 0 0.25rem;font-size:0.85rem;">Oklahoma State — 21-50 FG (42.0%), 12-16 FT</div>
-                        <table style="width:100%;border-collapse:collapse;font-size:0.78rem;"><thead><tr style="border-bottom:2px solid #E8E2D6;color:#6B7A8D;text-align:right;"><th style="text-align:left;padding:0.3rem 0.5rem;">Player</th><th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th><th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th><th style="padding:0.3rem;">AST</th><th style="padding:0.3rem;font-weight:700;color:#1B2A4A;">PTS</th></tr></thead><tbody>
+                        <table style="width:100%;border-collapse:collapse;font-size:0.78rem;"><thead><tr style="border-bottom:2px solid #E8E2D6;color:#667486;text-align:right;"><th style="text-align:left;padding:0.3rem 0.5rem;">Player</th><th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th><th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th><th style="padding:0.3rem;">AST</th><th style="padding:0.3rem;font-weight:700;color:#1B2A4A;">PTS</th></tr></thead><tbody>
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Bryant Reeves</td><td style="text-align:right;padding:0.3rem;">40</td><td style="text-align:right;padding:0.3rem;">8-16</td><td style="text-align:right;padding:0.3rem;">9-9</td><td style="text-align:right;padding:0.3rem;">9</td><td style="text-align:right;padding:0.3rem;">0</td><td style="text-align:right;padding:0.3rem;font-weight:700;">25</td></tr>
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Randy Rutherford</td><td style="text-align:right;padding:0.3rem;">40</td><td style="text-align:right;padding:0.3rem;">4-13</td><td style="text-align:right;padding:0.3rem;">3-4</td><td style="text-align:right;padding:0.3rem;">4</td><td style="text-align:right;padding:0.3rem;">1</td><td style="text-align:right;padding:0.3rem;font-weight:700;">15</td></tr>
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Chianti Roberts</td><td style="text-align:right;padding:0.3rem;">29</td><td style="text-align:right;padding:0.3rem;">5-7</td><td style="text-align:right;padding:0.3rem;">0-2</td><td style="text-align:right;padding:0.3rem;">6</td><td style="text-align:right;padding:0.3rem;">0</td><td style="text-align:right;padding:0.3rem;font-weight:700;">10</td></tr>
                             <tr style="border-bottom:1px solid #F0ECE0;"><td style="text-align:left;padding:0.3rem 0.5rem;font-weight:600;">Terry Collins</td><td style="text-align:right;padding:0.3rem;">22</td><td style="text-align:right;padding:0.3rem;">2-6</td><td style="text-align:right;padding:0.3rem;">0-0</td><td style="text-align:right;padding:0.3rem;">2</td><td style="text-align:right;padding:0.3rem;">5</td><td style="text-align:right;padding:0.3rem;font-weight:700;">6</td></tr>
                             <tr style="border-bottom:2px solid #E8E2D6;font-weight:700;"><td style="text-align:left;padding:0.3rem 0.5rem;">TOTALS</td><td style="text-align:right;padding:0.3rem;">200</td><td style="text-align:right;padding:0.3rem;">21-50</td><td style="text-align:right;padding:0.3rem;">12-16</td><td style="text-align:right;padding:0.3rem;">31</td><td style="text-align:right;padding:0.3rem;">16</td><td style="text-align:right;padding:0.3rem;">61</td></tr>
                         </tbody></table>
-                        <div style="font-size:0.75rem;color:#6B7A8D;margin-top:0.5rem;">Source: Sports Reference</div>
+                        <div style="font-size:0.75rem;color:#667486;margin-top:0.5rem;">Source: Sports Reference</div>
                     </div>`,
                     5: `<div style="overflow-x:auto;">
                         <div style="font-weight:700;color:#1B2A4A;margin-bottom:0.5rem;font-size:0.95rem;">UCLA 89, Arkansas 78 — April 3, 1995</div>
                         <div style="font-weight:600;color:#1B2A4A;margin:0.75rem 0 0.25rem;font-size:0.85rem;">UCLA — 33-68 FG (.485), 21-29 FT</div>
                         <table style="width:100%;border-collapse:collapse;font-size:0.78rem;margin-bottom:1rem;">
-                            <thead><tr style="border-bottom:2px solid #E8E2D6;color:#6B7A8D;text-align:right;">
+                            <thead><tr style="border-bottom:2px solid #E8E2D6;color:#667486;text-align:right;">
                                 <th style="text-align:left;padding:0.3rem 0.5rem;">Player</th>
                                 <th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th>
                                 <th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th>
@@ -14819,7 +14826,7 @@
                         </table>
                         <div style="font-weight:600;color:#1B2A4A;margin:0.75rem 0 0.25rem;font-size:0.85rem;">Arkansas — 28-65 FG (.431), 12-20 FT</div>
                         <table style="width:100%;border-collapse:collapse;font-size:0.78rem;margin-bottom:1rem;">
-                            <thead><tr style="border-bottom:2px solid #E8E2D6;color:#6B7A8D;text-align:right;">
+                            <thead><tr style="border-bottom:2px solid #E8E2D6;color:#667486;text-align:right;">
                                 <th style="text-align:left;padding:0.3rem 0.5rem;">Player</th>
                                 <th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th>
                                 <th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th>
@@ -14928,7 +14935,7 @@
                                 </tr>
                             </tbody>
                         </table>
-                        <div style="font-size:0.75rem;color:#6B7A8D;margin-top:0.5rem;">Source: Sports Reference</div>
+                        <div style="font-size:0.75rem;color:#667486;margin-top:0.5rem;">Source: Sports Reference</div>
                     </div>`
                 }
             },
@@ -14959,7 +14966,7 @@
                         <div style="font-weight:700;color:#1B2A4A;margin-bottom:0.5rem;font-size:0.95rem;">Kentucky 110, San Jose State 72 — March 14, 1996</div>
                         <div style="font-weight:600;color:#1B2A4A;margin:0.75rem 0 0.25rem;font-size:0.85rem;">Kentucky — 42-78 FG (.538), 17-23 FT</div>
                         <table style="width:100%;border-collapse:collapse;font-size:0.78rem;margin-bottom:1rem;">
-                            <thead><tr style="border-bottom:2px solid #E8E2D6;color:#6B7A8D;text-align:right;">
+                            <thead><tr style="border-bottom:2px solid #E8E2D6;color:#667486;text-align:right;">
                                 <th style="text-align:left;padding:0.3rem 0.5rem;">Player</th>
                                 <th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th>
                                 <th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th>
@@ -14983,7 +14990,7 @@
                         </table>
                         <div style="font-weight:600;color:#1B2A4A;margin:0.75rem 0 0.25rem;font-size:0.85rem;">San Jose State — 27-60 FG (.450), 13-21 FT</div>
                         <table style="width:100%;border-collapse:collapse;font-size:0.78rem;margin-bottom:1rem;">
-                            <thead><tr style="border-bottom:2px solid #E8E2D6;color:#6B7A8D;text-align:right;">
+                            <thead><tr style="border-bottom:2px solid #E8E2D6;color:#667486;text-align:right;">
                                 <th style="text-align:left;padding:0.3rem 0.5rem;">Player</th>
                                 <th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th>
                                 <th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th>
@@ -15002,13 +15009,13 @@
                                 <tr style="border-bottom:2px solid #E8E2D6;font-weight:700;"><td style="text-align:left;padding:0.3rem 0.5rem;">TOTALS</td><td style="text-align:right;padding:0.3rem;">200</td><td style="text-align:right;padding:0.3rem;">27-60</td><td style="text-align:right;padding:0.3rem;">13-21</td><td style="text-align:right;padding:0.3rem;">36</td><td style="text-align:right;padding:0.3rem;">16</td><td style="text-align:right;padding:0.3rem;font-weight:700;">72</td></tr>
                             </tbody>
                         </table>
-                        <div style="font-size:0.75rem;color:#6B7A8D;margin-top:0.5rem;">Source: Sports Reference</div>
+                        <div style="font-size:0.75rem;color:#667486;margin-top:0.5rem;">Source: Sports Reference</div>
                     </div>`,
                     1: `<div style="overflow-x:auto;">
                         <div style="font-weight:700;color:#1B2A4A;margin-bottom:0.5rem;font-size:0.95rem;">Kentucky 84, Virginia Tech 60 — March 16, 1996</div>
                         <div style="font-weight:600;color:#1B2A4A;margin:0.75rem 0 0.25rem;font-size:0.85rem;">Kentucky — 32-60 FG (.533), 15-19 FT</div>
                         <table style="width:100%;border-collapse:collapse;font-size:0.78rem;margin-bottom:1rem;">
-                            <thead><tr style="border-bottom:2px solid #E8E2D6;color:#6B7A8D;text-align:right;">
+                            <thead><tr style="border-bottom:2px solid #E8E2D6;color:#667486;text-align:right;">
                                 <th style="text-align:left;padding:0.3rem 0.5rem;">Player</th>
                                 <th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th>
                                 <th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th>
@@ -15030,7 +15037,7 @@
                         </table>
                         <div style="font-weight:600;color:#1B2A4A;margin:0.75rem 0 0.25rem;font-size:0.85rem;">Virginia Tech — 22-56 FG (.393), 11-18 FT</div>
                         <table style="width:100%;border-collapse:collapse;font-size:0.78rem;margin-bottom:1rem;">
-                            <thead><tr style="border-bottom:2px solid #E8E2D6;color:#6B7A8D;text-align:right;">
+                            <thead><tr style="border-bottom:2px solid #E8E2D6;color:#667486;text-align:right;">
                                 <th style="text-align:left;padding:0.3rem 0.5rem;">Player</th>
                                 <th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th>
                                 <th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th>
@@ -15050,13 +15057,13 @@
                                 <tr style="border-bottom:2px solid #E8E2D6;font-weight:700;"><td style="text-align:left;padding:0.3rem 0.5rem;">TOTALS</td><td style="text-align:right;padding:0.3rem;">200</td><td style="text-align:right;padding:0.3rem;">22-56</td><td style="text-align:right;padding:0.3rem;">11-18</td><td style="text-align:right;padding:0.3rem;">22</td><td style="text-align:right;padding:0.3rem;">15</td><td style="text-align:right;padding:0.3rem;font-weight:700;">60</td></tr>
                             </tbody>
                         </table>
-                        <div style="font-size:0.75rem;color:#6B7A8D;margin-top:0.5rem;">Source: Sports Reference</div>
+                        <div style="font-size:0.75rem;color:#667486;margin-top:0.5rem;">Source: Sports Reference</div>
                     </div>`,
                     2: `<div style="overflow-x:auto;">
                         <div style="font-weight:700;color:#1B2A4A;margin-bottom:0.5rem;font-size:0.95rem;">Kentucky 101, Utah 70 — March 21, 1996</div>
                         <div style="font-weight:600;color:#1B2A4A;margin:0.75rem 0 0.25rem;font-size:0.85rem;">Kentucky — 41-83 FG (.494), 11-16 FT</div>
                         <table style="width:100%;border-collapse:collapse;font-size:0.78rem;margin-bottom:1rem;">
-                            <thead><tr style="border-bottom:2px solid #E8E2D6;color:#6B7A8D;text-align:right;">
+                            <thead><tr style="border-bottom:2px solid #E8E2D6;color:#667486;text-align:right;">
                                 <th style="text-align:left;padding:0.3rem 0.5rem;">Player</th>
                                 <th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th>
                                 <th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th>
@@ -15081,7 +15088,7 @@
                         </table>
                         <div style="font-weight:600;color:#1B2A4A;margin:0.75rem 0 0.25rem;font-size:0.85rem;">Utah — 27-57 FG (.474), 12-15 FT</div>
                         <table style="width:100%;border-collapse:collapse;font-size:0.78rem;margin-bottom:1rem;">
-                            <thead><tr style="border-bottom:2px solid #E8E2D6;color:#6B7A8D;text-align:right;">
+                            <thead><tr style="border-bottom:2px solid #E8E2D6;color:#667486;text-align:right;">
                                 <th style="text-align:left;padding:0.3rem 0.5rem;">Player</th>
                                 <th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th>
                                 <th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th>
@@ -15102,13 +15109,13 @@
                                 <tr style="border-bottom:2px solid #E8E2D6;font-weight:700;"><td style="text-align:left;padding:0.3rem 0.5rem;">TOTALS</td><td style="text-align:right;padding:0.3rem;">200</td><td style="text-align:right;padding:0.3rem;">27-57</td><td style="text-align:right;padding:0.3rem;">12-15</td><td style="text-align:right;padding:0.3rem;">32</td><td style="text-align:right;padding:0.3rem;">17</td><td style="text-align:right;padding:0.3rem;font-weight:700;">70</td></tr>
                             </tbody>
                         </table>
-                        <div style="font-size:0.75rem;color:#6B7A8D;margin-top:0.5rem;">Source: Sports Reference</div>
+                        <div style="font-size:0.75rem;color:#667486;margin-top:0.5rem;">Source: Sports Reference</div>
                     </div>`,
                     3: `<div style="overflow-x:auto;">
                         <div style="font-weight:700;color:#1B2A4A;margin-bottom:0.5rem;font-size:0.95rem;">Kentucky 83, Wake Forest 63 — March 23, 1996</div>
                         <div style="font-weight:600;color:#1B2A4A;margin:0.75rem 0 0.25rem;font-size:0.85rem;">Kentucky — 28-53 FG (.528), 20-23 FT</div>
                         <table style="width:100%;border-collapse:collapse;font-size:0.78rem;margin-bottom:1rem;">
-                            <thead><tr style="border-bottom:2px solid #E8E2D6;color:#6B7A8D;text-align:right;">
+                            <thead><tr style="border-bottom:2px solid #E8E2D6;color:#667486;text-align:right;">
                                 <th style="text-align:left;padding:0.3rem 0.5rem;">Player</th>
                                 <th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th>
                                 <th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th>
@@ -15132,7 +15139,7 @@
                         </table>
                         <div style="font-weight:600;color:#1B2A4A;margin:0.75rem 0 0.25rem;font-size:0.85rem;">Wake Forest — 17-47 FG (.362), 20-23 FT</div>
                         <table style="width:100%;border-collapse:collapse;font-size:0.78rem;margin-bottom:1rem;">
-                            <thead><tr style="border-bottom:2px solid #E8E2D6;color:#6B7A8D;text-align:right;">
+                            <thead><tr style="border-bottom:2px solid #E8E2D6;color:#667486;text-align:right;">
                                 <th style="text-align:left;padding:0.3rem 0.5rem;">Player</th>
                                 <th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th>
                                 <th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th>
@@ -15150,13 +15157,13 @@
                                 <tr style="border-bottom:2px solid #E8E2D6;font-weight:700;"><td style="text-align:left;padding:0.3rem 0.5rem;">TOTALS</td><td style="text-align:right;padding:0.3rem;">200</td><td style="text-align:right;padding:0.3rem;">17-47</td><td style="text-align:right;padding:0.3rem;">20-23</td><td style="text-align:right;padding:0.3rem;">30</td><td style="text-align:right;padding:0.3rem;">12</td><td style="text-align:right;padding:0.3rem;font-weight:700;">63</td></tr>
                             </tbody>
                         </table>
-                        <div style="font-size:0.75rem;color:#6B7A8D;margin-top:0.5rem;">Source: Sports Reference</div>
+                        <div style="font-size:0.75rem;color:#667486;margin-top:0.5rem;">Source: Sports Reference</div>
                     </div>`,
                     4: `<div style="overflow-x:auto;">
                         <div style="font-weight:700;color:#1B2A4A;margin-bottom:0.5rem;font-size:0.95rem;">Kentucky 81, Massachusetts 74 — March 30, 1996</div>
                         <div style="font-weight:600;color:#1B2A4A;margin:0.75rem 0 0.25rem;font-size:0.85rem;">Kentucky — 28-55 FG (.509), 22-30 FT</div>
                         <table style="width:100%;border-collapse:collapse;font-size:0.78rem;margin-bottom:1rem;">
-                            <thead><tr style="border-bottom:2px solid #E8E2D6;color:#6B7A8D;text-align:right;">
+                            <thead><tr style="border-bottom:2px solid #E8E2D6;color:#667486;text-align:right;">
                                 <th style="text-align:left;padding:0.3rem 0.5rem;">Player</th>
                                 <th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th>
                                 <th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th>
@@ -15179,7 +15186,7 @@
                         </table>
                         <div style="font-weight:600;color:#1B2A4A;margin:0.75rem 0 0.25rem;font-size:0.85rem;">Massachusetts — 29-64 FG (.453), 13-19 FT</div>
                         <table style="width:100%;border-collapse:collapse;font-size:0.78rem;margin-bottom:1rem;">
-                            <thead><tr style="border-bottom:2px solid #E8E2D6;color:#6B7A8D;text-align:right;">
+                            <thead><tr style="border-bottom:2px solid #E8E2D6;color:#667486;text-align:right;">
                                 <th style="text-align:left;padding:0.3rem 0.5rem;">Player</th>
                                 <th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th>
                                 <th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th>
@@ -15199,13 +15206,13 @@
                                 <tr style="border-bottom:2px solid #E8E2D6;font-weight:700;"><td style="text-align:left;padding:0.3rem 0.5rem;">TOTALS</td><td style="text-align:right;padding:0.3rem;">200</td><td style="text-align:right;padding:0.3rem;">29-64</td><td style="text-align:right;padding:0.3rem;">13-19</td><td style="text-align:right;padding:0.3rem;">31</td><td style="text-align:right;padding:0.3rem;">18</td><td style="text-align:right;padding:0.3rem;font-weight:700;">74</td></tr>
                             </tbody>
                         </table>
-                        <div style="font-size:0.75rem;color:#6B7A8D;margin-top:0.5rem;">Source: Sports Reference</div>
+                        <div style="font-size:0.75rem;color:#667486;margin-top:0.5rem;">Source: Sports Reference</div>
                     </div>`,
                     5: `<div style="overflow-x:auto;">
                         <div style="font-weight:700;color:#1B2A4A;margin-bottom:0.5rem;font-size:0.95rem;">Kentucky 76, Syracuse 67 — April 1, 1996</div>
                         <div style="font-weight:600;color:#1B2A4A;margin:0.75rem 0 0.25rem;font-size:0.85rem;">Kentucky — 28-73 FG (.384), 8-13 FT</div>
                         <table style="width:100%;border-collapse:collapse;font-size:0.78rem;margin-bottom:1rem;">
-                            <thead><tr style="border-bottom:2px solid #E8E2D6;color:#6B7A8D;text-align:right;">
+                            <thead><tr style="border-bottom:2px solid #E8E2D6;color:#667486;text-align:right;">
                                 <th style="text-align:left;padding:0.3rem 0.5rem;">Player</th>
                                 <th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th>
                                 <th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th>
@@ -15307,7 +15314,7 @@
                         </table>
                         <div style="font-weight:600;color:#1B2A4A;margin:0.75rem 0 0.25rem;font-size:0.85rem;">Syracuse — 26-52 FG (.500), 9-14 FT</div>
                         <table style="width:100%;border-collapse:collapse;font-size:0.78rem;margin-bottom:1rem;">
-                            <thead><tr style="border-bottom:2px solid #E8E2D6;color:#6B7A8D;text-align:right;">
+                            <thead><tr style="border-bottom:2px solid #E8E2D6;color:#667486;text-align:right;">
                                 <th style="text-align:left;padding:0.3rem 0.5rem;">Player</th>
                                 <th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th>
                                 <th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th>
@@ -15398,7 +15405,7 @@
                                 </tr>
                             </tbody>
                         </table>
-                        <div style="font-size:0.75rem;color:#6B7A8D;margin-top:0.5rem;">Source: Sports Reference</div>
+                        <div style="font-size:0.75rem;color:#667486;margin-top:0.5rem;">Source: Sports Reference</div>
                     </div>`
                 }
             },
@@ -15430,7 +15437,7 @@
                         <div style="font-weight:700;color:#1B2A4A;margin-bottom:0.5rem;font-size:0.95rem;">Kentucky 82, South Carolina State 67 — March 13, 1998</div>
                         <div style="font-weight:600;color:#1B2A4A;margin:0.75rem 0 0.25rem;font-size:0.85rem;">Kentucky — 31-52 FG (.596), 16-19 FT</div>
                         <table style="width:100%;border-collapse:collapse;font-size:0.78rem;margin-bottom:1rem;">
-                            <thead><tr style="border-bottom:2px solid #E8E2D6;color:#6B7A8D;text-align:right;">
+                            <thead><tr style="border-bottom:2px solid #E8E2D6;color:#667486;text-align:right;">
                                 <th style="text-align:left;padding:0.3rem 0.5rem;">Player</th>
                                 <th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th>
                                 <th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th>
@@ -15452,7 +15459,7 @@
                         </table>
                         <div style="font-weight:600;color:#1B2A4A;margin:0.75rem 0 0.25rem;font-size:0.85rem;">South Carolina State — 23-59 FG (.390), 10-15 FT</div>
                         <table style="width:100%;border-collapse:collapse;font-size:0.78rem;margin-bottom:1rem;">
-                            <thead><tr style="border-bottom:2px solid #E8E2D6;color:#6B7A8D;text-align:right;">
+                            <thead><tr style="border-bottom:2px solid #E8E2D6;color:#667486;text-align:right;">
                                 <th style="text-align:left;padding:0.3rem 0.5rem;">Player</th>
                                 <th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th>
                                 <th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th>
@@ -15469,13 +15476,13 @@
                                 <tr style="border-bottom:2px solid #E8E2D6;font-weight:700;"><td style="text-align:left;padding:0.3rem 0.5rem;">TOTALS</td><td style="text-align:right;padding:0.3rem;">200</td><td style="text-align:right;padding:0.3rem;">23-59</td><td style="text-align:right;padding:0.3rem;">10-15</td><td style="text-align:right;padding:0.3rem;">23</td><td style="text-align:right;padding:0.3rem;">14</td><td style="text-align:right;padding:0.3rem;font-weight:700;">67</td></tr>
                             </tbody>
                         </table>
-                        <div style="font-size:0.75rem;color:#6B7A8D;margin-top:0.5rem;">Source: Sports Reference</div>
+                        <div style="font-size:0.75rem;color:#667486;margin-top:0.5rem;">Source: Sports Reference</div>
                     </div>`,
                     1: `<div style="overflow-x:auto;">
                         <div style="font-weight:700;color:#1B2A4A;margin-bottom:0.5rem;font-size:0.95rem;">Kentucky 88, Saint Louis 61 — March 15, 1998</div>
                         <div style="font-weight:600;color:#1B2A4A;margin:0.75rem 0 0.25rem;font-size:0.85rem;">Kentucky — 31-56 FG (.554), 16-23 FT</div>
                         <table style="width:100%;border-collapse:collapse;font-size:0.78rem;margin-bottom:1rem;">
-                            <thead><tr style="border-bottom:2px solid #E8E2D6;color:#6B7A8D;text-align:right;">
+                            <thead><tr style="border-bottom:2px solid #E8E2D6;color:#667486;text-align:right;">
                                 <th style="text-align:left;padding:0.3rem 0.5rem;">Player</th>
                                 <th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th>
                                 <th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th>
@@ -15499,7 +15506,7 @@
                         </table>
                         <div style="font-weight:600;color:#1B2A4A;margin:0.75rem 0 0.25rem;font-size:0.85rem;">Saint Louis — 20-65 FG (.308), 18-24 FT</div>
                         <table style="width:100%;border-collapse:collapse;font-size:0.78rem;margin-bottom:1rem;">
-                            <thead><tr style="border-bottom:2px solid #E8E2D6;color:#6B7A8D;text-align:right;">
+                            <thead><tr style="border-bottom:2px solid #E8E2D6;color:#667486;text-align:right;">
                                 <th style="text-align:left;padding:0.3rem 0.5rem;">Player</th>
                                 <th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th>
                                 <th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th>
@@ -15519,13 +15526,13 @@
                                 <tr style="border-bottom:2px solid #E8E2D6;font-weight:700;"><td style="text-align:left;padding:0.3rem 0.5rem;">TOTALS</td><td style="text-align:right;padding:0.3rem;">200</td><td style="text-align:right;padding:0.3rem;">20-65</td><td style="text-align:right;padding:0.3rem;">18-24</td><td style="text-align:right;padding:0.3rem;">37</td><td style="text-align:right;padding:0.3rem;">9</td><td style="text-align:right;padding:0.3rem;font-weight:700;">61</td></tr>
                             </tbody>
                         </table>
-                        <div style="font-size:0.75rem;color:#6B7A8D;margin-top:0.5rem;">Source: Sports Reference</div>
+                        <div style="font-size:0.75rem;color:#667486;margin-top:0.5rem;">Source: Sports Reference</div>
                     </div>`,
                     2: `<div style="overflow-x:auto;">
                         <div style="font-weight:700;color:#1B2A4A;margin-bottom:0.5rem;font-size:0.95rem;">Kentucky 94, UCLA 68 — March 20, 1998</div>
                         <div style="font-weight:600;color:#1B2A4A;margin:0.75rem 0 0.25rem;font-size:0.85rem;">Kentucky — 37-68 FG (.544), 14-19 FT</div>
                         <table style="width:100%;border-collapse:collapse;font-size:0.78rem;margin-bottom:1rem;">
-                            <thead><tr style="border-bottom:2px solid #E8E2D6;color:#6B7A8D;text-align:right;">
+                            <thead><tr style="border-bottom:2px solid #E8E2D6;color:#667486;text-align:right;">
                                 <th style="text-align:left;padding:0.3rem 0.5rem;">Player</th>
                                 <th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th>
                                 <th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th>
@@ -15548,7 +15555,7 @@
                         </table>
                         <div style="font-weight:600;color:#1B2A4A;margin:0.75rem 0 0.25rem;font-size:0.85rem;">UCLA — 23-79 FG (.291), 18-22 FT</div>
                         <table style="width:100%;border-collapse:collapse;font-size:0.78rem;margin-bottom:1rem;">
-                            <thead><tr style="border-bottom:2px solid #E8E2D6;color:#6B7A8D;text-align:right;">
+                            <thead><tr style="border-bottom:2px solid #E8E2D6;color:#667486;text-align:right;">
                                 <th style="text-align:left;padding:0.3rem 0.5rem;">Player</th>
                                 <th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th>
                                 <th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th>
@@ -15568,13 +15575,13 @@
                                 <tr style="border-bottom:2px solid #E8E2D6;font-weight:700;"><td style="text-align:left;padding:0.3rem 0.5rem;">TOTALS</td><td style="text-align:right;padding:0.3rem;">200</td><td style="text-align:right;padding:0.3rem;">23-79</td><td style="text-align:right;padding:0.3rem;">18-22</td><td style="text-align:right;padding:0.3rem;">47</td><td style="text-align:right;padding:0.3rem;">7</td><td style="text-align:right;padding:0.3rem;font-weight:700;">68</td></tr>
                             </tbody>
                         </table>
-                        <div style="font-size:0.75rem;color:#6B7A8D;margin-top:0.5rem;">Source: Sports Reference</div>
+                        <div style="font-size:0.75rem;color:#667486;margin-top:0.5rem;">Source: Sports Reference</div>
                     </div>`,
                     3: `<div style="overflow-x:auto;">
                         <div style="font-weight:700;color:#1B2A4A;margin-bottom:0.5rem;font-size:0.95rem;">Kentucky 86, Duke 84 — March 22, 1998</div>
                         <div style="font-weight:600;color:#1B2A4A;margin:0.75rem 0 0.25rem;font-size:0.85rem;">Kentucky — 29-63 FG (.460), 19-27 FT</div>
                         <table style="width:100%;border-collapse:collapse;font-size:0.78rem;margin-bottom:1rem;">
-                            <thead><tr style="border-bottom:2px solid #E8E2D6;color:#6B7A8D;text-align:right;">
+                            <thead><tr style="border-bottom:2px solid #E8E2D6;color:#667486;text-align:right;">
                                 <th style="text-align:left;padding:0.3rem 0.5rem;">Player</th>
                                 <th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th>
                                 <th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th>
@@ -15595,7 +15602,7 @@
                         </table>
                         <div style="font-weight:600;color:#1B2A4A;margin:0.75rem 0 0.25rem;font-size:0.85rem;">Duke — 29-67 FG (.433), 16-26 FT</div>
                         <table style="width:100%;border-collapse:collapse;font-size:0.78rem;margin-bottom:1rem;">
-                            <thead><tr style="border-bottom:2px solid #E8E2D6;color:#6B7A8D;text-align:right;">
+                            <thead><tr style="border-bottom:2px solid #E8E2D6;color:#667486;text-align:right;">
                                 <th style="text-align:left;padding:0.3rem 0.5rem;">Player</th>
                                 <th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th>
                                 <th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th>
@@ -15614,13 +15621,13 @@
                                 <tr style="border-bottom:2px solid #E8E2D6;font-weight:700;"><td style="text-align:left;padding:0.3rem 0.5rem;">TOTALS</td><td style="text-align:right;padding:0.3rem;">200</td><td style="text-align:right;padding:0.3rem;">29-67</td><td style="text-align:right;padding:0.3rem;">16-26</td><td style="text-align:right;padding:0.3rem;">20</td><td style="text-align:right;padding:0.3rem;">35</td><td style="text-align:right;padding:0.3rem;font-weight:700;">84</td></tr>
                             </tbody>
                         </table>
-                        <div style="font-size:0.75rem;color:#6B7A8D;margin-top:0.5rem;">Source: Sports Reference</div>
+                        <div style="font-size:0.75rem;color:#667486;margin-top:0.5rem;">Source: Sports Reference</div>
                     </div>`,
                     4: `<div style="overflow-x:auto;">
                         <div style="font-weight:700;color:#1B2A4A;margin-bottom:0.5rem;font-size:0.95rem;">Kentucky 86, Stanford 85 OT — March 28, 1998</div>
                         <div style="font-weight:600;color:#1B2A4A;margin:0.75rem 0 0.25rem;font-size:0.85rem;">Kentucky — 29-67 FG (.433), 23-33 FT</div>
                         <table style="width:100%;border-collapse:collapse;font-size:0.78rem;margin-bottom:1rem;">
-                            <thead><tr style="border-bottom:2px solid #E8E2D6;color:#6B7A8D;text-align:right;">
+                            <thead><tr style="border-bottom:2px solid #E8E2D6;color:#667486;text-align:right;">
                                 <th style="text-align:left;padding:0.3rem 0.5rem;">Player</th>
                                 <th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th>
                                 <th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th>
@@ -15641,7 +15648,7 @@
                         </table>
                         <div style="font-weight:600;color:#1B2A4A;margin:0.75rem 0 0.25rem;font-size:0.85rem;">Stanford — 27-68 FG (.397), 20-24 FT</div>
                         <table style="width:100%;border-collapse:collapse;font-size:0.78rem;margin-bottom:1rem;">
-                            <thead><tr style="border-bottom:2px solid #E8E2D6;color:#6B7A8D;text-align:right;">
+                            <thead><tr style="border-bottom:2px solid #E8E2D6;color:#667486;text-align:right;">
                                 <th style="text-align:left;padding:0.3rem 0.5rem;">Player</th>
                                 <th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th>
                                 <th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th>
@@ -15661,13 +15668,13 @@
                                 <tr style="border-bottom:2px solid #E8E2D6;font-weight:700;"><td style="text-align:left;padding:0.3rem 0.5rem;">TOTALS</td><td style="text-align:right;padding:0.3rem;">225</td><td style="text-align:right;padding:0.3rem;">27-68</td><td style="text-align:right;padding:0.3rem;">20-24</td><td style="text-align:right;padding:0.3rem;">42</td><td style="text-align:right;padding:0.3rem;">11</td><td style="text-align:right;padding:0.3rem;font-weight:700;">85</td></tr>
                             </tbody>
                         </table>
-                        <div style="font-size:0.75rem;color:#6B7A8D;margin-top:0.5rem;">Source: Sports Reference</div>
+                        <div style="font-size:0.75rem;color:#667486;margin-top:0.5rem;">Source: Sports Reference</div>
                     </div>`,
                     5: `<div style="overflow-x:auto;">
                         <div style="font-weight:700;color:#1B2A4A;margin-bottom:0.5rem;font-size:0.95rem;">Kentucky 78, Utah 69 — March 30, 1998</div>
                         <div style="font-weight:600;color:#1B2A4A;margin:0.75rem 0 0.25rem;font-size:0.85rem;">Kentucky — 29-57 FG (.509), 15-17 FT</div>
                         <table style="width:100%;border-collapse:collapse;font-size:0.78rem;margin-bottom:1rem;">
-                            <thead><tr style="border-bottom:2px solid #E8E2D6;color:#6B7A8D;text-align:right;">
+                            <thead><tr style="border-bottom:2px solid #E8E2D6;color:#667486;text-align:right;">
                                 <th style="text-align:left;padding:0.3rem 0.5rem;">Player</th>
                                 <th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th>
                                 <th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th>
@@ -15778,7 +15785,7 @@
                         </table>
                         <div style="font-weight:600;color:#1B2A4A;margin:0.75rem 0 0.25rem;font-size:0.85rem;">Utah — 24-55 FG (.436), 17-22 FT</div>
                         <table style="width:100%;border-collapse:collapse;font-size:0.78rem;margin-bottom:1rem;">
-                            <thead><tr style="border-bottom:2px solid #E8E2D6;color:#6B7A8D;text-align:right;">
+                            <thead><tr style="border-bottom:2px solid #E8E2D6;color:#667486;text-align:right;">
                                 <th style="text-align:left;padding:0.3rem 0.5rem;">Player</th>
                                 <th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th>
                                 <th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th>
@@ -15878,7 +15885,7 @@
                                 </tr>
                             </tbody>
                         </table>
-                        <div style="font-size:0.75rem;color:#6B7A8D;margin-top:0.5rem;">Source: Sports Reference</div>
+                        <div style="font-size:0.75rem;color:#667486;margin-top:0.5rem;">Source: Sports Reference</div>
                     </div>`
                 }
             },
@@ -15910,7 +15917,7 @@
                         <div style="font-weight:700;color:#1B2A4A;margin-bottom:0.5rem;font-size:0.95rem;">UConn 91, Texas-San Antonio 66 — March 11, 1999</div>
                         <div style="font-weight:600;color:#1B2A4A;margin:0.75rem 0 0.25rem;font-size:0.85rem;">UConn — 37-67 FG (.552), 12-15 FT</div>
                         <table style="width:100%;border-collapse:collapse;font-size:0.78rem;margin-bottom:1rem;">
-                            <thead><tr style="border-bottom:2px solid #E8E2D6;color:#6B7A8D;text-align:right;">
+                            <thead><tr style="border-bottom:2px solid #E8E2D6;color:#667486;text-align:right;">
                                 <th style="text-align:left;padding:0.3rem 0.5rem;">Player</th>
                                 <th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th>
                                 <th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th>
@@ -15932,7 +15939,7 @@
                         </table>
                         <div style="font-weight:600;color:#1B2A4A;margin:0.75rem 0 0.25rem;font-size:0.85rem;">Texas-San Antonio — 25-61 FG (.410), 13-26 FT</div>
                         <table style="width:100%;border-collapse:collapse;font-size:0.78rem;margin-bottom:1rem;">
-                            <thead><tr style="border-bottom:2px solid #E8E2D6;color:#6B7A8D;text-align:right;">
+                            <thead><tr style="border-bottom:2px solid #E8E2D6;color:#667486;text-align:right;">
                                 <th style="text-align:left;padding:0.3rem 0.5rem;">Player</th>
                                 <th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th>
                                 <th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th>
@@ -15951,13 +15958,13 @@
                                 <tr style="border-bottom:2px solid #E8E2D6;font-weight:700;"><td style="text-align:left;padding:0.3rem 0.5rem;">TOTALS</td><td style="text-align:right;padding:0.3rem;">200</td><td style="text-align:right;padding:0.3rem;">25-61</td><td style="text-align:right;padding:0.3rem;">13-26</td><td style="text-align:right;padding:0.3rem;">31</td><td style="text-align:right;padding:0.3rem;">8</td><td style="text-align:right;padding:0.3rem;font-weight:700;">66</td></tr>
                             </tbody>
                         </table>
-                        <div style="font-size:0.75rem;color:#6B7A8D;margin-top:0.5rem;">Source: Sports Reference</div>
+                        <div style="font-size:0.75rem;color:#667486;margin-top:0.5rem;">Source: Sports Reference</div>
                     </div>`,
                     1: `<div style="overflow-x:auto;">
                         <div style="font-weight:700;color:#1B2A4A;margin-bottom:0.5rem;font-size:0.95rem;">UConn 78, New Mexico 56 — March 13, 1999</div>
                         <div style="font-weight:600;color:#1B2A4A;margin:0.75rem 0 0.25rem;font-size:0.85rem;">UConn — 28-62 FG (.452), 16-20 FT</div>
                         <table style="width:100%;border-collapse:collapse;font-size:0.78rem;margin-bottom:1rem;">
-                            <thead><tr style="border-bottom:2px solid #E8E2D6;color:#6B7A8D;text-align:right;">
+                            <thead><tr style="border-bottom:2px solid #E8E2D6;color:#667486;text-align:right;">
                                 <th style="text-align:left;padding:0.3rem 0.5rem;">Player</th>
                                 <th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th>
                                 <th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th>
@@ -15978,7 +15985,7 @@
                         </table>
                         <div style="font-weight:600;color:#1B2A4A;margin:0.75rem 0 0.25rem;font-size:0.85rem;">New Mexico — 15-57 FG (.263), 22-25 FT</div>
                         <table style="width:100%;border-collapse:collapse;font-size:0.78rem;margin-bottom:1rem;">
-                            <thead><tr style="border-bottom:2px solid #E8E2D6;color:#6B7A8D;text-align:right;">
+                            <thead><tr style="border-bottom:2px solid #E8E2D6;color:#667486;text-align:right;">
                                 <th style="text-align:left;padding:0.3rem 0.5rem;">Player</th>
                                 <th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th>
                                 <th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th>
@@ -15995,13 +16002,13 @@
                                 <tr style="border-bottom:2px solid #E8E2D6;font-weight:700;"><td style="text-align:left;padding:0.3rem 0.5rem;">TOTALS</td><td style="text-align:right;padding:0.3rem;">200</td><td style="text-align:right;padding:0.3rem;">15-57</td><td style="text-align:right;padding:0.3rem;">22-25</td><td style="text-align:right;padding:0.3rem;">30</td><td style="text-align:right;padding:0.3rem;">8</td><td style="text-align:right;padding:0.3rem;font-weight:700;">56</td></tr>
                             </tbody>
                         </table>
-                        <div style="font-size:0.75rem;color:#6B7A8D;margin-top:0.5rem;">Source: Sports Reference</div>
+                        <div style="font-size:0.75rem;color:#667486;margin-top:0.5rem;">Source: Sports Reference</div>
                     </div>`,
                     2: `<div style="overflow-x:auto;">
                         <div style="font-weight:700;color:#1B2A4A;margin-bottom:0.5rem;font-size:0.95rem;">UConn 78, Iowa 68 — March 18, 1999</div>
                         <div style="font-weight:600;color:#1B2A4A;margin:0.75rem 0 0.25rem;font-size:0.85rem;">UConn — 26-48 FG (.542), 20-24 FT</div>
                         <table style="width:100%;border-collapse:collapse;font-size:0.78rem;margin-bottom:1rem;">
-                            <thead><tr style="border-bottom:2px solid #E8E2D6;color:#6B7A8D;text-align:right;">
+                            <thead><tr style="border-bottom:2px solid #E8E2D6;color:#667486;text-align:right;">
                                 <th style="text-align:left;padding:0.3rem 0.5rem;">Player</th>
                                 <th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th>
                                 <th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th>
@@ -16021,7 +16028,7 @@
                         </table>
                         <div style="font-weight:600;color:#1B2A4A;margin:0.75rem 0 0.25rem;font-size:0.85rem;">Iowa — 25-61 FG (.410), 10-16 FT</div>
                         <table style="width:100%;border-collapse:collapse;font-size:0.78rem;margin-bottom:1rem;">
-                            <thead><tr style="border-bottom:2px solid #E8E2D6;color:#6B7A8D;text-align:right;">
+                            <thead><tr style="border-bottom:2px solid #E8E2D6;color:#667486;text-align:right;">
                                 <th style="text-align:left;padding:0.3rem 0.5rem;">Player</th>
                                 <th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th>
                                 <th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th>
@@ -16040,13 +16047,13 @@
                                 <tr style="border-bottom:2px solid #E8E2D6;font-weight:700;"><td style="text-align:left;padding:0.3rem 0.5rem;">TOTALS</td><td style="text-align:right;padding:0.3rem;">200</td><td style="text-align:right;padding:0.3rem;">25-61</td><td style="text-align:right;padding:0.3rem;">10-16</td><td style="text-align:right;padding:0.3rem;">25</td><td style="text-align:right;padding:0.3rem;">8</td><td style="text-align:right;padding:0.3rem;font-weight:700;">68</td></tr>
                             </tbody>
                         </table>
-                        <div style="font-size:0.75rem;color:#6B7A8D;margin-top:0.5rem;">Source: Sports Reference</div>
+                        <div style="font-size:0.75rem;color:#667486;margin-top:0.5rem;">Source: Sports Reference</div>
                     </div>`,
                     3: `<div style="overflow-x:auto;">
                         <div style="font-weight:700;color:#1B2A4A;margin-bottom:0.5rem;font-size:0.95rem;">UConn 67, Gonzaga 62 — March 20, 1999</div>
                         <div style="font-weight:600;color:#1B2A4A;margin:0.75rem 0 0.25rem;font-size:0.85rem;">UConn — 24-65 FG (.369), 19-27 FT</div>
                         <table style="width:100%;border-collapse:collapse;font-size:0.78rem;margin-bottom:1rem;">
-                            <thead><tr style="border-bottom:2px solid #E8E2D6;color:#6B7A8D;text-align:right;">
+                            <thead><tr style="border-bottom:2px solid #E8E2D6;color:#667486;text-align:right;">
                                 <th style="text-align:left;padding:0.3rem 0.5rem;">Player</th>
                                 <th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th>
                                 <th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th>
@@ -16068,7 +16075,7 @@
                         </table>
                         <div style="font-weight:600;color:#1B2A4A;margin:0.75rem 0 0.25rem;font-size:0.85rem;">Gonzaga — 20-57 FG (.351), 17-22 FT</div>
                         <table style="width:100%;border-collapse:collapse;font-size:0.78rem;margin-bottom:1rem;">
-                            <thead><tr style="border-bottom:2px solid #E8E2D6;color:#6B7A8D;text-align:right;">
+                            <thead><tr style="border-bottom:2px solid #E8E2D6;color:#667486;text-align:right;">
                                 <th style="text-align:left;padding:0.3rem 0.5rem;">Player</th>
                                 <th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th>
                                 <th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th>
@@ -16088,13 +16095,13 @@
                                 <tr style="border-bottom:2px solid #E8E2D6;font-weight:700;"><td style="text-align:left;padding:0.3rem 0.5rem;">TOTALS</td><td style="text-align:right;padding:0.3rem;">200</td><td style="text-align:right;padding:0.3rem;">20-57</td><td style="text-align:right;padding:0.3rem;">17-22</td><td style="text-align:right;padding:0.3rem;">29</td><td style="text-align:right;padding:0.3rem;">11</td><td style="text-align:right;padding:0.3rem;font-weight:700;">62</td></tr>
                             </tbody>
                         </table>
-                        <div style="font-size:0.75rem;color:#6B7A8D;margin-top:0.5rem;">Source: Sports Reference</div>
+                        <div style="font-size:0.75rem;color:#667486;margin-top:0.5rem;">Source: Sports Reference</div>
                     </div>`,
                     4: `<div style="overflow-x:auto;">
                         <div style="font-weight:700;color:#1B2A4A;margin-bottom:0.5rem;font-size:0.95rem;">UConn 64, Ohio State 58 — March 27, 1999</div>
                         <div style="font-weight:600;color:#1B2A4A;margin:0.75rem 0 0.25rem;font-size:0.85rem;">UConn — 26-55 FG (.473), 11-15 FT</div>
                         <table style="width:100%;border-collapse:collapse;font-size:0.78rem;margin-bottom:1rem;">
-                            <thead><tr style="border-bottom:2px solid #E8E2D6;color:#6B7A8D;text-align:right;">
+                            <thead><tr style="border-bottom:2px solid #E8E2D6;color:#667486;text-align:right;">
                                 <th style="text-align:left;padding:0.3rem 0.5rem;">Player</th>
                                 <th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th>
                                 <th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th>
@@ -16114,7 +16121,7 @@
                         </table>
                         <div style="font-weight:600;color:#1B2A4A;margin:0.75rem 0 0.25rem;font-size:0.85rem;">Ohio State — 23-63 FG (.365), 9-18 FT</div>
                         <table style="width:100%;border-collapse:collapse;font-size:0.78rem;margin-bottom:1rem;">
-                            <thead><tr style="border-bottom:2px solid #E8E2D6;color:#6B7A8D;text-align:right;">
+                            <thead><tr style="border-bottom:2px solid #E8E2D6;color:#667486;text-align:right;">
                                 <th style="text-align:left;padding:0.3rem 0.5rem;">Player</th>
                                 <th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th>
                                 <th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th>
@@ -16132,13 +16139,13 @@
                                 <tr style="border-bottom:2px solid #E8E2D6;font-weight:700;"><td style="text-align:left;padding:0.3rem 0.5rem;">TOTALS</td><td style="text-align:right;padding:0.3rem;">200</td><td style="text-align:right;padding:0.3rem;">23-63</td><td style="text-align:right;padding:0.3rem;">9-18</td><td style="text-align:right;padding:0.3rem;">17</td><td style="text-align:right;padding:0.3rem;">32</td><td style="text-align:right;padding:0.3rem;font-weight:700;">58</td></tr>
                             </tbody>
                         </table>
-                        <div style="font-size:0.75rem;color:#6B7A8D;margin-top:0.5rem;">Source: Sports Reference</div>
+                        <div style="font-size:0.75rem;color:#667486;margin-top:0.5rem;">Source: Sports Reference</div>
                     </div>`,
                     5: `<div style="overflow-x:auto;">
                         <div style="font-weight:700;color:#1B2A4A;margin-bottom:0.5rem;font-size:0.95rem;">UConn 77, Duke 74 — March 29, 1999</div>
                         <div style="font-weight:600;color:#1B2A4A;margin:0.75rem 0 0.25rem;font-size:0.85rem;">UConn — 32-61 FG (.525), 10-18 FT</div>
                         <table style="width:100%;border-collapse:collapse;font-size:0.78rem;margin-bottom:1rem;">
-                            <thead><tr style="border-bottom:2px solid #E8E2D6;color:#6B7A8D;text-align:right;">
+                            <thead><tr style="border-bottom:2px solid #E8E2D6;color:#667486;text-align:right;">
                                 <th style="text-align:left;padding:0.3rem 0.5rem;">Player</th>
                                 <th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th>
                                 <th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th>
@@ -16240,7 +16247,7 @@
                         </table>
                         <div style="font-weight:600;color:#1B2A4A;margin:0.75rem 0 0.25rem;font-size:0.85rem;">Duke — 23-56 FG (.411), 21-27 FT</div>
                         <table style="width:100%;border-collapse:collapse;font-size:0.78rem;margin-bottom:1rem;">
-                            <thead><tr style="border-bottom:2px solid #E8E2D6;color:#6B7A8D;text-align:right;">
+                            <thead><tr style="border-bottom:2px solid #E8E2D6;color:#667486;text-align:right;">
                                 <th style="text-align:left;padding:0.3rem 0.5rem;">Player</th>
                                 <th style="padding:0.3rem;">MIN</th><th style="padding:0.3rem;">FG</th>
                                 <th style="padding:0.3rem;">FT</th><th style="padding:0.3rem;">REB</th>
@@ -16331,7 +16338,7 @@
                                 </tr>
                             </tbody>
                         </table>
-                        <div style="font-size:0.75rem;color:#6B7A8D;margin-top:0.5rem;">Source: Sports Reference</div>
+                        <div style="font-size:0.75rem;color:#667486;margin-top:0.5rem;">Source: Sports Reference</div>
                     </div>`
                 }
             },
@@ -17539,8 +17546,8 @@
             const otLabel = info.ot ? ` (${info.ot})` : '';
             const t1Logo = info.t1EspnId ? `https://a.espncdn.com/i/teamlogos/ncaa/500/${info.t1EspnId}.png` : '';
             const t2Logo = info.t2EspnId ? `https://a.espncdn.com/i/teamlogos/ncaa/500/${info.t2EspnId}.png` : '';
-            const t1ScoreColor = info.t1Winner ? info.t1Color : '#A0AAB8';
-            const t2ScoreColor = !info.t1Winner ? info.t2Color : '#A0AAB8';
+            const t1ScoreColor = info.t1Winner ? info.t1Color : '#6A7079';
+            const t2ScoreColor = !info.t1Winner ? info.t2Color : '#6A7079';
             return `
                 <div class="h2h-detail-header">
                     <div class="h2h-detail-team">
