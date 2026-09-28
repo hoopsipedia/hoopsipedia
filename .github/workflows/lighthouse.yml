@@ -111,6 +111,14 @@ jobs:
 
       - name: Run Lighthouse CI against live site
         uses: treosh/lighthouse-ci-action@v12
+        env:
+          # No checkout, so LHCI cannot `git rev-parse HEAD` for the upload's
+          # build context; without these the step fails after the assertions pass.
+          LHCI_BUILD_CONTEXT__CURRENT_HASH: ${{ github.sha }}
+          LHCI_BUILD_CONTEXT__CURRENT_BRANCH: ${{ github.ref_name }}
+          LHCI_BUILD_CONTEXT__COMMIT_MESSAGE: scheduled audit of the live site
+          LHCI_BUILD_CONTEXT__AUTHOR: github-actions
+          LHCI_BUILD_CONTEXT__AVATAR_URL: ""
         with:
           urls: |
             https://www.hoopsipedia.com/
