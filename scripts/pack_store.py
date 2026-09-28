@@ -1,23 +1,25 @@
 #!/usr/bin/env python3
-"""Keep the box-score master out of the deploy, but safe in git.
+"""Keep the big JSON masters out of the deploy, but safe in git.
 
 Cloudflare Pages rejects any file over 25 MiB and, because there is no
 build step, the repo root IS the deploy. sr_boxscores.json crossed that
 line on 2026-07-24 (store 10,652 → 12,248 games) and every deploy from then
 until 2026-09-11 failed silently — production sat on the July 24 build for
-seven weeks while the store grew to 61 MB.
+seven weeks while the store grew to 61 MB. games_1/2/3.json were next in
+line (21 MB each in Sept 2026), so they get the same treatment.
 
-The site never needs the master file: it reads boxscores/{year}.json
-slices (scripts/split_boxscores.py). So the master is now:
+The site never needs a master file: it reads boxscores/{year}.json and
+games/{espnId}.json slices (scripts/split_boxscores.py, split_games.py).
+So each master is now:
 
-  * sr_boxscores.json      — local working copy, gitignored, read/written by
-                             every harvest / merge / recap / players script
-  * sr_boxscores.json.gz   — committed, ~7 MiB, deploys harmlessly, and is
-                             the durable copy of the crown-jewel data
+  * <name>.json      — local working copy, gitignored, read/written by
+                       every harvest / merge / recap / engine script
+  * <name>.json.gz   — committed, deploys harmlessly, and is the durable copy
 
-  python3 scripts/pack_store.py            # json -> gz (after any store change)
-  python3 scripts/pack_store.py --unpack   # gz -> json (fresh clone)
-  python3 scripts/pack_store.py --check    # exit 1 if the gz is stale
+  python3 scripts/pack_store.py            # json -> gz for every master that changed
+  python3 scripts/pack_store.py --unpack   # gz -> json (fresh clone / cloud session)
+  python3 scripts/pack_store.py --check    # exit 1 if any gz is stale or missing
+  python3 scripts/pack_store.py games_1.json   # just one master (any mode)
 
 The pre-push hook and CI run --check, like the slice-freshness gates.
 The gzip is written with a fixed mtime so identical content is byte-identical.
@@ -29,8 +31,12 @@ import shutil
 import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-JSON_PATH = os.path.join(ROOT, 'sr_boxscores.json')
-GZ_PATH = JSON_PATH + '.gz'
+MASTERS = ['sr_boxscores.json', 'games_1.json', 'games_2.json', 'games_3.json']
+
+
+def paths(name):
+    j = os.path.join(ROOT, name)
+    return j, j + '.gz'
 
 
 def sha(path, opener=open):
@@ -41,39 +47,67 @@ def sha(path, opener=open):
     return h.hexdigest()
 
 
-def pack():
-    with open(JSON_PATH, 'rb') as src, gzip.GzipFile(GZ_PATH, 'wb', compresslevel=9, mtime=0) as dst:
-        shutil.copyfileobj(src, dst)
-    print(f'✅ packed sr_boxscores.json ({os.path.getsize(JSON_PATH) / 1048576:.1f} MiB) -> '
-          f'sr_boxscores.json.gz ({os.path.getsize(GZ_PATH) / 1048576:.1f} MiB)')
+def is_current(name):
+    """True when <name>.json.gz holds exactly what <name>.json holds."""
+    json_path, gz_path = paths(name)
+    if not os.path.exists(gz_path):
+        return False
+    if os.path.getmtime(json_path) <= os.path.getmtime(gz_path):
+        return True
+    return sha(json_path) == sha(gz_path, gzip.open)
 
 
-def unpack():
-    with gzip.open(GZ_PATH, 'rb') as src, open(JSON_PATH + '.tmp', 'wb') as dst:
-        shutil.copyfileobj(src, dst)
-    os.replace(JSON_PATH + '.tmp', JSON_PATH)
-    print(f'✅ unpacked sr_boxscores.json.gz -> sr_boxscores.json ({os.path.getsize(JSON_PATH) / 1048576:.1f} MiB)')
-
-
-def check():
-    if not os.path.exists(GZ_PATH):
-        print('❌ sr_boxscores.json.gz is missing — run python3 scripts/pack_store.py')
-        sys.exit(1)
-    if not os.path.exists(JSON_PATH):
-        print('✅ sr_boxscores.json.gz present (no local master to compare)')
+def pack(name):
+    json_path, gz_path = paths(name)
+    if not os.path.exists(json_path):
+        print(f'⏭  {name} not present locally, leaving {name}.gz as is')
         return
-    if os.path.getmtime(JSON_PATH) > os.path.getmtime(GZ_PATH):
-        # mtime says the master changed after the last pack; confirm by content
-        if sha(JSON_PATH) != sha(GZ_PATH, gzip.open):
-            print('❌ sr_boxscores.json is newer than sr_boxscores.json.gz — run python3 scripts/pack_store.py and commit the .gz')
-            sys.exit(1)
-    print('✅ sr_boxscores.json.gz is current')
+    if is_current(name):
+        print(f'✅ {name}.gz already current')
+        return
+    with open(json_path, 'rb') as src, gzip.GzipFile(gz_path, 'wb', compresslevel=9, mtime=0) as dst:
+        shutil.copyfileobj(src, dst)
+    print(f'✅ packed {name} ({os.path.getsize(json_path) / 1048576:.1f} MiB) -> '
+          f'{name}.gz ({os.path.getsize(gz_path) / 1048576:.1f} MiB)')
+
+
+def unpack(name):
+    json_path, gz_path = paths(name)
+    if not os.path.exists(gz_path):
+        print(f'❌ {name}.gz is missing')
+        sys.exit(1)
+    with gzip.open(gz_path, 'rb') as src, open(json_path + '.tmp', 'wb') as dst:
+        shutil.copyfileobj(src, dst)
+    os.replace(json_path + '.tmp', json_path)
+    print(f'✅ unpacked {name}.gz -> {name} ({os.path.getsize(json_path) / 1048576:.1f} MiB)')
+
+
+def check(name):
+    json_path, gz_path = paths(name)
+    if not os.path.exists(gz_path):
+        print(f'❌ {name}.gz is missing — run python3 scripts/pack_store.py')
+        return False
+    if not os.path.exists(json_path):
+        print(f'✅ {name}.gz present (no local master to compare)')
+        return True
+    if not is_current(name):
+        print(f'❌ {name} is newer than {name}.gz — run python3 scripts/pack_store.py and commit the .gz')
+        return False
+    print(f'✅ {name}.gz is current')
+    return True
 
 
 if __name__ == '__main__':
+    names = [a for a in sys.argv[1:] if not a.startswith('--')] or MASTERS
+    unknown = [n for n in names if n not in MASTERS]
+    if unknown:
+        sys.exit(f'unknown master(s) {unknown}; known: {MASTERS}')
     if '--unpack' in sys.argv:
-        unpack()
+        for n in names:
+            unpack(n)
     elif '--check' in sys.argv:
-        check()
+        ok = all([check(n) for n in names])
+        sys.exit(0 if ok else 1)
     else:
-        pack()
+        for n in names:
+            pack(n)

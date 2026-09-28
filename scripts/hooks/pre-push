@@ -20,6 +20,7 @@ python3 scripts/stamp_assets.py --check || exit 1
 
 # Verify deploy-critical data files are valid JSON
 for f in data.json h2h.json games_1.json games_2.json games_3.json; do
+    [ -f "$f" ] || continue   # games_1/2/3.json are local-only (committed as .gz)
     node -e "JSON.parse(require('fs').readFileSync('$f','utf8')); console.log('✅ $f is valid JSON');" || { echo "❌ $f is invalid JSON"; exit 1; }
 done
 
@@ -36,7 +37,7 @@ check_fresh games_1.json games/index.json scripts/split_games.py
 check_fresh games_2.json games/index.json scripts/split_games.py
 check_fresh games_3.json games/index.json scripts/split_games.py
 check_fresh sr_boxscores.json boxscores/index.json scripts/split_boxscores.py
-# The store master is committed only as sr_boxscores.json.gz (25MiB Pages limit)
+# The masters (sr_boxscores.json, games_1/2/3.json) are committed only as .gz (25MiB Pages limit)
 python3 scripts/pack_store.py --check || exit 1
 check_fresh seasons.json seasons/index.json scripts/split_seasons.py
 echo "✅ Data slices are fresh"

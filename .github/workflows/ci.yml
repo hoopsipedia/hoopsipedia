@@ -21,7 +21,7 @@ jobs:
       - name: Asset version stamps are current (app.css/app.js ?v= hashes)
         run: python3 scripts/stamp_assets.py --check
 
-      - name: Box-score master is committed as gzip (Pages 25MiB per-file limit)
+      - name: JSON masters are committed as gzip (Pages 25MiB per-file limit)
         run: |
           python3 scripts/pack_store.py --check
           for f in $(git ls-files); do
@@ -31,7 +31,7 @@ jobs:
 
       - name: Validate deploy-critical JSON files
         run: |
-          for f in data.json h2h.json games_1.json games_2.json games_3.json seasons.json espn_to_sr.json slug_aliases.json; do
+          for f in data.json h2h.json games/index.json seasons.json espn_to_sr.json slug_aliases.json; do
             node -e "JSON.parse(require('fs').readFileSync('$f','utf8'))"
             echo "OK $f"
           done

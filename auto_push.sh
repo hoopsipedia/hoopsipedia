@@ -35,7 +35,7 @@ print(f'Split: {len(data)} teams, {games} games')
 "
         
         # Commit and push
-        git add games_1.json games_2.json
+        python3 scripts/pack_store.py && git add games_1.json.gz games_2.json.gz games_3.json.gz
         git commit -m "Auto-update: $CURRENT teams scraped ($DIFF new since last push)
 
 Co-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>"
@@ -67,7 +67,7 @@ with open('games_1.json', 'w') as f:
 with open('games_2.json', 'w') as f:
     json.dump({k: data[k] for k in keys[mid:]}, f)
 "
-            git add games_1.json games_2.json
+            python3 scripts/pack_store.py && git add games_1.json.gz games_2.json.gz games_3.json.gz
             git commit -m "Final scrape update: $CURRENT teams total
 
 Co-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>"

@@ -25,8 +25,16 @@ node_modules/
 # Local working copy: python3 scripts/pack_store.py --unpack
 !sr_boxscores.json.gz
 sr_boxscores.json
+# Same treatment for the game-log masters (21 MB each by Sept 2026): the site
+# reads games/{espnId}.json slices, scripts read the local raw copies.
+!games_1.json.gz
+!games_2.json.gz
+!games_3.json.gz
+games_1.json
+games_2.json
+games_3.json
 
-# Large source file (split into games_1.json + games_2.json for deploy)
+# Large source file (split into games_1/2/3.json, which are now gitignored too)
 games.json
 
 # Wrangler

@@ -55,9 +55,6 @@ function sliceCacheSet(cache, key, val) {
 
 const cachedGameIds = new Map();   // espnId -> game_ids/{id}.json slice
 const cachedBoxYears = new Map();  // year -> boxscores/{year}.json slice
-let cachedGames1 = null;      // games_1.json (legacy fallback only)
-let cachedGames2 = null;      // games_2.json (legacy fallback only)
-let cachedGames3 = null;      // games_3.json (legacy fallback only)
 let cachedGamesManifest;      // games/index.json — undefined = not fetched, null = missing
 const cachedTeamGames = new Map(); // espnId -> normalized {games, slug} | null (per-team slices)
 
@@ -151,19 +148,10 @@ async function getTeamGames(ctx, espnId) {
       return sliceCacheSet(cachedTeamGames, id,
                            Array.isArray(entry) ? { games: entry } : entry);
     }
-    // Unexpected 404 despite manifest entry — fall through to legacy path
+    // Unexpected 404 despite manifest entry
   }
-  // Legacy fallback: per-team slices not deployed yet (kept for one release)
-  if (!cachedGames1) cachedGames1 = await loadJSON(ctx.env.ASSETS, ctx.request.url, '/games_1.json') || {};
-  if (!cachedGames2) cachedGames2 = await loadJSON(ctx.env.ASSETS, ctx.request.url, '/games_2.json') || {};
-  if (!cachedGames3) cachedGames3 = await loadJSON(ctx.env.ASSETS, ctx.request.url, '/games_3.json') || {};
-  // games_3 first: mirrors the old {...g1,...g2,...g3} last-wins merge — some teams
-  // (e.g. 263 Drake) have a stale legacy-format duplicate in an earlier file
-  const entry = cachedGames3[id] || cachedGames2[id] || cachedGames1[id] || null;
-  // ~116 teams are stored as legacy bare arrays (no .games wrapper) — normalize so
-  // the tools don't report "no game data" for them
-  const norm = Array.isArray(entry) ? { games: entry } : entry;
-  return sliceCacheSet(cachedTeamGames, id, norm);
+  // The games_1/2/3.json monoliths are no longer deployed (Pages 25 MiB limit).
+  return sliceCacheSet(cachedTeamGames, id, null);
 }
 
 // ── Helper: team slug from name ──

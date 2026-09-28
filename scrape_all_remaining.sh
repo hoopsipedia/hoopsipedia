@@ -71,7 +71,7 @@ print(len(s))
 
         # Git push
         echo "Pushing to git..." | tee -a "$LOG"
-        git add games_1.json games_2.json games_3.json
+        python3 scripts/pack_store.py && git add games_1.json.gz games_2.json.gz games_3.json.gz
         git commit -m "Scrape progress: $CURRENT teams (auto-batch $BATCH_NUM)
 
 Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>"
@@ -108,7 +108,7 @@ for fn in ['games_1.json', 'games_2.json', 'games_3.json']:
 print(len(s))
 ")
 
-    git add games_1.json games_2.json games_3.json
+    python3 scripts/pack_store.py && git add games_1.json.gz games_2.json.gz games_3.json.gz
     git commit -m "Scrape progress: $CURRENT teams (auto-batch $BATCH_NUM - final)
 
 Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>"

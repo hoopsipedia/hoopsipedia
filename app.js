@@ -36,10 +36,10 @@
                             console.log(`Games manifest loaded — ${Object.keys(GAMES_INDEX).length} teams (lazy per-team loading)`);
                             return;
                         }
-                    } catch (e) { /* fall through to legacy */ }
-                    // Deploy-transition safety: manifest missing — old monolithic load
-                    GAMES_LEGACY_MODE = true;
-                    await loadAllGames();
+                    } catch (e) { /* manifest unreachable */ }
+                    console.warn('games/index.json unavailable — game data disabled for this session');
+                    GAMES_INDEX = null;
+                    GAMES_DATA = GAMES_DATA || {};
                 })();
             }
             return _gamesIndexPromise;
@@ -72,30 +72,12 @@
 
         // Full-corpus load — used ONLY by consumers that genuinely need every
         // team's games (NET proxy fallback when real NCAA NET data is missing).
-        // games_1/2/3.json stay deployed for one release; once removed, this
-        // fans out per-team from the manifest instead.
+        // Fans out per-team from the manifest; the games_1/2/3.json monoliths
+        // are no longer deployed (each was closing on Pages' 25 MiB limit).
         function loadAllGames() {
             if (!_allGamesPromise) {
                 _allGamesPromise = (async () => {
-                    try {
-                        const gameParts = await Promise.all([
-                            fetch('/games_1.json').then(r => r.ok ? r.json() : {}),
-                            fetch('/games_2.json').then(r => r.ok ? r.json() : {}),
-                            fetch('/games_3.json').then(r => r.ok ? r.json() : {})
-                        ]);
-                        const merged = Object.assign({}, ...gameParts);
-                        if (Object.keys(merged).length > 0) {
-                            GAMES_DATA = Object.assign(merged, GAMES_DATA || {});
-                            if (!GAMES_INDEX) {
-                                GAMES_INDEX = {};
-                                for (const [id, e] of Object.entries(GAMES_DATA)) {
-                                    GAMES_INDEX[id] = (Array.isArray(e) ? e : (e.games || [])).length;
-                                }
-                            }
-                            console.log(`Loaded full game data for ${Object.keys(GAMES_DATA).length} teams`);
-                            return GAMES_DATA;
-                        }
-                    } catch (e) { /* monolith gone — fan out below */ }
+                    if (!GAMES_INDEX) await loadGamesIndex();
                     if (GAMES_INDEX) {
                         await Promise.all(Object.keys(GAMES_INDEX).map(id => ensureTeamGames(id)));
                     }
