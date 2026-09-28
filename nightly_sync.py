@@ -41,7 +41,10 @@ def fetch_team_record(espn_id):
     """Fetch current season W-L from ESPN API."""
     url = ESPN_TEAM_URL.format(espn_id)
     try:
-        req = urllib.request.Request(url, headers={'User-Agent': 'Hoopsipedia/1.0'})
+        # No custom User-Agent: ESPN started returning 403 for 'Hoopsipedia/1.0'
+        # (and for bare 'Mozilla/5.0') on 2026-09-18 while still serving the
+        # default 'Python-urllib/x.y' agent. Every sync from then to 09-28 got 0/365.
+        req = urllib.request.Request(url)
         with urllib.request.urlopen(req, timeout=10) as resp:
             data = json.loads(resp.read().decode())
             team = data.get('team', {})
@@ -62,6 +65,29 @@ def fetch_team_record(espn_id):
     except Exception as e:
         log(f"  ERROR fetching ESPN {espn_id}: {e}")
     return None
+
+MIN_COVERAGE = 0.8  # refuse to overwrite CS unless ESPN answered for this share of teams
+
+
+def in_season_slot(now=None):
+    """Decide whether this launchd firing should actually sync.
+
+    launchd fires the agent daily at 02:00 and every 30 min from noon to 23:30
+    all year (see setup_launchd.sh — launchd ignored Month-restricted slots and
+    ran the March schedule in September). The calendar lives here instead:
+      Nov-Feb, Apr:   once a day at 02:00
+      March Mon-Wed:  once a day at 02:00
+      March Thu-Sun:  every slot from noon on (tournament days)
+      May-Oct:        never
+    """
+    now = now or datetime.now()
+    m, h, wd = now.month, now.hour, now.weekday()  # Mon=0
+    if m in (11, 12, 1, 2, 4):
+        return h == 2
+    if m == 3:
+        return h == 2 if wd <= 2 else h >= 12
+    return False
+
 
 def sync_current_season():
     """Main sync: fetch current season records, update coaches, push to live."""
@@ -92,6 +118,10 @@ def sync_current_season():
             time.sleep(BATCH_DELAY)
 
     log(f"Got records for {len(new_cs)}/{len(team_ids)} teams")
+    if len(new_cs) < max(1, int(MIN_COVERAGE * len(team_ids))):
+        # On 2026-09-28 a 0/365 run wrote an empty CS map over 363 real records.
+        log(f"ABORT: only {len(new_cs)} records (need {MIN_COVERAGE:.0%}); data.json left untouched")
+        return None
 
     # Calculate deltas (new wins/losses since LAST sync)
     # IMPORTANT: If CS is empty (first run), this is a baseline capture only.
@@ -183,7 +213,7 @@ def push_to_live():
         if result.returncode == 0:
             log("No changes to commit.")
             return
-        msg = f"Nightly sync: update current season records and coaching data\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>"
+        msg = f"Nightly sync: update current season records and coaching data\n\nCo-Authored-By: Claude Fable 5.1 <noreply@anthropic.com>"
         subprocess.run(['git', 'commit', '-m', msg], check=True)
         subprocess.run(['git', 'push', 'origin', 'main'], check=True, timeout=60)
         log("Pushed to live ✅")
@@ -192,7 +222,18 @@ def push_to_live():
 
 if __name__ == '__main__':
     import sys
+    if '--check' in sys.argv:
+        # Probe ESPN with one team and exit; the sync itself is untouched.
+        eid = sys.argv[sys.argv.index('--check') + 1] if len(sys.argv) > sys.argv.index('--check') + 1 else '150'
+        print(f"ESPN {eid}: {fetch_team_record(eid)}")
+        sys.exit(0)
+    if '--force' not in sys.argv and not in_season_slot():
+        print(f"[{datetime.now():%Y-%m-%d %H:%M:%S}] out of season / off-slot, nothing to do")
+        sys.exit(0)
     had_changes = sync_current_season()
+    if had_changes is None:
+        log("SYNC ABORTED\n")
+        sys.exit(1)
     if had_changes or '--force-push' in sys.argv:
         push_to_live()
     else:

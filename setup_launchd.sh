@@ -37,14 +37,17 @@ fi
 
 mkdir -p "$AGENTS"
 
-# Emit one <dict> per calendar slot. launchd has no */30 or ranges, so the
-# March tournament schedule is expanded to explicit (weekday, hour, minute) slots.
+# Emit one <dict> per calendar slot.
+# The sync agent fires daily at 02:00 and every 30 min from noon to 23:30, all
+# year; nightly_sync.py decides from the date whether a firing does anything
+# (Nov-Apr nightly, March Thu-Sun every slot, otherwise exit in milliseconds).
+# The calendar used to live here as Month-restricted slots, but launchd ran the
+# March every-30-min slots in September 2026 (15-21 runs a day, 365 ESPN calls
+# each), so the Month key cannot be trusted and the gating moved into Python.
 slot() { printf '      <dict>'; for kv in "$@"; do printf '<key>%s</key><integer>%s</integer>' "${kv%%=*}" "${kv##*=}"; done; printf '</dict>\n'; }
 sync_slots() {
-  for m in 11 12 1 2 4; do slot Month=$m Hour=2 Minute=0; done          # Nov-Feb + April nightly 2 AM
-  for wd in 1 2 3; do slot Month=3 Weekday=$wd Hour=2 Minute=0; done    # March Mon-Wed 2 AM
-  for wd in 4 5 6 0; do for h in $(seq 12 23); do for mi in 0 30; do    # March Thu-Sun every 30 min noon-midnight
-    slot Month=3 Weekday=$wd Hour=$h Minute=$mi; done; done; done
+  slot Hour=2 Minute=0
+  for h in $(seq 12 23); do for mi in 0 30; do slot Hour=$h Minute=$mi; done; done
 }
 
 # write_plist label log-file slots-function command...

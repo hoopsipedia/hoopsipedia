@@ -18,6 +18,7 @@ import datetime
 import json
 import os
 import sys
+import time
 
 import requests
 from google.oauth2 import service_account
@@ -41,18 +42,33 @@ def session():
     return s
 
 
+def _request(fn, url, **kw):
+    """Google's reporting APIs occasionally hang past 60s (both Monday runs in
+    Sept 2026 died on a ReadTimeout), so retry with a longer timeout."""
+    delays = (0, 10, 30)
+    for i, d in enumerate(delays):
+        if d:
+            time.sleep(d)
+        try:
+            r = fn(url, timeout=120, **kw)
+        except (requests.Timeout, requests.ConnectionError) as e:
+            if i == len(delays) - 1:
+                raise RuntimeError(f'{url}: {e.__class__.__name__} after {len(delays)} attempts')
+            print(f'  retrying {url.split("/")[-1]} after {e.__class__.__name__}', file=sys.stderr)
+            continue
+        if r.status_code >= 500 and i < len(delays) - 1:
+            continue
+        if r.status_code >= 400:
+            raise RuntimeError(f'{r.status_code} {url}: {r.text[:300]}')
+        return r.json()
+
+
 def get(s, url, **kw):
-    r = s.get(url, timeout=60, **kw)
-    if r.status_code >= 400:
-        raise RuntimeError(f'{r.status_code} {url}: {r.text[:300]}')
-    return r.json()
+    return _request(s.get, url, **kw)
 
 
 def post(s, url, body):
-    r = s.post(url, json=body, timeout=60)
-    if r.status_code >= 400:
-        raise RuntimeError(f'{r.status_code} {url}: {r.text[:300]}')
-    return r.json()
+    return _request(s.post, url, json=body)
 
 
 # ── discovery ────────────────────────────────────────────────────────────
