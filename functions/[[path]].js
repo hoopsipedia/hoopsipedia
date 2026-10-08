@@ -678,7 +678,7 @@ function renderHomepageSsr(teams, origin) {
   const parts = [
     `<h1>Hoopsipedia — the college basketball history encyclopedia</h1>`,
     `<p>Hoopsipedia is a free historical database covering ${entries.length}+ Division I men's college basketball programs across 77 seasons (1949–2026): all-time records, season-by-season results, head coaches, NCAA Tournament history, championship runs, historical rankings, and retroactive efficiency ratings.</p>`,
-    `<p>Explore: <a href="${origin}/teams">All teams</a> · <a href="${origin}/rankings">Rankings</a> · <a href="${origin}/bracket">Tournament bracket</a> · <a href="${origin}/coaches">Coaches</a> · <a href="${origin}/champions">Championship journeys</a> · <a href="${origin}/upsets">Greatest upsets</a> · <a href="${origin}/classics">Instant classics</a></p>`,
+    `<p>Explore: <a href="${origin}/teams">All teams</a> · <a href="${origin}/rankings">Rankings</a> · <a href="${origin}/bracket">Tournament bracket</a> · <a href="${origin}/coaches">Coaches</a> · <a href="${origin}/champions">Championship journeys</a> · <a href="${origin}/upsets">Greatest upsets</a> · <a href="${origin}/classics">Instant classics</a> · <a href="${origin}/blue-blood-index">Blue Blood Index</a></p>`,
     `<h2>Winningest programs of all time</h2><p>${winningest}</p>`,
     `<h2>Recent national champions</h2><p>${champList}</p>`,
   ];
@@ -744,6 +744,10 @@ const SECTION_META = {
     title: '⚡ Instant Classics — 2026 NCAA Tournament | Hoopsipedia',
     description: 'Buzzer beaters, overtime thrillers, and games you\'ll never forget from the 2026 NCAA Tournament.',
   },
+  'blue-blood-index': {
+    title: 'The Blue Blood Index — Every College Basketball Program Ranked, All-Time — Hoopsipedia',
+    description: 'One composite ranking of all 364 Division I programs: banners, sustained peak (HTSS), decade-by-decade efficiency, longevity-adjusted winning, and poll prestige — plus the 250 greatest team-seasons since 1939 on one scale.',
+  },
   'champions': {
     title: '🏆 Championship Journeys — Every Path to Cutting Down the Nets | Hoopsipedia',
     description: 'Relive every championship run in NCAA Tournament history. Game-by-game breakdowns, box scores, highlights, and the stories behind each title.',
@@ -780,7 +784,7 @@ function renderRankingsSsr(teams, htss, origin) {
   const parts = [
     `<h1>College basketball rankings — all-time programs and the greatest seasons ever</h1>`,
     `<p>Two kinds of ranking live here. The record book: all-time wins, national championships, Final Fours. And Hoopsipedia's own <strong>HTSS (Historical Team-Season Score)</strong>, which scores every Division I team-season since 1949 on one scale — adjusted efficiency, schedule strength, tournament result, quality wins, poll perception, coaching, and NBA draft talent, era-normalized — so a 1972 team and a 2015 team can be compared honestly. Scale: 50 is average, 70–75 elite, 80–85 transcendent, 85+ GOAT tier.</p>`,
-    `<p>Related: <a href="${origin}/time-machine">Time Machine cross-era matchups</a> · <a href="${origin}/players">Player archive</a> · <a href="${origin}/coaches">Winningest coaches</a> · <a href="${origin}/champions">Championship journeys</a></p>`,
+    `<p>Related: <a href="${origin}/blue-blood-index">The Blue Blood Index — every program ranked on one scale</a> · <a href="${origin}/time-machine">Time Machine cross-era matchups</a> · <a href="${origin}/players">Player archive</a> · <a href="${origin}/coaches">Winningest coaches</a> · <a href="${origin}/champions">Championship journeys</a></p>`,
     `<h2>Winningest programs of all time</h2>`,
     rows(winningest, (t, i) => `<tr>${cell(i + 1)}${cell(teamLinkByName(origin, t[F.NAME]))}${cell(`${t[F.ATW]}–${t[F.ATL]}`)}${cell(((t[F.ATW] / (t[F.ATW] + t[F.ATL])) * 100).toFixed(1) + '%')}</tr>`),
     `<h2>Most national championships</h2>`,
@@ -903,6 +907,30 @@ function renderRivalrySsr(r, h2h, teams, origin) {
     `<p>${series ? `<strong>${escapeHtml(series)}.</strong> ` : ''}${escapeHtml(r.description || '')}</p>`,
     `<p>${escapeHtml(t1[F.NAME])}: ${t1[F.ATW]}–${t1[F.ATL]} all-time, ${t1[F.NC]} national title${t1[F.NC] === 1 ? '' : 's'}, ${t1[F.FF]} Final Fours. ${escapeHtml(t2[F.NAME])}: ${t2[F.ATW]}–${t2[F.ATL]} all-time, ${t2[F.NC]} national title${t2[F.NC] === 1 ? '' : 's'}, ${t2[F.FF]} Final Fours.</p>`,
     `<p><a href="${origin}/?compare=${encodeParam(`${s1}/${s2}`)}">Full head-to-head comparison</a> · <a href="${teamHref(origin, s1)}">${escapeHtml(t1[F.NAME])} history</a> · <a href="${teamHref(origin, s2)}">${escapeHtml(t2[F.NAME])} history</a> · <a href="${origin}/rivalries">All rivalries</a></p>`,
+  ];
+  return ssrWrap(parts.join('\n'));
+}
+
+function renderBlueBloodSsr(ur, teams, origin) {
+  const cell = (v) => `<td style="${SSR_CELL_STYLE}">${v}</td>`;
+  const rows = (list, cells) => `<table style="${SSR_TABLE_STYLE}">${list.map(cells).join('')}</table>`;
+  const programs = (ur.programAllTime || []).slice(0, 50);
+  const seasons = (ur.seasonAllTime || []).slice(0, 50);
+  const w = (ur.metadata && ur.metadata.weights) || {};
+  const pw = w.program || {}, sw = w.season || {};
+  const pct = (x) => `${Math.round((x || 0) * 100)}%`;
+  const resultLabel = (r) => String(r || '').replace(/_/g, ' ');
+  const parts = [
+    `<h1>The Blue Blood Index — every college basketball program ranked, all-time</h1>`,
+    `<p>One composite ranking of all ${(ur.programAllTime || []).length} Division I programs, built from five signals the site already computes: banners (era-weighted national titles, Final Fours, Elite Eights, Sweet 16s, bids), sustained peak (the average HTSS of a program's ten best seasons), decade-by-decade adjusted efficiency, longevity-adjusted winning percentage, and AP poll prestige. Each is standardized across the whole population and combined — ${pct(pw.hardware)} hardware, ${pct(pw.htssProgram)} sustained peak, ${pct(pw.efficiency)} efficiency, ${pct(pw.winPct)} winning, ${pct(pw.pollPrestige)} polls — then mapped to the HTSS scale: 50 is average, 70–75 elite, 80+ blue blood.</p>`,
+    `<p>Related: <a href="${origin}/rankings">HTSS and the record book</a> · <a href="${origin}/time-machine">Time Machine cross-era matchups</a> · <a href="${origin}/champions">Championship journeys</a></p>`,
+    `<h2>Blue Blood Index — top 50 programs</h2>`,
+    rows(programs, p => `<tr>${cell(p.rank)}${cell(teamLinkByName(origin, p.team))}${cell(`BBI ${p.score}`)}${cell(`${p.championships} title${p.championships === 1 ? '' : 's'}, ${p.finalFours} Final Four${p.finalFours === 1 ? '' : 's'}`)}${cell(escapeHtml(p.allTimeRecord || ''))}</tr>`),
+    `<h2>The greatest seasons — top 50 team-seasons since 1939</h2>`,
+    `<p>Every team-season with complete tournament data, scored on ${pct(sw.htss)} HTSS, ${pct(sw.effZ)} adjusted efficiency against era peers, ${pct(sw.tournament)} tournament result, and ${pct(sw.srs)} Simple Rating System against era peers. The tournament term is deliberately light: HTSS already rewards March, and at a heavier weight the list was just the champions reordered.</p>`,
+    rows(seasons, s => `<tr>${cell(s.rank)}${cell(`<a href="${seasonHref(origin, teamSlug(s.team), s.season)}">${escapeHtml(s.season)} ${escapeHtml(s.team)}</a>`)}${cell(escapeHtml(s.record || ''))}${cell(escapeHtml(s.coach || ''))}${cell(escapeHtml(resultLabel(s.tourneyResult)))}${cell(`Score ${s.score}`)}</tr>`),
+    `<h2>How it works</h2>`,
+    `<p>Missing data is never scored as zero: when a component does not exist for a program or season (adjusted efficiency before 1949-50, the AP poll before 1948-49, a season whose tournament results are not yet compiled) its weight is redistributed across the components that do. Titles are era-weighted (0.70 for the 8-team era through 1949, 0.85 through 1974, 0.95 through 1984, 1.00 for the 64-team era); Final Four, Elite Eight and Sweet 16 counts are not, because the record carries only the years of titles. Winning percentage is shrunk toward .500 with a 200-game prior so longevity itself counts. The 2019-20 season (no tournament) and the most recent season (tournament results pending) are not eligible for the seasons list.</p>`,
   ];
   return ssrWrap(parts.join('\n'));
 }
@@ -1132,7 +1160,7 @@ export async function onRequest(context) {
 
   // Section forever URLs (see SECTION_META), rivalry pages, Time Machine matchups.
   let sectionParam = null, rivalrySlug = null, tmRoute = null;
-  const sectionMatch = url.pathname.match(/^\/(teams|rankings|time-machine|players|rivalries|coaches|bracket|upsets|classics|champions)\/?$/);
+  const sectionMatch = url.pathname.match(/^\/(teams|rankings|time-machine|players|rivalries|coaches|bracket|upsets|classics|champions|blue-blood-index)\/?$/);
   if (sectionMatch) sectionParam = sectionMatch[1];
   let otdParam = null;
   const otdMatch = url.pathname.match(/^\/on-this-day(?:\/(\d{2}-\d{2}))?\/?$/);
@@ -1516,6 +1544,9 @@ export async function onRequest(context) {
         ssrHtml = renderRivalriesSsr(Array.isArray(rivalries) ? rivalries : [], h2h, teams, origin);
       } else if (sectionParam === 'coaches') {
         ssrHtml = renderCoachesSsr(coachLb, teams, origin);
+      } else if (sectionParam === 'blue-blood-index') {
+        const ur = await getJsonCached(assetFetcher, originUrl, '/unified_rankings.json');
+        ssrHtml = ur ? renderBlueBloodSsr(ur, teams, origin) : '';
       } else if (sectionParam === 'champions') {
         ssrHtml = renderChampionsSsr(teams, origin);
       } else {

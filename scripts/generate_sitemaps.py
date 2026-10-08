@@ -55,7 +55,8 @@ def main():
     # Pages Function), rivalry pages, the featured Time Machine matchups, and
     # the ?championship= pages carried over from the previous core sitemap.
     SECTIONS = ['teams', 'rankings', 'time-machine', 'players', 'rivalries',
-                'coaches', 'bracket', 'upsets', 'classics', 'champions']
+                'coaches', 'bracket', 'upsets', 'classics', 'champions',
+                'blue-blood-index']
     core = [url_el(f'{ORIGIN}/', priority='1.0')]
     core += [url_el(f'{ORIGIN}/{sec}', priority='0.9') for sec in SECTIONS]
     try:

@@ -1,10 +1,12 @@
 #!/usr/bin/env node
 /**
  * ============================================================================
- * UNIFIED HISTORICAL RANKINGS — PROTOTYPE v0.1
+ * UNIFIED HISTORICAL RANKINGS — v1.0 (the Blue Blood Index)
  * ============================================================================
  *
- * Hoopsipedia research prototype — NOT wired to the site.
+ * Ships to the site as /blue-blood-index (SSR in functions/[[path]].js,
+ * SPA view renderBlueBlood in app.js). Weights locked by Josh 2026-10-08;
+ * see RANKING_METHODOLOGY.md for the decision log.
  *
  * One composite ranking that aggregates every signal the repo already
  * computes. Two artifacts written to unified_rankings.json:
@@ -54,11 +56,16 @@ const WEIGHTS = {
     pollPrestige: 0.10, // AP weeks ranked — public perception across decades
   },
   season: {
-    htss:       0.40, // already a 9-component composite; the anchor
-    effZ:       0.25, // pure statistical dominance vs era peers
-    tournament: 0.20, // what the season is remembered for
+    htss:       0.45, // already a 9-component composite; the anchor
+    effZ:       0.30, // pure statistical dominance vs era peers
+    tournament: 0.10, // March matters, but HTSS already carries a tournament
+                      // term; at 0.20 the list was just the champions reordered
     srs:        0.15, // independent (SR-derived) rating as a cross-check
   },
+  // The AP poll began in 1948-49. A program whose last season ended before
+  // then is treated as having NO poll data (weight redistributed), not as
+  // "never ranked" — the same rule the efficiency component already follows.
+  apPollFirstEndYear: 1949,
   // Era weights applied to each championship year (hardware component).
   // Earlier titles came from smaller fields / pre-integration talent pools.
   champEra: [
@@ -299,6 +306,20 @@ function champEraWeight(year) {
   return 1.0;
 }
 
+// End year of the program's most recent season in seasons.json (null if none).
+function lastSeasonEndYear(espnId) {
+  const rows = seasonsData[espnId] && seasonsData[espnId].seasons;
+  if (!rows || !rows.length) return null;
+  let best = null;
+  for (const r of rows) {
+    const y = getSeasonEndYear(r.year);
+    if (Number.isFinite(y) && (best == null || y > best)) best = y;
+  }
+  return best;
+}
+let prePollPrograms = 0;
+let unverifiedSeasons = 0;
+
 function buildPrograms() {
   const items = [];
 
@@ -346,7 +367,10 @@ function buildPrograms() {
 
     // 5. Poll prestige — AP weeks ranked, log-scaled (0 weeks is real data, not missing)
     const apWeeks = info[F.APW] || 0;
-    const pollLog = Math.log1p(apWeeks);
+    const lastEndYear = lastSeasonEndYear(espnId);
+    const prePoll = lastEndYear != null && lastEndYear < WEIGHTS.apPollFirstEndYear;
+    const pollLog = prePoll ? null : Math.log1p(apWeeks);
+    if (prePoll) prePollPrograms++;
 
     items.push({
       espnId, name, conf: info[F.CONF],
@@ -414,6 +438,21 @@ function buildPrograms() {
 // ARTIFACT 2: seasonAllTime (top 250 team-seasons)
 // ─────────────────────────────────────────────────────────────────────────────
 
+// Seasons whose tournament field is populated for a bracket's worth of teams
+// (a modern field is 64-68; the 1939-50 fields were 8, with one or two results
+// missing from the source for several war years, so 6 is the bar). 2019-20
+// has none — the tournament was cancelled — and is excluded by the same rule.
+const tourneyComplete = new Set();
+{
+  const counts = {};
+  for (const t of Object.values(seasonsData)) {
+    for (const r of (t && t.seasons) || []) {
+      if (r.ncaaTourney) counts[r.year] = (counts[r.year] || 0) + 1;
+    }
+  }
+  for (const [year, n] of Object.entries(counts)) if (n >= 6) tourneyComplete.add(year);
+}
+
 function buildSeasons() {
   const items = [];
 
@@ -426,6 +465,11 @@ function buildSeasons() {
       const endYear = getSeasonEndYear(year);
       const era = getEra(endYear);
       const row = seasonRow[espnId] ? seasonRow[espnId][year] : null;
+      // A season is eligible for the all-time list only once its tournament
+      // data is complete. Until compile_history has the bracket for a season
+      // (2025-26 had 4 of 364 results when this shipped), every team in it
+      // would otherwise be scored as having missed the tournament.
+      if (!row || !tourneyComplete.has(year)) { unverifiedSeasons++; continue; }
 
       // 1. HTSS — invert the 50 + 15z display transform back to z-scale
       const htssZ = (hs.htss - WEIGHTS.scaleBase) / WEIGHTS.scaleSpread;
@@ -506,6 +550,7 @@ console.log(`  top ${seasonAllTime.length} team-seasons kept`);
 
 // NET cross-check (informational only — current era)
 const netCount = Object.keys(netData).length;
+console.log(`  pre-AP-poll programs (poll component redistributed): ${prePollPrograms}; seasons skipped for lacking a seasons.json row: ${unverifiedSeasons}`);
 console.log(`  (net_rankings.json loaded for reference: ${netCount} entries, not weighted in composite)`);
 
 let sanityFailures = 0;
@@ -556,9 +601,9 @@ if (sanityFailures > 0) {
 
 const output = {
   metadata: {
-    version: '0.1-prototype',
+    version: '1.0',
     algorithm: 'Unified Historical Rankings — aggregates HTSS v2, efficiency engine, hardware, win pct, AP poll prestige',
-    note: 'Research prototype. Not wired to the site. See RANKING_METHODOLOGY.md.',
+    note: 'The Blue Blood Index (programs) and Greatest Seasons (team-seasons, 1939 onward, tournament data complete). Weights locked 2026-10-08. See RANKING_METHODOLOGY.md.',
     weights: WEIGHTS,
     inputs: [
       'htss_v2_results.json (byTeam season scores)',

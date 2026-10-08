@@ -16,7 +16,7 @@ Function reads the manifest to pick og:image):
   rivalries          share/rivalry/{slug}.jpg
 
   python3 scripts/render_share_cards.py            # everything
-  python3 scripts/render_share_cards.py --only sections,tm,rivalry
+  python3 scripts/render_share_cards.py --only section,tm,rivalry
   python3 scripts/render_share_cards.py --only team --limit 5   # smoke test
 
 Idempotent; re-run after data.json / time_machine_results.json / rivalries.json
@@ -109,6 +109,7 @@ SECTIONS = {
     'bracket': ('NCAA Tournament Bracket', 'Live scores, seed-matchup history, upset alerts, every team’s résumé'),
     'upsets': ('Greatest Tournament Upsets', '340+ verified bracket busters, by seed and by era'),
     'classics': ('Instant Classics', 'Buzzer beaters and overtime thrillers from the latest NCAA Tournament'),
+    'blue-blood-index': ('The Blue Blood Index', 'Every program ranked on one scale — banners, sustained peak, efficiency, winning, prestige — and the greatest seasons ever'),
     'on-this-day': ('On This Day', 'The upsets, blowouts, overtime thrillers and title games played on this date, every year since 1908'),
 }
 

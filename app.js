@@ -537,13 +537,15 @@
             if (window.location.hash) return false;
             const path = window.location.pathname;
             // Section forever URLs: /rankings, /time-machine, /players, /rivalries, …
-            const sec = path.match(/^\/(rankings|time-machine|players|rivalries|teams|coaches|bracket|upsets|classics|champions)\/?$/);
+            const sec = path.match(/^\/(rankings|time-machine|players|rivalries|teams|coaches|bracket|upsets|classics|champions|blue-blood-index)\/?$/);
             if (sec) {
                 _skipHashUpdate = true;
                 try {
                     if (sec[1] === 'time-machine') {
                         switchView('rankings', true);
                         setTimeout(() => switchRankingsTab('timemachine'), 50);
+                    } else if (sec[1] === 'blue-blood-index') {
+                        switchView('blueblood', true);
                     } else {
                         switchView(sec[1], true);
                     }
@@ -2747,6 +2749,13 @@
                 return;
             }
 
+            // #blueblood — the Blue Blood Index (forever URL: /blue-blood-index)
+            if (hash === '#blueblood') {
+                switchView('blueblood', true);
+                _skipHashUpdate = false;
+                return;
+            }
+
             // #classics
             if (hash === '#classics') {
                 switchView('classics', true);
@@ -3290,7 +3299,7 @@
 
             // Views that read the full datasets wait for them (the view is
             // already active, so the switch feels instant; content follows).
-            const FAST_VIEWS = new Set(['home', 'teams', 'profile', 'seasonPage', 'players', 'rankings', 'onThisDay']);
+            const FAST_VIEWS = new Set(['home', 'teams', 'profile', 'seasonPage', 'players', 'rankings', 'onThisDay', 'blueblood']);
             if (!_allDataLoaded && !FAST_VIEWS.has(view)) {
                 startBackgroundLoads();
                 ensureAllLoads().then(() => { if (currentView === view) switchView(view, true); });
@@ -3342,6 +3351,9 @@
                 renderRivalries();
                 if (bracketRefreshInterval) clearInterval(bracketRefreshInterval);
             } else if (view === 'rivalryPage') {
+                if (bracketRefreshInterval) clearInterval(bracketRefreshInterval);
+            } else if (view === 'blueblood') {
+                renderBlueBlood();
                 if (bracketRefreshInterval) clearInterval(bracketRefreshInterval);
             } else if (view === 'classics') {
                 renderClassics();
@@ -11116,6 +11128,118 @@
             'W2a07ER2Rm0','MpjmP3Es3ek','qlAB7lFJnJg','xqB6MFRB3UU',
             'bLfEaiGJDq0','QOnJz0YRbGY','x3-bv47TsGI','GmFX7gSGhOQ'
         ]);
+
+        // ── The Blue Blood Index (/blue-blood-index) ──
+        // unified_rankings.json: programAllTime (every program) + seasonAllTime
+        // (top 250 team-seasons). Loaded on first visit, memoized.
+        let _bbiPromise = null;
+        let _bbiTab = 'programs';
+        let _bbiShowAll = false;
+        function loadBlueBlood() {
+            if (!_bbiPromise) _bbiPromise = loadJson('/unified_rankings.json');
+            return _bbiPromise;
+        }
+        function bbiTab(tab) { _bbiTab = tab; renderBlueBlood(); }
+        function bbiShowAll() { _bbiShowAll = true; renderBlueBlood(); }
+        function bbiShare() {
+            const url = 'https://www.hoopsipedia.com/blue-blood-index';
+            const done = () => {
+                const b = document.getElementById('bbiShareBtn');
+                if (b) { const t = b.textContent; b.textContent = 'LINK COPIED'; setTimeout(() => { b.textContent = t; }, 1600); }
+            };
+            if (navigator.share) { navigator.share({ title: 'The Blue Blood Index — Hoopsipedia', url }).catch(() => {}); return; }
+            if (navigator.clipboard) navigator.clipboard.writeText(url).then(done).catch(() => {});
+        }
+        async function renderBlueBlood() {
+            const el = document.getElementById('bluebloodContent');
+            if (!el) return;
+            if (!el.innerHTML) el.innerHTML = '<div class="chart-loading" style="padding:3rem 1rem;text-align:center;">Loading the Blue Blood Index…</div>';
+            const ur = await loadBlueBlood();
+            if (currentView !== 'blueblood') return;
+            if (!ur || !Array.isArray(ur.programAllTime)) {
+                el.innerHTML = '<div class="chart-loading" style="padding:3rem 1rem;text-align:center;">The Blue Blood Index is unavailable right now.</div>';
+                return;
+            }
+            const w = (ur.metadata && ur.metadata.weights) || {};
+            const pw = w.program || {}, sw = w.season || {};
+            const pct = x => `${Math.round((x || 0) * 100)}%`;
+            const teamById = id => allTeamsData.find(t => String(t.espnId) === String(id));
+            const logo = id => `<div class="team-logo-small" data-bg="${getLogoUrl(id, 80)}"></div>`;
+            const badge = r => r === 1 ? '<span class="rank-badge gold">1</span>' : r <= 5 ? `<span class="rank-badge accent">${r}</span>` : `<span class="rank-badge">${r}</span>`;
+            const resultLabel = r => String(r || '').replace(/_/g, ' ');
+
+            const tabs = [['programs', 'Programs'], ['seasons', 'Greatest Seasons'], ['method', 'How It Works']]
+                .map(([k, l]) => `<button class="games-filter-btn ${_bbiTab === k ? 'active' : ''}" onclick="bbiTab('${k}')">${l}</button>`).join('');
+
+            let body = '';
+            if (_bbiTab === 'programs') {
+                const list = _bbiShowAll ? ur.programAllTime : ur.programAllTime.slice(0, 50);
+                body = `<div class="rankings-table"><table>
+                    <thead><tr><th style="color:#fff;">Rank</th><th style="color:#fff;">Program</th><th style="color:#fff;">BBI</th><th style="color:#fff;">Titles</th><th style="color:#fff;" class="bbi-hide-sm">Final Fours</th><th style="color:#fff;" class="bbi-hide-sm">All-Time</th></tr></thead>
+                    <tbody>${list.map(p => {
+                        const t = teamById(p.espnId);
+                        const click = t ? `onclick="openProfile({espnId: '${t.espnId}', name: '${t.name.replace(/'/g, "\\'")}'})" style="cursor:pointer;"` : '';
+                        return `<tr><td>${badge(p.rank)}</td>
+                            <td><div class="team-cell" ${click}>${logo(p.espnId)}<span>${escapeHtml(p.team)}</span></div></td>
+                            <td><span class="htss-score ${getHtssClass(p.score)}">${p.score.toFixed(1)}</span></td>
+                            <td>${p.championships}</td><td class="bbi-hide-sm">${p.finalFours}</td><td class="bbi-hide-sm">${escapeHtml(p.allTimeRecord || '')}</td></tr>`;
+                    }).join('')}</tbody></table></div>
+                    ${_bbiShowAll ? '' : `<div style="text-align:center;margin-top:1rem;"><button class="games-filter-btn" onclick="bbiShowAll()">Show all ${ur.programAllTime.length} programs</button></div>`}`;
+            } else if (_bbiTab === 'seasons') {
+                const list = ur.seasonAllTime || [];
+                body = `<div class="rankings-table"><table>
+                    <thead><tr><th style="color:#fff;">Rank</th><th style="color:#fff;">Season</th><th style="color:#fff;">Record</th><th style="color:#fff;" class="bbi-hide-sm">Coach</th><th style="color:#fff;">Result</th><th style="color:#fff;">Score</th></tr></thead>
+                    <tbody>${list.map(s => `<tr><td>${badge(s.rank)}</td>
+                        <td><a href="/teams/${teamSlug(s.team)}/${s.season}" style="text-decoration:none;color:inherit;"><div class="team-cell">${logo(s.espnId)}<span><strong>${escapeHtml(s.season)}</strong> ${escapeHtml(s.team)}</span></div></a></td>
+                        <td>${escapeHtml(s.record || '')}</td><td class="bbi-hide-sm">${escapeHtml(s.coach || '')}</td>
+                        <td style="text-transform:capitalize;">${escapeHtml(resultLabel(s.tourneyResult))}</td>
+                        <td><span class="htss-score ${getHtssClass(s.score)}">${s.score.toFixed(1)}</span></td></tr>`).join('')}</tbody></table></div>
+                    <p class="bbi-note">Top 250 team-seasons since 1939 with complete tournament data. The 2019-20 season (no tournament) and the most recent season (results pending) are not yet eligible.</p>`;
+            } else {
+                body = `<div class="bbi-method">
+                    <h3>Programs: five signals, one scale</h3>
+                    <table class="bbi-weights">
+                        <tr><th>Hardware</th><td>${pct(pw.hardware)}</td><td>Era-weighted national titles (0.70 for the 8-team era through 1949, 0.85 through 1974, 0.95 through 1984, 1.00 since), plus Final Fours, Elite Eights, Sweet 16s and bids, log-scaled so UCLA's eleven don't decide the list alone.</td></tr>
+                        <tr><th>Sustained peak</th><td>${pct(pw.htssProgram)}</td><td>Average <a href="/rankings">HTSS</a> of the program's ten best seasons — how good were you at your best, for how long.</td></tr>
+                        <tr><th>Efficiency</th><td>${pct(pw.efficiency)}</td><td>Average within-season adjusted-efficiency percentile across every rated season (1949-50 onward).</td></tr>
+                        <tr><th>Winning</th><td>${pct(pw.winPct)}</td><td>All-time winning percentage shrunk toward .500 with a 200-game prior, so a long history counts for something.</td></tr>
+                        <tr><th>Poll prestige</th><td>${pct(pw.pollPrestige)}</td><td>Weeks ranked in the AP poll, log-scaled.</td></tr>
+                    </table>
+                    <h3>Seasons: four signals</h3>
+                    <table class="bbi-weights">
+                        <tr><th>HTSS</th><td>${pct(sw.htss)}</td><td>The nine-component, era-normalized season score — the anchor.</td></tr>
+                        <tr><th>Efficiency</th><td>${pct(sw.effZ)}</td><td>Adjusted efficiency margin against every team-season of the same era.</td></tr>
+                        <tr><th>Tournament</th><td>${pct(sw.tournament)}</td><td>Champion to missed, on a ladder. Deliberately light: HTSS already rewards March, and at a heavier weight the list was just the champions reordered.</td></tr>
+                        <tr><th>SRS</th><td>${pct(sw.srs)}</td><td>Simple Rating System against era peers — the one input not derived from our own engine.</td></tr>
+                    </table>
+                    <h3>Rules</h3>
+                    <ul>
+                        <li>Every component is standardized across the full population before weighting; scores map to the HTSS scale (50 average, 70–75 elite, 80+ blue blood).</li>
+                        <li>Missing data is never scored as zero. When a component does not exist — efficiency before 1949-50, the AP poll before 1948-49, tournament results not yet compiled — its weight is redistributed across the components that do.</li>
+                        <li>Final Four, Elite Eight and Sweet 16 counts are not era-weighted, because the record carries years only for titles. This slightly favors the old-money programs; we say so rather than guess.</li>
+                        <li>Vacated seasons are shown with an asterisk across the site and excluded from all-time win totals.</li>
+                    </ul>
+                    <p class="bbi-note">Weights were set on October 8, 2026 and will be revisited in the offseason. The full methodology lives in the repository's RANKING_METHODOLOGY.md.</p>
+                </div>`;
+            }
+
+            el.innerHTML = `
+                <div class="rivalries-header">
+                    <div class="kicker" style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--rust);margin-bottom:6px;">Hoopsipedia Original</div>
+                    <h2>The Blue Blood Index</h2>
+                    <p>Every Division I program on one scale: banners, sustained peak, efficiency, winning, and prestige — plus the greatest seasons ever played.</p>
+                    <div style="margin-top:0.9rem;display:flex;gap:8px;justify-content:center;flex-wrap:wrap;">
+                        <button class="games-filter-btn" id="bbiShareBtn" onclick="bbiShare()">SHARE</button>
+                        <a class="games-filter-btn" href="/rankings" data-view="rankings" style="text-decoration:none;">HTSS &amp; RECORD BOOK →</a>
+                    </div>
+                </div>
+                <div class="filter-buttons" style="justify-content:center;margin-bottom:1rem;">${tabs}</div>
+                ${body}`;
+            document.querySelectorAll('#bluebloodContent a[data-view]').forEach(a => a.addEventListener('click', e => {
+                if (e.metaKey || e.ctrlKey || e.shiftKey) return;
+                e.preventDefault(); switchView(a.dataset.view);
+            }));
+        }
 
         function renderChampions() {
             const content = document.getElementById('championsContent');
