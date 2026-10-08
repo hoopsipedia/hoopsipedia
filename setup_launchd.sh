@@ -19,7 +19,7 @@ PREFIX="com.hoopsipedia"
 UID_="$(id -u)"
 
 if [ "${1:-}" = "--status" ]; then
-  for j in sync drafts report; do
+  for j in sync drafts report refresh; do
     printf '%-24s ' "$PREFIX.$j"
     launchctl print "gui/$UID_/$PREFIX.$j" 2>/dev/null | grep -E "state =|last exit code|runs =" | tr -s ' ' | tr '\n' ' ' || printf 'not loaded'
     echo
@@ -28,7 +28,7 @@ if [ "${1:-}" = "--status" ]; then
   exit 0
 fi
 if [ "${1:-}" = "--remove" ]; then
-  for j in sync drafts report; do
+  for j in sync drafts report refresh; do
     launchctl bootout "gui/$UID_/$PREFIX.$j" 2>/dev/null || true
     rm -f "$AGENTS/$PREFIX.$j.plist"
   done
@@ -84,7 +84,12 @@ write_plist "$PREFIX.drafts" /private/tmp/hoopsipedia_content.log "slot Hour=7 M
 write_plist "$PREFIX.report" /private/tmp/hoopsipedia_reports.log "slot Weekday=1 Hour=8 Minute=0" \
   "cd '$SCRIPT_DIR' && set -a && . \$HOME/.config/hoopsipedia/google.env && set +a && '$PYTHON' scripts/google_reports.py"
 
-for j in sync drafts report; do
+# Once a year, after the title game: re-pull every program's season row so the
+# tournament results land (the 2026 bracket went missing for six months).
+write_plist "$PREFIX.refresh" /private/tmp/hoopsipedia_refresh.log "slot Month=4 Day=10 Hour=3 Minute=0" \
+  "cd '$SCRIPT_DIR' && ./scripts/post_tournament_refresh.sh"
+
+for j in sync drafts report refresh; do
   plutil -lint "$AGENTS/$PREFIX.$j.plist" >/dev/null
   launchctl bootout "gui/$UID_/$PREFIX.$j" 2>/dev/null || true
   launchctl bootstrap "gui/$UID_" "$AGENTS/$PREFIX.$j.plist"
