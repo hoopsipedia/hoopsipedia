@@ -9130,204 +9130,151 @@
         }
 
         function createSeasonChart(years, seasonData, team) {
+            // Readability over raw detail: the single-season line is thin and
+            // muted, a five-season rolling average carries the story, titles and
+            // Final Fours are marked, .500 is a reference, decades tick the axis,
+            // and long coaching tenures sit on the baseline. Hover any season.
             const container = document.createElement('div');
             container.style.position = 'relative';
             container.style.width = '100%';
             container.style.height = '400px';
 
-            const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-            svg.setAttribute('viewBox', '0 0 1200 400');
-            svg.setAttribute('class', 'season-chart');
-            svg.setAttribute('preserveAspectRatio', 'xMidYMid meet');
-            svg.setAttribute('style', 'width: 100%; height: 100%;');
+            const NS = 'http://www.w3.org/2000/svg';
+            const el = (tag, attrs) => { const n = document.createElementNS(NS, tag); for (const [k, v] of Object.entries(attrs)) n.setAttribute(k, v); return n; };
+            const svg = el('svg', { viewBox: '0 0 1200 400', class: 'season-chart', preserveAspectRatio: 'xMidYMid meet', style: 'width: 100%; height: 100%;' });
 
-            const padding = { top: 40, right: 40, bottom: 80, left: 60 };
+            const padding = { top: 44, right: 30, bottom: 96, left: 56 };
             const w = 1200 - padding.left - padding.right;
             const h = 400 - padding.top - padding.bottom;
+            const [c1] = ledgerColors(team.color, '#000000');
+            const color = c1 || 'var(--navy)';
 
-            // Calculate winning percentages
-            const winPcts = years.map(y => {
-                const wins = seasonData[y].wins;
-                const total = wins + seasonData[y].losses;
-                return total > 0 ? wins / total : 0;
+            const winPcts = years.map(y => { const sd = seasonData[y]; const t = sd.wins + sd.losses; return t > 0 ? sd.wins / t : 0; });
+            const firstYear = years[0], lastYear = years[years.length - 1];
+            const span = Math.max(1, lastYear - firstYear);
+            const xOf = year => padding.left + ((year - firstYear) / span) * w;
+            const yOf = pct => padding.top + (1 - pct) * h;
+
+            // Y grid: 0 / 25 / 50 / 75 / 100, with .500 emphasised
+            [0, 0.25, 0.5, 0.75, 1].forEach(p => {
+                svg.appendChild(el('line', { x1: padding.left, y1: yOf(p), x2: padding.left + w, y2: yOf(p),
+                    stroke: p === 0.5 ? '#9A937F' : '#E0D9CC', 'stroke-width': p === 0.5 ? 1 : 0.6, 'stroke-dasharray': p === 0.5 ? '4 4' : '' }));
+                const t = el('text', { x: padding.left - 10, y: yOf(p) + 4, 'text-anchor': 'end', 'font-size': 11, fill: '#5F6B7A', 'font-family': 'var(--font-mono)' });
+                t.textContent = p === 0.5 ? '.500' : Math.round(p * 100) + '%';
+                svg.appendChild(t);
             });
 
-            const maxPct = 1.0;
-            const pointSpacing = w / (years.length - 1);
-
-            // Y-axis labels and gridlines
-            for (let i = 0; i <= 10; i++) {
-                const pct = i / 10;
-                const y = padding.top + (1 - pct) * h;
-
-                const gridLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-                gridLine.setAttribute('x1', padding.left);
-                gridLine.setAttribute('y1', y);
-                gridLine.setAttribute('x2', padding.left + w);
-                gridLine.setAttribute('y2', y);
-                gridLine.setAttribute('stroke', '#E0D9CC');
-                gridLine.setAttribute('stroke-width', '0.5');
-                svg.appendChild(gridLine);
-
-                const label = document.createElementNS('http://www.w3.org/2000/svg', 'text');
-                label.setAttribute('x', padding.left - 15);
-                label.setAttribute('y', y + 4);
-                label.setAttribute('text-anchor', 'end');
-                label.setAttribute('font-size', '10');
-                label.setAttribute('fill', '#5F6B7A');
-                label.textContent = (pct * 100).toFixed(0) + '%';
-                svg.appendChild(label);
+            // Decade ticks
+            for (let d = Math.ceil(firstYear / 10) * 10; d <= lastYear; d += 10) {
+                const x = xOf(d);
+                svg.appendChild(el('line', { x1: x, y1: padding.top, x2: x, y2: padding.top + h, stroke: '#EDE9DD', 'stroke-width': 1 }));
+                const t = el('text', { x, y: padding.top + h + 22, 'text-anchor': 'middle', 'font-size': 11, fill: '#5F6B7A', 'font-family': 'var(--font-mono)' });
+                t.textContent = d;
+                svg.appendChild(t);
             }
+            svg.appendChild(el('line', { x1: padding.left, y1: padding.top + h, x2: padding.left + w, y2: padding.top + h, stroke: '#2C3345', 'stroke-width': 1.5 }));
 
-            // X-axis
-            const xAxis = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-            xAxis.setAttribute('x1', padding.left);
-            xAxis.setAttribute('y1', padding.top + h);
-            xAxis.setAttribute('x2', padding.left + w);
-            xAxis.setAttribute('y2', padding.top + h);
-            xAxis.setAttribute('stroke', '#2C3345');
-            xAxis.setAttribute('stroke-width', '1.5');
-            svg.appendChild(xAxis);
+            // Single-season line (thin, muted) — gaps where seasons are missing
+            let rawD = '';
+            years.forEach((y, i) => {
+                const gap = i > 0 && y - years[i - 1] > 1;
+                rawD += (i === 0 || gap ? 'M' : 'L') + xOf(y).toFixed(1) + ',' + yOf(winPcts[i]).toFixed(1);
+            });
+            svg.appendChild(el('path', { d: rawD, stroke: color, 'stroke-width': 1.25, fill: 'none', opacity: 0.35, 'stroke-linejoin': 'round' }));
 
-            // Build path for line chart
-            let pathD = '';
-            const points = [];
-            years.forEach((year, idx) => {
-                const pct = winPcts[idx];
-                const x = padding.left + idx * pointSpacing;
-                const y = padding.top + (1 - pct) * h;
-                // Find coach for this season
-                let coachName = '';
-                if (COACHES && COACHES[team.espnId]) {
-                    const coaches = COACHES[team.espnId];
-                    for (const c of coaches) {
-                        if (year >= c.start && year <= c.end) { coachName = c.name; break; }
-                    }
+            // Five-season rolling average (bold)
+            let avgD = '';
+            years.forEach((y, i) => {
+                const lo = Math.max(0, i - 2), hi = Math.min(years.length - 1, i + 2);
+                let num = 0, den = 0;
+                for (let j = lo; j <= hi; j++) { if (years[j] >= y - 4 && years[j] <= y + 4) { num += winPcts[j]; den++; } }
+                const v = den ? num / den : winPcts[i];
+                const gap = i > 0 && y - years[i - 1] > 1;
+                avgD += (i === 0 || gap ? 'M' : 'L') + xOf(y).toFixed(1) + ',' + yOf(v).toFixed(1);
+            });
+            svg.appendChild(el('path', { d: avgD, stroke: color, 'stroke-width': 3, fill: 'none', 'stroke-linejoin': 'round', 'stroke-linecap': 'round' }));
+
+            // Milestones: titles (gold ring) and Final Fours (navy dot)
+            years.forEach((y, i) => {
+                const ps = seasonData[y].postseason;
+                if (ps === 'Champion') {
+                    svg.appendChild(el('circle', { cx: xOf(y), cy: yOf(winPcts[i]), r: 6.5, fill: '#C9A86C', stroke: '#1B2A4A', 'stroke-width': 2 }));
+                } else if (ps === 'Final Four' || ps === 'Runner-Up') {
+                    svg.appendChild(el('circle', { cx: xOf(y), cy: yOf(winPcts[i]), r: 4, fill: '#1B2A4A' }));
                 }
-                const sd = seasonData[year];
-                points.push({
-                    x, y, year, idx,
-                    wins: sd.wins, losses: sd.losses,
-                    confWins: sd.confWins || 0, confLosses: sd.confLosses || 0,
-                    postseason: sd.postseason || '',
-                    coach: sd.coach || coachName
-                });
-                pathD += (idx === 0 ? 'M' : 'L') + x + ',' + y;
             });
 
-            // Area fill below line
-            const areaPath = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-            let areaD = pathD + ` L${padding.left + (years.length - 1) * pointSpacing},${padding.top + h} L${padding.left},${padding.top + h} Z`;
-            areaPath.setAttribute('d', areaD);
-            areaPath.setAttribute('fill', team.color);
-            areaPath.setAttribute('opacity', '0.15');
-            svg.appendChild(areaPath);
+            // Coaching tenures on the baseline (ten seasons or more)
+            const tenures = (COACHES && COACHES[team.espnId]) ? COACHES[team.espnId] : [];
+            tenures.forEach(c => {
+                const a = Math.max(c.start, firstYear), b = Math.min(c.end, lastYear);
+                if (b - a < 9) return;
+                const x1 = xOf(a), x2 = xOf(b);
+                svg.appendChild(el('line', { x1, y1: padding.top + h + 44, x2, y2: padding.top + h + 44, stroke: '#1B2A4A', 'stroke-width': 3, 'stroke-linecap': 'round', opacity: 0.8 }));
+                const t = el('text', { x: (x1 + x2) / 2, y: padding.top + h + 62, 'text-anchor': 'middle', 'font-size': 10.5, fill: '#1B2A4A', 'font-family': 'var(--font-mono)', 'letter-spacing': '0.06em' });
+                t.textContent = (c.name.split(' ').pop() || c.name).toUpperCase();
+                svg.appendChild(t);
+            });
 
-            // Line
-            const line = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-            line.setAttribute('d', pathD);
-            line.setAttribute('stroke', team.color);
-            line.setAttribute('stroke-width', '2.5');
-            line.setAttribute('fill', 'none');
-            svg.appendChild(line);
+            // Legend
+            const legend = el('g', { transform: `translate(${padding.left}, ${padding.top - 22})`, 'font-size': 10.5, 'font-family': 'var(--font-mono)', fill: '#5F6B7A' });
+            const items = [
+                ['line', { x1: 0, y1: 0, x2: 22, y2: 0, stroke: color, 'stroke-width': 3 }, '5-SEASON AVERAGE'],
+                ['line', { x1: 0, y1: 0, x2: 22, y2: 0, stroke: color, 'stroke-width': 1.25, opacity: 0.5 }, 'SINGLE SEASON'],
+                ['circle', { cx: 8, cy: 0, r: 5, fill: '#C9A86C', stroke: '#1B2A4A', 'stroke-width': 1.5 }, 'NATIONAL TITLE'],
+                ['circle', { cx: 8, cy: 0, r: 3.5, fill: '#1B2A4A' }, 'FINAL FOUR'],
+            ];
+            let lx = 0;
+            items.forEach(([tag, attrs, label]) => {
+                const g = el('g', { transform: `translate(${lx}, 0)` });
+                g.appendChild(el(tag, attrs));
+                const t = el('text', { x: 28, y: 4 }); t.textContent = label; g.appendChild(t);
+                legend.appendChild(g);
+                lx += 28 + label.length * 7.2 + 26;
+            });
+            svg.appendChild(legend);
 
-            // Interactive hover elements
+            // Hover + click per season (invisible hit zones, nearest-season on the x axis)
             const tooltip = document.createElement('div');
             tooltip.className = 'chart-tooltip';
             tooltip.style.display = 'none';
             container.appendChild(tooltip);
-
-            const hoverLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-            hoverLine.setAttribute('stroke', '#C9A86C');
-            hoverLine.setAttribute('stroke-width', '1.5');
-            hoverLine.setAttribute('opacity', '0.6');
-            hoverLine.setAttribute('style', 'display: none;');
-            svg.appendChild(hoverLine);
-
-            // Data points and hover zones
-            points.forEach((point, idx) => {
-                const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
-                circle.setAttribute('cx', point.x);
-                circle.setAttribute('cy', point.y);
-                circle.setAttribute('r', '4');
-                circle.setAttribute('fill', team.color);
-                circle.setAttribute('opacity', '0.8');
-                svg.appendChild(circle);
-
-                // Hover zone
-                const hoverZone = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
-                hoverZone.setAttribute('cx', point.x);
-                hoverZone.setAttribute('cy', point.y);
-                hoverZone.setAttribute('r', '20');
-                hoverZone.setAttribute('fill', 'transparent');
-                hoverZone.setAttribute('style', 'cursor: pointer;');
-                hoverZone.addEventListener('mouseenter', () => {
-                    hoverLine.setAttribute('x1', point.x);
-                    hoverLine.setAttribute('y1', padding.top);
-                    hoverLine.setAttribute('x2', point.x);
-                    hoverLine.setAttribute('y2', padding.top + h);
+            const hoverLine = el('line', { stroke: '#C9A86C', 'stroke-width': 1.5, opacity: 0.7, style: 'display: none;' });
+            const hoverDot = el('circle', { r: 5, fill: '#FFFFFF', stroke: color, 'stroke-width': 2.5, style: 'display: none;' });
+            svg.appendChild(hoverLine); svg.appendChild(hoverDot);
+            const halfStep = (w / Math.max(1, years.length)) / 2;
+            years.forEach((year, i) => {
+                const x = xOf(year), y = yOf(winPcts[i]);
+                const sd = seasonData[year];
+                let coachName = sd.coach || '';
+                if (!coachName) for (const c of tenures) { if (year >= c.start && year <= c.end) { coachName = c.name; break; } }
+                const zone = el('rect', { x: x - Math.max(halfStep, 4), y: padding.top, width: Math.max(halfStep, 4) * 2, height: h, fill: 'transparent', style: 'cursor: pointer;' });
+                zone.addEventListener('mouseenter', () => {
+                    hoverLine.setAttribute('x1', x); hoverLine.setAttribute('x2', x); hoverLine.setAttribute('y1', padding.top); hoverLine.setAttribute('y2', padding.top + h);
                     hoverLine.setAttribute('style', 'display: block;');
-
-                    const winPct = ((point.wins / (point.wins + point.losses)) * 100).toFixed(1);
-                    const confLine = (point.confWins > 0 || point.confLosses > 0) ? `<div style="margin-top:3px;">Conf: ${point.confWins}-${point.confLosses}</div>` : '';
-                    const postLine = point.postseason ? `<div style="margin-top:3px; color:#C9A86C; font-weight:600;">${point.postseason}</div>` : '';
-                    const coachLine = point.coach ? `<div style="margin-top:3px; font-size:0.78rem; opacity:0.85;">Coach: ${point.coach}</div>` : '';
-                    const displayYear = `${point.year - 1}-${String(point.year).slice(2)}`;
+                    hoverDot.setAttribute('cx', x); hoverDot.setAttribute('cy', y); hoverDot.setAttribute('style', 'display: block;');
+                    const winPct = ((sd.wins / (sd.wins + sd.losses)) * 100).toFixed(1);
+                    const confLine = (sd.confWins > 0 || sd.confLosses > 0) ? `<div style="margin-top:3px;">Conf: ${sd.confWins}-${sd.confLosses}</div>` : '';
+                    const postLine = sd.postseason ? `<div style="margin-top:3px; color:#C9A86C; font-weight:600;">${sd.postseason}</div>` : '';
+                    const coachLine = coachName ? `<div style="margin-top:3px; font-size:0.78rem; opacity:0.85;">Coach: ${coachName}</div>` : '';
+                    const displayYear = `${year - 1}-${String(year).slice(2)}`;
                     tooltip.innerHTML = `
                         <div style="font-weight:700; margin-bottom:4px; border-bottom:1px solid rgba(255,255,255,0.15); padding-bottom:4px;">${team.name} ${displayYear}</div>
-                        <div>Record: <strong>${point.wins}-${point.losses}</strong> (${winPct}%)</div>
+                        <div>Record: <strong>${sd.wins}-${sd.losses}</strong> (${winPct}%)</div>
                         ${confLine}${postLine}${coachLine}
-                        <div style="margin-top:5px; font-size:0.72rem; color:#C9A86C; font-weight:600;">Click point to view season →</div>`;
+                        <div style="margin-top:5px; font-size:0.72rem; color:#C9A86C; font-weight:600;">Click to view season →</div>`;
                     tooltip.style.display = 'block';
-
                     const rect = svg.getBoundingClientRect();
-                    const tooltipHeight = tooltip.offsetHeight;
-                    const tooltipWidth = tooltip.offsetWidth || 180;
-                    let left = (point.x / 1200) * rect.width - tooltipWidth / 2;
-                    left = Math.max(5, Math.min(left, rect.width - tooltipWidth - 5));
+                    const tw = tooltip.offsetWidth || 180, th = tooltip.offsetHeight;
+                    let left = (x / 1200) * rect.width - tw / 2;
+                    left = Math.max(5, Math.min(left, rect.width - tw - 5));
                     tooltip.style.left = left + 'px';
-                    tooltip.style.top = ((point.y / 400) * rect.height - tooltipHeight - 12) + 'px';
+                    tooltip.style.top = Math.max(0, (y / 400) * rect.height - th - 14) + 'px';
                 });
-
-                hoverZone.addEventListener('mouseleave', () => {
-                    hoverLine.setAttribute('style', 'display: none;');
-                    tooltip.style.display = 'none';
-                });
-
-                // Click a data point → single-season page
-                hoverZone.addEventListener('click', () => {
-                    const displayYear = `${point.year - 1}-${String(point.year).slice(2)}`;
-                    window.location.hash = `#season/${teamSlug(team.name)}/${displayYear}`;
-                });
-
-                svg.appendChild(hoverZone);
+                zone.addEventListener('mouseleave', () => { hoverLine.setAttribute('style', 'display: none;'); hoverDot.setAttribute('style', 'display: none;'); tooltip.style.display = 'none'; });
+                zone.addEventListener('click', () => { window.location.hash = `#season/${teamSlug(team.name)}/${year - 1}-${String(year).slice(2)}`; });
+                svg.appendChild(zone);
             });
-
-            // X-axis year labels
-            const yearStep = Math.max(1, Math.floor(years.length / 8));
-            years.forEach((year, idx) => {
-                if (idx % yearStep === 0 || idx === years.length - 1) {
-                    const x = padding.left + idx * pointSpacing;
-                    const label = document.createElementNS('http://www.w3.org/2000/svg', 'text');
-                    label.setAttribute('x', x);
-                    label.setAttribute('y', padding.top + h + 25);
-                    label.setAttribute('text-anchor', 'middle');
-                    label.setAttribute('font-size', '11');
-                    label.setAttribute('fill', '#5F6B7A');
-                    label.textContent = year.toString();
-                    svg.appendChild(label);
-                }
-            });
-
-            // Y-axis label
-            const yLabel = document.createElementNS('http://www.w3.org/2000/svg', 'text');
-            yLabel.setAttribute('x', 15);
-            yLabel.setAttribute('y', padding.top - 10);
-            yLabel.setAttribute('font-size', '11');
-            yLabel.setAttribute('fill', '#5F6B7A');
-            yLabel.setAttribute('font-weight', '600');
-            yLabel.textContent = 'Win %';
-            svg.appendChild(yLabel);
 
             container.appendChild(svg);
             return container;
