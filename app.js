@@ -2894,6 +2894,7 @@
             crest.style.color = teamColor;
             crest.style.borderColor = teamColor;
             crest.style.background = 'var(--paper)';
+            crest.classList.remove('empty');
             crest.innerHTML = `<img src="${logoUrl}" alt="${team.name}" style="width:70%;height:70%;object-fit:contain;" onerror="this.parentElement.innerHTML='<span style=color:${teamColor.replace(/[^#a-zA-Z0-9(),]/g,'')}>?</span>'">`;
         }
 
@@ -3083,11 +3084,21 @@
             if (t.includes('National Semifinal')) return 'Final Four';
             if (t.includes('Regional Final')) return 'Elite Eight';
             if (t.includes('Regional Semifinal') || t.includes('Third Round')) return 'Sweet 16';
-            if (t.includes('Second Round')) return 'R32';
-            if (t.includes('First Round') || t.includes('Regional Third')) return 'R64';
+            if (t.includes('Second Round')) return 'Round of 32';
+            if (t.includes('First Round') || t.includes('Regional Third')) return 'Round of 64';
             if (t.includes('First Four') || t.includes('Opening Round')) return 'First Four';
             if (t.includes('Playing')) return 'In Progress';
             return 'NCAA';
+        }
+
+        // One pill vocabulary for the season tables' Postseason column.
+        function postseasonPillStyle(label) {
+            const base = 'display:inline-block; white-space:nowrap; border-radius:999px; padding:0.15rem 0.55rem; font-size:0.72rem; letter-spacing:0.02em; ';
+            if (!label) return base + 'color:#C4B99A;';
+            if (label === 'Champion') return base + 'background:#C9A86C; color:#1B2A4A; font-weight:700;';
+            if (label === 'Runner-Up' || label === 'Final Four') return base + 'background:#1B2A4A; color:#F5F3EE; font-weight:600;';
+            if (label === 'Elite Eight' || label === 'Sweet 16') return base + 'background:#E8DDD0; color:#1B2A4A; font-weight:600;';
+            return base + 'border:1px solid #D6CFC2; color:#667486;';
         }
 
         // Get CSS class for tournament round badge
@@ -3182,7 +3193,7 @@
 
             // Summary stats
             const total = appearances.length;
-            const resultRank = ['Champion', 'Runner-Up', 'Final Four', 'Elite Eight', 'Sweet 16', 'R32', 'R64', 'First Four', 'NCAA', 'In Progress'];
+            const resultRank = ['Champion', 'Runner-Up', 'Final Four', 'Elite Eight', 'Sweet 16', 'Round of 32', 'Round of 64', 'First Four', 'NCAA', 'In Progress'];
             const bestFinish = resultRank.find(r => appearances.some(a => a.result === r)) || 'NCAA';
             const ff = appearances.filter(a => ['Champion', 'Runner-Up', 'Final Four'].includes(a.result)).length;
             const seeded = appearances.filter(a => a.seed);
@@ -5151,7 +5162,7 @@
                 const aVal = a[currentLeadersStat];
                 const bVal = b[currentLeadersStat];
                 return leadersSortDir === 'desc' ? bVal - aVal : aVal - bVal;
-            }).slice(0, 25);
+            }).slice(0, 10);
 
             const tbody = document.getElementById('winsTableBody');
             tbody.innerHTML = '';
@@ -8523,10 +8534,15 @@
                 const latestTourney = latest?.ncaaTourney || '';
                 const latestApHigh = latest?.apHigh || '';
 
+                // "2025-26" is the current season until the next one tips off;
+                // from May of its end year it is last season.
+                const latestEnd = parseInt(String(latestYear).slice(0, 4), 10) + 1;
+                const nowD = new Date();
+                const seasonOver = nowD.getFullYear() > latestEnd || (nowD.getFullYear() === latestEnd && nowD.getMonth() >= 4);
                 if (latestWins > 0 || latestLosses > 0) currentSeasonHTML = `
                 <div style="background: ${team.color || 'var(--navy)'}; border-radius: var(--r-md); padding: 1.25rem 1.5rem; margin-bottom: 1.5rem; color: var(--cream); display: flex; flex-wrap: wrap; align-items: center; gap: 1.5rem;">
                     <div style="flex: 0 0 auto;">
-                        <div class="label-mono" style="opacity: 0.8; margin-bottom: 0.25rem; font-size:10px;">Current Season</div>
+                        <div class="label-mono" style="opacity: 0.8; margin-bottom: 0.25rem; font-size:10px;">${seasonOver ? 'Last Season' : 'Current Season'}</div>
                         <div class="h-slab" style="font-size: 1.6rem;">${latestYear}</div>
                     </div>
                     <div style="width: 1px; height: 40px; background: rgba(255,255,255,0.25);"></div>
@@ -9007,9 +9023,7 @@
                                     const pct = ((s.wins / (s.wins + s.losses)) * 100).toFixed(1);
                                     const confStr = (s.confWins > 0 || s.confLosses > 0) ? `${s.confWins}-${s.confLosses}` : '-';
                                     const bgColor = idx % 2 === 0 ? '#FFFFFF' : '#FAFAF7';
-                                    const postBadge = s.postseason === 'Champion' ? 'background:#C9A86C;color:#1B2A4A;font-weight:700;' :
-                                                      s.postseason === 'Final Four' ? 'background:#E8DDD0;color:#1B2A4A;font-weight:600;' :
-                                                      s.postseason ? 'color:#667486;' : 'color:#C4B99A;';
+                                    const postBadge = postseasonPillStyle(s.postseason);
                                     return `<tr style="background:${bgColor}; border-bottom: 1px solid #F0EDE6;">
                                         <td style="padding: 0.5rem 0.75rem; font-weight: 600; color: #2C3345;"><a class="season-year-link" href="#season/${teamSlug(team.name)}/${year - 1}-${String(year).slice(2)}" title="View ${year - 1}-${String(year).slice(2)} season page">${year - 1}-${String(year).slice(2)}</a></td>
                                         <td style="padding: 0.5rem 0.75rem; text-align: center; color: #2C3345;">${s.wins}-${s.losses}</td>
@@ -9102,9 +9116,7 @@
                                 const pct = ((s.wins / (s.wins + s.losses)) * 100).toFixed(1);
                                 const confStr = (s.confWins > 0 || s.confLosses > 0) ? `${s.confWins}-${s.confLosses}` : '-';
                                 const bgColor = idx % 2 === 0 ? '#FFFFFF' : '#FAFAF7';
-                                const postBadge = s.postseason === 'Champion' ? 'background:#C9A86C;color:#1B2A4A;font-weight:700;' :
-                                                  s.postseason === 'Final Four' || s.postseason === 'Runner-Up' ? 'background:#E8DDD0;color:#1B2A4A;font-weight:600;' :
-                                                  s.postseason ? 'color:#667486;' : 'color:#C4B99A;';
+                                const postBadge = postseasonPillStyle(s.postseason);
                                 const displayYear = `${year - 1}-${String(year).slice(2)}`;
                                 return `<tr style="background:${bgColor}; border-bottom: 1px solid #F0EDE6;">
                                     <td style="padding: 0.5rem 0.75rem; font-weight: 600; color: #2C3345;"><a class="season-year-link" href="#season/${teamSlug(team.name)}/${displayYear}" title="View ${displayYear} season page">${displayYear}</a></td>

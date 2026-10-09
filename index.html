@@ -98,7 +98,7 @@
       @font-face{font-family:'Roboto Slab';font-style:normal;font-weight:400 900;font-display:swap;src:url(/fonts/roboto-slab-var-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
       @font-face{font-family:'Stint Ultra Condensed';font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/stint-ultra-condensed-400-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
     </style>
-    <link rel="stylesheet" href="/app.css?v=08d45305bd">
+    <link rel="stylesheet" href="/app.css?v=9ece6f12bc">
 </head>
 <body>
 <style>#appLoader{position:fixed;top:0;left:0;width:100%;height:100%;background:#F5F3EE;z-index:99999;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px;transition:opacity 0.2s;}@keyframes ballBounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}</style>
@@ -169,9 +169,7 @@
                             <div>
                                 <div class="eyebrow" style="margin-bottom: 10px;">Program 1</div>
                                 <div style="display:flex; gap:14px; align-items:center;">
-                                    <div class="ds-crest md" id="homeTeam1Crest" style="color:var(--navy); background:var(--paper);">
-                                        <span style="color:var(--navy);">?</span>
-                                    </div>
+                                    <div class="ds-crest md empty" id="homeTeam1Crest" aria-hidden="true"></div>
                                     <div class="compare-input-wrapper" style="flex:1;">
                                         <input type="text" id="compareTeam1Input" placeholder="Search team..."
                                             style="width:100%; padding: 14px 16px; font-family: var(--font-serif); font-size: 22px; font-weight: 700;
@@ -197,9 +195,7 @@
                                             border: 2px solid var(--navy); background: var(--cream-soft); color: var(--navy); border-radius: 4px;">
                                         <div class="compare-dropdown" id="compareTeam2Dropdown" style="display: none;"></div>
                                     </div>
-                                    <div class="ds-crest md" id="homeTeam2Crest" style="color:var(--navy); background:var(--paper);">
-                                        <span style="color:var(--navy);">?</span>
-                                    </div>
+                                    <div class="ds-crest md empty" id="homeTeam2Crest" aria-hidden="true"></div>
                                 </div>
                             </div>
 
@@ -702,7 +698,7 @@
     <!-- Correction Button -->
     <button class="correction-btn" onclick="openCorrection()" title="Suggest a Correction">✎</button>
 
-    <script src="/app.js?v=d85346aee2" defer></script>
+    <script src="/app.js?v=3367b52533" defer></script>
 
     <!-- Chat Panel -->
     <div id="chatOverlay" class="chat-overlay" onclick="closeChatPanel()"></div>

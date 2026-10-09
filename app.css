@@ -335,6 +335,7 @@
         }
 
         /* ── Team crest (circular mark) ── */
+        .ds-crest.empty { border: 2px dashed var(--rule-soft) !important; background: transparent !important; }
         .ds-crest {
             display: inline-flex;
             align-items: center;
@@ -419,6 +420,22 @@
             }
             .masthead-nav a:first-child { border-left: none; }
             .masthead-nav .spacer { flex: 0 0 4px; border-right: none; }
+            .masthead-inner > div:first-child { flex-wrap: wrap; gap: 4px 16px; }
+            /* The nav scrolls sideways: fade the right edge so it reads as scrollable */
+            .masthead { position: relative; }
+            .masthead::after {
+                content: ''; position: absolute; right: 0; bottom: 0; width: 44px; height: 44px;
+                background: linear-gradient(to right, rgba(27,42,74,0), var(--navy) 80%);
+                pointer-events: none;
+            }
+            /* Record-book and rankings tables: fit four columns on a phone, scroll if not */
+            .wins-table, .rankings-table { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+            .wins-table td, .rankings-table td { padding: 10px 8px; font-size: 13px; }
+            .wins-table th, .rankings-table th { padding-left: 8px; padding-right: 8px; }
+            .rankings-table table, #rankingsTable { min-width: 0 !important; }
+            /* Conference is already a filter above the table; drop the column on phones */
+            #rankingsTable th:nth-child(3), #rankingsTable td:nth-child(3) { display: none; }
+            #rankingsTable th:nth-child(2), #rankingsTable td:nth-child(2) { max-width: 190px; overflow: hidden; text-overflow: ellipsis; }
             /* Hero wordmark: inline-styled at 120px on desktop — scale to fit */
             #home span[style*="font-size:120px"] { font-size: clamp(44px, 14vw, 64px) !important; }
             /* Safety net: nothing gets to widen the page */
@@ -651,6 +668,9 @@
             line-height: 1;
         }
         .logo-wordmark--nav { font-size: 1.7rem; color: #C9A86C; }
+        /* The masthead wordmark is an inline-flex "H" + two SVG basketballs +
+           "sipedia": on phones the row squeezed the SVGs to 0px ("Hpsipedia"). */
+        #hpLogoNav, #hpLogoNav svg { flex: 0 0 auto; }
         .logo-wordmark--hero { font-size: 4rem; color: #1B2A4A; }
         .logo-basketball {
             display: inline-block;
