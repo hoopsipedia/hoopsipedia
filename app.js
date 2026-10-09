@@ -5010,6 +5010,15 @@
             });
         }
 
+        function pollHeadline(poll) {
+            const name = (poll.name || 'Top 25').replace(/\s*Poll$/i, '');
+            const season = poll.season?.displayName || '';
+            const ageDays = poll.date ? (Date.now() - new Date(poll.date).getTime()) / 864e5 : 0;
+            const isFinal = poll.season?.type?.name === 'Postseason' || poll.occurrence?.last === true || ageDays > 21;
+            const stage = isFinal ? 'Final' : (poll.occurrence?.displayValue || '');
+            return [name, stage, season].filter(Boolean).join(' · ');
+        }
+
         function renderPopularPrograms() {
             const grid = document.getElementById('popularGrid');
             const titleEl = document.getElementById('popularTitle');
@@ -5030,11 +5039,10 @@
                         return;
                     }
 
-                    // Update title with poll info
-                    if (titleEl) {
-                        const weekLabel = poll.headline || poll.name || 'Top 25';
-                        titleEl.textContent = weekLabel;
-                    }
+                    // Our own heading, not ESPN's headline: in the offseason the
+                    // feed still serves the previous season's final poll, which
+                    // ESPN labels "Week 3" (its postseason numbering).
+                    if (titleEl) titleEl.textContent = pollHeadline(poll);
 
                     grid.innerHTML = '';
 
