@@ -5291,3 +5291,10 @@
             .ledger-row > div:nth-child(2) { padding: 0 8px !important; }
             .ledger-row .numerals { font-size: 19px !important; }
         }
+
+        /* ── Player Archive coverage note (collapsed by default) ── */
+        .players-coverage-note { max-width: 1280px; margin: 0 auto; }
+        .players-coverage-note summary { cursor: pointer; list-style: none; font-size: 14px; line-height: 1.5; padding: 10px 14px; background: var(--cream-deep); border-left: 3px solid var(--rust); border-radius: var(--r-md); }
+        .players-coverage-note summary::-webkit-details-marker { display: none; }
+        .players-coverage-more { font-family: var(--font-display); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--navy); white-space: nowrap; margin-left: 6px; }
+        .players-coverage-note[open] .players-coverage-more { visibility: hidden; }

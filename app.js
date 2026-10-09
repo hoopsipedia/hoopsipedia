@@ -466,18 +466,42 @@
         // ── SEASON ROLLOVER: update this block each November ──
         // Single source of truth for the current season. Every season-dependent
         // calculation, ESPN API URL, and tournament date below references this.
+        // Rolled to 2026-27 on 2026-10-09 (ESPN had already flipped: Nov 3
+        // schedule and 2026-27 rosters were live). Roll this every October.
         const SEASON_CONFIG = {
-            currentSeasonStartYear: 2025,
-            currentSeasonEndYear: 2026,
-            espnSeasonId: 2026,
-            seasonCutoverISO: '2025-09-01',
+            currentSeasonStartYear: 2026,
+            currentSeasonEndYear: 2027,
+            espnSeasonId: 2027,
+            seasonCutoverISO: '2026-09-01',
             tournament: {
+                year: 2027,
+                venue: 'Detroit, MI',
+                startDate: '20270316',
+                endDate: '20270405',
+                championshipDateText: 'April 5, 2027',
+                // every day with games: First Four, R64, R32, S16, E8, Final Four, title game
+                dates: ['20270316', '20270317', '20270318', '20270319', '20270320', '20270321',
+                        '20270325', '20270326', '20270327', '20270328', '20270403', '20270405']
+            },
+            // Shown on /bracket until the next Selection Sunday.
+            lastTournament: {
                 year: 2026,
+                venue: 'Indianapolis, IN',
                 startDate: '20260317',
                 endDate: '20260406',
-                championshipDateText: 'April 7, 2026'
+                championshipDateText: 'April 6, 2026',
+                dates: ['20260317', '20260318', '20260319', '20260320', '20260321', '20260322',
+                        '20260326', '20260327', '20260328', '20260329', '20260404', '20260406']
             }
         };
+        // The tournament the bracket page shows: the new one from the Sunday
+        // before its First Four, otherwise the one that was just played.
+        function bracketTournament() {
+            const t = SEASON_CONFIG.tournament;
+            const d = new Date(`${t.startDate.slice(0, 4)}-${t.startDate.slice(4, 6)}-${t.startDate.slice(6)}T00:00:00`);
+            d.setDate(d.getDate() - 2);
+            return Date.now() >= d.getTime() ? t : SEASON_CONFIG.lastTournament;
+        }
 
         // Redirect query-param share URLs to hash routes (for real browsers, not crawlers)
         (function redirectShareUrl() {
@@ -6664,6 +6688,21 @@
             document.getElementById('rankingsHtssPanel').style.display = tab === 'htss' ? 'block' : 'none';
             document.getElementById('rankingsTimeMachinePanel').style.display = tab === 'timemachine' ? 'block' : 'none';
             document.getElementById('rankingsTrajectoryPanel').style.display = tab === 'trajectory' ? 'block' : 'none';
+            // /time-machine is a tab of this view; give it its own opener so the
+            // page doesn't read "Rankings" when you asked for the Time Machine.
+            const opener = {
+                timemachine: ['The greatest games never played', 'TIME MACHINE', 'Any team-season against any other, 1949 to today, simulated from adjusted efficiency and HTSS. Predicted score, win probability, bragging rights.'],
+                htss: ['The record book', 'HTSS', 'One score for every team-season since 1949 — efficiency, schedule, March, polls, talent, era-normalized — so 1972 and 2015 can argue on equal terms.'],
+                trajectory: ['The record book', 'TRAJECTORIES', 'Who is rising and who is sliding, measured in HTSS over the last decade.'],
+                net: ['The record book', 'NET RANKINGS', 'The NCAA\'s own rating, with quad records, as the committee sees it.'],
+            }[tab] || ['The record book', 'RANKINGS', 'All-time wins, banners and Final Fours on one side; HTSS, our single scale for every season since 1949, on the other. Sort it, filter it, argue it.'];
+            const ok = document.getElementById('rankingsOpenerKicker'), ot = document.getElementById('rankingsOpenerTitle'), ol = document.getElementById('rankingsOpenerLine'), tiles = document.getElementById('rankingsStatCards');
+            if (ok) ok.textContent = opener[0];
+            if (ot) ot.textContent = opener[1];
+            if (ol) ol.textContent = opener[2];
+            if (tiles) tiles.style.display = tab === 'historical' ? '' : 'none';
+            document.querySelectorAll('.masthead-nav a[data-view]').forEach(a => a.classList.remove('active'));
+            document.querySelector(`.masthead-nav a[data-view="${tab === 'timemachine' ? 'time-machine' : 'rankings'}"]`)?.classList.add('active');
             if (tab === 'net') loadNetRankings();
             if (tab === 'htss') renderHtssRankings();
             if (tab === 'timemachine') renderTimeMachine();
@@ -9718,16 +9757,10 @@
 
         // ── BRACKET FUNCTIONS ──
         async function fetchBracketData() {
-            const _ty = SEASON_CONFIG.tournament.year;
-            const dates = [
-                SEASON_CONFIG.tournament.startDate, `${_ty}0318`, // First Four
-                `${_ty}0319`, `${_ty}0320`, // Round 64
-                `${_ty}0321`, `${_ty}0322`, // Round 32
-                `${_ty}0326`, `${_ty}0327`, // Sweet 16
-                `${_ty}0328`, `${_ty}0329`, // Elite 8
-                `${_ty}0404`,               // Final Four
-                SEASON_CONFIG.tournament.endDate // Championship
-            ];
+            const _bt = bracketTournament();
+            const dates = _bt.dates;
+            const titleEl = document.querySelector('#bracket .section-title');
+            if (titleEl) titleEl.textContent = `${_bt.year} NCAA Tournament Bracket`;
 
             try {
                 for (const date of dates) {
@@ -9912,7 +9945,7 @@
             champBox.innerHTML = `
                 <img class="ff-logo" src="/ff_logo.png" alt="Final Four" onerror="this.style.display='none'" style="width:100px;height:auto;">
                 <div class="champ-title-label">National Championship</div>
-                <div class="champ-subtitle">Indianapolis, IN &bull; ${SEASON_CONFIG.tournament.championshipDateText}</div>
+                <div class="champ-subtitle">${bracketTournament().venue} &bull; ${bracketTournament().championshipDateText}</div>
                 ${champGame.length > 0 ? createMatchupCard(champGame[0]).outerHTML : champTBD}
             `;
             centerCol.appendChild(champBox);
@@ -9994,7 +10027,7 @@
             champTabbed.innerHTML = `
                 <div class="bracket-champ-card">
                     <div class="champ-title-label">National Championship</div>
-                    <div class="champ-subtitle">Indianapolis, IN - ${SEASON_CONFIG.tournament.championshipDateText}</div>
+                    <div class="champ-subtitle">${bracketTournament().venue} - ${bracketTournament().championshipDateText}</div>
                     ${champGame.length > 0 ? createMatchupCard(champGame[0]).outerHTML : champTBD}
                 </div>
             `;
@@ -10444,7 +10477,7 @@
             if (SEASONS_DATA && wTeam) {
                 const seasons = SEASONS_DATA[wId]?.seasons || [];
                 const tourneyYears = seasons.filter(s => s.ncaaTourney || s.seed);
-                const priorYears = tourneyYears.filter(s => parseInt(s.year) < SEASON_CONFIG.tournament.year);
+                const priorYears = tourneyYears.filter(s => parseInt(s.year) < bracketTournament().year);
                 // Count prior tournament wins (reached R32+ means at least 1 win)
                 const priorWins = priorYears.filter(s => {
                     const r = mapTourneyResult(s.ncaaTourney);
@@ -10475,7 +10508,7 @@
                 // Long drought — first tourney win in 10+ years
                 if (priorWins.length > 0) {
                     const lastWinYear = Math.max(...priorWins.map(s => parseInt(s.year)));
-                    if (SEASON_CONFIG.tournament.year - lastWinYear >= 10) {
+                    if (bracketTournament().year - lastWinYear >= 10) {
                         return `${wName}'s first tournament win since ${lastWinYear}`;
                     }
                 }
@@ -10483,8 +10516,8 @@
                 // Back in the tournament after long absence
                 if (priorYears.length > 0) {
                     const lastAppear = Math.max(...priorYears.map(s => parseInt(s.year)));
-                    if (SEASON_CONFIG.tournament.year - lastAppear >= 15) {
-                        return `${wName} back in the tournament after ${SEASON_CONFIG.tournament.year - lastAppear} years`;
+                    if (bracketTournament().year - lastAppear >= 15) {
+                        return `${wName} back in the tournament after ${bracketTournament().year - lastAppear} years`;
                     }
                 }
             }
@@ -11719,7 +11752,9 @@
 
                 <section style="padding:0 0 20px;">
                   <div style="max-width:1280px;margin:0 auto;">
-                    <div class="upsets-fun-fact" style="border-left-color:#B5342E;">
+                    <details class="players-coverage-note">
+                      <summary><span class="label-mono" style="color:var(--rust);">Not career statistics</span> <span style="font-family:var(--font-serif);color:var(--ink-soft);">— only games in our box-score archive count, and coverage varies by program (median ${medianCov}%). Rankings are per game for that reason.</span> <span class="players-coverage-more">How coverage works ▾</span></summary>
+                      <div class="upsets-fun-fact" style="border-left-color:#B5342E;margin-top:10px;">
                       <div class="upsets-fun-fact-icon">!</div>
                       <div>
                         <div class="upsets-fun-fact-label">THESE ARE NOT CAREER STATISTICS</div>
@@ -11729,6 +11764,7 @@
                         </div>
                       </div>
                     </div>
+                    </details>
                   </div>
                 </section>
 
@@ -18047,9 +18083,7 @@
 
             try {
                 // Fetch all tournament dates to find this team's games
-                const _ty = SEASON_CONFIG.tournament.year;
-                const tourneyDates = [SEASON_CONFIG.tournament.startDate, `${_ty}0318`, `${_ty}0319`, `${_ty}0320`, `${_ty}0321`, `${_ty}0322`,
-                                      `${_ty}0326`, `${_ty}0327`, `${_ty}0328`, `${_ty}0329`, `${_ty}0404`, SEASON_CONFIG.tournament.endDate];
+                const tourneyDates = SEASON_CONFIG.tournament.dates;
                 const teamGames = [];
 
                 for (const date of tourneyDates) {
@@ -18667,11 +18701,14 @@
                 return '<div style="color:#5F6B7A;font-size:0.85rem;padding:1rem;">No player data available for this team.</div>';
             }
 
-            let players = data.players.filter(p => {
-                // Filter out players with no stats
+            // Before the first game nobody has stats: show the whole roster rather
+            // than nothing (or last year's four leftovers).
+            const anyStats = data.players.some(p => Object.keys(p.stats).length > 0);
+            let players = anyStats ? data.players.filter(p => {
                 const ppg = parseFloat(p.stats.avgPoints || p.stats.PTS || 0);
                 return ppg > 0 || Object.keys(p.stats).length > 0;
-            });
+            }) : data.players.slice().sort((a, b) => (parseInt(a.jersey) || 99) - (parseInt(b.jersey) || 99));
+            const preseasonNote = anyStats ? '' : `<div style="font-family:var(--font-serif);font-style:italic;font-size:13px;color:var(--ink-muted);margin:0 0 10px;">${SEASON_CONFIG.currentSeasonStartYear}-${String(SEASON_CONFIG.currentSeasonEndYear).slice(2)} roster as listed by ESPN. Per-game numbers appear once the season tips off.</div>`;
 
             // Sort by PPG by default
             players.sort((a, b) => {
@@ -18731,7 +18768,7 @@
                 { label: 'FG%', key: 'fieldGoalPct', type: 'number' }
             ];
 
-            return `
+            return preseasonNote + `
                 <div class="player-table-wrap">
                     <table class="player-table" id="playerStatsTable" data-team-id="${team.espnId}">
                         <thead><tr>
