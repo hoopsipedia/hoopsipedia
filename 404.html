@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Page not found — Hoopsipedia</title>
+    <link rel="icon" href="/favicon.ico">
+    <style>
+        :root { --navy: #1B2A4A; --cream: #F5F3EE; --paper: #FFFFFF; --rust: #BA3F2B; --ink-soft: #3A3A3A; --ink-muted: #6E695B; --gold: #C9A86C; }
+        * { box-sizing: border-box; }
+        body { margin: 0; background: var(--cream); color: var(--ink-soft); font-family: 'Roboto Slab', 'Zilla Slab', Georgia, serif; }
+        .masthead { background: var(--navy); color: var(--cream); padding: 14px 24px; border-bottom: 4px double var(--cream); }
+        .masthead a { color: var(--gold); text-decoration: none; font-family: 'Lobster', cursive; font-size: 28px; }
+        main { max-width: 760px; margin: 0 auto; padding: 72px 20px 96px; text-align: center; }
+        .kicker { font-family: 'JetBrains Mono', 'Courier New', monospace; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--rust); }
+        h1 { font-family: 'Stint Ultra Condensed', 'Oswald', Impact, sans-serif; font-size: clamp(64px, 14vw, 120px); line-height: 0.9; margin: 10px 0 18px; color: var(--navy); text-transform: uppercase; }
+        p { font-style: italic; font-size: 18px; max-width: 540px; margin: 0 auto 28px; }
+        .links a { display: inline-block; margin: 6px 8px; padding: 10px 16px; border: 2px solid var(--navy); color: var(--navy); text-decoration: none; font-family: 'Stint Ultra Condensed', 'Oswald', Impact, sans-serif; letter-spacing: 0.08em; text-transform: uppercase; font-size: 15px; }
+        .links a.primary { background: var(--rust); border-color: var(--rust); color: var(--cream); }
+        form { margin-top: 28px; display: flex; gap: 8px; justify-content: center; }
+        input { flex: 1; max-width: 360px; padding: 12px 14px; border: 1px solid #D6CFC2; border-radius: 6px; font-size: 16px; font-family: inherit; background: var(--paper); }
+        button { padding: 12px 18px; border: 0; border-radius: 6px; background: var(--navy); color: var(--cream); font-family: inherit; font-size: 15px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <header class="masthead"><a href="/">Hoopsipedia</a></header>
+    <main>
+        <div class="kicker">Out of bounds</div>
+        <h1>404</h1>
+        <p>That page isn't in the record book. The team, season or coach you're after probably is — try the search, or start from one of these.</p>
+        <div class="links">
+            <a class="primary" href="/">Home</a>
+            <a href="/teams">All teams</a>
+            <a href="/coaches">Coaches</a>
+            <a href="/rankings">Rankings</a>
+            <a href="/blue-blood-index">Blue Blood Index</a>
+        </div>
+        <form action="/teams" method="get" onsubmit="try{sessionStorage.setItem('teamSearchPrefill', this.q.value);}catch(e){} return true;">
+            <input name="q" placeholder="Search a team…" aria-label="Search a team">
+            <button type="submit">Search</button>
+        </form>
+    </main>
+</body>
+</html>

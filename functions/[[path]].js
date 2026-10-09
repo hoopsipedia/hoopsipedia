@@ -576,6 +576,21 @@ async function computeCoachAccoladesSsr(assetFetcher, originUrl, coach, teams) {
   return { titles, finalFours, trips, titleSeasons };
 }
 
+// "Lost NCAA Tournament Regional Final" -> "Elite Eight", etc., for titles/snippets.
+function seasonResultLabel(t) {
+  if (!t) return '';
+  t = String(t);
+  if (/^Won NCAA Tournament National Final/i.test(t)) return 'National Champions';
+  if (/Lost NCAA Tournament National Final/i.test(t)) return 'NCAA Runner-Up';
+  if (/National Semifinal/i.test(t)) return 'Final Four';
+  if (/Regional Final/i.test(t)) return 'Elite Eight';
+  if (/Regional Semifinal|Third Round/i.test(t)) return 'Sweet 16';
+  if (/Second Round/i.test(t)) return 'NCAA Round of 32';
+  if (/First Round|Regional Third/i.test(t)) return 'NCAA Tournament';
+  if (/First Four|Opening Round/i.test(t)) return 'NCAA First Four';
+  return 'NCAA Tournament';
+}
+
 function coachHref(origin, slug) {
   return `${origin}/coaches/${encodeParam(slug)}`;
 }
@@ -1216,8 +1231,15 @@ export async function onRequest(context) {
     { status: 404, headers: { 'content-type': 'text/html; charset=utf-8' } });
 
   if (coachParam) {
-    // /coaches/{slug} — coach career page
-    const coach = coachIdx ? coachIdx[coachParam] : null;
+    // /coaches/{slug} — coach career page. Top-100 coaches live in data.json;
+    // everyone else with a real tenure is in coaches_all.json (compile_coaches.py).
+    let coach = coachIdx ? coachIdx[coachParam] : null;
+    let coachFromAll = null;
+    if (!coach) {
+      const all = await getJsonCached(assetFetcher, originUrl, '/coaches_all.json');
+      coachFromAll = Array.isArray(all) ? all.find(c => teamSlug(c.name) === coachParam) : null;
+      coach = coachFromAll;
+    }
     if (!coach) return notFound();
 
     const slug = teamSlug(coach.name);
@@ -1237,7 +1259,7 @@ export async function onRequest(context) {
     const accBits = [];
     if (accolades.titles > 0) accBits.push(`${accolades.titles} national title${accolades.titles > 1 ? 's' : ''}`);
     if (accolades.finalFours > 0) accBits.push(`${accolades.finalFours} Final Four${accolades.finalFours === 1 ? '' : 's'}`);
-    const description = `${coach.name} coaching record: ${coach.wins}-${coach.losses} (${coach.pct}%), #${rank} all-time in D1 wins${accBits.length ? `, ${accBits.join(', ')}` : ''}. Full career history, season-by-season tenures, and comparisons on Hoopsipedia.`;
+    const description = `${coach.name} coaching record: ${coach.wins}-${coach.losses} (${coach.pct}%)${rank > 0 ? `, #${rank} all-time in D1 wins` : ''}${accBits.length ? `, ${accBits.join(', ')}` : ''}. Full career history, season-by-season tenures, and comparisons on Hoopsipedia.`;
 
     metaTags = [
       { key: 'description', value: description },
@@ -1252,6 +1274,8 @@ export async function onRequest(context) {
       { key: 'twitter:description', value: description },
       { key: 'twitter:image', value: imageUrl },
     ];
+    // Interim and one-year tenures are served but kept out of the index.
+    if (coachFromAll && !coachFromAll.indexable) metaTags.push({ key: 'robots', value: 'noindex, follow' });
 
     jsonLdBlocks.push({
       '@context': 'https://schema.org',
@@ -1297,8 +1321,28 @@ export async function onRequest(context) {
     const slug = teamSlug(team.name);
     canonicalUrl = seasonHref(origin, slug, seasonParam);
     const record = seasonRow.record || `${seasonRow.wins}-${seasonRow.losses}`;
-    pageTitle = `${seasonParam} ${team.name} Basketball — Schedule & Results — Hoopsipedia`;
-    const description = `${seasonParam} ${team.name} basketball: ${record}${seasonRow.coach ? ` under ${seasonRow.coach}` : ''}${seasonRow.apHigh ? `, peaked at AP #${seasonRow.apHigh}` : ''}. Full game-by-game schedule, scores, and box scores on Hoopsipedia.`;
+    // Title and description carry the hook (record, how March ended, the
+    // coach) so the snippet earns the click; "Men's Basketball" keeps the
+    // football searchers away.
+    const resultLabel = seasonResultLabel(seasonRow.ncaaTourney);
+    const titleBits = [record];
+    if (resultLabel) titleBits.push(resultLabel);
+    if (seasonRow.coach) titleBits.push(seasonRow.coach);
+    pageTitle = `${seasonParam} ${team.name} Men's Basketball: ${titleBits.join(', ')} — Hoopsipedia`;
+    const hookByResult = {
+      'National Champions': 'won the national championship',
+      'NCAA Runner-Up': 'lost in the national championship game',
+      'Final Four': 'reached the Final Four',
+      'Elite Eight': 'reached the Elite Eight',
+      'Sweet 16': 'reached the Sweet 16',
+      'NCAA Round of 32': 'won an NCAA Tournament game',
+      'NCAA Tournament': 'made the NCAA Tournament',
+      'NCAA First Four': 'played in the First Four',
+    };
+    const hook = hookByResult[resultLabel] ||
+                 (seasonRow.apHigh ? `reached No. ${seasonRow.apHigh} in the AP poll` :
+                 (seasonRow.confRecord ? `went ${seasonRow.confRecord} in the ${seasonRow.conf || 'conference'}` : ''));
+    const description = `${seasonParam} ${team.name} men's basketball went ${record}${seasonRow.coach ? ` under ${seasonRow.coach}` : ''}${hook ? ` and ${hook}` : ''}${seasonRow.apHigh && !/AP poll/.test(hook) ? `, peaking at AP #${seasonRow.apHigh}` : ''}. Full game-by-game schedule, scores, and box scores on Hoopsipedia.`;
     const imageUrl = await shareImage(assetFetcher, originUrl, origin, 'team', slug, `https://a.espncdn.com/i/teamlogos/ncaa/500/${team.espnId}.png`);
 
     metaTags = [

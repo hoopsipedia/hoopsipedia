@@ -99,12 +99,17 @@ def main():
         team_urls.append(url_el(f'{ORIGIN}/teams/{slug}', priority='0.8'))
     n_teams = write_urlset('sitemap-teams.xml', sorted(team_urls))
 
-    # top-100 coaches at forever URLs (same leaderboard the Pages function
-    # serves — /coaches/{slug} 404s anyone outside it)
+    # Coach pages at forever URLs: the top 100 from data.json plus every
+    # indexable coach in coaches_all.json (5+ seasons or 100+ wins); shorter
+    # tenures are served noindex and stay out of the sitemap.
     coach_lb = data.get('COACH_LB_TOP100') or data.get('COACH_LB') or []
-    coach_urls = sorted(
-        url_el(f"{ORIGIN}/coaches/{team_slug(c['name'])}", priority='0.7')
-        for c in coach_lb)
+    coach_slugs = {team_slug(c["name"]) for c in coach_lb}
+    try:
+        with open(os.path.join(ROOT, 'coaches_all.json')) as f:
+            coach_slugs |= {team_slug(c["name"]) for c in json.load(f) if c.get("indexable")}
+    except OSError:
+        pass
+    coach_urls = sorted(url_el(f'{ORIGIN}/coaches/{s}', priority='0.6') for s in sorted(coach_slugs))
     n_coaches = write_urlset('sitemap-coaches.xml', coach_urls)
 
     # seasons, chunked

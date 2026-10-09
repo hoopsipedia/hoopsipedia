@@ -616,10 +616,10 @@
             const cm = window.location.pathname.match(/^\/coaches\/([a-z0-9-]+)\/?$/);
             if (cm) {
                 const coach = findCoachBySlug(cm[1]);
-                if (!coach) return false;
                 _skipHashUpdate = true;
                 try {
-                    renderCoachDetail(coach);
+                    if (coach) renderCoachDetail(coach);
+                    else findAnyCoachBySlug(cm[1]).then(c2 => { if (c2) renderCoachDetail(c2); else switchView('coaches', true); });
                 } finally {
                     _skipHashUpdate = false;
                 }
@@ -2469,6 +2469,11 @@
                 });
             }
             renderTeamsStatCards(conferences);
+            // A query typed on the 404 page lands here with the search prefilled.
+            try {
+                const pre = sessionStorage.getItem('teamSearchPrefill') || new URLSearchParams(location.search).get('q');
+                if (pre) { sessionStorage.removeItem('teamSearchPrefill'); const inp = document.getElementById('teamSearchInput'); if (inp) { inp.value = pre; inp.dispatchEvent(new Event('input')); } }
+            } catch (e) {}
 
             // Global nav search
             const globalInput = document.getElementById('globalSearchInput');
@@ -2618,8 +2623,10 @@
             if (coachMatch) {
                 const c = findCoachBySlug(coachMatch[1]);
                 if (c) { renderCoachDetail(c); _skipHashUpdate = false; return; }
-                // Unknown coach slug — land on the coaches leaderboard, not a blank page
-                switchView('coaches', true);
+                findAnyCoachBySlug(coachMatch[1]).then(c2 => {
+                    if (c2) renderCoachDetail(c2);
+                    else switchView('coaches', true); // unknown slug — leaderboard, not a blank page
+                });
                 _skipHashUpdate = false;
                 return;
             }
@@ -3453,6 +3460,16 @@
         function findCoachBySlug(slug) {
             return COACH_LB.find(c => coachSlug(c.name) === slug);
         }
+        // Every coach with a real tenure has a page; the ones outside the top
+        // 100 come from coaches_all.json (compile_coaches.py), loaded once.
+        let _allCoachesPromise = null;
+        function loadAllCoaches() {
+            if (!_allCoachesPromise) _allCoachesPromise = loadJson('/coaches_all.json').then(d => Array.isArray(d) ? d : []);
+            return _allCoachesPromise;
+        }
+        async function findAnyCoachBySlug(slug) {
+            return findCoachBySlug(slug) || (await loadAllCoaches()).find(c => coachSlug(c.name) === slug) || null;
+        }
 
         let _selectedCoach1 = null;
         let _selectedCoach2 = null;
@@ -3524,9 +3541,11 @@
         function renderCoachDetail(coach) {
             switchView('coachComparison', true);
             const rank = COACH_LB.indexOf(coach) + 1;
-            const tier = getCoachTier(rank);
+            const tier = rank > 0 ? getCoachTier(rank) : 'career';
             const isActive = coach.yearsEnd >= new Date().getFullYear();
-            const tierBadge = `<span class="coach-tier-badge ${tier}">${tier === 'goat' ? '★ GOAT' : tier.toUpperCase()}</span>`;
+            const tierBadge = rank > 0
+                ? `<span class="coach-tier-badge ${tier}">${tier === 'goat' ? '★ GOAT' : tier.toUpperCase()}</span>`
+                : `<span class="coach-tier-badge great" style="background:var(--cream-deep);color:var(--ink-muted);">${coach.seasons || (coach.yearsEnd - coach.yearsStart + 1)} SEASONS</span>`;
 
             // Per-school tenures with records from COACHES[teamId], linked to
             // team pages; best season links into the new season pages.
@@ -3561,7 +3580,7 @@
                         <span style="display:inline-flex;align-items:center;gap:8px;">${tierBadge}${isActive ? '<span class="pill pill-moss" style="font-size:10px;padding:2px 8px;">ACTIVE</span>' : ''}</span>
                     </div>
                     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:14px;margin:22px 0 28px;">
-                        <div class="coaches-stat-card"><div class="label-mono" style="color:var(--ink-muted);">ALL-TIME RANK</div><div class="h-display" style="font-size:38px;color:var(--navy);">#${rank}</div></div>
+                        <div class="coaches-stat-card"><div class="label-mono" style="color:var(--ink-muted);">ALL-TIME RANK</div><div class="h-display" style="font-size:38px;color:var(--navy);">${rank > 0 ? '#' + rank : '—'}</div>${rank > 0 ? '' : '<div style="font-family:var(--font-serif);font-style:italic;font-size:12px;color:var(--ink-muted);">outside the top 100</div>'}</div>
                         <div class="coaches-stat-card"><div class="label-mono" style="color:var(--ink-muted);">CAREER RECORD</div><div class="h-display" style="font-size:38px;color:var(--navy);">${coach.wins.toLocaleString()}–${coach.losses.toLocaleString()}</div></div>
                         <div class="coaches-stat-card"><div class="label-mono" style="color:var(--ink-muted);">WIN %</div><div class="h-display" style="font-size:38px;color:var(--navy);">${coach.pct}%</div></div>
                         <div class="coaches-stat-card"><div class="label-mono" style="color:var(--ink-muted);">NATIONAL TITLES</div><div class="h-display" style="font-size:38px;color:var(--gold-brand);">${computeCoachAccolades(coach.name).titles}</div></div>
@@ -8795,7 +8814,7 @@
                         ${COACHES[team.espnId].map(coach => `
                             <div class="coach-item">
                                 <div class="coach-main-row">
-                                    <span class="coach-name">${coach.name}${COACH_RANK[coach.name] ? `<span class="coach-rank-badge" onclick="switchView('coaches')" title="Top ${Object.keys(COACH_RANK).length} All-Time Wins">#${COACH_RANK[coach.name]} All-Time</span>` : ''}</span>
+                                    <span class="coach-name"><a href="/coaches/${coachSlug(coach.name)}" onclick="event.preventDefault(); window.location.hash='#coach/${coachSlug(coach.name)}';" style="color:inherit;text-decoration:underline;text-decoration-color:var(--gold-brand);text-underline-offset:3px;">${coach.name}</a>${COACH_RANK[coach.name] ? `<span class="coach-rank-badge" onclick="switchView('coaches')" title="Top ${Object.keys(COACH_RANK).length} All-Time Wins">#${COACH_RANK[coach.name]} All-Time</span>` : ''}</span>
                                     <span class="coach-years">${coach.start}-${coach.end === new Date().getFullYear() ? 'Present' : coach.end}</span>
                                 </div>
                                 ${coach.w > 0 ? `<div class="coach-record-row">

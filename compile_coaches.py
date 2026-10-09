@@ -209,6 +209,20 @@ def compile_coaches():
 
     # Full leaderboard: all coaches with 200+ wins (for AI chat queryability)
     full_leaderboard = [c for c in all_coaches_list if c['wins'] >= 200]
+
+    # Every coach with a real tenure gets a page (coaches_all.json, loaded
+    # lazily by the SPA and the Pages Function when a slug is not in the
+    # top 100). `seasons` is the sum of tenure lengths; pages with fewer than
+    # five seasons are served but noindexed, so interim years don't become
+    # thin pages in Google.
+    coaches_all = []
+    for c in all_coaches_list:
+        seasons = sum(e - st + 1 for _, st, e in c['schools'])
+        if seasons < 2 and c['wins'] < 30:
+            continue
+        coaches_all.append({**c, 'seasons': seasons, 'indexable': seasons >= 5 or c['wins'] >= 100})
+    save_json_atomic('coaches_all.json', coaches_all, separators=(',', ':'))
+    print(f"coaches_all.json: {len(coaches_all)} coaches ({sum(1 for c in coaches_all if c['indexable'])} indexable)")
     # Top 100 subset (for display on the coaches page)
     top_100 = all_coaches_list[:100]
 
