@@ -6284,33 +6284,49 @@
             }
         }
 
+        // Two programs' colors are often near-identical (Duke #003087 vs Kentucky
+        // #0033A0): when they are, the second side borrows the site's gold so the
+        // bar halves can be told apart. Returns the pair actually drawn.
+        function ledgerColors(color1, color2) {
+            const rgb = c => { const m = String(c || '').match(/^#?([0-9a-f]{6})$/i); if (!m) return null; const h = m[1]; return [0, 2, 4].map(i => parseInt(h.slice(i, i + 2), 16)); };
+            const a = rgb(color1), b = rgb(color2);
+            const dist = a && b ? Math.hypot(a[0] - b[0], a[1] - b[1], a[2] - b[2]) : 999;
+            return [color1 || '#1B2A4A', dist < 90 ? '#A47C1F' : (color2 || '#A47C1F')];
+        }
+
+        // One ledger row: the bar grows outward from the centre toward whichever
+        // side leads, the leading value is heavy navy, the trailing value is muted,
+        // and the row itself is washed faintly toward the winner.
         function renderStatRow(label, val1, val2, color1, color2, team1, team2) {
             const num1 = parseFloat(val1);
             const num2 = parseFloat(val2);
-            const total = (num1 + num2) || 1;
-            const aPct = (num1 / total) * 100;
-
+            const max = Math.max(num1, num2, 0) || 1;
+            const w1 = Math.max(4, (num1 / max) * 100);
+            const w2 = Math.max(4, (num2 / max) * 100);
             const aWins = num1 > num2;
             const bWins = num2 > num1;
+            const [c1, c2] = ledgerColors(color1, color2);
+            const wash = aWins ? `linear-gradient(to left, var(--paper) 45%, ${c1}0d 100%)`
+                       : bWins ? `linear-gradient(to right, var(--paper) 45%, ${c2}0d 100%)`
+                       : 'var(--paper)';
+            const valueStyle = wins => `font-size:24px; font-weight:${wins ? 800 : 600}; color:${wins ? 'var(--navy)' : 'var(--ink-muted)'};`;
+            const lead = side => `<span class="ledger-lead" aria-label="leads">${side === 'a' ? '◀' : '▶'}</span>`;
 
             return `
-                <div style="display:grid; grid-template-columns:1fr 220px 1fr; background:var(--paper); padding:14px 18px; align-items:center;">
-                    <div style="text-align:right; display:flex; justify-content:flex-end; align-items:center; gap:10px;">
-                        <span class="numerals" style="font-size:24px; font-weight:800; color:${aWins ? 'var(--navy)' : 'var(--ink-faint)'};">
-                            ${val1}
-                        </span>
+                <div class="ledger-row" style="display:grid; grid-template-columns:1fr 220px 1fr; background:${wash}; padding:14px 18px; align-items:center;">
+                    <div style="text-align:right; display:flex; justify-content:flex-end; align-items:center; gap:8px;">
+                        <span class="numerals" style="${valueStyle(aWins)}">${val1}</span>${aWins ? lead('a') : ''}
                     </div>
                     <div style="padding:0 18px;">
                         <div class="label-mono" style="text-align:center; color:var(--ink-muted); margin-bottom:6px;">${label}</div>
-                        <div style="height:6px; display:flex; border-radius:1px; overflow:hidden; background:var(--cream-deep);">
-                            <div style="flex-basis:${aPct}%; background:${color1};"></div>
-                            <div style="flex-basis:${100 - aPct}%; background:${color2};"></div>
+                        <div style="display:grid; grid-template-columns:1fr 2px 1fr; align-items:center; height:8px;">
+                            <div style="display:flex; justify-content:flex-end; height:100%; background:var(--cream-deep);"><div style="width:${w1}%; height:100%; background:${c1}; opacity:${aWins ? 1 : 0.45};"></div></div>
+                            <div style="height:14px; background:var(--navy);"></div>
+                            <div style="display:flex; justify-content:flex-start; height:100%; background:var(--cream-deep);"><div style="width:${w2}%; height:100%; background:${c2}; opacity:${bWins ? 1 : 0.45};"></div></div>
                         </div>
                     </div>
-                    <div style="text-align:left; display:flex; align-items:center; gap:10px;">
-                        <span class="numerals" style="font-size:24px; font-weight:800; color:${bWins ? 'var(--navy)' : 'var(--ink-faint)'};">
-                            ${val2}
-                        </span>
+                    <div style="text-align:left; display:flex; align-items:center; gap:8px;">
+                        ${bWins ? lead('b') : ''}<span class="numerals" style="${valueStyle(bWins)}">${val2}</span>
                     </div>
                 </div>
             `;
@@ -6337,6 +6353,20 @@
                 { key: 'apWeeksRanked', label: 'AP Weeks Ranked' }
             ];
 
+            // Category tally for the header: who leads more of the eleven rows.
+            const rowsHtml = stats.map(stat => {
+                const val1 = stat.compute ? stat.compute(t1) : t1[stat.key];
+                const val2 = stat.compute ? stat.compute(t2) : t2[stat.key];
+                return { html: renderStatRow(stat.label, val1, val2, t1Color, t2Color, t1, t2), a: parseFloat(val1) > parseFloat(val2), b: parseFloat(val2) > parseFloat(val1) };
+            });
+            const aLeads = rowsHtml.filter(r => r.a).length, bLeads = rowsHtml.filter(r => r.b).length;
+            const [lc1, lc2] = ledgerColors(t1Color, t2Color);
+            const headName = (short, leads, color, align) => `
+                <div style="text-align:${align}; display:flex; flex-direction:column; gap:3px; ${align === 'right' ? 'align-items:flex-end;' : 'align-items:flex-start;'}">
+                    <div class="label-mono" style="color:var(--gold-brand); display:flex; align-items:center; gap:8px;">${align === 'right' ? `${short}<span style="width:10px;height:10px;background:${color};border-radius:2px;display:inline-block;"></span>` : `<span style="width:10px;height:10px;background:${color};border-radius:2px;display:inline-block;"></span>${short}`}</div>
+                    <div class="label-mono" style="font-size:10px; color:${leads > stats.length / 2 ? 'var(--cream)' : 'rgba(245,243,238,0.6)'};">${leads > stats.length / 2 ? '★ ' : ''}LEADS ${leads} OF ${stats.length}</div>
+                </div>`;
+
             // Design system stats matrix
             let html = `
                 <div style="margin-top:24px;">
@@ -6346,17 +6376,13 @@
                     </div>
                     <div style="display:flex; flex-direction:column; gap:1px; background:var(--rule-soft); border:1px solid var(--rule-soft);">
                         <!-- Header row -->
-                        <div style="display:grid; grid-template-columns:1fr 220px 1fr; background:var(--navy); color:var(--cream); padding:12px 18px;">
-                            <div class="label-mono" style="text-align:right; color:var(--gold-brand);">${t1Short}</div>
-                            <div class="label-mono" style="text-align:center; color:rgba(245,243,238,0.7);">STAT</div>
-                            <div class="label-mono" style="text-align:left; color:var(--gold-brand);">${t2Short}</div>
+                        <div style="display:grid; grid-template-columns:1fr 220px 1fr; background:var(--navy); color:var(--cream); padding:12px 18px; align-items:center;">
+                            ${headName(t1Short, aLeads, lc1, 'right')}
+                            <div class="label-mono" style="text-align:center; color:rgba(245,243,238,0.7);">STAT<br><span style="font-size:10px; color:rgba(245,243,238,0.6);">◀ ▶ MARKS THE LEADER</span></div>
+                            ${headName(t2Short, bLeads, lc2, 'left')}
                         </div>`;
 
-            stats.forEach(stat => {
-                const val1 = stat.compute ? stat.compute(t1) : t1[stat.key];
-                const val2 = stat.compute ? stat.compute(t2) : t2[stat.key];
-                html += renderStatRow(stat.label, val1, val2, t1Color, t2Color, t1, t2);
-            });
+            html += rowsHtml.map(r => r.html).join('');
 
             html += `</div></div>`;
 

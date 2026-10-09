@@ -5276,3 +5276,11 @@
             #bluebloodContent .rankings-table table { min-width: 420px; }
             #bluebloodContent .rankings-table td, #bluebloodContent .rankings-table th { padding-left: 0.5rem; padding-right: 0.5rem; white-space: nowrap; }
         }
+
+        /* ── Comparison ledger ── */
+        .ledger-lead { font-size: 11px; color: var(--rust); line-height: 1; }
+        @media (max-width: 640px) {
+            .ledger-row { grid-template-columns: 1fr 140px 1fr !important; padding: 12px 10px !important; }
+            .ledger-row > div:nth-child(2) { padding: 0 8px !important; }
+            .ledger-row .numerals { font-size: 19px !important; }
+        }
