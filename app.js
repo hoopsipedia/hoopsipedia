@@ -19669,6 +19669,7 @@
         let RIVALRIES = [];
 
         // Stat tiles under the Teams and Rankings openers (same cards as /coaches).
+        // (Re-stamped 2026-10-09: an edge cached the previous app.js under this URL mid-rollout.)
         function statTiles(el, stats) {
             if (!el) return;
             el.innerHTML = stats.map(st => `
