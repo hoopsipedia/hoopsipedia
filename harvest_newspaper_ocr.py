@@ -26,7 +26,13 @@ so re-parsing never re-fetches. Resumable.
   python3 harvest_newspaper_ocr.py dth --from 1975 --to 1999
   python3 harvest_newspaper_ocr.py dth --from 1975 --to 1999 --limit 40   # pilot
 """
-import json, os, re, sys, time, urllib.request, urllib.error
+import json, os, re, sys, time, socket, urllib.request, urllib.error
+# Some archive hosts advertise IPv6 but never complete the handshake (psu.edu hung
+# in SYN_SENT for minutes); force IPv4 for every fetch.
+_getaddrinfo = socket.getaddrinfo
+def _ipv4_only(*args, **kw):
+    return [ai for ai in _getaddrinfo(*args, **kw) if ai[0] == socket.AF_INET] or _getaddrinfo(*args, **kw)
+socket.getaddrinfo = _ipv4_only
 from datetime import date, timedelta
 ROOT = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, ROOT)
 from json_io import save_json_atomic
@@ -40,26 +46,62 @@ PAPERS = {
         'aliases': ['North Carolina', 'Carolina', 'UNC', 'N. Carolina', 'Tar Heels'],
         'max_pages': 20, 'day_offsets': [1, 2, 3],
     },
+    'psu': {
+        'name': 'The Daily Collegian, Penn State (Pennsylvania Newspaper Archive)',
+        'base': 'https://panewsarchive.psu.edu', 'lccns': ['sn85054904'], 'team': '213',
+        'aliases': ['Penn State', 'Penn St.', 'Nittany Lions', 'State'], 'max_pages': 24, 'day_offsets': [1, 2, 3],
+    },
+    'neb': {
+        'name': 'Daily Nebraskan (Nebraska Newspapers)',
+        'base': 'https://nebnewspapers.unl.edu', 'lccns': ['sn96080312'], 'team': '158',
+        'aliases': ['Nebraska', 'Neb.', 'Huskers', 'Cornhuskers'], 'max_pages': 20, 'day_offsets': [1, 2, 3],
+    },
+    'ore': {
+        'name': 'Oregon Daily Emerald (Historic Oregon Newspapers)',
+        'base': 'https://oregonnews.uoregon.edu', 'lccns': ['2004260239'], 'team': '2483',
+        'aliases': ['Oregon', 'Ducks', 'Ore.'], 'max_pages': 24, 'day_offsets': [1, 2, 3],
+    },
 }
 UA = 'Hoopsipedia/1.0 (https://www.hoopsipedia.com; box-score archive research)'
-DELAY = 0.4
+DELAY = 1.5          # ~40 requests/min per host; DigitalNC refused connections after ~660 at 0.4s
+HOST_DOWN = set()    # hosts that refused connections this run — stop hitting them
 
 def slugify(s): return re.sub(r'[^a-z0-9]+', '-', s.lower()).strip('-')
 
 def fetch(url, cache_path):
     if os.path.exists(cache_path):
         return open(cache_path, encoding='utf-8').read()
+    host = url.split('/')[2]
+    if host in HOST_DOWN:
+        raise RuntimeError(f'host down: {host}')
     time.sleep(DELAY)
-    try:
-        req = urllib.request.Request(url, headers={'User-Agent': UA})
-        with urllib.request.urlopen(req, timeout=30) as r:
-            txt = r.read().decode('utf-8', 'replace')
-    except urllib.error.HTTPError as e:
-        if e.code == 404:
-            os.makedirs(os.path.dirname(cache_path), exist_ok=True)
-            open(cache_path, 'w').write('\x00404')
+    txt = None
+    for attempt in range(4):
+        try:
+            req = urllib.request.Request(url, headers={'User-Agent': UA})
+            with urllib.request.urlopen(req, timeout=30) as r:
+                txt = r.read().decode('utf-8', 'replace')
+            break
+        except urllib.error.HTTPError as e:
+            if e.code == 404:
+                os.makedirs(os.path.dirname(cache_path), exist_ok=True)
+                open(cache_path, 'w').write('\x00404')
+                return None
+            if e.code in (429, 500, 502, 503, 504) and attempt < 3:
+                time.sleep(15 * (attempt + 1)); continue
+            raise
+        except (urllib.error.URLError, TimeoutError, ConnectionError, OSError) as e:
+            if 'refused' in str(e).lower():
+                # a refused connection is a block or an outage: stop hammering this host
+                HOST_DOWN.add(host); print(f'  {host} refused connections — stopping this host for the run', flush=True)
+                raise RuntimeError(f'host down: {host}')
+            # SSL handshake timeouts etc.: back off and retry, never crash a 3-hour run
+            if attempt < 3:
+                time.sleep(10 * (attempt + 1)); continue
+            print(f'  network failure after retries: {url}', flush=True)
             return None
-        raise
+    if txt is None:
+        return None
     os.makedirs(os.path.dirname(cache_path), exist_ok=True)
     open(cache_path, 'w', encoding='utf-8').write(txt)
     return txt
@@ -284,7 +326,69 @@ def parse_block(block, three_pt, known_score):
     elif ap: errs.append(f'ap-sum:{sum(p["pts"] for p in ap)}/{len(ap)}')
     return None, ';'.join(errs) or 'no-lines'
 
+OLD_LINE = re.compile(r"(?m)^\s*([A-Za-z][A-Za-z0-9'’.!\-]*[A-Za-z!'’.](?:\s[A-Z][A-Za-z0-9'’.!\-]+)?)\s*,?\s+(?:[fcgFCG]\b[\s.,]*)?([0-9OSBlIZ][0-9OSBlIZ\s\-\(\)'.,:]{3,})\s*$")
+TOTALS_LINE = re.compile(r"(?mi)^\s*T[a-z]{3,7}\s*[.:,]?\s+([0-9OSBlIZ][0-9OSBlIZ\s.,']{4,})\s*$")
+def find_box_by_totals(text, my_score, opp_score):
+    """1950s-60s format: 'Name pos FG FT PF PTS' lines ending in 'Totals FG FT PF PTS'.
+    Anchor on Totals lines whose last number is one of the two known scores and
+    take the run of agate lines above each."""
+    lines = text.split('\n')
+    found = {}
+    for i, ln in enumerate(lines):
+        m = TOTALS_LINE.match(ln)
+        if not m: continue
+        nums, _ = ints_of(m.group(1))
+        if not 3 <= len(nums) <= 5: continue
+        pts = int(nums[-1])
+        if pts not in (my_score, opp_score) or pts in found: continue
+        tot = tuple(map(int, nums))
+        players = []
+        j = i - 1
+        while j >= 0 and len(players) < 18:
+            lm = OLD_LINE.match(lines[j])
+            if not lm:
+                if lines[j].strip() == '' or len(players) == 0: j -= 1; continue
+                break
+            name, blob = lm.group(1), lm.group(2)
+            pn, _ = ints_of(blob)
+            # expected: FG FT PF PTS (4 numbers). Repair glued ('10 1 2' = 1 0 1 2)
+            # or split tokens by enumerating and keeping what satisfies PTS = 2FG + FT.
+            cands = set()
+            if len(pn) == 4: cands.add(tuple(map(int, pn)))
+            if len(pn) == 3:
+                for k, tkn in enumerate(pn):
+                    if len(tkn) >= 2:
+                        for c in range(1, len(tkn)):
+                            cands.add(tuple(map(int, pn[:k] + [tkn[:c], tkn[c:]] + pn[k + 1:])))
+                cands.add(tuple(map(int, pn)) + (None,))          # FG FT PTS without fouls
+            if len(pn) == 5:
+                for k in range(5): cands.add(tuple(map(int, pn[:k] + pn[k + 1:])))
+            good = set()
+            for c in cands:
+                if len(c) == 4 and c[3] is None:
+                    fg, ft, p = c[0], c[1], c[2]; pf = None
+                elif len(c) == 4:
+                    fg, ft, pf, p = c
+                else: continue
+                if fg <= 25 and ft <= 25 and (pf is None or pf <= 5) and 2 * fg + ft == p: good.add((fg, ft, pf, p))
+            if len({(g[0], g[1], g[3]) for g in good}) != 1: break
+            fg, ft, pf, p = sorted(good, key=lambda g: (g[2] is None, g))[0]
+            players.insert(0, {'name': name.strip('!. ,'), 'pts': p, 'fg': str(fg), 'ft': str(ft), **({'pf': pf} if pf is not None else {})})
+            j -= 1
+        if not 4 <= len(players) <= 16: continue
+        if sum(p['pts'] for p in players) != pts: continue
+        if len(tot) >= 2 and sum(int(p['fg']) for p in players) != tot[0]: continue
+        if len(tot) >= 3 and sum(int(p['ft']) for p in players) != tot[1]: continue
+        found[pts] = players
+    if my_score in found and opp_score in found and my_score != opp_score:
+        return {'me': found[my_score], 'opp': found[opp_score]}, None
+    return None, ('old-format-partial' if found else 'headers-not-found')
+
 def find_box(text, my_aliases, my_score, opp_aliases, opp_score, three_pt):
+    if not three_pt:
+        res, err = find_box_by_totals(text, my_score, opp_score)
+        if res: return res, None
+
     hs = headers(text)
     if len(hs) < 2: return None, 'headers-not-found'
     tried = []
@@ -342,7 +446,8 @@ def main():
         my_score, opp_score = int(g['pts']), int(g['opp_pts'])
         three_pt = d >= date(1986, 11, 1)
         result, why, where = None, 'no-issue', None
-        for off in paper['day_offsets']:
+        try:
+          for off in paper['day_offsets']:
             dd = d + timedelta(days=off)
             for lccn in paper['lccns']:
                 pages = issue_pages(paper, lccn, dd)
@@ -357,6 +462,8 @@ def main():
                 if result: break
                 if why == 'no-issue': why = 'not-on-any-page'
             if result: break
+        except RuntimeError as e:
+            print(f'  stopping: {e} (state saved; rerun later to resume)', flush=True); break
         if result:
             season_end = d.year + 1 if d.month >= 8 else d.year
             key = f"{season_end}/{slugify(team_name)}-vs-{slugify(opp_name)}-{g['date']}"
