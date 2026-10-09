@@ -248,69 +248,71 @@ def parse_block(block, three_pt, known_score):
     Accept only when points sum to the known score (and, for AP, match the
     printed totals when they parse)."""
     errs = []
-    # Full format: lines of Name + 10 numbers (min, fgm, fga, ftm, fta, oreb, treb, ast, pf, tp)
-    players = []; bad = None
+    # Full formats: a line of Name + N numbers. Layouts by field count:
+    #   10: min fgm fga ftm fta oreb treb ast pf pts   (Daily Tar Heel 1990s)
+    #    7: fgm fga ftm fta reb pf pts                 (Stanford Daily, Daily Kansan)
+    #    6: fgm fga ftm fta pf pts
+    #    8: min fgm fga ftm fta reb pf pts
+    LAYOUTS = {
+        10: ('min', 'fgm', 'fga', 'ftm', 'fta', 'oreb', 'reb', 'ast', 'pf', 'pts'),
+        8:  ('min', 'fgm', 'fga', 'ftm', 'fta', 'reb', 'pf', 'pts'),
+        7:  ('fgm', 'fga', 'ftm', 'fta', 'reb', 'pf', 'pts'),
+        6:  ('fgm', 'fga', 'ftm', 'fta', 'pf', 'pts'),
+    }
+    def valid(d):
+        if d['fgm'] > d['fga'] or d['ftm'] > d['fta'] or d['fga'] > 45 or d['fta'] > 35: return False
+        if d.get('min', 0) > 45 or d.get('pf', 0) > 6 or d.get('reb', 0) > 30 or d.get('ast', 0) > 25: return False
+        if 'oreb' in d and d['oreb'] > d['reb']: return False
+        lo, hi = 2 * d['fgm'] + d['ftm'], (3 * d['fgm'] + d['ftm'] if three_pt else 2 * d['fgm'] + d['ftm'])
+        return lo <= d['pts'] <= hi
+    def candidates(nums, n):
+        """all ways to reach n numbers by splitting glued tokens (2 or 3 pieces)"""
+        import itertools
+        if len(nums) == n: return {tuple(map(int, nums))}
+        if not (n - 4 <= len(nums) < n): return set()
+        found = set(); need = n - len(nums)
+        idxs = [i for i, t in enumerate(nums) if len(t) >= 2]
+        for combo in itertools.combinations(idxs, min(need, len(idxs))):
+            opts = []
+            for i in combo:
+                t = nums[i]; o = [(t[:k], t[k:]) for k in range(1, len(t)) if len(t[:k]) <= 2 and len(t[k:]) <= 2]
+                if len(t) >= 3: o += [(t[:a], t[a:b], t[b:]) for a in range(1, len(t) - 1) for b in range(a + 1, len(t)) if all(len(x) <= 2 for x in (t[:a], t[a:b], t[b:]))]
+                opts.append(o)
+            for cut in itertools.product(*opts):
+                out = []
+                for i, t in enumerate(nums):
+                    if i in combo: out.extend(cut[combo.index(i)])
+                    else: out.append(t)
+                if len(out) == n: found.add(tuple(map(int, out)))
+        return found
+    lines = []
     for name, blob in FULL_LINE.findall(block):
         if name.lower().startswith(('total', 'percent', 'min', 'fg', 'halftime', 'team', 'turnover', 'steal', 'blocked', 'rebound', 'assist')): continue
         nums, _ = ints_of(blob)
         if len(nums) < 5: continue          # half-by-half linescore ('North Carolina 51 49 100'), not a player
-        if len(nums) > 12: bad = f'full-line:{name}'; break
-        found = set()
-        if len(nums) == 10:
-            found.add(tuple(map(int, nums)))
-        elif 5 <= len(nums) < 10:
-            # some tokens are glued ('34' for '3-4', '2149' for '21 49'): split exactly
-            # (10 - len(nums)) of them, each into two 1-2 digit pieces.
-            need = 10 - len(nums)
-            import itertools
-            idxs = [i for i, t in enumerate(nums) if len(t) >= 2]
-            for combo in itertools.combinations(idxs, need):
-                # each chosen token can be cut at 1..len-1 (and 3-4 digit tokens into 2 pieces)
-                choices = []
-                for i in combo:
-                    t = nums[i]; choices.append([(t[:k], t[k:]) for k in range(1, len(t)) if len(t[:k]) <= 2 and len(t[k:]) <= 2])
-                for cut in itertools.product(*choices):
-                    out = []
-                    for i, t in enumerate(nums):
-                        if i in combo: out.extend(cut[combo.index(i)])
-                        else: out.append(t)
-                    found.add(tuple(map(int, out)))
-            # a 3-4 digit token may be three glued numbers ('115' -> 1 1 5)
-            if need >= 2:
-                for i, t in enumerate(nums):
-                    if 3 <= len(t) <= 4:
-                        rest_need = need - 2
-                        others = [j for j in idxs if j != i]
-                        for combo in itertools.combinations(others, rest_need):
-                            triples = [(t[:a], t[a:b], t[b:]) for a in range(1, len(t) - 1) for b in range(a + 1, len(t)) if all(len(x) <= 2 for x in (t[:a], t[a:b], t[b:]))]
-                            choices = [[(nums[j][:k], nums[j][k:]) for k in range(1, len(nums[j])) if len(nums[j][:k]) <= 2 and len(nums[j][k:]) <= 2] for j in combo]
-                            for tri in triples:
-                                for cut in itertools.product(*choices) if choices else [()]:
-                                    out = []
-                                    for j, tok in enumerate(nums):
-                                        if j == i: out.extend(tri)
-                                        elif j in combo: out.extend(cut[combo.index(j)])
-                                        else: out.append(tok)
-                                    found.add(tuple(map(int, out)))
-                for cut in itertools.product(*choices):
-                    out = []
-                    for i, t in enumerate(nums):
-                        if i in combo: out.extend(cut[combo.index(i)])
-                        else: out.append(t)
-                    found.add(tuple(map(int, out)))
-        ok = [c for c in found if c[1] <= c[2] and c[3] <= c[4] and c[5] <= c[6] and c[6] <= 30 and c[0] <= 45 and c[7] <= 25 and c[8] <= 6 and c[2] <= 40
-              and 2 * c[1] + c[3] <= c[9] <= (3 * c[1] + c[3] if three_pt else 2 * c[1] + c[3])]
-        if not ok:
-            if os.environ.get('DEBUG'): print('   DBG no-candidate:', name, nums)
-            bad = f'full-line:{name}'; break
-        if len({(c[1], c[3], c[9]) for c in ok}) != 1: bad = f'full-ambiguous:{name}'; break
-        c = sorted(ok)[0]
-        players.append({'name': name.strip('!. '), 'min': c[0], 'pts': c[9], 'fg': f'{c[1]}-{c[2]}', 'ft': f'{c[3]}-{c[4]}', 'reb': c[6], 'ast': c[7], 'pf': c[8]})
-    if os.environ.get('DEBUG') and not bad: print('   DBG full players', len(players), 'sum', sum(p['pts'] for p in players), 'known', known_score, [p['name'] for p in players])
-    if not bad and 5 <= len(players) <= 16 and sum(p['pts'] for p in players) == known_score:
-        return players, 'full'
-    if players and not bad: errs.append(f'full-sum:{sum(p["pts"] for p in players)}')
-    elif bad: errs.append(bad)
+        if len(nums) > 12: lines = None; bad = f'full-line:{name}'; break
+        lines.append((name, nums))
+    players = []; bad = None if lines is not None else bad
+    if lines:
+        # choose the layout under which EVERY line parses; try the most common token count first
+        import collections
+        order = [n for n, _ in collections.Counter(len(x[1]) for x in lines).most_common() if n in LAYOUTS] + [n for n in LAYOUTS if n not in {len(x[1]) for x in lines}]
+        for n in order:
+            players = []; bad = None
+            for name, nums in lines:
+                ok = [dict(zip(LAYOUTS[n], c)) for c in candidates(nums, n)]
+                ok = [d for d in ok if valid(d)]
+                if not ok: bad = f'full-line:{name}'; break
+                if len({(d['fgm'], d['ftm'], d['pts']) for d in ok}) != 1: bad = f'full-ambiguous:{name}'; break
+                d = sorted(ok, key=lambda d: tuple(d.values()))[0]
+                rec = {'name': name.strip('!. '), 'pts': d['pts'], 'fg': f"{d['fgm']}-{d['fga']}", 'ft': f"{d['ftm']}-{d['fta']}"}
+                for k in ('min', 'reb', 'ast', 'pf'):
+                    if k in d: rec[k] = d[k]
+                players.append(rec)
+            if not bad and 5 <= len(players) <= 16 and sum(p['pts'] for p in players) == known_score:
+                return players, f'full{n}'
+            if not bad: bad = f'full{n}-sum:{sum(p["pts"] for p in players)}'
+    if bad: errs.append(bad)
     # AP summary: 'Name fgm-fga ftm-fta pts, ... Totals a-b c-d NN.'
     m = re.search(r'(?i)totals?\s+([0-9OSBlIZ\s\-]{5,})', block)
     body = block[:m.start()] if m else block
@@ -363,6 +365,15 @@ def find_box_by_totals(text, my_score, opp_score):
                 cands.add(tuple(map(int, pn)) + (None,))          # FG FT PTS without fouls
             if len(pn) == 5:
                 for k in range(5): cands.add(tuple(map(int, pn[:k] + pn[k + 1:])))
+            if len(pn) == 2:   # 'Brown 4 119' = 4 1 1 9: one token holds three glued numbers
+                for k, tkn in enumerate(pn):
+                    if 3 <= len(tkn) <= 4:
+                        other = pn[1 - k]
+                        for a in range(1, len(tkn) - 1):
+                            for b in range(a + 1, len(tkn)):
+                                tri = [tkn[:a], tkn[a:b], tkn[b:]]
+                                seq = tri + [other] if k == 0 else [other] + tri
+                                cands.add(tuple(map(int, seq)))
             good = set()
             for c in cands:
                 if len(c) == 4 and c[3] is None:
@@ -370,15 +381,24 @@ def find_box_by_totals(text, my_score, opp_score):
                 elif len(c) == 4:
                     fg, ft, pf, p = c
                 else: continue
-                if fg <= 25 and ft <= 25 and (pf is None or pf <= 5) and 2 * fg + ft == p: good.add((fg, ft, pf, p))
+                # third column is either personal fouls (<=5) or free-throw attempts (>= made)
+                if fg <= 25 and ft <= 25 and (pf is None or pf <= 5 or ft <= pf <= 30) and 2 * fg + ft == p: good.add((fg, ft, pf, p))
             if len({(g[0], g[1], g[3]) for g in good}) != 1: break
             fg, ft, pf, p = sorted(good, key=lambda g: (g[2] is None, g))[0]
-            players.insert(0, {'name': name.strip('!. ,'), 'pts': p, 'fg': str(fg), 'ft': str(ft), **({'pf': pf} if pf is not None else {})})
+            players.insert(0, {'name': name.strip('!. ,'), 'pts': p, 'fg': str(fg), 'ft': str(ft), '_x': pf})
             j -= 1
         if not 4 <= len(players) <= 16: continue
+        # decide what the third column was for this block: fouls, or FT attempts
+        xs = [p['_x'] for p in players if p['_x'] is not None]
+        as_fta = bool(xs) and all(int(p['ft']) <= p['_x'] for p in players if p['_x'] is not None) and (len(tot) < 4 or tot[1] <= tot[2])
+        for p in players:
+            x = p.pop('_x')
+            if x is None: continue
+            if as_fta: p['ft'] = f"{p['ft']}-{x}"
+            else: p['pf'] = x
         if sum(p['pts'] for p in players) != pts: continue
-        if len(tot) >= 2 and sum(int(p['fg']) for p in players) != tot[0]: continue
-        if len(tot) >= 3 and sum(int(p['ft']) for p in players) != tot[1]: continue
+        if len(tot) >= 2 and sum(int(str(p['fg']).split('-')[0]) for p in players) != tot[0]: continue
+        if len(tot) >= 3 and sum(int(str(p['ft']).split('-')[0]) for p in players) != tot[1]: continue
         found[pts] = players
     if my_score in found and opp_score in found and my_score != opp_score:
         return {'me': found[my_score], 'opp': found[opp_score]}, None
