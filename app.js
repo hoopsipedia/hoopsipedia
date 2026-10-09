@@ -6295,8 +6295,8 @@
         }
 
         // One ledger row: the bar grows outward from the centre toward whichever
-        // side leads, the leading value is heavy navy, the trailing value is muted,
-        // and the row itself is washed faintly toward the winner.
+        // side leads, the leading value is heavy navy with an arrow, the trailing
+        // value is muted. (A faint wash toward the winner was tried and dropped.)
         function renderStatRow(label, val1, val2, color1, color2, team1, team2) {
             const num1 = parseFloat(val1);
             const num2 = parseFloat(val2);
@@ -6306,14 +6306,11 @@
             const aWins = num1 > num2;
             const bWins = num2 > num1;
             const [c1, c2] = ledgerColors(color1, color2);
-            const wash = aWins ? `linear-gradient(to left, var(--paper) 45%, ${c1}0d 100%)`
-                       : bWins ? `linear-gradient(to right, var(--paper) 45%, ${c2}0d 100%)`
-                       : 'var(--paper)';
             const valueStyle = wins => `font-size:24px; font-weight:${wins ? 800 : 600}; color:${wins ? 'var(--navy)' : 'var(--ink-muted)'};`;
             const lead = side => `<span class="ledger-lead" aria-label="leads">${side === 'a' ? '◀' : '▶'}</span>`;
 
             return `
-                <div class="ledger-row" style="display:grid; grid-template-columns:1fr 220px 1fr; background:${wash}; padding:14px 18px; align-items:center;">
+                <div class="ledger-row" style="display:grid; grid-template-columns:1fr 220px 1fr; background:var(--paper); padding:14px 18px; align-items:center;">
                     <div style="text-align:right; display:flex; justify-content:flex-end; align-items:center; gap:8px;">
                         <span class="numerals" style="${valueStyle(aWins)}">${val1}</span>${aWins ? lead('a') : ''}
                     </div>
