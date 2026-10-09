@@ -111,6 +111,11 @@ const efficiency = loadJSONOrDie(path.join(BASE, 'efficiency_ratings.json'));
 const seasonsData = loadJSONOrDie(path.join(BASE, 'seasons.json'));
 const mainData   = loadJSONOrDie(path.join(BASE, 'data.json'));
 const netData    = loadJSONOrDie(path.join(BASE, 'net_rankings.json')); // current-era cross-check only
+// Years of Final Fours / Elite Eights / Sweet 16s derived from the season rows
+// (scripts/compile_tourney_years.py). Counts stay the record book's; these
+// years only set the era weight applied to each count.
+let tourneyYears = {};
+try { tourneyYears = JSON.parse(fs.readFileSync(path.join(BASE, 'tourney_years.json'), 'utf-8')); } catch (e) { console.warn('tourney_years.json missing — deep runs unweighted'); }
 
 console.timeEnd('Data loading');
 
@@ -333,12 +338,17 @@ function buildPrograms() {
     //    so era weighting can only be applied to titles.)
     const champYears = Array.isArray(info[F.NCY]) ? info[F.NCY] : [];
     const weightedChamps = champYears.reduce((s, y) => s + champEraWeight(y), 0);
+    // Deep runs: the record-book count × the mean era weight of that program's
+    // derived years for the round (1.0 when no years are known).
+    const ty = tourneyYears[espnId] || {};
+    const eraMean = yrs => (yrs && yrs.length) ? yrs.reduce((s, y) => s + champEraWeight(y), 0) / yrs.length : 1.0;
+    const wFF = eraMean(ty.ff), wE8 = eraMean(ty.e8), wS16 = eraMean(ty.s16);
     const P = WEIGHTS.hardwarePts;
     const hardwareRaw =
       P.champ * weightedChamps +
-      P.finalFour * (info[F.FF] || 0) +
-      P.eliteEight * (info[F.E8] || 0) +
-      P.sweet16 * (info[F.S16] || 0) +
+      P.finalFour * (info[F.FF] || 0) * wFF +
+      P.eliteEight * (info[F.E8] || 0) * wE8 +
+      P.sweet16 * (info[F.S16] || 0) * wS16 +
       P.bid * (info[F.NT] || 0);
     // log1p tames the extreme right tail (UCLA/Kentucky) before z-scoring
     const hardwareLog = Math.log1p(hardwareRaw);

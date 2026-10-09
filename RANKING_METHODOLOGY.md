@@ -88,9 +88,13 @@ to championships only:
 | 1975–1984 | 0.95 | 32–53 team field |
 | ≥ 1985 | 1.00 | 64+ team era — hardest path |
 
-Final Fours / Elite Eights / Sweet 16s are bare counts with no years attached,
-so they get flat weights. This slightly flatters old-money programs (UCLA's
-pre-1975 Final Fours count the same as UConn's modern ones) — see Known Biases.
+Final Fours / Elite Eights / Sweet 16s: the record book carries counts only,
+so (since 2026-10-09) `scripts/compile_tourney_years.py` derives the YEARS from
+the season rows (vacated seasons skipped; Sweet 16s from 1975) and each count
+is multiplied by the mean era weight of that program's derived years. Counts
+stay the record book's: the derived years disagree with the book for 22 (FF),
+70 (E8) and 133 (S16) programs — NCAA conventions, missing early rows — so
+they are used only to place a program's deep runs in time.
 
 ---
 
@@ -146,9 +150,9 @@ Mid Modern (1994–2007) · Late Modern (2008–15) · Current (2016–).
    before it, and z-scoring `log1p(apWeeks)` across all programs mildly
    penalizes long-dead programs whose entire run predates the poll. They're
    counted as "never ranked" rather than "missing" — debatable, flagged for Josh.
-3. **Final Four / E8 / S16 counts are not era-weighted** (no years in the data),
-   so deep runs in 8- and 16-team fields count the same as modern ones. Benefits
-   UCLA/Kentucky/UNC; penalizes UConn/Villanova-style modern dynasties.
+3. ~~Final Four / E8 / S16 counts are not era-weighted~~ Fixed 2026-10-09 via
+   derived years (`tourney_years.json`); the residual bias is that a program's
+   count is scaled by its *average* era rather than year by year.
 4. **HTSS appears twice in spirit.** The season composite weights HTSS 0.40 and
    then adds tournament and efficiency terms that HTSS already contains. This
    intentionally sharpens the all-time list toward champions, but it means the

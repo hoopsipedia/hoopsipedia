@@ -11202,7 +11202,7 @@
                     <ul>
                         <li>Every component is standardized across the full population before weighting; scores map to the HTSS scale (50 average, 70–75 elite, 80+ blue blood).</li>
                         <li>Missing data is never scored as zero. When a component does not exist — efficiency before 1949-50, the AP poll before 1948-49, tournament results not yet compiled — its weight is redistributed across the components that do.</li>
-                        <li>Final Four, Elite Eight and Sweet 16 counts are not era-weighted, because the record carries years only for titles. This slightly favors the old-money programs; we say so rather than guess.</li>
+                        <li>Final Four, Elite Eight and Sweet 16 counts are scaled by the era of each program's runs, derived from its season results, so a 1950s regional final and a 2020s one are not worth the same.</li>
                         <li>Vacated seasons are shown with an asterisk across the site and excluded from all-time win totals.</li>
                     </ul>
                     <p class="bbi-note">Weights were set on October 8, 2026 and will be revisited in the offseason. The full methodology lives in the repository's RANKING_METHODOLOGY.md.</p>

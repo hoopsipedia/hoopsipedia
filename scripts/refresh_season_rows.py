@@ -14,6 +14,7 @@ added to it (synthesized, vacated, …). Resumable: progress is kept next to
 the output so a stopped run picks up where it left off.
 
   python3 scripts/refresh_season_rows.py 2025-26
+  python3 scripts/refresh_season_rows.py 1995-96 1994-95 1993-94   # several seasons, one fetch per program
   python3 scripts/refresh_season_rows.py 2025-26 --limit 5      # smoke test
   python3 scripts/refresh_season_rows.py 2025-26 --restart      # ignore progress
 
@@ -36,7 +37,8 @@ def main():
     args = [a for a in sys.argv[1:] if not a.startswith('--')]
     if not args:
         sys.exit(__doc__)
-    season = args[0]
+    seasons = args
+    season = '+'.join(seasons)
     limit = int(sys.argv[sys.argv.index('--limit') + 1]) if '--limit' in sys.argv else None
     progress_path = os.path.join(ROOT, f'.refresh_{season}.progress.json')
     done = set()
@@ -57,12 +59,13 @@ def main():
             stats['failed'] += 1
             print(f'  FAIL {eid} {c.slug_mapping[eid]}')
             continue
-        fresh = next((r for r in rows if r.get('year') == season), None)
         existing = c.seasons_data[eid].setdefault('seasons', [])
-        idx = next((i for i, r in enumerate(existing) if r.get('year') == season), None)
-        if fresh is None:
-            stats['no_row'] += 1
-        else:
+        for one in seasons:
+            fresh = next((r for r in rows if r.get('year') == one), None)
+            idx = next((i for i, r in enumerate(existing) if r.get('year') == one), None)
+            if fresh is None:
+                stats['no_row'] += 1
+                continue
             if idx is not None:
                 for k in PRESERVE_KEYS:
                     if k in existing[idx]:
@@ -71,8 +74,9 @@ def main():
                 existing[idx] = fresh
                 stats['updated'] += int(changed)
             else:
-                # seasons are stored newest-first; put it before the previous year
-                existing.insert(0, fresh)
+                # seasons are stored newest-first; keep that order
+                pos = next((i for i, r in enumerate(existing) if str(r.get('year', '')) < one), len(existing))
+                existing.insert(pos, fresh)
                 stats['added'] += 1
             if fresh.get('ncaaTourney'):
                 stats['tourney'] += 1
