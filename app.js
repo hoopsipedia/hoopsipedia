@@ -2432,50 +2432,19 @@
                 renderTeamsGrid(query);
             });
 
-            // Conference filters — exclude empty and non-D1 conferences, support multi-select
+            // Conference filter — one dropdown instead of a wall of 32 pills
             const D1_EXCLUDE = ['CUNY', ''];
             const conferences = [...new Set(allTeamsData.map(t => t.conf))].filter(c => !D1_EXCLUDE.includes(c)).sort();
-            const filterContainer = document.getElementById('conferenceFilters');
-            filterContainer.innerHTML = '';
-            let selectedConferences = new Set();
-
-            const allBtn = document.createElement('button');
-            allBtn.className = 'conf-btn active';
-            allBtn.textContent = 'All';
-            allBtn.addEventListener('click', () => {
-                selectedConferences.clear();
-                filterConference = null;
-                document.querySelectorAll('#conferenceFilters .conf-btn').forEach(b => b.classList.remove('active'));
-                allBtn.classList.add('active');
-                document.getElementById('teamSearchInput').value = '';
-                renderTeamsGrid();
-            });
-            filterContainer.appendChild(allBtn);
-
-            conferences.forEach(conf => {
-                const btn = document.createElement('button');
-                btn.className = 'conf-btn';
-                btn.textContent = conf;
-                btn.addEventListener('click', () => {
-                    if (selectedConferences.has(conf)) {
-                        selectedConferences.delete(conf);
-                        btn.classList.remove('active');
-                    } else {
-                        selectedConferences.add(conf);
-                        btn.classList.add('active');
-                    }
-                    allBtn.classList.remove('active');
-                    if (selectedConferences.size === 0) {
-                        filterConference = null;
-                        allBtn.classList.add('active');
-                    } else {
-                        filterConference = [...selectedConferences];
-                    }
+            const confSelect = document.getElementById('teamsConfSelect');
+            if (confSelect) {
+                confSelect.innerHTML = `<option value="">All conferences</option>` + conferences.map(c => `<option value="${c}">${c}</option>`).join('');
+                confSelect.addEventListener('change', () => {
+                    filterConference = confSelect.value || null;
                     document.getElementById('teamSearchInput').value = '';
                     renderTeamsGrid();
                 });
-                filterContainer.appendChild(btn);
-            });
+            }
+            renderTeamsStatCards(conferences);
 
             // Global nav search
             const globalInput = document.getElementById('globalSearchInput');
@@ -6581,41 +6550,16 @@
                 filterContainer.appendChild(btn);
             });
 
-            // Conference filter for rankings — multi-select, exclude non-D1
-            const confContainer = document.getElementById('rankingsConferenceFilters');
-            confContainer.innerHTML = '';
-            const rankConferences = [...new Set(allTeamsData.map(t => t.conf))].filter(c => !['CUNY', ''].includes(c)).sort();
-            if (!window._rankingsSelectedConfs) window._rankingsSelectedConfs = new Set();
-
-            const allConfBtn = document.createElement('button');
-            allConfBtn.className = `conf-btn ${!rankingsConfFilter ? 'active' : ''}`;
-            allConfBtn.textContent = 'All';
-            allConfBtn.addEventListener('click', () => {
-                window._rankingsSelectedConfs.clear();
-                rankingsConfFilter = null;
-                renderRankings();
-            });
-            confContainer.appendChild(allConfBtn);
-
-            rankConferences.forEach(conf => {
-                const btn = document.createElement('button');
-                btn.className = `conf-btn ${window._rankingsSelectedConfs.has(conf) ? 'active' : ''}`;
-                btn.textContent = conf;
-                btn.addEventListener('click', () => {
-                    if (window._rankingsSelectedConfs.has(conf)) {
-                        window._rankingsSelectedConfs.delete(conf);
-                    } else {
-                        window._rankingsSelectedConfs.add(conf);
-                    }
-                    if (window._rankingsSelectedConfs.size === 0) {
-                        rankingsConfFilter = null;
-                    } else {
-                        rankingsConfFilter = [...window._rankingsSelectedConfs];
-                    }
-                    renderRankings();
-                });
-                confContainer.appendChild(btn);
-            });
+            // Conference filter — one dropdown (the 32-pill wall is gone)
+            const confSelect = document.getElementById('rankingsConfSelect');
+            if (confSelect && !confSelect.dataset.ready) {
+                const rankConferences = [...new Set(allTeamsData.map(t => t.conf))].filter(c => !['CUNY', ''].includes(c)).sort();
+                confSelect.innerHTML = `<option value="">All conferences</option>` + rankConferences.map(c => `<option value="${c}">${c}</option>`).join('');
+                confSelect.addEventListener('change', () => { rankingsConfFilter = confSelect.value || null; renderRankings(); });
+                confSelect.dataset.ready = '1';
+            }
+            if (confSelect) confSelect.value = Array.isArray(rankingsConfFilter) ? (rankingsConfFilter[0] || '') : (rankingsConfFilter || '');
+            renderRankingsStatCards();
 
             document.getElementById('statHeader').textContent = categories.find(c => c.key === currentSortStat).label;
             const header = document.getElementById('statHeader');
@@ -19724,12 +19668,75 @@
         // server-render /rivalries with the same data. Loaded in loadData().
         let RIVALRIES = [];
 
+        // Stat tiles under the Teams and Rankings openers (same cards as /coaches).
+        function statTiles(el, stats) {
+            if (!el) return;
+            el.innerHTML = stats.map(st => `
+                <div class="coaches-stat-card">
+                    <div class="label-mono" style="color:var(--ink-muted);margin-bottom:6px;">${st.label}</div>
+                    <div class="h-display" style="font-size:44px;color:var(--navy);line-height:1;">${st.num}</div>
+                    <div style="font-family:var(--font-serif);font-style:italic;font-size:13px;color:var(--ink-muted);margin-top:6px;">${st.sub}</div>
+                </div>`).join('');
+        }
+        function renderTeamsStatCards(conferences) {
+            const titled = allTeamsData.filter(t => (t.natlChamps || 0) > 0);
+            let champ = null, champYear = 0;
+            for (const t of allTeamsData) {
+                const yrs = (H[t.espnId] && Array.isArray(H[t.espnId][F.NCY])) ? H[t.espnId][F.NCY] : [];
+                const y = Math.max(0, ...yrs);
+                if (y > champYear) { champYear = y; champ = t; }
+            }
+            statTiles(document.getElementById('teamsStatCards'), [
+                { num: allTeamsData.length, label: 'PROGRAMS', sub: 'every Division I team' },
+                { num: conferences.length, label: 'CONFERENCES', sub: 'as aligned today' },
+                { num: titled.length, label: 'HAVE A TITLE', sub: 'programs with a national championship' },
+                { num: champ ? champ.name.split(' ').pop() : '—', label: 'REIGNING CHAMPION', sub: champ ? `${champ.name} · ${champYear}` : '' },
+            ]);
+        }
+        function renderRankingsStatCards() {
+            const pool = allTeamsData.filter(t => !['CUNY', ''].includes(t.conf));
+            const top = key => pool.reduce((a, b) => ((b[key] || 0) > (a[key] || 0) ? b : a), pool[0]);
+            const w = top('allTimeW'), c = top('natlChamps'), f = top('finalFours');
+            statTiles(document.getElementById('rankingsStatCards'), [
+                { num: pool.length, label: 'PROGRAMS RANKED', sub: 'eleven record-book categories' },
+                { num: (w.allTimeW || 0).toLocaleString(), label: 'MOST ALL-TIME WINS', sub: w.name },
+                { num: c.natlChamps || 0, label: 'MOST TITLES', sub: c.name },
+                { num: f.finalFours || 0, label: 'MOST FINAL FOURS', sub: f.name },
+            ]);
+        }
+
         function renderRivalries() {
             const container = document.getElementById('rivalriesContent');
-            let html = `<div class="rivalries-header">
-                <h2>College Basketball Rivalries</h2>
-                <p>Explore the greatest rivalries in the history of the game</p>
-            </div>
+            // Opener in the house style (same bones as /coaches, /upsets, /champions)
+            const series = RIVALRIES.map(r => {
+                const h = H2H_DATA ? H2H_DATA[r.team1Id]?.[r.team2Id] : null;
+                return { r, total: h ? h.w + h.l : 0, gap: h ? Math.abs(h.w - h.l) : 0, h };
+            });
+            const most = series.reduce((a, b) => (b.total > a.total ? b : a), series[0] || { total: 0 });
+            const closest = series.filter(x => x.total >= 20).reduce((a, b) => (b.gap < a.gap ? b : a), series[0] || { gap: 0 });
+            const lopsided = series.reduce((a, b) => (b.gap > a.gap ? b : a), series[0] || { gap: 0 });
+            let html = `
+            <section class="page-opener">
+                <div class="divider-stars" style="margin-bottom:14px;">
+                    <span class="stars">★ ★</span>
+                    <span class="label-mono" style="color:var(--ink-muted);">Bad blood</span>
+                    <span class="stars">★ ★</span>
+                </div>
+                <h1 class="h-display" style="font-size:clamp(64px,10vw,124px);color:var(--navy);line-height:0.88;margin:0;text-align:center;">RIVALRIES</h1>
+                <p style="text-align:center;font-family:var(--font-serif);font-style:italic;font-size:19px;color:var(--ink-soft);max-width:720px;margin:14px auto 0;">The series records, the streaks, and the games that still get brought up at Thanksgiving. Pick a feud.</p>
+                <div class="page-stat-grid">
+                    ${[
+                        { num: RIVALRIES.length, label: 'RIVALRIES', sub: 'with the full series history' },
+                        { num: most.total || '—', label: 'MOST MEETINGS', sub: most.r ? most.r.name : '' },
+                        { num: closest.h ? `${closest.h.w}–${closest.h.l}` : '—', label: 'CLOSEST SERIES', sub: closest.r ? closest.r.name : '' },
+                        { num: lopsided.h ? `${Math.max(lopsided.h.w, lopsided.h.l)}–${Math.min(lopsided.h.w, lopsided.h.l)}` : '—', label: 'MOST LOPSIDED', sub: lopsided.r ? lopsided.r.name : '' },
+                    ].map(st => `<div class="coaches-stat-card">
+                        <div class="label-mono" style="color:var(--ink-muted);margin-bottom:6px;">${st.label}</div>
+                        <div class="h-display" style="font-size:44px;color:var(--navy);line-height:1;">${st.num}</div>
+                        <div style="font-family:var(--font-serif);font-style:italic;font-size:13px;color:var(--ink-muted);margin-top:6px;">${st.sub}</div>
+                    </div>`).join('')}
+                </div>
+            </section>
             <div class="rivalries-grid">`;
 
             for (const r of RIVALRIES) {
@@ -19749,16 +19756,21 @@
                     }
                 }
 
-                html += `<div class="rivalry-card" onclick="window.location.hash='#rivalry/${r.slug}'">
-                    <div class="rivalry-card-logos">
-                        <img src="${getLogoUrl(r.team1Id)}" alt="${t1Name}" onerror="this.src='${getFallbackLogoUrl(r.team1Id)}'">
-                        <span class="rivalry-card-vs">VS</span>
-                        <img src="${getLogoUrl(r.team2Id)}" alt="${t2Name}" onerror="this.src='${getFallbackLogoUrl(r.team2Id)}'">
+                const h = H2H_DATA ? H2H_DATA[r.team1Id]?.[r.team2Id] : null;
+                html += `<a class="rivalry-card" href="/rivalries/${r.slug}" onclick="if(!(event.metaKey||event.ctrlKey||event.shiftKey)){event.preventDefault();window.location.hash='#rivalry/${r.slug}';}">
+                    <div class="rivalry-card-top">
+                        <div class="rivalry-card-logos">
+                            <img src="${getLogoUrl(r.team1Id)}" alt="${t1Name}" loading="lazy" onerror="this.src='${getFallbackLogoUrl(r.team1Id)}'">
+                            <span class="rivalry-card-vs">VS</span>
+                            <img src="${getLogoUrl(r.team2Id)}" alt="${t2Name}" loading="lazy" onerror="this.src='${getFallbackLogoUrl(r.team2Id)}'">
+                        </div>
+                        ${seriesText ? `<span class="ds-pill ds-pill-rust rivalry-card-record">${seriesText.toUpperCase()}</span>` : ''}
                     </div>
                     <div class="rivalry-card-name">${r.name}</div>
-                    ${seriesText ? `<div class="rivalry-card-record">${seriesText}</div>` : ''}
+                    <div class="rivalry-card-teams">${t1Name} <span>vs</span> ${t2Name}${h ? ` · ${h.w + h.l} games` : ''}</div>
                     <div class="rivalry-card-desc">${r.description}</div>
-                </div>`;
+                    <div class="rivalry-card-more">Series history →</div>
+                </a>`;
             }
 
             html += '</div>';

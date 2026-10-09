@@ -1793,6 +1793,14 @@
         .coach-tier-badge.great { background: transparent; color: var(--ink-soft); border: 1px solid var(--rule); }
 
         /* Coaches stat cards */
+        /* Section openers (Rankings, Teams, Rivalries) share the Coaches bones */
+        .page-opener { padding: 40px 0 28px; max-width: 1280px; margin: 0 auto; }
+        .page-stat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 28px; }
+        @media (max-width: 768px) {
+            .page-opener { padding: 28px 0 20px; }
+            .page-stat-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+            .page-stat-grid .h-display { font-size: 32px !important; }
+        }
         .coaches-stat-card {
             border: 2px solid var(--navy); border-radius: var(--r-md); padding: 20px 18px;
         }
@@ -5071,48 +5079,27 @@
         }
 
         /* ── Rivalry Pages ── */
-        .rivalries-header {
-            text-align: center; padding: 2rem 1rem 1.5rem;
-        }
-        .rivalries-header h2 {
-            font-size: 1.8rem; color: #1B2A4A; margin-bottom: 0.3rem;
-        }
-        .rivalries-header p {
-            color: #6B7280; font-size: 0.95rem;
-        }
         .rivalries-grid {
             display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-            gap: 1.25rem; padding: 0 1rem 2rem; max-width: 1200px; margin: 0 auto;
+            gap: 16px; padding: 0 0 2rem; max-width: 1280px; margin: 0 auto;
         }
         .rivalry-card {
-            background: #1B2A4A; border-radius: 1rem; padding: 1.5rem;
-            cursor: pointer; transition: transform 0.2s, box-shadow 0.2s;
-            display: flex; flex-direction: column; align-items: center; gap: 0.75rem;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            display: flex; flex-direction: column; gap: 10px; text-decoration: none; color: inherit;
+            background: var(--paper); border: 1px solid var(--rule-soft); border-left: 4px solid var(--navy);
+            border-radius: var(--r-md); padding: 20px 22px; cursor: pointer;
+            transition: transform 0.15s, box-shadow 0.15s, border-color 0.15s;
         }
-        .rivalry-card:hover {
-            transform: translateY(-3px); box-shadow: 0 6px 20px rgba(0,0,0,0.25);
-        }
-        .rivalry-card-logos {
-            display: flex; align-items: center; gap: 1rem; justify-content: center;
-        }
-        .rivalry-card-logos img {
-            width: 64px; height: 64px; object-fit: contain;
-            background: rgba(255,255,255,0.1); border-radius: 50%; padding: 6px;
-        }
-        .rivalry-card-vs {
-            font-size: 1.1rem; font-weight: 800; color: #C9A86C;
-        }
-        .rivalry-card-name {
-            font-size: 1.05rem; font-weight: 700; color: #fff; text-align: center;
-        }
-        .rivalry-card-record {
-            font-size: 0.85rem; color: rgba(255,255,255,0.7); text-align: center;
-        }
-        .rivalry-card-desc {
-            font-size: 0.78rem; color: rgba(255,255,255,0.5); text-align: center;
-            line-height: 1.4;
-        }
+        .rivalry-card:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(20,35,63,0.10); border-left-color: var(--rust); }
+        .rivalry-card-top { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+        .rivalry-card-logos { display: flex; align-items: center; gap: 10px; }
+        .rivalry-card-logos img { width: 44px; height: 44px; object-fit: contain; }
+        .rivalry-card-vs { font-family: var(--font-display); font-size: 18px; color: var(--rust); letter-spacing: 0.04em; }
+        .rivalry-card-record { font-size: 9px; }
+        .rivalry-card-name { font-family: var(--font-display); font-size: 26px; letter-spacing: 0.01em; text-transform: uppercase; color: var(--navy); line-height: 1; margin-top: 4px; }
+        .rivalry-card-teams { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-muted); }
+        .rivalry-card-teams span { color: var(--rust); }
+        .rivalry-card-desc { font-family: var(--font-serif); font-size: 14px; line-height: 1.55; color: var(--ink-soft); }
+        .rivalry-card-more { font-family: var(--font-display); font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--navy); border-bottom: 2px solid var(--navy); align-self: flex-start; margin-top: auto; }
 
         /* ── Individual Rivalry Page ── */
         .rivalry-hero {
