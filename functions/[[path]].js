@@ -1018,7 +1018,9 @@ function renderOnThisDaySsr(mmdd, items, teams, origin) {
       const team = teams[String(t.espnId)];
       if (!team) return escapeHtml(t.name);
       const slug = teamSlug(team[F.NAME]);
-      return i === 0
+      // Link the season page only when generate_on_this_day.py confirmed a
+      // season row exists (hasSeason); otherwise Google crawls 404s from here.
+      return i === 0 && t.hasSeason !== false
         ? `<a href="${seasonHref(origin, slug, season)}">${escapeHtml(team[F.NAME])} ${escapeHtml(season)} season</a>`
         : `<a href="${teamHref(origin, slug)}">${escapeHtml(team[F.NAME])}</a>`;
     });

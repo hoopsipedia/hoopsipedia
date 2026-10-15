@@ -474,6 +474,19 @@ def main():
         seen.add(key)
         by_day[ev['date'][5:]].append(ev)
 
+    # Flag whether the winner's season row exists so the SSR links the season
+    # page only when it will resolve (Google crawled 404s from these links, Oct 2026).
+    with open(os.path.join(ROOT, 'seasons.json')) as f:
+        season_years = {tid: {str(r.get('year')) for r in v.get('seasons', [])}
+                        for tid, v in json.load(f).items()}
+    for ev in events:
+        end = season_of(ev['date'])                      # calendar year the season ends in
+        label = '{}-{:02d}'.format(end - 1, end % 100)   # seasons.json uses '1996-97'
+        for t in ev['teams']:
+            t['hasSeason'] = label in season_years.get(str(t['espnId']), set())
+    stats['events_without_season_row'] = sum(
+        1 for e in events if not e['teams'][0]['hasSeason'])
+
     out = {}
     for mmdd in all_mmdd():
         day_events = sorted(by_day.get(mmdd, []),

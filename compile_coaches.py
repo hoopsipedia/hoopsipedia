@@ -218,8 +218,8 @@ def compile_coaches():
     coaches_all = []
     for c in all_coaches_list:
         seasons = sum(e - st + 1 for _, st, e in c['schools'])
-        if seasons < 2 and c['wins'] < 30:
-            continue
+        # One-season coaches are kept too (noindexed below): every coach named on a
+        # season page gets a page, so those links never 404 (GSC flagged e-a-knoth 2026-10).
         coaches_all.append({**c, 'seasons': seasons, 'indexable': seasons >= 5 or c['wins'] >= 100})
     save_json_atomic('coaches_all.json', coaches_all, separators=(',', ':'))
     print(f"coaches_all.json: {len(coaches_all)} coaches ({sum(1 for c in coaches_all if c['indexable'])} indexable)")

@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """Re-pull one season's row for every program from Sports Reference.
 
+  python3 scripts/refresh_season_rows.py --fill-missing   # add every SR row the local file lacks (1,675 interior gaps found 2026-10-15)
+
 Why this exists: seasons.json rows are compiled once and kept. The 2025-26
 rows were pulled before March 2026, so on 2026-10-08 only the 4 programs
 re-scraped in July carried a tournament result (round_max) and seed; the
@@ -35,10 +37,11 @@ PRESERVE_KEYS = ('synthesized', 'vacated', 'vacatedNote', 'note', 'source')
 
 def main():
     args = [a for a in sys.argv[1:] if not a.startswith('--')]
-    if not args:
+    if not args and '--fill-missing' not in sys.argv:
         sys.exit(__doc__)
-    seasons = args
-    season = '+'.join(seasons)
+    fill = '--fill-missing' in sys.argv
+    seasons = [] if fill else args
+    season = 'fill-missing' if fill else '+'.join(seasons)
     limit = int(sys.argv[sys.argv.index('--limit') + 1]) if '--limit' in sys.argv else None
     progress_path = os.path.join(ROOT, f'.refresh_{season}.progress.json')
     done = set()
@@ -60,7 +63,13 @@ def main():
             print(f'  FAIL {eid} {c.slug_mapping[eid]}')
             continue
         existing = c.seasons_data[eid].setdefault('seasons', [])
-        for one in seasons:
+        if fill:
+            # --fill-missing: add every SR season the local file lacks, never touch existing rows
+            have = {str(r.get('year', '')) for r in existing}
+            todo = [r['year'] for r in rows if r.get('year') and r['year'] not in have]
+        else:
+            todo = seasons
+        for one in todo:
             fresh = next((r for r in rows if r.get('year') == one), None)
             idx = next((i for i, r in enumerate(existing) if r.get('year') == one), None)
             if fresh is None:
