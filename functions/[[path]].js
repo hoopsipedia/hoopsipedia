@@ -1322,7 +1322,7 @@ export async function onRequest(context) {
     // e.g. South Carolina State 1969-70): send the reader to the program page
     // rather than a dead end. Malformed season strings still hard-404.
     if (!seasonRow) {
-      if (/^\d{4}-\d{2}$/.test(seasonParam)) return Response.redirect(teamHref(origin, teamSlug(team.name)), 301);
+      if (/^\d{4}-\d{2}$/.test(seasonParam)) return Response.redirect(`${origin}/teams/${encodeParam(teamSlug(team.name))}`, 301);
       return notFound();
     }
 
