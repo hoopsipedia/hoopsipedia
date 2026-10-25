@@ -1318,7 +1318,13 @@ export async function onRequest(context) {
         synthesizedRow = true;
       }
     }
-    if (!seasonRow) return notFound();
+    // A real program but a season we hold nothing for (pre-Division I years,
+    // e.g. South Carolina State 1969-70): send the reader to the program page
+    // rather than a dead end. Malformed season strings still hard-404.
+    if (!seasonRow) {
+      if (/^\d{4}-\d{2}$/.test(seasonParam)) return Response.redirect(teamHref(origin, teamSlug(team.name)), 301);
+      return notFound();
+    }
 
     const slug = teamSlug(team.name);
     canonicalUrl = seasonHref(origin, slug, seasonParam);
