@@ -1193,6 +1193,12 @@ export async function onRequest(context) {
     return Response.redirect(`https://www.hoopsipedia.com/${viewParam}`, 301);
   }
 
+  // Old SPA tab path Google still crawls (hoopsipedia.com/starting5, the
+  // Compare page's Starting Five tab): send it to Compare instead of a 404.
+  if (url.pathname === '/starting5' || url.pathname === '/starting5/') {
+    return Response.redirect('https://www.hoopsipedia.com/#comparison', 301);
+  }
+
   // Bare homepage gets SSR content too; everything else with no relevant
   // query params passes through to static files.
   const isHomepage = url.pathname === '/' && url.search === '';
