@@ -160,6 +160,32 @@ function teamSlug(name) {
 }
 
 // ── Tool implementations ──
+// Short progress line shown in the chat bubble while a tool runs.
+function statusLabel(name, input) {
+  const q = input && (input.query || input.team || input.name || input.coach || '');
+  const who = q ? ` ${String(q).slice(0, 40)}` : '';
+  switch (name) {
+    case 'lookupTeam': return `Looking up${who}…`;
+    case 'getTeamSeasons': return 'Pulling season records…';
+    case 'getHeadToHead': return 'Checking the head-to-head…';
+    case 'getHTSSRankings': return 'Consulting the HTSS rankings…';
+    case 'getCoachInfo': return `Reading the coach file${who}…`;
+    case 'getEfficiency': return 'Running the efficiency numbers…';
+    case 'getUpsetHistory': return 'Digging through the upsets…';
+    case 'navigateUser': return 'Finding the page…';
+    case 'getDraftHistory': return 'Checking the draft history…';
+    case 'getTeamHistory': return `Reading the program history${who}…`;
+    case 'getTimeMachine': return 'Firing up the Time Machine…';
+    case 'getAPPoll': return 'Pulling the AP poll…';
+    case 'getBoxScore': return 'Opening the box score…';
+    case 'getChampionByYear': return 'Checking the champions list…';
+    case 'getTeamsByConference': return 'Listing the conference…';
+    case 'searchGames': return 'Searching the game logs…';
+    case 'getTeamTournamentRecord': return 'Checking the tournament record…';
+    default: return 'Checking the record book…';
+  }
+}
+
 async function executeTool(name, input, ctx) {
   switch (name) {
     case 'lookupTeam': return await toolLookupTeam(input, ctx);
@@ -1246,6 +1272,8 @@ async function handleClaudeStream(claudeBody, writer, encoder, messages, apiKey,
     // Execute each tool
     const toolResults = [];
     for (const tool of toolUseBlocks) {
+      // Tell the client what we're doing so the bubble isn't blank while tools run.
+      await writer.write(encoder.encode(`event: status\ndata: ${JSON.stringify({ text: statusLabel(tool.name, tool.input) })}\n\n`));
       const result = await executeTool(tool.name, tool.input, ctx);
 
       // If navigateUser, emit navigation event to client
@@ -1281,9 +1309,13 @@ const MAX_ASSISTANT_MESSAGE_CHARS = 40960; // assistant history can hold multi-r
 // Returns CORS headers for a request Origin. If Origin is absent (curl,
 // same-origin), the request is allowed but no ACAO header is emitted.
 // If Origin is present but not allowlisted, returns null (caller must 403).
-function corsHeadersFor(origin) {
+function corsHeadersFor(origin, requestUrl) {
   if (!origin) return {};
-  if (!ALLOWED_ORIGINS.includes(origin)) return null;
+  // `wrangler pages dev`: the function itself is served from localhost, so a
+  // localhost page may call it. Production never serves from localhost.
+  const local = /^https?:\/\/(localhost|127\.0\.0\.1)(:\d+)?$/;
+  const servedLocally = requestUrl && local.test(new URL(requestUrl).origin);
+  if (!ALLOWED_ORIGINS.includes(origin) && !(servedLocally && local.test(origin))) return null;
   return {
     'Access-Control-Allow-Origin': origin,
     'Vary': 'Origin'
@@ -1296,7 +1328,7 @@ export async function onRequestPost(context) {
 
   // CORS lockdown: reject browser requests from non-allowlisted origins
   const origin = request.headers.get('Origin');
-  const corsHeaders = corsHeadersFor(origin);
+  const corsHeaders = corsHeadersFor(origin, request.url);
   if (corsHeaders === null) {
     return new Response('Forbidden', { status: 403 });
   }
@@ -1405,7 +1437,7 @@ export async function onRequestPost(context) {
 // Handle CORS preflight
 export async function onRequestOptions(context) {
   const origin = context.request.headers.get('Origin');
-  const corsHeaders = corsHeadersFor(origin);
+  const corsHeaders = corsHeadersFor(origin, context.request.url);
   if (corsHeaders === null) {
     return new Response('Forbidden', { status: 403 });
   }

@@ -19554,7 +19554,7 @@
             const typingEl = document.createElement('div');
             typingEl.className = 'chat-msg chat-msg-assistant';
             typingEl.id = 'chatTyping';
-            typingEl.innerHTML = '<div class="chat-typing"><div class="chat-typing-dot"></div><div class="chat-typing-dot"></div><div class="chat-typing-dot"></div></div>';
+            typingEl.innerHTML = '<div class="chat-typing"><div class="chat-typing-dot"></div><div class="chat-typing-dot"></div><div class="chat-typing-dot"></div><span class="chat-status">Thinking…</span></div>';
             container.appendChild(typingEl);
             container.scrollTop = container.scrollHeight;
 
@@ -19568,18 +19568,26 @@
                     body: JSON.stringify({ messages: chatMessages })
                 });
 
-                // Remove typing indicator
-                const typing = document.getElementById('chatTyping');
-                if (typing) typing.remove();
-
                 if (!resp.ok && resp.status !== 429) {
                     throw new Error('Server error');
                 }
 
-                // Create assistant bubble
-                const bubble = document.createElement('div');
+                // The typing bubble becomes the assistant bubble: dots + a status
+                // line stay until the first token, so the panel is never blank
+                // while the server runs tool lookups (which can take several seconds).
+                const bubble = document.getElementById('chatTyping') || document.createElement('div');
                 bubble.className = 'chat-msg chat-msg-assistant';
-                container.appendChild(bubble);
+                bubble.removeAttribute('id');
+                if (!bubble.parentNode) container.appendChild(bubble);
+                const statusEl = bubble.querySelector('.chat-status');
+                const fallbackLines = ['Checking the record book…', 'Still digging…', 'Crunching the numbers…'];
+                let fallbackIdx = 0;
+                const fallbackTimer = setInterval(() => {
+                    if (statusEl && !statusEl.dataset.fromServer) {
+                        statusEl.textContent = fallbackLines[fallbackIdx++ % fallbackLines.length];
+                    }
+                }, 5000);
+                const clearStatus = () => clearInterval(fallbackTimer);
 
                 let assistantText = '';
 
@@ -19606,9 +19614,12 @@
                             try {
                                 const data = JSON.parse(dataStr);
                                 if (currentEvent === 'text' && data.text) {
+                                    if (!assistantText) clearStatus();
                                     assistantText += data.text;
                                     bubble.innerHTML = formatChatText(assistantText);
                                     container.scrollTop = container.scrollHeight;
+                                } else if (currentEvent === 'status' && data.text && !assistantText) {
+                                    if (statusEl) { statusEl.textContent = data.text; statusEl.dataset.fromServer = '1'; }
                                 } else if (currentEvent === 'navigate' && data.route) {
                                     const link = document.createElement('button');
                                     link.className = 'chat-msg-link';
@@ -19618,6 +19629,7 @@
                                     bubble.appendChild(link);
                                     container.scrollTop = container.scrollHeight;
                                 } else if (currentEvent === 'error' && data.message) {
+                                    clearStatus();
                                     bubble.innerHTML = `<div class="chat-error">${data.message}</div>`;
                                 }
                             } catch {}
@@ -19625,9 +19637,12 @@
                     }
                 }
 
+                clearStatus();
                 // Save assistant response to history
                 if (assistantText) {
                     chatMessages.push({ role: 'assistant', content: assistantText });
+                } else if (!bubble.querySelector('.chat-error')) {
+                    bubble.innerHTML = '<div class="chat-error">No answer came back. Try asking again.</div>';
                 }
 
             } catch (err) {
