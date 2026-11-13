@@ -751,6 +751,10 @@ const SECTION_META = {
     title: 'Greatest NCAA Tournament Upsets of All Time — Hoopsipedia',
     description: 'Every Cinderella story, every bracket buster. Explore the most shocking upsets in March Madness history with scores, highlights, and the stories behind the madness.',
   },
+  'scores': {
+    title: "Today's College Basketball Scores — Every Division I Game, Live — Hoopsipedia",
+    description: 'Live scores for every Division I men\'s college basketball game today, ranked by juice: AP Top 25 matchups first, with records, the all-time series between the two programs, and a box score for every game.',
+  },
   'on-this-day': {
     title: 'On This Day in College Basketball History — Hoopsipedia',
     description: 'The biggest upsets, blowouts, overtime thrillers and championship games played on this date, every year since 1908 — with the full box score and season behind each one.',
@@ -1004,7 +1008,7 @@ function seasonKeyForDate(date) {
 
 function renderOnThisDaySsr(mmdd, items, teams, origin) {
   const label = otdLabel(mmdd);
-  const typeWord = { upset: 'Upset', blowout: 'Blowout', ot: 'Overtime', championship: 'Championship', high_score: 'Scoring' };
+  const typeWord = { upset: 'Upset', blowout: 'Blowout', ot: 'Overtime', championship: 'National championship', high_score: 'Scoring', tournament: 'NCAA Tournament', ranked: 'Top-25 showdown', rivalry: 'Rivalry' };
   const parts = [
     `<h1>On this day in college basketball history: ${escapeHtml(label)}</h1>`,
     `<p>${items.length ? `${items.length} game${items.length === 1 ? '' : 's'} worth remembering were played on ${escapeHtml(label)}` : `No games in the database were played on ${escapeHtml(label)} — the college season runs November to April`}. Each entry links to the full season, game by game, and to the box score where one exists.</p>`,
@@ -1024,8 +1028,13 @@ function renderOnThisDaySsr(mmdd, items, teams, origin) {
         ? `<a href="${seasonHref(origin, slug, season)}">${escapeHtml(team[F.NAME])} ${escapeHtml(season)} season</a>`
         : `<a href="${teamHref(origin, slug)}">${escapeHtml(team[F.NAME])}</a>`;
     });
-    parts.push(`<h2>${escapeHtml(year)}: ${escapeHtml(headline)}</h2>`);
-    parts.push(`<p>${typeWord[it.type] ? escapeHtml(typeWord[it.type]) + ' · ' : ''}Final ${escapeHtml(it.score || '')}. ${links.join(' · ')}</p>`);
+    // Headline links to the game itself: the winner's season log opened at
+    // that date (?g=), where the box score expands when one exists.
+    const wTeam = it.teams && it.teams[0] && teams[String(it.teams[0].espnId)];
+    const gameUrl = wTeam && it.season && it.teams[0].hasSeason !== false
+      ? `${seasonHref(origin, teamSlug(wTeam[F.NAME]), it.season)}?g=${encodeURIComponent(it.date)}` : '';
+    parts.push(`<h2>${escapeHtml(year)}: ${gameUrl ? `<a href="${gameUrl}">${escapeHtml(headline)}</a>` : escapeHtml(headline)}</h2>`);
+    parts.push(`<p>${typeWord[it.type] ? escapeHtml(typeWord[it.type]) + ' · ' : ''}Final ${escapeHtml(it.score || '')}.${gameUrl ? ` <a href="${gameUrl}">${it.hasBox ? 'Box score' : 'Game log'}</a> ·` : ''} ${links.join(' · ')}</p>`);
   }
   parts.push(`<p><a href="${origin}/rankings">Rankings</a> · <a href="${origin}/time-machine">Time Machine</a> · <a href="${origin}/teams">All programs</a></p>`);
   return ssrWrap(parts.join('\n'));
@@ -1035,6 +1044,7 @@ function renderSectionIntroSsr(section, origin) {
   const intro = {
     bracket: `<h1>NCAA Tournament bracket</h1><p>The full bracket with live scores during the tournament, seed-matchup history on every game ("16-seeds are 2–152 all-time vs 1-seeds"), upset alerts, and each team's tournament résumé. Off-season, it shows the most recent tournament.</p>`,
     upsets: `<h1>The greatest NCAA Tournament upsets of all time</h1><p>More than 340 verified upsets by seed matchup and era, each with the score, the box score where one exists, highlight video, and why it mattered.</p>`,
+    scores: `<h1>Today's college basketball scores</h1><p>Every Division I men's game on today's schedule, live and refreshed every 30 seconds: AP Top 25 matchups first, then the rest, each with both teams' records, the all-time series between the programs, a link to settle the argument on the Compare page, and the box score.</p>`,
     classics: `<h1>Instant classics</h1><p>Buzzer beaters, overtime thrillers, and the games from the most recent NCAA Tournament nobody will forget.</p>`,
   }[section] || '';
   return ssrWrap(`${intro}<p><a href="${origin}/rankings">Rankings</a> · <a href="${origin}/champions">Championship journeys</a> · <a href="${origin}/teams">All programs</a></p>`);
@@ -1177,7 +1187,7 @@ export async function onRequest(context) {
 
   // Section forever URLs (see SECTION_META), rivalry pages, Time Machine matchups.
   let sectionParam = null, rivalrySlug = null, tmRoute = null;
-  const sectionMatch = url.pathname.match(/^\/(teams|rankings|time-machine|players|rivalries|coaches|bracket|upsets|classics|champions|blue-blood-index)\/?$/);
+  const sectionMatch = url.pathname.match(/^\/(teams|rankings|time-machine|players|rivalries|coaches|bracket|upsets|classics|champions|blue-blood-index|scores)\/?$/);
   if (sectionMatch) sectionParam = sectionMatch[1];
   let otdParam = null;
   const otdMatch = url.pathname.match(/^\/on-this-day(?:\/(\d{2}-\d{2}))?\/?$/);

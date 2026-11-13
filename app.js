@@ -537,9 +537,9 @@
         // not need the full seasons/h2h/htss files before first paint.
         function isFastRoute() {
             const h = window.location.hash;
-            if (h && h !== '#') return /^#(team\/[^/]+|teams|players|rankings|htss-rankings|time-machine|trajectories|net-rankings|on-this-day(\/\d{2}-\d{2})?)$/.test(h);
+            if (h && h !== '#') return /^#(team\/[^/]+|teams|players|rankings|htss-rankings|time-machine|trajectories|net-rankings|scores|on-this-day(\/\d{2}-\d{2})?)$/.test(h);
             const p = window.location.pathname;
-            return p === '/' || /^\/(teams|players|rankings|time-machine|on-this-day)\/?$/.test(p) || /^\/on-this-day\/\d{2}-\d{2}\/?$/.test(p) || /^\/teams\/[a-z0-9-]+(?:\/\d{4}(?:-\d{2})?)?\/?$/.test(p);
+            return p === '/' || /^\/(teams|players|rankings|time-machine|on-this-day|scores)\/?$/.test(p) || /^\/on-this-day\/\d{2}-\d{2}\/?$/.test(p) || /^\/teams\/[a-z0-9-]+(?:\/\d{4}(?:-\d{2})?)?\/?$/.test(p);
         }
 
         // A team PROFILE route (not a season page): its first render wants the
@@ -561,7 +561,7 @@
             if (window.location.hash) return false;
             const path = window.location.pathname;
             // Section forever URLs: /rankings, /time-machine, /players, /rivalries, …
-            const sec = path.match(/^\/(rankings|time-machine|players|rivalries|teams|coaches|bracket|upsets|classics|champions|blue-blood-index)\/?$/);
+            const sec = path.match(/^\/(rankings|time-machine|players|rivalries|teams|coaches|bracket|upsets|classics|champions|blue-blood-index|scores)\/?$/);
             if (sec) {
                 _skipHashUpdate = true;
                 try {
@@ -633,7 +633,8 @@
             try {
                 if (m[2]) {
                     switchView('seasonPage', true);
-                    renderSeasonPage(m[1], m[2]);
+                    const focus = new URLSearchParams(window.location.search).get('g');
+                    renderSeasonPage(m[1], m[2], /^\d{4}-\d{2}-\d{2}$/.test(focus || '') ? focus : null);
                 } else {
                     openProfile(team, true);
                 }
@@ -836,8 +837,8 @@
             el.innerHTML = `<div class="chart-loading">Loading ${label}…</div>`;
             const data = await loadOtdData();
             const items = ((data && data[mmdd]) || []).slice().sort((a, b) => (b.sig || 0) - (a.sig || 0)).slice(0, 25);
-            const typeWord = { upset: 'UPSET', blowout: 'BLOWOUT', ot: 'OVERTIME', championship: 'CHAMPIONSHIP', high_score: 'SCORING' };
-            const typeColor = { upset: 'var(--rust)', championship: 'var(--gold-deep)', ot: 'var(--navy-soft)', blowout: 'var(--ink-muted)', high_score: 'var(--moss)' };
+            const typeWord = { upset: 'UPSET', blowout: 'BLOWOUT', ot: 'OVERTIME', championship: 'NATIONAL CHAMPIONSHIP', high_score: 'SCORING', tournament: 'NCAA TOURNAMENT', ranked: 'TOP-25 SHOWDOWN', rivalry: 'RIVALRY' };
+            const typeColor = { upset: 'var(--rust)', championship: 'var(--gold-deep)', tournament: 'var(--gold-deep)', ranked: 'var(--navy)', rivalry: 'var(--rust)', ot: 'var(--navy-soft)', blowout: 'var(--ink-muted)', high_score: 'var(--moss)' };
             const prev = otdShift(mmdd, -1), next = otdShift(mmdd, 1);
             const nav = `<div style="display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap; margin: 0 0 18px;">
                     <a class="tm-share-btn" href="#on-this-day/${prev}" style="text-decoration:none;">← ${otdLabel(prev)}</a>
@@ -851,13 +852,15 @@
                 const wt = w && allTeamsData.find(t => t.espnId === String(w.espnId));
                 const lt = l && allTeamsData.find(t => t.espnId === String(l.espnId));
                 const logo = (t) => t ? `<img src="${getLogoUrl(t.espnId, 80)}" alt="" style="width:40px;height:40px;object-fit:contain;" onerror="this.style.display='none'">` : '';
+                const gameHref = wt ? `#season/${teamSlug(wt.name)}/${it.season || season}/g/${it.date}` : '';
                 return `<div class="ds-card-bordered" style="padding:18px 22px; display:flex; gap:16px; align-items:flex-start; background:var(--paper);">
                         <div style="display:flex; flex-direction:column; gap:6px; align-items:center; flex-shrink:0;">${logo(wt)}${logo(lt)}</div>
                         <div style="flex:1; min-width:0;">
-                            <div class="label-mono" style="color:${typeColor[it.type] || 'var(--ink-muted)'};">${year} · ${typeWord[it.type] || (it.type || '').toUpperCase()}${it.score ? ' · ' + escapeHtml(it.score) : ''}</div>
-                            <div class="h-slab" style="font-size:19px; color:var(--navy); margin-top:4px; line-height:1.3;">${escapeHtml(headline)}</div>
+                            <div class="label-mono" style="color:${typeColor[it.type] || 'var(--ink-muted)'};">${year} · ${typeWord[it.type] || (it.type || '').toUpperCase()}${it.round && it.type === 'tournament' ? ' · ' + escapeHtml(String(it.round).toUpperCase()) : ''}${it.score ? ' · ' + escapeHtml(it.score) : ''}</div>
+                            <div class="h-slab" style="font-size:19px; color:var(--navy); margin-top:4px; line-height:1.3;">${gameHref ? `<a href="${gameHref}" style="color:inherit; text-decoration:none; border-bottom:2px solid var(--gold-brand);" title="${it.hasBox ? 'Open the box score' : 'Open this game in the season log'}">${escapeHtml(headline)}</a>` : escapeHtml(headline)}</div>
                             <div style="margin-top:8px; display:flex; gap:14px; flex-wrap:wrap; font-size:13px;">
-                                ${wt ? `<a href="#season/${teamSlug(wt.name)}/${season}" style="color:var(--navy); font-weight:600;">${escapeHtml(wt.name)} ${season} season →</a>` : ''}
+                                ${gameHref ? `<a href="${gameHref}" style="color:var(--rust); font-weight:600;">${it.hasBox ? 'Box score →' : 'Game log →'}</a>` : ''}
+                                ${wt ? `<a href="#season/${teamSlug(wt.name)}/${season}" style="color:var(--navy); font-weight:600;">${escapeHtml(wt.name)} ${season} season</a>` : ''}
                                 ${lt ? `<a href="#team/${teamSlug(lt.name)}" style="color:var(--ink-muted);">${escapeHtml(lt.name)}</a>` : ''}
                             </div>
                         </div>
@@ -901,7 +904,12 @@
                         body = body.replace(t.name, '{' + t.name + '|' + slug + '|' + t.espnId + '}');
                     }
                 }
-                const text = 'On ' + monthNames[month] + ' ' + day + ', <span class="otd-year">' + year + '</span>: ' + body;
+                let text = 'On ' + monthNames[month] + ' ' + day + ', <span class="otd-year">' + year + '</span>: ' + body;
+                const w = (e.teams || [])[0];
+                const wt = w && allTeamsData.find(t => t.espnId === String(w.espnId));
+                if (wt && e.season) {
+                    text += ' <a class="otd-team-link" href="#season/' + teamSlug(wt.name) + '/' + e.season + '/g/' + e.date + '" style="white-space:nowrap;">' + (e.hasBox ? 'Box score →' : 'Game log →') + '</a>';
+                }
                 return { month, day, year, text, score: e.sig || 25 };
             }).filter(f => f.year >= 1950).sort((a, b) => b.score - a.score).slice(0, 10);
         }
@@ -1126,7 +1134,7 @@
                 const mm = String(et.getMonth() + 1).padStart(2, '0');
                 const dd = String(et.getDate()).padStart(2, '0');
                 const dateStr = `${yyyy}${mm}${dd}`;
-                const resp = await fetch(`https://site.api.espn.com/apis/site/v2/sports/basketball/mens-college-basketball/scoreboard?dates=${dateStr}&groups=100&limit=200`);
+                const resp = await fetch(`https://site.api.espn.com/apis/site/v2/sports/basketball/mens-college-basketball/scoreboard?dates=${dateStr}&groups=50&limit=300`);
                 if (!resp.ok) return _sharedScoreboard;
                 _sharedScoreboard = await resp.json();
                 _sharedScoreboardTime = Date.now();
@@ -1943,8 +1951,9 @@
                 try {
                     const homeView = document.getElementById('home');
                     if (homeView && homeView.style.display !== 'none') {
-                        renderTodaysGames();
+                        renderGameOfDay();
                     }
+                    if (currentView === 'scores') renderScoresPage();
                 } catch(e) {}
             }
 
@@ -2731,6 +2740,12 @@
                 _skipHashUpdate = false;
                 return;
             }
+            // #scores — today's live scoreboard
+            if (hash === '#scores') {
+                switchView('scores', true);
+                _skipHashUpdate = false;
+                return;
+            }
 
             // #on-this-day or #on-this-day/MM-DD
             const otdHash = hash.match(/^#on-this-day(?:\/(\d{2}-\d{2}))?$/);
@@ -2771,10 +2786,10 @@
             }
 
             // #season/{slug}/{year} — single-season page (year like "1988-89")
-            const seasonMatch = hash.match(/^#season\/([a-z0-9-]+)\/(\d{4}(?:-\d{2})?)$/);
+            const seasonMatch = hash.match(/^#season\/([a-z0-9-]+)\/(\d{4}(?:-\d{2})?)(?:\/g\/(\d{4}-\d{2}-\d{2}))?$/);
             if (seasonMatch) {
                 switchView('seasonPage', true);
-                renderSeasonPage(seasonMatch[1], seasonMatch[2]);
+                renderSeasonPage(seasonMatch[1], seasonMatch[2], seasonMatch[3] || null);
                 _skipHashUpdate = false;
                 return;
             }
@@ -3310,7 +3325,7 @@
 
             // Views that read the full datasets wait for them (the view is
             // already active, so the switch feels instant; content follows).
-            const FAST_VIEWS = new Set(['home', 'teams', 'profile', 'seasonPage', 'players', 'rankings', 'onThisDay', 'blueblood']);
+            const FAST_VIEWS = new Set(['home', 'teams', 'profile', 'seasonPage', 'players', 'rankings', 'onThisDay', 'blueblood', 'scores']);
             if (!_allDataLoaded && !FAST_VIEWS.has(view)) {
                 startBackgroundLoads();
                 ensureAllLoads().then(() => { if (currentView === view) switchView(view, true); });
@@ -3357,6 +3372,9 @@
             } else if (view === 'championshipRun') {
                 if (bracketRefreshInterval) clearInterval(bracketRefreshInterval);
             } else if (view === 'seasonPage') {
+                if (bracketRefreshInterval) clearInterval(bracketRefreshInterval);
+            } else if (view === 'scores') {
+                renderScoresPage();
                 if (bracketRefreshInterval) clearInterval(bracketRefreshInterval);
             } else if (view === 'rivalries') {
                 renderRivalries();
@@ -3718,8 +3736,222 @@
             try { renderPopularPrograms(); } catch(e) { console.error('AP Top 25 error:', e); }
             try { renderWinsLeaders(); } catch(e) { console.error('Leaders error:', e); }
             try { renderTrendingMatchups(); } catch(e) { console.error('Trending matchups error:', e); }
+            try { renderGameOfDay(); } catch(e) { console.error('Game of the day error:', e); }
             try { renderTmDaily(); } catch(e) { console.error('Matchup of the day error:', e); }
             try { renderOtdKicker(); } catch(e) { console.error('OTD kicker error:', e); }
+        }
+
+        // ===== Games of the Day + live scoreboard =====
+        // One shared ESPN scoreboard (groups=50 = every Division I game today)
+        // feeds the homepage strip and the /scores page. Juice = AP ranks first,
+        // then program weight, then whatever is on right now. Off-season, or
+        // on a day with no D-I games, the Time Machine matchup takes the slot.
+        function gameWeight(e) {
+            const c = e.competitions && e.competitions[0];
+            if (!c || !Array.isArray(c.competitors)) return -1;
+            let rankPts = 0, programPts = 0, s = 0;
+            const ranks = c.competitors.map(x => (x.curatedRank && x.curatedRank.current) || 99);
+            ranks.forEach(r => { if (r <= 25) rankPts += 26 - r; });
+            if (ranks.every(r => r <= 25)) rankPts += 15;
+            c.competitors.forEach(x => {
+                const t = allTeamsData.find(t => String(t.espnId) === String(x.team && x.team.id));
+                if (t) programPts += Math.min(8, (t.allTimeW || 0) / 300);
+            });
+            s = rankPts + programPts;
+            const st = c.status && c.status.type && c.status.type.state;
+            if (st === 'in') s += 3;
+            if (c.neutralSite) s += 1;
+            // "Juice": an AP-ranked team is involved, or two heavyweight
+            // programs (roughly 1,800+ all-time wins each) are meeting.
+            e._juice = rankPts > 0 || programPts >= 12;
+            return s;
+        }
+
+        function rankedGames(sb) {
+            const evs = (sb && sb.events) || [];
+            return evs.map(e => ({ e, w: gameWeight(e), juice: !!e._juice })).filter(x => x.w >= 0).sort((a, b) => b.w - a.w);
+        }
+
+        // Normalize one ESPN event into the bits every card needs.
+        function gameBits(e) {
+            const c = e.competitions[0];
+            const st = (c.status && c.status.type) || {};
+            const state = st.state || 'pre';
+            const comps = c.competitors || [];
+            const winner = comps.find(x => x.winner);
+            const side = (x) => {
+                const id = String((x && x.team && x.team.id) || '');
+                const t = allTeamsData.find(t => String(t.espnId) === id) || null;
+                const r = x && x.curatedRank && x.curatedRank.current;
+                return {
+                    id, t,
+                    name: t ? t.name : ((x && x.team && (x.team.displayName || x.team.shortDisplayName)) || 'TBD'),
+                    short: (x && x.team && (x.team.location || x.team.shortDisplayName)) || (t ? t.name : 'TBD'),
+                    rank: r && r <= 25 ? r : null,
+                    rec: (x && x.records && x.records[0] && x.records[0].summary) || '',
+                    score: x && x.score != null ? String(x.score) : '',
+                    won: !!(state === 'post' && winner && x === winner),
+                };
+            };
+            const home = comps.find(x => x.homeAway === 'home') || comps[0] || {};
+            const away = comps.find(x => x.homeAway === 'away') || comps[1] || {};
+            const tip = new Date(e.date);
+            const per = (c.status && c.status.period) || 0;
+            const links = e.links || [];
+            return {
+                e, c, state, per,
+                away: side(away), home: side(home),
+                neutral: !!c.neutralSite,
+                venue: (c.venue && c.venue.fullName) || '',
+                tv: (c.broadcasts || []).map(b => (b.names || []).join('/')).filter(Boolean).join(', '),
+                tipLabel: isNaN(tip) ? '' : tip.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', timeZoneName: 'short' }),
+                tipMs: isNaN(tip) ? 0 : tip.getTime(),
+                statusText: state === 'in' ? (st.shortDetail || st.detail || 'LIVE')
+                    : state === 'post' ? ('FINAL' + (per > 3 ? ` / ${per - 2}OT` : per === 3 ? ' / OT' : ''))
+                    : '',
+                espnLink: links.find(l => (l.rel || []).includes('boxscore')) || links.find(l => (l.rel || []).includes('summary')) || links[0] || null,
+            };
+        }
+
+        function seriesLine(a, b) {
+            if (!H2H_DATA || !a.t || !b.t) return '';
+            const r = H2H_DATA[String(a.t.espnId)] && H2H_DATA[String(a.t.espnId)][String(b.t.espnId)];
+            if (!r || !r.g) return '';
+            const lead = r.w > r.l ? a.t : r.l > r.w ? b.t : null;
+            return lead ? `All-time series: ${escapeHtml(lead.name)} leads ${Math.max(r.w, r.l)}-${Math.min(r.w, r.l)}` : `All-time series tied ${r.w}-${r.l}`;
+        }
+
+        function teamLabel(s, big) {
+            const nameHtml = s.t ? `<a href="#team/${teamSlug(s.t.name)}" style="color:inherit; text-decoration:none;">${escapeHtml(big ? s.name : s.short)}</a>` : escapeHtml(big ? s.name : s.short);
+            return `${s.rank ? `<span style="color:var(--rust);">No. ${s.rank}</span> ` : ''}${nameHtml}`;
+        }
+
+        // Compact card: homepage strip and the scoreboard page.
+        function gameCardHtml(g) {
+            const live = g.state === 'in';
+            const status = g.state === 'pre'
+                ? `${escapeHtml(g.tipLabel)}${g.tv ? ' · ' + escapeHtml(g.tv) : ''}`
+                : `<span style="color:${live ? 'var(--rust)' : 'var(--ink-muted)'};">${live ? '<span class="god-live-dot"></span>' : ''}${escapeHtml(g.statusText)}</span>`;
+            const line = (s) => `
+                <div style="display:flex; align-items:center; gap:8px; padding:3px 0;">
+                    ${s.id ? `<img src="${getLogoUrl(s.id, 80)}" alt="" style="width:22px;height:22px;object-fit:contain;flex-shrink:0;" onerror="this.style.display='none'">` : ''}
+                    <span class="h-slab" style="font-size:15px; color:${g.state === 'post' && !s.won ? 'var(--ink-muted)' : 'var(--navy)'}; flex:1; min-width:0; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">${teamLabel(s, false)}</span>
+                    <span class="label-mono" style="color:var(--ink-faint); font-size:10px;">${escapeHtml(s.rec)}</span>
+                    ${g.state !== 'pre' ? `<span class="numerals" style="font-size:20px; font-weight:700; min-width:30px; text-align:right; color:${g.state === 'post' && !s.won ? 'var(--ink-faint)' : 'var(--navy)'};">${escapeHtml(s.score)}</span>` : ''}
+                </div>`;
+            const settle = g.away.t && g.home.t ? `<a href="#compare/${teamSlug(g.away.t.name)}/${teamSlug(g.home.t.name)}" class="label-mono" style="color:var(--navy); text-decoration:none; border-bottom:1px solid var(--gold-brand);">SETTLE IT →</a>` : '';
+            const box = g.espnLink && g.state !== 'pre' ? `<a href="${escapeHtml(g.espnLink.href)}" target="_blank" rel="noopener" class="label-mono" style="color:var(--ink-muted); text-decoration:none;">${live ? 'LIVE BOX ↗' : 'BOX ↗'}</a>` : '';
+            return `
+                <div style="background:var(--paper); border:1px solid ${live ? 'var(--rust)' : 'var(--rule-soft)'}; border-radius:var(--r-md); padding:12px 14px; display:flex; flex-direction:column; gap:4px;">
+                    ${line(g.away)}
+                    ${line(g.home)}
+                    <div style="display:flex; justify-content:space-between; align-items:center; gap:10px; margin-top:4px; flex-wrap:wrap;">
+                        <span class="label-mono" style="color:var(--ink-muted);">${status}${g.neutral && g.state === 'pre' ? ' · NEUTRAL' : ''}</span>
+                        <span style="display:flex; gap:12px;">${box}${settle}</span>
+                    </div>
+                </div>`;
+        }
+
+        // Featured card: the single biggest game, full size.
+        function featuredGameHtml(g) {
+            let center;
+            if (g.state === 'in') {
+                center = `<div class="h-display" style="font-size:22px; color:var(--rust);"><span class="god-live-dot"></span>${escapeHtml(g.statusText)}</div>`;
+            } else if (g.state === 'post') {
+                center = `<div class="h-display" style="font-size:26px; color:var(--navy);">${escapeHtml(g.statusText)}</div>`;
+            } else {
+                center = `<div class="h-display" style="font-size:30px; color:var(--rust);">VS</div><div class="label-mono" style="color:var(--ink-muted); margin-top:4px;">${escapeHtml(g.tipLabel)}${g.tv ? ' · ' + escapeHtml(g.tv) : ''}</div>`;
+            }
+            const side = (s, isHome) => `
+                <div style="flex:1; min-width:180px; text-align:center;">
+                    ${s.id ? `<img src="${getLogoUrl(s.id, 200)}" alt="" style="width:72px;height:72px;object-fit:contain;" onerror="this.style.display='none'">` : ''}
+                    <div class="h-slab" style="font-size:20px; color:var(--navy); margin-top:6px;">${teamLabel(s, true)}</div>
+                    <div class="label-mono" style="color:var(--ink-muted); margin-top:2px;">${escapeHtml(s.rec)}${isHome && !g.neutral ? ' · HOME' : ''}</div>
+                    ${g.state !== 'pre' ? `<div class="numerals" style="font-size:44px; font-weight:700; margin-top:6px; color:${g.state === 'post' && !s.won ? 'var(--ink-faint)' : 'var(--navy)'};">${escapeHtml(s.score)}</div>` : ''}
+                </div>`;
+            const series = seriesLine(g.away, g.home);
+            return `
+                <div style="background:var(--paper); border:1px solid var(--rule-soft); border-radius:var(--r-md); padding:22px 24px; display:flex; align-items:center; gap:16px; flex-wrap:wrap;">
+                    ${side(g.away, false)}
+                    <div style="text-align:center; min-width:120px;">${center}</div>
+                    ${side(g.home, true)}
+                    <div style="flex-basis:100%; display:flex; justify-content:center; align-items:center; gap:18px; margin-top:6px; flex-wrap:wrap;">
+                        ${series ? `<span class="label-mono" style="color:var(--ink-muted);">${series}</span>` : ''}
+                        ${g.venue && g.state === 'pre' ? `<span class="label-mono" style="color:var(--ink-muted);">${escapeHtml(g.venue)}</span>` : ''}
+                    </div>
+                    <div style="flex-basis:100%; display:flex; justify-content:center; gap:12px; margin-top:2px; flex-wrap:wrap;">
+                        ${g.away.t && g.home.t ? `<a class="btn" href="#compare/${teamSlug(g.away.t.name)}/${teamSlug(g.home.t.name)}" style="padding:10px 22px; text-decoration:none;">SETTLE IT: ${escapeHtml(g.away.short.toUpperCase())} VS ${escapeHtml(g.home.short.toUpperCase())} →</a>` : ''}
+                        ${g.espnLink && g.state !== 'pre' ? `<a class="tm-share-btn" href="${escapeHtml(g.espnLink.href)}" target="_blank" rel="noopener" style="text-decoration:none;">${g.state === 'in' ? 'Live box score' : 'Box score'} ↗</a>` : ''}
+                    </div>
+                </div>`;
+        }
+
+        async function renderGameOfDay() {
+            const section = document.getElementById('gameOfDaySection');
+            const el = document.getElementById('gameOfDayContent');
+            if (!section || !el) return;
+            const month = new Date().getMonth();
+            let ranked = [];
+            if (!(month >= 4 && month <= 9)) {
+                try { ranked = rankedGames(await getScoreboard()); } catch (e) { ranked = []; }
+            }
+            if (!ranked.length) {
+                window._gameOfDayActive = false;
+                section.style.display = 'none';
+                renderTmDaily();
+                return;
+            }
+            if (currentView !== 'home') return;
+            window._gameOfDayActive = true;
+            const featured = gameBits(ranked[0].e);
+            const kickerEl = document.getElementById('gameOfDayKicker');
+            const anyLive = ranked.some(x => (x.e.competitions[0].status.type || {}).state === 'in');
+            if (kickerEl) kickerEl.innerHTML = anyLive ? '<span class="god-live-dot"></span>LIVE' : featured.state === 'post' ? '● FINAL' : '● TONIGHT';
+            el.innerHTML = featuredGameHtml(featured);
+            const more = document.getElementById('gameOfDayMore');
+            if (more) {
+                const rest = ranked.slice(1).filter(x => x.juice).slice(0, 4);
+                more.innerHTML = rest.length
+                    ? `<div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(230px, 1fr)); gap:10px;">${rest.map(x => gameCardHtml(gameBits(x.e))).join('')}</div>`
+                    : '';
+            }
+            section.style.display = '';
+            const tm = document.getElementById('tmDailySection');
+            if (tm) tm.style.display = 'none';
+        }
+
+        // /scores — every Division I game today, live, refreshed with the ticker.
+        async function renderScoresPage() {
+            const el = document.getElementById('scoresContent');
+            if (!el) return;
+            document.title = "Today's College Basketball Scores — Every Division I Game, Live — Hoopsipedia";
+            if (!el.innerHTML.trim()) el.innerHTML = '<div class="chart-loading">Loading today\'s games…</div>';
+            let sb = null;
+            try { sb = await getScoreboard(); } catch (e) { sb = null; }
+            if (currentView !== 'scores') return;
+            const today = new Date().toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' });
+            const ranked = rankedGames(sb);
+            const groups = { in: [], post: [], pre: [] };
+            ranked.forEach(x => { const g = gameBits(x.e); (groups[g.state] || groups.pre).push({ g, w: x.w }); });
+            groups.pre.sort((a, b) => (a.g.tipMs - b.g.tipMs) || (b.w - a.w));
+            const block = (title, color, items) => items.length ? `
+                <div style="margin-top:26px;">
+                    <div style="display:flex; align-items:baseline; gap:12px; border-bottom:3px solid var(--navy); padding-bottom:8px; margin-bottom:12px;">
+                        <span class="label-mono" style="color:${color};">${title}</span>
+                        <span class="label-mono" style="color:var(--ink-faint);">${items.length} game${items.length === 1 ? '' : 's'}</span>
+                    </div>
+                    <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(290px, 1fr)); gap:10px;">${items.map(x => gameCardHtml(x.g)).join('')}</div>
+                </div>` : '';
+            el.innerHTML = `
+                <div style="max-width: 1100px; margin: 0 auto; padding: 8px 0 40px;">
+                    <div class="label-mono" style="color:var(--rust);">● LIVE SCOREBOARD</div>
+                    <h1 class="h-display" style="font-size: clamp(36px, 6vw, 64px); color:var(--navy); margin: 6px 0 6px; line-height:1;">TODAY'S GAMES</h1>
+                    <div class="label-mono" style="color:var(--ink-muted); margin-bottom:6px;">${escapeHtml(today)} · every Division I game · updates every 30 seconds · ranks are the AP poll</div>
+                    ${ranked.length ? '' : `<div class="ds-card-bordered" style="padding:28px; text-align:center; color:var(--ink-muted); margin-top:20px;">No Division I games on the schedule today.${(new Date().getMonth() >= 4 && new Date().getMonth() <= 9) ? ' The season tips off in November.' : ''} <a href="#time-machine" style="color:var(--navy); font-weight:600;">Build a Time Machine matchup instead →</a></div>`}
+                    ${block('<span class="god-live-dot"></span>LIVE NOW', 'var(--rust)', groups.in)}
+                    ${block('● UPCOMING', 'var(--navy)', groups.pre)}
+                    ${block('● FINAL', 'var(--ink-muted)', groups.post)}
+                </div>`;
         }
 
         // ===== Time Machine: matchup of the day =====
@@ -3729,6 +3961,7 @@
             const section = document.getElementById('tmDailySection');
             const el = document.getElementById('tmDailyContent');
             if (!section || !el) return;
+            if (window._gameOfDayActive) { section.style.display = 'none'; return; }
             if (!TIME_MACHINE_DATA || !TIME_MACHINE_DATA.matchups || !TIME_MACHINE_DATA.matchups.length) {
                 whenData('timeMachine').then(() => { if (currentView === 'home' && TIME_MACHINE_DATA) renderTmDaily(); });
                 return;
@@ -9437,7 +9670,7 @@
             return _srSlugIndex;
         }
 
-        async function renderSeasonPage(slug, seasonStr) {
+        async function renderSeasonPage(slug, seasonStr, focusDate) {
             const container = document.getElementById('seasonPageContent');
             if (!container) return;
             const reqId = ++_seasonPageReq;
@@ -9546,6 +9779,7 @@
                 if (g.vacated) anyVacated = true;
 
                 _seasonGameInfo[uid] = {
+                    date: g.date,
                     eventId: espnOk ? eventId : null,
                     tournamentYear: startYear + 1,
                     teamName: team.name, oppName: oppName,
@@ -9654,6 +9888,21 @@
                 ${scheduleHTML}
                 ${navHTML}
             `;
+
+            // Deep link from On This Day (#season/{slug}/{season}/g/{date} or
+            // ?g={date}): scroll to that game and open its box score.
+            if (focusDate) {
+                const uid = Object.keys(_seasonGameInfo).find(k => _seasonGameInfo[k].date === focusDate);
+                const row = uid && document.getElementById('season-row-' + uid);
+                if (row) {
+                    row.style.outline = '2px solid var(--rust)';
+                    row.style.outlineOffset = '-2px';
+                    setTimeout(() => {
+                        row.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        if (row.classList.contains('expandable')) toggleSeasonBoxScore(uid);
+                    }, 80);
+                }
+            }
         }
 
         // Expand/collapse a season-page box score row — same animation pattern
@@ -11719,7 +11968,7 @@
                 <section style="padding:0 0 20px;">
                   <div style="max-width:1280px;margin:0 auto;">
                     <details class="players-coverage-note">
-                      <summary><span class="label-mono" style="color:var(--rust);">Not career statistics</span> <span style="font-family:var(--font-serif);color:var(--ink-soft);">— only games in our box-score archive count, and coverage varies by program (median ${medianCov}%). Rankings are per game for that reason.</span> <span class="players-coverage-more">How coverage works ▾</span></summary>
+                      <summary><span class="label-mono" style="color:var(--rust);">Not career statistics</span> <span style="font-family:var(--font-serif);color:var(--ink-soft);">— only games in our box-score archive count, and coverage varies by program. Rankings are per game for that reason.</span> <span class="players-coverage-more">How coverage works ▾</span></summary>
                       <div class="upsets-fun-fact" style="border-left-color:#B5342E;margin-top:10px;">
                       <div class="upsets-fun-fact-icon">!</div>
                       <div>

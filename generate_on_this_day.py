@@ -9,11 +9,22 @@ sr_boxscores.json URL dates, and writes on_this_day.json keyed by
 events sorted by a significance score.
 
 Event types (significance):
-  championship  100        last game of a team's NCY-flagged title season
+  championship  101        title game, from the champion's season row (v2) or
+                100        the NCY-flagged last win of a title season (v1 fallback)
+  tournament    50-99      any NCAA Tournament game, dated from the LOSER's
+                           season row (ncaaTourney round) + the winner's row
+                           one round deeper + the mirror log row; seeds shown
   upset         70+2*gap   NCAA first-round seed upsets from upset_history
-  ot            30+8*nOT   multi-overtime games
-  high_score    <=72       highest combined-score games
-  blowout       <=68       biggest margins
+  ranked        55-90      both teams in that week's AP Top 25
+  upset         50-85      unranked team beats an AP-ranked team
+  rivalry       48-56      one of the 40 rivalries in rivalries.json
+  ot            36-70      overtime games (single OT counts now)
+  high_score    <=42       highest combined-score games (filler)
+  blowout       <=40       biggest margins (filler, max 3 per day)
+Modifiers: rivalry +12, overtime +6/+12, AP-ranked team involved +4.
+Every event carries the winner's season label and hasBox (an ESPN event id
+or a Sports-Reference box score exists for that exact game), so the UI can
+link the headline straight to the box score.
 
 ACCURACY RULE: every fact in a headline comes directly from a data
 field; no embellishment. See OTD_NOTES.md for heuristics and risks.
@@ -22,6 +33,7 @@ Usage: python3 generate_on_this_day.py
 """
 
 import datetime
+import glob
 import json
 import os
 import re
@@ -38,7 +50,14 @@ UPSETS_JSON = 'upset_history.json'
 SR_BOX_JSON = 'sr_boxscores.json'
 OUT_JSON = 'on_this_day.json'
 
-MAX_EVENTS = 8
+MAX_EVENTS = 10
+MAX_FILLERS_PER_DAY = 3   # blowout + high_score
+AP_JSON = 'ap_polls.json'
+RIVALRIES_JSON = 'rivalries.json'
+SEASONS_DIR = 'seasons'
+GAME_IDS_DIR = 'game_ids'
+BOX_DIR = 'boxscores'
+BOX_INDEX_JSON = 'boxscore_match_index.json'
 # Championship-game search window (earliest NCAA final in our era:
 # 1953-03-18; latest modern finals: ~April 8).
 CHAMP_WINDOW = ((3, 15), (4, 15))
@@ -194,8 +213,8 @@ def team_name(teams, tid, fallback=None):
 
 
 def make_event(date, etype, headline, w_id, w_name, l_id, l_name,
-               w_pts, l_pts, sig):
-    return {
+               w_pts, l_pts, sig, **extra):
+    ev = {
         'date': date,
         'type': etype,
         'headline': headline,
@@ -206,6 +225,8 @@ def make_event(date, etype, headline, w_id, w_name, l_id, l_name,
         'score': '{}-{}'.format(w_pts, l_pts),
         'sig': round(sig, 1),
     }
+    ev.update(extra)
+    return ev
 
 
 def detect_championships(teams, per_team, stats):
@@ -396,48 +417,376 @@ def article(n):
     return 'an' if (80 <= n <= 89 or n in (8, 11, 18)) else 'a'
 
 
-def ot_phrase(ot):
-    if ot == 'OT':
-        return 'overtime'
-    return '{} overtimes'.format(ot[:-2])
+def ot_count(ot):
+    if not ot:
+        return 0
+    return 1 if ot == 'OT' else int(ot[:-2])
 
 
-def score_regular_games(teams, canonical):
-    """Score every canonical game on the high_score / blowout / ot axes
-    and emit one event (its best axis) when any threshold is met."""
+def ot_suffix(n):
+    return {0: '', 1: ' in overtime', 2: ' in double overtime',
+            3: ' in triple overtime'}.get(n, ' in {} overtimes'.format(n))
+
+
+# ── AP poll ranks at a given date ──────────────────────────────────────
+def load_ap_polls():
+    """season end-year -> [(iso_date, {tid: rank}), ...] sorted by date.
+    Week labels are 'Pre', 'Conf' (skipped) or 'M/D' (poll release date;
+    Sep-Dec belong to the season's first calendar year)."""
+    out = {}
+    for yr, doc in load_json(AP_JSON).items():
+        try:
+            end = int(yr)
+        except ValueError:
+            continue
+        polls = []
+        for w in doc.get('weeks', []):
+            label = str(w.get('label', ''))
+            ranks = {str(r['id']): int(r['rank'])
+                     for r in w.get('ranks', []) if r.get('id')}
+            if not ranks:
+                continue
+            if label == 'Pre':
+                d = datetime.date(end - 1, 10, 1)
+            else:
+                m = re.match(r'^(\d{1,2})/(\d{1,2})$', label)
+                if not m:
+                    continue
+                mo, dy = int(m.group(1)), int(m.group(2))
+                try:
+                    d = datetime.date(end - 1 if mo >= 9 else end, mo, dy)
+                except ValueError:
+                    continue
+            polls.append((d.isoformat(), ranks))
+        polls.sort()
+        out[end] = polls
+    return out
+
+
+def rank_at(ap, date_str, tid):
+    """AP rank of tid in the most recent poll on or before date_str."""
+    polls = ap.get(season_of(date_str))
+    if not polls:
+        return None
+    cur = None
+    for d, ranks in polls:
+        if d <= date_str:
+            cur = ranks
+        else:
+            break
+    return cur.get(tid) if cur else None
+
+
+def load_rivalries():
+    out = {}
+    for r in load_json(RIVALRIES_JSON):
+        name = r.get('name') or ''
+        if r.get('team1Id') and r.get('team2Id') and name:
+            out[frozenset((str(r['team1Id']), str(r['team2Id'])))] = name
+    return out
+
+
+def rivalry_phrase(name):
+    """' in the Tobacco Road Rivalry' / ' in Bedlam'; plain 'A vs B' names
+    (no nickname) add nothing to the headline."""
+    if ' vs ' in name:
+        return ''
+    if name in ('Bedlam', "Braggin' Rights"):
+        return ' in ' + name
+    return ' in the ' + re.sub(r'^The\s+', '', name).strip()
+
+
+# ── NCAA Tournament games from the season rows ─────────────────────────
+ROUND_DEPTH = {
+    'Opening Round': 0, 'First Four': 0, 'First Round': 1, 'Second Round': 2,
+    'Third Round': 3, 'Regional Semifinal': 4, 'Regional Final': 5,
+    'Regional Final (Final Four)': 5, 'National Semifinal': 6,
+    'National Final': 7,
+}
+ROUND_LABEL = {
+    'First Round': 'first round', 'Second Round': 'second round',
+    'Third Round': 'second round', 'Regional Semifinal': 'Sweet 16',
+    'Regional Final': 'Elite Eight', 'Regional Final (Final Four)': 'Elite Eight',
+    'National Semifinal': 'Final Four',
+    'National Final': 'national championship game',
+}
+ROUND_SIG = {
+    'First Four': 50, 'first round': 58, 'second round': 66, 'Sweet 16': 78,
+    'Elite Eight': 86, 'Final Four': 93, 'national championship game': 101,
+}
+
+
+def round_label(rnd, end_year):
+    if rnd in ('Opening Round', 'First Four'):
+        return 'First Four'
+    if 2011 <= end_year <= 2015:
+        # Sports-Reference labels for the 68-team era before 2016: the
+        # First Four was 'First Round', the round of 64 'Second Round'
+        # and the round of 32 'Third Round'.
+        return {'First Round': 'First Four', 'Second Round': 'first round',
+                'Third Round': 'second round'}.get(rnd) or ROUND_LABEL.get(rnd)
+    return ROUND_LABEL.get(rnd)
+
+
+def round_phrase(label):
+    if label in ('first round', 'second round'):
+        return 'in the NCAA Tournament ' + label
+    return 'in the ' + label
+
+
+def load_tourney_rows(stats):
+    """(tid, season_end_year) -> {depth, round, won, seed, vacated} from
+    the ncaaTourney field of seasons/{tid}.json rows."""
+    out = {}
+    for path in glob.glob(os.path.join(ROOT, SEASONS_DIR, '*.json')):
+        tid = os.path.basename(path)[:-5]
+        if tid == 'index':
+            continue
+        with open(path) as f:
+            doc = json.load(f)
+        rows = doc.get('seasons', []) if isinstance(doc, dict) else doc
+        for r in rows:
+            t = r.get('ncaaTourney')
+            y = str(r.get('year', ''))
+            if not t or not re.match(r'^\d{4}-\d{2}$', y):
+                continue
+            end = int(y[:4]) + 1
+            vac = t.endswith('*')
+            m = re.match(r'^(Won|Lost) NCAA Tournament (.+?)\*?$', t)
+            if not m:
+                continue
+            won = m.group(1) == 'Won'
+            rnd = m.group(2)
+            depth = 8 if won else ROUND_DEPTH.get(rnd)
+            if depth is None:
+                stats['tourney_round_unmapped'] += 1
+                continue
+            seed = r.get('seed')
+            try:
+                seed = int(seed) if seed not in (None, '') else None
+            except (TypeError, ValueError):
+                seed = None
+            out[(tid, end)] = {'depth': depth, 'round': rnd, 'won': won,
+                               'seed': seed, 'vacated': vac}
+    return out
+
+
+def seeded(seed, name):
+    return '({}) {}'.format(seed, name) if seed else name
+
+
+def detect_tournament_games(teams, per_team, trows, ap, stats):
+    """Every NCAA Tournament game we can prove: the LOSER's season row
+    names the round it lost in, so its last loss of that March/April is
+    that game. Accept only when the winner's own row is at least one round
+    deeper (or the title) and the winner's log carries the mirror row."""
+    events, keys = [], set()
+    for (tid, end), row in trows.items():
+        if row['won']:
+            continue
+        season = sorted((g for g in per_team.get(tid, [])
+                         if season_of(g['date']) == end),
+                        key=lambda g: g['date'], reverse=True)
+        # Consolation games (third-place, pre-1982) can follow the loss:
+        # look at the last two games, take the first that proves out.
+        for last in season[:2]:
+            if last['w'] or last['date'][5:7] not in ('03', '04'):
+                continue
+            opp = last.get('opp')
+            orow = trows.get((opp, end)) if opp else None
+            if not orow or orow['depth'] <= row['depth']:
+                stats['tourney_cross_check_failed'] += 1
+                continue
+            mirror = [g for g in per_team.get(opp, [])
+                      if g['date'] == last['date'] and g.get('opp') == tid
+                      and g['pts'] == last['opp_pts']
+                      and g['opp_pts'] == last['pts'] and g['w']]
+            if not mirror:
+                stats['tourney_mirror_missing'] += 1
+                continue
+            label = round_label(row['round'], end)
+            if not label:
+                continue
+            w_name, l_name = team_name(teams, opp), team_name(teams, tid)
+            if 'Unknown' in (w_name, l_name):
+                continue
+            w_pts, l_pts = last['opp_pts'], last['pts']
+            margin = w_pts - l_pts
+            ws, ls = orow['seed'], row['seed']
+            if ws and ls and ws - ls >= 4:
+                verb = 'stuns'
+            elif ws and ls and ws > ls:
+                verb = 'upsets'
+            elif margin <= 2:
+                verb = 'edges'
+            elif margin >= 25:
+                verb = 'routs'
+            else:
+                verb = 'beats'
+            n_ot = ot_count(last.get('ot', ''))
+            vac = (row['vacated'] or orow['vacated'] or last.get('vacated')
+                   or mirror[0].get('vacated'))
+            head = '{}: {} {} {} {}-{} {}{}{}'.format(
+                last['date'], seeded(ws, w_name), verb, seeded(ls, l_name),
+                w_pts, l_pts, round_phrase(label), ot_suffix(n_ot),
+                ' (later vacated)' if vac else '')
+            sig = ROUND_SIG[label]
+            if ws and ls and ws > ls:
+                sig += 2 * (ws - ls)
+            if n_ot:
+                sig += 6 * min(n_ot, 2)
+            rw, rl = rank_at(ap, last['date'], opp), rank_at(ap, last['date'], tid)
+            if rw or rl:
+                sig += 4
+            etype = 'championship' if label == 'national championship game' else 'tournament'
+            events.append(make_event(last['date'], etype, head, opp, w_name,
+                                     tid, l_name, w_pts, l_pts, sig,
+                                     round=label))
+            keys.add((last['date'],) + tuple(sorted((tid, opp))))
+            stats['tourney_events'] += 1
+            break
+    return events, keys
+
+
+def score_games(teams, canonical, ap, rivals, tourney_keys, stats):
+    """Score every non-tournament canonical game: AP-ranked matchups and
+    upsets, rivalry games, overtime, then the scoring/margin fillers."""
     events = []
-    for g in canonical.values():
-        total = g['w_pts'] + g['l_pts']
-        margin = g['w_pts'] - g['l_pts']
+    for key, g in canonical.items():
+        if key in tourney_keys:
+            continue
         w_name = team_name(teams, g['w_id'])
         l_name = team_name(teams, g['l_id'])
-        if w_name == 'Unknown' or l_name == 'Unknown':
+        if 'Unknown' in (w_name, l_name):
             continue
-        candidates = []
-        if g['ot'] and g['ot'] != 'OT':
-            n = int(g['ot'][:-2])
-            head = '{}: {} outlasts {} {}-{} in {}'.format(
-                g['date'], w_name, l_name, g['w_pts'], g['l_pts'],
-                ot_phrase(g['ot']))
-            candidates.append(('ot', 30 + 8 * n, head))
+        date = g['date']
+        rw, rl = rank_at(ap, date, g['w_id']), rank_at(ap, date, g['l_id'])
+        riv = rivals.get(frozenset((g['w_id'], g['l_id'])))
+        n_ot = ot_count(g['ot'])
+        total = g['w_pts'] + g['l_pts']
+        margin = g['w_pts'] - g['l_pts']
+        cands = []
+        if rw and rl:
+            cands.append(('ranked', 55 + (26 - min(rw, rl)) * 0.9
+                          + (26 - max(rw, rl)) * 0.5))
+        elif rl and not rw:
+            cands.append(('upset', 50 + (26 - rl) * 1.4))
+        if riv:
+            cands.append(('rivalry', 48 + (8 if margin <= 3 else 0)))
+        if n_ot:
+            cands.append(('ot', {1: 36, 2: 50, 3: 62}.get(n_ot, 70)))
         if total >= HIGH_SCORE_MIN_TOTAL:
-            head = '{}: {} outguns {} {}-{} in a {}-point shootout'.format(
-                g['date'], w_name, l_name, g['w_pts'], g['l_pts'], total)
-            candidates.append(('high_score',
-                               min(72, 30 + (total - HIGH_SCORE_MIN_TOTAL) * 0.6),
-                               head))
+            cands.append(('high_score',
+                          min(42, 25 + (total - HIGH_SCORE_MIN_TOTAL) * 0.4)))
         if margin >= BLOWOUT_MIN_MARGIN:
-            head = '{}: {} routs {} {}-{}, {} {}-point margin'.format(
-                g['date'], w_name, l_name, g['w_pts'], g['l_pts'],
-                article(margin), margin)
-            candidates.append(('blowout', min(68, 25 + margin * 0.5), head))
-        if not candidates:
+            cands.append(('blowout', min(40, 20 + margin * 0.4)))
+        if not cands:
             continue
-        etype, sig, head = max(candidates, key=lambda c: c[1])
-        events.append(make_event(g['date'], etype, head,
+        etype, sig = max(cands, key=lambda c: c[1])
+        if riv and etype != 'rivalry':
+            sig += 12
+        if n_ot and etype != 'ot':
+            sig += 6 * min(n_ot, 2)
+        if etype not in ('ranked', 'upset') and (rw or rl):
+            sig += 4
+
+        wn = 'No. {} {}'.format(rw, w_name) if rw else w_name
+        ln = 'No. {} {}'.format(rl, l_name) if rl else l_name
+        score = '{}-{}'.format(g['w_pts'], g['l_pts'])
+        if etype == 'ranked':
+            verb = 'edges' if margin <= 2 else ('routs' if margin >= 25 else 'beats')
+            head = '{} {} {} {}'.format(wn, verb, ln, score)
+        elif etype == 'upset':
+            verb = 'stuns' if rl <= 5 else 'upsets'
+            head = 'Unranked {} {} {} {}'.format(w_name, verb, ln, score)
+        elif etype == 'rivalry':
+            verb = 'edges' if margin <= 2 else ('routs' if margin >= 25 else 'beats')
+            head = '{} {} {} {}'.format(wn, verb, ln, score)
+        elif etype == 'ot':
+            head = '{} outlasts {} {}'.format(wn, ln, score)
+        elif etype == 'high_score':
+            head = '{} outguns {} {} in a {}-point shootout'.format(
+                wn, ln, score, total)
+        else:
+            head = '{} routs {} {}, {} {}-point margin'.format(
+                wn, ln, score, article(margin), margin)
+        if n_ot and etype != 'high_score':
+            head += ot_suffix(n_ot)
+        if riv:
+            head += rivalry_phrase(riv)
+        if g.get('vacated'):
+            head += ' (later vacated)'
+        events.append(make_event(date, etype, '{}: {}'.format(date, head),
                                  g['w_id'], w_name, g['l_id'], l_name,
                                  g['w_pts'], g['l_pts'], sig))
+        stats['type_' + etype] += 1
     return events
+
+
+# ── Box-score availability (so the headline can link to it) ───────────
+def bx_norm(s):
+    """Byte-identical to norm() in scripts/build_boxscore_match_index.py."""
+    s = str(s or '').lower().replace("'", '').replace('’', '').replace('&', '')
+    return re.sub(r'-{2,}', '-', re.sub(r'[^a-z0-9]+', '-', s)).strip('-')
+
+
+class BoxLocator(object):
+    def __init__(self):
+        self.names = load_json(BOX_INDEX_JSON).get('names', {})
+        self._gid = {}
+        self._box = {}
+
+    def _game_ids(self, tid):
+        if tid not in self._gid:
+            path = os.path.join(ROOT, GAME_IDS_DIR, '{}.json'.format(tid))
+            try:
+                with open(path) as f:
+                    self._gid[tid] = json.load(f)
+            except (IOError, ValueError):
+                self._gid[tid] = {}
+        return self._gid[tid]
+
+    def _boxes(self, year):
+        if year not in self._box:
+            path = os.path.join(ROOT, BOX_DIR, '{}.json'.format(year))
+            try:
+                with open(path) as f:
+                    self._box[year] = json.load(f)
+            except (IOError, ValueError):
+                self._box[year] = {}
+        return self._box[year]
+
+    def has_box(self, ev):
+        w, l = str(ev['teams'][0]['espnId']), str(ev['teams'][1]['espnId'])
+        date = ev['date']
+        w_pts, l_pts = (int(x) for x in ev['score'].split('-'))
+        if date >= '2002':
+            d0 = datetime.date.fromisoformat(date)
+            for e in self._game_ids(w).values():
+                if not e or not e.get('date'):
+                    continue
+                if {str(e.get('t1')), str(e.get('t2'))} != {w, l}:
+                    continue
+                try:
+                    dd = abs((datetime.date.fromisoformat(e['date']) - d0).days)
+                except ValueError:
+                    continue
+                if dd <= 1:
+                    return True
+        pair, scores = {w, l}, {w_pts, l_pts}
+        for v in self._boxes(season_of(date)).values():
+            t = v.get('teams') if isinstance(v, dict) else None
+            if not isinstance(t, list) or len(t) < 2:
+                continue
+            try:
+                if {int(t[0].get('score')), int(t[1].get('score'))} != scores:
+                    continue
+            except (TypeError, ValueError):
+                continue
+            ids = {self.names.get(bx_norm(x.get('name'))) for x in t[:2]}
+            if ids == pair:
+                return True
+        return False
 
 
 def all_mmdd():
@@ -457,12 +806,19 @@ def main():
     stats['teams'] = len(per_team)
     stats['canonical_games'] = len(canonical)
 
+    ap = load_ap_polls()
+    rivals = load_rivalries()
+    trows = load_tourney_rows(stats)
+    stats['tourney_rows'] = len(trows)
+
     events = []
     events += detect_championships(teams, per_team, stats)
-    stats['championship_events'] = sum(
+    stats['championship_events_v1'] = sum(
         1 for e in events if e['type'] == 'championship')
+    t_events, tourney_keys = detect_tournament_games(teams, per_team, trows, ap, stats)
+    events += t_events
     events += detect_upsets(teams, canonical, stats)
-    events += score_regular_games(teams, canonical)
+    events += score_games(teams, canonical, ap, rivals, tourney_keys, stats)
 
     by_day = defaultdict(list)
     seen = set()  # one event per (date, team pair)
@@ -487,10 +843,23 @@ def main():
     stats['events_without_season_row'] = sum(
         1 for e in events if not e['teams'][0]['hasSeason'])
 
+    locator = BoxLocator()
     out = {}
     for mmdd in all_mmdd():
-        day_events = sorted(by_day.get(mmdd, []),
-                            key=lambda e: (-e['sig'], e['date']))[:MAX_EVENTS]
+        day_events, fillers = [], 0
+        for e in sorted(by_day.get(mmdd, []), key=lambda e: (-e['sig'], e['date'])):
+            if e['type'] in ('blowout', 'high_score'):
+                if fillers >= MAX_FILLERS_PER_DAY:
+                    continue
+                fillers += 1
+            day_events.append(e)
+            if len(day_events) >= MAX_EVENTS:
+                break
+        for e in day_events:
+            end = season_of(e['date'])
+            e['season'] = '{}-{:02d}'.format(end - 1, end % 100)
+            e['hasBox'] = locator.has_box(e)
+            stats['events_with_box'] += 1 if e['hasBox'] else 0
         out[mmdd] = day_events
         if day_events:
             stats['days_with_events'] += 1

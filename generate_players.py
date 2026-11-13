@@ -94,9 +94,67 @@ def build_team_canonical_map(all_team_names):
     return mapping
 
 
+_NAME_SUFFIXES = ('jr', 'jr.', 'sr', 'sr.', 'ii', 'iii', 'iv', 'v')
+
+
+def _title_case_surname(s):
+    """Title-case an all-caps surname, keeping Mc/Mac/O' capitals."""
+    if not s.isupper() or len(s) < 2:
+        return s
+    out = []
+    for part in re.split(r'(\s+|-)', s):
+        if not part or re.match(r'\s+|-', part):
+            out.append(part)
+            continue
+        p = part.lower()
+        if p.startswith("o'") and len(p) > 2:
+            p = "O'" + p[2:].capitalize()
+        elif p.startswith('mc') and len(p) > 2:
+            p = 'Mc' + p[2:].capitalize()
+        elif p.startswith('mac') and len(p) > 4:
+            p = 'Mac' + p[3:].capitalize()
+        else:
+            p = p.capitalize()
+        out.append(p)
+    return ''.join(out)
+
+
+def display_name(name):
+    """Canonical 'First Last' form.
+
+    Many box-score sources print 'Last, First' (StatCrew, SIDs, 1950s
+    agate) while most print 'First Last'; before this the two spellings
+    of one player became two archive entries (6,184 twins measured
+    2026-11-12). Suffixes ride with the surname: 'Smith, John Jr.' ->
+    'John Smith Jr.'. An all-caps surname is title-cased."""
+    name = ' '.join(name.split())
+    if ',' not in name:
+        return name
+    parts = [x.strip() for x in name.split(',')]
+    if len(parts) == 3 and parts[1].lower() in _NAME_SUFFIXES and parts[0] and parts[2]:
+        # 'Wright, Jr., Dewayne' -> 'Dewayne Wright Jr.'
+        return '{} {} {}'.format(parts[2], _title_case_surname(parts[0]), parts[1])
+    if len(parts) == 3 and parts[2].lower() in _NAME_SUFFIXES and parts[0] and parts[1]:
+        # 'Wright, Dewayne, Jr.' -> 'Dewayne Wright Jr.'
+        return '{} {} {}'.format(parts[1], _title_case_surname(parts[0]), parts[2])
+    last, first = [x.strip() for x in name.split(',', 1)]
+    if not first or not last:
+        return name
+    if last.lower() in _NAME_SUFFIXES:
+        # Source quirk 'Jr., Calvin Murphy' -> 'Calvin Murphy Jr.'
+        return '{} {}'.format(first, last)
+    suffix = ''
+    parts = first.split(' ')
+    if len(parts) > 1 and parts[-1].lower() in _NAME_SUFFIXES:
+        suffix = ' ' + parts[-1]
+        first = ' '.join(parts[:-1])
+    return '{} {}{}'.format(first, _title_case_surname(last), suffix)
+
+
 def normalize_player_name(name):
-    """Normalization used for merge keys: case/punctuation-insensitive."""
-    return slugify(name)
+    """Normalization used for merge keys: case/punctuation-insensitive,
+    and 'Last, First' folded onto 'First Last'."""
+    return slugify(display_name(name))
 
 
 def _to_int(v):
@@ -263,6 +321,7 @@ def aggregate(data):
                     skipped += 1
                     continue
                 parsed += 1
+                pname = display_name(pname)
                 pkey = '%s|%s' % (normalize_player_name(pname), team_slug)
                 rec = players.get(pkey)
                 if rec is None:
