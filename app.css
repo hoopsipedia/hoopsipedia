@@ -1490,6 +1490,52 @@
         .tm-card-header span { color: var(--gold-brand); }
         .tm-card-body { padding: 1.25rem; }
         .tm-share { text-align: center; margin-top: 0.9rem; }
+        /* ── Games of the Day / live scoreboard cards ── */
+        .god-feature { background: var(--paper); border: 1px solid var(--rule-soft); border-top: 4px solid var(--navy); border-radius: var(--r-md); max-width: 980px; margin: 0 auto; padding: 18px 24px 14px; }
+        .god-row { display: grid; grid-template-columns: 1fr minmax(130px, auto) 1fr; align-items: center; gap: 16px; }
+        .god-side { display: flex; align-items: center; gap: 14px; min-width: 0; }
+        .god-side.home { flex-direction: row-reverse; text-align: right; }
+        .god-logo { width: 60px; height: 60px; object-fit: contain; flex-shrink: 0; }
+        .god-who { flex: 1; min-width: 0; }
+        .god-name { font-family: var(--font-serif); font-weight: 800; font-size: 21px; line-height: 1.1; letter-spacing: -0.01em; color: var(--navy); }
+        .god-name a, .god-mini-name a { color: inherit; text-decoration: none; }
+        .god-rank { color: var(--rust); }
+        .god-rec { font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-muted); margin-top: 3px; }
+        .god-score { font-family: var(--font-serif); font-feature-settings: "tnum" 1, "lnum" 1; font-size: 52px; font-weight: 700; line-height: 1; color: var(--navy); min-width: 66px; text-align: center; }
+        .god-score.lost, .god-mini-score.lost { color: var(--ink-faint); }
+        .god-center { text-align: center; }
+        .god-status { font-family: var(--font-mono); font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--rust); }
+        .god-status.final { font-family: var(--font-display); font-size: 26px; letter-spacing: 0.04em; color: var(--navy); }
+        .god-vs { font-family: var(--font-display); font-size: 32px; line-height: 1; color: var(--rust); }
+        .god-sub { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-muted); margin-top: 5px; }
+        .god-foot { display: flex; justify-content: center; align-items: center; gap: 10px 18px; flex-wrap: wrap; margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--rule-soft); }
+        .god-meta { font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-muted); }
+        .god-btn { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--navy); background: transparent; border: 1.5px solid var(--navy); border-radius: 999px; padding: 7px 16px; text-decoration: none; white-space: nowrap; transition: background .15s, color .15s, border-color .15s; }
+        .god-btn:hover { background: var(--navy); color: var(--cream); }
+        .god-btn.primary { background: var(--navy); color: var(--cream); }
+        .god-btn.primary:hover { background: var(--rust); border-color: var(--rust); }
+        .god-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px; max-width: 980px; margin: 10px auto 0; }
+        .god-mini { background: var(--paper); border: 1px solid var(--rule-soft); border-left: 3px solid var(--navy); border-radius: var(--r-md); padding: 10px 12px 8px; display: flex; flex-direction: column; gap: 2px; }
+        .god-mini.live { border-left-color: var(--rust); }
+        .god-mini-row { display: flex; align-items: center; gap: 8px; padding: 3px 0; }
+        .god-mini-row img { width: 24px; height: 24px; object-fit: contain; flex-shrink: 0; }
+        .god-mini-name { flex: 1; min-width: 0; font-family: var(--font-serif); font-weight: 800; font-size: 14.5px; color: var(--navy); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .god-mini-name.lost { color: var(--ink-muted); }
+        .god-mini-rec { font-family: var(--font-mono); font-size: 10px; color: var(--ink-faint); }
+        .god-mini-score { font-family: var(--font-serif); font-feature-settings: "tnum" 1, "lnum" 1; font-size: 19px; font-weight: 800; min-width: 28px; text-align: right; color: var(--navy); }
+        .god-mini-foot { display: flex; justify-content: space-between; align-items: center; gap: 4px 10px; flex-wrap: wrap; margin-top: 4px; padding-top: 6px; border-top: 1px solid var(--rule-soft); font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-muted); }
+        .god-mini-foot > span { white-space: nowrap; }
+        .god-mini-foot a { color: var(--navy); text-decoration: none; font-weight: 700; }
+        .god-mini-foot a + a { margin-left: 10px; }
+        @media (max-width: 720px) {
+            .god-feature { padding: 14px 14px 12px; }
+            .god-row { grid-template-columns: 1fr; gap: 6px; }
+            .god-side.home { flex-direction: row; text-align: left; }
+            .god-center { order: -1; padding-bottom: 8px; margin-bottom: 4px; border-bottom: 1px dashed var(--rule-soft); }
+            .god-logo { width: 42px; height: 42px; }
+            .god-score { font-size: 36px; min-width: 52px; }
+            .god-name { font-size: 18px; }
+        }
         .god-live-dot { display:inline-block; width:8px; height:8px; border-radius:50%; background:var(--rust); margin-right:6px; vertical-align:middle; animation: godPulse 1.2s ease-in-out infinite; }
         @keyframes godPulse { 0%, 100% { opacity:1; } 50% { opacity:0.25; } }
         .tm-share-btn {

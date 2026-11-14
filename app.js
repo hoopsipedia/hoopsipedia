@@ -3832,7 +3832,7 @@
 
         function teamLabel(s, big) {
             const nameHtml = s.t ? `<a href="#team/${teamSlug(s.t.name)}" style="color:inherit; text-decoration:none;">${escapeHtml(big ? s.name : s.short)}</a>` : escapeHtml(big ? s.name : s.short);
-            return `${s.rank ? `<span style="color:var(--rust);">No. ${s.rank}</span> ` : ''}${nameHtml}`;
+            return `${s.rank ? `<span class="god-rank">No. ${s.rank}</span> ` : ''}${nameHtml}`;
         }
 
         // Compact card: homepage strip and the scoreboard page.
@@ -3841,56 +3841,61 @@
             const status = g.state === 'pre'
                 ? `${escapeHtml(g.tipLabel)}${g.tv ? ' · ' + escapeHtml(g.tv) : ''}`
                 : `<span style="color:${live ? 'var(--rust)' : 'var(--ink-muted)'};">${live ? '<span class="god-live-dot"></span>' : ''}${escapeHtml(g.statusText)}</span>`;
-            const line = (s) => `
-                <div style="display:flex; align-items:center; gap:8px; padding:3px 0;">
-                    ${s.id ? `<img src="${getLogoUrl(s.id, 80)}" alt="" style="width:22px;height:22px;object-fit:contain;flex-shrink:0;" onerror="this.style.display='none'">` : ''}
-                    <span class="h-slab" style="font-size:15px; color:${g.state === 'post' && !s.won ? 'var(--ink-muted)' : 'var(--navy)'}; flex:1; min-width:0; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">${teamLabel(s, false)}</span>
-                    <span class="label-mono" style="color:var(--ink-faint); font-size:10px;">${escapeHtml(s.rec)}</span>
-                    ${g.state !== 'pre' ? `<span class="numerals" style="font-size:20px; font-weight:700; min-width:30px; text-align:right; color:${g.state === 'post' && !s.won ? 'var(--ink-faint)' : 'var(--navy)'};">${escapeHtml(s.score)}</span>` : ''}
+            const row = (s) => {
+                const lost = g.state === 'post' && !s.won;
+                return `
+                <div class="god-mini-row">
+                    ${s.id ? `<img src="${getLogoUrl(s.id, 80)}" alt="" onerror="this.style.visibility='hidden'">` : '<span style="width:24px;"></span>'}
+                    <span class="god-mini-name${lost ? ' lost' : ''}">${teamLabel(s, false)}</span>
+                    <span class="god-mini-rec">${escapeHtml(s.rec)}</span>
+                    ${g.state !== 'pre' ? `<span class="god-mini-score${lost ? ' lost' : ''}">${escapeHtml(s.score)}</span>` : ''}
                 </div>`;
-            const settle = g.away.t && g.home.t ? `<a href="#compare/${teamSlug(g.away.t.name)}/${teamSlug(g.home.t.name)}" class="label-mono" style="color:var(--navy); text-decoration:none; border-bottom:1px solid var(--gold-brand);">SETTLE IT →</a>` : '';
-            const box = g.espnLink && g.state !== 'pre' ? `<a href="${escapeHtml(g.espnLink.href)}" target="_blank" rel="noopener" class="label-mono" style="color:var(--ink-muted); text-decoration:none;">${live ? 'LIVE BOX ↗' : 'BOX ↗'}</a>` : '';
+            };
+            const settle = g.away.t && g.home.t ? `<a href="#compare/${teamSlug(g.away.t.name)}/${teamSlug(g.home.t.name)}">Settle it →</a>` : '';
+            const box = g.espnLink && g.state !== 'pre' ? `<a href="${escapeHtml(g.espnLink.href)}" target="_blank" rel="noopener" style="color:var(--ink-muted); font-weight:500;">${live ? 'Live box ↗' : 'Box ↗'}</a>` : '';
             return `
-                <div style="background:var(--paper); border:1px solid ${live ? 'var(--rust)' : 'var(--rule-soft)'}; border-radius:var(--r-md); padding:12px 14px; display:flex; flex-direction:column; gap:4px;">
-                    ${line(g.away)}
-                    ${line(g.home)}
-                    <div style="display:flex; justify-content:space-between; align-items:center; gap:10px; margin-top:4px; flex-wrap:wrap;">
-                        <span class="label-mono" style="color:var(--ink-muted);">${status}${g.neutral && g.state === 'pre' ? ' · NEUTRAL' : ''}</span>
-                        <span style="display:flex; gap:12px;">${box}${settle}</span>
+                <div class="god-mini${live ? ' live' : ''}">
+                    ${row(g.away)}
+                    ${row(g.home)}
+                    <div class="god-mini-foot">
+                        <span>${status}${g.neutral && g.state === 'pre' ? ' · neutral' : ''}</span>
+                        <span>${box}${settle}</span>
                     </div>
                 </div>`;
         }
 
-        // Featured card: the single biggest game, full size.
+        // Featured card: the single biggest game, as a scoreboard bar.
         function featuredGameHtml(g) {
             let center;
             if (g.state === 'in') {
-                center = `<div class="h-display" style="font-size:22px; color:var(--rust);"><span class="god-live-dot"></span>${escapeHtml(g.statusText)}</div>`;
+                center = `<div class="god-status"><span class="god-live-dot"></span>${escapeHtml(g.statusText)}</div>${g.tv ? `<div class="god-sub">${escapeHtml(g.tv)}</div>` : ''}`;
             } else if (g.state === 'post') {
-                center = `<div class="h-display" style="font-size:26px; color:var(--navy);">${escapeHtml(g.statusText)}</div>`;
+                center = `<div class="god-status final">${escapeHtml(g.statusText)}</div>`;
             } else {
-                center = `<div class="h-display" style="font-size:30px; color:var(--rust);">VS</div><div class="label-mono" style="color:var(--ink-muted); margin-top:4px;">${escapeHtml(g.tipLabel)}${g.tv ? ' · ' + escapeHtml(g.tv) : ''}</div>`;
+                center = `<div class="god-vs">VS</div><div class="god-sub">${escapeHtml(g.tipLabel)}${g.tv ? ' · ' + escapeHtml(g.tv) : ''}</div>`;
             }
             const side = (s, isHome) => `
-                <div style="flex:1; min-width:180px; text-align:center;">
-                    ${s.id ? `<img src="${getLogoUrl(s.id, 200)}" alt="" style="width:72px;height:72px;object-fit:contain;" onerror="this.style.display='none'">` : ''}
-                    <div class="h-slab" style="font-size:20px; color:var(--navy); margin-top:6px;">${teamLabel(s, true)}</div>
-                    <div class="label-mono" style="color:var(--ink-muted); margin-top:2px;">${escapeHtml(s.rec)}${isHome && !g.neutral ? ' · HOME' : ''}</div>
-                    ${g.state !== 'pre' ? `<div class="numerals" style="font-size:44px; font-weight:700; margin-top:6px; color:${g.state === 'post' && !s.won ? 'var(--ink-faint)' : 'var(--navy)'};">${escapeHtml(s.score)}</div>` : ''}
+                <div class="god-side ${isHome ? 'home' : 'away'}">
+                    ${s.id ? `<img class="god-logo" src="${getLogoUrl(s.id, 200)}" alt="" onerror="this.style.visibility='hidden'">` : ''}
+                    <div class="god-who">
+                        <div class="god-name">${teamLabel(s, true)}</div>
+                        <div class="god-rec">${escapeHtml(s.rec)}${isHome && !g.neutral ? ' · home' : ''}</div>
+                    </div>
+                    ${g.state !== 'pre' ? `<div class="god-score${g.state === 'post' && !s.won ? ' lost' : ''}">${escapeHtml(s.score)}</div>` : ''}
                 </div>`;
             const series = seriesLine(g.away, g.home);
+            const meta = [series, g.state === 'pre' && g.venue ? escapeHtml(g.venue) : ''].filter(Boolean);
             return `
-                <div style="background:var(--paper); border:1px solid var(--rule-soft); border-radius:var(--r-md); padding:22px 24px; display:flex; align-items:center; gap:16px; flex-wrap:wrap;">
-                    ${side(g.away, false)}
-                    <div style="text-align:center; min-width:120px;">${center}</div>
-                    ${side(g.home, true)}
-                    <div style="flex-basis:100%; display:flex; justify-content:center; align-items:center; gap:18px; margin-top:6px; flex-wrap:wrap;">
-                        ${series ? `<span class="label-mono" style="color:var(--ink-muted);">${series}</span>` : ''}
-                        ${g.venue && g.state === 'pre' ? `<span class="label-mono" style="color:var(--ink-muted);">${escapeHtml(g.venue)}</span>` : ''}
+                <div class="god-feature">
+                    <div class="god-row">
+                        ${side(g.away, false)}
+                        <div class="god-center">${center}</div>
+                        ${side(g.home, true)}
                     </div>
-                    <div style="flex-basis:100%; display:flex; justify-content:center; gap:12px; margin-top:2px; flex-wrap:wrap;">
-                        ${g.away.t && g.home.t ? `<a class="btn" href="#compare/${teamSlug(g.away.t.name)}/${teamSlug(g.home.t.name)}" style="padding:10px 22px; text-decoration:none;">SETTLE IT: ${escapeHtml(g.away.short.toUpperCase())} VS ${escapeHtml(g.home.short.toUpperCase())} →</a>` : ''}
-                        ${g.espnLink && g.state !== 'pre' ? `<a class="tm-share-btn" href="${escapeHtml(g.espnLink.href)}" target="_blank" rel="noopener" style="text-decoration:none;">${g.state === 'in' ? 'Live box score' : 'Box score'} ↗</a>` : ''}
+                    <div class="god-foot">
+                        ${meta.map(m => `<span class="god-meta">${m}</span>`).join('')}
+                        ${g.away.t && g.home.t ? `<a class="god-btn primary" href="#compare/${teamSlug(g.away.t.name)}/${teamSlug(g.home.t.name)}">Settle it: ${escapeHtml(g.away.short)} vs ${escapeHtml(g.home.short)} →</a>` : ''}
+                        ${g.espnLink && g.state !== 'pre' ? `<a class="god-btn" href="${escapeHtml(g.espnLink.href)}" target="_blank" rel="noopener">${g.state === 'in' ? 'Live box score' : 'Box score'} ↗</a>` : ''}
                     </div>
                 </div>`;
         }
@@ -3949,7 +3954,7 @@
             if (more) {
                 const rest = ranked.slice(1).filter(x => x.juice).slice(0, 4);
                 more.innerHTML = rest.length
-                    ? `<div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(230px, 1fr)); gap:10px;">${rest.map(x => gameCardHtml(gameBits(x.e))).join('')}</div>`
+                    ? `<div class="god-grid">${rest.map(x => gameCardHtml(gameBits(x.e))).join('')}</div>`
                     : '';
             }
             section.style.display = '';
