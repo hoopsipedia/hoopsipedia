@@ -1327,7 +1327,11 @@ export async function onRequest(context) {
     if (!seasonRow && /^\d{4}-\d{2}$/.test(seasonParam)) {
       const logged = await getTeamGames(assetFetcher, originUrl, team.espnId);
       const inSeason = logged ? gamesForSeason(logged, seasonParam) : [];
-      if (inSeason.length >= 8) {
+      // The season in progress (ESPN rows arrive nightly) qualifies from its
+      // first game; past seasons still need a real log, not a stray row.
+      const nowEnd = new Date().getUTCFullYear() + (new Date().getUTCMonth() >= 7 ? 1 : 0);
+      const isCurrent = seasonParam === `${nowEnd - 1}-${String(nowEnd % 100).padStart(2, '0')}`;
+      if (inSeason.length >= 8 || (isCurrent && inSeason.length >= 1)) {
         const wins = inSeason.filter(g => g.w).length;
         seasonRow = { year: seasonParam, wins, losses: inSeason.length - wins, record: `${wins}-${inSeason.length - wins}`, conf: team.conf };
         seasonRow.synthesized = true;

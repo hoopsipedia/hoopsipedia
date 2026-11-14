@@ -537,7 +537,7 @@
         // not need the full seasons/h2h/htss files before first paint.
         function isFastRoute() {
             const h = window.location.hash;
-            if (h && h !== '#') return /^#(team\/[^/]+|teams|players|rankings|htss-rankings|time-machine|trajectories|net-rankings|scores|on-this-day(\/\d{2}-\d{2})?)$/.test(h);
+            if (h && h !== '#') return /^#(team\/[^/]+|teams|players|rankings|htss-rankings|time-machine|trajectories|net-rankings|scores(\/\d{4}-\d{2}-\d{2})?|on-this-day(\/\d{2}-\d{2})?)$/.test(h);
             const p = window.location.pathname;
             return p === '/' || /^\/(teams|players|rankings|time-machine|on-this-day|scores)\/?$/.test(p) || /^\/on-this-day\/\d{2}-\d{2}\/?$/.test(p) || /^\/teams\/[a-z0-9-]+(?:\/\d{4}(?:-\d{2})?)?\/?$/.test(p);
         }
@@ -1064,6 +1064,10 @@
 
             renderOtdFacts();
             widget.style.display = 'flex';
+            // Stacked card: no paging, no timer.
+            const otdNav = document.getElementById('otdPrev') && document.getElementById('otdPrev').parentElement;
+            if (otdNav) otdNav.style.display = 'none';
+            return;
 
             document.getElementById('otdPrev').addEventListener('click', () => {
                 _otdIndex = (_otdIndex - 1 + _otdFacts.length) % _otdFacts.length;
@@ -1098,9 +1102,11 @@
                 });
             }
 
+            // The homepage card shows the top three events for the date, stacked
+            // (the one-line rotator hid two thirds of the good stuff).
             let html = '';
-            _otdFacts.forEach((fact, i) => {
-                html += '<div class="otd-fact' + (i === _otdIndex ? ' active' : '') + '">';
+            _otdFacts.slice(0, 3).forEach((fact, i) => {
+                html += '<div class="otd-fact active" style="padding:10px 0;' + (i ? ' border-top:1px solid var(--rule-soft);' : '') + '">';
                 html += '<div class="otd-text">' + parseFact(fact.text) + '</div>';
                 html += '</div>';
             });
@@ -1953,7 +1959,7 @@
                     if (homeView && homeView.style.display !== 'none') {
                         renderGameOfDay();
                     }
-                    if (currentView === 'scores') renderScoresPage();
+                    if (currentView === 'scores' && !_scoresDate) renderScoresPage();
                 } catch(e) {}
             }
 
@@ -2740,8 +2746,10 @@
                 _skipHashUpdate = false;
                 return;
             }
-            // #scores — today's live scoreboard
-            if (hash === '#scores') {
+            // #scores or #scores/YYYY-MM-DD — the live scoreboard, any date
+            const scoresMatch = hash.match(/^#scores(?:\/(\d{4}-\d{2}-\d{2}))?$/);
+            if (scoresMatch) {
+                _scoresDate = scoresMatch[1] || null;
                 switchView('scores', true);
                 _skipHashUpdate = false;
                 return;
@@ -3374,6 +3382,7 @@
             } else if (view === 'seasonPage') {
                 if (bracketRefreshInterval) clearInterval(bracketRefreshInterval);
             } else if (view === 'scores') {
+                if (!window.location.hash.startsWith('#scores/')) _scoresDate = null;
                 renderScoresPage();
                 if (bracketRefreshInterval) clearInterval(bracketRefreshInterval);
             } else if (view === 'rivalries') {
@@ -3886,6 +3895,31 @@
                 </div>`;
         }
 
+        // Editorial pin (featured_game.json): {date, espnIds:[a,b]} — when the
+        // date is today's and that game is on the scoreboard, it leads.
+        let _featuredPin = null, _featuredPinAt = 0;
+        async function featuredPin() {
+            if (Date.now() - _featuredPinAt < 300000) return _featuredPin;
+            _featuredPinAt = Date.now();
+            try {
+                const r = await fetch('/featured_game.json', { cache: 'no-cache' });
+                _featuredPin = r.ok ? await r.json() : null;
+            } catch (e) { _featuredPin = null; }
+            return _featuredPin;
+        }
+        function applyPin(ranked, pin) {
+            if (!pin || !Array.isArray(pin.espnIds) || pin.espnIds.length !== 2) return ranked;
+            if (pin.date && pin.date !== scoresTodayStr()) return ranked;
+            const want = new Set(pin.espnIds.map(String));
+            const i = ranked.findIndex(x => {
+                const ids = (x.e.competitions[0].competitors || []).map(c => String(c.team && c.team.id));
+                return ids.length === 2 && ids.every(id => want.has(id));
+            });
+            if (i <= 0) return ranked;
+            const picked = ranked[i];
+            return [picked, ...ranked.slice(0, i), ...ranked.slice(i + 1)];
+        }
+
         async function renderGameOfDay() {
             const section = document.getElementById('gameOfDaySection');
             const el = document.getElementById('gameOfDayContent');
@@ -3893,7 +3927,10 @@
             const month = new Date().getMonth();
             let ranked = [];
             if (!(month >= 4 && month <= 9)) {
-                try { ranked = rankedGames(await getScoreboard()); } catch (e) { ranked = []; }
+                try {
+                    const [sb, pin] = await Promise.all([getScoreboard(), featuredPin()]);
+                    ranked = applyPin(rankedGames(sb), pin);
+                } catch (e) { ranked = []; }
             }
             if (!ranked.length) {
                 window._gameOfDayActive = false;
@@ -3921,15 +3958,53 @@
         }
 
         // /scores — every Division I game today, live, refreshed with the ticker.
-        async function renderScoresPage() {
+        // Scoreboard "today" rolls over on Mountain time (late tip-offs), same
+        // as fetchSharedScoreboard; other dates are fetched on demand.
+        let _scoresDate = null;           // 'YYYY-MM-DD' or null = today
+        const _scoresByDate = {};         // date -> { sb, at }
+        function scoresTodayStr() {
+            const et = new Date(new Date().toLocaleString('en-US', { timeZone: 'America/Denver' }));
+            return `${et.getFullYear()}-${String(et.getMonth() + 1).padStart(2, '0')}-${String(et.getDate()).padStart(2, '0')}`;
+        }
+        function scoresShift(dateStr, days) {
+            const d = new Date(dateStr + 'T12:00:00');
+            d.setDate(d.getDate() + days);
+            return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+        }
+        async function scoreboardForDate(dateStr) {
+            if (!dateStr || dateStr === scoresTodayStr()) return getScoreboard();
+            const hit = _scoresByDate[dateStr];
+            if (hit && Date.now() - hit.at < 60000) return hit.sb;
+            try {
+                const resp = await fetch(`https://site.api.espn.com/apis/site/v2/sports/basketball/mens-college-basketball/scoreboard?dates=${dateStr.replace(/-/g, '')}&groups=50&limit=300`);
+                const sb = resp.ok ? await resp.json() : null;
+                _scoresByDate[dateStr] = { sb, at: Date.now() };
+                return sb;
+            } catch (e) { return null; }
+        }
+
+        async function renderScoresPage(dateStr) {
             const el = document.getElementById('scoresContent');
             if (!el) return;
-            document.title = "Today's College Basketball Scores — Every Division I Game, Live — Hoopsipedia";
-            if (!el.innerHTML.trim()) el.innerHTML = '<div class="chart-loading">Loading today\'s games…</div>';
+            if (dateStr !== undefined) _scoresDate = dateStr;
+            const todayStr = scoresTodayStr();
+            const viewDate = _scoresDate || todayStr;
+            const isToday = viewDate === todayStr;
+            document.title = isToday
+                ? "Today's College Basketball Scores — Every Division I Game, Live — Hoopsipedia"
+                : `College Basketball Scores — ${new Date(viewDate + 'T12:00:00').toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })} — Hoopsipedia`;
+            if (!el.innerHTML.trim()) el.innerHTML = '<div class="chart-loading">Loading games…</div>';
             let sb = null;
-            try { sb = await getScoreboard(); } catch (e) { sb = null; }
-            if (currentView !== 'scores') return;
-            const today = new Date().toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' });
+            try { sb = await scoreboardForDate(viewDate); } catch (e) { sb = null; }
+            if (currentView !== 'scores' || (_scoresDate || todayStr) !== viewDate) return;
+            const today = new Date(viewDate + 'T12:00:00').toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' });
+            const prev = scoresShift(viewDate, -1), next = scoresShift(viewDate, 1);
+            const dayLabel = d => new Date(d + 'T12:00:00').toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
+            const dateNav = `<div style="display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap; margin: 14px 0 0;">
+                    <a class="tm-share-btn" href="#scores/${prev}" style="text-decoration:none;">← ${dayLabel(prev)}</a>
+                    <a class="tm-share-btn" href="#scores" style="text-decoration:none;${isToday ? ' background:var(--navy); color:var(--cream);' : ''}">Today</a>
+                    <a class="tm-share-btn" href="#scores/${next}" style="text-decoration:none;">${dayLabel(next)} →</a>
+                </div>`;
             const ranked = rankedGames(sb);
             const groups = { in: [], post: [], pre: [] };
             ranked.forEach(x => { const g = gameBits(x.e); (groups[g.state] || groups.pre).push({ g, w: x.w }); });
@@ -3945,9 +4020,10 @@
             el.innerHTML = `
                 <div style="max-width: 1100px; margin: 0 auto; padding: 8px 0 40px;">
                     <div class="label-mono" style="color:var(--rust);">● LIVE SCOREBOARD</div>
-                    <h1 class="h-display" style="font-size: clamp(36px, 6vw, 64px); color:var(--navy); margin: 6px 0 6px; line-height:1;">TODAY'S GAMES</h1>
-                    <div class="label-mono" style="color:var(--ink-muted); margin-bottom:6px;">${escapeHtml(today)} · every Division I game · updates every 30 seconds · ranks are the AP poll</div>
-                    ${ranked.length ? '' : `<div class="ds-card-bordered" style="padding:28px; text-align:center; color:var(--ink-muted); margin-top:20px;">No Division I games on the schedule today.${(new Date().getMonth() >= 4 && new Date().getMonth() <= 9) ? ' The season tips off in November.' : ''} <a href="#time-machine" style="color:var(--navy); font-weight:600;">Build a Time Machine matchup instead →</a></div>`}
+                    <h1 class="h-display" style="font-size: clamp(36px, 6vw, 64px); color:var(--navy); margin: 6px 0 6px; line-height:1;">${isToday ? "TODAY'S GAMES" : escapeHtml(today.toUpperCase())}</h1>
+                    <div class="label-mono" style="color:var(--ink-muted); margin-bottom:6px;">${isToday ? escapeHtml(today) + ' · ' : ''}every Division I game · ${isToday ? 'updates every 30 seconds · ' : ''}ranks are the AP poll</div>
+                    ${dateNav}
+                    ${ranked.length ? '' : `<div class="ds-card-bordered" style="padding:28px; text-align:center; color:var(--ink-muted); margin-top:20px;">No Division I games on the schedule ${isToday ? 'today' : 'that day'}.${(new Date().getMonth() >= 4 && new Date().getMonth() <= 9) ? ' The season tips off in November.' : ''} <a href="#time-machine" style="color:var(--navy); font-weight:600;">Build a Time Machine matchup instead →</a></div>`}
                     ${block('<span class="god-live-dot"></span>LIVE NOW', 'var(--rust)', groups.in)}
                     ${block('● UPCOMING', 'var(--navy)', groups.pre)}
                     ${block('● FINAL', 'var(--ink-muted)', groups.post)}
@@ -9772,7 +9848,8 @@
                     oppTeam = allTeamsData.find(t => String(t.espnId) === eid) || null;
                 }
                 const oppName = oppTeam ? oppTeam.name : String(g.opp_slug || 'Unknown').replace(/-/g, ' ');
-                const eventId = matchSeasonEventId(espnId, g, gameIds);
+                // Current-season rows from ESPN carry their event id directly.
+                const eventId = g.eid || matchSeasonEventId(espnId, g, gameIds);
                 const espnOk = !!(eventId && gameYear >= 2002);
                 const srPlausible = gameMonth === 3 || gameMonth === 4; // tournament-era window
                 const expandable = espnOk || srPlausible;

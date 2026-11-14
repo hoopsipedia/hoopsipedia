@@ -122,8 +122,20 @@ def compose(key, g, own, opp):
     return ''.join(re.sub(r'\.\.$', '.', b) for b in bits)
 
 
-def main():
+def load_store_plus_espn():
+    """The SR store plus the current season's ESPN box scores
+    (archives/espn/espn_*_pending.json, written nightly by
+    scripts/espn_recaps.py) until those are merged into the store."""
     store = json.load(open(os.path.join(ROOT, 'sr_boxscores.json')))
+    import glob
+    for path in sorted(glob.glob(os.path.join(ROOT, 'archives', 'espn', 'espn_*_pending.json'))):
+        for k, v in json.load(open(path)).items():
+            store.setdefault(k, v)
+    return store
+
+
+def main():
+    store = load_store_plus_espn()
     by_slug = build_name_to_espn()
     out = {}  # espnId -> {date: recap}
     made = skipped = 0
@@ -141,7 +153,7 @@ def main():
             continue
         recap = compose(key, g, a, b)
         for t in teams:
-            eid = by_slug.get(slugify(t.get('name', '')))
+            eid = t.get('espnId') or by_slug.get(slugify(t.get('name', '')))
             if eid:
                 out.setdefault(eid, {})[date] = recap
                 made += 1

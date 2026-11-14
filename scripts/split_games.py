@@ -57,8 +57,18 @@ def main():
 
     os.makedirs(OUT_DIR, exist_ok=True)
 
+    # Current-season rows from ESPN (scripts/espn_recaps.py) live outside the
+    # SR masters until the post-season scrape lands; re-apply them here so a
+    # rebuild never drops the season in progress. SR rows win on a date clash.
+    import glob
+    espn_rows = {}
+    for path in sorted(glob.glob(os.path.join(ROOT, 'archives', 'espn', 'espn_*_games.json'))):
+        for tid, by_date in load(os.path.relpath(path, ROOT)).items():
+            espn_rows.setdefault(str(tid), {}).update(by_date)
+
     index = {}
     written_total = 0
+    espn_added = 0
     wrapped = 0
     slug_filled = 0
     for espn_id in sorted(merged, key=lambda k: (len(k), k)):
@@ -75,6 +85,20 @@ def main():
             if slug:
                 entry['slug'] = slug
                 slug_filled += 1
+        extra = espn_rows.get(espn_id)
+        if extra:
+            have = {g['date']: g for g in entry['games']}
+            new_rows = []
+            for d, r in sorted(extra.items()):
+                cur = have.get(d)
+                if cur is None:
+                    new_rows.append(r)
+                elif str(cur.get('opp')) == str(r.get('opp')):
+                    for k, v in r.items():   # eid / arena / ot onto an SR row
+                        cur.setdefault(k, v)
+            if new_rows:
+                entry['games'] = sorted(entry['games'] + new_rows, key=lambda g: g['date'])
+                espn_added += len(new_rows)
         out = {'games': entry['games']}
         for k in sorted(entry):
             if k != 'games':
@@ -90,8 +114,8 @@ def main():
 
     # ── Validation ──
     errors = []
-    if written_total != source_total:
-        errors.append(f'game count mismatch: wrote {written_total}, source has {source_total}')
+    if written_total - espn_added != source_total:
+        errors.append(f'game count mismatch: wrote {written_total} ({espn_added} ESPN current-season rows), source has {source_total}')
 
     data = load('data.json')
     h_ids = set(data.get('H', {}).keys())

@@ -1,0 +1,6 @@
+{
+  "_note": "Editorial pin for the homepage Game of the Day. When `date` is today's scoreboard date (Eastern) and both ESPN team ids appear in one game, that game is featured ahead of the automatic pick. Leave `date` in the past to fall back to automatic.",
+  "date": "2026-11-13",
+  "espnIds": ["228", "46"],
+  "label": "Georgetown at Clemson"
+}

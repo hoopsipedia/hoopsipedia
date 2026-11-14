@@ -17,6 +17,7 @@ import urllib.error
 import time
 import os
 import subprocess
+import sys
 from datetime import datetime
 
 from json_io import save_json_atomic
@@ -204,11 +205,28 @@ def sync_current_season():
 
     return len(changes) > 0
 
+def sync_espn_recaps():
+    """Yesterday's box scores + recaps from ESPN (scripts/espn_recaps.py).
+    Failures never block the records sync."""
+    try:
+        r = subprocess.run([sys.executable, os.path.join(DATA_DIR, 'scripts', 'espn_recaps.py')],
+                           capture_output=True, text=True, timeout=900, cwd=DATA_DIR)
+        for line in (r.stdout or '').strip().splitlines()[-3:]:
+            log(f"  recaps: {line}")
+        if r.returncode != 0:
+            log(f"  recaps step failed: {(r.stderr or '').strip()[-300:]}")
+            return False
+        return True
+    except Exception as e:
+        log(f"  recaps step error: {e}")
+        return False
+
+
 def push_to_live():
     """Git add, commit, push."""
     os.chdir(DATA_DIR)
     try:
-        subprocess.run(['git', 'add', 'data.json'], check=True)
+        subprocess.run(['git', 'add', 'data.json', 'recaps', 'archives/espn', 'games'], check=True)
         result = subprocess.run(['git', 'diff', '--cached', '--quiet'], capture_output=True)
         if result.returncode == 0:
             log("No changes to commit.")
@@ -234,6 +252,8 @@ if __name__ == '__main__':
     if had_changes is None:
         log("SYNC ABORTED\n")
         sys.exit(1)
+    if sync_espn_recaps():
+        had_changes = True
     if had_changes or '--force-push' in sys.argv:
         push_to_live()
     else:
