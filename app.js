@@ -20421,3 +20421,5 @@
                 navigator.serviceWorker.register('/sw.js').catch(() => {});
             });
         }
+
+// build 2026-11-13b: cache-key bump after an edge cached the previous hashed URL mid-rollout
