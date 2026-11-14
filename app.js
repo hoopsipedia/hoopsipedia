@@ -1953,6 +1953,7 @@
                 // 2. Update ALL components from the same data, same moment
                 try { checkUpsetWatch(); } catch(e) {}
                 try { checkForFinalGames(); } catch(e) {}
+                try { checkCelebration(); } catch(e) {}
                 // 3. Refresh homepage game cards if visible
                 try {
                     const homeView = document.getElementById('home');
@@ -3902,15 +3903,16 @@
 
         // Editorial pin (featured_game.json): {date, espnIds:[a,b]} — when the
         // date is today's and that game is on the scoreboard, it leads.
-        let _featuredPin = null, _featuredPinAt = 0;
-        async function featuredPin() {
-            if (Date.now() - _featuredPinAt < 300000) return _featuredPin;
+        let _featuredPinPromise = null, _featuredPinAt = 0;
+        function featuredPin() {
+            // Memoize the PROMISE: concurrent callers on the first tick must
+            // share one fetch rather than read an empty cache.
+            if (_featuredPinPromise && Date.now() - _featuredPinAt < 300000) return _featuredPinPromise;
             _featuredPinAt = Date.now();
-            try {
-                const r = await fetch('/featured_game.json', { cache: 'no-cache' });
-                _featuredPin = r.ok ? await r.json() : null;
-            } catch (e) { _featuredPin = null; }
-            return _featuredPin;
+            _featuredPinPromise = fetch('/featured_game.json', { cache: 'no-cache' })
+                .then(r => r.ok ? r.json() : null)
+                .catch(() => null);
+            return _featuredPinPromise;
         }
         function applyPin(ranked, pin) {
             if (!pin || !Array.isArray(pin.espnIds) || pin.espnIds.length !== 2) return ranked;
@@ -3923,6 +3925,81 @@
             if (i <= 0) return ranked;
             const picked = ranked[i];
             return [picked, ...ranked.slice(0, i), ...ranked.slice(i + 1)];
+        }
+
+
+        // ── Celebration mode ─────────────────────────────────────────────
+        // featured_game.json may carry `celebration: {teamId, image, label,
+        // until?, force?}`. When the pinned game is final and that team won
+        // (or force is set), every basketball in the three wordmarks becomes
+        // the face in `image` (a CC0 photo under /branding). It switches off
+        // after `until` (default: the pin date). Nothing happens otherwise.
+        let _celebWon = null, _celebKey = '';
+        function wordmarkBalls() {
+            return [...document.querySelectorAll('svg[viewBox="0 0 32 32"]')].filter(s =>
+                s.querySelector('circle[cx="16"]') && s.parentElement && /psipedia/.test(s.parentElement.textContent));
+        }
+        function setCelebration(on, image) {
+            document.body.classList.toggle('celebration', !!on);
+            const ns = 'http://www.w3.org/2000/svg';
+            wordmarkBalls().forEach((svg, i) => {
+                if (on && !svg.querySelector('.celeb-face')) {
+                    const c = svg.querySelector('circle');
+                    const cx = +c.getAttribute('cx'), cy = +c.getAttribute('cy'), r = +c.getAttribute('r');
+                    const id = 'celebClip' + i;
+                    const defs = document.createElementNS(ns, 'defs');
+                    const clip = document.createElementNS(ns, 'clipPath'); clip.id = id;
+                    const cc = document.createElementNS(ns, 'circle');
+                    cc.setAttribute('cx', cx); cc.setAttribute('cy', cy); cc.setAttribute('r', r);
+                    clip.appendChild(cc); defs.appendChild(clip);
+                    const img = document.createElementNS(ns, 'image');
+                    img.setAttribute('href', image);
+                    img.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', image);
+                    img.setAttribute('x', cx - r); img.setAttribute('y', cy - r);
+                    img.setAttribute('width', 2 * r); img.setAttribute('height', 2 * r);
+                    img.setAttribute('preserveAspectRatio', 'xMidYMid slice');
+                    img.setAttribute('clip-path', `url(#${id})`);
+                    img.classList.add('celeb-face');
+                    const ring = document.createElementNS(ns, 'circle');
+                    ring.setAttribute('cx', cx); ring.setAttribute('cy', cy); ring.setAttribute('r', r - 0.6);
+                    ring.setAttribute('fill', 'none'); ring.setAttribute('stroke', '#1B2A4A'); ring.setAttribute('stroke-width', '1.2');
+                    ring.classList.add('celeb-face');
+                    svg.appendChild(defs); svg.appendChild(img); svg.appendChild(ring);
+                }
+                [...svg.children].forEach(el => {
+                    if (el.tagName === 'defs') return;
+                    const isFace = el.classList.contains('celeb-face');
+                    el.style.visibility = (on ? !isFace : isFace) ? 'hidden' : '';
+                });
+            });
+        }
+        async function checkCelebration() {
+            const pin = await featuredPin();
+            const c = pin && pin.celebration;
+            if (!c || !c.image || !pin.date) { if (document.body.classList.contains('celebration')) setCelebration(false); return; }
+            const today = scoresTodayStr();
+            const until = c.until || pin.date;
+            if (today < pin.date || today > until) { setCelebration(false); return; }
+            const key = pin.date + '|' + c.teamId;
+            if (key !== _celebKey) { _celebKey = key; _celebWon = null; }
+            let won = !!c.force;
+            if (!won) {
+                if (_celebWon === null) {
+                    const sb = await scoreboardForDate(pin.date);
+                    const want = new Set((pin.espnIds || []).map(String));
+                    const ev = ((sb && sb.events) || []).find(e => {
+                        const ids = (e.competitions[0].competitors || []).map(x => String(x.team && x.team.id));
+                        return ids.length === 2 && ids.every(id => want.has(id));
+                    });
+                    const comp = ev && ev.competitions[0];
+                    if (comp && comp.status && comp.status.type && comp.status.type.state === 'post') {
+                        const w = (comp.competitors || []).find(x => x.winner);
+                        _celebWon = !!(w && String(w.team && w.team.id) === String(c.teamId));
+                    }
+                }
+                won = _celebWon === true;
+            }
+            setCelebration(won, c.image);
         }
 
         async function renderGameOfDay() {
