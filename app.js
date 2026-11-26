@@ -10121,10 +10121,10 @@
             // ESPN box score (matched event ID, 2002+)
             if (info.eventId) {
                 const gameData = await fetchBoxScoreData(info.eventId);
-                if (gameData && gameData.boxscore) html = renderBoxScore(gameData);
+                if (espnBoxHasStats(gameData)) html = renderBoxScore(gameData);
             }
 
-            // Sports Reference tournament boxscores — any era
+            // Sports Reference / archive boxscores — any era
             if (!html && info.tournamentYear) {
                 const [srData] = await Promise.all([
                     loadSRBoxscoresYear(info.tournamentYear),
@@ -12485,6 +12485,16 @@
             for (const k in all) if (k.startsWith(y + '/')) slice[k] = all[k];
             SR_BOXSCORES_BY_YEAR[y] = slice;
             return slice;
+        }
+
+        // ESPN's summary endpoint returns a box score SHELL for many early-2000s
+        // games: athletes listed, labels present, every stats array empty
+        // (2003 Syracuse-Texas rendered a panel of dashes). Only a box with
+        // real stat values counts as available.
+        function espnBoxHasStats(gameData) {
+            const players = (gameData && gameData.boxscore && gameData.boxscore.players) || [];
+            return players.some(p => (p.statistics || []).some(s =>
+                (s.athletes || []).some(a => Array.isArray(a.stats) && a.stats.some(v => v !== '' && v != null))));
         }
 
         async function fetchBoxScoreData(eventId) {
@@ -18421,34 +18431,33 @@
 
             // Our scraped SR tournament box scores cover 1939-2026 — try them
             // first for pre-ESPN years (exact score-pair + both-team match).
-            if (year < 2002 && runData && runData.games && runData.games[gameIndex]) {
+            // ESPN carries event ids back to 2002 but its box scores are EMPTY
+            // for many early-2000s games (2003 Syracuse-Texas rendered a panel
+            // of dashes), so the SR store is also the fallback whenever ESPN
+            // answers without player lines.
+            const trySR = async () => {
+                if (!(runData && runData.games && runData.games[gameIndex])) return false;
                 const [srData] = await Promise.all([
                     loadSRBoxscoresYear(year), loadBoxscoreMatchIndex()]);
                 const srMatch = findChampSRBoxScore(srData, runData, runData.games[gameIndex]);
-                if (srMatch) {
-                    inner.innerHTML = renderSRBoxScore(srMatch);
-                    inner.dataset.loaded = 'true';
-                    requestAnimationFrame(() => {
-                        panel.style.maxHeight = panel.scrollHeight + 'px';
-                        setTimeout(() => { if (wrapper.classList.contains('expanded')) panel.style.maxHeight = 'none'; }, 450);
-                    });
-                    return;
-                }
-            }
+                if (!srMatch) return false;
+                inner.innerHTML = renderSRBoxScore(srMatch);
+                inner.dataset.loaded = 'true';
+                requestAnimationFrame(() => {
+                    panel.style.maxHeight = panel.scrollHeight + 'px';
+                    setTimeout(() => { if (wrapper.classList.contains('expanded')) panel.style.maxHeight = 'none'; }, 450);
+                });
+                return true;
+            };
+            if (year < 2002 && await trySR()) return;
 
             // Find game ID from schedule
             const espnGameId = await findChampGameId(espnId, year, gameIndex);
+            const gameData = espnGameId ? await fetchChampBoxScore(espnGameId) : null;
+            const espnHasStats = espnBoxHasStats(gameData);
 
-            if (!espnGameId) {
-                inner.innerHTML = '<div class="champ-run-boxscore-loading" style="color:#A8736B;">Box score coming soon</div>';
-                panel.style.maxHeight = panel.scrollHeight + 'px';
-                return;
-            }
-
-            // Fetch box score
-            const gameData = await fetchChampBoxScore(espnGameId);
-
-            if (!gameData || !gameData.boxscore) {
+            if (!espnHasStats) {
+                if (await trySR()) return;
                 inner.innerHTML = '<div class="champ-run-boxscore-loading" style="color:#A8736B;">Box score coming soon</div>';
                 panel.style.maxHeight = panel.scrollHeight + 'px';
                 return;
