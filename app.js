@@ -9794,7 +9794,14 @@
             const scores = [Number(info.pts), Number(info.oppPts)].sort((a, b) => a - b);
             for (const [key, val] of Object.entries(srData)) {
                 if (!val || !val.teams || val.teams.length < 2) continue;
-                if (info.date && bxDateConflict(key, val, info.date)) continue;
+                // Sources disagree by a day on late tip-offs and road trips
+                // (Arkansas at Arizona: box 1952-12-27, log 12-26), so a
+                // one-day gap is tolerated; anything wider is a different game.
+                if (info.date && bxDateConflict(key, val, info.date)) {
+                    const m = String(key).match(/(\d{4}-\d{2}-\d{2})/) || String((val && val.url) || '').match(/(\d{4}-\d{2}-\d{2})/);
+                    const gap = m ? Math.abs(Date.parse(m[1] + 'T00:00:00Z') - Date.parse(info.date + 'T00:00:00Z')) : Infinity;
+                    if (gap > 86400000) continue;
+                }
                 const srScores = [Number(val.teams[0].score), Number(val.teams[1].score)].sort((a, b) => a - b);
                 if (!isNaN(scores[0]) && !isNaN(srScores[0]) &&
                     (srScores[0] !== scores[0] || srScores[1] !== scores[1])) continue;
