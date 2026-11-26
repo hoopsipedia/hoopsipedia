@@ -9792,8 +9792,9 @@
             const t1Short = (info.teamName || '').toLowerCase();
             const t2Short = (info.oppName || '').toLowerCase();
             const scores = [Number(info.pts), Number(info.oppPts)].sort((a, b) => a - b);
-            for (const val of Object.values(srData)) {
+            for (const [key, val] of Object.entries(srData)) {
                 if (!val || !val.teams || val.teams.length < 2) continue;
+                if (info.date && bxDateConflict(key, val, info.date)) continue;
                 const srScores = [Number(val.teams[0].score), Number(val.teams[1].score)].sort((a, b) => a - b);
                 if (!isNaN(scores[0]) && !isNaN(srScores[0]) &&
                     (srScores[0] !== scores[0] || srScores[1] !== scores[1])) continue;
@@ -9919,6 +9920,15 @@
             const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
             let anyVacated = false;
             const srSlugIndex = await getSrSlugIndex();
+            // Box-score availability is decided by looking, not by the calendar:
+            // the store holds regular-season boxes back to the 1940s (Kentucky
+            // 1983-11-26 vs Louisville was unexpandable because only March/April
+            // rows were assumed to have one). One slice fetch per season page.
+            let srSeasonData = null;
+            try {
+                [srSeasonData] = await Promise.all([loadSRBoxscoresYear(startYear + 1), loadBoxscoreMatchIndex()]);
+            } catch (e) { srSeasonData = null; }
+            if (reqId !== _seasonPageReq) return;
             const scheduleRows = games.map((g, i) => {
                 const uid = 'sp' + i;
                 const gameYear = parseInt(g.date.slice(0, 4));
@@ -9933,8 +9943,6 @@
                 // Current-season rows from ESPN carry their event id directly.
                 const eventId = g.eid || matchSeasonEventId(espnId, g, gameIds);
                 const espnOk = !!(eventId && gameYear >= 2002);
-                const srPlausible = gameMonth === 3 || gameMonth === 4; // tournament-era window
-                const expandable = espnOk || srPlausible;
                 if (g.vacated) anyVacated = true;
 
                 _seasonGameInfo[uid] = {
@@ -9945,6 +9953,13 @@
                     teamId: team.espnId, oppId: oppTeam ? oppTeam.espnId : null,
                     pts: g.pts, oppPts: g.opp_pts, w: !!g.w
                 };
+                let hasSR = false;
+                if (srSeasonData && Object.keys(srSeasonData).length) {
+                    try { hasSR = !!findSRSeasonMatch(srSeasonData, _seasonGameInfo[uid]); } catch (e) { hasSR = false; }
+                } else {
+                    hasSR = gameMonth === 3 || gameMonth === 4; // slice unavailable: old tournament-window guess
+                }
+                const expandable = espnOk || hasSR;
 
                 const dParts = g.date.split('-');
                 const dateDisplay = `${monthNames[parseInt(dParts[1]) - 1]} ${parseInt(dParts[2])}, ${dParts[0]}`;
