@@ -185,10 +185,14 @@ def gsc_section(s, start, end, pstart, pend):
         lines.append(f"| {r['keys'][0].replace('https://www.hoopsipedia.com', '')} | {r['clicks']:,} | {r['impressions']:,} | {r['position']:.1f} |")
     try:
         sm = get(s, f'https://www.googleapis.com/webmasters/v3/sites/{quote(site, safe="")}/sitemaps').get('sitemap', [])
-        lines += ['', '### Sitemaps', '', '| Sitemap | Last downloaded | Submitted | Indexed | Errors |', '|---|---|---|---|---|']
+        # The Sitemaps API's `indexed` field has returned 0 for every property
+        # since Google retired it; the real count lives only in the Page
+        # Indexing report (no API). Don't print a misleading zero.
+        lines += ['', '### Sitemaps', '', '| Sitemap | Last downloaded | Submitted | Errors |', '|---|---|---|---|']
         for x in sm:
             c = (x.get('contents') or [{}])[0]
-            lines.append(f"| {x['path'].replace('https://www.hoopsipedia.com', '')} | {x.get('lastDownloaded', '')[:10]} | {c.get('submitted', '')} | {c.get('indexed', '')} | {x.get('errors', 0)} |")
+            lines.append(f"| {x['path'].replace('https://www.hoopsipedia.com', '')} | {x.get('lastDownloaded', '')[:10]} | {c.get('submitted', '')} | {x.get('errors', 0)} |")
+        lines += ['', 'Indexed count: see Search Console → Pages (not exposed by the API).']
     except RuntimeError as e:
         lines += ['', f'(sitemaps unavailable: {e})']
     return lines
