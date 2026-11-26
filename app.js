@@ -18158,11 +18158,18 @@
 
             const gameYear = parseInt(dateStr.substring(0, 4));
 
-            // For pre-2002 games, check SR boxscores first (no ESPN data available)
-            if (gameYear < 2002) {
-                // Show loading while we check SR data
-                inner.innerHTML = headerHtml + '<div class="h2h-boxscore-loading"><div class="spinner"></div>Checking for box score...</div>';
-                panel.style.maxHeight = '200px';
+            // ESPN first for 2002+, but its box is a hollow shell (athletes,
+            // no stat values) for nearly every 2002-04 game and a few later
+            // ones; those fall through to the archive like pre-2002 games.
+            inner.innerHTML = headerHtml + '<div class="h2h-boxscore-loading"><div class="spinner"></div>Checking for box score...</div>';
+            panel.style.maxHeight = '200px';
+            let espnGameId = null, gameData = null;
+            if (gameYear >= 2002) {
+                espnGameId = await findH2HGameId(t1EspnId, t2EspnId, dateStr, info.t1Score);
+                if (espnGameId) gameData = await fetchH2HBoxScore(espnGameId);
+            }
+
+            if (!espnBoxHasStats(gameData)) {
 
                 // Per-year slices: SR keys use tournament year, so a Nov/Dec game
                 // date maps to the following year's key — fetch both candidates
@@ -18216,52 +18223,10 @@
                     const t2Name = info.t2Name || 'Team 2';
                     inner.innerHTML = headerHtml + `
                         <div class="h2h-detail-not-available">
-                            Box score not available for this era.
+                            Box score not available for this game.
                             <div class="score-fallback">Final: ${t1Name} ${info.t1Score || '?'}, ${t2Name} ${info.t2Score || '?'}</div>
                         </div>`;
                 }
-                inner.dataset.loaded = 'true';
-                requestAnimationFrame(() => {
-                    panel.style.maxHeight = panel.scrollHeight + 'px';
-                    setTimeout(() => { if (wrapper.classList.contains('expanded')) panel.style.maxHeight = 'none'; }, 450);
-                });
-                return;
-            }
-
-            // Show loading spinner
-            inner.innerHTML = headerHtml + '<div class="h2h-boxscore-loading"><div class="spinner"></div>Loading box score...</div>';
-            panel.style.maxHeight = '200px';
-
-            // Find ESPN game ID
-            const espnGameId = await findH2HGameId(t1EspnId, t2EspnId, dateStr, info.t1Score);
-
-            if (!espnGameId) {
-                const t1Name = info.t1Name || 'Team 1';
-                const t2Name = info.t2Name || 'Team 2';
-                inner.innerHTML = headerHtml + `
-                    <div class="h2h-detail-not-available">
-                        Box score coming soon.
-                        <div class="score-fallback">Final: ${t1Name} ${info.t1Score || '?'}, ${t2Name} ${info.t2Score || '?'}</div>
-                    </div>`;
-                inner.dataset.loaded = 'true';
-                requestAnimationFrame(() => {
-                    panel.style.maxHeight = panel.scrollHeight + 'px';
-                    setTimeout(() => { if (wrapper.classList.contains('expanded')) panel.style.maxHeight = 'none'; }, 450);
-                });
-                return;
-            }
-
-            // Fetch box score
-            const gameData = await fetchH2HBoxScore(espnGameId);
-
-            if (!gameData || !gameData.boxscore) {
-                const t1Name = info.t1Name || 'Team 1';
-                const t2Name = info.t2Name || 'Team 2';
-                inner.innerHTML = headerHtml + `
-                    <div class="h2h-detail-not-available">
-                        Box score coming soon.
-                        <div class="score-fallback">Final: ${t1Name} ${info.t1Score || '?'}, ${t2Name} ${info.t2Score || '?'}</div>
-                    </div>`;
                 inner.dataset.loaded = 'true';
                 requestAnimationFrame(() => {
                     panel.style.maxHeight = panel.scrollHeight + 'px';
